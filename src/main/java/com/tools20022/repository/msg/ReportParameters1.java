@@ -38,20 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters1#NetPositionIdentification
- * ReportParameters1.NetPositionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters1#mmNetPositionIdentification
+ * ReportParameters1.mmNetPositionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters1#ReportDateAndTime
- * ReportParameters1.ReportDateAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameters1#UpdateType
- * ReportParameters1.UpdateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameters1#Frequency
- * ReportParameters1.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameters1#ReportNumber
- * ReportParameters1.ReportNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters1#mmReportDateAndTime
+ * ReportParameters1.mmReportDateAndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportParameters1#mmUpdateType
+ * ReportParameters1.mmUpdateType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportParameters1#mmFrequency
+ * ReportParameters1.mmFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters1#ActivityIndicator
- * ReportParameters1.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters1#mmReportNumber
+ * ReportParameters1.mmReportNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters1#mmActivityIndicator
+ * ReportParameters1.mmActivityIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -59,15 +60,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#ReportParameters
- * NetPositionV03.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmReportParameters
+ * NetPositionV03.mmReportParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text netPositionIdentification;
 	/**
 	 * After netting, reference that is common to a net transaction to settle
 	 * and all its underlying trades.
@@ -111,7 +113,7 @@ public class ReportParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetPositionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetPositionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
@@ -119,11 +121,12 @@ public class ReportParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPositionIdentification";
 			definition = "After netting, reference that is common to a net transaction to settle and all its underlying trades.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice reportDateAndTime;
 	/**
 	 * Date and time of the net position report.
 	 * <p>
@@ -152,7 +155,7 @@ public class ReportParameters1 {
 	 * definition} = "Date and time of the net position report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
@@ -160,11 +163,12 @@ public class ReportParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
 			definition = "Date and time of the net position report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected StatementUpdateType1Code updateType;
 	/**
 	 * Indicates whether the statement is complete or contains changes only.
 	 * <p>
@@ -194,7 +198,7 @@ public class ReportParameters1 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
@@ -202,11 +206,12 @@ public class ReportParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
 		}
 	};
+	protected EventFrequency6Code frequency;
 	/**
 	 * Frequency of the report.
 	 * <p>
@@ -235,7 +240,7 @@ public class ReportParameters1 {
 	 * definition} = "Frequency of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
@@ -243,11 +248,12 @@ public class ReportParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency6Code.mmObject();
 		}
 	};
+	protected Exact5NumericText reportNumber;
 	/**
 	 * Sequential number of the report.
 	 * <p>
@@ -276,7 +282,7 @@ public class ReportParameters1 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
@@ -284,11 +290,12 @@ public class ReportParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact5NumericText.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -320,7 +327,7 @@ public class ReportParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
@@ -328,8 +335,8 @@ public class ReportParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -337,16 +344,64 @@ public class ReportParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters1.NetPositionIdentification, com.tools20022.repository.msg.ReportParameters1.ReportDateAndTime,
-						com.tools20022.repository.msg.ReportParameters1.UpdateType, com.tools20022.repository.msg.ReportParameters1.Frequency, com.tools20022.repository.msg.ReportParameters1.ReportNumber,
-						com.tools20022.repository.msg.ReportParameters1.ActivityIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.NetPositionV03.ReportParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters1.mmNetPositionIdentification, com.tools20022.repository.msg.ReportParameters1.mmReportDateAndTime,
+						com.tools20022.repository.msg.ReportParameters1.mmUpdateType, com.tools20022.repository.msg.ReportParameters1.mmFrequency, com.tools20022.repository.msg.ReportParameters1.mmReportNumber,
+						com.tools20022.repository.msg.ReportParameters1.mmActivityIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.NetPositionV03.mmReportParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportParameters1";
 				definition = "Parameters related to the net position.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNetPositionIdentification() {
+		return netPositionIdentification;
+	}
+
+	public void setNetPositionIdentification(Max35Text netPositionIdentification) {
+		this.netPositionIdentification = netPositionIdentification;
+	}
+
+	public DateAndDateTimeChoice getReportDateAndTime() {
+		return reportDateAndTime;
+	}
+
+	public void setReportDateAndTime(DateAndDateTimeChoice reportDateAndTime) {
+		this.reportDateAndTime = reportDateAndTime;
+	}
+
+	public StatementUpdateType1Code getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(StatementUpdateType1Code updateType) {
+		this.updateType = updateType;
+	}
+
+	public EventFrequency6Code getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(EventFrequency6Code frequency) {
+		this.frequency = frequency;
+	}
+
+	public Exact5NumericText getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Exact5NumericText reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
 	}
 }

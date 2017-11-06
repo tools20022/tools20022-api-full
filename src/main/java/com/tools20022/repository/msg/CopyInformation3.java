@@ -32,15 +32,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CopyInformation3#CopyIndicator
- * CopyInformation3.CopyIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CopyInformation3#mmCopyIndicator
+ * CopyInformation3.mmCopyIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CopyInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator copyIndicator;
 	/**
 	 * Indicates whether the message is a copy.
 	 * <p>
@@ -83,7 +85,7 @@ public class CopyInformation3 {
 	 * definition} = "Indicates whether the message is a copy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CopyInformation3.mmObject();
 			isDerived = false;
@@ -91,8 +93,8 @@ public class CopyInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicates whether the message is a copy.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -100,13 +102,21 @@ public class CopyInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CopyInformation3.CopyIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CopyInformation3.mmCopyIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CopyInformation3";
 				definition = "Information provided when the message is a copy of a previous message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getCopyIndicator() {
+		return copyIndicator;
+	}
+
+	public void setCopyIndicator(YesNoIndicator copyIndicator) {
+		this.copyIndicator = copyIndicator;
 	}
 }

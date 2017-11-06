@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Specifies a number of quotes, order and settlement conditions for a specific
@@ -41,42 +42,44 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#Identification
- * QuoteEntry1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#OrderType
- * QuoteEntry1.OrderType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#ValidUntilDateTime
- * QuoteEntry1.ValidUntilDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#Currency
- * QuoteEntry1.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#mmIdentification
+ * QuoteEntry1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#mmOrderType
+ * QuoteEntry1.mmOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteEntry1#InstrumentLegGroupDetails
- * QuoteEntry1.InstrumentLegGroupDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#OfferSide
- * QuoteEntry1.OfferSide}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#MidSide
- * QuoteEntry1.MidSide}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#BidSide
- * QuoteEntry1.BidSide}</li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmValidUntilDateTime
+ * QuoteEntry1.mmValidUntilDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#mmCurrency
+ * QuoteEntry1.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteEntry1#FinancialInstrumentDetails
- * QuoteEntry1.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmInstrumentLegGroupDetails
+ * QuoteEntry1.mmInstrumentLegGroupDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#mmOfferSide
+ * QuoteEntry1.mmOfferSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#mmMidSide
+ * QuoteEntry1.mmMidSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#mmBidSide
+ * QuoteEntry1.mmBidSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteEntry1#FinancialInstrumentAttributes
- * QuoteEntry1.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmFinancialInstrumentDetails
+ * QuoteEntry1.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteEntry1#InstrumentLegDetails
- * QuoteEntry1.InstrumentLegDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmFinancialInstrumentAttributes
+ * QuoteEntry1.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteEntry1#LegFinancialInstrumentAttributes
- * QuoteEntry1.LegFinancialInstrumentAttributes}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#LegStipulations
- * QuoteEntry1.LegStipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmInstrumentLegDetails
+ * QuoteEntry1.mmInstrumentLegDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteEntry1#TradingSessionDetails
- * QuoteEntry1.TradingSessionDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#SettlementDetails
- * QuoteEntry1.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmLegFinancialInstrumentAttributes
+ * QuoteEntry1.mmLegFinancialInstrumentAttributes}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry1#mmLegStipulations
+ * QuoteEntry1.mmLegStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmTradingSessionDetails
+ * QuoteEntry1.mmTradingSessionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmSettlementDetails
+ * QuoteEntry1.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -86,8 +89,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -104,6 +107,7 @@ import java.util.function.Supplier;
 public class QuoteEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of a quote entry.
 	 * <p>
@@ -130,7 +134,7 @@ public class QuoteEntry1 {
 	 * definition} = "Identification of a quote entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
 			isDerived = false;
@@ -138,11 +142,12 @@ public class QuoteEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a quote entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OrderType1Code orderType;
 	/**
 	 * Indicates the type of instruction to a broker or dealer to buy or sell a
 	 * financial instrument.
@@ -157,8 +162,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderExecutionParameters
-	 * SecuritiesOrder.OrderExecutionParameters}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderExecutionParameters
+	 * SecuritiesOrder.mmOrderExecutionParameters}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -178,20 +183,21 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderExecutionParameters;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderExecutionParameters;
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OrderType1Code.mmObject();
 		}
 	};
+	protected ISODateTime validUntilDateTime;
 	/**
 	 * Expresses the validity date and time of the Quote.
 	 * <p>
@@ -204,8 +210,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#ValidUntilDateTime
-	 * Quote.ValidUntilDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmValidUntilDateTime
+	 * Quote.mmValidUntilDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -223,20 +229,21 @@ public class QuoteEntry1 {
 	 * definition} = "Expresses the validity date and time of the Quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidUntilDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.ValidUntilDateTime;
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Expresses the validity date and time of the Quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Can be used to specify the desired currency of the quoted price that may
 	 * differ from the normal trading currency of the instrument being quote
@@ -267,7 +274,7 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
 			isDerived = false;
@@ -275,11 +282,12 @@ public class QuoteEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Can be used to specify the desired currency of the quoted price that may differ from the normal trading currency of the instrument being quote requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected InstrumentLeg2 instrumentLegGroupDetails;
 	/**
 	 * Additionnal details related to the leg.
 	 * <p>
@@ -291,8 +299,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#LegAdditionalInformation
-	 * Asset.LegAdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmLegAdditionalInformation
+	 * Asset.mmLegAdditionalInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,21 +318,22 @@ public class QuoteEntry1 {
 	 * definition} = "Additionnal details related to the leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentLegGroupDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.LegAdditionalInformation;
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegGroupDetails";
 			definition = "Additionnal details related to the leg.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InstrumentLeg2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuoteSide1> offerSide;
 	/**
 	 * Indicates that the quote details are indicated as an offer of a security,
 	 * commodity, currency.
@@ -336,8 +345,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#OfferSide
-	 * SecuritiesQuoteVariable.OfferSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmOfferSide
+	 * SecuritiesQuoteVariable.mmOfferSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,20 +366,21 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OfferSide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOfferSide = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmOfferSide;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.OfferSide;
 			isDerived = false;
 			xmlTag = "OfferSd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferSide";
 			definition = "Indicates that the quote details are indicated as an offer of a security, commodity, currency.";
 			minOccurs = 0;
-			type_lazy = () -> QuoteSide1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuoteSide1> midSide;
 	/**
 	 * Indicates that the quote details are indicated as a mid of a security,
 	 * commodity, currency (an average of the offer and the bid).
@@ -382,8 +392,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#MidSide
-	 * SecuritiesQuoteVariable.MidSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmMidSide
+	 * SecuritiesQuoteVariable.mmMidSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -403,20 +413,21 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MidSide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMidSide = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmMidSide;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.MidSide;
 			isDerived = false;
 			xmlTag = "MidSd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSide";
 			definition = "Indicates that the quote details are indicated as a mid of a security, commodity, currency (an average of the offer and the bid).";
 			minOccurs = 0;
-			type_lazy = () -> QuoteSide1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuoteSide1> bidSide;
 	/**
 	 * Indicates that the quote details are indicated as a bid of a security,
 	 * commodity, currency.
@@ -428,8 +439,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#BidSide
-	 * SecuritiesQuoteVariable.BidSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmBidSide
+	 * SecuritiesQuoteVariable.mmBidSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -449,20 +460,21 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BidSide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBidSide = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.BidSide;
 			isDerived = false;
 			xmlTag = "BidSd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidSide";
 			definition = "Indicates that the quote details are indicated as a bid of a security, commodity, currency.";
 			minOccurs = 0;
-			type_lazy = () -> QuoteSide1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
 		}
 	};
+	protected SecurityIdentification7 financialInstrumentDetails;
 	/**
 	 * Provides details about the financial instrument.
 	 * <p>
@@ -475,8 +487,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -494,21 +506,22 @@ public class QuoteEntry1 {
 	 * definition} = "Provides details about the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Provides details about the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes1 financialInstrumentAttributes;
 	/**
 	 * Provides details about the financial instrument attributes.
 	 * <p>
@@ -521,8 +534,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#QuotedSecurity
-	 * Quote.QuotedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmQuotedSecurity
+	 * Quote.mmQuotedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -541,21 +554,22 @@ public class QuoteEntry1 {
 	 * "Provides details about the financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuotedSecurity;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.QuotedSecurity;
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification7> instrumentLegDetails;
 	/**
 	 * Provides details about the financial instrument of each leg.
 	 * <p>
@@ -568,8 +582,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -588,20 +602,21 @@ public class QuoteEntry1 {
 	 * "Provides details about the financial instrument of each leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentLegDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "InstrmLegDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegDetails";
 			definition = "Provides details about the financial instrument of each leg.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> legFinancialInstrumentAttributes;
 	/**
 	 * Provides details about the underlying financial instrument attributes of
 	 * each leg.
@@ -615,8 +630,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#QuotedSecurity
-	 * Quote.QuotedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmQuotedSecurity
+	 * Quote.mmQuotedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -636,20 +651,21 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuotedSecurity;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.QuotedSecurity;
 			isDerived = false;
 			xmlTag = "LegFinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegFinancialInstrumentAttributes";
 			definition = "Provides details about the underlying financial instrument attributes of each leg.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentStipulations> legStipulations;
 	/**
 	 * Provides details about the financial instrument stipulations of each leg.
 	 * <p>
@@ -662,8 +678,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#QuotedSecurity
-	 * Quote.QuotedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmQuotedSecurity
+	 * Quote.mmQuotedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -683,20 +699,21 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegStipulations = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuotedSecurity;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.QuotedSecurity;
 			isDerived = false;
 			xmlTag = "LegStiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegStipulations";
 			definition = "Provides details about the financial instrument stipulations of each leg.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected TradingSession1 tradingSessionDetails;
 	/**
 	 * Provides details about the trading session.
 	 * <p>
@@ -708,8 +725,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#QuoteTradingSession
-	 * SecuritiesQuoteVariable.QuoteTradingSession}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmQuoteTradingSession
+	 * SecuritiesQuoteVariable.mmQuoteTradingSession}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -727,21 +744,22 @@ public class QuoteEntry1 {
 	 * definition} = "Provides details about the trading session."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingSessionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingSessionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQuoteTradingSession;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.QuoteTradingSession;
 			isDerived = false;
 			xmlTag = "TradgSsnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionDetails";
 			definition = "Provides details about the trading session.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TradingSession1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 		}
 	};
+	protected SecuritiesSettlement1 settlementDetails;
 	/**
 	 * The parameters required in order to settle the transfer of a financial
 	 * instrument.
@@ -754,8 +772,8 @@ public class QuoteEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -775,32 +793,33 @@ public class QuoteEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> QuoteEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "The parameters required in order to settle the transfer of a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlement1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry1.Identification, com.tools20022.repository.msg.QuoteEntry1.OrderType, com.tools20022.repository.msg.QuoteEntry1.ValidUntilDateTime,
-						com.tools20022.repository.msg.QuoteEntry1.Currency, com.tools20022.repository.msg.QuoteEntry1.InstrumentLegGroupDetails, com.tools20022.repository.msg.QuoteEntry1.OfferSide,
-						com.tools20022.repository.msg.QuoteEntry1.MidSide, com.tools20022.repository.msg.QuoteEntry1.BidSide, com.tools20022.repository.msg.QuoteEntry1.FinancialInstrumentDetails,
-						com.tools20022.repository.msg.QuoteEntry1.FinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteEntry1.InstrumentLegDetails, com.tools20022.repository.msg.QuoteEntry1.LegFinancialInstrumentAttributes,
-						com.tools20022.repository.msg.QuoteEntry1.LegStipulations, com.tools20022.repository.msg.QuoteEntry1.TradingSessionDetails, com.tools20022.repository.msg.QuoteEntry1.SettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry1.mmIdentification, com.tools20022.repository.msg.QuoteEntry1.mmOrderType, com.tools20022.repository.msg.QuoteEntry1.mmValidUntilDateTime,
+						com.tools20022.repository.msg.QuoteEntry1.mmCurrency, com.tools20022.repository.msg.QuoteEntry1.mmInstrumentLegGroupDetails, com.tools20022.repository.msg.QuoteEntry1.mmOfferSide,
+						com.tools20022.repository.msg.QuoteEntry1.mmMidSide, com.tools20022.repository.msg.QuoteEntry1.mmBidSide, com.tools20022.repository.msg.QuoteEntry1.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.QuoteEntry1.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteEntry1.mmInstrumentLegDetails,
+						com.tools20022.repository.msg.QuoteEntry1.mmLegFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteEntry1.mmLegStipulations, com.tools20022.repository.msg.QuoteEntry1.mmTradingSessionDetails,
+						com.tools20022.repository.msg.QuoteEntry1.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -814,5 +833,125 @@ public class QuoteEntry1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public OrderType1Code getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(OrderType1Code orderType) {
+		this.orderType = orderType;
+	}
+
+	public ISODateTime getValidUntilDateTime() {
+		return validUntilDateTime;
+	}
+
+	public void setValidUntilDateTime(ISODateTime validUntilDateTime) {
+		this.validUntilDateTime = validUntilDateTime;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public InstrumentLeg2 getInstrumentLegGroupDetails() {
+		return instrumentLegGroupDetails;
+	}
+
+	public void setInstrumentLegGroupDetails(com.tools20022.repository.msg.InstrumentLeg2 instrumentLegGroupDetails) {
+		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
+	}
+
+	public List<QuoteSide1> getOfferSide() {
+		return offerSide;
+	}
+
+	public void setOfferSide(List<com.tools20022.repository.msg.QuoteSide1> offerSide) {
+		this.offerSide = offerSide;
+	}
+
+	public List<QuoteSide1> getMidSide() {
+		return midSide;
+	}
+
+	public void setMidSide(List<com.tools20022.repository.msg.QuoteSide1> midSide) {
+		this.midSide = midSide;
+	}
+
+	public List<QuoteSide1> getBidSide() {
+		return bidSide;
+	}
+
+	public void setBidSide(List<com.tools20022.repository.msg.QuoteSide1> bidSide) {
+		this.bidSide = bidSide;
+	}
+
+	public SecurityIdentification7 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.SecurityIdentification7 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public List<SecurityIdentification7> getInstrumentLegDetails() {
+		return instrumentLegDetails;
+	}
+
+	public void setInstrumentLegDetails(List<com.tools20022.repository.msg.SecurityIdentification7> instrumentLegDetails) {
+		this.instrumentLegDetails = instrumentLegDetails;
+	}
+
+	public List<FinancialInstrumentAttributes1> getLegFinancialInstrumentAttributes() {
+		return legFinancialInstrumentAttributes;
+	}
+
+	public void setLegFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> legFinancialInstrumentAttributes) {
+		this.legFinancialInstrumentAttributes = legFinancialInstrumentAttributes;
+	}
+
+	public List<FinancialInstrumentStipulations> getLegStipulations() {
+		return legStipulations;
+	}
+
+	public void setLegStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> legStipulations) {
+		this.legStipulations = legStipulations;
+	}
+
+	public TradingSession1 getTradingSessionDetails() {
+		return tradingSessionDetails;
+	}
+
+	public void setTradingSessionDetails(com.tools20022.repository.msg.TradingSession1 tradingSessionDetails) {
+		this.tradingSessionDetails = tradingSessionDetails;
+	}
+
+	public SecuritiesSettlement1 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(com.tools20022.repository.msg.SecuritiesSettlement1 settlementDetails) {
+		this.settlementDetails = settlementDetails;
 	}
 }

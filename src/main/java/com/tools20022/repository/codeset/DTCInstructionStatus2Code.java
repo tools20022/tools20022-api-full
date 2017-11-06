@@ -34,54 +34,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Cancel
- * DTCInstructionStatus2Code.Cancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmCancel
+ * DTCInstructionStatus2Code.mmCancel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#ConversionCancellation
- * DTCInstructionStatus2Code.ConversionCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmConversionCancellation
+ * DTCInstructionStatus2Code.mmConversionCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Dropped
- * DTCInstructionStatus2Code.Dropped}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmDropped
+ * DTCInstructionStatus2Code.mmDropped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Made
- * DTCInstructionStatus2Code.Made}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmMade
+ * DTCInstructionStatus2Code.mmMade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#PendingDocumentation
- * DTCInstructionStatus2Code.PendingDocumentation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmPendingDocumentation
+ * DTCInstructionStatus2Code.mmPendingDocumentation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#PendingApproval
- * DTCInstructionStatus2Code.PendingApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmPendingApproval
+ * DTCInstructionStatus2Code.mmPendingApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Pending
- * DTCInstructionStatus2Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmPending
+ * DTCInstructionStatus2Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#RejectedByAgent
- * DTCInstructionStatus2Code.RejectedByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmRejectedByAgent
+ * DTCInstructionStatus2Code.mmRejectedByAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Reject
- * DTCInstructionStatus2Code.Reject}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmReject
+ * DTCInstructionStatus2Code.mmReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#RecycleMade
- * DTCInstructionStatus2Code.RecycleMade}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmRecycleMade
+ * DTCInstructionStatus2Code.mmRecycleMade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Rescinded
- * DTCInstructionStatus2Code.Rescinded}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmRescinded
+ * DTCInstructionStatus2Code.mmRescinded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Swung
- * DTCInstructionStatus2Code.Swung}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmSwung
+ * DTCInstructionStatus2Code.mmSwung}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Withdrawn
- * DTCInstructionStatus2Code.Withdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmWithdrawn
+ * DTCInstructionStatus2Code.mmWithdrawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#Recycle
- * DTCInstructionStatus2Code.Recycle}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus2Code#mmRecycle
+ * DTCInstructionStatus2Code.mmRecycle}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,7 +112,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Cancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancel = new MMCode() {
+	public static final MMCode mmCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancel";
@@ -135,7 +135,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "ConversionCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConversionCancellation = new MMCode() {
+	public static final MMCode mmConversionCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionCancellation";
@@ -158,7 +158,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Dropped"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dropped = new MMCode() {
+	public static final MMCode mmDropped = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dropped";
@@ -181,7 +181,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Made"</li>
 	 * </ul>
 	 */
-	public static final MMCode Made = new MMCode() {
+	public static final MMCode mmMade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Made";
@@ -204,7 +204,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "PendingDocumentation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingDocumentation = new MMCode() {
+	public static final MMCode mmPendingDocumentation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDocumentation";
@@ -227,7 +227,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "PendingApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingApproval = new MMCode() {
+	public static final MMCode mmPendingApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingApproval";
@@ -250,7 +250,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -273,7 +273,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "RejectedByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedByAgent = new MMCode() {
+	public static final MMCode mmRejectedByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedByAgent";
@@ -296,7 +296,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Reject"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reject = new MMCode() {
+	public static final MMCode mmReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
@@ -319,7 +319,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "RecycleMade"</li>
 	 * </ul>
 	 */
-	public static final MMCode RecycleMade = new MMCode() {
+	public static final MMCode mmRecycleMade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecycleMade";
@@ -342,7 +342,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Rescinded"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rescinded = new MMCode() {
+	public static final MMCode mmRescinded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
@@ -365,7 +365,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Swung"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swung = new MMCode() {
+	public static final MMCode mmSwung = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swung";
@@ -388,7 +388,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawn = new MMCode() {
+	public static final MMCode mmWithdrawn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
@@ -411,7 +411,7 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	 * name} = "Recycle"</li>
 	 * </ul>
 	 */
-	public static final MMCode Recycle = new MMCode() {
+	public static final MMCode mmRecycle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycle";
@@ -422,16 +422,17 @@ public class DTCInstructionStatus2Code extends DTCInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCInstructionStatus2Code";
 				definition = "DTC (The Depository Trust Company) system status code of instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCInstructionStatus2Code.Cancel, com.tools20022.repository.codeset.DTCInstructionStatus2Code.ConversionCancellation,
-						com.tools20022.repository.codeset.DTCInstructionStatus2Code.Dropped, com.tools20022.repository.codeset.DTCInstructionStatus2Code.Made,
-						com.tools20022.repository.codeset.DTCInstructionStatus2Code.PendingDocumentation, com.tools20022.repository.codeset.DTCInstructionStatus2Code.PendingApproval,
-						com.tools20022.repository.codeset.DTCInstructionStatus2Code.Pending, com.tools20022.repository.codeset.DTCInstructionStatus2Code.RejectedByAgent, com.tools20022.repository.codeset.DTCInstructionStatus2Code.Reject,
-						com.tools20022.repository.codeset.DTCInstructionStatus2Code.RecycleMade, com.tools20022.repository.codeset.DTCInstructionStatus2Code.Rescinded, com.tools20022.repository.codeset.DTCInstructionStatus2Code.Swung,
-						com.tools20022.repository.codeset.DTCInstructionStatus2Code.Withdrawn, com.tools20022.repository.codeset.DTCInstructionStatus2Code.Recycle);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmCancel, com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmConversionCancellation,
+						com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmDropped, com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmMade,
+						com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmPendingDocumentation, com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmPendingApproval,
+						com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmPending, com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmRejectedByAgent,
+						com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmReject, com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmRecycleMade,
+						com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmRescinded, com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmSwung, com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmWithdrawn,
+						com.tools20022.repository.codeset.DTCInstructionStatus2Code.mmRecycle);
 				trace_lazy = () -> DTCInstructionStatusCode.mmObject();
 			}
 		});

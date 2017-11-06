@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#Selling
- * RestrictionType1Code.Selling}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#mmSelling
+ * RestrictionType1Code.mmSelling}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#Buying
- * RestrictionType1Code.Buying}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#mmBuying
+ * RestrictionType1Code.mmBuying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#Placing
- * RestrictionType1Code.Placing}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#mmPlacing
+ * RestrictionType1Code.mmPlacing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#Holding
- * RestrictionType1Code.Holding}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#mmHolding
+ * RestrictionType1Code.mmHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#Voting
- * RestrictionType1Code.Voting}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionType1Code#mmVoting
+ * RestrictionType1Code.mmVoting}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 * name} = "Selling"</li>
 	 * </ul>
 	 */
-	public static final MMCode Selling = new MMCode() {
+	public static final MMCode mmSelling = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Selling";
@@ -113,7 +113,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 * name} = "Buying"</li>
 	 * </ul>
 	 */
-	public static final MMCode Buying = new MMCode() {
+	public static final MMCode mmBuying = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buying";
@@ -136,7 +136,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 * name} = "Placing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Placing = new MMCode() {
+	public static final MMCode mmPlacing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placing";
@@ -159,7 +159,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 * name} = "Holding"</li>
 	 * </ul>
 	 */
-	public static final MMCode Holding = new MMCode() {
+	public static final MMCode mmHolding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holding";
@@ -182,7 +182,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 * name} = "Voting"</li>
 	 * </ul>
 	 */
-	public static final MMCode Voting = new MMCode() {
+	public static final MMCode mmVoting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Voting";
@@ -193,13 +193,13 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SELR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RestrictionType1Code";
 				definition = "Specifies the type of restriction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionType1Code.Selling, com.tools20022.repository.codeset.RestrictionType1Code.Buying, com.tools20022.repository.codeset.RestrictionType1Code.Placing,
-						com.tools20022.repository.codeset.RestrictionType1Code.Holding, com.tools20022.repository.codeset.RestrictionType1Code.Voting);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionType1Code.mmSelling, com.tools20022.repository.codeset.RestrictionType1Code.mmBuying,
+						com.tools20022.repository.codeset.RestrictionType1Code.mmPlacing, com.tools20022.repository.codeset.RestrictionType1Code.mmHolding, com.tools20022.repository.codeset.RestrictionType1Code.mmVoting);
 				trace_lazy = () -> RestrictionTypeCode.mmObject();
 			}
 		});

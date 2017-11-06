@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation14#FullLegalName
- * Organisation14.FullLegalName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation14#mmFullLegalName
+ * Organisation14.mmFullLegalName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation14#OrganisationIdentification
- * Organisation14.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Organisation14#mmOrganisationIdentification
+ * Organisation14.mmOrganisationIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,18 +49,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#OrganisationIdentification
- * AccountClosingRequestV02.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#mmOrganisationIdentification
+ * AccountClosingRequestV02.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#OrganisationIdentification
- * AccountMandateMaintenanceRequestV02.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#mmOrganisationIdentification
+ * AccountMandateMaintenanceRequestV02.mmOrganisationIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Organisation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text fullLegalName;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -90,8 +91,8 @@ public class Organisation14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationName#LegalName
-	 * OrganisationName.LegalName}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationName#mmLegalName
+	 * OrganisationName.mmLegalName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +112,21 @@ public class Organisation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FullLegalName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFullLegalName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmLegalName;
 			componentContext_lazy = () -> Organisation14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.LegalName;
 			isDerived = false;
 			xmlTag = "FullLglNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullLegalName";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected OrganisationIdentification8 organisationIdentification;
 	/**
 	 * Unique and unambiguous way of identifying an organisation.
 	 * <p>
@@ -137,8 +139,8 @@ public class Organisation14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,30 +159,30 @@ public class Organisation14 {
 	 * "Unique and unambiguous way of identifying an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Organisation14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way of identifying an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrganisationIdentification8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation14.FullLegalName, com.tools20022.repository.msg.Organisation14.OrganisationIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation14.mmFullLegalName, com.tools20022.repository.msg.Organisation14.mmOrganisationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmOrganisationIdentification);
 				trace_lazy = () -> Organisation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingRequestV02.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.OrganisationIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Organisation14";
 				definition = "Information which describes the organisation.";
@@ -188,5 +190,21 @@ public class Organisation14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getFullLegalName() {
+		return fullLegalName;
+	}
+
+	public void setFullLegalName(Max350Text fullLegalName) {
+		this.fullLegalName = fullLegalName;
+	}
+
+	public OrganisationIdentification8 getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(com.tools20022.repository.msg.OrganisationIdentification8 organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
 	}
 }

@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#After
- * ProcessingPosition2Code.After}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#mmAfter
+ * ProcessingPosition2Code.mmAfter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#With
- * ProcessingPosition2Code.With}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#mmWith
+ * ProcessingPosition2Code.mmWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#Before
- * ProcessingPosition2Code.Before}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#mmBefore
+ * ProcessingPosition2Code.mmBefore}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#Information
- * ProcessingPosition2Code.Information}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition2Code#mmInformation
+ * ProcessingPosition2Code.mmInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class ProcessingPosition2Code extends ProcessingPositionCode {
 	 * name} = "After"</li>
 	 * </ul>
 	 */
-	public static final MMCode After = new MMCode() {
+	public static final MMCode mmAfter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "After";
@@ -110,7 +110,7 @@ public class ProcessingPosition2Code extends ProcessingPositionCode {
 	 * name} = "With"</li>
 	 * </ul>
 	 */
-	public static final MMCode With = new MMCode() {
+	public static final MMCode mmWith = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "With";
@@ -133,7 +133,7 @@ public class ProcessingPosition2Code extends ProcessingPositionCode {
 	 * name} = "Before"</li>
 	 * </ul>
 	 */
-	public static final MMCode Before = new MMCode() {
+	public static final MMCode mmBefore = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Before";
@@ -156,7 +156,7 @@ public class ProcessingPosition2Code extends ProcessingPositionCode {
 	 * name} = "Information"</li>
 	 * </ul>
 	 */
-	public static final MMCode Information = new MMCode() {
+	public static final MMCode mmInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
@@ -167,13 +167,13 @@ public class ProcessingPosition2Code extends ProcessingPositionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFTE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition2Code";
 				definition = "Specifies the processing position.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition2Code.After, com.tools20022.repository.codeset.ProcessingPosition2Code.With,
-						com.tools20022.repository.codeset.ProcessingPosition2Code.Before, com.tools20022.repository.codeset.ProcessingPosition2Code.Information);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition2Code.mmAfter, com.tools20022.repository.codeset.ProcessingPosition2Code.mmWith,
+						com.tools20022.repository.codeset.ProcessingPosition2Code.mmBefore, com.tools20022.repository.codeset.ProcessingPosition2Code.mmInformation);
 				trace_lazy = () -> ProcessingPositionCode.mmObject();
 			}
 		});

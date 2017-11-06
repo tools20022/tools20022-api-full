@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ErrorSeverity1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies information concerning the technical error that prevented delivery
@@ -36,19 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TechnicalError1#Severity
- * TechnicalError1.Severity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TechnicalError1#ErrorCode
- * TechnicalError1.ErrorCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TechnicalError1#Description
- * TechnicalError1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TechnicalError1#mmSeverity
+ * TechnicalError1.mmSeverity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TechnicalError1#mmErrorCode
+ * TechnicalError1.mmErrorCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TechnicalError1#mmDescription
+ * TechnicalError1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TechnicalError1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ErrorSeverity1Code severity;
 	/**
 	 * Indicates the severity of the related error.
 	 * <p>
@@ -92,7 +94,7 @@ public class TechnicalError1 {
 	 * definition} = "Indicates the severity of the related error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Severity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSeverity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TechnicalError1.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class TechnicalError1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Severity";
 			definition = "Indicates the severity of the related error.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ErrorSeverity1Code.mmObject();
 		}
 	};
+	protected TechnicalError1Choice errorCode;
 	/**
 	 * Specifies the error code.
 	 * <p>
@@ -132,7 +135,7 @@ public class TechnicalError1 {
 	 * definition} = "Specifies the error code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ErrorCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmErrorCode = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TechnicalError1.mmObject();
 			isDerived = false;
@@ -140,12 +143,13 @@ public class TechnicalError1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorCode";
 			definition = "Specifies the error code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TechnicalError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TechnicalError1Choice.mmObject();
 		}
 	};
+	protected List<Max140Text> description;
 	/**
 	 * Specification of the error, in free format.
 	 * <p>
@@ -173,7 +177,7 @@ public class TechnicalError1 {
 	 * definition} = "Specification of the error, in free format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TechnicalError1.mmObject();
 			isDerived = false;
@@ -189,13 +193,37 @@ public class TechnicalError1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TechnicalError1.Severity, com.tools20022.repository.msg.TechnicalError1.ErrorCode, com.tools20022.repository.msg.TechnicalError1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TechnicalError1.mmSeverity, com.tools20022.repository.msg.TechnicalError1.mmErrorCode, com.tools20022.repository.msg.TechnicalError1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TechnicalError1";
 				definition = "Specifies information concerning the technical error that prevented delivery of the referenced messaging by the payment gateway application.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ErrorSeverity1Code getSeverity() {
+		return severity;
+	}
+
+	public void setSeverity(ErrorSeverity1Code severity) {
+		this.severity = severity;
+	}
+
+	public TechnicalError1Choice getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(TechnicalError1Choice errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public List<Max140Text> getDescription() {
+		return description;
+	}
+
+	public void setDescription(List<Max140Text> description) {
+		this.description = description;
 	}
 }

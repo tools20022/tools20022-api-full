@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder5#OrderReference
- * InvestmentFundOrder5.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder5#mmOrderReference
+ * InvestmentFundOrder5.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder5#ClientReference
- * InvestmentFundOrder5.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder5#mmClientReference
+ * InvestmentFundOrder5.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder5#CancellationReference
- * InvestmentFundOrder5.CancellationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder5#mmCancellationReference
+ * InvestmentFundOrder5.mmCancellationReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundOrder5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for an order, as assigned by the
 	 * instructing party.
@@ -85,8 +86,8 @@ public class InvestmentFundOrder5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +110,28 @@ public class InvestmentFundOrder5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder9#OrderReference
-	 * InvestmentFundOrder9.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder9#mmOrderReference
+	 * InvestmentFundOrder9.mmOrderReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder9.OrderReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder9.mmOrderReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of an order. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -144,8 +146,8 @@ public class InvestmentFundOrder5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,27 +170,28 @@ public class InvestmentFundOrder5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder9#ClientReference
-	 * InvestmentFundOrder9.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder9#mmClientReference
+	 * InvestmentFundOrder9.mmClientReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> InvestmentFundOrder5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder9.ClientReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder9.mmClientReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for an order cancellation, as assigned
 	 * by the instructing party.
@@ -202,8 +205,8 @@ public class InvestmentFundOrder5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#CancellationRequestIdentification
-	 * SecuritiesTradeIdentification.CancellationRequestIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCancellationRequestIdentification
+	 * SecuritiesTradeIdentification.mmCancellationRequestIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,24 +229,24 @@ public class InvestmentFundOrder5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder9#CancellationReference
-	 * InvestmentFundOrder9.CancellationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder9#mmCancellationReference
+	 * InvestmentFundOrder9.mmCancellationReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCancellationRequestIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.CancellationRequestIdentification;
 			isDerived = false;
 			xmlTag = "CxlRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for an order cancellation, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder9.CancellationReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder9.mmCancellationReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -251,10 +254,10 @@ public class InvestmentFundOrder5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder5.OrderReference, com.tools20022.repository.msg.InvestmentFundOrder5.ClientReference,
-						com.tools20022.repository.msg.InvestmentFundOrder5.CancellationReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder5.mmOrderReference, com.tools20022.repository.msg.InvestmentFundOrder5.mmClientReference,
+						com.tools20022.repository.msg.InvestmentFundOrder5.mmCancellationReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrder5";
 				definition = "Reference of an order and order cancellation.";
@@ -262,5 +265,29 @@ public class InvestmentFundOrder5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
 	}
 }

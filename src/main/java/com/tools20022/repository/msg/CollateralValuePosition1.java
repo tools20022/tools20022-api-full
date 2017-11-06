@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CollateralValuation;
 import com.tools20022.repository.entity.Security;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the collateral value position/balance.
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#DataAccessTime
- * CollateralValuePosition1.DataAccessTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#mmDataAccessTime
+ * CollateralValuePosition1.mmDataAccessTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#TotalCollateralValuation
- * CollateralValuePosition1.TotalCollateralValuation}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#mmTotalCollateralValuation
+ * CollateralValuePosition1.mmTotalCollateralValuation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#SecuritiesAccount
- * CollateralValuePosition1.SecuritiesAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#mmSecuritiesAccount
+ * CollateralValuePosition1.mmSecuritiesAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#Securities
- * CollateralValuePosition1.Securities}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#mmSecurities
+ * CollateralValuePosition1.mmSecurities}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralValuePosition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime dataAccessTime;
 	/**
 	 * Date and time when the data was last accessed.
 	 * <p>
@@ -98,7 +100,7 @@ public class CollateralValuePosition1 {
 	 * definition} = "Date and time when the data was last accessed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DataAccessTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDataAccessTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
 			isDerived = false;
@@ -106,11 +108,12 @@ public class CollateralValuePosition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataAccessTime";
 			definition = "Date and time when the data was last accessed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalCollateralValuation;
 	/**
 	 * Total value of the collateral valuation.
 	 * <p>
@@ -124,8 +127,8 @@ public class CollateralValuePosition1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#ReportedCurrencyAndAmount
-	 * CollateralValuation.ReportedCurrencyAndAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmReportedCurrencyAndAmount
+	 * CollateralValuation.mmReportedCurrencyAndAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +147,21 @@ public class CollateralValuePosition1 {
 	 * definition} = "Total value of the collateral valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalCollateralValuation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalCollateralValuation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmReportedCurrencyAndAmount;
 			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.ReportedCurrencyAndAmount;
 			isDerived = false;
 			xmlTag = "TtlCollValtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateralValuation";
 			definition = "Total value of the collateral valuation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected SecuritiesAccount2 securitiesAccount;
 	/**
 	 * Unique identification, as assigned by the account servicer, to
 	 * unambiguously identify the securities account.
@@ -170,8 +174,8 @@ public class CollateralValuePosition1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesAccount
-	 * Security.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesAccount
+	 * Security.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,21 +196,22 @@ public class CollateralValuePosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "SctiesAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the securities account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityCharacteristics1> securities;
 	/**
 	 * Unique identification, as known by the account owner, to unambiguously
 	 * identify the securities on which the collateral value position is
@@ -242,33 +247,65 @@ public class CollateralValuePosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Securities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecurities = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "Scties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			definition = "Unique identification, as known by the account owner, to unambiguously identify the securities on which the collateral value position is requested.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityCharacteristics1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityCharacteristics1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuePosition1.DataAccessTime, com.tools20022.repository.msg.CollateralValuePosition1.TotalCollateralValuation,
-						com.tools20022.repository.msg.CollateralValuePosition1.SecuritiesAccount, com.tools20022.repository.msg.CollateralValuePosition1.Securities);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuePosition1.mmDataAccessTime, com.tools20022.repository.msg.CollateralValuePosition1.mmTotalCollateralValuation,
+						com.tools20022.repository.msg.CollateralValuePosition1.mmSecuritiesAccount, com.tools20022.repository.msg.CollateralValuePosition1.mmSecurities);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValuePosition1";
 				definition = "Details of the collateral value position/balance.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getDataAccessTime() {
+		return dataAccessTime;
+	}
+
+	public void setDataAccessTime(ISODateTime dataAccessTime) {
+		this.dataAccessTime = dataAccessTime;
+	}
+
+	public ActiveCurrencyAndAmount getTotalCollateralValuation() {
+		return totalCollateralValuation;
+	}
+
+	public void setTotalCollateralValuation(ActiveCurrencyAndAmount totalCollateralValuation) {
+		this.totalCollateralValuation = totalCollateralValuation;
+	}
+
+	public SecuritiesAccount2 getSecuritiesAccount() {
+		return securitiesAccount;
+	}
+
+	public void setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount2 securitiesAccount) {
+		this.securitiesAccount = securitiesAccount;
+	}
+
+	public List<SecurityCharacteristics1> getSecurities() {
+		return securities;
+	}
+
+	public void setSecurities(List<com.tools20022.repository.msg.SecurityCharacteristics1> securities) {
+		this.securities = securities;
 	}
 }

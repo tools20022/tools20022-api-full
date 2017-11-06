@@ -72,18 +72,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#CancellationRequestIdentification
- * InvoiceFinancingCancellationRequestV01.CancellationRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#mmCancellationRequestIdentification
+ * InvoiceFinancingCancellationRequestV01.mmCancellationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#CancellationRequestInformation
- * InvoiceFinancingCancellationRequestV01.CancellationRequestInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#mmCancellationRequestInformation
+ * InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#identifier
- * InvoiceFinancingCancellationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsin.003.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceFinancingCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 cancellationRequestIdentification;
 	/**
 	 * Unique and unambiguous identification of the message.
 	 * <p>
@@ -122,17 +121,18 @@ public class InvoiceFinancingCancellationRequestV01 {
 	 * definition} = "Unique and unambiguous identification of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequestIdentification";
 			definition = "Unique and unambiguous identification of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected CancellationRequestInformation1 cancellationRequestInformation;
 	/**
 	 * Set of information related to the cancellation request, such as actors
 	 * involved and identification of the original invoice financing request to
@@ -160,42 +160,15 @@ public class InvoiceFinancingCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationRequestInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationRequestInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlReqInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequestInformation";
 			definition = "Set of information related to the cancellation request, such as actors involved and identification of the original invoice financing request to which the cancellation request refers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CancellationRequestInformation1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsin"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsin";
-			messageFunctionality = "003";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -209,11 +182,34 @@ public class InvoiceFinancingCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "InvcFincgCxlReq";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.CancellationRequestIdentification,
-						com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.CancellationRequestInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.mmCancellationRequestIdentification,
+						com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsin";
+						messageFunctionality = "003";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getCancellationRequestIdentification() {
+		return cancellationRequestIdentification;
+	}
+
+	public void setCancellationRequestIdentification(MessageIdentification1 cancellationRequestIdentification) {
+		this.cancellationRequestIdentification = cancellationRequestIdentification;
+	}
+
+	public CancellationRequestInformation1 getCancellationRequestInformation() {
+		return cancellationRequestInformation;
+	}
+
+	public void setCancellationRequestInformation(CancellationRequestInformation1 cancellationRequestInformation) {
+		this.cancellationRequestInformation = cancellationRequestInformation;
 	}
 }

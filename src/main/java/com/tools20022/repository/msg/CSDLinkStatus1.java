@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.Status6Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Business status of the party for processing in the system.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CSDLinkStatus1#Status
- * CSDLinkStatus1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CSDLinkStatus1#StatusReason
- * CSDLinkStatus1.StatusReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CSDLinkStatus1#mmStatus
+ * CSDLinkStatus1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CSDLinkStatus1#mmStatusReason
+ * CSDLinkStatus1.mmStatusReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CSDLinkStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status6Code status;
 	/**
 	 * Status of the party maintenance instruction.
 	 * <p>
@@ -83,7 +85,7 @@ public class CSDLinkStatus1 {
 	 * definition} = "Status of the party maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CSDLinkStatus1.mmObject();
 			isDerived = false;
@@ -91,11 +93,12 @@ public class CSDLinkStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the party maintenance instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
 	 * Underlying reason related to the creation of a transaction.
 	 * <p>
@@ -123,7 +126,7 @@ public class CSDLinkStatus1 {
 	 * "Underlying reason related to the creation of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CSDLinkStatus1.mmObject();
 			isDerived = false;
@@ -132,21 +135,37 @@ public class CSDLinkStatus1 {
 			name = "StatusReason";
 			definition = "Underlying reason related to the creation of a transaction.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CSDLinkStatus1.Status, com.tools20022.repository.msg.CSDLinkStatus1.StatusReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CSDLinkStatus1.mmStatus, com.tools20022.repository.msg.CSDLinkStatus1.mmStatusReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CSDLinkStatus1";
 				definition = "Business status of the party for processing in the system. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status6Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status6Code status) {
+		this.status = status;
+	}
+
+	public List<StatusReasonInformation10> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = statusReason;
 	}
 }

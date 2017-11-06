@@ -30,10 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#TaxPrincipal
- * TaxLiabilityCode.TaxPrincipal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#TaxAgent
- * TaxLiabilityCode.TaxAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#mmTaxPrincipal
+ * TaxLiabilityCode.mmTaxPrincipal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#mmTaxAgent
+ * TaxLiabilityCode.mmTaxAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +90,7 @@ public class TaxLiabilityCode {
 	 * "Settlement party is acting as a principal for tax liability."</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxPrincipal = new MMCode() {
+	public static final MMCode mmTaxPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxPrincipal";
@@ -120,7 +121,7 @@ public class TaxLiabilityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxAgent = new MMCode() {
+	public static final MMCode mmTaxAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxAgent";
@@ -133,12 +134,12 @@ public class TaxLiabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxLiabilityCode";
 				definition = "Specifies the tax role capacity of the instructing party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxLiabilityCode.TaxPrincipal, com.tools20022.repository.codeset.TaxLiabilityCode.TaxAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxLiabilityCode.mmTaxPrincipal, com.tools20022.repository.codeset.TaxLiabilityCode.mmTaxAgent);
 				derivation_lazy = () -> Arrays.asList(TaxLiability1Code.mmObject());
 			}
 		});

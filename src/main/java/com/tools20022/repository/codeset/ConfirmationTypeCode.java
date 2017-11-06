@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#Intent
- * ConfirmationTypeCode.Intent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#mmIntent
+ * ConfirmationTypeCode.mmIntent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#Actual
- * ConfirmationTypeCode.Actual}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#mmActual
+ * ConfirmationTypeCode.mmActual}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class ConfirmationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Intent = new MMCode() {
+	public static final MMCode mmIntent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intent";
@@ -128,7 +128,7 @@ public class ConfirmationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Actual = new MMCode() {
+	public static final MMCode mmActual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
@@ -141,12 +141,12 @@ public class ConfirmationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationTypeCode";
 				definition = "Specifies whether a message is an intention to execute a transfer instruction or an actual confirmation of the execution of the transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationTypeCode.Intent, com.tools20022.repository.codeset.ConfirmationTypeCode.Actual);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationTypeCode.mmIntent, com.tools20022.repository.codeset.ConfirmationTypeCode.mmActual);
 				derivation_lazy = () -> Arrays.asList(ConfirmationType1Code.mmObject());
 			}
 		});

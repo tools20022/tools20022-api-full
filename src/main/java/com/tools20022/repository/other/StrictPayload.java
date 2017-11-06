@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,7 +56,7 @@ public class StrictPayload {
 	final static public MMExternalSchema mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMExternalSchema() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StrictPayload";
 				definition = "Specifies a data structure that allows the inclusion of any valid XML structure, for example, through an XML Schema. The property namespace is set to 'any'.\r\nThe processContents value is 'strict' which according to the above specification and to ISO 20022:2013 means that the application must understand and validate the content.";

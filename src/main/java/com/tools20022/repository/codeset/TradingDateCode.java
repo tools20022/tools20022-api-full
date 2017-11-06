@@ -29,8 +29,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingDateCode#Various
- * TradingDateCode.Various}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingDateCode#mmVarious
+ * TradingDateCode.mmVarious}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class TradingDateCode {
 	 * "Partial trades have occurred over a period of two or more days."</li>
 	 * </ul>
 	 */
-	public static final MMCode Various = new MMCode() {
+	public static final MMCode mmVarious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
@@ -99,12 +99,12 @@ public class TradingDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VARI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingDateCode";
 				definition = "Indicates if the Trading Date is various.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingDateCode.Various);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingDateCode.mmVarious);
 				derivation_lazy = () -> Arrays.asList(TradingDate1Code.mmObject());
 			}
 		});

@@ -37,19 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#Identification
- * ATMTotals3.Identification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#mmIdentification
+ * ATMTotals3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTotals3#AdditionalIdentification
- * ATMTotals3.AdditionalIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#Period
- * ATMTotals3.Period}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#Currency
- * ATMTotals3.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#Count
- * ATMTotals3.Count}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#Amount
- * ATMTotals3.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTotals3#mmAdditionalIdentification
+ * ATMTotals3.mmAdditionalIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#mmPeriod
+ * ATMTotals3.mmPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#mmCurrency
+ * ATMTotals3.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#mmCount
+ * ATMTotals3.mmCount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3#mmAmount
+ * ATMTotals3.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTotals3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text identification;
 	/**
 	 * Identification of the type of transaction. The following values are
 	 * predefined: Withdrawal, QuickWithdrawal, WithdrawalForDisabledPerson,
@@ -103,7 +104,7 @@ public class ATMTotals3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
@@ -111,11 +112,12 @@ public class ATMTotals3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the type of transaction. The following values are predefined: Withdrawal, QuickWithdrawal, WithdrawalForDisabledPerson, CashDeposit, Transfer, InternationalTransfer, PeriodicTransfer, CheckCommand, MobileTopUp, Moneo.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max70Text additionalIdentification;
 	/**
 	 * Additional identification of the type of transaction. The following
 	 * values are predefined: Vodaphone, TMobile, Verizon.
@@ -145,7 +147,7 @@ public class ATMTotals3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class ATMTotals3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "Additional identification of the type of transaction. The following values are predefined:  Vodaphone, TMobile, Verizon.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ATMCounterType2Code period;
 	/**
 	 * Period of computation for the counters.
 	 * <p>
@@ -189,20 +192,21 @@ public class ATMTotals3 {
 	 * definition} = "Period of computation for the counters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Period = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTotals3.mmObject();
 			businessComponentTrace_lazy = () -> ATMTotal.mmObject();
+			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period of computation for the counters.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCounterType2Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency of the totals.
 	 * <p>
@@ -216,8 +220,8 @@ public class ATMTotals3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ATMTotal#Currency
-	 * ATMTotal.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.ATMTotal#mmCurrency
+	 * ATMTotal.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.ATMTotals3
@@ -235,20 +239,21 @@ public class ATMTotals3 {
 	 * definition} = "Currency of the totals."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmCurrency;
 			componentContext_lazy = () -> ATMTotals3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the totals.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected Number count;
 	/**
 	 * Number of transaction with the defined currency.
 	 * <p>
@@ -261,8 +266,8 @@ public class ATMTotals3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ATMTotal#ATMCurrentNumber
-	 * ATMTotal.ATMCurrentNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrentNumber
+	 * ATMTotal.mmATMCurrentNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.ATMTotals3
@@ -280,20 +285,21 @@ public class ATMTotals3 {
 	 * definition} = "Number of transaction with the defined currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Count = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMCurrentNumber;
 			componentContext_lazy = () -> ATMTotals3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.ATMCurrentNumber;
 			isDerived = false;
 			xmlTag = "Cnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Count";
 			definition = "Number of transaction with the defined currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount amount;
 	/**
 	 * Amount of transaction with the defined currency.
 	 * <p>
@@ -307,8 +313,8 @@ public class ATMTotals3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ATMTotal#ATMCurrent
-	 * ATMTotal.ATMCurrent}</li>
+	 * {@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrent
+	 * ATMTotal.mmATMCurrent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.ATMTotals3
@@ -326,17 +332,17 @@ public class ATMTotals3 {
 	 * definition} = "Amount of transaction with the defined currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMCurrent;
 			componentContext_lazy = () -> ATMTotals3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.ATMCurrent;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of transaction with the defined currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -344,15 +350,63 @@ public class ATMTotals3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals3.Identification, com.tools20022.repository.msg.ATMTotals3.AdditionalIdentification, com.tools20022.repository.msg.ATMTotals3.Period,
-						com.tools20022.repository.msg.ATMTotals3.Currency, com.tools20022.repository.msg.ATMTotals3.Count, com.tools20022.repository.msg.ATMTotals3.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals3.mmIdentification, com.tools20022.repository.msg.ATMTotals3.mmAdditionalIdentification, com.tools20022.repository.msg.ATMTotals3.mmPeriod,
+						com.tools20022.repository.msg.ATMTotals3.mmCurrency, com.tools20022.repository.msg.ATMTotals3.mmCount, com.tools20022.repository.msg.ATMTotals3.mmAmount);
 				trace_lazy = () -> ATMTotal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTotals3";
 				definition = "Totals of the ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max70Text identification) {
+		this.identification = identification;
+	}
+
+	public Max70Text getAdditionalIdentification() {
+		return additionalIdentification;
+	}
+
+	public void setAdditionalIdentification(Max70Text additionalIdentification) {
+		this.additionalIdentification = additionalIdentification;
+	}
+
+	public ATMCounterType2Code getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(ATMCounterType2Code period) {
+		this.period = period;
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public Number getCount() {
+		return count;
+	}
+
+	public void setCount(Number count) {
+		this.count = count;
+	}
+
+	public ImpliedCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

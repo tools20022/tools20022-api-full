@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.DebitTypeCode DebitTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#Global
- * DebitType1Code.Global}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#Single
- * DebitType1Code.Single}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#mmGlobal
+ * DebitType1Code.mmGlobal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#mmSingle
+ * DebitType1Code.mmSingle}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class DebitType1Code extends DebitTypeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode Global = new MMCode() {
+	public static final MMCode mmGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
@@ -95,7 +95,7 @@ public class DebitType1Code extends DebitTypeCode {
 	 * name} = "Single"</li>
 	 * </ul>
 	 */
-	public static final MMCode Single = new MMCode() {
+	public static final MMCode mmSingle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
@@ -106,11 +106,11 @@ public class DebitType1Code extends DebitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DebitType1Code";
 				definition = "Specifies the type of debit to be applied to the payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DebitType1Code.Global, com.tools20022.repository.codeset.DebitType1Code.Single);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DebitType1Code.mmGlobal, com.tools20022.repository.codeset.DebitType1Code.mmSingle);
 				trace_lazy = () -> DebitTypeCode.mmObject();
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat39Choice#Rate
- * RateAndAmountFormat39Choice.Rate}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat39Choice#mmRate
+ * RateAndAmountFormat39Choice.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat39Choice#Amount
- * RateAndAmountFormat39Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat39Choice#mmAmount
+ * RateAndAmountFormat39Choice.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateAndAmountFormat39Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Value is expressed as a rate.
 	 * <p>
@@ -80,8 +81,8 @@ public class RateAndAmountFormat39Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Rate
-	 * RateAndAmount.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRate
+	 * RateAndAmount.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,25 +102,26 @@ public class RateAndAmountFormat39Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat5Choice#Rate
-	 * RateAndAmountFormat5Choice.Rate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat5Choice#mmRate
+	 * RateAndAmountFormat5Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmRate;
 			componentContext_lazy = () -> RateAndAmountFormat39Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat5Choice.Rate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat5Choice.mmRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Value is expressed as a currency and amount.
 	 * <p>
@@ -133,8 +135,8 @@ public class RateAndAmountFormat39Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Amount
-	 * RateAndAmount.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAmount
+	 * RateAndAmount.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,22 +156,22 @@ public class RateAndAmountFormat39Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat5Choice#Amount
-	 * RateAndAmountFormat5Choice.Amount}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat5Choice#mmAmount
+	 * RateAndAmountFormat5Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
 			componentContext_lazy = () -> RateAndAmountFormat39Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value is expressed as a currency and amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat5Choice.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat5Choice.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -177,9 +179,9 @@ public class RateAndAmountFormat39Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat39Choice.Rate, com.tools20022.repository.choice.RateAndAmountFormat39Choice.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat39Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat39Choice.mmAmount);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateAndAmountFormat39Choice";
 				definition = "Choice of format between rate and amount.";
@@ -187,5 +189,21 @@ public class RateAndAmountFormat39Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
 	}
 }

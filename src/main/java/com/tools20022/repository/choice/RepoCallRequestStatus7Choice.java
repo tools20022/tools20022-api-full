@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#AcknowledgedAccepted
- * RepoCallRequestStatus7Choice.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#mmAcknowledgedAccepted
+ * RepoCallRequestStatus7Choice.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#Denied
- * RepoCallRequestStatus7Choice.Denied}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#mmDenied
+ * RepoCallRequestStatus7Choice.mmDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#Proprietary
- * RepoCallRequestStatus7Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#mmProprietary
+ * RepoCallRequestStatus7Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,18 +52,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#RepoCallRequestStatus
- * SecuritiesFinancingStatusAdviceV06.RepoCallRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmRepoCallRequestStatus
+ * SecuritiesFinancingStatusAdviceV06.mmRepoCallRequestStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#RepoCallRequestStatus
- * SecuritiesFinancingStatusAdviceV07.RepoCallRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmRepoCallRequestStatus
+ * SecuritiesFinancingStatusAdviceV07.mmRepoCallRequestStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RepoCallRequestStatus7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AcknowledgedAcceptedStatus22Choice acknowledgedAccepted;
 	/**
 	 * Instruction has been acknowledged by the account servicer.
 	 * <p>
@@ -94,8 +95,8 @@ public class RepoCallRequestStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#RepoCallAcknowledgementReason
-	 * SecuritiesTradeStatusReason.RepoCallAcknowledgementReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmRepoCallAcknowledgementReason
+	 * SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,26 +117,27 @@ public class RepoCallRequestStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#AcknowledgedAccepted
-	 * RepoCallRequestStatus5Choice.AcknowledgedAccepted}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#mmAcknowledgedAccepted
+	 * RepoCallRequestStatus5Choice.mmAcknowledgedAccepted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcknowledgedAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> RepoCallRequestStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.RepoCallAcknowledgementReason;
 			isDerived = false;
 			xmlTag = "AckdAccptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged by the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus5Choice.AcknowledgedAccepted;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus5Choice.mmAcknowledgedAccepted;
 			maxOccurs = 1;
-			type_lazy = () -> AcknowledgedAcceptedStatus22Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus22Choice.mmObject();
 		}
 	};
+	protected DeniedStatus17Choice denied;
 	/**
 	 * Instruction/Request will not be executed.
 	 * <p>
@@ -148,8 +150,8 @@ public class RepoCallRequestStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#DeniedReason
-	 * SecuritiesTradeStatusReason.DeniedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmDeniedReason
+	 * SecuritiesTradeStatusReason.mmDeniedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,26 +171,27 @@ public class RepoCallRequestStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#Denied
-	 * RepoCallRequestStatus5Choice.Denied}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#mmDenied
+	 * RepoCallRequestStatus5Choice.mmDenied}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Denied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> RepoCallRequestStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.DeniedReason;
 			isDerived = false;
 			xmlTag = "Dnd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			definition = "Instruction/Request will not be executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus5Choice.Denied;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus5Choice.mmDenied;
 			maxOccurs = 1;
-			type_lazy = () -> DeniedStatus17Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.DeniedStatus17Choice.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason6 proprietary;
 	/**
 	 * Proprietary status.
 	 * <p>
@@ -222,36 +225,36 @@ public class RepoCallRequestStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#Proprietary
-	 * RepoCallRequestStatus5Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#mmProprietary
+	 * RepoCallRequestStatus5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RepoCallRequestStatus7Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> RepoCallRequestStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus5Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus5Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus7Choice.AcknowledgedAccepted, com.tools20022.repository.choice.RepoCallRequestStatus7Choice.Denied,
-						com.tools20022.repository.choice.RepoCallRequestStatus7Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus7Choice.mmAcknowledgedAccepted, com.tools20022.repository.choice.RepoCallRequestStatus7Choice.mmDenied,
+						com.tools20022.repository.choice.RepoCallRequestStatus7Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmRepoCallRequestStatus,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmRepoCallRequestStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.RepoCallRequestStatus,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.RepoCallRequestStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepoCallRequestStatus7Choice";
 				definition = "Choice of format for the repurchase agreement call acknowledgement.";
@@ -259,5 +262,29 @@ public class RepoCallRequestStatus7Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AcknowledgedAcceptedStatus22Choice getAcknowledgedAccepted() {
+		return acknowledgedAccepted;
+	}
+
+	public void setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus22Choice acknowledgedAccepted) {
+		this.acknowledgedAccepted = acknowledgedAccepted;
+	}
+
+	public DeniedStatus17Choice getDenied() {
+		return denied;
+	}
+
+	public void setDenied(com.tools20022.repository.choice.DeniedStatus17Choice denied) {
+		this.denied = denied;
+	}
+
+	public ProprietaryStatusAndReason6 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(ProprietaryStatusAndReason6 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

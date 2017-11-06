@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType5Code#Trade
- * SecuritiesTransactionType5Code.Trade}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType5Code#mmTrade
+ * SecuritiesTransactionType5Code.mmTrade}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class SecuritiesTransactionType5Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Trade"</li>
 	 * </ul>
 	 */
-	public static final MMCode Trade = new MMCode() {
+	public static final MMCode mmTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
@@ -90,12 +90,12 @@ public class SecuritiesTransactionType5Code extends SecuritiesTransactionTypeV2C
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionType5Code";
 				definition = "Specifies underlying information regarding the type of transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType5Code.Trade);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType5Code.mmTrade);
 				trace_lazy = () -> SecuritiesTransactionTypeV2Code.mmObject();
 			}
 		});

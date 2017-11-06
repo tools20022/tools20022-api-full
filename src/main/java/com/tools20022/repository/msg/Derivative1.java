@@ -31,17 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Derivative1#Future
- * Derivative1.Future}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Derivative1#Option
- * Derivative1.Option}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Derivative1#mmFuture
+ * Derivative1.mmFuture}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Derivative1#mmOption
+ * Derivative1.mmOption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Derivative1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Future2 future;
 	/**
 	 * Parameters for contracts which obligate the buyer to receive and the
 	 * seller to deliver in the future the assets specified at an agreed price.
@@ -82,7 +83,7 @@ public class Derivative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Future = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFuture = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Derivative1.mmObject();
 			isDerived = false;
@@ -90,12 +91,13 @@ public class Derivative1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
 			definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Future2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Future2.mmObject();
 		}
 	};
+	protected Option7 option;
 	/**
 	 * Contracts which grant to the holder either the privilege to purchase or
 	 * the privilege to sell the assets specified at a predetermined price or
@@ -124,7 +126,7 @@ public class Derivative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Option = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Derivative1.mmObject();
 			isDerived = false;
@@ -132,23 +134,39 @@ public class Derivative1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			definition = "Contracts which grant to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Option7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Option7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Derivative1.Future, com.tools20022.repository.msg.Derivative1.Option);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Derivative1.mmFuture, com.tools20022.repository.msg.Derivative1.mmOption);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Derivative1";
 				definition = "Represents different types of derivative.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Future2 getFuture() {
+		return future;
+	}
+
+	public void setFuture(com.tools20022.repository.msg.Future2 future) {
+		this.future = future;
+	}
+
+	public Option7 getOption() {
+		return option;
+	}
+
+	public void setOption(com.tools20022.repository.msg.Option7 option) {
+		this.option = option;
 	}
 }

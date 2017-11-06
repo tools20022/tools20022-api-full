@@ -35,28 +35,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason15#InferredMatchingStatus
- * StatusAndReason15.InferredMatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason15#mmInferredMatchingStatus
+ * StatusAndReason15.mmInferredMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason15#MatchingStatus
- * StatusAndReason15.MatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason15#mmMatchingStatus
+ * StatusAndReason15.mmMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason15#SettlementStatus
- * StatusAndReason15.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason15#mmSettlementStatus
+ * StatusAndReason15.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason15#InstructionProcessingStatus
- * StatusAndReason15.InstructionProcessingStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason15#Settled
- * StatusAndReason15.Settled}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason15#Proprietary
- * StatusAndReason15.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason15#mmInstructionProcessingStatus
+ * StatusAndReason15.mmInstructionProcessingStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason15#mmSettled
+ * StatusAndReason15.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason15#mmProprietary
+ * StatusAndReason15.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusAndReason15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MatchingStatus7Choice inferredMatchingStatus;
 	/**
 	 * Provides the matching status of an instruction as known by the account
 	 * servicer based on an allegement. At this time no matching took place on
@@ -101,7 +103,7 @@ public class StatusAndReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
@@ -109,12 +111,13 @@ public class StatusAndReason15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingStatus7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MatchingStatus7Choice.mmObject();
 		}
 	};
+	protected MatchingStatus7Choice matchingStatus;
 	/**
 	 * Provides the matching status of the instruction.
 	 * <p>
@@ -142,7 +145,7 @@ public class StatusAndReason15 {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
@@ -150,12 +153,13 @@ public class StatusAndReason15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingStatus7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MatchingStatus7Choice.mmObject();
 		}
 	};
+	protected SettlementStatus7Choice settlementStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -183,7 +187,7 @@ public class StatusAndReason15 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
@@ -191,12 +195,13 @@ public class StatusAndReason15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementStatus7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SettlementStatus7Choice.mmObject();
 		}
 	};
+	protected InstructionProcessingStatus10Choice instructionProcessingStatus;
 	/**
 	 * Provides the status of an instruction.
 	 * <p>
@@ -224,7 +229,7 @@ public class StatusAndReason15 {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
@@ -232,12 +237,13 @@ public class StatusAndReason15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Provides the status of an instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InstructionProcessingStatus10Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InstructionProcessingStatus10Choice.mmObject();
 		}
 	};
+	protected ProprietaryReason1 settled;
 	/**
 	 * Specifies the state or the condition.
 	 * <p>
@@ -264,7 +270,7 @@ public class StatusAndReason15 {
 	 * definition} = "Specifies the state or the condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Settled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
@@ -272,12 +278,13 @@ public class StatusAndReason15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Specifies the state or the condition.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason1 proprietary;
 	/**
 	 * Proprietary status.
 	 * <p>
@@ -305,7 +312,7 @@ public class StatusAndReason15 {
 	 * definition} = "Proprietary status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
@@ -313,25 +320,73 @@ public class StatusAndReason15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason15.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason15.MatchingStatus,
-						com.tools20022.repository.msg.StatusAndReason15.SettlementStatus, com.tools20022.repository.msg.StatusAndReason15.InstructionProcessingStatus, com.tools20022.repository.msg.StatusAndReason15.Settled,
-						com.tools20022.repository.msg.StatusAndReason15.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason15.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason15.mmMatchingStatus,
+						com.tools20022.repository.msg.StatusAndReason15.mmSettlementStatus, com.tools20022.repository.msg.StatusAndReason15.mmInstructionProcessingStatus, com.tools20022.repository.msg.StatusAndReason15.mmSettled,
+						com.tools20022.repository.msg.StatusAndReason15.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusAndReason15";
 				definition = "Choice of status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MatchingStatus7Choice getInferredMatchingStatus() {
+		return inferredMatchingStatus;
+	}
+
+	public void setInferredMatchingStatus(MatchingStatus7Choice inferredMatchingStatus) {
+		this.inferredMatchingStatus = inferredMatchingStatus;
+	}
+
+	public MatchingStatus7Choice getMatchingStatus() {
+		return matchingStatus;
+	}
+
+	public void setMatchingStatus(MatchingStatus7Choice matchingStatus) {
+		this.matchingStatus = matchingStatus;
+	}
+
+	public SettlementStatus7Choice getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(SettlementStatus7Choice settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public InstructionProcessingStatus10Choice getInstructionProcessingStatus() {
+		return instructionProcessingStatus;
+	}
+
+	public void setInstructionProcessingStatus(InstructionProcessingStatus10Choice instructionProcessingStatus) {
+		this.instructionProcessingStatus = instructionProcessingStatus;
+	}
+
+	public ProprietaryReason1 getSettled() {
+		return settled;
+	}
+
+	public void setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+		this.settled = settled;
+	}
+
+	public ProprietaryStatusAndReason1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(com.tools20022.repository.msg.ProprietaryStatusAndReason1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

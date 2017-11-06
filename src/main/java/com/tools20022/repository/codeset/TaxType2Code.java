@@ -32,21 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType2Code#StampDuty
- * TaxType2Code.StampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType2Code#mmStampDuty
+ * TaxType2Code.mmStampDuty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType2Code#WithholdingTax
- * TaxType2Code.WithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType2Code#mmWithholdingTax
+ * TaxType2Code.mmWithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType2Code#EUTaxRetention
- * TaxType2Code.EUTaxRetention}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType2Code#mmEUTaxRetention
+ * TaxType2Code.mmEUTaxRetention}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class TaxType2Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode StampDuty = new MMCode() {
+	public static final MMCode mmStampDuty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
@@ -103,7 +103,7 @@ public class TaxType2Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTax = new MMCode() {
+	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
@@ -125,7 +125,7 @@ public class TaxType2Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUTaxRetention = new MMCode() {
+	public static final MMCode mmEUTaxRetention = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
@@ -136,12 +136,12 @@ public class TaxType2Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType2Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType2Code.StampDuty, com.tools20022.repository.codeset.TaxType2Code.WithholdingTax, com.tools20022.repository.codeset.TaxType2Code.EUTaxRetention);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType2Code.mmStampDuty, com.tools20022.repository.codeset.TaxType2Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxType2Code.mmEUTaxRetention);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

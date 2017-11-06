@@ -37,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DocumentNumber3Choice#ShortNumber
- * DocumentNumber3Choice.ShortNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.DocumentNumber3Choice#mmShortNumber
+ * DocumentNumber3Choice.mmShortNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DocumentNumber3Choice#LongNumber
- * DocumentNumber3Choice.LongNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.DocumentNumber3Choice#mmLongNumber
+ * DocumentNumber3Choice.mmLongNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DocumentNumber3Choice#ProprietaryNumber
- * DocumentNumber3Choice.ProprietaryNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.DocumentNumber3Choice#mmProprietaryNumber
+ * DocumentNumber3Choice.mmProprietaryNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentNumber3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText shortNumber;
 	/**
 	 * Message type number of the document referenced.
 	 * <p>
@@ -95,7 +96,7 @@ public class DocumentNumber3Choice {
 	 * definition} = "Message type number of the document referenced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentNumber3Choice.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class DocumentNumber3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortNumber";
 			definition = "Message type number of the document referenced.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected ISO20022MessageIdentificationText longNumber;
 	/**
 	 * MX Message identifier of the referenced document.
 	 * <p>
@@ -136,7 +138,7 @@ public class DocumentNumber3Choice {
 	 * definition} = "MX Message identifier of the referenced document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LongNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLongNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentNumber3Choice.mmObject();
 			isDerived = false;
@@ -144,11 +146,12 @@ public class DocumentNumber3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongNumber";
 			definition = "MX Message identifier of the referenced document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISO20022MessageIdentificationText.mmObject();
 		}
 	};
+	protected GenericIdentification34 proprietaryNumber;
 	/**
 	 * Proprietary document identification.
 	 * <p>
@@ -176,7 +179,7 @@ public class DocumentNumber3Choice {
 	 * definition} = "Proprietary document identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentNumber3Choice.mmObject();
 			isDerived = false;
@@ -184,24 +187,48 @@ public class DocumentNumber3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryNumber";
 			definition = "Proprietary document identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification34.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification34.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentNumber3Choice.ShortNumber, com.tools20022.repository.choice.DocumentNumber3Choice.LongNumber,
-						com.tools20022.repository.choice.DocumentNumber3Choice.ProprietaryNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentNumber3Choice.mmShortNumber, com.tools20022.repository.choice.DocumentNumber3Choice.mmLongNumber,
+						com.tools20022.repository.choice.DocumentNumber3Choice.mmProprietaryNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber3Choice";
 				definition = "Choice between a short document number, a long document number or a proprietary document number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getShortNumber() {
+		return shortNumber;
+	}
+
+	public void setShortNumber(Exact3NumericText shortNumber) {
+		this.shortNumber = shortNumber;
+	}
+
+	public ISO20022MessageIdentificationText getLongNumber() {
+		return longNumber;
+	}
+
+	public void setLongNumber(ISO20022MessageIdentificationText longNumber) {
+		this.longNumber = longNumber;
+	}
+
+	public GenericIdentification34 getProprietaryNumber() {
+		return proprietaryNumber;
+	}
+
+	public void setProprietaryNumber(GenericIdentification34 proprietaryNumber) {
+		this.proprietaryNumber = proprietaryNumber;
 	}
 }

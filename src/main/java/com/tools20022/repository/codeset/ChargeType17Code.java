@@ -33,41 +33,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#PostageCharge
- * ChargeType17Code.PostageCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmPostageCharge
+ * ChargeType17Code.mmPostageCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#RegulatoryFee
- * ChargeType17Code.RegulatoryFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmRegulatoryFee
+ * ChargeType17Code.mmRegulatoryFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#ShippingCharge
- * ChargeType17Code.ShippingCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmShippingCharge
+ * ChargeType17Code.mmShippingCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#ServiceProvisionFee
- * ChargeType17Code.ServiceProvisionFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code#Other
- * ChargeType17Code.Other}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code#Premium
- * ChargeType17Code.Premium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code#Packaging
- * ChargeType17Code.Packaging}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code#PickUp
- * ChargeType17Code.PickUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmServiceProvisionFee
+ * ChargeType17Code.mmServiceProvisionFee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmOther
+ * ChargeType17Code.mmOther}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmPremium
+ * ChargeType17Code.mmPremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#SecurityCharge
- * ChargeType17Code.SecurityCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmPackaging
+ * ChargeType17Code.mmPackaging}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmPickUp
+ * ChargeType17Code.mmPickUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#InsurancePremium
- * ChargeType17Code.InsurancePremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmSecurityCharge
+ * ChargeType17Code.mmSecurityCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#MiscellaneousFee
- * ChargeType17Code.MiscellaneousFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmInsurancePremium
+ * ChargeType17Code.mmInsurancePremium}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType17Code#mmMiscellaneousFee
+ * ChargeType17Code.mmMiscellaneousFee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -103,7 +104,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "PostageCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode PostageCharge = new MMCode() {
+	public static final MMCode mmPostageCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostageCharge";
@@ -126,7 +127,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "RegulatoryFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatoryFee = new MMCode() {
+	public static final MMCode mmRegulatoryFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryFee";
@@ -149,7 +150,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "ShippingCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShippingCharge = new MMCode() {
+	public static final MMCode mmShippingCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingCharge";
@@ -172,7 +173,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "ServiceProvisionFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ServiceProvisionFee = new MMCode() {
+	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
@@ -195,7 +196,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -218,7 +219,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode Premium = new MMCode() {
+	public static final MMCode mmPremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
@@ -241,7 +242,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "Packaging"</li>
 	 * </ul>
 	 */
-	public static final MMCode Packaging = new MMCode() {
+	public static final MMCode mmPackaging = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Packaging";
@@ -264,7 +265,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "PickUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode PickUp = new MMCode() {
+	public static final MMCode mmPickUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUp";
@@ -287,7 +288,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "SecurityCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityCharge = new MMCode() {
+	public static final MMCode mmSecurityCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityCharge";
@@ -310,7 +311,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "InsurancePremium"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsurancePremium = new MMCode() {
+	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsurancePremium";
@@ -333,7 +334,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 * name} = "MiscellaneousFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode MiscellaneousFee = new MMCode() {
+	public static final MMCode mmMiscellaneousFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousFee";
@@ -344,15 +345,15 @@ public class ChargeType17Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("POST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType17Code";
 				definition = "Type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType17Code.PostageCharge, com.tools20022.repository.codeset.ChargeType17Code.RegulatoryFee,
-						com.tools20022.repository.codeset.ChargeType17Code.ShippingCharge, com.tools20022.repository.codeset.ChargeType17Code.ServiceProvisionFee, com.tools20022.repository.codeset.ChargeType17Code.Other,
-						com.tools20022.repository.codeset.ChargeType17Code.Premium, com.tools20022.repository.codeset.ChargeType17Code.Packaging, com.tools20022.repository.codeset.ChargeType17Code.PickUp,
-						com.tools20022.repository.codeset.ChargeType17Code.SecurityCharge, com.tools20022.repository.codeset.ChargeType17Code.InsurancePremium, com.tools20022.repository.codeset.ChargeType17Code.MiscellaneousFee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType17Code.mmPostageCharge, com.tools20022.repository.codeset.ChargeType17Code.mmRegulatoryFee,
+						com.tools20022.repository.codeset.ChargeType17Code.mmShippingCharge, com.tools20022.repository.codeset.ChargeType17Code.mmServiceProvisionFee, com.tools20022.repository.codeset.ChargeType17Code.mmOther,
+						com.tools20022.repository.codeset.ChargeType17Code.mmPremium, com.tools20022.repository.codeset.ChargeType17Code.mmPackaging, com.tools20022.repository.codeset.ChargeType17Code.mmPickUp,
+						com.tools20022.repository.codeset.ChargeType17Code.mmSecurityCharge, com.tools20022.repository.codeset.ChargeType17Code.mmInsurancePremium, com.tools20022.repository.codeset.ChargeType17Code.mmMiscellaneousFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

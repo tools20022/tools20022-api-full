@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.OrderStatusAndReason4;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#RelatedReferenceOrOtherReferenceRule
- * OrderCancellationStatusReportV02.RelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmRelatedReferenceOrOtherReferenceRule
+ * OrderCancellationStatusReportV02.mmRelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -77,21 +78,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#RelatedReference
- * OrderCancellationStatusReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmRelatedReference
+ * OrderCancellationStatusReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#OtherReference
- * OrderCancellationStatusReportV02.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmOtherReference
+ * OrderCancellationStatusReportV02.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#CancellationStatusReport
- * OrderCancellationStatusReportV02.CancellationStatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmCancellationStatusReport
+ * OrderCancellationStatusReportV02.mmCancellationStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#identifier
- * OrderCancellationStatusReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.017.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,11 +125,11 @@ public class OrderCancellationStatusReportV02 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#RelatedReference
-	 * OrderCancellationStatusReportV02.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmRelatedReference
+	 * OrderCancellationStatusReportV02.mmRelatedReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#OtherReference
-	 * OrderCancellationStatusReportV02.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmOtherReference
+	 * OrderCancellationStatusReportV02.mmOtherReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -150,16 +149,17 @@ public class OrderCancellationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "If OtherReference is not present, then RelatedReference is mandatory. If OtherReference is present, then RelatedReference is not allowed.";
 			messageDefinition_lazy = () -> OrderCancellationStatusReportV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays
-					.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.RelatedReference, com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.OtherReference);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmRelatedReference,
+					com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmOtherReference);
 		}
 	};
+	protected List<AdditionalReference3> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -184,17 +184,18 @@ public class OrderCancellationStatusReportV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 1;
 			maxOccurs = 2;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> otherReference;
 	/**
 	 * Reference to a linked message sent in a proprietary way or reference of a
 	 * system.
@@ -221,17 +222,18 @@ public class OrderCancellationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or reference of a system.";
-			minOccurs = 1;
 			maxOccurs = 2;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected OrderStatusAndReason4 cancellationStatusReport;
 	/**
 	 * Status report details of a bulk or multiple or switch order cancellation
 	 * instruction that was previously received.
@@ -258,42 +260,15 @@ public class OrderCancellationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationStatusReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlStsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReport";
 			definition = "Status report details of a bulk or multiple or switch order cancellation instruction that was previously received.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OrderStatusAndReason4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "017"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "017";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -305,16 +280,47 @@ public class OrderCancellationStatusReportV02 {
 				definition = "Scope\r\nThe OrderCancellationStatusReport is sent by an executing party, eg, a transfer agent, to the instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThe message gives the status of an order cancellation instruction message that was previously sent by the instructing party.\r\nUsage\r\nThe OrderCancellationStatusReport message is used to report the status of an order cancellation instruction message that was previously sent by the instructing party. The message can be used to report one of the following:\r\n- the cancellation is accepted for further processing, or\r\n- the cancellation is rejected, or\r\n- the order has been cancelled.\r\nWhen the cancellation is rejected, the reason for the rejection must be specified.";
 				nextVersions_lazy = () -> Arrays.asList(OrderCancellationStatusReportV03.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.RelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmRelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "setr.017.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.017.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.RelatedReference, com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.OtherReference,
-						com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.CancellationStatusReport);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmRelatedReference, com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmOtherReference,
+						com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmCancellationStatusReport);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "017";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AdditionalReference3> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public List<AdditionalReference3> getOtherReference() {
+		return otherReference;
+	}
+
+	public void setOtherReference(List<AdditionalReference3> otherReference) {
+		this.otherReference = otherReference;
+	}
+
+	public OrderStatusAndReason4 getCancellationStatusReport() {
+		return cancellationStatusReport;
+	}
+
+	public void setCancellationStatusReport(OrderStatusAndReason4 cancellationStatusReport) {
+		this.cancellationStatusReport = cancellationStatusReport;
 	}
 }

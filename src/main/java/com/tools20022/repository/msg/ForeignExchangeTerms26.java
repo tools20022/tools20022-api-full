@@ -39,26 +39,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#ToAmount
- * ForeignExchangeTerms26.ToAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#mmToAmount
+ * ForeignExchangeTerms26.mmToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#FromAmount
- * ForeignExchangeTerms26.FromAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#mmFromAmount
+ * ForeignExchangeTerms26.mmFromAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#UnitCurrency
- * ForeignExchangeTerms26.UnitCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#mmUnitCurrency
+ * ForeignExchangeTerms26.mmUnitCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#QuotedCurrency
- * ForeignExchangeTerms26.QuotedCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#mmQuotedCurrency
+ * ForeignExchangeTerms26.mmQuotedCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#ExchangeRate
- * ForeignExchangeTerms26.ExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#mmExchangeRate
+ * ForeignExchangeTerms26.mmExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#QuotationDate
- * ForeignExchangeTerms26.QuotationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#mmQuotationDate
+ * ForeignExchangeTerms26.mmQuotationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#QuotingInstitution
- * ForeignExchangeTerms26.QuotingInstitution}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26#mmQuotingInstitution
+ * ForeignExchangeTerms26.mmQuotingInstitution}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeTerms26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount toAmount;
 	/**
 	 * Cash amount resulting from a foreign exchange trade.
 	 * <p>
@@ -100,8 +101,8 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#BuyAmount
-	 * ForeignExchangeTrade.BuyAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmBuyAmount
+	 * ForeignExchangeTrade.mmBuyAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,25 +122,26 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#ToAmount
-	 * ForeignExchangeTerms7.ToAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#mmToAmount
+	 * ForeignExchangeTerms7.mmToAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmBuyAmount;
 			componentContext_lazy = () -> ForeignExchangeTerms26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.BuyAmount;
 			isDerived = false;
 			xmlTag = "ToAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAmount";
 			definition = "Cash amount resulting from a foreign exchange trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.ToAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmToAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount fromAmount;
 	/**
 	 * Cash amount for which a foreign exchange is required.
 	 * <p>
@@ -153,8 +155,8 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#SellAmount
-	 * ForeignExchangeTrade.SellAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmSellAmount
+	 * ForeignExchangeTrade.mmSellAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,25 +176,26 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#FromAmount
-	 * ForeignExchangeTerms7.FromAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#mmFromAmount
+	 * ForeignExchangeTerms7.mmFromAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmSellAmount;
 			componentContext_lazy = () -> ForeignExchangeTerms26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.SellAmount;
 			isDerived = false;
 			xmlTag = "FrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromAmount";
 			definition = "Cash amount for which a foreign exchange is required.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.FromAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmFromAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode unitCurrency;
 	/**
 	 * Currency in which the rate of exchange is expressed in a currency
 	 * exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
@@ -207,8 +210,8 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#UnitCurrency
-	 * CurrencyExchange.UnitCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmUnitCurrency
+	 * CurrencyExchange.mmUnitCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,25 +233,26 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#UnitCurrency
-	 * ForeignExchangeTerms7.UnitCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#mmUnitCurrency
+	 * ForeignExchangeTerms7.mmUnitCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.UnitCurrency;
 			isDerived = false;
 			xmlTag = "UnitCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.UnitCurrency;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmUnitCurrency;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode quotedCurrency;
 	/**
 	 * Currency into which the base currency is converted, in a currency
 	 * exchange.
@@ -263,8 +267,8 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#QuotedCurrency
-	 * CurrencyExchange.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmQuotedCurrency
+	 * CurrencyExchange.mmQuotedCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -286,25 +290,26 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#QuotedCurrency
-	 * ForeignExchangeTerms7.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#mmQuotedCurrency
+	 * ForeignExchangeTerms7.mmQuotedCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.QuotedCurrency;
 			isDerived = false;
 			xmlTag = "QtdCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.QuotedCurrency;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmQuotedCurrency;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected BaseOneRate exchangeRate;
 	/**
 	 * The value of one currency expressed in relation to another currency.
 	 * ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency
@@ -319,8 +324,8 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -342,25 +347,26 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#ExchangeRate
-	 * ForeignExchangeTerms7.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#mmExchangeRate
+	 * ForeignExchangeTerms7.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> ForeignExchangeTerms26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.ExchangeRate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmExchangeRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected ISODateTime quotationDate;
 	/**
 	 * Date and time at which an exchange rate is quoted.
 	 * <p>
@@ -373,8 +379,8 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#QuotationDate
-	 * CurrencyExchange.QuotationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmQuotationDate
+	 * CurrencyExchange.mmQuotationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -394,25 +400,26 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#QuotationDate
-	 * ForeignExchangeTerms7.QuotationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#mmQuotationDate
+	 * ForeignExchangeTerms7.mmQuotationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> ForeignExchangeTerms26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.QuotationDate;
 			isDerived = false;
 			xmlTag = "QtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date and time at which an exchange rate is quoted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.QuotationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmQuotationDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected PartyIdentification70Choice quotingInstitution;
 	/**
 	 * Party that proposes a foreign exchange rate.
 	 * <p>
@@ -426,8 +433,8 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -447,22 +454,22 @@ public class ForeignExchangeTerms26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#QuotingInstitution
-	 * ForeignExchangeTerms7.QuotingInstitution}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms7#mmQuotingInstitution
+	 * ForeignExchangeTerms7.mmQuotingInstitution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotingInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotingInstitution = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ForeignExchangeTerms26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "QtgInstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotingInstitution";
 			definition = "Party that proposes a  foreign exchange rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.QuotingInstitution;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmQuotingInstitution;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
@@ -470,11 +477,11 @@ public class ForeignExchangeTerms26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms26.ToAmount, com.tools20022.repository.msg.ForeignExchangeTerms26.FromAmount,
-						com.tools20022.repository.msg.ForeignExchangeTerms26.UnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms26.QuotedCurrency, com.tools20022.repository.msg.ForeignExchangeTerms26.ExchangeRate,
-						com.tools20022.repository.msg.ForeignExchangeTerms26.QuotationDate, com.tools20022.repository.msg.ForeignExchangeTerms26.QuotingInstitution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms26.mmToAmount, com.tools20022.repository.msg.ForeignExchangeTerms26.mmFromAmount,
+						com.tools20022.repository.msg.ForeignExchangeTerms26.mmUnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms26.mmQuotedCurrency, com.tools20022.repository.msg.ForeignExchangeTerms26.mmExchangeRate,
+						com.tools20022.repository.msg.ForeignExchangeTerms26.mmQuotationDate, com.tools20022.repository.msg.ForeignExchangeTerms26.mmQuotingInstitution);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTerms26";
 				definition = "Information needed to process a currency exchange or conversion.";
@@ -482,5 +489,61 @@ public class ForeignExchangeTerms26 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getToAmount() {
+		return toAmount;
+	}
+
+	public void setToAmount(ActiveCurrencyAnd13DecimalAmount toAmount) {
+		this.toAmount = toAmount;
+	}
+
+	public ActiveCurrencyAndAmount getFromAmount() {
+		return fromAmount;
+	}
+
+	public void setFromAmount(ActiveCurrencyAndAmount fromAmount) {
+		this.fromAmount = fromAmount;
+	}
+
+	public ActiveOrHistoricCurrencyCode getUnitCurrency() {
+		return unitCurrency;
+	}
+
+	public void setUnitCurrency(ActiveOrHistoricCurrencyCode unitCurrency) {
+		this.unitCurrency = unitCurrency;
+	}
+
+	public ActiveOrHistoricCurrencyCode getQuotedCurrency() {
+		return quotedCurrency;
+	}
+
+	public void setQuotedCurrency(ActiveOrHistoricCurrencyCode quotedCurrency) {
+		this.quotedCurrency = quotedCurrency;
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public ISODateTime getQuotationDate() {
+		return quotationDate;
+	}
+
+	public void setQuotationDate(ISODateTime quotationDate) {
+		this.quotationDate = quotationDate;
+	}
+
+	public PartyIdentification70Choice getQuotingInstitution() {
+		return quotingInstitution;
+	}
+
+	public void setQuotingInstitution(PartyIdentification70Choice quotingInstitution) {
+		this.quotingInstitution = quotingInstitution;
 	}
 }

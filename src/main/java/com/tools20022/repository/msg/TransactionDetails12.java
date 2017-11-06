@@ -37,14 +37,15 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails12#Reference
- * TransactionDetails12.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails12#AccountOwner
- * TransactionDetails12.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails12#mmReference
+ * TransactionDetails12.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails12#SafekeepingAccount
- * TransactionDetails12.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails12#mmAccountOwner
+ * TransactionDetails12.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails12#mmSafekeepingAccount
+ * TransactionDetails12.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,15 +56,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#Details
- * SecuritiesMessageCancellationAdviceV01.Details}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#mmDetails
+ * SecuritiesMessageCancellationAdviceV01.mmDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,6 +79,7 @@ import java.util.function.Supplier;
 public class TransactionDetails12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected References3Choice reference;
 	/**
 	 * Reference to the message advised to be cancelled by the account servicer
 	 * <p>
@@ -106,7 +108,7 @@ public class TransactionDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionDetails12.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class TransactionDetails12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the message advised to be cancelled by the account servicer";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> References3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> References3Choice.mmObject();
 		}
 	};
+	protected PartyIdentification13Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -132,8 +135,8 @@ public class TransactionDetails12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,21 +155,22 @@ public class TransactionDetails12 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TransactionDetails12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification13Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -178,8 +182,8 @@ public class TransactionDetails12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesAccount
-	 * Security.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesAccount
+	 * Security.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,30 +202,30 @@ public class TransactionDetails12 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> TransactionDetails12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails12.Reference, com.tools20022.repository.msg.TransactionDetails12.AccountOwner,
-						com.tools20022.repository.msg.TransactionDetails12.SafekeepingAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails12.mmReference, com.tools20022.repository.msg.TransactionDetails12.mmAccountOwner,
+						com.tools20022.repository.msg.TransactionDetails12.mmSafekeepingAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.Details);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -235,5 +239,29 @@ public class TransactionDetails12 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References3Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(References3Choice reference) {
+		this.reference = reference;
+	}
+
+	public PartyIdentification13Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification13Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
 	}
 }

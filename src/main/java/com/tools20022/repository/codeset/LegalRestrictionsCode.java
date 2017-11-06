@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#JurisdictionOwnership
- * LegalRestrictionsCode.JurisdictionOwnership}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#mmJurisdictionOwnership
+ * LegalRestrictionsCode.mmJurisdictionOwnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#PrivatePlacements
- * LegalRestrictionsCode.PrivatePlacements}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#mmPrivatePlacements
+ * LegalRestrictionsCode.mmPrivatePlacements}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#AccreditedInvestor
- * LegalRestrictionsCode.AccreditedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#mmAccreditedInvestor
+ * LegalRestrictionsCode.mmAccreditedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#Margin
- * LegalRestrictionsCode.Margin}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#mmMargin
+ * LegalRestrictionsCode.mmMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#Privilege
- * LegalRestrictionsCode.Privilege}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode#mmPrivilege
+ * LegalRestrictionsCode.mmPrivilege}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class LegalRestrictionsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode JurisdictionOwnership = new MMCode() {
+	public static final MMCode mmJurisdictionOwnership = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "JurisdictionOwnership";
@@ -135,7 +135,7 @@ public class LegalRestrictionsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PrivatePlacements = new MMCode() {
+	public static final MMCode mmPrivatePlacements = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PrivatePlacements";
@@ -168,7 +168,7 @@ public class LegalRestrictionsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AccreditedInvestor = new MMCode() {
+	public static final MMCode mmAccreditedInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccreditedInvestor";
@@ -201,7 +201,7 @@ public class LegalRestrictionsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Margin = new MMCode() {
+	public static final MMCode mmMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Margin";
@@ -234,7 +234,7 @@ public class LegalRestrictionsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Privilege = new MMCode() {
+	public static final MMCode mmPrivilege = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Privilege";
@@ -247,13 +247,13 @@ public class LegalRestrictionsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("JURO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LegalRestrictionsCode";
 				definition = "Specifies the regulatory restrictions applicable to a security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalRestrictionsCode.JurisdictionOwnership, com.tools20022.repository.codeset.LegalRestrictionsCode.PrivatePlacements,
-						com.tools20022.repository.codeset.LegalRestrictionsCode.AccreditedInvestor, com.tools20022.repository.codeset.LegalRestrictionsCode.Margin, com.tools20022.repository.codeset.LegalRestrictionsCode.Privilege);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalRestrictionsCode.mmJurisdictionOwnership, com.tools20022.repository.codeset.LegalRestrictionsCode.mmPrivatePlacements,
+						com.tools20022.repository.codeset.LegalRestrictionsCode.mmAccreditedInvestor, com.tools20022.repository.codeset.LegalRestrictionsCode.mmMargin, com.tools20022.repository.codeset.LegalRestrictionsCode.mmPrivilege);
 				derivation_lazy = () -> Arrays.asList(LegalRestrictions2Code.mmObject());
 			}
 		});

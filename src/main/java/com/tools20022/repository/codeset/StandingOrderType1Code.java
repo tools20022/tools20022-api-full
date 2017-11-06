@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#UserDefinedStandingOrder
- * StandingOrderType1Code.UserDefinedStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#mmUserDefinedStandingOrder
+ * StandingOrderType1Code.mmUserDefinedStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#PredefinedStandingOrder
- * StandingOrderType1Code.PredefinedStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#mmPredefinedStandingOrder
+ * StandingOrderType1Code.mmPredefinedStandingOrder}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	 * name} = "UserDefinedStandingOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode UserDefinedStandingOrder = new MMCode() {
+	public static final MMCode mmUserDefinedStandingOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedStandingOrder";
@@ -107,7 +107,7 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	 * name} = "PredefinedStandingOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode PredefinedStandingOrder = new MMCode() {
+	public static final MMCode mmPredefinedStandingOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PredefinedStandingOrder";
@@ -118,12 +118,12 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("USTO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderType1Code";
 				definition = "Specifies the type of standing order, such as a user defined standing order or a predefined liquidity transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderType1Code.UserDefinedStandingOrder, com.tools20022.repository.codeset.StandingOrderType1Code.PredefinedStandingOrder);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderType1Code.mmUserDefinedStandingOrder, com.tools20022.repository.codeset.StandingOrderType1Code.mmPredefinedStandingOrder);
 				trace_lazy = () -> StandingOrderTypeCode.mmObject();
 			}
 		});

@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestve
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -81,24 +82,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#GroupHeader
- * PaymentReturnV07.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#mmGroupHeader
+ * PaymentReturnV07.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#OriginalGroupInformation
- * PaymentReturnV07.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#mmOriginalGroupInformation
+ * PaymentReturnV07.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#TransactionInformation
- * PaymentReturnV07.TransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#mmTransactionInformation
+ * PaymentReturnV07.mmTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#SupplementaryData
- * PaymentReturnV07.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#mmSupplementaryData
+ * PaymentReturnV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#identifier
- * PaymentReturnV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.004.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentReturnV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader72 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -144,22 +144,23 @@ public class PaymentReturnV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#GroupHeader
-	 * PaymentReturnV06.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#mmGroupHeader
+	 * PaymentReturnV06.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader72.mmObject();
 		}
 	};
+	protected OriginalGroupHeader2 originalGroupInformation;
 	/**
 	 * Information concerning the original group of transactions, to which the
 	 * message refers.
@@ -187,22 +188,23 @@ public class PaymentReturnV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#OriginalGroupInformation
-	 * PaymentReturnV06.OriginalGroupInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#mmOriginalGroupInformation
+	 * PaymentReturnV06.mmOriginalGroupInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.OriginalGroupInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.mmOriginalGroupInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OriginalGroupHeader2.mmObject();
 		}
 	};
+	protected List<PaymentTransaction76> transactionInformation;
 	/**
 	 * Information concerning the original transactions, to which the return
 	 * message refers.
@@ -230,21 +232,22 @@ public class PaymentReturnV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#TransactionInformation
-	 * PaymentReturnV06.TransactionInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#mmTransactionInformation
+	 * PaymentReturnV06.mmTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformation";
 			definition = "Information concerning the original transactions, to which the return message refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.TransactionInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.mmTransactionInformation;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransaction76.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -272,46 +275,19 @@ public class PaymentReturnV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#SupplementaryData
-	 * PaymentReturnV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06#mmSupplementaryData
+	 * PaymentReturnV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "004";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -326,11 +302,50 @@ public class PaymentReturnV07 {
 				rootElement = "Document";
 				xmlTag = "PmtRtr";
 				businessArea_lazy = () -> PaymentsClearingandSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV07.GroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV07.OriginalGroupInformation,
-						com.tools20022.repository.area.pacs.PaymentReturnV07.TransactionInformation, com.tools20022.repository.area.pacs.PaymentReturnV07.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV07.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV07.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.PaymentReturnV07.mmTransactionInformation, com.tools20022.repository.area.pacs.PaymentReturnV07.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "004";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader72 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader72 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalGroupHeader2 getOriginalGroupInformation() {
+		return originalGroupInformation;
+	}
+
+	public void setOriginalGroupInformation(OriginalGroupHeader2 originalGroupInformation) {
+		this.originalGroupInformation = originalGroupInformation;
+	}
+
+	public List<PaymentTransaction76> getTransactionInformation() {
+		return transactionInformation;
+	}
+
+	public void setTransactionInformation(List<PaymentTransaction76> transactionInformation) {
+		this.transactionInformation = transactionInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

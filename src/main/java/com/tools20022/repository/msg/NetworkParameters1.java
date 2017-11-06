@@ -36,24 +36,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters1#PrimaryAddress
- * NetworkParameters1.PrimaryAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmPrimaryAddress
+ * NetworkParameters1.mmPrimaryAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters1#PrimaryPortNumber
- * NetworkParameters1.PrimaryPortNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmPrimaryPortNumber
+ * NetworkParameters1.mmPrimaryPortNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters1#SecondaryAddress
- * NetworkParameters1.SecondaryAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmSecondaryAddress
+ * NetworkParameters1.mmSecondaryAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters1#SecondaryPortNumber
- * NetworkParameters1.SecondaryPortNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters1#UserName
- * NetworkParameters1.UserName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters1#AccessCode
- * NetworkParameters1.AccessCode}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmSecondaryPortNumber
+ * NetworkParameters1.mmSecondaryPortNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters1#mmUserName
+ * NetworkParameters1.mmUserName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters1#ClientCertificate
- * NetworkParameters1.ClientCertificate}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmAccessCode
+ * NetworkParameters1.mmAccessCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmClientCertificate
+ * NetworkParameters1.mmClientCertificate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetworkParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text primaryAddress;
 	/**
 	 * IP address or host name of the primary host.
 	 * <p>
@@ -98,8 +100,8 @@ public class NetworkParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#HostIPAddress
-	 * NetworkAccess.HostIPAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostIPAddress
+	 * NetworkAccess.mmHostIPAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,20 +120,21 @@ public class NetworkParameters1 {
 	 * definition} = "IP address or host name of the primary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrimaryAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrimaryAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmHostIPAddress;
 			componentContext_lazy = () -> NetworkParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.HostIPAddress;
 			isDerived = false;
 			xmlTag = "PmryAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryAddress";
 			definition = "IP address or host name of the primary host.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number primaryPortNumber;
 	/**
 	 * Port number of the primary host.
 	 * <p>
@@ -144,8 +147,8 @@ public class NetworkParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#HostPortNumber
-	 * NetworkAccess.HostPortNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostPortNumber
+	 * NetworkAccess.mmHostPortNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,20 +167,21 @@ public class NetworkParameters1 {
 	 * definition} = "Port number of the primary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrimaryPortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrimaryPortNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmHostPortNumber;
 			componentContext_lazy = () -> NetworkParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.HostPortNumber;
 			isDerived = false;
 			xmlTag = "PmryPortNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryPortNumber";
 			definition = "Port number of the primary host.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35Text secondaryAddress;
 	/**
 	 * IP address or host name of the secondary host.
 	 * <p>
@@ -190,8 +194,8 @@ public class NetworkParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#HostIPAddress
-	 * NetworkAccess.HostIPAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostIPAddress
+	 * NetworkAccess.mmHostIPAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class NetworkParameters1 {
 	 * definition} = "IP address or host name of the secondary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmHostIPAddress;
 			componentContext_lazy = () -> NetworkParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.HostIPAddress;
 			isDerived = false;
 			xmlTag = "ScndryAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryAddress";
 			definition = "IP address or host name of the secondary host.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number secondaryPortNumber;
 	/**
 	 * Port number of the secondary host.
 	 * <p>
@@ -236,8 +241,8 @@ public class NetworkParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#HostPortNumber
-	 * NetworkAccess.HostPortNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmHostPortNumber
+	 * NetworkAccess.mmHostPortNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -256,20 +261,21 @@ public class NetworkParameters1 {
 	 * definition} = "Port number of the secondary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryPortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryPortNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmHostPortNumber;
 			componentContext_lazy = () -> NetworkParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.HostPortNumber;
 			isDerived = false;
 			xmlTag = "ScndryPortNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryPortNumber";
 			definition = "Port number of the secondary host.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35Text userName;
 	/**
 	 * User name identifying the client.
 	 * <p>
@@ -282,8 +288,8 @@ public class NetworkParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#UserName
-	 * NetworkAccess.UserName}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmUserName
+	 * NetworkAccess.mmUserName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -304,27 +310,28 @@ public class NetworkParameters1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters3#UserName
-	 * NetworkParameters3.UserName}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters3#mmUserName
+	 * NetworkParameters3.mmUserName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UserName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmUserName;
 			componentContext_lazy = () -> NetworkParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.UserName;
 			isDerived = false;
 			xmlTag = "UsrNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserName";
 			definition = "User name identifying the client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.UserName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.mmUserName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accessCode;
 	/**
 	 * Password authenticating the client.
 	 * <p>
@@ -337,8 +344,8 @@ public class NetworkParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#AccessCode
-	 * NetworkAccess.AccessCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmAccessCode
+	 * NetworkAccess.mmAccessCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -359,27 +366,28 @@ public class NetworkParameters1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters3#AccessCode
-	 * NetworkParameters3.AccessCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters3#mmAccessCode
+	 * NetworkParameters3.mmAccessCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccessCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmAccessCode;
 			componentContext_lazy = () -> NetworkParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.AccessCode;
 			isDerived = false;
 			xmlTag = "AccsCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccessCode";
 			definition = "Password authenticating the client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.AccessCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.mmAccessCode);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max3000Binary clientCertificate;
 	/**
 	 * Client certificate chain.
 	 * <p>
@@ -393,8 +401,8 @@ public class NetworkParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#ClientCertificate
-	 * NetworkAccess.ClientCertificate}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmClientCertificate
+	 * NetworkAccess.mmClientCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -413,17 +421,17 @@ public class NetworkParameters1 {
 	 * definition} = "Client certificate chain."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientCertificate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmClientCertificate;
 			componentContext_lazy = () -> NetworkParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.ClientCertificate;
 			isDerived = false;
 			xmlTag = "ClntCert";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCertificate";
 			definition = "Client certificate chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
@@ -431,11 +439,11 @@ public class NetworkParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters1.PrimaryAddress, com.tools20022.repository.msg.NetworkParameters1.PrimaryPortNumber,
-						com.tools20022.repository.msg.NetworkParameters1.SecondaryAddress, com.tools20022.repository.msg.NetworkParameters1.SecondaryPortNumber, com.tools20022.repository.msg.NetworkParameters1.UserName,
-						com.tools20022.repository.msg.NetworkParameters1.AccessCode, com.tools20022.repository.msg.NetworkParameters1.ClientCertificate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters1.mmPrimaryAddress, com.tools20022.repository.msg.NetworkParameters1.mmPrimaryPortNumber,
+						com.tools20022.repository.msg.NetworkParameters1.mmSecondaryAddress, com.tools20022.repository.msg.NetworkParameters1.mmSecondaryPortNumber, com.tools20022.repository.msg.NetworkParameters1.mmUserName,
+						com.tools20022.repository.msg.NetworkParameters1.mmAccessCode, com.tools20022.repository.msg.NetworkParameters1.mmClientCertificate);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters1";
 				definition = "Configuration parameters to communicate with a host.";
@@ -443,5 +451,61 @@ public class NetworkParameters1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPrimaryAddress() {
+		return primaryAddress;
+	}
+
+	public void setPrimaryAddress(Max35Text primaryAddress) {
+		this.primaryAddress = primaryAddress;
+	}
+
+	public Number getPrimaryPortNumber() {
+		return primaryPortNumber;
+	}
+
+	public void setPrimaryPortNumber(Number primaryPortNumber) {
+		this.primaryPortNumber = primaryPortNumber;
+	}
+
+	public Max35Text getSecondaryAddress() {
+		return secondaryAddress;
+	}
+
+	public void setSecondaryAddress(Max35Text secondaryAddress) {
+		this.secondaryAddress = secondaryAddress;
+	}
+
+	public Number getSecondaryPortNumber() {
+		return secondaryPortNumber;
+	}
+
+	public void setSecondaryPortNumber(Number secondaryPortNumber) {
+		this.secondaryPortNumber = secondaryPortNumber;
+	}
+
+	public Max35Text getUserName() {
+		return userName;
+	}
+
+	public void setUserName(Max35Text userName) {
+		this.userName = userName;
+	}
+
+	public Max35Text getAccessCode() {
+		return accessCode;
+	}
+
+	public void setAccessCode(Max35Text accessCode) {
+		this.accessCode = accessCode;
+	}
+
+	public Max3000Binary getClientCertificate() {
+		return clientCertificate;
+	}
+
+	public void setClientCertificate(Max3000Binary clientCertificate) {
+		this.clientCertificate = clientCertificate;
 	}
 }

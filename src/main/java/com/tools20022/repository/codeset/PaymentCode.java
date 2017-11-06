@@ -31,11 +31,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentCode#ActualPayment
- * PaymentCode.ActualPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCode#ContractualPayment
- * PaymentCode.ContractualPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCode#mmActualPayment
+ * PaymentCode.mmActualPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCode#mmContractualPayment
+ * PaymentCode.mmContractualPayment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +94,7 @@ public class PaymentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ActualPayment = new MMCode() {
+	public static final MMCode mmActualPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ActualPayment";
@@ -126,7 +127,7 @@ public class PaymentCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ContractualPayment = new MMCode() {
+	public static final MMCode mmContractualPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ContractualPayment";
@@ -139,12 +140,12 @@ public class PaymentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentCode";
 				definition = "Indicates whether the cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer or upon receipt of proceeds from the issuer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCode.ActualPayment, com.tools20022.repository.codeset.PaymentCode.ContractualPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCode.mmActualPayment, com.tools20022.repository.codeset.PaymentCode.mmContractualPayment);
 				derivation_lazy = () -> Arrays.asList(Payment1Code.mmObject());
 			}
 		});

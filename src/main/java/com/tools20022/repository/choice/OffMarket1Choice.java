@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#OffMarketIndicator
- * OffMarket1Choice.OffMarketIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#mmOffMarketIndicator
+ * OffMarket1Choice.mmOffMarketIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#SystematicInternaliser
- * OffMarket1Choice.SystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#mmSystematicInternaliser
+ * OffMarket1Choice.mmSystematicInternaliser}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OffMarket1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OffMarket1Code offMarketIndicator;
 	/**
 	 * Indicates that the trade was executed off-exchange.
 	 * <p>
@@ -77,8 +78,8 @@ public class OffMarket1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#OffMarketReason
-	 * SecuritiesTradeExecution.OffMarketReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmOffMarketReason
+	 * SecuritiesTradeExecution.mmOffMarketReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class OffMarket1Choice {
 	 * definition} = "Indicates that the trade was executed off-exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OffMarketIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOffMarketIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmOffMarketReason;
 			componentContext_lazy = () -> OffMarket1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.OffMarketReason;
 			isDerived = false;
 			xmlTag = "OffMktInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffMarketIndicator";
 			definition = "Indicates that the trade was executed off-exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OffMarket1Code.mmObject();
 		}
 	};
+	protected AnyBICIdentifier systematicInternaliser;
 	/**
 	 * Provides the BIC code of the systematic internaliser.
 	 * <p>
@@ -124,8 +126,8 @@ public class OffMarket1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,17 +146,17 @@ public class OffMarket1Choice {
 	 * definition} = "Provides the BIC code of the systematic internaliser."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystematicInternaliser = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystematicInternaliser = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> OffMarket1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "SystmtcIntlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
 			definition = "Provides the BIC code of the systematic internaliser.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
@@ -162,14 +164,30 @@ public class OffMarket1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OffMarket1Choice.OffMarketIndicator, com.tools20022.repository.choice.OffMarket1Choice.SystematicInternaliser);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OffMarket1Choice.mmOffMarketIndicator, com.tools20022.repository.choice.OffMarket1Choice.mmSystematicInternaliser);
 				trace_lazy = () -> SecuritiesTradeExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OffMarket1Choice";
 				definition = "Choice for specifying how the trade was executed off-market.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OffMarket1Code getOffMarketIndicator() {
+		return offMarketIndicator;
+	}
+
+	public void setOffMarketIndicator(OffMarket1Code offMarketIndicator) {
+		this.offMarketIndicator = offMarketIndicator;
+	}
+
+	public AnyBICIdentifier getSystematicInternaliser() {
+		return systematicInternaliser;
+	}
+
+	public void setSystematicInternaliser(AnyBICIdentifier systematicInternaliser) {
+		this.systematicInternaliser = systematicInternaliser;
 	}
 }

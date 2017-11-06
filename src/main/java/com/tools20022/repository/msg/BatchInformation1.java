@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BatchInformation1#MessageIdentification
- * BatchInformation1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BatchInformation1#mmMessageIdentification
+ * BatchInformation1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BatchInformation1#PaymentInformationIdentification
- * BatchInformation1.PaymentInformationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BatchInformation1#mmPaymentInformationIdentification
+ * BatchInformation1.mmPaymentInformationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BatchInformation1#NumberOfTransactions
- * BatchInformation1.NumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.BatchInformation1#mmNumberOfTransactions
+ * BatchInformation1.mmNumberOfTransactions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BatchInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference assigned by the sending party to unambiguously
 	 * identify the batch of transactions.
@@ -92,7 +93,7 @@ public class BatchInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BatchInformation1.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class BatchInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference assigned by the sending party to unambiguously identify the batch of transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text paymentInformationIdentification;
 	/**
 	 * Reference assigned by a sending party to unambiguously identify a payment
 	 * information block within a payment message.
@@ -135,7 +137,7 @@ public class BatchInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BatchInformation1.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class BatchInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationIdentification";
 			definition = "Reference assigned by a sending party to unambiguously identify a payment information block within a payment message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfTransactions;
 	/**
 	 * Number of individual transactions included in the batch.
 	 * <p>
@@ -176,7 +179,7 @@ public class BatchInformation1 {
 	 * definition} = "Number of individual transactions included in the batch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BatchInformation1.mmObject();
 			isDerived = false;
@@ -184,8 +187,8 @@ public class BatchInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions included in the batch.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
@@ -193,14 +196,38 @@ public class BatchInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BatchInformation1.MessageIdentification, com.tools20022.repository.msg.BatchInformation1.PaymentInformationIdentification,
-						com.tools20022.repository.msg.BatchInformation1.NumberOfTransactions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BatchInformation1.mmMessageIdentification, com.tools20022.repository.msg.BatchInformation1.mmPaymentInformationIdentification,
+						com.tools20022.repository.msg.BatchInformation1.mmNumberOfTransactions);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BatchInformation1";
 				definition = "Identifies the underlying batches.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getPaymentInformationIdentification() {
+		return paymentInformationIdentification;
+	}
+
+	public void setPaymentInformationIdentification(Max35Text paymentInformationIdentification) {
+		this.paymentInformationIdentification = paymentInformationIdentification;
+	}
+
+	public Max15NumericText getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = numberOfTransactions;
 	}
 }

@@ -29,15 +29,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#DateTime
- * SenderTriggerCode.DateTime}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#Forced
- * SenderTriggerCode.Forced}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#Manual
- * SenderTriggerCode.Manual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SenderTriggerCode#SufficientlySigned
- * SenderTriggerCode.SufficientlySigned}</li>
+ * {@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmDateTime
+ * SenderTriggerCode.mmDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmForced
+ * SenderTriggerCode.mmForced}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmManual
+ * SenderTriggerCode.mmManual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmSufficientlySigned
+ * SenderTriggerCode.mmSufficientlySigned}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +88,7 @@ public class SenderTriggerCode {
 	 * definition} = "File generated based on a date/time event."</li>
 	 * </ul>
 	 */
-	public static final MMCode DateTime = new MMCode() {
+	public static final MMCode mmDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
@@ -119,7 +120,7 @@ public class SenderTriggerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Forced = new MMCode() {
+	public static final MMCode mmForced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forced";
@@ -152,7 +153,7 @@ public class SenderTriggerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Manual = new MMCode() {
+	public static final MMCode mmManual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
@@ -185,7 +186,7 @@ public class SenderTriggerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SufficientlySigned = new MMCode() {
+	public static final MMCode mmSufficientlySigned = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SufficientlySigned";
@@ -198,12 +199,12 @@ public class SenderTriggerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SenderTriggerCode";
 				definition = "Specifies the trigger code used by the sender to generate the file.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SenderTriggerCode.DateTime, com.tools20022.repository.codeset.SenderTriggerCode.Forced, com.tools20022.repository.codeset.SenderTriggerCode.Manual,
-						com.tools20022.repository.codeset.SenderTriggerCode.SufficientlySigned);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SenderTriggerCode.mmDateTime, com.tools20022.repository.codeset.SenderTriggerCode.mmForced, com.tools20022.repository.codeset.SenderTriggerCode.mmManual,
+						com.tools20022.repository.codeset.SenderTriggerCode.mmSufficientlySigned);
 				derivation_lazy = () -> Arrays.asList(SenderTrigger1Code.mmObject());
 			}
 		});

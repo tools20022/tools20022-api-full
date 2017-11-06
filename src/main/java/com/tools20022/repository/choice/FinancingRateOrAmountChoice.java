@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancingRateOrAmountChoice#Amount
- * FinancingRateOrAmountChoice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancingRateOrAmountChoice#mmAmount
+ * FinancingRateOrAmountChoice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancingRateOrAmountChoice#Rate
- * FinancingRateOrAmountChoice.Rate}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancingRateOrAmountChoice#mmRate
+ * FinancingRateOrAmountChoice.mmRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancingRateOrAmountChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount expressed as an absolute value.
 	 * <p>
@@ -80,8 +81,8 @@ public class FinancingRateOrAmountChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#RequestedAmount
-	 * InvoiceFinancingAgreement.RequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedAmount
+	 * InvoiceFinancingAgreement.mmRequestedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class FinancingRateOrAmountChoice {
 	 * definition} = "Amount expressed as an absolute value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmRequestedAmount;
 			componentContext_lazy = () -> FinancingRateOrAmountChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.RequestedAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount expressed as an absolute value.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Amount expressed as a percentage rate.
 	 * <p>
@@ -127,8 +129,8 @@ public class FinancingRateOrAmountChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#RequestedPercentage
-	 * InvoiceFinancingAgreement.RequestedPercentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedPercentage
+	 * InvoiceFinancingAgreement.mmRequestedPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,17 +149,17 @@ public class FinancingRateOrAmountChoice {
 	 * definition} = "Amount expressed as a percentage rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmRequestedPercentage;
 			componentContext_lazy = () -> FinancingRateOrAmountChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.RequestedPercentage;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Amount expressed as a percentage rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -165,14 +167,30 @@ public class FinancingRateOrAmountChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancingRateOrAmountChoice.Amount, com.tools20022.repository.choice.FinancingRateOrAmountChoice.Rate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancingRateOrAmountChoice.mmAmount, com.tools20022.repository.choice.FinancingRateOrAmountChoice.mmRate);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancingRateOrAmountChoice";
 				definition = "Choice between amount expressed as an absolute value or as a percentage rate related to another reference amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
 	}
 }

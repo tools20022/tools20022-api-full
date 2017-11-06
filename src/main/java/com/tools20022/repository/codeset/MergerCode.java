@@ -31,18 +31,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerCode#MergerClassificationIsUnknown
- * MergerCode.MergerClassificationIsUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerCode#mmMergerClassificationIsUnknown
+ * MergerCode.mmMergerClassificationIsUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerCode#NoGeneralShareholdersMeeting
- * MergerCode.NoGeneralShareholdersMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerCode#mmNoGeneralShareholdersMeeting
+ * MergerCode.mmNoGeneralShareholdersMeeting}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class MergerCode {
 	 * definition} = "The merger regulatory condition is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMCode MergerClassificationIsUnknown = new MMCode() {
+	public static final MMCode mmMergerClassificationIsUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MergerClassificationIsUnknown";
@@ -110,7 +110,7 @@ public class MergerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NoGeneralShareholdersMeeting = new MMCode() {
+	public static final MMCode mmNoGeneralShareholdersMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoGeneralShareholdersMeeting";
@@ -123,11 +123,11 @@ public class MergerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MergerCode";
 				definition = "Classification of the regulatory condition of a merger for the TSE/JASDEC extension.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MergerCode.MergerClassificationIsUnknown, com.tools20022.repository.codeset.MergerCode.NoGeneralShareholdersMeeting);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MergerCode.mmMergerClassificationIsUnknown, com.tools20022.repository.codeset.MergerCode.mmNoGeneralShareholdersMeeting);
 			}
 		});
 		return mmObject_lazy.get();

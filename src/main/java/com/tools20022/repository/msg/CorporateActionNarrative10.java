@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information such as the information conditions.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative10#AdditionalText
- * CorporateActionNarrative10.AdditionalText}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative10#mmAdditionalText
+ * CorporateActionNarrative10.mmAdditionalText}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative10#PartyContactNarrative
- * CorporateActionNarrative10.PartyContactNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative10#mmPartyContactNarrative
+ * CorporateActionNarrative10.mmPartyContactNarrative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,82 +50,82 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#AdditionalInformation
- * CorporateActionEventProcessingStatusAdviceV01.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#mmAdditionalInformation
+ * CorporateActionEventProcessingStatusAdviceV01.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02#AdditionalInformation
- * CorporateActionEventProcessingStatusAdviceV02.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02#mmAdditionalInformation
+ * CorporateActionEventProcessingStatusAdviceV02.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03#AdditionalInformation
- * CorporateActionEventProcessingStatusAdviceV03.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03#mmAdditionalInformation
+ * CorporateActionEventProcessingStatusAdviceV03.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#AdditionalInformation
- * CorporateActionEventProcessingStatusAdviceV04.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmAdditionalInformation
+ * CorporateActionEventProcessingStatusAdviceV04.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#AdditionalInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmAdditionalInformation
  * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * AdditionalInformation}</li>
+ * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02#AdditionalInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02#mmAdditionalInformation
  * CorporateActionInstructionCancellationRequestStatusAdviceV02.
- * AdditionalInformation}</li>
+ * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03#AdditionalInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03#mmAdditionalInformation
  * CorporateActionInstructionCancellationRequestStatusAdviceV03.
- * AdditionalInformation}</li>
+ * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04#AdditionalInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04#mmAdditionalInformation
  * CorporateActionInstructionCancellationRequestStatusAdviceV04.
- * AdditionalInformation}</li>
+ * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV01.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV01.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV02.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV02.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV03.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV03.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV04.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV04.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV05.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV05.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05#AdditionalInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05#mmAdditionalInformation
  * CorporateActionInstructionCancellationRequestStatusAdviceV05.
- * AdditionalInformation}</li>
+ * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV06.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV06.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06#AdditionalInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06#mmAdditionalInformation
  * CorporateActionInstructionCancellationRequestStatusAdviceV06.
- * AdditionalInformation}</li>
+ * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#AdditionalInformation
- * CorporateActionEventProcessingStatusAdviceV05.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#mmAdditionalInformation
+ * CorporateActionEventProcessingStatusAdviceV05.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV07.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#AdditionalInformation
- * CorporateActionEventProcessingStatusAdviceV06.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#mmAdditionalInformation
+ * CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07#AdditionalInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07#mmAdditionalInformation
  * CorporateActionInstructionCancellationRequestStatusAdviceV07.
- * AdditionalInformation}</li>
+ * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV08.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,6 +140,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max350Text> additionalText;
 	/**
 	 * Provides additional information or specifies in more detail the content
 	 * of a message. This field may only be used when the information to be
@@ -170,7 +172,7 @@ public class CorporateActionNarrative10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative10.mmObject();
 			isDerived = false;
@@ -182,6 +184,7 @@ public class CorporateActionNarrative10 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> partyContactNarrative;
 	/**
 	 * Provides additional information regarding the party, for example, the
 	 * contact unit or person responsible for the transaction identified in the
@@ -196,8 +199,8 @@ public class CorporateActionNarrative10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#ContactPersonRole
-	 * Role.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmContactPersonRole
+	 * Role.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -218,10 +221,10 @@ public class CorporateActionNarrative10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,31 +238,47 @@ public class CorporateActionNarrative10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative10.AdditionalText, com.tools20022.repository.msg.CorporateActionNarrative10.PartyContactNarrative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative10.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative10.mmPartyContactNarrative);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02.AdditionalInformation, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.AdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03.AdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.AdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative10";
 				definition = "Provides additional information such as the information conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max350Text> getAdditionalText() {
+		return additionalText;
+	}
+
+	public void setAdditionalText(List<Max350Text> additionalText) {
+		this.additionalText = additionalText;
+	}
+
+	public List<Max350Text> getPartyContactNarrative() {
+		return partyContactNarrative;
+	}
+
+	public void setPartyContactNarrative(List<Max350Text> partyContactNarrative) {
+		this.partyContactNarrative = partyContactNarrative;
 	}
 }

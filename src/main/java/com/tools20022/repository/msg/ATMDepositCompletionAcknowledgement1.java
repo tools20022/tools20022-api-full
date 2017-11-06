@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1#ATM
- * ATMDepositCompletionAcknowledgement1.ATM}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1#mmATM
+ * ATMDepositCompletionAcknowledgement1.mmATM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1#Context
- * ATMDepositCompletionAcknowledgement1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1#mmContext
+ * ATMDepositCompletionAcknowledgement1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1#Transaction
- * ATMDepositCompletionAcknowledgement1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1#mmTransaction
+ * ATMDepositCompletionAcknowledgement1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +48,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01#ATMDepositCompletionAcknowledgement
- * ATMDepositCompletionAcknowledgementV01.ATMDepositCompletionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01#mmATMDepositCompletionAcknowledgement
+ * ATMDepositCompletionAcknowledgementV01.mmATMDepositCompletionAcknowledgement}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDepositCompletionAcknowledgement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AutomatedTellerMachine3 aTM;
 	/**
 	 * ATM information.
 	 * <p>
@@ -99,7 +101,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 	 * definition} = "ATM information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDepositCompletionAcknowledgement1.mmObject();
 			isDerived = false;
@@ -107,12 +109,13 @@ public class ATMDepositCompletionAcknowledgement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATM";
 			definition = "ATM information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AutomatedTellerMachine3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine3.mmObject();
 		}
 	};
+	protected ATMContext12 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -139,7 +142,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDepositCompletionAcknowledgement1.mmObject();
 			isDerived = false;
@@ -147,12 +150,13 @@ public class ATMDepositCompletionAcknowledgement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext12.mmObject();
 		}
 	};
+	protected ATMTransaction18 transaction;
 	/**
 	 * Acknowledgement of the deposit completion advice.
 	 * <p>
@@ -179,7 +183,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 	 * definition} = "Acknowledgement of the deposit completion advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDepositCompletionAcknowledgement1.mmObject();
 			isDerived = false;
@@ -187,25 +191,49 @@ public class ATMDepositCompletionAcknowledgement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Acknowledgement of the deposit completion advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction18.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.ATM, com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.Context,
-						com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.ATMDepositCompletionAcknowledgement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmATM, com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmContext,
+						com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.mmATMDepositCompletionAcknowledgement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositCompletionAcknowledgement1";
 				definition = "Information related to the acknowledgement  of an ATM deposit transaction from the ATM manager.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AutomatedTellerMachine3 getATM() {
+		return aTM;
+	}
+
+	public void setATM(com.tools20022.repository.msg.AutomatedTellerMachine3 aTM) {
+		this.aTM = aTM;
+	}
+
+	public ATMContext12 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext12 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction18 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction18 transaction) {
+		this.transaction = transaction;
 	}
 }

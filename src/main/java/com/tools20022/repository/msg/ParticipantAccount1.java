@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max40Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details from participant profile account.
@@ -37,45 +38,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#AccountTypeName
- * ParticipantAccount1.AccountTypeName}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmAccountTypeName
+ * ParticipantAccount1.mmAccountTypeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#AccountTypeShortName
- * ParticipantAccount1.AccountTypeShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmAccountTypeShortName
+ * ParticipantAccount1.mmAccountTypeShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#OpeningDate
- * ParticipantAccount1.OpeningDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmOpeningDate
+ * ParticipantAccount1.mmOpeningDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#ClosingDate
- * ParticipantAccount1.ClosingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmClosingDate
+ * ParticipantAccount1.mmClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#DeletionDate
- * ParticipantAccount1.DeletionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmDeletionDate
+ * ParticipantAccount1.mmDeletionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#LicenseWithdrawalDocument
- * ParticipantAccount1.LicenseWithdrawalDocument}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmLicenseWithdrawalDocument
+ * ParticipantAccount1.mmLicenseWithdrawalDocument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#AccountRestrictions
- * ParticipantAccount1.AccountRestrictions}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmAccountRestrictions
+ * ParticipantAccount1.mmAccountRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#DesignatedAccount
- * ParticipantAccount1.DesignatedAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmDesignatedAccount
+ * ParticipantAccount1.mmDesignatedAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#LiquidityPoolParticipantDetails
- * ParticipantAccount1.LiquidityPoolParticipantDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParticipantAccount1#Limits
- * ParticipantAccount1.Limits}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParticipantAccount1#Arrests
- * ParticipantAccount1.Arrests}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParticipantAccount1#Migration
- * ParticipantAccount1.Migration}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmLiquidityPoolParticipantDetails
+ * ParticipantAccount1.mmLiquidityPoolParticipantDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmLimits
+ * ParticipantAccount1.mmLimits}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmArrests
+ * ParticipantAccount1.mmArrests}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAccount1#mmMigration
+ * ParticipantAccount1.mmMigration}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ParticipantAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max40Text accountTypeName;
 	/**
 	 * Type of the account
 	 * <p>
@@ -116,7 +119,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Type of the account"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountTypeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountTypeName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -124,11 +127,12 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeName";
 			definition = "Type of the account";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	protected Max140Text accountTypeShortName;
 	/**
 	 * Short name for the account type.
 	 * <p>
@@ -156,7 +160,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Short name for the account type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountTypeShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountTypeShortName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -164,11 +168,12 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeShortName";
 			definition = "Short name for the account type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ISODateTime openingDate;
 	/**
 	 * Date the account was open.
 	 * <p>
@@ -196,7 +201,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Date the account was open."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -204,11 +209,12 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Date the account was open.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime closingDate;
 	/**
 	 * Date the account was closed.
 	 * <p>
@@ -236,7 +242,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Date the account was closed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -244,11 +250,12 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Date the account was closed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime deletionDate;
 	/**
 	 * Date the information about the account was deleted.
 	 * <p>
@@ -276,7 +283,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Date the information about the account was deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeletionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeletionDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -284,11 +291,12 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeletionDate";
 			definition = "Date the information about the account was deleted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DocumentIdentification11 licenseWithdrawalDocument;
 	/**
 	 * Details related to license withdrawal.
 	 * <p>
@@ -316,7 +324,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Details related to license withdrawal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LicenseWithdrawalDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLicenseWithdrawalDocument = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -324,12 +332,13 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LicenseWithdrawalDocument";
 			definition = "Details related to license withdrawal.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification11.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification11.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AccountRestrictions1> accountRestrictions;
 	/**
 	 * Details regarding intraday account restrictions.
 	 * <p>
@@ -356,7 +365,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Details regarding intraday account restrictions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountRestrictions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountRestrictions = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -365,10 +374,11 @@ public class ParticipantAccount1 {
 			name = "AccountRestrictions";
 			definition = "Details regarding intraday account restrictions.";
 			minOccurs = 0;
-			type_lazy = () -> AccountRestrictions1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 		}
 	};
+	protected DefaultAccountDetails1 designatedAccount;
 	/**
 	 * Balance sweeping account used for automated funds transfer when the
 	 * receiver account is not available.
@@ -398,7 +408,7 @@ public class ParticipantAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DesignatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDesignatedAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -406,12 +416,13 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignatedAccount";
 			definition = "Balance sweeping account used for automated funds transfer when the receiver account is not available.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DefaultAccountDetails1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DefaultAccountDetails1.mmObject();
 		}
 	};
+	protected LiquidityPoolMembers1Choice liquidityPoolParticipantDetails;
 	/**
 	 * Information about account and account owner.
 	 * <p>
@@ -439,7 +450,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Information about account and account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LiquidityPoolParticipantDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLiquidityPoolParticipantDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -447,12 +458,13 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityPoolParticipantDetails";
 			definition = "Information about account and account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AccountLimits1> limits;
 	/**
 	 * Values and types of limits set on the account.
 	 * <p>
@@ -479,7 +491,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Values and types of limits set on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Limits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -488,10 +500,11 @@ public class ParticipantAccount1 {
 			name = "Limits";
 			definition = "Values and types of limits set on the account.";
 			minOccurs = 0;
-			type_lazy = () -> AccountLimits1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ArrestedFunds1> arrests;
 	/**
 	 * Information related to the arrest.
 	 * <p>
@@ -518,7 +531,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Information related to the arrest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Arrests = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmArrests = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -527,10 +540,11 @@ public class ParticipantAccount1 {
 			name = "Arrests";
 			definition = "Information related to the arrest.";
 			minOccurs = 0;
-			type_lazy = () -> ArrestedFunds1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 		}
 	};
+	protected SystemMigration1 migration;
 	/**
 	 * Information related for participant migration process.
 	 * <p>
@@ -557,7 +571,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Information related for participant migration process. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Migration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -565,27 +579,123 @@ public class ParticipantAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migration";
 			definition = "Information related for participant migration process. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemMigration1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAccount1.AccountTypeName, com.tools20022.repository.msg.ParticipantAccount1.AccountTypeShortName,
-						com.tools20022.repository.msg.ParticipantAccount1.OpeningDate, com.tools20022.repository.msg.ParticipantAccount1.ClosingDate, com.tools20022.repository.msg.ParticipantAccount1.DeletionDate,
-						com.tools20022.repository.msg.ParticipantAccount1.LicenseWithdrawalDocument, com.tools20022.repository.msg.ParticipantAccount1.AccountRestrictions,
-						com.tools20022.repository.msg.ParticipantAccount1.DesignatedAccount, com.tools20022.repository.msg.ParticipantAccount1.LiquidityPoolParticipantDetails, com.tools20022.repository.msg.ParticipantAccount1.Limits,
-						com.tools20022.repository.msg.ParticipantAccount1.Arrests, com.tools20022.repository.msg.ParticipantAccount1.Migration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAccount1.mmAccountTypeName, com.tools20022.repository.msg.ParticipantAccount1.mmAccountTypeShortName,
+						com.tools20022.repository.msg.ParticipantAccount1.mmOpeningDate, com.tools20022.repository.msg.ParticipantAccount1.mmClosingDate, com.tools20022.repository.msg.ParticipantAccount1.mmDeletionDate,
+						com.tools20022.repository.msg.ParticipantAccount1.mmLicenseWithdrawalDocument, com.tools20022.repository.msg.ParticipantAccount1.mmAccountRestrictions,
+						com.tools20022.repository.msg.ParticipantAccount1.mmDesignatedAccount, com.tools20022.repository.msg.ParticipantAccount1.mmLiquidityPoolParticipantDetails, com.tools20022.repository.msg.ParticipantAccount1.mmLimits,
+						com.tools20022.repository.msg.ParticipantAccount1.mmArrests, com.tools20022.repository.msg.ParticipantAccount1.mmMigration);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantAccount1";
 				definition = "Details from participant profile account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max40Text getAccountTypeName() {
+		return accountTypeName;
+	}
+
+	public void setAccountTypeName(Max40Text accountTypeName) {
+		this.accountTypeName = accountTypeName;
+	}
+
+	public Max140Text getAccountTypeShortName() {
+		return accountTypeShortName;
+	}
+
+	public void setAccountTypeShortName(Max140Text accountTypeShortName) {
+		this.accountTypeShortName = accountTypeShortName;
+	}
+
+	public ISODateTime getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(ISODateTime openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	public ISODateTime getClosingDate() {
+		return closingDate;
+	}
+
+	public void setClosingDate(ISODateTime closingDate) {
+		this.closingDate = closingDate;
+	}
+
+	public ISODateTime getDeletionDate() {
+		return deletionDate;
+	}
+
+	public void setDeletionDate(ISODateTime deletionDate) {
+		this.deletionDate = deletionDate;
+	}
+
+	public DocumentIdentification11 getLicenseWithdrawalDocument() {
+		return licenseWithdrawalDocument;
+	}
+
+	public void setLicenseWithdrawalDocument(com.tools20022.repository.msg.DocumentIdentification11 licenseWithdrawalDocument) {
+		this.licenseWithdrawalDocument = licenseWithdrawalDocument;
+	}
+
+	public List<AccountRestrictions1> getAccountRestrictions() {
+		return accountRestrictions;
+	}
+
+	public void setAccountRestrictions(List<com.tools20022.repository.msg.AccountRestrictions1> accountRestrictions) {
+		this.accountRestrictions = accountRestrictions;
+	}
+
+	public DefaultAccountDetails1 getDesignatedAccount() {
+		return designatedAccount;
+	}
+
+	public void setDesignatedAccount(com.tools20022.repository.msg.DefaultAccountDetails1 designatedAccount) {
+		this.designatedAccount = designatedAccount;
+	}
+
+	public LiquidityPoolMembers1Choice getLiquidityPoolParticipantDetails() {
+		return liquidityPoolParticipantDetails;
+	}
+
+	public void setLiquidityPoolParticipantDetails(LiquidityPoolMembers1Choice liquidityPoolParticipantDetails) {
+		this.liquidityPoolParticipantDetails = liquidityPoolParticipantDetails;
+	}
+
+	public List<AccountLimits1> getLimits() {
+		return limits;
+	}
+
+	public void setLimits(List<com.tools20022.repository.msg.AccountLimits1> limits) {
+		this.limits = limits;
+	}
+
+	public List<ArrestedFunds1> getArrests() {
+		return arrests;
+	}
+
+	public void setArrests(List<com.tools20022.repository.msg.ArrestedFunds1> arrests) {
+		this.arrests = arrests;
+	}
+
+	public SystemMigration1 getMigration() {
+		return migration;
+	}
+
+	public void setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
+		this.migration = migration;
 	}
 }

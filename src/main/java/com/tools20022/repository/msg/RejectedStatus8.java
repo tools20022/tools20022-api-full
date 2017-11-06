@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus8#ExtendedReason
- * RejectedStatus8.ExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectedStatus8#AdditionalInformation
- * RejectedStatus8.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectedStatus8#mmExtendedReason
+ * RejectedStatus8.mmExtendedReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RejectedStatus8#mmAdditionalInformation
+ * RejectedStatus8.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectedStatus8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text extendedReason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -89,7 +91,7 @@ public class RejectedStatus8 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedStatus8.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class RejectedStatus8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RestrictedFINMax210Text additionalInformation;
 	/**
 	 * Additional information about the rejected status reason.
 	 * <p>
@@ -115,8 +118,8 @@ public class RejectedStatus8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,17 +138,17 @@ public class RejectedStatus8 {
 	 * definition} = "Additional information about the rejected status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> RejectedStatus8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the rejected status reason.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax210Text.mmObject();
 		}
 	};
@@ -153,14 +156,30 @@ public class RejectedStatus8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus8.ExtendedReason, com.tools20022.repository.msg.RejectedStatus8.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus8.mmExtendedReason, com.tools20022.repository.msg.RejectedStatus8.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatus8";
 				definition = "Status is rejected.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Max350Text extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public RestrictedFINMax210Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(RestrictedFINMax210Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.PaymentExecution;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements identifying the dates related to the underlying transactions.
@@ -36,22 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDates1#AcceptanceDateTime
- * TransactionDates1.AcceptanceDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDates1#TradeDate
- * TransactionDates1.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDates1#mmAcceptanceDateTime
+ * TransactionDates1.mmAcceptanceDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDates1#mmTradeDate
+ * TransactionDates1.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDates1#InterbankSettlementDate
- * TransactionDates1.InterbankSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDates1#StartDate
- * TransactionDates1.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDates1#EndDate
- * TransactionDates1.EndDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDates1#mmInterbankSettlementDate
+ * TransactionDates1.mmInterbankSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDates1#mmStartDate
+ * TransactionDates1.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDates1#mmEndDate
+ * TransactionDates1.mmEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDates1#TransactionDateTime
- * TransactionDates1.TransactionDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDates1#Proprietary
- * TransactionDates1.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDates1#mmTransactionDateTime
+ * TransactionDates1.mmTransactionDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDates1#mmProprietary
+ * TransactionDates1.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionDates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime acceptanceDateTime;
 	/**
 	 * Point in time when the payment order from the initiating party meets the
 	 * processing conditions of the account servicing agent (debtor's agent in
@@ -94,8 +97,8 @@ public class TransactionDates1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#AcceptanceDateTime
-	 * PaymentExecution.AcceptanceDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmAcceptanceDateTime
+	 * PaymentExecution.mmAcceptanceDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,20 +119,21 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcceptanceDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcceptanceDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmAcceptanceDateTime;
 			componentContext_lazy = () -> TransactionDates1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.AcceptanceDateTime;
 			isDerived = false;
 			xmlTag = "AccptncDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceDateTime";
 			definition = "Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent (debtor's agent in case of a credit transfer, creditor's agent in case of a direct debit). This means - amongst others - that the account servicing agent has received the payment order and has applied checks as eg, authorisation, availability of funds.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODate tradeDate;
 	/**
 	 * Date on which the trade was executed.
 	 * <p>
@@ -142,8 +146,8 @@ public class TransactionDates1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +166,21 @@ public class TransactionDates1 {
 	 * definition} = "Date on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransactionDates1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date on which the trade was executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate interbankSettlementDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -190,8 +195,8 @@ public class TransactionDates1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,20 +217,21 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> TransactionDates1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate startDate;
 	/**
 	 * Start date of the underlying transaction, such as a treasury transaction,
 	 * an investment plan.
@@ -239,8 +245,8 @@ public class TransactionDates1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#StartDate
-	 * Trade.StartDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmStartDate
+	 * Trade.mmStartDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -261,20 +267,21 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmStartDate;
 			componentContext_lazy = () -> TransactionDates1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.StartDate;
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of the underlying transaction, such as a treasury transaction, an investment plan.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate endDate;
 	/**
 	 * End date of the underlying transaction, such as a treasury transaction,
 	 * an investment plan.
@@ -288,8 +295,8 @@ public class TransactionDates1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#EndDate Trade.EndDate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmEndDate
+	 * Trade.mmEndDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,20 +317,21 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmEndDate;
 			componentContext_lazy = () -> TransactionDates1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.EndDate;
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End date of the underlying transaction, such as a treasury transaction, an investment plan.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime transactionDateTime;
 	/**
 	 * Date and time of the underlying transaction.
 	 * <p>
@@ -336,8 +344,8 @@ public class TransactionDates1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -356,20 +364,21 @@ public class TransactionDates1 {
 	 * definition} = "Date and time of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransactionDates1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TxDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDateTime";
 			definition = "Date and time of the underlying transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ProprietaryDate1> proprietary;
 	/**
 	 * Proprietary date related to the underlying transaction.
 	 * <p>
@@ -396,7 +405,7 @@ public class TransactionDates1 {
 	 * definition} = "Proprietary date related to the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionDates1.mmObject();
 			isDerived = false;
@@ -405,24 +414,80 @@ public class TransactionDates1 {
 			name = "Proprietary";
 			definition = "Proprietary date related to the underlying transaction.";
 			minOccurs = 0;
-			type_lazy = () -> ProprietaryDate1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDates1.AcceptanceDateTime, com.tools20022.repository.msg.TransactionDates1.TradeDate,
-						com.tools20022.repository.msg.TransactionDates1.InterbankSettlementDate, com.tools20022.repository.msg.TransactionDates1.StartDate, com.tools20022.repository.msg.TransactionDates1.EndDate,
-						com.tools20022.repository.msg.TransactionDates1.TransactionDateTime, com.tools20022.repository.msg.TransactionDates1.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDates1.mmAcceptanceDateTime, com.tools20022.repository.msg.TransactionDates1.mmTradeDate,
+						com.tools20022.repository.msg.TransactionDates1.mmInterbankSettlementDate, com.tools20022.repository.msg.TransactionDates1.mmStartDate, com.tools20022.repository.msg.TransactionDates1.mmEndDate,
+						com.tools20022.repository.msg.TransactionDates1.mmTransactionDateTime, com.tools20022.repository.msg.TransactionDates1.mmProprietary);
 				trace_lazy = () -> PaymentExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionDates1";
 				definition = "Set of elements identifying the dates related to the underlying transactions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getAcceptanceDateTime() {
+		return acceptanceDateTime;
+	}
+
+	public void setAcceptanceDateTime(ISODateTime acceptanceDateTime) {
+		this.acceptanceDateTime = acceptanceDateTime;
+	}
+
+	public ISODate getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODate tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public ISODate getInterbankSettlementDate() {
+		return interbankSettlementDate;
+	}
+
+	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = interbankSettlementDate;
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public ISODate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(ISODate endDate) {
+		this.endDate = endDate;
+	}
+
+	public ISODateTime getTransactionDateTime() {
+		return transactionDateTime;
+	}
+
+	public void setTransactionDateTime(ISODateTime transactionDateTime) {
+		this.transactionDateTime = transactionDateTime;
+	}
+
+	public List<ProprietaryDate1> getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(List<com.tools20022.repository.msg.ProprietaryDate1> proprietary) {
+		this.proprietary = proprietary;
 	}
 }

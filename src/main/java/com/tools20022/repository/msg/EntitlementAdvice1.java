@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the CA entitlement.
@@ -36,18 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EntitlementAdvice1#OptionType
- * EntitlementAdvice1.OptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#OptionNumber
- * EntitlementAdvice1.OptionNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntitlementAdvice1#RecordDate
- * EntitlementAdvice1.RecordDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntitlementAdvice1#PaymentDate
- * EntitlementAdvice1.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmOptionType
+ * EntitlementAdvice1.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#AccountAndDistributionDetails
- * EntitlementAdvice1.AccountAndDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmOptionNumber
+ * EntitlementAdvice1.mmOptionNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmRecordDate
+ * EntitlementAdvice1.mmRecordDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmPaymentDate
+ * EntitlementAdvice1.mmPaymentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmAccountAndDistributionDetails
+ * EntitlementAdvice1.mmAccountAndDistributionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,15 +63,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#CorporateActionDistributionDetails
- * AgentCADistributionBreakdownAdviceV01.CorporateActionDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#mmCorporateActionDistributionDetails
+ * AgentCADistributionBreakdownAdviceV01.mmCorporateActionDistributionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EntitlementAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionOption1FormatChoice optionType;
 	/**
 	 * Specifies the corporate action options available to the account owner.
 	 * <p>
@@ -94,8 +99,8 @@ public class EntitlementAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
-	 * CorporateActionOption.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+	 * CorporateActionOption.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,20 +120,21 @@ public class EntitlementAdvice1 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> EntitlementAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	protected Exact3NumericText optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -142,8 +148,8 @@ public class EntitlementAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +169,21 @@ public class EntitlementAdvice1 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> EntitlementAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected DateFormat4Choice recordDate;
 	/**
 	 * Date on which the holders of securities are/will be recorded for the
 	 * income being paid or for entitlement to the rights or offer/privilege.
@@ -191,8 +198,8 @@ public class EntitlementAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RecordDate
-	 * CorporateActionDeadline.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRecordDate
+	 * CorporateActionDeadline.mmRecordDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -213,20 +220,21 @@ public class EntitlementAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> EntitlementAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RecordDate;
 			isDerived = false;
 			xmlTag = "RcrdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date on which the holders of securities are/will be recorded for the income being paid or for entitlement to the rights or offer/privilege.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice paymentDate;
 	/**
 	 * Date on which securities/cash will be paid.
 	 * <p>
@@ -240,8 +248,8 @@ public class EntitlementAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#MovementDate
-	 * CorporateActionDistribution.MovementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmMovementDate
+	 * CorporateActionDistribution.mmMovementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +268,21 @@ public class EntitlementAdvice1 {
 	 * definition} = "Date on which securities/cash will be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> EntitlementAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.MovementDate;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which securities/cash will be paid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Entitlement1> accountAndDistributionDetails;
 	/**
 	 * Provides information about the entitlement and the entitled account.
 	 * <p>
@@ -306,34 +315,74 @@ public class EntitlementAdvice1 {
 	 * "Provides information about the entitlement and the entitled account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountAndDistributionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountAndDistributionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EntitlementAdvice1.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionEntitlement.mmObject();
+			componentContext_lazy = () -> EntitlementAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctAndDstrbtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountAndDistributionDetails";
 			definition = "Provides information about the entitlement and the entitled account.";
 			minOccurs = 1;
-			type_lazy = () -> Entitlement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Entitlement1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAdvice1.OptionType, com.tools20022.repository.msg.EntitlementAdvice1.OptionNumber,
-						com.tools20022.repository.msg.EntitlementAdvice1.RecordDate, com.tools20022.repository.msg.EntitlementAdvice1.PaymentDate, com.tools20022.repository.msg.EntitlementAdvice1.AccountAndDistributionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAdvice1.mmOptionType, com.tools20022.repository.msg.EntitlementAdvice1.mmOptionNumber,
+						com.tools20022.repository.msg.EntitlementAdvice1.mmRecordDate, com.tools20022.repository.msg.EntitlementAdvice1.mmPaymentDate, com.tools20022.repository.msg.EntitlementAdvice1.mmAccountAndDistributionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.mmCorporateActionDistributionDetails);
 				trace_lazy = () -> CorporateActionEntitlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.CorporateActionDistributionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EntitlementAdvice1";
 				definition = "Provides information about the CA entitlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionOption1FormatChoice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
+		this.optionType = optionType;
+	}
+
+	public Exact3NumericText getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public DateFormat4Choice getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(DateFormat4Choice recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public DateFormat4Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat4Choice paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
+	public List<Entitlement1> getAccountAndDistributionDetails() {
+		return accountAndDistributionDetails;
+	}
+
+	public void setAccountAndDistributionDetails(List<com.tools20022.repository.msg.Entitlement1> accountAndDistributionDetails) {
+		this.accountAndDistributionDetails = accountAndDistributionDetails;
 	}
 }

@@ -32,14 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalRightCode#WrittenQuestionProposal
- * AdditionalRightCode.WrittenQuestionProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalRightCode#mmWrittenQuestionProposal
+ * AdditionalRightCode.mmWrittenQuestionProposal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalRightCode#ResolutionProposal
- * AdditionalRightCode.ResolutionProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalRightCode#mmResolutionProposal
+ * AdditionalRightCode.mmResolutionProposal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalRightCode#AgendaItemProposal
- * AdditionalRightCode.AgendaItemProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalRightCode#mmAgendaItemProposal
+ * AdditionalRightCode.mmAgendaItemProposal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class AdditionalRightCode {
 	 * definition} = "Defines a written question proposal."</li>
 	 * </ul>
 	 */
-	public static final MMCode WrittenQuestionProposal = new MMCode() {
+	public static final MMCode mmWrittenQuestionProposal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WrittenQuestionProposal";
@@ -126,7 +126,7 @@ public class AdditionalRightCode {
 	 * definition} = "Defines a resolution proposal."</li>
 	 * </ul>
 	 */
-	public static final MMCode ResolutionProposal = new MMCode() {
+	public static final MMCode mmResolutionProposal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ResolutionProposal";
@@ -156,7 +156,7 @@ public class AdditionalRightCode {
 	 * definition} = "Defines a resolution proposal."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgendaItemProposal = new MMCode() {
+	public static final MMCode mmAgendaItemProposal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgendaItemProposal";
@@ -169,13 +169,13 @@ public class AdditionalRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WQPS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRightCode";
 				definition = "Define specific rights that the shareholder has (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalRightCode.WrittenQuestionProposal, com.tools20022.repository.codeset.AdditionalRightCode.ResolutionProposal,
-						com.tools20022.repository.codeset.AdditionalRightCode.AgendaItemProposal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalRightCode.mmWrittenQuestionProposal, com.tools20022.repository.codeset.AdditionalRightCode.mmResolutionProposal,
+						com.tools20022.repository.codeset.AdditionalRightCode.mmAgendaItemProposal);
 				derivation_lazy = () -> Arrays.asList(AdditionalRight1Code.mmObject());
 			}
 		});

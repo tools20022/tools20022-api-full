@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -66,42 +67,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#MessageIdentification
- * TransferOutConfirmationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmMessageIdentification
+ * TransferOutConfirmationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#RelatedReference
- * TransferOutConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmRelatedReference
+ * TransferOutConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#PoolReference
- * TransferOutConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmPoolReference
+ * TransferOutConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#PreviousReference
- * TransferOutConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmPreviousReference
+ * TransferOutConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#TransferDetails
- * TransferOutConfirmationV02.TransferDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmTransferDetails
+ * TransferOutConfirmationV02.mmTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#FinancialInstrumentDetails
- * TransferOutConfirmationV02.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmFinancialInstrumentDetails
+ * TransferOutConfirmationV02.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#AccountDetails
- * TransferOutConfirmationV02.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmAccountDetails
+ * TransferOutConfirmationV02.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#SettlementDetails
- * TransferOutConfirmationV02.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmSettlementDetails
+ * TransferOutConfirmationV02.mmSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#CopyDetails
- * TransferOutConfirmationV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmCopyDetails
+ * TransferOutConfirmationV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#Extension
- * TransferOutConfirmationV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmExtension
+ * TransferOutConfirmationV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#identifier
- * TransferOutConfirmationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.003.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOutConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -155,17 +155,18 @@ public class TransferOutConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -190,17 +191,18 @@ public class TransferOutConfirmationV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -224,17 +226,18 @@ public class TransferOutConfirmationV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -258,17 +261,18 @@ public class TransferOutConfirmationV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected Transfer10 transferDetails;
 	/**
 	 * General information related to the transfer of a financial instrument.
 	 * <p>
@@ -293,17 +297,18 @@ public class TransferOutConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Transfer10.mmObject();
 		}
 	};
+	protected FinancialInstrument13 financialInstrumentDetails;
 	/**
 	 * Information related to the financial instrument withdrawn.
 	 * <p>
@@ -328,17 +333,18 @@ public class TransferOutConfirmationV02 {
 	 * "Information related to the financial instrument withdrawn."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Information related to the financial instrument withdrawn.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrument13.mmObject();
 		}
 	};
+	protected InvestmentAccount22 accountDetails;
 	/**
 	 * Information related to the account from which the financial instrument
 	 * was withdrawn.
@@ -365,17 +371,18 @@ public class TransferOutConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument was withdrawn.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount22.mmObject();
 		}
 	};
+	protected ReceiveInformation4 settlementDetails;
 	/**
 	 * Information related to the receiving side of the transfer.
 	 * <p>
@@ -400,17 +407,18 @@ public class TransferOutConfirmationV02 {
 	 * "Information related to the receiving side of the transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReceiveInformation4.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -435,17 +443,18 @@ public class TransferOutConfirmationV02 {
 	 * "Information provided when the message is a copy of a previous message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -471,7 +480,7 @@ public class TransferOutConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,33 +490,6 @@ public class TransferOutConfirmationV02 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "003";
-			version = "02";
-			flavour = "001";
-		}
-	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
@@ -515,20 +497,107 @@ public class TransferOutConfirmationV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferOutConfirmationV02";
 				definition = "Scope\r\nAn executing party, eg, a transfer agent, sends the TransferOutConfirmation message to the instructing party, eg, an investment manager or its authorised representative, to confirm the delivery of a financial instrument, free of payment, on a given date, to a specified party.\r\nThis message may also be used to confirm the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.\r\nUsage\r\nThe TransferOutConfirmation message is used to confirm the withdrawal of a financial instrument from the owner's account and its delivery to another own account, or to a third party, has taken place.\r\nThe reference of the transfer confirmation is identified in TransferConfirmationReference. The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferOutInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.";
-				previousVersion_lazy = () -> TransferOutConfirmation.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV03.mmObject());
+				previousVersion_lazy = () -> TransferOutConfirmation.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfOutConfV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutConfirmationV02.MessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV02.PoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV02.TransferDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.FinancialInstrumentDetails,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV02.AccountDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.SettlementDetails,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV02.CopyDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmPoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmTransferDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmFinancialInstrumentDetails,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmAccountDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmSettlementDetails,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmCopyDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "003";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public Transfer10 getTransferDetails() {
+		return transferDetails;
+	}
+
+	public void setTransferDetails(Transfer10 transferDetails) {
+		this.transferDetails = transferDetails;
+	}
+
+	public FinancialInstrument13 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(FinancialInstrument13 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public InvestmentAccount22 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(InvestmentAccount22 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public ReceiveInformation4 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(ReceiveInformation4 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

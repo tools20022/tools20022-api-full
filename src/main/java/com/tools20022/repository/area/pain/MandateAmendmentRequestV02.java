@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -78,21 +79,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV02#GroupHeader
- * MandateAmendmentRequestV02.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV02#mmGroupHeader
+ * MandateAmendmentRequestV02.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV02#UnderlyingAmendmentDetails
- * MandateAmendmentRequestV02.UnderlyingAmendmentDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV02#mmUnderlyingAmendmentDetails
+ * MandateAmendmentRequestV02.mmUnderlyingAmendmentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV02#SupplementaryData
- * MandateAmendmentRequestV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV02#mmSupplementaryData
+ * MandateAmendmentRequestV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV02#identifier
- * MandateAmendmentRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.010.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateAmendmentRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader47 groupHeader;
 	/**
 	 * Set of characteristics to identify the message and parties playing a role
 	 * in the amendment of the mandate, but which are not part of the mandate.
@@ -145,17 +145,18 @@ public class MandateAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the amendment of the mandate, but which are not part of the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 	};
+	protected MandateAmendment2 underlyingAmendmentDetails;
 	/**
 	 * Set of elements used to provide details on the amendment request.
 	 * <p>
@@ -180,17 +181,18 @@ public class MandateAmendmentRequestV02 {
 	 * "Set of elements used to provide details on the amendment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingAmendmentDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingAmendmentDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygAmdmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingAmendmentDetails";
 			definition = "Set of elements used to provide details on the amendment request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MandateAmendment2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -217,7 +219,7 @@ public class MandateAmendmentRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,33 +229,6 @@ public class MandateAmendmentRequestV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "010";
-			version = "02";
-			flavour = "001";
-		}
-	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
@@ -261,17 +236,48 @@ public class MandateAmendmentRequestV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendmentRequestV02";
 				definition = "Scope\r\nThe MandateAmendmentRequest message is sent by the initiator of the request to his agent and/or counterparty. The initiator can both be the debtor or the creditor (or where appropriate the debtor agent).\r\nThe MandateAmendmentRequest message is forwarded by the agent of the initiator to the agent of the counterparty.\r\nA MandateAmendmentRequest message is used to request the amendment of specific information in an existing mandate. The MandateAmendmentRequest message must reflect the new data of the element(s) to be amended and at a minimum a unique reference to the existing mandate. If accepted, this MandateAmendmentRequest message together with the MandateAcceptanceReport message confirming the acceptance will be considered as a valid amendment on an existing mandate, agreed upon by all parties. The amended mandate will from then on be considered the valid mandate.\r\nUsage\r\nThe MandateAmendmentRequest message can contain only one request to amend one specific mandate.\r\nThe messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.\r\nThe message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.\r\nThe MandateAmendmentRequest message can be used in domestic and cross-border scenarios.\r\nIf all elements in the existing Mandate need to be amended or the underlying contract is different, then the MandateAmendmentRequest message should not be used. The existing Mandate has to be cancelled and a new Mandate has to be initiated.";
-				previousVersion_lazy = () -> MandateAmendmentRequestV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(MandateAmendmentRequestV03.mmObject());
+				previousVersion_lazy = () -> MandateAmendmentRequestV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "MndtAmdmntReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAmendmentRequestV02.GroupHeader, com.tools20022.repository.area.pain.MandateAmendmentRequestV02.UnderlyingAmendmentDetails,
-						com.tools20022.repository.area.pain.MandateAmendmentRequestV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.MandateAmendmentRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmGroupHeader, com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmUnderlyingAmendmentDetails,
+						com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "010";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader47 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader47 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public MandateAmendment2 getUnderlyingAmendmentDetails() {
+		return underlyingAmendmentDetails;
+	}
+
+	public void setUnderlyingAmendmentDetails(MandateAmendment2 underlyingAmendmentDetails) {
+		this.underlyingAmendmentDetails = underlyingAmendmentDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

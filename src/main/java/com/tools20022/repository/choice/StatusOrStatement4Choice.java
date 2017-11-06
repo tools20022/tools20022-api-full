@@ -37,18 +37,18 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement4Choice#StatusAdvice
- * StatusOrStatement4Choice.StatusAdvice}</li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement4Choice#mmStatusAdvice
+ * StatusOrStatement4Choice.mmStatusAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement4Choice#Statement
- * StatusOrStatement4Choice.Statement}</li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement4Choice#mmStatement
+ * StatusOrStatement4Choice.mmStatement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -64,6 +64,7 @@ import java.util.function.Supplier;
 public class StatusOrStatement4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber7 statusAdvice;
 	/**
 	 * Identify the status advice and the transaction for which the status
 	 * advice was requested.
@@ -93,7 +94,7 @@ public class StatusOrStatement4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAdvice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAdvice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusOrStatement4Choice.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class StatusOrStatement4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAdvice";
 			definition = "Identify the status advice and the transaction for which the status advice was requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber7.mmObject();
 		}
 	};
+	protected DocumentNumber3 statement;
 	/**
 	 * Identify the statement/report that was requested.
 	 * <p>
@@ -133,7 +135,7 @@ public class StatusOrStatement4Choice {
 	 * definition} = "Identify the statement/report that was requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Statement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusOrStatement4Choice.mmObject();
 			isDerived = false;
@@ -141,18 +143,18 @@ public class StatusOrStatement4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Identify the statement/report that was requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement4Choice.StatusAdvice, com.tools20022.repository.choice.StatusOrStatement4Choice.Statement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement4Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement4Choice.mmStatement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -166,5 +168,21 @@ public class StatusOrStatement4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber7 getStatusAdvice() {
+		return statusAdvice;
+	}
+
+	public void setStatusAdvice(DocumentNumber7 statusAdvice) {
+		this.statusAdvice = statusAdvice;
+	}
+
+	public DocumentNumber3 getStatement() {
+		return statement;
+	}
+
+	public void setStatement(DocumentNumber3 statement) {
+		this.statement = statement;
 	}
 }

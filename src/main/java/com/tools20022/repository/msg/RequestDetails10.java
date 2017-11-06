@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the request providing the changes and references of the
@@ -38,23 +39,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#Reference
- * RequestDetails10.Reference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#Linkage
- * RequestDetails10.Linkage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#Priority
- * RequestDetails10.Priority}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#mmReference
+ * RequestDetails10.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#mmLinkage
+ * RequestDetails10.mmLinkage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#mmPriority
+ * RequestDetails10.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails10#OtherProcessing
- * RequestDetails10.OtherProcessing}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails10#mmOtherProcessing
+ * RequestDetails10.mmOtherProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails10#PartialSettlementIndicator
- * RequestDetails10.PartialSettlementIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails10#mmPartialSettlementIndicator
+ * RequestDetails10.mmPartialSettlementIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails10#ClearingChannel
- * RequestDetails10.ClearingChannel}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#Linkages
- * RequestDetails10.Linkages}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails10#mmClearingChannel
+ * RequestDetails10.mmClearingChannel}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails10#mmLinkages
+ * RequestDetails10.mmLinkages}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestDetails10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected References14 reference;
 	/**
 	 * References of the transaction for which the intra-balance modification is
 	 * requested.
@@ -92,8 +94,8 @@ public class RequestDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTradeRelatedIdentifications
-	 * SecuritiesTrade.SecuritiesTradeRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
+	 * SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,21 +116,22 @@ public class RequestDetails10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> RequestDetails10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTradeRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "References of the transaction for which the intra-balance modification is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> References14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.References14.mmObject();
 		}
 	};
+	protected LinkageType1Choice linkage;
 	/**
 	 * Specifies the type of linkage requested.
 	 * <p>
@@ -157,7 +160,7 @@ public class RequestDetails10 {
 	 * definition} = "Specifies the type of linkage requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Linkage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
@@ -165,11 +168,12 @@ public class RequestDetails10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkage";
 			definition = "Specifies the type of linkage requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> LinkageType1Choice.mmObject();
 		}
 	};
+	protected PriorityNumeric1Choice priority;
 	/**
 	 * Specifies whether the transaction is to be executed with a high priority.
 	 * <p>
@@ -200,7 +204,7 @@ public class RequestDetails10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Priority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
@@ -208,11 +212,12 @@ public class RequestDetails10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification30> otherProcessing;
 	/**
 	 * Specifies another type of processing change request.
 	 * <p>
@@ -241,7 +246,7 @@ public class RequestDetails10 {
 	 * definition} = "Specifies another type of processing change request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherProcessing = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherProcessing = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
@@ -250,9 +255,10 @@ public class RequestDetails10 {
 			name = "OtherProcessing";
 			definition = "Specifies another type of processing change request.";
 			minOccurs = 0;
-			complexType_lazy = () -> GenericIdentification30.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
 		}
 	};
+	protected YesNoIndicator partialSettlementIndicator;
 	/**
 	 * Specifies whether partial settlement is allowed.
 	 * <p>
@@ -266,8 +272,8 @@ public class RequestDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartialSettlementIndicator
-	 * SecuritiesSettlement.PartialSettlementIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartialSettlementIndicator
+	 * SecuritiesSettlement.mmPartialSettlementIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -286,20 +292,21 @@ public class RequestDetails10 {
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialSettlementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartialSettlementIndicator;
 			componentContext_lazy = () -> RequestDetails10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartialSettlementIndicator;
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ClearingChannel2Code clearingChannel;
 	/**
 	 * Specifies the clearing channel to be used to process the payment
 	 * instruction.
@@ -314,8 +321,8 @@ public class RequestDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ClearingChannel
-	 * PaymentProcessing.ClearingChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
+	 * PaymentProcessing.mmClearingChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -336,20 +343,21 @@ public class RequestDetails10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> RequestDetails10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ClearingChannel;
 			isDerived = false;
 			xmlTag = "ClrChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Linkages26> linkages;
 	/**
 	 * Information regarding the linkage requested.
 	 * <p>
@@ -375,7 +383,7 @@ public class RequestDetails10 {
 	 * definition} = "Information regarding the linkage requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Linkages = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkages = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
@@ -384,24 +392,80 @@ public class RequestDetails10 {
 			name = "Linkages";
 			definition = "Information regarding the linkage requested.";
 			minOccurs = 0;
-			type_lazy = () -> Linkages26.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Linkages26.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails10.Reference, com.tools20022.repository.msg.RequestDetails10.Linkage, com.tools20022.repository.msg.RequestDetails10.Priority,
-						com.tools20022.repository.msg.RequestDetails10.OtherProcessing, com.tools20022.repository.msg.RequestDetails10.PartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails10.ClearingChannel,
-						com.tools20022.repository.msg.RequestDetails10.Linkages);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails10.mmReference, com.tools20022.repository.msg.RequestDetails10.mmLinkage, com.tools20022.repository.msg.RequestDetails10.mmPriority,
+						com.tools20022.repository.msg.RequestDetails10.mmOtherProcessing, com.tools20022.repository.msg.RequestDetails10.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails10.mmClearingChannel,
+						com.tools20022.repository.msg.RequestDetails10.mmLinkages);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestDetails10";
 				definition = "Details of the request providing  the changes and references of the instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References14 getReference() {
+		return reference;
+	}
+
+	public void setReference(com.tools20022.repository.msg.References14 reference) {
+		this.reference = reference;
+	}
+
+	public LinkageType1Choice getLinkage() {
+		return linkage;
+	}
+
+	public void setLinkage(LinkageType1Choice linkage) {
+		this.linkage = linkage;
+	}
+
+	public PriorityNumeric1Choice getPriority() {
+		return priority;
+	}
+
+	public void setPriority(PriorityNumeric1Choice priority) {
+		this.priority = priority;
+	}
+
+	public List<GenericIdentification30> getOtherProcessing() {
+		return otherProcessing;
+	}
+
+	public void setOtherProcessing(List<com.tools20022.repository.msg.GenericIdentification30> otherProcessing) {
+		this.otherProcessing = otherProcessing;
+	}
+
+	public YesNoIndicator getPartialSettlementIndicator() {
+		return partialSettlementIndicator;
+	}
+
+	public void setPartialSettlementIndicator(YesNoIndicator partialSettlementIndicator) {
+		this.partialSettlementIndicator = partialSettlementIndicator;
+	}
+
+	public ClearingChannel2Code getClearingChannel() {
+		return clearingChannel;
+	}
+
+	public void setClearingChannel(ClearingChannel2Code clearingChannel) {
+		this.clearingChannel = clearingChannel;
+	}
+
+	public List<Linkages26> getLinkages() {
+		return linkages;
+	}
+
+	public void setLinkages(List<com.tools20022.repository.msg.Linkages26> linkages) {
+		this.linkages = linkages;
 	}
 }

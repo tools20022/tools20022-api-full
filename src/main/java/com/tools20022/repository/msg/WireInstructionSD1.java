@@ -35,41 +35,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#PlaceAndName
- * WireInstructionSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmPlaceAndName
+ * WireInstructionSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#WireQuantity
- * WireInstructionSD1.WireQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.WireInstructionSD1#BankName
- * WireInstructionSD1.BankName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.WireInstructionSD1#BankAddress
- * WireInstructionSD1.BankAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.WireInstructionSD1#BankCity
- * WireInstructionSD1.BankCity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.WireInstructionSD1#BankCountry
- * WireInstructionSD1.BankCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmWireQuantity
+ * WireInstructionSD1.mmWireQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBankName
+ * WireInstructionSD1.mmBankName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#BankAttentionTo
- * WireInstructionSD1.BankAttentionTo}</li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBankAddress
+ * WireInstructionSD1.mmBankAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBankCity
+ * WireInstructionSD1.mmBankCity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#BankComments
- * WireInstructionSD1.BankComments}</li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBankCountry
+ * WireInstructionSD1.mmBankCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#BeneficiaryAccount
- * WireInstructionSD1.BeneficiaryAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBankAttentionTo
+ * WireInstructionSD1.mmBankAttentionTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#BeneficiaryAccountIdentification
- * WireInstructionSD1.BeneficiaryAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBankComments
+ * WireInstructionSD1.mmBankComments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#BeneficiaryAccountComments
- * WireInstructionSD1.BeneficiaryAccountComments}</li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBeneficiaryAccount
+ * WireInstructionSD1.mmBeneficiaryAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBeneficiaryAccountIdentification
+ * WireInstructionSD1.mmBeneficiaryAccountIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.WireInstructionSD1#mmBeneficiaryAccountComments
+ * WireInstructionSD1.mmBeneficiaryAccountComments}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class WireInstructionSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -117,7 +120,7 @@ public class WireInstructionSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -125,11 +128,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice wireQuantity;
 	/**
 	 * Quantity of securities concerned in this wire.
 	 * <p>
@@ -158,7 +162,7 @@ public class WireInstructionSD1 {
 	 * definition} = "Quantity of securities concerned in this wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WireQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWireQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -166,11 +170,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WireQuantity";
 			definition = "Quantity of securities concerned in this wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected Max105Text bankName;
 	/**
 	 * Name of the recipient bank for the wire.
 	 * <p>
@@ -198,7 +203,7 @@ public class WireInstructionSD1 {
 	 * definition} = "Name of the recipient bank for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -206,11 +211,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankName";
 			definition = "Name of the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max140Text bankAddress;
 	/**
 	 * Street address of the recipient bank for the wire.
 	 * <p>
@@ -238,7 +244,7 @@ public class WireInstructionSD1 {
 	 * definition} = "Street address of the recipient bank for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -246,11 +252,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankAddress";
 			definition = "Street address of the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max70Text bankCity;
 	/**
 	 * City of the recipient bank for the wire.
 	 * <p>
@@ -278,7 +285,7 @@ public class WireInstructionSD1 {
 	 * definition} = "City of the recipient bank for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankCity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankCity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -286,11 +293,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankCity";
 			definition = "City of the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode bankCountry;
 	/**
 	 * Country of the recipient bank for the wire.
 	 * <p>
@@ -318,7 +326,7 @@ public class WireInstructionSD1 {
 	 * definition} = "Country of the recipient bank for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -326,11 +334,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankCountry";
 			definition = "Country of the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max105Text bankAttentionTo;
 	/**
 	 * Responsible person in the recipient back for the wire.
 	 * <p>
@@ -358,7 +367,7 @@ public class WireInstructionSD1 {
 	 * definition} = "Responsible person in the recipient back for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankAttentionTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankAttentionTo = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -366,11 +375,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankAttentionTo";
 			definition = "Responsible person in the recipient back for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max140Text bankComments;
 	/**
 	 * Notes or comments for the recipient bank for the wire.
 	 * <p>
@@ -398,7 +408,7 @@ public class WireInstructionSD1 {
 	 * definition} = "Notes or comments for the recipient bank for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankComments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankComments = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -406,11 +416,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankComments";
 			definition = "Notes or comments for the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max70Text beneficiaryAccount;
 	/**
 	 * Account type at the recipient bank for the wire.
 	 * <p>
@@ -438,7 +449,7 @@ public class WireInstructionSD1 {
 	 * definition} = "Account type at the recipient bank for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficiaryAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficiaryAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -446,11 +457,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccount";
 			definition = "Account type at the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected RestrictedFINMax35Text beneficiaryAccountIdentification;
 	/**
 	 * Account identification at the recipient bank for the wire.
 	 * <p>
@@ -480,7 +492,7 @@ public class WireInstructionSD1 {
 	 * "Account identification at the recipient bank for the wire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficiaryAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficiaryAccountIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -488,11 +500,12 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccountIdentification";
 			definition = "Account identification at the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax35Text.mmObject();
 		}
 	};
+	protected Max140Text beneficiaryAccountComments;
 	/**
 	 * Notes or comments for the beneficiary account at the recipient bank for
 	 * the wire.
@@ -523,7 +536,7 @@ public class WireInstructionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficiaryAccountComments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficiaryAccountComments = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
@@ -531,8 +544,8 @@ public class WireInstructionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccountComments";
 			definition = "Notes or comments for the beneficiary account at the recipient bank for the wire.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -540,12 +553,12 @@ public class WireInstructionSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.WireInstructionSD1.PlaceAndName, com.tools20022.repository.msg.WireInstructionSD1.WireQuantity,
-						com.tools20022.repository.msg.WireInstructionSD1.BankName, com.tools20022.repository.msg.WireInstructionSD1.BankAddress, com.tools20022.repository.msg.WireInstructionSD1.BankCity,
-						com.tools20022.repository.msg.WireInstructionSD1.BankCountry, com.tools20022.repository.msg.WireInstructionSD1.BankAttentionTo, com.tools20022.repository.msg.WireInstructionSD1.BankComments,
-						com.tools20022.repository.msg.WireInstructionSD1.BeneficiaryAccount, com.tools20022.repository.msg.WireInstructionSD1.BeneficiaryAccountIdentification,
-						com.tools20022.repository.msg.WireInstructionSD1.BeneficiaryAccountComments);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.WireInstructionSD1.mmPlaceAndName, com.tools20022.repository.msg.WireInstructionSD1.mmWireQuantity,
+						com.tools20022.repository.msg.WireInstructionSD1.mmBankName, com.tools20022.repository.msg.WireInstructionSD1.mmBankAddress, com.tools20022.repository.msg.WireInstructionSD1.mmBankCity,
+						com.tools20022.repository.msg.WireInstructionSD1.mmBankCountry, com.tools20022.repository.msg.WireInstructionSD1.mmBankAttentionTo, com.tools20022.repository.msg.WireInstructionSD1.mmBankComments,
+						com.tools20022.repository.msg.WireInstructionSD1.mmBeneficiaryAccount, com.tools20022.repository.msg.WireInstructionSD1.mmBeneficiaryAccountIdentification,
+						com.tools20022.repository.msg.WireInstructionSD1.mmBeneficiaryAccountComments);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "WireInstructionSD1";
 				definition = "Payment wire instruction details.";
@@ -553,5 +566,93 @@ public class WireInstructionSD1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public FinancialInstrumentQuantity15Choice getWireQuantity() {
+		return wireQuantity;
+	}
+
+	public void setWireQuantity(FinancialInstrumentQuantity15Choice wireQuantity) {
+		this.wireQuantity = wireQuantity;
+	}
+
+	public Max105Text getBankName() {
+		return bankName;
+	}
+
+	public void setBankName(Max105Text bankName) {
+		this.bankName = bankName;
+	}
+
+	public Max140Text getBankAddress() {
+		return bankAddress;
+	}
+
+	public void setBankAddress(Max140Text bankAddress) {
+		this.bankAddress = bankAddress;
+	}
+
+	public Max70Text getBankCity() {
+		return bankCity;
+	}
+
+	public void setBankCity(Max70Text bankCity) {
+		this.bankCity = bankCity;
+	}
+
+	public CountryCode getBankCountry() {
+		return bankCountry;
+	}
+
+	public void setBankCountry(CountryCode bankCountry) {
+		this.bankCountry = bankCountry;
+	}
+
+	public Max105Text getBankAttentionTo() {
+		return bankAttentionTo;
+	}
+
+	public void setBankAttentionTo(Max105Text bankAttentionTo) {
+		this.bankAttentionTo = bankAttentionTo;
+	}
+
+	public Max140Text getBankComments() {
+		return bankComments;
+	}
+
+	public void setBankComments(Max140Text bankComments) {
+		this.bankComments = bankComments;
+	}
+
+	public Max70Text getBeneficiaryAccount() {
+		return beneficiaryAccount;
+	}
+
+	public void setBeneficiaryAccount(Max70Text beneficiaryAccount) {
+		this.beneficiaryAccount = beneficiaryAccount;
+	}
+
+	public RestrictedFINMax35Text getBeneficiaryAccountIdentification() {
+		return beneficiaryAccountIdentification;
+	}
+
+	public void setBeneficiaryAccountIdentification(RestrictedFINMax35Text beneficiaryAccountIdentification) {
+		this.beneficiaryAccountIdentification = beneficiaryAccountIdentification;
+	}
+
+	public Max140Text getBeneficiaryAccountComments() {
+		return beneficiaryAccountComments;
+	}
+
+	public void setBeneficiaryAccountComments(Max140Text beneficiaryAccountComments) {
+		this.beneficiaryAccountComments = beneficiaryAccountComments;
 	}
 }

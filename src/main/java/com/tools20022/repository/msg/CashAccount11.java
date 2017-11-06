@@ -34,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount11#Identification
- * CashAccount11.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount11#AccountServicer
- * CashAccount11.AccountServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount11#mmIdentification
+ * CashAccount11.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount11#mmAccountServicer
+ * CashAccount11.mmAccountServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,30 +49,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#CashAccount
- * PEPOrISAOrPortfolioTransferConfirmationV02.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#mmCashAccount
+ * PEPOrISAOrPortfolioTransferConfirmationV02.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#CashAccount
- * PortfolioTransferConfirmationV03.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#mmCashAccount
+ * PortfolioTransferConfirmationV03.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#CashAccount
- * PortfolioTransferConfirmationV04.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#mmCashAccount
+ * PortfolioTransferConfirmationV04.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#CashAccount
- * PEPOrISAOrPortfolioTransferInstructionV02.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#mmCashAccount
+ * PEPOrISAOrPortfolioTransferInstructionV02.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#CashAccount
- * PortfolioTransferInstructionV03.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#mmCashAccount
+ * PortfolioTransferInstructionV03.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#CashAccount
- * PortfolioTransferInstructionV04.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#mmCashAccount
+ * PortfolioTransferInstructionV04.mmCashAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccount11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccountIdentification1Choice identification;
 	/**
 	 * Unique and unambiguous identification of the account between the account
 	 * owner and the account servicer.
@@ -105,8 +107,8 @@ public class CashAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,27 +130,28 @@ public class CashAccount11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount29#Identification
-	 * CashAccount29.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount29#mmIdentification
+	 * CashAccount29.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount29.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount29.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification3Choice accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -165,8 +168,8 @@ public class CashAccount11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,24 +191,24 @@ public class CashAccount11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount29#AccountServicer
-	 * CashAccount29.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount29#mmAccountServicer
+	 * CashAccount29.mmAccountServicer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CashAccount11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount29.AccountServicer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount29.mmAccountServicer);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
 		}
 	};
@@ -213,12 +216,13 @@ public class CashAccount11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount11.Identification, com.tools20022.repository.msg.CashAccount11.AccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount11.mmIdentification, com.tools20022.repository.msg.CashAccount11.mmAccountServicer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmCashAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmCashAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmCashAccount,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmCashAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmCashAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmCashAccount);
 				trace_lazy = () -> CashAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.CashAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.CashAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.CashAccount, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.CashAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.CashAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.CashAccount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccount11";
 				definition = "Information used for identifying an account.";
@@ -226,5 +230,21 @@ public class CashAccount11 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccountIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(CashAccountIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public FinancialInstitutionIdentification3Choice getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(FinancialInstitutionIdentification3Choice accountServicer) {
+		this.accountServicer = accountServicer;
 	}
 }

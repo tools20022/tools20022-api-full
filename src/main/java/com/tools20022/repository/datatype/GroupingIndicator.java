@@ -36,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,12 +55,12 @@ public class GroupingIndicator {
 	final static public MMIndicator mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIndicator() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GroupingIndicator";
 				definition = "A flag indicating a True or False value.";
-				meaningWhenFalse = "Indicates that there is the same number of occurrences of the PaymentInformation block and of the PaymentTransaction block.";
 				meaningWhenTrue = "Indicates that there is only one occurrence of the PaymentInformation block and several occurrences of the PaymentTransaction block.";
+				meaningWhenFalse = "Indicates that there is the same number of occurrences of the PaymentInformation block and of the PaymentTransaction block.";
 			}
 		});
 		return mmObject_lazy.get();

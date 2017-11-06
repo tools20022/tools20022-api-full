@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FractionDispositionTypeSD2#PlaceAndName
- * FractionDispositionTypeSD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.FractionDispositionTypeSD2#mmPlaceAndName
+ * FractionDispositionTypeSD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FractionDispositionTypeSD2#RoundingFactor
- * FractionDispositionTypeSD2.RoundingFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.FractionDispositionTypeSD2#mmRoundingFactor
+ * FractionDispositionTypeSD2.mmRoundingFactor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FractionDispositionTypeSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -89,7 +90,7 @@ public class FractionDispositionTypeSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FractionDispositionTypeSD2.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class FractionDispositionTypeSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DecimalNumber roundingFactor;
 	/**
 	 * Decimal above which numbers are rounded. For an example if rounding
 	 * factor is 0.6 this means that fractional units greater than or equal to 6
@@ -134,7 +136,7 @@ public class FractionDispositionTypeSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingFactor = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FractionDispositionTypeSD2.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class FractionDispositionTypeSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingFactor";
 			definition = "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -151,13 +153,29 @@ public class FractionDispositionTypeSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FractionDispositionTypeSD2.PlaceAndName, com.tools20022.repository.msg.FractionDispositionTypeSD2.RoundingFactor);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FractionDispositionTypeSD2.mmPlaceAndName, com.tools20022.repository.msg.FractionDispositionTypeSD2.mmRoundingFactor);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionTypeSD2";
 				definition = "Provides additional information regarding corporate action securities movement fraction disposition details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public DecimalNumber getRoundingFactor() {
+		return roundingFactor;
+	}
+
+	public void setRoundingFactor(DecimalNumber roundingFactor) {
+		this.roundingFactor = roundingFactor;
 	}
 }

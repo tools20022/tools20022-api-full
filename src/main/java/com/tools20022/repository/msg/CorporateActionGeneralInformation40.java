@@ -38,15 +38,15 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation40#CorporateActionEventIdentification
- * CorporateActionGeneralInformation40.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation40#mmCorporateActionEventIdentification
+ * CorporateActionGeneralInformation40.mmCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation40#OfficialCorporateActionEventIdentification
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation40#mmOfficialCorporateActionEventIdentification
  * CorporateActionGeneralInformation40.
- * OfficialCorporateActionEventIdentification}</li>
+ * mmOfficialCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation40#NarrativeType
- * CorporateActionGeneralInformation40.NarrativeType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation40#mmNarrativeType
+ * CorporateActionGeneralInformation40.mmNarrativeType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,15 +57,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#CorporateActionGeneralInformation
- * CorporateActionNarrativeV03.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#mmCorporateActionGeneralInformation
+ * CorporateActionNarrativeV03.mmCorporateActionGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -92,6 +92,7 @@ import java.util.function.Supplier;
 public class CorporateActionGeneralInformation40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text corporateActionEventIdentification;
 	/**
 	 * Reference assigned by the account servicer to unambiguously identify a
 	 * corporate action event.
@@ -105,8 +106,8 @@ public class CorporateActionGeneralInformation40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#CorporateActionEventIdentification
-	 * CorporateActionEventRegistration.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
+	 * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -129,27 +130,29 @@ public class CorporateActionGeneralInformation40 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation92#CorporateActionEventIdentification
-	 * CorporateActionGeneralInformation92.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation92#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation92.mmCorporateActionEventIdentification}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionGeneralInformation40.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.CorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation92.CorporateActionEventIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation92.mmCorporateActionEventIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text officialCorporateActionEventIdentification;
 	/**
 	 * Official and unique reference assigned by the official central
 	 * body/entity within each market at the beginning of a corporate action
@@ -164,9 +167,9 @@ public class CorporateActionGeneralInformation40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#OfficialCorporateActionEventIdentification
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialCorporateActionEventIdentification
 	 * CorporateActionEventRegistration.
-	 * OfficialCorporateActionEventIdentification}</li>
+	 * mmOfficialCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -189,28 +192,29 @@ public class CorporateActionGeneralInformation40 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation92#OfficialCorporateActionEventIdentification
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation92#mmOfficialCorporateActionEventIdentification
 	 * CorporateActionGeneralInformation92.
-	 * OfficialCorporateActionEventIdentification}</li>
+	 * mmOfficialCorporateActionEventIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionGeneralInformation40.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.OfficialCorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "OffclCorpActnEvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
 			definition = "Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation92.OfficialCorporateActionEventIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation92.mmOfficialCorporateActionEventIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CorporateActionNarrative1Choice narrativeType;
 	/**
 	 * Specifies the type of narrative related to the message.
 	 * <p>
@@ -241,13 +245,13 @@ public class CorporateActionGeneralInformation40 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation92#NarrativeType
-	 * CorporateActionGeneralInformation92.NarrativeType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation92#mmNarrativeType
+	 * CorporateActionGeneralInformation92.mmNarrativeType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NarrativeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNarrativeType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformation40.mmObject();
 			isDerived = false;
@@ -255,9 +259,9 @@ public class CorporateActionGeneralInformation40 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeType";
 			definition = "Specifies the type of narrative related to the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation92.NarrativeType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation92.mmNarrativeType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative1Choice.mmObject();
 		}
 	};
@@ -265,11 +269,11 @@ public class CorporateActionGeneralInformation40 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation40.CorporateActionEventIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformation40.OfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation40.NarrativeType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation40.mmCorporateActionEventIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation40.mmOfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation40.mmNarrativeType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmCorporateActionGeneralInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV03.CorporateActionGeneralInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -280,10 +284,34 @@ public class CorporateActionGeneralInformation40 {
 				})).get();
 				name = "CorporateActionGeneralInformation40";
 				definition = "General information about the corporate action event.";
-				previousVersion_lazy = () -> CorporateActionGeneralInformation10.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation92.mmObject());
+				previousVersion_lazy = () -> CorporateActionGeneralInformation10.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification;
+	}
+
+	public void setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
+		this.corporateActionEventIdentification = corporateActionEventIdentification;
+	}
+
+	public Max35Text getOfficialCorporateActionEventIdentification() {
+		return officialCorporateActionEventIdentification;
+	}
+
+	public void setOfficialCorporateActionEventIdentification(Max35Text officialCorporateActionEventIdentification) {
+		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
+	}
+
+	public CorporateActionNarrative1Choice getNarrativeType() {
+		return narrativeType;
+	}
+
+	public void setNarrativeType(CorporateActionNarrative1Choice narrativeType) {
+		this.narrativeType = narrativeType;
 	}
 }

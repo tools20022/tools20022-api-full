@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#LengthPadding
- * BytePadding1Code.LengthPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmLengthPadding
+ * BytePadding1Code.mmLengthPadding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#Null80Padding
- * BytePadding1Code.Null80Padding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmNull80Padding
+ * BytePadding1Code.mmNull80Padding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#NullLengthPadding
- * BytePadding1Code.NullLengthPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmNullLengthPadding
+ * BytePadding1Code.mmNullLengthPadding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#NullPadding
- * BytePadding1Code.NullPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmNullPadding
+ * BytePadding1Code.mmNullPadding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#RandomPadding
- * BytePadding1Code.RandomPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmRandomPadding
+ * BytePadding1Code.mmRandomPadding}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +87,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "LengthPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode LengthPadding = new MMCode() {
+	public static final MMCode mmLengthPadding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LengthPadding";
@@ -110,7 +110,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "Null80Padding"</li>
 	 * </ul>
 	 */
-	public static final MMCode Null80Padding = new MMCode() {
+	public static final MMCode mmNull80Padding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Null80Padding";
@@ -133,7 +133,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "NullLengthPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode NullLengthPadding = new MMCode() {
+	public static final MMCode mmNullLengthPadding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullLengthPadding";
@@ -156,7 +156,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "NullPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode NullPadding = new MMCode() {
+	public static final MMCode mmNullPadding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullPadding";
@@ -179,7 +179,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "RandomPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode RandomPadding = new MMCode() {
+	public static final MMCode mmRandomPadding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomPadding";
@@ -190,12 +190,12 @@ public class BytePadding1Code extends BytePaddingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BytePadding1Code";
 				definition = "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BytePadding1Code.LengthPadding, com.tools20022.repository.codeset.BytePadding1Code.Null80Padding,
-						com.tools20022.repository.codeset.BytePadding1Code.NullLengthPadding, com.tools20022.repository.codeset.BytePadding1Code.NullPadding, com.tools20022.repository.codeset.BytePadding1Code.RandomPadding);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BytePadding1Code.mmLengthPadding, com.tools20022.repository.codeset.BytePadding1Code.mmNull80Padding,
+						com.tools20022.repository.codeset.BytePadding1Code.mmNullLengthPadding, com.tools20022.repository.codeset.BytePadding1Code.mmNullPadding, com.tools20022.repository.codeset.BytePadding1Code.mmRandomPadding);
 				trace_lazy = () -> BytePaddingCode.mmObject();
 			}
 		});

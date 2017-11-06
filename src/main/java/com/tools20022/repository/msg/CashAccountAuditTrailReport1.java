@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport1#CashAccountAuditTrailOrError
- * CashAccountAuditTrailReport1.CashAccountAuditTrailOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport1#mmCashAccountAuditTrailOrError
+ * CashAccountAuditTrailReport1.mmCashAccountAuditTrailOrError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport1#DatePeriod
- * CashAccountAuditTrailReport1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport1#mmDatePeriod
+ * CashAccountAuditTrailReport1.mmDatePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport1#CashAccountIdentification
- * CashAccountAuditTrailReport1.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport1#mmCashAccountIdentification
+ * CashAccountAuditTrailReport1.mmCashAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuditTrailOrBusinessError1Choice cashAccountAuditTrailOrError;
 	/**
 	 * Identifies the returned cash account reference data or error information.
 	 * <p>
@@ -92,7 +93,7 @@ public class CashAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountAuditTrailOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -100,12 +101,13 @@ public class CashAccountAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountAuditTrailOrError";
 			definition = "Identifies the returned cash account reference data or error information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 		}
 	};
+	protected DateSearchChoice datePeriod;
 	/**
 	 * Period in dates for which the audit trail is provided.
 	 * <p>
@@ -134,7 +136,7 @@ public class CashAccountAuditTrailReport1 {
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class CashAccountAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected CashAccount16 cashAccountIdentification;
 	/**
 	 * Identifies the cash account for which the audit trail is provided.
 	 * <p>
@@ -175,7 +178,7 @@ public class CashAccountAuditTrailReport1 {
 	 * "Identifies the cash account for which the audit trail is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -183,23 +186,47 @@ public class CashAccountAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Identifies the cash account for which the audit trail is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAuditTrailReport1.CashAccountAuditTrailOrError, com.tools20022.repository.msg.CashAccountAuditTrailReport1.DatePeriod,
-						com.tools20022.repository.msg.CashAccountAuditTrailReport1.CashAccountIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmCashAccountAuditTrailOrError, com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmDatePeriod,
+						com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmCashAccountIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailReport1";
 				definition = "Report information about cash account reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuditTrailOrBusinessError1Choice getCashAccountAuditTrailOrError() {
+		return cashAccountAuditTrailOrError;
+	}
+
+	public void setCashAccountAuditTrailOrError(AuditTrailOrBusinessError1Choice cashAccountAuditTrailOrError) {
+		this.cashAccountAuditTrailOrError = cashAccountAuditTrailOrError;
+	}
+
+	public DateSearchChoice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateSearchChoice datePeriod) {
+		this.datePeriod = datePeriod;
+	}
+
+	public CashAccount16 getCashAccountIdentification() {
+		return cashAccountIdentification;
+	}
+
+	public void setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
+		this.cashAccountIdentification = cashAccountIdentification;
 	}
 }

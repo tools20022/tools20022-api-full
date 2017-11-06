@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OriginalMandate1Choice#OriginalMandateIdentification
- * OriginalMandate1Choice.OriginalMandateIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.OriginalMandate1Choice#mmOriginalMandateIdentification
+ * OriginalMandate1Choice.mmOriginalMandateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OriginalMandate1Choice#OriginalMandate
- * OriginalMandate1Choice.OriginalMandate}</li>
+ * {@linkplain com.tools20022.repository.choice.OriginalMandate1Choice#mmOriginalMandate
+ * OriginalMandate1Choice.mmOriginalMandate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalMandate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalMandateIdentification;
 	/**
 	 * Unique identification, as assigned by the creditor, to unambiguously
 	 * identify the original mandate.
@@ -77,8 +78,8 @@ public class OriginalMandate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Mandate#MandateIdentification
-	 * Mandate.MandateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Mandate#mmMandateIdentification
+	 * Mandate.mmMandateIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class OriginalMandate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMandateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> OriginalMandate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.MandateIdentification;
 			isDerived = false;
 			xmlTag = "OrgnlMndtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandateIdentification";
 			definition = "Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected MandateInformation1 originalMandate;
 	/**
 	 * Set of elements used to provide the original mandate data.
 	 * <p>
@@ -145,33 +147,49 @@ public class OriginalMandate1Choice {
 	 * "Set of elements used to provide the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalMandate1Choice.mmObject();
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
+			componentContext_lazy = () -> OriginalMandate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Set of elements used to provide the original mandate data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MandateInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MandateInformation1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OriginalMandate1Choice.OriginalMandateIdentification, com.tools20022.repository.choice.OriginalMandate1Choice.OriginalMandate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OriginalMandate1Choice.mmOriginalMandateIdentification, com.tools20022.repository.choice.OriginalMandate1Choice.mmOriginalMandate);
 				trace_lazy = () -> Mandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalMandate1Choice";
 				definition = "Specifies the mandate that is being accepted.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalMandateIdentification() {
+		return originalMandateIdentification;
+	}
+
+	public void setOriginalMandateIdentification(Max35Text originalMandateIdentification) {
+		this.originalMandateIdentification = originalMandateIdentification;
+	}
+
+	public MandateInformation1 getOriginalMandate() {
+		return originalMandate;
+	}
+
+	public void setOriginalMandate(MandateInformation1 originalMandate) {
+		this.originalMandate = originalMandate;
 	}
 }

@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SpreadRate1#Sign
- * SpreadRate1.Sign}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SpreadRate1#RateOrAmount
- * SpreadRate1.RateOrAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SpreadRate1#mmSign
+ * SpreadRate1.mmSign}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SpreadRate1#mmRateOrAmount
+ * SpreadRate1.mmRateOrAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SpreadRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PlusOrMinusIndicator sign;
 	/**
 	 * Specifies the sign of the rate.
 	 * <p>
@@ -88,7 +89,7 @@ public class SpreadRate1 {
 	 * definition} = "Specifies the sign of the rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sign = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SpreadRate1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class SpreadRate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Specifies the sign of the rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	protected AmountOrRate1Choice rateOrAmount;
 	/**
 	 * Specifies if the spreadf is expressed as an amount or a rate.
 	 * <p>
@@ -127,7 +129,7 @@ public class SpreadRate1 {
 	 * "Specifies if the spreadf is expressed as an amount or a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateOrAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateOrAmount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SpreadRate1.mmObject();
 			isDerived = false;
@@ -135,23 +137,39 @@ public class SpreadRate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateOrAmount";
 			definition = "Specifies if the spreadf is expressed as an amount or a rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountOrRate1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountOrRate1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SpreadRate1.Sign, com.tools20022.repository.msg.SpreadRate1.RateOrAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SpreadRate1.mmSign, com.tools20022.repository.msg.SpreadRate1.mmRateOrAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SpreadRate1";
 				definition = "Margin over or under an index that determines the repurchase rate expressed as a rate or an amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PlusOrMinusIndicator getSign() {
+		return sign;
+	}
+
+	public void setSign(PlusOrMinusIndicator sign) {
+		this.sign = sign;
+	}
+
+	public AmountOrRate1Choice getRateOrAmount() {
+		return rateOrAmount;
+	}
+
+	public void setRateOrAmount(AmountOrRate1Choice rateOrAmount) {
+		this.rateOrAmount = rateOrAmount;
 	}
 }

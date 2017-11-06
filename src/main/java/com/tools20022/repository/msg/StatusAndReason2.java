@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason2#StatusAndReason
- * StatusAndReason2.StatusAndReason}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason2#mmStatusAndReason
+ * StatusAndReason2.mmStatusAndReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status2Choice statusAndReason;
 	/**
 	 * Status and reason for the transaction.
 	 * <p>
@@ -88,33 +89,41 @@ public class StatusAndReason2 {
 	 * definition} = "Status and reason for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusAndReason2.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> StatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason for the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Status2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Status2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason2.StatusAndReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason2.mmStatusAndReason);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason2";
 				definition = "Status and reason of an instructed order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status2Choice getStatusAndReason() {
+		return statusAndReason;
+	}
+
+	public void setStatusAndReason(Status2Choice statusAndReason) {
+		this.statusAndReason = statusAndReason;
 	}
 }

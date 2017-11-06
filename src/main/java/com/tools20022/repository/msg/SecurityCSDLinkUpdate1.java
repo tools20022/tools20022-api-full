@@ -33,15 +33,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLinkUpdate1#ValidTo
- * SecurityCSDLinkUpdate1.ValidTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLinkUpdate1#mmValidTo
+ * SecurityCSDLinkUpdate1.mmValidTo}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityCSDLinkUpdate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice validTo;
 	/**
 	 * Defines the date until when the CSD is linked to the security.
 	 * <p>
@@ -86,7 +88,7 @@ public class SecurityCSDLinkUpdate1 {
 	 * "Defines the date until when the CSD is linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLinkUpdate1.mmObject();
 			isDerived = false;
@@ -94,8 +96,8 @@ public class SecurityCSDLinkUpdate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Defines the date until when the CSD is linked to the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -103,13 +105,21 @@ public class SecurityCSDLinkUpdate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLinkUpdate1.ValidTo);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLinkUpdate1.mmValidTo);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCSDLinkUpdate1";
 				definition = "Defines which data, representing the link between the CSD and the security, needs to be updated.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getValidTo() {
+		return validTo;
+	}
+
+	public void setValidTo(DateAndDateTimeChoice validTo) {
+		this.validTo = validTo;
 	}
 }

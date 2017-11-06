@@ -37,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#Invoicer
- * InvoiceLegalIssue1.Invoicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#Invoicee
- * InvoiceLegalIssue1.Invoicee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#mmInvoicer
+ * InvoiceLegalIssue1.mmInvoicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#mmInvoicee
+ * InvoiceLegalIssue1.mmInvoicee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#InvoiceLegalStatement
- * InvoiceLegalIssue1.InvoiceLegalStatement}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#mmInvoiceLegalStatement
+ * InvoiceLegalIssue1.mmInvoiceLegalStatement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#PaymentMethod
- * InvoiceLegalIssue1.PaymentMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#mmPaymentMethod
+ * InvoiceLegalIssue1.mmPaymentMethod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceLegalIssue1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 invoicer;
 	/**
 	 * Identification of the organisation issuing the invoice, when it is
 	 * different from the creditor or ultimate creditor.
@@ -83,8 +84,8 @@ public class InvoiceLegalIssue1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,21 +106,22 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Invoicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicer";
 			definition = "Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected PartyIdentification43 invoicee;
 	/**
 	 * Identification of the party to whom an invoice is issued, when it is
 	 * different from the debtor or ultimate debtor.
@@ -132,8 +134,8 @@ public class InvoiceLegalIssue1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,21 +156,22 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Invoicee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoicee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invcee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicee";
 			definition = "Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected Max210Text invoiceLegalStatement;
 	/**
 	 * Additional information, in free text form, to complement the structured
 	 * remittance information.
@@ -203,20 +206,21 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvoiceLegalStatement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvoiceLegalStatement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
+			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcLglStmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceLegalStatement";
 			definition = "Additional information, in free text form, to complement the structured remittance information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	protected PaymentMethod1Choice paymentMethod;
 	/**
 	 * Method of payment for the remittance of the CSD or NCB to the invoicing
 	 * party.
@@ -230,8 +234,8 @@ public class InvoiceLegalIssue1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountService#PaymentMethod
-	 * CashAccountService.PaymentMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountService#mmPaymentMethod
+	 * CashAccountService.mmPaymentMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,34 +256,66 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmPaymentMethod;
 			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.PaymentMethod;
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Method of payment for the remittance of the CSD or NCB to the invoicing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentMethod1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PaymentMethod1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceLegalIssue1.Invoicer, com.tools20022.repository.msg.InvoiceLegalIssue1.Invoicee,
-						com.tools20022.repository.msg.InvoiceLegalIssue1.InvoiceLegalStatement, com.tools20022.repository.msg.InvoiceLegalIssue1.PaymentMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoicer, com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoicee,
+						com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoiceLegalStatement, com.tools20022.repository.msg.InvoiceLegalIssue1.mmPaymentMethod);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvoiceLegalIssue1";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getInvoicer() {
+		return invoicer;
+	}
+
+	public void setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
+		this.invoicer = invoicer;
+	}
+
+	public PartyIdentification43 getInvoicee() {
+		return invoicee;
+	}
+
+	public void setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
+		this.invoicee = invoicee;
+	}
+
+	public Max210Text getInvoiceLegalStatement() {
+		return invoiceLegalStatement;
+	}
+
+	public void setInvoiceLegalStatement(Max210Text invoiceLegalStatement) {
+		this.invoiceLegalStatement = invoiceLegalStatement;
+	}
+
+	public PaymentMethod1Choice getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(PaymentMethod1Choice paymentMethod) {
+		this.paymentMethod = paymentMethod;
 	}
 }

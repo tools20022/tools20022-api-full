@@ -37,11 +37,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria#SourceCurrency
- * CurrencyExchangeSearchCriteria.SourceCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria#mmSourceCurrency
+ * CurrencyExchangeSearchCriteria.mmSourceCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria#TargetCurrency
- * CurrencyExchangeSearchCriteria.TargetCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria#mmTargetCurrency
+ * CurrencyExchangeSearchCriteria.mmTargetCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class CurrencyExchangeSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCode sourceCurrency;
 	/**
 	 * Currency of the amount to be converted in a currency conversion.
 	 * <p>
@@ -79,8 +80,8 @@ public class CurrencyExchangeSearchCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#SourceCurrency
-	 * CurrencyExchange.SourceCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmSourceCurrency
+	 * CurrencyExchange.mmSourceCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class CurrencyExchangeSearchCriteria {
 	 * "Currency of the amount to be converted in a currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> CurrencyExchangeSearchCriteria.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.SourceCurrency;
 			isDerived = false;
 			xmlTag = "SrcCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceCurrency";
 			definition = "Currency of the amount to be converted in a currency conversion.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected CurrencyCode targetCurrency;
 	/**
 	 * Currency into which an amount is to be converted in a currency
 	 * conversion.
@@ -127,8 +129,8 @@ public class CurrencyExchangeSearchCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#TargetCurrency
-	 * CurrencyExchange.TargetCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmTargetCurrency
+	 * CurrencyExchange.mmTargetCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,17 +151,17 @@ public class CurrencyExchangeSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> CurrencyExchangeSearchCriteria.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.TargetCurrency;
 			isDerived = false;
 			xmlTag = "TrgtCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCurrency";
 			definition = "Currency into which an amount is to be converted in a currency conversion.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
@@ -167,9 +169,9 @@ public class CurrencyExchangeSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.SourceCurrency, com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.TargetCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmSourceCurrency, com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmTargetCurrency);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -183,5 +185,21 @@ public class CurrencyExchangeSearchCriteria {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCode getSourceCurrency() {
+		return sourceCurrency;
+	}
+
+	public void setSourceCurrency(CurrencyCode sourceCurrency) {
+		this.sourceCurrency = sourceCurrency;
+	}
+
+	public CurrencyCode getTargetCurrency() {
+		return targetCurrency;
+	}
+
+	public void setTargetCurrency(CurrencyCode targetCurrency) {
+		this.targetCurrency = targetCurrency;
 	}
 }

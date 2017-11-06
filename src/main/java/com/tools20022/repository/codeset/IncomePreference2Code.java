@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * IncomePreferenceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.IncomePreference2Code#Cash
- * IncomePreference2Code.Cash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncomePreference2Code#Securities
- * IncomePreference2Code.Securities}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncomePreference2Code#mmCash
+ * IncomePreference2Code.mmCash}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IncomePreference2Code#mmSecurities
+ * IncomePreference2Code.mmSecurities}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +75,7 @@ public class IncomePreference2Code extends IncomePreferenceCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -97,7 +98,7 @@ public class IncomePreference2Code extends IncomePreferenceCode {
 	 * name} = "Securities"</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
@@ -108,11 +109,11 @@ public class IncomePreference2Code extends IncomePreferenceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IncomePreference2Code";
 				definition = "Specifies the options for distribution of dividend income.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IncomePreference2Code.Cash, com.tools20022.repository.codeset.IncomePreference2Code.Securities);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IncomePreference2Code.mmCash, com.tools20022.repository.codeset.IncomePreference2Code.mmSecurities);
 				trace_lazy = () -> IncomePreferenceCode.mmObject();
 			}
 		});

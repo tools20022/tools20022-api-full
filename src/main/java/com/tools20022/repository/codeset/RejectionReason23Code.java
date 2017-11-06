@@ -35,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#SafekeepingAccountRejection
- * RejectionReason23Code.SafekeepingAccountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmSafekeepingAccountRejection
+ * RejectionReason23Code.mmSafekeepingAccountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#AccountServicerDeadlineMissed
- * RejectionReason23Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmAccountServicerDeadlineMissed
+ * RejectionReason23Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#ReferenceRejection
- * RejectionReason23Code.ReferenceRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmReferenceRejection
+ * RejectionReason23Code.mmReferenceRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#MarketDeadlineMissed
- * RejectionReason23Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmMarketDeadlineMissed
+ * RejectionReason23Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#SettlementDateRejection
- * RejectionReason23Code.SettlementDateRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmSettlementDateRejection
+ * RejectionReason23Code.mmSettlementDateRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#Other
- * RejectionReason23Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmOther
+ * RejectionReason23Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "SafekeepingAccountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccountRejection = new MMCode() {
+	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
@@ -119,7 +119,7 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -142,7 +142,7 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "ReferenceRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReferenceRejection = new MMCode() {
+	public static final MMCode mmReferenceRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
@@ -165,7 +165,7 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -188,7 +188,7 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "SettlementDateRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDateRejection = new MMCode() {
+	public static final MMCode mmSettlementDateRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateRejection";
@@ -211,7 +211,7 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -222,14 +222,14 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SAFE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason23Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason23Code.SafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason23Code.AccountServicerDeadlineMissed,
-						com.tools20022.repository.codeset.RejectionReason23Code.ReferenceRejection, com.tools20022.repository.codeset.RejectionReason23Code.MarketDeadlineMissed,
-						com.tools20022.repository.codeset.RejectionReason23Code.SettlementDateRejection, com.tools20022.repository.codeset.RejectionReason23Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason23Code.mmSafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason23Code.mmAccountServicerDeadlineMissed,
+						com.tools20022.repository.codeset.RejectionReason23Code.mmReferenceRejection, com.tools20022.repository.codeset.RejectionReason23Code.mmMarketDeadlineMissed,
+						com.tools20022.repository.codeset.RejectionReason23Code.mmSettlementDateRejection, com.tools20022.repository.codeset.RejectionReason23Code.mmOther);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

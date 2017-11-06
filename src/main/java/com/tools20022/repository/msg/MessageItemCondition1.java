@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.MessageItemCondition1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Presence condition of a message item.
@@ -34,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageItemCondition1#ItemIdentification
- * MessageItemCondition1.ItemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageItemCondition1#mmItemIdentification
+ * MessageItemCondition1.mmItemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageItemCondition1#Condition
- * MessageItemCondition1.Condition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MessageItemCondition1#Value
- * MessageItemCondition1.Value}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageItemCondition1#mmCondition
+ * MessageItemCondition1.mmCondition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageItemCondition1#mmValue
+ * MessageItemCondition1.mmValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageItemCondition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text itemIdentification;
 	/**
 	 * Unique identification of the message and the message item.
 	 * <p>
@@ -89,7 +91,7 @@ public class MessageItemCondition1 {
 	 * "Unique identification of the message and the message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageItemCondition1.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class MessageItemCondition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemIdentification";
 			definition = "Unique identification of the message and the message item.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected MessageItemCondition1Code condition;
 	/**
 	 * Condition of presence of the message item.
 	 * <p>
@@ -130,7 +133,7 @@ public class MessageItemCondition1 {
 	 * definition} = "Condition of presence of the message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Condition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCondition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageItemCondition1.mmObject();
 			isDerived = false;
@@ -138,11 +141,12 @@ public class MessageItemCondition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Condition";
 			definition = "Condition of presence of the message item.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
 	};
+	protected List<Max140Text> value;
 	/**
 	 * Value to be used for the message item.
 	 * <p>
@@ -170,7 +174,7 @@ public class MessageItemCondition1 {
 	 * definition} = "Value to be used for the message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageItemCondition1.mmObject();
 			isDerived = false;
@@ -186,14 +190,38 @@ public class MessageItemCondition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageItemCondition1.ItemIdentification, com.tools20022.repository.msg.MessageItemCondition1.Condition,
-						com.tools20022.repository.msg.MessageItemCondition1.Value);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageItemCondition1.mmItemIdentification, com.tools20022.repository.msg.MessageItemCondition1.mmCondition,
+						com.tools20022.repository.msg.MessageItemCondition1.mmValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageItemCondition1";
 				definition = "Presence condition of a message item.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getItemIdentification() {
+		return itemIdentification;
+	}
+
+	public void setItemIdentification(Max140Text itemIdentification) {
+		this.itemIdentification = itemIdentification;
+	}
+
+	public MessageItemCondition1Code getCondition() {
+		return condition;
+	}
+
+	public void setCondition(MessageItemCondition1Code condition) {
+		this.condition = condition;
+	}
+
+	public List<Max140Text> getValue() {
+		return value;
+	}
+
+	public void setValue(List<Max140Text> value) {
+		this.value = value;
 	}
 }

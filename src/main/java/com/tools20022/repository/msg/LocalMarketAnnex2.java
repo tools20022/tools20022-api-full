@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.TradingMarket;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Context, or geographic environment, in which trading parties may meet in
@@ -35,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#Country
- * LocalMarketAnnex2.Country}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#mmCountry
+ * LocalMarketAnnex2.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#LocalOrderDesk
- * LocalMarketAnnex2.LocalOrderDesk}</li>
+ * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#mmLocalOrderDesk
+ * LocalMarketAnnex2.mmLocalOrderDesk}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#SubscriptionProcessingCharacteristics
- * LocalMarketAnnex2.SubscriptionProcessingCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#mmSubscriptionProcessingCharacteristics
+ * LocalMarketAnnex2.mmSubscriptionProcessingCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#RedemptionProcessingCharacteristics
- * LocalMarketAnnex2.RedemptionProcessingCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#mmRedemptionProcessingCharacteristics
+ * LocalMarketAnnex2.mmRedemptionProcessingCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#SettlementDetails
- * LocalMarketAnnex2.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#mmSettlementDetails
+ * LocalMarketAnnex2.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LocalMarketAnnex2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CountryCode> country;
 	/**
 	 * Country in which the processing characteristic applies.
 	 * <p>
@@ -86,7 +88,8 @@ public class LocalMarketAnnex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,10 +108,10 @@ public class LocalMarketAnnex2 {
 	 * definition} = "Country in which the processing characteristic applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,6 +121,7 @@ public class LocalMarketAnnex2 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ContactAttributes1 localOrderDesk;
 	/**
 	 * Organisation established primarily to provide financial services.
 	 * <p>
@@ -129,8 +133,8 @@ public class LocalMarketAnnex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#ContactPoint
-	 * Party.ContactPoint}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmContactPoint
+	 * Party.mmContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,21 +154,22 @@ public class LocalMarketAnnex2 {
 	 * "Organisation established primarily to provide financial services."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LocalOrderDesk = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocalOrderDesk = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.ContactPoint;
 			isDerived = false;
 			xmlTag = "LclOrdrDsk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalOrderDesk";
 			definition = "Organisation established primarily to provide financial services.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ContactAttributes1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactAttributes1.mmObject();
 		}
 	};
+	protected ProcessingCharacteristics2 subscriptionProcessingCharacteristics;
 	/**
 	 * Processing characteristics linked to the instrument, ie, not to the
 	 * market.
@@ -178,8 +183,8 @@ public class LocalMarketAnnex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ProcessingCharacteristics
-	 * InvestmentFundClass.ProcessingCharacteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
+	 * InvestmentFundClass.mmProcessingCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,21 +205,22 @@ public class LocalMarketAnnex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ProcessingCharacteristics;
 			isDerived = false;
 			xmlTag = "SbcptPrcgChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingCharacteristics2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics2.mmObject();
 		}
 	};
+	protected ProcessingCharacteristics3 redemptionProcessingCharacteristics;
 	/**
 	 * Processing characteristics linked to the instrument, ie, not to the
 	 * market.
@@ -228,8 +234,8 @@ public class LocalMarketAnnex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ProcessingCharacteristics
-	 * InvestmentFundClass.ProcessingCharacteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
+	 * InvestmentFundClass.mmProcessingCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,21 +256,22 @@ public class LocalMarketAnnex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ProcessingCharacteristics;
 			isDerived = false;
 			xmlTag = "RedPrcgChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingCharacteristics3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccount22> settlementDetails;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -276,8 +283,8 @@ public class LocalMarketAnnex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#SettlementAccount
-	 * CashSettlement.SettlementAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
+	 * CashSettlement.mmSettlementAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -296,34 +303,74 @@ public class LocalMarketAnnex2 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.SettlementAccount;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Account to or from which a cash entry is made.";
 			minOccurs = 1;
-			type_lazy = () -> CashAccount22.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex2.Country, com.tools20022.repository.msg.LocalMarketAnnex2.LocalOrderDesk,
-						com.tools20022.repository.msg.LocalMarketAnnex2.SubscriptionProcessingCharacteristics, com.tools20022.repository.msg.LocalMarketAnnex2.RedemptionProcessingCharacteristics,
-						com.tools20022.repository.msg.LocalMarketAnnex2.SettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex2.mmCountry, com.tools20022.repository.msg.LocalMarketAnnex2.mmLocalOrderDesk,
+						com.tools20022.repository.msg.LocalMarketAnnex2.mmSubscriptionProcessingCharacteristics, com.tools20022.repository.msg.LocalMarketAnnex2.mmRedemptionProcessingCharacteristics,
+						com.tools20022.repository.msg.LocalMarketAnnex2.mmSettlementDetails);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LocalMarketAnnex2";
 				definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CountryCode> getCountry() {
+		return country;
+	}
+
+	public void setCountry(List<CountryCode> country) {
+		this.country = country;
+	}
+
+	public ContactAttributes1 getLocalOrderDesk() {
+		return localOrderDesk;
+	}
+
+	public void setLocalOrderDesk(com.tools20022.repository.msg.ContactAttributes1 localOrderDesk) {
+		this.localOrderDesk = localOrderDesk;
+	}
+
+	public ProcessingCharacteristics2 getSubscriptionProcessingCharacteristics() {
+		return subscriptionProcessingCharacteristics;
+	}
+
+	public void setSubscriptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics2 subscriptionProcessingCharacteristics) {
+		this.subscriptionProcessingCharacteristics = subscriptionProcessingCharacteristics;
+	}
+
+	public ProcessingCharacteristics3 getRedemptionProcessingCharacteristics() {
+		return redemptionProcessingCharacteristics;
+	}
+
+	public void setRedemptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics3 redemptionProcessingCharacteristics) {
+		this.redemptionProcessingCharacteristics = redemptionProcessingCharacteristics;
+	}
+
+	public List<CashAccount22> getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(List<com.tools20022.repository.msg.CashAccount22> settlementDetails) {
+		this.settlementDetails = settlementDetails;
 	}
 }

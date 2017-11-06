@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#ClassSpecific
- * CommodityDerivate4.ClassSpecific}</li>
+ * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#mmClassSpecific
+ * CommodityDerivate4.mmClassSpecific}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#NotionalCurrency
- * CommodityDerivate4.NotionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#mmNotionalCurrency
+ * CommodityDerivate4.mmNotionalCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommodityDerivate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CommodityDerivate2Choice classSpecific;
 	/**
 	 * Provides specific information related to commodity derivatives.
 	 * <p>
@@ -97,21 +98,22 @@ public class CommodityDerivate4 {
 	 * "Provides specific information related to commodity derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClassSpecific = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClassSpecific = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CommodityDerivate4.mmObject();
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
+			componentContext_lazy = () -> CommodityDerivate4.mmObject();
 			isDerived = false;
 			xmlTag = "ClssSpcfc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassSpecific";
 			definition = "Provides specific information related to commodity derivatives.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommodityDerivate2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CommodityDerivate2Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode notionalCurrency;
 	/**
 	 * Currency in which the notional is denominated.
 	 * <p>
@@ -125,8 +127,8 @@ public class CommodityDerivate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrency
-	 * Derivative.NotionalCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
+	 * Derivative.mmNotionalCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class CommodityDerivate4 {
 	 * definition} = "Currency in which the notional is denominated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> CommodityDerivate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrency;
 			isDerived = false;
 			xmlTag = "NtnlCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency";
 			definition = "Currency in which the notional is denominated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class CommodityDerivate4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate4.ClassSpecific, com.tools20022.repository.msg.CommodityDerivate4.NotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate4.mmClassSpecific, com.tools20022.repository.msg.CommodityDerivate4.mmNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate4";
 				definition = "Transparency calculation specific details for an commodity derivatives.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CommodityDerivate2Choice getClassSpecific() {
+		return classSpecific;
+	}
+
+	public void setClassSpecific(CommodityDerivate2Choice classSpecific) {
+		this.classSpecific = classSpecific;
+	}
+
+	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
+		return notionalCurrency;
+	}
+
+	public void setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
+		this.notionalCurrency = notionalCurrency;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesTransaction;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the securities transaction report.
@@ -38,20 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#TransactionIdentification
- * SecuritiesTransactionReport2.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#mmTransactionIdentification
+ * SecuritiesTransactionReport2.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#ExecutingParty
- * SecuritiesTransactionReport2.ExecutingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#mmExecutingParty
+ * SecuritiesTransactionReport2.mmExecutingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#SubmittingParty
- * SecuritiesTransactionReport2.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#mmSubmittingParty
+ * SecuritiesTransactionReport2.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#TechnicalAttributes
- * SecuritiesTransactionReport2.TechnicalAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#mmTechnicalAttributes
+ * SecuritiesTransactionReport2.mmTechnicalAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#SupplementaryData
- * SecuritiesTransactionReport2.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#mmSupplementaryData
+ * SecuritiesTransactionReport2.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max52Text transactionIdentification;
 	/**
 	 * Unique and unambiguous identification of the transaction.
 	 * <p>
@@ -87,8 +89,8 @@ public class SecuritiesTransactionReport2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#UniqueTradeIdentifier
-	 * TradeIdentification.UniqueTradeIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmUniqueTradeIdentifier
+	 * TradeIdentification.mmUniqueTradeIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +110,21 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.UniqueTradeIdentifier;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique and unambiguous identification of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
 	};
+	protected LEIIdentifier executingParty;
 	/**
 	 * Identification of the entity executing the transaction. <br>
 	 * <br>
@@ -162,20 +165,21 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutingParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			businessComponentTrace_lazy = () -> ExecutingTrader.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingParty";
 			definition = "Identification of the entity executing the transaction. \r\n\r\nUsage:\r\nFor legal entities, use the legal entity identifier. For non-legal entities, this field shall be populated with an identifier as specified in the local regulation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected LEIIdentifier submittingParty;
 	/**
 	 * Entity submitting the transaction report to the competent authority.<br>
 	 * <p>
@@ -211,20 +215,21 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubmittingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubmittingParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Entity submitting the transaction report to the competent authority.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected RecordTechnicalData2 technicalAttributes;
 	/**
 	 * Data used for exchanges between national competent authorities, not to be
 	 * used by reporting entities.
@@ -254,7 +259,7 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TechnicalAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTechnicalAttributes = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
@@ -262,12 +267,13 @@ public class SecuritiesTransactionReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAttributes";
 			definition = "Data used for exchanges between national competent authorities, not to be used by reporting entities.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RecordTechnicalData2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -297,7 +303,7 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
@@ -306,24 +312,64 @@ public class SecuritiesTransactionReport2 {
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport2.TransactionIdentification, com.tools20022.repository.msg.SecuritiesTransactionReport2.ExecutingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport2.SubmittingParty, com.tools20022.repository.msg.SecuritiesTransactionReport2.TechnicalAttributes,
-						com.tools20022.repository.msg.SecuritiesTransactionReport2.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport2.mmTransactionIdentification, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmExecutingParty,
+						com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSubmittingParty, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmTechnicalAttributes,
+						com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionReport2";
 				definition = "Details of the securities transaction report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max52Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max52Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public LEIIdentifier getExecutingParty() {
+		return executingParty;
+	}
+
+	public void setExecutingParty(LEIIdentifier executingParty) {
+		this.executingParty = executingParty;
+	}
+
+	public LEIIdentifier getSubmittingParty() {
+		return submittingParty;
+	}
+
+	public void setSubmittingParty(LEIIdentifier submittingParty) {
+		this.submittingParty = submittingParty;
+	}
+
+	public RecordTechnicalData2 getTechnicalAttributes() {
+		return technicalAttributes;
+	}
+
+	public void setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData2 technicalAttributes) {
+		this.technicalAttributes = technicalAttributes;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

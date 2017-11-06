@@ -31,41 +31,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#AcceptedTechnicalValidation
- * StatisticalReportingStatusCode.AcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmAcceptedTechnicalValidation
+ * StatisticalReportingStatusCode.mmAcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#Received
- * StatisticalReportingStatusCode.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmReceived
+ * StatisticalReportingStatusCode.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#PartiallyAccepted
- * StatisticalReportingStatusCode.PartiallyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmPartiallyAccepted
+ * StatisticalReportingStatusCode.mmPartiallyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#Rejected
- * StatisticalReportingStatusCode.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmRejected
+ * StatisticalReportingStatusCode.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#Pending
- * StatisticalReportingStatusCode.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmPending
+ * StatisticalReportingStatusCode.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#Accepted
- * StatisticalReportingStatusCode.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmAccepted
+ * StatisticalReportingStatusCode.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#Warning
- * StatisticalReportingStatusCode.Warning}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmWarning
+ * StatisticalReportingStatusCode.mmWarning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#Reminder
- * StatisticalReportingStatusCode.Reminder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmReminder
+ * StatisticalReportingStatusCode.mmReminder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#CorruptedFile
- * StatisticalReportingStatusCode.CorruptedFile}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmCorruptedFile
+ * StatisticalReportingStatusCode.mmCorruptedFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#IncorrectFilename
- * StatisticalReportingStatusCode.IncorrectFilename}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmIncorrectFilename
+ * StatisticalReportingStatusCode.mmIncorrectFilename}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#AcceptedAfterPending
- * StatisticalReportingStatusCode.AcceptedAfterPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmAcceptedAfterPending
+ * StatisticalReportingStatusCode.mmAcceptedAfterPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#RejectedAfterPending
- * StatisticalReportingStatusCode.RejectedAfterPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmRejectedAfterPending
+ * StatisticalReportingStatusCode.mmRejectedAfterPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -86,8 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -132,7 +132,7 @@ public class StatisticalReportingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedTechnicalValidation = new MMCode() {
+	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
@@ -162,7 +162,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "Report has been received."</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -196,7 +196,7 @@ public class StatisticalReportingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyAccepted = new MMCode() {
+	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
@@ -226,7 +226,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "Transaction or report has been rejected."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -256,7 +256,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "Processing of transaction or report is pending."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -286,7 +286,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "Transaction or report has been accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -316,7 +316,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "Transaction has been accepted with warnings."</li>
 	 * </ul>
 	 */
-	public static final MMCode Warning = new MMCode() {
+	public static final MMCode mmWarning = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warning";
@@ -346,7 +346,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "Reminder of a non received report."</li>
 	 * </ul>
 	 */
-	public static final MMCode Reminder = new MMCode() {
+	public static final MMCode mmReminder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
@@ -376,7 +376,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "File containing the report is corrupted."</li>
 	 * </ul>
 	 */
-	public static final MMCode CorruptedFile = new MMCode() {
+	public static final MMCode mmCorruptedFile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedFile";
@@ -406,7 +406,7 @@ public class StatisticalReportingStatusCode {
 	 * definition} = "File containing the report has an incorrect filename."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectFilename = new MMCode() {
+	public static final MMCode mmIncorrectFilename = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFilename";
@@ -437,7 +437,7 @@ public class StatisticalReportingStatusCode {
 	 * "Transaction or report has been accepted, following a pending status."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedAfterPending = new MMCode() {
+	public static final MMCode mmAcceptedAfterPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAfterPending";
@@ -468,7 +468,7 @@ public class StatisticalReportingStatusCode {
 	 * "Transaction or report has been rejected, following a pending status."</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedAfterPending = new MMCode() {
+	public static final MMCode mmRejectedAfterPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedAfterPending";
@@ -481,17 +481,17 @@ public class StatisticalReportingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatisticalReportingStatusCode";
 				definition = "Specifies the status of a single statistical reporting transaction or of a group of statistical reporting transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatisticalReportingStatusCode.AcceptedTechnicalValidation, com.tools20022.repository.codeset.StatisticalReportingStatusCode.Received,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.PartiallyAccepted, com.tools20022.repository.codeset.StatisticalReportingStatusCode.Rejected,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.Pending, com.tools20022.repository.codeset.StatisticalReportingStatusCode.Accepted,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.Warning, com.tools20022.repository.codeset.StatisticalReportingStatusCode.Reminder,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.CorruptedFile, com.tools20022.repository.codeset.StatisticalReportingStatusCode.IncorrectFilename,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.AcceptedAfterPending, com.tools20022.repository.codeset.StatisticalReportingStatusCode.RejectedAfterPending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmReceived,
+						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmPartiallyAccepted, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmRejected,
+						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmPending, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmAccepted,
+						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmWarning, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmReminder,
+						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmCorruptedFile, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmIncorrectFilename,
+						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmAcceptedAfterPending, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmRejectedAfterPending);
 				derivation_lazy = () -> Arrays.asList(StatisticalReportingStatus2Code.mmObject(), StatisticalReportingStatus1Code.mmObject(), TaxReportingStatus2Code.mmObject(), TaxReportingStatus1Code.mmObject());
 			}
 		});

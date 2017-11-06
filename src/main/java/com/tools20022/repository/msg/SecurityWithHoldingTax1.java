@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityWithHoldingTax1#WithholdingTaxValue
- * SecurityWithHoldingTax1.WithholdingTaxValue}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityWithHoldingTax1#mmWithholdingTaxValue
+ * SecurityWithHoldingTax1.mmWithholdingTaxValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityWithHoldingTax1#Country
- * SecurityWithHoldingTax1.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityWithHoldingTax1#mmCountry
+ * SecurityWithHoldingTax1.mmCountry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityWithHoldingTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateAndAmountFormat1Choice withholdingTaxValue;
 	/**
 	 * Value of the withholding tax as rate, amount or not specified.
 	 * <p>
@@ -91,7 +92,7 @@ public class SecurityWithHoldingTax1 {
 	 * "Value of the withholding tax as rate, amount or not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WithholdingTaxValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWithholdingTaxValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class SecurityWithHoldingTax1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxValue";
 			definition = "Value of the withholding tax as rate, amount or not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RateAndAmountFormat1Choice.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Represents the tax authority.
 	 * <p>
@@ -131,7 +133,7 @@ public class SecurityWithHoldingTax1 {
 	 * definition} = "Represents the tax authority."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class SecurityWithHoldingTax1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Represents the tax authority.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class SecurityWithHoldingTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityWithHoldingTax1.WithholdingTaxValue, com.tools20022.repository.msg.SecurityWithHoldingTax1.Country);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityWithHoldingTax1.mmWithholdingTaxValue, com.tools20022.repository.msg.SecurityWithHoldingTax1.mmCountry);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityWithHoldingTax1";
 				definition = "Set of elements of a cash distribution that will be withheld by a tax authority.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateAndAmountFormat1Choice getWithholdingTaxValue() {
+		return withholdingTaxValue;
+	}
+
+	public void setWithholdingTaxValue(RateAndAmountFormat1Choice withholdingTaxValue) {
+		this.withholdingTaxValue = withholdingTaxValue;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

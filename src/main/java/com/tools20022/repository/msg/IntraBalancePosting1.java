@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.BookEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the transactions in the report.
@@ -33,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalancePosting1#BalanceFrom
- * IntraBalancePosting1.BalanceFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePosting1#Movement
- * IntraBalancePosting1.Movement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalancePosting1#mmBalanceFrom
+ * IntraBalancePosting1.mmBalanceFrom}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalancePosting1#mmMovement
+ * IntraBalancePosting1.mmMovement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalancePosting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom;
 	/**
 	 * Balance from which the amount of money is moved.
 	 * <p>
@@ -86,7 +89,7 @@ public class IntraBalancePosting1 {
 	 * definition} = "Balance from which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalancePosting1.mmObject();
 			isDerived = false;
@@ -94,12 +97,13 @@ public class IntraBalancePosting1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IntraBalancePosting2> movement;
 	/**
 	 * Identifies the individual transaction.
 	 * <p>
@@ -126,7 +130,7 @@ public class IntraBalancePosting1 {
 	 * definition} = "Identifies the individual transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Movement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalancePosting1.mmObject();
 			isDerived = false;
@@ -135,22 +139,38 @@ public class IntraBalancePosting1 {
 			name = "Movement";
 			definition = "Identifies the individual transaction.";
 			minOccurs = 1;
-			type_lazy = () -> IntraBalancePosting2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraBalancePosting2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalancePosting1.BalanceFrom, com.tools20022.repository.msg.IntraBalancePosting1.Movement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalancePosting1.mmBalanceFrom, com.tools20022.repository.msg.IntraBalancePosting1.mmMovement);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalancePosting1";
 				definition = "Provides the transactions in the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
+		return balanceFrom;
+	}
+
+	public void setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+		this.balanceFrom = balanceFrom;
+	}
+
+	public List<IntraBalancePosting2> getMovement() {
+		return movement;
+	}
+
+	public void setMovement(List<com.tools20022.repository.msg.IntraBalancePosting2> movement) {
+		this.movement = movement;
 	}
 }

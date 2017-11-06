@@ -35,15 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition5Code#Information
- * ProcessingPosition5Code.Information}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition5Code#mmInformation
+ * ProcessingPosition5Code.mmInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class ProcessingPosition5Code extends ProcessingPositionCode {
 	 * name} = "Information"</li>
 	 * </ul>
 	 */
-	public static final MMCode Information = new MMCode() {
+	public static final MMCode mmInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
@@ -86,11 +86,11 @@ public class ProcessingPosition5Code extends ProcessingPositionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition5Code";
 				definition = "Specifies when an transaction/instruction is to be executed relative to a linked transaction/instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition5Code.Information);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition5Code.mmInformation);
 				trace_lazy = () -> ProcessingPositionCode.mmObject();
 			}
 		});

@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType1Code#Subscription
- * FundOrderType1Code.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType1Code#mmSubscription
+ * FundOrderType1Code.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType1Code#Redemption
- * FundOrderType1Code.Redemption}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType1Code#Switch
- * FundOrderType1Code.Switch}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType1Code#mmRedemption
+ * FundOrderType1Code.mmRedemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType1Code#mmSwitch
+ * FundOrderType1Code.mmSwitch}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
@@ -106,7 +107,7 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -129,7 +130,7 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	 * name} = "Switch"</li>
 	 * </ul>
 	 */
-	public static final MMCode Switch = new MMCode() {
+	public static final MMCode mmSwitch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
@@ -140,13 +141,13 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUBS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType1Code";
 				definition = "Specifies the type of the investment fund order.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.FundOrderType1Code.Subscription, com.tools20022.repository.codeset.FundOrderType1Code.Redemption, com.tools20022.repository.codeset.FundOrderType1Code.Switch);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType1Code.mmSubscription, com.tools20022.repository.codeset.FundOrderType1Code.mmRedemption,
+						com.tools20022.repository.codeset.FundOrderType1Code.mmSwitch);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

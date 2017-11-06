@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification99#Identification
- * PartyIdentification99.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification99#LEI
- * PartyIdentification99.LEI}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification99#mmIdentification
+ * PartyIdentification99.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification99#mmLEI
+ * PartyIdentification99.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification99 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification93Choice identification;
 	/**
 	 * Unique identification of the party.
 	 * <p>
@@ -98,28 +99,29 @@ public class PartyIdentification99 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification110#Identification
-	 * PartyIdentification110.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification110#mmIdentification
+	 * PartyIdentification110.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification99.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification99.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification110.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification110.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification93Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification93Choice.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identification as an alternate identification for a party.
 	 * <p>
@@ -151,13 +153,14 @@ public class PartyIdentification99 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification110#LEI
-	 * PartyIdentification110.LEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification110#mmLEI
+	 * PartyIdentification110.mmLEI}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentification99.mmObject();
 			isDerived = false;
@@ -165,9 +168,9 @@ public class PartyIdentification99 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification110.LEI);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification110.mmLEI);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -175,14 +178,30 @@ public class PartyIdentification99 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification99.Identification, com.tools20022.repository.msg.PartyIdentification99.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification99.mmIdentification, com.tools20022.repository.msg.PartyIdentification99.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification99";
 				definition = "Identification of the party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification93Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification93Choice identification) {
+		this.identification = identification;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

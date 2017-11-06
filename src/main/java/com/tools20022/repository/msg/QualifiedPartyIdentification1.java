@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines and associates identifications for a party as a list of other global
@@ -43,20 +44,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#Identification
- * QualifiedPartyIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#mmIdentification
+ * QualifiedPartyIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#Party
- * QualifiedPartyIdentification1.Party}</li>
+ * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#mmParty
+ * QualifiedPartyIdentification1.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#ShortIdentification
- * QualifiedPartyIdentification1.ShortIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#mmShortIdentification
+ * QualifiedPartyIdentification1.mmShortIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#Role
- * QualifiedPartyIdentification1.Role}</li>
+ * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#mmRole
+ * QualifiedPartyIdentification1.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#RoleDescription
- * QualifiedPartyIdentification1.RoleDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#mmRoleDescription
+ * QualifiedPartyIdentification1.mmRoleDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QualifiedPartyIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ID identification;
 	/**
 	 * Schema ID to be used in IDREF values.
 	 * <p>
@@ -109,7 +111,7 @@ public class QualifiedPartyIdentification1 {
 	 * definition} = "Schema ID to be used in IDREF values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isDerived = false;
@@ -117,11 +119,12 @@ public class QualifiedPartyIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Schema ID to be used in IDREF values.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ID.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SingleQualifiedPartyIdentification1> party;
 	/**
 	 * List of identifications for the same party.
 	 * <p>
@@ -134,8 +137,8 @@ public class QualifiedPartyIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#IdentifiedParty
-	 * PartyIdentificationInformation.IdentifiedParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmIdentifiedParty
+	 * PartyIdentificationInformation.mmIdentifiedParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +157,21 @@ public class QualifiedPartyIdentification1 {
 	 * definition} = "List of identifications for the same party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedParty;
 			componentContext_lazy = () -> QualifiedPartyIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.IdentifiedParty;
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "List of identifications for the same party.";
 			minOccurs = 1;
-			type_lazy = () -> SingleQualifiedPartyIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice shortIdentification;
 	/**
 	 * Short identification of the resulting party as a control mechanism for
 	 * humans.
@@ -203,21 +207,22 @@ public class QualifiedPartyIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ShortIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmShortIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortIdentification";
 			definition = "Short identification of the resulting party as a control mechanism for humans.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected GenericIdentification1 role;
 	/**
 	 * Formally defined role qualifying the party.
 	 * <p>
@@ -229,8 +234,8 @@ public class QualifiedPartyIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RolePlayer#Role
-	 * RolePlayer.Role}</li>
+	 * {@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
+	 * RolePlayer.mmRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,21 +254,22 @@ public class QualifiedPartyIdentification1 {
 	 * definition} = "Formally defined role qualifying the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Role = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmRole;
 			componentContext_lazy = () -> QualifiedPartyIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.Role;
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Formally defined role qualifying the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	protected Max256Text roleDescription;
 	/**
 	 * Free form description of the party's role.
 	 * <p>
@@ -291,7 +297,7 @@ public class QualifiedPartyIdentification1 {
 	 * definition} = "Free form description of the party's role."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoleDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoleDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isDerived = false;
@@ -299,8 +305,8 @@ public class QualifiedPartyIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoleDescription";
 			definition = "Free form description of the party's role.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -308,16 +314,56 @@ public class QualifiedPartyIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QualifiedPartyIdentification1.Identification, com.tools20022.repository.msg.QualifiedPartyIdentification1.Party,
-						com.tools20022.repository.msg.QualifiedPartyIdentification1.ShortIdentification, com.tools20022.repository.msg.QualifiedPartyIdentification1.Role,
-						com.tools20022.repository.msg.QualifiedPartyIdentification1.RoleDescription);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QualifiedPartyIdentification1.mmIdentification, com.tools20022.repository.msg.QualifiedPartyIdentification1.mmParty,
+						com.tools20022.repository.msg.QualifiedPartyIdentification1.mmShortIdentification, com.tools20022.repository.msg.QualifiedPartyIdentification1.mmRole,
+						com.tools20022.repository.msg.QualifiedPartyIdentification1.mmRoleDescription);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QualifiedPartyIdentification1";
 				definition = "Defines and associates identifications for a party as a list of other global or qualified relative identifiers.\r\nIt is assumed that customers of a party can be referenced by an identifier local to the party. The party together with the local identifier can be used to reference the customer.\r\nMultiple references can be given to identify the same party.\r\nA short identification can be used for display purposes.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ID getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ID identification) {
+		this.identification = identification;
+	}
+
+	public List<SingleQualifiedPartyIdentification1> getParty() {
+		return party;
+	}
+
+	public void setParty(List<com.tools20022.repository.msg.SingleQualifiedPartyIdentification1> party) {
+		this.party = party;
+	}
+
+	public PartyIdentification2Choice getShortIdentification() {
+		return shortIdentification;
+	}
+
+	public void setShortIdentification(PartyIdentification2Choice shortIdentification) {
+		this.shortIdentification = shortIdentification;
+	}
+
+	public GenericIdentification1 getRole() {
+		return role;
+	}
+
+	public void setRole(com.tools20022.repository.msg.GenericIdentification1 role) {
+		this.role = role;
+	}
+
+	public Max256Text getRoleDescription() {
+		return roleDescription;
+	}
+
+	public void setRoleDescription(Max256Text roleDescription) {
+		this.roleDescription = roleDescription;
 	}
 }

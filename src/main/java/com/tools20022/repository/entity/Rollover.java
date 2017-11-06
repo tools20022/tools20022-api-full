@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.ObligationFulfilment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Process whereby a financial instrument is reinvested at maturity.
@@ -36,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Rollover#SecuritiesSettlement
- * Rollover.SecuritiesSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.Rollover#mmSecuritiesSettlement
+ * Rollover.mmSecuritiesSettlement}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#Rollover
- * SecuritiesSettlement.Rollover}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRollover
+ * SecuritiesSettlement.mmRollover}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Rollover extends ObligationFulfilment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement;
 	/**
 	 * Trade settlement process which is the source of the rollover.
 	 * <p>
@@ -80,8 +82,8 @@ public class Rollover extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#Rollover
-	 * SecuritiesSettlement.Rollover}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRollover
+	 * SecuritiesSettlement.mmRollover}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -106,7 +108,7 @@ public class Rollover extends ObligationFulfilment {
 	 * "Trade settlement process which is the source of the rollover."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Rollover.mmObject();
 			isDerived = false;
@@ -114,24 +116,32 @@ public class Rollover extends ObligationFulfilment {
 			name = "SecuritiesSettlement";
 			definition = "Trade settlement process which is the source of the rollover.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.Rollover;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmRollover;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Rollover";
 				definition = "Process whereby a financial instrument is reinvested at maturity.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.Rollover);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmRollover);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Rollover.SecuritiesSettlement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Rollover.mmSecuritiesSettlement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesSettlement> getSecuritiesSettlement() {
+		return securitiesSettlement;
+	}
+
+	public void setSecuritiesSettlement(List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement) {
+		this.securitiesSettlement = securitiesSettlement;
 	}
 }

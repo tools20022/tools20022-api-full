@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType11Code#NonSyndicated
- * SecuritiesTransactionType11Code.NonSyndicated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType11Code#mmNonSyndicated
+ * SecuritiesTransactionType11Code.mmNonSyndicated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType11Code#SyndicateUnderwriters
- * SecuritiesTransactionType11Code.SyndicateUnderwriters}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType11Code#mmSyndicateUnderwriters
+ * SecuritiesTransactionType11Code.mmSyndicateUnderwriters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class SecuritiesTransactionType11Code extends SecuritiesTransactionTypeCo
 	 * name} = "NonSyndicated"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonSyndicated = new MMCode() {
+	public static final MMCode mmNonSyndicated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonSyndicated";
@@ -107,7 +107,7 @@ public class SecuritiesTransactionType11Code extends SecuritiesTransactionTypeCo
 	 * name} = "SyndicateUnderwriters"</li>
 	 * </ul>
 	 */
-	public static final MMCode SyndicateUnderwriters = new MMCode() {
+	public static final MMCode mmSyndicateUnderwriters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyndicateUnderwriters";
@@ -118,12 +118,12 @@ public class SecuritiesTransactionType11Code extends SecuritiesTransactionTypeCo
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NSYN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionType11Code";
 				definition = "Specifies underlying information regarding the type of settlement transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType11Code.NonSyndicated, com.tools20022.repository.codeset.SecuritiesTransactionType11Code.SyndicateUnderwriters);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType11Code.mmNonSyndicated, com.tools20022.repository.codeset.SecuritiesTransactionType11Code.mmSyndicateUnderwriters);
 				trace_lazy = () -> SecuritiesTransactionTypeCode.mmObject();
 			}
 		});

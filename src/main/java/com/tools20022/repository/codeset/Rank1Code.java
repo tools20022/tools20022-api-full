@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RankCode RankCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#Primary
- * Rank1Code.Primary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#Secondary
- * Rank1Code.Secondary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#mmPrimary
+ * Rank1Code.mmPrimary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#mmSecondary
+ * Rank1Code.mmSecondary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class Rank1Code extends RankCode {
 	 * name} = "Primary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Primary = new MMCode() {
+	public static final MMCode mmPrimary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Primary";
@@ -95,7 +95,7 @@ public class Rank1Code extends RankCode {
 	 * name} = "Secondary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Secondary = new MMCode() {
+	public static final MMCode mmSecondary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Secondary";
@@ -106,11 +106,11 @@ public class Rank1Code extends RankCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Rank1Code";
 				definition = "Specifies the rank of an element (party, market) in a specific environment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Rank1Code.Primary, com.tools20022.repository.codeset.Rank1Code.Secondary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Rank1Code.mmPrimary, com.tools20022.repository.codeset.Rank1Code.mmSecondary);
 				trace_lazy = () -> RankCode.mmObject();
 			}
 		});

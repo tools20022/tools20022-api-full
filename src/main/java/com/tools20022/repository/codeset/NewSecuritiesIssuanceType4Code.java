@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code#RefundedSecurityIndicator
- * NewSecuritiesIssuanceType4Code.RefundedSecurityIndicator}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code#mmRefundedSecurityIndicator
+ * NewSecuritiesIssuanceType4Code.mmRefundedSecurityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code#NonRefundedSecurityIndicator
- * NewSecuritiesIssuanceType4Code.NonRefundedSecurityIndicator}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code#mmNonRefundedSecurityIndicator
+ * NewSecuritiesIssuanceType4Code.mmNonRefundedSecurityIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class NewSecuritiesIssuanceType4Code extends NewSecuritiesIssuanceTypeCod
 	 * name} = "RefundedSecurityIndicator"</li>
 	 * </ul>
 	 */
-	public static final MMCode RefundedSecurityIndicator = new MMCode() {
+	public static final MMCode mmRefundedSecurityIndicator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundedSecurityIndicator";
@@ -98,7 +98,7 @@ public class NewSecuritiesIssuanceType4Code extends NewSecuritiesIssuanceTypeCod
 	 * name} = "NonRefundedSecurityIndicator"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonRefundedSecurityIndicator = new MMCode() {
+	public static final MMCode mmNonRefundedSecurityIndicator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRefundedSecurityIndicator";
@@ -109,11 +109,11 @@ public class NewSecuritiesIssuanceType4Code extends NewSecuritiesIssuanceTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NewSecuritiesIssuanceType4Code";
 				definition = "Specifies the type of securities proceeds newly issued.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code.RefundedSecurityIndicator, com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code.NonRefundedSecurityIndicator);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code.mmRefundedSecurityIndicator, com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code.mmNonRefundedSecurityIndicator);
 				trace_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
 			}
 		});

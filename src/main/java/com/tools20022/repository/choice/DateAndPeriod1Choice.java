@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndPeriod1Choice#StatementDate
- * DateAndPeriod1Choice.StatementDate}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndPeriod1Choice#mmStatementDate
+ * DateAndPeriod1Choice.mmStatementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndPeriod1Choice#StatementPeriod
- * DateAndPeriod1Choice.StatementPeriod}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndPeriod1Choice#mmStatementPeriod
+ * DateAndPeriod1Choice.mmStatementPeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateAndPeriod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice statementDate;
 	/**
 	 * Date of the statement.
 	 * <p>
@@ -85,7 +86,7 @@ public class DateAndPeriod1Choice {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndPeriod1Choice.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class DateAndPeriod1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDate";
 			definition = "Date of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Period2Choice statementPeriod;
 	/**
 	 * Period for the statement.
 	 * <p>
@@ -126,7 +128,7 @@ public class DateAndPeriod1Choice {
 	 * definition} = "Period for the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndPeriod1Choice.mmObject();
 			isDerived = false;
@@ -134,22 +136,38 @@ public class DateAndPeriod1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPeriod";
 			definition = "Period for the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period2Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.Period2Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndPeriod1Choice.StatementDate, com.tools20022.repository.choice.DateAndPeriod1Choice.StatementPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndPeriod1Choice.mmStatementDate, com.tools20022.repository.choice.DateAndPeriod1Choice.mmStatementPeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateAndPeriod1Choice";
 				definition = "Choice between a date and period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getStatementDate() {
+		return statementDate;
+	}
+
+	public void setStatementDate(com.tools20022.repository.choice.DateAndDateTimeChoice statementDate) {
+		this.statementDate = statementDate;
+	}
+
+	public Period2Choice getStatementPeriod() {
+		return statementPeriod;
+	}
+
+	public void setStatementPeriod(com.tools20022.repository.choice.Period2Choice statementPeriod) {
+		this.statementPeriod = statementPeriod;
 	}
 }

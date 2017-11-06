@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -44,62 +45,64 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#TransactionActivity
- * TransactionDetails63.TransactionActivity}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmTransactionActivity
+ * TransactionDetails63.mmTransactionActivity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SettlementTransactionOrCorporateActionEventType
- * TransactionDetails63.SettlementTransactionOrCorporateActionEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSettlementTransactionOrCorporateActionEventType
+ * TransactionDetails63.mmSettlementTransactionOrCorporateActionEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SecuritiesMovementType
- * TransactionDetails63.SecuritiesMovementType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails63#Payment
- * TransactionDetails63.Payment}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSecuritiesMovementType
+ * TransactionDetails63.mmSecuritiesMovementType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails63#mmPayment
+ * TransactionDetails63.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SettlementParameters
- * TransactionDetails63.SettlementParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSettlementParameters
+ * TransactionDetails63.mmSettlementParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#PlaceOfTrade
- * TransactionDetails63.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmPlaceOfTrade
+ * TransactionDetails63.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SafekeepingPlace
- * TransactionDetails63.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSafekeepingPlace
+ * TransactionDetails63.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#PlaceOfClearing
- * TransactionDetails63.PlaceOfClearing}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmPlaceOfClearing
+ * TransactionDetails63.mmPlaceOfClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#PostingQuantity
- * TransactionDetails63.PostingQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmPostingQuantity
+ * TransactionDetails63.mmPostingQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#NumberOfDaysAccrued
- * TransactionDetails63.NumberOfDaysAccrued}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmNumberOfDaysAccrued
+ * TransactionDetails63.mmNumberOfDaysAccrued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#PostingAmount
- * TransactionDetails63.PostingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmPostingAmount
+ * TransactionDetails63.mmPostingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#AccruedInterestAmount
- * TransactionDetails63.AccruedInterestAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails63#TradeDate
- * TransactionDetails63.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmAccruedInterestAmount
+ * TransactionDetails63.mmAccruedInterestAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#EffectiveSettlementDate
- * TransactionDetails63.EffectiveSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmTradeDate
+ * TransactionDetails63.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SettlementDate
- * TransactionDetails63.SettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails63#ValueDate
- * TransactionDetails63.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmEffectiveSettlementDate
+ * TransactionDetails63.mmEffectiveSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#DeliveringSettlementParties
- * TransactionDetails63.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSettlementDate
+ * TransactionDetails63.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#ReceivingSettlementParties
- * TransactionDetails63.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmValueDate
+ * TransactionDetails63.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#ReversalIndicator
- * TransactionDetails63.ReversalIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmDeliveringSettlementParties
+ * TransactionDetails63.mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#TransactionAdditionalDetails
- * TransactionDetails63.TransactionAdditionalDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmReceivingSettlementParties
+ * TransactionDetails63.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmReversalIndicator
+ * TransactionDetails63.mmReversalIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmTransactionAdditionalDetails
+ * TransactionDetails63.mmTransactionAdditionalDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -108,8 +111,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -135,6 +138,7 @@ import java.util.function.Supplier;
 public class TransactionDetails63 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionActivity1Choice transactionActivity;
 	/**
 	 * Specifies the type of activity to which this instruction relates.
 	 * <p>
@@ -147,8 +151,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#Activity
-	 * SecuritiesTrade.Activity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmActivity
+	 * SecuritiesTrade.mmActivity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,34 +174,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#TransactionActivity
-	 * TransactionDetails78.TransactionActivity}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmTransactionActivity
+	 * TransactionDetails78.mmTransactionActivity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#TransactionActivity
-	 * TransactionDetails57.TransactionActivity}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmTransactionActivity
+	 * TransactionDetails57.mmTransactionActivity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionActivity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionActivity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmActivity;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.Activity;
 			isDerived = false;
 			xmlTag = "TxActvty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionActivity";
 			definition = "Specifies the type of activity to which this instruction relates.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.TransactionActivity;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.TransactionActivity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmTransactionActivity);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmTransactionActivity;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionActivity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TransactionActivity1Choice.mmObject();
 		}
 	};
+	protected SettlementOrCorporateActionEvent9Choice settlementTransactionOrCorporateActionEventType;
 	/**
 	 * Choice of type for the transaction reported.
 	 * <p>
@@ -227,18 +232,18 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SettlementTransactionOrCorporateActionEventType
-	 * TransactionDetails78.SettlementTransactionOrCorporateActionEventType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSettlementTransactionOrCorporateActionEventType
+	 * TransactionDetails78.mmSettlementTransactionOrCorporateActionEventType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SettlementTransactionOrCorporateActionEventType
-	 * TransactionDetails57.SettlementTransactionOrCorporateActionEventType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSettlementTransactionOrCorporateActionEventType
+	 * TransactionDetails57.mmSettlementTransactionOrCorporateActionEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementTransactionOrCorporateActionEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementTransactionOrCorporateActionEventType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
 			isDerived = false;
@@ -246,14 +251,15 @@ public class TransactionDetails63 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionOrCorporateActionEventType";
 			definition = "Choice of type for the transaction reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.SettlementTransactionOrCorporateActionEventType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.SettlementTransactionOrCorporateActionEventType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmSettlementTransactionOrCorporateActionEventType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmSettlementTransactionOrCorporateActionEventType;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementOrCorporateActionEvent9Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SettlementOrCorporateActionEvent9Choice.mmObject();
 		}
 	};
+	protected ReceiveDelivery1Code securitiesMovementType;
 	/**
 	 * Specifies if the movement on a securities account results from a deliver
 	 * or a receive instruction.
@@ -268,8 +274,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SecuritiesMovementType
-	 * SecuritiesSettlement.SecuritiesMovementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesMovementType
+	 * SecuritiesSettlement.mmSecuritiesMovementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -292,33 +298,34 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SecuritiesMovementType
-	 * TransactionDetails78.SecuritiesMovementType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSecuritiesMovementType
+	 * TransactionDetails78.mmSecuritiesMovementType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SecuritiesMovementType
-	 * TransactionDetails57.SecuritiesMovementType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSecuritiesMovementType
+	 * TransactionDetails57.mmSecuritiesMovementType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesMovementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SecuritiesMovementType;
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.SecuritiesMovementType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.SecuritiesMovementType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmSecuritiesMovementType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmSecuritiesMovementType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code payment;
 	/**
 	 * Specifies how the transaction is to be settled, for example, against
 	 * payment.
@@ -333,8 +340,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,33 +364,34 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#Payment
-	 * TransactionDetails78.Payment}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmPayment
+	 * TransactionDetails78.mmPayment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#Payment
-	 * TransactionDetails57.Payment}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmPayment
+	 * TransactionDetails57.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.Payment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.Payment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmPayment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmPayment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected SettlementDetails75 settlementParameters;
 	/**
 	 * Parameters applied to the settlement of a security transfer.
 	 * <p>
@@ -395,8 +403,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -418,34 +426,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SettlementParameters
-	 * TransactionDetails78.SettlementParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSettlementParameters
+	 * TransactionDetails78.mmSettlementParameters}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SettlementParameters
-	 * TransactionDetails57.SettlementParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSettlementParameters
+	 * TransactionDetails57.mmSettlementParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementParameters = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SttlmParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters applied to the settlement of a security transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.SettlementParameters;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.SettlementParameters);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmSettlementParameters);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmSettlementParameters;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementDetails75.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementDetails75.mmObject();
 		}
 	};
+	protected MarketIdentification78 placeOfTrade;
 	/**
 	 * Market in which a trade transaction has been executed.
 	 * <p>
@@ -457,8 +466,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#TradingMarket
-	 * Security.TradingMarket}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmTradingMarket
+	 * Security.mmTradingMarket}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -479,34 +488,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#PlaceOfTrade
-	 * TransactionDetails78.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmPlaceOfTrade
+	 * TransactionDetails78.mmPlaceOfTrade}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#PlaceOfTrade
-	 * TransactionDetails57.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmPlaceOfTrade
+	 * TransactionDetails57.mmPlaceOfTrade}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlaceOfTrade = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlaceOfTrade = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTradingMarket;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.TradingMarket;
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which a trade transaction has been executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.PlaceOfTrade;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.PlaceOfTrade);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmPlaceOfTrade);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmPlaceOfTrade;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification78.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification78.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormat3Choice safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -546,34 +556,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SafekeepingPlace
-	 * TransactionDetails78.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSafekeepingPlace
+	 * TransactionDetails78.mmSafekeepingPlace}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SafekeepingPlace
-	 * TransactionDetails57.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSafekeepingPlace
+	 * TransactionDetails57.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.SafekeepingPlace;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.SafekeepingPlace);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmSafekeepingPlace);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmSafekeepingPlace;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
 		}
 	};
+	protected AnyBICIdentifier placeOfClearing;
 	/**
 	 * Infrastructure which may be a component of a clearing house and which
 	 * facilitates clearing and settlement for its members by standing between
@@ -590,8 +601,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -614,33 +625,34 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#PlaceOfClearing
-	 * TransactionDetails78.PlaceOfClearing}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmPlaceOfClearing
+	 * TransactionDetails78.mmPlaceOfClearing}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#PlaceOfClearing
-	 * TransactionDetails57.PlaceOfClearing}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmPlaceOfClearing
+	 * TransactionDetails57.mmPlaceOfClearing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfClearing = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfClearing = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "PlcOfClr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfClearing";
 			definition = "Infrastructure which may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.PlaceOfClearing;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.PlaceOfClearing);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmPlaceOfClearing);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmPlaceOfClearing;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected Quantity6Choice postingQuantity;
 	/**
 	 * Quantity of financial instrument (to be) posted to the safekeeping
 	 * account.
@@ -653,8 +665,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementQuantity
-	 * SecuritiesSettlement.SettlementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+	 * SecuritiesSettlement.mmSettlementQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -677,34 +689,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#PostingQuantity
-	 * TransactionDetails78.PostingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmPostingQuantity
+	 * TransactionDetails78.mmPostingQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#PostingQuantity
-	 * TransactionDetails57.PostingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmPostingQuantity
+	 * TransactionDetails57.mmPostingQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostingQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostingQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementQuantity;
 			isDerived = false;
 			xmlTag = "PstngQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Quantity of financial instrument (to be) posted to the safekeeping account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.PostingQuantity;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.PostingQuantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmPostingQuantity);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmPostingQuantity;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Quantity6Choice.mmObject();
 		}
 	};
+	protected Max3Number numberOfDaysAccrued;
 	/**
 	 * Number of days on which the interest rate accrues (daily accrual note).
 	 * <p>
@@ -717,8 +730,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#NumberOfDays
-	 * DateTimePeriod.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmNumberOfDays
+	 * DateTimePeriod.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -741,33 +754,34 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#NumberOfDaysAccrued
-	 * TransactionDetails78.NumberOfDaysAccrued}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmNumberOfDaysAccrued
+	 * TransactionDetails78.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#NumberOfDaysAccrued
-	 * TransactionDetails57.NumberOfDaysAccrued}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmNumberOfDaysAccrued
+	 * TransactionDetails57.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.NumberOfDays;
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Number of days on which the interest rate accrues (daily accrual note).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.NumberOfDaysAccrued;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.NumberOfDaysAccrued);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmNumberOfDaysAccrued);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmNumberOfDaysAccrued;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 	};
+	protected AmountAndDirection3 postingAmount;
 	/**
 	 * Amount of money that is to be/was posted to the account.
 	 * <p>
@@ -779,8 +793,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -801,34 +815,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#PostingAmount
-	 * TransactionDetails78.PostingAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmPostingAmount
+	 * TransactionDetails78.mmPostingAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#PostingAmount
-	 * TransactionDetails57.PostingAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmPostingAmount
+	 * TransactionDetails57.mmPostingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostingAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostingAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "PstngAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Amount of money that is to be/was posted to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.PostingAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.PostingAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmPostingAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmPostingAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection3.mmObject();
 		}
 	};
+	protected AmountAndDirection4 accruedInterestAmount;
 	/**
 	 * Interest amount that has accrued in between coupon payment periods.
 	 * <p>
@@ -840,8 +855,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -863,34 +878,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#AccruedInterestAmount
-	 * TransactionDetails78.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmAccruedInterestAmount
+	 * TransactionDetails78.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#AccruedInterestAmount
-	 * TransactionDetails57.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmAccruedInterestAmount
+	 * TransactionDetails57.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccruedInterestAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.AccruedInterestAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.AccruedInterestAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmAccruedInterestAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmAccruedInterestAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected TradeDate1Choice tradeDate;
 	/**
 	 * Specifies the date/time on which the trade was executed.
 	 * <p>
@@ -902,8 +918,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -924,34 +940,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#TradeDate
-	 * TransactionDetails78.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmTradeDate
+	 * TransactionDetails78.mmTradeDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#TradeDate
-	 * TransactionDetails57.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmTradeDate
+	 * TransactionDetails57.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.TradeDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.TradeDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmTradeDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmTradeDate;
 			maxOccurs = 1;
-			type_lazy = () -> TradeDate1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> TradeDate1Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice effectiveSettlementDate;
 	/**
 	 * Date and time at which a transaction is completed and cleared, that is,
 	 * payment is effected and securities are delivered.
@@ -965,8 +982,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementDate
-	 * SecuritiesSettlement.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+	 * SecuritiesSettlement.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -989,34 +1006,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#EffectiveSettlementDate
-	 * TransactionDetails78.EffectiveSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmEffectiveSettlementDate
+	 * TransactionDetails78.mmEffectiveSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#EffectiveSettlementDate
-	 * TransactionDetails57.EffectiveSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmEffectiveSettlementDate
+	 * TransactionDetails57.mmEffectiveSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EffectiveSettlementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEffectiveSettlementDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementDate;
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared, that is, payment is effected and securities are delivered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.EffectiveSettlementDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.EffectiveSettlementDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmEffectiveSettlementDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmEffectiveSettlementDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected SettlementDate1Choice settlementDate;
 	/**
 	 * Date and time at which the securities are to be delivered or received.
 	 * <p>
@@ -1029,8 +1047,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1052,34 +1070,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SettlementDate
-	 * TransactionDetails78.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSettlementDate
+	 * TransactionDetails78.mmSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SettlementDate
-	 * TransactionDetails57.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSettlementDate
+	 * TransactionDetails57.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.SettlementDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.SettlementDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmSettlementDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmSettlementDate;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementDate1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SettlementDate1Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice valueDate;
 	/**
 	 * Date and time assets become available to the account owner (in a credit
 	 * entry), or cease to be available to the account owner (in a debit entry).
@@ -1093,8 +1112,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#ValueDate
-	 * Trade.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmValueDate
+	 * Trade.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1117,34 +1136,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#ValueDate
-	 * TransactionDetails78.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmValueDate
+	 * TransactionDetails78.mmValueDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#ValueDate
-	 * TransactionDetails57.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmValueDate
+	 * TransactionDetails57.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValueDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmValueDate;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.ValueDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.ValueDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmValueDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmValueDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected SettlementParties13 deliveringSettlementParties;
 	/**
 	 * Identifies the chain of delivering settlement parties.
 	 * <p>
@@ -1156,8 +1176,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1178,34 +1198,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#DeliveringSettlementParties
-	 * TransactionDetails78.DeliveringSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmDeliveringSettlementParties
+	 * TransactionDetails78.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#DeliveringSettlementParties
-	 * TransactionDetails57.DeliveringSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmDeliveringSettlementParties
+	 * TransactionDetails57.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.DeliveringSettlementParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.DeliveringSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmDeliveringSettlementParties);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmDeliveringSettlementParties;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	protected SettlementParties13 receivingSettlementParties;
 	/**
 	 * Identifies the chain of receiving settlement parties.
 	 * <p>
@@ -1217,8 +1238,8 @@ public class TransactionDetails63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1239,34 +1260,35 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#ReceivingSettlementParties
-	 * TransactionDetails78.ReceivingSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmReceivingSettlementParties
+	 * TransactionDetails78.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#ReceivingSettlementParties
-	 * TransactionDetails57.ReceivingSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmReceivingSettlementParties
+	 * TransactionDetails57.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.ReceivingSettlementParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.ReceivingSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmReceivingSettlementParties);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmReceivingSettlementParties;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	protected YesNoIndicator reversalIndicator;
 	/**
 	 * Specifies whether it is the reversal of a previously reported movement.
 	 * <p>
@@ -1299,18 +1321,18 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#ReversalIndicator
-	 * TransactionDetails78.ReversalIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmReversalIndicator
+	 * TransactionDetails78.mmReversalIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#ReversalIndicator
-	 * TransactionDetails57.ReversalIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmReversalIndicator
+	 * TransactionDetails57.mmReversalIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReversalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReversalIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
 			isDerived = false;
@@ -1318,13 +1340,14 @@ public class TransactionDetails63 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIndicator";
 			definition = "Specifies whether it is the reversal of a previously reported movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.ReversalIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.ReversalIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmReversalIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmReversalIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max350Text transactionAdditionalDetails;
 	/**
 	 * Provides additional details on the transaction which can not be included
 	 * within the structured fields of the message.
@@ -1357,18 +1380,18 @@ public class TransactionDetails63 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#TransactionAdditionalDetails
-	 * TransactionDetails78.TransactionAdditionalDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmTransactionAdditionalDetails
+	 * TransactionDetails78.mmTransactionAdditionalDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#TransactionAdditionalDetails
-	 * TransactionDetails57.TransactionAdditionalDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmTransactionAdditionalDetails
+	 * TransactionDetails57.mmTransactionAdditionalDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionAdditionalDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionDetails63.mmObject();
 			isDerived = false;
@@ -1376,10 +1399,10 @@ public class TransactionDetails63 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAdditionalDetails";
 			definition = "Provides additional details on the transaction which can not be included within the structured fields of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.TransactionAdditionalDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.TransactionAdditionalDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails78.mmTransactionAdditionalDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionDetails57.mmTransactionAdditionalDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -1387,16 +1410,16 @@ public class TransactionDetails63 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails63.TransactionActivity, com.tools20022.repository.msg.TransactionDetails63.SettlementTransactionOrCorporateActionEventType,
-						com.tools20022.repository.msg.TransactionDetails63.SecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails63.Payment, com.tools20022.repository.msg.TransactionDetails63.SettlementParameters,
-						com.tools20022.repository.msg.TransactionDetails63.PlaceOfTrade, com.tools20022.repository.msg.TransactionDetails63.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails63.PlaceOfClearing,
-						com.tools20022.repository.msg.TransactionDetails63.PostingQuantity, com.tools20022.repository.msg.TransactionDetails63.NumberOfDaysAccrued, com.tools20022.repository.msg.TransactionDetails63.PostingAmount,
-						com.tools20022.repository.msg.TransactionDetails63.AccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails63.TradeDate, com.tools20022.repository.msg.TransactionDetails63.EffectiveSettlementDate,
-						com.tools20022.repository.msg.TransactionDetails63.SettlementDate, com.tools20022.repository.msg.TransactionDetails63.ValueDate, com.tools20022.repository.msg.TransactionDetails63.DeliveringSettlementParties,
-						com.tools20022.repository.msg.TransactionDetails63.ReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails63.ReversalIndicator,
-						com.tools20022.repository.msg.TransactionDetails63.TransactionAdditionalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails63.mmTransactionActivity, com.tools20022.repository.msg.TransactionDetails63.mmSettlementTransactionOrCorporateActionEventType,
+						com.tools20022.repository.msg.TransactionDetails63.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails63.mmPayment, com.tools20022.repository.msg.TransactionDetails63.mmSettlementParameters,
+						com.tools20022.repository.msg.TransactionDetails63.mmPlaceOfTrade, com.tools20022.repository.msg.TransactionDetails63.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails63.mmPlaceOfClearing,
+						com.tools20022.repository.msg.TransactionDetails63.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails63.mmNumberOfDaysAccrued, com.tools20022.repository.msg.TransactionDetails63.mmPostingAmount,
+						com.tools20022.repository.msg.TransactionDetails63.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails63.mmTradeDate,
+						com.tools20022.repository.msg.TransactionDetails63.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails63.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails63.mmValueDate,
+						com.tools20022.repository.msg.TransactionDetails63.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails63.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.TransactionDetails63.mmReversalIndicator, com.tools20022.repository.msg.TransactionDetails63.mmTransactionAdditionalDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1407,10 +1430,170 @@ public class TransactionDetails63 {
 				})).get();
 				name = "TransactionDetails63";
 				definition = "Identifies the details of the transaction.";
-				previousVersion_lazy = () -> TransactionDetails57.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransactionDetails78.mmObject());
+				previousVersion_lazy = () -> TransactionDetails57.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionActivity1Choice getTransactionActivity() {
+		return transactionActivity;
+	}
+
+	public void setTransactionActivity(TransactionActivity1Choice transactionActivity) {
+		this.transactionActivity = transactionActivity;
+	}
+
+	public SettlementOrCorporateActionEvent9Choice getSettlementTransactionOrCorporateActionEventType() {
+		return settlementTransactionOrCorporateActionEventType;
+	}
+
+	public void setSettlementTransactionOrCorporateActionEventType(SettlementOrCorporateActionEvent9Choice settlementTransactionOrCorporateActionEventType) {
+		this.settlementTransactionOrCorporateActionEventType = settlementTransactionOrCorporateActionEventType;
+	}
+
+	public ReceiveDelivery1Code getSecuritiesMovementType() {
+		return securitiesMovementType;
+	}
+
+	public void setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
+		this.securitiesMovementType = securitiesMovementType;
+	}
+
+	public DeliveryReceiptType2Code getPayment() {
+		return payment;
+	}
+
+	public void setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = payment;
+	}
+
+	public SettlementDetails75 getSettlementParameters() {
+		return settlementParameters;
+	}
+
+	public void setSettlementParameters(com.tools20022.repository.msg.SettlementDetails75 settlementParameters) {
+		this.settlementParameters = settlementParameters;
+	}
+
+	public MarketIdentification78 getPlaceOfTrade() {
+		return placeOfTrade;
+	}
+
+	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification78 placeOfTrade) {
+		this.placeOfTrade = placeOfTrade;
+	}
+
+	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat3Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public AnyBICIdentifier getPlaceOfClearing() {
+		return placeOfClearing;
+	}
+
+	public void setPlaceOfClearing(AnyBICIdentifier placeOfClearing) {
+		this.placeOfClearing = placeOfClearing;
+	}
+
+	public Quantity6Choice getPostingQuantity() {
+		return postingQuantity;
+	}
+
+	public void setPostingQuantity(Quantity6Choice postingQuantity) {
+		this.postingQuantity = postingQuantity;
+	}
+
+	public Max3Number getNumberOfDaysAccrued() {
+		return numberOfDaysAccrued;
+	}
+
+	public void setNumberOfDaysAccrued(Max3Number numberOfDaysAccrued) {
+		this.numberOfDaysAccrued = numberOfDaysAccrued;
+	}
+
+	public AmountAndDirection3 getPostingAmount() {
+		return postingAmount;
+	}
+
+	public void setPostingAmount(com.tools20022.repository.msg.AmountAndDirection3 postingAmount) {
+		this.postingAmount = postingAmount;
+	}
+
+	public AmountAndDirection4 getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection4 accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
+	}
+
+	public TradeDate1Choice getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(TradeDate1Choice tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public DateAndDateTimeChoice getEffectiveSettlementDate() {
+		return effectiveSettlementDate;
+	}
+
+	public void setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
+		this.effectiveSettlementDate = effectiveSettlementDate;
+	}
+
+	public SettlementDate1Choice getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(SettlementDate1Choice settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public DateAndDateTimeChoice getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(DateAndDateTimeChoice valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public SettlementParties13 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties13 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public SettlementParties13 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties13 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public YesNoIndicator getReversalIndicator() {
+		return reversalIndicator;
+	}
+
+	public void setReversalIndicator(YesNoIndicator reversalIndicator) {
+		this.reversalIndicator = reversalIndicator;
+	}
+
+	public Max350Text getTransactionAdditionalDetails() {
+		return transactionAdditionalDetails;
+	}
+
+	public void setTransactionAdditionalDetails(Max350Text transactionAdditionalDetails) {
+		this.transactionAdditionalDetails = transactionAdditionalDetails;
 	}
 }

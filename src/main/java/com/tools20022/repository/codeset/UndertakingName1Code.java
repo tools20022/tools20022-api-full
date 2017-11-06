@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#StandbyLetterOfCredit
- * UndertakingName1Code.StandbyLetterOfCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#mmStandbyLetterOfCredit
+ * UndertakingName1Code.mmStandbyLetterOfCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#DemandGuarantee
- * UndertakingName1Code.DemandGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#mmDemandGuarantee
+ * UndertakingName1Code.mmDemandGuarantee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	 * name} = "StandbyLetterOfCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode StandbyLetterOfCredit = new MMCode() {
+	public static final MMCode mmStandbyLetterOfCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandbyLetterOfCredit";
@@ -104,7 +104,7 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	 * name} = "DemandGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode DemandGuarantee = new MMCode() {
+	public static final MMCode mmDemandGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandGuarantee";
@@ -115,12 +115,12 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STBY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingName1Code";
 				definition = "Specifies the named type of the undertaking.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingName1Code.StandbyLetterOfCredit, com.tools20022.repository.codeset.UndertakingName1Code.DemandGuarantee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingName1Code.mmStandbyLetterOfCredit, com.tools20022.repository.codeset.UndertakingName1Code.mmDemandGuarantee);
 				trace_lazy = () -> UndertakingNameCode.mmObject();
 			}
 		});

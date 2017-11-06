@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus1#Type
- * IntraPositionQueryStatus1.Type}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus1#DatePeriod
- * IntraPositionQueryStatus1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus1#mmType
+ * IntraPositionQueryStatus1.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus1#mmDatePeriod
+ * IntraPositionQueryStatus1.mmDatePeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionQueryStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IntraPositionStatusType1 type;
 	/**
 	 * Defines the status type of query criteria.
 	 * <p>
@@ -96,21 +98,22 @@ public class IntraPositionQueryStatus1 {
 	 * definition} = "Defines the status type of query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraPositionQueryStatus1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> IntraPositionQueryStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines the status type of query criteria.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IntraPositionStatusType1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusType1.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice datePeriod;
 	/**
 	 * Specified date period of the status.
 	 * <p>
@@ -123,8 +126,8 @@ public class IntraPositionQueryStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#ValidityTime
-	 * Status.ValidityTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmValidityTime
+	 * Status.mmValidityTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,33 +146,49 @@ public class IntraPositionQueryStatus1 {
 	 * definition} = "Specified date period of the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DatePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmValidityTime;
 			componentContext_lazy = () -> IntraPositionQueryStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.ValidityTime;
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Specified date period of the status.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryStatus1.Type, com.tools20022.repository.msg.IntraPositionQueryStatus1.DatePeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryStatus1.mmType, com.tools20022.repository.msg.IntraPositionQueryStatus1.mmDatePeriod);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionQueryStatus1";
 				definition = "Defines the intra-position movement status query criteria including the status period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IntraPositionStatusType1 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.IntraPositionStatusType1 type) {
+		this.type = type;
+	}
+
+	public DateAndDateTimeSearch2Choice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateAndDateTimeSearch2Choice datePeriod) {
+		this.datePeriod = datePeriod;
 	}
 }

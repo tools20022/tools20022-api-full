@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Registration1Choice#Code
- * Registration1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Registration1Choice#mmCode
+ * Registration1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Registration1Choice#Proprietary
- * Registration1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Registration1Choice#mmProprietary
+ * Registration1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Registration1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Registration1Code code;
 	/**
 	 * Registration information expressed as an ISO 20022 code.
 	 * <p>
@@ -83,8 +84,8 @@ public class Registration1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#RegistrationInstruction
-	 * BasicSecuritiesRegistration.RegistrationInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmRegistrationInstruction
+	 * BasicSecuritiesRegistration.mmRegistrationInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,27 +106,28 @@ public class Registration1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Registration9Choice#Code
-	 * Registration9Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.Registration9Choice#mmCode
+	 * Registration9Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmRegistrationInstruction;
 			componentContext_lazy = () -> Registration1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.RegistrationInstruction;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Registration information expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Registration9Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Registration9Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Registration1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Registration information expressed as a proprietary code.
 	 * <p>
@@ -139,8 +141,8 @@ public class Registration1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#RegistrationInstruction
-	 * BasicSecuritiesRegistration.RegistrationInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmRegistrationInstruction
+	 * BasicSecuritiesRegistration.mmRegistrationInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,24 +164,24 @@ public class Registration1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Registration9Choice#Proprietary
-	 * Registration9Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.Registration9Choice#mmProprietary
+	 * Registration9Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmRegistrationInstruction;
 			componentContext_lazy = () -> Registration1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.RegistrationInstruction;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Registration information expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Registration9Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Registration9Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -187,9 +189,9 @@ public class Registration1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Registration1Choice.Code, com.tools20022.repository.choice.Registration1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Registration1Choice.mmCode, com.tools20022.repository.choice.Registration1Choice.mmProprietary);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Registration1Choice";
 				definition = "Choice of format for the registration information.";
@@ -197,5 +199,21 @@ public class Registration1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Registration1Code getCode() {
+		return code;
+	}
+
+	public void setCode(Registration1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

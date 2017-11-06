@@ -33,26 +33,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * EventFrequencyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Annual
- * EventFrequency3Code.Annual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Monthly
- * EventFrequency3Code.Monthly}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmAnnual
+ * EventFrequency3Code.mmAnnual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Quarterly
- * EventFrequency3Code.Quarterly}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmMonthly
+ * EventFrequency3Code.mmMonthly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#SemiAnnual
- * EventFrequency3Code.SemiAnnual}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Weekly
- * EventFrequency3Code.Weekly}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmQuarterly
+ * EventFrequency3Code.mmQuarterly}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmSemiAnnual
+ * EventFrequency3Code.mmSemiAnnual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmWeekly
+ * EventFrequency3Code.mmWeekly}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +90,7 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Annual = new MMCode() {
+	public static final MMCode mmAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
@@ -111,7 +113,7 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
-	public static final MMCode Monthly = new MMCode() {
+	public static final MMCode mmMonthly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
@@ -134,7 +136,7 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Quarterly"</li>
 	 * </ul>
 	 */
-	public static final MMCode Quarterly = new MMCode() {
+	public static final MMCode mmQuarterly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quarterly";
@@ -157,7 +159,7 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "SemiAnnual"</li>
 	 * </ul>
 	 */
-	public static final MMCode SemiAnnual = new MMCode() {
+	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
@@ -180,7 +182,7 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Weekly"</li>
 	 * </ul>
 	 */
-	public static final MMCode Weekly = new MMCode() {
+	public static final MMCode mmWeekly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekly";
@@ -191,13 +193,13 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("YEAR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency3Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency3Code.Annual, com.tools20022.repository.codeset.EventFrequency3Code.Monthly, com.tools20022.repository.codeset.EventFrequency3Code.Quarterly,
-						com.tools20022.repository.codeset.EventFrequency3Code.SemiAnnual, com.tools20022.repository.codeset.EventFrequency3Code.Weekly);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency3Code.mmAnnual, com.tools20022.repository.codeset.EventFrequency3Code.mmMonthly,
+						com.tools20022.repository.codeset.EventFrequency3Code.mmQuarterly, com.tools20022.repository.codeset.EventFrequency3Code.mmSemiAnnual, com.tools20022.repository.codeset.EventFrequency3Code.mmWeekly);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
 			}
 		});

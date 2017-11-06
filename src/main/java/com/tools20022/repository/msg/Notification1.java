@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Notification1#Type
- * Notification1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Notification1#mmType
+ * Notification1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Notification1#AdditionalInformation
- * Notification1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Notification1#mmAdditionalInformation
+ * Notification1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,18 +46,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#Notification
- * SpecialRequestV01.Notification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#mmNotification
+ * SpecialRequestV01.mmNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#Notification
- * SpecialNotificationV01.Notification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#mmNotification
+ * SpecialNotificationV01.mmNotification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Notification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NotificationType1Code type;
 	/**
 	 * Type of the notification.
 	 * <p>
@@ -100,7 +101,7 @@ public class Notification1 {
 	 * definition} = "Type of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Notification1.mmObject();
 			isDerived = false;
@@ -108,11 +109,12 @@ public class Notification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NotificationType1Code.mmObject();
 		}
 	};
+	protected Max140Text additionalInformation;
 	/**
 	 * Additional and important information to qualify and describe the
 	 * notification.
@@ -142,7 +144,7 @@ public class Notification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Notification1.mmObject();
 			isDerived = false;
@@ -150,8 +152,8 @@ public class Notification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional and important information to qualify and describe the notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -159,14 +161,30 @@ public class Notification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Notification1.Type, com.tools20022.repository.msg.Notification1.AdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.SpecialRequestV01.Notification, com.tools20022.repository.area.tsmt.SpecialNotificationV01.Notification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Notification1.mmType, com.tools20022.repository.msg.Notification1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.SpecialRequestV01.mmNotification, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmNotification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Notification1";
 				definition = "Structured information to be communicated to other parties in the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NotificationType1Code getType() {
+		return type;
+	}
+
+	public void setType(NotificationType1Code type) {
+		this.type = type;
+	}
+
+	public Max140Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max140Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#DisplayedPrice
- * TypeOfDiscretionPrice1Code.DisplayedPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#mmDisplayedPrice
+ * TypeOfDiscretionPrice1Code.mmDisplayedPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#MarketPrice
- * TypeOfDiscretionPrice1Code.MarketPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#mmMarketPrice
+ * TypeOfDiscretionPrice1Code.mmMarketPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#PrimaryPrice
- * TypeOfDiscretionPrice1Code.PrimaryPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#mmPrimaryPrice
+ * TypeOfDiscretionPrice1Code.mmPrimaryPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#LocalPrimaryPrice
- * TypeOfDiscretionPrice1Code.LocalPrimaryPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#mmLocalPrimaryPrice
+ * TypeOfDiscretionPrice1Code.mmLocalPrimaryPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#MidpointPrice
- * TypeOfDiscretionPrice1Code.MidpointPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#mmMidpointPrice
+ * TypeOfDiscretionPrice1Code.mmMidpointPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#VolumeWeightedAveragePrice
- * TypeOfDiscretionPrice1Code.VolumeWeightedAveragePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#mmVolumeWeightedAveragePrice
+ * TypeOfDiscretionPrice1Code.mmVolumeWeightedAveragePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#AveragePriceGuarantee
- * TypeOfDiscretionPrice1Code.AveragePriceGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code#mmAveragePriceGuarantee
+ * TypeOfDiscretionPrice1Code.mmAveragePriceGuarantee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +97,7 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	 * name} = "DisplayedPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode DisplayedPrice = new MMCode() {
+	public static final MMCode mmDisplayedPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayedPrice";
@@ -120,7 +120,7 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	 * name} = "MarketPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPrice = new MMCode() {
+	public static final MMCode mmMarketPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
@@ -143,7 +143,7 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	 * name} = "PrimaryPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrimaryPrice = new MMCode() {
+	public static final MMCode mmPrimaryPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryPrice";
@@ -166,7 +166,7 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	 * name} = "LocalPrimaryPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode LocalPrimaryPrice = new MMCode() {
+	public static final MMCode mmLocalPrimaryPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalPrimaryPrice";
@@ -189,7 +189,7 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	 * name} = "MidpointPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode MidpointPrice = new MMCode() {
+	public static final MMCode mmMidpointPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidpointPrice";
@@ -212,7 +212,7 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	 * name} = "VolumeWeightedAveragePrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode VolumeWeightedAveragePrice = new MMCode() {
+	public static final MMCode mmVolumeWeightedAveragePrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeWeightedAveragePrice";
@@ -235,7 +235,7 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	 * name} = "AveragePriceGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode AveragePriceGuarantee = new MMCode() {
+	public static final MMCode mmAveragePriceGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePriceGuarantee";
@@ -246,15 +246,15 @@ public class TypeOfDiscretionPrice1Code extends TypeOfDiscretionPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfDiscretionPrice1Code";
 				definition = "Contains the type of price to which the discretion offset is related to.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.DisplayedPrice, com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.MarketPrice,
-						com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.PrimaryPrice, com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.LocalPrimaryPrice,
-						com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.MidpointPrice, com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.VolumeWeightedAveragePrice,
-						com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.AveragePriceGuarantee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.mmDisplayedPrice, com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.mmMarketPrice,
+						com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.mmPrimaryPrice, com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.mmLocalPrimaryPrice,
+						com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.mmMidpointPrice, com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.mmVolumeWeightedAveragePrice,
+						com.tools20022.repository.codeset.TypeOfDiscretionPrice1Code.mmAveragePriceGuarantee);
 				trace_lazy = () -> TypeOfDiscretionPriceCode.mmObject();
 			}
 		});

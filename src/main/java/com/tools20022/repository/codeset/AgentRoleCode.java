@@ -30,21 +30,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRoleCode#SystemPayingAgent
- * AgentRoleCode.SystemPayingAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#CoDomicile
- * AgentRoleCode.CoDomicile}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRoleCode#mmSystemPayingAgent
+ * AgentRoleCode.mmSystemPayingAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#mmCoDomicile
+ * AgentRoleCode.mmCoDomicile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRoleCode#PrincipalAgent
- * AgentRoleCode.PrincipalAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#SubAgent
- * AgentRoleCode.SubAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#IssuerAgent
- * AgentRoleCode.IssuerAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#Registrar
- * AgentRoleCode.Registrar}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#PayingAgent
- * AgentRoleCode.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRoleCode#mmPrincipalAgent
+ * AgentRoleCode.mmPrincipalAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#mmSubAgent
+ * AgentRoleCode.mmSubAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRoleCode#mmIssuerAgent
+ * AgentRoleCode.mmIssuerAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRoleCode#mmRegistrar
+ * AgentRoleCode.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRoleCode#mmPayingAgent
+ * AgentRoleCode.mmPayingAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -107,7 +109,7 @@ public class AgentRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SystemPayingAgent = new MMCode() {
+	public static final MMCode mmSystemPayingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemPayingAgent";
@@ -140,7 +142,7 @@ public class AgentRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CoDomicile = new MMCode() {
+	public static final MMCode mmCoDomicile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoDomicile";
@@ -170,7 +172,7 @@ public class AgentRoleCode {
 	 * definition} = "Identification of the agent acting as main agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode PrincipalAgent = new MMCode() {
+	public static final MMCode mmPrincipalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalAgent";
@@ -201,7 +203,7 @@ public class AgentRoleCode {
 	 * "Identification of the agent acting as co-domicile or sub agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode SubAgent = new MMCode() {
+	public static final MMCode mmSubAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAgent";
@@ -235,7 +237,7 @@ public class AgentRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerAgent = new MMCode() {
+	public static final MMCode mmIssuerAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuerAgent";
@@ -266,7 +268,7 @@ public class AgentRoleCode {
 	 * "Party/agent responsible for maintaining the register of a security."</li>
 	 * </ul>
 	 */
-	public static final MMCode Registrar = new MMCode() {
+	public static final MMCode mmRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Registrar";
@@ -299,7 +301,7 @@ public class AgentRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PayingAgent = new MMCode() {
+	public static final MMCode mmPayingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PayingAgent";
@@ -312,14 +314,14 @@ public class AgentRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SPAY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgentRoleCode";
 				definition = "Identification of the agent acting as main paying agent or sub paying agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRoleCode.SystemPayingAgent, com.tools20022.repository.codeset.AgentRoleCode.CoDomicile, com.tools20022.repository.codeset.AgentRoleCode.PrincipalAgent,
-						com.tools20022.repository.codeset.AgentRoleCode.SubAgent, com.tools20022.repository.codeset.AgentRoleCode.IssuerAgent, com.tools20022.repository.codeset.AgentRoleCode.Registrar,
-						com.tools20022.repository.codeset.AgentRoleCode.PayingAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRoleCode.mmSystemPayingAgent, com.tools20022.repository.codeset.AgentRoleCode.mmCoDomicile,
+						com.tools20022.repository.codeset.AgentRoleCode.mmPrincipalAgent, com.tools20022.repository.codeset.AgentRoleCode.mmSubAgent, com.tools20022.repository.codeset.AgentRoleCode.mmIssuerAgent,
+						com.tools20022.repository.codeset.AgentRoleCode.mmRegistrar, com.tools20022.repository.codeset.AgentRoleCode.mmPayingAgent);
 				derivation_lazy = () -> Arrays.asList(AgentRole1Code.mmObject(), AgentRole2Code.mmObject());
 			}
 		});

@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeRegulatoryConditionsCode#Solicited
- * TradeRegulatoryConditionsCode.Solicited}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeRegulatoryConditionsCode#mmSolicited
+ * TradeRegulatoryConditionsCode.mmSolicited}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeRegulatoryConditionsCode#Unsolicited
- * TradeRegulatoryConditionsCode.Unsolicited}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeRegulatoryConditionsCode#mmUnsolicited
+ * TradeRegulatoryConditionsCode.mmUnsolicited}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class TradeRegulatoryConditionsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Solicited = new MMCode() {
+	public static final MMCode mmSolicited = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Solicited";
@@ -127,7 +127,7 @@ public class TradeRegulatoryConditionsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Unsolicited = new MMCode() {
+	public static final MMCode mmUnsolicited = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsolicited";
@@ -140,12 +140,12 @@ public class TradeRegulatoryConditionsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SOLI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeRegulatoryConditionsCode";
 				definition = "indicates if the Trade Regulatory Conditions is solicited or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeRegulatoryConditionsCode.Solicited, com.tools20022.repository.codeset.TradeRegulatoryConditionsCode.Unsolicited);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeRegulatoryConditionsCode.mmSolicited, com.tools20022.repository.codeset.TradeRegulatoryConditionsCode.mmUnsolicited);
 				derivation_lazy = () -> Arrays.asList(TradeRegulatoryConditions1Code.mmObject());
 			}
 		});

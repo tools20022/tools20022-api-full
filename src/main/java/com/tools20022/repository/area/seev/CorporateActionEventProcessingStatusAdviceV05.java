@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,31 +68,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#NotificationIdentification
- * CorporateActionEventProcessingStatusAdviceV05.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#mmNotificationIdentification
+ * CorporateActionEventProcessingStatusAdviceV05.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#OtherDocumentIdentification
- * CorporateActionEventProcessingStatusAdviceV05.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#mmOtherDocumentIdentification
+ * CorporateActionEventProcessingStatusAdviceV05.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#CorporateActionGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#mmCorporateActionGeneralInformation
  * CorporateActionEventProcessingStatusAdviceV05.
- * CorporateActionGeneralInformation}</li>
+ * mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#EventProcessingStatus
- * CorporateActionEventProcessingStatusAdviceV05.EventProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#mmEventProcessingStatus
+ * CorporateActionEventProcessingStatusAdviceV05.mmEventProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#AdditionalInformation
- * CorporateActionEventProcessingStatusAdviceV05.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#mmAdditionalInformation
+ * CorporateActionEventProcessingStatusAdviceV05.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#SupplementaryData
- * CorporateActionEventProcessingStatusAdviceV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#mmSupplementaryData
+ * CorporateActionEventProcessingStatusAdviceV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05#identifier
- * CorporateActionEventProcessingStatusAdviceV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.032.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,6 +118,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionEventProcessingStatusAdviceV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification9 notificationIdentification;
 	/**
 	 * Identification of a previously sent notification document.
 	 * <p>
@@ -145,32 +145,33 @@ public class CorporateActionEventProcessingStatusAdviceV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#NotificationIdentification
-	 * CorporateActionEventProcessingStatusAdviceV06.NotificationIdentification}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#mmNotificationIdentification
+	 * CorporateActionEventProcessingStatusAdviceV06.
+	 * mmNotificationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#NotificationIdentification
-	 * CorporateActionEventProcessingStatusAdviceV04.NotificationIdentification}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmNotificationIdentification
+	 * CorporateActionEventProcessingStatusAdviceV04.
+	 * mmNotificationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identification of a previously sent notification document.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.NotificationIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.NotificationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmNotificationIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmNotificationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
 	};
+	protected List<DocumentIdentification33> otherDocumentIdentification;
 	/**
 	 * Identification of other documents as well as the document number.
 	 * <p>
@@ -197,31 +198,32 @@ public class CorporateActionEventProcessingStatusAdviceV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#OtherDocumentIdentification
-	 * CorporateActionEventProcessingStatusAdviceV06.OtherDocumentIdentification
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#mmOtherDocumentIdentification
+	 * CorporateActionEventProcessingStatusAdviceV06.
+	 * mmOtherDocumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#OtherDocumentIdentification
-	 * CorporateActionEventProcessingStatusAdviceV04.OtherDocumentIdentification
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmOtherDocumentIdentification
+	 * CorporateActionEventProcessingStatusAdviceV04.
+	 * mmOtherDocumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherDocumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrDocId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentIdentification";
 			definition = "Identification of other documents as well as the document number.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.OtherDocumentIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.OtherDocumentIdentification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmOtherDocumentIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification33.mmObject();
 		}
 	};
+	protected CorporateActionGeneralInformation91 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -247,32 +249,33 @@ public class CorporateActionEventProcessingStatusAdviceV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#CorporateActionGeneralInformation
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#mmCorporateActionGeneralInformation
 	 * CorporateActionEventProcessingStatusAdviceV06.
-	 * CorporateActionGeneralInformation}</li>
+	 * mmCorporateActionGeneralInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#CorporateActionGeneralInformation
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmCorporateActionGeneralInformation
 	 * CorporateActionEventProcessingStatusAdviceV04.
-	 * CorporateActionGeneralInformation}</li>
+	 * mmCorporateActionGeneralInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.CorporateActionGeneralInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.CorporateActionGeneralInformation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmCorporateActionGeneralInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation91.mmObject();
 		}
 	};
+	protected List<EventProcessingStatus3Choice> eventProcessingStatus;
 	/**
 	 * Information about the status of a corporate action.
 	 * <p>
@@ -298,29 +301,30 @@ public class CorporateActionEventProcessingStatusAdviceV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#EventProcessingStatus
-	 * CorporateActionEventProcessingStatusAdviceV06.EventProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#mmEventProcessingStatus
+	 * CorporateActionEventProcessingStatusAdviceV06.mmEventProcessingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#EventProcessingStatus
-	 * CorporateActionEventProcessingStatusAdviceV04.EventProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmEventProcessingStatus
+	 * CorporateActionEventProcessingStatusAdviceV04.mmEventProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EventProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEventProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventProcessingStatus";
 			definition = "Information about the status of a corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.EventProcessingStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.EventProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmEventProcessingStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmEventProcessingStatus;
 			minOccurs = 1;
 			complexType_lazy = () -> EventProcessingStatus3Choice.mmObject();
 		}
 	};
+	protected CorporateActionNarrative10 additionalInformation;
 	/**
 	 * Provides additional information.
 	 * <p>
@@ -346,30 +350,31 @@ public class CorporateActionEventProcessingStatusAdviceV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#AdditionalInformation
-	 * CorporateActionEventProcessingStatusAdviceV06.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#mmAdditionalInformation
+	 * CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#AdditionalInformation
-	 * CorporateActionEventProcessingStatusAdviceV04.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmAdditionalInformation
+	 * CorporateActionEventProcessingStatusAdviceV04.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.AdditionalInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.AdditionalInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative10.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -398,54 +403,27 @@ public class CorporateActionEventProcessingStatusAdviceV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#SupplementaryData
-	 * CorporateActionEventProcessingStatusAdviceV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06#mmSupplementaryData
+	 * CorporateActionEventProcessingStatusAdviceV06.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#SupplementaryData
-	 * CorporateActionEventProcessingStatusAdviceV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmSupplementaryData
+	 * CorporateActionEventProcessingStatusAdviceV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "032"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "032";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -455,20 +433,75 @@ public class CorporateActionEventProcessingStatusAdviceV05 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingStatusAdviceV05";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionEventProcessingStatusAdvice message to an account owner or its designated agent to report processing status of a corporate action event.\r\r\nThe account servicer uses this message to provide a reason as to why a corporate action event has not been completed by the announced payment dates.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), \r\nusing the relevant elements in the business application header (BAH).";
-				previousVersion_lazy = () -> CorporateActionEventProcessingStatusAdviceV04.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdviceV06.mmObject());
+				previousVersion_lazy = () -> CorporateActionEventProcessingStatusAdviceV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnEvtPrcgStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.NotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.EventProcessingStatus, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmEventProcessingStatus, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "032";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification9 getNotificationIdentification() {
+		return notificationIdentification;
+	}
+
+	public void setNotificationIdentification(DocumentIdentification9 notificationIdentification) {
+		this.notificationIdentification = notificationIdentification;
+	}
+
+	public List<DocumentIdentification33> getOtherDocumentIdentification() {
+		return otherDocumentIdentification;
+	}
+
+	public void setOtherDocumentIdentification(List<DocumentIdentification33> otherDocumentIdentification) {
+		this.otherDocumentIdentification = otherDocumentIdentification;
+	}
+
+	public CorporateActionGeneralInformation91 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation91 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public List<EventProcessingStatus3Choice> getEventProcessingStatus() {
+		return eventProcessingStatus;
+	}
+
+	public void setEventProcessingStatus(List<EventProcessingStatus3Choice> eventProcessingStatus) {
+		this.eventProcessingStatus = eventProcessingStatus;
+	}
+
+	public CorporateActionNarrative10 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(CorporateActionNarrative10 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

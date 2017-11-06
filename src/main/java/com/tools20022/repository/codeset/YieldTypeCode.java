@@ -29,100 +29,105 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#AfterTax
- * YieldTypeCode.AfterTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Annual
- * YieldTypeCode.Annual}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#AtIssue
- * YieldTypeCode.AtIssue}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmAfterTax
+ * YieldTypeCode.mmAfterTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmAnnual
+ * YieldTypeCode.mmAnnual}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmAtIssue
+ * YieldTypeCode.mmAtIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#ToAverageLife
- * YieldTypeCode.ToAverageLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmToAverageLife
+ * YieldTypeCode.mmToAverageLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#ToAverageMaturity
- * YieldTypeCode.ToAverageMaturity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Book
- * YieldTypeCode.Book}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#ToNextCall
- * YieldTypeCode.ToNextCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmToAverageMaturity
+ * YieldTypeCode.mmToAverageMaturity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmBook
+ * YieldTypeCode.mmBook}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmToNextCall
+ * YieldTypeCode.mmToNextCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#ChangeSinceClose
- * YieldTypeCode.ChangeSinceClose}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Closing
- * YieldTypeCode.Closing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Compound
- * YieldTypeCode.Compound}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Current
- * YieldTypeCode.Current}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#TrueGross
- * YieldTypeCode.TrueGross}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmChangeSinceClose
+ * YieldTypeCode.mmChangeSinceClose}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmClosing
+ * YieldTypeCode.mmClosing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmCompound
+ * YieldTypeCode.mmCompound}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmCurrent
+ * YieldTypeCode.mmCurrent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmTrueGross
+ * YieldTypeCode.mmTrueGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#GovernmentEquivalent
- * YieldTypeCode.GovernmentEquivalent}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmGovernmentEquivalent
+ * YieldTypeCode.mmGovernmentEquivalent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#InflationAssumption
- * YieldTypeCode.InflationAssumption}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmInflationAssumption
+ * YieldTypeCode.mmInflationAssumption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#InverseFloater
- * YieldTypeCode.InverseFloater}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#LastClose
- * YieldTypeCode.LastClose}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#LastMonth
- * YieldTypeCode.LastMonth}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#LastQuarter
- * YieldTypeCode.LastQuarter}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#LastYear
- * YieldTypeCode.LastYear}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmInverseFloater
+ * YieldTypeCode.mmInverseFloater}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmLastClose
+ * YieldTypeCode.mmLastClose}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmLastMonth
+ * YieldTypeCode.mmLastMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#LongestAverageLife
- * YieldTypeCode.LongestAverageLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmLastQuarter
+ * YieldTypeCode.mmLastQuarter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmLastYear
+ * YieldTypeCode.mmLastYear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#LongestAverage
- * YieldTypeCode.LongestAverage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#MarkToMarket
- * YieldTypeCode.MarkToMarket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Maturity
- * YieldTypeCode.Maturity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#ToNextRefund
- * YieldTypeCode.ToNextRefund}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#OpenAverage
- * YieldTypeCode.OpenAverage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#ToNextPut
- * YieldTypeCode.ToNextPut}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmLongestAverageLife
+ * YieldTypeCode.mmLongestAverageLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#PreviousClose
- * YieldTypeCode.PreviousClose}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Proceeds
- * YieldTypeCode.Proceeds}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#SemiAnnual
- * YieldTypeCode.SemiAnnual}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmLongestAverage
+ * YieldTypeCode.mmLongestAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#ShortestAverageLife
- * YieldTypeCode.ShortestAverageLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmMarkToMarket
+ * YieldTypeCode.mmMarkToMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmMaturity
+ * YieldTypeCode.mmMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#ShortestAverage
- * YieldTypeCode.ShortestAverage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Simple
- * YieldTypeCode.Simple}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmToNextRefund
+ * YieldTypeCode.mmToNextRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#TaxEquivalent
- * YieldTypeCode.TaxEquivalent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#ToTenderDate
- * YieldTypeCode.ToTenderDate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#True
- * YieldTypeCode.True}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#Proportion
- * YieldTypeCode.Proportion}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmOpenAverage
+ * YieldTypeCode.mmOpenAverage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmToNextPut
+ * YieldTypeCode.mmToNextPut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#ToWorstConvention
- * YieldTypeCode.ToWorstConvention}</li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmPreviousClose
+ * YieldTypeCode.mmPreviousClose}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmProceeds
+ * YieldTypeCode.mmProceeds}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmSemiAnnual
+ * YieldTypeCode.mmSemiAnnual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmShortestAverageLife
+ * YieldTypeCode.mmShortestAverageLife}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmShortestAverage
+ * YieldTypeCode.mmShortestAverage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmSimple
+ * YieldTypeCode.mmSimple}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmTaxEquivalent
+ * YieldTypeCode.mmTaxEquivalent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmToTenderDate
+ * YieldTypeCode.mmToTenderDate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmTrue
+ * YieldTypeCode.mmTrue}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmProportion
+ * YieldTypeCode.mmProportion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.YieldTypeCode#mmToWorstConvention
+ * YieldTypeCode.mmToWorstConvention}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -167,7 +172,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AfterTax = new MMCode() {
+	public static final MMCode mmAfterTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterTax";
@@ -200,7 +205,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Annual = new MMCode() {
+	public static final MMCode mmAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
@@ -230,7 +235,7 @@ public class YieldTypeCode {
 	 * definition} = "The yield of the bond offered on the issue date."</li>
 	 * </ul>
 	 */
-	public static final MMCode AtIssue = new MMCode() {
+	public static final MMCode mmAtIssue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtIssue";
@@ -264,7 +269,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ToAverageLife = new MMCode() {
+	public static final MMCode mmToAverageLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAverageLife";
@@ -297,7 +302,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ToAverageMaturity = new MMCode() {
+	public static final MMCode mmToAverageMaturity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAverageMaturity";
@@ -331,7 +336,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Book = new MMCode() {
+	public static final MMCode mmBook = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
@@ -361,7 +366,7 @@ public class YieldTypeCode {
 	 * definition} = "The yield of a bond to the next possible call date."</li>
 	 * </ul>
 	 */
-	public static final MMCode ToNextCall = new MMCode() {
+	public static final MMCode mmToNextCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextCall";
@@ -392,7 +397,7 @@ public class YieldTypeCode {
 	 * "The change in the yield since the previous day's closing yield."</li>
 	 * </ul>
 	 */
-	public static final MMCode ChangeSinceClose = new MMCode() {
+	public static final MMCode mmChangeSinceClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeSinceClose";
@@ -422,7 +427,7 @@ public class YieldTypeCode {
 	 * definition} = "The yield of a bond based on the closing price."</li>
 	 * </ul>
 	 */
-	public static final MMCode Closing = new MMCode() {
+	public static final MMCode mmClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
@@ -456,7 +461,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Compound = new MMCode() {
+	public static final MMCode mmCompound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compound";
@@ -489,7 +494,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Current = new MMCode() {
+	public static final MMCode mmCurrent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
@@ -522,7 +527,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TrueGross = new MMCode() {
+	public static final MMCode mmTrueGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrueGross";
@@ -555,7 +560,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentEquivalent = new MMCode() {
+	public static final MMCode mmGovernmentEquivalent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentEquivalent";
@@ -589,7 +594,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InflationAssumption = new MMCode() {
+	public static final MMCode mmInflationAssumption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationAssumption";
@@ -622,7 +627,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InverseFloater = new MMCode() {
+	public static final MMCode mmInverseFloater = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InverseFloater";
@@ -655,7 +660,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LastClose = new MMCode() {
+	public static final MMCode mmLastClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastClose";
@@ -688,7 +693,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LastMonth = new MMCode() {
+	public static final MMCode mmLastMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastMonth";
@@ -721,7 +726,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LastQuarter = new MMCode() {
+	public static final MMCode mmLastQuarter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastQuarter";
@@ -754,7 +759,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LastYear = new MMCode() {
+	public static final MMCode mmLastYear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastYear";
@@ -788,7 +793,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LongestAverageLife = new MMCode() {
+	public static final MMCode mmLongestAverageLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverageLife";
@@ -822,7 +827,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LongestAverage = new MMCode() {
+	public static final MMCode mmLongestAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverage";
@@ -855,7 +860,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarkToMarket = new MMCode() {
+	public static final MMCode mmMarkToMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarket";
@@ -885,7 +890,7 @@ public class YieldTypeCode {
 	 * definition} = "The yield of a bond to its maturity date."</li>
 	 * </ul>
 	 */
-	public static final MMCode Maturity = new MMCode() {
+	public static final MMCode mmMaturity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maturity";
@@ -918,7 +923,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ToNextRefund = new MMCode() {
+	public static final MMCode mmToNextRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextRefund";
@@ -949,7 +954,7 @@ public class YieldTypeCode {
 	 * "The average yield of the respective securities in the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenAverage = new MMCode() {
+	public static final MMCode mmOpenAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenAverage";
@@ -982,7 +987,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ToNextPut = new MMCode() {
+	public static final MMCode mmToNextPut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextPut";
@@ -1013,7 +1018,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PreviousClose = new MMCode() {
+	public static final MMCode mmPreviousClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClose";
@@ -1046,7 +1051,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Proceeds = new MMCode() {
+	public static final MMCode mmProceeds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proceeds";
@@ -1078,7 +1083,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SemiAnnual = new MMCode() {
+	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
@@ -1112,7 +1117,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ShortestAverageLife = new MMCode() {
+	public static final MMCode mmShortestAverageLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverageLife";
@@ -1146,7 +1151,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ShortestAverage = new MMCode() {
+	public static final MMCode mmShortestAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverage";
@@ -1179,7 +1184,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Simple = new MMCode() {
+	public static final MMCode mmSimple = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
@@ -1212,7 +1217,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxEquivalent = new MMCode() {
+	public static final MMCode mmTaxEquivalent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxEquivalent";
@@ -1243,7 +1248,7 @@ public class YieldTypeCode {
 	 * "The yield on a Municipal bond to its mandatory tender date."</li>
 	 * </ul>
 	 */
-	public static final MMCode ToTenderDate = new MMCode() {
+	public static final MMCode mmToTenderDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToTenderDate";
@@ -1276,7 +1281,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode True = new MMCode() {
+	public static final MMCode mmTrue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "True";
@@ -1309,7 +1314,7 @@ public class YieldTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Proportion = new MMCode() {
+	public static final MMCode mmProportion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proportion";
@@ -1340,7 +1345,7 @@ public class YieldTypeCode {
 	 * "The lowest yield to all possible redemption date scenarios."</li>
 	 * </ul>
 	 */
-	public static final MMCode ToWorstConvention = new MMCode() {
+	public static final MMCode mmToWorstConvention = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToWorstConvention";
@@ -1353,24 +1358,24 @@ public class YieldTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFTX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "YieldTypeCode";
 				definition = "Yield computation method.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.YieldTypeCode.AfterTax, com.tools20022.repository.codeset.YieldTypeCode.Annual, com.tools20022.repository.codeset.YieldTypeCode.AtIssue,
-						com.tools20022.repository.codeset.YieldTypeCode.ToAverageLife, com.tools20022.repository.codeset.YieldTypeCode.ToAverageMaturity, com.tools20022.repository.codeset.YieldTypeCode.Book,
-						com.tools20022.repository.codeset.YieldTypeCode.ToNextCall, com.tools20022.repository.codeset.YieldTypeCode.ChangeSinceClose, com.tools20022.repository.codeset.YieldTypeCode.Closing,
-						com.tools20022.repository.codeset.YieldTypeCode.Compound, com.tools20022.repository.codeset.YieldTypeCode.Current, com.tools20022.repository.codeset.YieldTypeCode.TrueGross,
-						com.tools20022.repository.codeset.YieldTypeCode.GovernmentEquivalent, com.tools20022.repository.codeset.YieldTypeCode.InflationAssumption, com.tools20022.repository.codeset.YieldTypeCode.InverseFloater,
-						com.tools20022.repository.codeset.YieldTypeCode.LastClose, com.tools20022.repository.codeset.YieldTypeCode.LastMonth, com.tools20022.repository.codeset.YieldTypeCode.LastQuarter,
-						com.tools20022.repository.codeset.YieldTypeCode.LastYear, com.tools20022.repository.codeset.YieldTypeCode.LongestAverageLife, com.tools20022.repository.codeset.YieldTypeCode.LongestAverage,
-						com.tools20022.repository.codeset.YieldTypeCode.MarkToMarket, com.tools20022.repository.codeset.YieldTypeCode.Maturity, com.tools20022.repository.codeset.YieldTypeCode.ToNextRefund,
-						com.tools20022.repository.codeset.YieldTypeCode.OpenAverage, com.tools20022.repository.codeset.YieldTypeCode.ToNextPut, com.tools20022.repository.codeset.YieldTypeCode.PreviousClose,
-						com.tools20022.repository.codeset.YieldTypeCode.Proceeds, com.tools20022.repository.codeset.YieldTypeCode.SemiAnnual, com.tools20022.repository.codeset.YieldTypeCode.ShortestAverageLife,
-						com.tools20022.repository.codeset.YieldTypeCode.ShortestAverage, com.tools20022.repository.codeset.YieldTypeCode.Simple, com.tools20022.repository.codeset.YieldTypeCode.TaxEquivalent,
-						com.tools20022.repository.codeset.YieldTypeCode.ToTenderDate, com.tools20022.repository.codeset.YieldTypeCode.True, com.tools20022.repository.codeset.YieldTypeCode.Proportion,
-						com.tools20022.repository.codeset.YieldTypeCode.ToWorstConvention);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.YieldTypeCode.mmAfterTax, com.tools20022.repository.codeset.YieldTypeCode.mmAnnual, com.tools20022.repository.codeset.YieldTypeCode.mmAtIssue,
+						com.tools20022.repository.codeset.YieldTypeCode.mmToAverageLife, com.tools20022.repository.codeset.YieldTypeCode.mmToAverageMaturity, com.tools20022.repository.codeset.YieldTypeCode.mmBook,
+						com.tools20022.repository.codeset.YieldTypeCode.mmToNextCall, com.tools20022.repository.codeset.YieldTypeCode.mmChangeSinceClose, com.tools20022.repository.codeset.YieldTypeCode.mmClosing,
+						com.tools20022.repository.codeset.YieldTypeCode.mmCompound, com.tools20022.repository.codeset.YieldTypeCode.mmCurrent, com.tools20022.repository.codeset.YieldTypeCode.mmTrueGross,
+						com.tools20022.repository.codeset.YieldTypeCode.mmGovernmentEquivalent, com.tools20022.repository.codeset.YieldTypeCode.mmInflationAssumption, com.tools20022.repository.codeset.YieldTypeCode.mmInverseFloater,
+						com.tools20022.repository.codeset.YieldTypeCode.mmLastClose, com.tools20022.repository.codeset.YieldTypeCode.mmLastMonth, com.tools20022.repository.codeset.YieldTypeCode.mmLastQuarter,
+						com.tools20022.repository.codeset.YieldTypeCode.mmLastYear, com.tools20022.repository.codeset.YieldTypeCode.mmLongestAverageLife, com.tools20022.repository.codeset.YieldTypeCode.mmLongestAverage,
+						com.tools20022.repository.codeset.YieldTypeCode.mmMarkToMarket, com.tools20022.repository.codeset.YieldTypeCode.mmMaturity, com.tools20022.repository.codeset.YieldTypeCode.mmToNextRefund,
+						com.tools20022.repository.codeset.YieldTypeCode.mmOpenAverage, com.tools20022.repository.codeset.YieldTypeCode.mmToNextPut, com.tools20022.repository.codeset.YieldTypeCode.mmPreviousClose,
+						com.tools20022.repository.codeset.YieldTypeCode.mmProceeds, com.tools20022.repository.codeset.YieldTypeCode.mmSemiAnnual, com.tools20022.repository.codeset.YieldTypeCode.mmShortestAverageLife,
+						com.tools20022.repository.codeset.YieldTypeCode.mmShortestAverage, com.tools20022.repository.codeset.YieldTypeCode.mmSimple, com.tools20022.repository.codeset.YieldTypeCode.mmTaxEquivalent,
+						com.tools20022.repository.codeset.YieldTypeCode.mmToTenderDate, com.tools20022.repository.codeset.YieldTypeCode.mmTrue, com.tools20022.repository.codeset.YieldTypeCode.mmProportion,
+						com.tools20022.repository.codeset.YieldTypeCode.mmToWorstConvention);
 			}
 		});
 		return mmObject_lazy.get();

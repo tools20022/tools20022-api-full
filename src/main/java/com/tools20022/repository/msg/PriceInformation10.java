@@ -35,16 +35,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation10#CurrentPrice
- * PriceInformation10.CurrentPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation10#Type
- * PriceInformation10.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation10#mmCurrentPrice
+ * PriceInformation10.mmCurrentPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation10#mmType
+ * PriceInformation10.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation10#PreviousPrice
- * PriceInformation10.PreviousPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation10#mmPreviousPrice
+ * PriceInformation10.mmPreviousPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation10#AmountOfChange
- * PriceInformation10.AmountOfChange}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation10#mmAmountOfChange
+ * PriceInformation10.mmAmountOfChange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAnd13DecimalAmount currentPrice;
 	/**
 	 * Current value of the price, eg, as a currency and value.
 	 * <p>
@@ -82,8 +83,8 @@ public class PriceInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class PriceInformation10 {
 	 * definition} = "Current value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> PriceInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "CurPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentPrice";
 			definition = "Current value of the price, eg, as a currency and value.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected TypeOfPrice27Choice type;
 	/**
 	 * Specifies the type of price and information about the price.
 	 * <p>
@@ -129,8 +131,8 @@ public class PriceInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class PriceInformation10 {
 	 * "Specifies the type of price and information about the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> PriceInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of price and information about the price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TypeOfPrice27Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAnd13DecimalAmount previousPrice;
 	/**
 	 * Previous value of the price, eg, as a currency and value.
 	 * <p>
@@ -177,8 +180,8 @@ public class PriceInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,20 +201,21 @@ public class PriceInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> PriceInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "PrvsPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousPrice";
 			definition = "Previous value of the price, eg, as a currency and value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected PriceValueAndRate4 amountOfChange;
 	/**
 	 * Difference or change between the previous price value and the current
 	 * price value.
@@ -248,33 +252,65 @@ public class PriceInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountOfChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountOfChange = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceInformation10.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
+			componentContext_lazy = () -> PriceInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "AmtOfChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOfChange";
 			definition = "Difference or change between the previous price value and the current price value.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValueAndRate4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValueAndRate4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation10.CurrentPrice, com.tools20022.repository.msg.PriceInformation10.Type, com.tools20022.repository.msg.PriceInformation10.PreviousPrice,
-						com.tools20022.repository.msg.PriceInformation10.AmountOfChange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation10.mmCurrentPrice, com.tools20022.repository.msg.PriceInformation10.mmType,
+						com.tools20022.repository.msg.PriceInformation10.mmPreviousPrice, com.tools20022.repository.msg.PriceInformation10.mmAmountOfChange);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation10";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAnd13DecimalAmount getCurrentPrice() {
+		return currentPrice;
+	}
+
+	public void setCurrentPrice(ActiveOrHistoricCurrencyAnd13DecimalAmount currentPrice) {
+		this.currentPrice = currentPrice;
+	}
+
+	public TypeOfPrice27Choice getType() {
+		return type;
+	}
+
+	public void setType(TypeOfPrice27Choice type) {
+		this.type = type;
+	}
+
+	public ActiveOrHistoricCurrencyAnd13DecimalAmount getPreviousPrice() {
+		return previousPrice;
+	}
+
+	public void setPreviousPrice(ActiveOrHistoricCurrencyAnd13DecimalAmount previousPrice) {
+		this.previousPrice = previousPrice;
+	}
+
+	public PriceValueAndRate4 getAmountOfChange() {
+		return amountOfChange;
+	}
+
+	public void setAmountOfChange(com.tools20022.repository.msg.PriceValueAndRate4 amountOfChange) {
+		this.amountOfChange = amountOfChange;
 	}
 }

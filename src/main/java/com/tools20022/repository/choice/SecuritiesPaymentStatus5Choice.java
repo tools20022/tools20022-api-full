@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice#Code
- * SecuritiesPaymentStatus5Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice#mmCode
+ * SecuritiesPaymentStatus5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice#Proprietary
- * SecuritiesPaymentStatus5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice#mmProprietary
+ * SecuritiesPaymentStatus5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesPaymentStatus5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesPaymentStatus1Code code;
 	/**
 	 * Securities payment status expressed as an ISO 20022 code.
 	 * <p>
@@ -83,8 +84,8 @@ public class SecuritiesPaymentStatus5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#PaymentStatus
-	 * SecuritiesStatus.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
+	 * SecuritiesStatus.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,25 +106,26 @@ public class SecuritiesPaymentStatus5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice#Code
-	 * SecuritiesPaymentStatus2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice#mmCode
+	 * SecuritiesPaymentStatus2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> SecuritiesPaymentStatus5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.PaymentStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Securities payment status expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Securities payment status expressed as a proprietary code.
 	 * <p>
@@ -137,8 +139,8 @@ public class SecuritiesPaymentStatus5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#PaymentStatus
-	 * SecuritiesStatus.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
+	 * SecuritiesStatus.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,22 +161,22 @@ public class SecuritiesPaymentStatus5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice#Proprietary
-	 * SecuritiesPaymentStatus2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice#mmProprietary
+	 * SecuritiesPaymentStatus2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> SecuritiesPaymentStatus5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.PaymentStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Securities payment status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -182,9 +184,9 @@ public class SecuritiesPaymentStatus5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.Code, com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.mmCode, com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPaymentStatus5Choice";
 				definition = "Choice of format for the status of payment of a security at a particular time.";
@@ -192,5 +194,21 @@ public class SecuritiesPaymentStatus5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesPaymentStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SecuritiesPaymentStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -34,16 +34,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Statement54#StatementDateOrPeriod
- * Statement54.StatementDateOrPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement54#Frequency
- * Statement54.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement54#UpdateType
- * Statement54.UpdateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement54#StatementBasis
- * Statement54.StatementBasis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement54#StatementType
- * Statement54.StatementType}</li>
+ * {@linkplain com.tools20022.repository.msg.Statement54#mmStatementDateOrPeriod
+ * Statement54.mmStatementDateOrPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement54#mmFrequency
+ * Statement54.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement54#mmUpdateType
+ * Statement54.mmUpdateType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement54#mmStatementBasis
+ * Statement54.mmStatementBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement54#mmStatementType
+ * Statement54.mmStatementType}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06#StatementGeneralDetails
- * SecuritiesStatementQuery002V06.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06#mmStatementGeneralDetails
+ * SecuritiesStatementQuery002V06.mmStatementGeneralDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Statement54 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndPeriod1Choice statementDateOrPeriod;
 	/**
 	 * Date or period of the statement.
 	 * <p>
@@ -99,7 +100,7 @@ public class Statement54 {
 	 * definition} = "Date or period of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatementDateOrPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatementDateOrPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement54.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class Statement54 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateOrPeriod";
 			definition = "Date or period of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndPeriod1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndPeriod1Choice.mmObject();
 		}
 	};
+	protected Frequency26Choice frequency;
 	/**
 	 * Frequency of the statement.
 	 * <p>
@@ -140,7 +142,7 @@ public class Statement54 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement54.mmObject();
 			isDerived = false;
@@ -148,11 +150,12 @@ public class Statement54 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Frequency26Choice.mmObject();
 		}
 	};
+	protected UpdateType16Choice updateType;
 	/**
 	 * Indicates whether the statement is complete or contains changes only.
 	 * <p>
@@ -179,7 +182,7 @@ public class Statement54 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement54.mmObject();
 			isDerived = false;
@@ -187,12 +190,13 @@ public class Statement54 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UpdateType16Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> UpdateType16Choice.mmObject();
 		}
 	};
+	protected StatementBasis9Choice statementBasis;
 	/**
 	 * Type of balance on which the statement is prepared.
 	 * <p>
@@ -220,7 +224,7 @@ public class Statement54 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement54.mmObject();
 			isDerived = false;
@@ -228,11 +232,12 @@ public class Statement54 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasis";
 			definition = "Type of balance on which the statement is prepared.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementBasis9Choice.mmObject();
 		}
 	};
+	protected StatementType6Choice statementType;
 	/**
 	 * Type of balance on which the statement is prepared.
 	 * <p>
@@ -260,7 +265,7 @@ public class Statement54 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement54.mmObject();
 			isDerived = false;
@@ -268,8 +273,8 @@ public class Statement54 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementType";
 			definition = "Type of balance on which the statement is prepared.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementType6Choice.mmObject();
 		}
 	};
@@ -277,15 +282,55 @@ public class Statement54 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement54.StatementDateOrPeriod, com.tools20022.repository.msg.Statement54.Frequency, com.tools20022.repository.msg.Statement54.UpdateType,
-						com.tools20022.repository.msg.Statement54.StatementBasis, com.tools20022.repository.msg.Statement54.StatementType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06.StatementGeneralDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement54.mmStatementDateOrPeriod, com.tools20022.repository.msg.Statement54.mmFrequency, com.tools20022.repository.msg.Statement54.mmUpdateType,
+						com.tools20022.repository.msg.Statement54.mmStatementBasis, com.tools20022.repository.msg.Statement54.mmStatementType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06.mmStatementGeneralDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Statement54";
 				definition = "Characteristics of the statement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndPeriod1Choice getStatementDateOrPeriod() {
+		return statementDateOrPeriod;
+	}
+
+	public void setStatementDateOrPeriod(DateAndPeriod1Choice statementDateOrPeriod) {
+		this.statementDateOrPeriod = statementDateOrPeriod;
+	}
+
+	public Frequency26Choice getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency26Choice frequency) {
+		this.frequency = frequency;
+	}
+
+	public UpdateType16Choice getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(UpdateType16Choice updateType) {
+		this.updateType = updateType;
+	}
+
+	public StatementBasis9Choice getStatementBasis() {
+		return statementBasis;
+	}
+
+	public void setStatementBasis(StatementBasis9Choice statementBasis) {
+		this.statementBasis = statementBasis;
+	}
+
+	public StatementType6Choice getStatementType() {
+		return statementType;
+	}
+
+	public void setStatementType(StatementType6Choice statementType) {
+		this.statementType = statementType;
 	}
 }

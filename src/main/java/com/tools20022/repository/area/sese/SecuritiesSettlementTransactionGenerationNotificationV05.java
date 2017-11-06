@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope An account servicer sends a
@@ -77,75 +78,74 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#TransactionIdentificationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmTransactionIdentificationDetails
  * SecuritiesSettlementTransactionGenerationNotificationV05.
- * TransactionIdentificationDetails}</li>
+ * mmTransactionIdentificationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#NumberCounts
- * SecuritiesSettlementTransactionGenerationNotificationV05.NumberCounts}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmNumberCounts
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmNumberCounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#Linkages
- * SecuritiesSettlementTransactionGenerationNotificationV05.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmLinkages
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#TradeDetails
- * SecuritiesSettlementTransactionGenerationNotificationV05.TradeDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmTradeDetails
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmTradeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionGenerationNotificationV05.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#FinancialInstrumentAttributes
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmFinancialInstrumentAttributes
  * SecuritiesSettlementTransactionGenerationNotificationV05.
- * FinancialInstrumentAttributes}</li>
+ * mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#QuantityAndAccountDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmQuantityAndAccountDetails
  * SecuritiesSettlementTransactionGenerationNotificationV05.
- * QuantityAndAccountDetails}</li>
+ * mmQuantityAndAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#SettlementParameters
- * SecuritiesSettlementTransactionGenerationNotificationV05.SettlementParameters
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#DeliveringSettlementParties
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmSettlementParameters
  * SecuritiesSettlementTransactionGenerationNotificationV05.
- * DeliveringSettlementParties}</li>
+ * mmSettlementParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#ReceivingSettlementParties
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmDeliveringSettlementParties
  * SecuritiesSettlementTransactionGenerationNotificationV05.
- * ReceivingSettlementParties}</li>
+ * mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#CashParties
- * SecuritiesSettlementTransactionGenerationNotificationV05.CashParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#SettlementAmount
- * SecuritiesSettlementTransactionGenerationNotificationV05.SettlementAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#OtherAmounts
- * SecuritiesSettlementTransactionGenerationNotificationV05.OtherAmounts}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#OtherBusinessParties
- * SecuritiesSettlementTransactionGenerationNotificationV05.OtherBusinessParties
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmReceivingSettlementParties
  * SecuritiesSettlementTransactionGenerationNotificationV05.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmReceivingSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#GeneratedReason
- * SecuritiesSettlementTransactionGenerationNotificationV05.GeneratedReason}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmCashParties
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmCashParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#StatusAndReason
- * SecuritiesSettlementTransactionGenerationNotificationV05.StatusAndReason}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmSettlementAmount
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#SupplementaryData
- * SecuritiesSettlementTransactionGenerationNotificationV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmOtherAmounts
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionGenerationNotificationV05.
+ * mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmAdditionalPhysicalOrRegistrationDetails
+ * SecuritiesSettlementTransactionGenerationNotificationV05.
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmGeneratedReason
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmGeneratedReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmStatusAndReason
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmSupplementaryData
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmSupplementaryData}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#identifier
- * SecuritiesSettlementTransactionGenerationNotificationV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.032.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -173,6 +173,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected SettlementTypeAndIdentification15 transactionIdentificationDetails;
 	/**
 	 * Provides transaction type and identification information.
 	 * <p>
@@ -199,32 +200,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#TransactionIdentificationDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmTransactionIdentificationDetails
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * TransactionIdentificationDetails}</li>
+	 * mmTransactionIdentificationDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#TransactionIdentificationDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmTransactionIdentificationDetails
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * TransactionIdentificationDetails}</li>
+	 * mmTransactionIdentificationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxIdDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationDetails";
 			definition = "Provides transaction type and identification information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.TransactionIdentificationDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.TransactionIdentificationDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmTransactionIdentificationDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmTransactionIdentificationDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SettlementTypeAndIdentification15.mmObject();
 		}
 	};
+	protected NumberCount1Choice numberCounts;
 	/**
 	 * Count of the number of transactions linked.
 	 * <p>
@@ -250,30 +252,31 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#NumberCounts
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.NumberCounts}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmNumberCounts
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.mmNumberCounts}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#NumberCounts
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.NumberCounts}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmNumberCounts
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.mmNumberCounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NumberCounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNumberCounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NbCounts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberCounts";
 			definition = "Count of the number of transactions linked.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.NumberCounts;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.NumberCounts);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmNumberCounts);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmNumberCounts;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> NumberCount1Choice.mmObject();
 		}
 	};
+	protected List<Linkages17> linkages;
 	/**
 	 * Link to another transaction that must be processed after, before or at
 	 * the same time.
@@ -301,29 +304,30 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#Linkages
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.Linkages}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmLinkages
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.mmLinkages}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#Linkages
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.Linkages}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmLinkages
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.mmLinkages}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Linkages = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmLinkages = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Lnkgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.Linkages;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.Linkages);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmLinkages);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmLinkages;
 			minOccurs = 0;
 			complexType_lazy = () -> Linkages17.mmObject();
 		}
 	};
+	protected SecuritiesTradeDetails33 tradeDetails;
 	/**
 	 * Details of the trade.
 	 * <p>
@@ -349,30 +353,31 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#TradeDetails
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.TradeDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmTradeDetails
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.mmTradeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#TradeDetails
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.TradeDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmTradeDetails
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.mmTradeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDetails";
 			definition = "Details of the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.TradeDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.TradeDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmTradeDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmTradeDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesTradeDetails33.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Financial instrument representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -401,32 +406,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#FinancialInstrumentIdentification
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmFinancialInstrumentIdentification
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * FinancialInstrumentIdentification}</li>
+	 * mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#FinancialInstrumentIdentification
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmFinancialInstrumentIdentification
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * FinancialInstrumentIdentification}</li>
+	 * mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.FinancialInstrumentIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.FinancialInstrumentIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmFinancialInstrumentIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes35 financialInstrumentAttributes;
 	/**
 	 * Elements characterising a financial instrument.
 	 * <p>
@@ -452,32 +458,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#FinancialInstrumentAttributes
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmFinancialInstrumentAttributes
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * FinancialInstrumentAttributes}</li>
+	 * mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#FinancialInstrumentAttributes
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmFinancialInstrumentAttributes
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * FinancialInstrumentAttributes}</li>
+	 * mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentAttributes = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.FinancialInstrumentAttributes;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.FinancialInstrumentAttributes);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmFinancialInstrumentAttributes);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmFinancialInstrumentAttributes;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes35.mmObject();
 		}
 	};
+	protected List<QuantityAndAccount25> quantityAndAccountDetails;
 	/**
 	 * Details related to the account and quantity involved in the transaction.
 	 * <p>
@@ -505,31 +512,32 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#QuantityAndAccountDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmQuantityAndAccountDetails
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * QuantityAndAccountDetails}</li>
+	 * mmQuantityAndAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#QuantityAndAccountDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmQuantityAndAccountDetails
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * QuantityAndAccountDetails}</li>
+	 * mmQuantityAndAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock QuantityAndAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmQuantityAndAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "QtyAndAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityAndAccountDetails";
 			definition = "Details related to the account and quantity involved in the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.QuantityAndAccountDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.QuantityAndAccountDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmQuantityAndAccountDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmQuantityAndAccountDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityAndAccount25.mmObject();
 		}
 	};
+	protected SettlementDetails67 settlementParameters;
 	/**
 	 * Parameters which explicitly state the conditions that must be fulfilled
 	 * before a particular transaction of a financial instrument can be settled.
@@ -560,32 +568,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#SettlementParameters
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmSettlementParameters
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * SettlementParameters}</li>
+	 * mmSettlementParameters}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#SettlementParameters
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmSettlementParameters
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * SettlementParameters}</li>
+	 * mmSettlementParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.SettlementParameters;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.SettlementParameters);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmSettlementParameters);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmSettlementParameters;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SettlementDetails67.mmObject();
 		}
 	};
+	protected SettlementParties11 deliveringSettlementParties;
 	/**
 	 * Identifies the chain of delivering settlement parties.
 	 * <p>
@@ -611,32 +620,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#DeliveringSettlementParties
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmDeliveringSettlementParties
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * DeliveringSettlementParties}</li>
+	 * mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#DeliveringSettlementParties
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmDeliveringSettlementParties
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * DeliveringSettlementParties}</li>
+	 * mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DeliveringSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDeliveringSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.DeliveringSettlementParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.DeliveringSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmDeliveringSettlementParties);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmDeliveringSettlementParties;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties11.mmObject();
 		}
 	};
+	protected SettlementParties11 receivingSettlementParties;
 	/**
 	 * Identifies the chain of receiving settlement parties.
 	 * <p>
@@ -662,32 +672,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#ReceivingSettlementParties
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmReceivingSettlementParties
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * ReceivingSettlementParties}</li>
+	 * mmReceivingSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#ReceivingSettlementParties
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmReceivingSettlementParties
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * ReceivingSettlementParties}</li>
+	 * mmReceivingSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReceivingSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReceivingSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.ReceivingSettlementParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.ReceivingSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmReceivingSettlementParties);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmReceivingSettlementParties;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties11.mmObject();
 		}
 	};
+	protected CashParties17 cashParties;
 	/**
 	 * Cash parties involved in the transaction if different for the securities
 	 * settlement parties.
@@ -715,30 +726,31 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#CashParties
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.CashParties}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmCashParties
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.mmCashParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#CashParties
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.CashParties}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmCashParties
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.mmCashParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CashParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCashParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties involved in the transaction if different for the securities settlement parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.CashParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.CashParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmCashParties);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmCashParties;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashParties17.mmObject();
 		}
 	};
+	protected AmountAndDirection36 settlementAmount;
 	/**
 	 * Total amount of money to be paid or received in exchange for the
 	 * securities.
@@ -767,32 +779,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#SettlementAmount
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.SettlementAmount
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmSettlementAmount
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.
+	 * mmSettlementAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#SettlementAmount
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.SettlementAmount
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmSettlementAmount
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.
+	 * mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementAmount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementAmount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.SettlementAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.SettlementAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmSettlementAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmSettlementAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AmountAndDirection36.mmObject();
 		}
 	};
+	protected OtherAmounts14 otherAmounts;
 	/**
 	 * Other amounts than the settlement amount.
 	 * <p>
@@ -817,30 +830,31 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#OtherAmounts
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.OtherAmounts}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmOtherAmounts
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.mmOtherAmounts}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#OtherAmounts
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.OtherAmounts}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmOtherAmounts
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.mmOtherAmounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmounts";
 			definition = "Other amounts than the settlement amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.OtherAmounts;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.OtherAmounts);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmOtherAmounts);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmOtherAmounts;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OtherAmounts14.mmObject();
 		}
 	};
+	protected OtherParties19 otherBusinessParties;
 	/**
 	 * Other business parties relevant to the transaction.
 	 * <p>
@@ -865,32 +879,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#OtherBusinessParties
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmOtherBusinessParties
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * OtherBusinessParties}</li>
+	 * mmOtherBusinessParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#OtherBusinessParties
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmOtherBusinessParties
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * OtherBusinessParties}</li>
+	 * mmOtherBusinessParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherBusinessParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherBusinessParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrBizPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties relevant to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.OtherBusinessParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.OtherBusinessParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmOtherBusinessParties);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmOtherBusinessParties;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OtherParties19.mmObject();
 		}
 	};
+	protected RegistrationParameters1 additionalPhysicalOrRegistrationDetails;
 	/**
 	 * Provides information required for the registration or physical
 	 * settlement.
@@ -919,32 +934,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#AdditionalPhysicalOrRegistrationDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmAdditionalPhysicalOrRegistrationDetails
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * AdditionalPhysicalOrRegistrationDetails}</li>
+	 * mmAdditionalPhysicalOrRegistrationDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#AdditionalPhysicalOrRegistrationDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmAdditionalPhysicalOrRegistrationDetails
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * AdditionalPhysicalOrRegistrationDetails}</li>
+	 * mmAdditionalPhysicalOrRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalPhysicalOrRegistrationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalPhysicalOrRegistrationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlPhysOrRegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPhysicalOrRegistrationDetails";
 			definition = "Provides information required for the registration or physical settlement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.AdditionalPhysicalOrRegistrationDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.AdditionalPhysicalOrRegistrationDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmAdditionalPhysicalOrRegistrationDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmAdditionalPhysicalOrRegistrationDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RegistrationParameters1.mmObject();
 		}
 	};
+	protected List<GeneratedReason3> generatedReason;
 	/**
 	 * Specifies the reason why the transaction was generated.
 	 * <p>
@@ -970,31 +986,32 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#GeneratedReason
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.GeneratedReason}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmGeneratedReason
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.
+	 * mmGeneratedReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#GeneratedReason
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.GeneratedReason}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmGeneratedReason
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.
+	 * mmGeneratedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GeneratedReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGeneratedReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GnrtdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneratedReason";
 			definition = "Specifies the reason why the transaction was generated.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.GeneratedReason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.GeneratedReason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmGeneratedReason);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmGeneratedReason;
 			minOccurs = 0;
 			complexType_lazy = () -> GeneratedReason3.mmObject();
 		}
 	};
+	protected StatusAndReason19 statusAndReason;
 	/**
 	 * Status and reason of the transaction.
 	 * <p>
@@ -1020,32 +1037,33 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#StatusAndReason
-	 * SecuritiesSettlementTransactionGenerationNotificationV06.StatusAndReason}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmStatusAndReason
+	 * SecuritiesSettlementTransactionGenerationNotificationV06.
+	 * mmStatusAndReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#StatusAndReason
-	 * SecuritiesSettlementTransactionGenerationNotificationV04.StatusAndReason}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmStatusAndReason
+	 * SecuritiesSettlementTransactionGenerationNotificationV04.
+	 * mmStatusAndReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusAndReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusAndReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsAndRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.StatusAndReason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.StatusAndReason);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmStatusAndReason);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmStatusAndReason;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatusAndReason19.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -1074,56 +1092,29 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#SupplementaryData
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmSupplementaryData
 	 * SecuritiesSettlementTransactionGenerationNotificationV06.
-	 * SupplementaryData}</li>
+	 * mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#SupplementaryData
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmSupplementaryData
 	 * SecuritiesSettlementTransactionGenerationNotificationV04.
-	 * SupplementaryData}</li>
+	 * mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "032"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "032";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -1133,32 +1124,183 @@ public class SecuritiesSettlementTransactionGenerationNotificationV05 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionGenerationNotificationV05";
 				definition = "Scope\nAn account servicer sends a SecuritiesSettlementTransactionGenerationNotification to an account owner to advise the account owner of a securities settlement transaction that has been generated/created by the account servicer for the account owner. The reason for creation can range from the automatic transformation of pending settlement instructions following a corporate event to the recovery of an account owner transactions' database initiated by its account servicer.\nThe account servicer/owner relationship may be:\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\n- a custodian acting on behalf of an investment management institution or a broker/dealer\n\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
-				previousVersion_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV04.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotificationV06.mmObject());
+				previousVersion_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxGnrtnNtfctn";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.TransactionIdentificationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.NumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.Linkages,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.TradeDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.FinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.QuantityAndAccountDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.SettlementParameters,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.DeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.ReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.CashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.SettlementAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.OtherAmounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.GeneratedReason,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.StatusAndReason,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmTransactionIdentificationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmLinkages,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmTradeDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmQuantityAndAccountDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmSettlementParameters,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmDeliveringSettlementParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmReceivingSettlementParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmCashParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmSettlementAmount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmOtherAmounts,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmGeneratedReason,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmStatusAndReason,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "032";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementTypeAndIdentification15 getTransactionIdentificationDetails() {
+		return transactionIdentificationDetails;
+	}
+
+	public void setTransactionIdentificationDetails(SettlementTypeAndIdentification15 transactionIdentificationDetails) {
+		this.transactionIdentificationDetails = transactionIdentificationDetails;
+	}
+
+	public NumberCount1Choice getNumberCounts() {
+		return numberCounts;
+	}
+
+	public void setNumberCounts(NumberCount1Choice numberCounts) {
+		this.numberCounts = numberCounts;
+	}
+
+	public List<Linkages17> getLinkages() {
+		return linkages;
+	}
+
+	public void setLinkages(List<Linkages17> linkages) {
+		this.linkages = linkages;
+	}
+
+	public SecuritiesTradeDetails33 getTradeDetails() {
+		return tradeDetails;
+	}
+
+	public void setTradeDetails(SecuritiesTradeDetails33 tradeDetails) {
+		this.tradeDetails = tradeDetails;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public FinancialInstrumentAttributes35 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(FinancialInstrumentAttributes35 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public List<QuantityAndAccount25> getQuantityAndAccountDetails() {
+		return quantityAndAccountDetails;
+	}
+
+	public void setQuantityAndAccountDetails(List<QuantityAndAccount25> quantityAndAccountDetails) {
+		this.quantityAndAccountDetails = quantityAndAccountDetails;
+	}
+
+	public SettlementDetails67 getSettlementParameters() {
+		return settlementParameters;
+	}
+
+	public void setSettlementParameters(SettlementDetails67 settlementParameters) {
+		this.settlementParameters = settlementParameters;
+	}
+
+	public SettlementParties11 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(SettlementParties11 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public SettlementParties11 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(SettlementParties11 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public CashParties17 getCashParties() {
+		return cashParties;
+	}
+
+	public void setCashParties(CashParties17 cashParties) {
+		this.cashParties = cashParties;
+	}
+
+	public AmountAndDirection36 getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(AmountAndDirection36 settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public OtherAmounts14 getOtherAmounts() {
+		return otherAmounts;
+	}
+
+	public void setOtherAmounts(OtherAmounts14 otherAmounts) {
+		this.otherAmounts = otherAmounts;
+	}
+
+	public OtherParties19 getOtherBusinessParties() {
+		return otherBusinessParties;
+	}
+
+	public void setOtherBusinessParties(OtherParties19 otherBusinessParties) {
+		this.otherBusinessParties = otherBusinessParties;
+	}
+
+	public RegistrationParameters1 getAdditionalPhysicalOrRegistrationDetails() {
+		return additionalPhysicalOrRegistrationDetails;
+	}
+
+	public void setAdditionalPhysicalOrRegistrationDetails(RegistrationParameters1 additionalPhysicalOrRegistrationDetails) {
+		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
+	}
+
+	public List<GeneratedReason3> getGeneratedReason() {
+		return generatedReason;
+	}
+
+	public void setGeneratedReason(List<GeneratedReason3> generatedReason) {
+		this.generatedReason = generatedReason;
+	}
+
+	public StatusAndReason19 getStatusAndReason() {
+		return statusAndReason;
+	}
+
+	public void setStatusAndReason(StatusAndReason19 statusAndReason) {
+		this.statusAndReason = statusAndReason;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionTypeCode#NewElection
- * ElectionTypeCode.NewElection}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionTypeCode#mmNewElection
+ * ElectionTypeCode.mmNewElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionTypeCode#OptionChange
- * ElectionTypeCode.OptionChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionTypeCode#mmOptionChange
+ * ElectionTypeCode.mmOptionChange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class ElectionTypeCode {
 	 * definition} = "New election advice."</li>
 	 * </ul>
 	 */
-	public static final MMCode NewElection = new MMCode() {
+	public static final MMCode mmNewElection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NewElection";
@@ -119,7 +119,7 @@ public class ElectionTypeCode {
 	 * definition} = "Election advice which is the result of an option change."</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionChange = new MMCode() {
+	public static final MMCode mmOptionChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OptionChange";
@@ -132,12 +132,12 @@ public class ElectionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElectionTypeCode";
 				definition = "Specifies the type of election.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionTypeCode.NewElection, com.tools20022.repository.codeset.ElectionTypeCode.OptionChange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionTypeCode.mmNewElection, com.tools20022.repository.codeset.ElectionTypeCode.mmOptionChange);
 				derivation_lazy = () -> Arrays.asList(ElectionType1Code.mmObject());
 			}
 		});

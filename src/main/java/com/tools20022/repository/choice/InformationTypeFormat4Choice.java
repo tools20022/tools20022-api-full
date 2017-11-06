@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InformationTypeFormat4Choice#Code
- * InformationTypeFormat4Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.InformationTypeFormat4Choice#mmCode
+ * InformationTypeFormat4Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InformationTypeFormat4Choice#Proprietary
- * InformationTypeFormat4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.InformationTypeFormat4Choice#mmProprietary
+ * InformationTypeFormat4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InformationTypeFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionInformationType1Code code;
 	/**
 	 * Standard code to specify the information type required.
 	 * <p>
@@ -96,11 +97,11 @@ public class InformationTypeFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InformationTypeFormat1Choice#Code
-	 * InformationTypeFormat1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.InformationTypeFormat1Choice#mmCode
+	 * InformationTypeFormat1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InformationTypeFormat4Choice.mmObject();
 			isDerived = false;
@@ -108,12 +109,13 @@ public class InformationTypeFormat4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the information type required.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionInformationType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Proprietary identification of the information type.
 	 * <p>
@@ -142,11 +144,11 @@ public class InformationTypeFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InformationTypeFormat1Choice#Proprietary
-	 * InformationTypeFormat1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.InformationTypeFormat1Choice#mmProprietary
+	 * InformationTypeFormat1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InformationTypeFormat4Choice.mmObject();
 			isDerived = false;
@@ -154,19 +156,19 @@ public class InformationTypeFormat4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the information type.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat1Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InformationTypeFormat4Choice.Code, com.tools20022.repository.choice.InformationTypeFormat4Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InformationTypeFormat4Choice.mmCode, com.tools20022.repository.choice.InformationTypeFormat4Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InformationTypeFormat4Choice";
 				definition = "Choice between a standard code or proprietary code to specify the information type format required.";
@@ -174,5 +176,21 @@ public class InformationTypeFormat4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionInformationType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionInformationType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

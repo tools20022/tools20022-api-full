@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCancellationReason1Code#Withrawal
- * CorporateActionCancellationReason1Code.Withrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCancellationReason1Code#mmWithrawal
+ * CorporateActionCancellationReason1Code.mmWithrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCancellationReason1Code#Processing
- * CorporateActionCancellationReason1Code.Processing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCancellationReason1Code#mmProcessing
+ * CorporateActionCancellationReason1Code.mmProcessing}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class CorporateActionCancellationReason1Code extends CorporateActionCance
 	 * name} = "Withrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withrawal = new MMCode() {
+	public static final MMCode mmWithrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withrawal";
@@ -105,7 +105,7 @@ public class CorporateActionCancellationReason1Code extends CorporateActionCance
 	 * name} = "Processing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Processing = new MMCode() {
+	public static final MMCode mmProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processing";
@@ -116,12 +116,12 @@ public class CorporateActionCancellationReason1Code extends CorporateActionCance
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WITH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationReason1Code";
 				definition = "Specifies reasons for cancellation of a corporate action event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionCancellationReason1Code.Withrawal, com.tools20022.repository.codeset.CorporateActionCancellationReason1Code.Processing);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionCancellationReason1Code.mmWithrawal, com.tools20022.repository.codeset.CorporateActionCancellationReason1Code.mmProcessing);
 				trace_lazy = () -> CorporateActionCancellationReasonCode.mmObject();
 			}
 		});

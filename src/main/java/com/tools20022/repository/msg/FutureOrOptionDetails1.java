@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Derivative;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parameters for contracts which obligate the buyer to receive and the seller
@@ -45,62 +46,64 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#FutureAndOptionContractType
- * FutureOrOptionDetails1.FutureAndOptionContractType}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmFutureAndOptionContractType
+ * FutureOrOptionDetails1.mmFutureAndOptionContractType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#LastDeliveryDate
- * FutureOrOptionDetails1.LastDeliveryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmLastDeliveryDate
+ * FutureOrOptionDetails1.mmLastDeliveryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#UnitOfMeasure
- * FutureOrOptionDetails1.UnitOfMeasure}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmUnitOfMeasure
+ * FutureOrOptionDetails1.mmUnitOfMeasure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#FutureDate
- * FutureOrOptionDetails1.FutureDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmFutureDate
+ * FutureOrOptionDetails1.mmFutureDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#MinimumSize
- * FutureOrOptionDetails1.MinimumSize}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmMinimumSize
+ * FutureOrOptionDetails1.mmMinimumSize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#AnnouncementDate
- * FutureOrOptionDetails1.AnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmAnnouncementDate
+ * FutureOrOptionDetails1.mmAnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#Appearance
- * FutureOrOptionDetails1.Appearance}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmAppearance
+ * FutureOrOptionDetails1.mmAppearance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#StrippableIndicator
- * FutureOrOptionDetails1.StrippableIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmStrippableIndicator
+ * FutureOrOptionDetails1.mmStrippableIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#PositionLimit
- * FutureOrOptionDetails1.PositionLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmPositionLimit
+ * FutureOrOptionDetails1.mmPositionLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#NearTermPositionLimit
- * FutureOrOptionDetails1.NearTermPositionLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmNearTermPositionLimit
+ * FutureOrOptionDetails1.mmNearTermPositionLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#MinimumTradingPricingIncrement
- * FutureOrOptionDetails1.MinimumTradingPricingIncrement}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#Purpose
- * FutureOrOptionDetails1.Purpose}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmMinimumTradingPricingIncrement
+ * FutureOrOptionDetails1.mmMinimumTradingPricingIncrement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#ContractSettlementMonth
- * FutureOrOptionDetails1.ContractSettlementMonth}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmPurpose
+ * FutureOrOptionDetails1.mmPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#FirstDealingDate
- * FutureOrOptionDetails1.FirstDealingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#Ratio
- * FutureOrOptionDetails1.Ratio}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#Rating
- * FutureOrOptionDetails1.Rating}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmContractSettlementMonth
+ * FutureOrOptionDetails1.mmContractSettlementMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#IssuePrice
- * FutureOrOptionDetails1.IssuePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmFirstDealingDate
+ * FutureOrOptionDetails1.mmFirstDealingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmRatio
+ * FutureOrOptionDetails1.mmRatio}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#OptionRights
- * FutureOrOptionDetails1.OptionRights}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmRating
+ * FutureOrOptionDetails1.mmRating}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#LastTransaction
- * FutureOrOptionDetails1.LastTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmIssuePrice
+ * FutureOrOptionDetails1.mmIssuePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#SpreadTransaction
- * FutureOrOptionDetails1.SpreadTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmOptionRights
+ * FutureOrOptionDetails1.mmOptionRights}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmLastTransaction
+ * FutureOrOptionDetails1.mmLastTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmSpreadTransaction
+ * FutureOrOptionDetails1.mmSpreadTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -108,8 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FutureOrOptionDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FutureAndOptionContractType1Code futureAndOptionContractType;
 	/**
 	 * Specifies the type of the contract for futures and options.
 	 * <p>
@@ -154,7 +158,7 @@ public class FutureOrOptionDetails1 {
 	 * "Specifies the type of the contract for futures and options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FutureAndOptionContractType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFutureAndOptionContractType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
 			isDerived = false;
@@ -162,11 +166,12 @@ public class FutureOrOptionDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureAndOptionContractType";
 			definition = "Specifies the type of the contract for futures and options.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FutureAndOptionContractType1Code.mmObject();
 		}
 	};
+	protected ISODateTime lastDeliveryDate;
 	/**
 	 * Last date/time by which the option for physical delivery may still be
 	 * exercised.
@@ -180,8 +185,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Future#LastDeliveryDate
-	 * Future.LastDeliveryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Future#mmLastDeliveryDate
+	 * Future.mmLastDeliveryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,20 +207,21 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastDeliveryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastDeliveryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmLastDeliveryDate;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.LastDeliveryDate;
 			isDerived = false;
 			xmlTag = "LastDlvryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDeliveryDate";
 			definition = "Last date/time by which the option for physical delivery may still be exercised.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected UnitOfMeasure1Code unitOfMeasure;
 	/**
 	 * Used to indicate the size of the underlying commodity on which the
 	 * contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude
@@ -231,8 +237,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Future#UnitOfMeasure
-	 * Future.UnitOfMeasure}</li>
+	 * {@linkplain com.tools20022.repository.entity.Future#mmUnitOfMeasure
+	 * Future.mmUnitOfMeasure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,20 +259,21 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmUnitOfMeasure;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.UnitOfMeasure;
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> UnitOfMeasure1Code.mmObject();
 		}
 	};
+	protected ISODateTime futureDate;
 	/**
 	 * Date on which future contracts settle.
 	 * <p>
@@ -279,8 +286,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Future#FutureDate
-	 * Future.FutureDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Future#mmFutureDate
+	 * Future.mmFutureDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,20 +306,21 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Date on which future contracts settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FutureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFutureDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmFutureDate;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.FutureDate;
 			isDerived = false;
 			xmlTag = "FutrDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureDate";
 			definition = "Date on which future contracts settle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount minimumSize;
 	/**
 	 * Specifies the minimum ratio or multiply factor used to convert from
 	 * contracts to shares.
@@ -327,8 +335,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Future#MinimumSize
-	 * Future.MinimumSize}</li>
+	 * {@linkplain com.tools20022.repository.entity.Future#mmMinimumSize
+	 * Future.mmMinimumSize}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -349,20 +357,21 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumSize = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmMinimumSize;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.MinimumSize;
 			isDerived = false;
 			xmlTag = "MinSz";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSize";
 			definition = "Specifies the minimum ratio or multiply factor used to convert from contracts to shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODateTime announcementDate;
 	/**
 	 * Date/time, as announced by the issuer, at which the securities will be
 	 * issued.
@@ -376,8 +385,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#IssueDate
-	 * Issuance.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmIssueDate
+	 * Issuance.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -398,20 +407,21 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDate;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.IssueDate;
 			isDerived = false;
 			xmlTag = "AnncmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time, as announced by the issuer, at which the securities will be issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Appearance1Code appearance;
 	/**
 	 * Specifies the deliverability of a security.
 	 * <p>
@@ -425,8 +435,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Appearance
-	 * Security.Appearance}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmAppearance
+	 * Security.mmAppearance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -445,20 +455,21 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Specifies the deliverability of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Appearance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAppearance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmAppearance;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Appearance;
 			isDerived = false;
 			xmlTag = "Apprnc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Appearance";
 			definition = "Specifies the deliverability of a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Appearance1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator strippableIndicator;
 	/**
 	 * Indicates whether the interest is separable from the principal.
 	 * <p>
@@ -472,8 +483,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#StrippableIndicator
-	 * Security.StrippableIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmStrippableIndicator
+	 * Security.mmStrippableIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -493,20 +504,21 @@ public class FutureOrOptionDetails1 {
 	 * "Indicates whether the interest is separable from the principal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StrippableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStrippableIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmStrippableIndicator;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.StrippableIndicator;
 			isDerived = false;
 			xmlTag = "StrpblInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrippableIndicator";
 			definition = "Indicates whether the interest is separable from the principal.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Number positionLimit;
 	/**
 	 * Indicates the maximum number of listed option contracts on a single
 	 * security which can be held by an investor or group of investors acting
@@ -521,8 +533,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#PositionLimit
-	 * Option.PositionLimit}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmPositionLimit
+	 * Option.mmPositionLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -543,20 +555,21 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPositionLimit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmPositionLimit;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.PositionLimit;
 			isDerived = false;
 			xmlTag = "PosLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionLimit";
 			definition = "Indicates the maximum number of listed option contracts on a single security which can be held by an investor or group of investors acting jointly.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number nearTermPositionLimit;
 	/**
 	 * Position limit in the near-term contract for a given exchange-traded
 	 * product.
@@ -570,8 +583,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#NearTermPositionLimit
-	 * Security.NearTermPositionLimit}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmNearTermPositionLimit
+	 * Security.mmNearTermPositionLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -592,20 +605,21 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NearTermPositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNearTermPositionLimit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmNearTermPositionLimit;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.NearTermPositionLimit;
 			isDerived = false;
 			xmlTag = "NearTermPosLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NearTermPositionLimit";
 			definition = "Position limit in the near-term contract for a given exchange-traded product.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number minimumTradingPricingIncrement;
 	/**
 	 * Minimum price increase for a given exchange-traded Instrument
 	 * <p>
@@ -618,8 +632,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#MinimumTradingPricingIncrement
-	 * Security.MinimumTradingPricingIncrement}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmMinimumTradingPricingIncrement
+	 * Security.mmMinimumTradingPricingIncrement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -639,20 +653,21 @@ public class FutureOrOptionDetails1 {
 	 * "Minimum price increase for a given exchange-traded Instrument"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumTradingPricingIncrement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumTradingPricingIncrement = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmMinimumTradingPricingIncrement;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.MinimumTradingPricingIncrement;
 			isDerived = false;
 			xmlTag = "MinTradgPricgIncrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTradingPricingIncrement";
 			definition = "Minimum price increase for a given exchange-traded Instrument";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max256Text purpose;
 	/**
 	 * Reason for which money is raised through the issuance of a security.
 	 * <p>
@@ -665,8 +680,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#Purpose
-	 * Issuance.Purpose}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmPurpose
+	 * Issuance.mmPurpose}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -686,20 +701,21 @@ public class FutureOrOptionDetails1 {
 	 * "Reason for which money is raised through the issuance of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Purpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmPurpose;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.Purpose;
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Reason for which money is raised through the issuance of a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected ISOYearMonth contractSettlementMonth;
 	/**
 	 * Specifies when the contract (i.e. MBS/TBA) will settle.
 	 * <p>
@@ -713,8 +729,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#ContractSettlementMonth
-	 * Security.ContractSettlementMonth}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmContractSettlementMonth
+	 * Security.mmContractSettlementMonth}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -733,20 +749,21 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Specifies when the contract (i.e. MBS/TBA) will settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractSettlementMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractSettlementMonth = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmContractSettlementMonth;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.ContractSettlementMonth;
 			isDerived = false;
 			xmlTag = "CtrctSttlmMnth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSettlementMonth";
 			definition = "Specifies when the contract (i.e. MBS/TBA) will settle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 	};
+	protected DateAndDateTime1Choice firstDealingDate;
 	/**
 	 * Date on which new securities begin trading.
 	 * <p>
@@ -759,8 +776,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#FirstDealingDate
-	 * Security.FirstDealingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmFirstDealingDate
+	 * Security.mmFirstDealingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -779,21 +796,22 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Date on which new securities begin trading."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FirstDealingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFirstDealingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFirstDealingDate;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.FirstDealingDate;
 			isDerived = false;
 			xmlTag = "FrstDealgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstDealingDate";
 			definition = "Date on which new securities begin trading.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTime1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.UnderlyingRatio1> ratio;
 	/**
 	 * Ratio applied to convert the related security.
 	 * <p>
@@ -805,8 +823,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#Ratio
-	 * SecuritiesConversion.Ratio}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmRatio
+	 * SecuritiesConversion.mmRatio}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -825,20 +843,21 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Ratio applied to convert the related security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Ratio = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRatio = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmRatio;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.Ratio;
 			isDerived = false;
 			xmlTag = "Ratio";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ratio";
 			definition = "Ratio applied to convert the related security.";
 			minOccurs = 0;
-			type_lazy = () -> UnderlyingRatio1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Rating1> rating;
 	/**
 	 * Rating(s) of the security.
 	 * <p>
@@ -849,8 +868,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Rating
-	 * Security.Rating}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRating
+	 * Security.mmRating}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -869,20 +888,21 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Rating(s) of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rating = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRating = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRating;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Rating;
 			isDerived = false;
 			xmlTag = "Ratg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rating";
 			definition = "Rating(s) of the security.";
 			minOccurs = 0;
-			type_lazy = () -> Rating1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Rating1.mmObject();
 		}
 	};
+	protected Price4 issuePrice;
 	/**
 	 * Initial issue price of a financial instrument.
 	 * <p>
@@ -893,8 +913,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#IssuePrice
-	 * Issuance.IssuePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmIssuePrice
+	 * Issuance.mmIssuePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -913,21 +933,22 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Initial issue price of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssuePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssuePrice;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.IssuePrice;
 			isDerived = false;
 			xmlTag = "IssePric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePrice";
 			definition = "Initial issue price of a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected OptionRight1Choice optionRights;
 	/**
 	 * Rights to exercise the privilege to purchase or to sell the assets
 	 * specified at a predetermined price or formula at or within a time in the
@@ -960,7 +981,7 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionRights = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
 			isDerived = false;
@@ -968,11 +989,12 @@ public class FutureOrOptionDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionRights";
 			definition = "Rights to exercise the privilege to purchase or to sell the assets specified at a predetermined price or formula at or within a time in the future.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OptionRight1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator lastTransaction;
 	/**
 	 * Indicates whether or not this is the last transaction.
 	 * <p>
@@ -1001,7 +1023,7 @@ public class FutureOrOptionDetails1 {
 	 * definition} = "Indicates whether or not this is the last transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastTransaction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
 			isDerived = false;
@@ -1009,11 +1031,12 @@ public class FutureOrOptionDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTransaction";
 			definition = "Indicates whether or not this is the last transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator spreadTransaction;
 	/**
 	 * Specifies that there will be one price and one transaction when two
 	 * contracts are carried out simultaneously, one to buy and the other one to
@@ -1029,8 +1052,8 @@ public class FutureOrOptionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#SpreadTransaction
-	 * SecuritiesFinancing.SpreadTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmSpreadTransaction
+	 * SecuritiesFinancing.mmSpreadTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1051,17 +1074,17 @@ public class FutureOrOptionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SpreadTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSpreadTransaction = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmSpreadTransaction;
 			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.SpreadTransaction;
 			isDerived = false;
 			xmlTag = "SprdTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadTransaction";
 			definition = "Specifies that there will be one price and one transaction when two contracts are carried out simultaneously, one to buy and the other one to sell with two different expiration dates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -1069,21 +1092,181 @@ public class FutureOrOptionDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.FutureAndOptionContractType, com.tools20022.repository.msg.FutureOrOptionDetails1.LastDeliveryDate,
-						com.tools20022.repository.msg.FutureOrOptionDetails1.UnitOfMeasure, com.tools20022.repository.msg.FutureOrOptionDetails1.FutureDate, com.tools20022.repository.msg.FutureOrOptionDetails1.MinimumSize,
-						com.tools20022.repository.msg.FutureOrOptionDetails1.AnnouncementDate, com.tools20022.repository.msg.FutureOrOptionDetails1.Appearance, com.tools20022.repository.msg.FutureOrOptionDetails1.StrippableIndicator,
-						com.tools20022.repository.msg.FutureOrOptionDetails1.PositionLimit, com.tools20022.repository.msg.FutureOrOptionDetails1.NearTermPositionLimit,
-						com.tools20022.repository.msg.FutureOrOptionDetails1.MinimumTradingPricingIncrement, com.tools20022.repository.msg.FutureOrOptionDetails1.Purpose,
-						com.tools20022.repository.msg.FutureOrOptionDetails1.ContractSettlementMonth, com.tools20022.repository.msg.FutureOrOptionDetails1.FirstDealingDate, com.tools20022.repository.msg.FutureOrOptionDetails1.Ratio,
-						com.tools20022.repository.msg.FutureOrOptionDetails1.Rating, com.tools20022.repository.msg.FutureOrOptionDetails1.IssuePrice, com.tools20022.repository.msg.FutureOrOptionDetails1.OptionRights,
-						com.tools20022.repository.msg.FutureOrOptionDetails1.LastTransaction, com.tools20022.repository.msg.FutureOrOptionDetails1.SpreadTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.mmFutureAndOptionContractType, com.tools20022.repository.msg.FutureOrOptionDetails1.mmLastDeliveryDate,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmUnitOfMeasure, com.tools20022.repository.msg.FutureOrOptionDetails1.mmFutureDate, com.tools20022.repository.msg.FutureOrOptionDetails1.mmMinimumSize,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmAnnouncementDate, com.tools20022.repository.msg.FutureOrOptionDetails1.mmAppearance, com.tools20022.repository.msg.FutureOrOptionDetails1.mmStrippableIndicator,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmPositionLimit, com.tools20022.repository.msg.FutureOrOptionDetails1.mmNearTermPositionLimit,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmMinimumTradingPricingIncrement, com.tools20022.repository.msg.FutureOrOptionDetails1.mmPurpose,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmContractSettlementMonth, com.tools20022.repository.msg.FutureOrOptionDetails1.mmFirstDealingDate, com.tools20022.repository.msg.FutureOrOptionDetails1.mmRatio,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmRating, com.tools20022.repository.msg.FutureOrOptionDetails1.mmIssuePrice, com.tools20022.repository.msg.FutureOrOptionDetails1.mmOptionRights,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmLastTransaction, com.tools20022.repository.msg.FutureOrOptionDetails1.mmSpreadTransaction);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FutureOrOptionDetails1";
 				definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price or contracts which grant to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FutureAndOptionContractType1Code getFutureAndOptionContractType() {
+		return futureAndOptionContractType;
+	}
+
+	public void setFutureAndOptionContractType(FutureAndOptionContractType1Code futureAndOptionContractType) {
+		this.futureAndOptionContractType = futureAndOptionContractType;
+	}
+
+	public ISODateTime getLastDeliveryDate() {
+		return lastDeliveryDate;
+	}
+
+	public void setLastDeliveryDate(ISODateTime lastDeliveryDate) {
+		this.lastDeliveryDate = lastDeliveryDate;
+	}
+
+	public UnitOfMeasure1Code getUnitOfMeasure() {
+		return unitOfMeasure;
+	}
+
+	public void setUnitOfMeasure(UnitOfMeasure1Code unitOfMeasure) {
+		this.unitOfMeasure = unitOfMeasure;
+	}
+
+	public ISODateTime getFutureDate() {
+		return futureDate;
+	}
+
+	public void setFutureDate(ISODateTime futureDate) {
+		this.futureDate = futureDate;
+	}
+
+	public ActiveCurrencyAndAmount getMinimumSize() {
+		return minimumSize;
+	}
+
+	public void setMinimumSize(ActiveCurrencyAndAmount minimumSize) {
+		this.minimumSize = minimumSize;
+	}
+
+	public ISODateTime getAnnouncementDate() {
+		return announcementDate;
+	}
+
+	public void setAnnouncementDate(ISODateTime announcementDate) {
+		this.announcementDate = announcementDate;
+	}
+
+	public Appearance1Code getAppearance() {
+		return appearance;
+	}
+
+	public void setAppearance(Appearance1Code appearance) {
+		this.appearance = appearance;
+	}
+
+	public YesNoIndicator getStrippableIndicator() {
+		return strippableIndicator;
+	}
+
+	public void setStrippableIndicator(YesNoIndicator strippableIndicator) {
+		this.strippableIndicator = strippableIndicator;
+	}
+
+	public Number getPositionLimit() {
+		return positionLimit;
+	}
+
+	public void setPositionLimit(Number positionLimit) {
+		this.positionLimit = positionLimit;
+	}
+
+	public Number getNearTermPositionLimit() {
+		return nearTermPositionLimit;
+	}
+
+	public void setNearTermPositionLimit(Number nearTermPositionLimit) {
+		this.nearTermPositionLimit = nearTermPositionLimit;
+	}
+
+	public Number getMinimumTradingPricingIncrement() {
+		return minimumTradingPricingIncrement;
+	}
+
+	public void setMinimumTradingPricingIncrement(Number minimumTradingPricingIncrement) {
+		this.minimumTradingPricingIncrement = minimumTradingPricingIncrement;
+	}
+
+	public Max256Text getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(Max256Text purpose) {
+		this.purpose = purpose;
+	}
+
+	public ISOYearMonth getContractSettlementMonth() {
+		return contractSettlementMonth;
+	}
+
+	public void setContractSettlementMonth(ISOYearMonth contractSettlementMonth) {
+		this.contractSettlementMonth = contractSettlementMonth;
+	}
+
+	public DateAndDateTime1Choice getFirstDealingDate() {
+		return firstDealingDate;
+	}
+
+	public void setFirstDealingDate(DateAndDateTime1Choice firstDealingDate) {
+		this.firstDealingDate = firstDealingDate;
+	}
+
+	public List<UnderlyingRatio1> getRatio() {
+		return ratio;
+	}
+
+	public void setRatio(List<com.tools20022.repository.msg.UnderlyingRatio1> ratio) {
+		this.ratio = ratio;
+	}
+
+	public List<Rating1> getRating() {
+		return rating;
+	}
+
+	public void setRating(List<com.tools20022.repository.msg.Rating1> rating) {
+		this.rating = rating;
+	}
+
+	public Price4 getIssuePrice() {
+		return issuePrice;
+	}
+
+	public void setIssuePrice(com.tools20022.repository.msg.Price4 issuePrice) {
+		this.issuePrice = issuePrice;
+	}
+
+	public OptionRight1Choice getOptionRights() {
+		return optionRights;
+	}
+
+	public void setOptionRights(OptionRight1Choice optionRights) {
+		this.optionRights = optionRights;
+	}
+
+	public YesNoIndicator getLastTransaction() {
+		return lastTransaction;
+	}
+
+	public void setLastTransaction(YesNoIndicator lastTransaction) {
+		this.lastTransaction = lastTransaction;
+	}
+
+	public YesNoIndicator getSpreadTransaction() {
+		return spreadTransaction;
+	}
+
+	public void setSpreadTransaction(YesNoIndicator spreadTransaction) {
+		this.spreadTransaction = spreadTransaction;
 	}
 }

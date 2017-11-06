@@ -33,29 +33,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#BackEndLoad
- * ChargeType16Code.BackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#mmBackEndLoad
+ * ChargeType16Code.mmBackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#FrontEndLoad
- * ChargeType16Code.FrontEndLoad}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType16Code#Discount
- * ChargeType16Code.Discount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#mmFrontEndLoad
+ * ChargeType16Code.mmFrontEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#BrokerageFee
- * ChargeType16Code.BrokerageFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#mmDiscount
+ * ChargeType16Code.mmDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#UCITSCommission
- * ChargeType16Code.UCITSCommission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#mmBrokerageFee
+ * ChargeType16Code.mmBrokerageFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#ServiceProvisionFee
- * ChargeType16Code.ServiceProvisionFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#mmUCITSCommission
+ * ChargeType16Code.mmUCITSCommission}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType16Code#mmServiceProvisionFee
+ * ChargeType16Code.mmServiceProvisionFee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +93,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 * name} = "BackEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode BackEndLoad = new MMCode() {
+	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
@@ -115,7 +116,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 * name} = "FrontEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrontEndLoad = new MMCode() {
+	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
@@ -138,7 +139,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -161,7 +162,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 * name} = "BrokerageFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerageFee = new MMCode() {
+	public static final MMCode mmBrokerageFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageFee";
@@ -184,7 +185,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 * name} = "UCITSCommission"</li>
 	 * </ul>
 	 */
-	public static final MMCode UCITSCommission = new MMCode() {
+	public static final MMCode mmUCITSCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UCITSCommission";
@@ -207,7 +208,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 * name} = "ServiceProvisionFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ServiceProvisionFee = new MMCode() {
+	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
@@ -218,13 +219,14 @@ public class ChargeType16Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType16Code";
 				definition = "Specifies the type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType16Code.BackEndLoad, com.tools20022.repository.codeset.ChargeType16Code.FrontEndLoad, com.tools20022.repository.codeset.ChargeType16Code.Discount,
-						com.tools20022.repository.codeset.ChargeType16Code.BrokerageFee, com.tools20022.repository.codeset.ChargeType16Code.UCITSCommission, com.tools20022.repository.codeset.ChargeType16Code.ServiceProvisionFee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType16Code.mmBackEndLoad, com.tools20022.repository.codeset.ChargeType16Code.mmFrontEndLoad,
+						com.tools20022.repository.codeset.ChargeType16Code.mmDiscount, com.tools20022.repository.codeset.ChargeType16Code.mmBrokerageFee, com.tools20022.repository.codeset.ChargeType16Code.mmUCITSCommission,
+						com.tools20022.repository.codeset.ChargeType16Code.mmServiceProvisionFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

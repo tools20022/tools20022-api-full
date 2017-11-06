@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition11Code#NoAutomaticMarketClaim
- * SettlementTransactionCondition11Code.NoAutomaticMarketClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition11Code#mmNoAutomaticMarketClaim
+ * SettlementTransactionCondition11Code.mmNoAutomaticMarketClaim}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class SettlementTransactionCondition11Code extends SettlementTransactionC
 	 * name} = "NoAutomaticMarketClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAutomaticMarketClaim = new MMCode() {
+	public static final MMCode mmNoAutomaticMarketClaim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAutomaticMarketClaim";
@@ -84,11 +84,11 @@ public class SettlementTransactionCondition11Code extends SettlementTransactionC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition11Code";
 				definition = "Specifies the conditions under which a order/trade is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition11Code.NoAutomaticMarketClaim);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition11Code.mmNoAutomaticMarketClaim);
 				trace_lazy = () -> SettlementTransactionConditionCode.mmObject();
 			}
 		});

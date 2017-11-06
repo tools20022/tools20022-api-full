@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#Identification
- * GenericValidationRuleIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#mmIdentification
+ * GenericValidationRuleIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#Description
- * GenericValidationRuleIdentification1.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#mmDescription
+ * GenericValidationRuleIdentification1.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#SchemeName
- * GenericValidationRuleIdentification1.SchemeName}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#mmSchemeName
+ * GenericValidationRuleIdentification1.mmSchemeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#Issuer
- * GenericValidationRuleIdentification1.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#mmIssuer
+ * GenericValidationRuleIdentification1.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericValidationRuleIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification of a validation rule.
 	 * <p>
@@ -102,20 +103,21 @@ public class GenericValidationRuleIdentification1 {
 	 * "Unique and unambiguous identification of a validation rule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a validation rule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text description;
 	/**
 	 * Further information on the validation rule as identified in the
 	 * Identification.
@@ -129,8 +131,8 @@ public class GenericValidationRuleIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDescription
-	 * Status.StatusDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
+	 * Status.mmStatusDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,20 +153,21 @@ public class GenericValidationRuleIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
 			componentContext_lazy = () -> GenericValidationRuleIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDescription;
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Further information on the validation rule as identified in the Identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ValidationRuleSchemeName1Choice schemeName;
 	/**
 	 * Name of the identification scheme.
 	 * <p>
@@ -192,7 +195,7 @@ public class GenericValidationRuleIdentification1 {
 	 * definition} = "Name of the identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SchemeName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSchemeName = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isDerived = false;
@@ -200,12 +203,13 @@ public class GenericValidationRuleIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Name of the identification scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ValidationRuleSchemeName1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ValidationRuleSchemeName1Choice.mmObject();
 		}
 	};
+	protected Max35Text issuer;
 	/**
 	 * Entity that assigns the identification.
 	 * <p>
@@ -233,7 +237,7 @@ public class GenericValidationRuleIdentification1 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isDerived = false;
@@ -241,8 +245,8 @@ public class GenericValidationRuleIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -250,15 +254,47 @@ public class GenericValidationRuleIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericValidationRuleIdentification1.Identification, com.tools20022.repository.msg.GenericValidationRuleIdentification1.Description,
-						com.tools20022.repository.msg.GenericValidationRuleIdentification1.SchemeName, com.tools20022.repository.msg.GenericValidationRuleIdentification1.Issuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmIdentification, com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmDescription,
+						com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmSchemeName, com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmIssuer);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GenericValidationRuleIdentification1";
 				definition = "Information for the identification of a validation rule.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max350Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max350Text description) {
+		this.description = description;
+	}
+
+	public ValidationRuleSchemeName1Choice getSchemeName() {
+		return schemeName;
+	}
+
+	public void setSchemeName(ValidationRuleSchemeName1Choice schemeName) {
+		this.schemeName = schemeName;
+	}
+
+	public Max35Text getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max35Text issuer) {
+		this.issuer = issuer;
 	}
 }

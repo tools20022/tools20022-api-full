@@ -35,16 +35,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#Type
- * SystemEvent2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#ScheduledTime
- * SystemEvent2.ScheduledTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#EffectiveTime
- * SystemEvent2.EffectiveTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#StartTime
- * SystemEvent2.StartTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#EndTime
- * SystemEvent2.EndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmType
+ * SystemEvent2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmScheduledTime
+ * SystemEvent2.mmScheduledTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmEffectiveTime
+ * SystemEvent2.mmEffectiveTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmStartTime
+ * SystemEvent2.mmStartTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmEndTime
+ * SystemEvent2.mmEndTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemEvent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemEventType2Choice type;
 	/**
 	 * Nature of the event that has occurred.
 	 * <p>
@@ -83,8 +84,8 @@ public class SystemEvent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Type
-	 * SystemEventInformation.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmType
+	 * SystemEventInformation.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class SystemEvent2 {
 	 * definition} = "Nature of the event that has occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmType;
 			componentContext_lazy = () -> SystemEvent2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the event that has occurred.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SystemEventType2Choice.mmObject();
 		}
 	};
+	protected ISODateTime scheduledTime;
 	/**
 	 * Date and time at which the event is foreseen to occur.
 	 * <p>
@@ -128,8 +130,8 @@ public class SystemEvent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Time
-	 * SystemEventInformation.Time}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+	 * SystemEventInformation.mmTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,20 +149,21 @@ public class SystemEvent2 {
 	 * definition} = "Date and time at which the event is foreseen to occur. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ScheduledTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
 			componentContext_lazy = () -> SystemEvent2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Time;
 			isDerived = false;
 			xmlTag = "SchdldTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledTime";
 			definition = "Date and time at which the event is foreseen to occur. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime effectiveTime;
 	/**
 	 * Date and time at which the event effectively takes place.
 	 * <p>
@@ -173,8 +176,8 @@ public class SystemEvent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Time
-	 * SystemEventInformation.Time}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+	 * SystemEventInformation.mmTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,20 +196,21 @@ public class SystemEvent2 {
 	 * "Date and time at which the event effectively takes place. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
 			componentContext_lazy = () -> SystemEvent2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Time;
 			isDerived = false;
 			xmlTag = "FctvTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTime";
 			definition = "Date and time at which the event effectively takes place. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime startTime;
 	/**
 	 * Time at which the event starts.
 	 * <p>
@@ -219,8 +223,8 @@ public class SystemEvent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Time
-	 * SystemEventInformation.Time}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+	 * SystemEventInformation.mmTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -238,20 +242,21 @@ public class SystemEvent2 {
 	 * definition} = "Time at which the event starts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
 			componentContext_lazy = () -> SystemEvent2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Time;
 			isDerived = false;
 			xmlTag = "StartTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartTime";
 			definition = "Time at which the event starts.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime endTime;
 	/**
 	 * Time at which the event ends.
 	 * <p>
@@ -264,8 +269,8 @@ public class SystemEvent2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Time
-	 * SystemEventInformation.Time}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+	 * SystemEventInformation.mmTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,17 +288,17 @@ public class SystemEvent2 {
 	 * definition} = "Time at which the event ends."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
 			componentContext_lazy = () -> SystemEvent2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Time;
 			isDerived = false;
 			xmlTag = "EndTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndTime";
 			definition = "Time at which the event ends.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -301,15 +306,55 @@ public class SystemEvent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemEvent2.Type, com.tools20022.repository.msg.SystemEvent2.ScheduledTime, com.tools20022.repository.msg.SystemEvent2.EffectiveTime,
-						com.tools20022.repository.msg.SystemEvent2.StartTime, com.tools20022.repository.msg.SystemEvent2.EndTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemEvent2.mmType, com.tools20022.repository.msg.SystemEvent2.mmScheduledTime, com.tools20022.repository.msg.SystemEvent2.mmEffectiveTime,
+						com.tools20022.repository.msg.SystemEvent2.mmStartTime, com.tools20022.repository.msg.SystemEvent2.mmEndTime);
 				trace_lazy = () -> SystemEventInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemEvent2";
 				definition = "Provides details on an event occurring in a system, whether planned or unplanned as stipulated in the specifications of the system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemEventType2Choice getType() {
+		return type;
+	}
+
+	public void setType(SystemEventType2Choice type) {
+		this.type = type;
+	}
+
+	public ISODateTime getScheduledTime() {
+		return scheduledTime;
+	}
+
+	public void setScheduledTime(ISODateTime scheduledTime) {
+		this.scheduledTime = scheduledTime;
+	}
+
+	public ISODateTime getEffectiveTime() {
+		return effectiveTime;
+	}
+
+	public void setEffectiveTime(ISODateTime effectiveTime) {
+		this.effectiveTime = effectiveTime;
+	}
+
+	public ISODateTime getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(ISODateTime startTime) {
+		this.startTime = startTime;
+	}
+
+	public ISODateTime getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(ISODateTime endTime) {
+		this.endTime = endTime;
 	}
 }

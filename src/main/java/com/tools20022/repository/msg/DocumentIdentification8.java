@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification8#Identification
- * DocumentIdentification8.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification8#mmIdentification
+ * DocumentIdentification8.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification8#CreationDateTime
- * DocumentIdentification8.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification8#mmCreationDateTime
+ * DocumentIdentification8.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,179 +50,180 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#Identification
- * AgentCANotificationAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmIdentification
+ * AgentCANotificationAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01#Identification
- * AgentCANotificationCancellationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01#mmIdentification
+ * AgentCANotificationCancellationRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#Identification
- * AgentCANotificationStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#mmIdentification
+ * AgentCANotificationStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#AgentCANotificationAdviceIdentification
- * AgentCANotificationStatusAdviceV01.AgentCANotificationAdviceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#AgentCANotificationCancellationRequestIdentification
- * AgentCANotificationStatusAdviceV01.
- * AgentCANotificationCancellationRequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#Identification
- * AgentCAElectionAdviceV01.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#Identification
- * AgentCAElectionAmendmentRequestV01.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#AgentCAElectionAdviceIdentification
- * AgentCAElectionAmendmentRequestV01.AgentCAElectionAdviceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01#Identification
- * AgentCAElectionCancellationRequestV01.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01#AgentCAElectionAdviceIdentification
- * AgentCAElectionCancellationRequestV01.AgentCAElectionAdviceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#Identification
- * AgentCAElectionStatusAdviceV01.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#AgentCAElectionAdviceIdentification
- * AgentCAElectionStatusAdviceV01.AgentCAElectionAdviceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#AgentCAElectionCancellationRequestIdentification
- * AgentCAElectionStatusAdviceV01.
- * AgentCAElectionCancellationRequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#AgentCAElectionAmendmentRequestIdentification
- * AgentCAElectionStatusAdviceV01.AgentCAElectionAmendmentRequestIdentification}
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#mmAgentCANotificationAdviceIdentification
+ * AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#Identification
- * AgentCADistributionBreakdownAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#mmAgentCANotificationCancellationRequestIdentification
+ * AgentCANotificationStatusAdviceV01.
+ * mmAgentCANotificationCancellationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#Identification
- * AgentCAGlobalDistributionAuthorisationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmIdentification
+ * AgentCAElectionAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#Identification
- * AgentCAGlobalDistributionStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmIdentification
+ * AgentCAElectionAmendmentRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#AgentCAGlobalDistributionAuthorisationRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01#mmIdentification
+ * AgentCAElectionCancellationRequestV01.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAElectionCancellationRequestV01.mmAgentCAElectionAdviceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#mmIdentification
+ * AgentCAElectionStatusAdviceV01.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAElectionStatusAdviceV01.mmAgentCAElectionAdviceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#mmAgentCAElectionCancellationRequestIdentification
+ * AgentCAElectionStatusAdviceV01.
+ * mmAgentCAElectionCancellationRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#mmAgentCAElectionAmendmentRequestIdentification
+ * AgentCAElectionStatusAdviceV01.
+ * mmAgentCAElectionAmendmentRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#mmIdentification
+ * AgentCADistributionBreakdownAdviceV01.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#mmIdentification
+ * AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#mmIdentification
+ * AgentCAGlobalDistributionStatusAdviceV01.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#mmAgentCAGlobalDistributionAuthorisationRequestIdentification
  * AgentCAGlobalDistributionStatusAdviceV01.
- * AgentCAGlobalDistributionAuthorisationRequestIdentification}</li>
+ * mmAgentCAGlobalDistributionAuthorisationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#Identification
- * AgentCAMovementInstructionV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmIdentification
+ * AgentCAMovementInstructionV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#AgentCAElectionAdviceIdentification
- * AgentCAMovementInstructionV01.AgentCAElectionAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#Identification
- * AgentCAMovementCancellationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#mmIdentification
+ * AgentCAMovementCancellationRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#AgentCAMovementInstructionIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#mmAgentCAMovementInstructionIdentification
  * AgentCAMovementCancellationRequestV01.
- * AgentCAMovementInstructionIdentification}</li>
+ * mmAgentCAMovementInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#Identification
- * AgentCAMovementConfirmationV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmIdentification
+ * AgentCAMovementConfirmationV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAMovementInstructionIdentification
- * AgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAMovementInstructionIdentification
+ * AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAElectionStatusAdviceIdentification
- * AgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAElectionStatusAdviceIdentification
+ * AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#AgentCAGlobalDistributionStatusAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01#mmAgentCAGlobalDistributionStatusAdviceIdentification
  * AgentCAMovementConfirmationV01.
- * AgentCAGlobalDistributionStatusAdviceIdentification}</li>
+ * mmAgentCAGlobalDistributionStatusAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#Identification
- * AgentCAMovementStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#mmIdentification
+ * AgentCAMovementStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#AgentCAElectionStatusAdviceIdentification
- * AgentCAMovementStatusAdviceV01.AgentCAElectionStatusAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#mmAgentCAElectionStatusAdviceIdentification
+ * AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#AgentCAGlobalDistributionStatusAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#mmAgentCAGlobalDistributionStatusAdviceIdentification
  * AgentCAMovementStatusAdviceV01.
- * AgentCAGlobalDistributionStatusAdviceIdentification}</li>
+ * mmAgentCAGlobalDistributionStatusAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#AgentCAMovementInstructionIdentification
- * AgentCAMovementStatusAdviceV01.AgentCAMovementInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#mmAgentCAMovementInstructionIdentification
+ * AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#AgentCAMovementCancellationRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#mmAgentCAMovementCancellationRequestIdentification
  * AgentCAMovementStatusAdviceV01.
- * AgentCAMovementCancellationRequestIdentification}</li>
+ * mmAgentCAMovementCancellationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#Identification
- * AgentCAInformationAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmIdentification
+ * AgentCAInformationAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#AgentCAElectionAdviceIdentification
- * AgentCAInformationAdviceV01.AgentCAElectionAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01#Identification
- * AgentCAInformationStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01#mmIdentification
+ * AgentCAInformationStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01#AgentCAInformationAdviceIdentification
- * AgentCAInformationStatusAdviceV01.AgentCAInformationAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01#mmAgentCAInformationAdviceIdentification
+ * AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01#Identification
- * AgentCAStandingInstructionRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01#mmIdentification
+ * AgentCAStandingInstructionRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01#Identification
- * AgentCAStandingInstructionCancellationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01#mmIdentification
+ * AgentCAStandingInstructionCancellationRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01#AgentCAStandingInstructionRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01#mmAgentCAStandingInstructionRequestIdentification
  * AgentCAStandingInstructionCancellationRequestV01.
- * AgentCAStandingInstructionRequestIdentification}</li>
+ * mmAgentCAStandingInstructionRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#Identification
- * AgentCAStandingInstructionStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmIdentification
+ * AgentCAStandingInstructionStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#AgentCAStandingInstructionRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmAgentCAStandingInstructionRequestIdentification
  * AgentCAStandingInstructionStatusAdviceV01.
- * AgentCAStandingInstructionRequestIdentification}</li>
+ * mmAgentCAStandingInstructionRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#AgentCAStandingInstructionCancellationRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmAgentCAStandingInstructionCancellationRequestIdentification
  * AgentCAStandingInstructionStatusAdviceV01.
- * AgentCAStandingInstructionCancellationRequestIdentification}</li>
+ * mmAgentCAStandingInstructionCancellationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01#Identification
- * AgentCADeactivationInstructionV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01#mmIdentification
+ * AgentCADeactivationInstructionV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#Identification
- * AgentCADeactivationCancellationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#mmIdentification
+ * AgentCADeactivationCancellationRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#AgentCADeactivationInstructionIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#mmAgentCADeactivationInstructionIdentification
  * AgentCADeactivationCancellationRequestV01.
- * AgentCADeactivationInstructionIdentification}</li>
+ * mmAgentCADeactivationInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01#Identification
- * AgentCADeactivationStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01#mmIdentification
+ * AgentCADeactivationStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01#AgentCADeactivationInstructionIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01#mmAgentCADeactivationInstructionIdentification
  * AgentCADeactivationStatusAdviceV01.
- * AgentCADeactivationInstructionIdentification}</li>
+ * mmAgentCADeactivationInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01#AgentCADeactivationCancellationRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01#mmAgentCADeactivationCancellationRequestIdentification
  * AgentCADeactivationStatusAdviceV01.
- * AgentCADeactivationCancellationRequestIdentification}</li>
+ * mmAgentCADeactivationCancellationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#Identification
- * RegulatoryTransactionReportV02.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#mmIdentification
+ * RegulatoryTransactionReportV02.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#Identification
- * RegulatoryTransactionReportCancellationRequestV02.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmIdentification
+ * RegulatoryTransactionReportCancellationRequestV02.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#Identification
- * RegulatoryTransactionReportStatusV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmIdentification
+ * RegulatoryTransactionReportStatusV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01#Identification
- * RegulatoryTransactionReportCancellationStatusV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01#mmIdentification
+ * RegulatoryTransactionReportCancellationStatusV01.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -238,6 +239,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identification of the document.
 	 * <p>
@@ -250,8 +252,8 @@ public class DocumentIdentification8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -270,20 +272,21 @@ public class DocumentIdentification8 {
 	 * definition} = "Unique identification of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date/time of the creation of the document.
 	 * <p>
@@ -296,8 +299,8 @@ public class DocumentIdentification8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -316,17 +319,17 @@ public class DocumentIdentification8 {
 	 * definition} = "Date/time of the creation of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentIdentification8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date/time of the creation of the document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -334,46 +337,63 @@ public class DocumentIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification8.Identification, com.tools20022.repository.msg.DocumentIdentification8.CreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification8.mmIdentification, com.tools20022.repository.msg.DocumentIdentification8.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionAmendmentRequestIdentification, com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmAgentCAGlobalDistributionAuthorisationRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmAgentCAMovementInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification, com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification, com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.mmAgentCAStandingInstructionRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.mmIdentification, com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmAgentCADeactivationInstructionIdentification, com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmIdentification,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIdentification,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmIdentification);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.Identification, com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.Identification, com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.AgentCANotificationAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.AgentCANotificationCancellationRequestIdentification, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.Identification, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.AgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.Identification, com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.AgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.Identification, com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.AgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.AgentCAElectionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.AgentCAElectionAmendmentRequestIdentification, com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.Identification, com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.AgentCAGlobalDistributionAuthorisationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.Identification, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.AgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.Identification, com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.AgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.Identification, com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.AgentCAGlobalDistributionStatusAdviceIdentification, com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.AgentCAElectionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.AgentCAGlobalDistributionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.AgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.AgentCAMovementCancellationRequestIdentification, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.AgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.AgentCAInformationAdviceIdentification, com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.AgentCAStandingInstructionRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.Identification, com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.AgentCADeactivationInstructionIdentification, com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.AgentCADeactivationInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.AgentCADeactivationCancellationRequestIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.Identification,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.Identification, com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.Identification,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification8";
 				definition = "Identifies the document by providing a unique identification and optionally the date/time of the creation of the document.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

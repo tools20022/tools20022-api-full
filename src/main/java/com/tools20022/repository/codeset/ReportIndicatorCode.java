@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#Standard
- * ReportIndicatorCode.Standard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#mmStandard
+ * ReportIndicatorCode.mmStandard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#Proprietary
- * ReportIndicatorCode.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#mmProprietary
+ * ReportIndicatorCode.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class ReportIndicatorCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Standard = new MMCode() {
+	public static final MMCode mmStandard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
@@ -124,7 +124,7 @@ public class ReportIndicatorCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Proprietary = new MMCode() {
+	public static final MMCode mmProprietary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
@@ -137,12 +137,12 @@ public class ReportIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportIndicatorCode";
 				definition = "Specifies the nature of the report, ie, standard or proprietary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportIndicatorCode.Standard, com.tools20022.repository.codeset.ReportIndicatorCode.Proprietary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportIndicatorCode.mmStandard, com.tools20022.repository.codeset.ReportIndicatorCode.mmProprietary);
 				derivation_lazy = () -> Arrays.asList(ReportIndicator1Code.mmObject());
 			}
 		});

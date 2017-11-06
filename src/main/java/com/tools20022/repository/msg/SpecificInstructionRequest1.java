@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1#ParticipationRegistration
- * SpecificInstructionRequest1.ParticipationRegistration}</li>
+ * {@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1#mmParticipationRegistration
+ * SpecificInstructionRequest1.mmParticipationRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1#BlockingSecurities
- * SpecificInstructionRequest1.BlockingSecurities}</li>
+ * {@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1#mmBlockingSecurities
+ * SpecificInstructionRequest1.mmBlockingSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1#SecuritiesRegistration
- * SpecificInstructionRequest1.SecuritiesRegistration}</li>
+ * {@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1#mmSecuritiesRegistration
+ * SpecificInstructionRequest1.mmSecuritiesRegistration}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SpecificInstructionRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator participationRegistration;
 	/**
 	 * Request to register for participation to the meeting.
 	 * <p>
@@ -81,8 +82,8 @@ public class SpecificInstructionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#ParticipationRegistration
-	 * InstructionForMeeting.ParticipationRegistration}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmParticipationRegistration
+	 * InstructionForMeeting.mmParticipationRegistration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class SpecificInstructionRequest1 {
 	 * definition} = "Request to register for participation to the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ParticipationRegistration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParticipationRegistration = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmParticipationRegistration;
 			componentContext_lazy = () -> SpecificInstructionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.ParticipationRegistration;
 			isDerived = false;
 			xmlTag = "PrtcptnRegn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipationRegistration";
 			definition = "Request to register for participation to the meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator blockingSecurities;
 	/**
 	 * Request to block the securities
 	 * <p>
@@ -128,8 +130,8 @@ public class SpecificInstructionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#BlockingSecurities
-	 * InstructionForMeeting.BlockingSecurities}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmBlockingSecurities
+	 * InstructionForMeeting.mmBlockingSecurities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +150,21 @@ public class SpecificInstructionRequest1 {
 	 * definition} = "Request to block the securities"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BlockingSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBlockingSecurities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmBlockingSecurities;
 			componentContext_lazy = () -> SpecificInstructionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.BlockingSecurities;
 			isDerived = false;
 			xmlTag = "BlckgScties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockingSecurities";
 			definition = "Request to block the securities";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator securitiesRegistration;
 	/**
 	 * Request to register the securities for the meeting.
 	 * <p>
@@ -175,8 +178,8 @@ public class SpecificInstructionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#SecuritiesRegistration
-	 * InstructionForMeeting.SecuritiesRegistration}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmSecuritiesRegistration
+	 * InstructionForMeeting.mmSecuritiesRegistration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,17 +198,17 @@ public class SpecificInstructionRequest1 {
 	 * definition} = "Request to register the securities for the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesRegistration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesRegistration = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmSecuritiesRegistration;
 			componentContext_lazy = () -> SpecificInstructionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.SecuritiesRegistration;
 			isDerived = false;
 			xmlTag = "SctiesRegn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRegistration";
 			definition = "Request to register the securities for the meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -213,15 +216,39 @@ public class SpecificInstructionRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SpecificInstructionRequest1.ParticipationRegistration, com.tools20022.repository.msg.SpecificInstructionRequest1.BlockingSecurities,
-						com.tools20022.repository.msg.SpecificInstructionRequest1.SecuritiesRegistration);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SpecificInstructionRequest1.mmParticipationRegistration, com.tools20022.repository.msg.SpecificInstructionRequest1.mmBlockingSecurities,
+						com.tools20022.repository.msg.SpecificInstructionRequest1.mmSecuritiesRegistration);
 				trace_lazy = () -> InstructionForMeeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SpecificInstructionRequest1";
 				definition = "Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getParticipationRegistration() {
+		return participationRegistration;
+	}
+
+	public void setParticipationRegistration(YesNoIndicator participationRegistration) {
+		this.participationRegistration = participationRegistration;
+	}
+
+	public YesNoIndicator getBlockingSecurities() {
+		return blockingSecurities;
+	}
+
+	public void setBlockingSecurities(YesNoIndicator blockingSecurities) {
+		this.blockingSecurities = blockingSecurities;
+	}
+
+	public YesNoIndicator getSecuritiesRegistration() {
+		return securitiesRegistration;
+	}
+
+	public void setSecuritiesRegistration(YesNoIndicator securitiesRegistration) {
+		this.securitiesRegistration = securitiesRegistration;
 	}
 }

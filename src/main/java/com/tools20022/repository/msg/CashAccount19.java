@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount19#CreditDebitIndicator
- * CashAccount19.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount19#mmCreditDebitIndicator
+ * CashAccount19.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount19#AccountOwnerIdentification
- * CashAccount19.AccountOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount19#mmAccountOwnerIdentification
+ * CashAccount19.mmAccountOwnerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount19#AccountIdentification
- * CashAccount19.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount19#mmAccountIdentification
+ * CashAccount19.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccount19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies whether the value is a debit or credit.
 	 * <p>
@@ -80,8 +81,8 @@ public class CashAccount19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#CreditDebitIndicator
-	 * Balance.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
+	 * Balance.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class CashAccount19 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashAccount19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
 	 * Identification of the party that owns the account.
 	 * <p>
@@ -126,8 +128,8 @@ public class CashAccount19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +147,21 @@ public class CashAccount19 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashAccount19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected AccountIdentification2Choice accountIdentification;
 	/**
 	 * Identification of the cash account or the securities account from which
 	 * the cash account is derived.
@@ -173,8 +176,8 @@ public class CashAccount19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,17 +197,17 @@ public class CashAccount19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the cash account or the securities account from which the cash account is derived.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification2Choice.mmObject();
 		}
 	};
@@ -212,15 +215,39 @@ public class CashAccount19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount19.CreditDebitIndicator, com.tools20022.repository.msg.CashAccount19.AccountOwnerIdentification,
-						com.tools20022.repository.msg.CashAccount19.AccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount19.mmCreditDebitIndicator, com.tools20022.repository.msg.CashAccount19.mmAccountOwnerIdentification,
+						com.tools20022.repository.msg.CashAccount19.mmAccountIdentification);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccount19";
 				definition = "Provides information about the cash account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public PartyIdentification2Choice getAccountOwnerIdentification() {
+		return accountOwnerIdentification;
+	}
+
+	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+		this.accountOwnerIdentification = accountOwnerIdentification;
+	}
+
+	public AccountIdentification2Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification2Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
 	}
 }

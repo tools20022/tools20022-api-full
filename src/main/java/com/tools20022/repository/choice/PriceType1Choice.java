@@ -33,10 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PriceType1Choice#Market
- * PriceType1Choice.Market}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PriceType1Choice#Indicative
- * PriceType1Choice.Indicative}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PriceType1Choice#mmMarket
+ * PriceType1Choice.mmMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PriceType1Choice#mmIndicative
+ * PriceType1Choice.mmIndicative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Price2 market;
 	/**
 	 * Last reported price of a financial instrument in a market, determined by
 	 * supply and demand.
@@ -93,21 +95,22 @@ public class PriceType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Market = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarket = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PriceType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
+			componentContext_lazy = () -> PriceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mkt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
 			definition = "Last reported price of a financial instrument in a market, determined by supply and demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Price2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Price2.mmObject();
 		}
 	};
+	protected Price2 indicative;
 	/**
 	 * Estimated price, for valuation purposes.
 	 * <p>
@@ -138,33 +141,49 @@ public class PriceType1Choice {
 	 * definition} = "Estimated price, for valuation purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Indicative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndicative = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PriceType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
+			componentContext_lazy = () -> PriceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indctv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
 			definition = "Estimated price, for valuation purposes.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Price2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Price2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceType1Choice.Market, com.tools20022.repository.choice.PriceType1Choice.Indicative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceType1Choice.mmMarket, com.tools20022.repository.choice.PriceType1Choice.mmIndicative);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceType1Choice";
 				definition = "Choice of price type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Price2 getMarket() {
+		return market;
+	}
+
+	public void setMarket(Price2 market) {
+		this.market = market;
+	}
+
+	public Price2 getIndicative() {
+		return indicative;
+	}
+
+	public void setIndicative(Price2 indicative) {
+		this.indicative = indicative;
 	}
 }

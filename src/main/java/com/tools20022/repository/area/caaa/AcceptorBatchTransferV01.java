@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.Header3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -59,21 +60,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#Header
- * AcceptorBatchTransferV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#mmHeader
+ * AcceptorBatchTransferV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#DataSet
- * AcceptorBatchTransferV01.DataSet}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#mmDataSet
+ * AcceptorBatchTransferV01.mmDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#SecurityTrailer
- * AcceptorBatchTransferV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#mmSecurityTrailer
+ * AcceptorBatchTransferV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#identifier
- * AcceptorBatchTransferV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorBatchTransferV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header3 header;
 	/**
 	 * Batch capture message management information.
 	 * <p>
@@ -118,17 +118,18 @@ public class AcceptorBatchTransferV01 {
 	 * definition} = "Batch capture message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Batch capture message management information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header3.mmObject();
 		}
 	};
+	protected List<CardPaymentDataSet1> dataSet;
 	/**
 	 * Information related to the set of transaction.
 	 * <p>
@@ -152,7 +153,7 @@ public class AcceptorBatchTransferV01 {
 	 * definition} = "Information related to the set of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DataSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,6 +163,7 @@ public class AcceptorBatchTransferV01 {
 			complexType_lazy = () -> CardPaymentDataSet1.mmObject();
 		}
 	};
+	protected ContentInformationType1 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -186,42 +188,15 @@ public class AcceptorBatchTransferV01 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "011";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -236,11 +211,42 @@ public class AcceptorBatchTransferV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrBtchTrf";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.Header, com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.DataSet,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmDataSet,
+						com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "011";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header3 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header3 header) {
+		this.header = header;
+	}
+
+	public List<CardPaymentDataSet1> getDataSet() {
+		return dataSet;
+	}
+
+	public void setDataSet(List<CardPaymentDataSet1> dataSet) {
+		this.dataSet = dataSet;
+	}
+
+	public ContentInformationType1 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType1 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

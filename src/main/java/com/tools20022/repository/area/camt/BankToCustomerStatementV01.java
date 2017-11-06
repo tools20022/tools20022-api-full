@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.GroupHeader23;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -72,18 +73,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV01#GroupHeader
- * BankToCustomerStatementV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV01#mmGroupHeader
+ * BankToCustomerStatementV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV01#Statement
- * BankToCustomerStatementV01.Statement}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV01#mmStatement
+ * BankToCustomerStatementV01.mmStatement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV01#identifier
- * BankToCustomerStatementV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.053.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankToCustomerStatementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader23 groupHeader;
 	/**
 	 * Common information for the message.
 	 * <p>
@@ -129,17 +129,18 @@ public class BankToCustomerStatementV01 {
 	 * definition} = "Common information for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common information for the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader23.mmObject();
 		}
 	};
+	protected List<AccountStatement1> statement;
 	/**
 	 * Reports on booked entries and balances for a cash account.
 	 * <p>
@@ -164,7 +165,7 @@ public class BankToCustomerStatementV01 {
 	 * "Reports on booked entries and balances for a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Statement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Stmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,33 +173,6 @@ public class BankToCustomerStatementV01 {
 			definition = "Reports on booked entries and balances for a cash account.";
 			minOccurs = 1;
 			complexType_lazy = () -> AccountStatement1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "053"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "053";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -213,10 +187,33 @@ public class BankToCustomerStatementV01 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrStmtV01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV01.GroupHeader, com.tools20022.repository.area.camt.BankToCustomerStatementV01.Statement);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV01.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerStatementV01.mmStatement);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "053";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader23 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader23 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<AccountStatement1> getStatement() {
+		return statement;
+	}
+
+	public void setStatement(List<AccountStatement1> statement) {
+		this.statement = statement;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a report.
@@ -38,33 +39,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#AccountIdentification
- * ReportQuerySearchCriteria1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#mmAccountIdentification
+ * ReportQuerySearchCriteria1.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#Balance
- * ReportQuerySearchCriteria1.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#mmBalance
+ * ReportQuerySearchCriteria1.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#ReportName
- * ReportQuerySearchCriteria1.ReportName}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#mmReportName
+ * ReportQuerySearchCriteria1.mmReportName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#PartyIdentification
- * ReportQuerySearchCriteria1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#mmPartyIdentification
+ * ReportQuerySearchCriteria1.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#ResponsiblePartyIdentification
- * ReportQuerySearchCriteria1.ResponsiblePartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#mmResponsiblePartyIdentification
+ * ReportQuerySearchCriteria1.mmResponsiblePartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#DateSearch
- * ReportQuerySearchCriteria1.DateSearch}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#mmDateSearch
+ * ReportQuerySearchCriteria1.mmDateSearch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#ScheduledTime
- * ReportQuerySearchCriteria1.ScheduledTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria1#mmScheduledTime
+ * ReportQuerySearchCriteria1.mmScheduledTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportQuerySearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AccountIdentificationSearchCriteria2Choice> accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -108,7 +110,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -117,10 +119,11 @@ public class ReportQuerySearchCriteria1 {
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			minOccurs = 0;
-			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashBalance4> balance;
 	/**
 	 * Numerical representation of the net increases and decreases in an account
 	 * at a specific point in time. A cash balance is calculated from a sum of
@@ -151,7 +154,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -160,10 +163,11 @@ public class ReportQuerySearchCriteria1 {
 			name = "Balance";
 			definition = "Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.";
 			minOccurs = 0;
-			type_lazy = () -> CashBalance4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText reportName;
 	/**
 	 * Values of possible reports.
 	 * <p>
@@ -192,7 +196,7 @@ public class ReportQuerySearchCriteria1 {
 	 * definition} = "Values of possible reports."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -200,11 +204,12 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportName";
 			definition = "Values of possible reports.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice partyIdentification;
 	/**
 	 * Report owning party.
 	 * <p>
@@ -233,7 +238,7 @@ public class ReportQuerySearchCriteria1 {
 	 * definition} = "Report owning party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -241,11 +246,12 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Report owning party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice responsiblePartyIdentification;
 	/**
 	 * Responsible Party of the report owning party.
 	 * <p>
@@ -274,7 +280,7 @@ public class ReportQuerySearchCriteria1 {
 	 * definition} = "Responsible Party of the report owning party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -282,11 +288,12 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIdentification";
 			definition = "Responsible Party of the report owning party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected DateSearchChoice dateSearch;
 	/**
 	 * Date and time when the report was created.
 	 * <p>
@@ -315,7 +322,7 @@ public class ReportQuerySearchCriteria1 {
 	 * definition} = "Date and time when the report was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateSearch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -323,11 +330,12 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateSearch";
 			definition = "Date and time when the report was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected DateTimePeriodChoice scheduledTime;
 	/**
 	 * Time when the (business) event, which triggered the report, was
 	 * scheduled.
@@ -359,7 +367,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ScheduledTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -367,8 +375,8 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledTime";
 			definition = "Time when the (business) event, which triggered the report, was scheduled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
@@ -376,16 +384,72 @@ public class ReportQuerySearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportQuerySearchCriteria1.AccountIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.Balance,
-						com.tools20022.repository.msg.ReportQuerySearchCriteria1.ReportName, com.tools20022.repository.msg.ReportQuerySearchCriteria1.PartyIdentification,
-						com.tools20022.repository.msg.ReportQuerySearchCriteria1.ResponsiblePartyIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.DateSearch,
-						com.tools20022.repository.msg.ReportQuerySearchCriteria1.ScheduledTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmAccountIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmBalance,
+						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmReportName, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmPartyIdentification,
+						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmResponsiblePartyIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmDateSearch,
+						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmScheduledTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportQuerySearchCriteria1";
 				definition = "Defines the criteria used to search for a report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AccountIdentificationSearchCriteria2Choice> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<AccountIdentificationSearchCriteria2Choice> accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<CashBalance4> getBalance() {
+		return balance;
+	}
+
+	public void setBalance(List<com.tools20022.repository.msg.CashBalance4> balance) {
+		this.balance = balance;
+	}
+
+	public Max4AlphaNumericText getReportName() {
+		return reportName;
+	}
+
+	public void setReportName(Max4AlphaNumericText reportName) {
+		this.reportName = reportName;
+	}
+
+	public PartyIdentification71Choice getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(PartyIdentification71Choice partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public PartyIdentification71Choice getResponsiblePartyIdentification() {
+		return responsiblePartyIdentification;
+	}
+
+	public void setResponsiblePartyIdentification(PartyIdentification71Choice responsiblePartyIdentification) {
+		this.responsiblePartyIdentification = responsiblePartyIdentification;
+	}
+
+	public DateSearchChoice getDateSearch() {
+		return dateSearch;
+	}
+
+	public void setDateSearch(DateSearchChoice dateSearch) {
+		this.dateSearch = dateSearch;
+	}
+
+	public DateTimePeriodChoice getScheduledTime() {
+		return scheduledTime;
+	}
+
+	public void setScheduledTime(DateTimePeriodChoice scheduledTime) {
+		this.scheduledTime = scheduledTime;
 	}
 }

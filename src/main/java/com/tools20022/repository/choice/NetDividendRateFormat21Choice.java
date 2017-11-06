@@ -39,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#Amount
- * NetDividendRateFormat21Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#mmAmount
+ * NetDividendRateFormat21Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#AmountAndRateStatus
- * NetDividendRateFormat21Choice.AmountAndRateStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat21Choice.mmAmountAndRateStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#RateTypeAndAmountAndRateStatus
- * NetDividendRateFormat21Choice.RateTypeAndAmountAndRateStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#mmRateTypeAndAmountAndRateStatus
+ * NetDividendRateFormat21Choice.mmRateTypeAndAmountAndRateStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#NotSpecifiedRate
- * NetDividendRateFormat21Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#mmNotSpecifiedRate
+ * NetDividendRateFormat21Choice.mmNotSpecifiedRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetDividendRateFormat21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Number of monetary units specified in a currency.
 	 * <p>
@@ -85,8 +86,8 @@ public class NetDividendRateFormat21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#NetDividend
-	 * Dividend.NetDividend}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmNetDividend
+	 * Dividend.mmNetDividend}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class NetDividendRateFormat21Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmNetDividend;
 			componentContext_lazy = () -> NetDividendRateFormat21Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.NetDividend;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected AmountAndRateStatus1 amountAndRateStatus;
 	/**
 	 * Specifies an amount and a rate status.
 	 * <p>
@@ -150,21 +152,22 @@ public class NetDividendRateFormat21Choice {
 	 * definition} = "Specifies an amount and a rate status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NetDividendRateFormat21Choice.mmObject();
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
+			componentContext_lazy = () -> NetDividendRateFormat21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtAndRateSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndRateStatus";
 			definition = "Specifies an amount and a rate status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndRateStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountAndRateStatus1.mmObject();
 		}
 	};
+	protected RateTypeAndAmountAndStatus25 rateTypeAndAmountAndRateStatus;
 	/**
 	 * Specifies different formats for the net dividend rate.
 	 * <p>
@@ -192,7 +195,7 @@ public class NetDividendRateFormat21Choice {
 	 * definition} = "Specifies different formats for the net dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NetDividendRateFormat21Choice.mmObject();
 			isDerived = false;
@@ -200,12 +203,13 @@ public class NetDividendRateFormat21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the net dividend rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateTypeAndAmountAndStatus25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateTypeAndAmountAndStatus25.mmObject();
 		}
 	};
+	protected RateValueType7Code notSpecifiedRate;
 	/**
 	 * Value of the rate not specified.
 	 * <p>
@@ -234,7 +238,7 @@ public class NetDividendRateFormat21Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetDividendRateFormat21Choice.mmObject();
 			isDerived = false;
@@ -242,8 +246,8 @@ public class NetDividendRateFormat21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
 		}
 	};
@@ -251,15 +255,47 @@ public class NetDividendRateFormat21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NetDividendRateFormat21Choice.Amount, com.tools20022.repository.choice.NetDividendRateFormat21Choice.AmountAndRateStatus,
-						com.tools20022.repository.choice.NetDividendRateFormat21Choice.RateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.NetDividendRateFormat21Choice.NotSpecifiedRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NetDividendRateFormat21Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat21Choice.mmAmountAndRateStatus,
+						com.tools20022.repository.choice.NetDividendRateFormat21Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.NetDividendRateFormat21Choice.mmNotSpecifiedRate);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRateFormat21Choice";
 				definition = "Choice between an amount or an unspecified rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public AmountAndRateStatus1 getAmountAndRateStatus() {
+		return amountAndRateStatus;
+	}
+
+	public void setAmountAndRateStatus(AmountAndRateStatus1 amountAndRateStatus) {
+		this.amountAndRateStatus = amountAndRateStatus;
+	}
+
+	public RateTypeAndAmountAndStatus25 getRateTypeAndAmountAndRateStatus() {
+		return rateTypeAndAmountAndRateStatus;
+	}
+
+	public void setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus25 rateTypeAndAmountAndRateStatus) {
+		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
+	}
+
+	public RateValueType7Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateValueType7Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
 	}
 }

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.entity.BeneficialOwner;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Account and holding of the next sub-level (Level 6).
@@ -35,28 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#AccountIdentification
- * AccountSubLevel16.AccountIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel16#AccountOwner
- * AccountSubLevel16.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmAccountIdentification
+ * AccountSubLevel16.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#AccountServicer
- * AccountSubLevel16.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmAccountOwner
+ * AccountSubLevel16.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#BeneficialOwner
- * AccountSubLevel16.BeneficialOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmAccountServicer
+ * AccountSubLevel16.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#BalanceDetails
- * AccountSubLevel16.BalanceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmBeneficialOwner
+ * AccountSubLevel16.mmBeneficialOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#AccountSubLevel7
- * AccountSubLevel16.AccountSubLevel7}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmBalanceDetails
+ * AccountSubLevel16.mmBalanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#AccountSubLevel7Difference
- * AccountSubLevel16.AccountSubLevel7Difference}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmAccountSubLevel7
+ * AccountSubLevel16.mmAccountSubLevel7}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#SupplementaryData
- * AccountSubLevel16.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmAccountSubLevel7Difference
+ * AccountSubLevel16.mmAccountSubLevel7Difference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountSubLevel16#mmSupplementaryData
+ * AccountSubLevel16.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountSubLevel16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount19 accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the sub-account between the
 	 * account owner and the account servicer.
@@ -95,8 +99,8 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,26 +122,27 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#AccountIdentification
-	 * AccountSubLevel6.AccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmAccountIdentification
+	 * AccountSubLevel6.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> AccountSubLevel16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the sub-account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.AccountIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.mmAccountIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount19.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
 		}
 	};
+	protected PartyIdentification100 accountOwner;
 	/**
 	 * Party that legally owns the sub-account.
 	 * <p>
@@ -151,8 +156,8 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,25 +177,26 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#AccountOwner
-	 * AccountSubLevel6.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmAccountOwner
+	 * AccountSubLevel6.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AccountSubLevel16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the sub-account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.AccountOwner;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.mmAccountOwner;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification100.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 		}
 	};
+	protected PartyIdentification100 accountServicer;
 	/**
 	 * Party that manages the sub-account on behalf of the account owner, that
 	 * is manages the registration and booking of entries on the account,
@@ -207,8 +213,8 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,25 +236,26 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#AccountServicer
-	 * AccountSubLevel6.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmAccountServicer
+	 * AccountSubLevel6.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AccountSubLevel16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the sub-account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.AccountServicer;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.mmAccountServicer;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification100.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner;
 	/**
 	 * Individual or entity that is ultimately entitled to the benefit of income
 	 * and rights in a financial instrument, as opposed to a nominal or legal
@@ -285,25 +292,26 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#BeneficialOwner
-	 * AccountSubLevel6.BeneficialOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmBeneficialOwner
+	 * AccountSubLevel6.mmBeneficialOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BeneficialOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficialOwner = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
 			componentContext_lazy = () -> AccountSubLevel16.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwner";
 			definition = "Individual or entity that is ultimately entitled to the benefit of income and rights in a financial instrument, as opposed to a nominal or legal owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.BeneficialOwner;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.mmBeneficialOwner;
 			minOccurs = 0;
-			type_lazy = () -> BeneficialOwner2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AggregateHoldingBalance3> balanceDetails;
 	/**
 	 * Report on the net position of a financial instrument on the sub-account
 	 * (sub-account level 6), for a certain date. The agent, for example, a
@@ -340,20 +348,21 @@ public class AccountSubLevel16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountSubLevel16.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> AccountSubLevel16.mmObject();
 			isDerived = false;
 			xmlTag = "BalDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceDetails";
 			definition = "Report on the net position of a financial instrument on the sub-account (sub-account level 6),  for a certain date. The agent, for example, a trade intermediary, may also be specified.";
 			minOccurs = 0;
-			type_lazy = () -> AggregateHoldingBalance3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AccountSubLevel17> accountSubLevel7;
 	/**
 	 * Holdings of level 7.
 	 * <p>
@@ -386,25 +395,26 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#AccountSubLevel7
-	 * AccountSubLevel6.AccountSubLevel7}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmAccountSubLevel7
+	 * AccountSubLevel6.mmAccountSubLevel7}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountSubLevel7 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountSubLevel7 = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountSubLevel16.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> AccountSubLevel16.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl7";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSubLevel7";
 			definition = "Holdings of level 7.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.AccountSubLevel7;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.mmAccountSubLevel7;
 			minOccurs = 0;
-			type_lazy = () -> AccountSubLevel17.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountSubLevel17.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel7Difference;
 	/**
 	 * Difference in holdings between the sub-account at level 6 and the
 	 * sub-accounts of level 7.
@@ -441,25 +451,26 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#AccountSubLevel7Difference
-	 * AccountSubLevel6.AccountSubLevel7Difference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmAccountSubLevel7Difference
+	 * AccountSubLevel6.mmAccountSubLevel7Difference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountSubLevel7Difference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountSubLevel7Difference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountSubLevel16.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> AccountSubLevel16.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl7Diff";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSubLevel7Difference";
 			definition = "Difference in holdings between the sub-account at level 6 and the sub-accounts of level 7.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.AccountSubLevel7Difference;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.mmAccountSubLevel7Difference;
 			minOccurs = 0;
-			type_lazy = () -> AggregateHoldingBalance2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -490,11 +501,11 @@ public class AccountSubLevel16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#SupplementaryData
-	 * AccountSubLevel6.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmSupplementaryData
+	 * AccountSubLevel6.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountSubLevel16.mmObject();
 			isDerived = false;
@@ -502,21 +513,21 @@ public class AccountSubLevel16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel6.mmSupplementaryData;
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountSubLevel16.AccountIdentification, com.tools20022.repository.msg.AccountSubLevel16.AccountOwner,
-						com.tools20022.repository.msg.AccountSubLevel16.AccountServicer, com.tools20022.repository.msg.AccountSubLevel16.BeneficialOwner, com.tools20022.repository.msg.AccountSubLevel16.BalanceDetails,
-						com.tools20022.repository.msg.AccountSubLevel16.AccountSubLevel7, com.tools20022.repository.msg.AccountSubLevel16.AccountSubLevel7Difference, com.tools20022.repository.msg.AccountSubLevel16.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountSubLevel16.mmAccountIdentification, com.tools20022.repository.msg.AccountSubLevel16.mmAccountOwner,
+						com.tools20022.repository.msg.AccountSubLevel16.mmAccountServicer, com.tools20022.repository.msg.AccountSubLevel16.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel16.mmBalanceDetails,
+						com.tools20022.repository.msg.AccountSubLevel16.mmAccountSubLevel7, com.tools20022.repository.msg.AccountSubLevel16.mmAccountSubLevel7Difference, com.tools20022.repository.msg.AccountSubLevel16.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountSubLevel16";
 				definition = "Account and holding of the next sub-level (Level 6).";
@@ -524,5 +535,69 @@ public class AccountSubLevel16 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount19 getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public PartyIdentification100 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.PartyIdentification100 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public PartyIdentification100 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(com.tools20022.repository.msg.PartyIdentification100 accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public List<BeneficialOwner2> getBeneficialOwner() {
+		return beneficialOwner;
+	}
+
+	public void setBeneficialOwner(List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner) {
+		this.beneficialOwner = beneficialOwner;
+	}
+
+	public List<AggregateHoldingBalance3> getBalanceDetails() {
+		return balanceDetails;
+	}
+
+	public void setBalanceDetails(List<com.tools20022.repository.msg.AggregateHoldingBalance3> balanceDetails) {
+		this.balanceDetails = balanceDetails;
+	}
+
+	public List<AccountSubLevel17> getAccountSubLevel7() {
+		return accountSubLevel7;
+	}
+
+	public void setAccountSubLevel7(List<com.tools20022.repository.msg.AccountSubLevel17> accountSubLevel7) {
+		this.accountSubLevel7 = accountSubLevel7;
+	}
+
+	public List<AggregateHoldingBalance2> getAccountSubLevel7Difference() {
+		return accountSubLevel7Difference;
+	}
+
+	public void setAccountSubLevel7Difference(List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel7Difference) {
+		this.accountSubLevel7Difference = accountSubLevel7Difference;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

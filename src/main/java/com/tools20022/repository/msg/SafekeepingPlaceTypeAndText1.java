@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1#SafekeepingPlaceType
- * SafekeepingPlaceTypeAndText1.SafekeepingPlaceType}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1#mmSafekeepingPlaceType
+ * SafekeepingPlaceTypeAndText1.mmSafekeepingPlaceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1#Identification
- * SafekeepingPlaceTypeAndText1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1#mmIdentification
+ * SafekeepingPlaceTypeAndText1.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafekeepingPlaceTypeAndText1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlace3Code safekeepingPlaceType;
 	/**
 	 * Place of safekeeping as a code.
 	 * <p>
@@ -79,8 +80,8 @@ public class SafekeepingPlaceTypeAndText1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#SafekeepingPlaceType
-	 * SafekeepingPlace.SafekeepingPlaceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmSafekeepingPlaceType
+	 * SafekeepingPlace.mmSafekeepingPlaceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class SafekeepingPlaceTypeAndText1 {
 	 * definition} = "Place of safekeeping as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingPlaceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingPlaceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmSafekeepingPlaceType;
 			componentContext_lazy = () -> SafekeepingPlaceTypeAndText1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.SafekeepingPlaceType;
 			isDerived = false;
 			xmlTag = "SfkpgPlcTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceType";
 			definition = "Place of safekeeping as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlace3Code.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Place of safekeeping.
 	 * <p>
@@ -125,8 +127,8 @@ public class SafekeepingPlaceTypeAndText1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class SafekeepingPlaceTypeAndText1 {
 	 * definition} = "Place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SafekeepingPlaceTypeAndText1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Place of safekeeping.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class SafekeepingPlaceTypeAndText1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.SafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.Identification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.mmSafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.mmIdentification);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceTypeAndText1";
 				definition = "Identification of the place of safekeeping expressed as a code and a narrative description.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlace3Code getSafekeepingPlaceType() {
+		return safekeepingPlaceType;
+	}
+
+	public void setSafekeepingPlaceType(SafekeepingPlace3Code safekeepingPlaceType) {
+		this.safekeepingPlaceType = safekeepingPlaceType;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

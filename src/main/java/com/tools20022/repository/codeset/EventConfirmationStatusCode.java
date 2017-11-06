@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventConfirmationStatusCode#Confirmed
- * EventConfirmationStatusCode.Confirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventConfirmationStatusCode#mmConfirmed
+ * EventConfirmationStatusCode.mmConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventConfirmationStatusCode#Unconfirmed
- * EventConfirmationStatusCode.Unconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventConfirmationStatusCode#mmUnconfirmed
+ * EventConfirmationStatusCode.mmUnconfirmed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class EventConfirmationStatusCode {
 	 * definition} = "Occurrence of the event has been confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmed = new MMCode() {
+	public static final MMCode mmConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Confirmed";
@@ -120,7 +120,7 @@ public class EventConfirmationStatusCode {
 	 * definition} = "Occurrence of the event has not been confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unconfirmed = new MMCode() {
+	public static final MMCode mmUnconfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Unconfirmed";
@@ -133,12 +133,12 @@ public class EventConfirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CONF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventConfirmationStatusCode";
 				definition = "Indicates the status of the occurrence of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventConfirmationStatusCode.Confirmed, com.tools20022.repository.codeset.EventConfirmationStatusCode.Unconfirmed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventConfirmationStatusCode.mmConfirmed, com.tools20022.repository.codeset.EventConfirmationStatusCode.mmUnconfirmed);
 				derivation_lazy = () -> Arrays.asList(EventConfirmationStatus1Code.mmObject());
 			}
 		});

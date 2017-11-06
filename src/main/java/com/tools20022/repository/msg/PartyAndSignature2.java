@@ -32,10 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyAndSignature2#Party
- * PartyAndSignature2.Party}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyAndSignature2#Signature
- * PartyAndSignature2.Signature}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyAndSignature2#mmParty
+ * PartyAndSignature2.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyAndSignature2#mmSignature
+ * PartyAndSignature2.mmSignature}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,117 +46,117 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02#DigitalSignature
- * AccountAdditionalInformationRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02#mmDigitalSignature
+ * AccountAdditionalInformationRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02#DigitalSignature
- * AccountClosingAdditionalInformationRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02#mmDigitalSignature
+ * AccountClosingAdditionalInformationRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02#DigitalSignature
- * AccountClosingAmendmentRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02#mmDigitalSignature
+ * AccountClosingAmendmentRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#DigitalSignature
- * AccountClosingRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#mmDigitalSignature
+ * AccountClosingRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#DigitalSignature
- * AccountExcludedMandateMaintenanceAmendmentRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#mmDigitalSignature
+ * AccountExcludedMandateMaintenanceAmendmentRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#DigitalSignature
- * AccountExcludedMandateMaintenanceRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#mmDigitalSignature
+ * AccountExcludedMandateMaintenanceRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#DigitalSignature
- * AccountMandateMaintenanceAmendmentRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#mmDigitalSignature
+ * AccountMandateMaintenanceAmendmentRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#DigitalSignature
- * AccountMandateMaintenanceRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#mmDigitalSignature
+ * AccountMandateMaintenanceRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02#DigitalSignature
- * AccountOpeningAdditionalInformationRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02#mmDigitalSignature
+ * AccountOpeningAdditionalInformationRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#DigitalSignature
- * AccountOpeningAmendmentRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmDigitalSignature
+ * AccountOpeningAmendmentRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#DigitalSignature
- * AccountOpeningRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#mmDigitalSignature
+ * AccountOpeningRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV02#DigitalSignature
- * AccountReportRequestV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV02#mmDigitalSignature
+ * AccountReportRequestV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportV02#DigitalSignature
- * AccountReportV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportV02#mmDigitalSignature
+ * AccountReportV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02#DigitalSignature
- * AccountRequestAcknowledgementV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02#mmDigitalSignature
+ * AccountRequestAcknowledgementV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV02#DigitalSignature
- * AccountRequestRejectionV02.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV02#mmDigitalSignature
+ * AccountRequestRejectionV02.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#DigitalSignature
- * DemandRefusalNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#mmDigitalSignature
+ * DemandRefusalNotificationV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01#DigitalSignature
- * DemandWithdrawalNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01#mmDigitalSignature
+ * DemandWithdrawalNotificationV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayRequestV01#DigitalSignature
- * ExtendOrPayRequestV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayRequestV01#mmDigitalSignature
+ * ExtendOrPayRequestV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#DigitalSignature
- * ExtendOrPayResponseV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#mmDigitalSignature
+ * ExtendOrPayResponseV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#DigitalSignature
- * TradeStatusReportV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#mmDigitalSignature
+ * TradeStatusReportV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#DigitalSignature
- * UndertakingAmendmentAdviceV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#mmDigitalSignature
+ * UndertakingAmendmentAdviceV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#DigitalSignature
- * UndertakingAmendmentNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#mmDigitalSignature
+ * UndertakingAmendmentNotificationV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01#DigitalSignature
- * UndertakingAmendmentRequestV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01#mmDigitalSignature
+ * UndertakingAmendmentRequestV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01#DigitalSignature
- * UndertakingAmendmentResponseNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01#mmDigitalSignature
+ * UndertakingAmendmentResponseNotificationV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01#DigitalSignature
- * UndertakingAmendmentResponseV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01#mmDigitalSignature
+ * UndertakingAmendmentResponseV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentV01#DigitalSignature
- * UndertakingAmendmentV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentV01#mmDigitalSignature
+ * UndertakingAmendmentV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#DigitalSignature
- * UndertakingApplicationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#mmDigitalSignature
+ * UndertakingApplicationV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingDemandV01#DigitalSignature
- * UndertakingDemandV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingDemandV01#mmDigitalSignature
+ * UndertakingDemandV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01#DigitalSignature
- * UndertakingIssuanceAdviceV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01#mmDigitalSignature
+ * UndertakingIssuanceAdviceV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01#DigitalSignature
- * UndertakingIssuanceNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01#mmDigitalSignature
+ * UndertakingIssuanceNotificationV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#DigitalSignature
- * UndertakingIssuanceV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#mmDigitalSignature
+ * UndertakingIssuanceV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#DigitalSignature
- * UndertakingNonExtensionNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#mmDigitalSignature
+ * UndertakingNonExtensionNotificationV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01#DigitalSignature
- * UndertakingNonExtensionRequestV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01#mmDigitalSignature
+ * UndertakingNonExtensionRequestV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#DigitalSignature
- * UndertakingStatusReportV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#mmDigitalSignature
+ * UndertakingStatusReportV01.mmDigitalSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01#DigitalSignature
- * UndertakingTerminationNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01#mmDigitalSignature
+ * UndertakingTerminationNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -170,6 +170,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyAndSignature2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 party;
 	/**
 	 * Entity involved in an activity.
 	 * <p>
@@ -181,8 +182,8 @@ public class PartyAndSignature2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,21 +202,22 @@ public class PartyAndSignature2 {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> PartyAndSignature2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Entity involved in an activity.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected ProprietaryData3 signature;
 	/**
 	 * Signature of a party.
 	 * <p>
@@ -247,51 +249,67 @@ public class PartyAndSignature2 {
 	 * definition} = "Signature of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Signature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignature = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyAndSignature2.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicSignature.mmObject();
+			componentContext_lazy = () -> PartyAndSignature2.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Signature of a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryData3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryData3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndSignature2.Party, com.tools20022.repository.msg.PartyAndSignature2.Signature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndSignature2.mmParty, com.tools20022.repository.msg.PartyAndSignature2.mmSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountReportRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountReportV02.mmDigitalSignature,
+						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.ExtendOrPayRequestV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.TradeStatusReportV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentV01.mmDigitalSignature, com.tools20022.repository.area.tsin.UndertakingApplicationV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.UndertakingDemandV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.mmDigitalSignature,
+						com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.mmDigitalSignature);
 				trace_lazy = () -> ElectronicSignature.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02.DigitalSignature,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.DigitalSignature,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.DigitalSignature,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.DigitalSignature,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.DigitalSignature,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.DigitalSignature,
-						com.tools20022.repository.area.acmt.AccountReportRequestV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountReportV02.DigitalSignature,
-						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02.DigitalSignature, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.DigitalSignature,
-						com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.DigitalSignature, com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.ExtendOrPayRequestV01.DigitalSignature, com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.TradeStatusReportV01.DigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.DigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01.DigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentV01.DigitalSignature, com.tools20022.repository.area.tsin.UndertakingApplicationV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingDemandV01.DigitalSignature, com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01.DigitalSignature, com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.DigitalSignature, com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.DigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.DigitalSignature, com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.DigitalSignature);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyAndSignature2";
 				definition = "Entity involved in an activity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.msg.PartyIdentification43 party) {
+		this.party = party;
+	}
+
+	public ProprietaryData3 getSignature() {
+		return signature;
+	}
+
+	public void setSignature(com.tools20022.repository.msg.ProprietaryData3 signature) {
+		this.signature = signature;
 	}
 }

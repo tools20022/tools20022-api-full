@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The MiFIRCurrencyCodeReport message provides the details the ISO 4217
@@ -56,18 +57,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01#CurrencyData
- * FinancialInstrumentReportingCurrencyCodeReportV01.CurrencyData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01#mmCurrencyData
+ * FinancialInstrumentReportingCurrencyCodeReportV01.mmCurrencyData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01#SupplementaryData
- * FinancialInstrumentReportingCurrencyCodeReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01#mmSupplementaryData
+ * FinancialInstrumentReportingCurrencyCodeReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01#identifier
- * FinancialInstrumentReportingCurrencyCodeReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.048.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<SecuritiesCurrencyIdentification2> currencyData;
 	/**
 	 * Report all currencies and countries which use that currency.
 	 * <p>
@@ -107,7 +107,7 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 	 * "Report all currencies and countries which use that currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CurrencyData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCurrencyData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CcyData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,6 +117,7 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 			complexType_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -143,7 +144,7 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,33 +152,6 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "048"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "048";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -191,11 +165,34 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgCcyCdRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.CurrencyData,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.mmCurrencyData,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "048";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesCurrencyIdentification2> getCurrencyData() {
+		return currencyData;
+	}
+
+	public void setCurrencyData(List<SecuritiesCurrencyIdentification2> currencyData) {
+		this.currencyData = currencyData;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

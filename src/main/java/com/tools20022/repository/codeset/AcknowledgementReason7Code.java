@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#NotStraightThroughProcessing
- * AcknowledgementReason7Code.NotStraightThroughProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#mmNotStraightThroughProcessing
+ * AcknowledgementReason7Code.mmNotStraightThroughProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#Other
- * AcknowledgementReason7Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#mmOther
+ * AcknowledgementReason7Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +76,7 @@ public class AcknowledgementReason7Code extends AcknowledgementReasonCode {
 	 * name} = "NotStraightThroughProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotStraightThroughProcessing = new MMCode() {
+	public static final MMCode mmNotStraightThroughProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotStraightThroughProcessing";
@@ -99,7 +99,7 @@ public class AcknowledgementReason7Code extends AcknowledgementReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -110,11 +110,11 @@ public class AcknowledgementReason7Code extends AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason7Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason7Code.NotStraightThroughProcessing, com.tools20022.repository.codeset.AcknowledgementReason7Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason7Code.mmNotStraightThroughProcessing, com.tools20022.repository.codeset.AcknowledgementReason7Code.mmOther);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
 			}
 		});

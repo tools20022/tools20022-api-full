@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingUltimateObligor;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the advice for the issuance of an undertaking.
@@ -38,22 +39,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#ApplicantReferenceNumber
- * UndertakingAdvice2.ApplicantReferenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingAdvice2#Obligor
- * UndertakingAdvice2.Obligor}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#mmApplicantReferenceNumber
+ * UndertakingAdvice2.mmApplicantReferenceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingAdvice2#mmObligor
+ * UndertakingAdvice2.mmObligor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#UndertakingIssuanceMessage
- * UndertakingAdvice2.UndertakingIssuanceMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#mmUndertakingIssuanceMessage
+ * UndertakingAdvice2.mmUndertakingIssuanceMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#OriginalIssuedMedium
- * UndertakingAdvice2.OriginalIssuedMedium}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#mmOriginalIssuedMedium
+ * UndertakingAdvice2.mmOriginalIssuedMedium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#EnclosedFile
- * UndertakingAdvice2.EnclosedFile}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#mmEnclosedFile
+ * UndertakingAdvice2.mmEnclosedFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#AdditionalInformation
- * UndertakingAdvice2.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice2#mmAdditionalInformation
+ * UndertakingAdvice2.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,15 +65,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01#UndertakingIssuanceNotificationDetails
- * UndertakingIssuanceNotificationV01.UndertakingIssuanceNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01#mmUndertakingIssuanceNotificationDetails
+ * UndertakingIssuanceNotificationV01.mmUndertakingIssuanceNotificationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAdvice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text applicantReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the applicant to the
 	 * undertaking.
@@ -116,7 +118,7 @@ public class UndertakingAdvice2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicantReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicantReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
 			isDerived = false;
@@ -124,11 +126,12 @@ public class UndertakingAdvice2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicantReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the applicant to the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification43 obligor;
 	/**
 	 * Party obligated to reimburse the issuer.
 	 * <p>
@@ -160,21 +163,22 @@ public class UndertakingAdvice2 {
 	 * definition} = "Party obligated to reimburse the issuer. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Obligor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmObligor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingUltimateObligor.mmObject();
+			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
 			isDerived = false;
 			xmlTag = "Oblgr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligor";
 			definition = "Party obligated to reimburse the issuer. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected UndertakingIssuanceMessage undertakingIssuanceMessage;
 	/**
 	 * Contents of the related UndertakingIssuance message.
 	 * <p>
@@ -206,21 +210,22 @@ public class UndertakingAdvice2 {
 	 * definition} = "Contents of the related UndertakingIssuance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIssuanceMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIssuanceMessage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
+			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgIssncMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuanceMessage";
 			definition = "Contents of the related UndertakingIssuance message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingIssuanceMessage.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingIssuanceMessage.mmObject();
 		}
 	};
+	protected PresentationMedium1Code originalIssuedMedium;
 	/**
 	 * Medium used to issue the original undertaking.
 	 * <p>
@@ -234,8 +239,8 @@ public class UndertakingAdvice2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#Medium
-	 * Presentation.Medium}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmMedium
+	 * Presentation.mmMedium}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +259,21 @@ public class UndertakingAdvice2 {
 	 * definition} = "Medium used to issue the original undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalIssuedMedium = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalIssuedMedium = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmMedium;
 			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.Medium;
 			isDerived = false;
 			xmlTag = "OrgnlIssdMdm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalIssuedMedium";
 			definition = "Medium used to issue the original undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PresentationMedium1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
 	/**
 	 * Document or template enclosed in the notification.
 	 * <p>
@@ -278,8 +284,8 @@ public class UndertakingAdvice2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#SpecifiedDocument
-	 * Undertaking.SpecifiedDocument}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmSpecifiedDocument
+	 * Undertaking.mmSpecifiedDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -298,20 +304,21 @@ public class UndertakingAdvice2 {
 	 * definition} = "Document or template enclosed in the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EnclosedFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmSpecifiedDocument;
 			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.SpecifiedDocument;
 			isDerived = false;
 			xmlTag = "NclsdFile";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnclosedFile";
 			definition = "Document or template enclosed in the notification.";
 			minOccurs = 0;
-			type_lazy = () -> Document9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the undertaking notification.
 	 * <p>
@@ -340,7 +347,7 @@ public class UndertakingAdvice2 {
 	 * "Additional information related to the undertaking notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingAdvice2.mmObject();
 			isDerived = false;
@@ -348,8 +355,8 @@ public class UndertakingAdvice2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the undertaking notification.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -357,17 +364,65 @@ public class UndertakingAdvice2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAdvice2.ApplicantReferenceNumber, com.tools20022.repository.msg.UndertakingAdvice2.Obligor,
-						com.tools20022.repository.msg.UndertakingAdvice2.UndertakingIssuanceMessage, com.tools20022.repository.msg.UndertakingAdvice2.OriginalIssuedMedium, com.tools20022.repository.msg.UndertakingAdvice2.EnclosedFile,
-						com.tools20022.repository.msg.UndertakingAdvice2.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAdvice2.mmApplicantReferenceNumber, com.tools20022.repository.msg.UndertakingAdvice2.mmObligor,
+						com.tools20022.repository.msg.UndertakingAdvice2.mmUndertakingIssuanceMessage, com.tools20022.repository.msg.UndertakingAdvice2.mmOriginalIssuedMedium,
+						com.tools20022.repository.msg.UndertakingAdvice2.mmEnclosedFile, com.tools20022.repository.msg.UndertakingAdvice2.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01.mmUndertakingIssuanceNotificationDetails);
 				trace_lazy = () -> Undertaking.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01.UndertakingIssuanceNotificationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAdvice2";
 				definition = "Details of the advice for the issuance of an undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getApplicantReferenceNumber() {
+		return applicantReferenceNumber;
+	}
+
+	public void setApplicantReferenceNumber(Max35Text applicantReferenceNumber) {
+		this.applicantReferenceNumber = applicantReferenceNumber;
+	}
+
+	public PartyIdentification43 getObligor() {
+		return obligor;
+	}
+
+	public void setObligor(com.tools20022.repository.msg.PartyIdentification43 obligor) {
+		this.obligor = obligor;
+	}
+
+	public UndertakingIssuanceMessage getUndertakingIssuanceMessage() {
+		return undertakingIssuanceMessage;
+	}
+
+	public void setUndertakingIssuanceMessage(com.tools20022.repository.msg.UndertakingIssuanceMessage undertakingIssuanceMessage) {
+		this.undertakingIssuanceMessage = undertakingIssuanceMessage;
+	}
+
+	public PresentationMedium1Code getOriginalIssuedMedium() {
+		return originalIssuedMedium;
+	}
+
+	public void setOriginalIssuedMedium(PresentationMedium1Code originalIssuedMedium) {
+		this.originalIssuedMedium = originalIssuedMedium;
+	}
+
+	public List<Document9> getEnclosedFile() {
+		return enclosedFile;
+	}
+
+	public void setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+		this.enclosedFile = enclosedFile;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

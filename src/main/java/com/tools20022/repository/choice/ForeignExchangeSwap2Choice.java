@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ReportPeriodActivity1Code;
 import com.tools20022.repository.msg.ForeignExchangeSwapTransaction2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between a reason for no activity and the foreign exchange swaps
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap2Choice#DataSetAction
- * ForeignExchangeSwap2Choice.DataSetAction}</li>
+ * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap2Choice#mmDataSetAction
+ * ForeignExchangeSwap2Choice.mmDataSetAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap2Choice#Transaction
- * ForeignExchangeSwap2Choice.Transaction}</li>
+ * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap2Choice#mmTransaction
+ * ForeignExchangeSwap2Choice.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,16 +49,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#ForeignExchangeSwapsReport
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#mmForeignExchangeSwapsReport
  * MoneyMarketForeignExchangeSwapsStatisticalReportV01.
- * ForeignExchangeSwapsReport}</li>
+ * mmForeignExchangeSwapsReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeSwap2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportPeriodActivity1Code dataSetAction;
 	/**
 	 * Provides the reason why no transactions are being reported for a money
 	 * market reporting period.
@@ -117,18 +119,18 @@ public class ForeignExchangeSwap2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap3Choice#DataSetAction
-	 * ForeignExchangeSwap3Choice.DataSetAction}</li>
+	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap3Choice#mmDataSetAction
+	 * ForeignExchangeSwap3Choice.mmDataSetAction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap1Choice#DataSetAction
-	 * ForeignExchangeSwap1Choice.DataSetAction}</li>
+	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap1Choice#mmDataSetAction
+	 * ForeignExchangeSwap1Choice.mmDataSetAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ForeignExchangeSwap2Choice.mmObject();
 			isDerived = false;
@@ -136,13 +138,14 @@ public class ForeignExchangeSwap2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAction";
 			definition = "Provides the reason why no transactions are being reported for a money market reporting period.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap1Choice.DataSetAction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ForeignExchangeSwap3Choice.DataSetAction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmDataSetAction);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap1Choice.mmDataSetAction;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
 		}
 	};
+	protected List<ForeignExchangeSwapTransaction2> transaction;
 	/**
 	 * Provides the details of the foreign exchange transaction as reported by
 	 * the reporting agent.
@@ -175,18 +178,18 @@ public class ForeignExchangeSwap2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap3Choice#Transaction
-	 * ForeignExchangeSwap3Choice.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap3Choice#mmTransaction
+	 * ForeignExchangeSwap3Choice.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap1Choice#Transaction
-	 * ForeignExchangeSwap1Choice.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.choice.ForeignExchangeSwap1Choice#mmTransaction
+	 * ForeignExchangeSwap1Choice.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ForeignExchangeSwap2Choice.mmObject();
 			isDerived = false;
@@ -194,27 +197,43 @@ public class ForeignExchangeSwap2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Provides the details of the foreign exchange transaction as reported by the reporting agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap1Choice.Transaction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ForeignExchangeSwap3Choice.Transaction);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmTransaction);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap1Choice.mmTransaction;
 			minOccurs = 1;
-			type_lazy = () -> ForeignExchangeSwapTransaction2.mmObject();
 			isComposite = true;
+			type_lazy = () -> ForeignExchangeSwapTransaction2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ForeignExchangeSwap2Choice.DataSetAction, com.tools20022.repository.choice.ForeignExchangeSwap2Choice.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.ForeignExchangeSwapsReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ForeignExchangeSwap2Choice.mmDataSetAction, com.tools20022.repository.choice.ForeignExchangeSwap2Choice.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmForeignExchangeSwapsReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeSwap2Choice";
 				definition = "Choice between a reason for no activity and the foreign exchange swaps segment transaction details.";
-				previousVersion_lazy = () -> ForeignExchangeSwap1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ForeignExchangeSwap3Choice.mmObject());
+				previousVersion_lazy = () -> ForeignExchangeSwap1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportPeriodActivity1Code getDataSetAction() {
+		return dataSetAction;
+	}
+
+	public void setDataSetAction(ReportPeriodActivity1Code dataSetAction) {
+		this.dataSetAction = dataSetAction;
+	}
+
+	public List<ForeignExchangeSwapTransaction2> getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(List<ForeignExchangeSwapTransaction2> transaction) {
+		this.transaction = transaction;
 	}
 }

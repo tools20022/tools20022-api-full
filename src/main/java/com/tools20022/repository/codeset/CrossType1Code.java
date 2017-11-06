@@ -32,22 +32,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.CrossTypeCode CrossTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#AllOrNone
- * CrossType1Code.AllOrNone}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#mmAllOrNone
+ * CrossType1Code.mmAllOrNone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CrossType1Code#ImmediateOrCancel
- * CrossType1Code.ImmediateOrCancel}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#OneSide
- * CrossType1Code.OneSide}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#SamePrice
- * CrossType1Code.SamePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CrossType1Code#mmImmediateOrCancel
+ * CrossType1Code.mmImmediateOrCancel}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#mmOneSide
+ * CrossType1Code.mmOneSide}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#mmSamePrice
+ * CrossType1Code.mmSamePrice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "AllOrNone"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllOrNone = new MMCode() {
+	public static final MMCode mmAllOrNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
@@ -106,7 +106,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "ImmediateOrCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImmediateOrCancel = new MMCode() {
+	public static final MMCode mmImmediateOrCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateOrCancel";
@@ -129,7 +129,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "OneSide"</li>
 	 * </ul>
 	 */
-	public static final MMCode OneSide = new MMCode() {
+	public static final MMCode mmOneSide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneSide";
@@ -152,7 +152,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "SamePrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode SamePrice = new MMCode() {
+	public static final MMCode mmSamePrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SamePrice";
@@ -163,13 +163,13 @@ public class CrossType1Code extends CrossTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALON");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CrossType1Code";
 				definition = "Type of cross being submitted to a market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CrossType1Code.AllOrNone, com.tools20022.repository.codeset.CrossType1Code.ImmediateOrCancel, com.tools20022.repository.codeset.CrossType1Code.OneSide,
-						com.tools20022.repository.codeset.CrossType1Code.SamePrice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CrossType1Code.mmAllOrNone, com.tools20022.repository.codeset.CrossType1Code.mmImmediateOrCancel, com.tools20022.repository.codeset.CrossType1Code.mmOneSide,
+						com.tools20022.repository.codeset.CrossType1Code.mmSamePrice);
 				trace_lazy = () -> CrossTypeCode.mmObject();
 			}
 		});

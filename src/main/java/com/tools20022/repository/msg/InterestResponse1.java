@@ -36,17 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InterestResponse1#ResponseType
- * InterestResponse1.ResponseType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestResponse1#RejectionReason
- * InterestResponse1.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestResponse1#mmResponseType
+ * InterestResponse1.mmResponseType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestResponse1#RejectionReasonInformation
- * InterestResponse1.RejectionReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestResponse1#mmRejectionReason
+ * InterestResponse1.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestResponse1#InterestPaymentRequestIdentification
- * InterestResponse1.InterestPaymentRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestResponse1#mmRejectionReasonInformation
+ * InterestResponse1.mmRejectionReasonInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InterestResponse1#mmInterestPaymentRequestIdentification
+ * InterestResponse1.mmInterestPaymentRequestIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +58,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#InterestResponse
- * InterestPaymentResponseV03.InterestResponse}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmInterestResponse
+ * InterestPaymentResponseV03.mmInterestResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#InterestResponse
- * InterestPaymentResponseV04.InterestResponse}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV04#mmInterestResponse
+ * InterestPaymentResponseV04.mmInterestResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InterestResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status4Code responseType;
 	/**
 	 * Provides the type of the response, either accepted or rejected.
 	 * <p>
@@ -95,8 +97,8 @@ public class InterestResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,20 +118,21 @@ public class InterestResponse1 {
 	 * "Provides the type of the response, either accepted or rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> InterestResponse1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "RspnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Provides the type of the response, either accepted or rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
 		}
 	};
+	protected RejectionReason21FormatChoice rejectionReason;
 	/**
 	 * Provides a reason for rejection identified using a code or a proprietary
 	 * format.
@@ -144,8 +147,8 @@ public class InterestResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#InterestRejectionReason
-	 * CollateralStatus.InterestRejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmInterestRejectionReason
+	 * CollateralStatus.mmInterestRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,20 +169,21 @@ public class InterestResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmInterestRejectionReason;
 			componentContext_lazy = () -> InterestResponse1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.InterestRejectionReason;
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Provides a reason for rejection identified using a code or a proprietary format.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RejectionReason21FormatChoice.mmObject();
 		}
 	};
+	protected Max140Text rejectionReasonInformation;
 	/**
 	 * Provides additional information on the rejection reason.
 	 * <p>
@@ -192,8 +196,8 @@ public class InterestResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,20 +216,21 @@ public class InterestResponse1 {
 	 * definition} = "Provides additional information on the rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> InterestResponse1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "RjctnRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReasonInformation";
 			definition = "Provides additional information on the rejection reason.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max35Text interestPaymentRequestIdentification;
 	/**
 	 * Provides the reference to the interest payment request.
 	 * <p>
@@ -253,7 +258,7 @@ public class InterestResponse1 {
 	 * definition} = "Provides the reference to the interest payment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPaymentRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPaymentRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InterestResponse1.mmObject();
 			isDerived = false;
@@ -261,8 +266,8 @@ public class InterestResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRequestIdentification";
 			definition = "Provides the reference to the interest payment request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -270,16 +275,48 @@ public class InterestResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestResponse1.ResponseType, com.tools20022.repository.msg.InterestResponse1.RejectionReason,
-						com.tools20022.repository.msg.InterestResponse1.RejectionReasonInformation, com.tools20022.repository.msg.InterestResponse1.InterestPaymentRequestIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestResponse1.mmResponseType, com.tools20022.repository.msg.InterestResponse1.mmRejectionReason,
+						com.tools20022.repository.msg.InterestResponse1.mmRejectionReasonInformation, com.tools20022.repository.msg.InterestResponse1.mmInterestPaymentRequestIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestResponse, com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmInterestResponse);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV03.InterestResponse, com.tools20022.repository.area.colr.InterestPaymentResponseV04.InterestResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestResponse1";
 				definition = "Provides details about the reponse to the interest payment request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status4Code getResponseType() {
+		return responseType;
+	}
+
+	public void setResponseType(Status4Code responseType) {
+		this.responseType = responseType;
+	}
+
+	public RejectionReason21FormatChoice getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReason21FormatChoice rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+
+	public Max140Text getRejectionReasonInformation() {
+		return rejectionReasonInformation;
+	}
+
+	public void setRejectionReasonInformation(Max140Text rejectionReasonInformation) {
+		this.rejectionReasonInformation = rejectionReasonInformation;
+	}
+
+	public Max35Text getInterestPaymentRequestIdentification() {
+		return interestPaymentRequestIdentification;
+	}
+
+	public void setInterestPaymentRequestIdentification(Max35Text interestPaymentRequestIdentification) {
+		this.interestPaymentRequestIdentification = interestPaymentRequestIdentification;
 	}
 }

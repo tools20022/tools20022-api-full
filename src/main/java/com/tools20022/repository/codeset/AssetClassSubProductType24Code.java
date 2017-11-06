@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType24Code#Coal
- * AssetClassSubProductType24Code.Coal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType24Code#mmCoal
+ * AssetClassSubProductType24Code.mmCoal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType24Code extends AssetClassSubProductTypeCode
 	 * name} = "Coal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Coal = new MMCode() {
+	public static final MMCode mmCoal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coal";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType24Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType24Code";
 				definition = "Defines the sub-product of type Coal.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType24Code.Coal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType24Code.mmCoal);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

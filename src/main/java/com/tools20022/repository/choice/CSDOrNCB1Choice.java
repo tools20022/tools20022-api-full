@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#CSDIdentification
- * CSDOrNCB1Choice.CSDIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#mmCSDIdentification
+ * CSDOrNCB1Choice.mmCSDIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#NCBIdentification
- * CSDOrNCB1Choice.NCBIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#mmNCBIdentification
+ * CSDOrNCB1Choice.mmNCBIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CSDOrNCB1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICFIIdentifier cSDIdentification;
 	/**
 	 * Unique identification to unambiguously identify the central security
 	 * depository within the system.
@@ -79,8 +80,8 @@ public class CSDOrNCB1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class CSDOrNCB1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSDIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSDIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> CSDOrNCB1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "CSDId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDIdentification";
 			definition = "Unique identification to unambiguously identify the central security depository within the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected BICFIIdentifier nCBIdentification;
 	/**
 	 * Unique identification to unambiguously identify the national central bank
 	 * within the system.
@@ -129,8 +131,8 @@ public class CSDOrNCB1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,17 +153,17 @@ public class CSDOrNCB1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NCBIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNCBIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> CSDOrNCB1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "NCBId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NCBIdentification";
 			definition = "Unique identification to unambiguously identify the national central bank within the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
@@ -169,14 +171,30 @@ public class CSDOrNCB1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CSDOrNCB1Choice.CSDIdentification, com.tools20022.repository.choice.CSDOrNCB1Choice.NCBIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CSDOrNCB1Choice.mmCSDIdentification, com.tools20022.repository.choice.CSDOrNCB1Choice.mmNCBIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CSDOrNCB1Choice";
 				definition = "Choice between a central securities depositary or a national central bank for querying party reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICFIIdentifier getCSDIdentification() {
+		return cSDIdentification;
+	}
+
+	public void setCSDIdentification(BICFIIdentifier cSDIdentification) {
+		this.cSDIdentification = cSDIdentification;
+	}
+
+	public BICFIIdentifier getNCBIdentification() {
+		return nCBIdentification;
+	}
+
+	public void setNCBIdentification(BICFIIdentifier nCBIdentification) {
+		this.nCBIdentification = nCBIdentification;
 	}
 }

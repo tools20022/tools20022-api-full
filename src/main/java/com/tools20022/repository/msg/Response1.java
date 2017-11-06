@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.ResponseType1Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the margin call, that is a description and a response
@@ -35,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Response1#ResponseTypeDetails
- * Response1.ResponseTypeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Response1#Description
- * Response1.Description}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Response1#mmResponseTypeDetails
+ * Response1.mmResponseTypeDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Response1#mmDescription
+ * Response1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,18 +48,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#ResponseDetails
- * MarginCallResponseV03.ResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#mmResponseDetails
+ * MarginCallResponseV03.mmResponseDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV04#ResponseDetails
- * MarginCallResponseV04.ResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV04#mmResponseDetails
+ * MarginCallResponseV04.mmResponseDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Response1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ResponseType1Choice> responseTypeDetails;
 	/**
 	 * Provides details about the response type.
 	 * <p>
@@ -98,7 +101,7 @@ public class Response1 {
 	 * definition} = "Provides details about the response type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ResponseTypeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmResponseTypeDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Response1.mmObject();
 			isDerived = false;
@@ -107,10 +110,11 @@ public class Response1 {
 			name = "ResponseTypeDetails";
 			definition = "Provides details about the response type.";
 			minOccurs = 1;
-			type_lazy = () -> ResponseType1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> ResponseType1Choice.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Provides additional details related to the margin call response.
 	 * <p>
@@ -138,7 +142,7 @@ public class Response1 {
 	 * "Provides additional details related to the margin call response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Response1.mmObject();
 			isDerived = false;
@@ -146,8 +150,8 @@ public class Response1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Provides additional details related to the margin call response.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -155,14 +159,30 @@ public class Response1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Response1.ResponseTypeDetails, com.tools20022.repository.msg.Response1.Description);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV03.ResponseDetails, com.tools20022.repository.area.colr.MarginCallResponseV04.ResponseDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Response1.mmResponseTypeDetails, com.tools20022.repository.msg.Response1.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV03.mmResponseDetails, com.tools20022.repository.area.colr.MarginCallResponseV04.mmResponseDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Response1";
 				definition = "Provides details on the margin call, that is a description and a response type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ResponseType1Choice> getResponseTypeDetails() {
+		return responseTypeDetails;
+	}
+
+	public void setResponseTypeDetails(List<ResponseType1Choice> responseTypeDetails) {
+		this.responseTypeDetails = responseTypeDetails;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

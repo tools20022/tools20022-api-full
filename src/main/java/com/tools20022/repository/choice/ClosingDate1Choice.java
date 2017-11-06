@@ -32,10 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ClosingDate1Choice#Date
- * ClosingDate1Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ClosingDate1Choice#Code
- * ClosingDate1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ClosingDate1Choice#mmDate
+ * ClosingDate1Choice.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ClosingDate1Choice#mmCode
+ * ClosingDate1Choice.mmCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClosingDate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Closing date is defined as a choice between a date or a date and time
 	 * format.
@@ -73,8 +74,8 @@ public class ClosingDate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#EndDate Trade.EndDate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmEndDate
+	 * Trade.mmEndDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class ClosingDate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmEndDate;
 			componentContext_lazy = () -> ClosingDate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.EndDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Closing date is defined as a choice between a date or a date and time format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Date2Choice code;
 	/**
 	 * Closing date is defined using a code or data source scheme.
 	 * <p>
@@ -121,8 +123,8 @@ public class ClosingDate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#EndDate Trade.EndDate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmEndDate
+	 * Trade.mmEndDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,32 +144,48 @@ public class ClosingDate1Choice {
 	 * "Closing date is defined using a code or data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmEndDate;
 			componentContext_lazy = () -> ClosingDate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.EndDate;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Closing date is defined using a code or data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> Date2Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.Date2Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingDate1Choice.Date, com.tools20022.repository.choice.ClosingDate1Choice.Code);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingDate1Choice.mmDate, com.tools20022.repository.choice.ClosingDate1Choice.mmCode);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClosingDate1Choice";
 				definition = "Choice between a date or a code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public Date2Choice getCode() {
+		return code;
+	}
+
+	public void setCode(com.tools20022.repository.choice.Date2Choice code) {
+		this.code = code;
 	}
 }

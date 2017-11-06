@@ -34,29 +34,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#Card
- * AccountIdentification30Choice.Card}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmCard
+ * AccountIdentification30Choice.mmCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#MSISDN
- * AccountIdentification30Choice.MSISDN}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmMSISDN
+ * AccountIdentification30Choice.mmMSISDN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#EMail
- * AccountIdentification30Choice.EMail}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmEMail
+ * AccountIdentification30Choice.mmEMail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#IBAN
- * AccountIdentification30Choice.IBAN}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmIBAN
+ * AccountIdentification30Choice.mmIBAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#BBAN
- * AccountIdentification30Choice.BBAN}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmBBAN
+ * AccountIdentification30Choice.mmBBAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#UPIC
- * AccountIdentification30Choice.UPIC}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmUPIC
+ * AccountIdentification30Choice.mmUPIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#Domestic
- * AccountIdentification30Choice.Domestic}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmDomestic
+ * AccountIdentification30Choice.mmDomestic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#Other
- * AccountIdentification30Choice.Other}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmOther
+ * AccountIdentification30Choice.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification30Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Min8Max28NumericText card;
 	/**
 	 * PAN of the card identifying the account.
 	 * <p>
@@ -118,20 +119,21 @@ public class AccountIdentification30Choice {
 	 * definition} = "PAN of the card identifying the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Card = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCard = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "PAN of the card identifying the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
 		}
 	};
+	protected Max16Text mSISDN;
 	/**
 	 * Mobile Subscriber Integrated Service Digital Network (i.e. mobile phone
 	 * number of the SIM card).
@@ -167,20 +169,21 @@ public class AccountIdentification30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MSISDN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMSISDN = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MSISDN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MSISDN";
 			definition = "Mobile Subscriber Integrated Service Digital Network (i.e. mobile phone number of the SIM card).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max35Text eMail;
 	/**
 	 * E-mail identifying the account.
 	 * <p>
@@ -213,20 +216,21 @@ public class AccountIdentification30Choice {
 	 * definition} = "E-mail identifying the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EMail = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEMail = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EMail";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMail";
 			definition = "E-mail identifying the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected IBANIdentifier iBAN;
 	/**
 	 * International Bank Account Number (IBAN) - identifier used
 	 * internationally by financial institutions to uniquely identify the
@@ -245,8 +249,8 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#IBAN
-	 * AccountIdentification.IBAN}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmIBAN
+	 * AccountIdentification.mmIBAN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -268,25 +272,26 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#IBAN
-	 * AccountIdentification1Choice.IBAN}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmIBAN
+	 * AccountIdentification1Choice.mmIBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.IBAN;
 			isDerived = false;
 			xmlTag = "IBAN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.IBAN;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmIBAN;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
 		}
 	};
+	protected BBANIdentifier bBAN;
 	/**
 	 * Basic Bank Account Number (BBAN) - identifier used nationally by
 	 * financial institutions, that is, in individual countries, generally as
@@ -303,8 +308,8 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#BBAN
-	 * AccountIdentification.BBAN}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmBBAN
+	 * AccountIdentification.mmBBAN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -326,25 +331,26 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#BBAN
-	 * AccountIdentification1Choice.BBAN}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmBBAN
+	 * AccountIdentification1Choice.mmBBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmBBAN;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.BBAN;
 			isDerived = false;
 			xmlTag = "BBAN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBAN";
 			definition = "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, that is, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.BBAN;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmBBAN;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
 		}
 	};
+	protected UPICIdentifier uPIC;
 	/**
 	 * Universal Payment Identification Code (UPIC) - identifier used by the New
 	 * York Clearing House to mask confidential data, such as bank accounts and
@@ -361,8 +367,8 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#UPIC
-	 * AccountIdentification.UPIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmUPIC
+	 * AccountIdentification.mmUPIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -384,25 +390,26 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#UPIC
-	 * AccountIdentification1Choice.UPIC}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmUPIC
+	 * AccountIdentification1Choice.mmUPIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UPIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmUPIC;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.UPIC;
 			isDerived = false;
 			xmlTag = "UPIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UPIC";
 			definition = "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.UPIC;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmUPIC;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
 		}
 	};
+	protected Max35Text domestic;
 	/**
 	 * Account number used by financial institutions in individual countries to
 	 * identify an account of a customer, but not necessarily the bank and
@@ -439,20 +446,21 @@ public class AccountIdentification30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Domestic = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDomestic = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dmst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
 			definition = "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text other;
 	/**
 	 * Other identifier.
 	 * <p>
@@ -465,8 +473,8 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#ProprietaryIdentification
-	 * AccountIdentification.ProprietaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+	 * AccountIdentification.mmProprietaryIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -485,17 +493,17 @@ public class AccountIdentification30Choice {
 	 * definition} = "Other identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Other = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.ProprietaryIdentification;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -503,11 +511,12 @@ public class AccountIdentification30Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification30Choice.Card, com.tools20022.repository.choice.AccountIdentification30Choice.MSISDN,
-						com.tools20022.repository.choice.AccountIdentification30Choice.EMail, com.tools20022.repository.choice.AccountIdentification30Choice.IBAN, com.tools20022.repository.choice.AccountIdentification30Choice.BBAN,
-						com.tools20022.repository.choice.AccountIdentification30Choice.UPIC, com.tools20022.repository.choice.AccountIdentification30Choice.Domestic, com.tools20022.repository.choice.AccountIdentification30Choice.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification30Choice.mmCard, com.tools20022.repository.choice.AccountIdentification30Choice.mmMSISDN,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmEMail, com.tools20022.repository.choice.AccountIdentification30Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification30Choice.mmBBAN,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmUPIC, com.tools20022.repository.choice.AccountIdentification30Choice.mmDomestic,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmOther);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification30Choice";
 				definition = "Identifier of an account, as assigned by the account servicer.";
@@ -515,5 +524,69 @@ public class AccountIdentification30Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Min8Max28NumericText getCard() {
+		return card;
+	}
+
+	public void setCard(Min8Max28NumericText card) {
+		this.card = card;
+	}
+
+	public Max16Text getMSISDN() {
+		return mSISDN;
+	}
+
+	public void setMSISDN(Max16Text mSISDN) {
+		this.mSISDN = mSISDN;
+	}
+
+	public Max35Text getEMail() {
+		return eMail;
+	}
+
+	public void setEMail(Max35Text eMail) {
+		this.eMail = eMail;
+	}
+
+	public IBANIdentifier getIBAN() {
+		return iBAN;
+	}
+
+	public void setIBAN(IBANIdentifier iBAN) {
+		this.iBAN = iBAN;
+	}
+
+	public BBANIdentifier getBBAN() {
+		return bBAN;
+	}
+
+	public void setBBAN(BBANIdentifier bBAN) {
+		this.bBAN = bBAN;
+	}
+
+	public UPICIdentifier getUPIC() {
+		return uPIC;
+	}
+
+	public void setUPIC(UPICIdentifier uPIC) {
+		this.uPIC = uPIC;
+	}
+
+	public Max35Text getDomestic() {
+		return domestic;
+	}
+
+	public void setDomestic(Max35Text domestic) {
+		this.domestic = domestic;
+	}
+
+	public Max35Text getOther() {
+		return other;
+	}
+
+	public void setOther(Max35Text other) {
+		this.other = other;
 	}
 }

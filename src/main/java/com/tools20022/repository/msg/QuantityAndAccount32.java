@@ -24,12 +24,14 @@ import com.tools20022.repository.choice.CashAccountIdentification6Choice;
 import com.tools20022.repository.choice.PartyIdentification51Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax210Text;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -42,20 +44,20 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#DenominationChoice
- * QuantityAndAccount32.DenominationChoice}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#mmDenominationChoice
+ * QuantityAndAccount32.mmDenominationChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#AccountOwner
- * QuantityAndAccount32.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#mmAccountOwner
+ * QuantityAndAccount32.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#CashAccount
- * QuantityAndAccount32.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#mmCashAccount
+ * QuantityAndAccount32.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#SafekeepingPlace
- * QuantityAndAccount32.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#mmSafekeepingPlace
+ * QuantityAndAccount32.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#QuantityBreakdown
- * QuantityAndAccount32.QuantityBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#mmQuantityBreakdown
+ * QuantityAndAccount32.mmQuantityBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +66,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,6 +84,7 @@ import java.util.function.Supplier;
 public class QuantityAndAccount32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax210Text denominationChoice;
 	/**
 	 * Denomination of the security to be received or delivered.
 	 * <p>
@@ -95,8 +98,8 @@ public class QuantityAndAccount32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#DenominationChoice
-	 * SecuritiesSettlement.DenominationChoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmDenominationChoice
+	 * SecuritiesSettlement.mmDenominationChoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,20 +119,21 @@ public class QuantityAndAccount32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DenominationChoice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmDenominationChoice;
 			componentContext_lazy = () -> QuantityAndAccount32.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.DenominationChoice;
 			isDerived = false;
 			xmlTag = "DnmtnChc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination of the security to be received or delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
 		}
 	};
+	protected PartyIdentification51Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -142,8 +146,8 @@ public class QuantityAndAccount32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,21 +166,22 @@ public class QuantityAndAccount32 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount32.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification51Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification51Choice.mmObject();
 		}
 	};
+	protected CashAccountIdentification6Choice cashAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -189,8 +194,8 @@ public class QuantityAndAccount32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -209,21 +214,22 @@ public class QuantityAndAccount32 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount32.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormat4Choice safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -261,21 +267,22 @@ public class QuantityAndAccount32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> QuantityAndAccount32.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceFormat4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceFormat4Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuantityBreakdown18> quantityBreakdown;
 	/**
 	 * Breakdown of a quantity into lots such as tax lots, instrument series,
 	 * etc.
@@ -288,8 +295,8 @@ public class QuantityAndAccount32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#LotBreakdown
-	 * SecuritiesQuantity.LotBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLotBreakdown
+	 * SecuritiesQuantity.mmLotBreakdown}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,28 +317,28 @@ public class QuantityAndAccount32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> QuantityAndAccount32.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.LotBreakdown;
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
 			minOccurs = 0;
-			type_lazy = () -> QuantityBreakdown18.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown18.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount32.DenominationChoice, com.tools20022.repository.msg.QuantityAndAccount32.AccountOwner,
-						com.tools20022.repository.msg.QuantityAndAccount32.CashAccount, com.tools20022.repository.msg.QuantityAndAccount32.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount32.QuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount32.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount32.mmAccountOwner,
+						com.tools20022.repository.msg.QuantityAndAccount32.mmCashAccount, com.tools20022.repository.msg.QuantityAndAccount32.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount32.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -345,5 +352,45 @@ public class QuantityAndAccount32 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax210Text getDenominationChoice() {
+		return denominationChoice;
+	}
+
+	public void setDenominationChoice(RestrictedFINXMax210Text denominationChoice) {
+		this.denominationChoice = denominationChoice;
+	}
+
+	public PartyIdentification51Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification51Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public CashAccountIdentification6Choice getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(CashAccountIdentification6Choice cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public SafekeepingPlaceFormat4Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat4Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public List<QuantityBreakdown18> getQuantityBreakdown() {
+		return quantityBreakdown;
+	}
+
+	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown18> quantityBreakdown) {
+		this.quantityBreakdown = quantityBreakdown;
 	}
 }

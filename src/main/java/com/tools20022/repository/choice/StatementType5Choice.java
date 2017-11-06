@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.StatementType5Choice#Code
- * StatementType5Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.StatementType5Choice#mmCode
+ * StatementType5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementType5Choice#Proprietary
- * StatementType5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementType5Choice#mmProprietary
+ * StatementType5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementType5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesStatementType1Code code;
 	/**
 	 * Statement type expressed as an ISO 20022 code.
 	 * <p>
@@ -91,11 +92,11 @@ public class StatementType5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.StatementType2Choice#Code
-	 * StatementType2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatementType2Choice#mmCode
+	 * StatementType2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementType5Choice.mmObject();
 			isDerived = false;
@@ -103,12 +104,13 @@ public class StatementType5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Statement type expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StatementType2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.StatementType2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesStatementType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Statement type expressed as a proprietary code.
 	 * <p>
@@ -138,11 +140,11 @@ public class StatementType5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.StatementType2Choice#Proprietary
-	 * StatementType2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatementType2Choice#mmProprietary
+	 * StatementType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementType5Choice.mmObject();
 			isDerived = false;
@@ -150,9 +152,9 @@ public class StatementType5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Statement type expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StatementType2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.StatementType2Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -160,8 +162,8 @@ public class StatementType5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementType5Choice.Code, com.tools20022.repository.choice.StatementType5Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementType5Choice.mmCode, com.tools20022.repository.choice.StatementType5Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementType5Choice";
 				definition = "Choice of format for the statement type.";
@@ -169,5 +171,21 @@ public class StatementType5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesStatementType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SecuritiesStatementType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

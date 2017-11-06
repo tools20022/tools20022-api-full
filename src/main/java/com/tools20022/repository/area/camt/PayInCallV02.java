@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The PayInCall message is sent by a central settlement system to request
@@ -60,23 +61,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#PartyIdentification
- * PayInCallV02.PartyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.PayInCallV02#ReportData
- * PayInCallV02.ReportData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#mmPartyIdentification
+ * PayInCallV02.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#SettlementSessionIdentifier
- * PayInCallV02.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#mmReportData
+ * PayInCallV02.mmReportData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#SupplementaryData
- * PayInCallV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#mmSettlementSessionIdentifier
+ * PayInCallV02.mmSettlementSessionIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#mmSupplementaryData
+ * PayInCallV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#identifier
- * PayInCallV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.061.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayInCallV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification73Choice partyIdentification;
 	/**
 	 * Party for which the PayInCall is generated.
 	 * <p>
@@ -115,17 +116,18 @@ public class PayInCallV02 {
 	 * definition} = "Party for which the PayInCall is generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PartyIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPartyIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party for which the PayInCall is generated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected ReportData5 reportData;
 	/**
 	 * Contains the report generation information and the report items.
 	 * <p>
@@ -149,17 +151,18 @@ public class PayInCallV02 {
 	 * "Contains  the report generation information and the report items."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportData";
 			definition = "Contains  the report generation information and the report items.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportData5.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -186,17 +189,18 @@ public class PayInCallV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -223,7 +227,7 @@ public class PayInCallV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,33 +235,6 @@ public class PayInCallV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "061"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "061";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -271,11 +248,50 @@ public class PayInCallV02 {
 				rootElement = "Document";
 				xmlTag = "PayInCall";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInCallV02.PartyIdentification, com.tools20022.repository.area.camt.PayInCallV02.ReportData,
-						com.tools20022.repository.area.camt.PayInCallV02.SettlementSessionIdentifier, com.tools20022.repository.area.camt.PayInCallV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.PayInCallV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInCallV02.mmPartyIdentification, com.tools20022.repository.area.camt.PayInCallV02.mmReportData,
+						com.tools20022.repository.area.camt.PayInCallV02.mmSettlementSessionIdentifier, com.tools20022.repository.area.camt.PayInCallV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "061";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification73Choice getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(PartyIdentification73Choice partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public ReportData5 getReportData() {
+		return reportData;
+	}
+
+	public void setReportData(ReportData5 reportData) {
+		this.reportData = reportData;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

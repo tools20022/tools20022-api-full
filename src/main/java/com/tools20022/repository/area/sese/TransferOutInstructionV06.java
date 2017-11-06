@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,48 +68,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#MessageIdentification
- * TransferOutInstructionV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmMessageIdentification
+ * TransferOutInstructionV06.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#PoolReference
- * TransferOutInstructionV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmPoolReference
+ * TransferOutInstructionV06.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#PreviousReference
- * TransferOutInstructionV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmPreviousReference
+ * TransferOutInstructionV06.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#RelatedReference
- * TransferOutInstructionV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmRelatedReference
+ * TransferOutInstructionV06.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#MasterReference
- * TransferOutInstructionV06.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmMasterReference
+ * TransferOutInstructionV06.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#RequestedTransferDate
- * TransferOutInstructionV06.RequestedTransferDate}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmRequestedTransferDate
+ * TransferOutInstructionV06.mmRequestedTransferDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#TransferDetails
- * TransferOutInstructionV06.TransferDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmTransferDetails
+ * TransferOutInstructionV06.mmTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#AccountDetails
- * TransferOutInstructionV06.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmAccountDetails
+ * TransferOutInstructionV06.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#SettlementDetails
- * TransferOutInstructionV06.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmSettlementDetails
+ * TransferOutInstructionV06.mmSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#MarketPracticeVersion
- * TransferOutInstructionV06.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmMarketPracticeVersion
+ * TransferOutInstructionV06.mmMarketPracticeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#CopyDetails
- * TransferOutInstructionV06.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmCopyDetails
+ * TransferOutInstructionV06.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#Extension
- * TransferOutInstructionV06.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmExtension
+ * TransferOutInstructionV06.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#identifier
- * TransferOutInstructionV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.001.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,6 +135,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOutInstructionV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -164,30 +164,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#MessageIdentification
-	 * TransferOutInstructionV07.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmMessageIdentification
+	 * TransferOutInstructionV07.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#MessageIdentification
-	 * TransferOutInstructionV05.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmMessageIdentification
+	 * TransferOutInstructionV05.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.MessageIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmMessageIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -213,30 +214,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#PoolReference
-	 * TransferOutInstructionV07.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmPoolReference
+	 * TransferOutInstructionV07.mmPoolReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#PoolReference
-	 * TransferOutInstructionV05.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmPoolReference
+	 * TransferOutInstructionV05.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.PoolReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.PoolReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmPoolReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmPoolReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference of the linked message that was previously sent.
 	 * <p>
@@ -263,30 +265,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#PreviousReference
-	 * TransferOutInstructionV07.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmPreviousReference
+	 * TransferOutInstructionV07.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#PreviousReference
-	 * TransferOutInstructionV05.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmPreviousReference
+	 * TransferOutInstructionV05.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.PreviousReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.PreviousReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmPreviousReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmPreviousReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -313,30 +316,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#RelatedReference
-	 * TransferOutInstructionV07.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmRelatedReference
+	 * TransferOutInstructionV07.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#RelatedReference
-	 * TransferOutInstructionV05.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmRelatedReference
+	 * TransferOutInstructionV05.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.RelatedReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.RelatedReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmRelatedReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmRelatedReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual transfers as
 	 * assigned by the instructing party. This identifier links the individual
@@ -365,30 +369,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#MasterReference
-	 * TransferOutInstructionV07.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmMasterReference
+	 * TransferOutInstructionV07.mmMasterReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#MasterReference
-	 * TransferOutInstructionV05.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmMasterReference
+	 * TransferOutInstructionV05.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.MasterReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.MasterReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmMasterReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateFormat1Choice requestedTransferDate;
 	/**
 	 * Requested date at which the instructing party places the transfer
 	 * instruction.
@@ -417,30 +422,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#RequestedTransferDate
-	 * TransferOutInstructionV07.RequestedTransferDate}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmRequestedTransferDate
+	 * TransferOutInstructionV07.mmRequestedTransferDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#RequestedTransferDate
-	 * TransferOutInstructionV05.RequestedTransferDate}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmRequestedTransferDate
+	 * TransferOutInstructionV05.mmRequestedTransferDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestedTransferDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestedTransferDate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqdTrfDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTransferDate";
 			definition = "Requested date at which the instructing party places the transfer instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.RequestedTransferDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.RequestedTransferDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmRequestedTransferDate);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmRequestedTransferDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat1Choice.mmObject();
 		}
 	};
+	protected List<Transfer27> transferDetails;
 	/**
 	 * General information related to the transfer of a financial instrument.
 	 * <p>
@@ -466,29 +472,30 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#TransferDetails
-	 * TransferOutInstructionV07.TransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmTransferDetails
+	 * TransferOutInstructionV07.mmTransferDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#TransferDetails
-	 * TransferOutInstructionV05.TransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmTransferDetails
+	 * TransferOutInstructionV05.mmTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.TransferDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.TransferDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmTransferDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmTransferDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer27.mmObject();
 		}
 	};
+	protected InvestmentAccount40 accountDetails;
 	/**
 	 * Information related to the account from which the financial instrument is
 	 * to be withdrawn.
@@ -517,30 +524,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#AccountDetails
-	 * TransferOutInstructionV07.AccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmAccountDetails
+	 * TransferOutInstructionV07.mmAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#AccountDetails
-	 * TransferOutInstructionV05.AccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmAccountDetails
+	 * TransferOutInstructionV05.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument is to be withdrawn.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.AccountDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.AccountDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmAccountDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmAccountDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount40.mmObject();
 		}
 	};
+	protected ReceiveInformation15 settlementDetails;
 	/**
 	 * Information related to the receiving side of the transfer.
 	 * <p>
@@ -567,30 +575,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#SettlementDetails
-	 * TransferOutInstructionV07.SettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmSettlementDetails
+	 * TransferOutInstructionV07.mmSettlementDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#SettlementDetails
-	 * TransferOutInstructionV05.SettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmSettlementDetails
+	 * TransferOutInstructionV05.mmSettlementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.SettlementDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.SettlementDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmSettlementDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmSettlementDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ReceiveInformation15.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -617,30 +626,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#MarketPracticeVersion
-	 * TransferOutInstructionV07.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmMarketPracticeVersion
+	 * TransferOutInstructionV07.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#MarketPracticeVersion
-	 * TransferOutInstructionV05.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmMarketPracticeVersion
+	 * TransferOutInstructionV05.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.MarketPracticeVersion;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.MarketPracticeVersion);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmMarketPracticeVersion);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmMarketPracticeVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -667,30 +677,31 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#CopyDetails
-	 * TransferOutInstructionV07.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmCopyDetails
+	 * TransferOutInstructionV07.mmCopyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#CopyDetails
-	 * TransferOutInstructionV05.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmCopyDetails
+	 * TransferOutInstructionV05.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.CopyDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.CopyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmCopyDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmCopyDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -718,54 +729,27 @@ public class TransferOutInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#Extension
-	 * TransferOutInstructionV07.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmExtension
+	 * TransferOutInstructionV07.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#Extension
-	 * TransferOutInstructionV05.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmExtension
+	 * TransferOutInstructionV05.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.Extension;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV07.mmExtension);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV05.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "001";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -775,21 +759,124 @@ public class TransferOutInstructionV06 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferOutInstructionV06";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the TransferOutInstruction message to the executing party, for example, a transfer agent, to instruct the delivery of a financial instrument, free of payment, on a given date from a specified party.\r\nThis message may also be used to instruct the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.\r\nUsage\r\nThe TransferOutInstruction message is used to instruct the withdrawal of a financial instrument from one account and deliver it to either another account or to a third party.";
-				previousVersion_lazy = () -> TransferOutInstructionV05.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransferOutInstructionV07.mmObject());
+				previousVersion_lazy = () -> TransferOutInstructionV05.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfOutInstr";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV06.MessageIdentification, com.tools20022.repository.area.sese.TransferOutInstructionV06.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV06.PreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV06.MasterReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.RequestedTransferDate,
-						com.tools20022.repository.area.sese.TransferOutInstructionV06.TransferDetails, com.tools20022.repository.area.sese.TransferOutInstructionV06.AccountDetails,
-						com.tools20022.repository.area.sese.TransferOutInstructionV06.SettlementDetails, com.tools20022.repository.area.sese.TransferOutInstructionV06.MarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferOutInstructionV06.CopyDetails, com.tools20022.repository.area.sese.TransferOutInstructionV06.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferOutInstructionV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV06.mmMasterReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmRequestedTransferDate,
+						com.tools20022.repository.area.sese.TransferOutInstructionV06.mmTransferDetails, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmAccountDetails,
+						com.tools20022.repository.area.sese.TransferOutInstructionV06.mmSettlementDetails, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmMarketPracticeVersion,
+						com.tools20022.repository.area.sese.TransferOutInstructionV06.mmCopyDetails, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "001";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public DateFormat1Choice getRequestedTransferDate() {
+		return requestedTransferDate;
+	}
+
+	public void setRequestedTransferDate(DateFormat1Choice requestedTransferDate) {
+		this.requestedTransferDate = requestedTransferDate;
+	}
+
+	public List<Transfer27> getTransferDetails() {
+		return transferDetails;
+	}
+
+	public void setTransferDetails(List<Transfer27> transferDetails) {
+		this.transferDetails = transferDetails;
+	}
+
+	public InvestmentAccount40 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(InvestmentAccount40 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public ReceiveInformation15 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(ReceiveInformation15 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

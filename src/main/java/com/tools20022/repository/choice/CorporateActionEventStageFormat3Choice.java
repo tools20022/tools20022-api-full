@@ -40,11 +40,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice#Code
- * CorporateActionEventStageFormat3Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice#mmCode
+ * CorporateActionEventStageFormat3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice#Proprietary
- * CorporateActionEventStageFormat3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice#mmProprietary
+ * CorporateActionEventStageFormat3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,6 +79,7 @@ import java.util.function.Supplier;
 public class CorporateActionEventStageFormat3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionEventStage1Code code;
 	/**
 	 * Standard code to specify the stage of the corporate action event.
 	 * <p>
@@ -92,8 +93,8 @@ public class CorporateActionEventStageFormat3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EventStage
-	 * CorporateActionEvent.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
+	 * CorporateActionEvent.mmEventStage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,27 +116,28 @@ public class CorporateActionEventStageFormat3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice#Code
-	 * CorporateActionEventStageFormat5Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice#mmCode
+	 * CorporateActionEventStageFormat5Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateActionEventStageFormat3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EventStage;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the stage of the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventStage1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the stage of the corporate action event.
 	 * <p>
@@ -148,8 +150,8 @@ public class CorporateActionEventStageFormat3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EventStage
-	 * CorporateActionEvent.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
+	 * CorporateActionEvent.mmEventStage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,35 +173,35 @@ public class CorporateActionEventStageFormat3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice#Proprietary
-	 * CorporateActionEventStageFormat5Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice#mmProprietary
+	 * CorporateActionEventStageFormat5Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateActionEventStageFormat3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EventStage;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the stage of the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice.Code, com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -214,5 +216,21 @@ public class CorporateActionEventStageFormat3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionEventStage1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionEventStage1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

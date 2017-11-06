@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentMessage1#UndertakingAmendmentDetails
- * UndertakingAmendmentMessage1.UndertakingAmendmentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentMessage1#mmUndertakingAmendmentDetails
+ * UndertakingAmendmentMessage1.mmUndertakingAmendmentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentMessage1#DigitalSignature
- * UndertakingAmendmentMessage1.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentMessage1#mmDigitalSignature
+ * UndertakingAmendmentMessage1.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAmendmentMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amendment1 undertakingAmendmentDetails;
 	/**
 	 * Details related to the proposed undertaking amendment.
 	 * <p>
@@ -91,21 +92,22 @@ public class UndertakingAmendmentMessage1 {
 	 * definition} = "Details related to the proposed undertaking amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingAmendmentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingAmendmentDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingAmendmentMessage1.mmObject();
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
+			componentContext_lazy = () -> UndertakingAmendmentMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentDetails";
 			definition = "Details related to the proposed undertaking amendment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amendment1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amendment1.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the proposed amendment.
 	 * <p>
@@ -117,8 +119,8 @@ public class UndertakingAmendmentMessage1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#ElectronicSignature
-	 * Undertaking.ElectronicSignature}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmElectronicSignature
+	 * Undertaking.mmElectronicSignature}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,33 +139,49 @@ public class UndertakingAmendmentMessage1 {
 	 * definition} = "Digital signature of the proposed amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> UndertakingAmendmentMessage1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.ElectronicSignature;
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the proposed amendment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyAndSignature2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyAndSignature2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmendmentMessage1.UndertakingAmendmentDetails, com.tools20022.repository.msg.UndertakingAmendmentMessage1.DigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmUndertakingAmendmentDetails, com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmDigitalSignature);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmendmentMessage1";
 				definition = "Contents of an Undertaking Amendment message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amendment1 getUndertakingAmendmentDetails() {
+		return undertakingAmendmentDetails;
+	}
+
+	public void setUndertakingAmendmentDetails(com.tools20022.repository.msg.Amendment1 undertakingAmendmentDetails) {
+		this.undertakingAmendmentDetails = undertakingAmendmentDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(com.tools20022.repository.msg.PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

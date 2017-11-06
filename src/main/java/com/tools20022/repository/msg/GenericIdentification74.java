@@ -37,18 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification74#Identification
- * GenericIdentification74.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification74#Type
- * GenericIdentification74.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification74#Issuer
- * GenericIdentification74.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification74#mmIdentification
+ * GenericIdentification74.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification74#mmType
+ * GenericIdentification74.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification74#Country
- * GenericIdentification74.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification74#mmIssuer
+ * GenericIdentification74.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification74#ShortName
- * GenericIdentification74.ShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification74#mmCountry
+ * GenericIdentification74.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification74#mmShortName
+ * GenericIdentification74.mmShortName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericIdentification74 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the entity.
 	 * <p>
@@ -88,8 +90,8 @@ public class GenericIdentification74 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,25 +111,26 @@ public class GenericIdentification74 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#Identification
-	 * GenericIdentification76.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#mmIdentification
+	 * GenericIdentification76.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification74.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the entity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyType10Code type;
 	/**
 	 * Type of identified entity.
 	 * <p>
@@ -162,25 +165,26 @@ public class GenericIdentification74 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#Type
-	 * GenericIdentification76.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#mmType
+	 * GenericIdentification76.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification74.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> GenericIdentification74.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of identified entity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.Type;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PartyType10Code.mmObject();
 		}
 	};
+	protected PartyType10Code issuer;
 	/**
 	 * Entity assigning the identification (for example merchant, acceptor,
 	 * acquirer, or tax authority).
@@ -218,25 +222,26 @@ public class GenericIdentification74 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#Issuer
-	 * GenericIdentification76.Issuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#mmIssuer
+	 * GenericIdentification76.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification74.mmObject();
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
+			componentContext_lazy = () -> GenericIdentification74.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity assigning the identification  (for example merchant, acceptor, acquirer, or tax authority).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.Issuer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.mmIssuer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PartyType10Code.mmObject();
 		}
 	};
+	protected Min2Max3AlphaText country;
 	/**
 	 * Country of the entity (ISO 3166-1 alpha-2 or alpha-3)
 	 * <p>
@@ -266,11 +271,11 @@ public class GenericIdentification74 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#Country
-	 * GenericIdentification76.Country}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#mmCountry
+	 * GenericIdentification76.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericIdentification74.mmObject();
 			isDerived = false;
@@ -278,12 +283,13 @@ public class GenericIdentification74 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country of the entity (ISO 3166-1 alpha-2 or alpha-3)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.Country;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.mmCountry;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3AlphaText.mmObject();
 		}
 	};
+	protected Max35Text shortName;
 	/**
 	 * Name of the entity.
 	 * <p>
@@ -296,8 +302,8 @@ public class GenericIdentification74 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationName#ShortName
-	 * OrganisationName.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationName#mmShortName
+	 * OrganisationName.mmShortName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -317,22 +323,22 @@ public class GenericIdentification74 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#ShortName
-	 * GenericIdentification76.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification76#mmShortName
+	 * GenericIdentification76.mmShortName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmShortName;
 			componentContext_lazy = () -> GenericIdentification74.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.ShortName;
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Name of the entity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.ShortName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification76.mmShortName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -340,10 +346,10 @@ public class GenericIdentification74 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification74.Identification, com.tools20022.repository.msg.GenericIdentification74.Type,
-						com.tools20022.repository.msg.GenericIdentification74.Issuer, com.tools20022.repository.msg.GenericIdentification74.Country, com.tools20022.repository.msg.GenericIdentification74.ShortName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification74.mmIdentification, com.tools20022.repository.msg.GenericIdentification74.mmType,
+						com.tools20022.repository.msg.GenericIdentification74.mmIssuer, com.tools20022.repository.msg.GenericIdentification74.mmCountry, com.tools20022.repository.msg.GenericIdentification74.mmShortName);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification74";
 				definition = "Identification of an entity.";
@@ -351,5 +357,45 @@ public class GenericIdentification74 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public PartyType10Code getType() {
+		return type;
+	}
+
+	public void setType(PartyType10Code type) {
+		this.type = type;
+	}
+
+	public PartyType10Code getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(PartyType10Code issuer) {
+		this.issuer = issuer;
+	}
+
+	public Min2Max3AlphaText getCountry() {
+		return country;
+	}
+
+	public void setCountry(Min2Max3AlphaText country) {
+		this.country = country;
+	}
+
+	public Max35Text getShortName() {
+		return shortName;
+	}
+
+	public void setShortName(Max35Text shortName) {
+		this.shortName = shortName;
 	}
 }

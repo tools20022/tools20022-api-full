@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#CollateralSubstitutionRequestIdentification
- * CollateralConfirmation1.CollateralSubstitutionRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#mmCollateralSubstitutionRequestIdentification
+ * CollateralConfirmation1.mmCollateralSubstitutionRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#CollateralSubstitutionResponseIdentification
- * CollateralConfirmation1.CollateralSubstitutionResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#mmCollateralSubstitutionResponseIdentification
+ * CollateralConfirmation1.mmCollateralSubstitutionResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#ConfirmationType
- * CollateralConfirmation1.ConfirmationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#mmConfirmationType
+ * CollateralConfirmation1.mmConfirmationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#Comment
- * CollateralConfirmation1.Comment}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralConfirmation1#mmComment
+ * CollateralConfirmation1.mmComment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +57,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#SubstitutionConfirmation
- * CollateralSubstitutionConfirmationV03.SubstitutionConfirmation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#mmSubstitutionConfirmation
+ * CollateralSubstitutionConfirmationV03.mmSubstitutionConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#SubstitutionConfirmation
- * CollateralSubstitutionConfirmationV04.SubstitutionConfirmation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#mmSubstitutionConfirmation
+ * CollateralSubstitutionConfirmationV04.mmSubstitutionConfirmation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text collateralSubstitutionRequestIdentification;
 	/**
 	 * Reference to the collateral substitution request identification.
 	 * <p>
@@ -111,7 +112,7 @@ public class CollateralConfirmation1 {
 	 * "Reference to the collateral substitution request identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
 			isDerived = false;
@@ -119,11 +120,12 @@ public class CollateralConfirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Reference to the collateral substitution request identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralSubstitutionResponseIdentification;
 	/**
 	 * Reference to the collateral substitution response identification.
 	 * <p>
@@ -152,7 +154,7 @@ public class CollateralConfirmation1 {
 	 * "Reference to the collateral substitution response identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
 			isDerived = false;
@@ -160,11 +162,12 @@ public class CollateralConfirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionResponseIdentification";
 			definition = "Reference to the collateral substitution response identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CollateralSubstitutionConfirmation1Code confirmationType;
 	/**
 	 * Provides details about the status of the collateral substitution, either
 	 * released or returned.
@@ -179,8 +182,8 @@ public class CollateralConfirmation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#SubstitutionStatus
-	 * CollateralStatus.SubstitutionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmSubstitutionStatus
+	 * CollateralStatus.mmSubstitutionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,20 +204,21 @@ public class CollateralConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmSubstitutionStatus;
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.SubstitutionStatus;
 			isDerived = false;
 			xmlTag = "ConfTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
 			definition = "Provides details about the status of the collateral substitution, either released or returned.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralSubstitutionConfirmation1Code.mmObject();
 		}
 	};
+	protected Max140Text comment;
 	/**
 	 * Allows to provides additional comments on the collateral substitution
 	 * status.
@@ -245,7 +249,7 @@ public class CollateralConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Comment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmComment = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
 			isDerived = false;
@@ -253,8 +257,8 @@ public class CollateralConfirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Comment";
 			definition = "Allows to provides additional comments on the collateral substitution status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -262,18 +266,50 @@ public class CollateralConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralConfirmation1.CollateralSubstitutionRequestIdentification,
-						com.tools20022.repository.msg.CollateralConfirmation1.CollateralSubstitutionResponseIdentification, com.tools20022.repository.msg.CollateralConfirmation1.ConfirmationType,
-						com.tools20022.repository.msg.CollateralConfirmation1.Comment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralConfirmation1.mmCollateralSubstitutionRequestIdentification,
+						com.tools20022.repository.msg.CollateralConfirmation1.mmCollateralSubstitutionResponseIdentification, com.tools20022.repository.msg.CollateralConfirmation1.mmConfirmationType,
+						com.tools20022.repository.msg.CollateralConfirmation1.mmComment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmSubstitutionConfirmation,
+						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmSubstitutionConfirmation);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.SubstitutionConfirmation,
-						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.SubstitutionConfirmation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralConfirmation1";
 				definition = "Provides the status details about the collateral substitution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCollateralSubstitutionRequestIdentification() {
+		return collateralSubstitutionRequestIdentification;
+	}
+
+	public void setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
+		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
+	}
+
+	public Max35Text getCollateralSubstitutionResponseIdentification() {
+		return collateralSubstitutionResponseIdentification;
+	}
+
+	public void setCollateralSubstitutionResponseIdentification(Max35Text collateralSubstitutionResponseIdentification) {
+		this.collateralSubstitutionResponseIdentification = collateralSubstitutionResponseIdentification;
+	}
+
+	public CollateralSubstitutionConfirmation1Code getConfirmationType() {
+		return confirmationType;
+	}
+
+	public void setConfirmationType(CollateralSubstitutionConfirmation1Code confirmationType) {
+		this.confirmationType = confirmationType;
+	}
+
+	public Max140Text getComment() {
+		return comment;
+	}
+
+	public void setComment(Max140Text comment) {
+		this.comment = comment;
 	}
 }

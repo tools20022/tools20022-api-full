@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus5#DetailedNumberOfTransactions
- * NumberOfTransactionsPerStatus5.DetailedNumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus5#mmDetailedNumberOfTransactions
+ * NumberOfTransactionsPerStatus5.mmDetailedNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus5#DetailedStatus
- * NumberOfTransactionsPerStatus5.DetailedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus5#mmDetailedStatus
+ * NumberOfTransactionsPerStatus5.mmDetailedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus5#DetailedControlSum
- * NumberOfTransactionsPerStatus5.DetailedControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus5#mmDetailedControlSum
+ * NumberOfTransactionsPerStatus5.mmDetailedControlSum}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NumberOfTransactionsPerStatus5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15NumericText detailedNumberOfTransactions;
 	/**
 	 * Number of individual transactions contained in the message, detailed per
 	 * status.
@@ -102,11 +103,11 @@ public class NumberOfTransactionsPerStatus5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#DetailedNumberOfTransactions
-	 * NumberOfTransactionsPerStatus3.DetailedNumberOfTransactions}</li>
+	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#mmDetailedNumberOfTransactions
+	 * NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
 			isDerived = false;
@@ -114,12 +115,13 @@ public class NumberOfTransactionsPerStatus5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedNumberOfTransactions";
 			definition = "Number of individual transactions contained in the message, detailed per status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.DetailedNumberOfTransactions;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected ExternalPaymentTransactionStatus1Code detailedStatus;
 	/**
 	 * Common transaction status for all individual transactions reported.
 	 * <p>
@@ -150,11 +152,11 @@ public class NumberOfTransactionsPerStatus5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#DetailedStatus
-	 * NumberOfTransactionsPerStatus3.DetailedStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#mmDetailedStatus
+	 * NumberOfTransactionsPerStatus3.mmDetailedStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
 			isDerived = false;
@@ -162,12 +164,13 @@ public class NumberOfTransactionsPerStatus5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedStatus";
 			definition = "Common transaction status for all individual transactions reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.DetailedStatus;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPaymentTransactionStatus1Code.mmObject();
 		}
 	};
+	protected DecimalNumber detailedControlSum;
 	/**
 	 * Total of all individual amounts included in the message, irrespective of
 	 * currencies, detailed per status.
@@ -200,11 +203,11 @@ public class NumberOfTransactionsPerStatus5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#DetailedControlSum
-	 * NumberOfTransactionsPerStatus3.DetailedControlSum}</li>
+	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#mmDetailedControlSum
+	 * NumberOfTransactionsPerStatus3.mmDetailedControlSum}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
 			isDerived = false;
@@ -212,9 +215,9 @@ public class NumberOfTransactionsPerStatus5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies, detailed per status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.DetailedControlSum;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedControlSum;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -222,9 +225,9 @@ public class NumberOfTransactionsPerStatus5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.DetailedNumberOfTransactions, com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.DetailedStatus,
-						com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.DetailedControlSum);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmDetailedNumberOfTransactions, com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmDetailedStatus,
+						com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmDetailedControlSum);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NumberOfTransactionsPerStatus5";
 				definition = "Set of elements used to provide detailed information on the number of transactions that are reported with a specific transaction status.";
@@ -232,5 +235,29 @@ public class NumberOfTransactionsPerStatus5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15NumericText getDetailedNumberOfTransactions() {
+		return detailedNumberOfTransactions;
+	}
+
+	public void setDetailedNumberOfTransactions(Max15NumericText detailedNumberOfTransactions) {
+		this.detailedNumberOfTransactions = detailedNumberOfTransactions;
+	}
+
+	public ExternalPaymentTransactionStatus1Code getDetailedStatus() {
+		return detailedStatus;
+	}
+
+	public void setDetailedStatus(ExternalPaymentTransactionStatus1Code detailedStatus) {
+		this.detailedStatus = detailedStatus;
+	}
+
+	public DecimalNumber getDetailedControlSum() {
+		return detailedControlSum;
+	}
+
+	public void setDetailedControlSum(DecimalNumber detailedControlSum) {
+		this.detailedControlSum = detailedControlSum;
 	}
 }

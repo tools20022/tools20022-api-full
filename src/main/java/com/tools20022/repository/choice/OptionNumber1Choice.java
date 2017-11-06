@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.OptionNumber1Choice#Number
- * OptionNumber1Choice.Number}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OptionNumber1Choice#Code
- * OptionNumber1Choice.Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OptionNumber1Choice#mmNumber
+ * OptionNumber1Choice.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OptionNumber1Choice#mmCode
+ * OptionNumber1Choice.mmCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OptionNumber1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText number;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -87,7 +89,7 @@ public class OptionNumber1Choice {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionNumber1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class OptionNumber1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected OptionNumber1Code code;
 	/**
 	 * Code identifying special corporate action option numbers.
 	 * <p>
@@ -129,7 +132,7 @@ public class OptionNumber1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionNumber1Choice.mmObject();
 			isDerived = false;
@@ -137,8 +140,8 @@ public class OptionNumber1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Code identifying special corporate action option numbers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OptionNumber1Code.mmObject();
 		}
 	};
@@ -146,13 +149,29 @@ public class OptionNumber1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionNumber1Choice.Number, com.tools20022.repository.choice.OptionNumber1Choice.Code);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionNumber1Choice.mmNumber, com.tools20022.repository.choice.OptionNumber1Choice.mmCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionNumber1Choice";
 				definition = "Choice between an number and a option number in a code format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getNumber() {
+		return number;
+	}
+
+	public void setNumber(Exact3NumericText number) {
+		this.number = number;
+	}
+
+	public OptionNumber1Code getCode() {
+		return code;
+	}
+
+	public void setCode(OptionNumber1Code code) {
+		this.code = code;
 	}
 }

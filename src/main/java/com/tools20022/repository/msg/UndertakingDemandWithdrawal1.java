@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#UndertakingIdentification
- * UndertakingDemandWithdrawal1.UndertakingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#mmUndertakingIdentification
+ * UndertakingDemandWithdrawal1.mmUndertakingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#AdvisingPartyReferenceNumber
- * UndertakingDemandWithdrawal1.AdvisingPartyReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#mmAdvisingPartyReferenceNumber
+ * UndertakingDemandWithdrawal1.mmAdvisingPartyReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#DemandDetails
- * UndertakingDemandWithdrawal1.DemandDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#mmDemandDetails
+ * UndertakingDemandWithdrawal1.mmDemandDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#ConfirmerReferenceNumber
- * UndertakingDemandWithdrawal1.ConfirmerReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1#mmConfirmerReferenceNumber
+ * UndertakingDemandWithdrawal1.mmConfirmerReferenceNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,15 +55,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01#DemandWithdrawalNotificationDetails
- * DemandWithdrawalNotificationV01.DemandWithdrawalNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01#mmDemandWithdrawalNotificationDetails
+ * DemandWithdrawalNotificationV01.mmDemandWithdrawalNotificationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingDemandWithdrawal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Undertaking6 undertakingIdentification;
 	/**
 	 * Details related to the identification of the undertaking.
 	 * <p>
@@ -88,8 +89,8 @@ public class UndertakingDemandWithdrawal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Demand#Undertaking
-	 * Demand.Undertaking}</li>
+	 * {@linkplain com.tools20022.repository.entity.Demand#mmUndertaking
+	 * Demand.mmUndertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,21 +110,22 @@ public class UndertakingDemandWithdrawal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmUndertaking;
 			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.Undertaking;
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Undertaking6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
 		}
 	};
+	protected Max35Text advisingPartyReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the advising party to the
 	 * undertaking.
@@ -154,7 +156,7 @@ public class UndertakingDemandWithdrawal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
@@ -162,11 +164,12 @@ public class UndertakingDemandWithdrawal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the advising party to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Demand3 demandDetails;
 	/**
 	 * Details related to the demand.
 	 * <p>
@@ -196,21 +199,22 @@ public class UndertakingDemandWithdrawal1 {
 	 * definition} = "Details related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DemandDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			businessComponentTrace_lazy = () -> Demand.mmObject();
+			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandDetails";
 			definition = "Details related to the demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Demand3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Demand3.mmObject();
 		}
 	};
+	protected Max35Text confirmerReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the confirmer to the
 	 * undertaking.
@@ -241,7 +245,7 @@ public class UndertakingDemandWithdrawal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmerReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
@@ -249,8 +253,8 @@ public class UndertakingDemandWithdrawal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmerReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -258,16 +262,48 @@ public class UndertakingDemandWithdrawal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingDemandWithdrawal1.UndertakingIdentification, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.AdvisingPartyReferenceNumber,
-						com.tools20022.repository.msg.UndertakingDemandWithdrawal1.DemandDetails, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.ConfirmerReferenceNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmUndertakingIdentification, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmAdvisingPartyReferenceNumber,
+						com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmDemandDetails, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmConfirmerReferenceNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.mmDemandWithdrawalNotificationDetails);
 				trace_lazy = () -> Demand.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.DemandWithdrawalNotificationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingDemandWithdrawal1";
 				definition = "Details of the demand withdrawal notification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Undertaking6 getUndertakingIdentification() {
+		return undertakingIdentification;
+	}
+
+	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
+		this.undertakingIdentification = undertakingIdentification;
+	}
+
+	public Max35Text getAdvisingPartyReferenceNumber() {
+		return advisingPartyReferenceNumber;
+	}
+
+	public void setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
+		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
+	}
+
+	public Demand3 getDemandDetails() {
+		return demandDetails;
+	}
+
+	public void setDemandDetails(com.tools20022.repository.msg.Demand3 demandDetails) {
+		this.demandDetails = demandDetails;
+	}
+
+	public Max35Text getConfirmerReferenceNumber() {
+		return confirmerReferenceNumber;
+	}
+
+	public void setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
+		this.confirmerReferenceNumber = confirmerReferenceNumber;
 	}
 }

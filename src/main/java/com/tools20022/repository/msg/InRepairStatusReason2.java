@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InRepairStatusReason2#AdditionalInformation
- * InRepairStatusReason2.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InRepairStatusReason2#mmAdditionalInformation
+ * InRepairStatusReason2.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InRepairStatusReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text additionalInformation;
 	/**
 	 * Reason for the in repair status in textual form.
 	 * <p>
@@ -82,7 +83,7 @@ public class InRepairStatusReason2 {
 	 * definition} = "Reason for the in repair status in textual form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InRepairStatusReason2.mmObject();
 			isDerived = false;
@@ -90,8 +91,8 @@ public class InRepairStatusReason2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Reason for the in repair status in textual form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -99,13 +100,21 @@ public class InRepairStatusReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason2.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatusReason2.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatusReason2";
 				definition = "Reason for an in repair status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

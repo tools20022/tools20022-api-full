@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies in terms of value and quantity the assets.
@@ -43,89 +44,90 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#HoldingValue
- * AssetHolding.HoldingValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#BookValue
- * AssetHolding.BookValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#FaceAmount
- * AssetHolding.FaceAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingValue
+ * AssetHolding.mmHoldingValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+ * AssetHolding.mmBookValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmFaceAmount
+ * AssetHolding.mmFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#AmortisedFaceValue
- * AssetHolding.AmortisedFaceValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#MarketValue
- * AssetHolding.MarketValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#Balance
- * AssetHolding.Balance}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmAmortisedFaceValue
+ * AssetHolding.mmAmortisedFaceValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmMarketValue
+ * AssetHolding.mmMarketValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmBalance
+ * AssetHolding.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#UnrealisedGainOrLoss
- * AssetHolding.UnrealisedGainOrLoss}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#Asset
- * AssetHolding.Asset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#Haircut
- * AssetHolding.Haircut}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmUnrealisedGainOrLoss
+ * AssetHolding.mmUnrealisedGainOrLoss}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmAsset
+ * AssetHolding.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmHaircut
+ * AssetHolding.mmHaircut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#EligibleCollateralValue
- * AssetHolding.EligibleCollateralValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#ExchangeRate
- * AssetHolding.ExchangeRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#CapValue
- * AssetHolding.CapValue}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmEligibleCollateralValue
+ * AssetHolding.mmEligibleCollateralValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmExchangeRate
+ * AssetHolding.mmExchangeRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmCapValue
+ * AssetHolding.mmCapValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#RiskAdjustedValue
- * AssetHolding.RiskAdjustedValue}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmRiskAdjustedValue
+ * AssetHolding.mmRiskAdjustedValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#RealisedGainOrLoss
- * AssetHolding.RealisedGainOrLoss}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#UnrealisedType
- * AssetHolding.UnrealisedType}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmRealisedGainOrLoss
+ * AssetHolding.mmRealisedGainOrLoss}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#PostHaircutValue
- * AssetHolding.PostHaircutValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#Interest
- * AssetHolding.Interest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#Collateral
- * AssetHolding.Collateral}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmUnrealisedType
+ * AssetHolding.mmUnrealisedType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#FinancialAssetType
- * AssetHolding.FinancialAssetType}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmPostHaircutValue
+ * AssetHolding.mmPostHaircutValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmInterest
+ * AssetHolding.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmCollateral
+ * AssetHolding.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#VariationMarginCollateral
- * AssetHolding.VariationMarginCollateral}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmFinancialAssetType
+ * AssetHolding.mmFinancialAssetType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#IndependentAmountCollateral
- * AssetHolding.IndependentAmountCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#HoldingType
- * AssetHolding.HoldingType}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmVariationMarginCollateral
+ * AssetHolding.mmVariationMarginCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#GuaranteeAmount
- * AssetHolding.GuaranteeAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmIndependentAmountCollateral
+ * AssetHolding.mmIndependentAmountCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingType
+ * AssetHolding.mmHoldingType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmGuaranteeAmount
+ * AssetHolding.mmGuaranteeAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#AssetValue
- * Asset.AssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#AssetHolding
- * Balance.AssetHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
+ * Asset.mmAssetValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
+ * Balance.mmAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#RelatedAssetHolding
- * Interest.RelatedAssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
+ * Interest.mmRelatedAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CalculatedAssetValue
- * CurrencyExchange.CalculatedAssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Collateral#AssetHolding
- * Collateral.AssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCalculatedAssetValue
+ * CurrencyExchange.mmCalculatedAssetValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Collateral#mmAssetHolding
+ * Collateral.mmAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#VariationMarginAssetHolding
- * Collateral.VariationMarginAssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmVariationMarginAssetHolding
+ * Collateral.mmVariationMarginAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#SegregatedIndependentAmountAssetHolding
- * Collateral.SegregatedIndependentAmountAssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmSegregatedIndependentAmountAssetHolding
+ * Collateral.mmSegregatedIndependentAmountAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.HaircutValuation#AssetHolding
- * HaircutValuation.AssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmAssetHolding
+ * HaircutValuation.mmAssetHolding}</li>
  * </ul>
  * </li>
  * <li>
@@ -133,11 +135,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#Holdings
- * FinancialInstrumentAggregateBalance1.Holdings}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmHoldings
+ * FinancialInstrumentAggregateBalance1.mmHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#BalanceForFinancialInstrument
- * AggregateHoldingBalance1.BalanceForFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#mmBalanceForFinancialInstrument
+ * AggregateHoldingBalance1.mmBalanceForFinancialInstrument}</li>
  * </ul>
  * </li>
  * <li>
@@ -167,8 +169,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -182,6 +184,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetHolding {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount holdingValue;
 	/**
 	 * Value of the balance of an individual securities holding.
 	 * <p>
@@ -192,123 +195,123 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument26#AverageAcquisitionPrice
-	 * FinancialInstrument26.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument30#AverageAcquisitionPrice
-	 * FinancialInstrument30.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument24#AverageAcquisitionPrice
-	 * FinancialInstrument24.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#AverageAcquisitionPrice
-	 * FinancialInstrument33.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument23#AverageAcquisitionPrice
-	 * FinancialInstrument23.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#HoldingValue
-	 * BalanceAmounts1.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#PreviousHoldingValue
-	 * BalanceAmounts1.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts2#HoldingValue
-	 * BalanceAmounts2.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts5#HoldingValue
-	 * BalanceAmounts5.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts5#PreviousHoldingValue
-	 * BalanceAmounts5.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts6#HoldingValue
-	 * BalanceAmounts6.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2#HoldingValue
-	 * AggregateBalancePerSafekeepingPlace2.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2#HoldingValue
-	 * AggregateBalanceInformation2.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#HoldingValue
-	 * AggregateBalancePerSafekeepingPlace4.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#PreviousHoldingValue
-	 * AggregateBalancePerSafekeepingPlace4.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#HoldingValue
-	 * AggregateBalanceInformation3.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#PreviousHoldingValue
-	 * AggregateBalanceInformation3.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#HoldingValue
-	 * BalanceAmounts3.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#PreviousHoldingValue
-	 * BalanceAmounts3.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4#HoldingValue
-	 * BalanceAmounts4.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4#PreviousHoldingValue
-	 * BalanceAmounts4.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1#HoldingValue
-	 * AggregateBalancePerSafekeepingPlace1.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation1#HoldingValue
-	 * AggregateBalanceInformation1.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#HoldingValue
-	 * AggregateBalancePerSafekeepingPlace3.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#PreviousHoldingValue
-	 * AggregateBalancePerSafekeepingPlace3.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#HoldingValue
-	 * AggregateBalanceInformation4.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#PreviousHoldingValue
-	 * AggregateBalanceInformation4.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral1#Amount
-	 * OtherTypeOfCollateral1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation5#HoldingValue
-	 * AggregateBalanceInformation5.HoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation5#PreviousHoldingValue
-	 * AggregateBalanceInformation5.PreviousHoldingValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument37#AverageAcquisitionPrice
-	 * FinancialInstrument37.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#AverageAcquisitionPrice
-	 * FinancialInstrument35.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#AverageAcquisitionPrice
-	 * FinancialInstrument40.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebtInstrument2#NominalValuePerUnit
-	 * DebtInstrument2.NominalValuePerUnit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#AverageAcquisitionPrice
-	 * FinancialInstrument48.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#AverageAcquisitionPrice
-	 * FinancialInstrument47.AverageAcquisitionPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument26#mmAverageAcquisitionPrice
+	 * FinancialInstrument26.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument30#mmAverageAcquisitionPrice
+	 * FinancialInstrument30.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument24#mmAverageAcquisitionPrice
+	 * FinancialInstrument24.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#mmAverageAcquisitionPrice
+	 * FinancialInstrument33.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument23#mmAverageAcquisitionPrice
+	 * FinancialInstrument23.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmHoldingValue
+	 * BalanceAmounts1.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmPreviousHoldingValue
+	 * BalanceAmounts1.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts2#mmHoldingValue
+	 * BalanceAmounts2.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts5#mmHoldingValue
+	 * BalanceAmounts5.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts5#mmPreviousHoldingValue
+	 * BalanceAmounts5.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts6#mmHoldingValue
+	 * BalanceAmounts6.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2#mmHoldingValue
+	 * AggregateBalancePerSafekeepingPlace2.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2#mmHoldingValue
+	 * AggregateBalanceInformation2.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#mmHoldingValue
+	 * AggregateBalancePerSafekeepingPlace4.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#mmPreviousHoldingValue
+	 * AggregateBalancePerSafekeepingPlace4.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#mmHoldingValue
+	 * AggregateBalanceInformation3.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#mmPreviousHoldingValue
+	 * AggregateBalanceInformation3.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmHoldingValue
+	 * BalanceAmounts3.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmPreviousHoldingValue
+	 * BalanceAmounts3.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4#mmHoldingValue
+	 * BalanceAmounts4.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4#mmPreviousHoldingValue
+	 * BalanceAmounts4.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1#mmHoldingValue
+	 * AggregateBalancePerSafekeepingPlace1.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation1#mmHoldingValue
+	 * AggregateBalanceInformation1.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#mmHoldingValue
+	 * AggregateBalancePerSafekeepingPlace3.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#mmPreviousHoldingValue
+	 * AggregateBalancePerSafekeepingPlace3.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#mmHoldingValue
+	 * AggregateBalanceInformation4.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#mmPreviousHoldingValue
+	 * AggregateBalanceInformation4.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral1#mmAmount
+	 * OtherTypeOfCollateral1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation5#mmHoldingValue
+	 * AggregateBalanceInformation5.mmHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation5#mmPreviousHoldingValue
+	 * AggregateBalanceInformation5.mmPreviousHoldingValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument37#mmAverageAcquisitionPrice
+	 * FinancialInstrument37.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#mmAverageAcquisitionPrice
+	 * FinancialInstrument35.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#mmAverageAcquisitionPrice
+	 * FinancialInstrument40.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DebtInstrument2#mmNominalValuePerUnit
+	 * DebtInstrument2.mmNominalValuePerUnit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#mmAverageAcquisitionPrice
+	 * FinancialInstrument48.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#mmAverageAcquisitionPrice
+	 * FinancialInstrument47.mmAverageAcquisitionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -321,33 +324,35 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute HoldingValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmHoldingValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument26.AverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument30.AverageAcquisitionPrice,
-					com.tools20022.repository.msg.FinancialInstrument24.AverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument33.AverageAcquisitionPrice,
-					com.tools20022.repository.msg.FinancialInstrument23.AverageAcquisitionPrice, com.tools20022.repository.msg.BalanceAmounts1.HoldingValue, com.tools20022.repository.msg.BalanceAmounts1.PreviousHoldingValue,
-					com.tools20022.repository.msg.BalanceAmounts2.HoldingValue, com.tools20022.repository.msg.BalanceAmounts5.HoldingValue, com.tools20022.repository.msg.BalanceAmounts5.PreviousHoldingValue,
-					com.tools20022.repository.msg.BalanceAmounts6.HoldingValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2.HoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation2.HoldingValue,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.HoldingValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.PreviousHoldingValue,
-					com.tools20022.repository.msg.AggregateBalanceInformation3.HoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation3.PreviousHoldingValue, com.tools20022.repository.msg.BalanceAmounts3.HoldingValue,
-					com.tools20022.repository.msg.BalanceAmounts3.PreviousHoldingValue, com.tools20022.repository.msg.BalanceAmounts4.HoldingValue, com.tools20022.repository.msg.BalanceAmounts4.PreviousHoldingValue,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1.HoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation1.HoldingValue,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.HoldingValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.PreviousHoldingValue,
-					com.tools20022.repository.msg.AggregateBalanceInformation4.HoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation4.PreviousHoldingValue, com.tools20022.repository.msg.OtherTypeOfCollateral1.Amount,
-					com.tools20022.repository.msg.AggregateBalanceInformation5.HoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation5.PreviousHoldingValue,
-					com.tools20022.repository.msg.FinancialInstrument37.AverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument35.AverageAcquisitionPrice,
-					com.tools20022.repository.msg.FinancialInstrument40.AverageAcquisitionPrice, com.tools20022.repository.msg.DebtInstrument2.NominalValuePerUnit,
-					com.tools20022.repository.msg.FinancialInstrument48.AverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument47.AverageAcquisitionPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument26.mmAverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument30.mmAverageAcquisitionPrice,
+					com.tools20022.repository.msg.FinancialInstrument24.mmAverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument33.mmAverageAcquisitionPrice,
+					com.tools20022.repository.msg.FinancialInstrument23.mmAverageAcquisitionPrice, com.tools20022.repository.msg.BalanceAmounts1.mmHoldingValue, com.tools20022.repository.msg.BalanceAmounts1.mmPreviousHoldingValue,
+					com.tools20022.repository.msg.BalanceAmounts2.mmHoldingValue, com.tools20022.repository.msg.BalanceAmounts5.mmHoldingValue, com.tools20022.repository.msg.BalanceAmounts5.mmPreviousHoldingValue,
+					com.tools20022.repository.msg.BalanceAmounts6.mmHoldingValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2.mmHoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation2.mmHoldingValue,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.mmHoldingValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.mmPreviousHoldingValue,
+					com.tools20022.repository.msg.AggregateBalanceInformation3.mmHoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation3.mmPreviousHoldingValue, com.tools20022.repository.msg.BalanceAmounts3.mmHoldingValue,
+					com.tools20022.repository.msg.BalanceAmounts3.mmPreviousHoldingValue, com.tools20022.repository.msg.BalanceAmounts4.mmHoldingValue, com.tools20022.repository.msg.BalanceAmounts4.mmPreviousHoldingValue,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1.mmHoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation1.mmHoldingValue,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.mmHoldingValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.mmPreviousHoldingValue,
+					com.tools20022.repository.msg.AggregateBalanceInformation4.mmHoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation4.mmPreviousHoldingValue,
+					com.tools20022.repository.msg.OtherTypeOfCollateral1.mmAmount, com.tools20022.repository.msg.AggregateBalanceInformation5.mmHoldingValue,
+					com.tools20022.repository.msg.AggregateBalanceInformation5.mmPreviousHoldingValue, com.tools20022.repository.msg.FinancialInstrument37.mmAverageAcquisitionPrice,
+					com.tools20022.repository.msg.FinancialInstrument35.mmAverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument40.mmAverageAcquisitionPrice,
+					com.tools20022.repository.msg.DebtInstrument2.mmNominalValuePerUnit, com.tools20022.repository.msg.FinancialInstrument48.mmAverageAcquisitionPrice,
+					com.tools20022.repository.msg.FinancialInstrument47.mmAverageAcquisitionPrice);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HoldingValue";
 			definition = "Value of the balance of an individual securities holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount bookValue;
 	/**
 	 * Value of a security, as booked/acquired in an account. Book value is
 	 * often different from the current market value of the security.
@@ -359,195 +364,205 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument26#TotalBookValue
-	 * FinancialInstrument26.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument30#TotalBookValue
-	 * FinancialInstrument30.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument24#TotalBookValue
-	 * FinancialInstrument24.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#TotalBookValue
-	 * FinancialInstrument33.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument23#TotalBookValue
-	 * FinancialInstrument23.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument31#AverageAcquisitionPrice
-	 * FinancialInstrument31.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument31#TotalBookValue
-	 * FinancialInstrument31.TotalBookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer4#AveragePrice
-	 * Transfer4.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer7#AveragePrice
-	 * Transfer7.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer17#AveragePrice
-	 * Transfer17.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer2#AveragePrice
-	 * Transfer2.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer10#AveragePrice
-	 * Transfer10.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer14#AveragePrice
-	 * Transfer14.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer24#AveragePrice
-	 * Transfer24.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer25#AveragePrice
-	 * Transfer25.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer1#AveragePrice
-	 * Transfer1.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer9#AveragePrice
-	 * Transfer9.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer12#AveragePrice
-	 * Transfer12.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer20#AveragePrice
-	 * Transfer20.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer18#AveragePrice
-	 * Transfer18.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer26#AveragePrice
-	 * Transfer26.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer13#AveragePrice
-	 * Transfer13.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer23#AveragePrice
-	 * Transfer23.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer8#AveragePrice
-	 * Transfer8.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer11#AveragePrice
-	 * Transfer11.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer19#AveragePrice
-	 * Transfer19.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1#BookValue
-	 * BalanceAmounts1.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts2#BookValue
-	 * BalanceAmounts2.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts5#BookValue
-	 * BalanceAmounts5.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts6#BookValue
-	 * BalanceAmounts6.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2#BookValue
-	 * AggregateBalancePerSafekeepingPlace2.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2#BookValue
-	 * AggregateBalanceInformation2.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#BookValue
-	 * AggregateBalancePerSafekeepingPlace4.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#BookValue
-	 * AggregateBalanceInformation3.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3#BookValue
-	 * BalanceAmounts3.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts4#BookValue
-	 * BalanceAmounts4.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1#BookValue
-	 * AggregateBalancePerSafekeepingPlace1.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation1#BookValue
-	 * AggregateBalanceInformation1.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#BookValue
-	 * AggregateBalancePerSafekeepingPlace3.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#BookValue
-	 * AggregateBalanceInformation4.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts4#BookValue
-	 * OtherAmounts4.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts5#BookValue
-	 * OtherAmounts5.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts17#BookValue
-	 * OtherAmounts17.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts23#BookValue
-	 * OtherAmounts23.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts9#BookValue
-	 * OtherAmounts9.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts10#BookValue
-	 * OtherAmounts10.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts18#BookValue
-	 * OtherAmounts18.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts24#BookValue
-	 * OtherAmounts24.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts16#BookValue
-	 * OtherAmounts16.BookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts16#RemainingBookValue
-	 * OtherAmounts16.RemainingBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation5#BookValue
-	 * AggregateBalanceInformation5.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#AveragePrice
-	 * Transfer27.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer28#AveragePrice
-	 * Transfer28.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer28#NewAveragePrice
-	 * Transfer28.NewAveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer29#AveragePrice
-	 * Transfer29.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer29#NewAveragePrice
-	 * Transfer29.NewAveragePrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument37#TotalBookValue
-	 * FinancialInstrument37.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#TotalBookValue
-	 * FinancialInstrument35.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument34#AverageAcquisitionPrice
-	 * FinancialInstrument34.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument34#TotalBookValue
-	 * FinancialInstrument34.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#TotalBookValue
-	 * FinancialInstrument40.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#AverageAcquisitionPrice
-	 * FinancialInstrument39.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#TotalBookValue
-	 * FinancialInstrument39.TotalBookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts30#BookValue
-	 * OtherAmounts30.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts31#BookValue
-	 * OtherAmounts31.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#AveragePrice
-	 * Transfer31.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#NewAveragePrice
-	 * Transfer31.NewAveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer30#AveragePrice
-	 * Transfer30.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#AveragePrice
-	 * Transfer33.AveragePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#NewAveragePrice
-	 * Transfer33.NewAveragePrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#TotalBookValue
-	 * FinancialInstrument48.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#TotalBookValue
-	 * FinancialInstrument47.TotalBookValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#AverageAcquisitionPrice
-	 * FinancialInstrument46.AverageAcquisitionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#TotalBookValue
-	 * FinancialInstrument46.TotalBookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts34#BookValue
-	 * OtherAmounts34.BookValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts38#BookValue
-	 * OtherAmounts38.BookValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument26#mmTotalBookValue
+	 * FinancialInstrument26.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument30#mmTotalBookValue
+	 * FinancialInstrument30.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument24#mmTotalBookValue
+	 * FinancialInstrument24.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#mmTotalBookValue
+	 * FinancialInstrument33.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument23#mmTotalBookValue
+	 * FinancialInstrument23.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument31#mmAverageAcquisitionPrice
+	 * FinancialInstrument31.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument31#mmTotalBookValue
+	 * FinancialInstrument31.mmTotalBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer4#mmAveragePrice
+	 * Transfer4.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer7#mmAveragePrice
+	 * Transfer7.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer17#mmAveragePrice
+	 * Transfer17.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer2#mmAveragePrice
+	 * Transfer2.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer10#mmAveragePrice
+	 * Transfer10.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer14#mmAveragePrice
+	 * Transfer14.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer24#mmAveragePrice
+	 * Transfer24.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer25#mmAveragePrice
+	 * Transfer25.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer1#mmAveragePrice
+	 * Transfer1.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer9#mmAveragePrice
+	 * Transfer9.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer12#mmAveragePrice
+	 * Transfer12.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer20#mmAveragePrice
+	 * Transfer20.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer18#mmAveragePrice
+	 * Transfer18.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer26#mmAveragePrice
+	 * Transfer26.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer13#mmAveragePrice
+	 * Transfer13.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer23#mmAveragePrice
+	 * Transfer23.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer8#mmAveragePrice
+	 * Transfer8.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer11#mmAveragePrice
+	 * Transfer11.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmAveragePrice
+	 * Transfer19.mmAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmBookValue
+	 * BalanceAmounts1.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts2#mmBookValue
+	 * BalanceAmounts2.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts5#mmBookValue
+	 * BalanceAmounts5.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts6#mmBookValue
+	 * BalanceAmounts6.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2#mmBookValue
+	 * AggregateBalancePerSafekeepingPlace2.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2#mmBookValue
+	 * AggregateBalanceInformation2.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#mmBookValue
+	 * AggregateBalancePerSafekeepingPlace4.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#mmBookValue
+	 * AggregateBalanceInformation3.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmBookValue
+	 * BalanceAmounts3.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4#mmBookValue
+	 * BalanceAmounts4.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1#mmBookValue
+	 * AggregateBalancePerSafekeepingPlace1.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation1#mmBookValue
+	 * AggregateBalanceInformation1.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#mmBookValue
+	 * AggregateBalancePerSafekeepingPlace3.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#mmBookValue
+	 * AggregateBalanceInformation4.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts4#mmBookValue
+	 * OtherAmounts4.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts5#mmBookValue
+	 * OtherAmounts5.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts17#mmBookValue
+	 * OtherAmounts17.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts23#mmBookValue
+	 * OtherAmounts23.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts9#mmBookValue
+	 * OtherAmounts9.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts10#mmBookValue
+	 * OtherAmounts10.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts18#mmBookValue
+	 * OtherAmounts18.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts24#mmBookValue
+	 * OtherAmounts24.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts16#mmBookValue
+	 * OtherAmounts16.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts16#mmRemainingBookValue
+	 * OtherAmounts16.mmRemainingBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation5#mmBookValue
+	 * AggregateBalanceInformation5.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#mmAveragePrice
+	 * Transfer27.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer28#mmAveragePrice
+	 * Transfer28.mmAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmNewAveragePrice
+	 * Transfer28.mmNewAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer29#mmAveragePrice
+	 * Transfer29.mmAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmNewAveragePrice
+	 * Transfer29.mmNewAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument37#mmTotalBookValue
+	 * FinancialInstrument37.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#mmTotalBookValue
+	 * FinancialInstrument35.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument34#mmAverageAcquisitionPrice
+	 * FinancialInstrument34.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument34#mmTotalBookValue
+	 * FinancialInstrument34.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#mmTotalBookValue
+	 * FinancialInstrument40.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmAverageAcquisitionPrice
+	 * FinancialInstrument39.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmTotalBookValue
+	 * FinancialInstrument39.mmTotalBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts30#mmBookValue
+	 * OtherAmounts30.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts31#mmBookValue
+	 * OtherAmounts31.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#mmAveragePrice
+	 * Transfer31.mmAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmNewAveragePrice
+	 * Transfer31.mmNewAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer30#mmAveragePrice
+	 * Transfer30.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#mmAveragePrice
+	 * Transfer33.mmAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmNewAveragePrice
+	 * Transfer33.mmNewAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#mmTotalBookValue
+	 * FinancialInstrument48.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#mmTotalBookValue
+	 * FinancialInstrument47.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmAverageAcquisitionPrice
+	 * FinancialInstrument46.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmTotalBookValue
+	 * FinancialInstrument46.mmTotalBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts34#mmBookValue
+	 * OtherAmounts34.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts38#mmBookValue
+	 * OtherAmounts38.mmBookValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -561,43 +576,45 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BookValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBookValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument26.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument30.TotalBookValue,
-					com.tools20022.repository.msg.FinancialInstrument24.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument33.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument23.TotalBookValue,
-					com.tools20022.repository.msg.FinancialInstrument31.AverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument31.TotalBookValue, com.tools20022.repository.msg.Transfer4.AveragePrice,
-					com.tools20022.repository.msg.Transfer7.AveragePrice, com.tools20022.repository.msg.Transfer17.AveragePrice, com.tools20022.repository.msg.Transfer2.AveragePrice, com.tools20022.repository.msg.Transfer10.AveragePrice,
-					com.tools20022.repository.msg.Transfer14.AveragePrice, com.tools20022.repository.msg.Transfer24.AveragePrice, com.tools20022.repository.msg.Transfer25.AveragePrice, com.tools20022.repository.msg.Transfer1.AveragePrice,
-					com.tools20022.repository.msg.Transfer9.AveragePrice, com.tools20022.repository.msg.Transfer12.AveragePrice, com.tools20022.repository.msg.Transfer20.AveragePrice, com.tools20022.repository.msg.Transfer18.AveragePrice,
-					com.tools20022.repository.msg.Transfer26.AveragePrice, com.tools20022.repository.msg.Transfer13.AveragePrice, com.tools20022.repository.msg.Transfer23.AveragePrice, com.tools20022.repository.msg.Transfer8.AveragePrice,
-					com.tools20022.repository.msg.Transfer11.AveragePrice, com.tools20022.repository.msg.Transfer19.AveragePrice, com.tools20022.repository.msg.BalanceAmounts1.BookValue,
-					com.tools20022.repository.msg.BalanceAmounts2.BookValue, com.tools20022.repository.msg.BalanceAmounts5.BookValue, com.tools20022.repository.msg.BalanceAmounts6.BookValue,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2.BookValue, com.tools20022.repository.msg.AggregateBalanceInformation2.BookValue,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.BookValue, com.tools20022.repository.msg.AggregateBalanceInformation3.BookValue, com.tools20022.repository.msg.BalanceAmounts3.BookValue,
-					com.tools20022.repository.msg.BalanceAmounts4.BookValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1.BookValue, com.tools20022.repository.msg.AggregateBalanceInformation1.BookValue,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.BookValue, com.tools20022.repository.msg.AggregateBalanceInformation4.BookValue, com.tools20022.repository.msg.OtherAmounts4.BookValue,
-					com.tools20022.repository.msg.OtherAmounts5.BookValue, com.tools20022.repository.msg.OtherAmounts17.BookValue, com.tools20022.repository.msg.OtherAmounts23.BookValue,
-					com.tools20022.repository.msg.OtherAmounts9.BookValue, com.tools20022.repository.msg.OtherAmounts10.BookValue, com.tools20022.repository.msg.OtherAmounts18.BookValue,
-					com.tools20022.repository.msg.OtherAmounts24.BookValue, com.tools20022.repository.msg.OtherAmounts16.BookValue, com.tools20022.repository.msg.OtherAmounts16.RemainingBookValue,
-					com.tools20022.repository.msg.AggregateBalanceInformation5.BookValue, com.tools20022.repository.msg.Transfer27.AveragePrice, com.tools20022.repository.msg.Transfer28.AveragePrice,
-					com.tools20022.repository.msg.Transfer28.NewAveragePrice, com.tools20022.repository.msg.Transfer29.AveragePrice, com.tools20022.repository.msg.Transfer29.NewAveragePrice,
-					com.tools20022.repository.msg.FinancialInstrument37.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument35.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument34.AverageAcquisitionPrice,
-					com.tools20022.repository.msg.FinancialInstrument34.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument40.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument39.AverageAcquisitionPrice,
-					com.tools20022.repository.msg.FinancialInstrument39.TotalBookValue, com.tools20022.repository.msg.OtherAmounts30.BookValue, com.tools20022.repository.msg.OtherAmounts31.BookValue,
-					com.tools20022.repository.msg.Transfer31.AveragePrice, com.tools20022.repository.msg.Transfer31.NewAveragePrice, com.tools20022.repository.msg.Transfer30.AveragePrice,
-					com.tools20022.repository.msg.Transfer33.AveragePrice, com.tools20022.repository.msg.Transfer33.NewAveragePrice, com.tools20022.repository.msg.FinancialInstrument48.TotalBookValue,
-					com.tools20022.repository.msg.FinancialInstrument47.TotalBookValue, com.tools20022.repository.msg.FinancialInstrument46.AverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument46.TotalBookValue,
-					com.tools20022.repository.msg.OtherAmounts34.BookValue, com.tools20022.repository.msg.OtherAmounts38.BookValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument26.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument30.mmTotalBookValue,
+					com.tools20022.repository.msg.FinancialInstrument24.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument33.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument23.mmTotalBookValue,
+					com.tools20022.repository.msg.FinancialInstrument31.mmAverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument31.mmTotalBookValue, com.tools20022.repository.msg.Transfer4.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer7.mmAveragePrice, com.tools20022.repository.msg.Transfer17.mmAveragePrice, com.tools20022.repository.msg.Transfer2.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer10.mmAveragePrice, com.tools20022.repository.msg.Transfer14.mmAveragePrice, com.tools20022.repository.msg.Transfer24.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer25.mmAveragePrice, com.tools20022.repository.msg.Transfer1.mmAveragePrice, com.tools20022.repository.msg.Transfer9.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer12.mmAveragePrice, com.tools20022.repository.msg.Transfer20.mmAveragePrice, com.tools20022.repository.msg.Transfer18.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer26.mmAveragePrice, com.tools20022.repository.msg.Transfer13.mmAveragePrice, com.tools20022.repository.msg.Transfer23.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer8.mmAveragePrice, com.tools20022.repository.msg.Transfer11.mmAveragePrice, com.tools20022.repository.msg.Transfer19.mmAveragePrice,
+					com.tools20022.repository.msg.BalanceAmounts1.mmBookValue, com.tools20022.repository.msg.BalanceAmounts2.mmBookValue, com.tools20022.repository.msg.BalanceAmounts5.mmBookValue,
+					com.tools20022.repository.msg.BalanceAmounts6.mmBookValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2.mmBookValue, com.tools20022.repository.msg.AggregateBalanceInformation2.mmBookValue,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.mmBookValue, com.tools20022.repository.msg.AggregateBalanceInformation3.mmBookValue, com.tools20022.repository.msg.BalanceAmounts3.mmBookValue,
+					com.tools20022.repository.msg.BalanceAmounts4.mmBookValue, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1.mmBookValue, com.tools20022.repository.msg.AggregateBalanceInformation1.mmBookValue,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.mmBookValue, com.tools20022.repository.msg.AggregateBalanceInformation4.mmBookValue, com.tools20022.repository.msg.OtherAmounts4.mmBookValue,
+					com.tools20022.repository.msg.OtherAmounts5.mmBookValue, com.tools20022.repository.msg.OtherAmounts17.mmBookValue, com.tools20022.repository.msg.OtherAmounts23.mmBookValue,
+					com.tools20022.repository.msg.OtherAmounts9.mmBookValue, com.tools20022.repository.msg.OtherAmounts10.mmBookValue, com.tools20022.repository.msg.OtherAmounts18.mmBookValue,
+					com.tools20022.repository.msg.OtherAmounts24.mmBookValue, com.tools20022.repository.msg.OtherAmounts16.mmBookValue, com.tools20022.repository.msg.OtherAmounts16.mmRemainingBookValue,
+					com.tools20022.repository.msg.AggregateBalanceInformation5.mmBookValue, com.tools20022.repository.msg.Transfer27.mmAveragePrice, com.tools20022.repository.msg.Transfer28.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer28.mmNewAveragePrice, com.tools20022.repository.msg.Transfer29.mmAveragePrice, com.tools20022.repository.msg.Transfer29.mmNewAveragePrice,
+					com.tools20022.repository.msg.FinancialInstrument37.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument35.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument34.mmAverageAcquisitionPrice,
+					com.tools20022.repository.msg.FinancialInstrument34.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument40.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument39.mmAverageAcquisitionPrice,
+					com.tools20022.repository.msg.FinancialInstrument39.mmTotalBookValue, com.tools20022.repository.msg.OtherAmounts30.mmBookValue, com.tools20022.repository.msg.OtherAmounts31.mmBookValue,
+					com.tools20022.repository.msg.Transfer31.mmAveragePrice, com.tools20022.repository.msg.Transfer31.mmNewAveragePrice, com.tools20022.repository.msg.Transfer30.mmAveragePrice,
+					com.tools20022.repository.msg.Transfer33.mmAveragePrice, com.tools20022.repository.msg.Transfer33.mmNewAveragePrice, com.tools20022.repository.msg.FinancialInstrument48.mmTotalBookValue,
+					com.tools20022.repository.msg.FinancialInstrument47.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument46.mmAverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument46.mmTotalBookValue,
+					com.tools20022.repository.msg.OtherAmounts34.mmBookValue, com.tools20022.repository.msg.OtherAmounts38.mmBookValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BookValue";
 			definition = "Value of a security, as booked/acquired in an account. Book value is often different from the current market value of the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount faceAmount;
 	/**
 	 * Quantity expressed as an amount representing the face amount, ie, the
 	 * principal, of a debt instrument.
@@ -609,118 +626,118 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice#FaceAmount
-	 * FinancialInstrumentQuantity1Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities1#FaceAmount
-	 * OriginalAndCurrentQuantities1.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice#FaceAmount
-	 * FinancialInstrumentQuantity15Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities4#FaceAmount
-	 * OriginalAndCurrentQuantities4.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#FaceAmount
-	 * OriginalAndCurrentQuantities2.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity4Choice#OriginalAndCurrentFaceAmount
-	 * Quantity4Choice.OriginalAndCurrentFaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities3#FaceAmount
-	 * OriginalAndCurrentQuantities3.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity9Choice#OriginalAndCurrentFaceAmount
-	 * Quantity9Choice.OriginalAndCurrentFaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice#FaceAmount
-	 * FinancialInstrumentQuantity2Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice#FaceAmount
-	 * FinancialInstrumentQuantity14Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice#FaceAmount
-	 * FinancialInstrumentQuantity16Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice#FaceAmount
-	 * FinancialInstrumentQuantity17Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice#FaceAmount
-	 * FinancialInstrumentQuantity19Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice#FaceAmount
-	 * FinancialInstrumentQuantity20Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#FaceAmount
-	 * FinancialInstrumentQuantity21Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice#FaceAmount
-	 * FinancialInstrumentQuantity22Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantityChoice#FaceAmount
-	 * FinancialInstrumentQuantityChoice.FaceAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Debt1#FaceAmount
-	 * Debt1.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountChoice#FaceAmount
-	 * UnitOrFaceAmountChoice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice#FaceAmount
-	 * FinancialInstrumentQuantity18Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes31#FaceAmount
-	 * FinancialInstrumentAttributes31.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes44#FaceAmount
-	 * FinancialInstrumentAttributes44.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmount1Choice#FaceAmount
-	 * UnitOrFaceAmount1Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#FaceAmount
-	 * UnitOrFaceAmountOrCodeChoice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice#FaceAmount
-	 * UnitOrFaceAmountOrCode1Choice.FaceAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#FaceAmount
-	 * Debt2.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice#FaceAmount
-	 * FinancialInstrumentQuantitySearch1Choice.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#FaceAmount
-	 * FinancialInstrumentQuantitySearch1.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity16Choice#OriginalAndCurrentFaceAmount
-	 * Quantity16Choice.OriginalAndCurrentFaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities5#FaceAmount
-	 * OriginalAndCurrentQuantities5.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity18Choice#OriginalAndCurrentFaceAmount
-	 * Quantity18Choice.OriginalAndCurrentFaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#FaceAmount
-	 * OriginalAndCurrentQuantities6.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity23Choice#OriginalAndCurrentFaceAmount
-	 * Quantity23Choice.OriginalAndCurrentFaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities7#FaceAmount
-	 * OriginalAndCurrentQuantities7.FaceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#NominalValue
-	 * FinancialInstrumentQuantity25Choice.NominalValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity1Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities1#mmFaceAmount
+	 * OriginalAndCurrentQuantities1.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity15Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities4#mmFaceAmount
+	 * OriginalAndCurrentQuantities4.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#mmFaceAmount
+	 * OriginalAndCurrentQuantities2.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity4Choice#mmOriginalAndCurrentFaceAmount
+	 * Quantity4Choice.mmOriginalAndCurrentFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities3#mmFaceAmount
+	 * OriginalAndCurrentQuantities3.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity9Choice#mmOriginalAndCurrentFaceAmount
+	 * Quantity9Choice.mmOriginalAndCurrentFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity2Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity14Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity16Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity17Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity19Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity20Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity21Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity22Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantityChoice#mmFaceAmount
+	 * FinancialInstrumentQuantityChoice.mmFaceAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt1#mmFaceAmount
+	 * Debt1.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountChoice#mmFaceAmount
+	 * UnitOrFaceAmountChoice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity18Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes31#mmFaceAmount
+	 * FinancialInstrumentAttributes31.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes44#mmFaceAmount
+	 * FinancialInstrumentAttributes44.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmount1Choice#mmFaceAmount
+	 * UnitOrFaceAmount1Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice#mmFaceAmount
+	 * UnitOrFaceAmountOrCodeChoice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice#mmFaceAmount
+	 * UnitOrFaceAmountOrCode1Choice.mmFaceAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmFaceAmount
+	 * Debt2.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice#mmFaceAmount
+	 * FinancialInstrumentQuantitySearch1Choice.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#mmFaceAmount
+	 * FinancialInstrumentQuantitySearch1.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity16Choice#mmOriginalAndCurrentFaceAmount
+	 * Quantity16Choice.mmOriginalAndCurrentFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities5#mmFaceAmount
+	 * OriginalAndCurrentQuantities5.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity18Choice#mmOriginalAndCurrentFaceAmount
+	 * Quantity18Choice.mmOriginalAndCurrentFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#mmFaceAmount
+	 * OriginalAndCurrentQuantities6.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity23Choice#mmOriginalAndCurrentFaceAmount
+	 * Quantity23Choice.mmOriginalAndCurrentFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities7#mmFaceAmount
+	 * OriginalAndCurrentQuantities7.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmNominalValue
+	 * FinancialInstrumentQuantity25Choice.mmNominalValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -734,34 +751,36 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FaceAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFaceAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.FaceAmount, com.tools20022.repository.msg.OriginalAndCurrentQuantities1.FaceAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.FaceAmount, com.tools20022.repository.msg.OriginalAndCurrentQuantities4.FaceAmount,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities2.FaceAmount, com.tools20022.repository.choice.Quantity4Choice.OriginalAndCurrentFaceAmount,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities3.FaceAmount, com.tools20022.repository.choice.Quantity9Choice.OriginalAndCurrentFaceAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice.FaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice.FaceAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice.FaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice.FaceAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.FaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.FaceAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.FaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice.FaceAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.FaceAmount, com.tools20022.repository.msg.Debt1.FaceAmount, com.tools20022.repository.choice.UnitOrFaceAmountChoice.FaceAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice.FaceAmount, com.tools20022.repository.msg.FinancialInstrumentAttributes31.FaceAmount,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.FaceAmount, com.tools20022.repository.choice.UnitOrFaceAmount1Choice.FaceAmount, com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.FaceAmount,
-					com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice.FaceAmount, com.tools20022.repository.msg.Debt2.FaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.FaceAmount,
-					com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.FaceAmount, com.tools20022.repository.choice.Quantity16Choice.OriginalAndCurrentFaceAmount,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities5.FaceAmount, com.tools20022.repository.choice.Quantity18Choice.OriginalAndCurrentFaceAmount,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities6.FaceAmount, com.tools20022.repository.choice.Quantity23Choice.OriginalAndCurrentFaceAmount,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities7.FaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.NominalValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmFaceAmount, com.tools20022.repository.msg.OriginalAndCurrentQuantities1.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmFaceAmount, com.tools20022.repository.msg.OriginalAndCurrentQuantities4.mmFaceAmount,
+					com.tools20022.repository.msg.OriginalAndCurrentQuantities2.mmFaceAmount, com.tools20022.repository.choice.Quantity4Choice.mmOriginalAndCurrentFaceAmount,
+					com.tools20022.repository.msg.OriginalAndCurrentQuantities3.mmFaceAmount, com.tools20022.repository.choice.Quantity9Choice.mmOriginalAndCurrentFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice.mmFaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice.mmFaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmFaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmFaceAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmFaceAmount, com.tools20022.repository.msg.Debt1.mmFaceAmount, com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice.mmFaceAmount, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmFaceAmount,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmFaceAmount, com.tools20022.repository.choice.UnitOrFaceAmount1Choice.mmFaceAmount,
+					com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.mmFaceAmount, com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice.mmFaceAmount, com.tools20022.repository.msg.Debt2.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.mmFaceAmount, com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.mmFaceAmount,
+					com.tools20022.repository.choice.Quantity16Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.msg.OriginalAndCurrentQuantities5.mmFaceAmount,
+					com.tools20022.repository.choice.Quantity18Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.msg.OriginalAndCurrentQuantities6.mmFaceAmount,
+					com.tools20022.repository.choice.Quantity23Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmFaceAmount,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmNominalValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amortisedFaceValue;
 	/**
 	 * Quantity expressed as an amount representing the current amortised face
 	 * amount of a bond, for example, a periodic reduction/increase of a bond's
@@ -774,81 +793,81 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice#AmortisedValue
-	 * FinancialInstrumentQuantity1Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities1#AmortisedValue
-	 * OriginalAndCurrentQuantities1.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice#AmortisedValue
-	 * FinancialInstrumentQuantity15Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities4#AmortisedValue
-	 * OriginalAndCurrentQuantities4.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#AmortisedValue
-	 * OriginalAndCurrentQuantities2.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities3#AmortisedValue
-	 * OriginalAndCurrentQuantities3.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice#AmortisedValue
-	 * FinancialInstrumentQuantity2Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice#AmortisedValue
-	 * FinancialInstrumentQuantity14Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice#AmortisedValue
-	 * FinancialInstrumentQuantity16Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice#AmortisedValue
-	 * FinancialInstrumentQuantity17Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice#AmortisedValue
-	 * FinancialInstrumentQuantity19Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice#AmortisedValue
-	 * FinancialInstrumentQuantity20Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#AmortisedValue
-	 * FinancialInstrumentQuantity21Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice#AmortisedValue
-	 * FinancialInstrumentQuantity22Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantityChoice#AmortisedValue
-	 * FinancialInstrumentQuantityChoice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts16#RemainingFaceValue
-	 * OtherAmounts16.RemainingFaceValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice#AmortisedValue
-	 * FinancialInstrumentQuantitySearch1Choice.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#AmortisedValue
-	 * FinancialInstrumentQuantitySearch1.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities5#AmortisedValue
-	 * OriginalAndCurrentQuantities5.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#AmortisedValue
-	 * OriginalAndCurrentQuantities6.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities7#AmortisedValue
-	 * OriginalAndCurrentQuantities7.AmortisedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#MonetaryValue
-	 * FinancialInstrumentQuantity25Choice.MonetaryValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity1Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities1#mmAmortisedValue
+	 * OriginalAndCurrentQuantities1.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity15Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities4#mmAmortisedValue
+	 * OriginalAndCurrentQuantities4.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#mmAmortisedValue
+	 * OriginalAndCurrentQuantities2.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities3#mmAmortisedValue
+	 * OriginalAndCurrentQuantities3.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity2Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity14Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity16Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity17Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity19Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity20Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity21Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantity22Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantityChoice#mmAmortisedValue
+	 * FinancialInstrumentQuantityChoice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts16#mmRemainingFaceValue
+	 * OtherAmounts16.mmRemainingFaceValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice#mmAmortisedValue
+	 * FinancialInstrumentQuantitySearch1Choice.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#mmAmortisedValue
+	 * FinancialInstrumentQuantitySearch1.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities5#mmAmortisedValue
+	 * OriginalAndCurrentQuantities5.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#mmAmortisedValue
+	 * OriginalAndCurrentQuantities6.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities7#mmAmortisedValue
+	 * OriginalAndCurrentQuantities7.mmAmortisedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmMonetaryValue
+	 * FinancialInstrumentQuantity25Choice.mmMonetaryValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -862,29 +881,30 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AmortisedFaceValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmortisedFaceValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.AmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities1.AmortisedValue,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.AmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities4.AmortisedValue,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities2.AmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities3.AmortisedValue,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice.AmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice.AmortisedValue,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice.AmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice.AmortisedValue,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.AmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.AmortisedValue,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.AmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice.AmortisedValue,
-					com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.AmortisedValue, com.tools20022.repository.msg.OtherAmounts16.RemainingFaceValue,
-					com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.AmortisedValue, com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.AmortisedValue,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities5.AmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities6.AmortisedValue,
-					com.tools20022.repository.msg.OriginalAndCurrentQuantities7.AmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.MonetaryValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmAmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities1.mmAmortisedValue,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmAmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities4.mmAmortisedValue,
+					com.tools20022.repository.msg.OriginalAndCurrentQuantities2.mmAmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities3.mmAmortisedValue,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice.mmAmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice.mmAmortisedValue,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice.mmAmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice.mmAmortisedValue,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmAmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmAmortisedValue,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmAmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice.mmAmortisedValue,
+					com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmAmortisedValue, com.tools20022.repository.msg.OtherAmounts16.mmRemainingFaceValue,
+					com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.mmAmortisedValue, com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.mmAmortisedValue,
+					com.tools20022.repository.msg.OriginalAndCurrentQuantities5.mmAmortisedValue, com.tools20022.repository.msg.OriginalAndCurrentQuantities6.mmAmortisedValue,
+					com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmAmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmMonetaryValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AmortisedFaceValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount marketValue;
 	/**
 	 * Value of the asset holding based on current market prices.
 	 * <p>
@@ -895,91 +915,91 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes3#MarketPrice
-	 * FinancialInstrumentAttributes3.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes12#MarketPrice
-	 * FinancialInstrumentAttributes12.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes17#MarketPrice
-	 * FinancialInstrumentAttributes17.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes25#MarketPrice
-	 * FinancialInstrumentAttributes25.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes46#MarketPrice
-	 * FinancialInstrumentAttributes46.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes47#MarketPrice
-	 * FinancialInstrumentAttributes47.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts16#NetMarketValue
-	 * OtherAmounts16.NetMarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral1#MarketValue
-	 * SecuritiesCollateral1.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral1#MarketValue
-	 * OtherCollateral1.MarketValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral3#MarketValue
-	 * Collateral3.MarketValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral6#MarketValue
-	 * Collateral6.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#MarketValue
-	 * SecuritiesCollateral2.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#MarketValue
-	 * OtherCollateral2.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#MarketValue
-	 * SecuritiesCollateral3.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#MarketValue
-	 * OtherCollateral3.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral4#MarketValue
-	 * OtherCollateral4.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#MarketValue
-	 * SecuritiesCollateral4.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes68#MarketPrice
-	 * FinancialInstrumentAttributes68.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral7#MarketValue
-	 * OtherCollateral7.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#MarketValue
-	 * OtherCollateral6.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#MarketValue
-	 * SecuritiesCollateral6.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#MarketValue
-	 * SecuritiesCollateral5.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral5#MarketValue
-	 * OtherCollateral5.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#MarketValue
-	 * SecuritiesCollateral7.MarketValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes73#MarketPrice
-	 * FinancialInstrumentAttributes73.MarketPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#MarketValue
-	 * SecuritiesCollateral8.MarketValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes3#mmMarketPrice
+	 * FinancialInstrumentAttributes3.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes12#mmMarketPrice
+	 * FinancialInstrumentAttributes12.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes17#mmMarketPrice
+	 * FinancialInstrumentAttributes17.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes25#mmMarketPrice
+	 * FinancialInstrumentAttributes25.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes46#mmMarketPrice
+	 * FinancialInstrumentAttributes46.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes47#mmMarketPrice
+	 * FinancialInstrumentAttributes47.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts16#mmNetMarketValue
+	 * OtherAmounts16.mmNetMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral1#mmMarketValue
+	 * SecuritiesCollateral1.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmMarketValue
+	 * OtherCollateral1.mmMarketValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral3#mmMarketValue
+	 * Collateral3.mmMarketValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral6#mmMarketValue
+	 * Collateral6.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#mmMarketValue
+	 * SecuritiesCollateral2.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmMarketValue
+	 * OtherCollateral2.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#mmMarketValue
+	 * SecuritiesCollateral3.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmMarketValue
+	 * OtherCollateral3.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmMarketValue
+	 * OtherCollateral4.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#mmMarketValue
+	 * SecuritiesCollateral4.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes68#mmMarketPrice
+	 * FinancialInstrumentAttributes68.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmMarketValue
+	 * OtherCollateral7.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmMarketValue
+	 * OtherCollateral6.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#mmMarketValue
+	 * SecuritiesCollateral6.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#mmMarketValue
+	 * SecuritiesCollateral5.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmMarketValue
+	 * OtherCollateral5.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#mmMarketValue
+	 * SecuritiesCollateral7.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes73#mmMarketPrice
+	 * FinancialInstrumentAttributes73.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#mmMarketValue
+	 * SecuritiesCollateral8.mmMarketValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -992,28 +1012,29 @@ public class AssetHolding {
 	 * "Value of the asset holding based on current market prices."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MarketValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMarketValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes3.MarketPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes12.MarketPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes17.MarketPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes25.MarketPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes46.MarketPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes47.MarketPrice, com.tools20022.repository.msg.OtherAmounts16.NetMarketValue,
-					com.tools20022.repository.msg.SecuritiesCollateral1.MarketValue, com.tools20022.repository.msg.OtherCollateral1.MarketValue, com.tools20022.repository.msg.Collateral3.MarketValue,
-					com.tools20022.repository.msg.Collateral6.MarketValue, com.tools20022.repository.msg.SecuritiesCollateral2.MarketValue, com.tools20022.repository.msg.OtherCollateral2.MarketValue,
-					com.tools20022.repository.msg.SecuritiesCollateral3.MarketValue, com.tools20022.repository.msg.OtherCollateral3.MarketValue, com.tools20022.repository.msg.OtherCollateral4.MarketValue,
-					com.tools20022.repository.msg.SecuritiesCollateral4.MarketValue, com.tools20022.repository.msg.FinancialInstrumentAttributes68.MarketPrice, com.tools20022.repository.msg.OtherCollateral7.MarketValue,
-					com.tools20022.repository.msg.OtherCollateral6.MarketValue, com.tools20022.repository.msg.SecuritiesCollateral6.MarketValue, com.tools20022.repository.msg.SecuritiesCollateral5.MarketValue,
-					com.tools20022.repository.msg.OtherCollateral5.MarketValue, com.tools20022.repository.msg.SecuritiesCollateral7.MarketValue, com.tools20022.repository.msg.FinancialInstrumentAttributes73.MarketPrice,
-					com.tools20022.repository.msg.SecuritiesCollateral8.MarketValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes3.mmMarketPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes12.mmMarketPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes17.mmMarketPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmMarketPrice,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes46.mmMarketPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes47.mmMarketPrice, com.tools20022.repository.msg.OtherAmounts16.mmNetMarketValue,
+					com.tools20022.repository.msg.SecuritiesCollateral1.mmMarketValue, com.tools20022.repository.msg.OtherCollateral1.mmMarketValue, com.tools20022.repository.msg.Collateral3.mmMarketValue,
+					com.tools20022.repository.msg.Collateral6.mmMarketValue, com.tools20022.repository.msg.SecuritiesCollateral2.mmMarketValue, com.tools20022.repository.msg.OtherCollateral2.mmMarketValue,
+					com.tools20022.repository.msg.SecuritiesCollateral3.mmMarketValue, com.tools20022.repository.msg.OtherCollateral3.mmMarketValue, com.tools20022.repository.msg.OtherCollateral4.mmMarketValue,
+					com.tools20022.repository.msg.SecuritiesCollateral4.mmMarketValue, com.tools20022.repository.msg.FinancialInstrumentAttributes68.mmMarketPrice, com.tools20022.repository.msg.OtherCollateral7.mmMarketValue,
+					com.tools20022.repository.msg.OtherCollateral6.mmMarketValue, com.tools20022.repository.msg.SecuritiesCollateral6.mmMarketValue, com.tools20022.repository.msg.SecuritiesCollateral5.mmMarketValue,
+					com.tools20022.repository.msg.OtherCollateral5.mmMarketValue, com.tools20022.repository.msg.SecuritiesCollateral7.mmMarketValue, com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmMarketPrice,
+					com.tools20022.repository.msg.SecuritiesCollateral8.mmMarketValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarketValue";
 			definition = "Value of the asset holding based on current market prices.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Balance> balance;
 	/**
 	 * Specifies the balance of the asset holding.
 	 * <p>
@@ -1022,8 +1043,8 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#AssetHolding
-	 * Balance.AssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
+	 * Balance.mmAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1045,7 +1066,7 @@ public class AssetHolding {
 	 * definition} = "Specifies the balance of the asset holding."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Balance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
@@ -1053,11 +1074,12 @@ public class AssetHolding {
 			name = "Balance";
 			definition = "Specifies the balance of the asset holding.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Balance.AssetHolding;
+			opposite_lazy = () -> com.tools20022.repository.entity.Balance.mmAssetHolding;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 		}
 	};
+	protected CurrencyAndAmount unrealisedGainOrLoss;
 	/**
 	 * Difference between the holding value and the book value of the asset.
 	 * <p>
@@ -1068,30 +1090,30 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#UnrealisedGainLoss
-	 * BalanceAmounts1.UnrealisedGainLoss}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts2#UnrealisedGainLoss
-	 * BalanceAmounts2.UnrealisedGainLoss}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts5#UnrealisedGainLoss
-	 * BalanceAmounts5.UnrealisedGainLoss}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts6#UnrealisedGainLoss
-	 * BalanceAmounts6.UnrealisedGainLoss}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#UnrealisedGainOrLoss
-	 * TotalPortfolioValuation1.UnrealisedGainOrLoss}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmUnrealisedGainLoss
+	 * BalanceAmounts1.mmUnrealisedGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts2#mmUnrealisedGainLoss
+	 * BalanceAmounts2.mmUnrealisedGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts5#mmUnrealisedGainLoss
+	 * BalanceAmounts5.mmUnrealisedGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts6#mmUnrealisedGainLoss
+	 * BalanceAmounts6.mmUnrealisedGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmUnrealisedGainOrLoss
+	 * TotalPortfolioValuation1.mmUnrealisedGainOrLoss}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1104,20 +1126,21 @@ public class AssetHolding {
 	 * "Difference between the holding value and the book value of the asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute UnrealisedGainOrLoss = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmUnrealisedGainOrLoss = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts1.UnrealisedGainLoss, com.tools20022.repository.msg.BalanceAmounts2.UnrealisedGainLoss,
-					com.tools20022.repository.msg.BalanceAmounts5.UnrealisedGainLoss, com.tools20022.repository.msg.BalanceAmounts6.UnrealisedGainLoss, com.tools20022.repository.msg.TotalPortfolioValuation1.UnrealisedGainOrLoss);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts1.mmUnrealisedGainLoss, com.tools20022.repository.msg.BalanceAmounts2.mmUnrealisedGainLoss,
+					com.tools20022.repository.msg.BalanceAmounts5.mmUnrealisedGainLoss, com.tools20022.repository.msg.BalanceAmounts6.mmUnrealisedGainLoss, com.tools20022.repository.msg.TotalPortfolioValuation1.mmUnrealisedGainOrLoss);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnrealisedGainOrLoss";
 			definition = "Difference between the holding value and the book value of the asset.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Asset asset;
 	/**
 	 * Specifies the asset included in the holding.
 	 * <p>
@@ -1126,47 +1149,47 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#AssetValue
-	 * Asset.AssetValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
+	 * Asset.mmAssetValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#OtherCollateral
-	 * ProposalType1Choice.OtherCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral4#OtherCollateral
-	 * Collateral4.OtherCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral7#OtherCollateral
-	 * Collateral7.OtherCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral8#OtherCollateral
-	 * Collateral8.OtherCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#OtherCollateral
-	 * Collateral11.OtherCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral12#OtherCollateral
-	 * Collateral12.OtherCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral16#OtherCollateral
-	 * Collateral16.OtherCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral17#OtherCollateral
-	 * Collateral17.OtherCollateral}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#mmOtherCollateral
+	 * ProposalType1Choice.mmOtherCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral4#mmOtherCollateral
+	 * Collateral4.mmOtherCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral7#mmOtherCollateral
+	 * Collateral7.mmOtherCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral8#mmOtherCollateral
+	 * Collateral8.mmOtherCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmOtherCollateral
+	 * Collateral11.mmOtherCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral12#mmOtherCollateral
+	 * Collateral12.mmOtherCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral16#mmOtherCollateral
+	 * Collateral16.mmOtherCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral17#mmOtherCollateral
+	 * Collateral17.mmOtherCollateral}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1178,23 +1201,24 @@ public class AssetHolding {
 	 * definition} = "Specifies the asset included in the holding."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Asset = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProposalType1Choice.OtherCollateral, com.tools20022.repository.msg.Collateral4.OtherCollateral, com.tools20022.repository.msg.Collateral7.OtherCollateral,
-					com.tools20022.repository.msg.Collateral8.OtherCollateral, com.tools20022.repository.msg.Collateral11.OtherCollateral, com.tools20022.repository.msg.Collateral12.OtherCollateral,
-					com.tools20022.repository.msg.Collateral16.OtherCollateral, com.tools20022.repository.msg.Collateral17.OtherCollateral);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProposalType1Choice.mmOtherCollateral, com.tools20022.repository.msg.Collateral4.mmOtherCollateral,
+					com.tools20022.repository.msg.Collateral7.mmOtherCollateral, com.tools20022.repository.msg.Collateral8.mmOtherCollateral, com.tools20022.repository.msg.Collateral11.mmOtherCollateral,
+					com.tools20022.repository.msg.Collateral12.mmOtherCollateral, com.tools20022.repository.msg.Collateral16.mmOtherCollateral, com.tools20022.repository.msg.Collateral17.mmOtherCollateral);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Asset";
 			definition = "Specifies the asset included in the holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Asset.AssetValue;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetValue;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.HaircutValuation> haircut;
 	/**
 	 * Percentage by which an asset's market value is reduced for the purpose of
 	 * calculating capital requirement, margin and collateral levels.
@@ -1204,8 +1228,8 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#AssetHolding
-	 * HaircutValuation.AssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmAssetHolding
+	 * HaircutValuation.mmAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1213,126 +1237,126 @@ public class AssetHolding {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.HaircutValuation
 	 * HaircutValuation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9#ValuationHaircutDetails
-	 * AggregateBalanceInformation9.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10#ValuationHaircutDetails
-	 * AggregateBalanceInformation10.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12#ValuationHaircutDetails
-	 * AggregateBalanceInformation12.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14#ValuationHaircutDetails
-	 * AggregateBalanceInformation14.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16#ValuationHaircutDetails
-	 * AggregateBalanceInformation16.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18#ValuationHaircutDetails
-	 * AggregateBalanceInformation18.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21#ValuationHaircutDetails
-	 * AggregateBalanceInformation21.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24#ValuationHaircutDetails
-	 * AggregateBalanceInformation24.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails11.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails14.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations#Haircut
-	 * FinancialInstrumentStipulations.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#SecuritiesHaircut
-	 * SecuritiesFinancing10.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails19.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails20.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails17.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails18.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20#ValuationHaircutDetails
-	 * AggregateBalanceInformation20.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#SecuritiesHaircut
-	 * SecuritiesFinancing1.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#ValuationHaircutDetails
-	 * FinancialInstrument1.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails21.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails22.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails24.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation25#ValuationHaircutDetails
-	 * AggregateBalanceInformation25.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28#ValuationHaircutDetails
-	 * AggregateBalanceInformation28.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails25.SecuritiesHaircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral10#Haircut
-	 * Collateral10.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30#ValuationHaircutDetails
-	 * AggregateBalanceInformation30.ValuationHaircutDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails26.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails28.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails27.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails33.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails32.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails30.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33#ValuationHaircutDetails
-	 * AggregateBalanceInformation33.ValuationHaircutDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral14#Haircut
-	 * Collateral14.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails35.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails36.SecuritiesHaircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral18#Haircut
-	 * Collateral18.Haircut}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9#mmValuationHaircutDetails
+	 * AggregateBalanceInformation9.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10#mmValuationHaircutDetails
+	 * AggregateBalanceInformation10.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12#mmValuationHaircutDetails
+	 * AggregateBalanceInformation12.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14#mmValuationHaircutDetails
+	 * AggregateBalanceInformation14.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16#mmValuationHaircutDetails
+	 * AggregateBalanceInformation16.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18#mmValuationHaircutDetails
+	 * AggregateBalanceInformation18.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21#mmValuationHaircutDetails
+	 * AggregateBalanceInformation21.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24#mmValuationHaircutDetails
+	 * AggregateBalanceInformation24.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails11.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails14.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations#mmHaircut
+	 * FinancialInstrumentStipulations.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmSecuritiesHaircut
+	 * SecuritiesFinancing10.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails19.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails20.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails17.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails18.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20#mmValuationHaircutDetails
+	 * AggregateBalanceInformation20.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmSecuritiesHaircut
+	 * SecuritiesFinancing1.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#mmValuationHaircutDetails
+	 * FinancialInstrument1.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails21.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails22.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails24.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation25#mmValuationHaircutDetails
+	 * AggregateBalanceInformation25.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28#mmValuationHaircutDetails
+	 * AggregateBalanceInformation28.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails25.mmSecuritiesHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral10#mmHaircut
+	 * Collateral10.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30#mmValuationHaircutDetails
+	 * AggregateBalanceInformation30.mmValuationHaircutDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails26.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails28.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails27.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails33.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails32.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails30.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33#mmValuationHaircutDetails
+	 * AggregateBalanceInformation33.mmValuationHaircutDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral14#mmHaircut
+	 * Collateral14.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails35.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails36.mmSecuritiesHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral18#mmHaircut
+	 * Collateral18.mmHaircut}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1346,38 +1370,39 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Haircut = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmHaircut = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation9.ValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation10.ValuationHaircutDetails,
-					com.tools20022.repository.msg.AggregateBalanceInformation12.ValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation14.ValuationHaircutDetails,
-					com.tools20022.repository.msg.AggregateBalanceInformation16.ValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation18.ValuationHaircutDetails,
-					com.tools20022.repository.msg.AggregateBalanceInformation21.ValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation24.ValuationHaircutDetails,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.SecuritiesHaircut,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations.Haircut, com.tools20022.repository.msg.SecuritiesFinancing10.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.SecuritiesHaircut,
-					com.tools20022.repository.msg.AggregateBalanceInformation20.ValuationHaircutDetails, com.tools20022.repository.msg.SecuritiesFinancing1.SecuritiesHaircut,
-					com.tools20022.repository.msg.FinancialInstrument1.ValuationHaircutDetails, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.SecuritiesHaircut,
-					com.tools20022.repository.msg.AggregateBalanceInformation25.ValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation28.ValuationHaircutDetails,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.SecuritiesHaircut, com.tools20022.repository.msg.Collateral10.Haircut,
-					com.tools20022.repository.msg.AggregateBalanceInformation30.ValuationHaircutDetails, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.SecuritiesHaircut, com.tools20022.repository.msg.AggregateBalanceInformation33.ValuationHaircutDetails,
-					com.tools20022.repository.msg.Collateral14.Haircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.SecuritiesHaircut, com.tools20022.repository.msg.Collateral18.Haircut);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation9.mmValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation10.mmValuationHaircutDetails,
+					com.tools20022.repository.msg.AggregateBalanceInformation12.mmValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation14.mmValuationHaircutDetails,
+					com.tools20022.repository.msg.AggregateBalanceInformation16.mmValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation18.mmValuationHaircutDetails,
+					com.tools20022.repository.msg.AggregateBalanceInformation21.mmValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation24.mmValuationHaircutDetails,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.FinancialInstrumentStipulations.mmHaircut, com.tools20022.repository.msg.SecuritiesFinancing10.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.AggregateBalanceInformation20.mmValuationHaircutDetails, com.tools20022.repository.msg.SecuritiesFinancing1.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.FinancialInstrument1.mmValuationHaircutDetails, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.AggregateBalanceInformation25.mmValuationHaircutDetails, com.tools20022.repository.msg.AggregateBalanceInformation28.mmValuationHaircutDetails,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmSecuritiesHaircut, com.tools20022.repository.msg.Collateral10.mmHaircut,
+					com.tools20022.repository.msg.AggregateBalanceInformation30.mmValuationHaircutDetails, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmSecuritiesHaircut, com.tools20022.repository.msg.AggregateBalanceInformation33.mmValuationHaircutDetails,
+					com.tools20022.repository.msg.Collateral14.mmHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmSecuritiesHaircut, com.tools20022.repository.msg.Collateral18.mmHaircut);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Haircut";
 			definition = "Percentage by which an asset's market value is reduced for the purpose of calculating capital requirement, margin and collateral levels.";
 			minOccurs = 0;
-			type_lazy = () -> HaircutValuation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.HaircutValuation.AssetHolding;
+			opposite_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmAssetHolding;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount eligibleCollateralValue;
 	/**
 	 * Value of the position eligible for collateral purposes. This corresponds
 	 * to the sub balance with a type AvailableForCollateral.
@@ -1389,27 +1414,27 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#EligibleCollateralValue
-	 * BalanceAmounts3.EligibleCollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement1#TotalEligibleCollateralValue
-	 * TotalValueInPageAndStatement1.TotalEligibleCollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4#EligibleCollateralValue
-	 * BalanceAmounts4.EligibleCollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#TotalEligibleCollateralValue
-	 * TotalValueInPageAndStatement3.TotalEligibleCollateralValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts3#mmEligibleCollateralValue
+	 * BalanceAmounts3.mmEligibleCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement1#mmTotalEligibleCollateralValue
+	 * TotalValueInPageAndStatement1.mmTotalEligibleCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceAmounts4#mmEligibleCollateralValue
+	 * BalanceAmounts4.mmEligibleCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#mmTotalEligibleCollateralValue
+	 * TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1423,20 +1448,21 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EligibleCollateralValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEligibleCollateralValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts3.EligibleCollateralValue, com.tools20022.repository.msg.TotalValueInPageAndStatement1.TotalEligibleCollateralValue,
-					com.tools20022.repository.msg.BalanceAmounts4.EligibleCollateralValue, com.tools20022.repository.msg.TotalValueInPageAndStatement3.TotalEligibleCollateralValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts3.mmEligibleCollateralValue, com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmTotalEligibleCollateralValue,
+					com.tools20022.repository.msg.BalanceAmounts4.mmEligibleCollateralValue, com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EligibleCollateralValue";
 			definition = "Value of the position eligible for collateral purposes. This corresponds to the sub balance with a type AvailableForCollateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyExchange exchangeRate;
 	/**
 	 * Specifies the exchange rate between the currency of the asset and the
 	 * reporting currency.
@@ -1446,8 +1472,8 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CalculatedAssetValue
-	 * CurrencyExchange.CalculatedAssetValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCalculatedAssetValue
+	 * CurrencyExchange.mmCalculatedAssetValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1455,63 +1481,63 @@ public class AssetHolding {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#ExchangeRate
-	 * UnderlyingAttributes.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral1#ExchangeRate
-	 * CashCollateral1.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral1#ExchangeRate
-	 * OtherCollateral1.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#ExchangeRate
-	 * UnderlyingAttributes2.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#ExchangeRate
-	 * OtherCollateral2.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral3#ExchangeRate
-	 * CashCollateral3.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#ExchangeRate
-	 * OtherCollateral3.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#ExchangeRate
-	 * CashCollateral4.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral2#ExchangeRate
-	 * CashCollateral2.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral4#ExchangeRate
-	 * OtherCollateral4.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral5#ExchangeRate
-	 * CashCollateral5.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral7#ExchangeRate
-	 * OtherCollateral7.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#ExchangeRate
-	 * OtherCollateral6.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral5#ExchangeRate
-	 * OtherCollateral5.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#ForeignExchange
-	 * AssetClassAttributes1Choice.ForeignExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AssetClassAttributes1#ForeignExchange
-	 * AssetClassAttributes1.ForeignExchange}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmExchangeRate
+	 * UnderlyingAttributes.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral1#mmExchangeRate
+	 * CashCollateral1.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmExchangeRate
+	 * OtherCollateral1.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmExchangeRate
+	 * UnderlyingAttributes2.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmExchangeRate
+	 * OtherCollateral2.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral3#mmExchangeRate
+	 * CashCollateral3.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmExchangeRate
+	 * OtherCollateral3.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#mmExchangeRate
+	 * CashCollateral4.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral2#mmExchangeRate
+	 * CashCollateral2.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmExchangeRate
+	 * OtherCollateral4.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral5#mmExchangeRate
+	 * CashCollateral5.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmExchangeRate
+	 * OtherCollateral7.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmExchangeRate
+	 * OtherCollateral6.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmExchangeRate
+	 * OtherCollateral5.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#mmForeignExchange
+	 * AssetClassAttributes1Choice.mmForeignExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AssetClassAttributes1#mmForeignExchange
+	 * AssetClassAttributes1.mmForeignExchange}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1525,26 +1551,27 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ExchangeRate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmExchangeRate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.ExchangeRate, com.tools20022.repository.msg.CashCollateral1.ExchangeRate, com.tools20022.repository.msg.OtherCollateral1.ExchangeRate,
-					com.tools20022.repository.msg.UnderlyingAttributes2.ExchangeRate, com.tools20022.repository.msg.OtherCollateral2.ExchangeRate, com.tools20022.repository.msg.CashCollateral3.ExchangeRate,
-					com.tools20022.repository.msg.OtherCollateral3.ExchangeRate, com.tools20022.repository.msg.CashCollateral4.ExchangeRate, com.tools20022.repository.msg.CashCollateral2.ExchangeRate,
-					com.tools20022.repository.msg.OtherCollateral4.ExchangeRate, com.tools20022.repository.msg.CashCollateral5.ExchangeRate, com.tools20022.repository.msg.OtherCollateral7.ExchangeRate,
-					com.tools20022.repository.msg.OtherCollateral6.ExchangeRate, com.tools20022.repository.msg.OtherCollateral5.ExchangeRate, com.tools20022.repository.choice.AssetClassAttributes1Choice.ForeignExchange,
-					com.tools20022.repository.msg.AssetClassAttributes1.ForeignExchange);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.mmExchangeRate, com.tools20022.repository.msg.CashCollateral1.mmExchangeRate,
+					com.tools20022.repository.msg.OtherCollateral1.mmExchangeRate, com.tools20022.repository.msg.UnderlyingAttributes2.mmExchangeRate, com.tools20022.repository.msg.OtherCollateral2.mmExchangeRate,
+					com.tools20022.repository.msg.CashCollateral3.mmExchangeRate, com.tools20022.repository.msg.OtherCollateral3.mmExchangeRate, com.tools20022.repository.msg.CashCollateral4.mmExchangeRate,
+					com.tools20022.repository.msg.CashCollateral2.mmExchangeRate, com.tools20022.repository.msg.OtherCollateral4.mmExchangeRate, com.tools20022.repository.msg.CashCollateral5.mmExchangeRate,
+					com.tools20022.repository.msg.OtherCollateral7.mmExchangeRate, com.tools20022.repository.msg.OtherCollateral6.mmExchangeRate, com.tools20022.repository.msg.OtherCollateral5.mmExchangeRate,
+					com.tools20022.repository.choice.AssetClassAttributes1Choice.mmForeignExchange, com.tools20022.repository.msg.AssetClassAttributes1.mmForeignExchange);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExchangeRate";
 			definition = "Specifies the exchange rate between the currency of the asset and the reporting currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyExchange.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.CalculatedAssetValue;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCalculatedAssetValue;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
+	protected CurrencyAndAmount capValue;
 	/**
 	 * Maximum notional value for a financial instrument that is capped.
 	 * <p>
@@ -1555,21 +1582,21 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#CapValue
-	 * UnderlyingAttributes.CapValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#CapValue
-	 * UnderlyingAttributes2.CapValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmCapValue
+	 * UnderlyingAttributes.mmCapValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCapValue
+	 * UnderlyingAttributes2.mmCapValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1582,19 +1609,20 @@ public class AssetHolding {
 	 * "Maximum notional value for a financial instrument that is capped."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CapValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCapValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.CapValue, com.tools20022.repository.msg.UnderlyingAttributes2.CapValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.mmCapValue, com.tools20022.repository.msg.UnderlyingAttributes2.mmCapValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CapValue";
 			definition = "Maximum notional value for a financial instrument that is capped.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount riskAdjustedValue;
 	/**
 	 * Value of the asset holding after deduction of a percentage (the haircut)
 	 * that reflects the perceived risk associated with holding this asset.
@@ -1606,75 +1634,75 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral1#CollateralValue
-	 * SecuritiesCollateral1.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral1#CollateralValue
-	 * CashCollateral1.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral1#CollateralValue
-	 * OtherCollateral1.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#CollateralValue
-	 * SecuritiesCollateral2.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#CollateralValue
-	 * OtherCollateral2.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral3#CollateralValue
-	 * CashCollateral3.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#CollateralValue
-	 * SecuritiesCollateral3.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#CollateralValue
-	 * OtherCollateral3.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#CollateralValue
-	 * CashCollateral4.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral2#CollateralValue
-	 * CashCollateral2.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral4#CollateralValue
-	 * OtherCollateral4.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#CollateralValue
-	 * SecuritiesCollateral4.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral5#CollateralValue
-	 * CashCollateral5.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral7#CollateralValue
-	 * OtherCollateral7.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#CollateralValue
-	 * OtherCollateral6.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#CollateralValue
-	 * SecuritiesCollateral6.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#CollateralValue
-	 * SecuritiesCollateral5.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral5#CollateralValue
-	 * OtherCollateral5.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#CollateralValue
-	 * SecuritiesCollateral7.CollateralValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#CollateralValue
-	 * SecuritiesCollateral8.CollateralValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral1#mmCollateralValue
+	 * SecuritiesCollateral1.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral1#mmCollateralValue
+	 * CashCollateral1.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmCollateralValue
+	 * OtherCollateral1.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#mmCollateralValue
+	 * SecuritiesCollateral2.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmCollateralValue
+	 * OtherCollateral2.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral3#mmCollateralValue
+	 * CashCollateral3.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#mmCollateralValue
+	 * SecuritiesCollateral3.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmCollateralValue
+	 * OtherCollateral3.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#mmCollateralValue
+	 * CashCollateral4.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral2#mmCollateralValue
+	 * CashCollateral2.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmCollateralValue
+	 * OtherCollateral4.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#mmCollateralValue
+	 * SecuritiesCollateral4.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral5#mmCollateralValue
+	 * CashCollateral5.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmCollateralValue
+	 * OtherCollateral7.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmCollateralValue
+	 * OtherCollateral6.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#mmCollateralValue
+	 * SecuritiesCollateral6.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#mmCollateralValue
+	 * SecuritiesCollateral5.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmCollateralValue
+	 * OtherCollateral5.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#mmCollateralValue
+	 * SecuritiesCollateral7.mmCollateralValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#mmCollateralValue
+	 * SecuritiesCollateral8.mmCollateralValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1688,25 +1716,26 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RiskAdjustedValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRiskAdjustedValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral1.CollateralValue, com.tools20022.repository.msg.CashCollateral1.CollateralValue,
-					com.tools20022.repository.msg.OtherCollateral1.CollateralValue, com.tools20022.repository.msg.SecuritiesCollateral2.CollateralValue, com.tools20022.repository.msg.OtherCollateral2.CollateralValue,
-					com.tools20022.repository.msg.CashCollateral3.CollateralValue, com.tools20022.repository.msg.SecuritiesCollateral3.CollateralValue, com.tools20022.repository.msg.OtherCollateral3.CollateralValue,
-					com.tools20022.repository.msg.CashCollateral4.CollateralValue, com.tools20022.repository.msg.CashCollateral2.CollateralValue, com.tools20022.repository.msg.OtherCollateral4.CollateralValue,
-					com.tools20022.repository.msg.SecuritiesCollateral4.CollateralValue, com.tools20022.repository.msg.CashCollateral5.CollateralValue, com.tools20022.repository.msg.OtherCollateral7.CollateralValue,
-					com.tools20022.repository.msg.OtherCollateral6.CollateralValue, com.tools20022.repository.msg.SecuritiesCollateral6.CollateralValue, com.tools20022.repository.msg.SecuritiesCollateral5.CollateralValue,
-					com.tools20022.repository.msg.OtherCollateral5.CollateralValue, com.tools20022.repository.msg.SecuritiesCollateral7.CollateralValue, com.tools20022.repository.msg.SecuritiesCollateral8.CollateralValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral1.mmCollateralValue, com.tools20022.repository.msg.CashCollateral1.mmCollateralValue,
+					com.tools20022.repository.msg.OtherCollateral1.mmCollateralValue, com.tools20022.repository.msg.SecuritiesCollateral2.mmCollateralValue, com.tools20022.repository.msg.OtherCollateral2.mmCollateralValue,
+					com.tools20022.repository.msg.CashCollateral3.mmCollateralValue, com.tools20022.repository.msg.SecuritiesCollateral3.mmCollateralValue, com.tools20022.repository.msg.OtherCollateral3.mmCollateralValue,
+					com.tools20022.repository.msg.CashCollateral4.mmCollateralValue, com.tools20022.repository.msg.CashCollateral2.mmCollateralValue, com.tools20022.repository.msg.OtherCollateral4.mmCollateralValue,
+					com.tools20022.repository.msg.SecuritiesCollateral4.mmCollateralValue, com.tools20022.repository.msg.CashCollateral5.mmCollateralValue, com.tools20022.repository.msg.OtherCollateral7.mmCollateralValue,
+					com.tools20022.repository.msg.OtherCollateral6.mmCollateralValue, com.tools20022.repository.msg.SecuritiesCollateral6.mmCollateralValue, com.tools20022.repository.msg.SecuritiesCollateral5.mmCollateralValue,
+					com.tools20022.repository.msg.OtherCollateral5.mmCollateralValue, com.tools20022.repository.msg.SecuritiesCollateral7.mmCollateralValue, com.tools20022.repository.msg.SecuritiesCollateral8.mmCollateralValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RiskAdjustedValue";
 			definition = "Value of the asset holding after deduction of a percentage (the haircut) that reflects the perceived risk associated with holding this asset.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount realisedGainOrLoss;
 	/**
 	 * Difference between the realised value caused by the actual
 	 * trade/re-evaluation and the book value of the asset.
@@ -1718,18 +1747,18 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#RealisedGainOrLoss
-	 * TotalPortfolioValuation1.RealisedGainOrLoss}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmRealisedGainOrLoss
+	 * TotalPortfolioValuation1.mmRealisedGainOrLoss}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1743,19 +1772,20 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RealisedGainOrLoss = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRealisedGainOrLoss = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalPortfolioValuation1.RealisedGainOrLoss);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalPortfolioValuation1.mmRealisedGainOrLoss);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RealisedGainOrLoss";
 			definition = "Difference between the realised value caused by the actual trade/re-evaluation and the book value of the asset.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected UnrealisedCode unrealisedType;
 	/**
 	 * Specifies whether the unrealised amount is a gain or a loss.
 	 * <p>
@@ -1766,19 +1796,21 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.UnrealisedCode
 	 * UnrealisedCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails6#Unrealised
-	 * BalanceDetails6.Unrealised}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5#Unrealised
-	 * BalanceDetails5.Unrealised}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceDetails6#mmUnrealised
+	 * BalanceDetails6.mmUnrealised}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceDetails5#mmUnrealised
+	 * BalanceDetails5.mmUnrealised}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1791,19 +1823,20 @@ public class AssetHolding {
 	 * "Specifies whether the unrealised amount is a gain or a loss."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute UnrealisedType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmUnrealisedType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails6.Unrealised, com.tools20022.repository.msg.BalanceDetails5.Unrealised);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails6.mmUnrealised, com.tools20022.repository.msg.BalanceDetails5.mmUnrealised);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnrealisedType";
 			definition = "Specifies whether the unrealised amount is a gain or a loss.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnrealisedCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount postHaircutValue;
 	/**
 	 * Value of the collateral after deduction of a percentage (the haircut)
 	 * that reflects the perceived risk associated with holding this collateral.
@@ -1815,21 +1848,21 @@ public class AssetHolding {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral3#PostHaircutValue
-	 * Collateral3.PostHaircutValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral6#PostHaircutValue
-	 * Collateral6.PostHaircutValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral3#mmPostHaircutValue
+	 * Collateral3.mmPostHaircutValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral6#mmPostHaircutValue
+	 * Collateral6.mmPostHaircutValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1843,19 +1876,20 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PostHaircutValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPostHaircutValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral3.PostHaircutValue, com.tools20022.repository.msg.Collateral6.PostHaircutValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral3.mmPostHaircutValue, com.tools20022.repository.msg.Collateral6.mmPostHaircutValue);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PostHaircutValue";
 			definition = "Value of the collateral after deduction of a percentage (the haircut) that reflects the perceived risk associated with holding this collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Interest> interest;
 	/**
 	 * interest relative to the asset and the parameters used to calculate it.
 	 * <p>
@@ -1864,32 +1898,32 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#RelatedAssetHolding
-	 * Interest.RelatedAssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
+	 * Interest.mmRelatedAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Interest Interest}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#Interest
-	 * AssetClassAttributes1Choice.Interest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AssetClassAttributes1#Interest
-	 * AssetClassAttributes1.Interest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestRateDerivative5#InflationIndex
-	 * InterestRateDerivative5.InflationIndex}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#mmInterest
+	 * AssetClassAttributes1Choice.mmInterest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AssetClassAttributes1#mmInterest
+	 * AssetClassAttributes1.mmInterest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRateDerivative5#mmInflationIndex
+	 * InterestRateDerivative5.mmInflationIndex}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1903,21 +1937,22 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Interest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassAttributes1Choice.Interest, com.tools20022.repository.msg.AssetClassAttributes1.Interest,
-					com.tools20022.repository.msg.InterestRateDerivative5.InflationIndex);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassAttributes1Choice.mmInterest, com.tools20022.repository.msg.AssetClassAttributes1.mmInterest,
+					com.tools20022.repository.msg.InterestRateDerivative5.mmInflationIndex);
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "interest relative to the asset and the parameters used to calculate it.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Interest.RelatedAssetHolding;
+			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmRelatedAssetHolding;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Collateral> collateral;
 	/**
 	 * Specifies the collateral information in relation with some assets.
 	 * <p>
@@ -1926,8 +1961,8 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#AssetHolding
-	 * Collateral.AssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmAssetHolding
+	 * Collateral.mmAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1951,7 +1986,7 @@ public class AssetHolding {
 	 * "Specifies the collateral information in relation with some assets."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Collateral = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
@@ -1959,11 +1994,12 @@ public class AssetHolding {
 			name = "Collateral";
 			definition = "Specifies the collateral information in relation with some assets.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.AssetHolding;
+			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmAssetHolding;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
 		}
 	};
+	protected FinancialAssetBalanceTypeCode financialAssetType;
 	/**
 	 * Specifies the asset type.
 	 * <p>
@@ -1989,18 +2025,19 @@ public class AssetHolding {
 	 * definition} = "Specifies the asset type."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FinancialAssetType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFinancialAssetType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialAssetType";
 			definition = "Specifies the asset type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
 		}
 	};
+	protected Collateral variationMarginCollateral;
 	/**
 	 * Specifies the collateral information in relation with the segregated
 	 * independent amount asset holding.
@@ -2010,8 +2047,8 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#VariationMarginAssetHolding
-	 * Collateral.VariationMarginAssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmVariationMarginAssetHolding
+	 * Collateral.mmVariationMarginAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2036,20 +2073,21 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd VariationMarginCollateral = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmVariationMarginCollateral = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VariationMarginCollateral";
 			definition = "Specifies the collateral information in relation with the segregated independent amount asset holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.VariationMarginAssetHolding;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmVariationMarginAssetHolding;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
 		}
 	};
+	protected Collateral independentAmountCollateral;
 	/**
 	 * Specifies the collateral information in relation with the segregated
 	 * independent amount asset holding.
@@ -2059,8 +2097,8 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#SegregatedIndependentAmountAssetHolding
-	 * Collateral.SegregatedIndependentAmountAssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmSegregatedIndependentAmountAssetHolding
+	 * Collateral.mmSegregatedIndependentAmountAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2085,20 +2123,21 @@ public class AssetHolding {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd IndependentAmountCollateral = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIndependentAmountCollateral = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IndependentAmountCollateral";
 			definition = "Specifies the collateral information in relation with the segregated independent amount asset holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.SegregatedIndependentAmountAssetHolding;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmSegregatedIndependentAmountAssetHolding;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
 		}
 	};
+	protected BlockedReasonCode holdingType;
 	/**
 	 * Specifies the type of holding.
 	 * <p>
@@ -2124,18 +2163,19 @@ public class AssetHolding {
 	 * definition} = "Specifies the type of holding."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute HoldingType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmHoldingType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HoldingType";
 			definition = "Specifies the type of holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BlockedReasonCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount guaranteeAmount;
 	/**
 	 * Amount of the bank guarantee.
 	 * <p>
@@ -2161,15 +2201,15 @@ public class AssetHolding {
 	 * definition} = "Amount of the bank guarantee."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute GuaranteeAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmGuaranteeAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AssetHolding.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GuaranteeAmount";
 			definition = "Amount of the bank guarantee.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -2177,26 +2217,210 @@ public class AssetHolding {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetHolding";
 				definition = "Specifies in terms of value and quantity the assets.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.AssetValue, com.tools20022.repository.entity.Balance.AssetHolding, com.tools20022.repository.entity.Interest.RelatedAssetHolding,
-						com.tools20022.repository.entity.CurrencyExchange.CalculatedAssetValue, com.tools20022.repository.entity.Collateral.AssetHolding, com.tools20022.repository.entity.Collateral.VariationMarginAssetHolding,
-						com.tools20022.repository.entity.Collateral.SegregatedIndependentAmountAssetHolding, com.tools20022.repository.entity.HaircutValuation.AssetHolding);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.Holdings, com.tools20022.repository.msg.AggregateHoldingBalance1.BalanceForFinancialInstrument);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetHolding.HoldingValue, com.tools20022.repository.entity.AssetHolding.BookValue, com.tools20022.repository.entity.AssetHolding.FaceAmount,
-						com.tools20022.repository.entity.AssetHolding.AmortisedFaceValue, com.tools20022.repository.entity.AssetHolding.MarketValue, com.tools20022.repository.entity.AssetHolding.Balance,
-						com.tools20022.repository.entity.AssetHolding.UnrealisedGainOrLoss, com.tools20022.repository.entity.AssetHolding.Asset, com.tools20022.repository.entity.AssetHolding.Haircut,
-						com.tools20022.repository.entity.AssetHolding.EligibleCollateralValue, com.tools20022.repository.entity.AssetHolding.ExchangeRate, com.tools20022.repository.entity.AssetHolding.CapValue,
-						com.tools20022.repository.entity.AssetHolding.RiskAdjustedValue, com.tools20022.repository.entity.AssetHolding.RealisedGainOrLoss, com.tools20022.repository.entity.AssetHolding.UnrealisedType,
-						com.tools20022.repository.entity.AssetHolding.PostHaircutValue, com.tools20022.repository.entity.AssetHolding.Interest, com.tools20022.repository.entity.AssetHolding.Collateral,
-						com.tools20022.repository.entity.AssetHolding.FinancialAssetType, com.tools20022.repository.entity.AssetHolding.VariationMarginCollateral, com.tools20022.repository.entity.AssetHolding.IndependentAmountCollateral,
-						com.tools20022.repository.entity.AssetHolding.HoldingType, com.tools20022.repository.entity.AssetHolding.GuaranteeAmount);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmAssetValue, com.tools20022.repository.entity.Balance.mmAssetHolding, com.tools20022.repository.entity.Interest.mmRelatedAssetHolding,
+						com.tools20022.repository.entity.CurrencyExchange.mmCalculatedAssetValue, com.tools20022.repository.entity.Collateral.mmAssetHolding, com.tools20022.repository.entity.Collateral.mmVariationMarginAssetHolding,
+						com.tools20022.repository.entity.Collateral.mmSegregatedIndependentAmountAssetHolding, com.tools20022.repository.entity.HaircutValuation.mmAssetHolding);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmHoldings, com.tools20022.repository.msg.AggregateHoldingBalance1.mmBalanceForFinancialInstrument);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetHolding.mmHoldingValue, com.tools20022.repository.entity.AssetHolding.mmBookValue, com.tools20022.repository.entity.AssetHolding.mmFaceAmount,
+						com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue, com.tools20022.repository.entity.AssetHolding.mmMarketValue, com.tools20022.repository.entity.AssetHolding.mmBalance,
+						com.tools20022.repository.entity.AssetHolding.mmUnrealisedGainOrLoss, com.tools20022.repository.entity.AssetHolding.mmAsset, com.tools20022.repository.entity.AssetHolding.mmHaircut,
+						com.tools20022.repository.entity.AssetHolding.mmEligibleCollateralValue, com.tools20022.repository.entity.AssetHolding.mmExchangeRate, com.tools20022.repository.entity.AssetHolding.mmCapValue,
+						com.tools20022.repository.entity.AssetHolding.mmRiskAdjustedValue, com.tools20022.repository.entity.AssetHolding.mmRealisedGainOrLoss, com.tools20022.repository.entity.AssetHolding.mmUnrealisedType,
+						com.tools20022.repository.entity.AssetHolding.mmPostHaircutValue, com.tools20022.repository.entity.AssetHolding.mmInterest, com.tools20022.repository.entity.AssetHolding.mmCollateral,
+						com.tools20022.repository.entity.AssetHolding.mmFinancialAssetType, com.tools20022.repository.entity.AssetHolding.mmVariationMarginCollateral,
+						com.tools20022.repository.entity.AssetHolding.mmIndependentAmountCollateral, com.tools20022.repository.entity.AssetHolding.mmHoldingType, com.tools20022.repository.entity.AssetHolding.mmGuaranteeAmount);
 				derivationComponent_lazy = () -> Arrays.asList(BalanceAmounts1.mmObject(), BalanceAmounts2.mmObject(), BalanceAmounts5.mmObject(), BalanceAmounts6.mmObject(), BalanceAmounts3.mmObject(), BalanceAmounts4.mmObject(),
 						FinancialInstrumentAggregateBalance1.mmObject(), FinancialInstrumentAggregateBalance1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getHoldingValue() {
+		return holdingValue;
+	}
+
+	public void setHoldingValue(ActiveOrHistoricCurrencyAndAmount holdingValue) {
+		this.holdingValue = holdingValue;
+	}
+
+	public CurrencyAndAmount getBookValue() {
+		return bookValue;
+	}
+
+	public void setBookValue(CurrencyAndAmount bookValue) {
+		this.bookValue = bookValue;
+	}
+
+	public CurrencyAndAmount getFaceAmount() {
+		return faceAmount;
+	}
+
+	public void setFaceAmount(CurrencyAndAmount faceAmount) {
+		this.faceAmount = faceAmount;
+	}
+
+	public CurrencyAndAmount getAmortisedFaceValue() {
+		return amortisedFaceValue;
+	}
+
+	public void setAmortisedFaceValue(CurrencyAndAmount amortisedFaceValue) {
+		this.amortisedFaceValue = amortisedFaceValue;
+	}
+
+	public ActiveCurrencyAndAmount getMarketValue() {
+		return marketValue;
+	}
+
+	public void setMarketValue(ActiveCurrencyAndAmount marketValue) {
+		this.marketValue = marketValue;
+	}
+
+	public List<Balance> getBalance() {
+		return balance;
+	}
+
+	public void setBalance(List<com.tools20022.repository.entity.Balance> balance) {
+		this.balance = balance;
+	}
+
+	public CurrencyAndAmount getUnrealisedGainOrLoss() {
+		return unrealisedGainOrLoss;
+	}
+
+	public void setUnrealisedGainOrLoss(CurrencyAndAmount unrealisedGainOrLoss) {
+		this.unrealisedGainOrLoss = unrealisedGainOrLoss;
+	}
+
+	public Asset getAsset() {
+		return asset;
+	}
+
+	public void setAsset(com.tools20022.repository.entity.Asset asset) {
+		this.asset = asset;
+	}
+
+	public List<HaircutValuation> getHaircut() {
+		return haircut;
+	}
+
+	public void setHaircut(List<com.tools20022.repository.entity.HaircutValuation> haircut) {
+		this.haircut = haircut;
+	}
+
+	public ActiveCurrencyAndAmount getEligibleCollateralValue() {
+		return eligibleCollateralValue;
+	}
+
+	public void setEligibleCollateralValue(ActiveCurrencyAndAmount eligibleCollateralValue) {
+		this.eligibleCollateralValue = eligibleCollateralValue;
+	}
+
+	public CurrencyExchange getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(com.tools20022.repository.entity.CurrencyExchange exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public CurrencyAndAmount getCapValue() {
+		return capValue;
+	}
+
+	public void setCapValue(CurrencyAndAmount capValue) {
+		this.capValue = capValue;
+	}
+
+	public ActiveCurrencyAndAmount getRiskAdjustedValue() {
+		return riskAdjustedValue;
+	}
+
+	public void setRiskAdjustedValue(ActiveCurrencyAndAmount riskAdjustedValue) {
+		this.riskAdjustedValue = riskAdjustedValue;
+	}
+
+	public CurrencyAndAmount getRealisedGainOrLoss() {
+		return realisedGainOrLoss;
+	}
+
+	public void setRealisedGainOrLoss(CurrencyAndAmount realisedGainOrLoss) {
+		this.realisedGainOrLoss = realisedGainOrLoss;
+	}
+
+	public UnrealisedCode getUnrealisedType() {
+		return unrealisedType;
+	}
+
+	public void setUnrealisedType(UnrealisedCode unrealisedType) {
+		this.unrealisedType = unrealisedType;
+	}
+
+	public CurrencyAndAmount getPostHaircutValue() {
+		return postHaircutValue;
+	}
+
+	public void setPostHaircutValue(CurrencyAndAmount postHaircutValue) {
+		this.postHaircutValue = postHaircutValue;
+	}
+
+	public List<Interest> getInterest() {
+		return interest;
+	}
+
+	public void setInterest(List<com.tools20022.repository.entity.Interest> interest) {
+		this.interest = interest;
+	}
+
+	public List<Collateral> getCollateral() {
+		return collateral;
+	}
+
+	public void setCollateral(List<com.tools20022.repository.entity.Collateral> collateral) {
+		this.collateral = collateral;
+	}
+
+	public FinancialAssetBalanceTypeCode getFinancialAssetType() {
+		return financialAssetType;
+	}
+
+	public void setFinancialAssetType(FinancialAssetBalanceTypeCode financialAssetType) {
+		this.financialAssetType = financialAssetType;
+	}
+
+	public Collateral getVariationMarginCollateral() {
+		return variationMarginCollateral;
+	}
+
+	public void setVariationMarginCollateral(com.tools20022.repository.entity.Collateral variationMarginCollateral) {
+		this.variationMarginCollateral = variationMarginCollateral;
+	}
+
+	public Collateral getIndependentAmountCollateral() {
+		return independentAmountCollateral;
+	}
+
+	public void setIndependentAmountCollateral(com.tools20022.repository.entity.Collateral independentAmountCollateral) {
+		this.independentAmountCollateral = independentAmountCollateral;
+	}
+
+	public BlockedReasonCode getHoldingType() {
+		return holdingType;
+	}
+
+	public void setHoldingType(BlockedReasonCode holdingType) {
+		this.holdingType = holdingType;
+	}
+
+	public CurrencyAndAmount getGuaranteeAmount() {
+		return guaranteeAmount;
+	}
+
+	public void setGuaranteeAmount(CurrencyAndAmount guaranteeAmount) {
+		this.guaranteeAmount = guaranteeAmount;
 	}
 }

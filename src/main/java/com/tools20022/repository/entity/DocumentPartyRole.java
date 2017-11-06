@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of a document.
@@ -35,16 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DocumentPartyRole#Document
- * DocumentPartyRole.Document}</li>
- * </ul>
- * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Document#PartyRole
- * Document.PartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.DocumentPartyRole#mmDocument
+ * DocumentPartyRole.mmDocument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -66,13 +60,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * NotifyingParty}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPartyRole
+ * Document.mmPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Document> document;
 	/**
 	 * Identifies the document for which a party plays a role.
 	 * <p>
@@ -94,8 +97,8 @@ public class DocumentPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Document#PartyRole
-	 * Document.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmPartyRole
+	 * Document.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -118,7 +121,7 @@ public class DocumentPartyRole extends Role {
 	 * definition} = "Identifies the document for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Document = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDocument = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> DocumentPartyRole.mmObject();
 			isDerived = false;
@@ -126,26 +129,34 @@ public class DocumentPartyRole extends Role {
 			name = "Document";
 			definition = "Identifies the document for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Document.PartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentPartyRole";
 				definition = "Role played by a party in the context of a document.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Document.PartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Document.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(ValidatingPartyRole.mmObject(), CheckingPartyRole.mmObject(), ResponsiblePartyRole.mmObject(), DocumentIssuer.mmObject(), DocumentSignatory.mmObject(), NotificationReceiver.mmObject(),
 						NotifyingParty.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DocumentPartyRole.Document);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DocumentPartyRole.mmDocument);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Document> getDocument() {
+		return document;
+	}
+
+	public void setDocument(List<com.tools20022.repository.entity.Document> document) {
+		this.document = document;
 	}
 }

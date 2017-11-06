@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Transport;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to multimodal transportation of goods.
@@ -36,29 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#DepartureAirport
- * MultimodalTransport1.DepartureAirport}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmDepartureAirport
+ * MultimodalTransport1.mmDepartureAirport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#DestinationAirport
- * MultimodalTransport1.DestinationAirport}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmDestinationAirport
+ * MultimodalTransport1.mmDestinationAirport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PortOfLoading
- * MultimodalTransport1.PortOfLoading}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPortOfLoading
+ * MultimodalTransport1.mmPortOfLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PortOfDischarge
- * MultimodalTransport1.PortOfDischarge}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPortOfDischarge
+ * MultimodalTransport1.mmPortOfDischarge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PlaceOfReceipt
- * MultimodalTransport1.PlaceOfReceipt}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPlaceOfReceipt
+ * MultimodalTransport1.mmPlaceOfReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PlaceOfDelivery
- * MultimodalTransport1.PlaceOfDelivery}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPlaceOfDelivery
+ * MultimodalTransport1.mmPlaceOfDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#TakingInCharge
- * MultimodalTransport1.TakingInCharge}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmTakingInCharge
+ * MultimodalTransport1.mmTakingInCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PlaceOfFinalDestination
- * MultimodalTransport1.PlaceOfFinalDestination}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPlaceOfFinalDestination
+ * MultimodalTransport1.mmPlaceOfFinalDestination}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MultimodalTransport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AirportName1Choice> departureAirport;
 	/**
 	 * Place from where the goods must leave.
 	 * <p>
@@ -92,8 +94,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +114,21 @@ public class MultimodalTransport1 {
 	 * definition} = "Place from where the goods must leave."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DepartureAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "DprtureAirprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepartureAirport";
 			definition = "Place from where the goods must leave.";
 			minOccurs = 0;
-			type_lazy = () -> AirportName1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	protected List<AirportName1Choice> destinationAirport;
 	/**
 	 * Place where the goods must arrive.
 	 * <p>
@@ -137,8 +140,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +160,21 @@ public class MultimodalTransport1 {
 	 * definition} = "Place where the goods must arrive."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DestinationAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "DstnAirprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DestinationAirport";
 			definition = "Place where the goods must arrive.";
 			minOccurs = 0;
-			type_lazy = () -> AirportName1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	protected List<Max35Text> portOfLoading;
 	/**
 	 * Identifies the port where the goods are loaded on board the ship.
 	 * <p>
@@ -183,8 +187,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,10 +208,10 @@ public class MultimodalTransport1 {
 	 * "Identifies the port where the goods are loaded on board the ship."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PortOfLoading = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,6 +221,7 @@ public class MultimodalTransport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> portOfDischarge;
 	/**
 	 * Identifies the port where the goods are discharged.
 	 * <p>
@@ -229,8 +234,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,10 +254,10 @@ public class MultimodalTransport1 {
 	 * definition} = "Identifies the port where the goods are discharged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PortOfDischarge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,6 +267,7 @@ public class MultimodalTransport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> placeOfReceipt;
 	/**
 	 * Identifies the location where the goods are received for transportation.
 	 * <p>
@@ -274,8 +280,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -296,10 +302,10 @@ public class MultimodalTransport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "PlcOfRct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,6 +315,7 @@ public class MultimodalTransport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> placeOfDelivery;
 	/**
 	 * Identifies the location of delivery of the goods.
 	 * <p>
@@ -321,8 +328,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -341,10 +348,10 @@ public class MultimodalTransport1 {
 	 * definition} = "Identifies the location of delivery of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "PlcOfDlvry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,6 +361,7 @@ public class MultimodalTransport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> takingInCharge;
 	/**
 	 * Identifies the location where the goods are take in charge for
 	 * transportation.
@@ -367,8 +375,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -389,10 +397,10 @@ public class MultimodalTransport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TakingInCharge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "TakngInChrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,6 +410,7 @@ public class MultimodalTransport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> placeOfFinalDestination;
 	/**
 	 * Identifies the location of the final destination of the goods.
 	 * <p>
@@ -414,8 +423,8 @@ public class MultimodalTransport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -435,10 +444,10 @@ public class MultimodalTransport1 {
 	 * "Identifies the location of the final destination of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfFinalDestination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "PlcOfFnlDstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -452,16 +461,82 @@ public class MultimodalTransport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultimodalTransport1.DepartureAirport, com.tools20022.repository.msg.MultimodalTransport1.DestinationAirport,
-						com.tools20022.repository.msg.MultimodalTransport1.PortOfLoading, com.tools20022.repository.msg.MultimodalTransport1.PortOfDischarge, com.tools20022.repository.msg.MultimodalTransport1.PlaceOfReceipt,
-						com.tools20022.repository.msg.MultimodalTransport1.PlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport1.TakingInCharge, com.tools20022.repository.msg.MultimodalTransport1.PlaceOfFinalDestination);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.MultimodalTransport1.mmDepartureAirport, com.tools20022.repository.msg.MultimodalTransport1.mmDestinationAirport,
+								com.tools20022.repository.msg.MultimodalTransport1.mmPortOfLoading, com.tools20022.repository.msg.MultimodalTransport1.mmPortOfDischarge, com.tools20022.repository.msg.MultimodalTransport1.mmPlaceOfReceipt,
+								com.tools20022.repository.msg.MultimodalTransport1.mmPlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport1.mmTakingInCharge,
+								com.tools20022.repository.msg.MultimodalTransport1.mmPlaceOfFinalDestination);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MultimodalTransport1";
 				definition = "Information related to multimodal transportation of goods.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AirportName1Choice> getDepartureAirport() {
+		return departureAirport;
+	}
+
+	public void setDepartureAirport(List<AirportName1Choice> departureAirport) {
+		this.departureAirport = departureAirport;
+	}
+
+	public List<AirportName1Choice> getDestinationAirport() {
+		return destinationAirport;
+	}
+
+	public void setDestinationAirport(List<AirportName1Choice> destinationAirport) {
+		this.destinationAirport = destinationAirport;
+	}
+
+	public List<Max35Text> getPortOfLoading() {
+		return portOfLoading;
+	}
+
+	public void setPortOfLoading(List<Max35Text> portOfLoading) {
+		this.portOfLoading = portOfLoading;
+	}
+
+	public List<Max35Text> getPortOfDischarge() {
+		return portOfDischarge;
+	}
+
+	public void setPortOfDischarge(List<Max35Text> portOfDischarge) {
+		this.portOfDischarge = portOfDischarge;
+	}
+
+	public List<Max35Text> getPlaceOfReceipt() {
+		return placeOfReceipt;
+	}
+
+	public void setPlaceOfReceipt(List<Max35Text> placeOfReceipt) {
+		this.placeOfReceipt = placeOfReceipt;
+	}
+
+	public List<Max35Text> getPlaceOfDelivery() {
+		return placeOfDelivery;
+	}
+
+	public void setPlaceOfDelivery(List<Max35Text> placeOfDelivery) {
+		this.placeOfDelivery = placeOfDelivery;
+	}
+
+	public List<Max35Text> getTakingInCharge() {
+		return takingInCharge;
+	}
+
+	public void setTakingInCharge(List<Max35Text> takingInCharge) {
+		this.takingInCharge = takingInCharge;
+	}
+
+	public List<Max35Text> getPlaceOfFinalDestination() {
+		return placeOfFinalDestination;
+	}
+
+	public void setPlaceOfFinalDestination(List<Max35Text> placeOfFinalDestination) {
+		this.placeOfFinalDestination = placeOfFinalDestination;
 	}
 }

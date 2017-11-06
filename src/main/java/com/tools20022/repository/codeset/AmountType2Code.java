@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountType2Code#FixedAmount
- * AmountType2Code.FixedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountType2Code#mmFixedAmount
+ * AmountType2Code.mmFixedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountType2Code#MaximumAmount
- * AmountType2Code.MaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountType2Code#mmMaximumAmount
+ * AmountType2Code.mmMaximumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountType2Code#MinimumAmount
- * AmountType2Code.MinimumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountType2Code#mmMinimumAmount
+ * AmountType2Code.mmMinimumAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class AmountType2Code extends AmountTypeCode {
 	 * name} = "FixedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedAmount = new MMCode() {
+	public static final MMCode mmFixedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedAmount";
@@ -106,7 +106,7 @@ public class AmountType2Code extends AmountTypeCode {
 	 * name} = "MaximumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumAmount = new MMCode() {
+	public static final MMCode mmMaximumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
@@ -129,7 +129,7 @@ public class AmountType2Code extends AmountTypeCode {
 	 * name} = "MinimumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumAmount = new MMCode() {
+	public static final MMCode mmMinimumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmount";
@@ -140,13 +140,13 @@ public class AmountType2Code extends AmountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountType2Code";
 				definition = "Specifies the amount type.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.AmountType2Code.FixedAmount, com.tools20022.repository.codeset.AmountType2Code.MaximumAmount, com.tools20022.repository.codeset.AmountType2Code.MinimumAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountType2Code.mmFixedAmount, com.tools20022.repository.codeset.AmountType2Code.mmMaximumAmount,
+						com.tools20022.repository.codeset.AmountType2Code.mmMinimumAmount);
 				trace_lazy = () -> AmountTypeCode.mmObject();
 			}
 		});

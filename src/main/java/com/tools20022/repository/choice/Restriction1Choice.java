@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Restriction1Choice#Code
- * Restriction1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Restriction1Choice#mmCode
+ * Restriction1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Restriction1Choice#Proprietary
- * Restriction1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Restriction1Choice#mmProprietary
+ * Restriction1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Restriction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OwnershipLegalRestrictions1Code code;
 	/**
 	 * Restrictions expressed as an ISO 20022 code.
 	 * <p>
@@ -94,13 +95,14 @@ public class Restriction1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Restriction5Choice#Code
-	 * Restriction5Choice.Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Restriction5Choice#mmCode
+	 * Restriction5Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Restriction1Choice.mmObject();
 			isDerived = false;
@@ -108,12 +110,13 @@ public class Restriction1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Restrictions expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Restriction5Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Restriction5Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Restrictions expressed as a proprietary code.
 	 * <p>
@@ -144,13 +147,13 @@ public class Restriction1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Restriction5Choice#Proprietary
-	 * Restriction5Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.Restriction5Choice#mmProprietary
+	 * Restriction5Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Restriction1Choice.mmObject();
 			isDerived = false;
@@ -158,9 +161,9 @@ public class Restriction1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Restrictions expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Restriction5Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Restriction5Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -168,8 +171,8 @@ public class Restriction1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Restriction1Choice.Code, com.tools20022.repository.choice.Restriction1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Restriction1Choice.mmCode, com.tools20022.repository.choice.Restriction1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Restriction1Choice";
 				definition = "Choice of format for the securities restriction information.";
@@ -177,5 +180,21 @@ public class Restriction1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OwnershipLegalRestrictions1Code getCode() {
+		return code;
+	}
+
+	public void setCode(OwnershipLegalRestrictions1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

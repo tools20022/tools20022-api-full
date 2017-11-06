@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.Vote2;
 import com.tools20022.repository.msg.Vote5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies whether an agenda item of a general meeting has been accepted or
@@ -40,25 +41,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#Vote
- * VoteResult.Vote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#Accepted
- * VoteResult.Accepted}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmVote
+ * VoteResult.mmVote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmAccepted
+ * VoteResult.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.VoteResult#VoteDissemination
- * VoteResult.VoteDissemination}</li>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#TotalVotesCast
- * VoteResult.TotalVotesCast}</li>
+ * {@linkplain com.tools20022.repository.entity.VoteResult#mmVoteDissemination
+ * VoteResult.mmVoteDissemination}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmTotalVotesCast
+ * VoteResult.mmTotalVotesCast}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Vote#Result Vote.Result}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Vote#mmResult Vote.mmResult}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#VoteResult
- * MeetingResultDissemination.VoteResult}</li>
+ * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#mmVoteResult
+ * MeetingResultDissemination.mmVoteResult}</li>
  * </ul>
  * </li>
  * <li>
@@ -72,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VoteResult {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Vote> vote;
 	/**
 	 * Number of votes per type of vote and per resolution.
 	 * <p>
@@ -96,8 +99,8 @@ public class VoteResult {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Vote#Result
-	 * Vote.Result}</li>
+	 * opposite} = {@linkplain com.tools20022.repository.entity.Vote#mmResult
+	 * Vote.mmResult}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -119,7 +122,7 @@ public class VoteResult {
 	 * definition} = "Number of votes per type of vote and per resolution."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Vote = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmVote = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
@@ -127,11 +130,12 @@ public class VoteResult {
 			name = "Vote";
 			definition = "Number of votes per type of vote and per resolution.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Vote.Result;
+			opposite_lazy = () -> com.tools20022.repository.entity.Vote.mmResult;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 		}
 	};
+	protected YesNoIndicator accepted;
 	/**
 	 * Specifies whether a resolution is accepted or not.
 	 * <p>
@@ -142,19 +146,19 @@ public class VoteResult {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Vote2#Accepted
-	 * Vote2.Accepted}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Vote5#Accepted
-	 * Vote5.Accepted}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VoteResult VoteResult}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Vote2#mmAccepted
+	 * Vote2.mmAccepted}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Vote5#mmAccepted
+	 * Vote5.mmAccepted}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -166,19 +170,20 @@ public class VoteResult {
 	 * definition} = "Specifies whether a resolution is accepted or not."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Accepted = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAccepted = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote2.Accepted, com.tools20022.repository.msg.Vote5.Accepted);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote2.mmAccepted, com.tools20022.repository.msg.Vote5.mmAccepted);
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
 			definition = "Specifies whether a resolution is accepted or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected MeetingResultDissemination voteDissemination;
 	/**
 	 * Disemination process through which the results are propagated.
 	 * <p>
@@ -187,8 +192,8 @@ public class VoteResult {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#VoteResult
-	 * MeetingResultDissemination.VoteResult}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingResultDissemination#mmVoteResult
+	 * MeetingResultDissemination.mmVoteResult}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -213,20 +218,21 @@ public class VoteResult {
 	 * "Disemination process through which the results are propagated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd VoteDissemination = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmVoteDissemination = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VoteDissemination";
 			definition = "Disemination process through which the results are propagated.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MeetingResultDissemination.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.MeetingResultDissemination.VoteResult;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.MeetingResultDissemination.mmVoteResult;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.MeetingResultDissemination.mmObject();
 		}
 	};
+	protected Number totalVotesCast;
 	/**
 	 * Total number of votes cast per resolution.
 	 * <p>
@@ -251,15 +257,15 @@ public class VoteResult {
 	 * definition} = "Total number of votes cast per resolution."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalVotesCast = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalVotesCast = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalVotesCast";
 			definition = "Total number of votes cast per resolution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -267,16 +273,48 @@ public class VoteResult {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VoteResult";
 				definition = "Specifies whether an agenda item of a general meeting has been accepted or rejected, together with the number of votes.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Vote.Result, com.tools20022.repository.entity.MeetingResultDissemination.VoteResult);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteResult.Vote, com.tools20022.repository.entity.VoteResult.Accepted, com.tools20022.repository.entity.VoteResult.VoteDissemination,
-						com.tools20022.repository.entity.VoteResult.TotalVotesCast);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Vote.mmResult, com.tools20022.repository.entity.MeetingResultDissemination.mmVoteResult);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteResult.mmVote, com.tools20022.repository.entity.VoteResult.mmAccepted, com.tools20022.repository.entity.VoteResult.mmVoteDissemination,
+						com.tools20022.repository.entity.VoteResult.mmTotalVotesCast);
 				derivationComponent_lazy = () -> Arrays.asList(Vote2.mmObject(), Vote5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Vote> getVote() {
+		return vote;
+	}
+
+	public void setVote(List<com.tools20022.repository.entity.Vote> vote) {
+		this.vote = vote;
+	}
+
+	public YesNoIndicator getAccepted() {
+		return accepted;
+	}
+
+	public void setAccepted(YesNoIndicator accepted) {
+		this.accepted = accepted;
+	}
+
+	public MeetingResultDissemination getVoteDissemination() {
+		return voteDissemination;
+	}
+
+	public void setVoteDissemination(com.tools20022.repository.entity.MeetingResultDissemination voteDissemination) {
+		this.voteDissemination = voteDissemination;
+	}
+
+	public Number getTotalVotesCast() {
+		return totalVotesCast;
+	}
+
+	public void setTotalVotesCast(Number totalVotesCast) {
+		this.totalVotesCast = totalVotesCast;
 	}
 }

@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CommodityDerivate5#Size
- * CommodityDerivate5.Size}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommodityDerivate5#mmSize
+ * CommodityDerivate5.mmSize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommodityDerivate5#AverageTimeCharter
- * CommodityDerivate5.AverageTimeCharter}</li>
+ * {@linkplain com.tools20022.repository.msg.CommodityDerivate5#mmAverageTimeCharter
+ * CommodityDerivate5.mmAverageTimeCharter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommodityDerivate5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max25Text size;
 	/**
 	 * Specification of the size related to the freight sub type. Field to be
 	 * populated when the base product field is equal to freight.
@@ -88,7 +89,7 @@ public class CommodityDerivate5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Size = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSize = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommodityDerivate5.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class CommodityDerivate5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Size";
 			definition = "Specification of the size related to the freight sub type. Field to be populated when the base product field is equal to freight.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
 		}
 	};
+	protected Max25Text averageTimeCharter;
 	/**
 	 * Details the specific route or time charter average. Field to be populated
 	 * when the base product field is equal to freight.
@@ -131,7 +133,7 @@ public class CommodityDerivate5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AverageTimeCharter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAverageTimeCharter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommodityDerivate5.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class CommodityDerivate5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageTimeCharter";
 			definition = "Details the specific route or time charter average. Field to be populated when the base product field is equal to freight.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class CommodityDerivate5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate5.Size, com.tools20022.repository.msg.CommodityDerivate5.AverageTimeCharter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate5.mmSize, com.tools20022.repository.msg.CommodityDerivate5.mmAverageTimeCharter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate5";
 				definition = "Transparency calculation specific details for a freight commodity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max25Text getSize() {
+		return size;
+	}
+
+	public void setSize(Max25Text size) {
+		this.size = size;
+	}
+
+	public Max25Text getAverageTimeCharter() {
+		return averageTimeCharter;
+	}
+
+	public void setAverageTimeCharter(Max25Text averageTimeCharter) {
+		this.averageTimeCharter = averageTimeCharter;
 	}
 }

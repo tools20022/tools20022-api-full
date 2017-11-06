@@ -32,19 +32,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code#Open
- * RateType12Code.Open}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code#Unknown
- * RateType12Code.Unknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code#NilPayment
- * RateType12Code.NilPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code#mmOpen
+ * RateType12Code.mmOpen}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code#mmUnknown
+ * RateType12Code.mmUnknown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RateType12Code#mmNilPayment
+ * RateType12Code.mmNilPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class RateType12Code extends RateTypeCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
@@ -103,7 +104,7 @@ public class RateType12Code extends RateTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -126,7 +127,7 @@ public class RateType12Code extends RateTypeCode {
 	 * name} = "NilPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode NilPayment = new MMCode() {
+	public static final MMCode mmNilPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NilPayment";
@@ -137,12 +138,12 @@ public class RateType12Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType12Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType12Code.Open, com.tools20022.repository.codeset.RateType12Code.Unknown, com.tools20022.repository.codeset.RateType12Code.NilPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType12Code.mmOpen, com.tools20022.repository.codeset.RateType12Code.mmUnknown, com.tools20022.repository.codeset.RateType12Code.mmNilPayment);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

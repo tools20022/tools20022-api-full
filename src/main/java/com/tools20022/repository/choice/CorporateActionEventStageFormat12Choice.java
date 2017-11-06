@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice#Code
- * CorporateActionEventStageFormat12Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice#mmCode
+ * CorporateActionEventStageFormat12Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice#Proprietary
- * CorporateActionEventStageFormat12Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice#mmProprietary
+ * CorporateActionEventStageFormat12Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionEventStageFormat12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionEventStage4Code code;
 	/**
 	 * Standard code to specify the stage of the corporate action event.
 	 * <p>
@@ -80,8 +81,8 @@ public class CorporateActionEventStageFormat12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EventStage
-	 * CorporateActionEvent.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
+	 * CorporateActionEvent.mmEventStage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class CorporateActionEventStageFormat12Choice {
 	 * "Standard code to specify the stage of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateActionEventStageFormat12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EventStage;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the stage of the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventStage4Code.mmObject();
 		}
 	};
+	protected GenericIdentification51 proprietary;
 	/**
 	 * Proprietary identification of the stage of the corporate action event.
 	 * <p>
@@ -127,8 +129,8 @@ public class CorporateActionEventStageFormat12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EventStage
-	 * CorporateActionEvent.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
+	 * CorporateActionEvent.mmEventStage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,33 +150,49 @@ public class CorporateActionEventStageFormat12Choice {
 	 * "Proprietary identification of the stage of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateActionEventStageFormat12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EventStage;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the stage of the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification51.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification51.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice.Code, com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionEventStageFormat12Choice";
 				definition = "Choice between a standard code or proprietary code to specify the event stage type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionEventStage4Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionEventStage4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification51 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification51 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

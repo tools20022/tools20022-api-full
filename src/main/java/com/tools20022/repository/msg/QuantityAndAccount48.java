@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.CashAccountIdentification6Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
@@ -37,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#SettlementQuantity
- * QuantityAndAccount48.SettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#mmSettlementQuantity
+ * QuantityAndAccount48.mmSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#AccountOwner
- * QuantityAndAccount48.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#mmAccountOwner
+ * QuantityAndAccount48.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#SafekeepingAccount
- * QuantityAndAccount48.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#mmSafekeepingAccount
+ * QuantityAndAccount48.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#CashAccount
- * QuantityAndAccount48.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#mmCashAccount
+ * QuantityAndAccount48.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#SafekeepingPlace
- * QuantityAndAccount48.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#mmSafekeepingPlace
+ * QuantityAndAccount48.mmSafekeepingPlace}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,15 +62,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05#QuantityAndAccountDetails
- * SecuritiesFinancingModificationInstruction002V05.QuantityAndAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05#mmQuantityAndAccountDetails
+ * SecuritiesFinancingModificationInstruction002V05.mmQuantityAndAccountDetails}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuantityAndAccount48 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity15Choice settlementQuantity;
 	/**
 	 * Total quantity of securities to be settled.
 	 * <p>
@@ -104,8 +107,8 @@ public class QuantityAndAccount48 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementQuantity
-	 * SecuritiesSettlement.SettlementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+	 * SecuritiesSettlement.mmSettlementQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -126,28 +129,29 @@ public class QuantityAndAccount48 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#SettlementQuantity
-	 * QuantityAndAccount61.SettlementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#mmSettlementQuantity
+	 * QuantityAndAccount61.mmSettlementQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> QuantityAndAccount48.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementQuantity;
 			isDerived = false;
 			xmlTag = "SttlmQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.SettlementQuantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.mmSettlementQuantity);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected PartyIdentification109 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -159,8 +163,8 @@ public class QuantityAndAccount48 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,28 +185,29 @@ public class QuantityAndAccount48 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#AccountOwner
-	 * QuantityAndAccount61.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#mmAccountOwner
+	 * QuantityAndAccount61.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount48.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.AccountOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.mmAccountOwner);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification109.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification109.mmObject();
 		}
 	};
+	protected SecuritiesAccount30 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -236,28 +241,29 @@ public class QuantityAndAccount48 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#SafekeepingAccount
-	 * QuantityAndAccount61.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#mmSafekeepingAccount
+	 * QuantityAndAccount61.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QuantityAndAccount48.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> QuantityAndAccount48.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.SafekeepingAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.mmSafekeepingAccount);
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount30.mmObject();
 		}
 	};
+	protected CashAccountIdentification6Choice cashAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -270,8 +276,8 @@ public class QuantityAndAccount48 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -292,28 +298,29 @@ public class QuantityAndAccount48 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#CashAccount
-	 * QuantityAndAccount61.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#mmCashAccount
+	 * QuantityAndAccount61.mmCashAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount48.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.CashAccount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.mmCashAccount);
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
 		}
 	};
+	protected SafeKeepingPlace2 safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -352,37 +359,37 @@ public class QuantityAndAccount48 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#SafekeepingPlace
-	 * QuantityAndAccount61.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#mmSafekeepingPlace
+	 * QuantityAndAccount61.mmSafekeepingPlace}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> QuantityAndAccount48.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.SafekeepingPlace);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount61.mmSafekeepingPlace);
 			maxOccurs = 1;
-			type_lazy = () -> SafeKeepingPlace2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount48.SettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount48.AccountOwner,
-						com.tools20022.repository.msg.QuantityAndAccount48.SafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount48.CashAccount, com.tools20022.repository.msg.QuantityAndAccount48.SafekeepingPlace);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount48.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount48.mmAccountOwner,
+						com.tools20022.repository.msg.QuantityAndAccount48.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount48.mmCashAccount, com.tools20022.repository.msg.QuantityAndAccount48.mmSafekeepingPlace);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05.mmQuantityAndAccountDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05.QuantityAndAccountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuantityAndAccount48";
 				definition = "Details on the quantity, account and other related information involved in a transaction.";
@@ -390,5 +397,45 @@ public class QuantityAndAccount48 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity15Choice getSettlementQuantity() {
+		return settlementQuantity;
+	}
+
+	public void setSettlementQuantity(FinancialInstrumentQuantity15Choice settlementQuantity) {
+		this.settlementQuantity = settlementQuantity;
+	}
+
+	public PartyIdentification109 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.PartyIdentification109 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount30 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount30 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public CashAccountIdentification6Choice getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(CashAccountIdentification6Choice cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public SafeKeepingPlace2 getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace2 safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
 	}
 }

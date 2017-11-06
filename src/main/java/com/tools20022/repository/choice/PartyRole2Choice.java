@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PartyRole2Choice#Code
- * PartyRole2Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PartyRole2Choice#mmCode
+ * PartyRole2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyRole2Choice#Proprietary
- * PartyRole2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyRole2Choice#mmProprietary
+ * PartyRole2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyRole2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentFundRole6Code code;
 	/**
 	 * Role expressed as a code.
 	 * <p>
@@ -86,8 +87,8 @@ public class PartyRole2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#PartyType
-	 * PartyIdentificationInformation.PartyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyType
+	 * PartyIdentificationInformation.mmPartyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,29 +108,30 @@ public class PartyRole2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole4Choice#Code
-	 * PartyRole4Choice.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole5Choice#Code
-	 * PartyRole5Choice.Code}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole4Choice#mmCode
+	 * PartyRole4Choice.mmCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole5Choice#mmCode
+	 * PartyRole5Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> PartyRole2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.PartyType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Role expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole4Choice.Code, com.tools20022.repository.choice.PartyRole5Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole4Choice.mmCode, com.tools20022.repository.choice.PartyRole5Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole6Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Role expressed as a proprietary code.
 	 * <p>
@@ -142,8 +144,8 @@ public class PartyRole2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#PartyType
-	 * PartyIdentificationInformation.PartyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyType
+	 * PartyIdentificationInformation.mmPartyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,38 +166,38 @@ public class PartyRole2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyRole4Choice#Proprietary
-	 * PartyRole4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartyRole4Choice#mmProprietary
+	 * PartyRole4Choice.mmProprietary}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyRole5Choice#Proprietary
-	 * PartyRole5Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartyRole5Choice#mmProprietary
+	 * PartyRole5Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> PartyRole2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.PartyType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Role expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole4Choice.Proprietary, com.tools20022.repository.choice.PartyRole5Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole4Choice.mmProprietary, com.tools20022.repository.choice.PartyRole5Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole2Choice.Code, com.tools20022.repository.choice.PartyRole2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole2Choice.mmCode, com.tools20022.repository.choice.PartyRole2Choice.mmProprietary);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyRole2Choice";
 				definition = "Choice of formats for the specification of the role.";
@@ -203,5 +205,21 @@ public class PartyRole2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentFundRole6Code getCode() {
+		return code;
+	}
+
+	public void setCode(InvestmentFundRole6Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

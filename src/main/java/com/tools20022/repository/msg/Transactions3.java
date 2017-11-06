@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on transactions.
@@ -32,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transactions3#PaymentCommonInformation
- * Transactions3.PaymentCommonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Transactions3#mmPaymentCommonInformation
+ * Transactions3.mmPaymentCommonInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transactions3#TransactionReport
- * Transactions3.TransactionReport}</li>
+ * {@linkplain com.tools20022.repository.msg.Transactions3#mmTransactionReport
+ * Transactions3.mmTransactionReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Transactions3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentCommonDetails3 paymentCommonInformation;
 	/**
 	 * Common detailed payment instruction information.
 	 * <p>
@@ -82,7 +84,7 @@ public class Transactions3 {
 	 * definition} = "Common detailed payment instruction information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentCommonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentCommonInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Transactions3.mmObject();
 			isDerived = false;
@@ -90,12 +92,13 @@ public class Transactions3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCommonInformation";
 			definition = "Common detailed payment instruction information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentCommonDetails3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentCommonDetails3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionReportDetails4> transactionReport;
 	/**
 	 * Reports either on the transaction information or on a business error.
 	 * <p>
@@ -123,7 +126,7 @@ public class Transactions3 {
 	 * "Reports either on the transaction information or on a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Transactions3.mmObject();
 			isDerived = false;
@@ -132,21 +135,37 @@ public class Transactions3 {
 			name = "TransactionReport";
 			definition = "Reports either on the transaction information or on a business error.";
 			minOccurs = 1;
-			type_lazy = () -> TransactionReportDetails4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transactions3.PaymentCommonInformation, com.tools20022.repository.msg.Transactions3.TransactionReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transactions3.mmPaymentCommonInformation, com.tools20022.repository.msg.Transactions3.mmTransactionReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Transactions3";
 				definition = "Reports on transactions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentCommonDetails3 getPaymentCommonInformation() {
+		return paymentCommonInformation;
+	}
+
+	public void setPaymentCommonInformation(com.tools20022.repository.msg.PaymentCommonDetails3 paymentCommonInformation) {
+		this.paymentCommonInformation = paymentCommonInformation;
+	}
+
+	public List<TransactionReportDetails4> getTransactionReport() {
+		return transactionReport;
+	}
+
+	public void setTransactionReport(List<com.tools20022.repository.msg.TransactionReportDetails4> transactionReport) {
+		this.transactionReport = transactionReport;
 	}
 }

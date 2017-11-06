@@ -35,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearer1Code#BorneByDebtor
- * ChargeBearer1Code.BorneByDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearer1Code#mmBorneByDebtor
+ * ChargeBearer1Code.mmBorneByDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearer1Code#BorneByCreditor
- * ChargeBearer1Code.BorneByCreditor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearer1Code#Shared
- * ChargeBearer1Code.Shared}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearer1Code#mmBorneByCreditor
+ * ChargeBearer1Code.mmBorneByCreditor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearer1Code#mmShared
+ * ChargeBearer1Code.mmShared}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class ChargeBearer1Code extends ChargeBearerCode {
 	 * name} = "BorneByDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode BorneByDebtor = new MMCode() {
+	public static final MMCode mmBorneByDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorneByDebtor";
@@ -109,7 +109,7 @@ public class ChargeBearer1Code extends ChargeBearerCode {
 	 * name} = "BorneByCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode BorneByCreditor = new MMCode() {
+	public static final MMCode mmBorneByCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorneByCreditor";
@@ -132,7 +132,7 @@ public class ChargeBearer1Code extends ChargeBearerCode {
 	 * name} = "Shared"</li>
 	 * </ul>
 	 */
-	public static final MMCode Shared = new MMCode() {
+	public static final MMCode mmShared = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Shared";
@@ -143,13 +143,13 @@ public class ChargeBearer1Code extends ChargeBearerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OUR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeBearer1Code";
 				definition = "Specifies which party(ies) will pay charges due for processing of the payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearer1Code.BorneByDebtor, com.tools20022.repository.codeset.ChargeBearer1Code.BorneByCreditor,
-						com.tools20022.repository.codeset.ChargeBearer1Code.Shared);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearer1Code.mmBorneByDebtor, com.tools20022.repository.codeset.ChargeBearer1Code.mmBorneByCreditor,
+						com.tools20022.repository.codeset.ChargeBearer1Code.mmShared);
 				trace_lazy = () -> ChargeBearerCode.mmObject();
 			}
 		});

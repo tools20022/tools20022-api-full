@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Tangible items of value to a business.
@@ -32,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityAttributes3#FinancialInstrumentIdentification
- * SecurityAttributes3.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityAttributes3#mmFinancialInstrumentIdentification
+ * SecurityAttributes3.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityAttributes3#FinancialInstrumentType
- * SecurityAttributes3.FinancialInstrumentType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityAttributes3#mmFinancialInstrumentType
+ * SecurityAttributes3.mmFinancialInstrumentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityAttributes3#FinancialInstrumentAttributes
- * SecurityAttributes3.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityAttributes3#mmFinancialInstrumentAttributes
+ * SecurityAttributes3.mmFinancialInstrumentAttributes}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityAttributes3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
 	/**
 	 * Way(s) of identifying the security.
 	 * <p>
@@ -87,7 +89,7 @@ public class SecurityAttributes3 {
 	 * definition} = "Way(s) of identifying the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityAttributes3.mmObject();
 			isDerived = false;
@@ -96,10 +98,11 @@ public class SecurityAttributes3 {
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected FinancialInstrument28 financialInstrumentType;
 	/**
 	 * Provides additional details about the financial instrument.
 	 * <p>
@@ -127,7 +130,7 @@ public class SecurityAttributes3 {
 	 * "Provides additional details about the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityAttributes3.mmObject();
 			isDerived = false;
@@ -135,12 +138,13 @@ public class SecurityAttributes3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentType";
 			definition = "Provides additional details about the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument28.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument28.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes3> financialInstrumentAttributes;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -171,7 +175,7 @@ public class SecurityAttributes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityAttributes3.mmObject();
 			isDerived = false;
@@ -180,22 +184,46 @@ public class SecurityAttributes3 {
 			name = "FinancialInstrumentAttributes";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			minOccurs = 0;
-			type_lazy = () -> CommonFinancialInstrumentAttributes3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommonFinancialInstrumentAttributes3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityAttributes3.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityAttributes3.FinancialInstrumentType,
-						com.tools20022.repository.msg.SecurityAttributes3.FinancialInstrumentAttributes);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityAttributes3.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityAttributes3.mmFinancialInstrumentType,
+						com.tools20022.repository.msg.SecurityAttributes3.mmFinancialInstrumentAttributes);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityAttributes3";
 				definition = "Tangible items of value to a business.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public FinancialInstrument28 getFinancialInstrumentType() {
+		return financialInstrumentType;
+	}
+
+	public void setFinancialInstrumentType(com.tools20022.repository.msg.FinancialInstrument28 financialInstrumentType) {
+		this.financialInstrumentType = financialInstrumentType;
+	}
+
+	public List<CommonFinancialInstrumentAttributes3> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes3> financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
 	}
 }

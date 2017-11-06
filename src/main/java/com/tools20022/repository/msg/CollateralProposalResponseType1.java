@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#CollateralProposalIdentification
- * CollateralProposalResponseType1.CollateralProposalIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#mmCollateralProposalIdentification
+ * CollateralProposalResponseType1.mmCollateralProposalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#Type
- * CollateralProposalResponseType1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#mmType
+ * CollateralProposalResponseType1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#ResponseType
- * CollateralProposalResponseType1.ResponseType}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#mmResponseType
+ * CollateralProposalResponseType1.mmResponseType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#RejectionReason
- * CollateralProposalResponseType1.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#mmRejectionReason
+ * CollateralProposalResponseType1.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#RejectionInformation
- * CollateralProposalResponseType1.RejectionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType1#mmRejectionInformation
+ * CollateralProposalResponseType1.mmRejectionInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralProposalResponseType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text collateralProposalIdentification;
 	/**
 	 * Unique identifier for a collateral proposal.
 	 * <p>
@@ -111,13 +112,13 @@ public class CollateralProposalResponseType1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType2#CollateralProposalIdentification
-	 * CollateralProposalResponseType2.CollateralProposalIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType2#mmCollateralProposalIdentification
+	 * CollateralProposalResponseType2.mmCollateralProposalIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralProposalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralProposalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralProposalResponseType1.mmObject();
 			isDerived = false;
@@ -125,12 +126,13 @@ public class CollateralProposalResponseType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalIdentification";
 			definition = "Unique identifier for a collateral proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType2.CollateralProposalIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType2.mmCollateralProposalIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CollateralProposalResponse1Code type;
 	/**
 	 * Indicates whether the collateral proposal is an initial or a counter
 	 * proposal.
@@ -145,8 +147,8 @@ public class CollateralProposalResponseType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#ResponseType
-	 * CollateralProposal.ResponseType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmResponseType
+	 * CollateralProposal.mmResponseType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,27 +171,28 @@ public class CollateralProposalResponseType1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType2#Type
-	 * CollateralProposalResponseType2.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralProposalResponseType2#mmType
+	 * CollateralProposalResponseType2.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmResponseType;
 			componentContext_lazy = () -> CollateralProposalResponseType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.ResponseType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates whether the collateral proposal is an initial or a counter proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType2.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType2.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralProposalResponse1Code.mmObject();
 		}
 	};
+	protected Status4Code responseType;
 	/**
 	 * Specifies the status of the collateral proposal.
 	 * <p>
@@ -202,8 +205,8 @@ public class CollateralProposalResponseType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -222,20 +225,21 @@ public class CollateralProposalResponseType1 {
 	 * definition} = "Specifies the status of the collateral proposal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> CollateralProposalResponseType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "RspnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Specifies the status of the collateral proposal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
 		}
 	};
+	protected RejectionReasonV021Code rejectionReason;
 	/**
 	 * Specifies the reason why the instruction/cancellation request has a
 	 * rejected status.
@@ -250,8 +254,8 @@ public class CollateralProposalResponseType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,20 +276,21 @@ public class CollateralProposalResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> CollateralProposalResponseType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
 	};
+	protected Max35Text rejectionInformation;
 	/**
 	 * Additional information regarding why the collateral proposal has a
 	 * rejected status.
@@ -299,8 +304,8 @@ public class CollateralProposalResponseType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -321,17 +326,17 @@ public class CollateralProposalResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> CollateralProposalResponseType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "RjctnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionInformation";
 			definition = "Additional information regarding why the collateral proposal has a rejected status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -339,11 +344,11 @@ public class CollateralProposalResponseType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType1.CollateralProposalIdentification, com.tools20022.repository.msg.CollateralProposalResponseType1.Type,
-						com.tools20022.repository.msg.CollateralProposalResponseType1.ResponseType, com.tools20022.repository.msg.CollateralProposalResponseType1.RejectionReason,
-						com.tools20022.repository.msg.CollateralProposalResponseType1.RejectionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType1.mmCollateralProposalIdentification, com.tools20022.repository.msg.CollateralProposalResponseType1.mmType,
+						com.tools20022.repository.msg.CollateralProposalResponseType1.mmResponseType, com.tools20022.repository.msg.CollateralProposalResponseType1.mmRejectionReason,
+						com.tools20022.repository.msg.CollateralProposalResponseType1.mmRejectionInformation);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralProposalResponseType1";
 				definition = "Provides details on the response for a collateral proposal.";
@@ -351,5 +356,45 @@ public class CollateralProposalResponseType1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCollateralProposalIdentification() {
+		return collateralProposalIdentification;
+	}
+
+	public void setCollateralProposalIdentification(Max35Text collateralProposalIdentification) {
+		this.collateralProposalIdentification = collateralProposalIdentification;
+	}
+
+	public CollateralProposalResponse1Code getType() {
+		return type;
+	}
+
+	public void setType(CollateralProposalResponse1Code type) {
+		this.type = type;
+	}
+
+	public Status4Code getResponseType() {
+		return responseType;
+	}
+
+	public void setResponseType(Status4Code responseType) {
+		this.responseType = responseType;
+	}
+
+	public RejectionReasonV021Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReasonV021Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+
+	public Max35Text getRejectionInformation() {
+		return rejectionInformation;
+	}
+
+	public void setRejectionInformation(Max35Text rejectionInformation) {
+		this.rejectionInformation = rejectionInformation;
 	}
 }

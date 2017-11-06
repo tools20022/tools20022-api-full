@@ -30,23 +30,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#ElectionInstruction
- * DTCCorporateActionInstructionTypeCode.ElectionInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#mmElectionInstruction
+ * DTCCorporateActionInstructionTypeCode.mmElectionInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#ProtectInstruction
- * DTCCorporateActionInstructionTypeCode.ProtectInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#mmProtectInstruction
+ * DTCCorporateActionInstructionTypeCode.mmProtectInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#InstructionWithdrawal
- * DTCCorporateActionInstructionTypeCode.InstructionWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#mmInstructionWithdrawal
+ * DTCCorporateActionInstructionTypeCode.mmInstructionWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#ProtectWithdrawal
- * DTCCorporateActionInstructionTypeCode.ProtectWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#mmProtectWithdrawal
+ * DTCCorporateActionInstructionTypeCode.mmProtectWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#CoverProtectSystem
- * DTCCorporateActionInstructionTypeCode.CoverProtectSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#mmCoverProtectSystem
+ * DTCCorporateActionInstructionTypeCode.mmCoverProtectSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#CoverProtectAgent
- * DTCCorporateActionInstructionTypeCode.CoverProtectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode#mmCoverProtectAgent
+ * DTCCorporateActionInstructionTypeCode.mmCoverProtectAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class DTCCorporateActionInstructionTypeCode {
 	 * definition} = "Instruction on a option in corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMCode ElectionInstruction = new MMCode() {
+	public static final MMCode mmElectionInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionInstruction";
@@ -135,7 +135,7 @@ public class DTCCorporateActionInstructionTypeCode {
 	 * definition} = "Instruction for a protect on a corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMCode ProtectInstruction = new MMCode() {
+	public static final MMCode mmProtectInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectInstruction";
@@ -165,7 +165,7 @@ public class DTCCorporateActionInstructionTypeCode {
 	 * definition} = "Withdrawal of previously submitted instruction."</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructionWithdrawal = new MMCode() {
+	public static final MMCode mmInstructionWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionWithdrawal";
@@ -196,7 +196,7 @@ public class DTCCorporateActionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ProtectWithdrawal = new MMCode() {
+	public static final MMCode mmProtectWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectWithdrawal";
@@ -227,7 +227,7 @@ public class DTCCorporateActionInstructionTypeCode {
 	 * "Instruction on covering a protect at the service provider."</li>
 	 * </ul>
 	 */
-	public static final MMCode CoverProtectSystem = new MMCode() {
+	public static final MMCode mmCoverProtectSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverProtectSystem";
@@ -257,7 +257,7 @@ public class DTCCorporateActionInstructionTypeCode {
 	 * definition} = "Instruction on covering a protect at the agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode CoverProtectAgent = new MMCode() {
+	public static final MMCode mmCoverProtectAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverProtectAgent";
@@ -270,14 +270,14 @@ public class DTCCorporateActionInstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCCorporateActionInstructionTypeCode";
 				definition = "Specifies the type of the corporate action instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.ElectionInstruction, com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.ProtectInstruction,
-						com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.InstructionWithdrawal, com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.ProtectWithdrawal,
-						com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.CoverProtectSystem, com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.CoverProtectAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.mmElectionInstruction, com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.mmProtectInstruction,
+						com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.mmInstructionWithdrawal, com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.mmProtectWithdrawal,
+						com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.mmCoverProtectSystem, com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode.mmCoverProtectAgent);
 				derivation_lazy = () -> Arrays.asList(DTCCorporateActionInstructionType1Code.mmObject(), DTCCorporateActionInstructionType2Code.mmObject());
 			}
 		});

@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the trade leg statement details.
@@ -34,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#ClearingAccount
- * TradeLegStatement3.ClearingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#mmClearingAccount
+ * TradeLegStatement3.mmClearingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#ClearingSegment
- * TradeLegStatement3.ClearingSegment}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#mmClearingSegment
+ * TradeLegStatement3.mmClearingSegment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#NonClearingMember
- * TradeLegStatement3.NonClearingMember}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#mmNonClearingMember
+ * TradeLegStatement3.mmNonClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#TradeLegsDetails
- * TradeLegStatement3.TradeLegsDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeLegStatement3#mmTradeLegsDetails
+ * TradeLegStatement3.mmTradeLegsDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,15 +56,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#StatementDetails
- * TradeLegStatementV03.StatementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmStatementDetails
+ * TradeLegStatementV03.mmStatementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeLegStatement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount18 clearingAccount;
 	/**
 	 * Identifies the clearing member account at the Central counterparty
 	 * through which the trade must be cleared (sometimes called position
@@ -94,8 +96,8 @@ public class TradeLegStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#ClearingAccount
-	 * ClearingMemberRole.ClearingAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingAccount
+	 * ClearingMemberRole.mmClearingAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,26 +119,27 @@ public class TradeLegStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#ClearingAccount
-	 * TradeLegStatement2.ClearingAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#mmClearingAccount
+	 * TradeLegStatement2.mmClearingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> TradeLegStatement3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.ClearingAccount;
 			isDerived = false;
 			xmlTag = "ClrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.ClearingAccount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmClearingAccount;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount18.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingSegment;
 	/**
 	 * Clearing organisation that will clear the trade.<br>
 	 * Note: This field allows Clearing Member Firm to segregate flows coming
@@ -153,8 +156,8 @@ public class TradeLegStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,26 +179,27 @@ public class TradeLegStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#ClearingSegment
-	 * TradeLegStatement2.ClearingSegment}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#mmClearingSegment
+	 * TradeLegStatement2.mmClearingSegment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingSegment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingSegment = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TradeLegStatement3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "ClrSgmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\nNote: This field allows Clearing Member Firm to segregate flows coming from clearing counterparty's clearing system. Indeed, Clearing Member Firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.ClearingSegment;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmClearingSegment;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification35Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
 	 * Provides the identification for the non-clearing member.
 	 * <p>
@@ -208,8 +212,8 @@ public class TradeLegStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -229,26 +233,27 @@ public class TradeLegStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#NonClearingMember
-	 * TradeLegStatement2.NonClearingMember}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#mmNonClearingMember
+	 * TradeLegStatement2.mmNonClearingMember}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TradeLegStatement3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.NonClearingMember;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmNonClearingMember;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TradeLeg9> tradeLegsDetails;
 	/**
 	 * Provides the lists of all trades during the period in consideration for
 	 * the statement.
@@ -283,34 +288,34 @@ public class TradeLegStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#TradeLegsDetails
-	 * TradeLegStatement2.TradeLegsDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLegStatement2#mmTradeLegsDetails
+	 * TradeLegStatement2.mmTradeLegsDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeLegsDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeLegsDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TradeLegStatement3.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
+			componentContext_lazy = () -> TradeLegStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "TradLegsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLegsDetails";
 			definition = "Provides the lists of all trades during the period in consideration for the statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.TradeLegsDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmTradeLegsDetails;
 			minOccurs = 1;
-			type_lazy = () -> TradeLeg9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeLeg9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeLegStatement3.ClearingAccount, com.tools20022.repository.msg.TradeLegStatement3.ClearingSegment,
-						com.tools20022.repository.msg.TradeLegStatement3.NonClearingMember, com.tools20022.repository.msg.TradeLegStatement3.TradeLegsDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeLegStatement3.mmClearingAccount, com.tools20022.repository.msg.TradeLegStatement3.mmClearingSegment,
+						com.tools20022.repository.msg.TradeLegStatement3.mmNonClearingMember, com.tools20022.repository.msg.TradeLegStatement3.mmTradeLegsDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegStatementV03.mmStatementDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegStatementV03.StatementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeLegStatement3";
 				definition = "Provides the trade leg statement details.";
@@ -318,5 +323,37 @@ public class TradeLegStatement3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount18 getClearingAccount() {
+		return clearingAccount;
+	}
+
+	public void setClearingAccount(com.tools20022.repository.msg.SecuritiesAccount18 clearingAccount) {
+		this.clearingAccount = clearingAccount;
+	}
+
+	public PartyIdentification35Choice getClearingSegment() {
+		return clearingSegment;
+	}
+
+	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+		this.clearingSegment = clearingSegment;
+	}
+
+	public PartyIdentificationAndAccount31 getNonClearingMember() {
+		return nonClearingMember;
+	}
+
+	public void setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+		this.nonClearingMember = nonClearingMember;
+	}
+
+	public List<TradeLeg9> getTradeLegsDetails() {
+		return tradeLegsDetails;
+	}
+
+	public void setTradeLegsDetails(List<com.tools20022.repository.msg.TradeLeg9> tradeLegsDetails) {
+		this.tradeLegsDetails = tradeLegsDetails;
 	}
 }

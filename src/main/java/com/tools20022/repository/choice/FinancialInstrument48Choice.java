@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#ISIN
- * FinancialInstrument48Choice.ISIN}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#mmISIN
+ * FinancialInstrument48Choice.mmISIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#LEI
- * FinancialInstrument48Choice.LEI}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#mmLEI
+ * FinancialInstrument48Choice.mmLEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#Index
- * FinancialInstrument48Choice.Index}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#mmIndex
+ * FinancialInstrument48Choice.mmIndex}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument48Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINOct2015Identifier iSIN;
 	/**
 	 * Identifies the financial instrument using an ISIN.
 	 * <p>
@@ -80,8 +81,8 @@ public class FinancialInstrument48Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class FinancialInstrument48Choice {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> FinancialInstrument48Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "Identifies the financial instrument using an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * The LEI code of the issuer where the instrument is referring to an issuer
 	 * rather than one single instrument.
@@ -128,8 +130,8 @@ public class FinancialInstrument48Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class FinancialInstrument48Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> FinancialInstrument48Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "The LEI code of the issuer where the instrument is referring to an issuer rather than one single instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected FinancialInstrument58 index;
 	/**
 	 * Index on which the financial instrument is based.
 	 * <p>
@@ -175,7 +178,8 @@ public class FinancialInstrument48Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#Index Spread.Index}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmIndex
+	 * Spread.mmIndex}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,34 +198,58 @@ public class FinancialInstrument48Choice {
 	 * definition} = "Index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Index = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmIndex;
 			componentContext_lazy = () -> FinancialInstrument48Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.Index;
 			isDerived = false;
 			xmlTag = "Indx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Index on which the financial instrument is based.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument58.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrument58.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrument48Choice.ISIN, com.tools20022.repository.choice.FinancialInstrument48Choice.LEI,
-						com.tools20022.repository.choice.FinancialInstrument48Choice.Index);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrument48Choice.mmISIN, com.tools20022.repository.choice.FinancialInstrument48Choice.mmLEI,
+						com.tools20022.repository.choice.FinancialInstrument48Choice.mmIndex);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument48Choice";
 				definition = "Choice to specific an instrument of type ISIN, LEI or Index.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINOct2015Identifier getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(ISINOct2015Identifier iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
+	}
+
+	public FinancialInstrument58 getIndex() {
+		return index;
+	}
+
+	public void setIndex(FinancialInstrument58 index) {
+		this.index = index;
 	}
 }

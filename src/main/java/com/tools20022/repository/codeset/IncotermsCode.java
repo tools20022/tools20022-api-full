@@ -31,41 +31,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.IncotermsCode#ExWorks
- * IncotermsCode.ExWorks}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IncotermsCode#FreeCarrier
- * IncotermsCode.FreeCarrier}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IncotermsCode#mmExWorks
+ * IncotermsCode.mmExWorks}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#FreeAlongsideShip
- * IncotermsCode.FreeAlongsideShip}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IncotermsCode#FreeOnBoard
- * IncotermsCode.FreeOnBoard}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmFreeCarrier
+ * IncotermsCode.mmFreeCarrier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#CostAndFreight
- * IncotermsCode.CostAndFreight}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmFreeAlongsideShip
+ * IncotermsCode.mmFreeAlongsideShip}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#CostInsuranceAndFreight
- * IncotermsCode.CostInsuranceAndFreight}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IncotermsCode#CarriagePaid
- * IncotermsCode.CarriagePaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmFreeOnBoard
+ * IncotermsCode.mmFreeOnBoard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#CarriageAndInsurancePaid
- * IncotermsCode.CarriageAndInsurancePaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmCostAndFreight
+ * IncotermsCode.mmCostAndFreight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#DeliveredAtFrontier
- * IncotermsCode.DeliveredAtFrontier}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmCostInsuranceAndFreight
+ * IncotermsCode.mmCostInsuranceAndFreight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#DeliveredExShip
- * IncotermsCode.DeliveredExShip}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmCarriagePaid
+ * IncotermsCode.mmCarriagePaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#DeliveredExQuay
- * IncotermsCode.DeliveredExQuay}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmCarriageAndInsurancePaid
+ * IncotermsCode.mmCarriageAndInsurancePaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#DeliveredDutyUnpaid
- * IncotermsCode.DeliveredDutyUnpaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmDeliveredAtFrontier
+ * IncotermsCode.mmDeliveredAtFrontier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode#DeliveredDutyPaid
- * IncotermsCode.DeliveredDutyPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmDeliveredExShip
+ * IncotermsCode.mmDeliveredExShip}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmDeliveredExQuay
+ * IncotermsCode.mmDeliveredExQuay}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmDeliveredDutyUnpaid
+ * IncotermsCode.mmDeliveredDutyUnpaid}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode#mmDeliveredDutyPaid
+ * IncotermsCode.mmDeliveredDutyPaid}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -78,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -122,7 +125,7 @@ public class IncotermsCode {
 	 * definition} = "Ex Works (any mode of transport, including multimodal)"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExWorks = new MMCode() {
+	public static final MMCode mmExWorks = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExWorks";
@@ -153,7 +156,7 @@ public class IncotermsCode {
 	 * "Free Carrier (any mode of transport, including multimodal)"</li>
 	 * </ul>
 	 */
-	public static final MMCode FreeCarrier = new MMCode() {
+	public static final MMCode mmFreeCarrier = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FreeCarrier";
@@ -183,7 +186,7 @@ public class IncotermsCode {
 	 * definition} = "Free Alongside Ship (sea and inland waterway transport)"</li>
 	 * </ul>
 	 */
-	public static final MMCode FreeAlongsideShip = new MMCode() {
+	public static final MMCode mmFreeAlongsideShip = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FreeAlongsideShip";
@@ -213,7 +216,7 @@ public class IncotermsCode {
 	 * definition} = "Free On Board (sea and inland waterway transport)"</li>
 	 * </ul>
 	 */
-	public static final MMCode FreeOnBoard = new MMCode() {
+	public static final MMCode mmFreeOnBoard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FreeOnBoard";
@@ -243,7 +246,7 @@ public class IncotermsCode {
 	 * definition} = "Cost and Freight (sea and inland waterway transport)"</li>
 	 * </ul>
 	 */
-	public static final MMCode CostAndFreight = new MMCode() {
+	public static final MMCode mmCostAndFreight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CostAndFreight";
@@ -274,7 +277,7 @@ public class IncotermsCode {
 	 * "Cost, Insurance and Freight (sea and inland waterway transport)"</li>
 	 * </ul>
 	 */
-	public static final MMCode CostInsuranceAndFreight = new MMCode() {
+	public static final MMCode mmCostInsuranceAndFreight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CostInsuranceAndFreight";
@@ -305,7 +308,7 @@ public class IncotermsCode {
 	 * "Carriage Paid To (any mode of transport, including multimodal)"</li>
 	 * </ul>
 	 */
-	public static final MMCode CarriagePaid = new MMCode() {
+	public static final MMCode mmCarriagePaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CarriagePaid";
@@ -338,7 +341,7 @@ public class IncotermsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CarriageAndInsurancePaid = new MMCode() {
+	public static final MMCode mmCarriageAndInsurancePaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CarriageAndInsurancePaid";
@@ -369,7 +372,7 @@ public class IncotermsCode {
 	 * "Delivered At Frontier (any mode of transport, including multimodal)"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveredAtFrontier = new MMCode() {
+	public static final MMCode mmDeliveredAtFrontier = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveredAtFrontier";
@@ -399,7 +402,7 @@ public class IncotermsCode {
 	 * definition} = "Delivered Ex Ship (sea and inland waterway transport)"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveredExShip = new MMCode() {
+	public static final MMCode mmDeliveredExShip = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveredExShip";
@@ -429,7 +432,7 @@ public class IncotermsCode {
 	 * definition} = "Delivered Ex Quay (sea and inland waterway transport)"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveredExQuay = new MMCode() {
+	public static final MMCode mmDeliveredExQuay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveredExQuay";
@@ -460,7 +463,7 @@ public class IncotermsCode {
 	 * "Delivered Duty Unpaid (any mode of transport, including multimodal)"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveredDutyUnpaid = new MMCode() {
+	public static final MMCode mmDeliveredDutyUnpaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveredDutyUnpaid";
@@ -491,7 +494,7 @@ public class IncotermsCode {
 	 * "Delivered Duty Paid (any mode of transport, including multimodal)"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveredDutyPaid = new MMCode() {
+	public static final MMCode mmDeliveredDutyPaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveredDutyPaid";
@@ -504,16 +507,16 @@ public class IncotermsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXW");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IncotermsCode";
 				definition = "A set of international standard trade terms (delivery terms) used to designate a point at which the costs and risks of transport are divided between the buyer and the seller.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IncotermsCode.ExWorks, com.tools20022.repository.codeset.IncotermsCode.FreeCarrier, com.tools20022.repository.codeset.IncotermsCode.FreeAlongsideShip,
-						com.tools20022.repository.codeset.IncotermsCode.FreeOnBoard, com.tools20022.repository.codeset.IncotermsCode.CostAndFreight, com.tools20022.repository.codeset.IncotermsCode.CostInsuranceAndFreight,
-						com.tools20022.repository.codeset.IncotermsCode.CarriagePaid, com.tools20022.repository.codeset.IncotermsCode.CarriageAndInsurancePaid, com.tools20022.repository.codeset.IncotermsCode.DeliveredAtFrontier,
-						com.tools20022.repository.codeset.IncotermsCode.DeliveredExShip, com.tools20022.repository.codeset.IncotermsCode.DeliveredExQuay, com.tools20022.repository.codeset.IncotermsCode.DeliveredDutyUnpaid,
-						com.tools20022.repository.codeset.IncotermsCode.DeliveredDutyPaid);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IncotermsCode.mmExWorks, com.tools20022.repository.codeset.IncotermsCode.mmFreeCarrier, com.tools20022.repository.codeset.IncotermsCode.mmFreeAlongsideShip,
+						com.tools20022.repository.codeset.IncotermsCode.mmFreeOnBoard, com.tools20022.repository.codeset.IncotermsCode.mmCostAndFreight, com.tools20022.repository.codeset.IncotermsCode.mmCostInsuranceAndFreight,
+						com.tools20022.repository.codeset.IncotermsCode.mmCarriagePaid, com.tools20022.repository.codeset.IncotermsCode.mmCarriageAndInsurancePaid, com.tools20022.repository.codeset.IncotermsCode.mmDeliveredAtFrontier,
+						com.tools20022.repository.codeset.IncotermsCode.mmDeliveredExShip, com.tools20022.repository.codeset.IncotermsCode.mmDeliveredExQuay, com.tools20022.repository.codeset.IncotermsCode.mmDeliveredDutyUnpaid,
+						com.tools20022.repository.codeset.IncotermsCode.mmDeliveredDutyPaid);
 				derivation_lazy = () -> Arrays.asList(Incoterms1Code.mmObject());
 			}
 		});

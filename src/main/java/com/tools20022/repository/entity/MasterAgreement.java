@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.msg.AgreementConditions1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Agreement which defines the framework of a contract between two trading
@@ -42,33 +43,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#CollateralAgreement
- * MasterAgreement.CollateralAgreement}</li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmCollateralAgreement
+ * MasterAgreement.mmCollateralAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#MasterAgreementType
- * MasterAgreement.MasterAgreementType}</li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmMasterAgreementType
+ * MasterAgreement.mmMasterAgreementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#GovernedTrades
- * MasterAgreement.GovernedTrades}</li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGovernedTrades
+ * MasterAgreement.mmGovernedTrades}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#GovernedContract
- * MasterAgreement.GovernedContract}</li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGovernedContract
+ * MasterAgreement.mmGovernedContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MasterAgreement#GoverningLaw
- * MasterAgreement.GoverningLaw}</li>
+ * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmGoverningLaw
+ * MasterAgreement.mmGoverningLaw}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#GoverningDocument
- * Trade.GoverningDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Contract#MasterAgreement
- * Contract.MasterAgreement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmGoverningDocument
+ * Trade.mmGoverningDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Contract#mmMasterAgreement
+ * Contract.mmMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#AssociatedMasterAgreement
- * CollateralAgreement.AssociatedMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmAssociatedMasterAgreement
+ * CollateralAgreement.mmAssociatedMasterAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -76,11 +77,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BPOApplicableRules1Choice#OtherRulesAndVersion
- * BPOApplicableRules1Choice.OtherRulesAndVersion}</li>
+ * {@linkplain com.tools20022.repository.choice.BPOApplicableRules1Choice#mmOtherRulesAndVersion
+ * BPOApplicableRules1Choice.mmOtherRulesAndVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation5#AgreementDetails
- * GeneralInformation5.AgreementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation5#mmAgreementDetails
+ * GeneralInformation5.mmAgreementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -99,8 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MasterAgreement extends Agreement {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CollateralAgreement collateralAgreement;
 	/**
 	 * Collateral agreement which is governed by the related master agreement.
 	 * <p>
@@ -124,8 +126,8 @@ public class MasterAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#AssociatedMasterAgreement
-	 * CollateralAgreement.AssociatedMasterAgreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmAssociatedMasterAgreement
+	 * CollateralAgreement.mmAssociatedMasterAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -151,20 +153,21 @@ public class MasterAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CollateralAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateralAgreement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralAgreement";
 			definition = "Collateral agreement which is governed by the related master agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.AssociatedMasterAgreement;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 		}
 	};
+	protected AgreementFrameworkCode masterAgreementType;
 	/**
 	 * Nature of the agreement, eg, ISDA Master Agreement or bilateral
 	 * agreement.
@@ -176,25 +179,25 @@ public class MasterAgreement extends Agreement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AgreementFrameworkCode
 	 * AgreementFrameworkCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AgreementFramework1Choice#AgreementFramework
-	 * AgreementFramework1Choice.AgreementFramework}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AgreementFramework1Choice#ProprietaryIdentification
-	 * AgreementFramework1Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AgreementConditions1#AgreementCode
-	 * AgreementConditions1.AgreementCode}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MasterAgreement
 	 * MasterAgreement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AgreementFramework1Choice#mmAgreementFramework
+	 * AgreementFramework1Choice.mmAgreementFramework}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AgreementFramework1Choice#mmProprietaryIdentification
+	 * AgreementFramework1Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AgreementConditions1#mmAgreementCode
+	 * AgreementConditions1.mmAgreementCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -208,20 +211,21 @@ public class MasterAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MasterAgreementType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMasterAgreementType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreementFramework1Choice.AgreementFramework, com.tools20022.repository.choice.AgreementFramework1Choice.ProprietaryIdentification,
-					com.tools20022.repository.msg.AgreementConditions1.AgreementCode);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreementFramework1Choice.mmAgreementFramework, com.tools20022.repository.choice.AgreementFramework1Choice.mmProprietaryIdentification,
+					com.tools20022.repository.msg.AgreementConditions1.mmAgreementCode);
 			elementContext_lazy = () -> MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MasterAgreementType";
 			definition = "Nature of the agreement, eg, ISDA Master Agreement or bilateral agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AgreementFrameworkCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Trade> governedTrades;
 	/**
 	 * Trades to which the master agreement applies.
 	 * <p>
@@ -230,8 +234,8 @@ public class MasterAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#GoverningDocument
-	 * Trade.GoverningDocument}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmGoverningDocument
+	 * Trade.mmGoverningDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -254,7 +258,7 @@ public class MasterAgreement extends Agreement {
 	 * definition} = "Trades to which the master agreement applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd GovernedTrades = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmGovernedTrades = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MasterAgreement.mmObject();
 			isDerived = false;
@@ -262,11 +266,12 @@ public class MasterAgreement extends Agreement {
 			name = "GovernedTrades";
 			definition = "Trades to which the master agreement applies.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Trade.GoverningDocument;
+			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmGoverningDocument;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
+	protected Contract governedContract;
 	/**
 	 * Contract which is governed by the master agreement.
 	 * <p>
@@ -275,8 +280,8 @@ public class MasterAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Contract#MasterAgreement
-	 * Contract.MasterAgreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.Contract#mmMasterAgreement
+	 * Contract.mmMasterAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -299,20 +304,21 @@ public class MasterAgreement extends Agreement {
 	 * definition} = "Contract which is governed by the master agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd GovernedContract = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmGovernedContract = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GovernedContract";
 			definition = "Contract which is governed by the master agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Contract.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Contract.MasterAgreement;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Contract.mmMasterAgreement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Contract.mmObject();
 		}
 	};
+	protected CountryCode governingLaw;
 	/**
 	 * National law under which a non-deliverable contract has been agreed.
 	 * <p>
@@ -339,15 +345,15 @@ public class MasterAgreement extends Agreement {
 	 * "National law under which a non-deliverable contract has been agreed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute GoverningLaw = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmGoverningLaw = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> MasterAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GoverningLaw";
 			definition = "National law under which a non-deliverable contract has been agreed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -355,19 +361,59 @@ public class MasterAgreement extends Agreement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MasterAgreement";
 				definition = "Agreement which defines the framework of a contract between two trading parties in different domains such as collateral, derivatives, trade..";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.GoverningDocument, com.tools20022.repository.entity.Contract.MasterAgreement,
-						com.tools20022.repository.entity.CollateralAgreement.AssociatedMasterAgreement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BPOApplicableRules1Choice.OtherRulesAndVersion, com.tools20022.repository.msg.GeneralInformation5.AgreementDetails);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmGoverningDocument, com.tools20022.repository.entity.Contract.mmMasterAgreement,
+						com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BPOApplicableRules1Choice.mmOtherRulesAndVersion, com.tools20022.repository.msg.GeneralInformation5.mmAgreementDetails);
 				superType_lazy = () -> Agreement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MasterAgreement.CollateralAgreement, com.tools20022.repository.entity.MasterAgreement.MasterAgreementType,
-						com.tools20022.repository.entity.MasterAgreement.GovernedTrades, com.tools20022.repository.entity.MasterAgreement.GovernedContract, com.tools20022.repository.entity.MasterAgreement.GoverningLaw);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MasterAgreement.mmCollateralAgreement, com.tools20022.repository.entity.MasterAgreement.mmMasterAgreementType,
+						com.tools20022.repository.entity.MasterAgreement.mmGovernedTrades, com.tools20022.repository.entity.MasterAgreement.mmGovernedContract, com.tools20022.repository.entity.MasterAgreement.mmGoverningLaw);
 				derivationComponent_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmObject(), AgreementConditions1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CollateralAgreement getCollateralAgreement() {
+		return collateralAgreement;
+	}
+
+	public void setCollateralAgreement(com.tools20022.repository.entity.CollateralAgreement collateralAgreement) {
+		this.collateralAgreement = collateralAgreement;
+	}
+
+	public AgreementFrameworkCode getMasterAgreementType() {
+		return masterAgreementType;
+	}
+
+	public void setMasterAgreementType(AgreementFrameworkCode masterAgreementType) {
+		this.masterAgreementType = masterAgreementType;
+	}
+
+	public List<Trade> getGovernedTrades() {
+		return governedTrades;
+	}
+
+	public void setGovernedTrades(List<com.tools20022.repository.entity.Trade> governedTrades) {
+		this.governedTrades = governedTrades;
+	}
+
+	public Contract getGovernedContract() {
+		return governedContract;
+	}
+
+	public void setGovernedContract(com.tools20022.repository.entity.Contract governedContract) {
+		this.governedContract = governedContract;
+	}
+
+	public CountryCode getGoverningLaw() {
+		return governingLaw;
+	}
+
+	public void setGoverningLaw(CountryCode governingLaw) {
+		this.governingLaw = governingLaw;
 	}
 }

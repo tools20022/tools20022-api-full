@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice#PreviousReference
- * LinkedMessage4Choice.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice#mmPreviousReference
+ * LinkedMessage4Choice.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice#OtherReference
- * LinkedMessage4Choice.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.choice.LinkedMessage4Choice#mmOtherReference
+ * LinkedMessage4Choice.mmOtherReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LinkedMessage4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference6 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -89,11 +90,11 @@ public class LinkedMessage4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.LinkedMessage3Choice#PreviousReference
-	 * LinkedMessage3Choice.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.choice.LinkedMessage3Choice#mmPreviousReference
+	 * LinkedMessage3Choice.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LinkedMessage4Choice.mmObject();
 			isDerived = false;
@@ -101,13 +102,14 @@ public class LinkedMessage4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkedMessage3Choice.PreviousReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkedMessage3Choice.mmPreviousReference;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReference6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected AdditionalReference6 otherReference;
 	/**
 	 * Reference to a linked message sent in a proprietary way or reference of a
 	 * system.
@@ -138,11 +140,11 @@ public class LinkedMessage4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.LinkedMessage3Choice#OtherReference
-	 * LinkedMessage3Choice.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.choice.LinkedMessage3Choice#mmOtherReference
+	 * LinkedMessage3Choice.mmOtherReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LinkedMessage4Choice.mmObject();
 			isDerived = false;
@@ -150,19 +152,19 @@ public class LinkedMessage4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or reference of a system.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkedMessage3Choice.OtherReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkedMessage3Choice.mmOtherReference;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReference6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage4Choice.PreviousReference, com.tools20022.repository.choice.LinkedMessage4Choice.OtherReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage4Choice.mmPreviousReference, com.tools20022.repository.choice.LinkedMessage4Choice.mmOtherReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LinkedMessage4Choice";
 				definition = "Reference to a message.";
@@ -170,5 +172,21 @@ public class LinkedMessage4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference6 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference6 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference6 getOtherReference() {
+		return otherReference;
+	}
+
+	public void setOtherReference(AdditionalReference6 otherReference) {
+		this.otherReference = otherReference;
 	}
 }

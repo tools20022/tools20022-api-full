@@ -33,27 +33,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType4Code#CaptureCard
- * ActionType4Code.CaptureCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmCaptureCard
+ * ActionType4Code.mmCaptureCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType4Code#IdentificationRequired
- * ActionType4Code.IdentificationRequired}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#Referral
- * ActionType4Code.Referral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#Approve
- * ActionType4Code.Approve}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#BlockCard
- * ActionType4Code.BlockCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmIdentificationRequired
+ * ActionType4Code.mmIdentificationRequired}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#mmReferral
+ * ActionType4Code.mmReferral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#mmApprove
+ * ActionType4Code.mmApprove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType4Code#NoReasonForDecline
- * ActionType4Code.NoReasonForDecline}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmBlockCard
+ * ActionType4Code.mmBlockCard}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmNoReasonForDecline
+ * ActionType4Code.mmNoReasonForDecline}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +84,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "CaptureCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode CaptureCard = new MMCode() {
+	public static final MMCode mmCaptureCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
@@ -106,7 +107,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "IdentificationRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode IdentificationRequired = new MMCode() {
+	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
@@ -129,7 +130,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "Referral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Referral = new MMCode() {
+	public static final MMCode mmReferral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
@@ -152,7 +153,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "Approve"</li>
 	 * </ul>
 	 */
-	public static final MMCode Approve = new MMCode() {
+	public static final MMCode mmApprove = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approve";
@@ -175,7 +176,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "BlockCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode BlockCard = new MMCode() {
+	public static final MMCode mmBlockCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockCard";
@@ -198,7 +199,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "NoReasonForDecline"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoReasonForDecline = new MMCode() {
+	public static final MMCode mmNoReasonForDecline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReasonForDecline";
@@ -209,13 +210,13 @@ public class ActionType4Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionType4Code";
 				definition = "Recommended action for the issuer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType4Code.CaptureCard, com.tools20022.repository.codeset.ActionType4Code.IdentificationRequired,
-						com.tools20022.repository.codeset.ActionType4Code.Referral, com.tools20022.repository.codeset.ActionType4Code.Approve, com.tools20022.repository.codeset.ActionType4Code.BlockCard,
-						com.tools20022.repository.codeset.ActionType4Code.NoReasonForDecline);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType4Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType4Code.mmIdentificationRequired,
+						com.tools20022.repository.codeset.ActionType4Code.mmReferral, com.tools20022.repository.codeset.ActionType4Code.mmApprove, com.tools20022.repository.codeset.ActionType4Code.mmBlockCard,
+						com.tools20022.repository.codeset.ActionType4Code.mmNoReasonForDecline);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

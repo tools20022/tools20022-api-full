@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledByYourselves
- * InstructionCancellationReason2Code.CancelledByYourselves}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledByYourselves
+ * InstructionCancellationReason2Code.mmCancelledByYourselves}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledBySystem
- * InstructionCancellationReason2Code.CancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledBySystem
+ * InstructionCancellationReason2Code.mmCancelledBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledByAgent
- * InstructionCancellationReason2Code.CancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledByAgent
+ * InstructionCancellationReason2Code.mmCancelledByAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledByAnotherParty
- * InstructionCancellationReason2Code.CancelledByAnotherParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledByAnotherParty
+ * InstructionCancellationReason2Code.mmCancelledByAnotherParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledDueToTransformation
- * InstructionCancellationReason2Code.CancelledDueToTransformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledDueToTransformation
+ * InstructionCancellationReason2Code.mmCancelledDueToTransformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledDueToSplitPartialSettlement
- * InstructionCancellationReason2Code.CancelledDueToSplitPartialSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledDueToSplitPartialSettlement
+ * InstructionCancellationReason2Code.mmCancelledDueToSplitPartialSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledDueToCorporateAction
- * InstructionCancellationReason2Code.CancelledDueToCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledDueToCorporateAction
+ * InstructionCancellationReason2Code.mmCancelledDueToCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#CancelledByIssuerRegistrar
- * InstructionCancellationReason2Code.CancelledByIssuerRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmCancelledByIssuerRegistrar
+ * InstructionCancellationReason2Code.mmCancelledByIssuerRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#Expired
- * InstructionCancellationReason2Code.Expired}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmExpired
+ * InstructionCancellationReason2Code.mmExpired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#SecuritiesNoLongerEligible
- * InstructionCancellationReason2Code.SecuritiesNoLongerEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code#mmSecuritiesNoLongerEligible
+ * InstructionCancellationReason2Code.mmSecuritiesNoLongerEligible}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledByYourselves"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByYourselves = new MMCode() {
+	public static final MMCode mmCancelledByYourselves = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourselves";
@@ -128,7 +128,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledBySystem = new MMCode() {
+	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
@@ -151,7 +151,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAgent = new MMCode() {
+	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
@@ -174,7 +174,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledByAnotherParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAnotherParty = new MMCode() {
+	public static final MMCode mmCancelledByAnotherParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAnotherParty";
@@ -197,7 +197,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledDueToTransformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledDueToTransformation = new MMCode() {
+	public static final MMCode mmCancelledDueToTransformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToTransformation";
@@ -220,7 +220,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledDueToSplitPartialSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledDueToSplitPartialSettlement = new MMCode() {
+	public static final MMCode mmCancelledDueToSplitPartialSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToSplitPartialSettlement";
@@ -243,7 +243,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledDueToCorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledDueToCorporateAction = new MMCode() {
+	public static final MMCode mmCancelledDueToCorporateAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToCorporateAction";
@@ -266,7 +266,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "CancelledByIssuerRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByIssuerRegistrar = new MMCode() {
+	public static final MMCode mmCancelledByIssuerRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByIssuerRegistrar";
@@ -289,7 +289,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "Expired"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expired = new MMCode() {
+	public static final MMCode mmExpired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
@@ -312,7 +312,7 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	 * name} = "SecuritiesNoLongerEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesNoLongerEligible = new MMCode() {
+	public static final MMCode mmSecuritiesNoLongerEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesNoLongerEligible";
@@ -323,16 +323,16 @@ public class InstructionCancellationReason2Code extends InstructionCancellationR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionCancellationReason2Code";
 				definition = "Specifies the reason why the instruction is cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledByYourselves, com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledBySystem,
-						com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledByAgent, com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledByAnotherParty,
-						com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledDueToTransformation, com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledDueToSplitPartialSettlement,
-						com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledDueToCorporateAction, com.tools20022.repository.codeset.InstructionCancellationReason2Code.CancelledByIssuerRegistrar,
-						com.tools20022.repository.codeset.InstructionCancellationReason2Code.Expired, com.tools20022.repository.codeset.InstructionCancellationReason2Code.SecuritiesNoLongerEligible);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledByYourselves, com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledBySystem,
+						com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledByAgent, com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledByAnotherParty,
+						com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledDueToTransformation, com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledDueToSplitPartialSettlement,
+						com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledDueToCorporateAction, com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmCancelledByIssuerRegistrar,
+						com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmExpired, com.tools20022.repository.codeset.InstructionCancellationReason2Code.mmSecuritiesNoLongerEligible);
 				trace_lazy = () -> InstructionCancellationReasonCode.mmObject();
 			}
 		});

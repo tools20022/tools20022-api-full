@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionStyleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle2Code#American
- * OptionStyle2Code.American}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle2Code#European
- * OptionStyle2Code.European}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle2Code#mmAmerican
+ * OptionStyle2Code.mmAmerican}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle2Code#mmEuropean
+ * OptionStyle2Code.mmEuropean}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +81,7 @@ public class OptionStyle2Code extends OptionStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode American = new MMCode() {
+	public static final MMCode mmAmerican = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
@@ -102,7 +104,7 @@ public class OptionStyle2Code extends OptionStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode European = new MMCode() {
+	public static final MMCode mmEuropean = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
@@ -113,12 +115,12 @@ public class OptionStyle2Code extends OptionStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle2Code";
 				definition = "Defines how an option can be exercised";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle2Code.American, com.tools20022.repository.codeset.OptionStyle2Code.European);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle2Code.mmAmerican, com.tools20022.repository.codeset.OptionStyle2Code.mmEuropean);
 				trace_lazy = () -> OptionStyleCode.mmObject();
 			}
 		});

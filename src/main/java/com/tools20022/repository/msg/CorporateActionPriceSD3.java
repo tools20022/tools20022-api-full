@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD3#PlaceAndName
- * CorporateActionPriceSD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD3#mmPlaceAndName
+ * CorporateActionPriceSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD3#SubscriptionPrice
- * CorporateActionPriceSD3.SubscriptionPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD3#mmSubscriptionPrice
+ * CorporateActionPriceSD3.mmSubscriptionPrice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPriceSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -89,7 +90,7 @@ public class CorporateActionPriceSD3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPriceSD3.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class CorporateActionPriceSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAnd13DecimalAmount subscriptionPrice;
 	/**
 	 * Cost to subscribe to additional share(s) of the underlying security.
 	 * <p>
@@ -131,7 +133,7 @@ public class CorporateActionPriceSD3 {
 	 * "Cost to subscribe to additional share(s) of the underlying security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPriceSD3.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class CorporateActionPriceSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Cost to subscribe to additional share(s) of the underlying security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class CorporateActionPriceSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPriceSD3.PlaceAndName, com.tools20022.repository.msg.CorporateActionPriceSD3.SubscriptionPrice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPriceSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionPriceSD3.mmSubscriptionPrice);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPriceSD3";
 				definition = "Provides additional information regarding corporate action details price details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public RestrictedFINActiveCurrencyAnd13DecimalAmount getSubscriptionPrice() {
+		return subscriptionPrice;
+	}
+
+	public void setSubscriptionPrice(RestrictedFINActiveCurrencyAnd13DecimalAmount subscriptionPrice) {
+		this.subscriptionPrice = subscriptionPrice;
 	}
 }

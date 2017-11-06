@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalReport1#LimitIdentification
- * LimitJournalReport1.LimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalReport1#mmLimitIdentification
+ * LimitJournalReport1.mmLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalReport1#LimitReport
- * LimitJournalReport1.LimitReport}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalReport1#mmLimitReport
+ * LimitJournalReport1.mmLimitReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitJournalReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LimitIdentification4 limitIdentification;
 	/**
 	 * Identification of the limit on which information is requested.
 	 * <p>
@@ -86,7 +87,7 @@ public class LimitJournalReport1 {
 	 * "Identification of the limit on which information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitJournalReport1.mmObject();
 			isDerived = false;
@@ -94,12 +95,13 @@ public class LimitJournalReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentification4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
 		}
 	};
+	protected LimitJournalReportOrError2Choice limitReport;
 	/**
 	 * Specifies the business report either as a limit utilisation journal or a
 	 * business error.
@@ -130,7 +132,7 @@ public class LimitJournalReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitJournalReport1.mmObject();
 			isDerived = false;
@@ -138,23 +140,39 @@ public class LimitJournalReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitReport";
 			definition = "Specifies the business report either as a limit utilisation journal or a business error.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitJournalReportOrError2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitJournalReportOrError2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournalReport1.LimitIdentification, com.tools20022.repository.msg.LimitJournalReport1.LimitReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournalReport1.mmLimitIdentification, com.tools20022.repository.msg.LimitJournalReport1.mmLimitReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalReport1";
 				definition = "Reports either on the risk management limit or on a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LimitIdentification4 getLimitIdentification() {
+		return limitIdentification;
+	}
+
+	public void setLimitIdentification(com.tools20022.repository.msg.LimitIdentification4 limitIdentification) {
+		this.limitIdentification = limitIdentification;
+	}
+
+	public LimitJournalReportOrError2Choice getLimitReport() {
+		return limitReport;
+	}
+
+	public void setLimitReport(LimitJournalReportOrError2Choice limitReport) {
+		this.limitReport = limitReport;
 	}
 }

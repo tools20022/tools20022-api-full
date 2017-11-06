@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#AntiMoneyLaundering
- * CertificateType2Code.AntiMoneyLaundering}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmAntiMoneyLaundering
+ * CertificateType2Code.mmAntiMoneyLaundering}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#DrivingLicense
- * CertificateType2Code.DrivingLicense}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmDrivingLicense
+ * CertificateType2Code.mmDrivingLicense}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#DueFormationAndOrganisation
- * CertificateType2Code.DueFormationAndOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmDueFormationAndOrganisation
+ * CertificateType2Code.mmDueFormationAndOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#GoodStanding
- * CertificateType2Code.GoodStanding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmGoodStanding
+ * CertificateType2Code.mmGoodStanding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#IdentityCard
- * CertificateType2Code.IdentityCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmIdentityCard
+ * CertificateType2Code.mmIdentityCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#Incumbency
- * CertificateType2Code.Incumbency}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmIncumbency
+ * CertificateType2Code.mmIncumbency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#LetterOfReference
- * CertificateType2Code.LetterOfReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmLetterOfReference
+ * CertificateType2Code.mmLetterOfReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#Passport
- * CertificateType2Code.Passport}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmPassport
+ * CertificateType2Code.mmPassport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#ProofOfAddress
- * CertificateType2Code.ProofOfAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmProofOfAddress
+ * CertificateType2Code.mmProofOfAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#PublicKeyInfrastructureCertificate
- * CertificateType2Code.PublicKeyInfrastructureCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmPublicKeyInfrastructureCertificate
+ * CertificateType2Code.mmPublicKeyInfrastructureCertificate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "AntiMoneyLaundering"</li>
 	 * </ul>
 	 */
-	public static final MMCode AntiMoneyLaundering = new MMCode() {
+	public static final MMCode mmAntiMoneyLaundering = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AntiMoneyLaundering";
@@ -128,7 +128,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "DrivingLicense"</li>
 	 * </ul>
 	 */
-	public static final MMCode DrivingLicense = new MMCode() {
+	public static final MMCode mmDrivingLicense = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrivingLicense";
@@ -151,7 +151,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "DueFormationAndOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode DueFormationAndOrganisation = new MMCode() {
+	public static final MMCode mmDueFormationAndOrganisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueFormationAndOrganisation";
@@ -174,7 +174,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "GoodStanding"</li>
 	 * </ul>
 	 */
-	public static final MMCode GoodStanding = new MMCode() {
+	public static final MMCode mmGoodStanding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodStanding";
@@ -197,7 +197,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "IdentityCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode IdentityCard = new MMCode() {
+	public static final MMCode mmIdentityCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCard";
@@ -220,7 +220,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "Incumbency"</li>
 	 * </ul>
 	 */
-	public static final MMCode Incumbency = new MMCode() {
+	public static final MMCode mmIncumbency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incumbency";
@@ -243,7 +243,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "LetterOfReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode LetterOfReference = new MMCode() {
+	public static final MMCode mmLetterOfReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfReference";
@@ -266,7 +266,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "Passport"</li>
 	 * </ul>
 	 */
-	public static final MMCode Passport = new MMCode() {
+	public static final MMCode mmPassport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Passport";
@@ -289,7 +289,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "ProofOfAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProofOfAddress = new MMCode() {
+	public static final MMCode mmProofOfAddress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProofOfAddress";
@@ -312,7 +312,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "PublicKeyInfrastructureCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode PublicKeyInfrastructureCertificate = new MMCode() {
+	public static final MMCode mmPublicKeyInfrastructureCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicKeyInfrastructureCertificate";
@@ -323,16 +323,16 @@ public class CertificateType2Code extends CertificateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMLC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertificateType2Code";
 				definition = "Specifies the type of certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificateType2Code.AntiMoneyLaundering, com.tools20022.repository.codeset.CertificateType2Code.DrivingLicense,
-						com.tools20022.repository.codeset.CertificateType2Code.DueFormationAndOrganisation, com.tools20022.repository.codeset.CertificateType2Code.GoodStanding,
-						com.tools20022.repository.codeset.CertificateType2Code.IdentityCard, com.tools20022.repository.codeset.CertificateType2Code.Incumbency, com.tools20022.repository.codeset.CertificateType2Code.LetterOfReference,
-						com.tools20022.repository.codeset.CertificateType2Code.Passport, com.tools20022.repository.codeset.CertificateType2Code.ProofOfAddress,
-						com.tools20022.repository.codeset.CertificateType2Code.PublicKeyInfrastructureCertificate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificateType2Code.mmAntiMoneyLaundering, com.tools20022.repository.codeset.CertificateType2Code.mmDrivingLicense,
+						com.tools20022.repository.codeset.CertificateType2Code.mmDueFormationAndOrganisation, com.tools20022.repository.codeset.CertificateType2Code.mmGoodStanding,
+						com.tools20022.repository.codeset.CertificateType2Code.mmIdentityCard, com.tools20022.repository.codeset.CertificateType2Code.mmIncumbency, com.tools20022.repository.codeset.CertificateType2Code.mmLetterOfReference,
+						com.tools20022.repository.codeset.CertificateType2Code.mmPassport, com.tools20022.repository.codeset.CertificateType2Code.mmProofOfAddress,
+						com.tools20022.repository.codeset.CertificateType2Code.mmPublicKeyInfrastructureCertificate);
 				trace_lazy = () -> CertificateTypeCode.mmObject();
 			}
 		});

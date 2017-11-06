@@ -31,17 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#FullyQualified
- * QualifiedDividendTaxCode.FullyQualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#mmFullyQualified
+ * QualifiedDividendTaxCode.mmFullyQualified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#PartlyQualified
- * QualifiedDividendTaxCode.PartlyQualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#mmPartlyQualified
+ * QualifiedDividendTaxCode.mmPartlyQualified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#NotQualified
- * QualifiedDividendTaxCode.NotQualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#mmNotQualified
+ * QualifiedDividendTaxCode.mmNotQualified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#Unknown
- * QualifiedDividendTaxCode.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.QualifiedDividendTaxCode#mmUnknown
+ * QualifiedDividendTaxCode.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +101,7 @@ public class QualifiedDividendTaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FullyQualified = new MMCode() {
+	public static final MMCode mmFullyQualified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyQualified";
@@ -134,7 +134,7 @@ public class QualifiedDividendTaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartlyQualified = new MMCode() {
+	public static final MMCode mmPartlyQualified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartlyQualified";
@@ -166,7 +166,7 @@ public class QualifiedDividendTaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NotQualified = new MMCode() {
+	public static final MMCode mmNotQualified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotQualified";
@@ -200,7 +200,7 @@ public class QualifiedDividendTaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -213,13 +213,13 @@ public class QualifiedDividendTaxCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FQUD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QualifiedDividendTaxCode";
 				definition = "Indicates whether the dividend as a whole or in part qualifies for lower/favourable tax rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QualifiedDividendTaxCode.FullyQualified, com.tools20022.repository.codeset.QualifiedDividendTaxCode.PartlyQualified,
-						com.tools20022.repository.codeset.QualifiedDividendTaxCode.NotQualified, com.tools20022.repository.codeset.QualifiedDividendTaxCode.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QualifiedDividendTaxCode.mmFullyQualified, com.tools20022.repository.codeset.QualifiedDividendTaxCode.mmPartlyQualified,
+						com.tools20022.repository.codeset.QualifiedDividendTaxCode.mmNotQualified, com.tools20022.repository.codeset.QualifiedDividendTaxCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(QualifiedDividendTax1Code.mmObject());
 			}
 		});

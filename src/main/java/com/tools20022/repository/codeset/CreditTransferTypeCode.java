@@ -30,147 +30,147 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#IntraCompanyPayment
- * CreditTransferTypeCode.IntraCompanyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmIntraCompanyPayment
+ * CreditTransferTypeCode.mmIntraCompanyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#TradeSettlementPayment
- * CreditTransferTypeCode.TradeSettlementPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmTradeSettlementPayment
+ * CreditTransferTypeCode.mmTradeSettlementPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#SalaryPayment
- * CreditTransferTypeCode.SalaryPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmSalaryPayment
+ * CreditTransferTypeCode.mmSalaryPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#TreasuryPayment
- * CreditTransferTypeCode.TreasuryPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmTreasuryPayment
+ * CreditTransferTypeCode.mmTreasuryPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#SweepAccount
- * CreditTransferTypeCode.SweepAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmSweepAccount
+ * CreditTransferTypeCode.mmSweepAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#TopAccount
- * CreditTransferTypeCode.TopAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmTopAccount
+ * CreditTransferTypeCode.mmTopAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#ZeroBalanceAccount
- * CreditTransferTypeCode.ZeroBalanceAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmZeroBalanceAccount
+ * CreditTransferTypeCode.mmZeroBalanceAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#AdvancePayment
- * CreditTransferTypeCode.AdvancePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmAdvancePayment
+ * CreditTransferTypeCode.mmAdvancePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#AgriculturalTransfer
- * CreditTransferTypeCode.AgriculturalTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmAgriculturalTransfer
+ * CreditTransferTypeCode.mmAgriculturalTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#AlimonyPayment
- * CreditTransferTypeCode.AlimonyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmAlimonyPayment
+ * CreditTransferTypeCode.mmAlimonyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#ChildBenefit
- * CreditTransferTypeCode.ChildBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmChildBenefit
+ * CreditTransferTypeCode.mmChildBenefit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#UnemploymentDisabilityBenefit
- * CreditTransferTypeCode.UnemploymentDisabilityBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmUnemploymentDisabilityBenefit
+ * CreditTransferTypeCode.mmUnemploymentDisabilityBenefit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#BonusPayment
- * CreditTransferTypeCode.BonusPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmBonusPayment
+ * CreditTransferTypeCode.mmBonusPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#CashManagementTransfer
- * CreditTransferTypeCode.CashManagementTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCashManagementTransfer
+ * CreditTransferTypeCode.mmCashManagementTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#CapitalBuilding
- * CreditTransferTypeCode.CapitalBuilding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCapitalBuilding
+ * CreditTransferTypeCode.mmCapitalBuilding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#CharityPayment
- * CreditTransferTypeCode.CharityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCharityPayment
+ * CreditTransferTypeCode.mmCharityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#CommodityTransfer
- * CreditTransferTypeCode.CommodityTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCommodityTransfer
+ * CreditTransferTypeCode.mmCommodityTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#CommercialCredit
- * CreditTransferTypeCode.CommercialCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCommercialCredit
+ * CreditTransferTypeCode.mmCommercialCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Commission
- * CreditTransferTypeCode.Commission}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCommission
+ * CreditTransferTypeCode.mmCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Costs
- * CreditTransferTypeCode.Costs}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCosts
+ * CreditTransferTypeCode.mmCosts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Copyright
- * CreditTransferTypeCode.Copyright}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmCopyright
+ * CreditTransferTypeCode.mmCopyright}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Dividend
- * CreditTransferTypeCode.Dividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmDividend
+ * CreditTransferTypeCode.mmDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#ForeignExchange
- * CreditTransferTypeCode.ForeignExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmForeignExchange
+ * CreditTransferTypeCode.mmForeignExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#PurchaseSaleOfGoods
- * CreditTransferTypeCode.PurchaseSaleOfGoods}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmPurchaseSaleOfGoods
+ * CreditTransferTypeCode.mmPurchaseSaleOfGoods}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#GovernmentPayment
- * CreditTransferTypeCode.GovernmentPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmGovernmentPayment
+ * CreditTransferTypeCode.mmGovernmentPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#InstalmentHirePurchaseAgreement
- * CreditTransferTypeCode.InstalmentHirePurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmInstalmentHirePurchaseAgreement
+ * CreditTransferTypeCode.mmInstalmentHirePurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#InsurancePremium
- * CreditTransferTypeCode.InsurancePremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmInsurancePremium
+ * CreditTransferTypeCode.mmInsurancePremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Interest
- * CreditTransferTypeCode.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmInterest
+ * CreditTransferTypeCode.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#LicenseFee
- * CreditTransferTypeCode.LicenseFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmLicenseFee
+ * CreditTransferTypeCode.mmLicenseFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Loan
- * CreditTransferTypeCode.Loan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmLoan
+ * CreditTransferTypeCode.mmLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#LoanRepayment
- * CreditTransferTypeCode.LoanRepayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmLoanRepayment
+ * CreditTransferTypeCode.mmLoanRepayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Netting
- * CreditTransferTypeCode.Netting}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmNetting
+ * CreditTransferTypeCode.mmNetting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#PensionPayment
- * CreditTransferTypeCode.PensionPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmPensionPayment
+ * CreditTransferTypeCode.mmPensionPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Refund
- * CreditTransferTypeCode.Refund}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmRefund
+ * CreditTransferTypeCode.mmRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Rent
- * CreditTransferTypeCode.Rent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmRent
+ * CreditTransferTypeCode.mmRent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Royalties
- * CreditTransferTypeCode.Royalties}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmRoyalties
+ * CreditTransferTypeCode.mmRoyalties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#PurchaseSaleOfServices
- * CreditTransferTypeCode.PurchaseSaleOfServices}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmPurchaseSaleOfServices
+ * CreditTransferTypeCode.mmPurchaseSaleOfServices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Securities
- * CreditTransferTypeCode.Securities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmSecurities
+ * CreditTransferTypeCode.mmSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#SocialSecurityBenefit
- * CreditTransferTypeCode.SocialSecurityBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmSocialSecurityBenefit
+ * CreditTransferTypeCode.mmSocialSecurityBenefit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Subscription
- * CreditTransferTypeCode.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmSubscription
+ * CreditTransferTypeCode.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#TaxPayment
- * CreditTransferTypeCode.TaxPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmTaxPayment
+ * CreditTransferTypeCode.mmTaxPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#ValueAddedTaxPayment
- * CreditTransferTypeCode.ValueAddedTaxPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmValueAddedTaxPayment
+ * CreditTransferTypeCode.mmValueAddedTaxPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#SupplierPayment
- * CreditTransferTypeCode.SupplierPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmSupplierPayment
+ * CreditTransferTypeCode.mmSupplierPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Hedging
- * CreditTransferTypeCode.Hedging}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmHedging
+ * CreditTransferTypeCode.mmHedging}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#Trade
- * CreditTransferTypeCode.Trade}</li>
+ * {@linkplain com.tools20022.repository.codeset.CreditTransferTypeCode#mmTrade
+ * CreditTransferTypeCode.mmTrade}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -214,7 +214,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IntraCompanyPayment = new MMCode() {
+	public static final MMCode mmIntraCompanyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "IntraCompanyPayment";
@@ -247,7 +247,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TradeSettlementPayment = new MMCode() {
+	public static final MMCode mmTradeSettlementPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "TradeSettlementPayment";
@@ -277,7 +277,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of salaries."</li>
 	 * </ul>
 	 */
-	public static final MMCode SalaryPayment = new MMCode() {
+	public static final MMCode mmSalaryPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "SalaryPayment";
@@ -307,7 +307,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to treasury operations."</li>
 	 * </ul>
 	 */
-	public static final MMCode TreasuryPayment = new MMCode() {
+	public static final MMCode mmTreasuryPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "TreasuryPayment";
@@ -340,7 +340,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SweepAccount = new MMCode() {
+	public static final MMCode mmSweepAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "SweepAccount";
@@ -374,7 +374,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TopAccount = new MMCode() {
+	public static final MMCode mmTopAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "TopAccount";
@@ -407,7 +407,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ZeroBalanceAccount = new MMCode() {
+	public static final MMCode mmZeroBalanceAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "ZeroBalanceAccount";
@@ -437,7 +437,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is an advance payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode AdvancePayment = new MMCode() {
+	public static final MMCode mmAdvancePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "AdvancePayment";
@@ -467,7 +467,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to the agricultural domain."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgriculturalTransfer = new MMCode() {
+	public static final MMCode mmAgriculturalTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "AgriculturalTransfer";
@@ -497,7 +497,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of alimony."</li>
 	 * </ul>
 	 */
-	public static final MMCode AlimonyPayment = new MMCode() {
+	public static final MMCode mmAlimonyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "AlimonyPayment";
@@ -530,7 +530,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ChildBenefit = new MMCode() {
+	public static final MMCode mmChildBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "ChildBenefit";
@@ -561,7 +561,7 @@ public class CreditTransferTypeCode {
 	 * "Transaction is related to a payment to person unemployed/disabled."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnemploymentDisabilityBenefit = new MMCode() {
+	public static final MMCode mmUnemploymentDisabilityBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "UnemploymentDisabilityBenefit";
@@ -591,7 +591,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to payment of a bonus."</li>
 	 * </ul>
 	 */
-	public static final MMCode BonusPayment = new MMCode() {
+	public static final MMCode mmBonusPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "BonusPayment";
@@ -621,7 +621,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is a general cash management instruction."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashManagementTransfer = new MMCode() {
+	public static final MMCode mmCashManagementTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CashManagementTransfer";
@@ -654,7 +654,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalBuilding = new MMCode() {
+	public static final MMCode mmCapitalBuilding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CapitalBuilding";
@@ -684,7 +684,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is a payment for charity reasons."</li>
 	 * </ul>
 	 */
-	public static final MMCode CharityPayment = new MMCode() {
+	public static final MMCode mmCharityPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CharityPayment";
@@ -714,7 +714,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is payment of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMCode CommodityTransfer = new MMCode() {
+	public static final MMCode mmCommodityTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CommodityTransfer";
@@ -744,7 +744,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is payment of commercial credit."</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialCredit = new MMCode() {
+	public static final MMCode mmCommercialCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CommercialCredit";
@@ -774,7 +774,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is payment of commission."</li>
 	 * </ul>
 	 */
-	public static final MMCode Commission = new MMCode() {
+	public static final MMCode mmCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Commission";
@@ -804,7 +804,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to payment of costs."</li>
 	 * </ul>
 	 */
-	public static final MMCode Costs = new MMCode() {
+	public static final MMCode mmCosts = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Costs";
@@ -834,7 +834,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is payment of copyright."</li>
 	 * </ul>
 	 */
-	public static final MMCode Copyright = new MMCode() {
+	public static final MMCode mmCopyright = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Copyright";
@@ -864,7 +864,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Dividend";
@@ -894,7 +894,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to a foreign exchange operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchange = new MMCode() {
+	public static final MMCode mmForeignExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "ForeignExchange";
@@ -924,7 +924,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to purchase and sale of goods."</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseSaleOfGoods = new MMCode() {
+	public static final MMCode mmPurchaseSaleOfGoods = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "PurchaseSaleOfGoods";
@@ -955,7 +955,7 @@ public class CreditTransferTypeCode {
 	 * "Transaction is a payment to or from a government department."</li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentPayment = new MMCode() {
+	public static final MMCode mmGovernmentPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "GovernmentPayment";
@@ -986,7 +986,7 @@ public class CreditTransferTypeCode {
 	 * "Transaction is payment for Instalment/hire-purchase agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode InstalmentHirePurchaseAgreement = new MMCode() {
+	public static final MMCode mmInstalmentHirePurchaseAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "InstalmentHirePurchaseAgreement";
@@ -1016,7 +1016,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is payment of an insurance premium."</li>
 	 * </ul>
 	 */
-	public static final MMCode InsurancePremium = new MMCode() {
+	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "InsurancePremium";
@@ -1046,7 +1046,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of interest."</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Interest";
@@ -1076,7 +1076,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is payment of a license fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode LicenseFee = new MMCode() {
+	public static final MMCode mmLicenseFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "LicenseFee";
@@ -1107,7 +1107,7 @@ public class CreditTransferTypeCode {
 	 * "Transaction is related to the transfer of a loan to a borrower."</li>
 	 * </ul>
 	 */
-	public static final MMCode Loan = new MMCode() {
+	public static final MMCode mmLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Loan";
@@ -1137,7 +1137,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to repayment of loan to lender."</li>
 	 * </ul>
 	 */
-	public static final MMCode LoanRepayment = new MMCode() {
+	public static final MMCode mmLoanRepayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "LoanRepayment";
@@ -1167,7 +1167,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to a netting operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Netting = new MMCode() {
+	public static final MMCode mmNetting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Netting";
@@ -1197,7 +1197,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of pension."</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionPayment = new MMCode() {
+	public static final MMCode mmPensionPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "PensionPayment";
@@ -1227,7 +1227,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of a refund."</li>
 	 * </ul>
 	 */
-	public static final MMCode Refund = new MMCode() {
+	public static final MMCode mmRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Refund";
@@ -1257,7 +1257,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of rent."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rent = new MMCode() {
+	public static final MMCode mmRent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Rent";
@@ -1287,7 +1287,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of royalties."</li>
 	 * </ul>
 	 */
-	public static final MMCode Royalties = new MMCode() {
+	public static final MMCode mmRoyalties = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Royalties";
@@ -1317,7 +1317,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to purchase and sale of services."</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseSaleOfServices = new MMCode() {
+	public static final MMCode mmPurchaseSaleOfServices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "PurchaseSaleOfServices";
@@ -1347,7 +1347,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Securities";
@@ -1380,7 +1380,7 @@ public class CreditTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SocialSecurityBenefit = new MMCode() {
+	public static final MMCode mmSocialSecurityBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "SocialSecurityBenefit";
@@ -1410,7 +1410,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is payment of a subscription."</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Subscription";
@@ -1440,7 +1440,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of taxes."</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxPayment = new MMCode() {
+	public static final MMCode mmTaxPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "TaxPayment";
@@ -1470,7 +1470,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is the payment of value added tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTaxPayment = new MMCode() {
+	public static final MMCode mmValueAddedTaxPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "ValueAddedTaxPayment";
@@ -1500,7 +1500,7 @@ public class CreditTransferTypeCode {
 	 * definition} = "Transaction is related to a payment to a supplier."</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplierPayment = new MMCode() {
+	public static final MMCode mmSupplierPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "SupplierPayment";
@@ -1531,7 +1531,7 @@ public class CreditTransferTypeCode {
 	 * "Transaction is related to the payment of a hedging operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Hedging = new MMCode() {
+	public static final MMCode mmHedging = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Hedging";
@@ -1562,7 +1562,7 @@ public class CreditTransferTypeCode {
 	 * "Transaction is related to the payment of a trade transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Trade = new MMCode() {
+	public static final MMCode mmTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Trade";
@@ -1575,31 +1575,32 @@ public class CreditTransferTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "CreditTransferTypeCode";
 				definition = "Specifies the type of transaction that resulted in the payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CreditTransferTypeCode.IntraCompanyPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.TradeSettlementPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.SalaryPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.TreasuryPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.SweepAccount, com.tools20022.repository.codeset.CreditTransferTypeCode.TopAccount,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.ZeroBalanceAccount, com.tools20022.repository.codeset.CreditTransferTypeCode.AdvancePayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.AgriculturalTransfer, com.tools20022.repository.codeset.CreditTransferTypeCode.AlimonyPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.ChildBenefit, com.tools20022.repository.codeset.CreditTransferTypeCode.UnemploymentDisabilityBenefit,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.BonusPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.CashManagementTransfer,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.CapitalBuilding, com.tools20022.repository.codeset.CreditTransferTypeCode.CharityPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.CommodityTransfer, com.tools20022.repository.codeset.CreditTransferTypeCode.CommercialCredit,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.Commission, com.tools20022.repository.codeset.CreditTransferTypeCode.Costs, com.tools20022.repository.codeset.CreditTransferTypeCode.Copyright,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.Dividend, com.tools20022.repository.codeset.CreditTransferTypeCode.ForeignExchange,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.PurchaseSaleOfGoods, com.tools20022.repository.codeset.CreditTransferTypeCode.GovernmentPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.InstalmentHirePurchaseAgreement, com.tools20022.repository.codeset.CreditTransferTypeCode.InsurancePremium,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.Interest, com.tools20022.repository.codeset.CreditTransferTypeCode.LicenseFee, com.tools20022.repository.codeset.CreditTransferTypeCode.Loan,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.LoanRepayment, com.tools20022.repository.codeset.CreditTransferTypeCode.Netting, com.tools20022.repository.codeset.CreditTransferTypeCode.PensionPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.Refund, com.tools20022.repository.codeset.CreditTransferTypeCode.Rent, com.tools20022.repository.codeset.CreditTransferTypeCode.Royalties,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.PurchaseSaleOfServices, com.tools20022.repository.codeset.CreditTransferTypeCode.Securities,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.SocialSecurityBenefit, com.tools20022.repository.codeset.CreditTransferTypeCode.Subscription,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.TaxPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.ValueAddedTaxPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.SupplierPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.Hedging, com.tools20022.repository.codeset.CreditTransferTypeCode.Trade);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CreditTransferTypeCode.mmIntraCompanyPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTradeSettlementPayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSalaryPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTreasuryPayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSweepAccount, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTopAccount,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmZeroBalanceAccount, com.tools20022.repository.codeset.CreditTransferTypeCode.mmAdvancePayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmAgriculturalTransfer, com.tools20022.repository.codeset.CreditTransferTypeCode.mmAlimonyPayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmChildBenefit, com.tools20022.repository.codeset.CreditTransferTypeCode.mmUnemploymentDisabilityBenefit,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmBonusPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCashManagementTransfer,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmCapitalBuilding, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCharityPayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmCommodityTransfer, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCommercialCredit,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmCommission, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCosts, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCopyright,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmDividend, com.tools20022.repository.codeset.CreditTransferTypeCode.mmForeignExchange,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmPurchaseSaleOfGoods, com.tools20022.repository.codeset.CreditTransferTypeCode.mmGovernmentPayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmInstalmentHirePurchaseAgreement, com.tools20022.repository.codeset.CreditTransferTypeCode.mmInsurancePremium,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmInterest, com.tools20022.repository.codeset.CreditTransferTypeCode.mmLicenseFee, com.tools20022.repository.codeset.CreditTransferTypeCode.mmLoan,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmLoanRepayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmNetting,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmPensionPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmRefund, com.tools20022.repository.codeset.CreditTransferTypeCode.mmRent,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmRoyalties, com.tools20022.repository.codeset.CreditTransferTypeCode.mmPurchaseSaleOfServices,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSecurities, com.tools20022.repository.codeset.CreditTransferTypeCode.mmSocialSecurityBenefit,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSubscription, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTaxPayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmValueAddedTaxPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmSupplierPayment,
+						com.tools20022.repository.codeset.CreditTransferTypeCode.mmHedging, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTrade);
 			}
 		});
 		return mmObject_lazy.get();

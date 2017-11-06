@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#SettleOnClose
- * SettleStyle1Code.SettleOnClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#mmSettleOnClose
+ * SettleStyle1Code.mmSettleOnClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#SettleOnOpen
- * SettleStyle1Code.SettleOnOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#mmSettleOnOpen
+ * SettleStyle1Code.mmSettleOnOpen}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class SettleStyle1Code extends SettleStyleCode {
 	 * name} = "SettleOnClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettleOnClose = new MMCode() {
+	public static final MMCode mmSettleOnClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettleOnClose";
@@ -104,7 +104,7 @@ public class SettleStyle1Code extends SettleStyleCode {
 	 * name} = "SettleOnOpen"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettleOnOpen = new MMCode() {
+	public static final MMCode mmSettleOnOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettleOnOpen";
@@ -115,12 +115,12 @@ public class SettleStyle1Code extends SettleStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SETC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettleStyle1Code";
 				definition = "Specifies when the option contract settles.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettleStyle1Code.SettleOnClose, com.tools20022.repository.codeset.SettleStyle1Code.SettleOnOpen);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettleStyle1Code.mmSettleOnClose, com.tools20022.repository.codeset.SettleStyle1Code.mmSettleOnOpen);
 				trace_lazy = () -> SettleStyleCode.mmObject();
 			}
 		});

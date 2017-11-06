@@ -34,22 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Discount
- * PriceRateType3Code.Discount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Premium
- * PriceRateType3Code.Premium}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmDiscount
+ * PriceRateType3Code.mmDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Percentage
- * PriceRateType3Code.Percentage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Yield
- * PriceRateType3Code.Yield}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmPremium
+ * PriceRateType3Code.mmPremium}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmPercentage
+ * PriceRateType3Code.mmPercentage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmYield
+ * PriceRateType3Code.mmYield}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +86,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -108,7 +109,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode Premium = new MMCode() {
+	public static final MMCode mmPremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
@@ -131,7 +132,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Percentage"</li>
 	 * </ul>
 	 */
-	public static final MMCode Percentage = new MMCode() {
+	public static final MMCode mmPercentage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
@@ -154,7 +155,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Yield"</li>
 	 * </ul>
 	 */
-	public static final MMCode Yield = new MMCode() {
+	public static final MMCode mmYield = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
@@ -165,13 +166,13 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceRateType3Code";
 				definition = "Specifies the type of price rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceRateType3Code.Discount, com.tools20022.repository.codeset.PriceRateType3Code.Premium, com.tools20022.repository.codeset.PriceRateType3Code.Percentage,
-						com.tools20022.repository.codeset.PriceRateType3Code.Yield);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceRateType3Code.mmDiscount, com.tools20022.repository.codeset.PriceRateType3Code.mmPremium,
+						com.tools20022.repository.codeset.PriceRateType3Code.mmPercentage, com.tools20022.repository.codeset.PriceRateType3Code.mmYield);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

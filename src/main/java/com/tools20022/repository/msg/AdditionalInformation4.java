@@ -42,38 +42,38 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#AccountOwnerTransactionIdentification
- * AdditionalInformation4.AccountOwnerTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmAccountOwnerTransactionIdentification
+ * AdditionalInformation4.mmAccountOwnerTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#ClassificationType
- * AdditionalInformation4.ClassificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmClassificationType
+ * AdditionalInformation4.mmClassificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#SafekeepingAccount
- * AdditionalInformation4.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmSafekeepingAccount
+ * AdditionalInformation4.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#FinancialInstrumentIdentification
- * AdditionalInformation4.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmFinancialInstrumentIdentification
+ * AdditionalInformation4.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#Quantity
- * AdditionalInformation4.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmQuantity
+ * AdditionalInformation4.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#EffectiveDate
- * AdditionalInformation4.EffectiveDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmEffectiveDate
+ * AdditionalInformation4.mmEffectiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#ExpiryDate
- * AdditionalInformation4.ExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmExpiryDate
+ * AdditionalInformation4.mmExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#CutOffDate
- * AdditionalInformation4.CutOffDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmCutOffDate
+ * AdditionalInformation4.mmCutOffDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#Investor
- * AdditionalInformation4.Investor}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmInvestor
+ * AdditionalInformation4.mmInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#DeliveringParty1
- * AdditionalInformation4.DeliveringParty1}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmDeliveringParty1
+ * AdditionalInformation4.mmDeliveringParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#ReceivingParty1
- * AdditionalInformation4.ReceivingParty1}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation4#mmReceivingParty1
+ * AdditionalInformation4.mmReceivingParty1}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -82,8 +82,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -98,6 +98,7 @@ import java.util.function.Supplier;
 public class AdditionalInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax16Text accountOwnerTransactionIdentification;
 	/**
 	 * Identification of the transaction as known by the account owner. Will be
 	 * used in a unilateral split to provide the executing party with the
@@ -113,8 +114,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#AccountOwnerTransactionIdentification
-	 * Entry.AccountOwnerTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmAccountOwnerTransactionIdentification
+	 * Entry.mmAccountOwnerTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,20 +136,21 @@ public class AdditionalInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.AccountOwnerTransactionIdentification;
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Identification of the transaction as known by the account owner. Will be used in a unilateral split to provide the executing party with the account owner identification of each split transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected ClassificationType4Choice classificationType;
 	/**
 	 * Type of instrument involved in the transactions on which the modification
 	 * request should apply.
@@ -162,8 +164,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#AssetClassification
-	 * Asset.AssetClassification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetClassification
+	 * Asset.mmAssetClassification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -184,21 +186,22 @@ public class AdditionalInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClassificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetClassification;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.AssetClassification;
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Type of instrument involved in the transactions on which the modification request should apply.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClassificationType4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ClassificationType4Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount17 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -210,8 +213,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesAccount
-	 * Security.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesAccount
+	 * Security.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,21 +233,22 @@ public class AdditionalInformation4 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount17.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount17.mmObject();
 		}
 	};
+	protected SecurityIdentification12 financialInstrumentIdentification;
 	/**
 	 * Identification of the financial instrument involved in the transactions
 	 * on which the modification request should apply.
@@ -258,8 +262,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -280,21 +284,22 @@ public class AdditionalInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the financial instrument involved in the transactions on which the modification request should apply.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification12.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification12.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
 	 * Quantity of financial instrument concerned by the settlement condition
 	 * modification request.
@@ -308,8 +313,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -330,21 +335,22 @@ public class AdditionalInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument concerned by the settlement condition modification request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice effectiveDate;
 	/**
 	 * Date/time when the request should take effect.
 	 * <p>
@@ -357,8 +363,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementDate
-	 * SecuritiesSettlement.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+	 * SecuritiesSettlement.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -377,21 +383,22 @@ public class AdditionalInformation4 {
 	 * definition} = "Date/time when the request should take effect."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EffectiveDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEffectiveDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementDate;
 			isDerived = false;
 			xmlTag = "FctvDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date/time when the request should take effect.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice expiryDate;
 	/**
 	 * Date/time when the request should cease to be in effect.
 	 * <p>
@@ -419,7 +426,7 @@ public class AdditionalInformation4 {
 	 * definition} = "Date/time when the request should cease to be in effect."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExpiryDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
 			isDerived = false;
@@ -427,12 +434,13 @@ public class AdditionalInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date/time when the request should cease to be in effect.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice cutOffDate;
 	/**
 	 * Date/time of the release.
 	 * <p>
@@ -460,7 +468,7 @@ public class AdditionalInformation4 {
 	 * definition} = "Date/time of the release."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CutOffDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCutOffDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
 			isDerived = false;
@@ -468,12 +476,13 @@ public class AdditionalInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffDate";
 			definition = "Date/time of the release.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected PartyIdentification16Choice investor;
 	/**
 	 * Party, either an individual or organisation, whose assets are being
 	 * invested.
@@ -487,8 +496,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -509,21 +518,22 @@ public class AdditionalInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Investor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification16Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification16Choice.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount25 deliveringParty1;
 	/**
 	 * Party that, in a settlement chain interacts with the depository.
 	 * <p>
@@ -536,8 +546,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -557,21 +567,22 @@ public class AdditionalInformation4 {
 	 * "Party that, in a settlement chain interacts with the depository."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringParty1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringParty1 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DlvrgPty1";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringParty1";
 			definition = "Party that, in a settlement chain interacts with the depository.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount25.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount25.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount25 receivingParty1;
 	/**
 	 * Party that, in a settlement chain interacts with the depository.
 	 * <p>
@@ -584,8 +595,8 @@ public class AdditionalInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -605,32 +616,32 @@ public class AdditionalInformation4 {
 	 * "Party that, in a settlement chain interacts with the depository."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingParty1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingParty1 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvgPty1";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingParty1";
 			definition = "Party that, in a settlement chain interacts with the depository.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount25.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount25.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation4.AccountOwnerTransactionIdentification, com.tools20022.repository.msg.AdditionalInformation4.ClassificationType,
-						com.tools20022.repository.msg.AdditionalInformation4.SafekeepingAccount, com.tools20022.repository.msg.AdditionalInformation4.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.AdditionalInformation4.Quantity, com.tools20022.repository.msg.AdditionalInformation4.EffectiveDate, com.tools20022.repository.msg.AdditionalInformation4.ExpiryDate,
-						com.tools20022.repository.msg.AdditionalInformation4.CutOffDate, com.tools20022.repository.msg.AdditionalInformation4.Investor, com.tools20022.repository.msg.AdditionalInformation4.DeliveringParty1,
-						com.tools20022.repository.msg.AdditionalInformation4.ReceivingParty1);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation4.mmAccountOwnerTransactionIdentification, com.tools20022.repository.msg.AdditionalInformation4.mmClassificationType,
+						com.tools20022.repository.msg.AdditionalInformation4.mmSafekeepingAccount, com.tools20022.repository.msg.AdditionalInformation4.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.AdditionalInformation4.mmQuantity, com.tools20022.repository.msg.AdditionalInformation4.mmEffectiveDate, com.tools20022.repository.msg.AdditionalInformation4.mmExpiryDate,
+						com.tools20022.repository.msg.AdditionalInformation4.mmCutOffDate, com.tools20022.repository.msg.AdditionalInformation4.mmInvestor, com.tools20022.repository.msg.AdditionalInformation4.mmDeliveringParty1,
+						com.tools20022.repository.msg.AdditionalInformation4.mmReceivingParty1);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -644,5 +655,93 @@ public class AdditionalInformation4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax16Text getAccountOwnerTransactionIdentification() {
+		return accountOwnerTransactionIdentification;
+	}
+
+	public void setAccountOwnerTransactionIdentification(RestrictedFINXMax16Text accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	}
+
+	public ClassificationType4Choice getClassificationType() {
+		return classificationType;
+	}
+
+	public void setClassificationType(ClassificationType4Choice classificationType) {
+		this.classificationType = classificationType;
+	}
+
+	public SecuritiesAccount17 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount17 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public SecurityIdentification12 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification12 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public FinancialInstrumentQuantity15Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public DateAndDateTimeChoice getEffectiveDate() {
+		return effectiveDate;
+	}
+
+	public void setEffectiveDate(DateAndDateTimeChoice effectiveDate) {
+		this.effectiveDate = effectiveDate;
+	}
+
+	public DateAndDateTimeChoice getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(DateAndDateTimeChoice expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public DateAndDateTimeChoice getCutOffDate() {
+		return cutOffDate;
+	}
+
+	public void setCutOffDate(DateAndDateTimeChoice cutOffDate) {
+		this.cutOffDate = cutOffDate;
+	}
+
+	public PartyIdentification16Choice getInvestor() {
+		return investor;
+	}
+
+	public void setInvestor(PartyIdentification16Choice investor) {
+		this.investor = investor;
+	}
+
+	public PartyIdentificationAndAccount25 getDeliveringParty1() {
+		return deliveringParty1;
+	}
+
+	public void setDeliveringParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount25 deliveringParty1) {
+		this.deliveringParty1 = deliveringParty1;
+	}
+
+	public PartyIdentificationAndAccount25 getReceivingParty1() {
+		return receivingParty1;
+	}
+
+	public void setReceivingParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount25 receivingParty1) {
+		this.receivingParty1 = receivingParty1;
 	}
 }

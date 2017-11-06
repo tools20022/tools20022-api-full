@@ -34,36 +34,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#Conditional
- * OptionFeatures1Code.Conditional}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmConditional
+ * OptionFeatures1Code.mmConditional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#MaximumCash
- * OptionFeatures1Code.MaximumCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmMaximumCash
+ * OptionFeatures1Code.mmMaximumCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#MaximumSecurities
- * OptionFeatures1Code.MaximumSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmMaximumSecurities
+ * OptionFeatures1Code.mmMaximumSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#OddLotPreference
- * OptionFeatures1Code.OddLotPreference}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmOddLotPreference
+ * OptionFeatures1Code.mmOddLotPreference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#Proration
- * OptionFeatures1Code.Proration}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmProration
+ * OptionFeatures1Code.mmProration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#OverAndAbove
- * OptionFeatures1Code.OverAndAbove}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmOverAndAbove
+ * OptionFeatures1Code.mmOverAndAbove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#QuantityToReceive
- * OptionFeatures1Code.QuantityToReceive}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmQuantityToReceive
+ * OptionFeatures1Code.mmQuantityToReceive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#ReducedWithholdingTax
- * OptionFeatures1Code.ReducedWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code#mmReducedWithholdingTax
+ * OptionFeatures1Code.mmReducedWithholdingTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,17 +108,17 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#Conditional
-	 * OptionFeatures6Code.Conditional}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#mmConditional
+	 * OptionFeatures6Code.mmConditional}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Conditional = new MMCode() {
+	public static final MMCode mmConditional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conditional";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.Conditional);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.mmConditional);
 			owner_lazy = () -> OptionFeatures1Code.mmObject();
 		}
 	};
@@ -140,17 +140,17 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#MaximumCash
-	 * OptionFeatures6Code.MaximumCash}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#mmMaximumCash
+	 * OptionFeatures6Code.mmMaximumCash}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumCash = new MMCode() {
+	public static final MMCode mmMaximumCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumCash";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.MaximumCash);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.mmMaximumCash);
 			owner_lazy = () -> OptionFeatures1Code.mmObject();
 		}
 	};
@@ -172,17 +172,17 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#MaximumSecurities
-	 * OptionFeatures6Code.MaximumSecurities}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#mmMaximumSecurities
+	 * OptionFeatures6Code.mmMaximumSecurities}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumSecurities = new MMCode() {
+	public static final MMCode mmMaximumSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSecurities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.MaximumSecurities);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.mmMaximumSecurities);
 			owner_lazy = () -> OptionFeatures1Code.mmObject();
 		}
 	};
@@ -204,17 +204,17 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#OddLotPreference
-	 * OptionFeatures6Code.OddLotPreference}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#mmOddLotPreference
+	 * OptionFeatures6Code.mmOddLotPreference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OddLotPreference = new MMCode() {
+	public static final MMCode mmOddLotPreference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotPreference";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.OddLotPreference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.mmOddLotPreference);
 			owner_lazy = () -> OptionFeatures1Code.mmObject();
 		}
 	};
@@ -236,17 +236,17 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#Proration
-	 * OptionFeatures6Code.Proration}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#mmProration
+	 * OptionFeatures6Code.mmProration}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Proration = new MMCode() {
+	public static final MMCode mmProration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proration";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.Proration);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.mmProration);
 			owner_lazy = () -> OptionFeatures1Code.mmObject();
 		}
 	};
@@ -266,7 +266,7 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * name} = "OverAndAbove"</li>
 	 * </ul>
 	 */
-	public static final MMCode OverAndAbove = new MMCode() {
+	public static final MMCode mmOverAndAbove = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAndAbove";
@@ -289,7 +289,7 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * name} = "QuantityToReceive"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityToReceive = new MMCode() {
+	public static final MMCode mmQuantityToReceive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
@@ -314,17 +314,17 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#ReducedWithholdingTax
-	 * OptionFeatures6Code.ReducedWithholdingTax}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures6Code#mmReducedWithholdingTax
+	 * OptionFeatures6Code.mmReducedWithholdingTax}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReducedWithholdingTax = new MMCode() {
+	public static final MMCode mmReducedWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReducedWithholdingTax";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.ReducedWithholdingTax);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.mmReducedWithholdingTax);
 			owner_lazy = () -> OptionFeatures1Code.mmObject();
 		}
 	};
@@ -332,16 +332,16 @@ public class OptionFeatures1Code extends OptionFeaturesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionFeatures1Code";
 				definition = "Specifies the  feature of an option.";
 				nextVersions_lazy = () -> Arrays.asList(OptionFeatures6Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures1Code.Conditional, com.tools20022.repository.codeset.OptionFeatures1Code.MaximumCash,
-						com.tools20022.repository.codeset.OptionFeatures1Code.MaximumSecurities, com.tools20022.repository.codeset.OptionFeatures1Code.OddLotPreference, com.tools20022.repository.codeset.OptionFeatures1Code.Proration,
-						com.tools20022.repository.codeset.OptionFeatures1Code.OverAndAbove, com.tools20022.repository.codeset.OptionFeatures1Code.QuantityToReceive,
-						com.tools20022.repository.codeset.OptionFeatures1Code.ReducedWithholdingTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures1Code.mmConditional, com.tools20022.repository.codeset.OptionFeatures1Code.mmMaximumCash,
+						com.tools20022.repository.codeset.OptionFeatures1Code.mmMaximumSecurities, com.tools20022.repository.codeset.OptionFeatures1Code.mmOddLotPreference, com.tools20022.repository.codeset.OptionFeatures1Code.mmProration,
+						com.tools20022.repository.codeset.OptionFeatures1Code.mmOverAndAbove, com.tools20022.repository.codeset.OptionFeatures1Code.mmQuantityToReceive,
+						com.tools20022.repository.codeset.OptionFeatures1Code.mmReducedWithholdingTax);
 				trace_lazy = () -> OptionFeaturesCode.mmObject();
 			}
 		});

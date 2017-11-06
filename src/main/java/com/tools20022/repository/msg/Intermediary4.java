@@ -34,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary4#Identification
- * Intermediary4.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary4#Account
- * Intermediary4.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary4#Role
- * Intermediary4.Role}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary4#mmIdentification
+ * Intermediary4.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary4#mmAccount
+ * Intermediary4.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary4#mmRole
+ * Intermediary4.mmRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,42 +50,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#IntermediaryDetails
- * RedemptionBulkOrderConfirmationV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#mmIntermediaryDetails
+ * RedemptionBulkOrderConfirmationV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#IntermediaryDetails
- * RedemptionBulkOrderV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#mmIntermediaryDetails
+ * RedemptionBulkOrderV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#IntermediaryDetails
- * RedemptionMultipleOrderConfirmationV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#mmIntermediaryDetails
+ * RedemptionMultipleOrderConfirmationV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#IntermediaryDetails
- * RedemptionMultipleOrderV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#mmIntermediaryDetails
+ * RedemptionMultipleOrderV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#IntermediaryDetails
- * SubscriptionBulkOrderConfirmationV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmIntermediaryDetails
+ * SubscriptionBulkOrderConfirmationV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#IntermediaryDetails
- * SubscriptionBulkOrderV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#mmIntermediaryDetails
+ * SubscriptionBulkOrderV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#IntermediaryDetails
- * SubscriptionMultipleOrderConfirmationV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#mmIntermediaryDetails
+ * SubscriptionMultipleOrderConfirmationV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#IntermediaryDetails
- * SubscriptionMultipleOrderV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#mmIntermediaryDetails
+ * SubscriptionMultipleOrderV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#IntermediaryDetails
- * SwitchOrderConfirmationV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#mmIntermediaryDetails
+ * SwitchOrderConfirmationV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#IntermediaryDetails
- * SwitchOrderV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#mmIntermediaryDetails
+ * SwitchOrderV02.mmIntermediaryDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Intermediary4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice identification;
 	/**
 	 * Unique and unambiguous identifier of the intermediary.
 	 * <p>
@@ -113,8 +114,8 @@ public class Intermediary4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -132,20 +133,21 @@ public class Intermediary4 {
 	 * definition} = "Unique and unambiguous identifier of the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Account2 account;
 	/**
 	 * Business relationship between two entities; one entity is the account
 	 * owner, the other entity is the account servicer.
@@ -159,8 +161,8 @@ public class Intermediary4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#Account
-	 * TradePartyRole.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmAccount
+	 * TradePartyRole.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,20 +182,21 @@ public class Intermediary4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Account = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.Account;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Account2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Account2.mmObject();
 		}
 	};
+	protected Max35Text role;
 	/**
 	 * Function performed by the intermediary.
 	 * <p>
@@ -225,17 +228,17 @@ public class Intermediary4 {
 	 * definition} = "Function performed by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Role = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Intermediary4.mmObject();
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
+			componentContext_lazy = () -> Intermediary4.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -243,19 +246,43 @@ public class Intermediary4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary4.Identification, com.tools20022.repository.msg.Intermediary4.Account, com.tools20022.repository.msg.Intermediary4.Role);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary4.mmIdentification, com.tools20022.repository.msg.Intermediary4.mmAccount, com.tools20022.repository.msg.Intermediary4.mmRole);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmIntermediaryDetails,
+						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmIntermediaryDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmIntermediaryDetails,
+						com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmIntermediaryDetails,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SwitchOrderV02.mmIntermediaryDetails);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.IntermediaryDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.IntermediaryDetails,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.IntermediaryDetails, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.IntermediaryDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.IntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.IntermediaryDetails,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.IntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.IntermediaryDetails,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.IntermediaryDetails, com.tools20022.repository.area.setr.SwitchOrderV02.IntermediaryDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Intermediary4";
 				definition = "Party that provides services to investors relating to financial products.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification2Choice identification) {
+		this.identification = identification;
+	}
+
+	public Account2 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.Account2 account) {
+		this.account = account;
+	}
+
+	public Max35Text getRole() {
+		return role;
+	}
+
+	public void setRole(Max35Text role) {
+		this.role = role;
 	}
 }

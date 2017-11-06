@@ -30,47 +30,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#BuyersItemSpecification
- * ProductCharacteristicsCode.BuyersItemSpecification}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmBuyersItemSpecification
+ * ProductCharacteristicsCode.mmBuyersItemSpecification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#ChassisNumber
- * ProductCharacteristicsCode.ChassisNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmChassisNumber
+ * ProductCharacteristicsCode.mmChassisNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#Colour
- * ProductCharacteristicsCode.Colour}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmColour
+ * ProductCharacteristicsCode.mmColour}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#EngineDisplacement
- * ProductCharacteristicsCode.EngineDisplacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmEngineDisplacement
+ * ProductCharacteristicsCode.mmEngineDisplacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#EngineNumber
- * ProductCharacteristicsCode.EngineNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmEngineNumber
+ * ProductCharacteristicsCode.mmEngineNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#Option
- * ProductCharacteristicsCode.Option}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmOption
+ * ProductCharacteristicsCode.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#OriginCriterion
- * ProductCharacteristicsCode.OriginCriterion}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmOriginCriterion
+ * ProductCharacteristicsCode.mmOriginCriterion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#PercentageByVolume
- * ProductCharacteristicsCode.PercentageByVolume}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmPercentageByVolume
+ * ProductCharacteristicsCode.mmPercentageByVolume}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#SellersItemSpecification
- * ProductCharacteristicsCode.SellersItemSpecification}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmSellersItemSpecification
+ * ProductCharacteristicsCode.mmSellersItemSpecification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#Size
- * ProductCharacteristicsCode.Size}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmSize
+ * ProductCharacteristicsCode.mmSize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#SizeRange
- * ProductCharacteristicsCode.SizeRange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmSizeRange
+ * ProductCharacteristicsCode.mmSizeRange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#SpecialRemarks
- * ProductCharacteristicsCode.SpecialRemarks}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmSpecialRemarks
+ * ProductCharacteristicsCode.mmSpecialRemarks}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#StorageCode
- * ProductCharacteristicsCode.StorageCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmStorageCode
+ * ProductCharacteristicsCode.mmStorageCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#VehicleIdentificationNumber
- * ProductCharacteristicsCode.VehicleIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode#mmVehicleIdentificationNumber
+ * ProductCharacteristicsCode.mmVehicleIdentificationNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -84,8 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -126,7 +126,7 @@ public class ProductCharacteristicsCode {
 	 * definition} = "Detailed product information as assigned by the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyersItemSpecification = new MMCode() {
+	public static final MMCode mmBuyersItemSpecification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BuyersItemSpecification";
@@ -159,7 +159,7 @@ public class ProductCharacteristicsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ChassisNumber = new MMCode() {
+	public static final MMCode mmChassisNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChassisNumber";
@@ -189,7 +189,7 @@ public class ProductCharacteristicsCode {
 	 * definition} = "Indication of the product colour."</li>
 	 * </ul>
 	 */
-	public static final MMCode Colour = new MMCode() {
+	public static final MMCode mmColour = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Colour";
@@ -222,7 +222,7 @@ public class ProductCharacteristicsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EngineDisplacement = new MMCode() {
+	public static final MMCode mmEngineDisplacement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EngineDisplacement";
@@ -255,7 +255,7 @@ public class ProductCharacteristicsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EngineNumber = new MMCode() {
+	public static final MMCode mmEngineNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EngineNumber";
@@ -286,7 +286,7 @@ public class ProductCharacteristicsCode {
 	 * "Identifier of a sub-category of a product such as size, colour, etc."</li>
 	 * </ul>
 	 */
-	public static final MMCode Option = new MMCode() {
+	public static final MMCode mmOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Option";
@@ -317,7 +317,7 @@ public class ProductCharacteristicsCode {
 	 * "Code assigned to the product describing how it will be stored."</li>
 	 * </ul>
 	 */
-	public static final MMCode OriginCriterion = new MMCode() {
+	public static final MMCode mmOriginCriterion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OriginCriterion";
@@ -347,7 +347,7 @@ public class ProductCharacteristicsCode {
 	 * definition} = "Percentage by volume."</li>
 	 * </ul>
 	 */
-	public static final MMCode PercentageByVolume = new MMCode() {
+	public static final MMCode mmPercentageByVolume = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PercentageByVolume";
@@ -377,7 +377,7 @@ public class ProductCharacteristicsCode {
 	 * definition} = "Detailed product information as assigned by the seller."</li>
 	 * </ul>
 	 */
-	public static final MMCode SellersItemSpecification = new MMCode() {
+	public static final MMCode mmSellersItemSpecification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SellersItemSpecification";
@@ -407,7 +407,7 @@ public class ProductCharacteristicsCode {
 	 * definition} = "Indication of the product size."</li>
 	 * </ul>
 	 */
-	public static final MMCode Size = new MMCode() {
+	public static final MMCode mmSize = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Size";
@@ -437,7 +437,7 @@ public class ProductCharacteristicsCode {
 	 * definition} = "Range of product sizes."</li>
 	 * </ul>
 	 */
-	public static final MMCode SizeRange = new MMCode() {
+	public static final MMCode mmSizeRange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SizeRange";
@@ -467,7 +467,7 @@ public class ProductCharacteristicsCode {
 	 * definition} = "Special remarks about a product."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialRemarks = new MMCode() {
+	public static final MMCode mmSpecialRemarks = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialRemarks";
@@ -498,7 +498,7 @@ public class ProductCharacteristicsCode {
 	 * "Code assigned to the product describing how it will be stored."</li>
 	 * </ul>
 	 */
-	public static final MMCode StorageCode = new MMCode() {
+	public static final MMCode mmStorageCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StorageCode";
@@ -531,7 +531,7 @@ public class ProductCharacteristicsCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode VehicleIdentificationNumber = new MMCode() {
+	public static final MMCode mmVehicleIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VehicleIdentificationNumber";
@@ -544,18 +544,18 @@ public class ProductCharacteristicsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BISP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristicsCode";
 				definition = "Specifies the charateristics of a product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductCharacteristicsCode.BuyersItemSpecification, com.tools20022.repository.codeset.ProductCharacteristicsCode.ChassisNumber,
-						com.tools20022.repository.codeset.ProductCharacteristicsCode.Colour, com.tools20022.repository.codeset.ProductCharacteristicsCode.EngineDisplacement,
-						com.tools20022.repository.codeset.ProductCharacteristicsCode.EngineNumber, com.tools20022.repository.codeset.ProductCharacteristicsCode.Option,
-						com.tools20022.repository.codeset.ProductCharacteristicsCode.OriginCriterion, com.tools20022.repository.codeset.ProductCharacteristicsCode.PercentageByVolume,
-						com.tools20022.repository.codeset.ProductCharacteristicsCode.SellersItemSpecification, com.tools20022.repository.codeset.ProductCharacteristicsCode.Size,
-						com.tools20022.repository.codeset.ProductCharacteristicsCode.SizeRange, com.tools20022.repository.codeset.ProductCharacteristicsCode.SpecialRemarks,
-						com.tools20022.repository.codeset.ProductCharacteristicsCode.StorageCode, com.tools20022.repository.codeset.ProductCharacteristicsCode.VehicleIdentificationNumber);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductCharacteristicsCode.mmBuyersItemSpecification, com.tools20022.repository.codeset.ProductCharacteristicsCode.mmChassisNumber,
+						com.tools20022.repository.codeset.ProductCharacteristicsCode.mmColour, com.tools20022.repository.codeset.ProductCharacteristicsCode.mmEngineDisplacement,
+						com.tools20022.repository.codeset.ProductCharacteristicsCode.mmEngineNumber, com.tools20022.repository.codeset.ProductCharacteristicsCode.mmOption,
+						com.tools20022.repository.codeset.ProductCharacteristicsCode.mmOriginCriterion, com.tools20022.repository.codeset.ProductCharacteristicsCode.mmPercentageByVolume,
+						com.tools20022.repository.codeset.ProductCharacteristicsCode.mmSellersItemSpecification, com.tools20022.repository.codeset.ProductCharacteristicsCode.mmSize,
+						com.tools20022.repository.codeset.ProductCharacteristicsCode.mmSizeRange, com.tools20022.repository.codeset.ProductCharacteristicsCode.mmSpecialRemarks,
+						com.tools20022.repository.codeset.ProductCharacteristicsCode.mmStorageCode, com.tools20022.repository.codeset.ProductCharacteristicsCode.mmVehicleIdentificationNumber);
 				derivation_lazy = () -> Arrays.asList(ProductCharacteristics1Code.mmObject());
 			}
 		});

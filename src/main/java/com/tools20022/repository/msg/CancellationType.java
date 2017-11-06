@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationType#CancellationType
- * CancellationType.CancellationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationType#mmCancellationType
+ * CancellationType.mmCancellationType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuoteStatus2Code cancellationType;
 	/**
 	 * Reason for the cancellation.
 	 * <p>
@@ -72,8 +73,8 @@ public class CancellationType {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.QuoteStatus#Status
-	 * QuoteStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.QuoteStatus#mmStatus
+	 * QuoteStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,17 +93,17 @@ public class CancellationType {
 	 * definition} = "Reason for the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationType.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteStatus.Status;
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmStatus;
+			componentContext_lazy = () -> CancellationType.mmObject();
 			isDerived = false;
 			xmlTag = "CxlTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationType";
 			definition = "Reason for the cancellation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatus2Code.mmObject();
 		}
 	};
@@ -110,14 +111,22 @@ public class CancellationType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationType.CancellationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationType.mmCancellationType);
 				trace_lazy = () -> QuoteStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CancellationType";
 				definition = "Reason for the cancellation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuoteStatus2Code getCancellationType() {
+		return cancellationType;
+	}
+
+	public void setCancellationType(QuoteStatus2Code cancellationType) {
+		this.cancellationType = cancellationType;
 	}
 }

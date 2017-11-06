@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReason1#Code
- * TaxReason1.Code}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReason1#Explanation
- * TaxReason1.Explanation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReason1#mmCode
+ * TaxReason1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReason1#mmExplanation
+ * TaxReason1.mmExplanation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max10Text code;
 	/**
 	 * Reason why the service is taxed, in a coded form.
 	 * <p>
@@ -86,7 +87,7 @@ public class TaxReason1 {
 	 * definition} = "Reason why the service is taxed, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxReason1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class TaxReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason why the service is taxed, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	protected Max105Text explanation;
 	/**
 	 * Reason why the service is taxed, in a free-text form.
 	 * <p>
@@ -125,7 +127,7 @@ public class TaxReason1 {
 	 * definition} = "Reason why the service is taxed, in a free-text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Explanation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExplanation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxReason1.mmObject();
 			isDerived = false;
@@ -133,8 +135,8 @@ public class TaxReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Explanation";
 			definition = "Reason why the service is taxed, in a free-text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
@@ -142,14 +144,30 @@ public class TaxReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReason1.Code, com.tools20022.repository.msg.TaxReason1.Explanation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReason1.mmCode, com.tools20022.repository.msg.TaxReason1.mmExplanation);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxReason1";
 				definition = "Reason why the service is taxed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max10Text getCode() {
+		return code;
+	}
+
+	public void setCode(Max10Text code) {
+		this.code = code;
+	}
+
+	public Max105Text getExplanation() {
+		return explanation;
+	}
+
+	public void setExplanation(Max105Text explanation) {
+		this.explanation = explanation;
 	}
 }

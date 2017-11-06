@@ -23,10 +23,13 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Communication device number or electronic address used for communication.
@@ -37,44 +40,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#Name
- * OrderDeskContactDetails.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmName
+ * OrderDeskContactDetails.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#PostalAddress
- * OrderDeskContactDetails.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmPostalAddress
+ * OrderDeskContactDetails.mmPostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#PhoneNumber
- * OrderDeskContactDetails.PhoneNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmPhoneNumber
+ * OrderDeskContactDetails.mmPhoneNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#FaxNumber
- * OrderDeskContactDetails.FaxNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmFaxNumber
+ * OrderDeskContactDetails.mmFaxNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#EmailAddress
- * OrderDeskContactDetails.EmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmEmailAddress
+ * OrderDeskContactDetails.mmEmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#Identification
- * OrderDeskContactDetails.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmIdentification
+ * OrderDeskContactDetails.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#ApplicationForms
- * OrderDeskContactDetails.ApplicationForms}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmApplicationForms
+ * OrderDeskContactDetails.mmApplicationForms}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#SignatureRequiredInitialSubscription
- * OrderDeskContactDetails.SignatureRequiredInitialSubscription}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmSignatureRequiredInitialSubscription
+ * OrderDeskContactDetails.mmSignatureRequiredInitialSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#SignatureRequiredSubsequentSubscription
- * OrderDeskContactDetails.SignatureRequiredSubsequentSubscription}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmSignatureRequiredSubsequentSubscription
+ * OrderDeskContactDetails.mmSignatureRequiredSubsequentSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#SignatureRequiredRedemption
- * OrderDeskContactDetails.SignatureRequiredRedemption}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmSignatureRequiredRedemption
+ * OrderDeskContactDetails.mmSignatureRequiredRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#SubscriptionProcessingCharacteristics
- * OrderDeskContactDetails.SubscriptionProcessingCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmSubscriptionProcessingCharacteristics
+ * OrderDeskContactDetails.mmSubscriptionProcessingCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#RedemptionProcessingCharacteristics
- * OrderDeskContactDetails.RedemptionProcessingCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmRedemptionProcessingCharacteristics
+ * OrderDeskContactDetails.mmRedemptionProcessingCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#SettlementDetails
- * OrderDeskContactDetails.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmSettlementDetails
+ * OrderDeskContactDetails.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -83,8 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderDeskContactDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -112,8 +116,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -134,20 +138,21 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PostalAddress1 postalAddress;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services.
@@ -182,21 +187,22 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	protected PhoneNumber phoneNumber;
 	/**
 	 * Collection of information that identifies a phone number, as defined by
 	 * telecom services.
@@ -210,8 +216,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#PhoneNumber
-	 * PhoneAddress.PhoneNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#mmPhoneNumber
+	 * PhoneAddress.mmPhoneNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -232,20 +238,21 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.PhoneNumber;
 			isDerived = false;
 			xmlTag = "PhneNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.PhoneNumber.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected PhoneNumber faxNumber;
 	/**
 	 * Collection of information that identifies a FAX number, as defined by
 	 * telecom services.
@@ -259,8 +266,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#FaxNumber
-	 * PhoneAddress.FaxNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#mmFaxNumber
+	 * PhoneAddress.mmFaxNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -281,20 +288,21 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FaxNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.FaxNumber;
 			isDerived = false;
 			xmlTag = "FaxNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.PhoneNumber.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected Max256Text emailAddress;
 	/**
 	 * Address for electronic mail (e-mail).
 	 * <p>
@@ -307,8 +315,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#EmailAddress
-	 * ElectronicAddress.EmailAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
+	 * ElectronicAddress.mmEmailAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -327,20 +335,21 @@ public class OrderDeskContactDetails {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.EmailAddress;
 			isDerived = false;
 			xmlTag = "EmailAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected BICIdentifier identification;
 	/**
 	 * Unique and unambiguous identification of a financial institution, as
 	 * assigned under a globally recognised or proprietary identification
@@ -356,8 +365,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -378,20 +387,21 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a financial institution, as assigned under a globally recognised or proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected Forms applicationForms;
 	/**
 	 * Application forms or original signature required by fund order desk.
 	 * <p>
@@ -402,8 +412,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#InvestmentFundClassProcessing
-	 * ContactPoint.InvestmentFundClassProcessing}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
+	 * ContactPoint.mmInvestmentFundClassProcessing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -423,21 +433,22 @@ public class OrderDeskContactDetails {
 	 * "Application forms or original signature required by fund order desk."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ApplicationForms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmApplicationForms = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.InvestmentFundClassProcessing;
 			isDerived = false;
 			xmlTag = "ApplFrms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationForms";
 			definition = "Application forms or original signature required by fund order desk.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Forms.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
 		}
 	};
+	protected Forms signatureRequiredInitialSubscription;
 	/**
 	 * An original signature is required when completing an initial
 	 * subscription.
@@ -449,8 +460,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#InvestmentFundClassProcessing
-	 * ContactPoint.InvestmentFundClassProcessing}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
+	 * ContactPoint.mmInvestmentFundClassProcessing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -471,21 +482,22 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignatureRequiredInitialSubscription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignatureRequiredInitialSubscription = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.InvestmentFundClassProcessing;
 			isDerived = false;
 			xmlTag = "SgntrReqrdInitlSbcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequiredInitialSubscription";
 			definition = "An original signature is required when completing an initial subscription.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Forms.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
 		}
 	};
+	protected Forms signatureRequiredSubsequentSubscription;
 	/**
 	 * Indicate if original signature is required when completing an subsequent
 	 * subscription.
@@ -497,8 +509,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#InvestmentFundClassProcessing
-	 * ContactPoint.InvestmentFundClassProcessing}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
+	 * ContactPoint.mmInvestmentFundClassProcessing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -519,21 +531,22 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignatureRequiredSubsequentSubscription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignatureRequiredSubsequentSubscription = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.InvestmentFundClassProcessing;
 			isDerived = false;
 			xmlTag = "SgntrReqrdSbsqntSbcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequiredSubsequentSubscription";
 			definition = "Indicate if original signature is required when completing an subsequent subscription.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Forms.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
 		}
 	};
+	protected Forms signatureRequiredRedemption;
 	/**
 	 * An original signature is required when completing redemption.
 	 * <p>
@@ -544,8 +557,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#InvestmentFundClassProcessing
-	 * ContactPoint.InvestmentFundClassProcessing}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
+	 * ContactPoint.mmInvestmentFundClassProcessing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -565,21 +578,22 @@ public class OrderDeskContactDetails {
 	 * "An original signature is required when completing redemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignatureRequiredRedemption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignatureRequiredRedemption = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.InvestmentFundClassProcessing;
 			isDerived = false;
 			xmlTag = "SgntrReqrdRed";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequiredRedemption";
 			definition = "An original signature is required when completing redemption.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Forms.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
 		}
 	};
+	protected ProcessingCharacteristics1 subscriptionProcessingCharacteristics;
 	/**
 	 * Subscription processing information applicable to the main fund order
 	 * desk.
@@ -593,8 +607,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#InvestmentFundClassProcessing
-	 * ContactPoint.InvestmentFundClassProcessing}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
+	 * ContactPoint.mmInvestmentFundClassProcessing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -615,21 +629,22 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.InvestmentFundClassProcessing;
 			isDerived = false;
 			xmlTag = "SbcptPrcgChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
 			definition = "Subscription processing information applicable to the main fund order desk.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingCharacteristics1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics1.mmObject();
 		}
 	};
+	protected ProcessingCharacteristics1 redemptionProcessingCharacteristics;
 	/**
 	 * Redemption processing information applicable to the main fund order desk.
 	 * <p>
@@ -642,8 +657,8 @@ public class OrderDeskContactDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#InvestmentFundClassProcessing
-	 * ContactPoint.InvestmentFundClassProcessing}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
+	 * ContactPoint.mmInvestmentFundClassProcessing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -664,21 +679,22 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.InvestmentFundClassProcessing;
 			isDerived = false;
 			xmlTag = "RedPrcgChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
 			definition = "Redemption processing information applicable to the main fund order desk.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingCharacteristics1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccount14> settlementDetails;
 	/**
 	 * Cash settlement information for the main fund order desk.
 	 * <p>
@@ -710,38 +726,142 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Cash settlement information for the main fund order desk.";
-			minOccurs = 1;
 			maxOccurs = 5;
-			type_lazy = () -> CashAccount14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderDeskContactDetails.Name, com.tools20022.repository.msg.OrderDeskContactDetails.PostalAddress,
-						com.tools20022.repository.msg.OrderDeskContactDetails.PhoneNumber, com.tools20022.repository.msg.OrderDeskContactDetails.FaxNumber, com.tools20022.repository.msg.OrderDeskContactDetails.EmailAddress,
-						com.tools20022.repository.msg.OrderDeskContactDetails.Identification, com.tools20022.repository.msg.OrderDeskContactDetails.ApplicationForms,
-						com.tools20022.repository.msg.OrderDeskContactDetails.SignatureRequiredInitialSubscription, com.tools20022.repository.msg.OrderDeskContactDetails.SignatureRequiredSubsequentSubscription,
-						com.tools20022.repository.msg.OrderDeskContactDetails.SignatureRequiredRedemption, com.tools20022.repository.msg.OrderDeskContactDetails.SubscriptionProcessingCharacteristics,
-						com.tools20022.repository.msg.OrderDeskContactDetails.RedemptionProcessingCharacteristics, com.tools20022.repository.msg.OrderDeskContactDetails.SettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderDeskContactDetails.mmName, com.tools20022.repository.msg.OrderDeskContactDetails.mmPostalAddress,
+						com.tools20022.repository.msg.OrderDeskContactDetails.mmPhoneNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmFaxNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmEmailAddress,
+						com.tools20022.repository.msg.OrderDeskContactDetails.mmIdentification, com.tools20022.repository.msg.OrderDeskContactDetails.mmApplicationForms,
+						com.tools20022.repository.msg.OrderDeskContactDetails.mmSignatureRequiredInitialSubscription, com.tools20022.repository.msg.OrderDeskContactDetails.mmSignatureRequiredSubsequentSubscription,
+						com.tools20022.repository.msg.OrderDeskContactDetails.mmSignatureRequiredRedemption, com.tools20022.repository.msg.OrderDeskContactDetails.mmSubscriptionProcessingCharacteristics,
+						com.tools20022.repository.msg.OrderDeskContactDetails.mmRedemptionProcessingCharacteristics, com.tools20022.repository.msg.OrderDeskContactDetails.mmSettlementDetails);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderDeskContactDetails";
 				definition = "Communication device number or electronic address used for communication.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public PostalAddress1 getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+		this.postalAddress = postalAddress;
+	}
+
+	public PhoneNumber getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(PhoneNumber phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public PhoneNumber getFaxNumber() {
+		return faxNumber;
+	}
+
+	public void setFaxNumber(PhoneNumber faxNumber) {
+		this.faxNumber = faxNumber;
+	}
+
+	public Max256Text getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(Max256Text emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public BICIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(BICIdentifier identification) {
+		this.identification = identification;
+	}
+
+	public Forms getApplicationForms() {
+		return applicationForms;
+	}
+
+	public void setApplicationForms(com.tools20022.repository.msg.Forms applicationForms) {
+		this.applicationForms = applicationForms;
+	}
+
+	public Forms getSignatureRequiredInitialSubscription() {
+		return signatureRequiredInitialSubscription;
+	}
+
+	public void setSignatureRequiredInitialSubscription(com.tools20022.repository.msg.Forms signatureRequiredInitialSubscription) {
+		this.signatureRequiredInitialSubscription = signatureRequiredInitialSubscription;
+	}
+
+	public Forms getSignatureRequiredSubsequentSubscription() {
+		return signatureRequiredSubsequentSubscription;
+	}
+
+	public void setSignatureRequiredSubsequentSubscription(com.tools20022.repository.msg.Forms signatureRequiredSubsequentSubscription) {
+		this.signatureRequiredSubsequentSubscription = signatureRequiredSubsequentSubscription;
+	}
+
+	public Forms getSignatureRequiredRedemption() {
+		return signatureRequiredRedemption;
+	}
+
+	public void setSignatureRequiredRedemption(com.tools20022.repository.msg.Forms signatureRequiredRedemption) {
+		this.signatureRequiredRedemption = signatureRequiredRedemption;
+	}
+
+	public ProcessingCharacteristics1 getSubscriptionProcessingCharacteristics() {
+		return subscriptionProcessingCharacteristics;
+	}
+
+	public void setSubscriptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics1 subscriptionProcessingCharacteristics) {
+		this.subscriptionProcessingCharacteristics = subscriptionProcessingCharacteristics;
+	}
+
+	public ProcessingCharacteristics1 getRedemptionProcessingCharacteristics() {
+		return redemptionProcessingCharacteristics;
+	}
+
+	public void setRedemptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics1 redemptionProcessingCharacteristics) {
+		this.redemptionProcessingCharacteristics = redemptionProcessingCharacteristics;
+	}
+
+	public List<CashAccount14> getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(List<com.tools20022.repository.msg.CashAccount14> settlementDetails) {
+		this.settlementDetails = settlementDetails;
 	}
 }

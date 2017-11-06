@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BillingSubServiceQualifier1Choice#Code
- * BillingSubServiceQualifier1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.BillingSubServiceQualifier1Choice#mmCode
+ * BillingSubServiceQualifier1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BillingSubServiceQualifier1Choice#Proprietary
- * BillingSubServiceQualifier1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.BillingSubServiceQualifier1Choice#mmProprietary
+ * BillingSubServiceQualifier1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingSubServiceQualifier1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BillingSubServiceQualifier1Code code;
 	/**
 	 * Specifies the contents of the sub service qualifier, in a coded form.
 	 * <p>
@@ -88,7 +89,7 @@ public class BillingSubServiceQualifier1Choice {
 	 * "Specifies the contents of the sub service qualifier, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BillingSubServiceQualifier1Choice.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class BillingSubServiceQualifier1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the contents of the sub service qualifier, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BillingSubServiceQualifier1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Specifies the contents of the sub service qualifier, in a free-text form.
 	 * <p>
@@ -130,7 +132,7 @@ public class BillingSubServiceQualifier1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BillingSubServiceQualifier1Choice.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class BillingSubServiceQualifier1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the contents of the sub service qualifier, in a free-text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class BillingSubServiceQualifier1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingSubServiceQualifier1Choice.Code, com.tools20022.repository.choice.BillingSubServiceQualifier1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingSubServiceQualifier1Choice.mmCode, com.tools20022.repository.choice.BillingSubServiceQualifier1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingSubServiceQualifier1Choice";
 				definition = "Specifies the qualifier for a subservice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BillingSubServiceQualifier1Code getCode() {
+		return code;
+	}
+
+	public void setCode(BillingSubServiceQualifier1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

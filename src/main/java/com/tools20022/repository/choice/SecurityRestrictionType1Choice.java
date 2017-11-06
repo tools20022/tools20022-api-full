@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityRestrictionType1Choice#ProprietaryRestriction
- * SecurityRestrictionType1Choice.ProprietaryRestriction}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityRestrictionType1Choice#mmProprietaryRestriction
+ * SecurityRestrictionType1Choice.mmProprietaryRestriction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityRestrictionType1Choice#RestrictionType
- * SecurityRestrictionType1Choice.RestrictionType}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityRestrictionType1Choice#mmRestrictionType
+ * SecurityRestrictionType1Choice.mmRestrictionType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityRestrictionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification40 proprietaryRestriction;
 	/**
 	 * Type of the restriction, for example, selling restriction, buying
 	 * restriction, placing restriction.
@@ -90,7 +91,7 @@ public class SecurityRestrictionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryRestriction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryRestriction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class SecurityRestrictionType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryRestriction";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
+	protected RestrictionType1Code restrictionType;
 	/**
 	 * Type of the restriction, for example, selling restriction, buying
 	 * restriction, placing restriction.
@@ -134,7 +136,7 @@ public class SecurityRestrictionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class SecurityRestrictionType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictionType1Code.mmObject();
 		}
 	};
@@ -151,13 +153,29 @@ public class SecurityRestrictionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityRestrictionType1Choice.ProprietaryRestriction, com.tools20022.repository.choice.SecurityRestrictionType1Choice.RestrictionType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmProprietaryRestriction, com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmRestrictionType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestrictionType1Choice";
 				definition = "Choice between the type of restriction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification40 getProprietaryRestriction() {
+		return proprietaryRestriction;
+	}
+
+	public void setProprietaryRestriction(GenericIdentification40 proprietaryRestriction) {
+		this.proprietaryRestriction = proprietaryRestriction;
+	}
+
+	public RestrictionType1Code getRestrictionType() {
+		return restrictionType;
+	}
+
+	public void setRestrictionType(RestrictionType1Code restrictionType) {
+		this.restrictionType = restrictionType;
 	}
 }

@@ -37,14 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages48#ProcessingPosition
- * Linkages48.ProcessingPosition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages48#MessageNumber
- * Linkages48.MessageNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages48#Reference
- * Linkages48.Reference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages48#LinkedQuantity
- * Linkages48.LinkedQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Linkages48#mmProcessingPosition
+ * Linkages48.mmProcessingPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmMessageNumber
+ * Linkages48.mmMessageNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmReference
+ * Linkages48.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmLinkedQuantity
+ * Linkages48.mmLinkedQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Linkages48 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessingPosition10Choice processingPosition;
 	/**
 	 * When the transaction is to be executed relative to a linked transaction.
 	 * <p>
@@ -98,7 +100,7 @@ public class Linkages48 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Linkages48.mmObject();
 			isDerived = false;
@@ -106,11 +108,12 @@ public class Linkages48 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProcessingPosition10Choice.mmObject();
 		}
 	};
+	protected DocumentNumber6Choice messageNumber;
 	/**
 	 * Message type number/message identifier of the message referenced in the
 	 * linkage sequence.
@@ -140,7 +143,7 @@ public class Linkages48 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages48.mmObject();
 			isDerived = false;
@@ -148,12 +151,13 @@ public class Linkages48 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber6Choice.mmObject();
 		}
 	};
+	protected References58Choice reference;
 	/**
 	 * Reference to the linked transaction.
 	 * <p>
@@ -184,21 +188,22 @@ public class Linkages48 {
 	 * definition} = "Reference to the linked transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages48.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
+			componentContext_lazy = () -> Linkages48.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> References58Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> References58Choice.mmObject();
 		}
 	};
+	protected PairedOrTurnedQuantity4Choice linkedQuantity;
 	/**
 	 * Quantity of financial instruments of the linked transaction to be
 	 * paired-off or turned.
@@ -213,8 +218,8 @@ public class Linkages48 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Linkages48
@@ -234,17 +239,17 @@ public class Linkages48 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> Linkages48.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "LkdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off or turned.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PairedOrTurnedQuantity4Choice.mmObject();
 		}
 	};
@@ -252,15 +257,47 @@ public class Linkages48 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages48.ProcessingPosition, com.tools20022.repository.msg.Linkages48.MessageNumber, com.tools20022.repository.msg.Linkages48.Reference,
-						com.tools20022.repository.msg.Linkages48.LinkedQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages48.mmProcessingPosition, com.tools20022.repository.msg.Linkages48.mmMessageNumber, com.tools20022.repository.msg.Linkages48.mmReference,
+						com.tools20022.repository.msg.Linkages48.mmLinkedQuantity);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Linkages48";
 				definition = "Information related to a linked transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessingPosition10Choice getProcessingPosition() {
+		return processingPosition;
+	}
+
+	public void setProcessingPosition(ProcessingPosition10Choice processingPosition) {
+		this.processingPosition = processingPosition;
+	}
+
+	public DocumentNumber6Choice getMessageNumber() {
+		return messageNumber;
+	}
+
+	public void setMessageNumber(DocumentNumber6Choice messageNumber) {
+		this.messageNumber = messageNumber;
+	}
+
+	public References58Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(References58Choice reference) {
+		this.reference = reference;
+	}
+
+	public PairedOrTurnedQuantity4Choice getLinkedQuantity() {
+		return linkedQuantity;
+	}
+
+	public void setLinkedQuantity(PairedOrTurnedQuantity4Choice linkedQuantity) {
+		this.linkedQuantity = linkedQuantity;
 	}
 }

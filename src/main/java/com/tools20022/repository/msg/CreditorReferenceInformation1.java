@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditorReferenceInformation1#CreditorReferenceType
- * CreditorReferenceInformation1.CreditorReferenceType}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditorReferenceInformation1#mmCreditorReferenceType
+ * CreditorReferenceInformation1.mmCreditorReferenceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditorReferenceInformation1#CreditorReference
- * CreditorReferenceInformation1.CreditorReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditorReferenceInformation1#mmCreditorReference
+ * CreditorReferenceInformation1.mmCreditorReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditorReferenceInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditorReferenceType1 creditorReferenceType;
 	/**
 	 * Provides the type of the creditor reference.
 	 * <p>
@@ -93,7 +94,7 @@ public class CreditorReferenceInformation1 {
 	 * definition} = "Provides the type of the creditor reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorReferenceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorReferenceType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CreditorReferenceInformation1.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class CreditorReferenceInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorReferenceType";
 			definition = "Provides the type of the creditor reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CreditorReferenceType1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
 		}
 	};
+	protected Max35Text creditorReference;
 	/**
 	 * Unique and unambiguous reference assigned by the creditor to refer to the
 	 * payment transaction.
@@ -130,8 +132,8 @@ public class CreditorReferenceInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#CreditorReference
-	 * PaymentIdentification.CreditorReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmCreditorReference
+	 * PaymentIdentification.mmCreditorReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,17 +154,17 @@ public class CreditorReferenceInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditorReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditorReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> CreditorReferenceInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.CreditorReference;
 			isDerived = false;
 			xmlTag = "CdtrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorReference";
 			definition = "Unique and unambiguous reference assigned by the creditor to refer to the payment transaction.\n\nUsage: if available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the cash.\n\nIf the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -170,14 +172,30 @@ public class CreditorReferenceInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditorReferenceInformation1.CreditorReferenceType, com.tools20022.repository.msg.CreditorReferenceInformation1.CreditorReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditorReferenceInformation1.mmCreditorReferenceType, com.tools20022.repository.msg.CreditorReferenceInformation1.mmCreditorReference);
 				trace_lazy = () -> PaymentIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditorReferenceInformation1";
 				definition = "Structured information supplied to enable the matching, i.e.  reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an accounts receivable system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditorReferenceType1 getCreditorReferenceType() {
+		return creditorReferenceType;
+	}
+
+	public void setCreditorReferenceType(com.tools20022.repository.msg.CreditorReferenceType1 creditorReferenceType) {
+		this.creditorReferenceType = creditorReferenceType;
+	}
+
+	public Max35Text getCreditorReference() {
+		return creditorReference;
+	}
+
+	public void setCreditorReference(Max35Text creditorReference) {
+		this.creditorReference = creditorReference;
 	}
 }

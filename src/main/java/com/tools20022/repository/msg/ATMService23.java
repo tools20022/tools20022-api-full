@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.ATMServiceType9Code;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Inquiry service provided by the ATM inside the session.
@@ -33,24 +34,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService23#ServiceReference
- * ATMService23.ServiceReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService23#ATMServiceCode
- * ATMService23.ATMServiceCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService23#HostServiceCode
- * ATMService23.HostServiceCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService23#ServiceType
- * ATMService23.ServiceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMService23#ServiceVariantIdentification
- * ATMService23.ServiceVariantIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMService23#mmServiceReference
+ * ATMService23.mmServiceReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService23#mmATMServiceCode
+ * ATMService23.mmATMServiceCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService23#mmHostServiceCode
+ * ATMService23.mmHostServiceCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService23#mmServiceType
+ * ATMService23.mmServiceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMService23#mmServiceVariantIdentification
+ * ATMService23.mmServiceVariantIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMService23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text serviceReference;
 	/**
 	 * Unique identification of the customer session in which the transfer is
 	 * performed.
@@ -104,18 +107,18 @@ public class ATMService23 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMService24#ServiceReference
-	 * ATMService24.ServiceReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService24#mmServiceReference
+	 * ATMService24.mmServiceReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService22#ServiceReference
-	 * ATMService22.ServiceReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService22#mmServiceReference
+	 * ATMService22.mmServiceReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService23.mmObject();
 			isDerived = false;
@@ -123,13 +126,14 @@ public class ATMService23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceReference";
 			definition = "Unique identification of the customer session in which the transfer is performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.ServiceReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.ServiceReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.mmServiceReference);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.mmServiceReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text aTMServiceCode;
 	/**
 	 * Codification of the type of service for the ATM.
 	 * <p>
@@ -158,18 +162,18 @@ public class ATMService23 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMService24#ATMServiceCode
-	 * ATMService24.ATMServiceCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService24#mmATMServiceCode
+	 * ATMService24.mmATMServiceCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService22#ATMServiceCode
-	 * ATMService22.ATMServiceCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService22#mmATMServiceCode
+	 * ATMService22.mmATMServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ATMServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService23.mmObject();
 			isDerived = false;
@@ -177,13 +181,14 @@ public class ATMService23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMServiceCode";
 			definition = "Codification of the type of service for the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.ATMServiceCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.ATMServiceCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.mmATMServiceCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.mmATMServiceCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text hostServiceCode;
 	/**
 	 * Codification of the type of service for the host.
 	 * <p>
@@ -212,13 +217,13 @@ public class ATMService23 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMService24#HostServiceCode
-	 * ATMService24.HostServiceCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService24#mmHostServiceCode
+	 * ATMService24.mmHostServiceCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostServiceCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService23.mmObject();
 			isDerived = false;
@@ -226,12 +231,13 @@ public class ATMService23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostServiceCode";
 			definition = "Codification of the type of service for the host.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.HostServiceCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.mmHostServiceCode);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ATMServiceType9Code serviceType;
 	/**
 	 * Describes the type of fund transfer selected by the customer or the ATM.
 	 * <p>
@@ -262,18 +268,18 @@ public class ATMService23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMService24#ServiceType
-	 * ATMService24.ServiceType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMService24#mmServiceType
+	 * ATMService24.mmServiceType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService22#ServiceType
-	 * ATMService22.ServiceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService22#mmServiceType
+	 * ATMService22.mmServiceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService23.mmObject();
 			isDerived = false;
@@ -281,13 +287,14 @@ public class ATMService23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Describes the type of fund transfer selected by the customer or the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.ServiceType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.ServiceType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.mmServiceType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.mmServiceType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType9Code.mmObject();
 		}
 	};
+	protected List<Max35Text> serviceVariantIdentification;
 	/**
 	 * Identification of the variant of the service.
 	 * <p>
@@ -316,18 +323,18 @@ public class ATMService23 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMService24#ServiceVariantIdentification
-	 * ATMService24.ServiceVariantIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService24#mmServiceVariantIdentification
+	 * ATMService24.mmServiceVariantIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService22#ServiceVariantIdentification
-	 * ATMService22.ServiceVariantIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService22#mmServiceVariantIdentification
+	 * ATMService22.mmServiceVariantIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceVariantIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceVariantIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService23.mmObject();
 			isDerived = false;
@@ -335,8 +342,8 @@ public class ATMService23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceVariantIdentification";
 			definition = "Identification of the variant of the service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.ServiceVariantIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.ServiceVariantIdentification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService24.mmServiceVariantIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService22.mmServiceVariantIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -345,16 +352,56 @@ public class ATMService23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService23.ServiceReference, com.tools20022.repository.msg.ATMService23.ATMServiceCode, com.tools20022.repository.msg.ATMService23.HostServiceCode,
-						com.tools20022.repository.msg.ATMService23.ServiceType, com.tools20022.repository.msg.ATMService23.ServiceVariantIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService23.mmServiceReference, com.tools20022.repository.msg.ATMService23.mmATMServiceCode,
+						com.tools20022.repository.msg.ATMService23.mmHostServiceCode, com.tools20022.repository.msg.ATMService23.mmServiceType, com.tools20022.repository.msg.ATMService23.mmServiceVariantIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMService23";
 				definition = "Inquiry service provided by the ATM inside the session.";
-				previousVersion_lazy = () -> ATMService22.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMService24.mmObject());
+				previousVersion_lazy = () -> ATMService22.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getServiceReference() {
+		return serviceReference;
+	}
+
+	public void setServiceReference(Max35Text serviceReference) {
+		this.serviceReference = serviceReference;
+	}
+
+	public Max35Text getATMServiceCode() {
+		return aTMServiceCode;
+	}
+
+	public void setATMServiceCode(Max35Text aTMServiceCode) {
+		this.aTMServiceCode = aTMServiceCode;
+	}
+
+	public Max35Text getHostServiceCode() {
+		return hostServiceCode;
+	}
+
+	public void setHostServiceCode(Max35Text hostServiceCode) {
+		this.hostServiceCode = hostServiceCode;
+	}
+
+	public ATMServiceType9Code getServiceType() {
+		return serviceType;
+	}
+
+	public void setServiceType(ATMServiceType9Code serviceType) {
+		this.serviceType = serviceType;
+	}
+
+	public List<Max35Text> getServiceVariantIdentification() {
+		return serviceVariantIdentification;
+	}
+
+	public void setServiceVariantIdentification(List<Max35Text> serviceVariantIdentification) {
+		this.serviceVariantIdentification = serviceVariantIdentification;
 	}
 }

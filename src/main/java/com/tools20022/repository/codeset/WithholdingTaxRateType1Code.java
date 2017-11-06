@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code#BackUpWithholding
- * WithholdingTaxRateType1Code.BackUpWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code#mmBackUpWithholding
+ * WithholdingTaxRateType1Code.mmBackUpWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code#FATCATax
- * WithholdingTaxRateType1Code.FATCATax}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code#mmFATCATax
+ * WithholdingTaxRateType1Code.mmFATCATax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code#NRATax
- * WithholdingTaxRateType1Code.NRATax}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code#mmNRATax
+ * WithholdingTaxRateType1Code.mmNRATax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class WithholdingTaxRateType1Code extends WithholdingTaxRateTypeCode {
 	 * name} = "BackUpWithholding"</li>
 	 * </ul>
 	 */
-	public static final MMCode BackUpWithholding = new MMCode() {
+	public static final MMCode mmBackUpWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUpWithholding";
@@ -101,7 +101,7 @@ public class WithholdingTaxRateType1Code extends WithholdingTaxRateTypeCode {
 	 * name} = "FATCATax"</li>
 	 * </ul>
 	 */
-	public static final MMCode FATCATax = new MMCode() {
+	public static final MMCode mmFATCATax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCATax";
@@ -124,7 +124,7 @@ public class WithholdingTaxRateType1Code extends WithholdingTaxRateTypeCode {
 	 * name} = "NRATax"</li>
 	 * </ul>
 	 */
-	public static final MMCode NRATax = new MMCode() {
+	public static final MMCode mmNRATax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATax";
@@ -135,12 +135,12 @@ public class WithholdingTaxRateType1Code extends WithholdingTaxRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "WithholdingTaxRateType1Code";
 				definition = "Specifies the type of withholding tax rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WithholdingTaxRateType1Code.BackUpWithholding, com.tools20022.repository.codeset.WithholdingTaxRateType1Code.FATCATax,
-						com.tools20022.repository.codeset.WithholdingTaxRateType1Code.NRATax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WithholdingTaxRateType1Code.mmBackUpWithholding, com.tools20022.repository.codeset.WithholdingTaxRateType1Code.mmFATCATax,
+						com.tools20022.repository.codeset.WithholdingTaxRateType1Code.mmNRATax);
 				trace_lazy = () -> WithholdingTaxRateTypeCode.mmObject();
 			}
 		});

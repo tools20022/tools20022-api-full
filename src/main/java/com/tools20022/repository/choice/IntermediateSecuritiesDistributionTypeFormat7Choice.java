@@ -40,11 +40,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice#Code
- * IntermediateSecuritiesDistributionTypeFormat7Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice#mmCode
+ * IntermediateSecuritiesDistributionTypeFormat7Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice#Proprietary
- * IntermediateSecuritiesDistributionTypeFormat7Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice#mmProprietary
+ * IntermediateSecuritiesDistributionTypeFormat7Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -72,6 +72,7 @@ import java.util.function.Supplier;
 public class IntermediateSecuritiesDistributionTypeFormat7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IntermediateSecurityDistributionType4Code code;
 	/**
 	 * Standard code to specify the type of intermediate security distribution.
 	 * <p>
@@ -85,8 +86,8 @@ public class IntermediateSecuritiesDistributionTypeFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#IntermediateSecuritiesDistributionType
-	 * SecuritiesProceedsDefinition.IntermediateSecuritiesDistributionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmIntermediateSecuritiesDistributionType
+	 * SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +108,21 @@ public class IntermediateSecuritiesDistributionTypeFormat7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> IntermediateSecuritiesDistributionTypeFormat7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.IntermediateSecuritiesDistributionType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of intermediate security distribution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IntermediateSecurityDistributionType4Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Proprietary identification of the type of intermediate security
 	 * distribution.
@@ -134,8 +136,8 @@ public class IntermediateSecuritiesDistributionTypeFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#IntermediateSecuritiesDistributionType
-	 * SecuritiesProceedsDefinition.IntermediateSecuritiesDistributionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmIntermediateSecuritiesDistributionType
+	 * SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,29 +158,29 @@ public class IntermediateSecuritiesDistributionTypeFormat7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> IntermediateSecuritiesDistributionTypeFormat7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.IntermediateSecuritiesDistributionType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of intermediate security distribution.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice.Code,
-						com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice.mmCode,
+						com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat7Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -192,5 +194,21 @@ public class IntermediateSecuritiesDistributionTypeFormat7Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IntermediateSecurityDistributionType4Code getCode() {
+		return code;
+	}
+
+	public void setCode(IntermediateSecurityDistributionType4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

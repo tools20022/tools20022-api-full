@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.UndertakingStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Undertaking status information.
@@ -39,41 +40,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#InitiatingParty
- * UndertakingStatusAdvice1.InitiatingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmInitiatingParty
+ * UndertakingStatusAdvice1.mmInitiatingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#UndertakingIdentification
- * UndertakingStatusAdvice1.UndertakingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmUndertakingIdentification
+ * UndertakingStatusAdvice1.mmUndertakingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#AmendmentSequenceNumber
- * UndertakingStatusAdvice1.AmendmentSequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmAmendmentSequenceNumber
+ * UndertakingStatusAdvice1.mmAmendmentSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#AdvisingPartyReferenceNumber
- * UndertakingStatusAdvice1.AdvisingPartyReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmAdvisingPartyReferenceNumber
+ * UndertakingStatusAdvice1.mmAdvisingPartyReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#ConfirmerReferenceNumber
- * UndertakingStatusAdvice1.ConfirmerReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmConfirmerReferenceNumber
+ * UndertakingStatusAdvice1.mmConfirmerReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#StatusCategory
- * UndertakingStatusAdvice1.StatusCategory}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmStatusCategory
+ * UndertakingStatusAdvice1.mmStatusCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#Status
- * UndertakingStatusAdvice1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmStatus
+ * UndertakingStatusAdvice1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#StatusReason
- * UndertakingStatusAdvice1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmStatusReason
+ * UndertakingStatusAdvice1.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#ReportedAmount
- * UndertakingStatusAdvice1.ReportedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmReportedAmount
+ * UndertakingStatusAdvice1.mmReportedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#OriginalMessageDetails
- * UndertakingStatusAdvice1.OriginalMessageDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmOriginalMessageDetails
+ * UndertakingStatusAdvice1.mmOriginalMessageDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#EnclosedFile
- * UndertakingStatusAdvice1.EnclosedFile}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmEnclosedFile
+ * UndertakingStatusAdvice1.mmEnclosedFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#AdditionalInformation
- * UndertakingStatusAdvice1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingStatusAdvice1#mmAdditionalInformation
+ * UndertakingStatusAdvice1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -84,15 +85,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#UndertakingStatusReportDetails
- * UndertakingStatusReportV01.UndertakingStatusReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingStatusReportV01#mmUndertakingStatusReportDetails
+ * UndertakingStatusReportV01.mmUndertakingStatusReportDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingStatusAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 initiatingParty;
 	/**
 	 * Details related to the party that initiated the report.
 	 * <p>
@@ -117,8 +119,8 @@ public class UndertakingStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,21 +139,22 @@ public class UndertakingStatusAdvice1 {
 	 * definition} = "Details related to the party that initiated the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "InitgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Details related to the party that initiated the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected Undertaking8 undertakingIdentification;
 	/**
 	 * Details related to the identification of the undertaking.
 	 * <p>
@@ -163,8 +166,8 @@ public class UndertakingStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#Undertaking
-	 * UndertakingStatus.Undertaking}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmUndertaking
+	 * UndertakingStatus.mmUndertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -184,21 +187,22 @@ public class UndertakingStatusAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.Undertaking;
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Undertaking8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Undertaking8.mmObject();
 		}
 	};
+	protected Number amendmentSequenceNumber;
 	/**
 	 * Sequence number assigned by the issuer to each amendment of the
 	 * undertaking.
@@ -229,7 +233,7 @@ public class UndertakingStatusAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendmentSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendmentSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
@@ -237,11 +241,12 @@ public class UndertakingStatusAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentSequenceNumber";
 			definition = "Sequence number assigned by the issuer to each amendment of the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35Text advisingPartyReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the advising party to the
 	 * undertaking.
@@ -272,7 +277,7 @@ public class UndertakingStatusAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
@@ -280,11 +285,12 @@ public class UndertakingStatusAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the advising party to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text confirmerReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the confirmer to the
 	 * undertaking.
@@ -315,7 +321,7 @@ public class UndertakingStatusAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmerReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
@@ -323,11 +329,12 @@ public class UndertakingStatusAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmerReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ExternalUndertakingStatusCategory1Code statusCategory;
 	/**
 	 * Specifies the category of the status.
 	 * <p>
@@ -341,8 +348,8 @@ public class UndertakingStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#StatusCategory
-	 * UndertakingStatus.StatusCategory}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmStatusCategory
+	 * UndertakingStatus.mmStatusCategory}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -361,20 +368,21 @@ public class UndertakingStatusAdvice1 {
 	 * definition} = "Specifies the category of the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusCategory = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmStatusCategory;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.StatusCategory;
 			isDerived = false;
 			xmlTag = "StsCtgy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusCategory";
 			definition = "Specifies the category of the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingStatusCategory1Code.mmObject();
 		}
 	};
+	protected UndertakingStatus3Code status;
 	/**
 	 * Specifies the reported status.
 	 * <p>
@@ -388,8 +396,8 @@ public class UndertakingStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#Status
-	 * UndertakingStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmStatus
+	 * UndertakingStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -408,20 +416,21 @@ public class UndertakingStatusAdvice1 {
 	 * definition} = "Specifies the reported status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmStatus;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the reported status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UndertakingStatus3Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason;
 	/**
 	 * Set of elements used to provide detailed information on the status
 	 * reason.
@@ -435,8 +444,8 @@ public class UndertakingStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#UndertakingStatusReason
-	 * UndertakingStatus.UndertakingStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmUndertakingStatusReason
+	 * UndertakingStatus.mmUndertakingStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -457,20 +466,21 @@ public class UndertakingStatusAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertakingStatusReason;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.UndertakingStatusReason;
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Set of elements used to provide detailed information on the status reason.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReportedAmount1> reportedAmount;
 	/**
 	 * Amount reported.
 	 * <p>
@@ -498,7 +508,7 @@ public class UndertakingStatusAdvice1 {
 	 * definition} = "Amount reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
@@ -507,9 +517,10 @@ public class UndertakingStatusAdvice1 {
 			name = "ReportedAmount";
 			definition = "Amount reported.";
 			minOccurs = 0;
-			complexType_lazy = () -> ReportedAmount1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.ReportedAmount1.mmObject();
 		}
 	};
+	protected OriginalMessage1 originalMessageDetails;
 	/**
 	 * Information concerning the original message to which the status report
 	 * may be sent in response.
@@ -539,7 +550,7 @@ public class UndertakingStatusAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
@@ -547,12 +558,13 @@ public class UndertakingStatusAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageDetails";
 			definition = "Information concerning the original message to which the status report may be sent in response.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessage1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
 	/**
 	 * Document or template enclosed in the report.
 	 * <p>
@@ -563,8 +575,8 @@ public class UndertakingStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#SpecifiedDocument
-	 * Undertaking.SpecifiedDocument}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmSpecifiedDocument
+	 * Undertaking.mmSpecifiedDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -583,20 +595,21 @@ public class UndertakingStatusAdvice1 {
 	 * definition} = "Document or template enclosed in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EnclosedFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmSpecifiedDocument;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.SpecifiedDocument;
 			isDerived = false;
 			xmlTag = "NclsdFile";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnclosedFile";
 			definition = "Document or template enclosed in the report.";
 			minOccurs = 0;
-			type_lazy = () -> Document9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the report.
 	 * <p>
@@ -624,7 +637,7 @@ public class UndertakingStatusAdvice1 {
 	 * definition} = "Additional information related to the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
@@ -632,8 +645,8 @@ public class UndertakingStatusAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the report.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -641,20 +654,116 @@ public class UndertakingStatusAdvice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingStatusAdvice1.InitiatingParty, com.tools20022.repository.msg.UndertakingStatusAdvice1.UndertakingIdentification,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.AmendmentSequenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.AdvisingPartyReferenceNumber,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.ConfirmerReferenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.StatusCategory, com.tools20022.repository.msg.UndertakingStatusAdvice1.Status,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.StatusReason, com.tools20022.repository.msg.UndertakingStatusAdvice1.ReportedAmount,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.OriginalMessageDetails, com.tools20022.repository.msg.UndertakingStatusAdvice1.EnclosedFile,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingStatusAdvice1.mmInitiatingParty, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmUndertakingIdentification,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAmendmentSequenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAdvisingPartyReferenceNumber,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmConfirmerReferenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatusCategory,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatus, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatusReason, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmReportedAmount,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmOriginalMessageDetails, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmEnclosedFile,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.mmUndertakingStatusReportDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.UndertakingStatusReportDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatusAdvice1";
 				definition = "Undertaking status information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getInitiatingParty() {
+		return initiatingParty;
+	}
+
+	public void setInitiatingParty(com.tools20022.repository.msg.PartyIdentification43 initiatingParty) {
+		this.initiatingParty = initiatingParty;
+	}
+
+	public Undertaking8 getUndertakingIdentification() {
+		return undertakingIdentification;
+	}
+
+	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking8 undertakingIdentification) {
+		this.undertakingIdentification = undertakingIdentification;
+	}
+
+	public Number getAmendmentSequenceNumber() {
+		return amendmentSequenceNumber;
+	}
+
+	public void setAmendmentSequenceNumber(Number amendmentSequenceNumber) {
+		this.amendmentSequenceNumber = amendmentSequenceNumber;
+	}
+
+	public Max35Text getAdvisingPartyReferenceNumber() {
+		return advisingPartyReferenceNumber;
+	}
+
+	public void setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
+		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
+	}
+
+	public Max35Text getConfirmerReferenceNumber() {
+		return confirmerReferenceNumber;
+	}
+
+	public void setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
+		this.confirmerReferenceNumber = confirmerReferenceNumber;
+	}
+
+	public ExternalUndertakingStatusCategory1Code getStatusCategory() {
+		return statusCategory;
+	}
+
+	public void setStatusCategory(ExternalUndertakingStatusCategory1Code statusCategory) {
+		this.statusCategory = statusCategory;
+	}
+
+	public UndertakingStatus3Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(UndertakingStatus3Code status) {
+		this.status = status;
+	}
+
+	public List<StatusReasonInformation8> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public List<ReportedAmount1> getReportedAmount() {
+		return reportedAmount;
+	}
+
+	public void setReportedAmount(List<com.tools20022.repository.msg.ReportedAmount1> reportedAmount) {
+		this.reportedAmount = reportedAmount;
+	}
+
+	public OriginalMessage1 getOriginalMessageDetails() {
+		return originalMessageDetails;
+	}
+
+	public void setOriginalMessageDetails(com.tools20022.repository.msg.OriginalMessage1 originalMessageDetails) {
+		this.originalMessageDetails = originalMessageDetails;
+	}
+
+	public List<Document9> getEnclosedFile() {
+		return enclosedFile;
+	}
+
+	public void setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+		this.enclosedFile = enclosedFile;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

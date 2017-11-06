@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstructionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionType3Code#Match
- * InstructionType3Code.Match}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionType3Code#PreMatch
- * InstructionType3Code.PreMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionType3Code#mmMatch
+ * InstructionType3Code.mmMatch}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionType3Code#mmPreMatch
+ * InstructionType3Code.mmPreMatch}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class InstructionType3Code extends InstructionTypeCode {
 	 * name} = "Match"</li>
 	 * </ul>
 	 */
-	public static final MMCode Match = new MMCode() {
+	public static final MMCode mmMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Match";
@@ -104,7 +105,7 @@ public class InstructionType3Code extends InstructionTypeCode {
 	 * name} = "PreMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreMatch = new MMCode() {
+	public static final MMCode mmPreMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreMatch";
@@ -115,12 +116,12 @@ public class InstructionType3Code extends InstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MTCH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionType3Code";
 				definition = "Specifies whether the submitted data set must be matched or pre-matched.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionType3Code.Match, com.tools20022.repository.codeset.InstructionType3Code.PreMatch);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionType3Code.mmMatch, com.tools20022.repository.codeset.InstructionType3Code.mmPreMatch);
 				trace_lazy = () -> InstructionTypeCode.mmObject();
 			}
 		});

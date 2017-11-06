@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.StatisticalReportingStatus1Code;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the money market statistical status report header details.
@@ -35,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#ReportingAgent
- * MoneyMarketStatusReportHeader1.ReportingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#mmReportingAgent
+ * MoneyMarketStatusReportHeader1.mmReportingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#ReportingPeriod
- * MoneyMarketStatusReportHeader1.ReportingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#mmReportingPeriod
+ * MoneyMarketStatusReportHeader1.mmReportingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#ReportStatus
- * MoneyMarketStatusReportHeader1.ReportStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#mmReportStatus
+ * MoneyMarketStatusReportHeader1.mmReportStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#ValidationRule
- * MoneyMarketStatusReportHeader1.ValidationRule}</li>
+ * {@linkplain com.tools20022.repository.msg.MoneyMarketStatusReportHeader1#mmValidationRule
+ * MoneyMarketStatusReportHeader1.mmValidationRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,15 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01#StatusReportHeader
- * MoneyMarketStatisticalReportStatusAdviceV01.StatusReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01#mmStatusReportHeader
+ * MoneyMarketStatisticalReportStatusAdviceV01.mmStatusReportHeader}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MoneyMarketStatusReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LEIIdentifier reportingAgent;
 	/**
 	 * Agent which is subject to reporting requirements.
 	 * <p>
@@ -111,7 +113,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 * definition} = "Agent which is subject to reporting requirements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportingAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportingAgent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -119,11 +121,12 @@ public class MoneyMarketStatusReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAgent";
 			definition = "Agent which is subject to reporting requirements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected DateTimePeriod1 reportingPeriod;
 	/**
 	 * For daily reporting this is the day to which the transaction data in the
 	 * status message refers (trade date or amendment date if there are
@@ -157,7 +160,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -165,12 +168,13 @@ public class MoneyMarketStatusReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "For daily reporting this is the day to which the transaction data in the status message refers (trade date or amendment date if there are corrections).\r\nFor periodic reporting this is the first and the last day to which the transaction data in the status message refers (trade date or amendment date in case of corrections).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriod1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriod1.mmObject();
 		}
 	};
+	protected StatisticalReportingStatus1Code reportStatus;
 	/**
 	 * Provides the status for the full report.
 	 * <p>
@@ -201,13 +205,13 @@ public class MoneyMarketStatusReportHeader1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1#ReportStatus
-	 * InvoiceTaxStatusReportHeader1.ReportStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1#mmReportStatus
+	 * InvoiceTaxStatusReportHeader1.mmReportStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -215,12 +219,13 @@ public class MoneyMarketStatusReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatus";
 			definition = "Provides the status for the full report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.ReportStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmReportStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * Provides the details of the rule which could not be validated.
 	 * <p>
@@ -251,13 +256,13 @@ public class MoneyMarketStatusReportHeader1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1#ValidationRule
-	 * InvoiceTaxStatusReportHeader1.ValidationRule}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1#mmValidationRule
+	 * InvoiceTaxStatusReportHeader1.mmValidationRule}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -265,20 +270,20 @@ public class MoneyMarketStatusReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.ValidationRule);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmValidationRule);
 			minOccurs = 0;
-			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.ReportingAgent, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.ReportingPeriod,
-						com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.ReportStatus, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.ValidationRule);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.StatusReportHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportingAgent, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportingPeriod,
+						com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportStatus, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmValidationRule);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.mmStatusReportHeader);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketStatusReportHeader1";
 				definition = "Provides the money market statistical status report header details.";
@@ -286,5 +291,37 @@ public class MoneyMarketStatusReportHeader1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LEIIdentifier getReportingAgent() {
+		return reportingAgent;
+	}
+
+	public void setReportingAgent(LEIIdentifier reportingAgent) {
+		this.reportingAgent = reportingAgent;
+	}
+
+	public DateTimePeriod1 getReportingPeriod() {
+		return reportingPeriod;
+	}
+
+	public void setReportingPeriod(com.tools20022.repository.msg.DateTimePeriod1 reportingPeriod) {
+		this.reportingPeriod = reportingPeriod;
+	}
+
+	public StatisticalReportingStatus1Code getReportStatus() {
+		return reportStatus;
+	}
+
+	public void setReportStatus(StatisticalReportingStatus1Code reportStatus) {
+		this.reportStatus = reportStatus;
+	}
+
+	public List<GenericValidationRuleIdentification1> getValidationRule() {
+		return validationRule;
+	}
+
+	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = validationRule;
 	}
 }

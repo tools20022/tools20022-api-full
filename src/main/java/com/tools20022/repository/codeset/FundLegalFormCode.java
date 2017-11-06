@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundLegalFormCode#Contractual
- * FundLegalFormCode.Contractual}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundLegalFormCode#Trust
- * FundLegalFormCode.Trust}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundLegalFormCode#mmContractual
+ * FundLegalFormCode.mmContractual}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundLegalFormCode#mmTrust
+ * FundLegalFormCode.mmTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundLegalFormCode#Corporate
- * FundLegalFormCode.Corporate}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundLegalFormCode#mmCorporate
+ * FundLegalFormCode.mmCorporate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class FundLegalFormCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Contractual = new MMCode() {
+	public static final MMCode mmContractual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Contractual";
@@ -125,7 +125,7 @@ public class FundLegalFormCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Trust = new MMCode() {
+	public static final MMCode mmTrust = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Trust";
@@ -160,7 +160,7 @@ public class FundLegalFormCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Corporate = new MMCode() {
+	public static final MMCode mmCorporate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Corporate";
@@ -173,12 +173,13 @@ public class FundLegalFormCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CONT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundLegalFormCode";
 				definition = "The legal form of a Fund.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundLegalFormCode.Contractual, com.tools20022.repository.codeset.FundLegalFormCode.Trust, com.tools20022.repository.codeset.FundLegalFormCode.Corporate);
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.FundLegalFormCode.mmContractual, com.tools20022.repository.codeset.FundLegalFormCode.mmTrust, com.tools20022.repository.codeset.FundLegalFormCode.mmCorporate);
 			}
 		});
 		return mmObject_lazy.get();

@@ -39,11 +39,11 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EquivalentAmount#Amount
- * EquivalentAmount.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EquivalentAmount#mmAmount
+ * EquivalentAmount.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EquivalentAmount#CurrencyOfTransfer
- * EquivalentAmount.CurrencyOfTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.EquivalentAmount#mmCurrencyOfTransfer
+ * EquivalentAmount.mmCurrencyOfTransfer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -69,6 +69,7 @@ import java.util.function.Supplier;
 public class EquivalentAmount {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money to be transferred between debtor and creditor, before
 	 * deduction of charges, expressed in the currency of the debtor's account,
@@ -90,8 +91,8 @@ public class EquivalentAmount {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#EquivalentAmount
-	 * Payment.EquivalentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmEquivalentAmount
+	 * Payment.mmEquivalentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +113,21 @@ public class EquivalentAmount {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmEquivalentAmount;
 			componentContext_lazy = () -> EquivalentAmount.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.EquivalentAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money to be transferred between debtor and creditor, before deduction of charges, expressed in the currency of the debtor's account, and to be transferred in a different currency. \n\nUsage : Currency of the amount is expressed in the currency of the debtor's account, but the amount to be transferred is in another currency. The first agent will convert the amount and currency to the to be transferred amount and currency, eg, 'pay equivalent of 100000 EUR in JPY'(and account is in EUR).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyCode currencyOfTransfer;
 	/**
 	 * Specifies the currency of the to be transferred amount, which is
 	 * different from the currency of the debtor's account.
@@ -139,8 +141,8 @@ public class EquivalentAmount {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyOfTransfer
-	 * Payment.CurrencyOfTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+	 * Payment.mmCurrencyOfTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,17 +163,17 @@ public class EquivalentAmount {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyOfTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyOfTransfer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> EquivalentAmount.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyOfTransfer;
 			isDerived = false;
 			xmlTag = "CcyOfTrf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOfTransfer";
 			definition = "Specifies the currency of the to be transferred amount, which is different from the currency of the debtor's account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
@@ -179,9 +181,9 @@ public class EquivalentAmount {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquivalentAmount.Amount, com.tools20022.repository.msg.EquivalentAmount.CurrencyOfTransfer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquivalentAmount.mmAmount, com.tools20022.repository.msg.EquivalentAmount.mmCurrencyOfTransfer);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -195,5 +197,21 @@ public class EquivalentAmount {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public CurrencyCode getCurrencyOfTransfer() {
+		return currencyOfTransfer;
+	}
+
+	public void setCurrencyOfTransfer(CurrencyCode currencyOfTransfer) {
+		this.currencyOfTransfer = currencyOfTransfer;
 	}
 }

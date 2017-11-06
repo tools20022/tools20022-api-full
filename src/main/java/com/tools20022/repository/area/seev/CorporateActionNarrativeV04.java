@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
 import com.tools20022.repository.msgset.CorporateActionsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -72,27 +73,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#AccountDetails
- * CorporateActionNarrativeV04.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#mmAccountDetails
+ * CorporateActionNarrativeV04.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#UnderlyingSecurity
- * CorporateActionNarrativeV04.UnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#mmUnderlyingSecurity
+ * CorporateActionNarrativeV04.mmUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#CorporateActionGeneralInformation
- * CorporateActionNarrativeV04.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#mmCorporateActionGeneralInformation
+ * CorporateActionNarrativeV04.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#AdditionalInformation
- * CorporateActionNarrativeV04.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#mmAdditionalInformation
+ * CorporateActionNarrativeV04.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#SupplementaryData
- * CorporateActionNarrativeV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#mmSupplementaryData
+ * CorporateActionNarrativeV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#identifier
- * CorporateActionNarrativeV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.038.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrativeV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification33Choice accountDetails;
 	/**
 	 * General information about the safekeeping account and the account owner.
 	 * <p>
@@ -138,22 +138,23 @@ public class CorporateActionNarrativeV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#AccountDetails
-	 * CorporateActionNarrativeV03.AccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#mmAccountDetails
+	 * CorporateActionNarrativeV03.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "General information about the safekeeping account and the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.AccountDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmAccountDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification33Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification19 underlyingSecurity;
 	/**
 	 * Provides information about the securitised right for entitlement.
 	 * <p>
@@ -179,22 +180,23 @@ public class CorporateActionNarrativeV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#UnderlyingSecurity
-	 * CorporateActionNarrativeV03.UnderlyingSecurity}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#mmUnderlyingSecurity
+	 * CorporateActionNarrativeV03.mmUnderlyingSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingSecurity = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygScty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Provides information about the securitised right for entitlement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.UnderlyingSecurity;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmUnderlyingSecurity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification19.mmObject();
 		}
 	};
+	protected CorporateActionGeneralInformation92 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -219,22 +221,23 @@ public class CorporateActionNarrativeV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#CorporateActionGeneralInformation
-	 * CorporateActionNarrativeV03.CorporateActionGeneralInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#mmCorporateActionGeneralInformation
+	 * CorporateActionNarrativeV03.mmCorporateActionGeneralInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.CorporateActionGeneralInformation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation92.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 additionalInformation;
 	/**
 	 * Provides additional information.
 	 * <p>
@@ -259,22 +262,23 @@ public class CorporateActionNarrativeV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#AdditionalInformation
-	 * CorporateActionNarrativeV03.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#mmAdditionalInformation
+	 * CorporateActionNarrativeV03.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.AdditionalInformation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -302,46 +306,19 @@ public class CorporateActionNarrativeV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#SupplementaryData
-	 * CorporateActionNarrativeV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV03#mmSupplementaryData
+	 * CorporateActionNarrativeV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "038";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -356,12 +333,59 @@ public class CorporateActionNarrativeV04 {
 				rootElement = "Document";
 				xmlTag = "CorpActnNrrtv";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV04.AccountDetails, com.tools20022.repository.area.seev.CorporateActionNarrativeV04.UnderlyingSecurity,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV04.CorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionNarrativeV04.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmUnderlyingSecurity,
+						com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "038";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification33Choice getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(AccountIdentification33Choice accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public SecurityIdentification19 getUnderlyingSecurity() {
+		return underlyingSecurity;
+	}
+
+	public void setUnderlyingSecurity(SecurityIdentification19 underlyingSecurity) {
+		this.underlyingSecurity = underlyingSecurity;
+	}
+
+	public CorporateActionGeneralInformation92 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation92 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public UpdatedAdditionalInformation8 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(UpdatedAdditionalInformation8 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -32,50 +32,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#BuyUp
- * FractionDispositionTypeV2Code.BuyUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmBuyUp
+ * FractionDispositionTypeV2Code.mmBuyUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#CashInLieuOfFraction
- * FractionDispositionTypeV2Code.CashInLieuOfFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmCashInLieuOfFraction
+ * FractionDispositionTypeV2Code.mmCashInLieuOfFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#Full
- * FractionDispositionTypeV2Code.Full}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmFull
+ * FractionDispositionTypeV2Code.mmFull}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#NoFraction
- * FractionDispositionTypeV2Code.NoFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmNoFraction
+ * FractionDispositionTypeV2Code.mmNoFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#ProRate
- * FractionDispositionTypeV2Code.ProRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmProRate
+ * FractionDispositionTypeV2Code.mmProRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#RoundUp
- * FractionDispositionTypeV2Code.RoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmRoundUp
+ * FractionDispositionTypeV2Code.mmRoundUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#RoundDown
- * FractionDispositionTypeV2Code.RoundDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmRoundDown
+ * FractionDispositionTypeV2Code.mmRoundDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#RoundToNearest
- * FractionDispositionTypeV2Code.RoundToNearest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmRoundToNearest
+ * FractionDispositionTypeV2Code.mmRoundToNearest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#IssueFraction
- * FractionDispositionTypeV2Code.IssueFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmIssueFraction
+ * FractionDispositionTypeV2Code.mmIssueFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#DiscussFirst
- * FractionDispositionTypeV2Code.DiscussFirst}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmDiscussFirst
+ * FractionDispositionTypeV2Code.mmDiscussFirst}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#Specific
- * FractionDispositionTypeV2Code.Specific}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmSpecific
+ * FractionDispositionTypeV2Code.mmSpecific}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#Standard
- * FractionDispositionTypeV2Code.Standard}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmStandard
+ * FractionDispositionTypeV2Code.mmStandard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#Retain
- * FractionDispositionTypeV2Code.Retain}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmRetain
+ * FractionDispositionTypeV2Code.mmRetain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#Expire
- * FractionDispositionTypeV2Code.Expire}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmExpire
+ * FractionDispositionTypeV2Code.mmExpire}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#Unknown
- * FractionDispositionTypeV2Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeV2Code#mmUnknown
+ * FractionDispositionTypeV2Code.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -98,8 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -146,7 +146,7 @@ public class FractionDispositionTypeV2Code {
 	 * definition} = "Buy securities up to next whole number."</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyUp = new MMCode() {
+	public static final MMCode mmBuyUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
@@ -176,7 +176,7 @@ public class FractionDispositionTypeV2Code {
 	 * definition} = "Fractional part of cash. Take cash in lieu of fractions."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashInLieuOfFraction = new MMCode() {
+	public static final MMCode mmCashInLieuOfFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFraction";
@@ -206,7 +206,7 @@ public class FractionDispositionTypeV2Code {
 	 * definition} = "Pre-allocate shares only if fully dealt."</li>
 	 * </ul>
 	 */
-	public static final MMCode Full = new MMCode() {
+	public static final MMCode mmFull = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Full";
@@ -236,7 +236,7 @@ public class FractionDispositionTypeV2Code {
 	 * definition} = "No fractional shares are allowed."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoFraction = new MMCode() {
+	public static final MMCode mmNoFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoFraction";
@@ -266,7 +266,7 @@ public class FractionDispositionTypeV2Code {
 	 * definition} = "In case of a partial fill, pro-rate the allocations."</li>
 	 * </ul>
 	 */
-	public static final MMCode ProRate = new MMCode() {
+	public static final MMCode mmProRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProRate";
@@ -297,7 +297,7 @@ public class FractionDispositionTypeV2Code {
 	 * "Round up to the next full unit/minimum nominal quantity at no cost."</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUp = new MMCode() {
+	public static final MMCode mmRoundUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
@@ -330,7 +330,7 @@ public class FractionDispositionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDown = new MMCode() {
+	public static final MMCode mmRoundDown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
@@ -364,7 +364,7 @@ public class FractionDispositionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RoundToNearest = new MMCode() {
+	public static final MMCode mmRoundToNearest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundToNearest";
@@ -395,7 +395,7 @@ public class FractionDispositionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IssueFraction = new MMCode() {
+	public static final MMCode mmIssueFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
@@ -425,7 +425,7 @@ public class FractionDispositionTypeV2Code {
 	 * definition} = "Do not pro-rate; discuss first."</li>
 	 * </ul>
 	 */
-	public static final MMCode DiscussFirst = new MMCode() {
+	public static final MMCode mmDiscussFirst = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscussFirst";
@@ -458,7 +458,7 @@ public class FractionDispositionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Specific = new MMCode() {
+	public static final MMCode mmSpecific = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Specific";
@@ -491,7 +491,7 @@ public class FractionDispositionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Standard = new MMCode() {
+	public static final MMCode mmStandard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
@@ -522,7 +522,7 @@ public class FractionDispositionTypeV2Code {
 	 * "Indicates that fractional value should be retained; no rounding."</li>
 	 * </ul>
 	 */
-	public static final MMCode Retain = new MMCode() {
+	public static final MMCode mmRetain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retain";
@@ -552,7 +552,7 @@ public class FractionDispositionTypeV2Code {
 	 * definition} = "Let fractions expire worthless."</li>
 	 * </ul>
 	 */
-	public static final MMCode Expire = new MMCode() {
+	public static final MMCode mmExpire = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expire";
@@ -583,7 +583,7 @@ public class FractionDispositionTypeV2Code {
 	 * "Characteristics of the disposition of fractions are unknown."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -596,21 +596,20 @@ public class FractionDispositionTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionTypeV2Code";
 				definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
 				previousVersion_lazy = () -> FractionDispositionTypeCode.mmObject();
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.FractionDispositionTypeV2Code.BuyUp, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.CashInLieuOfFraction,
-								com.tools20022.repository.codeset.FractionDispositionTypeV2Code.Full, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.NoFraction,
-								com.tools20022.repository.codeset.FractionDispositionTypeV2Code.ProRate, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.RoundUp,
-								com.tools20022.repository.codeset.FractionDispositionTypeV2Code.RoundDown, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.RoundToNearest,
-								com.tools20022.repository.codeset.FractionDispositionTypeV2Code.IssueFraction, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.DiscussFirst,
-								com.tools20022.repository.codeset.FractionDispositionTypeV2Code.Specific, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.Standard,
-								com.tools20022.repository.codeset.FractionDispositionTypeV2Code.Retain, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.Expire,
-								com.tools20022.repository.codeset.FractionDispositionTypeV2Code.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmBuyUp, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmCashInLieuOfFraction,
+						com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmFull, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmNoFraction,
+						com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmProRate, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmRoundUp,
+						com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmRoundDown, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmRoundToNearest,
+						com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmIssueFraction, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmDiscussFirst,
+						com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmSpecific, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmStandard,
+						com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmRetain, com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmExpire,
+						com.tools20022.repository.codeset.FractionDispositionTypeV2Code.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(FractionDispositionType10Code.mmObject(), FractionDispositionType11Code.mmObject(), FractionDispositionType8Code.mmObject(), FractionDispositionType9Code.mmObject());
 			}
 		});

@@ -31,13 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#Exceptional
- * ValuationTimingCode.Exceptional}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ValuationTimingCode#Usual
- * ValuationTimingCode.Usual}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#mmExceptional
+ * ValuationTimingCode.mmExceptional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#Particular
- * ValuationTimingCode.Particular}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#mmUsual
+ * ValuationTimingCode.mmUsual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#mmParticular
+ * ValuationTimingCode.mmParticular}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +98,7 @@ public class ValuationTimingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Exceptional = new MMCode() {
+	public static final MMCode mmExceptional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Exceptional";
@@ -129,7 +130,7 @@ public class ValuationTimingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Usual = new MMCode() {
+	public static final MMCode mmUsual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Usual";
@@ -163,7 +164,7 @@ public class ValuationTimingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Particular = new MMCode() {
+	public static final MMCode mmParticular = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Particular";
@@ -176,13 +177,13 @@ public class ValuationTimingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXCP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValuationTimingCode";
 				definition = "Specifies how the price valuation timing is done based on the timeline defined in the prospectus.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValuationTimingCode.Exceptional, com.tools20022.repository.codeset.ValuationTimingCode.Usual,
-						com.tools20022.repository.codeset.ValuationTimingCode.Particular);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValuationTimingCode.mmExceptional, com.tools20022.repository.codeset.ValuationTimingCode.mmUsual,
+						com.tools20022.repository.codeset.ValuationTimingCode.mmParticular);
 				derivation_lazy = () -> Arrays.asList(ValuationTiming1Code.mmObject());
 			}
 		});

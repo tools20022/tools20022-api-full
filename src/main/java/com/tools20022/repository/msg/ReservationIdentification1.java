@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#ReservationIdentification
- * ReservationIdentification1.ReservationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#mmReservationIdentification
+ * ReservationIdentification1.mmReservationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#SystemIdentification
- * ReservationIdentification1.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#mmSystemIdentification
+ * ReservationIdentification1.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#Type
- * ReservationIdentification1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#mmType
+ * ReservationIdentification1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#AccountOwner
- * ReservationIdentification1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#mmAccountOwner
+ * ReservationIdentification1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#AccountIdentification
- * ReservationIdentification1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#mmAccountIdentification
+ * ReservationIdentification1.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reservationIdentification;
 	/**
 	 * Unique identification of the reservation.
 	 * <p>
@@ -107,20 +108,21 @@ public class ReservationIdentification1 {
 	 * definition} = "Unique identification of the reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReservationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReservationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReservationIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
+			componentContext_lazy = () -> ReservationIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationIdentification";
 			definition = "Unique identification of the reservation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SystemIdentification2Choice systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -134,8 +136,8 @@ public class ReservationIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class ReservationIdentification1 {
 	 * definition} = "Identification of a particular cash clearing system. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> ReservationIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
 	};
+	protected ReservationType1Choice type;
 	/**
 	 * Nature of the reservation.
 	 * <p>
@@ -181,8 +184,8 @@ public class ReservationIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reservation#ReservationType
-	 * Reservation.ReservationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
+	 * Reservation.mmReservationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,20 +204,21 @@ public class ReservationIdentification1 {
 	 * definition} = "Nature of the reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.mmReservationType;
 			componentContext_lazy = () -> ReservationIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.ReservationType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the reservation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReservationType1Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountOwner;
 	/**
 	 * Owner of the account which is being queried.
 	 * <p>
@@ -227,8 +231,8 @@ public class ReservationIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,21 +251,22 @@ public class ReservationIdentification1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReservationIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -275,8 +280,8 @@ public class ReservationIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,34 +302,75 @@ public class ReservationIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> ReservationIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentification1.ReservationIdentification, com.tools20022.repository.msg.ReservationIdentification1.SystemIdentification,
-						com.tools20022.repository.msg.ReservationIdentification1.Type, com.tools20022.repository.msg.ReservationIdentification1.AccountOwner, com.tools20022.repository.msg.ReservationIdentification1.AccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentification1.mmReservationIdentification, com.tools20022.repository.msg.ReservationIdentification1.mmSystemIdentification,
+						com.tools20022.repository.msg.ReservationIdentification1.mmType, com.tools20022.repository.msg.ReservationIdentification1.mmAccountOwner,
+						com.tools20022.repository.msg.ReservationIdentification1.mmAccountIdentification);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReservationIdentification1";
 				definition = "Liquidity set aside by the account owner for specific purposes.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReservationIdentification() {
+		return reservationIdentification;
+	}
+
+	public void setReservationIdentification(Max35Text reservationIdentification) {
+		this.reservationIdentification = reservationIdentification;
+	}
+
+	public SystemIdentification2Choice getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(SystemIdentification2Choice systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public ReservationType1Choice getType() {
+		return type;
+	}
+
+	public void setType(ReservationType1Choice type) {
+		this.type = type;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public AccountIdentification4Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
 	}
 }

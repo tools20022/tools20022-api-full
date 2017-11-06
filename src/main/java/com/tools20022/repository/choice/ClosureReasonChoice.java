@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ClosureReasonChoice#Code
- * ClosureReasonChoice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ClosureReasonChoice#mmCode
+ * ClosureReasonChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClosureReasonChoice#ProprietaryReason
- * ClosureReasonChoice.ProprietaryReason}</li>
+ * {@linkplain com.tools20022.repository.choice.ClosureReasonChoice#mmProprietaryReason
+ * ClosureReasonChoice.mmProprietaryReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClosureReasonChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemClosureReason1Code code;
 	/**
 	 * Reason the system is closed/not operating.
 	 * <p>
@@ -91,7 +92,7 @@ public class ClosureReasonChoice {
 	 * definition} = "Reason the system is closed/not operating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClosureReasonChoice.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class ClosureReasonChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason the system is closed/not operating.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SystemClosureReason1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietaryReason;
 	/**
 	 * Type of closure reason is a bilaterally agreed code.
 	 * <p>
@@ -131,7 +133,7 @@ public class ClosureReasonChoice {
 	 * definition} = "Type of closure reason is a bilaterally agreed code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClosureReasonChoice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class ClosureReasonChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryReason";
 			definition = "Type of closure reason is a bilaterally agreed code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -148,14 +150,30 @@ public class ClosureReasonChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosureReasonChoice.Code, com.tools20022.repository.choice.ClosureReasonChoice.ProprietaryReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosureReasonChoice.mmCode, com.tools20022.repository.choice.ClosureReasonChoice.mmProprietaryReason);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClosureReasonChoice";
 				definition = "Closure reason is expressed as a code or a bilaterally agreed code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemClosureReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SystemClosureReason1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietaryReason() {
+		return proprietaryReason;
+	}
+
+	public void setProprietaryReason(Max35Text proprietaryReason) {
+		this.proprietaryReason = proprietaryReason;
 	}
 }

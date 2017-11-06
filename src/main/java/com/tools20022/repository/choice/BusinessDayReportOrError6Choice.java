@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.BusinessDay4;
 import com.tools20022.repository.msg.ErrorHandling4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between business day information details or a business error when the
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError6Choice#BusinessDayInformation
- * BusinessDayReportOrError6Choice.BusinessDayInformation}</li>
+ * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError6Choice#mmBusinessDayInformation
+ * BusinessDayReportOrError6Choice.mmBusinessDayInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError6Choice#BusinessError
- * BusinessDayReportOrError6Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError6Choice#mmBusinessError
+ * BusinessDayReportOrError6Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessDayReportOrError6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BusinessDay4 businessDayInformation;
 	/**
 	 * Requested system details for a specific business day.
 	 * <p>
@@ -93,11 +95,11 @@ public class BusinessDayReportOrError6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError2Choice#BusinessDayInformation
-	 * BusinessDayReportOrError2Choice.BusinessDayInformation}</li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError2Choice#mmBusinessDayInformation
+	 * BusinessDayReportOrError2Choice.mmBusinessDayInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessDayInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessDayInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDayReportOrError6Choice.mmObject();
 			isDerived = false;
@@ -105,13 +107,14 @@ public class BusinessDayReportOrError6Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDayInformation";
 			definition = "Requested system details for a specific business day.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError2Choice.BusinessDayInformation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError2Choice.mmBusinessDayInformation;
 			maxOccurs = 1;
-			type_lazy = () -> BusinessDay4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BusinessDay4.mmObject();
 		}
 	};
+	protected List<ErrorHandling4> businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -139,11 +142,11 @@ public class BusinessDayReportOrError6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError2Choice#BusinessError
-	 * BusinessDayReportOrError2Choice.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError2Choice#mmBusinessError
+	 * BusinessDayReportOrError2Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDayReportOrError6Choice.mmObject();
 			isDerived = false;
@@ -151,18 +154,18 @@ public class BusinessDayReportOrError6Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given. ";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError2Choice.BusinessError;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError2Choice.mmBusinessError;
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling4.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError6Choice.BusinessDayInformation, com.tools20022.repository.choice.BusinessDayReportOrError6Choice.BusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError6Choice.mmBusinessDayInformation, com.tools20022.repository.choice.BusinessDayReportOrError6Choice.mmBusinessError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BusinessDayReportOrError6Choice";
 				definition = "Choice between business day information details or a business error when the requested data cannot be retrieved.";
@@ -170,5 +173,21 @@ public class BusinessDayReportOrError6Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BusinessDay4 getBusinessDayInformation() {
+		return businessDayInformation;
+	}
+
+	public void setBusinessDayInformation(BusinessDay4 businessDayInformation) {
+		this.businessDayInformation = businessDayInformation;
+	}
+
+	public List<ErrorHandling4> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling4> businessError) {
+		this.businessError = businessError;
 	}
 }

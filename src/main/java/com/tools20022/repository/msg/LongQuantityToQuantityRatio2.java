@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongQuantityToQuantityRatio2#LongQuantity1
- * LongQuantityToQuantityRatio2.LongQuantity1}</li>
+ * {@linkplain com.tools20022.repository.msg.LongQuantityToQuantityRatio2#mmLongQuantity1
+ * LongQuantityToQuantityRatio2.mmLongQuantity1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongQuantityToQuantityRatio2#LongQuantity2
- * LongQuantityToQuantityRatio2.LongQuantity2}</li>
+ * {@linkplain com.tools20022.repository.msg.LongQuantityToQuantityRatio2#mmLongQuantity2
+ * LongQuantityToQuantityRatio2.mmLongQuantity2}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LongQuantityToQuantityRatio2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LongDecimalNumber longQuantity1;
 	/**
 	 * High precision numerator of the quotient of quantities.
 	 * <p>
@@ -75,8 +76,8 @@ public class LongQuantityToQuantityRatio2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#Quantity1
-	 * QuantityRatio.Quantity1}</li>
+	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmQuantity1
+	 * QuantityRatio.mmQuantity1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class LongQuantityToQuantityRatio2 {
 	 * definition} = "High precision numerator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LongQuantity1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLongQuantity1 = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmQuantity1;
 			componentContext_lazy = () -> LongQuantityToQuantityRatio2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuantityRatio.Quantity1;
 			isDerived = false;
 			xmlTag = "LngQty1";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongQuantity1";
 			definition = "High precision numerator of the quotient of quantities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LongDecimalNumber.mmObject();
 		}
 	};
+	protected LongDecimalNumber longQuantity2;
 	/**
 	 * High precision denominator of the quotient of quantities.
 	 * <p>
@@ -122,8 +124,8 @@ public class LongQuantityToQuantityRatio2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#Quantity2
-	 * QuantityRatio.Quantity2}</li>
+	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmQuantity2
+	 * QuantityRatio.mmQuantity2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class LongQuantityToQuantityRatio2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LongQuantity2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLongQuantity2 = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmQuantity2;
 			componentContext_lazy = () -> LongQuantityToQuantityRatio2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuantityRatio.Quantity2;
 			isDerived = false;
 			xmlTag = "LngQty2";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongQuantity2";
 			definition = "High precision denominator of the quotient of quantities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LongDecimalNumber.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class LongQuantityToQuantityRatio2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LongQuantityToQuantityRatio2.LongQuantity1, com.tools20022.repository.msg.LongQuantityToQuantityRatio2.LongQuantity2);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmLongQuantity1, com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmLongQuantity2);
 				trace_lazy = () -> QuantityRatio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LongQuantityToQuantityRatio2";
 				definition = "Ratio expressed as a quotient of quantities.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LongDecimalNumber getLongQuantity1() {
+		return longQuantity1;
+	}
+
+	public void setLongQuantity1(LongDecimalNumber longQuantity1) {
+		this.longQuantity1 = longQuantity1;
+	}
+
+	public LongDecimalNumber getLongQuantity2() {
+		return longQuantity2;
+	}
+
+	public void setLongQuantity2(LongDecimalNumber longQuantity2) {
+		this.longQuantity2 = longQuantity2;
 	}
 }

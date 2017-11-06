@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.*;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.text.DateFormat;
@@ -40,32 +41,32 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#SettledQuantity
- * QuantityAndAccount6.SettledQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmSettledQuantity
+ * QuantityAndAccount6.mmSettledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#PreviouslySettledQuantity
- * QuantityAndAccount6.PreviouslySettledQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmPreviouslySettledQuantity
+ * QuantityAndAccount6.mmPreviouslySettledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#RemainingToBeSettledQuantity
- * QuantityAndAccount6.RemainingToBeSettledQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmRemainingToBeSettledQuantity
+ * QuantityAndAccount6.mmRemainingToBeSettledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#PreviouslySettledAmount
- * QuantityAndAccount6.PreviouslySettledAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmPreviouslySettledAmount
+ * QuantityAndAccount6.mmPreviouslySettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#RemainingToBeSettledAmount
- * QuantityAndAccount6.RemainingToBeSettledAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmRemainingToBeSettledAmount
+ * QuantityAndAccount6.mmRemainingToBeSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#AccountOwner
- * QuantityAndAccount6.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmAccountOwner
+ * QuantityAndAccount6.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#SafekeepingAccount
- * QuantityAndAccount6.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmSafekeepingAccount
+ * QuantityAndAccount6.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#CashAccount
- * QuantityAndAccount6.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmCashAccount
+ * QuantityAndAccount6.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#SafekeepingPlace
- * QuantityAndAccount6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmSafekeepingPlace
+ * QuantityAndAccount6.mmSafekeepingPlace}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -76,15 +77,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#QuantityAndAccountDetails
- * SecuritiesFinancingConfirmationV01.QuantityAndAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#mmQuantityAndAccountDetails
+ * SecuritiesFinancingConfirmationV01.mmQuantityAndAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -101,6 +102,7 @@ import java.util.function.Supplier;
 public class QuantityAndAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity6Choice settledQuantity;
 	/**
 	 * Quantity of financial instrument effectively settled.
 	 * <p>
@@ -112,8 +114,8 @@ public class QuantityAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementQuantity
-	 * SecuritiesSettlement.SettlementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+	 * SecuritiesSettlement.mmSettlementQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -132,21 +134,22 @@ public class QuantityAndAccount6 {
 	 * definition} = "Quantity of financial instrument effectively settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettledQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementQuantity;
 			isDerived = false;
 			xmlTag = "SttldQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Quantity of financial instrument effectively settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Quantity6Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice previouslySettledQuantity;
 	/**
 	 * Quantity of financial instrument previously settled.
 	 * <p>
@@ -159,8 +162,8 @@ public class QuantityAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementQuantity
-	 * SecuritiesSettlement.SettlementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+	 * SecuritiesSettlement.mmSettlementQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,21 +182,22 @@ public class QuantityAndAccount6 {
 	 * definition} = "Quantity of financial instrument previously settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviouslySettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviouslySettledQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementQuantity;
 			isDerived = false;
 			xmlTag = "PrevslySttldQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledQuantity";
 			definition = "Quantity of financial instrument previously settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice remainingToBeSettledQuantity;
 	/**
 	 * Quantity of financial instrument remaining to be settled.
 	 * <p>
@@ -206,8 +210,8 @@ public class QuantityAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementQuantity
-	 * SecuritiesSettlement.SettlementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+	 * SecuritiesSettlement.mmSettlementQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -227,21 +231,22 @@ public class QuantityAndAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RemainingToBeSettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRemainingToBeSettledQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementQuantity;
 			isDerived = false;
 			xmlTag = "RmngToBeSttldQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingToBeSettledQuantity";
 			definition = "Quantity of financial instrument remaining to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected AmountAndDirection5 previouslySettledAmount;
 	/**
 	 * Amount of money previously settled.
 	 * <p>
@@ -253,8 +258,8 @@ public class QuantityAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -273,21 +278,22 @@ public class QuantityAndAccount6 {
 	 * definition} = "Amount of money previously settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviouslySettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviouslySettledAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "PrevslySttldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledAmount";
 			definition = "Amount of money previously settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
 		}
 	};
+	protected AmountAndDirection5 remainingToBeSettledAmount;
 	/**
 	 * Amount of money remaining to be settled.
 	 * <p>
@@ -299,8 +305,8 @@ public class QuantityAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -319,21 +325,22 @@ public class QuantityAndAccount6 {
 	 * definition} = "Amount of money remaining to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RemainingToBeSettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRemainingToBeSettledAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "RmngToBeSttldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingToBeSettledAmount";
 			definition = "Amount of money remaining to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
 		}
 	};
+	protected PartyIdentification13Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -346,8 +353,8 @@ public class QuantityAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -366,21 +373,22 @@ public class QuantityAndAccount6 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification13Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -412,21 +420,22 @@ public class QuantityAndAccount6 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected CashAccountIdentification5Choice cashAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -440,8 +449,8 @@ public class QuantityAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -460,20 +469,21 @@ public class QuantityAndAccount6 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormat3Choice safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -511,32 +521,32 @@ public class QuantityAndAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> QuantityAndAccount6.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount6.SettledQuantity, com.tools20022.repository.msg.QuantityAndAccount6.PreviouslySettledQuantity,
-						com.tools20022.repository.msg.QuantityAndAccount6.RemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount6.PreviouslySettledAmount,
-						com.tools20022.repository.msg.QuantityAndAccount6.RemainingToBeSettledAmount, com.tools20022.repository.msg.QuantityAndAccount6.AccountOwner, com.tools20022.repository.msg.QuantityAndAccount6.SafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount6.CashAccount, com.tools20022.repository.msg.QuantityAndAccount6.SafekeepingPlace);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount6.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount6.mmPreviouslySettledQuantity,
+						com.tools20022.repository.msg.QuantityAndAccount6.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount6.mmPreviouslySettledAmount,
+						com.tools20022.repository.msg.QuantityAndAccount6.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.QuantityAndAccount6.mmAccountOwner,
+						com.tools20022.repository.msg.QuantityAndAccount6.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount6.mmCashAccount, com.tools20022.repository.msg.QuantityAndAccount6.mmSafekeepingPlace);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmQuantityAndAccountDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.QuantityAndAccountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -550,5 +560,77 @@ public class QuantityAndAccount6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity6Choice getSettledQuantity() {
+		return settledQuantity;
+	}
+
+	public void setSettledQuantity(Quantity6Choice settledQuantity) {
+		this.settledQuantity = settledQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getPreviouslySettledQuantity() {
+		return previouslySettledQuantity;
+	}
+
+	public void setPreviouslySettledQuantity(FinancialInstrumentQuantity1Choice previouslySettledQuantity) {
+		this.previouslySettledQuantity = previouslySettledQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getRemainingToBeSettledQuantity() {
+		return remainingToBeSettledQuantity;
+	}
+
+	public void setRemainingToBeSettledQuantity(FinancialInstrumentQuantity1Choice remainingToBeSettledQuantity) {
+		this.remainingToBeSettledQuantity = remainingToBeSettledQuantity;
+	}
+
+	public AmountAndDirection5 getPreviouslySettledAmount() {
+		return previouslySettledAmount;
+	}
+
+	public void setPreviouslySettledAmount(com.tools20022.repository.msg.AmountAndDirection5 previouslySettledAmount) {
+		this.previouslySettledAmount = previouslySettledAmount;
+	}
+
+	public AmountAndDirection5 getRemainingToBeSettledAmount() {
+		return remainingToBeSettledAmount;
+	}
+
+	public void setRemainingToBeSettledAmount(com.tools20022.repository.msg.AmountAndDirection5 remainingToBeSettledAmount) {
+		this.remainingToBeSettledAmount = remainingToBeSettledAmount;
+	}
+
+	public PartyIdentification13Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification13Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public CashAccountIdentification5Choice getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(CashAccountIdentification5Choice cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat3Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
 	}
 }

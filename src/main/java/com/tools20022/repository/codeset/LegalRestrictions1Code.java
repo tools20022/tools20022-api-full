@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions1Code#USLegal144A
- * LegalRestrictions1Code.USLegal144A}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions1Code#mmUSLegal144A
+ * LegalRestrictions1Code.mmUSLegal144A}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions1Code#NoRestrictions
- * LegalRestrictions1Code.NoRestrictions}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions1Code#mmNoRestrictions
+ * LegalRestrictions1Code.mmNoRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions1Code#Restrictions
- * LegalRestrictions1Code.Restrictions}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions1Code#mmRestrictions
+ * LegalRestrictions1Code.mmRestrictions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class LegalRestrictions1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode USLegal144A = new MMCode() {
+	public static final MMCode mmUSLegal144A = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USLegal144A";
@@ -121,7 +121,7 @@ public class LegalRestrictions1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NoRestrictions = new MMCode() {
+	public static final MMCode mmNoRestrictions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NoRestrictions";
@@ -154,7 +154,7 @@ public class LegalRestrictions1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Restrictions = new MMCode() {
+	public static final MMCode mmRestrictions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Restrictions";
@@ -167,13 +167,13 @@ public class LegalRestrictions1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("USLE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LegalRestrictions1Code";
 				definition = "Specifies the regulatory restrictions applicable to a security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalRestrictions1Code.USLegal144A, com.tools20022.repository.codeset.LegalRestrictions1Code.NoRestrictions,
-						com.tools20022.repository.codeset.LegalRestrictions1Code.Restrictions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalRestrictions1Code.mmUSLegal144A, com.tools20022.repository.codeset.LegalRestrictions1Code.mmNoRestrictions,
+						com.tools20022.repository.codeset.LegalRestrictions1Code.mmRestrictions);
 			}
 		});
 		return mmObject_lazy.get();

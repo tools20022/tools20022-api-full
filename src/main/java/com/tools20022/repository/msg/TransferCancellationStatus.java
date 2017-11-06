@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus#Status
- * TransferCancellationStatus.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus#mmStatus
+ * TransferCancellationStatus.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus#AdditionalInformation
- * TransferCancellationStatus.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus#mmAdditionalInformation
+ * TransferCancellationStatus.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferCancellationStatus {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationStatus1Code status;
 	/**
 	 * Status of the transfer cancellation instruction.
 	 * <p>
@@ -76,8 +77,8 @@ public class TransferCancellationStatus {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#CancellationStatus
-	 * SecuritiesTradeStatus.CancellationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmCancellationStatus
+	 * SecuritiesTradeStatus.mmCancellationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class TransferCancellationStatus {
 	 * definition} = "Status of the transfer cancellation instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmCancellationStatus;
 			componentContext_lazy = () -> TransferCancellationStatus.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.CancellationStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the transfer cancellation instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancellationStatus1Code.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the status in textual form.
 	 * <p>
@@ -137,7 +139,7 @@ public class TransferCancellationStatus {
 	 * definition} = "Additional information about the status in textual form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferCancellationStatus.mmObject();
 			isDerived = false;
@@ -145,8 +147,8 @@ public class TransferCancellationStatus {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status in textual form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -154,14 +156,30 @@ public class TransferCancellationStatus {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationStatus.Status, com.tools20022.repository.msg.TransferCancellationStatus.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationStatus.mmStatus, com.tools20022.repository.msg.TransferCancellationStatus.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferCancellationStatus";
 				definition = "Cancellation status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(CancellationStatus1Code status) {
+		this.status = status;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

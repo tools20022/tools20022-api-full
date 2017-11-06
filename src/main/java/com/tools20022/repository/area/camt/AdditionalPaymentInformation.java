@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.PaymentComplementaryInformation;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
@@ -97,24 +98,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#Assignment
- * AdditionalPaymentInformation.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#mmAssignment
+ * AdditionalPaymentInformation.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#Case
- * AdditionalPaymentInformation.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#mmCase
+ * AdditionalPaymentInformation.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#Underlying
- * AdditionalPaymentInformation.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#mmUnderlying
+ * AdditionalPaymentInformation.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#Information
- * AdditionalPaymentInformation.Information}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#mmInformation
+ * AdditionalPaymentInformation.mmInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#identifier
- * AdditionalPaymentInformation.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.028.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,6 +129,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalPaymentInformation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies the assignment.
 	 * <p>
@@ -152,17 +152,18 @@ public class AdditionalPaymentInformation {
 	 * definition} = "Identifies the assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -184,17 +185,18 @@ public class AdditionalPaymentInformation {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected PaymentInstructionExtract underlying;
 	/**
 	 * Identifies the underlying payment instruction.
 	 * <p>
@@ -218,17 +220,18 @@ public class AdditionalPaymentInformation {
 	 * definition} = "Identifies the underlying payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the underlying payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 	};
+	protected PaymentComplementaryInformation information;
 	/**
 	 * Additional information to the underlying payment instruction.
 	 * <p>
@@ -253,42 +256,15 @@ public class AdditionalPaymentInformation {
 	 * "Additional information to the underlying payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Information = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Inf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Additional information to the underlying payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentComplementaryInformation.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "028"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "028";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -303,11 +279,50 @@ public class AdditionalPaymentInformation {
 				xmlTag = "camt.028.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.028.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AdditionalPaymentInformation.Assignment, com.tools20022.repository.area.camt.AdditionalPaymentInformation.Case,
-						com.tools20022.repository.area.camt.AdditionalPaymentInformation.Underlying, com.tools20022.repository.area.camt.AdditionalPaymentInformation.Information);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.AdditionalPaymentInformation.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmAssignment, com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmCase,
+						com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "028";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public PaymentInstructionExtract getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(PaymentInstructionExtract underlying) {
+		this.underlying = underlying;
+	}
+
+	public PaymentComplementaryInformation getInformation() {
+		return information;
+	}
+
+	public void setInformation(PaymentComplementaryInformation information) {
+		this.information = information;
 	}
 }

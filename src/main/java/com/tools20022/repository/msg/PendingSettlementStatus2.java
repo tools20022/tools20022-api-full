@@ -40,8 +40,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#ReasonOrExtendedOrDssOrNoSpecifiedReasonRule
- * PendingSettlementStatus2.ReasonOrExtendedOrDssOrNoSpecifiedReasonRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmReasonOrExtendedOrDssOrNoSpecifiedReasonRule
+ * PendingSettlementStatus2.mmReasonOrExtendedOrDssOrNoSpecifiedReasonRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,17 +49,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#Reason
- * PendingSettlementStatus2.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmReason
+ * PendingSettlementStatus2.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#ExtendedReason
- * PendingSettlementStatus2.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmExtendedReason
+ * PendingSettlementStatus2.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#DataSourceScheme
- * PendingSettlementStatus2.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmDataSourceScheme
+ * PendingSettlementStatus2.mmDataSourceScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#NoSpecifiedReason
- * PendingSettlementStatus2.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmNoSpecifiedReason
+ * PendingSettlementStatus2.mmNoSpecifiedReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,8 +69,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -93,6 +93,7 @@ import java.util.function.Supplier;
 public class PendingSettlementStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingSettlementStatusReason2Code reason;
 	/**
 	 * Reason for the settlement pending status.
 	 * <p>
@@ -106,8 +107,8 @@ public class PendingSettlementStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#PendingSettlementReason
-	 * SecuritiesTradeStatusReason.PendingSettlementReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmPendingSettlementReason
+	 * SecuritiesTradeStatusReason.mmPendingSettlementReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,27 +129,28 @@ public class PendingSettlementStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#Reason
-	 * PendingSettlementStatus3Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#mmReason
+	 * PendingSettlementStatus3Choice.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> PendingSettlementStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.PendingSettlementReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the settlement pending status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.Reason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PendingSettlementStatusReason2Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the settlement pending status.
 	 * <p>
@@ -179,13 +181,13 @@ public class PendingSettlementStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#ExtendedReason
-	 * PendingSettlementStatus3Choice.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#mmExtendedReason
+	 * PendingSettlementStatus3Choice.mmExtendedReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PendingSettlementStatus2.mmObject();
 			isDerived = false;
@@ -193,12 +195,13 @@ public class PendingSettlementStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the settlement pending status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.ExtendedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmExtendedReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the pending settlement
 	 * status.
@@ -211,8 +214,8 @@ public class PendingSettlementStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,28 +238,29 @@ public class PendingSettlementStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#DataSourceScheme
-	 * PendingSettlementStatus3Choice.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#mmDataSourceScheme
+	 * PendingSettlementStatus3Choice.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> PendingSettlementStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the pending settlement status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.DataSourceScheme);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmDataSourceScheme);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -269,8 +273,8 @@ public class PendingSettlementStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -292,24 +296,24 @@ public class PendingSettlementStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#NoSpecifiedReason
-	 * PendingSettlementStatus3Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingSettlementStatus3Choice#mmNoSpecifiedReason
+	 * PendingSettlementStatus3Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> PendingSettlementStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
@@ -323,17 +327,17 @@ public class PendingSettlementStatus2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#Reason
-	 * PendingSettlementStatus2.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmReason
+	 * PendingSettlementStatus2.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#ExtendedReason
-	 * PendingSettlementStatus2.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmExtendedReason
+	 * PendingSettlementStatus2.mmExtendedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#DataSourceScheme
-	 * PendingSettlementStatus2.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmDataSourceScheme
+	 * PendingSettlementStatus2.mmDataSourceScheme}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#NoSpecifiedReason
-	 * PendingSettlementStatus2.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingSettlementStatus2#mmNoSpecifiedReason
+	 * PendingSettlementStatus2.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -353,24 +357,24 @@ public class PendingSettlementStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonOrExtendedOrDssOrNoSpecifiedReasonRule = new MMXor() {
+	public static final MMXor mmReasonOrExtendedOrDssOrNoSpecifiedReasonRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedOrDssOrNoSpecifiedReasonRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme, NoSpecifiedReason) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingSettlementStatus2.Reason, com.tools20022.repository.msg.PendingSettlementStatus2.ExtendedReason,
-					com.tools20022.repository.msg.PendingSettlementStatus2.DataSourceScheme, com.tools20022.repository.msg.PendingSettlementStatus2.NoSpecifiedReason);
 			messageComponent_lazy = () -> PendingSettlementStatus2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingSettlementStatus2.mmReason, com.tools20022.repository.msg.PendingSettlementStatus2.mmExtendedReason,
+					com.tools20022.repository.msg.PendingSettlementStatus2.mmDataSourceScheme, com.tools20022.repository.msg.PendingSettlementStatus2.mmNoSpecifiedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingSettlementStatus2.Reason, com.tools20022.repository.msg.PendingSettlementStatus2.ExtendedReason,
-						com.tools20022.repository.msg.PendingSettlementStatus2.DataSourceScheme, com.tools20022.repository.msg.PendingSettlementStatus2.NoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingSettlementStatus2.mmReason, com.tools20022.repository.msg.PendingSettlementStatus2.mmExtendedReason,
+						com.tools20022.repository.msg.PendingSettlementStatus2.mmDataSourceScheme, com.tools20022.repository.msg.PendingSettlementStatus2.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -382,9 +386,41 @@ public class PendingSettlementStatus2 {
 				name = "PendingSettlementStatus2";
 				definition = "Reason for the pending settlement status.";
 				nextVersions_lazy = () -> Arrays.asList(PendingSettlementStatus3Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingSettlementStatus2.ReasonOrExtendedOrDssOrNoSpecifiedReasonRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingSettlementStatus2.mmReasonOrExtendedOrDssOrNoSpecifiedReasonRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingSettlementStatusReason2Code getReason() {
+		return reason;
+	}
+
+	public void setReason(PendingSettlementStatusReason2Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
 	}
 }

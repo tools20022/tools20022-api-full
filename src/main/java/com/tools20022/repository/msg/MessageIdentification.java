@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageIdentification#Identification
- * MessageIdentification.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageIdentification#mmIdentification
+ * MessageIdentification.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,54 +44,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#RelatedReference
- * MeetingEntitlementNotificationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#mmRelatedReference
+ * MeetingEntitlementNotificationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#RelatedReference
- * MeetingEntitlementNotificationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmRelatedReference
+ * MeetingEntitlementNotificationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#RelatedReference
- * MeetingEntitlementNotificationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#mmRelatedReference
+ * MeetingEntitlementNotificationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#PreviousReference
- * MeetingInstructionCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmPreviousReference
+ * MeetingInstructionCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#PreviousReference
- * MeetingInstructionCancellationRequestV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#mmPreviousReference
+ * MeetingInstructionCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#PreviousReference
- * MeetingInstructionCancellationRequestV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmPreviousReference
+ * MeetingInstructionCancellationRequestV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#InstructionIdentification
- * MeetingInstructionStatusV02.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#mmInstructionIdentification
+ * MeetingInstructionStatusV02.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#InstructionCancellationIdentification
- * MeetingInstructionStatusV02.InstructionCancellationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#mmInstructionCancellationIdentification
+ * MeetingInstructionStatusV02.mmInstructionCancellationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02#RelatedReference
- * MeetingVoteExecutionConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02#mmRelatedReference
+ * MeetingVoteExecutionConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03#RelatedReference
- * MeetingVoteExecutionConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03#mmRelatedReference
+ * MeetingVoteExecutionConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#RelatedReference
- * MeetingVoteExecutionConfirmationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmRelatedReference
+ * MeetingVoteExecutionConfirmationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#PreviousReference
- * MeetingInstructionCancellationRequestV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05#mmPreviousReference
+ * MeetingInstructionCancellationRequestV05.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#RelatedReference
- * MeetingVoteExecutionConfirmationV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#mmRelatedReference
+ * MeetingVoteExecutionConfirmationV05.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05#RelatedReference
- * MeetingEntitlementNotificationV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05#mmRelatedReference
+ * MeetingEntitlementNotificationV05.mmRelatedReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageIdentification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * String of characters that uniquely identifies a message.
 	 * <p>
@@ -134,7 +135,7 @@ public class MessageIdentification {
 	 * definition} = "String of characters that uniquely identifies a message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageIdentification.mmObject();
 			isDerived = false;
@@ -142,8 +143,8 @@ public class MessageIdentification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "String of characters that uniquely identifies a message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -151,20 +152,29 @@ public class MessageIdentification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification.Identification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.RelatedReference, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.RelatedReference,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.RelatedReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.PreviousReference,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.PreviousReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.PreviousReference,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.InstructionIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.InstructionCancellationIdentification,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.RelatedReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.RelatedReference,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.RelatedReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.PreviousReference,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.RelatedReference, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.RelatedReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmRelatedReference,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmRelatedReference, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmRelatedReference,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmPreviousReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmPreviousReference, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionCancellationIdentification, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.mmRelatedReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmRelatedReference,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.mmPreviousReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmRelatedReference,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmRelatedReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageIdentification";
 				definition = "Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

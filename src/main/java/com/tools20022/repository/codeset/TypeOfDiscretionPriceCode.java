@@ -30,26 +30,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#DisplayedPrice
- * TypeOfDiscretionPriceCode.DisplayedPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#mmDisplayedPrice
+ * TypeOfDiscretionPriceCode.mmDisplayedPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#MarketPrice
- * TypeOfDiscretionPriceCode.MarketPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#mmMarketPrice
+ * TypeOfDiscretionPriceCode.mmMarketPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#PrimaryPrice
- * TypeOfDiscretionPriceCode.PrimaryPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#mmPrimaryPrice
+ * TypeOfDiscretionPriceCode.mmPrimaryPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#LocalPrimaryPrice
- * TypeOfDiscretionPriceCode.LocalPrimaryPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#mmLocalPrimaryPrice
+ * TypeOfDiscretionPriceCode.mmLocalPrimaryPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#MidpointPrice
- * TypeOfDiscretionPriceCode.MidpointPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#mmMidpointPrice
+ * TypeOfDiscretionPriceCode.mmMidpointPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#VolumeWeightedAveragePrice
- * TypeOfDiscretionPriceCode.VolumeWeightedAveragePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#mmVolumeWeightedAveragePrice
+ * TypeOfDiscretionPriceCode.mmVolumeWeightedAveragePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#AveragePriceGuarantee
- * TypeOfDiscretionPriceCode.AveragePriceGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDiscretionPriceCode#mmAveragePriceGuarantee
+ * TypeOfDiscretionPriceCode.mmAveragePriceGuarantee}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -62,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +106,7 @@ public class TypeOfDiscretionPriceCode {
 	 * "Indicates that the offset value is related to displayed price."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisplayedPrice = new MMCode() {
+	public static final MMCode mmDisplayedPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayedPrice";
@@ -137,7 +137,7 @@ public class TypeOfDiscretionPriceCode {
 	 * "Indicates that the offset value is related to market price."</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPrice = new MMCode() {
+	public static final MMCode mmMarketPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
@@ -168,7 +168,7 @@ public class TypeOfDiscretionPriceCode {
 	 * "Indicates that the offset value is related to primary price."</li>
 	 * </ul>
 	 */
-	public static final MMCode PrimaryPrice = new MMCode() {
+	public static final MMCode mmPrimaryPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryPrice";
@@ -199,7 +199,7 @@ public class TypeOfDiscretionPriceCode {
 	 * "Indicates that the offset value is related to local primary price."</li>
 	 * </ul>
 	 */
-	public static final MMCode LocalPrimaryPrice = new MMCode() {
+	public static final MMCode mmLocalPrimaryPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalPrimaryPrice";
@@ -230,7 +230,7 @@ public class TypeOfDiscretionPriceCode {
 	 * "Indicates that the offset value is related to midpoint price."</li>
 	 * </ul>
 	 */
-	public static final MMCode MidpointPrice = new MMCode() {
+	public static final MMCode mmMidpointPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidpointPrice";
@@ -261,7 +261,7 @@ public class TypeOfDiscretionPriceCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode VolumeWeightedAveragePrice = new MMCode() {
+	public static final MMCode mmVolumeWeightedAveragePrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeWeightedAveragePrice";
@@ -292,7 +292,7 @@ public class TypeOfDiscretionPriceCode {
 	 * "Indicates that the offset value is related to average price guarantee."</li>
 	 * </ul>
 	 */
-	public static final MMCode AveragePriceGuarantee = new MMCode() {
+	public static final MMCode mmAveragePriceGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePriceGuarantee";
@@ -305,15 +305,15 @@ public class TypeOfDiscretionPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfDiscretionPriceCode";
 				definition = "Contains the type of price to which the discretion offset is related to.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.DisplayedPrice, com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.MarketPrice,
-						com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.PrimaryPrice, com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.LocalPrimaryPrice,
-						com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.MidpointPrice, com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.VolumeWeightedAveragePrice,
-						com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.AveragePriceGuarantee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.mmDisplayedPrice, com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.mmMarketPrice,
+						com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.mmPrimaryPrice, com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.mmLocalPrimaryPrice,
+						com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.mmMidpointPrice, com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.mmVolumeWeightedAveragePrice,
+						com.tools20022.repository.codeset.TypeOfDiscretionPriceCode.mmAveragePriceGuarantee);
 				derivation_lazy = () -> Arrays.asList(TypeOfDiscretionPrice1Code.mmObject());
 			}
 		});

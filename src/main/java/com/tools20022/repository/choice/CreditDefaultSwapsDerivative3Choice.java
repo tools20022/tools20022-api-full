@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#SingleNameCreditDefaultSwap
- * CreditDefaultSwapsDerivative3Choice.SingleNameCreditDefaultSwap}</li>
+ * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#mmSingleNameCreditDefaultSwap
+ * CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#CreditDefaultSwapIndex
- * CreditDefaultSwapsDerivative3Choice.CreditDefaultSwapIndex}</li>
+ * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#mmCreditDefaultSwapIndex
+ * CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#SingleNameCreditDefaultSwapDerivative
- * CreditDefaultSwapsDerivative3Choice.SingleNameCreditDefaultSwapDerivative}</li>
+ * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#mmSingleNameCreditDefaultSwapDerivative
+ * CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwapDerivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#CreditDefaultSwapIndexDerivative
- * CreditDefaultSwapsDerivative3Choice.CreditDefaultSwapIndexDerivative}</li>
+ * {@linkplain com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice#mmCreditDefaultSwapIndexDerivative
+ * CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditDefaultSwapsDerivative3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditDefaultSwapSingleName2 singleNameCreditDefaultSwap;
 	/**
 	 * A credit default swap on a single name instrument.
 	 * <p>
@@ -104,21 +105,22 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap on a single name instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SingleNameCreditDefaultSwap = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSingleNameCreditDefaultSwap = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
+			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglNmCdtDfltSwp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleNameCreditDefaultSwap";
 			definition = "A credit default swap on a single name instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
 		}
 	};
+	protected CreditDefaultSwapIndex2 creditDefaultSwapIndex;
 	/**
 	 * A credit default swap on an index.
 	 * <p>
@@ -151,21 +153,22 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap on an index."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditDefaultSwapIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditDefaultSwapIndex = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
+			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDfltSwpIndx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDefaultSwapIndex";
 			definition = "A credit default swap on an index.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CreditDefaultSwapIndex2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CreditDefaultSwapIndex2.mmObject();
 		}
 	};
+	protected CreditDefaultSwapDerivative4 singleNameCreditDefaultSwapDerivative;
 	/**
 	 * A credit default swap derivative on a single name.
 	 * <p>
@@ -198,21 +201,22 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap derivative on a single name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SingleNameCreditDefaultSwapDerivative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSingleNameCreditDefaultSwapDerivative = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
+			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglNmCdtDfltSwpDeriv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleNameCreditDefaultSwapDerivative";
 			definition = "A credit default swap derivative on a single name.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
 		}
 	};
+	protected CreditDefaultSwapDerivative3 creditDefaultSwapIndexDerivative;
 	/**
 	 * A credit default swap derivative on an index.
 	 * <p>
@@ -245,35 +249,67 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap derivative on an index."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditDefaultSwapIndexDerivative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditDefaultSwapIndexDerivative = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
+			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDfltSwpIndxDeriv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDefaultSwapIndexDerivative";
 			definition = "A credit default swap derivative on an index.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CreditDefaultSwapDerivative3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CreditDefaultSwapDerivative3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.SingleNameCreditDefaultSwap,
-						com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.CreditDefaultSwapIndex, com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.SingleNameCreditDefaultSwapDerivative,
-						com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.CreditDefaultSwapIndexDerivative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwap,
+						com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndex, com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwapDerivative,
+						com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative);
 				trace_lazy = () -> CreditDefaultSwap.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwapsDerivative3Choice";
 				definition = "Choice structure allowing a credit default swap derivative to be defined.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditDefaultSwapSingleName2 getSingleNameCreditDefaultSwap() {
+		return singleNameCreditDefaultSwap;
+	}
+
+	public void setSingleNameCreditDefaultSwap(CreditDefaultSwapSingleName2 singleNameCreditDefaultSwap) {
+		this.singleNameCreditDefaultSwap = singleNameCreditDefaultSwap;
+	}
+
+	public CreditDefaultSwapIndex2 getCreditDefaultSwapIndex() {
+		return creditDefaultSwapIndex;
+	}
+
+	public void setCreditDefaultSwapIndex(CreditDefaultSwapIndex2 creditDefaultSwapIndex) {
+		this.creditDefaultSwapIndex = creditDefaultSwapIndex;
+	}
+
+	public CreditDefaultSwapDerivative4 getSingleNameCreditDefaultSwapDerivative() {
+		return singleNameCreditDefaultSwapDerivative;
+	}
+
+	public void setSingleNameCreditDefaultSwapDerivative(CreditDefaultSwapDerivative4 singleNameCreditDefaultSwapDerivative) {
+		this.singleNameCreditDefaultSwapDerivative = singleNameCreditDefaultSwapDerivative;
+	}
+
+	public CreditDefaultSwapDerivative3 getCreditDefaultSwapIndexDerivative() {
+		return creditDefaultSwapIndexDerivative;
+	}
+
+	public void setCreditDefaultSwapIndexDerivative(CreditDefaultSwapDerivative3 creditDefaultSwapIndexDerivative) {
+		this.creditDefaultSwapIndexDerivative = creditDefaultSwapIndexDerivative;
 	}
 }

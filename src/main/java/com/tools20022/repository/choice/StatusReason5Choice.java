@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.StatusReason5Choice#Code
- * StatusReason5Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.StatusReason5Choice#mmCode
+ * StatusReason5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatusReason5Choice#Proprietary
- * StatusReason5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.StatusReason5Choice#mmProprietary
+ * StatusReason5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReason5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionRejectReason7Code code;
 	/**
 	 * Reason for the status in a coded form.
 	 * <p>
@@ -75,8 +76,8 @@ public class StatusReason5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#TransactionRejectionReason
-	 * PaymentStatus.TransactionRejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmTransactionRejectionReason
+	 * PaymentStatus.mmTransactionRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class StatusReason5Choice {
 	 * definition} = "Reason for the status in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> StatusReason5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.TransactionRejectionReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the status in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransactionRejectReason7Code.mmObject();
 		}
 	};
+	protected RestrictedRR01SL01CodeText proprietary;
 	/**
 	 * Reason for the status not catered for by the available codes.
 	 * <p>
@@ -122,8 +124,8 @@ public class StatusReason5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#TransactionRejectionReason
-	 * PaymentStatus.TransactionRejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmTransactionRejectionReason
+	 * PaymentStatus.mmTransactionRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class StatusReason5Choice {
 	 * "Reason for the status not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> StatusReason5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.TransactionRejectionReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the status not catered for by the available codes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedRR01SL01CodeText.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class StatusReason5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusReason5Choice.Code, com.tools20022.repository.choice.StatusReason5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusReason5Choice.mmCode, com.tools20022.repository.choice.StatusReason5Choice.mmProprietary);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusReason5Choice";
 				definition = "Reason for the status of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionRejectReason7Code getCode() {
+		return code;
+	}
+
+	public void setCode(TransactionRejectReason7Code code) {
+		this.code = code;
+	}
+
+	public RestrictedRR01SL01CodeText getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(RestrictedRR01SL01CodeText proprietary) {
+		this.proprietary = proprietary;
 	}
 }

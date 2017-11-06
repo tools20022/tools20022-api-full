@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,30 +66,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#Identification
- * MeetingEntitlementNotificationV03.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmIdentification
+ * MeetingEntitlementNotificationV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#RelatedReference
- * MeetingEntitlementNotificationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmRelatedReference
+ * MeetingEntitlementNotificationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#MeetingReference
- * MeetingEntitlementNotificationV03.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmMeetingReference
+ * MeetingEntitlementNotificationV03.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#NotifyingParty
- * MeetingEntitlementNotificationV03.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmNotifyingParty
+ * MeetingEntitlementNotificationV03.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#Security
- * MeetingEntitlementNotificationV03.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmSecurity
+ * MeetingEntitlementNotificationV03.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#Eligibility
- * MeetingEntitlementNotificationV03.Eligibility}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmEligibility
+ * MeetingEntitlementNotificationV03.mmEligibility}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#identifier
- * MeetingEntitlementNotificationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.003.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingEntitlementNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 identification;
 	/**
 	 * Identifies the notification of entitlement instruction.
 	 * <p>
@@ -139,17 +139,18 @@ public class MeetingEntitlementNotificationV03 {
 	 * definition} = "Identifies the notification of entitlement instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the notification of entitlement instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected MessageIdentification relatedReference;
 	/**
 	 * Identifies the meeting entitlement message to be modified.
 	 * <p>
@@ -174,17 +175,18 @@ public class MeetingEntitlementNotificationV03 {
 	 * "Identifies the meeting entitlement message to be modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Identifies the meeting entitlement message to be modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
 	};
+	protected MeetingReference4 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -208,17 +210,18 @@ public class MeetingEntitlementNotificationV03 {
 	 * definition} = "Series of elements which allow to identify a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference4.mmObject();
 		}
 	};
+	protected PartyIdentification9Choice notifyingParty;
 	/**
 	 * Party notifying the entitlement.
 	 * <p>
@@ -242,17 +245,18 @@ public class MeetingEntitlementNotificationV03 {
 	 * definition} = "Party notifying the entitlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotifyingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotifyingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtifngPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Party notifying the entitlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected List<SecurityPosition6> security;
 	/**
 	 * Identifies the security for which the meeting is organised, the account
 	 * and the positions of the security holder.
@@ -279,17 +283,18 @@ public class MeetingEntitlementNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Security = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Identifies the security for which the meeting is organised, the account and the positions of the security holder.";
-			minOccurs = 1;
 			maxOccurs = 200;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityPosition6.mmObject();
 		}
 	};
+	protected EligibilityDates1 eligibility;
 	/**
 	 * Defines the dates determining eligibility.
 	 * <p>
@@ -313,42 +318,15 @@ public class MeetingEntitlementNotificationV03 {
 	 * definition} = "Defines the dates determining eligibility."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Eligibility = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEligibility = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Elgblty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligibility";
 			definition = "Defines the dates determining eligibility.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> EligibilityDates1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "003";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -358,18 +336,74 @@ public class MeetingEntitlementNotificationV03 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingEntitlementNotificationV03";
 				definition = "Scope\r\nAn account servicer sends the MeetingEntitlementNotification to an issuer, its agent, an intermediary or an account owner to advise the entitlement in relation to a shareholders meeting.\r\nUsage\r\nThis message is sent to advise the quantity of securities held by an account owner. The balance is specified for the securities for which the meeting is taking place.\r\nThis entitlement message is sent by the account servicer or the registrar to an intermediary, the issuer's agent or the issuer. It is also sent between the account servicer and the account owner or the party holding the right to vote.\r\nThe message is also used to amend a previously sent MeetingEntitlementNotification. To notify an update, the RelatedReference must be included in the message.";
-				previousVersion_lazy = () -> MeetingEntitlementNotificationV02.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV04.mmObject());
+				previousVersion_lazy = () -> MeetingEntitlementNotificationV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "MtgEntitlmntNtfctn";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.Identification, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.RelatedReference,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.MeetingReference, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.NotifyingParty,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.Security, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.Eligibility);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmRelatedReference, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmEligibility);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "003";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(MessageIdentification1 identification) {
+		this.identification = identification;
+	}
+
+	public MessageIdentification getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(MessageIdentification relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public MeetingReference4 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference4 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public PartyIdentification9Choice getNotifyingParty() {
+		return notifyingParty;
+	}
+
+	public void setNotifyingParty(PartyIdentification9Choice notifyingParty) {
+		this.notifyingParty = notifyingParty;
+	}
+
+	public List<SecurityPosition6> getSecurity() {
+		return security;
+	}
+
+	public void setSecurity(List<SecurityPosition6> security) {
+		this.security = security;
+	}
+
+	public EligibilityDates1 getEligibility() {
+		return eligibility;
+	}
+
+	public void setEligibility(EligibilityDates1 eligibility) {
+		this.eligibility = eligibility;
 	}
 }

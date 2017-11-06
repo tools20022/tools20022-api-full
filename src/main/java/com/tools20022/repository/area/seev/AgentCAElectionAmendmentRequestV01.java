@@ -64,33 +64,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#Identification
- * AgentCAElectionAmendmentRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmIdentification
+ * AgentCAElectionAmendmentRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#AgentCAElectionAdviceIdentification
- * AgentCAElectionAmendmentRequestV01.AgentCAElectionAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#CorporateActionGeneralInformation
- * AgentCAElectionAmendmentRequestV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmCorporateActionGeneralInformation
+ * AgentCAElectionAmendmentRequestV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#AccountDetails
- * AgentCAElectionAmendmentRequestV01.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmAccountDetails
+ * AgentCAElectionAmendmentRequestV01.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#OriginalElectionDetails
- * AgentCAElectionAmendmentRequestV01.OriginalElectionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmOriginalElectionDetails
+ * AgentCAElectionAmendmentRequestV01.mmOriginalElectionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#AmendedElectionDetails
- * AgentCAElectionAmendmentRequestV01.AmendedElectionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmAmendedElectionDetails
+ * AgentCAElectionAmendmentRequestV01.mmAmendedElectionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#ContactDetails
- * AgentCAElectionAmendmentRequestV01.ContactDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#mmContactDetails
+ * AgentCAElectionAmendmentRequestV01.mmContactDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01#identifier
- * AgentCAElectionAmendmentRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.013.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCAElectionAmendmentRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * request.
@@ -132,17 +131,18 @@ public class AgentCAElectionAmendmentRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
 	 * Identification of the linked Agent CA Election Advice for which an
 	 * amendment is requested.
@@ -169,17 +169,18 @@ public class AgentCAElectionAmendmentRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAElctnAdvcId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionAdviceIdentification";
 			definition = "Identification of the linked Agent CA Election Advice for which an amendment is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -203,17 +204,18 @@ public class AgentCAElectionAmendmentRequestV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected SecuritiesAccount7 accountDetails;
 	/**
 	 * Provides information about the account.
 	 * <p>
@@ -237,17 +239,18 @@ public class AgentCAElectionAmendmentRequestV01 {
 	 * definition} = "Provides information about the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount7.mmObject();
 		}
 	};
+	protected CorporateActionElection1 originalElectionDetails;
 	/**
 	 * Provides information about the original election to be amended.
 	 * <p>
@@ -272,17 +275,18 @@ public class AgentCAElectionAmendmentRequestV01 {
 	 * "Provides information about the original election to be amended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalElectionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalElectionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlElctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalElectionDetails";
 			definition = "Provides information about the original election to be amended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionElection1.mmObject();
 		}
 	};
+	protected CorporateActionElection2 amendedElectionDetails;
 	/**
 	 * Provides information about the amendments to the election.
 	 * <p>
@@ -307,17 +311,18 @@ public class AgentCAElectionAmendmentRequestV01 {
 	 * "Provides information about the amendments to the election."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AmendedElectionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAmendedElectionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AmddElctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendedElectionDetails";
 			definition = "Provides information about the amendments to the election.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionElection2.mmObject();
 		}
 	};
+	protected ContactPerson1 contactDetails;
 	/**
 	 * Contact responsible for the transaction identified in the message.
 	 * <p>
@@ -341,42 +346,15 @@ public class AgentCAElectionAmendmentRequestV01 {
 	 * "Contact responsible for the transaction identified in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContactDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContactDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Contact responsible for the transaction identified in the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContactPerson1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "013";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -390,13 +368,77 @@ public class AgentCAElectionAmendmentRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAElctnAmdmntReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.AgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.AccountDetails, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.OriginalElectionDetails,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.AmendedElectionDetails, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.ContactDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAccountDetails,
+						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmOriginalElectionDetails, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAmendedElectionDetails,
+						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmContactDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "013";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
+		return agentCAElectionAdviceIdentification;
+	}
+
+	public void setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
+		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public SecuritiesAccount7 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(SecuritiesAccount7 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public CorporateActionElection1 getOriginalElectionDetails() {
+		return originalElectionDetails;
+	}
+
+	public void setOriginalElectionDetails(CorporateActionElection1 originalElectionDetails) {
+		this.originalElectionDetails = originalElectionDetails;
+	}
+
+	public CorporateActionElection2 getAmendedElectionDetails() {
+		return amendedElectionDetails;
+	}
+
+	public void setAmendedElectionDetails(CorporateActionElection2 amendedElectionDetails) {
+		this.amendedElectionDetails = amendedElectionDetails;
+	}
+
+	public ContactPerson1 getContactDetails() {
+		return contactDetails;
+	}
+
+	public void setContactDetails(ContactPerson1 contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 }

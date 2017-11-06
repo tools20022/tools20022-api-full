@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#Pending
- * SettlementStatus9Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#mmPending
+ * SettlementStatus9Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#Failing
- * SettlementStatus9Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#mmFailing
+ * SettlementStatus9Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#Proprietary
- * SettlementStatus9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#mmProprietary
+ * SettlementStatus9Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#SettlementStatus
- * IntraPositionMovementStatusAdviceV03.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#mmSettlementStatus
+ * IntraPositionMovementStatusAdviceV03.mmSettlementStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementStatus9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingStatus12Choice pending;
 	/**
 	 * Instruction is pending. Settlement at the instructed settlement date is
 	 * still possible.
@@ -122,28 +123,29 @@ public class SettlementStatus9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#Pending
-	 * SettlementStatus16Choice.Pending}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#mmPending
+	 * SettlementStatus16Choice.mmPending}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementStatus9Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> SettlementStatus9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Instruction is pending. Settlement at the instructed settlement date is still possible.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus16Choice.Pending);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus16Choice.mmPending);
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatus12Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingStatus12Choice.mmObject();
 		}
 	};
+	protected FailingStatus4Choice failing;
 	/**
 	 * Instruction is failing. Settlement at the instructed settlement date is
 	 * no longer possible.
@@ -181,28 +183,29 @@ public class SettlementStatus9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#Failing
-	 * SettlementStatus16Choice.Failing}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#mmFailing
+	 * SettlementStatus16Choice.mmFailing}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Failing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFailing = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementStatus9Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> SettlementStatus9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Flng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
 			definition = "Instruction is failing. Settlement at the instructed settlement date is no longer possible.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus16Choice.Failing);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus16Choice.mmFailing);
 			maxOccurs = 1;
-			type_lazy = () -> FailingStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FailingStatus4Choice.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason1 proprietary;
 	/**
 	 * Proprietary status.
 	 * <p>
@@ -237,44 +240,68 @@ public class SettlementStatus9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#Proprietary
-	 * SettlementStatus16Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#mmProprietary
+	 * SettlementStatus16Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementStatus9Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> SettlementStatus9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus16Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus16Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus9Choice.Pending, com.tools20022.repository.choice.SettlementStatus9Choice.Failing,
-						com.tools20022.repository.choice.SettlementStatus9Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus9Choice.mmPending, com.tools20022.repository.choice.SettlementStatus9Choice.mmFailing,
+						com.tools20022.repository.choice.SettlementStatus9Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmSettlementStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.SettlementStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus9Choice";
 				definition = "Choice of format for the settlement status.";
-				previousVersion_lazy = () -> SettlementStatus2Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SettlementStatus16Choice.mmObject());
+				previousVersion_lazy = () -> SettlementStatus2Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingStatus12Choice getPending() {
+		return pending;
+	}
+
+	public void setPending(com.tools20022.repository.choice.PendingStatus12Choice pending) {
+		this.pending = pending;
+	}
+
+	public FailingStatus4Choice getFailing() {
+		return failing;
+	}
+
+	public void setFailing(com.tools20022.repository.choice.FailingStatus4Choice failing) {
+		this.failing = failing;
+	}
+
+	public ProprietaryStatusAndReason1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(ProprietaryStatusAndReason1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

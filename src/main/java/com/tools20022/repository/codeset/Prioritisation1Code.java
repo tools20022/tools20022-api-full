@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * PrioritisationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Prioritisation1Code#None
- * Prioritisation1Code.None}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Prioritisation1Code#mmNone
+ * Prioritisation1Code.mmNone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#BuySide
- * Prioritisation1Code.BuySide}</li>
+ * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#mmBuySide
+ * Prioritisation1Code.mmBuySide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#SellSide
- * Prioritisation1Code.SellSide}</li>
+ * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#mmSellSide
+ * Prioritisation1Code.mmSellSide}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -107,7 +107,7 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 * name} = "BuySide"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuySide = new MMCode() {
+	public static final MMCode mmBuySide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySide";
@@ -130,7 +130,7 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 * name} = "SellSide"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellSide = new MMCode() {
+	public static final MMCode mmSellSide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellSide";
@@ -141,12 +141,13 @@ public class Prioritisation1Code extends PrioritisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NONE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Prioritisation1Code";
 				definition = "Indicates if one side or the other of a cross order should be prioritized.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Prioritisation1Code.None, com.tools20022.repository.codeset.Prioritisation1Code.BuySide, com.tools20022.repository.codeset.Prioritisation1Code.SellSide);
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.Prioritisation1Code.mmNone, com.tools20022.repository.codeset.Prioritisation1Code.mmBuySide, com.tools20022.repository.codeset.Prioritisation1Code.mmSellSide);
 				trace_lazy = () -> PrioritisationCode.mmObject();
 			}
 		});

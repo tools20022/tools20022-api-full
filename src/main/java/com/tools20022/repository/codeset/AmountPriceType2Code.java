@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountPriceType2Code#ActualAmount
- * AmountPriceType2Code.ActualAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceType2Code#mmActualAmount
+ * AmountPriceType2Code.mmActualAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class AmountPriceType2Code extends AmountPriceTypeCode {
 	 * name} = "ActualAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ActualAmount = new MMCode() {
+	public static final MMCode mmActualAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
@@ -89,12 +89,12 @@ public class AmountPriceType2Code extends AmountPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountPriceType2Code";
 				definition = "Specifies the amount price type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceType2Code.ActualAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceType2Code.mmActualAmount);
 				trace_lazy = () -> AmountPriceTypeCode.mmObject();
 			}
 		});

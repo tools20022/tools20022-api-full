@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#Confirmation
- * ConfirmationRequest1Code.Confirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#mmConfirmation
+ * ConfirmationRequest1Code.mmConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#ConfirmationRequestRejected
- * ConfirmationRequest1Code.ConfirmationRequestRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#mmConfirmationRequestRejected
+ * ConfirmationRequest1Code.mmConfirmationRequestRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#Status
- * ConfirmationRequest1Code.Status}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#mmStatus
+ * ConfirmationRequest1Code.mmStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 * name} = "Confirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmation = new MMCode() {
+	public static final MMCode mmConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
@@ -101,7 +101,7 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 * name} = "ConfirmationRequestRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationRequestRejected = new MMCode() {
+	public static final MMCode mmConfirmationRequestRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationRequestRejected";
@@ -124,7 +124,7 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 * name} = "Status"</li>
 	 * </ul>
 	 */
-	public static final MMCode Status = new MMCode() {
+	public static final MMCode mmStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
@@ -135,12 +135,12 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationRequest1Code";
 				definition = "Identifies the type of confirmation message being sent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationRequest1Code.Confirmation, com.tools20022.repository.codeset.ConfirmationRequest1Code.ConfirmationRequestRejected,
-						com.tools20022.repository.codeset.ConfirmationRequest1Code.Status);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationRequest1Code.mmConfirmation, com.tools20022.repository.codeset.ConfirmationRequest1Code.mmConfirmationRequestRejected,
+						com.tools20022.repository.codeset.ConfirmationRequest1Code.mmStatus);
 				trace_lazy = () -> ConfirmationRequestCode.mmObject();
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max9NumericText;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Summary details about CBRF electronic informational message in the report.
@@ -35,25 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageDetails1#ReportIdentification
- * MessageDetails1.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageDetails1#mmReportIdentification
+ * MessageDetails1.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageDetails1#ReportPagination
- * MessageDetails1.ReportPagination}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageDetails1#mmReportPagination
+ * MessageDetails1.mmReportPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageDetails1#TotalNumberOfEntries
- * MessageDetails1.TotalNumberOfEntries}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MessageDetails1#SentEntry
- * MessageDetails1.SentEntry}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MessageDetails1#ReceivedEntry
- * MessageDetails1.ReceivedEntry}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageDetails1#mmTotalNumberOfEntries
+ * MessageDetails1.mmTotalNumberOfEntries}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageDetails1#mmSentEntry
+ * MessageDetails1.mmSentEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MessageDetails1#mmReceivedEntry
+ * MessageDetails1.mmReceivedEntry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reportIdentification;
 	/**
 	 * Unique identification assigned by the CBR payment system to unambiguously
 	 * identify the report.
@@ -98,7 +101,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
@@ -106,11 +109,12 @@ public class MessageDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification assigned by the CBR payment system to unambiguously identify the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Pagination reportPagination;
 	/**
 	 * Page number of the message and continuation indicator to indicate that
 	 * the multi-parts notification is to continue or that the message is the
@@ -140,7 +144,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportPagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportPagination = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
@@ -148,12 +152,13 @@ public class MessageDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPagination";
 			definition = "Page number of the message and  continuation indicator to indicate that the multi-parts notification is to continue or that the message is the last page of the multi-parts notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Pagination.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	protected Max9NumericText totalNumberOfEntries;
 	/**
 	 * Number of entries in the pool.
 	 * <p>
@@ -182,7 +187,7 @@ public class MessageDetails1 {
 	 * definition} = "Number of entries in the pool."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfEntries = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfEntries = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
@@ -190,11 +195,12 @@ public class MessageDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfEntries";
 			definition = "Number of entries in the pool.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CBRFReportEntry1> sentEntry;
 	/**
 	 * Set of elements used to provide details of the report of sent messages.
 	 * <p>
@@ -223,7 +229,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SentEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSentEntry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
@@ -232,10 +238,11 @@ public class MessageDetails1 {
 			name = "SentEntry";
 			definition = "Set of elements used to provide details of the report of sent messages.";
 			minOccurs = 0;
-			type_lazy = () -> CBRFReportEntry1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CBRFReportEntry1> receivedEntry;
 	/**
 	 * Set of elements used to provide details of the report of received
 	 * messages.
@@ -265,7 +272,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivedEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivedEntry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
@@ -274,22 +281,62 @@ public class MessageDetails1 {
 			name = "ReceivedEntry";
 			definition = "Set of elements used to provide details of the report of received messages.";
 			minOccurs = 0;
-			type_lazy = () -> CBRFReportEntry1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageDetails1.ReportIdentification, com.tools20022.repository.msg.MessageDetails1.ReportPagination,
-						com.tools20022.repository.msg.MessageDetails1.TotalNumberOfEntries, com.tools20022.repository.msg.MessageDetails1.SentEntry, com.tools20022.repository.msg.MessageDetails1.ReceivedEntry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageDetails1.mmReportIdentification, com.tools20022.repository.msg.MessageDetails1.mmReportPagination,
+						com.tools20022.repository.msg.MessageDetails1.mmTotalNumberOfEntries, com.tools20022.repository.msg.MessageDetails1.mmSentEntry, com.tools20022.repository.msg.MessageDetails1.mmReceivedEntry);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MessageDetails1";
 				definition = "Summary details about CBRF electronic informational message in the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public Pagination getReportPagination() {
+		return reportPagination;
+	}
+
+	public void setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
+		this.reportPagination = reportPagination;
+	}
+
+	public Max9NumericText getTotalNumberOfEntries() {
+		return totalNumberOfEntries;
+	}
+
+	public void setTotalNumberOfEntries(Max9NumericText totalNumberOfEntries) {
+		this.totalNumberOfEntries = totalNumberOfEntries;
+	}
+
+	public List<CBRFReportEntry1> getSentEntry() {
+		return sentEntry;
+	}
+
+	public void setSentEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> sentEntry) {
+		this.sentEntry = sentEntry;
+	}
+
+	public List<CBRFReportEntry1> getReceivedEntry() {
+		return receivedEntry;
+	}
+
+	public void setReceivedEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> receivedEntry) {
+		this.receivedEntry = receivedEntry;
 	}
 }

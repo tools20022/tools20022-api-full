@@ -43,21 +43,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#Product
- * ProductCharacteristics.Product}</li>
+ * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmProduct
+ * ProductCharacteristics.mmProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#Characteristics
- * ProductCharacteristics.Characteristics}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductCharacteristics#Type
- * ProductCharacteristics.Type}</li>
+ * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmCharacteristics
+ * ProductCharacteristics.mmCharacteristics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmType
+ * ProductCharacteristics.mmType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Characteristics
- * Product.Characteristics}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmCharacteristics
+ * Product.mmCharacteristics}</li>
  * </ul>
  * </li>
  * <li>
@@ -65,11 +66,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#StructuredProductCharacteristics
- * ProductCharacteristics1Choice.StructuredProductCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#mmStructuredProductCharacteristics
+ * ProductCharacteristics1Choice.mmStructuredProductCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#OtherProductCharacteristics
- * ProductCharacteristics1Choice.OtherProductCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#mmOtherProductCharacteristics
+ * ProductCharacteristics1Choice.mmOtherProductCharacteristics}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductCharacteristics {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Product product;
 	/**
 	 * Specifies the product for which characteristics are specified.
 	 * <p>
@@ -113,8 +115,8 @@ public class ProductCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Product#Characteristics
-	 * Product.Characteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmCharacteristics
+	 * Product.mmCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -138,20 +140,21 @@ public class ProductCharacteristics {
 	 * "Specifies the product for which characteristics are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Product = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ProductCharacteristics.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Product";
 			definition = "Specifies the product for which characteristics are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Product.Characteristics;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmCharacteristics;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
 	};
+	protected Max35Text characteristics;
 	/**
 	 * Specifies the characteristic of a product.
 	 * <p>
@@ -161,25 +164,25 @@ public class ProductCharacteristics {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics1#Characteristics
-	 * ProductCharacteristics1.Characteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics2#Characteristic
-	 * ProductCharacteristics2.Characteristic}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics3#Characteristic
-	 * ProductCharacteristics3.Characteristic}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics
 	 * ProductCharacteristics}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics1#mmCharacteristics
+	 * ProductCharacteristics1.mmCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics2#mmCharacteristic
+	 * ProductCharacteristics2.mmCharacteristic}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics3#mmCharacteristic
+	 * ProductCharacteristics3.mmCharacteristic}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -191,20 +194,21 @@ public class ProductCharacteristics {
 	 * definition} = "Specifies the characteristic of a product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Characteristics = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCharacteristics = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics1.Characteristics, com.tools20022.repository.msg.ProductCharacteristics2.Characteristic,
-					com.tools20022.repository.msg.ProductCharacteristics3.Characteristic);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics1.mmCharacteristics, com.tools20022.repository.msg.ProductCharacteristics2.mmCharacteristic,
+					com.tools20022.repository.msg.ProductCharacteristics3.mmCharacteristic);
 			elementContext_lazy = () -> ProductCharacteristics.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Characteristics";
 			definition = "Specifies the characteristic of a product.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ProductCharacteristicsCode type;
 	/**
 	 * Specifies the type of product characteristic by means of a code.
 	 * <p>
@@ -215,19 +219,19 @@ public class ProductCharacteristics {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ProductCharacteristicsCode
 	 * ProductCharacteristicsCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics1#Type
-	 * ProductCharacteristics1.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics
 	 * ProductCharacteristics}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics1#mmType
+	 * ProductCharacteristics1.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -240,16 +244,16 @@ public class ProductCharacteristics {
 	 * "Specifies the type of product characteristic by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics1.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics1.mmType);
 			elementContext_lazy = () -> ProductCharacteristics.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of product characteristic by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProductCharacteristicsCode.mmObject();
 		}
 	};
@@ -257,18 +261,42 @@ public class ProductCharacteristics {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics";
 				definition = "Identifies the characteristic of a product.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.Characteristics);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCharacteristics1Choice.StructuredProductCharacteristics,
-						com.tools20022.repository.choice.ProductCharacteristics1Choice.OtherProductCharacteristics);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductCharacteristics.Product, com.tools20022.repository.entity.ProductCharacteristics.Characteristics,
-						com.tools20022.repository.entity.ProductCharacteristics.Type);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmCharacteristics);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCharacteristics1Choice.mmStructuredProductCharacteristics,
+						com.tools20022.repository.choice.ProductCharacteristics1Choice.mmOtherProductCharacteristics);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductCharacteristics.mmProduct, com.tools20022.repository.entity.ProductCharacteristics.mmCharacteristics,
+						com.tools20022.repository.entity.ProductCharacteristics.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(ProductCharacteristics1.mmObject(), ProductCharacteristics1Choice.mmObject(), ProductCharacteristics2.mmObject(), ProductCharacteristics3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(com.tools20022.repository.entity.Product product) {
+		this.product = product;
+	}
+
+	public Max35Text getCharacteristics() {
+		return characteristics;
+	}
+
+	public void setCharacteristics(Max35Text characteristics) {
+		this.characteristics = characteristics;
+	}
+
+	public ProductCharacteristicsCode getType() {
+		return type;
+	}
+
+	public void setType(ProductCharacteristicsCode type) {
+		this.type = type;
 	}
 }

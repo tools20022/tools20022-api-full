@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice#Code
- * AdditionalBusinessProcessFormat7Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice#mmCode
+ * AdditionalBusinessProcessFormat7Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice#Proprietary
- * AdditionalBusinessProcessFormat7Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice#mmProprietary
+ * AdditionalBusinessProcessFormat7Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalBusinessProcessFormat7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalBusinessProcess4Code code;
 	/**
 	 * Standard code to specify the additional business process "tax refund"
 	 * linked to a corporate action event.
@@ -93,8 +94,8 @@ public class AdditionalBusinessProcessFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AdditionalBusinessProcess
-	 * CorporateActionEvent.AdditionalBusinessProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAdditionalBusinessProcess
+	 * CorporateActionEvent.mmAdditionalBusinessProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,27 +118,28 @@ public class AdditionalBusinessProcessFormat7Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice#Code
-	 * AdditionalBusinessProcessFormat11Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice#mmCode
+	 * AdditionalBusinessProcessFormat11Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> AdditionalBusinessProcessFormat7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AdditionalBusinessProcess;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the additional business process \"tax refund\" linked to a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the additional business process
 	 * "tax refund" linked to a corporate action event.
@@ -151,8 +153,8 @@ public class AdditionalBusinessProcessFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AdditionalBusinessProcess
-	 * CorporateActionEvent.AdditionalBusinessProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAdditionalBusinessProcess
+	 * CorporateActionEvent.mmAdditionalBusinessProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -175,42 +177,58 @@ public class AdditionalBusinessProcessFormat7Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice#Proprietary
-	 * AdditionalBusinessProcessFormat11Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice#mmProprietary
+	 * AdditionalBusinessProcessFormat11Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> AdditionalBusinessProcessFormat7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AdditionalBusinessProcess;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the additional business process \"tax refund\" linked to a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice.Code, com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcessFormat7Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of the additional business process, that is, a tax refund.";
-				previousVersion_lazy = () -> AdditionalBusinessProcessFormat3Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat11Choice.mmObject());
+				previousVersion_lazy = () -> AdditionalBusinessProcessFormat3Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalBusinessProcess4Code getCode() {
+		return code;
+	}
+
+	public void setCode(AdditionalBusinessProcess4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

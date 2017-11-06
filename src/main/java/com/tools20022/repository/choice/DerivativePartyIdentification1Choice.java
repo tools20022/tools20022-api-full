@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#Country
- * DerivativePartyIdentification1Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#mmCountry
+ * DerivativePartyIdentification1Choice.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#CountrySubDivision
- * DerivativePartyIdentification1Choice.CountrySubDivision}</li>
+ * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#mmCountrySubDivision
+ * DerivativePartyIdentification1Choice.mmCountrySubDivision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#LEI
- * DerivativePartyIdentification1Choice.LEI}</li>
+ * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#mmLEI
+ * DerivativePartyIdentification1Choice.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DerivativePartyIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country of the reference entity.
 	 * <p>
@@ -82,8 +83,8 @@ public class DerivativePartyIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Country
-	 * PostalAddress.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+	 * PostalAddress.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class DerivativePartyIdentification1Choice {
 	 * definition} = "Country of the reference entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
 			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Country;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country of the reference entity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountrySubDivisionCode countrySubDivision;
 	/**
 	 * Country and country sub-division of the reference entity.
 	 * <p>
@@ -129,8 +131,8 @@ public class DerivativePartyIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#State
-	 * PostalAddress.State}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmState
+	 * PostalAddress.mmState}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class DerivativePartyIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountrySubDivision = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmState;
 			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.State;
 			isDerived = false;
 			xmlTag = "CtrySubDvsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountrySubDivision";
 			definition = "Country and country sub-division of the reference entity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountrySubDivisionCode.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Identification of the reference party through Legal entity identifier.
 	 * <p>
@@ -177,8 +180,8 @@ public class DerivativePartyIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,17 +201,17 @@ public class DerivativePartyIdentification1Choice {
 	 * "Identification of the reference party through Legal entity identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Identification of the reference party through Legal entity identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -216,15 +219,39 @@ public class DerivativePartyIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DerivativePartyIdentification1Choice.Country, com.tools20022.repository.choice.DerivativePartyIdentification1Choice.CountrySubDivision,
-						com.tools20022.repository.choice.DerivativePartyIdentification1Choice.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountry, com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountrySubDivision,
+						com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmLEI);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DerivativePartyIdentification1Choice";
 				definition = "Reference entity of a single name credit default swap (CDS) or a derivative on single name credit default swap (CDS).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public CountrySubDivisionCode getCountrySubDivision() {
+		return countrySubDivision;
+	}
+
+	public void setCountrySubDivision(CountrySubDivisionCode countrySubDivision) {
+		this.countrySubDivision = countrySubDivision;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

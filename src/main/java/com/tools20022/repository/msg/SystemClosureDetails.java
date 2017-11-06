@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemClosureDetails#Period
- * SystemClosureDetails.Period}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemClosureDetails#Reason
- * SystemClosureDetails.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemClosureDetails#mmPeriod
+ * SystemClosureDetails.mmPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemClosureDetails#mmReason
+ * SystemClosureDetails.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemClosureDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateTimePeriodChoice period;
 	/**
 	 * Period of time when the system is closed/not operating.
 	 * <p>
@@ -85,7 +86,7 @@ public class SystemClosureDetails {
 	 * definition} = "Period of time when the system is closed/not operating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Period = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemClosureDetails.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class SystemClosureDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period of time when the system is closed/not operating.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	protected ClosureReasonChoice reason;
 	/**
 	 * Reason the system is closed/not operating.
 	 * <p>
@@ -126,7 +128,7 @@ public class SystemClosureDetails {
 	 * definition} = "Reason the system is closed/not operating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemClosureDetails.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class SystemClosureDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason the system is closed/not operating.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ClosureReasonChoice.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class SystemClosureDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemClosureDetails.Period, com.tools20022.repository.msg.SystemClosureDetails.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemClosureDetails.mmPeriod, com.tools20022.repository.msg.SystemClosureDetails.mmReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemClosureDetails";
 				definition = "Information about inactivity of a system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateTimePeriodChoice getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(DateTimePeriodChoice period) {
+		this.period = period;
+	}
+
+	public ClosureReasonChoice getReason() {
+		return reason;
+	}
+
+	public void setReason(ClosureReasonChoice reason) {
+		this.reason = reason;
 	}
 }

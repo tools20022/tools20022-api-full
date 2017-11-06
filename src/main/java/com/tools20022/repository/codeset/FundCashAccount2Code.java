@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#CashAccount
- * FundCashAccount2Code.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#mmCashAccount
+ * FundCashAccount2Code.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#PensionFundOrdinary
- * FundCashAccount2Code.PensionFundOrdinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#mmPensionFundOrdinary
+ * FundCashAccount2Code.mmPensionFundOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#PensionFundSpecial
- * FundCashAccount2Code.PensionFundSpecial}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#mmPensionFundSpecial
+ * FundCashAccount2Code.mmPensionFundSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#RetirementScheme
- * FundCashAccount2Code.RetirementScheme}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccount2Code#mmRetirementScheme
+ * FundCashAccount2Code.mmRetirementScheme}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class FundCashAccount2Code extends FundCashAccountCode {
 	 * name} = "CashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashAccount = new MMCode() {
+	public static final MMCode mmCashAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
@@ -110,7 +110,7 @@ public class FundCashAccount2Code extends FundCashAccountCode {
 	 * name} = "PensionFundOrdinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionFundOrdinary = new MMCode() {
+	public static final MMCode mmPensionFundOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PensionFundOrdinary";
@@ -133,7 +133,7 @@ public class FundCashAccount2Code extends FundCashAccountCode {
 	 * name} = "PensionFundSpecial"</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionFundSpecial = new MMCode() {
+	public static final MMCode mmPensionFundSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PensionFundSpecial";
@@ -156,7 +156,7 @@ public class FundCashAccount2Code extends FundCashAccountCode {
 	 * name} = "RetirementScheme"</li>
 	 * </ul>
 	 */
-	public static final MMCode RetirementScheme = new MMCode() {
+	public static final MMCode mmRetirementScheme = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetirementScheme";
@@ -167,13 +167,13 @@ public class FundCashAccount2Code extends FundCashAccountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundCashAccount2Code";
 				definition = "Specifies the cash account type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundCashAccount2Code.CashAccount, com.tools20022.repository.codeset.FundCashAccount2Code.PensionFundOrdinary,
-						com.tools20022.repository.codeset.FundCashAccount2Code.PensionFundSpecial, com.tools20022.repository.codeset.FundCashAccount2Code.RetirementScheme);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundCashAccount2Code.mmCashAccount, com.tools20022.repository.codeset.FundCashAccount2Code.mmPensionFundOrdinary,
+						com.tools20022.repository.codeset.FundCashAccount2Code.mmPensionFundSpecial, com.tools20022.repository.codeset.FundCashAccount2Code.mmRetirementScheme);
 				trace_lazy = () -> FundCashAccountCode.mmObject();
 			}
 		});

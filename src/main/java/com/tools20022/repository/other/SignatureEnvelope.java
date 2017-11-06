@@ -42,15 +42,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#Signature
- * BusinessApplicationHeaderV01.Signature}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmSignature
+ * BusinessApplicationHeaderV01.mmSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,13 +70,13 @@ public class SignatureEnvelope {
 	final static public MMExternalSchema mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMExternalSchema() {
 			{
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.Signature);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmSignature);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignatureEnvelope";
 				definition = "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/";
-				processContent = com.tools20022.metamodel.MMProcessContent.LAX;
 				namespaceList = Arrays.asList("http://www.w3.org/2000/09/xmldsig#");
+				processContent = com.tools20022.metamodel.MMProcessContent.LAX;
 			}
 		});
 		return mmObject_lazy.get();

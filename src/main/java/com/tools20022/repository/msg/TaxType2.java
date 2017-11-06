@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxType2#Structured
- * TaxType2.Structured}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxType2#AdditionalInformation
- * TaxType2.AdditionalInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxType2#mmStructured
+ * TaxType2.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxType2#mmAdditionalInformation
+ * TaxType2.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxType5Code structured;
 	/**
 	 * Structured format.
 	 * <p>
@@ -83,7 +85,7 @@ public class TaxType2 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxType2.mmObject();
 			isDerived = false;
@@ -91,11 +93,12 @@ public class TaxType2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Structured format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxType5Code.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the type of tax.
 	 * <p>
@@ -122,7 +125,7 @@ public class TaxType2 {
 	 * definition} = "Additional information about the type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxType2.mmObject();
 			isDerived = false;
@@ -130,8 +133,8 @@ public class TaxType2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the type of tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -139,13 +142,29 @@ public class TaxType2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxType2.Structured, com.tools20022.repository.msg.TaxType2.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxType2.mmStructured, com.tools20022.repository.msg.TaxType2.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType2";
 				definition = "Specification of the tax type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxType5Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(TaxType5Code structured) {
+		this.structured = structured;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

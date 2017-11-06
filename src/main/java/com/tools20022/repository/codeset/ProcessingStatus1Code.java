@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#Complete
- * ProcessingStatus1Code.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#mmComplete
+ * ProcessingStatus1Code.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#PreliminaryConfirmed
- * ProcessingStatus1Code.PreliminaryConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#mmPreliminaryConfirmed
+ * ProcessingStatus1Code.mmPreliminaryConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#PreliminaryUnconfirmed
- * ProcessingStatus1Code.PreliminaryUnconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#mmPreliminaryUnconfirmed
+ * ProcessingStatus1Code.mmPreliminaryUnconfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#ForInformationOnly
- * ProcessingStatus1Code.ForInformationOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code#mmForInformationOnly
+ * ProcessingStatus1Code.mmForInformationOnly}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class ProcessingStatus1Code extends ProcessingStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -110,7 +110,7 @@ public class ProcessingStatus1Code extends ProcessingStatusCode {
 	 * name} = "PreliminaryConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreliminaryConfirmed = new MMCode() {
+	public static final MMCode mmPreliminaryConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryConfirmed";
@@ -133,7 +133,7 @@ public class ProcessingStatus1Code extends ProcessingStatusCode {
 	 * name} = "PreliminaryUnconfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreliminaryUnconfirmed = new MMCode() {
+	public static final MMCode mmPreliminaryUnconfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryUnconfirmed";
@@ -156,7 +156,7 @@ public class ProcessingStatus1Code extends ProcessingStatusCode {
 	 * name} = "ForInformationOnly"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForInformationOnly = new MMCode() {
+	public static final MMCode mmForInformationOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForInformationOnly";
@@ -167,13 +167,13 @@ public class ProcessingStatus1Code extends ProcessingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus1Code";
 				definition = "Specifies the processing status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingStatus1Code.Complete, com.tools20022.repository.codeset.ProcessingStatus1Code.PreliminaryConfirmed,
-						com.tools20022.repository.codeset.ProcessingStatus1Code.PreliminaryUnconfirmed, com.tools20022.repository.codeset.ProcessingStatus1Code.ForInformationOnly);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingStatus1Code.mmComplete, com.tools20022.repository.codeset.ProcessingStatus1Code.mmPreliminaryConfirmed,
+						com.tools20022.repository.codeset.ProcessingStatus1Code.mmPreliminaryUnconfirmed, com.tools20022.repository.codeset.ProcessingStatus1Code.mmForInformationOnly);
 				trace_lazy = () -> ProcessingStatusCode.mmObject();
 			}
 		});

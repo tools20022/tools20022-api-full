@@ -39,17 +39,18 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement2#AgreementDetails
- * Agreement2.AgreementDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement2#mmAgreementDetails
+ * Agreement2.mmAgreementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Agreement2#AgreementIdentification
- * Agreement2.AgreementIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement2#AgreementDate
- * Agreement2.AgreementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement2#BaseCurrency
- * Agreement2.BaseCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement2#AgreementFramework
- * Agreement2.AgreementFramework}</li>
+ * {@linkplain com.tools20022.repository.msg.Agreement2#mmAgreementIdentification
+ * Agreement2.mmAgreementIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement2#mmAgreementDate
+ * Agreement2.mmAgreementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement2#mmBaseCurrency
+ * Agreement2.mmBaseCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Agreement2#mmAgreementFramework
+ * Agreement2.mmAgreementFramework}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,42 +61,42 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionRequestV03#Agreement
- * CollateralSubstitutionRequestV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionRequestV03#mmAgreement
+ * CollateralSubstitutionRequestV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV03#Agreement
- * InterestPaymentStatementV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV03#mmAgreement
+ * InterestPaymentStatementV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#Agreement
- * CollateralAndExposureReportV02.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmAgreement
+ * CollateralAndExposureReportV02.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#Agreement
- * MarginCallResponseV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#mmAgreement
+ * MarginCallResponseV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#Agreement
- * MarginCallRequestV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmAgreement
+ * MarginCallRequestV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV03#Agreement
- * CollateralProposalV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV03#mmAgreement
+ * CollateralProposalV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03#Agreement
- * CollateralSubstitutionResponseV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03#mmAgreement
+ * CollateralSubstitutionResponseV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#Agreement
- * InterestPaymentResponseV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentResponseV03#mmAgreement
+ * InterestPaymentResponseV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentRequestV03#Agreement
- * InterestPaymentRequestV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentRequestV03#mmAgreement
+ * InterestPaymentRequestV03.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#Agreement
- * CollateralSubstitutionConfirmationV03.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#mmAgreement
+ * CollateralSubstitutionConfirmationV03.mmAgreement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -116,6 +117,7 @@ import java.util.function.Supplier;
 public class Agreement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text agreementDetails;
 	/**
 	 * Full details of the supporting legal agreement under which the margin
 	 * call can be issued and/or governed.
@@ -129,8 +131,8 @@ public class Agreement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Description
-	 * Agreement.Description}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDescription
+	 * Agreement.mmDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement2
@@ -152,27 +154,28 @@ public class Agreement2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Agreement4#AgreementDetails
-	 * Agreement4.AgreementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Agreement4#mmAgreementDetails
+	 * Agreement4.mmAgreementDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgreementDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgreementDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDescription;
 			componentContext_lazy = () -> Agreement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Description;
 			isDerived = false;
 			xmlTag = "AgrmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementDetails";
 			definition = "Full details of the supporting legal agreement under which the margin call can be issued and/or governed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.AgreementDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.mmAgreementDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max140Text agreementIdentification;
 	/**
 	 * Common reference to the agreement between the two counterparties.
 	 * <p>
@@ -185,8 +188,8 @@ public class Agreement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement2
@@ -207,27 +210,28 @@ public class Agreement2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Agreement4#AgreementIdentification
-	 * Agreement4.AgreementIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Agreement4#mmAgreementIdentification
+	 * Agreement4.mmAgreementIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgreementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgreementIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> Agreement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AgrmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementIdentification";
 			definition = "Common reference to the agreement between the two counterparties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.AgreementIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.mmAgreementIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ISODate agreementDate;
 	/**
 	 * Date on which the collateral agreement was signed.
 	 * <p>
@@ -240,8 +244,8 @@ public class Agreement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#DateSigned
-	 * Agreement.DateSigned}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDateSigned
+	 * Agreement.mmDateSigned}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement2
@@ -260,27 +264,28 @@ public class Agreement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement4#AgreementDate
-	 * Agreement4.AgreementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement4#mmAgreementDate
+	 * Agreement4.mmAgreementDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgreementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgreementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
 			componentContext_lazy = () -> Agreement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.DateSigned;
 			isDerived = false;
 			xmlTag = "AgrmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementDate";
 			definition = "Date on which the collateral agreement was signed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.AgreementDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.mmAgreementDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CurrencyCode baseCurrency;
 	/**
 	 * Denomination currency as specified in the collateral agreement.
 	 * <p>
@@ -293,8 +298,8 @@ public class Agreement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#BaseCurrency
-	 * CollateralAgreement.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmBaseCurrency
+	 * CollateralAgreement.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement2
@@ -314,27 +319,28 @@ public class Agreement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement4#BaseCurrency
-	 * Agreement4.BaseCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement4#mmBaseCurrency
+	 * Agreement4.mmBaseCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmBaseCurrency;
 			componentContext_lazy = () -> Agreement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.BaseCurrency;
 			isDerived = false;
 			xmlTag = "BaseCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Denomination currency as specified in the collateral agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.BaseCurrency);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.mmBaseCurrency);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected AgreementFramework1Choice agreementFramework;
 	/**
 	 * Specifies the underlying master agreement.
 	 * <p>
@@ -348,8 +354,8 @@ public class Agreement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#AssociatedMasterAgreement
-	 * CollateralAgreement.AssociatedMasterAgreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmAssociatedMasterAgreement
+	 * CollateralAgreement.mmAssociatedMasterAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement2
@@ -369,24 +375,24 @@ public class Agreement2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Agreement4#AgreementFramework
-	 * Agreement4.AgreementFramework}</li>
+	 * {@linkplain com.tools20022.repository.msg.Agreement4#mmAgreementFramework
+	 * Agreement4.mmAgreementFramework}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgreementFramework = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgreementFramework = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement;
 			componentContext_lazy = () -> Agreement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.AssociatedMasterAgreement;
 			isDerived = false;
 			xmlTag = "AgrmtFrmwk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementFramework";
 			definition = "Specifies the underlying master agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.AgreementFramework);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.mmAgreementFramework);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AgreementFramework1Choice.mmObject();
 		}
 	};
@@ -394,15 +400,15 @@ public class Agreement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement2.AgreementDetails, com.tools20022.repository.msg.Agreement2.AgreementIdentification, com.tools20022.repository.msg.Agreement2.AgreementDate,
-						com.tools20022.repository.msg.Agreement2.BaseCurrency, com.tools20022.repository.msg.Agreement2.AgreementFramework);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement2.mmAgreementDetails, com.tools20022.repository.msg.Agreement2.mmAgreementIdentification,
+						com.tools20022.repository.msg.Agreement2.mmAgreementDate, com.tools20022.repository.msg.Agreement2.mmBaseCurrency, com.tools20022.repository.msg.Agreement2.mmAgreementFramework);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionRequestV03.mmAgreement, com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmAgreement,
+						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmAgreement, com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreement,
+						com.tools20022.repository.area.colr.MarginCallRequestV03.mmAgreement, com.tools20022.repository.area.colr.CollateralProposalV03.mmAgreement,
+						com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03.mmAgreement, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmAgreement,
+						com.tools20022.repository.area.colr.InterestPaymentRequestV03.mmAgreement, com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmAgreement);
 				trace_lazy = () -> CollateralAgreement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionRequestV03.Agreement, com.tools20022.repository.area.colr.InterestPaymentStatementV03.Agreement,
-						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.Agreement, com.tools20022.repository.area.colr.MarginCallResponseV03.Agreement, com.tools20022.repository.area.colr.MarginCallRequestV03.Agreement,
-						com.tools20022.repository.area.colr.CollateralProposalV03.Agreement, com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03.Agreement,
-						com.tools20022.repository.area.colr.InterestPaymentResponseV03.Agreement, com.tools20022.repository.area.colr.InterestPaymentRequestV03.Agreement,
-						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.Agreement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -417,5 +423,45 @@ public class Agreement2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getAgreementDetails() {
+		return agreementDetails;
+	}
+
+	public void setAgreementDetails(Max140Text agreementDetails) {
+		this.agreementDetails = agreementDetails;
+	}
+
+	public Max140Text getAgreementIdentification() {
+		return agreementIdentification;
+	}
+
+	public void setAgreementIdentification(Max140Text agreementIdentification) {
+		this.agreementIdentification = agreementIdentification;
+	}
+
+	public ISODate getAgreementDate() {
+		return agreementDate;
+	}
+
+	public void setAgreementDate(ISODate agreementDate) {
+		this.agreementDate = agreementDate;
+	}
+
+	public CurrencyCode getBaseCurrency() {
+		return baseCurrency;
+	}
+
+	public void setBaseCurrency(CurrencyCode baseCurrency) {
+		this.baseCurrency = baseCurrency;
+	}
+
+	public AgreementFramework1Choice getAgreementFramework() {
+		return agreementFramework;
+	}
+
+	public void setAgreementFramework(AgreementFramework1Choice agreementFramework) {
+		this.agreementFramework = agreementFramework;
 	}
 }

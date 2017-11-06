@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1;
+import com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,11 +38,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ActiveAmountRange1Choice#ImpliedCurrencyAndAmountRange
- * ActiveAmountRange1Choice.ImpliedCurrencyAndAmountRange}</li>
+ * {@linkplain com.tools20022.repository.choice.ActiveAmountRange1Choice#mmImpliedCurrencyAndAmountRange
+ * ActiveAmountRange1Choice.mmImpliedCurrencyAndAmountRange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ActiveAmountRange1Choice#CurrencyAndAmountRange
- * ActiveAmountRange1Choice.CurrencyAndAmountRange}</li>
+ * {@linkplain com.tools20022.repository.choice.ActiveAmountRange1Choice#mmCurrencyAndAmountRange
+ * ActiveAmountRange1Choice.mmCurrencyAndAmountRange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +68,7 @@ import java.util.function.Supplier;
 public class ActiveAmountRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmountRange impliedCurrencyAndAmountRange;
 	/**
 	 * Expresses an amount or an amount range with an explicit debit/credit
 	 * indicator and where the currency is implied.
@@ -101,21 +103,22 @@ public class ActiveAmountRange1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ActiveAmountRange1Choice.mmObject();
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
+			componentContext_lazy = () -> ActiveAmountRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ImpldCcyAndAmtRg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpliedCurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmountRange1 currencyAndAmountRange;
 	/**
 	 * Expresses an amount or an amount range with the currency and where the
 	 * credit/debit indicator is explicit.
@@ -150,28 +153,28 @@ public class ActiveAmountRange1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ActiveAmountRange1Choice.mmObject();
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
+			componentContext_lazy = () -> ActiveAmountRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyAndAmtRg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with the currency and where the credit/debit indicator is explicit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ActiveCurrencyAndAmountRange1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ActiveCurrencyAndAmountRange1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ActiveAmountRange1Choice.ImpliedCurrencyAndAmountRange, com.tools20022.repository.choice.ActiveAmountRange1Choice.CurrencyAndAmountRange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ActiveAmountRange1Choice.mmImpliedCurrencyAndAmountRange, com.tools20022.repository.choice.ActiveAmountRange1Choice.mmCurrencyAndAmountRange);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -185,5 +188,21 @@ public class ActiveAmountRange1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmountRange getImpliedCurrencyAndAmountRange() {
+		return impliedCurrencyAndAmountRange;
+	}
+
+	public void setImpliedCurrencyAndAmountRange(ImpliedCurrencyAndAmountRange impliedCurrencyAndAmountRange) {
+		this.impliedCurrencyAndAmountRange = impliedCurrencyAndAmountRange;
+	}
+
+	public ActiveCurrencyAndAmountRange1 getCurrencyAndAmountRange() {
+		return currencyAndAmountRange;
+	}
+
+	public void setCurrencyAndAmountRange(ActiveCurrencyAndAmountRange1 currencyAndAmountRange) {
+		this.currencyAndAmountRange = currencyAndAmountRange;
 	}
 }

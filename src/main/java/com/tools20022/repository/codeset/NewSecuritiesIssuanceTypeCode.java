@@ -31,26 +31,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#ExistingIssue
- * NewSecuritiesIssuanceTypeCode.ExistingIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmExistingIssue
+ * NewSecuritiesIssuanceTypeCode.mmExistingIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#NewIssue
- * NewSecuritiesIssuanceTypeCode.NewIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmNewIssue
+ * NewSecuritiesIssuanceTypeCode.mmNewIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#Unknown
- * NewSecuritiesIssuanceTypeCode.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmUnknown
+ * NewSecuritiesIssuanceTypeCode.mmUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#DefeasedSecurityIndicator
- * NewSecuritiesIssuanceTypeCode.DefeasedSecurityIndicator}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmDefeasedSecurityIndicator
+ * NewSecuritiesIssuanceTypeCode.mmDefeasedSecurityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#NonDefeasedSecurityIndicator
- * NewSecuritiesIssuanceTypeCode.NonDefeasedSecurityIndicator}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmNonDefeasedSecurityIndicator
+ * NewSecuritiesIssuanceTypeCode.mmNonDefeasedSecurityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#RefundedSecurityIndicator
- * NewSecuritiesIssuanceTypeCode.RefundedSecurityIndicator}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmRefundedSecurityIndicator
+ * NewSecuritiesIssuanceTypeCode.mmRefundedSecurityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#NonRefundedSecurityIndicator
- * NewSecuritiesIssuanceTypeCode.NonRefundedSecurityIndicator}</li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmNonRefundedSecurityIndicator
+ * NewSecuritiesIssuanceTypeCode.mmNonRefundedSecurityIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -79,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -123,7 +123,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 * definition} = "Securities proceeds are not new issues."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExistingIssue = new MMCode() {
+	public static final MMCode mmExistingIssue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExistingIssue";
@@ -153,7 +153,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 * definition} = "Securities proceeds are newly issued."</li>
 	 * </ul>
 	 */
-	public static final MMCode NewIssue = new MMCode() {
+	public static final MMCode mmNewIssue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssue";
@@ -184,7 +184,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 * "Not known whether the securities proceeds are newly issued or not."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -219,7 +219,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DefeasedSecurityIndicator = new MMCode() {
+	public static final MMCode mmDefeasedSecurityIndicator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefeasedSecurityIndicator";
@@ -253,7 +253,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NonDefeasedSecurityIndicator = new MMCode() {
+	public static final MMCode mmNonDefeasedSecurityIndicator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDefeasedSecurityIndicator";
@@ -287,7 +287,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RefundedSecurityIndicator = new MMCode() {
+	public static final MMCode mmRefundedSecurityIndicator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundedSecurityIndicator";
@@ -321,7 +321,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NonRefundedSecurityIndicator = new MMCode() {
+	public static final MMCode mmNonRefundedSecurityIndicator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRefundedSecurityIndicator";
@@ -334,15 +334,15 @@ public class NewSecuritiesIssuanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXIS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NewSecuritiesIssuanceTypeCode";
 				definition = "Specifies the type of securities proceeds; whether they are newly issued or not, defeased or non-defeased.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.ExistingIssue, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.NewIssue,
-						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.Unknown, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.DefeasedSecurityIndicator,
-						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.NonDefeasedSecurityIndicator, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.RefundedSecurityIndicator,
-						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.NonRefundedSecurityIndicator);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmExistingIssue, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmNewIssue,
+						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmUnknown, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmDefeasedSecurityIndicator,
+						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmNonDefeasedSecurityIndicator, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmRefundedSecurityIndicator,
+						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmNonRefundedSecurityIndicator);
 				derivation_lazy = () -> Arrays.asList(NewSecuritiesIssuanceType1Code.mmObject(), NewSecuritiesIssuanceType2Code.mmObject(), NewSecuritiesIssuanceType3Code.mmObject(), NewSecuritiesIssuanceType4Code.mmObject(),
 						NewSecuritiesIssuanceType5Code.mmObject(), NewSecuritiesIssuanceType6Code.mmObject());
 			}

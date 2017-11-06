@@ -55,21 +55,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#Header
- * AcquirerAuthorisationResponse.Header}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#mmHeader
+ * AcquirerAuthorisationResponse.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#AuthorisationResponse
- * AcquirerAuthorisationResponse.AuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#mmAuthorisationResponse
+ * AcquirerAuthorisationResponse.mmAuthorisationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#SecurityTrailer
- * AcquirerAuthorisationResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#mmSecurityTrailer
+ * AcquirerAuthorisationResponse.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#identifier
- * AcquirerAuthorisationResponse.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerAuthorisationResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header17 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -107,17 +106,18 @@ public class AcquirerAuthorisationResponse {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
 	};
+	protected AcquirerAuthorisationResponse1 authorisationResponse;
 	/**
 	 * Information related to the response of an authorisation.
 	 * <p>
@@ -141,17 +141,18 @@ public class AcquirerAuthorisationResponse {
 	 * definition} = "Information related to the response of an authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AuthorisationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAuthorisationResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AuthstnRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
 			definition = "Information related to the response of an authorisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcquirerAuthorisationResponse1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -175,42 +176,15 @@ public class AcquirerAuthorisationResponse {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "002";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -224,11 +198,42 @@ public class AcquirerAuthorisationResponse {
 				rootElement = "Document";
 				xmlTag = "AcqrrAuthstnRspn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.Header, com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.AuthorisationResponse,
-						com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmHeader, com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmAuthorisationResponse,
+						com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "002";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header17 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header17 header) {
+		this.header = header;
+	}
+
+	public AcquirerAuthorisationResponse1 getAuthorisationResponse() {
+		return authorisationResponse;
+	}
+
+	public void setAuthorisationResponse(AcquirerAuthorisationResponse1 authorisationResponse) {
+		this.authorisationResponse = authorisationResponse;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

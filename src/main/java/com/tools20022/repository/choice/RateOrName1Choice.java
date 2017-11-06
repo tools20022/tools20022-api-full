@@ -34,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RateOrName1Choice#Rate
- * RateOrName1Choice.Rate}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateOrName1Choice#RateName
- * RateOrName1Choice.RateName}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateOrName1Choice#mmRate
+ * RateOrName1Choice.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateOrName1Choice#mmRateName
+ * RateOrName1Choice.mmRateName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateOrName1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Rate2 rate;
 	/**
 	 * Pricing expressed as a rate.
 	 * <p>
@@ -70,8 +72,8 @@ public class RateOrName1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -90,21 +92,22 @@ public class RateOrName1Choice {
 	 * definition} = "Pricing expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> RateOrName1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Pricing expressed as a rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Rate2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Rate2.mmObject();
 		}
 	};
+	protected RateName1 rateName;
 	/**
 	 * Pricing expressed as a rate name.
 	 * <p>
@@ -130,7 +133,7 @@ public class RateOrName1Choice {
 	 * definition} = "Pricing expressed as a rate name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateName = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RateOrName1Choice.mmObject();
 			isDerived = false;
@@ -138,24 +141,40 @@ public class RateOrName1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateName";
 			definition = "Pricing expressed as a rate name.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateName1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateName1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateOrName1Choice.Rate, com.tools20022.repository.choice.RateOrName1Choice.RateName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateOrName1Choice.mmRate, com.tools20022.repository.choice.RateOrName1Choice.mmRateName);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateOrName1Choice";
 				definition = "Choice between a percentage rate or a rate name.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Rate2 getRate() {
+		return rate;
+	}
+
+	public void setRate(Rate2 rate) {
+		this.rate = rate;
+	}
+
+	public RateName1 getRateName() {
+		return rateName;
+	}
+
+	public void setRateName(RateName1 rateName) {
+		this.rateName = rateName;
 	}
 }

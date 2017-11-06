@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max2000Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the instructions from the bank.
@@ -33,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BankInstructions1#Text
- * BankInstructions1.Text}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BankInstructions1#mmText
+ * BankInstructions1.mmText}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankInstructions1#LastDateForResponse
- * BankInstructions1.LastDateForResponse}</li>
+ * {@linkplain com.tools20022.repository.msg.BankInstructions1#mmLastDateForResponse
+ * BankInstructions1.mmLastDateForResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max2000Text> text;
 	/**
 	 * Instructions from the bank.
 	 * <p>
@@ -85,7 +87,7 @@ public class BankInstructions1 {
 	 * definition} = "Instructions from the bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Text = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BankInstructions1.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class BankInstructions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Instructions from the bank.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected ISODate lastDateForResponse;
 	/**
 	 * Last date for a response to the bank instructions.
 	 * <p>
@@ -125,7 +128,7 @@ public class BankInstructions1 {
 	 * definition} = "Last date for a response to the bank instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastDateForResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastDateForResponse = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BankInstructions1.mmObject();
 			isDerived = false;
@@ -133,8 +136,8 @@ public class BankInstructions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDateForResponse";
 			definition = "Last date for a response to the bank instructions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -142,13 +145,29 @@ public class BankInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankInstructions1.Text, com.tools20022.repository.msg.BankInstructions1.LastDateForResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankInstructions1.mmText, com.tools20022.repository.msg.BankInstructions1.mmLastDateForResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BankInstructions1";
 				definition = "Details of the instructions from the bank.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max2000Text> getText() {
+		return text;
+	}
+
+	public void setText(List<Max2000Text> text) {
+		this.text = text;
+	}
+
+	public ISODate getLastDateForResponse() {
+		return lastDateForResponse;
+	}
+
+	public void setLastDateForResponse(ISODate lastDateForResponse) {
+		this.lastDateForResponse = lastDateForResponse;
 	}
 }

@@ -57,15 +57,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.WithdrawalNotificationV01#MatchingSystemUniqueReference
- * WithdrawalNotificationV01.MatchingSystemUniqueReference}</li>
+ * {@linkplain com.tools20022.repository.area.trea.WithdrawalNotificationV01#mmMatchingSystemUniqueReference
+ * WithdrawalNotificationV01.mmMatchingSystemUniqueReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.trea.WithdrawalNotificationV01#identifier
- * WithdrawalNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code trea.013.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class WithdrawalNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageReference matchingSystemUniqueReference;
 	/**
 	 * Reference assigned by the central matching system which is notifying the
 	 * deletion of a previously reported trade.
@@ -107,42 +106,15 @@ public class WithdrawalNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MatchingSystemUniqueReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMatchingSystemUniqueReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtchgSysUnqRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference assigned by the central matching system which is notifying the deletion of a previously reported trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageReference.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "trea"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "trea";
-			messageFunctionality = "013";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -156,10 +128,25 @@ public class WithdrawalNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "WdrwlNtfctnV01";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.WithdrawalNotificationV01.MatchingSystemUniqueReference);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.trea.WithdrawalNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.WithdrawalNotificationV01.mmMatchingSystemUniqueReference);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "trea";
+						messageFunctionality = "013";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageReference getMatchingSystemUniqueReference() {
+		return matchingSystemUniqueReference;
+	}
+
+	public void setMatchingSystemUniqueReference(MessageReference matchingSystemUniqueReference) {
+		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
 	}
 }

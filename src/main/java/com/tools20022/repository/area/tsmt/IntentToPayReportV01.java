@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,18 +68,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayReportV01#ReportIdentification
- * IntentToPayReportV01.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayReportV01#mmReportIdentification
+ * IntentToPayReportV01.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayReportV01#ReportedItems
- * IntentToPayReportV01.ReportedItems}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayReportV01#mmReportedItems
+ * IntentToPayReportV01.mmReportedItems}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayReportV01#identifier
- * IntentToPayReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.046.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntentToPayReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 reportIdentification;
 	/**
 	 * Identifies the report message.
 	 * <p>
@@ -117,17 +117,18 @@ public class IntentToPayReportV01 {
 	 * definition} = "Identifies the report message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<ReportLine1> reportedItems;
 	/**
 	 * Reports on the intention to pay per purchase order.
 	 * <p>
@@ -150,7 +151,7 @@ public class IntentToPayReportV01 {
 	 * definition} = "Reports on the intention to pay per purchase order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportedItems = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportedItems = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptdItms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,33 +159,6 @@ public class IntentToPayReportV01 {
 			definition = "Reports on the intention to pay per purchase order.";
 			minOccurs = 0;
 			complexType_lazy = () -> ReportLine1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "046"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "046";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -198,10 +172,33 @@ public class IntentToPayReportV01 {
 				rootElement = "Document";
 				xmlTag = "InttToPayRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayReportV01.ReportIdentification, com.tools20022.repository.area.tsmt.IntentToPayReportV01.ReportedItems);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.IntentToPayReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayReportV01.mmReportIdentification, com.tools20022.repository.area.tsmt.IntentToPayReportV01.mmReportedItems);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "046";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public List<ReportLine1> getReportedItems() {
+		return reportedItems;
+	}
+
+	public void setReportedItems(List<ReportLine1> reportedItems) {
+		this.reportedItems = reportedItems;
 	}
 }

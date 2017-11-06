@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope1#ModificationScopeIndication
- * ModificationScope1.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope1#mmModificationScopeIndication
+ * ModificationScope1.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope1#PostalAddress
- * ModificationScope1.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope1#mmPostalAddress
+ * ModificationScope1.mmPostalAddress}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -102,16 +103,16 @@ public class ModificationScope1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope17#ModificationScopeIndication
-	 * ModificationScope17.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope17#mmModificationScopeIndication
+	 * ModificationScope17.mmModificationScopeIndication}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope34#ModificationScopeIndication
-	 * ModificationScope34.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope34#mmModificationScopeIndication
+	 * ModificationScope34.mmModificationScopeIndication}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope1.mmObject();
 			isDerived = false;
@@ -119,12 +120,13 @@ public class ModificationScope1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope17.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope34.ModificationScopeIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope17.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope34.mmModificationScopeIndication);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected PostalAddress3 postalAddress;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services.
@@ -156,13 +158,13 @@ public class ModificationScope1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope34#PostalAddress
-	 * ModificationScope34.PostalAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope34#mmPostalAddress
+	 * ModificationScope34.mmPostalAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope1.mmObject();
 			isDerived = false;
@@ -170,19 +172,19 @@ public class ModificationScope1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope34.PostalAddress);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope34.mmPostalAddress);
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope1.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope1.PostalAddress);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope1.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope1.mmPostalAddress);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope1";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -190,5 +192,21 @@ public class ModificationScope1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public PostalAddress3 getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress3 postalAddress) {
+		this.postalAddress = postalAddress;
 	}
 }

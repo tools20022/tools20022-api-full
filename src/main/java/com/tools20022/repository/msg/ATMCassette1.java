@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ATMNoteType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information on the cassette of an ATM.
@@ -37,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassette1#PhysicalIdentification
- * ATMCassette1.PhysicalIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassette1#mmPhysicalIdentification
+ * ATMCassette1.mmPhysicalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassette1#LogicalIdentification
- * ATMCassette1.LogicalIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#Type
- * ATMCassette1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#SubType
- * ATMCassette1.SubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#MediaType
- * ATMCassette1.MediaType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#MediaCounters
- * ATMCassette1.MediaCounters}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassette1#mmLogicalIdentification
+ * ATMCassette1.mmLogicalIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#mmType
+ * ATMCassette1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#mmSubType
+ * ATMCassette1.mmSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#mmMediaType
+ * ATMCassette1.mmMediaType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassette1#mmMediaCounters
+ * ATMCassette1.mmMediaCounters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCassette1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text physicalIdentification;
 	/**
 	 * Physical identification of the cassette for the ATM.
 	 * <p>
@@ -96,7 +98,7 @@ public class ATMCassette1 {
 	 * definition} = "Physical identification of the cassette for the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhysicalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhysicalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassette1.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class ATMCassette1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalIdentification";
 			definition = "Physical identification of the cassette for the ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text logicalIdentification;
 	/**
 	 * Logical identification of the cassette for the ATM.
 	 * <p>
@@ -135,7 +138,7 @@ public class ATMCassette1 {
 	 * definition} = "Logical identification of the cassette for the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LogicalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLogicalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassette1.mmObject();
 			isDerived = false;
@@ -143,11 +146,12 @@ public class ATMCassette1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LogicalIdentification";
 			definition = "Logical identification of the cassette for the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ATMCassetteType1Code type;
 	/**
 	 * Type of cassette.
 	 * <p>
@@ -175,7 +179,7 @@ public class ATMCassette1 {
 	 * definition} = "Type of cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassette1.mmObject();
 			isDerived = false;
@@ -183,11 +187,12 @@ public class ATMCassette1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of cassette.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCassetteType1Code.mmObject();
 		}
 	};
+	protected List<ATMNoteType1Code> subType;
 	/**
 	 * Type of items the cash-in takes
 	 * <p>
@@ -215,7 +220,7 @@ public class ATMCassette1 {
 	 * definition} = "Type of items the cash-in takes"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassette1.mmObject();
 			isDerived = false;
@@ -227,6 +232,7 @@ public class ATMCassette1 {
 			simpleType_lazy = () -> ATMNoteType1Code.mmObject();
 		}
 	};
+	protected ATMMediaType1Code mediaType;
 	/**
 	 * Type of media inside the cassette.
 	 * <p>
@@ -254,7 +260,7 @@ public class ATMCassette1 {
 	 * definition} = "Type of media inside the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MediaType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMediaType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassette1.mmObject();
 			isDerived = false;
@@ -262,11 +268,12 @@ public class ATMCassette1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaType";
 			definition = "Type of media inside the cassette.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMCassetteCounters1> mediaCounters;
 	/**
 	 * Counter per unit value or globally.
 	 * <p>
@@ -292,7 +299,7 @@ public class ATMCassette1 {
 	 * definition} = "Counter per unit value or globally."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MediaCounters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMediaCounters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCassette1.mmObject();
 			isDerived = false;
@@ -301,22 +308,71 @@ public class ATMCassette1 {
 			name = "MediaCounters";
 			definition = "Counter per unit value or globally.";
 			minOccurs = 0;
-			type_lazy = () -> ATMCassetteCounters1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassette1.PhysicalIdentification, com.tools20022.repository.msg.ATMCassette1.LogicalIdentification, com.tools20022.repository.msg.ATMCassette1.Type,
-						com.tools20022.repository.msg.ATMCassette1.SubType, com.tools20022.repository.msg.ATMCassette1.MediaType, com.tools20022.repository.msg.ATMCassette1.MediaCounters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassette1.mmPhysicalIdentification, com.tools20022.repository.msg.ATMCassette1.mmLogicalIdentification,
+						com.tools20022.repository.msg.ATMCassette1.mmType, com.tools20022.repository.msg.ATMCassette1.mmSubType, com.tools20022.repository.msg.ATMCassette1.mmMediaType,
+						com.tools20022.repository.msg.ATMCassette1.mmMediaCounters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCassette1";
 				definition = "Information on the cassette of an ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPhysicalIdentification() {
+		return physicalIdentification;
+	}
+
+	public void setPhysicalIdentification(Max35Text physicalIdentification) {
+		this.physicalIdentification = physicalIdentification;
+	}
+
+	public Max35Text getLogicalIdentification() {
+		return logicalIdentification;
+	}
+
+	public void setLogicalIdentification(Max35Text logicalIdentification) {
+		this.logicalIdentification = logicalIdentification;
+	}
+
+	public ATMCassetteType1Code getType() {
+		return type;
+	}
+
+	public void setType(ATMCassetteType1Code type) {
+		this.type = type;
+	}
+
+	public List<ATMNoteType1Code> getSubType() {
+		return subType;
+	}
+
+	public void setSubType(List<ATMNoteType1Code> subType) {
+		this.subType = subType;
+	}
+
+	public ATMMediaType1Code getMediaType() {
+		return mediaType;
+	}
+
+	public void setMediaType(ATMMediaType1Code mediaType) {
+		this.mediaType = mediaType;
+	}
+
+	public List<ATMCassetteCounters1> getMediaCounters() {
+		return mediaCounters;
+	}
+
+	public void setMediaCounters(List<com.tools20022.repository.msg.ATMCassetteCounters1> mediaCounters) {
+		this.mediaCounters = mediaCounters;
 	}
 }

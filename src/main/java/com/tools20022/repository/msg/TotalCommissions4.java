@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.Commission;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Total amount of commissions related to a specific order.
@@ -33,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalCommissions4#CommissionDetails
- * TotalCommissions4.CommissionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalCommissions4#mmCommissionDetails
+ * TotalCommissions4.mmCommissionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -42,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalCommissions4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.Commission14> commissionDetails;
 	/**
 	 * Information related to a specific commission.
 	 * <p>
@@ -87,33 +89,41 @@ public class TotalCommissions4 {
 	 * definition} = "Information related to a specific commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalCommissions4.mmObject();
 			businessComponentTrace_lazy = () -> Commission.mmObject();
+			componentContext_lazy = () -> TotalCommissions4.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Information related to a specific commission.";
-			minOccurs = 1;
 			maxOccurs = 5;
-			type_lazy = () -> Commission14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalCommissions4.CommissionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalCommissions4.mmCommissionDetails);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalCommissions4";
 				definition = "Total amount of commissions related to a specific order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Commission14> getCommissionDetails() {
+		return commissionDetails;
+	}
+
+	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission14> commissionDetails) {
+		this.commissionDetails = commissionDetails;
 	}
 }

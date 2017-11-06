@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuantityOrAmount1Choice#Quantity
- * QuantityOrAmount1Choice.Quantity}</li>
+ * {@linkplain com.tools20022.repository.choice.QuantityOrAmount1Choice#mmQuantity
+ * QuantityOrAmount1Choice.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuantityOrAmount1Choice#Amount
- * QuantityOrAmount1Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.QuantityOrAmount1Choice#mmAmount
+ * QuantityOrAmount1Choice.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuantityOrAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantityChoice quantity;
 	/**
 	 * Quantity is expressed in units, face amount or amortised amount.
 	 * <p>
@@ -99,20 +100,21 @@ public class QuantityOrAmount1Choice {
 	 * "Quantity is expressed in units, face amount or amortised amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuantityOrAmount1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> QuantityOrAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity is expressed in units, face amount or amortised amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Quantity is expressed as an amount.
 	 * <p>
@@ -126,8 +128,8 @@ public class QuantityOrAmount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class QuantityOrAmount1Choice {
 	 * definition} = "Quantity is expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> QuantityOrAmount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Quantity is expressed as an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class QuantityOrAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuantityOrAmount1Choice.Quantity, com.tools20022.repository.choice.QuantityOrAmount1Choice.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuantityOrAmount1Choice.mmQuantity, com.tools20022.repository.choice.QuantityOrAmount1Choice.mmAmount);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuantityOrAmount1Choice";
 				definition = "Choice between a quantity expressed in units, face amount or amortised amount and a quantity expressed as an amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantityChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

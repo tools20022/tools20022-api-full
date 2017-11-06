@@ -34,204 +34,205 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#ActiveTradingStatus
- * CorporateActionEventType7Code.ActiveTradingStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmActiveTradingStatus
+ * CorporateActionEventType7Code.mmActiveTradingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Attachment
- * CorporateActionEventType7Code.Attachment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmAttachment
+ * CorporateActionEventType7Code.mmAttachment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#RepurchaseOffer
- * CorporateActionEventType7Code.RepurchaseOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmRepurchaseOffer
+ * CorporateActionEventType7Code.mmRepurchaseOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#BonusIssue
- * CorporateActionEventType7Code.BonusIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmBonusIssue
+ * CorporateActionEventType7Code.mmBonusIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#PutRedemption
- * CorporateActionEventType7Code.PutRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPutRedemption
+ * CorporateActionEventType7Code.mmPutRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Bankruptcy
- * CorporateActionEventType7Code.Bankruptcy}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmBankruptcy
+ * CorporateActionEventType7Code.mmBankruptcy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#CapitalGainsDistribution
- * CorporateActionEventType7Code.CapitalGainsDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmCapitalGainsDistribution
+ * CorporateActionEventType7Code.mmCapitalGainsDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Capitalisation
- * CorporateActionEventType7Code.Capitalisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmCapitalisation
+ * CorporateActionEventType7Code.mmCapitalisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#NonUSTEFRADCertification
- * CorporateActionEventType7Code.NonUSTEFRADCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmNonUSTEFRADCertification
+ * CorporateActionEventType7Code.mmNonUSTEFRADCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Change
- * CorporateActionEventType7Code.Change}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmChange
+ * CorporateActionEventType7Code.mmChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#ClassActionProposedSettlement
- * CorporateActionEventType7Code.ClassActionProposedSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmClassActionProposedSettlement
+ * CorporateActionEventType7Code.mmClassActionProposedSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Consent
- * CorporateActionEventType7Code.Consent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmConsent
+ * CorporateActionEventType7Code.mmConsent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Conversion
- * CorporateActionEventType7Code.Conversion}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmConversion
+ * CorporateActionEventType7Code.mmConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#CompanyOption
- * CorporateActionEventType7Code.CompanyOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmCompanyOption
+ * CorporateActionEventType7Code.mmCompanyOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#DecreaseInValue
- * CorporateActionEventType7Code.DecreaseInValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmDecreaseInValue
+ * CorporateActionEventType7Code.mmDecreaseInValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Detachment
- * CorporateActionEventType7Code.Detachment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmDetachment
+ * CorporateActionEventType7Code.mmDetachment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#BondDefault
- * CorporateActionEventType7Code.BondDefault}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmBondDefault
+ * CorporateActionEventType7Code.mmBondDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#TradingStatusDelisted
- * CorporateActionEventType7Code.TradingStatusDelisted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmTradingStatusDelisted
+ * CorporateActionEventType7Code.mmTradingStatusDelisted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Drawing
- * CorporateActionEventType7Code.Drawing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmDrawing
+ * CorporateActionEventType7Code.mmDrawing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#DividendReinvestment
- * CorporateActionEventType7Code.DividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmDividendReinvestment
+ * CorporateActionEventType7Code.mmDividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Disclosure
- * CorporateActionEventType7Code.Disclosure}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmDisclosure
+ * CorporateActionEventType7Code.mmDisclosure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#DutchAuction
- * CorporateActionEventType7Code.DutchAuction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmDutchAuction
+ * CorporateActionEventType7Code.mmDutchAuction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#CashDividend
- * CorporateActionEventType7Code.CashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmCashDividend
+ * CorporateActionEventType7Code.mmCashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#DividendOption
- * CorporateActionEventType7Code.DividendOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmDividendOption
+ * CorporateActionEventType7Code.mmDividendOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#ScripDividend
- * CorporateActionEventType7Code.ScripDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmScripDividend
+ * CorporateActionEventType7Code.mmScripDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#StockDividend
- * CorporateActionEventType7Code.StockDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmStockDividend
+ * CorporateActionEventType7Code.mmStockDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Exchange
- * CorporateActionEventType7Code.Exchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmExchange
+ * CorporateActionEventType7Code.mmExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#CallOnIntermediateSecurities
- * CorporateActionEventType7Code.CallOnIntermediateSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmCallOnIntermediateSecurities
+ * CorporateActionEventType7Code.mmCallOnIntermediateSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#MaturityExtension
- * CorporateActionEventType7Code.MaturityExtension}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmMaturityExtension
+ * CorporateActionEventType7Code.mmMaturityExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#WarrantExercise
- * CorporateActionEventType7Code.WarrantExercise}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmWarrantExercise
+ * CorporateActionEventType7Code.mmWarrantExercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#CapitalDistribution
- * CorporateActionEventType7Code.CapitalDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmCapitalDistribution
+ * CorporateActionEventType7Code.mmCapitalDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#IncreaseInValue
- * CorporateActionEventType7Code.IncreaseInValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmIncreaseInValue
+ * CorporateActionEventType7Code.mmIncreaseInValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#InterestPayment
- * CorporateActionEventType7Code.InterestPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmInterestPayment
+ * CorporateActionEventType7Code.mmInterestPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#LiquidationDividend
- * CorporateActionEventType7Code.LiquidationDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmLiquidationDividend
+ * CorporateActionEventType7Code.mmLiquidationDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#FullCall
- * CorporateActionEventType7Code.FullCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmFullCall
+ * CorporateActionEventType7Code.mmFullCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Merger
- * CorporateActionEventType7Code.Merger}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmMerger
+ * CorporateActionEventType7Code.mmMerger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#OddLotSalePurchase
- * CorporateActionEventType7Code.OddLotSalePurchase}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmOddLotSalePurchase
+ * CorporateActionEventType7Code.mmOddLotSalePurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#OtherEvent
- * CorporateActionEventType7Code.OtherEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmOtherEvent
+ * CorporateActionEventType7Code.mmOtherEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#PariPassu
- * CorporateActionEventType7Code.PariPassu}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPariPassu
+ * CorporateActionEventType7Code.mmPariPassu}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#PartialRedemptionWithNominalValueReduction
- * CorporateActionEventType7Code.PartialRedemptionWithNominalValueReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPartialRedemptionWithNominalValueReduction
+ * CorporateActionEventType7Code.mmPartialRedemptionWithNominalValueReduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Prefunding
- * CorporateActionEventType7Code.Prefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPrefunding
+ * CorporateActionEventType7Code.mmPrefunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#PayInKind
- * CorporateActionEventType7Code.PayInKind}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPayInKind
+ * CorporateActionEventType7Code.mmPayInKind}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#PlaceOfIncorporation
- * CorporateActionEventType7Code.PlaceOfIncorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPlaceOfIncorporation
+ * CorporateActionEventType7Code.mmPlaceOfIncorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#InstalmentCall
- * CorporateActionEventType7Code.InstalmentCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmInstalmentCall
+ * CorporateActionEventType7Code.mmInstalmentCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#PartialRedemptionWithoutNominalValueReduction
- * CorporateActionEventType7Code.PartialRedemptionWithoutNominalValueReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPartialRedemptionWithoutNominalValueReduction
+ * CorporateActionEventType7Code.mmPartialRedemptionWithoutNominalValueReduction
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#InterestPaymentWithPrincipal
- * CorporateActionEventType7Code.InterestPaymentWithPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmInterestPaymentWithPrincipal
+ * CorporateActionEventType7Code.mmInterestPaymentWithPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#PriorityIssue
- * CorporateActionEventType7Code.PriorityIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmPriorityIssue
+ * CorporateActionEventType7Code.mmPriorityIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#FinalMaturity
- * CorporateActionEventType7Code.FinalMaturity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmFinalMaturity
+ * CorporateActionEventType7Code.mmFinalMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Redenomination
- * CorporateActionEventType7Code.Redenomination}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmRedenomination
+ * CorporateActionEventType7Code.mmRedenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#RemarketingAgreement
- * CorporateActionEventType7Code.RemarketingAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmRemarketingAgreement
+ * CorporateActionEventType7Code.mmRemarketingAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#IntermediateSecuritiesDistribution
- * CorporateActionEventType7Code.IntermediateSecuritiesDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmIntermediateSecuritiesDistribution
+ * CorporateActionEventType7Code.mmIntermediateSecuritiesDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#RightsIssue
- * CorporateActionEventType7Code.RightsIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmRightsIssue
+ * CorporateActionEventType7Code.mmRightsIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#SharesPremiumDividend
- * CorporateActionEventType7Code.SharesPremiumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmSharesPremiumDividend
+ * CorporateActionEventType7Code.mmSharesPremiumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#SmallestNegotiableUnit
- * CorporateActionEventType7Code.SmallestNegotiableUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmSmallestNegotiableUnit
+ * CorporateActionEventType7Code.mmSmallestNegotiableUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#SpinOff
- * CorporateActionEventType7Code.SpinOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmSpinOff
+ * CorporateActionEventType7Code.mmSpinOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#StockSplit
- * CorporateActionEventType7Code.StockSplit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmStockSplit
+ * CorporateActionEventType7Code.mmStockSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#ReverseStockSplit
- * CorporateActionEventType7Code.ReverseStockSplit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmReverseStockSplit
+ * CorporateActionEventType7Code.mmReverseStockSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#TradingStatusSuspended
- * CorporateActionEventType7Code.TradingStatusSuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmTradingStatusSuspended
+ * CorporateActionEventType7Code.mmTradingStatusSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Tender
- * CorporateActionEventType7Code.Tender}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmTender
+ * CorporateActionEventType7Code.mmTender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#TaxReclaim
- * CorporateActionEventType7Code.TaxReclaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmTaxReclaim
+ * CorporateActionEventType7Code.mmTaxReclaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#Worthless
- * CorporateActionEventType7Code.Worthless}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmWorthless
+ * CorporateActionEventType7Code.mmWorthless}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#WithholdingTaxReliefCertification
- * CorporateActionEventType7Code.WithholdingTaxReliefCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmWithholdingTaxReliefCertification
+ * CorporateActionEventType7Code.mmWithholdingTaxReliefCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#CreditEvent
- * CorporateActionEventType7Code.CreditEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmCreditEvent
+ * CorporateActionEventType7Code.mmCreditEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#SecuritiesHoldersMeeting
- * CorporateActionEventType7Code.SecuritiesHoldersMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType7Code#mmSecuritiesHoldersMeeting
+ * CorporateActionEventType7Code.mmSecuritiesHoldersMeeting}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -275,7 +276,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "ActiveTradingStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode ActiveTradingStatus = new MMCode() {
+	public static final MMCode mmActiveTradingStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveTradingStatus";
@@ -298,7 +299,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Attachment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Attachment = new MMCode() {
+	public static final MMCode mmAttachment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
@@ -321,7 +322,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "RepurchaseOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseOffer = new MMCode() {
+	public static final MMCode mmRepurchaseOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseOffer";
@@ -344,7 +345,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "BonusIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode BonusIssue = new MMCode() {
+	public static final MMCode mmBonusIssue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusIssue";
@@ -367,7 +368,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "PutRedemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode PutRedemption = new MMCode() {
+	public static final MMCode mmPutRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutRedemption";
@@ -390,7 +391,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Bankruptcy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bankruptcy = new MMCode() {
+	public static final MMCode mmBankruptcy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
@@ -413,7 +414,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "CapitalGainsDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGainsDistribution = new MMCode() {
+	public static final MMCode mmCapitalGainsDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainsDistribution";
@@ -436,7 +437,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Capitalisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Capitalisation = new MMCode() {
+	public static final MMCode mmCapitalisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capitalisation";
@@ -459,7 +460,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "NonUSTEFRADCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonUSTEFRADCertification = new MMCode() {
+	public static final MMCode mmNonUSTEFRADCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonUSTEFRADCertification";
@@ -482,7 +483,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Change"</li>
 	 * </ul>
 	 */
-	public static final MMCode Change = new MMCode() {
+	public static final MMCode mmChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
@@ -505,7 +506,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "ClassActionProposedSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClassActionProposedSettlement = new MMCode() {
+	public static final MMCode mmClassActionProposedSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionProposedSettlement";
@@ -528,7 +529,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Consent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Consent = new MMCode() {
+	public static final MMCode mmConsent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
@@ -551,7 +552,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Conversion"</li>
 	 * </ul>
 	 */
-	public static final MMCode Conversion = new MMCode() {
+	public static final MMCode mmConversion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
@@ -574,7 +575,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "CompanyOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode CompanyOption = new MMCode() {
+	public static final MMCode mmCompanyOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyOption";
@@ -597,7 +598,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "DecreaseInValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode DecreaseInValue = new MMCode() {
+	public static final MMCode mmDecreaseInValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecreaseInValue";
@@ -620,7 +621,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Detachment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Detachment = new MMCode() {
+	public static final MMCode mmDetachment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detachment";
@@ -643,7 +644,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "BondDefault"</li>
 	 * </ul>
 	 */
-	public static final MMCode BondDefault = new MMCode() {
+	public static final MMCode mmBondDefault = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondDefault";
@@ -666,7 +667,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "TradingStatusDelisted"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradingStatusDelisted = new MMCode() {
+	public static final MMCode mmTradingStatusDelisted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusDelisted";
@@ -689,7 +690,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Drawing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Drawing = new MMCode() {
+	public static final MMCode mmDrawing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawing";
@@ -712,7 +713,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestment = new MMCode() {
+	public static final MMCode mmDividendReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
@@ -735,7 +736,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Disclosure"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disclosure = new MMCode() {
+	public static final MMCode mmDisclosure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclosure";
@@ -758,7 +759,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "DutchAuction"</li>
 	 * </ul>
 	 */
-	public static final MMCode DutchAuction = new MMCode() {
+	public static final MMCode mmDutchAuction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DutchAuction";
@@ -781,7 +782,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividend = new MMCode() {
+	public static final MMCode mmCashDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
@@ -804,7 +805,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "DividendOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendOption = new MMCode() {
+	public static final MMCode mmDividendOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
@@ -827,7 +828,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "ScripDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode ScripDividend = new MMCode() {
+	public static final MMCode mmScripDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
@@ -850,7 +851,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "StockDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockDividend = new MMCode() {
+	public static final MMCode mmStockDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
@@ -873,7 +874,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Exchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode Exchange = new MMCode() {
+	public static final MMCode mmExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
@@ -896,7 +897,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "CallOnIntermediateSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode CallOnIntermediateSecurities = new MMCode() {
+	public static final MMCode mmCallOnIntermediateSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallOnIntermediateSecurities";
@@ -919,7 +920,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "MaturityExtension"</li>
 	 * </ul>
 	 */
-	public static final MMCode MaturityExtension = new MMCode() {
+	public static final MMCode mmMaturityExtension = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityExtension";
@@ -942,7 +943,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "WarrantExercise"</li>
 	 * </ul>
 	 */
-	public static final MMCode WarrantExercise = new MMCode() {
+	public static final MMCode mmWarrantExercise = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantExercise";
@@ -965,7 +966,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "CapitalDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalDistribution = new MMCode() {
+	public static final MMCode mmCapitalDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalDistribution";
@@ -988,7 +989,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "IncreaseInValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncreaseInValue = new MMCode() {
+	public static final MMCode mmIncreaseInValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseInValue";
@@ -1011,7 +1012,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "InterestPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestPayment = new MMCode() {
+	public static final MMCode mmInterestPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
@@ -1034,7 +1035,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "LiquidationDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidationDividend = new MMCode() {
+	public static final MMCode mmLiquidationDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationDividend";
@@ -1057,7 +1058,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "FullCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullCall = new MMCode() {
+	public static final MMCode mmFullCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullCall";
@@ -1080,7 +1081,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Merger"</li>
 	 * </ul>
 	 */
-	public static final MMCode Merger = new MMCode() {
+	public static final MMCode mmMerger = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merger";
@@ -1103,7 +1104,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "OddLotSalePurchase"</li>
 	 * </ul>
 	 */
-	public static final MMCode OddLotSalePurchase = new MMCode() {
+	public static final MMCode mmOddLotSalePurchase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotSalePurchase";
@@ -1126,7 +1127,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "OtherEvent"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherEvent = new MMCode() {
+	public static final MMCode mmOtherEvent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherEvent";
@@ -1149,7 +1150,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "PariPassu"</li>
 	 * </ul>
 	 */
-	public static final MMCode PariPassu = new MMCode() {
+	public static final MMCode mmPariPassu = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
@@ -1172,7 +1173,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "PartialRedemptionWithNominalValueReduction"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialRedemptionWithNominalValueReduction = new MMCode() {
+	public static final MMCode mmPartialRedemptionWithNominalValueReduction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithNominalValueReduction";
@@ -1195,7 +1196,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Prefunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode Prefunding = new MMCode() {
+	public static final MMCode mmPrefunding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prefunding";
@@ -1218,7 +1219,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "PayInKind"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayInKind = new MMCode() {
+	public static final MMCode mmPayInKind = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInKind";
@@ -1241,7 +1242,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "PlaceOfIncorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfIncorporation = new MMCode() {
+	public static final MMCode mmPlaceOfIncorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfIncorporation";
@@ -1264,7 +1265,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "InstalmentCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode InstalmentCall = new MMCode() {
+	public static final MMCode mmInstalmentCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentCall";
@@ -1287,7 +1288,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "PartialRedemptionWithoutNominalValueReduction"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialRedemptionWithoutNominalValueReduction = new MMCode() {
+	public static final MMCode mmPartialRedemptionWithoutNominalValueReduction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithoutNominalValueReduction";
@@ -1310,7 +1311,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "InterestPaymentWithPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestPaymentWithPrincipal = new MMCode() {
+	public static final MMCode mmInterestPaymentWithPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentWithPrincipal";
@@ -1333,7 +1334,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "PriorityIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode PriorityIssue = new MMCode() {
+	public static final MMCode mmPriorityIssue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorityIssue";
@@ -1356,7 +1357,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "FinalMaturity"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinalMaturity = new MMCode() {
+	public static final MMCode mmFinalMaturity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalMaturity";
@@ -1379,7 +1380,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Redenomination"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redenomination = new MMCode() {
+	public static final MMCode mmRedenomination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redenomination";
@@ -1402,7 +1403,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "RemarketingAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode RemarketingAgreement = new MMCode() {
+	public static final MMCode mmRemarketingAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemarketingAgreement";
@@ -1425,7 +1426,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "IntermediateSecuritiesDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntermediateSecuritiesDistribution = new MMCode() {
+	public static final MMCode mmIntermediateSecuritiesDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistribution";
@@ -1448,7 +1449,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "RightsIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode RightsIssue = new MMCode() {
+	public static final MMCode mmRightsIssue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsIssue";
@@ -1471,7 +1472,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "SharesPremiumDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode SharesPremiumDividend = new MMCode() {
+	public static final MMCode mmSharesPremiumDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesPremiumDividend";
@@ -1494,7 +1495,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "SmallestNegotiableUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode SmallestNegotiableUnit = new MMCode() {
+	public static final MMCode mmSmallestNegotiableUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallestNegotiableUnit";
@@ -1517,7 +1518,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "SpinOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpinOff = new MMCode() {
+	public static final MMCode mmSpinOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
@@ -1540,7 +1541,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "StockSplit"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockSplit = new MMCode() {
+	public static final MMCode mmStockSplit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockSplit";
@@ -1563,7 +1564,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "ReverseStockSplit"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReverseStockSplit = new MMCode() {
+	public static final MMCode mmReverseStockSplit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseStockSplit";
@@ -1586,7 +1587,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "TradingStatusSuspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradingStatusSuspended = new MMCode() {
+	public static final MMCode mmTradingStatusSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusSuspended";
@@ -1609,7 +1610,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Tender"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tender = new MMCode() {
+	public static final MMCode mmTender = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
@@ -1632,7 +1633,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "TaxReclaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxReclaim = new MMCode() {
+	public static final MMCode mmTaxReclaim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaim";
@@ -1655,7 +1656,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "Worthless"</li>
 	 * </ul>
 	 */
-	public static final MMCode Worthless = new MMCode() {
+	public static final MMCode mmWorthless = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Worthless";
@@ -1678,7 +1679,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "WithholdingTaxReliefCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTaxReliefCertification = new MMCode() {
+	public static final MMCode mmWithholdingTaxReliefCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxReliefCertification";
@@ -1701,7 +1702,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "CreditEvent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditEvent = new MMCode() {
+	public static final MMCode mmCreditEvent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEvent";
@@ -1724,7 +1725,7 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	 * name} = "SecuritiesHoldersMeeting"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesHoldersMeeting = new MMCode() {
+	public static final MMCode mmSecuritiesHoldersMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesHoldersMeeting";
@@ -1735,44 +1736,44 @@ public class CorporateActionEventType7Code extends CorporateActionEventTypeV3Cod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventType7Code";
 				definition = "Specifies the type of a corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType9Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventType7Code.ActiveTradingStatus, com.tools20022.repository.codeset.CorporateActionEventType7Code.Attachment,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.RepurchaseOffer, com.tools20022.repository.codeset.CorporateActionEventType7Code.BonusIssue,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.PutRedemption, com.tools20022.repository.codeset.CorporateActionEventType7Code.Bankruptcy,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.CapitalGainsDistribution, com.tools20022.repository.codeset.CorporateActionEventType7Code.Capitalisation,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.NonUSTEFRADCertification, com.tools20022.repository.codeset.CorporateActionEventType7Code.Change,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.ClassActionProposedSettlement, com.tools20022.repository.codeset.CorporateActionEventType7Code.Consent,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Conversion, com.tools20022.repository.codeset.CorporateActionEventType7Code.CompanyOption,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.DecreaseInValue, com.tools20022.repository.codeset.CorporateActionEventType7Code.Detachment,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.BondDefault, com.tools20022.repository.codeset.CorporateActionEventType7Code.TradingStatusDelisted,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Drawing, com.tools20022.repository.codeset.CorporateActionEventType7Code.DividendReinvestment,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Disclosure, com.tools20022.repository.codeset.CorporateActionEventType7Code.DutchAuction,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.CashDividend, com.tools20022.repository.codeset.CorporateActionEventType7Code.DividendOption,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.ScripDividend, com.tools20022.repository.codeset.CorporateActionEventType7Code.StockDividend,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Exchange, com.tools20022.repository.codeset.CorporateActionEventType7Code.CallOnIntermediateSecurities,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.MaturityExtension, com.tools20022.repository.codeset.CorporateActionEventType7Code.WarrantExercise,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.CapitalDistribution, com.tools20022.repository.codeset.CorporateActionEventType7Code.IncreaseInValue,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.InterestPayment, com.tools20022.repository.codeset.CorporateActionEventType7Code.LiquidationDividend,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.FullCall, com.tools20022.repository.codeset.CorporateActionEventType7Code.Merger,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.OddLotSalePurchase, com.tools20022.repository.codeset.CorporateActionEventType7Code.OtherEvent,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.PariPassu, com.tools20022.repository.codeset.CorporateActionEventType7Code.PartialRedemptionWithNominalValueReduction,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Prefunding, com.tools20022.repository.codeset.CorporateActionEventType7Code.PayInKind,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.PlaceOfIncorporation, com.tools20022.repository.codeset.CorporateActionEventType7Code.InstalmentCall,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.PartialRedemptionWithoutNominalValueReduction, com.tools20022.repository.codeset.CorporateActionEventType7Code.InterestPaymentWithPrincipal,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.PriorityIssue, com.tools20022.repository.codeset.CorporateActionEventType7Code.FinalMaturity,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Redenomination, com.tools20022.repository.codeset.CorporateActionEventType7Code.RemarketingAgreement,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.IntermediateSecuritiesDistribution, com.tools20022.repository.codeset.CorporateActionEventType7Code.RightsIssue,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.SharesPremiumDividend, com.tools20022.repository.codeset.CorporateActionEventType7Code.SmallestNegotiableUnit,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.SpinOff, com.tools20022.repository.codeset.CorporateActionEventType7Code.StockSplit,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.ReverseStockSplit, com.tools20022.repository.codeset.CorporateActionEventType7Code.TradingStatusSuspended,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Tender, com.tools20022.repository.codeset.CorporateActionEventType7Code.TaxReclaim,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.Worthless, com.tools20022.repository.codeset.CorporateActionEventType7Code.WithholdingTaxReliefCertification,
-						com.tools20022.repository.codeset.CorporateActionEventType7Code.CreditEvent, com.tools20022.repository.codeset.CorporateActionEventType7Code.SecuritiesHoldersMeeting);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventType7Code.mmActiveTradingStatus, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmAttachment,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmRepurchaseOffer, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmBonusIssue,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPutRedemption, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmBankruptcy,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmCapitalGainsDistribution, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmCapitalisation,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmNonUSTEFRADCertification, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmChange,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmClassActionProposedSettlement, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmConsent,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmConversion, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmCompanyOption,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmDecreaseInValue, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmDetachment,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmBondDefault, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmTradingStatusDelisted,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmDrawing, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmDividendReinvestment,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmDisclosure, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmDutchAuction,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmCashDividend, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmDividendOption,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmScripDividend, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmStockDividend,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmExchange, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmCallOnIntermediateSecurities,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmMaturityExtension, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmWarrantExercise,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmCapitalDistribution, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmIncreaseInValue,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmInterestPayment, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmLiquidationDividend,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmFullCall, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmMerger,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmOddLotSalePurchase, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmOtherEvent,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPariPassu, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPartialRedemptionWithNominalValueReduction,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPrefunding, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPayInKind,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPlaceOfIncorporation, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmInstalmentCall,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPartialRedemptionWithoutNominalValueReduction, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmInterestPaymentWithPrincipal,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmPriorityIssue, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmFinalMaturity,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmRedenomination, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmRemarketingAgreement,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmIntermediateSecuritiesDistribution, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmRightsIssue,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmSharesPremiumDividend, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmSmallestNegotiableUnit,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmSpinOff, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmStockSplit,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmReverseStockSplit, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmTradingStatusSuspended,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmTender, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmTaxReclaim,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmWorthless, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmWithholdingTaxReliefCertification,
+						com.tools20022.repository.codeset.CorporateActionEventType7Code.mmCreditEvent, com.tools20022.repository.codeset.CorporateActionEventType7Code.mmSecuritiesHoldersMeeting);
 				trace_lazy = () -> CorporateActionEventTypeV3Code.mmObject();
 			}
 		});

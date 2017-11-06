@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#SellersOption
- * SettlementDate3Code.SellersOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmSellersOption
+ * SettlementDate3Code.mmSellersOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#ToBeAnnouncedTrade
- * SettlementDate3Code.ToBeAnnouncedTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmToBeAnnouncedTrade
+ * SettlementDate3Code.mmToBeAnnouncedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#WhenDistributed
- * SettlementDate3Code.WhenDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmWhenDistributed
+ * SettlementDate3Code.mmWhenDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#WhenIssuedOrDistributed
- * SettlementDate3Code.WhenIssuedOrDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmWhenIssuedOrDistributed
+ * SettlementDate3Code.mmWhenIssuedOrDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#WhenIssued
- * SettlementDate3Code.WhenIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmWhenIssued
+ * SettlementDate3Code.mmWhenIssued}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "SellersOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellersOption = new MMCode() {
+	public static final MMCode mmSellersOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersOption";
@@ -113,7 +113,7 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "ToBeAnnouncedTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToBeAnnouncedTrade = new MMCode() {
+	public static final MMCode mmToBeAnnouncedTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeAnnouncedTrade";
@@ -136,7 +136,7 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "WhenDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenDistributed = new MMCode() {
+	public static final MMCode mmWhenDistributed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenDistributed";
@@ -159,7 +159,7 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "WhenIssuedOrDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenIssuedOrDistributed = new MMCode() {
+	public static final MMCode mmWhenIssuedOrDistributed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssuedOrDistributed";
@@ -182,7 +182,7 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "WhenIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenIssued = new MMCode() {
+	public static final MMCode mmWhenIssued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssued";
@@ -193,13 +193,14 @@ public class SettlementDate3Code extends SettlementDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SELL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate3Code";
 				definition = "Specifies the date of settlement, in coded form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate3Code.SellersOption, com.tools20022.repository.codeset.SettlementDate3Code.ToBeAnnouncedTrade,
-						com.tools20022.repository.codeset.SettlementDate3Code.WhenDistributed, com.tools20022.repository.codeset.SettlementDate3Code.WhenIssuedOrDistributed, com.tools20022.repository.codeset.SettlementDate3Code.WhenIssued);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate3Code.mmSellersOption, com.tools20022.repository.codeset.SettlementDate3Code.mmToBeAnnouncedTrade,
+						com.tools20022.repository.codeset.SettlementDate3Code.mmWhenDistributed, com.tools20022.repository.codeset.SettlementDate3Code.mmWhenIssuedOrDistributed,
+						com.tools20022.repository.codeset.SettlementDate3Code.mmWhenIssued);
 				trace_lazy = () -> SettlementDateCode.mmObject();
 			}
 		});

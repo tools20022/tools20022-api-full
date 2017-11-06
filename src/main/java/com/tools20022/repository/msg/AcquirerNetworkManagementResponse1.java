@@ -32,11 +32,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerNetworkManagementResponse1#Environment
- * AcquirerNetworkManagementResponse1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerNetworkManagementResponse1#mmEnvironment
+ * AcquirerNetworkManagementResponse1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerNetworkManagementResponse1#Transaction
- * AcquirerNetworkManagementResponse1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerNetworkManagementResponse1#mmTransaction
+ * AcquirerNetworkManagementResponse1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,15 +44,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#NetworkManagementResponse
- * NetworkManagementResponse.NetworkManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#mmNetworkManagementResponse
+ * NetworkManagementResponse.mmNetworkManagementResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerNetworkManagementResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardTransactionEnvironment6 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -94,7 +95,7 @@ public class AcquirerNetworkManagementResponse1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerNetworkManagementResponse1.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class AcquirerNetworkManagementResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionEnvironment6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment6.mmObject();
 		}
 	};
+	protected CardTransaction12 transaction;
 	/**
 	 * Network management transaction.
 	 * <p>
@@ -134,7 +136,7 @@ public class AcquirerNetworkManagementResponse1 {
 	 * definition} = "Network management transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerNetworkManagementResponse1.mmObject();
 			isDerived = false;
@@ -142,24 +144,40 @@ public class AcquirerNetworkManagementResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Network management transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransaction12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerNetworkManagementResponse1.Environment, com.tools20022.repository.msg.AcquirerNetworkManagementResponse1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.NetworkManagementResponse.NetworkManagementResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerNetworkManagementResponse1.mmEnvironment, com.tools20022.repository.msg.AcquirerNetworkManagementResponse1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.NetworkManagementResponse.mmNetworkManagementResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcquirerNetworkManagementResponse1";
 				definition = "Information related to the response to the network management.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardTransactionEnvironment6 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment6 environment) {
+		this.environment = environment;
+	}
+
+	public CardTransaction12 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardTransaction12 transaction) {
+		this.transaction = transaction;
 	}
 }

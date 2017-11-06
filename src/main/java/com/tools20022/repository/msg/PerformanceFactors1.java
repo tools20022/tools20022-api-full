@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#CorporateActionFactor
- * PerformanceFactors1.CorporateActionFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#mmCorporateActionFactor
+ * PerformanceFactors1.mmCorporateActionFactor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#CumulativeCorporateActionFactor
- * PerformanceFactors1.CumulativeCorporateActionFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#mmCumulativeCorporateActionFactor
+ * PerformanceFactors1.mmCumulativeCorporateActionFactor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#AccumulationPeriod
- * PerformanceFactors1.AccumulationPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#mmAccumulationPeriod
+ * PerformanceFactors1.mmAccumulationPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#NormalPerformance
- * PerformanceFactors1.NormalPerformance}</li>
+ * {@linkplain com.tools20022.repository.msg.PerformanceFactors1#mmNormalPerformance
+ * PerformanceFactors1.mmNormalPerformance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PerformanceFactors1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber corporateActionFactor;
 	/**
 	 * Value of the NAV before all corporate events of the valuation date,
 	 * divided by the value of the NAV after the corporate event.
@@ -82,8 +83,8 @@ public class PerformanceFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#CorporateActionFactor
-	 * PerformanceFactors.CorporateActionFactor}</li>
+	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmCorporateActionFactor
+	 * PerformanceFactors.mmCorporateActionFactor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class PerformanceFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionFactor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.mmCorporateActionFactor;
 			componentContext_lazy = () -> PerformanceFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.CorporateActionFactor;
 			isDerived = false;
 			xmlTag = "CorpActnFctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionFactor";
 			definition = "Value of the NAV before all corporate events of the valuation date, divided by the value of the NAV after the corporate event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber cumulativeCorporateActionFactor;
 	/**
 	 * Value of the NAV before a corporate event, divided by the value of the
 	 * NAV after the corporate event, accumulated for a number of corporate
@@ -133,8 +135,8 @@ public class PerformanceFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#CumulativeCorporateActionFactor
-	 * PerformanceFactors.CumulativeCorporateActionFactor}</li>
+	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmCumulativeCorporateActionFactor
+	 * PerformanceFactors.mmCumulativeCorporateActionFactor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +157,21 @@ public class PerformanceFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CumulativeCorporateActionFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCumulativeCorporateActionFactor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.mmCumulativeCorporateActionFactor;
 			componentContext_lazy = () -> PerformanceFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.CumulativeCorporateActionFactor;
 			isDerived = false;
 			xmlTag = "CmltvCorpActnFctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumulativeCorporateActionFactor";
 			definition = "Value of the NAV before a corporate event, divided by the value of the NAV after the corporate event, accumulated for a number of corporate events over the defined period of time.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DatePeriodDetails accumulationPeriod;
 	/**
 	 * Period of time for the calculation of the cumulative corporate action
 	 * factor.
@@ -183,8 +186,8 @@ public class PerformanceFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#AccumulationPeriod
-	 * PerformanceFactors.AccumulationPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmAccumulationPeriod
+	 * PerformanceFactors.mmAccumulationPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,20 +208,21 @@ public class PerformanceFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccumulationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccumulationPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.mmAccumulationPeriod;
 			componentContext_lazy = () -> PerformanceFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.AccumulationPeriod;
 			isDerived = false;
 			xmlTag = "AcmltnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulationPeriod";
 			definition = "Period of time for the calculation of the cumulative corporate action factor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DatePeriodDetails.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
 		}
 	};
+	protected DecimalNumber normalPerformance;
 	/**
 	 * Normal performance value of the NAV.
 	 * <p>
@@ -232,8 +236,8 @@ public class PerformanceFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#NormalPerformance
-	 * PerformanceFactors.NormalPerformance}</li>
+	 * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmNormalPerformance
+	 * PerformanceFactors.mmNormalPerformance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,17 +256,17 @@ public class PerformanceFactors1 {
 	 * definition} = "Normal performance value of the NAV."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NormalPerformance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNormalPerformance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.mmNormalPerformance;
 			componentContext_lazy = () -> PerformanceFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.NormalPerformance;
 			isDerived = false;
 			xmlTag = "NrmlPrfrmnc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalPerformance";
 			definition = "Normal performance value of the NAV.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -270,15 +274,47 @@ public class PerformanceFactors1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PerformanceFactors1.CorporateActionFactor, com.tools20022.repository.msg.PerformanceFactors1.CumulativeCorporateActionFactor,
-						com.tools20022.repository.msg.PerformanceFactors1.AccumulationPeriod, com.tools20022.repository.msg.PerformanceFactors1.NormalPerformance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PerformanceFactors1.mmCorporateActionFactor, com.tools20022.repository.msg.PerformanceFactors1.mmCumulativeCorporateActionFactor,
+						com.tools20022.repository.msg.PerformanceFactors1.mmAccumulationPeriod, com.tools20022.repository.msg.PerformanceFactors1.mmNormalPerformance);
 				trace_lazy = () -> PerformanceFactors.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PerformanceFactors1";
 				definition = "Performance factors of the investment fund / fund class.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getCorporateActionFactor() {
+		return corporateActionFactor;
+	}
+
+	public void setCorporateActionFactor(DecimalNumber corporateActionFactor) {
+		this.corporateActionFactor = corporateActionFactor;
+	}
+
+	public DecimalNumber getCumulativeCorporateActionFactor() {
+		return cumulativeCorporateActionFactor;
+	}
+
+	public void setCumulativeCorporateActionFactor(DecimalNumber cumulativeCorporateActionFactor) {
+		this.cumulativeCorporateActionFactor = cumulativeCorporateActionFactor;
+	}
+
+	public DatePeriodDetails getAccumulationPeriod() {
+		return accumulationPeriod;
+	}
+
+	public void setAccumulationPeriod(com.tools20022.repository.msg.DatePeriodDetails accumulationPeriod) {
+		this.accumulationPeriod = accumulationPeriod;
+	}
+
+	public DecimalNumber getNormalPerformance() {
+		return normalPerformance;
+	}
+
+	public void setNormalPerformance(DecimalNumber normalPerformance) {
+		this.normalPerformance = normalPerformance;
 	}
 }

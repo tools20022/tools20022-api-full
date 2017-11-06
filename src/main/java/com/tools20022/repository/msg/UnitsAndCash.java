@@ -39,16 +39,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#Instrument
- * UnitsAndCash.Instrument}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#GrandTotalAmount
- * UnitsAndCash.GrandTotalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#Group1Number
- * UnitsAndCash.Group1Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#Group2Number
- * UnitsAndCash.Group2Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#CompleteIndicator
- * UnitsAndCash.CompleteIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#mmInstrument
+ * UnitsAndCash.mmInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnitsAndCash#mmGrandTotalAmount
+ * UnitsAndCash.mmGrandTotalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#mmGroup1Number
+ * UnitsAndCash.mmGroup1Number}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash#mmGroup2Number
+ * UnitsAndCash.mmGroup2Number}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnitsAndCash#mmCompleteIndicator
+ * UnitsAndCash.mmCompleteIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitsAndCash {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrument7 instrument;
 	/**
 	 * Specifies the type of underlying assets for the PEP or ISA.
 	 * <p>
@@ -106,21 +109,22 @@ public class UnitsAndCash {
 	 * "Specifies the type of underlying assets for the PEP or ISA."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Instrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "Instrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instrument";
 			definition = "Specifies the type of underlying assets for the PEP or ISA.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument7.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount grandTotalAmount;
 	/**
 	 * Quantity expressed as an amount, eg, in the investment fund business, a
 	 * quantity of a financial instrument may be expressed as an amount of
@@ -136,8 +140,8 @@ public class UnitsAndCash {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +161,21 @@ public class UnitsAndCash {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrandTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrandTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "GrdTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrandTotalAmount";
 			definition = "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DecimalNumber group1Number;
 	/**
 	 * Quantity expressed as a number, eg, a number of shares.
 	 * <p>
@@ -184,8 +189,8 @@ public class UnitsAndCash {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#UnitsNumber
-	 * InvestmentFundOrderExecution.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmUnitsNumber
+	 * InvestmentFundOrderExecution.mmUnitsNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,20 +208,21 @@ public class UnitsAndCash {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Group1Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroup1Number = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.UnitsNumber;
 			isDerived = false;
 			xmlTag = "Grp1Nb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber group2Number;
 	/**
 	 * Quantity expressed as a number, eg, a number of shares.
 	 * <p>
@@ -230,8 +236,8 @@ public class UnitsAndCash {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#UnitsNumber
-	 * InvestmentFundOrderExecution.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmUnitsNumber
+	 * InvestmentFundOrderExecution.mmUnitsNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,20 +255,21 @@ public class UnitsAndCash {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Group2Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroup2Number = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.UnitsNumber;
 			isDerived = false;
 			xmlTag = "Grp2Nb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group2Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected YesNoIndicator completeIndicator;
 	/**
 	 * Specifies whether the transfer of the asset is final or not, eg whether
 	 * dividends or units are still to be delivered.
@@ -293,7 +300,7 @@ public class UnitsAndCash {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CompleteIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompleteIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			isDerived = false;
@@ -301,8 +308,8 @@ public class UnitsAndCash {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteIndicator";
 			definition = "Specifies whether the transfer of the asset is final or not, eg whether dividends or units are still to be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -310,15 +317,55 @@ public class UnitsAndCash {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitsAndCash.Instrument, com.tools20022.repository.msg.UnitsAndCash.GrandTotalAmount, com.tools20022.repository.msg.UnitsAndCash.Group1Number,
-						com.tools20022.repository.msg.UnitsAndCash.Group2Number, com.tools20022.repository.msg.UnitsAndCash.CompleteIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitsAndCash.mmInstrument, com.tools20022.repository.msg.UnitsAndCash.mmGrandTotalAmount, com.tools20022.repository.msg.UnitsAndCash.mmGroup1Number,
+						com.tools20022.repository.msg.UnitsAndCash.mmGroup2Number, com.tools20022.repository.msg.UnitsAndCash.mmCompleteIndicator);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnitsAndCash";
 				definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrument7 getInstrument() {
+		return instrument;
+	}
+
+	public void setInstrument(com.tools20022.repository.msg.FinancialInstrument7 instrument) {
+		this.instrument = instrument;
+	}
+
+	public ImpliedCurrencyAndAmount getGrandTotalAmount() {
+		return grandTotalAmount;
+	}
+
+	public void setGrandTotalAmount(ImpliedCurrencyAndAmount grandTotalAmount) {
+		this.grandTotalAmount = grandTotalAmount;
+	}
+
+	public DecimalNumber getGroup1Number() {
+		return group1Number;
+	}
+
+	public void setGroup1Number(DecimalNumber group1Number) {
+		this.group1Number = group1Number;
+	}
+
+	public DecimalNumber getGroup2Number() {
+		return group2Number;
+	}
+
+	public void setGroup2Number(DecimalNumber group2Number) {
+		this.group2Number = group2Number;
+	}
+
+	public YesNoIndicator getCompleteIndicator() {
+		return completeIndicator;
+	}
+
+	public void setCompleteIndicator(YesNoIndicator completeIndicator) {
+		this.completeIndicator = completeIndicator;
 	}
 }

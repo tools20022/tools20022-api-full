@@ -35,36 +35,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD9#PlaceAndName
- * AccountBalanceSD9.PlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#OriginalBalance
- * AccountBalanceSD9.OriginalBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmPlaceAndName
+ * AccountBalanceSD9.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#UnpledgedBalance
- * AccountBalanceSD9.UnpledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmOriginalBalance
+ * AccountBalanceSD9.mmOriginalBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#InvestmentUnpledgedBalance
- * AccountBalanceSD9.InvestmentUnpledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmUnpledgedBalance
+ * AccountBalanceSD9.mmUnpledgedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#InvestmentPledgedBalance
- * AccountBalanceSD9.InvestmentPledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmInvestmentUnpledgedBalance
+ * AccountBalanceSD9.mmInvestmentUnpledgedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#AcceptedBalance
- * AccountBalanceSD9.AcceptedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmInvestmentPledgedBalance
+ * AccountBalanceSD9.mmInvestmentPledgedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#UnacceptedBalance
- * AccountBalanceSD9.UnacceptedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmAcceptedBalance
+ * AccountBalanceSD9.mmAcceptedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#OversubscriptionBalance
- * AccountBalanceSD9.OversubscriptionBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmUnacceptedBalance
+ * AccountBalanceSD9.mmUnacceptedBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD9#mmOversubscriptionBalance
+ * AccountBalanceSD9.mmOversubscriptionBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountBalanceSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -112,11 +114,11 @@ public class AccountBalanceSD9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#PlaceAndName
-	 * AccountBalanceSD4.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmPlaceAndName
+	 * AccountBalanceSD4.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -124,12 +126,13 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.PlaceAndName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.mmPlaceAndName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 originalBalance;
 	/**
 	 * Position held in a security as of the day prior to publication date. This
 	 * position is subject to a redemption lottery call when this is the first
@@ -163,11 +166,11 @@ public class AccountBalanceSD9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#OriginalBalance
-	 * AccountBalanceSD4.OriginalBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmOriginalBalance
+	 * AccountBalanceSD4.mmOriginalBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -175,13 +178,14 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.OriginalBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.mmOriginalBalance;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 unpledgedBalance;
 	/**
 	 * Portion of the Original Balance position held in DTC General Free account
 	 * as of day prior to Publication Date. Position held in this account is
@@ -213,11 +217,11 @@ public class AccountBalanceSD9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#UnpledgedBalance
-	 * AccountBalanceSD4.UnpledgedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmUnpledgedBalance
+	 * AccountBalanceSD4.mmUnpledgedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnpledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -225,13 +229,14 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.UnpledgedBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.mmUnpledgedBalance;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 investmentUnpledgedBalance;
 	/**
 	 * Portion of the Original Balance position held in DTC Segregated account
 	 * as of day prior to Publication Date. Position held in this account is
@@ -264,11 +269,11 @@ public class AccountBalanceSD9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#InvestmentUnpledgedBalance
-	 * AccountBalanceSD4.InvestmentUnpledgedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmInvestmentUnpledgedBalance
+	 * AccountBalanceSD4.mmInvestmentUnpledgedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -276,13 +281,14 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.InvestmentUnpledgedBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.mmInvestmentUnpledgedBalance;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 investmentPledgedBalance;
 	/**
 	 * Portion of the Original Balance position held in DTC Investment account
 	 * as of day prior to Publication Date. Position held in this account is
@@ -315,11 +321,11 @@ public class AccountBalanceSD9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#InvestmentPledgedBalance
-	 * AccountBalanceSD4.InvestmentPledgedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD4#mmInvestmentPledgedBalance
+	 * AccountBalanceSD4.mmInvestmentPledgedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentPledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -327,13 +333,14 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.InvestmentPledgedBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD4.mmInvestmentPledgedBalance;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 acceptedBalance;
 	/**
 	 * Balance that has been accepted by the issuer / agent for payment.
 	 * <p>
@@ -361,7 +368,7 @@ public class AccountBalanceSD9 {
 	 * "Balance that has been accepted by the issuer / agent for payment. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcceptedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcceptedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -369,12 +376,13 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedBalance";
 			definition = "Balance that has been accepted by the issuer / agent for payment. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 unacceptedBalance;
 	/**
 	 * Balance that has not been accepted by issuer / agent for payment.
 	 * <p>
@@ -402,7 +410,7 @@ public class AccountBalanceSD9 {
 	 * "Balance that has not been accepted by issuer / agent for payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnacceptedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnacceptedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -410,12 +418,13 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedBalance";
 			definition = "Balance that has not been accepted by issuer / agent for payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 oversubscriptionBalance;
 	/**
 	 * For Rights Subscription events, total number of oversubscribed units
 	 * applicable to the payment or the subscription charge.
@@ -445,7 +454,7 @@ public class AccountBalanceSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OversubscriptionBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOversubscriptionBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD9.mmObject();
 			isDerived = false;
@@ -453,20 +462,21 @@ public class AccountBalanceSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OversubscriptionBalance";
 			definition = "For Rights Subscription events, total number of oversubscribed units applicable to the payment or the subscription charge. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.PlaceAndName, com.tools20022.repository.msg.AccountBalanceSD9.OriginalBalance,
-						com.tools20022.repository.msg.AccountBalanceSD9.UnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD9.InvestmentUnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD9.InvestmentPledgedBalance,
-						com.tools20022.repository.msg.AccountBalanceSD9.AcceptedBalance, com.tools20022.repository.msg.AccountBalanceSD9.UnacceptedBalance, com.tools20022.repository.msg.AccountBalanceSD9.OversubscriptionBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceSD9.mmOriginalBalance,
+						com.tools20022.repository.msg.AccountBalanceSD9.mmUnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD9.mmInvestmentUnpledgedBalance,
+						com.tools20022.repository.msg.AccountBalanceSD9.mmInvestmentPledgedBalance, com.tools20022.repository.msg.AccountBalanceSD9.mmAcceptedBalance, com.tools20022.repository.msg.AccountBalanceSD9.mmUnacceptedBalance,
+						com.tools20022.repository.msg.AccountBalanceSD9.mmOversubscriptionBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountBalanceSD9";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
@@ -474,5 +484,69 @@ public class AccountBalanceSD9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public SignedQuantityFormat9 getOriginalBalance() {
+		return originalBalance;
+	}
+
+	public void setOriginalBalance(com.tools20022.repository.msg.SignedQuantityFormat9 originalBalance) {
+		this.originalBalance = originalBalance;
+	}
+
+	public SignedQuantityFormat9 getUnpledgedBalance() {
+		return unpledgedBalance;
+	}
+
+	public void setUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 unpledgedBalance) {
+		this.unpledgedBalance = unpledgedBalance;
+	}
+
+	public SignedQuantityFormat9 getInvestmentUnpledgedBalance() {
+		return investmentUnpledgedBalance;
+	}
+
+	public void setInvestmentUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 investmentUnpledgedBalance) {
+		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
+	}
+
+	public SignedQuantityFormat9 getInvestmentPledgedBalance() {
+		return investmentPledgedBalance;
+	}
+
+	public void setInvestmentPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 investmentPledgedBalance) {
+		this.investmentPledgedBalance = investmentPledgedBalance;
+	}
+
+	public SignedQuantityFormat9 getAcceptedBalance() {
+		return acceptedBalance;
+	}
+
+	public void setAcceptedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 acceptedBalance) {
+		this.acceptedBalance = acceptedBalance;
+	}
+
+	public SignedQuantityFormat9 getUnacceptedBalance() {
+		return unacceptedBalance;
+	}
+
+	public void setUnacceptedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 unacceptedBalance) {
+		this.unacceptedBalance = unacceptedBalance;
+	}
+
+	public SignedQuantityFormat9 getOversubscriptionBalance() {
+		return oversubscriptionBalance;
+	}
+
+	public void setOversubscriptionBalance(com.tools20022.repository.msg.SignedQuantityFormat9 oversubscriptionBalance) {
+		this.oversubscriptionBalance = oversubscriptionBalance;
 	}
 }

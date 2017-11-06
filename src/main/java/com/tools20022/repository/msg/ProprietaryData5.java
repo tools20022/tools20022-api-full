@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData5#Type
- * ProprietaryData5.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData5#Data
- * ProprietaryData5.Data}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData5#mmType
+ * ProprietaryData5.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData5#mmData
+ * ProprietaryData5.mmData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryData5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of the proprietary document
 	 * <p>
@@ -87,7 +88,7 @@ public class ProprietaryData5 {
 	 * definition} = "Type of the proprietary document"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryData5.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class ProprietaryData5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the proprietary document";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SupplementaryDataEnvelope1 data;
 	/**
 	 * Technical element wrapping the proprietary message.
 	 * <p>
@@ -128,7 +130,7 @@ public class ProprietaryData5 {
 	 * definition} = "Technical element wrapping the proprietary message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Data = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryData5.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class ProprietaryData5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			definition = "Technical element wrapping the proprietary message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SupplementaryDataEnvelope1.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class ProprietaryData5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData5.Type, com.tools20022.repository.msg.ProprietaryData5.Data);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData5.mmType, com.tools20022.repository.msg.ProprietaryData5.mmData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProprietaryData5";
 				definition = "Container for proprietary information. Business content of this element is not specified.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public SupplementaryDataEnvelope1 getData() {
+		return data;
+	}
+
+	public void setData(SupplementaryDataEnvelope1 data) {
+		this.data = data;
 	}
 }

@@ -41,8 +41,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransaction#ReplacedAmount
- * SecuritiesTransaction.ReplacedAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransaction#mmReplacedAmount
+ * SecuritiesTransaction.mmReplacedAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,14 +50,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#New
- * ReportingTransactionType1Choice.New}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#mmNew
+ * ReportingTransactionType1Choice.mmNew}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#Cancellation
- * ReportingTransactionType1Choice.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#mmCancellation
+ * ReportingTransactionType1Choice.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#Transaction
- * SecuritiesTransactionReport4.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmTransaction
+ * SecuritiesTransactionReport4.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -78,8 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransaction extends SecuritiesTrade {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount replacedAmount;
 	/**
 	 * Specifies the amount requested to be replaced or actually replaced.
 	 * <p>
@@ -120,15 +121,15 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 	 * "Specifies the amount requested to be replaced or actually replaced."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ReplacedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReplacedAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SecuritiesTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacedAmount";
 			definition = "Specifies the amount requested to be replaced or actually replaced.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -136,17 +137,25 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransaction";
 				definition = "Exchange of securities.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingTransactionType1Choice.New, com.tools20022.repository.choice.ReportingTransactionType1Choice.Cancellation,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.Transaction);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingTransactionType1Choice.mmNew, com.tools20022.repository.choice.ReportingTransactionType1Choice.mmCancellation,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTransaction);
 				superType_lazy = () -> SecuritiesTrade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransaction.ReplacedAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransaction.mmReplacedAmount);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesTransaction1.mmObject(), SecuritiesTransactionReport2.mmObject(), SecuritiesTransactionReport4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getReplacedAmount() {
+		return replacedAmount;
+	}
+
+	public void setReplacedAmount(CurrencyAndAmount replacedAmount) {
+		this.replacedAmount = replacedAmount;
 	}
 }

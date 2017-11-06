@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction72#PaymentInstrument
- * PaymentTransaction72.PaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction72#mmPaymentInstrument
+ * PaymentTransaction72.mmPaymentInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTransaction72 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentInstrument21Choice paymentInstrument;
 	/**
 	 * Choice between types of payment instrument, for example, cheque, credit
 	 * transfer or investment account.
@@ -99,33 +100,33 @@ public class PaymentTransaction72 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction21#PaymentInstrument
-	 * PaymentTransaction21.PaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction21#mmPaymentInstrument
+	 * PaymentTransaction21.mmPaymentInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentTransaction72.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> PaymentTransaction72.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Choice between types of payment instrument, for example, cheque, credit transfer or investment account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction21.PaymentInstrument;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction21.mmPaymentInstrument;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument21Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentInstrument21Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction72.PaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction72.mmPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction72";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
@@ -133,5 +134,13 @@ public class PaymentTransaction72 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentInstrument21Choice getPaymentInstrument() {
+		return paymentInstrument;
+	}
+
+	public void setPaymentInstrument(PaymentInstrument21Choice paymentInstrument) {
+		this.paymentInstrument = paymentInstrument;
 	}
 }

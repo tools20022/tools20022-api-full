@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#Code
- * ProcessedStatus1FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#mmCode
+ * ProcessedStatus1FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#Proprietary
- * ProcessedStatus1FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#mmProprietary
+ * ProcessedStatus1FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessedStatus1FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessedStatus1Code code;
 	/**
 	 * Standard code to specify to express the processing status of the
 	 * notification advice.
@@ -80,8 +81,8 @@ public class ProcessedStatus1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#RelatedInstructionProcessedStatus
-	 * CorporateActionStatus.RelatedInstructionProcessedStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmRelatedInstructionProcessedStatus
+	 * CorporateActionStatus.mmRelatedInstructionProcessedStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class ProcessedStatus1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmRelatedInstructionProcessedStatus;
 			componentContext_lazy = () -> ProcessedStatus1FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.RelatedInstructionProcessedStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to  specify to  express the processing status of the notification advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProcessedStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the processing status of the notification
 	 * advice.
@@ -130,8 +132,8 @@ public class ProcessedStatus1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#RelatedInstructionProcessedStatus
-	 * CorporateActionStatus.RelatedInstructionProcessedStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmRelatedInstructionProcessedStatus
+	 * CorporateActionStatus.mmRelatedInstructionProcessedStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,17 +154,17 @@ public class ProcessedStatus1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmRelatedInstructionProcessedStatus;
 			componentContext_lazy = () -> ProcessedStatus1FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.RelatedInstructionProcessedStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the processing status of the notification advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -170,14 +172,30 @@ public class ProcessedStatus1FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessedStatus1FormatChoice.Code, com.tools20022.repository.choice.ProcessedStatus1FormatChoice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessedStatus1FormatChoice.mmCode, com.tools20022.repository.choice.ProcessedStatus1FormatChoice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus1FormatChoice";
 				definition = "Choice of formats to  express the processing status of the notification advice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessedStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ProcessedStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

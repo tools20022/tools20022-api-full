@@ -37,21 +37,22 @@ import java.util.function.Supplier;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus7#ReasonRule
- * RejectedStatus7.ReasonRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus7#mmReasonRule
+ * RejectedStatus7.mmReasonRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus7#Reason
- * RejectedStatus7.Reason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus7#ExtendedReason
- * RejectedStatus7.ExtendedReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus7#mmReason
+ * RejectedStatus7.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectedStatus7#DataSourceScheme
- * RejectedStatus7.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectedStatus7#mmExtendedReason
+ * RejectedStatus7.mmExtendedReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RejectedStatus7#mmDataSourceScheme
+ * RejectedStatus7.mmDataSourceScheme}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,6 +77,7 @@ import java.util.function.Supplier;
 public class RejectedStatus7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectedStatusReason8Code reason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -89,8 +91,8 @@ public class RejectedStatus7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectedStatusReason
-	 * StatusReason.RejectedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectedStatusReason
+	 * StatusReason.mmRejectedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,20 +111,21 @@ public class RejectedStatus7 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> RejectedStatus7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectedStatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason8Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -151,7 +154,7 @@ public class RejectedStatus7 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedStatus7.mmObject();
 			isDerived = false;
@@ -159,11 +162,12 @@ public class RejectedStatus7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the rejcted status.
 	 * <p>
@@ -175,8 +179,8 @@ public class RejectedStatus7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,19 +200,19 @@ public class RejectedStatus7 {
 	 * "Proprietary identification of the reason for the rejcted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> RejectedStatus7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the rejcted status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
 	/**
@@ -220,14 +224,14 @@ public class RejectedStatus7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus7#Reason
-	 * RejectedStatus7.Reason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus7#mmReason
+	 * RejectedStatus7.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectedStatus7#ExtendedReason
-	 * RejectedStatus7.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectedStatus7#mmExtendedReason
+	 * RejectedStatus7.mmExtendedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectedStatus7#DataSourceScheme
-	 * RejectedStatus7.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectedStatus7#mmDataSourceScheme
+	 * RejectedStatus7.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -247,22 +251,24 @@ public class RejectedStatus7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonRule = new MMXor() {
+	public static final MMXor mmReasonRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus7.Reason, com.tools20022.repository.msg.RejectedStatus7.ExtendedReason, com.tools20022.repository.msg.RejectedStatus7.DataSourceScheme);
 			messageComponent_lazy = () -> RejectedStatus7.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus7.mmReason, com.tools20022.repository.msg.RejectedStatus7.mmExtendedReason,
+					com.tools20022.repository.msg.RejectedStatus7.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus7.Reason, com.tools20022.repository.msg.RejectedStatus7.ExtendedReason, com.tools20022.repository.msg.RejectedStatus7.DataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus7.mmReason, com.tools20022.repository.msg.RejectedStatus7.mmExtendedReason,
+						com.tools20022.repository.msg.RejectedStatus7.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -273,9 +279,33 @@ public class RejectedStatus7 {
 				})).get();
 				name = "RejectedStatus7";
 				definition = "Status is rejected.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus7.ReasonRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus7.mmReasonRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectedStatusReason8Code getReason() {
+		return reason;
+	}
+
+	public void setReason(RejectedStatusReason8Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
 	}
 }

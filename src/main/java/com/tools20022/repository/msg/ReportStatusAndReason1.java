@@ -24,11 +24,13 @@ import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.choice.RejectedStatusReason9Choice;
 import com.tools20022.repository.codeset.Status2Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Status;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Provides the related report identification and its status. If the status is
@@ -39,8 +41,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#TypeOfStatusRule
- * ReportStatusAndReason1.TypeOfStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#mmTypeOfStatusRule
+ * ReportStatusAndReason1.mmTypeOfStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,13 +50,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#RelatedReference
- * ReportStatusAndReason1.RelatedReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#Status
- * ReportStatusAndReason1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#mmRelatedReference
+ * ReportStatusAndReason1.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#Rejected
- * ReportStatusAndReason1.Rejected}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#mmStatus
+ * ReportStatusAndReason1.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#mmRejected
+ * ReportStatusAndReason1.mmRejected}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,15 +67,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#ReportStatus
- * RegulatoryTransactionReportStatusV01.ReportStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmReportStatus
+ * RegulatoryTransactionReportStatusV01.mmReportStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -89,6 +92,7 @@ import java.util.function.Supplier;
 public class ReportStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text relatedReference;
 	/**
 	 * Provides the identification of the RegulatoryTransactionReport document
 	 * that was previously sent by the reporting institution.
@@ -119,7 +123,7 @@ public class ReportStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportStatusAndReason1.mmObject();
 			isDerived = false;
@@ -127,11 +131,12 @@ public class ReportStatusAndReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Provides the identification of the RegulatoryTransactionReport document that was previously sent by the reporting institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Status2Code status;
 	/**
 	 * Indicates the status of a report message.
 	 * <p>
@@ -159,7 +164,7 @@ public class ReportStatusAndReason1 {
 	 * definition} = "Indicates the status of a report message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportStatusAndReason1.mmObject();
 			isDerived = false;
@@ -167,11 +172,12 @@ public class ReportStatusAndReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates the status of a report message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status2Code.mmObject();
 		}
 	};
+	protected List<RejectedStatusReason9Choice> rejected;
 	/**
 	 * Indicates that the report is rejected and provides a reason why.
 	 * <p>
@@ -184,8 +190,8 @@ public class ReportStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,19 +211,19 @@ public class ReportStatusAndReason1 {
 	 * "Indicates that the report is rejected and provides a reason why."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> ReportStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Indicates that the report is rejected and provides a reason why.";
-			minOccurs = 1;
 			maxOccurs = 100;
-			type_lazy = () -> RejectedStatusReason9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RejectedStatusReason9Choice.mmObject();
 		}
 	};
 	/**
@@ -229,11 +235,11 @@ public class ReportStatusAndReason1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#Status
-	 * ReportStatusAndReason1.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#mmStatus
+	 * ReportStatusAndReason1.mmStatus}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#Rejected
-	 * ReportStatusAndReason1.Rejected}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason1#mmRejected
+	 * ReportStatusAndReason1.mmRejected}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -251,24 +257,24 @@ public class ReportStatusAndReason1 {
 	 * definition} = "Either Status or Rejected must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor TypeOfStatusRule = new MMXor() {
+	public static final MMXor mmTypeOfStatusRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
 			definition = "Either Status or Rejected must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason1.Status, com.tools20022.repository.msg.ReportStatusAndReason1.Rejected);
 			messageComponent_lazy = () -> ReportStatusAndReason1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason1.mmStatus, com.tools20022.repository.msg.ReportStatusAndReason1.mmRejected);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason1.RelatedReference, com.tools20022.repository.msg.ReportStatusAndReason1.Status,
-						com.tools20022.repository.msg.ReportStatusAndReason1.Rejected);
-				trace_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.ReportStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason1.mmRelatedReference, com.tools20022.repository.msg.ReportStatusAndReason1.mmStatus,
+						com.tools20022.repository.msg.ReportStatusAndReason1.mmRejected);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus);
+				trace_lazy = () -> Status.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -279,9 +285,33 @@ public class ReportStatusAndReason1 {
 				})).get();
 				name = "ReportStatusAndReason1";
 				definition = "Provides the related report identification and its status. If the status is rejected, a reason for this status must be given.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason1.TypeOfStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason1.mmTypeOfStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(Max35Text relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Status2Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status2Code status) {
+		this.status = status;
+	}
+
+	public List<RejectedStatusReason9Choice> getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(List<RejectedStatusReason9Choice> rejected) {
+		this.rejected = rejected;
 	}
 }

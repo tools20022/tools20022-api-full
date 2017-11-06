@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.CashAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for an account.
@@ -37,23 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#AccountIdentification
- * CashAccountSearchCriteria5.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#mmAccountIdentification
+ * CashAccountSearchCriteria5.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#Type
- * CashAccountSearchCriteria5.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#mmType
+ * CashAccountSearchCriteria5.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#Currency
- * CashAccountSearchCriteria5.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#mmCurrency
+ * CashAccountSearchCriteria5.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#Balance
- * CashAccountSearchCriteria5.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#mmBalance
+ * CashAccountSearchCriteria5.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#AccountOwner
- * CashAccountSearchCriteria5.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#mmAccountOwner
+ * CashAccountSearchCriteria5.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#AccountServicer
- * CashAccountSearchCriteria5.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria5#mmAccountServicer
+ * CashAccountSearchCriteria5.mmAccountServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountSearchCriteria5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AccountIdentificationSearchCriteria2Choice> accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -90,8 +92,8 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +114,21 @@ public class CashAccountSearchCriteria5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashAccountSearchCriteria5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			minOccurs = 0;
-			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	protected List<CashAccountType2Choice> type;
 	/**
 	 * Specifies the nature, or use, of the cash account.
 	 * <p>
@@ -139,8 +142,8 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashAccountType
-	 * CashAccount.CashAccountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashAccountType
+	 * CashAccount.mmCashAccountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,10 +162,10 @@ public class CashAccountSearchCriteria5 {
 	 * definition} = "Specifies the nature, or use, of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> CashAccountSearchCriteria5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashAccountType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,6 +175,7 @@ public class CashAccountSearchCriteria5 {
 			complexType_lazy = () -> CashAccountType2Choice.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyCode> currency;
 	/**
 	 * Specifies the currency of the cash account.
 	 * <p>
@@ -185,8 +189,8 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#BaseCurrency
-	 * Account.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,10 +209,10 @@ public class CashAccountSearchCriteria5 {
 	 * definition} = "Specifies the currency of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
 			componentContext_lazy = () -> CashAccountSearchCriteria5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.BaseCurrency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,6 +222,7 @@ public class CashAccountSearchCriteria5 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashBalance4> balance;
 	/**
 	 * Balance of the account which is being queried.
 	 * <p>
@@ -229,8 +234,8 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashBalance
-	 * CashAccount.CashBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,20 +254,21 @@ public class CashAccountSearchCriteria5 {
 	 * definition} = "Balance of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashBalance;
 			componentContext_lazy = () -> CashAccountSearchCriteria5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashBalance;
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Balance of the account which is being queried.";
 			minOccurs = 0;
-			type_lazy = () -> CashBalance4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
 		}
 	};
+	protected PartyIdentification43 accountOwner;
 	/**
 	 * Owner of the account which is being queried.
 	 * <p>
@@ -274,8 +280,8 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -294,21 +300,22 @@ public class CashAccountSearchCriteria5 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashAccountSearchCriteria5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
 	 * Servicer of the account which is being queried.
 	 * <p>
@@ -321,8 +328,8 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -341,35 +348,83 @@ public class CashAccountSearchCriteria5 {
 	 * definition} = "Servicer of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashAccountSearchCriteria5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Servicer of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountSearchCriteria5.AccountIdentification, com.tools20022.repository.msg.CashAccountSearchCriteria5.Type,
-						com.tools20022.repository.msg.CashAccountSearchCriteria5.Currency, com.tools20022.repository.msg.CashAccountSearchCriteria5.Balance, com.tools20022.repository.msg.CashAccountSearchCriteria5.AccountOwner,
-						com.tools20022.repository.msg.CashAccountSearchCriteria5.AccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountSearchCriteria5.mmAccountIdentification, com.tools20022.repository.msg.CashAccountSearchCriteria5.mmType,
+						com.tools20022.repository.msg.CashAccountSearchCriteria5.mmCurrency, com.tools20022.repository.msg.CashAccountSearchCriteria5.mmBalance, com.tools20022.repository.msg.CashAccountSearchCriteria5.mmAccountOwner,
+						com.tools20022.repository.msg.CashAccountSearchCriteria5.mmAccountServicer);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountSearchCriteria5";
 				definition = "Defines the criteria used to search for an account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AccountIdentificationSearchCriteria2Choice> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<AccountIdentificationSearchCriteria2Choice> accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<CashAccountType2Choice> getType() {
+		return type;
+	}
+
+	public void setType(List<CashAccountType2Choice> type) {
+		this.type = type;
+	}
+
+	public List<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(List<ActiveOrHistoricCurrencyCode> currency) {
+		this.currency = currency;
+	}
+
+	public List<CashBalance4> getBalance() {
+		return balance;
+	}
+
+	public void setBalance(List<com.tools20022.repository.msg.CashBalance4> balance) {
+		this.balance = balance;
+	}
+
+	public PartyIdentification43 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.PartyIdentification43 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+		this.accountServicer = accountServicer;
 	}
 }

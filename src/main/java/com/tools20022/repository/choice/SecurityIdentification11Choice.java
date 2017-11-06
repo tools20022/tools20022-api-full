@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#ISIN
- * SecurityIdentification11Choice.ISIN}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#mmISIN
+ * SecurityIdentification11Choice.mmISIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#OtherIdentification
- * SecurityIdentification11Choice.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#mmOtherIdentification
+ * SecurityIdentification11Choice.mmOtherIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINIdentifier iSIN;
 	/**
 	 * International Securities Identification Number (ISIN). A numbering system
 	 * designed by the United Nation's International Organisation for
@@ -87,8 +88,8 @@ public class SecurityIdentification11Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,20 +110,21 @@ public class SecurityIdentification11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification11Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected AlternateIdentification1 otherIdentification;
 	/**
 	 * Identification of a security by proprietary or domestic identification
 	 * scheme.
@@ -158,33 +160,49 @@ public class SecurityIdentification11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityIdentification11Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Identification of a security by proprietary or domestic identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AlternateIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AlternateIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification11Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification11Choice.OtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification11Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification11Choice.mmOtherIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification11Choice";
 				definition = "Choice between ISIN and an alternative format for the identification of a security. ISIN is the preferred format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINIdentifier getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(ISINIdentifier iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public AlternateIdentification1 getOtherIdentification() {
+		return otherIdentification;
+	}
+
+	public void setOtherIdentification(AlternateIdentification1 otherIdentification) {
+		this.otherIdentification = otherIdentification;
 	}
 }

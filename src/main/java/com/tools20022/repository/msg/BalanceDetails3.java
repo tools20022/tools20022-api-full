@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.BalanceType6Code;
 import com.tools20022.repository.entity.CashBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Balance related detailed for a cash account.
@@ -36,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails3#BalanceType
- * BalanceDetails3.BalanceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails3#mmBalanceType
+ * BalanceDetails3.mmBalanceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceDetails3#CounterpartyType
- * BalanceDetails3.CounterpartyType}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceDetails3#mmCounterpartyType
+ * BalanceDetails3.mmCounterpartyType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceDetails3#CounterpartyIdentification
- * BalanceDetails3.CounterpartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceDetails3#mmCounterpartyIdentification
+ * BalanceDetails3.mmCounterpartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceDetails3#BalanceValueDate
- * BalanceDetails3.BalanceValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceDetails3#mmBalanceValueDate
+ * BalanceDetails3.mmBalanceValueDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BalanceDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<BalanceType6Code> balanceType;
 	/**
 	 * Specifies the nature of a balance.
 	 * <p>
@@ -83,7 +85,8 @@ public class BalanceDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,10 +105,10 @@ public class BalanceDetails3 {
 	 * definition} = "Specifies the nature of a balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> BalanceDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "BalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,6 +118,7 @@ public class BalanceDetails3 {
 			simpleType_lazy = () -> BalanceType6Code.mmObject();
 		}
 	};
+	protected BalanceCounterparty1Code counterpartyType;
 	/**
 	 * Specifies the type of counterparty for which the balance is calculated.
 	 * <p>
@@ -128,8 +132,8 @@ public class BalanceDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CalculationType
-	 * CashBalance.CalculationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCalculationType
+	 * CashBalance.mmCalculationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +154,21 @@ public class BalanceDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCalculationType;
 			componentContext_lazy = () -> BalanceDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CalculationType;
 			isDerived = false;
 			xmlTag = "CtrPtyTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyType";
 			definition = "Specifies the type of counterparty for which the balance is calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BalanceCounterparty1Code.mmObject();
 		}
 	};
+	protected List<MemberIdentificationChoice> counterpartyIdentification;
 	/**
 	 * Identifies the counterparty for which the balance is calculated.
 	 * <p>
@@ -177,8 +182,8 @@ public class BalanceDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#Counterparty
-	 * CashBalance.Counterparty}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCounterparty
+	 * CashBalance.mmCounterparty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,10 +203,10 @@ public class BalanceDetails3 {
 	 * "Identifies the counterparty for which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCounterparty;
 			componentContext_lazy = () -> BalanceDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.Counterparty;
 			isDerived = false;
 			xmlTag = "CtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,6 +216,7 @@ public class BalanceDetails3 {
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
 		}
 	};
+	protected List<DateAndDateTimeSearchChoice> balanceValueDate;
 	/**
 	 * Date and time at which the balance is or will be available.
 	 * <p>
@@ -224,8 +230,8 @@ public class BalanceDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#ValueDate
-	 * Balance.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+	 * Balance.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -245,10 +251,10 @@ public class BalanceDetails3 {
 	 * "Date and time at which the balance is or will be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalanceValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalanceValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
 			componentContext_lazy = () -> BalanceDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.ValueDate;
 			isDerived = false;
 			xmlTag = "BalValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,15 +268,47 @@ public class BalanceDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails3.BalanceType, com.tools20022.repository.msg.BalanceDetails3.CounterpartyType,
-						com.tools20022.repository.msg.BalanceDetails3.CounterpartyIdentification, com.tools20022.repository.msg.BalanceDetails3.BalanceValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails3.mmBalanceType, com.tools20022.repository.msg.BalanceDetails3.mmCounterpartyType,
+						com.tools20022.repository.msg.BalanceDetails3.mmCounterpartyIdentification, com.tools20022.repository.msg.BalanceDetails3.mmBalanceValueDate);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BalanceDetails3";
 				definition = "Balance related detailed for a cash account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BalanceType6Code> getBalanceType() {
+		return balanceType;
+	}
+
+	public void setBalanceType(List<BalanceType6Code> balanceType) {
+		this.balanceType = balanceType;
+	}
+
+	public BalanceCounterparty1Code getCounterpartyType() {
+		return counterpartyType;
+	}
+
+	public void setCounterpartyType(BalanceCounterparty1Code counterpartyType) {
+		this.counterpartyType = counterpartyType;
+	}
+
+	public List<MemberIdentificationChoice> getCounterpartyIdentification() {
+		return counterpartyIdentification;
+	}
+
+	public void setCounterpartyIdentification(List<MemberIdentificationChoice> counterpartyIdentification) {
+		this.counterpartyIdentification = counterpartyIdentification;
+	}
+
+	public List<DateAndDateTimeSearchChoice> getBalanceValueDate() {
+		return balanceValueDate;
+	}
+
+	public void setBalanceValueDate(List<DateAndDateTimeSearchChoice> balanceValueDate) {
+		this.balanceValueDate = balanceValueDate;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.entity.BasicSecuritiesRegistration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to registration of securities.
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#CertificationIdentification
- * RegistrationParameters5.CertificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#mmCertificationIdentification
+ * RegistrationParameters5.mmCertificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#CertificationDateTime
- * RegistrationParameters5.CertificationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#mmCertificationDateTime
+ * RegistrationParameters5.mmCertificationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#RegistrarAccount
- * RegistrationParameters5.RegistrarAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#mmRegistrarAccount
+ * RegistrationParameters5.mmRegistrarAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#CertificateNumber
- * RegistrationParameters5.CertificateNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#mmCertificateNumber
+ * RegistrationParameters5.mmCertificateNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,44 +60,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionReversalAdvice002V05.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionConfirmation002V06.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionGenerationNotification002V06.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionInstruction002V06.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionInstruction002V07.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionGenerationNotification002V07.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionConfirmation002V07.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#AdditionalPhysicalOrRegistrationDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#mmAdditionalPhysicalOrRegistrationDetails
  * SecuritiesSettlementTransactionReversalAdvice002V06.
- * AdditionalPhysicalOrRegistrationDetails}</li>
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegistrationParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax16Text certificationIdentification;
 	/**
 	 * Identification assigned to a deposit.
 	 * <p>
@@ -123,8 +125,8 @@ public class RegistrationParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#CertificationIdentification
-	 * BasicSecuritiesRegistration.CertificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationIdentification
+	 * BasicSecuritiesRegistration.mmCertificationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +145,21 @@ public class RegistrationParameters5 {
 	 * definition} = "Identification assigned to a deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationIdentification;
 			componentContext_lazy = () -> RegistrationParameters5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.CertificationIdentification;
 			isDerived = false;
 			xmlTag = "CertfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIdentification";
 			definition = "Identification assigned to a deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice certificationDateTime;
 	/**
 	 * Date/time at which the certificates in the deposit were validated by the
 	 * agent.
@@ -171,8 +174,8 @@ public class RegistrationParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#CertificationDate
-	 * BasicSecuritiesRegistration.CertificationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationDate
+	 * BasicSecuritiesRegistration.mmCertificationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,20 +196,21 @@ public class RegistrationParameters5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationDate;
 			componentContext_lazy = () -> RegistrationParameters5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.CertificationDate;
 			isDerived = false;
 			xmlTag = "CertfctnDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationDateTime";
 			definition = "Date/time at which the certificates in the deposit were validated by the agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected RestrictedFINXMax35Text registrarAccount;
 	/**
 	 * Account at the registrar where financial instruments are registered.
 	 * <p>
@@ -220,8 +224,8 @@ public class RegistrationParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegistrarRole#RegistrarAccount
-	 * RegistrarRole.RegistrarAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegistrarAccount
+	 * RegistrarRole.mmRegistrarAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,20 +245,21 @@ public class RegistrationParameters5 {
 	 * "Account at the registrar where financial instruments are registered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrarAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrarAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmRegistrarAccount;
 			componentContext_lazy = () -> RegistrationParameters5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegistrarRole.RegistrarAccount;
 			isDerived = false;
 			xmlTag = "RegarAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrarAccount";
 			definition = "Account at the registrar where financial instruments are registered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesCertificate5> certificateNumber;
 	/**
 	 * Unique and unambiguous identifier of a certificate assigned by the
 	 * issuer.
@@ -267,8 +272,8 @@ public class RegistrationParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#Number
-	 * SecuritiesCertificate.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmNumber
+	 * SecuritiesCertificate.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -289,41 +294,73 @@ public class RegistrationParameters5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CertificateNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> RegistrationParameters5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.Number;
 			isDerived = false;
 			xmlTag = "CertNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesCertificate5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters5.CertificationIdentification, com.tools20022.repository.msg.RegistrationParameters5.CertificationDateTime,
-						com.tools20022.repository.msg.RegistrationParameters5.RegistrarAccount, com.tools20022.repository.msg.RegistrationParameters5.CertificateNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters5.mmCertificationIdentification, com.tools20022.repository.msg.RegistrationParameters5.mmCertificationDateTime,
+						com.tools20022.repository.msg.RegistrationParameters5.mmRegistrarAccount, com.tools20022.repository.msg.RegistrationParameters5.mmCertificateNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.mmAdditionalPhysicalOrRegistrationDetails);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.AdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.AdditionalPhysicalOrRegistrationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegistrationParameters5";
 				definition = "Information related to registration of securities.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax16Text getCertificationIdentification() {
+		return certificationIdentification;
+	}
+
+	public void setCertificationIdentification(RestrictedFINXMax16Text certificationIdentification) {
+		this.certificationIdentification = certificationIdentification;
+	}
+
+	public DateAndDateTimeChoice getCertificationDateTime() {
+		return certificationDateTime;
+	}
+
+	public void setCertificationDateTime(DateAndDateTimeChoice certificationDateTime) {
+		this.certificationDateTime = certificationDateTime;
+	}
+
+	public RestrictedFINXMax35Text getRegistrarAccount() {
+		return registrarAccount;
+	}
+
+	public void setRegistrarAccount(RestrictedFINXMax35Text registrarAccount) {
+		this.registrarAccount = registrarAccount;
+	}
+
+	public List<SecuritiesCertificate5> getCertificateNumber() {
+		return certificateNumber;
+	}
+
+	public void setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate5> certificateNumber) {
+		this.certificateNumber = certificateNumber;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BreakDown1Choice#ByPurchaseOrder
- * BreakDown1Choice.ByPurchaseOrder}</li>
+ * {@linkplain com.tools20022.repository.choice.BreakDown1Choice#mmByPurchaseOrder
+ * BreakDown1Choice.mmByPurchaseOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BreakDown1Choice#ByCommercialInvoice
- * BreakDown1Choice.ByCommercialInvoice}</li>
+ * {@linkplain com.tools20022.repository.choice.BreakDown1Choice#mmByCommercialInvoice
+ * BreakDown1Choice.mmByCommercialInvoice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BreakDown1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportLine5 byPurchaseOrder;
 	/**
 	 * The intention to pay is based on a purchase order.
 	 * <p>
@@ -86,7 +87,7 @@ public class BreakDown1Choice {
 	 * definition} = "The intention to pay is based on a purchase order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ByPurchaseOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmByPurchaseOrder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakDown1Choice.mmObject();
 			isDerived = false;
@@ -94,12 +95,13 @@ public class BreakDown1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPurchaseOrder";
 			definition = "The intention to pay is based on a purchase order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReportLine5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ReportLine5.mmObject();
 		}
 	};
+	protected ReportLine6 byCommercialInvoice;
 	/**
 	 * The intention to pay is based on a commercial invoice.
 	 * <p>
@@ -126,7 +128,7 @@ public class BreakDown1Choice {
 	 * definition} = "The intention to pay is based on a commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ByCommercialInvoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmByCommercialInvoice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakDown1Choice.mmObject();
 			isDerived = false;
@@ -134,23 +136,39 @@ public class BreakDown1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByCommercialInvoice";
 			definition = "The intention to pay is based on a commercial invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReportLine6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ReportLine6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BreakDown1Choice.ByPurchaseOrder, com.tools20022.repository.choice.BreakDown1Choice.ByCommercialInvoice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BreakDown1Choice.mmByPurchaseOrder, com.tools20022.repository.choice.BreakDown1Choice.mmByCommercialInvoice);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BreakDown1Choice";
 				definition = "Specifies if breakdown is by purchase order or commercial invoice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportLine5 getByPurchaseOrder() {
+		return byPurchaseOrder;
+	}
+
+	public void setByPurchaseOrder(ReportLine5 byPurchaseOrder) {
+		this.byPurchaseOrder = byPurchaseOrder;
+	}
+
+	public ReportLine6 getByCommercialInvoice() {
+		return byCommercialInvoice;
+	}
+
+	public void setByCommercialInvoice(ReportLine6 byCommercialInvoice) {
+		this.byCommercialInvoice = byCommercialInvoice;
 	}
 }

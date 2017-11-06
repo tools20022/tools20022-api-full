@@ -33,39 +33,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#OrderMassStatusRequestIdentification
- * Reference15.OrderMassStatusRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmOrderMassStatusRequestIdentification
+ * Reference15.mmOrderMassStatusRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#OrderStatusRequestIdentification
- * Reference15.OrderStatusRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmOrderStatusRequestIdentification
+ * Reference15.mmOrderStatusRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#OrderIdentification
- * Reference15.OrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmOrderIdentification
+ * Reference15.mmOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#HostCrossIdentification
- * Reference15.HostCrossIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmHostCrossIdentification
+ * Reference15.mmHostCrossIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#CrossOrderIdentification
- * Reference15.CrossOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmCrossOrderIdentification
+ * Reference15.mmCrossOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#OriginalCrossOrderIdentification
- * Reference15.OriginalCrossOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmOriginalCrossOrderIdentification
+ * Reference15.mmOriginalCrossOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#ClientOrderIdentification
- * Reference15.ClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmClientOrderIdentification
+ * Reference15.mmClientOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#SecondaryOrderIdentification
- * Reference15.SecondaryOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmSecondaryOrderIdentification
+ * Reference15.mmSecondaryOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference15#SecondaryClientOrderIdentification
- * Reference15.SecondaryClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference15#mmSecondaryClientOrderIdentification
+ * Reference15.mmSecondaryClientOrderIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text orderMassStatusRequestIdentification;
 	/**
 	 * Identification assigned by issuer of Mass Status Request to uniquely
 	 * identify the request.
@@ -108,7 +109,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderMassStatusRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderMassStatusRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -116,11 +117,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderMassStatusRequestIdentification";
 			definition = "Identification assigned by issuer of Mass Status Request to uniquely identify the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text orderStatusRequestIdentification;
 	/**
 	 * Identification assigned by issuer of Order Status Request to uniquely
 	 * identify the request.
@@ -150,7 +152,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderStatusRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderStatusRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -158,11 +160,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderStatusRequestIdentification";
 			definition = "Identification assigned by issuer of Order Status Request to uniquely identify the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text orderIdentification;
 	/**
 	 * Unique identifier for Order as assigned by sell-side.
 	 * <p>
@@ -189,7 +192,7 @@ public class Reference15 {
 	 * definition} = "Unique identifier for Order as assigned by sell-side."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -197,11 +200,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderIdentification";
 			definition = "Unique identifier for Order as assigned by sell-side.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text hostCrossIdentification;
 	/**
 	 * Host assigned entity identification that can be used to reference all
 	 * components of a cross; sides + strategy + legs. The HostCrossID will be
@@ -234,7 +238,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostCrossIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostCrossIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -242,11 +246,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCrossIdentification";
 			definition = "Host assigned entity identification that can be used to reference all components of a cross; sides + strategy + legs. The HostCrossID will be used to link together components of the Cross Order. For example, each individual Notice of Execution associated with the order will carry HostCrossID in order to tie back to the original cross order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text crossOrderIdentification;
 	/**
 	 * Identifier for a cross order. Must be unique during a given trading day.
 	 * <p>
@@ -275,7 +280,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CrossOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCrossOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -283,11 +288,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossOrderIdentification";
 			definition = "Identifier for a cross order. Must be unique during a given trading day.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalCrossOrderIdentification;
 	/**
 	 * Cross Identification of the previous cross order (not the initial cross
 	 * order of the day) as assigned by the institution, used to identify the
@@ -319,7 +325,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCrossOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCrossOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -327,11 +333,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCrossOrderIdentification";
 			definition = "Cross Identification of the previous cross order (not the initial cross order of the day) as assigned by the institution, used to identify the previous cross order in Cross Order Modification Request and Cross Order Cancellation Request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientOrderIdentification;
 	/**
 	 * Unique identifier for Order as assigned by the buy-side.
 	 * <p>
@@ -358,7 +365,7 @@ public class Reference15 {
 	 * definition} = "Unique identifier for Order as assigned by the buy-side."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -366,11 +373,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for Order as assigned by the buy-side.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text secondaryOrderIdentification;
 	/**
 	 * Identifier assigned by the party which accepts the order.
 	 * <p>
@@ -398,7 +406,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -406,11 +414,12 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryOrderIdentification";
 			definition = "Identifier assigned by the party which accepts the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text secondaryClientOrderIdentification;
 	/**
 	 * Identifier assigned by the party which originates the order.
 	 * <p>
@@ -438,7 +447,7 @@ public class Reference15 {
 	 * "Identifier assigned by the party which originates the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
@@ -446,8 +455,8 @@ public class Reference15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Identifier assigned by the party which originates the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -455,16 +464,88 @@ public class Reference15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference15.OrderMassStatusRequestIdentification, com.tools20022.repository.msg.Reference15.OrderStatusRequestIdentification,
-						com.tools20022.repository.msg.Reference15.OrderIdentification, com.tools20022.repository.msg.Reference15.HostCrossIdentification, com.tools20022.repository.msg.Reference15.CrossOrderIdentification,
-						com.tools20022.repository.msg.Reference15.OriginalCrossOrderIdentification, com.tools20022.repository.msg.Reference15.ClientOrderIdentification,
-						com.tools20022.repository.msg.Reference15.SecondaryOrderIdentification, com.tools20022.repository.msg.Reference15.SecondaryClientOrderIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference15.mmOrderMassStatusRequestIdentification, com.tools20022.repository.msg.Reference15.mmOrderStatusRequestIdentification,
+						com.tools20022.repository.msg.Reference15.mmOrderIdentification, com.tools20022.repository.msg.Reference15.mmHostCrossIdentification, com.tools20022.repository.msg.Reference15.mmCrossOrderIdentification,
+						com.tools20022.repository.msg.Reference15.mmOriginalCrossOrderIdentification, com.tools20022.repository.msg.Reference15.mmClientOrderIdentification,
+						com.tools20022.repository.msg.Reference15.mmSecondaryOrderIdentification, com.tools20022.repository.msg.Reference15.mmSecondaryClientOrderIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference15";
 				definition = "Additional references linked to the order status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOrderMassStatusRequestIdentification() {
+		return orderMassStatusRequestIdentification;
+	}
+
+	public void setOrderMassStatusRequestIdentification(Max35Text orderMassStatusRequestIdentification) {
+		this.orderMassStatusRequestIdentification = orderMassStatusRequestIdentification;
+	}
+
+	public Max35Text getOrderStatusRequestIdentification() {
+		return orderStatusRequestIdentification;
+	}
+
+	public void setOrderStatusRequestIdentification(Max35Text orderStatusRequestIdentification) {
+		this.orderStatusRequestIdentification = orderStatusRequestIdentification;
+	}
+
+	public Max35Text getOrderIdentification() {
+		return orderIdentification;
+	}
+
+	public void setOrderIdentification(Max35Text orderIdentification) {
+		this.orderIdentification = orderIdentification;
+	}
+
+	public Max35Text getHostCrossIdentification() {
+		return hostCrossIdentification;
+	}
+
+	public void setHostCrossIdentification(Max35Text hostCrossIdentification) {
+		this.hostCrossIdentification = hostCrossIdentification;
+	}
+
+	public Max35Text getCrossOrderIdentification() {
+		return crossOrderIdentification;
+	}
+
+	public void setCrossOrderIdentification(Max35Text crossOrderIdentification) {
+		this.crossOrderIdentification = crossOrderIdentification;
+	}
+
+	public Max35Text getOriginalCrossOrderIdentification() {
+		return originalCrossOrderIdentification;
+	}
+
+	public void setOriginalCrossOrderIdentification(Max35Text originalCrossOrderIdentification) {
+		this.originalCrossOrderIdentification = originalCrossOrderIdentification;
+	}
+
+	public Max35Text getClientOrderIdentification() {
+		return clientOrderIdentification;
+	}
+
+	public void setClientOrderIdentification(Max35Text clientOrderIdentification) {
+		this.clientOrderIdentification = clientOrderIdentification;
+	}
+
+	public Max35Text getSecondaryOrderIdentification() {
+		return secondaryOrderIdentification;
+	}
+
+	public void setSecondaryOrderIdentification(Max35Text secondaryOrderIdentification) {
+		this.secondaryOrderIdentification = secondaryOrderIdentification;
+	}
+
+	public Max35Text getSecondaryClientOrderIdentification() {
+		return secondaryClientOrderIdentification;
+	}
+
+	public void setSecondaryClientOrderIdentification(Max35Text secondaryClientOrderIdentification) {
+		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
 	}
 }

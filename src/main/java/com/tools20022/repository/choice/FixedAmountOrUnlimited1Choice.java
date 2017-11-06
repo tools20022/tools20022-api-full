@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice#Amount
- * FixedAmountOrUnlimited1Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice#mmAmount
+ * FixedAmountOrUnlimited1Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice#NotLimited
- * FixedAmountOrUnlimited1Choice.NotLimited}</li>
+ * {@linkplain com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice#mmNotLimited
+ * FixedAmountOrUnlimited1Choice.mmNotLimited}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FixedAmountOrUnlimited1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Fixed amount.
 	 * <p>
@@ -87,7 +88,7 @@ public class FixedAmountOrUnlimited1Choice {
 	 * definition} = "Fixed amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FixedAmountOrUnlimited1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class FixedAmountOrUnlimited1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Fixed amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Unlimited9Text notLimited;
 	/**
 	 * Unlimited amount.
 	 * <p>
@@ -128,7 +130,7 @@ public class FixedAmountOrUnlimited1Choice {
 	 * definition} = "Unlimited amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotLimited = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotLimited = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FixedAmountOrUnlimited1Choice.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class FixedAmountOrUnlimited1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLimited";
 			definition = "Unlimited amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Unlimited9Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class FixedAmountOrUnlimited1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice.Amount, com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice.NotLimited);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice.mmAmount, com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice.mmNotLimited);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FixedAmountOrUnlimited1Choice";
 				definition = "Choice between a fixed amount and an unlimited amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public Unlimited9Text getNotLimited() {
+		return notLimited;
+	}
+
+	public void setNotLimited(Unlimited9Text notLimited) {
+		this.notLimited = notLimited;
 	}
 }

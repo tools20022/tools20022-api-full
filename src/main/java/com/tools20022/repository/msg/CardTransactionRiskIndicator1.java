@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CardTransactionRiskReason1Code;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Indicates to the issuer the level of risk of the transaction.
@@ -35,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionRiskIndicator1#Reason
- * CardTransactionRiskIndicator1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionRiskIndicator1#mmReason
+ * CardTransactionRiskIndicator1.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionRiskIndicator1#Level
- * CardTransactionRiskIndicator1.Level}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionRiskIndicator1#mmLevel
+ * CardTransactionRiskIndicator1.mmLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionRiskIndicator1#RecommendedAction
- * CardTransactionRiskIndicator1.RecommendedAction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionRiskIndicator1#mmRecommendedAction
+ * CardTransactionRiskIndicator1.mmRecommendedAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransactionRiskIndicator1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CardTransactionRiskReason1Code> reason;
 	/**
 	 * Reason to indicate a certain level of risk for the transaction.
 	 * <p>
@@ -93,7 +95,7 @@ public class CardTransactionRiskIndicator1 {
 	 * "Reason to indicate a certain level of risk for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
@@ -105,6 +107,7 @@ public class CardTransactionRiskIndicator1 {
 			simpleType_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
 	};
+	protected Number level;
 	/**
 	 * Level of risk, from 1 to 99.
 	 * <p>
@@ -132,7 +135,7 @@ public class CardTransactionRiskIndicator1 {
 	 * definition} = "Level of risk, from 1 to 99."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Level = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLevel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
@@ -140,11 +143,12 @@ public class CardTransactionRiskIndicator1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level";
 			definition = "Level of risk, from 1 to 99.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<ActionType4Code> recommendedAction;
 	/**
 	 * Recommended action for the issuer.
 	 * <p>
@@ -173,7 +177,7 @@ public class CardTransactionRiskIndicator1 {
 	 * definition} = "Recommended action for the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecommendedAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecommendedAction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
@@ -189,14 +193,38 @@ public class CardTransactionRiskIndicator1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionRiskIndicator1.Reason, com.tools20022.repository.msg.CardTransactionRiskIndicator1.Level,
-						com.tools20022.repository.msg.CardTransactionRiskIndicator1.RecommendedAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmReason, com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmLevel,
+						com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmRecommendedAction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionRiskIndicator1";
 				definition = "Indicates to the issuer the level of risk of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CardTransactionRiskReason1Code> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<CardTransactionRiskReason1Code> reason) {
+		this.reason = reason;
+	}
+
+	public Number getLevel() {
+		return level;
+	}
+
+	public void setLevel(Number level) {
+		this.level = level;
+	}
+
+	public List<ActionType4Code> getRecommendedAction() {
+		return recommendedAction;
+	}
+
+	public void setRecommendedAction(List<ActionType4Code> recommendedAction) {
+		this.recommendedAction = recommendedAction;
 	}
 }

@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#AnyBIC
- * PartyIdentification71Choice.AnyBIC}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#mmAnyBIC
+ * PartyIdentification71Choice.mmAnyBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#ProprietaryIdentification
- * PartyIdentification71Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#mmProprietaryIdentification
+ * PartyIdentification71Choice.mmProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#NameAndAddress
- * PartyIdentification71Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#mmNameAndAddress
+ * PartyIdentification71Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,274 +56,274 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#IssuerAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#PayingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#SubPayingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.SubPayingAgent}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#Registrar
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.Registrar}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#ResellingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.ResellingAgent}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#PhysicalSecuritiesAgent
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmSubPayingAgent
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.
- * PhysicalSecuritiesAgent}</li>
+ * mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#DropAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#SolicitationAgent
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmResellingAgent
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.
- * SolicitationAgent}</li>
+ * mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#InformationAgent
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmPhysicalSecuritiesAgent
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.
- * InformationAgent}</li>
+ * mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#IssuerAgent
- * CorporateActionMovementPreliminaryAdviceV07.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#PayingAgent
- * CorporateActionMovementPreliminaryAdviceV07.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.
+ * mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#SubPayingAgent
- * CorporateActionMovementPreliminaryAdviceV07.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.
+ * mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#Registrar
- * CorporateActionMovementPreliminaryAdviceV07.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#ResellingAgent
- * CorporateActionMovementPreliminaryAdviceV07.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#PhysicalSecuritiesAgent
- * CorporateActionMovementPreliminaryAdviceV07.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmSubPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#DropAgent
- * CorporateActionMovementPreliminaryAdviceV07.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceV07.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#SolicitationAgent
- * CorporateActionMovementPreliminaryAdviceV07.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmResellingAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#InformationAgent
- * CorporateActionMovementPreliminaryAdviceV07.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmPhysicalSecuritiesAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#IssuerAgent
- * CorporateActionMovementConfirmationV07.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#PayingAgent
- * CorporateActionMovementConfirmationV07.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#SubPayingAgent
- * CorporateActionMovementConfirmationV07.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceV07.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#IssuerAgent
- * CorporateActionNotificationV06.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#mmIssuerAgent
+ * CorporateActionMovementConfirmationV07.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#PayingAgent
- * CorporateActionNotificationV06.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#mmPayingAgent
+ * CorporateActionMovementConfirmationV07.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#SubPayingAgent
- * CorporateActionNotificationV06.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#mmSubPayingAgent
+ * CorporateActionMovementConfirmationV07.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#Registrar
- * CorporateActionNotificationV06.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmIssuerAgent
+ * CorporateActionNotificationV06.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#ResellingAgent
- * CorporateActionNotificationV06.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmPayingAgent
+ * CorporateActionNotificationV06.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#PhysicalSecuritiesAgent
- * CorporateActionNotificationV06.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmSubPayingAgent
+ * CorporateActionNotificationV06.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#DropAgent
- * CorporateActionNotificationV06.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmRegistrar
+ * CorporateActionNotificationV06.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#SolicitationAgent
- * CorporateActionNotificationV06.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmResellingAgent
+ * CorporateActionNotificationV06.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#InformationAgent
- * CorporateActionNotificationV06.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmPhysicalSecuritiesAgent
+ * CorporateActionNotificationV06.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#IssuerAgent
- * CorporateActionMovementReversalAdviceV07.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmDropAgent
+ * CorporateActionNotificationV06.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#PayingAgent
- * CorporateActionMovementReversalAdviceV07.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmSolicitationAgent
+ * CorporateActionNotificationV06.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#SubPayingAgent
- * CorporateActionMovementReversalAdviceV07.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmInformationAgent
+ * CorporateActionNotificationV06.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#IssuerAgent
- * CorporateActionCancellationAdviceV06.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#mmIssuerAgent
+ * CorporateActionMovementReversalAdviceV07.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#PayingAgent
- * CorporateActionCancellationAdviceV06.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#mmPayingAgent
+ * CorporateActionMovementReversalAdviceV07.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#SubPayingAgent
- * CorporateActionCancellationAdviceV06.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#mmSubPayingAgent
+ * CorporateActionMovementReversalAdviceV07.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#Registrar
- * CorporateActionCancellationAdviceV06.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmIssuerAgent
+ * CorporateActionCancellationAdviceV06.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#ResellingAgent
- * CorporateActionCancellationAdviceV06.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmPayingAgent
+ * CorporateActionCancellationAdviceV06.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#PhysicalSecuritiesAgent
- * CorporateActionCancellationAdviceV06.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmSubPayingAgent
+ * CorporateActionCancellationAdviceV06.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#DropAgent
- * CorporateActionCancellationAdviceV06.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmRegistrar
+ * CorporateActionCancellationAdviceV06.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#SolicitationAgent
- * CorporateActionCancellationAdviceV06.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmResellingAgent
+ * CorporateActionCancellationAdviceV06.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#InformationAgent
- * CorporateActionCancellationAdviceV06.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmPhysicalSecuritiesAgent
+ * CorporateActionCancellationAdviceV06.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#IssuerAgent
- * CorporateActionCancellationAdviceV07.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmDropAgent
+ * CorporateActionCancellationAdviceV06.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#PayingAgent
- * CorporateActionCancellationAdviceV07.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmSolicitationAgent
+ * CorporateActionCancellationAdviceV06.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#SubPayingAgent
- * CorporateActionCancellationAdviceV07.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmInformationAgent
+ * CorporateActionCancellationAdviceV06.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#Registrar
- * CorporateActionCancellationAdviceV07.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmIssuerAgent
+ * CorporateActionCancellationAdviceV07.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#ResellingAgent
- * CorporateActionCancellationAdviceV07.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmPayingAgent
+ * CorporateActionCancellationAdviceV07.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#PhysicalSecuritiesAgent
- * CorporateActionCancellationAdviceV07.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmSubPayingAgent
+ * CorporateActionCancellationAdviceV07.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#DropAgent
- * CorporateActionCancellationAdviceV07.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmRegistrar
+ * CorporateActionCancellationAdviceV07.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#SolicitationAgent
- * CorporateActionCancellationAdviceV07.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmResellingAgent
+ * CorporateActionCancellationAdviceV07.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#InformationAgent
- * CorporateActionCancellationAdviceV07.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmPhysicalSecuritiesAgent
+ * CorporateActionCancellationAdviceV07.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#IssuerAgent
- * CorporateActionNotificationV07.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmDropAgent
+ * CorporateActionCancellationAdviceV07.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#PayingAgent
- * CorporateActionNotificationV07.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmSolicitationAgent
+ * CorporateActionCancellationAdviceV07.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#SubPayingAgent
- * CorporateActionNotificationV07.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmInformationAgent
+ * CorporateActionCancellationAdviceV07.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#Registrar
- * CorporateActionNotificationV07.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmIssuerAgent
+ * CorporateActionNotificationV07.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#ResellingAgent
- * CorporateActionNotificationV07.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmPayingAgent
+ * CorporateActionNotificationV07.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#PhysicalSecuritiesAgent
- * CorporateActionNotificationV07.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmSubPayingAgent
+ * CorporateActionNotificationV07.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#DropAgent
- * CorporateActionNotificationV07.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmRegistrar
+ * CorporateActionNotificationV07.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#SolicitationAgent
- * CorporateActionNotificationV07.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmResellingAgent
+ * CorporateActionNotificationV07.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#InformationAgent
- * CorporateActionNotificationV07.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmPhysicalSecuritiesAgent
+ * CorporateActionNotificationV07.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#IssuerAgent
- * CorporateActionMovementConfirmationV08.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmDropAgent
+ * CorporateActionNotificationV07.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#PayingAgent
- * CorporateActionMovementConfirmationV08.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmSolicitationAgent
+ * CorporateActionNotificationV07.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#SubPayingAgent
- * CorporateActionMovementConfirmationV08.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmInformationAgent
+ * CorporateActionNotificationV07.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#IssuerAgent
- * CorporateActionMovementPreliminaryAdviceV08.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#mmIssuerAgent
+ * CorporateActionMovementConfirmationV08.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#PayingAgent
- * CorporateActionMovementPreliminaryAdviceV08.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#mmPayingAgent
+ * CorporateActionMovementConfirmationV08.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#SubPayingAgent
- * CorporateActionMovementPreliminaryAdviceV08.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#mmSubPayingAgent
+ * CorporateActionMovementConfirmationV08.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#Registrar
- * CorporateActionMovementPreliminaryAdviceV08.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#ResellingAgent
- * CorporateActionMovementPreliminaryAdviceV08.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#PhysicalSecuritiesAgent
- * CorporateActionMovementPreliminaryAdviceV08.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmSubPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#DropAgent
- * CorporateActionMovementPreliminaryAdviceV08.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceV08.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#SolicitationAgent
- * CorporateActionMovementPreliminaryAdviceV08.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmResellingAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#InformationAgent
- * CorporateActionMovementPreliminaryAdviceV08.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmPhysicalSecuritiesAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#IssuerAgent
- * CorporateActionMovementReversalAdviceV08.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#PayingAgent
- * CorporateActionMovementReversalAdviceV08.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#SubPayingAgent
- * CorporateActionMovementReversalAdviceV08.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceV08.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#IssuerAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmIssuerAgent
+ * CorporateActionMovementReversalAdviceV08.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#PayingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmPayingAgent
+ * CorporateActionMovementReversalAdviceV08.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#SubPayingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.SubPayingAgent}
- * </li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmSubPayingAgent
+ * CorporateActionMovementReversalAdviceV08.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#Registrar
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#ResellingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.ResellingAgent}
- * </li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#PhysicalSecuritiesAgent
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmSubPayingAgent
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
- * PhysicalSecuritiesAgent}</li>
+ * mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#DropAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#SolicitationAgent
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmResellingAgent
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
- * SolicitationAgent}</li>
+ * mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#InformationAgent
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmPhysicalSecuritiesAgent
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
- * InformationAgent}</li>
+ * mmPhysicalSecuritiesAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmDropAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
+ * mmSolicitationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
+ * mmInformationAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -338,6 +338,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification71Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier anyBIC;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -354,8 +355,8 @@ public class PartyIdentification71Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -376,20 +377,21 @@ public class PartyIdentification71Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification71Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification36 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -403,8 +405,8 @@ public class PartyIdentification71Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -425,21 +427,22 @@ public class PartyIdentification71Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification71Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification36.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Name and address of a party.
 	 * <p>
@@ -472,17 +475,17 @@ public class PartyIdentification71Choice {
 	 * definition} = "Name and address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification71Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification71Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
@@ -490,65 +493,89 @@ public class PartyIdentification71Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification71Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification71Choice.ProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification71Choice.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification71Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification71Choice.mmProprietaryIdentification,
+						com.tools20022.repository.choice.PartyIdentification71Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmRegistrar,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmPhysicalSecuritiesAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmSolicitationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmInformationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmRegistrar,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmResellingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmPhysicalSecuritiesAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmDropAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmSolicitationAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmInformationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmRegistrar,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmPhysicalSecuritiesAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmSolicitationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmInformationAgent);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.Registrar,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.PhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.SolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.InformationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.PayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.Registrar, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.PhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.SolicitationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.InformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV06.PayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV06.Registrar, com.tools20022.repository.area.seev.CorporateActionNotificationV06.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV06.PhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV06.SolicitationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV06.InformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.PayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.Registrar, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.PhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.SolicitationAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.InformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.Registrar,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.ResellingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.PhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.DropAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.SolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.InformationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.PayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.Registrar, com.tools20022.repository.area.seev.CorporateActionNotificationV07.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.PhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.SolicitationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.InformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.PayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.Registrar, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.PhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.SolicitationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.InformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.Registrar,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.PhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.SolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.InformationAgent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification71Choice";
 				definition = "Choice between different formats for the identification of a party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getAnyBIC() {
+		return anyBIC;
+	}
+
+	public void setAnyBIC(AnyBICIdentifier anyBIC) {
+		this.anyBIC = anyBIC;
+	}
+
+	public GenericIdentification36 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification36 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

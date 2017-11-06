@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.CRSStatus3Choice#Code
- * CRSStatus3Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CRSStatus3Choice#mmCode
+ * CRSStatus3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CRSStatus3Choice#Proprietary
- * CRSStatus3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CRSStatus3Choice#mmProprietary
+ * CRSStatus3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CRSStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CRSStatus1Code code;
 	/**
 	 * Common Reporting Standard (CRS) status expressed as a code.
 	 * <p>
@@ -76,8 +77,8 @@ public class CRSStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CRSStatus#CRSStatus
-	 * CRSStatus.CRSStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CRSStatus#mmCRSStatus
+	 * CRSStatus.mmCRSStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,25 +99,26 @@ public class CRSStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.FATCAStatus2Choice#Code
-	 * FATCAStatus2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.FATCAStatus2Choice#mmCode
+	 * FATCAStatus2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmCRSStatus;
 			componentContext_lazy = () -> CRSStatus3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CRSStatus.CRSStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Common Reporting Standard (CRS) status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCAStatus2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCAStatus2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CRSStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Common Reporting Standard (CRS) status expressed as a proprietary code.
 	 * <p>
@@ -147,11 +149,11 @@ public class CRSStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.FATCAStatus2Choice#Proprietary
-	 * FATCAStatus2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.FATCAStatus2Choice#mmProprietary
+	 * FATCAStatus2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CRSStatus3Choice.mmObject();
 			isDerived = false;
@@ -159,25 +161,41 @@ public class CRSStatus3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Common Reporting Standard (CRS) status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCAStatus2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCAStatus2Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CRSStatus3Choice.Code, com.tools20022.repository.choice.CRSStatus3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CRSStatus3Choice.mmCode, com.tools20022.repository.choice.CRSStatus3Choice.mmProprietary);
 				trace_lazy = () -> CRSStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CRSStatus3Choice";
 				definition = "Choice of formats for the Common Reporting Standard (CRS) status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CRSStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CRSStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

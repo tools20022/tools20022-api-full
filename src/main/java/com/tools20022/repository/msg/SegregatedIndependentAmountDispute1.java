@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.choice.DisputeResolutionType1Choice;
 import com.tools20022.repository.entity.DisputeManagement;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Provides for the segregated independent amount, the dispute details like the
@@ -37,11 +39,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountDispute1#DisputeDetails
- * SegregatedIndependentAmountDispute1.DisputeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountDispute1#mmDisputeDetails
+ * SegregatedIndependentAmountDispute1.mmDisputeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountDispute1#DisputeResolutionType1Choice
- * SegregatedIndependentAmountDispute1.DisputeResolutionType1Choice}</li>
+ * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountDispute1#mmDisputeResolutionType1Choice
+ * SegregatedIndependentAmountDispute1.mmDisputeResolutionType1Choice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +52,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -68,6 +70,7 @@ import java.util.function.Supplier;
 public class SegregatedIndependentAmountDispute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Dispute1 disputeDetails;
 	/**
 	 * Details of the disputed instruction.
 	 * <p>
@@ -93,7 +96,7 @@ public class SegregatedIndependentAmountDispute1 {
 	 * definition} = "Details of the disputed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DisputeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDisputeDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
@@ -101,12 +104,13 @@ public class SegregatedIndependentAmountDispute1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeDetails";
 			definition = "Details of the disputed instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Dispute1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
 		}
 	};
+	protected List<DisputeResolutionType1Choice> disputeResolutionType1Choice;
 	/**
 	 * Specifies the type of dispute that is to be resolved regarding the
 	 * disputed collateral amount.
@@ -137,7 +141,7 @@ public class SegregatedIndependentAmountDispute1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DisputeResolutionType1Choice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDisputeResolutionType1Choice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
@@ -146,17 +150,17 @@ public class SegregatedIndependentAmountDispute1 {
 			name = "DisputeResolutionType1Choice";
 			definition = "Specifies the type of dispute that is to be resolved regarding the disputed collateral amount.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.choice.DisputeResolutionType1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> DisputeResolutionType1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.DisputeDetails, com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.DisputeResolutionType1Choice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmDisputeDetails, com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmDisputeResolutionType1Choice);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -170,5 +174,21 @@ public class SegregatedIndependentAmountDispute1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Dispute1 getDisputeDetails() {
+		return disputeDetails;
+	}
+
+	public void setDisputeDetails(com.tools20022.repository.msg.Dispute1 disputeDetails) {
+		this.disputeDetails = disputeDetails;
+	}
+
+	public List<DisputeResolutionType1Choice> getDisputeResolutionType1Choice() {
+		return disputeResolutionType1Choice;
+	}
+
+	public void setDisputeResolutionType1Choice(List<DisputeResolutionType1Choice> disputeResolutionType1Choice) {
+		this.disputeResolutionType1Choice = disputeResolutionType1Choice;
 	}
 }

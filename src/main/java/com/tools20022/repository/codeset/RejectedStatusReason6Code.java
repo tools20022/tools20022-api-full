@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason6Code#InvestmentAccount
- * RejectedStatusReason6Code.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason6Code#mmInvestmentAccount
+ * RejectedStatusReason6Code.mmInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason6Code#NotCompliantWithSLA
- * RejectedStatusReason6Code.NotCompliantWithSLA}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason6Code#mmNotCompliantWithSLA
+ * RejectedStatusReason6Code.mmNotCompliantWithSLA}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class RejectedStatusReason6Code extends RejectedStatusReasonCode {
 	 * name} = "InvestmentAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentAccount = new MMCode() {
+	public static final MMCode mmInvestmentAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
@@ -104,7 +104,7 @@ public class RejectedStatusReason6Code extends RejectedStatusReasonCode {
 	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotCompliantWithSLA = new MMCode() {
+	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
@@ -115,12 +115,12 @@ public class RejectedStatusReason6Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SAFE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason6Code";
 				definition = "Specifies the reason for a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason6Code.InvestmentAccount, com.tools20022.repository.codeset.RejectedStatusReason6Code.NotCompliantWithSLA);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason6Code.mmInvestmentAccount, com.tools20022.repository.codeset.RejectedStatusReason6Code.mmNotCompliantWithSLA);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

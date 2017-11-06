@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#New
- * CorporateActionNotificationType1Code.New}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#mmNew
+ * CorporateActionNotificationType1Code.mmNew}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#Replacement
- * CorporateActionNotificationType1Code.Replacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#mmReplacement
+ * CorporateActionNotificationType1Code.mmReplacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#Reminder
- * CorporateActionNotificationType1Code.Reminder}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#mmReminder
+ * CorporateActionNotificationType1Code.mmReminder}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode New = new MMCode() {
+	public static final MMCode mmNew = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
@@ -107,7 +107,7 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 * name} = "Replacement"</li>
 	 * </ul>
 	 */
-	public static final MMCode Replacement = new MMCode() {
+	public static final MMCode mmReplacement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
@@ -130,7 +130,7 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 * name} = "Reminder"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reminder = new MMCode() {
+	public static final MMCode mmReminder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
@@ -141,13 +141,13 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationType1Code";
 				definition = "Type of notification advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionNotificationType1Code.New, com.tools20022.repository.codeset.CorporateActionNotificationType1Code.Replacement,
-						com.tools20022.repository.codeset.CorporateActionNotificationType1Code.Reminder);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmNew, com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmReplacement,
+						com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmReminder);
 				trace_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
 			}
 		});

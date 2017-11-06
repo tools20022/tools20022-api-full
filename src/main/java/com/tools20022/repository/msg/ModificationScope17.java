@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope17#ModificationScopeIndication
- * ModificationScope17.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope17#mmModificationScopeIndication
+ * ModificationScope17.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope17#OtherIdentification
- * ModificationScope17.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope17#mmOtherIdentification
+ * ModificationScope17.mmOtherIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -103,18 +104,18 @@ public class ModificationScope17 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope23#ModificationScopeIndication
-	 * ModificationScope23.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope23#mmModificationScopeIndication
+	 * ModificationScope23.mmModificationScopeIndication}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope1#ModificationScopeIndication
-	 * ModificationScope1.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope1#mmModificationScopeIndication
+	 * ModificationScope1.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope17.mmObject();
 			isDerived = false;
@@ -122,13 +123,14 @@ public class ModificationScope17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope1.ModificationScopeIndication;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope23.ModificationScopeIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope23.mmModificationScopeIndication);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope1.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected GenericIdentification44 otherIdentification;
 	/**
 	 * Alternative identification, for example, national registration
 	 * identification number, passport number, or an account number used to
@@ -163,13 +165,13 @@ public class ModificationScope17 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope23#OtherIdentification
-	 * ModificationScope23.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope23#mmOtherIdentification
+	 * ModificationScope23.mmOtherIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope17.mmObject();
 			isDerived = false;
@@ -177,26 +179,42 @@ public class ModificationScope17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Alternative identification, for example, national registration identification number, passport number, or an account number used to further identify the beneficial owner, for example, a Central Provident Fund (CFP) account as required for Singapore.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope23.OtherIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope23.mmOtherIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification44.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope17.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope17.OtherIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope17.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope17.mmOtherIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope17";
 				definition = "Specifies the type of modification to be applied on a data set.";
-				previousVersion_lazy = () -> ModificationScope1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope23.mmObject());
+				previousVersion_lazy = () -> ModificationScope1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public GenericIdentification44 getOtherIdentification() {
+		return otherIdentification;
+	}
+
+	public void setOtherIdentification(com.tools20022.repository.msg.GenericIdentification44 otherIdentification) {
+		this.otherIdentification = otherIdentification;
 	}
 }

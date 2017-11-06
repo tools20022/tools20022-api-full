@@ -35,69 +35,69 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#ApprovedBySEC
- * IssuerStatus1Code.ApprovedBySEC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmApprovedBySEC
+ * IssuerStatus1Code.mmApprovedBySEC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#ApprovedByShareholders
- * IssuerStatus1Code.ApprovedByShareholders}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmApprovedByShareholders
+ * IssuerStatus1Code.mmApprovedByShareholders}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#ApprovedByShareholdersAndSEC
- * IssuerStatus1Code.ApprovedByShareholdersAndSEC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmApprovedByShareholdersAndSEC
+ * IssuerStatus1Code.mmApprovedByShareholdersAndSEC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#ApproximateRate
- * IssuerStatus1Code.ApproximateRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmApproximateRate
+ * IssuerStatus1Code.mmApproximateRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#AwaitingInformationFromCompany
- * IssuerStatus1Code.AwaitingInformationFromCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmAwaitingInformationFromCompany
+ * IssuerStatus1Code.mmAwaitingInformationFromCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#DayGracePeriod
- * IssuerStatus1Code.DayGracePeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmDayGracePeriod
+ * IssuerStatus1Code.mmDayGracePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#DistributionRejected
- * IssuerStatus1Code.DistributionRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmDistributionRejected
+ * IssuerStatus1Code.mmDistributionRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#SeeComments
- * IssuerStatus1Code.SeeComments}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmSeeComments
+ * IssuerStatus1Code.mmSeeComments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#HolidayInCountryofOrigin
- * IssuerStatus1Code.HolidayInCountryofOrigin}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmHolidayInCountryofOrigin
+ * IssuerStatus1Code.mmHolidayInCountryofOrigin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#IssueNotFunded
- * IssuerStatus1Code.IssueNotFunded}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmIssueNotFunded
+ * IssuerStatus1Code.mmIssueNotFunded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#IssueTradingFlat
- * IssuerStatus1Code.IssueTradingFlat}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmIssueTradingFlat
+ * IssuerStatus1Code.mmIssueTradingFlat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#LateAnnouncementWithElections
- * IssuerStatus1Code.LateAnnouncementWithElections}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmLateAnnouncementWithElections
+ * IssuerStatus1Code.mmLateAnnouncementWithElections}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#Liquidation
- * IssuerStatus1Code.Liquidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmLiquidation
+ * IssuerStatus1Code.mmLiquidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#PaidUponrReceiptOfFunds
- * IssuerStatus1Code.PaidUponrReceiptOfFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmPaidUponrReceiptOfFunds
+ * IssuerStatus1Code.mmPaidUponrReceiptOfFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#PendingConversionOfFunds
- * IssuerStatus1Code.PendingConversionOfFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmPendingConversionOfFunds
+ * IssuerStatus1Code.mmPendingConversionOfFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#PendingEDSElections
- * IssuerStatus1Code.PendingEDSElections}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmPendingEDSElections
+ * IssuerStatus1Code.mmPendingEDSElections}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#PendingSECApproval
- * IssuerStatus1Code.PendingSECApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmPendingSECApproval
+ * IssuerStatus1Code.mmPendingSECApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#PendingShareholderAndSECApproval
- * IssuerStatus1Code.PendingShareholderAndSECApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmPendingShareholderAndSECApproval
+ * IssuerStatus1Code.mmPendingShareholderAndSECApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#PendingShareholderApproval
- * IssuerStatus1Code.PendingShareholderApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatus1Code#mmPendingShareholderApproval
+ * IssuerStatus1Code.mmPendingShareholderApproval}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -135,7 +135,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "ApprovedBySEC"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApprovedBySEC = new MMCode() {
+	public static final MMCode mmApprovedBySEC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedBySEC";
@@ -158,7 +158,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "ApprovedByShareholders"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApprovedByShareholders = new MMCode() {
+	public static final MMCode mmApprovedByShareholders = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedByShareholders";
@@ -181,7 +181,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "ApprovedByShareholdersAndSEC"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApprovedByShareholdersAndSEC = new MMCode() {
+	public static final MMCode mmApprovedByShareholdersAndSEC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedByShareholdersAndSEC";
@@ -204,7 +204,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "ApproximateRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApproximateRate = new MMCode() {
+	public static final MMCode mmApproximateRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApproximateRate";
@@ -227,7 +227,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "AwaitingInformationFromCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingInformationFromCompany = new MMCode() {
+	public static final MMCode mmAwaitingInformationFromCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingInformationFromCompany";
@@ -250,7 +250,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "DayGracePeriod"</li>
 	 * </ul>
 	 */
-	public static final MMCode DayGracePeriod = new MMCode() {
+	public static final MMCode mmDayGracePeriod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayGracePeriod";
@@ -273,7 +273,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "DistributionRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode DistributionRejected = new MMCode() {
+	public static final MMCode mmDistributionRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionRejected";
@@ -296,7 +296,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "SeeComments"</li>
 	 * </ul>
 	 */
-	public static final MMCode SeeComments = new MMCode() {
+	public static final MMCode mmSeeComments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeeComments";
@@ -319,7 +319,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "HolidayInCountryofOrigin"</li>
 	 * </ul>
 	 */
-	public static final MMCode HolidayInCountryofOrigin = new MMCode() {
+	public static final MMCode mmHolidayInCountryofOrigin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HolidayInCountryofOrigin";
@@ -342,7 +342,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "IssueNotFunded"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssueNotFunded = new MMCode() {
+	public static final MMCode mmIssueNotFunded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueNotFunded";
@@ -365,7 +365,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "IssueTradingFlat"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssueTradingFlat = new MMCode() {
+	public static final MMCode mmIssueTradingFlat = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueTradingFlat";
@@ -388,7 +388,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "LateAnnouncementWithElections"</li>
 	 * </ul>
 	 */
-	public static final MMCode LateAnnouncementWithElections = new MMCode() {
+	public static final MMCode mmLateAnnouncementWithElections = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementWithElections";
@@ -411,7 +411,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "Liquidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Liquidation = new MMCode() {
+	public static final MMCode mmLiquidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidation";
@@ -434,7 +434,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "PaidUponrReceiptOfFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaidUponrReceiptOfFunds = new MMCode() {
+	public static final MMCode mmPaidUponrReceiptOfFunds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaidUponrReceiptOfFunds";
@@ -457,7 +457,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "PendingConversionOfFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingConversionOfFunds = new MMCode() {
+	public static final MMCode mmPendingConversionOfFunds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConversionOfFunds";
@@ -480,7 +480,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "PendingEDSElections"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingEDSElections = new MMCode() {
+	public static final MMCode mmPendingEDSElections = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingEDSElections";
@@ -503,7 +503,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "PendingSECApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingSECApproval = new MMCode() {
+	public static final MMCode mmPendingSECApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSECApproval";
@@ -526,7 +526,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "PendingShareholderAndSECApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingShareholderAndSECApproval = new MMCode() {
+	public static final MMCode mmPendingShareholderAndSECApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingShareholderAndSECApproval";
@@ -549,7 +549,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 * name} = "PendingShareholderApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingShareholderApproval = new MMCode() {
+	public static final MMCode mmPendingShareholderApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingShareholderApproval";
@@ -560,20 +560,21 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ASEC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerStatus1Code";
 				definition = "Specifies DTC (The Depository Trust Company) defined issuer status of the event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerStatus1Code.ApprovedBySEC, com.tools20022.repository.codeset.IssuerStatus1Code.ApprovedByShareholders,
-						com.tools20022.repository.codeset.IssuerStatus1Code.ApprovedByShareholdersAndSEC, com.tools20022.repository.codeset.IssuerStatus1Code.ApproximateRate,
-						com.tools20022.repository.codeset.IssuerStatus1Code.AwaitingInformationFromCompany, com.tools20022.repository.codeset.IssuerStatus1Code.DayGracePeriod,
-						com.tools20022.repository.codeset.IssuerStatus1Code.DistributionRejected, com.tools20022.repository.codeset.IssuerStatus1Code.SeeComments,
-						com.tools20022.repository.codeset.IssuerStatus1Code.HolidayInCountryofOrigin, com.tools20022.repository.codeset.IssuerStatus1Code.IssueNotFunded, com.tools20022.repository.codeset.IssuerStatus1Code.IssueTradingFlat,
-						com.tools20022.repository.codeset.IssuerStatus1Code.LateAnnouncementWithElections, com.tools20022.repository.codeset.IssuerStatus1Code.Liquidation,
-						com.tools20022.repository.codeset.IssuerStatus1Code.PaidUponrReceiptOfFunds, com.tools20022.repository.codeset.IssuerStatus1Code.PendingConversionOfFunds,
-						com.tools20022.repository.codeset.IssuerStatus1Code.PendingEDSElections, com.tools20022.repository.codeset.IssuerStatus1Code.PendingSECApproval,
-						com.tools20022.repository.codeset.IssuerStatus1Code.PendingShareholderAndSECApproval, com.tools20022.repository.codeset.IssuerStatus1Code.PendingShareholderApproval);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerStatus1Code.mmApprovedBySEC, com.tools20022.repository.codeset.IssuerStatus1Code.mmApprovedByShareholders,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmApprovedByShareholdersAndSEC, com.tools20022.repository.codeset.IssuerStatus1Code.mmApproximateRate,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmAwaitingInformationFromCompany, com.tools20022.repository.codeset.IssuerStatus1Code.mmDayGracePeriod,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmDistributionRejected, com.tools20022.repository.codeset.IssuerStatus1Code.mmSeeComments,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmHolidayInCountryofOrigin, com.tools20022.repository.codeset.IssuerStatus1Code.mmIssueNotFunded,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmIssueTradingFlat, com.tools20022.repository.codeset.IssuerStatus1Code.mmLateAnnouncementWithElections,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmLiquidation, com.tools20022.repository.codeset.IssuerStatus1Code.mmPaidUponrReceiptOfFunds,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingConversionOfFunds, com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingEDSElections,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingSECApproval, com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingShareholderAndSECApproval,
+						com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingShareholderApproval);
 				trace_lazy = () -> IssuerStatusCode.mmObject();
 			}
 		});

@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#ATMConfiguration
- * DataSetCategory7Code.ATMConfiguration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmATMConfiguration
+ * DataSetCategory7Code.mmATMConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#ATMProtocol
- * DataSetCategory7Code.ATMProtocol}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmATMProtocol
+ * DataSetCategory7Code.mmATMProtocol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#ApplicationParameters
- * DataSetCategory7Code.ApplicationParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmApplicationParameters
+ * DataSetCategory7Code.mmApplicationParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#CardApplication
- * DataSetCategory7Code.CardApplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmCardApplication
+ * DataSetCategory7Code.mmCardApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#CardConfiguration
- * DataSetCategory7Code.CardConfiguration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmCardConfiguration
+ * DataSetCategory7Code.mmCardConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#OfflineExchangeRate
- * DataSetCategory7Code.OfflineExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmOfflineExchangeRate
+ * DataSetCategory7Code.mmOfflineExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#PreDefinedAmount
- * DataSetCategory7Code.PreDefinedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmPreDefinedAmount
+ * DataSetCategory7Code.mmPreDefinedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#LocationConfiguration
- * DataSetCategory7Code.LocationConfiguration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmLocationConfiguration
+ * DataSetCategory7Code.mmLocationConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#MobileOperator
- * DataSetCategory7Code.MobileOperator}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory7Code#mmMobileOperator
+ * DataSetCategory7Code.mmMobileOperator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "ATMConfiguration"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMConfiguration = new MMCode() {
+	public static final MMCode mmATMConfiguration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMConfiguration";
@@ -119,7 +119,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "ATMProtocol"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMProtocol = new MMCode() {
+	public static final MMCode mmATMProtocol = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMProtocol";
@@ -142,7 +142,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "ApplicationParameters"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApplicationParameters = new MMCode() {
+	public static final MMCode mmApplicationParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
@@ -165,7 +165,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "CardApplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardApplication = new MMCode() {
+	public static final MMCode mmCardApplication = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardApplication";
@@ -188,7 +188,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "CardConfiguration"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardConfiguration = new MMCode() {
+	public static final MMCode mmCardConfiguration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardConfiguration";
@@ -211,7 +211,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "OfflineExchangeRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode OfflineExchangeRate = new MMCode() {
+	public static final MMCode mmOfflineExchangeRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineExchangeRate";
@@ -234,7 +234,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "PreDefinedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreDefinedAmount = new MMCode() {
+	public static final MMCode mmPreDefinedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreDefinedAmount";
@@ -257,7 +257,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "LocationConfiguration"</li>
 	 * </ul>
 	 */
-	public static final MMCode LocationConfiguration = new MMCode() {
+	public static final MMCode mmLocationConfiguration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationConfiguration";
@@ -280,7 +280,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 * name} = "MobileOperator"</li>
 	 * </ul>
 	 */
-	public static final MMCode MobileOperator = new MMCode() {
+	public static final MMCode mmMobileOperator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobileOperator";
@@ -291,15 +291,15 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataSetCategory7Code";
 				definition = "Type of an ATM configuration.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory7Code.ATMConfiguration, com.tools20022.repository.codeset.DataSetCategory7Code.ATMProtocol,
-						com.tools20022.repository.codeset.DataSetCategory7Code.ApplicationParameters, com.tools20022.repository.codeset.DataSetCategory7Code.CardApplication,
-						com.tools20022.repository.codeset.DataSetCategory7Code.CardConfiguration, com.tools20022.repository.codeset.DataSetCategory7Code.OfflineExchangeRate,
-						com.tools20022.repository.codeset.DataSetCategory7Code.PreDefinedAmount, com.tools20022.repository.codeset.DataSetCategory7Code.LocationConfiguration,
-						com.tools20022.repository.codeset.DataSetCategory7Code.MobileOperator);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory7Code.mmATMConfiguration, com.tools20022.repository.codeset.DataSetCategory7Code.mmATMProtocol,
+						com.tools20022.repository.codeset.DataSetCategory7Code.mmApplicationParameters, com.tools20022.repository.codeset.DataSetCategory7Code.mmCardApplication,
+						com.tools20022.repository.codeset.DataSetCategory7Code.mmCardConfiguration, com.tools20022.repository.codeset.DataSetCategory7Code.mmOfflineExchangeRate,
+						com.tools20022.repository.codeset.DataSetCategory7Code.mmPreDefinedAmount, com.tools20022.repository.codeset.DataSetCategory7Code.mmLocationConfiguration,
+						com.tools20022.repository.codeset.DataSetCategory7Code.mmMobileOperator);
 				trace_lazy = () -> DataSetCategoryCode.mmObject();
 			}
 		});

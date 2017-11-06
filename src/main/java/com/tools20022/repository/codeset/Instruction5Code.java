@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction5Code#PhoneBeneficiary
- * Instruction5Code.PhoneBeneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Instruction5Code#Telecom
- * Instruction5Code.Telecom}</li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction5Code#mmPhoneBeneficiary
+ * Instruction5Code.mmPhoneBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Instruction5Code#mmTelecom
+ * Instruction5Code.mmTelecom}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class Instruction5Code extends InstructionCode {
 	 * name} = "PhoneBeneficiary"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhoneBeneficiary = new MMCode() {
+	public static final MMCode mmPhoneBeneficiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneBeneficiary";
@@ -106,7 +106,7 @@ public class Instruction5Code extends InstructionCode {
 	 * name} = "Telecom"</li>
 	 * </ul>
 	 */
-	public static final MMCode Telecom = new MMCode() {
+	public static final MMCode mmTelecom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Telecom";
@@ -117,12 +117,12 @@ public class Instruction5Code extends InstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PHOB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Instruction5Code";
 				definition = "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction5Code.PhoneBeneficiary, com.tools20022.repository.codeset.Instruction5Code.Telecom);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction5Code.mmPhoneBeneficiary, com.tools20022.repository.codeset.Instruction5Code.mmTelecom);
 				trace_lazy = () -> InstructionCode.mmObject();
 			}
 		});

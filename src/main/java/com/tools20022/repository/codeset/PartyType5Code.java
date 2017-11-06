@@ -33,30 +33,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType5Code#OriginatingPOI
- * PartyType5Code.OriginatingPOI}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code#Acceptor
- * PartyType5Code.Acceptor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code#Merchant
- * PartyType5Code.Merchant}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code#Acquirer
- * PartyType5Code.Acquirer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType5Code#mmOriginatingPOI
+ * PartyType5Code.mmOriginatingPOI}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code#mmAcceptor
+ * PartyType5Code.mmAcceptor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code#mmMerchant
+ * PartyType5Code.mmMerchant}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType5Code#mmAcquirer
+ * PartyType5Code.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType5Code#IntermediaryAgent
- * PartyType5Code.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType5Code#mmIntermediaryAgent
+ * PartyType5Code.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType5Code#MasterTerminalManager
- * PartyType5Code.MasterTerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType5Code#mmMasterTerminalManager
+ * PartyType5Code.mmMasterTerminalManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType5Code#TerminalManager
- * PartyType5Code.TerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType5Code#mmTerminalManager
+ * PartyType5Code.mmTerminalManager}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class PartyType5Code extends PartyTypeCode {
 	 * name} = "OriginatingPOI"</li>
 	 * </ul>
 	 */
-	public static final MMCode OriginatingPOI = new MMCode() {
+	public static final MMCode mmOriginatingPOI = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingPOI";
@@ -116,7 +116,7 @@ public class PartyType5Code extends PartyTypeCode {
 	 * name} = "Acceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acceptor = new MMCode() {
+	public static final MMCode mmAcceptor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
@@ -139,7 +139,7 @@ public class PartyType5Code extends PartyTypeCode {
 	 * name} = "Merchant"</li>
 	 * </ul>
 	 */
-	public static final MMCode Merchant = new MMCode() {
+	public static final MMCode mmMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
@@ -162,7 +162,7 @@ public class PartyType5Code extends PartyTypeCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -185,7 +185,7 @@ public class PartyType5Code extends PartyTypeCode {
 	 * name} = "IntermediaryAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntermediaryAgent = new MMCode() {
+	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
@@ -208,7 +208,7 @@ public class PartyType5Code extends PartyTypeCode {
 	 * name} = "MasterTerminalManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode MasterTerminalManager = new MMCode() {
+	public static final MMCode mmMasterTerminalManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTerminalManager";
@@ -231,7 +231,7 @@ public class PartyType5Code extends PartyTypeCode {
 	 * name} = "TerminalManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode TerminalManager = new MMCode() {
+	public static final MMCode mmTerminalManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManager";
@@ -242,14 +242,14 @@ public class PartyType5Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPOI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyType5Code";
 				definition = "Identification of the type of entity involved in a maintenance operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType5Code.OriginatingPOI, com.tools20022.repository.codeset.PartyType5Code.Acceptor, com.tools20022.repository.codeset.PartyType5Code.Merchant,
-						com.tools20022.repository.codeset.PartyType5Code.Acquirer, com.tools20022.repository.codeset.PartyType5Code.IntermediaryAgent, com.tools20022.repository.codeset.PartyType5Code.MasterTerminalManager,
-						com.tools20022.repository.codeset.PartyType5Code.TerminalManager);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType5Code.mmOriginatingPOI, com.tools20022.repository.codeset.PartyType5Code.mmAcceptor, com.tools20022.repository.codeset.PartyType5Code.mmMerchant,
+						com.tools20022.repository.codeset.PartyType5Code.mmAcquirer, com.tools20022.repository.codeset.PartyType5Code.mmIntermediaryAgent, com.tools20022.repository.codeset.PartyType5Code.mmMasterTerminalManager,
+						com.tools20022.repository.codeset.PartyType5Code.mmTerminalManager);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

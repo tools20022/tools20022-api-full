@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ResolutionInformation1#InterbankSettlementAmount
- * ResolutionInformation1.InterbankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ResolutionInformation1#mmInterbankSettlementAmount
+ * ResolutionInformation1.mmInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ResolutionInformation1#InterbankSettlementDate
- * ResolutionInformation1.InterbankSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ResolutionInformation1#mmInterbankSettlementDate
+ * ResolutionInformation1.mmInterbankSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ResolutionInformation1#ClearingChannel
- * ResolutionInformation1.ClearingChannel}</li>
+ * {@linkplain com.tools20022.repository.msg.ResolutionInformation1#mmClearingChannel
+ * ResolutionInformation1.mmClearingChannel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,27 +56,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#ResolutionRelatedInformation
- * ResolutionOfInvestigationV03.ResolutionRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmResolutionRelatedInformation
+ * ResolutionOfInvestigationV03.mmResolutionRelatedInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV04#ResolutionRelatedInformation
- * ResolutionOfInvestigationV04.ResolutionRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV04#mmResolutionRelatedInformation
+ * ResolutionOfInvestigationV04.mmResolutionRelatedInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV05#ResolutionRelatedInformation
- * ResolutionOfInvestigationV05.ResolutionRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV05#mmResolutionRelatedInformation
+ * ResolutionOfInvestigationV05.mmResolutionRelatedInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#ResolutionRelatedInformation
- * ResolutionOfInvestigationV06.ResolutionRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmResolutionRelatedInformation
+ * ResolutionOfInvestigationV06.mmResolutionRelatedInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#ResolutionRelatedInformation
- * ResolutionOfInvestigationV07.ResolutionRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmResolutionRelatedInformation
+ * ResolutionOfInvestigationV07.mmResolutionRelatedInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResolutionInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount interbankSettlementAmount;
 	/**
 	 * Amount of money moved between the instructing agent and the instructed
 	 * agent.
@@ -106,8 +107,8 @@ public class ResolutionInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,20 +129,21 @@ public class ResolutionInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> ResolutionInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate interbankSettlementDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -156,8 +158,8 @@ public class ResolutionInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -178,20 +180,21 @@ public class ResolutionInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> ResolutionInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ClearingChannel2Code clearingChannel;
 	/**
 	 * Specifies the clearing channel to be used to process the payment
 	 * instruction.
@@ -206,8 +209,8 @@ public class ResolutionInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ClearingChannel
-	 * PaymentProcessing.ClearingChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
+	 * PaymentProcessing.mmClearingChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,17 +231,17 @@ public class ResolutionInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> ResolutionInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ClearingChannel;
 			isDerived = false;
 			xmlTag = "ClrChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
 		}
 	};
@@ -246,18 +249,42 @@ public class ResolutionInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResolutionInformation1.InterbankSettlementAmount, com.tools20022.repository.msg.ResolutionInformation1.InterbankSettlementDate,
-						com.tools20022.repository.msg.ResolutionInformation1.ClearingChannel);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResolutionInformation1.mmInterbankSettlementAmount, com.tools20022.repository.msg.ResolutionInformation1.mmInterbankSettlementDate,
+						com.tools20022.repository.msg.ResolutionInformation1.mmClearingChannel);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmResolutionRelatedInformation,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV04.mmResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV05.mmResolutionRelatedInformation,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmResolutionRelatedInformation);
 				trace_lazy = () -> CashSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.ResolutionRelatedInformation,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV04.ResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV05.ResolutionRelatedInformation,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.ResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.ResolutionRelatedInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResolutionInformation1";
 				definition = "Set of elements used to provide information on the return or reversal expected by the party that initiated the initial payment instruction after a cancellation or modification request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getInterbankSettlementAmount() {
+		return interbankSettlementAmount;
+	}
+
+	public void setInterbankSettlementAmount(ActiveOrHistoricCurrencyAndAmount interbankSettlementAmount) {
+		this.interbankSettlementAmount = interbankSettlementAmount;
+	}
+
+	public ISODate getInterbankSettlementDate() {
+		return interbankSettlementDate;
+	}
+
+	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = interbankSettlementDate;
+	}
+
+	public ClearingChannel2Code getClearingChannel() {
+		return clearingChannel;
+	}
+
+	public void setClearingChannel(ClearingChannel2Code clearingChannel) {
+		this.clearingChannel = clearingChannel;
 	}
 }

@@ -37,20 +37,20 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References1Choice#SecuritiesSettlementTransactionIdentification
- * References1Choice.SecuritiesSettlementTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References1Choice#mmSecuritiesSettlementTransactionIdentification
+ * References1Choice.mmSecuritiesSettlementTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References1Choice#PoolIdentification
- * References1Choice.PoolIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References1Choice#mmPoolIdentification
+ * References1Choice.mmPoolIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References1Choice#IntraPositionMovementIdentification
- * References1Choice.IntraPositionMovementIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References1Choice#mmIntraPositionMovementIdentification
+ * References1Choice.mmIntraPositionMovementIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References1Choice#AccountServicerTransactionIdentification
- * References1Choice.AccountServicerTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References1Choice#mmAccountServicerTransactionIdentification
+ * References1Choice.mmAccountServicerTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References1Choice#OtherTransactionIdentification
- * References1Choice.OtherTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References1Choice#mmOtherTransactionIdentification
+ * References1Choice.mmOtherTransactionIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,6 +83,7 @@ import java.util.function.Supplier;
 public class References1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text securitiesSettlementTransactionIdentification;
 	/**
 	 * Unambiguous identification of a securities settlement transaction as
 	 * known by the account owner (or instructing party acting on its behalf).
@@ -96,8 +97,8 @@ public class References1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,27 +121,28 @@ public class References1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References47Choice#SecuritiesSettlementTransactionIdentification
-	 * References47Choice.SecuritiesSettlementTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References47Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References47Choice.mmSecuritiesSettlementTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesSettlementTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionIdentification";
 			definition = "Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.SecuritiesSettlementTransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.mmSecuritiesSettlementTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text poolIdentification;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -153,8 +155,8 @@ public class References1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#PoolIdentification
-	 * SecuritiesTradeIdentification.PoolIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmPoolIdentification
+	 * SecuritiesTradeIdentification.mmPoolIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -175,27 +177,28 @@ public class References1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References47Choice#PoolIdentification
-	 * References47Choice.PoolIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References47Choice#mmPoolIdentification
+	 * References47Choice.mmPoolIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> References1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.PoolIdentification;
 			isDerived = false;
 			xmlTag = "PoolId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.PoolIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.mmPoolIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text intraPositionMovementIdentification;
 	/**
 	 * Unambiguous identification of the intra-position movement transaction as
 	 * known by the account owner (or instructing party acting on its behalf).
@@ -228,13 +231,13 @@ public class References1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References47Choice#IntraPositionMovementIdentification
-	 * References47Choice.IntraPositionMovementIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References47Choice#mmIntraPositionMovementIdentification
+	 * References47Choice.mmIntraPositionMovementIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntraPositionMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References1Choice.mmObject();
 			isDerived = false;
@@ -242,12 +245,13 @@ public class References1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementIdentification";
 			definition = "Unambiguous identification of the intra-position movement transaction as known by the account owner (or instructing party acting on its behalf).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.IntraPositionMovementIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.mmIntraPositionMovementIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountServicerTransactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the account
 	 * servicer.
@@ -261,8 +265,8 @@ public class References1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#AccountServicerTransactionIdentification
-	 * Entry.AccountServicerTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmAccountServicerTransactionIdentification
+	 * Entry.mmAccountServicerTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -285,27 +289,28 @@ public class References1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References47Choice#AccountServicerTransactionIdentification
-	 * References47Choice.AccountServicerTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References47Choice#mmAccountServicerTransactionIdentification
+	 * References47Choice.mmAccountServicerTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> References1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.AccountServicerTransactionIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.AccountServicerTransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.mmAccountServicerTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text otherTransactionIdentification;
 	/**
 	 * Identification of a transaction that cannot be identified using a
 	 * standard reference element present in the message.
@@ -319,8 +324,8 @@ public class References1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -343,24 +348,24 @@ public class References1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References47Choice#OtherTransactionIdentification
-	 * References47Choice.OtherTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References47Choice#mmOtherTransactionIdentification
+	 * References47Choice.mmOtherTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> References1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "OthrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTransactionIdentification";
 			definition = "Identification of a transaction that cannot be identified using a standard reference element present in the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.OtherTransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References47Choice.mmOtherTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -368,11 +373,11 @@ public class References1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References1Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References1Choice.PoolIdentification,
-						com.tools20022.repository.choice.References1Choice.IntraPositionMovementIdentification, com.tools20022.repository.choice.References1Choice.AccountServicerTransactionIdentification,
-						com.tools20022.repository.choice.References1Choice.OtherTransactionIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References1Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References1Choice.mmPoolIdentification,
+						com.tools20022.repository.choice.References1Choice.mmIntraPositionMovementIdentification, com.tools20022.repository.choice.References1Choice.mmAccountServicerTransactionIdentification,
+						com.tools20022.repository.choice.References1Choice.mmOtherTransactionIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -387,5 +392,45 @@ public class References1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSecuritiesSettlementTransactionIdentification() {
+		return securitiesSettlementTransactionIdentification;
+	}
+
+	public void setSecuritiesSettlementTransactionIdentification(Max35Text securitiesSettlementTransactionIdentification) {
+		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
+	}
+
+	public Max35Text getPoolIdentification() {
+		return poolIdentification;
+	}
+
+	public void setPoolIdentification(Max35Text poolIdentification) {
+		this.poolIdentification = poolIdentification;
+	}
+
+	public Max35Text getIntraPositionMovementIdentification() {
+		return intraPositionMovementIdentification;
+	}
+
+	public void setIntraPositionMovementIdentification(Max35Text intraPositionMovementIdentification) {
+		this.intraPositionMovementIdentification = intraPositionMovementIdentification;
+	}
+
+	public Max35Text getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification;
+	}
+
+	public void setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
+		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+	}
+
+	public Max35Text getOtherTransactionIdentification() {
+		return otherTransactionIdentification;
+	}
+
+	public void setOtherTransactionIdentification(Max35Text otherTransactionIdentification) {
+		this.otherTransactionIdentification = otherTransactionIdentification;
 	}
 }

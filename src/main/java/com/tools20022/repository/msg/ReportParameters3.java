@@ -41,21 +41,22 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters3#ReportIdentification
- * ReportParameters3.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters3#mmReportIdentification
+ * ReportParameters3.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters3#ReportDateAndTime
- * ReportParameters3.ReportDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters3#mmReportDateAndTime
+ * ReportParameters3.mmReportDateAndTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters3#ReportCurrency
- * ReportParameters3.ReportCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters3#mmReportCurrency
+ * ReportParameters3.mmReportCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters3#CalculationDateAndTime
- * ReportParameters3.CalculationDateAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameters3#Frequency
- * ReportParameters3.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameters3#ReportNumber
- * ReportParameters3.ReportNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters3#mmCalculationDateAndTime
+ * ReportParameters3.mmCalculationDateAndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportParameters3#mmFrequency
+ * ReportParameters3.mmFrequency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters3#mmReportNumber
+ * ReportParameters3.mmReportNumber}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,15 +64,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#ReportParameters
- * MarginReportV02.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmReportParameters
+ * MarginReportV02.mmReportParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -86,6 +87,7 @@ import java.util.function.Supplier;
 public class ReportParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reportIdentification;
 	/**
 	 * Unique identification of the report.
 	 * <p>
@@ -113,7 +115,7 @@ public class ReportParameters3 {
 	 * definition} = "Unique identification of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
@@ -121,11 +123,12 @@ public class ReportParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice reportDateAndTime;
 	/**
 	 * Date (and time) and time of the report.
 	 * <p>
@@ -154,7 +157,7 @@ public class ReportParameters3 {
 	 * definition} = "Date (and time) and time of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
@@ -162,11 +165,12 @@ public class ReportParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
 			definition = "Date (and time) and time of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CurrencyCode reportCurrency;
 	/**
 	 * Currency used for the calculation of the margin.
 	 * <p>
@@ -194,7 +198,7 @@ public class ReportParameters3 {
 	 * definition} = "Currency used for the calculation of the margin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
@@ -202,11 +206,12 @@ public class ReportParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCurrency";
 			definition = "Currency used for the calculation of the margin.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected ISODateTime calculationDateAndTime;
 	/**
 	 * Date of calculation of the margin.
 	 * <p>
@@ -234,7 +239,7 @@ public class ReportParameters3 {
 	 * definition} = "Date of calculation of the margin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
@@ -242,11 +247,12 @@ public class ReportParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDateAndTime";
 			definition = "Date of calculation of the margin.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected EventFrequency6Code frequency;
 	/**
 	 * Frequency of the report.
 	 * <p>
@@ -275,7 +281,7 @@ public class ReportParameters3 {
 	 * definition} = "Frequency of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
@@ -283,11 +289,12 @@ public class ReportParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency6Code.mmObject();
 		}
 	};
+	protected Exact5NumericText reportNumber;
 	/**
 	 * Sequential number of the report.
 	 * <p>
@@ -316,7 +323,7 @@ public class ReportParameters3 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
@@ -324,8 +331,8 @@ public class ReportParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact5NumericText.mmObject();
 		}
 	};
@@ -333,11 +340,11 @@ public class ReportParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters3.ReportIdentification, com.tools20022.repository.msg.ReportParameters3.ReportDateAndTime,
-						com.tools20022.repository.msg.ReportParameters3.ReportCurrency, com.tools20022.repository.msg.ReportParameters3.CalculationDateAndTime, com.tools20022.repository.msg.ReportParameters3.Frequency,
-						com.tools20022.repository.msg.ReportParameters3.ReportNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.ReportParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters3.mmReportIdentification, com.tools20022.repository.msg.ReportParameters3.mmReportDateAndTime,
+						com.tools20022.repository.msg.ReportParameters3.mmReportCurrency, com.tools20022.repository.msg.ReportParameters3.mmCalculationDateAndTime, com.tools20022.repository.msg.ReportParameters3.mmFrequency,
+						com.tools20022.repository.msg.ReportParameters3.mmReportNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.mmReportParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -351,5 +358,53 @@ public class ReportParameters3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public DateAndDateTimeChoice getReportDateAndTime() {
+		return reportDateAndTime;
+	}
+
+	public void setReportDateAndTime(DateAndDateTimeChoice reportDateAndTime) {
+		this.reportDateAndTime = reportDateAndTime;
+	}
+
+	public CurrencyCode getReportCurrency() {
+		return reportCurrency;
+	}
+
+	public void setReportCurrency(CurrencyCode reportCurrency) {
+		this.reportCurrency = reportCurrency;
+	}
+
+	public ISODateTime getCalculationDateAndTime() {
+		return calculationDateAndTime;
+	}
+
+	public void setCalculationDateAndTime(ISODateTime calculationDateAndTime) {
+		this.calculationDateAndTime = calculationDateAndTime;
+	}
+
+	public EventFrequency6Code getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(EventFrequency6Code frequency) {
+		this.frequency = frequency;
+	}
+
+	public Exact5NumericText getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Exact5NumericText reportNumber) {
+		this.reportNumber = reportNumber;
 	}
 }

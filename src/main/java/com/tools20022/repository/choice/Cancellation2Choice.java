@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Cancellation2Choice#Reference
- * Cancellation2Choice.Reference}</li>
+ * {@linkplain com.tools20022.repository.choice.Cancellation2Choice#mmReference
+ * Cancellation2Choice.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Cancellation2Choice#TransferInDetails
- * Cancellation2Choice.TransferInDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.Cancellation2Choice#mmTransferInDetails
+ * Cancellation2Choice.mmTransferInDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +50,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV04#Cancellation
- * TransferInCancellationRequestV04.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV04#mmCancellation
+ * TransferInCancellationRequestV04.mmCancellation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Cancellation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransferReference1 reference;
 	/**
 	 * Reference of the transfer to be cancelled.
 	 * <p>
@@ -97,8 +98,8 @@ public class Cancellation2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTradeRelatedIdentifications
-	 * SecuritiesTrade.SecuritiesTradeRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
+	 * SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,27 +120,28 @@ public class Cancellation2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Cancellation5Choice#References
-	 * Cancellation5Choice.References}</li>
+	 * {@linkplain com.tools20022.repository.choice.Cancellation5Choice#mmReferences
+	 * Cancellation5Choice.mmReferences}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> Cancellation2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTradeRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference of the transfer to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation5Choice.References);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation5Choice.mmReferences);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransferReference1.mmObject();
 		}
 	};
+	protected TransferIn7 transferInDetails;
 	/**
 	 * Details of the transfer in request to cancel.
 	 * <p>
@@ -174,24 +176,24 @@ public class Cancellation2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Cancellation5Choice#TransferInDetails
-	 * Cancellation5Choice.TransferInDetails}</li>
+	 * {@linkplain com.tools20022.repository.choice.Cancellation5Choice#mmTransferInDetails
+	 * Cancellation5Choice.mmTransferInDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferInDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferInDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Cancellation2Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
+			componentContext_lazy = () -> Cancellation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfInDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferInDetails";
 			definition = "Details of the transfer in request to cancel.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation5Choice.TransferInDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation5Choice.mmTransferInDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransferIn7.mmObject();
 		}
 	};
@@ -199,17 +201,33 @@ public class Cancellation2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation2Choice.Reference, com.tools20022.repository.choice.Cancellation2Choice.TransferInDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation2Choice.mmReference, com.tools20022.repository.choice.Cancellation2Choice.mmTransferInDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV04.mmCancellation);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV04.Cancellation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Cancellation2Choice";
 				definition = "Choice between cancellation by reference or by transfer details.";
-				previousVersion_lazy = () -> Cancellation1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Cancellation5Choice.mmObject());
+				previousVersion_lazy = () -> Cancellation1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransferReference1 getReference() {
+		return reference;
+	}
+
+	public void setReference(TransferReference1 reference) {
+		this.reference = reference;
+	}
+
+	public TransferIn7 getTransferInDetails() {
+		return transferInDetails;
+	}
+
+	public void setTransferInDetails(TransferIn7 transferInDetails) {
+		this.transferInDetails = transferInDetails;
 	}
 }

@@ -30,29 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#TripartiteCentralMatching
- * BusinessProcessTypeCode.TripartiteCentralMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmTripartiteCentralMatching
+ * BusinessProcessTypeCode.mmTripartiteCentralMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#NotCoveredByInvestmentInstructions
- * BusinessProcessTypeCode.NotCoveredByInvestmentInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmNotCoveredByInvestmentInstructions
+ * BusinessProcessTypeCode.mmNotCoveredByInvestmentInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#PreAccepted
- * BusinessProcessTypeCode.PreAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmPreAccepted
+ * BusinessProcessTypeCode.mmPreAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#Reversal
- * BusinessProcessTypeCode.Reversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmReversal
+ * BusinessProcessTypeCode.mmReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#OwnAccountTradeType
- * BusinessProcessTypeCode.OwnAccountTradeType}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmOwnAccountTradeType
+ * BusinessProcessTypeCode.mmOwnAccountTradeType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#ThroughType
- * BusinessProcessTypeCode.ThroughType}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmThroughType
+ * BusinessProcessTypeCode.mmThroughType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#BillateralCentralMatching
- * BusinessProcessTypeCode.BillateralCentralMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmBillateralCentralMatching
+ * BusinessProcessTypeCode.mmBillateralCentralMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#DuplexType
- * BusinessProcessTypeCode.DuplexType}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessProcessTypeCode#mmDuplexType
+ * BusinessProcessTypeCode.mmDuplexType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -111,7 +111,7 @@ public class BusinessProcessTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TripartiteCentralMatching = new MMCode() {
+	public static final MMCode mmTripartiteCentralMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartiteCentralMatching";
@@ -142,7 +142,7 @@ public class BusinessProcessTypeCode {
 	 * "Specifies the processing of a transaction in a local matching model."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotCoveredByInvestmentInstructions = new MMCode() {
+	public static final MMCode mmNotCoveredByInvestmentInstructions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCoveredByInvestmentInstructions";
@@ -176,7 +176,7 @@ public class BusinessProcessTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PreAccepted = new MMCode() {
+	public static final MMCode mmPreAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAccepted";
@@ -216,7 +216,7 @@ public class BusinessProcessTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Reversal = new MMCode() {
+	public static final MMCode mmReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
@@ -249,7 +249,7 @@ public class BusinessProcessTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OwnAccountTradeType = new MMCode() {
+	public static final MMCode mmOwnAccountTradeType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnAccountTradeType";
@@ -280,7 +280,7 @@ public class BusinessProcessTypeCode {
 	 * "Specifies the processing of a transaction in a through type model."</li>
 	 * </ul>
 	 */
-	public static final MMCode ThroughType = new MMCode() {
+	public static final MMCode mmThroughType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThroughType";
@@ -313,7 +313,7 @@ public class BusinessProcessTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BillateralCentralMatching = new MMCode() {
+	public static final MMCode mmBillateralCentralMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillateralCentralMatching";
@@ -344,7 +344,7 @@ public class BusinessProcessTypeCode {
 	 * "Specifies the processing of a transaction in a duplex type model."</li>
 	 * </ul>
 	 */
-	public static final MMCode DuplexType = new MMCode() {
+	public static final MMCode mmDuplexType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplexType";
@@ -357,15 +357,15 @@ public class BusinessProcessTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISUP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BusinessProcessTypeCode";
 				definition = "Type of business process model used to carry out the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessProcessTypeCode.TripartiteCentralMatching, com.tools20022.repository.codeset.BusinessProcessTypeCode.NotCoveredByInvestmentInstructions,
-						com.tools20022.repository.codeset.BusinessProcessTypeCode.PreAccepted, com.tools20022.repository.codeset.BusinessProcessTypeCode.Reversal,
-						com.tools20022.repository.codeset.BusinessProcessTypeCode.OwnAccountTradeType, com.tools20022.repository.codeset.BusinessProcessTypeCode.ThroughType,
-						com.tools20022.repository.codeset.BusinessProcessTypeCode.BillateralCentralMatching, com.tools20022.repository.codeset.BusinessProcessTypeCode.DuplexType);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessProcessTypeCode.mmTripartiteCentralMatching, com.tools20022.repository.codeset.BusinessProcessTypeCode.mmNotCoveredByInvestmentInstructions,
+						com.tools20022.repository.codeset.BusinessProcessTypeCode.mmPreAccepted, com.tools20022.repository.codeset.BusinessProcessTypeCode.mmReversal,
+						com.tools20022.repository.codeset.BusinessProcessTypeCode.mmOwnAccountTradeType, com.tools20022.repository.codeset.BusinessProcessTypeCode.mmThroughType,
+						com.tools20022.repository.codeset.BusinessProcessTypeCode.mmBillateralCentralMatching, com.tools20022.repository.codeset.BusinessProcessTypeCode.mmDuplexType);
 				derivation_lazy = () -> Arrays.asList(BusinessProcessType1Code.mmObject());
 			}
 		});

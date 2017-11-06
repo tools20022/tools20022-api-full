@@ -34,234 +34,234 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidPrice
- * HoldingRejectionReason41Code.InvalidPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidPrice
+ * HoldingRejectionReason41Code.mmInvalidPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidIdentification
- * HoldingRejectionReason41Code.InvalidIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidIdentification
+ * HoldingRejectionReason41Code.mmInvalidIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidAgent
- * HoldingRejectionReason41Code.InvalidAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidAgent
+ * HoldingRejectionReason41Code.mmInvalidAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#Intermediary
- * HoldingRejectionReason41Code.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmIntermediary
+ * HoldingRejectionReason41Code.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#IncorrectCertification
- * HoldingRejectionReason41Code.IncorrectCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmIncorrectCertification
+ * HoldingRejectionReason41Code.mmIncorrectCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#BusinessPartnerNumberRejection
- * HoldingRejectionReason41Code.BusinessPartnerNumberRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmBusinessPartnerNumberRejection
+ * HoldingRejectionReason41Code.mmBusinessPartnerNumberRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#BankReferenceNumberRejection
- * HoldingRejectionReason41Code.BankReferenceNumberRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmBankReferenceNumberRejection
+ * HoldingRejectionReason41Code.mmBankReferenceNumberRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#AddressDetailsRejection
- * HoldingRejectionReason41Code.AddressDetailsRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmAddressDetailsRejection
+ * HoldingRejectionReason41Code.mmAddressDetailsRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#DeliveringCustodian
- * HoldingRejectionReason41Code.DeliveringCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmDeliveringCustodian
+ * HoldingRejectionReason41Code.mmDeliveringCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#IncorrectActivityType
- * HoldingRejectionReason41Code.IncorrectActivityType}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmIncorrectActivityType
+ * HoldingRejectionReason41Code.mmIncorrectActivityType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidForTaxAuthorities
- * HoldingRejectionReason41Code.InvalidForTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidForTaxAuthorities
+ * HoldingRejectionReason41Code.mmInvalidForTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidDetails
- * HoldingRejectionReason41Code.InvalidDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidDetails
+ * HoldingRejectionReason41Code.mmInvalidDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidOption
- * HoldingRejectionReason41Code.InvalidOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidOption
+ * HoldingRejectionReason41Code.mmInvalidOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidOptionType
- * HoldingRejectionReason41Code.InvalidOptionType}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidOptionType
+ * HoldingRejectionReason41Code.mmInvalidOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidMovementInformation
- * HoldingRejectionReason41Code.InvalidMovementInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidMovementInformation
+ * HoldingRejectionReason41Code.mmInvalidMovementInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidModificationRequest
- * HoldingRejectionReason41Code.InvalidModificationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidModificationRequest
+ * HoldingRejectionReason41Code.mmInvalidModificationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidUnderlyingSecurity
- * HoldingRejectionReason41Code.InvalidUnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidUnderlyingSecurity
+ * HoldingRejectionReason41Code.mmInvalidUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidSecurity
- * HoldingRejectionReason41Code.InvalidSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidSecurity
+ * HoldingRejectionReason41Code.mmInvalidSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MissingPeriodEndDate
- * HoldingRejectionReason41Code.MissingPeriodEndDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMissingPeriodEndDate
+ * HoldingRejectionReason41Code.mmMissingPeriodEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MissingPeriodStartDate
- * HoldingRejectionReason41Code.MissingPeriodStartDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMissingPeriodStartDate
+ * HoldingRejectionReason41Code.mmMissingPeriodStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MissingOption
- * HoldingRejectionReason41Code.MissingOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMissingOption
+ * HoldingRejectionReason41Code.mmMissingOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NoHolding
- * HoldingRejectionReason41Code.NoHolding}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNoHolding
+ * HoldingRejectionReason41Code.mmNoHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NoInstrumentMarket
- * HoldingRejectionReason41Code.NoInstrumentMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNoInstrumentMarket
+ * HoldingRejectionReason41Code.mmNoInstrumentMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NotApplicable
- * HoldingRejectionReason41Code.NotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNotApplicable
+ * HoldingRejectionReason41Code.mmNotApplicable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NotAuthorised
- * HoldingRejectionReason41Code.NotAuthorised}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNotAuthorised
+ * HoldingRejectionReason41Code.mmNotAuthorised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NotDefinedAgent
- * HoldingRejectionReason41Code.NotDefinedAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNotDefinedAgent
+ * HoldingRejectionReason41Code.mmNotDefinedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NotEligibleDisperseSecurity
- * HoldingRejectionReason41Code.NotEligibleDisperseSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNotEligibleDisperseSecurity
+ * HoldingRejectionReason41Code.mmNotEligibleDisperseSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NotIdentifiedCorrespondentBank
- * HoldingRejectionReason41Code.NotIdentifiedCorrespondentBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNotIdentifiedCorrespondentBank
+ * HoldingRejectionReason41Code.mmNotIdentifiedCorrespondentBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#PlaceOfSafekeeping
- * HoldingRejectionReason41Code.PlaceOfSafekeeping}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmPlaceOfSafekeeping
+ * HoldingRejectionReason41Code.mmPlaceOfSafekeeping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#PlaceOfTrade
- * HoldingRejectionReason41Code.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmPlaceOfTrade
+ * HoldingRejectionReason41Code.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#PriceExceeds
- * HoldingRejectionReason41Code.PriceExceeds}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmPriceExceeds
+ * HoldingRejectionReason41Code.mmPriceExceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#ReceivingAgent
- * HoldingRejectionReason41Code.ReceivingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmReceivingAgent
+ * HoldingRejectionReason41Code.mmReceivingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#QuantityUnitType
- * HoldingRejectionReason41Code.QuantityUnitType}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmQuantityUnitType
+ * HoldingRejectionReason41Code.mmQuantityUnitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#QuantityRejection
- * HoldingRejectionReason41Code.QuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmQuantityRejection
+ * HoldingRejectionReason41Code.mmQuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#QuantityExceeds
- * HoldingRejectionReason41Code.QuantityExceeds}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmQuantityExceeds
+ * HoldingRejectionReason41Code.mmQuantityExceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#ReceivingDeliveringDepository
- * HoldingRejectionReason41Code.ReceivingDeliveringDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmReceivingDeliveringDepository
+ * HoldingRejectionReason41Code.mmReceivingDeliveringDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#ReceivingCustodian
- * HoldingRejectionReason41Code.ReceivingCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmReceivingCustodian
+ * HoldingRejectionReason41Code.mmReceivingCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#SafekeepingAccountRejection
- * HoldingRejectionReason41Code.SafekeepingAccountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmSafekeepingAccountRejection
+ * HoldingRejectionReason41Code.mmSafekeepingAccountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#SettlementAmountRejection
- * HoldingRejectionReason41Code.SettlementAmountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmSettlementAmountRejection
+ * HoldingRejectionReason41Code.mmSettlementAmountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#SettlementAmountCurrencyRejection
- * HoldingRejectionReason41Code.SettlementAmountCurrencyRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmSettlementAmountCurrencyRejection
+ * HoldingRejectionReason41Code.mmSettlementAmountCurrencyRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#TradedSecuritiesQuantity
- * HoldingRejectionReason41Code.TradedSecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmTradedSecuritiesQuantity
+ * HoldingRejectionReason41Code.mmTradedSecuritiesQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#SettlementTransactionRejection
- * HoldingRejectionReason41Code.SettlementTransactionRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmSettlementTransactionRejection
+ * HoldingRejectionReason41Code.mmSettlementTransactionRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#UnknownSymbol
- * HoldingRejectionReason41Code.UnknownSymbol}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmUnknownSymbol
+ * HoldingRejectionReason41Code.mmUnknownSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#DealPrice
- * HoldingRejectionReason41Code.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmDealPrice
+ * HoldingRejectionReason41Code.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#ClosingDateTimeRejection
- * HoldingRejectionReason41Code.ClosingDateTimeRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmClosingDateTimeRejection
+ * HoldingRejectionReason41Code.mmClosingDateTimeRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidReference
- * HoldingRejectionReason41Code.InvalidReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidReference
+ * HoldingRejectionReason41Code.mmInvalidReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NarrativeReason
- * HoldingRejectionReason41Code.NarrativeReason}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNarrativeReason
+ * HoldingRejectionReason41Code.mmNarrativeReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NotFoundRejection
- * HoldingRejectionReason41Code.NotFoundRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNotFoundRejection
+ * HoldingRejectionReason41Code.mmNotFoundRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidBalance
- * HoldingRejectionReason41Code.InvalidBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidBalance
+ * HoldingRejectionReason41Code.mmInvalidBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#AccountServicerDeadlineMissed
- * HoldingRejectionReason41Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmAccountServicerDeadlineMissed
+ * HoldingRejectionReason41Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#CashAccount
- * HoldingRejectionReason41Code.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmCashAccount
+ * HoldingRejectionReason41Code.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#CommercializationContractRejection
- * HoldingRejectionReason41Code.CommercializationContractRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmCommercializationContractRejection
+ * HoldingRejectionReason41Code.mmCommercializationContractRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#ConcentrationLimitExceeded
- * HoldingRejectionReason41Code.ConcentrationLimitExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmConcentrationLimitExceeded
+ * HoldingRejectionReason41Code.mmConcentrationLimitExceeded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InsufficientBalance
- * HoldingRejectionReason41Code.InsufficientBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInsufficientBalance
+ * HoldingRejectionReason41Code.mmInsufficientBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InsufficientCollateral
- * HoldingRejectionReason41Code.InsufficientCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInsufficientCollateral
+ * HoldingRejectionReason41Code.mmInsufficientCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidInvestorParty
- * HoldingRejectionReason41Code.InvalidInvestorParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidInvestorParty
+ * HoldingRejectionReason41Code.mmInvalidInvestorParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidLotNumber
- * HoldingRejectionReason41Code.InvalidLotNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidLotNumber
+ * HoldingRejectionReason41Code.mmInvalidLotNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidLink
- * HoldingRejectionReason41Code.InvalidLink}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidLink
+ * HoldingRejectionReason41Code.mmInvalidLink}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvalidRule
- * HoldingRejectionReason41Code.InvalidRule}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvalidRule
+ * HoldingRejectionReason41Code.mmInvalidRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#InvestorNameAddressUnknown
- * HoldingRejectionReason41Code.InvestorNameAddressUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmInvestorNameAddressUnknown
+ * HoldingRejectionReason41Code.mmInvestorNameAddressUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#Late
- * HoldingRejectionReason41Code.Late}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmLate
+ * HoldingRejectionReason41Code.mmLate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MinimumSettlementQuantity
- * HoldingRejectionReason41Code.MinimumSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMinimumSettlementQuantity
+ * HoldingRejectionReason41Code.mmMinimumSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MissingBeneficiaryOwnerDetails
- * HoldingRejectionReason41Code.MissingBeneficiaryOwnerDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMissingBeneficiaryOwnerDetails
+ * HoldingRejectionReason41Code.mmMissingBeneficiaryOwnerDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MissingCertification
- * HoldingRejectionReason41Code.MissingCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMissingCertification
+ * HoldingRejectionReason41Code.mmMissingCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MissingOrInvalidPOA
- * HoldingRejectionReason41Code.MissingOrInvalidPOA}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMissingOrInvalidPOA
+ * HoldingRejectionReason41Code.mmMissingOrInvalidPOA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#MultipleSettlementQuantity
- * HoldingRejectionReason41Code.MultipleSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmMultipleSettlementQuantity
+ * HoldingRejectionReason41Code.mmMultipleSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NarrativeInformationRejection
- * HoldingRejectionReason41Code.NarrativeInformationRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNarrativeInformationRejection
+ * HoldingRejectionReason41Code.mmNarrativeInformationRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NoInventory
- * HoldingRejectionReason41Code.NoInventory}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNoInventory
+ * HoldingRejectionReason41Code.mmNoInventory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NonEligibleSecurity
- * HoldingRejectionReason41Code.NonEligibleSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNonEligibleSecurity
+ * HoldingRejectionReason41Code.mmNonEligibleSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#PeriodEndDateBeforeStartDate
- * HoldingRejectionReason41Code.PeriodEndDateBeforeStartDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmPeriodEndDateBeforeStartDate
+ * HoldingRejectionReason41Code.mmPeriodEndDateBeforeStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#ReferenceRejection
- * HoldingRejectionReason41Code.ReferenceRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmReferenceRejection
+ * HoldingRejectionReason41Code.mmReferenceRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#SameIdentification
- * HoldingRejectionReason41Code.SameIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmSameIdentification
+ * HoldingRejectionReason41Code.mmSameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#TypeOfOwnershipRejection
- * HoldingRejectionReason41Code.TypeOfOwnershipRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmTypeOfOwnershipRejection
+ * HoldingRejectionReason41Code.mmTypeOfOwnershipRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#NotAvailable
- * HoldingRejectionReason41Code.NotAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingRejectionReason41Code#mmNotAvailable
+ * HoldingRejectionReason41Code.mmNotAvailable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -291,7 +291,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidPrice = new MMCode() {
+	public static final MMCode mmInvalidPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidPrice";
@@ -314,7 +314,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidIdentification = new MMCode() {
+	public static final MMCode mmInvalidIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidIdentification";
@@ -337,7 +337,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAgent = new MMCode() {
+	public static final MMCode mmInvalidAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAgent";
@@ -360,7 +360,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "Intermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
@@ -383,7 +383,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "IncorrectCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCertification = new MMCode() {
+	public static final MMCode mmIncorrectCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCertification";
@@ -406,7 +406,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "BusinessPartnerNumberRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode BusinessPartnerNumberRejection = new MMCode() {
+	public static final MMCode mmBusinessPartnerNumberRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessPartnerNumberRejection";
@@ -429,7 +429,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "BankReferenceNumberRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankReferenceNumberRejection = new MMCode() {
+	public static final MMCode mmBankReferenceNumberRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankReferenceNumberRejection";
@@ -452,7 +452,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "AddressDetailsRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode AddressDetailsRejection = new MMCode() {
+	public static final MMCode mmAddressDetailsRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressDetailsRejection";
@@ -475,7 +475,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "DeliveringCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveringCustodian = new MMCode() {
+	public static final MMCode mmDeliveringCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringCustodian";
@@ -498,7 +498,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "IncorrectActivityType"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectActivityType = new MMCode() {
+	public static final MMCode mmIncorrectActivityType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectActivityType";
@@ -521,7 +521,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidForTaxAuthorities"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidForTaxAuthorities = new MMCode() {
+	public static final MMCode mmInvalidForTaxAuthorities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidForTaxAuthorities";
@@ -544,7 +544,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidDetails = new MMCode() {
+	public static final MMCode mmInvalidDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDetails";
@@ -567,7 +567,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOption = new MMCode() {
+	public static final MMCode mmInvalidOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOption";
@@ -590,7 +590,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidOptionType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOptionType = new MMCode() {
+	public static final MMCode mmInvalidOptionType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOptionType";
@@ -613,7 +613,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidMovementInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidMovementInformation = new MMCode() {
+	public static final MMCode mmInvalidMovementInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMovementInformation";
@@ -636,7 +636,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidModificationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidModificationRequest = new MMCode() {
+	public static final MMCode mmInvalidModificationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidModificationRequest";
@@ -659,7 +659,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidUnderlyingSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidUnderlyingSecurity = new MMCode() {
+	public static final MMCode mmInvalidUnderlyingSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidUnderlyingSecurity";
@@ -682,7 +682,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidSecurity = new MMCode() {
+	public static final MMCode mmInvalidSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
@@ -705,7 +705,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MissingPeriodEndDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingPeriodEndDate = new MMCode() {
+	public static final MMCode mmMissingPeriodEndDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingPeriodEndDate";
@@ -728,7 +728,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MissingPeriodStartDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingPeriodStartDate = new MMCode() {
+	public static final MMCode mmMissingPeriodStartDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingPeriodStartDate";
@@ -751,7 +751,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MissingOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingOption = new MMCode() {
+	public static final MMCode mmMissingOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOption";
@@ -774,7 +774,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NoHolding"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoHolding = new MMCode() {
+	public static final MMCode mmNoHolding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoHolding";
@@ -797,7 +797,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NoInstrumentMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoInstrumentMarket = new MMCode() {
+	public static final MMCode mmNoInstrumentMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoInstrumentMarket";
@@ -820,7 +820,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NotApplicable"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotApplicable = new MMCode() {
+	public static final MMCode mmNotApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
@@ -843,7 +843,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NotAuthorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAuthorised = new MMCode() {
+	public static final MMCode mmNotAuthorised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorised";
@@ -866,7 +866,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NotDefinedAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDefinedAgent = new MMCode() {
+	public static final MMCode mmNotDefinedAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDefinedAgent";
@@ -889,7 +889,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NotEligibleDisperseSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotEligibleDisperseSecurity = new MMCode() {
+	public static final MMCode mmNotEligibleDisperseSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligibleDisperseSecurity";
@@ -912,7 +912,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NotIdentifiedCorrespondentBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotIdentifiedCorrespondentBank = new MMCode() {
+	public static final MMCode mmNotIdentifiedCorrespondentBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotIdentifiedCorrespondentBank";
@@ -935,7 +935,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "PlaceOfSafekeeping"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfSafekeeping = new MMCode() {
+	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
@@ -958,7 +958,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "PlaceOfTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfTrade = new MMCode() {
+	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
@@ -981,7 +981,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "PriceExceeds"</li>
 	 * </ul>
 	 */
-	public static final MMCode PriceExceeds = new MMCode() {
+	public static final MMCode mmPriceExceeds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceExceeds";
@@ -1004,7 +1004,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingAgent = new MMCode() {
+	public static final MMCode mmReceivingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgent";
@@ -1027,7 +1027,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "QuantityUnitType"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityUnitType = new MMCode() {
+	public static final MMCode mmQuantityUnitType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityUnitType";
@@ -1050,7 +1050,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityRejection = new MMCode() {
+	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
@@ -1073,7 +1073,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "QuantityExceeds"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityExceeds = new MMCode() {
+	public static final MMCode mmQuantityExceeds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityExceeds";
@@ -1096,7 +1096,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringDepository = new MMCode() {
+	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
@@ -1119,7 +1119,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingCustodian = new MMCode() {
+	public static final MMCode mmReceivingCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingCustodian";
@@ -1142,7 +1142,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "SafekeepingAccountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccountRejection = new MMCode() {
+	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
@@ -1165,7 +1165,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "SettlementAmountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmountRejection = new MMCode() {
+	public static final MMCode mmSettlementAmountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountRejection";
@@ -1188,7 +1188,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "SettlementAmountCurrencyRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmountCurrencyRejection = new MMCode() {
+	public static final MMCode mmSettlementAmountCurrencyRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRejection";
@@ -1211,7 +1211,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "TradedSecuritiesQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradedSecuritiesQuantity = new MMCode() {
+	public static final MMCode mmTradedSecuritiesQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradedSecuritiesQuantity";
@@ -1234,7 +1234,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "SettlementTransactionRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementTransactionRejection = new MMCode() {
+	public static final MMCode mmSettlementTransactionRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionRejection";
@@ -1257,7 +1257,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "UnknownSymbol"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownSymbol = new MMCode() {
+	public static final MMCode mmUnknownSymbol = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownSymbol";
@@ -1280,7 +1280,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "DealPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode DealPrice = new MMCode() {
+	public static final MMCode mmDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
@@ -1303,7 +1303,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "ClosingDateTimeRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosingDateTimeRejection = new MMCode() {
+	public static final MMCode mmClosingDateTimeRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDateTimeRejection";
@@ -1326,7 +1326,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidReference = new MMCode() {
+	public static final MMCode mmInvalidReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
@@ -1349,7 +1349,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NarrativeReason"</li>
 	 * </ul>
 	 */
-	public static final MMCode NarrativeReason = new MMCode() {
+	public static final MMCode mmNarrativeReason = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeReason";
@@ -1372,7 +1372,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NotFoundRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotFoundRejection = new MMCode() {
+	public static final MMCode mmNotFoundRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFoundRejection";
@@ -1395,7 +1395,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidBalance = new MMCode() {
+	public static final MMCode mmInvalidBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidBalance";
@@ -1418,7 +1418,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -1441,7 +1441,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "CashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashAccount = new MMCode() {
+	public static final MMCode mmCashAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
@@ -1464,7 +1464,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "CommercializationContractRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercializationContractRejection = new MMCode() {
+	public static final MMCode mmCommercializationContractRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercializationContractRejection";
@@ -1487,7 +1487,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "ConcentrationLimitExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConcentrationLimitExceeded = new MMCode() {
+	public static final MMCode mmConcentrationLimitExceeded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConcentrationLimitExceeded";
@@ -1510,7 +1510,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InsufficientBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientBalance = new MMCode() {
+	public static final MMCode mmInsufficientBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientBalance";
@@ -1533,7 +1533,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InsufficientCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientCollateral = new MMCode() {
+	public static final MMCode mmInsufficientCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCollateral";
@@ -1556,7 +1556,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidInvestorParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidInvestorParty = new MMCode() {
+	public static final MMCode mmInvalidInvestorParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidInvestorParty";
@@ -1579,7 +1579,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidLotNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidLotNumber = new MMCode() {
+	public static final MMCode mmInvalidLotNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidLotNumber";
@@ -1602,7 +1602,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidLink"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidLink = new MMCode() {
+	public static final MMCode mmInvalidLink = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidLink";
@@ -1625,7 +1625,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvalidRule"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidRule = new MMCode() {
+	public static final MMCode mmInvalidRule = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidRule";
@@ -1648,7 +1648,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "InvestorNameAddressUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestorNameAddressUnknown = new MMCode() {
+	public static final MMCode mmInvestorNameAddressUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorNameAddressUnknown";
@@ -1671,7 +1671,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "Late"</li>
 	 * </ul>
 	 */
-	public static final MMCode Late = new MMCode() {
+	public static final MMCode mmLate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
@@ -1694,7 +1694,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MinimumSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumSettlementQuantity = new MMCode() {
+	public static final MMCode mmMinimumSettlementQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementQuantity";
@@ -1717,7 +1717,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MissingBeneficiaryOwnerDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingBeneficiaryOwnerDetails = new MMCode() {
+	public static final MMCode mmMissingBeneficiaryOwnerDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingBeneficiaryOwnerDetails";
@@ -1740,7 +1740,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MissingCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingCertification = new MMCode() {
+	public static final MMCode mmMissingCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
@@ -1763,7 +1763,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MissingOrInvalidPOA"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingOrInvalidPOA = new MMCode() {
+	public static final MMCode mmMissingOrInvalidPOA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOrInvalidPOA";
@@ -1786,7 +1786,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "MultipleSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleSettlementQuantity = new MMCode() {
+	public static final MMCode mmMultipleSettlementQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementQuantity";
@@ -1809,7 +1809,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NarrativeInformationRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode NarrativeInformationRejection = new MMCode() {
+	public static final MMCode mmNarrativeInformationRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeInformationRejection";
@@ -1832,7 +1832,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NoInventory"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoInventory = new MMCode() {
+	public static final MMCode mmNoInventory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoInventory";
@@ -1855,7 +1855,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NonEligibleSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonEligibleSecurity = new MMCode() {
+	public static final MMCode mmNonEligibleSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleSecurity";
@@ -1878,7 +1878,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "PeriodEndDateBeforeStartDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode PeriodEndDateBeforeStartDate = new MMCode() {
+	public static final MMCode mmPeriodEndDateBeforeStartDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodEndDateBeforeStartDate";
@@ -1901,7 +1901,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "ReferenceRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReferenceRejection = new MMCode() {
+	public static final MMCode mmReferenceRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
@@ -1924,7 +1924,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "SameIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode SameIdentification = new MMCode() {
+	public static final MMCode mmSameIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameIdentification";
@@ -1947,7 +1947,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "TypeOfOwnershipRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode TypeOfOwnershipRejection = new MMCode() {
+	public static final MMCode mmTypeOfOwnershipRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfOwnershipRejection";
@@ -1970,7 +1970,7 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	 * name} = "NotAvailable"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAvailable = new MMCode() {
+	public static final MMCode mmNotAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAvailable";
@@ -1981,47 +1981,47 @@ public class HoldingRejectionReason41Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HoldingRejectionReason41Code";
 				definition = "Specifies the reason the report item is rejected.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidPrice, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidIdentification,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidAgent, com.tools20022.repository.codeset.HoldingRejectionReason41Code.Intermediary,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.IncorrectCertification, com.tools20022.repository.codeset.HoldingRejectionReason41Code.BusinessPartnerNumberRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.BankReferenceNumberRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.AddressDetailsRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.DeliveringCustodian, com.tools20022.repository.codeset.HoldingRejectionReason41Code.IncorrectActivityType,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidForTaxAuthorities, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidDetails,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidOption, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidOptionType,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidMovementInformation, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidModificationRequest,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidUnderlyingSecurity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidSecurity,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.MissingPeriodEndDate, com.tools20022.repository.codeset.HoldingRejectionReason41Code.MissingPeriodStartDate,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.MissingOption, com.tools20022.repository.codeset.HoldingRejectionReason41Code.NoHolding,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.NoInstrumentMarket, com.tools20022.repository.codeset.HoldingRejectionReason41Code.NotApplicable,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.NotAuthorised, com.tools20022.repository.codeset.HoldingRejectionReason41Code.NotDefinedAgent,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.NotEligibleDisperseSecurity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.NotIdentifiedCorrespondentBank,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.PlaceOfSafekeeping, com.tools20022.repository.codeset.HoldingRejectionReason41Code.PlaceOfTrade,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.PriceExceeds, com.tools20022.repository.codeset.HoldingRejectionReason41Code.ReceivingAgent,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.QuantityUnitType, com.tools20022.repository.codeset.HoldingRejectionReason41Code.QuantityRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.QuantityExceeds, com.tools20022.repository.codeset.HoldingRejectionReason41Code.ReceivingDeliveringDepository,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.ReceivingCustodian, com.tools20022.repository.codeset.HoldingRejectionReason41Code.SafekeepingAccountRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.SettlementAmountRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.SettlementAmountCurrencyRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.TradedSecuritiesQuantity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.SettlementTransactionRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.UnknownSymbol, com.tools20022.repository.codeset.HoldingRejectionReason41Code.DealPrice,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.ClosingDateTimeRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidReference,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.NarrativeReason, com.tools20022.repository.codeset.HoldingRejectionReason41Code.NotFoundRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidBalance, com.tools20022.repository.codeset.HoldingRejectionReason41Code.AccountServicerDeadlineMissed,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.CashAccount, com.tools20022.repository.codeset.HoldingRejectionReason41Code.CommercializationContractRejection,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.ConcentrationLimitExceeded, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InsufficientBalance,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InsufficientCollateral, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidInvestorParty,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidLotNumber, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidLink,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvalidRule, com.tools20022.repository.codeset.HoldingRejectionReason41Code.InvestorNameAddressUnknown,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.Late, com.tools20022.repository.codeset.HoldingRejectionReason41Code.MinimumSettlementQuantity,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.MissingBeneficiaryOwnerDetails, com.tools20022.repository.codeset.HoldingRejectionReason41Code.MissingCertification,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.MissingOrInvalidPOA, com.tools20022.repository.codeset.HoldingRejectionReason41Code.MultipleSettlementQuantity,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.NarrativeInformationRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.NoInventory,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.NonEligibleSecurity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.PeriodEndDateBeforeStartDate,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.ReferenceRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.SameIdentification,
-						com.tools20022.repository.codeset.HoldingRejectionReason41Code.TypeOfOwnershipRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.NotAvailable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidPrice, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidIdentification,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidAgent, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmIntermediary,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmIncorrectCertification, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmBusinessPartnerNumberRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmBankReferenceNumberRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmAddressDetailsRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmDeliveringCustodian, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmIncorrectActivityType,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidForTaxAuthorities, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidDetails,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidOption, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidOptionType,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidMovementInformation, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidModificationRequest,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidUnderlyingSecurity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidSecurity,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMissingPeriodEndDate, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMissingPeriodStartDate,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMissingOption, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNoHolding,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNoInstrumentMarket, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNotApplicable,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNotAuthorised, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNotDefinedAgent,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNotEligibleDisperseSecurity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNotIdentifiedCorrespondentBank,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmPlaceOfSafekeeping, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmPlaceOfTrade,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmPriceExceeds, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmReceivingAgent,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmQuantityUnitType, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmQuantityRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmQuantityExceeds, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmReceivingDeliveringDepository,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmReceivingCustodian, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmSafekeepingAccountRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmSettlementAmountRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmSettlementAmountCurrencyRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmTradedSecuritiesQuantity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmSettlementTransactionRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmUnknownSymbol, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmDealPrice,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmClosingDateTimeRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidReference,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNarrativeReason, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNotFoundRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidBalance, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmAccountServicerDeadlineMissed,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmCashAccount, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmCommercializationContractRejection,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmConcentrationLimitExceeded, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInsufficientBalance,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInsufficientCollateral, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidInvestorParty,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidLotNumber, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidLink,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvalidRule, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmInvestorNameAddressUnknown,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmLate, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMinimumSettlementQuantity,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMissingBeneficiaryOwnerDetails, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMissingCertification,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMissingOrInvalidPOA, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmMultipleSettlementQuantity,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNarrativeInformationRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNoInventory,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNonEligibleSecurity, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmPeriodEndDateBeforeStartDate,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmReferenceRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmSameIdentification,
+						com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmTypeOfOwnershipRejection, com.tools20022.repository.codeset.HoldingRejectionReason41Code.mmNotAvailable);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

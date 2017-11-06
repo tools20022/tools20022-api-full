@@ -34,35 +34,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DisplayInstruction1#Quantity
- * DisplayInstruction1.Quantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmQuantity
+ * DisplayInstruction1.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#SecondaryQuantity
- * DisplayInstruction1.SecondaryQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DisplayInstruction1#Method
- * DisplayInstruction1.Method}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmSecondaryQuantity
+ * DisplayInstruction1.mmSecondaryQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmMethod
+ * DisplayInstruction1.mmMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#LowQuantity
- * DisplayInstruction1.LowQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmLowQuantity
+ * DisplayInstruction1.mmLowQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#HighQuantity
- * DisplayInstruction1.HighQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmHighQuantity
+ * DisplayInstruction1.mmHighQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#MinimumIncrement
- * DisplayInstruction1.MinimumIncrement}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmMinimumIncrement
+ * DisplayInstruction1.mmMinimumIncrement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#RefreshQuantity
- * DisplayInstruction1.RefreshQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmRefreshQuantity
+ * DisplayInstruction1.mmRefreshQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#RefreshTime
- * DisplayInstruction1.RefreshTime}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayInstruction1#mmRefreshTime
+ * DisplayInstruction1.mmRefreshTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DisplayInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantityChoice quantity;
 	/**
 	 * Indicates the quantity to be displayed.
 	 * <p>
@@ -104,7 +105,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Indicates the quantity to be displayed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Indicates the quantity to be displayed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice secondaryQuantity;
 	/**
 	 * Used for reserve orders when Quantity applies to the primary execution
 	 * market (e.g.an Electronic Communication Network) and another quantity is
@@ -149,7 +151,7 @@ public class DisplayInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -157,11 +159,12 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryQuantity";
 			definition = "Used for reserve orders when Quantity applies to the primary execution market (e.g.an Electronic Communication Network) and another quantity is to be shown at other markets (e.g. the exchange).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected DisplayMethod1Code method;
 	/**
 	 * Instructions for the use of Quantity.
 	 * <p>
@@ -190,7 +193,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Instructions for the use of Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Method = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -198,11 +201,12 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Instructions for the use of Quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DisplayMethod1Code.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice lowQuantity;
 	/**
 	 * Defines the lower quantity limit to a randomized refresh of Quantity.
 	 * <p>
@@ -232,7 +236,7 @@ public class DisplayInstruction1 {
 	 * "Defines the lower quantity limit to a randomized refresh of Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LowQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLowQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -240,11 +244,12 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LowQuantity";
 			definition = "Defines the lower quantity limit to a randomized refresh of Quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice highQuantity;
 	/**
 	 * Defines the upper quantity limit to a randomized refresh of Quantity.
 	 * <p>
@@ -274,7 +279,7 @@ public class DisplayInstruction1 {
 	 * "Defines the upper quantity limit to a randomized refresh of Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HighQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHighQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -282,11 +287,12 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighQuantity";
 			definition = "Defines the upper quantity limit to a randomized refresh of Quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice minimumIncrement;
 	/**
 	 * Defines the minimum increment to be used when calculating a random
 	 * refresh of Quantity. A user specifies this when he wants a larger
@@ -320,7 +326,7 @@ public class DisplayInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumIncrement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumIncrement = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -328,11 +334,12 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumIncrement";
 			definition = "Defines the minimum increment to be used when calculating a random refresh of Quantity. A user specifies this when he wants a larger increment than the standard provided by the market (e.g. the round lot size).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice refreshQuantity;
 	/**
 	 * Defines the quantity used to refresh Quantity.
 	 * <p>
@@ -361,7 +368,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Defines the quantity used to refresh Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RefreshQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRefreshQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -369,11 +376,12 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefreshQuantity";
 			definition = "Defines the quantity used to refresh Quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected RefreshTime1Code refreshTime;
 	/**
 	 * Defines when to refresh quantity (Immediate or Exhaust).
 	 * <p>
@@ -402,7 +410,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Defines when to refresh quantity (Immediate or Exhaust)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RefreshTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRefreshTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -410,8 +418,8 @@ public class DisplayInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefreshTime";
 			definition = "Defines when to refresh quantity (Immediate or Exhaust).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RefreshTime1Code.mmObject();
 		}
 	};
@@ -419,15 +427,79 @@ public class DisplayInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayInstruction1.Quantity, com.tools20022.repository.msg.DisplayInstruction1.SecondaryQuantity,
-						com.tools20022.repository.msg.DisplayInstruction1.Method, com.tools20022.repository.msg.DisplayInstruction1.LowQuantity, com.tools20022.repository.msg.DisplayInstruction1.HighQuantity,
-						com.tools20022.repository.msg.DisplayInstruction1.MinimumIncrement, com.tools20022.repository.msg.DisplayInstruction1.RefreshQuantity, com.tools20022.repository.msg.DisplayInstruction1.RefreshTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayInstruction1.mmQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmSecondaryQuantity,
+						com.tools20022.repository.msg.DisplayInstruction1.mmMethod, com.tools20022.repository.msg.DisplayInstruction1.mmLowQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmHighQuantity,
+						com.tools20022.repository.msg.DisplayInstruction1.mmMinimumIncrement, com.tools20022.repository.msg.DisplayInstruction1.mmRefreshQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmRefreshTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DisplayInstruction1";
 				definition = "Provides details about strategy order/Iceberg orders.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantityChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public FinancialInstrumentQuantityChoice getSecondaryQuantity() {
+		return secondaryQuantity;
+	}
+
+	public void setSecondaryQuantity(FinancialInstrumentQuantityChoice secondaryQuantity) {
+		this.secondaryQuantity = secondaryQuantity;
+	}
+
+	public DisplayMethod1Code getMethod() {
+		return method;
+	}
+
+	public void setMethod(DisplayMethod1Code method) {
+		this.method = method;
+	}
+
+	public FinancialInstrumentQuantityChoice getLowQuantity() {
+		return lowQuantity;
+	}
+
+	public void setLowQuantity(FinancialInstrumentQuantityChoice lowQuantity) {
+		this.lowQuantity = lowQuantity;
+	}
+
+	public FinancialInstrumentQuantityChoice getHighQuantity() {
+		return highQuantity;
+	}
+
+	public void setHighQuantity(FinancialInstrumentQuantityChoice highQuantity) {
+		this.highQuantity = highQuantity;
+	}
+
+	public FinancialInstrumentQuantityChoice getMinimumIncrement() {
+		return minimumIncrement;
+	}
+
+	public void setMinimumIncrement(FinancialInstrumentQuantityChoice minimumIncrement) {
+		this.minimumIncrement = minimumIncrement;
+	}
+
+	public FinancialInstrumentQuantityChoice getRefreshQuantity() {
+		return refreshQuantity;
+	}
+
+	public void setRefreshQuantity(FinancialInstrumentQuantityChoice refreshQuantity) {
+		this.refreshQuantity = refreshQuantity;
+	}
+
+	public RefreshTime1Code getRefreshTime() {
+		return refreshTime;
+	}
+
+	public void setRefreshTime(RefreshTime1Code refreshTime) {
+		this.refreshTime = refreshTime;
 	}
 }

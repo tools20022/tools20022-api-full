@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestHandling1#StatusCode
- * RequestHandling1.StatusCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestHandling1#Description
- * RequestHandling1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestHandling1#mmStatusCode
+ * RequestHandling1.mmStatusCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestHandling1#mmDescription
+ * RequestHandling1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestHandling1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText statusCode;
 	/**
 	 * Specifies the status of the request, for example the result of the schema
 	 * validation or a business processing result/error.
@@ -88,7 +89,7 @@ public class RequestHandling1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestHandling1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class RequestHandling1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusCode";
 			definition = "Specifies the status of the request, for example the result of the schema validation or a business processing result/error.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Description of the status, in free format text.
 	 * <p>
@@ -128,7 +130,7 @@ public class RequestHandling1 {
 	 * definition} = "Description of the status, in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestHandling1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class RequestHandling1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the status, in free format text.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class RequestHandling1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestHandling1.StatusCode, com.tools20022.repository.msg.RequestHandling1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestHandling1.mmStatusCode, com.tools20022.repository.msg.RequestHandling1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestHandling1";
 				definition = "Explains the status of the related request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getStatusCode() {
+		return statusCode;
+	}
+
+	public void setStatusCode(Max4AlphaNumericText statusCode) {
+		this.statusCode = statusCode;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

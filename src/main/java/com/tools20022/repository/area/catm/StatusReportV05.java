@@ -59,21 +59,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV05#Header
- * StatusReportV05.Header}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV05#mmHeader
+ * StatusReportV05.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#StatusReport
- * StatusReportV05.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#mmStatusReport
+ * StatusReportV05.mmStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#SecurityTrailer
- * StatusReportV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#mmSecurityTrailer
+ * StatusReportV05.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#identifier
- * StatusReportV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catm.001.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header27 header;
 	/**
 	 * Set of characteristics related to the transfer of the status report.
 	 * <p>
@@ -125,30 +124,31 @@ public class StatusReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#Header
-	 * StatusReportV06.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#mmHeader
+	 * StatusReportV06.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#Header
-	 * StatusReportV04.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#mmHeader
+	 * StatusReportV04.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics related to the transfer of the status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.StatusReportV04.Header;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV06.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV06.mmHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.catm.StatusReportV04.mmHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header27.mmObject();
 		}
 	};
+	protected StatusReport5 statusReport;
 	/**
 	 * Status of the point of interaction (POI), its components and their
 	 * installed versions.
@@ -176,30 +176,31 @@ public class StatusReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#StatusReport
-	 * StatusReportV06.StatusReport}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#mmStatusReport
+	 * StatusReportV06.mmStatusReport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#StatusReport
-	 * StatusReportV04.StatusReport}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#mmStatusReport
+	 * StatusReportV04.mmStatusReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
 			definition = "Status of the point of interaction (POI), its components and their installed versions.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.StatusReportV04.StatusReport;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV06.StatusReport);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV06.mmStatusReport);
+			previousVersion_lazy = () -> com.tools20022.repository.area.catm.StatusReportV04.mmStatusReport;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StatusReport5.mmObject();
 		}
 	};
+	protected ContentInformationType12 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -226,55 +227,28 @@ public class StatusReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#SecurityTrailer
-	 * StatusReportV06.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#mmSecurityTrailer
+	 * StatusReportV06.mmSecurityTrailer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#SecurityTrailer
-	 * StatusReportV04.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#mmSecurityTrailer
+	 * StatusReportV04.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.StatusReportV04.SecurityTrailer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV06.SecurityTrailer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV06.mmSecurityTrailer);
+			previousVersion_lazy = () -> com.tools20022.repository.area.catm.StatusReportV04.mmSecurityTrailer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catm";
-			messageFunctionality = "001";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -284,17 +258,48 @@ public class StatusReportV05 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusReportV05";
 				definition = "Informs the master terminal manager (MTM) or the terminal manager (TM) about the status of the acceptor system including the identification of the POI, its components and their installed versions.";
-				previousVersion_lazy = () -> StatusReportV04.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(StatusReportV06.mmObject());
+				previousVersion_lazy = () -> StatusReportV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPETerminalManagementMaintenance20152016.mmObject());
 				rootElement = "Document";
 				xmlTag = "StsRpt";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV05.Header, com.tools20022.repository.area.catm.StatusReportV05.StatusReport,
-						com.tools20022.repository.area.catm.StatusReportV05.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catm.StatusReportV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV05.mmHeader, com.tools20022.repository.area.catm.StatusReportV05.mmStatusReport,
+						com.tools20022.repository.area.catm.StatusReportV05.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catm";
+						messageFunctionality = "001";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header27 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header27 header) {
+		this.header = header;
+	}
+
+	public StatusReport5 getStatusReport() {
+		return statusReport;
+	}
+
+	public void setStatusReport(StatusReport5 statusReport) {
+		this.statusReport = statusReport;
+	}
+
+	public ContentInformationType12 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

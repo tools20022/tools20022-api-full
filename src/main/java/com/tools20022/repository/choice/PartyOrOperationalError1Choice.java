@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.PartyReport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Report between the party reference data or an operational error.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyOrOperationalError1Choice#PartyReport
- * PartyOrOperationalError1Choice.PartyReport}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyOrOperationalError1Choice#mmPartyReport
+ * PartyOrOperationalError1Choice.mmPartyReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyOrOperationalError1Choice#OperationalError
- * PartyOrOperationalError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyOrOperationalError1Choice#mmOperationalError
+ * PartyOrOperationalError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<PartyReport1> partyReport;
 	/**
 	 * Report information about party reference data.
 	 * <p>
@@ -86,7 +88,7 @@ public class PartyOrOperationalError1Choice {
 	 * definition} = "Report information about party reference data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -95,10 +97,11 @@ public class PartyOrOperationalError1Choice {
 			name = "PartyReport";
 			definition = "Report information about party reference data.";
 			minOccurs = 1;
-			type_lazy = () -> PartyReport1.mmObject();
 			isComposite = true;
+			type_lazy = () -> PartyReport1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Operational error resulting from a rejection.
 	 * <p>
@@ -125,7 +128,7 @@ public class PartyOrOperationalError1Choice {
 	 * definition} = "Operational error resulting from a rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -134,21 +137,37 @@ public class PartyOrOperationalError1Choice {
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrOperationalError1Choice.PartyReport, com.tools20022.repository.choice.PartyOrOperationalError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmPartyReport, com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyOrOperationalError1Choice";
 				definition = "Report between the party reference data or an operational error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PartyReport1> getPartyReport() {
+		return partyReport;
+	}
+
+	public void setPartyReport(List<PartyReport1> partyReport) {
+		this.partyReport = partyReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

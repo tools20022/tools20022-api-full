@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#Amendment
- * TransactionOperationType1Code.Amendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmAmendment
+ * TransactionOperationType1Code.mmAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#Cancellation
- * TransactionOperationType1Code.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmCancellation
+ * TransactionOperationType1Code.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#Correction
- * TransactionOperationType1Code.Correction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmCorrection
+ * TransactionOperationType1Code.mmCorrection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#NewTransaction
- * TransactionOperationType1Code.NewTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmNewTransaction
+ * TransactionOperationType1Code.mmNewTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,7 +82,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "Amendment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Amendment = new MMCode() {
+	public static final MMCode mmAmendment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
@@ -105,7 +105,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -128,7 +128,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "Correction"</li>
 	 * </ul>
 	 */
-	public static final MMCode Correction = new MMCode() {
+	public static final MMCode mmCorrection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Correction";
@@ -151,7 +151,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "NewTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewTransaction = new MMCode() {
+	public static final MMCode mmNewTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewTransaction";
@@ -162,12 +162,12 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionOperationType1Code";
 				definition = "Specifies the type of process related to a specific transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionOperationType1Code.Amendment, com.tools20022.repository.codeset.TransactionOperationType1Code.Cancellation,
-						com.tools20022.repository.codeset.TransactionOperationType1Code.Correction, com.tools20022.repository.codeset.TransactionOperationType1Code.NewTransaction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionOperationType1Code.mmAmendment, com.tools20022.repository.codeset.TransactionOperationType1Code.mmCancellation,
+						com.tools20022.repository.codeset.TransactionOperationType1Code.mmCorrection, com.tools20022.repository.codeset.TransactionOperationType1Code.mmNewTransaction);
 				trace_lazy = () -> TransactionOperationTypeCode.mmObject();
 			}
 		});

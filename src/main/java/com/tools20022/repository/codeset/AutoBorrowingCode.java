@@ -30,16 +30,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#LastResort
- * AutoBorrowingCode.LastResort}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#mmLastResort
+ * AutoBorrowingCode.mmLastResort}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#NoAutomatic
- * AutoBorrowingCode.NoAutomatic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#mmNoAutomatic
+ * AutoBorrowingCode.mmNoAutomatic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#Automatic
- * AutoBorrowingCode.Automatic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#Return
- * AutoBorrowingCode.Return}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#mmAutomatic
+ * AutoBorrowingCode.mmAutomatic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AutoBorrowingCode#mmReturn
+ * AutoBorrowingCode.mmReturn}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +99,7 @@ public class AutoBorrowingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LastResort = new MMCode() {
+	public static final MMCode mmLastResort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LastResort";
@@ -129,7 +129,7 @@ public class AutoBorrowingCode {
 	 * definition} = "No automatic borrowing should take place."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAutomatic = new MMCode() {
+	public static final MMCode mmNoAutomatic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NoAutomatic";
@@ -159,7 +159,7 @@ public class AutoBorrowingCode {
 	 * definition} = "Automatic borrowing should take place."</li>
 	 * </ul>
 	 */
-	public static final MMCode Automatic = new MMCode() {
+	public static final MMCode mmAutomatic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Automatic";
@@ -189,7 +189,7 @@ public class AutoBorrowingCode {
 	 * definition} = "Return of stocks should take place."</li>
 	 * </ul>
 	 */
-	public static final MMCode Return = new MMCode() {
+	public static final MMCode mmReturn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Return";
@@ -202,13 +202,13 @@ public class AutoBorrowingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LAMI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AutoBorrowingCode";
 				definition = "Specifies the condition under which automatic borrowing is allowed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutoBorrowingCode.LastResort, com.tools20022.repository.codeset.AutoBorrowingCode.NoAutomatic, com.tools20022.repository.codeset.AutoBorrowingCode.Automatic,
-						com.tools20022.repository.codeset.AutoBorrowingCode.Return);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutoBorrowingCode.mmLastResort, com.tools20022.repository.codeset.AutoBorrowingCode.mmNoAutomatic,
+						com.tools20022.repository.codeset.AutoBorrowingCode.mmAutomatic, com.tools20022.repository.codeset.AutoBorrowingCode.mmReturn);
 				derivation_lazy = () -> Arrays.asList(AutoBorrowing1Code.mmObject(), AutoBorrowing2Code.mmObject());
 			}
 		});

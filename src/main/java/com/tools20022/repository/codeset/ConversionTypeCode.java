@@ -29,10 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ConversionTypeCode#Final
- * ConversionTypeCode.Final}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ConversionTypeCode#Interim
- * ConversionTypeCode.Interim}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ConversionTypeCode#mmFinal
+ * ConversionTypeCode.mmFinal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ConversionTypeCode#mmInterim
+ * ConversionTypeCode.mmInterim}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +88,7 @@ public class ConversionTypeCode {
 	 * definition} = "This is a final conversion."</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Final";
@@ -117,7 +118,7 @@ public class ConversionTypeCode {
 	 * definition} = "This is an interim conversion."</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Interim";
@@ -130,12 +131,12 @@ public class ConversionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FINL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConversionTypeCode";
 				definition = "Specifies the type of conversion.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConversionTypeCode.Final, com.tools20022.repository.codeset.ConversionTypeCode.Interim);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConversionTypeCode.mmFinal, com.tools20022.repository.codeset.ConversionTypeCode.mmInterim);
 				derivation_lazy = () -> Arrays.asList(ConversionType1Code.mmObject());
 			}
 		});

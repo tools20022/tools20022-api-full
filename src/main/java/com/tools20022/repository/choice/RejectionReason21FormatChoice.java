@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionReason21FormatChoice#Code
- * RejectionReason21FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionReason21FormatChoice#mmCode
+ * RejectionReason21FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionReason21FormatChoice#Proprietary
- * RejectionReason21FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionReason21FormatChoice#mmProprietary
+ * RejectionReason21FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectionReason21FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InterestRejectionReason1Code code;
 	/**
 	 * Provides the interest rejection reason using an ISO 20022 code.
 	 * <p>
@@ -75,8 +76,8 @@ public class RejectionReason21FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#InterestRejectionReason
-	 * CollateralStatus.InterestRejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmInterestRejectionReason
+	 * CollateralStatus.mmInterestRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class RejectionReason21FormatChoice {
 	 * "Provides the interest rejection reason using an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmInterestRejectionReason;
 			componentContext_lazy = () -> RejectionReason21FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.InterestRejectionReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the interest rejection reason using an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InterestRejectionReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Provides the interest rejection reason using a proprietary code.
 	 * <p>
@@ -123,8 +125,8 @@ public class RejectionReason21FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#InterestRejectionReason
-	 * CollateralStatus.InterestRejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmInterestRejectionReason
+	 * CollateralStatus.mmInterestRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,17 +146,17 @@ public class RejectionReason21FormatChoice {
 	 * "Provides the interest rejection reason using a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmInterestRejectionReason;
 			componentContext_lazy = () -> RejectionReason21FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.InterestRejectionReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the interest rejection reason using a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -162,13 +164,29 @@ public class RejectionReason21FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionReason21FormatChoice.Code, com.tools20022.repository.choice.RejectionReason21FormatChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionReason21FormatChoice.mmCode, com.tools20022.repository.choice.RejectionReason21FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason21FormatChoice";
 				definition = "Choice of formats to express the reason of a rejection of the interest request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InterestRejectionReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(InterestRejectionReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -109,32 +110,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#MessageIdentification
- * SwitchOrderV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmMessageIdentification
+ * SwitchOrderV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#PoolReference
- * SwitchOrderV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmPoolReference
+ * SwitchOrderV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#PreviousReference
- * SwitchOrderV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmPreviousReference
+ * SwitchOrderV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#MessagePagination
- * SwitchOrderV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmMessagePagination
+ * SwitchOrderV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#SwitchOrderDetails
- * SwitchOrderV03.SwitchOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmSwitchOrderDetails
+ * SwitchOrderV03.mmSwitchOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#CopyDetails
- * SwitchOrderV03.CopyDetails}</li>
- * <li>{@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#Extension
- * SwitchOrderV03.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmCopyDetails
+ * SwitchOrderV03.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmExtension
+ * SwitchOrderV03.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#identifier
- * SwitchOrderV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.013.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -161,6 +161,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchOrderV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -189,24 +190,25 @@ public class SwitchOrderV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#MessageIdentification
-	 * SwitchOrderV04.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmMessageIdentification
+	 * SwitchOrderV04.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -232,24 +234,25 @@ public class SwitchOrderV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#PoolReference
-	 * SwitchOrderV04.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmPoolReference
+	 * SwitchOrderV04.mmPoolReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.PoolReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmPoolReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -275,23 +278,24 @@ public class SwitchOrderV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#PreviousReference
-	 * SwitchOrderV04.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmPreviousReference
+	 * SwitchOrderV04.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.PreviousReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -316,24 +320,25 @@ public class SwitchOrderV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#MessagePagination
-	 * SwitchOrderV04.MessagePagination}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmMessagePagination
+	 * SwitchOrderV04.mmMessagePagination}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.MessagePagination);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmMessagePagination);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected List<SwitchOrder4> switchOrderDetails;
 	/**
 	 * Information related to the switch order
 	 * <p>
@@ -358,23 +363,24 @@ public class SwitchOrderV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#SwitchOrderDetails
-	 * SwitchOrderV04.SwitchOrderDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmSwitchOrderDetails
+	 * SwitchOrderV04.mmSwitchOrderDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SwitchOrderDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSwitchOrderDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SwtchOrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOrderDetails";
 			definition = "Information related to the switch order";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.SwitchOrderDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmSwitchOrderDetails);
 			minOccurs = 1;
 			complexType_lazy = () -> SwitchOrder4.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -401,24 +407,25 @@ public class SwitchOrderV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#CopyDetails
-	 * SwitchOrderV04.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmCopyDetails
+	 * SwitchOrderV04.mmCopyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.CopyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmCopyDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -446,48 +453,21 @@ public class SwitchOrderV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#Extension
-	 * SwitchOrderV04.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmExtension
+	 * SwitchOrderV04.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "013";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -497,18 +477,81 @@ public class SwitchOrderV03 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the SwitchOrder message to the executing party, for example, a transfer agent, to instruct a switch transaction from a financial instrument or multiple financial instruments to a different specified financial instrument or instruments for a specified amount/quantity.\r\nUsage\r\nThe SwitchOrder message is used to either:\r\n- instruct one switch transaction comprising one or more redemption legs and one or more subscription legs, that is, a single switch transaction that can be a one to one, many to one, many to many or one to many switch transaction, or,\r\n- instruct one or many switch transactions each comprising one redemption leg and one subscription leg, that is, multiple simple switch transactions.\r\nThe SwitchOrder message may be used to either:\r\n- instruct a switch transaction for one investment account, or,\r\n- instruct a switch transaction for separate accounts at the redemption and subscription leg levels.\nThe message caters for a switch from one financial instrument to another financial instrument (within the same fund family), many to one, many to many and one to many.\nThe message caters for switch transactions that result in an additional cash payment from the investor or a transaction that results in a net payment to the investor. Not all institutions or funds permit this type of switch and acceptance is therefore not automatic. \nThere is no limitation on the number of switch legs in a switch message. The number allowed is defined by the fund prospectus or by the service level agreement (SLA) in place between the two parties. However, if the SwitchOrderDetails sequence is present more than once, then the RedemptionLegDetails and SubscriptionLegDetails sequences may only be present once.\nIf SwitchOrderDetails\\InvestmentAccount is used, then the InvestmentAccountDetails sequences in SubscriptionLegDetails and RedemptionLegDetails are not allowed. This functionality is to be used by institutions that set up two accounts per investor, rather than one investment account.\nThere is no switch driver type in the message to indicate whether the switch is buy or sell driven. A driver is not needed since it is possible to indicate the total subscription amount or the total redemption amount. Only one of these two amounts should be used. \nThe subscription quantity can be expressed in one of the following ways:\n- Amount: the monetary value (either GROSS or NET) of the financial instrument to be subscribed to, eg, the subscription of EUR 1,000 of financial instrument ISIN LU1234567890 or \n- Unit: the number of units of the financial instrument to be subscribed to, eg, the subscription of 10 units of financial instrument ISIN LU1234567890 or \n- Percentage of the total redemption amount: when the switch transaction is redemption driven, it is the part of the redemption amount that must be switched to a specific financial instrument, for example, the subscription quantity of financial instrument ISIN LU1234567890 represents 50% of the redemption amount of the financial instrument ISIN LU4444444444.\nThe redemption quantity can be expressed in one of the following ways:\n- Amount: the monetary value (either GROSS or NET) of the financial instrument to be redeemed, eg, the redemption of EUR 1,000 of financial instrument ISIN LU1234567890, or \n- Unit: the number of units of financial instrument to be redeemed, eg, the redemption of 10 units of financial instrument ISIN LU1234567890, or\n- Rate: the part of the portfolio to be redeemed, eg, the redemption of 10% of the holdings in financial instrument ISIN LU1234567890, or\n- Percentage of the total subscription amount: when the switch transaction is subscription driven, it is the part of the subscription amount that must be the result of the redemption of a specific financial instrument, for example, the redemption quantity in financial instrument ABC represents 50% of the subscription amount of the financial instrument ISIN LU4444444444\n";
-				previousVersion_lazy = () -> SwitchOrderV02.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SwitchOrderV04.mmObject());
+				previousVersion_lazy = () -> SwitchOrderV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "SwtchOrdrV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV03.MessageIdentification, com.tools20022.repository.area.setr.SwitchOrderV03.PoolReference,
-						com.tools20022.repository.area.setr.SwitchOrderV03.PreviousReference, com.tools20022.repository.area.setr.SwitchOrderV03.MessagePagination, com.tools20022.repository.area.setr.SwitchOrderV03.SwitchOrderDetails,
-						com.tools20022.repository.area.setr.SwitchOrderV03.CopyDetails, com.tools20022.repository.area.setr.SwitchOrderV03.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV03.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SwitchOrderV03.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderV03.mmMessagePagination,
+						com.tools20022.repository.area.setr.SwitchOrderV03.mmSwitchOrderDetails, com.tools20022.repository.area.setr.SwitchOrderV03.mmCopyDetails, com.tools20022.repository.area.setr.SwitchOrderV03.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "013";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public List<AdditionalReference3> getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public List<SwitchOrder4> getSwitchOrderDetails() {
+		return switchOrderDetails;
+	}
+
+	public void setSwitchOrderDetails(List<SwitchOrder4> switchOrderDetails) {
+		this.switchOrderDetails = switchOrderDetails;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

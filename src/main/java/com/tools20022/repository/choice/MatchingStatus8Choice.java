@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#Code
- * MatchingStatus8Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#Proprietary
- * MatchingStatus8Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#mmCode
+ * MatchingStatus8Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#mmProprietary
+ * MatchingStatus8Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MatchingStatus8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MatchingStatus1Code code;
 	/**
 	 * Provides the matching status of the instruction.
 	 * <p>
@@ -75,8 +77,8 @@ public class MatchingStatus8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +97,21 @@ public class MatchingStatus8Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> MatchingStatus8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the matching status of the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MatchingStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification38 proprietary;
 	/**
 	 * Provides the matching status of the instruction.
 	 * <p>
@@ -122,8 +125,8 @@ public class MatchingStatus8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +145,17 @@ public class MatchingStatus8Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> MatchingStatus8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the matching status of the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
 		}
 	};
@@ -160,14 +163,30 @@ public class MatchingStatus8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus8Choice.Code, com.tools20022.repository.choice.MatchingStatus8Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus8Choice.mmCode, com.tools20022.repository.choice.MatchingStatus8Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus8Choice";
 				definition = "Choice of format for the matching status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MatchingStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(MatchingStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification38 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

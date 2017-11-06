@@ -34,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1#Quantity
- * OrderQuantity1.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1#QuantityType
- * OrderQuantity1.QuantityType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1#Price
- * OrderQuantity1.Price}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1#mmQuantity
+ * OrderQuantity1.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1#mmQuantityType
+ * OrderQuantity1.mmQuantityType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1#mmPrice
+ * OrderQuantity1.mmPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderQuantity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuantityOrAmount1Choice quantity;
 	/**
 	 * Quantity of financial instrument to be ordered.
 	 * <p>
@@ -77,8 +78,8 @@ public class OrderQuantity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class OrderQuantity1 {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> OrderQuantity1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument to be ordered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	protected OrderQuantityType3Code quantityType;
 	/**
 	 * Quantity of financial instrument to be ordered.
 	 * <p>
@@ -123,8 +125,8 @@ public class OrderQuantity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#QuantityType
-	 * SecuritiesOrder.QuantityType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmQuantityType
+	 * SecuritiesOrder.mmQuantityType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,20 +144,21 @@ public class OrderQuantity1 {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> OrderQuantity1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.QuantityType;
 			isDerived = false;
 			xmlTag = "QtyTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityType";
 			definition = "Quantity of financial instrument to be ordered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OrderQuantityType3Code.mmObject();
 		}
 	};
+	protected Price1 price;
 	/**
 	 * Amount of money for which goods or services are offered, sold, or bought.
 	 * <p>
@@ -167,8 +170,8 @@ public class OrderQuantity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderPrice
-	 * SecuritiesOrder.OrderPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderPrice
+	 * SecuritiesOrder.mmOrderPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,32 +191,56 @@ public class OrderQuantity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> OrderQuantity1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderPrice;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity1.Quantity, com.tools20022.repository.msg.OrderQuantity1.QuantityType, com.tools20022.repository.msg.OrderQuantity1.Price);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity1.mmQuantity, com.tools20022.repository.msg.OrderQuantity1.mmQuantityType, com.tools20022.repository.msg.OrderQuantity1.mmPrice);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderQuantity1";
 				definition = "Intention to transfer an ownership of a financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuantityOrAmount1Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(QuantityOrAmount1Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public OrderQuantityType3Code getQuantityType() {
+		return quantityType;
+	}
+
+	public void setQuantityType(OrderQuantityType3Code quantityType) {
+		this.quantityType = quantityType;
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
 	}
 }

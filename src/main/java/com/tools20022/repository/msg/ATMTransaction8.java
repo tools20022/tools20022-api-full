@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Preferred withdrawal transaction chosen by the the customer.
@@ -37,19 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#Amount
- * ATMTransaction8.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#Currency
- * ATMTransaction8.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#ReceiptFlag
- * ATMTransaction8.ReceiptFlag}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#mmAmount
+ * ATMTransaction8.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#mmCurrency
+ * ATMTransaction8.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#mmReceiptFlag
+ * ATMTransaction8.mmReceiptFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction8#BalancePrintFlag
- * ATMTransaction8.BalancePrintFlag}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#MixType
- * ATMTransaction8.MixType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#Mix
- * ATMTransaction8.Mix}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction8#mmBalancePrintFlag
+ * ATMTransaction8.mmBalancePrintFlag}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#mmMixType
+ * ATMTransaction8.mmMixType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#mmMix
+ * ATMTransaction8.mmMix}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransaction8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount amount;
 	/**
 	 * Amount to dispense.
 	 * <p>
@@ -89,8 +91,8 @@ public class ATMTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,20 +111,21 @@ public class ATMTransaction8 {
 	 * definition} = "Amount to dispense."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> ATMTransaction8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount to dispense.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency.
 	 * <p>
@@ -136,8 +139,8 @@ public class ATMTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyExchange
-	 * Payment.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+	 * Payment.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +159,21 @@ public class ATMTransaction8 {
 	 * definition} = "Currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> ATMTransaction8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected TrueFalseIndicator receiptFlag;
 	/**
 	 * True if a receipt has to be printed by the ATM for the customer.
 	 * <p>
@@ -200,11 +204,11 @@ public class ATMTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#RequestedReceipt
-	 * ATMTransaction1.RequestedReceipt}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#mmRequestedReceipt
+	 * ATMTransaction1.mmRequestedReceipt}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiptFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiptFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction8.mmObject();
 			isDerived = false;
@@ -212,12 +216,13 @@ public class ATMTransaction8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptFlag";
 			definition = "True if a receipt has to be printed by the ATM for the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.RequestedReceipt;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.mmRequestedReceipt;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator balancePrintFlag;
 	/**
 	 * True if a balance has to be printed by the ATM on the customer receipt.
 	 * <p>
@@ -248,7 +253,7 @@ public class ATMTransaction8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalancePrintFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalancePrintFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction8.mmObject();
 			isDerived = false;
@@ -256,11 +261,12 @@ public class ATMTransaction8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalancePrintFlag";
 			definition = "True if a balance has to be printed by the ATM on the customer receipt.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Max35Text mixType;
 	/**
 	 * Media mix algorithm, the identification of the algorithm is an agreement
 	 * between the ATM and the ATM manager.
@@ -292,11 +298,11 @@ public class ATMTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#SelectedMixType
-	 * ATMTransaction1.SelectedMixType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#mmSelectedMixType
+	 * ATMTransaction1.mmSelectedMixType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MixType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMixType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction8.mmObject();
 			isDerived = false;
@@ -304,12 +310,13 @@ public class ATMTransaction8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MixType";
 			definition = "Media mix algorithm, the identification of the algorithm is an agreement between the ATM and the ATM manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.SelectedMixType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.mmSelectedMixType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMMediaMix2> mix;
 	/**
 	 * Media mix to select.
 	 * <p>
@@ -337,11 +344,11 @@ public class ATMTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#SelectedMix
-	 * ATMTransaction1.SelectedMix}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#mmSelectedMix
+	 * ATMTransaction1.mmSelectedMix}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Mix = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMix = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction8.mmObject();
 			isDerived = false;
@@ -349,20 +356,20 @@ public class ATMTransaction8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mix";
 			definition = "Media mix to select.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.SelectedMix;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.mmSelectedMix;
 			minOccurs = 0;
-			type_lazy = () -> ATMMediaMix2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMMediaMix2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction8.Amount, com.tools20022.repository.msg.ATMTransaction8.Currency, com.tools20022.repository.msg.ATMTransaction8.ReceiptFlag,
-						com.tools20022.repository.msg.ATMTransaction8.BalancePrintFlag, com.tools20022.repository.msg.ATMTransaction8.MixType, com.tools20022.repository.msg.ATMTransaction8.Mix);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction8.mmAmount, com.tools20022.repository.msg.ATMTransaction8.mmCurrency, com.tools20022.repository.msg.ATMTransaction8.mmReceiptFlag,
+						com.tools20022.repository.msg.ATMTransaction8.mmBalancePrintFlag, com.tools20022.repository.msg.ATMTransaction8.mmMixType, com.tools20022.repository.msg.ATMTransaction8.mmMix);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction8";
 				definition = "Preferred withdrawal transaction chosen by the the customer.";
@@ -370,5 +377,53 @@ public class ATMTransaction8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public TrueFalseIndicator getReceiptFlag() {
+		return receiptFlag;
+	}
+
+	public void setReceiptFlag(TrueFalseIndicator receiptFlag) {
+		this.receiptFlag = receiptFlag;
+	}
+
+	public TrueFalseIndicator getBalancePrintFlag() {
+		return balancePrintFlag;
+	}
+
+	public void setBalancePrintFlag(TrueFalseIndicator balancePrintFlag) {
+		this.balancePrintFlag = balancePrintFlag;
+	}
+
+	public Max35Text getMixType() {
+		return mixType;
+	}
+
+	public void setMixType(Max35Text mixType) {
+		this.mixType = mixType;
+	}
+
+	public List<ATMMediaMix2> getMix() {
+		return mix;
+	}
+
+	public void setMix(List<com.tools20022.repository.msg.ATMMediaMix2> mix) {
+		this.mix = mix;
 	}
 }

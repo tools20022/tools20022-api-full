@@ -30,170 +30,170 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#CumBonus
- * TradeTransactionConditionCode.CumBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCumBonus
+ * TradeTransactionConditionCode.mmCumBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ExBonus
- * TradeTransactionConditionCode.ExBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmExBonus
+ * TradeTransactionConditionCode.mmExBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#CumCoupon
- * TradeTransactionConditionCode.CumCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCumCoupon
+ * TradeTransactionConditionCode.mmCumCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ExCoupon
- * TradeTransactionConditionCode.ExCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmExCoupon
+ * TradeTransactionConditionCode.mmExCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#CumDividend
- * TradeTransactionConditionCode.CumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCumDividend
+ * TradeTransactionConditionCode.mmCumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ExDividend
- * TradeTransactionConditionCode.ExDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmExDividend
+ * TradeTransactionConditionCode.mmExDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#CumRights
- * TradeTransactionConditionCode.CumRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCumRights
+ * TradeTransactionConditionCode.mmCumRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ExRights
- * TradeTransactionConditionCode.ExRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmExRights
+ * TradeTransactionConditionCode.mmExRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#CumWarrant
- * TradeTransactionConditionCode.CumWarrant}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCumWarrant
+ * TradeTransactionConditionCode.mmCumWarrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ExWarrant
- * TradeTransactionConditionCode.ExWarrant}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmExWarrant
+ * TradeTransactionConditionCode.mmExWarrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialCumDividend
- * TradeTransactionConditionCode.SpecialCumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialCumDividend
+ * TradeTransactionConditionCode.mmSpecialCumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialExDividend
- * TradeTransactionConditionCode.SpecialExDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialExDividend
+ * TradeTransactionConditionCode.mmSpecialExDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#BrokerDueBill
- * TradeTransactionConditionCode.BrokerDueBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmBrokerDueBill
+ * TradeTransactionConditionCode.mmBrokerDueBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SoldShort
- * TradeTransactionConditionCode.SoldShort}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSoldShort
+ * TradeTransactionConditionCode.mmSoldShort}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Dirty
- * TradeTransactionConditionCode.Dirty}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmDirty
+ * TradeTransactionConditionCode.mmDirty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Clean
- * TradeTransactionConditionCode.Clean}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmClean
+ * TradeTransactionConditionCode.mmClean}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Block
- * TradeTransactionConditionCode.Block}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmBlock
+ * TradeTransactionConditionCode.mmBlock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#GuaranteedDelivery
- * TradeTransactionConditionCode.GuaranteedDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmGuaranteedDelivery
+ * TradeTransactionConditionCode.mmGuaranteedDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Fractions
- * TradeTransactionConditionCode.Fractions}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmFractions
+ * TradeTransactionConditionCode.mmFractions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#CrossTrade
- * TradeTransactionConditionCode.CrossTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCrossTrade
+ * TradeTransactionConditionCode.mmCrossTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#NoCrossTrade
- * TradeTransactionConditionCode.NoCrossTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmNoCrossTrade
+ * TradeTransactionConditionCode.mmNoCrossTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#DirectOrder
- * TradeTransactionConditionCode.DirectOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmDirectOrder
+ * TradeTransactionConditionCode.mmDirectOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#DirectedOrder
- * TradeTransactionConditionCode.DirectedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmDirectedOrder
+ * TradeTransactionConditionCode.mmDirectedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#WarehouseTrade
- * TradeTransactionConditionCode.WarehouseTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmWarehouseTrade
+ * TradeTransactionConditionCode.mmWarehouseTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#NotIncrease
- * TradeTransactionConditionCode.NotIncrease}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmNotIncrease
+ * TradeTransactionConditionCode.mmNotIncrease}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#NotReduce
- * TradeTransactionConditionCode.NotReduce}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmNotReduce
+ * TradeTransactionConditionCode.mmNotReduce}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ForwardPriceTrade
- * TradeTransactionConditionCode.ForwardPriceTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmForwardPriceTrade
+ * TradeTransactionConditionCode.mmForwardPriceTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#HistoricPriceTrade
- * TradeTransactionConditionCode.HistoricPriceTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmHistoricPriceTrade
+ * TradeTransactionConditionCode.mmHistoricPriceTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ResultOption
- * TradeTransactionConditionCode.ResultOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmResultOption
+ * TradeTransactionConditionCode.mmResultOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ResultRepo
- * TradeTransactionConditionCode.ResultRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmResultRepo
+ * TradeTransactionConditionCode.mmResultRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#DeliverCountryIncorporation
- * TradeTransactionConditionCode.DeliverCountryIncorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmDeliverCountryIncorporation
+ * TradeTransactionConditionCode.mmDeliverCountryIncorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#DeliveryForm
- * TradeTransactionConditionCode.DeliveryForm}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmDeliveryForm
+ * TradeTransactionConditionCode.mmDeliveryForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#BoardLot
- * TradeTransactionConditionCode.BoardLot}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmBoardLot
+ * TradeTransactionConditionCode.mmBoardLot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#BadName
- * TradeTransactionConditionCode.BadName}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmBadName
+ * TradeTransactionConditionCode.mmBadName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Automated
- * TradeTransactionConditionCode.Automated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmAutomated
+ * TradeTransactionConditionCode.mmAutomated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#BestExecution
- * TradeTransactionConditionCode.BestExecution}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmBestExecution
+ * TradeTransactionConditionCode.mmBestExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Call
- * TradeTransactionConditionCode.Call}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCall
+ * TradeTransactionConditionCode.mmCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#ClosureBeforeRollOver
- * TradeTransactionConditionCode.ClosureBeforeRollOver}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmClosureBeforeRollOver
+ * TradeTransactionConditionCode.mmClosureBeforeRollOver}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Monthly
- * TradeTransactionConditionCode.Monthly}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmMonthly
+ * TradeTransactionConditionCode.mmMonthly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#NewTradeFollowingRollover
- * TradeTransactionConditionCode.NewTradeFollowingRollover}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmNewTradeFollowingRollover
+ * TradeTransactionConditionCode.mmNewTradeFollowingRollover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#Putt
- * TradeTransactionConditionCode.Putt}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmPutt
+ * TradeTransactionConditionCode.mmPutt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#TradeFollowingRollover
- * TradeTransactionConditionCode.TradeFollowingRollover}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmTradeFollowingRollover
+ * TradeTransactionConditionCode.mmTradeFollowingRollover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialCumCoupon
- * TradeTransactionConditionCode.SpecialCumCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialCumCoupon
+ * TradeTransactionConditionCode.mmSpecialCumCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialExCoupon
- * TradeTransactionConditionCode.SpecialExCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialExCoupon
+ * TradeTransactionConditionCode.mmSpecialExCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialExBonus
- * TradeTransactionConditionCode.SpecialExBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialExBonus
+ * TradeTransactionConditionCode.mmSpecialExBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialCumBonus
- * TradeTransactionConditionCode.SpecialCumBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialCumBonus
+ * TradeTransactionConditionCode.mmSpecialCumBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialCumRights
- * TradeTransactionConditionCode.SpecialCumRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialCumRights
+ * TradeTransactionConditionCode.mmSpecialCumRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialExRights
- * TradeTransactionConditionCode.SpecialExRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialExRights
+ * TradeTransactionConditionCode.mmSpecialExRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialCumCapitalRepayments
- * TradeTransactionConditionCode.SpecialCumCapitalRepayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialCumCapitalRepayments
+ * TradeTransactionConditionCode.mmSpecialCumCapitalRepayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialExCapitalRepayments
- * TradeTransactionConditionCode.SpecialExCapitalRepayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialExCapitalRepayments
+ * TradeTransactionConditionCode.mmSpecialExCapitalRepayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#CashSettlement
- * TradeTransactionConditionCode.CashSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmCashSettlement
+ * TradeTransactionConditionCode.mmCashSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#SpecialPrice
- * TradeTransactionConditionCode.SpecialPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmSpecialPrice
+ * TradeTransactionConditionCode.mmSpecialPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#MarketPrice
- * TradeTransactionConditionCode.MarketPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmMarketPrice
+ * TradeTransactionConditionCode.mmMarketPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#NegotiatedTrade
- * TradeTransactionConditionCode.NegotiatedTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmNegotiatedTrade
+ * TradeTransactionConditionCode.mmNegotiatedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#NonMarketPrice
- * TradeTransactionConditionCode.NonMarketPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode#mmNonMarketPrice
+ * TradeTransactionConditionCode.mmNonMarketPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -219,8 +219,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -263,7 +263,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed cum bonus."</li>
 	 * </ul>
 	 */
-	public static final MMCode CumBonus = new MMCode() {
+	public static final MMCode mmCumBonus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CumBonus";
@@ -293,7 +293,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed ex bonus."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExBonus = new MMCode() {
+	public static final MMCode mmExBonus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExBonus";
@@ -323,7 +323,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed cum coupon."</li>
 	 * </ul>
 	 */
-	public static final MMCode CumCoupon = new MMCode() {
+	public static final MMCode mmCumCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CumCoupon";
@@ -353,7 +353,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed ex coupon."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExCoupon = new MMCode() {
+	public static final MMCode mmExCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExCoupon";
@@ -383,7 +383,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed cum dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode CumDividend = new MMCode() {
+	public static final MMCode mmCumDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CumDividend";
@@ -413,7 +413,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed ex dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExDividend = new MMCode() {
+	public static final MMCode mmExDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExDividend";
@@ -443,7 +443,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed cum rights."</li>
 	 * </ul>
 	 */
-	public static final MMCode CumRights = new MMCode() {
+	public static final MMCode mmCumRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CumRights";
@@ -473,7 +473,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed ex rights."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExRights = new MMCode() {
+	public static final MMCode mmExRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExRights";
@@ -503,7 +503,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed cum warrant."</li>
 	 * </ul>
 	 */
-	public static final MMCode CumWarrant = new MMCode() {
+	public static final MMCode mmCumWarrant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CumWarrant";
@@ -533,7 +533,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether the trade is executed ex warrant."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExWarrant = new MMCode() {
+	public static final MMCode mmExWarrant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExWarrant";
@@ -566,7 +566,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumDividend = new MMCode() {
+	public static final MMCode mmSpecialCumDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumDividend";
@@ -599,7 +599,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExDividend = new MMCode() {
+	public static final MMCode mmSpecialExDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialExDividend";
@@ -633,7 +633,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerDueBill = new MMCode() {
+	public static final MMCode mmBrokerDueBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BrokerDueBill";
@@ -667,7 +667,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SoldShort = new MMCode() {
+	public static final MMCode mmSoldShort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SoldShort";
@@ -700,7 +700,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Dirty = new MMCode() {
+	public static final MMCode mmDirty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Dirty";
@@ -733,7 +733,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Clean = new MMCode() {
+	public static final MMCode mmClean = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Clean";
@@ -766,7 +766,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Block = new MMCode() {
+	public static final MMCode mmBlock = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Block";
@@ -799,7 +799,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GuaranteedDelivery = new MMCode() {
+	public static final MMCode mmGuaranteedDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedDelivery";
@@ -829,7 +829,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates whether fractional parts are allowed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Fractions = new MMCode() {
+	public static final MMCode mmFractions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Fractions";
@@ -862,7 +862,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CrossTrade = new MMCode() {
+	public static final MMCode mmCrossTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossTrade";
@@ -895,7 +895,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NoCrossTrade = new MMCode() {
+	public static final MMCode mmNoCrossTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NoCrossTrade";
@@ -931,7 +931,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DirectOrder = new MMCode() {
+	public static final MMCode mmDirectOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DirectOrder";
@@ -963,7 +963,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DirectedOrder = new MMCode() {
+	public static final MMCode mmDirectedOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DirectedOrder";
@@ -993,7 +993,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Warehouse Trade."</li>
 	 * </ul>
 	 */
-	public static final MMCode WarehouseTrade = new MMCode() {
+	public static final MMCode mmWarehouseTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WarehouseTrade";
@@ -1027,7 +1027,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NotIncrease = new MMCode() {
+	public static final MMCode mmNotIncrease = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotIncrease";
@@ -1063,7 +1063,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NotReduce = new MMCode() {
+	public static final MMCode mmNotReduce = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotReduce";
@@ -1093,7 +1093,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates that the order is based on a forward price."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardPriceTrade = new MMCode() {
+	public static final MMCode mmForwardPriceTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ForwardPriceTrade";
@@ -1123,7 +1123,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Indicates that the order is based on a historic price."</li>
 	 * </ul>
 	 */
-	public static final MMCode HistoricPriceTrade = new MMCode() {
+	public static final MMCode mmHistoricPriceTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HistoricPriceTrade";
@@ -1153,7 +1153,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Result of option when set. (UK specific)"</li>
 	 * </ul>
 	 */
-	public static final MMCode ResultOption = new MMCode() {
+	public static final MMCode mmResultOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ResultOption";
@@ -1183,7 +1183,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Result of repo when set (UK specific)."</li>
 	 * </ul>
 	 */
-	public static final MMCode ResultRepo = new MMCode() {
+	public static final MMCode mmResultRepo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ResultRepo";
@@ -1215,7 +1215,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverCountryIncorporation = new MMCode() {
+	public static final MMCode mmDeliverCountryIncorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliverCountryIncorporation";
@@ -1247,7 +1247,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveryForm = new MMCode() {
+	public static final MMCode mmDeliveryForm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveryForm";
@@ -1277,7 +1277,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Board lots, not set for odd lots (UK specific)."</li>
 	 * </ul>
 	 */
-	public static final MMCode BoardLot = new MMCode() {
+	public static final MMCode mmBoardLot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BoardLot";
@@ -1307,7 +1307,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Bad names, not set for good names (UK specific)."</li>
 	 * </ul>
 	 */
-	public static final MMCode BadName = new MMCode() {
+	public static final MMCode mmBadName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BadName";
@@ -1337,7 +1337,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Automated."</li>
 	 * </ul>
 	 */
-	public static final MMCode Automated = new MMCode() {
+	public static final MMCode mmAutomated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Automated";
@@ -1367,7 +1367,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Trade to be executed done at best execution."</li>
 	 * </ul>
 	 */
-	public static final MMCode BestExecution = new MMCode() {
+	public static final MMCode mmBestExecution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BestExecution";
@@ -1400,7 +1400,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Call = new MMCode() {
+	public static final MMCode mmCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Call";
@@ -1433,7 +1433,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ClosureBeforeRollOver = new MMCode() {
+	public static final MMCode mmClosureBeforeRollOver = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClosureBeforeRollOver";
@@ -1466,7 +1466,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Monthly = new MMCode() {
+	public static final MMCode mmMonthly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Monthly";
@@ -1499,7 +1499,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NewTradeFollowingRollover = new MMCode() {
+	public static final MMCode mmNewTradeFollowingRollover = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NewTradeFollowingRollover";
@@ -1532,7 +1532,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Putt = new MMCode() {
+	public static final MMCode mmPutt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Putt";
@@ -1565,7 +1565,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TradeFollowingRollover = new MMCode() {
+	public static final MMCode mmTradeFollowingRollover = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradeFollowingRollover";
@@ -1596,7 +1596,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed with a special cum coupon."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumCoupon = new MMCode() {
+	public static final MMCode mmSpecialCumCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumCoupon";
@@ -1627,7 +1627,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed with a special ex coupon."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExCoupon = new MMCode() {
+	public static final MMCode mmSpecialExCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialExCoupon";
@@ -1658,7 +1658,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExBonus = new MMCode() {
+	public static final MMCode mmSpecialExBonus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialExBonus";
@@ -1689,7 +1689,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed special cum bonus."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumBonus = new MMCode() {
+	public static final MMCode mmSpecialCumBonus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumBonus";
@@ -1720,7 +1720,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed special cum rights."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumRights = new MMCode() {
+	public static final MMCode mmSpecialCumRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumRights";
@@ -1751,7 +1751,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed special ex rights."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExRights = new MMCode() {
+	public static final MMCode mmSpecialExRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialExRights";
@@ -1783,7 +1783,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumCapitalRepayments = new MMCode() {
+	public static final MMCode mmSpecialCumCapitalRepayments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumCapitalRepayments";
@@ -1814,7 +1814,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed special ex capital repayments."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExCapitalRepayments = new MMCode() {
+	public static final MMCode mmSpecialExCapitalRepayments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialExCapitalRepayments";
@@ -1845,7 +1845,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed with a cash settlement."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashSettlement = new MMCode() {
+	public static final MMCode mmCashSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashSettlement";
@@ -1876,7 +1876,7 @@ public class TradeTransactionConditionCode {
 	 * "Indicates whether the trade is executed with a special price."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialPrice = new MMCode() {
+	public static final MMCode mmSpecialPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialPrice";
@@ -1906,7 +1906,7 @@ public class TradeTransactionConditionCode {
 	 * definition} = "Trade was executed at market price."</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPrice = new MMCode() {
+	public static final MMCode mmMarketPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarketPrice";
@@ -1939,7 +1939,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NegotiatedTrade = new MMCode() {
+	public static final MMCode mmNegotiatedTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NegotiatedTrade";
@@ -1972,7 +1972,7 @@ public class TradeTransactionConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NonMarketPrice = new MMCode() {
+	public static final MMCode mmNonMarketPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NonMarketPrice";
@@ -1985,38 +1985,39 @@ public class TradeTransactionConditionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CBNS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionConditionCode";
 				definition = "Indicates the conditions under which the order/trade is to be/was executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionConditionCode.CumBonus, com.tools20022.repository.codeset.TradeTransactionConditionCode.ExBonus,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.CumCoupon, com.tools20022.repository.codeset.TradeTransactionConditionCode.ExCoupon,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.CumDividend, com.tools20022.repository.codeset.TradeTransactionConditionCode.ExDividend,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.CumRights, com.tools20022.repository.codeset.TradeTransactionConditionCode.ExRights,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.CumWarrant, com.tools20022.repository.codeset.TradeTransactionConditionCode.ExWarrant,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialCumDividend, com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialExDividend,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.BrokerDueBill, com.tools20022.repository.codeset.TradeTransactionConditionCode.SoldShort,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.Dirty, com.tools20022.repository.codeset.TradeTransactionConditionCode.Clean, com.tools20022.repository.codeset.TradeTransactionConditionCode.Block,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.GuaranteedDelivery, com.tools20022.repository.codeset.TradeTransactionConditionCode.Fractions,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.CrossTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.NoCrossTrade,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.DirectOrder, com.tools20022.repository.codeset.TradeTransactionConditionCode.DirectedOrder,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.WarehouseTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.NotIncrease,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.NotReduce, com.tools20022.repository.codeset.TradeTransactionConditionCode.ForwardPriceTrade,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.HistoricPriceTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.ResultOption,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.ResultRepo, com.tools20022.repository.codeset.TradeTransactionConditionCode.DeliverCountryIncorporation,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.DeliveryForm, com.tools20022.repository.codeset.TradeTransactionConditionCode.BoardLot,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.BadName, com.tools20022.repository.codeset.TradeTransactionConditionCode.Automated,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.BestExecution, com.tools20022.repository.codeset.TradeTransactionConditionCode.Call,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.ClosureBeforeRollOver, com.tools20022.repository.codeset.TradeTransactionConditionCode.Monthly,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.NewTradeFollowingRollover, com.tools20022.repository.codeset.TradeTransactionConditionCode.Putt,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.TradeFollowingRollover, com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialCumCoupon,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialExCoupon, com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialExBonus,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialCumBonus, com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialCumRights,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialExRights, com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialCumCapitalRepayments,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialExCapitalRepayments, com.tools20022.repository.codeset.TradeTransactionConditionCode.CashSettlement,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.SpecialPrice, com.tools20022.repository.codeset.TradeTransactionConditionCode.MarketPrice,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.NegotiatedTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.NonMarketPrice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumBonus, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExBonus,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumCoupon, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExCoupon,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumDividend, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExDividend,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumRights, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExRights,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumWarrant, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExWarrant,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumDividend, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExDividend,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBrokerDueBill, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSoldShort,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDirty, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmClean,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBlock, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmGuaranteedDelivery,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmFractions, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCrossTrade,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNoCrossTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDirectOrder,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDirectedOrder, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmWarehouseTrade,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNotIncrease, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNotReduce,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmForwardPriceTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmHistoricPriceTrade,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmResultOption, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmResultRepo,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDeliverCountryIncorporation, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDeliveryForm,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBoardLot, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBadName,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmAutomated, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBestExecution,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCall, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmClosureBeforeRollOver,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmMonthly, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNewTradeFollowingRollover,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmPutt, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmTradeFollowingRollover,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumCoupon, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExCoupon,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExBonus, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumBonus,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumRights, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExRights,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumCapitalRepayments, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExCapitalRepayments,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCashSettlement, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialPrice,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmMarketPrice, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNegotiatedTrade,
+						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNonMarketPrice);
 				derivation_lazy = () -> Arrays.asList(TradeTransactionCondition4Code.mmObject(), TradeTransactionCondition2Code.mmObject(), TradeTransactionCondition1Code.mmObject(), TradeTransactionCondition3Code.mmObject(),
 						TradeTransactionCondition5Code.mmObject());
 			}

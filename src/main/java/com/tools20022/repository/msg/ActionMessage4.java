@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#Format
- * ActionMessage4.Format}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#Message
- * ActionMessage4.Message}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#Reference
- * ActionMessage4.Reference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#Device
- * ActionMessage4.Device}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#mmFormat
+ * ActionMessage4.mmFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#mmMessage
+ * ActionMessage4.mmMessage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#mmReference
+ * ActionMessage4.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4#mmDevice
+ * ActionMessage4.mmDevice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ActionMessage4#MessageContentSignature
- * ActionMessage4.MessageContentSignature}</li>
+ * {@linkplain com.tools20022.repository.msg.ActionMessage4#mmMessageContentSignature
+ * ActionMessage4.mmMessageContentSignature}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ActionMessage4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OutputFormat2Code format;
 	/**
 	 * Information format.
 	 * <p>
@@ -102,11 +103,11 @@ public class ActionMessage4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ActionMessage3#Format
-	 * ActionMessage3.Format}</li>
+	 * {@linkplain com.tools20022.repository.msg.ActionMessage3#mmFormat
+	 * ActionMessage3.mmFormat}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Format = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ActionMessage4.mmObject();
 			isDerived = false;
@@ -114,12 +115,13 @@ public class ActionMessage4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Information format.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage3.Format;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage3.mmFormat;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OutputFormat2Code.mmObject();
 		}
 	};
+	protected Max20000Text message;
 	/**
 	 * Content of the message.
 	 * <p>
@@ -133,8 +135,8 @@ public class ActionMessage4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#ActionMessage
-	 * CardPaymentAcquiring.ActionMessage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionMessage
+	 * CardPaymentAcquiring.mmActionMessage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,25 +155,26 @@ public class ActionMessage4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ActionMessage3#Content
-	 * ActionMessage3.Content}</li>
+	 * {@linkplain com.tools20022.repository.msg.ActionMessage3#mmContent
+	 * ActionMessage3.mmContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Message = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> ActionMessage4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.ActionMessage;
 			isDerived = false;
 			xmlTag = "Msg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Message";
 			definition = "Content of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage3.Content;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage3.mmContent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
 	};
+	protected Max35Text reference;
 	/**
 	 * Message content if this is a message reference or screen reference.
 	 * <p>
@@ -199,7 +202,7 @@ public class ActionMessage4 {
 	 * "Message content if this is a message reference or screen reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ActionMessage4.mmObject();
 			isDerived = false;
@@ -207,11 +210,12 @@ public class ActionMessage4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Message content if this is a message reference or screen reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ATMDevice1Code device;
 	/**
 	 * Device to be used.
 	 * <p>
@@ -239,7 +243,7 @@ public class ActionMessage4 {
 	 * definition} = "Device to be used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Device = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDevice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ActionMessage4.mmObject();
 			isDerived = false;
@@ -247,11 +251,12 @@ public class ActionMessage4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Device";
 			definition = "Device to be used.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ATMDevice1Code.mmObject();
 		}
 	};
+	protected Max35Binary messageContentSignature;
 	/**
 	 * Electronic signature of the message to display or print.
 	 * <p>
@@ -278,7 +283,7 @@ public class ActionMessage4 {
 	 * definition} = "Electronic signature of the message to display or print."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageContentSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageContentSignature = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ActionMessage4.mmObject();
 			isDerived = false;
@@ -286,8 +291,8 @@ public class ActionMessage4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageContentSignature";
 			definition = "Electronic signature of the message to display or print.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
@@ -295,10 +300,10 @@ public class ActionMessage4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage4.Format, com.tools20022.repository.msg.ActionMessage4.Message, com.tools20022.repository.msg.ActionMessage4.Reference,
-						com.tools20022.repository.msg.ActionMessage4.Device, com.tools20022.repository.msg.ActionMessage4.MessageContentSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage4.mmFormat, com.tools20022.repository.msg.ActionMessage4.mmMessage, com.tools20022.repository.msg.ActionMessage4.mmReference,
+						com.tools20022.repository.msg.ActionMessage4.mmDevice, com.tools20022.repository.msg.ActionMessage4.mmMessageContentSignature);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionMessage4";
 				definition = "Information to display, print or log.";
@@ -306,5 +311,45 @@ public class ActionMessage4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OutputFormat2Code getFormat() {
+		return format;
+	}
+
+	public void setFormat(OutputFormat2Code format) {
+		this.format = format;
+	}
+
+	public Max20000Text getMessage() {
+		return message;
+	}
+
+	public void setMessage(Max20000Text message) {
+		this.message = message;
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public ATMDevice1Code getDevice() {
+		return device;
+	}
+
+	public void setDevice(ATMDevice1Code device) {
+		this.device = device;
+	}
+
+	public Max35Binary getMessageContentSignature() {
+		return messageContentSignature;
+	}
+
+	public void setMessageContentSignature(Max35Binary messageContentSignature) {
+		this.messageContentSignature = messageContentSignature;
 	}
 }

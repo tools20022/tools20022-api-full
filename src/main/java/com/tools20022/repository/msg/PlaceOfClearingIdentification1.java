@@ -38,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PlaceOfClearingIdentification1#Identification
- * PlaceOfClearingIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PlaceOfClearingIdentification1#mmIdentification
+ * PlaceOfClearingIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PlaceOfClearingIdentification1#LEI
- * PlaceOfClearingIdentification1.LEI}</li>
+ * {@linkplain com.tools20022.repository.msg.PlaceOfClearingIdentification1#mmLEI
+ * PlaceOfClearingIdentification1.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlaceOfClearingIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier identification;
 	/**
 	 * Unique identification of the place of clearing.
 	 * <p>
@@ -102,20 +103,21 @@ public class PlaceOfClearingIdentification1 {
 	 * definition} = "Unique identification of the place of clearing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PlaceOfClearingIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PlaceOfClearingIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the place of clearing.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identification as an alternate identification for a place of
 	 * clearing.
@@ -147,7 +149,7 @@ public class PlaceOfClearingIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PlaceOfClearingIdentification1.mmObject();
 			isDerived = false;
@@ -155,8 +157,8 @@ public class PlaceOfClearingIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a place of clearing.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class PlaceOfClearingIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfClearingIdentification1.Identification, com.tools20022.repository.msg.PlaceOfClearingIdentification1.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfClearingIdentification1.mmIdentification, com.tools20022.repository.msg.PlaceOfClearingIdentification1.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfClearingIdentification1";
 				definition = "Identification of infrastructure which may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(AnyBICIdentifier identification) {
+		this.identification = identification;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

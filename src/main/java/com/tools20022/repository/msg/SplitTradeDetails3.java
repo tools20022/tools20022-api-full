@@ -34,13 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#StatusDetails
- * SplitTradeDetails3.StatusDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#mmStatusDetails
+ * SplitTradeDetails3.mmStatusDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#TradeAmounts
- * SplitTradeDetails3.TradeAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SplitTradeDetails3#AgreedRate
- * SplitTradeDetails3.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#mmTradeAmounts
+ * SplitTradeDetails3.mmTradeAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#mmAgreedRate
+ * SplitTradeDetails3.mmAgreedRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#SplitTradeInformation
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.SplitTradeInformation}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmSplitTradeInformation
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSplitTradeInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SplitTradeDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradeData16 statusDetails;
 	/**
 	 * Provides information on the status of a foreign exchange trade in the
 	 * system.
@@ -86,8 +88,8 @@ public class SplitTradeDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade#TreasuryTradeSettlementStatus
-	 * TreasuryTrade.TreasuryTradeSettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasuryTradeSettlementStatus
+	 * TreasuryTrade.mmTreasuryTradeSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,21 +110,22 @@ public class SplitTradeDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmTreasuryTradeSettlementStatus;
 			componentContext_lazy = () -> SplitTradeDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.TreasuryTradeSettlementStatus;
 			isDerived = false;
 			xmlTag = "StsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDetails";
 			definition = "Provides information on the status of a foreign exchange trade in the system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TradeData16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeData16.mmObject();
 		}
 	};
+	protected AmountsAndValueDate1 tradeAmounts;
 	/**
 	 * Amounts of the foreign exchange trade.
 	 * <p>
@@ -154,21 +157,22 @@ public class SplitTradeDetails3 {
 	 * definition} = "Amounts of the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeAmounts = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SplitTradeDetails3.mmObject();
 			businessComponentTrace_lazy = () -> ForeignExchangeTrade.mmObject();
+			componentContext_lazy = () -> SplitTradeDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "TradAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Amounts of the foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountsAndValueDate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
 		}
 	};
+	protected AgreedRate3 agreedRate;
 	/**
 	 * Exchange rate as agreed by the traders.
 	 * <p>
@@ -180,8 +184,8 @@ public class SplitTradeDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,35 +204,59 @@ public class SplitTradeDetails3 {
 	 * definition} = "Exchange rate as agreed by the traders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AgreedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgreedRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> SplitTradeDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "AgrdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Exchange rate as agreed by the traders.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AgreedRate3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SplitTradeDetails3.StatusDetails, com.tools20022.repository.msg.SplitTradeDetails3.TradeAmounts,
-						com.tools20022.repository.msg.SplitTradeDetails3.AgreedRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SplitTradeDetails3.mmStatusDetails, com.tools20022.repository.msg.SplitTradeDetails3.mmTradeAmounts,
+						com.tools20022.repository.msg.SplitTradeDetails3.mmAgreedRate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSplitTradeInformation);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.SplitTradeInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SplitTradeDetails3";
 				definition = "Information describing the high level details of a split trade.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeData16 getStatusDetails() {
+		return statusDetails;
+	}
+
+	public void setStatusDetails(com.tools20022.repository.msg.TradeData16 statusDetails) {
+		this.statusDetails = statusDetails;
+	}
+
+	public AmountsAndValueDate1 getTradeAmounts() {
+		return tradeAmounts;
+	}
+
+	public void setTradeAmounts(com.tools20022.repository.msg.AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = tradeAmounts;
+	}
+
+	public AgreedRate3 getAgreedRate() {
+		return agreedRate;
+	}
+
+	public void setAgreedRate(com.tools20022.repository.msg.AgreedRate3 agreedRate) {
+		this.agreedRate = agreedRate;
 	}
 }

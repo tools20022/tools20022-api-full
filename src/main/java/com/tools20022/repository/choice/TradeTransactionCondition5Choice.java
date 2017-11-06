@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition5Choice#Code
- * TradeTransactionCondition5Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition5Choice#mmCode
+ * TradeTransactionCondition5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition5Choice#Proprietary
- * TradeTransactionCondition5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition5Choice#mmProprietary
+ * TradeTransactionCondition5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeTransactionCondition5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradeTransactionCondition4Code code;
 	/**
 	 * Trade conditions expressed as an ISO 20022 code.
 	 * <p>
@@ -80,8 +81,8 @@ public class TradeTransactionCondition5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeTransactionCondition
-	 * SecuritiesTrade.TradeTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeTransactionCondition
+	 * SecuritiesTrade.mmTradeTransactionCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,25 +102,26 @@ public class TradeTransactionCondition5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition1Choice#Code
-	 * TradeTransactionCondition1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition1Choice#mmCode
+	 * TradeTransactionCondition1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> TradeTransactionCondition5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeTransactionCondition;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trade conditions expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TradeTransactionCondition4Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Trade conditions expressed as a proprietary code.
 	 * <p>
@@ -133,8 +135,8 @@ public class TradeTransactionCondition5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeTransactionCondition
-	 * SecuritiesTrade.TradeTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeTransactionCondition
+	 * SecuritiesTrade.mmTradeTransactionCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,22 +156,22 @@ public class TradeTransactionCondition5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition1Choice#Proprietary
-	 * TradeTransactionCondition1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition1Choice#mmProprietary
+	 * TradeTransactionCondition1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> TradeTransactionCondition5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeTransactionCondition;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trade conditions expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -177,9 +179,9 @@ public class TradeTransactionCondition5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeTransactionCondition5Choice.Code, com.tools20022.repository.choice.TradeTransactionCondition5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeTransactionCondition5Choice.mmCode, com.tools20022.repository.choice.TradeTransactionCondition5Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionCondition5Choice";
 				definition = "Choice of format for the trade transaction condition.";
@@ -187,5 +189,21 @@ public class TradeTransactionCondition5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeTransactionCondition4Code getCode() {
+		return code;
+	}
+
+	public void setCode(TradeTransactionCondition4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

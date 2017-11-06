@@ -39,10 +39,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat2#ShortLongPosition
- * SignedQuantityFormat2.ShortLongPosition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SignedQuantityFormat2#Quantity
- * SignedQuantityFormat2.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat2#mmShortLongPosition
+ * SignedQuantityFormat2.mmShortLongPosition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat2#mmQuantity
+ * SignedQuantityFormat2.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -74,6 +75,7 @@ import java.util.function.Supplier;
 public class SignedQuantityFormat2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongPosition;
 	/**
 	 * Sign of the quantity of security.
 	 * <p>
@@ -87,8 +89,8 @@ public class SignedQuantityFormat2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#ShortLong
-	 * SecuritiesBalance.ShortLong}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmShortLong
+	 * SecuritiesBalance.mmShortLong}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +111,28 @@ public class SignedQuantityFormat2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat6#ShortLongPosition
-	 * SignedQuantityFormat6.ShortLongPosition}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat6#mmShortLongPosition
+	 * SignedQuantityFormat6.mmShortLongPosition}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> SignedQuantityFormat2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.ShortLong;
 			isDerived = false;
 			xmlTag = "ShrtLngPos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongPosition";
 			definition = "Sign of the quantity of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat6.ShortLongPosition);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat6.mmShortLongPosition);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice quantity;
 	/**
 	 * Quantity of security.
 	 * <p>
@@ -142,8 +145,8 @@ public class SignedQuantityFormat2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AggregateQuantity
-	 * SecuritiesBalance.AggregateQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+	 * SecuritiesBalance.mmAggregateQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,35 +167,35 @@ public class SignedQuantityFormat2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat6#Quantity
-	 * SignedQuantityFormat6.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat6#mmQuantity
+	 * SignedQuantityFormat6.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> SignedQuantityFormat2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AggregateQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat6.Quantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat6.mmQuantity);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat2.ShortLongPosition, com.tools20022.repository.msg.SignedQuantityFormat2.Quantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat2.mmShortLongPosition, com.tools20022.repository.msg.SignedQuantityFormat2.mmQuantity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -207,5 +210,21 @@ public class SignedQuantityFormat2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongPosition() {
+		return shortLongPosition;
+	}
+
+	public void setShortLongPosition(ShortLong1Code shortLongPosition) {
+		this.shortLongPosition = shortLongPosition;
+	}
+
+	public FinancialInstrumentQuantity1Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantity1Choice quantity) {
+		this.quantity = quantity;
 	}
 }

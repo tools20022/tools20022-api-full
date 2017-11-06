@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.SecuritiesFinancingAgreement;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
 import java.util.function.Supplier;
 
 /**
@@ -41,22 +42,22 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#Description
- * Agreement1.Description}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#Identification
- * Agreement1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#Date
- * Agreement1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#Currency
- * Agreement1.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#TerminationType
- * Agreement1.TerminationType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#StartDate
- * Agreement1.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#DeliveryType
- * Agreement1.DeliveryType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1#MarginRatio
- * Agreement1.MarginRatio}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmDescription
+ * Agreement1.mmDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmIdentification
+ * Agreement1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmDate
+ * Agreement1.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmCurrency
+ * Agreement1.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmTerminationType
+ * Agreement1.mmTerminationType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmStartDate
+ * Agreement1.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmDeliveryType
+ * Agreement1.mmDeliveryType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmMarginRatio
+ * Agreement1.mmMarginRatio}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,6 +84,7 @@ import java.util.function.Supplier;
 public class Agreement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text description;
 	/**
 	 * Full name of the base standard agreement, annexes and amendments in place
 	 * between the principals and applicable to this deal.
@@ -96,8 +98,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Description
-	 * Agreement.Description}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDescription
+	 * Agreement.mmDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -117,20 +119,21 @@ public class Agreement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDescription;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Description;
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Full name of the base standard agreement, annexes and amendments in place between the principals and applicable to this deal.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Common reference to the applicable standing agreement between the
 	 * counterparties to a financing transaction.
@@ -144,8 +147,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -165,20 +168,21 @@ public class Agreement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Common reference to the applicable standing agreement between the counterparties to a financing transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime date;
 	/**
 	 * Reference to the date the underlying agreement specified by agreement
 	 * identification and agreement description was executed.
@@ -192,8 +196,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#DateSigned
-	 * Agreement.DateSigned}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDateSigned
+	 * Agreement.mmDateSigned}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -213,20 +217,21 @@ public class Agreement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.DateSigned;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Reference to the date the underlying agreement specified by agreement identification and agreement description was executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Contractual currency forming the basis of a financing agreement and
 	 * associated transactions. Usually, but not always, the same as the trade
@@ -241,8 +246,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#Currency
-	 * SecuritiesFinancingAgreement.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmCurrency
+	 * SecuritiesFinancingAgreement.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -262,20 +267,21 @@ public class Agreement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmCurrency;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Contractual currency forming the basis of a financing agreement and associated transactions. Usually, but not always, the same as the trade currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected TerminationType1Code terminationType;
 	/**
 	 * Type of financing termination.
 	 * <p>
@@ -289,8 +295,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#TerminationType
-	 * SecuritiesFinancingAgreement.TerminationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmTerminationType
+	 * SecuritiesFinancingAgreement.mmTerminationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -308,20 +314,21 @@ public class Agreement1 {
 	 * definition} = "Type of financing termination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TerminationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTerminationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmTerminationType;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.TerminationType;
 			isDerived = false;
 			xmlTag = "TermntnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationType";
 			definition = "Type of financing termination.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TerminationType1Code.mmObject();
 		}
 	};
+	protected ISODateTime startDate;
 	/**
 	 * Start date of a financing deal that is the date the buyer pays the seller
 	 * cash and takes control of the collateral.
@@ -335,8 +342,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -356,20 +363,21 @@ public class Agreement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of a financing deal that is the date the buyer pays the seller cash and takes control of the collateral.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DeliveryType1Code deliveryType;
 	/**
 	 * Identifies type of settlement.
 	 * <p>
@@ -383,8 +391,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#DeliveryType
-	 * SecuritiesFinancingAgreement.DeliveryType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmDeliveryType
+	 * SecuritiesFinancingAgreement.mmDeliveryType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -402,20 +410,21 @@ public class Agreement1 {
 	 * definition} = "Identifies type of settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmDeliveryType;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.DeliveryType;
 			isDerived = false;
 			xmlTag = "DlvryTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryType";
 			definition = "Identifies type of settlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryType1Code.mmObject();
 		}
 	};
+	protected PercentageRate marginRatio;
 	/**
 	 * Fraction of the cash consideration that must be collateralized, expressed
 	 * as a percent. A margin ratio of 02% indicates that the value of the
@@ -432,8 +441,8 @@ public class Agreement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#MarginRatio
-	 * SecuritiesFinancingAgreement.MarginRatio}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmMarginRatio
+	 * SecuritiesFinancingAgreement.mmMarginRatio}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Agreement1
@@ -453,17 +462,17 @@ public class Agreement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginRatio = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmMarginRatio;
 			componentContext_lazy = () -> Agreement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.MarginRatio;
 			isDerived = false;
 			xmlTag = "MrgnRatio";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginRatio";
 			definition = "Fraction of the cash consideration that must be collateralized, expressed as a percent. A margin ratio of 02% indicates that the value of the collateral (after deducting for \"haircut\") must exceed the cash consideration by 2%.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -471,13 +480,13 @@ public class Agreement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement1.Description, com.tools20022.repository.msg.Agreement1.Identification, com.tools20022.repository.msg.Agreement1.Date,
-						com.tools20022.repository.msg.Agreement1.Currency, com.tools20022.repository.msg.Agreement1.TerminationType, com.tools20022.repository.msg.Agreement1.StartDate, com.tools20022.repository.msg.Agreement1.DeliveryType,
-						com.tools20022.repository.msg.Agreement1.MarginRatio);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement1.mmDescription, com.tools20022.repository.msg.Agreement1.mmIdentification, com.tools20022.repository.msg.Agreement1.mmDate,
+						com.tools20022.repository.msg.Agreement1.mmCurrency, com.tools20022.repository.msg.Agreement1.mmTerminationType, com.tools20022.repository.msg.Agreement1.mmStartDate,
+						com.tools20022.repository.msg.Agreement1.mmDeliveryType, com.tools20022.repository.msg.Agreement1.mmMarginRatio);
 				trace_lazy = () -> SecuritiesFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
-				removalDate = ((Supplier<java.util.Date>) (() -> {
+				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
 					} catch (Exception e) {
@@ -489,5 +498,69 @@ public class Agreement1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max350Text description) {
+		this.description = description;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODateTime getDate() {
+		return date;
+	}
+
+	public void setDate(ISODateTime date) {
+		this.date = date;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public TerminationType1Code getTerminationType() {
+		return terminationType;
+	}
+
+	public void setTerminationType(TerminationType1Code terminationType) {
+		this.terminationType = terminationType;
+	}
+
+	public ISODateTime getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODateTime startDate) {
+		this.startDate = startDate;
+	}
+
+	public DeliveryType1Code getDeliveryType() {
+		return deliveryType;
+	}
+
+	public void setDeliveryType(DeliveryType1Code deliveryType) {
+		this.deliveryType = deliveryType;
+	}
+
+	public PercentageRate getMarginRatio() {
+		return marginRatio;
+	}
+
+	public void setMarginRatio(PercentageRate marginRatio) {
+		this.marginRatio = marginRatio;
 	}
 }

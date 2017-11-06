@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.CaseAssignmentRejectionJustification;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -72,21 +73,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#Assignment
- * RejectCaseAssignment.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#mmAssignment
+ * RejectCaseAssignment.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#Case
- * RejectCaseAssignment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#mmCase
+ * RejectCaseAssignment.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#Justification
- * RejectCaseAssignment.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#mmJustification
+ * RejectCaseAssignment.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#identifier
- * RejectCaseAssignment.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.031.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectCaseAssignment {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies the assignment.
 	 * <p>
@@ -124,17 +124,18 @@ public class RejectCaseAssignment {
 	 * definition} = "Identifies the assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -156,17 +157,18 @@ public class RejectCaseAssignment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected CaseAssignmentRejectionJustification justification;
 	/**
 	 * Specifies the reason for not accepting a Case.
 	 * <p>
@@ -190,42 +192,15 @@ public class RejectCaseAssignment {
 	 * definition} = "Specifies the reason for not accepting a Case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Justification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Specifies the reason for not accepting a Case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignmentRejectionJustification.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "031"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "031";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -240,11 +215,42 @@ public class RejectCaseAssignment {
 				xmlTag = "camt.031.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.031.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectCaseAssignment.Assignment, com.tools20022.repository.area.camt.RejectCaseAssignment.Case,
-						com.tools20022.repository.area.camt.RejectCaseAssignment.Justification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.RejectCaseAssignment.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectCaseAssignment.mmAssignment, com.tools20022.repository.area.camt.RejectCaseAssignment.mmCase,
+						com.tools20022.repository.area.camt.RejectCaseAssignment.mmJustification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "031";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public CaseAssignmentRejectionJustification getJustification() {
+		return justification;
+	}
+
+	public void setJustification(CaseAssignmentRejectionJustification justification) {
+		this.justification = justification;
 	}
 }

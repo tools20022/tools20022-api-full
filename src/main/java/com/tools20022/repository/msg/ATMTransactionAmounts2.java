@@ -37,26 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#Currency
- * ATMTransactionAmounts2.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#mmCurrency
+ * ATMTransactionAmounts2.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#MaximumAuthorisableAmount
- * ATMTransactionAmounts2.MaximumAuthorisableAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#mmMaximumAuthorisableAmount
+ * ATMTransactionAmounts2.mmMaximumAuthorisableAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#MinimumAllowedAmount
- * ATMTransactionAmounts2.MinimumAllowedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#mmMinimumAllowedAmount
+ * ATMTransactionAmounts2.mmMinimumAllowedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#MaximumAllowedAmount
- * ATMTransactionAmounts2.MaximumAllowedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#mmMaximumAllowedAmount
+ * ATMTransactionAmounts2.mmMaximumAllowedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#DailyBalance
- * ATMTransactionAmounts2.DailyBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#mmDailyBalance
+ * ATMTransactionAmounts2.mmDailyBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#WeeklyBalance
- * ATMTransactionAmounts2.WeeklyBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#mmWeeklyBalance
+ * ATMTransactionAmounts2.mmWeeklyBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#MonthlyBalance
- * ATMTransactionAmounts2.MonthlyBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts2#mmMonthlyBalance
+ * ATMTransactionAmounts2.mmMonthlyBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransactionAmounts2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency of the limits, if different from the requested amount.
 	 * <p>
@@ -101,8 +102,8 @@ public class ATMTransactionAmounts2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Currency
-	 * Limit.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmCurrency
+	 * Limit.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -124,27 +125,28 @@ public class ATMTransactionAmounts2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts3#Currency
-	 * ATMTransactionAmounts3.Currency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts3#mmCurrency
+	 * ATMTransactionAmounts3.mmCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCurrency;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the limits, if different from the requested amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.Currency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.mmCurrency);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount maximumAuthorisableAmount;
 	/**
 	 * Maximum amount allowed in the authorised currency if the withdrawal was
 	 * not approved.
@@ -159,8 +161,8 @@ public class ATMTransactionAmounts2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#AvailableAmount
-	 * Limit.AvailableAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAvailableAmount
+	 * Limit.mmAvailableAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,27 +185,28 @@ public class ATMTransactionAmounts2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts3#MaximumAmount
-	 * ATMTransactionAmounts3.MaximumAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts3#mmMaximumAmount
+	 * ATMTransactionAmounts3.mmMaximumAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumAuthorisableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumAuthorisableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAvailableAmount;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.AvailableAmount;
 			isDerived = false;
 			xmlTag = "MaxAuthsbAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAuthorisableAmount";
 			definition = "Maximum amount allowed in the authorised currency if the withdrawal was not approved.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.MaximumAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.mmMaximumAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount minimumAllowedAmount;
 	/**
 	 * Minimum amount allowed for a withdrawal in the authorised currency.
 	 * <p>
@@ -217,7 +220,8 @@ public class ATMTransactionAmounts2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,27 +243,28 @@ public class ATMTransactionAmounts2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts3#MinimumAmount
-	 * ATMTransactionAmounts3.MinimumAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts3#mmMinimumAmount
+	 * ATMTransactionAmounts3.mmMinimumAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumAllowedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumAllowedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "MinAllwdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAllowedAmount";
 			definition = "Minimum amount allowed for a withdrawal in the authorised currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.MinimumAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.mmMinimumAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount maximumAllowedAmount;
 	/**
 	 * Maximum amount allowed for a withdrawal in the authorised currency.
 	 * <p>
@@ -273,7 +278,8 @@ public class ATMTransactionAmounts2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,27 +301,28 @@ public class ATMTransactionAmounts2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#AvailableAmount
-	 * ATMTransactionAmounts4.AvailableAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#mmAvailableAmount
+	 * ATMTransactionAmounts4.mmAvailableAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumAllowedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumAllowedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "MaxAllwdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAllowedAmount";
 			definition = "Maximum amount allowed for a withdrawal in the authorised currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.AvailableAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmAvailableAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DetailedAmount4 dailyBalance;
 	/**
 	 * Remaining daily amount of the customer totals after the withdrawal.
 	 * <p>
@@ -349,28 +356,29 @@ public class ATMTransactionAmounts2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#DailyBalance
-	 * ATMTransactionAmounts4.DailyBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#mmDailyBalance
+	 * ATMTransactionAmounts4.mmDailyBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DailyBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDailyBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "DalyBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DailyBalance";
 			definition = "Remaining daily amount of the customer totals after the withdrawal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.DailyBalance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmDailyBalance);
 			maxOccurs = 1;
-			type_lazy = () -> DetailedAmount4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	protected DetailedAmount4 weeklyBalance;
 	/**
 	 * Remaining weekly amount of the customer totals after the withdrawal.
 	 * <p>
@@ -404,28 +412,29 @@ public class ATMTransactionAmounts2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#WeeklyBalance
-	 * ATMTransactionAmounts4.WeeklyBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#mmWeeklyBalance
+	 * ATMTransactionAmounts4.mmWeeklyBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd WeeklyBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmWeeklyBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "WklyBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeeklyBalance";
 			definition = "Remaining weekly amount of the customer totals after the withdrawal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.WeeklyBalance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmWeeklyBalance);
 			maxOccurs = 1;
-			type_lazy = () -> DetailedAmount4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	protected DetailedAmount4 monthlyBalance;
 	/**
 	 * Remaining monthly amount of the customer totals after the withdrawal.
 	 * <p>
@@ -459,37 +468,37 @@ public class ATMTransactionAmounts2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#MonthlyBalance
-	 * ATMTransactionAmounts4.MonthlyBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#mmMonthlyBalance
+	 * ATMTransactionAmounts4.mmMonthlyBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MonthlyBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMonthlyBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyBalance";
 			definition = "Remaining monthly amount of the customer totals after the withdrawal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.MonthlyBalance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmMonthlyBalance);
 			maxOccurs = 1;
-			type_lazy = () -> DetailedAmount4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts2.Currency, com.tools20022.repository.msg.ATMTransactionAmounts2.MaximumAuthorisableAmount,
-						com.tools20022.repository.msg.ATMTransactionAmounts2.MinimumAllowedAmount, com.tools20022.repository.msg.ATMTransactionAmounts2.MaximumAllowedAmount,
-						com.tools20022.repository.msg.ATMTransactionAmounts2.DailyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.WeeklyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.MonthlyBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts2.mmCurrency, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAuthorisableAmount,
+						com.tools20022.repository.msg.ATMTransactionAmounts2.mmMinimumAllowedAmount, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAllowedAmount,
+						com.tools20022.repository.msg.ATMTransactionAmounts2.mmDailyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmWeeklyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMonthlyBalance);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts2";
 				definition = "Limit of amounts for the customer.";
@@ -497,5 +506,61 @@ public class ATMTransactionAmounts2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ImpliedCurrencyAndAmount getMaximumAuthorisableAmount() {
+		return maximumAuthorisableAmount;
+	}
+
+	public void setMaximumAuthorisableAmount(ImpliedCurrencyAndAmount maximumAuthorisableAmount) {
+		this.maximumAuthorisableAmount = maximumAuthorisableAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getMinimumAllowedAmount() {
+		return minimumAllowedAmount;
+	}
+
+	public void setMinimumAllowedAmount(ImpliedCurrencyAndAmount minimumAllowedAmount) {
+		this.minimumAllowedAmount = minimumAllowedAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getMaximumAllowedAmount() {
+		return maximumAllowedAmount;
+	}
+
+	public void setMaximumAllowedAmount(ImpliedCurrencyAndAmount maximumAllowedAmount) {
+		this.maximumAllowedAmount = maximumAllowedAmount;
+	}
+
+	public DetailedAmount4 getDailyBalance() {
+		return dailyBalance;
+	}
+
+	public void setDailyBalance(com.tools20022.repository.msg.DetailedAmount4 dailyBalance) {
+		this.dailyBalance = dailyBalance;
+	}
+
+	public DetailedAmount4 getWeeklyBalance() {
+		return weeklyBalance;
+	}
+
+	public void setWeeklyBalance(com.tools20022.repository.msg.DetailedAmount4 weeklyBalance) {
+		this.weeklyBalance = weeklyBalance;
+	}
+
+	public DetailedAmount4 getMonthlyBalance() {
+		return monthlyBalance;
+	}
+
+	public void setMonthlyBalance(com.tools20022.repository.msg.DetailedAmount4 monthlyBalance) {
+		this.monthlyBalance = monthlyBalance;
 	}
 }

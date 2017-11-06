@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.OriginalPaymentInformation5;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -56,23 +57,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01#GroupHeader
- * CreditorPaymentActivationRequestStatusReportV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01#mmGroupHeader
+ * CreditorPaymentActivationRequestStatusReportV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01#OriginalGroupInformationAndStatus
+ * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01#mmOriginalGroupInformationAndStatus
  * CreditorPaymentActivationRequestStatusReportV01.
- * OriginalGroupInformationAndStatus}</li>
+ * mmOriginalGroupInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01#OriginalPaymentInformationAndStatus
+ * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01#mmOriginalPaymentInformationAndStatus
  * CreditorPaymentActivationRequestStatusReportV01.
- * OriginalPaymentInformationAndStatus}</li>
+ * mmOriginalPaymentInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01#identifier
- * CreditorPaymentActivationRequestStatusReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.014.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditorPaymentActivationRequestStatusReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader46 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -121,17 +121,18 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader46.mmObject();
 		}
 	};
+	protected OriginalGroupInformation25 originalGroupInformationAndStatus;
 	/**
 	 * Original group information concerning the group of transactions, to which
 	 * the status report message refers to.
@@ -158,17 +159,18 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Original group information concerning the group of transactions, to which the status report message refers to.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation25.mmObject();
 		}
 	};
+	protected List<OriginalPaymentInformation5> originalPaymentInformationAndStatus;
 	/**
 	 * Information concerning the original payment information, to which the
 	 * status report message refers.
@@ -195,7 +197,7 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalPaymentInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlPmtInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,33 +205,6 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 			definition = "Information concerning the original payment information, to which the status report message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInformation5.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "014"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "014";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -244,12 +219,43 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 				rootElement = "Document";
 				xmlTag = "CdtrPmtActvtnReqStsRpt";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01.GroupHeader,
-						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01.OriginalGroupInformationAndStatus,
-						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01.OriginalPaymentInformationAndStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01.mmGroupHeader,
+						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01.mmOriginalGroupInformationAndStatus,
+						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV01.mmOriginalPaymentInformationAndStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "014";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader46 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader46 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalGroupInformation25 getOriginalGroupInformationAndStatus() {
+		return originalGroupInformationAndStatus;
+	}
+
+	public void setOriginalGroupInformationAndStatus(OriginalGroupInformation25 originalGroupInformationAndStatus) {
+		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+	}
+
+	public List<OriginalPaymentInformation5> getOriginalPaymentInformationAndStatus() {
+		return originalPaymentInformationAndStatus;
+	}
+
+	public void setOriginalPaymentInformationAndStatus(List<OriginalPaymentInformation5> originalPaymentInformationAndStatus) {
+		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
 	}
 }

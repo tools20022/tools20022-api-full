@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.Limit4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between risk management limit details or a business error when the
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.LimitOrError1Choice#Limit
- * LimitOrError1Choice.Limit}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LimitOrError1Choice#mmLimit
+ * LimitOrError1Choice.mmLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitOrError1Choice#BusinessError
- * LimitOrError1Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitOrError1Choice#mmBusinessError
+ * LimitOrError1Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Limit4 limit;
 	/**
 	 * Requested information on the limit.
 	 * <p>
@@ -95,13 +97,13 @@ public class LimitOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.LimitOrError2Choice#Limit
-	 * LimitOrError2Choice.Limit}</li>
+	 * {@linkplain com.tools20022.repository.choice.LimitOrError2Choice#mmLimit
+	 * LimitOrError2Choice.mmLimit}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Limit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitOrError1Choice.mmObject();
 			isDerived = false;
@@ -109,13 +111,14 @@ public class LimitOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Requested information on the limit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitOrError2Choice.Limit);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitOrError2Choice.mmLimit);
 			maxOccurs = 1;
-			type_lazy = () -> Limit4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Limit4.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -144,13 +147,13 @@ public class LimitOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.LimitOrError2Choice#BusinessError
-	 * LimitOrError2Choice.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.choice.LimitOrError2Choice#mmBusinessError
+	 * LimitOrError2Choice.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitOrError1Choice.mmObject();
 			isDerived = false;
@@ -158,18 +161,18 @@ public class LimitOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitOrError2Choice.BusinessError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitOrError2Choice.mmBusinessError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitOrError1Choice.Limit, com.tools20022.repository.choice.LimitOrError1Choice.BusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitOrError1Choice.mmLimit, com.tools20022.repository.choice.LimitOrError1Choice.mmBusinessError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitOrError1Choice";
 				definition = "Choice between risk management limit details or a business error when the requested data cannot be retrieved.";
@@ -177,5 +180,21 @@ public class LimitOrError1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Limit4 getLimit() {
+		return limit;
+	}
+
+	public void setLimit(Limit4 limit) {
+		this.limit = limit;
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
 	}
 }

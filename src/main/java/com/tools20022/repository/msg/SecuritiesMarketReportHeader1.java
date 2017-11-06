@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesMarketReportHeader1#ReportingEntity
- * SecuritiesMarketReportHeader1.ReportingEntity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesMarketReportHeader1#mmReportingEntity
+ * SecuritiesMarketReportHeader1.mmReportingEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesMarketReportHeader1#ReportingPeriod
- * SecuritiesMarketReportHeader1.ReportingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesMarketReportHeader1#mmReportingPeriod
+ * SecuritiesMarketReportHeader1.mmReportingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesMarketReportHeader1#SubmissionDateTime
- * SecuritiesMarketReportHeader1.SubmissionDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesMarketReportHeader1#mmSubmissionDateTime
+ * SecuritiesMarketReportHeader1.mmSubmissionDateTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,45 +51,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01#ReportHeader
- * FinancialInstrumentReportingTradingVolumeCapDataReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01#mmReportHeader
+ * FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#ReportHeader
- * FinancialInstrumentReportingNonEquityTradingActivityResultV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#mmReportHeader
+ * FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmReportHeader}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityResultV01#ReportHeader
- * FinancialInstrumentReportingEquityTradingActivityResultV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityResultV01#mmReportHeader
+ * FinancialInstrumentReportingEquityTradingActivityResultV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTransparencyDataReportV01#ReportHeader
- * FinancialInstrumentReportingEquityTransparencyDataReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTransparencyDataReportV01#mmReportHeader
+ * FinancialInstrumentReportingEquityTransparencyDataReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01#ReportHeader
- * FinancialInstrumentReportingReferenceDataReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01#mmReportHeader
+ * FinancialInstrumentReportingReferenceDataReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01#ReportHeader
- * FinancialInstrumentReportingNonWorkingDayReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01#mmReportHeader
+ * FinancialInstrumentReportingNonWorkingDayReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01#ReportHeader
- * FinancialInstrumentReportingEquityTradingActivityReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01#mmReportHeader
+ * FinancialInstrumentReportingEquityTradingActivityReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01#ReportHeader
- * FinancialInstrumentReportingReferenceDataIndexReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01#mmReportHeader
+ * FinancialInstrumentReportingReferenceDataIndexReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01#ReportHeader
- * FinancialInstrumentReportingNonEquityTransparencyDataReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01#mmReportHeader
+ * FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmReportHeader
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01#ReportHeader
- * FinancialInstrumentReportingReferenceDataDeltaReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01#mmReportHeader
+ * FinancialInstrumentReportingReferenceDataDeltaReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01#ReportHeader
- * FinancialInstrumentReportingNonEquityTradingActivityReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01#mmReportHeader
+ * FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmReportHeader}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesMarketReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradingVenueIdentification1Choice reportingEntity;
 	/**
 	 * Identification of the venue which generates the report.
 	 * <p>
@@ -131,7 +135,7 @@ public class SecuritiesMarketReportHeader1 {
 	 * definition} = "Identification of the venue which generates the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingEntity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -139,12 +143,13 @@ public class SecuritiesMarketReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingEntity";
 			definition = "Identification of the venue which generates the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradingVenueIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 		}
 	};
+	protected Period4Choice reportingPeriod;
 	/**
 	 * Date or date range the report relates to.
 	 * <p>
@@ -171,7 +176,7 @@ public class SecuritiesMarketReportHeader1 {
 	 * definition} = "Date or date range the report relates to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -179,12 +184,13 @@ public class SecuritiesMarketReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Date or date range the report relates to.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected ISODateTime submissionDateTime;
 	/**
 	 * Date and time of the report originally submitted by the reporting entity
 	 * when the file is generated for submission to their reporting authority.
@@ -215,7 +221,7 @@ public class SecuritiesMarketReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubmissionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -223,8 +229,8 @@ public class SecuritiesMarketReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Date and time of the report originally submitted by the reporting entity when the file is generated for submission to their reporting authority.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -232,23 +238,47 @@ public class SecuritiesMarketReportHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesMarketReportHeader1.ReportingEntity, com.tools20022.repository.msg.SecuritiesMarketReportHeader1.ReportingPeriod,
-						com.tools20022.repository.msg.SecuritiesMarketReportHeader1.SubmissionDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityResultV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTransparencyDataReportV01.ReportHeader, com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.ReportHeader, com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01.ReportHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmReportingEntity, com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmReportingPeriod,
+						com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmSubmissionDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityResultV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTransparencyDataReportV01.mmReportHeader, com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmReportHeader, com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmReportHeader);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesMarketReportHeader1";
 				definition = "Provides the securities market transaction report related header details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradingVenueIdentification1Choice getReportingEntity() {
+		return reportingEntity;
+	}
+
+	public void setReportingEntity(TradingVenueIdentification1Choice reportingEntity) {
+		this.reportingEntity = reportingEntity;
+	}
+
+	public Period4Choice getReportingPeriod() {
+		return reportingPeriod;
+	}
+
+	public void setReportingPeriod(Period4Choice reportingPeriod) {
+		this.reportingPeriod = reportingPeriod;
+	}
+
+	public ISODateTime getSubmissionDateTime() {
+		return submissionDateTime;
+	}
+
+	public void setSubmissionDateTime(ISODateTime submissionDateTime) {
+		this.submissionDateTime = submissionDateTime;
 	}
 }

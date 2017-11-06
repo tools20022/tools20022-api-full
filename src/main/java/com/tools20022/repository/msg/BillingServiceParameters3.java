@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingServiceParameters3#BankService
- * BillingServiceParameters3.BankService}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingServiceParameters3#mmBankService
+ * BillingServiceParameters3.mmBankService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingServiceParameters3#Volume
- * BillingServiceParameters3.Volume}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingServiceParameters3#mmVolume
+ * BillingServiceParameters3.mmVolume}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingServiceParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BillingServiceIdentification3 bankService;
 	/**
 	 * Specifies the details to fully identify the bank service.
 	 * <p>
@@ -101,25 +102,26 @@ public class BillingServiceParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceParameters1#BankService
-	 * BillingServiceParameters1.BankService}</li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceParameters1#mmBankService
+	 * BillingServiceParameters1.mmBankService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankService = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankService = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BillingServiceParameters3.mmObject();
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
+			componentContext_lazy = () -> BillingServiceParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "BkSvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankService";
 			definition = "Specifies the details to fully identify the bank service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceParameters1.BankService;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceParameters1.mmBankService;
 			maxOccurs = 1;
-			complexType_lazy = () -> BillingServiceIdentification3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification3.mmObject();
 		}
 	};
+	protected DecimalNumber volume;
 	/**
 	 * Count or number of items (volume) involved in the charge.
 	 * <p>
@@ -133,8 +135,8 @@ public class BillingServiceParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#Value
-	 * ProductQuantity.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmValue
+	 * ProductQuantity.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,22 +157,22 @@ public class BillingServiceParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceParameters1#Volume
-	 * BillingServiceParameters1.Volume}</li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceParameters1#mmVolume
+	 * BillingServiceParameters1.mmVolume}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Volume = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVolume = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
 			componentContext_lazy = () -> BillingServiceParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.Value;
 			isDerived = false;
 			xmlTag = "Vol";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Volume";
 			definition = "Count or number of items (volume) involved in the charge.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceParameters1.Volume;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceParameters1.mmVolume;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -178,9 +180,9 @@ public class BillingServiceParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters3.BankService, com.tools20022.repository.msg.BillingServiceParameters3.Volume);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters3.mmBankService, com.tools20022.repository.msg.BillingServiceParameters3.mmVolume);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingServiceParameters3";
 				definition = "Specifies the detailed parameters a service to be billed.";
@@ -188,5 +190,21 @@ public class BillingServiceParameters3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BillingServiceIdentification3 getBankService() {
+		return bankService;
+	}
+
+	public void setBankService(com.tools20022.repository.msg.BillingServiceIdentification3 bankService) {
+		this.bankService = bankService;
+	}
+
+	public DecimalNumber getVolume() {
+		return volume;
+	}
+
+	public void setVolume(DecimalNumber volume) {
+		this.volume = volume;
 	}
 }

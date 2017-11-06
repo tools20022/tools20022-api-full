@@ -34,13 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast3#NetAmount
- * NetCashForecast3.NetAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast3#mmNetAmount
+ * NetCashForecast3.mmNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetCashForecast3#NetUnitsNumber
- * NetCashForecast3.NetUnitsNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast3#FlowDirection
- * NetCashForecast3.FlowDirection}</li>
+ * {@linkplain com.tools20022.repository.msg.NetCashForecast3#mmNetUnitsNumber
+ * NetCashForecast3.mmNetUnitsNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetCashForecast3#mmFlowDirection
+ * NetCashForecast3.mmFlowDirection}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,36 +52,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#ConsolidatedNetCashForecast
- * FundConfirmedCashForecastReportV03.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#mmConsolidatedNetCashForecast
+ * FundConfirmedCashForecastReportV03.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#ConsolidatedNetCashForecast
- * FundDetailedConfirmedCashForecastReportV03.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#mmConsolidatedNetCashForecast
+ * FundDetailedConfirmedCashForecastReportV03.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#ConsolidatedNetCashForecast
- * FundDetailedEstimatedCashForecastReportV03.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#mmConsolidatedNetCashForecast
+ * FundDetailedEstimatedCashForecastReportV03.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#ConsolidatedNetCashForecast
- * FundEstimatedCashForecastReportV03.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmConsolidatedNetCashForecast
+ * FundEstimatedCashForecastReportV03.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#ConsolidatedNetCashForecast
- * FundDetailedEstimatedCashForecastReportV04.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#mmConsolidatedNetCashForecast
+ * FundDetailedEstimatedCashForecastReportV04.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#ConsolidatedNetCashForecast
- * FundConfirmedCashForecastReportV04.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#mmConsolidatedNetCashForecast
+ * FundConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#ConsolidatedNetCashForecast
- * FundEstimatedCashForecastReportV04.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmConsolidatedNetCashForecast
+ * FundEstimatedCashForecastReportV04.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#ConsolidatedNetCashForecast
- * FundDetailedConfirmedCashForecastReportV04.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#mmConsolidatedNetCashForecast
+ * FundDetailedConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetCashForecast3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount netAmount;
 	/**
 	 * Net amount of the cash flow, expressed as an amount of money.
 	 * <p>
@@ -108,8 +110,8 @@ public class NetCashForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -129,20 +131,21 @@ public class NetCashForecast3 {
 	 * "Net amount of the cash flow, expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> NetCashForecast3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Net amount of the cash flow, expressed as an amount of money.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 netUnitsNumber;
 	/**
 	 * Net amount, expressed as a number of units.
 	 * <p>
@@ -156,8 +159,8 @@ public class NetCashForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,20 +179,21 @@ public class NetCashForecast3 {
 	 * definition} = "Net amount, expressed as a number of units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> NetCashForecast3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "NetUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetUnitsNumber";
 			definition = "Net amount, expressed as a number of units.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected FlowDirectionType1Code flowDirection;
 	/**
 	 * Specifies the direction of the cash flow from the perspective of the
 	 * fund.
@@ -204,8 +208,8 @@ public class NetCashForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#FlowDirection
-	 * FundsCashFlow.FlowDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmFlowDirection
+	 * FundsCashFlow.mmFlowDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,17 +230,17 @@ public class NetCashForecast3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FlowDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFlowDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmFlowDirection;
 			componentContext_lazy = () -> NetCashForecast3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.FlowDirection;
 			isDerived = false;
 			xmlTag = "FlowDrctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlowDirection";
 			definition = "Specifies the direction of the cash flow from the perspective of the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FlowDirectionType1Code.mmObject();
 		}
 	};
@@ -244,20 +248,44 @@ public class NetCashForecast3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.NetCashForecast3.NetAmount, com.tools20022.repository.msg.NetCashForecast3.NetUnitsNumber, com.tools20022.repository.msg.NetCashForecast3.FlowDirection);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetCashForecast3.mmNetAmount, com.tools20022.repository.msg.NetCashForecast3.mmNetUnitsNumber,
+						com.tools20022.repository.msg.NetCashForecast3.mmFlowDirection);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmConsolidatedNetCashForecast,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmConsolidatedNetCashForecast,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmConsolidatedNetCashForecast,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.ConsolidatedNetCashForecast,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.ConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.ConsolidatedNetCashForecast,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.ConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.ConsolidatedNetCashForecast,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.ConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.ConsolidatedNetCashForecast,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.ConsolidatedNetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetCashForecast3";
 				definition = "Net cash movement to a fund as a result of investment funds transactions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(ActiveOrHistoricCurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
+	}
+
+	public FinancialInstrumentQuantity1 getNetUnitsNumber() {
+		return netUnitsNumber;
+	}
+
+	public void setNetUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 netUnitsNumber) {
+		this.netUnitsNumber = netUnitsNumber;
+	}
+
+	public FlowDirectionType1Code getFlowDirection() {
+		return flowDirection;
+	}
+
+	public void setFlowDirection(FlowDirectionType1Code flowDirection) {
+		this.flowDirection = flowDirection;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification
 import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * This extends the message InformationRequestResponse.
@@ -55,24 +56,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#InvestigationIdentification
- * InformationResponseSD1V01.InvestigationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#mmInvestigationIdentification
+ * InformationResponseSD1V01.mmInvestigationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#CreationDateTime
- * InformationResponseSD1V01.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#mmCreationDateTime
+ * InformationResponseSD1V01.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#AccountServicerIdentification
- * InformationResponseSD1V01.AccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#mmAccountServicerIdentification
+ * InformationResponseSD1V01.mmAccountServicerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#AccountAndParties
- * InformationResponseSD1V01.AccountAndParties}</li>
+ * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#mmAccountAndParties
+ * InformationResponseSD1V01.mmAccountAndParties}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.supl.InformationResponseSD1V01#identifier
- * InformationResponseSD1V01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code supl.027.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InformationResponseSD1V01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text investigationIdentification;
 	/**
 	 * Information used to identify the request.
 	 * <p>
@@ -108,17 +108,18 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Information used to identify the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InvestigationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvestigationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstgtnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationIdentification";
 			definition = "Information used to identify the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time of creation of the extension.
 	 * <p>
@@ -141,17 +142,18 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Date and time of creation of the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CreationDateTime = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCreationDateTime = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time of creation of the extension.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
 	/**
 	 * Identifies the account servicing institution.
 	 * <p>
@@ -175,17 +177,18 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Identifies the account servicing institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identifies the account servicing institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	protected List<AccountAndParties2> accountAndParties;
 	/**
 	 * Requested account and its owners.
 	 * <p>
@@ -209,7 +212,7 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Requested account and its owners."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountAndParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountAndParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctAndPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,33 +220,6 @@ public class InformationResponseSD1V01 {
 			definition = "Requested account and its owners.";
 			minOccurs = 1;
 			complexType_lazy = () -> AccountAndParties2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "supl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "027"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "supl";
-			messageFunctionality = "027";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -257,11 +233,50 @@ public class InformationResponseSD1V01 {
 				rootElement = "Document";
 				xmlTag = "InfRspnSD1";
 				businessArea_lazy = () -> SupplementaryDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.InformationResponseSD1V01.InvestigationIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.CreationDateTime,
-						com.tools20022.repository.area.supl.InformationResponseSD1V01.AccountServicerIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.AccountAndParties);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.supl.InformationResponseSD1V01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.InformationResponseSD1V01.mmInvestigationIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.mmCreationDateTime,
+						com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountServicerIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountAndParties);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "supl";
+						messageFunctionality = "027";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getInvestigationIdentification() {
+		return investigationIdentification;
+	}
+
+	public void setInvestigationIdentification(Max35Text investigationIdentification) {
+		this.investigationIdentification = investigationIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
+		return accountServicerIdentification;
+	}
+
+	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
+		this.accountServicerIdentification = accountServicerIdentification;
+	}
+
+	public List<AccountAndParties2> getAccountAndParties() {
+		return accountAndParties;
+	}
+
+	public void setAccountAndParties(List<AccountAndParties2> accountAndParties) {
+		this.accountAndParties = accountAndParties;
 	}
 }

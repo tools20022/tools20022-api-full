@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PercentagePrice1#PercentagePriceType
- * PercentagePrice1.PercentagePriceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PercentagePrice1#PriceValue
- * PercentagePrice1.PriceValue}</li>
+ * {@linkplain com.tools20022.repository.msg.PercentagePrice1#mmPercentagePriceType
+ * PercentagePrice1.mmPercentagePriceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PercentagePrice1#mmPriceValue
+ * PercentagePrice1.mmPriceValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PercentagePrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceRateType3Code percentagePriceType;
 	/**
 	 * Specifies the type of percentage price.
 	 * <p>
@@ -75,8 +76,8 @@ public class PercentagePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#TypeOfRate
-	 * SecuritiesPricing.TypeOfRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfRate
+	 * SecuritiesPricing.mmTypeOfRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class PercentagePrice1 {
 	 * definition} = "Specifies the type of percentage price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentagePriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentagePriceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfRate;
 			componentContext_lazy = () -> PercentagePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.TypeOfRate;
 			isDerived = false;
 			xmlTag = "PctgPricTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePriceType";
 			definition = "Specifies the type of percentage price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceRateType3Code.mmObject();
 		}
 	};
+	protected PercentageRate priceValue;
 	/**
 	 * Specifies the value of price.
 	 * <p>
@@ -122,8 +124,8 @@ public class PercentagePrice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +144,17 @@ public class PercentagePrice1 {
 	 * definition} = "Specifies the value of price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PercentagePrice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "PricVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Specifies the value of price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class PercentagePrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentagePrice1.PercentagePriceType, com.tools20022.repository.msg.PercentagePrice1.PriceValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentagePrice1.mmPercentagePriceType, com.tools20022.repository.msg.PercentagePrice1.mmPriceValue);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PercentagePrice1";
 				definition = "Price expressed as a percentage price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceRateType3Code getPercentagePriceType() {
+		return percentagePriceType;
+	}
+
+	public void setPercentagePriceType(PriceRateType3Code percentagePriceType) {
+		this.percentagePriceType = percentagePriceType;
+	}
+
+	public PercentageRate getPriceValue() {
+		return priceValue;
+	}
+
+	public void setPriceValue(PercentageRate priceValue) {
+		this.priceValue = priceValue;
 	}
 }

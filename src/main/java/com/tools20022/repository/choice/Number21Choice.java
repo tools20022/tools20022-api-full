@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Number21Choice#NumberIdentification
- * Number21Choice.NumberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Number21Choice#Proprietary
- * Number21Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Number21Choice#mmNumberIdentification
+ * Number21Choice.mmNumberIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Number21Choice#mmProprietary
+ * Number21Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Number21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4NumericText numberIdentification;
 	/**
 	 * Number of maximum 4 numeric text.
 	 * <p>
@@ -86,7 +88,7 @@ public class Number21Choice {
 	 * definition} = "Number of maximum 4 numeric text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number21Choice.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class Number21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberIdentification";
 			definition = "Number of maximum 4 numeric text.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4NumericText.mmObject();
 		}
 	};
+	protected GenericIdentification29 proprietary;
 	/**
 	 * Number of maximum 35 text, with the possibility to provide an issuer for
 	 * the number identification.
@@ -130,7 +133,7 @@ public class Number21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number21Choice.mmObject();
 			isDerived = false;
@@ -138,8 +141,8 @@ public class Number21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Number of maximum 35 text, with the possibility to provide an issuer for the number identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
 		}
 	};
@@ -147,13 +150,29 @@ public class Number21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number21Choice.NumberIdentification, com.tools20022.repository.choice.Number21Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number21Choice.mmNumberIdentification, com.tools20022.repository.choice.Number21Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Number21Choice";
 				definition = "Choice number format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4NumericText getNumberIdentification() {
+		return numberIdentification;
+	}
+
+	public void setNumberIdentification(Max4NumericText numberIdentification) {
+		this.numberIdentification = numberIdentification;
+	}
+
+	public GenericIdentification29 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification29 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

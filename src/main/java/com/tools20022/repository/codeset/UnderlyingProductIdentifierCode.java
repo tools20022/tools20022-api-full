@@ -31,17 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeForward
- * UnderlyingProductIdentifierCode.ForeignExchangeForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeForward
+ * UnderlyingProductIdentifierCode.mmForeignExchangeForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeNonDeliverableForward
- * UnderlyingProductIdentifierCode.ForeignExchangeNonDeliverableForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeNonDeliverableForward
+ * UnderlyingProductIdentifierCode.mmForeignExchangeNonDeliverableForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeSpot
- * UnderlyingProductIdentifierCode.ForeignExchangeSpot}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeSpot
+ * UnderlyingProductIdentifierCode.mmForeignExchangeSpot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeSWAP
- * UnderlyingProductIdentifierCode.ForeignExchangeSWAP}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeSWAP
+ * UnderlyingProductIdentifierCode.mmForeignExchangeSWAP}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +101,7 @@ public class UnderlyingProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchangeForward = new MMCode() {
+	public static final MMCode mmForeignExchangeForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeForward";
@@ -134,7 +134,7 @@ public class UnderlyingProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchangeNonDeliverableForward = new MMCode() {
+	public static final MMCode mmForeignExchangeNonDeliverableForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeNonDeliverableForward";
@@ -165,7 +165,7 @@ public class UnderlyingProductIdentifierCode {
 	 * "Underlying product type of the transaction is Foreign Exchange Spot."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchangeSpot = new MMCode() {
+	public static final MMCode mmForeignExchangeSpot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeSpot";
@@ -196,7 +196,7 @@ public class UnderlyingProductIdentifierCode {
 	 * "Underlying product type of the transaction is a Foreign Exchange SWAP."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchangeSWAP = new MMCode() {
+	public static final MMCode mmForeignExchangeSWAP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeSWAP";
@@ -209,14 +209,14 @@ public class UnderlyingProductIdentifierCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FORW");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingProductIdentifierCode";
 				definition = "Indicates the underlying product type for reporting to trade repositories. These product codes must be in line with the ISDA Product Taxonomy.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeForward,
-						com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeNonDeliverableForward, com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeSpot,
-						com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeSWAP);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmForeignExchangeForward,
+						com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmForeignExchangeNonDeliverableForward, com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmForeignExchangeSpot,
+						com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmForeignExchangeSWAP);
 				derivation_lazy = () -> Arrays.asList(UnderlyingProductIdentifier1Code.mmObject());
 			}
 		});

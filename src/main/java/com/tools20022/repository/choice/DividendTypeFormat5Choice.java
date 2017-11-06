@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DividendTypeFormat5Choice#Code
- * DividendTypeFormat5Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.DividendTypeFormat5Choice#mmCode
+ * DividendTypeFormat5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DividendTypeFormat5Choice#Proprietary
- * DividendTypeFormat5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.DividendTypeFormat5Choice#mmProprietary
+ * DividendTypeFormat5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DividendTypeFormat5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionFrequencyType3Code code;
 	/**
 	 * Standard code to specify the frequency of the corporate action event.
 	 * <p>
@@ -90,8 +91,8 @@ public class DividendTypeFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#Type Dividend.Type}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmType
+	 * Dividend.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,33 +114,34 @@ public class DividendTypeFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat9Choice#Code
-	 * DividendTypeFormat9Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat9Choice#mmCode
+	 * DividendTypeFormat9Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat3Choice#Code
-	 * DividendTypeFormat3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat3Choice#mmCode
+	 * DividendTypeFormat3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmType;
 			componentContext_lazy = () -> DividendTypeFormat5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.Type;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the frequency of the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat3Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DividendTypeFormat9Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DividendTypeFormat9Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat3Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionFrequencyType3Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the frequency of the corporate action
 	 * event.
@@ -153,8 +155,8 @@ public class DividendTypeFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#Type Dividend.Type}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmType
+	 * Dividend.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,48 +179,64 @@ public class DividendTypeFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat9Choice#Proprietary
-	 * DividendTypeFormat9Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat9Choice#mmProprietary
+	 * DividendTypeFormat9Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat3Choice#Proprietary
-	 * DividendTypeFormat3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.DividendTypeFormat3Choice#mmProprietary
+	 * DividendTypeFormat3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmType;
 			componentContext_lazy = () -> DividendTypeFormat5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.Type;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the frequency of the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat3Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DividendTypeFormat9Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DividendTypeFormat9Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat3Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DividendTypeFormat5Choice.Code, com.tools20022.repository.choice.DividendTypeFormat5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DividendTypeFormat5Choice.mmCode, com.tools20022.repository.choice.DividendTypeFormat5Choice.mmProprietary);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DividendTypeFormat5Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of dividend.";
-				previousVersion_lazy = () -> DividendTypeFormat3Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(DividendTypeFormat9Choice.mmObject());
+				previousVersion_lazy = () -> DividendTypeFormat3Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionFrequencyType3Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionFrequencyType3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

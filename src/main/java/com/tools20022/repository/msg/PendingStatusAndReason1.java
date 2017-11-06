@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.SettlementStatus9Choice;
 import com.tools20022.repository.entity.PaymentStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of the intra-balance movement status type.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason1#ProcessingStatus
- * PendingStatusAndReason1.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason1#mmProcessingStatus
+ * PendingStatusAndReason1.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason1#SettlementStatus
- * PendingStatusAndReason1.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason1#mmSettlementStatus
+ * PendingStatusAndReason1.mmSettlementStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ProcessingStatus34Choice> processingStatus;
 	/**
 	 * Provides details on the processing status of the transaction.
 	 * <p>
@@ -75,8 +77,8 @@ public class PendingStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +98,21 @@ public class PendingStatusAndReason1 {
 	 * "Provides details on the processing status of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> PendingStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
 			minOccurs = 0;
-			type_lazy = () -> ProcessingStatus34Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> ProcessingStatus34Choice.mmObject();
 		}
 	};
+	protected List<SettlementStatus9Choice> settlementStatus;
 	/**
 	 * Provides the settlement status of a transaction
 	 * <p>
@@ -122,8 +125,8 @@ public class PendingStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#SettlementStatus
-	 * Status.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
+	 * Status.mmSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,32 +145,48 @@ public class PendingStatusAndReason1 {
 	 * definition} = "Provides the settlement status of a transaction"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
 			componentContext_lazy = () -> PendingStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.SettlementStatus;
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the settlement status of a transaction";
 			minOccurs = 0;
-			type_lazy = () -> SettlementStatus9Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SettlementStatus9Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusAndReason1.ProcessingStatus, com.tools20022.repository.msg.PendingStatusAndReason1.SettlementStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusAndReason1.mmProcessingStatus, com.tools20022.repository.msg.PendingStatusAndReason1.mmSettlementStatus);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PendingStatusAndReason1";
 				definition = "Choice of the intra-balance movement status type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ProcessingStatus34Choice> getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(List<ProcessingStatus34Choice> processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public List<SettlementStatus9Choice> getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(List<SettlementStatus9Choice> settlementStatus) {
+		this.settlementStatus = settlementStatus;
 	}
 }

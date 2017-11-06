@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation2#Presenter
- * Presentation2.Presenter}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation2#mmPresenter
+ * Presentation2.mmPresenter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Presentation2#BeneficiaryPresentationDate
- * Presentation2.BeneficiaryPresentationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.Presentation2#mmBeneficiaryPresentationDate
+ * Presentation2.mmBeneficiaryPresentationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Presentation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 presenter;
 	/**
 	 * Party, other than beneficiary, forwarding the documents.
 	 * <p>
@@ -93,21 +94,22 @@ public class Presentation2 {
 	 * definition} = "Party, other than beneficiary, forwarding the documents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Presenter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPresenter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Presentation2.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingPresenter.mmObject();
+			componentContext_lazy = () -> Presentation2.mmObject();
 			isDerived = false;
 			xmlTag = "Presntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Presenter";
 			definition = "Party, other than beneficiary, forwarding the documents.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected ISODate beneficiaryPresentationDate;
 	/**
 	 * Date on which the beneficiary presented the demand.
 	 * <p>
@@ -120,8 +122,8 @@ public class Presentation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#PresentationDate
-	 * Presentation.PresentationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmPresentationDate
+	 * Presentation.mmPresentationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,17 +141,17 @@ public class Presentation2 {
 	 * definition} = "Date on which the beneficiary presented the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficiaryPresentationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficiaryPresentationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmPresentationDate;
 			componentContext_lazy = () -> Presentation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.PresentationDate;
 			isDerived = false;
 			xmlTag = "BnfcryPresntnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryPresentationDate";
 			definition = "Date on which the beneficiary presented the demand.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -157,14 +159,30 @@ public class Presentation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation2.Presenter, com.tools20022.repository.msg.Presentation2.BeneficiaryPresentationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation2.mmPresenter, com.tools20022.repository.msg.Presentation2.mmBeneficiaryPresentationDate);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Presentation2";
 				definition = "Information for the presentation of documents.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getPresenter() {
+		return presenter;
+	}
+
+	public void setPresenter(com.tools20022.repository.msg.PartyIdentification43 presenter) {
+		this.presenter = presenter;
+	}
+
+	public ISODate getBeneficiaryPresentationDate() {
+		return beneficiaryPresentationDate;
+	}
+
+	public void setBeneficiaryPresentationDate(ISODate beneficiaryPresentationDate) {
+		this.beneficiaryPresentationDate = beneficiaryPresentationDate;
 	}
 }

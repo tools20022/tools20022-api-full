@@ -40,19 +40,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#VesselName
- * TransportBySea.VesselName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#VoyageNumber
- * TransportBySea.VoyageNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#mmVesselName
+ * TransportBySea.mmVesselName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransportBySea#ChartererName
- * TransportBySea.ChartererName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#MasterName
- * TransportBySea.MasterName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#OwnerName
- * TransportBySea.OwnerName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#IMONumber
- * TransportBySea.IMONumber}</li>
+ * {@linkplain com.tools20022.repository.entity.TransportBySea#mmVoyageNumber
+ * TransportBySea.mmVoyageNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransportBySea#mmChartererName
+ * TransportBySea.mmChartererName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#mmMasterName
+ * TransportBySea.mmMasterName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#mmOwnerName
+ * TransportBySea.mmOwnerName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransportBySea#mmIMONumber
+ * TransportBySea.mmIMONumber}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,29 +61,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportBySea
- * SingleTransport1.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportBySea
+ * SingleTransport1.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport4#TransportBySea
- * SingleTransport4.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport4#mmTransportBySea
+ * SingleTransport4.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport2#TransportBySea
- * SingleTransport2.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport2#mmTransportBySea
+ * SingleTransport2.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport5#TransportBySea
- * SingleTransport5.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport5#mmTransportBySea
+ * SingleTransport5.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport3#TransportBySea
- * SingleTransport3.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport3#mmTransportBySea
+ * SingleTransport3.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport6#TransportBySea
- * SingleTransport6.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport6#mmTransportBySea
+ * SingleTransport6.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport7#TransportBySea
- * SingleTransport7.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport7#mmTransportBySea
+ * SingleTransport7.mmTransportBySea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport8#TransportBySea
- * SingleTransport8.TransportBySea}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport8#mmTransportBySea
+ * SingleTransport8.mmTransportBySea}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -111,8 +112,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,6 +127,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportBySea extends Transport {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text vesselName;
 	/**
 	 * Name of a vessel.
 	 * <p>
@@ -135,27 +137,31 @@ public class TransportBySea extends Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransportBySea2#VesselName
-	 * TransportBySea2.VesselName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#VesselName
-	 * MultimodalTransport2.VesselName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransportBySea4#VesselName
-	 * TransportBySea4.VesselName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransportBySea5#VesselName
-	 * TransportBySea5.VesselName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransportBySea6#VesselName
-	 * TransportBySea6.VesselName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportBySea
 	 * TransportBySea}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea2#mmVesselName
+	 * TransportBySea2.mmVesselName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmVesselName
+	 * MultimodalTransport2.mmVesselName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea4#mmVesselName
+	 * TransportBySea4.mmVesselName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmVesselName
+	 * TransportBySea5.mmVesselName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea6#mmVesselName
+	 * TransportBySea6.mmVesselName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -167,20 +173,21 @@ public class TransportBySea extends Transport {
 	 * definition} = "Name of a vessel."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute VesselName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmVesselName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea2.VesselName, com.tools20022.repository.msg.MultimodalTransport2.VesselName, com.tools20022.repository.msg.TransportBySea4.VesselName,
-					com.tools20022.repository.msg.TransportBySea5.VesselName, com.tools20022.repository.msg.TransportBySea6.VesselName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea2.mmVesselName, com.tools20022.repository.msg.MultimodalTransport2.mmVesselName, com.tools20022.repository.msg.TransportBySea4.mmVesselName,
+					com.tools20022.repository.msg.TransportBySea5.mmVesselName, com.tools20022.repository.msg.TransportBySea6.mmVesselName);
 			elementContext_lazy = () -> TransportBySea.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VesselName";
 			definition = "Name of a vessel.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text voyageNumber;
 	/**
 	 * Identifies the voyage.
 	 * <p>
@@ -190,19 +197,19 @@ public class TransportBySea extends Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#VoyageNumber
-	 * TransportBySea5.VoyageNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportBySea
 	 * TransportBySea}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmVoyageNumber
+	 * TransportBySea5.mmVoyageNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -214,19 +221,20 @@ public class TransportBySea extends Transport {
 	 * definition} = "Identifies the voyage."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute VoyageNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmVoyageNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.VoyageNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.mmVoyageNumber);
 			elementContext_lazy = () -> TransportBySea.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VoyageNumber";
 			definition = "Identifies the voyage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max70Text chartererName;
 	/**
 	 * Name of the company or individual that acts in the capacity of charterer.
 	 * <p>
@@ -236,19 +244,19 @@ public class TransportBySea extends Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#ChartererName
-	 * TransportBySea5.ChartererName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportBySea
 	 * TransportBySea}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmChartererName
+	 * TransportBySea5.mmChartererName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -262,19 +270,20 @@ public class TransportBySea extends Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ChartererName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmChartererName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.ChartererName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.mmChartererName);
 			elementContext_lazy = () -> TransportBySea.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChartererName";
 			definition = "Name of the company or individual that acts in the capacity of charterer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max70Text masterName;
 	/**
 	 * Name of the master or captain of a vessel.
 	 * <p>
@@ -284,18 +293,19 @@ public class TransportBySea extends Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransportBySea5#MasterName
-	 * TransportBySea5.MasterName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportBySea
 	 * TransportBySea}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmMasterName
+	 * TransportBySea5.mmMasterName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -307,19 +317,20 @@ public class TransportBySea extends Transport {
 	 * definition} = "Name of the master or captain of a vessel."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MasterName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMasterName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.MasterName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.mmMasterName);
 			elementContext_lazy = () -> TransportBySea.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MasterName";
 			definition = "Name of the master or captain of a vessel.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max70Text ownerName;
 	/**
 	 * Name of the company or individual that acts in the capacity of owner.
 	 * <p>
@@ -329,18 +340,19 @@ public class TransportBySea extends Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransportBySea5#OwnerName
-	 * TransportBySea5.OwnerName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportBySea
 	 * TransportBySea}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmOwnerName
+	 * TransportBySea5.mmOwnerName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -353,19 +365,20 @@ public class TransportBySea extends Transport {
 	 * "Name of the company or individual that acts in the capacity of owner."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OwnerName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOwnerName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.OwnerName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.mmOwnerName);
 			elementContext_lazy = () -> TransportBySea.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OwnerName";
 			definition = "Name of the company or individual that acts in the capacity of owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Exact7NumericText iMONumber;
 	/**
 	 * International Maritime Organisation identification of a ship. This is a
 	 * unique seven digit number that is assigned to vessels and aids banks in
@@ -379,18 +392,19 @@ public class TransportBySea extends Transport {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Exact7NumericText
 	 * Exact7NumericText}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransportBySea5#IMONumber
-	 * TransportBySea5.IMONumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransportBySea
 	 * TransportBySea}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmIMONumber
+	 * TransportBySea5.mmIMONumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -404,16 +418,16 @@ public class TransportBySea extends Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute IMONumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIMONumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.IMONumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.mmIMONumber);
 			elementContext_lazy = () -> TransportBySea.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IMONumber";
 			definition = "International Maritime Organisation identification of a ship. This is a unique seven digit number that is assigned to vessels and aids banks in determining whether a vessel is subject to an order that would not permit a bank to handle a certain transaction under local or international laws.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact7NumericText.mmObject();
 		}
 	};
@@ -421,20 +435,69 @@ public class TransportBySea extends Transport {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportBySea";
 				definition = "Information related for the transportation of goods by sea.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.TransportBySea, com.tools20022.repository.msg.SingleTransport4.TransportBySea,
-						com.tools20022.repository.msg.SingleTransport2.TransportBySea, com.tools20022.repository.msg.SingleTransport5.TransportBySea, com.tools20022.repository.msg.SingleTransport3.TransportBySea,
-						com.tools20022.repository.msg.SingleTransport6.TransportBySea, com.tools20022.repository.msg.SingleTransport7.TransportBySea, com.tools20022.repository.msg.SingleTransport8.TransportBySea);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.mmTransportBySea, com.tools20022.repository.msg.SingleTransport4.mmTransportBySea,
+						com.tools20022.repository.msg.SingleTransport2.mmTransportBySea, com.tools20022.repository.msg.SingleTransport5.mmTransportBySea, com.tools20022.repository.msg.SingleTransport3.mmTransportBySea,
+						com.tools20022.repository.msg.SingleTransport6.mmTransportBySea, com.tools20022.repository.msg.SingleTransport7.mmTransportBySea, com.tools20022.repository.msg.SingleTransport8.mmTransportBySea);
 				superType_lazy = () -> Transport.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportBySea.VesselName, com.tools20022.repository.entity.TransportBySea.VoyageNumber, com.tools20022.repository.entity.TransportBySea.ChartererName,
-						com.tools20022.repository.entity.TransportBySea.MasterName, com.tools20022.repository.entity.TransportBySea.OwnerName, com.tools20022.repository.entity.TransportBySea.IMONumber);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportBySea.mmVesselName, com.tools20022.repository.entity.TransportBySea.mmVoyageNumber,
+						com.tools20022.repository.entity.TransportBySea.mmChartererName, com.tools20022.repository.entity.TransportBySea.mmMasterName, com.tools20022.repository.entity.TransportBySea.mmOwnerName,
+						com.tools20022.repository.entity.TransportBySea.mmIMONumber);
 				derivationComponent_lazy = () -> Arrays.asList(TransportBySea1.mmObject(), TransportBySea3.mmObject(), TransportBySea2.mmObject(), TransportBySea4.mmObject(), TransportBySea5.mmObject(), ShipmentDate1Choice.mmObject(),
 						TransportBySea6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getVesselName() {
+		return vesselName;
+	}
+
+	public void setVesselName(Max35Text vesselName) {
+		this.vesselName = vesselName;
+	}
+
+	public Max35Text getVoyageNumber() {
+		return voyageNumber;
+	}
+
+	public void setVoyageNumber(Max35Text voyageNumber) {
+		this.voyageNumber = voyageNumber;
+	}
+
+	public Max70Text getChartererName() {
+		return chartererName;
+	}
+
+	public void setChartererName(Max70Text chartererName) {
+		this.chartererName = chartererName;
+	}
+
+	public Max70Text getMasterName() {
+		return masterName;
+	}
+
+	public void setMasterName(Max70Text masterName) {
+		this.masterName = masterName;
+	}
+
+	public Max70Text getOwnerName() {
+		return ownerName;
+	}
+
+	public void setOwnerName(Max70Text ownerName) {
+		this.ownerName = ownerName;
+	}
+
+	public Exact7NumericText getIMONumber() {
+		return iMONumber;
+	}
+
+	public void setIMONumber(Exact7NumericText iMONumber) {
+		this.iMONumber = iMONumber;
 	}
 }

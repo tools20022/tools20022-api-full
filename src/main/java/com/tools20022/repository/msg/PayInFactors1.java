@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CashEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Factors used in the calculation of the pay in schedule.
@@ -34,10 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayInFactors1#AggregateShortPositionLimit
- * PayInFactors1.AggregateShortPositionLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PayInFactors1#CurrencyFactors
- * PayInFactors1.CurrencyFactors}</li>
+ * {@linkplain com.tools20022.repository.msg.PayInFactors1#mmAggregateShortPositionLimit
+ * PayInFactors1.mmAggregateShortPositionLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PayInFactors1#mmCurrencyFactors
+ * PayInFactors1.mmCurrencyFactors}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#PayInFactors
- * PayInScheduleV03.PayInFactors}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmPayInFactors
+ * PayInScheduleV03.mmPayInFactors}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayInFactors1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount aggregateShortPositionLimit;
 	/**
 	 * Maximum allowed sum of short positions in all currencies, converted to
 	 * base currency, during settlement.
@@ -99,7 +102,7 @@ public class PayInFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AggregateShortPositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAggregateShortPositionLimit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PayInFactors1.mmObject();
 			isDerived = false;
@@ -107,11 +110,12 @@ public class PayInFactors1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateShortPositionLimit";
 			definition = "Maximum allowed sum of short positions in all currencies, converted to base currency, during settlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CurrencyFactors1> currencyFactors;
 	/**
 	 * Currency specific pay-in factors.
 	 * <p>
@@ -139,7 +143,7 @@ public class PayInFactors1 {
 	 * definition} = "Currency specific pay-in factors."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyFactors = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyFactors = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PayInFactors1.mmObject();
 			isDerived = false;
@@ -148,22 +152,38 @@ public class PayInFactors1 {
 			name = "CurrencyFactors";
 			definition = "Currency specific pay-in factors.";
 			minOccurs = 1;
-			complexType_lazy = () -> CurrencyFactors1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayInFactors1.AggregateShortPositionLimit, com.tools20022.repository.msg.PayInFactors1.CurrencyFactors);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayInFactors1.mmAggregateShortPositionLimit, com.tools20022.repository.msg.PayInFactors1.mmCurrencyFactors);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInFactors);
 				trace_lazy = () -> CashEntry.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.PayInFactors);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PayInFactors1";
 				definition = "Factors used in the calculation of the pay in schedule.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAggregateShortPositionLimit() {
+		return aggregateShortPositionLimit;
+	}
+
+	public void setAggregateShortPositionLimit(ActiveCurrencyAndAmount aggregateShortPositionLimit) {
+		this.aggregateShortPositionLimit = aggregateShortPositionLimit;
+	}
+
+	public List<CurrencyFactors1> getCurrencyFactors() {
+		return currencyFactors;
+	}
+
+	public void setCurrencyFactors(List<com.tools20022.repository.msg.CurrencyFactors1> currencyFactors) {
+		this.currencyFactors = currencyFactors;
 	}
 }

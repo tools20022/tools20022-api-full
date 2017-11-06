@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#AES128
- * CryptographicKeyType3Code.AES128}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmAES128
+ * CryptographicKeyType3Code.mmAES128}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#DES112
- * CryptographicKeyType3Code.DES112}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmDES112
+ * CryptographicKeyType3Code.mmDES112}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#DUKPT2009
- * CryptographicKeyType3Code.DUKPT2009}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmDUKPT2009
+ * CryptographicKeyType3Code.mmDUKPT2009}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#AES192
- * CryptographicKeyType3Code.AES192}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmAES192
+ * CryptographicKeyType3Code.mmAES192}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#AES256
- * CryptographicKeyType3Code.AES256}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmAES256
+ * CryptographicKeyType3Code.mmAES256}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#DES168
- * CryptographicKeyType3Code.DES168}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmDES168
+ * CryptographicKeyType3Code.mmDES168}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,15 +98,15 @@ public class CryptographicKeyType3Code extends CryptographicKeyTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#AES128
-	 * CryptographicKeyType2Code.AES128}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#mmAES128
+	 * CryptographicKeyType2Code.mmAES128}</li>
 	 * </ul>
 	 */
-	public static final MMCode AES128 = new MMCode() {
+	public static final MMCode mmAES128 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.AES128;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.mmAES128;
 			owner_lazy = () -> CryptographicKeyType3Code.mmObject();
 		}
 	};
@@ -127,15 +127,15 @@ public class CryptographicKeyType3Code extends CryptographicKeyTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#DES112
-	 * CryptographicKeyType2Code.DES112}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#mmDES112
+	 * CryptographicKeyType2Code.mmDES112}</li>
 	 * </ul>
 	 */
-	public static final MMCode DES112 = new MMCode() {
+	public static final MMCode mmDES112 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.DES112;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.mmDES112;
 			owner_lazy = () -> CryptographicKeyType3Code.mmObject();
 		}
 	};
@@ -156,15 +156,15 @@ public class CryptographicKeyType3Code extends CryptographicKeyTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#DUKPT2009
-	 * CryptographicKeyType2Code.DUKPT2009}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#mmDUKPT2009
+	 * CryptographicKeyType2Code.mmDUKPT2009}</li>
 	 * </ul>
 	 */
-	public static final MMCode DUKPT2009 = new MMCode() {
+	public static final MMCode mmDUKPT2009 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT2009";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.DUKPT2009;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.mmDUKPT2009;
 			owner_lazy = () -> CryptographicKeyType3Code.mmObject();
 		}
 	};
@@ -184,7 +184,7 @@ public class CryptographicKeyType3Code extends CryptographicKeyTypeCode {
 	 * name} = "AES192"</li>
 	 * </ul>
 	 */
-	public static final MMCode AES192 = new MMCode() {
+	public static final MMCode mmAES192 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES192";
@@ -207,7 +207,7 @@ public class CryptographicKeyType3Code extends CryptographicKeyTypeCode {
 	 * name} = "AES256"</li>
 	 * </ul>
 	 */
-	public static final MMCode AES256 = new MMCode() {
+	public static final MMCode mmAES256 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES256";
@@ -230,7 +230,7 @@ public class CryptographicKeyType3Code extends CryptographicKeyTypeCode {
 	 * name} = "DES168"</li>
 	 * </ul>
 	 */
-	public static final MMCode DES168 = new MMCode() {
+	public static final MMCode mmDES168 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES168";
@@ -241,15 +241,15 @@ public class CryptographicKeyType3Code extends CryptographicKeyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AES2");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType3Code";
 				definition = "Codes for qualifying the type of cryptographic keys.";
 				previousVersion_lazy = () -> CryptographicKeyType2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType3Code.AES128, com.tools20022.repository.codeset.CryptographicKeyType3Code.DES112,
-						com.tools20022.repository.codeset.CryptographicKeyType3Code.DUKPT2009, com.tools20022.repository.codeset.CryptographicKeyType3Code.AES192, com.tools20022.repository.codeset.CryptographicKeyType3Code.AES256,
-						com.tools20022.repository.codeset.CryptographicKeyType3Code.DES168);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType3Code.mmAES128, com.tools20022.repository.codeset.CryptographicKeyType3Code.mmDES112,
+						com.tools20022.repository.codeset.CryptographicKeyType3Code.mmDUKPT2009, com.tools20022.repository.codeset.CryptographicKeyType3Code.mmAES192, com.tools20022.repository.codeset.CryptographicKeyType3Code.mmAES256,
+						com.tools20022.repository.codeset.CryptographicKeyType3Code.mmDES168);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
 			}
 		});

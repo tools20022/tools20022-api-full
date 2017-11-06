@@ -40,8 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,12 +61,12 @@ public class SignatureEnvelopeReference {
 	final static public MMExternalSchema mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMExternalSchema() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignatureEnvelopeReference";
 				definition = "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/";
-				processContent = com.tools20022.metamodel.MMProcessContent.STRICT;
 				namespaceList = Arrays.asList("http://www.w3.org/2000/09/xmldsig#");
+				processContent = com.tools20022.metamodel.MMProcessContent.STRICT;
 			}
 		});
 		return mmObject_lazy.get();

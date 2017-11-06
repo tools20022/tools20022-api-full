@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus2Code#PartiallyAccepted
- * TransactionGroupStatus2Code.PartiallyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus2Code#mmPartiallyAccepted
+ * TransactionGroupStatus2Code.mmPartiallyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus2Code#Rejected
- * TransactionGroupStatus2Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus2Code#mmRejected
+ * TransactionGroupStatus2Code.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class TransactionGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "PartiallyAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyAccepted = new MMCode() {
+	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
@@ -104,7 +104,7 @@ public class TransactionGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -115,12 +115,12 @@ public class TransactionGroupStatus2Code extends PaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PART");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionGroupStatus2Code";
 				definition = "Specifies the status of a group of payment transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionGroupStatus2Code.PartiallyAccepted, com.tools20022.repository.codeset.TransactionGroupStatus2Code.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionGroupStatus2Code.mmPartiallyAccepted, com.tools20022.repository.codeset.TransactionGroupStatus2Code.mmRejected);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
 			}
 		});

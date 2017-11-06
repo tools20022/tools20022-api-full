@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevel2Code#SingleEuroPaymentsArea
- * ServiceLevel2Code.SingleEuroPaymentsArea}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevel2Code#mmSingleEuroPaymentsArea
+ * ServiceLevel2Code.mmSingleEuroPaymentsArea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevel2Code#SameDayValue
- * ServiceLevel2Code.SameDayValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevel2Code#mmSameDayValue
+ * ServiceLevel2Code.mmSameDayValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class ServiceLevel2Code extends ServiceLevelCode {
 	 * name} = "SingleEuroPaymentsArea"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleEuroPaymentsArea = new MMCode() {
+	public static final MMCode mmSingleEuroPaymentsArea = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleEuroPaymentsArea";
@@ -105,7 +105,7 @@ public class ServiceLevel2Code extends ServiceLevelCode {
 	 * name} = "SameDayValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode SameDayValue = new MMCode() {
+	public static final MMCode mmSameDayValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameDayValue";
@@ -116,12 +116,12 @@ public class ServiceLevel2Code extends ServiceLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEPA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel2Code";
 				definition = "Specifies the pre-agreed level of service between the parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel2Code.SingleEuroPaymentsArea, com.tools20022.repository.codeset.ServiceLevel2Code.SameDayValue);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel2Code.mmSingleEuroPaymentsArea, com.tools20022.repository.codeset.ServiceLevel2Code.mmSameDayValue);
 				trace_lazy = () -> ServiceLevelCode.mmObject();
 			}
 		});

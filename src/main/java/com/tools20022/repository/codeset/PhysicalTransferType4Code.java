@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#Physical
- * PhysicalTransferType4Code.Physical}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#mmPhysical
+ * PhysicalTransferType4Code.mmPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#Optional
- * PhysicalTransferType4Code.Optional}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#mmOptional
+ * PhysicalTransferType4Code.mmOptional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#Cash
- * PhysicalTransferType4Code.Cash}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#mmCash
+ * PhysicalTransferType4Code.mmCash}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +80,7 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 * name} = "Physical"</li>
 	 * </ul>
 	 */
-	public static final MMCode Physical = new MMCode() {
+	public static final MMCode mmPhysical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
@@ -103,7 +103,7 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 * name} = "Optional"</li>
 	 * </ul>
 	 */
-	public static final MMCode Optional = new MMCode() {
+	public static final MMCode mmOptional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
@@ -126,7 +126,7 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -137,12 +137,12 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PhysicalTransferType4Code";
 				definition = "Specifies the asset delivery type when the financial instrument is settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferType4Code.Physical, com.tools20022.repository.codeset.PhysicalTransferType4Code.Optional,
-						com.tools20022.repository.codeset.PhysicalTransferType4Code.Cash);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferType4Code.mmPhysical, com.tools20022.repository.codeset.PhysicalTransferType4Code.mmOptional,
+						com.tools20022.repository.codeset.PhysicalTransferType4Code.mmCash);
 				trace_lazy = () -> PhysicalTransferTypeV2Code.mmObject();
 			}
 		});

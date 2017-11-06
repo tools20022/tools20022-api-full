@@ -35,10 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#CurrentYear
- * ISAYearsOfIssue.CurrentYear}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#PreviousYears
- * ISAYearsOfIssue.PreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#mmCurrentYear
+ * ISAYearsOfIssue.mmCurrentYear}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#mmPreviousYears
+ * ISAYearsOfIssue.mmPreviousYears}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ISAYearsOfIssue {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISAType1Code currentYear;
 	/**
 	 * ISA that was issued during the current fiscal year.
 	 * <p>
@@ -74,8 +76,8 @@ public class ISAYearsOfIssue {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#CurrentYearISAType
-	 * PortfolioTransfer.CurrentYearISAType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCurrentYearISAType
+	 * PortfolioTransfer.mmCurrentYearISAType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +96,21 @@ public class ISAYearsOfIssue {
 	 * definition} = "ISA that was issued during the current fiscal year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentYear = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentYear = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> ISAYearsOfIssue.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.CurrentYearISAType;
 			isDerived = false;
 			xmlTag = "CurYr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYear";
 			definition = "ISA that was issued during the current fiscal year.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISAType1Code.mmObject();
 		}
 	};
+	protected PreviousYearChoice previousYears;
 	/**
 	 * Specifies the year during which the investment plan was issued.
 	 * <p>
@@ -140,33 +143,49 @@ public class ISAYearsOfIssue {
 	 * "Specifies the year during which the investment plan was issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousYears = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousYears = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISAYearsOfIssue.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> ISAYearsOfIssue.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousYears";
 			definition = "Specifies the year during which the investment plan was issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PreviousYearChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PreviousYearChoice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue.CurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue.PreviousYears);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue.mmCurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue.mmPreviousYears);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ISAYearsOfIssue";
 				definition = "Year in which the ISA plan is issued.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISAType1Code getCurrentYear() {
+		return currentYear;
+	}
+
+	public void setCurrentYear(ISAType1Code currentYear) {
+		this.currentYear = currentYear;
+	}
+
+	public PreviousYearChoice getPreviousYears() {
+		return previousYears;
+	}
+
+	public void setPreviousYears(PreviousYearChoice previousYears) {
+		this.previousYears = previousYears;
 	}
 }

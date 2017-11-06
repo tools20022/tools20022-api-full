@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ReportingPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * This is regulatory transaction reporting information from the counterparty
@@ -36,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CounterpartySideTransactionReporting1#ReportingJurisdiction
- * CounterpartySideTransactionReporting1.ReportingJurisdiction}</li>
+ * {@linkplain com.tools20022.repository.msg.CounterpartySideTransactionReporting1#mmReportingJurisdiction
+ * CounterpartySideTransactionReporting1.mmReportingJurisdiction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CounterpartySideTransactionReporting1#ReportingParty
- * CounterpartySideTransactionReporting1.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.CounterpartySideTransactionReporting1#mmReportingParty
+ * CounterpartySideTransactionReporting1.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CounterpartySideTransactionReporting1#CounterpartySideUniqueTransactionIdentifier
+ * {@linkplain com.tools20022.repository.msg.CounterpartySideTransactionReporting1#mmCounterpartySideUniqueTransactionIdentifier
  * CounterpartySideTransactionReporting1.
- * CounterpartySideUniqueTransactionIdentifier}</li>
+ * mmCounterpartySideUniqueTransactionIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CounterpartySideTransactionReporting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reportingJurisdiction;
 	/**
 	 * Specifies the supervisory party to which the trade needs to be reported.
 	 * <p>
@@ -82,8 +84,8 @@ public class CounterpartySideTransactionReporting1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +106,21 @@ public class CounterpartySideTransactionReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportingJurisdiction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportingJurisdiction = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> CounterpartySideTransactionReporting1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "RptgJursdctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingJurisdiction";
 			definition = "Specifies the supervisory party to which the trade needs to be reported.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice reportingParty;
 	/**
 	 * Identifies the party that is responsible for reporting the trade to the
 	 * trade repository.
@@ -132,8 +135,8 @@ public class CounterpartySideTransactionReporting1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +157,21 @@ public class CounterpartySideTransactionReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportingParty = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CounterpartySideTransactionReporting1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RptgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Identifies the party that is responsible for reporting the trade to the trade repository.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.UniqueTransactionIdentifier2> counterpartySideUniqueTransactionIdentifier;
 	/**
 	 * Specifies the unique transaction identifier (UTI) to be created at the
 	 * time a transaction is first executed, shared with all registered entities
@@ -186,8 +190,8 @@ public class CounterpartySideTransactionReporting1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeRelatedIdentifications
-	 * Trade.TradeRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeRelatedIdentifications
+	 * Trade.mmTradeRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,32 +212,56 @@ public class CounterpartySideTransactionReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartySideUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartySideUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> CounterpartySideTransactionReporting1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "CtrPtySdUnqTxIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideUniqueTransactionIdentifier";
 			definition = "Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI). This is the UTI from the Counterparty Side party.";
 			minOccurs = 0;
-			complexType_lazy = () -> UniqueTransactionIdentifier2.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CounterpartySideTransactionReporting1.ReportingJurisdiction, com.tools20022.repository.msg.CounterpartySideTransactionReporting1.ReportingParty,
-						com.tools20022.repository.msg.CounterpartySideTransactionReporting1.CounterpartySideUniqueTransactionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CounterpartySideTransactionReporting1.mmReportingJurisdiction, com.tools20022.repository.msg.CounterpartySideTransactionReporting1.mmReportingParty,
+						com.tools20022.repository.msg.CounterpartySideTransactionReporting1.mmCounterpartySideUniqueTransactionIdentifier);
 				trace_lazy = () -> ReportingPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CounterpartySideTransactionReporting1";
 				definition = "This is regulatory transaction reporting information from the counterparty side party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReportingJurisdiction() {
+		return reportingJurisdiction;
+	}
+
+	public void setReportingJurisdiction(Max35Text reportingJurisdiction) {
+		this.reportingJurisdiction = reportingJurisdiction;
+	}
+
+	public PartyIdentification73Choice getReportingParty() {
+		return reportingParty;
+	}
+
+	public void setReportingParty(PartyIdentification73Choice reportingParty) {
+		this.reportingParty = reportingParty;
+	}
+
+	public List<UniqueTransactionIdentifier2> getCounterpartySideUniqueTransactionIdentifier() {
+		return counterpartySideUniqueTransactionIdentifier;
+	}
+
+	public void setCounterpartySideUniqueTransactionIdentifier(List<com.tools20022.repository.msg.UniqueTransactionIdentifier2> counterpartySideUniqueTransactionIdentifier) {
+		this.counterpartySideUniqueTransactionIdentifier = counterpartySideUniqueTransactionIdentifier;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AllegementReason1Choice#Code
- * AllegementReason1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.AllegementReason1Choice#mmCode
+ * AllegementReason1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AllegementReason1Choice#Proprietary
- * AllegementReason1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AllegementReason1Choice#mmProprietary
+ * AllegementReason1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AllegementReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AllegementReason1Code code;
 	/**
 	 * Specifies the reason why the instruction has been alleged.
 	 * <p>
@@ -81,8 +82,8 @@ public class AllegementReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#AllegementReason
-	 * SecuritiesTradeStatusReason.AllegementReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmAllegementReason
+	 * SecuritiesTradeStatusReason.mmAllegementReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,25 +104,26 @@ public class AllegementReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AllegmentReason1Choice#Code
-	 * AllegmentReason1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.AllegmentReason1Choice#mmCode
+	 * AllegmentReason1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmAllegementReason;
 			componentContext_lazy = () -> AllegementReason1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.AllegementReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction has been alleged.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AllegmentReason1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AllegmentReason1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AllegementReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification38 proprietary;
 	/**
 	 * Specifies the reason why the instruction has been alleged.
 	 * <p>
@@ -135,8 +137,8 @@ public class AllegementReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#AllegementReason
-	 * SecuritiesTradeStatusReason.AllegementReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmAllegementReason
+	 * SecuritiesTradeStatusReason.mmAllegementReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,22 +159,22 @@ public class AllegementReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AllegmentReason1Choice#Proprietary
-	 * AllegmentReason1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.AllegmentReason1Choice#mmProprietary
+	 * AllegmentReason1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmAllegementReason;
 			componentContext_lazy = () -> AllegementReason1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.AllegementReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the instruction has been alleged.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AllegmentReason1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AllegmentReason1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
 		}
 	};
@@ -180,9 +182,9 @@ public class AllegementReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AllegementReason1Choice.Code, com.tools20022.repository.choice.AllegementReason1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AllegementReason1Choice.mmCode, com.tools20022.repository.choice.AllegementReason1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AllegementReason1Choice";
 				definition = "Choice of format for the allegment reason.";
@@ -190,5 +192,21 @@ public class AllegementReason1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AllegementReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(AllegementReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification38 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

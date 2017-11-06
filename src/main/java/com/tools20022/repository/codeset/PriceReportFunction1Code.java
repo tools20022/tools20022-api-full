@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#CompleteReplacementPriceReport
- * PriceReportFunction1Code.CompleteReplacementPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#mmCompleteReplacementPriceReport
+ * PriceReportFunction1Code.mmCompleteReplacementPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#NewPriceReport
- * PriceReportFunction1Code.NewPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#mmNewPriceReport
+ * PriceReportFunction1Code.mmNewPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#PartialCorrectionPriceReport
- * PriceReportFunction1Code.PartialCorrectionPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#mmPartialCorrectionPriceReport
+ * PriceReportFunction1Code.mmPartialCorrectionPriceReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 * name} = "CompleteReplacementPriceReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode CompleteReplacementPriceReport = new MMCode() {
+	public static final MMCode mmCompleteReplacementPriceReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteReplacementPriceReport";
@@ -107,7 +107,7 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 * name} = "NewPriceReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewPriceReport = new MMCode() {
+	public static final MMCode mmNewPriceReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReport";
@@ -130,7 +130,7 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 * name} = "PartialCorrectionPriceReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialCorrectionPriceReport = new MMCode() {
+	public static final MMCode mmPartialCorrectionPriceReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialCorrectionPriceReport";
@@ -141,13 +141,13 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REPL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceReportFunction1Code";
 				definition = "Specifies the function of the price report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunction1Code.CompleteReplacementPriceReport, com.tools20022.repository.codeset.PriceReportFunction1Code.NewPriceReport,
-						com.tools20022.repository.codeset.PriceReportFunction1Code.PartialCorrectionPriceReport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunction1Code.mmCompleteReplacementPriceReport, com.tools20022.repository.codeset.PriceReportFunction1Code.mmNewPriceReport,
+						com.tools20022.repository.codeset.PriceReportFunction1Code.mmPartialCorrectionPriceReport);
 				trace_lazy = () -> PriceReportFunctionCode.mmObject();
 			}
 		});

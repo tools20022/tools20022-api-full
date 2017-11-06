@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * DepositTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DepositType1Code#FixedTerm
- * DepositType1Code.FixedTerm}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DepositType1Code#Call
- * DepositType1Code.Call}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DepositType1Code#mmFixedTerm
+ * DepositType1Code.mmFixedTerm}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DepositType1Code#mmCall
+ * DepositType1Code.mmCall}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +80,7 @@ public class DepositType1Code extends DepositTypeCode {
 	 * name} = "FixedTerm"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedTerm = new MMCode() {
+	public static final MMCode mmFixedTerm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedTerm";
@@ -102,7 +103,7 @@ public class DepositType1Code extends DepositTypeCode {
 	 * name} = "Call"</li>
 	 * </ul>
 	 */
-	public static final MMCode Call = new MMCode() {
+	public static final MMCode mmCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
@@ -113,12 +114,12 @@ public class DepositType1Code extends DepositTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FITE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DepositType1Code";
 				definition = "Specifies whether the deposit is fixed term or call/notice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositType1Code.FixedTerm, com.tools20022.repository.codeset.DepositType1Code.Call);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositType1Code.mmFixedTerm, com.tools20022.repository.codeset.DepositType1Code.mmCall);
 				trace_lazy = () -> DepositTypeCode.mmObject();
 			}
 		});

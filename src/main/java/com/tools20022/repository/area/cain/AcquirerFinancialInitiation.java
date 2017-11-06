@@ -56,21 +56,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#Header
- * AcquirerFinancialInitiation.Header}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#mmHeader
+ * AcquirerFinancialInitiation.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#FinancialInitiation
- * AcquirerFinancialInitiation.FinancialInitiation}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#mmFinancialInitiation
+ * AcquirerFinancialInitiation.mmFinancialInitiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#SecurityTrailer
- * AcquirerFinancialInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#mmSecurityTrailer
+ * AcquirerFinancialInitiation.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#identifier
- * AcquirerFinancialInitiation.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.003.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerFinancialInitiation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header17 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -108,17 +107,18 @@ public class AcquirerFinancialInitiation {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
 	};
+	protected AcquirerFinancialInitiation1 financialInitiation;
 	/**
 	 * Information related to financial authorisation.
 	 * <p>
@@ -142,17 +142,18 @@ public class AcquirerFinancialInitiation {
 	 * definition} = "Information related to financial authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInitiation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInitiation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInitn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInitiation";
 			definition = "Information related to financial authorisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcquirerFinancialInitiation1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -176,42 +177,15 @@ public class AcquirerFinancialInitiation {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "003";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -225,11 +199,42 @@ public class AcquirerFinancialInitiation {
 				rootElement = "Document";
 				xmlTag = "AcqrrFinInitn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerFinancialInitiation.Header, com.tools20022.repository.area.cain.AcquirerFinancialInitiation.FinancialInitiation,
-						com.tools20022.repository.area.cain.AcquirerFinancialInitiation.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.AcquirerFinancialInitiation.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerFinancialInitiation.mmHeader, com.tools20022.repository.area.cain.AcquirerFinancialInitiation.mmFinancialInitiation,
+						com.tools20022.repository.area.cain.AcquirerFinancialInitiation.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "003";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header17 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header17 header) {
+		this.header = header;
+	}
+
+	public AcquirerFinancialInitiation1 getFinancialInitiation() {
+		return financialInitiation;
+	}
+
+	public void setFinancialInitiation(AcquirerFinancialInitiation1 financialInitiation) {
+		this.financialInitiation = financialInitiation;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

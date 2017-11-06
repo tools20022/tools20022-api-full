@@ -53,17 +53,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.area.cain.AcquirerRejection#Header
- * AcquirerRejection.Header}</li>
- * <li>{@linkplain com.tools20022.repository.area.cain.AcquirerRejection#Reject
- * AcquirerRejection.Reject}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerRejection#mmHeader
+ * AcquirerRejection.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerRejection#mmReject
+ * AcquirerRejection.mmReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.AcquirerRejection#identifier
- * AcquirerRejection.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.013.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerRejection {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header19 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -101,17 +102,18 @@ public class AcquirerRejection {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header19.mmObject();
 		}
 	};
+	protected AcceptorRejection4 reject;
 	/**
 	 * Information related to the reject.
 	 * <p>
@@ -135,42 +137,15 @@ public class AcquirerRejection {
 	 * definition} = "Information related to the reject."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rjct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			definition = "Information related to the reject.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "013";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -184,10 +159,33 @@ public class AcquirerRejection {
 				rootElement = "Document";
 				xmlTag = "AcqrrRjctn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerRejection.Header, com.tools20022.repository.area.cain.AcquirerRejection.Reject);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.AcquirerRejection.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerRejection.mmHeader, com.tools20022.repository.area.cain.AcquirerRejection.mmReject);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "013";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header19 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header19 header) {
+		this.header = header;
+	}
+
+	public AcceptorRejection4 getReject() {
+		return reject;
+	}
+
+	public void setReject(AcceptorRejection4 reject) {
+		this.reject = reject;
 	}
 }

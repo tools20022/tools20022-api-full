@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#Rejected
- * IntraPositionProcessingStatus1Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#mmRejected
+ * IntraPositionProcessingStatus1Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#Repair
- * IntraPositionProcessingStatus1Choice.Repair}</li>
+ * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#mmRepair
+ * IntraPositionProcessingStatus1Choice.mmRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#Cancelled
- * IntraPositionProcessingStatus1Choice.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#mmCancelled
+ * IntraPositionProcessingStatus1Choice.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#AcknowledgedAccepted
- * IntraPositionProcessingStatus1Choice.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#mmAcknowledgedAccepted
+ * IntraPositionProcessingStatus1Choice.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#Proprietary
- * IntraPositionProcessingStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice#mmProprietary
+ * IntraPositionProcessingStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,18 +59,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#ProcessingStatus
- * IntraPositionMovementStatusAdviceV01.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#mmProcessingStatus
+ * IntraPositionMovementStatusAdviceV01.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV02#ProcessingStatus
- * IntraPositionMovementStatusAdviceV02.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV02#mmProcessingStatus
+ * IntraPositionMovementStatusAdviceV02.mmProcessingStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionProcessingStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectionOrRepairStatus2Choice rejected;
 	/**
 	 * Instruction/Request has been rejected for further processing.
 	 * <p>
@@ -125,21 +126,22 @@ public class IntraPositionProcessingStatus1Choice {
 	 * "Instruction/Request has been rejected for further processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Instruction/Request has been rejected for further processing.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RejectionOrRepairStatus2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus2Choice.mmObject();
 		}
 	};
+	protected RejectionOrRepairStatus2Choice repair;
 	/**
 	 * Instruction/Request is accepted but in repair.
 	 * <p>
@@ -172,21 +174,22 @@ public class IntraPositionProcessingStatus1Choice {
 	 * definition} = "Instruction/Request is accepted but in repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Repair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRepair = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repair";
 			definition = "Instruction/Request is accepted but in repair.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RejectionOrRepairStatus2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus2Choice.mmObject();
 		}
 	};
+	protected CancellationStatus4Choice cancelled;
 	/**
 	 * Instruction has been cancelled (only as an response to an
 	 * SecuritiesTransactionStatusQuery). The status on the processing of a
@@ -202,8 +205,8 @@ public class IntraPositionProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -224,21 +227,22 @@ public class IntraPositionProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Cancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Canc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Instruction has been cancelled (only as an response to an SecuritiesTransactionStatusQuery). The status on the processing of a cancellation request must be provided using a SecuritiesTransactionCancellationRequestStatusAdvice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CancellationStatus4Choice.mmObject();
 		}
 	};
+	protected AcknowledgedAcceptedStatus3Choice acknowledgedAccepted;
 	/**
 	 * Instruction has been acknowledged by the account servicer.
 	 * <p>
@@ -251,8 +255,8 @@ public class IntraPositionProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#AcknowledgedAcceptedReason
-	 * StatusReason.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmAcknowledgedAcceptedReason
+	 * StatusReason.mmAcknowledgedAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,21 +276,22 @@ public class IntraPositionProcessingStatus1Choice {
 	 * "Instruction has been acknowledged by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcknowledgedAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.AcknowledgedAcceptedReason;
 			isDerived = false;
 			xmlTag = "AckdAccptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AcknowledgedAcceptedStatus3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus3Choice.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason1 proprietary;
 	/**
 	 * Specifies a choice of status for the processing of an intra-position
 	 * movement.
@@ -300,8 +305,8 @@ public class IntraPositionProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Status
-	 * StatusReason.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmStatus
+	 * StatusReason.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -322,32 +327,32 @@ public class IntraPositionProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmStatus;
 			componentContext_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Status;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies a choice of status for the processing of an intra-position movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.Rejected, com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.Repair,
-						com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.Cancelled, com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.AcknowledgedAccepted,
-						com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmRejected, com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmRepair,
+						com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmCancelled, com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmAcknowledgedAccepted,
+						com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmProcessingStatus,
+						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV02.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.ProcessingStatus,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV02.ProcessingStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionProcessingStatus1Choice";
 				definition = "Choice of format for the processing status.";
@@ -355,5 +360,45 @@ public class IntraPositionProcessingStatus1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectionOrRepairStatus2Choice getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(com.tools20022.repository.choice.RejectionOrRepairStatus2Choice rejected) {
+		this.rejected = rejected;
+	}
+
+	public RejectionOrRepairStatus2Choice getRepair() {
+		return repair;
+	}
+
+	public void setRepair(com.tools20022.repository.choice.RejectionOrRepairStatus2Choice repair) {
+		this.repair = repair;
+	}
+
+	public CancellationStatus4Choice getCancelled() {
+		return cancelled;
+	}
+
+	public void setCancelled(com.tools20022.repository.choice.CancellationStatus4Choice cancelled) {
+		this.cancelled = cancelled;
+	}
+
+	public AcknowledgedAcceptedStatus3Choice getAcknowledgedAccepted() {
+		return acknowledgedAccepted;
+	}
+
+	public void setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus3Choice acknowledgedAccepted) {
+		this.acknowledgedAccepted = acknowledgedAccepted;
+	}
+
+	public ProprietaryStatusAndReason1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(ProprietaryStatusAndReason1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

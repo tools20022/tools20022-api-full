@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice#Reason
- * TransferCancellationCompleteStatusChoice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice#mmReason
+ * TransferCancellationCompleteStatusChoice.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice#DataSourceScheme
- * TransferCancellationCompleteStatusChoice.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice#mmDataSourceScheme
+ * TransferCancellationCompleteStatusChoice.mmDataSourceScheme}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferCancellationCompleteStatusChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransferCancellationCompleteReason1 reason;
 	/**
 	 * Reason of the complete status.
 	 * <p>
@@ -96,21 +97,22 @@ public class TransferCancellationCompleteStatusChoice {
 	 * definition} = "Reason of the complete status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferCancellationCompleteStatusChoice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> TransferCancellationCompleteStatusChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason of the complete status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransferCancellationCompleteReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TransferCancellationCompleteReason1.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification for a reason of a complete status in the
 	 * report.
@@ -123,8 +125,8 @@ public class TransferCancellationCompleteStatusChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,33 +147,49 @@ public class TransferCancellationCompleteStatusChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> TransferCancellationCompleteStatusChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification for a reason of a complete status in the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice.Reason, com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice.DataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice.mmReason, com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferCancellationCompleteStatusChoice";
 				definition = "Reason for the complete status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransferCancellationCompleteReason1 getReason() {
+		return reason;
+	}
+
+	public void setReason(TransferCancellationCompleteReason1 reason) {
+		this.reason = reason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
 	}
 }

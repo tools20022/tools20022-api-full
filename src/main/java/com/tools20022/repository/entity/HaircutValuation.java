@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.msg.BasicCollateralValuation1Details;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Basic valuation details of an asset's market value.
@@ -39,14 +40,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.HaircutValuation#AssetHolding
- * HaircutValuation.AssetHolding}</li>
- * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#Haircut
- * HaircutValuation.Haircut}</li>
- * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#Sign
- * HaircutValuation.Sign}</li>
- * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#PartyRole
- * HaircutValuation.PartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmAssetHolding
+ * HaircutValuation.mmAssetHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#mmHaircut
+ * HaircutValuation.mmHaircut}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#mmSign
+ * HaircutValuation.mmSign}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmPartyRole
+ * HaircutValuation.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -54,10 +56,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#HaircutValuation
- * InformationPartyRole.HaircutValuation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#Haircut
- * AssetHolding.Haircut}</li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmHaircutValuation
+ * InformationPartyRole.mmHaircutValuation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmHaircut
+ * AssetHolding.mmHaircut}</li>
  * </ul>
  * </li>
  * <li>
@@ -72,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HaircutValuation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetHolding assetHolding;
 	/**
 	 * Asset holding for which a haircut is specified.
 	 * <p>
@@ -95,8 +98,8 @@ public class HaircutValuation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#Haircut
-	 * AssetHolding.Haircut}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHaircut
+	 * AssetHolding.mmHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -120,20 +123,21 @@ public class HaircutValuation {
 	 * definition} = "Asset holding for which a haircut is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AssetHolding = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAssetHolding = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AssetHolding";
 			definition = "Asset holding for which a haircut is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.Haircut;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHaircut;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
+	protected PercentageRate haircut;
 	/**
 	 * Haircut or valuation factor on the security expressed as a percentage.
 	 * <p>
@@ -144,105 +148,105 @@ public class HaircutValuation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details#ValuationHaircut
-	 * BasicCollateralValuation1Details.ValuationHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails3.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails5.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails1.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails4.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations2#Haircut
-	 * FinancialInstrumentStipulations2.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails2.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails8.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral1#Haircut
-	 * SecuritiesCollateral1.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral1#Haircut
-	 * CashCollateral1.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#Haircut
-	 * OtherCollateral1.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#CurrencyHaircut
-	 * CollateralValuation1.CurrencyHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails6.SecuritiesHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails10.SecuritiesHaircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#Haircut
-	 * Debt2.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation2#CurrencyHaircut
-	 * CollateralValuation2.CurrencyHaircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#Haircut
-	 * SecuritiesCollateral2.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#Haircut
-	 * OtherCollateral2.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral3#Haircut
-	 * CashCollateral3.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#Haircut
-	 * SecuritiesCollateral3.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral3#Haircut
-	 * OtherCollateral3.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral4#Haircut
-	 * CashCollateral4.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral2#Haircut
-	 * CashCollateral2.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral4#Haircut
-	 * OtherCollateral4.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#Haircut
-	 * SecuritiesCollateral4.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral5#Haircut
-	 * CashCollateral5.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral7#Haircut
-	 * OtherCollateral7.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#CurrencyHaircut
-	 * CollateralValuation5.CurrencyHaircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral6#Haircut
-	 * OtherCollateral6.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#Haircut
-	 * SecuritiesCollateral6.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#Haircut
-	 * SecuritiesCollateral5.Haircut}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral5#Haircut
-	 * OtherCollateral5.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#Haircut
-	 * SecuritiesCollateral7.Haircut}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#Haircut
-	 * SecuritiesCollateral8.Haircut}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.HaircutValuation
 	 * HaircutValuation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details#mmValuationHaircut
+	 * BasicCollateralValuation1Details.mmValuationHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails3.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails5.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails1.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails4.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations2#mmHaircut
+	 * FinancialInstrumentStipulations2.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails2.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails8.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral1#mmHaircut
+	 * SecuritiesCollateral1.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral1#mmHaircut
+	 * CashCollateral1.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#mmHaircut
+	 * OtherCollateral1.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmCurrencyHaircut
+	 * CollateralValuation1.mmCurrencyHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails6.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails10.mmSecuritiesHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmHaircut
+	 * Debt2.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmCurrencyHaircut
+	 * CollateralValuation2.mmCurrencyHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#mmHaircut
+	 * SecuritiesCollateral2.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#mmHaircut
+	 * OtherCollateral2.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral3#mmHaircut
+	 * CashCollateral3.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#mmHaircut
+	 * SecuritiesCollateral3.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral3#mmHaircut
+	 * OtherCollateral3.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral4#mmHaircut
+	 * CashCollateral4.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral2#mmHaircut
+	 * CashCollateral2.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral4#mmHaircut
+	 * OtherCollateral4.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#mmHaircut
+	 * SecuritiesCollateral4.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashCollateral5#mmHaircut
+	 * CashCollateral5.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral7#mmHaircut
+	 * OtherCollateral7.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmCurrencyHaircut
+	 * CollateralValuation5.mmCurrencyHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral6#mmHaircut
+	 * OtherCollateral6.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#mmHaircut
+	 * SecuritiesCollateral6.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#mmHaircut
+	 * SecuritiesCollateral5.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral5#mmHaircut
+	 * OtherCollateral5.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#mmHaircut
+	 * SecuritiesCollateral7.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#mmHaircut
+	 * SecuritiesCollateral8.mmHaircut}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -255,31 +259,32 @@ public class HaircutValuation {
 	 * "Haircut or valuation factor on the security expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Haircut = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmHaircut = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasicCollateralValuation1Details.ValuationHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.SecuritiesHaircut, com.tools20022.repository.msg.FinancialInstrumentStipulations2.Haircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesCollateral1.Haircut, com.tools20022.repository.msg.CashCollateral1.Haircut, com.tools20022.repository.msg.OtherCollateral1.Haircut,
-					com.tools20022.repository.msg.CollateralValuation1.CurrencyHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.SecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.SecuritiesHaircut, com.tools20022.repository.msg.Debt2.Haircut, com.tools20022.repository.msg.CollateralValuation2.CurrencyHaircut,
-					com.tools20022.repository.msg.SecuritiesCollateral2.Haircut, com.tools20022.repository.msg.OtherCollateral2.Haircut, com.tools20022.repository.msg.CashCollateral3.Haircut,
-					com.tools20022.repository.msg.SecuritiesCollateral3.Haircut, com.tools20022.repository.msg.OtherCollateral3.Haircut, com.tools20022.repository.msg.CashCollateral4.Haircut,
-					com.tools20022.repository.msg.CashCollateral2.Haircut, com.tools20022.repository.msg.OtherCollateral4.Haircut, com.tools20022.repository.msg.SecuritiesCollateral4.Haircut,
-					com.tools20022.repository.msg.CashCollateral5.Haircut, com.tools20022.repository.msg.OtherCollateral7.Haircut, com.tools20022.repository.msg.CollateralValuation5.CurrencyHaircut,
-					com.tools20022.repository.msg.OtherCollateral6.Haircut, com.tools20022.repository.msg.SecuritiesCollateral6.Haircut, com.tools20022.repository.msg.SecuritiesCollateral5.Haircut,
-					com.tools20022.repository.msg.OtherCollateral5.Haircut, com.tools20022.repository.msg.SecuritiesCollateral7.Haircut, com.tools20022.repository.msg.SecuritiesCollateral8.Haircut);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasicCollateralValuation1Details.mmValuationHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmSecuritiesHaircut, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesCollateral1.mmHaircut, com.tools20022.repository.msg.CashCollateral1.mmHaircut, com.tools20022.repository.msg.OtherCollateral1.mmHaircut,
+					com.tools20022.repository.msg.CollateralValuation1.mmCurrencyHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSecuritiesHaircut,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSecuritiesHaircut, com.tools20022.repository.msg.Debt2.mmHaircut, com.tools20022.repository.msg.CollateralValuation2.mmCurrencyHaircut,
+					com.tools20022.repository.msg.SecuritiesCollateral2.mmHaircut, com.tools20022.repository.msg.OtherCollateral2.mmHaircut, com.tools20022.repository.msg.CashCollateral3.mmHaircut,
+					com.tools20022.repository.msg.SecuritiesCollateral3.mmHaircut, com.tools20022.repository.msg.OtherCollateral3.mmHaircut, com.tools20022.repository.msg.CashCollateral4.mmHaircut,
+					com.tools20022.repository.msg.CashCollateral2.mmHaircut, com.tools20022.repository.msg.OtherCollateral4.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral4.mmHaircut,
+					com.tools20022.repository.msg.CashCollateral5.mmHaircut, com.tools20022.repository.msg.OtherCollateral7.mmHaircut, com.tools20022.repository.msg.CollateralValuation5.mmCurrencyHaircut,
+					com.tools20022.repository.msg.OtherCollateral6.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral6.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral5.mmHaircut,
+					com.tools20022.repository.msg.OtherCollateral5.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral7.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral8.mmHaircut);
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Haircut";
 			definition = "Haircut or valuation factor on the security expressed as a percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PlusOrMinusIndicator sign;
 	/**
 	 * One of the following PlusOrMinusIndicator values must be used:<br>
 	 * MeaningWhenTrue: Plus (the haircut is added)<br>
@@ -310,18 +315,19 @@ public class HaircutValuation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Sign = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSign = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Sign";
 			definition = "One of the following PlusOrMinusIndicator values must be used:\r\nMeaningWhenTrue: Plus (the haircut is added)\r\nMeaningWhenFalse: Minus (the haircut is deducted)";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InformationPartyRole> partyRole;
 	/**
 	 * Specifies the role of a party in the haircut valuation process.
 	 * <p>
@@ -330,8 +336,8 @@ public class HaircutValuation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#HaircutValuation
-	 * InformationPartyRole.HaircutValuation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmHaircutValuation
+	 * InformationPartyRole.mmHaircutValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -357,7 +363,7 @@ public class HaircutValuation {
 	 * "Specifies the role of a party in the haircut valuation process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
@@ -365,25 +371,57 @@ public class HaircutValuation {
 			name = "PartyRole";
 			definition = "Specifies the role of a party in the haircut valuation process.";
 			minOccurs = 0;
-			type_lazy = () -> InformationPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.HaircutValuation;
+			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmHaircutValuation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HaircutValuation";
 				definition = "Basic valuation details of an asset's market value.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.HaircutValuation, com.tools20022.repository.entity.AssetHolding.Haircut);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.HaircutValuation.AssetHolding, com.tools20022.repository.entity.HaircutValuation.Haircut, com.tools20022.repository.entity.HaircutValuation.Sign,
-						com.tools20022.repository.entity.HaircutValuation.PartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.mmHaircutValuation, com.tools20022.repository.entity.AssetHolding.mmHaircut);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.HaircutValuation.mmAssetHolding, com.tools20022.repository.entity.HaircutValuation.mmHaircut, com.tools20022.repository.entity.HaircutValuation.mmSign,
+						com.tools20022.repository.entity.HaircutValuation.mmPartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(BasicCollateralValuation1Details.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetHolding getAssetHolding() {
+		return assetHolding;
+	}
+
+	public void setAssetHolding(com.tools20022.repository.entity.AssetHolding assetHolding) {
+		this.assetHolding = assetHolding;
+	}
+
+	public PercentageRate getHaircut() {
+		return haircut;
+	}
+
+	public void setHaircut(PercentageRate haircut) {
+		this.haircut = haircut;
+	}
+
+	public PlusOrMinusIndicator getSign() {
+		return sign;
+	}
+
+	public void setSign(PlusOrMinusIndicator sign) {
+		this.sign = sign;
+	}
+
+	public List<InformationPartyRole> getPartyRole() {
+		return partyRole;
+	}
+
+	public void setPartyRole(List<com.tools20022.repository.entity.InformationPartyRole> partyRole) {
+		this.partyRole = partyRole;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceDetails22#GenericCashPricePaidPerProduct
- * PriceDetails22.GenericCashPricePaidPerProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceDetails22#mmGenericCashPricePaidPerProduct
+ * PriceDetails22.mmGenericCashPricePaidPerProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceDetails22#GenericCashPriceReceivedPerProduct
- * PriceDetails22.GenericCashPriceReceivedPerProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceDetails22#mmGenericCashPriceReceivedPerProduct
+ * PriceDetails22.mmGenericCashPriceReceivedPerProduct}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceDetails22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceFormat44Choice genericCashPricePaidPerProduct;
 	/**
 	 * Generic cash price paid per product by the underlying security holder
 	 * either as a percentage or an amount or a number of points above an index,
@@ -81,8 +82,8 @@ public class PriceDetails22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#GenericCashPricePaidPerProduct
-	 * CorporateActionPrice.GenericCashPricePaidPerProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
+	 * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,26 +104,27 @@ public class PriceDetails22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PriceDetails15#GenericCashPricePaidPerProduct
-	 * PriceDetails15.GenericCashPricePaidPerProduct}</li>
+	 * {@linkplain com.tools20022.repository.msg.PriceDetails15#mmGenericCashPricePaidPerProduct
+	 * PriceDetails15.mmGenericCashPricePaidPerProduct}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> PriceDetails22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.GenericCashPricePaidPerProduct;
 			isDerived = false;
 			xmlTag = "GncCshPricPdPerPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Generic cash price paid per product by the underlying security holder either as a percentage or an amount or a number of points above an index, for example, reinvestment price, strike price and exercise price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceDetails15.GenericCashPricePaidPerProduct;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceDetails15.mmGenericCashPricePaidPerProduct;
 			maxOccurs = 1;
-			type_lazy = () -> PriceFormat44Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PriceFormat44Choice.mmObject();
 		}
 	};
+	protected PriceFormat47Choice genericCashPriceReceivedPerProduct;
 	/**
 	 * Generic cash price received per product by the underlying security holder
 	 * either as a percentage or an amount, for example, redemption price.
@@ -135,8 +137,8 @@ public class PriceDetails22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#GenericCashPriceReceivedPerProduct
-	 * CorporateActionPrice.GenericCashPriceReceivedPerProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
+	 * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,33 +159,33 @@ public class PriceDetails22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PriceDetails15#GenericCashPriceReceivedPerProduct
-	 * PriceDetails15.GenericCashPriceReceivedPerProduct}</li>
+	 * {@linkplain com.tools20022.repository.msg.PriceDetails15#mmGenericCashPriceReceivedPerProduct
+	 * PriceDetails15.mmGenericCashPriceReceivedPerProduct}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> PriceDetails22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.GenericCashPriceReceivedPerProduct;
 			isDerived = false;
 			xmlTag = "GncCshPricRcvdPerPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
 			definition = "Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceDetails15.GenericCashPriceReceivedPerProduct;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceDetails15.mmGenericCashPriceReceivedPerProduct;
 			maxOccurs = 1;
-			type_lazy = () -> PriceFormat47Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PriceFormat47Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceDetails22.GenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails22.GenericCashPriceReceivedPerProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceDetails22.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails22.mmGenericCashPriceReceivedPerProduct);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceDetails22";
 				definition = "Provides information about the prices related to a corporate action option.";
@@ -191,5 +193,21 @@ public class PriceDetails22 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceFormat44Choice getGenericCashPricePaidPerProduct() {
+		return genericCashPricePaidPerProduct;
+	}
+
+	public void setGenericCashPricePaidPerProduct(PriceFormat44Choice genericCashPricePaidPerProduct) {
+		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
+	}
+
+	public PriceFormat47Choice getGenericCashPriceReceivedPerProduct() {
+		return genericCashPriceReceivedPerProduct;
+	}
+
+	public void setGenericCashPriceReceivedPerProduct(PriceFormat47Choice genericCashPriceReceivedPerProduct) {
+		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
 	}
 }

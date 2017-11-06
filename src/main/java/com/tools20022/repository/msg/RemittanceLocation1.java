@@ -40,17 +40,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#RemittanceIdentification
- * RemittanceLocation1.RemittanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#mmRemittanceIdentification
+ * RemittanceLocation1.mmRemittanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#RemittanceLocationMethod
- * RemittanceLocation1.RemittanceLocationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#mmRemittanceLocationMethod
+ * RemittanceLocation1.mmRemittanceLocationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#RemittanceLocationElectronicAddress
- * RemittanceLocation1.RemittanceLocationElectronicAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#mmRemittanceLocationElectronicAddress
+ * RemittanceLocation1.mmRemittanceLocationElectronicAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#RemittanceLocationPostalAddress
- * RemittanceLocation1.RemittanceLocationPostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#mmRemittanceLocationPostalAddress
+ * RemittanceLocation1.mmRemittanceLocationPostalAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RemittanceLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text remittanceIdentification;
 	/**
 	 * Unique and unambiguous identification of the remittance information, e.g.
 	 * a remittance advice, which is sent separately from the payment
@@ -107,7 +108,7 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemittanceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemittanceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RemittanceLocation1.mmObject();
 			isDerived = false;
@@ -115,11 +116,12 @@ public class RemittanceLocation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceIdentification";
 			definition = "Unique and unambiguous identification of the remittance information, e.g. a remittance advice, which is sent separately from the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected RemittanceLocationMethod1Code remittanceLocationMethod;
 	/**
 	 * Specifies the method used to deliver the remittance advice information.
 	 * <p>
@@ -133,8 +135,8 @@ public class RemittanceLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#RemittanceDeliveryMethod
-	 * PaymentObligation.RemittanceDeliveryMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmRemittanceDeliveryMethod
+	 * PaymentObligation.mmRemittanceDeliveryMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +157,21 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemittanceLocationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemittanceLocationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmRemittanceDeliveryMethod;
 			componentContext_lazy = () -> RemittanceLocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.RemittanceDeliveryMethod;
 			isDerived = false;
 			xmlTag = "RmtLctnMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocationMethod";
 			definition = "Specifies the method used to deliver the remittance advice information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RemittanceLocationMethod1Code.mmObject();
 		}
 	};
+	protected Max256Text remittanceLocationElectronicAddress;
 	/**
 	 * Electronic address to which an agent is to send the remittance
 	 * information.
@@ -203,20 +206,21 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemittanceLocationElectronicAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemittanceLocationElectronicAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RemittanceLocation1.mmObject();
 			businessComponentTrace_lazy = () -> ContactPoint.mmObject();
+			componentContext_lazy = () -> RemittanceLocation1.mmObject();
 			isDerived = false;
 			xmlTag = "RmtLctnElctrncAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocationElectronicAddress";
 			definition = "Electronic address to which an agent is to send the remittance information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected NameAndAddress3 remittanceLocationPostalAddress;
 	/**
 	 * Postal address to which an agent is to send the remittance information.
 	 * <p>
@@ -250,34 +254,66 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RemittanceLocationPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRemittanceLocationPostalAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RemittanceLocation1.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> RemittanceLocation1.mmObject();
 			isDerived = false;
 			xmlTag = "RmtLctnPstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocationPostalAddress";
 			definition = "Postal address to which an agent is to send the remittance information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> NameAndAddress3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocation1.RemittanceIdentification, com.tools20022.repository.msg.RemittanceLocation1.RemittanceLocationMethod,
-						com.tools20022.repository.msg.RemittanceLocation1.RemittanceLocationElectronicAddress, com.tools20022.repository.msg.RemittanceLocation1.RemittanceLocationPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocation1.mmRemittanceIdentification, com.tools20022.repository.msg.RemittanceLocation1.mmRemittanceLocationMethod,
+						com.tools20022.repository.msg.RemittanceLocation1.mmRemittanceLocationElectronicAddress, com.tools20022.repository.msg.RemittanceLocation1.mmRemittanceLocationPostalAddress);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RemittanceLocation1";
 				definition = "Remittance information that provides all remittance address elements, that enables the matching, i.e.  reconciliation, of a payment with the items that the transaction in intended to settle.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getRemittanceIdentification() {
+		return remittanceIdentification;
+	}
+
+	public void setRemittanceIdentification(Max35Text remittanceIdentification) {
+		this.remittanceIdentification = remittanceIdentification;
+	}
+
+	public RemittanceLocationMethod1Code getRemittanceLocationMethod() {
+		return remittanceLocationMethod;
+	}
+
+	public void setRemittanceLocationMethod(RemittanceLocationMethod1Code remittanceLocationMethod) {
+		this.remittanceLocationMethod = remittanceLocationMethod;
+	}
+
+	public Max256Text getRemittanceLocationElectronicAddress() {
+		return remittanceLocationElectronicAddress;
+	}
+
+	public void setRemittanceLocationElectronicAddress(Max256Text remittanceLocationElectronicAddress) {
+		this.remittanceLocationElectronicAddress = remittanceLocationElectronicAddress;
+	}
+
+	public NameAndAddress3 getRemittanceLocationPostalAddress() {
+		return remittanceLocationPostalAddress;
+	}
+
+	public void setRemittanceLocationPostalAddress(com.tools20022.repository.msg.NameAndAddress3 remittanceLocationPostalAddress) {
+		this.remittanceLocationPostalAddress = remittanceLocationPostalAddress;
 	}
 }

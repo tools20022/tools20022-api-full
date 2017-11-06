@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionCondition1#Program
- * CardTransactionCondition1.Program}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionCondition1#mmProgram
+ * CardTransactionCondition1.mmProgram}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionCondition1#Value
- * CardTransactionCondition1.Value}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionCondition1#mmValue
+ * CardTransactionCondition1.mmValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransactionCondition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text program;
 	/**
 	 * Identification of the specific condition.
 	 * <p>
@@ -88,7 +89,7 @@ public class CardTransactionCondition1 {
 	 * definition} = "Identification of the specific condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Program = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProgram = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransactionCondition1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class CardTransactionCondition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Program";
 			definition = "Identification of the specific condition.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text value;
 	/**
 	 * Level of the condition.
 	 * <p>
@@ -128,7 +130,7 @@ public class CardTransactionCondition1 {
 	 * definition} = "Level of the condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransactionCondition1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class CardTransactionCondition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Level of the condition.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class CardTransactionCondition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionCondition1.Program, com.tools20022.repository.msg.CardTransactionCondition1.Value);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionCondition1.mmProgram, com.tools20022.repository.msg.CardTransactionCondition1.mmValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionCondition1";
 				definition = "Data used to assign specific condition such as liability shift or preferential interchange fees.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getProgram() {
+		return program;
+	}
+
+	public void setProgram(Max35Text program) {
+		this.program = program;
+	}
+
+	public Max35Text getValue() {
+		return value;
+	}
+
+	public void setValue(Max35Text value) {
+		this.value = value;
 	}
 }

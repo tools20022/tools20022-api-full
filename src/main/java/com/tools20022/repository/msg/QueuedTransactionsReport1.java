@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Payment funds transfer instructions from intraday queue.
@@ -36,24 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#QueueType
- * QueuedTransactionsReport1.QueueType}</li>
+ * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#mmQueueType
+ * QueuedTransactionsReport1.mmQueueType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#NumberOfTransactions
- * QueuedTransactionsReport1.NumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#mmNumberOfTransactions
+ * QueuedTransactionsReport1.mmNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#TotalAmount
- * QueuedTransactionsReport1.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#mmTotalAmount
+ * QueuedTransactionsReport1.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#BreakdownByCounterparty
- * QueuedTransactionsReport1.BreakdownByCounterparty}</li>
+ * {@linkplain com.tools20022.repository.msg.QueuedTransactionsReport1#mmBreakdownByCounterparty
+ * QueuedTransactionsReport1.mmBreakdownByCounterparty}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QueuedTransactionsReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queueType;
 	/**
 	 * List of queue names/ identifiers.
 	 * <p>
@@ -94,7 +96,7 @@ public class QueuedTransactionsReport1 {
 	 * definition} = "List of queue names/ identifiers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueueType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueueType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
@@ -102,11 +104,12 @@ public class QueuedTransactionsReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueType";
 			definition = "List of queue names/ identifiers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number numberOfTransactions;
 	/**
 	 * Number of transactions in the queue.
 	 * <p>
@@ -134,7 +137,7 @@ public class QueuedTransactionsReport1 {
 	 * definition} = "Number of transactions in the queue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
@@ -142,11 +145,12 @@ public class QueuedTransactionsReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of transactions in the queue.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalAmount;
 	/**
 	 * Total amount of transactions in a given queue.
 	 * <p>
@@ -175,7 +179,7 @@ public class QueuedTransactionsReport1 {
 	 * definition} = "Total amount of transactions in a given queue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
@@ -183,11 +187,12 @@ public class QueuedTransactionsReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of transactions in a given queue.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QueueTransaction1> breakdownByCounterparty;
 	/**
 	 * Transaction details sorted by counterparty account.
 	 * <p>
@@ -214,7 +219,7 @@ public class QueuedTransactionsReport1 {
 	 * definition} = "Transaction details sorted by counterparty account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BreakdownByCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBreakdownByCounterparty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
@@ -223,22 +228,54 @@ public class QueuedTransactionsReport1 {
 			name = "BreakdownByCounterparty";
 			definition = "Transaction details sorted by counterparty account.";
 			minOccurs = 0;
-			type_lazy = () -> QueueTransaction1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueuedTransactionsReport1.QueueType, com.tools20022.repository.msg.QueuedTransactionsReport1.NumberOfTransactions,
-						com.tools20022.repository.msg.QueuedTransactionsReport1.TotalAmount, com.tools20022.repository.msg.QueuedTransactionsReport1.BreakdownByCounterparty);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueuedTransactionsReport1.mmQueueType, com.tools20022.repository.msg.QueuedTransactionsReport1.mmNumberOfTransactions,
+						com.tools20022.repository.msg.QueuedTransactionsReport1.mmTotalAmount, com.tools20022.repository.msg.QueuedTransactionsReport1.mmBreakdownByCounterparty);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QueuedTransactionsReport1";
 				definition = "Payment funds transfer instructions from intraday queue.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueueType() {
+		return queueType;
+	}
+
+	public void setQueueType(Max35Text queueType) {
+		this.queueType = queueType;
+	}
+
+	public Number getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public void setNumberOfTransactions(Number numberOfTransactions) {
+		this.numberOfTransactions = numberOfTransactions;
+	}
+
+	public ActiveCurrencyAndAmount getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(ActiveCurrencyAndAmount totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public List<QueueTransaction1> getBreakdownByCounterparty() {
+		return breakdownByCounterparty;
+	}
+
+	public void setBreakdownByCounterparty(List<com.tools20022.repository.msg.QueueTransaction1> breakdownByCounterparty) {
+		this.breakdownByCounterparty = breakdownByCounterparty;
 	}
 }

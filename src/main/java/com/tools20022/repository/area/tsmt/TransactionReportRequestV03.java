@@ -67,18 +67,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportRequestV03#RequestIdentification
- * TransactionReportRequestV03.RequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportRequestV03#mmRequestIdentification
+ * TransactionReportRequestV03.mmRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportRequestV03#ReportSpecification
- * TransactionReportRequestV03.ReportSpecification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportRequestV03#mmReportSpecification
+ * TransactionReportRequestV03.mmReportSpecification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportRequestV03#identifier
- * TransactionReportRequestV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.042.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionReportRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 requestIdentification;
 	/**
 	 * Identifies the request message.
 	 * <p>
@@ -117,17 +116,18 @@ public class TransactionReportRequestV03 {
 	 * definition} = "Identifies the request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected ReportSpecification4 reportSpecification;
 	/**
 	 * Parameters to be used as criteria for the content of the transaction
 	 * report.
@@ -154,42 +154,15 @@ public class TransactionReportRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportSpecification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportSpecification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptSpcfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportSpecification";
 			definition = "Parameters to be used as criteria for the content of the transaction report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportSpecification4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "042"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "042";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -203,10 +176,33 @@ public class TransactionReportRequestV03 {
 				rootElement = "Document";
 				xmlTag = "TxRptReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.TransactionReportRequestV03.RequestIdentification, com.tools20022.repository.area.tsmt.TransactionReportRequestV03.ReportSpecification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.TransactionReportRequestV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.TransactionReportRequestV03.mmRequestIdentification, com.tools20022.repository.area.tsmt.TransactionReportRequestV03.mmReportSpecification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "042";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRequestIdentification() {
+		return requestIdentification;
+	}
+
+	public void setRequestIdentification(MessageIdentification1 requestIdentification) {
+		this.requestIdentification = requestIdentification;
+	}
+
+	public ReportSpecification4 getReportSpecification() {
+		return reportSpecification;
+	}
+
+	public void setReportSpecification(ReportSpecification4 reportSpecification) {
+		this.reportSpecification = reportSpecification;
 	}
 }

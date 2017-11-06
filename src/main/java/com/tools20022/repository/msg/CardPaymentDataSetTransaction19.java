@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cancelled card payment transaction to be captured in a batch.
@@ -35,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#TransactionSequenceCounter
- * CardPaymentDataSetTransaction19.TransactionSequenceCounter}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#mmTransactionSequenceCounter
+ * CardPaymentDataSetTransaction19.mmTransactionSequenceCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#Traceability
- * CardPaymentDataSetTransaction19.Traceability}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#mmTraceability
+ * CardPaymentDataSetTransaction19.mmTraceability}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#Environment
- * CardPaymentDataSetTransaction19.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#mmEnvironment
+ * CardPaymentDataSetTransaction19.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#Context
- * CardPaymentDataSetTransaction19.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#mmContext
+ * CardPaymentDataSetTransaction19.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#Transaction
- * CardPaymentDataSetTransaction19.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19#mmTransaction
+ * CardPaymentDataSetTransaction19.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentDataSetTransaction19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max9NumericText transactionSequenceCounter;
 	/**
 	 * Sequential counter of the transaction.
 	 * <p>
@@ -106,11 +108,11 @@ public class CardPaymentDataSetTransaction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#TransactionSequenceCounter
-	 * CardPaymentDataSetTransaction15.TransactionSequenceCounter}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#mmTransactionSequenceCounter
+	 * CardPaymentDataSetTransaction15.mmTransactionSequenceCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionSequenceCounter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
 			isDerived = false;
@@ -118,12 +120,13 @@ public class CardPaymentDataSetTransaction19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSequenceCounter";
 			definition = "Sequential counter of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.TransactionSequenceCounter;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmTransactionSequenceCounter;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Traceability5> traceability;
 	/**
 	 * Identification of partners involved in the exchange from the merchant to
 	 * the issuer, with the corresponding timestamp of their exchanges.
@@ -154,11 +157,11 @@ public class CardPaymentDataSetTransaction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#Traceability
-	 * CardPaymentDataSetTransaction15.Traceability}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#mmTraceability
+	 * CardPaymentDataSetTransaction15.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Traceability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTraceability = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
 			isDerived = false;
@@ -166,12 +169,13 @@ public class CardPaymentDataSetTransaction19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.Traceability;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmTraceability;
 			minOccurs = 0;
-			type_lazy = () -> Traceability5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
 		}
 	};
+	protected CardPaymentEnvironment61 environment;
 	/**
 	 * Data related to the environment of the cancelled transaction captured in
 	 * batch.
@@ -207,26 +211,27 @@ public class CardPaymentDataSetTransaction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#Environment
-	 * CardPaymentDataSetTransaction15.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#mmEnvironment
+	 * CardPaymentDataSetTransaction15.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the cancelled transaction captured in batch.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.Environment;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmEnvironment;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentEnvironment61.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment61.mmObject();
 		}
 	};
+	protected CardPaymentContext25 context;
 	/**
 	 * Context in which the transaction is performed (payment and sale).
 	 * <p>
@@ -240,8 +245,8 @@ public class CardPaymentDataSetTransaction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#CardPaymentAcquiring
-	 * CardPayment.CardPaymentAcquiring}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
+	 * CardPayment.mmCardPaymentAcquiring}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,25 +267,26 @@ public class CardPaymentDataSetTransaction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#Context
-	 * CardPaymentDataSetTransaction15.Context}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#mmContext
+	 * CardPaymentDataSetTransaction15.mmContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Context = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContext = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.CardPaymentAcquiring;
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.Context;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmContext;
 			maxOccurs = 1;
-			complexType_lazy = () -> CardPaymentContext25.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentContext25.mmObject();
 		}
 	};
+	protected CardPaymentTransaction75 transaction;
 	/**
 	 * Card payment cancellation transaction between an acceptor and an
 	 * acquirer.
@@ -316,35 +322,35 @@ public class CardPaymentDataSetTransaction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#Transaction
-	 * CardPaymentDataSetTransaction15.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15#mmTransaction
+	 * CardPaymentDataSetTransaction15.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment cancellation transaction between an acceptor and an acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.Transaction;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmTransaction;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentTransaction75.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction75.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSetTransaction19.TransactionSequenceCounter, com.tools20022.repository.msg.CardPaymentDataSetTransaction19.Traceability,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction19.Environment, com.tools20022.repository.msg.CardPaymentDataSetTransaction19.Context,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction19.Transaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmTransactionSequenceCounter, com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmTraceability,
+						com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmContext,
+						com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmTransaction);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction19";
 				definition = "Cancelled card payment transaction to be captured in a batch.";
@@ -352,5 +358,45 @@ public class CardPaymentDataSetTransaction19 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max9NumericText getTransactionSequenceCounter() {
+		return transactionSequenceCounter;
+	}
+
+	public void setTransactionSequenceCounter(Max9NumericText transactionSequenceCounter) {
+		this.transactionSequenceCounter = transactionSequenceCounter;
+	}
+
+	public List<Traceability5> getTraceability() {
+		return traceability;
+	}
+
+	public void setTraceability(List<com.tools20022.repository.msg.Traceability5> traceability) {
+		this.traceability = traceability;
+	}
+
+	public CardPaymentEnvironment61 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment61 environment) {
+		this.environment = environment;
+	}
+
+	public CardPaymentContext25 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.CardPaymentContext25 context) {
+		this.context = context;
+	}
+
+	public CardPaymentTransaction75 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardPaymentTransaction75 transaction) {
+		this.transaction = transaction;
 	}
 }

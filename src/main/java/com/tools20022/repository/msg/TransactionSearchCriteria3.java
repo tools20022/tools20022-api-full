@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria which are used to search for a payment transaction.
@@ -32,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#PaymentTo
- * TransactionSearchCriteria3.PaymentTo}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#mmPaymentTo
+ * TransactionSearchCriteria3.mmPaymentTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#PaymentFrom
- * TransactionSearchCriteria3.PaymentFrom}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#mmPaymentFrom
+ * TransactionSearchCriteria3.mmPaymentFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#PaymentSearch
- * TransactionSearchCriteria3.PaymentSearch}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#mmPaymentSearch
+ * TransactionSearchCriteria3.mmPaymentSearch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#AccountEntrySearch
- * TransactionSearchCriteria3.AccountEntrySearch}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria3#mmAccountEntrySearch
+ * TransactionSearchCriteria3.mmAccountEntrySearch}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionSearchCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.SystemSearch2> paymentTo;
 	/**
 	 * Defines the criteria which are used to search for the destination of the
 	 * payment.
@@ -93,7 +95,7 @@ public class TransactionSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionSearchCriteria3.mmObject();
 			isDerived = false;
@@ -102,10 +104,11 @@ public class TransactionSearchCriteria3 {
 			name = "PaymentTo";
 			definition = "Defines the criteria which are used to search for the destination of the payment.";
 			minOccurs = 0;
-			type_lazy = () -> SystemSearch2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemSearch2> paymentFrom;
 	/**
 	 * Defines the criteria which are used to search for the origin of the
 	 * payment.
@@ -135,7 +138,7 @@ public class TransactionSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionSearchCriteria3.mmObject();
 			isDerived = false;
@@ -144,10 +147,11 @@ public class TransactionSearchCriteria3 {
 			name = "PaymentFrom";
 			definition = "Defines the criteria which are used to search for the origin of the payment.";
 			minOccurs = 0;
-			type_lazy = () -> SystemSearch2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
 		}
 	};
+	protected PaymentSearch3 paymentSearch;
 	/**
 	 * Defines the criteria which are used to search for a payment.
 	 * <p>
@@ -175,7 +179,7 @@ public class TransactionSearchCriteria3 {
 	 * "Defines the criteria which are used to search for a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentSearch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentSearch = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionSearchCriteria3.mmObject();
 			isDerived = false;
@@ -183,12 +187,13 @@ public class TransactionSearchCriteria3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentSearch";
 			definition = "Defines the criteria which are used to search for a payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentSearch3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 		}
 	};
+	protected AccountCashEntrySearch2 accountEntrySearch;
 	/**
 	 * Defines the criteria which are used to search for a cash entry.
 	 * <p>
@@ -217,7 +222,7 @@ public class TransactionSearchCriteria3 {
 	 * "Defines the criteria which are used to search for a cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountEntrySearch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountEntrySearch = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionSearchCriteria3.mmObject();
 			isDerived = false;
@@ -225,24 +230,56 @@ public class TransactionSearchCriteria3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntrySearch";
 			definition = "Defines the criteria which are used to search for a cash entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountCashEntrySearch2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria3.PaymentTo, com.tools20022.repository.msg.TransactionSearchCriteria3.PaymentFrom,
-						com.tools20022.repository.msg.TransactionSearchCriteria3.PaymentSearch, com.tools20022.repository.msg.TransactionSearchCriteria3.AccountEntrySearch);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria3.mmPaymentTo, com.tools20022.repository.msg.TransactionSearchCriteria3.mmPaymentFrom,
+						com.tools20022.repository.msg.TransactionSearchCriteria3.mmPaymentSearch, com.tools20022.repository.msg.TransactionSearchCriteria3.mmAccountEntrySearch);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionSearchCriteria3";
 				definition = "Defines the criteria which are used to search for a payment transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SystemSearch2> getPaymentTo() {
+		return paymentTo;
+	}
+
+	public void setPaymentTo(List<com.tools20022.repository.msg.SystemSearch2> paymentTo) {
+		this.paymentTo = paymentTo;
+	}
+
+	public List<SystemSearch2> getPaymentFrom() {
+		return paymentFrom;
+	}
+
+	public void setPaymentFrom(List<com.tools20022.repository.msg.SystemSearch2> paymentFrom) {
+		this.paymentFrom = paymentFrom;
+	}
+
+	public PaymentSearch3 getPaymentSearch() {
+		return paymentSearch;
+	}
+
+	public void setPaymentSearch(com.tools20022.repository.msg.PaymentSearch3 paymentSearch) {
+		this.paymentSearch = paymentSearch;
+	}
+
+	public AccountCashEntrySearch2 getAccountEntrySearch() {
+		return accountEntrySearch;
+	}
+
+	public void setAccountEntrySearch(com.tools20022.repository.msg.AccountCashEntrySearch2 accountEntrySearch) {
+		this.accountEntrySearch = accountEntrySearch;
 	}
 }

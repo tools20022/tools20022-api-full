@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Configuration parameters of data exchanges.
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#ExchangePolicy
- * ExchangeConfiguration2.ExchangePolicy}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#mmExchangePolicy
+ * ExchangeConfiguration2.mmExchangePolicy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#MaximumNumber
- * ExchangeConfiguration2.MaximumNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#mmMaximumNumber
+ * ExchangeConfiguration2.mmMaximumNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#MaximumAmount
- * ExchangeConfiguration2.MaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#mmMaximumAmount
+ * ExchangeConfiguration2.mmMaximumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#TimeCondition
- * ExchangeConfiguration2.TimeCondition}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#mmTimeCondition
+ * ExchangeConfiguration2.mmTimeCondition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExchangeConfiguration2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ExchangePolicy1Code> exchangePolicy;
 	/**
 	 * Exchange policy between parties.
 	 * <p>
@@ -97,8 +99,8 @@ public class ExchangeConfiguration2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ExchangePolicy
-	 * AcceptorConfiguration.ExchangePolicy}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmExchangePolicy
+	 * AcceptorConfiguration.mmExchangePolicy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,26 +121,27 @@ public class ExchangeConfiguration2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#ExchangePolicy
-	 * ExchangeConfiguration4.ExchangePolicy}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#mmExchangePolicy
+	 * ExchangeConfiguration4.mmExchangePolicy}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangePolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangePolicy = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmExchangePolicy;
 			componentContext_lazy = () -> ExchangeConfiguration2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.ExchangePolicy;
 			isDerived = false;
 			xmlTag = "XchgPlcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangePolicy";
 			definition = "Exchange policy between parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.ExchangePolicy);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.mmExchangePolicy);
 			minOccurs = 1;
 			simpleType_lazy = () -> ExchangePolicy1Code.mmObject();
 		}
 	};
+	protected Number maximumNumber;
 	/**
 	 * Maximum number of transactions without exchange.
 	 * <p>
@@ -151,8 +154,8 @@ public class ExchangeConfiguration2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#MaximumNumber
-	 * AcceptorConfiguration.MaximumNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumNumber
+	 * AcceptorConfiguration.mmMaximumNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,27 +176,28 @@ public class ExchangeConfiguration2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#MaximumNumber
-	 * ExchangeConfiguration4.MaximumNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#mmMaximumNumber
+	 * ExchangeConfiguration4.mmMaximumNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumNumber;
 			componentContext_lazy = () -> ExchangeConfiguration2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.MaximumNumber;
 			isDerived = false;
 			xmlTag = "MaxNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of transactions without exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.MaximumNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.mmMaximumNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount maximumAmount;
 	/**
 	 * Maximum cumulative amount of the transactions without exchange.
 	 * <p>
@@ -207,8 +211,8 @@ public class ExchangeConfiguration2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#MaximumAmount
-	 * AcceptorConfiguration.MaximumAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumAmount
+	 * AcceptorConfiguration.mmMaximumAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,27 +234,28 @@ public class ExchangeConfiguration2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#MaximumAmount
-	 * ExchangeConfiguration4.MaximumAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#mmMaximumAmount
+	 * ExchangeConfiguration4.mmMaximumAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumAmount;
 			componentContext_lazy = () -> ExchangeConfiguration2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.MaximumAmount;
 			isDerived = false;
 			xmlTag = "MaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum cumulative amount of the transactions without exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.MaximumAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.mmMaximumAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ProcessTiming2 timeCondition;
 	/**
 	 * Timing condition for periodic exchanges.
 	 * <p>
@@ -279,13 +284,13 @@ public class ExchangeConfiguration2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#TimeCondition
-	 * ExchangeConfiguration4.TimeCondition}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#mmTimeCondition
+	 * ExchangeConfiguration4.mmTimeCondition}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TimeCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExchangeConfiguration2.mmObject();
 			isDerived = false;
@@ -293,28 +298,60 @@ public class ExchangeConfiguration2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeCondition";
 			definition = "Timing condition for periodic exchanges.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.TimeCondition);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration4.mmTimeCondition);
 			maxOccurs = 1;
-			type_lazy = () -> ProcessTiming2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration2.ExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration2.MaximumNumber,
-						com.tools20022.repository.msg.ExchangeConfiguration2.MaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration2.TimeCondition);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration2.mmExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration2.mmMaximumNumber,
+						com.tools20022.repository.msg.ExchangeConfiguration2.mmMaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration2.mmTimeCondition);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExchangeConfiguration2";
 				definition = "Configuration parameters of data exchanges.";
-				previousVersion_lazy = () -> ExchangeConfiguration1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ExchangeConfiguration3.mmObject(), ExchangeConfiguration4.mmObject());
+				previousVersion_lazy = () -> ExchangeConfiguration1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ExchangePolicy1Code> getExchangePolicy() {
+		return exchangePolicy;
+	}
+
+	public void setExchangePolicy(List<ExchangePolicy1Code> exchangePolicy) {
+		this.exchangePolicy = exchangePolicy;
+	}
+
+	public Number getMaximumNumber() {
+		return maximumNumber;
+	}
+
+	public void setMaximumNumber(Number maximumNumber) {
+		this.maximumNumber = maximumNumber;
+	}
+
+	public ImpliedCurrencyAndAmount getMaximumAmount() {
+		return maximumAmount;
+	}
+
+	public void setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
+		this.maximumAmount = maximumAmount;
+	}
+
+	public ProcessTiming2 getTimeCondition() {
+		return timeCondition;
+	}
+
+	public void setTimeCondition(com.tools20022.repository.msg.ProcessTiming2 timeCondition) {
+		this.timeCondition = timeCondition;
 	}
 }

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DeniedReason2Choice#Code
- * DeniedReason2Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DeniedReason2Choice#mmCode
+ * DeniedReason2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DeniedReason2Choice#Proprietary
- * DeniedReason2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.DeniedReason2Choice#mmProprietary
+ * DeniedReason2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeniedReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DeniedReason4Code code;
 	/**
 	 * Specifies the reason why the request was denied.
 	 * <p>
@@ -85,8 +86,8 @@ public class DeniedReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#DeniedReason
-	 * SecuritiesTradeStatusReason.DeniedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmDeniedReason
+	 * SecuritiesTradeStatusReason.mmDeniedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,30 +108,31 @@ public class DeniedReason2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DeniedReason7Choice#Code
-	 * DeniedReason7Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.DeniedReason7Choice#mmCode
+	 * DeniedReason7Choice.mmCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DeniedReason16Choice#Code
-	 * DeniedReason16Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.DeniedReason16Choice#mmCode
+	 * DeniedReason16Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> DeniedReason2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.DeniedReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the request was denied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason7Choice.Code, com.tools20022.repository.choice.DeniedReason16Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason7Choice.mmCode, com.tools20022.repository.choice.DeniedReason16Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DeniedReason4Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Specifies the reason why the request was denied.
 	 * <p>
@@ -144,8 +146,8 @@ public class DeniedReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#DeniedReason
-	 * SecuritiesTradeStatusReason.DeniedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmDeniedReason
+	 * SecuritiesTradeStatusReason.mmDeniedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,27 +168,27 @@ public class DeniedReason2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DeniedReason7Choice#Proprietary
-	 * DeniedReason7Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.DeniedReason7Choice#mmProprietary
+	 * DeniedReason7Choice.mmProprietary}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DeniedReason16Choice#Proprietary
-	 * DeniedReason16Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.DeniedReason16Choice#mmProprietary
+	 * DeniedReason16Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> DeniedReason2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.DeniedReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the request was denied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason7Choice.Proprietary, com.tools20022.repository.choice.DeniedReason16Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason7Choice.mmProprietary, com.tools20022.repository.choice.DeniedReason16Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -194,9 +196,9 @@ public class DeniedReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason2Choice.Code, com.tools20022.repository.choice.DeniedReason2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason2Choice.mmCode, com.tools20022.repository.choice.DeniedReason2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeniedReason2Choice";
 				definition = "Choice of format for the denied reason.";
@@ -204,5 +206,21 @@ public class DeniedReason2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DeniedReason4Code getCode() {
+		return code;
+	}
+
+	public void setCode(DeniedReason4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

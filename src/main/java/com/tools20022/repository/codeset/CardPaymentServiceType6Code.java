@@ -35,48 +35,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#Aggregation
- * CardPaymentServiceType6Code.Aggregation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmAggregation
+ * CardPaymentServiceType6Code.mmAggregation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#DCC
- * CardPaymentServiceType6Code.DCC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmDCC
+ * CardPaymentServiceType6Code.mmDCC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#Gratuity
- * CardPaymentServiceType6Code.Gratuity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmGratuity
+ * CardPaymentServiceType6Code.mmGratuity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#Loyalty
- * CardPaymentServiceType6Code.Loyalty}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmLoyalty
+ * CardPaymentServiceType6Code.mmLoyalty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#NoShow
- * CardPaymentServiceType6Code.NoShow}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmNoShow
+ * CardPaymentServiceType6Code.mmNoShow}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#PurchaseCorporate
- * CardPaymentServiceType6Code.PurchaseCorporate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmPurchaseCorporate
+ * CardPaymentServiceType6Code.mmPurchaseCorporate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#RecurringPayment
- * CardPaymentServiceType6Code.RecurringPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmRecurringPayment
+ * CardPaymentServiceType6Code.mmRecurringPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#SolicitedAvailableFunds
- * CardPaymentServiceType6Code.SolicitedAvailableFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmSolicitedAvailableFunds
+ * CardPaymentServiceType6Code.mmSolicitedAvailableFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#VoiceAuthorisation
- * CardPaymentServiceType6Code.VoiceAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmVoiceAuthorisation
+ * CardPaymentServiceType6Code.mmVoiceAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#IssuerInstalment
- * CardPaymentServiceType6Code.IssuerInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmIssuerInstalment
+ * CardPaymentServiceType6Code.mmIssuerInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#AcceptorInstalment
- * CardPaymentServiceType6Code.AcceptorInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmAcceptorInstalment
+ * CardPaymentServiceType6Code.mmAcceptorInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#CashBack
- * CardPaymentServiceType6Code.CashBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType6Code#mmCashBack
+ * CardPaymentServiceType6Code.mmCashBack}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -128,23 +128,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#Aggregation
-	 * CardPaymentServiceType9Code.Aggregation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmAggregation
+	 * CardPaymentServiceType9Code.mmAggregation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#Aggregation
-	 * CardPaymentServiceType2Code.Aggregation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmAggregation
+	 * CardPaymentServiceType2Code.mmAggregation}</li>
 	 * </ul>
 	 */
-	public static final MMCode Aggregation = new MMCode() {
+	public static final MMCode mmAggregation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aggregation";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.Aggregation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.Aggregation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmAggregation);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmAggregation;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -166,23 +166,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#DCC
-	 * CardPaymentServiceType9Code.DCC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmDCC
+	 * CardPaymentServiceType9Code.mmDCC}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#DCC
-	 * CardPaymentServiceType2Code.DCC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmDCC
+	 * CardPaymentServiceType2Code.mmDCC}</li>
 	 * </ul>
 	 */
-	public static final MMCode DCC = new MMCode() {
+	public static final MMCode mmDCC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DCC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.DCC;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.DCC);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmDCC);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmDCC;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -204,23 +204,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#Gratuity
-	 * CardPaymentServiceType9Code.Gratuity}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmGratuity
+	 * CardPaymentServiceType9Code.mmGratuity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#Gratuity
-	 * CardPaymentServiceType2Code.Gratuity}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmGratuity
+	 * CardPaymentServiceType2Code.mmGratuity}</li>
 	 * </ul>
 	 */
-	public static final MMCode Gratuity = new MMCode() {
+	public static final MMCode mmGratuity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.Gratuity;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.Gratuity);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmGratuity);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmGratuity;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -242,23 +242,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#Loyalty
-	 * CardPaymentServiceType9Code.Loyalty}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmLoyalty
+	 * CardPaymentServiceType9Code.mmLoyalty}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#Loyalty
-	 * CardPaymentServiceType2Code.Loyalty}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmLoyalty
+	 * CardPaymentServiceType2Code.mmLoyalty}</li>
 	 * </ul>
 	 */
-	public static final MMCode Loyalty = new MMCode() {
+	public static final MMCode mmLoyalty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loyalty";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.Loyalty;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.Loyalty);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmLoyalty);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmLoyalty;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -280,23 +280,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#NoShow
-	 * CardPaymentServiceType9Code.NoShow}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmNoShow
+	 * CardPaymentServiceType9Code.mmNoShow}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#NoShow
-	 * CardPaymentServiceType2Code.NoShow}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmNoShow
+	 * CardPaymentServiceType2Code.mmNoShow}</li>
 	 * </ul>
 	 */
-	public static final MMCode NoShow = new MMCode() {
+	public static final MMCode mmNoShow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoShow";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.NoShow;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.NoShow);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmNoShow);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmNoShow;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -318,23 +318,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#PurchaseCorporate
-	 * CardPaymentServiceType9Code.PurchaseCorporate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmPurchaseCorporate
+	 * CardPaymentServiceType9Code.mmPurchaseCorporate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#PurchaseCorporate
-	 * CardPaymentServiceType2Code.PurchaseCorporate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmPurchaseCorporate
+	 * CardPaymentServiceType2Code.mmPurchaseCorporate}</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseCorporate = new MMCode() {
+	public static final MMCode mmPurchaseCorporate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseCorporate";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.PurchaseCorporate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.PurchaseCorporate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmPurchaseCorporate);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmPurchaseCorporate;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -356,23 +356,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#RecurringPayment
-	 * CardPaymentServiceType9Code.RecurringPayment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmRecurringPayment
+	 * CardPaymentServiceType9Code.mmRecurringPayment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#RecurringPayment
-	 * CardPaymentServiceType2Code.RecurringPayment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmRecurringPayment
+	 * CardPaymentServiceType2Code.mmRecurringPayment}</li>
 	 * </ul>
 	 */
-	public static final MMCode RecurringPayment = new MMCode() {
+	public static final MMCode mmRecurringPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecurringPayment";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.RecurringPayment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.RecurringPayment);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmRecurringPayment);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmRecurringPayment;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -394,23 +394,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#SolicitedAvailableFunds
-	 * CardPaymentServiceType9Code.SolicitedAvailableFunds}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmSolicitedAvailableFunds
+	 * CardPaymentServiceType9Code.mmSolicitedAvailableFunds}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#SolicitedAvailableFunds
-	 * CardPaymentServiceType2Code.SolicitedAvailableFunds}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmSolicitedAvailableFunds
+	 * CardPaymentServiceType2Code.mmSolicitedAvailableFunds}</li>
 	 * </ul>
 	 */
-	public static final MMCode SolicitedAvailableFunds = new MMCode() {
+	public static final MMCode mmSolicitedAvailableFunds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitedAvailableFunds";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.SolicitedAvailableFunds;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.SolicitedAvailableFunds);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmSolicitedAvailableFunds);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmSolicitedAvailableFunds;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -432,23 +432,23 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#VoiceAuthorisation
-	 * CardPaymentServiceType9Code.VoiceAuthorisation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmVoiceAuthorisation
+	 * CardPaymentServiceType9Code.mmVoiceAuthorisation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#VoiceAuthorisation
-	 * CardPaymentServiceType2Code.VoiceAuthorisation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType2Code#mmVoiceAuthorisation
+	 * CardPaymentServiceType2Code.mmVoiceAuthorisation}</li>
 	 * </ul>
 	 */
-	public static final MMCode VoiceAuthorisation = new MMCode() {
+	public static final MMCode mmVoiceAuthorisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoiceAuthorisation";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.VoiceAuthorisation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.VoiceAuthorisation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmVoiceAuthorisation);
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType2Code.mmVoiceAuthorisation;
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -470,17 +470,17 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#IssuerInstalment
-	 * CardPaymentServiceType9Code.IssuerInstalment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmIssuerInstalment
+	 * CardPaymentServiceType9Code.mmIssuerInstalment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerInstalment = new MMCode() {
+	public static final MMCode mmIssuerInstalment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInstalment";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.IssuerInstalment);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmIssuerInstalment);
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -502,17 +502,17 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#AcceptorInstalment
-	 * CardPaymentServiceType9Code.AcceptorInstalment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmAcceptorInstalment
+	 * CardPaymentServiceType9Code.mmAcceptorInstalment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptorInstalment = new MMCode() {
+	public static final MMCode mmAcceptorInstalment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorInstalment";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.AcceptorInstalment);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmAcceptorInstalment);
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -534,17 +534,17 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#CashBack
-	 * CardPaymentServiceType9Code.CashBack}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType9Code#mmCashBack
+	 * CardPaymentServiceType9Code.mmCashBack}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashBack = new MMCode() {
+	public static final MMCode mmCashBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBack";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.CashBack);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType9Code.mmCashBack);
 			owner_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
@@ -552,19 +552,19 @@ public class CardPaymentServiceType6Code extends CardPaymentServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGGR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType6Code";
 				definition = "Service provided by the card payment transaction, in addition to the main service.";
-				previousVersion_lazy = () -> CardPaymentServiceType2Code.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType9Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType6Code.Aggregation, com.tools20022.repository.codeset.CardPaymentServiceType6Code.DCC,
-						com.tools20022.repository.codeset.CardPaymentServiceType6Code.Gratuity, com.tools20022.repository.codeset.CardPaymentServiceType6Code.Loyalty, com.tools20022.repository.codeset.CardPaymentServiceType6Code.NoShow,
-						com.tools20022.repository.codeset.CardPaymentServiceType6Code.PurchaseCorporate, com.tools20022.repository.codeset.CardPaymentServiceType6Code.RecurringPayment,
-						com.tools20022.repository.codeset.CardPaymentServiceType6Code.SolicitedAvailableFunds, com.tools20022.repository.codeset.CardPaymentServiceType6Code.VoiceAuthorisation,
-						com.tools20022.repository.codeset.CardPaymentServiceType6Code.IssuerInstalment, com.tools20022.repository.codeset.CardPaymentServiceType6Code.AcceptorInstalment,
-						com.tools20022.repository.codeset.CardPaymentServiceType6Code.CashBack);
+				previousVersion_lazy = () -> CardPaymentServiceType2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmAggregation, com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmDCC,
+						com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmGratuity, com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmLoyalty,
+						com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmNoShow, com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmPurchaseCorporate,
+						com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmRecurringPayment, com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmSolicitedAvailableFunds,
+						com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmVoiceAuthorisation, com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmIssuerInstalment,
+						com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmAcceptorInstalment, com.tools20022.repository.codeset.CardPaymentServiceType6Code.mmCashBack);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 			}
 		});

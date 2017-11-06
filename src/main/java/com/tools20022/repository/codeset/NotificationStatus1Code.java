@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#Complete
- * NotificationStatus1Code.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#mmComplete
+ * NotificationStatus1Code.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#PreliminaryEventConfirmed
- * NotificationStatus1Code.PreliminaryEventConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#mmPreliminaryEventConfirmed
+ * NotificationStatus1Code.mmPreliminaryEventConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#PreliminaryEventUnconfirmed
- * NotificationStatus1Code.PreliminaryEventUnconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#mmPreliminaryEventUnconfirmed
+ * NotificationStatus1Code.mmPreliminaryEventUnconfirmed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -110,7 +110,7 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 * name} = "PreliminaryEventConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreliminaryEventConfirmed = new MMCode() {
+	public static final MMCode mmPreliminaryEventConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryEventConfirmed";
@@ -133,7 +133,7 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 * name} = "PreliminaryEventUnconfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreliminaryEventUnconfirmed = new MMCode() {
+	public static final MMCode mmPreliminaryEventUnconfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryEventUnconfirmed";
@@ -144,13 +144,13 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus1Code";
 				definition = "Status to define the completeness of information contained in the notification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus1Code.Complete, com.tools20022.repository.codeset.NotificationStatus1Code.PreliminaryEventConfirmed,
-						com.tools20022.repository.codeset.NotificationStatus1Code.PreliminaryEventUnconfirmed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus1Code.mmComplete, com.tools20022.repository.codeset.NotificationStatus1Code.mmPreliminaryEventConfirmed,
+						com.tools20022.repository.codeset.NotificationStatus1Code.mmPreliminaryEventUnconfirmed);
 				trace_lazy = () -> NotificationStatusCode.mmObject();
 			}
 		});

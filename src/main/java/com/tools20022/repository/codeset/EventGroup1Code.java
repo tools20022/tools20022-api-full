@@ -32,15 +32,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.EventGroupCode EventGroupCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventGroup1Code#Redemption
- * EventGroup1Code.Redemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventGroup1Code#mmRedemption
+ * EventGroup1Code.mmRedemption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +79,7 @@ public class EventGroup1Code extends EventGroupCode {
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -89,12 +90,12 @@ public class EventGroup1Code extends EventGroupCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REDM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventGroup1Code";
 				definition = "Specifies DTC (The Depository Trust Company) processing domain for the event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventGroup1Code.Redemption);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventGroup1Code.mmRedemption);
 				trace_lazy = () -> EventGroupCode.mmObject();
 			}
 		});

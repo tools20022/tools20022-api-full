@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation10#Basis
- * TaxCalculationInformation10.Basis}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation10#mmBasis
+ * TaxCalculationInformation10.mmBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation10#TaxableAmount
- * TaxCalculationInformation10.TaxableAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation10#mmTaxableAmount
+ * TaxCalculationInformation10.mmTaxableAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxCalculationInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxBasis1Choice basis;
 	/**
 	 * Form of the rebate, for example, cash.
 	 * <p>
@@ -80,7 +81,7 @@ public class TaxCalculationInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Basis Tax.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,25 +101,26 @@ public class TaxCalculationInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#Basis
-	 * TaxCalculationInformation8.Basis}</li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#mmBasis
+	 * TaxCalculationInformation8.mmBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Basis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Basis;
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Form of the rebate, for example, cash.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.Basis;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.mmBasis;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TaxBasis1Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxableAmount;
 	/**
 	 * Amount of money on which the tax is charged.
 	 * <p>
@@ -132,8 +134,8 @@ public class TaxCalculationInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxableBaseAmount
-	 * Tax.TaxableBaseAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
+	 * Tax.mmTaxableBaseAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,22 +155,22 @@ public class TaxCalculationInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#TaxableAmount
-	 * TaxCalculationInformation8.TaxableAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#mmTaxableAmount
+	 * TaxCalculationInformation8.mmTaxableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> TaxCalculationInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxableBaseAmount;
 			isDerived = false;
 			xmlTag = "TaxblAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableAmount";
 			definition = "Amount of money on which the tax is charged.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.TaxableAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.mmTaxableAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -176,9 +178,9 @@ public class TaxCalculationInformation10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation10.Basis, com.tools20022.repository.msg.TaxCalculationInformation10.TaxableAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation10.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation10.mmTaxableAmount);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculationInformation10";
 				definition = "Information used to calculate the tax.";
@@ -186,5 +188,21 @@ public class TaxCalculationInformation10 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxBasis1Choice getBasis() {
+		return basis;
+	}
+
+	public void setBasis(TaxBasis1Choice basis) {
+		this.basis = basis;
+	}
+
+	public ActiveCurrencyAndAmount getTaxableAmount() {
+		return taxableAmount;
+	}
+
+	public void setTaxableAmount(ActiveCurrencyAndAmount taxableAmount) {
+		this.taxableAmount = taxableAmount;
 	}
 }

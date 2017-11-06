@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * EntryStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus2Code#Booked
- * EntryStatus2Code.Booked}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus2Code#Pending
- * EntryStatus2Code.Pending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus2Code#mmBooked
+ * EntryStatus2Code.mmBooked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus2Code#mmPending
+ * EntryStatus2Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EntryStatus2Code#Information
- * EntryStatus2Code.Information}</li>
+ * {@linkplain com.tools20022.repository.codeset.EntryStatus2Code#mmInformation
+ * EntryStatus2Code.mmInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class EntryStatus2Code extends EntryStatusCode {
 	 * name} = "Booked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Booked = new MMCode() {
+	public static final MMCode mmBooked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Booked";
@@ -105,7 +105,7 @@ public class EntryStatus2Code extends EntryStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -128,7 +128,7 @@ public class EntryStatus2Code extends EntryStatusCode {
 	 * name} = "Information"</li>
 	 * </ul>
 	 */
-	public static final MMCode Information = new MMCode() {
+	public static final MMCode mmInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
@@ -139,12 +139,12 @@ public class EntryStatus2Code extends EntryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus2Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus2Code.Booked, com.tools20022.repository.codeset.EntryStatus2Code.Pending, com.tools20022.repository.codeset.EntryStatus2Code.Information);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus2Code.mmBooked, com.tools20022.repository.codeset.EntryStatus2Code.mmPending, com.tools20022.repository.codeset.EntryStatus2Code.mmInformation);
 				trace_lazy = () -> EntryStatusCode.mmObject();
 			}
 		});

@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.BusinessError1;
 import com.tools20022.repository.msg.SecurityAttributes3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the financial instruments details or the business error.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityOrBusinessError1Choice#SecurityReport
- * SecurityOrBusinessError1Choice.SecurityReport}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityOrBusinessError1Choice#mmSecurityReport
+ * SecurityOrBusinessError1Choice.mmSecurityReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityOrBusinessError1Choice#BusinessError
- * SecurityOrBusinessError1Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityOrBusinessError1Choice#mmBusinessError
+ * SecurityOrBusinessError1Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<SecurityAttributes3> securityReport;
 	/**
 	 * Provides the financial instruments details.
 	 * <p>
@@ -86,7 +88,7 @@ public class SecurityOrBusinessError1Choice {
 	 * definition} = "Provides the financial instruments details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecurityReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecurityReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -95,10 +97,11 @@ public class SecurityOrBusinessError1Choice {
 			name = "SecurityReport";
 			definition = "Provides the financial instruments details.";
 			minOccurs = 1;
-			type_lazy = () -> SecurityAttributes3.mmObject();
 			isComposite = true;
+			type_lazy = () -> SecurityAttributes3.mmObject();
 		}
 	};
+	protected List<BusinessError1> businessError;
 	/**
 	 * Provides the business error details.
 	 * <p>
@@ -125,7 +128,7 @@ public class SecurityOrBusinessError1Choice {
 	 * definition} = "Provides the business error details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -134,21 +137,37 @@ public class SecurityOrBusinessError1Choice {
 			name = "BusinessError";
 			definition = "Provides the business error details.";
 			minOccurs = 1;
-			type_lazy = () -> BusinessError1.mmObject();
 			isComposite = true;
+			type_lazy = () -> BusinessError1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityOrBusinessError1Choice.SecurityReport, com.tools20022.repository.choice.SecurityOrBusinessError1Choice.BusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityOrBusinessError1Choice.mmSecurityReport, com.tools20022.repository.choice.SecurityOrBusinessError1Choice.mmBusinessError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityOrBusinessError1Choice";
 				definition = "Provides the financial instruments details or the business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecurityAttributes3> getSecurityReport() {
+		return securityReport;
+	}
+
+	public void setSecurityReport(List<SecurityAttributes3> securityReport) {
+		this.securityReport = securityReport;
+	}
+
+	public List<BusinessError1> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<BusinessError1> businessError) {
+		this.businessError = businessError;
 	}
 }

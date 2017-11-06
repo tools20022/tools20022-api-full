@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#Received
- * ProcessedStatus1Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmReceived
+ * ProcessedStatus1Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#SentToMarket
- * ProcessedStatus1Code.SentToMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmSentToMarket
+ * ProcessedStatus1Code.mmSentToMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#AcceptedWithWarning
- * ProcessedStatus1Code.AcceptedWithWarning}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmAcceptedWithWarning
+ * ProcessedStatus1Code.mmAcceptedWithWarning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#Accepted
- * ProcessedStatus1Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmAccepted
+ * ProcessedStatus1Code.mmAccepted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -110,7 +110,7 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "SentToMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToMarket = new MMCode() {
+	public static final MMCode mmSentToMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToMarket";
@@ -133,7 +133,7 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "AcceptedWithWarning"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithWarning = new MMCode() {
+	public static final MMCode mmAcceptedWithWarning = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithWarning";
@@ -156,7 +156,7 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -167,13 +167,13 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus1Code";
 				definition = "Specifies the processing status of the notification advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus1Code.Received, com.tools20022.repository.codeset.ProcessedStatus1Code.SentToMarket,
-						com.tools20022.repository.codeset.ProcessedStatus1Code.AcceptedWithWarning, com.tools20022.repository.codeset.ProcessedStatus1Code.Accepted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus1Code.mmReceived, com.tools20022.repository.codeset.ProcessedStatus1Code.mmSentToMarket,
+						com.tools20022.repository.codeset.ProcessedStatus1Code.mmAcceptedWithWarning, com.tools20022.repository.codeset.ProcessedStatus1Code.mmAccepted);
 				trace_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
 			}
 		});

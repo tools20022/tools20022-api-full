@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#Global
- * LiquidityLimitType1Code.Global}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmGlobal
+ * LiquidityLimitType1Code.mmGlobal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#CashReservation
- * LiquidityLimitType1Code.CashReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmCashReservation
+ * LiquidityLimitType1Code.mmCashReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#CriticalPaymentReservation
- * LiquidityLimitType1Code.CriticalPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmCriticalPaymentReservation
+ * LiquidityLimitType1Code.mmCriticalPaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#NetSSSReservation
- * LiquidityLimitType1Code.NetSSSReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmNetSSSReservation
+ * LiquidityLimitType1Code.mmNetSSSReservation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode Global = new MMCode() {
+	public static final MMCode mmGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
@@ -110,7 +110,7 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "CashReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashReservation = new MMCode() {
+	public static final MMCode mmCashReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservation";
@@ -133,7 +133,7 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "CriticalPaymentReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CriticalPaymentReservation = new MMCode() {
+	public static final MMCode mmCriticalPaymentReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CriticalPaymentReservation";
@@ -156,7 +156,7 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "NetSSSReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetSSSReservation = new MMCode() {
+	public static final MMCode mmNetSSSReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservation";
@@ -167,13 +167,13 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GLBL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LiquidityLimitType1Code";
 				definition = "Specifies the precise type of liquidity management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiquidityLimitType1Code.Global, com.tools20022.repository.codeset.LiquidityLimitType1Code.CashReservation,
-						com.tools20022.repository.codeset.LiquidityLimitType1Code.CriticalPaymentReservation, com.tools20022.repository.codeset.LiquidityLimitType1Code.NetSSSReservation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiquidityLimitType1Code.mmGlobal, com.tools20022.repository.codeset.LiquidityLimitType1Code.mmCashReservation,
+						com.tools20022.repository.codeset.LiquidityLimitType1Code.mmCriticalPaymentReservation, com.tools20022.repository.codeset.LiquidityLimitType1Code.mmNetSSSReservation);
 				trace_lazy = () -> LiquidityLimitTypeCode.mmObject();
 			}
 		});

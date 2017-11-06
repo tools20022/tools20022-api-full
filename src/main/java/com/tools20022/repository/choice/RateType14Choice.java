@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RateType14Choice#Code
- * RateType14Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType14Choice#mmCode
+ * RateType14Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateType14Choice#Proprietary
- * RateType14Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RateType14Choice#mmProprietary
+ * RateType14Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateType14Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxType4Code code;
 	/**
 	 * Standard code to specify the type of tax rate.
 	 * <p>
@@ -75,8 +76,8 @@ public class RateType14Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxRateType
-	 * Tax.TaxRateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRateType
+	 * Tax.mmTaxRateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class RateType14Choice {
 	 * definition} = "Standard code to specify the type of tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxRateType;
 			componentContext_lazy = () -> RateType14Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxRateType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of tax rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxType4Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Proprietary identification of the type of tax rate.
 	 * <p>
@@ -121,8 +123,8 @@ public class RateType14Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxRateType
-	 * Tax.TaxRateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRateType
+	 * Tax.mmTaxRateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,33 +143,49 @@ public class RateType14Choice {
 	 * definition} = "Proprietary identification of the type of tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxRateType;
 			componentContext_lazy = () -> RateType14Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxRateType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of tax rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType14Choice.Code, com.tools20022.repository.choice.RateType14Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType14Choice.mmCode, com.tools20022.repository.choice.RateType14Choice.mmProprietary);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType14Choice";
 				definition = "Choice between a standard code or proprietary code to specify a rate type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxType4Code getCode() {
+		return code;
+	}
+
+	public void setCode(TaxType4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

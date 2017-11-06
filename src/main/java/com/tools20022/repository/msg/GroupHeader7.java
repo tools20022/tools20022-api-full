@@ -36,29 +36,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GroupHeader7#MessageIdentification
- * GroupHeader7.MessageIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#CreationDateTime
- * GroupHeader7.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader7#mmMessageIdentification
+ * GroupHeader7.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GroupHeader7#NumberOfTransactions
- * GroupHeader7.NumberOfTransactions}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#ControlSum
- * GroupHeader7.ControlSum}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#GroupCancellation
- * GroupHeader7.GroupCancellation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#InitiatingParty
- * GroupHeader7.InitiatingParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#ForwardingAgent
- * GroupHeader7.ForwardingAgent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#DebtorAgent
- * GroupHeader7.DebtorAgent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#CreditorAgent
- * GroupHeader7.CreditorAgent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#InstructingAgent
- * GroupHeader7.InstructingAgent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#InstructedAgent
- * GroupHeader7.InstructedAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader7#mmCreationDateTime
+ * GroupHeader7.mmCreationDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader7#mmNumberOfTransactions
+ * GroupHeader7.mmNumberOfTransactions}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#mmControlSum
+ * GroupHeader7.mmControlSum}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader7#mmGroupCancellation
+ * GroupHeader7.mmGroupCancellation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#mmInitiatingParty
+ * GroupHeader7.mmInitiatingParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#mmForwardingAgent
+ * GroupHeader7.mmForwardingAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#mmDebtorAgent
+ * GroupHeader7.mmDebtorAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#mmCreditorAgent
+ * GroupHeader7.mmCreditorAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader7#mmInstructingAgent
+ * GroupHeader7.mmInstructingAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader7#mmInstructedAgent
+ * GroupHeader7.mmInstructedAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,18 +71,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01#GroupHeader
- * PaymentCancellationRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01#mmGroupHeader
+ * PaymentCancellationRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#GroupHeader
- * PaymentCancellationRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#mmGroupHeader
+ * PaymentCancellationRequestV01.mmGroupHeader}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GroupHeader7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference assigned by the instructing party and sent to
 	 * the next party in the chain to unambiguously identify the message.
@@ -112,8 +116,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,20 +137,21 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.\n\nUsage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the (group of) cancellation request(s) was created
 	 * by the instructing party.
@@ -160,8 +165,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,20 +186,21 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the (group of) cancellation request(s) was created by the instructing party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfTransactions;
 	/**
 	 * Number of individual transactions contained in the message.
 	 * <p>
@@ -223,7 +229,7 @@ public class GroupHeader7 {
 	 * "Number of individual transactions contained in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GroupHeader7.mmObject();
 			isDerived = false;
@@ -231,11 +237,12 @@ public class GroupHeader7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions contained in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in the message, irrespective of
 	 * currencies.
@@ -266,7 +273,7 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GroupHeader7.mmObject();
 			isDerived = false;
@@ -274,11 +281,12 @@ public class GroupHeader7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected GroupingIndicator groupCancellation;
 	/**
 	 * Indicates whether the cancellation applies to a whole group of
 	 * transactions or to individual transactions within the original group.
@@ -309,7 +317,7 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GroupCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroupCancellation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GroupHeader7.mmObject();
 			isDerived = false;
@@ -317,11 +325,12 @@ public class GroupHeader7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellation";
 			definition = "Indicates whether the cancellation applies to a whole group of transactions or to individual transactions within the original group.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> GroupingIndicator.mmObject();
 		}
 	};
+	protected PartyIdentification8 initiatingParty;
 	/**
 	 * Party initiating the payment. In the payment context, this can either be
 	 * the debtor (in a credit transfer), the creditor (in a direct debit), or
@@ -335,8 +344,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -356,21 +365,22 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "InitgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Party initiating the payment. In the payment context, this can either be the debtor (in a credit transfer), the creditor (in a direct debit), or the party that initiates the payment on behalf of the debtor or creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 forwardingAgent;
 	/**
 	 * Financial institution that receives the instruction from the initiating
 	 * party and forwards it to the next agent in the payment chain.
@@ -384,8 +394,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -405,21 +415,22 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForwardingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForwardingAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "FwdgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardingAgent";
 			definition = "Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 debtorAgent;
 	/**
 	 * Financial institution servicing an account for the debtor.
 	 * <p>
@@ -432,8 +443,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -452,21 +463,22 @@ public class GroupHeader7 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 creditorAgent;
 	/**
 	 * Financial institution servicing an account for the creditor.
 	 * <p>
@@ -479,8 +491,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -499,21 +511,22 @@ public class GroupHeader7 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 instructingAgent;
 	/**
 	 * Agent that instructs the next party in the chain to carry out the (set
 	 * of) instruction(s).
@@ -527,8 +540,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -548,21 +561,22 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 instructedAgent;
 	/**
 	 * Agent that is instructed by the previous party in the chain to carry out
 	 * the (set of) instruction(s).
@@ -576,8 +590,8 @@ public class GroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -597,37 +611,125 @@ public class GroupHeader7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "InstdAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader7.MessageIdentification, com.tools20022.repository.msg.GroupHeader7.CreationDateTime,
-						com.tools20022.repository.msg.GroupHeader7.NumberOfTransactions, com.tools20022.repository.msg.GroupHeader7.ControlSum, com.tools20022.repository.msg.GroupHeader7.GroupCancellation,
-						com.tools20022.repository.msg.GroupHeader7.InitiatingParty, com.tools20022.repository.msg.GroupHeader7.ForwardingAgent, com.tools20022.repository.msg.GroupHeader7.DebtorAgent,
-						com.tools20022.repository.msg.GroupHeader7.CreditorAgent, com.tools20022.repository.msg.GroupHeader7.InstructingAgent, com.tools20022.repository.msg.GroupHeader7.InstructedAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader7.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader7.mmCreationDateTime,
+						com.tools20022.repository.msg.GroupHeader7.mmNumberOfTransactions, com.tools20022.repository.msg.GroupHeader7.mmControlSum, com.tools20022.repository.msg.GroupHeader7.mmGroupCancellation,
+						com.tools20022.repository.msg.GroupHeader7.mmInitiatingParty, com.tools20022.repository.msg.GroupHeader7.mmForwardingAgent, com.tools20022.repository.msg.GroupHeader7.mmDebtorAgent,
+						com.tools20022.repository.msg.GroupHeader7.mmCreditorAgent, com.tools20022.repository.msg.GroupHeader7.mmInstructingAgent, com.tools20022.repository.msg.GroupHeader7.mmInstructedAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentCancellationRequestV01.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentCancellationRequestV01.GroupHeader, com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.GroupHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader7";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public Max15NumericText getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = numberOfTransactions;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+	}
+
+	public GroupingIndicator getGroupCancellation() {
+		return groupCancellation;
+	}
+
+	public void setGroupCancellation(GroupingIndicator groupCancellation) {
+		this.groupCancellation = groupCancellation;
+	}
+
+	public PartyIdentification8 getInitiatingParty() {
+		return initiatingParty;
+	}
+
+	public void setInitiatingParty(com.tools20022.repository.msg.PartyIdentification8 initiatingParty) {
+		this.initiatingParty = initiatingParty;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getForwardingAgent() {
+		return forwardingAgent;
+	}
+
+	public void setForwardingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 forwardingAgent) {
+		this.forwardingAgent = forwardingAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getDebtorAgent() {
+		return debtorAgent;
+	}
+
+	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 debtorAgent) {
+		this.debtorAgent = debtorAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getCreditorAgent() {
+		return creditorAgent;
+	}
+
+	public void setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 creditorAgent) {
+		this.creditorAgent = creditorAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getInstructingAgent() {
+		return instructingAgent;
+	}
+
+	public void setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 instructingAgent) {
+		this.instructingAgent = instructingAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getInstructedAgent() {
+		return instructedAgent;
+	}
+
+	public void setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 instructedAgent) {
+		this.instructedAgent = instructedAgent;
 	}
 }

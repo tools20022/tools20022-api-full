@@ -41,41 +41,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConfirmationRejectedStatusReason
- * SecuritiesOrderStatus.ConfirmationRejectedStatusReason}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationRejectedStatusReason
+ * SecuritiesOrderStatus.mmConfirmationRejectedStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConfirmationStatus
- * SecuritiesOrderStatus.ConfirmationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationStatus
+ * SecuritiesOrderStatus.mmConfirmationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#CancellationStatus
- * SecuritiesOrderStatus.CancellationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCancellationStatus
+ * SecuritiesOrderStatus.mmCancellationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#PartiallySettledStatusReason
- * SecuritiesOrderStatus.PartiallySettledStatusReason}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmPartiallySettledStatusReason
+ * SecuritiesOrderStatus.mmPartiallySettledStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#SuspendedStatusReason
- * SecuritiesOrderStatus.SuspendedStatusReason}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSuspendedStatusReason
+ * SecuritiesOrderStatus.mmSuspendedStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ListOrderStatus
- * SecuritiesOrderStatus.ListOrderStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmListOrderStatus
+ * SecuritiesOrderStatus.mmListOrderStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#SecuritiesOrder
- * SecuritiesOrderStatus.SecuritiesOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSecuritiesOrder
+ * SecuritiesOrderStatus.mmSecuritiesOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#InvestmentFundOrder
- * SecuritiesOrderStatus.InvestmentFundOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmInvestmentFundOrder
+ * SecuritiesOrderStatus.mmInvestmentFundOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#CumulativeQuantity
- * SecuritiesOrderStatus.CumulativeQuantity}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCumulativeQuantity
+ * SecuritiesOrderStatus.mmCumulativeQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#RemainingQuantity
- * SecuritiesOrderStatus.RemainingQuantity}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmRemainingQuantity
+ * SecuritiesOrderStatus.mmRemainingQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConditionallyAcceptedStatus
- * SecuritiesOrderStatus.ConditionallyAcceptedStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
+ * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#OrderStatus
- * SecuritiesOrderStatus.OrderStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmOrderStatus
+ * SecuritiesOrderStatus.mmOrderStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,16 +83,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderStatus
- * InvestmentFundOrder.OrderStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderStatus
+ * InvestmentFundOrder.mmOrderStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#RelatedOrderStatus
- * SecuritiesQuantity.RelatedOrderStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderStatus
+ * SecuritiesQuantity.mmRelatedOrderStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#SecuritiesOrderStatus
- * SecuritiesQuantity.SecuritiesOrderStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesOrder#Status
- * SecuritiesOrder.Status}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesOrderStatus
+ * SecuritiesQuantity.mmSecuritiesOrderStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmStatus
+ * SecuritiesOrder.mmStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,48 +100,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason4#Rejected
- * IndividualOrderStatusAndReason4.Rejected}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SuspendedStatus1#Reason
- * SuspendedStatus1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason4#mmRejected
+ * IndividualOrderStatusAndReason4.mmRejected}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SuspendedStatus1#mmReason
+ * SuspendedStatus1.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#InRepair
- * IndividualOrderStatusAndReason1.InRepair}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#mmInRepair
+ * IndividualOrderStatusAndReason1.mmInRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#RepairedConditions
- * IndividualOrderStatusAndReason1.RepairedConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#mmRepairedConditions
+ * IndividualOrderStatusAndReason1.mmRepairedConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#Rejected
- * IndividualOrderStatusAndReason2.Rejected}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmRejected
+ * IndividualOrderStatusAndReason2.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#RepairedConditions
- * IndividualOrderStatusAndReason2.RepairedConditions}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OrderStatus1Choice#Rejected
- * OrderStatus1Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmRepairedConditions
+ * IndividualOrderStatusAndReason2.mmRepairedConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason3#StatusDetails
- * IndividualOrderStatusAndReason3.StatusDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmRejected
+ * OrderStatus1Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason5#Rejected
- * IndividualOrderStatusAndReason5.Rejected}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason3#mmStatusDetails
+ * IndividualOrderStatusAndReason3.mmStatusDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5#OrderStatusDetails
- * OrderStatusAndReason5.OrderStatusDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason5#mmRejected
+ * IndividualOrderStatusAndReason5.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatus3#SingleOrderStatusDetails
- * OrderStatus3.SingleOrderStatusDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5#mmOrderStatusDetails
+ * OrderStatusAndReason5.mmOrderStatusDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatus2#SingleOrderDetails
- * OrderStatus2.SingleOrderDetails}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OrderStatus5Choice#Rejected
- * OrderStatus5Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmSingleOrderStatusDetails
+ * OrderStatus3.mmSingleOrderStatusDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#AmendmentRejected
- * ConfirmationStatus1Choice.AmendmentRejected}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OrderStatus3Choice#Rejected
- * OrderStatus3Choice.Rejected}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OrderStatus4Choice#Rejected
- * OrderStatus4Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus2#mmSingleOrderDetails
+ * OrderStatus2.mmSingleOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#mmRejected
+ * OrderStatus5Choice.mmRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#mmAmendmentRejected
+ * ConfirmationStatus1Choice.mmAmendmentRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#mmRejected
+ * OrderStatus3Choice.mmRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#mmRejected
+ * OrderStatus4Choice.mmRejected}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -273,8 +277,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -289,6 +293,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesOrderStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectedConfirmationStatusReasonCode confirmationRejectedStatusReason;
 	/**
 	 * Specifies the reason for a confirmation rejected status.
 	 * <p>
@@ -299,28 +304,28 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RejectedConfirmationStatusReasonCode
 	 * RejectedConfirmationStatusReasonCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus1#Reason
-	 * ConfirmationRejectedStatus1.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#ConfirmationRejected
-	 * ConfirmationStatus1Choice.ConfirmationRejected}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus2#Reason
-	 * ConfirmationRejectedStatus2.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConfirmationRejectedReason1Choice#Code
-	 * ConfirmationRejectedReason1Choice.Code}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus1#mmReason
+	 * ConfirmationRejectedStatus1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#mmConfirmationRejected
+	 * ConfirmationStatus1Choice.mmConfirmationRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus2#mmReason
+	 * ConfirmationRejectedStatus2.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ConfirmationRejectedReason1Choice#mmCode
+	 * ConfirmationRejectedReason1Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -332,20 +337,21 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Specifies the reason for a confirmation rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ConfirmationRejectedStatusReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmConfirmationRejectedStatusReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.Reason, com.tools20022.repository.choice.ConfirmationStatus1Choice.ConfirmationRejected,
-					com.tools20022.repository.msg.ConfirmationRejectedStatus2.Reason, com.tools20022.repository.choice.ConfirmationRejectedReason1Choice.Code);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmReason, com.tools20022.repository.choice.ConfirmationStatus1Choice.mmConfirmationRejected,
+					com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmReason, com.tools20022.repository.choice.ConfirmationRejectedReason1Choice.mmCode);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConfirmationRejectedStatusReason";
 			definition = "Specifies the reason for a confirmation rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectedConfirmationStatusReasonCode.mmObject();
 		}
 	};
+	protected OrderConfirmationStatusCode confirmationStatus;
 	/**
 	 * Status of the confirmation of a status order.
 	 * <p>
@@ -356,22 +362,22 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatusCode
 	 * OrderConfirmationStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1#Status
-	 * IndividualOrderConfirmationStatusAndReason1.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#Status
-	 * ConfirmationStatus1Choice.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1#mmStatus
+	 * IndividualOrderConfirmationStatusAndReason1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#mmStatus
+	 * ConfirmationStatus1Choice.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -383,19 +389,20 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Status of the confirmation of a status order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ConfirmationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmConfirmationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.Status, com.tools20022.repository.choice.ConfirmationStatus1Choice.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmStatus, com.tools20022.repository.choice.ConfirmationStatus1Choice.mmStatus);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConfirmationStatus";
 			definition = "Status of the confirmation of a status order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderConfirmationStatusCode.mmObject();
 		}
 	};
+	protected OrderCancellationStatusCode cancellationStatus;
 	/**
 	 * Status of the cancellation of a securities order.
 	 * <p>
@@ -406,28 +413,28 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatusCode
 	 * OrderCancellationStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#Status
-	 * OrderStatusAndReason8.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason4#Status
-	 * IndividualOrderStatusAndReason4.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#Cancelled
-	 * SwitchOrderStatusAndReason1.Cancelled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CancellationStatus22Choice#Status
-	 * CancellationStatus22Choice.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#mmStatus
+	 * OrderStatusAndReason8.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason4#mmStatus
+	 * IndividualOrderStatusAndReason4.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmCancelled
+	 * SwitchOrderStatusAndReason1.mmCancelled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationStatus22Choice#mmStatus
+	 * CancellationStatus22Choice.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -439,20 +446,21 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Status of the cancellation of a securities order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CancellationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCancellationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason8.Status, com.tools20022.repository.msg.IndividualOrderStatusAndReason4.Status,
-					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.Cancelled, com.tools20022.repository.choice.CancellationStatus22Choice.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason8.mmStatus, com.tools20022.repository.msg.IndividualOrderStatusAndReason4.mmStatus,
+					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmCancelled, com.tools20022.repository.choice.CancellationStatus22Choice.mmStatus);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationStatus";
 			definition = "Status of the cancellation of a securities order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderCancellationStatusCode.mmObject();
 		}
 	};
+	protected PartiallySettledStatusReasonCode partiallySettledStatusReason;
 	/**
 	 * Reason for the partially settled status.
 	 * <p>
@@ -463,49 +471,49 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode
 	 * PartiallySettledStatusReasonCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartiallySettledStatus1#Reason
-	 * PartiallySettledStatus1.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#PartiallySettled
-	 * OrderStatusAndReason7.PartiallySettled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#PartiallySettled
-	 * IndividualOrderStatusAndReason2.PartiallySettled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#PartiallySettled
-	 * SwitchOrderStatusAndReason1.PartiallySettled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#Reason
-	 * PartiallySettledStatus2.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#Proprietary
-	 * PartiallySettledStatus2.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#PartiallySettled
-	 * OrderStatus1Choice.PartiallySettled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#PartiallySettled
-	 * OrderStatus5Choice.PartiallySettled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartiallySettledStatus10#Reason
-	 * PartiallySettledStatus10.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#PartiallySettled
-	 * OrderStatus3Choice.PartiallySettled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#PartiallySettled
-	 * OrderStatus4Choice.PartiallySettled}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartiallySettledStatus1#mmReason
+	 * PartiallySettledStatus1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmPartiallySettled
+	 * OrderStatusAndReason7.mmPartiallySettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmPartiallySettled
+	 * IndividualOrderStatusAndReason2.mmPartiallySettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmPartiallySettled
+	 * SwitchOrderStatusAndReason1.mmPartiallySettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#mmReason
+	 * PartiallySettledStatus2.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#mmProprietary
+	 * PartiallySettledStatus2.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmPartiallySettled
+	 * OrderStatus1Choice.mmPartiallySettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#mmPartiallySettled
+	 * OrderStatus5Choice.mmPartiallySettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartiallySettledStatus10#mmReason
+	 * PartiallySettledStatus10.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#mmPartiallySettled
+	 * OrderStatus3Choice.mmPartiallySettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#mmPartiallySettled
+	 * OrderStatus4Choice.mmPartiallySettled}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -517,23 +525,24 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Reason for the partially settled status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PartiallySettledStatusReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPartiallySettledStatusReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartiallySettledStatus1.Reason, com.tools20022.repository.msg.OrderStatusAndReason7.PartiallySettled,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason2.PartiallySettled, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.PartiallySettled,
-					com.tools20022.repository.choice.PartiallySettledStatus2.Reason, com.tools20022.repository.choice.PartiallySettledStatus2.Proprietary, com.tools20022.repository.choice.OrderStatus1Choice.PartiallySettled,
-					com.tools20022.repository.choice.OrderStatus5Choice.PartiallySettled, com.tools20022.repository.msg.PartiallySettledStatus10.Reason, com.tools20022.repository.choice.OrderStatus3Choice.PartiallySettled,
-					com.tools20022.repository.choice.OrderStatus4Choice.PartiallySettled);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartiallySettledStatus1.mmReason, com.tools20022.repository.msg.OrderStatusAndReason7.mmPartiallySettled,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmPartiallySettled, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmPartiallySettled,
+					com.tools20022.repository.choice.PartiallySettledStatus2.mmReason, com.tools20022.repository.choice.PartiallySettledStatus2.mmProprietary, com.tools20022.repository.choice.OrderStatus1Choice.mmPartiallySettled,
+					com.tools20022.repository.choice.OrderStatus5Choice.mmPartiallySettled, com.tools20022.repository.msg.PartiallySettledStatus10.mmReason, com.tools20022.repository.choice.OrderStatus3Choice.mmPartiallySettled,
+					com.tools20022.repository.choice.OrderStatus4Choice.mmPartiallySettled);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartiallySettledStatusReason";
 			definition = "Reason for the partially settled status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PartiallySettledStatusReasonCode.mmObject();
 		}
 	};
+	protected SuspendedStatusReasonCode suspendedStatusReason;
 	/**
 	 * Reason for the suspended status.
 	 * <p>
@@ -544,58 +553,58 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode
 	 * SuspendedStatusReasonCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason1#Structured
-	 * SuspendedStatusReason1.Structured}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason3#Suspended
-	 * OrderStatusAndReason3.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#Suspended
-	 * IndividualOrderStatusAndReason1.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#Reason
-	 * SuspendedStatusReason2.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SuspendedStatus2#ReasonDetails
-	 * SuspendedStatus2.ReasonDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#Suspended
-	 * OrderStatusAndReason7.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#Suspended
-	 * IndividualOrderStatusAndReason2.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#Suspended
-	 * SwitchOrderStatusAndReason1.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SuspendedStatusReasonChoice#Reason
-	 * SuspendedStatusReasonChoice.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SuspendedStatusReasonChoice#Proprietary
-	 * SuspendedStatusReasonChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#Suspended
-	 * OrderStatus1Choice.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#Suspended
-	 * OrderStatus5Choice.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#Suspended
-	 * OrderStatus3Choice.Suspended}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#Suspended
-	 * OrderStatus4Choice.Suspended}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason1#mmStructured
+	 * SuspendedStatusReason1.mmStructured}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason3#mmSuspended
+	 * OrderStatusAndReason3.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#mmSuspended
+	 * IndividualOrderStatusAndReason1.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmReason
+	 * SuspendedStatusReason2.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SuspendedStatus2#mmReasonDetails
+	 * SuspendedStatus2.mmReasonDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmSuspended
+	 * OrderStatusAndReason7.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmSuspended
+	 * IndividualOrderStatusAndReason2.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmSuspended
+	 * SwitchOrderStatusAndReason1.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SuspendedStatusReasonChoice#mmReason
+	 * SuspendedStatusReasonChoice.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SuspendedStatusReasonChoice#mmProprietary
+	 * SuspendedStatusReasonChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmSuspended
+	 * OrderStatus1Choice.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#mmSuspended
+	 * OrderStatus5Choice.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#mmSuspended
+	 * OrderStatus3Choice.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#mmSuspended
+	 * OrderStatus4Choice.mmSuspended}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -607,23 +616,24 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SuspendedStatusReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSuspendedStatusReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason1.Structured, com.tools20022.repository.msg.OrderStatusAndReason3.Suspended,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason1.Suspended, com.tools20022.repository.msg.SuspendedStatusReason2.Reason, com.tools20022.repository.msg.SuspendedStatus2.ReasonDetails,
-					com.tools20022.repository.msg.OrderStatusAndReason7.Suspended, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.Suspended, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.Suspended,
-					com.tools20022.repository.choice.SuspendedStatusReasonChoice.Reason, com.tools20022.repository.choice.SuspendedStatusReasonChoice.Proprietary, com.tools20022.repository.choice.OrderStatus1Choice.Suspended,
-					com.tools20022.repository.choice.OrderStatus5Choice.Suspended, com.tools20022.repository.choice.OrderStatus3Choice.Suspended, com.tools20022.repository.choice.OrderStatus4Choice.Suspended);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason1.mmStructured, com.tools20022.repository.msg.OrderStatusAndReason3.mmSuspended,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmSuspended, com.tools20022.repository.msg.SuspendedStatusReason2.mmReason, com.tools20022.repository.msg.SuspendedStatus2.mmReasonDetails,
+					com.tools20022.repository.msg.OrderStatusAndReason7.mmSuspended, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmSuspended, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmSuspended,
+					com.tools20022.repository.choice.SuspendedStatusReasonChoice.mmReason, com.tools20022.repository.choice.SuspendedStatusReasonChoice.mmProprietary, com.tools20022.repository.choice.OrderStatus1Choice.mmSuspended,
+					com.tools20022.repository.choice.OrderStatus5Choice.mmSuspended, com.tools20022.repository.choice.OrderStatus3Choice.mmSuspended, com.tools20022.repository.choice.OrderStatus4Choice.mmSuspended);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SuspendedStatusReason";
 			definition = "Reason for the suspended status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReasonCode.mmObject();
 		}
 	};
+	protected ListStatusTypeCode listOrderStatus;
 	/**
 	 * Specifies the status of a list order.
 	 * <p>
@@ -634,19 +644,19 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ListStatusTypeCode
 	 * ListStatusTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatus2#ListStatusType
-	 * OrderStatus2.ListStatusType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatus2#mmListStatusType
+	 * OrderStatus2.mmListStatusType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -658,19 +668,20 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Specifies the status of a list order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ListOrderStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmListOrderStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus2.ListStatusType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus2.mmListStatusType);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ListOrderStatus";
 			definition = "Specifies the status of a list order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ListStatusTypeCode.mmObject();
 		}
 	};
+	protected SecuritiesOrder securitiesOrder;
 	/**
 	 * Order for which a status is specified.
 	 * <p>
@@ -679,8 +690,8 @@ public class SecuritiesOrderStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Status
-	 * SecuritiesOrder.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmStatus
+	 * SecuritiesOrder.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -704,20 +715,21 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Order for which a status is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
 			definition = "Order for which a status is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Status;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
+	protected InvestmentFundOrder investmentFundOrder;
 	/**
 	 * Investment fund order for which a status is provided.
 	 * <p>
@@ -726,8 +738,8 @@ public class SecuritiesOrderStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderStatus
-	 * InvestmentFundOrder.OrderStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderStatus
+	 * InvestmentFundOrder.mmOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -735,25 +747,25 @@ public class SecuritiesOrderStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
 	 * InvestmentFundOrder}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#OrderData
-	 * IndividualOrderStatusAndReason2.OrderData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason3#OrderData
-	 * IndividualOrderStatusAndReason3.OrderData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#OrderData
-	 * IndividualOrderStatusAndReason7.OrderData}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmOrderData
+	 * IndividualOrderStatusAndReason2.mmOrderData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason3#mmOrderData
+	 * IndividualOrderStatusAndReason3.mmOrderData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmOrderData
+	 * IndividualOrderStatusAndReason7.mmOrderData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -765,22 +777,23 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Investment fund order for which a status is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentFundOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentFundOrder = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason2.OrderData, com.tools20022.repository.msg.IndividualOrderStatusAndReason3.OrderData,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason7.OrderData);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmOrderData, com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmOrderData,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmOrderData);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundOrder";
 			definition = "Investment fund order for which a status is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderStatus;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmObject();
 		}
 	};
+	protected SecuritiesQuantity cumulativeQuantity;
 	/**
 	 * Total quantity (for instance number of shares) filled.
 	 * <p>
@@ -789,8 +802,8 @@ public class SecuritiesOrderStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#SecuritiesOrderStatus
-	 * SecuritiesQuantity.SecuritiesOrderStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesOrderStatus
+	 * SecuritiesQuantity.mmSecuritiesOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -798,22 +811,22 @@ public class SecuritiesOrderStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatus1#CumulativeQuantity
-	 * OrderStatus1.CumulativeQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatus3#CumulativeQuantity
-	 * OrderStatus3.CumulativeQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatus1#mmCumulativeQuantity
+	 * OrderStatus1.mmCumulativeQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmCumulativeQuantity
+	 * OrderStatus3.mmCumulativeQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -825,21 +838,22 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Total quantity (for instance number of shares) filled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CumulativeQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCumulativeQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus1.CumulativeQuantity, com.tools20022.repository.msg.OrderStatus3.CumulativeQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus1.mmCumulativeQuantity, com.tools20022.repository.msg.OrderStatus3.mmCumulativeQuantity);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CumulativeQuantity";
 			definition = "Total quantity (for instance number of shares) filled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.SecuritiesOrderStatus;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesOrderStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected SecuritiesQuantity remainingQuantity;
 	/**
 	 * Quantity opened for further execution.
 	 * <p>
@@ -848,8 +862,8 @@ public class SecuritiesOrderStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#RelatedOrderStatus
-	 * SecuritiesQuantity.RelatedOrderStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderStatus
+	 * SecuritiesQuantity.mmRelatedOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -857,28 +871,28 @@ public class SecuritiesOrderStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#RemainingQuantity
-	 * PartialFill1.RemainingQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatus1#RemainingQuantity
-	 * OrderStatus1.RemainingQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatus3#RemainingQuantity
-	 * OrderStatus3.RemainingQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartialFill2#RemainingQuantity
-	 * PartialFill2.RemainingQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmRemainingQuantity
+	 * PartialFill1.mmRemainingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatus1#mmRemainingQuantity
+	 * OrderStatus1.mmRemainingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmRemainingQuantity
+	 * OrderStatus3.mmRemainingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill2#mmRemainingQuantity
+	 * PartialFill2.mmRemainingQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -890,22 +904,23 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Quantity opened for further execution."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RemainingQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRemainingQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill1.RemainingQuantity, com.tools20022.repository.msg.OrderStatus1.RemainingQuantity, com.tools20022.repository.msg.OrderStatus3.RemainingQuantity,
-					com.tools20022.repository.msg.PartialFill2.RemainingQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill1.mmRemainingQuantity, com.tools20022.repository.msg.OrderStatus1.mmRemainingQuantity,
+					com.tools20022.repository.msg.OrderStatus3.mmRemainingQuantity, com.tools20022.repository.msg.PartialFill2.mmRemainingQuantity);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RemainingQuantity";
 			definition = "Quantity opened for further execution.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.RelatedOrderStatus;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrderStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected ConditionallyAcceptedStatusReasonCode conditionallyAcceptedStatus;
 	/**
 	 * Reason for the conditionally accepted status.
 	 * <p>
@@ -916,73 +931,73 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode
 	 * ConditionallyAcceptedStatusReasonCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1#Structured
-	 * ConditionallyAcceptedStatusReason1.Structured}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1#AdditionalInformation
-	 * ConditionallyAcceptedStatusReason1.AdditionalInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus1#Reason
-	 * ConditionallyAcceptedStatus1.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason3#ConditionallyAccepted
-	 * OrderStatusAndReason3.ConditionallyAccepted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#Reason
-	 * ConditionallyAcceptedStatusReason2.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#AdditionalInformation
-	 * ConditionallyAcceptedStatusReason2.AdditionalInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#ReasonDetails
-	 * ConditionallyAcceptedStatus2.ReasonDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#ConditionallyAccepted
-	 * OrderStatusAndReason7.ConditionallyAccepted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#ConditionallyAccepted
-	 * IndividualOrderStatusAndReason2.ConditionallyAccepted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#ConditionallyAccepted
-	 * SwitchOrderStatusAndReason1.ConditionallyAccepted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice#Reason
-	 * ConditionallyAcceptedStatusReason1Choice.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice#Proprietary
-	 * ConditionallyAcceptedStatusReason1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#ConditionallyAccepted
-	 * OrderStatus1Choice.ConditionallyAccepted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#ConditionallyAccepted
-	 * OrderStatus5Choice.ConditionallyAccepted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SuspendedStatusReason4Choice#ReasonDetails
-	 * SuspendedStatusReason4Choice.ReasonDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#ReasonDetails
-	 * ConditionallyAcceptedStatus3Choice.ReasonDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InRepairStatusReason4Choice#ReasonDetails
-	 * InRepairStatusReason4Choice.ReasonDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#ConditionallyAccepted
-	 * OrderStatus3Choice.ConditionallyAccepted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#ConditionallyAccepted
-	 * OrderStatus4Choice.ConditionallyAccepted}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1#mmStructured
+	 * ConditionallyAcceptedStatusReason1.mmStructured}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1#mmAdditionalInformation
+	 * ConditionallyAcceptedStatusReason1.mmAdditionalInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus1#mmReason
+	 * ConditionallyAcceptedStatus1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason3#mmConditionallyAccepted
+	 * OrderStatusAndReason3.mmConditionallyAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmReason
+	 * ConditionallyAcceptedStatusReason2.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmAdditionalInformation
+	 * ConditionallyAcceptedStatusReason2.mmAdditionalInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#mmReasonDetails
+	 * ConditionallyAcceptedStatus2.mmReasonDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmConditionallyAccepted
+	 * OrderStatusAndReason7.mmConditionallyAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmConditionallyAccepted
+	 * IndividualOrderStatusAndReason2.mmConditionallyAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmConditionallyAccepted
+	 * SwitchOrderStatusAndReason1.mmConditionallyAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice#mmReason
+	 * ConditionallyAcceptedStatusReason1Choice.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice#mmProprietary
+	 * ConditionallyAcceptedStatusReason1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmConditionallyAccepted
+	 * OrderStatus1Choice.mmConditionallyAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#mmConditionallyAccepted
+	 * OrderStatus5Choice.mmConditionallyAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SuspendedStatusReason4Choice#mmReasonDetails
+	 * SuspendedStatusReason4Choice.mmReasonDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#mmReasonDetails
+	 * ConditionallyAcceptedStatus3Choice.mmReasonDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InRepairStatusReason4Choice#mmReasonDetails
+	 * InRepairStatusReason4Choice.mmReasonDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#mmConditionallyAccepted
+	 * OrderStatus3Choice.mmConditionallyAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#mmConditionallyAccepted
+	 * OrderStatus4Choice.mmConditionallyAccepted}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -994,27 +1009,29 @@ public class SecuritiesOrderStatus extends Status {
 	 * definition} = "Reason for the conditionally accepted status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ConditionallyAcceptedStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmConditionallyAcceptedStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1.Structured, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1.AdditionalInformation,
-					com.tools20022.repository.msg.ConditionallyAcceptedStatus1.Reason, com.tools20022.repository.msg.OrderStatusAndReason3.ConditionallyAccepted, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.Reason,
-					com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.AdditionalInformation, com.tools20022.repository.msg.ConditionallyAcceptedStatus2.ReasonDetails,
-					com.tools20022.repository.msg.OrderStatusAndReason7.ConditionallyAccepted, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.ConditionallyAccepted,
-					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.ConditionallyAccepted, com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.Reason,
-					com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.Proprietary, com.tools20022.repository.choice.OrderStatus1Choice.ConditionallyAccepted,
-					com.tools20022.repository.choice.OrderStatus5Choice.ConditionallyAccepted, com.tools20022.repository.choice.SuspendedStatusReason4Choice.ReasonDetails,
-					com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.ReasonDetails, com.tools20022.repository.choice.InRepairStatusReason4Choice.ReasonDetails,
-					com.tools20022.repository.choice.OrderStatus3Choice.ConditionallyAccepted, com.tools20022.repository.choice.OrderStatus4Choice.ConditionallyAccepted);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1.mmStructured, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1.mmAdditionalInformation,
+					com.tools20022.repository.msg.ConditionallyAcceptedStatus1.mmReason, com.tools20022.repository.msg.OrderStatusAndReason3.mmConditionallyAccepted,
+					com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmReason, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmAdditionalInformation,
+					com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmReasonDetails, com.tools20022.repository.msg.OrderStatusAndReason7.mmConditionallyAccepted,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmConditionallyAccepted, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmConditionallyAccepted,
+					com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.mmReason, com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.mmProprietary,
+					com.tools20022.repository.choice.OrderStatus1Choice.mmConditionallyAccepted, com.tools20022.repository.choice.OrderStatus5Choice.mmConditionallyAccepted,
+					com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmReasonDetails, com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmReasonDetails,
+					com.tools20022.repository.choice.InRepairStatusReason4Choice.mmReasonDetails, com.tools20022.repository.choice.OrderStatus3Choice.mmConditionallyAccepted,
+					com.tools20022.repository.choice.OrderStatus4Choice.mmConditionallyAccepted);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConditionallyAcceptedStatus";
 			definition = "Reason for the conditionally accepted status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
 		}
 	};
+	protected OrderStatusCode orderStatus;
 	/**
 	 * Indicates the status of an order at a specific point in time.
 	 * <p>
@@ -1025,64 +1042,64 @@ public class SecuritiesOrderStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
 	 * OrderStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason4#Status
-	 * OrderStatusAndReason4.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason3#Status
-	 * OrderStatusAndReason3.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#Status
-	 * IndividualOrderStatusAndReason1.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#Status
-	 * OrderStatusAndReason7.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#Status
-	 * IndividualOrderStatusAndReason2.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#Status
-	 * SwitchOrderStatusAndReason1.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#Status
-	 * OrderStatus1Choice.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason5#Status
-	 * IndividualOrderStatusAndReason5.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5#Status
-	 * OrderStatusAndReason5.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatus2#ListOrderStatus
-	 * OrderStatus2.ListOrderStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#Status
-	 * OrderStatus5Choice.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#OrderStatus
-	 * IndividualOrderStatusAndReason7.OrderStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#OrderStatus
-	 * SwitchOrderStatusAndReason2.OrderStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#OrderStatus
-	 * OrderStatusAndReason10.OrderStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#Status
-	 * OrderStatus3Choice.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#Status
-	 * OrderStatus4Choice.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus
 	 * SecuritiesOrderStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason4#mmStatus
+	 * OrderStatusAndReason4.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason3#mmStatus
+	 * OrderStatusAndReason3.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1#mmStatus
+	 * IndividualOrderStatusAndReason1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmStatus
+	 * OrderStatusAndReason7.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmStatus
+	 * IndividualOrderStatusAndReason2.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmStatus
+	 * SwitchOrderStatusAndReason1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus1Choice#mmStatus
+	 * OrderStatus1Choice.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason5#mmStatus
+	 * IndividualOrderStatusAndReason5.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5#mmStatus
+	 * OrderStatusAndReason5.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatus2#mmListOrderStatus
+	 * OrderStatus2.mmListOrderStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus5Choice#mmStatus
+	 * OrderStatus5Choice.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmOrderStatus
+	 * IndividualOrderStatusAndReason7.mmOrderStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmOrderStatus
+	 * SwitchOrderStatusAndReason2.mmOrderStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#mmOrderStatus
+	 * OrderStatusAndReason10.mmOrderStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus3Choice#mmStatus
+	 * OrderStatus3Choice.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrderStatus4Choice#mmStatus
+	 * OrderStatus4Choice.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1095,21 +1112,21 @@ public class SecuritiesOrderStatus extends Status {
 	 * "Indicates the status of an order at a specific point in time."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OrderStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOrderStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason4.Status, com.tools20022.repository.msg.OrderStatusAndReason3.Status, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.Status,
-					com.tools20022.repository.msg.OrderStatusAndReason7.Status, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.Status, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.Status,
-					com.tools20022.repository.choice.OrderStatus1Choice.Status, com.tools20022.repository.msg.IndividualOrderStatusAndReason5.Status, com.tools20022.repository.msg.OrderStatusAndReason5.Status,
-					com.tools20022.repository.msg.OrderStatus2.ListOrderStatus, com.tools20022.repository.choice.OrderStatus5Choice.Status, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.OrderStatus,
-					com.tools20022.repository.msg.SwitchOrderStatusAndReason2.OrderStatus, com.tools20022.repository.msg.OrderStatusAndReason10.OrderStatus, com.tools20022.repository.choice.OrderStatus3Choice.Status,
-					com.tools20022.repository.choice.OrderStatus4Choice.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason4.mmStatus, com.tools20022.repository.msg.OrderStatusAndReason3.mmStatus,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmStatus, com.tools20022.repository.msg.OrderStatusAndReason7.mmStatus, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmStatus,
+					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmStatus, com.tools20022.repository.choice.OrderStatus1Choice.mmStatus, com.tools20022.repository.msg.IndividualOrderStatusAndReason5.mmStatus,
+					com.tools20022.repository.msg.OrderStatusAndReason5.mmStatus, com.tools20022.repository.msg.OrderStatus2.mmListOrderStatus, com.tools20022.repository.choice.OrderStatus5Choice.mmStatus,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmOrderStatus, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmOrderStatus, com.tools20022.repository.msg.OrderStatusAndReason10.mmOrderStatus,
+					com.tools20022.repository.choice.OrderStatus3Choice.mmStatus, com.tools20022.repository.choice.OrderStatus4Choice.mmStatus);
 			elementContext_lazy = () -> SecuritiesOrderStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OrderStatus";
 			definition = "Indicates the status of an order at a specific point in time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatusCode.mmObject();
 		}
 	};
@@ -1117,26 +1134,26 @@ public class SecuritiesOrderStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrderStatus";
 				definition = "Status of a securities order or of the processing of a securities order.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundOrder.OrderStatus, com.tools20022.repository.entity.SecuritiesQuantity.RelatedOrderStatus,
-						com.tools20022.repository.entity.SecuritiesQuantity.SecuritiesOrderStatus, com.tools20022.repository.entity.SecuritiesOrder.Status);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason4.Rejected, com.tools20022.repository.msg.SuspendedStatus1.Reason,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason1.InRepair, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.RepairedConditions,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason2.Rejected, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.RepairedConditions, com.tools20022.repository.choice.OrderStatus1Choice.Rejected,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason3.StatusDetails, com.tools20022.repository.msg.IndividualOrderStatusAndReason5.Rejected,
-						com.tools20022.repository.msg.OrderStatusAndReason5.OrderStatusDetails, com.tools20022.repository.msg.OrderStatus3.SingleOrderStatusDetails, com.tools20022.repository.msg.OrderStatus2.SingleOrderDetails,
-						com.tools20022.repository.choice.OrderStatus5Choice.Rejected, com.tools20022.repository.choice.ConfirmationStatus1Choice.AmendmentRejected, com.tools20022.repository.choice.OrderStatus3Choice.Rejected,
-						com.tools20022.repository.choice.OrderStatus4Choice.Rejected);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundOrder.mmOrderStatus, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrderStatus,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesOrderStatus, com.tools20022.repository.entity.SecuritiesOrder.mmStatus);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason4.mmRejected, com.tools20022.repository.msg.SuspendedStatus1.mmReason,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmInRepair, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmRepairedConditions,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmRejected, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmRepairedConditions,
+						com.tools20022.repository.choice.OrderStatus1Choice.mmRejected, com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmStatusDetails,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason5.mmRejected, com.tools20022.repository.msg.OrderStatusAndReason5.mmOrderStatusDetails,
+						com.tools20022.repository.msg.OrderStatus3.mmSingleOrderStatusDetails, com.tools20022.repository.msg.OrderStatus2.mmSingleOrderDetails, com.tools20022.repository.choice.OrderStatus5Choice.mmRejected,
+						com.tools20022.repository.choice.ConfirmationStatus1Choice.mmAmendmentRejected, com.tools20022.repository.choice.OrderStatus3Choice.mmRejected, com.tools20022.repository.choice.OrderStatus4Choice.mmRejected);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderStatus.ConfirmationRejectedStatusReason, com.tools20022.repository.entity.SecuritiesOrderStatus.ConfirmationStatus,
-						com.tools20022.repository.entity.SecuritiesOrderStatus.CancellationStatus, com.tools20022.repository.entity.SecuritiesOrderStatus.PartiallySettledStatusReason,
-						com.tools20022.repository.entity.SecuritiesOrderStatus.SuspendedStatusReason, com.tools20022.repository.entity.SecuritiesOrderStatus.ListOrderStatus,
-						com.tools20022.repository.entity.SecuritiesOrderStatus.SecuritiesOrder, com.tools20022.repository.entity.SecuritiesOrderStatus.InvestmentFundOrder,
-						com.tools20022.repository.entity.SecuritiesOrderStatus.CumulativeQuantity, com.tools20022.repository.entity.SecuritiesOrderStatus.RemainingQuantity,
-						com.tools20022.repository.entity.SecuritiesOrderStatus.ConditionallyAcceptedStatus, com.tools20022.repository.entity.SecuritiesOrderStatus.OrderStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationRejectedStatusReason, com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationStatus,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmCancellationStatus, com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmSuspendedStatusReason, com.tools20022.repository.entity.SecuritiesOrderStatus.mmListOrderStatus,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmSecuritiesOrder, com.tools20022.repository.entity.SecuritiesOrderStatus.mmInvestmentFundOrder,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmCumulativeQuantity, com.tools20022.repository.entity.SecuritiesOrderStatus.mmRemainingQuantity,
+						com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus, com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus);
 				derivationComponent_lazy = () -> Arrays.asList(RejectedStatusReason4.mmObject(), RejectedStatus4.mmObject(), OrderStatusAndReason4.mmObject(), RejectedStatus7.mmObject(), OrderStatusAndReason8.mmObject(),
 						IndividualOrderStatusAndReason4.mmObject(), ConfirmationRejectedStatus1.mmObject(), ConditionallyAcceptedStatusReason1.mmObject(), ConditionallyAcceptedStatus1.mmObject(), RejectedStatusReason6.mmObject(),
 						RejectedStatus3.mmObject(), SuspendedStatusReason1.mmObject(), SuspendedStatus1.mmObject(), OrderStatusAndReason3.mmObject(), InRepairStatus1.mmObject(), RepairedConditions2.mmObject(),
@@ -1150,5 +1167,101 @@ public class SecuritiesOrderStatus extends Status {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectedConfirmationStatusReasonCode getConfirmationRejectedStatusReason() {
+		return confirmationRejectedStatusReason;
+	}
+
+	public void setConfirmationRejectedStatusReason(RejectedConfirmationStatusReasonCode confirmationRejectedStatusReason) {
+		this.confirmationRejectedStatusReason = confirmationRejectedStatusReason;
+	}
+
+	public OrderConfirmationStatusCode getConfirmationStatus() {
+		return confirmationStatus;
+	}
+
+	public void setConfirmationStatus(OrderConfirmationStatusCode confirmationStatus) {
+		this.confirmationStatus = confirmationStatus;
+	}
+
+	public OrderCancellationStatusCode getCancellationStatus() {
+		return cancellationStatus;
+	}
+
+	public void setCancellationStatus(OrderCancellationStatusCode cancellationStatus) {
+		this.cancellationStatus = cancellationStatus;
+	}
+
+	public PartiallySettledStatusReasonCode getPartiallySettledStatusReason() {
+		return partiallySettledStatusReason;
+	}
+
+	public void setPartiallySettledStatusReason(PartiallySettledStatusReasonCode partiallySettledStatusReason) {
+		this.partiallySettledStatusReason = partiallySettledStatusReason;
+	}
+
+	public SuspendedStatusReasonCode getSuspendedStatusReason() {
+		return suspendedStatusReason;
+	}
+
+	public void setSuspendedStatusReason(SuspendedStatusReasonCode suspendedStatusReason) {
+		this.suspendedStatusReason = suspendedStatusReason;
+	}
+
+	public ListStatusTypeCode getListOrderStatus() {
+		return listOrderStatus;
+	}
+
+	public void setListOrderStatus(ListStatusTypeCode listOrderStatus) {
+		this.listOrderStatus = listOrderStatus;
+	}
+
+	public SecuritiesOrder getSecuritiesOrder() {
+		return securitiesOrder;
+	}
+
+	public void setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
+		this.securitiesOrder = securitiesOrder;
+	}
+
+	public InvestmentFundOrder getInvestmentFundOrder() {
+		return investmentFundOrder;
+	}
+
+	public void setInvestmentFundOrder(com.tools20022.repository.entity.InvestmentFundOrder investmentFundOrder) {
+		this.investmentFundOrder = investmentFundOrder;
+	}
+
+	public SecuritiesQuantity getCumulativeQuantity() {
+		return cumulativeQuantity;
+	}
+
+	public void setCumulativeQuantity(com.tools20022.repository.entity.SecuritiesQuantity cumulativeQuantity) {
+		this.cumulativeQuantity = cumulativeQuantity;
+	}
+
+	public SecuritiesQuantity getRemainingQuantity() {
+		return remainingQuantity;
+	}
+
+	public void setRemainingQuantity(com.tools20022.repository.entity.SecuritiesQuantity remainingQuantity) {
+		this.remainingQuantity = remainingQuantity;
+	}
+
+	public ConditionallyAcceptedStatusReasonCode getConditionallyAcceptedStatus() {
+		return conditionallyAcceptedStatus;
+	}
+
+	public void setConditionallyAcceptedStatus(ConditionallyAcceptedStatusReasonCode conditionallyAcceptedStatus) {
+		this.conditionallyAcceptedStatus = conditionallyAcceptedStatus;
+	}
+
+	public OrderStatusCode getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(OrderStatusCode orderStatus) {
+		this.orderStatus = orderStatus;
 	}
 }

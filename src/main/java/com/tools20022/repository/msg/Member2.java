@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.SystemMemberRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the members of a system.
@@ -36,12 +37,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Member2#ReturnAddress
- * Member2.ReturnAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Member2#ContactReference
- * Member2.ContactReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Member2#CommunicationAddress
- * Member2.CommunicationAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Member2#mmReturnAddress
+ * Member2.mmReturnAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Member2#mmContactReference
+ * Member2.mmContactReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Member2#mmCommunicationAddress
+ * Member2.mmCommunicationAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Member2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<MemberIdentification2Choice> returnAddress;
 	/**
 	 * Physical/logical address belonging to a member, segregated from its main
 	 * address that is used for normal operations. The fund return address is
@@ -102,10 +104,10 @@ public class Member2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReturnAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReturnAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Member2.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> Member2.mmObject();
 			isDerived = false;
 			xmlTag = "RtrAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,6 +117,7 @@ public class Member2 {
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ContactIdentificationAndAddress> contactReference;
 	/**
 	 * Person to be contacted in a given organisation.
 	 * <p>
@@ -145,20 +148,21 @@ public class Member2 {
 	 * definition} = "Person to be contacted in a given organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Member2.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> Member2.mmObject();
 			isDerived = false;
 			xmlTag = "CtctRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactReference";
 			definition = "Person to be contacted in a given organisation.";
 			minOccurs = 0;
-			type_lazy = () -> ContactIdentificationAndAddress.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
 		}
 	};
+	protected CommunicationAddressDetails communicationAddress;
 	/**
 	 * Number, or virtual address, used for communication.
 	 * <p>
@@ -171,8 +175,8 @@ public class Member2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#ContactPoint
-	 * Party.ContactPoint}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmContactPoint
+	 * Party.mmContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Member2
@@ -190,33 +194,57 @@ public class Member2 {
 	 * definition} = "Number, or virtual address, used for communication."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
 			componentContext_lazy = () -> Member2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.ContactPoint;
 			isDerived = false;
 			xmlTag = "ComAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationAddress";
 			definition = "Number, or virtual address, used for communication.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommunicationAddressDetails.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddressDetails.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Member2.ReturnAddress, com.tools20022.repository.msg.Member2.ContactReference, com.tools20022.repository.msg.Member2.CommunicationAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Member2.mmReturnAddress, com.tools20022.repository.msg.Member2.mmContactReference, com.tools20022.repository.msg.Member2.mmCommunicationAddress);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Member2";
 				definition = "Information about the members of a system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<MemberIdentification2Choice> getReturnAddress() {
+		return returnAddress;
+	}
+
+	public void setReturnAddress(List<MemberIdentification2Choice> returnAddress) {
+		this.returnAddress = returnAddress;
+	}
+
+	public List<ContactIdentificationAndAddress> getContactReference() {
+		return contactReference;
+	}
+
+	public void setContactReference(List<com.tools20022.repository.msg.ContactIdentificationAndAddress> contactReference) {
+		this.contactReference = contactReference;
+	}
+
+	public CommunicationAddressDetails getCommunicationAddress() {
+		return communicationAddress;
+	}
+
+	public void setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddressDetails communicationAddress) {
+		this.communicationAddress = communicationAddress;
 	}
 }

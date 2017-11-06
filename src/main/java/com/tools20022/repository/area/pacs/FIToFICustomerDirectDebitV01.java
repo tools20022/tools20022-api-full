@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.GroupHeader3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -69,18 +70,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01#GroupHeader
- * FIToFICustomerDirectDebitV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01#mmGroupHeader
+ * FIToFICustomerDirectDebitV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01#DirectDebitTransactionInformation
- * FIToFICustomerDirectDebitV01.DirectDebitTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01#mmDirectDebitTransactionInformation
+ * FIToFICustomerDirectDebitV01.mmDirectDebitTransactionInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01#identifier
- * FIToFICustomerDirectDebitV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.003.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FIToFICustomerDirectDebitV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader3 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -129,17 +129,18 @@ public class FIToFICustomerDirectDebitV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader3.mmObject();
 		}
 	};
+	protected List<DirectDebitTransactionInformation2> directDebitTransactionInformation;
 	/**
 	 * Set of elements providing information specific to the individual direct
 	 * debit(s).
@@ -166,7 +167,7 @@ public class FIToFICustomerDirectDebitV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DirectDebitTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDirectDebitTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DrctDbtTxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,33 +175,6 @@ public class FIToFICustomerDirectDebitV01 {
 			definition = "Set of elements providing information specific to the individual direct debit(s).";
 			minOccurs = 1;
 			complexType_lazy = () -> DirectDebitTransactionInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "003";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -216,11 +190,34 @@ public class FIToFICustomerDirectDebitV01 {
 				xmlTag = "pacs.003.001.01";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
 				xmlName = "pacs.003.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01.GroupHeader,
-						com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01.DirectDebitTransactionInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV01.mmDirectDebitTransactionInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "003";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader3 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader3 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<DirectDebitTransactionInformation2> getDirectDebitTransactionInformation() {
+		return directDebitTransactionInformation;
+	}
+
+	public void setDirectDebitTransactionInformation(List<DirectDebitTransactionInformation2> directDebitTransactionInformation) {
+		this.directDebitTransactionInformation = directDebitTransactionInformation;
 	}
 }

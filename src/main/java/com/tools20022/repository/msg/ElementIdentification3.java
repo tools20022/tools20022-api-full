@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElementIdentification3#ElementPath
- * ElementIdentification3.ElementPath}</li>
+ * {@linkplain com.tools20022.repository.msg.ElementIdentification3#mmElementPath
+ * ElementIdentification3.mmElementPath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElementIdentification3#ElementName
- * ElementIdentification3.ElementName}</li>
+ * {@linkplain com.tools20022.repository.msg.ElementIdentification3#mmElementName
+ * ElementIdentification3.mmElementName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElementIdentification3#ElementValue
- * ElementIdentification3.ElementValue}</li>
+ * {@linkplain com.tools20022.repository.msg.ElementIdentification3#mmElementValue
+ * ElementIdentification3.mmElementValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ElementIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text elementPath;
 	/**
 	 * Specifies from the root of the message the complete path of the element
 	 * that violated a rule.
@@ -93,7 +94,7 @@ public class ElementIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementPath = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementPath = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElementIdentification3.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class ElementIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementPath";
 			definition = "Specifies from the root of the message the complete path of the element that violated a rule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text elementName;
 	/**
 	 * Name of the element.
 	 * <p>
@@ -133,7 +135,7 @@ public class ElementIdentification3 {
 	 * definition} = "Name of the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElementIdentification3.mmObject();
 			isDerived = false;
@@ -141,11 +143,12 @@ public class ElementIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementName";
 			definition = "Name of the element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max140Text elementValue;
 	/**
 	 * Contents of the element.
 	 * <p>
@@ -173,7 +176,7 @@ public class ElementIdentification3 {
 	 * definition} = "Contents of the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElementIdentification3.mmObject();
 			isDerived = false;
@@ -181,8 +184,8 @@ public class ElementIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementValue";
 			definition = "Contents of the element.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -190,14 +193,38 @@ public class ElementIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElementIdentification3.ElementPath, com.tools20022.repository.msg.ElementIdentification3.ElementName,
-						com.tools20022.repository.msg.ElementIdentification3.ElementValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElementIdentification3.mmElementPath, com.tools20022.repository.msg.ElementIdentification3.mmElementName,
+						com.tools20022.repository.msg.ElementIdentification3.mmElementValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElementIdentification3";
 				definition = "Description of the elements that violated a rule.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getElementPath() {
+		return elementPath;
+	}
+
+	public void setElementPath(Max350Text elementPath) {
+		this.elementPath = elementPath;
+	}
+
+	public Max35Text getElementName() {
+		return elementName;
+	}
+
+	public void setElementName(Max35Text elementName) {
+		this.elementName = elementName;
+	}
+
+	public Max140Text getElementValue() {
+		return elementValue;
+	}
+
+	public void setElementValue(Max140Text elementValue) {
+		this.elementValue = elementValue;
 	}
 }

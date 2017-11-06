@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#OptionType
- * CorporateActionOption2.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#mmOptionType
+ * CorporateActionOption2.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#OptionNumber
- * CorporateActionOption2.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#mmOptionNumber
+ * CorporateActionOption2.mmOptionNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOption2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionOption1FormatChoice optionType;
 	/**
 	 * Specifies the corporate action options available to the account owner.
 	 * <p>
@@ -76,8 +77,8 @@ public class CorporateActionOption2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
-	 * CorporateActionOption.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+	 * CorporateActionOption.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class CorporateActionOption2 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionOption2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	protected Exact3NumericText optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -124,8 +126,8 @@ public class CorporateActionOption2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class CorporateActionOption2 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionOption2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class CorporateActionOption2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption2.OptionType, com.tools20022.repository.msg.CorporateActionOption2.OptionNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption2.mmOptionType, com.tools20022.repository.msg.CorporateActionOption2.mmOptionNumber);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption2";
 				definition = "Provides information on a CA option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionOption1FormatChoice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
+		this.optionType = optionType;
+	}
+
+	public Exact3NumericText getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = optionNumber;
 	}
 }

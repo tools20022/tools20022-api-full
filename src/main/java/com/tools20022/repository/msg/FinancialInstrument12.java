@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument12#Identification
- * FinancialInstrument12.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument12#Name
- * FinancialInstrument12.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument12#mmIdentification
+ * FinancialInstrument12.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument12#mmName
+ * FinancialInstrument12.mmName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification3Choice identification;
 	/**
 	 * Unique and unambiguous identifier of a security, assigned under a formal
 	 * or proprietary identification scheme.
@@ -88,8 +89,8 @@ public class FinancialInstrument12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class FinancialInstrument12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
 		}
 	};
+	protected Max350Text name;
 	/**
 	 * Name of the financial instrument in free format text.
 	 * <p>
@@ -136,8 +138,8 @@ public class FinancialInstrument12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,17 +158,17 @@ public class FinancialInstrument12 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrument12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -174,9 +176,9 @@ public class FinancialInstrument12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument12.Identification, com.tools20022.repository.msg.FinancialInstrument12.Name);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument12.mmIdentification, com.tools20022.repository.msg.FinancialInstrument12.mmName);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument12";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
@@ -184,5 +186,21 @@ public class FinancialInstrument12 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification3Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(SecurityIdentification3Choice identification) {
+		this.identification = identification;
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
 	}
 }

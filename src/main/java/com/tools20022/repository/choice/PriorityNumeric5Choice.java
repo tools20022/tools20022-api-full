@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriorityNumeric5Choice#Numeric
- * PriorityNumeric5Choice.Numeric}</li>
+ * {@linkplain com.tools20022.repository.choice.PriorityNumeric5Choice#mmNumeric
+ * PriorityNumeric5Choice.mmNumeric}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriorityNumeric5Choice#Proprietary
- * PriorityNumeric5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PriorityNumeric5Choice#mmProprietary
+ * PriorityNumeric5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriorityNumeric5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact4NumericText numeric;
 	/**
 	 * Specifies the execution priority of the instruction with a number between
 	 * 0001 and 9999.
@@ -90,7 +91,7 @@ public class PriorityNumeric5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Numeric = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumeric = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriorityNumeric5Choice.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class PriorityNumeric5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Numeric";
 			definition = "Specifies the execution priority of the instruction with a number between 0001 and 9999.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Specifies the execution priority of the instruction with a proprietary
 	 * scheme.
@@ -134,7 +136,7 @@ public class PriorityNumeric5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriorityNumeric5Choice.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class PriorityNumeric5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the execution priority of the instruction with a proprietary scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -151,13 +153,29 @@ public class PriorityNumeric5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric5Choice.Numeric, com.tools20022.repository.choice.PriorityNumeric5Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric5Choice.mmNumeric, com.tools20022.repository.choice.PriorityNumeric5Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriorityNumeric5Choice";
 				definition = "Choice of format for the priority.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact4NumericText getNumeric() {
+		return numeric;
+	}
+
+	public void setNumeric(Exact4NumericText numeric) {
+		this.numeric = numeric;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

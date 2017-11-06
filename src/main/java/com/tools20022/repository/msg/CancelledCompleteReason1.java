@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancelledCompleteReason1#Reason
- * CancelledCompleteReason1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.CancelledCompleteReason1#mmReason
+ * CancelledCompleteReason1.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancelledCompleteReason1#AdditionalReasonInformation
- * CancelledCompleteReason1.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CancelledCompleteReason1#mmAdditionalReasonInformation
+ * CancelledCompleteReason1.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancelledCompleteReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationCompleteReason1Choice reason;
 	/**
 	 * Reason for the cancelled complete status.
 	 * <p>
@@ -76,8 +77,8 @@ public class CancelledCompleteReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class CancelledCompleteReason1 {
 	 * definition} = "Reason for the cancelled complete status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancelledCompleteReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the cancelled complete status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationCompleteReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CancellationCompleteReason1Choice.mmObject();
 		}
 	};
+	protected Max350Text additionalReasonInformation;
 	/**
 	 * Additional information about the cancelled complete status reason.
 	 * <p>
@@ -143,17 +145,17 @@ public class CancelledCompleteReason1 {
 	 * "Additional information about the cancelled complete status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CancelledCompleteReason1.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> CancelledCompleteReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the cancelled complete status reason.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class CancelledCompleteReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancelledCompleteReason1.Reason, com.tools20022.repository.msg.CancelledCompleteReason1.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancelledCompleteReason1.mmReason, com.tools20022.repository.msg.CancelledCompleteReason1.mmAdditionalReasonInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledCompleteReason1";
 				definition = "Reason for a cancelled completed status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationCompleteReason1Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(CancellationCompleteReason1Choice reason) {
+		this.reason = reason;
+	}
+
+	public Max350Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max350Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

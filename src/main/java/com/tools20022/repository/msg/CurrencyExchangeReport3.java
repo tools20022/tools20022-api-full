@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport3#CurrencyReference
- * CurrencyExchangeReport3.CurrencyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport3#mmCurrencyReference
+ * CurrencyExchangeReport3.mmCurrencyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport3#CurrencyExchangeOrError
- * CurrencyExchangeReport3.CurrencyExchangeOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport3#mmCurrencyExchangeOrError
+ * CurrencyExchangeReport3.mmCurrencyExchangeOrError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyExchangeReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencySourceTarget1 currencyReference;
 	/**
 	 * Source and target currencies for which information is request.
 	 * <p>
@@ -86,7 +87,7 @@ public class CurrencyExchangeReport3 {
 	 * "Source and target currencies for which information is request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyExchangeReport3.mmObject();
 			isDerived = false;
@@ -94,12 +95,13 @@ public class CurrencyExchangeReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyReference";
 			definition = "Source and target currencies for which information is request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencySourceTarget1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
 		}
 	};
+	protected ExchangeRateReportOrError2Choice currencyExchangeOrError;
 	/**
 	 * Reports either on currency exchange information or on a business error.
 	 * <p>
@@ -129,7 +131,7 @@ public class CurrencyExchangeReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyExchangeOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyExchangeOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyExchangeReport3.mmObject();
 			isDerived = false;
@@ -137,23 +139,39 @@ public class CurrencyExchangeReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchangeOrError";
 			definition = "Reports either on currency exchange information or on a business error.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ExchangeRateReportOrError2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ExchangeRateReportOrError2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport3.CurrencyReference, com.tools20022.repository.msg.CurrencyExchangeReport3.CurrencyExchangeOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport3.mmCurrencyReference, com.tools20022.repository.msg.CurrencyExchangeReport3.mmCurrencyExchangeOrError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyExchangeReport3";
 				definition = "Reports either on currency exchange information or on a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencySourceTarget1 getCurrencyReference() {
+		return currencyReference;
+	}
+
+	public void setCurrencyReference(com.tools20022.repository.msg.CurrencySourceTarget1 currencyReference) {
+		this.currencyReference = currencyReference;
+	}
+
+	public ExchangeRateReportOrError2Choice getCurrencyExchangeOrError() {
+		return currencyExchangeOrError;
+	}
+
+	public void setCurrencyExchangeOrError(ExchangeRateReportOrError2Choice currencyExchangeOrError) {
+		this.currencyExchangeOrError = currencyExchangeOrError;
 	}
 }

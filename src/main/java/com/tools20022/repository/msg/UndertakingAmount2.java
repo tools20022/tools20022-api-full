@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.UndertakingAmount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about an amount.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmount2#AmountChoice
- * UndertakingAmount2.AmountChoice}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmount2#mmAmountChoice
+ * UndertakingAmount2.mmAmountChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmount2#AdditionalInformation
- * UndertakingAmount2.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmount2#mmAdditionalInformation
+ * UndertakingAmount2.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amount1Choice amountChoice;
 	/**
 	 * Choice of amounts.
 	 * <p>
@@ -95,21 +97,22 @@ public class UndertakingAmount2 {
 	 * definition} = "Choice of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountChoice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingAmount2.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
+			componentContext_lazy = () -> UndertakingAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtChc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountChoice";
 			definition = "Choice of amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amount1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Amount1Choice.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information concerning the amended amount.
 	 * <p>
@@ -137,7 +140,7 @@ public class UndertakingAmount2 {
 	 * definition} = "Additional information concerning the amended amount. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingAmount2.mmObject();
 			isDerived = false;
@@ -145,8 +148,8 @@ public class UndertakingAmount2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information concerning the amended amount. ";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -154,14 +157,30 @@ public class UndertakingAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount2.AmountChoice, com.tools20022.repository.msg.UndertakingAmount2.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount2.mmAmountChoice, com.tools20022.repository.msg.UndertakingAmount2.mmAdditionalInformation);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmount2";
 				definition = "Information about an amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amount1Choice getAmountChoice() {
+		return amountChoice;
+	}
+
+	public void setAmountChoice(Amount1Choice amountChoice) {
+		this.amountChoice = amountChoice;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

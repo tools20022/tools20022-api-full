@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.msg.ReportItemStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides acceptance status of the holding item.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportItemStatus1Choice#Accepted
- * ReportItemStatus1Choice.Accepted}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportItemStatus1Choice#mmAccepted
+ * ReportItemStatus1Choice.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportItemStatus1Choice#AcceptedWithException
- * ReportItemStatus1Choice.AcceptedWithException}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportItemStatus1Choice#mmAcceptedWithException
+ * ReportItemStatus1Choice.mmAcceptedWithException}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportItemStatus1Choice#Rejected
- * ReportItemStatus1Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportItemStatus1Choice#mmRejected
+ * ReportItemStatus1Choice.mmRejected}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,15 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#Status
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.Status}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmStatus
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportItemStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode accepted;
 	/**
 	 * Statement is accepted.
 	 * <p>
@@ -91,8 +93,8 @@ public class ReportItemStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#AcknowledgedAcceptedReason
-	 * StatusReason.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmAcknowledgedAcceptedReason
+	 * StatusReason.mmAcknowledgedAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,25 +114,26 @@ public class ReportItemStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus18Choice#AcknowledgedAccepted
-	 * ProcessingStatus18Choice.AcknowledgedAccepted}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus18Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus18Choice.mmAcknowledgedAccepted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Accepted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccepted = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> ReportItemStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.AcknowledgedAcceptedReason;
 			isDerived = false;
 			xmlTag = "Accptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Statement is accepted.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus18Choice.AcknowledgedAccepted;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus18Choice.mmAcknowledgedAccepted;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<ReportItemStatus1> acceptedWithException;
 	/**
 	 * Statement is accepted with an exception/s.
 	 * <p>
@@ -142,8 +145,8 @@ public class ReportItemStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +165,21 @@ public class ReportItemStatus1Choice {
 	 * definition} = "Statement is accepted  with an exception/s."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcceptedWithException = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcceptedWithException = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> ReportItemStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "AccptdWthXcptn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithException";
 			definition = "Statement is accepted  with an exception/s.";
 			minOccurs = 1;
-			type_lazy = () -> ReportItemStatus1.mmObject();
 			isComposite = true;
+			type_lazy = () -> ReportItemStatus1.mmObject();
 		}
 	};
+	protected ReportItemStatus1 rejected;
 	/**
 	 * Statement is rejected.
 	 * <p>
@@ -187,8 +191,8 @@ public class ReportItemStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,35 +212,35 @@ public class ReportItemStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus18Choice#Rejected
-	 * ProcessingStatus18Choice.Rejected}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus18Choice#mmRejected
+	 * ProcessingStatus18Choice.mmRejected}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReportItemStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Statement is rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus18Choice.Rejected;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus18Choice.mmRejected;
 			maxOccurs = 1;
-			type_lazy = () -> ReportItemStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ReportItemStatus1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportItemStatus1Choice.Accepted, com.tools20022.repository.choice.ReportItemStatus1Choice.AcceptedWithException,
-						com.tools20022.repository.choice.ReportItemStatus1Choice.Rejected);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportItemStatus1Choice.mmAccepted, com.tools20022.repository.choice.ReportItemStatus1Choice.mmAcceptedWithException,
+						com.tools20022.repository.choice.ReportItemStatus1Choice.mmRejected);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.Status);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatus1Choice";
 				definition = "Provides acceptance status of the holding item.";
@@ -244,5 +248,29 @@ public class ReportItemStatus1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getAccepted() {
+		return accepted;
+	}
+
+	public void setAccepted(NoReasonCode accepted) {
+		this.accepted = accepted;
+	}
+
+	public List<ReportItemStatus1> getAcceptedWithException() {
+		return acceptedWithException;
+	}
+
+	public void setAcceptedWithException(List<ReportItemStatus1> acceptedWithException) {
+		this.acceptedWithException = acceptedWithException;
+	}
+
+	public ReportItemStatus1 getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(ReportItemStatus1 rejected) {
+		this.rejected = rejected;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Sub-account reporting.
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#AccountOwner
- * SubAccountIdentification15.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#mmAccountOwner
+ * SubAccountIdentification15.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#SafekeepingAccount
- * SubAccountIdentification15.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#mmSafekeepingAccount
+ * SubAccountIdentification15.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#ActivityIndicator
- * SubAccountIdentification15.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#mmActivityIndicator
+ * SubAccountIdentification15.mmActivityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#FinancialInstrumentDetails
- * SubAccountIdentification15.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification15#mmFinancialInstrumentDetails
+ * SubAccountIdentification15.mmFinancialInstrumentDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,15 +59,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02#SubAccountDetails
- * SecuritiesTransactionPostingReportV02.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02#mmSubAccountDetails
+ * SecuritiesTransactionPostingReportV02.mmSubAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubAccountIdentification15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification36Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -99,8 +101,8 @@ public class SubAccountIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,21 +121,22 @@ public class SubAccountIdentification15 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SubAccountIdentification15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification36Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount14 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -165,21 +168,22 @@ public class SubAccountIdentification15 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubAccountIdentification15.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> SubAccountIdentification15.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount14.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -211,7 +215,7 @@ public class SubAccountIdentification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SubAccountIdentification15.mmObject();
 			isDerived = false;
@@ -219,11 +223,12 @@ public class SubAccountIdentification15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentDetails5> financialInstrumentDetails;
 	/**
 	 * Reporting per financial instrument.
 	 * <p>
@@ -236,8 +241,8 @@ public class SubAccountIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#Security
-	 * SecuritiesAccount.Security}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecurity
+	 * SecuritiesAccount.mmSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -256,29 +261,29 @@ public class SubAccountIdentification15 {
 	 * definition} = "Reporting per financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecurity;
 			componentContext_lazy = () -> SubAccountIdentification15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.Security;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Reporting per financial instrument.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentDetails5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification15.AccountOwner, com.tools20022.repository.msg.SubAccountIdentification15.SafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification15.ActivityIndicator, com.tools20022.repository.msg.SubAccountIdentification15.FinancialInstrumentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification15.mmAccountOwner, com.tools20022.repository.msg.SubAccountIdentification15.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SubAccountIdentification15.mmActivityIndicator, com.tools20022.repository.msg.SubAccountIdentification15.mmFinancialInstrumentDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.mmSubAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.SubAccountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubAccountIdentification15";
 				definition = "Sub-account reporting.";
@@ -286,5 +291,37 @@ public class SubAccountIdentification15 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification36Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount14 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount14 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
+	}
+
+	public List<FinancialInstrumentDetails5> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrumentDetails5> financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 }

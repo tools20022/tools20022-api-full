@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the securities for which the meeting is organised.
@@ -34,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityPosition9#FinancialInstrumentIdentification
- * SecurityPosition9.FinancialInstrumentIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition9#Position
- * SecurityPosition9.Position}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityPosition9#mmFinancialInstrumentIdentification
+ * SecurityPosition9.mmFinancialInstrumentIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition9#mmPosition
+ * SecurityPosition9.mmPosition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05#Security
- * MeetingEntitlementNotificationV05.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05#mmSecurity
+ * MeetingEntitlementNotificationV05.mmSecurity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityPosition9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Identification of the security, as assigned under a formal or proprietary
 	 * identification scheme.
@@ -89,8 +91,8 @@ public class SecurityPosition9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,25 +114,26 @@ public class SecurityPosition9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityPosition7#Identification
-	 * SecurityPosition7.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityPosition7#mmIdentification
+	 * SecurityPosition7.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecurityPosition9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the security, as assigned under a formal or proprietary identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityPosition7.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityPosition7.mmIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.EligiblePosition6> position;
 	/**
 	 * Amount of securities that are eligible for the vote.
 	 * <p>
@@ -163,34 +166,34 @@ public class SecurityPosition9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityPosition7#Position
-	 * SecurityPosition7.Position}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityPosition7#mmPosition
+	 * SecurityPosition7.mmPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Position = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityPosition9.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> SecurityPosition9.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Amount of securities that are eligible for the vote.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityPosition7.Position;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityPosition7.mmPosition;
 			maxOccurs = 1000;
-			type_lazy = () -> EligiblePosition6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition9.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityPosition9.Position);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition9.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityPosition9.mmPosition);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmSecurity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.Security);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityPosition9";
 				definition = "Identifies the securities for which the meeting is organised.";
@@ -198,5 +201,21 @@ public class SecurityPosition9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public List<EligiblePosition6> getPosition() {
+		return position;
+	}
+
+	public void setPosition(List<com.tools20022.repository.msg.EligiblePosition6> position) {
+		this.position = position;
 	}
 }

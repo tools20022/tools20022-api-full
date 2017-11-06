@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode#WaiveInCash
- * WaivingInstructionCode.WaiveInCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode#mmWaiveInCash
+ * WaivingInstructionCode.mmWaiveInCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode#WaiveInUnits
- * WaivingInstructionCode.WaiveInUnits}</li>
+ * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode#mmWaiveInUnits
+ * WaivingInstructionCode.mmWaiveInUnits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode#Other
- * WaivingInstructionCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.WaivingInstructionCode#mmOther
+ * WaivingInstructionCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class WaivingInstructionCode {
 	 * definition} = "Form of commission waived is cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode WaiveInCash = new MMCode() {
+	public static final MMCode mmWaiveInCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WaiveInCash";
@@ -126,7 +126,7 @@ public class WaivingInstructionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode WaiveInUnits = new MMCode() {
+	public static final MMCode mmWaiveInUnits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WaiveInUnits";
@@ -156,7 +156,7 @@ public class WaivingInstructionCode {
 	 * definition} = "Another type of commission waiving."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -169,13 +169,13 @@ public class WaivingInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WICA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "WaivingInstructionCode";
 				definition = "Specifies the form of the rebate when commission is waived.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WaivingInstructionCode.WaiveInCash, com.tools20022.repository.codeset.WaivingInstructionCode.WaiveInUnits,
-						com.tools20022.repository.codeset.WaivingInstructionCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WaivingInstructionCode.mmWaiveInCash, com.tools20022.repository.codeset.WaivingInstructionCode.mmWaiveInUnits,
+						com.tools20022.repository.codeset.WaivingInstructionCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(WaivingInstruction2Code.mmObject(), WaivingInstruction1Code.mmObject());
 			}
 		});

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.TradeAgreement13;
 import com.tools20022.repository.msg.TradeAgreement6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Contractual details related to an agreement between parties.
@@ -40,36 +41,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#DateSigned
- * Agreement.DateSigned}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#Description
- * Agreement.Description}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#Version
- * Agreement.Version}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#ValidityPeriod
- * Agreement.ValidityPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#Document
- * Agreement.Document}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#Trade
- * Agreement.Trade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#Jurisdiction
- * Agreement.Jurisdiction}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedAgreement
- * DateTimePeriod.RelatedAgreement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#Agreement
- * Document.Agreement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Jurisdiction#RelatedAgreement
- * Jurisdiction.RelatedAgreement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#Agreement
- * CommercialTrade.Agreement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmDateSigned
+ * Agreement.mmDateSigned}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmDescription
+ * Agreement.mmDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmVersion
+ * Agreement.mmVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmValidityPeriod
+ * Agreement.mmValidityPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmDocument
+ * Agreement.mmDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmTrade
+ * Agreement.mmTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmJurisdiction
+ * Agreement.mmJurisdiction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -88,6 +73,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedAgreement
+ * DateTimePeriod.mmRelatedAgreement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmAgreement
+ * Document.mmAgreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedAgreement
+ * Jurisdiction.mmRelatedAgreement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmAgreement
+ * CommercialTrade.mmAgreement}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -100,8 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Agreement {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate dateSigned;
 	/**
 	 * Date on which the agreement was signed by all parties.
 	 * <p>
@@ -124,103 +126,104 @@ public class Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35#AccountSignatureDateTime
-	 * InvestmentAccount35.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36#AccountSignatureDateTime
-	 * InvestmentAccount36.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34#AccountSignatureDateTime
-	 * InvestmentAccount34.AccountSignatureDateTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement3#Date
-	 * Agreement3.Date}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContractDocument1#SignOffDate
-	 * ContractDocument1.SignOffDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation1#DateOfSignature
-	 * MandateRelatedInformation1.DateOfSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation6#DateOfSignature
-	 * MandateRelatedInformation6.DateOfSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation7#DateOfSignature
-	 * MandateRelatedInformation7.DateOfSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation8#DateOfSignature
-	 * MandateRelatedInformation8.DateOfSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation9#DateOfSignature
-	 * MandateRelatedInformation9.DateOfSignature}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement2#AgreementDate
-	 * Agreement2.AgreementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation4#DateOfSignature
-	 * MandateRelatedInformation4.DateOfSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation5#DateOfSignature
-	 * MandateRelatedInformation5.DateOfSignature}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement1#Date
-	 * Agreement1.Date}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#AccountSignatureDateTime
-	 * InvestmentAccount38.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#AccountSignatureDateTime
-	 * InvestmentAccount37.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#AccountSignatureDateTime
-	 * InvestmentAccount39.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation10#DateOfSignature
-	 * MandateRelatedInformation10.DateOfSignature}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#AccountSignatureDateTime
-	 * InvestmentAccount46.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#AccountSignatureDateTime
-	 * InvestmentAccount47.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#StartDate
-	 * RegisteredContractAmendment1.StartDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#AccountSignatureDateTime
-	 * InvestmentAccount49.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#AccountSignatureDateTime
-	 * InvestmentAccount51.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#AccountSignatureDateTime
-	 * InvestmentAccount50.AccountSignatureDateTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement4#AgreementDate
-	 * Agreement4.AgreementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#AccountSignatureDateTime
-	 * InvestmentAccount61.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#AccountSignatureDateTime
-	 * InvestmentAccount63.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#AccountSignatureDateTime
-	 * InvestmentAccount62.AccountSignatureDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralInformation5#DefinitionsYear
-	 * GeneralInformation5.DefinitionsYear}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.AgreementConditions1#Date
-	 * AgreementConditions1.Date}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation11#DateOfSignature
-	 * MandateRelatedInformation11.DateOfSignature}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Agreement
 	 * Agreement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35#mmAccountSignatureDateTime
+	 * InvestmentAccount35.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36#mmAccountSignatureDateTime
+	 * InvestmentAccount36.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34#mmAccountSignatureDateTime
+	 * InvestmentAccount34.mmAccountSignatureDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement3#mmDate
+	 * Agreement3.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractDocument1#mmSignOffDate
+	 * ContractDocument1.mmSignOffDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation1#mmDateOfSignature
+	 * MandateRelatedInformation1.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation6#mmDateOfSignature
+	 * MandateRelatedInformation6.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation7#mmDateOfSignature
+	 * MandateRelatedInformation7.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation8#mmDateOfSignature
+	 * MandateRelatedInformation8.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation9#mmDateOfSignature
+	 * MandateRelatedInformation9.mmDateOfSignature}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement2#mmAgreementDate
+	 * Agreement2.mmAgreementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation4#mmDateOfSignature
+	 * MandateRelatedInformation4.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation5#mmDateOfSignature
+	 * MandateRelatedInformation5.mmDateOfSignature}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmDate
+	 * Agreement1.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#mmAccountSignatureDateTime
+	 * InvestmentAccount38.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#mmAccountSignatureDateTime
+	 * InvestmentAccount37.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmAccountSignatureDateTime
+	 * InvestmentAccount39.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation10#mmDateOfSignature
+	 * MandateRelatedInformation10.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#mmAccountSignatureDateTime
+	 * InvestmentAccount46.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmAccountSignatureDateTime
+	 * InvestmentAccount47.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#mmStartDate
+	 * RegisteredContractAmendment1.mmStartDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#mmAccountSignatureDateTime
+	 * InvestmentAccount49.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmAccountSignatureDateTime
+	 * InvestmentAccount51.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#mmAccountSignatureDateTime
+	 * InvestmentAccount50.mmAccountSignatureDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement4#mmAgreementDate
+	 * Agreement4.mmAgreementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#mmAccountSignatureDateTime
+	 * InvestmentAccount61.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#mmAccountSignatureDateTime
+	 * InvestmentAccount63.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#mmAccountSignatureDateTime
+	 * InvestmentAccount62.mmAccountSignatureDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralInformation5#mmDefinitionsYear
+	 * GeneralInformation5.mmDefinitionsYear}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AgreementConditions1#mmDate
+	 * AgreementConditions1.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation11#mmDateOfSignature
+	 * MandateRelatedInformation11.mmDateOfSignature}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,31 +235,32 @@ public class Agreement {
 	 * definition} = "Date on which the agreement was signed by all parties."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DateSigned = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDateSigned = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount35.AccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount36.AccountSignatureDateTime,
-					com.tools20022.repository.msg.InvestmentAccount34.AccountSignatureDateTime, com.tools20022.repository.msg.Agreement3.Date, com.tools20022.repository.msg.ContractDocument1.SignOffDate,
-					com.tools20022.repository.msg.MandateRelatedInformation1.DateOfSignature, com.tools20022.repository.msg.MandateRelatedInformation6.DateOfSignature,
-					com.tools20022.repository.msg.MandateRelatedInformation7.DateOfSignature, com.tools20022.repository.msg.MandateRelatedInformation8.DateOfSignature,
-					com.tools20022.repository.msg.MandateRelatedInformation9.DateOfSignature, com.tools20022.repository.msg.Agreement2.AgreementDate, com.tools20022.repository.msg.MandateRelatedInformation4.DateOfSignature,
-					com.tools20022.repository.msg.MandateRelatedInformation5.DateOfSignature, com.tools20022.repository.msg.Agreement1.Date, com.tools20022.repository.msg.InvestmentAccount38.AccountSignatureDateTime,
-					com.tools20022.repository.msg.InvestmentAccount37.AccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount39.AccountSignatureDateTime,
-					com.tools20022.repository.msg.MandateRelatedInformation10.DateOfSignature, com.tools20022.repository.msg.InvestmentAccount46.AccountSignatureDateTime,
-					com.tools20022.repository.msg.InvestmentAccount47.AccountSignatureDateTime, com.tools20022.repository.msg.RegisteredContractAmendment1.StartDate,
-					com.tools20022.repository.msg.InvestmentAccount49.AccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount51.AccountSignatureDateTime,
-					com.tools20022.repository.msg.InvestmentAccount50.AccountSignatureDateTime, com.tools20022.repository.msg.Agreement4.AgreementDate, com.tools20022.repository.msg.InvestmentAccount61.AccountSignatureDateTime,
-					com.tools20022.repository.msg.InvestmentAccount63.AccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount62.AccountSignatureDateTime, com.tools20022.repository.msg.GeneralInformation5.DefinitionsYear,
-					com.tools20022.repository.msg.AgreementConditions1.Date, com.tools20022.repository.msg.MandateRelatedInformation11.DateOfSignature);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount35.mmAccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount36.mmAccountSignatureDateTime,
+					com.tools20022.repository.msg.InvestmentAccount34.mmAccountSignatureDateTime, com.tools20022.repository.msg.Agreement3.mmDate, com.tools20022.repository.msg.ContractDocument1.mmSignOffDate,
+					com.tools20022.repository.msg.MandateRelatedInformation1.mmDateOfSignature, com.tools20022.repository.msg.MandateRelatedInformation6.mmDateOfSignature,
+					com.tools20022.repository.msg.MandateRelatedInformation7.mmDateOfSignature, com.tools20022.repository.msg.MandateRelatedInformation8.mmDateOfSignature,
+					com.tools20022.repository.msg.MandateRelatedInformation9.mmDateOfSignature, com.tools20022.repository.msg.Agreement2.mmAgreementDate, com.tools20022.repository.msg.MandateRelatedInformation4.mmDateOfSignature,
+					com.tools20022.repository.msg.MandateRelatedInformation5.mmDateOfSignature, com.tools20022.repository.msg.Agreement1.mmDate, com.tools20022.repository.msg.InvestmentAccount38.mmAccountSignatureDateTime,
+					com.tools20022.repository.msg.InvestmentAccount37.mmAccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount39.mmAccountSignatureDateTime,
+					com.tools20022.repository.msg.MandateRelatedInformation10.mmDateOfSignature, com.tools20022.repository.msg.InvestmentAccount46.mmAccountSignatureDateTime,
+					com.tools20022.repository.msg.InvestmentAccount47.mmAccountSignatureDateTime, com.tools20022.repository.msg.RegisteredContractAmendment1.mmStartDate,
+					com.tools20022.repository.msg.InvestmentAccount49.mmAccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount51.mmAccountSignatureDateTime,
+					com.tools20022.repository.msg.InvestmentAccount50.mmAccountSignatureDateTime, com.tools20022.repository.msg.Agreement4.mmAgreementDate, com.tools20022.repository.msg.InvestmentAccount61.mmAccountSignatureDateTime,
+					com.tools20022.repository.msg.InvestmentAccount63.mmAccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount62.mmAccountSignatureDateTime,
+					com.tools20022.repository.msg.GeneralInformation5.mmDefinitionsYear, com.tools20022.repository.msg.AgreementConditions1.mmDate, com.tools20022.repository.msg.MandateRelatedInformation11.mmDateOfSignature);
 			elementContext_lazy = () -> Agreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DateSigned";
 			definition = "Date on which the agreement was signed by all parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max350Text description;
 	/**
 	 * Full name of an agreement, annexes and amendments in place between the
 	 * principals.
@@ -267,57 +271,57 @@ public class Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement3#Description
-	 * Agreement3.Description}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContractDocument1#Reference
-	 * ContractDocument1.Reference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Agreement2#AgreementDetails
-	 * Agreement2.AgreementDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Agreement1#Description
-	 * Agreement1.Description}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate7#Reason
-	 * Mandate7.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails10#OriginalReason
-	 * AmendmentInformationDetails10.OriginalReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate6#Reason
-	 * Mandate6.Reason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate5#Reason
-	 * Mandate5.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation10#Reason
-	 * MandateRelatedInformation10.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SupportingDocumentRequestOrLetter1#Description
-	 * SupportingDocumentRequestOrLetter1.Description}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Agreement4#AgreementDetails
-	 * Agreement4.AgreementDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate10#Reason
-	 * Mandate10.Reason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate9#Reason
-	 * Mandate9.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation11#Reason
-	 * MandateRelatedInformation11.Reason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate11#Reason
-	 * Mandate11.Reason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate8#Reason
-	 * Mandate8.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails11#OriginalReason
-	 * AmendmentInformationDetails11.OriginalReason}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Agreement
 	 * Agreement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement3#mmDescription
+	 * Agreement3.mmDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractDocument1#mmReference
+	 * ContractDocument1.mmReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Agreement2#mmAgreementDetails
+	 * Agreement2.mmAgreementDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmDescription
+	 * Agreement1.mmDescription}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Mandate7#mmReason
+	 * Mandate7.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails10#mmOriginalReason
+	 * AmendmentInformationDetails10.mmOriginalReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Mandate6#mmReason
+	 * Mandate6.mmReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Mandate5#mmReason
+	 * Mandate5.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation10#mmReason
+	 * MandateRelatedInformation10.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SupportingDocumentRequestOrLetter1#mmDescription
+	 * SupportingDocumentRequestOrLetter1.mmDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Agreement4#mmAgreementDetails
+	 * Agreement4.mmAgreementDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Mandate10#mmReason
+	 * Mandate10.mmReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Mandate9#mmReason
+	 * Mandate9.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation11#mmReason
+	 * MandateRelatedInformation11.mmReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Mandate11#mmReason
+	 * Mandate11.mmReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Mandate8#mmReason
+	 * Mandate8.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails11#mmOriginalReason
+	 * AmendmentInformationDetails11.mmOriginalReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -331,24 +335,25 @@ public class Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Description = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement3.Description, com.tools20022.repository.msg.ContractDocument1.Reference, com.tools20022.repository.msg.Agreement2.AgreementDetails,
-					com.tools20022.repository.msg.Agreement1.Description, com.tools20022.repository.msg.Mandate7.Reason, com.tools20022.repository.msg.AmendmentInformationDetails10.OriginalReason,
-					com.tools20022.repository.msg.Mandate6.Reason, com.tools20022.repository.msg.Mandate5.Reason, com.tools20022.repository.msg.MandateRelatedInformation10.Reason,
-					com.tools20022.repository.msg.SupportingDocumentRequestOrLetter1.Description, com.tools20022.repository.msg.Agreement4.AgreementDetails, com.tools20022.repository.msg.Mandate10.Reason,
-					com.tools20022.repository.msg.Mandate9.Reason, com.tools20022.repository.msg.MandateRelatedInformation11.Reason, com.tools20022.repository.msg.Mandate11.Reason, com.tools20022.repository.msg.Mandate8.Reason,
-					com.tools20022.repository.msg.AmendmentInformationDetails11.OriginalReason);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement3.mmDescription, com.tools20022.repository.msg.ContractDocument1.mmReference, com.tools20022.repository.msg.Agreement2.mmAgreementDetails,
+					com.tools20022.repository.msg.Agreement1.mmDescription, com.tools20022.repository.msg.Mandate7.mmReason, com.tools20022.repository.msg.AmendmentInformationDetails10.mmOriginalReason,
+					com.tools20022.repository.msg.Mandate6.mmReason, com.tools20022.repository.msg.Mandate5.mmReason, com.tools20022.repository.msg.MandateRelatedInformation10.mmReason,
+					com.tools20022.repository.msg.SupportingDocumentRequestOrLetter1.mmDescription, com.tools20022.repository.msg.Agreement4.mmAgreementDetails, com.tools20022.repository.msg.Mandate10.mmReason,
+					com.tools20022.repository.msg.Mandate9.mmReason, com.tools20022.repository.msg.MandateRelatedInformation11.mmReason, com.tools20022.repository.msg.Mandate11.mmReason, com.tools20022.repository.msg.Mandate8.mmReason,
+					com.tools20022.repository.msg.AmendmentInformationDetails11.mmOriginalReason);
 			elementContext_lazy = () -> Agreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Full name of an agreement, annexes and amendments in place between the principals.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text version;
 	/**
 	 * Version number of a contract or of a legal agreement.
 	 * <p>
@@ -358,20 +363,21 @@ public class Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContractDocument1#Version
-	 * ContractDocument1.Version}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AgreementConditions1#Version
-	 * AgreementConditions1.Version}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Agreement
 	 * Agreement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractDocument1#mmVersion
+	 * ContractDocument1.mmVersion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AgreementConditions1#mmVersion
+	 * AgreementConditions1.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -383,19 +389,20 @@ public class Agreement {
 	 * definition} = "Version number of a contract or of a  legal agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Version = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmVersion = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractDocument1.Version, com.tools20022.repository.msg.AgreementConditions1.Version);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractDocument1.mmVersion, com.tools20022.repository.msg.AgreementConditions1.mmVersion);
 			elementContext_lazy = () -> Agreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Version";
 			definition = "Version number of a contract or of a  legal agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod;
 	/**
 	 * Period during which the agreement is valid
 	 * <p>
@@ -404,8 +411,8 @@ public class Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedAgreement
-	 * DateTimePeriod.RelatedAgreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedAgreement
+	 * DateTimePeriod.mmRelatedAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -413,27 +420,27 @@ public class Agreement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences1#Duration
-	 * MandateOccurrences1.Duration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#Duration
-	 * MandateOccurrences2.Duration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#Duration
-	 * MandateOccurrences3.Duration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#Duration
-	 * MandateOccurrences4.Duration}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Agreement
 	 * Agreement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences1#mmDuration
+	 * MandateOccurrences1.mmDuration}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#mmDuration
+	 * MandateOccurrences2.mmDuration}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#mmDuration
+	 * MandateOccurrences3.mmDuration}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#mmDuration
+	 * MandateOccurrences4.mmDuration}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -445,21 +452,22 @@ public class Agreement {
 	 * definition} = "Period during which the agreement is valid"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ValidityPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences1.Duration, com.tools20022.repository.msg.MandateOccurrences2.Duration, com.tools20022.repository.msg.MandateOccurrences3.Duration,
-					com.tools20022.repository.msg.MandateOccurrences4.Duration);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences1.mmDuration, com.tools20022.repository.msg.MandateOccurrences2.mmDuration, com.tools20022.repository.msg.MandateOccurrences3.mmDuration,
+					com.tools20022.repository.msg.MandateOccurrences4.mmDuration);
 			elementContext_lazy = () -> Agreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Period during which the agreement is valid";
 			minOccurs = 0;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.RelatedAgreement;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedAgreement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected Document document;
 	/**
 	 * Document which materialises the agreement.
 	 * <p>
@@ -468,68 +476,80 @@ public class Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Agreement
-	 * Document.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmAgreement
+	 * Document.mmAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateInformation1#ReferredDocument
-	 * MandateInformation1.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate1#ReferredDocument
-	 * Mandate1.ReferredDocument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateInformation3#ReferredDocument
-	 * MandateInformation3.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate3#ReferredDocument
-	 * Mandate3.ReferredDocument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateInformation2#ReferredDocument
-	 * MandateInformation2.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate2#ReferredDocument
-	 * Mandate2.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate4#ReferredDocument
-	 * Mandate4.ReferredDocument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#InvoiceGeneralInformation
-	 * InvoiceRequestInformation1.InvoiceGeneralInformation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate7#ReferredDocument
-	 * Mandate7.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate6#ReferredDocument
-	 * Mandate6.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate5#ReferredDocument
-	 * Mandate5.ReferredDocument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#RelatedGuaranteeLetter
-	 * FinancingAgreementItem1.RelatedGuaranteeLetter}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#AssociatedDocument
-	 * FinancingAgreementItem1.AssociatedDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SupportingDocument1#Entry
-	 * SupportingDocument1.Entry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#Document
-	 * RegisteredContractAmendment1.Document}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate10#ReferredDocument
-	 * Mandate10.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate9#ReferredDocument
-	 * Mandate9.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate11#ReferredDocument
-	 * Mandate11.ReferredDocument}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Mandate8#ReferredDocument
-	 * Mandate8.ReferredDocument}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Agreement
 	 * Agreement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateInformation1#mmReferredDocument
+	 * MandateInformation1.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate1#mmReferredDocument
+	 * Mandate1.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateInformation3#mmReferredDocument
+	 * MandateInformation3.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate3#mmReferredDocument
+	 * Mandate3.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateInformation2#mmReferredDocument
+	 * MandateInformation2.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate2#mmReferredDocument
+	 * Mandate2.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate4#mmReferredDocument
+	 * Mandate4.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmInvoiceGeneralInformation
+	 * InvoiceRequestInformation1.mmInvoiceGeneralInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate7#mmReferredDocument
+	 * Mandate7.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate6#mmReferredDocument
+	 * Mandate6.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate5#mmReferredDocument
+	 * Mandate5.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmRelatedGuaranteeLetter
+	 * FinancingAgreementItem1.mmRelatedGuaranteeLetter}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmAssociatedDocument
+	 * FinancingAgreementItem1.mmAssociatedDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SupportingDocument1#mmEntry
+	 * SupportingDocument1.mmEntry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegisteredContractAmendment1#mmDocument
+	 * RegisteredContractAmendment1.mmDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate10#mmReferredDocument
+	 * Mandate10.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate9#mmReferredDocument
+	 * Mandate9.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate11#mmReferredDocument
+	 * Mandate11.mmReferredDocument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Mandate8#mmReferredDocument
+	 * Mandate8.mmReferredDocument}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -541,27 +561,28 @@ public class Agreement {
 	 * definition} = "Document which materialises the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Document = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDocument = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateInformation1.ReferredDocument, com.tools20022.repository.msg.Mandate1.ReferredDocument,
-					com.tools20022.repository.msg.MandateInformation3.ReferredDocument, com.tools20022.repository.msg.Mandate3.ReferredDocument, com.tools20022.repository.msg.MandateInformation2.ReferredDocument,
-					com.tools20022.repository.msg.Mandate2.ReferredDocument, com.tools20022.repository.msg.Mandate4.ReferredDocument, com.tools20022.repository.msg.InvoiceRequestInformation1.InvoiceGeneralInformation,
-					com.tools20022.repository.msg.Mandate7.ReferredDocument, com.tools20022.repository.msg.Mandate6.ReferredDocument, com.tools20022.repository.msg.Mandate5.ReferredDocument,
-					com.tools20022.repository.msg.FinancingAgreementItem1.RelatedGuaranteeLetter, com.tools20022.repository.msg.FinancingAgreementItem1.AssociatedDocument, com.tools20022.repository.msg.SupportingDocument1.Entry,
-					com.tools20022.repository.msg.RegisteredContractAmendment1.Document, com.tools20022.repository.msg.Mandate10.ReferredDocument, com.tools20022.repository.msg.Mandate9.ReferredDocument,
-					com.tools20022.repository.msg.Mandate11.ReferredDocument, com.tools20022.repository.msg.Mandate8.ReferredDocument);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateInformation1.mmReferredDocument, com.tools20022.repository.msg.Mandate1.mmReferredDocument,
+					com.tools20022.repository.msg.MandateInformation3.mmReferredDocument, com.tools20022.repository.msg.Mandate3.mmReferredDocument, com.tools20022.repository.msg.MandateInformation2.mmReferredDocument,
+					com.tools20022.repository.msg.Mandate2.mmReferredDocument, com.tools20022.repository.msg.Mandate4.mmReferredDocument, com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoiceGeneralInformation,
+					com.tools20022.repository.msg.Mandate7.mmReferredDocument, com.tools20022.repository.msg.Mandate6.mmReferredDocument, com.tools20022.repository.msg.Mandate5.mmReferredDocument,
+					com.tools20022.repository.msg.FinancingAgreementItem1.mmRelatedGuaranteeLetter, com.tools20022.repository.msg.FinancingAgreementItem1.mmAssociatedDocument, com.tools20022.repository.msg.SupportingDocument1.mmEntry,
+					com.tools20022.repository.msg.RegisteredContractAmendment1.mmDocument, com.tools20022.repository.msg.Mandate10.mmReferredDocument, com.tools20022.repository.msg.Mandate9.mmReferredDocument,
+					com.tools20022.repository.msg.Mandate11.mmReferredDocument, com.tools20022.repository.msg.Mandate8.mmReferredDocument);
 			elementContext_lazy = () -> Agreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Document";
 			definition = "Document which materialises the agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Document.Agreement;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmAgreement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
+	protected CommercialTrade trade;
 	/**
 	 * Specifies the type of trade that is the subject of an agreement. The
 	 * agreement contains the clauses that will govern each trade between the
@@ -572,8 +593,8 @@ public class Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#Agreement
-	 * CommercialTrade.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmAgreement
+	 * CommercialTrade.mmAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -598,20 +619,21 @@ public class Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Trade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Agreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Specifies the type of trade that is the subject of an agreement. The agreement contains the clauses that will govern each trade between the signing parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CommercialTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.Agreement;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmAgreement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 		}
 	};
+	protected Jurisdiction jurisdiction;
 	/**
 	 * Jurisdiction where an agreement applies.
 	 * <p>
@@ -620,8 +642,8 @@ public class Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Jurisdiction#RelatedAgreement
-	 * Jurisdiction.RelatedAgreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedAgreement
+	 * Jurisdiction.mmRelatedAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -644,37 +666,93 @@ public class Agreement {
 	 * definition} = "Jurisdiction where an agreement applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Jurisdiction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmJurisdiction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Agreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Jurisdiction";
 			definition = "Jurisdiction where an agreement applies.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.RelatedAgreement;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmRelatedAgreement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Agreement";
 				definition = "Contractual details related to an agreement between parties.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.RelatedAgreement, com.tools20022.repository.entity.Document.Agreement,
-						com.tools20022.repository.entity.Jurisdiction.RelatedAgreement, com.tools20022.repository.entity.CommercialTrade.Agreement);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedAgreement, com.tools20022.repository.entity.Document.mmAgreement,
+						com.tools20022.repository.entity.Jurisdiction.mmRelatedAgreement, com.tools20022.repository.entity.CommercialTrade.mmAgreement);
 				subType_lazy = () -> Arrays.asList(Contract.mmObject(), SecuritiesFinancingAgreement.mmObject(), CollateralAgreement.mmObject(), MasterAgreement.mmObject(), InvoiceFinancingAgreement.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Agreement.DateSigned, com.tools20022.repository.entity.Agreement.Description, com.tools20022.repository.entity.Agreement.Version,
-						com.tools20022.repository.entity.Agreement.ValidityPeriod, com.tools20022.repository.entity.Agreement.Document, com.tools20022.repository.entity.Agreement.Trade,
-						com.tools20022.repository.entity.Agreement.Jurisdiction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Agreement.mmDateSigned, com.tools20022.repository.entity.Agreement.mmDescription, com.tools20022.repository.entity.Agreement.mmVersion,
+						com.tools20022.repository.entity.Agreement.mmValidityPeriod, com.tools20022.repository.entity.Agreement.mmDocument, com.tools20022.repository.entity.Agreement.mmTrade,
+						com.tools20022.repository.entity.Agreement.mmJurisdiction);
 				derivationComponent_lazy = () -> Arrays.asList(TradeAgreement6.mmObject(), TradeAgreement13.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDateSigned() {
+		return dateSigned;
+	}
+
+	public void setDateSigned(ISODate dateSigned) {
+		this.dateSigned = dateSigned;
+	}
+
+	public Max350Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max350Text description) {
+		this.description = description;
+	}
+
+	public Max35Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max35Text version) {
+		this.version = version;
+	}
+
+	public List<DateTimePeriod> getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public Document getDocument() {
+		return document;
+	}
+
+	public void setDocument(com.tools20022.repository.entity.Document document) {
+		this.document = document;
+	}
+
+	public CommercialTrade getTrade() {
+		return trade;
+	}
+
+	public void setTrade(com.tools20022.repository.entity.CommercialTrade trade) {
+		this.trade = trade;
+	}
+
+	public Jurisdiction getJurisdiction() {
+		return jurisdiction;
+	}
+
+	public void setJurisdiction(com.tools20022.repository.entity.Jurisdiction jurisdiction) {
+		this.jurisdiction = jurisdiction;
 	}
 }

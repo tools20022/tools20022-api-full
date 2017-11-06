@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.UndertakingStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the trade status report.
@@ -36,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeStatusReport1#OriginalMessageDetails
- * TradeStatusReport1.OriginalMessageDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeStatusReport1#Status
- * TradeStatusReport1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeStatusReport1#mmOriginalMessageDetails
+ * TradeStatusReport1.mmOriginalMessageDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeStatusReport1#mmStatus
+ * TradeStatusReport1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeStatusReport1#StatusReason
- * TradeStatusReport1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeStatusReport1#mmStatusReason
+ * TradeStatusReport1.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeStatusReport1#AdditionalInformation
- * TradeStatusReport1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeStatusReport1#mmAdditionalInformation
+ * TradeStatusReport1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,15 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#TradeStatusAdviceDetails
- * TradeStatusReportV01.TradeStatusAdviceDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#mmTradeStatusAdviceDetails
+ * TradeStatusReportV01.mmTradeStatusAdviceDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeStatusReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalMessage1 originalMessageDetails;
 	/**
 	 * Information concerning the original message to which the
 	 * TradeStatusReport is sent in response.
@@ -107,7 +109,7 @@ public class TradeStatusReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
 			isDerived = false;
@@ -115,12 +117,13 @@ public class TradeStatusReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageDetails";
 			definition = "Information concerning the original message to which the TradeStatusReport is sent in response.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessage1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 		}
 	};
+	protected UndertakingStatus1Code status;
 	/**
 	 * Specifies the processing status of the original message.
 	 * <p>
@@ -134,8 +137,8 @@ public class TradeStatusReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#Status
-	 * UndertakingStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmStatus
+	 * UndertakingStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +157,21 @@ public class TradeStatusReport1 {
 	 * definition} = "Specifies the processing status of the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmStatus;
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the processing status of the original message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UndertakingStatus1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason;
 	/**
 	 * Set of elements used to provide detailed information on the status
 	 * reason.
@@ -181,8 +185,8 @@ public class TradeStatusReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#UndertakingStatusReason
-	 * UndertakingStatus.UndertakingStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmUndertakingStatusReason
+	 * UndertakingStatus.mmUndertakingStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,20 +207,21 @@ public class TradeStatusReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertakingStatusReason;
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.UndertakingStatusReason;
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Set of elements used to provide detailed information on the status reason.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation8.mmObject();
 		}
 	};
+	protected Max35Text additionalInformation;
 	/**
 	 * Additional information related to the report.
 	 * <p>
@@ -244,7 +249,7 @@ public class TradeStatusReport1 {
 	 * definition} = "Additional information related to the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
 			isDerived = false;
@@ -252,8 +257,8 @@ public class TradeStatusReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -261,16 +266,48 @@ public class TradeStatusReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeStatusReport1.OriginalMessageDetails, com.tools20022.repository.msg.TradeStatusReport1.Status,
-						com.tools20022.repository.msg.TradeStatusReport1.StatusReason, com.tools20022.repository.msg.TradeStatusReport1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeStatusReport1.mmOriginalMessageDetails, com.tools20022.repository.msg.TradeStatusReport1.mmStatus,
+						com.tools20022.repository.msg.TradeStatusReport1.mmStatusReason, com.tools20022.repository.msg.TradeStatusReport1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.TradeStatusReportV01.mmTradeStatusAdviceDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.TradeStatusReportV01.TradeStatusAdviceDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeStatusReport1";
 				definition = "Details of the trade status report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalMessage1 getOriginalMessageDetails() {
+		return originalMessageDetails;
+	}
+
+	public void setOriginalMessageDetails(com.tools20022.repository.msg.OriginalMessage1 originalMessageDetails) {
+		this.originalMessageDetails = originalMessageDetails;
+	}
+
+	public UndertakingStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(UndertakingStatus1Code status) {
+		this.status = status;
+	}
+
+	public List<StatusReasonInformation8> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public Max35Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max35Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

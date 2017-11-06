@@ -34,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Restriction1#RestrictionType
- * Restriction1.RestrictionType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Restriction1#ValidFrom
- * Restriction1.ValidFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Restriction1#ValidUntil
- * Restriction1.ValidUntil}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Restriction1#mmRestrictionType
+ * Restriction1.mmRestrictionType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Restriction1#mmValidFrom
+ * Restriction1.mmValidFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Restriction1#mmValidUntil
+ * Restriction1.mmValidUntil}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Restriction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CodeOrProprietary1Choice restrictionType;
 	/**
 	 * Type of the restriction.
 	 * <p>
@@ -95,20 +96,21 @@ public class Restriction1 {
 	 * definition} = "Type of the restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Restriction1.mmObject();
 			businessComponentTrace_lazy = () -> AccountRestriction.mmObject();
+			componentContext_lazy = () -> Restriction1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CodeOrProprietary1Choice.mmObject();
 		}
 	};
+	protected ISODateTime validFrom;
 	/**
 	 * Date from when the restriction is valid.
 	 * <p>
@@ -121,8 +123,8 @@ public class Restriction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,20 +142,21 @@ public class Restriction1 {
 	 * definition} = "Date from when the restriction is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Restriction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Date from when the restriction is valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime validUntil;
 	/**
 	 * Date until when the restriction is valid.
 	 * <p>
@@ -166,8 +169,8 @@ public class Restriction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#ToDateTime
-	 * DateTimePeriod.ToDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmToDateTime
+	 * DateTimePeriod.mmToDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,17 +188,17 @@ public class Restriction1 {
 	 * definition} = "Date until when the restriction is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidUntil = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidUntil = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> Restriction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.ToDateTime;
 			isDerived = false;
 			xmlTag = "VldUntil";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntil";
 			definition = "Date until when the restriction is valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -203,14 +206,38 @@ public class Restriction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Restriction1.RestrictionType, com.tools20022.repository.msg.Restriction1.ValidFrom, com.tools20022.repository.msg.Restriction1.ValidUntil);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Restriction1.mmRestrictionType, com.tools20022.repository.msg.Restriction1.mmValidFrom, com.tools20022.repository.msg.Restriction1.mmValidUntil);
 				trace_lazy = () -> AccountRestriction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Restriction1";
 				definition = "Restriction on capability or operations allowed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CodeOrProprietary1Choice getRestrictionType() {
+		return restrictionType;
+	}
+
+	public void setRestrictionType(CodeOrProprietary1Choice restrictionType) {
+		this.restrictionType = restrictionType;
+	}
+
+	public ISODateTime getValidFrom() {
+		return validFrom;
+	}
+
+	public void setValidFrom(ISODateTime validFrom) {
+		this.validFrom = validFrom;
+	}
+
+	public ISODateTime getValidUntil() {
+		return validUntil;
+	}
+
+	public void setValidUntil(ISODateTime validUntil) {
+		this.validUntil = validUntil;
 	}
 }

@@ -39,8 +39,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ComparisonResult2#ReplacementOrAdditionOrDeletion
- * ComparisonResult2.ReplacementOrAdditionOrDeletion}</li>
+ * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmReplacementOrAdditionOrDeletion
+ * ComparisonResult2.mmReplacementOrAdditionOrDeletion}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,18 +48,21 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ComparisonResult2#ElementSequenceNumber
- * ComparisonResult2.ElementSequenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#ElementPath
- * ComparisonResult2.ElementPath}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#ElementName
- * ComparisonResult2.ElementName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#Replacement
- * ComparisonResult2.Replacement}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#Deletion
- * ComparisonResult2.Deletion}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#Addition
- * ComparisonResult2.Addition}</li>
+ * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmElementSequenceNumber
+ * ComparisonResult2.mmElementSequenceNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmElementPath
+ * ComparisonResult2.mmElementPath}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmElementName
+ * ComparisonResult2.mmElementName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmReplacement
+ * ComparisonResult2.mmReplacement}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#mmDeletion
+ * ComparisonResult2.mmDeletion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#mmAddition
+ * ComparisonResult2.mmAddition}</li>
  * </ul>
  * </li>
  * <li>
@@ -67,15 +70,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#UpdatedElement
- * DeltaReportV03.UpdatedElement}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmUpdatedElement
+ * DeltaReportV03.mmUpdatedElement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -92,6 +95,7 @@ import java.util.function.Supplier;
 public class ComparisonResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number elementSequenceNumber;
 	/**
 	 * Sequence number assigned to the element.
 	 * <p>
@@ -119,7 +123,7 @@ public class ComparisonResult2 {
 	 * definition} = "Sequence number assigned to the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ComparisonResult2.mmObject();
 			isDerived = false;
@@ -127,11 +131,12 @@ public class ComparisonResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementSequenceNumber";
 			definition = "Sequence number assigned to the element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max350Text elementPath;
 	/**
 	 * Specifies from the root of the message the complete path of the element.
 	 * <p>
@@ -161,7 +166,7 @@ public class ComparisonResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementPath = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementPath = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ComparisonResult2.mmObject();
 			isDerived = false;
@@ -169,11 +174,12 @@ public class ComparisonResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementPath";
 			definition = "Specifies from the root of the message the complete path of the element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text elementName;
 	/**
 	 * Name of the element.
 	 * <p>
@@ -201,7 +207,7 @@ public class ComparisonResult2 {
 	 * definition} = "Name of the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ComparisonResult2.mmObject();
 			isDerived = false;
@@ -209,11 +215,12 @@ public class ComparisonResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementName";
 			definition = "Name of the element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Replacement2 replacement;
 	/**
 	 * Replacement of an existing content by a different one
 	 * <p>
@@ -240,7 +247,7 @@ public class ComparisonResult2 {
 	 * definition} = "Replacement of an existing content by a different one"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Replacement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReplacement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ComparisonResult2.mmObject();
 			isDerived = false;
@@ -248,12 +255,13 @@ public class ComparisonResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
 			definition = "Replacement of an existing content by a different one";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Replacement2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Replacement2.mmObject();
 		}
 	};
+	protected Deletion2 deletion;
 	/**
 	 * Deletion of the current element.
 	 * <p>
@@ -279,7 +287,7 @@ public class ComparisonResult2 {
 	 * definition} = "Deletion of the current element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Deletion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ComparisonResult2.mmObject();
 			isDerived = false;
@@ -287,12 +295,13 @@ public class ComparisonResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
 			definition = "Deletion of the current element.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Deletion2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Deletion2.mmObject();
 		}
 	};
+	protected Addition2 addition;
 	/**
 	 * Addition of a new element.
 	 * <p>
@@ -318,7 +327,7 @@ public class ComparisonResult2 {
 	 * definition} = "Addition of a new element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Addition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ComparisonResult2.mmObject();
 			isDerived = false;
@@ -326,10 +335,10 @@ public class ComparisonResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
 			definition = "Addition of a new element.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Addition2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Addition2.mmObject();
 		}
 	};
 	/**
@@ -342,12 +351,14 @@ public class ComparisonResult2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ComparisonResult2#Replacement
-	 * ComparisonResult2.Replacement}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#Deletion
-	 * ComparisonResult2.Deletion}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ComparisonResult2#Addition
-	 * ComparisonResult2.Addition}</li>
+	 * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmReplacement
+	 * ComparisonResult2.mmReplacement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmDeletion
+	 * ComparisonResult2.mmDeletion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ComparisonResult2#mmAddition
+	 * ComparisonResult2.mmAddition}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -367,24 +378,24 @@ public class ComparisonResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReplacementOrAdditionOrDeletion = new MMXor() {
+	public static final MMXor mmReplacementOrAdditionOrDeletion = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacementOrAdditionOrDeletion";
 			definition = "One and only one Message Element in the list Addition, Deletion, Replacement must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ComparisonResult2.Replacement, com.tools20022.repository.msg.ComparisonResult2.Deletion, com.tools20022.repository.msg.ComparisonResult2.Addition);
 			messageComponent_lazy = () -> ComparisonResult2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ComparisonResult2.mmReplacement, com.tools20022.repository.msg.ComparisonResult2.mmDeletion, com.tools20022.repository.msg.ComparisonResult2.mmAddition);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ComparisonResult2.ElementSequenceNumber, com.tools20022.repository.msg.ComparisonResult2.ElementPath,
-						com.tools20022.repository.msg.ComparisonResult2.ElementName, com.tools20022.repository.msg.ComparisonResult2.Replacement, com.tools20022.repository.msg.ComparisonResult2.Deletion,
-						com.tools20022.repository.msg.ComparisonResult2.Addition);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DeltaReportV03.UpdatedElement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ComparisonResult2.mmElementSequenceNumber, com.tools20022.repository.msg.ComparisonResult2.mmElementPath,
+						com.tools20022.repository.msg.ComparisonResult2.mmElementName, com.tools20022.repository.msg.ComparisonResult2.mmReplacement, com.tools20022.repository.msg.ComparisonResult2.mmDeletion,
+						com.tools20022.repository.msg.ComparisonResult2.mmAddition);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DeltaReportV03.mmUpdatedElement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -395,9 +406,57 @@ public class ComparisonResult2 {
 				})).get();
 				name = "ComparisonResult2";
 				definition = "Describes the comparison between the currently established baseline elements and the proposed ones.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ComparisonResult2.ReplacementOrAdditionOrDeletion);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ComparisonResult2.mmReplacementOrAdditionOrDeletion);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getElementSequenceNumber() {
+		return elementSequenceNumber;
+	}
+
+	public void setElementSequenceNumber(Number elementSequenceNumber) {
+		this.elementSequenceNumber = elementSequenceNumber;
+	}
+
+	public Max350Text getElementPath() {
+		return elementPath;
+	}
+
+	public void setElementPath(Max350Text elementPath) {
+		this.elementPath = elementPath;
+	}
+
+	public Max35Text getElementName() {
+		return elementName;
+	}
+
+	public void setElementName(Max35Text elementName) {
+		this.elementName = elementName;
+	}
+
+	public Replacement2 getReplacement() {
+		return replacement;
+	}
+
+	public void setReplacement(com.tools20022.repository.msg.Replacement2 replacement) {
+		this.replacement = replacement;
+	}
+
+	public Deletion2 getDeletion() {
+		return deletion;
+	}
+
+	public void setDeletion(com.tools20022.repository.msg.Deletion2 deletion) {
+		this.deletion = deletion;
+	}
+
+	public Addition2 getAddition() {
+		return addition;
+	}
+
+	public void setAddition(com.tools20022.repository.msg.Addition2 addition) {
+		this.addition = addition;
 	}
 }

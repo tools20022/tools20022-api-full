@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#AcquirerParameters
- * DataSetCategory10Code.AcquirerParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmAcquirerParameters
+ * DataSetCategory10Code.mmAcquirerParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#ApplicationParameters
- * DataSetCategory10Code.ApplicationParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmApplicationParameters
+ * DataSetCategory10Code.mmApplicationParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#MasterTerminalManager
- * DataSetCategory10Code.MasterTerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmMasterTerminalManager
+ * DataSetCategory10Code.mmMasterTerminalManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#MerchantParameters
- * DataSetCategory10Code.MerchantParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmMerchantParameters
+ * DataSetCategory10Code.mmMerchantParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#Monitoring
- * DataSetCategory10Code.Monitoring}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmMonitoring
+ * DataSetCategory10Code.mmMonitoring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#SecurityParameters
- * DataSetCategory10Code.SecurityParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmSecurityParameters
+ * DataSetCategory10Code.mmSecurityParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#SoftwareModule
- * DataSetCategory10Code.SoftwareModule}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmSoftwareModule
+ * DataSetCategory10Code.mmSoftwareModule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#TerminalParameters
- * DataSetCategory10Code.TerminalParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmTerminalParameters
+ * DataSetCategory10Code.mmTerminalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#CertificateParameters
- * DataSetCategory10Code.CertificateParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmCertificateParameters
+ * DataSetCategory10Code.mmCertificateParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#TMSProtocolParameters
- * DataSetCategory10Code.TMSProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory10Code#mmTMSProtocolParameters
+ * DataSetCategory10Code.mmTMSProtocolParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,15 +104,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#AcquirerParameters
-	 * DataSetCategory5Code.AcquirerParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmAcquirerParameters
+	 * DataSetCategory5Code.mmAcquirerParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerParameters = new MMCode() {
+	public static final MMCode mmAcquirerParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerParameters";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.AcquirerParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmAcquirerParameters;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -133,15 +133,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#ApplicationParameters
-	 * DataSetCategory5Code.ApplicationParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmApplicationParameters
+	 * DataSetCategory5Code.mmApplicationParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode ApplicationParameters = new MMCode() {
+	public static final MMCode mmApplicationParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.ApplicationParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmApplicationParameters;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -162,15 +162,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#MasterTerminalManager
-	 * DataSetCategory5Code.MasterTerminalManager}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmMasterTerminalManager
+	 * DataSetCategory5Code.mmMasterTerminalManager}</li>
 	 * </ul>
 	 */
-	public static final MMCode MasterTerminalManager = new MMCode() {
+	public static final MMCode mmMasterTerminalManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTerminalManager";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.MasterTerminalManager;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmMasterTerminalManager;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -191,15 +191,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#MerchantParameters
-	 * DataSetCategory5Code.MerchantParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmMerchantParameters
+	 * DataSetCategory5Code.mmMerchantParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode MerchantParameters = new MMCode() {
+	public static final MMCode mmMerchantParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.MerchantParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmMerchantParameters;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -220,15 +220,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#Monitoring
-	 * DataSetCategory5Code.Monitoring}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmMonitoring
+	 * DataSetCategory5Code.mmMonitoring}</li>
 	 * </ul>
 	 */
-	public static final MMCode Monitoring = new MMCode() {
+	public static final MMCode mmMonitoring = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monitoring";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.Monitoring;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmMonitoring;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -249,15 +249,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#SecurityParameters
-	 * DataSetCategory5Code.SecurityParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmSecurityParameters
+	 * DataSetCategory5Code.mmSecurityParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityParameters = new MMCode() {
+	public static final MMCode mmSecurityParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityParameters";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.SecurityParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmSecurityParameters;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -278,15 +278,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#SoftwareModule
-	 * DataSetCategory5Code.SoftwareModule}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmSoftwareModule
+	 * DataSetCategory5Code.mmSoftwareModule}</li>
 	 * </ul>
 	 */
-	public static final MMCode SoftwareModule = new MMCode() {
+	public static final MMCode mmSoftwareModule = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftwareModule";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.SoftwareModule;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmSoftwareModule;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -307,15 +307,15 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#TerminalParameters
-	 * DataSetCategory5Code.TerminalParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory5Code#mmTerminalParameters
+	 * DataSetCategory5Code.mmTerminalParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode TerminalParameters = new MMCode() {
+	public static final MMCode mmTerminalParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalParameters";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.TerminalParameters;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.DataSetCategory5Code.mmTerminalParameters;
 			owner_lazy = () -> DataSetCategory10Code.mmObject();
 		}
 	};
@@ -335,7 +335,7 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * name} = "CertificateParameters"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateParameters = new MMCode() {
+	public static final MMCode mmCertificateParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateParameters";
@@ -358,7 +358,7 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	 * name} = "TMSProtocolParameters"</li>
 	 * </ul>
 	 */
-	public static final MMCode TMSProtocolParameters = new MMCode() {
+	public static final MMCode mmTMSProtocolParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolParameters";
@@ -369,16 +369,16 @@ public class DataSetCategory10Code extends DataSetCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataSetCategory10Code";
 				definition = "Maintenance services provided by a terminal manager.";
 				previousVersion_lazy = () -> DataSetCategory5Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory10Code.AcquirerParameters, com.tools20022.repository.codeset.DataSetCategory10Code.ApplicationParameters,
-						com.tools20022.repository.codeset.DataSetCategory10Code.MasterTerminalManager, com.tools20022.repository.codeset.DataSetCategory10Code.MerchantParameters,
-						com.tools20022.repository.codeset.DataSetCategory10Code.Monitoring, com.tools20022.repository.codeset.DataSetCategory10Code.SecurityParameters, com.tools20022.repository.codeset.DataSetCategory10Code.SoftwareModule,
-						com.tools20022.repository.codeset.DataSetCategory10Code.TerminalParameters, com.tools20022.repository.codeset.DataSetCategory10Code.CertificateParameters,
-						com.tools20022.repository.codeset.DataSetCategory10Code.TMSProtocolParameters);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory10Code.mmAcquirerParameters, com.tools20022.repository.codeset.DataSetCategory10Code.mmApplicationParameters,
+						com.tools20022.repository.codeset.DataSetCategory10Code.mmMasterTerminalManager, com.tools20022.repository.codeset.DataSetCategory10Code.mmMerchantParameters,
+						com.tools20022.repository.codeset.DataSetCategory10Code.mmMonitoring, com.tools20022.repository.codeset.DataSetCategory10Code.mmSecurityParameters,
+						com.tools20022.repository.codeset.DataSetCategory10Code.mmSoftwareModule, com.tools20022.repository.codeset.DataSetCategory10Code.mmTerminalParameters,
+						com.tools20022.repository.codeset.DataSetCategory10Code.mmCertificateParameters, com.tools20022.repository.codeset.DataSetCategory10Code.mmTMSProtocolParameters);
 				trace_lazy = () -> DataSetCategoryCode.mmObject();
 			}
 		});

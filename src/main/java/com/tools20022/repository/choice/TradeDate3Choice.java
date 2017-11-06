@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TradeDate3Choice#Date
- * TradeDate3Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeDate3Choice#DateCode
- * TradeDate3Choice.DateCode}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeDate3Choice#mmDate
+ * TradeDate3Choice.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeDate3Choice#mmDateCode
+ * TradeDate3Choice.mmDateCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeDate3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Trade date expressed as an ISO 20022 code.
 	 * <p>
@@ -69,8 +70,8 @@ public class TradeDate3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -89,20 +90,21 @@ public class TradeDate3Choice {
 	 * definition} = "Trade date expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TradeDate3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Trade date expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateType1Code dateCode;
 	/**
 	 * Date expressed as a code.
 	 * <p>
@@ -131,7 +133,7 @@ public class TradeDate3Choice {
 	 * definition} = "Date expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeDate3Choice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class TradeDate3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Date expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DateType1Code.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class TradeDate3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeDate3Choice.Date, com.tools20022.repository.choice.TradeDate3Choice.DateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeDate3Choice.mmDate, com.tools20022.repository.choice.TradeDate3Choice.mmDateCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeDate3Choice";
 				definition = "Choice of format for the trade date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public DateType1Code getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(DateType1Code dateCode) {
+		this.dateCode = dateCode;
 	}
 }

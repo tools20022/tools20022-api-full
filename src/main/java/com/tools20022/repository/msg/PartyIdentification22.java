@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -37,11 +38,12 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification22#BICOrBEI
- * PartyIdentification22.BICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification22#AlternativeIdentifier
- * PartyIdentification22.AlternativeIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification22#mmBICOrBEI
+ * PartyIdentification22.mmBICOrBEI}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification22#mmAlternativeIdentifier
+ * PartyIdentification22.mmAlternativeIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +53,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +69,7 @@ import java.util.function.Supplier;
 public class PartyIdentification22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bICOrBEI;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -83,8 +86,8 @@ public class PartyIdentification22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +108,21 @@ public class PartyIdentification22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected List<Max35Text> alternativeIdentifier;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -132,8 +136,8 @@ public class PartyIdentification22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,17 +158,17 @@ public class PartyIdentification22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternativeIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternativeIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "AltrntvIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternativeIdentifier";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -172,9 +176,9 @@ public class PartyIdentification22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification22.BICOrBEI, com.tools20022.repository.msg.PartyIdentification22.AlternativeIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification22.mmBICOrBEI, com.tools20022.repository.msg.PartyIdentification22.mmAlternativeIdentifier);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -188,5 +192,21 @@ public class PartyIdentification22 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBICOrBEI() {
+		return bICOrBEI;
+	}
+
+	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = bICOrBEI;
+	}
+
+	public List<Max35Text> getAlternativeIdentifier() {
+		return alternativeIdentifier;
+	}
+
+	public void setAlternativeIdentifier(List<Max35Text> alternativeIdentifier) {
+		this.alternativeIdentifier = alternativeIdentifier;
 	}
 }

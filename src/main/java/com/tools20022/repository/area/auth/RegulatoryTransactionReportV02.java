@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.TransactionDetails3;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,27 +66,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#Identification
- * RegulatoryTransactionReportV02.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#mmIdentification
+ * RegulatoryTransactionReportV02.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#TransactionDetails
- * RegulatoryTransactionReportV02.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#mmTransactionDetails
+ * RegulatoryTransactionReportV02.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#ReportingInstitution
- * RegulatoryTransactionReportV02.ReportingInstitution}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#mmReportingInstitution
+ * RegulatoryTransactionReportV02.mmReportingInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#ReportingAgent
- * RegulatoryTransactionReportV02.ReportingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#mmReportingAgent
+ * RegulatoryTransactionReportV02.mmReportingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#Extension
- * RegulatoryTransactionReportV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#mmExtension
+ * RegulatoryTransactionReportV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportV02#identifier
- * RegulatoryTransactionReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.008.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegulatoryTransactionReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification of the RegulatoryTransactionReport.
 	 * <p>
@@ -124,17 +124,18 @@ public class RegulatoryTransactionReportV02 {
 	 * definition} = "Identification of the RegulatoryTransactionReport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the RegulatoryTransactionReport.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected List<TransactionDetails3> transactionDetails;
 	/**
 	 * Provides details of the trade for which the transaction report is being
 	 * sent.
@@ -161,7 +162,7 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,6 +172,7 @@ public class RegulatoryTransactionReportV02 {
 			complexType_lazy = () -> TransactionDetails3.mmObject();
 		}
 	};
+	protected PartyIdentification23Choice reportingInstitution;
 	/**
 	 * Identification of the firm that is legally responsible for sending the
 	 * transaction report.
@@ -197,17 +199,18 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportingInstitution = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportingInstitution = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgInstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingInstitution";
 			definition = "Identification of the firm that is legally responsible for sending the transaction report.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
 		}
 	};
+	protected PartyIdentification24Choice reportingAgent;
 	/**
 	 * Identifies the intermediary which is reporting on behalf on the
 	 * ReportingInstitution. If there is a reporting chain, then the last party
@@ -235,17 +238,18 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAgent";
 			definition = "Identifies the intermediary which is reporting on behalf on the ReportingInstitution. If there is a reporting chain, then the last party should override the previous one.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -271,7 +275,7 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,33 +283,6 @@ public class RegulatoryTransactionReportV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "008";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -319,12 +296,59 @@ public class RegulatoryTransactionReportV02 {
 				rootElement = "Document";
 				xmlTag = "RgltryTxRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.Identification, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.TransactionDetails,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.ReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.ReportingAgent,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmTransactionDetails,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmReportingAgent,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "008";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public List<TransactionDetails3> getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(List<TransactionDetails3> transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public PartyIdentification23Choice getReportingInstitution() {
+		return reportingInstitution;
+	}
+
+	public void setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
+		this.reportingInstitution = reportingInstitution;
+	}
+
+	public PartyIdentification24Choice getReportingAgent() {
+		return reportingAgent;
+	}
+
+	public void setReportingAgent(PartyIdentification24Choice reportingAgent) {
+		this.reportingAgent = reportingAgent;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

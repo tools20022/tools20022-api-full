@@ -41,49 +41,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#PlaceAndName
- * SecuritiesOptionSD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmPlaceAndName
+ * SecuritiesOptionSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#DTCPayMethod
- * SecuritiesOptionSD3.DTCPayMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmDTCPayMethod
+ * SecuritiesOptionSD3.mmDTCPayMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#DTCPayOrder
- * SecuritiesOptionSD3.DTCPayOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmDTCPayOrder
+ * SecuritiesOptionSD3.mmDTCPayOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#ReinvestmentIncomeClassification
- * SecuritiesOptionSD3.ReinvestmentIncomeClassification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmReinvestmentIncomeClassification
+ * SecuritiesOptionSD3.mmReinvestmentIncomeClassification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#EntitlementCalculationMethod
- * SecuritiesOptionSD3.EntitlementCalculationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmEntitlementCalculationMethod
+ * SecuritiesOptionSD3.mmEntitlementCalculationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#FairMarketValue
- * SecuritiesOptionSD3.FairMarketValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#PriceBasis
- * SecuritiesOptionSD3.PriceBasis}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmFairMarketValue
+ * SecuritiesOptionSD3.mmFairMarketValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#DTCExitExplanationIndicator
- * SecuritiesOptionSD3.DTCExitExplanationIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#ChargeFlag
- * SecuritiesOptionSD3.ChargeFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmPriceBasis
+ * SecuritiesOptionSD3.mmPriceBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#ProtectChargeFlag
- * SecuritiesOptionSD3.ProtectChargeFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmDTCExitExplanationIndicator
+ * SecuritiesOptionSD3.mmDTCExitExplanationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#EstimatedPriceFlag
- * SecuritiesOptionSD3.EstimatedPriceFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmChargeFlag
+ * SecuritiesOptionSD3.mmChargeFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#DTCFractionalShareInstructionPeriod
- * SecuritiesOptionSD3.DTCFractionalShareInstructionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmProtectChargeFlag
+ * SecuritiesOptionSD3.mmProtectChargeFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#DTCUSTaxInstructionPeriod
- * SecuritiesOptionSD3.DTCUSTaxInstructionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmEstimatedPriceFlag
+ * SecuritiesOptionSD3.mmEstimatedPriceFlag}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmDTCFractionalShareInstructionPeriod
+ * SecuritiesOptionSD3.mmDTCFractionalShareInstructionPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD3#mmDTCUSTaxInstructionPeriod
+ * SecuritiesOptionSD3.mmDTCUSTaxInstructionPeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesOptionSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -126,7 +129,7 @@ public class SecuritiesOptionSD3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -134,11 +137,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max3NumericText dTCPayMethod;
 	/**
 	 * Indicates the type of payment. Used in stock dividends processing at
 	 * DTC(The Depository Trust Corporation). Valid values list will be
@@ -171,7 +175,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPayMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -179,11 +183,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max3NumericText dTCPayOrder;
 	/**
 	 * Indicates the payment order. Used in stock dividends processing at DTC
 	 * (The Depository Trust Corporation). Valid values list will be maintained
@@ -216,7 +221,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPayOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -224,11 +229,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected ReinvestmentIncomeClassification1Code reinvestmentIncomeClassification;
 	/**
 	 * Income classification of the cash proceeds for dividend reinvestment .
 	 * <p>
@@ -258,7 +264,7 @@ public class SecuritiesOptionSD3 {
 	 * "Income classification of the cash proceeds for dividend reinvestment ."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReinvestmentIncomeClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -266,11 +272,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
 			definition = "Income classification of the cash proceeds for dividend reinvestment .";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification1Code.mmObject();
 		}
 	};
+	protected DTCEntitlementCalculationMethod1Code entitlementCalculationMethod;
 	/**
 	 * Indicates how the entitlements were calculated optional dividends.
 	 * <p>
@@ -300,7 +307,7 @@ public class SecuritiesOptionSD3 {
 	 * "Indicates how the entitlements were calculated optional dividends."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntitlementCalculationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntitlementCalculationMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -308,11 +315,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAnd13DecimalAmount fairMarketValue;
 	/**
 	 * For stock distributions, the fair market value represents the value of
 	 * the security per share at the time of distribution. The value is used to
@@ -347,7 +355,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FairMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFairMarketValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -355,11 +363,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FairMarketValue";
 			definition = "For stock distributions, the fair market value represents the value of the security per share at the time of distribution. The value is used to calculate the cash value of the distribution and the necessary tax withholding on the distribution at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected DTCBaseDisbursed1Code priceBasis;
 	/**
 	 * Price is based on either base or disbursed security.
 	 * <p>
@@ -388,7 +397,7 @@ public class SecuritiesOptionSD3 {
 	 * definition} = "Price is based on either base or disbursed security. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceBasis = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -396,11 +405,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceBasis";
 			definition = "Price is based on either base or disbursed security. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCBaseDisbursed1Code.mmObject();
 		}
 	};
+	protected SecuritiesExitReason1Code dTCExitExplanationIndicator;
 	/**
 	 * Specifies the reason for DTC (The Depository Trust Corporation) to exit
 	 * the shares.
@@ -432,7 +442,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCExitExplanationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCExitExplanationIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -440,11 +450,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitExplanationIndicator";
 			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesExitReason1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator chargeFlag;
 	/**
 	 * Indicates whether a DTC (The Depository Trust Corporation) participant,
 	 * using one or more payment bonds in connection with a warrant exercise,
@@ -478,7 +489,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargeFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -486,11 +497,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeFlag";
 			definition = "Indicates whether a DTC (The Depository Trust Corporation) participant, using one or more payment bonds in connection with a warrant exercise, will be charged (through settlement on exercise date) the value of the upcoming interest payment on the bond(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator protectChargeFlag;
 	/**
 	 * Indicates whether a charge is levied on the protect instructions at the
 	 * time when the protect is submitted or at the time of the cover. Applies
@@ -526,7 +538,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProtectChargeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProtectChargeFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -534,11 +546,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator estimatedPriceFlag;
 	/**
 	 * Indicates whether the price from the offeror is estimated or final.
 	 * <p>
@@ -568,7 +581,7 @@ public class SecuritiesOptionSD3 {
 	 * "Indicates whether the price from the offeror is estimated or final. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EstimatedPriceFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEstimatedPriceFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -576,11 +589,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedPriceFlag";
 			definition = "Indicates whether the price from the offeror is estimated or final. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Period3 dTCFractionalShareInstructionPeriod;
 	/**
 	 * Time period during which instructions regarding the disposition of
 	 * fractional entitlements will be accepted at DTC (The Depository Trust
@@ -612,7 +626,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCFractionalShareInstructionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCFractionalShareInstructionPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -620,11 +634,12 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCFractionalShareInstructionPeriod";
 			definition = "Time period during which instructions regarding the disposition of fractional entitlements will be accepted at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	protected Period3 dTCUSTaxInstructionPeriod;
 	/**
 	 * Indicates the period during which the instructions for US Tax service
 	 * will be accepted at DTC (The Depository Trust Corporation).
@@ -655,7 +670,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCUSTaxInstructionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCUSTaxInstructionPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -663,27 +678,131 @@ public class SecuritiesOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for US Tax service will be accepted at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD3.PlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD3.DTCPayMethod,
-						com.tools20022.repository.msg.SecuritiesOptionSD3.DTCPayOrder, com.tools20022.repository.msg.SecuritiesOptionSD3.ReinvestmentIncomeClassification,
-						com.tools20022.repository.msg.SecuritiesOptionSD3.EntitlementCalculationMethod, com.tools20022.repository.msg.SecuritiesOptionSD3.FairMarketValue, com.tools20022.repository.msg.SecuritiesOptionSD3.PriceBasis,
-						com.tools20022.repository.msg.SecuritiesOptionSD3.DTCExitExplanationIndicator, com.tools20022.repository.msg.SecuritiesOptionSD3.ChargeFlag, com.tools20022.repository.msg.SecuritiesOptionSD3.ProtectChargeFlag,
-						com.tools20022.repository.msg.SecuritiesOptionSD3.EstimatedPriceFlag, com.tools20022.repository.msg.SecuritiesOptionSD3.DTCFractionalShareInstructionPeriod,
-						com.tools20022.repository.msg.SecuritiesOptionSD3.DTCUSTaxInstructionPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD3.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD3.mmDTCPayMethod,
+						com.tools20022.repository.msg.SecuritiesOptionSD3.mmDTCPayOrder, com.tools20022.repository.msg.SecuritiesOptionSD3.mmReinvestmentIncomeClassification,
+						com.tools20022.repository.msg.SecuritiesOptionSD3.mmEntitlementCalculationMethod, com.tools20022.repository.msg.SecuritiesOptionSD3.mmFairMarketValue, com.tools20022.repository.msg.SecuritiesOptionSD3.mmPriceBasis,
+						com.tools20022.repository.msg.SecuritiesOptionSD3.mmDTCExitExplanationIndicator, com.tools20022.repository.msg.SecuritiesOptionSD3.mmChargeFlag, com.tools20022.repository.msg.SecuritiesOptionSD3.mmProtectChargeFlag,
+						com.tools20022.repository.msg.SecuritiesOptionSD3.mmEstimatedPriceFlag, com.tools20022.repository.msg.SecuritiesOptionSD3.mmDTCFractionalShareInstructionPeriod,
+						com.tools20022.repository.msg.SecuritiesOptionSD3.mmDTCUSTaxInstructionPeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesOptionSD3";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max3NumericText getDTCPayMethod() {
+		return dTCPayMethod;
+	}
+
+	public void setDTCPayMethod(Max3NumericText dTCPayMethod) {
+		this.dTCPayMethod = dTCPayMethod;
+	}
+
+	public Max3NumericText getDTCPayOrder() {
+		return dTCPayOrder;
+	}
+
+	public void setDTCPayOrder(Max3NumericText dTCPayOrder) {
+		this.dTCPayOrder = dTCPayOrder;
+	}
+
+	public ReinvestmentIncomeClassification1Code getReinvestmentIncomeClassification() {
+		return reinvestmentIncomeClassification;
+	}
+
+	public void setReinvestmentIncomeClassification(ReinvestmentIncomeClassification1Code reinvestmentIncomeClassification) {
+		this.reinvestmentIncomeClassification = reinvestmentIncomeClassification;
+	}
+
+	public DTCEntitlementCalculationMethod1Code getEntitlementCalculationMethod() {
+		return entitlementCalculationMethod;
+	}
+
+	public void setEntitlementCalculationMethod(DTCEntitlementCalculationMethod1Code entitlementCalculationMethod) {
+		this.entitlementCalculationMethod = entitlementCalculationMethod;
+	}
+
+	public RestrictedFINActiveCurrencyAnd13DecimalAmount getFairMarketValue() {
+		return fairMarketValue;
+	}
+
+	public void setFairMarketValue(RestrictedFINActiveCurrencyAnd13DecimalAmount fairMarketValue) {
+		this.fairMarketValue = fairMarketValue;
+	}
+
+	public DTCBaseDisbursed1Code getPriceBasis() {
+		return priceBasis;
+	}
+
+	public void setPriceBasis(DTCBaseDisbursed1Code priceBasis) {
+		this.priceBasis = priceBasis;
+	}
+
+	public SecuritiesExitReason1Code getDTCExitExplanationIndicator() {
+		return dTCExitExplanationIndicator;
+	}
+
+	public void setDTCExitExplanationIndicator(SecuritiesExitReason1Code dTCExitExplanationIndicator) {
+		this.dTCExitExplanationIndicator = dTCExitExplanationIndicator;
+	}
+
+	public YesNoIndicator getChargeFlag() {
+		return chargeFlag;
+	}
+
+	public void setChargeFlag(YesNoIndicator chargeFlag) {
+		this.chargeFlag = chargeFlag;
+	}
+
+	public YesNoIndicator getProtectChargeFlag() {
+		return protectChargeFlag;
+	}
+
+	public void setProtectChargeFlag(YesNoIndicator protectChargeFlag) {
+		this.protectChargeFlag = protectChargeFlag;
+	}
+
+	public YesNoIndicator getEstimatedPriceFlag() {
+		return estimatedPriceFlag;
+	}
+
+	public void setEstimatedPriceFlag(YesNoIndicator estimatedPriceFlag) {
+		this.estimatedPriceFlag = estimatedPriceFlag;
+	}
+
+	public Period3 getDTCFractionalShareInstructionPeriod() {
+		return dTCFractionalShareInstructionPeriod;
+	}
+
+	public void setDTCFractionalShareInstructionPeriod(com.tools20022.repository.msg.Period3 dTCFractionalShareInstructionPeriod) {
+		this.dTCFractionalShareInstructionPeriod = dTCFractionalShareInstructionPeriod;
+	}
+
+	public Period3 getDTCUSTaxInstructionPeriod() {
+		return dTCUSTaxInstructionPeriod;
+	}
+
+	public void setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
+		this.dTCUSTaxInstructionPeriod = dTCUSTaxInstructionPeriod;
 	}
 }

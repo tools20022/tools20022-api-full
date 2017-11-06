@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -98,27 +99,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#AccountOwner
- * SecuritiesSettlementConditionsModificationRequestV05.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#mmAccountOwner
+ * SecuritiesSettlementConditionsModificationRequestV05.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#SafekeepingAccount
- * SecuritiesSettlementConditionsModificationRequestV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#mmSafekeepingAccount
+ * SecuritiesSettlementConditionsModificationRequestV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#RequestDetails
- * SecuritiesSettlementConditionsModificationRequestV05.RequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#mmRequestDetails
+ * SecuritiesSettlementConditionsModificationRequestV05.mmRequestDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#AdditionalInformation
- * SecuritiesSettlementConditionsModificationRequestV05.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#mmAdditionalInformation
+ * SecuritiesSettlementConditionsModificationRequestV05.mmAdditionalInformation}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#SupplementaryData
- * SecuritiesSettlementConditionsModificationRequestV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#mmSupplementaryData
+ * SecuritiesSettlementConditionsModificationRequestV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#identifier
- * SecuritiesSettlementConditionsModificationRequestV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.030.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -146,6 +146,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementConditionsModificationRequestV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification36Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -171,30 +172,31 @@ public class SecuritiesSettlementConditionsModificationRequestV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#AccountOwner
-	 * SecuritiesSettlementConditionsModificationRequestV06.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#mmAccountOwner
+	 * SecuritiesSettlementConditionsModificationRequestV06.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#AccountOwner
-	 * SecuritiesSettlementConditionsModificationRequestV04.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#mmAccountOwner
+	 * SecuritiesSettlementConditionsModificationRequestV04.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.AccountOwner;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.AccountOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmAccountOwner);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.mmAccountOwner;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -220,30 +222,33 @@ public class SecuritiesSettlementConditionsModificationRequestV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#SafekeepingAccount
-	 * SecuritiesSettlementConditionsModificationRequestV06.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#mmSafekeepingAccount
+	 * SecuritiesSettlementConditionsModificationRequestV06.mmSafekeepingAccount
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#SafekeepingAccount
-	 * SecuritiesSettlementConditionsModificationRequestV04.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#mmSafekeepingAccount
+	 * SecuritiesSettlementConditionsModificationRequestV04.mmSafekeepingAccount
+	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.SafekeepingAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.SafekeepingAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmSafekeepingAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 	};
+	protected List<RequestDetails13> requestDetails;
 	/**
 	 * Details of the request.
 	 * <p>
@@ -269,29 +274,30 @@ public class SecuritiesSettlementConditionsModificationRequestV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#RequestDetails
-	 * SecuritiesSettlementConditionsModificationRequestV06.RequestDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#mmRequestDetails
+	 * SecuritiesSettlementConditionsModificationRequestV06.mmRequestDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#RequestDetails
-	 * SecuritiesSettlementConditionsModificationRequestV04.RequestDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#mmRequestDetails
+	 * SecuritiesSettlementConditionsModificationRequestV04.mmRequestDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
 			definition = "Details of the request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.RequestDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.RequestDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmRequestDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.mmRequestDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> RequestDetails13.mmObject();
 		}
 	};
+	protected List<AdditionalInformation9> additionalInformation;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -320,31 +326,32 @@ public class SecuritiesSettlementConditionsModificationRequestV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#AdditionalInformation
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#mmAdditionalInformation
 	 * SecuritiesSettlementConditionsModificationRequestV06.
-	 * AdditionalInformation}</li>
+	 * mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#AdditionalInformation
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#mmAdditionalInformation
 	 * SecuritiesSettlementConditionsModificationRequestV04.
-	 * AdditionalInformation}</li>
+	 * mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.AdditionalInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.AdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmAdditionalInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.mmAdditionalInformation;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalInformation9.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -373,54 +380,29 @@ public class SecuritiesSettlementConditionsModificationRequestV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#SupplementaryData
-	 * SecuritiesSettlementConditionsModificationRequestV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06#mmSupplementaryData
+	 * SecuritiesSettlementConditionsModificationRequestV06.mmSupplementaryData}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#SupplementaryData
-	 * SecuritiesSettlementConditionsModificationRequestV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#mmSupplementaryData
+	 * SecuritiesSettlementConditionsModificationRequestV04.mmSupplementaryData}
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "030"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "030";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -430,19 +412,67 @@ public class SecuritiesSettlementConditionsModificationRequestV05 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementConditionsModificationRequestV05";
 				definition = "Scope\r\nAn account owner sends a SecuritiesSettlementConditionsModificationRequest to an account servicer to request the modification of a processing indicator or another non-matching information.\r\n\r\nThe account owner/servicer relationship may be:\r\n- a central securities depository participant which has an account with a central securities depository.\r\nIt could also be, if agreed in a service level agreement:\r\n- a global custodian which has an account with its local agent (sub-custodian), or\r\n- an investment management institution which manage a fund account opened at a custodian, or\r\n- a broker which has an account with a custodian, or\r\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.\r\n\r\nIn markets where this applies (eg, securities market infrastructures with no pre-settlement matching process), it is used by a party to approve, cancel or reject a transaction instructed by the counterparty.\r\n\r\nThis message cannot be used to request the modification of trade or event details.\r\nThe use of AdditionalInformation and its fields must be pre-agreed between account servicer and account owner. The fields in that sequence cannot be used to amend a trade or event detail unless authorised by country market practice.\r\n\r\nISO 15022 - 20022 Coexistence\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
-				previousVersion_lazy = () -> SecuritiesSettlementConditionsModificationRequestV04.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementConditionsModificationRequestV06.mmObject());
+				previousVersion_lazy = () -> SecuritiesSettlementConditionsModificationRequestV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmCondsModReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.RequestDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.AdditionalInformation,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.mmRequestDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.mmAdditionalInformation,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "030";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification36Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<RequestDetails13> getRequestDetails() {
+		return requestDetails;
+	}
+
+	public void setRequestDetails(List<RequestDetails13> requestDetails) {
+		this.requestDetails = requestDetails;
+	}
+
+	public List<AdditionalInformation9> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<AdditionalInformation9> additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

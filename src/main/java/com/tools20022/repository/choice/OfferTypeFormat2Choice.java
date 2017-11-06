@@ -36,11 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#Code
- * OfferTypeFormat2Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#Proprietary
- * OfferTypeFormat2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#mmCode
+ * OfferTypeFormat2Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#mmProprietary
+ * OfferTypeFormat2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OfferTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OfferType1Code code;
 	/**
 	 * Standard code to specify the conditions that apply to the offer.
 	 * <p>
@@ -79,8 +81,8 @@ public class OfferTypeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OfferType
-	 * CorporateActionOption.OfferType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOfferType
+	 * CorporateActionOption.mmOfferType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +102,21 @@ public class OfferTypeFormat2Choice {
 	 * "Standard code to specify the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> OfferTypeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OfferType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the conditions that apply to the offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OfferType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Proprietary identification of the conditions that apply to the offer.
 	 * <p>
@@ -126,8 +129,8 @@ public class OfferTypeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OfferType
-	 * CorporateActionOption.OfferType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOfferType
+	 * CorporateActionOption.mmOfferType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,33 +150,49 @@ public class OfferTypeFormat2Choice {
 	 * "Proprietary identification of the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> OfferTypeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OfferType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the conditions that apply to the offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat2Choice.Code, com.tools20022.repository.choice.OfferTypeFormat2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat2Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat2Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OfferTypeFormat2Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of offer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OfferType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(OfferType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

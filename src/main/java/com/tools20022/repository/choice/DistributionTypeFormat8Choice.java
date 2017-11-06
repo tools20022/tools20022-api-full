@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DistributionTypeFormat8Choice#Code
- * DistributionTypeFormat8Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.DistributionTypeFormat8Choice#mmCode
+ * DistributionTypeFormat8Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DistributionTypeFormat8Choice#Proprietary
- * DistributionTypeFormat8Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.DistributionTypeFormat8Choice#mmProprietary
+ * DistributionTypeFormat8Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DistributionTypeFormat8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DistributionType3Code code;
 	/**
 	 * Standard code to specify whether the proceeds of the event will be
 	 * distributed on a rolling basis rather than on a specific date.
@@ -82,8 +83,8 @@ public class DistributionTypeFormat8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#OrderType
-	 * CorporateActionDistribution.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOrderType
+	 * CorporateActionDistribution.mmOrderType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class DistributionTypeFormat8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> DistributionTypeFormat8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.OrderType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DistributionType3Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Proprietary identification of the type of distribution.
 	 * <p>
@@ -130,8 +132,8 @@ public class DistributionTypeFormat8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#OrderType
-	 * CorporateActionDistribution.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOrderType
+	 * CorporateActionDistribution.mmOrderType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,33 +152,49 @@ public class DistributionTypeFormat8Choice {
 	 * definition} = "Proprietary identification of the type of distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> DistributionTypeFormat8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.OrderType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of distribution.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DistributionTypeFormat8Choice.Code, com.tools20022.repository.choice.DistributionTypeFormat8Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DistributionTypeFormat8Choice.mmCode, com.tools20022.repository.choice.DistributionTypeFormat8Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionDistribution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DistributionTypeFormat8Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of distribution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DistributionType3Code getCode() {
+		return code;
+	}
+
+	public void setCode(DistributionType3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

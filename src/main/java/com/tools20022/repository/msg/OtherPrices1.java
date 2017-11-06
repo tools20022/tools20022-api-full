@@ -33,39 +33,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#Maximum
- * OtherPrices1.Maximum}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#Transaction
- * OtherPrices1.Transaction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmMaximum
+ * OtherPrices1.mmMaximum}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmTransaction
+ * OtherPrices1.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherPrices1#MarketBrokerCommission
- * OtherPrices1.MarketBrokerCommission}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#MarkedUp
- * OtherPrices1.MarkedUp}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#MarkedDown
- * OtherPrices1.MarkedDown}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#NetDisclosed
- * OtherPrices1.NetDisclosed}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#NetUndisclosed
- * OtherPrices1.NetUndisclosed}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#NotionalGross
- * OtherPrices1.NotionalGross}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherPrices1#mmMarketBrokerCommission
+ * OtherPrices1.mmMarketBrokerCommission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmMarkedUp
+ * OtherPrices1.mmMarkedUp}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmMarkedDown
+ * OtherPrices1.mmMarkedDown}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmNetDisclosed
+ * OtherPrices1.mmNetDisclosed}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmNetUndisclosed
+ * OtherPrices1.mmNetUndisclosed}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmNotionalGross
+ * OtherPrices1.mmNotionalGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherPrices1#BenchmarkWeightedAverage
- * OtherPrices1.BenchmarkWeightedAverage}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherPrices1#mmBenchmarkWeightedAverage
+ * OtherPrices1.mmBenchmarkWeightedAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherPrices1#AllMarketsWeightedAverage
- * OtherPrices1.AllMarketsWeightedAverage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#Benchmark
- * OtherPrices1.Benchmark}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#OtherPrice
- * OtherPrices1.OtherPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#IndexPrice
- * OtherPrices1.IndexPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#ReportedPrice
- * OtherPrices1.ReportedPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#ReferencePrice
- * OtherPrices1.ReferencePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherPrices1#mmAllMarketsWeightedAverage
+ * OtherPrices1.mmAllMarketsWeightedAverage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmBenchmark
+ * OtherPrices1.mmBenchmark}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmOtherPrice
+ * OtherPrices1.mmOtherPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmIndexPrice
+ * OtherPrices1.mmIndexPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmReportedPrice
+ * OtherPrices1.mmReportedPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1#mmReferencePrice
+ * OtherPrices1.mmReferencePrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -75,18 +75,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#OtherPrices
- * SecuritiesTradeConfirmationV01.OtherPrices}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#mmOtherPrices
+ * SecuritiesTradeConfirmationV01.mmOtherPrices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#OtherPrices
- * SecuritiesTradeConfirmationV02.OtherPrices}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#mmOtherPrices
+ * SecuritiesTradeConfirmationV02.mmOtherPrices}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherPrices1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Price4 maximum;
 	/**
 	 * Specifies the maximum price.
 	 * <p>
@@ -135,28 +136,29 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#Maximum
-	 * OtherPrices2.Maximum}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmMaximum
+	 * OtherPrices2.mmMaximum}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Maximum = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMaximum = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "Max";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maximum";
 			definition = "Specifies the maximum price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.Maximum);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmMaximum);
 			maxOccurs = 1;
-			type_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 transaction;
 	/**
 	 * Specifies the transaction price.
 	 * <p>
@@ -186,28 +188,29 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#Transaction
-	 * OtherPrices2.Transaction}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmTransaction
+	 * OtherPrices2.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Specifies the transaction price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.Transaction);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmTransaction);
 			maxOccurs = 1;
-			type_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 marketBrokerCommission;
 	/**
 	 * Market price including or excluding the broker's commission.
 	 * <p>
@@ -219,8 +222,8 @@ public class OtherPrices1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Price
-	 * Adjustment.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmPrice
+	 * Adjustment.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,27 +244,28 @@ public class OtherPrices1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#MarketBrokerCommission
-	 * OtherPrices2.MarketBrokerCommission}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmMarketBrokerCommission
+	 * OtherPrices2.mmMarketBrokerCommission}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketBrokerCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketBrokerCommission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmPrice;
 			componentContext_lazy = () -> OtherPrices1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Price;
 			isDerived = false;
 			xmlTag = "MktBrkrComssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketBrokerCommission";
 			definition = "Market price including or excluding the broker's commission.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.MarketBrokerCommission);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmMarketBrokerCommission);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 markedUp;
 	/**
 	 * In case of an order to buy, the price that the broker paid on the market
 	 * plus the broker's commission.
@@ -294,28 +298,29 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#MarkedUp
-	 * OtherPrices2.MarkedUp}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmMarkedUp
+	 * OtherPrices2.mmMarkedUp}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarkedUp = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarkedUp = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "MrkdUp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkedUp";
 			definition = "In case of an order to buy, the price that the broker paid on the market plus the broker's commission.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.MarkedUp);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmMarkedUp);
 			maxOccurs = 1;
-			type_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 markedDown;
 	/**
 	 * In case of an order to sell, the price the broker receives in the market
 	 * minus the broker's commission.
@@ -348,28 +353,29 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#MarkedDown
-	 * OtherPrices2.MarkedDown}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmMarkedDown
+	 * OtherPrices2.mmMarkedDown}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarkedDown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarkedDown = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "MrkdDwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkedDown";
 			definition = "In case of an order to sell, the price the broker receives in the market minus the broker's commission.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.MarkedDown);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmMarkedDown);
 			maxOccurs = 1;
-			type_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 netDisclosed;
 	/**
 	 * Price is net to the disclosed client.
 	 * <p>
@@ -400,27 +406,29 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#NetDisclosed
-	 * OtherPrices2.NetDisclosed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmNetDisclosed
+	 * OtherPrices2.mmNetDisclosed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetDisclosed = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetDisclosed = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "NetDscld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDisclosed";
 			definition = "Price is net to the disclosed client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.NetDisclosed);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmNetDisclosed);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 netUndisclosed;
 	/**
 	 * Price is net to the client undisclosed (used in the UK market).
 	 * <p>
@@ -453,27 +461,28 @@ public class OtherPrices1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#NetUndisclosed
-	 * OtherPrices2.NetUndisclosed}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmNetUndisclosed
+	 * OtherPrices2.mmNetUndisclosed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetUndisclosed = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetUndisclosed = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "NetUdscld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetUndisclosed";
 			definition = "Price is net to the client undisclosed (used in the UK market).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.NetUndisclosed);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmNetUndisclosed);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 notionalGross;
 	/**
 	 * Price is notional gross (used in the UK market).
 	 * <p>
@@ -504,27 +513,29 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#NotionalGross
-	 * OtherPrices2.NotionalGross}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmNotionalGross
+	 * OtherPrices2.mmNotionalGross}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalGross = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalGross = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlGrss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalGross";
 			definition = "Price is notional gross (used in the UK market).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.NotionalGross);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmNotionalGross);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 benchmarkWeightedAverage;
 	/**
 	 * Price is weighted average price of the benchmark prices at the time of
 	 * each partial fill.
@@ -559,27 +570,28 @@ public class OtherPrices1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#BenchmarkWeightedAverage
-	 * OtherPrices2.BenchmarkWeightedAverage}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmBenchmarkWeightedAverage
+	 * OtherPrices2.mmBenchmarkWeightedAverage}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BenchmarkWeightedAverage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBenchmarkWeightedAverage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "BchmkWghtdAvrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkWeightedAverage";
 			definition = "Price is weighted average price of the benchmark prices at the time of each partial fill.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.BenchmarkWeightedAverage);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmBenchmarkWeightedAverage);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 allMarketsWeightedAverage;
 	/**
 	 * Price is weighted average price of all market executions during the
 	 * completion of the order.
@@ -614,27 +626,28 @@ public class OtherPrices1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#AllMarketsWeightedAverage
-	 * OtherPrices2.AllMarketsWeightedAverage}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmAllMarketsWeightedAverage
+	 * OtherPrices2.mmAllMarketsWeightedAverage}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllMarketsWeightedAverage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllMarketsWeightedAverage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "AllMktsWghtdAvrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllMarketsWeightedAverage";
 			definition = "Price is weighted average price of all market executions during the completion of the order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.AllMarketsWeightedAverage);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmAllMarketsWeightedAverage);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 benchmark;
 	/**
 	 * Price is a benchmark price relating to the current partial fills (eg,
 	 * last trade tick from market).
@@ -668,27 +681,28 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#Benchmark
-	 * OtherPrices2.Benchmark}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmBenchmark
+	 * OtherPrices2.mmBenchmark}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Benchmark = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBenchmark = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "Bchmk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Benchmark";
 			definition = "Price is a benchmark price relating to the current partial fills (eg, last trade tick from market).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.Benchmark);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmBenchmark);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 otherPrice;
 	/**
 	 * Type of price that is not defined explicitly.
 	 * <p>
@@ -719,27 +733,28 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#OtherPrice
-	 * OtherPrices2.OtherPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmOtherPrice
+	 * OtherPrices2.mmOtherPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPrice";
 			definition = "Type of price that is not defined explicitly.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.OtherPrice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmOtherPrice);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 indexPrice;
 	/**
 	 * Price of securities representing a particular market or a portion of it.
 	 * <p>
@@ -772,27 +787,28 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#IndexPrice
-	 * OtherPrices2.IndexPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmIndexPrice
+	 * OtherPrices2.mmIndexPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IndexPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndexPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexPrice";
 			definition = "Price of securities representing a particular market or a portion of it.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.IndexPrice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmIndexPrice);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected Price4 reportedPrice;
 	/**
 	 * Price used to differentiate from price on a confirmation of a marked up
 	 * or marked down principal trade.
@@ -826,27 +842,29 @@ public class OtherPrices1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#ReportedPrice
-	 * OtherPrices2.ReportedPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmReportedPrice
+	 * OtherPrices2.mmReportedPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportedPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedPrice";
 			definition = "Price used to differentiate from price on a confirmation of a marked up or marked down principal trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.ReportedPrice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmReportedPrice);
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected PriceInformation9 referencePrice;
 	/**
 	 * Price of reference of the concerned financial instrument.
 	 * <p>
@@ -881,39 +899,39 @@ public class OtherPrices1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#ReferencePrice
-	 * OtherPrices2.ReferencePrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherPrices2#mmReferencePrice
+	 * OtherPrices2.mmReferencePrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferencePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferencePrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherPrices1.mmObject();
 			businessComponentTrace_lazy = () -> Price.mmObject();
+			componentContext_lazy = () -> OtherPrices1.mmObject();
 			isDerived = false;
 			xmlTag = "RefPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePrice";
 			definition = "Price of reference of the concerned financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.ReferencePrice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices2.mmReferencePrice);
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceInformation9.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceInformation9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices1.Maximum, com.tools20022.repository.msg.OtherPrices1.Transaction, com.tools20022.repository.msg.OtherPrices1.MarketBrokerCommission,
-						com.tools20022.repository.msg.OtherPrices1.MarkedUp, com.tools20022.repository.msg.OtherPrices1.MarkedDown, com.tools20022.repository.msg.OtherPrices1.NetDisclosed,
-						com.tools20022.repository.msg.OtherPrices1.NetUndisclosed, com.tools20022.repository.msg.OtherPrices1.NotionalGross, com.tools20022.repository.msg.OtherPrices1.BenchmarkWeightedAverage,
-						com.tools20022.repository.msg.OtherPrices1.AllMarketsWeightedAverage, com.tools20022.repository.msg.OtherPrices1.Benchmark, com.tools20022.repository.msg.OtherPrices1.OtherPrice,
-						com.tools20022.repository.msg.OtherPrices1.IndexPrice, com.tools20022.repository.msg.OtherPrices1.ReportedPrice, com.tools20022.repository.msg.OtherPrices1.ReferencePrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherPrices1.mmMaximum, com.tools20022.repository.msg.OtherPrices1.mmTransaction, com.tools20022.repository.msg.OtherPrices1.mmMarketBrokerCommission,
+						com.tools20022.repository.msg.OtherPrices1.mmMarkedUp, com.tools20022.repository.msg.OtherPrices1.mmMarkedDown, com.tools20022.repository.msg.OtherPrices1.mmNetDisclosed,
+						com.tools20022.repository.msg.OtherPrices1.mmNetUndisclosed, com.tools20022.repository.msg.OtherPrices1.mmNotionalGross, com.tools20022.repository.msg.OtherPrices1.mmBenchmarkWeightedAverage,
+						com.tools20022.repository.msg.OtherPrices1.mmAllMarketsWeightedAverage, com.tools20022.repository.msg.OtherPrices1.mmBenchmark, com.tools20022.repository.msg.OtherPrices1.mmOtherPrice,
+						com.tools20022.repository.msg.OtherPrices1.mmIndexPrice, com.tools20022.repository.msg.OtherPrices1.mmReportedPrice, com.tools20022.repository.msg.OtherPrices1.mmReferencePrice);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmOtherPrices, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmOtherPrices);
 				trace_lazy = () -> Price.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.OtherPrices, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.OtherPrices);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherPrices1";
 				definition = "Specifies the type of price and information about the price.";
@@ -921,5 +939,125 @@ public class OtherPrices1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Price4 getMaximum() {
+		return maximum;
+	}
+
+	public void setMaximum(com.tools20022.repository.msg.Price4 maximum) {
+		this.maximum = maximum;
+	}
+
+	public Price4 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.Price4 transaction) {
+		this.transaction = transaction;
+	}
+
+	public Price4 getMarketBrokerCommission() {
+		return marketBrokerCommission;
+	}
+
+	public void setMarketBrokerCommission(com.tools20022.repository.msg.Price4 marketBrokerCommission) {
+		this.marketBrokerCommission = marketBrokerCommission;
+	}
+
+	public Price4 getMarkedUp() {
+		return markedUp;
+	}
+
+	public void setMarkedUp(com.tools20022.repository.msg.Price4 markedUp) {
+		this.markedUp = markedUp;
+	}
+
+	public Price4 getMarkedDown() {
+		return markedDown;
+	}
+
+	public void setMarkedDown(com.tools20022.repository.msg.Price4 markedDown) {
+		this.markedDown = markedDown;
+	}
+
+	public Price4 getNetDisclosed() {
+		return netDisclosed;
+	}
+
+	public void setNetDisclosed(com.tools20022.repository.msg.Price4 netDisclosed) {
+		this.netDisclosed = netDisclosed;
+	}
+
+	public Price4 getNetUndisclosed() {
+		return netUndisclosed;
+	}
+
+	public void setNetUndisclosed(com.tools20022.repository.msg.Price4 netUndisclosed) {
+		this.netUndisclosed = netUndisclosed;
+	}
+
+	public Price4 getNotionalGross() {
+		return notionalGross;
+	}
+
+	public void setNotionalGross(com.tools20022.repository.msg.Price4 notionalGross) {
+		this.notionalGross = notionalGross;
+	}
+
+	public Price4 getBenchmarkWeightedAverage() {
+		return benchmarkWeightedAverage;
+	}
+
+	public void setBenchmarkWeightedAverage(com.tools20022.repository.msg.Price4 benchmarkWeightedAverage) {
+		this.benchmarkWeightedAverage = benchmarkWeightedAverage;
+	}
+
+	public Price4 getAllMarketsWeightedAverage() {
+		return allMarketsWeightedAverage;
+	}
+
+	public void setAllMarketsWeightedAverage(com.tools20022.repository.msg.Price4 allMarketsWeightedAverage) {
+		this.allMarketsWeightedAverage = allMarketsWeightedAverage;
+	}
+
+	public Price4 getBenchmark() {
+		return benchmark;
+	}
+
+	public void setBenchmark(com.tools20022.repository.msg.Price4 benchmark) {
+		this.benchmark = benchmark;
+	}
+
+	public Price4 getOtherPrice() {
+		return otherPrice;
+	}
+
+	public void setOtherPrice(com.tools20022.repository.msg.Price4 otherPrice) {
+		this.otherPrice = otherPrice;
+	}
+
+	public Price4 getIndexPrice() {
+		return indexPrice;
+	}
+
+	public void setIndexPrice(com.tools20022.repository.msg.Price4 indexPrice) {
+		this.indexPrice = indexPrice;
+	}
+
+	public Price4 getReportedPrice() {
+		return reportedPrice;
+	}
+
+	public void setReportedPrice(com.tools20022.repository.msg.Price4 reportedPrice) {
+		this.reportedPrice = reportedPrice;
+	}
+
+	public PriceInformation9 getReferencePrice() {
+		return referencePrice;
+	}
+
+	public void setReferencePrice(com.tools20022.repository.msg.PriceInformation9 referencePrice) {
+		this.referencePrice = referencePrice;
 	}
 }

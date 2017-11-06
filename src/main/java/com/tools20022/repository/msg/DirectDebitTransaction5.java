@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#MandateRelatedInformation
- * DirectDebitTransaction5.MandateRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#mmMandateRelatedInformation
+ * DirectDebitTransaction5.mmMandateRelatedInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#CreditorSchemeIdentification
- * DirectDebitTransaction5.CreditorSchemeIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#mmCreditorSchemeIdentification
+ * DirectDebitTransaction5.mmCreditorSchemeIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#PreNotificationIdentification
- * DirectDebitTransaction5.PreNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#mmPreNotificationIdentification
+ * DirectDebitTransaction5.mmPreNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#PreNotificationDate
- * DirectDebitTransaction5.PreNotificationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransaction5#mmPreNotificationDate
+ * DirectDebitTransaction5.mmPreNotificationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DirectDebitTransaction5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MandateRelatedInformation5 mandateRelatedInformation;
 	/**
 	 * Set of elements used to provide further details related to a direct debit
 	 * mandate signed between the creditor and the debtor.
@@ -89,8 +90,8 @@ public class DirectDebitTransaction5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit#DirectDebitMandate
-	 * DirectDebit.DirectDebitMandate}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit#mmDirectDebitMandate
+	 * DirectDebit.mmDirectDebitMandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,21 +112,22 @@ public class DirectDebitTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MandateRelatedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMandateRelatedInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> DirectDebitTransaction5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.DirectDebitMandate;
 			isDerived = false;
 			xmlTag = "MndtRltdInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateRelatedInformation";
 			definition = "Set of elements used to provide further details related to a direct debit mandate signed between the creditor and the debtor.\n\nUsage: Mandate related information is to be used only when the direct debit relates to a mandate signed between the debtor and the creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MandateRelatedInformation5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
 		}
 	};
+	protected PartyIdentification18 creditorSchemeIdentification;
 	/**
 	 * Credit party that signs the direct debit mandate.
 	 * <p>
@@ -137,8 +139,8 @@ public class DirectDebitTransaction5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,21 +159,22 @@ public class DirectDebitTransaction5 {
 	 * definition} = "Credit party that signs the direct debit mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorSchemeIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransaction5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "CdtrSchmeId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorSchemeIdentification";
 			definition = "Credit party that signs the direct debit mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification18.mmObject();
 		}
 	};
+	protected Max35Text preNotificationIdentification;
 	/**
 	 * Unique and unambiguous identification of the pre-notification which is
 	 * sent separately from the direct debit instruction.
@@ -189,8 +192,8 @@ public class DirectDebitTransaction5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit#PreNotificationIdentification
-	 * DirectDebit.PreNotificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationIdentification
+	 * DirectDebit.mmPreNotificationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -211,20 +214,21 @@ public class DirectDebitTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreNotificationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmPreNotificationIdentification;
 			componentContext_lazy = () -> DirectDebitTransaction5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.PreNotificationIdentification;
 			isDerived = false;
 			xmlTag = "PreNtfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreNotificationIdentification";
 			definition = "Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.\n\nUsage: The direct debit pre-notification is used to reconcile separately sent collection information with the direct debit transaction information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate preNotificationDate;
 	/**
 	 * Date on which the creditor notifies the debtor about the amount and date
 	 * on which the direct debit instruction will be presented to the debtor's
@@ -239,8 +243,8 @@ public class DirectDebitTransaction5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit#PreNotificationDate
-	 * DirectDebit.PreNotificationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationDate
+	 * DirectDebit.mmPreNotificationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -261,17 +265,17 @@ public class DirectDebitTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreNotificationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmPreNotificationDate;
 			componentContext_lazy = () -> DirectDebitTransaction5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.PreNotificationDate;
 			isDerived = false;
 			xmlTag = "PreNtfctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreNotificationDate";
 			definition = "Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -279,15 +283,47 @@ public class DirectDebitTransaction5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction5.MandateRelatedInformation, com.tools20022.repository.msg.DirectDebitTransaction5.CreditorSchemeIdentification,
-						com.tools20022.repository.msg.DirectDebitTransaction5.PreNotificationIdentification, com.tools20022.repository.msg.DirectDebitTransaction5.PreNotificationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction5.mmMandateRelatedInformation, com.tools20022.repository.msg.DirectDebitTransaction5.mmCreditorSchemeIdentification,
+						com.tools20022.repository.msg.DirectDebitTransaction5.mmPreNotificationIdentification, com.tools20022.repository.msg.DirectDebitTransaction5.mmPreNotificationDate);
 				trace_lazy = () -> DirectDebit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectDebitTransaction5";
 				definition = "Set of elements providing specific information on the direct debit transaction and the related mandate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MandateRelatedInformation5 getMandateRelatedInformation() {
+		return mandateRelatedInformation;
+	}
+
+	public void setMandateRelatedInformation(com.tools20022.repository.msg.MandateRelatedInformation5 mandateRelatedInformation) {
+		this.mandateRelatedInformation = mandateRelatedInformation;
+	}
+
+	public PartyIdentification18 getCreditorSchemeIdentification() {
+		return creditorSchemeIdentification;
+	}
+
+	public void setCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification18 creditorSchemeIdentification) {
+		this.creditorSchemeIdentification = creditorSchemeIdentification;
+	}
+
+	public Max35Text getPreNotificationIdentification() {
+		return preNotificationIdentification;
+	}
+
+	public void setPreNotificationIdentification(Max35Text preNotificationIdentification) {
+		this.preNotificationIdentification = preNotificationIdentification;
+	}
+
+	public ISODate getPreNotificationDate() {
+		return preNotificationDate;
+	}
+
+	public void setPreNotificationDate(ISODate preNotificationDate) {
+		this.preNotificationDate = preNotificationDate;
 	}
 }

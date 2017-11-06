@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RateName2#Issuer
- * RateName2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateName2#RateName
- * RateName2.RateName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateName2#mmIssuer
+ * RateName2.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateName2#mmRateName
+ * RateName2.mmRateName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateName2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax8Text issuer;
 	/**
 	 * Entity that assigns the identification.
 	 * <p>
@@ -87,7 +88,7 @@ public class RateName2 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateName2.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class RateName2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax8Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax24Text rateName;
 	/**
 	 * Rate Name specifies the reference rate or basis rate on which a variable
 	 * rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
@@ -130,7 +132,7 @@ public class RateName2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateName2.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class RateName2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateName";
 			definition = "Rate Name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax24Text.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class RateName2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateName2.Issuer, com.tools20022.repository.msg.RateName2.RateName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateName2.mmIssuer, com.tools20022.repository.msg.RateName2.mmRateName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateName2";
 				definition = "Rate name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax8Text getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(RestrictedFINXMax8Text issuer) {
+		this.issuer = issuer;
+	}
+
+	public RestrictedFINXMax24Text getRateName() {
+		return rateName;
+	}
+
+	public void setRateName(RestrictedFINXMax24Text rateName) {
+		this.rateName = rateName;
 	}
 }

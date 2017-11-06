@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeRateInformation1#ExchangeRate
- * ExchangeRateInformation1.ExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeRateInformation1#mmExchangeRate
+ * ExchangeRateInformation1.mmExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeRateInformation1#RateType
- * ExchangeRateInformation1.RateType}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeRateInformation1#mmRateType
+ * ExchangeRateInformation1.mmRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeRateInformation1#ContractIdentification
- * ExchangeRateInformation1.ContractIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeRateInformation1#mmContractIdentification
+ * ExchangeRateInformation1.mmContractIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExchangeRateInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaseOneRate exchangeRate;
 	/**
 	 * The factor used for conversion of an amount from one currency to another.
 	 * This reflects the price at which one currency was bought with another
@@ -84,8 +85,8 @@ public class ExchangeRateInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class ExchangeRateInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> ExchangeRateInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "The factor used for conversion of an amount from one currency to another. This reflects the price at which one currency was bought with another currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected ExchangeRateType1Code rateType;
 	/**
 	 * Specifies the type used to complete the currency exchange.
 	 * <p>
@@ -133,8 +135,8 @@ public class ExchangeRateInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#RateType
-	 * CurrencyExchange.RateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmRateType
+	 * CurrencyExchange.mmRateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class ExchangeRateInformation1 {
 	 * "Specifies the type used to complete the currency exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmRateType;
 			componentContext_lazy = () -> ExchangeRateInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.RateType;
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Specifies the type used to complete the currency exchange.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExchangeRateType1Code.mmObject();
 		}
 	};
+	protected Max35Text contractIdentification;
 	/**
 	 * Unique and unambiguous reference to the foreign exchange contract agreed
 	 * between the initiating party/creditor and the debtor agent.
@@ -181,8 +184,8 @@ public class ExchangeRateInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,17 +206,17 @@ public class ExchangeRateInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> ExchangeRateInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "CtrctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractIdentification";
 			definition = "Unique and unambiguous reference to the foreign exchange contract agreed between the initiating party/creditor and the debtor agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -221,15 +224,39 @@ public class ExchangeRateInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeRateInformation1.ExchangeRate, com.tools20022.repository.msg.ExchangeRateInformation1.RateType,
-						com.tools20022.repository.msg.ExchangeRateInformation1.ContractIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeRateInformation1.mmExchangeRate, com.tools20022.repository.msg.ExchangeRateInformation1.mmRateType,
+						com.tools20022.repository.msg.ExchangeRateInformation1.mmContractIdentification);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExchangeRateInformation1";
 				definition = "Further detailed information on the exchange rate that has been used in the payment transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public ExchangeRateType1Code getRateType() {
+		return rateType;
+	}
+
+	public void setRateType(ExchangeRateType1Code rateType) {
+		this.rateType = rateType;
+	}
+
+	public Max35Text getContractIdentification() {
+		return contractIdentification;
+	}
+
+	public void setContractIdentification(Max35Text contractIdentification) {
+		this.contractIdentification = contractIdentification;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.FailingReason2Choice#Code
- * FailingReason2Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FailingReason2Choice#mmCode
+ * FailingReason2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FailingReason2Choice#Proprietary
- * FailingReason2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.FailingReason2Choice#mmProprietary
+ * FailingReason2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FailingReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FailingReason1Code code;
 	/**
 	 * Specifies the reason why the instruction has a failing settlement status.
 	 * <p>
@@ -77,8 +78,8 @@ public class FailingReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#FailingReason
-	 * StatusReason.FailingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmFailingReason
+	 * StatusReason.mmFailingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class FailingReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmFailingReason;
 			componentContext_lazy = () -> FailingReason2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.FailingReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction has a failing settlement status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FailingReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Specifies the reason why the instruction has a failing settlement status.
 	 * <p>
@@ -125,8 +127,8 @@ public class FailingReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#FailingReason
-	 * StatusReason.FailingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmFailingReason
+	 * StatusReason.mmFailingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,33 +149,49 @@ public class FailingReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmFailingReason;
 			componentContext_lazy = () -> FailingReason2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.FailingReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the instruction has a failing settlement status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailingReason2Choice.Code, com.tools20022.repository.choice.FailingReason2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailingReason2Choice.mmCode, com.tools20022.repository.choice.FailingReason2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FailingReason2Choice";
 				definition = "Choice of format for the failing reason.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FailingReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(FailingReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

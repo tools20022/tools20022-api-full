@@ -37,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline#BlockingPeriod
- * SecuritiesBlockingDeadline.BlockingPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline#mmBlockingPeriod
+ * SecuritiesBlockingDeadline.mmBlockingPeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesBlockingDeadline extends Deadline {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateTimePeriod blockingPeriod;
 	/**
 	 * Period during which the securities are blocked, ie, not available for
 	 * exchange.
@@ -72,34 +73,34 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * complexType} =
 	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3#BlockingPeriod
-	 * CorporateActionPeriod3.BlockingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod6#BlockingPeriod
-	 * CorporateActionPeriod6.BlockingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod8#BlockingPeriod
-	 * CorporateActionPeriod8.BlockingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EligibilityDates#BlockingPeriod
-	 * EligibilityDates.BlockingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#BlockingPeriod
-	 * CorporateActionPeriod1.BlockingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#BlockingPeriod
-	 * CorporateActionPeriod10.BlockingPeriod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
 	 * SecuritiesBlockingDeadline}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3#mmBlockingPeriod
+	 * CorporateActionPeriod3.mmBlockingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod6#mmBlockingPeriod
+	 * CorporateActionPeriod6.mmBlockingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod8#mmBlockingPeriod
+	 * CorporateActionPeriod8.mmBlockingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibilityDates#mmBlockingPeriod
+	 * EligibilityDates.mmBlockingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmBlockingPeriod
+	 * CorporateActionPeriod1.mmBlockingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmBlockingPeriod
+	 * CorporateActionPeriod10.mmBlockingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -113,33 +114,41 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BlockingPeriod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBlockingPeriod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.BlockingPeriod, com.tools20022.repository.msg.CorporateActionPeriod6.BlockingPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod8.BlockingPeriod, com.tools20022.repository.msg.EligibilityDates.BlockingPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.BlockingPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod10.BlockingPeriod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmBlockingPeriod, com.tools20022.repository.msg.CorporateActionPeriod6.mmBlockingPeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod8.mmBlockingPeriod, com.tools20022.repository.msg.EligibilityDates.mmBlockingPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmBlockingPeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod10.mmBlockingPeriod);
 			elementContext_lazy = () -> SecuritiesBlockingDeadline.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BlockingPeriod";
 			definition = "Period during which the securities are blocked, ie, not available for exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateTimePeriod.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBlockingDeadline";
 				definition = "Date by which the securities should be blocked.";
 				superType_lazy = () -> Deadline.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBlockingDeadline.BlockingPeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBlockingDeadline.mmBlockingPeriod);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateTimePeriod getBlockingPeriod() {
+		return blockingPeriod;
+	}
+
+	public void setBlockingPeriod(com.tools20022.repository.entity.DateTimePeriod blockingPeriod) {
+		this.blockingPeriod = blockingPeriod;
 	}
 }

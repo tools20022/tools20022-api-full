@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CountryCodeAndName3#Code
- * CountryCodeAndName3.Code}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CountryCodeAndName3#Name
- * CountryCodeAndName3.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CountryCodeAndName3#mmCode
+ * CountryCodeAndName3.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CountryCodeAndName3#mmName
+ * CountryCodeAndName3.mmName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CountryCodeAndName3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode code;
 	/**
 	 * Country is specified by its code.
 	 * <p>
@@ -72,7 +73,8 @@ public class CountryCodeAndName3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -91,20 +93,21 @@ public class CountryCodeAndName3 {
 	 * definition} = "Country is specified by its code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> CountryCodeAndName3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Country is specified by its code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max70Text name;
 	/**
 	 * Country is specified by its name.
 	 * <p>
@@ -117,7 +120,8 @@ public class CountryCodeAndName3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Name Country.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmName
+	 * Country.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -136,17 +140,17 @@ public class CountryCodeAndName3 {
 	 * definition} = "Country is specified by its name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmName;
 			componentContext_lazy = () -> CountryCodeAndName3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Country is specified by its name.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -154,14 +158,30 @@ public class CountryCodeAndName3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryCodeAndName3.Code, com.tools20022.repository.msg.CountryCodeAndName3.Name);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryCodeAndName3.mmCode, com.tools20022.repository.msg.CountryCodeAndName3.mmName);
 				trace_lazy = () -> Country.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CountryCodeAndName3";
 				definition = "Specifies a country by its code and its name.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCode() {
+		return code;
+	}
+
+	public void setCode(CountryCode code) {
+		this.code = code;
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
 	}
 }

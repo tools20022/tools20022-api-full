@@ -37,11 +37,12 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2#Amount
- * AmountAndQuantityRatio2.Amount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2#Quantity
- * AmountAndQuantityRatio2.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2#mmAmount
+ * AmountAndQuantityRatio2.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2#mmQuantity
+ * AmountAndQuantityRatio2.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -73,6 +74,7 @@ import java.util.function.Supplier;
 public class AmountAndQuantityRatio2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Cash amount.
 	 * <p>
@@ -86,8 +88,8 @@ public class AmountAndQuantityRatio2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#Amount
-	 * AmountAndQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmAmount
+	 * AmountAndQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,27 +110,28 @@ public class AmountAndQuantityRatio2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4#Amount
-	 * AmountAndQuantityRatio4.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4#mmAmount
+	 * AmountAndQuantityRatio4.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> AmountAndQuantityRatio2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio4.Amount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio4.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected DecimalNumber quantity;
 	/**
 	 * Quantity expressed as number.
 	 * <p>
@@ -142,8 +145,8 @@ public class AmountAndQuantityRatio2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#Quantity
-	 * AmountAndQuantity.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmQuantity
+	 * AmountAndQuantity.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,24 +167,24 @@ public class AmountAndQuantityRatio2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4#Quantity
-	 * AmountAndQuantityRatio4.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4#mmQuantity
+	 * AmountAndQuantityRatio4.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmQuantity;
 			componentContext_lazy = () -> AmountAndQuantityRatio2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.Quantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity expressed as number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio4.Quantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio4.mmQuantity);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -189,9 +192,9 @@ public class AmountAndQuantityRatio2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio2.Amount, com.tools20022.repository.msg.AmountAndQuantityRatio2.Quantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio2.mmAmount, com.tools20022.repository.msg.AmountAndQuantityRatio2.mmQuantity);
 				trace_lazy = () -> AmountAndQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -206,5 +209,21 @@ public class AmountAndQuantityRatio2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public DecimalNumber getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(DecimalNumber quantity) {
+		this.quantity = quantity;
 	}
 }

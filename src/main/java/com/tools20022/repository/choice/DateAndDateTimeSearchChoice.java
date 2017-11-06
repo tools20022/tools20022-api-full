@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearchChoice#DateTimeSearch
- * DateAndDateTimeSearchChoice.DateTimeSearch}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearchChoice#mmDateTimeSearch
+ * DateAndDateTimeSearchChoice.mmDateTimeSearch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearchChoice#DateSearch
- * DateAndDateTimeSearchChoice.DateSearch}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearchChoice#mmDateSearch
+ * DateAndDateTimeSearchChoice.mmDateSearch}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateAndDateTimeSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateTimePeriodChoice dateTimeSearch;
 	/**
 	 * Patterns to search a date time.
 	 * <p>
@@ -86,7 +87,7 @@ public class DateAndDateTimeSearchChoice {
 	 * definition} = "Patterns to search a date time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTimeSearch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTimeSearch = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class DateAndDateTimeSearchChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTimeSearch";
 			definition = "Patterns to search a date time.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateTimePeriodChoice.mmObject();
 		}
 	};
+	protected DateSearchChoice dateSearch;
 	/**
 	 * Patterns to search a date.
 	 * <p>
@@ -127,7 +129,7 @@ public class DateAndDateTimeSearchChoice {
 	 * definition} = "Patterns to search a date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateSearch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 			isDerived = false;
@@ -135,22 +137,38 @@ public class DateAndDateTimeSearchChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateSearch";
 			definition = "Patterns to search a date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateSearchChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeSearchChoice.DateTimeSearch, com.tools20022.repository.choice.DateAndDateTimeSearchChoice.DateSearch);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmDateTimeSearch, com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmDateSearch);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateAndDateTimeSearchChoice";
 				definition = "Choice between a date or a date time pattern as search selection criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateTimePeriodChoice getDateTimeSearch() {
+		return dateTimeSearch;
+	}
+
+	public void setDateTimeSearch(com.tools20022.repository.choice.DateTimePeriodChoice dateTimeSearch) {
+		this.dateTimeSearch = dateTimeSearch;
+	}
+
+	public DateSearchChoice getDateSearch() {
+		return dateSearch;
+	}
+
+	public void setDateSearch(com.tools20022.repository.choice.DateSearchChoice dateSearch) {
+		this.dateSearch = dateSearch;
 	}
 }

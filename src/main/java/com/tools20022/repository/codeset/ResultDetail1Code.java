@@ -34,274 +34,276 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#AccountNotFound
- * ResultDetail1Code.AccountNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmAccountNotFound
+ * ResultDetail1Code.mmAccountNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#AcquirerNotSupported
- * ResultDetail1Code.AcquirerNotSupported}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmAcquirerNotSupported
+ * ResultDetail1Code.mmAcquirerNotSupported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#AMLValidation
- * ResultDetail1Code.AMLValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmAMLValidation
+ * ResultDetail1Code.mmAMLValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#AmountNotFound
- * ResultDetail1Code.AmountNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmAmountNotFound
+ * ResultDetail1Code.mmAmountNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#BankNotFound
- * ResultDetail1Code.BankNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmBankNotFound
+ * ResultDetail1Code.mmBankNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#CardError
- * ResultDetail1Code.CardError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmCardError
+ * ResultDetail1Code.mmCardError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#CardVerificationFailed
- * ResultDetail1Code.CardVerificationFailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmCardVerificationFailed
+ * ResultDetail1Code.mmCardVerificationFailed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#CasbackNotAllowed
- * ResultDetail1Code.CasbackNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmCasbackNotAllowed
+ * ResultDetail1Code.mmCasbackNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#CashbackAmountExceeded
- * ResultDetail1Code.CashbackAmountExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmCashbackAmountExceeded
+ * ResultDetail1Code.mmCashbackAmountExceeded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#ClosedAccount
- * ResultDetail1Code.ClosedAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmClosedAccount
+ * ResultDetail1Code.mmClosedAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#CutoverInProcess
- * ResultDetail1Code.CutoverInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmCutoverInProcess
+ * ResultDetail1Code.mmCutoverInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#DatabaseError
- * ResultDetail1Code.DatabaseError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmDatabaseError
+ * ResultDetail1Code.mmDatabaseError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#DisputedFees
- * ResultDetail1Code.DisputedFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmDisputedFees
+ * ResultDetail1Code.mmDisputedFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#ExceededTransactionLifeCycle
- * ResultDetail1Code.ExceededTransactionLifeCycle}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmExceededTransactionLifeCycle
+ * ResultDetail1Code.mmExceededTransactionLifeCycle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#ExpiredCard
- * ResultDetail1Code.ExpiredCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmExpiredCard
+ * ResultDetail1Code.mmExpiredCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#FormatError
- * ResultDetail1Code.FormatError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmFormatError
+ * ResultDetail1Code.mmFormatError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#FromAccountError
- * ResultDetail1Code.FromAccountError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmFromAccountError
+ * ResultDetail1Code.mmFromAccountError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InProgress
- * ResultDetail1Code.InProgress}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInProgress
+ * ResultDetail1Code.mmInProgress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InsufficientFunds
- * ResultDetail1Code.InsufficientFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInsufficientFunds
+ * ResultDetail1Code.mmInsufficientFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidAcceptor
- * ResultDetail1Code.InvalidAcceptor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidAcceptor
+ * ResultDetail1Code.mmInvalidAcceptor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidAmount
- * ResultDetail1Code.InvalidAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidAmount
+ * ResultDetail1Code.mmInvalidAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidCardholderIdentification
- * ResultDetail1Code.InvalidCardholderIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidCardholderIdentification
+ * ResultDetail1Code.mmInvalidCardholderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidCardNumber
- * ResultDetail1Code.InvalidCardNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidCardNumber
+ * ResultDetail1Code.mmInvalidCardNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidCertificate
- * ResultDetail1Code.InvalidCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidCertificate
+ * ResultDetail1Code.mmInvalidCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#NotPermittedToAcceptor
- * ResultDetail1Code.NotPermittedToAcceptor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmNotPermittedToAcceptor
+ * ResultDetail1Code.mmNotPermittedToAcceptor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#NotAbleToValidatePIN
- * ResultDetail1Code.NotAbleToValidatePIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmNotAbleToValidatePIN
+ * ResultDetail1Code.mmNotAbleToValidatePIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#NoLiabilityAccepted
- * ResultDetail1Code.NoLiabilityAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmNoLiabilityAccepted
+ * ResultDetail1Code.mmNoLiabilityAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#NoCardRecord
- * ResultDetail1Code.NoCardRecord}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmNoCardRecord
+ * ResultDetail1Code.mmNoCardRecord}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#NewPINInvalid
- * ResultDetail1Code.NewPINInvalid}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmNewPINInvalid
+ * ResultDetail1Code.mmNewPINInvalid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#MACKeyError
- * ResultDetail1Code.MACKeyError}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResultDetail1Code#MACError
- * ResultDetail1Code.MACError}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResultDetail1Code#LostCard
- * ResultDetail1Code.LostCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmMACKeyError
+ * ResultDetail1Code.mmMACKeyError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#LiabilityAccepted
- * ResultDetail1Code.LiabilityAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmMACError
+ * ResultDetail1Code.mmMACError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#IssuerUnavailable
- * ResultDetail1Code.IssuerUnavailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmLostCard
+ * ResultDetail1Code.mmLostCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#IssuerTimeOut
- * ResultDetail1Code.IssuerTimeOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmLiabilityAccepted
+ * ResultDetail1Code.mmLiabilityAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#IssuerSignedOff
- * ResultDetail1Code.IssuerSignedOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmIssuerUnavailable
+ * ResultDetail1Code.mmIssuerUnavailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#IssuerNotFound
- * ResultDetail1Code.IssuerNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmIssuerTimeOut
+ * ResultDetail1Code.mmIssuerTimeOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#IssuerInoperative
- * ResultDetail1Code.IssuerInoperative}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmIssuerSignedOff
+ * ResultDetail1Code.mmIssuerSignedOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidTransactionDateTime
- * ResultDetail1Code.InvalidTransactionDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmIssuerNotFound
+ * ResultDetail1Code.mmIssuerNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidTransaction
- * ResultDetail1Code.InvalidTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmIssuerInoperative
+ * ResultDetail1Code.mmIssuerInoperative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidTokenIdentification
- * ResultDetail1Code.InvalidTokenIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidTransactionDateTime
+ * ResultDetail1Code.mmInvalidTransactionDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidToken
- * ResultDetail1Code.InvalidToken}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidTransaction
+ * ResultDetail1Code.mmInvalidTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidSecurityCode
- * ResultDetail1Code.InvalidSecurityCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidTokenIdentification
+ * ResultDetail1Code.mmInvalidTokenIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidPIN
- * ResultDetail1Code.InvalidPIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidToken
+ * ResultDetail1Code.mmInvalidToken}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#InvalidOriginalAmount
- * ResultDetail1Code.InvalidOriginalAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidSecurityCode
+ * ResultDetail1Code.mmInvalidSecurityCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#NotPermittedToCardholder
- * ResultDetail1Code.NotPermittedToCardholder}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidPIN
+ * ResultDetail1Code.mmInvalidPIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#OffLineProcess
- * ResultDetail1Code.OffLineProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmInvalidOriginalAmount
+ * ResultDetail1Code.mmInvalidOriginalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#OffLineProcessAfterReferral
- * ResultDetail1Code.OffLineProcessAfterReferral}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmNotPermittedToCardholder
+ * ResultDetail1Code.mmNotPermittedToCardholder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#OriginalDoesNotMatch
- * ResultDetail1Code.OriginalDoesNotMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmOffLineProcess
+ * ResultDetail1Code.mmOffLineProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#OtherError
- * ResultDetail1Code.OtherError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmOffLineProcessAfterReferral
+ * ResultDetail1Code.mmOffLineProcessAfterReferral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#OutOfBalance
- * ResultDetail1Code.OutOfBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmOriginalDoesNotMatch
+ * ResultDetail1Code.mmOriginalDoesNotMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#OutOfSequence
- * ResultDetail1Code.OutOfSequence}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmOtherError
+ * ResultDetail1Code.mmOtherError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#PaymentAmountLimit
- * ResultDetail1Code.PaymentAmountLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmOutOfBalance
+ * ResultDetail1Code.mmOutOfBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#PaymentNumberLimit
- * ResultDetail1Code.PaymentNumberLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmOutOfSequence
+ * ResultDetail1Code.mmOutOfSequence}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#PINChangeRequired
- * ResultDetail1Code.PINChangeRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmPaymentAmountLimit
+ * ResultDetail1Code.mmPaymentAmountLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#PINDataRequired
- * ResultDetail1Code.PINDataRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmPaymentNumberLimit
+ * ResultDetail1Code.mmPaymentNumberLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#PINEncryptionError
- * ResultDetail1Code.PINEncryptionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmPINChangeRequired
+ * ResultDetail1Code.mmPINChangeRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#PINSecurityError
- * ResultDetail1Code.PINSecurityError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmPINDataRequired
+ * ResultDetail1Code.mmPINDataRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#PINTriesExceeded
- * ResultDetail1Code.PINTriesExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmPINEncryptionError
+ * ResultDetail1Code.mmPINEncryptionError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#QueueMaximumExceeded
- * ResultDetail1Code.QueueMaximumExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmPINSecurityError
+ * ResultDetail1Code.mmPINSecurityError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#RecurringDataError
- * ResultDetail1Code.RecurringDataError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmPINTriesExceeded
+ * ResultDetail1Code.mmPINTriesExceeded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#RestrictedCard
- * ResultDetail1Code.RestrictedCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmQueueMaximumExceeded
+ * ResultDetail1Code.mmQueueMaximumExceeded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SecurityViolation
- * ResultDetail1Code.SecurityViolation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmRecurringDataError
+ * ResultDetail1Code.mmRecurringDataError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SoftwareOrHardwareError
- * ResultDetail1Code.SoftwareOrHardwareError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmRestrictedCard
+ * ResultDetail1Code.mmRestrictedCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SpecialConditions
- * ResultDetail1Code.SpecialConditions}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSecurityViolation
+ * ResultDetail1Code.mmSecurityViolation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#WrongCard
- * ResultDetail1Code.WrongCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSoftwareOrHardwareError
+ * ResultDetail1Code.mmSoftwareOrHardwareError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#WithdrawalNumberLimit
- * ResultDetail1Code.WithdrawalNumberLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSpecialConditions
+ * ResultDetail1Code.mmSpecialConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#WithdrawalAmountLimit
- * ResultDetail1Code.WithdrawalAmountLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmWrongCard
+ * ResultDetail1Code.mmWrongCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#VendorNotFound
- * ResultDetail1Code.VendorNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmWithdrawalNumberLimit
+ * ResultDetail1Code.mmWithdrawalNumberLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#VendorFormatError
- * ResultDetail1Code.VendorFormatError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmWithdrawalAmountLimit
+ * ResultDetail1Code.mmWithdrawalAmountLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#UnsupportedService
- * ResultDetail1Code.UnsupportedService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmVendorNotFound
+ * ResultDetail1Code.mmVendorNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#UneffectiveCard
- * ResultDetail1Code.UneffectiveCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmVendorFormatError
+ * ResultDetail1Code.mmVendorFormatError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#UnavailablecommunicationKey
- * ResultDetail1Code.UnavailablecommunicationKey}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmUnsupportedService
+ * ResultDetail1Code.mmUnsupportedService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#UnacceptableCurrency
- * ResultDetail1Code.UnacceptableCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmUneffectiveCard
+ * ResultDetail1Code.mmUneffectiveCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#UnableToProcessOffLine
- * ResultDetail1Code.UnableToProcessOffLine}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmUnavailablecommunicationKey
+ * ResultDetail1Code.mmUnavailablecommunicationKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#UnableToGoOnLine
- * ResultDetail1Code.UnableToGoOnLine}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmUnacceptableCurrency
+ * ResultDetail1Code.mmUnacceptableCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#UnableToFindOriginal
- * ResultDetail1Code.UnableToFindOriginal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmUnableToProcessOffLine
+ * ResultDetail1Code.mmUnableToProcessOffLine}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#TransactionDuplicate
- * ResultDetail1Code.TransactionDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmUnableToGoOnLine
+ * ResultDetail1Code.mmUnableToGoOnLine}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#TransactionDidNotComplete
- * ResultDetail1Code.TransactionDidNotComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmUnableToFindOriginal
+ * ResultDetail1Code.mmUnableToFindOriginal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#TotalsNotAvailable
- * ResultDetail1Code.TotalsNotAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmTransactionDuplicate
+ * ResultDetail1Code.mmTransactionDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#ToAccountError
- * ResultDetail1Code.ToAccountError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmTransactionDidNotComplete
+ * ResultDetail1Code.mmTransactionDidNotComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SystemMalfunction
- * ResultDetail1Code.SystemMalfunction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmTotalsNotAvailable
+ * ResultDetail1Code.mmTotalsNotAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SystemInoperative
- * ResultDetail1Code.SystemInoperative}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmToAccountError
+ * ResultDetail1Code.mmToAccountError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SuspectedFraud
- * ResultDetail1Code.SuspectedFraud}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSystemMalfunction
+ * ResultDetail1Code.mmSystemMalfunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SuspectedCounterfeitCard
- * ResultDetail1Code.SuspectedCounterfeitCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSystemInoperative
+ * ResultDetail1Code.mmSystemInoperative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#SurchargeNotPermitted
- * ResultDetail1Code.SurchargeNotPermitted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSuspectedFraud
+ * ResultDetail1Code.mmSuspectedFraud}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#StolenCard
- * ResultDetail1Code.StolenCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSuspectedCounterfeitCard
+ * ResultDetail1Code.mmSuspectedCounterfeitCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#AcknowledgementOnly
- * ResultDetail1Code.AcknowledgementOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmSurchargeNotPermitted
+ * ResultDetail1Code.mmSurchargeNotPermitted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmStolenCard
+ * ResultDetail1Code.mmStolenCard}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail1Code#mmAcknowledgementOnly
+ * ResultDetail1Code.mmAcknowledgementOnly}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -331,7 +333,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "AccountNotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountNotFound = new MMCode() {
+	public static final MMCode mmAccountNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountNotFound";
@@ -354,7 +356,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "AcquirerNotSupported"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerNotSupported = new MMCode() {
+	public static final MMCode mmAcquirerNotSupported = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerNotSupported";
@@ -377,7 +379,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "AMLValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AMLValidation = new MMCode() {
+	public static final MMCode mmAMLValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AMLValidation";
@@ -400,7 +402,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "AmountNotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode AmountNotFound = new MMCode() {
+	public static final MMCode mmAmountNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountNotFound";
@@ -423,7 +425,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "BankNotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankNotFound = new MMCode() {
+	public static final MMCode mmBankNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankNotFound";
@@ -446,7 +448,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "CardError"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardError = new MMCode() {
+	public static final MMCode mmCardError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardError";
@@ -469,7 +471,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "CardVerificationFailed"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardVerificationFailed = new MMCode() {
+	public static final MMCode mmCardVerificationFailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardVerificationFailed";
@@ -492,7 +494,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "CasbackNotAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode CasbackNotAllowed = new MMCode() {
+	public static final MMCode mmCasbackNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CasbackNotAllowed";
@@ -515,7 +517,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "CashbackAmountExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashbackAmountExceeded = new MMCode() {
+	public static final MMCode mmCashbackAmountExceeded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashbackAmountExceeded";
@@ -538,7 +540,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "ClosedAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosedAccount = new MMCode() {
+	public static final MMCode mmClosedAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccount";
@@ -561,7 +563,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "CutoverInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode CutoverInProcess = new MMCode() {
+	public static final MMCode mmCutoverInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutoverInProcess";
@@ -584,7 +586,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "DatabaseError"</li>
 	 * </ul>
 	 */
-	public static final MMCode DatabaseError = new MMCode() {
+	public static final MMCode mmDatabaseError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatabaseError";
@@ -607,7 +609,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "DisputedFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode DisputedFees = new MMCode() {
+	public static final MMCode mmDisputedFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputedFees";
@@ -630,7 +632,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "ExceededTransactionLifeCycle"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExceededTransactionLifeCycle = new MMCode() {
+	public static final MMCode mmExceededTransactionLifeCycle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceededTransactionLifeCycle";
@@ -653,7 +655,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "ExpiredCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExpiredCard = new MMCode() {
+	public static final MMCode mmExpiredCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiredCard";
@@ -676,7 +678,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "FormatError"</li>
 	 * </ul>
 	 */
-	public static final MMCode FormatError = new MMCode() {
+	public static final MMCode mmFormatError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatError";
@@ -699,7 +701,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "FromAccountError"</li>
 	 * </ul>
 	 */
-	public static final MMCode FromAccountError = new MMCode() {
+	public static final MMCode mmFromAccountError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromAccountError";
@@ -722,7 +724,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InProgress"</li>
 	 * </ul>
 	 */
-	public static final MMCode InProgress = new MMCode() {
+	public static final MMCode mmInProgress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InProgress";
@@ -745,7 +747,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InsufficientFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientFunds = new MMCode() {
+	public static final MMCode mmInsufficientFunds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFunds";
@@ -768,7 +770,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidAcceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAcceptor = new MMCode() {
+	public static final MMCode mmInvalidAcceptor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAcceptor";
@@ -791,7 +793,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAmount = new MMCode() {
+	public static final MMCode mmInvalidAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAmount";
@@ -814,7 +816,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidCardholderIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCardholderIdentification = new MMCode() {
+	public static final MMCode mmInvalidCardholderIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCardholderIdentification";
@@ -837,7 +839,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidCardNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCardNumber = new MMCode() {
+	public static final MMCode mmInvalidCardNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCardNumber";
@@ -860,7 +862,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCertificate = new MMCode() {
+	public static final MMCode mmInvalidCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCertificate";
@@ -883,7 +885,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "NotPermittedToAcceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotPermittedToAcceptor = new MMCode() {
+	public static final MMCode mmNotPermittedToAcceptor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPermittedToAcceptor";
@@ -906,7 +908,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "NotAbleToValidatePIN"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAbleToValidatePIN = new MMCode() {
+	public static final MMCode mmNotAbleToValidatePIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAbleToValidatePIN";
@@ -929,7 +931,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "NoLiabilityAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoLiabilityAccepted = new MMCode() {
+	public static final MMCode mmNoLiabilityAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoLiabilityAccepted";
@@ -952,7 +954,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "NoCardRecord"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoCardRecord = new MMCode() {
+	public static final MMCode mmNoCardRecord = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCardRecord";
@@ -975,7 +977,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "NewPINInvalid"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewPINInvalid = new MMCode() {
+	public static final MMCode mmNewPINInvalid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPINInvalid";
@@ -998,7 +1000,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "MACKeyError"</li>
 	 * </ul>
 	 */
-	public static final MMCode MACKeyError = new MMCode() {
+	public static final MMCode mmMACKeyError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACKeyError";
@@ -1021,7 +1023,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "MACError"</li>
 	 * </ul>
 	 */
-	public static final MMCode MACError = new MMCode() {
+	public static final MMCode mmMACError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACError";
@@ -1044,7 +1046,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "LostCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode LostCard = new MMCode() {
+	public static final MMCode mmLostCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCard";
@@ -1067,7 +1069,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "LiabilityAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode LiabilityAccepted = new MMCode() {
+	public static final MMCode mmLiabilityAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiabilityAccepted";
@@ -1090,7 +1092,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "IssuerUnavailable"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerUnavailable = new MMCode() {
+	public static final MMCode mmIssuerUnavailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerUnavailable";
@@ -1113,7 +1115,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "IssuerTimeOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerTimeOut = new MMCode() {
+	public static final MMCode mmIssuerTimeOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerTimeOut";
@@ -1136,7 +1138,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "IssuerSignedOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerSignedOff = new MMCode() {
+	public static final MMCode mmIssuerSignedOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerSignedOff";
@@ -1159,7 +1161,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "IssuerNotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerNotFound = new MMCode() {
+	public static final MMCode mmIssuerNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerNotFound";
@@ -1182,7 +1184,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "IssuerInoperative"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerInoperative = new MMCode() {
+	public static final MMCode mmIssuerInoperative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInoperative";
@@ -1205,7 +1207,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidTransactionDateTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidTransactionDateTime = new MMCode() {
+	public static final MMCode mmInvalidTransactionDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidTransactionDateTime";
@@ -1228,7 +1230,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidTransaction = new MMCode() {
+	public static final MMCode mmInvalidTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidTransaction";
@@ -1251,7 +1253,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidTokenIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidTokenIdentification = new MMCode() {
+	public static final MMCode mmInvalidTokenIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidTokenIdentification";
@@ -1274,7 +1276,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidToken"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidToken = new MMCode() {
+	public static final MMCode mmInvalidToken = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidToken";
@@ -1297,7 +1299,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidSecurityCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidSecurityCode = new MMCode() {
+	public static final MMCode mmInvalidSecurityCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurityCode";
@@ -1320,7 +1322,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidPIN"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidPIN = new MMCode() {
+	public static final MMCode mmInvalidPIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidPIN";
@@ -1343,7 +1345,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "InvalidOriginalAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOriginalAmount = new MMCode() {
+	public static final MMCode mmInvalidOriginalAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOriginalAmount";
@@ -1366,7 +1368,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "NotPermittedToCardholder"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotPermittedToCardholder = new MMCode() {
+	public static final MMCode mmNotPermittedToCardholder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPermittedToCardholder";
@@ -1389,7 +1391,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "OffLineProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode OffLineProcess = new MMCode() {
+	public static final MMCode mmOffLineProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffLineProcess";
@@ -1412,7 +1414,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "OffLineProcessAfterReferral"</li>
 	 * </ul>
 	 */
-	public static final MMCode OffLineProcessAfterReferral = new MMCode() {
+	public static final MMCode mmOffLineProcessAfterReferral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffLineProcessAfterReferral";
@@ -1435,7 +1437,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "OriginalDoesNotMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode OriginalDoesNotMatch = new MMCode() {
+	public static final MMCode mmOriginalDoesNotMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDoesNotMatch";
@@ -1458,7 +1460,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "OtherError"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherError = new MMCode() {
+	public static final MMCode mmOtherError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherError";
@@ -1481,7 +1483,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "OutOfBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode OutOfBalance = new MMCode() {
+	public static final MMCode mmOutOfBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfBalance";
@@ -1504,7 +1506,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "OutOfSequence"</li>
 	 * </ul>
 	 */
-	public static final MMCode OutOfSequence = new MMCode() {
+	public static final MMCode mmOutOfSequence = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfSequence";
@@ -1527,7 +1529,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "PaymentAmountLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentAmountLimit = new MMCode() {
+	public static final MMCode mmPaymentAmountLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentAmountLimit";
@@ -1550,7 +1552,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "PaymentNumberLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentNumberLimit = new MMCode() {
+	public static final MMCode mmPaymentNumberLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentNumberLimit";
@@ -1573,7 +1575,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "PINChangeRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINChangeRequired = new MMCode() {
+	public static final MMCode mmPINChangeRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINChangeRequired";
@@ -1596,7 +1598,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "PINDataRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINDataRequired = new MMCode() {
+	public static final MMCode mmPINDataRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINDataRequired";
@@ -1619,7 +1621,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "PINEncryptionError"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINEncryptionError = new MMCode() {
+	public static final MMCode mmPINEncryptionError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINEncryptionError";
@@ -1642,7 +1644,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "PINSecurityError"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINSecurityError = new MMCode() {
+	public static final MMCode mmPINSecurityError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINSecurityError";
@@ -1665,7 +1667,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "PINTriesExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINTriesExceeded = new MMCode() {
+	public static final MMCode mmPINTriesExceeded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINTriesExceeded";
@@ -1688,7 +1690,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "QueueMaximumExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode QueueMaximumExceeded = new MMCode() {
+	public static final MMCode mmQueueMaximumExceeded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueMaximumExceeded";
@@ -1711,7 +1713,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "RecurringDataError"</li>
 	 * </ul>
 	 */
-	public static final MMCode RecurringDataError = new MMCode() {
+	public static final MMCode mmRecurringDataError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecurringDataError";
@@ -1734,7 +1736,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "RestrictedCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode RestrictedCard = new MMCode() {
+	public static final MMCode mmRestrictedCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedCard";
@@ -1757,7 +1759,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SecurityViolation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityViolation = new MMCode() {
+	public static final MMCode mmSecurityViolation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityViolation";
@@ -1780,7 +1782,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SoftwareOrHardwareError"</li>
 	 * </ul>
 	 */
-	public static final MMCode SoftwareOrHardwareError = new MMCode() {
+	public static final MMCode mmSoftwareOrHardwareError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftwareOrHardwareError";
@@ -1803,7 +1805,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SpecialConditions"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialConditions = new MMCode() {
+	public static final MMCode mmSpecialConditions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConditions";
@@ -1826,7 +1828,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "WrongCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode WrongCard = new MMCode() {
+	public static final MMCode mmWrongCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCard";
@@ -1849,7 +1851,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "WithdrawalNumberLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithdrawalNumberLimit = new MMCode() {
+	public static final MMCode mmWithdrawalNumberLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalNumberLimit";
@@ -1872,7 +1874,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "WithdrawalAmountLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithdrawalAmountLimit = new MMCode() {
+	public static final MMCode mmWithdrawalAmountLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalAmountLimit";
@@ -1895,7 +1897,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "VendorNotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode VendorNotFound = new MMCode() {
+	public static final MMCode mmVendorNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorNotFound";
@@ -1918,7 +1920,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "VendorFormatError"</li>
 	 * </ul>
 	 */
-	public static final MMCode VendorFormatError = new MMCode() {
+	public static final MMCode mmVendorFormatError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorFormatError";
@@ -1941,7 +1943,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "UnsupportedService"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnsupportedService = new MMCode() {
+	public static final MMCode mmUnsupportedService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsupportedService";
@@ -1964,7 +1966,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "UneffectiveCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode UneffectiveCard = new MMCode() {
+	public static final MMCode mmUneffectiveCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UneffectiveCard";
@@ -1987,7 +1989,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "UnavailablecommunicationKey"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnavailablecommunicationKey = new MMCode() {
+	public static final MMCode mmUnavailablecommunicationKey = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailablecommunicationKey";
@@ -2010,7 +2012,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "UnacceptableCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnacceptableCurrency = new MMCode() {
+	public static final MMCode mmUnacceptableCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptableCurrency";
@@ -2033,7 +2035,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "UnableToProcessOffLine"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnableToProcessOffLine = new MMCode() {
+	public static final MMCode mmUnableToProcessOffLine = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToProcessOffLine";
@@ -2056,7 +2058,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "UnableToGoOnLine"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnableToGoOnLine = new MMCode() {
+	public static final MMCode mmUnableToGoOnLine = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToGoOnLine";
@@ -2079,7 +2081,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "UnableToFindOriginal"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnableToFindOriginal = new MMCode() {
+	public static final MMCode mmUnableToFindOriginal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToFindOriginal";
@@ -2102,7 +2104,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "TransactionDuplicate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionDuplicate = new MMCode() {
+	public static final MMCode mmTransactionDuplicate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDuplicate";
@@ -2125,7 +2127,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "TransactionDidNotComplete"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionDidNotComplete = new MMCode() {
+	public static final MMCode mmTransactionDidNotComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDidNotComplete";
@@ -2148,7 +2150,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "TotalsNotAvailable"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalsNotAvailable = new MMCode() {
+	public static final MMCode mmTotalsNotAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalsNotAvailable";
@@ -2171,7 +2173,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "ToAccountError"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToAccountError = new MMCode() {
+	public static final MMCode mmToAccountError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAccountError";
@@ -2194,7 +2196,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SystemMalfunction"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystemMalfunction = new MMCode() {
+	public static final MMCode mmSystemMalfunction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMalfunction";
@@ -2217,7 +2219,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SystemInoperative"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystemInoperative = new MMCode() {
+	public static final MMCode mmSystemInoperative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemInoperative";
@@ -2240,7 +2242,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SuspectedFraud"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspectedFraud = new MMCode() {
+	public static final MMCode mmSuspectedFraud = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedFraud";
@@ -2263,7 +2265,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SuspectedCounterfeitCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspectedCounterfeitCard = new MMCode() {
+	public static final MMCode mmSuspectedCounterfeitCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedCounterfeitCard";
@@ -2286,7 +2288,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "SurchargeNotPermitted"</li>
 	 * </ul>
 	 */
-	public static final MMCode SurchargeNotPermitted = new MMCode() {
+	public static final MMCode mmSurchargeNotPermitted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurchargeNotPermitted";
@@ -2309,7 +2311,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "StolenCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode StolenCard = new MMCode() {
+	public static final MMCode mmStolenCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StolenCard";
@@ -2332,7 +2334,7 @@ public class ResultDetail1Code extends ResultDetailCode {
 	 * name} = "AcknowledgementOnly"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgementOnly = new MMCode() {
+	public static final MMCode mmAcknowledgementOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementOnly";
@@ -2343,44 +2345,49 @@ public class ResultDetail1Code extends ResultDetailCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResultDetail1Code";
 				definition = "Detail of the result.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail1Code.AccountNotFound, com.tools20022.repository.codeset.ResultDetail1Code.AcquirerNotSupported,
-						com.tools20022.repository.codeset.ResultDetail1Code.AMLValidation, com.tools20022.repository.codeset.ResultDetail1Code.AmountNotFound, com.tools20022.repository.codeset.ResultDetail1Code.BankNotFound,
-						com.tools20022.repository.codeset.ResultDetail1Code.CardError, com.tools20022.repository.codeset.ResultDetail1Code.CardVerificationFailed, com.tools20022.repository.codeset.ResultDetail1Code.CasbackNotAllowed,
-						com.tools20022.repository.codeset.ResultDetail1Code.CashbackAmountExceeded, com.tools20022.repository.codeset.ResultDetail1Code.ClosedAccount, com.tools20022.repository.codeset.ResultDetail1Code.CutoverInProcess,
-						com.tools20022.repository.codeset.ResultDetail1Code.DatabaseError, com.tools20022.repository.codeset.ResultDetail1Code.DisputedFees, com.tools20022.repository.codeset.ResultDetail1Code.ExceededTransactionLifeCycle,
-						com.tools20022.repository.codeset.ResultDetail1Code.ExpiredCard, com.tools20022.repository.codeset.ResultDetail1Code.FormatError, com.tools20022.repository.codeset.ResultDetail1Code.FromAccountError,
-						com.tools20022.repository.codeset.ResultDetail1Code.InProgress, com.tools20022.repository.codeset.ResultDetail1Code.InsufficientFunds, com.tools20022.repository.codeset.ResultDetail1Code.InvalidAcceptor,
-						com.tools20022.repository.codeset.ResultDetail1Code.InvalidAmount, com.tools20022.repository.codeset.ResultDetail1Code.InvalidCardholderIdentification,
-						com.tools20022.repository.codeset.ResultDetail1Code.InvalidCardNumber, com.tools20022.repository.codeset.ResultDetail1Code.InvalidCertificate,
-						com.tools20022.repository.codeset.ResultDetail1Code.NotPermittedToAcceptor, com.tools20022.repository.codeset.ResultDetail1Code.NotAbleToValidatePIN,
-						com.tools20022.repository.codeset.ResultDetail1Code.NoLiabilityAccepted, com.tools20022.repository.codeset.ResultDetail1Code.NoCardRecord, com.tools20022.repository.codeset.ResultDetail1Code.NewPINInvalid,
-						com.tools20022.repository.codeset.ResultDetail1Code.MACKeyError, com.tools20022.repository.codeset.ResultDetail1Code.MACError, com.tools20022.repository.codeset.ResultDetail1Code.LostCard,
-						com.tools20022.repository.codeset.ResultDetail1Code.LiabilityAccepted, com.tools20022.repository.codeset.ResultDetail1Code.IssuerUnavailable, com.tools20022.repository.codeset.ResultDetail1Code.IssuerTimeOut,
-						com.tools20022.repository.codeset.ResultDetail1Code.IssuerSignedOff, com.tools20022.repository.codeset.ResultDetail1Code.IssuerNotFound, com.tools20022.repository.codeset.ResultDetail1Code.IssuerInoperative,
-						com.tools20022.repository.codeset.ResultDetail1Code.InvalidTransactionDateTime, com.tools20022.repository.codeset.ResultDetail1Code.InvalidTransaction,
-						com.tools20022.repository.codeset.ResultDetail1Code.InvalidTokenIdentification, com.tools20022.repository.codeset.ResultDetail1Code.InvalidToken,
-						com.tools20022.repository.codeset.ResultDetail1Code.InvalidSecurityCode, com.tools20022.repository.codeset.ResultDetail1Code.InvalidPIN, com.tools20022.repository.codeset.ResultDetail1Code.InvalidOriginalAmount,
-						com.tools20022.repository.codeset.ResultDetail1Code.NotPermittedToCardholder, com.tools20022.repository.codeset.ResultDetail1Code.OffLineProcess,
-						com.tools20022.repository.codeset.ResultDetail1Code.OffLineProcessAfterReferral, com.tools20022.repository.codeset.ResultDetail1Code.OriginalDoesNotMatch,
-						com.tools20022.repository.codeset.ResultDetail1Code.OtherError, com.tools20022.repository.codeset.ResultDetail1Code.OutOfBalance, com.tools20022.repository.codeset.ResultDetail1Code.OutOfSequence,
-						com.tools20022.repository.codeset.ResultDetail1Code.PaymentAmountLimit, com.tools20022.repository.codeset.ResultDetail1Code.PaymentNumberLimit, com.tools20022.repository.codeset.ResultDetail1Code.PINChangeRequired,
-						com.tools20022.repository.codeset.ResultDetail1Code.PINDataRequired, com.tools20022.repository.codeset.ResultDetail1Code.PINEncryptionError, com.tools20022.repository.codeset.ResultDetail1Code.PINSecurityError,
-						com.tools20022.repository.codeset.ResultDetail1Code.PINTriesExceeded, com.tools20022.repository.codeset.ResultDetail1Code.QueueMaximumExceeded, com.tools20022.repository.codeset.ResultDetail1Code.RecurringDataError,
-						com.tools20022.repository.codeset.ResultDetail1Code.RestrictedCard, com.tools20022.repository.codeset.ResultDetail1Code.SecurityViolation, com.tools20022.repository.codeset.ResultDetail1Code.SoftwareOrHardwareError,
-						com.tools20022.repository.codeset.ResultDetail1Code.SpecialConditions, com.tools20022.repository.codeset.ResultDetail1Code.WrongCard, com.tools20022.repository.codeset.ResultDetail1Code.WithdrawalNumberLimit,
-						com.tools20022.repository.codeset.ResultDetail1Code.WithdrawalAmountLimit, com.tools20022.repository.codeset.ResultDetail1Code.VendorNotFound, com.tools20022.repository.codeset.ResultDetail1Code.VendorFormatError,
-						com.tools20022.repository.codeset.ResultDetail1Code.UnsupportedService, com.tools20022.repository.codeset.ResultDetail1Code.UneffectiveCard,
-						com.tools20022.repository.codeset.ResultDetail1Code.UnavailablecommunicationKey, com.tools20022.repository.codeset.ResultDetail1Code.UnacceptableCurrency,
-						com.tools20022.repository.codeset.ResultDetail1Code.UnableToProcessOffLine, com.tools20022.repository.codeset.ResultDetail1Code.UnableToGoOnLine,
-						com.tools20022.repository.codeset.ResultDetail1Code.UnableToFindOriginal, com.tools20022.repository.codeset.ResultDetail1Code.TransactionDuplicate,
-						com.tools20022.repository.codeset.ResultDetail1Code.TransactionDidNotComplete, com.tools20022.repository.codeset.ResultDetail1Code.TotalsNotAvailable,
-						com.tools20022.repository.codeset.ResultDetail1Code.ToAccountError, com.tools20022.repository.codeset.ResultDetail1Code.SystemMalfunction, com.tools20022.repository.codeset.ResultDetail1Code.SystemInoperative,
-						com.tools20022.repository.codeset.ResultDetail1Code.SuspectedFraud, com.tools20022.repository.codeset.ResultDetail1Code.SuspectedCounterfeitCard,
-						com.tools20022.repository.codeset.ResultDetail1Code.SurchargeNotPermitted, com.tools20022.repository.codeset.ResultDetail1Code.StolenCard, com.tools20022.repository.codeset.ResultDetail1Code.AcknowledgementOnly);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail1Code.mmAccountNotFound, com.tools20022.repository.codeset.ResultDetail1Code.mmAcquirerNotSupported,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmAMLValidation, com.tools20022.repository.codeset.ResultDetail1Code.mmAmountNotFound, com.tools20022.repository.codeset.ResultDetail1Code.mmBankNotFound,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmCardError, com.tools20022.repository.codeset.ResultDetail1Code.mmCardVerificationFailed, com.tools20022.repository.codeset.ResultDetail1Code.mmCasbackNotAllowed,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmCashbackAmountExceeded, com.tools20022.repository.codeset.ResultDetail1Code.mmClosedAccount,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmCutoverInProcess, com.tools20022.repository.codeset.ResultDetail1Code.mmDatabaseError, com.tools20022.repository.codeset.ResultDetail1Code.mmDisputedFees,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmExceededTransactionLifeCycle, com.tools20022.repository.codeset.ResultDetail1Code.mmExpiredCard,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmFormatError, com.tools20022.repository.codeset.ResultDetail1Code.mmFromAccountError, com.tools20022.repository.codeset.ResultDetail1Code.mmInProgress,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmInsufficientFunds, com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidAcceptor, com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidAmount,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidCardholderIdentification, com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidCardNumber,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidCertificate, com.tools20022.repository.codeset.ResultDetail1Code.mmNotPermittedToAcceptor,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmNotAbleToValidatePIN, com.tools20022.repository.codeset.ResultDetail1Code.mmNoLiabilityAccepted,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmNoCardRecord, com.tools20022.repository.codeset.ResultDetail1Code.mmNewPINInvalid, com.tools20022.repository.codeset.ResultDetail1Code.mmMACKeyError,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmMACError, com.tools20022.repository.codeset.ResultDetail1Code.mmLostCard, com.tools20022.repository.codeset.ResultDetail1Code.mmLiabilityAccepted,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmIssuerUnavailable, com.tools20022.repository.codeset.ResultDetail1Code.mmIssuerTimeOut, com.tools20022.repository.codeset.ResultDetail1Code.mmIssuerSignedOff,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmIssuerNotFound, com.tools20022.repository.codeset.ResultDetail1Code.mmIssuerInoperative,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidTransactionDateTime, com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidTransaction,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidTokenIdentification, com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidToken,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidSecurityCode, com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidPIN,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmInvalidOriginalAmount, com.tools20022.repository.codeset.ResultDetail1Code.mmNotPermittedToCardholder,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmOffLineProcess, com.tools20022.repository.codeset.ResultDetail1Code.mmOffLineProcessAfterReferral,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmOriginalDoesNotMatch, com.tools20022.repository.codeset.ResultDetail1Code.mmOtherError, com.tools20022.repository.codeset.ResultDetail1Code.mmOutOfBalance,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmOutOfSequence, com.tools20022.repository.codeset.ResultDetail1Code.mmPaymentAmountLimit,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmPaymentNumberLimit, com.tools20022.repository.codeset.ResultDetail1Code.mmPINChangeRequired,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmPINDataRequired, com.tools20022.repository.codeset.ResultDetail1Code.mmPINEncryptionError,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmPINSecurityError, com.tools20022.repository.codeset.ResultDetail1Code.mmPINTriesExceeded,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmQueueMaximumExceeded, com.tools20022.repository.codeset.ResultDetail1Code.mmRecurringDataError,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmRestrictedCard, com.tools20022.repository.codeset.ResultDetail1Code.mmSecurityViolation,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmSoftwareOrHardwareError, com.tools20022.repository.codeset.ResultDetail1Code.mmSpecialConditions,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmWrongCard, com.tools20022.repository.codeset.ResultDetail1Code.mmWithdrawalNumberLimit,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmWithdrawalAmountLimit, com.tools20022.repository.codeset.ResultDetail1Code.mmVendorNotFound,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmVendorFormatError, com.tools20022.repository.codeset.ResultDetail1Code.mmUnsupportedService,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmUneffectiveCard, com.tools20022.repository.codeset.ResultDetail1Code.mmUnavailablecommunicationKey,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmUnacceptableCurrency, com.tools20022.repository.codeset.ResultDetail1Code.mmUnableToProcessOffLine,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmUnableToGoOnLine, com.tools20022.repository.codeset.ResultDetail1Code.mmUnableToFindOriginal,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmTransactionDuplicate, com.tools20022.repository.codeset.ResultDetail1Code.mmTransactionDidNotComplete,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmTotalsNotAvailable, com.tools20022.repository.codeset.ResultDetail1Code.mmToAccountError,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmSystemMalfunction, com.tools20022.repository.codeset.ResultDetail1Code.mmSystemInoperative, com.tools20022.repository.codeset.ResultDetail1Code.mmSuspectedFraud,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmSuspectedCounterfeitCard, com.tools20022.repository.codeset.ResultDetail1Code.mmSurchargeNotPermitted,
+						com.tools20022.repository.codeset.ResultDetail1Code.mmStolenCard, com.tools20022.repository.codeset.ResultDetail1Code.mmAcknowledgementOnly);
 				trace_lazy = () -> ResultDetailCode.mmObject();
 			}
 		});

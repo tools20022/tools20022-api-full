@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXCancellation1Choice#Indicator
- * FXCancellation1Choice.Indicator}</li>
+ * {@linkplain com.tools20022.repository.choice.FXCancellation1Choice#mmIndicator
+ * FXCancellation1Choice.mmIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXCancellation1Choice#Proprietary
- * FXCancellation1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.FXCancellation1Choice#mmProprietary
+ * FXCancellation1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,21 +46,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02#FXCancellation
- * SecuritiesTransactionCancellationRequestV02.FXCancellation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02#mmFXCancellation
+ * SecuritiesTransactionCancellationRequestV02.mmFXCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03#FXCancellation
- * SecuritiesTransactionCancellationRequestV03.FXCancellation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03#mmFXCancellation
+ * SecuritiesTransactionCancellationRequestV03.mmFXCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04#FXCancellation
- * SecuritiesTransactionCancellationRequestV04.FXCancellation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04#mmFXCancellation
+ * SecuritiesTransactionCancellationRequestV04.mmFXCancellation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FXCancellation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator indicator;
 	/**
 	 * Specifies whether the underlying FX transaction should also be cancelled.
 	 * Yes means FX is to be cancelled. No means FX is to be retained.
@@ -114,13 +115,13 @@ public class FXCancellation1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FXCancellation3Choice#Indicator
-	 * FXCancellation3Choice.Indicator}</li>
+	 * {@linkplain com.tools20022.repository.choice.FXCancellation3Choice#mmIndicator
+	 * FXCancellation3Choice.mmIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FXCancellation1Choice.mmObject();
 			isDerived = false;
@@ -128,12 +129,13 @@ public class FXCancellation1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the underlying FX transaction should also be cancelled. Yes means FX is to be cancelled. No means FX is to be retained.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXCancellation3Choice.Indicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXCancellation3Choice.mmIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * FX Cancellation information expressed as a proprietary code.
 	 * <p>
@@ -165,13 +167,13 @@ public class FXCancellation1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FXCancellation3Choice#Proprietary
-	 * FXCancellation3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.FXCancellation3Choice#mmProprietary
+	 * FXCancellation3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FXCancellation1Choice.mmObject();
 			isDerived = false;
@@ -179,9 +181,9 @@ public class FXCancellation1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "FX Cancellation information expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXCancellation3Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXCancellation3Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -189,10 +191,10 @@ public class FXCancellation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXCancellation1Choice.Indicator, com.tools20022.repository.choice.FXCancellation1Choice.Proprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02.FXCancellation,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03.FXCancellation, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.FXCancellation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXCancellation1Choice.mmIndicator, com.tools20022.repository.choice.FXCancellation1Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02.mmFXCancellation,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03.mmFXCancellation, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmFXCancellation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FXCancellation1Choice";
 				definition = "Choice of format for the FX cancellation information.";
@@ -200,5 +202,21 @@ public class FXCancellation1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(YesNoIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

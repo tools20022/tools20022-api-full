@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UnitsOrAmount1Choice#Amount
- * UnitsOrAmount1Choice.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UnitsOrAmount1Choice#Unit
- * UnitsOrAmount1Choice.Unit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnitsOrAmount1Choice#mmAmount
+ * UnitsOrAmount1Choice.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UnitsOrAmount1Choice#mmUnit
+ * UnitsOrAmount1Choice.mmUnit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitsOrAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Currency and amount of the periodical payments.
 	 * <p>
@@ -85,7 +87,7 @@ public class UnitsOrAmount1Choice {
 	 * definition} = "Currency and amount of the periodical payments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnitsOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class UnitsOrAmount1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount of the periodical payments.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DecimalNumber unit;
 	/**
 	 * Number of units to be subscribed or withdrawn.
 	 * <p>
@@ -126,7 +129,7 @@ public class UnitsOrAmount1Choice {
 	 * definition} = "Number of units to be subscribed or withdrawn."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnitsOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -134,8 +137,8 @@ public class UnitsOrAmount1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Number of units to be subscribed or withdrawn.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -143,13 +146,29 @@ public class UnitsOrAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitsOrAmount1Choice.Amount, com.tools20022.repository.choice.UnitsOrAmount1Choice.Unit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitsOrAmount1Choice.mmAmount, com.tools20022.repository.choice.UnitsOrAmount1Choice.mmUnit);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitsOrAmount1Choice";
 				definition = "Choice between an amount or number of units.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public DecimalNumber getUnit() {
+		return unit;
+	}
+
+	public void setUnit(DecimalNumber unit) {
+		this.unit = unit;
 	}
 }

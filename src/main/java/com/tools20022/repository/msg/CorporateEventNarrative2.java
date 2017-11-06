@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max350Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional narrative information about the corporate event.
@@ -33,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateEventNarrative2#Disclaimer
- * CorporateEventNarrative2.Disclaimer}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateEventNarrative2#mmDisclaimer
+ * CorporateEventNarrative2.mmDisclaimer}</li>
  * </ul>
  * </li>
  * <li>
@@ -42,18 +43,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#AdditionalInformation
- * MeetingNotificationV04.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmAdditionalInformation
+ * MeetingNotificationV04.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#AdditionalInformation
- * MeetingNotificationV05.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#mmAdditionalInformation
+ * MeetingNotificationV05.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateEventNarrative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max350Text> disclaimer;
 	/**
 	 * Issuer’s disclaimer notice relative to the meeting announcement
 	 * information provided. It may be ignored for automated processing.
@@ -98,7 +100,7 @@ public class CorporateEventNarrative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Disclaimer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateEventNarrative2.mmObject();
 			isDerived = false;
@@ -114,14 +116,22 @@ public class CorporateEventNarrative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateEventNarrative2.Disclaimer);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV04.AdditionalInformation, com.tools20022.repository.area.seev.MeetingNotificationV05.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateEventNarrative2.mmDisclaimer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV04.mmAdditionalInformation, com.tools20022.repository.area.seev.MeetingNotificationV05.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateEventNarrative2";
 				definition = "Provides additional narrative information about the corporate event.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max350Text> getDisclaimer() {
+		return disclaimer;
+	}
+
+	public void setDisclaimer(List<Max350Text> disclaimer) {
+		this.disclaimer = disclaimer;
 	}
 }

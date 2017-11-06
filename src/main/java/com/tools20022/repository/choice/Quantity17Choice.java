@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity17Choice#QuantityChoice
- * Quantity17Choice.QuantityChoice}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity17Choice#mmQuantityChoice
+ * Quantity17Choice.mmQuantityChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity17Choice#ProprietaryQuantity
- * Quantity17Choice.ProprietaryQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity17Choice#mmProprietaryQuantity
+ * Quantity17Choice.mmProprietaryQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quantity17Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity18Choice quantityChoice;
 	/**
 	 * Choice between different quantity of security formats.
 	 * <p>
@@ -93,11 +94,11 @@ public class Quantity17Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Quantity3Choice#QuantityChoice
-	 * Quantity3Choice.QuantityChoice}</li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity3Choice#mmQuantityChoice
+	 * Quantity3Choice.mmQuantityChoice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity17Choice.mmObject();
 			isDerived = false;
@@ -105,13 +106,14 @@ public class Quantity17Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityChoice";
 			definition = "Choice between different quantity of security formats.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.QuantityChoice;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmQuantityChoice;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity18Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.Quantity18Choice.mmObject();
 		}
 	};
+	protected ProprietaryQuantity7 proprietaryQuantity;
 	/**
 	 * Proprietary quantity of security format.
 	 * <p>
@@ -139,11 +141,11 @@ public class Quantity17Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Quantity3Choice#ProprietaryQuantity
-	 * Quantity3Choice.ProprietaryQuantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity3Choice#mmProprietaryQuantity
+	 * Quantity3Choice.mmProprietaryQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity17Choice.mmObject();
 			isDerived = false;
@@ -151,20 +153,20 @@ public class Quantity17Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryQuantity";
 			definition = "Proprietary quantity of security format.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.ProprietaryQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmProprietaryQuantity;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryQuantity7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryQuantity7.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity17Choice.QuantityChoice, com.tools20022.repository.choice.Quantity17Choice.ProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity17Choice.mmQuantityChoice, com.tools20022.repository.choice.Quantity17Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quantity17Choice";
 				definition = "Choice between different quantity of security formats.";
@@ -172,5 +174,21 @@ public class Quantity17Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity18Choice getQuantityChoice() {
+		return quantityChoice;
+	}
+
+	public void setQuantityChoice(com.tools20022.repository.choice.Quantity18Choice quantityChoice) {
+		this.quantityChoice = quantityChoice;
+	}
+
+	public ProprietaryQuantity7 getProprietaryQuantity() {
+		return proprietaryQuantity;
+	}
+
+	public void setProprietaryQuantity(ProprietaryQuantity7 proprietaryQuantity) {
+		this.proprietaryQuantity = proprietaryQuantity;
 	}
 }

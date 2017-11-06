@@ -32,15 +32,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#ReferredDocument
- * InvoiceRequestInformation1.ReferredDocument}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -49,6 +40,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.UndertakingDocument
  * UndertakingDocument}</li>
  * <li>{@linkplain com.tools20022.repository.entity.CreditNote CreditNote}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmReferredDocument
+ * InvoiceRequestInformation1.mmReferredDocument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,11 +83,11 @@ public class FinancialDocument extends Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialDocument";
 				definition = "Type of document used in relation with financial transactions.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceRequestInformation1.ReferredDocument);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceRequestInformation1.mmReferredDocument);
 				subType_lazy = () -> Arrays.asList(Cheque.mmObject(), Invoice.mmObject(), UndertakingDocument.mmObject(), CreditNote.mmObject());
 				superType_lazy = () -> Document.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(FinancialItem1.mmObject());

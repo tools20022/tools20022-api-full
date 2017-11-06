@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#Person
- * ExecutingParty1Choice.Person}</li>
+ * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#mmPerson
+ * ExecutingParty1Choice.mmPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#Algorithm
- * ExecutingParty1Choice.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#mmAlgorithm
+ * ExecutingParty1Choice.mmAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#Client
- * ExecutingParty1Choice.Client}</li>
+ * {@linkplain com.tools20022.repository.choice.ExecutingParty1Choice#mmClient
+ * ExecutingParty1Choice.mmClient}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExecutingParty1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PersonIdentification12 person;
 	/**
 	 * Identification of a person.
 	 * <p>
@@ -95,11 +96,11 @@ public class ExecutingParty1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#Person
-	 * InvestmentParty1Choice.Person}</li>
+	 * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#mmPerson
+	 * InvestmentParty1Choice.mmPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Person = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExecutingParty1Choice.mmObject();
 			isDerived = false;
@@ -107,13 +108,14 @@ public class ExecutingParty1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identification of a person.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.Person;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.mmPerson;
 			maxOccurs = 1;
-			type_lazy = () -> PersonIdentification12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PersonIdentification12.mmObject();
 		}
 	};
+	protected Max50Text algorithm;
 	/**
 	 * Identification of an algorithm.
 	 * <p>
@@ -142,11 +144,11 @@ public class ExecutingParty1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#Algorithm
-	 * InvestmentParty1Choice.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.choice.InvestmentParty1Choice#mmAlgorithm
+	 * InvestmentParty1Choice.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ExecutingParty1Choice.mmObject();
 			isDerived = false;
@@ -154,12 +156,13 @@ public class ExecutingParty1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of an algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.Algorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.mmAlgorithm;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
 		}
 	};
+	protected NoReasonCode client;
 	/**
 	 * Indication that the transaction was executed directly by the client.
 	 * <p>
@@ -188,7 +191,7 @@ public class ExecutingParty1Choice {
 	 * "Indication that the transaction was executed directly by the client."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Client = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClient = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ExecutingParty1Choice.mmObject();
 			isDerived = false;
@@ -196,8 +199,8 @@ public class ExecutingParty1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
 			definition = "Indication that the transaction was executed directly by the client.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
@@ -205,9 +208,9 @@ public class ExecutingParty1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.Person, com.tools20022.repository.choice.ExecutingParty1Choice.Algorithm,
-						com.tools20022.repository.choice.ExecutingParty1Choice.Client);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.mmPerson, com.tools20022.repository.choice.ExecutingParty1Choice.mmAlgorithm,
+						com.tools20022.repository.choice.ExecutingParty1Choice.mmClient);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExecutingParty1Choice";
 				definition = "Identification of the executing party.";
@@ -215,5 +218,29 @@ public class ExecutingParty1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PersonIdentification12 getPerson() {
+		return person;
+	}
+
+	public void setPerson(PersonIdentification12 person) {
+		this.person = person;
+	}
+
+	public Max50Text getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Max50Text algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public NoReasonCode getClient() {
+		return client;
+	}
+
+	public void setClient(NoReasonCode client) {
+		this.client = client;
 	}
 }

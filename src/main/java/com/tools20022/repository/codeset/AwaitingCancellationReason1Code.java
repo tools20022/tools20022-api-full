@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReason1Code#AwaitingCancellation
- * AwaitingCancellationReason1Code.AwaitingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReason1Code#mmAwaitingCancellation
+ * AwaitingCancellationReason1Code.mmAwaitingCancellation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class AwaitingCancellationReason1Code extends AwaitingCancellationReasonC
 	 * name} = "AwaitingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingCancellation = new MMCode() {
+	public static final MMCode mmAwaitingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCancellation";
@@ -91,12 +91,12 @@ public class AwaitingCancellationReason1Code extends AwaitingCancellationReasonC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WCAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AwaitingCancellationReason1Code";
 				definition = "Specifies the reason why the instruction has an awaiting cancellation status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingCancellationReason1Code.AwaitingCancellation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingCancellationReason1Code.mmAwaitingCancellation);
 				trace_lazy = () -> AwaitingCancellationReasonCode.mmObject();
 			}
 		});

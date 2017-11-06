@@ -37,18 +37,18 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification1#MessageNumber
- * GenericDocumentIdentification1.MessageNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification1#mmMessageNumber
+ * GenericDocumentIdentification1.mmMessageNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification1#Identification
- * GenericDocumentIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification1#mmIdentification
+ * GenericDocumentIdentification1.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,6 +70,7 @@ import java.util.function.Supplier;
 public class GenericDocumentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber1Choice messageNumber;
 	/**
 	 * Message type number/message identifier of the message referenced in the
 	 * linkage sequence.
@@ -103,13 +104,13 @@ public class GenericDocumentIdentification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification4#MessageNumber
-	 * GenericDocumentIdentification4.MessageNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification4#mmMessageNumber
+	 * GenericDocumentIdentification4.mmMessageNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericDocumentIdentification1.mmObject();
 			isDerived = false;
@@ -117,12 +118,13 @@ public class GenericDocumentIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification4.MessageNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification4.mmMessageNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber1Choice.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Identification of the document.
 	 * <p>
@@ -152,13 +154,13 @@ public class GenericDocumentIdentification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification4#Identification
-	 * GenericDocumentIdentification4.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification4#mmIdentification
+	 * GenericDocumentIdentification4.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericDocumentIdentification1.mmObject();
 			isDerived = false;
@@ -166,9 +168,9 @@ public class GenericDocumentIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification4.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification4.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -176,8 +178,8 @@ public class GenericDocumentIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification1.MessageNumber, com.tools20022.repository.msg.GenericDocumentIdentification1.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification1.mmMessageNumber, com.tools20022.repository.msg.GenericDocumentIdentification1.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -192,5 +194,21 @@ public class GenericDocumentIdentification1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber1Choice getMessageNumber() {
+		return messageNumber;
+	}
+
+	public void setMessageNumber(DocumentNumber1Choice messageNumber) {
+		this.messageNumber = messageNumber;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

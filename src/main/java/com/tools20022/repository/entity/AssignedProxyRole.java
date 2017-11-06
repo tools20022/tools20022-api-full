@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.MeetingPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Party appointed by the rights holder to attend a meeting and vote in its
@@ -41,22 +42,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#ProxyPerson
- * AssignedProxyRole.ProxyPerson}</li>
+ * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#mmProxyPerson
+ * AssignedProxyRole.mmProxyPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#PreAssignedProxyRole
- * AssignedProxyRole.PreAssignedProxyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.AssignedProxyRole#mmPreAssignedProxyRole
+ * AssignedProxyRole.mmPreAssignedProxyRole}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Person#RelatedRole
- * Person.RelatedRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Person#mmRelatedRole
+ * Person.mmRelatedRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Person#PreAssignedProxyPerson
- * Person.PreAssignedProxyPerson}</li>
+ * {@linkplain com.tools20022.repository.entity.Person#mmPreAssignedProxyPerson
+ * Person.mmPreAssignedProxyPerson}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation1#AuthorisedProxy
- * ProxyAppointmentInformation1.AuthorisedProxy}</li>
+ * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation1#mmAuthorisedProxy
+ * ProxyAppointmentInformation1.mmAuthorisedProxy}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -74,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssignedProxyRole extends MeetingPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Person> proxyPerson;
 	/**
 	 * Specifies the person who is the assigned proxy for a meeting.
 	 * <p>
@@ -99,8 +101,8 @@ public class AssignedProxyRole extends MeetingPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Person#RelatedRole
-	 * Person.RelatedRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmRelatedRole
+	 * Person.mmRelatedRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -124,7 +126,7 @@ public class AssignedProxyRole extends MeetingPartyRole {
 	 * "Specifies the person who is the assigned proxy for a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ProxyPerson = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProxyPerson = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AssignedProxyRole.mmObject();
 			isDerived = false;
@@ -132,11 +134,12 @@ public class AssignedProxyRole extends MeetingPartyRole {
 			name = "ProxyPerson";
 			definition = "Specifies the person who is the assigned proxy for a meeting.";
 			minOccurs = 0;
-			type_lazy = () -> Person.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Person.RelatedRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmRelatedRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Person> preAssignedProxyRole;
 	/**
 	 * Identifies a proxy that has been assigned by the issuer of the meeting.
 	 * <p>
@@ -145,8 +148,8 @@ public class AssignedProxyRole extends MeetingPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Person#PreAssignedProxyPerson
-	 * Person.PreAssignedProxyPerson}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmPreAssignedProxyPerson
+	 * Person.mmPreAssignedProxyPerson}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -171,7 +174,7 @@ public class AssignedProxyRole extends MeetingPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PreAssignedProxyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPreAssignedProxyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AssignedProxyRole.mmObject();
 			isDerived = false;
@@ -179,25 +182,41 @@ public class AssignedProxyRole extends MeetingPartyRole {
 			name = "PreAssignedProxyRole";
 			definition = "Identifies a proxy that has been assigned by the issuer of the meeting.";
 			minOccurs = 0;
-			type_lazy = () -> Person.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Person.PreAssignedProxyPerson;
+			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmPreAssignedProxyPerson;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssignedProxyRole";
 				definition = "Party appointed by the rights holder to attend a meeting and vote in its name. The proxy can be the chairman of the meeting or another party selected by the issuer. The proxy can also be a third party selected by the rights holder.\r\nThe proxy can be assigned by a specific instruction or pre-assigned by the issuer of the meeting.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.RelatedRole, com.tools20022.repository.entity.Person.PreAssignedProxyPerson);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProxyAppointmentInformation1.AuthorisedProxy);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmRelatedRole, com.tools20022.repository.entity.Person.mmPreAssignedProxyPerson);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProxyAppointmentInformation1.mmAuthorisedProxy);
 				superType_lazy = () -> MeetingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssignedProxyRole.ProxyPerson, com.tools20022.repository.entity.AssignedProxyRole.PreAssignedProxyRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssignedProxyRole.mmProxyPerson, com.tools20022.repository.entity.AssignedProxyRole.mmPreAssignedProxyRole);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Person> getProxyPerson() {
+		return proxyPerson;
+	}
+
+	public void setProxyPerson(List<com.tools20022.repository.entity.Person> proxyPerson) {
+		this.proxyPerson = proxyPerson;
+	}
+
+	public List<Person> getPreAssignedProxyRole() {
+		return preAssignedProxyRole;
+	}
+
+	public void setPreAssignedProxyRole(List<com.tools20022.repository.entity.Person> preAssignedProxyRole) {
+		this.preAssignedProxyRole = preAssignedProxyRole;
 	}
 }

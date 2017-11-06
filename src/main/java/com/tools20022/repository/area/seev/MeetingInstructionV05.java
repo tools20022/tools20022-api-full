@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -70,24 +71,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#MeetingReference
- * MeetingInstructionV05.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#mmMeetingReference
+ * MeetingInstructionV05.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#FinancialInstrumentIdentification
- * MeetingInstructionV05.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#mmFinancialInstrumentIdentification
+ * MeetingInstructionV05.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#Instruction
- * MeetingInstructionV05.Instruction}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#mmInstruction
+ * MeetingInstructionV05.mmInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#SupplementaryData
- * MeetingInstructionV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#mmSupplementaryData
+ * MeetingInstructionV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#identifier
- * MeetingInstructionV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.004.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingInstructionV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MeetingReference7 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -131,22 +131,23 @@ public class MeetingInstructionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#MeetingReference
-	 * MeetingInstructionV04.MeetingReference}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#mmMeetingReference
+	 * MeetingInstructionV04.mmMeetingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.MeetingReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.mmMeetingReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference7.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Identifies the security for which the meeting is organised.
 	 * <p>
@@ -172,22 +173,23 @@ public class MeetingInstructionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#SecurityIdentification
-	 * MeetingInstructionV04.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#mmSecurityIdentification
+	 * MeetingInstructionV04.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the security for which the meeting is organised.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.SecurityIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.mmSecurityIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
 		}
 	};
+	protected List<Instruction3> instruction;
 	/**
 	 * Identifies the position of the instructing party and the action that they
 	 * want to take.
@@ -214,21 +216,22 @@ public class MeetingInstructionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#Instruction
-	 * MeetingInstructionV04.Instruction}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#mmInstruction
+	 * MeetingInstructionV04.mmInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Instruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Instr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Identifies the position of the instructing party and the action that they want to take.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.Instruction;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.mmInstruction;
 			minOccurs = 1;
 			complexType_lazy = () -> Instruction3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -255,7 +258,7 @@ public class MeetingInstructionV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,33 +266,6 @@ public class MeetingInstructionV05 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "004";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -304,11 +280,50 @@ public class MeetingInstructionV05 {
 				rootElement = "Document";
 				xmlTag = "MtgInstr";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV05.MeetingReference, com.tools20022.repository.area.seev.MeetingInstructionV05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionV05.Instruction, com.tools20022.repository.area.seev.MeetingInstructionV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV05.mmMeetingReference, com.tools20022.repository.area.seev.MeetingInstructionV05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionV05.mmInstruction, com.tools20022.repository.area.seev.MeetingInstructionV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "004";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MeetingReference7 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference7 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public List<Instruction3> getInstruction() {
+		return instruction;
+	}
+
+	public void setInstruction(List<Instruction3> instruction) {
+		this.instruction = instruction;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -36,8 +36,9 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Identification1#Identification
- * Identification1.Identification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification1#mmIdentification
+ * Identification1.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,115 +50,115 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01#QueryReference
- * SecuritiesSettlementTransactionAuditTrailReportV01.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01#mmQueryReference
+ * SecuritiesSettlementTransactionAuditTrailReportV01.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdviceV01.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#mmRequestReference
+ * SecuritiesSettlementConditionModificationStatusAdviceV01.mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdviceV02.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02#mmRequestReference
+ * SecuritiesSettlementConditionModificationStatusAdviceV02.mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdviceV03.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03#mmRequestReference
+ * SecuritiesSettlementConditionModificationStatusAdviceV03.mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdviceV04.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04#mmRequestReference
+ * SecuritiesSettlementConditionModificationStatusAdviceV04.mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#CorporateActionEventIdentification
- * IntraPositionMovementInstructionV01.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#mmCorporateActionEventIdentification
+ * IntraPositionMovementInstructionV01.mmCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02#CorporateActionEventIdentification
- * IntraPositionMovementInstructionV02.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02#mmCorporateActionEventIdentification
+ * IntraPositionMovementInstructionV02.mmCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementAllegementRemovalAdviceV02.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementTransactionAllegementNotificationV01.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV02#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV02#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementTransactionAllegementNotificationV02.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#ConfirmationReference
- * SecuritiesSettlementTransactionReversalAdviceV01.ConfirmationReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdviceV01.mmConfirmationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV02#ConfirmationReference
- * SecuritiesSettlementTransactionReversalAdviceV02.ConfirmationReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV02#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdviceV02.mmConfirmationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#QueryReference
- * SecuritiesStatusOrStatementQueryStatusAdviceV01.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#mmQueryReference
+ * SecuritiesStatusOrStatementQueryStatusAdviceV01.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02#QueryReference
- * SecuritiesStatusOrStatementQueryStatusAdviceV02.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02#mmQueryReference
+ * SecuritiesStatusOrStatementQueryStatusAdviceV02.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#CancellationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmCancellationRequestReference
  * SecuritiesTransactionCancellationRequestStatusAdviceV01.
- * CancellationRequestReference}</li>
+ * mmCancellationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV02#CancellationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV02#mmCancellationRequestReference
  * SecuritiesTransactionCancellationRequestStatusAdviceV02.
- * CancellationRequestReference}</li>
+ * mmCancellationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementAllegementRemovalAdviceV03.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV03#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV03#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementTransactionAllegementNotificationV03.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV03#ConfirmationReference
- * SecuritiesSettlementTransactionReversalAdviceV03.ConfirmationReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV03#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdviceV03.mmConfirmationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#CancellationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#mmCancellationRequestReference
  * SecuritiesTransactionCancellationRequestStatusAdviceV03.
- * CancellationRequestReference}</li>
+ * mmCancellationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03#CorporateActionEventIdentification
- * IntraPositionMovementInstructionV03.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03#mmCorporateActionEventIdentification
+ * IntraPositionMovementInstructionV03.mmCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01#ModificationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01#mmModificationRequestReference
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.
- * ModificationRequestReference}</li>
+ * mmModificationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementTransactionAllegementNotificationV04.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04#ConfirmationReference
- * SecuritiesSettlementTransactionReversalAdviceV04.ConfirmationReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdviceV04.mmConfirmationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdviceV05.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05#mmRequestReference
+ * SecuritiesSettlementConditionModificationStatusAdviceV05.mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02#ModificationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02#mmModificationRequestReference
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.
- * ModificationRequestReference}</li>
+ * mmModificationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#CancellationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#mmCancellationRequestReference
  * SecuritiesTransactionCancellationRequestStatusAdviceV04.
- * CancellationRequestReference}</li>
+ * mmCancellationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdviceV06.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06#mmRequestReference
+ * SecuritiesSettlementConditionModificationStatusAdviceV06.mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03#ModificationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03#mmModificationRequestReference
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.
- * ModificationRequestReference}</li>
+ * mmModificationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02#QueryReference
- * SecuritiesSettlementTransactionAuditTrailReportV02.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02#mmQueryReference
+ * SecuritiesSettlementTransactionAuditTrailReportV02.mmQueryReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -172,6 +173,7 @@ import java.util.function.Supplier;
 public class Identification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identifier of a document, message or transaction.
 	 * <p>
@@ -204,17 +206,17 @@ public class Identification1 {
 	 * definition} = "Unique identifier of a document, message or transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Identification1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
+			componentContext_lazy = () -> Identification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of a document, message or transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -222,36 +224,38 @@ public class Identification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification1.Identification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification1.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.mmQueryReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02.mmRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03.mmRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04.mmRequestReference,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmCorporateActionEventIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02.mmCorporateActionEventIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV02.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmConfirmationReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV02.mmConfirmationReference, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmQueryReference,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02.mmQueryReference,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmCancellationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV02.mmCancellationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV03.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV03.mmConfirmationReference,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.mmCancellationRequestReference,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmCorporateActionEventIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmModificationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmConfirmationReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05.mmRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmModificationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.mmCancellationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06.mmRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmModificationRequestReference,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmQueryReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.QueryReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.RequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02.RequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03.RequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04.RequestReference,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.CorporateActionEventIdentification, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02.CorporateActionEventIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV02.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.ConfirmationReference, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV02.ConfirmationReference,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.QueryReference, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02.QueryReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.CancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV02.CancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV03.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV03.ConfirmationReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.CancellationRequestReference,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.CorporateActionEventIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.ModificationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.ConfirmationReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05.RequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.ModificationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.CancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06.RequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.ModificationRequestReference,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.QueryReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -265,5 +269,13 @@ public class Identification1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

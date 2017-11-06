@@ -40,18 +40,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnTransactionCopy1#MessageHeader
- * ReturnTransactionCopy1.MessageHeader}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnTransactionCopy1#mmMessageHeader
+ * ReturnTransactionCopy1.mmMessageHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnTransactionCopy1#ReportOrError
- * ReturnTransactionCopy1.ReportOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnTransactionCopy1#mmReportOrError
+ * ReturnTransactionCopy1.mmReportOrError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReturnTransactionCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageHeader5 messageHeader;
 	/**
 	 * Common business identification for the message.
 	 * <p>
@@ -93,7 +94,7 @@ public class ReturnTransactionCopy1 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageHeader = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReturnTransactionCopy1.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class ReturnTransactionCopy1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageHeader";
 			definition = "Common business identification for the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MessageHeader5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 		}
 	};
+	protected TransactionReportOrError2Choice reportOrError;
 	/**
 	 * Reports on transactions.
 	 * <p>
@@ -134,7 +136,7 @@ public class ReturnTransactionCopy1 {
 	 * definition} = "Reports on transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReturnTransactionCopy1.mmObject();
 			isDerived = false;
@@ -142,23 +144,39 @@ public class ReturnTransactionCopy1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportOrError";
 			definition = "Reports on transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionReportOrError2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TransactionReportOrError2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnTransactionCopy1.MessageHeader, com.tools20022.repository.msg.ReturnTransactionCopy1.ReportOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnTransactionCopy1.mmMessageHeader, com.tools20022.repository.msg.ReturnTransactionCopy1.mmReportOrError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnTransactionCopy1";
 				definition = "The ReturnTransaction message is sent by the transaction administrator to a member of the system.\r\nIt is used to provide information on transactions and booked entries held at the transaction administrator.\r\nThe Return Transaction message can be sent as a response to a related GetTransaction message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageHeader5 getMessageHeader() {
+		return messageHeader;
+	}
+
+	public void setMessageHeader(com.tools20022.repository.msg.MessageHeader5 messageHeader) {
+		this.messageHeader = messageHeader;
+	}
+
+	public TransactionReportOrError2Choice getReportOrError() {
+		return reportOrError;
+	}
+
+	public void setReportOrError(TransactionReportOrError2Choice reportOrError) {
+		this.reportOrError = reportOrError;
 	}
 }

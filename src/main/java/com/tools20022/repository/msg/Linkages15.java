@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages15#MessageNumber
- * Linkages15.MessageNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages15#Reference
- * Linkages15.Reference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages15#mmMessageNumber
+ * Linkages15.mmMessageNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages15#mmReference
+ * Linkages15.mmReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,27 +49,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01#References
- * SecuritiesTradeConfirmationCancellationV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01#mmReferences
+ * SecuritiesTradeConfirmationCancellationV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#References
- * SecuritiesTradeConfirmationResponseV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmReferences
+ * SecuritiesTradeConfirmationResponseV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#References
- * SecuritiesTradeConfirmationV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#mmReferences
+ * SecuritiesTradeConfirmationV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#References
- * SecuritiesTradeConfirmationV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#mmReferences
+ * SecuritiesTradeConfirmationV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#References
- * SecuritiesTradeConfirmationV03.References}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#mmReferences
+ * SecuritiesTradeConfirmationV03.mmReferences}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Linkages15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber4Choice messageNumber;
 	/**
 	 * Message type number/message identifier of the message referenced in the
 	 * linkage sequence.
@@ -112,7 +113,7 @@ public class Linkages15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages15.mmObject();
 			isDerived = false;
@@ -120,12 +121,13 @@ public class Linkages15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber4Choice.mmObject();
 		}
 	};
+	protected IdentificationReference8Choice reference;
 	/**
 	 * Reference to the linked transaction.
 	 * <p>
@@ -157,36 +159,52 @@ public class Linkages15 {
 	 * definition} = "Reference to the linked transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages15.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
+			componentContext_lazy = () -> Linkages15.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IdentificationReference8Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IdentificationReference8Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages15.MessageNumber, com.tools20022.repository.msg.Linkages15.Reference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages15.mmMessageNumber, com.tools20022.repository.msg.Linkages15.mmReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.mmReferences,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmReferences, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmReferences,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmReferences, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmReferences);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.References,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.References, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.References,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.References, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.References);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Linkages15";
 				definition = "Information related to a linked transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber4Choice getMessageNumber() {
+		return messageNumber;
+	}
+
+	public void setMessageNumber(DocumentNumber4Choice messageNumber) {
+		this.messageNumber = messageNumber;
+	}
+
+	public IdentificationReference8Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(IdentificationReference8Choice reference) {
+		this.reference = reference;
 	}
 }

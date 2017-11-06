@@ -32,27 +32,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.EventTypeCode EventTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code#Put
- * EventType1Code.Put}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code#Call
- * EventType1Code.Call}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code#Tender
- * EventType1Code.Tender}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code#Activation
- * EventType1Code.Activation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code#mmPut
+ * EventType1Code.mmPut}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code#mmCall
+ * EventType1Code.mmCall}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code#mmTender
+ * EventType1Code.mmTender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventType1Code#Inactivation
- * EventType1Code.Inactivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventType1Code#mmActivation
+ * EventType1Code.mmActivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventType1Code#SinkingFundCall
- * EventType1Code.SinkingFundCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventType1Code#mmInactivation
+ * EventType1Code.mmInactivation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventType1Code#mmSinkingFundCall
+ * EventType1Code.mmSinkingFundCall}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +89,7 @@ public class EventType1Code extends EventTypeCode {
 	 * name} = "Put"</li>
 	 * </ul>
 	 */
-	public static final MMCode Put = new MMCode() {
+	public static final MMCode mmPut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
@@ -111,7 +112,7 @@ public class EventType1Code extends EventTypeCode {
 	 * name} = "Call"</li>
 	 * </ul>
 	 */
-	public static final MMCode Call = new MMCode() {
+	public static final MMCode mmCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
@@ -134,7 +135,7 @@ public class EventType1Code extends EventTypeCode {
 	 * name} = "Tender"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tender = new MMCode() {
+	public static final MMCode mmTender = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
@@ -157,7 +158,7 @@ public class EventType1Code extends EventTypeCode {
 	 * name} = "Activation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Activation = new MMCode() {
+	public static final MMCode mmActivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activation";
@@ -180,7 +181,7 @@ public class EventType1Code extends EventTypeCode {
 	 * name} = "Inactivation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Inactivation = new MMCode() {
+	public static final MMCode mmInactivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactivation";
@@ -203,7 +204,7 @@ public class EventType1Code extends EventTypeCode {
 	 * name} = "SinkingFundCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode SinkingFundCall = new MMCode() {
+	public static final MMCode mmSinkingFundCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SinkingFundCall";
@@ -214,13 +215,13 @@ public class EventType1Code extends EventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PUT1");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventType1Code";
 				definition = "Identifies the type of event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventType1Code.Put, com.tools20022.repository.codeset.EventType1Code.Call, com.tools20022.repository.codeset.EventType1Code.Tender,
-						com.tools20022.repository.codeset.EventType1Code.Activation, com.tools20022.repository.codeset.EventType1Code.Inactivation, com.tools20022.repository.codeset.EventType1Code.SinkingFundCall);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventType1Code.mmPut, com.tools20022.repository.codeset.EventType1Code.mmCall, com.tools20022.repository.codeset.EventType1Code.mmTender,
+						com.tools20022.repository.codeset.EventType1Code.mmActivation, com.tools20022.repository.codeset.EventType1Code.mmInactivation, com.tools20022.repository.codeset.EventType1Code.mmSinkingFundCall);
 				trace_lazy = () -> EventTypeCode.mmObject();
 			}
 		});

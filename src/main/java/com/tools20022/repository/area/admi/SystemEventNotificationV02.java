@@ -62,15 +62,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventNotificationV02#EventInformation
- * SystemEventNotificationV02.EventInformation}</li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventNotificationV02#mmEventInformation
+ * SystemEventNotificationV02.mmEventInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.admi.SystemEventNotificationV02#identifier
- * SystemEventNotificationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code admi.004.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemEventNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Event2 eventInformation;
 	/**
 	 * Detailed information about a system event.
 	 * <p>
@@ -107,42 +106,15 @@ public class SystemEventNotificationV02 {
 	 * definition} = "Detailed information about a system event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EventInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEventInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventInformation";
 			definition = "Detailed information about a system event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Event2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "admi"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "admi";
-			messageFunctionality = "004";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -156,10 +128,25 @@ public class SystemEventNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "SysEvtNtfctn";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventNotificationV02.EventInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.admi.SystemEventNotificationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventNotificationV02.mmEventInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "admi";
+						messageFunctionality = "004";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Event2 getEventInformation() {
+		return eventInformation;
+	}
+
+	public void setEventInformation(Event2 eventInformation) {
+		this.eventInformation = eventInformation;
 	}
 }

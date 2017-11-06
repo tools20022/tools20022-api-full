@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeFundInformation1#GuaranteeFundAccount
- * GuaranteeFundInformation1.GuaranteeFundAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeFundInformation1#mmGuaranteeFundAccount
+ * GuaranteeFundInformation1.mmGuaranteeFundAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeFundInformation1#GuaranteeFundAccountOwner
- * GuaranteeFundInformation1.GuaranteeFundAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeFundInformation1#mmGuaranteeFundAccountOwner
+ * GuaranteeFundInformation1.mmGuaranteeFundAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GuaranteeFundInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount24 guaranteeFundAccount;
 	/**
 	 * Guarantee fund account identifier.
 	 * <p>
@@ -83,7 +84,7 @@ public class GuaranteeFundInformation1 {
 	 * definition} = "Guarantee fund account identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GuaranteeFundAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuaranteeFundAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GuaranteeFundInformation1.mmObject();
 			isDerived = false;
@@ -91,12 +92,13 @@ public class GuaranteeFundInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundAccount";
 			definition = "Guarantee fund account identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification9 guaranteeFundAccountOwner;
 	/**
 	 * Owner identification of the guarantee fund.
 	 * <p>
@@ -124,7 +126,7 @@ public class GuaranteeFundInformation1 {
 	 * definition} = "Owner identification of the guarantee fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GuaranteeFundAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuaranteeFundAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GuaranteeFundInformation1.mmObject();
 			isDerived = false;
@@ -132,23 +134,39 @@ public class GuaranteeFundInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundAccountOwner";
 			definition = "Owner identification of the guarantee fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeFundInformation1.GuaranteeFundAccount, com.tools20022.repository.msg.GuaranteeFundInformation1.GuaranteeFundAccountOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeFundInformation1.mmGuaranteeFundAccount, com.tools20022.repository.msg.GuaranteeFundInformation1.mmGuaranteeFundAccountOwner);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GuaranteeFundInformation1";
 				definition = "Owner and account number of the guarantee fund.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount24 getGuaranteeFundAccount() {
+		return guaranteeFundAccount;
+	}
+
+	public void setGuaranteeFundAccount(com.tools20022.repository.msg.CashAccount24 guaranteeFundAccount) {
+		this.guaranteeFundAccount = guaranteeFundAccount;
+	}
+
+	public FinancialInstitutionIdentification9 getGuaranteeFundAccountOwner() {
+		return guaranteeFundAccountOwner;
+	}
+
+	public void setGuaranteeFundAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 guaranteeFundAccountOwner) {
+		this.guaranteeFundAccountOwner = guaranteeFundAccountOwner;
 	}
 }

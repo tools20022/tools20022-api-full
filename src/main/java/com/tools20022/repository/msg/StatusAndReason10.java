@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason10#AffirmationStatus
- * StatusAndReason10.AffirmationStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason10#mmAffirmationStatus
+ * StatusAndReason10.mmAffirmationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason10#UnaffirmedReason
- * StatusAndReason10.UnaffirmedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason10#mmUnaffirmedReason
+ * StatusAndReason10.mmUnaffirmedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason10#AdditionalReasonInformation
- * StatusAndReason10.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason10#mmAdditionalReasonInformation
+ * StatusAndReason10.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,15 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#Status
- * SecuritiesTradeConfirmationResponseV01.Status}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmStatus
+ * SecuritiesTradeConfirmationResponseV01.mmStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusAndReason10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AffirmationStatus7Choice affirmationStatus;
 	/**
 	 * Status of affirmation of a trade.
 	 * <p>
@@ -88,8 +89,8 @@ public class StatusAndReason10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#AffirmationStatus
-	 * SecuritiesTradeStatus.AffirmationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmAffirmationStatus
+	 * SecuritiesTradeStatus.mmAffirmationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class StatusAndReason10 {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AffirmationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAffirmationStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> StatusAndReason10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.AffirmationStatus;
 			isDerived = false;
 			xmlTag = "AffirmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Status of affirmation of a trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AffirmationStatus7Choice.mmObject();
 		}
 	};
+	protected UnaffirmedReason2Choice unaffirmedReason;
 	/**
 	 * Specifies the reason why the instruction has an unaffirmed status.
 	 * <p>
@@ -151,7 +153,7 @@ public class StatusAndReason10 {
 	 * "Specifies the reason why the instruction has an unaffirmed status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnaffirmedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnaffirmedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusAndReason10.mmObject();
 			isDerived = false;
@@ -159,11 +161,12 @@ public class StatusAndReason10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnaffirmedReason";
 			definition = "Specifies the reason why the instruction has an unaffirmed status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnaffirmedReason2Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Provides additional information about the reason in narrative form.
 	 * <p>
@@ -176,8 +179,8 @@ public class StatusAndReason10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,17 +200,17 @@ public class StatusAndReason10 {
 	 * "Provides additional information about the reason in narrative form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> StatusAndReason10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the reason in narrative form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -215,16 +218,40 @@ public class StatusAndReason10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason10.AffirmationStatus, com.tools20022.repository.msg.StatusAndReason10.UnaffirmedReason,
-						com.tools20022.repository.msg.StatusAndReason10.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason10.mmAffirmationStatus, com.tools20022.repository.msg.StatusAndReason10.mmUnaffirmedReason,
+						com.tools20022.repository.msg.StatusAndReason10.mmAdditionalReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.Status);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason10";
 				definition = "Provides details related to the status of the order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AffirmationStatus7Choice getAffirmationStatus() {
+		return affirmationStatus;
+	}
+
+	public void setAffirmationStatus(AffirmationStatus7Choice affirmationStatus) {
+		this.affirmationStatus = affirmationStatus;
+	}
+
+	public UnaffirmedReason2Choice getUnaffirmedReason() {
+		return unaffirmedReason;
+	}
+
+	public void setUnaffirmedReason(UnaffirmedReason2Choice unaffirmedReason) {
+		this.unaffirmedReason = unaffirmedReason;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

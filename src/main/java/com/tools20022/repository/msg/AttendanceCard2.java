@@ -36,12 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AttendanceCard2#AttendanceCardLabelling
- * AttendanceCard2.AttendanceCardLabelling}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AttendanceCard2#DeliveryMethod
- * AttendanceCard2.DeliveryMethod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AttendanceCard2#OtherAddress
- * AttendanceCard2.OtherAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.AttendanceCard2#mmAttendanceCardLabelling
+ * AttendanceCard2.mmAttendanceCardLabelling}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AttendanceCard2#mmDeliveryMethod
+ * AttendanceCard2.mmDeliveryMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AttendanceCard2#mmOtherAddress
+ * AttendanceCard2.mmOtherAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AttendanceCard2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max105Text attendanceCardLabelling;
 	/**
 	 * Information to be indicated on the attendance card.
 	 * <p>
@@ -77,8 +79,8 @@ public class AttendanceCard2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AttendanceCard#AttendanceCardLabelling
-	 * AttendanceCard.AttendanceCardLabelling}</li>
+	 * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmAttendanceCardLabelling
+	 * AttendanceCard.mmAttendanceCardLabelling}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +99,21 @@ public class AttendanceCard2 {
 	 * definition} = "Information to be indicated on the attendance card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceCardLabelling = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceCardLabelling = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmAttendanceCardLabelling;
 			componentContext_lazy = () -> AttendanceCard2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AttendanceCard.AttendanceCardLabelling;
 			isDerived = false;
 			xmlTag = "AttndncCardLbllg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceCardLabelling";
 			definition = "Information to be indicated on the attendance card.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected DeliveryPlace1Code deliveryMethod;
 	/**
 	 * Specifies where the attendance card must be delivered.
 	 * <p>
@@ -124,8 +127,8 @@ public class AttendanceCard2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AttendanceCard#DeliveryMethod
-	 * AttendanceCard.DeliveryMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.AttendanceCard#mmDeliveryMethod
+	 * AttendanceCard.mmDeliveryMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +147,21 @@ public class AttendanceCard2 {
 	 * definition} = "Specifies where the attendance card must be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmDeliveryMethod;
 			componentContext_lazy = () -> AttendanceCard2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AttendanceCard.DeliveryMethod;
 			isDerived = false;
 			xmlTag = "DlvryMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryMethod";
 			definition = "Specifies where the attendance card must be delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryPlace1Code.mmObject();
 		}
 	};
+	protected NameAndAddress9 otherAddress;
 	/**
 	 * Name and address of a party.
 	 * <p>
@@ -169,8 +173,8 @@ public class AttendanceCard2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -189,34 +193,58 @@ public class AttendanceCard2 {
 	 * definition} = "Name and address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherAddress = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AttendanceCard2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "OthrAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAddress";
 			definition = "Name and address of a party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> NameAndAddress9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AttendanceCard2.AttendanceCardLabelling, com.tools20022.repository.msg.AttendanceCard2.DeliveryMethod,
-						com.tools20022.repository.msg.AttendanceCard2.OtherAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AttendanceCard2.mmAttendanceCardLabelling, com.tools20022.repository.msg.AttendanceCard2.mmDeliveryMethod,
+						com.tools20022.repository.msg.AttendanceCard2.mmOtherAddress);
 				trace_lazy = () -> AttendanceCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AttendanceCard2";
 				definition = "Specifies details related to the attendance card.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max105Text getAttendanceCardLabelling() {
+		return attendanceCardLabelling;
+	}
+
+	public void setAttendanceCardLabelling(Max105Text attendanceCardLabelling) {
+		this.attendanceCardLabelling = attendanceCardLabelling;
+	}
+
+	public DeliveryPlace1Code getDeliveryMethod() {
+		return deliveryMethod;
+	}
+
+	public void setDeliveryMethod(DeliveryPlace1Code deliveryMethod) {
+		this.deliveryMethod = deliveryMethod;
+	}
+
+	public NameAndAddress9 getOtherAddress() {
+		return otherAddress;
+	}
+
+	public void setOtherAddress(com.tools20022.repository.msg.NameAndAddress9 otherAddress) {
+		this.otherAddress = otherAddress;
 	}
 }

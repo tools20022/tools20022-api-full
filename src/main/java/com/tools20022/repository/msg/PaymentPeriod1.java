@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod1#Code
- * PaymentPeriod1.Code}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod1#NumberOfDays
- * PaymentPeriod1.NumberOfDays}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod1#mmCode
+ * PaymentPeriod1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod1#mmNumberOfDays
+ * PaymentPeriod1.mmNumberOfDays}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentTime1Code code;
 	/**
 	 * Code for the payment.
 	 * <p>
@@ -74,8 +75,8 @@ public class PaymentPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#PaymentTime
-	 * PaymentTerms.PaymentTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentTime
+	 * PaymentTerms.mmPaymentTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class PaymentPeriod1 {
 	 * definition} = "Code for the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmPaymentTime;
 			componentContext_lazy = () -> PaymentPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.PaymentTime;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Code for the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTime1Code.mmObject();
 		}
 	};
+	protected Number numberOfDays;
 	/**
 	 * Number of days after which the payment must be effected.
 	 * <p>
@@ -119,8 +121,8 @@ public class PaymentPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#NumberOfDays
-	 * DateTimePeriod.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmNumberOfDays
+	 * DateTimePeriod.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,17 +140,17 @@ public class PaymentPeriod1 {
 	 * definition} = "Number of days after which the payment must be effected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> PaymentPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.NumberOfDays;
 			isDerived = false;
 			xmlTag = "NbOfDays";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Number of days after which the payment must be effected.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -156,14 +158,30 @@ public class PaymentPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentPeriod1.Code, com.tools20022.repository.msg.PaymentPeriod1.NumberOfDays);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentPeriod1.mmCode, com.tools20022.repository.msg.PaymentPeriod1.mmNumberOfDays);
 				trace_lazy = () -> PaymentTerms.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentPeriod1";
 				definition = "Specifies the payment terms by means of a code and a period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentTime1Code getCode() {
+		return code;
+	}
+
+	public void setCode(PaymentTime1Code code) {
+		this.code = code;
+	}
+
+	public Number getNumberOfDays() {
+		return numberOfDays;
+	}
+
+	public void setNumberOfDays(Number numberOfDays) {
+		this.numberOfDays = numberOfDays;
 	}
 }

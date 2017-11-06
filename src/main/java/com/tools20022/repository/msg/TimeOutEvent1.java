@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TimeOutEvent1#Type
- * TimeOutEvent1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TimeOutEvent1#Description
- * TimeOutEvent1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimeOutEvent1#mmType
+ * TimeOutEvent1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimeOutEvent1#mmDescription
+ * TimeOutEvent1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TimeOutEvent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TimeOut1Code type;
 	/**
 	 * Specifies in coded form the reason for the time-out notification.
 	 * <p>
@@ -84,7 +85,7 @@ public class TimeOutEvent1 {
 	 * "Specifies in coded form the reason for the time-out notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TimeOutEvent1.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class TimeOutEvent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies in coded form the reason for the time-out notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TimeOut1Code.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Additional information on the reason for the time-out.
 	 * <p>
@@ -123,7 +125,7 @@ public class TimeOutEvent1 {
 	 * definition} = "Additional information on the reason for the time-out."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TimeOutEvent1.mmObject();
 			isDerived = false;
@@ -131,8 +133,8 @@ public class TimeOutEvent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Additional information on the reason for the time-out.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -140,13 +142,29 @@ public class TimeOutEvent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeOutEvent1.Type, com.tools20022.repository.msg.TimeOutEvent1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeOutEvent1.mmType, com.tools20022.repository.msg.TimeOutEvent1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TimeOutEvent1";
 				definition = "Describes the time-out reason.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TimeOut1Code getType() {
+		return type;
+	}
+
+	public void setType(TimeOut1Code type) {
+		this.type = type;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

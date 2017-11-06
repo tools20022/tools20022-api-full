@@ -40,14 +40,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#IntermediaryAgentRole
- * IntermediaryAgentRole.IntermediaryAgentRole}</li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmIntermediaryAgentRole
+ * IntermediaryAgentRole.mmIntermediaryAgentRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#NextParty
- * IntermediaryAgentRole.NextParty}</li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmNextParty
+ * IntermediaryAgentRole.mmNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#Position
- * IntermediaryAgentRole.Position}</li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmPosition
+ * IntermediaryAgentRole.mmPosition}</li>
  * </ul>
  * </li>
  * <li>
@@ -55,11 +55,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#IntermediaryAgentRole
- * IntermediaryAgentRole.IntermediaryAgentRole}</li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmIntermediaryAgentRole
+ * IntermediaryAgentRole.mmIntermediaryAgentRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#NextParty
- * IntermediaryAgentRole.NextParty}</li>
+ * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmNextParty
+ * IntermediaryAgentRole.mmNextParty}</li>
  * </ul>
  * </li>
  * <li>
@@ -67,11 +67,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation#Intermediary
- * PaymentComplementaryInformation.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation#mmIntermediary
+ * PaymentComplementaryInformation.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#IntermediaryAgent
- * RequestGroupInformation1.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmIntermediaryAgent
+ * RequestGroupInformation1.mmIntermediaryAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -80,8 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntermediaryAgentRole extends PaymentPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected IntermediaryAgentRole intermediaryAgentRole;
 	/**
 	 * Specifies the settlement party which is followed by another party.
 	 * <p>
@@ -105,8 +106,8 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#NextParty
-	 * IntermediaryAgentRole.NextParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmNextParty
+	 * IntermediaryAgentRole.mmNextParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -132,20 +133,21 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * "Specifies the settlement party which is followed by another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd IntermediaryAgentRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIntermediaryAgentRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IntermediaryAgentRole";
 			definition = "Specifies the settlement party which is followed by another party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.NextParty;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmNextParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
 		}
 	};
+	protected IntermediaryAgentRole nextParty;
 	/**
 	 * Next intermediary in the payment.
 	 * <p>
@@ -154,8 +156,8 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#IntermediaryAgentRole
-	 * IntermediaryAgentRole.IntermediaryAgentRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.IntermediaryAgentRole#mmIntermediaryAgentRole
+	 * IntermediaryAgentRole.mmIntermediaryAgentRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -180,20 +182,21 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * definition} = "Next intermediary in the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd NextParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNextParty = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NextParty";
 			definition = "Next intermediary in the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.IntermediaryAgentRole;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmIntermediaryAgentRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
 		}
 	};
+	protected Number position;
 	/**
 	 * Number used to show the relative position of an intermediary in the
 	 * payment.
@@ -222,15 +225,15 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Position = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPosition = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Position";
 			definition = "Number used to show the relative position of an intermediary in the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -238,17 +241,41 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntermediaryAgentRole";
 				definition = "Agent between the debtor's agent and the creditor's agent. There can be several intermediary agents specified for the execution of a payment.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntermediaryAgentRole.IntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole.NextParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentComplementaryInformation.Intermediary, com.tools20022.repository.msg.RequestGroupInformation1.IntermediaryAgent);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntermediaryAgentRole.mmIntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole.mmNextParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentComplementaryInformation.mmIntermediary, com.tools20022.repository.msg.RequestGroupInformation1.mmIntermediaryAgent);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntermediaryAgentRole.IntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole.NextParty,
-						com.tools20022.repository.entity.IntermediaryAgentRole.Position);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntermediaryAgentRole.mmIntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole.mmNextParty,
+						com.tools20022.repository.entity.IntermediaryAgentRole.mmPosition);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IntermediaryAgentRole getIntermediaryAgentRole() {
+		return intermediaryAgentRole;
+	}
+
+	public void setIntermediaryAgentRole(com.tools20022.repository.entity.IntermediaryAgentRole intermediaryAgentRole) {
+		this.intermediaryAgentRole = intermediaryAgentRole;
+	}
+
+	public IntermediaryAgentRole getNextParty() {
+		return nextParty;
+	}
+
+	public void setNextParty(com.tools20022.repository.entity.IntermediaryAgentRole nextParty) {
+		this.nextParty = nextParty;
+	}
+
+	public Number getPosition() {
+		return position;
+	}
+
+	public void setPosition(Number position) {
+		this.position = position;
 	}
 }

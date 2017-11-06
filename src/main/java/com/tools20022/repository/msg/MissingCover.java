@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MissingCover#MissingCoverIndication
- * MissingCover.MissingCoverIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.MissingCover#mmMissingCoverIndication
+ * MissingCover.mmMissingCoverIndication}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#MissingCover
- * ClaimNonReceipt.MissingCover}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#mmMissingCover
+ * ClaimNonReceipt.mmMissingCover}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MissingCover {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator missingCoverIndication;
 	/**
 	 * Indicates whether or not the claim is related to a missing cover.
 	 * <p>
@@ -83,8 +84,8 @@ public class MissingCover {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#MissingCoverIndication
-	 * PaymentInvestigationCase.MissingCoverIndication}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmMissingCoverIndication
+	 * PaymentInvestigationCase.mmMissingCoverIndication}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,17 +104,17 @@ public class MissingCover {
 	 * "Indicates whether or not the claim is related to a missing cover."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MissingCoverIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMissingCoverIndication = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmMissingCoverIndication;
 			componentContext_lazy = () -> MissingCover.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.MissingCoverIndication;
 			isDerived = false;
 			xmlTag = "MssngCoverIndctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCoverIndication";
 			definition = "Indicates whether or not the claim is related to a missing cover.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -121,15 +122,23 @@ public class MissingCover {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover.MissingCoverIndication);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover.mmMissingCoverIndication);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceipt.mmMissingCover);
 				trace_lazy = () -> PaymentInvestigationCase.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceipt.MissingCover);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MissingCover";
 				definition = "Indicates that the claim for non receipt is effectively a missing cover.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getMissingCoverIndication() {
+		return missingCoverIndication;
+	}
+
+	public void setMissingCoverIndication(YesNoIndicator missingCoverIndication) {
+		this.missingCoverIndication = missingCoverIndication;
 	}
 }

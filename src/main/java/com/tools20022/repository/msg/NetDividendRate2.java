@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NetDividendRate2#RateType
- * NetDividendRate2.RateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetDividendRate2#Amount
- * NetDividendRate2.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetDividendRate2#mmRateType
+ * NetDividendRate2.mmRateType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetDividendRate2#mmAmount
+ * NetDividendRate2.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetDividendRate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NetDividendRateType1FormatChoice rateType;
 	/**
 	 * Type of underlying securities to which the rate is related, eg,
 	 * underlying security for which an interest is paid.
@@ -77,8 +78,8 @@ public class NetDividendRate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#RateType
-	 * Dividend.RateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmRateType
+	 * Dividend.mmRateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class NetDividendRate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmRateType;
 			componentContext_lazy = () -> NetDividendRate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.RateType;
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Type of underlying securities to which the rate is related, eg, underlying security for which an interest is paid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NetDividendRateType1FormatChoice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Value expressed as an amount.
 	 * <p>
@@ -126,8 +128,8 @@ public class NetDividendRate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#NetDividend
-	 * Dividend.NetDividend}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmNetDividend
+	 * Dividend.mmNetDividend}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class NetDividendRate2 {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmNetDividend;
 			componentContext_lazy = () -> NetDividendRate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.NetDividend;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value expressed as an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class NetDividendRate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetDividendRate2.RateType, com.tools20022.repository.msg.NetDividendRate2.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetDividendRate2.mmRateType, com.tools20022.repository.msg.NetDividendRate2.mmAmount);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRate2";
 				definition = "Cash dividend amount per equity after deductions or allowances have been made.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NetDividendRateType1FormatChoice getRateType() {
+		return rateType;
+	}
+
+	public void setRateType(NetDividendRateType1FormatChoice rateType) {
+		this.rateType = rateType;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

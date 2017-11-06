@@ -36,26 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Header23#FormatVersion
- * Header23.FormatVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header23#mmFormatVersion
+ * Header23.mmFormatVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Header23#ExchangeIdentification
- * Header23.ExchangeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header23#InitiatingParty
- * Header23.InitiatingParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header23#RecipientParty
- * Header23.RecipientParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header23#MessageSequenceNumber
- * Header23.MessageSequenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header23#CreationDateTime
- * Header23.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.Header23#mmExchangeIdentification
+ * Header23.mmExchangeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header23#mmInitiatingParty
+ * Header23.mmInitiatingParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header23#mmRecipientParty
+ * Header23.mmRecipientParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Header23#mmMessageSequenceNumber
+ * Header23.mmMessageSequenceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header23#mmCreationDateTime
+ * Header23.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Header23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max6Text formatVersion;
 	/**
 	 * Version of file format.
 	 * <p>
@@ -100,11 +102,11 @@ public class Header23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Header3#FormatVersion
-	 * Header3.FormatVersion}</li>
+	 * {@linkplain com.tools20022.repository.msg.Header3#mmFormatVersion
+	 * Header3.mmFormatVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FormatVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormatVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header23.mmObject();
 			isDerived = false;
@@ -112,12 +114,13 @@ public class Header23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatVersion";
 			definition = "Version of file format.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.FormatVersion;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.mmFormatVersion;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected Max3NumericText exchangeIdentification;
 	/**
 	 * Unique identification of an exchange occurrence.
 	 * <p>
@@ -146,11 +149,11 @@ public class Header23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Header3#ExchangeIdentification
-	 * Header3.ExchangeIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Header3#mmExchangeIdentification
+	 * Header3.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header23.mmObject();
 			isDerived = false;
@@ -158,12 +161,13 @@ public class Header23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.ExchangeIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.mmExchangeIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected GenericIdentification32 initiatingParty;
 	/**
 	 * Unique identification of the partner that has initiated the exchange.
 	 * <p>
@@ -192,11 +196,11 @@ public class Header23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Header3#InitiatingParty
-	 * Header3.InitiatingParty}</li>
+	 * {@linkplain com.tools20022.repository.msg.Header3#mmInitiatingParty
+	 * Header3.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Header23.mmObject();
 			isDerived = false;
@@ -204,13 +208,14 @@ public class Header23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.InitiatingParty;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.mmInitiatingParty;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected GenericIdentification32 recipientParty;
 	/**
 	 * Unique identification of the partner that is the recipient of the
 	 * exchange.
@@ -241,11 +246,11 @@ public class Header23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Header3#RecipientParty
-	 * Header3.RecipientParty}</li>
+	 * {@linkplain com.tools20022.repository.msg.Header3#mmRecipientParty
+	 * Header3.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Header23.mmObject();
 			isDerived = false;
@@ -253,13 +258,14 @@ public class Header23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.RecipientParty;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.mmRecipientParty;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected Number messageSequenceNumber;
 	/**
 	 * Sequence of this message in a conversation in integer.
 	 * <p>
@@ -286,7 +292,7 @@ public class Header23 {
 	 * definition} = "Sequence of this message in a conversation in integer. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header23.mmObject();
 			isDerived = false;
@@ -294,11 +300,12 @@ public class Header23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageSequenceNumber";
 			definition = "Sequence of this message in a conversation in integer. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the file or message was created.
 	 * <p>
@@ -326,11 +333,11 @@ public class Header23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Header3#CreationDateTime
-	 * Header3.CreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.Header3#mmCreationDateTime
+	 * Header3.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header23.mmObject();
 			isDerived = false;
@@ -338,9 +345,9 @@ public class Header23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the file or message was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.CreationDateTime;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Header3.mmCreationDateTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -348,9 +355,9 @@ public class Header23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header23.FormatVersion, com.tools20022.repository.msg.Header23.ExchangeIdentification, com.tools20022.repository.msg.Header23.InitiatingParty,
-						com.tools20022.repository.msg.Header23.RecipientParty, com.tools20022.repository.msg.Header23.MessageSequenceNumber, com.tools20022.repository.msg.Header23.CreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header23.mmFormatVersion, com.tools20022.repository.msg.Header23.mmExchangeIdentification, com.tools20022.repository.msg.Header23.mmInitiatingParty,
+						com.tools20022.repository.msg.Header23.mmRecipientParty, com.tools20022.repository.msg.Header23.mmMessageSequenceNumber, com.tools20022.repository.msg.Header23.mmCreationDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Header23";
 				definition = "Set of characteristics related to the transfer of transactions.";
@@ -358,5 +365,53 @@ public class Header23 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max6Text getFormatVersion() {
+		return formatVersion;
+	}
+
+	public void setFormatVersion(Max6Text formatVersion) {
+		this.formatVersion = formatVersion;
+	}
+
+	public Max3NumericText getExchangeIdentification() {
+		return exchangeIdentification;
+	}
+
+	public void setExchangeIdentification(Max3NumericText exchangeIdentification) {
+		this.exchangeIdentification = exchangeIdentification;
+	}
+
+	public GenericIdentification32 getInitiatingParty() {
+		return initiatingParty;
+	}
+
+	public void setInitiatingParty(com.tools20022.repository.msg.GenericIdentification32 initiatingParty) {
+		this.initiatingParty = initiatingParty;
+	}
+
+	public GenericIdentification32 getRecipientParty() {
+		return recipientParty;
+	}
+
+	public void setRecipientParty(com.tools20022.repository.msg.GenericIdentification32 recipientParty) {
+		this.recipientParty = recipientParty;
+	}
+
+	public Number getMessageSequenceNumber() {
+		return messageSequenceNumber;
+	}
+
+	public void setMessageSequenceNumber(Number messageSequenceNumber) {
+		this.messageSequenceNumber = messageSequenceNumber;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice#Indicator
- * CentralCounterPartyEligibility1Choice.Indicator}</li>
+ * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice#mmIndicator
+ * CentralCounterPartyEligibility1Choice.mmIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice#Proprietary
- * CentralCounterPartyEligibility1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice#mmProprietary
+ * CentralCounterPartyEligibility1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CentralCounterPartyEligibility1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator indicator;
 	/**
 	 * Specifies whether the settlement transaction is CCP (Central
 	 * Counterparty) eligible.
@@ -84,8 +85,8 @@ public class CentralCounterPartyEligibility1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Settlement#CentralCounterpartyEligibilityIndicator
-	 * Settlement.CentralCounterpartyEligibilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Settlement#mmCentralCounterpartyEligibilityIndicator
+	 * Settlement.mmCentralCounterpartyEligibilityIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,27 +109,28 @@ public class CentralCounterPartyEligibility1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice#Indicator
-	 * CentralCounterPartyEligibility4Choice.Indicator}</li>
+	 * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice#mmIndicator
+	 * CentralCounterPartyEligibility4Choice.mmIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmCentralCounterpartyEligibilityIndicator;
 			componentContext_lazy = () -> CentralCounterPartyEligibility1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.CentralCounterpartyEligibilityIndicator;
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the settlement transaction is CCP (Central Counterparty) eligible.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice.Indicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice.mmIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Central counterparty eligibility information expressed as a proprietary
 	 * code.
@@ -143,8 +145,8 @@ public class CentralCounterPartyEligibility1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Settlement#CentralCounterpartyEligibilityIndicator
-	 * Settlement.CentralCounterpartyEligibilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Settlement#mmCentralCounterpartyEligibilityIndicator
+	 * Settlement.mmCentralCounterpartyEligibilityIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,24 +169,24 @@ public class CentralCounterPartyEligibility1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice#Proprietary
-	 * CentralCounterPartyEligibility4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice#mmProprietary
+	 * CentralCounterPartyEligibility4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmCentralCounterpartyEligibilityIndicator;
 			componentContext_lazy = () -> CentralCounterPartyEligibility1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.CentralCounterpartyEligibilityIndicator;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Central counterparty eligibility information expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -192,9 +194,9 @@ public class CentralCounterPartyEligibility1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.Indicator, com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.mmIndicator, com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.mmProprietary);
 				trace_lazy = () -> Settlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CentralCounterPartyEligibility1Choice";
 				definition = "Choice of format for the CCP eligibility information.";
@@ -202,5 +204,21 @@ public class CentralCounterPartyEligibility1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(YesNoIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

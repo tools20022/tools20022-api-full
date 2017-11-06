@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#ClaimOrCompensation
- * AdditionalBusinessProcess6Code.ClaimOrCompensation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmClaimOrCompensation
+ * AdditionalBusinessProcess6Code.mmClaimOrCompensation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#NotificationOfReversal
- * AdditionalBusinessProcess6Code.NotificationOfReversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmNotificationOfReversal
+ * AdditionalBusinessProcess6Code.mmNotificationOfReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#TaxRefund
- * AdditionalBusinessProcess6Code.TaxRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmTaxRefund
+ * AdditionalBusinessProcess6Code.mmTaxRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#PartialMandatoryPutRedemption
- * AdditionalBusinessProcess6Code.PartialMandatoryPutRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmPartialMandatoryPutRedemption
+ * AdditionalBusinessProcess6Code.mmPartialMandatoryPutRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#PartialPreFunding
- * AdditionalBusinessProcess6Code.PartialPreFunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmPartialPreFunding
+ * AdditionalBusinessProcess6Code.mmPartialPreFunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#FullPrefunding
- * AdditionalBusinessProcess6Code.FullPrefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmFullPrefunding
+ * AdditionalBusinessProcess6Code.mmFullPrefunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#RequiredAction
- * AdditionalBusinessProcess6Code.RequiredAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmRequiredAction
+ * AdditionalBusinessProcess6Code.mmRequiredAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -103,15 +103,15 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#ClaimOrCompensation
-	 * AdditionalBusinessProcess2Code.ClaimOrCompensation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#mmClaimOrCompensation
+	 * AdditionalBusinessProcess2Code.mmClaimOrCompensation}</li>
 	 * </ul>
 	 */
-	public static final MMCode ClaimOrCompensation = new MMCode() {
+	public static final MMCode mmClaimOrCompensation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimOrCompensation";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.ClaimOrCompensation;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmClaimOrCompensation;
 			owner_lazy = () -> AdditionalBusinessProcess6Code.mmObject();
 		}
 	};
@@ -132,15 +132,15 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#NotificationOfReversal
-	 * AdditionalBusinessProcess2Code.NotificationOfReversal}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#mmNotificationOfReversal
+	 * AdditionalBusinessProcess2Code.mmNotificationOfReversal}</li>
 	 * </ul>
 	 */
-	public static final MMCode NotificationOfReversal = new MMCode() {
+	public static final MMCode mmNotificationOfReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationOfReversal";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.NotificationOfReversal;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmNotificationOfReversal;
 			owner_lazy = () -> AdditionalBusinessProcess6Code.mmObject();
 		}
 	};
@@ -161,15 +161,15 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#TaxRefund
-	 * AdditionalBusinessProcess2Code.TaxRefund}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#mmTaxRefund
+	 * AdditionalBusinessProcess2Code.mmTaxRefund}</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxRefund = new MMCode() {
+	public static final MMCode mmTaxRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRefund";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.TaxRefund;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmTaxRefund;
 			owner_lazy = () -> AdditionalBusinessProcess6Code.mmObject();
 		}
 	};
@@ -189,7 +189,7 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	 * name} = "PartialMandatoryPutRedemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialMandatoryPutRedemption = new MMCode() {
+	public static final MMCode mmPartialMandatoryPutRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMandatoryPutRedemption";
@@ -212,7 +212,7 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	 * name} = "PartialPreFunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialPreFunding = new MMCode() {
+	public static final MMCode mmPartialPreFunding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPreFunding";
@@ -235,7 +235,7 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	 * name} = "FullPrefunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullPrefunding = new MMCode() {
+	public static final MMCode mmFullPrefunding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrefunding";
@@ -258,7 +258,7 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	 * name} = "RequiredAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequiredAction = new MMCode() {
+	public static final MMCode mmRequiredAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredAction";
@@ -269,16 +269,16 @@ public class AdditionalBusinessProcess6Code extends AdditionalBusinessProcessCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLAI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess6Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				previousVersion_lazy = () -> AdditionalBusinessProcess2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.ClaimOrCompensation, com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.NotificationOfReversal,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.TaxRefund, com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.PartialMandatoryPutRedemption,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.PartialPreFunding, com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.FullPrefunding,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.RequiredAction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmClaimOrCompensation, com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmNotificationOfReversal,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmTaxRefund, com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmPartialMandatoryPutRedemption,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmPartialPreFunding, com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmFullPrefunding,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmRequiredAction);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason23Choice#Code
- * RejectionAndRepairReason23Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason23Choice#mmCode
+ * RejectionAndRepairReason23Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason23Choice#Proprietary
- * RejectionAndRepairReason23Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason23Choice#mmProprietary
+ * RejectionAndRepairReason23Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectionAndRepairReason23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectionReason29Code code;
 	/**
 	 * Specifies the reason why the instruction/request has a repair or
 	 * rejection status.
@@ -82,8 +83,8 @@ public class RejectionAndRepairReason23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,25 +106,26 @@ public class RejectionAndRepairReason23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason14Choice#Code
-	 * RejectionAndRepairReason14Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason14Choice#mmCode
+	 * RejectionAndRepairReason14Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> RejectionAndRepairReason23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction/request has a repair or rejection status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason14Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason14Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason29Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Specifies the reason why the instruction/request has a repair or
 	 * rejection status.
@@ -138,8 +140,8 @@ public class RejectionAndRepairReason23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,22 +163,22 @@ public class RejectionAndRepairReason23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason14Choice#Proprietary
-	 * RejectionAndRepairReason14Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason14Choice#mmProprietary
+	 * RejectionAndRepairReason14Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> RejectionAndRepairReason23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the instruction/request has a repair or rejection status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason14Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason14Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -184,9 +186,9 @@ public class RejectionAndRepairReason23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionAndRepairReason23Choice.Code, com.tools20022.repository.choice.RejectionAndRepairReason23Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionAndRepairReason23Choice.mmCode, com.tools20022.repository.choice.RejectionAndRepairReason23Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionAndRepairReason23Choice";
 				definition = "Choice of format for the rejection or repair reason.";
@@ -194,5 +196,21 @@ public class RejectionAndRepairReason23Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectionReason29Code getCode() {
+		return code;
+	}
+
+	public void setCode(RejectionReason29Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

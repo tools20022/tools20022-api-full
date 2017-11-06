@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Person;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,11 +40,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#MoneyLaunderingCheckOrExtendedRule
- * InvestmentAccountOwnershipInformation2.MoneyLaunderingCheckOrExtendedRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmMoneyLaunderingCheckOrExtendedRule
+ * InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheckOrExtendedRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#OrganisationOrIndividualPerson
- * InvestmentAccountOwnershipInformation2.OrganisationOrIndividualPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmOrganisationOrIndividualPerson
+ * InvestmentAccountOwnershipInformation2.mmOrganisationOrIndividualPerson}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,32 +52,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#Organisation
- * InvestmentAccountOwnershipInformation2.Organisation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmOrganisation
+ * InvestmentAccountOwnershipInformation2.mmOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#IndividualPerson
- * InvestmentAccountOwnershipInformation2.IndividualPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmIndividualPerson
+ * InvestmentAccountOwnershipInformation2.mmIndividualPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#MoneyLaunderingCheck
- * InvestmentAccountOwnershipInformation2.MoneyLaunderingCheck}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmMoneyLaunderingCheck
+ * InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheck}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#ExtendedMoneyLaunderingCheck
- * InvestmentAccountOwnershipInformation2.ExtendedMoneyLaunderingCheck}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmExtendedMoneyLaunderingCheck
+ * InvestmentAccountOwnershipInformation2.mmExtendedMoneyLaunderingCheck}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#OwnershipBeneficiaryRate
- * InvestmentAccountOwnershipInformation2.OwnershipBeneficiaryRate}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmOwnershipBeneficiaryRate
+ * InvestmentAccountOwnershipInformation2.mmOwnershipBeneficiaryRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#ClientIdentification
- * InvestmentAccountOwnershipInformation2.ClientIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmClientIdentification
+ * InvestmentAccountOwnershipInformation2.mmClientIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#ExtendedPartyRole
- * InvestmentAccountOwnershipInformation2.ExtendedPartyRole}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmExtendedPartyRole
+ * InvestmentAccountOwnershipInformation2.mmExtendedPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#FiscalExemption
- * InvestmentAccountOwnershipInformation2.FiscalExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmFiscalExemption
+ * InvestmentAccountOwnershipInformation2.mmFiscalExemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#SignatoryRightIndicator
- * InvestmentAccountOwnershipInformation2.SignatoryRightIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmSignatoryRightIndicator
+ * InvestmentAccountOwnershipInformation2.mmSignatoryRightIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -86,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccountOwnershipInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Organisation2 organisation;
 	/**
 	 * Organised structure that is set up for a particular purpose, eg, a
 	 * business, government body, department, charity, or financial institution.
@@ -134,21 +136,22 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Organisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
 			xmlTag = "Org";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
 			definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
+	protected IndividualPerson5 individualPerson;
 	/**
 	 * Human entity, as distinguished from a corporate entity (which is
 	 * sometimes referred to as an 'artificial person').
@@ -182,21 +185,22 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualPerson";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson5.mmObject();
 		}
 	};
+	protected OldMoneyLaunderingCheck1Code moneyLaunderingCheck;
 	/**
 	 * Status of an identity check to prevent money laundering. This includes
 	 * the counter-terrorism check.
@@ -211,8 +215,8 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#MoneyLaunderingCheck
-	 * Party.MoneyLaunderingCheck}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmMoneyLaunderingCheck
+	 * Party.mmMoneyLaunderingCheck}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -233,20 +237,21 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MoneyLaunderingCheck = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMoneyLaunderingCheck = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.MoneyLaunderingCheck;
 			isDerived = false;
 			xmlTag = "MnyLndrgChck";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyLaunderingCheck";
 			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OldMoneyLaunderingCheck1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedMoneyLaunderingCheck;
 	/**
 	 * Status of an identity check to prevent money laundering. This includes
 	 * the counter-terrorism check.
@@ -261,8 +266,8 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#MoneyLaunderingCheck
-	 * Party.MoneyLaunderingCheck}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmMoneyLaunderingCheck
+	 * Party.mmMoneyLaunderingCheck}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,20 +288,21 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedMoneyLaunderingCheck = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedMoneyLaunderingCheck = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.MoneyLaunderingCheck;
 			isDerived = false;
 			xmlTag = "XtndedMnyLndrgChck";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedMoneyLaunderingCheck";
 			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected PercentageRate ownershipBeneficiaryRate;
 	/**
 	 * Percentage of ownership or of beneficial ownership of the shares/units in
 	 * the account. All subsequent subscriptions and or redemptions will be
@@ -312,8 +318,8 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#OwnershipBeneficiaryRate
-	 * InvestmentAccountPartyRole.OwnershipBeneficiaryRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmOwnershipBeneficiaryRate
+	 * InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -334,20 +340,21 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OwnershipBeneficiaryRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOwnershipBeneficiaryRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.OwnershipBeneficiaryRate;
 			isDerived = false;
 			xmlTag = "OwnrshBnfcryRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipBeneficiaryRate";
 			definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions and or redemptions will be allocated using the same percentage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Max35Text clientIdentification;
 	/**
 	 * Unique identification, as assigned by an organisation, to unambiguously
 	 * identify a party.
@@ -361,8 +368,8 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -383,20 +390,21 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "ClntId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Extended350Code extendedPartyRole;
 	/**
 	 * Role of the party in the activity.
 	 * <p>
@@ -410,8 +418,8 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RolePlayer#Role
-	 * RolePlayer.Role}</li>
+	 * {@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
+	 * RolePlayer.mmRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -430,20 +438,21 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * definition} = "Role of the party in the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedPartyRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedPartyRole = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmRole;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.Role;
 			isDerived = false;
 			xmlTag = "XtndedPtyRole";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedPartyRole";
 			definition = "Role of the party in the activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected YesNoIndicator fiscalExemption;
 	/**
 	 * Indicates whether an owner of an investment account may benefit from a
 	 * fiscal exemption or amnesty for instance for declaring overseas
@@ -459,8 +468,8 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#FiscalExemption
-	 * InvestmentFundTax.FiscalExemption}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmFiscalExemption
+	 * InvestmentFundTax.mmFiscalExemption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -481,20 +490,21 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FiscalExemption = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFiscalExemption = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmFiscalExemption;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.FiscalExemption;
 			isDerived = false;
 			xmlTag = "FsclXmptn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalExemption";
 			definition = "Indicates whether an owner of an investment account may benefit from a fiscal exemption or amnesty for instance for declaring overseas investments.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator signatoryRightIndicator;
 	/**
 	 * Indicates whether the signature of the account owner is required to
 	 * authorise transactions on the account.
@@ -509,8 +519,8 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#SignatoryRightIndicator
-	 * SignatureCondition.SignatoryRightIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignatoryRightIndicator
+	 * SignatureCondition.mmSignatoryRightIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -531,17 +541,17 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignatoryRightIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignatoryRightIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmSignatoryRightIndicator;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.SignatoryRightIndicator;
 			isDerived = false;
 			xmlTag = "SgntryRghtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatoryRightIndicator";
 			definition = "Indicates whether the signature of the account owner is required to authorise transactions on the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -555,11 +565,11 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation2.MoneyLaunderingCheck}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheck}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#ExtendedMoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation2.ExtendedMoneyLaunderingCheck}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmExtendedMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation2.mmExtendedMoneyLaunderingCheck}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -579,14 +589,14 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor MoneyLaunderingCheckOrExtendedRule = new MMXor() {
+	public static final MMXor mmMoneyLaunderingCheckOrExtendedRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyLaunderingCheckOrExtendedRule";
 			definition = "Either MoneyLaunderingCheck or ExtendedMoneyLaunderingCheck may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.ExtendedMoneyLaunderingCheck);
 			messageComponent_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmExtendedMoneyLaunderingCheck);
 		}
 	};
 	/**
@@ -598,11 +608,11 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#Organisation
-	 * InvestmentAccountOwnershipInformation2.Organisation}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmOrganisation
+	 * InvestmentAccountOwnershipInformation2.mmOrganisation}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#IndividualPerson
-	 * InvestmentAccountOwnershipInformation2.IndividualPerson}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmIndividualPerson
+	 * InvestmentAccountOwnershipInformation2.mmIndividualPerson}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -621,33 +631,105 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * "Either Organisation or IndividualPerson must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor OrganisationOrIndividualPerson = new MMXor() {
+	public static final MMXor mmOrganisationOrIndividualPerson = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationOrIndividualPerson";
 			definition = "Either Organisation or IndividualPerson must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.Organisation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.IndividualPerson);
 			messageComponent_lazy = () -> InvestmentAccountOwnershipInformation2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmOrganisation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmIndividualPerson);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.Organisation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.IndividualPerson,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.MoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.ExtendedMoneyLaunderingCheck,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.OwnershipBeneficiaryRate, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.ClientIdentification,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.ExtendedPartyRole, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.FiscalExemption,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.SignatoryRightIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmOrganisation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmIndividualPerson,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmExtendedMoneyLaunderingCheck,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmOwnershipBeneficiaryRate, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmClientIdentification,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmExtendedPartyRole, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmFiscalExemption,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmSignatoryRightIndicator);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountOwnershipInformation2";
 				definition = "Characteristics of the ownership of an investment account.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.MoneyLaunderingCheckOrExtendedRule,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.OrganisationOrIndividualPerson);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheckOrExtendedRule,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmOrganisationOrIndividualPerson);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Organisation2 getOrganisation() {
+		return organisation;
+	}
+
+	public void setOrganisation(com.tools20022.repository.msg.Organisation2 organisation) {
+		this.organisation = organisation;
+	}
+
+	public IndividualPerson5 getIndividualPerson() {
+		return individualPerson;
+	}
+
+	public void setIndividualPerson(com.tools20022.repository.msg.IndividualPerson5 individualPerson) {
+		this.individualPerson = individualPerson;
+	}
+
+	public OldMoneyLaunderingCheck1Code getMoneyLaunderingCheck() {
+		return moneyLaunderingCheck;
+	}
+
+	public void setMoneyLaunderingCheck(OldMoneyLaunderingCheck1Code moneyLaunderingCheck) {
+		this.moneyLaunderingCheck = moneyLaunderingCheck;
+	}
+
+	public Extended350Code getExtendedMoneyLaunderingCheck() {
+		return extendedMoneyLaunderingCheck;
+	}
+
+	public void setExtendedMoneyLaunderingCheck(Extended350Code extendedMoneyLaunderingCheck) {
+		this.extendedMoneyLaunderingCheck = extendedMoneyLaunderingCheck;
+	}
+
+	public PercentageRate getOwnershipBeneficiaryRate() {
+		return ownershipBeneficiaryRate;
+	}
+
+	public void setOwnershipBeneficiaryRate(PercentageRate ownershipBeneficiaryRate) {
+		this.ownershipBeneficiaryRate = ownershipBeneficiaryRate;
+	}
+
+	public Max35Text getClientIdentification() {
+		return clientIdentification;
+	}
+
+	public void setClientIdentification(Max35Text clientIdentification) {
+		this.clientIdentification = clientIdentification;
+	}
+
+	public Extended350Code getExtendedPartyRole() {
+		return extendedPartyRole;
+	}
+
+	public void setExtendedPartyRole(Extended350Code extendedPartyRole) {
+		this.extendedPartyRole = extendedPartyRole;
+	}
+
+	public YesNoIndicator getFiscalExemption() {
+		return fiscalExemption;
+	}
+
+	public void setFiscalExemption(YesNoIndicator fiscalExemption) {
+		this.fiscalExemption = fiscalExemption;
+	}
+
+	public YesNoIndicator getSignatoryRightIndicator() {
+		return signatoryRightIndicator;
+	}
+
+	public void setSignatoryRightIndicator(YesNoIndicator signatoryRightIndicator) {
+		this.signatoryRightIndicator = signatoryRightIndicator;
 	}
 }

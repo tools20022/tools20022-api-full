@@ -35,17 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateType1Choice#Code
- * DateType1Choice.Code}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateType1Choice#Proprietary
- * DateType1Choice.Proprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateType1Choice#mmCode
+ * DateType1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateType1Choice#mmProprietary
+ * DateType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementDate2Code code;
 	/**
 	 * Date identified using a code.
 	 * <p>
@@ -89,7 +91,7 @@ public class DateType1Choice {
 	 * definition} = "Date identified using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateType1Choice.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class DateType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Date identified using a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDate2Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Date identified using a data source scheme.
 	 * <p>
@@ -129,7 +132,7 @@ public class DateType1Choice {
 	 * definition} = "Date identified using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateType1Choice.mmObject();
 			isDerived = false;
@@ -137,23 +140,39 @@ public class DateType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Date identified using a data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateType1Choice.Code, com.tools20022.repository.choice.DateType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateType1Choice.mmCode, com.tools20022.repository.choice.DateType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateType1Choice";
 				definition = "Choice between a code and or a data source scheme to determine the settlement date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementDate2Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettlementDate2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.TradeTransactionStatusAndReason1;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -63,9 +64,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#ReportStatusOrIndividualTransactionStatusRule
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmReportStatusOrIndividualTransactionStatusRule
  * RegulatoryTransactionReportStatusV01.
- * ReportStatusOrIndividualTransactionStatusRule}</li>
+ * mmReportStatusOrIndividualTransactionStatusRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -75,24 +76,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#Identification
- * RegulatoryTransactionReportStatusV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmIdentification
+ * RegulatoryTransactionReportStatusV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#ReportingInstitution
- * RegulatoryTransactionReportStatusV01.ReportingInstitution}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmReportingInstitution
+ * RegulatoryTransactionReportStatusV01.mmReportingInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#ReportStatus
- * RegulatoryTransactionReportStatusV01.ReportStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmReportStatus
+ * RegulatoryTransactionReportStatusV01.mmReportStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#IndividualTransactionStatus
- * RegulatoryTransactionReportStatusV01.IndividualTransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmIndividualTransactionStatus
+ * RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#identifier
- * RegulatoryTransactionReportStatusV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,11 +118,11 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#ReportStatus
-	 * RegulatoryTransactionReportStatusV01.ReportStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmReportStatus
+	 * RegulatoryTransactionReportStatusV01.mmReportStatus}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#IndividualTransactionStatus
-	 * RegulatoryTransactionReportStatusV01.IndividualTransactionStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmIndividualTransactionStatus
+	 * RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -143,16 +142,17 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReportStatusOrIndividualTransactionStatusRule = new MMXor() {
+	public static final MMXor mmReportStatusOrIndividualTransactionStatusRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatusOrIndividualTransactionStatusRule";
 			definition = "Either ReportStatus or IndividualTransactionStatus must be present, but not both.";
 			messageDefinition_lazy = () -> RegulatoryTransactionReportStatusV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.ReportStatus,
-					com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.IndividualTransactionStatus);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus,
+					com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
 		}
 	};
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification of the RegulatoryTransactionReportStatus document.
 	 * <p>
@@ -177,17 +177,18 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * "Identification of the RegulatoryTransactionReportStatus document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the RegulatoryTransactionReportStatus document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected PartyIdentification23Choice reportingInstitution;
 	/**
 	 * Identification of the firm that is legally responsible for sending the
 	 * transaction report.
@@ -214,17 +215,18 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportingInstitution = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportingInstitution = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgInstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingInstitution";
 			definition = "Identification of the firm that is legally responsible for sending the transaction report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
 		}
 	};
+	protected ReportStatusAndReason1 reportStatus;
 	/**
 	 * Provides the status of the entire RegulatoryTransactionReport that was
 	 * previously sent by the reporting institution.
@@ -251,17 +253,18 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatus";
 			definition = "Provides the status of the entire RegulatoryTransactionReport that was previously sent by the reporting institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportStatusAndReason1.mmObject();
 		}
 	};
+	protected List<TradeTransactionStatusAndReason1> individualTransactionStatus;
 	/**
 	 * Provides the status of one or more transactions that were previously sent
 	 * within a RegulatoryTransactionReport by the reporting institution.
@@ -288,7 +291,7 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IndividualTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIndividualTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IndvTxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,33 +299,6 @@ public class RegulatoryTransactionReportStatusV01 {
 			definition = "Provides the status of one or more transactions that were previously sent within a RegulatoryTransactionReport by the reporting institution.";
 			minOccurs = 1;
 			complexType_lazy = () -> TradeTransactionStatusAndReason1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "010";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -333,16 +309,55 @@ public class RegulatoryTransactionReportStatusV01 {
 				name = "RegulatoryTransactionReportStatusV01";
 				definition = "Scope\r\nA regulator or an intermediary sends the RegulatoryTransactionReportStatus to a reporting institution to provide the status of a RegulatoryTransactionReport previously sent by the reporting institution.\r\nUsage\r\nThe message definition may be used to provide a status for the entire report or to provide a status at the level of individual transactions within the report. One of the following statuses can be reported:\r\n- Completed, or,\r\n- Pending, or,\r\n- Rejected.\r\nIf the status is rejected, then reason for the rejection must be specified.";
 				messageSet_lazy = () -> Arrays.asList(TransactionRegulatoryReportingISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.ReportStatusOrIndividualTransactionStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatusOrIndividualTransactionStatusRule);
 				rootElement = "Document";
 				xmlTag = "RgltryTxRptStsV01";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.Identification,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.ReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.ReportStatus,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.IndividualTransactionStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIdentification,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "010";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public PartyIdentification23Choice getReportingInstitution() {
+		return reportingInstitution;
+	}
+
+	public void setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
+		this.reportingInstitution = reportingInstitution;
+	}
+
+	public ReportStatusAndReason1 getReportStatus() {
+		return reportStatus;
+	}
+
+	public void setReportStatus(ReportStatusAndReason1 reportStatus) {
+		this.reportStatus = reportStatus;
+	}
+
+	public List<TradeTransactionStatusAndReason1> getIndividualTransactionStatus() {
+		return individualTransactionStatus;
+	}
+
+	public void setIndividualTransactionStatus(List<TradeTransactionStatusAndReason1> individualTransactionStatus) {
+		this.individualTransactionStatus = individualTransactionStatus;
 	}
 }

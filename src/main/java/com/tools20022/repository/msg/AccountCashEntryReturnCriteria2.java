@@ -33,36 +33,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#EntryReferenceIndicator
- * AccountCashEntryReturnCriteria2.EntryReferenceIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmEntryReferenceIndicator
+ * AccountCashEntryReturnCriteria2.mmEntryReferenceIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#AccountTypeIndicator
- * AccountCashEntryReturnCriteria2.AccountTypeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmAccountTypeIndicator
+ * AccountCashEntryReturnCriteria2.mmAccountTypeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#EntryAmountIndicator
- * AccountCashEntryReturnCriteria2.EntryAmountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmEntryAmountIndicator
+ * AccountCashEntryReturnCriteria2.mmEntryAmountIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#AccountCurrencyIndicator
- * AccountCashEntryReturnCriteria2.AccountCurrencyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmAccountCurrencyIndicator
+ * AccountCashEntryReturnCriteria2.mmAccountCurrencyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#EntryStatusIndicator
- * AccountCashEntryReturnCriteria2.EntryStatusIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmEntryStatusIndicator
+ * AccountCashEntryReturnCriteria2.mmEntryStatusIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#EntryDateIndicator
- * AccountCashEntryReturnCriteria2.EntryDateIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmEntryDateIndicator
+ * AccountCashEntryReturnCriteria2.mmEntryDateIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#AccountServicerIndicator
- * AccountCashEntryReturnCriteria2.AccountServicerIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmAccountServicerIndicator
+ * AccountCashEntryReturnCriteria2.mmAccountServicerIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#AccountOwnerIndicator
- * AccountCashEntryReturnCriteria2.AccountOwnerIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountCashEntryReturnCriteria2#mmAccountOwnerIndicator
+ * AccountCashEntryReturnCriteria2.mmAccountOwnerIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountCashEntryReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator entryReferenceIndicator;
 	/**
 	 * Indicates whether the entry reference is requested.
 	 * <p>
@@ -104,7 +105,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the entry reference is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryReferenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryReferenceIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryReferenceIndicator";
 			definition = "Indicates whether the entry reference is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator accountTypeIndicator;
 	/**
 	 * Indicates whether the account type is requested.
 	 * <p>
@@ -145,7 +147,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the account type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountTypeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeIndicator";
 			definition = "Indicates whether the account type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator entryAmountIndicator;
 	/**
 	 * Indicates whether the entry amount is requested.
 	 * <p>
@@ -186,7 +189,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the entry amount is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryAmountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -194,11 +197,12 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountIndicator";
 			definition = "Indicates whether the entry amount is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator accountCurrencyIndicator;
 	/**
 	 * Indicates whether the account currency is requested.
 	 * <p>
@@ -227,7 +231,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the account currency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountCurrencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountCurrencyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -235,11 +239,12 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCurrencyIndicator";
 			definition = "Indicates whether the account currency is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator entryStatusIndicator;
 	/**
 	 * Indicates whether the entry status is requested.
 	 * <p>
@@ -268,7 +273,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the entry status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryStatusIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -276,11 +281,12 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryStatusIndicator";
 			definition = "Indicates whether the entry status is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator entryDateIndicator;
 	/**
 	 * Indicates whether the entry date is requested.
 	 * <p>
@@ -309,7 +315,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the entry date is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryDateIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -317,11 +323,12 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDateIndicator";
 			definition = "Indicates whether the entry date is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator accountServicerIndicator;
 	/**
 	 * Indicates whether the account servicer is requested.
 	 * <p>
@@ -350,7 +357,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the account servicer is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -358,11 +365,12 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIndicator";
 			definition = "Indicates whether the account servicer is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator accountOwnerIndicator;
 	/**
 	 * Indicates whether the account owner is requested.
 	 * <p>
@@ -391,7 +399,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * definition} = "Indicates whether the account owner is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -399,8 +407,8 @@ public class AccountCashEntryReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIndicator";
 			definition = "Indicates whether the account owner is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -408,16 +416,80 @@ public class AccountCashEntryReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.EntryReferenceIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.AccountTypeIndicator,
-						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.EntryAmountIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.AccountCurrencyIndicator,
-						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.EntryStatusIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.EntryDateIndicator,
-						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.AccountServicerIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.AccountOwnerIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryReferenceIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountTypeIndicator,
+						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryAmountIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountCurrencyIndicator,
+						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryStatusIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryDateIndicator,
+						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountServicerIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountOwnerIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountCashEntryReturnCriteria2";
 				definition = "Defines the criteria used to report on the cash entry.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getEntryReferenceIndicator() {
+		return entryReferenceIndicator;
+	}
+
+	public void setEntryReferenceIndicator(RequestedIndicator entryReferenceIndicator) {
+		this.entryReferenceIndicator = entryReferenceIndicator;
+	}
+
+	public RequestedIndicator getAccountTypeIndicator() {
+		return accountTypeIndicator;
+	}
+
+	public void setAccountTypeIndicator(RequestedIndicator accountTypeIndicator) {
+		this.accountTypeIndicator = accountTypeIndicator;
+	}
+
+	public RequestedIndicator getEntryAmountIndicator() {
+		return entryAmountIndicator;
+	}
+
+	public void setEntryAmountIndicator(RequestedIndicator entryAmountIndicator) {
+		this.entryAmountIndicator = entryAmountIndicator;
+	}
+
+	public RequestedIndicator getAccountCurrencyIndicator() {
+		return accountCurrencyIndicator;
+	}
+
+	public void setAccountCurrencyIndicator(RequestedIndicator accountCurrencyIndicator) {
+		this.accountCurrencyIndicator = accountCurrencyIndicator;
+	}
+
+	public RequestedIndicator getEntryStatusIndicator() {
+		return entryStatusIndicator;
+	}
+
+	public void setEntryStatusIndicator(RequestedIndicator entryStatusIndicator) {
+		this.entryStatusIndicator = entryStatusIndicator;
+	}
+
+	public RequestedIndicator getEntryDateIndicator() {
+		return entryDateIndicator;
+	}
+
+	public void setEntryDateIndicator(RequestedIndicator entryDateIndicator) {
+		this.entryDateIndicator = entryDateIndicator;
+	}
+
+	public RequestedIndicator getAccountServicerIndicator() {
+		return accountServicerIndicator;
+	}
+
+	public void setAccountServicerIndicator(RequestedIndicator accountServicerIndicator) {
+		this.accountServicerIndicator = accountServicerIndicator;
+	}
+
+	public RequestedIndicator getAccountOwnerIndicator() {
+		return accountOwnerIndicator;
+	}
+
+	public void setAccountOwnerIndicator(RequestedIndicator accountOwnerIndicator) {
+		this.accountOwnerIndicator = accountOwnerIndicator;
 	}
 }

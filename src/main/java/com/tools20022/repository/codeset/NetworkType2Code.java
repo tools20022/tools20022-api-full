@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * NetworkTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#Sock5
- * NetworkType2Code.Sock5}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#Sock4
- * NetworkType2Code.Sock4}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#HTTP
- * NetworkType2Code.HTTP}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#mmSock5
+ * NetworkType2Code.mmSock5}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#mmSock4
+ * NetworkType2Code.mmSock4}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#mmHTTP
+ * NetworkType2Code.mmHTTP}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 * name} = "Sock5"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sock5 = new MMCode() {
+	public static final MMCode mmSock5 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock5";
@@ -98,7 +98,7 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 * name} = "Sock4"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sock4 = new MMCode() {
+	public static final MMCode mmSock4 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock4";
@@ -121,7 +121,7 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 * name} = "HTTP"</li>
 	 * </ul>
 	 */
-	public static final MMCode HTTP = new MMCode() {
+	public static final MMCode mmHTTP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HTTP";
@@ -132,11 +132,11 @@ public class NetworkType2Code extends NetworkTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetworkType2Code";
 				definition = "Type of proxy.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType2Code.Sock5, com.tools20022.repository.codeset.NetworkType2Code.Sock4, com.tools20022.repository.codeset.NetworkType2Code.HTTP);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType2Code.mmSock5, com.tools20022.repository.codeset.NetworkType2Code.mmSock4, com.tools20022.repository.codeset.NetworkType2Code.mmHTTP);
 				trace_lazy = () -> NetworkTypeCode.mmObject();
 			}
 		});

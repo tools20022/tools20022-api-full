@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OptionFeaturesFormat8SD1#PlaceAndName
- * OptionFeaturesFormat8SD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.OptionFeaturesFormat8SD1#mmPlaceAndName
+ * OptionFeaturesFormat8SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OptionFeaturesFormat8SD1#ProRationType
- * OptionFeaturesFormat8SD1.ProRationType}</li>
+ * {@linkplain com.tools20022.repository.msg.OptionFeaturesFormat8SD1#mmProRationType
+ * OptionFeaturesFormat8SD1.mmProRationType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OptionFeaturesFormat8SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -94,7 +95,7 @@ public class OptionFeaturesFormat8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionFeaturesFormat8SD1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class OptionFeaturesFormat8SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ProrationType1Code proRationType;
 	/**
 	 * Use of pro ration when the corporate action event type code is TEND or
 	 * BIDS.<br>
@@ -139,7 +141,7 @@ public class OptionFeaturesFormat8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProRationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProRationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionFeaturesFormat8SD1.mmObject();
 			isDerived = false;
@@ -147,8 +149,8 @@ public class OptionFeaturesFormat8SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProRationType";
 			definition = "Use of pro ration when the corporate action event type code  is TEND or BIDS.\r\nあん分比例方式の適用有無が「無し」「未定」「非設定」";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProrationType1Code.mmObject();
 		}
 	};
@@ -156,13 +158,29 @@ public class OptionFeaturesFormat8SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionFeaturesFormat8SD1.PlaceAndName, com.tools20022.repository.msg.OptionFeaturesFormat8SD1.ProRationType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionFeaturesFormat8SD1.mmPlaceAndName, com.tools20022.repository.msg.OptionFeaturesFormat8SD1.mmProRationType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionFeaturesFormat8SD1";
 				definition = "Extension to specify the features that may apply to a corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ProrationType1Code getProRationType() {
+		return proRationType;
+	}
+
+	public void setProRationType(ProrationType1Code proRationType) {
+		this.proRationType = proRationType;
 	}
 }

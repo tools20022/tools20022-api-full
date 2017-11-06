@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.msg.EquivalentAmount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountType1Choice#InstructedAmount
- * AmountType1Choice.InstructedAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountType1Choice#mmInstructedAmount
+ * AmountType1Choice.mmInstructedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountType1Choice#EquivalentAmount
- * AmountType1Choice.EquivalentAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountType1Choice#mmEquivalentAmount
+ * AmountType1Choice.mmEquivalentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount instructedAmount;
 	/**
 	 * Amount of money to be moved between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency as ordered by the
@@ -85,8 +87,8 @@ public class AmountType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +109,21 @@ public class AmountType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> AmountType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.\n\nUsage :  Currency of the amount is expressed in the currency (or one of the currencies) of the debtor's account or another currency, eg, pay 1000000 EUR (and debtor's account is is EUR) or pay 1000000 JPY (and debtor's account is in EUR).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected EquivalentAmount equivalentAmount;
 	/**
 	 * Amount of money to be transferred between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency of the debtor's account,
@@ -140,8 +143,8 @@ public class AmountType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#EquivalentAmount
-	 * Payment.EquivalentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmEquivalentAmount
+	 * Payment.mmEquivalentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,33 +165,49 @@ public class AmountType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EquivalentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEquivalentAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmEquivalentAmount;
 			componentContext_lazy = () -> AmountType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.EquivalentAmount;
 			isDerived = false;
 			xmlTag = "EqvtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquivalentAmount";
 			definition = "Amount of money to be transferred between the debtor and creditor, before deduction of charges, expressed in the currency of the debtor's account, and to be transferred into a different currency. \n\nUsage : Currency of the amount is expressed in the currency of the debtor's account, but the amount to be transferred is in another currency. The debtor agent will convert the amount and currency to the to be transferred amount and currency, eg, 'pay equivalent of 100000 EUR in JPY'(and account is in EUR).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.EquivalentAmount.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> EquivalentAmount.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountType1Choice.InstructedAmount, com.tools20022.repository.choice.AmountType1Choice.EquivalentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountType1Choice.mmInstructedAmount, com.tools20022.repository.choice.AmountType1Choice.mmEquivalentAmount);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountType1Choice";
 				definition = "Amount of money to be transferred between the debtor and creditor, expressed in debtor's account currency or converted in another currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getInstructedAmount() {
+		return instructedAmount;
+	}
+
+	public void setInstructedAmount(CurrencyAndAmount instructedAmount) {
+		this.instructedAmount = instructedAmount;
+	}
+
+	public EquivalentAmount getEquivalentAmount() {
+		return equivalentAmount;
+	}
+
+	public void setEquivalentAmount(EquivalentAmount equivalentAmount) {
+		this.equivalentAmount = equivalentAmount;
 	}
 }

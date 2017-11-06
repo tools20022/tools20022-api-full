@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2#EncryptedPINBlock
- * OnLinePIN2.EncryptedPINBlock}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2#PINFormat
- * OnLinePIN2.PINFormat}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2#AdditionalInput
- * OnLinePIN2.AdditionalInput}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2#mmEncryptedPINBlock
+ * OnLinePIN2.mmEncryptedPINBlock}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2#mmPINFormat
+ * OnLinePIN2.mmPINFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2#mmAdditionalInput
+ * OnLinePIN2.mmAdditionalInput}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OnLinePIN2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentInformationType5 encryptedPINBlock;
 	/**
 	 * Encrypted PIN (Personal Identification Number).
 	 * <p>
@@ -102,13 +103,13 @@ public class OnLinePIN2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OnLinePIN3#EncryptedPINBlock
-	 * OnLinePIN3.EncryptedPINBlock}</li>
+	 * {@linkplain com.tools20022.repository.msg.OnLinePIN3#mmEncryptedPINBlock
+	 * OnLinePIN3.mmEncryptedPINBlock}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncryptedPINBlock = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncryptedPINBlock = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OnLinePIN2.mmObject();
 			isDerived = false;
@@ -116,13 +117,14 @@ public class OnLinePIN2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedPINBlock";
 			definition = "Encrypted PIN (Personal Identification Number).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN3.EncryptedPINBlock);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN3.mmEncryptedPINBlock);
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType5.mmObject();
 		}
 	};
+	protected PINFormat2Code pINFormat;
 	/**
 	 * PIN format before encryption.
 	 * <p>
@@ -136,8 +138,8 @@ public class OnLinePIN2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication#PINFormat
-	 * Authentication.PINFormat}</li>
+	 * {@linkplain com.tools20022.repository.entity.Authentication#mmPINFormat
+	 * Authentication.mmPINFormat}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.OnLinePIN2
@@ -156,27 +158,28 @@ public class OnLinePIN2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN3#PINFormat
-	 * OnLinePIN3.PINFormat}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN3#mmPINFormat
+	 * OnLinePIN3.mmPINFormat}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PINFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPINFormat = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmPINFormat;
 			componentContext_lazy = () -> OnLinePIN2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.PINFormat;
 			isDerived = false;
 			xmlTag = "PINFrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINFormat";
 			definition = "PIN format before encryption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN3.PINFormat);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN3.mmPINFormat);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PINFormat2Code.mmObject();
 		}
 	};
+	protected Max35Text additionalInput;
 	/**
 	 * Additional information required to verify the PIN.
 	 * <p>
@@ -204,13 +207,14 @@ public class OnLinePIN2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN3#AdditionalInput
-	 * OnLinePIN3.AdditionalInput}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OnLinePIN3#mmAdditionalInput
+	 * OnLinePIN3.mmAdditionalInput}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInput = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInput = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OnLinePIN2.mmObject();
 			isDerived = false;
@@ -218,9 +222,9 @@ public class OnLinePIN2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInput";
 			definition = "Additional information required to verify the PIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN3.AdditionalInput);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN3.mmAdditionalInput);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -228,16 +232,40 @@ public class OnLinePIN2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN2.EncryptedPINBlock, com.tools20022.repository.msg.OnLinePIN2.PINFormat, com.tools20022.repository.msg.OnLinePIN2.AdditionalInput);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN2.mmEncryptedPINBlock, com.tools20022.repository.msg.OnLinePIN2.mmPINFormat, com.tools20022.repository.msg.OnLinePIN2.mmAdditionalInput);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OnLinePIN2";
 				definition = "Encrypted personal identification number (PIN) and related information.";
-				previousVersion_lazy = () -> OnLinePIN1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(OnLinePIN3.mmObject());
+				previousVersion_lazy = () -> OnLinePIN1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentInformationType5 getEncryptedPINBlock() {
+		return encryptedPINBlock;
+	}
+
+	public void setEncryptedPINBlock(com.tools20022.repository.msg.ContentInformationType5 encryptedPINBlock) {
+		this.encryptedPINBlock = encryptedPINBlock;
+	}
+
+	public PINFormat2Code getPINFormat() {
+		return pINFormat;
+	}
+
+	public void setPINFormat(PINFormat2Code pINFormat) {
+		this.pINFormat = pINFormat;
+	}
+
+	public Max35Text getAdditionalInput() {
+		return additionalInput;
+	}
+
+	public void setAdditionalInput(Max35Text additionalInput) {
+		this.additionalInput = additionalInput;
 	}
 }

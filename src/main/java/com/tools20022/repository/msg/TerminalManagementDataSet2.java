@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet2#Identification
- * TerminalManagementDataSet2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet2#mmIdentification
+ * TerminalManagementDataSet2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet2#SequenceCounter
- * TerminalManagementDataSet2.SequenceCounter}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet2#mmSequenceCounter
+ * TerminalManagementDataSet2.mmSequenceCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet2#Content
- * TerminalManagementDataSet2.Content}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet2#mmContent
+ * TerminalManagementDataSet2.mmContent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalManagementDataSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataSetIdentification2 identification;
 	/**
 	 * Identification of the data set containing the management plan.
 	 * <p>
@@ -101,7 +102,7 @@ public class TerminalManagementDataSet2 {
 	 * "Identification of the data set containing the management plan."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet2.mmObject();
 			isDerived = false;
@@ -109,12 +110,13 @@ public class TerminalManagementDataSet2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the data set containing the management plan.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
 		}
 	};
+	protected Max9NumericText sequenceCounter;
 	/**
 	 * Counter to identify a single data set within the whole transfer.
 	 * <p>
@@ -144,7 +146,7 @@ public class TerminalManagementDataSet2 {
 	 * "Counter to identify a single data set within the whole transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet2.mmObject();
 			isDerived = false;
@@ -152,11 +154,12 @@ public class TerminalManagementDataSet2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Counter to identify a single data set within the whole transfer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected ManagementPlanContent1 content;
 	/**
 	 * Content of the management plan.
 	 * <p>
@@ -183,7 +186,7 @@ public class TerminalManagementDataSet2 {
 	 * definition} = "Content of the management plan."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Content = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet2.mmObject();
 			isDerived = false;
@@ -191,20 +194,20 @@ public class TerminalManagementDataSet2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Content of the management plan.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ManagementPlanContent1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet2.Identification, com.tools20022.repository.msg.TerminalManagementDataSet2.SequenceCounter,
-						com.tools20022.repository.msg.TerminalManagementDataSet2.Content);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet2.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet2.mmSequenceCounter,
+						com.tools20022.repository.msg.TerminalManagementDataSet2.mmContent);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet2";
 				definition = "Data related to the management plan of a point of interaction (POI).";
@@ -212,5 +215,29 @@ public class TerminalManagementDataSet2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataSetIdentification2 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification2 identification) {
+		this.identification = identification;
+	}
+
+	public Max9NumericText getSequenceCounter() {
+		return sequenceCounter;
+	}
+
+	public void setSequenceCounter(Max9NumericText sequenceCounter) {
+		this.sequenceCounter = sequenceCounter;
+	}
+
+	public ManagementPlanContent1 getContent() {
+		return content;
+	}
+
+	public void setContent(com.tools20022.repository.msg.ManagementPlanContent1 content) {
+		this.content = content;
 	}
 }

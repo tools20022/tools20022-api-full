@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData2#ReceiptDateTime
- * RecordTechnicalData2.ReceiptDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData2#mmReceiptDateTime
+ * RecordTechnicalData2.mmReceiptDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData2#CancellationReason
- * RecordTechnicalData2.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData2#mmCancellationReason
+ * RecordTechnicalData2.mmCancellationReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RecordTechnicalData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime receiptDateTime;
 	/**
 	 * Defines the date and time when the report was originally received by the
 	 * national competent authority.
@@ -102,11 +103,11 @@ public class RecordTechnicalData2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RecordTechnicalData1#ReceiptDateTime
-	 * RecordTechnicalData1.ReceiptDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.RecordTechnicalData1#mmReceiptDateTime
+	 * RecordTechnicalData1.mmReceiptDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiptDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiptDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData2.mmObject();
 			isDerived = false;
@@ -114,12 +115,13 @@ public class RecordTechnicalData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptDateTime";
 			definition = "Defines the date and time when the report was originally received by the national competent authority.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData1.ReceiptDateTime;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData1.mmReceiptDateTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CancelledStatusReason15Code cancellationReason;
 	/**
 	 * Specifies the reason for the cancellation the transaction.
 	 * <p>
@@ -149,7 +151,7 @@ public class RecordTechnicalData2 {
 	 * "Specifies the reason for the cancellation the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData2.mmObject();
 			isDerived = false;
@@ -157,8 +159,8 @@ public class RecordTechnicalData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason for the cancellation the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason15Code.mmObject();
 		}
 	};
@@ -166,15 +168,31 @@ public class RecordTechnicalData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData2.ReceiptDateTime, com.tools20022.repository.msg.RecordTechnicalData2.CancellationReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData2.mmReceiptDateTime, com.tools20022.repository.msg.RecordTechnicalData2.mmCancellationReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RecordTechnicalData2";
 				definition = "Instrument specific technical data to support identification.";
-				previousVersion_lazy = () -> RecordTechnicalData1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RecordTechnicalData3.mmObject());
+				previousVersion_lazy = () -> RecordTechnicalData1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getReceiptDateTime() {
+		return receiptDateTime;
+	}
+
+	public void setReceiptDateTime(ISODateTime receiptDateTime) {
+		this.receiptDateTime = receiptDateTime;
+	}
+
+	public CancelledStatusReason15Code getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(CancelledStatusReason15Code cancellationReason) {
+		this.cancellationReason = cancellationReason;
 	}
 }

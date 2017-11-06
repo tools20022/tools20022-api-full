@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.System;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Search for a system and a member of a system.
@@ -37,16 +38,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSearch3#SystemIdentification
- * SystemSearch3.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSearch3#mmSystemIdentification
+ * SystemSearch3.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSearch3#MemberIdentification
- * SystemSearch3.MemberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemSearch3#Country
- * SystemSearch3.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSearch3#mmMemberIdentification
+ * SystemSearch3.mmMemberIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemSearch3#mmCountry
+ * SystemSearch3.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSearch3#AccountIdentification
- * SystemSearch3.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSearch3#mmAccountIdentification
+ * SystemSearch3.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemSearch3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ClearingSystemIdentification3Choice> systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -81,8 +83,8 @@ public class SystemSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +102,21 @@ public class SystemSearch3 {
 	 * definition} = "Identification of a particular cash clearing system. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> SystemSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
 			minOccurs = 0;
-			type_lazy = () -> ClearingSystemIdentification3Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> ClearingSystemIdentification3Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> memberIdentification;
 	/**
 	 * Unique and unambiguous identification of a member within a system,
 	 * assigned using the member identification scheme of the system.
@@ -127,8 +130,8 @@ public class SystemSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +151,21 @@ public class SystemSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMemberIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> SystemSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "MmbId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country in which the system is located.
 	 * <p>
@@ -174,7 +178,8 @@ public class SystemSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,20 +197,21 @@ public class SystemSearch3 {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> SystemSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the system is located.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -219,8 +225,8 @@ public class SystemSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,34 +246,66 @@ public class SystemSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> SystemSearch3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSearch3.SystemIdentification, com.tools20022.repository.msg.SystemSearch3.MemberIdentification,
-						com.tools20022.repository.msg.SystemSearch3.Country, com.tools20022.repository.msg.SystemSearch3.AccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSearch3.mmSystemIdentification, com.tools20022.repository.msg.SystemSearch3.mmMemberIdentification,
+						com.tools20022.repository.msg.SystemSearch3.mmCountry, com.tools20022.repository.msg.SystemSearch3.mmAccountIdentification);
 				trace_lazy = () -> System.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemSearch3";
 				definition = "Search for a system and a member of a system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ClearingSystemIdentification3Choice> getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(List<ClearingSystemIdentification3Choice> systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public List<BranchAndFinancialInstitutionIdentification5> getMemberIdentification() {
+		return memberIdentification;
+	}
+
+	public void setMemberIdentification(List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> memberIdentification) {
+		this.memberIdentification = memberIdentification;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public AccountIdentification4Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
 	}
 }

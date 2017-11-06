@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestorCapacity1Choice#Code
- * InvestorCapacity1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestorCapacity1Choice#mmCode
+ * InvestorCapacity1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestorCapacity1Choice#Proprietary
- * InvestorCapacity1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestorCapacity1Choice#mmProprietary
+ * InvestorCapacity1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestorCapacity1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Eligibility1Code code;
 	/**
 	 * Investor capacity expressed as an ISO 20022 code.
 	 * <p>
@@ -83,8 +84,8 @@ public class InvestorCapacity1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole#Capacity
-	 * InvestorRole.Capacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
+	 * InvestorRole.mmCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,27 +106,28 @@ public class InvestorCapacity1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InvestorCapacity4Choice#Code
-	 * InvestorCapacity4Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorCapacity4Choice#mmCode
+	 * InvestorCapacity4Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmCapacity;
 			componentContext_lazy = () -> InvestorCapacity1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.Capacity;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Investor capacity expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorCapacity4Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorCapacity4Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Investor capacity expressed as a proprietary code.
 	 * <p>
@@ -139,8 +141,8 @@ public class InvestorCapacity1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole#Capacity
-	 * InvestorRole.Capacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
+	 * InvestorRole.mmCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,24 +163,24 @@ public class InvestorCapacity1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InvestorCapacity4Choice#Proprietary
-	 * InvestorCapacity4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorCapacity4Choice#mmProprietary
+	 * InvestorCapacity4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmCapacity;
 			componentContext_lazy = () -> InvestorCapacity1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.Capacity;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Investor capacity expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorCapacity4Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorCapacity4Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -186,9 +188,9 @@ public class InvestorCapacity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorCapacity1Choice.Code, com.tools20022.repository.choice.InvestorCapacity1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorCapacity1Choice.mmCode, com.tools20022.repository.choice.InvestorCapacity1Choice.mmProprietary);
 				trace_lazy = () -> InvestorRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestorCapacity1Choice";
 				definition = "Choice of format for the investor capacity.";
@@ -196,5 +198,21 @@ public class InvestorCapacity1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Eligibility1Code getCode() {
+		return code;
+	}
+
+	public void setCode(Eligibility1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

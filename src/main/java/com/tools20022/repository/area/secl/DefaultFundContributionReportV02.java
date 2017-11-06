@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -69,24 +70,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#ReportParameters
- * DefaultFundContributionReportV02.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#mmReportParameters
+ * DefaultFundContributionReportV02.mmReportParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#ClearingMember
- * DefaultFundContributionReportV02.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#mmClearingMember
+ * DefaultFundContributionReportV02.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#ReportDetails
- * DefaultFundContributionReportV02.ReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#mmReportDetails
+ * DefaultFundContributionReportV02.mmReportDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#SupplementaryData
- * DefaultFundContributionReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#mmSupplementaryData
+ * DefaultFundContributionReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#identifier
- * DefaultFundContributionReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.006.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DefaultFundContributionReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportParameters2 reportParameters;
 	/**
 	 * Provides details about the report such as the report identification, the
 	 * calculation date, the value date.
@@ -128,17 +128,18 @@ public class DefaultFundContributionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameters";
 			definition = "Provides details about the report such as the report identification, the calculation date, the value date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters2.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingMember;
 	/**
 	 * Provides the identification of the account owner, that is the clearing
 	 * member (individual clearing member or general clearing member).
@@ -165,17 +166,18 @@ public class DefaultFundContributionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the account owner, that is the clearing member (individual clearing member or general clearing member).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected List<DefaultFundReport1> reportDetails;
 	/**
 	 * Provides details on the default fund report.
 	 * <p>
@@ -199,7 +201,7 @@ public class DefaultFundContributionReportV02 {
 	 * definition} = "Provides details on the default fund report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,6 +211,7 @@ public class DefaultFundContributionReportV02 {
 			complexType_lazy = () -> DefaultFundReport1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -235,7 +238,7 @@ public class DefaultFundContributionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,33 +246,6 @@ public class DefaultFundContributionReportV02 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "006";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -283,11 +259,50 @@ public class DefaultFundContributionReportV02 {
 				rootElement = "Document";
 				xmlTag = "DfltFndCntrbtnRpt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.DefaultFundContributionReportV02.ReportParameters, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.ClearingMember,
-						com.tools20022.repository.area.secl.DefaultFundContributionReportV02.ReportDetails, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.DefaultFundContributionReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmReportParameters, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmClearingMember,
+						com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmReportDetails, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "006";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportParameters2 getReportParameters() {
+		return reportParameters;
+	}
+
+	public void setReportParameters(ReportParameters2 reportParameters) {
+		this.reportParameters = reportParameters;
+	}
+
+	public PartyIdentification35Choice getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public List<DefaultFundReport1> getReportDetails() {
+		return reportDetails;
+	}
+
+	public void setReportDetails(List<DefaultFundReport1> reportDetails) {
+		this.reportDetails = reportDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

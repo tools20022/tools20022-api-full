@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxIdentificationNumberType1Code#GlobalIntermediaryIdentificationNumber
- * TaxIdentificationNumberType1Code.GlobalIntermediaryIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxIdentificationNumberType1Code#mmGlobalIntermediaryIdentificationNumber
+ * TaxIdentificationNumberType1Code.mmGlobalIntermediaryIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxIdentificationNumberType1Code#TaxIdentificationNumber
- * TaxIdentificationNumberType1Code.TaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxIdentificationNumberType1Code#mmTaxIdentificationNumber
+ * TaxIdentificationNumberType1Code.mmTaxIdentificationNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class TaxIdentificationNumberType1Code extends TaxIdentificationNumberTyp
 	 * name} = "GlobalIntermediaryIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalIntermediaryIdentificationNumber = new MMCode() {
+	public static final MMCode mmGlobalIntermediaryIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalIntermediaryIdentificationNumber";
@@ -98,7 +98,7 @@ public class TaxIdentificationNumberType1Code extends TaxIdentificationNumberTyp
 	 * name} = "TaxIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxIdentificationNumber = new MMCode() {
+	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
@@ -109,12 +109,12 @@ public class TaxIdentificationNumberType1Code extends TaxIdentificationNumberTyp
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxIdentificationNumberType1Code";
 				definition = "Specifies the type of tax identification number.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxIdentificationNumberType1Code.GlobalIntermediaryIdentificationNumber,
-						com.tools20022.repository.codeset.TaxIdentificationNumberType1Code.TaxIdentificationNumber);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxIdentificationNumberType1Code.mmGlobalIntermediaryIdentificationNumber,
+						com.tools20022.repository.codeset.TaxIdentificationNumberType1Code.mmTaxIdentificationNumber);
 				trace_lazy = () -> TaxIdentificationNumberTypeCode.mmObject();
 			}
 		});

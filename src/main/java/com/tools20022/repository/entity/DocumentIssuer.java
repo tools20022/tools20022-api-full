@@ -38,22 +38,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReferredDocumentType1#Issuer
- * ReferredDocumentType1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CreditorReferenceType1#Issuer
- * CreditorReferenceType1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReferredDocumentType2#Issuer
- * ReferredDocumentType2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CreditorReferenceType2#Issuer
- * CreditorReferenceType2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader1#Issuer
- * InvoiceHeader1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GarnishmentType1#Issuer
- * GarnishmentType1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReferredDocumentType4#Issuer
- * ReferredDocumentType4.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#Issuer
- * InvoiceHeader2.Issuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReferredDocumentType1#mmIssuer
+ * ReferredDocumentType1.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditorReferenceType1#mmIssuer
+ * CreditorReferenceType1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReferredDocumentType2#mmIssuer
+ * ReferredDocumentType2.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditorReferenceType2#mmIssuer
+ * CreditorReferenceType2.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmIssuer
+ * InvoiceHeader1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GarnishmentType1#mmIssuer
+ * GarnishmentType1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReferredDocumentType4#mmIssuer
+ * ReferredDocumentType4.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmIssuer
+ * InvoiceHeader2.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -62,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,13 +85,13 @@ public class DocumentIssuer extends DocumentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIssuer";
 				definition = "Party that issues a document such as a bank guarantee or letter of / documentary credit. For instance the inspection company for a trade certificate or the insurance company or its agent for an insurance certificate.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.Issuer, com.tools20022.repository.msg.CreditorReferenceType1.Issuer,
-						com.tools20022.repository.msg.ReferredDocumentType2.Issuer, com.tools20022.repository.msg.CreditorReferenceType2.Issuer, com.tools20022.repository.msg.InvoiceHeader1.Issuer,
-						com.tools20022.repository.msg.GarnishmentType1.Issuer, com.tools20022.repository.msg.ReferredDocumentType4.Issuer, com.tools20022.repository.msg.InvoiceHeader2.Issuer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.mmIssuer, com.tools20022.repository.msg.CreditorReferenceType1.mmIssuer,
+						com.tools20022.repository.msg.ReferredDocumentType2.mmIssuer, com.tools20022.repository.msg.CreditorReferenceType2.mmIssuer, com.tools20022.repository.msg.InvoiceHeader1.mmIssuer,
+						com.tools20022.repository.msg.GarnishmentType1.mmIssuer, com.tools20022.repository.msg.ReferredDocumentType4.mmIssuer, com.tools20022.repository.msg.InvoiceHeader2.mmIssuer);
 				superType_lazy = () -> DocumentPartyRole.mmObject();
 			}
 		});

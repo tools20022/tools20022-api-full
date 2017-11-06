@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#Collect
- * FreightCharges1Code.Collect}</li>
+ * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#mmCollect
+ * FreightCharges1Code.mmCollect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#Prepaid
- * FreightCharges1Code.Prepaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#mmPrepaid
+ * FreightCharges1Code.mmPrepaid}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class FreightCharges1Code extends FreightChargesCode {
 	 * name} = "Collect"</li>
 	 * </ul>
 	 */
-	public static final MMCode Collect = new MMCode() {
+	public static final MMCode mmCollect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collect";
@@ -104,7 +104,7 @@ public class FreightCharges1Code extends FreightChargesCode {
 	 * name} = "Prepaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Prepaid = new MMCode() {
+	public static final MMCode mmPrepaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prepaid";
@@ -115,12 +115,12 @@ public class FreightCharges1Code extends FreightChargesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FreightCharges1Code";
 				definition = "Indicates the arrangement as to the freight charges.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FreightCharges1Code.Collect, com.tools20022.repository.codeset.FreightCharges1Code.Prepaid);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FreightCharges1Code.mmCollect, com.tools20022.repository.codeset.FreightCharges1Code.mmPrepaid);
 				trace_lazy = () -> FreightChargesCode.mmObject();
 			}
 		});

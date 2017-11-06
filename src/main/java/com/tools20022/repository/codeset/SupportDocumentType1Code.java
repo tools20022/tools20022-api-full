@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code#LetterFromBank
- * SupportDocumentType1Code.LetterFromBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code#mmLetterFromBank
+ * SupportDocumentType1Code.mmLetterFromBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code#LetterToBank
- * SupportDocumentType1Code.LetterToBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code#mmLetterToBank
+ * SupportDocumentType1Code.mmLetterToBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code#SupportingDocument
- * SupportDocumentType1Code.SupportingDocument}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code#mmSupportingDocument
+ * SupportDocumentType1Code.mmSupportingDocument}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	 * name} = "LetterFromBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode LetterFromBank = new MMCode() {
+	public static final MMCode mmLetterFromBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterFromBank";
@@ -101,7 +101,7 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	 * name} = "LetterToBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode LetterToBank = new MMCode() {
+	public static final MMCode mmLetterToBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterToBank";
@@ -124,7 +124,7 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	 * name} = "SupportingDocument"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupportingDocument = new MMCode() {
+	public static final MMCode mmSupportingDocument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportingDocument";
@@ -135,12 +135,12 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SupportDocumentType1Code";
 				definition = "Specifies a type of supporting document.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportDocumentType1Code.LetterFromBank, com.tools20022.repository.codeset.SupportDocumentType1Code.LetterToBank,
-						com.tools20022.repository.codeset.SupportDocumentType1Code.SupportingDocument);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportDocumentType1Code.mmLetterFromBank, com.tools20022.repository.codeset.SupportDocumentType1Code.mmLetterToBank,
+						com.tools20022.repository.codeset.SupportDocumentType1Code.mmSupportingDocument);
 				trace_lazy = () -> SupportDocumentTypeCode.mmObject();
 			}
 		});

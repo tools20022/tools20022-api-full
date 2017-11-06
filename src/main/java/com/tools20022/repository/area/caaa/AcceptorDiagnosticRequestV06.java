@@ -57,21 +57,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#Header
- * AcceptorDiagnosticRequestV06.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#mmHeader
+ * AcceptorDiagnosticRequestV06.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#DiagnosticRequest
- * AcceptorDiagnosticRequestV06.DiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#mmDiagnosticRequest
+ * AcceptorDiagnosticRequestV06.mmDiagnosticRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#SecurityTrailer
- * AcceptorDiagnosticRequestV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#mmSecurityTrailer
+ * AcceptorDiagnosticRequestV06.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#identifier
- * AcceptorDiagnosticRequestV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.013.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorDiagnosticRequestV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header30 header;
 	/**
 	 * Diagnostic request message management information.
 	 * <p>
@@ -114,22 +113,23 @@ public class AcceptorDiagnosticRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#Header
-	 * AcceptorDiagnosticRequestV05.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#mmHeader
+	 * AcceptorDiagnosticRequestV05.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Diagnostic request message management information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.Header;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header30.mmObject();
 		}
 	};
+	protected AcceptorDiagnosticRequest6 diagnosticRequest;
 	/**
 	 * Information related to the diagnostic request.
 	 * <p>
@@ -154,22 +154,23 @@ public class AcceptorDiagnosticRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#DiagnosticRequest
-	 * AcceptorDiagnosticRequestV05.DiagnosticRequest}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#mmDiagnosticRequest
+	 * AcceptorDiagnosticRequestV05.mmDiagnosticRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DiagnosticRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDiagnosticRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgnstcReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticRequest";
 			definition = "Information related to the diagnostic request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.DiagnosticRequest;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmDiagnosticRequest;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorDiagnosticRequest6.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -194,47 +195,20 @@ public class AcceptorDiagnosticRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#SecurityTrailer
-	 * AcceptorDiagnosticRequestV05.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#mmSecurityTrailer
+	 * AcceptorDiagnosticRequestV05.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.SecurityTrailer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmSecurityTrailer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "013";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -249,11 +223,42 @@ public class AcceptorDiagnosticRequestV06 {
 				rootElement = "Document";
 				xmlTag = "AccptrDgnstcReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.Header, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.DiagnosticRequest,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.mmDiagnosticRequest,
+						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "013";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header30 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header30 header) {
+		this.header = header;
+	}
+
+	public AcceptorDiagnosticRequest6 getDiagnosticRequest() {
+		return diagnosticRequest;
+	}
+
+	public void setDiagnosticRequest(AcceptorDiagnosticRequest6 diagnosticRequest) {
+		this.diagnosticRequest = diagnosticRequest;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

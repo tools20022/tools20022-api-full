@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction70#PaymentInstrument
- * PaymentTransaction70.PaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction70#mmPaymentInstrument
+ * PaymentTransaction70.mmPaymentInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTransaction70 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentInstrument20Choice paymentInstrument;
 	/**
 	 * Choice between types of payment instrument, for example, cheque, credit
 	 * transfer, direct debit, investment account or payment card.
@@ -99,33 +100,33 @@ public class PaymentTransaction70 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction23#PaymentInstrument
-	 * PaymentTransaction23.PaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction23#mmPaymentInstrument
+	 * PaymentTransaction23.mmPaymentInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentTransaction70.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> PaymentTransaction70.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Choice between types of payment instrument, for example, cheque, credit transfer, direct debit, investment account or payment card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction23.PaymentInstrument;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction23.mmPaymentInstrument;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument20Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentInstrument20Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction70.PaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction70.mmPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction70";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
@@ -133,5 +134,13 @@ public class PaymentTransaction70 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentInstrument20Choice getPaymentInstrument() {
+		return paymentInstrument;
+	}
+
+	public void setPaymentInstrument(PaymentInstrument20Choice paymentInstrument) {
+		this.paymentInstrument = paymentInstrument;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.RestrictedMonthExact2Number;
 import com.tools20022.repository.entity.CreditDefaultSwap;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Credit default swap derivative specific for reporting derivatives on a credit
@@ -37,20 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#Series
- * CreditDefaultSwapIndex2.Series}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#Version
- * CreditDefaultSwapIndex2.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#mmSeries
+ * CreditDefaultSwapIndex2.mmSeries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#RollMonth
- * CreditDefaultSwapIndex2.RollMonth}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#mmVersion
+ * CreditDefaultSwapIndex2.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#NextRollDate
- * CreditDefaultSwapIndex2.NextRollDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#mmRollMonth
+ * CreditDefaultSwapIndex2.mmRollMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#NotionalCurrency
- * CreditDefaultSwapIndex2.NotionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#mmNextRollDate
+ * CreditDefaultSwapIndex2.mmNextRollDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapIndex2#mmNotionalCurrency
+ * CreditDefaultSwapIndex2.mmNotionalCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditDefaultSwapIndex2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number series;
 	/**
 	 * Series number of the composition of the index if applicable.
 	 * <p>
@@ -88,8 +91,8 @@ public class CreditDefaultSwapIndex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#Series
-	 * CreditDefaultSwap.Series}</li>
+	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmSeries
+	 * CreditDefaultSwap.mmSeries}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,20 +112,21 @@ public class CreditDefaultSwapIndex2 {
 	 * "Series number of the composition of the index if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Series = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSeries = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.mmSeries;
 			componentContext_lazy = () -> CreditDefaultSwapIndex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.Series;
 			isDerived = false;
 			xmlTag = "Srs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Series";
 			definition = "Series number of the composition of the index if applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number version;
 	/**
 	 * New version of a series is issued if one of the constituents defaults and
 	 * the index has to be re-weighted to account for the new number of total
@@ -137,8 +141,8 @@ public class CreditDefaultSwapIndex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#VersionNumber
-	 * Derivative.VersionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmVersionNumber
+	 * Derivative.mmVersionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +163,21 @@ public class CreditDefaultSwapIndex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmVersionNumber;
 			componentContext_lazy = () -> CreditDefaultSwapIndex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.VersionNumber;
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "New version of a series is issued if one of the constituents defaults and the index has to be re-weighted to account for the new number of total constituents within the index.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<RestrictedMonthExact2Number> rollMonth;
 	/**
 	 * All months when the roll is expected as established by the index provider
 	 * for a given year. Field should be repeated for each month in the roll.
@@ -204,7 +209,7 @@ public class CreditDefaultSwapIndex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RollMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRollMonth = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CreditDefaultSwapIndex2.mmObject();
 			isDerived = false;
@@ -212,11 +217,12 @@ public class CreditDefaultSwapIndex2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollMonth";
 			definition = "All months when the roll is expected as established by the index provider for a given year. Field should be repeated for each month in the roll.";
-			minOccurs = 0;
 			maxOccurs = 12;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedMonthExact2Number.mmObject();
 		}
 	};
+	protected ISODate nextRollDate;
 	/**
 	 * To be populated in the case of a CDS Index or a derivative CDS Index with
 	 * the next roll date of the index as established by the index provider.
@@ -230,8 +236,8 @@ public class CreditDefaultSwapIndex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#RollDate
-	 * CreditDefaultSwap.RollDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CreditDefaultSwap#mmRollDate
+	 * CreditDefaultSwap.mmRollDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,20 +258,21 @@ public class CreditDefaultSwapIndex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NextRollDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNextRollDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.mmRollDate;
 			componentContext_lazy = () -> CreditDefaultSwapIndex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.RollDate;
 			isDerived = false;
 			xmlTag = "NxtRollDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextRollDate";
 			definition = "To be populated in the case of a CDS Index or a derivative CDS Index with the next roll date of the index as established by the index provider.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode notionalCurrency;
 	/**
 	 * Currency in which the notional is denominated.<br>
 	 * <p>
@@ -279,8 +286,8 @@ public class CreditDefaultSwapIndex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrency
-	 * Derivative.NotionalCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
+	 * Derivative.mmNotionalCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,17 +306,17 @@ public class CreditDefaultSwapIndex2 {
 	 * definition} = "Currency in which the notional is denominated.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> CreditDefaultSwapIndex2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrency;
 			isDerived = false;
 			xmlTag = "NtnlCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency";
 			definition = "Currency in which the notional is denominated.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
@@ -317,15 +324,55 @@ public class CreditDefaultSwapIndex2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapIndex2.Series, com.tools20022.repository.msg.CreditDefaultSwapIndex2.Version,
-						com.tools20022.repository.msg.CreditDefaultSwapIndex2.RollMonth, com.tools20022.repository.msg.CreditDefaultSwapIndex2.NextRollDate, com.tools20022.repository.msg.CreditDefaultSwapIndex2.NotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmSeries, com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmVersion,
+						com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmRollMonth, com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmNextRollDate, com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmNotionalCurrency);
 				trace_lazy = () -> CreditDefaultSwap.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwapIndex2";
 				definition = "Credit default swap derivative specific for reporting derivatives on a credit default swap index.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getSeries() {
+		return series;
+	}
+
+	public void setSeries(Number series) {
+		this.series = series;
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public List<RestrictedMonthExact2Number> getRollMonth() {
+		return rollMonth;
+	}
+
+	public void setRollMonth(List<RestrictedMonthExact2Number> rollMonth) {
+		this.rollMonth = rollMonth;
+	}
+
+	public ISODate getNextRollDate() {
+		return nextRollDate;
+	}
+
+	public void setNextRollDate(ISODate nextRollDate) {
+		this.nextRollDate = nextRollDate;
+	}
+
+	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
+		return notionalCurrency;
+	}
+
+	public void setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
+		this.notionalCurrency = notionalCurrency;
 	}
 }

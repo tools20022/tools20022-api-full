@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.AccountIdentification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.AccountIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#AccountIdentification
- * AccountIdentificationAndName.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#mmAccountIdentification
+ * AccountIdentificationAndName.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#AccountName
- * AccountIdentificationAndName.AccountName}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#mmAccountName
+ * AccountIdentificationAndName.mmAccountName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentificationAndName {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification1Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -98,20 +100,21 @@ public class AccountIdentificationAndName {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> AccountIdentificationAndName.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	protected Max35Text accountName;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -126,8 +129,8 @@ public class AccountIdentificationAndName {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +151,17 @@ public class AccountIdentificationAndName {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> AccountIdentificationAndName.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "AcctNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountName";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -166,14 +169,30 @@ public class AccountIdentificationAndName {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName.AccountIdentification, com.tools20022.repository.msg.AccountIdentificationAndName.AccountName);
-				trace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName.mmAccountIdentification, com.tools20022.repository.msg.AccountIdentificationAndName.mmAccountName);
+				trace_lazy = () -> AccountIdentification.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentificationAndName";
 				definition = "Account to or from which a cash entry is made.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification1Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public Max35Text getAccountName() {
+		return accountName;
+	}
+
+	public void setAccountName(Max35Text accountName) {
+		this.accountName = accountName;
 	}
 }

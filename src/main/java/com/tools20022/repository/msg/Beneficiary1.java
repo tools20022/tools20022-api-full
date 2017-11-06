@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.UndertakingBeneficiary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details related to the beneficiary.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Beneficiary1#NewAddressOrNewBeneficiary
- * Beneficiary1.NewAddressOrNewBeneficiary}</li>
+ * {@linkplain com.tools20022.repository.msg.Beneficiary1#mmNewAddressOrNewBeneficiary
+ * Beneficiary1.mmNewAddressOrNewBeneficiary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Beneficiary1#AdditionalInformation
- * Beneficiary1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Beneficiary1#mmAdditionalInformation
+ * Beneficiary1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Beneficiary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AddressOrParty1Choice newAddressOrNewBeneficiary;
 	/**
 	 * New beneficiary address, or new beneficiary name and address.
 	 * <p>
@@ -91,7 +93,7 @@ public class Beneficiary1 {
 	 * "New beneficiary address, or new beneficiary name and address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewAddressOrNewBeneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewAddressOrNewBeneficiary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Beneficiary1.mmObject();
 			isDerived = false;
@@ -99,12 +101,13 @@ public class Beneficiary1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAddressOrNewBeneficiary";
 			definition = "New beneficiary address, or new beneficiary name and address.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AddressOrParty1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AddressOrParty1Choice.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information concerning the amended beneficiary details.
 	 * <p>
@@ -132,7 +135,7 @@ public class Beneficiary1 {
 	 * "Additional information concerning the amended beneficiary details. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Beneficiary1.mmObject();
 			isDerived = false;
@@ -140,8 +143,8 @@ public class Beneficiary1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information concerning the amended beneficiary details. ";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -149,14 +152,30 @@ public class Beneficiary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Beneficiary1.NewAddressOrNewBeneficiary, com.tools20022.repository.msg.Beneficiary1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Beneficiary1.mmNewAddressOrNewBeneficiary, com.tools20022.repository.msg.Beneficiary1.mmAdditionalInformation);
 				trace_lazy = () -> UndertakingBeneficiary.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Beneficiary1";
 				definition = "Details related to the beneficiary.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AddressOrParty1Choice getNewAddressOrNewBeneficiary() {
+		return newAddressOrNewBeneficiary;
+	}
+
+	public void setNewAddressOrNewBeneficiary(AddressOrParty1Choice newAddressOrNewBeneficiary) {
+		this.newAddressOrNewBeneficiary = newAddressOrNewBeneficiary;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

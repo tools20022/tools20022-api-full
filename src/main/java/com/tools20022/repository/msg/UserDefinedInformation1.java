@@ -35,18 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UserDefinedInformation1#Label
- * UserDefinedInformation1.Label}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UserDefinedInformation1#Information
- * UserDefinedInformation1.Information}</li>
+ * {@linkplain com.tools20022.repository.msg.UserDefinedInformation1#mmLabel
+ * UserDefinedInformation1.mmLabel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UserDefinedInformation1#mmInformation
+ * UserDefinedInformation1.mmInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UserDefinedInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text label;
 	/**
 	 * Identifies the nature of the user information.
 	 * <p>
@@ -89,7 +91,7 @@ public class UserDefinedInformation1 {
 	 * definition} = "Identifies the nature of the user information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Label = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UserDefinedInformation1.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class UserDefinedInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Label";
 			definition = "Identifies the nature of the user information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max140Text information;
 	/**
 	 * Specifies the content of the user information.
 	 * <p>
@@ -129,7 +132,7 @@ public class UserDefinedInformation1 {
 	 * definition} = "Specifies the content of the user information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Information = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UserDefinedInformation1.mmObject();
 			isDerived = false;
@@ -137,8 +140,8 @@ public class UserDefinedInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Specifies the content of the user information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -146,13 +149,29 @@ public class UserDefinedInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UserDefinedInformation1.Label, com.tools20022.repository.msg.UserDefinedInformation1.Information);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UserDefinedInformation1.mmLabel, com.tools20022.repository.msg.UserDefinedInformation1.mmInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UserDefinedInformation1";
 				definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getLabel() {
+		return label;
+	}
+
+	public void setLabel(Max35Text label) {
+		this.label = label;
+	}
+
+	public Max140Text getInformation() {
+		return information;
+	}
+
+	public void setInformation(Max140Text information) {
+		this.information = information;
 	}
 }

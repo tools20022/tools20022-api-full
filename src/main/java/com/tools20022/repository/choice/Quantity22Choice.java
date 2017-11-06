@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity22Choice#QuantityChoice
- * Quantity22Choice.QuantityChoice}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity22Choice#mmQuantityChoice
+ * Quantity22Choice.mmQuantityChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity22Choice#ProprietaryQuantity
- * Quantity22Choice.ProprietaryQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity22Choice#mmProprietaryQuantity
+ * Quantity22Choice.mmProprietaryQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quantity22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity23Choice quantityChoice;
 	/**
 	 * Choice between different quantity of security formats.
 	 * <p>
@@ -88,7 +89,7 @@ public class Quantity22Choice {
 	 * definition} = "Choice between different quantity of security formats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity22Choice.mmObject();
 			isDerived = false;
@@ -96,12 +97,13 @@ public class Quantity22Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityChoice";
 			definition = "Choice between different quantity of security formats.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity23Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.Quantity23Choice.mmObject();
 		}
 	};
+	protected ProprietaryQuantity10 proprietaryQuantity;
 	/**
 	 * Proprietary quantity of security format.
 	 * <p>
@@ -128,7 +130,7 @@ public class Quantity22Choice {
 	 * definition} = "Proprietary quantity of security format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity22Choice.mmObject();
 			isDerived = false;
@@ -136,24 +138,40 @@ public class Quantity22Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryQuantity";
 			definition = "Proprietary quantity of security format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryQuantity10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryQuantity10.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity22Choice.QuantityChoice, com.tools20022.repository.choice.Quantity22Choice.ProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity22Choice.mmQuantityChoice, com.tools20022.repository.choice.Quantity22Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quantity22Choice";
 				definition = "Choice between different quantity of security formats.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity23Choice getQuantityChoice() {
+		return quantityChoice;
+	}
+
+	public void setQuantityChoice(com.tools20022.repository.choice.Quantity23Choice quantityChoice) {
+		this.quantityChoice = quantityChoice;
+	}
+
+	public ProprietaryQuantity10 getProprietaryQuantity() {
+		return proprietaryQuantity;
+	}
+
+	public void setProprietaryQuantity(ProprietaryQuantity10 proprietaryQuantity) {
+		this.proprietaryQuantity = proprietaryQuantity;
 	}
 }

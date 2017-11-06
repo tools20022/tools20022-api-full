@@ -44,11 +44,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg#RelatedSwitchExecution
- * SwitchExecutionSubscriptionLeg.RelatedSwitchExecution}</li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg#mmRelatedSwitchExecution
+ * SwitchExecutionSubscriptionLeg.mmRelatedSwitchExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg#PercentageOfTotalRedemptionAmount
- * SwitchExecutionSubscriptionLeg.PercentageOfTotalRedemptionAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg#mmPercentageOfTotalRedemptionAmount
+ * SwitchExecutionSubscriptionLeg.mmPercentageOfTotalRedemptionAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecution#SubscriptionLeg
- * SwitchExecution.SubscriptionLeg}</li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmSubscriptionLeg
+ * SwitchExecution.mmSubscriptionLeg}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -85,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchExecutionSubscriptionLeg extends SubscriptionExecution {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SwitchExecution relatedSwitchExecution;
 	/**
 	 * Switch execution process for which a subcription leg is specified.
 	 * <p>
@@ -110,8 +111,8 @@ public class SwitchExecutionSubscriptionLeg extends SubscriptionExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchExecution#SubscriptionLeg
-	 * SwitchExecution.SubscriptionLeg}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmSubscriptionLeg
+	 * SwitchExecution.mmSubscriptionLeg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -136,20 +137,21 @@ public class SwitchExecutionSubscriptionLeg extends SubscriptionExecution {
 	 * "Switch execution process for which a subcription leg is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedSwitchExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedSwitchExecution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SwitchExecutionSubscriptionLeg.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedSwitchExecution";
 			definition = "Switch execution process for which a subcription leg is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SwitchExecution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SwitchExecution.SubscriptionLeg;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmSubscriptionLeg;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfTotalRedemptionAmount;
 	/**
 	 * Percentage of the total redemption amount used for the subscription in an
 	 * investment fund or investment fund class.
@@ -179,15 +181,15 @@ public class SwitchExecutionSubscriptionLeg extends SubscriptionExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PercentageOfTotalRedemptionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPercentageOfTotalRedemptionAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SwitchExecutionSubscriptionLeg.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfTotalRedemptionAmount";
 			definition = "Percentage of the total redemption amount used for the subscription in an investment fund or investment fund class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -195,16 +197,33 @@ public class SwitchExecutionSubscriptionLeg extends SubscriptionExecution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwitchExecutionSubscriptionLeg";
 				definition = "Execution of the subscription part, in a switch between investment funds or investment fund classes.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecution.SubscriptionLeg);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecution.mmSubscriptionLeg);
 				superType_lazy = () -> SubscriptionExecution.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg.RelatedSwitchExecution, com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg.PercentageOfTotalRedemptionAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg.mmRelatedSwitchExecution,
+						com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg.mmPercentageOfTotalRedemptionAmount);
 				derivationComponent_lazy = () -> Arrays.asList(SwitchSubscriptionLegExecution2.mmObject(), SwitchSubscriptionLegExecution3.mmObject(), SwitchExecutionSubscriptionLeg4.mmObject(), SwitchSubscriptionLegExecution4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SwitchExecution getRelatedSwitchExecution() {
+		return relatedSwitchExecution;
+	}
+
+	public void setRelatedSwitchExecution(com.tools20022.repository.entity.SwitchExecution relatedSwitchExecution) {
+		this.relatedSwitchExecution = relatedSwitchExecution;
+	}
+
+	public PercentageRate getPercentageOfTotalRedemptionAmount() {
+		return percentageOfTotalRedemptionAmount;
+	}
+
+	public void setPercentageOfTotalRedemptionAmount(PercentageRate percentageOfTotalRedemptionAmount) {
+		this.percentageOfTotalRedemptionAmount = percentageOfTotalRedemptionAmount;
 	}
 }

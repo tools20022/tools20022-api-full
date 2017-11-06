@@ -39,33 +39,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#PlaceAndName
- * AccountBalanceExtensionSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#mmPlaceAndName
+ * AccountBalanceExtensionSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#TransactionPosition
- * AccountBalanceExtensionSD1.TransactionPosition}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#mmTransactionPosition
+ * AccountBalanceExtensionSD1.mmTransactionPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#AsOfDate
- * AccountBalanceExtensionSD1.AsOfDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#mmAsOfDate
+ * AccountBalanceExtensionSD1.mmAsOfDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#DeliveryDate
- * AccountBalanceExtensionSD1.DeliveryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#mmDeliveryDate
+ * AccountBalanceExtensionSD1.mmDeliveryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#ContraParticipantNumber
- * AccountBalanceExtensionSD1.ContraParticipantNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#mmContraParticipantNumber
+ * AccountBalanceExtensionSD1.mmContraParticipantNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#ReceiverAccountNumber
- * AccountBalanceExtensionSD1.ReceiverAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#mmReceiverAccountNumber
+ * AccountBalanceExtensionSD1.mmReceiverAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#DelivererAccountNumber
- * AccountBalanceExtensionSD1.DelivererAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceExtensionSD1#mmDelivererAccountNumber
+ * AccountBalanceExtensionSD1.mmDelivererAccountNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountBalanceExtensionSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -115,7 +116,7 @@ public class AccountBalanceExtensionSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -123,11 +124,12 @@ public class AccountBalanceExtensionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected AdjustedBalanceTypeSD1Choice transactionPosition;
 	/**
 	 * Position that is concerned in transaction.
 	 * <p>
@@ -156,7 +158,7 @@ public class AccountBalanceExtensionSD1 {
 	 * definition} = "Position that is concerned in transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -164,11 +166,12 @@ public class AccountBalanceExtensionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionPosition";
 			definition = "Position that is concerned in transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 		}
 	};
+	protected ISODate asOfDate;
 	/**
 	 * Effective date of the transaction. Applicable to Fail transactions.
 	 * <p>
@@ -197,7 +200,7 @@ public class AccountBalanceExtensionSD1 {
 	 * "Effective date of the transaction. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAsOfDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -205,11 +208,12 @@ public class AccountBalanceExtensionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
 			definition = "Effective date of the transaction. Applicable to Fail transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate deliveryDate;
 	/**
 	 * Date of the delivery. Applicable to Fail transactions.
 	 * <p>
@@ -237,7 +241,7 @@ public class AccountBalanceExtensionSD1 {
 	 * definition} = "Date of the delivery. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -245,11 +249,12 @@ public class AccountBalanceExtensionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDate";
 			definition = "Date of the delivery. Applicable to Fail transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max8Text contraParticipantNumber;
 	/**
 	 * Transaction contra participant identification for stock loans, repurchase
 	 * agreements (REPOs), securities undelivered (FAILs).
@@ -280,7 +285,7 @@ public class AccountBalanceExtensionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -288,11 +293,12 @@ public class AccountBalanceExtensionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification for stock loans, repurchase agreements (REPOs), securities undelivered (FAILs).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax35Text receiverAccountNumber;
 	/**
 	 * Account number at receiver’s side. Applicable to Fail transactions.
 	 * <p>
@@ -322,7 +328,7 @@ public class AccountBalanceExtensionSD1 {
 	 * "Account number at receiver’s side. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiverAccountNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiverAccountNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -330,11 +336,12 @@ public class AccountBalanceExtensionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverAccountNumber";
 			definition = "Account number at receiver’s side. Applicable to Fail transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax35Text delivererAccountNumber;
 	/**
 	 * Account number at deliverer’s side. Applicable to Fail transactions.
 	 * <p>
@@ -364,7 +371,7 @@ public class AccountBalanceExtensionSD1 {
 	 * "Account number at deliverer’s side. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DelivererAccountNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelivererAccountNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -372,8 +379,8 @@ public class AccountBalanceExtensionSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelivererAccountNumber";
 			definition = "Account number at deliverer’s side. Applicable to Fail transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
@@ -381,11 +388,11 @@ public class AccountBalanceExtensionSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceExtensionSD1.PlaceAndName, com.tools20022.repository.msg.AccountBalanceExtensionSD1.TransactionPosition,
-						com.tools20022.repository.msg.AccountBalanceExtensionSD1.AsOfDate, com.tools20022.repository.msg.AccountBalanceExtensionSD1.DeliveryDate,
-						com.tools20022.repository.msg.AccountBalanceExtensionSD1.ContraParticipantNumber, com.tools20022.repository.msg.AccountBalanceExtensionSD1.ReceiverAccountNumber,
-						com.tools20022.repository.msg.AccountBalanceExtensionSD1.DelivererAccountNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmTransactionPosition,
+						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmAsOfDate, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmDeliveryDate,
+						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmContraParticipantNumber, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmReceiverAccountNumber,
+						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmDelivererAccountNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountBalanceExtensionSD1";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
@@ -393,5 +400,61 @@ public class AccountBalanceExtensionSD1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public AdjustedBalanceTypeSD1Choice getTransactionPosition() {
+		return transactionPosition;
+	}
+
+	public void setTransactionPosition(AdjustedBalanceTypeSD1Choice transactionPosition) {
+		this.transactionPosition = transactionPosition;
+	}
+
+	public ISODate getAsOfDate() {
+		return asOfDate;
+	}
+
+	public void setAsOfDate(ISODate asOfDate) {
+		this.asOfDate = asOfDate;
+	}
+
+	public ISODate getDeliveryDate() {
+		return deliveryDate;
+	}
+
+	public void setDeliveryDate(ISODate deliveryDate) {
+		this.deliveryDate = deliveryDate;
+	}
+
+	public Max8Text getContraParticipantNumber() {
+		return contraParticipantNumber;
+	}
+
+	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+		this.contraParticipantNumber = contraParticipantNumber;
+	}
+
+	public RestrictedFINXMax35Text getReceiverAccountNumber() {
+		return receiverAccountNumber;
+	}
+
+	public void setReceiverAccountNumber(RestrictedFINXMax35Text receiverAccountNumber) {
+		this.receiverAccountNumber = receiverAccountNumber;
+	}
+
+	public RestrictedFINXMax35Text getDelivererAccountNumber() {
+		return delivererAccountNumber;
+	}
+
+	public void setDelivererAccountNumber(RestrictedFINXMax35Text delivererAccountNumber) {
+		this.delivererAccountNumber = delivererAccountNumber;
 	}
 }

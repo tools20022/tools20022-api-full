@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1#ItemType
- * ServiceItemTotals1.ItemType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1#Quantity
- * ServiceItemTotals1.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1#UnitPrice
- * ServiceItemTotals1.UnitPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1#mmItemType
+ * ServiceItemTotals1.mmItemType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1#mmQuantity
+ * ServiceItemTotals1.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1#mmUnitPrice
+ * ServiceItemTotals1.mmUnitPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#TotalTaxableAmount
- * ServiceItemTotals1.TotalTaxableAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#mmTotalTaxableAmount
+ * ServiceItemTotals1.mmTotalTaxableAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#TotalTaxAmount
- * ServiceItemTotals1.TotalTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#mmTotalTaxAmount
+ * ServiceItemTotals1.mmTotalTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#TotalInvoiceAmount
- * ServiceItemTotals1.TotalInvoiceAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ServiceItemTotals1#mmTotalInvoiceAmount
+ * ServiceItemTotals1.mmTotalInvoiceAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ServiceItemTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText itemType;
 	/**
 	 * Specifies a classification for the service items such as query, report,
 	 * securities account, etc…
@@ -86,8 +87,8 @@ public class ServiceItemTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCategory#Type
-	 * ProductCategory.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCategory#mmType
+	 * ProductCategory.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class ServiceItemTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmType;
 			componentContext_lazy = () -> ServiceItemTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.Type;
 			isDerived = false;
 			xmlTag = "ItmTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemType";
 			definition = "Specifies a classification for the service items such as  query, report, securities account, etc…";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Number quantity;
 	/**
 	 * Sum of total number units per service item.
 	 * <p>
@@ -134,8 +136,8 @@ public class ServiceItemTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#Value
-	 * ProductQuantity.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmValue
+	 * ProductQuantity.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class ServiceItemTotals1 {
 	 * definition} = "Sum of total number units per service item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
 			componentContext_lazy = () -> ServiceItemTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.Value;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Sum of total number units per service item.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount unitPrice;
 	/**
 	 * Specifies the unit of the service item.
 	 * <p>
@@ -181,7 +184,8 @@ public class ServiceItemTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,20 +204,21 @@ public class ServiceItemTotals1 {
 	 * definition} = "Specifies the unit of the service item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> ServiceItemTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "UnitPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitPrice";
 			definition = "Specifies the unit of the service item.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalTaxableAmount;
 	/**
 	 * Total amount subject to tax.
 	 * <p>
@@ -227,8 +232,8 @@ public class ServiceItemTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxableBaseAmount
-	 * Tax.TaxableBaseAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
+	 * Tax.mmTaxableBaseAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,20 +252,21 @@ public class ServiceItemTotals1 {
 	 * definition} = "Total amount subject to tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> ServiceItemTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxableBaseAmount;
 			isDerived = false;
 			xmlTag = "TtlTaxblAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxableAmount";
 			definition = "Total amount subject to tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalTaxAmount;
 	/**
 	 * Sum of all tax amounts related to the invoice.
 	 * <p>
@@ -274,7 +280,7 @@ public class ServiceItemTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -293,20 +299,21 @@ public class ServiceItemTotals1 {
 	 * definition} = "Sum of all tax amounts related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> ServiceItemTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TtlTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Sum of all tax amounts related to the invoice.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalInvoiceAmount;
 	/**
 	 * Total amount of the invoice, being the sum of total invoice lines
 	 * amounts, total invoice adjustment amount (discounts, allowances and
@@ -322,8 +329,8 @@ public class ServiceItemTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Amount
-	 * Document.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmAmount
+	 * Document.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -344,17 +351,17 @@ public class ServiceItemTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
 			componentContext_lazy = () -> ServiceItemTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Amount;
 			isDerived = false;
 			xmlTag = "TtlInvcAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice adjustment amount (discounts, allowances and charges) and total tax amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -362,15 +369,64 @@ public class ServiceItemTotals1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceItemTotals1.ItemType, com.tools20022.repository.msg.ServiceItemTotals1.Quantity, com.tools20022.repository.msg.ServiceItemTotals1.UnitPrice,
-						com.tools20022.repository.msg.ServiceItemTotals1.TotalTaxableAmount, com.tools20022.repository.msg.ServiceItemTotals1.TotalTaxAmount, com.tools20022.repository.msg.ServiceItemTotals1.TotalInvoiceAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceItemTotals1.mmItemType, com.tools20022.repository.msg.ServiceItemTotals1.mmQuantity,
+						com.tools20022.repository.msg.ServiceItemTotals1.mmUnitPrice, com.tools20022.repository.msg.ServiceItemTotals1.mmTotalTaxableAmount, com.tools20022.repository.msg.ServiceItemTotals1.mmTotalTaxAmount,
+						com.tools20022.repository.msg.ServiceItemTotals1.mmTotalInvoiceAmount);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ServiceItemTotals1";
 				definition = "Specifies totals related to the invoice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getItemType() {
+		return itemType;
+	}
+
+	public void setItemType(Max4AlphaNumericText itemType) {
+		this.itemType = itemType;
+	}
+
+	public Number getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Number quantity) {
+		this.quantity = quantity;
+	}
+
+	public ActiveCurrencyAndAmount getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(ActiveCurrencyAndAmount unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
+	public ActiveCurrencyAndAmount getTotalTaxableAmount() {
+		return totalTaxableAmount;
+	}
+
+	public void setTotalTaxableAmount(ActiveCurrencyAndAmount totalTaxableAmount) {
+		this.totalTaxableAmount = totalTaxableAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTotalTaxAmount() {
+		return totalTaxAmount;
+	}
+
+	public void setTotalTaxAmount(ActiveCurrencyAndAmount totalTaxAmount) {
+		this.totalTaxAmount = totalTaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
+		return totalInvoiceAmount;
+	}
+
+	public void setTotalInvoiceAmount(ActiveCurrencyAndAmount totalInvoiceAmount) {
+		this.totalInvoiceAmount = totalInvoiceAmount;
 	}
 }

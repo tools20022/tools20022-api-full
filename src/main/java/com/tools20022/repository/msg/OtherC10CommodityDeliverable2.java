@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherC10CommodityDeliverable2#BaseProduct
- * OtherC10CommodityDeliverable2.BaseProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherC10CommodityDeliverable2#mmBaseProduct
+ * OtherC10CommodityDeliverable2.mmBaseProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherC10CommodityDeliverable2#SubProduct
- * OtherC10CommodityDeliverable2.SubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherC10CommodityDeliverable2#mmSubProduct
+ * OtherC10CommodityDeliverable2.mmSubProduct}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherC10CommodityDeliverable2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassProductType11Code baseProduct;
 	/**
 	 * Base product for the underlying asset class as specified in the
 	 * classification of commodities derivatives table.
@@ -78,8 +79,8 @@ public class OtherC10CommodityDeliverable2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#BaseProduct
-	 * Commodity.BaseProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
+	 * Commodity.mmBaseProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class OtherC10CommodityDeliverable2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
 			componentContext_lazy = () -> OtherC10CommodityDeliverable2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.BaseProduct;
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType11Code.mmObject();
 		}
 	};
+	protected AssetClassSubProductType47Code subProduct;
 	/**
 	 * Sub-product for the underlying asset class.
 	 * <p>
@@ -127,8 +129,8 @@ public class OtherC10CommodityDeliverable2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,17 +149,17 @@ public class OtherC10CommodityDeliverable2 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> OtherC10CommodityDeliverable2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductType47Code.mmObject();
 		}
 	};
@@ -165,14 +167,30 @@ public class OtherC10CommodityDeliverable2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherC10CommodityDeliverable2.BaseProduct, com.tools20022.repository.msg.OtherC10CommodityDeliverable2.SubProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherC10CommodityDeliverable2.mmBaseProduct, com.tools20022.repository.msg.OtherC10CommodityDeliverable2.mmSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherC10CommodityDeliverable2";
 				definition = "Defines commodity sub-product attributes of an other c10 of type deliverable.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassProductType11Code getBaseProduct() {
+		return baseProduct;
+	}
+
+	public void setBaseProduct(AssetClassProductType11Code baseProduct) {
+		this.baseProduct = baseProduct;
+	}
+
+	public AssetClassSubProductType47Code getSubProduct() {
+		return subProduct;
+	}
+
+	public void setSubProduct(AssetClassSubProductType47Code subProduct) {
+		this.subProduct = subProduct;
 	}
 }

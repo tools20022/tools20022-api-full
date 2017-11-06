@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD3#PlaceAndName
- * CorporateActionNotificationSD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD3#mmPlaceAndName
+ * CorporateActionNotificationSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD3#CreateDateAndTime
- * CorporateActionNotificationSD3.CreateDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD3#mmCreateDateAndTime
+ * CorporateActionNotificationSD3.mmCreateDateAndTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD3#UpdateDateAndTime
- * CorporateActionNotificationSD3.UpdateDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD3#mmUpdateDateAndTime
+ * CorporateActionNotificationSD3.mmUpdateDateAndTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNotificationSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -92,7 +93,7 @@ public class CorporateActionNotificationSD3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD3.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class CorporateActionNotificationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODateTime createDateAndTime;
 	/**
 	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
 	 * created the announcement record.
@@ -135,7 +137,7 @@ public class CorporateActionNotificationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreateDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD3.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class CorporateActionNotificationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime updateDateAndTime;
 	/**
 	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
 	 * last updated the announcement.
@@ -178,7 +181,7 @@ public class CorporateActionNotificationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD3.mmObject();
 			isDerived = false;
@@ -186,8 +189,8 @@ public class CorporateActionNotificationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -195,14 +198,38 @@ public class CorporateActionNotificationSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD3.PlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD3.CreateDateAndTime,
-						com.tools20022.repository.msg.CorporateActionNotificationSD3.UpdateDateAndTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD3.mmCreateDateAndTime,
+						com.tools20022.repository.msg.CorporateActionNotificationSD3.mmUpdateDateAndTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationSD3";
 				definition = "Provides additional information regarding notification general information details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODateTime getCreateDateAndTime() {
+		return createDateAndTime;
+	}
+
+	public void setCreateDateAndTime(ISODateTime createDateAndTime) {
+		this.createDateAndTime = createDateAndTime;
+	}
+
+	public ISODateTime getUpdateDateAndTime() {
+		return updateDateAndTime;
+	}
+
+	public void setUpdateDateAndTime(ISODateTime updateDateAndTime) {
+		this.updateDateAndTime = updateDateAndTime;
 	}
 }

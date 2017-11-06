@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Clearing instructions transactions list.
@@ -32,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingInstructions1#FIToFICreditTransferTransactionInformation
- * ClearingInstructions1.FIToFICreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingInstructions1#mmFIToFICreditTransferTransactionInformation
+ * ClearingInstructions1.mmFIToFICreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingInstructions1#FIToFIDirectDebitTransactionInformation
- * ClearingInstructions1.FIToFIDirectDebitTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingInstructions1#mmFIToFIDirectDebitTransactionInformation
+ * ClearingInstructions1.mmFIToFIDirectDebitTransactionInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClearingInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1> fIToFICreditTransferTransactionInformation;
 	/**
 	 * Set of elements providing information specific to the individual credit
 	 * transfer(s).
@@ -87,7 +89,7 @@ public class ClearingInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FIToFICreditTransferTransactionInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFIToFICreditTransferTransactionInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClearingInstructions1.mmObject();
 			isDerived = false;
@@ -96,10 +98,11 @@ public class ClearingInstructions1 {
 			name = "FIToFICreditTransferTransactionInformation";
 			definition = "Set of elements providing information specific to the individual credit transfer(s).";
 			minOccurs = 1;
-			type_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1> fIToFIDirectDebitTransactionInformation;
 	/**
 	 * Set of elements providing information specific to the individual direct
 	 * debit(s).
@@ -130,7 +133,7 @@ public class ClearingInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FIToFIDirectDebitTransactionInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFIToFIDirectDebitTransactionInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClearingInstructions1.mmObject();
 			isDerived = false;
@@ -139,22 +142,38 @@ public class ClearingInstructions1 {
 			name = "FIToFIDirectDebitTransactionInformation";
 			definition = "Set of elements providing information specific to the individual direct debit(s).";
 			minOccurs = 1;
-			type_lazy = () -> FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingInstructions1.FIToFICreditTransferTransactionInformation,
-						com.tools20022.repository.msg.ClearingInstructions1.FIToFIDirectDebitTransactionInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingInstructions1.mmFIToFICreditTransferTransactionInformation,
+						com.tools20022.repository.msg.ClearingInstructions1.mmFIToFIDirectDebitTransactionInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClearingInstructions1";
 				definition = "Clearing instructions transactions list.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<FIToFICreditTransferTransactionInformationDetails1> getFIToFICreditTransferTransactionInformation() {
+		return fIToFICreditTransferTransactionInformation;
+	}
+
+	public void setFIToFICreditTransferTransactionInformation(List<com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1> fIToFICreditTransferTransactionInformation) {
+		this.fIToFICreditTransferTransactionInformation = fIToFICreditTransferTransactionInformation;
+	}
+
+	public List<FIToFIDirectDebitTransactionInformationDetails1> getFIToFIDirectDebitTransactionInformation() {
+		return fIToFIDirectDebitTransactionInformation;
+	}
+
+	public void setFIToFIDirectDebitTransactionInformation(List<com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1> fIToFIDirectDebitTransactionInformation) {
+		this.fIToFIDirectDebitTransactionInformation = fIToFIDirectDebitTransactionInformation;
 	}
 }

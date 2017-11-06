@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The PayInSchedule message is sent by a central settlement system to the
@@ -61,30 +62,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#PartyIdentification
- * PayInScheduleV03.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmPartyIdentification
+ * PayInScheduleV03.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#ReportData
- * PayInScheduleV03.ReportData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmReportData
+ * PayInScheduleV03.mmReportData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#PayInScheduleLongBalance
- * PayInScheduleV03.PayInScheduleLongBalance}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmPayInScheduleLongBalance
+ * PayInScheduleV03.mmPayInScheduleLongBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#PayInScheduleItem
- * PayInScheduleV03.PayInScheduleItem}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmPayInScheduleItem
+ * PayInScheduleV03.mmPayInScheduleItem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#PayInFactors
- * PayInScheduleV03.PayInFactors}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmPayInFactors
+ * PayInScheduleV03.mmPayInFactors}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#SupplementaryData
- * PayInScheduleV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmSupplementaryData
+ * PayInScheduleV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#identifier
- * PayInScheduleV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.062.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayInScheduleV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification73Choice partyIdentification;
 	/**
 	 * Party for which the pay-in schedule is generated.
 	 * <p>
@@ -123,17 +123,18 @@ public class PayInScheduleV03 {
 	 * definition} = "Party for which the pay-in schedule is generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PartyIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPartyIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party for which the pay-in schedule is generated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected ReportData4 reportData;
 	/**
 	 * General information applicable to the report.
 	 * <p>
@@ -156,17 +157,18 @@ public class PayInScheduleV03 {
 	 * definition} = "General information applicable to the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportData";
 			definition = "General information applicable to the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportData4.mmObject();
 		}
 	};
+	protected List<BalanceStatus2> payInScheduleLongBalance;
 	/**
 	 * Projected net position for all currencies, projected long for the value
 	 * date.
@@ -192,7 +194,7 @@ public class PayInScheduleV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PayInScheduleLongBalance = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPayInScheduleLongBalance = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PayInSchdlLngBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,6 +204,7 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> BalanceStatus2.mmObject();
 		}
 	};
+	protected List<PayInScheduleItems1> payInScheduleItem;
 	/**
 	 * Currency and total amount to be paid in by the corresponding deadline.
 	 * <p>
@@ -226,7 +229,7 @@ public class PayInScheduleV03 {
 	 * "Currency and total amount to be paid in by the corresponding deadline."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PayInScheduleItem = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPayInScheduleItem = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PayInSchdlItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,6 +239,7 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> PayInScheduleItems1.mmObject();
 		}
 	};
+	protected PayInFactors1 payInFactors;
 	/**
 	 * Factors used in the calculation of the pay-in schedule.
 	 * <p>
@@ -258,17 +262,18 @@ public class PayInScheduleV03 {
 	 * definition} = "Factors used in the calculation of the pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PayInFactors = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPayInFactors = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PayInFctrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInFactors";
 			definition = "Factors used in the calculation of the pay-in schedule.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PayInFactors1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -295,7 +300,7 @@ public class PayInScheduleV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,33 +308,6 @@ public class PayInScheduleV03 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "062"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "062";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -343,12 +321,67 @@ public class PayInScheduleV03 {
 				rootElement = "Document";
 				xmlTag = "PayInSchdl";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.PartyIdentification, com.tools20022.repository.area.camt.PayInScheduleV03.ReportData,
-						com.tools20022.repository.area.camt.PayInScheduleV03.PayInScheduleLongBalance, com.tools20022.repository.area.camt.PayInScheduleV03.PayInScheduleItem,
-						com.tools20022.repository.area.camt.PayInScheduleV03.PayInFactors, com.tools20022.repository.area.camt.PayInScheduleV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.PayInScheduleV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.mmPartyIdentification, com.tools20022.repository.area.camt.PayInScheduleV03.mmReportData,
+						com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInScheduleLongBalance, com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInScheduleItem,
+						com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInFactors, com.tools20022.repository.area.camt.PayInScheduleV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "062";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification73Choice getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(PartyIdentification73Choice partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public ReportData4 getReportData() {
+		return reportData;
+	}
+
+	public void setReportData(ReportData4 reportData) {
+		this.reportData = reportData;
+	}
+
+	public List<BalanceStatus2> getPayInScheduleLongBalance() {
+		return payInScheduleLongBalance;
+	}
+
+	public void setPayInScheduleLongBalance(List<BalanceStatus2> payInScheduleLongBalance) {
+		this.payInScheduleLongBalance = payInScheduleLongBalance;
+	}
+
+	public List<PayInScheduleItems1> getPayInScheduleItem() {
+		return payInScheduleItem;
+	}
+
+	public void setPayInScheduleItem(List<PayInScheduleItems1> payInScheduleItem) {
+		this.payInScheduleItem = payInScheduleItem;
+	}
+
+	public PayInFactors1 getPayInFactors() {
+		return payInFactors;
+	}
+
+	public void setPayInFactors(PayInFactors1 payInFactors) {
+		this.payInFactors = payInFactors;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

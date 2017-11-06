@@ -30,54 +30,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingRemittanceInformation
- * UnableToApplyMissingInfo1Code.MissingRemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingRemittanceInformation
+ * UnableToApplyMissingInfo1Code.mmMissingRemittanceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingSenderToReceiverInformation
- * UnableToApplyMissingInfo1Code.MissingSenderToReceiverInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingSenderToReceiverInformation
+ * UnableToApplyMissingInfo1Code.mmMissingSenderToReceiverInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingDebtor
- * UnableToApplyMissingInfo1Code.MissingDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingDebtor
+ * UnableToApplyMissingInfo1Code.mmMissingDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingDebtorAccount
- * UnableToApplyMissingInfo1Code.MissingDebtorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingDebtorAccount
+ * UnableToApplyMissingInfo1Code.mmMissingDebtorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingFirstAgent
- * UnableToApplyMissingInfo1Code.MissingFirstAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingFirstAgent
+ * UnableToApplyMissingInfo1Code.mmMissingFirstAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingAmount
- * UnableToApplyMissingInfo1Code.MissingAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingAmount
+ * UnableToApplyMissingInfo1Code.mmMissingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingNostroVostroAccount
- * UnableToApplyMissingInfo1Code.MissingNostroVostroAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingNostroVostroAccount
+ * UnableToApplyMissingInfo1Code.mmMissingNostroVostroAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingIntermediary
- * UnableToApplyMissingInfo1Code.MissingIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingIntermediary
+ * UnableToApplyMissingInfo1Code.mmMissingIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingReimbursementAgent1
- * UnableToApplyMissingInfo1Code.MissingReimbursementAgent1}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingReimbursementAgent1
+ * UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingReimbursementAgent2
- * UnableToApplyMissingInfo1Code.MissingReimbursementAgent2}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingReimbursementAgent2
+ * UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingReimbursementAgent
- * UnableToApplyMissingInfo1Code.MissingReimbursementAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingReimbursementAgent
+ * UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingCreditor
- * UnableToApplyMissingInfo1Code.MissingCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingCreditor
+ * UnableToApplyMissingInfo1Code.mmMissingCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingCreditorAccount
- * UnableToApplyMissingInfo1Code.MissingCreditorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingCreditorAccount
+ * UnableToApplyMissingInfo1Code.mmMissingCreditorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#MissingInstruction
- * UnableToApplyMissingInfo1Code.MissingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code#mmMissingInstruction
+ * UnableToApplyMissingInfo1Code.mmMissingInstruction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -118,7 +118,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "RemittanceInformation is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingRemittanceInformation = new MMCode() {
+	public static final MMCode mmMissingRemittanceInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingRemittanceInformation";
@@ -148,7 +148,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "SenderToReceiverInformation is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingSenderToReceiverInformation = new MMCode() {
+	public static final MMCode mmMissingSenderToReceiverInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingSenderToReceiverInformation";
@@ -178,7 +178,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "Debtor is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingDebtor = new MMCode() {
+	public static final MMCode mmMissingDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDebtor";
@@ -208,7 +208,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "DebtorAccount is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingDebtorAccount = new MMCode() {
+	public static final MMCode mmMissingDebtorAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDebtorAccount";
@@ -238,7 +238,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "FirstAgent is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingFirstAgent = new MMCode() {
+	public static final MMCode mmMissingFirstAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingFirstAgent";
@@ -268,7 +268,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "Amount is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingAmount = new MMCode() {
+	public static final MMCode mmMissingAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingAmount";
@@ -298,7 +298,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "Nostro_VostroAccount is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingNostroVostroAccount = new MMCode() {
+	public static final MMCode mmMissingNostroVostroAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingNostroVostroAccount";
@@ -328,7 +328,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "Intermediary is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingIntermediary = new MMCode() {
+	public static final MMCode mmMissingIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingIntermediary";
@@ -358,7 +358,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "ReimbursementAgent (53) is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingReimbursementAgent1 = new MMCode() {
+	public static final MMCode mmMissingReimbursementAgent1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingReimbursementAgent1";
@@ -388,7 +388,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "ReimbursementAgent (54) is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingReimbursementAgent2 = new MMCode() {
+	public static final MMCode mmMissingReimbursementAgent2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingReimbursementAgent2";
@@ -418,7 +418,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "ReimbursementAgent (55) is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingReimbursementAgent = new MMCode() {
+	public static final MMCode mmMissingReimbursementAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingReimbursementAgent";
@@ -448,7 +448,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "Creditor is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingCreditor = new MMCode() {
+	public static final MMCode mmMissingCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditor";
@@ -478,7 +478,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "CreditorAccount is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingCreditorAccount = new MMCode() {
+	public static final MMCode mmMissingCreditorAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditorAccount";
@@ -508,7 +508,7 @@ public class UnableToApplyMissingInfo1Code {
 	 * definition} = "Indicates the payment instruction (MT103) is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingInstruction = new MMCode() {
+	public static final MMCode mmMissingInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstruction";
@@ -521,19 +521,19 @@ public class UnableToApplyMissingInfo1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MS01");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyMissingInfo1Code";
 				definition = "Used when the unable to apply is due to missing information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingRemittanceInformation,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingSenderToReceiverInformation, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingDebtor,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingDebtorAccount, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingFirstAgent,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingAmount, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingNostroVostroAccount,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingIntermediary, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingReimbursementAgent1,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingReimbursementAgent2, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingReimbursementAgent,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingCreditor, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingCreditorAccount,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.MissingInstruction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingRemittanceInformation,
+						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingSenderToReceiverInformation, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingDebtor,
+						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingDebtorAccount, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingFirstAgent,
+						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingAmount, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingNostroVostroAccount,
+						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingIntermediary, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent1,
+						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent2, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent,
+						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingCreditor, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingCreditorAccount,
+						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingInstruction);
 			}
 		});
 		return mmObject_lazy.get();

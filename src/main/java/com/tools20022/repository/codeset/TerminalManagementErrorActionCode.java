@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode#IgnoreError
- * TerminalManagementErrorActionCode.IgnoreError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode#mmIgnoreError
+ * TerminalManagementErrorActionCode.mmIgnoreError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode#SendStatusReport
- * TerminalManagementErrorActionCode.SendStatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode#mmSendStatusReport
+ * TerminalManagementErrorActionCode.mmSendStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode#StopSequence
- * TerminalManagementErrorActionCode.StopSequence}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode#mmStopSequence
+ * TerminalManagementErrorActionCode.mmStopSequence}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +97,7 @@ public class TerminalManagementErrorActionCode {
 	 * definition} = "Ignore the error."</li>
 	 * </ul>
 	 */
-	public static final MMCode IgnoreError = new MMCode() {
+	public static final MMCode mmIgnoreError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IgnoreError";
@@ -127,7 +127,7 @@ public class TerminalManagementErrorActionCode {
 	 * definition} = "Send a status report immediately."</li>
 	 * </ul>
 	 */
-	public static final MMCode SendStatusReport = new MMCode() {
+	public static final MMCode mmSendStatusReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SendStatusReport";
@@ -160,7 +160,7 @@ public class TerminalManagementErrorActionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode StopSequence = new MMCode() {
+	public static final MMCode mmStopSequence = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StopSequence";
@@ -173,13 +173,13 @@ public class TerminalManagementErrorActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IGNR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementErrorActionCode";
 				definition = "Action to perform in case of error during the action in progress.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorActionCode.IgnoreError, com.tools20022.repository.codeset.TerminalManagementErrorActionCode.SendStatusReport,
-						com.tools20022.repository.codeset.TerminalManagementErrorActionCode.StopSequence);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorActionCode.mmIgnoreError, com.tools20022.repository.codeset.TerminalManagementErrorActionCode.mmSendStatusReport,
+						com.tools20022.repository.codeset.TerminalManagementErrorActionCode.mmStopSequence);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementErrorAction1Code.mmObject(), TerminalManagementErrorAction2Code.mmObject());
 			}
 		});

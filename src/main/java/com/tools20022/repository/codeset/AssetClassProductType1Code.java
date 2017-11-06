@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType1Code#Agricultural
- * AssetClassProductType1Code.Agricultural}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType1Code#mmAgricultural
+ * AssetClassProductType1Code.mmAgricultural}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class AssetClassProductType1Code extends AssetClassProductTypeCode {
 	 * name} = "Agricultural"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agricultural = new MMCode() {
+	public static final MMCode mmAgricultural = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agricultural";
@@ -84,11 +84,11 @@ public class AssetClassProductType1Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType1Code";
 				definition = "Commodity derivative base product code list for Agricultural.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType1Code.Agricultural);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType1Code.mmAgricultural);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

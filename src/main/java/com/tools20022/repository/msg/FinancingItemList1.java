@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies a list of financing items exchanged between two parties, for
@@ -39,50 +40,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#Identifier
- * FinancingItemList1.Identifier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#IssueDate
- * FinancingItemList1.IssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#RelatedDocument
- * FinancingItemList1.RelatedDocument}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmIdentifier
+ * FinancingItemList1.mmIdentifier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#mmIssueDate
+ * FinancingItemList1.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#AmountCutOffDate
- * FinancingItemList1.AmountCutOffDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#Assignee
- * FinancingItemList1.Assignee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#Assigner
- * FinancingItemList1.Assigner}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmRelatedDocument
+ * FinancingItemList1.mmRelatedDocument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#NotificationInformation
- * FinancingItemList1.NotificationInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmAmountCutOffDate
+ * FinancingItemList1.mmAmountCutOffDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#mmAssignee
+ * FinancingItemList1.mmAssignee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#mmAssigner
+ * FinancingItemList1.mmAssigner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#FinancialItem
- * FinancingItemList1.FinancialItem}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#ItemCount
- * FinancingItemList1.ItemCount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#ControlSum
- * FinancingItemList1.ControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmNotificationInformation
+ * FinancingItemList1.mmNotificationInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#TotalRequestAmount
- * FinancingItemList1.TotalRequestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmFinancialItem
+ * FinancingItemList1.mmFinancialItem}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#mmItemCount
+ * FinancingItemList1.mmItemCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#TotalRequestFinancing
- * FinancingItemList1.TotalRequestFinancing}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1#AgreedRate
- * FinancingItemList1.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmControlSum
+ * FinancingItemList1.mmControlSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#FinancingInstalment
- * FinancingItemList1.FinancingInstalment}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmTotalRequestAmount
+ * FinancingItemList1.mmTotalRequestAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#AdditionalInformation
- * FinancingItemList1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmTotalRequestFinancing
+ * FinancingItemList1.mmTotalRequestFinancing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#ValidationStatusInformation
- * FinancingItemList1.ValidationStatusInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmAgreedRate
+ * FinancingItemList1.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#FinancingStatus
- * FinancingItemList1.FinancingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmFinancingInstalment
+ * FinancingItemList1.mmFinancingInstalment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmAdditionalInformation
+ * FinancingItemList1.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmValidationStatusInformation
+ * FinancingItemList1.mmValidationStatusInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmFinancingStatus
+ * FinancingItemList1.mmFinancingStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -92,24 +96,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01#AssignmentList
- * InvoiceAssignmentRequestV01.AssignmentList}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01#mmAssignmentList
+ * InvoiceAssignmentRequestV01.mmAssignmentList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01#NotificationList
- * InvoiceAssignmentNotificationV01.NotificationList}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01#mmNotificationList
+ * InvoiceAssignmentNotificationV01.mmNotificationList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01#PaymentStatusList
- * InvoiceAssignmentAcknowledgementV01.PaymentStatusList}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01#mmPaymentStatusList
+ * InvoiceAssignmentAcknowledgementV01.mmPaymentStatusList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01#AssignmentList
- * InvoiceAssignmentStatusV01.AssignmentList}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01#mmAssignmentList
+ * InvoiceAssignmentStatusV01.mmAssignmentList}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,6 +129,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancingItemList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identifier;
 	/**
 	 * Identification assigned to unambiguously identify the financing item
 	 * list.
@@ -138,8 +143,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#Identification
-	 * InvoiceFinancingAgreement.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmIdentification
+	 * InvoiceFinancingAgreement.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,20 +165,21 @@ public class FinancingItemList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmIdentification;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.Identification;
 			isDerived = false;
 			xmlTag = "Idr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identifier";
 			definition = "Identification assigned to unambiguously identify the financing item list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate issueDate;
 	/**
 	 * Date of creation of this document.
 	 * <p>
@@ -186,8 +192,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,20 +212,21 @@ public class FinancingItemList1 {
 	 * definition} = "Date of creation of this document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date of creation of this document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument;
 	/**
 	 * Reference to related documents for example to original assignment in a
 	 * status response or retry.
@@ -254,20 +261,21 @@ public class FinancingItemList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedDocument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDoc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDocument";
 			definition = "Reference to related documents for example to original assignment in a status response or retry.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected ISODate amountCutOffDate;
 	/**
 	 * Cut off date for items used to establish the total request amount.
 	 * <p>
@@ -280,8 +288,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CutOffDate
-	 * CashBalance.CutOffDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCutOffDate
+	 * CashBalance.mmCutOffDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -301,20 +309,21 @@ public class FinancingItemList1 {
 	 * "Cut off date for items used to establish the total request amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountCutOffDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountCutOffDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCutOffDate;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CutOffDate;
 			isDerived = false;
 			xmlTag = "AmtCutOffDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountCutOffDate";
 			definition = "Cut off date for items used to establish the total request amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected QualifiedPartyIdentification1 assignee;
 	/**
 	 * Party to which the list is assigned.
 	 * <p>
@@ -327,8 +336,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -347,21 +356,22 @@ public class FinancingItemList1 {
 	 * definition} = "Party to which the list is assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Assignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Assgne";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignee";
 			definition = "Party to which the list is assigned.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected QualifiedPartyIdentification1 assigner;
 	/**
 	 * Party assigning the list.
 	 * <p>
@@ -374,8 +384,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -394,21 +404,22 @@ public class FinancingItemList1 {
 	 * definition} = "Party assigning the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Assigner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Assgnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Party assigning the list.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancingNotificationParties1> notificationInformation;
 	/**
 	 * Identifies parties that notify the assignment(s) and the notified
 	 * parties.
@@ -422,8 +433,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#PartyRole
-	 * Document.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmPartyRole
+	 * Document.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -444,20 +455,21 @@ public class FinancingItemList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NotificationInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNotificationInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPartyRole;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.PartyRole;
 			isDerived = false;
 			xmlTag = "NtfctnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationInformation";
 			definition = "Identifies parties that notify the assignment(s) and the notified parties.";
 			minOccurs = 0;
-			type_lazy = () -> FinancingNotificationParties1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancingNotificationParties1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialItem1> financialItem;
 	/**
 	 * List of items/transactions.
 	 * <p>
@@ -489,20 +501,21 @@ public class FinancingItemList1 {
 	 * definition} = "List of items/transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialItem = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			businessComponentTrace_lazy = () -> InvoiceFinancingAgreement.mmObject();
+			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			isDerived = false;
 			xmlTag = "FinItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialItem";
 			definition = "List of items/transactions.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialItem1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
 		}
 	};
+	protected Max15NumericText itemCount;
 	/**
 	 * Number of individual items contained in the list.
 	 * <p>
@@ -531,7 +544,7 @@ public class FinancingItemList1 {
 	 * definition} = "Number of individual items contained in the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemCount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			isDerived = false;
@@ -539,11 +552,12 @@ public class FinancingItemList1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Number of individual items contained in the list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in the list, irrespective of
 	 * currencies.
@@ -575,7 +589,7 @@ public class FinancingItemList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			isDerived = false;
@@ -583,11 +597,12 @@ public class FinancingItemList1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the list, irrespective of currencies.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalRequestAmount;
 	/**
 	 * Total amount in all items. Requires same currency, necessary when
 	 * financing request is in percentage.
@@ -602,8 +617,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#RequestedAmount
-	 * InvoiceFinancingAgreement.RequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedAmount
+	 * InvoiceFinancingAgreement.mmRequestedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -624,20 +639,21 @@ public class FinancingItemList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalRequestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalRequestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmRequestedAmount;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.RequestedAmount;
 			isDerived = false;
 			xmlTag = "TtlReqAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRequestAmount";
 			definition = "Total amount in all items. Requires same currency, necessary when financing request is in percentage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancingRateOrAmountChoice totalRequestFinancing;
 	/**
 	 * Total amount requested.
 	 * <p>
@@ -650,8 +666,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#InvoiceFinancingTransaction
-	 * Invoice.InvoiceFinancingTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceFinancingTransaction
+	 * Invoice.mmInvoiceFinancingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -670,21 +686,22 @@ public class FinancingItemList1 {
 	 * definition} = "Total amount requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalRequestFinancing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalRequestFinancing = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmInvoiceFinancingTransaction;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.InvoiceFinancingTransaction;
 			isDerived = false;
 			xmlTag = "TtlReqFincg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRequestFinancing";
 			definition = "Total amount requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancingRateOrAmountChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancingRateOrAmountChoice.mmObject();
 		}
 	};
+	protected AgreedRate1 agreedRate;
 	/**
 	 * Acceptable exchange rate for financing by different currency.
 	 * <p>
@@ -696,8 +713,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#CurrencyExchange
-	 * Invoice.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmCurrencyExchange
+	 * Invoice.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -717,21 +734,22 @@ public class FinancingItemList1 {
 	 * "Acceptable exchange rate for financing by different currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AgreedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgreedRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmCurrencyExchange;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "AgrdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Acceptable exchange rate for financing by different currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AgreedRate1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Instalment2> financingInstalment;
 	/**
 	 * Instalment for the financing.
 	 * <p>
@@ -762,20 +780,21 @@ public class FinancingItemList1 {
 	 * definition} = "Instalment for the financing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancingInstalment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancingInstalment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			businessComponentTrace_lazy = () -> Instalment.mmObject();
+			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgInstlmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingInstalment";
 			definition = "Instalment for the financing.";
 			minOccurs = 0;
-			type_lazy = () -> Instalment2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
 		}
 	};
+	protected Max2000Text additionalInformation;
 	/**
 	 * Additional free form information concerning the list.
 	 * <p>
@@ -803,7 +822,7 @@ public class FinancingItemList1 {
 	 * definition} = "Additional free form information concerning the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
 			isDerived = false;
@@ -811,11 +830,12 @@ public class FinancingItemList1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional free form information concerning the list.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected ValidationStatusInformation1 validationStatusInformation;
 	/**
 	 * Validation status of the list.
 	 * <p>
@@ -828,8 +848,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -848,21 +868,22 @@ public class FinancingItemList1 {
 	 * definition} = "Validation status of the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Validation status of the list.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ValidationStatusInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 		}
 	};
+	protected FinancingInformationAndStatus1 financingStatus;
 	/**
 	 * Financing status if applicable to the nature of the items.
 	 * <p>
@@ -875,8 +896,8 @@ public class FinancingItemList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -896,40 +917,177 @@ public class FinancingItemList1 {
 	 * "Financing status if applicable to the nature of the items."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> FinancingItemList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "FincgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingStatus";
 			definition = "Financing status if applicable to the nature of the items.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancingInformationAndStatus1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancingInformationAndStatus1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingItemList1.Identifier, com.tools20022.repository.msg.FinancingItemList1.IssueDate,
-						com.tools20022.repository.msg.FinancingItemList1.RelatedDocument, com.tools20022.repository.msg.FinancingItemList1.AmountCutOffDate, com.tools20022.repository.msg.FinancingItemList1.Assignee,
-						com.tools20022.repository.msg.FinancingItemList1.Assigner, com.tools20022.repository.msg.FinancingItemList1.NotificationInformation, com.tools20022.repository.msg.FinancingItemList1.FinancialItem,
-						com.tools20022.repository.msg.FinancingItemList1.ItemCount, com.tools20022.repository.msg.FinancingItemList1.ControlSum, com.tools20022.repository.msg.FinancingItemList1.TotalRequestAmount,
-						com.tools20022.repository.msg.FinancingItemList1.TotalRequestFinancing, com.tools20022.repository.msg.FinancingItemList1.AgreedRate, com.tools20022.repository.msg.FinancingItemList1.FinancingInstalment,
-						com.tools20022.repository.msg.FinancingItemList1.AdditionalInformation, com.tools20022.repository.msg.FinancingItemList1.ValidationStatusInformation, com.tools20022.repository.msg.FinancingItemList1.FinancingStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingItemList1.mmIdentifier, com.tools20022.repository.msg.FinancingItemList1.mmIssueDate,
+						com.tools20022.repository.msg.FinancingItemList1.mmRelatedDocument, com.tools20022.repository.msg.FinancingItemList1.mmAmountCutOffDate, com.tools20022.repository.msg.FinancingItemList1.mmAssignee,
+						com.tools20022.repository.msg.FinancingItemList1.mmAssigner, com.tools20022.repository.msg.FinancingItemList1.mmNotificationInformation, com.tools20022.repository.msg.FinancingItemList1.mmFinancialItem,
+						com.tools20022.repository.msg.FinancingItemList1.mmItemCount, com.tools20022.repository.msg.FinancingItemList1.mmControlSum, com.tools20022.repository.msg.FinancingItemList1.mmTotalRequestAmount,
+						com.tools20022.repository.msg.FinancingItemList1.mmTotalRequestFinancing, com.tools20022.repository.msg.FinancingItemList1.mmAgreedRate, com.tools20022.repository.msg.FinancingItemList1.mmFinancingInstalment,
+						com.tools20022.repository.msg.FinancingItemList1.mmAdditionalInformation, com.tools20022.repository.msg.FinancingItemList1.mmValidationStatusInformation,
+						com.tools20022.repository.msg.FinancingItemList1.mmFinancingStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmAssignmentList, com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmNotificationList,
+						com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.mmPaymentStatusList, com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.mmAssignmentList);
 				trace_lazy = () -> Invoice.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.AssignmentList, com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.NotificationList,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.PaymentStatusList, com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.AssignmentList);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancingItemList1";
 				definition = "Specifies a list of financing items exchanged between two parties, for example invoice, credit, financing request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentifier() {
+		return identifier;
+	}
+
+	public void setIdentifier(Max35Text identifier) {
+		this.identifier = identifier;
+	}
+
+	public ISODate getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(ISODate issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public List<QualifiedDocumentInformation1> getRelatedDocument() {
+		return relatedDocument;
+	}
+
+	public void setRelatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument) {
+		this.relatedDocument = relatedDocument;
+	}
+
+	public ISODate getAmountCutOffDate() {
+		return amountCutOffDate;
+	}
+
+	public void setAmountCutOffDate(ISODate amountCutOffDate) {
+		this.amountCutOffDate = amountCutOffDate;
+	}
+
+	public QualifiedPartyIdentification1 getAssignee() {
+		return assignee;
+	}
+
+	public void setAssignee(com.tools20022.repository.msg.QualifiedPartyIdentification1 assignee) {
+		this.assignee = assignee;
+	}
+
+	public QualifiedPartyIdentification1 getAssigner() {
+		return assigner;
+	}
+
+	public void setAssigner(com.tools20022.repository.msg.QualifiedPartyIdentification1 assigner) {
+		this.assigner = assigner;
+	}
+
+	public List<FinancingNotificationParties1> getNotificationInformation() {
+		return notificationInformation;
+	}
+
+	public void setNotificationInformation(List<com.tools20022.repository.msg.FinancingNotificationParties1> notificationInformation) {
+		this.notificationInformation = notificationInformation;
+	}
+
+	public List<FinancialItem1> getFinancialItem() {
+		return financialItem;
+	}
+
+	public void setFinancialItem(List<com.tools20022.repository.msg.FinancialItem1> financialItem) {
+		this.financialItem = financialItem;
+	}
+
+	public Max15NumericText getItemCount() {
+		return itemCount;
+	}
+
+	public void setItemCount(Max15NumericText itemCount) {
+		this.itemCount = itemCount;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+	}
+
+	public ActiveCurrencyAndAmount getTotalRequestAmount() {
+		return totalRequestAmount;
+	}
+
+	public void setTotalRequestAmount(ActiveCurrencyAndAmount totalRequestAmount) {
+		this.totalRequestAmount = totalRequestAmount;
+	}
+
+	public FinancingRateOrAmountChoice getTotalRequestFinancing() {
+		return totalRequestFinancing;
+	}
+
+	public void setTotalRequestFinancing(FinancingRateOrAmountChoice totalRequestFinancing) {
+		this.totalRequestFinancing = totalRequestFinancing;
+	}
+
+	public AgreedRate1 getAgreedRate() {
+		return agreedRate;
+	}
+
+	public void setAgreedRate(com.tools20022.repository.msg.AgreedRate1 agreedRate) {
+		this.agreedRate = agreedRate;
+	}
+
+	public List<Instalment2> getFinancingInstalment() {
+		return financingInstalment;
+	}
+
+	public void setFinancingInstalment(List<com.tools20022.repository.msg.Instalment2> financingInstalment) {
+		this.financingInstalment = financingInstalment;
+	}
+
+	public Max2000Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max2000Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public ValidationStatusInformation1 getValidationStatusInformation() {
+		return validationStatusInformation;
+	}
+
+	public void setValidationStatusInformation(com.tools20022.repository.msg.ValidationStatusInformation1 validationStatusInformation) {
+		this.validationStatusInformation = validationStatusInformation;
+	}
+
+	public FinancingInformationAndStatus1 getFinancingStatus() {
+		return financingStatus;
+	}
+
+	public void setFinancingStatus(com.tools20022.repository.msg.FinancingInformationAndStatus1 financingStatus) {
+		this.financingStatus = financingStatus;
 	}
 }

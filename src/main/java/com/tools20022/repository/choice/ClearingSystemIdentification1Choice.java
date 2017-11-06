@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification1Choice#ClearingSystemIdentification
- * ClearingSystemIdentification1Choice.ClearingSystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification1Choice#mmClearingSystemIdentification
+ * ClearingSystemIdentification1Choice.mmClearingSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification1Choice#Proprietary
- * ClearingSystemIdentification1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification1Choice#mmProprietary
+ * ClearingSystemIdentification1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClearingSystemIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashClearingSystem3Code clearingSystemIdentification;
 	/**
 	 * Infrastructure through which the payment instruction is processed.
 	 * <p>
@@ -76,8 +77,8 @@ public class ClearingSystemIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#Identification
-	 * CashClearingSystem.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmIdentification
+	 * CashClearingSystem.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class ClearingSystemIdentification1Choice {
 	 * "Infrastructure through which the payment instruction is processed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmIdentification;
 			componentContext_lazy = () -> ClearingSystemIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.Identification;
 			isDerived = false;
 			xmlTag = "ClrSysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemIdentification";
 			definition = "Infrastructure through which the payment instruction is processed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CashClearingSystem3Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Proprietary clearing system service selected for a transaction.
 	 * <p>
@@ -123,8 +125,8 @@ public class ClearingSystemIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#Identification
-	 * CashClearingSystem.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmIdentification
+	 * CashClearingSystem.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,17 +146,17 @@ public class ClearingSystemIdentification1Choice {
 	 * "Proprietary clearing system service selected for a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmIdentification;
 			componentContext_lazy = () -> ClearingSystemIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.Identification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary clearing system service selected for a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -162,14 +164,31 @@ public class ClearingSystemIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClearingSystemIdentification1Choice.ClearingSystemIdentification, com.tools20022.repository.choice.ClearingSystemIdentification1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClearingSystemIdentification1Choice.mmClearingSystemIdentification,
+						com.tools20022.repository.choice.ClearingSystemIdentification1Choice.mmProprietary);
 				trace_lazy = () -> CashClearingSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClearingSystemIdentification1Choice";
 				definition = "Information used to identify a cash clearing system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashClearingSystem3Code getClearingSystemIdentification() {
+		return clearingSystemIdentification;
+	}
+
+	public void setClearingSystemIdentification(CashClearingSystem3Code clearingSystemIdentification) {
+		this.clearingSystemIdentification = clearingSystemIdentification;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

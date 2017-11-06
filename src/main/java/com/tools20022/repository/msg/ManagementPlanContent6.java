@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Content of the management plan.
@@ -36,13 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ManagementPlanContent6#TMChallenge
- * ManagementPlanContent6.TMChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.ManagementPlanContent6#mmTMChallenge
+ * ManagementPlanContent6.mmTMChallenge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ManagementPlanContent6#KeyEnciphermentCertificate
- * ManagementPlanContent6.KeyEnciphermentCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ManagementPlanContent6#Action
- * ManagementPlanContent6.Action}</li>
+ * {@linkplain com.tools20022.repository.msg.ManagementPlanContent6#mmKeyEnciphermentCertificate
+ * ManagementPlanContent6.mmKeyEnciphermentCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ManagementPlanContent6#mmAction
+ * ManagementPlanContent6.mmAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ManagementPlanContent6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Binary tMChallenge;
 	/**
 	 * Terminal manager challenge for cryptographic key injection.
 	 * <p>
@@ -101,11 +104,11 @@ public class ManagementPlanContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent5#TMChallenge
-	 * ManagementPlanContent5.TMChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent5#mmTMChallenge
+	 * ManagementPlanContent5.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ManagementPlanContent6.mmObject();
 			isDerived = false;
@@ -113,12 +116,13 @@ public class ManagementPlanContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent5.TMChallenge;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent5.mmTMChallenge;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	protected List<Max10KBinary> keyEnciphermentCertificate;
 	/**
 	 * Certificate chain of an asymmetric encryption keys for the encryption of
 	 * temporary transport key of the key to inject.
@@ -151,11 +155,11 @@ public class ManagementPlanContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent5#KeyEnciphermentCertificate
-	 * ManagementPlanContent5.KeyEnciphermentCertificate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent5#mmKeyEnciphermentCertificate
+	 * ManagementPlanContent5.mmKeyEnciphermentCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyEnciphermentCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyEnciphermentCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ManagementPlanContent6.mmObject();
 			isDerived = false;
@@ -163,11 +167,12 @@ public class ManagementPlanContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEnciphermentCertificate";
 			definition = "Certificate chain of an asymmetric encryption keys for the encryption of temporary transport key of the key to inject.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent5.KeyEnciphermentCertificate;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent5.mmKeyEnciphermentCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TMSAction6> action;
 	/**
 	 * Terminal management action to be performed by the point of interaction
 	 * (POI).
@@ -197,11 +202,11 @@ public class ManagementPlanContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent5#Action
-	 * ManagementPlanContent5.Action}</li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent5#mmAction
+	 * ManagementPlanContent5.mmAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Action = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ManagementPlanContent6.mmObject();
 			isDerived = false;
@@ -209,20 +214,20 @@ public class ManagementPlanContent6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Terminal management action to be performed by the point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent5.Action;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent5.mmAction;
 			minOccurs = 1;
-			type_lazy = () -> TMSAction6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSAction6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent6.TMChallenge, com.tools20022.repository.msg.ManagementPlanContent6.KeyEnciphermentCertificate,
-						com.tools20022.repository.msg.ManagementPlanContent6.Action);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent6.mmTMChallenge, com.tools20022.repository.msg.ManagementPlanContent6.mmKeyEnciphermentCertificate,
+						com.tools20022.repository.msg.ManagementPlanContent6.mmAction);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanContent6";
 				definition = "Content of the management plan.";
@@ -230,5 +235,29 @@ public class ManagementPlanContent6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Binary getTMChallenge() {
+		return tMChallenge;
+	}
+
+	public void setTMChallenge(Max140Binary tMChallenge) {
+		this.tMChallenge = tMChallenge;
+	}
+
+	public List<Max10KBinary> getKeyEnciphermentCertificate() {
+		return keyEnciphermentCertificate;
+	}
+
+	public void setKeyEnciphermentCertificate(List<Max10KBinary> keyEnciphermentCertificate) {
+		this.keyEnciphermentCertificate = keyEnciphermentCertificate;
+	}
+
+	public List<TMSAction6> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.msg.TMSAction6> action) {
+		this.action = action;
 	}
 }

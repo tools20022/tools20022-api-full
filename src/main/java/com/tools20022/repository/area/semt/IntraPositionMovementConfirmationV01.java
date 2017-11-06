@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -79,45 +80,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#Identification
- * IntraPositionMovementConfirmationV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmIdentification
+ * IntraPositionMovementConfirmationV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#AdditionalParameters
- * IntraPositionMovementConfirmationV01.AdditionalParameters}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmAdditionalParameters
+ * IntraPositionMovementConfirmationV01.mmAdditionalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#AccountOwner
- * IntraPositionMovementConfirmationV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmAccountOwner
+ * IntraPositionMovementConfirmationV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#SafekeepingAccount
- * IntraPositionMovementConfirmationV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#SafekeepingPlace
- * IntraPositionMovementConfirmationV01.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmSafekeepingPlace
+ * IntraPositionMovementConfirmationV01.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#FinancialInstrumentIdentification
- * IntraPositionMovementConfirmationV01.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmFinancialInstrumentIdentification
+ * IntraPositionMovementConfirmationV01.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#FinancialInstrumentAttributes
- * IntraPositionMovementConfirmationV01.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmFinancialInstrumentAttributes
+ * IntraPositionMovementConfirmationV01.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#IntraPositionDetails
- * IntraPositionMovementConfirmationV01.IntraPositionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmIntraPositionDetails
+ * IntraPositionMovementConfirmationV01.mmIntraPositionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#MessageOriginator
- * IntraPositionMovementConfirmationV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmMessageOriginator
+ * IntraPositionMovementConfirmationV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#MessageRecipient
- * IntraPositionMovementConfirmationV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmMessageRecipient
+ * IntraPositionMovementConfirmationV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#Extension
- * IntraPositionMovementConfirmationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmExtension
+ * IntraPositionMovementConfirmationV01.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#identifier
- * IntraPositionMovementConfirmationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.015.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,6 +140,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionMovementConfirmationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification11 identification;
 	/**
 	 * Information that unambiguously identifies an
 	 * IntraPositionMovementConfirmation message as known by the account
@@ -168,17 +168,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies an IntraPositionMovementConfirmation message as known by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 	};
+	protected AdditionalParameters3 additionalParameters;
 	/**
 	 * Additional parameters to the transaction.
 	 * <p>
@@ -202,17 +203,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Additional parameters to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParameters";
 			definition = "Additional parameters to the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalParameters3.mmObject();
 		}
 	};
+	protected PartyIdentification13Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -236,17 +238,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -270,17 +273,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormat3Choice safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -309,17 +313,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingPlace = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingPlace = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification11 financialInstrumentIdentification;
 	/**
 	 * Financial instrument representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -346,17 +351,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification11.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes4 financialInstrumentAttributes;
 	/**
 	 * Elements characterising a financial instrument.
 	 * <p>
@@ -380,17 +386,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Elements characterising a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentAttributes = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes4.mmObject();
 		}
 	};
+	protected IntraPositionDetails2 intraPositionDetails;
 	/**
 	 * Intra-position movement transaction details.
 	 * <p>
@@ -414,17 +421,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Intra-position movement transaction details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IntraPositionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntraPositionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntraPosDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionDetails";
 			definition = "Intra-position movement transaction details.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IntraPositionDetails2.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -449,17 +457,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageRecipient;
 	/**
 	 * Party that is the final destination of the message, if other than the
 	 * receiver.
@@ -486,17 +495,18 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party that is the final destination of the message, if other than the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected List<Extension2> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -522,7 +532,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -530,33 +540,6 @@ public class IntraPositionMovementConfirmationV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "015"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "015";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -571,15 +554,110 @@ public class IntraPositionMovementConfirmationV01 {
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntConf";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.Identification,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.AdditionalParameters, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.AccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.SafekeepingPlace,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.FinancialInstrumentIdentification, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.FinancialInstrumentAttributes,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.IntraPositionDetails, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.MessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.MessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmAdditionalParameters, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmAccountOwner,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmSafekeepingPlace,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmFinancialInstrumentIdentification, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmIntraPositionDetails, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmMessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "015";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification11 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification11 identification) {
+		this.identification = identification;
+	}
+
+	public AdditionalParameters3 getAdditionalParameters() {
+		return additionalParameters;
+	}
+
+	public void setAdditionalParameters(AdditionalParameters3 additionalParameters) {
+		this.additionalParameters = additionalParameters;
+	}
+
+	public PartyIdentification13Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification13Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat3Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public SecurityIdentification11 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification11 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public FinancialInstrumentAttributes4 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(FinancialInstrumentAttributes4 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public IntraPositionDetails2 getIntraPositionDetails() {
+		return intraPositionDetails;
+	}
+
+	public void setIntraPositionDetails(IntraPositionDetails2 intraPositionDetails) {
+		this.intraPositionDetails = intraPositionDetails;
+	}
+
+	public PartyIdentification10Choice getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(PartyIdentification10Choice messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public PartyIdentification10Choice getMessageRecipient() {
+		return messageRecipient;
+	}
+
+	public void setMessageRecipient(PartyIdentification10Choice messageRecipient) {
+		this.messageRecipient = messageRecipient;
+	}
+
+	public List<Extension2> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension2> extension) {
+		this.extension = extension;
 	}
 }

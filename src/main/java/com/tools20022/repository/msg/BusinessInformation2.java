@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on business information.
@@ -32,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessInformation2#GeneralBusinessReport
- * BusinessInformation2.GeneralBusinessReport}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessInformation2#mmGeneralBusinessReport
+ * BusinessInformation2.mmGeneralBusinessReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.GeneralBusinessReport2> generalBusinessReport;
 	/**
 	 * Reports either on the business information or on a business error.
 	 * <p>
@@ -81,7 +83,7 @@ public class BusinessInformation2 {
 	 * "Reports either on the business information or on a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GeneralBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGeneralBusinessReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessInformation2.mmObject();
 			isDerived = false;
@@ -90,21 +92,29 @@ public class BusinessInformation2 {
 			name = "GeneralBusinessReport";
 			definition = "Reports either on the business information or on a business error.";
 			minOccurs = 1;
-			type_lazy = () -> GeneralBusinessReport2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessInformation2.GeneralBusinessReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessInformation2.mmGeneralBusinessReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessInformation2";
 				definition = "Reports on business information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<GeneralBusinessReport2> getGeneralBusinessReport() {
+		return generalBusinessReport;
+	}
+
+	public void setGeneralBusinessReport(List<com.tools20022.repository.msg.GeneralBusinessReport2> generalBusinessReport) {
+		this.generalBusinessReport = generalBusinessReport;
 	}
 }

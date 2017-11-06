@@ -40,23 +40,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#OptionNumber
- * InstructedCorporateActionOption7.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmOptionNumber
+ * InstructedCorporateActionOption7.mmOptionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#OptionType
- * InstructedCorporateActionOption7.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmOptionType
+ * InstructedCorporateActionOption7.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#InstructedBalance
- * InstructedCorporateActionOption7.InstructedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmInstructedBalance
+ * InstructedCorporateActionOption7.mmInstructedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#DefaultAction
- * InstructedCorporateActionOption7.DefaultAction}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmDefaultAction
+ * InstructedCorporateActionOption7.mmDefaultAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#DeadlineDateTime
- * InstructedCorporateActionOption7.DeadlineDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmDeadlineDateTime
+ * InstructedCorporateActionOption7.mmDeadlineDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#DeadlineType
- * InstructedCorporateActionOption7.DeadlineType}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmDeadlineType
+ * InstructedCorporateActionOption7.mmDeadlineType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructedCorporateActionOption7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -94,8 +95,8 @@ public class InstructedCorporateActionOption7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,20 +116,21 @@ public class InstructedCorporateActionOption7 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> InstructedCorporateActionOption7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected CorporateActionOption23Choice optionType;
 	/**
 	 * Specifies the corporate action options available to the account owner.
 	 * <p>
@@ -142,8 +144,8 @@ public class InstructedCorporateActionOption7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
-	 * CorporateActionOption.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+	 * CorporateActionOption.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +165,21 @@ public class InstructedCorporateActionOption7 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> InstructedCorporateActionOption7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption23Choice.mmObject();
 		}
 	};
+	protected BalanceFormat7Choice instructedBalance;
 	/**
 	 * Balance of instructed position.
 	 * <p>
@@ -190,8 +193,8 @@ public class InstructedCorporateActionOption7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#InstructedBalance
-	 * CorporateActionEntitlement.InstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
+	 * CorporateActionEntitlement.mmInstructedBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +213,21 @@ public class InstructedCorporateActionOption7 {
 	 * definition} = "Balance of instructed position."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> InstructedCorporateActionOption7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.InstructedBalance;
 			isDerived = false;
 			xmlTag = "InstdBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Balance of instructed position.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat7Choice.mmObject();
 		}
 	};
+	protected DefaultProcessingOrStandingInstruction1Choice defaultAction;
 	/**
 	 * Indicates the default action related to a corporate action event.
 	 * <p>
@@ -252,7 +256,7 @@ public class InstructedCorporateActionOption7 {
 	 * "Indicates the default action related to a corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DefaultAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDefaultAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InstructedCorporateActionOption7.mmObject();
 			isDerived = false;
@@ -260,12 +264,13 @@ public class InstructedCorporateActionOption7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultAction";
 			definition = "Indicates the default action related to a corporate action event.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
 		}
 	};
+	protected ISODateTime deadlineDateTime;
 	/**
 	 * Any deadline chosen by the account servicer (service level agreement).
 	 * <p>
@@ -278,8 +283,8 @@ public class InstructedCorporateActionOption7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#Deadline
-	 * CorporateActionEvent.Deadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmDeadline
+	 * CorporateActionEvent.mmDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,20 +304,21 @@ public class InstructedCorporateActionOption7 {
 	 * "Any deadline chosen by the account servicer (service level agreement)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeadlineDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeadlineDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmDeadline;
 			componentContext_lazy = () -> InstructedCorporateActionOption7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.Deadline;
 			isDerived = false;
 			xmlTag = "DdlnDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeadlineDateTime";
 			definition = "Any deadline chosen by the account servicer (service level agreement).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DeadlineCode4Choice deadlineType;
 	/**
 	 * Specifies the type of deadline for instructing.
 	 * <p>
@@ -326,8 +332,8 @@ public class InstructedCorporateActionOption7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#Deadline
-	 * CorporateActionEvent.Deadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmDeadline
+	 * CorporateActionEvent.mmDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -346,17 +352,17 @@ public class InstructedCorporateActionOption7 {
 	 * definition} = "Specifies the type of deadline for instructing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeadlineType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeadlineType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmDeadline;
 			componentContext_lazy = () -> InstructedCorporateActionOption7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.Deadline;
 			isDerived = false;
 			xmlTag = "DdlnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeadlineType";
 			definition = "Specifies the type of deadline for instructing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DeadlineCode4Choice.mmObject();
 		}
 	};
@@ -364,16 +370,64 @@ public class InstructedCorporateActionOption7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedCorporateActionOption7.OptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption7.OptionType,
-						com.tools20022.repository.msg.InstructedCorporateActionOption7.InstructedBalance, com.tools20022.repository.msg.InstructedCorporateActionOption7.DefaultAction,
-						com.tools20022.repository.msg.InstructedCorporateActionOption7.DeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption7.DeadlineType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedCorporateActionOption7.mmOptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption7.mmOptionType,
+						com.tools20022.repository.msg.InstructedCorporateActionOption7.mmInstructedBalance, com.tools20022.repository.msg.InstructedCorporateActionOption7.mmDefaultAction,
+						com.tools20022.repository.msg.InstructedCorporateActionOption7.mmDeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption7.mmDeadlineType);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructedCorporateActionOption7";
 				definition = "Provides corporate action option details about total instructed balance.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public CorporateActionOption23Choice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOption23Choice optionType) {
+		this.optionType = optionType;
+	}
+
+	public BalanceFormat7Choice getInstructedBalance() {
+		return instructedBalance;
+	}
+
+	public void setInstructedBalance(BalanceFormat7Choice instructedBalance) {
+		this.instructedBalance = instructedBalance;
+	}
+
+	public DefaultProcessingOrStandingInstruction1Choice getDefaultAction() {
+		return defaultAction;
+	}
+
+	public void setDefaultAction(DefaultProcessingOrStandingInstruction1Choice defaultAction) {
+		this.defaultAction = defaultAction;
+	}
+
+	public ISODateTime getDeadlineDateTime() {
+		return deadlineDateTime;
+	}
+
+	public void setDeadlineDateTime(ISODateTime deadlineDateTime) {
+		this.deadlineDateTime = deadlineDateTime;
+	}
+
+	public DeadlineCode4Choice getDeadlineType() {
+		return deadlineType;
+	}
+
+	public void setDeadlineType(DeadlineCode4Choice deadlineType) {
+		this.deadlineType = deadlineType;
 	}
 }

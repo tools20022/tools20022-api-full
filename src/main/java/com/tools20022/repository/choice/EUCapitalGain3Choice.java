@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#Code
- * EUCapitalGain3Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#mmCode
+ * EUCapitalGain3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#Proprietary
- * EUCapitalGain3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#mmProprietary
+ * EUCapitalGain3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EUCapitalGain3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected EUCapitalGain2Code code;
 	/**
 	 * EU capital gain expressed as a code.
 	 * <p>
@@ -79,8 +80,8 @@ public class EUCapitalGain3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,25 +101,26 @@ public class EUCapitalGain3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#EUCapitalGain
-	 * EUCapitalGainType2Choice.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#mmEUCapitalGain
+	 * EUCapitalGainType2Choice.mmEUCapitalGain}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> EUCapitalGain3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "EU capital gain expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EUCapitalGainType2Choice.EUCapitalGain;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.EUCapitalGainType2Choice.mmEUCapitalGain;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * EU capital gain expressed as a proprietary code.
 	 * <p>
@@ -132,8 +134,8 @@ public class EUCapitalGain3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,22 +155,22 @@ public class EUCapitalGain3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#Proprietary
-	 * EUCapitalGainType2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#mmProprietary
+	 * EUCapitalGainType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> EUCapitalGain3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "EU capital gain expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EUCapitalGainType2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.EUCapitalGainType2Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -176,9 +178,9 @@ public class EUCapitalGain3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.Code, com.tools20022.repository.choice.EUCapitalGain3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.mmCode, com.tools20022.repository.choice.EUCapitalGain3Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EUCapitalGain3Choice";
 				definition = "Choice of formats for the EU capital gain.";
@@ -186,5 +188,21 @@ public class EUCapitalGain3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EUCapitalGain2Code getCode() {
+		return code;
+	}
+
+	public void setCode(EUCapitalGain2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

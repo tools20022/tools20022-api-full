@@ -30,53 +30,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#CancellationRequestOutOfTime
- * FinancingStatusReasonCode.CancellationRequestOutOfTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmCancellationRequestOutOfTime
+ * FinancingStatusReasonCode.mmCancellationRequestOutOfTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#NoMatchingFinancingRequest
- * FinancingStatusReasonCode.NoMatchingFinancingRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmNoMatchingFinancingRequest
+ * FinancingStatusReasonCode.mmNoMatchingFinancingRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#IncorrectAccountNumber
- * FinancingStatusReasonCode.IncorrectAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmIncorrectAccountNumber
+ * FinancingStatusReasonCode.mmIncorrectAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#ClosedAccountNumber
- * FinancingStatusReasonCode.ClosedAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmClosedAccountNumber
+ * FinancingStatusReasonCode.mmClosedAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#BlockedAccount
- * FinancingStatusReasonCode.BlockedAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmBlockedAccount
+ * FinancingStatusReasonCode.mmBlockedAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#UnrecognisedFinancingRequestor
- * FinancingStatusReasonCode.UnrecognisedFinancingRequestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmUnrecognisedFinancingRequestor
+ * FinancingStatusReasonCode.mmUnrecognisedFinancingRequestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#UnrecognisedIntermediaryAgent
- * FinancingStatusReasonCode.UnrecognisedIntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmUnrecognisedIntermediaryAgent
+ * FinancingStatusReasonCode.mmUnrecognisedIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#UnexpectedIntermediaryAgent
- * FinancingStatusReasonCode.UnexpectedIntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmUnexpectedIntermediaryAgent
+ * FinancingStatusReasonCode.mmUnexpectedIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#UnrecognisedParty
- * FinancingStatusReasonCode.UnrecognisedParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmUnrecognisedParty
+ * FinancingStatusReasonCode.mmUnrecognisedParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#InvalidPaymentDueDate
- * FinancingStatusReasonCode.InvalidPaymentDueDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmInvalidPaymentDueDate
+ * FinancingStatusReasonCode.mmInvalidPaymentDueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#DuplicatedRequestMessage
- * FinancingStatusReasonCode.DuplicatedRequestMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmDuplicatedRequestMessage
+ * FinancingStatusReasonCode.mmDuplicatedRequestMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#WrongIdentification
- * FinancingStatusReasonCode.WrongIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmWrongIdentification
+ * FinancingStatusReasonCode.mmWrongIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#InvalidDocumentNumber
- * FinancingStatusReasonCode.InvalidDocumentNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmInvalidDocumentNumber
+ * FinancingStatusReasonCode.mmInvalidDocumentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#MissingMandatoryInformation
- * FinancingStatusReasonCode.MissingMandatoryInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmMissingMandatoryInformation
+ * FinancingStatusReasonCode.mmMissingMandatoryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#Narrative
- * FinancingStatusReasonCode.Narrative}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmNarrative
+ * FinancingStatusReasonCode.mmNarrative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#FinancingProcessAlreadyInitiated
- * FinancingStatusReasonCode.FinancingProcessAlreadyInitiated}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancingStatusReasonCode#mmFinancingProcessAlreadyInitiated
+ * FinancingStatusReasonCode.mmFinancingProcessAlreadyInitiated}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -89,8 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -134,7 +134,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationRequestOutOfTime = new MMCode() {
+	public static final MMCode mmCancellationRequestOutOfTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequestOutOfTime";
@@ -167,7 +167,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatchingFinancingRequest = new MMCode() {
+	public static final MMCode mmNoMatchingFinancingRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingFinancingRequest";
@@ -197,7 +197,7 @@ public class FinancingStatusReasonCode {
 	 * definition} = "Format of the account number specified is not correct."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAccountNumber = new MMCode() {
+	public static final MMCode mmIncorrectAccountNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountNumber";
@@ -228,7 +228,7 @@ public class FinancingStatusReasonCode {
 	 * "Account number specified has been closed on the Receiver's books."</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosedAccountNumber = new MMCode() {
+	public static final MMCode mmClosedAccountNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
@@ -261,7 +261,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BlockedAccount = new MMCode() {
+	public static final MMCode mmBlockedAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAccount";
@@ -293,7 +293,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnrecognisedFinancingRequestor = new MMCode() {
+	public static final MMCode mmUnrecognisedFinancingRequestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedFinancingRequestor";
@@ -326,7 +326,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnrecognisedIntermediaryAgent = new MMCode() {
+	public static final MMCode mmUnrecognisedIntermediaryAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedIntermediaryAgent";
@@ -359,7 +359,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnexpectedIntermediaryAgent = new MMCode() {
+	public static final MMCode mmUnexpectedIntermediaryAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnexpectedIntermediaryAgent";
@@ -389,7 +389,7 @@ public class FinancingStatusReasonCode {
 	 * definition} = "Party is not recognised by the first agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnrecognisedParty = new MMCode() {
+	public static final MMCode mmUnrecognisedParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedParty";
@@ -420,7 +420,7 @@ public class FinancingStatusReasonCode {
 	 * "PaymentDueDate is occurring before the request message creation date."</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidPaymentDueDate = new MMCode() {
+	public static final MMCode mmInvalidPaymentDueDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidPaymentDueDate";
@@ -451,7 +451,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DuplicatedRequestMessage = new MMCode() {
+	public static final MMCode mmDuplicatedRequestMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicatedRequestMessage";
@@ -482,7 +482,7 @@ public class FinancingStatusReasonCode {
 	 * "Request message received appears to have a wrong identification."</li>
 	 * </ul>
 	 */
-	public static final MMCode WrongIdentification = new MMCode() {
+	public static final MMCode mmWrongIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongIdentification";
@@ -512,7 +512,7 @@ public class FinancingStatusReasonCode {
 	 * definition} = "Document number is invalid."</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidDocumentNumber = new MMCode() {
+	public static final MMCode mmInvalidDocumentNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDocumentNumber";
@@ -542,7 +542,7 @@ public class FinancingStatusReasonCode {
 	 * definition} = "Information bilateral agreed as mandatory is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingMandatoryInformation = new MMCode() {
+	public static final MMCode mmMissingMandatoryInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingMandatoryInformation";
@@ -575,7 +575,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Narrative = new MMCode() {
+	public static final MMCode mmNarrative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Narrative";
@@ -608,7 +608,7 @@ public class FinancingStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FinancingProcessAlreadyInitiated = new MMCode() {
+	public static final MMCode mmFinancingProcessAlreadyInitiated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingProcessAlreadyInitiated";
@@ -621,19 +621,19 @@ public class FinancingStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CA01");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancingStatusReasonCode";
 				definition = "Specifies the coded reason for the financing status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancingStatusReasonCode.CancellationRequestOutOfTime, com.tools20022.repository.codeset.FinancingStatusReasonCode.NoMatchingFinancingRequest,
-						com.tools20022.repository.codeset.FinancingStatusReasonCode.IncorrectAccountNumber, com.tools20022.repository.codeset.FinancingStatusReasonCode.ClosedAccountNumber,
-						com.tools20022.repository.codeset.FinancingStatusReasonCode.BlockedAccount, com.tools20022.repository.codeset.FinancingStatusReasonCode.UnrecognisedFinancingRequestor,
-						com.tools20022.repository.codeset.FinancingStatusReasonCode.UnrecognisedIntermediaryAgent, com.tools20022.repository.codeset.FinancingStatusReasonCode.UnexpectedIntermediaryAgent,
-						com.tools20022.repository.codeset.FinancingStatusReasonCode.UnrecognisedParty, com.tools20022.repository.codeset.FinancingStatusReasonCode.InvalidPaymentDueDate,
-						com.tools20022.repository.codeset.FinancingStatusReasonCode.DuplicatedRequestMessage, com.tools20022.repository.codeset.FinancingStatusReasonCode.WrongIdentification,
-						com.tools20022.repository.codeset.FinancingStatusReasonCode.InvalidDocumentNumber, com.tools20022.repository.codeset.FinancingStatusReasonCode.MissingMandatoryInformation,
-						com.tools20022.repository.codeset.FinancingStatusReasonCode.Narrative, com.tools20022.repository.codeset.FinancingStatusReasonCode.FinancingProcessAlreadyInitiated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancingStatusReasonCode.mmCancellationRequestOutOfTime, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmNoMatchingFinancingRequest,
+						com.tools20022.repository.codeset.FinancingStatusReasonCode.mmIncorrectAccountNumber, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmClosedAccountNumber,
+						com.tools20022.repository.codeset.FinancingStatusReasonCode.mmBlockedAccount, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmUnrecognisedFinancingRequestor,
+						com.tools20022.repository.codeset.FinancingStatusReasonCode.mmUnrecognisedIntermediaryAgent, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmUnexpectedIntermediaryAgent,
+						com.tools20022.repository.codeset.FinancingStatusReasonCode.mmUnrecognisedParty, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmInvalidPaymentDueDate,
+						com.tools20022.repository.codeset.FinancingStatusReasonCode.mmDuplicatedRequestMessage, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmWrongIdentification,
+						com.tools20022.repository.codeset.FinancingStatusReasonCode.mmInvalidDocumentNumber, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmMissingMandatoryInformation,
+						com.tools20022.repository.codeset.FinancingStatusReasonCode.mmNarrative, com.tools20022.repository.codeset.FinancingStatusReasonCode.mmFinancingProcessAlreadyInitiated);
 				derivation_lazy = () -> Arrays.asList(FinancingStatusReason1Code.mmObject());
 			}
 		});

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.MarginCall;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the total margin amount, the collateral amount on deposit and the
@@ -38,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCalculation1#TotalMarginAmount
- * MarginCalculation1.TotalMarginAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCalculation1#mmTotalMarginAmount
+ * MarginCalculation1.mmTotalMarginAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCalculation1#CollateralOnDeposit
- * MarginCalculation1.CollateralOnDeposit}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCalculation1#mmCollateralOnDeposit
+ * MarginCalculation1.mmCollateralOnDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCalculation1#MinimumRequirementDeposit
- * MarginCalculation1.MinimumRequirementDeposit}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCalculation1#mmMinimumRequirementDeposit
+ * MarginCalculation1.mmMinimumRequirementDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCalculation1#MarginResult
- * MarginCalculation1.MarginResult}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCalculation1#mmMarginResult
+ * MarginCalculation1.mmMarginResult}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,15 +59,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#ReportSummary
- * MarginReportV02.ReportSummary}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmReportSummary
+ * MarginReportV02.mmReportSummary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginCalculation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection20 totalMarginAmount;
 	/**
 	 * Total margin requirement (expressed in the reporting currency) that must
 	 * be provided by the clearing member to the central counterparty. This is
@@ -96,8 +98,8 @@ public class MarginCalculation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#TotalMarginAmount
-	 * MarginCall.TotalMarginAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarginAmount
+	 * MarginCall.mmTotalMarginAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,21 +120,22 @@ public class MarginCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalMarginAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalMarginAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmTotalMarginAmount;
 			componentContext_lazy = () -> MarginCalculation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.TotalMarginAmount;
 			isDerived = false;
 			xmlTag = "TtlMrgnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalMarginAmount";
 			definition = "Total margin requirement (expressed in the reporting currency) that must be provided by the clearing member to the central counterparty. This is the total requirement calculated to cover the initial margin and the variation margin.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Collateral6> collateralOnDeposit;
 	/**
 	 * Provides details on the valuation of the collateral on deposit.
 	 * <p>
@@ -144,8 +147,8 @@ public class MarginCalculation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#TotalCollateralCurrentValue
-	 * ExposureCalculation.TotalCollateralCurrentValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralCurrentValue
+	 * ExposureCalculation.mmTotalCollateralCurrentValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,20 +168,21 @@ public class MarginCalculation1 {
 	 * "Provides details on the valuation of the collateral on deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralOnDeposit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralOnDeposit = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> MarginCalculation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.TotalCollateralCurrentValue;
 			isDerived = false;
 			xmlTag = "CollOnDpst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOnDeposit";
 			definition = "Provides details on the valuation of the collateral on deposit.";
 			minOccurs = 0;
-			type_lazy = () -> Collateral6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Collateral6.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount minimumRequirementDeposit;
 	/**
 	 * Minimum requirement (expressed in the reporting currency) for a
 	 * participant if their requirement falls below a specific amount set by the
@@ -194,8 +198,8 @@ public class MarginCalculation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#MinimumRequirementDeposit
-	 * ExposureTerm.MinimumRequirementDeposit}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumRequirementDeposit
+	 * ExposureTerm.mmMinimumRequirementDeposit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,20 +220,21 @@ public class MarginCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumRequirementDeposit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumRequirementDeposit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmMinimumRequirementDeposit;
 			componentContext_lazy = () -> MarginCalculation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.MinimumRequirementDeposit;
 			isDerived = false;
 			xmlTag = "MinRqrmntDpst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumRequirementDeposit";
 			definition = "Minimum requirement (expressed in the reporting currency) for a participant if their requirement falls below a specific amount set by the central counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected MarginResult1Choice marginResult;
 	/**
 	 * Provide details on the margin result taking into consideration the total
 	 * margin amount and the minimum requirements deposit.
@@ -242,8 +247,8 @@ public class MarginCalculation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#CollateralMovement
-	 * MarginCall.CollateralMovement}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmCollateralMovement
+	 * MarginCall.mmCollateralMovement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -264,35 +269,67 @@ public class MarginCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarginResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarginResult = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmCollateralMovement;
 			componentContext_lazy = () -> MarginCalculation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.CollateralMovement;
 			isDerived = false;
 			xmlTag = "MrgnRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginResult";
 			definition = "Provide details on the margin result taking into consideration the total margin amount and the minimum requirements deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarginResult1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MarginResult1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCalculation1.TotalMarginAmount, com.tools20022.repository.msg.MarginCalculation1.CollateralOnDeposit,
-						com.tools20022.repository.msg.MarginCalculation1.MinimumRequirementDeposit, com.tools20022.repository.msg.MarginCalculation1.MarginResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCalculation1.mmTotalMarginAmount, com.tools20022.repository.msg.MarginCalculation1.mmCollateralOnDeposit,
+						com.tools20022.repository.msg.MarginCalculation1.mmMinimumRequirementDeposit, com.tools20022.repository.msg.MarginCalculation1.mmMarginResult);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.mmReportSummary);
 				trace_lazy = () -> MarginCall.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.ReportSummary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginCalculation1";
 				definition = "Provides the total margin amount, the collateral amount on deposit and the total minimum requirement that used to calculate the margin result, either an excess or a deficit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection20 getTotalMarginAmount() {
+		return totalMarginAmount;
+	}
+
+	public void setTotalMarginAmount(com.tools20022.repository.msg.AmountAndDirection20 totalMarginAmount) {
+		this.totalMarginAmount = totalMarginAmount;
+	}
+
+	public List<Collateral6> getCollateralOnDeposit() {
+		return collateralOnDeposit;
+	}
+
+	public void setCollateralOnDeposit(List<com.tools20022.repository.msg.Collateral6> collateralOnDeposit) {
+		this.collateralOnDeposit = collateralOnDeposit;
+	}
+
+	public ActiveCurrencyAndAmount getMinimumRequirementDeposit() {
+		return minimumRequirementDeposit;
+	}
+
+	public void setMinimumRequirementDeposit(ActiveCurrencyAndAmount minimumRequirementDeposit) {
+		this.minimumRequirementDeposit = minimumRequirementDeposit;
+	}
+
+	public MarginResult1Choice getMarginResult() {
+		return marginResult;
+	}
+
+	public void setMarginResult(MarginResult1Choice marginResult) {
+		this.marginResult = marginResult;
 	}
 }

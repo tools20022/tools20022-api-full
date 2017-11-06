@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2#OrderReference
- * InvestmentFundOrderExecution2.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2#mmOrderReference
+ * InvestmentFundOrderExecution2.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2#ClientReference
- * InvestmentFundOrderExecution2.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2#mmClientReference
+ * InvestmentFundOrderExecution2.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2#DealReference
- * InvestmentFundOrderExecution2.DealReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2#mmDealReference
+ * InvestmentFundOrderExecution2.mmDealReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundOrderExecution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for an order, as assigned by the
 	 * instructing party.
@@ -79,8 +80,8 @@ public class InvestmentFundOrderExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class InvestmentFundOrderExecution2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> InvestmentFundOrderExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of an order. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -129,8 +131,8 @@ public class InvestmentFundOrderExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,20 +153,21 @@ public class InvestmentFundOrderExecution2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> InvestmentFundOrderExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text dealReference;
 	/**
 	 * Unique and unambiguous identifier for an order cancellation, as assigned
 	 * by the instructing party.
@@ -178,8 +181,8 @@ public class InvestmentFundOrderExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#DealIdentification
-	 * InvestmentFundOrderExecution.DealIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmDealIdentification
+	 * InvestmentFundOrderExecution.mmDealIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,17 +203,17 @@ public class InvestmentFundOrderExecution2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> InvestmentFundOrderExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.DealIdentification;
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Unique and unambiguous identifier for an order cancellation, as assigned by the instructing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -218,15 +221,39 @@ public class InvestmentFundOrderExecution2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrderExecution2.OrderReference, com.tools20022.repository.msg.InvestmentFundOrderExecution2.ClientReference,
-						com.tools20022.repository.msg.InvestmentFundOrderExecution2.DealReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmOrderReference, com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmClientReference,
+						com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmDealReference);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrderExecution2";
 				definition = "Reference of an order, client or deal reference.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public Max35Text getDealReference() {
+		return dealReference;
+	}
+
+	public void setDealReference(Max35Text dealReference) {
+		this.dealReference = dealReference;
 	}
 }

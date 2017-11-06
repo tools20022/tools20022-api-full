@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#Quantity
- * DTCCQuantitySought1Code.Quantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#mmQuantity
+ * DTCCQuantitySought1Code.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#CheckComments
- * DTCCQuantitySought1Code.CheckComments}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#mmCheckComments
+ * DTCCQuantitySought1Code.mmCheckComments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#Percentage
- * DTCCQuantitySought1Code.Percentage}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#mmPercentage
+ * DTCCQuantitySought1Code.mmPercentage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
 	 * name} = "Quantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Quantity = new MMCode() {
+	public static final MMCode mmQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
@@ -107,7 +107,7 @@ public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
 	 * name} = "CheckComments"</li>
 	 * </ul>
 	 */
-	public static final MMCode CheckComments = new MMCode() {
+	public static final MMCode mmCheckComments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckComments";
@@ -130,7 +130,7 @@ public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
 	 * name} = "Percentage"</li>
 	 * </ul>
 	 */
-	public static final MMCode Percentage = new MMCode() {
+	public static final MMCode mmPercentage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
@@ -141,13 +141,13 @@ public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("QTTY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCCQuantitySought1Code";
 				definition = "Specifies the quantity sought type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCQuantitySought1Code.Quantity, com.tools20022.repository.codeset.DTCCQuantitySought1Code.CheckComments,
-						com.tools20022.repository.codeset.DTCCQuantitySought1Code.Percentage);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCQuantitySought1Code.mmQuantity, com.tools20022.repository.codeset.DTCCQuantitySought1Code.mmCheckComments,
+						com.tools20022.repository.codeset.DTCCQuantitySought1Code.mmPercentage);
 				trace_lazy = () -> DTCCQuantitySoughtCode.mmObject();
 			}
 		});

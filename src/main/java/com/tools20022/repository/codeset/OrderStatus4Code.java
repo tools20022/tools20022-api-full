@@ -33,42 +33,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code#Accepted
- * OrderStatus4Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#AlreadyExecuted
- * OrderStatus4Code.AlreadyExecuted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmAccepted
+ * OrderStatus4Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#SentToNextParty
- * OrderStatus4Code.SentToNextParty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code#Received
- * OrderStatus4Code.Received}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code#Settled
- * OrderStatus4Code.Settled}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmAlreadyExecuted
+ * OrderStatus4Code.mmAlreadyExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#CommunicationProblemNextParty
- * OrderStatus4Code.CommunicationProblemNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmSentToNextParty
+ * OrderStatus4Code.mmSentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#ConfirmationAmendment
- * OrderStatus4Code.ConfirmationAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmReceived
+ * OrderStatus4Code.mmReceived}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmSettled
+ * OrderStatus4Code.mmSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#DoneForDay
- * OrderStatus4Code.DoneForDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmCommunicationProblemNextParty
+ * OrderStatus4Code.mmCommunicationProblemNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#PartiallyDone
- * OrderStatus4Code.PartiallyDone}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code#Open
- * OrderStatus4Code.Open}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmConfirmationAmendment
+ * OrderStatus4Code.mmConfirmationAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#InvalidAgentConfirmation
- * OrderStatus4Code.InvalidAgentConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmDoneForDay
+ * OrderStatus4Code.mmDoneForDay}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmPartiallyDone
+ * OrderStatus4Code.mmPartiallyDone}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmOpen
+ * OrderStatus4Code.mmOpen}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus4Code#mmInvalidAgentConfirmation
+ * OrderStatus4Code.mmInvalidAgentConfirmation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -104,7 +106,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -127,7 +129,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "AlreadyExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlreadyExecuted = new MMCode() {
+	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
@@ -150,7 +152,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -173,7 +175,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -196,7 +198,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -219,7 +221,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "CommunicationProblemNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommunicationProblemNextParty = new MMCode() {
+	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
@@ -242,7 +244,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "ConfirmationAmendment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationAmendment = new MMCode() {
+	public static final MMCode mmConfirmationAmendment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationAmendment";
@@ -265,7 +267,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "DoneForDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode DoneForDay = new MMCode() {
+	public static final MMCode mmDoneForDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneForDay";
@@ -288,7 +290,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "PartiallyDone"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyDone = new MMCode() {
+	public static final MMCode mmPartiallyDone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyDone";
@@ -311,7 +313,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
@@ -334,7 +336,7 @@ public class OrderStatus4Code extends OrderStatusCode {
 	 * name} = "InvalidAgentConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAgentConfirmation = new MMCode() {
+	public static final MMCode mmInvalidAgentConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAgentConfirmation";
@@ -345,16 +347,16 @@ public class OrderStatus4Code extends OrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus4Code";
 				definition = "Specifies the current status of the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus4Code.Accepted, com.tools20022.repository.codeset.OrderStatus4Code.AlreadyExecuted,
-						com.tools20022.repository.codeset.OrderStatus4Code.SentToNextParty, com.tools20022.repository.codeset.OrderStatus4Code.Received, com.tools20022.repository.codeset.OrderStatus4Code.Settled,
-						com.tools20022.repository.codeset.OrderStatus4Code.CommunicationProblemNextParty, com.tools20022.repository.codeset.OrderStatus4Code.ConfirmationAmendment,
-						com.tools20022.repository.codeset.OrderStatus4Code.DoneForDay, com.tools20022.repository.codeset.OrderStatus4Code.PartiallyDone, com.tools20022.repository.codeset.OrderStatus4Code.Open,
-						com.tools20022.repository.codeset.OrderStatus4Code.InvalidAgentConfirmation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus4Code.mmAccepted, com.tools20022.repository.codeset.OrderStatus4Code.mmAlreadyExecuted,
+						com.tools20022.repository.codeset.OrderStatus4Code.mmSentToNextParty, com.tools20022.repository.codeset.OrderStatus4Code.mmReceived, com.tools20022.repository.codeset.OrderStatus4Code.mmSettled,
+						com.tools20022.repository.codeset.OrderStatus4Code.mmCommunicationProblemNextParty, com.tools20022.repository.codeset.OrderStatus4Code.mmConfirmationAmendment,
+						com.tools20022.repository.codeset.OrderStatus4Code.mmDoneForDay, com.tools20022.repository.codeset.OrderStatus4Code.mmPartiallyDone, com.tools20022.repository.codeset.OrderStatus4Code.mmOpen,
+						com.tools20022.repository.codeset.OrderStatus4Code.mmInvalidAgentConfirmation);
 				trace_lazy = () -> OrderStatusCode.mmObject();
 			}
 		});

@@ -36,22 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#PhoneNumber
- * PhoneAddress.PhoneNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#FaxNumber
- * PhoneAddress.FaxNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#MobileNumber
- * PhoneAddress.MobileNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmPhoneNumber
+ * PhoneAddress.mmPhoneNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmFaxNumber
+ * PhoneAddress.mmFaxNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmMobileNumber
+ * PhoneAddress.mmMobileNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods#VoteByTelephone
- * VoteMethods.VoteByTelephone}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#VoteByTelephone
- * VoteMethods2.VoteByTelephone}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods#mmVoteByTelephone
+ * VoteMethods.mmVoteByTelephone}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#mmVoteByTelephone
+ * VoteMethods2.mmVoteByTelephone}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PhoneAddress extends ContactPoint {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text phoneNumber;
 	/**
 	 * Collection of information that identifies a phone number, as defined by
 	 * telecom services.<br>
@@ -86,62 +87,62 @@ public class PhoneAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactDetails1#PhoneNumber
-	 * ContactDetails1.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#PhoneNumber
-	 * OrderDeskContactDetails.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactAttributes1#PhoneNumber
-	 * ContactAttributes1.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress3#Phone
-	 * CommunicationAddress3.Phone}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactDetails2#PhoneNumber
-	 * ContactDetails2.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#PhoneNumber
-	 * ContactIdentification2.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#PhoneNumber
-	 * ContactIdentification1.PhoneNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#PhoneNumber
-	 * Contacts3.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactInformation1#TelephoneNumber
-	 * ContactInformation1.TelephoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#PhoneNumber
-	 * ContactIdentification4.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#PhoneNumber
-	 * ContactIdentification3.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#PhoneNumber
-	 * CommunicationAddressDetails.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#PhoneNumber
-	 * ContactDetails3.PhoneNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress5#Phone
-	 * CommunicationAddress5.Phone}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress5#CustomerService
-	 * CommunicationAddress5.CustomerService}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#Phone
-	 * CommunicationAddress6.Phone}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails1#mmPhoneNumber
+	 * ContactDetails1.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmPhoneNumber
+	 * OrderDeskContactDetails.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactAttributes1#mmPhoneNumber
+	 * ContactAttributes1.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress3#mmPhone
+	 * CommunicationAddress3.mmPhone}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails2#mmPhoneNumber
+	 * ContactDetails2.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#mmPhoneNumber
+	 * ContactIdentification2.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#mmPhoneNumber
+	 * ContactIdentification1.mmPhoneNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#mmPhoneNumber
+	 * Contacts3.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactInformation1#mmTelephoneNumber
+	 * ContactInformation1.mmTelephoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmPhoneNumber
+	 * ContactIdentification4.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#mmPhoneNumber
+	 * ContactIdentification3.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#mmPhoneNumber
+	 * CommunicationAddressDetails.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#mmPhoneNumber
+	 * ContactDetails3.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress5#mmPhone
+	 * CommunicationAddress5.mmPhone}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress5#mmCustomerService
+	 * CommunicationAddress5.mmCustomerService}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#mmPhone
+	 * CommunicationAddress6.mmPhone}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -155,24 +156,25 @@ public class PhoneAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PhoneNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPhoneNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.PhoneNumber, com.tools20022.repository.msg.OrderDeskContactDetails.PhoneNumber, com.tools20022.repository.msg.ContactAttributes1.PhoneNumber,
-					com.tools20022.repository.msg.CommunicationAddress3.Phone, com.tools20022.repository.msg.ContactDetails2.PhoneNumber, com.tools20022.repository.msg.ContactIdentification2.PhoneNumber,
-					com.tools20022.repository.msg.ContactIdentification1.PhoneNumber, com.tools20022.repository.msg.Contacts3.PhoneNumber, com.tools20022.repository.msg.ContactInformation1.TelephoneNumber,
-					com.tools20022.repository.msg.ContactIdentification4.PhoneNumber, com.tools20022.repository.msg.ContactIdentification3.PhoneNumber, com.tools20022.repository.msg.CommunicationAddressDetails.PhoneNumber,
-					com.tools20022.repository.msg.ContactDetails3.PhoneNumber, com.tools20022.repository.msg.CommunicationAddress5.Phone, com.tools20022.repository.msg.CommunicationAddress5.CustomerService,
-					com.tools20022.repository.msg.CommunicationAddress6.Phone);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmPhoneNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmPhoneNumber,
+					com.tools20022.repository.msg.ContactAttributes1.mmPhoneNumber, com.tools20022.repository.msg.CommunicationAddress3.mmPhone, com.tools20022.repository.msg.ContactDetails2.mmPhoneNumber,
+					com.tools20022.repository.msg.ContactIdentification2.mmPhoneNumber, com.tools20022.repository.msg.ContactIdentification1.mmPhoneNumber, com.tools20022.repository.msg.Contacts3.mmPhoneNumber,
+					com.tools20022.repository.msg.ContactInformation1.mmTelephoneNumber, com.tools20022.repository.msg.ContactIdentification4.mmPhoneNumber, com.tools20022.repository.msg.ContactIdentification3.mmPhoneNumber,
+					com.tools20022.repository.msg.CommunicationAddressDetails.mmPhoneNumber, com.tools20022.repository.msg.ContactDetails3.mmPhoneNumber, com.tools20022.repository.msg.CommunicationAddress5.mmPhone,
+					com.tools20022.repository.msg.CommunicationAddress5.mmCustomerService, com.tools20022.repository.msg.CommunicationAddress6.mmPhone);
 			elementContext_lazy = () -> PhoneAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.\r\nIt is recommended to use only numbers and limited punctuation +,-.(.).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text faxNumber;
 	/**
 	 * Collection of information that identifies a FAX number, as defined by
 	 * telecom services.<br>
@@ -184,53 +186,56 @@ public class PhoneAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails1#FaxNumber
-	 * ContactDetails1.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#FaxNumber
-	 * OrderDeskContactDetails.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactAttributes1#FaxNumber
-	 * ContactAttributes1.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress3#FaxNumber
-	 * CommunicationAddress3.FaxNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails2#FaxNumber
-	 * ContactDetails2.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#FaxNumber
-	 * ContactIdentification2.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#FaxNumber
-	 * ContactIdentification1.FaxNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#FaxNumber
-	 * Contacts3.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactInformation1#FaxNumber
-	 * ContactInformation1.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#FaxNumber
-	 * ContactIdentification4.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#FaxNumber
-	 * ContactIdentification3.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#FaxNumber
-	 * CommunicationAddressDetails.FaxNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails3#FaxNumber
-	 * ContactDetails3.FaxNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#FaxNumber
-	 * CommunicationAddress6.FaxNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails1#mmFaxNumber
+	 * ContactDetails1.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmFaxNumber
+	 * OrderDeskContactDetails.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactAttributes1#mmFaxNumber
+	 * ContactAttributes1.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress3#mmFaxNumber
+	 * CommunicationAddress3.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails2#mmFaxNumber
+	 * ContactDetails2.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#mmFaxNumber
+	 * ContactIdentification2.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#mmFaxNumber
+	 * ContactIdentification1.mmFaxNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#mmFaxNumber
+	 * Contacts3.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactInformation1#mmFaxNumber
+	 * ContactInformation1.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmFaxNumber
+	 * ContactIdentification4.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#mmFaxNumber
+	 * ContactIdentification3.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#mmFaxNumber
+	 * CommunicationAddressDetails.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#mmFaxNumber
+	 * ContactDetails3.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#mmFaxNumber
+	 * CommunicationAddress6.mmFaxNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -244,23 +249,24 @@ public class PhoneAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FaxNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFaxNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.FaxNumber, com.tools20022.repository.msg.OrderDeskContactDetails.FaxNumber, com.tools20022.repository.msg.ContactAttributes1.FaxNumber,
-					com.tools20022.repository.msg.CommunicationAddress3.FaxNumber, com.tools20022.repository.msg.ContactDetails2.FaxNumber, com.tools20022.repository.msg.ContactIdentification2.FaxNumber,
-					com.tools20022.repository.msg.ContactIdentification1.FaxNumber, com.tools20022.repository.msg.Contacts3.FaxNumber, com.tools20022.repository.msg.ContactInformation1.FaxNumber,
-					com.tools20022.repository.msg.ContactIdentification4.FaxNumber, com.tools20022.repository.msg.ContactIdentification3.FaxNumber, com.tools20022.repository.msg.CommunicationAddressDetails.FaxNumber,
-					com.tools20022.repository.msg.ContactDetails3.FaxNumber, com.tools20022.repository.msg.CommunicationAddress6.FaxNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmFaxNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmFaxNumber, com.tools20022.repository.msg.ContactAttributes1.mmFaxNumber,
+					com.tools20022.repository.msg.CommunicationAddress3.mmFaxNumber, com.tools20022.repository.msg.ContactDetails2.mmFaxNumber, com.tools20022.repository.msg.ContactIdentification2.mmFaxNumber,
+					com.tools20022.repository.msg.ContactIdentification1.mmFaxNumber, com.tools20022.repository.msg.Contacts3.mmFaxNumber, com.tools20022.repository.msg.ContactInformation1.mmFaxNumber,
+					com.tools20022.repository.msg.ContactIdentification4.mmFaxNumber, com.tools20022.repository.msg.ContactIdentification3.mmFaxNumber, com.tools20022.repository.msg.CommunicationAddressDetails.mmFaxNumber,
+					com.tools20022.repository.msg.ContactDetails3.mmFaxNumber, com.tools20022.repository.msg.CommunicationAddress6.mmFaxNumber);
 			elementContext_lazy = () -> PhoneAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.\r\nIt is recommended to use only numbers and limited punctuation +,-.(.).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text mobileNumber;
 	/**
 	 * Collection of information that identifies a mobile phone number, as
 	 * defined by telecom services.<br>
@@ -272,32 +278,32 @@ public class PhoneAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress3#Mobile
-	 * CommunicationAddress3.Mobile}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactDetails2#MobileNumber
-	 * ContactDetails2.MobileNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#MobileNumber
-	 * ContactIdentification2.MobileNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#MobileNumber
-	 * Contacts3.MobileNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#MobileNumber
-	 * ContactDetails3.MobileNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#Mobile
-	 * CommunicationAddress6.Mobile}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress3#mmMobile
+	 * CommunicationAddress3.mmMobile}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails2#mmMobileNumber
+	 * ContactDetails2.mmMobileNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#mmMobileNumber
+	 * ContactIdentification2.mmMobileNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#mmMobileNumber
+	 * Contacts3.mmMobileNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#mmMobileNumber
+	 * ContactDetails3.mmMobileNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#mmMobile
+	 * CommunicationAddress6.mmMobile}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -311,17 +317,18 @@ public class PhoneAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MobileNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMobileNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress3.Mobile, com.tools20022.repository.msg.ContactDetails2.MobileNumber, com.tools20022.repository.msg.ContactIdentification2.MobileNumber,
-					com.tools20022.repository.msg.Contacts3.MobileNumber, com.tools20022.repository.msg.ContactDetails3.MobileNumber, com.tools20022.repository.msg.CommunicationAddress6.Mobile);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress3.mmMobile, com.tools20022.repository.msg.ContactDetails2.mmMobileNumber,
+					com.tools20022.repository.msg.ContactIdentification2.mmMobileNumber, com.tools20022.repository.msg.Contacts3.mmMobileNumber, com.tools20022.repository.msg.ContactDetails3.mmMobileNumber,
+					com.tools20022.repository.msg.CommunicationAddress6.mmMobile);
 			elementContext_lazy = () -> PhoneAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MobileNumber";
 			definition = "Collection of information that identifies a mobile phone number, as defined by telecom services.\r\nIt is recommended to use only numbers and limited punctuation +,-.(.).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -329,15 +336,39 @@ public class PhoneAddress extends ContactPoint {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PhoneAddress";
 				definition = "Collection of information that identifies a phone address.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods.VoteByTelephone, com.tools20022.repository.msg.VoteMethods2.VoteByTelephone);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods.mmVoteByTelephone, com.tools20022.repository.msg.VoteMethods2.mmVoteByTelephone);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhoneAddress.PhoneNumber, com.tools20022.repository.entity.PhoneAddress.FaxNumber, com.tools20022.repository.entity.PhoneAddress.MobileNumber);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber, com.tools20022.repository.entity.PhoneAddress.mmFaxNumber, com.tools20022.repository.entity.PhoneAddress.mmMobileNumber);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(Max35Text phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public Max35Text getFaxNumber() {
+		return faxNumber;
+	}
+
+	public void setFaxNumber(Max35Text faxNumber) {
+		this.faxNumber = faxNumber;
+	}
+
+	public Max35Text getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(Max35Text mobileNumber) {
+		this.mobileNumber = mobileNumber;
 	}
 }

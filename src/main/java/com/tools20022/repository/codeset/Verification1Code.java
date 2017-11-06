@@ -33,29 +33,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * VerificationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code#Failed
- * Verification1Code.Failed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code#Missing
- * Verification1Code.Missing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code#mmFailed
+ * Verification1Code.mmFailed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#NotPerformed
- * Verification1Code.NotPerformed}</li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmMissing
+ * Verification1Code.mmMissing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#PartialMatch
- * Verification1Code.PartialMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmNotPerformed
+ * Verification1Code.mmNotPerformed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#Successful
- * Verification1Code.Successful}</li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmPartialMatch
+ * Verification1Code.mmPartialMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#TechnicalError
- * Verification1Code.TechnicalError}</li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmSuccessful
+ * Verification1Code.mmSuccessful}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmTechnicalError
+ * Verification1Code.mmTechnicalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +86,7 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "Failed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Failed = new MMCode() {
+	public static final MMCode mmFailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failed";
@@ -108,7 +109,7 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "Missing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Missing = new MMCode() {
+	public static final MMCode mmMissing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Missing";
@@ -131,7 +132,7 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "NotPerformed"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotPerformed = new MMCode() {
+	public static final MMCode mmNotPerformed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPerformed";
@@ -154,7 +155,7 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "PartialMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialMatch = new MMCode() {
+	public static final MMCode mmPartialMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMatch";
@@ -177,7 +178,7 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "Successful"</li>
 	 * </ul>
 	 */
-	public static final MMCode Successful = new MMCode() {
+	public static final MMCode mmSuccessful = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Successful";
@@ -200,7 +201,7 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "TechnicalError"</li>
 	 * </ul>
 	 */
-	public static final MMCode TechnicalError = new MMCode() {
+	public static final MMCode mmTechnicalError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalError";
@@ -211,12 +212,13 @@ public class Verification1Code extends VerificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Verification1Code";
 				definition = "Result of the verification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Verification1Code.Failed, com.tools20022.repository.codeset.Verification1Code.Missing, com.tools20022.repository.codeset.Verification1Code.NotPerformed,
-						com.tools20022.repository.codeset.Verification1Code.PartialMatch, com.tools20022.repository.codeset.Verification1Code.Successful, com.tools20022.repository.codeset.Verification1Code.TechnicalError);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Verification1Code.mmFailed, com.tools20022.repository.codeset.Verification1Code.mmMissing,
+						com.tools20022.repository.codeset.Verification1Code.mmNotPerformed, com.tools20022.repository.codeset.Verification1Code.mmPartialMatch, com.tools20022.repository.codeset.Verification1Code.mmSuccessful,
+						com.tools20022.repository.codeset.Verification1Code.mmTechnicalError);
 				trace_lazy = () -> VerificationCode.mmObject();
 			}
 		});

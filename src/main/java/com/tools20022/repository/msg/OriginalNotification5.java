@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the original notification and to provide the status.
@@ -38,23 +39,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification5#OriginalMessageIdentification
- * OriginalNotification5.OriginalMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification5#mmOriginalMessageIdentification
+ * OriginalNotification5.mmOriginalMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification5#OriginalCreationDateTime
- * OriginalNotification5.OriginalCreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification5#mmOriginalCreationDateTime
+ * OriginalNotification5.mmOriginalCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification5#OriginalNotificationIdentification
- * OriginalNotification5.OriginalNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification5#mmOriginalNotificationIdentification
+ * OriginalNotification5.mmOriginalNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification5#NotificationStatus
- * OriginalNotification5.NotificationStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification5#mmNotificationStatus
+ * OriginalNotification5.mmNotificationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification5#AdditionalStatusInformation
- * OriginalNotification5.AdditionalStatusInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification5#mmAdditionalStatusInformation
+ * OriginalNotification5.mmAdditionalStatusInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification5#OriginalNotificationReference
- * OriginalNotification5.OriginalNotificationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification5#mmOriginalNotificationReference
+ * OriginalNotification5.mmOriginalNotificationReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,15 +66,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV03#OriginalNotificationAndStatus
- * NotificationToReceiveStatusReportV03.OriginalNotificationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV03#mmOriginalNotificationAndStatus
+ * NotificationToReceiveStatusReportV03.mmOriginalNotificationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalNotification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalMessageIdentification;
 	/**
 	 * Point to point reference, as assigned by the original sender, to
 	 * unambiguously identify the original notification to receive message.
@@ -127,13 +129,13 @@ public class OriginalNotification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#OriginalMessageIdentification
-	 * OriginalNotification7.OriginalMessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#mmOriginalMessageIdentification
+	 * OriginalNotification7.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
@@ -141,12 +143,13 @@ public class OriginalNotification5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original sender, to unambiguously identify the original notification to receive message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.OriginalMessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalCreationDateTime;
 	/**
 	 * Date and time at which the original message was created.
 	 * <p>
@@ -159,8 +162,8 @@ public class OriginalNotification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,27 +184,28 @@ public class OriginalNotification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#OriginalCreationDateTime
-	 * OriginalNotification7.OriginalCreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#mmOriginalCreationDateTime
+	 * OriginalNotification7.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.OriginalCreationDateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalCreationDateTime);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text originalNotificationIdentification;
 	/**
 	 * Identification of the original notification.
 	 * <p>
@@ -231,13 +235,13 @@ public class OriginalNotification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#OriginalNotificationIdentification
-	 * OriginalNotification7.OriginalNotificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#mmOriginalNotificationIdentification
+	 * OriginalNotification7.mmOriginalNotificationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
@@ -245,12 +249,13 @@ public class OriginalNotification5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationIdentification";
 			definition = "Identification of the original notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.OriginalNotificationIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalNotificationIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected NotificationStatus3Code notificationStatus;
 	/**
 	 * Specifies the status of the notification in a coded form.
 	 * <p>
@@ -264,8 +269,8 @@ public class OriginalNotification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#NotificationStatus
-	 * PaymentStatus.NotificationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmNotificationStatus
+	 * PaymentStatus.mmNotificationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,27 +292,28 @@ public class OriginalNotification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#NotificationStatus
-	 * OriginalNotification7.NotificationStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#mmNotificationStatus
+	 * OriginalNotification7.mmNotificationStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmNotificationStatus;
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.NotificationStatus;
 			isDerived = false;
 			xmlTag = "NtfctnSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationStatus";
 			definition = "Specifies the status of the notification in a coded form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.NotificationStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmNotificationStatus);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NotificationStatus3Code.mmObject();
 		}
 	};
+	protected Max140Text additionalStatusInformation;
 	/**
 	 * Further details of the notification status.
 	 * <p>
@@ -337,13 +343,13 @@ public class OriginalNotification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#AdditionalStatusInformation
-	 * OriginalNotification7.AdditionalStatusInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#mmAdditionalStatusInformation
+	 * OriginalNotification7.mmAdditionalStatusInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalStatusInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalStatusInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
@@ -351,12 +357,13 @@ public class OriginalNotification5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalStatusInformation";
 			definition = "Further details of the notification status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.AdditionalStatusInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmAdditionalStatusInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OriginalNotificationReference3> originalNotificationReference;
 	/**
 	 * Identifies the original notification item and provides the status.
 	 * <p>
@@ -392,37 +399,37 @@ public class OriginalNotification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#OriginalNotificationReference
-	 * OriginalNotification7.OriginalNotificationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification7#mmOriginalNotificationReference
+	 * OriginalNotification7.mmOriginalNotificationReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalNotificationReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalNotificationReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtfctnRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationReference";
 			definition = "Identifies the original notification item and provides the status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.OriginalNotificationReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalNotificationReference);
 			minOccurs = 0;
-			type_lazy = () -> OriginalNotificationReference3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification5.OriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification5.OriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalNotification5.OriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification5.NotificationStatus,
-						com.tools20022.repository.msg.OriginalNotification5.AdditionalStatusInformation, com.tools20022.repository.msg.OriginalNotification5.OriginalNotificationReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification5.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification5.mmOriginalCreationDateTime,
+						com.tools20022.repository.msg.OriginalNotification5.mmOriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification5.mmNotificationStatus,
+						com.tools20022.repository.msg.OriginalNotification5.mmAdditionalStatusInformation, com.tools20022.repository.msg.OriginalNotification5.mmOriginalNotificationReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV03.mmOriginalNotificationAndStatus);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV03.OriginalNotificationAndStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotification5";
 				definition = "Identifies the original notification and to provide the status.";
@@ -430,5 +437,53 @@ public class OriginalNotification5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
+	}
+
+	public ISODateTime getOriginalCreationDateTime() {
+		return originalCreationDateTime;
+	}
+
+	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = originalCreationDateTime;
+	}
+
+	public Max35Text getOriginalNotificationIdentification() {
+		return originalNotificationIdentification;
+	}
+
+	public void setOriginalNotificationIdentification(Max35Text originalNotificationIdentification) {
+		this.originalNotificationIdentification = originalNotificationIdentification;
+	}
+
+	public NotificationStatus3Code getNotificationStatus() {
+		return notificationStatus;
+	}
+
+	public void setNotificationStatus(NotificationStatus3Code notificationStatus) {
+		this.notificationStatus = notificationStatus;
+	}
+
+	public Max140Text getAdditionalStatusInformation() {
+		return additionalStatusInformation;
+	}
+
+	public void setAdditionalStatusInformation(Max140Text additionalStatusInformation) {
+		this.additionalStatusInformation = additionalStatusInformation;
+	}
+
+	public List<OriginalNotificationReference3> getOriginalNotificationReference() {
+		return originalNotificationReference;
+	}
+
+	public void setOriginalNotificationReference(List<com.tools20022.repository.msg.OriginalNotificationReference3> originalNotificationReference) {
+		this.originalNotificationReference = originalNotificationReference;
 	}
 }

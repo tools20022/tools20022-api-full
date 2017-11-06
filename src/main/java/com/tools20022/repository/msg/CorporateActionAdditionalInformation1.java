@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.BeneficialOwner;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information about the delivery details, beneficial owner
@@ -40,26 +41,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#BeneficialOwnerDetails
- * CorporateActionAdditionalInformation1.BeneficialOwnerDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#mmBeneficialOwnerDetails
+ * CorporateActionAdditionalInformation1.mmBeneficialOwnerDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#RegistrationDetails
- * CorporateActionAdditionalInformation1.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#mmRegistrationDetails
+ * CorporateActionAdditionalInformation1.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#ReceiverIdentification
- * CorporateActionAdditionalInformation1.ReceiverIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#mmReceiverIdentification
+ * CorporateActionAdditionalInformation1.mmReceiverIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#CertificationIndicator
- * CorporateActionAdditionalInformation1.CertificationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#mmCertificationIndicator
+ * CorporateActionAdditionalInformation1.mmCertificationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#CertificationType
- * CorporateActionAdditionalInformation1.CertificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#mmCertificationType
+ * CorporateActionAdditionalInformation1.mmCertificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#DeliveryDetails
- * CorporateActionAdditionalInformation1.DeliveryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#mmDeliveryDetails
+ * CorporateActionAdditionalInformation1.mmDeliveryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#AdditionalInstruction
- * CorporateActionAdditionalInformation1.AdditionalInstruction}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAdditionalInformation1#mmAdditionalInstruction
+ * CorporateActionAdditionalInformation1.mmAdditionalInstruction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -70,21 +71,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#AdditionalInformation
- * AgentCAElectionAdviceV01.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionAdviceV01#mmAdditionalInformation
+ * AgentCAElectionAdviceV01.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#CorporateActionAdditionalInformation
- * AgentCAInformationAdviceV01.CorporateActionAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmCorporateActionAdditionalInformation
+ * AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01#CorporateActionAdditionalInformation
- * AgentCAInformationStatusAdviceV01.CorporateActionAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01#mmCorporateActionAdditionalInformation
+ * AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionAdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.BeneficialOwner1> beneficialOwnerDetails;
 	/**
 	 * Provides information about the beneficial owner of the securities.
 	 * <p>
@@ -132,20 +134,21 @@ public class CorporateActionAdditionalInformation1 {
 	 * "Provides information about the beneficial owner of the securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BeneficialOwnerDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficialOwnerDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
+			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerDetails";
 			definition = "Provides information about the beneficial owner of the securities.";
 			minOccurs = 0;
-			type_lazy = () -> BeneficialOwner1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
 		}
 	};
+	protected Max350Text registrationDetails;
 	/**
 	 * Provides information required for the registration.
 	 * <p>
@@ -158,8 +161,8 @@ public class CorporateActionAdditionalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#RegistrationDetails
-	 * CorporateActionEvent.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRegistrationDetails
+	 * CorporateActionEvent.mmRegistrationDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -178,20 +181,21 @@ public class CorporateActionAdditionalInformation1 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.RegistrationDetails;
 			isDerived = false;
 			xmlTag = "RegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice receiverIdentification;
 	/**
 	 * Identification of the receiver of outturned resources (cash/securities)
 	 * in case the resources need to be delivered outside the CSD.
@@ -206,8 +210,8 @@ public class CorporateActionAdditionalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,20 +232,21 @@ public class CorporateActionAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiverIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiverIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverIdentification";
 			definition = "Identification of the receiver of outturned resources (cash/securities) in case the resources need to be delivered outside the CSD.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator certificationIndicator;
 	/**
 	 * Whether or not certification is required from the account owner. Y:
 	 * certification required N: no certification required
@@ -256,8 +261,8 @@ public class CorporateActionAdditionalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#CertificationIndicator
-	 * BeneficialOwner.CertificationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationIndicator
+	 * BeneficialOwner.mmCertificationIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -278,20 +283,21 @@ public class CorporateActionAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.CertificationIndicator;
 			isDerived = false;
 			xmlTag = "CertfctnInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Whether or not certification is required from the account owner. \nY: certification required \nN: no certification required";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected BeneficiaryCertificationType1FormatChoice certificationType;
 	/**
 	 * Type of certification which is required.
 	 * <p>
@@ -305,8 +311,8 @@ public class CorporateActionAdditionalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#CertificationType
-	 * BeneficialOwner.CertificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
+	 * BeneficialOwner.mmCertificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -325,20 +331,21 @@ public class CorporateActionAdditionalInformation1 {
 	 * definition} = "Type of certification which is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.CertificationType;
 			isDerived = false;
 			xmlTag = "CertfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Type of certification which is required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BeneficiaryCertificationType1FormatChoice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ProceedsDelivery1> deliveryDetails;
 	/**
 	 * Provides information about the delivery details of proceeds.
 	 * <p>
@@ -350,8 +357,9 @@ public class CorporateActionAdditionalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#CorporateActionProceedsDeliveryInstruction
-	 * CorporateActionDistribution.CorporateActionProceedsDeliveryInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmCorporateActionProceedsDeliveryInstruction
+	 * CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -371,20 +379,21 @@ public class CorporateActionAdditionalInformation1 {
 	 * "Provides information about the delivery details of proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveryDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.CorporateActionProceedsDeliveryInstruction;
 			isDerived = false;
 			xmlTag = "DlvryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDetails";
 			definition = "Provides information about the delivery details of proceeds.";
 			minOccurs = 0;
-			type_lazy = () -> ProceedsDelivery1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProceedsDelivery1.mmObject();
 		}
 	};
+	protected Max350Text additionalInstruction;
 	/**
 	 * Provides additional details pertaining to the corporate action
 	 * instruction.
@@ -415,7 +424,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInstruction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
@@ -423,8 +432,8 @@ public class CorporateActionAdditionalInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInstruction";
 			definition = "Provides additional details pertaining to the corporate action instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -432,19 +441,75 @@ public class CorporateActionAdditionalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAdditionalInformation1.BeneficialOwnerDetails, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.RegistrationDetails,
-						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.ReceiverIdentification, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.CertificationIndicator,
-						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.CertificationType, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.DeliveryDetails,
-						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.AdditionalInstruction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmBeneficialOwnerDetails,
+						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmReceiverIdentification,
+						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmCertificationIndicator, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmCertificationType,
+						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmDeliveryDetails, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmAdditionalInstruction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.AdditionalInformation,
-						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.CorporateActionAdditionalInformation, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.CorporateActionAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAdditionalInformation1";
 				definition = "Provides additional information about the delivery details, beneficial owner details, etc.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BeneficialOwner1> getBeneficialOwnerDetails() {
+		return beneficialOwnerDetails;
+	}
+
+	public void setBeneficialOwnerDetails(List<com.tools20022.repository.msg.BeneficialOwner1> beneficialOwnerDetails) {
+		this.beneficialOwnerDetails = beneficialOwnerDetails;
+	}
+
+	public Max350Text getRegistrationDetails() {
+		return registrationDetails;
+	}
+
+	public void setRegistrationDetails(Max350Text registrationDetails) {
+		this.registrationDetails = registrationDetails;
+	}
+
+	public PartyIdentification2Choice getReceiverIdentification() {
+		return receiverIdentification;
+	}
+
+	public void setReceiverIdentification(PartyIdentification2Choice receiverIdentification) {
+		this.receiverIdentification = receiverIdentification;
+	}
+
+	public YesNoIndicator getCertificationIndicator() {
+		return certificationIndicator;
+	}
+
+	public void setCertificationIndicator(YesNoIndicator certificationIndicator) {
+		this.certificationIndicator = certificationIndicator;
+	}
+
+	public BeneficiaryCertificationType1FormatChoice getCertificationType() {
+		return certificationType;
+	}
+
+	public void setCertificationType(BeneficiaryCertificationType1FormatChoice certificationType) {
+		this.certificationType = certificationType;
+	}
+
+	public List<ProceedsDelivery1> getDeliveryDetails() {
+		return deliveryDetails;
+	}
+
+	public void setDeliveryDetails(List<com.tools20022.repository.msg.ProceedsDelivery1> deliveryDetails) {
+		this.deliveryDetails = deliveryDetails;
+	}
+
+	public Max350Text getAdditionalInstruction() {
+		return additionalInstruction;
+	}
+
+	public void setAdditionalInstruction(Max350Text additionalInstruction) {
+		this.additionalInstruction = additionalInstruction;
 	}
 }

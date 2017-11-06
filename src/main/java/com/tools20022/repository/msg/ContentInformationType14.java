@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType14#ContentType
- * ContentInformationType14.ContentType}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType14#mmContentType
+ * ContentInformationType14.mmContentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType14#SignedData
- * ContentInformationType14.SignedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType14#mmSignedData
+ * ContentInformationType14.mmSignedData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContentInformationType14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType2Code contentType;
 	/**
 	 * Type of data protection.
 	 * <p>
@@ -95,11 +96,11 @@ public class ContentInformationType14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType12#ContentType
-	 * ContentInformationType12.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType12#mmContentType
+	 * ContentInformationType12.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ContentInformationType14.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class ContentInformationType14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.ContentType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmContentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	protected SignedData4 signedData;
 	/**
 	 * Data protected by a digital signatures.
 	 * <p>
@@ -140,11 +142,11 @@ public class ContentInformationType14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType12#SignedData
-	 * ContentInformationType12.SignedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType12#mmSignedData
+	 * ContentInformationType12.mmSignedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType14.mmObject();
 			isDerived = false;
@@ -152,19 +154,19 @@ public class ContentInformationType14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
 			definition = "Data protected by a digital signatures.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.SignedData;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmSignedData;
 			maxOccurs = 1;
-			type_lazy = () -> SignedData4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedData4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType14.ContentType, com.tools20022.repository.msg.ContentInformationType14.SignedData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType14.mmContentType, com.tools20022.repository.msg.ContentInformationType14.mmSignedData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType14";
 				definition = "General cryptographic message syntax (CMS) containing data. protected by a digital signature";
@@ -172,5 +174,21 @@ public class ContentInformationType14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType2Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType2Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public SignedData4 getSignedData() {
+		return signedData;
+	}
+
+	public void setSignedData(com.tools20022.repository.msg.SignedData4 signedData) {
+		this.signedData = signedData;
 	}
 }

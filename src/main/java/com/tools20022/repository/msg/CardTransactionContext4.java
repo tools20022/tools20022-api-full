@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Context of the card transaction.
@@ -33,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionContext4#SpecialConditions
- * CardTransactionContext4.SpecialConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionContext4#mmSpecialConditions
+ * CardTransactionContext4.mmSpecialConditions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransactionContext4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions;
 	/**
 	 * Data used to assign specific condition such as liability shift or
 	 * preferential interchange fees.
@@ -93,11 +95,11 @@ public class CardTransactionContext4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionContext2#SpecialConditions
-	 * CardTransactionContext2.SpecialConditions}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionContext2#mmSpecialConditions
+	 * CardTransactionContext2.mmSpecialConditions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SpecialConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSpecialConditions = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardTransactionContext4.mmObject();
 			isDerived = false;
@@ -105,19 +107,19 @@ public class CardTransactionContext4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConditions";
 			definition = "Data used to assign specific condition such as liability shift or preferential interchange fees.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.SpecialConditions;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmSpecialConditions;
 			minOccurs = 0;
-			type_lazy = () -> CardTransactionCondition1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext4.SpecialConditions);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext4.mmSpecialConditions);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionContext4";
 				definition = "Context of the card transaction.";
@@ -125,5 +127,13 @@ public class CardTransactionContext4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CardTransactionCondition1> getSpecialConditions() {
+		return specialConditions;
+	}
+
+	public void setSpecialConditions(List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions) {
+		this.specialConditions = specialConditions;
 	}
 }

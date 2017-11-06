@@ -33,21 +33,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * EventFrequencyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency6Code#Daily
- * EventFrequency6Code.Daily}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#IntraDay
- * EventFrequency6Code.IntraDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#mmDaily
+ * EventFrequency6Code.mmDaily}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#OnDemand
- * EventFrequency6Code.OnDemand}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#mmIntraDay
+ * EventFrequency6Code.mmIntraDay}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#mmOnDemand
+ * EventFrequency6Code.mmOnDemand}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class EventFrequency6Code extends EventFrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode Daily = new MMCode() {
+	public static final MMCode mmDaily = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
@@ -106,7 +107,7 @@ public class EventFrequency6Code extends EventFrequencyCode {
 	 * name} = "IntraDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntraDay = new MMCode() {
+	public static final MMCode mmIntraDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraDay";
@@ -129,7 +130,7 @@ public class EventFrequency6Code extends EventFrequencyCode {
 	 * name} = "OnDemand"</li>
 	 * </ul>
 	 */
-	public static final MMCode OnDemand = new MMCode() {
+	public static final MMCode mmOnDemand = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemand";
@@ -140,12 +141,13 @@ public class EventFrequency6Code extends EventFrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency6Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency6Code.Daily, com.tools20022.repository.codeset.EventFrequency6Code.IntraDay, com.tools20022.repository.codeset.EventFrequency6Code.OnDemand);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency6Code.mmDaily, com.tools20022.repository.codeset.EventFrequency6Code.mmIntraDay,
+						com.tools20022.repository.codeset.EventFrequency6Code.mmOnDemand);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
 			}
 		});

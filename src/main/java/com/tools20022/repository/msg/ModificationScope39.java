@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope39#ModificationScopeIndication
- * ModificationScope39.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope39#mmModificationScopeIndication
+ * ModificationScope39.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope39#Citizenship
- * ModificationScope39.Citizenship}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope39#mmCitizenship
+ * ModificationScope39.mmCitizenship}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -96,11 +97,11 @@ public class ModificationScope39 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope3#ModificationScopeIndication
-	 * ModificationScope3.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope3#mmModificationScopeIndication
+	 * ModificationScope3.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope39.mmObject();
 			isDerived = false;
@@ -108,12 +109,13 @@ public class ModificationScope39 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope3.ModificationScopeIndication;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope3.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected CitizenshipInformation2 citizenship;
 	/**
 	 * Nationality and legal status (minor or major).
 	 * <p>
@@ -142,11 +144,11 @@ public class ModificationScope39 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope3#Citizenship
-	 * ModificationScope3.Citizenship}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope3#mmCitizenship
+	 * ModificationScope3.mmCitizenship}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Citizenship = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCitizenship = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope39.mmObject();
 			isDerived = false;
@@ -154,19 +156,19 @@ public class ModificationScope39 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Citizenship";
 			definition = "Nationality and legal status (minor or major).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope3.Citizenship;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope3.mmCitizenship;
 			maxOccurs = 1;
-			type_lazy = () -> CitizenshipInformation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope39.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope39.Citizenship);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope39.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope39.mmCitizenship);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope39";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -174,5 +176,21 @@ public class ModificationScope39 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public CitizenshipInformation2 getCitizenship() {
+		return citizenship;
+	}
+
+	public void setCitizenship(com.tools20022.repository.msg.CitizenshipInformation2 citizenship) {
+		this.citizenship = citizenship;
 	}
 }

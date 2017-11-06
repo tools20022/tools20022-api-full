@@ -23,26 +23,26 @@ class ListBuilderForSecurity_01 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
-		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation120.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.CorporateActionOption134.SecurityIdentification);
-		list.add((T) com.tools20022.repository.msg.SecuritiesTradeDetails69.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation118.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.FinancialInstrumentDetails27.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.IntraPositionDetails42.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.AdditionalInformation14.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation121.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation123.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.CorporateActionOption135.SecurityIdentification);
-		list.add((T) com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.CorporateActionOption133.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.FinancialInstrumentAttributes85.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.FinancialInstrumentAttributes84.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.SecuritiesOption63.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.FinancialInstrumentDetails26.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.TransactionDetails100.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.TransactionDetails99.FinancialInstrumentIdentification);
-		list.add((T) com.tools20022.repository.msg.FinancialInstrumentAttributes83.FinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation120.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.CorporateActionOption134.mmSecurityIdentification);
+		list.add((T) com.tools20022.repository.msg.SecuritiesTradeDetails69.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation118.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.FinancialInstrumentDetails27.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.IntraPositionDetails42.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.AdditionalInformation14.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation121.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.CorporateActionGeneralInformation123.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.CorporateActionOption135.mmSecurityIdentification);
+		list.add((T) com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.CorporateActionOption133.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.SecuritiesOption63.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.FinancialInstrumentDetails26.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.TransactionDetails100.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.TransactionDetails99.mmFinancialInstrumentIdentification);
+		list.add((T) com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmFinancialInstrumentIdentification);
 		return list;
 	}
 }

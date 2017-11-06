@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#EUCapitalGain
- * EUCapitalGainType2Choice.EUCapitalGain}</li>
+ * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#mmEUCapitalGain
+ * EUCapitalGainType2Choice.mmEUCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#Proprietary
- * EUCapitalGainType2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.EUCapitalGainType2Choice#mmProprietary
+ * EUCapitalGainType2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EUCapitalGainType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected EUCapitalGain2Code eUCapitalGain;
 	/**
 	 * Specifies whether capital gain is in the scope of the European directive
 	 * on taxation of savings income in the form of interest payments (Council
@@ -86,8 +87,8 @@ public class EUCapitalGainType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,27 +111,28 @@ public class EUCapitalGainType2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#Code
-	 * EUCapitalGain3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#mmCode
+	 * EUCapitalGain3Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> EUCapitalGainType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "EUCptlGn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
 	};
+	protected GenericIdentification38 proprietary;
 	/**
 	 * Specifies whether capital gain is in the scope of the European directive
 	 * on taxation of savings income in the form of interest payments (Council
@@ -147,8 +149,8 @@ public class EUCapitalGainType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,24 +173,24 @@ public class EUCapitalGainType2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#Proprietary
-	 * EUCapitalGain3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.EUCapitalGain3Choice#mmProprietary
+	 * EUCapitalGain3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> EUCapitalGainType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
 		}
 	};
@@ -196,9 +198,9 @@ public class EUCapitalGainType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGainType2Choice.EUCapitalGain, com.tools20022.repository.choice.EUCapitalGainType2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGainType2Choice.mmEUCapitalGain, com.tools20022.repository.choice.EUCapitalGainType2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EUCapitalGainType2Choice";
 				definition = "Choice of an EU capital gain type.";
@@ -206,5 +208,21 @@ public class EUCapitalGainType2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EUCapitalGain2Code getEUCapitalGain() {
+		return eUCapitalGain;
+	}
+
+	public void setEUCapitalGain(EUCapitalGain2Code eUCapitalGain) {
+		this.eUCapitalGain = eUCapitalGain;
+	}
+
+	public GenericIdentification38 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

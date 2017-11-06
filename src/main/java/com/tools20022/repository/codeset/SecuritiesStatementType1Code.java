@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementType1Code#Custody
- * SecuritiesStatementType1Code.Custody}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementType1Code#mmCustody
+ * SecuritiesStatementType1Code.mmCustody}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementType1Code#Accounting
- * SecuritiesStatementType1Code.Accounting}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementType1Code#mmAccounting
+ * SecuritiesStatementType1Code.mmAccounting}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class SecuritiesStatementType1Code extends SecuritiesStatementTypeCode {
 	 * name} = "Custody"</li>
 	 * </ul>
 	 */
-	public static final MMCode Custody = new MMCode() {
+	public static final MMCode mmCustody = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
@@ -105,7 +105,7 @@ public class SecuritiesStatementType1Code extends SecuritiesStatementTypeCode {
 	 * name} = "Accounting"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accounting = new MMCode() {
+	public static final MMCode mmAccounting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accounting";
@@ -116,12 +116,12 @@ public class SecuritiesStatementType1Code extends SecuritiesStatementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesStatementType1Code";
 				definition = "Specifies whether the statement is an accounting or a custody statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesStatementType1Code.Custody, com.tools20022.repository.codeset.SecuritiesStatementType1Code.Accounting);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesStatementType1Code.mmCustody, com.tools20022.repository.codeset.SecuritiesStatementType1Code.mmAccounting);
 				trace_lazy = () -> SecuritiesStatementTypeCode.mmObject();
 			}
 		});

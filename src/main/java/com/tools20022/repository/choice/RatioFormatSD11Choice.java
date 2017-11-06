@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormatSD11Choice#QuantityToQuantity
- * RatioFormatSD11Choice.QuantityToQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormatSD11Choice#mmQuantityToQuantity
+ * RatioFormatSD11Choice.mmQuantityToQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormatSD11Choice#NotSpecifiedRate
- * RatioFormatSD11Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormatSD11Choice#mmNotSpecifiedRate
+ * RatioFormatSD11Choice.mmNotSpecifiedRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RatioFormatSD11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuantityToQuantityRatio1 quantityToQuantity;
 	/**
 	 * The ratio is expressed as a quantity per another quantity.
 	 * <p>
@@ -87,7 +88,7 @@ public class RatioFormatSD11Choice {
 	 * "The ratio is expressed as a quantity per another quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuantityToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantityToQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RatioFormatSD11Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class RatioFormatSD11Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "The ratio is expressed as a quantity per another quantity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> QuantityToQuantityRatio1.mmObject();
 		}
 	};
+	protected RateType12FormatChoice notSpecifiedRate;
 	/**
 	 * The value of the ratio is not specified.
 	 * <p>
@@ -128,7 +130,7 @@ public class RatioFormatSD11Choice {
 	 * definition} = "The value of the ratio is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RatioFormatSD11Choice.mmObject();
 			isDerived = false;
@@ -136,22 +138,38 @@ public class RatioFormatSD11Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "The value of the ratio is not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> RateType12FormatChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.RateType12FormatChoice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormatSD11Choice.QuantityToQuantity, com.tools20022.repository.choice.RatioFormatSD11Choice.NotSpecifiedRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormatSD11Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormatSD11Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RatioFormatSD11Choice";
 				definition = "Choice of format to expressed a ratio.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuantityToQuantityRatio1 getQuantityToQuantity() {
+		return quantityToQuantity;
+	}
+
+	public void setQuantityToQuantity(QuantityToQuantityRatio1 quantityToQuantity) {
+		this.quantityToQuantity = quantityToQuantity;
+	}
+
+	public RateType12FormatChoice getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(com.tools20022.repository.choice.RateType12FormatChoice notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
 	}
 }

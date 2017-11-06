@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionRequest#SubscriptionRequest
- * SubscriptionRequest.SubscriptionRequest}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionRequest#mmSubscriptionRequest
+ * SubscriptionRequest.mmSubscriptionRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubscriptionRequest {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SubscriptionRequest1Code subscriptionRequest;
 	/**
 	 * Used to subscribe or unsubscribe for the receipt of a certain message.
 	 * <p>
@@ -85,16 +86,16 @@ public class SubscriptionRequest {
 	 * "Used to subscribe or unsubscribe for the receipt of a certain message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionRequest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionRequest.mmObject();
+			componentContext_lazy = () -> SubscriptionRequest.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionRequest";
 			definition = "Used to subscribe or unsubscribe for the receipt of a certain message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SubscriptionRequest1Code.mmObject();
 		}
 	};
@@ -102,13 +103,21 @@ public class SubscriptionRequest {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionRequest.SubscriptionRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionRequest.mmSubscriptionRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubscriptionRequest";
 				definition = "Used to subscribe or unsubscribe for the receipt of a certain message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SubscriptionRequest1Code getSubscriptionRequest() {
+		return subscriptionRequest;
+	}
+
+	public void setSubscriptionRequest(SubscriptionRequest1Code subscriptionRequest) {
+		this.subscriptionRequest = subscriptionRequest;
 	}
 }

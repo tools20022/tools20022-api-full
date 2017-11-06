@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType9Choice#Code
- * BeneficiaryCertificationType9Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType9Choice#mmCode
+ * BeneficiaryCertificationType9Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType9Choice#Proprietary
- * BeneficiaryCertificationType9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType9Choice#mmProprietary
+ * BeneficiaryCertificationType9Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BeneficiaryCertificationType9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BeneficiaryCertificationType4Code code;
 	/**
 	 * Beneficial owner certification type expressed in a coded form.
 	 * <p>
@@ -84,8 +85,8 @@ public class BeneficiaryCertificationType9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#CertificationType
-	 * BeneficialOwner.CertificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
+	 * BeneficialOwner.mmCertificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,25 +107,26 @@ public class BeneficiaryCertificationType9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType7Choice#Code
-	 * BeneficiaryCertificationType7Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType7Choice#mmCode
+	 * BeneficiaryCertificationType7Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> BeneficiaryCertificationType9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.CertificationType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Beneficial owner certification type expressed in a coded form.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType7Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType7Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BeneficiaryCertificationType4Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Beneficial owner certification type expressed in a proprietary form.
 	 * <p>
@@ -137,8 +139,8 @@ public class BeneficiaryCertificationType9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#CertificationType
-	 * BeneficialOwner.CertificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
+	 * BeneficialOwner.mmCertificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,33 +161,33 @@ public class BeneficiaryCertificationType9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType7Choice#Proprietary
-	 * BeneficiaryCertificationType7Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType7Choice#mmProprietary
+	 * BeneficiaryCertificationType7Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> BeneficiaryCertificationType9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.CertificationType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Beneficial owner certification type expressed in a proprietary form.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType7Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType7Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.Code, com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmCode, com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmProprietary);
 				trace_lazy = () -> BeneficialOwner.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationType9Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of beneficiary certification required.";
@@ -193,5 +195,21 @@ public class BeneficiaryCertificationType9Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BeneficiaryCertificationType4Code getCode() {
+		return code;
+	}
+
+	public void setCode(BeneficiaryCertificationType4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

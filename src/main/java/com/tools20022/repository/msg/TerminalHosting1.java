@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TerminalHosting1#Category
- * TerminalHosting1.Category}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TerminalHosting1#mmCategory
+ * TerminalHosting1.mmCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalHosting1#Identification
- * TerminalHosting1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalHosting1#mmIdentification
+ * TerminalHosting1.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalHosting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionEnvironment3Code category;
 	/**
 	 * Type of ATM terminal hosting.
 	 * <p>
@@ -86,7 +87,7 @@ public class TerminalHosting1 {
 	 * definition} = "Type of ATM terminal hosting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Category = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalHosting1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class TerminalHosting1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Category";
 			definition = "Type of ATM terminal hosting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment3Code.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Identify the entity hosting the ATM.
 	 * <p>
@@ -126,7 +128,7 @@ public class TerminalHosting1 {
 	 * definition} = "Identify the entity hosting the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalHosting1.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class TerminalHosting1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identify the entity hosting the ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class TerminalHosting1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalHosting1.Category, com.tools20022.repository.msg.TerminalHosting1.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalHosting1.mmCategory, com.tools20022.repository.msg.TerminalHosting1.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalHosting1";
 				definition = "Entity hosting the ATM terminal.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionEnvironment3Code getCategory() {
+		return category;
+	}
+
+	public void setCategory(TransactionEnvironment3Code category) {
+		this.category = category;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType11Code#OtherC10
- * AssetClassProductType11Code.OtherC10}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType11Code#mmOtherC10
+ * AssetClassProductType11Code.mmOtherC10}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassProductType11Code extends AssetClassProductTypeCode {
 	 * name} = "OtherC10"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherC10 = new MMCode() {
+	public static final MMCode mmOtherC10 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherC10";
@@ -83,11 +83,11 @@ public class AssetClassProductType11Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType11Code";
 				definition = "Commodity derivative base product code list for Other C10.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType11Code.OtherC10);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType11Code.mmOtherC10);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

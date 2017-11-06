@@ -33,13 +33,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCompletionAdvice2#Environment
- * ATMCompletionAdvice2.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCompletionAdvice2#Context
- * ATMCompletionAdvice2.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCompletionAdvice2#mmEnvironment
+ * ATMCompletionAdvice2.mmEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCompletionAdvice2#mmContext
+ * ATMCompletionAdvice2.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCompletionAdvice2#Transaction
- * ATMCompletionAdvice2.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCompletionAdvice2#mmTransaction
+ * ATMCompletionAdvice2.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV02#ATMCompletionAdvice
- * ATMCompletionAdviceV02.ATMCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV02#mmATMCompletionAdvice
+ * ATMCompletionAdviceV02.mmATMCompletionAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCompletionAdvice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment13 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -100,7 +101,7 @@ public class ATMCompletionAdvice2 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCompletionAdvice2.mmObject();
 			isDerived = false;
@@ -108,12 +109,13 @@ public class ATMCompletionAdvice2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment13.mmObject();
 		}
 	};
+	protected ATMContext13 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -140,7 +142,7 @@ public class ATMCompletionAdvice2 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCompletionAdvice2.mmObject();
 			isDerived = false;
@@ -148,12 +150,13 @@ public class ATMCompletionAdvice2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext13.mmObject();
 		}
 	};
+	protected ATMTransaction20 transaction;
 	/**
 	 * Transaction for which the completion is sent.
 	 * <p>
@@ -165,8 +168,8 @@ public class ATMCompletionAdvice2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#RelatedCardPayment
-	 * CardPaymentAcquiring.RelatedCardPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmRelatedCardPayment
+	 * CardPaymentAcquiring.mmRelatedCardPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,35 +188,59 @@ public class ATMCompletionAdvice2 {
 	 * definition} = "Transaction for which the completion is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmRelatedCardPayment;
 			componentContext_lazy = () -> ATMCompletionAdvice2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.RelatedCardPayment;
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction for which the completion is sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction20.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCompletionAdvice2.Environment, com.tools20022.repository.msg.ATMCompletionAdvice2.Context,
-						com.tools20022.repository.msg.ATMCompletionAdvice2.Transaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCompletionAdvice2.mmEnvironment, com.tools20022.repository.msg.ATMCompletionAdvice2.mmContext,
+						com.tools20022.repository.msg.ATMCompletionAdvice2.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmATMCompletionAdvice);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMCompletionAdviceV02.ATMCompletionAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCompletionAdvice2";
 				definition = "Information related to the completion of an operation on the ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment13 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment13 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext13 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext13 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction20 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction20 transaction) {
+		this.transaction = transaction;
 	}
 }

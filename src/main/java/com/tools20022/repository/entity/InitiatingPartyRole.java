@@ -40,11 +40,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage2#OriginalSender
- * OriginalMessage2.OriginalSender}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalSender
+ * OriginalMessage2.mmOriginalSender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage3#OriginalSender
- * OriginalMessage3.OriginalSender}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage3#mmOriginalSender
+ * OriginalMessage3.mmOriginalSender}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,11 +74,11 @@ public class InitiatingPartyRole extends PaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InitiatingPartyRole";
 				definition = "Party initiating the payment to an agent. In the payment context, this can either be the debtor (in a credit transfer), the creditor (in a direct debit), or a party that initiates the payment on behalf of the debtor or creditor. In the context of treasury, the party that instructs the trading party to execute a treasury deal on its behalf.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage2.OriginalSender, com.tools20022.repository.msg.OriginalMessage3.OriginalSender);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage2.mmOriginalSender, com.tools20022.repository.msg.OriginalMessage3.mmOriginalSender);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
 			}
 		});

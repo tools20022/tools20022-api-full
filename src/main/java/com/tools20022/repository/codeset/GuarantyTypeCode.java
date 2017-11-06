@@ -29,33 +29,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#Simple
- * GuarantyTypeCode.Simple}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#Joint
- * GuarantyTypeCode.Joint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmSimple
+ * GuarantyTypeCode.mmSimple}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmJoint
+ * GuarantyTypeCode.mmJoint}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#Collateral
- * GuarantyTypeCode.Collateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmCollateral
+ * GuarantyTypeCode.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#Government
- * GuarantyTypeCode.Government}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#Lien
- * GuarantyTypeCode.Lien}</li>
+ * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmGovernment
+ * GuarantyTypeCode.mmGovernment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmLien
+ * GuarantyTypeCode.mmLien}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#LetterOfCredit
- * GuarantyTypeCode.LetterOfCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmLetterOfCredit
+ * GuarantyTypeCode.mmLetterOfCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#NegativePledge
- * GuarantyTypeCode.NegativePledge}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#Insurance
- * GuarantyTypeCode.Insurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmNegativePledge
+ * GuarantyTypeCode.mmNegativePledge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.GuarantyTypeCode#mmInsurance
+ * GuarantyTypeCode.mmInsurance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +97,7 @@ public class GuarantyTypeCode {
 	 * definition} = "Simple guaranty."</li>
 	 * </ul>
 	 */
-	public static final MMCode Simple = new MMCode() {
+	public static final MMCode mmSimple = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Simple";
@@ -126,7 +127,7 @@ public class GuarantyTypeCode {
 	 * definition} = "Joint guaranty."</li>
 	 * </ul>
 	 */
-	public static final MMCode Joint = new MMCode() {
+	public static final MMCode mmJoint = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Joint";
@@ -159,7 +160,7 @@ public class GuarantyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Collateral = new MMCode() {
+	public static final MMCode mmCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Collateral";
@@ -189,7 +190,7 @@ public class GuarantyTypeCode {
 	 * definition} = "Security is guaranteed by the government."</li>
 	 * </ul>
 	 */
-	public static final MMCode Government = new MMCode() {
+	public static final MMCode mmGovernment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Government";
@@ -222,7 +223,7 @@ public class GuarantyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Lien = new MMCode() {
+	public static final MMCode mmLien = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Lien";
@@ -256,7 +257,7 @@ public class GuarantyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LetterOfCredit = new MMCode() {
+	public static final MMCode mmLetterOfCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LetterOfCredit";
@@ -289,7 +290,7 @@ public class GuarantyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NegativePledge = new MMCode() {
+	public static final MMCode mmNegativePledge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NegativePledge";
@@ -319,7 +320,7 @@ public class GuarantyTypeCode {
 	 * definition} = "Security is guaranteed by an insurance policy."</li>
 	 * </ul>
 	 */
-	public static final MMCode Insurance = new MMCode() {
+	public static final MMCode mmInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Insurance";
@@ -332,14 +333,14 @@ public class GuarantyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GuarantyTypeCode";
 				definition = "Specifies the type of credit enhancement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GuarantyTypeCode.Simple, com.tools20022.repository.codeset.GuarantyTypeCode.Joint, com.tools20022.repository.codeset.GuarantyTypeCode.Collateral,
-						com.tools20022.repository.codeset.GuarantyTypeCode.Government, com.tools20022.repository.codeset.GuarantyTypeCode.Lien, com.tools20022.repository.codeset.GuarantyTypeCode.LetterOfCredit,
-						com.tools20022.repository.codeset.GuarantyTypeCode.NegativePledge, com.tools20022.repository.codeset.GuarantyTypeCode.Insurance);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GuarantyTypeCode.mmSimple, com.tools20022.repository.codeset.GuarantyTypeCode.mmJoint, com.tools20022.repository.codeset.GuarantyTypeCode.mmCollateral,
+						com.tools20022.repository.codeset.GuarantyTypeCode.mmGovernment, com.tools20022.repository.codeset.GuarantyTypeCode.mmLien, com.tools20022.repository.codeset.GuarantyTypeCode.mmLetterOfCredit,
+						com.tools20022.repository.codeset.GuarantyTypeCode.mmNegativePledge, com.tools20022.repository.codeset.GuarantyTypeCode.mmInsurance);
 			}
 		});
 		return mmObject_lazy.get();

@@ -65,25 +65,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#Identification
- * AgentCAMovementCancellationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#mmIdentification
+ * AgentCAMovementCancellationRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#AgentCAMovementInstructionIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#mmAgentCAMovementInstructionIdentification
  * AgentCAMovementCancellationRequestV01.
- * AgentCAMovementInstructionIdentification}</li>
+ * mmAgentCAMovementInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#CorporateActionGeneralInformation
- * AgentCAMovementCancellationRequestV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#mmCorporateActionGeneralInformation
+ * AgentCAMovementCancellationRequestV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#MovementDetails
- * AgentCAMovementCancellationRequestV01.MovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#mmMovementDetails
+ * AgentCAMovementCancellationRequestV01.mmMovementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#identifier
- * AgentCAMovementCancellationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.020.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCAMovementCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * cancellation request.
@@ -125,17 +124,18 @@ public class AgentCAMovementCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAMovementInstructionIdentification;
 	/**
 	 * Identification of the Agent CA Movement Instruction to be cancelled.
 	 * <p>
@@ -160,17 +160,18 @@ public class AgentCAMovementCancellationRequestV01 {
 	 * "Identification of the Agent CA Movement Instruction to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAMovementInstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAMovementInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAMvmntInstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAMovementInstructionIdentification";
 			definition = "Identification of the Agent CA Movement Instruction to be cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -194,17 +195,18 @@ public class AgentCAMovementCancellationRequestV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected MovementInstruction1 movementDetails;
 	/**
 	 * Details of the movement instructions to be cancelled.
 	 * <p>
@@ -228,42 +230,15 @@ public class AgentCAMovementCancellationRequestV01 {
 	 * definition} = "Details of the movement instructions to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMovementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementDetails";
 			definition = "Details of the movement instructions to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MovementInstruction1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "020"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "020";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -277,12 +252,51 @@ public class AgentCAMovementCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAMvmntCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.AgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.CorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.MovementDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmAgentCAMovementInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmMovementDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "020";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification8 getAgentCAMovementInstructionIdentification() {
+		return agentCAMovementInstructionIdentification;
+	}
+
+	public void setAgentCAMovementInstructionIdentification(DocumentIdentification8 agentCAMovementInstructionIdentification) {
+		this.agentCAMovementInstructionIdentification = agentCAMovementInstructionIdentification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public MovementInstruction1 getMovementDetails() {
+		return movementDetails;
+	}
+
+	public void setMovementDetails(MovementInstruction1 movementDetails) {
+		this.movementDetails = movementDetails;
 	}
 }

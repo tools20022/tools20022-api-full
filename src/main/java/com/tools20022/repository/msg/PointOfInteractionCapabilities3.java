@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.PointOfInteraction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Capabilities of the POI (Point Of Interaction) performing the transaction.
@@ -39,32 +40,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#CardReadingCapabilities
- * PointOfInteractionCapabilities3.CardReadingCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmCardReadingCapabilities
+ * PointOfInteractionCapabilities3.mmCardReadingCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#CardholderVerificationCapabilities
- * PointOfInteractionCapabilities3.CardholderVerificationCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmCardholderVerificationCapabilities
+ * PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#PINLengthCapabilities
- * PointOfInteractionCapabilities3.PINLengthCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmPINLengthCapabilities
+ * PointOfInteractionCapabilities3.mmPINLengthCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#ApprovalCodeLength
- * PointOfInteractionCapabilities3.ApprovalCodeLength}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmApprovalCodeLength
+ * PointOfInteractionCapabilities3.mmApprovalCodeLength}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#CardCaptureCapable
- * PointOfInteractionCapabilities3.CardCaptureCapable}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmCardCaptureCapable
+ * PointOfInteractionCapabilities3.mmCardCaptureCapable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#OnLineCapabilities
- * PointOfInteractionCapabilities3.OnLineCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmOnLineCapabilities
+ * PointOfInteractionCapabilities3.mmOnLineCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#DisplayCapabilities
- * PointOfInteractionCapabilities3.DisplayCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmDisplayCapabilities
+ * PointOfInteractionCapabilities3.mmDisplayCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#PrintLineWidth
- * PointOfInteractionCapabilities3.PrintLineWidth}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmPrintLineWidth
+ * PointOfInteractionCapabilities3.mmPrintLineWidth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#AvailableLanguage
- * PointOfInteractionCapabilities3.AvailableLanguage}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmAvailableLanguage
+ * PointOfInteractionCapabilities3.mmAvailableLanguage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +108,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PointOfInteractionCapabilities3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CardDataReading1Code> cardReadingCapabilities;
 	/**
 	 * Card reading capabilities of the POI (Point Of Interaction) performing
 	 * the transaction.
@@ -121,8 +123,8 @@ public class PointOfInteractionCapabilities3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#CardReadingCapabilities
-	 * PointOfInteraction.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardReadingCapabilities
+	 * PointOfInteraction.mmCardReadingCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,39 +147,40 @@ public class PointOfInteractionCapabilities3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#CardReadingCapabilities
-	 * PointOfInteractionCapabilities4.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#mmCardReadingCapabilities
+	 * PointOfInteractionCapabilities4.mmCardReadingCapabilities}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#CardReadData
-	 * PointOfInteractionCapabilities5.CardReadData}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmCardReadData
+	 * PointOfInteractionCapabilities5.mmCardReadData}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#CardReadingCapabilities
-	 * PointOfInteractionCapabilities6.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#mmCardReadingCapabilities
+	 * PointOfInteractionCapabilities6.mmCardReadingCapabilities}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#CardReadingCapabilities
-	 * PointOfInteractionCapabilities2.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#mmCardReadingCapabilities
+	 * PointOfInteractionCapabilities2.mmCardReadingCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardReadingCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardReadingCapabilities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.CardReadingCapabilities;
 			isDerived = false;
 			xmlTag = "CardRdngCpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardReadingCapabilities";
 			definition = "Card reading capabilities of the POI (Point Of Interaction) performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.CardReadingCapabilities;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.CardReadingCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities5.CardReadData,
-					com.tools20022.repository.msg.PointOfInteractionCapabilities6.CardReadingCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmCardReadingCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardReadData,
+					com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmCardReadingCapabilities);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmCardReadingCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
 	};
+	protected List<CardholderVerificationCapability1Code> cardholderVerificationCapabilities;
 	/**
 	 * Cardholder verification capabilities of the POI (Point Of Interaction)
 	 * performing the transaction.
@@ -192,8 +195,8 @@ public class PointOfInteractionCapabilities3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#CardholderVerificationCapabilities
-	 * PointOfInteraction.CardholderVerificationCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardholderVerificationCapabilities
+	 * PointOfInteraction.mmCardholderVerificationCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,39 +219,40 @@ public class PointOfInteractionCapabilities3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#CardholderVerificationCapabilities
-	 * PointOfInteractionCapabilities4.CardholderVerificationCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#mmCardholderVerificationCapabilities
+	 * PointOfInteractionCapabilities4.mmCardholderVerificationCapabilities}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#Authentication
-	 * PointOfInteractionCapabilities5.Authentication}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmAuthentication
+	 * PointOfInteractionCapabilities5.mmAuthentication}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#CardholderVerificationCapabilities
-	 * PointOfInteractionCapabilities6.CardholderVerificationCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#mmCardholderVerificationCapabilities
+	 * PointOfInteractionCapabilities6.mmCardholderVerificationCapabilities}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#CardholderVerificationCapabilities
-	 * PointOfInteractionCapabilities2.CardholderVerificationCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#mmCardholderVerificationCapabilities
+	 * PointOfInteractionCapabilities2.mmCardholderVerificationCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardholderVerificationCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardholderVerificationCapabilities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardholderVerificationCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.CardholderVerificationCapabilities;
 			isDerived = false;
 			xmlTag = "CrdhldrVrfctnCpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderVerificationCapabilities";
 			definition = "Cardholder verification capabilities of the POI (Point Of Interaction) performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.CardholderVerificationCapabilities;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.CardholderVerificationCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities5.Authentication,
-					com.tools20022.repository.msg.PointOfInteractionCapabilities6.CardholderVerificationCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmCardholderVerificationCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmAuthentication,
+					com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmCardholderVerificationCapabilities);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmCardholderVerificationCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardholderVerificationCapability1Code.mmObject();
 		}
 	};
+	protected Number pINLengthCapabilities;
 	/**
 	 * Maximum number of digits the POI is able to accept when the cardholder
 	 * enters its PIN.
@@ -281,19 +285,19 @@ public class PointOfInteractionCapabilities3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#PINLengthCapabilities
-	 * PointOfInteractionCapabilities4.PINLengthCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#mmPINLengthCapabilities
+	 * PointOfInteractionCapabilities4.mmPINLengthCapabilities}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#PINLengthCapabilities
-	 * PointOfInteractionCapabilities5.PINLengthCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmPINLengthCapabilities
+	 * PointOfInteractionCapabilities5.mmPINLengthCapabilities}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#PINLengthCapabilities
-	 * PointOfInteractionCapabilities6.PINLengthCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#mmPINLengthCapabilities
+	 * PointOfInteractionCapabilities6.mmPINLengthCapabilities}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PINLengthCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPINLengthCapabilities = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
 			isDerived = false;
@@ -301,13 +305,14 @@ public class PointOfInteractionCapabilities3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLengthCapabilities";
 			definition = "Maximum number of digits the POI is able to accept when the cardholder enters its PIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.PINLengthCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities5.PINLengthCapabilities,
-					com.tools20022.repository.msg.PointOfInteractionCapabilities6.PINLengthCapabilities);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmPINLengthCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmPINLengthCapabilities,
+					com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmPINLengthCapabilities);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number approvalCodeLength;
 	/**
 	 * Maximum number of characters of the approval code the POI is able to
 	 * manage.
@@ -340,19 +345,19 @@ public class PointOfInteractionCapabilities3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#ApprovalCodeLength
-	 * PointOfInteractionCapabilities4.ApprovalCodeLength}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#mmApprovalCodeLength
+	 * PointOfInteractionCapabilities4.mmApprovalCodeLength}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#ApprovalCodeLength
-	 * PointOfInteractionCapabilities5.ApprovalCodeLength}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmApprovalCodeLength
+	 * PointOfInteractionCapabilities5.mmApprovalCodeLength}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#ApprovalCodeLength
-	 * PointOfInteractionCapabilities6.ApprovalCodeLength}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#mmApprovalCodeLength
+	 * PointOfInteractionCapabilities6.mmApprovalCodeLength}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApprovalCodeLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApprovalCodeLength = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
 			isDerived = false;
@@ -360,13 +365,14 @@ public class PointOfInteractionCapabilities3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovalCodeLength";
 			definition = "Maximum number of characters of the approval code the POI is able to manage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.ApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities5.ApprovalCodeLength,
-					com.tools20022.repository.msg.PointOfInteractionCapabilities6.ApprovalCodeLength);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmApprovalCodeLength,
+					com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmApprovalCodeLength);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected TrueFalseIndicator cardCaptureCapable;
 	/**
 	 * True if the POI is able to capture card.
 	 * <p>
@@ -397,19 +403,19 @@ public class PointOfInteractionCapabilities3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#CardCaptureCapable
-	 * PointOfInteractionCapabilities4.CardCaptureCapable}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#mmCardCaptureCapable
+	 * PointOfInteractionCapabilities4.mmCardCaptureCapable}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#CardCaptureCapable
-	 * PointOfInteractionCapabilities5.CardCaptureCapable}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmCardCaptureCapable
+	 * PointOfInteractionCapabilities5.mmCardCaptureCapable}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#CardCaptureCapable
-	 * PointOfInteractionCapabilities6.CardCaptureCapable}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#mmCardCaptureCapable
+	 * PointOfInteractionCapabilities6.mmCardCaptureCapable}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardCaptureCapable = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardCaptureCapable = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
 			isDerived = false;
@@ -417,13 +423,14 @@ public class PointOfInteractionCapabilities3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCaptureCapable";
 			definition = "True if the POI is able to capture card.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.CardCaptureCapable, com.tools20022.repository.msg.PointOfInteractionCapabilities5.CardCaptureCapable,
-					com.tools20022.repository.msg.PointOfInteractionCapabilities6.CardCaptureCapable);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmCardCaptureCapable, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardCaptureCapable,
+					com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmCardCaptureCapable);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected OnLineCapability1Code onLineCapabilities;
 	/**
 	 * On-line and off-line capabilities of the POI (Point Of Interaction).
 	 * <p>
@@ -437,8 +444,8 @@ public class PointOfInteractionCapabilities3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#OnLineCapabilities
-	 * PointOfInteraction.OnLineCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmOnLineCapabilities
+	 * PointOfInteraction.mmOnLineCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -460,36 +467,37 @@ public class PointOfInteractionCapabilities3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#OnLineCapabilities
-	 * PointOfInteractionCapabilities4.OnLineCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities4#mmOnLineCapabilities
+	 * PointOfInteractionCapabilities4.mmOnLineCapabilities}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#OnLineCapabilities
-	 * PointOfInteractionCapabilities6.OnLineCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities6#mmOnLineCapabilities
+	 * PointOfInteractionCapabilities6.mmOnLineCapabilities}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#OnLineCapabilities
-	 * PointOfInteractionCapabilities2.OnLineCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#mmOnLineCapabilities
+	 * PointOfInteractionCapabilities2.mmOnLineCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OnLineCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOnLineCapabilities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmOnLineCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.OnLineCapabilities;
 			isDerived = false;
 			xmlTag = "OnLineCpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineCapabilities";
 			definition = "On-line and off-line capabilities of the POI (Point Of Interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.OnLineCapabilities;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.OnLineCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities6.OnLineCapabilities);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmOnLineCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmOnLineCapabilities);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmOnLineCapabilities;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OnLineCapability1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DisplayCapabilities2> displayCapabilities;
 	/**
 	 * Capabilities of the display components performing the transaction.
 	 * <p>
@@ -503,8 +511,8 @@ public class PointOfInteractionCapabilities3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#DisplayCapabilities
-	 * PointOfInteraction.DisplayCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmDisplayCapabilities
+	 * PointOfInteraction.mmDisplayCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -525,24 +533,25 @@ public class PointOfInteractionCapabilities3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#DisplayCapabilities
-	 * PointOfInteractionCapabilities2.DisplayCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#mmDisplayCapabilities
+	 * PointOfInteractionCapabilities2.mmDisplayCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisplayCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisplayCapabilities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmDisplayCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.DisplayCapabilities;
 			isDerived = false;
 			xmlTag = "DispCpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayCapabilities";
 			definition = "Capabilities of the display components performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.DisplayCapabilities;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmDisplayCapabilities;
 			minOccurs = 0;
-			complexType_lazy = () -> DisplayCapabilities2.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities2.mmObject();
 		}
 	};
+	protected Number printLineWidth;
 	/**
 	 * Number of columns of the printer component.
 	 * <p>
@@ -571,11 +580,11 @@ public class PointOfInteractionCapabilities3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#PrintLineWidth
-	 * PointOfInteractionCapabilities2.PrintLineWidth}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#mmPrintLineWidth
+	 * PointOfInteractionCapabilities2.mmPrintLineWidth}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrintLineWidth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrintLineWidth = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
 			isDerived = false;
@@ -583,12 +592,13 @@ public class PointOfInteractionCapabilities3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintLineWidth";
 			definition = "Number of columns of the printer component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.PrintLineWidth;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmPrintLineWidth;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<LanguageCode> availableLanguage;
 	/**
 	 * Available language in the display and printer interface.<br>
 	 * Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
@@ -620,11 +630,11 @@ public class PointOfInteractionCapabilities3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#AvailableLanguage
-	 * PointOfInteractionCapabilities2.AvailableLanguage}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities2#mmAvailableLanguage
+	 * PointOfInteractionCapabilities2.mmAvailableLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AvailableLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAvailableLanguage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities3.mmObject();
 			isDerived = false;
@@ -632,7 +642,7 @@ public class PointOfInteractionCapabilities3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableLanguage";
 			definition = "Available language in the display and printer interface.\r\nReference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.AvailableLanguage;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmAvailableLanguage;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
@@ -641,20 +651,92 @@ public class PointOfInteractionCapabilities3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities3.CardReadingCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities3.CardholderVerificationCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities3.PINLengthCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities3.ApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities3.CardCaptureCapable,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities3.OnLineCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities3.DisplayCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities3.PrintLineWidth, com.tools20022.repository.msg.PointOfInteractionCapabilities3.AvailableLanguage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardReadingCapabilities,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmPINLengthCapabilities,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardCaptureCapable,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmOnLineCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmDisplayCapabilities,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmPrintLineWidth, com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmAvailableLanguage);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionCapabilities3";
 				definition = "Capabilities of the POI (Point Of Interaction) performing the transaction.";
-				previousVersion_lazy = () -> PointOfInteractionCapabilities2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PointOfInteractionCapabilities4.mmObject(), PointOfInteractionCapabilities5.mmObject(), PointOfInteractionCapabilities6.mmObject());
+				previousVersion_lazy = () -> PointOfInteractionCapabilities2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CardDataReading1Code> getCardReadingCapabilities() {
+		return cardReadingCapabilities;
+	}
+
+	public void setCardReadingCapabilities(List<CardDataReading1Code> cardReadingCapabilities) {
+		this.cardReadingCapabilities = cardReadingCapabilities;
+	}
+
+	public List<CardholderVerificationCapability1Code> getCardholderVerificationCapabilities() {
+		return cardholderVerificationCapabilities;
+	}
+
+	public void setCardholderVerificationCapabilities(List<CardholderVerificationCapability1Code> cardholderVerificationCapabilities) {
+		this.cardholderVerificationCapabilities = cardholderVerificationCapabilities;
+	}
+
+	public Number getPINLengthCapabilities() {
+		return pINLengthCapabilities;
+	}
+
+	public void setPINLengthCapabilities(Number pINLengthCapabilities) {
+		this.pINLengthCapabilities = pINLengthCapabilities;
+	}
+
+	public Number getApprovalCodeLength() {
+		return approvalCodeLength;
+	}
+
+	public void setApprovalCodeLength(Number approvalCodeLength) {
+		this.approvalCodeLength = approvalCodeLength;
+	}
+
+	public TrueFalseIndicator getCardCaptureCapable() {
+		return cardCaptureCapable;
+	}
+
+	public void setCardCaptureCapable(TrueFalseIndicator cardCaptureCapable) {
+		this.cardCaptureCapable = cardCaptureCapable;
+	}
+
+	public OnLineCapability1Code getOnLineCapabilities() {
+		return onLineCapabilities;
+	}
+
+	public void setOnLineCapabilities(OnLineCapability1Code onLineCapabilities) {
+		this.onLineCapabilities = onLineCapabilities;
+	}
+
+	public List<DisplayCapabilities2> getDisplayCapabilities() {
+		return displayCapabilities;
+	}
+
+	public void setDisplayCapabilities(List<com.tools20022.repository.msg.DisplayCapabilities2> displayCapabilities) {
+		this.displayCapabilities = displayCapabilities;
+	}
+
+	public Number getPrintLineWidth() {
+		return printLineWidth;
+	}
+
+	public void setPrintLineWidth(Number printLineWidth) {
+		this.printLineWidth = printLineWidth;
+	}
+
+	public List<LanguageCode> getAvailableLanguage() {
+		return availableLanguage;
+	}
+
+	public void setAvailableLanguage(List<LanguageCode> availableLanguage) {
+		this.availableLanguage = availableLanguage;
 	}
 }

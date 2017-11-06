@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#TaxExempt
- * SecuritiesBalanceType2Code.TaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#mmTaxExempt
+ * SecuritiesBalanceType2Code.mmTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#NonTaxExempt
- * SecuritiesBalanceType2Code.NonTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#mmNonTaxExempt
+ * SecuritiesBalanceType2Code.mmNonTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#Registered
- * SecuritiesBalanceType2Code.Registered}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#mmRegistered
+ * SecuritiesBalanceType2Code.mmRegistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#Unclassified
- * SecuritiesBalanceType2Code.Unclassified}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#mmUnclassified
+ * SecuritiesBalanceType2Code.mmUnclassified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#StreetPosition
- * SecuritiesBalanceType2Code.StreetPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#mmStreetPosition
+ * SecuritiesBalanceType2Code.mmStreetPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#Unregistered
- * SecuritiesBalanceType2Code.Unregistered}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType2Code#mmUnregistered
+ * SecuritiesBalanceType2Code.mmUnregistered}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 * name} = "TaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxExempt = new MMCode() {
+	public static final MMCode mmTaxExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExempt";
@@ -117,7 +117,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 * name} = "NonTaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonTaxExempt = new MMCode() {
+	public static final MMCode mmNonTaxExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonTaxExempt";
@@ -140,7 +140,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Registered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Registered = new MMCode() {
+	public static final MMCode mmRegistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
@@ -163,7 +163,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unclassified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unclassified = new MMCode() {
+	public static final MMCode mmUnclassified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
@@ -186,7 +186,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 * name} = "StreetPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode StreetPosition = new MMCode() {
+	public static final MMCode mmStreetPosition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPosition";
@@ -209,7 +209,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unregistered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unregistered = new MMCode() {
+	public static final MMCode mmUnregistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unregistered";
@@ -220,14 +220,14 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType2Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType2Code.TaxExempt, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.NonTaxExempt,
-						com.tools20022.repository.codeset.SecuritiesBalanceType2Code.Registered, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.Unclassified,
-						com.tools20022.repository.codeset.SecuritiesBalanceType2Code.StreetPosition, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.Unregistered);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmTaxExempt, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmNonTaxExempt,
+						com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmRegistered, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmUnclassified,
+						com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmStreetPosition, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmUnregistered);
 				trace_lazy = () -> SecuritiesBalanceTypeCode.mmObject();
 			}
 		});

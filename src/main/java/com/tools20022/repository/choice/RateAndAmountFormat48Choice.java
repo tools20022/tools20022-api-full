@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat48Choice#Amount
- * RateAndAmountFormat48Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat48Choice#mmAmount
+ * RateAndAmountFormat48Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat48Choice#NotSpecifiedRate
- * RateAndAmountFormat48Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat48Choice#mmNotSpecifiedRate
+ * RateAndAmountFormat48Choice.mmNotSpecifiedRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateAndAmountFormat48Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Number of monetary units specified in a currency.
 	 * <p>
@@ -87,7 +88,7 @@ public class RateAndAmountFormat48Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat48Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class RateAndAmountFormat48Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected RateValueType7Code notSpecifiedRate;
 	/**
 	 * Value of the rate not specified.
 	 * <p>
@@ -128,7 +130,7 @@ public class RateAndAmountFormat48Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat48Choice.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class RateAndAmountFormat48Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class RateAndAmountFormat48Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat48Choice.Amount, com.tools20022.repository.choice.RateAndAmountFormat48Choice.NotSpecifiedRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat48Choice.mmAmount, com.tools20022.repository.choice.RateAndAmountFormat48Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateAndAmountFormat48Choice";
 				definition = "Choice between an amount or an unspecified rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public RateValueType7Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateValueType7Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
 	}
 }

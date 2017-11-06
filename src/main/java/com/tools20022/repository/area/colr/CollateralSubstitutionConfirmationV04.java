@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -85,27 +86,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#TransactionIdentification
- * CollateralSubstitutionConfirmationV04.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#mmTransactionIdentification
+ * CollateralSubstitutionConfirmationV04.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#Obligation
- * CollateralSubstitutionConfirmationV04.Obligation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#mmObligation
+ * CollateralSubstitutionConfirmationV04.mmObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#Agreement
- * CollateralSubstitutionConfirmationV04.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#mmAgreement
+ * CollateralSubstitutionConfirmationV04.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#SubstitutionConfirmation
- * CollateralSubstitutionConfirmationV04.SubstitutionConfirmation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#mmSubstitutionConfirmation
+ * CollateralSubstitutionConfirmationV04.mmSubstitutionConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#SupplementaryData
- * CollateralSubstitutionConfirmationV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#mmSupplementaryData
+ * CollateralSubstitutionConfirmationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04#identifier
- * CollateralSubstitutionConfirmationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code colr.012.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,6 +124,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralSubstitutionConfirmationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as know by the instructing
 	 * party.
@@ -151,22 +151,23 @@ public class CollateralSubstitutionConfirmationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#TransactionIdentification
-	 * CollateralSubstitutionConfirmationV03.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#mmTransactionIdentification
+	 * CollateralSubstitutionConfirmationV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.TransactionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Obligation4 obligation;
 	/**
 	 * Provides information like the identification of the party or parties
 	 * associated with the collateral agreement, the exposure type and the
@@ -194,22 +195,23 @@ public class CollateralSubstitutionConfirmationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#Obligation
-	 * CollateralSubstitutionConfirmationV03.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#mmObligation
+	 * CollateralSubstitutionConfirmationV03.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Obligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.Obligation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmObligation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
 	};
+	protected Agreement4 agreement;
 	/**
 	 * Agreement details for the over the counter market.
 	 * <p>
@@ -233,22 +235,23 @@ public class CollateralSubstitutionConfirmationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#Agreement
-	 * CollateralSubstitutionConfirmationV03.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#mmAgreement
+	 * CollateralSubstitutionConfirmationV03.mmAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Agreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.Agreement;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmAgreement;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
 		}
 	};
+	protected CollateralConfirmation1 substitutionConfirmation;
 	/**
 	 * Provides the status about the collateral substitution.
 	 * <p>
@@ -273,22 +276,23 @@ public class CollateralSubstitutionConfirmationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#SubstitutionConfirmation
-	 * CollateralSubstitutionConfirmationV03.SubstitutionConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#mmSubstitutionConfirmation
+	 * CollateralSubstitutionConfirmationV03.mmSubstitutionConfirmation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubstitutionConfirmation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubstitutionConfirmation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SbstitnConf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionConfirmation";
 			definition = "Provides the status about the collateral substitution.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.SubstitutionConfirmation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmSubstitutionConfirmation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CollateralConfirmation1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -316,46 +320,19 @@ public class CollateralSubstitutionConfirmationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#SupplementaryData
-	 * CollateralSubstitutionConfirmationV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03#mmSupplementaryData
+	 * CollateralSubstitutionConfirmationV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "colr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "colr";
-			messageFunctionality = "012";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -370,12 +347,59 @@ public class CollateralSubstitutionConfirmationV04 {
 				rootElement = "Document";
 				xmlTag = "CollSbstitnConf";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.TransactionIdentification,
-						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.Obligation, com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.Agreement,
-						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.SubstitutionConfirmation, com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmTransactionIdentification,
+						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmObligation, com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmAgreement,
+						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmSubstitutionConfirmation, com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "colr";
+						messageFunctionality = "012";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Obligation4 getObligation() {
+		return obligation;
+	}
+
+	public void setObligation(Obligation4 obligation) {
+		this.obligation = obligation;
+	}
+
+	public Agreement4 getAgreement() {
+		return agreement;
+	}
+
+	public void setAgreement(Agreement4 agreement) {
+		this.agreement = agreement;
+	}
+
+	public CollateralConfirmation1 getSubstitutionConfirmation() {
+		return substitutionConfirmation;
+	}
+
+	public void setSubstitutionConfirmation(CollateralConfirmation1 substitutionConfirmation) {
+		this.substitutionConfirmation = substitutionConfirmation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

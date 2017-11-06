@@ -32,11 +32,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ClosingBalance2Choice#Final
- * ClosingBalance2Choice.Final}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClosingBalance2Choice#Intermediary
- * ClosingBalance2Choice.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.choice.ClosingBalance2Choice#mmFinal
+ * ClosingBalance2Choice.mmFinal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClosingBalance2Choice#mmIntermediary
+ * ClosingBalance2Choice.mmIntermediary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClosingBalance2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BalanceQuantity7Choice final_;
 	/**
 	 * Sum of the opening balance and all entries booked to the account at the
 	 * close of the statement period.
@@ -73,8 +75,8 @@ public class ClosingBalance2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AggregateQuantity
-	 * SecuritiesBalance.AggregateQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+	 * SecuritiesBalance.mmAggregateQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,21 +97,22 @@ public class ClosingBalance2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Final = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinal = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> ClosingBalance2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AggregateQuantity;
 			isDerived = false;
 			xmlTag = "Fnl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "Sum of the opening balance and all entries booked to the account at the close of the statement period.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceQuantity7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.BalanceQuantity7Choice.mmObject();
 		}
 	};
+	protected BalanceQuantity7Choice intermediary;
 	/**
 	 * Closing balance of this page only. This balance must be the intermediary
 	 * opening balance of the next page of the same statement.
@@ -123,8 +126,8 @@ public class ClosingBalance2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AggregateQuantity
-	 * SecuritiesBalance.AggregateQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+	 * SecuritiesBalance.mmAggregateQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,33 +148,49 @@ public class ClosingBalance2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Intermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> ClosingBalance2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AggregateQuantity;
 			isDerived = false;
 			xmlTag = "Intrmy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Closing balance of this page only. This balance must be the intermediary opening balance of the next page of the same statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceQuantity7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.BalanceQuantity7Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance2Choice.Final, com.tools20022.repository.choice.ClosingBalance2Choice.Intermediary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance2Choice.mmFinal, com.tools20022.repository.choice.ClosingBalance2Choice.mmIntermediary);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClosingBalance2Choice";
 				definition = "Choice of closing balance.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BalanceQuantity7Choice getFinal() {
+		return final_;
+	}
+
+	public void setFinal(com.tools20022.repository.choice.BalanceQuantity7Choice final_) {
+		this.final_ = final_;
+	}
+
+	public BalanceQuantity7Choice getIntermediary() {
+		return intermediary;
+	}
+
+	public void setIntermediary(com.tools20022.repository.choice.BalanceQuantity7Choice intermediary) {
+		this.intermediary = intermediary;
 	}
 }

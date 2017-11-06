@@ -40,27 +40,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#AccruedInterestIndicator
- * AmountAndDirection46.AccruedInterestIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmAccruedInterestIndicator
+ * AmountAndDirection46.mmAccruedInterestIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#StampDutyIndicator
- * AmountAndDirection46.StampDutyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmStampDutyIndicator
+ * AmountAndDirection46.mmStampDutyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#BrokerageAmountIndicator
- * AmountAndDirection46.BrokerageAmountIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection46#Amount
- * AmountAndDirection46.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmBrokerageAmountIndicator
+ * AmountAndDirection46.mmBrokerageAmountIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmAmount
+ * AmountAndDirection46.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#CreditDebitIndicator
- * AmountAndDirection46.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmCreditDebitIndicator
+ * AmountAndDirection46.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#OriginalCurrencyAndOrderedAmount
- * AmountAndDirection46.OriginalCurrencyAndOrderedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmOriginalCurrencyAndOrderedAmount
+ * AmountAndDirection46.mmOriginalCurrencyAndOrderedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#ForeignExchangeDetails
- * AmountAndDirection46.ForeignExchangeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection46#ValueDate
- * AmountAndDirection46.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmForeignExchangeDetails
+ * AmountAndDirection46.mmForeignExchangeDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmValueDate
+ * AmountAndDirection46.mmValueDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -71,48 +72,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06#SettlementAmount
- * SecuritiesSettlementTransactionInstructionV06.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06#mmSettlementAmount
+ * SecuritiesSettlementTransactionInstructionV06.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06#SettledAmount
- * SecuritiesSettlementTransactionConfirmationV06.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06#mmSettledAmount
+ * SecuritiesSettlementTransactionConfirmationV06.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06#OpeningSettlementAmount
- * SecuritiesFinancingInstructionV06.OpeningSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06#mmOpeningSettlementAmount
+ * SecuritiesFinancingInstructionV06.mmOpeningSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#SettlementAmount
- * SecuritiesSettlementTransactionGenerationNotificationV06.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmSettlementAmount
+ * SecuritiesSettlementTransactionGenerationNotificationV06.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05#SettledAmount
- * SecuritiesSettlementTransactionReversalAdviceV05.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05#mmSettledAmount
+ * SecuritiesSettlementTransactionReversalAdviceV05.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06#SettledAmount
- * SecuritiesFinancingConfirmationV06.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06#mmSettledAmount
+ * SecuritiesFinancingConfirmationV06.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07#OpeningSettlementAmount
- * SecuritiesFinancingInstructionV07.OpeningSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07#mmOpeningSettlementAmount
+ * SecuritiesFinancingInstructionV07.mmOpeningSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#SettlementAmount
- * SecuritiesSettlementTransactionGenerationNotificationV07.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#mmSettlementAmount
+ * SecuritiesSettlementTransactionGenerationNotificationV07.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07#SettledAmount
- * SecuritiesSettlementTransactionConfirmationV07.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07#mmSettledAmount
+ * SecuritiesSettlementTransactionConfirmationV07.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#SettledAmount
- * SecuritiesSettlementTransactionReversalAdviceV06.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#mmSettledAmount
+ * SecuritiesSettlementTransactionReversalAdviceV06.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#SettledAmount
- * SecuritiesFinancingConfirmationV07.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#mmSettledAmount
+ * SecuritiesFinancingConfirmationV07.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#SettlementAmount
- * SecuritiesSettlementTransactionInstructionV07.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#mmSettlementAmount
+ * SecuritiesSettlementTransactionInstructionV07.mmSettlementAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,6 +133,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountAndDirection46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator accruedInterestIndicator;
 	/**
 	 * Indicates whether the net proceeds include interest accrued on the
 	 * financial instrument.
@@ -146,8 +148,8 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#AccruedInterestIndicator
-	 * SecuritiesSettlement.AccruedInterestIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterestIndicator
+	 * SecuritiesSettlement.mmAccruedInterestIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,25 +171,26 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#AccruedInterestIndicator
-	 * AmountAndDirection36.AccruedInterestIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmAccruedInterestIndicator
+	 * AmountAndDirection36.mmAccruedInterestIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterestIndicator;
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.AccruedInterestIndicator;
 			isDerived = false;
 			xmlTag = "AcrdIntrstInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestIndicator";
 			definition = "Indicates whether the net proceeds include interest accrued on the financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.AccruedInterestIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmAccruedInterestIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator stampDutyIndicator;
 	/**
 	 * Whether the net proceeds include stamp duty amount.
 	 * <p>
@@ -201,8 +204,8 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#StampDutyIndicator
-	 * SecuritiesTradeExecution.StampDutyIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmStampDutyIndicator
+	 * SecuritiesTradeExecution.mmStampDutyIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -222,25 +225,26 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#StampDutyIndicator
-	 * AmountAndDirection36.StampDutyIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmStampDutyIndicator
+	 * AmountAndDirection36.mmStampDutyIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StampDutyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStampDutyIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmStampDutyIndicator;
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.StampDutyIndicator;
 			isDerived = false;
 			xmlTag = "StmpDtyInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyIndicator";
 			definition = "Whether the net proceeds include stamp duty amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.StampDutyIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmStampDutyIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator brokerageAmountIndicator;
 	/**
 	 * Indicates whether the net proceeds include brokerage fees for the
 	 * transaction. If absent, element is not required.
@@ -273,11 +277,11 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#BrokerageAmountIndicator
-	 * AmountAndDirection36.BrokerageAmountIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmBrokerageAmountIndicator
+	 * AmountAndDirection36.mmBrokerageAmountIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BrokerageAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBrokerageAmountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
 			isDerived = false;
@@ -285,12 +289,13 @@ public class AmountAndDirection46 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageAmountIndicator";
 			definition = "Indicates whether the net proceeds include brokerage fees for the transaction. If absent, element is not required.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.BrokerageAmountIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmBrokerageAmountIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of money in the cash entry.
 	 * <p>
@@ -304,8 +309,8 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -325,25 +330,26 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#Amount
-	 * AmountAndDirection36.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmAmount
+	 * AmountAndDirection36.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether an entry is a credit or a debit.
 	 * <p>
@@ -357,8 +363,8 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreditDebitIndicator
-	 * PaymentExecution.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreditDebitIndicator
+	 * PaymentExecution.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -378,25 +384,26 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#CreditDebitIndicator
-	 * AmountAndDirection36.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmCreditDebitIndicator
+	 * AmountAndDirection36.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.CreditDebitIndicator;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount;
 	/**
 	 * Posting/settlement amount in its original currency when conversion
 	 * from/into another currency has occurred.
@@ -411,8 +418,8 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#OriginalAmount
-	 * CurrencyExchange.OriginalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmOriginalAmount
+	 * CurrencyExchange.mmOriginalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -434,25 +441,26 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#OriginalCurrencyAndOrderedAmount
-	 * AmountAndDirection36.OriginalCurrencyAndOrderedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection36.mmOriginalCurrencyAndOrderedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.OriginalAmount;
 			isDerived = false;
 			xmlTag = "OrgnlCcyAndOrdrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAndOrderedAmount";
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.OriginalCurrencyAndOrderedAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmOriginalCurrencyAndOrderedAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ForeignExchangeTerms23 foreignExchangeDetails;
 	/**
 	 * Information needed to process a currency exchange or conversion.
 	 * <p>
@@ -464,8 +472,8 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -486,26 +494,27 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#ForeignExchangeDetails
-	 * AmountAndDirection36.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmForeignExchangeDetails
+	 * AmountAndDirection36.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.ForeignExchangeDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmForeignExchangeDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ForeignExchangeTerms23.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice valueDate;
 	/**
 	 * Date and time at which the cash is at the disposal of the credit account
 	 * owner, or ceases to be at the disposal of the debit account owner.
@@ -520,8 +529,8 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -543,22 +552,22 @@ public class AmountAndDirection46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#ValueDate
-	 * AmountAndDirection36.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmValueDate
+	 * AmountAndDirection36.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> AmountAndDirection46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.ValueDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection36.mmValueDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -566,19 +575,19 @@ public class AmountAndDirection46 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.AccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection46.StampDutyIndicator,
-						com.tools20022.repository.msg.AmountAndDirection46.BrokerageAmountIndicator, com.tools20022.repository.msg.AmountAndDirection46.Amount, com.tools20022.repository.msg.AmountAndDirection46.CreditDebitIndicator,
-						com.tools20022.repository.msg.AmountAndDirection46.OriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection46.ForeignExchangeDetails,
-						com.tools20022.repository.msg.AmountAndDirection46.ValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection46.mmStampDutyIndicator,
+						com.tools20022.repository.msg.AmountAndDirection46.mmBrokerageAmountIndicator, com.tools20022.repository.msg.AmountAndDirection46.mmAmount, com.tools20022.repository.msg.AmountAndDirection46.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.AmountAndDirection46.mmOriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection46.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.AmountAndDirection46.mmValueDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06.mmSettlementAmount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06.mmSettledAmount, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06.mmOpeningSettlementAmount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmSettlementAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmSettledAmount,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06.mmSettledAmount, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07.mmOpeningSettlementAmount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.mmSettlementAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07.mmSettledAmount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmSettledAmount, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07.mmSettledAmount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.mmSettlementAmount);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06.SettlementAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06.SettledAmount, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06.OpeningSettlementAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.SettlementAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.SettledAmount,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06.SettledAmount, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07.OpeningSettlementAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.SettlementAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07.SettledAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.SettledAmount, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07.SettledAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.SettlementAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection46";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
@@ -586,5 +595,69 @@ public class AmountAndDirection46 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getAccruedInterestIndicator() {
+		return accruedInterestIndicator;
+	}
+
+	public void setAccruedInterestIndicator(YesNoIndicator accruedInterestIndicator) {
+		this.accruedInterestIndicator = accruedInterestIndicator;
+	}
+
+	public YesNoIndicator getStampDutyIndicator() {
+		return stampDutyIndicator;
+	}
+
+	public void setStampDutyIndicator(YesNoIndicator stampDutyIndicator) {
+		this.stampDutyIndicator = stampDutyIndicator;
+	}
+
+	public YesNoIndicator getBrokerageAmountIndicator() {
+		return brokerageAmountIndicator;
+	}
+
+	public void setBrokerageAmountIndicator(YesNoIndicator brokerageAmountIndicator) {
+		this.brokerageAmountIndicator = brokerageAmountIndicator;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getOriginalCurrencyAndOrderedAmount() {
+		return originalCurrencyAndOrderedAmount;
+	}
+
+	public void setOriginalCurrencyAndOrderedAmount(ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount) {
+		this.originalCurrencyAndOrderedAmount = originalCurrencyAndOrderedAmount;
+	}
+
+	public ForeignExchangeTerms23 getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms23 foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
+	}
+
+	public DateAndDateTimeChoice getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(DateAndDateTimeChoice valueDate) {
+		this.valueDate = valueDate;
 	}
 }

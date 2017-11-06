@@ -41,21 +41,21 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#AmountPrice
- * PriceFormatSD1Choice.AmountPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#mmAmountPrice
+ * PriceFormatSD1Choice.mmAmountPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#NotSpecifiedPrice
- * PriceFormatSD1Choice.NotSpecifiedPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#mmNotSpecifiedPrice
+ * PriceFormatSD1Choice.mmNotSpecifiedPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#AmountPricePerFinancialInstrumentQuantity
- * PriceFormatSD1Choice.AmountPricePerFinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#mmAmountPricePerFinancialInstrumentQuantity
+ * PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,6 +79,7 @@ import java.util.function.Supplier;
 public class PriceFormatSD1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountPrice5 amountPrice;
 	/**
 	 * Price expressed as a currency and amount.
 	 * <p>
@@ -105,7 +106,7 @@ public class PriceFormatSD1Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PriceFormatSD1Choice.mmObject();
 			isDerived = false;
@@ -113,12 +114,13 @@ public class PriceFormatSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPrice";
 			definition = "Price expressed as a currency and amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountPrice5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountPrice5.mmObject();
 		}
 	};
+	protected PriceValueType10Code notSpecifiedPrice;
 	/**
 	 * Value of the price not specified.
 	 * <p>
@@ -149,13 +151,13 @@ public class PriceFormatSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#NotSpecifiedPrice
-	 * PriceFormatSD2Choice.NotSpecifiedPrice}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#mmNotSpecifiedPrice
+	 * PriceFormatSD2Choice.mmNotSpecifiedPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceFormatSD1Choice.mmObject();
 			isDerived = false;
@@ -163,12 +165,13 @@ public class PriceFormatSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.NotSpecifiedPrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.mmNotSpecifiedPrice);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
 		}
 	};
+	protected AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity;
 	/**
 	 * Price expressed as a ratio: amount price per financial instrument
 	 * quantity.
@@ -201,13 +204,13 @@ public class PriceFormatSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#AmountPricePerFinancialInstrumentQuantity
-	 * PriceFormatSD2Choice.AmountPricePerFinancialInstrumentQuantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#mmAmountPricePerFinancialInstrumentQuantity
+	 * PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PriceFormatSD1Choice.mmObject();
 			isDerived = false;
@@ -215,20 +218,20 @@ public class PriceFormatSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as a ratio: amount price per financial instrument quantity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.AmountPricePerFinancialInstrumentQuantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity);
 			maxOccurs = 1;
-			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD1Choice.AmountPrice, com.tools20022.repository.choice.PriceFormatSD1Choice.NotSpecifiedPrice,
-						com.tools20022.repository.choice.PriceFormatSD1Choice.AmountPricePerFinancialInstrumentQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD1Choice.mmAmountPrice, com.tools20022.repository.choice.PriceFormatSD1Choice.mmNotSpecifiedPrice,
+						com.tools20022.repository.choice.PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -243,5 +246,29 @@ public class PriceFormatSD1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountPrice5 getAmountPrice() {
+		return amountPrice;
+	}
+
+	public void setAmountPrice(AmountPrice5 amountPrice) {
+		this.amountPrice = amountPrice;
+	}
+
+	public PriceValueType10Code getNotSpecifiedPrice() {
+		return notSpecifiedPrice;
+	}
+
+	public void setNotSpecifiedPrice(PriceValueType10Code notSpecifiedPrice) {
+		this.notSpecifiedPrice = notSpecifiedPrice;
+	}
+
+	public AmountPricePerFinancialInstrumentQuantity4 getAmountPricePerFinancialInstrumentQuantity() {
+		return amountPricePerFinancialInstrumentQuantity;
+	}
+
+	public void setAmountPricePerFinancialInstrumentQuantity(AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity) {
+		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
 	}
 }

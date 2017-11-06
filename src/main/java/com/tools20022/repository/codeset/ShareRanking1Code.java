@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * ShareRankingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ShareRanking1Code#Dividend
- * ShareRanking1Code.Dividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ShareRanking1Code#PariPassu
- * ShareRanking1Code.PariPassu}</li>
+ * {@linkplain com.tools20022.repository.codeset.ShareRanking1Code#mmDividend
+ * ShareRanking1Code.mmDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ShareRanking1Code#mmPariPassu
+ * ShareRanking1Code.mmPariPassu}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class ShareRanking1Code extends ShareRankingCode {
 	 * name} = "Dividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
@@ -104,7 +105,7 @@ public class ShareRanking1Code extends ShareRankingCode {
 	 * name} = "PariPassu"</li>
 	 * </ul>
 	 */
-	public static final MMCode PariPassu = new MMCode() {
+	public static final MMCode mmPariPassu = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
@@ -115,12 +116,12 @@ public class ShareRanking1Code extends ShareRankingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIVI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ShareRanking1Code";
 				definition = "Specifies whether the shares are ranking for dividend or pari passu.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ShareRanking1Code.Dividend, com.tools20022.repository.codeset.ShareRanking1Code.PariPassu);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ShareRanking1Code.mmDividend, com.tools20022.repository.codeset.ShareRanking1Code.mmPariPassu);
 				trace_lazy = () -> ShareRankingCode.mmObject();
 			}
 		});

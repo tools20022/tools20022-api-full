@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Role6Choice#Code
- * Role6Choice.Code}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role6Choice#Proprietary
- * Role6Choice.Proprietary}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role6Choice#Text
- * Role6Choice.Text}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role6Choice#mmCode
+ * Role6Choice.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role6Choice#mmProprietary
+ * Role6Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role6Choice#mmText
+ * Role6Choice.mmText}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Role6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentFundRole2Code code;
 	/**
 	 * Role of the party in the activity expressed as an ISO 20022 code.
 	 * <p>
@@ -81,8 +82,8 @@ public class Role6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#PartyRole
-	 * Role.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmPartyRole
+	 * Role.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,25 +103,26 @@ public class Role6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Role2Choice#Code
-	 * Role2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.Role2Choice#mmCode
+	 * Role2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPartyRole;
 			componentContext_lazy = () -> Role6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.PartyRole;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Role of the party in the activity expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Role2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Role2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Role of the party in the activity expressed as a proprietary code.
 	 * <p>
@@ -134,8 +136,8 @@ public class Role6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#PartyRole
-	 * Role.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmPartyRole
+	 * Role.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,25 +157,26 @@ public class Role6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Role2Choice#Proprietary
-	 * Role2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.Role2Choice#mmProprietary
+	 * Role2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPartyRole;
 			componentContext_lazy = () -> Role6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.PartyRole;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Role of the party in the activity expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Role2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Role2Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
+	protected Max350Text text;
 	/**
 	 * Role of the party in the activity.
 	 * <p>
@@ -201,11 +204,11 @@ public class Role6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Role2Choice#Text
-	 * Role2Choice.Text}</li>
+	 * {@linkplain com.tools20022.repository.choice.Role2Choice#mmText
+	 * Role2Choice.mmText}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Text = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Role6Choice.mmObject();
 			isDerived = false;
@@ -213,9 +216,9 @@ public class Role6Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Role of the party in the activity.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Role2Choice.Text;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Role2Choice.mmText;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -223,9 +226,9 @@ public class Role6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Role6Choice.Code, com.tools20022.repository.choice.Role6Choice.Proprietary, com.tools20022.repository.choice.Role6Choice.Text);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Role6Choice.mmCode, com.tools20022.repository.choice.Role6Choice.mmProprietary, com.tools20022.repository.choice.Role6Choice.mmText);
 				trace_lazy = () -> InvestmentFundPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Role6Choice";
 				definition = "Choice of format for a party role.";
@@ -233,5 +236,29 @@ public class Role6Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentFundRole2Code getCode() {
+		return code;
+	}
+
+	public void setCode(InvestmentFundRole2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
+	}
+
+	public Max350Text getText() {
+		return text;
+	}
+
+	public void setText(Max350Text text) {
+		this.text = text;
 	}
 }

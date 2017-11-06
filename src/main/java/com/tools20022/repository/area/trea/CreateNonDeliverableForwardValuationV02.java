@@ -58,30 +58,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#TradeInformation
- * CreateNonDeliverableForwardValuationV02.TradeInformation}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmTradeInformation
+ * CreateNonDeliverableForwardValuationV02.mmTradeInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#TradingSideIdentification
- * CreateNonDeliverableForwardValuationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmTradingSideIdentification
+ * CreateNonDeliverableForwardValuationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#CounterpartySideIdentification
- * CreateNonDeliverableForwardValuationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmCounterpartySideIdentification
+ * CreateNonDeliverableForwardValuationV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#TradeAmounts
- * CreateNonDeliverableForwardValuationV02.TradeAmounts}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmTradeAmounts
+ * CreateNonDeliverableForwardValuationV02.mmTradeAmounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#ValuationInformation
- * CreateNonDeliverableForwardValuationV02.ValuationInformation}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmValuationInformation
+ * CreateNonDeliverableForwardValuationV02.mmValuationInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#ValuationRate
- * CreateNonDeliverableForwardValuationV02.ValuationRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmValuationRate
+ * CreateNonDeliverableForwardValuationV02.mmValuationRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#identifier
- * CreateNonDeliverableForwardValuationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code trea.004.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreateNonDeliverableForwardValuationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeAgreement1 tradeInformation;
 	/**
 	 * Provides identification and date of the valuation of the non deliverable
 	 * trade which is created.
@@ -122,17 +121,18 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformation";
 			definition = "Provides identification and date of the valuation of the non deliverable trade which is created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement1.mmObject();
 		}
 	};
+	protected TradePartyIdentification3 tradingSideIdentification;
 	/**
 	 * Specifies the trading side of the valuation of the non deliverable trade
 	 * which is created.
@@ -159,17 +159,18 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the valuation of the non deliverable trade which is created. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 	};
+	protected TradePartyIdentification3 counterpartySideIdentification;
 	/**
 	 * Specifies the counterparty of the valuation of the non deliverable trade
 	 * which is created.
@@ -196,17 +197,18 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the valuation of the non deliverable trade which is created. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 	};
+	protected AmountsAndValueDate1 tradeAmounts;
 	/**
 	 * Specifies the amounts of the valuation of the non deliverable trade which
 	 * is created.
@@ -233,17 +235,18 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Specifies the amounts of the valuation of the non deliverable trade which is created. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();
 		}
 	};
+	protected ValuationData2 valuationInformation;
 	/**
 	 * Specifies the valuation information of the valuation of the non
 	 * deliverable trade which is created.
@@ -269,17 +272,18 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ValuationInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmValuationInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationInformation";
 			definition = "Specifies the valuation information of the valuation of the non deliverable trade which is created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ValuationData2.mmObject();
 		}
 	};
+	protected AgreedRate1 valuationRate;
 	/**
 	 * Specifies the valuation rate of the valuation of the non deliverable
 	 * trade which is created.
@@ -305,42 +309,15 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ValuationRate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmValuationRate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationRate";
 			definition = "Specifies the valuation rate of the valuation of the non deliverable trade which is created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AgreedRate1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "trea"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "trea";
-			messageFunctionality = "004";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -354,13 +331,68 @@ public class CreateNonDeliverableForwardValuationV02 {
 				rootElement = "Document";
 				xmlTag = "CretNDFValtnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.TradeInformation,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.TradingSideIdentification, com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.CounterpartySideIdentification,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.TradeAmounts, com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.ValuationInformation,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.ValuationRate);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmTradeInformation,
+						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmCounterpartySideIdentification,
+						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmTradeAmounts, com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmValuationInformation,
+						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmValuationRate);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "trea";
+						messageFunctionality = "004";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeAgreement1 getTradeInformation() {
+		return tradeInformation;
+	}
+
+	public void setTradeInformation(TradeAgreement1 tradeInformation) {
+		this.tradeInformation = tradeInformation;
+	}
+
+	public TradePartyIdentification3 getTradingSideIdentification() {
+		return tradingSideIdentification;
+	}
+
+	public void setTradingSideIdentification(TradePartyIdentification3 tradingSideIdentification) {
+		this.tradingSideIdentification = tradingSideIdentification;
+	}
+
+	public TradePartyIdentification3 getCounterpartySideIdentification() {
+		return counterpartySideIdentification;
+	}
+
+	public void setCounterpartySideIdentification(TradePartyIdentification3 counterpartySideIdentification) {
+		this.counterpartySideIdentification = counterpartySideIdentification;
+	}
+
+	public AmountsAndValueDate1 getTradeAmounts() {
+		return tradeAmounts;
+	}
+
+	public void setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = tradeAmounts;
+	}
+
+	public ValuationData2 getValuationInformation() {
+		return valuationInformation;
+	}
+
+	public void setValuationInformation(ValuationData2 valuationInformation) {
+		this.valuationInformation = valuationInformation;
+	}
+
+	public AgreedRate1 getValuationRate() {
+		return valuationRate;
+	}
+
+	public void setValuationRate(AgreedRate1 valuationRate) {
+		this.valuationRate = valuationRate;
 	}
 }

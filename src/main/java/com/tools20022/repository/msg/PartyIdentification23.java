@@ -38,22 +38,23 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification23#BICOrBEIOrProprietaryRule
- * PartyIdentification23.BICOrBEIOrProprietaryRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmBICOrBEIOrProprietaryRule
+ * PartyIdentification23.mmBICOrBEIOrProprietaryRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification23#BICOrBEI
- * PartyIdentification23.BICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification23#ProprietaryIdentification
- * PartyIdentification23.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmBICOrBEI
+ * PartyIdentification23.mmBICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification23#NameAndAddress
- * PartyIdentification23.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmProprietaryIdentification
+ * PartyIdentification23.mmProprietaryIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmNameAndAddress
+ * PartyIdentification23.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,6 +82,7 @@ import java.util.function.Supplier;
 public class PartyIdentification23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bICOrBEI;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -97,8 +99,8 @@ public class PartyIdentification23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,20 +121,21 @@ public class PartyIdentification23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -147,8 +150,8 @@ public class PartyIdentification23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,20 +172,21 @@ public class PartyIdentification23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -218,18 +222,18 @@ public class PartyIdentification23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification23.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification23.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
 		}
 	};
 	/**
@@ -242,11 +246,11 @@ public class PartyIdentification23 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#BICOrBEI
-	 * PartyIdentification23.BICOrBEI}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmBICOrBEI
+	 * PartyIdentification23.mmBICOrBEI}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#ProprietaryIdentification
-	 * PartyIdentification23.ProprietaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmProprietaryIdentification
+	 * PartyIdentification23.mmProprietaryIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -266,23 +270,23 @@ public class PartyIdentification23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor BICOrBEIOrProprietaryRule = new MMXor() {
+	public static final MMXor mmBICOrBEIOrProprietaryRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEIOrProprietaryRule";
 			definition = "Either BICOrBEI or ProprietaryIdentification must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification23.BICOrBEI, com.tools20022.repository.msg.PartyIdentification23.ProprietaryIdentification);
 			messageComponent_lazy = () -> PartyIdentification23.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification23.mmBICOrBEI, com.tools20022.repository.msg.PartyIdentification23.mmProprietaryIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification23.BICOrBEI, com.tools20022.repository.msg.PartyIdentification23.ProprietaryIdentification,
-						com.tools20022.repository.msg.PartyIdentification23.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification23.mmBICOrBEI, com.tools20022.repository.msg.PartyIdentification23.mmProprietaryIdentification,
+						com.tools20022.repository.msg.PartyIdentification23.mmNameAndAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -293,9 +297,33 @@ public class PartyIdentification23 {
 				})).get();
 				name = "PartyIdentification23";
 				definition = "Choice of identification of a party. The party can be identified by providing a BIC or a proprietary code.\r\nOptionally, the client account number can also be provided.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification23.BICOrBEIOrProprietaryRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification23.mmBICOrBEIOrProprietaryRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBICOrBEI() {
+		return bICOrBEI;
+	}
+
+	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = bICOrBEI;
+	}
+
+	public GenericIdentification1 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification1 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

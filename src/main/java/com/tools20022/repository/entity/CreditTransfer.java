@@ -40,11 +40,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CreditTransfer#StandingOrder
- * CreditTransfer.StandingOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.CreditTransfer#mmStandingOrder
+ * CreditTransfer.mmStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CreditTransfer#RelatedStandingOrder
- * CreditTransfer.RelatedStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.CreditTransfer#mmRelatedStandingOrder
+ * CreditTransfer.mmRelatedStandingOrder}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashStandingOrder#CreditTransfer
- * CashStandingOrder.CreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCreditTransfer
+ * CashStandingOrder.mmCreditTransfer}</li>
  * </ul>
  * </li>
  * <li>
@@ -61,92 +61,92 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#CreditTransferTransactionInformation
- * PaymentInstructionInformation1.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#mmCreditTransferTransactionInformation
+ * PaymentInstructionInformation1.mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#CreditTransferTransactionInformation
- * PaymentInstructionInformation3.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#mmCreditTransferTransactionInformation
+ * PaymentInstructionInformation3.mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#CreditTransferTransactionInformation
- * PaymentInstruction6.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#mmCreditTransferTransactionInformation
+ * PaymentInstruction6.mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#CreditTransferTransactionInformation
- * PaymentInstruction9.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#mmCreditTransferTransactionInformation
+ * PaymentInstruction9.mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#UnderlyingCustomerCreditTransfer
- * CreditTransferTransactionInformation13.UnderlyingCustomerCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#mmUnderlyingCustomerCreditTransfer
+ * CreditTransferTransactionInformation13.mmUnderlyingCustomerCreditTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#UnderlyingCustomerCreditTransfer
- * CreditTransferTransaction4.UnderlyingCustomerCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#mmUnderlyingCustomerCreditTransfer
+ * CreditTransferTransaction4.mmUnderlyingCustomerCreditTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#UnderlyingCustomerCreditTransfer
- * CreditTransferTransaction8.UnderlyingCustomerCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#mmUnderlyingCustomerCreditTransfer
+ * CreditTransferTransaction8.mmUnderlyingCustomerCreditTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction5#CreditTransferTransaction
- * PaymentInstruction5.CreditTransferTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction5#mmCreditTransferTransaction
+ * PaymentInstruction5.mmCreditTransferTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction8#CreditTransferTransaction
- * PaymentInstruction8.CreditTransferTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction8#mmCreditTransferTransaction
+ * PaymentInstruction8.mmCreditTransferTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction11#CreditTransferTransaction
- * PaymentInstruction11.CreditTransferTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction11#mmCreditTransferTransaction
+ * PaymentInstruction11.mmCreditTransferTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument7Choice#CreditTransferDetails
- * PaymentInstrument7Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument7Choice#mmCreditTransferDetails
+ * PaymentInstrument7Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument11Choice#CreditTransferDetails
- * PaymentInstrument11Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument11Choice#mmCreditTransferDetails
+ * PaymentInstrument11Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument9Choice#CreditTransferDetails
- * PaymentInstrument9Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument9Choice#mmCreditTransferDetails
+ * PaymentInstrument9Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument10Choice#CreditTransferDetails
- * PaymentInstrument10Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument10Choice#mmCreditTransferDetails
+ * PaymentInstrument10Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#CreditTransferDetails
- * PaymentInstrument6Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmCreditTransferDetails
+ * PaymentInstrument6Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument8Choice#CreditTransferDetails
- * PaymentInstrument8Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument8Choice#mmCreditTransferDetails
+ * PaymentInstrument8Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument12Choice#CreditTransferDetails
- * PaymentInstrument12Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument12Choice#mmCreditTransferDetails
+ * PaymentInstrument12Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument13Choice#CreditTransferDetails
- * PaymentInstrument13Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument13Choice#mmCreditTransferDetails
+ * PaymentInstrument13Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument14Choice#CreditTransferDetails
- * PaymentInstrument14Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument14Choice#mmCreditTransferDetails
+ * PaymentInstrument14Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#CreditTransferTransactionInformation
- * PaymentInstruction16.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#mmCreditTransferTransactionInformation
+ * PaymentInstruction16.mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#UnderlyingCustomerCreditTransfer
- * CreditTransferTransaction17.UnderlyingCustomerCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#mmUnderlyingCustomerCreditTransfer
+ * CreditTransferTransaction17.mmUnderlyingCustomerCreditTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction17#CreditTransferTransaction
- * PaymentInstruction17.CreditTransferTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction17#mmCreditTransferTransaction
+ * PaymentInstruction17.mmCreditTransferTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#UnderlyingCustomerCreditTransfer
- * CreditTransferTransaction23.UnderlyingCustomerCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#mmUnderlyingCustomerCreditTransfer
+ * CreditTransferTransaction23.mmUnderlyingCustomerCreditTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction19#CreditTransferTransaction
- * PaymentInstruction19.CreditTransferTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction19#mmCreditTransferTransaction
+ * PaymentInstruction19.mmCreditTransferTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#CreditTransferTransactionInformation
- * PaymentInstruction20.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#mmCreditTransferTransactionInformation
+ * PaymentInstruction20.mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument21Choice#CreditTransferDetails
- * PaymentInstrument21Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument21Choice#mmCreditTransferDetails
+ * PaymentInstrument21Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument20Choice#CreditTransferDetails
- * PaymentInstrument20Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument20Choice#mmCreditTransferDetails
+ * PaymentInstrument20Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction23#CreditTransferTransaction
- * PaymentInstruction23.CreditTransferTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction23#mmCreditTransferTransaction
+ * PaymentInstruction23.mmCreditTransferTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#CreditTransferTransactionInformation
- * PaymentInstruction22.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmCreditTransferTransactionInformation
+ * PaymentInstruction22.mmCreditTransferTransactionInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -245,8 +245,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -262,6 +262,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditTransfer extends IndividualPayment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator standingOrder;
 	/**
 	 * Transaction is a standing order. This information is derived from the
 	 * presence of detailed standing order specification.
@@ -291,18 +292,19 @@ public class CreditTransfer extends IndividualPayment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StandingOrder = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStandingOrder = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CreditTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StandingOrder";
 			definition = "Transaction is a standing order. This information is derived from the presence of detailed standing order specification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected CashStandingOrder relatedStandingOrder;
 	/**
 	 * Standing order which creates the credit transfers.
 	 * <p>
@@ -311,8 +313,8 @@ public class CreditTransfer extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder#CreditTransfer
-	 * CashStandingOrder.CreditTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashStandingOrder#mmCreditTransfer
+	 * CashStandingOrder.mmCreditTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -336,46 +338,46 @@ public class CreditTransfer extends IndividualPayment {
 	 * definition} = "Standing order which creates the credit transfers."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedStandingOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedStandingOrder = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CreditTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedStandingOrder";
 			definition = "Standing order which creates the credit transfers.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashStandingOrder.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.CreditTransfer;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmCreditTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditTransfer";
 				definition = "Payment made by transferring an amount of money from a debtor to a creditor. The payment flows through one or more financial institutions or systems.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashStandingOrder.CreditTransfer);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionInformation1.CreditTransferTransactionInformation,
-						com.tools20022.repository.msg.PaymentInstructionInformation3.CreditTransferTransactionInformation, com.tools20022.repository.msg.PaymentInstruction6.CreditTransferTransactionInformation,
-						com.tools20022.repository.msg.PaymentInstruction9.CreditTransferTransactionInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation13.UnderlyingCustomerCreditTransfer,
-						com.tools20022.repository.msg.CreditTransferTransaction4.UnderlyingCustomerCreditTransfer, com.tools20022.repository.msg.CreditTransferTransaction8.UnderlyingCustomerCreditTransfer,
-						com.tools20022.repository.msg.PaymentInstruction5.CreditTransferTransaction, com.tools20022.repository.msg.PaymentInstruction8.CreditTransferTransaction,
-						com.tools20022.repository.msg.PaymentInstruction11.CreditTransferTransaction, com.tools20022.repository.choice.PaymentInstrument7Choice.CreditTransferDetails,
-						com.tools20022.repository.choice.PaymentInstrument11Choice.CreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument9Choice.CreditTransferDetails,
-						com.tools20022.repository.choice.PaymentInstrument10Choice.CreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.CreditTransferDetails,
-						com.tools20022.repository.choice.PaymentInstrument8Choice.CreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument12Choice.CreditTransferDetails,
-						com.tools20022.repository.choice.PaymentInstrument13Choice.CreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument14Choice.CreditTransferDetails,
-						com.tools20022.repository.msg.PaymentInstruction16.CreditTransferTransactionInformation, com.tools20022.repository.msg.CreditTransferTransaction17.UnderlyingCustomerCreditTransfer,
-						com.tools20022.repository.msg.PaymentInstruction17.CreditTransferTransaction, com.tools20022.repository.msg.CreditTransferTransaction23.UnderlyingCustomerCreditTransfer,
-						com.tools20022.repository.msg.PaymentInstruction19.CreditTransferTransaction, com.tools20022.repository.msg.PaymentInstruction20.CreditTransferTransactionInformation,
-						com.tools20022.repository.choice.PaymentInstrument21Choice.CreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument20Choice.CreditTransferDetails,
-						com.tools20022.repository.msg.PaymentInstruction23.CreditTransferTransaction, com.tools20022.repository.msg.PaymentInstruction22.CreditTransferTransactionInformation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashStandingOrder.mmCreditTransfer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionInformation1.mmCreditTransferTransactionInformation,
+						com.tools20022.repository.msg.PaymentInstructionInformation3.mmCreditTransferTransactionInformation, com.tools20022.repository.msg.PaymentInstruction6.mmCreditTransferTransactionInformation,
+						com.tools20022.repository.msg.PaymentInstruction9.mmCreditTransferTransactionInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation13.mmUnderlyingCustomerCreditTransfer,
+						com.tools20022.repository.msg.CreditTransferTransaction4.mmUnderlyingCustomerCreditTransfer, com.tools20022.repository.msg.CreditTransferTransaction8.mmUnderlyingCustomerCreditTransfer,
+						com.tools20022.repository.msg.PaymentInstruction5.mmCreditTransferTransaction, com.tools20022.repository.msg.PaymentInstruction8.mmCreditTransferTransaction,
+						com.tools20022.repository.msg.PaymentInstruction11.mmCreditTransferTransaction, com.tools20022.repository.choice.PaymentInstrument7Choice.mmCreditTransferDetails,
+						com.tools20022.repository.choice.PaymentInstrument11Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument9Choice.mmCreditTransferDetails,
+						com.tools20022.repository.choice.PaymentInstrument10Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.mmCreditTransferDetails,
+						com.tools20022.repository.choice.PaymentInstrument8Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument12Choice.mmCreditTransferDetails,
+						com.tools20022.repository.choice.PaymentInstrument13Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument14Choice.mmCreditTransferDetails,
+						com.tools20022.repository.msg.PaymentInstruction16.mmCreditTransferTransactionInformation, com.tools20022.repository.msg.CreditTransferTransaction17.mmUnderlyingCustomerCreditTransfer,
+						com.tools20022.repository.msg.PaymentInstruction17.mmCreditTransferTransaction, com.tools20022.repository.msg.CreditTransferTransaction23.mmUnderlyingCustomerCreditTransfer,
+						com.tools20022.repository.msg.PaymentInstruction19.mmCreditTransferTransaction, com.tools20022.repository.msg.PaymentInstruction20.mmCreditTransferTransactionInformation,
+						com.tools20022.repository.choice.PaymentInstrument21Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument20Choice.mmCreditTransferDetails,
+						com.tools20022.repository.msg.PaymentInstruction23.mmCreditTransferTransaction, com.tools20022.repository.msg.PaymentInstruction22.mmCreditTransferTransactionInformation);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditTransfer.StandingOrder, com.tools20022.repository.entity.CreditTransfer.RelatedStandingOrder);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditTransfer.mmStandingOrder, com.tools20022.repository.entity.CreditTransfer.mmRelatedStandingOrder);
 				derivationComponent_lazy = () -> Arrays.asList(CreditTransferTransactionInformation1.mmObject(), CreditTransferTransactionInformation10.mmObject(), CreditTransferTransaction1.mmObject(),
 						CreditTransferTransaction6.mmObject(), CreditTransferTransactionInformation2.mmObject(), CreditTransferTransactionInformation11.mmObject(), CreditTransferTransaction2.mmObject(),
 						CreditTransferTransaction7.mmObject(), CreditTransferTransactionInformation3.mmObject(), CreditTransferTransactionInformation12.mmObject(), CreditTransferTransactionInformation13.mmObject(),
@@ -388,5 +390,21 @@ public class CreditTransfer extends IndividualPayment {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getStandingOrder() {
+		return standingOrder;
+	}
+
+	public void setStandingOrder(YesNoIndicator standingOrder) {
+		this.standingOrder = standingOrder;
+	}
+
+	public CashStandingOrder getRelatedStandingOrder() {
+		return relatedStandingOrder;
+	}
+
+	public void setRelatedStandingOrder(com.tools20022.repository.entity.CashStandingOrder relatedStandingOrder) {
+		this.relatedStandingOrder = relatedStandingOrder;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the securities transaction report.
@@ -40,47 +41,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#TransactionIdentification
- * SecuritiesTransactionReport4.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmTransactionIdentification
+ * SecuritiesTransactionReport4.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#ExecutingParty
- * SecuritiesTransactionReport4.ExecutingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmExecutingParty
+ * SecuritiesTransactionReport4.mmExecutingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#InvestmentPartyIndicator
- * SecuritiesTransactionReport4.InvestmentPartyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmInvestmentPartyIndicator
+ * SecuritiesTransactionReport4.mmInvestmentPartyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#SubmittingParty
- * SecuritiesTransactionReport4.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmSubmittingParty
+ * SecuritiesTransactionReport4.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#Buyer
- * SecuritiesTransactionReport4.Buyer}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmBuyer
+ * SecuritiesTransactionReport4.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#Seller
- * SecuritiesTransactionReport4.Seller}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmSeller
+ * SecuritiesTransactionReport4.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#OrderTransmission
- * SecuritiesTransactionReport4.OrderTransmission}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmOrderTransmission
+ * SecuritiesTransactionReport4.mmOrderTransmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#Transaction
- * SecuritiesTransactionReport4.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmTransaction
+ * SecuritiesTransactionReport4.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#FinancialInstrument
- * SecuritiesTransactionReport4.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmFinancialInstrument
+ * SecuritiesTransactionReport4.mmFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#InvestmentDecisionPerson
- * SecuritiesTransactionReport4.InvestmentDecisionPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmInvestmentDecisionPerson
+ * SecuritiesTransactionReport4.mmInvestmentDecisionPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#ExecutingPerson
- * SecuritiesTransactionReport4.ExecutingPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmExecutingPerson
+ * SecuritiesTransactionReport4.mmExecutingPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#AdditionalAttributes
- * SecuritiesTransactionReport4.AdditionalAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmAdditionalAttributes
+ * SecuritiesTransactionReport4.mmAdditionalAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#TechnicalAttributes
- * SecuritiesTransactionReport4.TechnicalAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmTechnicalAttributes
+ * SecuritiesTransactionReport4.mmTechnicalAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#SupplementaryData
- * SecuritiesTransactionReport4.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmSupplementaryData
+ * SecuritiesTransactionReport4.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -89,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max52Text transactionIdentification;
 	/**
 	 * Unique and unambiguous identification of the transaction.
 	 * <p>
@@ -116,8 +118,8 @@ public class SecuritiesTransactionReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,20 +139,21 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique and unambiguous identification of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
 	};
+	protected LEIIdentifier executingParty;
 	/**
 	 * Identification of the entity executing the transaction.
 	 * <p>
@@ -184,20 +187,21 @@ public class SecuritiesTransactionReport4 {
 	 * definition} = "Identification of the entity executing the transaction. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutingParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			businessComponentTrace_lazy = () -> ExecutingTrader.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingParty";
 			definition = "Identification of the entity executing the transaction. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected TrueFalseIndicator investmentPartyIndicator;
 	/**
 	 * Indicates whether the reporting party is defined as an investment firm
 	 * under the local regulation or not.
@@ -229,7 +233,7 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestmentPartyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestmentPartyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
@@ -237,11 +241,12 @@ public class SecuritiesTransactionReport4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPartyIndicator";
 			definition = "Indicates whether the reporting party is defined as an investment firm under the local regulation or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected LEIIdentifier submittingParty;
 	/**
 	 * Entity submitting the transaction report to the competent authority.
 	 * <p>
@@ -276,20 +281,21 @@ public class SecuritiesTransactionReport4 {
 	 * "Entity submitting the transaction report to the competent authority."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubmittingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubmittingParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Entity submitting the transaction report to the competent authority.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected PartyIdentification79 buyer;
 	/**
 	 * Identifies the acquirer of the legal title to the financial instrument.
 	 * <p>
@@ -322,21 +328,22 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Identifies the acquirer of the legal title to the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification79.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification79.mmObject();
 		}
 	};
+	protected PartyIdentification79 seller;
 	/**
 	 * Identifies the seller of the legal title to the financial instrument.
 	 * <p>
@@ -368,21 +375,22 @@ public class SecuritiesTransactionReport4 {
 	 * "Identifies the seller of the legal title to the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Seller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			businessComponentTrace_lazy = () -> SellerRole.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Identifies the seller of the legal title to the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification79.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification79.mmObject();
 		}
 	};
+	protected SecuritiesTransactionTransmission2 orderTransmission;
 	/**
 	 * Indication as to whether the transaction results from an order
 	 * transmitted by the reporting of a client to a third party.<br>
@@ -399,8 +407,8 @@ public class SecuritiesTransactionReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#RelatedOrder
-	 * SecuritiesTrade.RelatedOrder}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmRelatedOrder
+	 * SecuritiesTrade.mmRelatedOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -421,21 +429,22 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderTransmission = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderTransmission = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmRelatedOrder;
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.RelatedOrder;
 			isDerived = false;
 			xmlTag = "OrdrTrnsmssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderTransmission";
 			definition = "Indication as to whether the transaction results from an order  transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransactionTransmission2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmObject();
 		}
 	};
+	protected SecuritiesTransaction1 transaction;
 	/**
 	 * Provides the details of the reported transaction.
 	 * <p>
@@ -467,21 +476,22 @@ public class SecuritiesTransactionReport4 {
 	 * definition} = "Provides the details of the reported transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTransaction.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Provides the details of the reported transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransaction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes3Choice financialInstrument;
 	/**
 	 * Financial instrument representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -495,8 +505,8 @@ public class SecuritiesTransactionReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -517,21 +527,22 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentAttributes3Choice.mmObject();
 		}
 	};
+	protected InvestmentParty1Choice investmentDecisionPerson;
 	/**
 	 * Identifies the person or algorithm which is responsible within the
 	 * reporting party for the investment decision.
@@ -566,21 +577,22 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentDecisionPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentDecisionPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			businessComponentTrace_lazy = () -> Investor.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtDcsnPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentDecisionPerson";
 			definition = "Identifies the person or algorithm which is responsible within the reporting party for the investment decision. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentParty1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InvestmentParty1Choice.mmObject();
 		}
 	};
+	protected ExecutingParty1Choice executingPerson;
 	/**
 	 * Person or algorithm responsible for the execution of the transaction.
 	 * <p>
@@ -613,21 +625,22 @@ public class SecuritiesTransactionReport4 {
 	 * "Person or algorithm responsible for the execution of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExecutingPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExecutingPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingPerson";
 			definition = "Person or algorithm responsible for the execution of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ExecutingParty1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ExecutingParty1Choice.mmObject();
 		}
 	};
+	protected SecuritiesTransactionIndicator2 additionalAttributes;
 	/**
 	 * Provides additional indicators on the reported transaction.
 	 * <p>
@@ -656,7 +669,7 @@ public class SecuritiesTransactionReport4 {
 	 * "Provides additional indicators on the reported transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalAttributes = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
@@ -664,12 +677,13 @@ public class SecuritiesTransactionReport4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalAttributes";
 			definition = "Provides additional indicators on the reported transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmObject();
 		}
 	};
+	protected RecordTechnicalData1 technicalAttributes;
 	/**
 	 * Data used for exchanges between national competent authorities, not to be
 	 * used by reporting entities.
@@ -699,7 +713,7 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TechnicalAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTechnicalAttributes = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
@@ -707,12 +721,13 @@ public class SecuritiesTransactionReport4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAttributes";
 			definition = "Data used for exchanges between national competent authorities, not to be used by reporting entities.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RecordTechnicalData1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -742,7 +757,7 @@ public class SecuritiesTransactionReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
@@ -751,28 +766,140 @@ public class SecuritiesTransactionReport4 {
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport4.TransactionIdentification, com.tools20022.repository.msg.SecuritiesTransactionReport4.ExecutingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.InvestmentPartyIndicator, com.tools20022.repository.msg.SecuritiesTransactionReport4.SubmittingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.Buyer, com.tools20022.repository.msg.SecuritiesTransactionReport4.Seller, com.tools20022.repository.msg.SecuritiesTransactionReport4.OrderTransmission,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.Transaction, com.tools20022.repository.msg.SecuritiesTransactionReport4.FinancialInstrument,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.InvestmentDecisionPerson, com.tools20022.repository.msg.SecuritiesTransactionReport4.ExecutingPerson,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.AdditionalAttributes, com.tools20022.repository.msg.SecuritiesTransactionReport4.TechnicalAttributes,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTransactionIdentification, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmExecutingParty,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmInvestmentPartyIndicator, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSubmittingParty,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmBuyer, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSeller,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmOrderTransmission, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTransaction,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmFinancialInstrument, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmInvestmentDecisionPerson,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmExecutingPerson, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmAdditionalAttributes,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTechnicalAttributes, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionReport4";
 				definition = "Details of the securities transaction report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max52Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max52Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public LEIIdentifier getExecutingParty() {
+		return executingParty;
+	}
+
+	public void setExecutingParty(LEIIdentifier executingParty) {
+		this.executingParty = executingParty;
+	}
+
+	public TrueFalseIndicator getInvestmentPartyIndicator() {
+		return investmentPartyIndicator;
+	}
+
+	public void setInvestmentPartyIndicator(TrueFalseIndicator investmentPartyIndicator) {
+		this.investmentPartyIndicator = investmentPartyIndicator;
+	}
+
+	public LEIIdentifier getSubmittingParty() {
+		return submittingParty;
+	}
+
+	public void setSubmittingParty(LEIIdentifier submittingParty) {
+		this.submittingParty = submittingParty;
+	}
+
+	public PartyIdentification79 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(com.tools20022.repository.msg.PartyIdentification79 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PartyIdentification79 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(com.tools20022.repository.msg.PartyIdentification79 seller) {
+		this.seller = seller;
+	}
+
+	public SecuritiesTransactionTransmission2 getOrderTransmission() {
+		return orderTransmission;
+	}
+
+	public void setOrderTransmission(com.tools20022.repository.msg.SecuritiesTransactionTransmission2 orderTransmission) {
+		this.orderTransmission = orderTransmission;
+	}
+
+	public SecuritiesTransaction1 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.SecuritiesTransaction1 transaction) {
+		this.transaction = transaction;
+	}
+
+	public FinancialInstrumentAttributes3Choice getFinancialInstrument() {
+		return financialInstrument;
+	}
+
+	public void setFinancialInstrument(FinancialInstrumentAttributes3Choice financialInstrument) {
+		this.financialInstrument = financialInstrument;
+	}
+
+	public InvestmentParty1Choice getInvestmentDecisionPerson() {
+		return investmentDecisionPerson;
+	}
+
+	public void setInvestmentDecisionPerson(InvestmentParty1Choice investmentDecisionPerson) {
+		this.investmentDecisionPerson = investmentDecisionPerson;
+	}
+
+	public ExecutingParty1Choice getExecutingPerson() {
+		return executingPerson;
+	}
+
+	public void setExecutingPerson(ExecutingParty1Choice executingPerson) {
+		this.executingPerson = executingPerson;
+	}
+
+	public SecuritiesTransactionIndicator2 getAdditionalAttributes() {
+		return additionalAttributes;
+	}
+
+	public void setAdditionalAttributes(com.tools20022.repository.msg.SecuritiesTransactionIndicator2 additionalAttributes) {
+		this.additionalAttributes = additionalAttributes;
+	}
+
+	public RecordTechnicalData1 getTechnicalAttributes() {
+		return technicalAttributes;
+	}
+
+	public void setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData1 technicalAttributes) {
+		this.technicalAttributes = technicalAttributes;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

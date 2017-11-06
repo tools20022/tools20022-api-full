@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification21#Payment
- * SettlementTypeAndIdentification21.Payment}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification21#mmPayment
+ * SettlementTypeAndIdentification21.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification21#TransactionIdentification
- * SettlementTypeAndIdentification21.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification21#mmTransactionIdentification
+ * SettlementTypeAndIdentification21.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification21#SettlementDate
- * SettlementTypeAndIdentification21.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification21#mmSettlementDate
+ * SettlementTypeAndIdentification21.mmSettlementDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementTypeAndIdentification21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DeliveryReceiptType2Code payment;
 	/**
 	 * Specifies how the transaction is to be settled.
 	 * <p>
@@ -83,8 +84,8 @@ public class SettlementTypeAndIdentification21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class SettlementTypeAndIdentification21 {
 	 * definition} = "Specifies how the transaction is to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> SettlementTypeAndIdentification21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text transactionIdentification;
 	/**
 	 * Reference of the transaction.
 	 * <p>
@@ -130,8 +132,8 @@ public class SettlementTypeAndIdentification21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class SettlementTypeAndIdentification21 {
 	 * definition} = "Reference of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> SettlementTypeAndIdentification21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Reference of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice settlementDate;
 	/**
 	 * Identifies the intended settlement date.
 	 * <p>
@@ -177,8 +180,8 @@ public class SettlementTypeAndIdentification21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementDate
-	 * SecuritiesSettlement.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+	 * SecuritiesSettlement.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,17 +200,17 @@ public class SettlementTypeAndIdentification21 {
 	 * definition} = "Identifies the intended settlement date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> SettlementTypeAndIdentification21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Identifies the intended settlement date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -215,15 +218,39 @@ public class SettlementTypeAndIdentification21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndIdentification21.Payment, com.tools20022.repository.msg.SettlementTypeAndIdentification21.TransactionIdentification,
-						com.tools20022.repository.msg.SettlementTypeAndIdentification21.SettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndIdentification21.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification21.mmTransactionIdentification,
+						com.tools20022.repository.msg.SettlementTypeAndIdentification21.mmSettlementDate);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementTypeAndIdentification21";
 				definition = "Overall process covering the trade and settlement transactions of financial instruments.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DeliveryReceiptType2Code getPayment() {
+		return payment;
+	}
+
+	public void setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = payment;
+	}
+
+	public RestrictedFINXMax16Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(RestrictedFINXMax16Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DateAndDateTimeChoice getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(DateAndDateTimeChoice settlementDate) {
+		this.settlementDate = settlementDate;
 	}
 }

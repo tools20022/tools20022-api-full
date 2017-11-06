@@ -33,20 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat20Choice#Date
- * DateFormat20Choice.Date}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat20Choice#mmDate
+ * DateFormat20Choice.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateFormat20Choice#DateCodeAndTime
- * DateFormat20Choice.DateCodeAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat20Choice#DateCode
- * DateFormat20Choice.DateCode}</li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat20Choice#mmDateCodeAndTime
+ * DateFormat20Choice.mmDateCodeAndTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat20Choice#mmDateCode
+ * DateFormat20Choice.mmDateCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateFormat20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date expressed as a calendar date.
 	 * <p>
@@ -97,13 +99,14 @@ public class DateFormat20Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.DateFormat32Choice#Date
-	 * DateFormat32Choice.Date}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat32Choice#mmDate
+	 * DateFormat32Choice.mmDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Date = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateFormat20Choice.mmObject();
 			isDerived = false;
@@ -111,13 +114,14 @@ public class DateFormat20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat32Choice.Date);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat32Choice.mmDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateCodeAndTimeFormat1 dateCodeAndTime;
 	/**
 	 * Specifies a date code and a time.
 	 * <p>
@@ -146,13 +150,13 @@ public class DateFormat20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DateFormat32Choice#DateCodeAndTime
-	 * DateFormat32Choice.DateCodeAndTime}</li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat32Choice#mmDateCodeAndTime
+	 * DateFormat32Choice.mmDateCodeAndTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateCodeAndTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateCodeAndTime = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateFormat20Choice.mmObject();
 			isDerived = false;
@@ -160,13 +164,14 @@ public class DateFormat20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCodeAndTime";
 			definition = "Specifies  a date code and a time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat32Choice.DateCodeAndTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat32Choice.mmDateCodeAndTime);
 			maxOccurs = 1;
-			type_lazy = () -> DateCodeAndTimeFormat1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateCodeAndTimeFormat1.mmObject();
 		}
 	};
+	protected DateCode11Choice dateCode;
 	/**
 	 * Specifies the type of date.
 	 * <p>
@@ -195,13 +200,13 @@ public class DateFormat20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DateFormat32Choice#DateCode
-	 * DateFormat32Choice.DateCode}</li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat32Choice#mmDateCode
+	 * DateFormat32Choice.mmDateCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateFormat20Choice.mmObject();
 			isDerived = false;
@@ -209,20 +214,20 @@ public class DateFormat20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat32Choice.DateCode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat32Choice.mmDateCode);
 			maxOccurs = 1;
-			type_lazy = () -> DateCode11Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.DateCode11Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat20Choice.Date, com.tools20022.repository.choice.DateFormat20Choice.DateCodeAndTime,
-						com.tools20022.repository.choice.DateFormat20Choice.DateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat20Choice.mmDate, com.tools20022.repository.choice.DateFormat20Choice.mmDateCodeAndTime,
+						com.tools20022.repository.choice.DateFormat20Choice.mmDateCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateFormat20Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code or a date code and a time.";
@@ -230,5 +235,29 @@ public class DateFormat20Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public DateCodeAndTimeFormat1 getDateCodeAndTime() {
+		return dateCodeAndTime;
+	}
+
+	public void setDateCodeAndTime(DateCodeAndTimeFormat1 dateCodeAndTime) {
+		this.dateCodeAndTime = dateCodeAndTime;
+	}
+
+	public DateCode11Choice getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(com.tools20022.repository.choice.DateCode11Choice dateCode) {
+		this.dateCode = dateCode;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#Simple
- * CalculationMethod1Code.Simple}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#mmSimple
+ * CalculationMethod1Code.mmSimple}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#Compounding
- * CalculationMethod1Code.Compounding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#mmCompounding
+ * CalculationMethod1Code.mmCompounding}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	 * name} = "Simple"</li>
 	 * </ul>
 	 */
-	public static final MMCode Simple = new MMCode() {
+	public static final MMCode mmSimple = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
@@ -105,7 +105,7 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	 * name} = "Compounding"</li>
 	 * </ul>
 	 */
-	public static final MMCode Compounding = new MMCode() {
+	public static final MMCode mmCompounding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compounding";
@@ -116,12 +116,12 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CalculationMethod1Code";
 				definition = "Indicates if the method for interest calculation is simple or compounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationMethod1Code.Simple, com.tools20022.repository.codeset.CalculationMethod1Code.Compounding);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationMethod1Code.mmSimple, com.tools20022.repository.codeset.CalculationMethod1Code.mmCompounding);
 				trace_lazy = () -> CalculationMethodCode.mmObject();
 			}
 		});

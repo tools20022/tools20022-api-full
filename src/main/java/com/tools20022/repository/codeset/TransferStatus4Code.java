@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#Accepted
- * TransferStatus4Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#mmAccepted
+ * TransferStatus4Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#AlreadyExecuted
- * TransferStatus4Code.AlreadyExecuted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#mmAlreadyExecuted
+ * TransferStatus4Code.mmAlreadyExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#Matched
- * TransferStatus4Code.Matched}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#mmMatched
+ * TransferStatus4Code.mmMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#Received
- * TransferStatus4Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#mmReceived
+ * TransferStatus4Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#SentToNextParty
- * TransferStatus4Code.SentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#mmSentToNextParty
+ * TransferStatus4Code.mmSentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#Settled
- * TransferStatus4Code.Settled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#mmSettled
+ * TransferStatus4Code.mmSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#Complete
- * TransferStatus4Code.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus4Code#mmComplete
+ * TransferStatus4Code.mmComplete}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +90,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -113,7 +113,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 * name} = "AlreadyExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlreadyExecuted = new MMCode() {
+	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
@@ -136,7 +136,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Matched = new MMCode() {
+	public static final MMCode mmMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
@@ -159,7 +159,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -182,7 +182,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -205,7 +205,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -228,7 +228,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -239,13 +239,13 @@ public class TransferStatus4Code extends TransferStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferStatus4Code";
 				definition = "Specifies the transfer or settlement instruction status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferStatus4Code.Accepted, com.tools20022.repository.codeset.TransferStatus4Code.AlreadyExecuted,
-						com.tools20022.repository.codeset.TransferStatus4Code.Matched, com.tools20022.repository.codeset.TransferStatus4Code.Received, com.tools20022.repository.codeset.TransferStatus4Code.SentToNextParty,
-						com.tools20022.repository.codeset.TransferStatus4Code.Settled, com.tools20022.repository.codeset.TransferStatus4Code.Complete);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferStatus4Code.mmAccepted, com.tools20022.repository.codeset.TransferStatus4Code.mmAlreadyExecuted,
+						com.tools20022.repository.codeset.TransferStatus4Code.mmMatched, com.tools20022.repository.codeset.TransferStatus4Code.mmReceived, com.tools20022.repository.codeset.TransferStatus4Code.mmSentToNextParty,
+						com.tools20022.repository.codeset.TransferStatus4Code.mmSettled, com.tools20022.repository.codeset.TransferStatus4Code.mmComplete);
 				trace_lazy = () -> TransferStatusCode.mmObject();
 			}
 		});

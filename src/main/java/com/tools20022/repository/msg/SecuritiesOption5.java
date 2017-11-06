@@ -39,19 +39,20 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#SecurityIdentification
- * SecuritiesOption5.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#mmSecurityIdentification
+ * SecuritiesOption5.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#CreditDebitIndicator
- * SecuritiesOption5.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#mmCreditDebitIndicator
+ * SecuritiesOption5.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#PostingQuantity
- * SecuritiesOption5.PostingQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption5#PostingDate
- * SecuritiesOption5.PostingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#mmPostingQuantity
+ * SecuritiesOption5.mmPostingQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#OriginalPostingDate
- * SecuritiesOption5.OriginalPostingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#mmPostingDate
+ * SecuritiesOption5.mmPostingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption5#mmOriginalPostingDate
+ * SecuritiesOption5.mmOriginalPostingDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -77,6 +78,7 @@ import java.util.function.Supplier;
 public class SecuritiesOption5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification11 securityIdentification;
 	/**
 	 * Identification of the financial instrument.
 	 * <p>
@@ -90,8 +92,8 @@ public class SecuritiesOption5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +112,21 @@ public class SecuritiesOption5 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesOption5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification11.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies whether the value is a debit or credit.
 	 * <p>
@@ -137,8 +140,8 @@ public class SecuritiesOption5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#CreditDebitIndicator
-	 * ProceedsDefinition.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmCreditDebitIndicator
+	 * ProceedsDefinition.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +160,21 @@ public class SecuritiesOption5 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> SecuritiesOption5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected Quantity6Choice postingQuantity;
 	/**
 	 * Quantity of securities that have been posted (credit or debit) to the
 	 * safekeeping account.
@@ -185,8 +189,8 @@ public class SecuritiesOption5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingQuantity
-	 * CorporateActionDistribution.PostingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingQuantity
+	 * CorporateActionDistribution.mmPostingQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,20 +211,21 @@ public class SecuritiesOption5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> SecuritiesOption5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingQuantity;
 			isDerived = false;
 			xmlTag = "PstngQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Quantity of securities that have been posted (credit or debit) to the safekeeping account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity6Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice postingDate;
 	/**
 	 * Date of the posting (credit or debit) to the account.
 	 * <p>
@@ -234,8 +239,8 @@ public class SecuritiesOption5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingDateTime
-	 * CorporateActionDistribution.PostingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingDateTime
+	 * CorporateActionDistribution.mmPostingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +259,21 @@ public class SecuritiesOption5 {
 	 * definition} = "Date of the posting (credit or debit) to the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> SecuritiesOption5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingDateTime;
 			isDerived = false;
 			xmlTag = "PstngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice originalPostingDate;
 	/**
 	 * Date/Time of the posting (credit or debit) to the account that was
 	 * initially communicated in the confirmation.
@@ -282,8 +288,8 @@ public class SecuritiesOption5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingDateTime
-	 * CorporateActionDistribution.PostingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingDateTime
+	 * CorporateActionDistribution.mmPostingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -304,17 +310,17 @@ public class SecuritiesOption5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalPostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalPostingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> SecuritiesOption5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingDateTime;
 			isDerived = false;
 			xmlTag = "OrgnlPstngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -322,10 +328,10 @@ public class SecuritiesOption5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption5.SecurityIdentification, com.tools20022.repository.msg.SecuritiesOption5.CreditDebitIndicator,
-						com.tools20022.repository.msg.SecuritiesOption5.PostingQuantity, com.tools20022.repository.msg.SecuritiesOption5.PostingDate, com.tools20022.repository.msg.SecuritiesOption5.OriginalPostingDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption5.mmSecurityIdentification, com.tools20022.repository.msg.SecuritiesOption5.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.SecuritiesOption5.mmPostingQuantity, com.tools20022.repository.msg.SecuritiesOption5.mmPostingDate, com.tools20022.repository.msg.SecuritiesOption5.mmOriginalPostingDate);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -339,5 +345,45 @@ public class SecuritiesOption5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification11 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification11 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public Quantity6Choice getPostingQuantity() {
+		return postingQuantity;
+	}
+
+	public void setPostingQuantity(Quantity6Choice postingQuantity) {
+		this.postingQuantity = postingQuantity;
+	}
+
+	public DateAndDateTimeChoice getPostingDate() {
+		return postingDate;
+	}
+
+	public void setPostingDate(DateAndDateTimeChoice postingDate) {
+		this.postingDate = postingDate;
+	}
+
+	public DateAndDateTimeChoice getOriginalPostingDate() {
+		return originalPostingDate;
+	}
+
+	public void setOriginalPostingDate(DateAndDateTimeChoice originalPostingDate) {
+		this.originalPostingDate = originalPostingDate;
 	}
 }

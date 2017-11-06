@@ -19,6 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.msg.SecuritiesTransactionPrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice#Price
- * SecuritiesTransactionPrice4Choice.Price}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice#mmPrice
+ * SecuritiesTransactionPrice4Choice.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice#NoPrice
- * SecuritiesTransactionPrice4Choice.NoPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice#mmNoPrice
+ * SecuritiesTransactionPrice4Choice.mmNoPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionPrice4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesTransactionPrice2Choice price;
 	/**
 	 * Predetermined price at which the holder will have to buy or sell the
 	 * underlying instrument.
@@ -74,8 +76,8 @@ public class SecuritiesTransactionPrice4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#SecuritiesPricing
-	 * Price.SecuritiesPricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmSecuritiesPricing
+	 * Price.mmSecuritiesPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +98,22 @@ public class SecuritiesTransactionPrice4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Price = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmSecuritiesPricing;
 			componentContext_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.SecuritiesPricing;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmObject();
 		}
 	};
+	protected SecuritiesTransactionPrice1 noPrice;
 	/**
 	 * Captures where no price is yet known.
 	 * <p>
@@ -138,7 +141,7 @@ public class SecuritiesTransactionPrice4Choice {
 	 * definition} = "Captures where no price is yet known."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NoPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNoPrice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
 			isDerived = false;
@@ -146,24 +149,40 @@ public class SecuritiesTransactionPrice4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPrice";
 			definition = "Captures where no price is yet known.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransactionPrice1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesTransactionPrice1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.Price, com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.NoPrice);
-				trace_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmPrice, com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmNoPrice);
+				trace_lazy = () -> Price.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPrice4Choice";
 				definition = "Choice element capturing strike price related descriptive information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesTransactionPrice2Choice getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice price) {
+		this.price = price;
+	}
+
+	public SecuritiesTransactionPrice1 getNoPrice() {
+		return noPrice;
+	}
+
+	public void setNoPrice(SecuritiesTransactionPrice1 noPrice) {
+		this.noPrice = noPrice;
 	}
 }

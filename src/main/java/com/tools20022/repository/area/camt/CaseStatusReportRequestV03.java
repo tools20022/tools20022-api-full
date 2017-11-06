@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -89,21 +90,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03#RequestHeader
- * CaseStatusReportRequestV03.RequestHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03#mmRequestHeader
+ * CaseStatusReportRequestV03.mmRequestHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03#Case
- * CaseStatusReportRequestV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03#mmCase
+ * CaseStatusReportRequestV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03#SupplementaryData
- * CaseStatusReportRequestV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03#mmSupplementaryData
+ * CaseStatusReportRequestV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03#identifier
- * CaseStatusReportRequestV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.038.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,6 +122,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CaseStatusReportRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportHeader4 requestHeader;
 	/**
 	 * Identifies the party requesting the status, the requested party, the
 	 * identification and the date of the status.
@@ -148,17 +148,18 @@ public class CaseStatusReportRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHeader";
 			definition = "Identifies the party requesting the status, the requested party, the identification and the date of the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader4.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -180,17 +181,18 @@ public class CaseStatusReportRequestV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -217,7 +219,7 @@ public class CaseStatusReportRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,33 +227,6 @@ public class CaseStatusReportRequestV03 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "038";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -267,11 +242,42 @@ public class CaseStatusReportRequestV03 {
 				rootElement = "Document";
 				xmlTag = "CaseStsRptReq";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReportRequestV03.RequestHeader, com.tools20022.repository.area.camt.CaseStatusReportRequestV03.Case,
-						com.tools20022.repository.area.camt.CaseStatusReportRequestV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.CaseStatusReportRequestV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReportRequestV03.mmRequestHeader, com.tools20022.repository.area.camt.CaseStatusReportRequestV03.mmCase,
+						com.tools20022.repository.area.camt.CaseStatusReportRequestV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "038";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportHeader4 getRequestHeader() {
+		return requestHeader;
+	}
+
+	public void setRequestHeader(ReportHeader4 requestHeader) {
+		this.requestHeader = requestHeader;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

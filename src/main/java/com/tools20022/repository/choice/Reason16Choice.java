@@ -33,42 +33,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#RepoCallAcknowledgementReason
- * Reason16Choice.RepoCallAcknowledgementReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmRepoCallAcknowledgementReason
+ * Reason16Choice.mmRepoCallAcknowledgementReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#CancellationReason
- * Reason16Choice.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmCancellationReason
+ * Reason16Choice.mmCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#PendingCancellationReason
- * Reason16Choice.PendingCancellationReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmPendingCancellationReason
+ * Reason16Choice.mmPendingCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#GeneratedReason
- * Reason16Choice.GeneratedReason}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reason16Choice#DeniedReason
- * Reason16Choice.DeniedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmGeneratedReason
+ * Reason16Choice.mmGeneratedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#AcknowledgedAcceptedReason
- * Reason16Choice.AcknowledgedAcceptedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmDeniedReason
+ * Reason16Choice.mmDeniedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#PendingReason
- * Reason16Choice.PendingReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmAcknowledgedAcceptedReason
+ * Reason16Choice.mmAcknowledgedAcceptedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#FailingReason
- * Reason16Choice.FailingReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmPendingReason
+ * Reason16Choice.mmPendingReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#PendingProcessingReason
- * Reason16Choice.PendingProcessingReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmFailingReason
+ * Reason16Choice.mmFailingReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#RejectionReason
- * Reason16Choice.RejectionReason}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reason16Choice#RepairReason
- * Reason16Choice.RepairReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmPendingProcessingReason
+ * Reason16Choice.mmPendingProcessingReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#PendingModificationReason
- * Reason16Choice.PendingModificationReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmRejectionReason
+ * Reason16Choice.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reason16Choice#UnmatchedReason
- * Reason16Choice.UnmatchedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmRepairReason
+ * Reason16Choice.mmRepairReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmPendingModificationReason
+ * Reason16Choice.mmPendingModificationReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Reason16Choice#mmUnmatchedReason
+ * Reason16Choice.mmUnmatchedReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -78,8 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reason16Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AcknowledgementReason13Choice repoCallAcknowledgementReason;
 	/**
 	 * Specifies additional information on the repurchase agreement call request
 	 * acknowledgement.
@@ -109,8 +112,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#RepoCallAcknowledgementReason
-	 * SecuritiesTradeStatusReason.RepoCallAcknowledgementReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmRepoCallAcknowledgementReason
+	 * SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -132,26 +135,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#RepoCallAcknowledgementReason
-	 * Reason14Choice.RepoCallAcknowledgementReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmRepoCallAcknowledgementReason
+	 * Reason14Choice.mmRepoCallAcknowledgementReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RepoCallAcknowledgementReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRepoCallAcknowledgementReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.RepoCallAcknowledgementReason;
 			isDerived = false;
 			xmlTag = "RepoCallAckRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoCallAcknowledgementReason";
 			definition = "Specifies additional information on the repurchase agreement call request acknowledgement.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.RepoCallAcknowledgementReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmRepoCallAcknowledgementReason;
 			maxOccurs = 1;
-			type_lazy = () -> AcknowledgementReason13Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason13Choice.mmObject();
 		}
 	};
+	protected CancellationReason20Choice cancellationReason;
 	/**
 	 * Specifies the reason why the related instruction is cancelled, or the
 	 * related cancellation request is executed.
@@ -165,8 +169,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,26 +192,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#CancellationReason
-	 * Reason14Choice.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmCancellationReason
+	 * Reason14Choice.mmCancellationReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.CancellationReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmCancellationReason;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationReason20Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CancellationReason20Choice.mmObject();
 		}
 	};
+	protected PendingCancellationReasons4Choice pendingCancellationReason;
 	/**
 	 * Specifies the reason why the cancellation request is pending.
 	 * <p>
@@ -220,8 +225,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,26 +247,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#PendingCancellationReason
-	 * Reason14Choice.PendingCancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmPendingCancellationReason
+	 * Reason14Choice.mmPendingCancellationReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingCancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingCancellationReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "PdgCxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellationReason";
 			definition = "Specifies the reason why the cancellation request is pending.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.PendingCancellationReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmPendingCancellationReason;
 			maxOccurs = 1;
-			type_lazy = () -> PendingCancellationReasons4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons4Choice.mmObject();
 		}
 	};
+	protected GeneratedReasons5Choice generatedReason;
 	/**
 	 * Specifies the reason why the transaction was generated.
 	 * <p>
@@ -274,8 +280,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#GeneratedReason
-	 * SecuritiesTradeStatusReason.GeneratedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmGeneratedReason
+	 * SecuritiesTradeStatusReason.mmGeneratedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,26 +301,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#GeneratedReason
-	 * Reason14Choice.GeneratedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmGeneratedReason
+	 * Reason14Choice.mmGeneratedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GeneratedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGeneratedReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.GeneratedReason;
 			isDerived = false;
 			xmlTag = "GnrtdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneratedReason";
 			definition = "Specifies the reason why the transaction was generated.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.GeneratedReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmGeneratedReason;
 			maxOccurs = 1;
-			type_lazy = () -> GeneratedReasons5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.GeneratedReasons5Choice.mmObject();
 		}
 	};
+	protected DeniedReason14Choice deniedReason;
 	/**
 	 * Specifies the reason why the request was denied.
 	 * <p>
@@ -327,8 +334,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#DeniedReason
-	 * SecuritiesTradeStatusReason.DeniedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmDeniedReason
+	 * SecuritiesTradeStatusReason.mmDeniedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -348,26 +355,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#DeniedReason
-	 * Reason14Choice.DeniedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmDeniedReason
+	 * Reason14Choice.mmDeniedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeniedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeniedReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.DeniedReason;
 			isDerived = false;
 			xmlTag = "DndRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedReason";
 			definition = "Specifies the reason why the request was denied.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.DeniedReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmDeniedReason;
 			maxOccurs = 1;
-			type_lazy = () -> DeniedReason14Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.DeniedReason14Choice.mmObject();
 		}
 	};
+	protected AcknowledgementReason12Choice acknowledgedAcceptedReason;
 	/**
 	 * Specifies additional information about the processed instruction.
 	 * <p>
@@ -380,8 +388,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#AcknowledgedAcceptedReason
-	 * StatusReason.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmAcknowledgedAcceptedReason
+	 * StatusReason.mmAcknowledgedAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -402,26 +410,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#AcknowledgedAcceptedReason
-	 * Reason14Choice.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmAcknowledgedAcceptedReason
+	 * Reason14Choice.mmAcknowledgedAcceptedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcknowledgedAcceptedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcknowledgedAcceptedReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.AcknowledgedAcceptedReason;
 			isDerived = false;
 			xmlTag = "AckdAccptdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAcceptedReason";
 			definition = "Specifies additional information about the processed instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.AcknowledgedAcceptedReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmAcknowledgedAcceptedReason;
 			maxOccurs = 1;
-			type_lazy = () -> AcknowledgementReason12Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason12Choice.mmObject();
 		}
 	};
+	protected PendingReason29Choice pendingReason;
 	/**
 	 * Specifies the reason why the instruction has a pending status.
 	 * <p>
@@ -434,8 +443,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -456,26 +465,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#PendingReason
-	 * Reason14Choice.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmPendingReason
+	 * Reason14Choice.mmPendingReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "PdgRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReason";
 			definition = "Specifies the reason why the instruction has a pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.PendingReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmPendingReason;
 			maxOccurs = 1;
-			type_lazy = () -> PendingReason29Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingReason29Choice.mmObject();
 		}
 	};
+	protected FailingReason9Choice failingReason;
 	/**
 	 * Specifies the reason why the instruction has a failing settlement status.
 	 * <p>
@@ -488,8 +498,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#FailingReason
-	 * StatusReason.FailingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmFailingReason
+	 * StatusReason.mmFailingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -511,26 +521,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#FailingReason
-	 * Reason14Choice.FailingReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmFailingReason
+	 * Reason14Choice.mmFailingReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FailingReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFailingReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmFailingReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.FailingReason;
 			isDerived = false;
 			xmlTag = "FlngRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailingReason";
 			definition = "Specifies the reason why the instruction has a failing settlement status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.FailingReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmFailingReason;
 			maxOccurs = 1;
-			type_lazy = () -> FailingReason9Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FailingReason9Choice.mmObject();
 		}
 	};
+	protected PendingProcessingReason11Choice pendingProcessingReason;
 	/**
 	 * Specifies the reason why the instruction has a pending processing status.
 	 * <p>
@@ -543,8 +554,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -566,26 +577,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#PendingProcessingReason
-	 * Reason14Choice.PendingProcessingReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmPendingProcessingReason
+	 * Reason14Choice.mmPendingProcessingReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingProcessingReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingProcessingReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "PdgPrcgRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessingReason";
 			definition = "Specifies the reason why the instruction has a pending processing status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.PendingProcessingReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmPendingProcessingReason;
 			maxOccurs = 1;
-			type_lazy = () -> PendingProcessingReason11Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason11Choice.mmObject();
 		}
 	};
+	protected RejectionReason22Choice rejectionReason;
 	/**
 	 * Specifies the reason why the instruction/request has a rejected status.
 	 * <p>
@@ -598,8 +610,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -621,26 +633,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#RejectionReason
-	 * Reason14Choice.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmRejectionReason
+	 * Reason14Choice.mmRejectionReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectionReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reason why the instruction/request has a rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.RejectionReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmRejectionReason;
 			maxOccurs = 1;
-			type_lazy = () -> RejectionReason22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RejectionReason22Choice.mmObject();
 		}
 	};
+	protected RepairReason11Choice repairReason;
 	/**
 	 * Specifies the reason why the instruction is in repair.
 	 * <p>
@@ -653,8 +666,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#RepairReason
-	 * SecuritiesTradeStatusReason.RepairReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmRepairReason
+	 * SecuritiesTradeStatusReason.mmRepairReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -674,26 +687,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#RepairReason
-	 * Reason14Choice.RepairReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmRepairReason
+	 * Reason14Choice.mmRepairReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RepairReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRepairReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.RepairReason;
 			isDerived = false;
 			xmlTag = "RprRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairReason";
 			definition = "Specifies the reason why the instruction is in repair.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.RepairReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmRepairReason;
 			maxOccurs = 1;
-			type_lazy = () -> RepairReason11Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RepairReason11Choice.mmObject();
 		}
 	};
+	protected PendingReason28Choice pendingModificationReason;
 	/**
 	 * Specifies the reason why the modification request is pending.
 	 * <p>
@@ -706,8 +720,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -728,26 +742,27 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#PendingModificationReason
-	 * Reason14Choice.PendingModificationReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmPendingModificationReason
+	 * Reason14Choice.mmPendingModificationReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingModificationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingModificationReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "PdgModRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingModificationReason";
 			definition = "Specifies the reason why the modification request is pending.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.PendingModificationReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmPendingModificationReason;
 			maxOccurs = 1;
-			type_lazy = () -> PendingReason28Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingReason28Choice.mmObject();
 		}
 	};
+	protected UnmatchedReason22Choice unmatchedReason;
 	/**
 	 * Specifies the reason why the instruction has an unmatched status.
 	 * <p>
@@ -760,8 +775,8 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#UnmatchedReason
-	 * SecuritiesTradeStatusReason.UnmatchedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmUnmatchedReason
+	 * SecuritiesTradeStatusReason.mmUnmatchedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -782,37 +797,37 @@ public class Reason16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#UnmatchedReason
-	 * Reason14Choice.UnmatchedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reason14Choice#mmUnmatchedReason
+	 * Reason14Choice.mmUnmatchedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnmatchedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnmatchedReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> Reason16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.UnmatchedReason;
 			isDerived = false;
 			xmlTag = "UmtchdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnmatchedReason";
 			definition = "Specifies the reason why the instruction has an unmatched status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.UnmatchedReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reason14Choice.mmUnmatchedReason;
 			maxOccurs = 1;
-			type_lazy = () -> UnmatchedReason22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.UnmatchedReason22Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reason16Choice.RepoCallAcknowledgementReason, com.tools20022.repository.choice.Reason16Choice.CancellationReason,
-						com.tools20022.repository.choice.Reason16Choice.PendingCancellationReason, com.tools20022.repository.choice.Reason16Choice.GeneratedReason, com.tools20022.repository.choice.Reason16Choice.DeniedReason,
-						com.tools20022.repository.choice.Reason16Choice.AcknowledgedAcceptedReason, com.tools20022.repository.choice.Reason16Choice.PendingReason, com.tools20022.repository.choice.Reason16Choice.FailingReason,
-						com.tools20022.repository.choice.Reason16Choice.PendingProcessingReason, com.tools20022.repository.choice.Reason16Choice.RejectionReason, com.tools20022.repository.choice.Reason16Choice.RepairReason,
-						com.tools20022.repository.choice.Reason16Choice.PendingModificationReason, com.tools20022.repository.choice.Reason16Choice.UnmatchedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reason16Choice.mmRepoCallAcknowledgementReason, com.tools20022.repository.choice.Reason16Choice.mmCancellationReason,
+						com.tools20022.repository.choice.Reason16Choice.mmPendingCancellationReason, com.tools20022.repository.choice.Reason16Choice.mmGeneratedReason, com.tools20022.repository.choice.Reason16Choice.mmDeniedReason,
+						com.tools20022.repository.choice.Reason16Choice.mmAcknowledgedAcceptedReason, com.tools20022.repository.choice.Reason16Choice.mmPendingReason, com.tools20022.repository.choice.Reason16Choice.mmFailingReason,
+						com.tools20022.repository.choice.Reason16Choice.mmPendingProcessingReason, com.tools20022.repository.choice.Reason16Choice.mmRejectionReason, com.tools20022.repository.choice.Reason16Choice.mmRepairReason,
+						com.tools20022.repository.choice.Reason16Choice.mmPendingModificationReason, com.tools20022.repository.choice.Reason16Choice.mmUnmatchedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reason16Choice";
 				definition = "Choice of reason.";
@@ -820,5 +835,109 @@ public class Reason16Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AcknowledgementReason13Choice getRepoCallAcknowledgementReason() {
+		return repoCallAcknowledgementReason;
+	}
+
+	public void setRepoCallAcknowledgementReason(com.tools20022.repository.choice.AcknowledgementReason13Choice repoCallAcknowledgementReason) {
+		this.repoCallAcknowledgementReason = repoCallAcknowledgementReason;
+	}
+
+	public CancellationReason20Choice getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(com.tools20022.repository.choice.CancellationReason20Choice cancellationReason) {
+		this.cancellationReason = cancellationReason;
+	}
+
+	public PendingCancellationReasons4Choice getPendingCancellationReason() {
+		return pendingCancellationReason;
+	}
+
+	public void setPendingCancellationReason(com.tools20022.repository.choice.PendingCancellationReasons4Choice pendingCancellationReason) {
+		this.pendingCancellationReason = pendingCancellationReason;
+	}
+
+	public GeneratedReasons5Choice getGeneratedReason() {
+		return generatedReason;
+	}
+
+	public void setGeneratedReason(com.tools20022.repository.choice.GeneratedReasons5Choice generatedReason) {
+		this.generatedReason = generatedReason;
+	}
+
+	public DeniedReason14Choice getDeniedReason() {
+		return deniedReason;
+	}
+
+	public void setDeniedReason(com.tools20022.repository.choice.DeniedReason14Choice deniedReason) {
+		this.deniedReason = deniedReason;
+	}
+
+	public AcknowledgementReason12Choice getAcknowledgedAcceptedReason() {
+		return acknowledgedAcceptedReason;
+	}
+
+	public void setAcknowledgedAcceptedReason(com.tools20022.repository.choice.AcknowledgementReason12Choice acknowledgedAcceptedReason) {
+		this.acknowledgedAcceptedReason = acknowledgedAcceptedReason;
+	}
+
+	public PendingReason29Choice getPendingReason() {
+		return pendingReason;
+	}
+
+	public void setPendingReason(com.tools20022.repository.choice.PendingReason29Choice pendingReason) {
+		this.pendingReason = pendingReason;
+	}
+
+	public FailingReason9Choice getFailingReason() {
+		return failingReason;
+	}
+
+	public void setFailingReason(com.tools20022.repository.choice.FailingReason9Choice failingReason) {
+		this.failingReason = failingReason;
+	}
+
+	public PendingProcessingReason11Choice getPendingProcessingReason() {
+		return pendingProcessingReason;
+	}
+
+	public void setPendingProcessingReason(com.tools20022.repository.choice.PendingProcessingReason11Choice pendingProcessingReason) {
+		this.pendingProcessingReason = pendingProcessingReason;
+	}
+
+	public RejectionReason22Choice getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(com.tools20022.repository.choice.RejectionReason22Choice rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+
+	public RepairReason11Choice getRepairReason() {
+		return repairReason;
+	}
+
+	public void setRepairReason(com.tools20022.repository.choice.RepairReason11Choice repairReason) {
+		this.repairReason = repairReason;
+	}
+
+	public PendingReason28Choice getPendingModificationReason() {
+		return pendingModificationReason;
+	}
+
+	public void setPendingModificationReason(com.tools20022.repository.choice.PendingReason28Choice pendingModificationReason) {
+		this.pendingModificationReason = pendingModificationReason;
+	}
+
+	public UnmatchedReason22Choice getUnmatchedReason() {
+		return unmatchedReason;
+	}
+
+	public void setUnmatchedReason(com.tools20022.repository.choice.UnmatchedReason22Choice unmatchedReason) {
+		this.unmatchedReason = unmatchedReason;
 	}
 }

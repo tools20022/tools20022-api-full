@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for business information.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#Reference
- * GeneralBusinessInformationSearchCriteria.Reference}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmReference
+ * GeneralBusinessInformationSearchCriteria.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#Subject
- * GeneralBusinessInformationSearchCriteria.Subject}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmSubject
+ * GeneralBusinessInformationSearchCriteria.mmSubject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#Qualifier
- * GeneralBusinessInformationSearchCriteria.Qualifier}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmQualifier
+ * GeneralBusinessInformationSearchCriteria.mmQualifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralBusinessInformationSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> reference;
 	/**
 	 * Unique and unambiguous reference assigned to a general business
 	 * information system.
@@ -82,8 +84,8 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Reference
-	 * SystemBusinessInformation.Reference}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmReference
+	 * SystemBusinessInformation.mmReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,10 +106,10 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmReference;
 			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.Reference;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,6 +119,7 @@ public class GeneralBusinessInformationSearchCriteria {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<CharacterSearchChoice> subject;
 	/**
 	 * Subject line of an item of general business information, summarizing the
 	 * topic and intended destination of the information.
@@ -131,8 +134,8 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Subject
-	 * SystemBusinessInformation.Subject}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmSubject
+	 * SystemBusinessInformation.mmSubject}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,10 +156,10 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Subject = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmSubject;
 			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.Subject;
 			isDerived = false;
 			xmlTag = "Sbjt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,6 +169,7 @@ public class GeneralBusinessInformationSearchCriteria {
 			complexType_lazy = () -> CharacterSearchChoice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InformationQualifierType> qualifier;
 	/**
 	 * Further information about the criticality or importance of a general
 	 * business information system.
@@ -179,8 +183,8 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Qualifier
-	 * SystemBusinessInformation.Qualifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmQualifier
+	 * SystemBusinessInformation.mmQualifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,33 +205,57 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Qualifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQualifier = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmQualifier;
 			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.Qualifier;
 			isDerived = false;
 			xmlTag = "Qlfr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
 			minOccurs = 0;
-			type_lazy = () -> InformationQualifierType.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.Reference, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.Subject,
-						com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.Qualifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmReference, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmSubject,
+						com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmQualifier);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessInformationSearchCriteria";
 				definition = "Defines the criteria used to search for business information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getReference() {
+		return reference;
+	}
+
+	public void setReference(List<Max35Text> reference) {
+		this.reference = reference;
+	}
+
+	public List<CharacterSearchChoice> getSubject() {
+		return subject;
+	}
+
+	public void setSubject(List<CharacterSearchChoice> subject) {
+		this.subject = subject;
+	}
+
+	public List<InformationQualifierType> getQualifier() {
+		return qualifier;
+	}
+
+	public void setQualifier(List<com.tools20022.repository.msg.InformationQualifierType> qualifier) {
+		this.qualifier = qualifier;
 	}
 }

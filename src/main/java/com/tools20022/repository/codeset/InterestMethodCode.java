@@ -30,10 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestMethodCode#PhysicalSettlement
- * InterestMethodCode.PhysicalSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InterestMethodCode#RollIn
- * InterestMethodCode.RollIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestMethodCode#mmPhysicalSettlement
+ * InterestMethodCode.mmPhysicalSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestMethodCode#mmRollIn
+ * InterestMethodCode.mmRollIn}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +91,7 @@ public class InterestMethodCode {
 	 * "Indicates that the interest is intended to be settled in cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSettlement = new MMCode() {
+	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
@@ -123,7 +124,7 @@ public class InterestMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RollIn = new MMCode() {
+	public static final MMCode mmRollIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollIn";
@@ -136,12 +137,12 @@ public class InterestMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PHYS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestMethodCode";
 				definition = "Specifies whether the interest will be setlled in cash or rolled in.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestMethodCode.PhysicalSettlement, com.tools20022.repository.codeset.InterestMethodCode.RollIn);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestMethodCode.mmPhysicalSettlement, com.tools20022.repository.codeset.InterestMethodCode.mmRollIn);
 				derivation_lazy = () -> Arrays.asList(InterestMethod1Code.mmObject());
 			}
 		});

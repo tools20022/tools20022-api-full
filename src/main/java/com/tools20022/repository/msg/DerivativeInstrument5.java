@@ -41,29 +41,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#ExpiryDate
- * DerivativeInstrument5.ExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmExpiryDate
+ * DerivativeInstrument5.mmExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#PriceMultiplier
- * DerivativeInstrument5.PriceMultiplier}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmPriceMultiplier
+ * DerivativeInstrument5.mmPriceMultiplier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#UnderlyingInstrument
- * DerivativeInstrument5.UnderlyingInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmUnderlyingInstrument
+ * DerivativeInstrument5.mmUnderlyingInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#OptionType
- * DerivativeInstrument5.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmOptionType
+ * DerivativeInstrument5.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#StrikePrice
- * DerivativeInstrument5.StrikePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmStrikePrice
+ * DerivativeInstrument5.mmStrikePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#OptionExerciseStyle
- * DerivativeInstrument5.OptionExerciseStyle}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmOptionExerciseStyle
+ * DerivativeInstrument5.mmOptionExerciseStyle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#DeliveryType
- * DerivativeInstrument5.DeliveryType}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmDeliveryType
+ * DerivativeInstrument5.mmDeliveryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#AssetClassSpecificAttributes
- * DerivativeInstrument5.AssetClassSpecificAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmAssetClassSpecificAttributes
+ * DerivativeInstrument5.mmAssetClassSpecificAttributes}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -71,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DerivativeInstrument5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate expiryDate;
 	/**
 	 * Expiry date of the financial instrument.
 	 * <p>
@@ -98,8 +99,8 @@ public class DerivativeInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#ExerciseDate
-	 * Derivative.ExerciseDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmExerciseDate
+	 * Derivative.mmExerciseDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,20 +119,21 @@ public class DerivativeInstrument5 {
 	 * definition} = "Expiry date of the financial instrument. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExerciseDate;
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.ExerciseDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Expiry date of the financial instrument. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected NonNegativeDecimalNumber priceMultiplier;
 	/**
 	 * Number of units of the underlying instrument represented by a single
 	 * derivative contract. For a future or option on an index, the amount per
@@ -147,8 +149,8 @@ public class DerivativeInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#StrikeMultiplier
-	 * Option.StrikeMultiplier}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmStrikeMultiplier
+	 * Option.mmStrikeMultiplier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,20 +171,21 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceMultiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceMultiplier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmStrikeMultiplier;
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.StrikeMultiplier;
 			isDerived = false;
 			xmlTag = "PricMltplr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMultiplier";
 			definition = "Number of units of the underlying instrument represented by a single derivative contract. For a future or option on an index, the amount per index point.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NonNegativeDecimalNumber.mmObject();
 		}
 	};
+	protected FinancialInstrumentIdentification5Choice underlyingInstrument;
 	/**
 	 * Choice to specify the type(s) of underlying instrument(s) that make up
 	 * the financial instrument.
@@ -196,8 +199,8 @@ public class DerivativeInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#UnderlyingAsset
-	 * Derivative.UnderlyingAsset}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
+	 * Derivative.mmUnderlyingAsset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -218,21 +221,22 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingInstrument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.UnderlyingAsset;
 			isDerived = false;
 			xmlTag = "UndrlygInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingInstrument";
 			definition = "Choice to specify the type(s) of underlying instrument(s) that make up the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentIdentification5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentIdentification5Choice.mmObject();
 		}
 	};
+	protected OptionType2Code optionType;
 	/**
 	 * Specifies whether it is a call option (right to purchase a specific
 	 * underlying asset) or a put option (right to sell a specific underlying
@@ -257,8 +261,8 @@ public class DerivativeInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#OptionType
-	 * Option.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionType
+	 * Option.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -279,20 +283,21 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).\r\n\r\nUsage:\r\nWithin the scope of MiFIR, RTS 23, the following meanings should be used where a swaption is being detailed, “Put”, in case of receiver swaption, in which the buyer has the right to enter into a swap as a fixed-rate receiver. Call”, in case of payer swaption, in which the buyer has the right to enter into a swap as a fixed-rate payer. Caps and floors shall interpret this field as, \"Put”, in case of a Floor, \"Call”, in case of a Cap. Field only applies to derivatives that are options or warrants.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OptionType2Code.mmObject();
 		}
 	};
+	protected SecuritiesTransactionPrice4Choice strikePrice;
 	/**
 	 * Attributes to specify the strike price of a derivative.<br>
 	 * <br>
@@ -313,8 +318,8 @@ public class DerivativeInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#StrikePrice
-	 * Option.StrikePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmStrikePrice
+	 * Option.mmStrikePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,20 +340,21 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmStrikePrice;
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.StrikePrice;
 			isDerived = false;
 			xmlTag = "StrkPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Attributes to specify the strike price of a derivative.\r\n\r\nUsage:\r\nWithin the scope of MiFIR RTS 23, these are the fields 31 and 32. This field only applies to options, warrants, spread bet on an option on an equity or contract for difference on an option on an equity. Where price is currently not available but pending, the value shall be ’PNDG’. Where strike price is not applicable it shall not be populated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
 		}
 	};
+	protected OptionStyle7Code optionExerciseStyle;
 	/**
 	 * Indication as to whether the option may be exercised only at a fixed date
 	 * (European, and Asian style), a series of pre-specified dates (Bermudan)
@@ -368,8 +374,8 @@ public class DerivativeInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#OptionStyle
-	 * Option.OptionStyle}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionStyle
+	 * Option.mmOptionStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -390,20 +396,21 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionExerciseStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionExerciseStyle = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.OptionStyle;
 			isDerived = false;
 			xmlTag = "OptnExrcStyle";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionExerciseStyle";
 			definition = "Indication as to whether the option may be exercised only at a fixed date (European, and Asian style), a series of pre-specified dates (Bermudan) or at any time during the life of the contract (American style).\r\n\r\nUsage:\r\nWithin the scope of MiFIR, RTS 23, this field is only applicable for options, warrants and entitlement certificates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OptionStyle7Code.mmObject();
 		}
 	};
+	protected PhysicalTransferType4Code deliveryType;
 	/**
 	 * Indicates whether the transaction is settled physically or in cash.
 	 * <p>
@@ -417,8 +424,8 @@ public class DerivativeInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
-	 * SecuritiesTransfer.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+	 * SecuritiesTransfer.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -438,20 +445,21 @@ public class DerivativeInstrument5 {
 	 * "Indicates whether the transaction is settled physically or in cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery;
 			isDerived = false;
 			xmlTag = "DlvryTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryType";
 			definition = "Indicates whether the transaction is settled physically or in cash.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PhysicalTransferType4Code.mmObject();
 		}
 	};
+	protected AssetClass2 assetClassSpecificAttributes;
 	/**
 	 * Specific attributes of the underlying asset class of the financial
 	 * instrument.
@@ -481,7 +489,7 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AssetClassSpecificAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssetClassSpecificAttributes = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
 			isDerived = false;
@@ -489,27 +497,91 @@ public class DerivativeInstrument5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetClassSpecificAttributes";
 			definition = "Specific attributes of the underlying asset class of the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AssetClass2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AssetClass2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInstrument5.ExpiryDate, com.tools20022.repository.msg.DerivativeInstrument5.PriceMultiplier,
-						com.tools20022.repository.msg.DerivativeInstrument5.UnderlyingInstrument, com.tools20022.repository.msg.DerivativeInstrument5.OptionType, com.tools20022.repository.msg.DerivativeInstrument5.StrikePrice,
-						com.tools20022.repository.msg.DerivativeInstrument5.OptionExerciseStyle, com.tools20022.repository.msg.DerivativeInstrument5.DeliveryType,
-						com.tools20022.repository.msg.DerivativeInstrument5.AssetClassSpecificAttributes);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInstrument5.mmExpiryDate, com.tools20022.repository.msg.DerivativeInstrument5.mmPriceMultiplier,
+						com.tools20022.repository.msg.DerivativeInstrument5.mmUnderlyingInstrument, com.tools20022.repository.msg.DerivativeInstrument5.mmOptionType, com.tools20022.repository.msg.DerivativeInstrument5.mmStrikePrice,
+						com.tools20022.repository.msg.DerivativeInstrument5.mmOptionExerciseStyle, com.tools20022.repository.msg.DerivativeInstrument5.mmDeliveryType,
+						com.tools20022.repository.msg.DerivativeInstrument5.mmAssetClassSpecificAttributes);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DerivativeInstrument5";
 				definition = "Specifies the derivative instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(ISODate expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public NonNegativeDecimalNumber getPriceMultiplier() {
+		return priceMultiplier;
+	}
+
+	public void setPriceMultiplier(NonNegativeDecimalNumber priceMultiplier) {
+		this.priceMultiplier = priceMultiplier;
+	}
+
+	public FinancialInstrumentIdentification5Choice getUnderlyingInstrument() {
+		return underlyingInstrument;
+	}
+
+	public void setUnderlyingInstrument(FinancialInstrumentIdentification5Choice underlyingInstrument) {
+		this.underlyingInstrument = underlyingInstrument;
+	}
+
+	public OptionType2Code getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(OptionType2Code optionType) {
+		this.optionType = optionType;
+	}
+
+	public SecuritiesTransactionPrice4Choice getStrikePrice() {
+		return strikePrice;
+	}
+
+	public void setStrikePrice(SecuritiesTransactionPrice4Choice strikePrice) {
+		this.strikePrice = strikePrice;
+	}
+
+	public OptionStyle7Code getOptionExerciseStyle() {
+		return optionExerciseStyle;
+	}
+
+	public void setOptionExerciseStyle(OptionStyle7Code optionExerciseStyle) {
+		this.optionExerciseStyle = optionExerciseStyle;
+	}
+
+	public PhysicalTransferType4Code getDeliveryType() {
+		return deliveryType;
+	}
+
+	public void setDeliveryType(PhysicalTransferType4Code deliveryType) {
+		this.deliveryType = deliveryType;
+	}
+
+	public AssetClass2 getAssetClassSpecificAttributes() {
+		return assetClassSpecificAttributes;
+	}
+
+	public void setAssetClassSpecificAttributes(com.tools20022.repository.msg.AssetClass2 assetClassSpecificAttributes) {
+		this.assetClassSpecificAttributes = assetClassSpecificAttributes;
 	}
 }

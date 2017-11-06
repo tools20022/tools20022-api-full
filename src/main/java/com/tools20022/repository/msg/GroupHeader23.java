@@ -37,18 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GroupHeader23#MessageIdentification
- * GroupHeader23.MessageIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader23#CreationDateTime
- * GroupHeader23.CreationDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GroupHeader23#MessageRecipient
- * GroupHeader23.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader23#mmMessageIdentification
+ * GroupHeader23.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GroupHeader23#MessagePagination
- * GroupHeader23.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader23#mmCreationDateTime
+ * GroupHeader23.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GroupHeader23#AdditionalInformation
- * GroupHeader23.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader23#mmMessageRecipient
+ * GroupHeader23.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader23#mmMessagePagination
+ * GroupHeader23.mmMessagePagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader23#mmAdditionalInformation
+ * GroupHeader23.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,21 +60,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV01#GroupHeader
- * BankToCustomerAccountReportV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV01#mmGroupHeader
+ * BankToCustomerAccountReportV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV01#GroupHeader
- * BankToCustomerDebitCreditNotificationV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV01#mmGroupHeader
+ * BankToCustomerDebitCreditNotificationV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV01#GroupHeader
- * BankToCustomerStatementV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV01#mmGroupHeader
+ * BankToCustomerStatementV01.mmGroupHeader}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GroupHeader23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference assigned by the account servicing institution
 	 * and sent to the account owner to unambiguously identify the message.
@@ -103,8 +106,8 @@ public class GroupHeader23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -124,20 +127,21 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> GroupHeader23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference assigned by the account servicing institution and sent to the account owner to unambiguously identify the message.\n\nUsage: The account servicing institution has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created by the account servicer.
 	 * <p>
@@ -150,8 +154,8 @@ public class GroupHeader23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,20 +175,21 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> GroupHeader23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected PartyIdentification8 messageRecipient;
 	/**
 	 * Party that is entitled by the account owner to receive information about
 	 * movements in the account.
@@ -216,7 +221,7 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GroupHeader23.mmObject();
 			isDerived = false;
@@ -224,12 +229,13 @@ public class GroupHeader23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party that is entitled by the account owner to receive information about movements in the account. \n\nGuideline : MessageRecipient should only be identified when different from the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * 
@@ -259,7 +265,7 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GroupHeader23.mmObject();
 			isDerived = false;
@@ -267,12 +273,13 @@ public class GroupHeader23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.\n\nUsage: the pagination of the message is only allowed when agreed between the parties.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Pagination.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	protected Max500Text additionalInformation;
 	/**
 	 * Further details on the message.
 	 * <p>
@@ -299,7 +306,7 @@ public class GroupHeader23 {
 	 * definition} = "Further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GroupHeader23.mmObject();
 			isDerived = false;
@@ -307,8 +314,8 @@ public class GroupHeader23 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
@@ -316,17 +323,57 @@ public class GroupHeader23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader23.MessageIdentification, com.tools20022.repository.msg.GroupHeader23.CreationDateTime,
-						com.tools20022.repository.msg.GroupHeader23.MessageRecipient, com.tools20022.repository.msg.GroupHeader23.MessagePagination, com.tools20022.repository.msg.GroupHeader23.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader23.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader23.mmCreationDateTime,
+						com.tools20022.repository.msg.GroupHeader23.mmMessageRecipient, com.tools20022.repository.msg.GroupHeader23.mmMessagePagination, com.tools20022.repository.msg.GroupHeader23.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV01.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV01.mmGroupHeader,
+						com.tools20022.repository.area.camt.BankToCustomerStatementV01.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV01.GroupHeader, com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV01.GroupHeader,
-						com.tools20022.repository.area.camt.BankToCustomerStatementV01.GroupHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader23";
 				definition = "Set of elements providing further details on the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public PartyIdentification8 getMessageRecipient() {
+		return messageRecipient;
+	}
+
+	public void setMessageRecipient(com.tools20022.repository.msg.PartyIdentification8 messageRecipient) {
+		this.messageRecipient = messageRecipient;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public Max500Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max500Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

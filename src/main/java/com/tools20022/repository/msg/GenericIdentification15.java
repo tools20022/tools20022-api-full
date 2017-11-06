@@ -37,16 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification15#Identification
- * GenericIdentification15.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification15#Issuer
- * GenericIdentification15.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification15#mmIdentification
+ * GenericIdentification15.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification15#SchemeName
- * GenericIdentification15.SchemeName}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification15#mmIssuer
+ * GenericIdentification15.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification15#Balance
- * GenericIdentification15.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification15#mmSchemeName
+ * GenericIdentification15.mmSchemeName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification15#mmBalance
+ * GenericIdentification15.mmBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericIdentification15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText identification;
 	/**
 	 * Proprietary information, often a code, issued by the data source scheme
 	 * issuer.
@@ -84,8 +86,8 @@ public class GenericIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +108,21 @@ public class GenericIdentification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max35Text issuer;
 	/**
 	 * Entity that assigns the identification.
 	 * <p>
@@ -152,20 +155,21 @@ public class GenericIdentification15 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification15.mmObject();
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
+			componentContext_lazy = () -> GenericIdentification15.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text schemeName;
 	/**
 	 * Name of the identification scheme.
 	 * <p>
@@ -178,8 +182,8 @@ public class GenericIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Scheme#NameShort
-	 * Scheme.NameShort}</li>
+	 * {@linkplain com.tools20022.repository.entity.Scheme#mmNameShort
+	 * Scheme.mmNameShort}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,20 +202,21 @@ public class GenericIdentification15 {
 	 * definition} = "Name of the identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmNameShort;
 			componentContext_lazy = () -> GenericIdentification15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.NameShort;
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Name of the identification scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number balance;
 	/**
 	 * Value of the balance.
 	 * <p>
@@ -239,7 +244,7 @@ public class GenericIdentification15 {
 	 * definition} = "Value of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Balance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericIdentification15.mmObject();
 			isDerived = false;
@@ -247,8 +252,8 @@ public class GenericIdentification15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Value of the balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -256,15 +261,47 @@ public class GenericIdentification15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification15.Identification, com.tools20022.repository.msg.GenericIdentification15.Issuer,
-						com.tools20022.repository.msg.GenericIdentification15.SchemeName, com.tools20022.repository.msg.GenericIdentification15.Balance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification15.mmIdentification, com.tools20022.repository.msg.GenericIdentification15.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification15.mmSchemeName, com.tools20022.repository.msg.GenericIdentification15.mmBalance);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericIdentification15";
 				definition = "Balance expressed with a data source scheme.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max4AlphaNumericText identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max35Text issuer) {
+		this.issuer = issuer;
+	}
+
+	public Max35Text getSchemeName() {
+		return schemeName;
+	}
+
+	public void setSchemeName(Max35Text schemeName) {
+		this.schemeName = schemeName;
+	}
+
+	public Number getBalance() {
+		return balance;
+	}
+
+	public void setBalance(Number balance) {
+		this.balance = balance;
 	}
 }

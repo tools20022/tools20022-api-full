@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#Reversal
- * TransactionStatusCode.Reversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#mmReversal
+ * TransactionStatusCode.mmReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#Rebooked
- * TransactionStatusCode.Rebooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#mmRebooked
+ * TransactionStatusCode.mmRebooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#Cancelled
- * TransactionStatusCode.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#mmCancelled
+ * TransactionStatusCode.mmCancelled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class TransactionStatusCode {
 	 * definition} = "Transaction has been reversed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Reversal = new MMCode() {
+	public static final MMCode mmReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Reversal";
@@ -123,7 +123,7 @@ public class TransactionStatusCode {
 	 * definition} = "Transaction has been rebooked."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rebooked = new MMCode() {
+	public static final MMCode mmRebooked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Rebooked";
@@ -153,7 +153,7 @@ public class TransactionStatusCode {
 	 * definition} = "Transaction has been cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cancelled";
@@ -166,13 +166,13 @@ public class TransactionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RVSL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatusCode";
 				definition = "Specifies the processing status of an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionStatusCode.Reversal, com.tools20022.repository.codeset.TransactionStatusCode.Rebooked,
-						com.tools20022.repository.codeset.TransactionStatusCode.Cancelled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionStatusCode.mmReversal, com.tools20022.repository.codeset.TransactionStatusCode.mmRebooked,
+						com.tools20022.repository.codeset.TransactionStatusCode.mmCancelled);
 				derivation_lazy = () -> Arrays.asList(TransactionStatus1Code.mmObject());
 			}
 		});

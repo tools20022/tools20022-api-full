@@ -30,33 +30,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#CrossedCheque
- * ChequeTypeCode.CrossedCheque}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeTypeCode#OpenCheque
- * ChequeTypeCode.OpenCheque}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeTypeCode#OrderCheque
- * ChequeTypeCode.OrderCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmCrossedCheque
+ * ChequeTypeCode.mmCrossedCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#CircularCheque
- * ChequeTypeCode.CircularCheque}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeTypeCode#BankDraft
- * ChequeTypeCode.BankDraft}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmOpenCheque
+ * ChequeTypeCode.mmOpenCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#CustomerCheque
- * ChequeTypeCode.CustomerCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmOrderCheque
+ * ChequeTypeCode.mmOrderCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#CertifiedCustomerCheque
- * ChequeTypeCode.CertifiedCustomerCheque}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeTypeCode#BankCheque
- * ChequeTypeCode.BankCheque}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeTypeCode#Draft
- * ChequeTypeCode.Draft}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmCircularCheque
+ * ChequeTypeCode.mmCircularCheque}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmBankDraft
+ * ChequeTypeCode.mmBankDraft}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#ElectronicDraft
- * ChequeTypeCode.ElectronicDraft}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmCustomerCheque
+ * ChequeTypeCode.mmCustomerCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#OnlineCheque
- * ChequeTypeCode.OnlineCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmCertifiedCustomerCheque
+ * ChequeTypeCode.mmCertifiedCustomerCheque}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmBankCheque
+ * ChequeTypeCode.mmBankCheque}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmDraft
+ * ChequeTypeCode.mmDraft}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmElectronicDraft
+ * ChequeTypeCode.mmElectronicDraft}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeTypeCode#mmOnlineCheque
+ * ChequeTypeCode.mmOnlineCheque}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -71,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -116,7 +119,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CrossedCheque = new MMCode() {
+	public static final MMCode mmCrossedCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossedCheque";
@@ -146,7 +149,7 @@ public class ChequeTypeCode {
 	 * definition} = "Cheque that may only be cashed at the bank of origin."</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenCheque = new MMCode() {
+	public static final MMCode mmOpenCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpenCheque";
@@ -179,7 +182,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OrderCheque = new MMCode() {
+	public static final MMCode mmOrderCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OrderCheque";
@@ -212,7 +215,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CircularCheque = new MMCode() {
+	public static final MMCode mmCircularCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CircularCheque";
@@ -248,7 +251,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BankDraft = new MMCode() {
+	public static final MMCode mmBankDraft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankDraft";
@@ -281,7 +284,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerCheque = new MMCode() {
+	public static final MMCode mmCustomerCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CustomerCheque";
@@ -315,7 +318,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CertifiedCustomerCheque = new MMCode() {
+	public static final MMCode mmCertifiedCustomerCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CertifiedCustomerCheque";
@@ -350,7 +353,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BankCheque = new MMCode() {
+	public static final MMCode mmBankCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankCheque";
@@ -385,7 +388,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Draft = new MMCode() {
+	public static final MMCode mmDraft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Draft";
@@ -420,7 +423,7 @@ public class ChequeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ElectronicDraft = new MMCode() {
+	public static final MMCode mmElectronicDraft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ElectronicDraft";
@@ -450,7 +453,7 @@ public class ChequeTypeCode {
 	 * definition} = "Cheque intiated or completed through an online service."</li>
 	 * </ul>
 	 */
-	public static final MMCode OnlineCheque = new MMCode() {
+	public static final MMCode mmOnlineCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnlineCheque";
@@ -463,15 +466,15 @@ public class ChequeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRCQ");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChequeTypeCode";
 				definition = "Specifies the type of cheque.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeTypeCode.CrossedCheque, com.tools20022.repository.codeset.ChequeTypeCode.OpenCheque, com.tools20022.repository.codeset.ChequeTypeCode.OrderCheque,
-						com.tools20022.repository.codeset.ChequeTypeCode.CircularCheque, com.tools20022.repository.codeset.ChequeTypeCode.BankDraft, com.tools20022.repository.codeset.ChequeTypeCode.CustomerCheque,
-						com.tools20022.repository.codeset.ChequeTypeCode.CertifiedCustomerCheque, com.tools20022.repository.codeset.ChequeTypeCode.BankCheque, com.tools20022.repository.codeset.ChequeTypeCode.Draft,
-						com.tools20022.repository.codeset.ChequeTypeCode.ElectronicDraft, com.tools20022.repository.codeset.ChequeTypeCode.OnlineCheque);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeTypeCode.mmCrossedCheque, com.tools20022.repository.codeset.ChequeTypeCode.mmOpenCheque,
+						com.tools20022.repository.codeset.ChequeTypeCode.mmOrderCheque, com.tools20022.repository.codeset.ChequeTypeCode.mmCircularCheque, com.tools20022.repository.codeset.ChequeTypeCode.mmBankDraft,
+						com.tools20022.repository.codeset.ChequeTypeCode.mmCustomerCheque, com.tools20022.repository.codeset.ChequeTypeCode.mmCertifiedCustomerCheque, com.tools20022.repository.codeset.ChequeTypeCode.mmBankCheque,
+						com.tools20022.repository.codeset.ChequeTypeCode.mmDraft, com.tools20022.repository.codeset.ChequeTypeCode.mmElectronicDraft, com.tools20022.repository.codeset.ChequeTypeCode.mmOnlineCheque);
 				derivation_lazy = () -> Arrays.asList(ChequeType2Code.mmObject(), ChequeType3Code.mmObject());
 			}
 		});

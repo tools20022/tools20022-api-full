@@ -35,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction6Code#PayCreditorByCheque
- * Instruction6Code.PayCreditorByCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction6Code#mmPayCreditorByCheque
+ * Instruction6Code.mmPayCreditorByCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction6Code#HoldCashForCreditor
- * Instruction6Code.HoldCashForCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction6Code#mmHoldCashForCreditor
+ * Instruction6Code.mmHoldCashForCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction6Code#PhoneBeneficiary
- * Instruction6Code.PhoneBeneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Instruction6Code#Telecom
- * Instruction6Code.Telecom}</li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction6Code#mmPhoneBeneficiary
+ * Instruction6Code.mmPhoneBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Instruction6Code#mmTelecom
+ * Instruction6Code.mmTelecom}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class Instruction6Code extends InstructionCode {
 	 * name} = "PayCreditorByCheque"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayCreditorByCheque = new MMCode() {
+	public static final MMCode mmPayCreditorByCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayCreditorByCheque";
@@ -112,7 +112,7 @@ public class Instruction6Code extends InstructionCode {
 	 * name} = "HoldCashForCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode HoldCashForCreditor = new MMCode() {
+	public static final MMCode mmHoldCashForCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldCashForCreditor";
@@ -135,7 +135,7 @@ public class Instruction6Code extends InstructionCode {
 	 * name} = "PhoneBeneficiary"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhoneBeneficiary = new MMCode() {
+	public static final MMCode mmPhoneBeneficiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneBeneficiary";
@@ -158,7 +158,7 @@ public class Instruction6Code extends InstructionCode {
 	 * name} = "Telecom"</li>
 	 * </ul>
 	 */
-	public static final MMCode Telecom = new MMCode() {
+	public static final MMCode mmTelecom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Telecom";
@@ -169,13 +169,13 @@ public class Instruction6Code extends InstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CHQB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Instruction6Code";
 				definition = "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction6Code.PayCreditorByCheque, com.tools20022.repository.codeset.Instruction6Code.HoldCashForCreditor,
-						com.tools20022.repository.codeset.Instruction6Code.PhoneBeneficiary, com.tools20022.repository.codeset.Instruction6Code.Telecom);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction6Code.mmPayCreditorByCheque, com.tools20022.repository.codeset.Instruction6Code.mmHoldCashForCreditor,
+						com.tools20022.repository.codeset.Instruction6Code.mmPhoneBeneficiary, com.tools20022.repository.codeset.Instruction6Code.mmTelecom);
 				trace_lazy = () -> InstructionCode.mmObject();
 			}
 		});

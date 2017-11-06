@@ -34,22 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification3#Name
- * DataSetIdentification3.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification3#Type
- * DataSetIdentification3.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification3#Version
- * DataSetIdentification3.Version}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification3#mmName
+ * DataSetIdentification3.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification3#mmType
+ * DataSetIdentification3.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DataSetIdentification3#CreationDateTime
- * DataSetIdentification3.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.DataSetIdentification3#mmVersion
+ * DataSetIdentification3.mmVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DataSetIdentification3#mmCreationDateTime
+ * DataSetIdentification3.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DataSetIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max256Text name;
 	/**
 	 * Name of the data set.
 	 * <p>
@@ -103,13 +105,13 @@ public class DataSetIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#Name
-	 * DataSetIdentification4.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#mmName
+	 * DataSetIdentification4.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification3.mmObject();
 			isDerived = false;
@@ -117,12 +119,13 @@ public class DataSetIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the data set.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.Name);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.mmName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected DataSetCategory3Code type;
 	/**
 	 * Category of data set.
 	 * <p>
@@ -153,13 +156,13 @@ public class DataSetIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#Type
-	 * DataSetIdentification4.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#mmType
+	 * DataSetIdentification4.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification3.mmObject();
 			isDerived = false;
@@ -167,12 +170,13 @@ public class DataSetIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Category of data set.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory3Code.mmObject();
 		}
 	};
+	protected Max256Text version;
 	/**
 	 * Version of the data set.
 	 * <p>
@@ -202,13 +206,13 @@ public class DataSetIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#Version
-	 * DataSetIdentification4.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#mmVersion
+	 * DataSetIdentification4.mmVersion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification3.mmObject();
 			isDerived = false;
@@ -216,12 +220,13 @@ public class DataSetIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data set.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.Version);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.mmVersion);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time of creation of the data set.
 	 * <p>
@@ -251,13 +256,13 @@ public class DataSetIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#CreationDateTime
-	 * DataSetIdentification4.CreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification4#mmCreationDateTime
+	 * DataSetIdentification4.mmCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification3.mmObject();
 			isDerived = false;
@@ -265,9 +270,9 @@ public class DataSetIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time of creation of the data set.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.CreationDateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification4.mmCreationDateTime);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -275,16 +280,48 @@ public class DataSetIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification3.Name, com.tools20022.repository.msg.DataSetIdentification3.Type, com.tools20022.repository.msg.DataSetIdentification3.Version,
-						com.tools20022.repository.msg.DataSetIdentification3.CreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification3.mmName, com.tools20022.repository.msg.DataSetIdentification3.mmType,
+						com.tools20022.repository.msg.DataSetIdentification3.mmVersion, com.tools20022.repository.msg.DataSetIdentification3.mmCreationDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataSetIdentification3";
 				definition = "Identification of a data set.";
-				previousVersion_lazy = () -> DataSetIdentification2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(DataSetIdentification4.mmObject());
+				previousVersion_lazy = () -> DataSetIdentification2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max256Text getName() {
+		return name;
+	}
+
+	public void setName(Max256Text name) {
+		this.name = name;
+	}
+
+	public DataSetCategory3Code getType() {
+		return type;
+	}
+
+	public void setType(DataSetCategory3Code type) {
+		this.type = type;
+	}
+
+	public Max256Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max256Text version) {
+		this.version = version;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

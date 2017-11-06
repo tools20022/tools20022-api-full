@@ -35,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient3Choice#KeyTransport
- * Recipient3Choice.KeyTransport}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Recipient3Choice#KEK
- * Recipient3Choice.KEK}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKeyTransport
+ * Recipient3Choice.mmKeyTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKEK
+ * Recipient3Choice.mmKEK}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient3Choice#KeyIdentifier
- * Recipient3Choice.KeyIdentifier}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKeyIdentifier
+ * Recipient3Choice.mmKeyIdentifier}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Recipient3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected KeyTransport3 keyTransport;
 	/**
 	 * Encryption key using previously distributed asymmetric public key.
 	 * <p>
@@ -102,18 +103,18 @@ public class Recipient3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Recipient4Choice#KeyTransport
-	 * Recipient4Choice.KeyTransport}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient4Choice#mmKeyTransport
+	 * Recipient4Choice.mmKeyTransport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Recipient2Choice#KeyTransport
-	 * Recipient2Choice.KeyTransport}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient2Choice#mmKeyTransport
+	 * Recipient2Choice.mmKeyTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient3Choice.mmObject();
 			isDerived = false;
@@ -121,14 +122,15 @@ public class Recipient3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyTransport";
 			definition = "Encryption key using previously distributed asymmetric public key.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.KeyTransport;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.KeyTransport);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.mmKeyTransport);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.mmKeyTransport;
 			maxOccurs = 1;
-			type_lazy = () -> KeyTransport3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> KeyTransport3.mmObject();
 		}
 	};
+	protected KEK3 kEK;
 	/**
 	 * Encryption key using previously distributed symmetric key.
 	 * <p>
@@ -156,18 +158,18 @@ public class Recipient3Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Recipient4Choice#KEK
-	 * Recipient4Choice.KEK}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Recipient4Choice#mmKEK
+	 * Recipient4Choice.mmKEK}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Recipient2Choice#KEK
-	 * Recipient2Choice.KEK}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient2Choice#mmKEK
+	 * Recipient2Choice.mmKEK}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient3Choice.mmObject();
 			isDerived = false;
@@ -175,14 +177,15 @@ public class Recipient3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEK";
 			definition = "Encryption key using previously distributed symmetric key.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.KEK;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.KEK);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.mmKEK);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.mmKEK;
 			maxOccurs = 1;
-			type_lazy = () -> KEK3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> KEK3.mmObject();
 		}
 	};
+	protected KEKIdentifier1 keyIdentifier;
 	/**
 	 * Identification of a cryptographic symetric key, previously exchanged
 	 * between the initiator and the recipient.
@@ -214,13 +217,13 @@ public class Recipient3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Recipient4Choice#KeyIdentifier
-	 * Recipient4Choice.KeyIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient4Choice#mmKeyIdentifier
+	 * Recipient4Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KeyIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient3Choice.mmObject();
 			isDerived = false;
@@ -228,27 +231,51 @@ public class Recipient3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentifier";
 			definition = "Identification of a cryptographic symetric key, previously exchanged between the initiator and the recipient.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.KeyIdentifier);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.mmKeyIdentifier);
 			maxOccurs = 1;
-			type_lazy = () -> KEKIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> KEKIdentifier1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient3Choice.KeyTransport, com.tools20022.repository.choice.Recipient3Choice.KEK,
-						com.tools20022.repository.choice.Recipient3Choice.KeyIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient3Choice.mmKeyTransport, com.tools20022.repository.choice.Recipient3Choice.mmKEK,
+						com.tools20022.repository.choice.Recipient3Choice.mmKeyIdentifier);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Recipient3Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
-				previousVersion_lazy = () -> Recipient2Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Recipient4Choice.mmObject());
+				previousVersion_lazy = () -> Recipient2Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public KeyTransport3 getKeyTransport() {
+		return keyTransport;
+	}
+
+	public void setKeyTransport(KeyTransport3 keyTransport) {
+		this.keyTransport = keyTransport;
+	}
+
+	public KEK3 getKEK() {
+		return kEK;
+	}
+
+	public void setKEK(KEK3 kEK) {
+		this.kEK = kEK;
+	}
+
+	public KEKIdentifier1 getKeyIdentifier() {
+		return keyIdentifier;
+	}
+
+	public void setKeyIdentifier(KEKIdentifier1 keyIdentifier) {
+		this.keyIdentifier = keyIdentifier;
 	}
 }

@@ -34,23 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#ActualAmount
- * AmountPriceType1Code.ActualAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmActualAmount
+ * AmountPriceType1Code.mmActualAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#Discount
- * AmountPriceType1Code.Discount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#Lot
- * AmountPriceType1Code.Lot}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmDiscount
+ * AmountPriceType1Code.mmDiscount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmLot
+ * AmountPriceType1Code.mmLot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#Premium
- * AmountPriceType1Code.Premium}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmPremium
+ * AmountPriceType1Code.mmPremium}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "ActualAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ActualAmount = new MMCode() {
+	public static final MMCode mmActualAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
@@ -109,7 +109,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -132,7 +132,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "Lot"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lot = new MMCode() {
+	public static final MMCode mmLot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lot";
@@ -155,7 +155,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode Premium = new MMCode() {
+	public static final MMCode mmPremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
@@ -166,13 +166,13 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountPriceType1Code";
 				definition = "Specifies the amount price type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceType1Code.ActualAmount, com.tools20022.repository.codeset.AmountPriceType1Code.Discount,
-						com.tools20022.repository.codeset.AmountPriceType1Code.Lot, com.tools20022.repository.codeset.AmountPriceType1Code.Premium);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceType1Code.mmActualAmount, com.tools20022.repository.codeset.AmountPriceType1Code.mmDiscount,
+						com.tools20022.repository.codeset.AmountPriceType1Code.mmLot, com.tools20022.repository.codeset.AmountPriceType1Code.mmPremium);
 				trace_lazy = () -> AmountPriceTypeCode.mmObject();
 			}
 		});

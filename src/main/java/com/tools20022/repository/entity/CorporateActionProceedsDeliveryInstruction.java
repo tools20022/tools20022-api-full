@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.SecuritiesProceeds1;
 import com.tools20022.repository.msg.SecurityMovement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the delivery instructions for the securities and cash proceeds at
@@ -40,21 +41,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#RelatedDistribution
- * CorporateActionProceedsDeliveryInstruction.RelatedDistribution}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmRelatedDistribution
+ * CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#SecuritiesProceedsMovement
- * CorporateActionProceedsDeliveryInstruction.SecuritiesProceedsMovement}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
+ * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#CashProceedsMovement
- * CorporateActionProceedsDeliveryInstruction.CashProceedsMovement}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCashProceedsMovement
+ * CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#SettlementAccount
- * CorporateActionProceedsDeliveryInstruction.SettlementAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSettlementAccount
+ * CorporateActionProceedsDeliveryInstruction.mmSettlementAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#CorporateActionStandingInstruction
- * CorporateActionProceedsDeliveryInstruction.CorporateActionStandingInstruction
- * }</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
+ * CorporateActionProceedsDeliveryInstruction.
+ * mmCorporateActionStandingInstruction}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,20 +63,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Account#RelatedProceedsDelivery
- * Account.RelatedProceedsDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmRelatedProceedsDelivery
+ * Account.mmRelatedProceedsDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#RelatedCorporateAction
- * PaymentObligation.RelatedCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmRelatedCorporateAction
+ * PaymentObligation.mmRelatedCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#RelatedCorporateAction
- * SecuritiesDeliveryObligation.RelatedCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmRelatedCorporateAction
+ * SecuritiesDeliveryObligation.mmRelatedCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#CorporateActionProceedsDeliveryInstruction
- * CorporateActionDistribution.CorporateActionProceedsDeliveryInstruction}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmCorporateActionProceedsDeliveryInstruction
+ * CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#RelatedDeliveryInstructions
- * AgentCorporateActionStandingInstruction.RelatedDeliveryInstructions}</li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmRelatedDeliveryInstructions
+ * AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,8 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionProceedsDeliveryInstruction {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionDistribution relatedDistribution;
 	/**
 	 * Parameters of the distribution of the proceeds of a CA event.
 	 * <p>
@@ -118,8 +120,9 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#CorporateActionProceedsDeliveryInstruction
-	 * CorporateActionDistribution.CorporateActionProceedsDeliveryInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmCorporateActionProceedsDeliveryInstruction
+	 * CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -145,20 +148,21 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * "Parameters of the distribution of the proceeds of a CA event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedDistribution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedDistribution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedDistribution";
 			definition = "Parameters of the distribution of the proceeds of a CA event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionDistribution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.CorporateActionProceedsDeliveryInstruction;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesProceedsMovement;
 	/**
 	 * Instructions for the movement of securities related to a corporate
 	 * action.
@@ -168,8 +172,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#RelatedCorporateAction
-	 * SecuritiesDeliveryObligation.RelatedCorporateAction}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmRelatedCorporateAction
+	 * SecuritiesDeliveryObligation.mmRelatedCorporateAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -178,178 +182,178 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
 	 * SecuritiesDeliveryObligation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#SecuritiesMovementDetails
-	 * CorporateActionOption4.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#SecuritiesMovementDetails
-	 * CorporateActionOption14.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#SecuritiesMovementDetails
-	 * CorporateActionOption23.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#SecuritiesMovementDetails
-	 * CorporateActionOption31.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#SecuritiesMovementDetails
-	 * CorporateActionOption37.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#SecuritiesMovementDetails
-	 * CorporateActionOption46.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#SecuritiesMovementDetails
-	 * CorporateActionOption53.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#SecuritiesMovementDetails
-	 * CorporateActionOption54.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#SecuritiesMovementDetails
-	 * CorporateActionOption10.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#SecuritiesMovementDetails
-	 * CorporateActionOption15.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#SecuritiesMovementDetails
-	 * CorporateActionOption20.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#SecuritiesMovementDetails
-	 * CorporateActionOption32.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#SecuritiesMovementDetails
-	 * CorporateActionOption35.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#SecuritiesMovementDetails
-	 * CorporateActionOption44.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#SecuritiesMovementDetails
-	 * CorporateActionOption52.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#SecuritiesMovementDetails
-	 * CorporateActionOption55.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption12#SecuritiesMovementDetails
-	 * CorporateActionOption12.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption16#SecuritiesMovementDetails
-	 * CorporateActionOption16.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption24#SecuritiesMovementDetails
-	 * CorporateActionOption24.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption33#SecuritiesMovementDetails
-	 * CorporateActionOption33.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#SecuritiesMovementDetails
-	 * CorporateActionOption39.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption48#SecuritiesMovementDetails
-	 * CorporateActionOption48.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#SecuritiesMovementDetails
-	 * CorporateActionOption3.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#SecuritiesMovementDetails
-	 * CorporateActionOption17.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#SecuritiesMovementDetails
-	 * CorporateActionOption19.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#SecuritiesMovementDetails
-	 * CorporateActionOption34.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#SecuritiesMovementDetails
-	 * CorporateActionOption36.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#SecuritiesMovementDetails
-	 * CorporateActionOption45.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#SecuritiesMovementDetails
-	 * CorporateActionOption51.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#SecuritiesMovementDetails
-	 * CorporateActionOption56.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#SecuritiesMovementDetails
-	 * CorporateActionOption1.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#SecuritiesMovement
-	 * GlobalDistributionRequest1.SecuritiesMovement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#SecuritiesMovementDetails
-	 * CorporateActionOption100.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#SecuritiesMovementDetails
-	 * CorporateActionOption101.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#SecuritiesMovementDetails
-	 * CorporateActionOption102.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#SecuritiesMovementDetails
-	 * CorporateActionOption110.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#SecuritiesMovementDetails
-	 * CorporateActionOption108.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#SecuritiesMovementDetails
-	 * CorporateActionOption106.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#SecuritiesMovementDetails
-	 * CorporateActionOption111.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#SecuritiesMovementDetails
-	 * CorporateActionOption113.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#SecuritiesMovementDetails
-	 * CorporateActionOption117.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#SecuritiesMovementDetails
-	 * CorporateActionOption119.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#SecuritiesMovementDetails
-	 * CorporateActionOption115.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#SecuritiesMovementDetails
-	 * CorporateActionOption114.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption126#SecuritiesMovementDetails
-	 * CorporateActionOption126.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#SecuritiesMovementDetails
-	 * CorporateActionOption124.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#SecuritiesMovementDetails
-	 * CorporateActionOption125.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#SecuritiesMovementDetails
-	 * CorporateActionOption127.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#SecuritiesMovementDetails
-	 * CorporateActionOption132.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#SecuritiesMovementDetails
-	 * CorporateActionOption130.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#SecuritiesMovementDetails
-	 * CorporateActionOption129.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#SecuritiesMovementDetails
-	 * CorporateActionOption136.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#SecuritiesMovementDetails
-	 * CorporateActionOption135.SecuritiesMovementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#SecuritiesMovementDetails
-	 * CorporateActionOption133.SecuritiesMovementDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction
 	 * CorporateActionProceedsDeliveryInstruction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmSecuritiesMovementDetails
+	 * CorporateActionOption4.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmSecuritiesMovementDetails
+	 * CorporateActionOption14.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmSecuritiesMovementDetails
+	 * CorporateActionOption23.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmSecuritiesMovementDetails
+	 * CorporateActionOption31.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmSecuritiesMovementDetails
+	 * CorporateActionOption37.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmSecuritiesMovementDetails
+	 * CorporateActionOption46.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmSecuritiesMovementDetails
+	 * CorporateActionOption53.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmSecuritiesMovementDetails
+	 * CorporateActionOption54.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmSecuritiesMovementDetails
+	 * CorporateActionOption10.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmSecuritiesMovementDetails
+	 * CorporateActionOption15.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmSecuritiesMovementDetails
+	 * CorporateActionOption20.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmSecuritiesMovementDetails
+	 * CorporateActionOption32.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmSecuritiesMovementDetails
+	 * CorporateActionOption35.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmSecuritiesMovementDetails
+	 * CorporateActionOption44.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmSecuritiesMovementDetails
+	 * CorporateActionOption52.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmSecuritiesMovementDetails
+	 * CorporateActionOption55.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption12#mmSecuritiesMovementDetails
+	 * CorporateActionOption12.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption16#mmSecuritiesMovementDetails
+	 * CorporateActionOption16.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption24#mmSecuritiesMovementDetails
+	 * CorporateActionOption24.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption33#mmSecuritiesMovementDetails
+	 * CorporateActionOption33.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#mmSecuritiesMovementDetails
+	 * CorporateActionOption39.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption48#mmSecuritiesMovementDetails
+	 * CorporateActionOption48.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmSecuritiesMovementDetails
+	 * CorporateActionOption3.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmSecuritiesMovementDetails
+	 * CorporateActionOption17.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmSecuritiesMovementDetails
+	 * CorporateActionOption19.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmSecuritiesMovementDetails
+	 * CorporateActionOption34.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmSecuritiesMovementDetails
+	 * CorporateActionOption36.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmSecuritiesMovementDetails
+	 * CorporateActionOption45.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmSecuritiesMovementDetails
+	 * CorporateActionOption51.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmSecuritiesMovementDetails
+	 * CorporateActionOption56.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmSecuritiesMovementDetails
+	 * CorporateActionOption1.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmSecuritiesMovement
+	 * GlobalDistributionRequest1.mmSecuritiesMovement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmSecuritiesMovementDetails
+	 * CorporateActionOption100.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmSecuritiesMovementDetails
+	 * CorporateActionOption101.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmSecuritiesMovementDetails
+	 * CorporateActionOption102.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmSecuritiesMovementDetails
+	 * CorporateActionOption110.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmSecuritiesMovementDetails
+	 * CorporateActionOption108.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmSecuritiesMovementDetails
+	 * CorporateActionOption106.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmSecuritiesMovementDetails
+	 * CorporateActionOption111.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmSecuritiesMovementDetails
+	 * CorporateActionOption113.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmSecuritiesMovementDetails
+	 * CorporateActionOption117.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#mmSecuritiesMovementDetails
+	 * CorporateActionOption119.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmSecuritiesMovementDetails
+	 * CorporateActionOption115.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmSecuritiesMovementDetails
+	 * CorporateActionOption114.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption126#mmSecuritiesMovementDetails
+	 * CorporateActionOption126.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmSecuritiesMovementDetails
+	 * CorporateActionOption124.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmSecuritiesMovementDetails
+	 * CorporateActionOption125.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmSecuritiesMovementDetails
+	 * CorporateActionOption127.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmSecuritiesMovementDetails
+	 * CorporateActionOption132.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmSecuritiesMovementDetails
+	 * CorporateActionOption130.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmSecuritiesMovementDetails
+	 * CorporateActionOption129.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmSecuritiesMovementDetails
+	 * CorporateActionOption136.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmSecuritiesMovementDetails
+	 * CorporateActionOption135.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmSecuritiesMovementDetails
+	 * CorporateActionOption133.mmSecuritiesMovementDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -363,46 +367,47 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesProceedsMovement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesProceedsMovement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption4.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption14.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption23.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption31.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption37.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption46.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption53.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption54.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption10.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption15.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption20.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption32.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption35.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption44.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption52.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption55.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption12.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption16.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption24.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption33.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption39.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption48.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption3.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption17.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption19.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption34.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption36.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption45.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption51.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption56.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption1.SecuritiesMovementDetails, com.tools20022.repository.msg.GlobalDistributionRequest1.SecuritiesMovement,
-					com.tools20022.repository.msg.CorporateActionOption100.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption101.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption102.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption110.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption108.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption106.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption111.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption113.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption117.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption119.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption115.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption114.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption126.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption124.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption125.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption127.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption132.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption130.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption129.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption136.SecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption135.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption133.SecuritiesMovementDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption4.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption14.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption23.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption31.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption37.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption46.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption53.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption54.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption10.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption15.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption20.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption32.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption35.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption44.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption52.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption55.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption12.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption16.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption24.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption33.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption39.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption48.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption3.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption17.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption19.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption34.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption36.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption45.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption51.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption56.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption1.mmSecuritiesMovementDetails, com.tools20022.repository.msg.GlobalDistributionRequest1.mmSecuritiesMovement,
+					com.tools20022.repository.msg.CorporateActionOption100.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption101.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption102.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption110.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption108.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption106.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption111.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption113.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption117.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption119.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption115.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption114.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption126.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption124.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption125.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption127.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption132.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption130.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption129.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption136.mmSecuritiesMovementDetails,
+					com.tools20022.repository.msg.CorporateActionOption135.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption133.mmSecuritiesMovementDetails);
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesProceedsMovement";
 			definition = "Instructions for the movement of securities related to a corporate action.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesDeliveryObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.RelatedCorporateAction;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedCorporateAction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentObligation> cashProceedsMovement;
 	/**
 	 * Instructions for the movement of cash related to a corporate action.
 	 * <p>
@@ -411,8 +416,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#RelatedCorporateAction
-	 * PaymentObligation.RelatedCorporateAction}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmRelatedCorporateAction
+	 * PaymentObligation.mmRelatedCorporateAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -420,19 +425,19 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#CashMovement
-	 * GlobalDistributionRequest1.CashMovement}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction
 	 * CorporateActionProceedsDeliveryInstruction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmCashMovement
+	 * GlobalDistributionRequest1.mmCashMovement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -445,20 +450,21 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * "Instructions for the movement of cash related to a corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashProceedsMovement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashProceedsMovement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionRequest1.CashMovement);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionRequest1.mmCashMovement);
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashProceedsMovement";
 			definition = "Instructions for the movement of cash related to a corporate action.";
 			minOccurs = 0;
-			type_lazy = () -> PaymentObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.RelatedCorporateAction;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmRelatedCorporateAction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Account> settlementAccount;
 	/**
 	 * Information relative to the account(s) to be used for the delivery of the
 	 * proceeds (cash or securities)
@@ -468,8 +474,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#RelatedProceedsDelivery
-	 * Account.RelatedProceedsDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmRelatedProceedsDelivery
+	 * Account.mmRelatedProceedsDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -494,7 +500,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SettlementAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSettlementAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
@@ -502,11 +508,12 @@ public class CorporateActionProceedsDeliveryInstruction {
 			name = "SettlementAccount";
 			definition = "Information relative to the account(s) to be used for the delivery of the proceeds (cash or securities)";
 			minOccurs = 0;
-			type_lazy = () -> Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.RelatedProceedsDelivery;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmRelatedProceedsDelivery;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
+	protected AgentCorporateActionStandingInstruction corporateActionStandingInstruction;
 	/**
 	 * Standing instruction related to a corporate action.
 	 * <p>
@@ -515,8 +522,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#RelatedDeliveryInstructions
-	 * AgentCorporateActionStandingInstruction.RelatedDeliveryInstructions}</li>
+	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmRelatedDeliveryInstructions
+	 * AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -541,37 +548,77 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * definition} = "Standing instruction related to a corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CorporateActionStandingInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCorporateActionStandingInstruction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStandingInstruction";
 			definition = "Standing instruction related to a corporate action.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.RelatedDeliveryInstructions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProceedsDeliveryInstruction";
 				definition = "Specifies the delivery instructions for the securities and cash proceeds at any stage of the Corporate Action process.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.RelatedProceedsDelivery, com.tools20022.repository.entity.PaymentObligation.RelatedCorporateAction,
-						com.tools20022.repository.entity.SecuritiesDeliveryObligation.RelatedCorporateAction, com.tools20022.repository.entity.CorporateActionDistribution.CorporateActionProceedsDeliveryInstruction,
-						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.RelatedDeliveryInstructions);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.RelatedDistribution,
-						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.SecuritiesProceedsMovement, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.CashProceedsMovement,
-						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.SettlementAccount, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.CorporateActionStandingInstruction);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmRelatedProceedsDelivery, com.tools20022.repository.entity.PaymentObligation.mmRelatedCorporateAction,
+						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedCorporateAction, com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction,
+						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution,
+						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement,
+						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSettlementAccount, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction);
 				derivationComponent_lazy = () -> Arrays.asList(ProceedsDelivery1.mmObject(), SecurityMovement1.mmObject(), SecuritiesProceeds1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionDistribution getRelatedDistribution() {
+		return relatedDistribution;
+	}
+
+	public void setRelatedDistribution(com.tools20022.repository.entity.CorporateActionDistribution relatedDistribution) {
+		this.relatedDistribution = relatedDistribution;
+	}
+
+	public List<SecuritiesDeliveryObligation> getSecuritiesProceedsMovement() {
+		return securitiesProceedsMovement;
+	}
+
+	public void setSecuritiesProceedsMovement(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesProceedsMovement) {
+		this.securitiesProceedsMovement = securitiesProceedsMovement;
+	}
+
+	public List<PaymentObligation> getCashProceedsMovement() {
+		return cashProceedsMovement;
+	}
+
+	public void setCashProceedsMovement(List<com.tools20022.repository.entity.PaymentObligation> cashProceedsMovement) {
+		this.cashProceedsMovement = cashProceedsMovement;
+	}
+
+	public List<Account> getSettlementAccount() {
+		return settlementAccount;
+	}
+
+	public void setSettlementAccount(List<com.tools20022.repository.entity.Account> settlementAccount) {
+		this.settlementAccount = settlementAccount;
+	}
+
+	public AgentCorporateActionStandingInstruction getCorporateActionStandingInstruction() {
+		return corporateActionStandingInstruction;
+	}
+
+	public void setCorporateActionStandingInstruction(com.tools20022.repository.entity.AgentCorporateActionStandingInstruction corporateActionStandingInstruction) {
+		this.corporateActionStandingInstruction = corporateActionStandingInstruction;
 	}
 }

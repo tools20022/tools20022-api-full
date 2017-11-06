@@ -55,19 +55,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01#UndertakingTerminationNotificationDetails
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01#mmUndertakingTerminationNotificationDetails
  * UndertakingTerminationNotificationV01.
- * UndertakingTerminationNotificationDetails}</li>
+ * mmUndertakingTerminationNotificationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01#DigitalSignature
- * UndertakingTerminationNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01#mmDigitalSignature
+ * UndertakingTerminationNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01#identifier
- * UndertakingTerminationNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.012.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingTerminationNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingTerminationNotice1 undertakingTerminationNotificationDetails;
 	/**
 	 * Details of the termination notification.
 	 * <p>
@@ -106,17 +105,18 @@ public class UndertakingTerminationNotificationV01 {
 	 * definition} = "Details of the termination notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingTerminationNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingTerminationNotificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgTermntnNtfctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingTerminationNotificationDetails";
 			definition = "Details of the termination notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UndertakingTerminationNotice1.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the notification.
 	 * <p>
@@ -140,42 +140,15 @@ public class UndertakingTerminationNotificationV01 {
 	 * definition} = "Digital signature of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "012";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -189,11 +162,34 @@ public class UndertakingTerminationNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgTermntnNtfctn";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.UndertakingTerminationNotificationDetails,
-						com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.mmUndertakingTerminationNotificationDetails,
+						com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "012";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingTerminationNotice1 getUndertakingTerminationNotificationDetails() {
+		return undertakingTerminationNotificationDetails;
+	}
+
+	public void setUndertakingTerminationNotificationDetails(UndertakingTerminationNotice1 undertakingTerminationNotificationDetails) {
+		this.undertakingTerminationNotificationDetails = undertakingTerminationNotificationDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

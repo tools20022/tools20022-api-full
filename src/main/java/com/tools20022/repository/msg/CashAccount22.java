@@ -40,17 +40,18 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#Currency
- * CashAccount22.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#Servicer
- * CashAccount22.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#Identification
- * CashAccount22.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#SecondaryAccount
- * CashAccount22.SecondaryAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#mmCurrency
+ * CashAccount22.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#mmServicer
+ * CashAccount22.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#mmIdentification
+ * CashAccount22.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount22#AccountTypeDescription
- * CashAccount22.AccountTypeDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount22#mmSecondaryAccount
+ * CashAccount22.mmSecondaryAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount22#mmAccountTypeDescription
+ * CashAccount22.mmAccountTypeDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,6 +76,7 @@ import java.util.function.Supplier;
 public class CashAccount22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCode currency;
 	/**
 	 * Medium of exchange of value.
 	 * <p>
@@ -87,8 +89,8 @@ public class CashAccount22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#BaseCurrency
-	 * Account.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +108,21 @@ public class CashAccount22 {
 	 * definition} = "Medium of exchange of value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
 			componentContext_lazy = () -> CashAccount22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.BaseCurrency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected BICIdentifier servicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -136,8 +139,8 @@ public class CashAccount22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +160,21 @@ public class CashAccount22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Servicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> CashAccount22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected AccountIdentification5Choice identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -185,8 +189,8 @@ public class CashAccount22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,20 +210,21 @@ public class CashAccount22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification5Choice.mmObject();
 		}
 	};
+	protected CashAccount21 secondaryAccount;
 	/**
 	 * Sub-division of a master or omnibus cash account.
 	 * <p>
@@ -231,8 +236,8 @@ public class CashAccount22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#SubAccount
-	 * Account.SubAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmSubAccount
+	 * Account.mmSubAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,21 +255,22 @@ public class CashAccount22 {
 	 * definition} = "Sub-division of a master or omnibus cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondaryAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondaryAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmSubAccount;
 			componentContext_lazy = () -> CashAccount22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.SubAccount;
 			isDerived = false;
 			xmlTag = "ScndryAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryAccount";
 			definition = "Sub-division of a master or omnibus cash account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount21.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount21.mmObject();
 		}
 	};
+	protected Max35Text accountTypeDescription;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -279,8 +285,8 @@ public class CashAccount22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashAccountType
-	 * CashAccount.CashAccountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashAccountType
+	 * CashAccount.mmCashAccountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,17 +306,17 @@ public class CashAccount22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountTypeDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountTypeDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> CashAccount22.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashAccountType;
 			isDerived = false;
 			xmlTag = "AcctTpDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeDescription";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -318,10 +324,10 @@ public class CashAccount22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount22.Currency, com.tools20022.repository.msg.CashAccount22.Servicer, com.tools20022.repository.msg.CashAccount22.Identification,
-						com.tools20022.repository.msg.CashAccount22.SecondaryAccount, com.tools20022.repository.msg.CashAccount22.AccountTypeDescription);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount22.mmCurrency, com.tools20022.repository.msg.CashAccount22.mmServicer, com.tools20022.repository.msg.CashAccount22.mmIdentification,
+						com.tools20022.repository.msg.CashAccount22.mmSecondaryAccount, com.tools20022.repository.msg.CashAccount22.mmAccountTypeDescription);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -335,5 +341,45 @@ public class CashAccount22 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public BICIdentifier getServicer() {
+		return servicer;
+	}
+
+	public void setServicer(BICIdentifier servicer) {
+		this.servicer = servicer;
+	}
+
+	public AccountIdentification5Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(AccountIdentification5Choice identification) {
+		this.identification = identification;
+	}
+
+	public CashAccount21 getSecondaryAccount() {
+		return secondaryAccount;
+	}
+
+	public void setSecondaryAccount(com.tools20022.repository.msg.CashAccount21 secondaryAccount) {
+		this.secondaryAccount = secondaryAccount;
+	}
+
+	public Max35Text getAccountTypeDescription() {
+		return accountTypeDescription;
+	}
+
+	public void setAccountTypeDescription(Max35Text accountTypeDescription) {
+		this.accountTypeDescription = accountTypeDescription;
 	}
 }

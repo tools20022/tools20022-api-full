@@ -36,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionsBin2#NumberOfTransactions
- * TransactionsBin2.NumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionsBin2#mmNumberOfTransactions
+ * TransactionsBin2.mmNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionsBin2#TotalNotionalAmount
- * TransactionsBin2.TotalNotionalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionsBin2#Range
- * TransactionsBin2.Range}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionsBin2#mmTotalNotionalAmount
+ * TransactionsBin2.mmTotalNotionalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionsBin2#mmRange
+ * TransactionsBin2.mmRange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionsBin2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number numberOfTransactions;
 	/**
 	 * Total number of transactions executed for that bin. Transactions that
 	 * have been cancelled should be excluded from the reported figure.
@@ -95,7 +96,7 @@ public class TransactionsBin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionsBin2.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class TransactionsBin2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Total number of transactions executed for that bin. Transactions that have been cancelled should be excluded from the reported figure.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected DecimalNumber totalNotionalAmount;
 	/**
 	 * Total notional amount traded represented by all transactions executed on
 	 * the reporting day which size lies in the bin's range, expressed in the
@@ -143,7 +145,7 @@ public class TransactionsBin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNotionalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNotionalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionsBin2.mmObject();
 			isDerived = false;
@@ -151,11 +153,12 @@ public class TransactionsBin2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNotionalAmount";
 			definition = "Total notional amount traded represented by all transactions executed on the reporting day which size lies in the bin's range, expressed in the currency as specified in the local regulation (except for emission allowances and emission allowance derivatives : tons of carbon dioxide). Transactions that have been cancelled should be excluded from the reported figure.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected FromToQuantityRange2 range;
 	/**
 	 * Specific range the quantitative data relates to. Only allowed ranges must
 	 * be used.
@@ -185,7 +188,7 @@ public class TransactionsBin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Range = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRange = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionsBin2.mmObject();
 			isDerived = false;
@@ -193,24 +196,48 @@ public class TransactionsBin2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Range";
 			definition = "Specific range the quantitative data relates to.  Only allowed ranges must be used.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FromToQuantityRange2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionsBin2.NumberOfTransactions, com.tools20022.repository.msg.TransactionsBin2.TotalNotionalAmount,
-						com.tools20022.repository.msg.TransactionsBin2.Range);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionsBin2.mmNumberOfTransactions, com.tools20022.repository.msg.TransactionsBin2.mmTotalNotionalAmount,
+						com.tools20022.repository.msg.TransactionsBin2.mmRange);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionsBin2";
 				definition = "Specifies aggregated details on transactions within a defined numeric range bin.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public void setNumberOfTransactions(Number numberOfTransactions) {
+		this.numberOfTransactions = numberOfTransactions;
+	}
+
+	public DecimalNumber getTotalNotionalAmount() {
+		return totalNotionalAmount;
+	}
+
+	public void setTotalNotionalAmount(DecimalNumber totalNotionalAmount) {
+		this.totalNotionalAmount = totalNotionalAmount;
+	}
+
+	public FromToQuantityRange2 getRange() {
+		return range;
+	}
+
+	public void setRange(com.tools20022.repository.msg.FromToQuantityRange2 range) {
+		this.range = range;
 	}
 }

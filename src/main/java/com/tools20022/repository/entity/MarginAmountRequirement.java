@@ -41,17 +41,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#VariationMarginAmountRequirementCalculation
- * MarginAmountRequirement.VariationMarginAmountRequirementCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#mmVariationMarginAmountRequirementCalculation
+ * MarginAmountRequirement.mmVariationMarginAmountRequirementCalculation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#DeliverMarginAmount
- * MarginAmountRequirement.DeliverMarginAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#mmDeliverMarginAmount
+ * MarginAmountRequirement.mmDeliverMarginAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#ReturnMarginAmount
- * MarginAmountRequirement.ReturnMarginAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#mmReturnMarginAmount
+ * MarginAmountRequirement.mmReturnMarginAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#SegregatedAmountRequirementCalculation
- * MarginAmountRequirement.SegregatedAmountRequirementCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#mmSegregatedAmountRequirementCalculation
+ * MarginAmountRequirement.mmSegregatedAmountRequirementCalculation}</li>
  * </ul>
  * </li>
  * <li>
@@ -59,11 +59,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#VariationMarginAmountRequirement
- * ExposureCalculation.VariationMarginAmountRequirement}</li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmVariationMarginAmountRequirement
+ * ExposureCalculation.mmVariationMarginAmountRequirement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#SegregatedAmountRequirement
- * ExposureCalculation.SegregatedAmountRequirement}</li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmSegregatedAmountRequirement
+ * ExposureCalculation.mmSegregatedAmountRequirement}</li>
  * </ul>
  * </li>
  * <li>
@@ -78,8 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginAmountRequirement {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExposureCalculation variationMarginAmountRequirementCalculation;
 	/**
 	 * Exposure valuation which takes into account amount requirements.
 	 * <p>
@@ -103,8 +104,8 @@ public class MarginAmountRequirement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#VariationMarginAmountRequirement
-	 * ExposureCalculation.VariationMarginAmountRequirement}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmVariationMarginAmountRequirement
+	 * ExposureCalculation.mmVariationMarginAmountRequirement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -129,20 +130,21 @@ public class MarginAmountRequirement {
 	 * "Exposure valuation which takes into account amount requirements."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd VariationMarginAmountRequirementCalculation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmVariationMarginAmountRequirementCalculation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MarginAmountRequirement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginAmountRequirementCalculation";
 			definition = "Exposure valuation which takes into account amount requirements.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ExposureCalculation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.VariationMarginAmountRequirement;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmVariationMarginAmountRequirement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount deliverMarginAmount;
 	/**
 	 * Amount of new Variation Margin that will be delivered to one party by the
 	 * other party after rounding, threshold and minimum transfer amount are
@@ -155,19 +157,19 @@ public class MarginAmountRequirement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarginRequirement1#DeliverMarginAmount
-	 * MarginRequirement1.DeliverMarginAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarginRequirement1#mmDeliverMarginAmount
+	 * MarginRequirement1.mmDeliverMarginAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -181,19 +183,20 @@ public class MarginAmountRequirement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DeliverMarginAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDeliverMarginAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.DeliverMarginAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.mmDeliverMarginAmount);
 			elementContext_lazy = () -> MarginAmountRequirement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverMarginAmount";
 			definition = "Amount of new Variation Margin that will be delivered to one party by the other party after rounding, threshold and minimum transfer amount are taken into account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount returnMarginAmount;
 	/**
 	 * Amount of new Variation Margin that will be recalled to one party from
 	 * the other party after rounding, threshold and minimum transfer amount are
@@ -206,19 +209,19 @@ public class MarginAmountRequirement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarginRequirement1#ReturnMarginAmount
-	 * MarginRequirement1.ReturnMarginAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
 	 * MarginAmountRequirement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarginRequirement1#mmReturnMarginAmount
+	 * MarginRequirement1.mmReturnMarginAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,19 +235,20 @@ public class MarginAmountRequirement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ReturnMarginAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReturnMarginAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.ReturnMarginAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.mmReturnMarginAmount);
 			elementContext_lazy = () -> MarginAmountRequirement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnMarginAmount";
 			definition = "Amount of new Variation Margin that will be recalled to one party from the other party after rounding, threshold and minimum transfer amount are taken into account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ExposureCalculation segregatedAmountRequirementCalculation;
 	/**
 	 * Exposure valuation which takes into account amount requirements.
 	 * <p>
@@ -253,8 +257,8 @@ public class MarginAmountRequirement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#SegregatedAmountRequirement
-	 * ExposureCalculation.SegregatedAmountRequirement}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmSegregatedAmountRequirement
+	 * ExposureCalculation.mmSegregatedAmountRequirement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -279,34 +283,66 @@ public class MarginAmountRequirement {
 	 * "Exposure valuation which takes into account amount requirements."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SegregatedAmountRequirementCalculation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSegregatedAmountRequirementCalculation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MarginAmountRequirement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedAmountRequirementCalculation";
 			definition = "Exposure valuation which takes into account amount requirements.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ExposureCalculation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.SegregatedAmountRequirement;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmSegregatedAmountRequirement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginAmountRequirement";
 				definition = "Amount of expected margin required by any of the parties of the margin calculation.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureCalculation.VariationMarginAmountRequirement, com.tools20022.repository.entity.ExposureCalculation.SegregatedAmountRequirement);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarginAmountRequirement.VariationMarginAmountRequirementCalculation, com.tools20022.repository.entity.MarginAmountRequirement.DeliverMarginAmount,
-						com.tools20022.repository.entity.MarginAmountRequirement.ReturnMarginAmount, com.tools20022.repository.entity.MarginAmountRequirement.SegregatedAmountRequirementCalculation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureCalculation.mmVariationMarginAmountRequirement, com.tools20022.repository.entity.ExposureCalculation.mmSegregatedAmountRequirement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarginAmountRequirement.mmVariationMarginAmountRequirementCalculation, com.tools20022.repository.entity.MarginAmountRequirement.mmDeliverMarginAmount,
+						com.tools20022.repository.entity.MarginAmountRequirement.mmReturnMarginAmount, com.tools20022.repository.entity.MarginAmountRequirement.mmSegregatedAmountRequirementCalculation);
 				derivationComponent_lazy = () -> Arrays.asList(MarginRequirement1.mmObject(), Requirement1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExposureCalculation getVariationMarginAmountRequirementCalculation() {
+		return variationMarginAmountRequirementCalculation;
+	}
+
+	public void setVariationMarginAmountRequirementCalculation(com.tools20022.repository.entity.ExposureCalculation variationMarginAmountRequirementCalculation) {
+		this.variationMarginAmountRequirementCalculation = variationMarginAmountRequirementCalculation;
+	}
+
+	public ActiveCurrencyAndAmount getDeliverMarginAmount() {
+		return deliverMarginAmount;
+	}
+
+	public void setDeliverMarginAmount(ActiveCurrencyAndAmount deliverMarginAmount) {
+		this.deliverMarginAmount = deliverMarginAmount;
+	}
+
+	public ActiveCurrencyAndAmount getReturnMarginAmount() {
+		return returnMarginAmount;
+	}
+
+	public void setReturnMarginAmount(ActiveCurrencyAndAmount returnMarginAmount) {
+		this.returnMarginAmount = returnMarginAmount;
+	}
+
+	public ExposureCalculation getSegregatedAmountRequirementCalculation() {
+		return segregatedAmountRequirementCalculation;
+	}
+
+	public void setSegregatedAmountRequirementCalculation(com.tools20022.repository.entity.ExposureCalculation segregatedAmountRequirementCalculation) {
+		this.segregatedAmountRequirementCalculation = segregatedAmountRequirementCalculation;
 	}
 }

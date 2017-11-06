@@ -55,21 +55,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#Header
- * KeyExchangeInitiation.Header}</li>
+ * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#mmHeader
+ * KeyExchangeInitiation.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#KeyExchangeInitiation
- * KeyExchangeInitiation.KeyExchangeInitiation}</li>
+ * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#mmKeyExchangeInitiation
+ * KeyExchangeInitiation.mmKeyExchangeInitiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#SecurityTrailer
- * KeyExchangeInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#mmSecurityTrailer
+ * KeyExchangeInitiation.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#identifier
- * KeyExchangeInitiation.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class KeyExchangeInitiation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header17 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -107,17 +106,18 @@ public class KeyExchangeInitiation {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
 	};
+	protected AcquirerKeyExchangeInitiation1 keyExchangeInitiation;
 	/**
 	 * Information related to the key exchange.
 	 * <p>
@@ -141,17 +141,18 @@ public class KeyExchangeInitiation {
 	 * definition} = "Information related to the key exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock KeyExchangeInitiation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmKeyExchangeInitiation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "KeyXchgInitn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeInitiation";
 			definition = "Information related to the key exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcquirerKeyExchangeInitiation1.mmObject();
 		}
 	};
+	protected ContentInformationType12 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -176,42 +177,15 @@ public class KeyExchangeInitiation {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "011";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -225,11 +199,42 @@ public class KeyExchangeInitiation {
 				rootElement = "Document";
 				xmlTag = "KeyXchgInitn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.KeyExchangeInitiation.Header, com.tools20022.repository.area.cain.KeyExchangeInitiation.KeyExchangeInitiation,
-						com.tools20022.repository.area.cain.KeyExchangeInitiation.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.KeyExchangeInitiation.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.KeyExchangeInitiation.mmHeader, com.tools20022.repository.area.cain.KeyExchangeInitiation.mmKeyExchangeInitiation,
+						com.tools20022.repository.area.cain.KeyExchangeInitiation.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "011";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header17 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header17 header) {
+		this.header = header;
+	}
+
+	public AcquirerKeyExchangeInitiation1 getKeyExchangeInitiation() {
+		return keyExchangeInitiation;
+	}
+
+	public void setKeyExchangeInitiation(AcquirerKeyExchangeInitiation1 keyExchangeInitiation) {
+		this.keyExchangeInitiation = keyExchangeInitiation;
+	}
+
+	public ContentInformationType12 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

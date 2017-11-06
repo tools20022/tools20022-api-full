@@ -33,28 +33,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfAmountCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#Cashback
- * TypeOfAmount3Code.Cashback}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#Gratuity
- * TypeOfAmount3Code.Gratuity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#ServiceFee
- * TypeOfAmount3Code.ServiceFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#mmCashback
+ * TypeOfAmount3Code.mmCashback}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#InterchangeFee
- * TypeOfAmount3Code.InterchangeFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#Original
- * TypeOfAmount3Code.Original}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#mmGratuity
+ * TypeOfAmount3Code.mmGratuity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#Surcharge
- * TypeOfAmount3Code.Surcharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#mmServiceFee
+ * TypeOfAmount3Code.mmServiceFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#mmInterchangeFee
+ * TypeOfAmount3Code.mmInterchangeFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#mmOriginal
+ * TypeOfAmount3Code.mmOriginal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code#mmSurcharge
+ * TypeOfAmount3Code.mmSurcharge}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +93,7 @@ public class TypeOfAmount3Code extends TypeOfAmountCode {
 	 * name} = "Cashback"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cashback = new MMCode() {
+	public static final MMCode mmCashback = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cashback";
@@ -113,7 +116,7 @@ public class TypeOfAmount3Code extends TypeOfAmountCode {
 	 * name} = "Gratuity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gratuity = new MMCode() {
+	public static final MMCode mmGratuity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
@@ -136,7 +139,7 @@ public class TypeOfAmount3Code extends TypeOfAmountCode {
 	 * name} = "ServiceFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ServiceFee = new MMCode() {
+	public static final MMCode mmServiceFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceFee";
@@ -159,7 +162,7 @@ public class TypeOfAmount3Code extends TypeOfAmountCode {
 	 * name} = "InterchangeFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterchangeFee = new MMCode() {
+	public static final MMCode mmInterchangeFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterchangeFee";
@@ -182,7 +185,7 @@ public class TypeOfAmount3Code extends TypeOfAmountCode {
 	 * name} = "Original"</li>
 	 * </ul>
 	 */
-	public static final MMCode Original = new MMCode() {
+	public static final MMCode mmOriginal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
@@ -205,7 +208,7 @@ public class TypeOfAmount3Code extends TypeOfAmountCode {
 	 * name} = "Surcharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode Surcharge = new MMCode() {
+	public static final MMCode mmSurcharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
@@ -216,13 +219,14 @@ public class TypeOfAmount3Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSHB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount3Code";
 				definition = "Identification or qualification of the type of amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount3Code.Cashback, com.tools20022.repository.codeset.TypeOfAmount3Code.Gratuity, com.tools20022.repository.codeset.TypeOfAmount3Code.ServiceFee,
-						com.tools20022.repository.codeset.TypeOfAmount3Code.InterchangeFee, com.tools20022.repository.codeset.TypeOfAmount3Code.Original, com.tools20022.repository.codeset.TypeOfAmount3Code.Surcharge);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount3Code.mmCashback, com.tools20022.repository.codeset.TypeOfAmount3Code.mmGratuity,
+						com.tools20022.repository.codeset.TypeOfAmount3Code.mmServiceFee, com.tools20022.repository.codeset.TypeOfAmount3Code.mmInterchangeFee, com.tools20022.repository.codeset.TypeOfAmount3Code.mmOriginal,
+						com.tools20022.repository.codeset.TypeOfAmount3Code.mmSurcharge);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

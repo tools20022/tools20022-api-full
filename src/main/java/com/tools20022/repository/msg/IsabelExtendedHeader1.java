@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelExtendedHeader1#SEPA
- * IsabelExtendedHeader1.SEPA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelExtendedHeader1#mmSEPA
+ * IsabelExtendedHeader1.mmSEPA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelExtendedHeader1#BPNFinancialInstitution
- * IsabelExtendedHeader1.BPNFinancialInstitution}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelExtendedHeader1#mmBPNFinancialInstitution
+ * IsabelExtendedHeader1.mmBPNFinancialInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelExtendedHeader1#BICFinancialInstitution
- * IsabelExtendedHeader1.BICFinancialInstitution}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelExtendedHeader1#mmBICFinancialInstitution
+ * IsabelExtendedHeader1.mmBICFinancialInstitution}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelExtendedHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IsabelSEPAFile1 sEPA;
 	/**
 	 * SEPA related information for a payment file.
 	 * <p>
@@ -89,7 +90,7 @@ public class IsabelExtendedHeader1 {
 	 * definition} = "SEPA related information for a payment file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SEPA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSEPA = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelExtendedHeader1.mmObject();
 			isDerived = false;
@@ -97,12 +98,13 @@ public class IsabelExtendedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPA";
 			definition = "SEPA related information for a payment file.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelSEPAFile1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
 		}
 	};
+	protected Max3Text bPNFinancialInstitution;
 	/**
 	 * Belgian bank protocol number (BPN) of the receiving bank.
 	 * <p>
@@ -131,7 +133,7 @@ public class IsabelExtendedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BPNFinancialInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBPNFinancialInstitution = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelExtendedHeader1.mmObject();
 			isDerived = false;
@@ -139,11 +141,12 @@ public class IsabelExtendedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BPNFinancialInstitution";
 			definition = "Belgian bank protocol number (BPN) of the receiving bank.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	protected BICFIIdentifier bICFinancialInstitution;
 	/**
 	 * Business identification code of the receiving bank.
 	 * <p>
@@ -172,7 +175,7 @@ public class IsabelExtendedHeader1 {
 	 * definition} = "Business identification code of the receiving bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICFinancialInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICFinancialInstitution = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelExtendedHeader1.mmObject();
 			isDerived = false;
@@ -180,8 +183,8 @@ public class IsabelExtendedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFinancialInstitution";
 			definition = "Business identification code of the receiving bank.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
@@ -189,14 +192,38 @@ public class IsabelExtendedHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelExtendedHeader1.SEPA, com.tools20022.repository.msg.IsabelExtendedHeader1.BPNFinancialInstitution,
-						com.tools20022.repository.msg.IsabelExtendedHeader1.BICFinancialInstitution);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelExtendedHeader1.mmSEPA, com.tools20022.repository.msg.IsabelExtendedHeader1.mmBPNFinancialInstitution,
+						com.tools20022.repository.msg.IsabelExtendedHeader1.mmBICFinancialInstitution);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelExtendedHeader1";
 				definition = "Specifies the extended parameters for an Isabel payment file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IsabelSEPAFile1 getSEPA() {
+		return sEPA;
+	}
+
+	public void setSEPA(com.tools20022.repository.msg.IsabelSEPAFile1 sEPA) {
+		this.sEPA = sEPA;
+	}
+
+	public Max3Text getBPNFinancialInstitution() {
+		return bPNFinancialInstitution;
+	}
+
+	public void setBPNFinancialInstitution(Max3Text bPNFinancialInstitution) {
+		this.bPNFinancialInstitution = bPNFinancialInstitution;
+	}
+
+	public BICFIIdentifier getBICFinancialInstitution() {
+		return bICFinancialInstitution;
+	}
+
+	public void setBICFinancialInstitution(BICFIIdentifier bICFinancialInstitution) {
+		this.bICFinancialInstitution = bICFinancialInstitution;
 	}
 }

@@ -33,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#TypeIndicator
- * CashBalanceReturnCriteria.TypeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#mmTypeIndicator
+ * CashBalanceReturnCriteria.mmTypeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#StatusIndicator
- * CashBalanceReturnCriteria.StatusIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#mmStatusIndicator
+ * CashBalanceReturnCriteria.mmStatusIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#ValueDateIndicator
- * CashBalanceReturnCriteria.ValueDateIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#mmValueDateIndicator
+ * CashBalanceReturnCriteria.mmValueDateIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#NumberOfPaymentsIndicator
- * CashBalanceReturnCriteria.NumberOfPaymentsIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria#mmNumberOfPaymentsIndicator
+ * CashBalanceReturnCriteria.mmNumberOfPaymentsIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashBalanceReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator typeIndicator;
 	/**
 	 * Indicates whether the balance type is requested.
 	 * <p>
@@ -92,7 +93,7 @@ public class CashBalanceReturnCriteria {
 	 * definition} = "Indicates whether the balance type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the balance type is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator statusIndicator;
 	/**
 	 * Indicates whether the balance status is requested.
 	 * <p>
@@ -133,7 +135,7 @@ public class CashBalanceReturnCriteria {
 	 * definition} = "Indicates whether the balance status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -141,11 +143,12 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIndicator";
 			definition = "Indicates whether the balance status is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator valueDateIndicator;
 	/**
 	 * Indicates whether the value date is requested.
 	 * <p>
@@ -174,7 +177,7 @@ public class CashBalanceReturnCriteria {
 	 * definition} = "Indicates whether the value date is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDateIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -182,11 +185,12 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateIndicator";
 			definition = "Indicates whether the value date is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator numberOfPaymentsIndicator;
 	/**
 	 * Indicates whether the number of payment is requested.
 	 * <p>
@@ -215,7 +219,7 @@ public class CashBalanceReturnCriteria {
 	 * definition} = "Indicates whether the number of payment is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfPaymentsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfPaymentsIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -223,8 +227,8 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfPaymentsIndicator";
 			definition = "Indicates whether the number of payment is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -232,14 +236,46 @@ public class CashBalanceReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceReturnCriteria.TypeIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.StatusIndicator,
-						com.tools20022.repository.msg.CashBalanceReturnCriteria.ValueDateIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.NumberOfPaymentsIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceReturnCriteria.mmTypeIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.mmStatusIndicator,
+						com.tools20022.repository.msg.CashBalanceReturnCriteria.mmValueDateIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.mmNumberOfPaymentsIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashBalanceReturnCriteria";
 				definition = "Defines the criteria used to report on the cash balance.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getTypeIndicator() {
+		return typeIndicator;
+	}
+
+	public void setTypeIndicator(RequestedIndicator typeIndicator) {
+		this.typeIndicator = typeIndicator;
+	}
+
+	public RequestedIndicator getStatusIndicator() {
+		return statusIndicator;
+	}
+
+	public void setStatusIndicator(RequestedIndicator statusIndicator) {
+		this.statusIndicator = statusIndicator;
+	}
+
+	public RequestedIndicator getValueDateIndicator() {
+		return valueDateIndicator;
+	}
+
+	public void setValueDateIndicator(RequestedIndicator valueDateIndicator) {
+		this.valueDateIndicator = valueDateIndicator;
+	}
+
+	public RequestedIndicator getNumberOfPaymentsIndicator() {
+		return numberOfPaymentsIndicator;
+	}
+
+	public void setNumberOfPaymentsIndicator(RequestedIndicator numberOfPaymentsIndicator) {
+		this.numberOfPaymentsIndicator = numberOfPaymentsIndicator;
 	}
 }

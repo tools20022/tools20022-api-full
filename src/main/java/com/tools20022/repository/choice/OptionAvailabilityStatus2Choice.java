@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OptionAvailabilityStatus2Choice#Code
- * OptionAvailabilityStatus2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.OptionAvailabilityStatus2Choice#mmCode
+ * OptionAvailabilityStatus2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OptionAvailabilityStatus2Choice#Proprietary
- * OptionAvailabilityStatus2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OptionAvailabilityStatus2Choice#mmProprietary
+ * OptionAvailabilityStatus2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OptionAvailabilityStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OptionAvailabilityStatus1Code code;
 	/**
 	 * Standard code to specify the status of the option availability.
 	 * <p>
@@ -92,7 +93,7 @@ public class OptionAvailabilityStatus2Choice {
 	 * "Standard code to specify the status of the option availability."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionAvailabilityStatus2Choice.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class OptionAvailabilityStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the status of the option availability.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OptionAvailabilityStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Proprietary identification of the status of the option availability.
 	 * <p>
@@ -133,7 +135,7 @@ public class OptionAvailabilityStatus2Choice {
 	 * "Proprietary identification of the status of the option availability."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OptionAvailabilityStatus2Choice.mmObject();
 			isDerived = false;
@@ -141,23 +143,39 @@ public class OptionAvailabilityStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the status of the option availability.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionAvailabilityStatus2Choice.Code, com.tools20022.repository.choice.OptionAvailabilityStatus2Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionAvailabilityStatus2Choice.mmCode, com.tools20022.repository.choice.OptionAvailabilityStatus2Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionAvailabilityStatus2Choice";
 				definition = "Choice between a standard code or proprietary code to specify the option availability status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OptionAvailabilityStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(OptionAvailabilityStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

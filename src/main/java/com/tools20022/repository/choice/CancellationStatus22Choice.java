@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancellationStatus22Choice#Status
- * CancellationStatus22Choice.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.CancellationStatus22Choice#mmStatus
+ * CancellationStatus22Choice.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancellationStatus22Choice#Rejected
- * CancellationStatus22Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.CancellationStatus22Choice#mmRejected
+ * CancellationStatus22Choice.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationStatus22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderCancellationStatus2Code status;
 	/**
 	 * Status of the order cancellation request is cancelled.
 	 * <p>
@@ -73,8 +74,8 @@ public class CancellationStatus22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#CancellationStatus
-	 * SecuritiesOrderStatus.CancellationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCancellationStatus
+	 * SecuritiesOrderStatus.mmCancellationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class CancellationStatus22Choice {
 	 * definition} = "Status of the order cancellation request is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmCancellationStatus;
 			componentContext_lazy = () -> CancellationStatus22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.CancellationStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the order cancellation request is cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderCancellationStatus2Code.mmObject();
 		}
 	};
+	protected RejectedStatus10 rejected;
 	/**
 	 * Status of the order cancellation request is rejected.
 	 * <p>
@@ -118,8 +120,8 @@ public class CancellationStatus22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectedStatusReason
-	 * StatusReason.RejectedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectedStatusReason
+	 * StatusReason.mmRejectedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,32 +140,48 @@ public class CancellationStatus22Choice {
 	 * definition} = "Status of the order cancellation request is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> CancellationStatus22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectedStatusReason;
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the order cancellation request is rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RejectedStatus10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RejectedStatus10.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus22Choice.Status, com.tools20022.repository.choice.CancellationStatus22Choice.Rejected);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus22Choice.mmStatus, com.tools20022.repository.choice.CancellationStatus22Choice.mmRejected);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus22Choice";
 				definition = "Status is cancelled.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderCancellationStatus2Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderCancellationStatus2Code status) {
+		this.status = status;
+	}
+
+	public RejectedStatus10 getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(RejectedStatus10 rejected) {
+		this.rejected = rejected;
 	}
 }

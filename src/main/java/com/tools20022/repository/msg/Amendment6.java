@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the amendment.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment6#UndertakingAmendmentMessage
- * Amendment6.UndertakingAmendmentMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment6#mmUndertakingAmendmentMessage
+ * Amendment6.mmUndertakingAmendmentMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment6#ApplicantReferenceNumber
- * Amendment6.ApplicantReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment6#mmApplicantReferenceNumber
+ * Amendment6.mmApplicantReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment6#AdditionalInformation
- * Amendment6.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment6#mmAdditionalInformation
+ * Amendment6.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,15 +55,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#UndertakingAmendmentNotificationDetails
- * UndertakingAmendmentNotificationV01.UndertakingAmendmentNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#mmUndertakingAmendmentNotificationDetails
+ * UndertakingAmendmentNotificationV01.mmUndertakingAmendmentNotificationDetails
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Amendment6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingAmendmentMessage1 undertakingAmendmentMessage;
 	/**
 	 * Contents of the related proposed Undertaking Amendment message.
 	 * <p>
@@ -108,21 +111,22 @@ public class Amendment6 {
 	 * "Contents of the related proposed Undertaking Amendment message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingAmendmentMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingAmendmentMessage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Amendment6.mmObject();
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
+			componentContext_lazy = () -> Amendment6.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentMessage";
 			definition = "Contents of the related proposed Undertaking Amendment message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UndertakingAmendmentMessage1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmObject();
 		}
 	};
+	protected Max35Text applicantReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the applicant to the
 	 * undertaking.
@@ -152,7 +156,7 @@ public class Amendment6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicantReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicantReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amendment6.mmObject();
 			isDerived = false;
@@ -160,11 +164,12 @@ public class Amendment6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicantReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the applicant to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the notification.
 	 * <p>
@@ -191,7 +196,7 @@ public class Amendment6 {
 	 * definition} = "Additional information related to the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amendment6.mmObject();
 			isDerived = false;
@@ -199,8 +204,8 @@ public class Amendment6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the notification.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -208,16 +213,40 @@ public class Amendment6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment6.UndertakingAmendmentMessage, com.tools20022.repository.msg.Amendment6.ApplicantReferenceNumber,
-						com.tools20022.repository.msg.Amendment6.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment6.mmUndertakingAmendmentMessage, com.tools20022.repository.msg.Amendment6.mmApplicantReferenceNumber,
+						com.tools20022.repository.msg.Amendment6.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.mmUndertakingAmendmentNotificationDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.UndertakingAmendmentNotificationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Amendment6";
 				definition = "Details of the amendment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingAmendmentMessage1 getUndertakingAmendmentMessage() {
+		return undertakingAmendmentMessage;
+	}
+
+	public void setUndertakingAmendmentMessage(com.tools20022.repository.msg.UndertakingAmendmentMessage1 undertakingAmendmentMessage) {
+		this.undertakingAmendmentMessage = undertakingAmendmentMessage;
+	}
+
+	public Max35Text getApplicantReferenceNumber() {
+		return applicantReferenceNumber;
+	}
+
+	public void setApplicantReferenceNumber(Max35Text applicantReferenceNumber) {
+		this.applicantReferenceNumber = applicantReferenceNumber;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

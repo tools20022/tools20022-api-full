@@ -34,37 +34,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRate66#Interest
- * CorporateActionRate66.Interest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#PercentageSought
- * CorporateActionRate66.PercentageSought}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmInterest
+ * CorporateActionRate66.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#RelatedIndex
- * CorporateActionRate66.RelatedIndex}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRate66#Spread
- * CorporateActionRate66.Spread}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmPercentageSought
+ * CorporateActionRate66.mmPercentageSought}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#BidInterval
- * CorporateActionRate66.BidInterval}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmRelatedIndex
+ * CorporateActionRate66.mmRelatedIndex}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmSpread
+ * CorporateActionRate66.mmSpread}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#PreviousFactor
- * CorporateActionRate66.PreviousFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmBidInterval
+ * CorporateActionRate66.mmBidInterval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#NextFactor
- * CorporateActionRate66.NextFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmPreviousFactor
+ * CorporateActionRate66.mmPreviousFactor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#ReinvestmentDiscountRateToMarket
- * CorporateActionRate66.ReinvestmentDiscountRateToMarket}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmNextFactor
+ * CorporateActionRate66.mmNextFactor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#InterestShortfall
- * CorporateActionRate66.InterestShortfall}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmReinvestmentDiscountRateToMarket
+ * CorporateActionRate66.mmReinvestmentDiscountRateToMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#RealisedLoss
- * CorporateActionRate66.RealisedLoss}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmInterestShortfall
+ * CorporateActionRate66.mmInterestShortfall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#DeclaredRate
- * CorporateActionRate66.DeclaredRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmRealisedLoss
+ * CorporateActionRate66.mmRealisedLoss}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmDeclaredRate
+ * CorporateActionRate66.mmDeclaredRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionRate66 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateAndAmountFormat37Choice interest;
 	/**
 	 * Annual rate of a financial instrument.
 	 * <p>
@@ -104,8 +106,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#Interest
-	 * CashProceedsDefinition.Interest}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmInterest
+	 * CashProceedsDefinition.mmInterest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -125,26 +127,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#Interest
-	 * CorporateActionRate43.Interest}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmInterest
+	 * CorporateActionRate43.mmInterest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Interest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmInterest;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.Interest;
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Annual rate of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.Interest;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmInterest;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmountFormat37Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat37Choice.mmObject();
 		}
 	};
+	protected RateFormat7Choice percentageSought;
 	/**
 	 * Percentage of securities the offeror/issuer will purchase or redeem under
 	 * the terms of the event.
@@ -157,8 +160,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#PercentageSought
-	 * BiddingConditions.PercentageSought}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmPercentageSought
+	 * BiddingConditions.mmPercentageSought}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,26 +183,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#PercentageSought
-	 * CorporateActionRate43.PercentageSought}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmPercentageSought
+	 * CorporateActionRate43.mmPercentageSought}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PercentageSought = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPercentageSought = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmPercentageSought;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.PercentageSought;
 			isDerived = false;
 			xmlTag = "PctgSght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageSought";
 			definition = "Percentage of securities the offeror/issuer will purchase or redeem under the terms of the event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.PercentageSought;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmPercentageSought;
 			maxOccurs = 1;
-			type_lazy = () -> RateFormat7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateFormat7Choice.mmObject();
 		}
 	};
+	protected RateFormat3Choice relatedIndex;
 	/**
 	 * Index rate related to the interest rate of the forthcoming interest
 	 * payment.
@@ -212,8 +216,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#RelatedIndex
-	 * InterestCalculation.RelatedIndex}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRelatedIndex
+	 * InterestCalculation.mmRelatedIndex}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,26 +239,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#RelatedIndex
-	 * CorporateActionRate43.RelatedIndex}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmRelatedIndex
+	 * CorporateActionRate43.mmRelatedIndex}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedIndex = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRelatedIndex;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.RelatedIndex;
 			isDerived = false;
 			xmlTag = "RltdIndx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedIndex";
 			definition = "Index rate related to the interest rate of the forthcoming interest payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.RelatedIndex;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmRelatedIndex;
 			maxOccurs = 1;
-			type_lazy = () -> RateFormat3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateFormat3Choice.mmObject();
 		}
 	};
+	protected RateFormat3Choice spread;
 	/**
 	 * Margin allowed over or under a given rate.
 	 * <p>
@@ -266,8 +271,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Spread
-	 * Security.Spread}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSpread
+	 * Security.mmSpread}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,26 +292,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#Spread
-	 * CorporateActionRate43.Spread}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmSpread
+	 * CorporateActionRate43.mmSpread}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Spread = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSpread = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSpread;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Spread;
 			isDerived = false;
 			xmlTag = "Sprd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Margin allowed over or under a given rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.Spread;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmSpread;
 			maxOccurs = 1;
-			type_lazy = () -> RateFormat3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateFormat3Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat38Choice bidInterval;
 	/**
 	 * Acceptable price increment used for submitting a bid.
 	 * <p>
@@ -319,8 +325,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#BidInterval
-	 * BiddingConditions.BidInterval}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmBidInterval
+	 * BiddingConditions.mmBidInterval}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -340,26 +346,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#BidInterval
-	 * CorporateActionRate43.BidInterval}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmBidInterval
+	 * CorporateActionRate43.mmBidInterval}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BidInterval = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBidInterval = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmBidInterval;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.BidInterval;
 			isDerived = false;
 			xmlTag = "BidIntrvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidInterval";
 			definition = "Acceptable price increment used for submitting a bid.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.BidInterval;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmBidInterval;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmountFormat38Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat38Choice.mmObject();
 		}
 	};
+	protected RateFormat12Choice previousFactor;
 	/**
 	 * Factor used to calculate the value of the outstanding principal of the
 	 * financial instrument (for factored securities) until the next redemption
@@ -373,7 +380,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#Factor Debt.Factor}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmFactor Debt.mmFactor}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -395,26 +403,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#PreviousFactor
-	 * CorporateActionRate43.PreviousFactor}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmPreviousFactor
+	 * CorporateActionRate43.mmPreviousFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousFactor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousFactor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.Factor;
 			isDerived = false;
 			xmlTag = "PrvsFctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousFactor";
 			definition = "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) until the next redemption (factor) date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.PreviousFactor;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmPreviousFactor;
 			maxOccurs = 1;
-			type_lazy = () -> RateFormat12Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateFormat12Choice.mmObject();
 		}
 	};
+	protected RateFormat12Choice nextFactor;
 	/**
 	 * Factor used to calculate the value of the outstanding principal of the
 	 * financial instrument (for factored securities) that will applicable after
@@ -428,7 +437,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#Factor Debt.Factor}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmFactor Debt.mmFactor}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -450,26 +460,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#NextFactor
-	 * CorporateActionRate43.NextFactor}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmNextFactor
+	 * CorporateActionRate43.mmNextFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NextFactor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNextFactor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.Factor;
 			isDerived = false;
 			xmlTag = "NxtFctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
 			definition = "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) that will applicable after the redemption (factor) date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.NextFactor;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmNextFactor;
 			maxOccurs = 1;
-			type_lazy = () -> RateFormat12Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateFormat12Choice.mmObject();
 		}
 	};
+	protected RateFormat3Choice reinvestmentDiscountRateToMarket;
 	/**
 	 * Rate of discount for securities purchased through a reinvestment scheme
 	 * as compared to the current market price of security.
@@ -482,8 +493,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#ReinvestmentDiscountToMarket
-	 * SecuritiesProceedsDefinition.ReinvestmentDiscountToMarket}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmReinvestmentDiscountToMarket
+	 * SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -505,26 +516,27 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#ReinvestmentDiscountRateToMarket
-	 * CorporateActionRate43.ReinvestmentDiscountRateToMarket}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmReinvestmentDiscountRateToMarket
+	 * CorporateActionRate43.mmReinvestmentDiscountRateToMarket}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReinvestmentDiscountRateToMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReinvestmentDiscountRateToMarket = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.ReinvestmentDiscountToMarket;
 			isDerived = false;
 			xmlTag = "RinvstmtDscntRateToMkt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentDiscountRateToMarket";
 			definition = "Rate of discount for securities purchased through a reinvestment scheme as compared to the current market price of security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.ReinvestmentDiscountRateToMarket;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmReinvestmentDiscountRateToMarket;
 			maxOccurs = 1;
-			type_lazy = () -> RateFormat3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateFormat3Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat39Choice interestShortfall;
 	/**
 	 * For structured security issues where there is a set schedule of principal
 	 * and interest payments for the life of the issue, this is the difference
@@ -541,8 +553,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#InterestShortfall
-	 * Issuance.InterestShortfall}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmInterestShortfall
+	 * Issuance.mmInterestShortfall}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -564,25 +576,26 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#InterestShortfall
-	 * CorporateActionRate43.InterestShortfall}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmInterestShortfall
+	 * CorporateActionRate43.mmInterestShortfall}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestShortfall = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestShortfall = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmInterestShortfall;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.InterestShortfall;
 			isDerived = false;
 			xmlTag = "IntrstShrtfll";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestShortfall";
 			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment .";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.InterestShortfall;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmInterestShortfall;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat39Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat39Choice realisedLoss;
 	/**
 	 * For structured security issues where there is a set schedule of principal
 	 * and interest payments for the life of the issue, this is the difference
@@ -599,8 +612,8 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#RealisedLoss
-	 * Issuance.RealisedLoss}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmRealisedLoss
+	 * Issuance.mmRealisedLoss}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -622,25 +635,26 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#RealisedLoss
-	 * CorporateActionRate43.RealisedLoss}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmRealisedLoss
+	 * CorporateActionRate43.mmRealisedLoss}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RealisedLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRealisedLoss = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmRealisedLoss;
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.RealisedLoss;
 			isDerived = false;
 			xmlTag = "RealsdLoss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealisedLoss";
 			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the capital or principal repayment and the scheduled capital repayment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.RealisedLoss;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmRealisedLoss;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat39Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat39Choice declaredRate;
 	/**
 	 * Dividend or interest rate declared by the issuer.
 	 * <p>
@@ -670,11 +684,11 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#DeclaredRate
-	 * CorporateActionRate43.DeclaredRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmDeclaredRate
+	 * CorporateActionRate43.mmDeclaredRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclaredRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclaredRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRate66.mmObject();
 			isDerived = false;
@@ -682,9 +696,9 @@ public class CorporateActionRate66 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRate";
 			definition = "Dividend or interest rate declared by the issuer. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.DeclaredRate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate43.mmDeclaredRate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat39Choice.mmObject();
 		}
 	};
@@ -692,13 +706,13 @@ public class CorporateActionRate66 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate66.Interest, com.tools20022.repository.msg.CorporateActionRate66.PercentageSought,
-						com.tools20022.repository.msg.CorporateActionRate66.RelatedIndex, com.tools20022.repository.msg.CorporateActionRate66.Spread, com.tools20022.repository.msg.CorporateActionRate66.BidInterval,
-						com.tools20022.repository.msg.CorporateActionRate66.PreviousFactor, com.tools20022.repository.msg.CorporateActionRate66.NextFactor,
-						com.tools20022.repository.msg.CorporateActionRate66.ReinvestmentDiscountRateToMarket, com.tools20022.repository.msg.CorporateActionRate66.InterestShortfall,
-						com.tools20022.repository.msg.CorporateActionRate66.RealisedLoss, com.tools20022.repository.msg.CorporateActionRate66.DeclaredRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate66.mmInterest, com.tools20022.repository.msg.CorporateActionRate66.mmPercentageSought,
+						com.tools20022.repository.msg.CorporateActionRate66.mmRelatedIndex, com.tools20022.repository.msg.CorporateActionRate66.mmSpread, com.tools20022.repository.msg.CorporateActionRate66.mmBidInterval,
+						com.tools20022.repository.msg.CorporateActionRate66.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate66.mmNextFactor,
+						com.tools20022.repository.msg.CorporateActionRate66.mmReinvestmentDiscountRateToMarket, com.tools20022.repository.msg.CorporateActionRate66.mmInterestShortfall,
+						com.tools20022.repository.msg.CorporateActionRate66.mmRealisedLoss, com.tools20022.repository.msg.CorporateActionRate66.mmDeclaredRate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate66";
 				definition = "Specifies rates of a corporate action.";
@@ -706,5 +720,93 @@ public class CorporateActionRate66 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateAndAmountFormat37Choice getInterest() {
+		return interest;
+	}
+
+	public void setInterest(RateAndAmountFormat37Choice interest) {
+		this.interest = interest;
+	}
+
+	public RateFormat7Choice getPercentageSought() {
+		return percentageSought;
+	}
+
+	public void setPercentageSought(RateFormat7Choice percentageSought) {
+		this.percentageSought = percentageSought;
+	}
+
+	public RateFormat3Choice getRelatedIndex() {
+		return relatedIndex;
+	}
+
+	public void setRelatedIndex(RateFormat3Choice relatedIndex) {
+		this.relatedIndex = relatedIndex;
+	}
+
+	public RateFormat3Choice getSpread() {
+		return spread;
+	}
+
+	public void setSpread(RateFormat3Choice spread) {
+		this.spread = spread;
+	}
+
+	public RateAndAmountFormat38Choice getBidInterval() {
+		return bidInterval;
+	}
+
+	public void setBidInterval(RateAndAmountFormat38Choice bidInterval) {
+		this.bidInterval = bidInterval;
+	}
+
+	public RateFormat12Choice getPreviousFactor() {
+		return previousFactor;
+	}
+
+	public void setPreviousFactor(RateFormat12Choice previousFactor) {
+		this.previousFactor = previousFactor;
+	}
+
+	public RateFormat12Choice getNextFactor() {
+		return nextFactor;
+	}
+
+	public void setNextFactor(RateFormat12Choice nextFactor) {
+		this.nextFactor = nextFactor;
+	}
+
+	public RateFormat3Choice getReinvestmentDiscountRateToMarket() {
+		return reinvestmentDiscountRateToMarket;
+	}
+
+	public void setReinvestmentDiscountRateToMarket(RateFormat3Choice reinvestmentDiscountRateToMarket) {
+		this.reinvestmentDiscountRateToMarket = reinvestmentDiscountRateToMarket;
+	}
+
+	public RateAndAmountFormat39Choice getInterestShortfall() {
+		return interestShortfall;
+	}
+
+	public void setInterestShortfall(RateAndAmountFormat39Choice interestShortfall) {
+		this.interestShortfall = interestShortfall;
+	}
+
+	public RateAndAmountFormat39Choice getRealisedLoss() {
+		return realisedLoss;
+	}
+
+	public void setRealisedLoss(RateAndAmountFormat39Choice realisedLoss) {
+		this.realisedLoss = realisedLoss;
+	}
+
+	public RateAndAmountFormat39Choice getDeclaredRate() {
+		return declaredRate;
+	}
+
+	public void setDeclaredRate(RateAndAmountFormat39Choice declaredRate) {
+		this.declaredRate = declaredRate;
 	}
 }

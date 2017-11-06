@@ -31,6 +31,6 @@ public class DeriveMMBusinessAssociationEnd_memberType implements Function<MMBus
 	 */
 	@Override
 	public MMRepositoryType apply(MMBusinessAssociationEnd mmBean) {
-		throw new RuntimeException("Not implemented!");
+		return mmBean.getBusinessElementType();
 	}
 }

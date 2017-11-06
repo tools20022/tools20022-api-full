@@ -35,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountContract4#TargetClosingDate
- * AccountContract4.TargetClosingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountContract4#UrgencyFlag
- * AccountContract4.UrgencyFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountContract4#mmTargetClosingDate
+ * AccountContract4.mmTargetClosingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountContract4#mmUrgencyFlag
+ * AccountContract4.mmUrgencyFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountContract4#RemovalIndicator
- * AccountContract4.RemovalIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountContract4#mmRemovalIndicator
+ * AccountContract4.mmRemovalIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,24 +52,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01#ContractDates
- * AccountClosingAmendmentRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01#mmContractDates
+ * AccountClosingAmendmentRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02#ContractDates
- * AccountClosingAmendmentRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02#mmContractDates
+ * AccountClosingAmendmentRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#ContractDates
- * AccountClosingRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmContractDates
+ * AccountClosingRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#ContractDates
- * AccountClosingRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#mmContractDates
+ * AccountClosingRequestV02.mmContractDates}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountContract4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate targetClosingDate;
 	/**
 	 * Date on which the account and related services are expected to cease to
 	 * be operational for the account owner.
@@ -97,8 +98,8 @@ public class AccountContract4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#TargetClosingDate
-	 * AccountContract.TargetClosingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmTargetClosingDate
+	 * AccountContract.mmTargetClosingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,20 +120,21 @@ public class AccountContract4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TargetClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTargetClosingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTargetClosingDate;
 			componentContext_lazy = () -> AccountContract4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.TargetClosingDate;
 			isDerived = false;
 			xmlTag = "TrgtClsgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetClosingDate";
 			definition = "Date on which the account and related services are expected to cease to be operational for the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected YesNoIndicator urgencyFlag;
 	/**
 	 * Indicator that the account opening/maintenance/closing process needs to
 	 * be treated urgently, that is, sooner than the terms established by the
@@ -149,8 +151,8 @@ public class AccountContract4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#UrgencyFlag
-	 * AccountContract.UrgencyFlag}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmUrgencyFlag
+	 * AccountContract.mmUrgencyFlag}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,20 +173,21 @@ public class AccountContract4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UrgencyFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUrgencyFlag = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmUrgencyFlag;
 			componentContext_lazy = () -> AccountContract4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.UrgencyFlag;
 			isDerived = false;
 			xmlTag = "UrgcyFlg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgencyFlag";
 			definition = "Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator removalIndicator;
 	/**
 	 * Indicates removal of the account. After removal, an account will not
 	 * appear anymore in reports.
@@ -199,8 +202,8 @@ public class AccountContract4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#RemovalIndicator
-	 * AccountContract.RemovalIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmRemovalIndicator
+	 * AccountContract.mmRemovalIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,17 +224,17 @@ public class AccountContract4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemovalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemovalIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmRemovalIndicator;
 			componentContext_lazy = () -> AccountContract4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.RemovalIndicator;
 			isDerived = false;
 			xmlTag = "RmvlInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemovalIndicator";
 			definition = "Indicates removal of the account. After removal, an account will not appear anymore in reports.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -239,17 +242,41 @@ public class AccountContract4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.TargetClosingDate, com.tools20022.repository.msg.AccountContract4.UrgencyFlag,
-						com.tools20022.repository.msg.AccountContract4.RemovalIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.mmTargetClosingDate, com.tools20022.repository.msg.AccountContract4.mmUrgencyFlag,
+						com.tools20022.repository.msg.AccountContract4.mmRemovalIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmContractDates, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmContractDates, com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmContractDates);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.ContractDates, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.ContractDates,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.ContractDates, com.tools20022.repository.area.acmt.AccountClosingRequestV02.ContractDates);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountContract4";
 				definition = "Specifies target dates dates related to account opening and closing.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getTargetClosingDate() {
+		return targetClosingDate;
+	}
+
+	public void setTargetClosingDate(ISODate targetClosingDate) {
+		this.targetClosingDate = targetClosingDate;
+	}
+
+	public YesNoIndicator getUrgencyFlag() {
+		return urgencyFlag;
+	}
+
+	public void setUrgencyFlag(YesNoIndicator urgencyFlag) {
+		this.urgencyFlag = urgencyFlag;
+	}
+
+	public YesNoIndicator getRemovalIndicator() {
+		return removalIndicator;
+	}
+
+	public void setRemovalIndicator(YesNoIndicator removalIndicator) {
+		this.removalIndicator = removalIndicator;
 	}
 }

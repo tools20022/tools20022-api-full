@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CancellationReason18#Code
- * CancellationReason18.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CancellationReason18#mmCode
+ * CancellationReason18.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationReason18#AdditionalReasonInformation
- * CancellationReason18.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationReason18#mmAdditionalReasonInformation
+ * CancellationReason18.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationReason18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationReason28Choice code;
 	/**
 	 * Specifies the reason why the instruction is cancelled.
 	 * <p>
@@ -77,8 +78,8 @@ public class CancellationReason18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,21 +98,22 @@ public class CancellationReason18 {
 	 * definition} = "Specifies the reason why the instruction is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancellationReason18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction is cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationReason28Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CancellationReason28Choice.mmObject();
 		}
 	};
+	protected RestrictedFINXMax210Text additionalReasonInformation;
 	/**
 	 * Provides additional reason information that cannot be provided in a
 	 * structured field.
@@ -126,8 +128,8 @@ public class CancellationReason18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class CancellationReason18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> CancellationReason18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional reason information that cannot be provided in a structured field.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class CancellationReason18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReason18.Code, com.tools20022.repository.msg.CancellationReason18.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReason18.mmCode, com.tools20022.repository.msg.CancellationReason18.mmAdditionalReasonInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationReason18";
 				definition = "Specifies the reason why the instruction or request is cancelled.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationReason28Choice getCode() {
+		return code;
+	}
+
+	public void setCode(CancellationReason28Choice code) {
+		this.code = code;
+	}
+
+	public RestrictedFINXMax210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(RestrictedFINXMax210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

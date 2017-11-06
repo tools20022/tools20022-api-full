@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StampDutyType1FormatChoice#Code
- * StampDutyType1FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.StampDutyType1FormatChoice#mmCode
+ * StampDutyType1FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StampDutyType1FormatChoice#Proprietary
- * StampDutyType1FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.StampDutyType1FormatChoice#mmProprietary
+ * StampDutyType1FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StampDutyType1FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StampDutyType1Code code;
 	/**
 	 * Standard code to specify the stamp duty information.
 	 * <p>
@@ -76,8 +77,8 @@ public class StampDutyType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#StampDutyType
-	 * SecuritiesTax.StampDutyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyType
+	 * SecuritiesTax.mmStampDutyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class StampDutyType1FormatChoice {
 	 * definition} = "Standard code to specify the stamp duty information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> StampDutyType1FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.StampDutyType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the stamp duty information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StampDutyType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the stamp duty information.
 	 * <p>
@@ -123,8 +125,8 @@ public class StampDutyType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#StampDutyType
-	 * SecuritiesTax.StampDutyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyType
+	 * SecuritiesTax.mmStampDutyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class StampDutyType1FormatChoice {
 	 * definition} = "Proprietary code to express the stamp duty information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> StampDutyType1FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.StampDutyType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to express the stamp duty information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class StampDutyType1FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StampDutyType1FormatChoice.Code, com.tools20022.repository.choice.StampDutyType1FormatChoice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StampDutyType1FormatChoice.mmCode, com.tools20022.repository.choice.StampDutyType1FormatChoice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StampDutyType1FormatChoice";
 				definition = "Choice of formats to express the stamp duty information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StampDutyType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(StampDutyType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

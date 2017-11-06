@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus5Choice#Code
- * SettlementStatus5Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus5Choice#mmCode
+ * SettlementStatus5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus5Choice#Proprietary
- * SettlementStatus5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus5Choice#mmProprietary
+ * SettlementStatus5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementStatus5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesSettlementStatus2Code code;
 	/**
 	 * Provides the status of settlement of an instruction/financial instrument
 	 * movement.
@@ -85,8 +86,8 @@ public class SettlementStatus5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#SettlementStatus
-	 * Status.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
+	 * Status.mmSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +110,28 @@ public class SettlementStatus5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementStatus19Choice#Code
-	 * SettlementStatus19Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus19Choice#mmCode
+	 * SettlementStatus19Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
 			componentContext_lazy = () -> SettlementStatus5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.SettlementStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of settlement of an instruction/financial instrument movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus19Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus19Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesSettlementStatus2Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Provides the status of settlement of an instruction/financial instrument
 	 * movement.
@@ -143,8 +145,8 @@ public class SettlementStatus5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#SettlementStatus
-	 * Status.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
+	 * Status.mmSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,35 +169,35 @@ public class SettlementStatus5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementStatus19Choice#Proprietary
-	 * SettlementStatus19Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus19Choice#mmProprietary
+	 * SettlementStatus19Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
 			componentContext_lazy = () -> SettlementStatus5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.SettlementStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of settlement of an instruction/financial instrument movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus19Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus19Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus5Choice.Code, com.tools20022.repository.choice.SettlementStatus5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus5Choice.mmCode, com.tools20022.repository.choice.SettlementStatus5Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus5Choice";
 				definition = "Choice of format for the settlement status.";
@@ -203,5 +205,21 @@ public class SettlementStatus5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesSettlementStatus2Code getCode() {
+		return code;
+	}
+
+	public void setCode(SecuritiesSettlementStatus2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

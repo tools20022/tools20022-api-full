@@ -32,28 +32,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#Payment
- * IsabelHeader2Choice.Payment}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#Report
- * IsabelHeader2Choice.Report}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#Query
- * IsabelHeader2Choice.Query}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#QueryResponse
- * IsabelHeader2Choice.QueryResponse}</li>
+ * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#mmPayment
+ * IsabelHeader2Choice.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#Notification
- * IsabelHeader2Choice.Notification}</li>
+ * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#mmReport
+ * IsabelHeader2Choice.mmReport}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#mmQuery
+ * IsabelHeader2Choice.mmQuery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#Administration
- * IsabelHeader2Choice.Administration}</li>
+ * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#mmQueryResponse
+ * IsabelHeader2Choice.mmQueryResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#mmNotification
+ * IsabelHeader2Choice.mmNotification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IsabelHeader2Choice#mmAdministration
+ * IsabelHeader2Choice.mmAdministration}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelHeader2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IsabelPaymentHeader2 payment;
 	/**
 	 * File provided in the payload contains payment initiation requests.
 	 * <p>
@@ -94,7 +97,7 @@ public class IsabelHeader2Choice {
 	 * "File provided in the payload contains payment initiation requests."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Payment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -102,12 +105,13 @@ public class IsabelHeader2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "File provided in the payload contains payment initiation requests.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelPaymentHeader2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelPaymentHeader2.mmObject();
 		}
 	};
+	protected IsabelReportHeader3 report;
 	/**
 	 * File provided in the payload contains reporting data.
 	 * <p>
@@ -134,7 +138,7 @@ public class IsabelHeader2Choice {
 	 * definition} = "File provided in the payload contains reporting data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Report = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -142,12 +146,13 @@ public class IsabelHeader2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "File provided in the payload contains reporting data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelReportHeader3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelReportHeader3.mmObject();
 		}
 	};
+	protected IsabelQueryHeader1 query;
 	/**
 	 * File provided in the payload contains query data, as part of the
 	 * RequestForReponse data flow.
@@ -177,7 +182,7 @@ public class IsabelHeader2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Query = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuery = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -185,12 +190,13 @@ public class IsabelHeader2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Query";
 			definition = "File provided in the payload contains query data, as part of the RequestForReponse data flow.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelQueryHeader1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelQueryHeader1.mmObject();
 		}
 	};
+	protected IsabelReportHeader4 queryResponse;
 	/**
 	 * File provided in the payload contains in response to an original query,
 	 * as part of the RequestForReponse<br>
@@ -221,7 +227,7 @@ public class IsabelHeader2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QueryResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQueryResponse = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -229,12 +235,13 @@ public class IsabelHeader2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryResponse";
 			definition = "File provided in the payload contains in response to an original query, as part of the RequestForReponse\r\ndata flow.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelReportHeader4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelReportHeader4.mmObject();
 		}
 	};
+	protected IsabelNotificationHeader2 notification;
 	/**
 	 * File provided in the payload contains ISANot instances.
 	 * <p>
@@ -262,7 +269,7 @@ public class IsabelHeader2Choice {
 	 * definition} = "File provided in the payload contains ISANot instances."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Notification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNotification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -270,12 +277,13 @@ public class IsabelHeader2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notification";
 			definition = "File provided in the payload contains ISANot instances.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelNotificationHeader2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelNotificationHeader2.mmObject();
 		}
 	};
+	protected IsabelAdminHeader2 administration;
 	/**
 	 * File provided in the payload contains administrative instances.
 	 * <p>
@@ -303,7 +311,7 @@ public class IsabelHeader2Choice {
 	 * "File provided in the payload contains administrative instances."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Administration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdministration = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -311,25 +319,73 @@ public class IsabelHeader2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Administration";
 			definition = "File provided in the payload contains administrative instances.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelAdminHeader2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelAdminHeader2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelHeader2Choice.Payment, com.tools20022.repository.choice.IsabelHeader2Choice.Report,
-						com.tools20022.repository.choice.IsabelHeader2Choice.Query, com.tools20022.repository.choice.IsabelHeader2Choice.QueryResponse, com.tools20022.repository.choice.IsabelHeader2Choice.Notification,
-						com.tools20022.repository.choice.IsabelHeader2Choice.Administration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelHeader2Choice.mmPayment, com.tools20022.repository.choice.IsabelHeader2Choice.mmReport,
+						com.tools20022.repository.choice.IsabelHeader2Choice.mmQuery, com.tools20022.repository.choice.IsabelHeader2Choice.mmQueryResponse, com.tools20022.repository.choice.IsabelHeader2Choice.mmNotification,
+						com.tools20022.repository.choice.IsabelHeader2Choice.mmAdministration);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelHeader2Choice";
 				definition = "Specifies the type of file provided in the payload.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IsabelPaymentHeader2 getPayment() {
+		return payment;
+	}
+
+	public void setPayment(IsabelPaymentHeader2 payment) {
+		this.payment = payment;
+	}
+
+	public IsabelReportHeader3 getReport() {
+		return report;
+	}
+
+	public void setReport(IsabelReportHeader3 report) {
+		this.report = report;
+	}
+
+	public IsabelQueryHeader1 getQuery() {
+		return query;
+	}
+
+	public void setQuery(IsabelQueryHeader1 query) {
+		this.query = query;
+	}
+
+	public IsabelReportHeader4 getQueryResponse() {
+		return queryResponse;
+	}
+
+	public void setQueryResponse(IsabelReportHeader4 queryResponse) {
+		this.queryResponse = queryResponse;
+	}
+
+	public IsabelNotificationHeader2 getNotification() {
+		return notification;
+	}
+
+	public void setNotification(IsabelNotificationHeader2 notification) {
+		this.notification = notification;
+	}
+
+	public IsabelAdminHeader2 getAdministration() {
+		return administration;
+	}
+
+	public void setAdministration(IsabelAdminHeader2 administration) {
+		this.administration = administration;
 	}
 }

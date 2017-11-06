@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#NewPriceReport
- * PriceReportFunctionCode.NewPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#mmNewPriceReport
+ * PriceReportFunctionCode.mmNewPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#CompleteReplacementPriceReport
- * PriceReportFunctionCode.CompleteReplacementPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#mmCompleteReplacementPriceReport
+ * PriceReportFunctionCode.mmCompleteReplacementPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#PartialCorrectionPriceReport
- * PriceReportFunctionCode.PartialCorrectionPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#mmPartialCorrectionPriceReport
+ * PriceReportFunctionCode.mmPartialCorrectionPriceReport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class PriceReportFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NewPriceReport = new MMCode() {
+	public static final MMCode mmNewPriceReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReport";
@@ -128,7 +128,7 @@ public class PriceReportFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CompleteReplacementPriceReport = new MMCode() {
+	public static final MMCode mmCompleteReplacementPriceReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteReplacementPriceReport";
@@ -161,7 +161,7 @@ public class PriceReportFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartialCorrectionPriceReport = new MMCode() {
+	public static final MMCode mmPartialCorrectionPriceReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialCorrectionPriceReport";
@@ -174,13 +174,13 @@ public class PriceReportFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceReportFunctionCode";
 				definition = "Specifies the function of the price report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunctionCode.NewPriceReport, com.tools20022.repository.codeset.PriceReportFunctionCode.CompleteReplacementPriceReport,
-						com.tools20022.repository.codeset.PriceReportFunctionCode.PartialCorrectionPriceReport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunctionCode.mmNewPriceReport, com.tools20022.repository.codeset.PriceReportFunctionCode.mmCompleteReplacementPriceReport,
+						com.tools20022.repository.codeset.PriceReportFunctionCode.mmPartialCorrectionPriceReport);
 				derivation_lazy = () -> Arrays.asList(PriceReportFunction1Code.mmObject());
 			}
 		});

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the details relative to the submission of a data set.
@@ -32,8 +33,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission2#Submitter
- * RequiredSubmission2.Submitter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission2#mmSubmitter
+ * RequiredSubmission2.mmSubmitter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -42,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequiredSubmission2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.BICIdentification1> submitter;
 	/**
 	 * Specifies with party(ies) is authorised to submit the data set as part of
 	 * the transaction.
@@ -70,8 +73,8 @@ public class RequiredSubmission2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,32 +95,40 @@ public class RequiredSubmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Submitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> RequiredSubmission2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "Submitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies with party(ies) is authorised to submit the data set as part of the transaction.";
 			minOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission2.Submitter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission2.mmSubmitter);
 				trace_lazy = () -> SubmittingPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequiredSubmission2";
 				definition = "Specifies the details relative to the submission of a data set.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BICIdentification1> getSubmitter() {
+		return submitter;
+	}
+
+	public void setSubmitter(List<com.tools20022.repository.msg.BICIdentification1> submitter) {
+		this.submitter = submitter;
 	}
 }

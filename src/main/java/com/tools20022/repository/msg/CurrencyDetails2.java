@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#AlphaCode
- * CurrencyDetails2.AlphaCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#NumericCode
- * CurrencyDetails2.NumericCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#Decimal
- * CurrencyDetails2.Decimal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#Name
- * CurrencyDetails2.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmAlphaCode
+ * CurrencyDetails2.mmAlphaCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmNumericCode
+ * CurrencyDetails2.mmNumericCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmDecimal
+ * CurrencyDetails2.mmDecimal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmName
+ * CurrencyDetails2.mmName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyCode alphaCode;
 	/**
 	 * Alpha currency code (ISO 4217, 3 alphanumeric characters).
 	 * <p>
@@ -96,11 +97,11 @@ public class CurrencyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#AlphaCode
-	 * CurrencyDetails1.AlphaCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#mmAlphaCode
+	 * CurrencyDetails1.mmAlphaCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlphaCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlphaCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -108,12 +109,13 @@ public class CurrencyDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlphaCode";
 			definition = "Alpha currency code (ISO 4217, 3 alphanumeric characters).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.AlphaCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmAlphaCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected Exact3NumericText numericCode;
 	/**
 	 * Numeric currency code (ISO 4217, 3 numeric characters).
 	 * <p>
@@ -143,11 +145,11 @@ public class CurrencyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#NumericCode
-	 * CurrencyDetails1.NumericCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#mmNumericCode
+	 * CurrencyDetails1.mmNumericCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumericCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumericCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -155,12 +157,13 @@ public class CurrencyDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumericCode";
 			definition = "Numeric currency code (ISO 4217, 3 numeric characters).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.NumericCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmNumericCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected Number decimal;
 	/**
 	 * Maximal number of digits after the decimal separator for the currency.
 	 * <p>
@@ -190,11 +193,11 @@ public class CurrencyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#Decimal
-	 * CurrencyDetails1.Decimal}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#mmDecimal
+	 * CurrencyDetails1.mmDecimal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Decimal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDecimal = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -202,12 +205,13 @@ public class CurrencyDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decimal";
 			definition = "Maximal number of digits after the decimal separator for the currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.Decimal;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmDecimal;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35Text name;
 	/**
 	 * Full name of the currency.
 	 * <p>
@@ -236,11 +240,11 @@ public class CurrencyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#Name
-	 * CurrencyDetails1.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails1#mmName
+	 * CurrencyDetails1.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -248,9 +252,9 @@ public class CurrencyDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Full name of the currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.Name;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -258,9 +262,9 @@ public class CurrencyDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails2.AlphaCode, com.tools20022.repository.msg.CurrencyDetails2.NumericCode, com.tools20022.repository.msg.CurrencyDetails2.Decimal,
-						com.tools20022.repository.msg.CurrencyDetails2.Name);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails2.mmAlphaCode, com.tools20022.repository.msg.CurrencyDetails2.mmNumericCode, com.tools20022.repository.msg.CurrencyDetails2.mmDecimal,
+						com.tools20022.repository.msg.CurrencyDetails2.mmName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDetails2";
 				definition = "Details of a currency.";
@@ -268,5 +272,37 @@ public class CurrencyDetails2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyCode getAlphaCode() {
+		return alphaCode;
+	}
+
+	public void setAlphaCode(ActiveCurrencyCode alphaCode) {
+		this.alphaCode = alphaCode;
+	}
+
+	public Exact3NumericText getNumericCode() {
+		return numericCode;
+	}
+
+	public void setNumericCode(Exact3NumericText numericCode) {
+		this.numericCode = numericCode;
+	}
+
+	public Number getDecimal() {
+		return decimal;
+	}
+
+	public void setDecimal(Number decimal) {
+		this.decimal = decimal;
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
 	}
 }

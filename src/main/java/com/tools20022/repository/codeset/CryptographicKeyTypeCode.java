@@ -30,56 +30,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#DES
- * CryptographicKeyTypeCode.DES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmDES
+ * CryptographicKeyTypeCode.mmDES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#AES
- * CryptographicKeyTypeCode.AES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmAES
+ * CryptographicKeyTypeCode.mmAES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#RSA
- * CryptographicKeyTypeCode.RSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmRSA
+ * CryptographicKeyTypeCode.mmRSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#ECC
- * CryptographicKeyTypeCode.ECC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmECC
+ * CryptographicKeyTypeCode.mmECC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#AES128
- * CryptographicKeyTypeCode.AES128}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmAES128
+ * CryptographicKeyTypeCode.mmAES128}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#DES112
- * CryptographicKeyTypeCode.DES112}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmDES112
+ * CryptographicKeyTypeCode.mmDES112}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#DUKPT2009
- * CryptographicKeyTypeCode.DUKPT2009}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmDUKPT2009
+ * CryptographicKeyTypeCode.mmDUKPT2009}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#AES192
- * CryptographicKeyTypeCode.AES192}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmAES192
+ * CryptographicKeyTypeCode.mmAES192}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#AES256
- * CryptographicKeyTypeCode.AES256}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmAES256
+ * CryptographicKeyTypeCode.mmAES256}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#DES168
- * CryptographicKeyTypeCode.DES168}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmDES168
+ * CryptographicKeyTypeCode.mmDES168}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#Application
- * CryptographicKeyTypeCode.Application}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmApplication
+ * CryptographicKeyTypeCode.mmApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#Dynamic
- * CryptographicKeyTypeCode.Dynamic}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmDynamic
+ * CryptographicKeyTypeCode.mmDynamic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#Data
- * CryptographicKeyTypeCode.Data}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmData
+ * CryptographicKeyTypeCode.mmData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#KeyEncryption
- * CryptographicKeyTypeCode.KeyEncryption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmKeyEncryption
+ * CryptographicKeyTypeCode.mmKeyEncryption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#Working
- * CryptographicKeyTypeCode.Working}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmWorking
+ * CryptographicKeyTypeCode.mmWorking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#PIN
- * CryptographicKeyTypeCode.PIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmPIN
+ * CryptographicKeyTypeCode.mmPIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#MAC
- * CryptographicKeyTypeCode.MAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode#mmMAC
+ * CryptographicKeyTypeCode.mmMAC}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -98,8 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -140,7 +140,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Data encryption standard."</li>
 	 * </ul>
 	 */
-	public static final MMCode DES = new MMCode() {
+	public static final MMCode mmDES = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DES";
@@ -170,7 +170,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Advanced encryption standard."</li>
 	 * </ul>
 	 */
-	public static final MMCode AES = new MMCode() {
+	public static final MMCode mmAES = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AES";
@@ -200,7 +200,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Rivest, Shamir and Adleman."</li>
 	 * </ul>
 	 */
-	public static final MMCode RSA = new MMCode() {
+	public static final MMCode mmRSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RSA";
@@ -230,7 +230,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Elliptic-curve cryptography."</li>
 	 * </ul>
 	 */
-	public static final MMCode ECC = new MMCode() {
+	public static final MMCode mmECC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ECC";
@@ -264,7 +264,7 @@ public class CryptographicKeyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AES128 = new MMCode() {
+	public static final MMCode mmAES128 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AES128";
@@ -295,7 +295,7 @@ public class CryptographicKeyTypeCode {
 	 * "Data encryption standard key of 112 bits (without the parity bits)."</li>
 	 * </ul>
 	 */
-	public static final MMCode DES112 = new MMCode() {
+	public static final MMCode mmDES112 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DES112";
@@ -328,7 +328,7 @@ public class CryptographicKeyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DUKPT2009 = new MMCode() {
+	public static final MMCode mmDUKPT2009 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DUKPT2009";
@@ -362,7 +362,7 @@ public class CryptographicKeyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AES192 = new MMCode() {
+	public static final MMCode mmAES192 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES192";
@@ -396,7 +396,7 @@ public class CryptographicKeyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AES256 = new MMCode() {
+	public static final MMCode mmAES256 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES256";
@@ -427,7 +427,7 @@ public class CryptographicKeyTypeCode {
 	 * "Data encryption standard key of 168 bits (without the parity bits)."</li>
 	 * </ul>
 	 */
-	public static final MMCode DES168 = new MMCode() {
+	public static final MMCode mmDES168 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES168";
@@ -457,7 +457,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Key used to protect application information."</li>
 	 * </ul>
 	 */
-	public static final MMCode Application = new MMCode() {
+	public static final MMCode mmApplication = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Application";
@@ -487,7 +487,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Any cryptographic key that can be downloaded."</li>
 	 * </ul>
 	 */
-	public static final MMCode Dynamic = new MMCode() {
+	public static final MMCode mmDynamic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dynamic";
@@ -517,7 +517,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Key used to protect data in the messages."</li>
 	 * </ul>
 	 */
-	public static final MMCode Data = new MMCode() {
+	public static final MMCode mmData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
@@ -547,7 +547,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Key used to encrypt other keys."</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyEncryption = new MMCode() {
+	public static final MMCode mmKeyEncryption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryption";
@@ -577,7 +577,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Temporary key used to download keys."</li>
 	 * </ul>
 	 */
-	public static final MMCode Working = new MMCode() {
+	public static final MMCode mmWorking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Working";
@@ -607,7 +607,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Key used to encrypt a PIN."</li>
 	 * </ul>
 	 */
-	public static final MMCode PIN = new MMCode() {
+	public static final MMCode mmPIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PIN";
@@ -637,7 +637,7 @@ public class CryptographicKeyTypeCode {
 	 * definition} = "Key used to generate the MAC of a message."</li>
 	 * </ul>
 	 */
-	public static final MMCode MAC = new MMCode() {
+	public static final MMCode mmMAC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MAC";
@@ -650,17 +650,17 @@ public class CryptographicKeyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DESC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyTypeCode";
 				definition = "Type of algorithm used by the cryptographic key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyTypeCode.DES, com.tools20022.repository.codeset.CryptographicKeyTypeCode.AES, com.tools20022.repository.codeset.CryptographicKeyTypeCode.RSA,
-						com.tools20022.repository.codeset.CryptographicKeyTypeCode.ECC, com.tools20022.repository.codeset.CryptographicKeyTypeCode.AES128, com.tools20022.repository.codeset.CryptographicKeyTypeCode.DES112,
-						com.tools20022.repository.codeset.CryptographicKeyTypeCode.DUKPT2009, com.tools20022.repository.codeset.CryptographicKeyTypeCode.AES192, com.tools20022.repository.codeset.CryptographicKeyTypeCode.AES256,
-						com.tools20022.repository.codeset.CryptographicKeyTypeCode.DES168, com.tools20022.repository.codeset.CryptographicKeyTypeCode.Application, com.tools20022.repository.codeset.CryptographicKeyTypeCode.Dynamic,
-						com.tools20022.repository.codeset.CryptographicKeyTypeCode.Data, com.tools20022.repository.codeset.CryptographicKeyTypeCode.KeyEncryption, com.tools20022.repository.codeset.CryptographicKeyTypeCode.Working,
-						com.tools20022.repository.codeset.CryptographicKeyTypeCode.PIN, com.tools20022.repository.codeset.CryptographicKeyTypeCode.MAC);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmDES, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmAES,
+						com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmRSA, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmECC, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmAES128,
+						com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmDES112, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmDUKPT2009, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmAES192,
+						com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmAES256, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmDES168, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmApplication,
+						com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmDynamic, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmData, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmKeyEncryption,
+						com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmWorking, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmPIN, com.tools20022.repository.codeset.CryptographicKeyTypeCode.mmMAC);
 				derivation_lazy = () -> Arrays.asList(CryptographicKeyType1Code.mmObject(), CryptographicKeyType2Code.mmObject(), CryptographicKeyType3Code.mmObject(), CryptographicKeyType4Code.mmObject());
 			}
 		});

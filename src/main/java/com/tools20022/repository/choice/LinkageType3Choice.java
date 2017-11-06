@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.LinkageType3Choice#Code
- * LinkageType3Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LinkageType3Choice#mmCode
+ * LinkageType3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LinkageType3Choice#Proprietary
- * LinkageType3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.LinkageType3Choice#mmProprietary
+ * LinkageType3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LinkageType3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected LinkageType1Code code;
 	/**
 	 * Linkage type expressed as an ISO 20022 code.
 	 * <p>
@@ -91,11 +92,11 @@ public class LinkageType3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.LinkageType1Choice#Code
-	 * LinkageType1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.LinkageType1Choice#mmCode
+	 * LinkageType1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LinkageType3Choice.mmObject();
 			isDerived = false;
@@ -103,12 +104,13 @@ public class LinkageType3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Linkage type expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkageType1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkageType1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LinkageType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Linkage type expressed as a proprietary code.
 	 * <p>
@@ -138,11 +140,11 @@ public class LinkageType3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.LinkageType1Choice#Proprietary
-	 * LinkageType1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.LinkageType1Choice#mmProprietary
+	 * LinkageType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LinkageType3Choice.mmObject();
 			isDerived = false;
@@ -150,9 +152,9 @@ public class LinkageType3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Linkage type expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkageType1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkageType1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -160,8 +162,8 @@ public class LinkageType3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkageType3Choice.Code, com.tools20022.repository.choice.LinkageType3Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkageType3Choice.mmCode, com.tools20022.repository.choice.LinkageType3Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LinkageType3Choice";
 				definition = "Choice of format for the linkage type.";
@@ -169,5 +171,21 @@ public class LinkageType3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LinkageType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(LinkageType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

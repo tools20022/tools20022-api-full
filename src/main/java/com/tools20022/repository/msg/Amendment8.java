@@ -35,15 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Amendment8#Identification
- * Amendment8.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Amendment8#SequenceNumber
- * Amendment8.SequenceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amendment8#mmIdentification
+ * Amendment8.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amendment8#mmSequenceNumber
+ * Amendment8.mmSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment8#BeneficiaryReferenceNumber
- * Amendment8.BeneficiaryReferenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Amendment8#Issuer
- * Amendment8.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment8#mmBeneficiaryReferenceNumber
+ * Amendment8.mmBeneficiaryReferenceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amendment8#mmIssuer
+ * Amendment8.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Amendment8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identifier assigned by the issuer to the
 	 * undertaking, for example the guarantee or standby number.
@@ -80,8 +81,8 @@ public class Amendment8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#AmendmentIdentification
-	 * AmendmentOfUndertaking.AmendmentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmAmendmentIdentification
+	 * AmendmentOfUndertaking.mmAmendmentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Amendment8
@@ -101,20 +102,21 @@ public class Amendment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmAmendmentIdentification;
 			componentContext_lazy = () -> Amendment8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.AmendmentIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the issuer to the undertaking, for example the guarantee or standby number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText sequenceNumber;
 	/**
 	 * Sequence number assigned by the issuer to each amendment of the
 	 * undertaking.
@@ -145,7 +147,7 @@ public class Amendment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amendment8.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class Amendment8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Sequence number assigned by the issuer to each amendment of the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max35Text beneficiaryReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the beneficiary to the
 	 * undertaking.
@@ -187,7 +190,7 @@ public class Amendment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficiaryReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficiaryReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amendment8.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class Amendment8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the beneficiary to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification43 issuer;
 	/**
 	 * Party that issues the undertaking.
 	 * <p>
@@ -211,8 +215,8 @@ public class Amendment8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Amendment8
@@ -230,34 +234,66 @@ public class Amendment8 {
 	 * definition} = "Party that issues the undertaking. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Amendment8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issues the undertaking. ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment8.Identification, com.tools20022.repository.msg.Amendment8.SequenceNumber,
-						com.tools20022.repository.msg.Amendment8.BeneficiaryReferenceNumber, com.tools20022.repository.msg.Amendment8.Issuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment8.mmIdentification, com.tools20022.repository.msg.Amendment8.mmSequenceNumber,
+						com.tools20022.repository.msg.Amendment8.mmBeneficiaryReferenceNumber, com.tools20022.repository.msg.Amendment8.mmIssuer);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Amendment8";
 				definition = "Amendment identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max4AlphaNumericText getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(Max4AlphaNumericText sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	public Max35Text getBeneficiaryReferenceNumber() {
+		return beneficiaryReferenceNumber;
+	}
+
+	public void setBeneficiaryReferenceNumber(Max35Text beneficiaryReferenceNumber) {
+		this.beneficiaryReferenceNumber = beneficiaryReferenceNumber;
+	}
+
+	public PartyIdentification43 getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
+		this.issuer = issuer;
 	}
 }

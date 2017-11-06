@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#USLegal144A
- * OwnershipLegalRestrictions1Code.USLegal144A}</li>
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#mmUSLegal144A
+ * OwnershipLegalRestrictions1Code.mmUSLegal144A}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#NoRestrictions
- * OwnershipLegalRestrictions1Code.NoRestrictions}</li>
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#mmNoRestrictions
+ * OwnershipLegalRestrictions1Code.mmNoRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#Restrictions
- * OwnershipLegalRestrictions1Code.Restrictions}</li>
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#mmRestrictions
+ * OwnershipLegalRestrictions1Code.mmRestrictions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 * name} = "USLegal144A"</li>
 	 * </ul>
 	 */
-	public static final MMCode USLegal144A = new MMCode() {
+	public static final MMCode mmUSLegal144A = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USLegal144A";
@@ -109,7 +109,7 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 * name} = "NoRestrictions"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoRestrictions = new MMCode() {
+	public static final MMCode mmNoRestrictions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRestrictions";
@@ -132,7 +132,7 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 * name} = "Restrictions"</li>
 	 * </ul>
 	 */
-	public static final MMCode Restrictions = new MMCode() {
+	public static final MMCode mmRestrictions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restrictions";
@@ -143,13 +143,13 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("A144");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OwnershipLegalRestrictions1Code";
 				definition = "Specifies the regulatory restrictions applicable to a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.USLegal144A, com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.NoRestrictions,
-						com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.Restrictions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmUSLegal144A, com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmNoRestrictions,
+						com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmRestrictions);
 				trace_lazy = () -> OwnershipLegalRestrictionsCode.mmObject();
 			}
 		});

@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType44Code#UreaAndAmmoniumNitrite
- * AssetClassSubProductType44Code.UreaAndAmmoniumNitrite}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType44Code#mmUreaAndAmmoniumNitrite
+ * AssetClassSubProductType44Code.mmUreaAndAmmoniumNitrite}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType44Code extends AssetClassSubProductTypeCode
 	 * name} = "UreaAndAmmoniumNitrite"</li>
 	 * </ul>
 	 */
-	public static final MMCode UreaAndAmmoniumNitrite = new MMCode() {
+	public static final MMCode mmUreaAndAmmoniumNitrite = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UreaAndAmmoniumNitrite";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType44Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType44Code";
 				definition = "Defines the sub-product of type Urea and Ammonium Nitrate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType44Code.UreaAndAmmoniumNitrite);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType44Code.mmUreaAndAmmoniumNitrite);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

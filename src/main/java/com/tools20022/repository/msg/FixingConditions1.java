@@ -37,25 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FixingConditions1#TradeDate
- * FixingConditions1.TradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FixingConditions1#mmTradeDate
+ * FixingConditions1.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FixingConditions1#OriginatorReference
- * FixingConditions1.OriginatorReference}</li>
+ * {@linkplain com.tools20022.repository.msg.FixingConditions1#mmOriginatorReference
+ * FixingConditions1.mmOriginatorReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FixingConditions1#CommonReference
- * FixingConditions1.CommonReference}</li>
+ * {@linkplain com.tools20022.repository.msg.FixingConditions1#mmCommonReference
+ * FixingConditions1.mmCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FixingConditions1#RelatedReference
- * FixingConditions1.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.FixingConditions1#mmRelatedReference
+ * FixingConditions1.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FixingConditions1#TradingSideBuyAmount
- * FixingConditions1.TradingSideBuyAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.FixingConditions1#mmTradingSideBuyAmount
+ * FixingConditions1.mmTradingSideBuyAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FixingConditions1#TradingSideSellAmount
- * FixingConditions1.TradingSideSellAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FixingConditions1#ExchangeRate
- * FixingConditions1.ExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.FixingConditions1#mmTradingSideSellAmount
+ * FixingConditions1.mmTradingSideSellAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FixingConditions1#mmExchangeRate
+ * FixingConditions1.mmExchangeRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FixingConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate tradeDate;
 	/**
 	 * The date on which the trade was executed.
 	 * <p>
@@ -93,8 +95,8 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,20 +115,21 @@ public class FixingConditions1 {
 	 * definition} = "The date on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> FixingConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "The date on which the trade was executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text originatorReference;
 	/**
 	 * Represents the original reference of the instruction for which the status
 	 * is given, as assigned by the participant that submitted the foreign
@@ -141,8 +144,8 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +166,21 @@ public class FixingConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginatorReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginatorReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> FixingConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "OrgtrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorReference";
 			definition = "Represents the original reference of the instruction for which the status is given, as assigned by the participant that submitted the foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text commonReference;
 	/**
 	 * Reference common to both parties of the trade.
 	 * <p>
@@ -189,8 +193,8 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -209,20 +213,21 @@ public class FixingConditions1 {
 	 * definition} = "Reference common to both parties of the trade. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> FixingConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmonRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to both parties of the trade. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text relatedReference;
 	/**
 	 * Reference to the identification of a previous event in the life of a
 	 * trade which is amended or cancelled.
@@ -236,8 +241,8 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeRelatedIdentifications
-	 * Trade.TradeRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeRelatedIdentifications
+	 * Trade.mmTradeRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,20 +263,21 @@ public class FixingConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> FixingConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to the identification of a previous event in the life of a trade which is amended or cancelled. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount tradingSideBuyAmount;
 	/**
 	 * Currency and amount bought in a foreign exchange trade.
 	 * <p>
@@ -285,8 +291,8 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#BuyAmount
-	 * ForeignExchangeTrade.BuyAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmBuyAmount
+	 * ForeignExchangeTrade.mmBuyAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -305,20 +311,21 @@ public class FixingConditions1 {
 	 * definition} = "Currency and amount bought in a foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingSideBuyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingSideBuyAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmBuyAmount;
 			componentContext_lazy = () -> FixingConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.BuyAmount;
 			isDerived = false;
 			xmlTag = "TradgSdBuyAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideBuyAmount";
 			definition = "Currency and amount bought in a foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount tradingSideSellAmount;
 	/**
 	 * Currency and amount sold in a foreign exchange trade.
 	 * <p>
@@ -332,8 +339,8 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#SellAmount
-	 * ForeignExchangeTrade.SellAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmSellAmount
+	 * ForeignExchangeTrade.mmSellAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -352,20 +359,21 @@ public class FixingConditions1 {
 	 * definition} = "Currency and amount sold in a foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingSideSellAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingSideSellAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmSellAmount;
 			componentContext_lazy = () -> FixingConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.SellAmount;
 			isDerived = false;
 			xmlTag = "TradgSdSellAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideSellAmount";
 			definition = "Currency and amount sold in a foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected BaseOneRate exchangeRate;
 	/**
 	 * The value of one currency expressed in relation to another currency.
 	 * ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency
@@ -380,8 +388,8 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -402,17 +410,17 @@ public class FixingConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> FixingConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
@@ -420,16 +428,72 @@ public class FixingConditions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FixingConditions1.TradeDate, com.tools20022.repository.msg.FixingConditions1.OriginatorReference,
-						com.tools20022.repository.msg.FixingConditions1.CommonReference, com.tools20022.repository.msg.FixingConditions1.RelatedReference, com.tools20022.repository.msg.FixingConditions1.TradingSideBuyAmount,
-						com.tools20022.repository.msg.FixingConditions1.TradingSideSellAmount, com.tools20022.repository.msg.FixingConditions1.ExchangeRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FixingConditions1.mmTradeDate, com.tools20022.repository.msg.FixingConditions1.mmOriginatorReference,
+						com.tools20022.repository.msg.FixingConditions1.mmCommonReference, com.tools20022.repository.msg.FixingConditions1.mmRelatedReference, com.tools20022.repository.msg.FixingConditions1.mmTradingSideBuyAmount,
+						com.tools20022.repository.msg.FixingConditions1.mmTradingSideSellAmount, com.tools20022.repository.msg.FixingConditions1.mmExchangeRate);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FixingConditions1";
 				definition = "Provides the additional information for an NDF as supplied on a fixing instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODate tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public Max35Text getOriginatorReference() {
+		return originatorReference;
+	}
+
+	public void setOriginatorReference(Max35Text originatorReference) {
+		this.originatorReference = originatorReference;
+	}
+
+	public Max35Text getCommonReference() {
+		return commonReference;
+	}
+
+	public void setCommonReference(Max35Text commonReference) {
+		this.commonReference = commonReference;
+	}
+
+	public Max35Text getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(Max35Text relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getTradingSideBuyAmount() {
+		return tradingSideBuyAmount;
+	}
+
+	public void setTradingSideBuyAmount(ActiveOrHistoricCurrencyAndAmount tradingSideBuyAmount) {
+		this.tradingSideBuyAmount = tradingSideBuyAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getTradingSideSellAmount() {
+		return tradingSideSellAmount;
+	}
+
+	public void setTradingSideSellAmount(ActiveOrHistoricCurrencyAndAmount tradingSideSellAmount) {
+		this.tradingSideSellAmount = tradingSideSellAmount;
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
 	}
 }

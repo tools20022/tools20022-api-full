@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestData1#MessageIdentification
- * RequestData1.MessageIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestData1#RequestType
- * RequestData1.RequestType}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestData1#mmMessageIdentification
+ * RequestData1.mmMessageIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestData1#mmRequestType
+ * RequestData1.mmRequestType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestData1#RequestedActivationDate
- * RequestData1.RequestedActivationDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestData1#RequestServicer
- * RequestData1.RequestServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestData1#mmRequestedActivationDate
+ * RequestData1.mmRequestedActivationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestData1#mmRequestServicer
+ * RequestData1.mmRequestServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestData1#NetServiceParticipantIdentification
- * RequestData1.NetServiceParticipantIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestData1#NetServiceType
- * RequestData1.NetServiceType}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestData1#mmNetServiceParticipantIdentification
+ * RequestData1.mmNetServiceParticipantIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestData1#mmNetServiceType
+ * RequestData1.mmNetServiceType}</li>
  * </ul>
  * </li>
  * <li>
@@ -59,15 +59,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#RequestData
- * NettingCutOffReferenceDataUpdateRequestV01.RequestData}</li>
+ * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#mmRequestData
+ * NettingCutOffReferenceDataUpdateRequestV01.mmRequestData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique identification of the message
 	 * <p>
@@ -109,7 +110,7 @@ public class RequestData1 {
 	 * definition} = "Unique identification of the message"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
@@ -117,11 +118,12 @@ public class RequestData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique identification of the message";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max4Text requestType;
 	/**
 	 * Description of the type of request.
 	 * <p>
@@ -148,7 +150,7 @@ public class RequestData1 {
 	 * definition} = "Description of the type of request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
@@ -156,11 +158,12 @@ public class RequestData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Description of the type of request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected ISODate requestedActivationDate;
 	/**
 	 * Specifies the business date on which the new netting cut off(s) is (are)
 	 * to be activated.
@@ -190,7 +193,7 @@ public class RequestData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedActivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedActivationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
@@ -198,11 +201,12 @@ public class RequestData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedActivationDate";
 			definition = "Specifies the business date on which the new netting cut off(s) is (are) to be activated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice requestServicer;
 	/**
 	 * Describes the central system servicing the request.
 	 * <p>
@@ -229,7 +233,7 @@ public class RequestData1 {
 	 * definition} = "Describes the central system servicing the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestServicer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
@@ -237,12 +241,13 @@ public class RequestData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestServicer";
 			definition = "Describes the central system servicing the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice netServiceParticipantIdentification;
 	/**
 	 * Describes the participant issuing the request.
 	 * <p>
@@ -269,7 +274,7 @@ public class RequestData1 {
 	 * definition} = "Describes the participant issuing the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetServiceParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetServiceParticipantIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
@@ -277,12 +282,13 @@ public class RequestData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceParticipantIdentification";
 			definition = "Describes the participant issuing the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected Max35Text netServiceType;
 	/**
 	 * Describes the type of netting service supporting the net report.
 	 * <p>
@@ -310,7 +316,7 @@ public class RequestData1 {
 	 * "Describes the type of netting service supporting the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetServiceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
@@ -318,8 +324,8 @@ public class RequestData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceType";
 			definition = "Describes the type of netting service supporting the net report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -327,16 +333,64 @@ public class RequestData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestData1.MessageIdentification, com.tools20022.repository.msg.RequestData1.RequestType,
-						com.tools20022.repository.msg.RequestData1.RequestedActivationDate, com.tools20022.repository.msg.RequestData1.RequestServicer, com.tools20022.repository.msg.RequestData1.NetServiceParticipantIdentification,
-						com.tools20022.repository.msg.RequestData1.NetServiceType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.RequestData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestData1.mmMessageIdentification, com.tools20022.repository.msg.RequestData1.mmRequestType,
+						com.tools20022.repository.msg.RequestData1.mmRequestedActivationDate, com.tools20022.repository.msg.RequestData1.mmRequestServicer, com.tools20022.repository.msg.RequestData1.mmNetServiceParticipantIdentification,
+						com.tools20022.repository.msg.RequestData1.mmNetServiceType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmRequestData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestData1";
 				definition = "Contains the meta data for a netting cut off update request: message identification, request servicer and a request type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max4Text getRequestType() {
+		return requestType;
+	}
+
+	public void setRequestType(Max4Text requestType) {
+		this.requestType = requestType;
+	}
+
+	public ISODate getRequestedActivationDate() {
+		return requestedActivationDate;
+	}
+
+	public void setRequestedActivationDate(ISODate requestedActivationDate) {
+		this.requestedActivationDate = requestedActivationDate;
+	}
+
+	public PartyIdentification73Choice getRequestServicer() {
+		return requestServicer;
+	}
+
+	public void setRequestServicer(PartyIdentification73Choice requestServicer) {
+		this.requestServicer = requestServicer;
+	}
+
+	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
+		return netServiceParticipantIdentification;
+	}
+
+	public void setNetServiceParticipantIdentification(PartyIdentification73Choice netServiceParticipantIdentification) {
+		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
+	}
+
+	public Max35Text getNetServiceType() {
+		return netServiceType;
+	}
+
+	public void setNetServiceType(Max35Text netServiceType) {
+		this.netServiceType = netServiceType;
 	}
 }

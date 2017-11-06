@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.PaymentStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Further information on the status reason of the transaction.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#StatusOriginator
- * StatusReasonInformation5.StatusOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#mmStatusOriginator
+ * StatusReasonInformation5.mmStatusOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#StatusReason
- * StatusReasonInformation5.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#mmStatusReason
+ * StatusReasonInformation5.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#AdditionalStatusReasonInformation
- * StatusReasonInformation5.AdditionalStatusReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#mmAdditionalStatusReasonInformation
+ * StatusReasonInformation5.mmAdditionalStatusReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReasonInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification14 statusOriginator;
 	/**
 	 * Party issuing the status.
 	 * <p>
@@ -78,8 +80,8 @@ public class StatusReasonInformation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +100,22 @@ public class StatusReasonInformation5 {
 	 * definition} = "Party issuing the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> StatusReasonInformation5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StsOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOriginator";
 			definition = "Party issuing the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
 		}
 	};
+	protected StatusReason1Choice statusReason;
 	/**
 	 * Specifies the reason for the status report.
 	 * <p>
@@ -144,21 +147,22 @@ public class StatusReasonInformation5 {
 	 * definition} = "Specifies the reason for the status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReasonInformation5.mmObject();
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
+			componentContext_lazy = () -> StatusReasonInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Specifies the reason for the status report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> StatusReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> StatusReason1Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
 	 * Further details on the status reason.
 	 * 
@@ -174,8 +178,8 @@ public class StatusReasonInformation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,10 +200,10 @@ public class StatusReasonInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> StatusReasonInformation5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlStsRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,15 +217,39 @@ public class StatusReasonInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation5.StatusOriginator, com.tools20022.repository.msg.StatusReasonInformation5.StatusReason,
-						com.tools20022.repository.msg.StatusReasonInformation5.AdditionalStatusReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation5.mmStatusOriginator, com.tools20022.repository.msg.StatusReasonInformation5.mmStatusReason,
+						com.tools20022.repository.msg.StatusReasonInformation5.mmAdditionalStatusReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusReasonInformation5";
 				definition = "Further information on the status reason of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification14 getStatusOriginator() {
+		return statusOriginator;
+	}
+
+	public void setStatusOriginator(com.tools20022.repository.msg.PartyIdentification14 statusOriginator) {
+		this.statusOriginator = statusOriginator;
+	}
+
+	public StatusReason1Choice getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(StatusReason1Choice statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public List<Max105Text> getAdditionalStatusReasonInformation() {
+		return additionalStatusReasonInformation;
+	}
+
+	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
 	}
 }

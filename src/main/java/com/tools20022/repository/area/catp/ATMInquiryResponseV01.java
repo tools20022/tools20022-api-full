@@ -57,24 +57,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#Header
- * ATMInquiryResponseV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#mmHeader
+ * ATMInquiryResponseV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#ProtectedATMInquiryResponse
- * ATMInquiryResponseV01.ProtectedATMInquiryResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#mmProtectedATMInquiryResponse
+ * ATMInquiryResponseV01.mmProtectedATMInquiryResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#ATMInquiryResponse
- * ATMInquiryResponseV01.ATMInquiryResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#mmATMInquiryResponse
+ * ATMInquiryResponseV01.mmATMInquiryResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#SecurityTrailer
- * ATMInquiryResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#mmSecurityTrailer
+ * ATMInquiryResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#identifier
- * ATMInquiryResponseV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catp.007.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMInquiryResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header20 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -122,17 +121,18 @@ public class ATMInquiryResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMInquiryResponse;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -156,17 +156,18 @@ public class ATMInquiryResponseV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMInquiryResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMInquiryResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMNqryRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMInquiryResponse";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMInquiryResponse1 aTMInquiryResponse;
 	/**
 	 * Information related to the response of an ATM inquiry from an ATM
 	 * manager.
@@ -193,17 +194,18 @@ public class ATMInquiryResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMInquiryResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMInquiryResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMNqryRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryResponse";
 			definition = "Information related to the response of an ATM inquiry from an ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMInquiryResponse1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -227,42 +229,15 @@ public class ATMInquiryResponseV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catp";
-			messageFunctionality = "007";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -277,11 +252,50 @@ public class ATMInquiryResponseV01 {
 				rootElement = "Document";
 				xmlTag = "ATMNqryRspn";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMInquiryResponseV01.Header, com.tools20022.repository.area.catp.ATMInquiryResponseV01.ProtectedATMInquiryResponse,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV01.ATMInquiryResponse, com.tools20022.repository.area.catp.ATMInquiryResponseV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catp.ATMInquiryResponseV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmHeader, com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmProtectedATMInquiryResponse,
+						com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmATMInquiryResponse, com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catp";
+						messageFunctionality = "007";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header20 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header20 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMInquiryResponse() {
+		return protectedATMInquiryResponse;
+	}
+
+	public void setProtectedATMInquiryResponse(ContentInformationType10 protectedATMInquiryResponse) {
+		this.protectedATMInquiryResponse = protectedATMInquiryResponse;
+	}
+
+	public ATMInquiryResponse1 getATMInquiryResponse() {
+		return aTMInquiryResponse;
+	}
+
+	public void setATMInquiryResponse(ATMInquiryResponse1 aTMInquiryResponse) {
+		this.aTMInquiryResponse = aTMInquiryResponse;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -68,27 +69,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#TransactionIdentification
- * BuyInNotificationV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#mmTransactionIdentification
+ * BuyInNotificationV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#ClearingMember
- * BuyInNotificationV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#mmClearingMember
+ * BuyInNotificationV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#NotificationDetails
- * BuyInNotificationV03.NotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#mmNotificationDetails
+ * BuyInNotificationV03.mmNotificationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#OriginalSettlementObligation
- * BuyInNotificationV03.OriginalSettlementObligation}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#mmOriginalSettlementObligation
+ * BuyInNotificationV03.mmOriginalSettlementObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#SupplementaryData
- * BuyInNotificationV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#mmSupplementaryData
+ * BuyInNotificationV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#identifier
- * BuyInNotificationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.007.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BuyInNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the instructing
 	 * party.
@@ -129,17 +129,18 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the instructing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingMember;
 	/**
 	 * Provides the identification of the clearing member (individual clearing
 	 * member or general clearing member).
@@ -166,17 +167,18 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the clearing member (individual clearing member or general clearing member).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected BuyIn4 notificationDetails;
 	/**
 	 * Indicates if the message is a notification or a warning and gives the
 	 * option to specify the buy in date.
@@ -201,17 +203,18 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationDetails";
 			definition = "Indicates if the message is a notification or a warning and gives the option to specify the buy in date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BuyIn4.mmObject();
 		}
 	};
+	protected SettlementObligation7 originalSettlementObligation;
 	/**
 	 * Provides details about the original settlement obligation that did not
 	 * settle and for which the buy in process will be launched.
@@ -238,17 +241,18 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalSettlementObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalSettlementObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlSttlmOblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSettlementObligation";
 			definition = "Provides details about the original settlement obligation that did not settle and for which the buy in process will be launched.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SettlementObligation7.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -275,7 +279,7 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,33 +287,6 @@ public class BuyInNotificationV03 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "007";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -323,12 +300,59 @@ public class BuyInNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "BuyInNtfctn";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInNotificationV03.TransactionIdentification, com.tools20022.repository.area.secl.BuyInNotificationV03.ClearingMember,
-						com.tools20022.repository.area.secl.BuyInNotificationV03.NotificationDetails, com.tools20022.repository.area.secl.BuyInNotificationV03.OriginalSettlementObligation,
-						com.tools20022.repository.area.secl.BuyInNotificationV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.BuyInNotificationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.secl.BuyInNotificationV03.mmClearingMember,
+						com.tools20022.repository.area.secl.BuyInNotificationV03.mmNotificationDetails, com.tools20022.repository.area.secl.BuyInNotificationV03.mmOriginalSettlementObligation,
+						com.tools20022.repository.area.secl.BuyInNotificationV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "007";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public PartyIdentification35Choice getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public BuyIn4 getNotificationDetails() {
+		return notificationDetails;
+	}
+
+	public void setNotificationDetails(BuyIn4 notificationDetails) {
+		this.notificationDetails = notificationDetails;
+	}
+
+	public SettlementObligation7 getOriginalSettlementObligation() {
+		return originalSettlementObligation;
+	}
+
+	public void setOriginalSettlementObligation(SettlementObligation7 originalSettlementObligation) {
+		this.originalSettlementObligation = originalSettlementObligation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

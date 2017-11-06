@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#StepInFirm
- * ConfirmationParties4.StepInFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmStepInFirm
+ * ConfirmationParties4.mmStepInFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#StepInFirm
- * ConfirmationParties2.StepInFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmStepInFirm
+ * ConfirmationParties2.mmStepInFirm}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,11 +70,11 @@ public class StepInBroker extends Broker {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StepInBroker";
 				definition = "Broker to which the investment manager directs the execution of a portion of the trade.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.StepInFirm, com.tools20022.repository.msg.ConfirmationParties2.StepInFirm);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmStepInFirm, com.tools20022.repository.msg.ConfirmationParties2.mmStepInFirm);
 				superType_lazy = () -> Broker.mmObject();
 			}
 		});

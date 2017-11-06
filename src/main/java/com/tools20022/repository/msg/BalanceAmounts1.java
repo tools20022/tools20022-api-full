@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1#HoldingValue
- * BalanceAmounts1.HoldingValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmHoldingValue
+ * BalanceAmounts1.mmHoldingValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#PreviousHoldingValue
- * BalanceAmounts1.PreviousHoldingValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1#BookValue
- * BalanceAmounts1.BookValue}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmPreviousHoldingValue
+ * BalanceAmounts1.mmPreviousHoldingValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmBookValue
+ * BalanceAmounts1.mmBookValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#UnrealisedGainLoss
- * BalanceAmounts1.UnrealisedGainLoss}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmUnrealisedGainLoss
+ * BalanceAmounts1.mmUnrealisedGainLoss}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#AccruedInterestAmount
- * BalanceAmounts1.AccruedInterestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceAmounts1#mmAccruedInterestAmount
+ * BalanceAmounts1.mmAccruedInterestAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BalanceAmounts1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection6 holdingValue;
 	/**
 	 * Value of an individual financial instrument holding within a safekeeping
 	 * account.
@@ -85,8 +86,8 @@ public class BalanceAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#HoldingValue
-	 * AssetHolding.HoldingValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingValue
+	 * AssetHolding.mmHoldingValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +108,21 @@ public class BalanceAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> BalanceAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.HoldingValue;
 			isDerived = false;
 			xmlTag = "HldgVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingValue";
 			definition = "Value of an individual financial instrument holding within a safekeeping account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 previousHoldingValue;
 	/**
 	 * Previous value of an individual financial instrument holding within a
 	 * safekeeping account.
@@ -135,8 +137,8 @@ public class BalanceAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#HoldingValue
-	 * AssetHolding.HoldingValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingValue
+	 * AssetHolding.mmHoldingValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +159,21 @@ public class BalanceAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousHoldingValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousHoldingValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> BalanceAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.HoldingValue;
 			isDerived = false;
 			xmlTag = "PrvsHldgVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousHoldingValue";
 			definition = "Previous value of an individual financial instrument holding within a safekeeping account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 bookValue;
 	/**
 	 * Value of a financial instrument, as booked/acquired in an account. It may
 	 * be used to establish capital gain tax liability.
@@ -185,8 +188,8 @@ public class BalanceAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#BookValue
-	 * AssetHolding.BookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,20 +210,21 @@ public class BalanceAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBookValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
 			componentContext_lazy = () -> BalanceAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.BookValue;
 			isDerived = false;
 			xmlTag = "BookVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookValue";
 			definition = "Value of a financial instrument, as booked/acquired in an account. It may be used to establish capital gain tax liability.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 unrealisedGainLoss;
 	/**
 	 * Difference between holding value and the book value.
 	 * <p>
@@ -234,8 +238,8 @@ public class BalanceAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#UnrealisedGainOrLoss
-	 * AssetHolding.UnrealisedGainOrLoss}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmUnrealisedGainOrLoss
+	 * AssetHolding.mmUnrealisedGainOrLoss}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +258,21 @@ public class BalanceAmounts1 {
 	 * definition} = "Difference between holding value and the book value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnrealisedGainLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnrealisedGainLoss = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmUnrealisedGainOrLoss;
 			componentContext_lazy = () -> BalanceAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.UnrealisedGainOrLoss;
 			isDerived = false;
 			xmlTag = "UrlsdGnLoss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrealisedGainLoss";
 			definition = "Difference between holding value and the book value.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	protected AmountAndDirection6 accruedInterestAmount;
 	/**
 	 * Interest amount that has accrued in between coupon payment periods.
 	 * <p>
@@ -281,8 +286,8 @@ public class BalanceAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -302,33 +307,73 @@ public class BalanceAmounts1 {
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> BalanceAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts1.HoldingValue, com.tools20022.repository.msg.BalanceAmounts1.PreviousHoldingValue,
-						com.tools20022.repository.msg.BalanceAmounts1.BookValue, com.tools20022.repository.msg.BalanceAmounts1.UnrealisedGainLoss, com.tools20022.repository.msg.BalanceAmounts1.AccruedInterestAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts1.mmHoldingValue, com.tools20022.repository.msg.BalanceAmounts1.mmPreviousHoldingValue,
+						com.tools20022.repository.msg.BalanceAmounts1.mmBookValue, com.tools20022.repository.msg.BalanceAmounts1.mmUnrealisedGainLoss, com.tools20022.repository.msg.BalanceAmounts1.mmAccruedInterestAmount);
 				trace_lazy = () -> AssetHolding.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceAmounts1";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection6 getHoldingValue() {
+		return holdingValue;
+	}
+
+	public void setHoldingValue(com.tools20022.repository.msg.AmountAndDirection6 holdingValue) {
+		this.holdingValue = holdingValue;
+	}
+
+	public AmountAndDirection6 getPreviousHoldingValue() {
+		return previousHoldingValue;
+	}
+
+	public void setPreviousHoldingValue(com.tools20022.repository.msg.AmountAndDirection6 previousHoldingValue) {
+		this.previousHoldingValue = previousHoldingValue;
+	}
+
+	public AmountAndDirection6 getBookValue() {
+		return bookValue;
+	}
+
+	public void setBookValue(com.tools20022.repository.msg.AmountAndDirection6 bookValue) {
+		this.bookValue = bookValue;
+	}
+
+	public AmountAndDirection6 getUnrealisedGainLoss() {
+		return unrealisedGainLoss;
+	}
+
+	public void setUnrealisedGainLoss(com.tools20022.repository.msg.AmountAndDirection6 unrealisedGainLoss) {
+		this.unrealisedGainLoss = unrealisedGainLoss;
+	}
+
+	public AmountAndDirection6 getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection6 accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
 	}
 }

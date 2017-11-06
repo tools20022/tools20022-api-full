@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -66,54 +67,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#MessageIdentification
- * AccountDetailsConfirmationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmMessageIdentification
+ * AccountDetailsConfirmationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#OrderReference
- * AccountDetailsConfirmationV02.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmOrderReference
+ * AccountDetailsConfirmationV02.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#RelatedReference
- * AccountDetailsConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmRelatedReference
+ * AccountDetailsConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#ConfirmationDetails
- * AccountDetailsConfirmationV02.ConfirmationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmConfirmationDetails
+ * AccountDetailsConfirmationV02.mmConfirmationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#InvestmentAccount
- * AccountDetailsConfirmationV02.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmInvestmentAccount
+ * AccountDetailsConfirmationV02.mmInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#AccountParties
- * AccountDetailsConfirmationV02.AccountParties}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmAccountParties
+ * AccountDetailsConfirmationV02.mmAccountParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#Intermediaries
- * AccountDetailsConfirmationV02.Intermediaries}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmIntermediaries
+ * AccountDetailsConfirmationV02.mmIntermediaries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#Placement
- * AccountDetailsConfirmationV02.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmPlacement
+ * AccountDetailsConfirmationV02.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#NewIssueAllocation
- * AccountDetailsConfirmationV02.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmNewIssueAllocation
+ * AccountDetailsConfirmationV02.mmNewIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#SavingsInvestmentPlan
- * AccountDetailsConfirmationV02.SavingsInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmSavingsInvestmentPlan
+ * AccountDetailsConfirmationV02.mmSavingsInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#WithdrawalInvestmentPlan
- * AccountDetailsConfirmationV02.WithdrawalInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmWithdrawalInvestmentPlan
+ * AccountDetailsConfirmationV02.mmWithdrawalInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#CashSettlement
- * AccountDetailsConfirmationV02.CashSettlement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmCashSettlement
+ * AccountDetailsConfirmationV02.mmCashSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#ServiceLevelAgreement
- * AccountDetailsConfirmationV02.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmServiceLevelAgreement
+ * AccountDetailsConfirmationV02.mmServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#Extension
- * AccountDetailsConfirmationV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmExtension
+ * AccountDetailsConfirmationV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#identifier
- * AccountDetailsConfirmationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.002.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,6 +136,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountDetailsConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Identifies the message.
 	 * <p>
@@ -160,17 +160,18 @@ public class AccountDetailsConfirmationV02 {
 	 * definition} = "Identifies the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected InvestmentFundOrder4 orderReference;
 	/**
 	 * Identifies a related order.
 	 * <p>
@@ -194,17 +195,18 @@ public class AccountDetailsConfirmationV02 {
 	 * definition} = "Identifies a related order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OrderReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrderReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Identifies a related order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder4.mmObject();
 		}
 	};
+	protected AdditionalReference3 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -229,17 +231,18 @@ public class AccountDetailsConfirmationV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AccountManagementConfirmation1 confirmationDetails;
 	/**
 	 * Provide detailed information about the request or instruction which
 	 * triggered this confirmation.
@@ -266,17 +269,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ConfirmationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmConfirmationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ConfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
 			definition = "Provide detailed information about the request or instruction which triggered this confirmation. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountManagementConfirmation1.mmObject();
 		}
 	};
+	protected InvestmentAccount27 investmentAccount;
 	/**
 	 * Confirmation of the information related to a selected investment account.
 	 * <p>
@@ -302,17 +306,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InvestmentAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvestmentAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Confirmation of the information related to a selected investment account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccount27.mmObject();
 		}
 	};
+	protected AccountParties5 accountParties;
 	/**
 	 * Confirmation of information related to parties who are related to a
 	 * selected investment account.
@@ -338,17 +343,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountParties";
 			definition = "Confirmation of information related to parties who are related to a selected investment account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountParties5.mmObject();
 		}
 	};
+	protected List<Intermediary12> intermediaries;
 	/**
 	 * Confirmation of information related to intermediaries who are related to
 	 * a selected investment account.
@@ -374,17 +380,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Intermediaries = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntermediaries = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Intrmies";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediaries";
 			definition = "Confirmation of information related to intermediaries who are related to a selected investment account.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> Intermediary12.mmObject();
 		}
 	};
+	protected ReferredAgent1 placement;
 	/**
 	 * Placement agent for the hedge fund industry.
 	 * <p>
@@ -407,17 +414,18 @@ public class AccountDetailsConfirmationV02 {
 	 * definition} = "Placement agent for the hedge fund industry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Placement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPlacement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Plcmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placement";
 			definition = "Placement agent for the hedge fund industry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ReferredAgent1.mmObject();
 		}
 	};
+	protected NewIssueAllocation1 newIssueAllocation;
 	/**
 	 * Eligibility conditions applicable when there is an allocation of new
 	 * issues for hedge fund account opening.
@@ -444,17 +452,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NewIssueAllocation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNewIssueAllocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NewIsseAllcn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssueAllocation";
 			definition = "Eligibility conditions applicable when there is an allocation of new issues for hedge fund account opening.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> NewIssueAllocation1.mmObject();
 		}
 	};
+	protected List<InvestmentPlan4> savingsInvestmentPlan;
 	/**
 	 * Confirmation of the information related to a savings plan that is related
 	 * to a selected investment account.
@@ -480,17 +489,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SavingsInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSavingsInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvgsInvstmtPlan";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsInvestmentPlan";
 			definition = "Confirmation of the information related to a savings plan that is related to a selected investment account.";
-			minOccurs = 0;
 			maxOccurs = 50;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan4.mmObject();
 		}
 	};
+	protected List<InvestmentPlan4> withdrawalInvestmentPlan;
 	/**
 	 * Confirmation of the information related to a withrawal plan that is
 	 * related to a selected investment account.
@@ -516,17 +526,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock WithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "WdrwlInvstmtPlan";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalInvestmentPlan";
 			definition = "Confirmation of the information related to a withrawal plan that is related to a selected investment account.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan4.mmObject();
 		}
 	};
+	protected InvestmentFundCashSettlementInformation3 cashSettlement;
 	/**
 	 * Confirmation of the cash settlement standing instruction associated to
 	 * the investment fund transaction.
@@ -553,17 +564,18 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CashSettlement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCashSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshSttlm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			definition = "Confirmation of the cash settlement standing instruction associated to the investment fund transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundCashSettlementInformation3.mmObject();
 		}
 	};
+	protected List<DocumentToSend1> serviceLevelAgreement;
 	/**
 	 * Identifies documents to be provided for the account opening.
 	 * <p>
@@ -587,17 +599,18 @@ public class AccountDetailsConfirmationV02 {
 	 * "Identifies documents to be provided for the account opening."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ServiceLevelAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmServiceLevelAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvcLvlAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreement";
 			definition = "Identifies documents to be provided for the account opening.";
-			minOccurs = 0;
 			maxOccurs = 30;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentToSend1.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -623,7 +636,7 @@ public class AccountDetailsConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -631,33 +644,6 @@ public class AccountDetailsConfirmationV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "002";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -672,16 +658,135 @@ public class AccountDetailsConfirmationV02 {
 				rootElement = "Document";
 				xmlTag = "AcctDtlsConfV02";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.MessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.OrderReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.RelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.ConfirmationDetails,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.InvestmentAccount, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.AccountParties,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.Intermediaries, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.Placement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.NewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.SavingsInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.WithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.CashSettlement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.ServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmRelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmConfirmationDetails,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmInvestmentAccount, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmAccountParties,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmIntermediaries, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmPlacement,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmSavingsInvestmentPlan,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmWithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmCashSettlement,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "002";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public InvestmentFundOrder4 getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(InvestmentFundOrder4 orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public AdditionalReference3 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference3 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public AccountManagementConfirmation1 getConfirmationDetails() {
+		return confirmationDetails;
+	}
+
+	public void setConfirmationDetails(AccountManagementConfirmation1 confirmationDetails) {
+		this.confirmationDetails = confirmationDetails;
+	}
+
+	public InvestmentAccount27 getInvestmentAccount() {
+		return investmentAccount;
+	}
+
+	public void setInvestmentAccount(InvestmentAccount27 investmentAccount) {
+		this.investmentAccount = investmentAccount;
+	}
+
+	public AccountParties5 getAccountParties() {
+		return accountParties;
+	}
+
+	public void setAccountParties(AccountParties5 accountParties) {
+		this.accountParties = accountParties;
+	}
+
+	public List<Intermediary12> getIntermediaries() {
+		return intermediaries;
+	}
+
+	public void setIntermediaries(List<Intermediary12> intermediaries) {
+		this.intermediaries = intermediaries;
+	}
+
+	public ReferredAgent1 getPlacement() {
+		return placement;
+	}
+
+	public void setPlacement(ReferredAgent1 placement) {
+		this.placement = placement;
+	}
+
+	public NewIssueAllocation1 getNewIssueAllocation() {
+		return newIssueAllocation;
+	}
+
+	public void setNewIssueAllocation(NewIssueAllocation1 newIssueAllocation) {
+		this.newIssueAllocation = newIssueAllocation;
+	}
+
+	public List<InvestmentPlan4> getSavingsInvestmentPlan() {
+		return savingsInvestmentPlan;
+	}
+
+	public void setSavingsInvestmentPlan(List<InvestmentPlan4> savingsInvestmentPlan) {
+		this.savingsInvestmentPlan = savingsInvestmentPlan;
+	}
+
+	public List<InvestmentPlan4> getWithdrawalInvestmentPlan() {
+		return withdrawalInvestmentPlan;
+	}
+
+	public void setWithdrawalInvestmentPlan(List<InvestmentPlan4> withdrawalInvestmentPlan) {
+		this.withdrawalInvestmentPlan = withdrawalInvestmentPlan;
+	}
+
+	public InvestmentFundCashSettlementInformation3 getCashSettlement() {
+		return cashSettlement;
+	}
+
+	public void setCashSettlement(InvestmentFundCashSettlementInformation3 cashSettlement) {
+		this.cashSettlement = cashSettlement;
+	}
+
+	public List<DocumentToSend1> getServiceLevelAgreement() {
+		return serviceLevelAgreement;
+	}
+
+	public void setServiceLevelAgreement(List<DocumentToSend1> serviceLevelAgreement) {
+		this.serviceLevelAgreement = serviceLevelAgreement;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Process of lending or borrowing cash or securities against securities or cash
@@ -44,147 +45,94 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#ReturnLegInstruction
- * SecuritiesFinancing.ReturnLegInstruction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesFinancing#Type
- * SecuritiesFinancing.Type}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmReturnLegInstruction
+ * SecuritiesFinancing.mmReturnLegInstruction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmType
+ * SecuritiesFinancing.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TerminationDateTime
- * SecuritiesFinancing.TerminationDateTime}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTerminationDateTime
+ * SecuritiesFinancing.mmTerminationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RateChangeDateTime
- * SecuritiesFinancing.RateChangeDateTime}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRateChangeDateTime
+ * SecuritiesFinancing.mmRateChangeDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RevaluationIndicator
- * SecuritiesFinancing.RevaluationIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRevaluationIndicator
+ * SecuritiesFinancing.mmRevaluationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#InterestPayment
- * SecuritiesFinancing.InterestPayment}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmInterestPayment
+ * SecuritiesFinancing.mmInterestPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#VariableRateSupport
- * SecuritiesFinancing.VariableRateSupport}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmVariableRateSupport
+ * SecuritiesFinancing.mmVariableRateSupport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RepurchaseRate
- * SecuritiesFinancing.RepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRepurchaseRate
+ * SecuritiesFinancing.mmRepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#StockLoanMargin
- * SecuritiesFinancing.StockLoanMargin}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmStockLoanMargin
+ * SecuritiesFinancing.mmStockLoanMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#Interest
- * SecuritiesFinancing.Interest}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmInterest
+ * SecuritiesFinancing.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RepurchaseSpread
- * SecuritiesFinancing.RepurchaseSpread}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRepurchaseSpread
+ * SecuritiesFinancing.mmRepurchaseSpread}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TransactionCallDelay
- * SecuritiesFinancing.TransactionCallDelay}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTransactionCallDelay
+ * SecuritiesFinancing.mmTransactionCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TotalNumberOfCollateralInstructions
- * SecuritiesFinancing.TotalNumberOfCollateralInstructions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTotalNumberOfCollateralInstructions
+ * SecuritiesFinancing.mmTotalNumberOfCollateralInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#DealAmount
- * SecuritiesFinancing.DealAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmDealAmount
+ * SecuritiesFinancing.mmDealAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#ForfeitRepurchaseAmount
- * SecuritiesFinancing.ForfeitRepurchaseAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmForfeitRepurchaseAmount
+ * SecuritiesFinancing.mmForfeitRepurchaseAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#PremiumAmount
- * SecuritiesFinancing.PremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmPremiumAmount
+ * SecuritiesFinancing.mmPremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TerminationAmountPerPieceOfCollateral
- * SecuritiesFinancing.TerminationAmountPerPieceOfCollateral}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTerminationAmountPerPieceOfCollateral
+ * SecuritiesFinancing.mmTerminationAmountPerPieceOfCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TerminationTransactionAmount
- * SecuritiesFinancing.TerminationTransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTerminationTransactionAmount
+ * SecuritiesFinancing.mmTerminationTransactionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#MaturityDateModification
- * SecuritiesFinancing.MaturityDateModification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmMaturityDateModification
+ * SecuritiesFinancing.mmMaturityDateModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#EarliestCallBackDate
- * SecuritiesFinancing.EarliestCallBackDate}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmEarliestCallBackDate
+ * SecuritiesFinancing.mmEarliestCallBackDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#OpeningSettlementDate
- * SecuritiesFinancing.OpeningSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmOpeningSettlementDate
+ * SecuritiesFinancing.mmOpeningSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RepurchaseType
- * SecuritiesFinancing.RepurchaseType}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRepurchaseType
+ * SecuritiesFinancing.mmRepurchaseType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#EndPrice
- * SecuritiesFinancing.EndPrice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmEndPrice
+ * SecuritiesFinancing.mmEndPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#SpreadTransaction
- * SecuritiesFinancing.SpreadTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmSpreadTransaction
+ * SecuritiesFinancing.mmSpreadTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#FinancingAgreement
- * SecuritiesFinancing.FinancingAgreement}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmFinancingAgreement
+ * SecuritiesFinancing.mmFinancingAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#OpeningSettlementAmount
- * SecuritiesFinancing.OpeningSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmOpeningSettlementAmount
+ * SecuritiesFinancing.mmOpeningSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#ClosingLegExecution
- * SecuritiesFinancing.ClosingLegExecution}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmClosingLegExecution
+ * SecuritiesFinancing.mmClosingLegExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#OpeningLegExecution
- * SecuritiesFinancing.OpeningLegExecution}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmOpeningLegExecution
+ * SecuritiesFinancing.mmOpeningLegExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RelatedIndicationOfInterest
- * SecuritiesFinancing.RelatedIndicationOfInterest}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRelatedIndicationOfInterest
+ * SecuritiesFinancing.mmRelatedIndicationOfInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#Identification
- * SecuritiesFinancing.Identification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RelatedSecuritiesFinancing
- * SecuritiesPricing.RelatedSecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesFinancingClosingData
- * SecuritiesTrade.SecuritiesFinancingClosingData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesFinancingOpeningData
- * SecuritiesTrade.SecuritiesFinancingOpeningData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#SecuritiesFinancing
- * Interest.SecuritiesFinancing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#SecuritiesFinancing
- * Spread.SecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#SecuritiesFinancingTrade
- * SecuritiesFinancingAgreement.SecuritiesFinancingTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#TwoLegTransaction
- * BuyOrSellIndicationOfInterest.TwoLegTransaction}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#SecuritiesFinancingDetails
- * TwoLegTransactionType1Choice.SecuritiesFinancingDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#OtherAmounts
- * TwoLegTransactionDetails1.OtherAmounts}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#TwoLegTransactionType
- * TwoLegTransactionDetails1.TwoLegTransactionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SingleQuote1#TwoLegTransactionDetails
- * SingleQuote1.TwoLegTransactionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SingleOrder1#TwoLegTransactionDetails
- * SingleOrder1.TwoLegTransactionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Order11#TwoLegTransactionDetails
- * Order11.TwoLegTransactionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteRequest1#TwoLegTransactionDetails
- * QuoteRequest1.TwoLegTransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmIdentification
+ * SecuritiesFinancing.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -194,6 +142,60 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesLending}</li>
  * <li>{@linkplain com.tools20022.repository.entity.RepurchaseAgreement
  * RepurchaseAgreement}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesFinancing
+ * SecuritiesPricing.mmRelatedSecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingClosingData
+ * SecuritiesTrade.mmSecuritiesFinancingClosingData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingOpeningData
+ * SecuritiesTrade.mmSecuritiesFinancingOpeningData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
+ * Interest.mmSecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Spread#mmSecuritiesFinancing
+ * Spread.mmSecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmSecuritiesFinancingTrade
+ * SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmTwoLegTransaction
+ * BuyOrSellIndicationOfInterest.mmTwoLegTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#mmSecuritiesFinancingDetails
+ * TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmOtherAmounts
+ * TwoLegTransactionDetails1.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmTwoLegTransactionType
+ * TwoLegTransactionDetails1.mmTwoLegTransactionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SingleQuote1#mmTwoLegTransactionDetails
+ * SingleQuote1.mmTwoLegTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SingleOrder1#mmTwoLegTransactionDetails
+ * SingleOrder1.mmTwoLegTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Order11#mmTwoLegTransactionDetails
+ * Order11.mmTwoLegTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmTwoLegTransactionDetails
+ * QuoteRequest1.mmTwoLegTransactionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -396,8 +398,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -413,6 +415,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesFinancing extends SecuritiesTrade {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator returnLegInstruction;
 	/**
 	 * Specifies whether, for a securities lending/borrowing settlement
 	 * transaction, the lender will instruct the return leg as agreed with the
@@ -425,91 +428,91 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#ReturnLeg
-	 * SettlementDetails50.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#ReturnLeg
-	 * SettlementDetails51.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#ReturnLeg
-	 * SettlementDetails1.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#ReturnLeg
-	 * SettlementDetails19.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#ReturnLeg
-	 * SettlementDetails22.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#ReturnLeg
-	 * SettlementDetails35.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#ReturnLeg
-	 * SettlementDetails42.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#ReturnLeg
-	 * SettlementDetails52.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#ReturnLeg
-	 * SettlementDetails43.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#ReturnLeg
-	 * SettlementDetails67.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#ReturnLeg
-	 * SettlementDetails68.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#ReturnLeg
-	 * SettlementDetails81.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#ReturnLeg
-	 * SettlementDetails83.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#ReturnLeg
-	 * SettlementDetails93.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#ReturnLeg
-	 * SettlementDetails94.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#ReturnLeg
-	 * SettlementDetails101.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#ReturnLeg
-	 * SettlementDetails111.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#ReturnLeg
-	 * SettlementDetails112.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#ReturnLeg
-	 * SettlementDetails113.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#ReturnLeg
-	 * SettlementDetails120.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#ReturnLeg
-	 * SettlementDetails119.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#ReturnLeg
-	 * SettlementDetails122.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#ReturnLeg
-	 * SettlementDetails137.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#ReturnLeg
-	 * SettlementDetails132.ReturnLeg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#ReturnLeg
-	 * SettlementDetails138.ReturnLeg}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#mmReturnLeg
+	 * SettlementDetails50.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#mmReturnLeg
+	 * SettlementDetails51.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmReturnLeg
+	 * SettlementDetails1.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmReturnLeg
+	 * SettlementDetails19.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmReturnLeg
+	 * SettlementDetails22.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmReturnLeg
+	 * SettlementDetails35.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmReturnLeg
+	 * SettlementDetails42.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmReturnLeg
+	 * SettlementDetails52.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmReturnLeg
+	 * SettlementDetails43.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmReturnLeg
+	 * SettlementDetails67.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#mmReturnLeg
+	 * SettlementDetails68.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmReturnLeg
+	 * SettlementDetails81.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#mmReturnLeg
+	 * SettlementDetails83.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmReturnLeg
+	 * SettlementDetails93.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#mmReturnLeg
+	 * SettlementDetails94.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmReturnLeg
+	 * SettlementDetails101.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmReturnLeg
+	 * SettlementDetails111.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmReturnLeg
+	 * SettlementDetails112.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#mmReturnLeg
+	 * SettlementDetails113.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmReturnLeg
+	 * SettlementDetails120.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmReturnLeg
+	 * SettlementDetails119.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#mmReturnLeg
+	 * SettlementDetails122.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmReturnLeg
+	 * SettlementDetails137.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmReturnLeg
+	 * SettlementDetails132.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmReturnLeg
+	 * SettlementDetails138.mmReturnLeg}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -523,27 +526,28 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ReturnLegInstruction = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReturnLegInstruction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.ReturnLeg, com.tools20022.repository.msg.SettlementDetails51.ReturnLeg, com.tools20022.repository.msg.SettlementDetails1.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails19.ReturnLeg, com.tools20022.repository.msg.SettlementDetails22.ReturnLeg, com.tools20022.repository.msg.SettlementDetails35.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails42.ReturnLeg, com.tools20022.repository.msg.SettlementDetails52.ReturnLeg, com.tools20022.repository.msg.SettlementDetails43.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails67.ReturnLeg, com.tools20022.repository.msg.SettlementDetails68.ReturnLeg, com.tools20022.repository.msg.SettlementDetails81.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails83.ReturnLeg, com.tools20022.repository.msg.SettlementDetails93.ReturnLeg, com.tools20022.repository.msg.SettlementDetails94.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails101.ReturnLeg, com.tools20022.repository.msg.SettlementDetails111.ReturnLeg, com.tools20022.repository.msg.SettlementDetails112.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails113.ReturnLeg, com.tools20022.repository.msg.SettlementDetails120.ReturnLeg, com.tools20022.repository.msg.SettlementDetails119.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails122.ReturnLeg, com.tools20022.repository.msg.SettlementDetails137.ReturnLeg, com.tools20022.repository.msg.SettlementDetails132.ReturnLeg,
-					com.tools20022.repository.msg.SettlementDetails138.ReturnLeg);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails51.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails1.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails19.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails22.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails35.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails42.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails52.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails43.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails67.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails68.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails81.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails83.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails93.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails94.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails101.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails111.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails112.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails113.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails120.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails119.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails122.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails137.mmReturnLeg, com.tools20022.repository.msg.SettlementDetails132.mmReturnLeg,
+					com.tools20022.repository.msg.SettlementDetails138.mmReturnLeg);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReturnLegInstruction";
 			definition = "Specifies whether, for a securities lending/borrowing settlement transaction, the lender will instruct the return leg as agreed with the borrower.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected SecuritiesTransactionTypeV2Code type;
 	/**
 	 * Specifies the type of securities financing transaction, that is,
 	 * repurchase agreement, reverse repurchase agreement, securities lending or
@@ -574,18 +578,19 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionTypeV2Code.mmObject();
 		}
 	};
+	protected ISODateTime terminationDateTime;
 	/**
 	 * Closing date/time or maturity date/time of the repo transaction.
 	 * <p>
@@ -595,112 +600,112 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#TerminationDate
-	 * SecuritiesFinancingTransactionDetails3.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#TerminationDate
-	 * SecuritiesFinancingTransactionDetails5.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#TerminationDate
-	 * SecuritiesFinancingTransactionDetails1.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#TerminationDate
-	 * SecuritiesFinancingTransactionDetails11.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#TerminationDate
-	 * SecuritiesFinancingTransactionDetails14.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#TerminationDate
-	 * SecuritiesFinancingTransactionDetails4.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#ClosingDate
-	 * TwoLegTransactionDetails1.ClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#TerminationDate
-	 * SecuritiesFinancingTransactionDetails2.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#TerminationDate
-	 * SecuritiesFinancingTransactionDetails8.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#TerminationDate
-	 * SecuritiesFinancingTransactionDetails7.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TerminationDate
-	 * SecuritiesFinancingTransactionDetails19.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#TerminationDate
-	 * SecuritiesFinancingTransactionDetails20.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#TerminationDate
-	 * SecuritiesFinancingTransactionDetails6.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#TerminationDate
-	 * SecuritiesFinancingTransactionDetails10.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#TerminationDate
-	 * SecuritiesFinancingTransactionDetails17.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#TerminationDate
-	 * SecuritiesFinancingTransactionDetails18.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#TerminationDate
-	 * SecuritiesFinancingTransactionDetails9.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#TerminationDateTime
-	 * SecuritiesFinancing1.TerminationDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#TerminationDate
-	 * SecuritiesFinancingTransactionDetails21.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#TerminationDate
-	 * SecuritiesFinancingTransactionDetails22.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#TerminationDate
-	 * SecuritiesFinancingTransactionDetails24.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#TerminationDate
-	 * SecuritiesFinancingTransactionDetails25.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#TerminationDate
-	 * SecuritiesFinancingTransactionDetails26.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#TerminationDate
-	 * SecuritiesFinancingTransactionDetails28.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TerminationDate
-	 * SecuritiesFinancingTransactionDetails27.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#TerminationDate
-	 * SecuritiesFinancingTransactionDetails29.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#TerminationDate
-	 * SecuritiesFinancingTransactionDetails33.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#TerminationDate
-	 * SecuritiesFinancingTransactionDetails32.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#TerminationDate
-	 * SecuritiesFinancingTransactionDetails30.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#TerminationDate
-	 * SecuritiesFinancingTransactionDetails34.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#TerminationDate
-	 * SecuritiesFinancingTransactionDetails35.TerminationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#TerminationDate
-	 * SecuritiesFinancingTransactionDetails36.TerminationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails3.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails5.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails1.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails11.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails14.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails4.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmClosingDate
+	 * TwoLegTransactionDetails1.mmClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails2.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails8.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails7.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails19.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails20.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails6.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails10.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails17.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails18.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails9.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmTerminationDateTime
+	 * SecuritiesFinancing1.mmTerminationDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails21.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails22.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails24.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails25.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails26.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails28.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails27.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails29.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails33.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails32.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails30.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails34.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails35.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails36.mmTerminationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -713,34 +718,35 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * "Closing date/time or maturity date/time of the repo transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TerminationDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTerminationDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.TerminationDate,
-					com.tools20022.repository.msg.TwoLegTransactionDetails1.ClosingDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancing1.TerminationDateTime,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.TerminationDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.TerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.TerminationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmTerminationDate,
+					com.tools20022.repository.msg.TwoLegTransactionDetails1.mmClosingDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancing1.mmTerminationDateTime,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmTerminationDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmTerminationDate);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TerminationDateTime";
 			definition = "Closing date/time or maturity date/time of the repo transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime rateChangeDateTime;
 	/**
 	 * Date/Time at which rate change has taken place.
 	 * <p>
@@ -750,100 +756,100 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails3.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails5.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails1.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails11.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails14.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails4.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#RateChangeDate
-	 * SecuritiesFinancing10.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails2.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails8.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails19.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails20.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails6.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails10.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails17.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails18.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#RateChangeDateTime
-	 * SecuritiesFinancing1.RateChangeDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails21.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails22.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails24.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails25.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails26.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails28.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails27.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails33.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails32.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails30.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails35.RateChangeDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails36.RateChangeDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails3.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails5.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails1.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails11.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails14.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails4.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmRateChangeDate
+	 * SecuritiesFinancing10.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails2.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails8.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails19.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails20.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails6.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails10.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails17.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails18.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmRateChangeDateTime
+	 * SecuritiesFinancing1.mmRateChangeDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails21.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails22.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails24.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails25.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails26.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails28.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails27.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails33.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails32.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails30.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails35.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails36.mmRateChangeDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -855,32 +861,33 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * definition} = "Date/Time at which rate change has taken place."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RateChangeDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRateChangeDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancing10.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancing1.RateChangeDateTime,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.RateChangeDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.RateChangeDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancing1.mmRateChangeDateTime,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmRateChangeDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmRateChangeDate);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RateChangeDateTime";
 			definition = "Date/Time at which rate change has taken place.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected YesNoIndicator revaluationIndicator;
 	/**
 	 * Specifies whether the collateral position should be subject to automatic
 	 * revaluation by the account servicer.
@@ -892,94 +899,94 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator1Choice#Indicator
-	 * RevaluationIndicator1Choice.Indicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator1Choice#Proprietary
-	 * RevaluationIndicator1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#Revaluation
-	 * SecuritiesFinancingTransactionDetails3.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator2Choice#Indicator
-	 * RevaluationIndicator2Choice.Indicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator2Choice#Proprietary
-	 * RevaluationIndicator2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#Revaluation
-	 * SecuritiesFinancingTransactionDetails5.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#Revaluation
-	 * SecuritiesFinancingTransactionDetails1.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#Revaluation
-	 * SecuritiesFinancingTransactionDetails11.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#Revaluation
-	 * SecuritiesFinancingTransactionDetails14.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#Revaluation
-	 * SecuritiesFinancingTransactionDetails4.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#Indicator
-	 * Revaluation2Choice.Indicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#Proprietary
-	 * Revaluation2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#Revaluation
-	 * SecuritiesFinancing10.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#Revaluation
-	 * SecuritiesFinancingTransactionDetails19.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#Revaluation
-	 * SecuritiesFinancingTransactionDetails20.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Revaluation1Choice#Indicator
-	 * Revaluation1Choice.Indicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Revaluation1Choice#Proprietary
-	 * Revaluation1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#RevaluationIndicator
-	 * SecuritiesFinancing1.RevaluationIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#Revaluation
-	 * SecuritiesFinancingTransactionDetails28.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#Revaluation
-	 * SecuritiesFinancingTransactionDetails27.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator3Choice#Indicator
-	 * RevaluationIndicator3Choice.Indicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator3Choice#Proprietary
-	 * RevaluationIndicator3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#Revaluation
-	 * SecuritiesFinancingTransactionDetails32.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#Revaluation
-	 * SecuritiesFinancingTransactionDetails30.Revaluation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator4Choice#Indicator
-	 * RevaluationIndicator4Choice.Indicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator4Choice#Proprietary
-	 * RevaluationIndicator4Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator1Choice#mmIndicator
+	 * RevaluationIndicator1Choice.mmIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator1Choice#mmProprietary
+	 * RevaluationIndicator1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails3.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator2Choice#mmIndicator
+	 * RevaluationIndicator2Choice.mmIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator2Choice#mmProprietary
+	 * RevaluationIndicator2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails5.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails1.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails11.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails14.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails4.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#mmIndicator
+	 * Revaluation2Choice.mmIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#mmProprietary
+	 * Revaluation2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmRevaluation
+	 * SecuritiesFinancing10.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails19.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails20.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Revaluation1Choice#mmIndicator
+	 * Revaluation1Choice.mmIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Revaluation1Choice#mmProprietary
+	 * Revaluation1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmRevaluationIndicator
+	 * SecuritiesFinancing1.mmRevaluationIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails28.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails27.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator3Choice#mmIndicator
+	 * RevaluationIndicator3Choice.mmIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator3Choice#mmProprietary
+	 * RevaluationIndicator3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails32.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails30.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator4Choice#mmIndicator
+	 * RevaluationIndicator4Choice.mmIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator4Choice#mmProprietary
+	 * RevaluationIndicator4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -993,30 +1000,31 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RevaluationIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRevaluationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RevaluationIndicator1Choice.Indicator, com.tools20022.repository.choice.RevaluationIndicator1Choice.Proprietary,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.Revaluation, com.tools20022.repository.choice.RevaluationIndicator2Choice.Indicator,
-					com.tools20022.repository.choice.RevaluationIndicator2Choice.Proprietary, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.Revaluation,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.Revaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.Revaluation,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.Revaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.Revaluation,
-					com.tools20022.repository.choice.Revaluation2Choice.Indicator, com.tools20022.repository.choice.Revaluation2Choice.Proprietary, com.tools20022.repository.msg.SecuritiesFinancing10.Revaluation,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.Revaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.Revaluation,
-					com.tools20022.repository.choice.Revaluation1Choice.Indicator, com.tools20022.repository.choice.Revaluation1Choice.Proprietary, com.tools20022.repository.msg.SecuritiesFinancing1.RevaluationIndicator,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.Revaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.Revaluation,
-					com.tools20022.repository.choice.RevaluationIndicator3Choice.Indicator, com.tools20022.repository.choice.RevaluationIndicator3Choice.Proprietary,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.Revaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.Revaluation,
-					com.tools20022.repository.choice.RevaluationIndicator4Choice.Indicator, com.tools20022.repository.choice.RevaluationIndicator4Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RevaluationIndicator1Choice.mmIndicator, com.tools20022.repository.choice.RevaluationIndicator1Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmRevaluation, com.tools20022.repository.choice.RevaluationIndicator2Choice.mmIndicator,
+					com.tools20022.repository.choice.RevaluationIndicator2Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmRevaluation,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmRevaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmRevaluation,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmRevaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmRevaluation,
+					com.tools20022.repository.choice.Revaluation2Choice.mmIndicator, com.tools20022.repository.choice.Revaluation2Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesFinancing10.mmRevaluation,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmRevaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmRevaluation,
+					com.tools20022.repository.choice.Revaluation1Choice.mmIndicator, com.tools20022.repository.choice.Revaluation1Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesFinancing1.mmRevaluationIndicator,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmRevaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmRevaluation,
+					com.tools20022.repository.choice.RevaluationIndicator3Choice.mmIndicator, com.tools20022.repository.choice.RevaluationIndicator3Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmRevaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmRevaluation,
+					com.tools20022.repository.choice.RevaluationIndicator4Choice.mmIndicator, com.tools20022.repository.choice.RevaluationIndicator4Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RevaluationIndicator";
 			definition = "Specifies whether the collateral position should be subject to automatic revaluation by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator interestPayment;
 	/**
 	 * Specifies whether the interest is to be paid to the collateral taker. If
 	 * set to no, the interest is paid to the collateral giver.
@@ -1028,64 +1036,64 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#InterestPayment
-	 * SecuritiesFinancingTransactionDetails3.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#InterestPayment
-	 * SecuritiesFinancingTransactionDetails5.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#InterestPayment
-	 * SecuritiesFinancingTransactionDetails1.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#InterestPayment
-	 * SecuritiesFinancingTransactionDetails11.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#InterestPayment
-	 * SecuritiesFinancingTransactionDetails14.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#InterestPayment
-	 * SecuritiesFinancingTransactionDetails4.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#InterestPayment
-	 * SecuritiesFinancingTransactionDetails7.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#InterestPayment
-	 * SecuritiesFinancingTransactionDetails19.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#InterestPayment
-	 * SecuritiesFinancingTransactionDetails20.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#InterestPayment
-	 * SecuritiesFinancingTransactionDetails9.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#InterestPayment
-	 * SecuritiesFinancingTransactionDetails28.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#InterestPayment
-	 * SecuritiesFinancingTransactionDetails27.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#InterestPayment
-	 * SecuritiesFinancingTransactionDetails29.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#InterestPayment
-	 * SecuritiesFinancingTransactionDetails32.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#InterestPayment
-	 * SecuritiesFinancingTransactionDetails30.InterestPayment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#InterestPayment
-	 * SecuritiesFinancingTransactionDetails34.InterestPayment}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails3.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails5.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails1.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails11.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails14.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails4.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails7.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails19.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails20.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails9.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails28.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails27.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails29.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails32.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails30.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails34.mmInterestPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1099,26 +1107,27 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InterestPayment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInterestPayment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.InterestPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.InterestPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.InterestPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.InterestPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.InterestPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.InterestPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.InterestPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.InterestPayment);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmInterestPayment,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmInterestPayment,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmInterestPayment,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmInterestPayment,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmInterestPayment,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmInterestPayment,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmInterestPayment,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmInterestPayment);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InterestPayment";
 			definition = "Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text variableRateSupport;
 	/**
 	 * Index or support rate used together with the spread to calculate the
 	 * repurchase rate.
@@ -1129,112 +1138,112 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails3.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails5.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails1.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails11.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails14.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails4.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#VariableRateSupport
-	 * SecuritiesFinancing10.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails2.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails8.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails7.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails19.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails20.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails6.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails10.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails17.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails18.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails9.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#VariableRateSupport
-	 * SecuritiesFinancing1.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails21.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails22.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails24.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails25.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails26.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails28.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails27.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails29.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails33.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails32.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails30.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails34.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails35.VariableRateSupport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails36.VariableRateSupport}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails3.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails5.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails1.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails11.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails14.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails4.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmVariableRateSupport
+	 * SecuritiesFinancing10.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails2.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails8.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails7.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails19.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails20.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails6.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails10.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails17.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails18.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails9.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmVariableRateSupport
+	 * SecuritiesFinancing1.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails21.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails22.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails24.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails25.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails26.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails28.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails27.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails29.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails33.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails32.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails30.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails34.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails35.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails36.mmVariableRateSupport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1248,34 +1257,35 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute VariableRateSupport = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmVariableRateSupport = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancing10.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancing1.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.VariableRateSupport,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.VariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.VariableRateSupport);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancing1.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmVariableRateSupport,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmVariableRateSupport, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmVariableRateSupport);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VariableRateSupport";
 			definition = "Index or support rate used together with the spread to calculate the repurchase rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PercentageRate repurchaseRate;
 	/**
 	 * Rate to be used to recalculate the repurchase amount.
 	 * <p>
@@ -1286,112 +1296,112 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails3.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails5.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails1.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails11.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails14.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails4.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#RepurchaseRate
-	 * SecuritiesFinancing10.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails2.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails8.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails7.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails19.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails20.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails6.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails10.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails17.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails18.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails9.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#Repurchase
-	 * SecuritiesFinancing1.Repurchase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails21.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails22.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails24.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails25.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails26.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails28.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails27.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails29.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails33.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails32.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails30.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails34.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails35.RepurchaseRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails36.RepurchaseRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails3.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails5.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails1.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails11.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails14.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails4.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmRepurchaseRate
+	 * SecuritiesFinancing10.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails2.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails8.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails7.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails19.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails20.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails6.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails10.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails17.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails18.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails9.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmRepurchase
+	 * SecuritiesFinancing1.mmRepurchase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails21.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails22.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails24.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails25.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails26.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails28.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails27.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails29.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails33.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails32.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails30.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails34.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails35.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails36.mmRepurchaseRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1403,34 +1413,35 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * definition} = "Rate to be used to recalculate the repurchase amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RepurchaseRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRepurchaseRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancing10.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancing1.Repurchase,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.RepurchaseRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.RepurchaseRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancing1.mmRepurchase,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmRepurchaseRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmRepurchaseRate);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseRate";
 			definition = "Rate to be used to recalculate the repurchase amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate stockLoanMargin;
 	/**
 	 * Percentage mark-up on a loan consideration used to reflect the lender's
 	 * risk.
@@ -1442,100 +1453,100 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails3.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails5.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails1.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails11.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails14.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails4.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#StockLoanMargin
-	 * SecuritiesFinancing10.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails2.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails8.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails19.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails20.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails6.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails10.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails17.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails18.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#StockLoanMargin
-	 * SecuritiesFinancing1.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails21.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails22.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails24.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails25.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails26.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails28.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails27.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails33.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails32.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails30.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails35.StockLoanMargin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails36.StockLoanMargin}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails3.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails5.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails1.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails11.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails14.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails4.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmStockLoanMargin
+	 * SecuritiesFinancing10.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails2.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails8.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails19.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails20.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails6.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails10.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails17.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails18.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmStockLoanMargin
+	 * SecuritiesFinancing1.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails21.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails22.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails24.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails25.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails26.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails28.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails27.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails33.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails32.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails30.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails35.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails36.mmStockLoanMargin}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1549,32 +1560,33 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StockLoanMargin = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStockLoanMargin = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancing10.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancing1.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.StockLoanMargin,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.StockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.StockLoanMargin);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancing1.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmStockLoanMargin,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmStockLoanMargin, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmStockLoanMargin);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StockLoanMargin";
 			definition = "Percentage mark-up on a loan consideration used to reflect the lender's risk.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Interest> interest;
 	/**
 	 * Interest to be paid on the transaction amount.
 	 * <p>
@@ -1583,108 +1595,108 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#SecuritiesFinancing
-	 * Interest.SecuritiesFinancing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
+	 * Interest.mmSecuritiesFinancing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Interest Interest}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#PricingRate
-	 * SecuritiesFinancingTransactionDetails3.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#PricingRate
-	 * SecuritiesFinancingTransactionDetails5.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#PricingRate
-	 * SecuritiesFinancingTransactionDetails1.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#PricingRate
-	 * SecuritiesFinancingTransactionDetails11.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#PricingRate
-	 * SecuritiesFinancingTransactionDetails14.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#PricingRate
-	 * SecuritiesFinancingTransactionDetails4.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#PricingRate
-	 * SecuritiesFinancing10.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#PricingRate
-	 * SecuritiesFinancingTransactionDetails2.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#PricingRate
-	 * SecuritiesFinancingTransactionDetails8.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#PricingRate
-	 * SecuritiesFinancingTransactionDetails19.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#PricingRate
-	 * SecuritiesFinancingTransactionDetails20.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#PricingRate
-	 * SecuritiesFinancingTransactionDetails6.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#PricingRate
-	 * SecuritiesFinancingTransactionDetails10.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#PricingRate
-	 * SecuritiesFinancingTransactionDetails17.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#PricingRate
-	 * SecuritiesFinancingTransactionDetails18.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#Pricing
-	 * SecuritiesFinancing1.Pricing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#PricingRate
-	 * SecuritiesFinancingTransactionDetails21.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#PricingRate
-	 * SecuritiesFinancingTransactionDetails22.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#PricingRate
-	 * SecuritiesFinancingTransactionDetails24.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#PricingRate
-	 * SecuritiesFinancingTransactionDetails25.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#PricingRate
-	 * SecuritiesFinancingTransactionDetails26.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#PricingRate
-	 * SecuritiesFinancingTransactionDetails28.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#PricingRate
-	 * SecuritiesFinancingTransactionDetails27.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#PricingRate
-	 * SecuritiesFinancingTransactionDetails33.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#PricingRate
-	 * SecuritiesFinancingTransactionDetails32.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#PricingRate
-	 * SecuritiesFinancingTransactionDetails30.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#PricingRate
-	 * SecuritiesFinancingTransactionDetails35.PricingRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#PricingRate
-	 * SecuritiesFinancingTransactionDetails36.PricingRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails3.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails5.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails1.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails11.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails14.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails4.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmPricingRate
+	 * SecuritiesFinancing10.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails2.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails8.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails19.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails20.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails6.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails10.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails17.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails18.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmPricing
+	 * SecuritiesFinancing1.mmPricing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails21.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails22.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails24.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails25.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails26.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails28.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails27.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails33.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails32.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails30.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails35.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails36.mmPricingRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1696,33 +1708,34 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * definition} = "Interest to be paid on the transaction amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Interest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancing10.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.PricingRate, com.tools20022.repository.msg.SecuritiesFinancing1.Pricing,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.PricingRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.PricingRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancing1.mmPricing,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmPricingRate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmPricingRate);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest to be paid on the transaction amount.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Interest.SecuritiesFinancing;
+			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmSecuritiesFinancing;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
+	protected Spread repurchaseSpread;
 	/**
 	 * Repurchase spread expressed as a rate; margin over or under an index that
 	 * determines the repurchase rate.
@@ -1732,102 +1745,102 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#SecuritiesFinancing
-	 * Spread.SecuritiesFinancing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmSecuritiesFinancing
+	 * Spread.mmSecuritiesFinancing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Spread Spread}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#Spread
-	 * SecuritiesFinancingTransactionDetails3.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#Spread
-	 * SecuritiesFinancingTransactionDetails5.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#Spread
-	 * SecuritiesFinancingTransactionDetails1.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#Spread
-	 * SecuritiesFinancingTransactionDetails11.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#Spread
-	 * SecuritiesFinancingTransactionDetails14.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#Spread
-	 * SecuritiesFinancingTransactionDetails4.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#Spread
-	 * SecuritiesFinancingTransactionDetails2.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#Spread
-	 * SecuritiesFinancingTransactionDetails8.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#Spread
-	 * SecuritiesFinancingTransactionDetails19.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#Spread
-	 * SecuritiesFinancingTransactionDetails20.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#Spread
-	 * SecuritiesFinancingTransactionDetails6.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#Spread
-	 * SecuritiesFinancingTransactionDetails10.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#Spread
-	 * SecuritiesFinancingTransactionDetails17.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#Spread
-	 * SecuritiesFinancingTransactionDetails18.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#Spread
-	 * SecuritiesFinancingTransactionDetails21.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#Spread
-	 * SecuritiesFinancingTransactionDetails22.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#Spread
-	 * SecuritiesFinancingTransactionDetails24.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#Spread
-	 * SecuritiesFinancingTransactionDetails25.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#Spread
-	 * SecuritiesFinancingTransactionDetails26.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#Spread
-	 * SecuritiesFinancingTransactionDetails28.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#Spread
-	 * SecuritiesFinancingTransactionDetails27.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#Spread
-	 * SecuritiesFinancingTransactionDetails33.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#Spread
-	 * SecuritiesFinancingTransactionDetails32.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#Spread
-	 * SecuritiesFinancingTransactionDetails30.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#Spread
-	 * SecuritiesFinancingTransactionDetails35.Spread}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#Spread
-	 * SecuritiesFinancingTransactionDetails36.Spread}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmSpread
+	 * SecuritiesFinancingTransactionDetails3.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmSpread
+	 * SecuritiesFinancingTransactionDetails5.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmSpread
+	 * SecuritiesFinancingTransactionDetails1.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmSpread
+	 * SecuritiesFinancingTransactionDetails11.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmSpread
+	 * SecuritiesFinancingTransactionDetails14.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmSpread
+	 * SecuritiesFinancingTransactionDetails4.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmSpread
+	 * SecuritiesFinancingTransactionDetails2.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmSpread
+	 * SecuritiesFinancingTransactionDetails8.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmSpread
+	 * SecuritiesFinancingTransactionDetails19.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmSpread
+	 * SecuritiesFinancingTransactionDetails20.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmSpread
+	 * SecuritiesFinancingTransactionDetails6.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmSpread
+	 * SecuritiesFinancingTransactionDetails10.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmSpread
+	 * SecuritiesFinancingTransactionDetails17.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmSpread
+	 * SecuritiesFinancingTransactionDetails18.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmSpread
+	 * SecuritiesFinancingTransactionDetails21.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmSpread
+	 * SecuritiesFinancingTransactionDetails22.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmSpread
+	 * SecuritiesFinancingTransactionDetails24.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmSpread
+	 * SecuritiesFinancingTransactionDetails25.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmSpread
+	 * SecuritiesFinancingTransactionDetails26.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmSpread
+	 * SecuritiesFinancingTransactionDetails28.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmSpread
+	 * SecuritiesFinancingTransactionDetails27.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmSpread
+	 * SecuritiesFinancingTransactionDetails33.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmSpread
+	 * SecuritiesFinancingTransactionDetails32.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmSpread
+	 * SecuritiesFinancingTransactionDetails30.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmSpread
+	 * SecuritiesFinancingTransactionDetails35.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmSpread
+	 * SecuritiesFinancingTransactionDetails36.mmSpread}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1841,33 +1854,34 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RepurchaseSpread = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRepurchaseSpread = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.Spread,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.Spread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.Spread);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmSpread,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmSpread);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseSpread";
 			definition = "Repurchase spread expressed as a rate; margin over or under an index that determines the repurchase rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Spread.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Spread.SecuritiesFinancing;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Spread.mmSecuritiesFinancing;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 		}
 	};
+	protected Max3NumericText transactionCallDelay;
 	/**
 	 * Minimum number of days' notice a counterparty needs for terminating the
 	 * transaction.
@@ -1879,70 +1893,70 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max3NumericText
 	 * Max3NumericText}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails3.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails5.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails1.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails11.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails14.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails4.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#TransactionCallDelay
-	 * SecuritiesFinancing10.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails7.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails19.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails20.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails9.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#TransactionCallDelay
-	 * SecuritiesFinancing1.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails28.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails27.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails29.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails32.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails30.TransactionCallDelay}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails34.TransactionCallDelay}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails3.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails5.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails1.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails11.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails14.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails4.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmTransactionCallDelay
+	 * SecuritiesFinancing10.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails7.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails19.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails20.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails9.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmTransactionCallDelay
+	 * SecuritiesFinancing1.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails28.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails27.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails29.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails32.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails30.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails34.mmTransactionCallDelay}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1956,27 +1970,28 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransactionCallDelay = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransactionCallDelay = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancing10.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancing1.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.TransactionCallDelay,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.TransactionCallDelay);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancing1.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmTransactionCallDelay,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmTransactionCallDelay);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransactionCallDelay";
 			definition = "Minimum number of days' notice a counterparty needs for terminating the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max3NumericText totalNumberOfCollateralInstructions;
 	/**
 	 * Indicates the total Number of collateral instructions involved in the
 	 * transaction.
@@ -1988,70 +2003,70 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max3NumericText
 	 * Max3NumericText}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails3.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails5.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails1.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails11.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails14.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails4.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancing10.TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails19.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails20.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancing1.TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails28.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails27.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails32.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancingTransactionDetails30.
-	 * TotalNumberOfCollateralInstructions}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails3.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails5.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails1.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails11.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails14.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails4.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancing10.mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails19.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails20.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancing1.mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails28.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails27.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails32.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails30.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2065,26 +2080,27 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalNumberOfCollateralInstructions = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalNumberOfCollateralInstructions = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.TotalNumberOfCollateralInstructions,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.TotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.TotalNumberOfCollateralInstructions,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.TotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.TotalNumberOfCollateralInstructions,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.TotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancing10.TotalNumberOfCollateralInstructions,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.TotalNumberOfCollateralInstructions,
-					com.tools20022.repository.msg.SecuritiesFinancing1.TotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.TotalNumberOfCollateralInstructions,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.TotalNumberOfCollateralInstructions,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.TotalNumberOfCollateralInstructions);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmTotalNumberOfCollateralInstructions,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmTotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmTotalNumberOfCollateralInstructions,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmTotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTotalNumberOfCollateralInstructions,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmTotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancing10.mmTotalNumberOfCollateralInstructions,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmTotalNumberOfCollateralInstructions,
+					com.tools20022.repository.msg.SecuritiesFinancing1.mmTotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmTotalNumberOfCollateralInstructions,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTotalNumberOfCollateralInstructions, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmTotalNumberOfCollateralInstructions,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmTotalNumberOfCollateralInstructions);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalNumberOfCollateralInstructions";
 			definition = "Indicates the total Number of collateral instructions involved in the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected CurrencyAndAmount dealAmount;
 	/**
 	 * Deal amount of the second leg.
 	 * <p>
@@ -2095,55 +2111,55 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#DealAmount
-	 * SecuritiesFinancingTransactionDetails3.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#DealAmount
-	 * SecuritiesFinancingTransactionDetails5.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#DealAmount
-	 * SecuritiesFinancingTransactionDetails1.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#DealAmount
-	 * SecuritiesFinancingTransactionDetails11.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#DealAmount
-	 * SecuritiesFinancingTransactionDetails14.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#DealAmount
-	 * SecuritiesFinancingTransactionDetails4.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#DealAmount
-	 * SecuritiesFinancingTransactionDetails19.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#DealAmount
-	 * SecuritiesFinancingTransactionDetails20.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#DealAmount
-	 * SecuritiesFinancing1.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#DealAmount
-	 * SecuritiesFinancingTransactionDetails28.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#DealAmount
-	 * SecuritiesFinancingTransactionDetails27.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#DealAmount
-	 * SecuritiesFinancingTransactionDetails32.DealAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#DealAmount
-	 * SecuritiesFinancingTransactionDetails30.DealAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails3.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails5.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails1.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails11.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails14.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails4.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails19.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails20.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmDealAmount
+	 * SecuritiesFinancing1.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails28.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails27.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails32.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails30.mmDealAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2155,25 +2171,26 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * definition} = "Deal amount of the second leg."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DealAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDealAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.DealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.DealAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.DealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.DealAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.DealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.DealAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.DealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.DealAmount,
-					com.tools20022.repository.msg.SecuritiesFinancing1.DealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.DealAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.DealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.DealAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.DealAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmDealAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmDealAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmDealAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmDealAmount,
+					com.tools20022.repository.msg.SecuritiesFinancing1.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmDealAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmDealAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmDealAmount);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DealAmount";
 			definition = "Deal amount of the second leg.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount forfeitRepurchaseAmount;
 	/**
 	 * Fixed amount which has to be paid (instead of interest) in the case of a
 	 * recall.
@@ -2185,58 +2202,58 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails3.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails5.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails1.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails11.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails14.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails4.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#ForfeitAmount
-	 * SecuritiesFinancing10.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails19.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails20.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#ForfeitAmount
-	 * SecuritiesFinancing1.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails28.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails27.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails32.ForfeitAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails30.ForfeitAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails3.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails5.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails1.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails11.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails14.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails4.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmForfeitAmount
+	 * SecuritiesFinancing10.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails19.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails20.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmForfeitAmount
+	 * SecuritiesFinancing1.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails28.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails27.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails32.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails30.mmForfeitAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2250,25 +2267,26 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ForfeitRepurchaseAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmForfeitRepurchaseAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.ForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.ForfeitAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.ForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.ForfeitAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.ForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.ForfeitAmount,
-					com.tools20022.repository.msg.SecuritiesFinancing10.ForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.ForfeitAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.ForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancing1.ForfeitAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.ForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.ForfeitAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.ForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.ForfeitAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmForfeitAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmForfeitAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmForfeitAmount,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmForfeitAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancing1.mmForfeitAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmForfeitAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmForfeitAmount);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ForfeitRepurchaseAmount";
 			definition = "Fixed amount which has to be paid (instead of interest) in the case of a recall.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount premiumAmount;
 	/**
 	 * Difference between the cash amount of the first leg and the cash amount
 	 * of the second leg of the repurchase agreement.
@@ -2280,58 +2298,58 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails3.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails5.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails1.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails11.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails14.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails4.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#PremiumAmount
-	 * SecuritiesFinancing10.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails19.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails20.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#PremiumAmount
-	 * SecuritiesFinancing1.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails28.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails27.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails32.PremiumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails30.PremiumAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails3.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails5.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails1.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails11.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails14.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails4.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmPremiumAmount
+	 * SecuritiesFinancing10.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails19.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails20.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmPremiumAmount
+	 * SecuritiesFinancing1.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails28.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails27.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails32.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails30.mmPremiumAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2345,25 +2363,26 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PremiumAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPremiumAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.PremiumAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.PremiumAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.PremiumAmount,
-					com.tools20022.repository.msg.SecuritiesFinancing10.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.PremiumAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancing1.PremiumAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.PremiumAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.PremiumAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmPremiumAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmPremiumAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmPremiumAmount,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmPremiumAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancing1.mmPremiumAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmPremiumAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmPremiumAmount);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PremiumAmount";
 			definition = "Difference between the cash amount of the first leg and the cash amount of the \nsecond leg of the repurchase agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount terminationAmountPerPieceOfCollateral;
 	/**
 	 * Amount of money to be settled per piece of collateral to terminate the
 	 * transaction.
@@ -2375,67 +2394,67 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails3.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails5.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails1.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails11.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails14.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails4.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails19.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails20.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#TerminationAmountPerPiecesOfCollateral
-	 * SecuritiesFinancing1.TerminationAmountPerPiecesOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails28.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails27.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails32.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancingTransactionDetails30.
-	 * TerminationAmountPerPieceOfCollateral}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails3.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails5.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails1.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails11.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails14.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails4.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails19.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails20.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmTerminationAmountPerPiecesOfCollateral
+	 * SecuritiesFinancing1.mmTerminationAmountPerPiecesOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails28.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails27.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails32.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails30.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2449,25 +2468,30 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TerminationAmountPerPieceOfCollateral = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTerminationAmountPerPieceOfCollateral = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.TerminationAmountPerPieceOfCollateral,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.TerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.TerminationAmountPerPieceOfCollateral,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.TerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.TerminationAmountPerPieceOfCollateral,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.TerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TerminationAmountPerPieceOfCollateral,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.TerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancing1.TerminationAmountPerPiecesOfCollateral,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.TerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TerminationAmountPerPieceOfCollateral,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.TerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.TerminationAmountPerPieceOfCollateral);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmTerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmTerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancing1.mmTerminationAmountPerPiecesOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmTerminationAmountPerPieceOfCollateral,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmTerminationAmountPerPieceOfCollateral);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TerminationAmountPerPieceOfCollateral";
 			definition = "Amount of money to be settled per piece of collateral to terminate the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount terminationTransactionAmount;
 	/**
 	 * Total amount of money to be settled to terminate the transaction.
 	 * <p>
@@ -2478,112 +2502,112 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails3.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails5.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails1.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails11.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails14.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails4.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#ClosingSettlementAmount
-	 * TwoLegTransactionDetails1.ClosingSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails2.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails8.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails7.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails19.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails20.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails6.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails10.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails17.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails18.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails9.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#TerminationTransactionAmount
-	 * SecuritiesFinancing1.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails21.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails22.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails24.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails25.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails26.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails28.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails27.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails29.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails33.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails32.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails30.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails34.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails35.TerminationTransactionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails36.TerminationTransactionAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails3.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails5.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails1.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails11.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails14.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails4.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmClosingSettlementAmount
+	 * TwoLegTransactionDetails1.mmClosingSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails2.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails8.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails7.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails19.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails20.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails6.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails10.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails17.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails18.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails9.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmTerminationTransactionAmount
+	 * SecuritiesFinancing1.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails21.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails22.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails24.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails25.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails26.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails28.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails27.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails29.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails33.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails32.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails30.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails34.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails35.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails36.mmTerminationTransactionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2596,35 +2620,36 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * "Total amount of money to be settled to terminate the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TerminationTransactionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTerminationTransactionAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.TerminationTransactionAmount, com.tools20022.repository.msg.TwoLegTransactionDetails1.ClosingSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancing1.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.TerminationTransactionAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.TerminationTransactionAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmTerminationTransactionAmount, com.tools20022.repository.msg.TwoLegTransactionDetails1.mmClosingSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancing1.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmTerminationTransactionAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmTerminationTransactionAmount);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TerminationTransactionAmount";
 			definition = "Total amount of money to be settled to terminate the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected YesNoIndicator maturityDateModification;
 	/**
 	 * Specifies whether the maturity date of the securities financing
 	 * transaction may be modified.
@@ -2636,58 +2661,58 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails1.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails11.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails14.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails4.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails7.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails19.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails20.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails9.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails28.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails27.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails29.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails32.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails30.MaturityDateModification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails34.MaturityDateModification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails1.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails11.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails14.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails4.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails7.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails19.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails20.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails9.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails28.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails27.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails29.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails32.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails30.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails34.mmMaturityDateModification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2701,26 +2726,27 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MaturityDateModification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMaturityDateModification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.MaturityDateModification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.MaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.MaturityDateModification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.MaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.MaturityDateModification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.MaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.MaturityDateModification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.MaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.MaturityDateModification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.MaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.MaturityDateModification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.MaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.MaturityDateModification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.MaturityDateModification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmMaturityDateModification,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmMaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmMaturityDateModification,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmMaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmMaturityDateModification,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmMaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmMaturityDateModification,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmMaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmMaturityDateModification,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmMaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmMaturityDateModification,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmMaturityDateModification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmMaturityDateModification,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmMaturityDateModification);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaturityDateModification";
 			definition = "Specifies whether the maturity date of the securities financing transaction may be modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISODateTime earliestCallBackDate;
 	/**
 	 * Earliest date/time at which the call back can take place.
 	 * <p>
@@ -2730,40 +2756,40 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails11.EarliestCallBackDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails14.EarliestCallBackDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails19.EarliestCallBackDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails20.EarliestCallBackDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails28.EarliestCallBackDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails27.EarliestCallBackDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails32.EarliestCallBackDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails30.EarliestCallBackDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails11.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails14.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails19.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails20.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails28.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails27.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails32.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails30.mmEarliestCallBackDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2776,22 +2802,23 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EarliestCallBackDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEarliestCallBackDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.EarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.EarliestCallBackDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.EarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.EarliestCallBackDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.EarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.EarliestCallBackDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.EarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.EarliestCallBackDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmEarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmEarliestCallBackDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmEarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmEarliestCallBackDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmEarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmEarliestCallBackDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmEarliestCallBackDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmEarliestCallBackDate);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EarliestCallBackDate";
 			definition = "Earliest date/time at which the call back can take place.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime openingSettlementDate;
 	/**
 	 * Date and time at which the securities are to be delivered or received.
 	 * <p>
@@ -2801,82 +2828,82 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#OpeningSettlementDate
-	 * SecuritiesTradeDetails3.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#OpeningSettlementDate
-	 * SecuritiesTradeDetails11.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails5#OpeningSettlementDate
-	 * SecuritiesTradeDetails5.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails2.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails8.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails12#OpeningSettlementDate
-	 * SecuritiesTradeDetails12.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails6.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails10.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails17.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails18.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails21.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#OpeningSettlementDate
-	 * SecuritiesTradeDetails37.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails22.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#OpeningSettlementDate
-	 * SecuritiesTradeDetails40.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails24.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails25.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails26.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#OpeningSettlementDate
-	 * SecuritiesTradeDetails56.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#OpeningSettlementDate
-	 * SecuritiesTradeDetails59.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails33.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails35.OpeningSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#OpeningSettlementDate
-	 * SecuritiesFinancingTransactionDetails36.OpeningSettlementDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails3.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails11.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails5#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails5.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails2.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails8.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails12#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails12.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails6.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails10.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails17.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails18.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails21.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails37.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails22.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails40.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails24.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails25.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails26.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails56.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails59.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails33.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails35.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmOpeningSettlementDate
+	 * SecuritiesFinancingTransactionDetails36.mmOpeningSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2889,29 +2916,30 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OpeningSettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOpeningSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails3.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails11.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails5.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails12.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails37.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails40.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails56.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails59.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.OpeningSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.OpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.OpeningSettlementDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails3.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails11.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails5.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails12.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails37.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails40.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails56.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails59.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmOpeningSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmOpeningSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmOpeningSettlementDate);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpeningSettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected RepurchaseTypeCode repurchaseType;
 	/**
 	 * Specifies the type of repurchase transaction.
 	 * <p>
@@ -2922,400 +2950,400 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RepurchaseTypeCode
 	 * RepurchaseTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType3Choice#Code
-	 * RepurchaseType3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType3Choice#Proprietary
-	 * RepurchaseType3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#RepurchaseType
-	 * SettlementDetails6.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType6Choice#Code
-	 * RepurchaseType6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType6Choice#Proprietary
-	 * RepurchaseType6Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#RepurchaseType
-	 * SettlementDetails20.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#RepurchaseType
-	 * SettlementDetails24.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#RepurchaseType
-	 * SettlementDetails33.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#RepurchaseType
-	 * SettlementDetails45.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#RepurchaseType
-	 * SettlementDetails54.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType1Choice#Code
-	 * RepurchaseType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType1Choice#Proprietary
-	 * RepurchaseType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#RepurchaseType
-	 * SettlementDetails1.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType4Choice#Code
-	 * RepurchaseType4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType4Choice#Proprietary
-	 * RepurchaseType4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#RepurchaseType
-	 * SettlementDetails19.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#RepurchaseType
-	 * SettlementDetails22.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#RepurchaseType
-	 * SettlementDetails35.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#RepurchaseType
-	 * SettlementDetails42.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#RepurchaseType
-	 * SettlementDetails52.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#RepurchaseType
-	 * SettlementDetails8.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#RepurchaseType
-	 * SettlementDetails11.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#RepurchaseType
-	 * SettlementDetails23.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#RepurchaseType
-	 * SettlementDetails37.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#RepurchaseType
-	 * SettlementDetails44.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#RepurchaseType
-	 * SettlementDetails53.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#RepurchaseType
-	 * SettlementDetails7.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#RepurchaseType
-	 * SettlementDetails12.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#RepurchaseType
-	 * SettlementDetails28.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#RepurchaseType
-	 * SettlementDetails38.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#RepurchaseType
-	 * SettlementDetails47.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#RepurchaseType
-	 * SettlementDetails56.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#RepurchaseType
-	 * SettlementDetails2.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#RepurchaseType
-	 * SettlementDetails13.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#RepurchaseType
-	 * SettlementDetails27.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#RepurchaseType
-	 * SettlementDetails39.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#RepurchaseType
-	 * SettlementDetails48.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#RepurchaseType
-	 * SettlementDetails57.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType11Choice#Code
-	 * RepurchaseType11Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType11Choice#Proprietary
-	 * RepurchaseType11Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#RepurchaseType
-	 * SettlementDetails43.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType2Choice#Code
-	 * RepurchaseType2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType2Choice#Proprietary
-	 * RepurchaseType2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#Code
-	 * RepurchaseType7Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#Proprietary
-	 * RepurchaseType7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#RepurchaseType
-	 * SettlementDetails5.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType8Choice#Code
-	 * RepurchaseType8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType8Choice#Proprietary
-	 * RepurchaseType8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails25#RepurchaseType
-	 * SettlementDetails25.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#RepurchaseType
-	 * SettlementDetails26.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType5Choice#Code
-	 * RepurchaseType5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType5Choice#Proprietary
-	 * RepurchaseType5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType9Choice#Code
-	 * RepurchaseType9Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType9Choice#Proprietary
-	 * RepurchaseType9Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#RepurchaseType
-	 * SettlementDetails15.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType10Choice#Code
-	 * RepurchaseType10Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType10Choice#Proprietary
-	 * RepurchaseType10Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails34#RepurchaseType
-	 * SettlementDetails34.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails49#RepurchaseType
-	 * SettlementDetails49.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails58#RepurchaseType
-	 * SettlementDetails58.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#RepurchaseType
-	 * SettlementDetails36.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#RepurchaseType
-	 * SettlementDetails66.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#RepurchaseType
-	 * SettlementDetails67.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#RepurchaseType
-	 * SettlementDetails70.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#RepurchaseType
-	 * SettlementDetails69.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#RepurchaseType
-	 * SettlementDetails75.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#RepurchaseType
-	 * SettlementDetails74.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#RepurchaseType
-	 * SettlementDetails81.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#RepurchaseType
-	 * SettlementDetails80.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#RepurchaseType
-	 * SettlementDetails87.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#RepurchaseType
-	 * SettlementDetails86.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#RepurchaseType
-	 * SettlementDetails85.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#RepurchaseType
-	 * SettlementDetails93.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#RepurchaseType
-	 * SettlementDetails90.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails99#RepurchaseType
-	 * SettlementDetails99.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#Code
-	 * RepurchaseType15Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#Proprietary
-	 * RepurchaseType15Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType12Choice#Code
-	 * RepurchaseType12Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType12Choice#Proprietary
-	 * RepurchaseType12Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#RepurchaseType
-	 * SettlementDetails95.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#RepurchaseType
-	 * SettlementDetails91.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType13Choice#Code
-	 * RepurchaseType13Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType13Choice#Proprietary
-	 * RepurchaseType13Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#RepurchaseType
-	 * SettlementDetails92.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType14Choice#Code
-	 * RepurchaseType14Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType14Choice#Proprietary
-	 * RepurchaseType14Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#RepurchaseType
-	 * SettlementDetails101.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#RepurchaseType
-	 * SettlementDetails111.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#RepurchaseType
-	 * SettlementDetails112.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#RepurchaseType
-	 * SettlementDetails110.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails108#RepurchaseType
-	 * SettlementDetails108.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#RepurchaseType
-	 * SettlementDetails115.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType19Choice#Code
-	 * RepurchaseType19Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType19Choice#Proprietary
-	 * RepurchaseType19Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#RepurchaseType
-	 * SettlementDetails117.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType16Choice#Code
-	 * RepurchaseType16Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType16Choice#Proprietary
-	 * RepurchaseType16Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType17Choice#Code
-	 * RepurchaseType17Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType17Choice#Proprietary
-	 * RepurchaseType17Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#RepurchaseType
-	 * SettlementDetails116.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType20Choice#Code
-	 * RepurchaseType20Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType20Choice#Proprietary
-	 * RepurchaseType20Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#RepurchaseType
-	 * SettlementDetails128.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#RepurchaseType
-	 * SettlementDetails120.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#RepurchaseType
-	 * SettlementDetails119.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails125#RepurchaseType
-	 * SettlementDetails125.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#RepurchaseType
-	 * SettlementDetails126.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType22Choice#Code
-	 * RepurchaseType22Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType22Choice#Proprietary
-	 * RepurchaseType22Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#RepurchaseType
-	 * SettlementDetails127.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#Code
-	 * RepurchaseType21Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#Proprietary
-	 * RepurchaseType21Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType23Choice#Code
-	 * RepurchaseType23Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType23Choice#Proprietary
-	 * RepurchaseType23Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#RepurchaseType
-	 * SettlementDetails121.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#RepurchaseType
-	 * SettlementDetails134.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#RepurchaseType
-	 * SettlementDetails137.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#RepurchaseType
-	 * SettlementDetails132.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType31Choice#Code
-	 * RepurchaseType31Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType31Choice#Proprietary
-	 * RepurchaseType31Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#RepurchaseType
-	 * SettlementDetails130.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType24Choice#Code
-	 * RepurchaseType24Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType24Choice#Proprietary
-	 * RepurchaseType24Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType26Choice#Code
-	 * RepurchaseType26Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType26Choice#Proprietary
-	 * RepurchaseType26Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails131#RepurchaseType
-	 * SettlementDetails131.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#RepurchaseType
-	 * SettlementDetails133.RepurchaseType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#RepurchaseType
-	 * SettlementDetails139.RepurchaseType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType3Choice#mmCode
+	 * RepurchaseType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType3Choice#mmProprietary
+	 * RepurchaseType3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#mmRepurchaseType
+	 * SettlementDetails6.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType6Choice#mmCode
+	 * RepurchaseType6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType6Choice#mmProprietary
+	 * RepurchaseType6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#mmRepurchaseType
+	 * SettlementDetails20.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#mmRepurchaseType
+	 * SettlementDetails24.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#mmRepurchaseType
+	 * SettlementDetails33.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#mmRepurchaseType
+	 * SettlementDetails45.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#mmRepurchaseType
+	 * SettlementDetails54.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType1Choice#mmCode
+	 * RepurchaseType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType1Choice#mmProprietary
+	 * RepurchaseType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmRepurchaseType
+	 * SettlementDetails1.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType4Choice#mmCode
+	 * RepurchaseType4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType4Choice#mmProprietary
+	 * RepurchaseType4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmRepurchaseType
+	 * SettlementDetails19.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmRepurchaseType
+	 * SettlementDetails22.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmRepurchaseType
+	 * SettlementDetails35.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmRepurchaseType
+	 * SettlementDetails42.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmRepurchaseType
+	 * SettlementDetails52.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#mmRepurchaseType
+	 * SettlementDetails8.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#mmRepurchaseType
+	 * SettlementDetails11.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#mmRepurchaseType
+	 * SettlementDetails23.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#mmRepurchaseType
+	 * SettlementDetails37.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#mmRepurchaseType
+	 * SettlementDetails44.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#mmRepurchaseType
+	 * SettlementDetails53.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#mmRepurchaseType
+	 * SettlementDetails7.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#mmRepurchaseType
+	 * SettlementDetails12.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#mmRepurchaseType
+	 * SettlementDetails28.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#mmRepurchaseType
+	 * SettlementDetails38.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#mmRepurchaseType
+	 * SettlementDetails47.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#mmRepurchaseType
+	 * SettlementDetails56.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#mmRepurchaseType
+	 * SettlementDetails2.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#mmRepurchaseType
+	 * SettlementDetails13.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#mmRepurchaseType
+	 * SettlementDetails27.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#mmRepurchaseType
+	 * SettlementDetails39.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#mmRepurchaseType
+	 * SettlementDetails48.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#mmRepurchaseType
+	 * SettlementDetails57.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType11Choice#mmCode
+	 * RepurchaseType11Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType11Choice#mmProprietary
+	 * RepurchaseType11Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmRepurchaseType
+	 * SettlementDetails43.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType2Choice#mmCode
+	 * RepurchaseType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType2Choice#mmProprietary
+	 * RepurchaseType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#mmCode
+	 * RepurchaseType7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#mmProprietary
+	 * RepurchaseType7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#mmRepurchaseType
+	 * SettlementDetails5.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType8Choice#mmCode
+	 * RepurchaseType8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType8Choice#mmProprietary
+	 * RepurchaseType8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails25#mmRepurchaseType
+	 * SettlementDetails25.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#mmRepurchaseType
+	 * SettlementDetails26.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType5Choice#mmCode
+	 * RepurchaseType5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType5Choice#mmProprietary
+	 * RepurchaseType5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType9Choice#mmCode
+	 * RepurchaseType9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType9Choice#mmProprietary
+	 * RepurchaseType9Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#mmRepurchaseType
+	 * SettlementDetails15.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType10Choice#mmCode
+	 * RepurchaseType10Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType10Choice#mmProprietary
+	 * RepurchaseType10Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails34#mmRepurchaseType
+	 * SettlementDetails34.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails49#mmRepurchaseType
+	 * SettlementDetails49.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails58#mmRepurchaseType
+	 * SettlementDetails58.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#mmRepurchaseType
+	 * SettlementDetails36.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#mmRepurchaseType
+	 * SettlementDetails66.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmRepurchaseType
+	 * SettlementDetails67.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#mmRepurchaseType
+	 * SettlementDetails70.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#mmRepurchaseType
+	 * SettlementDetails69.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#mmRepurchaseType
+	 * SettlementDetails75.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#mmRepurchaseType
+	 * SettlementDetails74.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmRepurchaseType
+	 * SettlementDetails81.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#mmRepurchaseType
+	 * SettlementDetails80.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#mmRepurchaseType
+	 * SettlementDetails87.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#mmRepurchaseType
+	 * SettlementDetails86.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#mmRepurchaseType
+	 * SettlementDetails85.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmRepurchaseType
+	 * SettlementDetails93.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#mmRepurchaseType
+	 * SettlementDetails90.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails99#mmRepurchaseType
+	 * SettlementDetails99.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#mmCode
+	 * RepurchaseType15Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#mmProprietary
+	 * RepurchaseType15Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType12Choice#mmCode
+	 * RepurchaseType12Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType12Choice#mmProprietary
+	 * RepurchaseType12Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#mmRepurchaseType
+	 * SettlementDetails95.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#mmRepurchaseType
+	 * SettlementDetails91.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType13Choice#mmCode
+	 * RepurchaseType13Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType13Choice#mmProprietary
+	 * RepurchaseType13Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#mmRepurchaseType
+	 * SettlementDetails92.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType14Choice#mmCode
+	 * RepurchaseType14Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType14Choice#mmProprietary
+	 * RepurchaseType14Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmRepurchaseType
+	 * SettlementDetails101.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmRepurchaseType
+	 * SettlementDetails111.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmRepurchaseType
+	 * SettlementDetails112.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#mmRepurchaseType
+	 * SettlementDetails110.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails108#mmRepurchaseType
+	 * SettlementDetails108.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#mmRepurchaseType
+	 * SettlementDetails115.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType19Choice#mmCode
+	 * RepurchaseType19Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType19Choice#mmProprietary
+	 * RepurchaseType19Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#mmRepurchaseType
+	 * SettlementDetails117.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType16Choice#mmCode
+	 * RepurchaseType16Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType16Choice#mmProprietary
+	 * RepurchaseType16Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType17Choice#mmCode
+	 * RepurchaseType17Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType17Choice#mmProprietary
+	 * RepurchaseType17Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#mmRepurchaseType
+	 * SettlementDetails116.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType20Choice#mmCode
+	 * RepurchaseType20Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType20Choice#mmProprietary
+	 * RepurchaseType20Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmRepurchaseType
+	 * SettlementDetails128.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmRepurchaseType
+	 * SettlementDetails120.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmRepurchaseType
+	 * SettlementDetails119.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails125#mmRepurchaseType
+	 * SettlementDetails125.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#mmRepurchaseType
+	 * SettlementDetails126.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType22Choice#mmCode
+	 * RepurchaseType22Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType22Choice#mmProprietary
+	 * RepurchaseType22Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#mmRepurchaseType
+	 * SettlementDetails127.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#mmCode
+	 * RepurchaseType21Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#mmProprietary
+	 * RepurchaseType21Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType23Choice#mmCode
+	 * RepurchaseType23Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType23Choice#mmProprietary
+	 * RepurchaseType23Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#mmRepurchaseType
+	 * SettlementDetails121.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#mmRepurchaseType
+	 * SettlementDetails134.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmRepurchaseType
+	 * SettlementDetails137.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmRepurchaseType
+	 * SettlementDetails132.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType31Choice#mmCode
+	 * RepurchaseType31Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType31Choice#mmProprietary
+	 * RepurchaseType31Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#mmRepurchaseType
+	 * SettlementDetails130.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType24Choice#mmCode
+	 * RepurchaseType24Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType24Choice#mmProprietary
+	 * RepurchaseType24Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType26Choice#mmCode
+	 * RepurchaseType26Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType26Choice#mmProprietary
+	 * RepurchaseType26Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails131#mmRepurchaseType
+	 * SettlementDetails131.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#mmRepurchaseType
+	 * SettlementDetails133.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmRepurchaseType
+	 * SettlementDetails139.mmRepurchaseType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3327,61 +3355,62 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * definition} = "Specifies the type of repurchase transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RepurchaseType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRepurchaseType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType3Choice.Code, com.tools20022.repository.choice.RepurchaseType3Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails6.RepurchaseType, com.tools20022.repository.choice.RepurchaseType6Choice.Code, com.tools20022.repository.choice.RepurchaseType6Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails20.RepurchaseType, com.tools20022.repository.msg.SettlementDetails24.RepurchaseType, com.tools20022.repository.msg.SettlementDetails33.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails45.RepurchaseType, com.tools20022.repository.msg.SettlementDetails54.RepurchaseType, com.tools20022.repository.choice.RepurchaseType1Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType1Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails1.RepurchaseType, com.tools20022.repository.choice.RepurchaseType4Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType4Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails19.RepurchaseType, com.tools20022.repository.msg.SettlementDetails22.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails35.RepurchaseType, com.tools20022.repository.msg.SettlementDetails42.RepurchaseType, com.tools20022.repository.msg.SettlementDetails52.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails8.RepurchaseType, com.tools20022.repository.msg.SettlementDetails11.RepurchaseType, com.tools20022.repository.msg.SettlementDetails23.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails37.RepurchaseType, com.tools20022.repository.msg.SettlementDetails44.RepurchaseType, com.tools20022.repository.msg.SettlementDetails53.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails7.RepurchaseType, com.tools20022.repository.msg.SettlementDetails12.RepurchaseType, com.tools20022.repository.msg.SettlementDetails28.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails38.RepurchaseType, com.tools20022.repository.msg.SettlementDetails47.RepurchaseType, com.tools20022.repository.msg.SettlementDetails56.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails2.RepurchaseType, com.tools20022.repository.msg.SettlementDetails13.RepurchaseType, com.tools20022.repository.msg.SettlementDetails27.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails39.RepurchaseType, com.tools20022.repository.msg.SettlementDetails48.RepurchaseType, com.tools20022.repository.msg.SettlementDetails57.RepurchaseType,
-					com.tools20022.repository.choice.RepurchaseType11Choice.Code, com.tools20022.repository.choice.RepurchaseType11Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails43.RepurchaseType,
-					com.tools20022.repository.choice.RepurchaseType2Choice.Code, com.tools20022.repository.choice.RepurchaseType2Choice.Proprietary, com.tools20022.repository.choice.RepurchaseType7Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType7Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails5.RepurchaseType, com.tools20022.repository.choice.RepurchaseType8Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType8Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails25.RepurchaseType, com.tools20022.repository.msg.SettlementDetails26.RepurchaseType,
-					com.tools20022.repository.choice.RepurchaseType5Choice.Code, com.tools20022.repository.choice.RepurchaseType5Choice.Proprietary, com.tools20022.repository.choice.RepurchaseType9Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType9Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails15.RepurchaseType, com.tools20022.repository.choice.RepurchaseType10Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType10Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails34.RepurchaseType, com.tools20022.repository.msg.SettlementDetails49.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails58.RepurchaseType, com.tools20022.repository.msg.SettlementDetails36.RepurchaseType, com.tools20022.repository.msg.SettlementDetails66.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails67.RepurchaseType, com.tools20022.repository.msg.SettlementDetails70.RepurchaseType, com.tools20022.repository.msg.SettlementDetails69.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails75.RepurchaseType, com.tools20022.repository.msg.SettlementDetails74.RepurchaseType, com.tools20022.repository.msg.SettlementDetails81.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails80.RepurchaseType, com.tools20022.repository.msg.SettlementDetails87.RepurchaseType, com.tools20022.repository.msg.SettlementDetails86.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails85.RepurchaseType, com.tools20022.repository.msg.SettlementDetails93.RepurchaseType, com.tools20022.repository.msg.SettlementDetails90.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails99.RepurchaseType, com.tools20022.repository.choice.RepurchaseType15Choice.Code, com.tools20022.repository.choice.RepurchaseType15Choice.Proprietary,
-					com.tools20022.repository.choice.RepurchaseType12Choice.Code, com.tools20022.repository.choice.RepurchaseType12Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails95.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails91.RepurchaseType, com.tools20022.repository.choice.RepurchaseType13Choice.Code, com.tools20022.repository.choice.RepurchaseType13Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails92.RepurchaseType, com.tools20022.repository.choice.RepurchaseType14Choice.Code, com.tools20022.repository.choice.RepurchaseType14Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails101.RepurchaseType, com.tools20022.repository.msg.SettlementDetails111.RepurchaseType, com.tools20022.repository.msg.SettlementDetails112.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails110.RepurchaseType, com.tools20022.repository.msg.SettlementDetails108.RepurchaseType, com.tools20022.repository.msg.SettlementDetails115.RepurchaseType,
-					com.tools20022.repository.choice.RepurchaseType19Choice.Code, com.tools20022.repository.choice.RepurchaseType19Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails117.RepurchaseType,
-					com.tools20022.repository.choice.RepurchaseType16Choice.Code, com.tools20022.repository.choice.RepurchaseType16Choice.Proprietary, com.tools20022.repository.choice.RepurchaseType17Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType17Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails116.RepurchaseType, com.tools20022.repository.choice.RepurchaseType20Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType20Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails128.RepurchaseType, com.tools20022.repository.msg.SettlementDetails120.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails119.RepurchaseType, com.tools20022.repository.msg.SettlementDetails125.RepurchaseType, com.tools20022.repository.msg.SettlementDetails126.RepurchaseType,
-					com.tools20022.repository.choice.RepurchaseType22Choice.Code, com.tools20022.repository.choice.RepurchaseType22Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails127.RepurchaseType,
-					com.tools20022.repository.choice.RepurchaseType21Choice.Code, com.tools20022.repository.choice.RepurchaseType21Choice.Proprietary, com.tools20022.repository.choice.RepurchaseType23Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType23Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails121.RepurchaseType, com.tools20022.repository.msg.SettlementDetails134.RepurchaseType,
-					com.tools20022.repository.msg.SettlementDetails137.RepurchaseType, com.tools20022.repository.msg.SettlementDetails132.RepurchaseType, com.tools20022.repository.choice.RepurchaseType31Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType31Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails130.RepurchaseType, com.tools20022.repository.choice.RepurchaseType24Choice.Code,
-					com.tools20022.repository.choice.RepurchaseType24Choice.Proprietary, com.tools20022.repository.choice.RepurchaseType26Choice.Code, com.tools20022.repository.choice.RepurchaseType26Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails131.RepurchaseType, com.tools20022.repository.msg.SettlementDetails133.RepurchaseType, com.tools20022.repository.msg.SettlementDetails139.RepurchaseType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType3Choice.mmCode, com.tools20022.repository.choice.RepurchaseType3Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails6.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType6Choice.mmCode, com.tools20022.repository.choice.RepurchaseType6Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails20.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails24.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails33.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails45.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails54.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType1Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType1Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails1.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType4Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails19.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails22.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails35.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails42.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails52.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails8.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails11.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails23.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails37.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails44.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails53.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails7.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails12.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails28.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails38.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails47.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails56.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails2.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails13.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails27.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails39.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails48.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails57.mmRepurchaseType,
+					com.tools20022.repository.choice.RepurchaseType11Choice.mmCode, com.tools20022.repository.choice.RepurchaseType11Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails43.mmRepurchaseType,
+					com.tools20022.repository.choice.RepurchaseType2Choice.mmCode, com.tools20022.repository.choice.RepurchaseType2Choice.mmProprietary, com.tools20022.repository.choice.RepurchaseType7Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType7Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails5.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType8Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType8Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails25.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails26.mmRepurchaseType,
+					com.tools20022.repository.choice.RepurchaseType5Choice.mmCode, com.tools20022.repository.choice.RepurchaseType5Choice.mmProprietary, com.tools20022.repository.choice.RepurchaseType9Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType9Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails15.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType10Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType10Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails34.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails49.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails58.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails36.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails66.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails67.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails70.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails69.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails75.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails74.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails81.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails80.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails87.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails86.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails85.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails93.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails90.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails99.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType15Choice.mmCode, com.tools20022.repository.choice.RepurchaseType15Choice.mmProprietary,
+					com.tools20022.repository.choice.RepurchaseType12Choice.mmCode, com.tools20022.repository.choice.RepurchaseType12Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails95.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails91.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType13Choice.mmCode, com.tools20022.repository.choice.RepurchaseType13Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails92.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType14Choice.mmCode, com.tools20022.repository.choice.RepurchaseType14Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails101.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails111.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails112.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails110.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails108.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails115.mmRepurchaseType,
+					com.tools20022.repository.choice.RepurchaseType19Choice.mmCode, com.tools20022.repository.choice.RepurchaseType19Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails117.mmRepurchaseType,
+					com.tools20022.repository.choice.RepurchaseType16Choice.mmCode, com.tools20022.repository.choice.RepurchaseType16Choice.mmProprietary, com.tools20022.repository.choice.RepurchaseType17Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType17Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails116.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType20Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType20Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails128.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails120.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails119.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails125.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails126.mmRepurchaseType,
+					com.tools20022.repository.choice.RepurchaseType22Choice.mmCode, com.tools20022.repository.choice.RepurchaseType22Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails127.mmRepurchaseType,
+					com.tools20022.repository.choice.RepurchaseType21Choice.mmCode, com.tools20022.repository.choice.RepurchaseType21Choice.mmProprietary, com.tools20022.repository.choice.RepurchaseType23Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType23Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails121.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails134.mmRepurchaseType,
+					com.tools20022.repository.msg.SettlementDetails137.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails132.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType31Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType31Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails130.mmRepurchaseType, com.tools20022.repository.choice.RepurchaseType24Choice.mmCode,
+					com.tools20022.repository.choice.RepurchaseType24Choice.mmProprietary, com.tools20022.repository.choice.RepurchaseType26Choice.mmCode, com.tools20022.repository.choice.RepurchaseType26Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails131.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails133.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails139.mmRepurchaseType);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseType";
 			definition = "Specifies the type of repurchase transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RepurchaseTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesPricing> endPrice;
 	/**
 	 * Negotiated fixed price of the security to buy it back.
 	 * <p>
@@ -3390,8 +3419,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RelatedSecuritiesFinancing
-	 * SecuritiesPricing.RelatedSecuritiesFinancing}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesFinancing
+	 * SecuritiesPricing.mmRelatedSecuritiesFinancing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3399,19 +3428,19 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#EndPrice
-	 * TwoLegTransactionDetails1.EndPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmEndPrice
+	 * TwoLegTransactionDetails1.mmEndPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3423,20 +3452,21 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * definition} = "Negotiated fixed price of the security to buy it back."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd EndPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmEndPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TwoLegTransactionDetails1.EndPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TwoLegTransactionDetails1.mmEndPrice);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EndPrice";
 			definition = "Negotiated fixed price of the security to buy it back.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.RelatedSecuritiesFinancing;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedSecuritiesFinancing;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected YesNoIndicator spreadTransaction;
 	/**
 	 * Specifies that there will be one price and one transaction when two
 	 * contracts are carried out simultaneously, one to buy and the other one to
@@ -3449,19 +3479,19 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#SpreadTransaction
-	 * FutureOrOptionDetails1.SpreadTransaction}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmSpreadTransaction
+	 * FutureOrOptionDetails1.mmSpreadTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3475,19 +3505,20 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SpreadTransaction = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSpreadTransaction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.SpreadTransaction);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.mmSpreadTransaction);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpreadTransaction";
 			definition = "Specifies that there will be one price and one transaction when two contracts are carried out simultaneously, one to buy and the other one to sell with two different expiration dates.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected SecuritiesFinancingAgreement financingAgreement;
 	/**
 	 * Provides the contractual details related to the agreement between
 	 * parties.
@@ -3497,8 +3528,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#SecuritiesFinancingTrade
-	 * SecuritiesFinancingAgreement.SecuritiesFinancingTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmSecuritiesFinancingTrade
+	 * SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3507,22 +3538,22 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement
 	 * SecuritiesFinancingAgreement}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#FinancingAgreement
-	 * SecuritiesFinancing10.FinancingAgreement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#FinancingAgreement
-	 * SecuritiesFinancing1.FinancingAgreement}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmFinancingAgreement
+	 * SecuritiesFinancing10.mmFinancingAgreement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmFinancingAgreement
+	 * SecuritiesFinancing1.mmFinancingAgreement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3536,21 +3567,22 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd FinancingAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmFinancingAgreement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.FinancingAgreement, com.tools20022.repository.msg.SecuritiesFinancing1.FinancingAgreement);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmFinancingAgreement, com.tools20022.repository.msg.SecuritiesFinancing1.mmFinancingAgreement);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancingAgreement";
 			definition = "Provides the contractual details related to the agreement between parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesFinancingAgreement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.SecuritiesFinancingTrade;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 		}
 	};
+	protected CurrencyAndAmount openingSettlementAmount;
 	/**
 	 * Total amount of money to be paid or received in exchange for the
 	 * securities at the opening of a securities financing transaction.
@@ -3562,58 +3594,58 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails2.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails8.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails6.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails10.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails17.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails18.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails21.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails22.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails24.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails25.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails26.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails33.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails35.OpeningSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#OpeningSettlementAmount
-	 * SecuritiesFinancingTransactionDetails36.OpeningSettlementAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails2.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails8.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails6.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails10.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails17.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails18.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails21.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails22.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails24.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails25.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails26.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails33.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails35.mmOpeningSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmOpeningSettlementAmount
+	 * SecuritiesFinancingTransactionDetails36.mmOpeningSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3627,25 +3659,27 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OpeningSettlementAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOpeningSettlementAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.OpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.OpeningSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.OpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.OpeningSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.OpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.OpeningSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.OpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.OpeningSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.OpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.OpeningSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.OpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.OpeningSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.OpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.OpeningSettlementAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmOpeningSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmOpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmOpeningSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmOpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmOpeningSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmOpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmOpeningSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmOpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmOpeningSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmOpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmOpeningSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmOpeningSettlementAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmOpeningSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmOpeningSettlementAmount);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpeningSettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected SecuritiesTrade closingLegExecution;
 	/**
 	 * Repayment of the previously received cash by one party in exchange of the
 	 * return of the security by the counterparty.
@@ -3655,8 +3689,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesFinancingClosingData
-	 * SecuritiesTrade.SecuritiesFinancingClosingData}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingClosingData
+	 * SecuritiesTrade.mmSecuritiesFinancingClosingData}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3682,20 +3716,21 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ClosingLegExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmClosingLegExecution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClosingLegExecution";
 			definition = "Repayment of the previously received cash by one party in exchange of the return of the security by the counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesFinancingClosingData;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesFinancingClosingData;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> SecuritiesTrade.mmObject();
 		}
 	};
+	protected SecuritiesTrade openingLegExecution;
 	/**
 	 * Transfer of cash to a party against the legal transfer of securities. The
 	 * cash receiver agrees to buy the same security from the counterparty at a
@@ -3706,8 +3741,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesFinancingOpeningData
-	 * SecuritiesTrade.SecuritiesFinancingOpeningData}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingOpeningData
+	 * SecuritiesTrade.mmSecuritiesFinancingOpeningData}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3733,20 +3768,21 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OpeningLegExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOpeningLegExecution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpeningLegExecution";
 			definition = "Transfer of cash to a party against the legal transfer of securities. The cash receiver agrees to buy the same security from the counterparty at a fixed price at some later date.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesFinancingOpeningData;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesFinancingOpeningData;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> SecuritiesTrade.mmObject();
 		}
 	};
+	protected BuyOrSellIndicationOfInterest relatedIndicationOfInterest;
 	/**
 	 * Indication of interest process which is the source of a securities
 	 * financing process.
@@ -3756,8 +3792,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#TwoLegTransaction
-	 * BuyOrSellIndicationOfInterest.TwoLegTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmTwoLegTransaction
+	 * BuyOrSellIndicationOfInterest.mmTwoLegTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3784,20 +3820,21 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedIndicationOfInterest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedIndicationOfInterest = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedIndicationOfInterest";
 			definition = "Indication of interest process which is the source of a securities financing process.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.TwoLegTransaction;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmTwoLegTransaction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Unique identification of the repurchase agreement.
 	 * <p>
@@ -3807,19 +3844,19 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#Identification
-	 * SecuritiesFinancing1.Identification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmIdentification
+	 * SecuritiesFinancing1.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3831,16 +3868,16 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * definition} = "Unique identification of the repurchase agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing1.Identification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing1.mmIdentification);
 			elementContext_lazy = () -> SecuritiesFinancing.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the repurchase agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -3848,32 +3885,32 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancing";
 				definition = "Process of lending or borrowing cash or securities against securities or cash collateral. It aims at optimising liquidity, support a trading strategy, or increase settlement efficiency.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.RelatedSecuritiesFinancing, com.tools20022.repository.entity.SecuritiesTrade.SecuritiesFinancingClosingData,
-						com.tools20022.repository.entity.SecuritiesTrade.SecuritiesFinancingOpeningData, com.tools20022.repository.entity.Interest.SecuritiesFinancing, com.tools20022.repository.entity.Spread.SecuritiesFinancing,
-						com.tools20022.repository.entity.SecuritiesFinancingAgreement.SecuritiesFinancingTrade, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.TwoLegTransaction);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TwoLegTransactionType1Choice.SecuritiesFinancingDetails, com.tools20022.repository.msg.TwoLegTransactionDetails1.OtherAmounts,
-						com.tools20022.repository.msg.TwoLegTransactionDetails1.TwoLegTransactionType, com.tools20022.repository.msg.SingleQuote1.TwoLegTransactionDetails,
-						com.tools20022.repository.msg.SingleOrder1.TwoLegTransactionDetails, com.tools20022.repository.msg.Order11.TwoLegTransactionDetails, com.tools20022.repository.msg.QuoteRequest1.TwoLegTransactionDetails);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedSecuritiesFinancing, com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesFinancingClosingData,
+						com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesFinancingOpeningData, com.tools20022.repository.entity.Interest.mmSecuritiesFinancing, com.tools20022.repository.entity.Spread.mmSecuritiesFinancing,
+						com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmTwoLegTransaction);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails, com.tools20022.repository.msg.TwoLegTransactionDetails1.mmOtherAmounts,
+						com.tools20022.repository.msg.TwoLegTransactionDetails1.mmTwoLegTransactionType, com.tools20022.repository.msg.SingleQuote1.mmTwoLegTransactionDetails,
+						com.tools20022.repository.msg.SingleOrder1.mmTwoLegTransactionDetails, com.tools20022.repository.msg.Order11.mmTwoLegTransactionDetails, com.tools20022.repository.msg.QuoteRequest1.mmTwoLegTransactionDetails);
 				subType_lazy = () -> Arrays.asList(SecuritiesLending.mmObject(), RepurchaseAgreement.mmObject());
 				superType_lazy = () -> SecuritiesTrade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesFinancing.ReturnLegInstruction, com.tools20022.repository.entity.SecuritiesFinancing.Type,
-						com.tools20022.repository.entity.SecuritiesFinancing.TerminationDateTime, com.tools20022.repository.entity.SecuritiesFinancing.RateChangeDateTime,
-						com.tools20022.repository.entity.SecuritiesFinancing.RevaluationIndicator, com.tools20022.repository.entity.SecuritiesFinancing.InterestPayment,
-						com.tools20022.repository.entity.SecuritiesFinancing.VariableRateSupport, com.tools20022.repository.entity.SecuritiesFinancing.RepurchaseRate, com.tools20022.repository.entity.SecuritiesFinancing.StockLoanMargin,
-						com.tools20022.repository.entity.SecuritiesFinancing.Interest, com.tools20022.repository.entity.SecuritiesFinancing.RepurchaseSpread, com.tools20022.repository.entity.SecuritiesFinancing.TransactionCallDelay,
-						com.tools20022.repository.entity.SecuritiesFinancing.TotalNumberOfCollateralInstructions, com.tools20022.repository.entity.SecuritiesFinancing.DealAmount,
-						com.tools20022.repository.entity.SecuritiesFinancing.ForfeitRepurchaseAmount, com.tools20022.repository.entity.SecuritiesFinancing.PremiumAmount,
-						com.tools20022.repository.entity.SecuritiesFinancing.TerminationAmountPerPieceOfCollateral, com.tools20022.repository.entity.SecuritiesFinancing.TerminationTransactionAmount,
-						com.tools20022.repository.entity.SecuritiesFinancing.MaturityDateModification, com.tools20022.repository.entity.SecuritiesFinancing.EarliestCallBackDate,
-						com.tools20022.repository.entity.SecuritiesFinancing.OpeningSettlementDate, com.tools20022.repository.entity.SecuritiesFinancing.RepurchaseType, com.tools20022.repository.entity.SecuritiesFinancing.EndPrice,
-						com.tools20022.repository.entity.SecuritiesFinancing.SpreadTransaction, com.tools20022.repository.entity.SecuritiesFinancing.FinancingAgreement,
-						com.tools20022.repository.entity.SecuritiesFinancing.OpeningSettlementAmount, com.tools20022.repository.entity.SecuritiesFinancing.ClosingLegExecution,
-						com.tools20022.repository.entity.SecuritiesFinancing.OpeningLegExecution, com.tools20022.repository.entity.SecuritiesFinancing.RelatedIndicationOfInterest,
-						com.tools20022.repository.entity.SecuritiesFinancing.Identification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesFinancing.mmReturnLegInstruction, com.tools20022.repository.entity.SecuritiesFinancing.mmType,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationDateTime, com.tools20022.repository.entity.SecuritiesFinancing.mmRateChangeDateTime,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmRevaluationIndicator, com.tools20022.repository.entity.SecuritiesFinancing.mmInterestPayment,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmVariableRateSupport, com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseRate,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmStockLoanMargin, com.tools20022.repository.entity.SecuritiesFinancing.mmInterest, com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseSpread,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmTransactionCallDelay, com.tools20022.repository.entity.SecuritiesFinancing.mmTotalNumberOfCollateralInstructions,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmDealAmount, com.tools20022.repository.entity.SecuritiesFinancing.mmForfeitRepurchaseAmount,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmPremiumAmount, com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationAmountPerPieceOfCollateral,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationTransactionAmount, com.tools20022.repository.entity.SecuritiesFinancing.mmMaturityDateModification,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmEarliestCallBackDate, com.tools20022.repository.entity.SecuritiesFinancing.mmOpeningSettlementDate,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseType, com.tools20022.repository.entity.SecuritiesFinancing.mmEndPrice, com.tools20022.repository.entity.SecuritiesFinancing.mmSpreadTransaction,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmFinancingAgreement, com.tools20022.repository.entity.SecuritiesFinancing.mmOpeningSettlementAmount,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmClosingLegExecution, com.tools20022.repository.entity.SecuritiesFinancing.mmOpeningLegExecution,
+						com.tools20022.repository.entity.SecuritiesFinancing.mmRelatedIndicationOfInterest, com.tools20022.repository.entity.SecuritiesFinancing.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesTradeDetails6.mmObject(), RevaluationIndicator1Choice.mmObject(), SecuritiesFinancingTransactionDetails3.mmObject(), SecuritiesTradeDetails13.mmObject(),
 						RevaluationIndicator2Choice.mmObject(), SecuritiesFinancingTransactionDetails5.mmObject(), SecuritiesFinancingTransactionDetails1.mmObject(), SecuritiesFinancingTransactionDetails11.mmObject(),
 						SecuritiesFinancingTransactionDetails14.mmObject(), SecuritiesTradeDetails3.mmObject(), SecuritiesTradeDetails11.mmObject(), SecuritiesFinancingTransactionDetails4.mmObject(), RepurchaseType3Choice.mmObject(),
@@ -3894,5 +3931,245 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getReturnLegInstruction() {
+		return returnLegInstruction;
+	}
+
+	public void setReturnLegInstruction(YesNoIndicator returnLegInstruction) {
+		this.returnLegInstruction = returnLegInstruction;
+	}
+
+	public SecuritiesTransactionTypeV2Code getType() {
+		return type;
+	}
+
+	public void setType(SecuritiesTransactionTypeV2Code type) {
+		this.type = type;
+	}
+
+	public ISODateTime getTerminationDateTime() {
+		return terminationDateTime;
+	}
+
+	public void setTerminationDateTime(ISODateTime terminationDateTime) {
+		this.terminationDateTime = terminationDateTime;
+	}
+
+	public ISODateTime getRateChangeDateTime() {
+		return rateChangeDateTime;
+	}
+
+	public void setRateChangeDateTime(ISODateTime rateChangeDateTime) {
+		this.rateChangeDateTime = rateChangeDateTime;
+	}
+
+	public YesNoIndicator getRevaluationIndicator() {
+		return revaluationIndicator;
+	}
+
+	public void setRevaluationIndicator(YesNoIndicator revaluationIndicator) {
+		this.revaluationIndicator = revaluationIndicator;
+	}
+
+	public YesNoIndicator getInterestPayment() {
+		return interestPayment;
+	}
+
+	public void setInterestPayment(YesNoIndicator interestPayment) {
+		this.interestPayment = interestPayment;
+	}
+
+	public Max35Text getVariableRateSupport() {
+		return variableRateSupport;
+	}
+
+	public void setVariableRateSupport(Max35Text variableRateSupport) {
+		this.variableRateSupport = variableRateSupport;
+	}
+
+	public PercentageRate getRepurchaseRate() {
+		return repurchaseRate;
+	}
+
+	public void setRepurchaseRate(PercentageRate repurchaseRate) {
+		this.repurchaseRate = repurchaseRate;
+	}
+
+	public PercentageRate getStockLoanMargin() {
+		return stockLoanMargin;
+	}
+
+	public void setStockLoanMargin(PercentageRate stockLoanMargin) {
+		this.stockLoanMargin = stockLoanMargin;
+	}
+
+	public List<Interest> getInterest() {
+		return interest;
+	}
+
+	public void setInterest(List<com.tools20022.repository.entity.Interest> interest) {
+		this.interest = interest;
+	}
+
+	public Spread getRepurchaseSpread() {
+		return repurchaseSpread;
+	}
+
+	public void setRepurchaseSpread(com.tools20022.repository.entity.Spread repurchaseSpread) {
+		this.repurchaseSpread = repurchaseSpread;
+	}
+
+	public Max3NumericText getTransactionCallDelay() {
+		return transactionCallDelay;
+	}
+
+	public void setTransactionCallDelay(Max3NumericText transactionCallDelay) {
+		this.transactionCallDelay = transactionCallDelay;
+	}
+
+	public Max3NumericText getTotalNumberOfCollateralInstructions() {
+		return totalNumberOfCollateralInstructions;
+	}
+
+	public void setTotalNumberOfCollateralInstructions(Max3NumericText totalNumberOfCollateralInstructions) {
+		this.totalNumberOfCollateralInstructions = totalNumberOfCollateralInstructions;
+	}
+
+	public CurrencyAndAmount getDealAmount() {
+		return dealAmount;
+	}
+
+	public void setDealAmount(CurrencyAndAmount dealAmount) {
+		this.dealAmount = dealAmount;
+	}
+
+	public CurrencyAndAmount getForfeitRepurchaseAmount() {
+		return forfeitRepurchaseAmount;
+	}
+
+	public void setForfeitRepurchaseAmount(CurrencyAndAmount forfeitRepurchaseAmount) {
+		this.forfeitRepurchaseAmount = forfeitRepurchaseAmount;
+	}
+
+	public CurrencyAndAmount getPremiumAmount() {
+		return premiumAmount;
+	}
+
+	public void setPremiumAmount(CurrencyAndAmount premiumAmount) {
+		this.premiumAmount = premiumAmount;
+	}
+
+	public CurrencyAndAmount getTerminationAmountPerPieceOfCollateral() {
+		return terminationAmountPerPieceOfCollateral;
+	}
+
+	public void setTerminationAmountPerPieceOfCollateral(CurrencyAndAmount terminationAmountPerPieceOfCollateral) {
+		this.terminationAmountPerPieceOfCollateral = terminationAmountPerPieceOfCollateral;
+	}
+
+	public CurrencyAndAmount getTerminationTransactionAmount() {
+		return terminationTransactionAmount;
+	}
+
+	public void setTerminationTransactionAmount(CurrencyAndAmount terminationTransactionAmount) {
+		this.terminationTransactionAmount = terminationTransactionAmount;
+	}
+
+	public YesNoIndicator getMaturityDateModification() {
+		return maturityDateModification;
+	}
+
+	public void setMaturityDateModification(YesNoIndicator maturityDateModification) {
+		this.maturityDateModification = maturityDateModification;
+	}
+
+	public ISODateTime getEarliestCallBackDate() {
+		return earliestCallBackDate;
+	}
+
+	public void setEarliestCallBackDate(ISODateTime earliestCallBackDate) {
+		this.earliestCallBackDate = earliestCallBackDate;
+	}
+
+	public ISODateTime getOpeningSettlementDate() {
+		return openingSettlementDate;
+	}
+
+	public void setOpeningSettlementDate(ISODateTime openingSettlementDate) {
+		this.openingSettlementDate = openingSettlementDate;
+	}
+
+	public RepurchaseTypeCode getRepurchaseType() {
+		return repurchaseType;
+	}
+
+	public void setRepurchaseType(RepurchaseTypeCode repurchaseType) {
+		this.repurchaseType = repurchaseType;
+	}
+
+	public List<SecuritiesPricing> getEndPrice() {
+		return endPrice;
+	}
+
+	public void setEndPrice(List<com.tools20022.repository.entity.SecuritiesPricing> endPrice) {
+		this.endPrice = endPrice;
+	}
+
+	public YesNoIndicator getSpreadTransaction() {
+		return spreadTransaction;
+	}
+
+	public void setSpreadTransaction(YesNoIndicator spreadTransaction) {
+		this.spreadTransaction = spreadTransaction;
+	}
+
+	public SecuritiesFinancingAgreement getFinancingAgreement() {
+		return financingAgreement;
+	}
+
+	public void setFinancingAgreement(com.tools20022.repository.entity.SecuritiesFinancingAgreement financingAgreement) {
+		this.financingAgreement = financingAgreement;
+	}
+
+	public CurrencyAndAmount getOpeningSettlementAmount() {
+		return openingSettlementAmount;
+	}
+
+	public void setOpeningSettlementAmount(CurrencyAndAmount openingSettlementAmount) {
+		this.openingSettlementAmount = openingSettlementAmount;
+	}
+
+	public SecuritiesTrade getClosingLegExecution() {
+		return closingLegExecution;
+	}
+
+	public void setClosingLegExecution(SecuritiesTrade closingLegExecution) {
+		this.closingLegExecution = closingLegExecution;
+	}
+
+	public SecuritiesTrade getOpeningLegExecution() {
+		return openingLegExecution;
+	}
+
+	public void setOpeningLegExecution(SecuritiesTrade openingLegExecution) {
+		this.openingLegExecution = openingLegExecution;
+	}
+
+	public BuyOrSellIndicationOfInterest getRelatedIndicationOfInterest() {
+		return relatedIndicationOfInterest;
+	}
+
+	public void setRelatedIndicationOfInterest(com.tools20022.repository.entity.BuyOrSellIndicationOfInterest relatedIndicationOfInterest) {
+		this.relatedIndicationOfInterest = relatedIndicationOfInterest;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

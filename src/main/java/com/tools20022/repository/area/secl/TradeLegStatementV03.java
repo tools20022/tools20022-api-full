@@ -22,13 +22,11 @@ import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
-import com.tools20022.repository.msg.SecuritiesAccount18;
-import com.tools20022.repository.msg.Statement31;
-import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msg.TradeLegStatement3;
+import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,30 +65,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#StatementParameters
- * TradeLegStatementV03.StatementParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmStatementParameters
+ * TradeLegStatementV03.mmStatementParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#Pagination
- * TradeLegStatementV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmPagination
+ * TradeLegStatementV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#ClearingMember
- * TradeLegStatementV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmClearingMember
+ * TradeLegStatementV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#ClearingAccount
- * TradeLegStatementV03.ClearingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmClearingAccount
+ * TradeLegStatementV03.mmClearingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#StatementDetails
- * TradeLegStatementV03.StatementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmStatementDetails
+ * TradeLegStatementV03.mmStatementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#SupplementaryData
- * TradeLegStatementV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmSupplementaryData
+ * TradeLegStatementV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#identifier
- * TradeLegStatementV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.003.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeLegStatementV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Statement31 statementParameters;
 	/**
 	 * Provides various statement parameters such as the statement
 	 * identification, the statement date and time or the statement frequency.
@@ -131,17 +128,18 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementParameters";
 			definition = "Provides various statement parameters such as the statement identification, the statement date and time or the statement frequency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement31.mmObject();
 		}
 	};
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -168,17 +166,18 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingMember;
 	/**
 	 * Provides the identification of the account owner, that is the clearing
 	 * member (individual clearing member or general clearing member).
@@ -205,17 +204,18 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the account owner, that is the clearing member (individual clearing member or general clearing member).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount18 clearingAccount;
 	/**
 	 * Identifies the clearing member account at the Central counterparty
 	 * through which the trade must be cleared (sometimes called position
@@ -243,17 +243,18 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount18.mmObject();
 		}
 	};
+	protected List<TradeLegStatement3> statementDetails;
 	/**
 	 * Provides the statement details.
 	 * <p>
@@ -277,7 +278,7 @@ public class TradeLegStatementV03 {
 	 * definition} = "Provides the statement details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,6 +288,7 @@ public class TradeLegStatementV03 {
 			complexType_lazy = () -> TradeLegStatement3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -313,7 +315,7 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,33 +323,6 @@ public class TradeLegStatementV03 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "003";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -361,12 +336,67 @@ public class TradeLegStatementV03 {
 				rootElement = "Document";
 				xmlTag = "TradLegStmt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegStatementV03.StatementParameters, com.tools20022.repository.area.secl.TradeLegStatementV03.Pagination,
-						com.tools20022.repository.area.secl.TradeLegStatementV03.ClearingMember, com.tools20022.repository.area.secl.TradeLegStatementV03.ClearingAccount,
-						com.tools20022.repository.area.secl.TradeLegStatementV03.StatementDetails, com.tools20022.repository.area.secl.TradeLegStatementV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.TradeLegStatementV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegStatementV03.mmStatementParameters, com.tools20022.repository.area.secl.TradeLegStatementV03.mmPagination,
+						com.tools20022.repository.area.secl.TradeLegStatementV03.mmClearingMember, com.tools20022.repository.area.secl.TradeLegStatementV03.mmClearingAccount,
+						com.tools20022.repository.area.secl.TradeLegStatementV03.mmStatementDetails, com.tools20022.repository.area.secl.TradeLegStatementV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "003";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Statement31 getStatementParameters() {
+		return statementParameters;
+	}
+
+	public void setStatementParameters(Statement31 statementParameters) {
+		this.statementParameters = statementParameters;
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public PartyIdentification35Choice getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public SecuritiesAccount18 getClearingAccount() {
+		return clearingAccount;
+	}
+
+	public void setClearingAccount(SecuritiesAccount18 clearingAccount) {
+		this.clearingAccount = clearingAccount;
+	}
+
+	public List<TradeLegStatement3> getStatementDetails() {
+		return statementDetails;
+	}
+
+	public void setStatementDetails(List<TradeLegStatement3> statementDetails) {
+		this.statementDetails = statementDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

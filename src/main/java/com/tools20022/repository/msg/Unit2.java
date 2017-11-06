@@ -36,15 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Unit2#Instrument
- * Unit2.Instrument}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit2#TotalNumber
- * Unit2.TotalNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit2#Group1Number
- * Unit2.Group1Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit2#Group2Number
- * Unit2.Group2Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit2#Complete Unit2.Complete}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit2#mmInstrument
+ * Unit2.mmInstrument}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit2#mmTotalNumber
+ * Unit2.mmTotalNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit2#mmGroup1Number
+ * Unit2.mmGroup1Number}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit2#mmGroup2Number
+ * Unit2.mmGroup2Number}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit2#mmComplete
+ * Unit2.mmComplete}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Unit2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrument7 instrument;
 	/**
 	 * Specifies the type of underlying assets for the PEP or ISA.
 	 * <p>
@@ -99,21 +101,22 @@ public class Unit2 {
 	 * "Specifies the type of underlying assets for the PEP or ISA."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Instrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Unit2.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> Unit2.mmObject();
 			isDerived = false;
 			xmlTag = "Instrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instrument";
 			definition = "Specifies the type of underlying assets for the PEP or ISA.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument7.mmObject();
 		}
 	};
+	protected DecimalNumber totalNumber;
 	/**
 	 * Total number of the type of asset that are transferred.
 	 * <p>
@@ -127,8 +130,8 @@ public class Unit2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit2
@@ -146,20 +149,21 @@ public class Unit2 {
 	 * definition} = "Total number of the type of asset that are transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Unit2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "TtlNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Total number of the type of asset that are transferred.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber group1Number;
 	/**
 	 * Quantity expressed as a number, eg, a number of shares.
 	 * <p>
@@ -173,8 +177,8 @@ public class Unit2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit2
@@ -192,20 +196,21 @@ public class Unit2 {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Group1Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroup1Number = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Unit2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "Grp1Nb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber group2Number;
 	/**
 	 * Quantity expressed as a number, eg, a number of shares.
 	 * <p>
@@ -219,8 +224,8 @@ public class Unit2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit2
@@ -238,20 +243,21 @@ public class Unit2 {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Group2Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroup2Number = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Unit2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "Grp2Nb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group2Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected YesNoIndicator complete;
 	/**
 	 * Specifies whether the transfer of the asset is final or not, eg whether
 	 * dividends or units are still to be delivered.
@@ -282,7 +288,7 @@ public class Unit2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Complete = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmComplete = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Unit2.mmObject();
 			isDerived = false;
@@ -290,8 +296,8 @@ public class Unit2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Specifies whether the transfer of the asset is final or not, eg whether dividends or units are still to be delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -299,15 +305,55 @@ public class Unit2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit2.Instrument, com.tools20022.repository.msg.Unit2.TotalNumber, com.tools20022.repository.msg.Unit2.Group1Number,
-						com.tools20022.repository.msg.Unit2.Group2Number, com.tools20022.repository.msg.Unit2.Complete);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit2.mmInstrument, com.tools20022.repository.msg.Unit2.mmTotalNumber, com.tools20022.repository.msg.Unit2.mmGroup1Number,
+						com.tools20022.repository.msg.Unit2.mmGroup2Number, com.tools20022.repository.msg.Unit2.mmComplete);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Unit2";
 				definition = "Quantity of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrument7 getInstrument() {
+		return instrument;
+	}
+
+	public void setInstrument(com.tools20022.repository.msg.FinancialInstrument7 instrument) {
+		this.instrument = instrument;
+	}
+
+	public DecimalNumber getTotalNumber() {
+		return totalNumber;
+	}
+
+	public void setTotalNumber(DecimalNumber totalNumber) {
+		this.totalNumber = totalNumber;
+	}
+
+	public DecimalNumber getGroup1Number() {
+		return group1Number;
+	}
+
+	public void setGroup1Number(DecimalNumber group1Number) {
+		this.group1Number = group1Number;
+	}
+
+	public DecimalNumber getGroup2Number() {
+		return group2Number;
+	}
+
+	public void setGroup2Number(DecimalNumber group2Number) {
+		this.group2Number = group2Number;
+	}
+
+	public YesNoIndicator getComplete() {
+		return complete;
+	}
+
+	public void setComplete(YesNoIndicator complete) {
+		this.complete = complete;
 	}
 }

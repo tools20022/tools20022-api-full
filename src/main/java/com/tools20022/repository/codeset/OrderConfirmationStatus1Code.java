@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#SentToNextParty
- * OrderConfirmationStatus1Code.SentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmSentToNextParty
+ * OrderConfirmationStatus1Code.mmSentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#CommunicationProblemNextParty
- * OrderConfirmationStatus1Code.CommunicationProblemNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmCommunicationProblemNextParty
+ * OrderConfirmationStatus1Code.mmCommunicationProblemNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#ConfirmationAccepted
- * OrderConfirmationStatus1Code.ConfirmationAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmConfirmationAccepted
+ * OrderConfirmationStatus1Code.mmConfirmationAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#ConfirmationReceived
- * OrderConfirmationStatus1Code.ConfirmationReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmConfirmationReceived
+ * OrderConfirmationStatus1Code.mmConfirmationReceived}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -113,7 +113,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "CommunicationProblemNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommunicationProblemNextParty = new MMCode() {
+	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
@@ -136,7 +136,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "ConfirmationAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationAccepted = new MMCode() {
+	public static final MMCode mmConfirmationAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationAccepted";
@@ -159,7 +159,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "ConfirmationReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationReceived = new MMCode() {
+	public static final MMCode mmConfirmationReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationReceived";
@@ -170,13 +170,13 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STNP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderConfirmationStatus1Code";
 				definition = "Specifies the current status of an order confirmation or of an order confirmation amendment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderConfirmationStatus1Code.SentToNextParty, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.CommunicationProblemNextParty,
-						com.tools20022.repository.codeset.OrderConfirmationStatus1Code.ConfirmationAccepted, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.ConfirmationReceived);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmSentToNextParty, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmCommunicationProblemNextParty,
+						com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmConfirmationAccepted, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmConfirmationReceived);
 				trace_lazy = () -> OrderConfirmationStatusCode.mmObject();
 			}
 		});

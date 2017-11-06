@@ -38,12 +38,12 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount24#Identification
- * SecuritiesAccount24.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#Type
- * SecuritiesAccount24.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#Name
- * SecuritiesAccount24.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount24#mmIdentification
+ * SecuritiesAccount24.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#mmType
+ * SecuritiesAccount24.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#mmName
+ * SecuritiesAccount24.mmName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,57 +54,57 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04#SafekeepingAccount
- * IntraPositionMovementInstructionV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04#mmSafekeepingAccount
+ * IntraPositionMovementInstructionV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06#SafekeepingAccount
- * SecuritiesTransactionPostingReportV06.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#SafekeepingAccount
- * SecuritiesMessageCancellationAdviceV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#mmSafekeepingAccount
+ * SecuritiesMessageCancellationAdviceV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#SafekeepingAccount
- * IntraPositionMovementPostingReportV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV06#SafekeepingAccount
- * SecuritiesStatementQueryV06.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV06#mmSafekeepingAccount
+ * SecuritiesStatementQueryV06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04#SafekeepingAccount
- * SecuritiesTransactionStatusQueryV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04#mmSafekeepingAccount
+ * SecuritiesTransactionStatusQueryV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05#SafekeepingAccount
- * IntraPositionMovementConfirmationV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05#SafekeepingAccount
- * SecuritiesSettlementTransactionAllegementReportV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReportV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03#SafekeepingAccount
- * SecuritiesSettlementTransactionAuditTrailReportV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAuditTrailReportV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07#SafekeepingAccount
- * SecuritiesTransactionPendingReportV07.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV07.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#SafekeepingAccount
- * IntraPositionMovementPostingReportV06.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06#SafekeepingAccount
- * SecuritiesSettlementTransactionAllegementReportV06.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReportV06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08#SafekeepingAccount
- * SecuritiesTransactionPendingReportV08.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV08.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06#SafekeepingAccount
- * IntraPositionMovementConfirmationV06.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#SafekeepingAccount
- * SecuritiesTransactionPostingReportV07.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV07.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -123,6 +123,7 @@ import java.util.function.Supplier;
 public class SecuritiesAccount24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unambiguous identification for the account between the account owner and
 	 * the account servicer.”
@@ -136,8 +137,8 @@ public class SecuritiesAccount24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,25 +160,26 @@ public class SecuritiesAccount24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#Identification
-	 * SecuritiesAccount13.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#mmIdentification
+	 * SecuritiesAccount13.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unambiguous identification for the account between the account owner and the account servicer.”";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenericIdentification30 type;
 	/**
 	 * Specifies the type of securities account.
 	 * <p>
@@ -191,8 +193,8 @@ public class SecuritiesAccount24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#SecuritiesAccountType
-	 * SecuritiesAccount.SecuritiesAccountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesAccountType
+	 * SecuritiesAccount.mmSecuritiesAccountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,25 +214,26 @@ public class SecuritiesAccount24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#Type
-	 * SecuritiesAccount13.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#mmType
+	 * SecuritiesAccount13.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> SecuritiesAccount24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.SecuritiesAccountType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of securities account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.Type;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmType;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
 		}
 	};
+	protected Max70Text name;
 	/**
 	 * Description of the account.
 	 * <p>
@@ -243,8 +246,8 @@ public class SecuritiesAccount24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -264,22 +267,22 @@ public class SecuritiesAccount24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#Name
-	 * SecuritiesAccount13.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#mmName
+	 * SecuritiesAccount13.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Description of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.Name;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -287,17 +290,19 @@ public class SecuritiesAccount24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount24.Identification, com.tools20022.repository.msg.SecuritiesAccount24.Type, com.tools20022.repository.msg.SecuritiesAccount24.Name);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount24.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount24.mmType,
+						com.tools20022.repository.msg.SecuritiesAccount24.mmName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.SafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08.SafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.SafekeepingAccount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -312,5 +317,29 @@ public class SecuritiesAccount24 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public GenericIdentification30 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.GenericIdentification30 type) {
+		this.type = type;
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
 	}
 }

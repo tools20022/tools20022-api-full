@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DeliveryParameters3#Address
- * DeliveryParameters3.Address}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DeliveryParameters3#mmAddress
+ * DeliveryParameters3.mmAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveryParameters3#IssuedCertificateNumber
- * DeliveryParameters3.IssuedCertificateNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveryParameters3#mmIssuedCertificateNumber
+ * DeliveryParameters3.mmIssuedCertificateNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeliveryParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NameAndAddress4 address;
 	/**
 	 * Address for physical delivery.
 	 * <p>
@@ -73,8 +74,8 @@ public class DeliveryParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#Address
-	 * PhysicalDelivery.Address}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmAddress
+	 * PhysicalDelivery.mmAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class DeliveryParameters3 {
 	 * definition} = "Address for physical delivery."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Address = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmAddress;
 			componentContext_lazy = () -> DeliveryParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.Address;
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Address for physical delivery.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress4.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
 		}
 	};
+	protected Max35Text issuedCertificateNumber;
 	/**
 	 * Certificate representing a security that is delivered.
 	 * <p>
@@ -119,8 +121,8 @@ public class DeliveryParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#IssuedCertificateNumber
-	 * PhysicalDelivery.IssuedCertificateNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmIssuedCertificateNumber
+	 * PhysicalDelivery.mmIssuedCertificateNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,17 +141,17 @@ public class DeliveryParameters3 {
 	 * definition} = "Certificate representing a security that is delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuedCertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuedCertificateNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmIssuedCertificateNumber;
 			componentContext_lazy = () -> DeliveryParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.IssuedCertificateNumber;
 			isDerived = false;
 			xmlTag = "IssdCertNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuedCertificateNumber";
 			definition = "Certificate representing a security that is delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -157,14 +159,30 @@ public class DeliveryParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters3.Address, com.tools20022.repository.msg.DeliveryParameters3.IssuedCertificateNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters3.mmAddress, com.tools20022.repository.msg.DeliveryParameters3.mmIssuedCertificateNumber);
 				trace_lazy = () -> PhysicalDelivery.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveryParameters3";
 				definition = "Parameters of a physical delivery.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NameAndAddress4 getAddress() {
+		return address;
+	}
+
+	public void setAddress(com.tools20022.repository.msg.NameAndAddress4 address) {
+		this.address = address;
+	}
+
+	public Max35Text getIssuedCertificateNumber() {
+		return issuedCertificateNumber;
+	}
+
+	public void setIssuedCertificateNumber(Max35Text issuedCertificateNumber) {
+		this.issuedCertificateNumber = issuedCertificateNumber;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1#PlaceAndName
- * CorporateActionInstructionSecuritiesQuantityExtension1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1#mmPlaceAndName
+ * CorporateActionInstructionSecuritiesQuantityExtension1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1#BondQuantity
- * CorporateActionInstructionSecuritiesQuantityExtension1.BondQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1#mmBondQuantity
+ * CorporateActionInstructionSecuritiesQuantityExtension1.mmBondQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -89,7 +90,7 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice bondQuantity;
 	/**
 	 * Quantity of bonds in exchange of warrants.
 	 * <p>
@@ -130,7 +132,7 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	 * definition} = "Quantity of bonds in exchange of warrants."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BondQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBondQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondQuantity";
 			definition = "Quantity of bonds in exchange of warrants.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
@@ -147,14 +149,30 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.BondQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmBondQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructionSecuritiesQuantityExtension1";
 				definition = "Provides additional information regarding corporate action instruction securities quantity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public FinancialInstrumentQuantity15Choice getBondQuantity() {
+		return bondQuantity;
+	}
+
+	public void setBondQuantity(FinancialInstrumentQuantity15Choice bondQuantity) {
+		this.bondQuantity = bondQuantity;
 	}
 }

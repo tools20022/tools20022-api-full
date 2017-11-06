@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectedCancellationJustification#ReasonCode
- * RejectedCancellationJustification.ReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectedCancellationJustification#mmReasonCode
+ * RejectedCancellationJustification.mmReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectedCancellationJustification#Reason
- * RejectedCancellationJustification.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectedCancellationJustification#mmReason
+ * RejectedCancellationJustification.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectedCancellationJustification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentCancellationRejection1Code reasonCode;
 	/**
 	 * Justification for the rejection of the cancellation.
 	 * <p>
@@ -72,8 +73,8 @@ public class RejectedCancellationJustification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#RejectedCancellation
-	 * PaymentInvestigationCaseRejection.RejectedCancellation}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#mmRejectedCancellation
+	 * PaymentInvestigationCaseRejection.mmRejectedCancellation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +93,21 @@ public class RejectedCancellationJustification {
 	 * definition} = "Justification for the rejection of the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> RejectedCancellationJustification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.RejectedCancellation;
 			isDerived = false;
 			xmlTag = "RsnCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Justification for the rejection of the cancellation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentCancellationRejection1Code.mmObject();
 		}
 	};
+	protected Max140Text reason;
 	/**
 	 * Free text justification for rejecting a cancellation.
 	 * <p>
@@ -118,8 +120,8 @@ public class RejectedCancellationJustification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#RejectedCancellationReason
-	 * PaymentInvestigationCaseRejection.RejectedCancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#mmRejectedCancellationReason
+	 * PaymentInvestigationCaseRejection.mmRejectedCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,17 +140,17 @@ public class RejectedCancellationJustification {
 	 * definition} = "Free text justification for rejecting a cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellationReason;
 			componentContext_lazy = () -> RejectedCancellationJustification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.RejectedCancellationReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Free text justification for rejecting a cancellation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -156,13 +158,29 @@ public class RejectedCancellationJustification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedCancellationJustification.ReasonCode, com.tools20022.repository.msg.RejectedCancellationJustification.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedCancellationJustification.mmReasonCode, com.tools20022.repository.msg.RejectedCancellationJustification.mmReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationJustification";
 				definition = "Provides the reason for rejecting a RequestToCancelPayment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentCancellationRejection1Code getReasonCode() {
+		return reasonCode;
+	}
+
+	public void setReasonCode(PaymentCancellationRejection1Code reasonCode) {
+		this.reasonCode = reasonCode;
+	}
+
+	public Max140Text getReason() {
+		return reason;
+	}
+
+	public void setReason(Max140Text reason) {
+		this.reason = reason;
 	}
 }

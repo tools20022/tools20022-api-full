@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting1Code#StockExchange
- * Reporting1Code.StockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting1Code#mmStockExchange
+ * Reporting1Code.mmStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting1Code#RegulatoryOrganisation
- * Reporting1Code.RegulatoryOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting1Code#mmRegulatoryOrganisation
+ * Reporting1Code.mmRegulatoryOrganisation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class Reporting1Code extends ReportingCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchange = new MMCode() {
+	public static final MMCode mmStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
@@ -103,7 +103,7 @@ public class Reporting1Code extends ReportingCode {
 	 * name} = "RegulatoryOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatoryOrganisation = new MMCode() {
+	public static final MMCode mmRegulatoryOrganisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryOrganisation";
@@ -114,12 +114,12 @@ public class Reporting1Code extends ReportingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STEX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reporting1Code";
 				definition = "Identifies to which institution the reporting must be done.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reporting1Code.StockExchange, com.tools20022.repository.codeset.Reporting1Code.RegulatoryOrganisation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reporting1Code.mmStockExchange, com.tools20022.repository.codeset.Reporting1Code.mmRegulatoryOrganisation);
 				trace_lazy = () -> ReportingCode.mmObject();
 			}
 		});

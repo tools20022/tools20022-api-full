@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#StructuredFinanceProduct
- * NonEquityInstrumentReportingClassification1Code.StructuredFinanceProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#mmStructuredFinanceProduct
+ * NonEquityInstrumentReportingClassification1Code.mmStructuredFinanceProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#SecuritisedDerivative
- * NonEquityInstrumentReportingClassification1Code.SecuritisedDerivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#mmSecuritisedDerivative
+ * NonEquityInstrumentReportingClassification1Code.mmSecuritisedDerivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#Derivative
- * NonEquityInstrumentReportingClassification1Code.Derivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#mmDerivative
+ * NonEquityInstrumentReportingClassification1Code.mmDerivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#EmissionAllowance
- * NonEquityInstrumentReportingClassification1Code.EmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#mmEmissionAllowance
+ * NonEquityInstrumentReportingClassification1Code.mmEmissionAllowance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#Bond
- * NonEquityInstrumentReportingClassification1Code.Bond}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#mmBond
+ * NonEquityInstrumentReportingClassification1Code.mmBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#ExchangeTradedCommodities
- * NonEquityInstrumentReportingClassification1Code.ExchangeTradedCommodities}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#mmExchangeTradedCommodities
+ * NonEquityInstrumentReportingClassification1Code.mmExchangeTradedCommodities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#ExchangeTradedNote
- * NonEquityInstrumentReportingClassification1Code.ExchangeTradedNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code#mmExchangeTradedNote
+ * NonEquityInstrumentReportingClassification1Code.mmExchangeTradedNote}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +90,7 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	 * name} = "StructuredFinanceProduct"</li>
 	 * </ul>
 	 */
-	public static final MMCode StructuredFinanceProduct = new MMCode() {
+	public static final MMCode mmStructuredFinanceProduct = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredFinanceProduct";
@@ -113,7 +113,7 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	 * name} = "SecuritisedDerivative"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritisedDerivative = new MMCode() {
+	public static final MMCode mmSecuritisedDerivative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritisedDerivative";
@@ -136,7 +136,7 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	 * name} = "Derivative"</li>
 	 * </ul>
 	 */
-	public static final MMCode Derivative = new MMCode() {
+	public static final MMCode mmDerivative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Derivative";
@@ -159,7 +159,7 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	 * name} = "EmissionAllowance"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmissionAllowance = new MMCode() {
+	public static final MMCode mmEmissionAllowance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
@@ -182,7 +182,7 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	 * name} = "Bond"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bond = new MMCode() {
+	public static final MMCode mmBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
@@ -205,7 +205,7 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	 * name} = "ExchangeTradedCommodities"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeTradedCommodities = new MMCode() {
+	public static final MMCode mmExchangeTradedCommodities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedCommodities";
@@ -228,7 +228,7 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	 * name} = "ExchangeTradedNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeTradedNote = new MMCode() {
+	public static final MMCode mmExchangeTradedNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedNote";
@@ -239,14 +239,14 @@ public class NonEquityInstrumentReportingClassification1Code extends FinancialIn
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NonEquityInstrumentReportingClassification1Code";
 				definition = "Specifies the non-equity financial instruments.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.StructuredFinanceProduct,
-						com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.SecuritisedDerivative, com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.Derivative,
-						com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.EmissionAllowance, com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.Bond,
-						com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.ExchangeTradedCommodities, com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.ExchangeTradedNote);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.mmStructuredFinanceProduct,
+						com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.mmSecuritisedDerivative, com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.mmDerivative,
+						com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.mmEmissionAllowance, com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.mmBond,
+						com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.mmExchangeTradedCommodities, com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code.mmExchangeTradedNote);
 				trace_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
 			}
 		});

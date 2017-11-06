@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateCode5Choice#Code
- * DateCode5Choice.Code}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateCode5Choice#Proprietary
- * DateCode5Choice.Proprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateCode5Choice#mmCode
+ * DateCode5Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateCode5Choice#mmProprietary
+ * DateCode5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateCode5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateType5Code code;
 	/**
 	 * Date expressed as an ISO 20022 code.
 	 * <p>
@@ -86,7 +88,7 @@ public class DateCode5Choice {
 	 * definition} = "Date expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateCode5Choice.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class DateCode5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Date expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DateType5Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Date expressed as a proprietary code.
 	 * <p>
@@ -126,7 +129,7 @@ public class DateCode5Choice {
 	 * definition} = "Date expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateCode5Choice.mmObject();
 			isDerived = false;
@@ -134,23 +137,39 @@ public class DateCode5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Date expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode5Choice.Code, com.tools20022.repository.choice.DateCode5Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode5Choice.mmCode, com.tools20022.repository.choice.DateCode5Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateCode5Choice";
 				definition = "Choice of format for the date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateType5Code getCode() {
+		return code;
+	}
+
+	public void setCode(DateType5Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

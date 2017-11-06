@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.PortfolioStrategy;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Strategy is asset class based.
@@ -36,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetClassStrategy#AssetClass
- * AssetClassStrategy.AssetClass}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetClassStrategy#mmAssetClass
+ * AssetClassStrategy.mmAssetClass}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetClassification#Strategy
- * AssetClassification.Strategy}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetClassification#mmStrategy
+ * AssetClassification.mmStrategy}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetClassStrategy extends PortfolioStrategy {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.AssetClassification> assetClass;
 	/**
 	 * Strategy based on asset classes.
 	 * <p>
@@ -78,8 +80,8 @@ public class AssetClassStrategy extends PortfolioStrategy {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#Strategy
-	 * AssetClassification.Strategy}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmStrategy
+	 * AssetClassification.mmStrategy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -103,7 +105,7 @@ public class AssetClassStrategy extends PortfolioStrategy {
 	 * definition} = "Strategy based on asset classes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AssetClass = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAssetClass = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AssetClassStrategy.mmObject();
 			isDerived = false;
@@ -111,24 +113,32 @@ public class AssetClassStrategy extends PortfolioStrategy {
 			name = "AssetClass";
 			definition = "Strategy based on asset classes.";
 			minOccurs = 1;
-			type_lazy = () -> AssetClassification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetClassification.Strategy;
+			opposite_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmStrategy;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassStrategy";
 				definition = "Strategy is asset class based.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetClassification.Strategy);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetClassification.mmStrategy);
 				superType_lazy = () -> PortfolioStrategy.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetClassStrategy.AssetClass);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetClassStrategy.mmAssetClass);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AssetClassification> getAssetClass() {
+		return assetClass;
+	}
+
+	public void setAssetClass(List<com.tools20022.repository.entity.AssetClassification> assetClass) {
+		this.assetClass = assetClass;
 	}
 }

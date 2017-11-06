@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#CancelledAsPerRequest
- * InvestigationExecutionConfirmation2Code.CancelledAsPerRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmCancelledAsPerRequest
+ * InvestigationExecutionConfirmation2Code.mmCancelledAsPerRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#ModifiedAsPerRequest
- * InvestigationExecutionConfirmation2Code.ModifiedAsPerRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmModifiedAsPerRequest
+ * InvestigationExecutionConfirmation2Code.mmModifiedAsPerRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#PaymentInitiated
- * InvestigationExecutionConfirmation2Code.PaymentInitiated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmPaymentInitiated
+ * InvestigationExecutionConfirmation2Code.mmPaymentInitiated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#CoverInitiated
- * InvestigationExecutionConfirmation2Code.CoverInitiated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmCoverInitiated
+ * InvestigationExecutionConfirmation2Code.mmCoverInitiated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#CoverModified
- * InvestigationExecutionConfirmation2Code.CoverModified}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmCoverModified
+ * InvestigationExecutionConfirmation2Code.mmCoverModified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#AdditionalInformationSent
- * InvestigationExecutionConfirmation2Code.AdditionalInformationSent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmAdditionalInformationSent
+ * InvestigationExecutionConfirmation2Code.mmAdditionalInformationSent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#ConfirmationOfPayment
- * InvestigationExecutionConfirmation2Code.ConfirmationOfPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmConfirmationOfPayment
+ * InvestigationExecutionConfirmation2Code.mmConfirmationOfPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#CancellationWillFollow
- * InvestigationExecutionConfirmation2Code.CancellationWillFollow}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmCancellationWillFollow
+ * InvestigationExecutionConfirmation2Code.mmCancellationWillFollow}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#ModificationWillFollow
- * InvestigationExecutionConfirmation2Code.ModificationWillFollow}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmModificationWillFollow
+ * InvestigationExecutionConfirmation2Code.mmModificationWillFollow}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#UnableToApplyWillFollow
- * InvestigationExecutionConfirmation2Code.UnableToApplyWillFollow}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code#mmUnableToApplyWillFollow
+ * InvestigationExecutionConfirmation2Code.mmUnableToApplyWillFollow}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "CancelledAsPerRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledAsPerRequest = new MMCode() {
+	public static final MMCode mmCancelledAsPerRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledAsPerRequest";
@@ -128,7 +128,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "ModifiedAsPerRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode ModifiedAsPerRequest = new MMCode() {
+	public static final MMCode mmModifiedAsPerRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedAsPerRequest";
@@ -151,7 +151,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "PaymentInitiated"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentInitiated = new MMCode() {
+	public static final MMCode mmPaymentInitiated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInitiated";
@@ -174,7 +174,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "CoverInitiated"</li>
 	 * </ul>
 	 */
-	public static final MMCode CoverInitiated = new MMCode() {
+	public static final MMCode mmCoverInitiated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverInitiated";
@@ -197,7 +197,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "CoverModified"</li>
 	 * </ul>
 	 */
-	public static final MMCode CoverModified = new MMCode() {
+	public static final MMCode mmCoverModified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverModified";
@@ -220,7 +220,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "AdditionalInformationSent"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdditionalInformationSent = new MMCode() {
+	public static final MMCode mmAdditionalInformationSent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationSent";
@@ -243,7 +243,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "ConfirmationOfPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationOfPayment = new MMCode() {
+	public static final MMCode mmConfirmationOfPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationOfPayment";
@@ -266,7 +266,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "CancellationWillFollow"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationWillFollow = new MMCode() {
+	public static final MMCode mmCancellationWillFollow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationWillFollow";
@@ -289,7 +289,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "ModificationWillFollow"</li>
 	 * </ul>
 	 */
-	public static final MMCode ModificationWillFollow = new MMCode() {
+	public static final MMCode mmModificationWillFollow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationWillFollow";
@@ -312,7 +312,7 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	 * name} = "UnableToApplyWillFollow"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnableToApplyWillFollow = new MMCode() {
+	public static final MMCode mmUnableToApplyWillFollow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToApplyWillFollow";
@@ -323,17 +323,17 @@ public class InvestigationExecutionConfirmation2Code extends InvestigationExecut
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CNCL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestigationExecutionConfirmation2Code";
 				definition = "Indicates the result of an investigation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.CancelledAsPerRequest,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.ModifiedAsPerRequest, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.PaymentInitiated,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.CoverInitiated, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.CoverModified,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.AdditionalInformationSent, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.ConfirmationOfPayment,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.CancellationWillFollow, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.ModificationWillFollow,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.UnableToApplyWillFollow);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmCancelledAsPerRequest,
+						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmModifiedAsPerRequest, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmPaymentInitiated,
+						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmCoverInitiated, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmCoverModified,
+						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmAdditionalInformationSent, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmConfirmationOfPayment,
+						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmCancellationWillFollow, com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmModificationWillFollow,
+						com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code.mmUnableToApplyWillFollow);
 				trace_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
 			}
 		});

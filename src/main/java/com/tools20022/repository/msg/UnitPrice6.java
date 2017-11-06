@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Amount of money for which goods or services are offered, sold, or bought.
@@ -38,38 +39,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#Type
- * UnitPrice6.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#PriceMethod
- * UnitPrice6.PriceMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#mmType
+ * UnitPrice6.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#mmPriceMethod
+ * UnitPrice6.mmPriceMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice6#ValueInInvestmentCurrency
- * UnitPrice6.ValueInInvestmentCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmValueInInvestmentCurrency
+ * UnitPrice6.mmValueInInvestmentCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice6#ValueInAlternativeCurrency
- * UnitPrice6.ValueInAlternativeCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmValueInAlternativeCurrency
+ * UnitPrice6.mmValueInAlternativeCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice6#ForExecutionIndicator
- * UnitPrice6.ForExecutionIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmForExecutionIndicator
+ * UnitPrice6.mmForExecutionIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice6#CumDividendIndicator
- * UnitPrice6.CumDividendIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#CalculationBasis
- * UnitPrice6.CalculationBasis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#NumberOfDaysAccrued
- * UnitPrice6.NumberOfDaysAccrued}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmCumDividendIndicator
+ * UnitPrice6.mmCumDividendIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#mmCalculationBasis
+ * UnitPrice6.mmCalculationBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice6#TaxableIncomePerShare
- * UnitPrice6.TaxableIncomePerShare}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmNumberOfDaysAccrued
+ * UnitPrice6.mmNumberOfDaysAccrued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice6#TaxableIncomePerShareCalculated
- * UnitPrice6.TaxableIncomePerShareCalculated}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#ChargeDetails
- * UnitPrice6.ChargeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#TaxLiabilityDetails
- * UnitPrice6.TaxLiabilityDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#TaxRefundDetails
- * UnitPrice6.TaxRefundDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmTaxableIncomePerShare
+ * UnitPrice6.mmTaxableIncomePerShare}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmTaxableIncomePerShareCalculated
+ * UnitPrice6.mmTaxableIncomePerShareCalculated}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#mmChargeDetails
+ * UnitPrice6.mmChargeDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice6#mmTaxLiabilityDetails
+ * UnitPrice6.mmTaxLiabilityDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice6#mmTaxRefundDetails
+ * UnitPrice6.mmTaxRefundDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -78,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitPrice6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceType2 type;
 	/**
 	 * Type and information about a price.
 	 * <p>
@@ -106,8 +110,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -125,20 +129,21 @@ public class UnitPrice6 {
 	 * definition} = "Type and information about a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type and information about a price.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceType2.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceType2.mmObject();
 		}
 	};
+	protected PriceMethod1Code priceMethod;
 	/**
 	 * Type of pricing calculation method.
 	 * <p>
@@ -152,8 +157,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceMethod
-	 * SecuritiesPricing.PriceMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceMethod
+	 * SecuritiesPricing.mmPriceMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -171,20 +176,21 @@ public class UnitPrice6 {
 	 * definition} = "Type of pricing calculation method."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceMethod;
 			isDerived = false;
 			xmlTag = "PricMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PriceValue1> valueInInvestmentCurrency;
 	/**
 	 * Value of the price, eg, as a currency and value.
 	 * <p>
@@ -197,8 +203,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -216,19 +222,20 @@ public class UnitPrice6 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueInInvestmentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueInInvestmentCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "ValInInvstmtCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueInInvestmentCurrency";
 			definition = "Value of the price, eg, as a currency and value.";
 			minOccurs = 1;
-			complexType_lazy = () -> PriceValue1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PriceValue1> valueInAlternativeCurrency;
 	/**
 	 * Value of the price, eg, as a currency and value.
 	 * <p>
@@ -241,8 +248,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -260,19 +267,20 @@ public class UnitPrice6 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueInAlternativeCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueInAlternativeCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "ValInAltrntvCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueInAlternativeCurrency";
 			definition = "Value of the price, eg, as a currency and value.";
 			minOccurs = 0;
-			complexType_lazy = () -> PriceValue1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	protected YesNoIndicator forExecutionIndicator;
 	/**
 	 * Indicates whether the price information can be used for the execution of
 	 * a transaction.
@@ -287,8 +295,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#ForExecutionIndicator
-	 * NetAssetValueCalculation.ForExecutionIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmForExecutionIndicator
+	 * NetAssetValueCalculation.mmForExecutionIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -308,20 +316,21 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForExecutionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForExecutionIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmForExecutionIndicator;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.ForExecutionIndicator;
 			isDerived = false;
 			xmlTag = "ForExctnInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForExecutionIndicator";
 			definition = "Indicates whether the price information can be used for the execution of a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator cumDividendIndicator;
 	/**
 	 * Indicates whether the dividend is included, ie, cum-dividend, in the
 	 * price. When the dividend is not included, the price will be ex-dividend.
@@ -336,8 +345,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#CumDividendIndicator
-	 * SecuritiesPricing.CumDividendIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCumDividendIndicator
+	 * SecuritiesPricing.mmCumDividendIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -357,20 +366,21 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CumDividendIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmCumDividendIndicator;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.CumDividendIndicator;
 			isDerived = false;
 			xmlTag = "CumDvddInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumDividendIndicator";
 			definition = "Indicates whether the dividend is included, ie, cum-dividend, in the price. When the dividend is not included, the price will be ex-dividend.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PercentageRate calculationBasis;
 	/**
 	 * Ratio applied on the non-adjusted price.
 	 * <p>
@@ -384,8 +394,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#CalculationBasis
-	 * SecuritiesPricing.CalculationBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCalculationBasis
+	 * SecuritiesPricing.mmCalculationBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -403,20 +413,21 @@ public class UnitPrice6 {
 	 * definition} = "Ratio applied on the non-adjusted price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmCalculationBasis;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.CalculationBasis;
 			isDerived = false;
 			xmlTag = "ClctnBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationBasis";
 			definition = "Ratio applied on the non-adjusted price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Number numberOfDaysAccrued;
 	/**
 	 * Specifies the number of days from trade date that the counterparty on the
 	 * other side of the trade should "given up" or divulged.
@@ -430,8 +441,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#NumberOfDays
-	 * DateTimePeriod.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmNumberOfDays
+	 * DateTimePeriod.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -451,20 +462,21 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.NumberOfDays;
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Specifies the number of days from trade date that the counterparty on the other side of the trade should \"given up\" or divulged.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected AmountPrice1Choice taxableIncomePerShare;
 	/**
 	 * Amount included in the NAV that corresponds to gains directly or
 	 * indirectly derived from interest payment in the scope of the European
@@ -480,8 +492,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerShare
-	 * SecuritiesTax.TaxableIncomePerShare}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShare
+	 * SecuritiesTax.mmTaxableIncomePerShare}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -501,20 +513,21 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxableIncomePerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShare;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerShare;
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerShare";
 			definition = "Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AmountPrice1Choice.mmObject();
 		}
 	};
+	protected TaxableIncomePerShareCalculated1 taxableIncomePerShareCalculated;
 	/**
 	 * Specifies whether the fund calculates a taxable interest per share (TIS).
 	 * <p>
@@ -528,8 +541,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerShareCalculated
-	 * SecuritiesTax.TaxableIncomePerShareCalculated}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
+	 * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -549,20 +562,21 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxableIncomePerShareCalculated = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxableIncomePerShareCalculated = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerShareCalculated;
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShrClctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerShareCalculated";
 			definition = "Specifies whether the fund calculates a taxable interest per share (TIS).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> TaxableIncomePerShareCalculated1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Charge9> chargeDetails;
 	/**
 	 * Amount of money associated with a service.
 	 * <p>
@@ -573,8 +587,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Fees Security.Fees}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmFees
+	 * Security.mmFees}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -592,20 +606,21 @@ public class UnitPrice6 {
 	 * definition} = "Amount of money associated with a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Fees;
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Amount of money associated with a service.";
 			minOccurs = 0;
-			type_lazy = () -> Charge9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax8> taxLiabilityDetails;
 	/**
 	 * Information related to taxes that are due.
 	 * <p>
@@ -616,8 +631,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#TaxLiability
-	 * NetAssetValueCalculation.TaxLiability}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmTaxLiability
+	 * NetAssetValueCalculation.mmTaxLiability}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -635,20 +650,21 @@ public class UnitPrice6 {
 	 * definition} = "Information related to taxes that are due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxLiabilityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxLiabilityDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxLiability;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.TaxLiability;
 			isDerived = false;
 			xmlTag = "TaxLbltyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxLiabilityDetails";
 			definition = "Information related to taxes that are due.";
 			minOccurs = 0;
-			type_lazy = () -> Tax8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax8> taxRefundDetails;
 	/**
 	 * Information related to taxes that are paid back.
 	 * <p>
@@ -659,8 +675,8 @@ public class UnitPrice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#TaxRefund
-	 * NetAssetValueCalculation.TaxRefund}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmTaxRefund
+	 * NetAssetValueCalculation.mmTaxRefund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.UnitPrice6
@@ -678,36 +694,140 @@ public class UnitPrice6 {
 	 * definition} = "Information related to taxes that are paid back."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxRefundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxRefundDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxRefund;
 			componentContext_lazy = () -> UnitPrice6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.TaxRefund;
 			isDerived = false;
 			xmlTag = "TaxRfndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRefundDetails";
 			definition = "Information related to taxes that are paid back.";
 			minOccurs = 0;
-			type_lazy = () -> Tax8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice6.Type, com.tools20022.repository.msg.UnitPrice6.PriceMethod, com.tools20022.repository.msg.UnitPrice6.ValueInInvestmentCurrency,
-						com.tools20022.repository.msg.UnitPrice6.ValueInAlternativeCurrency, com.tools20022.repository.msg.UnitPrice6.ForExecutionIndicator, com.tools20022.repository.msg.UnitPrice6.CumDividendIndicator,
-						com.tools20022.repository.msg.UnitPrice6.CalculationBasis, com.tools20022.repository.msg.UnitPrice6.NumberOfDaysAccrued, com.tools20022.repository.msg.UnitPrice6.TaxableIncomePerShare,
-						com.tools20022.repository.msg.UnitPrice6.TaxableIncomePerShareCalculated, com.tools20022.repository.msg.UnitPrice6.ChargeDetails, com.tools20022.repository.msg.UnitPrice6.TaxLiabilityDetails,
-						com.tools20022.repository.msg.UnitPrice6.TaxRefundDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice6.mmType, com.tools20022.repository.msg.UnitPrice6.mmPriceMethod, com.tools20022.repository.msg.UnitPrice6.mmValueInInvestmentCurrency,
+						com.tools20022.repository.msg.UnitPrice6.mmValueInAlternativeCurrency, com.tools20022.repository.msg.UnitPrice6.mmForExecutionIndicator, com.tools20022.repository.msg.UnitPrice6.mmCumDividendIndicator,
+						com.tools20022.repository.msg.UnitPrice6.mmCalculationBasis, com.tools20022.repository.msg.UnitPrice6.mmNumberOfDaysAccrued, com.tools20022.repository.msg.UnitPrice6.mmTaxableIncomePerShare,
+						com.tools20022.repository.msg.UnitPrice6.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.UnitPrice6.mmChargeDetails, com.tools20022.repository.msg.UnitPrice6.mmTaxLiabilityDetails,
+						com.tools20022.repository.msg.UnitPrice6.mmTaxRefundDetails);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitPrice6";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceType2 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.PriceType2 type) {
+		this.type = type;
+	}
+
+	public PriceMethod1Code getPriceMethod() {
+		return priceMethod;
+	}
+
+	public void setPriceMethod(PriceMethod1Code priceMethod) {
+		this.priceMethod = priceMethod;
+	}
+
+	public List<PriceValue1> getValueInInvestmentCurrency() {
+		return valueInInvestmentCurrency;
+	}
+
+	public void setValueInInvestmentCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInInvestmentCurrency) {
+		this.valueInInvestmentCurrency = valueInInvestmentCurrency;
+	}
+
+	public List<PriceValue1> getValueInAlternativeCurrency() {
+		return valueInAlternativeCurrency;
+	}
+
+	public void setValueInAlternativeCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInAlternativeCurrency) {
+		this.valueInAlternativeCurrency = valueInAlternativeCurrency;
+	}
+
+	public YesNoIndicator getForExecutionIndicator() {
+		return forExecutionIndicator;
+	}
+
+	public void setForExecutionIndicator(YesNoIndicator forExecutionIndicator) {
+		this.forExecutionIndicator = forExecutionIndicator;
+	}
+
+	public YesNoIndicator getCumDividendIndicator() {
+		return cumDividendIndicator;
+	}
+
+	public void setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
+		this.cumDividendIndicator = cumDividendIndicator;
+	}
+
+	public PercentageRate getCalculationBasis() {
+		return calculationBasis;
+	}
+
+	public void setCalculationBasis(PercentageRate calculationBasis) {
+		this.calculationBasis = calculationBasis;
+	}
+
+	public Number getNumberOfDaysAccrued() {
+		return numberOfDaysAccrued;
+	}
+
+	public void setNumberOfDaysAccrued(Number numberOfDaysAccrued) {
+		this.numberOfDaysAccrued = numberOfDaysAccrued;
+	}
+
+	public AmountPrice1Choice getTaxableIncomePerShare() {
+		return taxableIncomePerShare;
+	}
+
+	public void setTaxableIncomePerShare(AmountPrice1Choice taxableIncomePerShare) {
+		this.taxableIncomePerShare = taxableIncomePerShare;
+	}
+
+	public TaxableIncomePerShareCalculated1 getTaxableIncomePerShareCalculated() {
+		return taxableIncomePerShareCalculated;
+	}
+
+	public void setTaxableIncomePerShareCalculated(com.tools20022.repository.msg.TaxableIncomePerShareCalculated1 taxableIncomePerShareCalculated) {
+		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
+	}
+
+	public List<Charge9> getChargeDetails() {
+		return chargeDetails;
+	}
+
+	public void setChargeDetails(List<com.tools20022.repository.msg.Charge9> chargeDetails) {
+		this.chargeDetails = chargeDetails;
+	}
+
+	public List<Tax8> getTaxLiabilityDetails() {
+		return taxLiabilityDetails;
+	}
+
+	public void setTaxLiabilityDetails(List<com.tools20022.repository.msg.Tax8> taxLiabilityDetails) {
+		this.taxLiabilityDetails = taxLiabilityDetails;
+	}
+
+	public List<Tax8> getTaxRefundDetails() {
+		return taxRefundDetails;
+	}
+
+	public void setTaxRefundDetails(List<com.tools20022.repository.msg.Tax8> taxRefundDetails) {
+		this.taxRefundDetails = taxRefundDetails;
 	}
 }

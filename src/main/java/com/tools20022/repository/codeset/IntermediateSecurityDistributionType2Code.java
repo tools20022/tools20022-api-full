@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#ReverseRights
- * IntermediateSecurityDistributionType2Code.ReverseRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmReverseRights
+ * IntermediateSecurityDistributionType2Code.mmReverseRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#BonusRights
- * IntermediateSecurityDistributionType2Code.BonusRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmBonusRights
+ * IntermediateSecurityDistributionType2Code.mmBonusRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#DividendReinvestment
- * IntermediateSecurityDistributionType2Code.DividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmDividendReinvestment
+ * IntermediateSecurityDistributionType2Code.mmDividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#DividendOption
- * IntermediateSecurityDistributionType2Code.DividendOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmDividendOption
+ * IntermediateSecurityDistributionType2Code.mmDividendOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#SubscriptionRights
- * IntermediateSecurityDistributionType2Code.SubscriptionRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmSubscriptionRights
+ * IntermediateSecurityDistributionType2Code.mmSubscriptionRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#OpenOfferRights
- * IntermediateSecurityDistributionType2Code.OpenOfferRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmOpenOfferRights
+ * IntermediateSecurityDistributionType2Code.mmOpenOfferRights}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "ReverseRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReverseRights = new MMCode() {
+	public static final MMCode mmReverseRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRights";
@@ -116,7 +116,7 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "BonusRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode BonusRights = new MMCode() {
+	public static final MMCode mmBonusRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRights";
@@ -139,7 +139,7 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestment = new MMCode() {
+	public static final MMCode mmDividendReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
@@ -162,7 +162,7 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "DividendOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendOption = new MMCode() {
+	public static final MMCode mmDividendOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
@@ -185,7 +185,7 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "SubscriptionRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubscriptionRights = new MMCode() {
+	public static final MMCode mmSubscriptionRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionRights";
@@ -208,7 +208,7 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "OpenOfferRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenOfferRights = new MMCode() {
+	public static final MMCode mmOpenOfferRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOfferRights";
@@ -219,14 +219,14 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntermediateSecurityDistributionType2Code";
 				definition = "Specifies the type of intermediate security distribution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.ReverseRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.BonusRights,
-						com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.DividendReinvestment, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.DividendOption,
-						com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.SubscriptionRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.OpenOfferRights);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmReverseRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmBonusRights,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmDividendReinvestment, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmDividendOption,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmSubscriptionRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmOpenOfferRights);
 				trace_lazy = () -> IntermediateSecurityDistributionTypeCode.mmObject();
 			}
 		});

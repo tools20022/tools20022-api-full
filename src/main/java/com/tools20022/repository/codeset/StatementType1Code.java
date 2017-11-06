@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementType1Code#AccountingHoldings
- * StatementType1Code.AccountingHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementType1Code#mmAccountingHoldings
+ * StatementType1Code.mmAccountingHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementType1Code#CustodyHoldings
- * StatementType1Code.CustodyHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementType1Code#mmCustodyHoldings
+ * StatementType1Code.mmCustodyHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementType1Code#InvestmentFundTransactions
- * StatementType1Code.InvestmentFundTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementType1Code#mmInvestmentFundTransactions
+ * StatementType1Code.mmInvestmentFundTransactions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class StatementType1Code extends MessageTypeCode {
 	 * name} = "AccountingHoldings"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountingHoldings = new MMCode() {
+	public static final MMCode mmAccountingHoldings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingHoldings";
@@ -107,7 +107,7 @@ public class StatementType1Code extends MessageTypeCode {
 	 * name} = "CustodyHoldings"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyHoldings = new MMCode() {
+	public static final MMCode mmCustodyHoldings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyHoldings";
@@ -130,7 +130,7 @@ public class StatementType1Code extends MessageTypeCode {
 	 * name} = "InvestmentFundTransactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentFundTransactions = new MMCode() {
+	public static final MMCode mmInvestmentFundTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactions";
@@ -141,13 +141,13 @@ public class StatementType1Code extends MessageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ST03");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementType1Code";
 				definition = "Specifies the statement message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementType1Code.AccountingHoldings, com.tools20022.repository.codeset.StatementType1Code.CustodyHoldings,
-						com.tools20022.repository.codeset.StatementType1Code.InvestmentFundTransactions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementType1Code.mmAccountingHoldings, com.tools20022.repository.codeset.StatementType1Code.mmCustodyHoldings,
+						com.tools20022.repository.codeset.StatementType1Code.mmInvestmentFundTransactions);
 				trace_lazy = () -> MessageTypeCode.mmObject();
 			}
 		});

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MainFundOrderDeskLocation1#Country
- * MainFundOrderDeskLocation1.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.MainFundOrderDeskLocation1#mmCountry
+ * MainFundOrderDeskLocation1.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MainFundOrderDeskLocation1#TimeZoneOffSet
- * MainFundOrderDeskLocation1.TimeZoneOffSet}</li>
+ * {@linkplain com.tools20022.repository.msg.MainFundOrderDeskLocation1#mmTimeZoneOffSet
+ * MainFundOrderDeskLocation1.mmTimeZoneOffSet}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MainFundOrderDeskLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country in which it is authorised to commercialise the fund.
 	 * <p>
@@ -78,8 +79,8 @@ public class MainFundOrderDeskLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#AuthorisedCountry
-	 * InvestmentFund.AuthorisedCountry}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmAuthorisedCountry
+	 * InvestmentFund.mmAuthorisedCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class MainFundOrderDeskLocation1 {
 	 * "Country in which it is authorised to commercialise the fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmAuthorisedCountry;
 			componentContext_lazy = () -> MainFundOrderDeskLocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.AuthorisedCountry;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which it is authorised to commercialise the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected UTCOffset1 timeZoneOffSet;
 	/**
 	 * Offset of the reporting time before or after 00:00 hour UTC.
 	 * <p>
@@ -125,8 +127,8 @@ public class MainFundOrderDeskLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Location#TimeZone
-	 * Location.TimeZone}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmTimeZone
+	 * Location.mmTimeZone}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,32 +148,48 @@ public class MainFundOrderDeskLocation1 {
 	 * "Offset of the reporting time before or after 00:00 hour UTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TimeZoneOffSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTimeZoneOffSet = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Location.mmTimeZone;
 			componentContext_lazy = () -> MainFundOrderDeskLocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Location.TimeZone;
 			isDerived = false;
 			xmlTag = "TmZoneOffSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeZoneOffSet";
 			definition = "Offset of the reporting time before or after 00:00 hour UTC.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> UTCOffset1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.UTCOffset1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MainFundOrderDeskLocation1.Country, com.tools20022.repository.msg.MainFundOrderDeskLocation1.TimeZoneOffSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MainFundOrderDeskLocation1.mmCountry, com.tools20022.repository.msg.MainFundOrderDeskLocation1.mmTimeZoneOffSet);
 				trace_lazy = () -> FundOrderDesk.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MainFundOrderDeskLocation1";
 				definition = "U-003-2009 Addition and Modification of choice component. S-009-2009 They are not valid business options in the redemption processing context. S-015-2009 Add new data elements to indicate time zone.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public UTCOffset1 getTimeZoneOffSet() {
+		return timeZoneOffSet;
+	}
+
+	public void setTimeZoneOffSet(com.tools20022.repository.msg.UTCOffset1 timeZoneOffSet) {
+		this.timeZoneOffSet = timeZoneOffSet;
 	}
 }

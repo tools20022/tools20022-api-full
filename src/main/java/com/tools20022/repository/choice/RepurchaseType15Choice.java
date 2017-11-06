@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#Code
- * RepurchaseType15Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#Proprietary
- * RepurchaseType15Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#mmCode
+ * RepurchaseType15Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RepurchaseType15Choice#mmProprietary
+ * RepurchaseType15Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RepurchaseType15Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RepurchaseType5Code code;
 	/**
 	 * Type of securities financing transaction process expressed as an ISO
 	 * 20022 code.
@@ -89,8 +91,8 @@ public class RepurchaseType15Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RepurchaseType
-	 * SecuritiesFinancing.RepurchaseType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRepurchaseType
+	 * SecuritiesFinancing.mmRepurchaseType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,33 +115,34 @@ public class RepurchaseType15Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#Code
-	 * RepurchaseType21Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#mmCode
+	 * RepurchaseType21Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#Code
-	 * RepurchaseType7Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#mmCode
+	 * RepurchaseType7Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseType;
 			componentContext_lazy = () -> RepurchaseType15Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RepurchaseType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of securities financing transaction process expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RepurchaseType7Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType21Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType21Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RepurchaseType7Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RepurchaseType5Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Type of securities financing transaction process expressed as a
 	 * proprietary code.
@@ -153,8 +156,8 @@ public class RepurchaseType15Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RepurchaseType
-	 * SecuritiesFinancing.RepurchaseType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRepurchaseType
+	 * SecuritiesFinancing.mmRepurchaseType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,48 +180,64 @@ public class RepurchaseType15Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#Proprietary
-	 * RepurchaseType21Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType21Choice#mmProprietary
+	 * RepurchaseType21Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#Proprietary
-	 * RepurchaseType7Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepurchaseType7Choice#mmProprietary
+	 * RepurchaseType7Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseType;
 			componentContext_lazy = () -> RepurchaseType15Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RepurchaseType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of securities financing transaction process expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RepurchaseType7Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType21Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType21Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RepurchaseType7Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType15Choice.Code, com.tools20022.repository.choice.RepurchaseType15Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepurchaseType15Choice.mmCode, com.tools20022.repository.choice.RepurchaseType15Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseType15Choice";
 				definition = "Choice of format for the repurchase transaction type information.";
-				previousVersion_lazy = () -> RepurchaseType7Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RepurchaseType21Choice.mmObject());
+				previousVersion_lazy = () -> RepurchaseType7Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RepurchaseType5Code getCode() {
+		return code;
+	}
+
+	public void setCode(RepurchaseType5Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

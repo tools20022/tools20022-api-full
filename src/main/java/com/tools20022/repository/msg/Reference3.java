@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference3#QuoteRequestIdentification
- * Reference3.QuoteRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference3#mmQuoteRequestIdentification
+ * Reference3.mmQuoteRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference3#QuoteResponseIdentification
- * Reference3.QuoteResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference3#mmQuoteResponseIdentification
+ * Reference3.mmQuoteResponseIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text quoteRequestIdentification;
 	/**
 	 * Unique identifier for quote request.
 	 * <p>
@@ -84,7 +85,7 @@ public class Reference3 {
 	 * definition} = "Unique identifier for quote request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference3.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class Reference3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteRequestIdentification";
 			definition = "Unique identifier for quote request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text quoteResponseIdentification;
 	/**
 	 * Unique identifier for quote response.
 	 * <p>
@@ -123,7 +125,7 @@ public class Reference3 {
 	 * definition} = "Unique identifier for quote response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference3.mmObject();
 			isDerived = false;
@@ -131,8 +133,8 @@ public class Reference3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteResponseIdentification";
 			definition = "Unique identifier for quote response.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -140,13 +142,29 @@ public class Reference3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference3.QuoteRequestIdentification, com.tools20022.repository.msg.Reference3.QuoteResponseIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference3.mmQuoteRequestIdentification, com.tools20022.repository.msg.Reference3.mmQuoteResponseIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference3";
 				definition = "Additional references linked to the quote.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQuoteRequestIdentification() {
+		return quoteRequestIdentification;
+	}
+
+	public void setQuoteRequestIdentification(Max35Text quoteRequestIdentification) {
+		this.quoteRequestIdentification = quoteRequestIdentification;
+	}
+
+	public Max35Text getQuoteResponseIdentification() {
+		return quoteResponseIdentification;
+	}
+
+	public void setQuoteResponseIdentification(Max35Text quoteResponseIdentification) {
+		this.quoteResponseIdentification = quoteResponseIdentification;
 	}
 }

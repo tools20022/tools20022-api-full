@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#Identification
- * SafekeepingPlaceFormatChoice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#mmIdentification
+ * SafekeepingPlaceFormatChoice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#IdentificationAsDSS
- * SafekeepingPlaceFormatChoice.IdentificationAsDSS}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#mmIdentificationAsDSS
+ * SafekeepingPlaceFormatChoice.mmIdentificationAsDSS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#IdentificationAsCountry
- * SafekeepingPlaceFormatChoice.IdentificationAsCountry}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#mmIdentificationAsCountry
+ * SafekeepingPlaceFormatChoice.mmIdentificationAsCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafekeepingPlaceFormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlaceAsCodeAndPartyIdentification identification;
 	/**
 	 * Place of safekeeping expressed as a code and BIC.
 	 * <p>
@@ -100,20 +101,21 @@ public class SafekeepingPlaceFormatChoice {
 	 * definition} = "Place of safekeeping expressed as a code and BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
+			componentContext_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Place of safekeeping expressed as a code and BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
 		}
 	};
+	protected GenericIdentification5 identificationAsDSS;
 	/**
 	 * Place of safekeeping expressed with a propriety identification scheme.
 	 * <p>
@@ -127,8 +129,8 @@ public class SafekeepingPlaceFormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +150,21 @@ public class SafekeepingPlaceFormatChoice {
 	 * "Place of safekeeping expressed with a propriety identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationAsDSS = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "IdAsDSS";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAsDSS";
 			definition = "Place of safekeeping expressed with a propriety identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification5.mmObject();
 		}
 	};
+	protected CountryCode identificationAsCountry;
 	/**
 	 * Place of safekeeping expressed with a country code.
 	 * <p>
@@ -174,7 +177,8 @@ public class SafekeepingPlaceFormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,17 +197,17 @@ public class SafekeepingPlaceFormatChoice {
 	 * definition} = "Place of safekeeping expressed with a country code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationAsCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationAsCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "IdAsCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAsCountry";
 			definition = "Place of safekeeping expressed with a country code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -211,15 +215,39 @@ public class SafekeepingPlaceFormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.Identification, com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.IdentificationAsDSS,
-						com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.IdentificationAsCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentificationAsDSS,
+						com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentificationAsCountry);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceFormatChoice";
 				definition = "Choice of formats for the place of safekeeping.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlaceAsCodeAndPartyIdentification getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(SafekeepingPlaceAsCodeAndPartyIdentification identification) {
+		this.identification = identification;
+	}
+
+	public GenericIdentification5 getIdentificationAsDSS() {
+		return identificationAsDSS;
+	}
+
+	public void setIdentificationAsDSS(GenericIdentification5 identificationAsDSS) {
+		this.identificationAsDSS = identificationAsDSS;
+	}
+
+	public CountryCode getIdentificationAsCountry() {
+		return identificationAsCountry;
+	}
+
+	public void setIdentificationAsCountry(CountryCode identificationAsCountry) {
+		this.identificationAsCountry = identificationAsCountry;
 	}
 }

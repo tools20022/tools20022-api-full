@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CitizenshipInformation2#Nationality
- * CitizenshipInformation2.Nationality}</li>
+ * {@linkplain com.tools20022.repository.msg.CitizenshipInformation2#mmNationality
+ * CitizenshipInformation2.mmNationality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CitizenshipInformation2#MinorIndicator
- * CitizenshipInformation2.MinorIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CitizenshipInformation2#mmMinorIndicator
+ * CitizenshipInformation2.mmMinorIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CitizenshipInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NationalityCode nationality;
 	/**
 	 * Country where a person was born or is legally accepted as belonging to
 	 * the country.
@@ -80,8 +81,8 @@ public class CitizenshipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Nationality
-	 * Person.Nationality}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmNationality
+	 * Person.mmNationality}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,25 +104,26 @@ public class CitizenshipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation#Nationality
-	 * CitizenshipInformation.Nationality}</li>
+	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation#mmNationality
+	 * CitizenshipInformation.mmNationality}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Nationality = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNationality = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmNationality;
 			componentContext_lazy = () -> CitizenshipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.Nationality;
 			isDerived = false;
 			xmlTag = "Ntlty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nationality";
 			definition = "Country where a person was born or is legally accepted as belonging to the country.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.Nationality;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.mmNationality;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NationalityCode.mmObject();
 		}
 	};
+	protected YesNoIndicator minorIndicator;
 	/**
 	 * Indicates whether the person is a legal minor. This may depend on the
 	 * nationality, the domicile country or the transaction in which the person
@@ -137,8 +139,8 @@ public class CitizenshipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#MinorIndicator
-	 * Person.MinorIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmMinorIndicator
+	 * Person.mmMinorIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,22 +162,22 @@ public class CitizenshipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation#MinorIndicator
-	 * CitizenshipInformation.MinorIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation#mmMinorIndicator
+	 * CitizenshipInformation.mmMinorIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinorIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinorIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmMinorIndicator;
 			componentContext_lazy = () -> CitizenshipInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.MinorIndicator;
 			isDerived = false;
 			xmlTag = "MnrInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinorIndicator";
 			definition = "Indicates whether the person is a legal minor. This may depend on the nationality, the domicile country or the transaction in which the person is involved.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.MinorIndicator;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.mmMinorIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -183,9 +185,9 @@ public class CitizenshipInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CitizenshipInformation2.Nationality, com.tools20022.repository.msg.CitizenshipInformation2.MinorIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CitizenshipInformation2.mmNationality, com.tools20022.repository.msg.CitizenshipInformation2.mmMinorIndicator);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CitizenshipInformation2";
 				definition = "Information about an individual person.";
@@ -193,5 +195,21 @@ public class CitizenshipInformation2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NationalityCode getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(NationalityCode nationality) {
+		this.nationality = nationality;
+	}
+
+	public YesNoIndicator getMinorIndicator() {
+		return minorIndicator;
+	}
+
+	public void setMinorIndicator(YesNoIndicator minorIndicator) {
+		this.minorIndicator = minorIndicator;
 	}
 }

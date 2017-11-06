@@ -58,30 +58,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#TradeInformation
- * AmendNonDeliverableForwardValuationV02.TradeInformation}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmTradeInformation
+ * AmendNonDeliverableForwardValuationV02.mmTradeInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#TradingSideIdentification
- * AmendNonDeliverableForwardValuationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmTradingSideIdentification
+ * AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#CounterpartySideIdentification
- * AmendNonDeliverableForwardValuationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmCounterpartySideIdentification
+ * AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#TradeAmounts
- * AmendNonDeliverableForwardValuationV02.TradeAmounts}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmTradeAmounts
+ * AmendNonDeliverableForwardValuationV02.mmTradeAmounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#ValuationRate
- * AmendNonDeliverableForwardValuationV02.ValuationRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmValuationRate
+ * AmendNonDeliverableForwardValuationV02.mmValuationRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#ValuationInformation
- * AmendNonDeliverableForwardValuationV02.ValuationInformation}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmValuationInformation
+ * AmendNonDeliverableForwardValuationV02.mmValuationInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#identifier
- * AmendNonDeliverableForwardValuationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code trea.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmendNonDeliverableForwardValuationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeAgreement2 tradeInformation;
 	/**
 	 * Provides references and date of the valuation of the non deliverable
 	 * trade which is amended.
@@ -122,17 +121,18 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformation";
 			definition = "Provides references and date of the valuation of the non deliverable trade which is amended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement2.mmObject();
 		}
 	};
+	protected TradePartyIdentification3 tradingSideIdentification;
 	/**
 	 * Specifies the trading side of the valuation of the non deliverable trade
 	 * which is amended.
@@ -159,17 +159,18 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the valuation of the non deliverable trade which is amended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 	};
+	protected TradePartyIdentification3 counterpartySideIdentification;
 	/**
 	 * Specifies the counterparty of the valuation of the non deliverable trade
 	 * which is amended.
@@ -196,17 +197,18 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the valuation of the non deliverable trade which is amended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 	};
+	protected AmountsAndValueDate1 tradeAmounts;
 	/**
 	 * Specifies the amounts of the valuation of the non deliverable trade which
 	 * is amended.
@@ -233,17 +235,18 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Specifies the amounts of the valuation of the non deliverable trade which is amended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();
 		}
 	};
+	protected AgreedRate1 valuationRate;
 	/**
 	 * Specifies the valuation rate of the valuation of the non deliverable
 	 * trade which is amended.
@@ -269,17 +272,18 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ValuationRate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmValuationRate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationRate";
 			definition = "Specifies the valuation rate of the valuation of the non deliverable trade which is amended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AgreedRate1.mmObject();
 		}
 	};
+	protected ValuationData2 valuationInformation;
 	/**
 	 * Specifies the valuation information of the valuation of the non
 	 * deliverable trade which is amended.
@@ -305,42 +309,15 @@ public class AmendNonDeliverableForwardValuationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ValuationInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmValuationInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationInformation";
 			definition = "Specifies the valuation information of the valuation of the non deliverable trade which is amended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ValuationData2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "trea"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "trea";
-			messageFunctionality = "005";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -354,13 +331,68 @@ public class AmendNonDeliverableForwardValuationV02 {
 				rootElement = "Document";
 				xmlTag = "AmdNDFValtnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.TradeInformation,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.TradingSideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.CounterpartySideIdentification,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.TradeAmounts, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.ValuationRate,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.ValuationInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradeInformation,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradeAmounts, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmValuationRate,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmValuationInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "trea";
+						messageFunctionality = "005";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeAgreement2 getTradeInformation() {
+		return tradeInformation;
+	}
+
+	public void setTradeInformation(TradeAgreement2 tradeInformation) {
+		this.tradeInformation = tradeInformation;
+	}
+
+	public TradePartyIdentification3 getTradingSideIdentification() {
+		return tradingSideIdentification;
+	}
+
+	public void setTradingSideIdentification(TradePartyIdentification3 tradingSideIdentification) {
+		this.tradingSideIdentification = tradingSideIdentification;
+	}
+
+	public TradePartyIdentification3 getCounterpartySideIdentification() {
+		return counterpartySideIdentification;
+	}
+
+	public void setCounterpartySideIdentification(TradePartyIdentification3 counterpartySideIdentification) {
+		this.counterpartySideIdentification = counterpartySideIdentification;
+	}
+
+	public AmountsAndValueDate1 getTradeAmounts() {
+		return tradeAmounts;
+	}
+
+	public void setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = tradeAmounts;
+	}
+
+	public AgreedRate1 getValuationRate() {
+		return valuationRate;
+	}
+
+	public void setValuationRate(AgreedRate1 valuationRate) {
+		this.valuationRate = valuationRate;
+	}
+
+	public ValuationData2 getValuationInformation() {
+		return valuationInformation;
+	}
+
+	public void setValuationInformation(ValuationData2 valuationInformation) {
+		this.valuationInformation = valuationInformation;
 	}
 }

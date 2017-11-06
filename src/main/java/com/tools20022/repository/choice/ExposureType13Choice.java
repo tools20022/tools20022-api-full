@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ExposureType13Choice#Code
- * ExposureType13Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ExposureType13Choice#mmCode
+ * ExposureType13Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExposureType13Choice#Proprietary
- * ExposureType13Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ExposureType13Choice#mmProprietary
+ * ExposureType13Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExposureType13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExposureType4Code code;
 	/**
 	 * Collateral movement exposure type expressed as an ISO 20022 code.
 	 * <p>
@@ -83,8 +84,8 @@ public class ExposureType13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#ExposureType
-	 * ExposureTerm.ExposureType}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmExposureType
+	 * ExposureTerm.mmExposureType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,27 +107,28 @@ public class ExposureType13Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#Code
-	 * ExposureType17Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#mmCode
+	 * ExposureType17Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> ExposureType13Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.ExposureType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Collateral movement exposure type expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType17Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType17Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExposureType4Code.mmObject();
 		}
 	};
+	protected GenericIdentification60 proprietary;
 	/**
 	 * Collateral movement exposure type expressed as a proprietary code.
 	 * <p>
@@ -139,8 +141,8 @@ public class ExposureType13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#ExposureType
-	 * ExposureTerm.ExposureType}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmExposureType
+	 * ExposureTerm.mmExposureType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,35 +164,35 @@ public class ExposureType13Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#Proprietary
-	 * ExposureType17Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#mmProprietary
+	 * ExposureType17Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> ExposureType13Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.ExposureType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Collateral movement exposure type expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType17Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType17Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification60.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification60.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType13Choice.Code, com.tools20022.repository.choice.ExposureType13Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType13Choice.mmCode, com.tools20022.repository.choice.ExposureType13Choice.mmProprietary);
 				trace_lazy = () -> ExposureTerm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExposureType13Choice";
 				definition = "Choice of format for the exposure information.";
@@ -198,5 +200,21 @@ public class ExposureType13Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExposureType4Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExposureType4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification60 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification60 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

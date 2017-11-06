@@ -32,8 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmendInformation3#PreviousReference
- * AmendInformation3.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AmendInformation3#mmPreviousReference
+ * AmendInformation3.mmPreviousReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -41,15 +41,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#Amendment
- * MeetingResultDisseminationV05.Amendment}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmAmendment
+ * MeetingResultDisseminationV05.mmAmendment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmendInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification previousReference;
 	/**
 	 * Identifies the MeetingResultDissemination message to be amended.
 	 * <p>
@@ -95,11 +96,11 @@ public class AmendInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmendInformation2#PreviousReference
-	 * AmendInformation2.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmendInformation2#mmPreviousReference
+	 * AmendInformation2.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AmendInformation3.mmObject();
 			isDerived = false;
@@ -107,20 +108,20 @@ public class AmendInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Identifies the MeetingResultDissemination message to be amended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmendInformation2.PreviousReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmendInformation2.mmPreviousReference;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation3.PreviousReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.Amendment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation3.mmPreviousReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmAmendment);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmendInformation3";
 				definition = "Information specific to an amendment.";
@@ -128,5 +129,13 @@ public class AmendInformation3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(com.tools20022.repository.msg.MessageIdentification previousReference) {
+		this.previousReference = previousReference;
 	}
 }

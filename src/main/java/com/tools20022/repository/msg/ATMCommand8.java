@@ -37,20 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand8#Type
- * ATMCommand8.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand8#RequiredDateTime
- * ATMCommand8.RequiredDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand8#ProcessedDateTime
- * ATMCommand8.ProcessedDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand8#mmType
+ * ATMCommand8.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand8#mmRequiredDateTime
+ * ATMCommand8.mmRequiredDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommand8#CommandIdentification
- * ATMCommand8.CommandIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand8#Result
- * ATMCommand8.Result}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand8#mmProcessedDateTime
+ * ATMCommand8.mmProcessedDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommand8#AdditionalErrorInformation
- * ATMCommand8.AdditionalErrorInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand8#mmCommandIdentification
+ * ATMCommand8.mmCommandIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand8#mmResult
+ * ATMCommand8.mmResult}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand8#mmAdditionalErrorInformation
+ * ATMCommand8.mmAdditionalErrorInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCommand8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCommand5Code type;
 	/**
 	 * Type of command to be performed by the ATM.
 	 * <p>
@@ -103,7 +105,7 @@ public class ATMCommand8 {
 	 * definition} = "Type of command to be performed by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand8.mmObject();
 			isDerived = false;
@@ -111,11 +113,12 @@ public class ATMCommand8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand5Code.mmObject();
 		}
 	};
+	protected ISODateTime requiredDateTime;
 	/**
 	 * Date time on which the command has been requested to be performed.
 	 * <p>
@@ -143,7 +146,7 @@ public class ATMCommand8 {
 	 * "Date time on which the command has been requested to be performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand8.mmObject();
 			isDerived = false;
@@ -151,11 +154,12 @@ public class ATMCommand8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredDateTime";
 			definition = "Date time on which the command has been requested to be performed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime processedDateTime;
 	/**
 	 * Date time on which the command has been performed.
 	 * <p>
@@ -182,7 +186,7 @@ public class ATMCommand8 {
 	 * definition} = "Date time on which the command has been performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessedDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessedDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand8.mmObject();
 			isDerived = false;
@@ -190,11 +194,12 @@ public class ATMCommand8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedDateTime";
 			definition = "Date time on which the command has been performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ATMCommandIdentification1 commandIdentification;
 	/**
 	 * Identification of the entity issuing the command.
 	 * <p>
@@ -221,7 +226,7 @@ public class ATMCommand8 {
 	 * definition} = "Identification of the entity issuing the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCommand8.mmObject();
 			isDerived = false;
@@ -229,12 +234,13 @@ public class ATMCommand8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCommandIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
 		}
 	};
+	protected TerminalManagementActionResult2Code result;
 	/**
 	 * Final result of the processed command at the ATM.
 	 * <p>
@@ -248,8 +254,8 @@ public class ATMCommand8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#ActionResult
-	 * TerminalManagementAction.ActionResult}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionResult
+	 * TerminalManagementAction.mmActionResult}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -267,20 +273,21 @@ public class ATMCommand8 {
 	 * definition} = "Final result of the processed command at the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Result = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> ATMCommand8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.ActionResult;
 			isDerived = false;
 			xmlTag = "Rslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Final result of the processed command at the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
 	};
+	protected Max140Text additionalErrorInformation;
 	/**
 	 * Additional information on the failure to be logged for further
 	 * examination.
@@ -310,7 +317,7 @@ public class ATMCommand8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalErrorInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand8.mmObject();
 			isDerived = false;
@@ -318,8 +325,8 @@ public class ATMCommand8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalErrorInformation";
 			definition = "Additional information on the failure to be logged for further examination.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -327,15 +334,63 @@ public class ATMCommand8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand8.Type, com.tools20022.repository.msg.ATMCommand8.RequiredDateTime, com.tools20022.repository.msg.ATMCommand8.ProcessedDateTime,
-						com.tools20022.repository.msg.ATMCommand8.CommandIdentification, com.tools20022.repository.msg.ATMCommand8.Result, com.tools20022.repository.msg.ATMCommand8.AdditionalErrorInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand8.mmType, com.tools20022.repository.msg.ATMCommand8.mmRequiredDateTime, com.tools20022.repository.msg.ATMCommand8.mmProcessedDateTime,
+						com.tools20022.repository.msg.ATMCommand8.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand8.mmResult, com.tools20022.repository.msg.ATMCommand8.mmAdditionalErrorInformation);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand8";
 				definition = "Command result for reinitialization of the transaction counters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCommand5Code getType() {
+		return type;
+	}
+
+	public void setType(ATMCommand5Code type) {
+		this.type = type;
+	}
+
+	public ISODateTime getRequiredDateTime() {
+		return requiredDateTime;
+	}
+
+	public void setRequiredDateTime(ISODateTime requiredDateTime) {
+		this.requiredDateTime = requiredDateTime;
+	}
+
+	public ISODateTime getProcessedDateTime() {
+		return processedDateTime;
+	}
+
+	public void setProcessedDateTime(ISODateTime processedDateTime) {
+		this.processedDateTime = processedDateTime;
+	}
+
+	public ATMCommandIdentification1 getCommandIdentification() {
+		return commandIdentification;
+	}
+
+	public void setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+		this.commandIdentification = commandIdentification;
+	}
+
+	public TerminalManagementActionResult2Code getResult() {
+		return result;
+	}
+
+	public void setResult(TerminalManagementActionResult2Code result) {
+		this.result = result;
+	}
+
+	public Max140Text getAdditionalErrorInformation() {
+		return additionalErrorInformation;
+	}
+
+	public void setAdditionalErrorInformation(Max140Text additionalErrorInformation) {
+		this.additionalErrorInformation = additionalErrorInformation;
 	}
 }

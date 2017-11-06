@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on limits.
@@ -32,10 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Limits2#CurrentLimit
- * Limits2.CurrentLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits2#DefaultLimit
- * Limits2.DefaultLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits2#mmCurrentLimit
+ * Limits2.mmCurrentLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits2#mmDefaultLimit
+ * Limits2.mmDefaultLimit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Limits2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.LimitReport2> currentLimit;
 	/**
 	 * Report is given for a current risk management type limit.
 	 * <p>
@@ -90,20 +92,21 @@ public class Limits2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrentLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrentLimit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Limits2.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> Limits2.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimit";
 			definition = "Report is given for a current risk management type limit.";
 			minOccurs = 0;
-			type_lazy = () -> LimitReport2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitReport2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.LimitReport2> defaultLimit;
 	/**
 	 * Report is given for a default risk management type limit.
 	 * <p>
@@ -135,32 +138,48 @@ public class Limits2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DefaultLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDefaultLimit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Limits2.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> Limits2.mmObject();
 			isDerived = false;
 			xmlTag = "DfltLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultLimit";
 			definition = "Report is given for a default risk management type limit.";
 			minOccurs = 0;
-			type_lazy = () -> LimitReport2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitReport2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limits2.CurrentLimit, com.tools20022.repository.msg.Limits2.DefaultLimit);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limits2.mmCurrentLimit, com.tools20022.repository.msg.Limits2.mmDefaultLimit);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Limits2";
 				definition = "Reports on limits.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<LimitReport2> getCurrentLimit() {
+		return currentLimit;
+	}
+
+	public void setCurrentLimit(List<com.tools20022.repository.msg.LimitReport2> currentLimit) {
+		this.currentLimit = currentLimit;
+	}
+
+	public List<LimitReport2> getDefaultLimit() {
+		return defaultLimit;
+	}
+
+	public void setDefaultLimit(List<com.tools20022.repository.msg.LimitReport2> defaultLimit) {
+		this.defaultLimit = defaultLimit;
 	}
 }

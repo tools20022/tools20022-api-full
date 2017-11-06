@@ -33,20 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * ObligationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ObligationType1Code#Fails
- * ObligationType1Code.Fails}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ObligationType1Code#New
- * ObligationType1Code.New}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ObligationType1Code#CorporateEvent
- * ObligationType1Code.CorporateEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ObligationType1Code#mmFails
+ * ObligationType1Code.mmFails}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ObligationType1Code#mmNew
+ * ObligationType1Code.mmNew}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ObligationType1Code#mmCorporateEvent
+ * ObligationType1Code.mmCorporateEvent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +83,7 @@ public class ObligationType1Code extends ObligationTypeCode {
 	 * name} = "Fails"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fails = new MMCode() {
+	public static final MMCode mmFails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fails";
@@ -105,7 +106,7 @@ public class ObligationType1Code extends ObligationTypeCode {
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode New = new MMCode() {
+	public static final MMCode mmNew = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
@@ -128,7 +129,7 @@ public class ObligationType1Code extends ObligationTypeCode {
 	 * name} = "CorporateEvent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateEvent = new MMCode() {
+	public static final MMCode mmCorporateEvent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateEvent";
@@ -139,12 +140,13 @@ public class ObligationType1Code extends ObligationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ObligationType1Code";
 				definition = "Specifies the type of the obligation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ObligationType1Code.Fails, com.tools20022.repository.codeset.ObligationType1Code.New, com.tools20022.repository.codeset.ObligationType1Code.CorporateEvent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ObligationType1Code.mmFails, com.tools20022.repository.codeset.ObligationType1Code.mmNew,
+						com.tools20022.repository.codeset.ObligationType1Code.mmCorporateEvent);
 				trace_lazy = () -> ObligationTypeCode.mmObject();
 			}
 		});

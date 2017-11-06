@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IsabelSenderTrigger1Choice#Code
- * IsabelSenderTrigger1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.IsabelSenderTrigger1Choice#mmCode
+ * IsabelSenderTrigger1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IsabelSenderTrigger1Choice#Proprietary
- * IsabelSenderTrigger1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.IsabelSenderTrigger1Choice#mmProprietary
+ * IsabelSenderTrigger1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelSenderTrigger1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SenderTrigger1Code code;
 	/**
 	 * Trigger used by the sender to generate the file, in a coded form.
 	 * <p>
@@ -89,7 +90,7 @@ public class IsabelSenderTrigger1Choice {
 	 * "Trigger used by the sender to generate the file, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSenderTrigger1Choice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class IsabelSenderTrigger1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trigger used by the sender to generate the file, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SenderTrigger1Code.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText proprietary;
 	/**
 	 * Trigger used by the sender to generate the file, in a proprietary form.
 	 * <p>
@@ -132,7 +134,7 @@ public class IsabelSenderTrigger1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSenderTrigger1Choice.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class IsabelSenderTrigger1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trigger used by the sender to generate the file, in a proprietary form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -149,13 +151,29 @@ public class IsabelSenderTrigger1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelSenderTrigger1Choice.Code, com.tools20022.repository.choice.IsabelSenderTrigger1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelSenderTrigger1Choice.mmCode, com.tools20022.repository.choice.IsabelSenderTrigger1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSenderTrigger1Choice";
 				definition = "Specifies the trigger used by the sender to generate the file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SenderTrigger1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SenderTrigger1Code code) {
+		this.code = code;
+	}
+
+	public Max4AlphaNumericText getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max4AlphaNumericText proprietary) {
+		this.proprietary = proprietary;
 	}
 }

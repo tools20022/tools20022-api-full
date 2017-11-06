@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1#FiscalDomicile
- * GenericIdentificationSD1.FiscalDomicile}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1#mmFiscalDomicile
+ * GenericIdentificationSD1.mmFiscalDomicile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1#AccountServicerIdentification
- * GenericIdentificationSD1.AccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1#mmAccountServicerIdentification
+ * GenericIdentificationSD1.mmAccountServicerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1#AccountOwnerIdentification
- * GenericIdentificationSD1.AccountOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentificationSD1#mmAccountOwnerIdentification
+ * GenericIdentificationSD1.mmAccountOwnerIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericIdentificationSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode fiscalDomicile;
 	/**
 	 * Country in which the account owner has one's fiscal domicile.
 	 * <p>
@@ -93,7 +94,7 @@ public class GenericIdentificationSD1 {
 	 * "Country in which the account owner has one's fiscal domicile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FiscalDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class GenericIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalDomicile";
 			definition = "Country in which the account owner has one's fiscal domicile.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text accountServicerIdentification;
 	/**
 	 * Identification of the document assigned by the account servicer.
 	 * <p>
@@ -118,8 +120,8 @@ public class GenericIdentificationSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,20 +141,21 @@ public class GenericIdentificationSD1 {
 	 * "Identification of the document assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identification of the document assigned by the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountOwnerIdentification;
 	/**
 	 * Identification of the document assigned by the account owner.
 	 * <p>
@@ -165,8 +168,8 @@ public class GenericIdentificationSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,17 +189,17 @@ public class GenericIdentificationSD1 {
 	 * "Identification of the document assigned by the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the document assigned by the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -204,14 +207,38 @@ public class GenericIdentificationSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentificationSD1.FiscalDomicile, com.tools20022.repository.msg.GenericIdentificationSD1.AccountServicerIdentification,
-						com.tools20022.repository.msg.GenericIdentificationSD1.AccountOwnerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentificationSD1.mmFiscalDomicile, com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountServicerIdentification,
+						com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountOwnerIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericIdentificationSD1";
 				definition = "Identification information expressed as a country of fiscal domicile and a reference.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getFiscalDomicile() {
+		return fiscalDomicile;
+	}
+
+	public void setFiscalDomicile(CountryCode fiscalDomicile) {
+		this.fiscalDomicile = fiscalDomicile;
+	}
+
+	public Max35Text getAccountServicerIdentification() {
+		return accountServicerIdentification;
+	}
+
+	public void setAccountServicerIdentification(Max35Text accountServicerIdentification) {
+		this.accountServicerIdentification = accountServicerIdentification;
+	}
+
+	public Max35Text getAccountOwnerIdentification() {
+		return accountOwnerIdentification;
+	}
+
+	public void setAccountOwnerIdentification(Max35Text accountOwnerIdentification) {
+		this.accountOwnerIdentification = accountOwnerIdentification;
 	}
 }

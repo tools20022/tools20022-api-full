@@ -37,16 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount17#AccountIdentification
- * CashAccount17.AccountIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount17#PaymentCurrency
- * CashAccount17.PaymentCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount17#mmAccountIdentification
+ * CashAccount17.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount17#AccountOwnerIdentification
- * CashAccount17.AccountOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount17#mmPaymentCurrency
+ * CashAccount17.mmPaymentCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount17#CorrespondentBankIdentification
- * CashAccount17.CorrespondentBankIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount17#mmAccountOwnerIdentification
+ * CashAccount17.mmAccountOwnerIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount17#mmCorrespondentBankIdentification
+ * CashAccount17.mmCorrespondentBankIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccount17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccountIdentification1Choice accountIdentification;
 	/**
 	 * Identification of the cash account.
 	 * <p>
@@ -83,8 +85,8 @@ public class CashAccount17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +104,21 @@ public class CashAccount17 {
 	 * definition} = "Identification of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the cash account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode paymentCurrency;
 	/**
 	 * Currency of the payment.
 	 * <p>
@@ -129,8 +132,8 @@ public class CashAccount17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#BaseCurrency
-	 * Account.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +151,21 @@ public class CashAccount17 {
 	 * definition} = "Currency of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
 			componentContext_lazy = () -> CashAccount17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.BaseCurrency;
 			isDerived = false;
 			xmlTag = "PmtCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCurrency";
 			definition = "Currency of the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
 	 * Identification of the party that owns the account.
 	 * <p>
@@ -175,8 +179,8 @@ public class CashAccount17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,20 +198,21 @@ public class CashAccount17 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashAccount17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected BICIdentifier correspondentBankIdentification;
 	/**
 	 * Identification of the cash correspondent back.
 	 * <p>
@@ -221,8 +226,8 @@ public class CashAccount17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,17 +245,17 @@ public class CashAccount17 {
 	 * definition} = "Identification of the cash correspondent back."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorrespondentBankIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorrespondentBankIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> CashAccount17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "CrspdtBkId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankIdentification";
 			definition = "Identification of the cash correspondent back.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
@@ -258,15 +263,47 @@ public class CashAccount17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount17.AccountIdentification, com.tools20022.repository.msg.CashAccount17.PaymentCurrency,
-						com.tools20022.repository.msg.CashAccount17.AccountOwnerIdentification, com.tools20022.repository.msg.CashAccount17.CorrespondentBankIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount17.mmAccountIdentification, com.tools20022.repository.msg.CashAccount17.mmPaymentCurrency,
+						com.tools20022.repository.msg.CashAccount17.mmAccountOwnerIdentification, com.tools20022.repository.msg.CashAccount17.mmCorrespondentBankIdentification);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccount17";
 				definition = "Provides information about the cash account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccountIdentification1Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(CashAccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public ActiveCurrencyCode getPaymentCurrency() {
+		return paymentCurrency;
+	}
+
+	public void setPaymentCurrency(ActiveCurrencyCode paymentCurrency) {
+		this.paymentCurrency = paymentCurrency;
+	}
+
+	public PartyIdentification2Choice getAccountOwnerIdentification() {
+		return accountOwnerIdentification;
+	}
+
+	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+		this.accountOwnerIdentification = accountOwnerIdentification;
+	}
+
+	public BICIdentifier getCorrespondentBankIdentification() {
+		return correspondentBankIdentification;
+	}
+
+	public void setCorrespondentBankIdentification(BICIdentifier correspondentBankIdentification) {
+		this.correspondentBankIdentification = correspondentBankIdentification;
 	}
 }

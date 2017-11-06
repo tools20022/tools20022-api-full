@@ -38,23 +38,24 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport3#QueryReference
- * IntraPositionReport3.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport3#mmQueryReference
+ * IntraPositionReport3.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport3#ReportIdentification
- * IntraPositionReport3.ReportIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraPositionReport3#QueryType
- * IntraPositionReport3.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport3#mmReportIdentification
+ * IntraPositionReport3.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionReport3#ActivityIndicator
- * IntraPositionReport3.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport3#mmQueryType
+ * IntraPositionReport3.mmQueryType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionReport3#mmActivityIndicator
+ * IntraPositionReport3.mmActivityIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -69,6 +70,7 @@ import java.util.function.Supplier;
 public class IntraPositionReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queryReference;
 	/**
 	 * Identification of the query message sent to request this statement.
 	 * <p>
@@ -97,7 +99,7 @@ public class IntraPositionReport3 {
 	 * "Identification of the query message sent to request this statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -105,11 +107,12 @@ public class IntraPositionReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the query message sent to request this statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text reportIdentification;
 	/**
 	 * Reference common to all pages of a report.
 	 * <p>
@@ -137,7 +140,7 @@ public class IntraPositionReport3 {
 	 * definition} = "Reference common to all pages of a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -145,11 +148,12 @@ public class IntraPositionReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference common to all pages of a report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected MovementResponseType1Code queryType;
 	/**
 	 * Defines the type of query.
 	 * <p>
@@ -178,7 +182,7 @@ public class IntraPositionReport3 {
 	 * definition} = "Defines the type of query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -186,11 +190,12 @@ public class IntraPositionReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -222,7 +227,7 @@ public class IntraPositionReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -230,8 +235,8 @@ public class IntraPositionReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -239,9 +244,9 @@ public class IntraPositionReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionReport3.QueryReference, com.tools20022.repository.msg.IntraPositionReport3.ReportIdentification,
-						com.tools20022.repository.msg.IntraPositionReport3.QueryType, com.tools20022.repository.msg.IntraPositionReport3.ActivityIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionReport3.mmQueryReference, com.tools20022.repository.msg.IntraPositionReport3.mmReportIdentification,
+						com.tools20022.repository.msg.IntraPositionReport3.mmQueryType, com.tools20022.repository.msg.IntraPositionReport3.mmActivityIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -255,5 +260,37 @@ public class IntraPositionReport3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(Max35Text queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public MovementResponseType1Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(MovementResponseType1Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
 	}
 }

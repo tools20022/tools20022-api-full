@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelLRCIExtension1#ImageHashAlgorithm
- * IsabelLRCIExtension1.ImageHashAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelLRCIExtension1#mmImageHashAlgorithm
+ * IsabelLRCIExtension1.mmImageHashAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelLRCIExtension1#TokenResponse
- * IsabelLRCIExtension1.TokenResponse}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelLRCIExtension1#mmTokenResponse
+ * IsabelLRCIExtension1.mmTokenResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelLRCIExtension1#TokenResponsePaymentInformationIndex
- * IsabelLRCIExtension1.TokenResponsePaymentInformationIndex}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelLRCIExtension1#mmTokenResponsePaymentInformationIndex
+ * IsabelLRCIExtension1.mmTokenResponsePaymentInformationIndex}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelLRCIExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max105Text imageHashAlgorithm;
 	/**
 	 * Effective method for calculating the (cryptographic) hash value of each
 	 * visual representation of a payment file.
@@ -93,7 +94,7 @@ public class IsabelLRCIExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ImageHashAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmImageHashAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class IsabelLRCIExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImageHashAlgorithm";
 			definition = "Effective method for calculating the (cryptographic) hash value of each visual representation of a payment file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected IsabelEpaymentTokenResponse1 tokenResponse;
 	/**
 	 * Block of data on which the signature is calculated by the LRCI client.
 	 * <p>
@@ -134,7 +136,7 @@ public class IsabelLRCIExtension1 {
 	 * "Block of data on which the signature is calculated by the LRCI client."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TokenResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTokenResponse = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
 			isDerived = false;
@@ -142,12 +144,13 @@ public class IsabelLRCIExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenResponse";
 			definition = "Block of data on which the signature is calculated by the LRCI client.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 		}
 	};
+	protected PositiveNumber tokenResponsePaymentInformationIndex;
 	/**
 	 * Index of the payment information element containing the hash of the
 	 * visual representation and the hash of the payment file relevant for this
@@ -180,7 +183,7 @@ public class IsabelLRCIExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TokenResponsePaymentInformationIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTokenResponsePaymentInformationIndex = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
 			isDerived = false;
@@ -188,8 +191,8 @@ public class IsabelLRCIExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenResponsePaymentInformationIndex";
 			definition = "Index of the payment information element containing the hash of the visual representation and the hash of the payment file relevant for this signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PositiveNumber.mmObject();
 		}
 	};
@@ -197,14 +200,38 @@ public class IsabelLRCIExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIExtension1.ImageHashAlgorithm, com.tools20022.repository.msg.IsabelLRCIExtension1.TokenResponse,
-						com.tools20022.repository.msg.IsabelLRCIExtension1.TokenResponsePaymentInformationIndex);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIExtension1.mmImageHashAlgorithm, com.tools20022.repository.msg.IsabelLRCIExtension1.mmTokenResponse,
+						com.tools20022.repository.msg.IsabelLRCIExtension1.mmTokenResponsePaymentInformationIndex);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelLRCIExtension1";
 				definition = "Specifies the LRCI protocol extension details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max105Text getImageHashAlgorithm() {
+		return imageHashAlgorithm;
+	}
+
+	public void setImageHashAlgorithm(Max105Text imageHashAlgorithm) {
+		this.imageHashAlgorithm = imageHashAlgorithm;
+	}
+
+	public IsabelEpaymentTokenResponse1 getTokenResponse() {
+		return tokenResponse;
+	}
+
+	public void setTokenResponse(com.tools20022.repository.msg.IsabelEpaymentTokenResponse1 tokenResponse) {
+		this.tokenResponse = tokenResponse;
+	}
+
+	public PositiveNumber getTokenResponsePaymentInformationIndex() {
+		return tokenResponsePaymentInformationIndex;
+	}
+
+	public void setTokenResponsePaymentInformationIndex(PositiveNumber tokenResponsePaymentInformationIndex) {
+		this.tokenResponsePaymentInformationIndex = tokenResponsePaymentInformationIndex;
 	}
 }

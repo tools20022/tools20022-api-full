@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#WithholdTax
- * TaxWithholdingMethod1Code.WithholdTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#mmWithholdTax
+ * TaxWithholdingMethod1Code.mmWithholdTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#ReportTax
- * TaxWithholdingMethod1Code.ReportTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#mmReportTax
+ * TaxWithholdingMethod1Code.mmReportTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#TaxCertificate
- * TaxWithholdingMethod1Code.TaxCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#mmTaxCertificate
+ * TaxWithholdingMethod1Code.mmTaxCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#WithholdTaxAndReport
- * TaxWithholdingMethod1Code.WithholdTaxAndReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxWithholdingMethod1Code#mmWithholdTaxAndReport
+ * TaxWithholdingMethod1Code.mmWithholdTaxAndReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 * name} = "WithholdTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdTax = new MMCode() {
+	public static final MMCode mmWithholdTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdTax";
@@ -114,7 +114,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 * name} = "ReportTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReportTax = new MMCode() {
+	public static final MMCode mmReportTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportTax";
@@ -137,7 +137,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 * name} = "TaxCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxCertificate = new MMCode() {
+	public static final MMCode mmTaxCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCertificate";
@@ -160,7 +160,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 * name} = "WithholdTaxAndReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdTaxAndReport = new MMCode() {
+	public static final MMCode mmWithholdTaxAndReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdTaxAndReport";
@@ -171,13 +171,13 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WTHD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxWithholdingMethod1Code";
 				definition = "Specified the method by which the tax on the interests is to be processed i.e. either withheld at source or reported to tax authorities or a tax certificate has been provided by the beneficiary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxWithholdingMethod1Code.WithholdTax, com.tools20022.repository.codeset.TaxWithholdingMethod1Code.ReportTax,
-						com.tools20022.repository.codeset.TaxWithholdingMethod1Code.TaxCertificate, com.tools20022.repository.codeset.TaxWithholdingMethod1Code.WithholdTaxAndReport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmWithholdTax, com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmReportTax,
+						com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmTaxCertificate, com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmWithholdTaxAndReport);
 				trace_lazy = () -> TaxWithholdingMethodCode.mmObject();
 			}
 		});

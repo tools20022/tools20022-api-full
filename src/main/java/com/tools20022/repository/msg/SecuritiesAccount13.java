@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#Identification
- * SecuritiesAccount13.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13#Type
- * SecuritiesAccount13.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13#Name
- * SecuritiesAccount13.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount13#mmIdentification
+ * SecuritiesAccount13.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13#mmType
+ * SecuritiesAccount13.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13#mmName
+ * SecuritiesAccount13.mmName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,207 +51,213 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01#SafekeepingAccount
- * SecuritiesSettlementTransactionAuditTrailReportV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAuditTrailReportV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#SafekeepingAccount
- * IntraPositionMovementConfirmationV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV02#SafekeepingAccount
- * IntraPositionMovementConfirmationV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV02#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV03#SafekeepingAccount
- * IntraPositionMovementConfirmationV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV03#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV04#SafekeepingAccount
- * IntraPositionMovementConfirmationV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV04#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#SafekeepingAccount
- * IntraPositionMovementPostingReportV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02#SafekeepingAccount
- * IntraPositionMovementPostingReportV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03#SafekeepingAccount
- * IntraPositionMovementPostingReportV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#SafekeepingAccount
- * IntraPositionMovementPostingReportV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV02#SafekeepingAccount
- * SecuritiesMessageCancellationAdviceV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV02#mmSafekeepingAccount
+ * SecuritiesMessageCancellationAdviceV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV03#SafekeepingAccount
- * SecuritiesMessageCancellationAdviceV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV03#mmSafekeepingAccount
+ * SecuritiesMessageCancellationAdviceV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#SafekeepingAccount
- * SecuritiesMessageCancellationAdviceV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#mmSafekeepingAccount
+ * SecuritiesMessageCancellationAdviceV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#SafekeepingAccount
- * SecuritiesSettlementConditionModificationStatusAdviceV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#mmSafekeepingAccount
+ * SecuritiesSettlementConditionModificationStatusAdviceV01.mmSafekeepingAccount
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02#SafekeepingAccount
- * SecuritiesSettlementConditionModificationStatusAdviceV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02#mmSafekeepingAccount
+ * SecuritiesSettlementConditionModificationStatusAdviceV02.mmSafekeepingAccount
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03#SafekeepingAccount
- * SecuritiesSettlementConditionModificationStatusAdviceV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03#mmSafekeepingAccount
+ * SecuritiesSettlementConditionModificationStatusAdviceV03.mmSafekeepingAccount
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04#SafekeepingAccount
- * SecuritiesSettlementConditionModificationStatusAdviceV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04#mmSafekeepingAccount
+ * SecuritiesSettlementConditionModificationStatusAdviceV04.mmSafekeepingAccount
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#SafekeepingAccount
- * SecuritiesSettlementConditionsModificationRequestV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#mmSafekeepingAccount
+ * SecuritiesSettlementConditionsModificationRequestV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV02#SafekeepingAccount
- * SecuritiesSettlementConditionsModificationRequestV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV02#mmSafekeepingAccount
+ * SecuritiesSettlementConditionsModificationRequestV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV03#SafekeepingAccount
- * SecuritiesSettlementConditionsModificationRequestV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV03#mmSafekeepingAccount
+ * SecuritiesSettlementConditionsModificationRequestV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#SafekeepingAccount
- * SecuritiesSettlementConditionsModificationRequestV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04#mmSafekeepingAccount
+ * SecuritiesSettlementConditionsModificationRequestV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#SafekeepingAccount
- * SecuritiesTransactionPendingReportV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02#SafekeepingAccount
- * SecuritiesTransactionPendingReportV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03#SafekeepingAccount
- * SecuritiesTransactionPendingReportV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04#SafekeepingAccount
- * SecuritiesTransactionPendingReportV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#SafekeepingAccount
- * SecuritiesTransactionPostingReportV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02#SafekeepingAccount
- * SecuritiesTransactionPostingReportV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03#SafekeepingAccount
- * SecuritiesTransactionPostingReportV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04#SafekeepingAccount
- * SecuritiesTransactionPostingReportV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#SafekeepingAccount
- * IntraPositionMovementInstructionV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#mmSafekeepingAccount
+ * IntraPositionMovementInstructionV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02#SafekeepingAccount
- * IntraPositionMovementInstructionV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02#mmSafekeepingAccount
+ * IntraPositionMovementInstructionV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#SafekeepingAccount
- * PortfolioTransferNotificationV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#mmSafekeepingAccount
+ * PortfolioTransferNotificationV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV02#SafekeepingAccount
- * PortfolioTransferNotificationV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV02#mmSafekeepingAccount
+ * PortfolioTransferNotificationV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02#SafekeepingAccount
- * SecuritiesSettlementAllegementRemovalAdviceV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02#mmSafekeepingAccount
+ * SecuritiesSettlementAllegementRemovalAdviceV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#SafekeepingAccount
- * SecuritiesSettlementTransactionAllegementReportV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReportV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02#SafekeepingAccount
- * SecuritiesSettlementTransactionAllegementReportV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReportV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#SafekeepingAccount
- * SecuritiesStatementQueryV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmSafekeepingAccount
+ * SecuritiesStatementQueryV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV02#SafekeepingAccount
- * SecuritiesStatementQueryV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV02#mmSafekeepingAccount
+ * SecuritiesStatementQueryV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#SafekeepingAccount
- * SecuritiesStatusOrStatementQueryStatusAdviceV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#mmSafekeepingAccount
+ * SecuritiesStatusOrStatementQueryStatusAdviceV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02#SafekeepingAccount
- * SecuritiesStatusOrStatementQueryStatusAdviceV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02#mmSafekeepingAccount
+ * SecuritiesStatusOrStatementQueryStatusAdviceV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02#SafekeepingAccount
- * SecuritiesTransactionCancellationRequestV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02#mmSafekeepingAccount
+ * SecuritiesTransactionCancellationRequestV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#SafekeepingAccount
- * SecuritiesTransactionStatusQueryV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#mmSafekeepingAccount
+ * SecuritiesTransactionStatusQueryV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02#SafekeepingAccount
- * SecuritiesTransactionStatusQueryV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02#mmSafekeepingAccount
+ * SecuritiesTransactionStatusQueryV02.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03#SafekeepingAccount
- * SecuritiesSettlementAllegementRemovalAdviceV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03#mmSafekeepingAccount
+ * SecuritiesSettlementAllegementRemovalAdviceV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03#SafekeepingAccount
- * SecuritiesSettlementTransactionAllegementReportV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReportV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV03#SafekeepingAccount
- * SecuritiesStatementQueryV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV03#mmSafekeepingAccount
+ * SecuritiesStatementQueryV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#SafekeepingAccount
- * SecuritiesStatusOrStatementQueryStatusAdviceV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmSafekeepingAccount
+ * SecuritiesStatusOrStatementQueryStatusAdviceV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03#SafekeepingAccount
- * SecuritiesTransactionCancellationRequestV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03#mmSafekeepingAccount
+ * SecuritiesTransactionCancellationRequestV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV03#SafekeepingAccount
- * SecuritiesTransactionStatusQueryV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV03#mmSafekeepingAccount
+ * SecuritiesTransactionStatusQueryV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03#SafekeepingAccount
- * IntraPositionMovementInstructionV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03#mmSafekeepingAccount
+ * IntraPositionMovementInstructionV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#SafekeepingAccount
- * PortfolioTransferNotificationV03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmSafekeepingAccount
+ * PortfolioTransferNotificationV03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01#SafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01#mmSafekeepingAccount
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.
- * SafekeepingAccount}</li>
+ * mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04#SafekeepingAccount
- * SecuritiesTransactionCancellationRequestV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04#mmSafekeepingAccount
+ * SecuritiesTransactionCancellationRequestV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05#SafekeepingAccount
- * SecuritiesSettlementConditionModificationStatusAdviceV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05#mmSafekeepingAccount
+ * SecuritiesSettlementConditionModificationStatusAdviceV05.mmSafekeepingAccount
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05#SafekeepingAccount
- * SecuritiesTransactionPendingReportV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05#SafekeepingAccount
- * SecuritiesTransactionPostingReportV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02#SafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02#mmSafekeepingAccount
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.
- * SafekeepingAccount}</li>
+ * mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#SafekeepingAccount
- * SecuritiesSettlementConditionsModificationRequestV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05#mmSafekeepingAccount
+ * SecuritiesSettlementConditionsModificationRequestV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04#SafekeepingAccount
- * SecuritiesSettlementTransactionAllegementReportV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReportV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV04#SafekeepingAccount
- * SecuritiesStatementQueryV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV04#mmSafekeepingAccount
+ * SecuritiesStatementQueryV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06#SafekeepingAccount
- * SecuritiesTransactionPendingReportV06.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV05#SafekeepingAccount
- * SecuritiesStatementQueryV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV05#mmSafekeepingAccount
+ * SecuritiesStatementQueryV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06#SafekeepingAccount
- * SecuritiesSettlementConditionModificationStatusAdviceV06.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06#mmSafekeepingAccount
+ * SecuritiesSettlementConditionModificationStatusAdviceV06.mmSafekeepingAccount
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03#SafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03#mmSafekeepingAccount
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.
- * SafekeepingAccount}</li>
+ * mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02#SafekeepingAccount
- * SecuritiesSettlementTransactionAuditTrailReportV02.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAuditTrailReportV02.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -274,6 +280,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccount13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unambiguous identification for the account between the account owner and
 	 * the account servicer.”
@@ -287,8 +294,8 @@ public class SecuritiesAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,30 +318,31 @@ public class SecuritiesAccount13 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount22#Identification
-	 * SecuritiesAccount22.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount22#mmIdentification
+	 * SecuritiesAccount22.mmIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount24#Identification
-	 * SecuritiesAccount24.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount24#mmIdentification
+	 * SecuritiesAccount24.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unambiguous identification for the account between the account owner and the account servicer.”";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount22.Identification, com.tools20022.repository.msg.SecuritiesAccount24.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount22.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount24.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenericIdentification20 type;
 	/**
 	 * Specifies the type of securities account.
 	 * <p>
@@ -348,8 +356,8 @@ public class SecuritiesAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#SecuritiesAccountType
-	 * SecuritiesAccount.SecuritiesAccountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesAccountType
+	 * SecuritiesAccount.mmSecuritiesAccountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -369,29 +377,30 @@ public class SecuritiesAccount13 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22#Type
-	 * SecuritiesAccount22.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#Type
-	 * SecuritiesAccount24.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22#mmType
+	 * SecuritiesAccount22.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#mmType
+	 * SecuritiesAccount24.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> SecuritiesAccount13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.SecuritiesAccountType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of securities account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount22.Type, com.tools20022.repository.msg.SecuritiesAccount24.Type);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount22.mmType, com.tools20022.repository.msg.SecuritiesAccount24.mmType);
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification20.mmObject();
 		}
 	};
+	protected Max70Text name;
 	/**
 	 * Description of the account.
 	 * <p>
@@ -404,8 +413,8 @@ public class SecuritiesAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -425,26 +434,26 @@ public class SecuritiesAccount13 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22#Name
-	 * SecuritiesAccount22.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#Name
-	 * SecuritiesAccount24.Name}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22#mmName
+	 * SecuritiesAccount22.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#mmName
+	 * SecuritiesAccount24.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Description of the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount22.Name, com.tools20022.repository.msg.SecuritiesAccount24.Name);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount22.mmName, com.tools20022.repository.msg.SecuritiesAccount24.mmName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -452,46 +461,50 @@ public class SecuritiesAccount13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount13.Identification, com.tools20022.repository.msg.SecuritiesAccount13.Type, com.tools20022.repository.msg.SecuritiesAccount13.Name);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount13.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount13.mmType,
+						com.tools20022.repository.msg.SecuritiesAccount13.mmName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV04.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV02.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02.mmSafekeepingAccount, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmSafekeepingAccount, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.SafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV02.SafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV03.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV04.SafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02.SafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV02.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV03.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV02.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV03.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.SafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02.SafekeepingAccount, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.SafekeepingAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV03.SafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.SafekeepingAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.SafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.SafekeepingAccount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount13";
 				definition = "Account to or from which a securities entry is made.";
@@ -499,5 +512,29 @@ public class SecuritiesAccount13 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public GenericIdentification20 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.GenericIdentification20 type) {
+		this.type = type;
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
 	}
 }

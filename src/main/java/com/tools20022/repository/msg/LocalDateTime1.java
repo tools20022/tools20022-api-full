@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LocalDateTime1#FromDateTime
- * LocalDateTime1.FromDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LocalDateTime1#ToDateTime
- * LocalDateTime1.ToDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LocalDateTime1#UTCOffset
- * LocalDateTime1.UTCOffset}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LocalDateTime1#mmFromDateTime
+ * LocalDateTime1.mmFromDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LocalDateTime1#mmToDateTime
+ * LocalDateTime1.mmToDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LocalDateTime1#mmUTCOffset
+ * LocalDateTime1.mmUTCOffset}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LocalDateTime1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime fromDateTime;
 	/**
 	 * Date time of the beginning of the period (inclusive).
 	 * <p>
@@ -85,7 +86,7 @@ public class LocalDateTime1 {
 	 * definition} = "Date time of the beginning of the period (inclusive)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LocalDateTime1.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class LocalDateTime1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateTime";
 			definition = "Date time of the beginning of the period (inclusive).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime toDateTime;
 	/**
 	 * Date time of the end of the period (exclusive).
 	 * <p>
@@ -124,7 +126,7 @@ public class LocalDateTime1 {
 	 * definition} = "Date time of the end of the period (exclusive)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ToDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LocalDateTime1.mmObject();
 			isDerived = false;
@@ -132,11 +134,12 @@ public class LocalDateTime1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDateTime";
 			definition = "Date time of the end of the period (exclusive).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Number uTCOffset;
 	/**
 	 * UTC offset in minutes, of the local time during the period. For instance,
 	 * 120 for Central European Time, -720 for Central Standard Time (North
@@ -167,7 +170,7 @@ public class LocalDateTime1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UTCOffset = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUTCOffset = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LocalDateTime1.mmObject();
 			isDerived = false;
@@ -175,8 +178,8 @@ public class LocalDateTime1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTCOffset";
 			definition = "UTC offset in minutes, of the local time during the period. For instance, 120 for Central European Time, -720 for Central Standard Time (North America).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -184,13 +187,37 @@ public class LocalDateTime1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalDateTime1.FromDateTime, com.tools20022.repository.msg.LocalDateTime1.ToDateTime, com.tools20022.repository.msg.LocalDateTime1.UTCOffset);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalDateTime1.mmFromDateTime, com.tools20022.repository.msg.LocalDateTime1.mmToDateTime, com.tools20022.repository.msg.LocalDateTime1.mmUTCOffset);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LocalDateTime1";
 				definition = "Local time offset to UTC (Coordinated Universal Time).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getFromDateTime() {
+		return fromDateTime;
+	}
+
+	public void setFromDateTime(ISODateTime fromDateTime) {
+		this.fromDateTime = fromDateTime;
+	}
+
+	public ISODateTime getToDateTime() {
+		return toDateTime;
+	}
+
+	public void setToDateTime(ISODateTime toDateTime) {
+		this.toDateTime = toDateTime;
+	}
+
+	public Number getUTCOffset() {
+		return uTCOffset;
+	}
+
+	public void setUTCOffset(Number uTCOffset) {
+		this.uTCOffset = uTCOffset;
 	}
 }

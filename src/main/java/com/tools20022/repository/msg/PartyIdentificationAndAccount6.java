@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#PartyIdentification
- * PartyIdentificationAndAccount6.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#mmPartyIdentification
+ * PartyIdentificationAndAccount6.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#CreditAccount
- * PartyIdentificationAndAccount6.CreditAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#mmCreditAccount
+ * PartyIdentificationAndAccount6.mmCreditAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#FinancingAccount
- * PartyIdentificationAndAccount6.FinancingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#mmFinancingAccount
+ * PartyIdentificationAndAccount6.mmFinancingAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationAndAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification25 partyIdentification;
 	/**
 	 * Unique identification, as assigned by an organisation, to unambiguously
 	 * identify a party.
@@ -99,21 +100,22 @@ public class PartyIdentificationAndAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount6.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentificationAndAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification25.mmObject();
 		}
 	};
+	protected CashAccount7 creditAccount;
 	/**
 	 * Unambiguous identification of an account held by Financing Requestor to
 	 * First Agent. This account is requested to be used for crediting the
@@ -127,8 +129,8 @@ public class PartyIdentificationAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#CashAccount
-	 * InvoiceFinancingPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmCashAccount
+	 * InvoiceFinancingPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,21 +151,22 @@ public class PartyIdentificationAndAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> PartyIdentificationAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "CdtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccount";
 			definition = "Unambiguous identification of an account held by Financing Requestor to First Agent. This account is requested to be used for crediting the amount financed, as a result of the financing process.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected CashAccount7 financingAccount;
 	/**
 	 * Unambiguous identification of an internal bank account used by First
 	 * Agent to manage the line of credit granted to Financing Requestor. This
@@ -177,8 +180,8 @@ public class PartyIdentificationAndAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#CashAccount
-	 * InvoiceFinancingPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmCashAccount
+	 * InvoiceFinancingPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,34 +202,58 @@ public class PartyIdentificationAndAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancingAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> PartyIdentificationAndAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "FincgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingAccount";
 			definition = "Unambiguous identification of an internal bank account used by First Agent to manage the line of credit granted to Financing Requestor. This account is requested to be used for managing the financing process.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount6.PartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount6.CreditAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount6.FinancingAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmCreditAccount,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmFinancingAccount);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount6";
 				definition = "Entity involved in an activity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification25 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.PartyIdentification25 partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public CashAccount7 getCreditAccount() {
+		return creditAccount;
+	}
+
+	public void setCreditAccount(com.tools20022.repository.msg.CashAccount7 creditAccount) {
+		this.creditAccount = creditAccount;
+	}
+
+	public CashAccount7 getFinancingAccount() {
+		return financingAccount;
+	}
+
+	public void setFinancingAccount(com.tools20022.repository.msg.CashAccount7 financingAccount) {
+		this.financingAccount = financingAccount;
 	}
 }

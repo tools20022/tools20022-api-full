@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason3Code#SettlementDate
- * RepairReason3Code.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason3Code#mmSettlementDate
+ * RepairReason3Code.mmSettlementDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class RepairReason3Code extends RepairReasonCode {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDate = new MMCode() {
+	public static final MMCode mmSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
@@ -89,12 +89,12 @@ public class RepairReason3Code extends RepairReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DDAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepairReason3Code";
 				definition = "Specifies the reason why the instruction is in repair.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepairReason3Code.SettlementDate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepairReason3Code.mmSettlementDate);
 				trace_lazy = () -> RepairReasonCode.mmObject();
 			}
 		});

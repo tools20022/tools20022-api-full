@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRule1Code#BeneficialOwnerRoundUpXAndAbove
- * FractionalSecurityRule1Code.BeneficialOwnerRoundUpXAndAbove}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRule1Code#mmBeneficialOwnerRoundUpXAndAbove
+ * FractionalSecurityRule1Code.mmBeneficialOwnerRoundUpXAndAbove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRule1Code#BeneficialOwnerCashInLieu
- * FractionalSecurityRule1Code.BeneficialOwnerCashInLieu}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRule1Code#mmBeneficialOwnerCashInLieu
+ * FractionalSecurityRule1Code.mmBeneficialOwnerCashInLieu}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRule1Code#BeneficialOwnerRoundDownXAndBelow
- * FractionalSecurityRule1Code.BeneficialOwnerRoundDownXAndBelow}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRule1Code#mmBeneficialOwnerRoundDownXAndBelow
+ * FractionalSecurityRule1Code.mmBeneficialOwnerRoundDownXAndBelow}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class FractionalSecurityRule1Code extends FractionalSecurityRuleCode {
 	 * name} = "BeneficialOwnerRoundUpXAndAbove"</li>
 	 * </ul>
 	 */
-	public static final MMCode BeneficialOwnerRoundUpXAndAbove = new MMCode() {
+	public static final MMCode mmBeneficialOwnerRoundUpXAndAbove = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerRoundUpXAndAbove";
@@ -110,7 +110,7 @@ public class FractionalSecurityRule1Code extends FractionalSecurityRuleCode {
 	 * name} = "BeneficialOwnerCashInLieu"</li>
 	 * </ul>
 	 */
-	public static final MMCode BeneficialOwnerCashInLieu = new MMCode() {
+	public static final MMCode mmBeneficialOwnerCashInLieu = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerCashInLieu";
@@ -133,7 +133,7 @@ public class FractionalSecurityRule1Code extends FractionalSecurityRuleCode {
 	 * name} = "BeneficialOwnerRoundDownXAndBelow"</li>
 	 * </ul>
 	 */
-	public static final MMCode BeneficialOwnerRoundDownXAndBelow = new MMCode() {
+	public static final MMCode mmBeneficialOwnerRoundDownXAndBelow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerRoundDownXAndBelow";
@@ -144,13 +144,13 @@ public class FractionalSecurityRule1Code extends FractionalSecurityRuleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BORU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FractionalSecurityRule1Code";
 				definition = "Specifies the fractional security handling rule that does not have an ISO value.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionalSecurityRule1Code.BeneficialOwnerRoundUpXAndAbove, com.tools20022.repository.codeset.FractionalSecurityRule1Code.BeneficialOwnerCashInLieu,
-						com.tools20022.repository.codeset.FractionalSecurityRule1Code.BeneficialOwnerRoundDownXAndBelow);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionalSecurityRule1Code.mmBeneficialOwnerRoundUpXAndAbove, com.tools20022.repository.codeset.FractionalSecurityRule1Code.mmBeneficialOwnerCashInLieu,
+						com.tools20022.repository.codeset.FractionalSecurityRule1Code.mmBeneficialOwnerRoundDownXAndBelow);
 				trace_lazy = () -> FractionalSecurityRuleCode.mmObject();
 			}
 		});

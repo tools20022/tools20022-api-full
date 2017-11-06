@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationMediumCode#Paper
- * PresentationMediumCode.Paper}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationMediumCode#mmPaper
+ * PresentationMediumCode.mmPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationMediumCode#Electronic
- * PresentationMediumCode.Electronic}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationMediumCode#mmElectronic
+ * PresentationMediumCode.mmElectronic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationMediumCode#PaperElectronic
- * PresentationMediumCode.PaperElectronic}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationMediumCode#mmPaperElectronic
+ * PresentationMediumCode.mmPaperElectronic}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class PresentationMediumCode {
 	 * definition} = "Presentation is made on paper."</li>
 	 * </ul>
 	 */
-	public static final MMCode Paper = new MMCode() {
+	public static final MMCode mmPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
@@ -122,7 +122,7 @@ public class PresentationMediumCode {
 	 * definition} = "Presentation is made electronically."</li>
 	 * </ul>
 	 */
-	public static final MMCode Electronic = new MMCode() {
+	public static final MMCode mmElectronic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
@@ -152,7 +152,7 @@ public class PresentationMediumCode {
 	 * definition} = "Presentation is made on paper and/or electronically."</li>
 	 * </ul>
 	 */
-	public static final MMCode PaperElectronic = new MMCode() {
+	public static final MMCode mmPaperElectronic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaperElectronic";
@@ -165,13 +165,13 @@ public class PresentationMediumCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PAPR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PresentationMediumCode";
 				definition = "Specifies the presentation medium.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PresentationMediumCode.Paper, com.tools20022.repository.codeset.PresentationMediumCode.Electronic,
-						com.tools20022.repository.codeset.PresentationMediumCode.PaperElectronic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PresentationMediumCode.mmPaper, com.tools20022.repository.codeset.PresentationMediumCode.mmElectronic,
+						com.tools20022.repository.codeset.PresentationMediumCode.mmPaperElectronic);
 				derivation_lazy = () -> Arrays.asList(PresentationMedium1Code.mmObject());
 			}
 		});

@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice#Deceased
- * BeneficialOwnerExemptionStatus1Choice.Deceased}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice#mmDeceased
+ * BeneficialOwnerExemptionStatus1Choice.mmDeceased}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice#Incompetent
- * BeneficialOwnerExemptionStatus1Choice.Incompetent}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice#mmIncompetent
+ * BeneficialOwnerExemptionStatus1Choice.mmIncompetent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice#NonExempt
- * BeneficialOwnerExemptionStatus1Choice.NonExempt}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice#mmNonExempt
+ * BeneficialOwnerExemptionStatus1Choice.mmNonExempt}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BeneficialOwnerExemptionStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DeceasedExemptionStatus1 deceased;
 	/**
 	 * Beneficial owner is deceased.
 	 * <p>
@@ -93,7 +94,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * definition} = "Beneficial owner is deceased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Deceased = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeceased = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deceased";
 			definition = "Beneficial owner is deceased.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DeceasedExemptionStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DeceasedExemptionStatus1.mmObject();
 		}
 	};
+	protected IncompetentExemptionStatus1 incompetent;
 	/**
 	 * Beneficial owner is incompetent.
 	 * <p>
@@ -134,7 +136,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * definition} = "Beneficial owner is incompetent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Incompetent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIncompetent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
@@ -142,12 +144,13 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incompetent";
 			definition = "Beneficial owner is incompetent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IncompetentExemptionStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IncompetentExemptionStatus1.mmObject();
 		}
 	};
+	protected NonExemptExemptionStatus1 nonExempt;
 	/**
 	 * Beneficial owner is non-exempt.
 	 * <p>
@@ -175,7 +178,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * definition} = "Beneficial owner is non-exempt."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonExempt = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonExempt = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
@@ -183,24 +186,48 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonExempt";
 			definition = "Beneficial owner is non-exempt.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NonExemptExemptionStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NonExemptExemptionStatus1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.Deceased, com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.Incompetent,
-						com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.NonExempt);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmDeceased, com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmIncompetent,
+						com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmNonExempt);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BeneficialOwnerExemptionStatus1Choice";
 				definition = "Exemption reason for the beneficial owner. Usually applicable for CD (Cash Deposit) Early Redemption events.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DeceasedExemptionStatus1 getDeceased() {
+		return deceased;
+	}
+
+	public void setDeceased(DeceasedExemptionStatus1 deceased) {
+		this.deceased = deceased;
+	}
+
+	public IncompetentExemptionStatus1 getIncompetent() {
+		return incompetent;
+	}
+
+	public void setIncompetent(IncompetentExemptionStatus1 incompetent) {
+		this.incompetent = incompetent;
+	}
+
+	public NonExemptExemptionStatus1 getNonExempt() {
+		return nonExempt;
+	}
+
+	public void setNonExempt(NonExemptExemptionStatus1 nonExempt) {
+		this.nonExempt = nonExempt;
 	}
 }

@@ -30,8 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EnabledStatusReasonCode#Modified
- * EnabledStatusReasonCode.Modified}</li>
+ * {@linkplain com.tools20022.repository.codeset.EnabledStatusReasonCode#mmModified
+ * EnabledStatusReasonCode.mmModified}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +80,7 @@ public class EnabledStatusReasonCode {
 	 * definition} = "Modification to the account data is in process."</li>
 	 * </ul>
 	 */
-	public static final MMCode Modified = new MMCode() {
+	public static final MMCode mmModified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
@@ -93,11 +93,11 @@ public class EnabledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EnabledStatusReasonCode";
 				definition = "Specifies the reason for an enabled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EnabledStatusReasonCode.Modified);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EnabledStatusReasonCode.mmModified);
 				derivation_lazy = () -> Arrays.asList(EnabledStatusReason1Code.mmObject());
 			}
 		});

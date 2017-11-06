@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#ActionPeriod
- * CorporateActionPeriod1.ActionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmActionPeriod
+ * CorporateActionPeriod1.mmActionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#CompulsoryPurchasePeriod
- * CorporateActionPeriod1.CompulsoryPurchasePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmCompulsoryPurchasePeriod
+ * CorporateActionPeriod1.mmCompulsoryPurchasePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#InterestPeriod
- * CorporateActionPeriod1.InterestPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmInterestPeriod
+ * CorporateActionPeriod1.mmInterestPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#BlockingPeriod
- * CorporateActionPeriod1.BlockingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmBlockingPeriod
+ * CorporateActionPeriod1.mmBlockingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#PriceCalculationPeriod
- * CorporateActionPeriod1.PriceCalculationPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmPriceCalculationPeriod
+ * CorporateActionPeriod1.mmPriceCalculationPeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Period1 actionPeriod;
 	/**
 	 * Period during which the specified option, or all options of the event,
 	 * remains valid, eg, offer period.
@@ -83,8 +84,8 @@ public class CorporateActionPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#ActionPeriod
-	 * CorporateActionOption.ActionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmActionPeriod
+	 * CorporateActionOption.mmActionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class CorporateActionPeriod1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.ActionPeriod;
 			isDerived = false;
 			xmlTag = "ActnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option, or all options of the event, remains valid, eg, offer period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	protected Period1 compulsoryPurchasePeriod;
 	/**
 	 * Period during a take-over where any outstanding equity must be purchased
 	 * by the take-over company.
@@ -132,8 +134,8 @@ public class CorporateActionPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#CompulsoryPurchasePeriod
-	 * BiddingConditions.CompulsoryPurchasePeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmCompulsoryPurchasePeriod
+	 * BiddingConditions.mmCompulsoryPurchasePeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class CorporateActionPeriod1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CompulsoryPurchasePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompulsoryPurchasePeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmCompulsoryPurchasePeriod;
 			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.CompulsoryPurchasePeriod;
 			isDerived = false;
 			xmlTag = "CmplsryPurchsPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompulsoryPurchasePeriod";
 			definition = "Period during a take-over where any outstanding equity must be purchased by the take-over company.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	protected Period1 interestPeriod;
 	/**
 	 * Period during which the interest rate has been applied.
 	 * <p>
@@ -180,8 +183,8 @@ public class CorporateActionPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#InterestPeriod
-	 * InterestCalculation.InterestPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmInterestPeriod
+	 * InterestCalculation.mmInterestPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,20 +203,21 @@ public class CorporateActionPeriod1 {
 	 * definition} = "Period during which the interest rate has been applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.InterestPeriod;
 			isDerived = false;
 			xmlTag = "IntrstPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriod";
 			definition = "Period during which the interest rate has been applied.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	protected Period1 blockingPeriod;
 	/**
 	 * Period during which the security is blocked.
 	 * <p>
@@ -226,8 +230,8 @@ public class CorporateActionPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline#BlockingPeriod
-	 * SecuritiesBlockingDeadline.BlockingPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline#mmBlockingPeriod
+	 * SecuritiesBlockingDeadline.mmBlockingPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,20 +250,21 @@ public class CorporateActionPeriod1 {
 	 * definition} = "Period during which the security is blocked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BlockingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBlockingPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBlockingDeadline.mmBlockingPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBlockingDeadline.BlockingPeriod;
 			isDerived = false;
 			xmlTag = "BlckgPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockingPeriod";
 			definition = "Period during which the security is blocked.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	protected Period1 priceCalculationPeriod;
 	/**
 	 * Period during which the price of a security is determined.
 	 * <p>
@@ -272,8 +277,8 @@ public class CorporateActionPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceCalculationPeriod
-	 * SecuritiesPricing.PriceCalculationPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceCalculationPeriod
+	 * SecuritiesPricing.mmPriceCalculationPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -293,33 +298,74 @@ public class CorporateActionPeriod1 {
 	 * "Period during which the price of a security is determined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceCalculationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceCalculationPeriod;
 			isDerived = false;
 			xmlTag = "PricClctnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod1.ActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.CompulsoryPurchasePeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod1.InterestPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.BlockingPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.PriceCalculationPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod1.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmCompulsoryPurchasePeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod1.mmInterestPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmBlockingPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod1.mmPriceCalculationPeriod);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod1";
 				definition = "Specifies periods.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Period1 getActionPeriod() {
+		return actionPeriod;
+	}
+
+	public void setActionPeriod(com.tools20022.repository.msg.Period1 actionPeriod) {
+		this.actionPeriod = actionPeriod;
+	}
+
+	public Period1 getCompulsoryPurchasePeriod() {
+		return compulsoryPurchasePeriod;
+	}
+
+	public void setCompulsoryPurchasePeriod(com.tools20022.repository.msg.Period1 compulsoryPurchasePeriod) {
+		this.compulsoryPurchasePeriod = compulsoryPurchasePeriod;
+	}
+
+	public Period1 getInterestPeriod() {
+		return interestPeriod;
+	}
+
+	public void setInterestPeriod(com.tools20022.repository.msg.Period1 interestPeriod) {
+		this.interestPeriod = interestPeriod;
+	}
+
+	public Period1 getBlockingPeriod() {
+		return blockingPeriod;
+	}
+
+	public void setBlockingPeriod(com.tools20022.repository.msg.Period1 blockingPeriod) {
+		this.blockingPeriod = blockingPeriod;
+	}
+
+	public Period1 getPriceCalculationPeriod() {
+		return priceCalculationPeriod;
+	}
+
+	public void setPriceCalculationPeriod(com.tools20022.repository.msg.Period1 priceCalculationPeriod) {
+		this.priceCalculationPeriod = priceCalculationPeriod;
 	}
 }

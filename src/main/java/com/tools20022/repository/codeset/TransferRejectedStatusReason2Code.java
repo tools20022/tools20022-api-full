@@ -35,90 +35,91 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#SettlementDate
- * TransferRejectedStatusReason2Code.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmSettlementDate
+ * TransferRejectedStatusReason2Code.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#SettlementPlace
- * TransferRejectedStatusReason2Code.SettlementPlace}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmSettlementPlace
+ * TransferRejectedStatusReason2Code.mmSettlementPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#FinancialInstrumentIdentification
- * TransferRejectedStatusReason2Code.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmFinancialInstrumentIdentification
+ * TransferRejectedStatusReason2Code.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#NotEnoughFinancialInstrument
- * TransferRejectedStatusReason2Code.NotEnoughFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmNotEnoughFinancialInstrument
+ * TransferRejectedStatusReason2Code.mmNotEnoughFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#SettlementParties
- * TransferRejectedStatusReason2Code.SettlementParties}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmSettlementParties
+ * TransferRejectedStatusReason2Code.mmSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#CertificateNumber
- * TransferRejectedStatusReason2Code.CertificateNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmCertificateNumber
+ * TransferRejectedStatusReason2Code.mmCertificateNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InvestmentAccount
- * TransferRejectedStatusReason2Code.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInvestmentAccount
+ * TransferRejectedStatusReason2Code.mmInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#AcquisitionDate
- * TransferRejectedStatusReason2Code.AcquisitionDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmAcquisitionDate
+ * TransferRejectedStatusReason2Code.mmAcquisitionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#AccountBlockedForCorporateAction
- * TransferRejectedStatusReason2Code.AccountBlockedForCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmAccountBlockedForCorporateAction
+ * TransferRejectedStatusReason2Code.mmAccountBlockedForCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#AccountBlockedMissingDocuments
- * TransferRejectedStatusReason2Code.AccountBlockedMissingDocuments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmAccountBlockedMissingDocuments
+ * TransferRejectedStatusReason2Code.mmAccountBlockedMissingDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#FinancialInstrumentIdentificationAndName
- * TransferRejectedStatusReason2Code.FinancialInstrumentIdentificationAndName}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmFinancialInstrumentIdentificationAndName
+ * TransferRejectedStatusReason2Code.mmFinancialInstrumentIdentificationAndName}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#PhysicalDeliveryImpossible
- * TransferRejectedStatusReason2Code.PhysicalDeliveryImpossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmPhysicalDeliveryImpossible
+ * TransferRejectedStatusReason2Code.mmPhysicalDeliveryImpossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#LegallyImpossible
- * TransferRejectedStatusReason2Code.LegallyImpossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmLegallyImpossible
+ * TransferRejectedStatusReason2Code.mmLegallyImpossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#NotCompliantWithSLA
- * TransferRejectedStatusReason2Code.NotCompliantWithSLA}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmNotCompliantWithSLA
+ * TransferRejectedStatusReason2Code.mmNotCompliantWithSLA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#FinancialInstrumentQuantity
- * TransferRejectedStatusReason2Code.FinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmFinancialInstrumentQuantity
+ * TransferRejectedStatusReason2Code.mmFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InvestorNameAddressUnknown
- * TransferRejectedStatusReason2Code.InvestorNameAddressUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInvestorNameAddressUnknown
+ * TransferRejectedStatusReason2Code.mmInvestorNameAddressUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InsufficientInvestorData
- * TransferRejectedStatusReason2Code.InsufficientInvestorData}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInsufficientInvestorData
+ * TransferRejectedStatusReason2Code.mmInsufficientInvestorData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InvalidAccountServicer
- * TransferRejectedStatusReason2Code.InvalidAccountServicer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInvalidAccountServicer
+ * TransferRejectedStatusReason2Code.mmInvalidAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InvalidNomineeAccount
- * TransferRejectedStatusReason2Code.InvalidNomineeAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInvalidNomineeAccount
+ * TransferRejectedStatusReason2Code.mmInvalidNomineeAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InvalidNewPlanManager
- * TransferRejectedStatusReason2Code.InvalidNewPlanManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInvalidNewPlanManager
+ * TransferRejectedStatusReason2Code.mmInvalidNewPlanManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#CurrentYearPartial
- * TransferRejectedStatusReason2Code.CurrentYearPartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmCurrentYearPartial
+ * TransferRejectedStatusReason2Code.mmCurrentYearPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#PartialNotSupported
- * TransferRejectedStatusReason2Code.PartialNotSupported}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmPartialNotSupported
+ * TransferRejectedStatusReason2Code.mmPartialNotSupported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#FinancialInstrumentTaxYear
- * TransferRejectedStatusReason2Code.FinancialInstrumentTaxYear}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmFinancialInstrumentTaxYear
+ * TransferRejectedStatusReason2Code.mmFinancialInstrumentTaxYear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InvalidISAType
- * TransferRejectedStatusReason2Code.InvalidISAType}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInvalidISAType
+ * TransferRejectedStatusReason2Code.mmInvalidISAType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#InvalidCashAccount
- * TransferRejectedStatusReason2Code.InvalidCashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmInvalidCashAccount
+ * TransferRejectedStatusReason2Code.mmInvalidCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#DuplicateTransferReference
- * TransferRejectedStatusReason2Code.DuplicateTransferReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferRejectedStatusReason2Code#mmDuplicateTransferReference
+ * TransferRejectedStatusReason2Code.mmDuplicateTransferReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -156,7 +157,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDate = new MMCode() {
+	public static final MMCode mmSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
@@ -179,7 +180,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "SettlementPlace"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementPlace = new MMCode() {
+	public static final MMCode mmSettlementPlace = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
@@ -202,7 +203,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "FinancialInstrumentIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentIdentification = new MMCode() {
+	public static final MMCode mmFinancialInstrumentIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
@@ -225,7 +226,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "NotEnoughFinancialInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotEnoughFinancialInstrument = new MMCode() {
+	public static final MMCode mmNotEnoughFinancialInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEnoughFinancialInstrument";
@@ -248,7 +249,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "SettlementParties"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementParties = new MMCode() {
+	public static final MMCode mmSettlementParties = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParties";
@@ -271,7 +272,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "CertificateNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateNumber = new MMCode() {
+	public static final MMCode mmCertificateNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
@@ -294,7 +295,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InvestmentAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentAccount = new MMCode() {
+	public static final MMCode mmInvestmentAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
@@ -317,7 +318,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "AcquisitionDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquisitionDate = new MMCode() {
+	public static final MMCode mmAcquisitionDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquisitionDate";
@@ -340,7 +341,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "AccountBlockedForCorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlockedForCorporateAction = new MMCode() {
+	public static final MMCode mmAccountBlockedForCorporateAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedForCorporateAction";
@@ -363,7 +364,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "AccountBlockedMissingDocuments"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlockedMissingDocuments = new MMCode() {
+	public static final MMCode mmAccountBlockedMissingDocuments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedMissingDocuments";
@@ -386,7 +387,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "FinancialInstrumentIdentificationAndName"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentIdentificationAndName = new MMCode() {
+	public static final MMCode mmFinancialInstrumentIdentificationAndName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentificationAndName";
@@ -409,7 +410,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "PhysicalDeliveryImpossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalDeliveryImpossible = new MMCode() {
+	public static final MMCode mmPhysicalDeliveryImpossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryImpossible";
@@ -432,7 +433,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "LegallyImpossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode LegallyImpossible = new MMCode() {
+	public static final MMCode mmLegallyImpossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegallyImpossible";
@@ -455,7 +456,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotCompliantWithSLA = new MMCode() {
+	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
@@ -478,7 +479,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "FinancialInstrumentQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentQuantity = new MMCode() {
+	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
@@ -501,7 +502,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InvestorNameAddressUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestorNameAddressUnknown = new MMCode() {
+	public static final MMCode mmInvestorNameAddressUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorNameAddressUnknown";
@@ -524,7 +525,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InsufficientInvestorData"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientInvestorData = new MMCode() {
+	public static final MMCode mmInsufficientInvestorData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientInvestorData";
@@ -547,7 +548,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InvalidAccountServicer"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAccountServicer = new MMCode() {
+	public static final MMCode mmInvalidAccountServicer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAccountServicer";
@@ -570,7 +571,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InvalidNomineeAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidNomineeAccount = new MMCode() {
+	public static final MMCode mmInvalidNomineeAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidNomineeAccount";
@@ -593,7 +594,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InvalidNewPlanManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidNewPlanManager = new MMCode() {
+	public static final MMCode mmInvalidNewPlanManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidNewPlanManager";
@@ -616,7 +617,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "CurrentYearPartial"</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrentYearPartial = new MMCode() {
+	public static final MMCode mmCurrentYearPartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearPartial";
@@ -639,7 +640,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "PartialNotSupported"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialNotSupported = new MMCode() {
+	public static final MMCode mmPartialNotSupported = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialNotSupported";
@@ -662,7 +663,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "FinancialInstrumentTaxYear"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentTaxYear = new MMCode() {
+	public static final MMCode mmFinancialInstrumentTaxYear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentTaxYear";
@@ -685,7 +686,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InvalidISAType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidISAType = new MMCode() {
+	public static final MMCode mmInvalidISAType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidISAType";
@@ -708,7 +709,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "InvalidCashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCashAccount = new MMCode() {
+	public static final MMCode mmInvalidCashAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCashAccount";
@@ -731,7 +732,7 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	 * name} = "DuplicateTransferReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode DuplicateTransferReference = new MMCode() {
+	public static final MMCode mmDuplicateTransferReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateTransferReference";
@@ -742,24 +743,24 @@ public class TransferRejectedStatusReason2Code extends RejectedStatusReasonCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DDAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferRejectedStatusReason2Code";
 				definition = "Specifies the reason for a transfer or settlement instruction rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.SettlementDate, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.SettlementPlace,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.FinancialInstrumentIdentification, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.NotEnoughFinancialInstrument,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.SettlementParties, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.CertificateNumber,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InvestmentAccount, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.AcquisitionDate,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.AccountBlockedForCorporateAction, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.AccountBlockedMissingDocuments,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.FinancialInstrumentIdentificationAndName, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.PhysicalDeliveryImpossible,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.LegallyImpossible, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.NotCompliantWithSLA,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.FinancialInstrumentQuantity, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InvestorNameAddressUnknown,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InsufficientInvestorData, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InvalidAccountServicer,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InvalidNomineeAccount, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InvalidNewPlanManager,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.CurrentYearPartial, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.PartialNotSupported,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.FinancialInstrumentTaxYear, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InvalidISAType,
-						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.InvalidCashAccount, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.DuplicateTransferReference);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmSettlementDate, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmSettlementPlace,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmFinancialInstrumentIdentification, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmNotEnoughFinancialInstrument,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmSettlementParties, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmCertificateNumber,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInvestmentAccount, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmAcquisitionDate,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmAccountBlockedForCorporateAction, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmAccountBlockedMissingDocuments,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmFinancialInstrumentIdentificationAndName, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmPhysicalDeliveryImpossible,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmLegallyImpossible, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmNotCompliantWithSLA,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmFinancialInstrumentQuantity, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInvestorNameAddressUnknown,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInsufficientInvestorData, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInvalidAccountServicer,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInvalidNomineeAccount, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInvalidNewPlanManager,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmCurrentYearPartial, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmPartialNotSupported,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmFinancialInstrumentTaxYear, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInvalidISAType,
+						com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmInvalidCashAccount, com.tools20022.repository.codeset.TransferRejectedStatusReason2Code.mmDuplicateTransferReference);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

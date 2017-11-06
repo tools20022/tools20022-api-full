@@ -33,25 +33,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType1Code#Multilateral
- * LimitType1Code.Multilateral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType1Code#Bilateral
- * LimitType1Code.Bilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType1Code#mmMultilateral
+ * LimitType1Code.mmMultilateral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType1Code#mmBilateral
+ * LimitType1Code.mmBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType1Code#NetBilateral
- * LimitType1Code.NetBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType1Code#mmNetBilateral
+ * LimitType1Code.mmNetBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType1Code#IndirectBilateral
- * LimitType1Code.IndirectBilateral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType1Code#Global
- * LimitType1Code.Global}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType1Code#mmIndirectBilateral
+ * LimitType1Code.mmIndirectBilateral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType1Code#mmGlobal
+ * LimitType1Code.mmGlobal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class LimitType1Code extends LimitTypeCode {
 	 * name} = "Multilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Multilateral = new MMCode() {
+	public static final MMCode mmMultilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
@@ -110,7 +110,7 @@ public class LimitType1Code extends LimitTypeCode {
 	 * name} = "Bilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bilateral = new MMCode() {
+	public static final MMCode mmBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
@@ -133,7 +133,7 @@ public class LimitType1Code extends LimitTypeCode {
 	 * name} = "NetBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetBilateral = new MMCode() {
+	public static final MMCode mmNetBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetBilateral";
@@ -156,7 +156,7 @@ public class LimitType1Code extends LimitTypeCode {
 	 * name} = "IndirectBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndirectBilateral = new MMCode() {
+	public static final MMCode mmIndirectBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndirectBilateral";
@@ -179,7 +179,7 @@ public class LimitType1Code extends LimitTypeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode Global = new MMCode() {
+	public static final MMCode mmGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
@@ -190,13 +190,13 @@ public class LimitType1Code extends LimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MULT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LimitType1Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType1Code.Multilateral, com.tools20022.repository.codeset.LimitType1Code.Bilateral, com.tools20022.repository.codeset.LimitType1Code.NetBilateral,
-						com.tools20022.repository.codeset.LimitType1Code.IndirectBilateral, com.tools20022.repository.codeset.LimitType1Code.Global);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType1Code.mmMultilateral, com.tools20022.repository.codeset.LimitType1Code.mmBilateral, com.tools20022.repository.codeset.LimitType1Code.mmNetBilateral,
+						com.tools20022.repository.codeset.LimitType1Code.mmIndirectBilateral, com.tools20022.repository.codeset.LimitType1Code.mmGlobal);
 				trace_lazy = () -> LimitTypeCode.mmObject();
 			}
 		});

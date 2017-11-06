@@ -33,19 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ReversibleCode ReversibleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Reversible1Code#Reversible
- * Reversible1Code.Reversible}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Reversible1Code#Fixed
- * Reversible1Code.Fixed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Reversible1Code#CallBack
- * Reversible1Code.CallBack}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Reversible1Code#mmReversible
+ * Reversible1Code.mmReversible}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Reversible1Code#mmFixed
+ * Reversible1Code.mmFixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Reversible1Code#mmCallBack
+ * Reversible1Code.mmCallBack}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class Reversible1Code extends ReversibleCode {
 	 * name} = "Reversible"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reversible = new MMCode() {
+	public static final MMCode mmReversible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversible";
@@ -106,7 +107,7 @@ public class Reversible1Code extends ReversibleCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fixed = new MMCode() {
+	public static final MMCode mmFixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
@@ -129,7 +130,7 @@ public class Reversible1Code extends ReversibleCode {
 	 * name} = "CallBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode CallBack = new MMCode() {
+	public static final MMCode mmCallBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallBack";
@@ -140,12 +141,12 @@ public class Reversible1Code extends ReversibleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REVL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reversible1Code";
 				definition = "Indicates the possibility to terminate the securitiesc lending contract either by the borrower or lender before the expiration date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reversible1Code.Reversible, com.tools20022.repository.codeset.Reversible1Code.Fixed, com.tools20022.repository.codeset.Reversible1Code.CallBack);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reversible1Code.mmReversible, com.tools20022.repository.codeset.Reversible1Code.mmFixed, com.tools20022.repository.codeset.Reversible1Code.mmCallBack);
 				trace_lazy = () -> ReversibleCode.mmObject();
 			}
 		});

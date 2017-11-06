@@ -34,54 +34,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#AllCredits
- * SettlementInstructionReason1Code.AllCredits}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmAllCredits
+ * SettlementInstructionReason1Code.mmAllCredits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#AllCreditsAndDebits
- * SettlementInstructionReason1Code.AllCreditsAndDebits}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmAllCreditsAndDebits
+ * SettlementInstructionReason1Code.mmAllCreditsAndDebits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#AllDebits
- * SettlementInstructionReason1Code.AllDebits}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmAllDebits
+ * SettlementInstructionReason1Code.mmAllDebits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#Charges
- * SettlementInstructionReason1Code.Charges}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmCharges
+ * SettlementInstructionReason1Code.mmCharges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#Dividend
- * SettlementInstructionReason1Code.Dividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmDividend
+ * SettlementInstructionReason1Code.mmDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#Interest
- * SettlementInstructionReason1Code.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmInterest
+ * SettlementInstructionReason1Code.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#InvestmentSavingsPlan
- * SettlementInstructionReason1Code.InvestmentSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmInvestmentSavingsPlan
+ * SettlementInstructionReason1Code.mmInvestmentSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#Redemption
- * SettlementInstructionReason1Code.Redemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmRedemption
+ * SettlementInstructionReason1Code.mmRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#SavingsPlan
- * SettlementInstructionReason1Code.SavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmSavingsPlan
+ * SettlementInstructionReason1Code.mmSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#SecuritiesPurchase
- * SettlementInstructionReason1Code.SecuritiesPurchase}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmSecuritiesPurchase
+ * SettlementInstructionReason1Code.mmSecuritiesPurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#SecuritiesSale
- * SettlementInstructionReason1Code.SecuritiesSale}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmSecuritiesSale
+ * SettlementInstructionReason1Code.mmSecuritiesSale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#Subscription
- * SettlementInstructionReason1Code.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmSubscription
+ * SettlementInstructionReason1Code.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#WithdrawalSavingsPlan
- * SettlementInstructionReason1Code.WithdrawalSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmWithdrawalSavingsPlan
+ * SettlementInstructionReason1Code.mmWithdrawalSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#CorporateAction
- * SettlementInstructionReason1Code.CorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReason1Code#mmCorporateAction
+ * SettlementInstructionReason1Code.mmCorporateAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,7 +111,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "AllCredits"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllCredits = new MMCode() {
+	public static final MMCode mmAllCredits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCredits";
@@ -134,7 +134,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "AllCreditsAndDebits"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllCreditsAndDebits = new MMCode() {
+	public static final MMCode mmAllCreditsAndDebits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCreditsAndDebits";
@@ -157,7 +157,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "AllDebits"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllDebits = new MMCode() {
+	public static final MMCode mmAllDebits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllDebits";
@@ -180,7 +180,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "Charges"</li>
 	 * </ul>
 	 */
-	public static final MMCode Charges = new MMCode() {
+	public static final MMCode mmCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
@@ -203,7 +203,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "Dividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
@@ -226,7 +226,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "Interest"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
@@ -249,7 +249,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "InvestmentSavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentSavingsPlan = new MMCode() {
+	public static final MMCode mmInvestmentSavingsPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentSavingsPlan";
@@ -272,7 +272,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -295,7 +295,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "SavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode SavingsPlan = new MMCode() {
+	public static final MMCode mmSavingsPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsPlan";
@@ -318,7 +318,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "SecuritiesPurchase"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesPurchase = new MMCode() {
+	public static final MMCode mmSecuritiesPurchase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchase";
@@ -341,7 +341,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "SecuritiesSale"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesSale = new MMCode() {
+	public static final MMCode mmSecuritiesSale = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSale";
@@ -364,7 +364,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
@@ -387,7 +387,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "WithdrawalSavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithdrawalSavingsPlan = new MMCode() {
+	public static final MMCode mmWithdrawalSavingsPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalSavingsPlan";
@@ -410,7 +410,7 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	 * name} = "CorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateAction = new MMCode() {
+	public static final MMCode mmCorporateAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
@@ -421,17 +421,17 @@ public class SettlementInstructionReason1Code extends SettlementInstructionReaso
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionReason1Code";
 				definition = "Specifies the type of transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionReason1Code.AllCredits, com.tools20022.repository.codeset.SettlementInstructionReason1Code.AllCreditsAndDebits,
-						com.tools20022.repository.codeset.SettlementInstructionReason1Code.AllDebits, com.tools20022.repository.codeset.SettlementInstructionReason1Code.Charges,
-						com.tools20022.repository.codeset.SettlementInstructionReason1Code.Dividend, com.tools20022.repository.codeset.SettlementInstructionReason1Code.Interest,
-						com.tools20022.repository.codeset.SettlementInstructionReason1Code.InvestmentSavingsPlan, com.tools20022.repository.codeset.SettlementInstructionReason1Code.Redemption,
-						com.tools20022.repository.codeset.SettlementInstructionReason1Code.SavingsPlan, com.tools20022.repository.codeset.SettlementInstructionReason1Code.SecuritiesPurchase,
-						com.tools20022.repository.codeset.SettlementInstructionReason1Code.SecuritiesSale, com.tools20022.repository.codeset.SettlementInstructionReason1Code.Subscription,
-						com.tools20022.repository.codeset.SettlementInstructionReason1Code.WithdrawalSavingsPlan, com.tools20022.repository.codeset.SettlementInstructionReason1Code.CorporateAction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmAllCredits, com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmAllCreditsAndDebits,
+						com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmAllDebits, com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmCharges,
+						com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmDividend, com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmInterest,
+						com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmInvestmentSavingsPlan, com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmRedemption,
+						com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmSavingsPlan, com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmSecuritiesPurchase,
+						com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmSecuritiesSale, com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmSubscription,
+						com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmWithdrawalSavingsPlan, com.tools20022.repository.codeset.SettlementInstructionReason1Code.mmCorporateAction);
 				trace_lazy = () -> SettlementInstructionReasonCode.mmObject();
 			}
 		});

@@ -41,10 +41,10 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Balance2#ShortLongIndicator
- * Balance2.ShortLongIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Balance2#Quantity
- * Balance2.Quantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance2#mmShortLongIndicator
+ * Balance2.mmShortLongIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance2#mmQuantity
+ * Balance2.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -71,6 +71,7 @@ import java.util.function.Supplier;
 public class Balance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongIndicator;
 	/**
 	 * Indication that the position is short or long.
 	 * <p>
@@ -84,8 +85,8 @@ public class Balance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#ShortLong
-	 * SecuritiesBalance.ShortLong}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmShortLong
+	 * SecuritiesBalance.mmShortLong}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Balance2
@@ -103,20 +104,21 @@ public class Balance2 {
 	 * definition} = "Indication that the position is short or long."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> Balance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.ShortLong;
 			isDerived = false;
 			xmlTag = "ShrtLngInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Indication that the position is short or long.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected BalanceQuantity6Choice quantity;
 	/**
 	 * Total quantity of financial instruments of the balance.
 	 * <p>
@@ -148,28 +150,28 @@ public class Balance2 {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Balance2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> Balance2.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Total quantity of financial instruments of the balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceQuantity6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BalanceQuantity6Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance2.ShortLongIndicator, com.tools20022.repository.msg.Balance2.Quantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance2.mmShortLongIndicator, com.tools20022.repository.msg.Balance2.mmQuantity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -183,5 +185,21 @@ public class Balance2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongIndicator() {
+		return shortLongIndicator;
+	}
+
+	public void setShortLongIndicator(ShortLong1Code shortLongIndicator) {
+		this.shortLongIndicator = shortLongIndicator;
+	}
+
+	public BalanceQuantity6Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(BalanceQuantity6Choice quantity) {
+		this.quantity = quantity;
 	}
 }

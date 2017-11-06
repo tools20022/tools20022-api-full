@@ -39,19 +39,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#Status
- * QuoteStatus.Status}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#RejectionReason
- * QuoteStatus.RejectionReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#RelatedQuote
- * QuoteStatus.RelatedQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#mmStatus
+ * QuoteStatus.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuoteStatus#mmRejectionReason
+ * QuoteStatus.mmRejectionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#mmRelatedQuote
+ * QuoteStatus.mmRelatedQuote}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#Status Quote.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmStatus
+ * Quote.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -67,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuoteStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuoteStatusCode status;
 	/**
 	 * Identifies the status of a quote acknowledgement.
 	 * <p>
@@ -92,18 +95,18 @@ public class QuoteStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode
 	 * QuoteStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationType#CancellationType
-	 * CancellationType.CancellationType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.QuoteStatus QuoteStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationType#mmCancellationType
+	 * CancellationType.mmCancellationType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -115,19 +118,20 @@ public class QuoteStatus extends Status {
 	 * definition} = "Identifies the status of a quote acknowledgement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Status = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationType.CancellationType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationType.mmCancellationType);
 			elementContext_lazy = () -> QuoteStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of a quote acknowledgement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatusCode.mmObject();
 		}
 	};
+	protected RejectionReasonV2Code rejectionReason;
 	/**
 	 * Reason why the quote is rejected.
 	 * <p>
@@ -153,18 +157,19 @@ public class QuoteStatus extends Status {
 	 * definition} = "Reason why the quote is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RejectionReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRejectionReason = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> QuoteStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason why the quote is rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReasonV2Code.mmObject();
 		}
 	};
+	protected Quote relatedQuote;
 	/**
 	 * Quote for wich the status is provided.
 	 * <p>
@@ -172,8 +177,8 @@ public class QuoteStatus extends Status {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Quote#Status
-	 * Quote.Status}</li>
+	 * opposite} = {@linkplain com.tools20022.repository.entity.Quote#mmStatus
+	 * Quote.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -195,34 +200,58 @@ public class QuoteStatus extends Status {
 	 * definition} = "Quote for wich the status is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedQuote = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedQuote = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> QuoteStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedQuote";
 			definition = "Quote for wich the status is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quote.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Quote.Status;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Quote.mmStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuoteStatus";
 				definition = "Status of a quote and if required, the rejection reason.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quote.Status);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quote.mmStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteStatus.Status, com.tools20022.repository.entity.QuoteStatus.RejectionReason, com.tools20022.repository.entity.QuoteStatus.RelatedQuote);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteStatus.mmStatus, com.tools20022.repository.entity.QuoteStatus.mmRejectionReason, com.tools20022.repository.entity.QuoteStatus.mmRelatedQuote);
 				derivationComponent_lazy = () -> Arrays.asList(CancellationType.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuoteStatusCode getStatus() {
+		return status;
+	}
+
+	public void setStatus(QuoteStatusCode status) {
+		this.status = status;
+	}
+
+	public RejectionReasonV2Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReasonV2Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+
+	public Quote getRelatedQuote() {
+		return relatedQuote;
+	}
+
+	public void setRelatedQuote(com.tools20022.repository.entity.Quote relatedQuote) {
+		this.relatedQuote = relatedQuote;
 	}
 }

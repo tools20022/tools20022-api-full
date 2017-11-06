@@ -63,30 +63,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#Identification
- * AgentCAInformationAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmIdentification
+ * AgentCAInformationAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#AgentCAElectionAdviceIdentification
- * AgentCAInformationAdviceV01.AgentCAElectionAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#CorporateActionGeneralInformation
- * AgentCAInformationAdviceV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmCorporateActionGeneralInformation
+ * AgentCAInformationAdviceV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#AccountDetails
- * AgentCAInformationAdviceV01.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmAccountDetails
+ * AgentCAInformationAdviceV01.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#CorporateActionAdditionalInformation
- * AgentCAInformationAdviceV01.CorporateActionAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmCorporateActionAdditionalInformation
+ * AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#ContactDetails
- * AgentCAInformationAdviceV01.ContactDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#mmContactDetails
+ * AgentCAInformationAdviceV01.mmContactDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAInformationAdviceV01#identifier
- * AgentCAInformationAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.023.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCAInformationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * advice.
@@ -128,17 +127,18 @@ public class AgentCAInformationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
 	 * Identification of the linked Agent CA Election Advice Identification
 	 * <p>
@@ -163,17 +163,18 @@ public class AgentCAInformationAdviceV01 {
 	 * "Identification of the linked Agent CA Election Advice Identification"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAElctnAdvcId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionAdviceIdentification";
 			definition = "Identification of the linked Agent CA Election Advice Identification";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -197,17 +198,18 @@ public class AgentCAInformationAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected SecuritiesAccount7 accountDetails;
 	/**
 	 * Information about the account for which additional information is
 	 * provided.
@@ -234,17 +236,18 @@ public class AgentCAInformationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information about the account for which additional information is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount7.mmObject();
 		}
 	};
+	protected CorporateActionAdditionalInformation1 corporateActionAdditionalInformation;
 	/**
 	 * Additional information about the corporate action such as the delivery
 	 * details.
@@ -271,17 +274,18 @@ public class AgentCAInformationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnAddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionAdditionalInformation";
 			definition = "Additional information about the corporate action such as the delivery details.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 		}
 	};
+	protected ContactPerson1 contactDetails;
 	/**
 	 * Contact responsible for the transaction identified in the message.
 	 * <p>
@@ -305,42 +309,15 @@ public class AgentCAInformationAdviceV01 {
 	 * "Contact responsible for the transaction identified in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContactDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContactDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Contact responsible for the transaction identified in the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContactPerson1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "023"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "023";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -354,13 +331,68 @@ public class AgentCAInformationAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAInfAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.AgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.AccountDetails, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.CorporateActionAdditionalInformation,
-						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.ContactDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmAccountDetails, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation,
+						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmContactDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "023";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
+		return agentCAElectionAdviceIdentification;
+	}
+
+	public void setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
+		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public SecuritiesAccount7 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(SecuritiesAccount7 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public CorporateActionAdditionalInformation1 getCorporateActionAdditionalInformation() {
+		return corporateActionAdditionalInformation;
+	}
+
+	public void setCorporateActionAdditionalInformation(CorporateActionAdditionalInformation1 corporateActionAdditionalInformation) {
+		this.corporateActionAdditionalInformation = corporateActionAdditionalInformation;
+	}
+
+	public ContactPerson1 getContactDetails() {
+		return contactDetails;
+	}
+
+	public void setContactDetails(ContactPerson1 contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 }

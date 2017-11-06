@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMContext2#SessionReference
- * ATMContext2.SessionReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMContext2#Service
- * ATMContext2.Service}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMContext2#mmSessionReference
+ * ATMContext2.mmSessionReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMContext2#mmService
+ * ATMContext2.mmService}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text sessionReference;
 	/**
 	 * Unique identification of the customer session in which the service is
 	 * performed.
@@ -90,11 +91,11 @@ public class ATMContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMContext1#SessionReference
-	 * ATMContext1.SessionReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMContext1#mmSessionReference
+	 * ATMContext1.mmSessionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SessionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSessionReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMContext2.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class ATMContext2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionReference";
 			definition = "Unique identification of the customer session in which the service is performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMContext1.SessionReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMContext1.mmSessionReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ATMService2 service;
 	/**
 	 * Withdrawal service provided by the ATM inside the session.
 	 * <p>
@@ -135,11 +137,11 @@ public class ATMContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMContext1#Service
-	 * ATMContext1.Service}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMContext1#mmService
+	 * ATMContext1.mmService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Service = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmService = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMContext2.mmObject();
 			isDerived = false;
@@ -147,19 +149,19 @@ public class ATMContext2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Service";
 			definition = "Withdrawal service provided by the ATM inside the session.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMContext1.Service;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMContext1.mmService;
 			maxOccurs = 1;
-			type_lazy = () -> ATMService2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMService2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext2.SessionReference, com.tools20022.repository.msg.ATMContext2.Service);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext2.mmSessionReference, com.tools20022.repository.msg.ATMContext2.mmService);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMContext2";
 				definition = "Context in which the transaction is performed.";
@@ -167,5 +169,21 @@ public class ATMContext2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSessionReference() {
+		return sessionReference;
+	}
+
+	public void setSessionReference(Max35Text sessionReference) {
+		this.sessionReference = sessionReference;
+	}
+
+	public ATMService2 getService() {
+		return service;
+	}
+
+	public void setService(com.tools20022.repository.msg.ATMService2 service) {
+		this.service = service;
 	}
 }

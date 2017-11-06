@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the voting entitlement.
@@ -36,15 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EligiblePosition#AccountIdentification
- * EligiblePosition.AccountIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EligiblePosition#AccountOwner
- * EligiblePosition.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.EligiblePosition#mmAccountIdentification
+ * EligiblePosition.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EligiblePosition#HoldingBalance
- * EligiblePosition.HoldingBalance}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EligiblePosition#RightsHolder
- * EligiblePosition.RightsHolder}</li>
+ * {@linkplain com.tools20022.repository.msg.EligiblePosition#mmAccountOwner
+ * EligiblePosition.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EligiblePosition#mmHoldingBalance
+ * EligiblePosition.mmHoldingBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EligiblePosition#mmRightsHolder
+ * EligiblePosition.mmRightsHolder}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EligiblePosition {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text accountIdentification;
 	/**
 	 * Identification of the securities account.
 	 * <p>
@@ -80,8 +84,8 @@ public class EligiblePosition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +104,21 @@ public class EligiblePosition {
 	 * definition} = "Identification of the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> EligiblePosition.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the securities account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification7Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -126,8 +131,8 @@ public class EligiblePosition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,21 +151,22 @@ public class EligiblePosition {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> EligiblePosition.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification7Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.HoldingBalance2> holdingBalance;
 	/**
 	 * Net position of a segregated holding of a single security within the
 	 * overall position held in a securities account, eg, sub-balance per
@@ -174,8 +180,8 @@ public class EligiblePosition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesSubBalance
-	 * SecuritiesBalance.SecuritiesSubBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesSubBalance
+	 * SecuritiesBalance.mmSecuritiesSubBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,21 +202,22 @@ public class EligiblePosition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd HoldingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHoldingBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> EligiblePosition.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesSubBalance;
 			isDerived = false;
 			xmlTag = "HldgBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingBalance";
 			definition = "Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> HoldingBalance2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.HoldingBalance2.mmObject();
 		}
 	};
+	protected PartyIdentification7Choice rightsHolder;
 	/**
 	 * Owner of the voting rights.
 	 * <p>
@@ -223,8 +230,8 @@ public class EligiblePosition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,34 +250,66 @@ public class EligiblePosition {
 	 * definition} = "Owner of the voting rights."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RightsHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> EligiblePosition.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RghtsHldr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolder";
 			definition = "Owner of the voting rights.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification7Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligiblePosition.AccountIdentification, com.tools20022.repository.msg.EligiblePosition.AccountOwner,
-						com.tools20022.repository.msg.EligiblePosition.HoldingBalance, com.tools20022.repository.msg.EligiblePosition.RightsHolder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligiblePosition.mmAccountIdentification, com.tools20022.repository.msg.EligiblePosition.mmAccountOwner,
+						com.tools20022.repository.msg.EligiblePosition.mmHoldingBalance, com.tools20022.repository.msg.EligiblePosition.mmRightsHolder);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligiblePosition";
 				definition = "Specifies the voting entitlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public PartyIdentification7Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification7Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public List<HoldingBalance2> getHoldingBalance() {
+		return holdingBalance;
+	}
+
+	public void setHoldingBalance(List<com.tools20022.repository.msg.HoldingBalance2> holdingBalance) {
+		this.holdingBalance = holdingBalance;
+	}
+
+	public PartyIdentification7Choice getRightsHolder() {
+		return rightsHolder;
+	}
+
+	public void setRightsHolder(PartyIdentification7Choice rightsHolder) {
+		this.rightsHolder = rightsHolder;
 	}
 }

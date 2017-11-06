@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#DisableStoreForward
- * CardServiceType2Code.DisableStoreForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#mmDisableStoreForward
+ * CardServiceType2Code.mmDisableStoreForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#EchoTest
- * CardServiceType2Code.EchoTest}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#mmEchoTest
+ * CardServiceType2Code.mmEchoTest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#EnableStoreForward
- * CardServiceType2Code.EnableStoreForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#mmEnableStoreForward
+ * CardServiceType2Code.mmEnableStoreForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#SignOff
- * CardServiceType2Code.SignOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#mmSignOff
+ * CardServiceType2Code.mmSignOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#SignOn
- * CardServiceType2Code.SignOn}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType2Code#mmSignOn
+ * CardServiceType2Code.mmSignOn}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class CardServiceType2Code extends CardServiceTypeCode {
 	 * name} = "DisableStoreForward"</li>
 	 * </ul>
 	 */
-	public static final MMCode DisableStoreForward = new MMCode() {
+	public static final MMCode mmDisableStoreForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisableStoreForward";
@@ -108,7 +108,7 @@ public class CardServiceType2Code extends CardServiceTypeCode {
 	 * name} = "EchoTest"</li>
 	 * </ul>
 	 */
-	public static final MMCode EchoTest = new MMCode() {
+	public static final MMCode mmEchoTest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EchoTest";
@@ -131,7 +131,7 @@ public class CardServiceType2Code extends CardServiceTypeCode {
 	 * name} = "EnableStoreForward"</li>
 	 * </ul>
 	 */
-	public static final MMCode EnableStoreForward = new MMCode() {
+	public static final MMCode mmEnableStoreForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnableStoreForward";
@@ -154,7 +154,7 @@ public class CardServiceType2Code extends CardServiceTypeCode {
 	 * name} = "SignOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode SignOff = new MMCode() {
+	public static final MMCode mmSignOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOff";
@@ -177,7 +177,7 @@ public class CardServiceType2Code extends CardServiceTypeCode {
 	 * name} = "SignOn"</li>
 	 * </ul>
 	 */
-	public static final MMCode SignOn = new MMCode() {
+	public static final MMCode mmSignOn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOn";
@@ -188,12 +188,12 @@ public class CardServiceType2Code extends CardServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardServiceType2Code";
 				definition = "Type of network management service (correspond to the ISO 8583 field 24).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType2Code.DisableStoreForward, com.tools20022.repository.codeset.CardServiceType2Code.EchoTest,
-						com.tools20022.repository.codeset.CardServiceType2Code.EnableStoreForward, com.tools20022.repository.codeset.CardServiceType2Code.SignOff, com.tools20022.repository.codeset.CardServiceType2Code.SignOn);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType2Code.mmDisableStoreForward, com.tools20022.repository.codeset.CardServiceType2Code.mmEchoTest,
+						com.tools20022.repository.codeset.CardServiceType2Code.mmEnableStoreForward, com.tools20022.repository.codeset.CardServiceType2Code.mmSignOff, com.tools20022.repository.codeset.CardServiceType2Code.mmSignOn);
 				trace_lazy = () -> CardServiceTypeCode.mmObject();
 			}
 		});

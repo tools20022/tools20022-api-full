@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#Code
- * PreferenceToIncome1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#mmCode
+ * PreferenceToIncome1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#Proprietary
- * PreferenceToIncome1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#mmProprietary
+ * PreferenceToIncome1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PreferenceToIncome1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PreferenceToIncome1Code code;
 	/**
 	 * Indicates the level of priority to claim on income and assets of the
 	 * company in case of the payment of dividends and in the event of a
@@ -75,8 +76,8 @@ public class PreferenceToIncome1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Equity#PreferenceToIncome
-	 * Equity.PreferenceToIncome}</li>
+	 * {@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
+	 * Equity.mmPreferenceToIncome}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class PreferenceToIncome1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> PreferenceToIncome1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.PreferenceToIncome;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Indicates the level of priority to claim on income and assets of the
 	 * company in case of the payment of dividends and in the event of a
@@ -127,8 +129,8 @@ public class PreferenceToIncome1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Equity#PreferenceToIncome
-	 * Equity.PreferenceToIncome}</li>
+	 * {@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
+	 * Equity.mmPreferenceToIncome}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,17 +151,17 @@ public class PreferenceToIncome1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> PreferenceToIncome1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.PreferenceToIncome;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -167,13 +169,29 @@ public class PreferenceToIncome1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreferenceToIncome1Choice.Code, com.tools20022.repository.choice.PreferenceToIncome1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreferenceToIncome1Choice.mmCode, com.tools20022.repository.choice.PreferenceToIncome1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PreferenceToIncome1Choice";
 				definition = "Choice of format for the preference to income.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PreferenceToIncome1Code getCode() {
+		return code;
+	}
+
+	public void setCode(PreferenceToIncome1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

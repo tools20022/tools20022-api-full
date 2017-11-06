@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#Method
- * TransactionVerificationResult4.Method}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#mmMethod
+ * TransactionVerificationResult4.mmMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#VerificationEntity
- * TransactionVerificationResult4.VerificationEntity}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#mmVerificationEntity
+ * TransactionVerificationResult4.mmVerificationEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#Result
- * TransactionVerificationResult4.Result}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#mmResult
+ * TransactionVerificationResult4.mmResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#AdditionalResult
- * TransactionVerificationResult4.AdditionalResult}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult4#mmAdditionalResult
+ * TransactionVerificationResult4.mmAdditionalResult}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionVerificationResult4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuthenticationMethod6Code method;
 	/**
 	 * Method of verification that has been performed.
 	 * <p>
@@ -108,18 +109,18 @@ public class TransactionVerificationResult4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#Method
-	 * TransactionVerificationResult5.Method}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#mmMethod
+	 * TransactionVerificationResult5.mmMethod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#Method
-	 * TransactionVerificationResult3.Method}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#mmMethod
+	 * TransactionVerificationResult3.mmMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Method = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -127,13 +128,14 @@ public class TransactionVerificationResult4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Method of verification that has been performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.Method;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.Method);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.mmMethod);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmMethod;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod6Code.mmObject();
 		}
 	};
+	protected AuthenticationEntity2Code verificationEntity;
 	/**
 	 * Entity or device that has performed the verification.
 	 * <p>
@@ -164,18 +166,18 @@ public class TransactionVerificationResult4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#VerificationEntity
-	 * TransactionVerificationResult5.VerificationEntity}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#mmVerificationEntity
+	 * TransactionVerificationResult5.mmVerificationEntity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#VerificationEntity
-	 * TransactionVerificationResult3.VerificationEntity}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#mmVerificationEntity
+	 * TransactionVerificationResult3.mmVerificationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VerificationEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVerificationEntity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -183,13 +185,14 @@ public class TransactionVerificationResult4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VerificationEntity";
 			definition = "Entity or device that has performed the verification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.VerificationEntity;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.VerificationEntity);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.mmVerificationEntity);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmVerificationEntity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
+	protected Verification1Code result;
 	/**
 	 * Result of the verification.
 	 * <p>
@@ -220,18 +223,18 @@ public class TransactionVerificationResult4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#Result
-	 * TransactionVerificationResult5.Result}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#mmResult
+	 * TransactionVerificationResult5.mmResult}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#Result
-	 * TransactionVerificationResult3.Result}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#mmResult
+	 * TransactionVerificationResult3.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Result = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -239,13 +242,14 @@ public class TransactionVerificationResult4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Result of the verification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.Result;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.Result);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.mmResult);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmResult;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Verification1Code.mmObject();
 		}
 	};
+	protected Max500Text additionalResult;
 	/**
 	 * Additional result of the verification.
 	 * <p>
@@ -275,18 +279,18 @@ public class TransactionVerificationResult4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#AdditionalResult
-	 * TransactionVerificationResult5.AdditionalResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult5#mmAdditionalResult
+	 * TransactionVerificationResult5.mmAdditionalResult}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#AdditionalResult
-	 * TransactionVerificationResult3.AdditionalResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult3#mmAdditionalResult
+	 * TransactionVerificationResult3.mmAdditionalResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalResult = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -294,10 +298,10 @@ public class TransactionVerificationResult4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResult";
 			definition = "Additional result of the verification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.AdditionalResult;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.AdditionalResult);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.mmAdditionalResult);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmAdditionalResult;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
@@ -305,16 +309,48 @@ public class TransactionVerificationResult4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult4.Method, com.tools20022.repository.msg.TransactionVerificationResult4.VerificationEntity,
-						com.tools20022.repository.msg.TransactionVerificationResult4.Result, com.tools20022.repository.msg.TransactionVerificationResult4.AdditionalResult);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult4.mmMethod, com.tools20022.repository.msg.TransactionVerificationResult4.mmVerificationEntity,
+						com.tools20022.repository.msg.TransactionVerificationResult4.mmResult, com.tools20022.repository.msg.TransactionVerificationResult4.mmAdditionalResult);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionVerificationResult4";
 				definition = "Result of performed verifications for the transaction.";
-				previousVersion_lazy = () -> TransactionVerificationResult3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransactionVerificationResult5.mmObject());
+				previousVersion_lazy = () -> TransactionVerificationResult3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuthenticationMethod6Code getMethod() {
+		return method;
+	}
+
+	public void setMethod(AuthenticationMethod6Code method) {
+		this.method = method;
+	}
+
+	public AuthenticationEntity2Code getVerificationEntity() {
+		return verificationEntity;
+	}
+
+	public void setVerificationEntity(AuthenticationEntity2Code verificationEntity) {
+		this.verificationEntity = verificationEntity;
+	}
+
+	public Verification1Code getResult() {
+		return result;
+	}
+
+	public void setResult(Verification1Code result) {
+		this.result = result;
+	}
+
+	public Max500Text getAdditionalResult() {
+		return additionalResult;
+	}
+
+	public void setAdditionalResult(Max500Text additionalResult) {
+		this.additionalResult = additionalResult;
 	}
 }

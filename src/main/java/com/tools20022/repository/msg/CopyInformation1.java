@@ -32,11 +32,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CopyInformation1#CopyIndicator
- * CopyInformation1.CopyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CopyInformation1#OriginalReceiver
- * CopyInformation1.OriginalReceiver}</li>
+ * {@linkplain com.tools20022.repository.msg.CopyInformation1#mmCopyIndicator
+ * CopyInformation1.mmCopyIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CopyInformation1#mmOriginalReceiver
+ * CopyInformation1.mmOriginalReceiver}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,45 +45,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#CopyDetails
- * RedemptionBulkOrderConfirmationV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#mmCopyDetails
+ * RedemptionBulkOrderConfirmationV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#CopyDetails
- * RedemptionBulkOrderV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#mmCopyDetails
+ * RedemptionBulkOrderV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#CopyDetails
- * RedemptionMultipleOrderConfirmationV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#mmCopyDetails
+ * RedemptionMultipleOrderConfirmationV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#CopyDetails
- * RedemptionMultipleOrderV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#mmCopyDetails
+ * RedemptionMultipleOrderV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#CopyDetails
- * SubscriptionBulkOrderConfirmationV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmCopyDetails
+ * SubscriptionBulkOrderConfirmationV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#CopyDetails
- * SubscriptionBulkOrderV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#mmCopyDetails
+ * SubscriptionBulkOrderV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#CopyDetails
- * SubscriptionOrderConfirmationCancellationInstructionV01.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmCopyDetails
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#CopyDetails
- * SubscriptionMultipleOrderConfirmationV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#mmCopyDetails
+ * SubscriptionMultipleOrderConfirmationV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#CopyDetails
- * SubscriptionMultipleOrderV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#mmCopyDetails
+ * SubscriptionMultipleOrderV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#CopyDetails
- * SwitchOrderConfirmationV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#mmCopyDetails
+ * SwitchOrderConfirmationV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#CopyDetails
- * SwitchOrderV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#mmCopyDetails
+ * SwitchOrderV02.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CopyInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator copyIndicator;
 	/**
 	 * Indicates whether the message is a copy.
 	 * <p>
@@ -125,7 +127,7 @@ public class CopyInformation1 {
 	 * definition} = "Indicates whether the message is a copy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CopyInformation1.mmObject();
 			isDerived = false;
@@ -133,11 +135,12 @@ public class CopyInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicates whether the message is a copy.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected BICIdentification1 originalReceiver;
 	/**
 	 * Original receiver of the message, if this message is a copy.
 	 * <p>
@@ -167,7 +170,7 @@ public class CopyInformation1 {
 	 * "Original receiver of the message, if this message is a copy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalReceiver = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalReceiver = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CopyInformation1.mmObject();
 			isDerived = false;
@@ -175,28 +178,44 @@ public class CopyInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalReceiver";
 			definition = "Original receiver of the message, if this message is a copy.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CopyInformation1.CopyIndicator, com.tools20022.repository.msg.CopyInformation1.OriginalReceiver);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.CopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.CopyDetails,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.CopyDetails, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.CopyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.CopyDetails, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.CopyDetails, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.CopyDetails,
-						com.tools20022.repository.area.setr.SwitchOrderV02.CopyDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CopyInformation1.mmCopyIndicator, com.tools20022.repository.msg.CopyInformation1.mmOriginalReceiver);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmCopyDetails, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.SwitchOrderV02.mmCopyDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CopyInformation1";
 				definition = "Information provided when the message is a copy of a previous message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getCopyIndicator() {
+		return copyIndicator;
+	}
+
+	public void setCopyIndicator(YesNoIndicator copyIndicator) {
+		this.copyIndicator = copyIndicator;
+	}
+
+	public BICIdentification1 getOriginalReceiver() {
+		return originalReceiver;
+	}
+
+	public void setOriginalReceiver(com.tools20022.repository.msg.BICIdentification1 originalReceiver) {
+		this.originalReceiver = originalReceiver;
 	}
 }

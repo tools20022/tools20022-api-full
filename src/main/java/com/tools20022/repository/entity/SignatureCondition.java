@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the signature requirements for managing an account.
@@ -40,39 +41,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SignatureCondition#RequiredSignatureNumber
- * SignatureCondition.RequiredSignatureNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmRequiredSignatureNumber
+ * SignatureCondition.mmRequiredSignatureNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SignatureCondition#SignatoryRightIndicator
- * SignatureCondition.SignatoryRightIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SignatureCondition#Mandate
- * SignatureCondition.Mandate}</li>
+ * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignatoryRightIndicator
+ * SignatureCondition.mmSignatoryRightIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SignatureCondition#SignatureOrderIndicator
- * SignatureCondition.SignatureOrderIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmMandate
+ * SignatureCondition.mmMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SignatureCondition#SignatureOrder
- * SignatureCondition.SignatureOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignatureOrderIndicator
+ * SignatureCondition.mmSignatureOrderIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SignatureCondition#Signature
- * SignatureCondition.Signature}</li>
+ * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignatureOrder
+ * SignatureCondition.mmSignatureOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignature
+ * SignatureCondition.mmSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Signature#Conditions
- * Signature.Conditions}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#SignatureConditions
- * Mandate.SignatureConditions}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Signature#mmConditions
+ * Signature.mmConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Mandate#mmSignatureConditions
+ * Mandate.mmSignatureConditions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SignatureCondition {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number requiredSignatureNumber;
 	/**
 	 * Number of account owners or related parties required to authorise
 	 * transactions on the account.
@@ -97,76 +101,76 @@ public class SignatureCondition {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount17#RequiredSignatoriesNumber
-	 * InvestmentAccount17.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount27#RequiredSignatoriesNumber
-	 * InvestmentAccount27.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35#RequiredSignatoriesNumber
-	 * InvestmentAccount35.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount18#RequiredSignatoriesNumber
-	 * InvestmentAccount18.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount28#RequiredSignatoriesNumber
-	 * InvestmentAccount28.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36#RequiredSignatoriesNumber
-	 * InvestmentAccount36.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#RequiredSignatoriesNumber
-	 * InvestmentAccount16.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount26#RequiredSignatoriesNumber
-	 * InvestmentAccount26.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34#RequiredSignatoriesNumber
-	 * InvestmentAccount34.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#RequiredSignatoriesNumber
-	 * InvestmentAccount38.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#RequiredSignatoriesNumber
-	 * InvestmentAccount37.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#RequiredSignatoriesNumber
-	 * InvestmentAccount39.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#RequiredSignatoriesNumber
-	 * InvestmentAccount46.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#RequiredSignatoriesNumber
-	 * InvestmentAccount47.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#RequiredSignatoriesNumber
-	 * InvestmentAccount49.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#RequiredSignatoriesNumber
-	 * InvestmentAccount51.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#RequiredSignatoriesNumber
-	 * InvestmentAccount50.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#RequiredSignatoriesNumber
-	 * InvestmentAccount61.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#RequiredSignatoriesNumber
-	 * InvestmentAccount63.RequiredSignatoriesNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#RequiredSignatoriesNumber
-	 * InvestmentAccount62.RequiredSignatoriesNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
 	 * SignatureCondition}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount17#mmRequiredSignatoriesNumber
+	 * InvestmentAccount17.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount27#mmRequiredSignatoriesNumber
+	 * InvestmentAccount27.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35#mmRequiredSignatoriesNumber
+	 * InvestmentAccount35.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount18#mmRequiredSignatoriesNumber
+	 * InvestmentAccount18.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount28#mmRequiredSignatoriesNumber
+	 * InvestmentAccount28.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36#mmRequiredSignatoriesNumber
+	 * InvestmentAccount36.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#mmRequiredSignatoriesNumber
+	 * InvestmentAccount16.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount26#mmRequiredSignatoriesNumber
+	 * InvestmentAccount26.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34#mmRequiredSignatoriesNumber
+	 * InvestmentAccount34.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#mmRequiredSignatoriesNumber
+	 * InvestmentAccount38.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#mmRequiredSignatoriesNumber
+	 * InvestmentAccount37.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmRequiredSignatoriesNumber
+	 * InvestmentAccount39.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#mmRequiredSignatoriesNumber
+	 * InvestmentAccount46.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmRequiredSignatoriesNumber
+	 * InvestmentAccount47.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#mmRequiredSignatoriesNumber
+	 * InvestmentAccount49.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmRequiredSignatoriesNumber
+	 * InvestmentAccount51.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#mmRequiredSignatoriesNumber
+	 * InvestmentAccount50.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#mmRequiredSignatoriesNumber
+	 * InvestmentAccount61.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#mmRequiredSignatoriesNumber
+	 * InvestmentAccount63.mmRequiredSignatoriesNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#mmRequiredSignatoriesNumber
+	 * InvestmentAccount62.mmRequiredSignatoriesNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -180,28 +184,29 @@ public class SignatureCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RequiredSignatureNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRequiredSignatureNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount17.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount27.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount35.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount18.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount28.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount36.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount16.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount26.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount34.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount38.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount37.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount39.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount46.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount47.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount49.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount51.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount50.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount61.RequiredSignatoriesNumber,
-					com.tools20022.repository.msg.InvestmentAccount63.RequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount62.RequiredSignatoriesNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount17.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount27.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount35.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount18.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount28.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount36.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount16.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount26.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount34.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount38.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount37.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount39.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount46.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount47.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount49.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount51.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount50.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount61.mmRequiredSignatoriesNumber,
+					com.tools20022.repository.msg.InvestmentAccount63.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount62.mmRequiredSignatoriesNumber);
 			elementContext_lazy = () -> SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RequiredSignatureNumber";
 			definition = "Number of account owners or related parties required to authorise transactions on the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator signatoryRightIndicator;
 	/**
 	 * Indicates whether the signature of the account owner is required to
 	 * authorise transactions on the account.
@@ -213,58 +218,58 @@ public class SignatureCondition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation5.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation2.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation6.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation3.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation4.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation7.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation8.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation9.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation10.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation11.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation12.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation13.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation15.SignatoryRightIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#SignatoryRightIndicator
-	 * InvestmentAccountOwnershipInformation14.SignatoryRightIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
 	 * SignatureCondition}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation5.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation2.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation6.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation3.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation4.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation7.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation8.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation9.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation10.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation11.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation12.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation13.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation15.mmSignatoryRightIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmSignatoryRightIndicator
+	 * InvestmentAccountOwnershipInformation14.mmSignatoryRightIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -278,25 +283,27 @@ public class SignatureCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SignatoryRightIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSignatoryRightIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.SignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.SignatoryRightIndicator,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.SignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.SignatoryRightIndicator,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.SignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.SignatoryRightIndicator,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.SignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.SignatoryRightIndicator,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.SignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.SignatoryRightIndicator,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.SignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.SignatoryRightIndicator,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.SignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.SignatoryRightIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.mmSignatoryRightIndicator,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmSignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.mmSignatoryRightIndicator,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmSignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.mmSignatoryRightIndicator,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.mmSignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.mmSignatoryRightIndicator,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmSignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmSignatoryRightIndicator,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.mmSignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmSignatoryRightIndicator,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmSignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmSignatoryRightIndicator,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmSignatoryRightIndicator);
 			elementContext_lazy = () -> SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SignatoryRightIndicator";
 			definition = "Indicates whether the signature of the account owner is required to authorise transactions on the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Mandate mandate;
 	/**
 	 * Mandate for which signature conditions are provided.
 	 * <p>
@@ -305,8 +312,8 @@ public class SignatureCondition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Mandate#SignatureConditions
-	 * Mandate.SignatureConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Mandate#mmSignatureConditions
+	 * Mandate.mmSignatureConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -329,20 +336,21 @@ public class SignatureCondition {
 	 * definition} = "Mandate for which signature conditions are provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Mandate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMandate = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Mandate";
 			definition = "Mandate for which signature conditions are provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Mandate.SignatureConditions;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Mandate.mmSignatureConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 		}
 	};
+	protected TrueFalseIndicator signatureOrderIndicator;
 	/**
 	 * Indicator whether a certain order of signatures has to be respected or
 	 * not.
@@ -354,25 +362,25 @@ public class SignatureCondition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OperationMandate1#SignatureOrderIndicator
-	 * OperationMandate1.SignatureOrderIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OperationMandate2#SignatureOrderIndicator
-	 * OperationMandate2.SignatureOrderIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OperationMandate3#SignatureOrderIndicator
-	 * OperationMandate3.SignatureOrderIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
 	 * SignatureCondition}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmSignatureOrderIndicator
+	 * OperationMandate1.mmSignatureOrderIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OperationMandate2#mmSignatureOrderIndicator
+	 * OperationMandate2.mmSignatureOrderIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OperationMandate3#mmSignatureOrderIndicator
+	 * OperationMandate3.mmSignatureOrderIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -386,20 +394,21 @@ public class SignatureCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SignatureOrderIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSignatureOrderIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OperationMandate1.SignatureOrderIndicator, com.tools20022.repository.msg.OperationMandate2.SignatureOrderIndicator,
-					com.tools20022.repository.msg.OperationMandate3.SignatureOrderIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OperationMandate1.mmSignatureOrderIndicator, com.tools20022.repository.msg.OperationMandate2.mmSignatureOrderIndicator,
+					com.tools20022.repository.msg.OperationMandate3.mmSignatureOrderIndicator);
 			elementContext_lazy = () -> SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SignatureOrderIndicator";
 			definition = "Indicator whether a certain order of signatures has to be respected or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Max15PlusSignedNumericText signatureOrder;
 	/**
 	 * Indicates the order in which the mandate holders are allowed to sign.
 	 * <p>
@@ -410,25 +419,25 @@ public class SignatureCondition {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max15PlusSignedNumericText
 	 * Max15PlusSignedNumericText}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#SignatureOrder
-	 * PartyAndCertificate1.SignatureOrder}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation1#SignatureOrder
-	 * PartyAndAuthorisation1.SignatureOrder}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation3#SignatureOrder
-	 * PartyAndAuthorisation3.SignatureOrder}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SignatureCondition
 	 * SignatureCondition}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#mmSignatureOrder
+	 * PartyAndCertificate1.mmSignatureOrder}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation1#mmSignatureOrder
+	 * PartyAndAuthorisation1.mmSignatureOrder}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation3#mmSignatureOrder
+	 * PartyAndAuthorisation3.mmSignatureOrder}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -441,20 +450,21 @@ public class SignatureCondition {
 	 * "Indicates the order in which the mandate holders are allowed to sign."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SignatureOrder = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSignatureOrder = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndCertificate1.SignatureOrder, com.tools20022.repository.msg.PartyAndAuthorisation1.SignatureOrder,
-					com.tools20022.repository.msg.PartyAndAuthorisation3.SignatureOrder);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndCertificate1.mmSignatureOrder, com.tools20022.repository.msg.PartyAndAuthorisation1.mmSignatureOrder,
+					com.tools20022.repository.msg.PartyAndAuthorisation3.mmSignatureOrder);
 			elementContext_lazy = () -> SignatureCondition.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SignatureOrder";
 			definition = "Indicates the order in which the mandate holders are allowed to sign.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Signature> signature;
 	/**
 	 * Manual or digital signature added as security provision by each party
 	 * involved in the business covered by the document.
@@ -464,8 +474,8 @@ public class SignatureCondition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Signature#Conditions
-	 * Signature.Conditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Signature#mmConditions
+	 * Signature.mmConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -491,7 +501,7 @@ public class SignatureCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Signature = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSignature = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SignatureCondition.mmObject();
 			isDerived = false;
@@ -499,25 +509,73 @@ public class SignatureCondition {
 			name = "Signature";
 			definition = "Manual or digital signature added as security provision by each party involved in the business covered by the document.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Signature.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Signature.Conditions;
+			opposite_lazy = () -> com.tools20022.repository.entity.Signature.mmConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Signature.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignatureCondition";
 				definition = "Specifies the signature requirements for managing an account.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Signature.Conditions, com.tools20022.repository.entity.Mandate.SignatureConditions);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SignatureCondition.RequiredSignatureNumber, com.tools20022.repository.entity.SignatureCondition.SignatoryRightIndicator,
-						com.tools20022.repository.entity.SignatureCondition.Mandate, com.tools20022.repository.entity.SignatureCondition.SignatureOrderIndicator, com.tools20022.repository.entity.SignatureCondition.SignatureOrder,
-						com.tools20022.repository.entity.SignatureCondition.Signature);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Signature.mmConditions, com.tools20022.repository.entity.Mandate.mmSignatureConditions);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SignatureCondition.mmRequiredSignatureNumber, com.tools20022.repository.entity.SignatureCondition.mmSignatoryRightIndicator,
+						com.tools20022.repository.entity.SignatureCondition.mmMandate, com.tools20022.repository.entity.SignatureCondition.mmSignatureOrderIndicator, com.tools20022.repository.entity.SignatureCondition.mmSignatureOrder,
+						com.tools20022.repository.entity.SignatureCondition.mmSignature);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getRequiredSignatureNumber() {
+		return requiredSignatureNumber;
+	}
+
+	public void setRequiredSignatureNumber(Number requiredSignatureNumber) {
+		this.requiredSignatureNumber = requiredSignatureNumber;
+	}
+
+	public YesNoIndicator getSignatoryRightIndicator() {
+		return signatoryRightIndicator;
+	}
+
+	public void setSignatoryRightIndicator(YesNoIndicator signatoryRightIndicator) {
+		this.signatoryRightIndicator = signatoryRightIndicator;
+	}
+
+	public Mandate getMandate() {
+		return mandate;
+	}
+
+	public void setMandate(com.tools20022.repository.entity.Mandate mandate) {
+		this.mandate = mandate;
+	}
+
+	public TrueFalseIndicator getSignatureOrderIndicator() {
+		return signatureOrderIndicator;
+	}
+
+	public void setSignatureOrderIndicator(TrueFalseIndicator signatureOrderIndicator) {
+		this.signatureOrderIndicator = signatureOrderIndicator;
+	}
+
+	public Max15PlusSignedNumericText getSignatureOrder() {
+		return signatureOrder;
+	}
+
+	public void setSignatureOrder(Max15PlusSignedNumericText signatureOrder) {
+		this.signatureOrder = signatureOrder;
+	}
+
+	public List<Signature> getSignature() {
+		return signature;
+	}
+
+	public void setSignature(List<com.tools20022.repository.entity.Signature> signature) {
+		this.signature = signature;
 	}
 }

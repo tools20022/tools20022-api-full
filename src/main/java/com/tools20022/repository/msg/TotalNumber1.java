@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalNumber1#CurrentInstructionNumber
- * TotalNumber1.CurrentInstructionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalNumber1#mmCurrentInstructionNumber
+ * TotalNumber1.mmCurrentInstructionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalNumber1#TotalOfLinkedInstructions
- * TotalNumber1.TotalOfLinkedInstructions}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalNumber1#mmTotalOfLinkedInstructions
+ * TotalNumber1.mmTotalOfLinkedInstructions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText currentInstructionNumber;
 	/**
 	 * Sequential number of the instruction in a range of linked settlement
 	 * instructions.
@@ -88,7 +89,7 @@ public class TotalNumber1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentInstructionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentInstructionNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalNumber1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class TotalNumber1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentInstructionNumber";
 			definition = "Sequential number of the instruction in a range of linked settlement instructions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected Exact3NumericText totalOfLinkedInstructions;
 	/**
 	 * Total number of settlement instructions that are linked together.
 	 * <p>
@@ -129,7 +131,7 @@ public class TotalNumber1 {
 	 * "Total number of settlement instructions that are linked together."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalOfLinkedInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalOfLinkedInstructions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalNumber1.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class TotalNumber1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalOfLinkedInstructions";
 			definition = "Total number of settlement instructions that are linked together.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class TotalNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalNumber1.CurrentInstructionNumber, com.tools20022.repository.msg.TotalNumber1.TotalOfLinkedInstructions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalNumber1.mmCurrentInstructionNumber, com.tools20022.repository.msg.TotalNumber1.mmTotalOfLinkedInstructions);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalNumber1";
 				definition = "Settlement transaction numbering information";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getCurrentInstructionNumber() {
+		return currentInstructionNumber;
+	}
+
+	public void setCurrentInstructionNumber(Exact3NumericText currentInstructionNumber) {
+		this.currentInstructionNumber = currentInstructionNumber;
+	}
+
+	public Exact3NumericText getTotalOfLinkedInstructions() {
+		return totalOfLinkedInstructions;
+	}
+
+	public void setTotalOfLinkedInstructions(Exact3NumericText totalOfLinkedInstructions) {
+		this.totalOfLinkedInstructions = totalOfLinkedInstructions;
 	}
 }

@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#OutsideIndex
- * ExchangeForPhysicalTradeParameters1.OutsideIndex}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#mmOutsideIndex
+ * ExchangeForPhysicalTradeParameters1.mmOutsideIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#FairValue
- * ExchangeForPhysicalTradeParameters1.FairValue}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#mmFairValue
+ * ExchangeForPhysicalTradeParameters1.mmFairValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#ValueForFutures
- * ExchangeForPhysicalTradeParameters1.ValueForFutures}</li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#mmValueForFutures
+ * ExchangeForPhysicalTradeParameters1.mmValueForFutures}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExchangeForPhysicalTradeParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate outsideIndex;
 	/**
 	 * Unexpected divergence between the price behaviour of an underlying
 	 * position or portfolio and the price behaviour of a hedging position or
@@ -85,8 +86,8 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#OutsideIndex
-	 * ExchangeForPhysicalTrade.OutsideIndex}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmOutsideIndex
+	 * ExchangeForPhysicalTrade.mmOutsideIndex}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +108,21 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OutsideIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOutsideIndex = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmOutsideIndex;
 			componentContext_lazy = () -> ExchangeForPhysicalTradeParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.OutsideIndex;
 			isDerived = false;
 			xmlTag = "OutsdIndx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutsideIndex";
 			definition = "Unexpected divergence between the price behaviour of an underlying position or portfolio and the price behaviour of a hedging position or benchmark.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount fairValue;
 	/**
 	 * Difference between the value of a future and the value of the underlying
 	 * equities after allowing for the discounted cash flows associated with the
@@ -136,8 +138,8 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#FairValue
-	 * ExchangeForPhysicalTrade.FairValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmFairValue
+	 * ExchangeForPhysicalTrade.mmFairValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,20 +160,21 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FairValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmFairValue;
 			componentContext_lazy = () -> ExchangeForPhysicalTradeParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.FairValue;
 			isDerived = false;
 			xmlTag = "FairVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount valueForFutures;
 	/**
 	 * Value of a futures position involved in an Exchange For Physical trade.
 	 * <p>
@@ -185,8 +188,8 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#ValueForFutures
-	 * ExchangeForPhysicalTrade.ValueForFutures}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmValueForFutures
+	 * ExchangeForPhysicalTrade.mmValueForFutures}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,17 +210,17 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueForFutures = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueForFutures = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmValueForFutures;
 			componentContext_lazy = () -> ExchangeForPhysicalTradeParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.ValueForFutures;
 			isDerived = false;
 			xmlTag = "ValForFutrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueForFutures";
 			definition = "Value of a futures position involved in an Exchange For Physical trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -225,15 +228,39 @@ public class ExchangeForPhysicalTradeParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.OutsideIndex, com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.FairValue,
-						com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.ValueForFutures);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmOutsideIndex, com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmFairValue,
+						com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmValueForFutures);
 				trace_lazy = () -> ExchangeForPhysicalTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangeForPhysicalTradeParameters1";
 				definition = "Technique whereby a position in the underlying is traded for a futures position in the physical commodity markets.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getOutsideIndex() {
+		return outsideIndex;
+	}
+
+	public void setOutsideIndex(PercentageRate outsideIndex) {
+		this.outsideIndex = outsideIndex;
+	}
+
+	public ActiveCurrencyAndAmount getFairValue() {
+		return fairValue;
+	}
+
+	public void setFairValue(ActiveCurrencyAndAmount fairValue) {
+		this.fairValue = fairValue;
+	}
+
+	public ActiveCurrencyAndAmount getValueForFutures() {
+		return valueForFutures;
+	}
+
+	public void setValueForFutures(ActiveCurrencyAndAmount valueForFutures) {
+		this.valueForFutures = valueForFutures;
 	}
 }

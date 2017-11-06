@@ -30,29 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#NationalCompetentAuthority
- * TradingVenueCode.NationalCompetentAuthority}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmNationalCompetentAuthority
+ * TradingVenueCode.mmNationalCompetentAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#ApprovedPublicationArrangement
- * TradingVenueCode.ApprovedPublicationArrangement}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmApprovedPublicationArrangement
+ * TradingVenueCode.mmApprovedPublicationArrangement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#SystematicInternaliser
- * TradingVenueCode.SystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmSystematicInternaliser
+ * TradingVenueCode.mmSystematicInternaliser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#TradingVenue
- * TradingVenueCode.TradingVenue}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmTradingVenue
+ * TradingVenueCode.mmTradingVenue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#MultilateralTradingFacility
- * TradingVenueCode.MultilateralTradingFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmMultilateralTradingFacility
+ * TradingVenueCode.mmMultilateralTradingFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#OrganisedTradingFacility
- * TradingVenueCode.OrganisedTradingFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmOrganisedTradingFacility
+ * TradingVenueCode.mmOrganisedTradingFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#ConsolidatedTapeProvider
- * TradingVenueCode.ConsolidatedTapeProvider}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmConsolidatedTapeProvider
+ * TradingVenueCode.mmConsolidatedTapeProvider}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#RegulatedMarket
- * TradingVenueCode.RegulatedMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmRegulatedMarket
+ * TradingVenueCode.mmRegulatedMarket}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -67,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,7 +106,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NationalCompetentAuthority = new MMCode() {
+	public static final MMCode mmNationalCompetentAuthority = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalCompetentAuthority";
@@ -140,7 +140,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ApprovedPublicationArrangement = new MMCode() {
+	public static final MMCode mmApprovedPublicationArrangement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedPublicationArrangement";
@@ -175,7 +175,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SystematicInternaliser = new MMCode() {
+	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
@@ -208,7 +208,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TradingVenue = new MMCode() {
+	public static final MMCode mmTradingVenue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
@@ -242,7 +242,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MultilateralTradingFacility = new MMCode() {
+	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralTradingFacility";
@@ -277,7 +277,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OrganisedTradingFacility = new MMCode() {
+	public static final MMCode mmOrganisedTradingFacility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisedTradingFacility";
@@ -312,7 +312,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConsolidatedTapeProvider = new MMCode() {
+	public static final MMCode mmConsolidatedTapeProvider = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedTapeProvider";
@@ -345,7 +345,7 @@ public class TradingVenueCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatedMarket = new MMCode() {
+	public static final MMCode mmRegulatedMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatedMarket";
@@ -358,14 +358,14 @@ public class TradingVenueCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingVenueCode";
 				definition = "Specifies the type of a trading venue.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenueCode.NationalCompetentAuthority, com.tools20022.repository.codeset.TradingVenueCode.ApprovedPublicationArrangement,
-						com.tools20022.repository.codeset.TradingVenueCode.SystematicInternaliser, com.tools20022.repository.codeset.TradingVenueCode.TradingVenue,
-						com.tools20022.repository.codeset.TradingVenueCode.MultilateralTradingFacility, com.tools20022.repository.codeset.TradingVenueCode.OrganisedTradingFacility,
-						com.tools20022.repository.codeset.TradingVenueCode.ConsolidatedTapeProvider, com.tools20022.repository.codeset.TradingVenueCode.RegulatedMarket);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenueCode.mmNationalCompetentAuthority, com.tools20022.repository.codeset.TradingVenueCode.mmApprovedPublicationArrangement,
+						com.tools20022.repository.codeset.TradingVenueCode.mmSystematicInternaliser, com.tools20022.repository.codeset.TradingVenueCode.mmTradingVenue,
+						com.tools20022.repository.codeset.TradingVenueCode.mmMultilateralTradingFacility, com.tools20022.repository.codeset.TradingVenueCode.mmOrganisedTradingFacility,
+						com.tools20022.repository.codeset.TradingVenueCode.mmConsolidatedTapeProvider, com.tools20022.repository.codeset.TradingVenueCode.mmRegulatedMarket);
 				derivation_lazy = () -> Arrays.asList(TradingVenue2Code.mmObject(), TradingVenue1Code.mmObject());
 			}
 		});

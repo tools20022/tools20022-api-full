@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PlaceOfPresentation1#Place
- * PlaceOfPresentation1.Place}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlaceOfPresentation1#Country
- * PlaceOfPresentation1.Country}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlaceOfPresentation1#mmPlace
+ * PlaceOfPresentation1.mmPlace}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlaceOfPresentation1#mmCountry
+ * PlaceOfPresentation1.mmCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlaceOfPresentation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalTypeOfParty1Code place;
 	/**
 	 * Place of the presentation.
 	 * <p>
@@ -75,8 +76,8 @@ public class PlaceOfPresentation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#PartyType
-	 * PartyIdentificationInformation.PartyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyType
+	 * PartyIdentificationInformation.mmPartyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class PlaceOfPresentation1 {
 	 * definition} = "Place of the presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Place = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlace = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> PlaceOfPresentation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.PartyType;
 			isDerived = false;
 			xmlTag = "Plc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Place";
 			definition = "Place of the presentation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country where a presentation is to be made.
 	 * <p>
@@ -121,7 +123,8 @@ public class PlaceOfPresentation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,17 +143,17 @@ public class PlaceOfPresentation1 {
 	 * definition} = "Country where a presentation is to be made. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> PlaceOfPresentation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country where a presentation is to be made. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -158,14 +161,30 @@ public class PlaceOfPresentation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfPresentation1.Place, com.tools20022.repository.msg.PlaceOfPresentation1.Country);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfPresentation1.mmPlace, com.tools20022.repository.msg.PlaceOfPresentation1.mmCountry);
 				trace_lazy = () -> UndertakingDeliveryToParty.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfPresentation1";
 				definition = "Location of a presentation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalTypeOfParty1Code getPlace() {
+		return place;
+	}
+
+	public void setPlace(ExternalTypeOfParty1Code place) {
+		this.place = place;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The StaticDataReport message is sent by a central system to the participant
@@ -60,24 +61,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#MessageIdentification
- * StaticDataReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#mmMessageIdentification
+ * StaticDataReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#SettlementSessionIdentifier
- * StaticDataReportV02.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#mmSettlementSessionIdentifier
+ * StaticDataReportV02.mmSettlementSessionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#ReportDetails
- * StaticDataReportV02.ReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#mmReportDetails
+ * StaticDataReportV02.mmReportDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#SupplementaryData
- * StaticDataReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#mmSupplementaryData
+ * StaticDataReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#identifier
- * StaticDataReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code admi.010.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StaticDataReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for the message, as assigned by the
 	 * sender.
@@ -118,17 +118,18 @@ public class StaticDataReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -155,17 +156,18 @@ public class StaticDataReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected RequestDetails5 reportDetails;
 	/**
 	 * Report type and returned data.
 	 * <p>
@@ -188,17 +190,18 @@ public class StaticDataReportV02 {
 	 * definition} = "Report type and returned data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDetails";
 			definition = "Report type and returned data.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestDetails5.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -225,7 +228,7 @@ public class StaticDataReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,33 +236,6 @@ public class StaticDataReportV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "admi"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "admi";
-			messageFunctionality = "010";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -273,11 +249,50 @@ public class StaticDataReportV02 {
 				rootElement = "Document";
 				xmlTag = "StatcDataRpt";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataReportV02.MessageIdentification, com.tools20022.repository.area.admi.StaticDataReportV02.SettlementSessionIdentifier,
-						com.tools20022.repository.area.admi.StaticDataReportV02.ReportDetails, com.tools20022.repository.area.admi.StaticDataReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.admi.StaticDataReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataReportV02.mmMessageIdentification, com.tools20022.repository.area.admi.StaticDataReportV02.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.admi.StaticDataReportV02.mmReportDetails, com.tools20022.repository.area.admi.StaticDataReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "admi";
+						messageFunctionality = "010";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
+	}
+
+	public RequestDetails5 getReportDetails() {
+		return reportDetails;
+	}
+
+	public void setReportDetails(RequestDetails5 reportDetails) {
+		this.reportDetails = reportDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

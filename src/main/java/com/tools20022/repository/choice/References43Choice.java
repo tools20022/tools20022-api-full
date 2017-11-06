@@ -36,52 +36,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesSettlementTransactionConfirmationIdentification
- * References43Choice.SecuritiesSettlementTransactionConfirmationIdentification}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#IntraPositionMovementConfirmationIdentification
- * References43Choice.IntraPositionMovementConfirmationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesBalanceAccountingReportIdentification
- * References43Choice.SecuritiesBalanceAccountingReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesBalanceCustodyReportIdentification
- * References43Choice.SecuritiesBalanceCustodyReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#IntraPositionMovementPostingReportIdentification
- * References43Choice.IntraPositionMovementPostingReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesFinancingConfirmationIdentification
- * References43Choice.SecuritiesFinancingConfirmationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesTransactionPendingReportIdentification
- * References43Choice.SecuritiesTransactionPendingReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesTransactionPostingReportIdentification
- * References43Choice.SecuritiesTransactionPostingReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesSettlementTransactionAllegementReportIdentification
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
  * References43Choice.
- * SecuritiesSettlementTransactionAllegementReportIdentification}</li>
+ * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmIntraPositionMovementConfirmationIdentification
+ * References43Choice.mmIntraPositionMovementConfirmationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesBalanceAccountingReportIdentification
+ * References43Choice.mmSecuritiesBalanceAccountingReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesBalanceCustodyReportIdentification
+ * References43Choice.mmSecuritiesBalanceCustodyReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmIntraPositionMovementPostingReportIdentification
+ * References43Choice.mmIntraPositionMovementPostingReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesFinancingConfirmationIdentification
+ * References43Choice.mmSecuritiesFinancingConfirmationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesTransactionPendingReportIdentification
+ * References43Choice.mmSecuritiesTransactionPendingReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesTransactionPostingReportIdentification
+ * References43Choice.mmSecuritiesTransactionPostingReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesSettlementTransactionAllegementReportIdentification
  * References43Choice.
- * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+ * mmSecuritiesSettlementTransactionAllegementReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+ * References43Choice.
+ * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#PortfolioTransferNotificationIdentification
- * References43Choice.PortfolioTransferNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmPortfolioTransferNotificationIdentification
+ * References43Choice.mmPortfolioTransferNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
  * References43Choice.
- * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+ * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#OtherMessageIdentification
- * References43Choice.OtherMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmOtherMessageIdentification
+ * References43Choice.mmOtherMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.References43Choice#TotalPortfolioValuationReportIdentification
- * References43Choice.TotalPortfolioValuationReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.References43Choice#mmTotalPortfolioValuationReportIdentification
+ * References43Choice.mmTotalPortfolioValuationReportIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -93,15 +93,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#Reference
- * SecuritiesMessageCancellationAdviceV05.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#mmReference
+ * SecuritiesMessageCancellationAdviceV05.mmReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class References43Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementTypeAndIdentification18 securitiesSettlementTransactionConfirmationIdentification;
 	/**
 	 * Unambiguous identification of the confirmation to be cancelled.
 	 * <p>
@@ -131,8 +132,8 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,27 +154,28 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesSettlementTransactionConfirmationIdentification
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
 	 * References37Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesSettlementTransactionConfirmationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionConfirmationIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References43Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxConfId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionConfirmationIdentification";
 			definition = "Unambiguous identification of the confirmation to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesSettlementTransactionConfirmationIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionConfirmationIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
 		}
 	};
+	protected Max35Text intraPositionMovementConfirmationIdentification;
 	/**
 	 * Unambiguous account servicer identification of the intra-position
 	 * movement confirmation to be cancelled.
@@ -205,11 +207,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#IntraPositionMovementConfirmationIdentification
-	 * References37Choice.IntraPositionMovementConfirmationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmIntraPositionMovementConfirmationIdentification
+	 * References37Choice.mmIntraPositionMovementConfirmationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntraPositionMovementConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntraPositionMovementConfirmationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -217,12 +219,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementConfirmationIdentification";
 			definition = "Unambiguous account servicer identification of the intra-position movement confirmation to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.IntraPositionMovementConfirmationIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmIntraPositionMovementConfirmationIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text securitiesBalanceAccountingReportIdentification;
 	/**
 	 * Unambiguous identification of the report message to be cancelled.
 	 * <p>
@@ -252,11 +255,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesBalanceAccountingReportIdentification
-	 * References37Choice.SecuritiesBalanceAccountingReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesBalanceAccountingReportIdentification
+	 * References37Choice.mmSecuritiesBalanceAccountingReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesBalanceAccountingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesBalanceAccountingReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -264,12 +267,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBalanceAccountingReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesBalanceAccountingReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesBalanceAccountingReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text securitiesBalanceCustodyReportIdentification;
 	/**
 	 * Unambiguous identification of the report message to be cancelled.
 	 * <p>
@@ -299,11 +303,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesBalanceCustodyReportIdentification
-	 * References37Choice.SecuritiesBalanceCustodyReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesBalanceCustodyReportIdentification
+	 * References37Choice.mmSecuritiesBalanceCustodyReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesBalanceCustodyReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesBalanceCustodyReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -311,12 +315,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBalanceCustodyReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesBalanceCustodyReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesBalanceCustodyReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text intraPositionMovementPostingReportIdentification;
 	/**
 	 * Identification of the intra-position movement posting report to be
 	 * cancelled.
@@ -348,11 +353,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#IntraPositionMovementPostingReportIdentification
-	 * References37Choice.IntraPositionMovementPostingReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmIntraPositionMovementPostingReportIdentification
+	 * References37Choice.mmIntraPositionMovementPostingReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntraPositionMovementPostingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntraPositionMovementPostingReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -360,12 +365,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementPostingReportIdentification";
 			definition = "Identification of the intra-position movement posting report to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.IntraPositionMovementPostingReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmIntraPositionMovementPostingReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SettlementTypeAndIdentification18 securitiesFinancingConfirmationIdentification;
 	/**
 	 * Unambiguous identification of the confirmation to be cancelled.
 	 * <p>
@@ -395,11 +401,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesFinancingConfirmationIdentification
-	 * References37Choice.SecuritiesFinancingConfirmationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesFinancingConfirmationIdentification
+	 * References37Choice.mmSecuritiesFinancingConfirmationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesFinancingConfirmationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesFinancingConfirmationIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -407,13 +413,14 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingConfirmationIdentification";
 			definition = "Unambiguous identification of the confirmation to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesFinancingConfirmationIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesFinancingConfirmationIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
 		}
 	};
+	protected Max35Text securitiesTransactionPendingReportIdentification;
 	/**
 	 * Unambiguous identification of the report message to be cancelled.
 	 * <p>
@@ -443,11 +450,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesTransactionPendingReportIdentification
-	 * References37Choice.SecuritiesTransactionPendingReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesTransactionPendingReportIdentification
+	 * References37Choice.mmSecuritiesTransactionPendingReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesTransactionPendingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesTransactionPendingReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -455,12 +462,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionPendingReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesTransactionPendingReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesTransactionPendingReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text securitiesTransactionPostingReportIdentification;
 	/**
 	 * Unambiguous identification of the report message to be cancelled.
 	 * <p>
@@ -490,11 +498,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesTransactionPostingReportIdentification
-	 * References37Choice.SecuritiesTransactionPostingReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesTransactionPostingReportIdentification
+	 * References37Choice.mmSecuritiesTransactionPostingReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesTransactionPostingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesTransactionPostingReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -502,12 +510,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionPostingReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesTransactionPostingReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesTransactionPostingReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text securitiesSettlementTransactionAllegementReportIdentification;
 	/**
 	 * Unambiguous identification of the report to be cancelled.
 	 * <p>
@@ -537,12 +546,12 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesSettlementTransactionAllegementReportIdentification
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesSettlementTransactionAllegementReportIdentification
 	 * References37Choice.
-	 * SecuritiesSettlementTransactionAllegementReportIdentification}</li>
+	 * mmSecuritiesSettlementTransactionAllegementReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesSettlementTransactionAllegementReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesSettlementTransactionAllegementReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -550,12 +559,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementReportIdentification";
 			definition = "Unambiguous identification of the report to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesSettlementTransactionAllegementReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SettlementTypeAndIdentification18 securitiesSettlementTransactionAllegementNotificationTransactionIdentification;
 	/**
 	 * Unambiguous identification of the allegement notification to be cancelled
 	 * as know by the account servicer.
@@ -569,8 +579,8 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -594,28 +604,29 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
 	 * References37Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References43Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxAllgmtNtfctnTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification";
 			definition = "Unambiguous identification of the allegement notification to be cancelled as know by the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
 		}
 	};
+	protected Max35Text portfolioTransferNotificationIdentification;
 	/**
 	 * Identification of the portfolio transfer.
 	 * <p>
@@ -644,11 +655,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#PortfolioTransferNotificationIdentification
-	 * References37Choice.PortfolioTransferNotificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmPortfolioTransferNotificationIdentification
+	 * References37Choice.mmPortfolioTransferNotificationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PortfolioTransferNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPortfolioTransferNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -656,12 +667,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioTransferNotificationIdentification";
 			definition = "Identification of the portfolio transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.PortfolioTransferNotificationIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmPortfolioTransferNotificationIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SettlementTypeAndIdentification18 securitiesSettlementTransactionGenerationNotificationIdentification;
 	/**
 	 * Unambiguous identification of the notification message to be cancelled.
 	 * <p>
@@ -674,8 +686,8 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -698,27 +710,28 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
 	 * References37Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesSettlementTransactionGenerationNotificationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionGenerationNotificationIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References43Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxGnrtnNtfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionGenerationNotificationIdentification";
 			definition = "Unambiguous identification of the notification message to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
 		}
 	};
+	protected Max35Text otherMessageIdentification;
 	/**
 	 * Unambiguous identification of the message to be cancelled.
 	 * <p>
@@ -748,11 +761,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#OtherMessageIdentification
-	 * References37Choice.OtherMessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmOtherMessageIdentification
+	 * References37Choice.mmOtherMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -760,12 +773,13 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherMessageIdentification";
 			definition = "Unambiguous identification of the message to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.OtherMessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmOtherMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text totalPortfolioValuationReportIdentification;
 	/**
 	 * Unique identification of the report.
 	 * <p>
@@ -794,11 +808,11 @@ public class References43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#TotalPortfolioValuationReportIdentification
-	 * References37Choice.TotalPortfolioValuationReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmTotalPortfolioValuationReportIdentification
+	 * References37Choice.mmTotalPortfolioValuationReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalPortfolioValuationReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalPortfolioValuationReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References43Choice.mmObject();
 			isDerived = false;
@@ -806,9 +820,9 @@ public class References43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPortfolioValuationReportIdentification";
 			definition = "Unique identification of the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.TotalPortfolioValuationReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.References37Choice.mmTotalPortfolioValuationReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -816,19 +830,19 @@ public class References43Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-						com.tools20022.repository.choice.References43Choice.IntraPositionMovementConfirmationIdentification, com.tools20022.repository.choice.References43Choice.SecuritiesBalanceAccountingReportIdentification,
-						com.tools20022.repository.choice.References43Choice.SecuritiesBalanceCustodyReportIdentification, com.tools20022.repository.choice.References43Choice.IntraPositionMovementPostingReportIdentification,
-						com.tools20022.repository.choice.References43Choice.SecuritiesFinancingConfirmationIdentification, com.tools20022.repository.choice.References43Choice.SecuritiesTransactionPendingReportIdentification,
-						com.tools20022.repository.choice.References43Choice.SecuritiesTransactionPostingReportIdentification,
-						com.tools20022.repository.choice.References43Choice.SecuritiesSettlementTransactionAllegementReportIdentification,
-						com.tools20022.repository.choice.References43Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-						com.tools20022.repository.choice.References43Choice.PortfolioTransferNotificationIdentification,
-						com.tools20022.repository.choice.References43Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.choice.References43Choice.OtherMessageIdentification,
-						com.tools20022.repository.choice.References43Choice.TotalPortfolioValuationReportIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+						com.tools20022.repository.choice.References43Choice.mmIntraPositionMovementConfirmationIdentification, com.tools20022.repository.choice.References43Choice.mmSecuritiesBalanceAccountingReportIdentification,
+						com.tools20022.repository.choice.References43Choice.mmSecuritiesBalanceCustodyReportIdentification, com.tools20022.repository.choice.References43Choice.mmIntraPositionMovementPostingReportIdentification,
+						com.tools20022.repository.choice.References43Choice.mmSecuritiesFinancingConfirmationIdentification, com.tools20022.repository.choice.References43Choice.mmSecuritiesTransactionPendingReportIdentification,
+						com.tools20022.repository.choice.References43Choice.mmSecuritiesTransactionPostingReportIdentification,
+						com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification,
+						com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+						com.tools20022.repository.choice.References43Choice.mmPortfolioTransferNotificationIdentification,
+						com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.choice.References43Choice.mmOtherMessageIdentification,
+						com.tools20022.repository.choice.References43Choice.mmTotalPortfolioValuationReportIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.mmReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.Reference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "References43Choice";
 				definition = "Choice of reference.";
@@ -836,5 +850,117 @@ public class References43Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementTypeAndIdentification18 getSecuritiesSettlementTransactionConfirmationIdentification() {
+		return securitiesSettlementTransactionConfirmationIdentification;
+	}
+
+	public void setSecuritiesSettlementTransactionConfirmationIdentification(SettlementTypeAndIdentification18 securitiesSettlementTransactionConfirmationIdentification) {
+		this.securitiesSettlementTransactionConfirmationIdentification = securitiesSettlementTransactionConfirmationIdentification;
+	}
+
+	public Max35Text getIntraPositionMovementConfirmationIdentification() {
+		return intraPositionMovementConfirmationIdentification;
+	}
+
+	public void setIntraPositionMovementConfirmationIdentification(Max35Text intraPositionMovementConfirmationIdentification) {
+		this.intraPositionMovementConfirmationIdentification = intraPositionMovementConfirmationIdentification;
+	}
+
+	public Max35Text getSecuritiesBalanceAccountingReportIdentification() {
+		return securitiesBalanceAccountingReportIdentification;
+	}
+
+	public void setSecuritiesBalanceAccountingReportIdentification(Max35Text securitiesBalanceAccountingReportIdentification) {
+		this.securitiesBalanceAccountingReportIdentification = securitiesBalanceAccountingReportIdentification;
+	}
+
+	public Max35Text getSecuritiesBalanceCustodyReportIdentification() {
+		return securitiesBalanceCustodyReportIdentification;
+	}
+
+	public void setSecuritiesBalanceCustodyReportIdentification(Max35Text securitiesBalanceCustodyReportIdentification) {
+		this.securitiesBalanceCustodyReportIdentification = securitiesBalanceCustodyReportIdentification;
+	}
+
+	public Max35Text getIntraPositionMovementPostingReportIdentification() {
+		return intraPositionMovementPostingReportIdentification;
+	}
+
+	public void setIntraPositionMovementPostingReportIdentification(Max35Text intraPositionMovementPostingReportIdentification) {
+		this.intraPositionMovementPostingReportIdentification = intraPositionMovementPostingReportIdentification;
+	}
+
+	public SettlementTypeAndIdentification18 getSecuritiesFinancingConfirmationIdentification() {
+		return securitiesFinancingConfirmationIdentification;
+	}
+
+	public void setSecuritiesFinancingConfirmationIdentification(SettlementTypeAndIdentification18 securitiesFinancingConfirmationIdentification) {
+		this.securitiesFinancingConfirmationIdentification = securitiesFinancingConfirmationIdentification;
+	}
+
+	public Max35Text getSecuritiesTransactionPendingReportIdentification() {
+		return securitiesTransactionPendingReportIdentification;
+	}
+
+	public void setSecuritiesTransactionPendingReportIdentification(Max35Text securitiesTransactionPendingReportIdentification) {
+		this.securitiesTransactionPendingReportIdentification = securitiesTransactionPendingReportIdentification;
+	}
+
+	public Max35Text getSecuritiesTransactionPostingReportIdentification() {
+		return securitiesTransactionPostingReportIdentification;
+	}
+
+	public void setSecuritiesTransactionPostingReportIdentification(Max35Text securitiesTransactionPostingReportIdentification) {
+		this.securitiesTransactionPostingReportIdentification = securitiesTransactionPostingReportIdentification;
+	}
+
+	public Max35Text getSecuritiesSettlementTransactionAllegementReportIdentification() {
+		return securitiesSettlementTransactionAllegementReportIdentification;
+	}
+
+	public void setSecuritiesSettlementTransactionAllegementReportIdentification(Max35Text securitiesSettlementTransactionAllegementReportIdentification) {
+		this.securitiesSettlementTransactionAllegementReportIdentification = securitiesSettlementTransactionAllegementReportIdentification;
+	}
+
+	public SettlementTypeAndIdentification18 getSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification() {
+		return securitiesSettlementTransactionAllegementNotificationTransactionIdentification;
+	}
+
+	public void setSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification(SettlementTypeAndIdentification18 securitiesSettlementTransactionAllegementNotificationTransactionIdentification) {
+		this.securitiesSettlementTransactionAllegementNotificationTransactionIdentification = securitiesSettlementTransactionAllegementNotificationTransactionIdentification;
+	}
+
+	public Max35Text getPortfolioTransferNotificationIdentification() {
+		return portfolioTransferNotificationIdentification;
+	}
+
+	public void setPortfolioTransferNotificationIdentification(Max35Text portfolioTransferNotificationIdentification) {
+		this.portfolioTransferNotificationIdentification = portfolioTransferNotificationIdentification;
+	}
+
+	public SettlementTypeAndIdentification18 getSecuritiesSettlementTransactionGenerationNotificationIdentification() {
+		return securitiesSettlementTransactionGenerationNotificationIdentification;
+	}
+
+	public void setSecuritiesSettlementTransactionGenerationNotificationIdentification(SettlementTypeAndIdentification18 securitiesSettlementTransactionGenerationNotificationIdentification) {
+		this.securitiesSettlementTransactionGenerationNotificationIdentification = securitiesSettlementTransactionGenerationNotificationIdentification;
+	}
+
+	public Max35Text getOtherMessageIdentification() {
+		return otherMessageIdentification;
+	}
+
+	public void setOtherMessageIdentification(Max35Text otherMessageIdentification) {
+		this.otherMessageIdentification = otherMessageIdentification;
+	}
+
+	public Max35Text getTotalPortfolioValuationReportIdentification() {
+		return totalPortfolioValuationReportIdentification;
+	}
+
+	public void setTotalPortfolioValuationReportIdentification(Max35Text totalPortfolioValuationReportIdentification) {
+		this.totalPortfolioValuationReportIdentification = totalPortfolioValuationReportIdentification;
 	}
 }

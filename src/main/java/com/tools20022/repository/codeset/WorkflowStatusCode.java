@@ -30,19 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Complete
- * WorkflowStatusCode.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmComplete
+ * WorkflowStatusCode.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Conflict
- * WorkflowStatusCode.Conflict}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmConflict
+ * WorkflowStatusCode.mmConflict}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#ConditionallyComplete
- * WorkflowStatusCode.ConditionallyComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmConditionallyComplete
+ * WorkflowStatusCode.mmConditionallyComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Incomplete
- * WorkflowStatusCode.Incomplete}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Deleted
- * WorkflowStatusCode.Deleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmIncomplete
+ * WorkflowStatusCode.mmIncomplete}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmDeleted
+ * WorkflowStatusCode.mmDeleted}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -100,7 +101,7 @@ public class WorkflowStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -133,7 +134,7 @@ public class WorkflowStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Conflict = new MMCode() {
+	public static final MMCode mmConflict = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conflict";
@@ -163,7 +164,7 @@ public class WorkflowStatusCode {
 	 * definition} = "Level details are complete pending a condition."</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionallyComplete = new MMCode() {
+	public static final MMCode mmConditionallyComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyComplete";
@@ -193,7 +194,7 @@ public class WorkflowStatusCode {
 	 * definition} = "Level details are incomplete."</li>
 	 * </ul>
 	 */
-	public static final MMCode Incomplete = new MMCode() {
+	public static final MMCode mmIncomplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
@@ -226,7 +227,7 @@ public class WorkflowStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Deleted = new MMCode() {
+	public static final MMCode mmDeleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
@@ -239,13 +240,13 @@ public class WorkflowStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "WorkflowStatusCode";
 				definition = "Specifies the workflow status of the details of a specific level. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WorkflowStatusCode.Complete, com.tools20022.repository.codeset.WorkflowStatusCode.Conflict,
-						com.tools20022.repository.codeset.WorkflowStatusCode.ConditionallyComplete, com.tools20022.repository.codeset.WorkflowStatusCode.Incomplete, com.tools20022.repository.codeset.WorkflowStatusCode.Deleted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WorkflowStatusCode.mmComplete, com.tools20022.repository.codeset.WorkflowStatusCode.mmConflict,
+						com.tools20022.repository.codeset.WorkflowStatusCode.mmConditionallyComplete, com.tools20022.repository.codeset.WorkflowStatusCode.mmIncomplete, com.tools20022.repository.codeset.WorkflowStatusCode.mmDeleted);
 				derivation_lazy = () -> Arrays.asList(WorkflowStatus1Code.mmObject());
 			}
 		});

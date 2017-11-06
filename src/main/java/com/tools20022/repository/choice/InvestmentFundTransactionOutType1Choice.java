@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice#Code
- * InvestmentFundTransactionOutType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice#mmCode
+ * InvestmentFundTransactionOutType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice#Proprietary
- * InvestmentFundTransactionOutType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice#mmProprietary
+ * InvestmentFundTransactionOutType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundTransactionOutType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentFundTransactionOutType1Code code;
 	/**
 	 * Transaction type expressed as a code.
 	 * <p>
@@ -76,8 +77,8 @@ public class InvestmentFundTransactionOutType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#Type
-	 * InvestmentFundTransaction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmType
+	 * InvestmentFundTransaction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,25 +98,26 @@ public class InvestmentFundTransactionOutType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice#Code
-	 * InvestmentFundTransactionInType1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice#mmCode
+	 * InvestmentFundTransactionInType1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> InvestmentFundTransactionOutType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.Type;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Transaction type expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundTransactionOutType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Transaction type expressed as a proprietary code.
 	 * <p>
@@ -129,8 +131,8 @@ public class InvestmentFundTransactionOutType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#Type
-	 * InvestmentFundTransaction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmType
+	 * InvestmentFundTransaction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,22 +152,22 @@ public class InvestmentFundTransactionOutType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice#Proprietary
-	 * InvestmentFundTransactionInType1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice#mmProprietary
+	 * InvestmentFundTransactionInType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> InvestmentFundTransactionOutType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.Type;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Transaction type expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentFundTransactionInType1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -173,8 +175,8 @@ public class InvestmentFundTransactionOutType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice.Code, com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice.mmCode, com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionOutType1Choice";
 				definition = "Choice of formats for the transaction-out type.";
@@ -182,5 +184,21 @@ public class InvestmentFundTransactionOutType1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentFundTransactionOutType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(InvestmentFundTransactionOutType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

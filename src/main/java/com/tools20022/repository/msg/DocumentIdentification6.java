@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification6#Identification
- * DocumentIdentification6.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification6#mmIdentification
+ * DocumentIdentification6.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification6#Version
- * DocumentIdentification6.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification6#mmVersion
+ * DocumentIdentification6.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification6#AmendmentSequenceNumber
- * DocumentIdentification6.AmendmentSequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification6#mmAmendmentSequenceNumber
+ * DocumentIdentification6.mmAmendmentSequenceNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,18 +54,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#EstablishedBaselineIdentification
- * BaselineReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmEstablishedBaselineIdentification
+ * BaselineReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#EstablishedBaselineIdentification
- * BaselineReportV04.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmEstablishedBaselineIdentification
+ * BaselineReportV04.mmEstablishedBaselineIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of a set of data.
 	 * <p>
@@ -93,8 +94,8 @@ public class DocumentIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,20 +114,21 @@ public class DocumentIdentification6 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of data.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number version;
 	/**
 	 * Unambiguous identification of the version of a set of data. Example:
 	 * Version 1.
@@ -140,8 +142,8 @@ public class DocumentIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#DocumentVersion
-	 * Document.DocumentVersion}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmDocumentVersion
+	 * Document.mmDocumentVersion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +164,21 @@ public class DocumentIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentVersion;
 			componentContext_lazy = () -> DocumentIdentification6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.DocumentVersion;
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Unambiguous identification of the version of a set of data. Example: Version 1.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max3NumericText amendmentSequenceNumber;
 	/**
 	 * Number that is assigned sequentially by the TSU to a baseline amendment.
 	 * <p>
@@ -206,7 +209,7 @@ public class DocumentIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendmentSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendmentSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentIdentification6.mmObject();
 			isDerived = false;
@@ -214,8 +217,8 @@ public class DocumentIdentification6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentSequenceNumber";
 			definition = "Number that is assigned sequentially by the TSU to a baseline amendment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
@@ -223,17 +226,41 @@ public class DocumentIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification6.Identification, com.tools20022.repository.msg.DocumentIdentification6.Version,
-						com.tools20022.repository.msg.DocumentIdentification6.AmendmentSequenceNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification6.mmIdentification, com.tools20022.repository.msg.DocumentIdentification6.mmVersion,
+						com.tools20022.repository.msg.DocumentIdentification6.mmAmendmentSequenceNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmEstablishedBaselineIdentification);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.EstablishedBaselineIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification6";
 				definition = "Identifies a document by a unique identification and a version.\nAlso provides reference to a baseline amendment number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public Max3NumericText getAmendmentSequenceNumber() {
+		return amendmentSequenceNumber;
+	}
+
+	public void setAmendmentSequenceNumber(Max3NumericText amendmentSequenceNumber) {
+		this.amendmentSequenceNumber = amendmentSequenceNumber;
 	}
 }

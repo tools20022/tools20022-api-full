@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.GeneralBusinessReport3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * It is used to provide some or all of the members with information related to
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError1Choice#OperationalError
- * GeneralBusinessOrError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError1Choice#mmOperationalError
+ * GeneralBusinessOrError1Choice.mmOperationalError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError1Choice#BusinessReport
- * GeneralBusinessOrError1Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError1Choice#mmBusinessReport
+ * GeneralBusinessOrError1Choice.mmBusinessReport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralBusinessOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -106,13 +108,13 @@ public class GeneralBusinessOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError3Choice#OperationalError
-	 * GeneralBusinessOrError3Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError3Choice#mmOperationalError
+	 * GeneralBusinessOrError3Choice.mmOperationalError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GeneralBusinessOrError1Choice.mmObject();
 			isDerived = false;
@@ -120,12 +122,13 @@ public class GeneralBusinessOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError3Choice.OperationalError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmOperationalError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	protected List<GeneralBusinessReport3> businessReport;
 	/**
 	 * Reports either on the business information or on a business error.
 	 * <p>
@@ -155,13 +158,13 @@ public class GeneralBusinessOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError3Choice#BusinessReport
-	 * GeneralBusinessOrError3Choice.BusinessReport}</li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError3Choice#mmBusinessReport
+	 * GeneralBusinessOrError3Choice.mmBusinessReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GeneralBusinessOrError1Choice.mmObject();
 			isDerived = false;
@@ -169,19 +172,19 @@ public class GeneralBusinessOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports either on the business information or on a business error.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError3Choice.BusinessReport);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmBusinessReport);
 			minOccurs = 1;
-			type_lazy = () -> GeneralBusinessReport3.mmObject();
 			isComposite = true;
+			type_lazy = () -> GeneralBusinessReport3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError1Choice.OperationalError, com.tools20022.repository.choice.GeneralBusinessOrError1Choice.BusinessReport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError1Choice.mmOperationalError, com.tools20022.repository.choice.GeneralBusinessOrError1Choice.mmBusinessReport);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessOrError1Choice";
 				definition = "It is used to provide some or all of the members with information related to the processing of the system.";
@@ -189,5 +192,21 @@ public class GeneralBusinessOrError1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
+	}
+
+	public List<GeneralBusinessReport3> getBusinessReport() {
+		return businessReport;
+	}
+
+	public void setBusinessReport(List<GeneralBusinessReport3> businessReport) {
+		this.businessReport = businessReport;
 	}
 }

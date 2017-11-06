@@ -34,120 +34,120 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AfterDeadline
- * RejectedStatusReason10Code.AfterDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAfterDeadline
+ * RejectedStatusReason10Code.mmAfterDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AccountBlockedForTransfer
- * RejectedStatusReason10Code.AccountBlockedForTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAccountBlockedForTransfer
+ * RejectedStatusReason10Code.mmAccountBlockedForTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#CutOffTime
- * RejectedStatusReason10Code.CutOffTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmCutOffTime
+ * RejectedStatusReason10Code.mmCutOffTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#SettlementDate
- * RejectedStatusReason10Code.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmSettlementDate
+ * RejectedStatusReason10Code.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AccountBlockedMissingDocuments
- * RejectedStatusReason10Code.AccountBlockedMissingDocuments}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAccountBlockedMissingDocuments
+ * RejectedStatusReason10Code.mmAccountBlockedMissingDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FinancialInstrumentQuantity
- * RejectedStatusReason10Code.FinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFinancialInstrumentQuantity
+ * RejectedStatusReason10Code.mmFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FinancialInstrumentIdentification
- * RejectedStatusReason10Code.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFinancialInstrumentIdentification
+ * RejectedStatusReason10Code.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TradeDate
- * RejectedStatusReason10Code.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTradeDate
+ * RejectedStatusReason10Code.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FinancialInstrumentIdentificationAndName
- * RejectedStatusReason10Code.FinancialInstrumentIdentificationAndName}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFinancialInstrumentIdentificationAndName
+ * RejectedStatusReason10Code.mmFinancialInstrumentIdentificationAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#SubscriberOrRedeemer
- * RejectedStatusReason10Code.SubscriberOrRedeemer}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmSubscriberOrRedeemer
+ * RejectedStatusReason10Code.mmSubscriberOrRedeemer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#Intermediary
- * RejectedStatusReason10Code.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmIntermediary
+ * RejectedStatusReason10Code.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InvalidOrderType
- * RejectedStatusReason10Code.InvalidOrderType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInvalidOrderType
+ * RejectedStatusReason10Code.mmInvalidOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InstructingPartyNotAllowedForAccount
- * RejectedStatusReason10Code.InstructingPartyNotAllowedForAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInstructingPartyNotAllowedForAccount
+ * RejectedStatusReason10Code.mmInstructingPartyNotAllowedForAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TooLate
- * RejectedStatusReason10Code.TooLate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTooLate
+ * RejectedStatusReason10Code.mmTooLate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NotEnoughCash
- * RejectedStatusReason10Code.NotEnoughCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNotEnoughCash
+ * RejectedStatusReason10Code.mmNotEnoughCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NoCancellationMatch
- * RejectedStatusReason10Code.NoCancellationMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNoCancellationMatch
+ * RejectedStatusReason10Code.mmNoCancellationMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NotCompliantWithSLA
- * RejectedStatusReason10Code.NotCompliantWithSLA}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNotCompliantWithSLA
+ * RejectedStatusReason10Code.mmNotCompliantWithSLA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#DuplicateOrderReference
- * RejectedStatusReason10Code.DuplicateOrderReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmDuplicateOrderReference
+ * RejectedStatusReason10Code.mmDuplicateOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InvestmentAccount
- * RejectedStatusReason10Code.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInvestmentAccount
+ * RejectedStatusReason10Code.mmInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NotEnoughFinancialInstrument
- * RejectedStatusReason10Code.NotEnoughFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNotEnoughFinancialInstrument
+ * RejectedStatusReason10Code.mmNotEnoughFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TooHighUnitsOrAmountToSubscribe
- * RejectedStatusReason10Code.TooHighUnitsOrAmountToSubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTooHighUnitsOrAmountToSubscribe
+ * RejectedStatusReason10Code.mmTooHighUnitsOrAmountToSubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TooLowUnitsOrAmountToSubscribe
- * RejectedStatusReason10Code.TooLowUnitsOrAmountToSubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTooLowUnitsOrAmountToSubscribe
+ * RejectedStatusReason10Code.mmTooLowUnitsOrAmountToSubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#UnacceptedDealCurrency
- * RejectedStatusReason10Code.UnacceptedDealCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmUnacceptedDealCurrency
+ * RejectedStatusReason10Code.mmUnacceptedDealCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#UnknownLinkagesReference
- * RejectedStatusReason10Code.UnknownLinkagesReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmUnknownLinkagesReference
+ * RejectedStatusReason10Code.mmUnknownLinkagesReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#UnacceptedRequestedSettlementCurrency
- * RejectedStatusReason10Code.UnacceptedRequestedSettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmUnacceptedRequestedSettlementCurrency
+ * RejectedStatusReason10Code.mmUnacceptedRequestedSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InvalidOrderedAmount
- * RejectedStatusReason10Code.InvalidOrderedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInvalidOrderedAmount
+ * RejectedStatusReason10Code.mmInvalidOrderedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumInitialInvestmentAmount
- * RejectedStatusReason10Code.BelowMinimumInitialInvestmentAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumInitialInvestmentAmount
+ * RejectedStatusReason10Code.mmBelowMinimumInitialInvestmentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumTopUpAmount
- * RejectedStatusReason10Code.BelowMinimumTopUpAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumTopUpAmount
+ * RejectedStatusReason10Code.mmBelowMinimumTopUpAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InsufficientCapacity
- * RejectedStatusReason10Code.InsufficientCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInsufficientCapacity
+ * RejectedStatusReason10Code.mmInsufficientCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#PercentageHoldingBreach
- * RejectedStatusReason10Code.PercentageHoldingBreach}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmPercentageHoldingBreach
+ * RejectedStatusReason10Code.mmPercentageHoldingBreach}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumRedemptionAmount
- * RejectedStatusReason10Code.BelowMinimumRedemptionAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumRedemptionAmount
+ * RejectedStatusReason10Code.mmBelowMinimumRedemptionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumRetainedAmount
- * RejectedStatusReason10Code.BelowMinimumRetainedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumRetainedAmount
+ * RejectedStatusReason10Code.mmBelowMinimumRetainedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#LockUp
- * RejectedStatusReason10Code.LockUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmLockUp
+ * RejectedStatusReason10Code.mmLockUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AssetsIlliquid
- * RejectedStatusReason10Code.AssetsIlliquid}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAssetsIlliquid
+ * RejectedStatusReason10Code.mmAssetsIlliquid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#DataInvalid
- * RejectedStatusReason10Code.DataInvalid}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmDataInvalid
+ * RejectedStatusReason10Code.mmDataInvalid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FundClosed
- * RejectedStatusReason10Code.FundClosed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFundClosed
+ * RejectedStatusReason10Code.mmFundClosed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -183,7 +183,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AfterDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode AfterDeadline = new MMCode() {
+	public static final MMCode mmAfterDeadline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterDeadline";
@@ -206,7 +206,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AccountBlockedForTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlockedForTransfer = new MMCode() {
+	public static final MMCode mmAccountBlockedForTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedForTransfer";
@@ -229,7 +229,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "CutOffTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode CutOffTime = new MMCode() {
+	public static final MMCode mmCutOffTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
@@ -252,7 +252,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDate = new MMCode() {
+	public static final MMCode mmSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
@@ -275,7 +275,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AccountBlockedMissingDocuments"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlockedMissingDocuments = new MMCode() {
+	public static final MMCode mmAccountBlockedMissingDocuments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedMissingDocuments";
@@ -298,7 +298,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FinancialInstrumentQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentQuantity = new MMCode() {
+	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
@@ -321,7 +321,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FinancialInstrumentIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentIdentification = new MMCode() {
+	public static final MMCode mmFinancialInstrumentIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
@@ -344,7 +344,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeDate = new MMCode() {
+	public static final MMCode mmTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
@@ -367,7 +367,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FinancialInstrumentIdentificationAndName"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentIdentificationAndName = new MMCode() {
+	public static final MMCode mmFinancialInstrumentIdentificationAndName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentificationAndName";
@@ -390,7 +390,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "SubscriberOrRedeemer"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubscriberOrRedeemer = new MMCode() {
+	public static final MMCode mmSubscriberOrRedeemer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriberOrRedeemer";
@@ -413,7 +413,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "Intermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
@@ -436,7 +436,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InvalidOrderType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOrderType = new MMCode() {
+	public static final MMCode mmInvalidOrderType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrderType";
@@ -459,7 +459,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InstructingPartyNotAllowedForAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructingPartyNotAllowedForAccount = new MMCode() {
+	public static final MMCode mmInstructingPartyNotAllowedForAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingPartyNotAllowedForAccount";
@@ -482,7 +482,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TooLate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TooLate = new MMCode() {
+	public static final MMCode mmTooLate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLate";
@@ -505,7 +505,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NotEnoughCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotEnoughCash = new MMCode() {
+	public static final MMCode mmNotEnoughCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEnoughCash";
@@ -528,7 +528,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NoCancellationMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoCancellationMatch = new MMCode() {
+	public static final MMCode mmNoCancellationMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCancellationMatch";
@@ -551,7 +551,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotCompliantWithSLA = new MMCode() {
+	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
@@ -574,7 +574,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "DuplicateOrderReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode DuplicateOrderReference = new MMCode() {
+	public static final MMCode mmDuplicateOrderReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateOrderReference";
@@ -597,7 +597,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InvestmentAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentAccount = new MMCode() {
+	public static final MMCode mmInvestmentAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
@@ -620,7 +620,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NotEnoughFinancialInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotEnoughFinancialInstrument = new MMCode() {
+	public static final MMCode mmNotEnoughFinancialInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEnoughFinancialInstrument";
@@ -643,7 +643,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TooHighUnitsOrAmountToSubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode TooHighUnitsOrAmountToSubscribe = new MMCode() {
+	public static final MMCode mmTooHighUnitsOrAmountToSubscribe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooHighUnitsOrAmountToSubscribe";
@@ -666,7 +666,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TooLowUnitsOrAmountToSubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode TooLowUnitsOrAmountToSubscribe = new MMCode() {
+	public static final MMCode mmTooLowUnitsOrAmountToSubscribe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLowUnitsOrAmountToSubscribe";
@@ -689,7 +689,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "UnacceptedDealCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnacceptedDealCurrency = new MMCode() {
+	public static final MMCode mmUnacceptedDealCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedDealCurrency";
@@ -712,7 +712,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "UnknownLinkagesReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownLinkagesReference = new MMCode() {
+	public static final MMCode mmUnknownLinkagesReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownLinkagesReference";
@@ -735,7 +735,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "UnacceptedRequestedSettlementCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnacceptedRequestedSettlementCurrency = new MMCode() {
+	public static final MMCode mmUnacceptedRequestedSettlementCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedRequestedSettlementCurrency";
@@ -758,7 +758,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InvalidOrderedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOrderedAmount = new MMCode() {
+	public static final MMCode mmInvalidOrderedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrderedAmount";
@@ -781,7 +781,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumInitialInvestmentAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode BelowMinimumInitialInvestmentAmount = new MMCode() {
+	public static final MMCode mmBelowMinimumInitialInvestmentAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumInitialInvestmentAmount";
@@ -804,7 +804,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumTopUpAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode BelowMinimumTopUpAmount = new MMCode() {
+	public static final MMCode mmBelowMinimumTopUpAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumTopUpAmount";
@@ -827,7 +827,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InsufficientCapacity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientCapacity = new MMCode() {
+	public static final MMCode mmInsufficientCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCapacity";
@@ -850,7 +850,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "PercentageHoldingBreach"</li>
 	 * </ul>
 	 */
-	public static final MMCode PercentageHoldingBreach = new MMCode() {
+	public static final MMCode mmPercentageHoldingBreach = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageHoldingBreach";
@@ -873,7 +873,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumRedemptionAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode BelowMinimumRedemptionAmount = new MMCode() {
+	public static final MMCode mmBelowMinimumRedemptionAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRedemptionAmount";
@@ -896,7 +896,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumRetainedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode BelowMinimumRetainedAmount = new MMCode() {
+	public static final MMCode mmBelowMinimumRetainedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRetainedAmount";
@@ -919,7 +919,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "LockUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode LockUp = new MMCode() {
+	public static final MMCode mmLockUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LockUp";
@@ -942,7 +942,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AssetsIlliquid"</li>
 	 * </ul>
 	 */
-	public static final MMCode AssetsIlliquid = new MMCode() {
+	public static final MMCode mmAssetsIlliquid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetsIlliquid";
@@ -965,7 +965,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "DataInvalid"</li>
 	 * </ul>
 	 */
-	public static final MMCode DataInvalid = new MMCode() {
+	public static final MMCode mmDataInvalid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataInvalid";
@@ -988,7 +988,7 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FundClosed"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundClosed = new MMCode() {
+	public static final MMCode mmFundClosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundClosed";
@@ -999,29 +999,29 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason10Code";
 				definition = "Specifies the reason for a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason10Code.AfterDeadline, com.tools20022.repository.codeset.RejectedStatusReason10Code.AccountBlockedForTransfer,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.CutOffTime, com.tools20022.repository.codeset.RejectedStatusReason10Code.SettlementDate,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.AccountBlockedMissingDocuments, com.tools20022.repository.codeset.RejectedStatusReason10Code.FinancialInstrumentQuantity,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.FinancialInstrumentIdentification, com.tools20022.repository.codeset.RejectedStatusReason10Code.TradeDate,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.FinancialInstrumentIdentificationAndName, com.tools20022.repository.codeset.RejectedStatusReason10Code.SubscriberOrRedeemer,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.Intermediary, com.tools20022.repository.codeset.RejectedStatusReason10Code.InvalidOrderType,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.InstructingPartyNotAllowedForAccount, com.tools20022.repository.codeset.RejectedStatusReason10Code.TooLate,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.NotEnoughCash, com.tools20022.repository.codeset.RejectedStatusReason10Code.NoCancellationMatch,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.NotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason10Code.DuplicateOrderReference,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.InvestmentAccount, com.tools20022.repository.codeset.RejectedStatusReason10Code.NotEnoughFinancialInstrument,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.TooHighUnitsOrAmountToSubscribe, com.tools20022.repository.codeset.RejectedStatusReason10Code.TooLowUnitsOrAmountToSubscribe,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.UnacceptedDealCurrency, com.tools20022.repository.codeset.RejectedStatusReason10Code.UnknownLinkagesReference,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.UnacceptedRequestedSettlementCurrency, com.tools20022.repository.codeset.RejectedStatusReason10Code.InvalidOrderedAmount,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumInitialInvestmentAmount, com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumTopUpAmount,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.InsufficientCapacity, com.tools20022.repository.codeset.RejectedStatusReason10Code.PercentageHoldingBreach,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumRedemptionAmount, com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumRetainedAmount,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.LockUp, com.tools20022.repository.codeset.RejectedStatusReason10Code.AssetsIlliquid,
-						com.tools20022.repository.codeset.RejectedStatusReason10Code.DataInvalid, com.tools20022.repository.codeset.RejectedStatusReason10Code.FundClosed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason10Code.mmAfterDeadline, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmAccountBlockedForTransfer,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmCutOffTime, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmSettlementDate,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmAccountBlockedMissingDocuments, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmFinancialInstrumentQuantity,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmFinancialInstrumentIdentification, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmTradeDate,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmFinancialInstrumentIdentificationAndName, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmSubscriberOrRedeemer,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmIntermediary, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmInvalidOrderType,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmInstructingPartyNotAllowedForAccount, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmTooLate,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmNotEnoughCash, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmNoCancellationMatch,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmNotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmDuplicateOrderReference,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmInvestmentAccount, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmNotEnoughFinancialInstrument,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmTooHighUnitsOrAmountToSubscribe, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmTooLowUnitsOrAmountToSubscribe,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmUnacceptedDealCurrency, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmUnknownLinkagesReference,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmUnacceptedRequestedSettlementCurrency, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmInvalidOrderedAmount,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmBelowMinimumInitialInvestmentAmount, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmBelowMinimumTopUpAmount,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmInsufficientCapacity, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmPercentageHoldingBreach,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmBelowMinimumRedemptionAmount, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmBelowMinimumRetainedAmount,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmLockUp, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmAssetsIlliquid,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.mmDataInvalid, com.tools20022.repository.codeset.RejectedStatusReason10Code.mmFundClosed);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

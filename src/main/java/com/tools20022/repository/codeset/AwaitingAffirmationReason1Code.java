@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AwaitingAffirmationReason1Code#AwaitingAffirmation
- * AwaitingAffirmationReason1Code.AwaitingAffirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AwaitingAffirmationReason1Code#mmAwaitingAffirmation
+ * AwaitingAffirmationReason1Code.mmAwaitingAffirmation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class AwaitingAffirmationReason1Code extends AwaitingAffirmationReasonCod
 	 * name} = "AwaitingAffirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingAffirmation = new MMCode() {
+	public static final MMCode mmAwaitingAffirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingAffirmation";
@@ -91,12 +91,12 @@ public class AwaitingAffirmationReason1Code extends AwaitingAffirmationReasonCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WAFF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AwaitingAffirmationReason1Code";
 				definition = "Specifies the reason why the instruction has an awaiting affirmation status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingAffirmationReason1Code.AwaitingAffirmation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingAffirmationReason1Code.mmAwaitingAffirmation);
 				trace_lazy = () -> AwaitingAffirmationReasonCode.mmObject();
 			}
 		});

@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#PaymentCardDetails
- * PaymentInstrument6Choice.PaymentCardDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmPaymentCardDetails
+ * PaymentInstrument6Choice.mmPaymentCardDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#CreditTransferDetails
- * PaymentInstrument6Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmCreditTransferDetails
+ * PaymentInstrument6Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#DirectDebitDetails
- * PaymentInstrument6Choice.DirectDebitDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmDirectDebitDetails
+ * PaymentInstrument6Choice.mmDirectDebitDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#ChequeDetails
- * PaymentInstrument6Choice.ChequeDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmChequeDetails
+ * PaymentInstrument6Choice.mmChequeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#AccountDetails
- * PaymentInstrument6Choice.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmAccountDetails
+ * PaymentInstrument6Choice.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInstrument6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentCard2 paymentCardDetails;
 	/**
 	 * Electronic money product that provides the cardholder with a portable and
 	 * specialised computer device, which typically contains a microprocessor.
@@ -87,8 +88,8 @@ public class PaymentInstrument6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#PaymentCard
-	 * CardPayment.PaymentCard}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
+	 * CardPayment.mmPaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,21 +110,22 @@ public class PaymentInstrument6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentCardDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.PaymentCard;
 			isDerived = false;
 			xmlTag = "PmtCardDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCardDetails";
 			definition = "Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentCard2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentCard2.mmObject();
 		}
 	};
+	protected CreditTransfer3 creditTransferDetails;
 	/**
 	 * Payment instrument between a debtor and a creditor, which flows through
 	 * one or more financial institutions or systems.
@@ -158,21 +160,22 @@ public class PaymentInstrument6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
+			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferDetails";
 			definition = "Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CreditTransfer3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CreditTransfer3.mmObject();
 		}
 	};
+	protected DirectDebitMandate2 directDebitDetails;
 	/**
 	 * Instruction, initiated by the creditor, to debit a debtor's account in
 	 * favour of the creditor. A direct debit can be pre-authorised or not. In
@@ -208,21 +211,22 @@ public class PaymentInstrument6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DirectDebitDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
+			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebitDetails";
 			definition = "Instruction, initiated by the creditor, to debit a debtor's account in favour of the creditor. A direct debit can be pre-authorised or not. In most countries, authorisation is in the form of a mandate between the debtor and creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DirectDebitMandate2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DirectDebitMandate2.mmObject();
 		}
 	};
+	protected Cheque3 chequeDetails;
 	/**
 	 * Written order on which instructions are given to an account holder (a
 	 * financial institution) to pay a stated sum to a named recipient (the
@@ -235,8 +239,8 @@ public class PaymentInstrument6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ChequePayment#Cheque
-	 * ChequePayment.Cheque}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
+	 * ChequePayment.mmCheque}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,21 +261,22 @@ public class PaymentInstrument6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChequeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequePayment.mmCheque;
 			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequePayment.Cheque;
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeDetails";
 			definition = "Written order on which instructions are given to an account holder (a financial institution) to pay a stated sum to a named recipient (the payee).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Cheque3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Cheque3.mmObject();
 		}
 	};
+	protected InvestmentAccount15 accountDetails;
 	/**
 	 * The part of the investment account to or from which cash entries are
 	 * made.
@@ -284,8 +289,8 @@ public class PaymentInstrument6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentAccount
-	 * InvestmentFundTransaction.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentAccount
+	 * InvestmentFundTransaction.mmInvestmentAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -306,35 +311,75 @@ public class PaymentInstrument6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentAccount;
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "The part of the investment account to or from which cash entries are made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount15.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InvestmentAccount15.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument6Choice.PaymentCardDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.CreditTransferDetails,
-						com.tools20022.repository.choice.PaymentInstrument6Choice.DirectDebitDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.ChequeDetails,
-						com.tools20022.repository.choice.PaymentInstrument6Choice.AccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument6Choice.mmPaymentCardDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.mmCreditTransferDetails,
+						com.tools20022.repository.choice.PaymentInstrument6Choice.mmDirectDebitDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.mmChequeDetails,
+						com.tools20022.repository.choice.PaymentInstrument6Choice.mmAccountDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument6Choice";
 				definition = "Choice between types of payment instrument, ie, cheque, credit transfer, direct debit, investment account or payment card.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentCard2 getPaymentCardDetails() {
+		return paymentCardDetails;
+	}
+
+	public void setPaymentCardDetails(PaymentCard2 paymentCardDetails) {
+		this.paymentCardDetails = paymentCardDetails;
+	}
+
+	public CreditTransfer3 getCreditTransferDetails() {
+		return creditTransferDetails;
+	}
+
+	public void setCreditTransferDetails(CreditTransfer3 creditTransferDetails) {
+		this.creditTransferDetails = creditTransferDetails;
+	}
+
+	public DirectDebitMandate2 getDirectDebitDetails() {
+		return directDebitDetails;
+	}
+
+	public void setDirectDebitDetails(DirectDebitMandate2 directDebitDetails) {
+		this.directDebitDetails = directDebitDetails;
+	}
+
+	public Cheque3 getChequeDetails() {
+		return chequeDetails;
+	}
+
+	public void setChequeDetails(Cheque3 chequeDetails) {
+		this.chequeDetails = chequeDetails;
+	}
+
+	public InvestmentAccount15 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(InvestmentAccount15 accountDetails) {
+		this.accountDetails = accountDetails;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference20#InterestPaymentRequestIdentification
- * Reference20.InterestPaymentRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference20#mmInterestPaymentRequestIdentification
+ * Reference20.mmInterestPaymentRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference20#InterestPaymentResponseIdentification
- * Reference20.InterestPaymentResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference20#mmInterestPaymentResponseIdentification
+ * Reference20.mmInterestPaymentResponseIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text interestPaymentRequestIdentification;
 	/**
 	 * Provides the reference to the interest payment request.
 	 * <p>
@@ -88,7 +89,7 @@ public class Reference20 {
 	 * definition} = "Provides the reference to the interest payment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPaymentRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPaymentRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference20.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class Reference20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRequestIdentification";
 			definition = "Provides the reference to the interest payment request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text interestPaymentResponseIdentification;
 	/**
 	 * Provides the reference to the interest payment response.
 	 * <p>
@@ -127,7 +129,7 @@ public class Reference20 {
 	 * definition} = "Provides the reference to the interest payment response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPaymentResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPaymentResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference20.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class Reference20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentResponseIdentification";
 			definition = "Provides the reference to the interest payment response.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class Reference20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference20.InterestPaymentRequestIdentification, com.tools20022.repository.msg.Reference20.InterestPaymentResponseIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference20.mmInterestPaymentRequestIdentification, com.tools20022.repository.msg.Reference20.mmInterestPaymentResponseIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reference20";
 				definition = "Additional references linked to the updated interest request such the original InterestRequest identification, and optionaly the InterestResponse identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getInterestPaymentRequestIdentification() {
+		return interestPaymentRequestIdentification;
+	}
+
+	public void setInterestPaymentRequestIdentification(Max35Text interestPaymentRequestIdentification) {
+		this.interestPaymentRequestIdentification = interestPaymentRequestIdentification;
+	}
+
+	public Max35Text getInterestPaymentResponseIdentification() {
+		return interestPaymentResponseIdentification;
+	}
+
+	public void setInterestPaymentResponseIdentification(Max35Text interestPaymentResponseIdentification) {
+		this.interestPaymentResponseIdentification = interestPaymentResponseIdentification;
 	}
 }

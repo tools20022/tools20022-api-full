@@ -38,15 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentDetails4#Instruction
- * PaymentDetails4.Instruction}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentDetails4#PaymentType
- * PaymentDetails4.PaymentType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentDetails4#Priority
- * PaymentDetails4.Priority}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentDetails4#mmInstruction
+ * PaymentDetails4.mmInstruction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentDetails4#mmPaymentType
+ * PaymentDetails4.mmPaymentType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentDetails4#mmPriority
+ * PaymentDetails4.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentDetails4#ProcessingValidityTime
- * PaymentDetails4.ProcessingValidityTime}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentDetails4#mmProcessingValidityTime
+ * PaymentDetails4.mmProcessingValidityTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Instruction1Code instruction;
 	/**
 	 * Further information related to the processing of the payment instruction.
 	 * The instruction can relate to a level of service between the bank and the
@@ -88,8 +89,8 @@ public class PaymentDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#InstructionForNextAgent
-	 * PaymentInstruction.InstructionForNextAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmInstructionForNextAgent
+	 * PaymentInstruction.mmInstructionForNextAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class PaymentDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Instruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> PaymentDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.InstructionForNextAgent;
 			isDerived = false;
 			xmlTag = "Instr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
 		}
 	};
+	protected PaymentType2Choice paymentType;
 	/**
 	 * Type, or nature, of the payment, eg, express payment.
 	 * <p>
@@ -137,7 +139,8 @@ public class PaymentDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Type Payment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmType
+	 * Payment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +159,21 @@ public class PaymentDetails4 {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmType;
 			componentContext_lazy = () -> PaymentDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Type;
 			isDerived = false;
 			xmlTag = "PmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentType";
 			definition = "Type, or nature, of the payment, eg, express payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PaymentType2Choice.mmObject();
 		}
 	};
+	protected PriorityCodeChoice priority;
 	/**
 	 * Urgency or order of importance that the originator would like the
 	 * recipient of the payment instruction to apply to the processing of the
@@ -185,8 +189,8 @@ public class PaymentDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#Priority
-	 * PaymentProcessing.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPriority
+	 * PaymentProcessing.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,20 +211,21 @@ public class PaymentDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Priority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> PaymentDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.Priority;
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriorityCodeChoice.mmObject();
 		}
 	};
+	protected DateTimePeriodChoice processingValidityTime;
 	/**
 	 * Date and time range within which the payment instruction must be
 	 * processed.
@@ -235,8 +240,8 @@ public class PaymentDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#ProcessingValidityTime
-	 * PaymentInstruction.ProcessingValidityTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmProcessingValidityTime
+	 * PaymentInstruction.mmProcessingValidityTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,17 +262,17 @@ public class PaymentDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> PaymentDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.ProcessingValidityTime;
 			isDerived = false;
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTime";
 			definition = "Date and time range within which the payment instruction must be processed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
@@ -275,15 +280,47 @@ public class PaymentDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDetails4.Instruction, com.tools20022.repository.msg.PaymentDetails4.PaymentType, com.tools20022.repository.msg.PaymentDetails4.Priority,
-						com.tools20022.repository.msg.PaymentDetails4.ProcessingValidityTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDetails4.mmInstruction, com.tools20022.repository.msg.PaymentDetails4.mmPaymentType, com.tools20022.repository.msg.PaymentDetails4.mmPriority,
+						com.tools20022.repository.msg.PaymentDetails4.mmProcessingValidityTime);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentDetails4";
 				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Instruction1Code getInstruction() {
+		return instruction;
+	}
+
+	public void setInstruction(Instruction1Code instruction) {
+		this.instruction = instruction;
+	}
+
+	public PaymentType2Choice getPaymentType() {
+		return paymentType;
+	}
+
+	public void setPaymentType(PaymentType2Choice paymentType) {
+		this.paymentType = paymentType;
+	}
+
+	public PriorityCodeChoice getPriority() {
+		return priority;
+	}
+
+	public void setPriority(PriorityCodeChoice priority) {
+		this.priority = priority;
+	}
+
+	public DateTimePeriodChoice getProcessingValidityTime() {
+		return processingValidityTime;
+	}
+
+	public void setProcessingValidityTime(DateTimePeriodChoice processingValidityTime) {
+		this.processingValidityTime = processingValidityTime;
 	}
 }

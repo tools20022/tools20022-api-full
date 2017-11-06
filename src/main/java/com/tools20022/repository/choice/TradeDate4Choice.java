@@ -32,10 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TradeDate4Choice#Date
- * TradeDate4Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeDate4Choice#Value
- * TradeDate4Choice.Value}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeDate4Choice#mmDate
+ * TradeDate4Choice.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeDate4Choice#mmValue
+ * TradeDate4Choice.mmValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeDate4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTime1Choice date;
 	/**
 	 * Date and time at which the securities are to be traded.
 	 * <p>
@@ -90,20 +91,21 @@ public class TradeDate4Choice {
 	 * definition} = "Date and time at which the securities are to be traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeDate4Choice.mmObject();
 			businessComponentTrace_lazy = () -> Trade.mmObject();
+			componentContext_lazy = () -> TradeDate4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date and time at which the securities are to be traded.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTime1Choice.mmObject();
 		}
 	};
+	protected TradingDateCode1Choice value;
 	/**
 	 * Date and time at which the securities are to be traded expressed as a
 	 * ISO20022 code.
@@ -139,32 +141,48 @@ public class TradeDate4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeDate4Choice.mmObject();
 			businessComponentTrace_lazy = () -> Trade.mmObject();
+			componentContext_lazy = () -> TradeDate4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Date and time at which the securities are to be traded expressed as a ISO20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> TradingDateCode1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.TradingDateCode1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeDate4Choice.Date, com.tools20022.repository.choice.TradeDate4Choice.Value);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeDate4Choice.mmDate, com.tools20022.repository.choice.TradeDate4Choice.mmValue);
 				trace_lazy = () -> Trade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeDate4Choice";
 				definition = "expressed as a ISO20022 code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTime1Choice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTime1Choice date) {
+		this.date = date;
+	}
+
+	public TradingDateCode1Choice getValue() {
+		return value;
+	}
+
+	public void setValue(com.tools20022.repository.choice.TradingDateCode1Choice value) {
+		this.value = value;
 	}
 }

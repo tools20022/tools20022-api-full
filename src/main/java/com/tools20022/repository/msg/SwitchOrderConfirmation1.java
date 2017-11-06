@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SwitchExecution;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Switch order confirmation details.
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1#AmendmentIndicator
- * SwitchOrderConfirmation1.AmendmentIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1#mmAmendmentIndicator
+ * SwitchOrderConfirmation1.mmAmendmentIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1#SwitchExecutionDetails
- * SwitchOrderConfirmation1.SwitchExecutionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1#mmSwitchExecutionDetails
+ * SwitchOrderConfirmation1.mmSwitchExecutionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1#Extension
- * SwitchOrderConfirmation1.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1#mmExtension
+ * SwitchOrderConfirmation1.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,16 +54,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#CancellationByOrderConfirmationDetails
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmCancellationByOrderConfirmationDetails
  * SwitchOrderConfirmationCancellationInstructionV01.
- * CancellationByOrderConfirmationDetails}</li>
+ * mmCancellationByOrderConfirmationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchOrderConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator amendmentIndicator;
 	/**
 	 * Indicates whether a confirmation amendment message will follow the
 	 * confirmation cancellation instruction or not.
@@ -107,7 +109,7 @@ public class SwitchOrderConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendmentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
@@ -115,11 +117,12 @@ public class SwitchOrderConfirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicator";
 			definition = "Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SwitchExecution4> switchExecutionDetails;
 	/**
 	 * Information related to a switch execution.
 	 * <p>
@@ -151,20 +154,21 @@ public class SwitchOrderConfirmation1 {
 	 * definition} = "Information related to a switch execution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SwitchExecutionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSwitchExecutionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
 			businessComponentTrace_lazy = () -> SwitchExecution.mmObject();
+			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchExctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchExecutionDetails";
 			definition = "Information related to a switch execution.";
 			minOccurs = 1;
-			type_lazy = () -> SwitchExecution4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SwitchExecution4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -193,7 +197,7 @@ public class SwitchOrderConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
@@ -202,24 +206,48 @@ public class SwitchOrderConfirmation1 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderConfirmation1.AmendmentIndicator, com.tools20022.repository.msg.SwitchOrderConfirmation1.SwitchExecutionDetails,
-						com.tools20022.repository.msg.SwitchOrderConfirmation1.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderConfirmation1.mmAmendmentIndicator, com.tools20022.repository.msg.SwitchOrderConfirmation1.mmSwitchExecutionDetails,
+						com.tools20022.repository.msg.SwitchOrderConfirmation1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
 				trace_lazy = () -> SwitchExecution.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.CancellationByOrderConfirmationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmation1";
 				definition = "Switch order confirmation details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getAmendmentIndicator() {
+		return amendmentIndicator;
+	}
+
+	public void setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
+		this.amendmentIndicator = amendmentIndicator;
+	}
+
+	public List<SwitchExecution4> getSwitchExecutionDetails() {
+		return switchExecutionDetails;
+	}
+
+	public void setSwitchExecutionDetails(List<com.tools20022.repository.msg.SwitchExecution4> switchExecutionDetails) {
+		this.switchExecutionDetails = switchExecutionDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

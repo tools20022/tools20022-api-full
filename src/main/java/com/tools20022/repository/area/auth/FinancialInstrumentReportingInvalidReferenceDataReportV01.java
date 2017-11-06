@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The FinancialInstrumentReportingInvalidReferenceDataReport message is sent by
@@ -59,25 +60,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#DatePeriod
- * FinancialInstrumentReportingInvalidReferenceDataReportV01.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#mmDatePeriod
+ * FinancialInstrumentReportingInvalidReferenceDataReportV01.mmDatePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#NumberOfRecords
- * FinancialInstrumentReportingInvalidReferenceDataReportV01.NumberOfRecords}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#mmNumberOfRecords
+ * FinancialInstrumentReportingInvalidReferenceDataReportV01.mmNumberOfRecords}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#FinancialInstruments
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#mmFinancialInstruments
  * FinancialInstrumentReportingInvalidReferenceDataReportV01.
- * FinancialInstruments}</li>
+ * mmFinancialInstruments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#SupplementaryData
- * FinancialInstrumentReportingInvalidReferenceDataReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#mmSupplementaryData
+ * FinancialInstrumentReportingInvalidReferenceDataReportV01.mmSupplementaryData
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#identifier
- * FinancialInstrumentReportingInvalidReferenceDataReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.042.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Period4Choice datePeriod;
 	/**
 	 * Date period capturing when instruments in the report have been
 	 * invalidated<br>
@@ -125,17 +126,18 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DatePeriod = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDatePeriod = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DtPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Date period capturing when instruments in the report have been invalidated\r\n\r\nUsage:\r\nWithin MiFIR, only the From Date To Date field will be used with the From Date corresponding to the date the first instrument was added to this report while the To Date is the date the last instrument was added to the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected Number numberOfRecords;
 	/**
 	 * Number of invalid records in this message.<br>
 	 * <p>
@@ -158,17 +160,18 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * definition} = "Number of invalid records in this message.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NumberOfRecords = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNumberOfRecords = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NbOfRcrds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfRecords";
 			definition = "Number of invalid records in this message.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<SecuritiesInvalidReferenceDataReport3> financialInstruments;
 	/**
 	 * Provides the details of the financial instruments.
 	 * <p>
@@ -192,7 +195,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * definition} = "Provides the details of the financial instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstruments = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstruments = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,6 +205,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			complexType_lazy = () -> SecuritiesInvalidReferenceDataReport3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -228,7 +232,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,33 +240,6 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "042"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "042";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -276,13 +253,52 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgInvldRefDataRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.DatePeriod,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.NumberOfRecords,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.FinancialInstruments,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmDatePeriod,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmNumberOfRecords,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmFinancialInstruments,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "042";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Period4Choice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(Period4Choice datePeriod) {
+		this.datePeriod = datePeriod;
+	}
+
+	public Number getNumberOfRecords() {
+		return numberOfRecords;
+	}
+
+	public void setNumberOfRecords(Number numberOfRecords) {
+		this.numberOfRecords = numberOfRecords;
+	}
+
+	public List<SecuritiesInvalidReferenceDataReport3> getFinancialInstruments() {
+		return financialInstruments;
+	}
+
+	public void setFinancialInstruments(List<SecuritiesInvalidReferenceDataReport3> financialInstruments) {
+		this.financialInstruments = financialInstruments;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

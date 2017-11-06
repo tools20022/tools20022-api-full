@@ -35,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#RequestedByCustomer
- * CancellationReason2Code.RequestedByCustomer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#mmRequestedByCustomer
+ * CancellationReason2Code.mmRequestedByCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#DuplicatePayment
- * CancellationReason2Code.DuplicatePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#mmDuplicatePayment
+ * CancellationReason2Code.mmDuplicatePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#IncorrectAgent
- * CancellationReason2Code.IncorrectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#mmIncorrectAgent
+ * CancellationReason2Code.mmIncorrectAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#IncorrectCurrency
- * CancellationReason2Code.IncorrectCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#mmIncorrectCurrency
+ * CancellationReason2Code.mmIncorrectCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#UnduePayment
- * CancellationReason2Code.UnduePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#mmUnduePayment
+ * CancellationReason2Code.mmUnduePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#SuspiciousPayment
- * CancellationReason2Code.SuspiciousPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason2Code#mmSuspiciousPayment
+ * CancellationReason2Code.mmSuspiciousPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class CancellationReason2Code extends CancellationReasonCode {
 	 * name} = "RequestedByCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestedByCustomer = new MMCode() {
+	public static final MMCode mmRequestedByCustomer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
@@ -119,7 +119,7 @@ public class CancellationReason2Code extends CancellationReasonCode {
 	 * name} = "DuplicatePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DuplicatePayment = new MMCode() {
+	public static final MMCode mmDuplicatePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicatePayment";
@@ -142,7 +142,7 @@ public class CancellationReason2Code extends CancellationReasonCode {
 	 * name} = "IncorrectAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAgent = new MMCode() {
+	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
@@ -165,7 +165,7 @@ public class CancellationReason2Code extends CancellationReasonCode {
 	 * name} = "IncorrectCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCurrency = new MMCode() {
+	public static final MMCode mmIncorrectCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
@@ -188,7 +188,7 @@ public class CancellationReason2Code extends CancellationReasonCode {
 	 * name} = "UnduePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnduePayment = new MMCode() {
+	public static final MMCode mmUnduePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnduePayment";
@@ -211,7 +211,7 @@ public class CancellationReason2Code extends CancellationReasonCode {
 	 * name} = "SuspiciousPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspiciousPayment = new MMCode() {
+	public static final MMCode mmSuspiciousPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousPayment";
@@ -222,14 +222,14 @@ public class CancellationReason2Code extends CancellationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationReason2Code";
 				definition = "Specifies the reason for requesting the cancellation of a payment instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationReason2Code.RequestedByCustomer, com.tools20022.repository.codeset.CancellationReason2Code.DuplicatePayment,
-						com.tools20022.repository.codeset.CancellationReason2Code.IncorrectAgent, com.tools20022.repository.codeset.CancellationReason2Code.IncorrectCurrency,
-						com.tools20022.repository.codeset.CancellationReason2Code.UnduePayment, com.tools20022.repository.codeset.CancellationReason2Code.SuspiciousPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationReason2Code.mmRequestedByCustomer, com.tools20022.repository.codeset.CancellationReason2Code.mmDuplicatePayment,
+						com.tools20022.repository.codeset.CancellationReason2Code.mmIncorrectAgent, com.tools20022.repository.codeset.CancellationReason2Code.mmIncorrectCurrency,
+						com.tools20022.repository.codeset.CancellationReason2Code.mmUnduePayment, com.tools20022.repository.codeset.CancellationReason2Code.mmSuspiciousPayment);
 				trace_lazy = () -> CancellationReasonCode.mmObject();
 			}
 		});

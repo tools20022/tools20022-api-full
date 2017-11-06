@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#UnitsPartiallySettled
- * PartiallySettledStatusReasonCode.UnitsPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#mmUnitsPartiallySettled
+ * PartiallySettledStatusReasonCode.mmUnitsPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#CashPartiallySettled
- * PartiallySettledStatusReasonCode.CashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#mmCashPartiallySettled
+ * PartiallySettledStatusReasonCode.mmCashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#UnitsCashPartiallySettled
- * PartiallySettledStatusReasonCode.UnitsCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#mmUnitsCashPartiallySettled
+ * PartiallySettledStatusReasonCode.mmUnitsCashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#HoldBackPendingAudit
- * PartiallySettledStatusReasonCode.HoldBackPendingAudit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#mmHoldBackPendingAudit
+ * PartiallySettledStatusReasonCode.mmHoldBackPendingAudit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#HoldBackLiquidation
- * PartiallySettledStatusReasonCode.HoldBackLiquidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode#mmHoldBackLiquidation
+ * PartiallySettledStatusReasonCode.mmHoldBackLiquidation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +99,7 @@ public class PartiallySettledStatusReasonCode {
 	 * definition} = "Units are partially settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsPartiallySettled = new MMCode() {
+	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
@@ -129,7 +129,7 @@ public class PartiallySettledStatusReasonCode {
 	 * definition} = "Cash is partially settled."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashPartiallySettled = new MMCode() {
+	public static final MMCode mmCashPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
@@ -159,7 +159,7 @@ public class PartiallySettledStatusReasonCode {
 	 * definition} = "Units and cash are both partially settled."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsCashPartiallySettled = new MMCode() {
+	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
@@ -192,7 +192,7 @@ public class PartiallySettledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HoldBackPendingAudit = new MMCode() {
+	public static final MMCode mmHoldBackPendingAudit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackPendingAudit";
@@ -225,7 +225,7 @@ public class PartiallySettledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HoldBackLiquidation = new MMCode() {
+	public static final MMCode mmHoldBackLiquidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackLiquidation";
@@ -238,14 +238,14 @@ public class PartiallySettledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UPST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartiallySettledStatusReasonCode";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.UnitsPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.CashPartiallySettled,
-						com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.UnitsCashPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.HoldBackPendingAudit,
-						com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.HoldBackLiquidation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.mmUnitsPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.mmCashPartiallySettled,
+						com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.mmUnitsCashPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.mmHoldBackPendingAudit,
+						com.tools20022.repository.codeset.PartiallySettledStatusReasonCode.mmHoldBackLiquidation);
 				derivation_lazy = () -> Arrays.asList(PartiallySettledStatusReason1Code.mmObject());
 			}
 		});

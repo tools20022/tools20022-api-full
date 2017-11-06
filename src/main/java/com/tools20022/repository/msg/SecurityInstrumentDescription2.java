@@ -41,29 +41,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#Description
- * SecurityInstrumentDescription2.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmDescription
+ * SecurityInstrumentDescription2.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#ClassificationType
- * SecurityInstrumentDescription2.ClassificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmClassificationType
+ * SecurityInstrumentDescription2.mmClassificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#PlaceOfListing
- * SecurityInstrumentDescription2.PlaceOfListing}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmPlaceOfListing
+ * SecurityInstrumentDescription2.mmPlaceOfListing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#ExerciseDate
- * SecurityInstrumentDescription2.ExerciseDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmExerciseDate
+ * SecurityInstrumentDescription2.mmExerciseDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#MaturityDate
- * SecurityInstrumentDescription2.MaturityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmMaturityDate
+ * SecurityInstrumentDescription2.mmMaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#OptionType
- * SecurityInstrumentDescription2.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmOptionType
+ * SecurityInstrumentDescription2.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#StrikePrice
- * SecurityInstrumentDescription2.StrikePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmStrikePrice
+ * SecurityInstrumentDescription2.mmStrikePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#Multiplier
- * SecurityInstrumentDescription2.Multiplier}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmMultiplier
+ * SecurityInstrumentDescription2.mmMultiplier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -71,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityInstrumentDescription2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text description;
 	/**
 	 * Description of the security.
 	 * <p>
@@ -115,7 +116,7 @@ public class SecurityInstrumentDescription2 {
 	 * definition} = "Description of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
 			isDerived = false;
@@ -123,11 +124,12 @@ public class SecurityInstrumentDescription2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SecurityClassificationType1Choice classificationType;
 	/**
 	 * Classification type of the financial instrument, as per the ISO
 	 * Classification of Financial Instrument (CFI) codification, eg, common
@@ -142,8 +144,8 @@ public class SecurityInstrumentDescription2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,21 +166,22 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClassificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, eg, common share with voting rights, fully paid, or registered.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityClassificationType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SecurityClassificationType1Choice.mmObject();
 		}
 	};
+	protected MICIdentifier placeOfListing;
 	/**
 	 * Provides the place of listing using a market identifier code (MIC).
 	 * <p>
@@ -192,8 +195,8 @@ public class SecurityInstrumentDescription2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -213,20 +216,21 @@ public class SecurityInstrumentDescription2 {
 	 * "Provides the place of listing using a market identifier code (MIC)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "PlcOfListg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "Provides the place of listing using a market identifier code (MIC).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected ISODate exerciseDate;
 	/**
 	 * Exercise date/time of a derivative contract.
 	 * <p>
@@ -239,8 +243,8 @@ public class SecurityInstrumentDescription2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#ExerciseDate
-	 * Derivative.ExerciseDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmExerciseDate
+	 * Derivative.mmExerciseDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,20 +263,21 @@ public class SecurityInstrumentDescription2 {
 	 * definition} = "Exercise date/time of a derivative contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExerciseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExerciseDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExerciseDate;
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.ExerciseDate;
 			isDerived = false;
 			xmlTag = "ExrcDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseDate";
 			definition = "Exercise date/time of a derivative contract.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate maturityDate;
 	/**
 	 * Maturity date/time at which an interest bearing security becomes due.
 	 * <p>
@@ -285,8 +290,8 @@ public class SecurityInstrumentDescription2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -306,20 +311,21 @@ public class SecurityInstrumentDescription2 {
 	 * "Maturity date/time at which an interest bearing security becomes due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Maturity date/time at which an interest bearing security becomes due.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected OptionTypeCode optionType;
 	/**
 	 * Specifies whether it is a call option (right to purchase a specific
 	 * underlying asset) or a put option (right to sell a specific underlying
@@ -335,8 +341,8 @@ public class SecurityInstrumentDescription2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#OptionType
-	 * Option.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionType
+	 * Option.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,20 +363,21 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OptionTypeCode.mmObject();
 		}
 	};
+	protected PriceRateOrAmountChoice strikePrice;
 	/**
 	 * Predetermined price at which the holder will have to buy or sell the
 	 * underlying instrument.
@@ -385,8 +392,8 @@ public class SecurityInstrumentDescription2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Pricing
-	 * Security.Pricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -407,20 +414,21 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Pricing;
 			isDerived = false;
 			xmlTag = "StrkPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
 		}
 	};
+	protected BaseOneRate multiplier;
 	/**
 	 * Indicates the ratio or multiplying factor used to convert one contract
 	 * into a quantity. In the case of an equity or a bond, the price multiplier
@@ -452,7 +460,7 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Multiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMultiplier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityInstrumentDescription2.mmObject();
 			isDerived = false;
@@ -460,8 +468,8 @@ public class SecurityInstrumentDescription2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiplier";
 			definition = "Indicates the ratio or multiplying factor used to convert one contract into a quantity. In the case of an equity or a bond, the price multiplier is 1.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
@@ -469,17 +477,81 @@ public class SecurityInstrumentDescription2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription2.Description, com.tools20022.repository.msg.SecurityInstrumentDescription2.ClassificationType,
-						com.tools20022.repository.msg.SecurityInstrumentDescription2.PlaceOfListing, com.tools20022.repository.msg.SecurityInstrumentDescription2.ExerciseDate,
-						com.tools20022.repository.msg.SecurityInstrumentDescription2.MaturityDate, com.tools20022.repository.msg.SecurityInstrumentDescription2.OptionType,
-						com.tools20022.repository.msg.SecurityInstrumentDescription2.StrikePrice, com.tools20022.repository.msg.SecurityInstrumentDescription2.Multiplier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription2.mmDescription, com.tools20022.repository.msg.SecurityInstrumentDescription2.mmClassificationType,
+						com.tools20022.repository.msg.SecurityInstrumentDescription2.mmPlaceOfListing, com.tools20022.repository.msg.SecurityInstrumentDescription2.mmExerciseDate,
+						com.tools20022.repository.msg.SecurityInstrumentDescription2.mmMaturityDate, com.tools20022.repository.msg.SecurityInstrumentDescription2.mmOptionType,
+						com.tools20022.repository.msg.SecurityInstrumentDescription2.mmStrikePrice, com.tools20022.repository.msg.SecurityInstrumentDescription2.mmMultiplier);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityInstrumentDescription2";
 				definition = "Identifies the security instrument by its name and typical characteristics.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max350Text description) {
+		this.description = description;
+	}
+
+	public SecurityClassificationType1Choice getClassificationType() {
+		return classificationType;
+	}
+
+	public void setClassificationType(SecurityClassificationType1Choice classificationType) {
+		this.classificationType = classificationType;
+	}
+
+	public MICIdentifier getPlaceOfListing() {
+		return placeOfListing;
+	}
+
+	public void setPlaceOfListing(MICIdentifier placeOfListing) {
+		this.placeOfListing = placeOfListing;
+	}
+
+	public ISODate getExerciseDate() {
+		return exerciseDate;
+	}
+
+	public void setExerciseDate(ISODate exerciseDate) {
+		this.exerciseDate = exerciseDate;
+	}
+
+	public ISODate getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public OptionTypeCode getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(OptionTypeCode optionType) {
+		this.optionType = optionType;
+	}
+
+	public PriceRateOrAmountChoice getStrikePrice() {
+		return strikePrice;
+	}
+
+	public void setStrikePrice(PriceRateOrAmountChoice strikePrice) {
+		this.strikePrice = strikePrice;
+	}
+
+	public BaseOneRate getMultiplier() {
+		return multiplier;
+	}
+
+	public void setMultiplier(BaseOneRate multiplier) {
+		this.multiplier = multiplier;
 	}
 }

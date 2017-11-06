@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry2#Delay
- * ProcessRetry2.Delay}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry2#MaximumNumber
- * ProcessRetry2.MaximumNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry2#mmDelay
+ * ProcessRetry2.mmDelay}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry2#mmMaximumNumber
+ * ProcessRetry2.mmMaximumNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessRetry2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max9NumericText delay;
 	/**
 	 * Time period to wait for a retry in months, days, hours and minutes,
 	 * leading zeros could be omitted.
@@ -91,7 +92,7 @@ public class ProcessRetry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Delay = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessRetry2.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class ProcessRetry2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delay";
 			definition = "Time period to wait for a retry in months, days, hours and minutes, leading zeros could be omitted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected Number maximumNumber;
 	/**
 	 * Maximum number of retries.
 	 * <p>
@@ -130,7 +132,7 @@ public class ProcessRetry2 {
 	 * definition} = "Maximum number of retries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessRetry2.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class ProcessRetry2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of retries.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -147,8 +149,8 @@ public class ProcessRetry2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessRetry2.Delay, com.tools20022.repository.msg.ProcessRetry2.MaximumNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessRetry2.mmDelay, com.tools20022.repository.msg.ProcessRetry2.mmMaximumNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessRetry2";
 				definition = "Definition of retry process if activation of an action fails.";
@@ -156,5 +158,21 @@ public class ProcessRetry2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max9NumericText getDelay() {
+		return delay;
+	}
+
+	public void setDelay(Max9NumericText delay) {
+		this.delay = delay;
+	}
+
+	public Number getMaximumNumber() {
+		return maximumNumber;
+	}
+
+	public void setMaximumNumber(Number maximumNumber) {
+		this.maximumNumber = maximumNumber;
 	}
 }

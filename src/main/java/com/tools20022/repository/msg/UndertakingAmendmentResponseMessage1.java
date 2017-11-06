@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1#UndertakingAmendmentResponseDetails
- * UndertakingAmendmentResponseMessage1.UndertakingAmendmentResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1#mmUndertakingAmendmentResponseDetails
+ * UndertakingAmendmentResponseMessage1.mmUndertakingAmendmentResponseDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1#DigitalSignature
- * UndertakingAmendmentResponseMessage1.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1#mmDigitalSignature
+ * UndertakingAmendmentResponseMessage1.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAmendmentResponseMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amendment7 undertakingAmendmentResponseDetails;
 	/**
 	 * Details of the proposed amendment response.
 	 * <p>
@@ -91,21 +92,22 @@ public class UndertakingAmendmentResponseMessage1 {
 	 * definition} = "Details of the proposed amendment response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingAmendmentResponseDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingAmendmentResponseDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingAmendmentResponseMessage1.mmObject();
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
+			componentContext_lazy = () -> UndertakingAmendmentResponseMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntRspnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentResponseDetails";
 			definition = "Details of the proposed amendment response.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amendment7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amendment7.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the response.
 	 * <p>
@@ -117,8 +119,8 @@ public class UndertakingAmendmentResponseMessage1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#ElectronicSignature
-	 * Undertaking.ElectronicSignature}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmElectronicSignature
+	 * Undertaking.mmElectronicSignature}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,34 +139,50 @@ public class UndertakingAmendmentResponseMessage1 {
 	 * definition} = "Digital signature of the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> UndertakingAmendmentResponseMessage1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.ElectronicSignature;
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the response.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyAndSignature2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyAndSignature2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.UndertakingAmendmentResponseDetails,
-						com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.DigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.mmUndertakingAmendmentResponseDetails,
+						com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.mmDigitalSignature);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmendmentResponseMessage1";
 				definition = "Contents of an UndertakingAmendmentResponse message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amendment7 getUndertakingAmendmentResponseDetails() {
+		return undertakingAmendmentResponseDetails;
+	}
+
+	public void setUndertakingAmendmentResponseDetails(com.tools20022.repository.msg.Amendment7 undertakingAmendmentResponseDetails) {
+		this.undertakingAmendmentResponseDetails = undertakingAmendmentResponseDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(com.tools20022.repository.msg.PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

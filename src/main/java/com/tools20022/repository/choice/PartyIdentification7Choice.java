@@ -40,11 +40,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#BICOrBEI
- * PartyIdentification7Choice.BICOrBEI}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#mmBICOrBEI
+ * PartyIdentification7Choice.mmBICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#NameAndAddress
- * PartyIdentification7Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#mmNameAndAddress
+ * PartyIdentification7Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -72,6 +72,7 @@ import java.util.function.Supplier;
 public class PartyIdentification7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bICOrBEI;
 	/**
 	 * Bank Identifier Code. Code allocated to financial institutions by the
 	 * Registration Authority, under an international identification scheme, as
@@ -88,8 +89,8 @@ public class PartyIdentification7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class PartyIdentification7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Bank Identifier Code. Code allocated to financial institutions by the Registration Authority, under an international identification scheme, as described in the latest version of the standard ISO 9362 Banking (Banking telecommunication messages, Bank Identifier Codes).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Name and address of a party.
 	 * <p>
@@ -155,28 +157,28 @@ public class PartyIdentification7Choice {
 	 * definition} = "Name and address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification7Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification7Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification7Choice.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification7Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification7Choice.mmNameAndAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -190,5 +192,21 @@ public class PartyIdentification7Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBICOrBEI() {
+		return bICOrBEI;
+	}
+
+	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = bICOrBEI;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

@@ -39,21 +39,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#ThresholdAmount
- * VariationMarginTerm.ThresholdAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#mmThresholdAmount
+ * VariationMarginTerm.mmThresholdAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#ThresholdType
- * VariationMarginTerm.ThresholdType}</li>
+ * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#mmThresholdType
+ * VariationMarginTerm.mmThresholdType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Margin1#VariationMargin
- * Margin1.VariationMargin}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCall1#MarginTerms
- * MarginCall1.MarginTerms}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin1#mmVariationMargin
+ * Margin1.mmVariationMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCall1#mmMarginTerms
+ * MarginCall1.mmMarginTerms}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -70,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VariationMarginTerm extends ExposureTerm {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount thresholdAmount;
 	/**
 	 * Amount of unsecured exposure a counterparty will accept before issuing a
 	 * margin call in the base currency.
@@ -97,22 +98,22 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#ThresholdAmount
-	 * VariationMargin1.ThresholdAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#ThresholdAmount
-	 * SummaryAmounts1.ThresholdAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm
 	 * VariationMarginTerm}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmThresholdAmount
+	 * VariationMargin1.mmThresholdAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmThresholdAmount
+	 * SummaryAmounts1.mmThresholdAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -126,19 +127,20 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ThresholdAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmThresholdAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.ThresholdAmount, com.tools20022.repository.msg.SummaryAmounts1.ThresholdAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmThresholdAmount, com.tools20022.repository.msg.SummaryAmounts1.mmThresholdAmount);
 			elementContext_lazy = () -> VariationMarginTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdAmount";
 			definition = "Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ThresholdTypeCode thresholdType;
 	/**
 	 * Defines whetherthe threshold is applied on an unsecured or security
 	 * basis.
@@ -150,22 +152,22 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ThresholdTypeCode
 	 * ThresholdTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#ThresholdType
-	 * VariationMargin1.ThresholdType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#ThresholdType
-	 * SummaryAmounts1.ThresholdType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm
 	 * VariationMarginTerm}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmThresholdType
+	 * VariationMargin1.mmThresholdType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmThresholdType
+	 * SummaryAmounts1.mmThresholdType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -179,16 +181,16 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ThresholdType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmThresholdType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.ThresholdType, com.tools20022.repository.msg.SummaryAmounts1.ThresholdType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmThresholdType, com.tools20022.repository.msg.SummaryAmounts1.mmThresholdType);
 			elementContext_lazy = () -> VariationMarginTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdType";
 			definition = "Defines whetherthe threshold is applied on an unsecured or security basis.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ThresholdTypeCode.mmObject();
 		}
 	};
@@ -196,16 +198,32 @@ public class VariationMarginTerm extends ExposureTerm {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VariationMarginTerm";
 				definition = "Defines the specific terms used to calculate a variation margin.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin1.VariationMargin, com.tools20022.repository.msg.MarginCall1.MarginTerms);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin1.mmVariationMargin, com.tools20022.repository.msg.MarginCall1.mmMarginTerms);
 				superType_lazy = () -> ExposureTerm.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VariationMarginTerm.ThresholdAmount, com.tools20022.repository.entity.VariationMarginTerm.ThresholdType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VariationMarginTerm.mmThresholdAmount, com.tools20022.repository.entity.VariationMarginTerm.mmThresholdType);
 				derivationComponent_lazy = () -> Arrays.asList(VariationMargin1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getThresholdAmount() {
+		return thresholdAmount;
+	}
+
+	public void setThresholdAmount(ActiveCurrencyAndAmount thresholdAmount) {
+		this.thresholdAmount = thresholdAmount;
+	}
+
+	public ThresholdTypeCode getThresholdType() {
+		return thresholdType;
+	}
+
+	public void setThresholdType(ThresholdTypeCode thresholdType) {
+		this.thresholdType = thresholdType;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.TransactionIdentifications29;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,27 +74,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#TransactionIdentification
- * IntraPositionMovementStatusAdviceV04.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#mmTransactionIdentification
+ * IntraPositionMovementStatusAdviceV04.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#ProcessingStatus
- * IntraPositionMovementStatusAdviceV04.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#mmProcessingStatus
+ * IntraPositionMovementStatusAdviceV04.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#SettlementStatus
- * IntraPositionMovementStatusAdviceV04.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#mmSettlementStatus
+ * IntraPositionMovementStatusAdviceV04.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#TransactionDetails
- * IntraPositionMovementStatusAdviceV04.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#mmTransactionDetails
+ * IntraPositionMovementStatusAdviceV04.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#SupplementaryData
- * IntraPositionMovementStatusAdviceV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#mmSupplementaryData
+ * IntraPositionMovementStatusAdviceV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04#identifier
- * IntraPositionMovementStatusAdviceV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.014.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,6 +120,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionMovementStatusAdviceV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifications29 transactionIdentification;
 	/**
 	 * Unambiguous identification of a transaction as per the account owner (or
 	 * the instructing party managing the account).
@@ -149,30 +149,31 @@ public class IntraPositionMovementStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#TransactionIdentification
-	 * IntraPositionMovementStatusAdviceV05.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#mmTransactionIdentification
+	 * IntraPositionMovementStatusAdviceV05.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#TransactionIdentification
-	 * IntraPositionMovementStatusAdviceV03.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#mmTransactionIdentification
+	 * IntraPositionMovementStatusAdviceV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of a transaction as per the account owner (or the instructing party managing the account).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.TransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.mmTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionIdentifications29.mmObject();
 		}
 	};
+	protected IntraPositionProcessingStatus5Choice processingStatus;
 	/**
 	 * Provides details on the processing status of the transaction.
 	 * <p>
@@ -199,30 +200,31 @@ public class IntraPositionMovementStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#ProcessingStatus
-	 * IntraPositionMovementStatusAdviceV05.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#mmProcessingStatus
+	 * IntraPositionMovementStatusAdviceV05.mmProcessingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#ProcessingStatus
-	 * IntraPositionMovementStatusAdviceV03.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#mmProcessingStatus
+	 * IntraPositionMovementStatusAdviceV03.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.ProcessingStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.ProcessingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.mmProcessingStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmProcessingStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> IntraPositionProcessingStatus5Choice.mmObject();
 		}
 	};
+	protected SettlementStatus16Choice settlementStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -248,30 +250,31 @@ public class IntraPositionMovementStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#SettlementStatus
-	 * IntraPositionMovementStatusAdviceV05.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#mmSettlementStatus
+	 * IntraPositionMovementStatusAdviceV05.mmSettlementStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#SettlementStatus
-	 * IntraPositionMovementStatusAdviceV03.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#mmSettlementStatus
+	 * IntraPositionMovementStatusAdviceV03.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.SettlementStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.SettlementStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.mmSettlementStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmSettlementStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus16Choice.mmObject();
 		}
 	};
+	protected IntraPositionDetails31 transactionDetails;
 	/**
 	 * Identifies the details of the transaction.
 	 * <p>
@@ -297,30 +300,31 @@ public class IntraPositionMovementStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#TransactionDetails
-	 * IntraPositionMovementStatusAdviceV05.TransactionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#mmTransactionDetails
+	 * IntraPositionMovementStatusAdviceV05.mmTransactionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#TransactionDetails
-	 * IntraPositionMovementStatusAdviceV03.TransactionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#mmTransactionDetails
+	 * IntraPositionMovementStatusAdviceV03.mmTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.TransactionDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.TransactionDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.mmTransactionDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmTransactionDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> IntraPositionDetails31.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -349,54 +353,27 @@ public class IntraPositionMovementStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#SupplementaryData
-	 * IntraPositionMovementStatusAdviceV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05#mmSupplementaryData
+	 * IntraPositionMovementStatusAdviceV05.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#SupplementaryData
-	 * IntraPositionMovementStatusAdviceV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03#mmSupplementaryData
+	 * IntraPositionMovementStatusAdviceV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "014"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "014";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -406,18 +383,65 @@ public class IntraPositionMovementStatusAdviceV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementStatusAdviceV04";
 				definition = "Scope\r\nAn account servicer sends a IntraPositionMovementStatusAdvice to an account owner to advise the status of a intra-position movement instruction previously sent by the account owner.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information.\r\nusing the relevant elements in the Business Application Header.";
-				previousVersion_lazy = () -> IntraPositionMovementStatusAdviceV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementStatusAdviceV05.mmObject());
+				previousVersion_lazy = () -> IntraPositionMovementStatusAdviceV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntStsAdvc";
 				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.TransactionIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.ProcessingStatus, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.SettlementStatus,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.TransactionDetails, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.mmTransactionIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.mmProcessingStatus, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.mmSettlementStatus,
+						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.mmTransactionDetails, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "014";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifications29 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(TransactionIdentifications29 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public IntraPositionProcessingStatus5Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(IntraPositionProcessingStatus5Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public SettlementStatus16Choice getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(SettlementStatus16Choice settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public IntraPositionDetails31 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(IntraPositionDetails31 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#Interest
- * AssetClassAttributes1Choice.Interest}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#mmInterest
+ * AssetClassAttributes1Choice.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#ForeignExchange
- * AssetClassAttributes1Choice.ForeignExchange}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#mmForeignExchange
+ * AssetClassAttributes1Choice.mmForeignExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#Both
- * AssetClassAttributes1Choice.Both}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassAttributes1Choice#mmBoth
+ * AssetClassAttributes1Choice.mmBoth}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetClassAttributes1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DerivativeInterest2 interest;
 	/**
 	 * Asset class is a non-financial instrument of type interest rate.
 	 * <p>
@@ -77,8 +78,8 @@ public class AssetClassAttributes1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#Interest
-	 * AssetHolding.Interest}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmInterest
+	 * AssetHolding.mmInterest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +99,22 @@ public class AssetClassAttributes1Choice {
 	 * "Asset class is a non-financial instrument of type interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Interest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmInterest;
 			componentContext_lazy = () -> AssetClassAttributes1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.Interest;
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Asset class is a non-financial instrument of type interest rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DerivativeInterest2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DerivativeInterest2.mmObject();
 		}
 	};
+	protected DerivativeForeignExchange2 foreignExchange;
 	/**
 	 * Asset class is a non-financial instrument of type foreign exchange.
 	 * <p>
@@ -125,8 +127,8 @@ public class AssetClassAttributes1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#ExchangeRate
-	 * AssetHolding.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmExchangeRate
+	 * AssetHolding.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,21 +148,22 @@ public class AssetClassAttributes1Choice {
 	 * "Asset class is a non-financial instrument of type foreign exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> AssetClassAttributes1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.ExchangeRate;
 			isDerived = false;
 			xmlTag = "FX";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchange";
 			definition = "Asset class is a non-financial instrument of type foreign exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DerivativeForeignExchange2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DerivativeForeignExchange2.mmObject();
 		}
 	};
+	protected AssetClassAttributes1 both;
 	/**
 	 * Asset class is composed of both an interest derivate and a foreign
 	 * exchange derivative.
@@ -194,34 +197,58 @@ public class AssetClassAttributes1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Both = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBoth = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AssetClassAttributes1Choice.mmObject();
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
+			componentContext_lazy = () -> AssetClassAttributes1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Both";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
 			definition = "Asset class is composed of both an interest derivate and a foreign exchange derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AssetClassAttributes1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AssetClassAttributes1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassAttributes1Choice.Interest, com.tools20022.repository.choice.AssetClassAttributes1Choice.ForeignExchange,
-						com.tools20022.repository.choice.AssetClassAttributes1Choice.Both);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassAttributes1Choice.mmInterest, com.tools20022.repository.choice.AssetClassAttributes1Choice.mmForeignExchange,
+						com.tools20022.repository.choice.AssetClassAttributes1Choice.mmBoth);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassAttributes1Choice";
 				definition = "Asset class specific details of a derivative.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DerivativeInterest2 getInterest() {
+		return interest;
+	}
+
+	public void setInterest(DerivativeInterest2 interest) {
+		this.interest = interest;
+	}
+
+	public DerivativeForeignExchange2 getForeignExchange() {
+		return foreignExchange;
+	}
+
+	public void setForeignExchange(DerivativeForeignExchange2 foreignExchange) {
+		this.foreignExchange = foreignExchange;
+	}
+
+	public AssetClassAttributes1 getBoth() {
+		return both;
+	}
+
+	public void setBoth(AssetClassAttributes1 both) {
+		this.both = both;
 	}
 }

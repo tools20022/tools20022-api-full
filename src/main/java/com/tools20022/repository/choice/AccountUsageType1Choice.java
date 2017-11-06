@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountUsageType1Choice#Code
- * AccountUsageType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountUsageType1Choice#mmCode
+ * AccountUsageType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountUsageType1Choice#Proprietary
- * AccountUsageType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountUsageType1Choice#mmProprietary
+ * AccountUsageType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountUsageType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountUsageType1Code code;
 	/**
 	 * Type of account usage expressed as a code.
 	 * <p>
@@ -106,27 +107,28 @@ public class AccountUsageType1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountUsageType2Choice#Code
-	 * AccountUsageType2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountUsageType2Choice#mmCode
+	 * AccountUsageType2Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountUsageType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> AccountUsageType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of account usage expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountUsageType2Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountUsageType2Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountUsageType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Type of account usage expressed as a proprietary code.
 	 * <p>
@@ -162,24 +164,24 @@ public class AccountUsageType1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountUsageType2Choice#Proprietary
-	 * AccountUsageType2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountUsageType2Choice#mmProprietary
+	 * AccountUsageType2Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountUsageType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> AccountUsageType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of account usage expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountUsageType2Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountUsageType2Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -187,9 +189,9 @@ public class AccountUsageType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountUsageType1Choice.Code, com.tools20022.repository.choice.AccountUsageType1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountUsageType1Choice.mmCode, com.tools20022.repository.choice.AccountUsageType1Choice.mmProprietary);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountUsageType1Choice";
 				definition = "Choice of formats for the specification of the type of account usage.";
@@ -197,5 +199,21 @@ public class AccountUsageType1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountUsageType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(AccountUsageType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

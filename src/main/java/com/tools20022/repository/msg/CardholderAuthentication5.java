@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#AuthenticationMethod
- * CardholderAuthentication5.AuthenticationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#mmAuthenticationMethod
+ * CardholderAuthentication5.mmAuthenticationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#AuthenticationEntity
- * CardholderAuthentication5.AuthenticationEntity}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#mmAuthenticationEntity
+ * CardholderAuthentication5.mmAuthenticationEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#AuthenticationValue
- * CardholderAuthentication5.AuthenticationValue}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#mmAuthenticationValue
+ * CardholderAuthentication5.mmAuthenticationValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#CardholderOnLinePIN
- * CardholderAuthentication5.CardholderOnLinePIN}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#mmCardholderOnLinePIN
+ * CardholderAuthentication5.mmCardholderOnLinePIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#AuthenticationCollectionIndicator
- * CardholderAuthentication5.AuthenticationCollectionIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderAuthentication5#mmAuthenticationCollectionIndicator
+ * CardholderAuthentication5.mmAuthenticationCollectionIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardholderAuthentication5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuthenticationMethod2Code authenticationMethod;
 	/**
 	 * Method used to authenticate a cardholder.
 	 * <p>
@@ -99,8 +100,8 @@ public class CardholderAuthentication5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication#AuthenticationMethod
-	 * Authentication.AuthenticationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationMethod
+	 * Authentication.mmAuthenticationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,33 +122,34 @@ public class CardholderAuthentication5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication6#AuthenticationMethod
-	 * CardholderAuthentication6.AuthenticationMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication6#mmAuthenticationMethod
+	 * CardholderAuthentication6.mmAuthenticationMethod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#AuthenticationMethod
-	 * CardholderAuthentication3.AuthenticationMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#mmAuthenticationMethod
+	 * CardholderAuthentication3.mmAuthenticationMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthenticationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthenticationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationMethod;
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.AuthenticationMethod;
 			isDerived = false;
 			xmlTag = "AuthntcnMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationMethod";
 			definition = "Method used to authenticate a cardholder.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.AuthenticationMethod;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.AuthenticationMethod);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.mmAuthenticationMethod);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationMethod;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod2Code.mmObject();
 		}
 	};
+	protected AuthenticationEntity1Code authenticationEntity;
 	/**
 	 * Entity or object in charge of verifying the cardholder authenticity.
 	 * <p>
@@ -161,8 +163,8 @@ public class CardholderAuthentication5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication#AuthenticationEntity
-	 * Authentication.AuthenticationEntity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationEntity
+	 * Authentication.mmAuthenticationEntity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,25 +185,26 @@ public class CardholderAuthentication5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#AuthenticationEntity
-	 * CardholderAuthentication3.AuthenticationEntity}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#mmAuthenticationEntity
+	 * CardholderAuthentication3.mmAuthenticationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthenticationEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthenticationEntity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationEntity;
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.AuthenticationEntity;
 			isDerived = false;
 			xmlTag = "AuthntcnNtty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationEntity";
 			definition = "Entity or object in charge of verifying the cardholder authenticity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.AuthenticationEntity;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationEntity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity1Code.mmObject();
 		}
 	};
+	protected Max40Text authenticationValue;
 	/**
 	 * Value used to authenticate the cardholder.
 	 * <p>
@@ -214,8 +217,8 @@ public class CardholderAuthentication5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication#AuthenticationValue
-	 * Authentication.AuthenticationValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationValue
+	 * Authentication.mmAuthenticationValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,33 +239,34 @@ public class CardholderAuthentication5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication6#AuthenticationValue
-	 * CardholderAuthentication6.AuthenticationValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication6#mmAuthenticationValue
+	 * CardholderAuthentication6.mmAuthenticationValue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#AuthenticationValue
-	 * CardholderAuthentication3.AuthenticationValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#mmAuthenticationValue
+	 * CardholderAuthentication3.mmAuthenticationValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthenticationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthenticationValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationValue;
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.AuthenticationValue;
 			isDerived = false;
 			xmlTag = "AuthntcnVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationValue";
 			definition = "Value used to authenticate the cardholder.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.AuthenticationValue;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.AuthenticationValue);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.mmAuthenticationValue);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationValue;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	protected OnLinePIN3 cardholderOnLinePIN;
 	/**
 	 * Encrypted personal identification number (PIN) and related information.
 	 * <p>
@@ -297,34 +301,35 @@ public class CardholderAuthentication5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication6#CardholderOnLinePIN
-	 * CardholderAuthentication6.CardholderOnLinePIN}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication6#mmCardholderOnLinePIN
+	 * CardholderAuthentication6.mmCardholderOnLinePIN}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#CardholderOnLinePIN
-	 * CardholderAuthentication3.CardholderOnLinePIN}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#mmCardholderOnLinePIN
+	 * CardholderAuthentication3.mmCardholderOnLinePIN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CardholderOnLinePIN = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCardholderOnLinePIN = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			businessComponentTrace_lazy = () -> Authentication.mmObject();
+			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrOnLinePIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderOnLinePIN";
 			definition = "Encrypted personal identification number (PIN) and related information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.CardholderOnLinePIN;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.CardholderOnLinePIN);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.mmCardholderOnLinePIN);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmCardholderOnLinePIN;
 			maxOccurs = 1;
-			type_lazy = () -> OnLinePIN3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OnLinePIN3.mmObject();
 		}
 	};
+	protected Max35Text authenticationCollectionIndicator;
 	/**
 	 * Identifies in electronic commerce transactions whether customer
 	 * authentication is supported and data is available.
@@ -356,11 +361,11 @@ public class CardholderAuthentication5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#AuthenticationCollectionIndicator
-	 * CardholderAuthentication3.AuthenticationCollectionIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardholderAuthentication3#mmAuthenticationCollectionIndicator
+	 * CardholderAuthentication3.mmAuthenticationCollectionIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthenticationCollectionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthenticationCollectionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			isDerived = false;
@@ -368,9 +373,9 @@ public class CardholderAuthentication5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationCollectionIndicator";
 			definition = "Identifies in electronic commerce transactions whether customer authentication is supported and data is available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.AuthenticationCollectionIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationCollectionIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -378,18 +383,58 @@ public class CardholderAuthentication5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication5.AuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication5.AuthenticationEntity,
-						com.tools20022.repository.msg.CardholderAuthentication5.AuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication5.CardholderOnLinePIN,
-						com.tools20022.repository.msg.CardholderAuthentication5.AuthenticationCollectionIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationEntity,
+						com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication5.mmCardholderOnLinePIN,
+						com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationCollectionIndicator);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardholderAuthentication5";
 				definition = "Data related to the authentication of the cardholder.";
-				previousVersion_lazy = () -> CardholderAuthentication3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardholderAuthentication6.mmObject());
+				previousVersion_lazy = () -> CardholderAuthentication3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuthenticationMethod2Code getAuthenticationMethod() {
+		return authenticationMethod;
+	}
+
+	public void setAuthenticationMethod(AuthenticationMethod2Code authenticationMethod) {
+		this.authenticationMethod = authenticationMethod;
+	}
+
+	public AuthenticationEntity1Code getAuthenticationEntity() {
+		return authenticationEntity;
+	}
+
+	public void setAuthenticationEntity(AuthenticationEntity1Code authenticationEntity) {
+		this.authenticationEntity = authenticationEntity;
+	}
+
+	public Max40Text getAuthenticationValue() {
+		return authenticationValue;
+	}
+
+	public void setAuthenticationValue(Max40Text authenticationValue) {
+		this.authenticationValue = authenticationValue;
+	}
+
+	public OnLinePIN3 getCardholderOnLinePIN() {
+		return cardholderOnLinePIN;
+	}
+
+	public void setCardholderOnLinePIN(com.tools20022.repository.msg.OnLinePIN3 cardholderOnLinePIN) {
+		this.cardholderOnLinePIN = cardholderOnLinePIN;
+	}
+
+	public Max35Text getAuthenticationCollectionIndicator() {
+		return authenticationCollectionIndicator;
+	}
+
+	public void setAuthenticationCollectionIndicator(Max35Text authenticationCollectionIndicator) {
+		this.authenticationCollectionIndicator = authenticationCollectionIndicator;
 	}
 }

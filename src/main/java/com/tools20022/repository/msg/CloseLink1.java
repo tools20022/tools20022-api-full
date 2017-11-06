@@ -36,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CloseLink1#SecurityIdentification
- * CloseLink1.SecurityIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CloseLink1#PartyIdentification
- * CloseLink1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CloseLink1#mmSecurityIdentification
+ * CloseLink1.mmSecurityIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CloseLink1#mmPartyIdentification
+ * CloseLink1.mmPartyIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CloseLink1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINIdentifier securityIdentification;
 	/**
 	 * Identification of a security by an ISIN.
 	 * <p>
@@ -77,8 +79,8 @@ public class CloseLink1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#CloseLink
-	 * Security.CloseLink}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmCloseLink
+	 * Security.mmCloseLink}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CloseLink1
@@ -96,20 +98,21 @@ public class CloseLink1 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmCloseLink;
 			componentContext_lazy = () -> CloseLink1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.CloseLink;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice partyIdentification;
 	/**
 	 * Identifies the party for which the close link is defined.
 	 * <p>
@@ -138,7 +141,7 @@ public class CloseLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CloseLink1.mmObject();
 			isDerived = false;
@@ -146,8 +149,8 @@ public class CloseLink1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the close link is defined.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
@@ -155,14 +158,30 @@ public class CloseLink1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CloseLink1.SecurityIdentification, com.tools20022.repository.msg.CloseLink1.PartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CloseLink1.mmSecurityIdentification, com.tools20022.repository.msg.CloseLink1.mmPartyIdentification);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CloseLink1";
 				definition = "Provides details of the close links as defined in the collateral reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINIdentifier getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(ISINIdentifier securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public SystemPartyIdentification1Choice getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(SystemPartyIdentification1Choice partyIdentification) {
+		this.partyIdentification = partyIdentification;
 	}
 }

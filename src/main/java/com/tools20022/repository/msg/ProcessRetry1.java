@@ -34,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry1#Delay
- * ProcessRetry1.Delay}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry1#MaximumNumber
- * ProcessRetry1.MaximumNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry1#LastReTryTime
- * ProcessRetry1.LastReTryTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry1#mmDelay
+ * ProcessRetry1.mmDelay}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry1#mmMaximumNumber
+ * ProcessRetry1.mmMaximumNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessRetry1#mmLastReTryTime
+ * ProcessRetry1.mmLastReTryTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessRetry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max9NumericText delay;
 	/**
 	 * Time period to wait for a retry in months, days, hours and minutes,
 	 * leading zeros could be omitted.
@@ -97,7 +98,7 @@ public class ProcessRetry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Delay = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessRetry1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class ProcessRetry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delay";
 			definition = "Time period to wait for a retry in months, days, hours and minutes, leading zeros could be omitted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected Number maximumNumber;
 	/**
 	 * Maximum number of retries.
 	 * <p>
@@ -136,7 +138,7 @@ public class ProcessRetry1 {
 	 * definition} = "Maximum number of retries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessRetry1.mmObject();
 			isDerived = false;
@@ -144,11 +146,12 @@ public class ProcessRetry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of retries.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISOTime lastReTryTime;
 	/**
 	 * Time of the last retry.
 	 * <p>
@@ -175,7 +178,7 @@ public class ProcessRetry1 {
 	 * definition} = "Time of the last retry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastReTryTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastReTryTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessRetry1.mmObject();
 			isDerived = false;
@@ -183,8 +186,8 @@ public class ProcessRetry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastReTryTime";
 			definition = "Time of the last retry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -192,8 +195,8 @@ public class ProcessRetry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessRetry1.Delay, com.tools20022.repository.msg.ProcessRetry1.MaximumNumber, com.tools20022.repository.msg.ProcessRetry1.LastReTryTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessRetry1.mmDelay, com.tools20022.repository.msg.ProcessRetry1.mmMaximumNumber, com.tools20022.repository.msg.ProcessRetry1.mmLastReTryTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessRetry1";
 				definition = "Definition of retry process if activation of an action fails.";
@@ -201,5 +204,29 @@ public class ProcessRetry1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max9NumericText getDelay() {
+		return delay;
+	}
+
+	public void setDelay(Max9NumericText delay) {
+		this.delay = delay;
+	}
+
+	public Number getMaximumNumber() {
+		return maximumNumber;
+	}
+
+	public void setMaximumNumber(Number maximumNumber) {
+		this.maximumNumber = maximumNumber;
+	}
+
+	public ISOTime getLastReTryTime() {
+		return lastReTryTime;
+	}
+
+	public void setLastReTryTime(ISOTime lastReTryTime) {
+		this.lastReTryTime = lastReTryTime;
 	}
 }

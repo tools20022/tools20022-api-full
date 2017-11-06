@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#ProcessingError
- * CollateralManagementCancellationReason1Code.ProcessingError}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#mmProcessingError
+ * CollateralManagementCancellationReason1Code.mmProcessingError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#PendingNewSubmission
- * CollateralManagementCancellationReason1Code.PendingNewSubmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#mmPendingNewSubmission
+ * CollateralManagementCancellationReason1Code.mmPendingNewSubmission}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	 * name} = "ProcessingError"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingError = new MMCode() {
+	public static final MMCode mmProcessingError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingError";
@@ -105,7 +105,7 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	 * name} = "PendingNewSubmission"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingNewSubmission = new MMCode() {
+	public static final MMCode mmPendingNewSubmission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingNewSubmission";
@@ -116,13 +116,13 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralManagementCancellationReason1Code";
 				definition = "Specifies the reason why the instruction/request has been cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.ProcessingError,
-						com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.PendingNewSubmission);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.mmProcessingError,
+						com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.mmPendingNewSubmission);
 				trace_lazy = () -> CollateralManagementCancellationReasonCode.mmObject();
 			}
 		});

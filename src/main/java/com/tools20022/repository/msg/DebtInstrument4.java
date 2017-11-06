@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument4#MaturityDate
- * DebtInstrument4.MaturityDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument4#mmMaturityDate
+ * DebtInstrument4.mmMaturityDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -42,8 +42,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebtInstrument4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate maturityDate;
 	/**
 	 * Maturity date/time at which an interest bearing financial instrument
 	 * becomes due, that is original date of expiry of the reported financial
@@ -74,8 +75,8 @@ public class DebtInstrument4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,22 +98,22 @@ public class DebtInstrument4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DebtInstrument2#MaturityDate
-	 * DebtInstrument2.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.DebtInstrument2#mmMaturityDate
+	 * DebtInstrument2.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> DebtInstrument4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Maturity date/time at which an interest bearing financial instrument becomes due, that is original date of expiry of the reported financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.MaturityDate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmMaturityDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -120,9 +121,9 @@ public class DebtInstrument4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument4.MaturityDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument4.mmMaturityDate);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrument4";
 				definition = "Specifies the debit instrument.";
@@ -130,5 +131,13 @@ public class DebtInstrument4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = maturityDate;
 	}
 }

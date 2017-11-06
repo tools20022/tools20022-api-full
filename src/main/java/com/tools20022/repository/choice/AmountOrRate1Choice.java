@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.AmountOrRate1Choice#Amount
- * AmountOrRate1Choice.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AmountOrRate1Choice#Rate
- * AmountOrRate1Choice.Rate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AmountOrRate1Choice#mmAmount
+ * AmountOrRate1Choice.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AmountOrRate1Choice#mmRate
+ * AmountOrRate1Choice.mmRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountOrRate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount expressed as an amount of money.
 	 * <p>
@@ -85,7 +87,7 @@ public class AmountOrRate1Choice {
 	 * definition} = "Amount expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountOrRate1Choice.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class AmountOrRate1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount expressed as an amount of money.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Amount expressed as a rate.
 	 * <p>
@@ -126,7 +129,7 @@ public class AmountOrRate1Choice {
 	 * definition} = "Amount expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountOrRate1Choice.mmObject();
 			isDerived = false;
@@ -134,8 +137,8 @@ public class AmountOrRate1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Amount expressed as a rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -143,13 +146,29 @@ public class AmountOrRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrRate1Choice.Amount, com.tools20022.repository.choice.AmountOrRate1Choice.Rate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrRate1Choice.mmAmount, com.tools20022.repository.choice.AmountOrRate1Choice.mmRate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountOrRate1Choice";
 				definition = "Choice between an amount or a rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
 	}
 }

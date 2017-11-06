@@ -31,6 +31,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -142,27 +143,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#Assignment
- * RequestToModifyPaymentV04.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmAssignment
+ * RequestToModifyPaymentV04.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#Case
- * RequestToModifyPaymentV04.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmCase
+ * RequestToModifyPaymentV04.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#Underlying
- * RequestToModifyPaymentV04.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmUnderlying
+ * RequestToModifyPaymentV04.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#Modification
- * RequestToModifyPaymentV04.Modification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmModification
+ * RequestToModifyPaymentV04.mmModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#SupplementaryData
- * RequestToModifyPaymentV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#mmSupplementaryData
+ * RequestToModifyPaymentV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04#identifier
- * RequestToModifyPaymentV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.087.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -182,6 +181,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestToModifyPaymentV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -209,22 +209,23 @@ public class RequestToModifyPaymentV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#Assignment
-	 * RequestToModifyPaymentV03.Assignment}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmAssignment
+	 * RequestToModifyPaymentV03.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.Assignment;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmAssignment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -247,22 +248,23 @@ public class RequestToModifyPaymentV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#Case
-	 * RequestToModifyPaymentV03.Case}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmCase
+	 * RequestToModifyPaymentV03.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.Case;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmCase;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected UnderlyingTransaction3Choice underlying;
 	/**
 	 * Identifies the payment transaction to be modified.
 	 * <p>
@@ -287,22 +289,23 @@ public class RequestToModifyPaymentV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#Underlying
-	 * RequestToModifyPaymentV03.Underlying}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmUnderlying
+	 * RequestToModifyPaymentV03.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment transaction to be modified.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.Underlying;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmUnderlying;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction3Choice.mmObject();
 		}
 	};
+	protected RequestedModification6 modification;
 	/**
 	 * Identifies the list of modifications requested.
 	 * <p>
@@ -327,22 +330,23 @@ public class RequestToModifyPaymentV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#Modification
-	 * RequestToModifyPaymentV03.Modification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmModification
+	 * RequestToModifyPaymentV03.mmModification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Modification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Identifies the list of modifications requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.Modification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmModification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestedModification6.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -370,46 +374,19 @@ public class RequestToModifyPaymentV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#SupplementaryData
-	 * RequestToModifyPaymentV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmSupplementaryData
+	 * RequestToModifyPaymentV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "087"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "087";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -424,12 +401,59 @@ public class RequestToModifyPaymentV04 {
 				rootElement = "Document";
 				xmlTag = "ReqToModfyPmt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV04.Assignment, com.tools20022.repository.area.camt.RequestToModifyPaymentV04.Case,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV04.Underlying, com.tools20022.repository.area.camt.RequestToModifyPaymentV04.Modification,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV04.mmAssignment, com.tools20022.repository.area.camt.RequestToModifyPaymentV04.mmCase,
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV04.mmUnderlying, com.tools20022.repository.area.camt.RequestToModifyPaymentV04.mmModification,
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "087";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public UnderlyingTransaction3Choice getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(UnderlyingTransaction3Choice underlying) {
+		this.underlying = underlying;
+	}
+
+	public RequestedModification6 getModification() {
+		return modification;
+	}
+
+	public void setModification(RequestedModification6 modification) {
+		this.modification = modification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

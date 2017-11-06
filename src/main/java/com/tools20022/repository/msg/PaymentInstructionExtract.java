@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#AssignerInstructionIdentification
- * PaymentInstructionExtract.AssignerInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#mmAssignerInstructionIdentification
+ * PaymentInstructionExtract.mmAssignerInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#AssigneeInstructionIdentification
- * PaymentInstructionExtract.AssigneeInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#mmAssigneeInstructionIdentification
+ * PaymentInstructionExtract.mmAssigneeInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#CurrencyAmount
- * PaymentInstructionExtract.CurrencyAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#mmCurrencyAmount
+ * PaymentInstructionExtract.mmCurrencyAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#ValueDate
- * PaymentInstructionExtract.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#mmValueDate
+ * PaymentInstructionExtract.mmValueDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,32 +58,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#Underlying
- * RequestToModifyPayment.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#mmUnderlying
+ * RequestToModifyPayment.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#Underlying
- * RequestToCancelPayment.Underlying}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApply#Underlying
- * UnableToApply.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#mmUnderlying
+ * RequestToCancelPayment.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#Underlying
- * ClaimNonReceipt.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApply#mmUnderlying
+ * UnableToApply.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#Underlying
- * AdditionalPaymentInformation.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#mmUnderlying
+ * ClaimNonReceipt.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#CorrectionTransaction
- * ResolutionOfInvestigation.CorrectionTransaction}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#mmUnderlying
+ * AdditionalPaymentInformation.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#Underlying
- * DebitAuthorisationRequest.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#mmCorrectionTransaction
+ * ResolutionOfInvestigation.mmCorrectionTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#mmUnderlying
+ * DebitAuthorisationRequest.mmUnderlying}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInstructionExtract {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text assignerInstructionIdentification;
 	/**
 	 * Identification of the payment instruction (eg, field 20 of an MT 103)
 	 * when meaningful to the case assigner.
@@ -112,8 +114,8 @@ public class PaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -134,20 +136,21 @@ public class PaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AssignerInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssignerInstructionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "AssgnrInstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssignerInstructionIdentification";
 			definition = "Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assigner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text assigneeInstructionIdentification;
 	/**
 	 * Identification of the payment instruction (eg, field 20 of an MT 103)
 	 * when meaningful to the case assignee.
@@ -161,8 +164,8 @@ public class PaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,20 +186,21 @@ public class PaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AssigneeInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssigneeInstructionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "AssgneInstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssigneeInstructionIdentification";
 			definition = "Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assignee.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount currencyAmount;
 	/**
 	 * Amount of the payment. Depending on the context it can be either the
 	 * amount settled (UnableToApply) or the instructed amount (RequestToCancel,
@@ -212,8 +216,8 @@ public class PaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -234,20 +238,21 @@ public class PaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "CcyAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
 			definition = "Amount of the payment. Depending on the context it can be either the amount settled (UnableToApply) or the instructed amount (RequestToCancel, RequestToModify, ClaimNonReceipt).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODateTime valueDate;
 	/**
 	 * Value date of the payment.
 	 * <p>
@@ -260,8 +265,8 @@ public class PaymentInstructionExtract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -280,17 +285,17 @@ public class PaymentInstructionExtract {
 	 * definition} = "Value date of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Value date of the payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -298,18 +303,51 @@ public class PaymentInstructionExtract {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract.AssignerInstructionIdentification, com.tools20022.repository.msg.PaymentInstructionExtract.AssigneeInstructionIdentification,
-						com.tools20022.repository.msg.PaymentInstructionExtract.CurrencyAmount, com.tools20022.repository.msg.PaymentInstructionExtract.ValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract.mmAssignerInstructionIdentification,
+						com.tools20022.repository.msg.PaymentInstructionExtract.mmAssigneeInstructionIdentification, com.tools20022.repository.msg.PaymentInstructionExtract.mmCurrencyAmount,
+						com.tools20022.repository.msg.PaymentInstructionExtract.mmValueDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmUnderlying, com.tools20022.repository.area.camt.RequestToCancelPayment.mmUnderlying,
+						com.tools20022.repository.area.camt.UnableToApply.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceipt.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmUnderlying,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmCorrectionTransaction, com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmUnderlying);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.Underlying, com.tools20022.repository.area.camt.RequestToCancelPayment.Underlying,
-						com.tools20022.repository.area.camt.UnableToApply.Underlying, com.tools20022.repository.area.camt.ClaimNonReceipt.Underlying, com.tools20022.repository.area.camt.AdditionalPaymentInformation.Underlying,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigation.CorrectionTransaction, com.tools20022.repository.area.camt.DebitAuthorisationRequest.Underlying);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstructionExtract";
 				definition = "Details of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAssignerInstructionIdentification() {
+		return assignerInstructionIdentification;
+	}
+
+	public void setAssignerInstructionIdentification(Max35Text assignerInstructionIdentification) {
+		this.assignerInstructionIdentification = assignerInstructionIdentification;
+	}
+
+	public Max35Text getAssigneeInstructionIdentification() {
+		return assigneeInstructionIdentification;
+	}
+
+	public void setAssigneeInstructionIdentification(Max35Text assigneeInstructionIdentification) {
+		this.assigneeInstructionIdentification = assigneeInstructionIdentification;
+	}
+
+	public CurrencyAndAmount getCurrencyAmount() {
+		return currencyAmount;
+	}
+
+	public void setCurrencyAmount(CurrencyAndAmount currencyAmount) {
+		this.currencyAmount = currencyAmount;
+	}
+
+	public ISODateTime getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODateTime valueDate) {
+		this.valueDate = valueDate;
 	}
 }

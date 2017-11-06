@@ -40,39 +40,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ExposureTerm#ExposureType
- * ExposureTerm.ExposureType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ExposureTerm#mmExposureType
+ * ExposureTerm.mmExposureType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#MinimumTransferAmount
- * ExposureTerm.MinimumTransferAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ExposureTerm#RoundingAmount
- * ExposureTerm.RoundingAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ExposureTerm#RoundingMethod
- * ExposureTerm.RoundingMethod}</li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumTransferAmount
+ * ExposureTerm.mmMinimumTransferAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#RelatedCollateralAgreement
- * ExposureTerm.RelatedCollateralAgreement}</li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingAmount
+ * ExposureTerm.mmRoundingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureTerm#MinimumRequirementDeposit
- * ExposureTerm.MinimumRequirementDeposit}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingMethod
+ * ExposureTerm.mmRoundingMethod}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRelatedCollateralAgreement
+ * ExposureTerm.mmRelatedCollateralAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#ExposureTerm
- * CollateralAgreement.ExposureTerm}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.MarginTerms1Choice#MarginDetails
- * MarginTerms1Choice.MarginDetails}</li>
+ * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumRequirementDeposit
+ * ExposureTerm.mmMinimumRequirementDeposit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -82,6 +66,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * IndependentAmountTerm}</li>
  * <li>{@linkplain com.tools20022.repository.entity.VariationMarginTerm
  * VariationMarginTerm}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmExposureTerm
+ * CollateralAgreement.mmExposureTerm}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.MarginTerms1Choice#mmMarginDetails
+ * MarginTerms1Choice.mmMarginDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,8 +130,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -144,6 +146,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExposureTerm {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExposureTypeCode exposureType;
 	/**
 	 * Specifies the underlying business area/type of trade causing the
 	 * collateral movement.
@@ -155,273 +158,273 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExposureTypeCode
 	 * ExposureTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType1Choice#Code
-	 * ExposureType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType1Choice#Proprietary
-	 * ExposureType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType3Choice#Code
-	 * ExposureType3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType3Choice#Proprietary
-	 * ExposureType3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#ExposureType
-	 * SettlementDetails50.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType7Choice#Code
-	 * ExposureType7Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType7Choice#Proprietary
-	 * ExposureType7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#ExposureType
-	 * SettlementDetails51.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#ExposureType
-	 * SettlementDetails6.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType2Choice#Code
-	 * ExposureType2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType2Choice#Proprietary
-	 * ExposureType2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#ExposureType
-	 * SettlementDetails20.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType4Choice#Code
-	 * ExposureType4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType4Choice#Proprietary
-	 * ExposureType4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#ExposureType
-	 * SettlementDetails24.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType6Choice#Code
-	 * ExposureType6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType6Choice#Proprietary
-	 * ExposureType6Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#ExposureType
-	 * SettlementDetails33.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#ExposureType
-	 * SettlementDetails45.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#ExposureType
-	 * SettlementDetails54.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#ExposureType
-	 * SettlementDetails1.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#ExposureType
-	 * SettlementDetails19.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#ExposureType
-	 * SettlementDetails22.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#ExposureType
-	 * SettlementDetails35.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#ExposureType
-	 * SettlementDetails42.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#ExposureType
-	 * SettlementDetails52.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#ExposureType
-	 * SettlementDetails8.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#ExposureType
-	 * SettlementDetails11.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#ExposureType
-	 * SettlementDetails23.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#ExposureType
-	 * SettlementDetails37.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#ExposureType
-	 * SettlementDetails44.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#ExposureType
-	 * SettlementDetails53.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType9Choice#Code
-	 * ExposureType9Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType9Choice#Proprietary
-	 * ExposureType9Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType5Choice#Code
-	 * ExposureType5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType5Choice#Proprietary
-	 * ExposureType5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#ExposureType
-	 * SettlementDetails26.ExposureType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Obligation1#ExposureType
-	 * Obligation1.ExposureType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Obligation2#ExposureType
-	 * Obligation2.ExposureType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Summary1#ExposureType
-	 * Summary1.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType8Choice#Code
-	 * ExposureType8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType8Choice#Proprietary
-	 * ExposureType8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#ExposureType
-	 * SettlementDetails36.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#ExposureType
-	 * SettlementDetails67.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#ExposureType
-	 * SettlementDetails70.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#ExposureType
-	 * SettlementDetails68.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType10Choice#Code
-	 * ExposureType10Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType10Choice#Proprietary
-	 * ExposureType10Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#ExposureType
-	 * SettlementDetails69.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#ExposureType
-	 * SettlementDetails81.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#ExposureType
-	 * SettlementDetails80.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType11Choice#Code
-	 * ExposureType11Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType11Choice#Proprietary
-	 * ExposureType11Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#ExposureType
-	 * SettlementDetails83.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#ExposureType
-	 * SettlementDetails85.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType12Choice#Code
-	 * ExposureType12Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType12Choice#Proprietary
-	 * ExposureType12Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Obligation3#ExposureType
-	 * Obligation3.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType13Choice#Code
-	 * ExposureType13Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType13Choice#Proprietary
-	 * ExposureType13Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType14Choice#Code
-	 * ExposureType14Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType14Choice#Proprietary
-	 * ExposureType14Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#ExposureType
-	 * SettlementDetails93.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#ExposureType
-	 * SettlementDetails90.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#ExposureType
-	 * SettlementDetails94.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#ExposureType
-	 * SettlementDetails95.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType16Choice#Code
-	 * ExposureType16Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType16Choice#Proprietary
-	 * ExposureType16Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#ExposureType
-	 * SettlementDetails101.ExposureType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Obligation4#ExposureType
-	 * Obligation4.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#ExposureType
-	 * SettlementDetails111.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#ExposureType
-	 * SettlementDetails112.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#ExposureType
-	 * SettlementDetails110.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#ExposureType
-	 * SettlementDetails115.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#ExposureType
-	 * SettlementDetails113.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#Code
-	 * ExposureType17Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#Proprietary
-	 * ExposureType17Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#ExposureType
-	 * SettlementDetails128.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#ExposureType
-	 * SettlementDetails120.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#ExposureType
-	 * SettlementDetails119.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#ExposureType
-	 * SettlementDetails122.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#ExposureType
-	 * SettlementDetails121.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#ExposureType
-	 * SettlementDetails134.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#ExposureType
-	 * SettlementDetails137.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#ExposureType
-	 * SettlementDetails132.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#ExposureType
-	 * SettlementDetails138.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#ExposureType
-	 * SettlementDetails133.ExposureType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Obligation5#ExposureType
-	 * Obligation5.ExposureType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType1Choice#mmCode
+	 * ExposureType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType1Choice#mmProprietary
+	 * ExposureType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType3Choice#mmCode
+	 * ExposureType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType3Choice#mmProprietary
+	 * ExposureType3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#mmExposureType
+	 * SettlementDetails50.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType7Choice#mmCode
+	 * ExposureType7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType7Choice#mmProprietary
+	 * ExposureType7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#mmExposureType
+	 * SettlementDetails51.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#mmExposureType
+	 * SettlementDetails6.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType2Choice#mmCode
+	 * ExposureType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType2Choice#mmProprietary
+	 * ExposureType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#mmExposureType
+	 * SettlementDetails20.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType4Choice#mmCode
+	 * ExposureType4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType4Choice#mmProprietary
+	 * ExposureType4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#mmExposureType
+	 * SettlementDetails24.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType6Choice#mmCode
+	 * ExposureType6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType6Choice#mmProprietary
+	 * ExposureType6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#mmExposureType
+	 * SettlementDetails33.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#mmExposureType
+	 * SettlementDetails45.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#mmExposureType
+	 * SettlementDetails54.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmExposureType
+	 * SettlementDetails1.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmExposureType
+	 * SettlementDetails19.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmExposureType
+	 * SettlementDetails22.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmExposureType
+	 * SettlementDetails35.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmExposureType
+	 * SettlementDetails42.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmExposureType
+	 * SettlementDetails52.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#mmExposureType
+	 * SettlementDetails8.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#mmExposureType
+	 * SettlementDetails11.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#mmExposureType
+	 * SettlementDetails23.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#mmExposureType
+	 * SettlementDetails37.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#mmExposureType
+	 * SettlementDetails44.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#mmExposureType
+	 * SettlementDetails53.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType9Choice#mmCode
+	 * ExposureType9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType9Choice#mmProprietary
+	 * ExposureType9Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType5Choice#mmCode
+	 * ExposureType5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType5Choice#mmProprietary
+	 * ExposureType5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#mmExposureType
+	 * SettlementDetails26.mmExposureType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Obligation1#mmExposureType
+	 * Obligation1.mmExposureType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Obligation2#mmExposureType
+	 * Obligation2.mmExposureType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Summary1#mmExposureType
+	 * Summary1.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType8Choice#mmCode
+	 * ExposureType8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType8Choice#mmProprietary
+	 * ExposureType8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#mmExposureType
+	 * SettlementDetails36.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmExposureType
+	 * SettlementDetails67.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#mmExposureType
+	 * SettlementDetails70.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#mmExposureType
+	 * SettlementDetails68.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType10Choice#mmCode
+	 * ExposureType10Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType10Choice#mmProprietary
+	 * ExposureType10Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#mmExposureType
+	 * SettlementDetails69.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmExposureType
+	 * SettlementDetails81.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#mmExposureType
+	 * SettlementDetails80.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType11Choice#mmCode
+	 * ExposureType11Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType11Choice#mmProprietary
+	 * ExposureType11Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#mmExposureType
+	 * SettlementDetails83.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#mmExposureType
+	 * SettlementDetails85.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType12Choice#mmCode
+	 * ExposureType12Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType12Choice#mmProprietary
+	 * ExposureType12Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Obligation3#mmExposureType
+	 * Obligation3.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType13Choice#mmCode
+	 * ExposureType13Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType13Choice#mmProprietary
+	 * ExposureType13Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType14Choice#mmCode
+	 * ExposureType14Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType14Choice#mmProprietary
+	 * ExposureType14Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmExposureType
+	 * SettlementDetails93.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#mmExposureType
+	 * SettlementDetails90.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#mmExposureType
+	 * SettlementDetails94.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#mmExposureType
+	 * SettlementDetails95.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType16Choice#mmCode
+	 * ExposureType16Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType16Choice#mmProprietary
+	 * ExposureType16Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmExposureType
+	 * SettlementDetails101.mmExposureType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Obligation4#mmExposureType
+	 * Obligation4.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmExposureType
+	 * SettlementDetails111.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmExposureType
+	 * SettlementDetails112.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#mmExposureType
+	 * SettlementDetails110.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#mmExposureType
+	 * SettlementDetails115.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#mmExposureType
+	 * SettlementDetails113.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#mmCode
+	 * ExposureType17Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ExposureType17Choice#mmProprietary
+	 * ExposureType17Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmExposureType
+	 * SettlementDetails128.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmExposureType
+	 * SettlementDetails120.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmExposureType
+	 * SettlementDetails119.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#mmExposureType
+	 * SettlementDetails122.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#mmExposureType
+	 * SettlementDetails121.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#mmExposureType
+	 * SettlementDetails134.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmExposureType
+	 * SettlementDetails137.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmExposureType
+	 * SettlementDetails132.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmExposureType
+	 * SettlementDetails138.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#mmExposureType
+	 * SettlementDetails133.mmExposureType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Obligation5#mmExposureType
+	 * Obligation5.mmExposureType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -435,48 +438,49 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExposureType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExposureType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType1Choice.Code, com.tools20022.repository.choice.ExposureType1Choice.Proprietary, com.tools20022.repository.choice.ExposureType3Choice.Code,
-					com.tools20022.repository.choice.ExposureType3Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails50.ExposureType, com.tools20022.repository.choice.ExposureType7Choice.Code,
-					com.tools20022.repository.choice.ExposureType7Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails51.ExposureType, com.tools20022.repository.msg.SettlementDetails6.ExposureType,
-					com.tools20022.repository.choice.ExposureType2Choice.Code, com.tools20022.repository.choice.ExposureType2Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails20.ExposureType,
-					com.tools20022.repository.choice.ExposureType4Choice.Code, com.tools20022.repository.choice.ExposureType4Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails24.ExposureType,
-					com.tools20022.repository.choice.ExposureType6Choice.Code, com.tools20022.repository.choice.ExposureType6Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails33.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails45.ExposureType, com.tools20022.repository.msg.SettlementDetails54.ExposureType, com.tools20022.repository.msg.SettlementDetails1.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails19.ExposureType, com.tools20022.repository.msg.SettlementDetails22.ExposureType, com.tools20022.repository.msg.SettlementDetails35.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails42.ExposureType, com.tools20022.repository.msg.SettlementDetails52.ExposureType, com.tools20022.repository.msg.SettlementDetails8.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails11.ExposureType, com.tools20022.repository.msg.SettlementDetails23.ExposureType, com.tools20022.repository.msg.SettlementDetails37.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails44.ExposureType, com.tools20022.repository.msg.SettlementDetails53.ExposureType, com.tools20022.repository.choice.ExposureType9Choice.Code,
-					com.tools20022.repository.choice.ExposureType9Choice.Proprietary, com.tools20022.repository.choice.ExposureType5Choice.Code, com.tools20022.repository.choice.ExposureType5Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails26.ExposureType, com.tools20022.repository.msg.Obligation1.ExposureType, com.tools20022.repository.msg.Obligation2.ExposureType,
-					com.tools20022.repository.msg.Summary1.ExposureType, com.tools20022.repository.choice.ExposureType8Choice.Code, com.tools20022.repository.choice.ExposureType8Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails36.ExposureType, com.tools20022.repository.msg.SettlementDetails67.ExposureType, com.tools20022.repository.msg.SettlementDetails70.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails68.ExposureType, com.tools20022.repository.choice.ExposureType10Choice.Code, com.tools20022.repository.choice.ExposureType10Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails69.ExposureType, com.tools20022.repository.msg.SettlementDetails81.ExposureType, com.tools20022.repository.msg.SettlementDetails80.ExposureType,
-					com.tools20022.repository.choice.ExposureType11Choice.Code, com.tools20022.repository.choice.ExposureType11Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails83.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails85.ExposureType, com.tools20022.repository.choice.ExposureType12Choice.Code, com.tools20022.repository.choice.ExposureType12Choice.Proprietary,
-					com.tools20022.repository.msg.Obligation3.ExposureType, com.tools20022.repository.choice.ExposureType13Choice.Code, com.tools20022.repository.choice.ExposureType13Choice.Proprietary,
-					com.tools20022.repository.choice.ExposureType14Choice.Code, com.tools20022.repository.choice.ExposureType14Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails93.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails90.ExposureType, com.tools20022.repository.msg.SettlementDetails94.ExposureType, com.tools20022.repository.msg.SettlementDetails95.ExposureType,
-					com.tools20022.repository.choice.ExposureType16Choice.Code, com.tools20022.repository.choice.ExposureType16Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails101.ExposureType,
-					com.tools20022.repository.msg.Obligation4.ExposureType, com.tools20022.repository.msg.SettlementDetails111.ExposureType, com.tools20022.repository.msg.SettlementDetails112.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails110.ExposureType, com.tools20022.repository.msg.SettlementDetails115.ExposureType, com.tools20022.repository.msg.SettlementDetails113.ExposureType,
-					com.tools20022.repository.choice.ExposureType17Choice.Code, com.tools20022.repository.choice.ExposureType17Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails128.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails120.ExposureType, com.tools20022.repository.msg.SettlementDetails119.ExposureType, com.tools20022.repository.msg.SettlementDetails122.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails121.ExposureType, com.tools20022.repository.msg.SettlementDetails134.ExposureType, com.tools20022.repository.msg.SettlementDetails137.ExposureType,
-					com.tools20022.repository.msg.SettlementDetails132.ExposureType, com.tools20022.repository.msg.SettlementDetails138.ExposureType, com.tools20022.repository.msg.SettlementDetails133.ExposureType,
-					com.tools20022.repository.msg.Obligation5.ExposureType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExposureType1Choice.mmCode, com.tools20022.repository.choice.ExposureType1Choice.mmProprietary, com.tools20022.repository.choice.ExposureType3Choice.mmCode,
+					com.tools20022.repository.choice.ExposureType3Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails50.mmExposureType, com.tools20022.repository.choice.ExposureType7Choice.mmCode,
+					com.tools20022.repository.choice.ExposureType7Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails51.mmExposureType, com.tools20022.repository.msg.SettlementDetails6.mmExposureType,
+					com.tools20022.repository.choice.ExposureType2Choice.mmCode, com.tools20022.repository.choice.ExposureType2Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails20.mmExposureType,
+					com.tools20022.repository.choice.ExposureType4Choice.mmCode, com.tools20022.repository.choice.ExposureType4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails24.mmExposureType,
+					com.tools20022.repository.choice.ExposureType6Choice.mmCode, com.tools20022.repository.choice.ExposureType6Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails33.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails45.mmExposureType, com.tools20022.repository.msg.SettlementDetails54.mmExposureType, com.tools20022.repository.msg.SettlementDetails1.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails19.mmExposureType, com.tools20022.repository.msg.SettlementDetails22.mmExposureType, com.tools20022.repository.msg.SettlementDetails35.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails42.mmExposureType, com.tools20022.repository.msg.SettlementDetails52.mmExposureType, com.tools20022.repository.msg.SettlementDetails8.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails11.mmExposureType, com.tools20022.repository.msg.SettlementDetails23.mmExposureType, com.tools20022.repository.msg.SettlementDetails37.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails44.mmExposureType, com.tools20022.repository.msg.SettlementDetails53.mmExposureType, com.tools20022.repository.choice.ExposureType9Choice.mmCode,
+					com.tools20022.repository.choice.ExposureType9Choice.mmProprietary, com.tools20022.repository.choice.ExposureType5Choice.mmCode, com.tools20022.repository.choice.ExposureType5Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails26.mmExposureType, com.tools20022.repository.msg.Obligation1.mmExposureType, com.tools20022.repository.msg.Obligation2.mmExposureType,
+					com.tools20022.repository.msg.Summary1.mmExposureType, com.tools20022.repository.choice.ExposureType8Choice.mmCode, com.tools20022.repository.choice.ExposureType8Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails36.mmExposureType, com.tools20022.repository.msg.SettlementDetails67.mmExposureType, com.tools20022.repository.msg.SettlementDetails70.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails68.mmExposureType, com.tools20022.repository.choice.ExposureType10Choice.mmCode, com.tools20022.repository.choice.ExposureType10Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails69.mmExposureType, com.tools20022.repository.msg.SettlementDetails81.mmExposureType, com.tools20022.repository.msg.SettlementDetails80.mmExposureType,
+					com.tools20022.repository.choice.ExposureType11Choice.mmCode, com.tools20022.repository.choice.ExposureType11Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails83.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails85.mmExposureType, com.tools20022.repository.choice.ExposureType12Choice.mmCode, com.tools20022.repository.choice.ExposureType12Choice.mmProprietary,
+					com.tools20022.repository.msg.Obligation3.mmExposureType, com.tools20022.repository.choice.ExposureType13Choice.mmCode, com.tools20022.repository.choice.ExposureType13Choice.mmProprietary,
+					com.tools20022.repository.choice.ExposureType14Choice.mmCode, com.tools20022.repository.choice.ExposureType14Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails93.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails90.mmExposureType, com.tools20022.repository.msg.SettlementDetails94.mmExposureType, com.tools20022.repository.msg.SettlementDetails95.mmExposureType,
+					com.tools20022.repository.choice.ExposureType16Choice.mmCode, com.tools20022.repository.choice.ExposureType16Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails101.mmExposureType,
+					com.tools20022.repository.msg.Obligation4.mmExposureType, com.tools20022.repository.msg.SettlementDetails111.mmExposureType, com.tools20022.repository.msg.SettlementDetails112.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails110.mmExposureType, com.tools20022.repository.msg.SettlementDetails115.mmExposureType, com.tools20022.repository.msg.SettlementDetails113.mmExposureType,
+					com.tools20022.repository.choice.ExposureType17Choice.mmCode, com.tools20022.repository.choice.ExposureType17Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails128.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails120.mmExposureType, com.tools20022.repository.msg.SettlementDetails119.mmExposureType, com.tools20022.repository.msg.SettlementDetails122.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails121.mmExposureType, com.tools20022.repository.msg.SettlementDetails134.mmExposureType, com.tools20022.repository.msg.SettlementDetails137.mmExposureType,
+					com.tools20022.repository.msg.SettlementDetails132.mmExposureType, com.tools20022.repository.msg.SettlementDetails138.mmExposureType, com.tools20022.repository.msg.SettlementDetails133.mmExposureType,
+					com.tools20022.repository.msg.Obligation5.mmExposureType);
 			elementContext_lazy = () -> ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExposureType";
 			definition = "Specifies the underlying business area/type of trade causing the collateral movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExposureTypeCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount minimumTransferAmount;
 	/**
 	 * Minimum amount to pay/receive as specified in the agreement in the base
 	 * currency (to avoid the need to transfer an inconveniently small amount of
@@ -489,24 +493,24 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#MinimumTransferAmount
-	 * VariationMargin1.MinimumTransferAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#MinimumTransferAmount
-	 * SegregatedIndependentAmountMargin1.MinimumTransferAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#MinimumTransferAmount
-	 * SummaryAmounts1.MinimumTransferAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmMinimumTransferAmount
+	 * VariationMargin1.mmMinimumTransferAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#mmMinimumTransferAmount
+	 * SegregatedIndependentAmountMargin1.mmMinimumTransferAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmMinimumTransferAmount
+	 * SummaryAmounts1.mmMinimumTransferAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -520,20 +524,21 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MinimumTransferAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMinimumTransferAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.MinimumTransferAmount, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.MinimumTransferAmount,
-					com.tools20022.repository.msg.SummaryAmounts1.MinimumTransferAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmMinimumTransferAmount, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmMinimumTransferAmount,
+					com.tools20022.repository.msg.SummaryAmounts1.mmMinimumTransferAmount);
 			elementContext_lazy = () -> ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTransferAmount";
 			definition = "Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of variation margin).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount roundingAmount;
 	/**
 	 * Amount specified to avoid the need to transfer uneven amounts of
 	 * collateral.
@@ -545,24 +550,24 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#RoundingAmount
-	 * VariationMargin1.RoundingAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#RoundingAmount
-	 * SegregatedIndependentAmountMargin1.RoundingAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#RoundingAmount
-	 * SummaryAmounts1.RoundingAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmRoundingAmount
+	 * VariationMargin1.mmRoundingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#mmRoundingAmount
+	 * SegregatedIndependentAmountMargin1.mmRoundingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmRoundingAmount
+	 * SummaryAmounts1.mmRoundingAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -576,20 +581,21 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RoundingAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRoundingAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.RoundingAmount, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.RoundingAmount,
-					com.tools20022.repository.msg.SummaryAmounts1.RoundingAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmRoundingAmount, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmRoundingAmount,
+					com.tools20022.repository.msg.SummaryAmounts1.mmRoundingAmount);
 			elementContext_lazy = () -> ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
 			definition = "Amount specified to avoid the need to transfer uneven amounts of collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected RoundingMethodCode roundingMethod;
 	/**
 	 * Defines how the rounding amount is applied in the calculation to avoid
 	 * the need to transfer uneven amounts of collateral. For example, should
@@ -603,21 +609,21 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RoundingMethodCode
 	 * RoundingMethodCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#RoundingMethod
-	 * VariationMargin1.RoundingMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#RoundingMethod
-	 * SegregatedIndependentAmountMargin1.RoundingMethod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.VariationMargin1#mmRoundingMethod
+	 * VariationMargin1.mmRoundingMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#mmRoundingMethod
+	 * SegregatedIndependentAmountMargin1.mmRoundingMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -631,19 +637,20 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RoundingMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRoundingMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.RoundingMethod, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.RoundingMethod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmRoundingMethod, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmRoundingMethod);
 			elementContext_lazy = () -> ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingMethod";
 			definition = "Defines how the rounding amount is applied in the calculation to avoid the need to transfer uneven amounts of collateral. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RoundingMethodCode.mmObject();
 		}
 	};
+	protected CollateralAgreement relatedCollateralAgreement;
 	/**
 	 * Agreement in which the exposure terms are specified.
 	 * <p>
@@ -652,8 +659,8 @@ public class ExposureTerm {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#ExposureTerm
-	 * CollateralAgreement.ExposureTerm}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmExposureTerm
+	 * CollateralAgreement.mmExposureTerm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -676,20 +683,21 @@ public class ExposureTerm {
 	 * definition} = "Agreement in which the exposure terms are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedCollateralAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedCollateralAgreement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCollateralAgreement";
 			definition = "Agreement in which the exposure terms are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralAgreement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.ExposureTerm;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmExposureTerm;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount minimumRequirementDeposit;
 	/**
 	 * Minimum requirement for a participant if their requirement falls below a
 	 * specific amount set by the central counterparty.
@@ -701,24 +709,24 @@ public class ExposureTerm {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Margin2#MinimumRequirementDeposit
-	 * Margin2.MinimumRequirementDeposit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarginCalculation1#MinimumRequirementDeposit
-	 * MarginCalculation1.MinimumRequirementDeposit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarginCalculation2#MinimumRequirementDeposit
-	 * MarginCalculation2.MinimumRequirementDeposit}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExposureTerm ExposureTerm}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Margin2#mmMinimumRequirementDeposit
+	 * Margin2.mmMinimumRequirementDeposit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarginCalculation1#mmMinimumRequirementDeposit
+	 * MarginCalculation1.mmMinimumRequirementDeposit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarginCalculation2#mmMinimumRequirementDeposit
+	 * MarginCalculation2.mmMinimumRequirementDeposit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -732,17 +740,17 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MinimumRequirementDeposit = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMinimumRequirementDeposit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin2.MinimumRequirementDeposit, com.tools20022.repository.msg.MarginCalculation1.MinimumRequirementDeposit,
-					com.tools20022.repository.msg.MarginCalculation2.MinimumRequirementDeposit);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin2.mmMinimumRequirementDeposit, com.tools20022.repository.msg.MarginCalculation1.mmMinimumRequirementDeposit,
+					com.tools20022.repository.msg.MarginCalculation2.mmMinimumRequirementDeposit);
 			elementContext_lazy = () -> ExposureTerm.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumRequirementDeposit";
 			definition = "Minimum requirement for a participant if their requirement falls below a specific amount set by the central counterparty.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -750,21 +758,69 @@ public class ExposureTerm {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExposureTerm";
 				definition = "Specifies the terms used to calculate a risk exposure and its coverage.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralAgreement.ExposureTerm);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginTerms1Choice.MarginDetails);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralAgreement.mmExposureTerm);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginTerms1Choice.mmMarginDetails);
 				subType_lazy = () -> Arrays.asList(IndependentAmountTerm.mmObject(), VariationMarginTerm.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureTerm.ExposureType, com.tools20022.repository.entity.ExposureTerm.MinimumTransferAmount,
-						com.tools20022.repository.entity.ExposureTerm.RoundingAmount, com.tools20022.repository.entity.ExposureTerm.RoundingMethod, com.tools20022.repository.entity.ExposureTerm.RelatedCollateralAgreement,
-						com.tools20022.repository.entity.ExposureTerm.MinimumRequirementDeposit);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureTerm.mmExposureType, com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount,
+						com.tools20022.repository.entity.ExposureTerm.mmRoundingAmount, com.tools20022.repository.entity.ExposureTerm.mmRoundingMethod, com.tools20022.repository.entity.ExposureTerm.mmRelatedCollateralAgreement,
+						com.tools20022.repository.entity.ExposureTerm.mmMinimumRequirementDeposit);
 				derivationComponent_lazy = () -> Arrays.asList(ExposureType1Choice.mmObject(), ExposureType3Choice.mmObject(), ExposureType7Choice.mmObject(), ExposureType2Choice.mmObject(), ExposureType4Choice.mmObject(),
 						ExposureType6Choice.mmObject(), ExposureType9Choice.mmObject(), ExposureType5Choice.mmObject(), Margin1.mmObject(), MarginTerms1Choice.mmObject(), ExposureType8Choice.mmObject(), ExposureType10Choice.mmObject(),
 						ExposureType11Choice.mmObject(), ExposureType12Choice.mmObject(), ExposureType13Choice.mmObject(), ExposureType14Choice.mmObject(), ExposureType16Choice.mmObject(), ExposureType17Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExposureTypeCode getExposureType() {
+		return exposureType;
+	}
+
+	public void setExposureType(ExposureTypeCode exposureType) {
+		this.exposureType = exposureType;
+	}
+
+	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
+		return minimumTransferAmount;
+	}
+
+	public void setMinimumTransferAmount(ActiveCurrencyAndAmount minimumTransferAmount) {
+		this.minimumTransferAmount = minimumTransferAmount;
+	}
+
+	public ActiveCurrencyAndAmount getRoundingAmount() {
+		return roundingAmount;
+	}
+
+	public void setRoundingAmount(ActiveCurrencyAndAmount roundingAmount) {
+		this.roundingAmount = roundingAmount;
+	}
+
+	public RoundingMethodCode getRoundingMethod() {
+		return roundingMethod;
+	}
+
+	public void setRoundingMethod(RoundingMethodCode roundingMethod) {
+		this.roundingMethod = roundingMethod;
+	}
+
+	public CollateralAgreement getRelatedCollateralAgreement() {
+		return relatedCollateralAgreement;
+	}
+
+	public void setRelatedCollateralAgreement(com.tools20022.repository.entity.CollateralAgreement relatedCollateralAgreement) {
+		this.relatedCollateralAgreement = relatedCollateralAgreement;
+	}
+
+	public ActiveCurrencyAndAmount getMinimumRequirementDeposit() {
+		return minimumRequirementDeposit;
+	}
+
+	public void setMinimumRequirementDeposit(ActiveCurrencyAndAmount minimumRequirementDeposit) {
+		this.minimumRequirementDeposit = minimumRequirementDeposit;
 	}
 }

@@ -32,27 +32,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.CSCResultCode CSCResultCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCMatch
- * CSCResult1Code.CSCMatch}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCNoMatch
- * CSCResult1Code.CSCNoMatch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCMatch
+ * CSCResult1Code.mmCSCMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCTechnical
- * CSCResult1Code.CSCTechnical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCNoMatch
+ * CSCResult1Code.mmCSCNoMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCNotTechnical
- * CSCResult1Code.CSCNotTechnical}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCMissing
- * CSCResult1Code.CSCMissing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCNotUsed
- * CSCResult1Code.CSCNotUsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCTechnical
+ * CSCResult1Code.mmCSCTechnical}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCNotTechnical
+ * CSCResult1Code.mmCSCNotTechnical}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCMissing
+ * CSCResult1Code.mmCSCMissing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCNotUsed
+ * CSCResult1Code.mmCSCNotUsed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +91,7 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCMatch = new MMCode() {
+	public static final MMCode mmCSCMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCMatch";
@@ -111,7 +114,7 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCNoMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCNoMatch = new MMCode() {
+	public static final MMCode mmCSCNoMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCNoMatch";
@@ -134,7 +137,7 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCTechnical"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCTechnical = new MMCode() {
+	public static final MMCode mmCSCTechnical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCTechnical";
@@ -157,7 +160,7 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCNotTechnical"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCNotTechnical = new MMCode() {
+	public static final MMCode mmCSCNotTechnical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCNotTechnical";
@@ -180,7 +183,7 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCMissing"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCMissing = new MMCode() {
+	public static final MMCode mmCSCMissing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCMissing";
@@ -203,7 +206,7 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCNotUsed"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCNotUsed = new MMCode() {
+	public static final MMCode mmCSCNotUsed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCNotUsed";
@@ -214,13 +217,13 @@ public class CSCResult1Code extends CSCResultCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMCH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CSCResult1Code";
 				definition = "Result of the printed CSC (Card Security Code) validation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CSCResult1Code.CSCMatch, com.tools20022.repository.codeset.CSCResult1Code.CSCNoMatch, com.tools20022.repository.codeset.CSCResult1Code.CSCTechnical,
-						com.tools20022.repository.codeset.CSCResult1Code.CSCNotTechnical, com.tools20022.repository.codeset.CSCResult1Code.CSCMissing, com.tools20022.repository.codeset.CSCResult1Code.CSCNotUsed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CSCResult1Code.mmCSCMatch, com.tools20022.repository.codeset.CSCResult1Code.mmCSCNoMatch, com.tools20022.repository.codeset.CSCResult1Code.mmCSCTechnical,
+						com.tools20022.repository.codeset.CSCResult1Code.mmCSCNotTechnical, com.tools20022.repository.codeset.CSCResult1Code.mmCSCMissing, com.tools20022.repository.codeset.CSCResult1Code.mmCSCNotUsed);
 				trace_lazy = () -> CSCResultCode.mmObject();
 			}
 		});

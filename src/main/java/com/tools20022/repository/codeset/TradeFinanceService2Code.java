@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#Level1Services
- * TradeFinanceService2Code.Level1Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#mmLevel1Services
+ * TradeFinanceService2Code.mmLevel1Services}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#Level2Services
- * TradeFinanceService2Code.Level2Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#mmLevel2Services
+ * TradeFinanceService2Code.mmLevel2Services}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#Level3Services
- * TradeFinanceService2Code.Level3Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#mmLevel3Services
+ * TradeFinanceService2Code.mmLevel3Services}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 * name} = "Level1Services"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level1Services = new MMCode() {
+	public static final MMCode mmLevel1Services = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level1Services";
@@ -107,7 +107,7 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 * name} = "Level2Services"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level2Services = new MMCode() {
+	public static final MMCode mmLevel2Services = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level2Services";
@@ -130,7 +130,7 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 * name} = "Level3Services"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level3Services = new MMCode() {
+	public static final MMCode mmLevel3Services = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level3Services";
@@ -141,13 +141,13 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LEV1");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeFinanceService2Code";
 				definition = "Specifies the level of service offered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeFinanceService2Code.Level1Services, com.tools20022.repository.codeset.TradeFinanceService2Code.Level2Services,
-						com.tools20022.repository.codeset.TradeFinanceService2Code.Level3Services);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeFinanceService2Code.mmLevel1Services, com.tools20022.repository.codeset.TradeFinanceService2Code.mmLevel2Services,
+						com.tools20022.repository.codeset.TradeFinanceService2Code.mmLevel3Services);
 				trace_lazy = () -> TradeFinanceServiceCode.mmObject();
 			}
 		});

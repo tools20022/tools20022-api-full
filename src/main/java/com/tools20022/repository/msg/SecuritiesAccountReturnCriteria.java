@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#AccountIdentification
- * SecuritiesAccountReturnCriteria.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmAccountIdentification
+ * SecuritiesAccountReturnCriteria.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#PartyIdentification
- * SecuritiesAccountReturnCriteria.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmPartyIdentification
+ * SecuritiesAccountReturnCriteria.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#PartyType
- * SecuritiesAccountReturnCriteria.PartyType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmPartyType
+ * SecuritiesAccountReturnCriteria.mmPartyType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#AccountServicer
- * SecuritiesAccountReturnCriteria.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmAccountServicer
+ * SecuritiesAccountReturnCriteria.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#AccountType
- * SecuritiesAccountReturnCriteria.AccountType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmAccountType
+ * SecuritiesAccountReturnCriteria.mmAccountType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#OpeningDate
- * SecuritiesAccountReturnCriteria.OpeningDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmOpeningDate
+ * SecuritiesAccountReturnCriteria.mmOpeningDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#ClosingDate
- * SecuritiesAccountReturnCriteria.ClosingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmClosingDate
+ * SecuritiesAccountReturnCriteria.mmClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#EndInvestorFlag
- * SecuritiesAccountReturnCriteria.EndInvestorFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmEndInvestorFlag
+ * SecuritiesAccountReturnCriteria.mmEndInvestorFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#PricingScheme
- * SecuritiesAccountReturnCriteria.PricingScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria#mmPricingScheme
+ * SecuritiesAccountReturnCriteria.mmPricingScheme}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccountReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator accountIdentification;
 	/**
 	 * Indicates whether the identification of the account is requested.
 	 * <p>
@@ -111,7 +112,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * "Indicates whether the identification of the account is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -119,11 +120,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Indicates whether the identification of the account is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator partyIdentification;
 	/**
 	 * Indicates whether the identification of the party owning the account is
 	 * requested.
@@ -155,7 +157,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -163,11 +165,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Indicates whether the identification of the party owning the account is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator partyType;
 	/**
 	 * Indicates whether the type of the party owning the account is requested.
 	 * <p>
@@ -198,7 +201,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -206,11 +209,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyType";
 			definition = "Indicates whether the type of the party owning the account is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator accountServicer;
 	/**
 	 * Indicates whether the account servicer is requested.
 	 * <p>
@@ -239,7 +243,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * definition} = "Indicates whether the account servicer is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -247,11 +251,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Indicates whether the account servicer is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator accountType;
 	/**
 	 * Indicates whether the account type is requested.
 	 * <p>
@@ -280,7 +285,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * definition} = "Indicates whether the account type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -288,11 +293,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountType";
 			definition = "Indicates whether the account type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator openingDate;
 	/**
 	 * Indicates whether the opening date for the account is requested.
 	 * <p>
@@ -322,7 +328,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * "Indicates whether the opening date for the account is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -330,11 +336,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Indicates whether the opening date for the account is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator closingDate;
 	/**
 	 * Indicates whether the closing date for the account is requested.
 	 * <p>
@@ -364,7 +371,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * "Indicates whether the closing date for the account is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -372,11 +379,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Indicates whether the closing date for the account is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator endInvestorFlag;
 	/**
 	 * Specifies information to identify securities accounts where allocation
 	 * instructions are posted.
@@ -408,7 +416,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndInvestorFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -416,11 +424,12 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndInvestorFlag";
 			definition = "Specifies information to identify securities accounts where allocation instructions are posted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator pricingScheme;
 	/**
 	 * Defines how the price is applied to the securities account.
 	 * <p>
@@ -450,7 +459,7 @@ public class SecuritiesAccountReturnCriteria {
 	 * "Defines how the price is applied to the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PricingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
@@ -458,8 +467,8 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingScheme";
 			definition = "Defines how the price is applied to the securities account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -467,17 +476,89 @@ public class SecuritiesAccountReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.AccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.PartyIdentification,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.PartyType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.AccountServicer,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.AccountType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.OpeningDate,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.ClosingDate, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.EndInvestorFlag,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.PricingScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPartyIdentification,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPartyType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountServicer,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmOpeningDate,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmClosingDate, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmEndInvestorFlag,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPricingScheme);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReturnCriteria";
 				definition = "Return criteria for information to be returned in the report deriving from a query about securities account reference data. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(RequestedIndicator accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public RequestedIndicator getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(RequestedIndicator partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public RequestedIndicator getPartyType() {
+		return partyType;
+	}
+
+	public void setPartyType(RequestedIndicator partyType) {
+		this.partyType = partyType;
+	}
+
+	public RequestedIndicator getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(RequestedIndicator accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public RequestedIndicator getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(RequestedIndicator accountType) {
+		this.accountType = accountType;
+	}
+
+	public RequestedIndicator getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(RequestedIndicator openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	public RequestedIndicator getClosingDate() {
+		return closingDate;
+	}
+
+	public void setClosingDate(RequestedIndicator closingDate) {
+		this.closingDate = closingDate;
+	}
+
+	public RequestedIndicator getEndInvestorFlag() {
+		return endInvestorFlag;
+	}
+
+	public void setEndInvestorFlag(RequestedIndicator endInvestorFlag) {
+		this.endInvestorFlag = endInvestorFlag;
+	}
+
+	public RequestedIndicator getPricingScheme() {
+		return pricingScheme;
+	}
+
+	public void setPricingScheme(RequestedIndicator pricingScheme) {
+		this.pricingScheme = pricingScheme;
 	}
 }

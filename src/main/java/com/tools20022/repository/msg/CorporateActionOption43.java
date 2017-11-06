@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#OptionNumber
- * CorporateActionOption43.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#mmOptionNumber
+ * CorporateActionOption43.mmOptionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#OptionType
- * CorporateActionOption43.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#mmOptionType
+ * CorporateActionOption43.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#InstructedOrQuantityToReceive
- * CorporateActionOption43.InstructedOrQuantityToReceive}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#mmInstructedOrQuantityToReceive
+ * CorporateActionOption43.mmInstructedOrQuantityToReceive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOption43 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OptionNumber1Choice optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -82,8 +83,8 @@ public class CorporateActionOption43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,21 +104,22 @@ public class CorporateActionOption43 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionOption43.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OptionNumber1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OptionNumber1Choice.mmObject();
 		}
 	};
+	protected CorporateActionOption15Choice optionType;
 	/**
 	 * Specifies the corporate action options available to the account owner.
 	 * <p>
@@ -130,8 +132,8 @@ public class CorporateActionOption43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
-	 * CorporateActionOption.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+	 * CorporateActionOption.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,21 +153,22 @@ public class CorporateActionOption43 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionOption43.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionOption15Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionOption15Choice.mmObject();
 		}
 	};
+	protected InstructedOrQuantityToReceive2Choice instructedOrQuantityToReceive;
 	/**
 	 * Specifies whether the quantity of financial instrument is a quantity of
 	 * securities instructed or a quantity to receive.
@@ -179,8 +182,8 @@ public class CorporateActionOption43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#InstructedBalance
-	 * CorporateActionEntitlement.InstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
+	 * CorporateActionEntitlement.mmInstructedBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,29 +204,29 @@ public class CorporateActionOption43 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructedOrQuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructedOrQuantityToReceive = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> CorporateActionOption43.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.InstructedBalance;
 			isDerived = false;
 			xmlTag = "InstdOrQtyToRcv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedOrQuantityToReceive";
 			definition = "Specifies whether the quantity of financial instrument is a quantity of securities instructed or a quantity to receive.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption43.OptionNumber, com.tools20022.repository.msg.CorporateActionOption43.OptionType,
-						com.tools20022.repository.msg.CorporateActionOption43.InstructedOrQuantityToReceive);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption43.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption43.mmOptionType,
+						com.tools20022.repository.msg.CorporateActionOption43.mmInstructedOrQuantityToReceive);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption43";
 				definition = "Provides information about the corporate action option.";
@@ -231,5 +234,29 @@ public class CorporateActionOption43 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OptionNumber1Choice getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(OptionNumber1Choice optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public CorporateActionOption15Choice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOption15Choice optionType) {
+		this.optionType = optionType;
+	}
+
+	public InstructedOrQuantityToReceive2Choice getInstructedOrQuantityToReceive() {
+		return instructedOrQuantityToReceive;
+	}
+
+	public void setInstructedOrQuantityToReceive(InstructedOrQuantityToReceive2Choice instructedOrQuantityToReceive) {
+		this.instructedOrQuantityToReceive = instructedOrQuantityToReceive;
 	}
 }

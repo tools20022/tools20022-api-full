@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectiveGroupInformation1#MessageIdentification
- * CorrectiveGroupInformation1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectiveGroupInformation1#mmMessageIdentification
+ * CorrectiveGroupInformation1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectiveGroupInformation1#MessageNameIdentification
- * CorrectiveGroupInformation1.MessageNameIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectiveGroupInformation1#mmMessageNameIdentification
+ * CorrectiveGroupInformation1.mmMessageNameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectiveGroupInformation1#CreationDateTime
- * CorrectiveGroupInformation1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CorrectiveGroupInformation1#mmCreationDateTime
+ * CorrectiveGroupInformation1.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorrectiveGroupInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference, as assigned by the instructing party, and sent
 	 * to the next party in the chain to unambiguously identify the message.
@@ -98,7 +99,7 @@ public class CorrectiveGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorrectiveGroupInformation1.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class CorrectiveGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.\nUsage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text messageNameIdentification;
 	/**
 	 * Specifies the message name identifier to which the message refers.
 	 * <p>
@@ -139,7 +141,7 @@ public class CorrectiveGroupInformation1 {
 	 * "Specifies the message name identifier to which the message refers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorrectiveGroupInformation1.mmObject();
 			isDerived = false;
@@ -147,11 +149,12 @@ public class CorrectiveGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameIdentification";
 			definition = "Specifies the message name identifier to which the message refers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created.
 	 * <p>
@@ -179,7 +182,7 @@ public class CorrectiveGroupInformation1 {
 	 * definition} = "Date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorrectiveGroupInformation1.mmObject();
 			isDerived = false;
@@ -187,8 +190,8 @@ public class CorrectiveGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -196,14 +199,38 @@ public class CorrectiveGroupInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectiveGroupInformation1.MessageIdentification, com.tools20022.repository.msg.CorrectiveGroupInformation1.MessageNameIdentification,
-						com.tools20022.repository.msg.CorrectiveGroupInformation1.CreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectiveGroupInformation1.mmMessageIdentification, com.tools20022.repository.msg.CorrectiveGroupInformation1.mmMessageNameIdentification,
+						com.tools20022.repository.msg.CorrectiveGroupInformation1.mmCreationDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorrectiveGroupInformation1";
 				definition = "Set of elements used to provide information on the group of the corrective transaction, to which the resolution message refers.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getMessageNameIdentification() {
+		return messageNameIdentification;
+	}
+
+	public void setMessageNameIdentification(Max35Text messageNameIdentification) {
+		this.messageNameIdentification = messageNameIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

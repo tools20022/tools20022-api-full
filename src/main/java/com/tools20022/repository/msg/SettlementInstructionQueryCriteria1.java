@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria based on which information is included.
@@ -37,92 +38,92 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#References
- * SettlementInstructionQueryCriteria1.References}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmReferences
+ * SettlementInstructionQueryCriteria1.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#Status
- * SettlementInstructionQueryCriteria1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmStatus
+ * SettlementInstructionQueryCriteria1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SecuritiesMovementType
- * SettlementInstructionQueryCriteria1.SecuritiesMovementType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSecuritiesMovementType
+ * SettlementInstructionQueryCriteria1.mmSecuritiesMovementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#Payment
- * SettlementInstructionQueryCriteria1.Payment}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmPayment
+ * SettlementInstructionQueryCriteria1.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SecuritiesTransactionType
- * SettlementInstructionQueryCriteria1.SecuritiesTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSecuritiesTransactionType
+ * SettlementInstructionQueryCriteria1.mmSecuritiesTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#FinancialInstrumentIdentification
- * SettlementInstructionQueryCriteria1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmFinancialInstrumentIdentification
+ * SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#Priority
- * SettlementInstructionQueryCriteria1.Priority}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmPriority
+ * SettlementInstructionQueryCriteria1.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SafekeepingAccount
- * SettlementInstructionQueryCriteria1.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSafekeepingAccount
+ * SettlementInstructionQueryCriteria1.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#CashAccount
- * SettlementInstructionQueryCriteria1.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmCashAccount
+ * SettlementInstructionQueryCriteria1.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#TradeDate
- * SettlementInstructionQueryCriteria1.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmTradeDate
+ * SettlementInstructionQueryCriteria1.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SettlementQuantity
- * SettlementInstructionQueryCriteria1.SettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSettlementQuantity
+ * SettlementInstructionQueryCriteria1.mmSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SettledQuantity
- * SettlementInstructionQueryCriteria1.SettledQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSettledQuantity
+ * SettlementInstructionQueryCriteria1.mmSettledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SettlementAmount
- * SettlementInstructionQueryCriteria1.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSettlementAmount
+ * SettlementInstructionQueryCriteria1.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SettledAmount
- * SettlementInstructionQueryCriteria1.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSettledAmount
+ * SettlementInstructionQueryCriteria1.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#IntendedSettlementDate
- * SettlementInstructionQueryCriteria1.IntendedSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmIntendedSettlementDate
+ * SettlementInstructionQueryCriteria1.mmIntendedSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#EffectiveSettlementDate
- * SettlementInstructionQueryCriteria1.EffectiveSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmEffectiveSettlementDate
+ * SettlementInstructionQueryCriteria1.mmEffectiveSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SettlementCurrency
- * SettlementInstructionQueryCriteria1.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSettlementCurrency
+ * SettlementInstructionQueryCriteria1.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SafekeepingAccountOwner
- * SettlementInstructionQueryCriteria1.SafekeepingAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSafekeepingAccountOwner
+ * SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#MessageOriginator
- * SettlementInstructionQueryCriteria1.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmMessageOriginator
+ * SettlementInstructionQueryCriteria1.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#CounterpartSettlementParties
- * SettlementInstructionQueryCriteria1.CounterpartSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmCounterpartSettlementParties
+ * SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#DeliveringSettlementParties
- * SettlementInstructionQueryCriteria1.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmDeliveringSettlementParties
+ * SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#ReceivingSettlementParties
- * SettlementInstructionQueryCriteria1.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmReceivingSettlementParties
+ * SettlementInstructionQueryCriteria1.mmReceivingSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#TradeTransactionCondition
- * SettlementInstructionQueryCriteria1.TradeTransactionCondition}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmTradeTransactionCondition
+ * SettlementInstructionQueryCriteria1.mmTradeTransactionCondition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#SecuritiesTransactionCondition
- * SettlementInstructionQueryCriteria1.SecuritiesTransactionCondition}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmSecuritiesTransactionCondition
+ * SettlementInstructionQueryCriteria1.mmSecuritiesTransactionCondition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#PartialSettlementIndicator
- * SettlementInstructionQueryCriteria1.PartialSettlementIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmPartialSettlementIndicator
+ * SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#ConditionalSecuritiesDelivery
- * SettlementInstructionQueryCriteria1.ConditionalSecuritiesDelivery}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmConditionalSecuritiesDelivery
+ * SettlementInstructionQueryCriteria1.mmConditionalSecuritiesDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#CountryOfIssue
- * SettlementInstructionQueryCriteria1.CountryOfIssue}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmCountryOfIssue
+ * SettlementInstructionQueryCriteria1.mmCountryOfIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#IssuerCSD
- * SettlementInstructionQueryCriteria1.IssuerCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmIssuerCSD
+ * SettlementInstructionQueryCriteria1.mmIssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#HoldIndicator
- * SettlementInstructionQueryCriteria1.HoldIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria1#mmHoldIndicator
+ * SettlementInstructionQueryCriteria1.mmHoldIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -131,8 +132,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -146,6 +147,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementInstructionQueryCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<References35Choice> references;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -174,7 +176,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute References = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -186,6 +188,7 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> References35Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SettlementInstructionQueryStatus1> status;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -214,7 +217,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -223,9 +226,10 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "Status";
 			definition = "Provides the status of settlement of a transaction.";
 			minOccurs = 0;
-			complexType_lazy = () -> SettlementInstructionQueryStatus1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmObject();
 		}
 	};
+	protected List<ReceiveDelivery1Code> securitiesMovementType;
 	/**
 	 * Specifies if the movement on a securities account results from a deliver
 	 * or a receive instruction.
@@ -257,7 +261,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesMovementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -269,6 +273,7 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	protected List<DeliveryReceiptType2Code> payment;
 	/**
 	 * Specifies how the transaction is to be settled, for example, against
 	 * payment.
@@ -300,7 +305,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -312,6 +317,7 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected List<SecuritiesTransactionType10Choice> securitiesTransactionType;
 	/**
 	 * Identifies the type of securities transaction.
 	 * <p>
@@ -339,7 +345,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Identifies the type of securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesTransactionType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -348,10 +354,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesTransactionType10Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SecuritiesTransactionType10Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -382,7 +389,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -391,10 +398,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected List<PriorityNumeric1Choice> priority;
 	/**
 	 * Specifies whether the transaction is to be executed with a high priority.
 	 * <p>
@@ -425,7 +433,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Priority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -437,6 +445,7 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesAccount13> safekeepingAccount;
 	/**
 	 * Account where financial instruments are maintained.
 	 * <p>
@@ -465,7 +474,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -474,9 +483,10 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
 			minOccurs = 0;
-			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected List<AccountIdentificationSearchCriteria2Choice> cashAccount;
 	/**
 	 * Account in which cash is maintained.
 	 * <p>
@@ -505,7 +515,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -517,6 +527,7 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice tradeDate;
 	/**
 	 * Specifies the date/time on which the trade was executed.
 	 * <p>
@@ -545,7 +556,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -553,11 +564,12 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	protected QuantitySearch1Choice settlementQuantity;
 	/**
 	 * Total quantity of securities to be settled.
 	 * <p>
@@ -586,7 +598,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Total quantity of securities to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -594,11 +606,12 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
 		}
 	};
+	protected QuantitySearch1Choice settledQuantity;
 	/**
 	 * Total quantity of securities settled.
 	 * <p>
@@ -627,7 +640,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Total quantity of securities settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettledQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettledQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -635,11 +648,12 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Total quantity of securities settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmountRange1 settlementAmount;
 	/**
 	 * Total amount of money to be paid or received in exchange for the
 	 * securities.
@@ -670,7 +684,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -678,12 +692,13 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ActiveCurrencyAndAmountRange1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmountRange1 settledAmount;
 	/**
 	 * Total amount of money paid or received in exchange for the securities.
 	 * <p>
@@ -712,7 +727,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * "Total amount of money paid or received in exchange for the securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettledAmount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -720,12 +735,13 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Total amount of money paid or received in exchange for the securities.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ActiveCurrencyAndAmountRange1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice intendedSettlementDate;
 	/**
 	 * Date on which a transaction is expected to settle. That is, the intended
 	 * day on which transfer of cash or assets is completed.
@@ -757,7 +773,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -765,11 +781,12 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date on which a transaction is expected to settle. That is, the intended day on which transfer of cash or assets is completed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice effectiveSettlementDate;
 	/**
 	 * Date and time at which a transaction is completed and cleared, that is a
 	 * payment is effected and securities are delivered.
@@ -801,7 +818,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -809,11 +826,12 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared, that is a payment is effected and securities are delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyCode> settlementCurrency;
 	/**
 	 * Currency in which the instructed amount is expressed.
 	 * <p>
@@ -842,7 +860,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Currency in which the instructed amount is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -854,6 +872,7 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentification46> safekeepingAccountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -880,7 +899,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -889,10 +908,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "SafekeepingAccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentification46.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification46.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -921,7 +941,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -930,10 +950,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SettlementParties13> counterpartSettlementParties;
 	/**
 	 * Identifies the chain of counterparty settlement parties.
 	 * <p>
@@ -960,7 +981,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Identifies the chain of counterparty settlement parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CounterpartSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCounterpartSettlementParties = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -969,10 +990,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "CounterpartSettlementParties";
 			definition = "Identifies the chain of counterparty settlement parties.";
 			minOccurs = 0;
-			type_lazy = () -> SettlementParties13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SettlementParties13> deliveringSettlementParties;
 	/**
 	 * Identifies the chain of delivering settlement parties.
 	 * <p>
@@ -999,7 +1021,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Identifies the chain of delivering settlement parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1008,10 +1030,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
 			minOccurs = 0;
-			type_lazy = () -> SettlementParties13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SettlementParties13> receivingSettlementParties;
 	/**
 	 * Identifies the chain of receiving settlement parties.
 	 * <p>
@@ -1038,7 +1061,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Identifies the chain of receiving settlement parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1047,10 +1070,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
 			minOccurs = 0;
-			type_lazy = () -> SettlementParties13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	protected List<TradeTransactionCondition1Code> tradeTransactionCondition;
 	/**
 	 * Provides the conditions under which the order/trade is to be/was
 	 * executed.
@@ -1082,7 +1106,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeTransactionCondition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1094,6 +1118,7 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> TradeTransactionCondition1Code.mmObject();
 		}
 	};
+	protected List<SettlementTransactionCondition12Choice> securitiesTransactionCondition;
 	/**
 	 * Indicates the conditions under which the order/trade is to be/was
 	 * executed.
@@ -1124,7 +1149,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesTransactionCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesTransactionCondition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1133,10 +1158,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "SecuritiesTransactionCondition";
 			definition = "Indicates the conditions under which the order/trade is to be/was executed.";
 			minOccurs = 0;
-			type_lazy = () -> SettlementTransactionCondition12Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SettlementTransactionCondition12Choice.mmObject();
 		}
 	};
+	protected SettlementTransactionCondition5Code partialSettlementIndicator;
 	/**
 	 * Specifies whether partial settlement is allowed.
 	 * <p>
@@ -1150,8 +1176,8 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementTransactionCondition
-	 * SecuritiesSettlement.SettlementTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
+	 * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1170,20 +1196,21 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialSettlementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementTransactionCondition;
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SettlementTransactionCondition5Code.mmObject();
 		}
 	};
+	protected YesNoIndicator conditionalSecuritiesDelivery;
 	/**
 	 * Specifies whether the transaction is under Conditional Securities
 	 * Delivery (CoSD).
@@ -1215,7 +1242,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConditionalSecuritiesDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConditionalSecuritiesDelivery = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1223,11 +1250,12 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalSecuritiesDelivery";
 			definition = "Specifies whether the transaction is under Conditional Securities Delivery (CoSD).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<CountryCode> countryOfIssue;
 	/**
 	 * Primary market or country where a security is issued by the issuer or its
 	 * agent.
@@ -1258,7 +1286,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1270,6 +1298,7 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected List<PartyIdentification71Choice> issuerCSD;
 	/**
 	 * Central securities depository (CSD) in which financial instruments are
 	 * issued (or immobilised). The issuer CSD opens accounts allowing investors
@@ -1302,7 +1331,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1311,10 +1340,11 @@ public class SettlementInstructionQueryCriteria1 {
 			name = "IssuerCSD";
 			definition = "Central securities depository (CSD) in which financial instruments are issued (or immobilised). The issuer CSD opens accounts allowing investors (in a direct holding system) and/or intermediaries (including investor CSDs) to hold these financial instruments.";
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentification71Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<Registration3Choice> holdIndicator;
 	/**
 	 * Specifies whether the transaction is on hold, blocked or frozen.
 	 * <p>
@@ -1344,7 +1374,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 * "Specifies whether the transaction is on hold, blocked or frozen."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
@@ -1360,28 +1390,260 @@ public class SettlementInstructionQueryCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.References, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.Status,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SecuritiesMovementType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.Payment,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SecuritiesTransactionType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.Priority, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SafekeepingAccount,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.CashAccount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.TradeDate,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SettlementQuantity, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SettledQuantity,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SettlementAmount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SettledAmount,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.IntendedSettlementDate, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.EffectiveSettlementDate,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SettlementCurrency, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SafekeepingAccountOwner,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.MessageOriginator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.CounterpartSettlementParties,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.DeliveringSettlementParties, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.ReceivingSettlementParties,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.TradeTransactionCondition, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.SecuritiesTransactionCondition,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.PartialSettlementIndicator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.ConditionalSecuritiesDelivery,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.CountryOfIssue, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.IssuerCSD,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.HoldIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmReferences, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmStatus,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPayment,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesTransactionType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPriority, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCashAccount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmTradeDate,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementQuantity, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettledQuantity,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementAmount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettledAmount,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmIntendedSettlementDate, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmEffectiveSettlementDate,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementCurrency, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmMessageOriginator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmTradeTransactionCondition, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesTransactionCondition,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmConditionalSecuritiesDelivery,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmIssuerCSD,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmHoldIndicator);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryCriteria1";
 				definition = "Defines the criteria based on which information is included.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<References35Choice> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<References35Choice> references) {
+		this.references = references;
+	}
+
+	public List<SettlementInstructionQueryStatus1> getStatus() {
+		return status;
+	}
+
+	public void setStatus(List<com.tools20022.repository.msg.SettlementInstructionQueryStatus1> status) {
+		this.status = status;
+	}
+
+	public List<ReceiveDelivery1Code> getSecuritiesMovementType() {
+		return securitiesMovementType;
+	}
+
+	public void setSecuritiesMovementType(List<ReceiveDelivery1Code> securitiesMovementType) {
+		this.securitiesMovementType = securitiesMovementType;
+	}
+
+	public List<DeliveryReceiptType2Code> getPayment() {
+		return payment;
+	}
+
+	public void setPayment(List<DeliveryReceiptType2Code> payment) {
+		this.payment = payment;
+	}
+
+	public List<SecuritiesTransactionType10Choice> getSecuritiesTransactionType() {
+		return securitiesTransactionType;
+	}
+
+	public void setSecuritiesTransactionType(List<SecuritiesTransactionType10Choice> securitiesTransactionType) {
+		this.securitiesTransactionType = securitiesTransactionType;
+	}
+
+	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public List<PriorityNumeric1Choice> getPriority() {
+		return priority;
+	}
+
+	public void setPriority(List<PriorityNumeric1Choice> priority) {
+		this.priority = priority;
+	}
+
+	public List<SecuritiesAccount13> getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(List<com.tools20022.repository.msg.SecuritiesAccount13> safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(List<AccountIdentificationSearchCriteria2Choice> cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public DateAndDateTimeSearch2Choice getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(DateAndDateTimeSearch2Choice tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public QuantitySearch1Choice getSettlementQuantity() {
+		return settlementQuantity;
+	}
+
+	public void setSettlementQuantity(QuantitySearch1Choice settlementQuantity) {
+		this.settlementQuantity = settlementQuantity;
+	}
+
+	public QuantitySearch1Choice getSettledQuantity() {
+		return settledQuantity;
+	}
+
+	public void setSettledQuantity(QuantitySearch1Choice settledQuantity) {
+		this.settledQuantity = settledQuantity;
+	}
+
+	public ActiveCurrencyAndAmountRange1 getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1 settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public ActiveCurrencyAndAmountRange1 getSettledAmount() {
+		return settledAmount;
+	}
+
+	public void setSettledAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1 settledAmount) {
+		this.settledAmount = settledAmount;
+	}
+
+	public DateAndDateTimeSearch2Choice getIntendedSettlementDate() {
+		return intendedSettlementDate;
+	}
+
+	public void setIntendedSettlementDate(DateAndDateTimeSearch2Choice intendedSettlementDate) {
+		this.intendedSettlementDate = intendedSettlementDate;
+	}
+
+	public DateAndDateTimeSearch2Choice getEffectiveSettlementDate() {
+		return effectiveSettlementDate;
+	}
+
+	public void setEffectiveSettlementDate(DateAndDateTimeSearch2Choice effectiveSettlementDate) {
+		this.effectiveSettlementDate = effectiveSettlementDate;
+	}
+
+	public List<ActiveOrHistoricCurrencyCode> getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(List<ActiveOrHistoricCurrencyCode> settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public List<PartyIdentification46> getSafekeepingAccountOwner() {
+		return safekeepingAccountOwner;
+	}
+
+	public void setSafekeepingAccountOwner(List<com.tools20022.repository.msg.PartyIdentification46> safekeepingAccountOwner) {
+		this.safekeepingAccountOwner = safekeepingAccountOwner;
+	}
+
+	public List<SystemPartyIdentification5> getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public List<SettlementParties13> getCounterpartSettlementParties() {
+		return counterpartSettlementParties;
+	}
+
+	public void setCounterpartSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> counterpartSettlementParties) {
+		this.counterpartSettlementParties = counterpartSettlementParties;
+	}
+
+	public List<SettlementParties13> getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public List<SettlementParties13> getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public List<TradeTransactionCondition1Code> getTradeTransactionCondition() {
+		return tradeTransactionCondition;
+	}
+
+	public void setTradeTransactionCondition(List<TradeTransactionCondition1Code> tradeTransactionCondition) {
+		this.tradeTransactionCondition = tradeTransactionCondition;
+	}
+
+	public List<SettlementTransactionCondition12Choice> getSecuritiesTransactionCondition() {
+		return securitiesTransactionCondition;
+	}
+
+	public void setSecuritiesTransactionCondition(List<SettlementTransactionCondition12Choice> securitiesTransactionCondition) {
+		this.securitiesTransactionCondition = securitiesTransactionCondition;
+	}
+
+	public SettlementTransactionCondition5Code getPartialSettlementIndicator() {
+		return partialSettlementIndicator;
+	}
+
+	public void setPartialSettlementIndicator(SettlementTransactionCondition5Code partialSettlementIndicator) {
+		this.partialSettlementIndicator = partialSettlementIndicator;
+	}
+
+	public YesNoIndicator getConditionalSecuritiesDelivery() {
+		return conditionalSecuritiesDelivery;
+	}
+
+	public void setConditionalSecuritiesDelivery(YesNoIndicator conditionalSecuritiesDelivery) {
+		this.conditionalSecuritiesDelivery = conditionalSecuritiesDelivery;
+	}
+
+	public List<CountryCode> getCountryOfIssue() {
+		return countryOfIssue;
+	}
+
+	public void setCountryOfIssue(List<CountryCode> countryOfIssue) {
+		this.countryOfIssue = countryOfIssue;
+	}
+
+	public List<PartyIdentification71Choice> getIssuerCSD() {
+		return issuerCSD;
+	}
+
+	public void setIssuerCSD(List<PartyIdentification71Choice> issuerCSD) {
+		this.issuerCSD = issuerCSD;
+	}
+
+	public List<Registration3Choice> getHoldIndicator() {
+		return holdIndicator;
+	}
+
+	public void setHoldIndicator(List<Registration3Choice> holdIndicator) {
+		this.holdIndicator = holdIndicator;
 	}
 }

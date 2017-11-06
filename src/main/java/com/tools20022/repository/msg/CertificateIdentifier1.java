@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateIdentifier1#IssuerAndSerialNumber
- * CertificateIdentifier1.IssuerAndSerialNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateIdentifier1#mmIssuerAndSerialNumber
+ * CertificateIdentifier1.mmIssuerAndSerialNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CertificateIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IssuerAndSerialNumber1 issuerAndSerialNumber;
 	/**
 	 * Certificate issuer name and serial number (see X.509).
 	 * <p>
@@ -82,7 +83,7 @@ public class CertificateIdentifier1 {
 	 * definition} = "Certificate issuer name and serial number  (see X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssuerAndSerialNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuerAndSerialNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificateIdentifier1.mmObject();
 			isDerived = false;
@@ -90,23 +91,31 @@ public class CertificateIdentifier1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAndSerialNumber";
 			definition = "Certificate issuer name and serial number  (see X.509).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IssuerAndSerialNumber1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IssuerAndSerialNumber1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateIdentifier1.IssuerAndSerialNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateIdentifier1.mmIssuerAndSerialNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertificateIdentifier1";
 				definition = "Transport key or key encryption key (KEK) identification for the recipient.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IssuerAndSerialNumber1 getIssuerAndSerialNumber() {
+		return issuerAndSerialNumber;
+	}
+
+	public void setIssuerAndSerialNumber(com.tools20022.repository.msg.IssuerAndSerialNumber1 issuerAndSerialNumber) {
+		this.issuerAndSerialNumber = issuerAndSerialNumber;
 	}
 }

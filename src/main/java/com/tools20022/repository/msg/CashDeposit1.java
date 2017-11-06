@@ -34,12 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashDeposit1#NoteDenomination
- * CashDeposit1.NoteDenomination}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashDeposit1#NumberOfNotes
- * CashDeposit1.NumberOfNotes}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashDeposit1#Amount
- * CashDeposit1.Amount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashDeposit1#mmNoteDenomination
+ * CashDeposit1.mmNoteDenomination}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashDeposit1#mmNumberOfNotes
+ * CashDeposit1.mmNumberOfNotes}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashDeposit1#mmAmount
+ * CashDeposit1.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashDeposit1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount noteDenomination;
 	/**
 	 * Specifies the note or coin denomination, including the currency, such as
 	 * a 50 euro note.
@@ -78,8 +80,8 @@ public class CashDeposit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashDeposit#NoteDenomination
-	 * CashDeposit.NoteDenomination}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashDeposit#mmNoteDenomination
+	 * CashDeposit.mmNoteDenomination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +101,21 @@ public class CashDeposit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoteDenomination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoteDenomination = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmNoteDenomination;
 			componentContext_lazy = () -> CashDeposit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashDeposit.NoteDenomination;
 			isDerived = false;
 			xmlTag = "NoteDnmtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoteDenomination";
 			definition = "Specifies the note or coin denomination, including the currency, such as a 50 euro note.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfNotes;
 	/**
 	 * Specifies the number of notes of the same denomination in the deposit.
 	 * <p>
@@ -126,8 +129,8 @@ public class CashDeposit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashDeposit#NumberOfNotes
-	 * CashDeposit.NumberOfNotes}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashDeposit#mmNumberOfNotes
+	 * CashDeposit.mmNumberOfNotes}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +149,21 @@ public class CashDeposit1 {
 	 * "Specifies the number of notes of the same denomination in the deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfNotes = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfNotes = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmNumberOfNotes;
 			componentContext_lazy = () -> CashDeposit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashDeposit.NumberOfNotes;
 			isDerived = false;
 			xmlTag = "NbOfNotes";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfNotes";
 			definition = "Specifies the number of notes of the same denomination in the deposit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Specifies the total amount of money in the cash deposit, that is the note
 	 * denomination times the number of notes.
@@ -174,8 +178,8 @@ public class CashDeposit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashDeposit#DepositAmount
-	 * CashDeposit.DepositAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashDeposit#mmDepositAmount
+	 * CashDeposit.mmDepositAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,17 +199,17 @@ public class CashDeposit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmDepositAmount;
 			componentContext_lazy = () -> CashDeposit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashDeposit.DepositAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specifies the total amount of money in the cash deposit, that is the note denomination times the number of notes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -213,14 +217,38 @@ public class CashDeposit1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashDeposit1.NoteDenomination, com.tools20022.repository.msg.CashDeposit1.NumberOfNotes, com.tools20022.repository.msg.CashDeposit1.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashDeposit1.mmNoteDenomination, com.tools20022.repository.msg.CashDeposit1.mmNumberOfNotes, com.tools20022.repository.msg.CashDeposit1.mmAmount);
 				trace_lazy = () -> CashDeposit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashDeposit1";
 				definition = "Deposit of an amount of money defined in cash notes and/or coins.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getNoteDenomination() {
+		return noteDenomination;
+	}
+
+	public void setNoteDenomination(ActiveCurrencyAndAmount noteDenomination) {
+		this.noteDenomination = noteDenomination;
+	}
+
+	public Max15NumericText getNumberOfNotes() {
+		return numberOfNotes;
+	}
+
+	public void setNumberOfNotes(Max15NumericText numberOfNotes) {
+		this.numberOfNotes = numberOfNotes;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

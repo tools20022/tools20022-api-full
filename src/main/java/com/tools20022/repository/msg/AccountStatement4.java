@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides further details of the account statement.
@@ -41,45 +42,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#Identification
- * AccountStatement4.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmIdentification
+ * AccountStatement4.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#StatementPagination
- * AccountStatement4.StatementPagination}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmStatementPagination
+ * AccountStatement4.mmStatementPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#ElectronicSequenceNumber
- * AccountStatement4.ElectronicSequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmElectronicSequenceNumber
+ * AccountStatement4.mmElectronicSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#LegalSequenceNumber
- * AccountStatement4.LegalSequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmLegalSequenceNumber
+ * AccountStatement4.mmLegalSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#CreationDateTime
- * AccountStatement4.CreationDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#FromToDate
- * AccountStatement4.FromToDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmCreationDateTime
+ * AccountStatement4.mmCreationDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#mmFromToDate
+ * AccountStatement4.mmFromToDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#CopyDuplicateIndicator
- * AccountStatement4.CopyDuplicateIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmCopyDuplicateIndicator
+ * AccountStatement4.mmCopyDuplicateIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#ReportingSource
- * AccountStatement4.ReportingSource}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#Account
- * AccountStatement4.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmReportingSource
+ * AccountStatement4.mmReportingSource}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#mmAccount
+ * AccountStatement4.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#RelatedAccount
- * AccountStatement4.RelatedAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#Interest
- * AccountStatement4.Interest}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#Balance
- * AccountStatement4.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmRelatedAccount
+ * AccountStatement4.mmRelatedAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#mmInterest
+ * AccountStatement4.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#mmBalance
+ * AccountStatement4.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#TransactionsSummary
- * AccountStatement4.TransactionsSummary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#Entry
- * AccountStatement4.Entry}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmTransactionsSummary
+ * AccountStatement4.mmTransactionsSummary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatement4#mmEntry
+ * AccountStatement4.mmEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatement4#AdditionalStatementInformation
- * AccountStatement4.AdditionalStatementInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement4#mmAdditionalStatementInformation
+ * AccountStatement4.mmAdditionalStatementInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -90,15 +91,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV04#Statement
- * BankToCustomerStatementV04.Statement}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV04#mmStatement
+ * BankToCustomerStatementV04.mmStatement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,6 +124,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountStatement4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identification, as assigned by the account servicer, to
 	 * unambiguously identify the account statement.
@@ -155,13 +157,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#Identification
-	 * AccountStatement5.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmIdentification
+	 * AccountStatement5.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -169,12 +171,13 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Pagination statementPagination;
 	/**
 	 * Provides details on the page number of the statement.<br>
 	 * <br>
@@ -209,13 +212,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#StatementPagination
-	 * AccountStatement5.StatementPagination}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmStatementPagination
+	 * AccountStatement5.mmStatementPagination}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementPagination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementPagination = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -223,12 +226,13 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPagination";
 			definition = "Provides details on the page number of the statement.\r\n\r\nUsage: The pagination of the statement is only allowed when agreed between the parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.StatementPagination);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmStatementPagination);
 			maxOccurs = 1;
-			complexType_lazy = () -> Pagination.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	protected Number electronicSequenceNumber;
 	/**
 	 * Sequential number of the statement, as assigned by the account servicer.
 	 * Usage: The sequential number is increased incrementally for each
@@ -262,13 +266,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#ElectronicSequenceNumber
-	 * AccountStatement5.ElectronicSequenceNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmElectronicSequenceNumber
+	 * AccountStatement5.mmElectronicSequenceNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElectronicSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElectronicSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -276,12 +280,13 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSequenceNumber";
 			definition = "Sequential number of the statement, as assigned by the account servicer.\nUsage: The sequential number is increased incrementally for each statement sent electronically.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.ElectronicSequenceNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmElectronicSequenceNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number legalSequenceNumber;
 	/**
 	 * Legal sequential number of the statement, as assigned by the account
 	 * servicer. It is increased incrementally for each statement sent.
@@ -321,13 +326,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#LegalSequenceNumber
-	 * AccountStatement5.LegalSequenceNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmLegalSequenceNumber
+	 * AccountStatement5.mmLegalSequenceNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -335,12 +340,13 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalSequenceNumber";
 			definition = "Legal sequential number of the statement, as assigned by the account servicer. It is increased incrementally for each statement sent.\n\nUsage: Where a paper statement is a legal requirement, it may have a number different from the electronic sequential number. Paper statements could for instance only be sent if movement on the account has taken place, whereas electronic statements could be sent at the end of each reporting period, regardless of whether movements have taken place or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.LegalSequenceNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmLegalSequenceNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created.
 	 * <p>
@@ -370,13 +376,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#CreationDateTime
-	 * AccountStatement5.CreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmCreationDateTime
+	 * AccountStatement5.mmCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -384,12 +390,13 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.CreationDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmCreationDateTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DateTimePeriodDetails fromToDate;
 	/**
 	 * Range of time between a start date and an end date for which the account
 	 * statement is issued.
@@ -421,13 +428,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#FromToDate
-	 * AccountStatement5.FromToDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmFromToDate
+	 * AccountStatement5.mmFromToDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FromToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -435,13 +442,14 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for which the account statement is issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.FromToDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmFromToDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriodDetails.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
 		}
 	};
+	protected CopyDuplicate1Code copyDuplicateIndicator;
 	/**
 	 * Indicates whether the document is a copy, a duplicate, or a duplicate of
 	 * a copy.
@@ -475,13 +483,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#CopyDuplicateIndicator
-	 * AccountStatement5.CopyDuplicateIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmCopyDuplicateIndicator
+	 * AccountStatement5.mmCopyDuplicateIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyDuplicateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyDuplicateIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -489,12 +497,13 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicateIndicator";
 			definition = "Indicates whether the document is a copy, a duplicate, or a duplicate of a copy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.CopyDuplicateIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmCopyDuplicateIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	protected ReportingSource1Choice reportingSource;
 	/**
 	 * Specifies the application used to generate the reporting.
 	 * <p>
@@ -525,13 +534,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#ReportingSource
-	 * AccountStatement5.ReportingSource}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmReportingSource
+	 * AccountStatement5.mmReportingSource}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingSource = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -539,13 +548,14 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingSource";
 			definition = "Specifies the application used to generate the reporting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.ReportingSource);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmReportingSource);
 			maxOccurs = 1;
-			type_lazy = () -> ReportingSource1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ReportingSource1Choice.mmObject();
 		}
 	};
+	protected CashAccount25 account;
 	/**
 	 * Unambiguous identification of the account to which credit and debit
 	 * entries are made.
@@ -558,8 +568,8 @@ public class AccountStatement4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashAccount
-	 * CashBalance.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashAccount
+	 * CashBalance.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -581,28 +591,30 @@ public class AccountStatement4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountStatement5#Account
-	 * AccountStatement5.Account}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmAccount
+	 * AccountStatement5.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashAccount;
 			componentContext_lazy = () -> AccountStatement4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which credit and debit entries are made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.Account);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmAccount);
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	protected CashAccount24 relatedAccount;
 	/**
 	 * Identifies the parent account of the account for which the statement has
 	 * been issued.
@@ -638,28 +650,29 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#RelatedAccount
-	 * AccountStatement5.RelatedAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmRelatedAccount
+	 * AccountStatement5.mmRelatedAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccount";
 			definition = "Identifies the parent account of the account for which the statement has been issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.RelatedAccount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmRelatedAccount);
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AccountInterest2> interest;
 	/**
 	 * Provides general interest information that applies to the account at a
 	 * particular moment in time.
@@ -672,8 +685,8 @@ public class AccountStatement4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#InterestCalculation
-	 * Interest.InterestCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmInterestCalculation
+	 * Interest.mmInterestCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -695,27 +708,29 @@ public class AccountStatement4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountStatement5#Interest
-	 * AccountStatement5.Interest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmInterest
+	 * AccountStatement5.mmInterest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Interest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
 			componentContext_lazy = () -> AccountStatement4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.InterestCalculation;
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Provides general interest information that applies to the account at a particular moment in time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.Interest);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmInterest);
 			minOccurs = 0;
-			type_lazy = () -> AccountInterest2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountInterest2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashBalance3> balance;
 	/**
 	 * Set of elements used to define the balance as a numerical representation
 	 * of the net increases and decreases in an account at a specific point in
@@ -751,27 +766,29 @@ public class AccountStatement4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountStatement5#Balance
-	 * AccountStatement5.Balance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmBalance
+	 * AccountStatement5.mmBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
 			businessComponentTrace_lazy = () -> CashBalance.mmObject();
+			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.Balance);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmBalance);
 			minOccurs = 1;
-			type_lazy = () -> CashBalance3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalance3.mmObject();
 		}
 	};
+	protected TotalTransactions4 transactionsSummary;
 	/**
 	 * Provides summary information on entries.
 	 * <p>
@@ -800,13 +817,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#TransactionsSummary
-	 * AccountStatement5.TransactionsSummary}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmTransactionsSummary
+	 * AccountStatement5.mmTransactionsSummary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionsSummary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionsSummary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -814,13 +831,14 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsSummary";
 			definition = "Provides summary information on entries.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.TransactionsSummary);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmTransactionsSummary);
 			maxOccurs = 1;
-			type_lazy = () -> TotalTransactions4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReportEntry4> entry;
 	/**
 	 * Set of elements used to specify an entry in the statement. Usage: At
 	 * least one reference must be provided to identify the entry and its
@@ -834,8 +852,8 @@ public class AccountStatement4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashBalanceEntry
-	 * CashBalance.CashBalanceEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashBalanceEntry
+	 * CashBalance.mmCashBalanceEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -857,27 +875,28 @@ public class AccountStatement4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountStatement5#Entry
-	 * AccountStatement5.Entry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountStatement5#mmEntry
+	 * AccountStatement5.mmEntry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Entry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> AccountStatement4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashBalanceEntry;
 			isDerived = false;
 			xmlTag = "Ntry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entry";
 			definition = "Set of elements used to specify an entry in the statement.\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.Entry);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmEntry);
 			minOccurs = 0;
-			type_lazy = () -> ReportEntry4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportEntry4.mmObject();
 		}
 	};
+	protected Max500Text additionalStatementInformation;
 	/**
 	 * Further details of the account statement.
 	 * <p>
@@ -907,13 +926,13 @@ public class AccountStatement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#AdditionalStatementInformation
-	 * AccountStatement5.AdditionalStatementInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement5#mmAdditionalStatementInformation
+	 * AccountStatement5.mmAdditionalStatementInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalStatementInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalStatementInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountStatement4.mmObject();
 			isDerived = false;
@@ -921,9 +940,9 @@ public class AccountStatement4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalStatementInformation";
 			definition = "Further details of the account statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.AdditionalStatementInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmAdditionalStatementInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
@@ -931,22 +950,142 @@ public class AccountStatement4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement4.Identification, com.tools20022.repository.msg.AccountStatement4.StatementPagination,
-						com.tools20022.repository.msg.AccountStatement4.ElectronicSequenceNumber, com.tools20022.repository.msg.AccountStatement4.LegalSequenceNumber, com.tools20022.repository.msg.AccountStatement4.CreationDateTime,
-						com.tools20022.repository.msg.AccountStatement4.FromToDate, com.tools20022.repository.msg.AccountStatement4.CopyDuplicateIndicator, com.tools20022.repository.msg.AccountStatement4.ReportingSource,
-						com.tools20022.repository.msg.AccountStatement4.Account, com.tools20022.repository.msg.AccountStatement4.RelatedAccount, com.tools20022.repository.msg.AccountStatement4.Interest,
-						com.tools20022.repository.msg.AccountStatement4.Balance, com.tools20022.repository.msg.AccountStatement4.TransactionsSummary, com.tools20022.repository.msg.AccountStatement4.Entry,
-						com.tools20022.repository.msg.AccountStatement4.AdditionalStatementInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement4.mmIdentification, com.tools20022.repository.msg.AccountStatement4.mmStatementPagination,
+						com.tools20022.repository.msg.AccountStatement4.mmElectronicSequenceNumber, com.tools20022.repository.msg.AccountStatement4.mmLegalSequenceNumber, com.tools20022.repository.msg.AccountStatement4.mmCreationDateTime,
+						com.tools20022.repository.msg.AccountStatement4.mmFromToDate, com.tools20022.repository.msg.AccountStatement4.mmCopyDuplicateIndicator, com.tools20022.repository.msg.AccountStatement4.mmReportingSource,
+						com.tools20022.repository.msg.AccountStatement4.mmAccount, com.tools20022.repository.msg.AccountStatement4.mmRelatedAccount, com.tools20022.repository.msg.AccountStatement4.mmInterest,
+						com.tools20022.repository.msg.AccountStatement4.mmBalance, com.tools20022.repository.msg.AccountStatement4.mmTransactionsSummary, com.tools20022.repository.msg.AccountStatement4.mmEntry,
+						com.tools20022.repository.msg.AccountStatement4.mmAdditionalStatementInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV04.mmStatement);
 				trace_lazy = () -> CashBalance.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV04.Statement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatement4";
 				definition = "Provides further details of the account statement.";
-				previousVersion_lazy = () -> AccountStatement3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AccountStatement5.mmObject());
+				previousVersion_lazy = () -> AccountStatement3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Pagination getStatementPagination() {
+		return statementPagination;
+	}
+
+	public void setStatementPagination(com.tools20022.repository.msg.Pagination statementPagination) {
+		this.statementPagination = statementPagination;
+	}
+
+	public Number getElectronicSequenceNumber() {
+		return electronicSequenceNumber;
+	}
+
+	public void setElectronicSequenceNumber(Number electronicSequenceNumber) {
+		this.electronicSequenceNumber = electronicSequenceNumber;
+	}
+
+	public Number getLegalSequenceNumber() {
+		return legalSequenceNumber;
+	}
+
+	public void setLegalSequenceNumber(Number legalSequenceNumber) {
+		this.legalSequenceNumber = legalSequenceNumber;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public DateTimePeriodDetails getFromToDate() {
+		return fromToDate;
+	}
+
+	public void setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+		this.fromToDate = fromToDate;
+	}
+
+	public CopyDuplicate1Code getCopyDuplicateIndicator() {
+		return copyDuplicateIndicator;
+	}
+
+	public void setCopyDuplicateIndicator(CopyDuplicate1Code copyDuplicateIndicator) {
+		this.copyDuplicateIndicator = copyDuplicateIndicator;
+	}
+
+	public ReportingSource1Choice getReportingSource() {
+		return reportingSource;
+	}
+
+	public void setReportingSource(ReportingSource1Choice reportingSource) {
+		this.reportingSource = reportingSource;
+	}
+
+	public CashAccount25 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = account;
+	}
+
+	public CashAccount24 getRelatedAccount() {
+		return relatedAccount;
+	}
+
+	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
+		this.relatedAccount = relatedAccount;
+	}
+
+	public List<AccountInterest2> getInterest() {
+		return interest;
+	}
+
+	public void setInterest(List<com.tools20022.repository.msg.AccountInterest2> interest) {
+		this.interest = interest;
+	}
+
+	public List<CashBalance3> getBalance() {
+		return balance;
+	}
+
+	public void setBalance(List<com.tools20022.repository.msg.CashBalance3> balance) {
+		this.balance = balance;
+	}
+
+	public TotalTransactions4 getTransactionsSummary() {
+		return transactionsSummary;
+	}
+
+	public void setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions4 transactionsSummary) {
+		this.transactionsSummary = transactionsSummary;
+	}
+
+	public List<ReportEntry4> getEntry() {
+		return entry;
+	}
+
+	public void setEntry(List<com.tools20022.repository.msg.ReportEntry4> entry) {
+		this.entry = entry;
+	}
+
+	public Max500Text getAdditionalStatementInformation() {
+		return additionalStatementInformation;
+	}
+
+	public void setAdditionalStatementInformation(Max500Text additionalStatementInformation) {
+		this.additionalStatementInformation = additionalStatementInformation;
 	}
 }

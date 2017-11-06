@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Terminal management system (TMS), has in charge the maintenance of the
@@ -44,29 +45,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#AcceptorConfiguration
- * TerminalManagementSystem.AcceptorConfiguration}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
+ * TerminalManagementSystem.mmAcceptorConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#NetworkAccess
- * TerminalManagementSystem.NetworkAccess}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmNetworkAccess
+ * TerminalManagementSystem.mmNetworkAccess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#CardPaymentAcquiring
- * TerminalManagementSystem.CardPaymentAcquiring}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmCardPaymentAcquiring
+ * TerminalManagementSystem.mmCardPaymentAcquiring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#ContactLevel
- * TerminalManagementSystem.ContactLevel}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactLevel
+ * TerminalManagementSystem.mmContactLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#ContactDateTime
- * TerminalManagementSystem.ContactDateTime}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactDateTime
+ * TerminalManagementSystem.mmContactDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#TerminalManagerRole
- * TerminalManagementSystem.TerminalManagerRole}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmTerminalManagerRole
+ * TerminalManagementSystem.mmTerminalManagerRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#ControlledPointOfInteraction
- * TerminalManagementSystem.ControlledPointOfInteraction}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmControlledPointOfInteraction
+ * TerminalManagementSystem.mmControlledPointOfInteraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#Action
- * TerminalManagementSystem.Action}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAction
+ * TerminalManagementSystem.mmAction}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,23 +75,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TMSTrigger
- * CardPaymentAcquiring.TMSTrigger}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTMSTrigger
+ * CardPaymentAcquiring.mmTMSTrigger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PointOfInteraction#ControllingTerminalManagementSystem
- * PointOfInteraction.ControllingTerminalManagementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmControllingTerminalManagementSystem
+ * PointOfInteraction.mmControllingTerminalManagementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#TerminalManagementSystem
- * AcceptorConfiguration.TerminalManagementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTerminalManagementSystem
+ * AcceptorConfiguration.mmTerminalManagementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#TerminalManagementSystem
- * TerminalManagementAction.TerminalManagementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmTerminalManagementSystem
+ * TerminalManagementAction.mmTerminalManagementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.NetworkAccess#TerminalManagementSystem
- * NetworkAccess.TerminalManagementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmTerminalManagementSystem
+ * NetworkAccess.mmTerminalManagementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagerRole#TerminalManagementSystem
- * TerminalManagerRole.TerminalManagementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagerRole#mmTerminalManagementSystem
+ * TerminalManagerRole.mmTerminalManagementSystem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -138,8 +139,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -155,6 +156,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalManagementSystem extends System {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.AcceptorConfiguration> acceptorConfiguration;
 	/**
 	 * Acceptor parameters to be downloaded from the terminal management system.
 	 * <p>
@@ -163,8 +165,8 @@ public class TerminalManagementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#TerminalManagementSystem
-	 * AcceptorConfiguration.TerminalManagementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTerminalManagementSystem
+	 * AcceptorConfiguration.mmTerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -191,7 +193,7 @@ public class TerminalManagementSystem extends System {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AcceptorConfiguration = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAcceptorConfiguration = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
@@ -199,11 +201,12 @@ public class TerminalManagementSystem extends System {
 			name = "AcceptorConfiguration";
 			definition = "Acceptor parameters to be downloaded from the terminal management system.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.TerminalManagementSystem;
+			opposite_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.NetworkAccess> networkAccess;
 	/**
 	 * Parameters used to access a network.
 	 * <p>
@@ -212,8 +215,8 @@ public class TerminalManagementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#TerminalManagementSystem
-	 * NetworkAccess.TerminalManagementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmTerminalManagementSystem
+	 * NetworkAccess.mmTerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -221,34 +224,34 @@ public class TerminalManagementSystem extends System {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.NetworkAccess
 	 * NetworkAccess}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction1#Address
-	 * TMSAction1.Address}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction2#Address
-	 * TMSAction2.Address}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#Address
-	 * HostCommunicationParameter1.Address}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter2#Address
-	 * HostCommunicationParameter2.Address}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#Address
-	 * TMSAction3.Address}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter3#Address
-	 * HostCommunicationParameter3.Address}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter4#Address
-	 * HostCommunicationParameter4.Address}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
 	 * TerminalManagementSystem}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction1#mmAddress
+	 * TMSAction1.mmAddress}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction2#mmAddress
+	 * TMSAction2.mmAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#mmAddress
+	 * HostCommunicationParameter1.mmAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter2#mmAddress
+	 * HostCommunicationParameter2.mmAddress}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmAddress
+	 * TMSAction3.mmAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter3#mmAddress
+	 * HostCommunicationParameter3.mmAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter4#mmAddress
+	 * HostCommunicationParameter4.mmAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -260,22 +263,23 @@ public class TerminalManagementSystem extends System {
 	 * definition} = "Parameters used to access a network."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd NetworkAccess = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNetworkAccess = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction1.Address, com.tools20022.repository.msg.TMSAction2.Address, com.tools20022.repository.msg.HostCommunicationParameter1.Address,
-					com.tools20022.repository.msg.HostCommunicationParameter2.Address, com.tools20022.repository.msg.TMSAction3.Address, com.tools20022.repository.msg.HostCommunicationParameter3.Address,
-					com.tools20022.repository.msg.HostCommunicationParameter4.Address);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction1.mmAddress, com.tools20022.repository.msg.TMSAction2.mmAddress, com.tools20022.repository.msg.HostCommunicationParameter1.mmAddress,
+					com.tools20022.repository.msg.HostCommunicationParameter2.mmAddress, com.tools20022.repository.msg.TMSAction3.mmAddress, com.tools20022.repository.msg.HostCommunicationParameter3.mmAddress,
+					com.tools20022.repository.msg.HostCommunicationParameter4.mmAddress);
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetworkAccess";
 			definition = "Parameters used to access a network.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.NetworkAccess.TerminalManagementSystem;
+			opposite_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmTerminalManagementSystem;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 		}
 	};
+	protected CardPaymentAcquiring cardPaymentAcquiring;
 	/**
 	 * Process for which a TMS trigger is specified.
 	 * <p>
@@ -284,8 +288,8 @@ public class TerminalManagementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TMSTrigger
-	 * CardPaymentAcquiring.TMSTrigger}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTMSTrigger
+	 * CardPaymentAcquiring.mmTMSTrigger}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -310,20 +314,21 @@ public class TerminalManagementSystem extends System {
 	 * definition} = "Process for which a TMS trigger is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CardPaymentAcquiring = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCardPaymentAcquiring = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentAcquiring";
 			definition = "Process for which a TMS trigger is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TMSTrigger;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTMSTrigger;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 		}
 	};
+	protected TMSContactLevelCode contactLevel;
 	/**
 	 * Level of urgency in contacting the maintenance.
 	 * <p>
@@ -334,25 +339,25 @@ public class TerminalManagementSystem extends System {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode
 	 * TMSContactLevelCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TMSTrigger1#TMSContactLevel
-	 * TMSTrigger1.TMSContactLevel}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand1#Urgency
-	 * ATMCommand1.Urgency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#Urgency
-	 * ATMCommand4.Urgency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand7#Urgency
-	 * ATMCommand7.Urgency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
 	 * TerminalManagementSystem}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSTrigger1#mmTMSContactLevel
+	 * TMSTrigger1.mmTMSContactLevel}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand1#mmUrgency
+	 * ATMCommand1.mmUrgency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#mmUrgency
+	 * ATMCommand4.mmUrgency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand7#mmUrgency
+	 * ATMCommand7.mmUrgency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -364,20 +369,21 @@ public class TerminalManagementSystem extends System {
 	 * definition} = "Level of urgency in contacting the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ContactLevel = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmContactLevel = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSTrigger1.TMSContactLevel, com.tools20022.repository.msg.ATMCommand1.Urgency, com.tools20022.repository.msg.ATMCommand4.Urgency,
-					com.tools20022.repository.msg.ATMCommand7.Urgency);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSTrigger1.mmTMSContactLevel, com.tools20022.repository.msg.ATMCommand1.mmUrgency, com.tools20022.repository.msg.ATMCommand4.mmUrgency,
+					com.tools20022.repository.msg.ATMCommand7.mmUrgency);
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ContactLevel";
 			definition = "Level of urgency in contacting the maintenance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TMSContactLevelCode.mmObject();
 		}
 	};
+	protected ISODateTime contactDateTime;
 	/**
 	 * Date and time for calling the maintenance.
 	 * <p>
@@ -387,19 +393,19 @@ public class TerminalManagementSystem extends System {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TMSTrigger1#TMSContactDateTime
-	 * TMSTrigger1.TMSContactDateTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
 	 * TerminalManagementSystem}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSTrigger1#mmTMSContactDateTime
+	 * TMSTrigger1.mmTMSContactDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -411,19 +417,20 @@ public class TerminalManagementSystem extends System {
 	 * definition} = "Date and time for calling the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ContactDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmContactDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSTrigger1.TMSContactDateTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSTrigger1.mmTMSContactDateTime);
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ContactDateTime";
 			definition = "Date and time for calling the maintenance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.TerminalManagerRole> terminalManagerRole;
 	/**
 	 * Identifies the party which is the terminal manager (TM) to contact for
 	 * the maintenance.
@@ -433,8 +440,8 @@ public class TerminalManagementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagerRole#TerminalManagementSystem
-	 * TerminalManagerRole.TerminalManagementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagerRole#mmTerminalManagementSystem
+	 * TerminalManagerRole.mmTerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -460,7 +467,7 @@ public class TerminalManagementSystem extends System {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TerminalManagerRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTerminalManagerRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
@@ -468,11 +475,12 @@ public class TerminalManagementSystem extends System {
 			name = "TerminalManagerRole";
 			definition = "Identifies the party which is the terminal manager (TM) to contact for the maintenance.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.TerminalManagerRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TerminalManagerRole.TerminalManagementSystem;
+			opposite_lazy = () -> com.tools20022.repository.entity.TerminalManagerRole.mmTerminalManagementSystem;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TerminalManagerRole.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PointOfInteraction> controlledPointOfInteraction;
 	/**
 	 * Specifies each point of interaction controlled by a TMS.
 	 * <p>
@@ -481,8 +489,8 @@ public class TerminalManagementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#ControllingTerminalManagementSystem
-	 * PointOfInteraction.ControllingTerminalManagementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmControllingTerminalManagementSystem
+	 * PointOfInteraction.mmControllingTerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -506,7 +514,7 @@ public class TerminalManagementSystem extends System {
 	 * definition} = "Specifies each point of interaction controlled by a TMS."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ControlledPointOfInteraction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmControlledPointOfInteraction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
@@ -514,11 +522,12 @@ public class TerminalManagementSystem extends System {
 			name = "ControlledPointOfInteraction";
 			definition = "Specifies each point of interaction controlled by a TMS.";
 			minOccurs = 0;
-			type_lazy = () -> PointOfInteraction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.ControllingTerminalManagementSystem;
+			opposite_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmControllingTerminalManagementSystem;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.TerminalManagementAction> action;
 	/**
 	 * Terminal management action to be performed by the point of interaction.
 	 * <p>
@@ -527,8 +536,8 @@ public class TerminalManagementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#TerminalManagementSystem
-	 * TerminalManagementAction.TerminalManagementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmTerminalManagementSystem
+	 * TerminalManagementAction.mmTerminalManagementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -555,7 +564,7 @@ public class TerminalManagementSystem extends System {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Action = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TerminalManagementSystem.mmObject();
 			isDerived = false;
@@ -563,27 +572,27 @@ public class TerminalManagementSystem extends System {
 			name = "Action";
 			definition = "Terminal management action to be performed by the point of interaction.";
 			minOccurs = 0;
-			type_lazy = () -> TerminalManagementAction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.TerminalManagementSystem;
+			opposite_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmTerminalManagementSystem;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementSystem";
 				definition = "Terminal management system (TMS), has in charge the maintenance of the terminal, including monitoring, software update, configuration parameters management.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentAcquiring.TMSTrigger, com.tools20022.repository.entity.PointOfInteraction.ControllingTerminalManagementSystem,
-						com.tools20022.repository.entity.AcceptorConfiguration.TerminalManagementSystem, com.tools20022.repository.entity.TerminalManagementAction.TerminalManagementSystem,
-						com.tools20022.repository.entity.NetworkAccess.TerminalManagementSystem, com.tools20022.repository.entity.TerminalManagerRole.TerminalManagementSystem);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentAcquiring.mmTMSTrigger, com.tools20022.repository.entity.PointOfInteraction.mmControllingTerminalManagementSystem,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem, com.tools20022.repository.entity.TerminalManagementAction.mmTerminalManagementSystem,
+						com.tools20022.repository.entity.NetworkAccess.mmTerminalManagementSystem, com.tools20022.repository.entity.TerminalManagerRole.mmTerminalManagementSystem);
 				superType_lazy = () -> System.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementSystem.AcceptorConfiguration, com.tools20022.repository.entity.TerminalManagementSystem.NetworkAccess,
-						com.tools20022.repository.entity.TerminalManagementSystem.CardPaymentAcquiring, com.tools20022.repository.entity.TerminalManagementSystem.ContactLevel,
-						com.tools20022.repository.entity.TerminalManagementSystem.ContactDateTime, com.tools20022.repository.entity.TerminalManagementSystem.TerminalManagerRole,
-						com.tools20022.repository.entity.TerminalManagementSystem.ControlledPointOfInteraction, com.tools20022.repository.entity.TerminalManagementSystem.Action);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementSystem.mmAcceptorConfiguration, com.tools20022.repository.entity.TerminalManagementSystem.mmNetworkAccess,
+						com.tools20022.repository.entity.TerminalManagementSystem.mmCardPaymentAcquiring, com.tools20022.repository.entity.TerminalManagementSystem.mmContactLevel,
+						com.tools20022.repository.entity.TerminalManagementSystem.mmContactDateTime, com.tools20022.repository.entity.TerminalManagementSystem.mmTerminalManagerRole,
+						com.tools20022.repository.entity.TerminalManagementSystem.mmControlledPointOfInteraction, com.tools20022.repository.entity.TerminalManagementSystem.mmAction);
 				derivationComponent_lazy = () -> Arrays.asList(AcquirerHostConfiguration1.mmObject(), HostCommunicationParameter1.mmObject(), AcquirerHostConfiguration2.mmObject(), HostCommunicationParameter2.mmObject(),
 						TMSTrigger1.mmObject(), AcquirerHostConfiguration3.mmObject(), HostCommunicationParameter3.mmObject(), ATMCompletionAdvice1.mmObject(), ATMCompletionAcknowledgement1.mmObject(), ATMCommand1.mmObject(),
 						ATMCommandParameters1.mmObject(), ATMCommand4.mmObject(), ATMCommand5.mmObject(), ATMCommandParameters1Choice.mmObject(), HostCommunicationParameter4.mmObject(), ATMCompletionAdvice2.mmObject(),
@@ -591,5 +600,69 @@ public class TerminalManagementSystem extends System {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AcceptorConfiguration> getAcceptorConfiguration() {
+		return acceptorConfiguration;
+	}
+
+	public void setAcceptorConfiguration(List<com.tools20022.repository.entity.AcceptorConfiguration> acceptorConfiguration) {
+		this.acceptorConfiguration = acceptorConfiguration;
+	}
+
+	public List<NetworkAccess> getNetworkAccess() {
+		return networkAccess;
+	}
+
+	public void setNetworkAccess(List<com.tools20022.repository.entity.NetworkAccess> networkAccess) {
+		this.networkAccess = networkAccess;
+	}
+
+	public CardPaymentAcquiring getCardPaymentAcquiring() {
+		return cardPaymentAcquiring;
+	}
+
+	public void setCardPaymentAcquiring(com.tools20022.repository.entity.CardPaymentAcquiring cardPaymentAcquiring) {
+		this.cardPaymentAcquiring = cardPaymentAcquiring;
+	}
+
+	public TMSContactLevelCode getContactLevel() {
+		return contactLevel;
+	}
+
+	public void setContactLevel(TMSContactLevelCode contactLevel) {
+		this.contactLevel = contactLevel;
+	}
+
+	public ISODateTime getContactDateTime() {
+		return contactDateTime;
+	}
+
+	public void setContactDateTime(ISODateTime contactDateTime) {
+		this.contactDateTime = contactDateTime;
+	}
+
+	public List<TerminalManagerRole> getTerminalManagerRole() {
+		return terminalManagerRole;
+	}
+
+	public void setTerminalManagerRole(List<com.tools20022.repository.entity.TerminalManagerRole> terminalManagerRole) {
+		this.terminalManagerRole = terminalManagerRole;
+	}
+
+	public List<PointOfInteraction> getControlledPointOfInteraction() {
+		return controlledPointOfInteraction;
+	}
+
+	public void setControlledPointOfInteraction(List<com.tools20022.repository.entity.PointOfInteraction> controlledPointOfInteraction) {
+		this.controlledPointOfInteraction = controlledPointOfInteraction;
+	}
+
+	public List<TerminalManagementAction> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.entity.TerminalManagementAction> action) {
+		this.action = action;
 	}
 }

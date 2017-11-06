@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.msg.ModificationReason5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of modification status.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationStatus5Choice#NoSpecifiedReason
- * ModificationStatus5Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationStatus5Choice#mmNoSpecifiedReason
+ * ModificationStatus5Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationStatus5Choice#Reason
- * ModificationStatus5Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationStatus5Choice#mmReason
+ * ModificationStatus5Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationStatus5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -77,8 +79,8 @@ public class ModificationStatus5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +100,21 @@ public class ModificationStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ModificationStatus5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<ModificationReason5> reason;
 	/**
 	 * Specifies the reason of the modification status.
 	 * <p>
@@ -143,32 +146,48 @@ public class ModificationStatus5Choice {
 	 * definition} = "Specifies the reason of the modification status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ModificationStatus5Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> ModificationStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the modification status.";
 			minOccurs = 0;
-			type_lazy = () -> ModificationReason5.mmObject();
 			isComposite = true;
+			type_lazy = () -> ModificationReason5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationStatus5Choice.NoSpecifiedReason, com.tools20022.repository.choice.ModificationStatus5Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationStatus5Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.ModificationStatus5Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationStatus5Choice";
 				definition = "Choice of modification status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<ModificationReason5> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<ModificationReason5> reason) {
+		this.reason = reason;
 	}
 }

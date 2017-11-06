@@ -39,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#Reason
- * ReversedStatus2Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#mmReason
+ * ReversedStatus2Choice.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#DataSourceScheme
- * ReversedStatus2Choice.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#mmDataSourceScheme
+ * ReversedStatus2Choice.mmDataSourceScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#NoSpecifiedReason
- * ReversedStatus2Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#mmNoSpecifiedReason
+ * ReversedStatus2Choice.mmNoSpecifiedReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReversedStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text reason;
 	/**
 	 * Reason for the reversal status.
 	 * <p>
@@ -102,11 +103,11 @@ public class ReversedStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1#Reason
-	 * ReversedStatus1.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1#mmReason
+	 * ReversedStatus1.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReversedStatus2Choice.mmObject();
 			isDerived = false;
@@ -114,12 +115,13 @@ public class ReversedStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the reversal status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.Reason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the reversed status.
 	 * <p>
@@ -153,26 +155,27 @@ public class ReversedStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1#DataSourceScheme
-	 * ReversedStatus1.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1#mmDataSourceScheme
+	 * ReversedStatus1.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReversedStatus2Choice.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> ReversedStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the reversed status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.DataSourceScheme;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmDataSourceScheme;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -185,8 +188,8 @@ public class ReversedStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,22 +210,22 @@ public class ReversedStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1#NoSpecifiedReason
-	 * ReversedStatus1.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1#mmNoSpecifiedReason
+	 * ReversedStatus1.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ReversedStatus2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.NoSpecifiedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
@@ -230,10 +233,10 @@ public class ReversedStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversedStatus2Choice.Reason, com.tools20022.repository.choice.ReversedStatus2Choice.DataSourceScheme,
-						com.tools20022.repository.choice.ReversedStatus2Choice.NoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversedStatus2Choice.mmReason, com.tools20022.repository.choice.ReversedStatus2Choice.mmDataSourceScheme,
+						com.tools20022.repository.choice.ReversedStatus2Choice.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReversedStatus2Choice";
 				definition = "Reason for the reversed status.";
@@ -241,5 +244,29 @@ public class ReversedStatus2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getReason() {
+		return reason;
+	}
+
+	public void setReason(Max350Text reason) {
+		this.reason = reason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
 	}
 }

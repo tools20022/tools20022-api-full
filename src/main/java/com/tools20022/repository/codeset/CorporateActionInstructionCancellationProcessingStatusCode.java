@@ -30,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#CancellationCompleted
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#mmCancellationCompleted
  * CorporateActionInstructionCancellationProcessingStatusCode.
- * CancellationCompleted}</li>
+ * mmCancellationCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#PendingCancellation
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#mmPendingCancellation
  * CorporateActionInstructionCancellationProcessingStatusCode.
- * PendingCancellation}</li>
+ * mmPendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#Accepted
- * CorporateActionInstructionCancellationProcessingStatusCode.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#mmAccepted
+ * CorporateActionInstructionCancellationProcessingStatusCode.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#Rejected
- * CorporateActionInstructionCancellationProcessingStatusCode.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode#mmRejected
+ * CorporateActionInstructionCancellationProcessingStatusCode.mmRejected}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -100,7 +100,7 @@ public class CorporateActionInstructionCancellationProcessingStatusCode {
 	 * definition} = "Cancellation request has been completed."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationCompleted = new MMCode() {
+	public static final MMCode mmCancellationCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationCompleted";
@@ -133,7 +133,7 @@ public class CorporateActionInstructionCancellationProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PendingCancellation = new MMCode() {
+	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PendingCancellation";
@@ -164,7 +164,7 @@ public class CorporateActionInstructionCancellationProcessingStatusCode {
 	 * "Cancellation request has been accepted for further processing."</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
@@ -197,7 +197,7 @@ public class CorporateActionInstructionCancellationProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Rejected";
@@ -210,14 +210,14 @@ public class CorporateActionInstructionCancellationProcessingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionCancellationProcessingStatusCode";
 				definition = "Specifies the status of a corporate action instruction cancellation process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.CancellationCompleted,
-						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.PendingCancellation,
-						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.Accepted, com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.mmCancellationCompleted,
+						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.mmPendingCancellation,
+						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.mmAccepted, com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode.mmRejected);
 				derivation_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationProcessingStatus1Code.mmObject());
 			}
 		});

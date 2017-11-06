@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SecurityStatus2Choice#Code
- * SecurityStatus2Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityStatus2Choice#Proprietary
- * SecurityStatus2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityStatus2Choice#mmCode
+ * SecurityStatus2Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityStatus2Choice#mmProprietary
+ * SecurityStatus2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityStatus2Code code;
 	/**
 	 * Security status expressed as an ISO 20022 code.
 	 * <p>
@@ -91,7 +93,7 @@ public class SecurityStatus2Choice {
 	 * definition} = "Security status expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityStatus2Choice.mmObject();
 			isDerived = false;
@@ -99,11 +101,12 @@ public class SecurityStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Security status expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecurityStatus2Code.mmObject();
 		}
 	};
+	protected GenericIdentification40 proprietary;
 	/**
 	 * Security status expressed as a proprietary code.
 	 * <p>
@@ -131,7 +134,7 @@ public class SecurityStatus2Choice {
 	 * definition} = "Security status expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityStatus2Choice.mmObject();
 			isDerived = false;
@@ -139,24 +142,40 @@ public class SecurityStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Security status expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification40.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityStatus2Choice.Code, com.tools20022.repository.choice.SecurityStatus2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityStatus2Choice.mmCode, com.tools20022.repository.choice.SecurityStatus2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityStatus2Choice";
 				definition = "Choice of format for security status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityStatus2Code getCode() {
+		return code;
+	}
+
+	public void setCode(SecurityStatus2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification40 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification40 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Unique and unambiguous identifier of the group of transactions as assigned by
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#OriginalMessageIdentification
- * OriginalGroupInformation4.OriginalMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#mmOriginalMessageIdentification
+ * OriginalGroupInformation4.mmOriginalMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#OriginalMessageNameIdentification
- * OriginalGroupInformation4.OriginalMessageNameIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#mmOriginalMessageNameIdentification
+ * OriginalGroupInformation4.mmOriginalMessageNameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#OriginalCreationDateTime
- * OriginalGroupInformation4.OriginalCreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#mmOriginalCreationDateTime
+ * OriginalGroupInformation4.mmOriginalCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#CancellationReasonInformation
- * OriginalGroupInformation4.CancellationReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation4#mmCancellationReasonInformation
+ * OriginalGroupInformation4.mmCancellationReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +58,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01#OriginalGroupInformation
- * PaymentCancellationRequestV01.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pain.PaymentCancellationRequestV01#mmOriginalGroupInformation
+ * PaymentCancellationRequestV01.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#OriginalGroupInformation
- * PaymentCancellationRequestV01.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#mmOriginalGroupInformation
+ * PaymentCancellationRequestV01.mmOriginalGroupInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalGroupInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalMessageIdentification;
 	/**
 	 * Point to point reference assigned by the original instructing party to
 	 * unambiguously identify the original group of individual transactions.
@@ -97,8 +99,8 @@ public class OriginalGroupInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,20 +121,21 @@ public class OriginalGroupInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalGroupInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalMessageNameIdentification;
 	/**
 	 * Specifies the original message name identifier to which the message
 	 * refers, eg, pacs.003.001.01 or MT103.
@@ -163,7 +166,7 @@ public class OriginalGroupInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalGroupInformation4.mmObject();
 			isDerived = false;
@@ -171,11 +174,12 @@ public class OriginalGroupInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalCreationDateTime;
 	/**
 	 * Original date and time at which the message was created.
 	 * <p>
@@ -188,8 +192,8 @@ public class OriginalGroupInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,20 +212,21 @@ public class OriginalGroupInformation4 {
 	 * definition} = "Original date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalGroupInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Original date and time at which the message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CancellationReasonInformation1> cancellationReasonInformation;
 	/**
 	 * Detailed information on the cancellation reason.
 	 * <p>
@@ -234,8 +239,8 @@ public class OriginalGroupInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#CancellationReason
-	 * PaymentStatus.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmCancellationReason
+	 * PaymentStatus.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,35 +259,67 @@ public class OriginalGroupInformation4 {
 	 * definition} = "Detailed information on the cancellation reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationReasonInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> OriginalGroupInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.CancellationReason;
 			isDerived = false;
 			xmlTag = "CxlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReasonInformation";
 			definition = "Detailed information on the cancellation reason.";
 			minOccurs = 0;
-			type_lazy = () -> CancellationReasonInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CancellationReasonInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation4.OriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation4.OriginalMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalGroupInformation4.OriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupInformation4.CancellationReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation4.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation4.mmOriginalMessageNameIdentification,
+						com.tools20022.repository.msg.OriginalGroupInformation4.mmOriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupInformation4.mmCancellationReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentCancellationRequestV01.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmOriginalGroupInformation);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentCancellationRequestV01.OriginalGroupInformation,
-						com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.OriginalGroupInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupInformation4";
 				definition = "Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
+	}
+
+	public Max35Text getOriginalMessageNameIdentification() {
+		return originalMessageNameIdentification;
+	}
+
+	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+		this.originalMessageNameIdentification = originalMessageNameIdentification;
+	}
+
+	public ISODateTime getOriginalCreationDateTime() {
+		return originalCreationDateTime;
+	}
+
+	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = originalCreationDateTime;
+	}
+
+	public List<CancellationReasonInformation1> getCancellationReasonInformation() {
+		return cancellationReasonInformation;
+	}
+
+	public void setCancellationReasonInformation(List<com.tools20022.repository.msg.CancellationReasonInformation1> cancellationReasonInformation) {
+		this.cancellationReasonInformation = cancellationReasonInformation;
 	}
 }

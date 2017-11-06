@@ -38,28 +38,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetReportData1#MessageIdentification
- * NetReportData1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NetReportData1#mmMessageIdentification
+ * NetReportData1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetReportData1#CreationDateTime
- * NetReportData1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.NetReportData1#mmCreationDateTime
+ * NetReportData1.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetReportData1#NettingCutOffTime
- * NetReportData1.NettingCutOffTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetReportData1#ReportDate
- * NetReportData1.ReportDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetReportData1#ValueDate
- * NetReportData1.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetReportData1#ReportType
- * NetReportData1.ReportType}</li>
+ * {@linkplain com.tools20022.repository.msg.NetReportData1#mmNettingCutOffTime
+ * NetReportData1.mmNettingCutOffTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetReportData1#mmReportDate
+ * NetReportData1.mmReportDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetReportData1#mmValueDate
+ * NetReportData1.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetReportData1#mmReportType
+ * NetReportData1.mmReportType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetReportData1#NetReportServicer
- * NetReportData1.NetReportServicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetReportData1#NetServiceType
- * NetReportData1.NetServiceType}</li>
+ * {@linkplain com.tools20022.repository.msg.NetReportData1#mmNetReportServicer
+ * NetReportData1.mmNetReportServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetReportData1#MessagePagination
- * NetReportData1.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.msg.NetReportData1#mmNetServiceType
+ * NetReportData1.mmNetServiceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetReportData1#mmMessagePagination
+ * NetReportData1.mmMessagePagination}</li>
  * </ul>
  * </li>
  * <li>
@@ -67,15 +68,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetReportData
- * NetReportV01.NetReportData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetReportData
+ * NetReportV01.mmNetReportData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetReportData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for a message, as assigned by the
 	 * Sender. This unique identifier can be used for cross-referencing purposes
@@ -119,7 +121,7 @@ public class NetReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -127,11 +129,12 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the net report was generated.
 	 * <p>
@@ -158,7 +161,7 @@ public class NetReportData1 {
 	 * definition} = "Date and time at which the net report was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -166,11 +169,12 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the net report was generated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISOTime nettingCutOffTime;
 	/**
 	 * Provides the cut off time that has been passed, resulting in the
 	 * generation of the net report.
@@ -200,7 +204,7 @@ public class NetReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NettingCutOffTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNettingCutOffTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -208,11 +212,12 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettingCutOffTime";
 			definition = "Provides the cut off time that has been passed, resulting in the generation of the net report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected ISODate reportDate;
 	/**
 	 * Specifies the value date on which the net report was generated.
 	 * <p>
@@ -240,7 +245,7 @@ public class NetReportData1 {
 	 * "Specifies the value date on which the net report was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -248,11 +253,12 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDate";
 			definition = "Specifies the value date on which the net report was generated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Specifies the value date for the trades used in the generation of the net
 	 * report.
@@ -282,7 +288,7 @@ public class NetReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -290,11 +296,12 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Specifies the value date for the trades used in the generation of the net report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text reportType;
 	/**
 	 * Specifies the type of net report, indicating how the obligations have
 	 * been calculated.
@@ -324,7 +331,7 @@ public class NetReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -332,11 +339,12 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportType";
 			definition = "Specifies the type of net report, indicating how the obligations have been calculated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice netReportServicer;
 	/**
 	 * Describes the central system responsible for generating the net report.
 	 * <p>
@@ -365,7 +373,7 @@ public class NetReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetReportServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetReportServicer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -373,12 +381,13 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetReportServicer";
 			definition = "Describes the central system responsible for generating the net report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected Max35Text netServiceType;
 	/**
 	 * Describes the type of netting service supporting the net report.
 	 * <p>
@@ -406,7 +415,7 @@ public class NetReportData1 {
 	 * "Describes the type of netting service supporting the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetServiceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -414,11 +423,12 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceType";
 			definition = "Describes the type of netting service supporting the net report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Page number of the message (within the net report) and continuation
 	 * indicator to indicate that the report is to continue or that the message
@@ -447,7 +457,7 @@ public class NetReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NetReportData1.mmObject();
 			isDerived = false;
@@ -455,27 +465,99 @@ public class NetReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Page number of the message (within the net report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Pagination.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetReportData1.MessageIdentification, com.tools20022.repository.msg.NetReportData1.CreationDateTime,
-						com.tools20022.repository.msg.NetReportData1.NettingCutOffTime, com.tools20022.repository.msg.NetReportData1.ReportDate, com.tools20022.repository.msg.NetReportData1.ValueDate,
-						com.tools20022.repository.msg.NetReportData1.ReportType, com.tools20022.repository.msg.NetReportData1.NetReportServicer, com.tools20022.repository.msg.NetReportData1.NetServiceType,
-						com.tools20022.repository.msg.NetReportData1.MessagePagination);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.NetReportData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetReportData1.mmMessageIdentification, com.tools20022.repository.msg.NetReportData1.mmCreationDateTime,
+						com.tools20022.repository.msg.NetReportData1.mmNettingCutOffTime, com.tools20022.repository.msg.NetReportData1.mmReportDate, com.tools20022.repository.msg.NetReportData1.mmValueDate,
+						com.tools20022.repository.msg.NetReportData1.mmReportType, com.tools20022.repository.msg.NetReportData1.mmNetReportServicer, com.tools20022.repository.msg.NetReportData1.mmNetServiceType,
+						com.tools20022.repository.msg.NetReportData1.mmMessagePagination);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.mmNetReportData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetReportData1";
 				definition = "Specifies the meta data associated with a net report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public ISOTime getNettingCutOffTime() {
+		return nettingCutOffTime;
+	}
+
+	public void setNettingCutOffTime(ISOTime nettingCutOffTime) {
+		this.nettingCutOffTime = nettingCutOffTime;
+	}
+
+	public ISODate getReportDate() {
+		return reportDate;
+	}
+
+	public void setReportDate(ISODate reportDate) {
+		this.reportDate = reportDate;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public Max35Text getReportType() {
+		return reportType;
+	}
+
+	public void setReportType(Max35Text reportType) {
+		this.reportType = reportType;
+	}
+
+	public PartyIdentification73Choice getNetReportServicer() {
+		return netReportServicer;
+	}
+
+	public void setNetReportServicer(PartyIdentification73Choice netReportServicer) {
+		this.netReportServicer = netReportServicer;
+	}
+
+	public Max35Text getNetServiceType() {
+		return netServiceType;
+	}
+
+	public void setNetServiceType(Max35Text netServiceType) {
+		this.netServiceType = netServiceType;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+		this.messagePagination = messagePagination;
 	}
 }

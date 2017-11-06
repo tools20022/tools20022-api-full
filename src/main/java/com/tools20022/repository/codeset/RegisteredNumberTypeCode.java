@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianBusinessNumber
- * RegisteredNumberTypeCode.AustralianBusinessNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianBusinessNumber
+ * RegisteredNumberTypeCode.mmAustralianBusinessNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianCompanyNumber
- * RegisteredNumberTypeCode.AustralianCompanyNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianCompanyNumber
+ * RegisteredNumberTypeCode.mmAustralianCompanyNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianRegisteredBodyNumber
- * RegisteredNumberTypeCode.AustralianRegisteredBodyNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianRegisteredBodyNumber
+ * RegisteredNumberTypeCode.mmAustralianRegisteredBodyNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianRegisteredSchemeNumber
- * RegisteredNumberTypeCode.AustralianRegisteredSchemeNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianRegisteredSchemeNumber
+ * RegisteredNumberTypeCode.mmAustralianRegisteredSchemeNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#Other
- * RegisteredNumberTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmOther
+ * RegisteredNumberTypeCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AustralianBusinessNumber = new MMCode() {
+	public static final MMCode mmAustralianBusinessNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianBusinessNumber";
@@ -129,7 +129,7 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AustralianCompanyNumber = new MMCode() {
+	public static final MMCode mmAustralianCompanyNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianCompanyNumber";
@@ -162,7 +162,7 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AustralianRegisteredBodyNumber = new MMCode() {
+	public static final MMCode mmAustralianRegisteredBodyNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredBodyNumber";
@@ -195,7 +195,7 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AustralianRegisteredSchemeNumber = new MMCode() {
+	public static final MMCode mmAustralianRegisteredSchemeNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredSchemeNumber";
@@ -225,7 +225,7 @@ public class RegisteredNumberTypeCode {
 	 * definition} = "Other registered number type."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -238,13 +238,13 @@ public class RegisteredNumberTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegisteredNumberTypeCode";
 				definition = "Code values for the registered number type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianBusinessNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianCompanyNumber,
-						com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianRegisteredBodyNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianRegisteredSchemeNumber,
-						com.tools20022.repository.codeset.RegisteredNumberTypeCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianBusinessNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianCompanyNumber,
+						com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianRegisteredBodyNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianRegisteredSchemeNumber,
+						com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(RegisteredNumberType1Code.mmObject());
 			}
 		});

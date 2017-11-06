@@ -68,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
- * GeneratedRepository.catalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
+ * GeneratedRepository.mmcatalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +90,7 @@ public class CrossBorderTransactionsCurrencyControlReportingISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.catalogue;
+				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Cross-Border Transactions Currency Control Reporting - ISO - Latest version";
 				definition = "Message set defined for the creation of the Cross-Border Transaction Regulatory Reporting (Local name in Russia is “Currency Control”) ISO 20022 messages as requested through the RU-CMPG (Russian Corporate Market Practice Group) Business Justification, approved on 22 July 2015.";

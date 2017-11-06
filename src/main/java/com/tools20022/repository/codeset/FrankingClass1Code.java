@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#CashDividend
- * FrankingClass1Code.CashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmCashDividend
+ * FrankingClass1Code.mmCashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#Interest
- * FrankingClass1Code.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmInterest
+ * FrankingClass1Code.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#NZDDeclared
- * FrankingClass1Code.NZDDeclared}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmNZDDeclared
+ * FrankingClass1Code.mmNZDDeclared}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#ScripDividend
- * FrankingClass1Code.ScripDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmScripDividend
+ * FrankingClass1Code.mmScripDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#SpecialDividend
- * FrankingClass1Code.SpecialDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmSpecialDividend
+ * FrankingClass1Code.mmSpecialDividend}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +87,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividend = new MMCode() {
+	public static final MMCode mmCashDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
@@ -110,7 +110,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "Interest"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
@@ -133,7 +133,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "NZDDeclared"</li>
 	 * </ul>
 	 */
-	public static final MMCode NZDDeclared = new MMCode() {
+	public static final MMCode mmNZDDeclared = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NZDDeclared";
@@ -156,7 +156,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "ScripDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode ScripDividend = new MMCode() {
+	public static final MMCode mmScripDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
@@ -179,7 +179,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "SpecialDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialDividend = new MMCode() {
+	public static final MMCode mmSpecialDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividend";
@@ -190,12 +190,12 @@ public class FrankingClass1Code extends FrankingClassCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FrankingClass1Code";
 				definition = "Code defining the dvidend / distribution class where this franking information applies to.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrankingClass1Code.CashDividend, com.tools20022.repository.codeset.FrankingClass1Code.Interest,
-						com.tools20022.repository.codeset.FrankingClass1Code.NZDDeclared, com.tools20022.repository.codeset.FrankingClass1Code.ScripDividend, com.tools20022.repository.codeset.FrankingClass1Code.SpecialDividend);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrankingClass1Code.mmCashDividend, com.tools20022.repository.codeset.FrankingClass1Code.mmInterest,
+						com.tools20022.repository.codeset.FrankingClass1Code.mmNZDDeclared, com.tools20022.repository.codeset.FrankingClass1Code.mmScripDividend, com.tools20022.repository.codeset.FrankingClass1Code.mmSpecialDividend);
 				trace_lazy = () -> FrankingClassCode.mmObject();
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashSettlementSystem3Choice#Code
- * CashSettlementSystem3Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CashSettlementSystem3Choice#mmCode
+ * CashSettlementSystem3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashSettlementSystem3Choice#Proprietary
- * CashSettlementSystem3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CashSettlementSystem3Choice#mmProprietary
+ * CashSettlementSystem3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashSettlementSystem3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashSettlementSystem2Code code;
 	/**
 	 * Cash settlement system expressed as an ISO 20022 code.
 	 * <p>
@@ -72,8 +73,8 @@ public class CashSettlementSystem3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#Type
-	 * CashClearingSystem.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmType
+	 * CashClearingSystem.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +93,21 @@ public class CashSettlementSystem3Choice {
 	 * definition} = "Cash settlement system expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmType;
 			componentContext_lazy = () -> CashSettlementSystem3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.Type;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Cash settlement system expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CashSettlementSystem2Code.mmObject();
 		}
 	};
+	protected GenericIdentification38 proprietary;
 	/**
 	 * Cash settlement system expressed as a proprietary code.
 	 * <p>
@@ -119,8 +121,8 @@ public class CashSettlementSystem3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#Type
-	 * CashClearingSystem.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmType
+	 * CashClearingSystem.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,17 +141,17 @@ public class CashSettlementSystem3Choice {
 	 * definition} = "Cash settlement system expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmType;
 			componentContext_lazy = () -> CashSettlementSystem3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.Type;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Cash settlement system expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
 		}
 	};
@@ -157,13 +159,29 @@ public class CashSettlementSystem3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashSettlementSystem3Choice.Code, com.tools20022.repository.choice.CashSettlementSystem3Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashSettlementSystem3Choice.mmCode, com.tools20022.repository.choice.CashSettlementSystem3Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystem3Choice";
 				definition = "Choice of format for the cash settlement system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashSettlementSystem2Code getCode() {
+		return code;
+	}
+
+	public void setCode(CashSettlementSystem2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification38 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -39,14 +39,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#BICOrBEI
- * PartyIdentification9Choice.BICOrBEI}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#mmBICOrBEI
+ * PartyIdentification9Choice.mmBICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#ProprietaryIdentification
- * PartyIdentification9Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#mmProprietaryIdentification
+ * PartyIdentification9Choice.mmProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#NameAndAddress
- * PartyIdentification9Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#mmNameAndAddress
+ * PartyIdentification9Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,87 +58,87 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#NotifyingParty
- * MeetingNotificationV02.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmNotifyingParty
+ * MeetingNotificationV02.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Issuer
- * MeetingNotificationV02.Issuer}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmIssuer
+ * MeetingNotificationV02.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#NotifyingParty
- * MeetingNotificationV03.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#mmNotifyingParty
+ * MeetingNotificationV03.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#NotifyingParty
- * MeetingNotificationV04.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmNotifyingParty
+ * MeetingNotificationV04.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#NotifyingParty
- * MeetingCancellationV02.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#mmNotifyingParty
+ * MeetingCancellationV02.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#NotifyingParty
- * MeetingCancellationV03.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#mmNotifyingParty
+ * MeetingCancellationV03.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#NotifyingParty
- * MeetingCancellationV04.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmNotifyingParty
+ * MeetingCancellationV04.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#NotifyingParty
- * MeetingEntitlementNotificationV02.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#mmNotifyingParty
+ * MeetingEntitlementNotificationV02.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#NotifyingParty
- * MeetingEntitlementNotificationV03.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmNotifyingParty
+ * MeetingEntitlementNotificationV03.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#NotifyingParty
- * MeetingEntitlementNotificationV04.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#mmNotifyingParty
+ * MeetingEntitlementNotificationV04.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV02#InstructingParty
- * MeetingInstructionV02.InstructingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV02#mmInstructingParty
+ * MeetingInstructionV02.mmInstructingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV03#InstructingParty
- * MeetingInstructionV03.InstructingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV03#mmInstructingParty
+ * MeetingInstructionV03.mmInstructingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#InstructingParty
- * MeetingInstructionV04.InstructingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#mmInstructingParty
+ * MeetingInstructionV04.mmInstructingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#RequestingParty
- * MeetingInstructionCancellationRequestV02.RequestingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmRequestingParty
+ * MeetingInstructionCancellationRequestV02.mmRequestingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#RequestingParty
- * MeetingInstructionCancellationRequestV03.RequestingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#mmRequestingParty
+ * MeetingInstructionCancellationRequestV03.mmRequestingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#RequestingParty
- * MeetingInstructionCancellationRequestV04.RequestingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmRequestingParty
+ * MeetingInstructionCancellationRequestV04.mmRequestingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#ReportingParty
- * MeetingInstructionStatusV02.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#mmReportingParty
+ * MeetingInstructionStatusV02.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#ReportingParty
- * MeetingInstructionStatusV03.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmReportingParty
+ * MeetingInstructionStatusV03.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV04#ReportingParty
- * MeetingInstructionStatusV04.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV04#mmReportingParty
+ * MeetingInstructionStatusV04.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02#ReportingParty
- * MeetingVoteExecutionConfirmationV02.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02#mmReportingParty
+ * MeetingVoteExecutionConfirmationV02.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03#ReportingParty
- * MeetingVoteExecutionConfirmationV03.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03#mmReportingParty
+ * MeetingVoteExecutionConfirmationV03.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#ReportingParty
- * MeetingVoteExecutionConfirmationV04.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmReportingParty
+ * MeetingVoteExecutionConfirmationV04.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV02#ReportingParty
- * MeetingResultDisseminationV02.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV02#mmReportingParty
+ * MeetingResultDisseminationV02.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#ReportingParty
- * MeetingResultDisseminationV03.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#mmReportingParty
+ * MeetingResultDisseminationV03.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#ReportingParty
- * MeetingResultDisseminationV04.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmReportingParty
+ * MeetingResultDisseminationV04.mmReportingParty}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -153,6 +153,7 @@ import java.util.function.Supplier;
 public class PartyIdentification9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bICOrBEI;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -169,8 +170,8 @@ public class PartyIdentification9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,20 +192,21 @@ public class PartyIdentification9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -219,8 +221,8 @@ public class PartyIdentification9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,20 +243,21 @@ public class PartyIdentification9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -290,17 +293,17 @@ public class PartyIdentification9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification9Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
@@ -308,23 +311,23 @@ public class PartyIdentification9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification9Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification9Choice.ProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification9Choice.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification9Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification9Choice.mmProprietaryIdentification,
+						com.tools20022.repository.choice.PartyIdentification9Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuer,
+						com.tools20022.repository.area.seev.MeetingNotificationV03.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingNotificationV04.mmNotifyingParty,
+						com.tools20022.repository.area.seev.MeetingCancellationV02.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingCancellationV03.mmNotifyingParty,
+						com.tools20022.repository.area.seev.MeetingCancellationV04.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmNotifyingParty,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmNotifyingParty,
+						com.tools20022.repository.area.seev.MeetingInstructionV02.mmInstructingParty, com.tools20022.repository.area.seev.MeetingInstructionV03.mmInstructingParty,
+						com.tools20022.repository.area.seev.MeetingInstructionV04.mmInstructingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmRequestingParty,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmRequestingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmRequestingParty,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmReportingParty, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmReportingParty,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmReportingParty,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.mmReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmReportingParty,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmReportingParty, com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmReportingParty,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmReportingParty);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.NotifyingParty, com.tools20022.repository.area.seev.MeetingNotificationV02.Issuer,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.NotifyingParty, com.tools20022.repository.area.seev.MeetingNotificationV04.NotifyingParty,
-						com.tools20022.repository.area.seev.MeetingCancellationV02.NotifyingParty, com.tools20022.repository.area.seev.MeetingCancellationV03.NotifyingParty,
-						com.tools20022.repository.area.seev.MeetingCancellationV04.NotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.NotifyingParty,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.NotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.NotifyingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionV02.InstructingParty, com.tools20022.repository.area.seev.MeetingInstructionV03.InstructingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionV04.InstructingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.RequestingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.RequestingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.RequestingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.ReportingParty, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.ReportingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.ReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.ReportingParty,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.ReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.ReportingParty,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.ReportingParty, com.tools20022.repository.area.seev.MeetingResultDisseminationV03.ReportingParty,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.ReportingParty);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -338,5 +341,29 @@ public class PartyIdentification9Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBICOrBEI() {
+		return bICOrBEI;
+	}
+
+	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = bICOrBEI;
+	}
+
+	public GenericIdentification1 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

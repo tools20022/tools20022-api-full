@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Detailed account holdings information report for a corporate action event.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#GeneralInformation
- * CorporateActionEventAndBalance11.GeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#mmGeneralInformation
+ * CorporateActionEventAndBalance11.mmGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#UnderlyingSecurity
- * CorporateActionEventAndBalance11.UnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#mmUnderlyingSecurity
+ * CorporateActionEventAndBalance11.mmUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#Balance
- * CorporateActionEventAndBalance11.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#mmBalance
+ * CorporateActionEventAndBalance11.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#SupplementaryData
- * CorporateActionEventAndBalance11.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance11#mmSupplementaryData
+ * CorporateActionEventAndBalance11.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionEventAndBalance11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EventInformation9 generalInformation;
 	/**
 	 * Provides general information related to a corporate action event.
 	 * <p>
@@ -105,26 +107,27 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#GeneralInformation
-	 * CorporateActionEventAndBalance9.GeneralInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#mmGeneralInformation
+	 * CorporateActionEventAndBalance9.mmGeneralInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GeneralInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGeneralInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
+			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
 			isDerived = false;
 			xmlTag = "GnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralInformation";
 			definition = "Provides general information related to a corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.GeneralInformation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.mmGeneralInformation;
 			maxOccurs = 1;
-			type_lazy = () -> EventInformation9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EventInformation9.mmObject();
 		}
 	};
+	protected SecurityIdentification19 underlyingSecurity;
 	/**
 	 * Security concerned by the corporate action.
 	 * <p>
@@ -137,8 +140,8 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#UnderlyingSecurity
-	 * CorporateActionEvent.UnderlyingSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnderlyingSecurity
+	 * CorporateActionEvent.mmUnderlyingSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,26 +161,27 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#UnderlyingSecurity
-	 * CorporateActionEventAndBalance9.UnderlyingSecurity}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#mmUnderlyingSecurity
+	 * CorporateActionEventAndBalance9.mmUnderlyingSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingSecurity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingSecurity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.UnderlyingSecurity;
 			isDerived = false;
 			xmlTag = "UndrlygScty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Security concerned by the corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.UnderlyingSecurity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.mmUnderlyingSecurity;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification19.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
 		}
 	};
+	protected CorporateActionBalanceDetails30 balance;
 	/**
 	 * Provides information about the balance related to a corporate action.
 	 * <p>
@@ -190,8 +194,8 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#AggregateQuantityBalance
-	 * SecuritiesQuantity.AggregateQuantityBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAggregateQuantityBalance
+	 * SecuritiesQuantity.mmAggregateQuantityBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,26 +216,27 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#Balance
-	 * CorporateActionEventAndBalance9.Balance}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#mmBalance
+	 * CorporateActionEventAndBalance9.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.AggregateQuantityBalance;
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about the balance related to a corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.Balance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.mmBalance;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Provides additional information related to the event and the balance of
 	 * the corporate action.
@@ -262,11 +267,11 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#SupplementaryData
-	 * CorporateActionEventAndBalance9.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9#mmSupplementaryData
+	 * CorporateActionEventAndBalance9.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
 			isDerived = false;
@@ -274,20 +279,20 @@ public class CorporateActionEventAndBalance11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Provides additional information related to the event and the balance of the corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance9.mmSupplementaryData;
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventAndBalance11.GeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance11.UnderlyingSecurity,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance11.Balance, com.tools20022.repository.msg.CorporateActionEventAndBalance11.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmGeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmUnderlyingSecurity,
+						com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmSupplementaryData);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventAndBalance11";
 				definition = "Detailed account holdings information report for a corporate action event.";
@@ -295,5 +300,37 @@ public class CorporateActionEventAndBalance11 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EventInformation9 getGeneralInformation() {
+		return generalInformation;
+	}
+
+	public void setGeneralInformation(com.tools20022.repository.msg.EventInformation9 generalInformation) {
+		this.generalInformation = generalInformation;
+	}
+
+	public SecurityIdentification19 getUnderlyingSecurity() {
+		return underlyingSecurity;
+	}
+
+	public void setUnderlyingSecurity(com.tools20022.repository.msg.SecurityIdentification19 underlyingSecurity) {
+		this.underlyingSecurity = underlyingSecurity;
+	}
+
+	public CorporateActionBalanceDetails30 getBalance() {
+		return balance;
+	}
+
+	public void setBalance(com.tools20022.repository.msg.CorporateActionBalanceDetails30 balance) {
+		this.balance = balance;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

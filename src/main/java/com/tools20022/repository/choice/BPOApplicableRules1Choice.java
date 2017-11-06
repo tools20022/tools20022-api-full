@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BPOApplicableRules1Choice#URBPOVersion
- * BPOApplicableRules1Choice.URBPOVersion}</li>
+ * {@linkplain com.tools20022.repository.choice.BPOApplicableRules1Choice#mmURBPOVersion
+ * BPOApplicableRules1Choice.mmURBPOVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BPOApplicableRules1Choice#OtherRulesAndVersion
- * BPOApplicableRules1Choice.OtherRulesAndVersion}</li>
+ * {@linkplain com.tools20022.repository.choice.BPOApplicableRules1Choice#mmOtherRulesAndVersion
+ * BPOApplicableRules1Choice.mmOtherRulesAndVersion}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BPOApplicableRules1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber uRBPOVersion;
 	/**
 	 * URBPO are rules that apply to a BPO when the Payment Obligation Segment
 	 * within an Established Baseline expressly states that it is subject to
@@ -96,7 +97,7 @@ public class BPOApplicableRules1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute URBPOVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmURBPOVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BPOApplicableRules1Choice.mmObject();
 			isDerived = false;
@@ -104,11 +105,12 @@ public class BPOApplicableRules1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URBPOVersion";
 			definition = "URBPO are rules that apply to a BPO when the Payment Obligation Segment within an Established Baseline expressly states that it is subject to these rules or when each Involved Bank agrees in a separate agreement that a BPO is subject to these rules. If an Established Baseline or separate agreement does not indicate the applicable version of URBPO, the BPO will be subject to the latest version in effect when the Baseline is established in accordance with sub-article 9 (d).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected Max35Text otherRulesAndVersion;
 	/**
 	 * Applicable rules are not URBPO and are specified here with version.
 	 * <p>
@@ -142,17 +144,17 @@ public class BPOApplicableRules1Choice {
 	 * "Applicable rules are not URBPO and are specified here with version."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherRulesAndVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherRulesAndVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BPOApplicableRules1Choice.mmObject();
 			businessComponentTrace_lazy = () -> MasterAgreement.mmObject();
+			componentContext_lazy = () -> BPOApplicableRules1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRulesAndVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRulesAndVersion";
 			definition = "Applicable rules are not URBPO and are specified here with version.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -160,13 +162,29 @@ public class BPOApplicableRules1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BPOApplicableRules1Choice.URBPOVersion, com.tools20022.repository.choice.BPOApplicableRules1Choice.OtherRulesAndVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BPOApplicableRules1Choice.mmURBPOVersion, com.tools20022.repository.choice.BPOApplicableRules1Choice.mmOtherRulesAndVersion);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BPOApplicableRules1Choice";
 				definition = "Rules which apply to the BPO (Bank Payment Obligation).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getURBPOVersion() {
+		return uRBPOVersion;
+	}
+
+	public void setURBPOVersion(DecimalNumber uRBPOVersion) {
+		this.uRBPOVersion = uRBPOVersion;
+	}
+
+	public Max35Text getOtherRulesAndVersion() {
+		return otherRulesAndVersion;
+	}
+
+	public void setOtherRulesAndVersion(Max35Text otherRulesAndVersion) {
+		this.otherRulesAndVersion = otherRulesAndVersion;
 	}
 }

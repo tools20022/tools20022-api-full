@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status information of the report item.
@@ -36,13 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportItemStatus1#Exception
- * ReportItemStatus1.Exception}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportItemStatus1#mmException
+ * ReportItemStatus1.mmException}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportItemStatus1#AdditionalReasonInformation
- * ReportItemStatus1.AdditionalReasonInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportItemStatus1#ReportItem
- * ReportItemStatus1.ReportItem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportItemStatus1#mmAdditionalReasonInformation
+ * ReportItemStatus1.mmAdditionalReasonInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportItemStatus1#mmReportItem
+ * ReportItemStatus1.mmReportItem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportItemStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportItemRejectionReason1Choice exception;
 	/**
 	 * Reason for the exception status.
 	 * <p>
@@ -103,21 +105,22 @@ public class ReportItemStatus1 {
 	 * definition} = "Reason for the exception status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Exception = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmException = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportItemStatus1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> ReportItemStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Xcptn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exception";
 			definition = "Reason for the exception status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReportItemRejectionReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ReportItemRejectionReason1Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Additional information about the reason for the status that cannot be
 	 * provided in a structured field.
@@ -131,8 +134,8 @@ public class ReportItemStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +156,21 @@ public class ReportItemStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> ReportItemStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional  information about the reason for the status that cannot be provided in a structured field.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReportItem1> reportItem;
 	/**
 	 * Details of the report item.
 	 * <p>
@@ -193,7 +197,7 @@ public class ReportItemStatus1 {
 	 * definition} = "Details of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportItem = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportItemStatus1.mmObject();
 			isDerived = false;
@@ -202,18 +206,18 @@ public class ReportItemStatus1 {
 			name = "ReportItem";
 			definition = "Details of the report item.";
 			minOccurs = 0;
-			type_lazy = () -> ReportItem1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItemStatus1.Exception, com.tools20022.repository.msg.ReportItemStatus1.AdditionalReasonInformation,
-						com.tools20022.repository.msg.ReportItemStatus1.ReportItem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItemStatus1.mmException, com.tools20022.repository.msg.ReportItemStatus1.mmAdditionalReasonInformation,
+						com.tools20022.repository.msg.ReportItemStatus1.mmReportItem);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatus1";
 				definition = "Status information of the report item.";
@@ -221,5 +225,29 @@ public class ReportItemStatus1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportItemRejectionReason1Choice getException() {
+		return exception;
+	}
+
+	public void setException(ReportItemRejectionReason1Choice exception) {
+		this.exception = exception;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
+	}
+
+	public List<ReportItem1> getReportItem() {
+		return reportItem;
+	}
+
+	public void setReportItem(List<com.tools20022.repository.msg.ReportItem1> reportItem) {
+		this.reportItem = reportItem;
 	}
 }

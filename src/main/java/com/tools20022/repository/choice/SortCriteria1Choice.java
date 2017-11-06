@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SortCriteria1Choice#Predefined
- * SortCriteria1Choice.Predefined}</li>
+ * {@linkplain com.tools20022.repository.choice.SortCriteria1Choice#mmPredefined
+ * SortCriteria1Choice.mmPredefined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SortCriteria1Choice#UserDefined
- * SortCriteria1Choice.UserDefined}</li>
+ * {@linkplain com.tools20022.repository.choice.SortCriteria1Choice#mmUserDefined
+ * SortCriteria1Choice.mmUserDefined}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SortCriteria1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportSortedType1Code predefined;
 	/**
 	 * Pre-defined way of indicating how the information is broken down.
 	 * <p>
@@ -88,7 +89,7 @@ public class SortCriteria1Choice {
 	 * "Pre-defined way of indicating how the information is broken down."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Predefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPredefined = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SortCriteria1Choice.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class SortCriteria1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Predefined";
 			definition = "Pre-defined way of indicating how the information is broken down.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportSortedType1Code.mmObject();
 		}
 	};
+	protected DataFormat1Choice userDefined;
 	/**
 	 * User-defined way of indicating how the information is broken down.
 	 * <p>
@@ -130,7 +132,7 @@ public class SortCriteria1Choice {
 	 * "User-defined way of indicating how the information is broken down."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UserDefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SortCriteria1Choice.mmObject();
 			isDerived = false;
@@ -138,22 +140,38 @@ public class SortCriteria1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			definition = "User-defined way of indicating how the information is broken down.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DataFormat1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DataFormat1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SortCriteria1Choice.Predefined, com.tools20022.repository.choice.SortCriteria1Choice.UserDefined);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SortCriteria1Choice.mmPredefined, com.tools20022.repository.choice.SortCriteria1Choice.mmUserDefined);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SortCriteria1Choice";
 				definition = "Choice between pre-defined and user-defined sorting criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportSortedType1Code getPredefined() {
+		return predefined;
+	}
+
+	public void setPredefined(ReportSortedType1Code predefined) {
+		this.predefined = predefined;
+	}
+
+	public DataFormat1Choice getUserDefined() {
+		return userDefined;
+	}
+
+	public void setUserDefined(com.tools20022.repository.choice.DataFormat1Choice userDefined) {
+		this.userDefined = userDefined;
 	}
 }

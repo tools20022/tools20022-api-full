@@ -37,15 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TMSEvent1#TimeStamp
- * TMSEvent1.TimeStamp}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSEvent1#Result
- * TMSEvent1.Result}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSEvent1#ActionIdentification
- * TMSEvent1.ActionIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSEvent1#mmTimeStamp
+ * TMSEvent1.mmTimeStamp}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSEvent1#mmResult
+ * TMSEvent1.mmResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSEvent1#AdditionalErrorInformation
- * TMSEvent1.AdditionalErrorInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSEvent1#mmActionIdentification
+ * TMSEvent1.mmActionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TMSEvent1#mmAdditionalErrorInformation
+ * TMSEvent1.mmAdditionalErrorInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TMSEvent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime timeStamp;
 	/**
 	 * Date time of the terminal management action performed by the point of
 	 * interaction.
@@ -107,7 +109,7 @@ public class TMSEvent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSEvent1.mmObject();
 			isDerived = false;
@@ -115,11 +117,12 @@ public class TMSEvent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeStamp";
 			definition = "Date time of the terminal management action performed by the point of interaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected TerminalManagementActionResult1Code result;
 	/**
 	 * Final result of the processed terminal management action.
 	 * <p>
@@ -133,8 +136,8 @@ public class TMSEvent1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#ActionResult
-	 * TerminalManagementAction.ActionResult}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionResult
+	 * TerminalManagementAction.mmActionResult}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TMSEvent1
@@ -153,20 +156,21 @@ public class TMSEvent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Result = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> TMSEvent1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.ActionResult;
 			isDerived = false;
 			xmlTag = "Rslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Final result of the processed terminal management action.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
 		}
 	};
+	protected TMSActionIdentification1 actionIdentification;
 	/**
 	 * Identification of the terminal management action performed by the point
 	 * of interaction.
@@ -196,7 +200,7 @@ public class TMSEvent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ActionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmActionIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TMSEvent1.mmObject();
 			isDerived = false;
@@ -204,12 +208,13 @@ public class TMSEvent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionIdentification";
 			definition = "Identification of the terminal management action performed by the point of interaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TMSActionIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification1.mmObject();
 		}
 	};
+	protected Max70Text additionalErrorInformation;
 	/**
 	 * Additional information related to a failure.
 	 * <p>
@@ -236,7 +241,7 @@ public class TMSEvent1 {
 	 * definition} = "Additional information related to a failure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalErrorInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSEvent1.mmObject();
 			isDerived = false;
@@ -244,8 +249,8 @@ public class TMSEvent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalErrorInformation";
 			definition = "Additional information related to a failure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -253,10 +258,10 @@ public class TMSEvent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent1.TimeStamp, com.tools20022.repository.msg.TMSEvent1.Result, com.tools20022.repository.msg.TMSEvent1.ActionIdentification,
-						com.tools20022.repository.msg.TMSEvent1.AdditionalErrorInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent1.mmTimeStamp, com.tools20022.repository.msg.TMSEvent1.mmResult, com.tools20022.repository.msg.TMSEvent1.mmActionIdentification,
+						com.tools20022.repository.msg.TMSEvent1.mmAdditionalErrorInformation);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TMSEvent1";
 				definition = "Result of an individual terminal management action performed by the point of interaction.";
@@ -264,5 +269,37 @@ public class TMSEvent1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getTimeStamp() {
+		return timeStamp;
+	}
+
+	public void setTimeStamp(ISODateTime timeStamp) {
+		this.timeStamp = timeStamp;
+	}
+
+	public TerminalManagementActionResult1Code getResult() {
+		return result;
+	}
+
+	public void setResult(TerminalManagementActionResult1Code result) {
+		this.result = result;
+	}
+
+	public TMSActionIdentification1 getActionIdentification() {
+		return actionIdentification;
+	}
+
+	public void setActionIdentification(com.tools20022.repository.msg.TMSActionIdentification1 actionIdentification) {
+		this.actionIdentification = actionIdentification;
+	}
+
+	public Max70Text getAdditionalErrorInformation() {
+		return additionalErrorInformation;
+	}
+
+	public void setAdditionalErrorInformation(Max70Text additionalErrorInformation) {
+		this.additionalErrorInformation = additionalErrorInformation;
 	}
 }

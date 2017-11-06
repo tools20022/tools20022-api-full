@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedParameters2#StatementByAccount
- * RequestedParameters2.StatementByAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedParameters2#mmStatementByAccount
+ * RequestedParameters2.mmStatementByAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedParameters2#StatementByAccountAndFinancialInstrument
- * RequestedParameters2.StatementByAccountAndFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedParameters2#mmStatementByAccountAndFinancialInstrument
+ * RequestedParameters2.mmStatementByAccountAndFinancialInstrument}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestedParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatementAttributes1 statementByAccount;
 	/**
 	 * Account and statement parameters for which the statement is requested.
 	 * <p>
@@ -84,7 +85,7 @@ public class RequestedParameters2 {
 	 * "Account and statement parameters for which the statement is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatementByAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatementByAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestedParameters2.mmObject();
 			isDerived = false;
@@ -92,12 +93,13 @@ public class RequestedParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementByAccount";
 			definition = "Account and statement parameters for which the statement is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> StatementAttributes1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 		}
 	};
+	protected GenericReportParameters statementByAccountAndFinancialInstrument;
 	/**
 	 * Account, financial instrument and statement parameters for which the
 	 * statement is requested.
@@ -128,7 +130,7 @@ public class RequestedParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatementByAccountAndFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatementByAccountAndFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestedParameters2.mmObject();
 			isDerived = false;
@@ -136,23 +138,39 @@ public class RequestedParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementByAccountAndFinancialInstrument";
 			definition = "Account, financial instrument and statement parameters for which the statement is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericReportParameters.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedParameters2.StatementByAccount, com.tools20022.repository.msg.RequestedParameters2.StatementByAccountAndFinancialInstrument);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedParameters2.mmStatementByAccount, com.tools20022.repository.msg.RequestedParameters2.mmStatementByAccountAndFinancialInstrument);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestedParameters2";
 				definition = "Specification of the request for report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatementAttributes1 getStatementByAccount() {
+		return statementByAccount;
+	}
+
+	public void setStatementByAccount(com.tools20022.repository.msg.StatementAttributes1 statementByAccount) {
+		this.statementByAccount = statementByAccount;
+	}
+
+	public GenericReportParameters getStatementByAccountAndFinancialInstrument() {
+		return statementByAccountAndFinancialInstrument;
+	}
+
+	public void setStatementByAccountAndFinancialInstrument(com.tools20022.repository.msg.GenericReportParameters statementByAccountAndFinancialInstrument) {
+		this.statementByAccountAndFinancialInstrument = statementByAccountAndFinancialInstrument;
 	}
 }

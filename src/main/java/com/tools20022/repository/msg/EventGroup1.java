@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#Type
- * EventGroup1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#Date
- * EventGroup1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#Price
- * EventGroup1.Price}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#Description
- * EventGroup1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#mmType
+ * EventGroup1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#mmDate
+ * EventGroup1.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#mmPrice
+ * EventGroup1.mmPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EventGroup1#mmDescription
+ * EventGroup1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EventGroup1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EventType1Code type;
 	/**
 	 * Represents the type of event.
 	 * <p>
@@ -93,7 +94,7 @@ public class EventGroup1 {
 	 * definition} = "Represents the type of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class EventGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Represents the type of event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EventType1Code.mmObject();
 		}
 	};
+	protected ISODateTime date;
 	/**
 	 * Date of event.
 	 * <p>
@@ -132,7 +134,7 @@ public class EventGroup1 {
 	 * definition} = "Date of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
@@ -140,11 +142,12 @@ public class EventGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Price1 price;
 	/**
 	 * Predetermined price of issue at event, if applicable.
 	 * <p>
@@ -170,7 +173,7 @@ public class EventGroup1 {
 	 * definition} = "Predetermined price of issue at event, if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
@@ -178,11 +181,12 @@ public class EventGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Predetermined price of issue at event, if applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Max350Text description;
 	/**
 	 * Comments related to the event.
 	 * <p>
@@ -209,7 +213,7 @@ public class EventGroup1 {
 	 * definition} = "Comments related to the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
@@ -217,8 +221,8 @@ public class EventGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Comments related to the event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -226,14 +230,46 @@ public class EventGroup1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventGroup1.Type, com.tools20022.repository.msg.EventGroup1.Date, com.tools20022.repository.msg.EventGroup1.Price,
-						com.tools20022.repository.msg.EventGroup1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventGroup1.mmType, com.tools20022.repository.msg.EventGroup1.mmDate, com.tools20022.repository.msg.EventGroup1.mmPrice,
+						com.tools20022.repository.msg.EventGroup1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EventGroup1";
 				definition = "Provides the significant events scheduled during the life of a security. Eg, a callable bond may list one or more dates at which the issuer may call the bond. An option may list put, tender or call dates.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EventType1Code getType() {
+		return type;
+	}
+
+	public void setType(EventType1Code type) {
+		this.type = type;
+	}
+
+	public ISODateTime getDate() {
+		return date;
+	}
+
+	public void setDate(ISODateTime date) {
+		this.date = date;
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+	}
+
+	public Max350Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max350Text description) {
+		this.description = description;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.ISODate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides system date for all of the changes occurred for an entity.
@@ -34,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountStatement1#SystemDate
- * CashAccountStatement1.SystemDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccountStatement1#Change
- * CashAccountStatement1.Change}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountStatement1#mmSystemDate
+ * CashAccountStatement1.mmSystemDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountStatement1#mmChange
+ * CashAccountStatement1.mmChange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate systemDate;
 	/**
 	 * Date for which the statement is valid.
 	 * <p>
@@ -86,7 +88,7 @@ public class CashAccountStatement1 {
 	 * definition} = "Date for which the statement is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountStatement1.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class CashAccountStatement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the statement is valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccountReferenceDataChange1> change;
 	/**
 	 * Provides information on the actual change occurred to the cash account.
 	 * <p>
@@ -128,7 +131,7 @@ public class CashAccountStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Change = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CashAccountStatement1.mmObject();
 			isDerived = false;
@@ -137,21 +140,37 @@ public class CashAccountStatement1 {
 			name = "Change";
 			definition = "Provides information on the actual change occurred to the cash account.";
 			minOccurs = 0;
-			type_lazy = () -> CashAccountReferenceDataChange1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountStatement1.SystemDate, com.tools20022.repository.msg.CashAccountStatement1.Change);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountStatement1.mmSystemDate, com.tools20022.repository.msg.CashAccountStatement1.mmChange);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountStatement1";
 				definition = "Provides system date for all of the changes occurred for an entity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getSystemDate() {
+		return systemDate;
+	}
+
+	public void setSystemDate(ISODate systemDate) {
+		this.systemDate = systemDate;
+	}
+
+	public List<CashAccountReferenceDataChange1> getChange() {
+		return change;
+	}
+
+	public void setChange(List<com.tools20022.repository.msg.CashAccountReferenceDataChange1> change) {
+		this.change = change;
 	}
 }

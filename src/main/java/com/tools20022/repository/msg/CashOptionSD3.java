@@ -38,41 +38,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#PlaceAndName
- * CashOptionSD3.PlaceAndName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#mmPlaceAndName
+ * CashOptionSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOptionSD3#ReinvestmentIncomeClassification
- * CashOptionSD3.ReinvestmentIncomeClassification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#DTCPayMethod
- * CashOptionSD3.DTCPayMethod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#DTCPayOrder
- * CashOptionSD3.DTCPayOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOptionSD3#mmReinvestmentIncomeClassification
+ * CashOptionSD3.mmReinvestmentIncomeClassification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#mmDTCPayMethod
+ * CashOptionSD3.mmDTCPayMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#mmDTCPayOrder
+ * CashOptionSD3.mmDTCPayOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOptionSD3#EntitlementCalculationMethod
- * CashOptionSD3.EntitlementCalculationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOptionSD3#mmEntitlementCalculationMethod
+ * CashOptionSD3.mmEntitlementCalculationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOptionSD3#EstimatedRateFlag
- * CashOptionSD3.EstimatedRateFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOptionSD3#mmEstimatedRateFlag
+ * CashOptionSD3.mmEstimatedRateFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOptionSD3#NRATaxReportableFlag
- * CashOptionSD3.NRATaxReportableFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOptionSD3#mmNRATaxReportableFlag
+ * CashOptionSD3.mmNRATaxReportableFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOptionSD3#ProtectChargeFlag
- * CashOptionSD3.ProtectChargeFlag}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#CSDCashRate
- * CashOptionSD3.CSDCashRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#DTCFeeRate
- * CashOptionSD3.DTCFeeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOptionSD3#mmProtectChargeFlag
+ * CashOptionSD3.mmProtectChargeFlag}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#mmCSDCashRate
+ * CashOptionSD3.mmCSDCashRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD3#mmDTCFeeRate
+ * CashOptionSD3.mmDTCFeeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOptionSD3#DTCUSTaxInstructionPeriod
- * CashOptionSD3.DTCUSTaxInstructionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOptionSD3#mmDTCUSTaxInstructionPeriod
+ * CashOptionSD3.mmDTCUSTaxInstructionPeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashOptionSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -114,7 +115,7 @@ public class CashOptionSD3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -122,11 +123,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ReinvestmentIncomeClassification1Code reinvestmentIncomeClassification;
 	/**
 	 * Income classification of the cash proceeds for dividend reinvestment .
 	 * <p>
@@ -155,7 +157,7 @@ public class CashOptionSD3 {
 	 * "Income classification of the cash proceeds for dividend reinvestment ."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReinvestmentIncomeClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -163,11 +165,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
 			definition = "Income classification of the cash proceeds for dividend reinvestment .";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification1Code.mmObject();
 		}
 	};
+	protected Max3Text dTCPayMethod;
 	/**
 	 * Indicates the type of payment. Used in stock dividends processing at DTC
 	 * (The Depository Trust Corporation). Valid values list will be maintained
@@ -198,7 +201,7 @@ public class CashOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPayMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -206,11 +209,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	protected Max3Text dTCPayOrder;
 	/**
 	 * Indicates the payment order. Used in stock dividends processing at DTC
 	 * (The Depository Trust Corporation). Valid values list will be maintained
@@ -241,7 +245,7 @@ public class CashOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPayOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -249,11 +253,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	protected DTCEntitlementCalculationMethod1Code entitlementCalculationMethod;
 	/**
 	 * Indicates how the entitlements were calculated optional dividends.
 	 * <p>
@@ -282,7 +287,7 @@ public class CashOptionSD3 {
 	 * "Indicates how the entitlements were calculated optional dividends."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntitlementCalculationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntitlementCalculationMethod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -290,11 +295,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator estimatedRateFlag;
 	/**
 	 * Denotes whether the rate is approximate.
 	 * <p>
@@ -322,7 +328,7 @@ public class CashOptionSD3 {
 	 * definition} = "Denotes whether the rate is approximate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EstimatedRateFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEstimatedRateFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -330,11 +336,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator nRATaxReportableFlag;
 	/**
 	 * Identifies the income events which are subject to withholding tax if paid
 	 * to a non-U.S. resident alien (NRA).
@@ -365,7 +372,7 @@ public class CashOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NRATaxReportableFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNRATaxReportableFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -373,11 +380,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATaxReportableFlag";
 			definition = "Identifies the income events which are subject to withholding tax if paid to a non-U.S. resident alien (NRA).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator protectChargeFlag;
 	/**
 	 * Indicates whether a charge is levied on the protect instructions at the
 	 * time when the protect is submitted or at the time of the cover. Applies
@@ -412,7 +420,7 @@ public class CashOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProtectChargeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProtectChargeFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -420,11 +428,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected RateAndAmountFormat17Choice cSDCashRate;
 	/**
 	 * Corresponding cash rate paid by CSD.
 	 * <p>
@@ -452,7 +461,7 @@ public class CashOptionSD3 {
 	 * definition} = "Corresponding cash rate paid by CSD. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSDCashRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSDCashRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -460,11 +469,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDCashRate";
 			definition = "Corresponding cash rate paid by CSD. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat17Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat17Choice dTCFeeRate;
 	/**
 	 * Rate at which a fee will be charged to a DTC (The Depository Trust
 	 * Corporation) participant.
@@ -495,7 +505,7 @@ public class CashOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCFeeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCFeeRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -503,11 +513,12 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCFeeRate";
 			definition = "Rate at which a fee will be charged to a DTC (The Depository Trust Corporation) participant.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat17Choice.mmObject();
 		}
 	};
+	protected Period3 dTCUSTaxInstructionPeriod;
 	/**
 	 * Indicates the period during which the instructions for DTC (The
 	 * Depository Trust Corporation) US Tax service will be accepted.
@@ -537,7 +548,7 @@ public class CashOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCUSTaxInstructionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCUSTaxInstructionPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD3.mmObject();
 			isDerived = false;
@@ -545,25 +556,113 @@ public class CashOptionSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for DTC (The Depository Trust Corporation) US Tax service will be accepted.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD3.PlaceAndName, com.tools20022.repository.msg.CashOptionSD3.ReinvestmentIncomeClassification,
-						com.tools20022.repository.msg.CashOptionSD3.DTCPayMethod, com.tools20022.repository.msg.CashOptionSD3.DTCPayOrder, com.tools20022.repository.msg.CashOptionSD3.EntitlementCalculationMethod,
-						com.tools20022.repository.msg.CashOptionSD3.EstimatedRateFlag, com.tools20022.repository.msg.CashOptionSD3.NRATaxReportableFlag, com.tools20022.repository.msg.CashOptionSD3.ProtectChargeFlag,
-						com.tools20022.repository.msg.CashOptionSD3.CSDCashRate, com.tools20022.repository.msg.CashOptionSD3.DTCFeeRate, com.tools20022.repository.msg.CashOptionSD3.DTCUSTaxInstructionPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD3.mmPlaceAndName, com.tools20022.repository.msg.CashOptionSD3.mmReinvestmentIncomeClassification,
+						com.tools20022.repository.msg.CashOptionSD3.mmDTCPayMethod, com.tools20022.repository.msg.CashOptionSD3.mmDTCPayOrder, com.tools20022.repository.msg.CashOptionSD3.mmEntitlementCalculationMethod,
+						com.tools20022.repository.msg.CashOptionSD3.mmEstimatedRateFlag, com.tools20022.repository.msg.CashOptionSD3.mmNRATaxReportableFlag, com.tools20022.repository.msg.CashOptionSD3.mmProtectChargeFlag,
+						com.tools20022.repository.msg.CashOptionSD3.mmCSDCashRate, com.tools20022.repository.msg.CashOptionSD3.mmDTCFeeRate, com.tools20022.repository.msg.CashOptionSD3.mmDTCUSTaxInstructionPeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashOptionSD3";
 				definition = "Provides additional information regarding corporate action option cash movement details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ReinvestmentIncomeClassification1Code getReinvestmentIncomeClassification() {
+		return reinvestmentIncomeClassification;
+	}
+
+	public void setReinvestmentIncomeClassification(ReinvestmentIncomeClassification1Code reinvestmentIncomeClassification) {
+		this.reinvestmentIncomeClassification = reinvestmentIncomeClassification;
+	}
+
+	public Max3Text getDTCPayMethod() {
+		return dTCPayMethod;
+	}
+
+	public void setDTCPayMethod(Max3Text dTCPayMethod) {
+		this.dTCPayMethod = dTCPayMethod;
+	}
+
+	public Max3Text getDTCPayOrder() {
+		return dTCPayOrder;
+	}
+
+	public void setDTCPayOrder(Max3Text dTCPayOrder) {
+		this.dTCPayOrder = dTCPayOrder;
+	}
+
+	public DTCEntitlementCalculationMethod1Code getEntitlementCalculationMethod() {
+		return entitlementCalculationMethod;
+	}
+
+	public void setEntitlementCalculationMethod(DTCEntitlementCalculationMethod1Code entitlementCalculationMethod) {
+		this.entitlementCalculationMethod = entitlementCalculationMethod;
+	}
+
+	public YesNoIndicator getEstimatedRateFlag() {
+		return estimatedRateFlag;
+	}
+
+	public void setEstimatedRateFlag(YesNoIndicator estimatedRateFlag) {
+		this.estimatedRateFlag = estimatedRateFlag;
+	}
+
+	public YesNoIndicator getNRATaxReportableFlag() {
+		return nRATaxReportableFlag;
+	}
+
+	public void setNRATaxReportableFlag(YesNoIndicator nRATaxReportableFlag) {
+		this.nRATaxReportableFlag = nRATaxReportableFlag;
+	}
+
+	public YesNoIndicator getProtectChargeFlag() {
+		return protectChargeFlag;
+	}
+
+	public void setProtectChargeFlag(YesNoIndicator protectChargeFlag) {
+		this.protectChargeFlag = protectChargeFlag;
+	}
+
+	public RateAndAmountFormat17Choice getCSDCashRate() {
+		return cSDCashRate;
+	}
+
+	public void setCSDCashRate(RateAndAmountFormat17Choice cSDCashRate) {
+		this.cSDCashRate = cSDCashRate;
+	}
+
+	public RateAndAmountFormat17Choice getDTCFeeRate() {
+		return dTCFeeRate;
+	}
+
+	public void setDTCFeeRate(RateAndAmountFormat17Choice dTCFeeRate) {
+		this.dTCFeeRate = dTCFeeRate;
+	}
+
+	public Period3 getDTCUSTaxInstructionPeriod() {
+		return dTCUSTaxInstructionPeriod;
+	}
+
+	public void setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
+		this.dTCUSTaxInstructionPeriod = dTCUSTaxInstructionPeriod;
 	}
 }

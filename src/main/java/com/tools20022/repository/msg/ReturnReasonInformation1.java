@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.PaymentStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Further information on the return reason of the transaction.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1#ReturnOriginator
- * ReturnReasonInformation1.ReturnOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1#mmReturnOriginator
+ * ReturnReasonInformation1.mmReturnOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1#ReturnReason
- * ReturnReasonInformation1.ReturnReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1#mmReturnReason
+ * ReturnReasonInformation1.mmReturnReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1#AdditionalReturnReasonInformation
- * ReturnReasonInformation1.AdditionalReturnReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation1#mmAdditionalReturnReasonInformation
+ * ReturnReasonInformation1.mmAdditionalReturnReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReturnReasonInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification8 returnOriginator;
 	/**
 	 * Party issuing the return.
 	 * <p>
@@ -78,8 +80,8 @@ public class ReturnReasonInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +100,22 @@ public class ReturnReasonInformation1 {
 	 * definition} = "Party issuing the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReturnReasonInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RtrOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOriginator";
 			definition = "Party issuing the return.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	protected ReturnReason1Choice returnReason;
 	/**
 	 * Specifies the reason for the return.
 	 * <p>
@@ -124,8 +127,8 @@ public class ReturnReasonInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,21 +147,22 @@ public class ReturnReasonInformation1 {
 	 * definition} = "Specifies the reason for the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> ReturnReasonInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "RtrRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnReason";
 			definition = "Specifies the reason for the return.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReturnReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ReturnReason1Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalReturnReasonInformation;
 	/**
 	 * Further details on the return reason.
 	 * <p>
@@ -186,7 +190,7 @@ public class ReturnReasonInformation1 {
 	 * definition} = "Further details on the return reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReturnReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReturnReasonInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReturnReasonInformation1.mmObject();
 			isDerived = false;
@@ -202,15 +206,39 @@ public class ReturnReasonInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation1.ReturnOriginator, com.tools20022.repository.msg.ReturnReasonInformation1.ReturnReason,
-						com.tools20022.repository.msg.ReturnReasonInformation1.AdditionalReturnReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation1.mmReturnOriginator, com.tools20022.repository.msg.ReturnReasonInformation1.mmReturnReason,
+						com.tools20022.repository.msg.ReturnReasonInformation1.mmAdditionalReturnReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReturnReasonInformation1";
 				definition = "Further information on the return reason of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification8 getReturnOriginator() {
+		return returnOriginator;
+	}
+
+	public void setReturnOriginator(com.tools20022.repository.msg.PartyIdentification8 returnOriginator) {
+		this.returnOriginator = returnOriginator;
+	}
+
+	public ReturnReason1Choice getReturnReason() {
+		return returnReason;
+	}
+
+	public void setReturnReason(ReturnReason1Choice returnReason) {
+		this.returnReason = returnReason;
+	}
+
+	public List<Max105Text> getAdditionalReturnReasonInformation() {
+		return additionalReturnReasonInformation;
+	}
+
+	public void setAdditionalReturnReasonInformation(List<Max105Text> additionalReturnReasonInformation) {
+		this.additionalReturnReasonInformation = additionalReturnReasonInformation;
 	}
 }

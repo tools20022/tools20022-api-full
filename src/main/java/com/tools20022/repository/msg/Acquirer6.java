@@ -34,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#Identification
- * Acquirer6.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#Issuer
- * Acquirer6.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#CountryCode
- * Acquirer6.CountryCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#mmIdentification
+ * Acquirer6.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#mmIssuer
+ * Acquirer6.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#mmCountryCode
+ * Acquirer6.mmCountryCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Acquirer6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the acquirer. <br>
 	 * It correspond to the ISO 8583 field number 32.
@@ -85,8 +86,8 @@ public class Acquirer6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Acquirer6
@@ -108,27 +109,28 @@ public class Acquirer6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Acquirer7#AcquiringInstitution
-	 * Acquirer7.AcquiringInstitution}</li>
+	 * {@linkplain com.tools20022.repository.msg.Acquirer7#mmAcquiringInstitution
+	 * Acquirer7.mmAcquiringInstitution}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Acquirer6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the acquirer. \r\nIt correspond to the ISO 8583 field number 32.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer7.AcquiringInstitution);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer7.mmAcquiringInstitution);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text issuer;
 	/**
 	 * Identification of the entity assigning the acquirer identification.
 	 * <p>
@@ -157,13 +159,13 @@ public class Acquirer6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer7#Branch
-	 * Acquirer7.Branch}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer7#mmBranch
+	 * Acquirer7.mmBranch}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Acquirer6.mmObject();
 			isDerived = false;
@@ -171,12 +173,13 @@ public class Acquirer6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Identification of the entity assigning the acquirer identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer7.Branch);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer7.mmBranch);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISO3NumericCountryCode countryCode;
 	/**
 	 * Country of the acquirer. <br>
 	 * It correspond to the ISO 8583 field number 19.
@@ -191,8 +194,8 @@ public class Acquirer6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Country
-	 * PostalAddress.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+	 * PostalAddress.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Acquirer6
@@ -212,17 +215,17 @@ public class Acquirer6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
 			componentContext_lazy = () -> Acquirer6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Country;
 			isDerived = false;
 			xmlTag = "CtryCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryCode";
 			definition = "Country of the acquirer. \r\nIt correspond to the ISO 8583 field number 19.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISO3NumericCountryCode.mmObject();
 		}
 	};
@@ -230,16 +233,40 @@ public class Acquirer6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer6.Identification, com.tools20022.repository.msg.Acquirer6.Issuer, com.tools20022.repository.msg.Acquirer6.CountryCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer6.mmIdentification, com.tools20022.repository.msg.Acquirer6.mmIssuer, com.tools20022.repository.msg.Acquirer6.mmCountryCode);
 				trace_lazy = () -> AcquirerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Acquirer6";
 				definition = "Acquirer of the card transaction.";
-				previousVersion_lazy = () -> Acquirer5.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Acquirer7.mmObject());
+				previousVersion_lazy = () -> Acquirer5.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max35Text issuer) {
+		this.issuer = issuer;
+	}
+
+	public ISO3NumericCountryCode getCountryCode() {
+		return countryCode;
+	}
+
+	public void setCountryCode(ISO3NumericCountryCode countryCode) {
+		this.countryCode = countryCode;
 	}
 }

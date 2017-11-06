@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#Free
- * DeliveryReceiptType1Code.Free}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#mmFree
+ * DeliveryReceiptType1Code.mmFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#AgainstPayment
- * DeliveryReceiptType1Code.AgainstPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#mmAgainstPayment
+ * DeliveryReceiptType1Code.mmAgainstPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#SplitFromPayment
- * DeliveryReceiptType1Code.SplitFromPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#mmSplitFromPayment
+ * DeliveryReceiptType1Code.mmSplitFromPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class DeliveryReceiptType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Free = new MMCode() {
+	public static final MMCode mmFree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Free";
@@ -121,7 +121,7 @@ public class DeliveryReceiptType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AgainstPayment = new MMCode() {
+	public static final MMCode mmAgainstPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgainstPayment";
@@ -155,7 +155,7 @@ public class DeliveryReceiptType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SplitFromPayment = new MMCode() {
+	public static final MMCode mmSplitFromPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SplitFromPayment";
@@ -168,13 +168,13 @@ public class DeliveryReceiptType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FREE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveryReceiptType1Code";
 				definition = "Specifies how the transaction is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReceiptType1Code.Free, com.tools20022.repository.codeset.DeliveryReceiptType1Code.AgainstPayment,
-						com.tools20022.repository.codeset.DeliveryReceiptType1Code.SplitFromPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmFree, com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmAgainstPayment,
+						com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmSplitFromPayment);
 			}
 		});
 		return mmObject_lazy.get();

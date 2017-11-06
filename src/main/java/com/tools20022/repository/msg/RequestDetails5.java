@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Report of the requested data.
@@ -33,13 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails5#Type
- * RequestDetails5.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails5#mmType
+ * RequestDetails5.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails5#RequestReference
- * RequestDetails5.RequestReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails5#ReportKey
- * RequestDetails5.ReportKey}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails5#mmRequestReference
+ * RequestDetails5.mmRequestReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails5#mmReportKey
+ * RequestDetails5.mmReportKey}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#ReportDetails
- * StaticDataReportV02.ReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataReportV02#mmReportDetails
+ * StaticDataReportV02.mmReportDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestDetails5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of data requested, for example, a sub-member BIC.
 	 * <p>
@@ -96,7 +98,7 @@ public class RequestDetails5 {
 	 * definition} = "Type of data requested, for example, a sub-member BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails5.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class RequestDetails5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of data requested, for example, a sub-member BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text requestReference;
 	/**
 	 * Reference to the request for which the report is sent.
 	 * <p>
@@ -136,7 +139,7 @@ public class RequestDetails5 {
 	 * definition} = "Reference to the request for which the report is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails5.mmObject();
 			isDerived = false;
@@ -144,11 +147,12 @@ public class RequestDetails5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReference";
 			definition = "Reference to the request for which the report is sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.RequestDetails4> reportKey;
 	/**
 	 * Report key and returned data.
 	 * <p>
@@ -175,7 +179,7 @@ public class RequestDetails5 {
 	 * definition} = "Report key and returned data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportKey = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestDetails5.mmObject();
 			isDerived = false;
@@ -184,22 +188,46 @@ public class RequestDetails5 {
 			name = "ReportKey";
 			definition = "Report key and returned data.";
 			minOccurs = 1;
-			type_lazy = () -> RequestDetails4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RequestDetails4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails5.Type, com.tools20022.repository.msg.RequestDetails5.RequestReference, com.tools20022.repository.msg.RequestDetails5.ReportKey);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataReportV02.ReportDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails5.mmType, com.tools20022.repository.msg.RequestDetails5.mmRequestReference, com.tools20022.repository.msg.RequestDetails5.mmReportKey);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataReportV02.mmReportDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails5";
 				definition = "Report of the requested data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public Max35Text getRequestReference() {
+		return requestReference;
+	}
+
+	public void setRequestReference(Max35Text requestReference) {
+		this.requestReference = requestReference;
+	}
+
+	public List<RequestDetails4> getReportKey() {
+		return reportKey;
+	}
+
+	public void setReportKey(List<com.tools20022.repository.msg.RequestDetails4> reportKey) {
+		this.reportKey = reportKey;
 	}
 }

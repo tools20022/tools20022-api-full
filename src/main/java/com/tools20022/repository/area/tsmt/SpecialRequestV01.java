@@ -65,24 +65,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#RequestIdentification
- * SpecialRequestV01.RequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#mmRequestIdentification
+ * SpecialRequestV01.mmRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#TransactionIdentification
- * SpecialRequestV01.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#mmTransactionIdentification
+ * SpecialRequestV01.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#SubmitterTransactionReference
- * SpecialRequestV01.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#mmSubmitterTransactionReference
+ * SpecialRequestV01.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#Notification
- * SpecialRequestV01.Notification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#mmNotification
+ * SpecialRequestV01.mmNotification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#identifier
- * SpecialRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.047.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SpecialRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 requestIdentification;
 	/**
 	 * Identifies the acceptance message.
 	 * <p>
@@ -121,17 +120,18 @@ public class SpecialRequestV01 {
 	 * definition} = "Identifies the acceptance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the acceptance message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -159,17 +159,18 @@ public class SpecialRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the identification of the transaction for the requesting
 	 * financial institution.
@@ -196,17 +197,18 @@ public class SpecialRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the identification of the transaction for the requesting financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected Notification1 notification;
 	/**
 	 * Type and details of the notification.
 	 * <p>
@@ -229,42 +231,15 @@ public class SpecialRequestV01 {
 	 * definition} = "Type and details of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Notification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notification";
 			definition = "Type and details of the notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Notification1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "047"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "047";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -278,11 +253,50 @@ public class SpecialRequestV01 {
 				rootElement = "Document";
 				xmlTag = "SpclReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.SpecialRequestV01.RequestIdentification, com.tools20022.repository.area.tsmt.SpecialRequestV01.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.SpecialRequestV01.SubmitterTransactionReference, com.tools20022.repository.area.tsmt.SpecialRequestV01.Notification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.SpecialRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.SpecialRequestV01.mmRequestIdentification, com.tools20022.repository.area.tsmt.SpecialRequestV01.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.SpecialRequestV01.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.SpecialRequestV01.mmNotification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "047";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRequestIdentification() {
+		return requestIdentification;
+	}
+
+	public void setRequestIdentification(MessageIdentification1 requestIdentification) {
+		this.requestIdentification = requestIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public Notification1 getNotification() {
+		return notification;
+	}
+
+	public void setNotification(Notification1 notification) {
+		this.notification = notification;
 	}
 }

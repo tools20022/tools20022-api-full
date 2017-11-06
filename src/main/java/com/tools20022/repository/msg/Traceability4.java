@@ -36,21 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Traceability4#RelayIdentification
- * Traceability4.RelayIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Traceability4#SequenceNumber
- * Traceability4.SequenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Traceability4#TraceDateTimeIn
- * Traceability4.TraceDateTimeIn}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Traceability4#TraceDateTimeOut
- * Traceability4.TraceDateTimeOut}</li>
+ * {@linkplain com.tools20022.repository.msg.Traceability4#mmRelayIdentification
+ * Traceability4.mmRelayIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Traceability4#mmSequenceNumber
+ * Traceability4.mmSequenceNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Traceability4#mmTraceDateTimeIn
+ * Traceability4.mmTraceDateTimeIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Traceability4#mmTraceDateTimeOut
+ * Traceability4.mmTraceDateTimeOut}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Traceability4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification77 relayIdentification;
 	/**
 	 * Identification of a partner of a message exchange.
 	 * <p>
@@ -96,11 +99,11 @@ public class Traceability4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Traceability2#RelayIdentification
-	 * Traceability2.RelayIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Traceability2#mmRelayIdentification
+	 * Traceability2.mmRelayIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelayIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelayIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
@@ -108,13 +111,14 @@ public class Traceability4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelayIdentification";
 			definition = "Identification of a partner of a message exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.RelayIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmRelayIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification77.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification77.mmObject();
 		}
 	};
+	protected Max35Text sequenceNumber;
 	/**
 	 * Identification of the relay node in the path, to enable identification of
 	 * several hosts in parallel.
@@ -144,7 +148,7 @@ public class Traceability4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
@@ -152,11 +156,12 @@ public class Traceability4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Identification of the relay node in the path, to enable identification of several hosts in parallel.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime traceDateTimeIn;
 	/**
 	 * Date and time of incoming data exchange for relaying or processing.
 	 * <p>
@@ -185,11 +190,11 @@ public class Traceability4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Traceability2#TraceDateTimeIn
-	 * Traceability2.TraceDateTimeIn}</li>
+	 * {@linkplain com.tools20022.repository.msg.Traceability2#mmTraceDateTimeIn
+	 * Traceability2.mmTraceDateTimeIn}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TraceDateTimeIn = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTraceDateTimeIn = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
@@ -197,12 +202,13 @@ public class Traceability4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraceDateTimeIn";
 			definition = "Date and time of incoming data exchange for relaying or processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.TraceDateTimeIn;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmTraceDateTimeIn;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime traceDateTimeOut;
 	/**
 	 * Date and time of the outgoing exchange for relaying or processing.
 	 * <p>
@@ -231,11 +237,11 @@ public class Traceability4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Traceability2#TraceDateTimeOut
-	 * Traceability2.TraceDateTimeOut}</li>
+	 * {@linkplain com.tools20022.repository.msg.Traceability2#mmTraceDateTimeOut
+	 * Traceability2.mmTraceDateTimeOut}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TraceDateTimeOut = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTraceDateTimeOut = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
@@ -243,9 +249,9 @@ public class Traceability4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraceDateTimeOut";
 			definition = "Date and time of the outgoing exchange for relaying or processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.TraceDateTimeOut;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmTraceDateTimeOut;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -253,9 +259,9 @@ public class Traceability4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Traceability4.RelayIdentification, com.tools20022.repository.msg.Traceability4.SequenceNumber,
-						com.tools20022.repository.msg.Traceability4.TraceDateTimeIn, com.tools20022.repository.msg.Traceability4.TraceDateTimeOut);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Traceability4.mmRelayIdentification, com.tools20022.repository.msg.Traceability4.mmSequenceNumber,
+						com.tools20022.repository.msg.Traceability4.mmTraceDateTimeIn, com.tools20022.repository.msg.Traceability4.mmTraceDateTimeOut);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Traceability4";
 				definition = "Identification of partners involved in exchange from the ATM to the issuer, with the relative timestamp of their exchanges.";
@@ -263,5 +269,37 @@ public class Traceability4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification77 getRelayIdentification() {
+		return relayIdentification;
+	}
+
+	public void setRelayIdentification(com.tools20022.repository.msg.GenericIdentification77 relayIdentification) {
+		this.relayIdentification = relayIdentification;
+	}
+
+	public Max35Text getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(Max35Text sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	public ISODateTime getTraceDateTimeIn() {
+		return traceDateTimeIn;
+	}
+
+	public void setTraceDateTimeIn(ISODateTime traceDateTimeIn) {
+		this.traceDateTimeIn = traceDateTimeIn;
+	}
+
+	public ISODateTime getTraceDateTimeOut() {
+		return traceDateTimeOut;
+	}
+
+	public void setTraceDateTimeOut(ISODateTime traceDateTimeOut) {
+		this.traceDateTimeOut = traceDateTimeOut;
 	}
 }

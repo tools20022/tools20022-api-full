@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice#MarketIdentification
- * PlaceOfTradeIdentification2Choice.MarketIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice#mmMarketIdentification
+ * PlaceOfTradeIdentification2Choice.mmMarketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice#OffMarket
- * PlaceOfTradeIdentification2Choice.OffMarket}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice#mmOffMarket
+ * PlaceOfTradeIdentification2Choice.mmOffMarket}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlaceOfTradeIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MICIdentifier marketIdentification;
 	/**
 	 * Exchange or Multilateral Trading Facility (MTF) on which the transaction
 	 * is executed.
@@ -77,8 +78,8 @@ public class PlaceOfTradeIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class PlaceOfTradeIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> PlaceOfTradeIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "MktId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
 			definition = "Exchange or Multilateral Trading Facility (MTF) on which the transaction is executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected OffMarket1Choice offMarket;
 	/**
 	 * Indicates that the trade was executed off -exchange.
 	 * <p>
@@ -124,8 +126,8 @@ public class PlaceOfTradeIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradingExecution
-	 * SecuritiesTrade.TradingExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradingExecution
+	 * SecuritiesTrade.mmTradingExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,33 +146,49 @@ public class PlaceOfTradeIdentification2Choice {
 	 * definition} = "Indicates that the trade was executed off -exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OffMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOffMarket = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradingExecution;
 			componentContext_lazy = () -> PlaceOfTradeIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradingExecution;
 			isDerived = false;
 			xmlTag = "OffMkt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffMarket";
 			definition = "Indicates that the trade was executed off -exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OffMarket1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.OffMarket1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.MarketIdentification, com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.OffMarket);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.mmMarketIdentification, com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.mmOffMarket);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfTradeIdentification2Choice";
 				definition = "Indicates whether the trade was executed on or off-market.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MICIdentifier getMarketIdentification() {
+		return marketIdentification;
+	}
+
+	public void setMarketIdentification(MICIdentifier marketIdentification) {
+		this.marketIdentification = marketIdentification;
+	}
+
+	public OffMarket1Choice getOffMarket() {
+		return offMarket;
+	}
+
+	public void setOffMarket(com.tools20022.repository.choice.OffMarket1Choice offMarket) {
+		this.offMarket = offMarket;
 	}
 }

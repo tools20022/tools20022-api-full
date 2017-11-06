@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code#Branch
- * TransactionEnvironment3Code.Branch}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code#mmBranch
+ * TransactionEnvironment3Code.mmBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code#Merchant
- * TransactionEnvironment3Code.Merchant}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code#mmMerchant
+ * TransactionEnvironment3Code.mmMerchant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code#Other
- * TransactionEnvironment3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment3Code#mmOther
+ * TransactionEnvironment3Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,7 +79,7 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	 * name} = "Branch"</li>
 	 * </ul>
 	 */
-	public static final MMCode Branch = new MMCode() {
+	public static final MMCode mmBranch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Branch";
@@ -102,7 +102,7 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	 * name} = "Merchant"</li>
 	 * </ul>
 	 */
-	public static final MMCode Merchant = new MMCode() {
+	public static final MMCode mmMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
@@ -125,7 +125,7 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -136,12 +136,12 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionEnvironment3Code";
 				definition = "Indicates the entity hosting the terminal performing the transaction. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment3Code.Branch, com.tools20022.repository.codeset.TransactionEnvironment3Code.Merchant,
-						com.tools20022.repository.codeset.TransactionEnvironment3Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment3Code.mmBranch, com.tools20022.repository.codeset.TransactionEnvironment3Code.mmMerchant,
+						com.tools20022.repository.codeset.TransactionEnvironment3Code.mmOther);
 				trace_lazy = () -> TransactionEnvironmentCode.mmObject();
 			}
 		});

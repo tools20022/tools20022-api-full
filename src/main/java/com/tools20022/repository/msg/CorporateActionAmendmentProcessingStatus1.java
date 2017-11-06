@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1#Status
- * CorporateActionAmendmentProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1#mmStatus
+ * CorporateActionAmendmentProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1#AdditionalInformation
- * CorporateActionAmendmentProcessingStatus1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1#mmAdditionalInformation
+ * CorporateActionAmendmentProcessingStatus1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionAmendmentProcessingStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessedStatus5FormatChoice status;
 	/**
 	 * The processing status.
 	 * <p>
@@ -97,20 +98,21 @@ public class CorporateActionAmendmentProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionAmendmentProcessingStatus1.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> CorporateActionAmendmentProcessingStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "The processing status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus5FormatChoice.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the status.
 	 * <p>
@@ -123,8 +125,8 @@ public class CorporateActionAmendmentProcessingStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDescription
-	 * Status.StatusDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
+	 * Status.mmStatusDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class CorporateActionAmendmentProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
 			componentContext_lazy = () -> CorporateActionAmendmentProcessingStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDescription;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class CorporateActionAmendmentProcessingStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1.Status, com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1.mmStatus, com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAmendmentProcessingStatus1";
 				definition = "Provide processing status information of an election amendment request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessedStatus5FormatChoice getStatus() {
+		return status;
+	}
+
+	public void setStatus(ProcessedStatus5FormatChoice status) {
+		this.status = status;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

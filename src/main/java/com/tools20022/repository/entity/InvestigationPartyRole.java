@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of an investigation process.
@@ -37,22 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#InvestigationCase
- * InvestigationPartyRole.InvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmInvestigationCase
+ * InvestigationPartyRole.mmInvestigationCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#Status
- * InvestigationPartyRole.Status}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Status#PartyRole
- * Status.PartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#InvestigationPartyRole
- * InvestigationCase.InvestigationPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmStatus
+ * InvestigationPartyRole.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -65,13 +55,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.CaseCreator CaseCreator}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmPartyRole
+ * Status.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationPartyRole
+ * InvestigationCase.mmInvestigationPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestigationPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.InvestigationCase> investigationCase;
 	/**
 	 * Identifies the case for which a party plays a role.
 	 * <p>
@@ -94,8 +96,8 @@ public class InvestigationPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#InvestigationPartyRole
-	 * InvestigationCase.InvestigationPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationPartyRole
+	 * InvestigationCase.mmInvestigationPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -119,7 +121,7 @@ public class InvestigationPartyRole extends Role {
 	 * definition} = "Identifies the case for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestigationCase = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestigationPartyRole.mmObject();
 			isDerived = false;
@@ -127,11 +129,12 @@ public class InvestigationPartyRole extends Role {
 			name = "InvestigationCase";
 			definition = "Identifies the case for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.InvestigationPartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmInvestigationPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Status> status;
 	/**
 	 * Status for which a party plays a role.
 	 * <p>
@@ -140,8 +143,8 @@ public class InvestigationPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Status#PartyRole
-	 * Status.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmPartyRole
+	 * Status.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -164,7 +167,7 @@ public class InvestigationPartyRole extends Role {
 	 * definition} = "Status for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Status = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestigationPartyRole.mmObject();
 			isDerived = false;
@@ -172,25 +175,41 @@ public class InvestigationPartyRole extends Role {
 			name = "Status";
 			definition = "Status for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Status.PartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.Status.mmPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestigationPartyRole";
 				definition = "Role played by a party in the context of an investigation process.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Status.PartyRole, com.tools20022.repository.entity.InvestigationCase.InvestigationPartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Status.mmPartyRole, com.tools20022.repository.entity.InvestigationCase.mmInvestigationPartyRole);
 				subType_lazy = () -> Arrays.asList(StatusOriginator.mmObject(), Assigner.mmObject(), Assignee.mmObject(), CaseCreator.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationPartyRole.InvestigationCase, com.tools20022.repository.entity.InvestigationPartyRole.Status);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationPartyRole.mmInvestigationCase, com.tools20022.repository.entity.InvestigationPartyRole.mmStatus);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<InvestigationCase> getInvestigationCase() {
+		return investigationCase;
+	}
+
+	public void setInvestigationCase(List<com.tools20022.repository.entity.InvestigationCase> investigationCase) {
+		this.investigationCase = investigationCase;
+	}
+
+	public List<Status> getStatus() {
+		return status;
+	}
+
+	public void setStatus(List<com.tools20022.repository.entity.Status> status) {
+		this.status = status;
 	}
 }

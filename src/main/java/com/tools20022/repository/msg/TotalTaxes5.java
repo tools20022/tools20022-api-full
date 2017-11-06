@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information regarding the total amount of taxes.
@@ -35,13 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes5#EUCapitalGain
- * TotalTaxes5.EUCapitalGain}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes5#mmEUCapitalGain
+ * TotalTaxes5.mmEUCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes5#PercentageOfDebtClaim
- * TotalTaxes5.PercentageOfDebtClaim}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes5#TaxDetails
- * TotalTaxes5.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes5#mmPercentageOfDebtClaim
+ * TotalTaxes5.mmPercentageOfDebtClaim}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes5#mmTaxDetails
+ * TotalTaxes5.mmTaxDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalTaxes5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EUCapitalGain2Code eUCapitalGain;
 	/**
 	 * Specifies whether capital gain is in the scope of the European directive
 	 * on taxation of savings income in the form of interest payments (Council
@@ -81,8 +83,8 @@ public class TotalTaxes5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +104,21 @@ public class TotalTaxes5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> TotalTaxes5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "EUCptlGn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfDebtClaim;
 	/**
 	 * Percentage of the underlying assets of the funds that represents a debt
 	 * and is in the scope of the European directive on taxation of savings
@@ -132,8 +135,8 @@ public class TotalTaxes5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#PercentageOfDebtClaim
-	 * InvestmentFundTax.PercentageOfDebtClaim}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageOfDebtClaim
+	 * InvestmentFundTax.mmPercentageOfDebtClaim}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +156,21 @@ public class TotalTaxes5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfDebtClaim = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> TotalTaxes5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.PercentageOfDebtClaim;
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax20> taxDetails;
 	/**
 	 * Information related to a specific tax.
 	 * <p>
@@ -196,33 +200,57 @@ public class TotalTaxes5 {
 	 * definition} = "Information related to a specific tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalTaxes5.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> TotalTaxes5.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Information related to a specific tax.";
-			minOccurs = 0;
 			maxOccurs = 7;
-			type_lazy = () -> Tax20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax20.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes5.EUCapitalGain, com.tools20022.repository.msg.TotalTaxes5.PercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes5.TaxDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes5.mmEUCapitalGain, com.tools20022.repository.msg.TotalTaxes5.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes5.mmTaxDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalTaxes5";
 				definition = "Information regarding the total amount of taxes.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EUCapitalGain2Code getEUCapitalGain() {
+		return eUCapitalGain;
+	}
+
+	public void setEUCapitalGain(EUCapitalGain2Code eUCapitalGain) {
+		this.eUCapitalGain = eUCapitalGain;
+	}
+
+	public PercentageRate getPercentageOfDebtClaim() {
+		return percentageOfDebtClaim;
+	}
+
+	public void setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
+		this.percentageOfDebtClaim = percentageOfDebtClaim;
+	}
+
+	public List<Tax20> getTaxDetails() {
+		return taxDetails;
+	}
+
+	public void setTaxDetails(List<com.tools20022.repository.msg.Tax20> taxDetails) {
+		this.taxDetails = taxDetails;
 	}
 }

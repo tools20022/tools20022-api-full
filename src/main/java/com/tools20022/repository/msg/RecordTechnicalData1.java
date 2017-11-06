@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.AuthorityExchangeReason1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Instrument specific technical data to support identification.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData1#ReceiptDateTime
- * RecordTechnicalData1.ReceiptDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData1#mmReceiptDateTime
+ * RecordTechnicalData1.mmReceiptDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData1#ExchangeReason
- * RecordTechnicalData1.ExchangeReason}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData1#mmExchangeReason
+ * RecordTechnicalData1.mmExchangeReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RecordTechnicalData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime receiptDateTime;
 	/**
 	 * Defines the date and time when the report was originally received by the
 	 * national competent authority.
@@ -99,13 +101,13 @@ public class RecordTechnicalData1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecordTechnicalData2#ReceiptDateTime
-	 * RecordTechnicalData2.ReceiptDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.RecordTechnicalData2#mmReceiptDateTime
+	 * RecordTechnicalData2.mmReceiptDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiptDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiptDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData1.mmObject();
 			isDerived = false;
@@ -113,12 +115,13 @@ public class RecordTechnicalData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptDateTime";
 			definition = "Defines the date and time when the report was originally received by the national competent authority.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData2.ReceiptDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData2.mmReceiptDateTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<AuthorityExchangeReason1Code> exchangeReason;
 	/**
 	 * Describes the reason for the exchange of the transaction report between
 	 * the competent authorities.
@@ -150,7 +153,7 @@ public class RecordTechnicalData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData1.mmObject();
 			isDerived = false;
@@ -166,8 +169,8 @@ public class RecordTechnicalData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData1.ReceiptDateTime, com.tools20022.repository.msg.RecordTechnicalData1.ExchangeReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData1.mmReceiptDateTime, com.tools20022.repository.msg.RecordTechnicalData1.mmExchangeReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RecordTechnicalData1";
 				definition = "Instrument specific technical data to support identification.";
@@ -175,5 +178,21 @@ public class RecordTechnicalData1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getReceiptDateTime() {
+		return receiptDateTime;
+	}
+
+	public void setReceiptDateTime(ISODateTime receiptDateTime) {
+		this.receiptDateTime = receiptDateTime;
+	}
+
+	public List<AuthorityExchangeReason1Code> getExchangeReason() {
+		return exchangeReason;
+	}
+
+	public void setExchangeReason(List<AuthorityExchangeReason1Code> exchangeReason) {
+		this.exchangeReason = exchangeReason;
 	}
 }

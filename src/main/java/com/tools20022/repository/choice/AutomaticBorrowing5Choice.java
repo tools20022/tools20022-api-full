@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AutomaticBorrowing5Choice#Code
- * AutomaticBorrowing5Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.AutomaticBorrowing5Choice#mmCode
+ * AutomaticBorrowing5Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AutomaticBorrowing5Choice#Proprietary
- * AutomaticBorrowing5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AutomaticBorrowing5Choice#mmProprietary
+ * AutomaticBorrowing5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AutomaticBorrowing5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AutoBorrowing1Code code;
 	/**
 	 * Condition for automatic borrowing expressed as an ISO 20022 code.
 	 * <p>
@@ -76,8 +77,8 @@ public class AutomaticBorrowing5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#AutomaticBorrowing
-	 * SecuritiesSettlement.AutomaticBorrowing}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAutomaticBorrowing
+	 * SecuritiesSettlement.mmAutomaticBorrowing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class AutomaticBorrowing5Choice {
 	 * "Condition for automatic borrowing expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> AutomaticBorrowing5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.AutomaticBorrowing;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Condition for automatic borrowing expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AutoBorrowing1Code.mmObject();
 		}
 	};
+	protected GenericIdentification38 proprietary;
 	/**
 	 * Condition for automatic borrowing expressed as a proprietary code.
 	 * <p>
@@ -124,8 +126,8 @@ public class AutomaticBorrowing5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#AutomaticBorrowing
-	 * SecuritiesSettlement.AutomaticBorrowing}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAutomaticBorrowing
+	 * SecuritiesSettlement.mmAutomaticBorrowing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class AutomaticBorrowing5Choice {
 	 * "Condition for automatic borrowing expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> AutomaticBorrowing5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.AutomaticBorrowing;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Condition for automatic borrowing expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class AutomaticBorrowing5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutomaticBorrowing5Choice.Code, com.tools20022.repository.choice.AutomaticBorrowing5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutomaticBorrowing5Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing5Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AutomaticBorrowing5Choice";
 				definition = "Choice of format for the automatic borrowing information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AutoBorrowing1Code getCode() {
+		return code;
+	}
+
+	public void setCode(AutoBorrowing1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification38 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

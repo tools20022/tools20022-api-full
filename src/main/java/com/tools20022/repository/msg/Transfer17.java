@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -42,27 +43,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer17#EffectiveTransferDate
- * Transfer17.EffectiveTransferDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer17#TradeDate
- * Transfer17.TradeDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer17#HoldingsPlanType
- * Transfer17.HoldingsPlanType}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer17#mmEffectiveTransferDate
+ * Transfer17.mmEffectiveTransferDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer17#mmTradeDate
+ * Transfer17.mmTradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer17#mmHoldingsPlanType
+ * Transfer17.mmHoldingsPlanType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer17#FinancialInstrumentDetails
- * Transfer17.FinancialInstrumentDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer17#TotalUnitsNumber
- * Transfer17.TotalUnitsNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer17#UnitsDetails
- * Transfer17.UnitsDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer17#AveragePrice
- * Transfer17.AveragePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer17#mmFinancialInstrumentDetails
+ * Transfer17.mmFinancialInstrumentDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer17#mmTotalUnitsNumber
+ * Transfer17.mmTotalUnitsNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer17#mmUnitsDetails
+ * Transfer17.mmUnitsDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer17#mmAveragePrice
+ * Transfer17.mmAveragePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer17#OwnAccountTransferIndicator
- * Transfer17.OwnAccountTransferIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer17#mmOwnAccountTransferIndicator
+ * Transfer17.mmOwnAccountTransferIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer17#NonStandardSettlementInformation
- * Transfer17.NonStandardSettlementInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer17#mmNonStandardSettlementInformation
+ * Transfer17.mmNonStandardSettlementInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -71,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Transfer17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice effectiveTransferDate;
 	/**
 	 * Date and time at which the transfer was executed.
 	 * <p>
@@ -111,8 +113,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
-	 * ObligationFulfilment.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+	 * ObligationFulfilment.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -130,20 +132,21 @@ public class Transfer17 {
 	 * definition} = "Date and time at which the transfer was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveTransferDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveTransferDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.Date;
 			isDerived = false;
 			xmlTag = "FctvTrfDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTransferDate";
 			definition = "Date and time at which the transfer was executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice tradeDate;
 	/**
 	 * Date and time at which a transaction is completed and cleared, ie,
 	 * securities are delivered.
@@ -158,8 +161,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -179,20 +182,21 @@ public class Transfer17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time at which a transaction is completed and cleared, ie, securities are delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected List<HoldingsPlanType1Code> holdingsPlanType;
 	/**
 	 * Identifies whether or not saving plan or withdrawal or switch plan are
 	 * included in the holdings.
@@ -207,8 +211,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#HoldingsPlanType
-	 * SecuritiesSettlement.HoldingsPlanType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldingsPlanType
+	 * SecuritiesSettlement.mmHoldingsPlanType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -228,20 +232,21 @@ public class Transfer17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingsPlanType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingsPlanType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmHoldingsPlanType;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.HoldingsPlanType;
 			isDerived = false;
 			xmlTag = "HldgsPlanTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsPlanType";
 			definition = "Identifies whether or not saving plan or withdrawal or switch plan are included in the holdings.";
-			minOccurs = 0;
 			maxOccurs = 3;
+			minOccurs = 0;
 			simpleType_lazy = () -> HoldingsPlanType1Code.mmObject();
 		}
 	};
+	protected FinancialInstrument13 financialInstrumentDetails;
 	/**
 	 * Information related to the financial instrument received.
 	 * <p>
@@ -275,20 +280,21 @@ public class Transfer17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Transfer17.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> Transfer17.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Information related to the financial instrument received.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrument13.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrument13.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
 	 * Total quantity of securities settled.
 	 * <p>
@@ -302,8 +308,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -321,20 +327,21 @@ public class Transfer17 {
 	 * definition} = "Total quantity of securities settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Total quantity of securities settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Unit3> unitsDetails;
 	/**
 	 * Information about the units to be transferred.
 	 * <p>
@@ -345,8 +352,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -364,20 +371,21 @@ public class Transfer17 {
 	 * definition} = "Information about the units to be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnitsDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnitsDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "UnitsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsDetails";
 			definition = "Information about the units to be transferred.";
 			minOccurs = 0;
-			type_lazy = () -> Unit3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice;
 	/**
 	 * Value of a security, as booked in an account. Book value is often
 	 * different from the current market value of the security.
@@ -392,8 +400,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#BookValue
-	 * AssetHolding.BookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -413,20 +421,21 @@ public class Transfer17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AveragePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.BookValue;
 			isDerived = false;
 			xmlTag = "AvrgPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePrice";
 			definition = "Value of a security, as booked in an account. Book value is often different from the current market value of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
 	 * Indicates whether the transfer results in a change of beneficial owner.
 	 * <p>
@@ -440,8 +449,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#OwnAccountTransferIndicator
-	 * SecuritiesTransfer.OwnAccountTransferIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmOwnAccountTransferIndicator
+	 * SecuritiesTransfer.mmOwnAccountTransferIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -461,20 +470,21 @@ public class Transfer17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OwnAccountTransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmOwnAccountTransferIndicator;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.OwnAccountTransferIndicator;
 			isDerived = false;
 			xmlTag = "OwnAcctTrfInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnAccountTransferIndicator";
 			definition = "Indicates whether the transfer results in a change of beneficial owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max350Text nonStandardSettlementInformation;
 	/**
 	 * Additional specific settlement information for non-regulated traded
 	 * funds.
@@ -488,8 +498,8 @@ public class Transfer17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#NonStandardSettlementInformation
-	 * InvestmentFundOrderExecution.NonStandardSettlementInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmNonStandardSettlementInformation
+	 * InvestmentFundOrderExecution.mmNonStandardSettlementInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer17
@@ -509,17 +519,17 @@ public class Transfer17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonStandardSettlementInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> Transfer17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.NonStandardSettlementInformation;
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -527,18 +537,90 @@ public class Transfer17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer17.EffectiveTransferDate, com.tools20022.repository.msg.Transfer17.TradeDate, com.tools20022.repository.msg.Transfer17.HoldingsPlanType,
-						com.tools20022.repository.msg.Transfer17.FinancialInstrumentDetails, com.tools20022.repository.msg.Transfer17.TotalUnitsNumber, com.tools20022.repository.msg.Transfer17.UnitsDetails,
-						com.tools20022.repository.msg.Transfer17.AveragePrice, com.tools20022.repository.msg.Transfer17.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer17.NonStandardSettlementInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer17.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer17.mmTradeDate, com.tools20022.repository.msg.Transfer17.mmHoldingsPlanType,
+						com.tools20022.repository.msg.Transfer17.mmFinancialInstrumentDetails, com.tools20022.repository.msg.Transfer17.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer17.mmUnitsDetails,
+						com.tools20022.repository.msg.Transfer17.mmAveragePrice, com.tools20022.repository.msg.Transfer17.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer17.mmNonStandardSettlementInformation);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Transfer17";
 				definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
-				previousVersion_lazy = () -> Transfer7.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Transfer25.mmObject(), Transfer18.mmObject());
+				previousVersion_lazy = () -> Transfer7.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getEffectiveTransferDate() {
+		return effectiveTransferDate;
+	}
+
+	public void setEffectiveTransferDate(DateAndDateTimeChoice effectiveTransferDate) {
+		this.effectiveTransferDate = effectiveTransferDate;
+	}
+
+	public DateAndDateTimeChoice getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(DateAndDateTimeChoice tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
+		return holdingsPlanType;
+	}
+
+	public void setHoldingsPlanType(List<HoldingsPlanType1Code> holdingsPlanType) {
+		this.holdingsPlanType = holdingsPlanType;
+	}
+
+	public FinancialInstrument13 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument13 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
+		return totalUnitsNumber;
+	}
+
+	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = totalUnitsNumber;
+	}
+
+	public List<Unit3> getUnitsDetails() {
+		return unitsDetails;
+	}
+
+	public void setUnitsDetails(List<com.tools20022.repository.msg.Unit3> unitsDetails) {
+		this.unitsDetails = unitsDetails;
+	}
+
+	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
+		return averagePrice;
+	}
+
+	public void setAveragePrice(ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice) {
+		this.averagePrice = averagePrice;
+	}
+
+	public YesNoIndicator getOwnAccountTransferIndicator() {
+		return ownAccountTransferIndicator;
+	}
+
+	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+	}
+
+	public Max350Text getNonStandardSettlementInformation() {
+		return nonStandardSettlementInformation;
+	}
+
+	public void setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
+		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
 	}
 }

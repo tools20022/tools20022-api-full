@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.InvestmentFund;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Fund Processing Passsport (FPP) is a fully harmonised document with all key
@@ -35,41 +36,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#UpdatedDate
- * FundProcessingPassport1.UpdatedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmUpdatedDate
+ * FundProcessingPassport1.mmUpdatedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#SecurityIdentification
- * FundProcessingPassport1.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmSecurityIdentification
+ * FundProcessingPassport1.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#MainFundOrderDesk
- * FundProcessingPassport1.MainFundOrderDesk}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmMainFundOrderDesk
+ * FundProcessingPassport1.mmMainFundOrderDesk}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#FundManagementCompany
- * FundProcessingPassport1.FundManagementCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmFundManagementCompany
+ * FundProcessingPassport1.mmFundManagementCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#FundDetails
- * FundProcessingPassport1.FundDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmFundDetails
+ * FundProcessingPassport1.mmFundDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#ValuationDealingCharacteristics
- * FundProcessingPassport1.ValuationDealingCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmValuationDealingCharacteristics
+ * FundProcessingPassport1.mmValuationDealingCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#InvestmentRestrictions
- * FundProcessingPassport1.InvestmentRestrictions}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmInvestmentRestrictions
+ * FundProcessingPassport1.mmInvestmentRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#SubscriptionProcessingCharacteristics
- * FundProcessingPassport1.SubscriptionProcessingCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmSubscriptionProcessingCharacteristics
+ * FundProcessingPassport1.mmSubscriptionProcessingCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#RedemptionProcessingCharacteristics
- * FundProcessingPassport1.RedemptionProcessingCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmRedemptionProcessingCharacteristics
+ * FundProcessingPassport1.mmRedemptionProcessingCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#SettlementDetails
- * FundProcessingPassport1.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmSettlementDetails
+ * FundProcessingPassport1.mmSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#LocalMarketAnnex
- * FundProcessingPassport1.LocalMarketAnnex}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmLocalMarketAnnex
+ * FundProcessingPassport1.mmLocalMarketAnnex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#Extension
- * FundProcessingPassport1.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmExtension
+ * FundProcessingPassport1.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -80,15 +81,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#FundProcessingPassport
- * FundProcessingPassportReportV02.FundProcessingPassport}</li>
+ * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#mmFundProcessingPassport
+ * FundProcessingPassportReportV02.mmFundProcessingPassport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundProcessingPassport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UpdatedDate updatedDate;
 	/**
 	 * Date of last revision.
 	 * <p>
@@ -130,7 +132,7 @@ public class FundProcessingPassport1 {
 	 * definition} = "Date of last revision."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpdatedDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpdatedDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
@@ -138,12 +140,13 @@ public class FundProcessingPassport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdatedDate";
 			definition = "Date of last revision.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedDate.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedDate.mmObject();
 		}
 	};
+	protected SecurityIdentification1 securityIdentification;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -157,8 +160,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,21 +182,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
 		}
 	};
+	protected ContactAttributes1 mainFundOrderDesk;
 	/**
 	 * Principal entity appointed by the fund, to which orders should be
 	 * submitted. Usually located in the country of domicile.
@@ -206,8 +210,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#OrderDesk
-	 * InvestmentFund.OrderDesk}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmOrderDesk
+	 * InvestmentFund.mmOrderDesk}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,21 +232,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MainFundOrderDesk = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMainFundOrderDesk = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmOrderDesk;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.OrderDesk;
 			isDerived = false;
 			xmlTag = "MainFndOrdrDsk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MainFundOrderDesk";
 			definition = "Principal entity appointed by the fund, to which orders should be submitted. Usually located in the country of domicile.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ContactAttributes1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactAttributes1.mmObject();
 		}
 	};
+	protected ContactAttributes1 fundManagementCompany;
 	/**
 	 * Company that is responsible for the management and operation of the fund,
 	 * eg, determines the investment strategy, appoints<br>
@@ -259,8 +264,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#ContactPoint
-	 * Party.ContactPoint}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmContactPoint
+	 * Party.mmContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -281,21 +286,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FundManagementCompany = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFundManagementCompany = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.ContactPoint;
 			isDerived = false;
 			xmlTag = "FndMgmtCpny";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundManagementCompany";
 			definition = "Company that is responsible for the management and operation of the fund, eg, determines the investment strategy, appoints\r\nthe service providers, and makes major decisions for the fund. It is usually responsible for the distribution and marketing\r\nof the fund. For self-managed funds, this wlll often be a separate promoter or sponsor of the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ContactAttributes1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactAttributes1.mmObject();
 		}
 	};
+	protected FinancialInstrument20 fundDetails;
 	/**
 	 * Security that is a sub-set of an investment fund, and is governed by the
 	 * same investment fund policy, eg, dividend option or valuation currency.
@@ -308,8 +314,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#InvestmentFundClass
-	 * InvestmentFund.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmInvestmentFundClass
+	 * InvestmentFund.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -330,21 +336,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFundDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "FndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetails";
 			definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
 		}
 	};
+	protected ValuationDealingProcessingCharacteristics2 valuationDealingCharacteristics;
 	/**
 	 * Processing characteristics linked to the instrument, ie, not to the
 	 * market.
@@ -358,8 +365,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ProcessingCharacteristics
-	 * InvestmentFundClass.ProcessingCharacteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
+	 * InvestmentFundClass.mmProcessingCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -380,21 +387,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValuationDealingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValuationDealingCharacteristics = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ProcessingCharacteristics;
 			isDerived = false;
 			xmlTag = "ValtnDealgChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDealingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmObject();
 		}
 	};
+	protected InvestmentRestrictions2 investmentRestrictions;
 	/**
 	 * Processing characteristics linked to the instrument, ie, not to the
 	 * market.
@@ -408,8 +416,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#InvestmentFundClass
-	 * InvestmentFund.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmInvestmentFundClass
+	 * InvestmentFund.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -430,21 +438,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentRestrictions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentRestrictions = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "InvstmtRstrctns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentRestrictions";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentRestrictions2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 		}
 	};
+	protected ProcessingCharacteristics2 subscriptionProcessingCharacteristics;
 	/**
 	 * Processing characteristics linked to the instrument, ie, not to the
 	 * market.
@@ -458,8 +467,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ProcessingCharacteristics
-	 * InvestmentFundClass.ProcessingCharacteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
+	 * InvestmentFundClass.mmProcessingCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -480,21 +489,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ProcessingCharacteristics;
 			isDerived = false;
 			xmlTag = "SbcptPrcgChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingCharacteristics2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics2.mmObject();
 		}
 	};
+	protected ProcessingCharacteristics3 redemptionProcessingCharacteristics;
 	/**
 	 * Processing characteristics linked to the instrument, ie, not to the
 	 * market.
@@ -508,8 +518,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ProcessingCharacteristics
-	 * InvestmentFundClass.ProcessingCharacteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmProcessingCharacteristics
+	 * InvestmentFundClass.mmProcessingCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -530,21 +540,22 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ProcessingCharacteristics;
 			isDerived = false;
 			xmlTag = "RedPrcgChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingCharacteristics3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccount22> settlementDetails;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -556,8 +567,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#SettlementAccount
-	 * InvestmentFundClassProcessingCharacteristics.SettlementAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmSettlementAccount
+	 * InvestmentFundClassProcessingCharacteristics.mmSettlementAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -576,20 +587,21 @@ public class FundProcessingPassport1 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementAccount;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.SettlementAccount;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Account to or from which a cash entry is made.";
 			minOccurs = 1;
-			type_lazy = () -> CashAccount22.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.LocalMarketAnnex2> localMarketAnnex;
 	/**
 	 * Context, or geographic environment, in which trading parties may meet in
 	 * order to negotiate and execute trades among themselves.
@@ -602,8 +614,8 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#TradingMarket
-	 * Security.TradingMarket}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmTradingMarket
+	 * Security.mmTradingMarket}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -624,20 +636,21 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LocalMarketAnnex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocalMarketAnnex = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTradingMarket;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.TradingMarket;
 			isDerived = false;
 			xmlTag = "LclMktAnx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalMarketAnnex";
 			definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			minOccurs = 0;
-			type_lazy = () -> LocalMarketAnnex2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -666,7 +679,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
@@ -675,28 +688,124 @@ public class FundProcessingPassport1 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundProcessingPassport1.UpdatedDate, com.tools20022.repository.msg.FundProcessingPassport1.SecurityIdentification,
-						com.tools20022.repository.msg.FundProcessingPassport1.MainFundOrderDesk, com.tools20022.repository.msg.FundProcessingPassport1.FundManagementCompany,
-						com.tools20022.repository.msg.FundProcessingPassport1.FundDetails, com.tools20022.repository.msg.FundProcessingPassport1.ValuationDealingCharacteristics,
-						com.tools20022.repository.msg.FundProcessingPassport1.InvestmentRestrictions, com.tools20022.repository.msg.FundProcessingPassport1.SubscriptionProcessingCharacteristics,
-						com.tools20022.repository.msg.FundProcessingPassport1.RedemptionProcessingCharacteristics, com.tools20022.repository.msg.FundProcessingPassport1.SettlementDetails,
-						com.tools20022.repository.msg.FundProcessingPassport1.LocalMarketAnnex, com.tools20022.repository.msg.FundProcessingPassport1.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundProcessingPassport1.mmUpdatedDate, com.tools20022.repository.msg.FundProcessingPassport1.mmSecurityIdentification,
+						com.tools20022.repository.msg.FundProcessingPassport1.mmMainFundOrderDesk, com.tools20022.repository.msg.FundProcessingPassport1.mmFundManagementCompany,
+						com.tools20022.repository.msg.FundProcessingPassport1.mmFundDetails, com.tools20022.repository.msg.FundProcessingPassport1.mmValuationDealingCharacteristics,
+						com.tools20022.repository.msg.FundProcessingPassport1.mmInvestmentRestrictions, com.tools20022.repository.msg.FundProcessingPassport1.mmSubscriptionProcessingCharacteristics,
+						com.tools20022.repository.msg.FundProcessingPassport1.mmRedemptionProcessingCharacteristics, com.tools20022.repository.msg.FundProcessingPassport1.mmSettlementDetails,
+						com.tools20022.repository.msg.FundProcessingPassport1.mmLocalMarketAnnex, com.tools20022.repository.msg.FundProcessingPassport1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.mmFundProcessingPassport);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.FundProcessingPassport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundProcessingPassport1";
 				definition = "Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters should provide on their investment funds in order to facilitate their trading.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UpdatedDate getUpdatedDate() {
+		return updatedDate;
+	}
+
+	public void setUpdatedDate(com.tools20022.repository.msg.UpdatedDate updatedDate) {
+		this.updatedDate = updatedDate;
+	}
+
+	public SecurityIdentification1 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification1 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public ContactAttributes1 getMainFundOrderDesk() {
+		return mainFundOrderDesk;
+	}
+
+	public void setMainFundOrderDesk(com.tools20022.repository.msg.ContactAttributes1 mainFundOrderDesk) {
+		this.mainFundOrderDesk = mainFundOrderDesk;
+	}
+
+	public ContactAttributes1 getFundManagementCompany() {
+		return fundManagementCompany;
+	}
+
+	public void setFundManagementCompany(com.tools20022.repository.msg.ContactAttributes1 fundManagementCompany) {
+		this.fundManagementCompany = fundManagementCompany;
+	}
+
+	public FinancialInstrument20 getFundDetails() {
+		return fundDetails;
+	}
+
+	public void setFundDetails(com.tools20022.repository.msg.FinancialInstrument20 fundDetails) {
+		this.fundDetails = fundDetails;
+	}
+
+	public ValuationDealingProcessingCharacteristics2 getValuationDealingCharacteristics() {
+		return valuationDealingCharacteristics;
+	}
+
+	public void setValuationDealingCharacteristics(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2 valuationDealingCharacteristics) {
+		this.valuationDealingCharacteristics = valuationDealingCharacteristics;
+	}
+
+	public InvestmentRestrictions2 getInvestmentRestrictions() {
+		return investmentRestrictions;
+	}
+
+	public void setInvestmentRestrictions(com.tools20022.repository.msg.InvestmentRestrictions2 investmentRestrictions) {
+		this.investmentRestrictions = investmentRestrictions;
+	}
+
+	public ProcessingCharacteristics2 getSubscriptionProcessingCharacteristics() {
+		return subscriptionProcessingCharacteristics;
+	}
+
+	public void setSubscriptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics2 subscriptionProcessingCharacteristics) {
+		this.subscriptionProcessingCharacteristics = subscriptionProcessingCharacteristics;
+	}
+
+	public ProcessingCharacteristics3 getRedemptionProcessingCharacteristics() {
+		return redemptionProcessingCharacteristics;
+	}
+
+	public void setRedemptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics3 redemptionProcessingCharacteristics) {
+		this.redemptionProcessingCharacteristics = redemptionProcessingCharacteristics;
+	}
+
+	public List<CashAccount22> getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(List<com.tools20022.repository.msg.CashAccount22> settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public List<LocalMarketAnnex2> getLocalMarketAnnex() {
+		return localMarketAnnex;
+	}
+
+	public void setLocalMarketAnnex(List<com.tools20022.repository.msg.LocalMarketAnnex2> localMarketAnnex) {
+		this.localMarketAnnex = localMarketAnnex;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

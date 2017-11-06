@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity5Code#Principal
- * TradingCapacity5Code.Principal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity5Code#mmPrincipal
+ * TradingCapacity5Code.mmPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity5Code#RisklessPrincipal
- * TradingCapacity5Code.RisklessPrincipal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity5Code#Agent
- * TradingCapacity5Code.Agent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity5Code#mmRisklessPrincipal
+ * TradingCapacity5Code.mmRisklessPrincipal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity5Code#mmAgent
+ * TradingCapacity5Code.mmAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class TradingCapacity5Code extends TradingCapacityCode {
 	 * name} = "Principal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Principal = new MMCode() {
+	public static final MMCode mmPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
@@ -106,7 +107,7 @@ public class TradingCapacity5Code extends TradingCapacityCode {
 	 * name} = "RisklessPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode RisklessPrincipal = new MMCode() {
+	public static final MMCode mmRisklessPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RisklessPrincipal";
@@ -129,7 +130,7 @@ public class TradingCapacity5Code extends TradingCapacityCode {
 	 * name} = "Agent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agent = new MMCode() {
+	public static final MMCode mmAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
@@ -140,13 +141,13 @@ public class TradingCapacity5Code extends TradingCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacity5Code";
 				definition = "Specifies the role of a trading party in a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity5Code.Principal, com.tools20022.repository.codeset.TradingCapacity5Code.RisklessPrincipal,
-						com.tools20022.repository.codeset.TradingCapacity5Code.Agent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity5Code.mmPrincipal, com.tools20022.repository.codeset.TradingCapacity5Code.mmRisklessPrincipal,
+						com.tools20022.repository.codeset.TradingCapacity5Code.mmAgent);
 				trace_lazy = () -> TradingCapacityCode.mmObject();
 			}
 		});

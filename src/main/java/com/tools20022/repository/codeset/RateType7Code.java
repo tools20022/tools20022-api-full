@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * InterestRateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType7Code#Scheduled
- * RateType7Code.Scheduled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType7Code#Unscheduled
- * RateType7Code.Unscheduled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType7Code#mmScheduled
+ * RateType7Code.mmScheduled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RateType7Code#mmUnscheduled
+ * RateType7Code.mmUnscheduled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +80,7 @@ public class RateType7Code extends InterestRateTypeCode {
 	 * name} = "Scheduled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Scheduled = new MMCode() {
+	public static final MMCode mmScheduled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Scheduled";
@@ -102,7 +103,7 @@ public class RateType7Code extends InterestRateTypeCode {
 	 * name} = "Unscheduled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unscheduled = new MMCode() {
+	public static final MMCode mmUnscheduled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unscheduled";
@@ -113,12 +114,12 @@ public class RateType7Code extends InterestRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SCHD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType7Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType7Code.Scheduled, com.tools20022.repository.codeset.RateType7Code.Unscheduled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType7Code.mmScheduled, com.tools20022.repository.codeset.RateType7Code.mmUnscheduled);
 				trace_lazy = () -> InterestRateTypeCode.mmObject();
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.MemberReport3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * It is used to provide information on transactions and booked entries held at
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberReportOrError1Choice#Report
- * MemberReportOrError1Choice.Report}</li>
+ * {@linkplain com.tools20022.repository.choice.MemberReportOrError1Choice#mmReport
+ * MemberReportOrError1Choice.mmReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberReportOrError1Choice#OperationalError
- * MemberReportOrError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.MemberReportOrError1Choice#mmOperationalError
+ * MemberReportOrError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<MemberReport3> report;
 	/**
 	 * Provides the details on the requested member.
 	 * <p>
@@ -97,20 +99,21 @@ public class MemberReportOrError1Choice {
 	 * definition} = "Provides the details on the requested member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Report = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberReportOrError1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
+			componentContext_lazy = () -> MemberReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "Provides the details on the requested member.";
 			minOccurs = 1;
-			type_lazy = () -> MemberReport3.mmObject();
 			isComposite = true;
+			type_lazy = () -> MemberReport3.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -140,7 +143,7 @@ public class MemberReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MemberReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -149,22 +152,38 @@ public class MemberReportOrError1Choice {
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberReportOrError1Choice.Report, com.tools20022.repository.choice.MemberReportOrError1Choice.OperationalError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberReportOrError1Choice.mmReport, com.tools20022.repository.choice.MemberReportOrError1Choice.mmOperationalError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReportOrError1Choice";
 				definition = "It is used to provide information on transactions and booked entries held at the transaction administrator.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<MemberReport3> getReport() {
+		return report;
+	}
+
+	public void setReport(List<MemberReport3> report) {
+		this.report = report;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

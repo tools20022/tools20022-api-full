@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code#CertificationNotRequired
- * BeneficiaryCertificationCompletion1Code.CertificationNotRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code#mmCertificationNotRequired
+ * BeneficiaryCertificationCompletion1Code.mmCertificationNotRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code#ElectronicCertification
- * BeneficiaryCertificationCompletion1Code.ElectronicCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code#mmElectronicCertification
+ * BeneficiaryCertificationCompletion1Code.mmElectronicCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code#PhysicalCertification
- * BeneficiaryCertificationCompletion1Code.PhysicalCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code#mmPhysicalCertification
+ * BeneficiaryCertificationCompletion1Code.mmPhysicalCertification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class BeneficiaryCertificationCompletion1Code extends BeneficiaryCertific
 	 * name} = "CertificationNotRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificationNotRequired = new MMCode() {
+	public static final MMCode mmCertificationNotRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationNotRequired";
@@ -108,7 +108,7 @@ public class BeneficiaryCertificationCompletion1Code extends BeneficiaryCertific
 	 * name} = "ElectronicCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode ElectronicCertification = new MMCode() {
+	public static final MMCode mmElectronicCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicCertification";
@@ -131,7 +131,7 @@ public class BeneficiaryCertificationCompletion1Code extends BeneficiaryCertific
 	 * name} = "PhysicalCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalCertification = new MMCode() {
+	public static final MMCode mmPhysicalCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalCertification";
@@ -142,13 +142,13 @@ public class BeneficiaryCertificationCompletion1Code extends BeneficiaryCertific
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NCER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationCompletion1Code";
 				definition = "Specifies the type of certification completion required for a beneficiary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code.CertificationNotRequired,
-						com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code.ElectronicCertification, com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code.PhysicalCertification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code.mmCertificationNotRequired,
+						com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code.mmElectronicCertification, com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code.mmPhysicalCertification);
 				trace_lazy = () -> BeneficiaryCertificationCompletionCode.mmObject();
 			}
 		});

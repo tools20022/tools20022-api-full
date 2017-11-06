@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SystemParty3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Report between the party reference data or a business error.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyOrBusinessError1Choice#BusinessError
- * PartyOrBusinessError1Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyOrBusinessError1Choice#mmBusinessError
+ * PartyOrBusinessError1Choice.mmBusinessError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyOrBusinessError1Choice#SystemParty
- * PartyOrBusinessError1Choice.SystemParty}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyOrBusinessError1Choice#mmSystemParty
+ * PartyOrBusinessError1Choice.mmSystemParty}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Business error resulting from a rejection.
 	 * <p>
@@ -85,7 +87,7 @@ public class PartyOrBusinessError1Choice {
 	 * definition} = "Business error resulting from a rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -94,10 +96,11 @@ public class PartyOrBusinessError1Choice {
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	protected SystemParty3 systemParty;
 	/**
 	 * Specifications of a party defined within a system.
 	 * <p>
@@ -124,7 +127,7 @@ public class PartyOrBusinessError1Choice {
 	 * definition} = "Specifications of a party defined within a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SystemParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSystemParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -132,23 +135,39 @@ public class PartyOrBusinessError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemParty";
 			definition = "Specifications of a party defined within a system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemParty3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SystemParty3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrBusinessError1Choice.BusinessError, com.tools20022.repository.choice.PartyOrBusinessError1Choice.SystemParty);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmBusinessError, com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmSystemParty);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyOrBusinessError1Choice";
 				definition = "Report between the party reference data or a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
+	}
+
+	public SystemParty3 getSystemParty() {
+		return systemParty;
+	}
+
+	public void setSystemParty(SystemParty3 systemParty) {
+		this.systemParty = systemParty;
 	}
 }

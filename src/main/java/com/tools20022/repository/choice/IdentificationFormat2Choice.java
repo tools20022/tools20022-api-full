@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationFormat2Choice#ShortIdentification
- * IdentificationFormat2Choice.ShortIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationFormat2Choice#mmShortIdentification
+ * IdentificationFormat2Choice.mmShortIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationFormat2Choice#LongIdentification
- * IdentificationFormat2Choice.LongIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationFormat2Choice#mmLongIdentification
+ * IdentificationFormat2Choice.mmLongIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationFormat2Choice#ProprietaryIdentification
- * IdentificationFormat2Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationFormat2Choice#mmProprietaryIdentification
+ * IdentificationFormat2Choice.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3UpperCaseAlphaNumericText shortIdentification;
 	/**
 	 * Format expressed as a short identification.
 	 * <p>
@@ -94,7 +95,7 @@ public class IdentificationFormat2Choice {
 	 * definition} = "Format expressed as a short identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IdentificationFormat2Choice.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class IdentificationFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortIdentification";
 			definition = "Format expressed as a short identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
 		}
 	};
+	protected RestrictedFINXMax30Text longIdentification;
 	/**
 	 * Format expressed as a long identification.
 	 * <p>
@@ -135,7 +137,7 @@ public class IdentificationFormat2Choice {
 	 * definition} = "Format expressed as a long identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LongIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLongIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IdentificationFormat2Choice.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class IdentificationFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongIdentification";
 			definition = "Format expressed as a long identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
 		}
 	};
+	protected GenericIdentification23 proprietaryIdentification;
 	/**
 	 * Format expressed as a proprietary identification.
 	 * <p>
@@ -175,7 +178,7 @@ public class IdentificationFormat2Choice {
 	 * definition} = "Format expressed as a proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IdentificationFormat2Choice.mmObject();
 			isDerived = false;
@@ -183,24 +186,48 @@ public class IdentificationFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Format expressed as a proprietary identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification23.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification23.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat2Choice.ShortIdentification, com.tools20022.repository.choice.IdentificationFormat2Choice.LongIdentification,
-						com.tools20022.repository.choice.IdentificationFormat2Choice.ProprietaryIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat2Choice.mmShortIdentification, com.tools20022.repository.choice.IdentificationFormat2Choice.mmLongIdentification,
+						com.tools20022.repository.choice.IdentificationFormat2Choice.mmProprietaryIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationFormat2Choice";
 				definition = "Choice between either a short, long or a proprietary identification format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3UpperCaseAlphaNumericText getShortIdentification() {
+		return shortIdentification;
+	}
+
+	public void setShortIdentification(Exact3UpperCaseAlphaNumericText shortIdentification) {
+		this.shortIdentification = shortIdentification;
+	}
+
+	public RestrictedFINXMax30Text getLongIdentification() {
+		return longIdentification;
+	}
+
+	public void setLongIdentification(RestrictedFINXMax30Text longIdentification) {
+		this.longIdentification = longIdentification;
+	}
+
+	public GenericIdentification23 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification23 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

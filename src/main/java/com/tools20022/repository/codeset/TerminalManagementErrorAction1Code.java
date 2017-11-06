@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#IgnoreError
- * TerminalManagementErrorAction1Code.IgnoreError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#mmIgnoreError
+ * TerminalManagementErrorAction1Code.mmIgnoreError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#SendStatusReport
- * TerminalManagementErrorAction1Code.SendStatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#mmSendStatusReport
+ * TerminalManagementErrorAction1Code.mmSendStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class TerminalManagementErrorAction1Code extends TerminalManagementErrorA
 	 * name} = "IgnoreError"</li>
 	 * </ul>
 	 */
-	public static final MMCode IgnoreError = new MMCode() {
+	public static final MMCode mmIgnoreError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IgnoreError";
@@ -105,7 +105,7 @@ public class TerminalManagementErrorAction1Code extends TerminalManagementErrorA
 	 * name} = "SendStatusReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode SendStatusReport = new MMCode() {
+	public static final MMCode mmSendStatusReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendStatusReport";
@@ -116,12 +116,12 @@ public class TerminalManagementErrorAction1Code extends TerminalManagementErrorA
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IGNR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementErrorAction1Code";
 				definition = "Action to perform in case of error during the action in progress.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.IgnoreError, com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.SendStatusReport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.mmIgnoreError, com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.mmSendStatusReport);
 				trace_lazy = () -> TerminalManagementErrorActionCode.mmObject();
 			}
 		});

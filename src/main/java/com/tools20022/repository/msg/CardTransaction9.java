@@ -38,32 +38,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#ReconciliationType
- * CardTransaction9.ReconciliationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmReconciliationType
+ * CardTransaction9.mmReconciliationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#Reconciliation
- * CardTransaction9.Reconciliation}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmReconciliation
+ * CardTransaction9.mmReconciliation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#InterBankSettlementDate
- * CardTransaction9.InterBankSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmInterBankSettlementDate
+ * CardTransaction9.mmInterBankSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#InitiatorTransactionDateTime
- * CardTransaction9.InitiatorTransactionDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmInitiatorTransactionDateTime
+ * CardTransaction9.mmInitiatorTransactionDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#InitiatorTransactionIdentification
- * CardTransaction9.InitiatorTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmInitiatorTransactionIdentification
+ * CardTransaction9.mmInitiatorTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#TransactionLifeCycleIdentification
- * CardTransaction9.TransactionLifeCycleIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmTransactionLifeCycleIdentification
+ * CardTransaction9.mmTransactionLifeCycleIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#ReconciliationTotals
- * CardTransaction9.ReconciliationTotals}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmReconciliationTotals
+ * CardTransaction9.mmReconciliationTotals}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#AmountNetReconciliation
- * CardTransaction9.AmountNetReconciliation}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmAmountNetReconciliation
+ * CardTransaction9.mmAmountNetReconciliation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction9#TransactionResponse
- * CardTransaction9.TransactionResponse}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmTransactionResponse
+ * CardTransaction9.mmTransactionResponse}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransaction9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardServiceType1Code reconciliationType;
 	/**
 	 * Type of reconciliation.
 	 * <p>
@@ -127,7 +128,7 @@ public class CardTransaction9 {
 	 * definition} = "Type of reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction9.mmObject();
 			isDerived = false;
@@ -135,11 +136,12 @@ public class CardTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationType";
 			definition = "Type of reconciliation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardServiceType1Code.mmObject();
 		}
 	};
+	protected TransactionIdentifier2 reconciliation;
 	/**
 	 * Identification of the reconciliation period between the acquirer and the
 	 * issuer or their respective agents.
@@ -152,8 +154,8 @@ public class CardTransaction9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#CardPaymentAcquiring
-	 * CardPayment.CardPaymentAcquiring}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
+	 * CardPayment.mmCardPaymentAcquiring}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,34 +178,35 @@ public class CardTransaction9 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#Reconciliation
-	 * CardTransaction10.Reconciliation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmReconciliation
+	 * CardTransaction10.mmReconciliation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction8#Reconciliation
-	 * CardTransaction8.Reconciliation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction8#mmReconciliation
+	 * CardTransaction8.mmReconciliation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reconciliation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReconciliation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> CardTransaction9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.CardPaymentAcquiring;
 			isDerived = false;
 			xmlTag = "Rcncltn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciliation";
 			definition = "Identification of the reconciliation period between the acquirer and the issuer or their respective agents.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction8.Reconciliation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.Reconciliation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.mmReconciliation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction8.mmReconciliation;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier2.mmObject();
 		}
 	};
+	protected ISODate interBankSettlementDate;
 	/**
 	 * Date when the settlement is expected.
 	 * <p>
@@ -233,13 +236,13 @@ public class CardTransaction9 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#InterBankSettlementDate
-	 * CardTransaction10.InterBankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmInterBankSettlementDate
+	 * CardTransaction10.mmInterBankSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterBankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterBankSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction9.mmObject();
 			isDerived = false;
@@ -247,12 +250,13 @@ public class CardTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterBankSettlementDate";
 			definition = "Date when the settlement is expected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.InterBankSettlementDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.mmInterBankSettlementDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime initiatorTransactionDateTime;
 	/**
 	 * Date and time of the transaction.
 	 * <p>
@@ -265,8 +269,8 @@ public class CardTransaction9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
-	 * ObligationFulfilment.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+	 * ObligationFulfilment.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,27 +291,28 @@ public class CardTransaction9 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#InitiatorTransactionDateTime
-	 * CardTransaction10.InitiatorTransactionDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmInitiatorTransactionDateTime
+	 * CardTransaction10.mmInitiatorTransactionDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitiatorTransactionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitiatorTransactionDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> CardTransaction9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.Date;
 			isDerived = false;
 			xmlTag = "InitrTxDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorTransactionDateTime";
 			definition = "Date and time of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.InitiatorTransactionDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.mmInitiatorTransactionDateTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text initiatorTransactionIdentification;
 	/**
 	 * Number generated by the transaction Initiator to assist in identifying a
 	 * transaction uniquely. This value remains unchanged for all messages
@@ -323,8 +328,8 @@ public class CardTransaction9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#InitiatorTransactionIdentifier
-	 * CardPaymentAcquiring.InitiatorTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmInitiatorTransactionIdentifier
+	 * CardPaymentAcquiring.mmInitiatorTransactionIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -347,33 +352,34 @@ public class CardTransaction9 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#InitiatorTransactionIdentification
-	 * CardTransaction10.InitiatorTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmInitiatorTransactionIdentification
+	 * CardTransaction10.mmInitiatorTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction8#InitiatorTransactionIdentification
-	 * CardTransaction8.InitiatorTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction8#mmInitiatorTransactionIdentification
+	 * CardTransaction8.mmInitiatorTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitiatorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitiatorTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmInitiatorTransactionIdentifier;
 			componentContext_lazy = () -> CardTransaction9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.InitiatorTransactionIdentifier;
 			isDerived = false;
 			xmlTag = "InitrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorTransactionIdentification";
 			definition = "Number generated by the transaction Initiator to assist in identifying a transaction uniquely. This value remains unchanged for all messages within a message pair exchange, for instance an initiation/response. It corresponds to the ISO 8583 field number 11.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction8.InitiatorTransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.InitiatorTransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.mmInitiatorTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction8.mmInitiatorTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text transactionLifeCycleIdentification;
 	/**
 	 * Unique identification to match transactions throughout their life cycle
 	 * (for example, authorisation to financial presentment, financial
@@ -409,18 +415,18 @@ public class CardTransaction9 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#TransactionLifeCycleIdentification
-	 * CardTransaction10.TransactionLifeCycleIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmTransactionLifeCycleIdentification
+	 * CardTransaction10.mmTransactionLifeCycleIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction8#TransactionLifeCycleIdentification
-	 * CardTransaction8.TransactionLifeCycleIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction8#mmTransactionLifeCycleIdentification
+	 * CardTransaction8.mmTransactionLifeCycleIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionLifeCycleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionLifeCycleIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction9.mmObject();
 			isDerived = false;
@@ -428,13 +434,14 @@ public class CardTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionLifeCycleIdentification";
 			definition = "Unique identification to match transactions throughout their life cycle (for example, authorisation to financial presentment, financial presentment to chargeback). It shall contain the same value in all messages throughout a transaction’s life cycle. It corresponds partially to ISO 8583:2003 field number 21.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction8.TransactionLifeCycleIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.TransactionLifeCycleIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.mmTransactionLifeCycleIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction8.mmTransactionLifeCycleIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TransactionTotals4 reconciliationTotals;
 	/**
 	 * Totals of the reconciliation.
 	 * <p>
@@ -463,13 +470,13 @@ public class CardTransaction9 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#ReconciliationTotals
-	 * CardTransaction10.ReconciliationTotals}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmReconciliationTotals
+	 * CardTransaction10.mmReconciliationTotals}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReconciliationTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReconciliationTotals = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardTransaction9.mmObject();
 			isDerived = false;
@@ -477,13 +484,14 @@ public class CardTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationTotals";
 			definition = "Totals of the reconciliation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.ReconciliationTotals);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.mmReconciliationTotals);
 			maxOccurs = 1;
-			type_lazy = () -> TransactionTotals4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals4.mmObject();
 		}
 	};
+	protected AmountAndDirection41 amountNetReconciliation;
 	/**
 	 * Net value of all gross amounts.
 	 * <p>
@@ -495,8 +503,8 @@ public class CardTransaction9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -517,28 +525,29 @@ public class CardTransaction9 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#AmountNetReconciliation
-	 * CardTransaction10.AmountNetReconciliation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmAmountNetReconciliation
+	 * CardTransaction10.mmAmountNetReconciliation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountNetReconciliation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountNetReconciliation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> CardTransaction9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "AmtNetRcncltn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountNetReconciliation";
 			definition = "Net value of all gross amounts.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.AmountNetReconciliation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction10.mmAmountNetReconciliation);
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection41.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
 		}
 	};
+	protected ResponseType2 transactionResponse;
 	/**
 	 * Response to the reconciliation.
 	 * <p>
@@ -550,8 +559,8 @@ public class CardTransaction9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#Response
-	 * CardPaymentValidation.Response}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#mmResponse
+	 * CardPaymentValidation.mmResponse}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -570,38 +579,110 @@ public class CardTransaction9 {
 	 * definition} = "Response to the reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> CardTransaction9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.Response;
 			isDerived = false;
 			xmlTag = "TxRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the reconciliation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ResponseType2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ResponseType2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction9.ReconciliationType, com.tools20022.repository.msg.CardTransaction9.Reconciliation,
-						com.tools20022.repository.msg.CardTransaction9.InterBankSettlementDate, com.tools20022.repository.msg.CardTransaction9.InitiatorTransactionDateTime,
-						com.tools20022.repository.msg.CardTransaction9.InitiatorTransactionIdentification, com.tools20022.repository.msg.CardTransaction9.TransactionLifeCycleIdentification,
-						com.tools20022.repository.msg.CardTransaction9.ReconciliationTotals, com.tools20022.repository.msg.CardTransaction9.AmountNetReconciliation, com.tools20022.repository.msg.CardTransaction9.TransactionResponse);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction9.mmReconciliationType, com.tools20022.repository.msg.CardTransaction9.mmReconciliation,
+						com.tools20022.repository.msg.CardTransaction9.mmInterBankSettlementDate, com.tools20022.repository.msg.CardTransaction9.mmInitiatorTransactionDateTime,
+						com.tools20022.repository.msg.CardTransaction9.mmInitiatorTransactionIdentification, com.tools20022.repository.msg.CardTransaction9.mmTransactionLifeCycleIdentification,
+						com.tools20022.repository.msg.CardTransaction9.mmReconciliationTotals, com.tools20022.repository.msg.CardTransaction9.mmAmountNetReconciliation, com.tools20022.repository.msg.CardTransaction9.mmTransactionResponse);
 				trace_lazy = () -> ReconciliationTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction9";
 				definition = "Card transaction for which the authorisation has been requested.";
-				previousVersion_lazy = () -> CardTransaction8.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardTransaction10.mmObject());
+				previousVersion_lazy = () -> CardTransaction8.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardServiceType1Code getReconciliationType() {
+		return reconciliationType;
+	}
+
+	public void setReconciliationType(CardServiceType1Code reconciliationType) {
+		this.reconciliationType = reconciliationType;
+	}
+
+	public TransactionIdentifier2 getReconciliation() {
+		return reconciliation;
+	}
+
+	public void setReconciliation(com.tools20022.repository.msg.TransactionIdentifier2 reconciliation) {
+		this.reconciliation = reconciliation;
+	}
+
+	public ISODate getInterBankSettlementDate() {
+		return interBankSettlementDate;
+	}
+
+	public void setInterBankSettlementDate(ISODate interBankSettlementDate) {
+		this.interBankSettlementDate = interBankSettlementDate;
+	}
+
+	public ISODateTime getInitiatorTransactionDateTime() {
+		return initiatorTransactionDateTime;
+	}
+
+	public void setInitiatorTransactionDateTime(ISODateTime initiatorTransactionDateTime) {
+		this.initiatorTransactionDateTime = initiatorTransactionDateTime;
+	}
+
+	public Max35Text getInitiatorTransactionIdentification() {
+		return initiatorTransactionIdentification;
+	}
+
+	public void setInitiatorTransactionIdentification(Max35Text initiatorTransactionIdentification) {
+		this.initiatorTransactionIdentification = initiatorTransactionIdentification;
+	}
+
+	public Max35Text getTransactionLifeCycleIdentification() {
+		return transactionLifeCycleIdentification;
+	}
+
+	public void setTransactionLifeCycleIdentification(Max35Text transactionLifeCycleIdentification) {
+		this.transactionLifeCycleIdentification = transactionLifeCycleIdentification;
+	}
+
+	public TransactionTotals4 getReconciliationTotals() {
+		return reconciliationTotals;
+	}
+
+	public void setReconciliationTotals(com.tools20022.repository.msg.TransactionTotals4 reconciliationTotals) {
+		this.reconciliationTotals = reconciliationTotals;
+	}
+
+	public AmountAndDirection41 getAmountNetReconciliation() {
+		return amountNetReconciliation;
+	}
+
+	public void setAmountNetReconciliation(com.tools20022.repository.msg.AmountAndDirection41 amountNetReconciliation) {
+		this.amountNetReconciliation = amountNetReconciliation;
+	}
+
+	public ResponseType2 getTransactionResponse() {
+		return transactionResponse;
+	}
+
+	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+		this.transactionResponse = transactionResponse;
 	}
 }

@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AirportName1Choice#AirportCode
- * AirportName1Choice.AirportCode}</li>
+ * {@linkplain com.tools20022.repository.choice.AirportName1Choice#mmAirportCode
+ * AirportName1Choice.mmAirportCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AirportName1Choice#OtherAirportDescription
- * AirportName1Choice.OtherAirportDescription}</li>
+ * {@linkplain com.tools20022.repository.choice.AirportName1Choice#mmOtherAirportDescription
+ * AirportName1Choice.mmOtherAirportDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AirportName1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max6Text airportCode;
 	/**
 	 * Identifies an airport by means of its IATA identification code. Example:
 	 * LHR.
@@ -80,8 +81,8 @@ public class AirportName1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransportByAir#AirportName
-	 * TransportByAir.AirportName}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransportByAir#mmAirportName
+	 * TransportByAir.mmAirportName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class AirportName1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AirportCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAirportCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmAirportName;
 			componentContext_lazy = () -> AirportName1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.AirportName;
 			isDerived = false;
 			xmlTag = "AirprtCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirportCode";
 			definition = "Identifies an airport by means of its IATA identification code. Example: LHR.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected AirportDescription1 otherAirportDescription;
 	/**
 	 * Identifies an airport by its location and by its name.
 	 * <p>
@@ -127,8 +129,8 @@ public class AirportName1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransportByAir#AirportName
-	 * TransportByAir.AirportName}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransportByAir#mmAirportName
+	 * TransportByAir.mmAirportName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,33 +149,49 @@ public class AirportName1Choice {
 	 * definition} = "Identifies an airport by its location and by its name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherAirportDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherAirportDescription = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmAirportName;
 			componentContext_lazy = () -> AirportName1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.AirportName;
 			isDerived = false;
 			xmlTag = "OthrAirprtDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAirportDescription";
 			definition = "Identifies an airport by its location and by its name.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AirportDescription1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AirportDescription1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AirportName1Choice.AirportCode, com.tools20022.repository.choice.AirportName1Choice.OtherAirportDescription);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AirportName1Choice.mmAirportCode, com.tools20022.repository.choice.AirportName1Choice.mmOtherAirportDescription);
 				trace_lazy = () -> TransportByAir.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AirportName1Choice";
 				definition = "Identifies an airport by its code or by its name and the town where it is located.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max6Text getAirportCode() {
+		return airportCode;
+	}
+
+	public void setAirportCode(Max6Text airportCode) {
+		this.airportCode = airportCode;
+	}
+
+	public AirportDescription1 getOtherAirportDescription() {
+		return otherAirportDescription;
+	}
+
+	public void setOtherAirportDescription(AirportDescription1 otherAirportDescription) {
+		this.otherAirportDescription = otherAirportDescription;
 	}
 }

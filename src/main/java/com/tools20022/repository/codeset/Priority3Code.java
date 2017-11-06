@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PriorityCode PriorityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority3Code#Urgent
- * Priority3Code.Urgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority3Code#High
- * Priority3Code.High}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority3Code#Normal
- * Priority3Code.Normal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority3Code#mmUrgent
+ * Priority3Code.mmUrgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority3Code#mmHigh
+ * Priority3Code.mmHigh}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority3Code#mmNormal
+ * Priority3Code.mmNormal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class Priority3Code extends PriorityCode {
 	 * name} = "Urgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Urgent = new MMCode() {
+	public static final MMCode mmUrgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urgent";
@@ -103,7 +103,7 @@ public class Priority3Code extends PriorityCode {
 	 * name} = "High"</li>
 	 * </ul>
 	 */
-	public static final MMCode High = new MMCode() {
+	public static final MMCode mmHigh = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
@@ -126,7 +126,7 @@ public class Priority3Code extends PriorityCode {
 	 * name} = "Normal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Normal = new MMCode() {
+	public static final MMCode mmNormal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Normal";
@@ -137,12 +137,12 @@ public class Priority3Code extends PriorityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("URGT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Priority3Code";
 				definition = "Specifies the priority level of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Priority3Code.Urgent, com.tools20022.repository.codeset.Priority3Code.High, com.tools20022.repository.codeset.Priority3Code.Normal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Priority3Code.mmUrgent, com.tools20022.repository.codeset.Priority3Code.mmHigh, com.tools20022.repository.codeset.Priority3Code.mmNormal);
 				trace_lazy = () -> PriorityCode.mmObject();
 			}
 		});

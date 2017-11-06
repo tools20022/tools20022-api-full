@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition4#SubAccount
- * SecurityPosition4.SubAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition4#mmSubAccount
+ * SecurityPosition4.mmSubAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityPosition4#VoteInstruction
- * SecurityPosition4.VoteInstruction}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityPosition4#mmVoteInstruction
+ * SecurityPosition4.mmVoteInstruction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityPosition4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EligiblePosition1 subAccount;
 	/**
 	 * Amount of securities that are eligible for the vote.
 	 * <p>
@@ -74,8 +75,8 @@ public class SecurityPosition4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#SubAccount
-	 * Account.SubAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmSubAccount
+	 * Account.mmSubAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,21 +95,22 @@ public class SecurityPosition4 {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmSubAccount;
 			componentContext_lazy = () -> SecurityPosition4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.SubAccount;
 			isDerived = false;
 			xmlTag = "SubAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount";
 			definition = "Amount of securities that are eligible for the vote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> EligiblePosition1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
 		}
 	};
+	protected VoteInstruction1 voteInstruction;
 	/**
 	 * Specifies how a party has voted for each agenda item.
 	 * <p>
@@ -120,8 +122,8 @@ public class SecurityPosition4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#VoteInstruction
-	 * InstructionForMeeting.VoteInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmVoteInstruction
+	 * InstructionForMeeting.mmVoteInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,33 +142,49 @@ public class SecurityPosition4 {
 	 * definition} = "Specifies how a party has voted for each agenda item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VoteInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> SecurityPosition4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.VoteInstruction;
 			isDerived = false;
 			xmlTag = "VoteInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstruction";
 			definition = "Specifies how a party has voted for each agenda item.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> VoteInstruction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition4.SubAccount, com.tools20022.repository.msg.SecurityPosition4.VoteInstruction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition4.mmSubAccount, com.tools20022.repository.msg.SecurityPosition4.mmVoteInstruction);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityPosition4";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EligiblePosition1 getSubAccount() {
+		return subAccount;
+	}
+
+	public void setSubAccount(com.tools20022.repository.msg.EligiblePosition1 subAccount) {
+		this.subAccount = subAccount;
+	}
+
+	public VoteInstruction1 getVoteInstruction() {
+		return voteInstruction;
+	}
+
+	public void setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
+		this.voteInstruction = voteInstruction;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2#QueryType
- * BusinessDayInformationQueryDefinition2.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2#mmQueryType
+ * BusinessDayInformationQueryDefinition2.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2#BusinessDayInformationCriteria
- * BusinessDayInformationQueryDefinition2.BusinessDayInformationCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2#mmBusinessDayInformationCriteria
+ * BusinessDayInformationQueryDefinition2.mmBusinessDayInformationCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessDayInformationQueryDefinition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType2Code queryType;
 	/**
 	 * Specifies the type of matching items to be returned in the response to
 	 * the query.
@@ -91,7 +92,7 @@ public class BusinessDayInformationQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayInformationQueryDefinition2.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class BusinessDayInformationQueryDefinition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	protected BusinessDayInformationCriteriaDefinitionChoice businessDayInformationCriteria;
 	/**
 	 * Defines the business day information query criteria.
 	 * <p>
@@ -131,7 +133,7 @@ public class BusinessDayInformationQueryDefinition2 {
 	 * definition} = "Defines the business day information query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessDayInformationCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessDayInformationCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDayInformationQueryDefinition2.mmObject();
 			isDerived = false;
@@ -139,23 +141,40 @@ public class BusinessDayInformationQueryDefinition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDayInformationCriteria";
 			definition = "Defines the business day information query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BusinessDayInformationCriteriaDefinitionChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> BusinessDayInformationCriteriaDefinitionChoice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2.QueryType, com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2.BusinessDayInformationCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2.mmQueryType,
+						com.tools20022.repository.msg.BusinessDayInformationQueryDefinition2.mmBusinessDayInformationCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayInformationQueryDefinition2";
 				definition = "Defines the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType2Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType2Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public BusinessDayInformationCriteriaDefinitionChoice getBusinessDayInformationCriteria() {
+		return businessDayInformationCriteria;
+	}
+
+	public void setBusinessDayInformationCriteria(BusinessDayInformationCriteriaDefinitionChoice businessDayInformationCriteria) {
+		this.businessDayInformationCriteria = businessDayInformationCriteria;
 	}
 }

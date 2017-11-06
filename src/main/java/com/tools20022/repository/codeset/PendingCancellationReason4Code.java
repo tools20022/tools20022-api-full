@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#AccountServicerDeadlineMissed
- * PendingCancellationReason4Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#mmAccountServicerDeadlineMissed
+ * PendingCancellationReason4Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#QuantityRejection
- * PendingCancellationReason4Code.QuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#mmQuantityRejection
+ * PendingCancellationReason4Code.mmQuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#MarketDeadlineMissed
- * PendingCancellationReason4Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#mmMarketDeadlineMissed
+ * PendingCancellationReason4Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#Other
- * PendingCancellationReason4Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason4Code#mmOther
+ * PendingCancellationReason4Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class PendingCancellationReason4Code extends RejectionReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -110,7 +110,7 @@ public class PendingCancellationReason4Code extends RejectionReasonCode {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityRejection = new MMCode() {
+	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
@@ -133,7 +133,7 @@ public class PendingCancellationReason4Code extends RejectionReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -156,7 +156,7 @@ public class PendingCancellationReason4Code extends RejectionReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -167,13 +167,13 @@ public class PendingCancellationReason4Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason4Code";
 				definition = "Standard code to specify";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason4Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason4Code.QuantityRejection,
-						com.tools20022.repository.codeset.PendingCancellationReason4Code.MarketDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason4Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason4Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason4Code.mmQuantityRejection,
+						com.tools20022.repository.codeset.PendingCancellationReason4Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason4Code.mmOther);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

@@ -29,12 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#Active
- * PlanStatusCode.Active}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#Suspended
- * PlanStatusCode.Suspended}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#Closed
- * PlanStatusCode.Closed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#mmActive
+ * PlanStatusCode.mmActive}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#mmSuspended
+ * PlanStatusCode.mmSuspended}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlanStatusCode#mmClosed
+ * PlanStatusCode.mmClosed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +83,7 @@ public class PlanStatusCode {
 	 * definition} = "Plan is active."</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -113,7 +113,7 @@ public class PlanStatusCode {
 	 * definition} = "Plan is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -143,7 +143,7 @@ public class PlanStatusCode {
 	 * definition} = "Plan is closed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Closed = new MMCode() {
+	public static final MMCode mmClosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
@@ -156,11 +156,11 @@ public class PlanStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlanStatusCode";
 				definition = "Specifies the status of a plan.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PlanStatusCode.Active, com.tools20022.repository.codeset.PlanStatusCode.Suspended, com.tools20022.repository.codeset.PlanStatusCode.Closed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PlanStatusCode.mmActive, com.tools20022.repository.codeset.PlanStatusCode.mmSuspended, com.tools20022.repository.codeset.PlanStatusCode.mmClosed);
 				derivation_lazy = () -> Arrays.asList(PlanStatus1Code.mmObject());
 			}
 		});

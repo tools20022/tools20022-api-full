@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code#Eligible
- * OrderOriginatorEligibility1Code.Eligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code#mmEligible
+ * OrderOriginatorEligibility1Code.mmEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code#Retail
- * OrderOriginatorEligibility1Code.Retail}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code#mmRetail
+ * OrderOriginatorEligibility1Code.mmRetail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code#Professional
- * OrderOriginatorEligibility1Code.Professional}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code#mmProfessional
+ * OrderOriginatorEligibility1Code.mmProfessional}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	 * name} = "Eligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode Eligible = new MMCode() {
+	public static final MMCode mmEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligible";
@@ -111,7 +111,7 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	 * name} = "Retail"</li>
 	 * </ul>
 	 */
-	public static final MMCode Retail = new MMCode() {
+	public static final MMCode mmRetail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retail";
@@ -134,7 +134,7 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	 * name} = "Professional"</li>
 	 * </ul>
 	 */
-	public static final MMCode Professional = new MMCode() {
+	public static final MMCode mmProfessional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Professional";
@@ -145,13 +145,13 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELIG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderOriginatorEligibility1Code";
 				definition = "Specifies the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.Eligible, com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.Retail,
-						com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.Professional);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.mmEligible, com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.mmRetail,
+						com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.mmProfessional);
 				trace_lazy = () -> OrderOriginatorEligibilityCode.mmObject();
 			}
 		});

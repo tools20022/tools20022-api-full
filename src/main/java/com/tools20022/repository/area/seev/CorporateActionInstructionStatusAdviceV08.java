@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
 import com.tools20022.repository.msgset.CorporateActionsMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,33 +74,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#InstructionIdentification
- * CorporateActionInstructionStatusAdviceV08.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmInstructionIdentification
+ * CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#OtherDocumentIdentification
- * CorporateActionInstructionStatusAdviceV08.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#CorporateActionGeneralInformation
- * CorporateActionInstructionStatusAdviceV08.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmCorporateActionGeneralInformation
+ * CorporateActionInstructionStatusAdviceV08.mmCorporateActionGeneralInformation
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#InstructionProcessingStatus
- * CorporateActionInstructionStatusAdviceV08.InstructionProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmInstructionProcessingStatus
+ * CorporateActionInstructionStatusAdviceV08.mmInstructionProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#CorporateActionInstruction
- * CorporateActionInstructionStatusAdviceV08.CorporateActionInstruction}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmCorporateActionInstruction
+ * CorporateActionInstructionStatusAdviceV08.mmCorporateActionInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#AdditionalInformation
- * CorporateActionInstructionStatusAdviceV08.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#SupplementaryData
- * CorporateActionInstructionStatusAdviceV08.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmSupplementaryData
+ * CorporateActionInstructionStatusAdviceV08.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#identifier
- * CorporateActionInstructionStatusAdviceV08.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.034.001.08}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionInstructionStatusAdviceV08 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification9 instructionIdentification;
 	/**
 	 * Identification of a related instruction document.
 	 * <p>
@@ -143,22 +144,23 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#InstructionIdentification
-	 * CorporateActionInstructionStatusAdviceV07.InstructionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmInstructionIdentification
+	 * CorporateActionInstructionStatusAdviceV07.mmInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identification of a related instruction document.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.InstructionIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmInstructionIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
 	};
+	protected List<DocumentIdentification33> otherDocumentIdentification;
 	/**
 	 * Identification of other documents as well as the document number.
 	 * <p>
@@ -184,21 +186,22 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#OtherDocumentIdentification
-	 * CorporateActionInstructionStatusAdviceV07.OtherDocumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmOtherDocumentIdentification
+	 * CorporateActionInstructionStatusAdviceV07.mmOtherDocumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherDocumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrDocId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentIdentification";
 			definition = "Identification of other documents as well as the document number.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.OtherDocumentIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification33.mmObject();
 		}
 	};
+	protected CorporateActionGeneralInformation109 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -223,23 +226,24 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#CorporateActionGeneralInformation
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmCorporateActionGeneralInformation
 	 * CorporateActionInstructionStatusAdviceV07.
-	 * CorporateActionGeneralInformation}</li>
+	 * mmCorporateActionGeneralInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.CorporateActionGeneralInformation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation109.mmObject();
 		}
 	};
+	protected List<InstructionProcessingStatus29Choice> instructionProcessingStatus;
 	/**
 	 * Provides information about the processing status of the instruction.
 	 * <p>
@@ -265,21 +269,22 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#InstructionProcessingStatus
-	 * CorporateActionInstructionStatusAdviceV07.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmInstructionProcessingStatus
+	 * CorporateActionInstructionStatusAdviceV07.mmInstructionProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Provides information about the processing status of the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.InstructionProcessingStatus;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmInstructionProcessingStatus;
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionProcessingStatus29Choice.mmObject();
 		}
 	};
+	protected CorporateActionOption116 corporateActionInstruction;
 	/**
 	 * Information about the corporate action instruction.
 	 * <p>
@@ -304,22 +309,23 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#CorporateActionInstruction
-	 * CorporateActionInstructionStatusAdviceV07.CorporateActionInstruction}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmCorporateActionInstruction
+	 * CorporateActionInstructionStatusAdviceV07.mmCorporateActionInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionInstruction";
 			definition = "Information about the corporate action instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.CorporateActionInstruction;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmCorporateActionInstruction;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption116.mmObject();
 		}
 	};
+	protected CorporateActionNarrative10 additionalInformation;
 	/**
 	 * Provides additional information.
 	 * <p>
@@ -344,22 +350,23 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#AdditionalInformation
-	 * CorporateActionInstructionStatusAdviceV07.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmAdditionalInformation
+	 * CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.AdditionalInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative10.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -387,46 +394,19 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#SupplementaryData
-	 * CorporateActionInstructionStatusAdviceV07.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07#mmSupplementaryData
+	 * CorporateActionInstructionStatusAdviceV07.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "08"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "034"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "034";
-			version = "08";
-			flavour = "001";
 		}
 	};
 
@@ -441,14 +421,78 @@ public class CorporateActionInstructionStatusAdviceV08 {
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.InstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.InstructionProcessingStatus, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.CorporateActionInstruction,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.AdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmInstructionProcessingStatus,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmCorporateActionInstruction, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "034";
+						version = "08";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification9 getInstructionIdentification() {
+		return instructionIdentification;
+	}
+
+	public void setInstructionIdentification(DocumentIdentification9 instructionIdentification) {
+		this.instructionIdentification = instructionIdentification;
+	}
+
+	public List<DocumentIdentification33> getOtherDocumentIdentification() {
+		return otherDocumentIdentification;
+	}
+
+	public void setOtherDocumentIdentification(List<DocumentIdentification33> otherDocumentIdentification) {
+		this.otherDocumentIdentification = otherDocumentIdentification;
+	}
+
+	public CorporateActionGeneralInformation109 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation109 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public List<InstructionProcessingStatus29Choice> getInstructionProcessingStatus() {
+		return instructionProcessingStatus;
+	}
+
+	public void setInstructionProcessingStatus(List<InstructionProcessingStatus29Choice> instructionProcessingStatus) {
+		this.instructionProcessingStatus = instructionProcessingStatus;
+	}
+
+	public CorporateActionOption116 getCorporateActionInstruction() {
+		return corporateActionInstruction;
+	}
+
+	public void setCorporateActionInstruction(CorporateActionOption116 corporateActionInstruction) {
+		this.corporateActionInstruction = corporateActionInstruction;
+	}
+
+	public CorporateActionNarrative10 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(CorporateActionNarrative10 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

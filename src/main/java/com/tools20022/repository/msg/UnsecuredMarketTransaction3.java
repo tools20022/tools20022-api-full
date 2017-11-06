@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Future;
 import com.tools20022.repository.entity.Option;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details of each individual un<br>
@@ -41,63 +42,63 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#ReportedTransactionStatus
- * UnsecuredMarketTransaction3.ReportedTransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmReportedTransactionStatus
+ * UnsecuredMarketTransaction3.mmReportedTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#BranchIdentification
- * UnsecuredMarketTransaction3.BranchIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmBranchIdentification
+ * UnsecuredMarketTransaction3.mmBranchIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#UniqueTransactionIdentifier
- * UnsecuredMarketTransaction3.UniqueTransactionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmUniqueTransactionIdentifier
+ * UnsecuredMarketTransaction3.mmUniqueTransactionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#ProprietaryTransactionIdentification
- * UnsecuredMarketTransaction3.ProprietaryTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmProprietaryTransactionIdentification
+ * UnsecuredMarketTransaction3.mmProprietaryTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#CounterpartyProprietaryTransactionIdentification
- * UnsecuredMarketTransaction3.CounterpartyProprietaryTransactionIdentification}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmCounterpartyProprietaryTransactionIdentification
+ * UnsecuredMarketTransaction3.
+ * mmCounterpartyProprietaryTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#CounterpartyIdentification
- * UnsecuredMarketTransaction3.CounterpartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmCounterpartyIdentification
+ * UnsecuredMarketTransaction3.mmCounterpartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#TradeDate
- * UnsecuredMarketTransaction3.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmTradeDate
+ * UnsecuredMarketTransaction3.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#SettlementDate
- * UnsecuredMarketTransaction3.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmSettlementDate
+ * UnsecuredMarketTransaction3.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#MaturityDate
- * UnsecuredMarketTransaction3.MaturityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmMaturityDate
+ * UnsecuredMarketTransaction3.mmMaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#TransactionType
- * UnsecuredMarketTransaction3.TransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmTransactionType
+ * UnsecuredMarketTransaction3.mmTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#InstrumentType
- * UnsecuredMarketTransaction3.InstrumentType}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmInstrumentType
+ * UnsecuredMarketTransaction3.mmInstrumentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#TransactionNominalAmount
- * UnsecuredMarketTransaction3.TransactionNominalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmTransactionNominalAmount
+ * UnsecuredMarketTransaction3.mmTransactionNominalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#DealPrice
- * UnsecuredMarketTransaction3.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmDealPrice
+ * UnsecuredMarketTransaction3.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#RateType
- * UnsecuredMarketTransaction3.RateType}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmRateType
+ * UnsecuredMarketTransaction3.mmRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#DealRate
- * UnsecuredMarketTransaction3.DealRate}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmDealRate
+ * UnsecuredMarketTransaction3.mmDealRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#FloatingRateNote
- * UnsecuredMarketTransaction3.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmFloatingRateNote
+ * UnsecuredMarketTransaction3.mmFloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#BrokeredDeal
- * UnsecuredMarketTransaction3.BrokeredDeal}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmBrokeredDeal
+ * UnsecuredMarketTransaction3.mmBrokeredDeal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#CallPutOption
- * UnsecuredMarketTransaction3.CallPutOption}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmCallPutOption
+ * UnsecuredMarketTransaction3.mmCallPutOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#SupplementaryData
- * UnsecuredMarketTransaction3.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmSupplementaryData
+ * UnsecuredMarketTransaction3.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -105,8 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,6 +133,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnsecuredMarketTransaction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionOperationType1Code reportedTransactionStatus;
 	/**
 	 * Defines the status of the reported transaction, that is details on
 	 * whether the transaction is a new transaction, an amendment of a
@@ -168,18 +170,18 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#ReportedTransactionStatus
-	 * UnsecuredMarketTransaction4.ReportedTransactionStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmReportedTransactionStatus
+	 * UnsecuredMarketTransaction4.mmReportedTransactionStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#ReportedTransactionStatus
-	 * UnsecuredMarketTransaction2.ReportedTransactionStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmReportedTransactionStatus
+	 * UnsecuredMarketTransaction2.mmReportedTransactionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportedTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportedTransactionStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			isDerived = false;
@@ -187,13 +189,14 @@ public class UnsecuredMarketTransaction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedTransactionStatus";
 			definition = "Defines the status of the reported transaction, that is details on whether the transaction is a new transaction, an amendment of a previously reported transaction, a cancellation of a previously reported transaction or a correction to a previously reported and rejected transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.ReportedTransactionStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.ReportedTransactionStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmReportedTransactionStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmReportedTransactionStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransactionOperationType1Code.mmObject();
 		}
 	};
+	protected LEIIdentifier branchIdentification;
 	/**
 	 * Unique and unambiguous legal entity identification of the branch of the
 	 * reporting agent in which the transaction has been booked.<br>
@@ -215,8 +218,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,33 +242,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#BranchIdentification
-	 * UnsecuredMarketTransaction4.BranchIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmBranchIdentification
+	 * UnsecuredMarketTransaction4.mmBranchIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#BranchIdentification
-	 * UnsecuredMarketTransaction2.BranchIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmBranchIdentification
+	 * UnsecuredMarketTransaction2.mmBranchIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BranchIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBranchIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "BrnchId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BranchIdentification";
 			definition = "Unique and unambiguous legal entity identification of  the branch of the reporting agent in which the transaction has been booked.\r\n\r\nUsage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify. \r\nWhere the transaction has been booked by the head office or the reporting agent cannot be identified by a unique branch-specific LEI, the reporting agent must provide the LEI of the head office.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.BranchIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.BranchIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmBranchIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmBranchIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected Max105Text uniqueTransactionIdentifier;
 	/**
 	 * Unique transaction identifier will be created at the time a transaction
 	 * is first executed, shared with all registered entities and counterparties
@@ -281,8 +285,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#UniqueTradeIdentifier
-	 * TradeIdentification.UniqueTradeIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmUniqueTradeIdentifier
+	 * TradeIdentification.mmUniqueTradeIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -305,33 +309,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#UniqueTransactionIdentifier
-	 * UnsecuredMarketTransaction4.UniqueTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmUniqueTransactionIdentifier
+	 * UnsecuredMarketTransaction4.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#UniqueTransactionIdentifier
-	 * UnsecuredMarketTransaction2.UniqueTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmUniqueTransactionIdentifier
+	 * UnsecuredMarketTransaction2.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.UniqueTradeIdentifier;
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueTransactionIdentifier";
 			definition = "Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.UniqueTransactionIdentifier;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.UniqueTransactionIdentifier);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmUniqueTransactionIdentifier);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmUniqueTransactionIdentifier;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max105Text proprietaryTransactionIdentification;
 	/**
 	 * Internal unique transaction identifier used by the reporting agent for
 	 * each transaction.
@@ -345,8 +350,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -369,33 +374,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#ProprietaryTransactionIdentification
-	 * UnsecuredMarketTransaction4.ProprietaryTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmProprietaryTransactionIdentification
+	 * UnsecuredMarketTransaction4.mmProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#ProprietaryTransactionIdentification
-	 * UnsecuredMarketTransaction2.ProprietaryTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmProprietaryTransactionIdentification
+	 * UnsecuredMarketTransaction2.mmProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "PrtryTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
 			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.ProprietaryTransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.ProprietaryTransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmProprietaryTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmProprietaryTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max105Text counterpartyProprietaryTransactionIdentification;
 	/**
 	 * Internal unique proprietary transaction identifier as assigned by the
 	 * counterparty of the reporting agent for each transaction.
@@ -409,8 +415,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CounterpartyReference
-	 * TradeIdentification.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCounterpartyReference
+	 * TradeIdentification.mmCounterpartyReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -433,35 +439,36 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#CounterpartyProprietaryTransactionIdentification
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmCounterpartyProprietaryTransactionIdentification
 	 * UnsecuredMarketTransaction4.
-	 * CounterpartyProprietaryTransactionIdentification}</li>
+	 * mmCounterpartyProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#CounterpartyProprietaryTransactionIdentification
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmCounterpartyProprietaryTransactionIdentification
 	 * UnsecuredMarketTransaction2.
-	 * CounterpartyProprietaryTransactionIdentification}</li>
+	 * mmCounterpartyProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CounterpartyReference;
 			isDerived = false;
 			xmlTag = "CtrPtyPrtryTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyProprietaryTransactionIdentification";
 			definition = "Internal unique proprietary transaction identifier as assigned by the counterparty of the reporting agent for each transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.CounterpartyProprietaryTransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.CounterpartyProprietaryTransactionIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmCounterpartyProprietaryTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmCounterpartyProprietaryTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected CounterpartyIdentification2Choice counterpartyIdentification;
 	/**
 	 * Identification of the counterparty of the reporting agent for the
 	 * reported transaction.
@@ -475,8 +482,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CounterpartyRisk#Party
-	 * CounterpartyRisk.Party}</li>
+	 * {@linkplain com.tools20022.repository.entity.CounterpartyRisk#mmParty
+	 * CounterpartyRisk.mmParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -499,34 +506,35 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#CounterpartyIdentification
-	 * UnsecuredMarketTransaction4.CounterpartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmCounterpartyIdentification
+	 * UnsecuredMarketTransaction4.mmCounterpartyIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#CounterpartyIdentification
-	 * UnsecuredMarketTransaction2.CounterpartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmCounterpartyIdentification
+	 * UnsecuredMarketTransaction2.mmCounterpartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CounterpartyRisk.mmParty;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CounterpartyRisk.Party;
 			isDerived = false;
 			xmlTag = "CtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Identification of the counterparty of the reporting agent for the reported transaction. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.CounterpartyIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.CounterpartyIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmCounterpartyIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmCounterpartyIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> CounterpartyIdentification2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CounterpartyIdentification2Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice tradeDate;
 	/**
 	 * Date and time on which the parties entered into the reported transaction.<br>
 	 * <br>
@@ -548,8 +556,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -572,34 +580,35 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#TradeDate
-	 * UnsecuredMarketTransaction4.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmTradeDate
+	 * UnsecuredMarketTransaction4.mmTradeDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#TradeDate
-	 * UnsecuredMarketTransaction2.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmTradeDate
+	 * UnsecuredMarketTransaction2.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time on which the parties entered into the reported transaction.\r\n\r\nUsage: when time is available, it must be reported.\r\n\r\nIt is to be reported with only the date when the time of the transaction is not available. \r\n\r\nThe reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.TradeDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.TradeDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmTradeDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmTradeDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected ISODate settlementDate;
 	/**
 	 * Date on which the amount of money is exchanged by counterparties or on
 	 * which the purchase or sale of a debt instrument settles. <br>
@@ -619,8 +628,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementDate
-	 * SecuritiesSettlement.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+	 * SecuritiesSettlement.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -643,33 +652,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#SettlementDate
-	 * UnsecuredMarketTransaction4.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmSettlementDate
+	 * UnsecuredMarketTransaction4.mmSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#SettlementDate
-	 * UnsecuredMarketTransaction2.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmSettlementDate
+	 * UnsecuredMarketTransaction2.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the amount of money is exchanged by counterparties or on which the purchase or sale of a debt instrument settles. \r\nWith regard to call accounts and other unsecured borrowing/lending redeemable at notice, it is the date on which the deposit is rolled over, that is on which it would have been paid back if it had been called/not rolled over. In the case of a settlement failure in which settlement takes place on a different date than initially agreed, no transactional amendment needs to be reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.SettlementDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.SettlementDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmSettlementDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmSettlementDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate maturityDate;
 	/**
 	 * Date on which the amount of money is due to be repaid by the borrower to
 	 * the lender or on which a debt instrument matures and is due to be paid
@@ -687,8 +697,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -711,33 +721,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#MaturityDate
-	 * UnsecuredMarketTransaction4.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmMaturityDate
+	 * UnsecuredMarketTransaction4.mmMaturityDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#MaturityDate
-	 * UnsecuredMarketTransaction2.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmMaturityDate
+	 * UnsecuredMarketTransaction2.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Date on which the amount of money is due to be repaid by the borrower to the lender or on which a debt instrument matures and is due to be paid back. In regards to callable and puttable instruments, the final maturity date must be provided. For call accounts and other unsecured borrowing/lending redeemable upon notice, the first date on which the instrument may be redeemed must be provided.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.MaturityDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.MaturityDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmMaturityDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmMaturityDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected MoneyMarketTransactionType1Code transactionType;
 	/**
 	 * Defines whether the transaction is a cash borrowing or cash lending
 	 * transaction.
@@ -752,8 +763,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TransactionType
-	 * SecuritiesTrade.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTransactionType
+	 * SecuritiesTrade.mmTransactionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -776,33 +787,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#TransactionType
-	 * UnsecuredMarketTransaction4.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmTransactionType
+	 * UnsecuredMarketTransaction4.mmTransactionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#TransactionType
-	 * UnsecuredMarketTransaction2.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmTransactionType
+	 * UnsecuredMarketTransaction2.mmTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TransactionType;
 			isDerived = false;
 			xmlTag = "TxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Defines whether the transaction is a cash borrowing or cash lending transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.TransactionType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.TransactionType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmTransactionType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmTransactionType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MoneyMarketTransactionType1Code.mmObject();
 		}
 	};
+	protected FinancialInstrumentProductType1Code instrumentType;
 	/**
 	 * Defines the instrument via which the borrowing or lending transaction
 	 * takes place.
@@ -817,8 +829,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ProductType
-	 * AssetClassification.ProductType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmProductType
+	 * AssetClassification.mmProductType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -841,33 +853,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#InstrumentType
-	 * UnsecuredMarketTransaction4.InstrumentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmInstrumentType
+	 * UnsecuredMarketTransaction4.mmInstrumentType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#InstrumentType
-	 * UnsecuredMarketTransaction2.InstrumentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmInstrumentType
+	 * UnsecuredMarketTransaction2.mmInstrumentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstrumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstrumentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ProductType;
 			isDerived = false;
 			xmlTag = "InstrmTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentType";
 			definition = "Defines the instrument via which the borrowing or lending transaction takes place.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.InstrumentType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.InstrumentType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmInstrumentType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmInstrumentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount transactionNominalAmount;
 	/**
 	 * Amount of money initially borrowed or lent on deposits. In the case of
 	 * debt securities, it is the nominal amount of the security issued or
@@ -883,8 +896,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Amount
-	 * PaymentObligation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAmount
+	 * PaymentObligation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -907,33 +920,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#TransactionNominalAmount
-	 * UnsecuredMarketTransaction4.TransactionNominalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmTransactionNominalAmount
+	 * UnsecuredMarketTransaction4.mmTransactionNominalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#TransactionNominalAmount
-	 * UnsecuredMarketTransaction2.TransactionNominalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmTransactionNominalAmount
+	 * UnsecuredMarketTransaction2.mmTransactionNominalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Amount;
 			isDerived = false;
 			xmlTag = "TxNmnlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionNominalAmount";
 			definition = "Amount of money initially borrowed or lent on deposits. In the case of debt securities, it is the nominal amount of the security issued or purchased.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.TransactionNominalAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.TransactionNominalAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmTransactionNominalAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmTransactionNominalAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate dealPrice;
 	/**
 	 * Dirty price at which the security is issued or traded in percentage
 	 * points, and which is to be reported as 100 for unsecured deposits.
@@ -948,8 +962,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#DealPrice
-	 * SecuritiesTradeExecution.DealPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmDealPrice
+	 * SecuritiesTradeExecution.mmDealPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -972,33 +986,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#DealPrice
-	 * UnsecuredMarketTransaction4.DealPrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmDealPrice
+	 * UnsecuredMarketTransaction4.mmDealPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#DealPrice
-	 * UnsecuredMarketTransaction2.DealPrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmDealPrice
+	 * UnsecuredMarketTransaction2.mmDealPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmDealPrice;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.DealPrice;
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Dirty price at which the security is issued or traded in percentage points, and which is to be reported as 100 for unsecured deposits.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.DealPrice;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.DealPrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmDealPrice);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmDealPrice;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected InterestRateType1Code rateType;
 	/**
 	 * Fixed rate for deposits and debt instruments with fixed coupons or
 	 * variable rate for debt instruments for which the pay out at maturity or
@@ -1015,8 +1030,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#TypeOfInterest
-	 * Interest.TypeOfInterest}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmTypeOfInterest
+	 * Interest.mmTypeOfInterest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1039,33 +1054,34 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#RateType
-	 * UnsecuredMarketTransaction4.RateType}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmRateType
+	 * UnsecuredMarketTransaction4.mmRateType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#RateType
-	 * UnsecuredMarketTransaction2.RateType}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmRateType
+	 * UnsecuredMarketTransaction2.mmRateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmTypeOfInterest;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.TypeOfInterest;
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Fixed rate for deposits and debt instruments with fixed coupons or variable rate for debt instruments for which the pay out at maturity or period depends on observed value of some underlying reference rate as well as for unsecured deposits paying interest at regular intervals. \r\n";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.RateType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.RateType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmRateType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmRateType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InterestRateType1Code.mmObject();
 		}
 	};
+	protected Rate2 dealRate;
 	/**
 	 * Interest rate expressed in accordance with the local money market
 	 * convention at which the repurchase agreement has been concluded and at
@@ -1095,8 +1111,8 @@ public class UnsecuredMarketTransaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1119,34 +1135,35 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#DealRate
-	 * UnsecuredMarketTransaction4.DealRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmDealRate
+	 * UnsecuredMarketTransaction4.mmDealRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#DealRate
-	 * UnsecuredMarketTransaction2.DealRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmDealRate
+	 * UnsecuredMarketTransaction2.mmDealRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DealRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDealRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "DealRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRate";
 			definition = "Interest rate expressed in accordance with the local money market convention at which the repurchase agreement has been concluded and at which the cash lent is remunerated.\r\n\r\nUsage:\r\nWhen the remuneration for securities lending transactions is represented by a fee amount, the fee amount will be translated into a deal rate per annum based on the ratio between the fee amount and the transaction nominal amount times number of days based on relevant money market convention divided by the number of days between the settlement date and the maturity of the transaction. \r\n\r\nOnly actual values, as opposed to estimated or default values, will be reported for this variable.\r\n\r\nThis value can be either positive or negative irrespective of whether the cash is borrowed or lent. It represents the contractually agreed remuneration rate on the transaction nominal amount regardless of the transaction sign (that whether the transaction type is reported as borrowed or lent).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.DealRate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.DealRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmDealRate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmDealRate;
 			maxOccurs = 1;
-			type_lazy = () -> Rate2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	protected FloatingRateNote2 floatingRateNote;
 	/**
 	 * Debt instrument in which the periodic interest payments are calculated on
 	 * the basis of the value (that is fixing of an underlying reference rate
@@ -1184,34 +1201,35 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#FloatingRateNote
-	 * UnsecuredMarketTransaction4.FloatingRateNote}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmFloatingRateNote
+	 * UnsecuredMarketTransaction4.mmFloatingRateNote}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#FloatingRateNote
-	 * UnsecuredMarketTransaction2.FloatingRateNote}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmFloatingRateNote
+	 * UnsecuredMarketTransaction2.mmFloatingRateNote}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FloatingRateNote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFloatingRateNote = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			businessComponentTrace_lazy = () -> Future.mmObject();
+			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "FltgRateNote";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
 			definition = "Debt instrument in which the periodic interest payments are calculated on the basis of the value (that is fixing of an underlying reference rate such as EURIBOR) on predefined dates (that is fixing) dates and which has a maturity of no more than one year.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.FloatingRateNote;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.FloatingRateNote);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmFloatingRateNote);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmFloatingRateNote;
 			maxOccurs = 1;
-			type_lazy = () -> FloatingRateNote2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FloatingRateNote2.mmObject();
 		}
 	};
+	protected BrokeredDeal1Code brokeredDeal;
 	/**
 	 * Specifies whether the transaction is arranged via a third party broker or
 	 * not.
@@ -1245,18 +1263,18 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#BrokeredDeal
-	 * UnsecuredMarketTransaction4.BrokeredDeal}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmBrokeredDeal
+	 * UnsecuredMarketTransaction4.mmBrokeredDeal}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#BrokeredDeal
-	 * UnsecuredMarketTransaction2.BrokeredDeal}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmBrokeredDeal
+	 * UnsecuredMarketTransaction2.mmBrokeredDeal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BrokeredDeal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBrokeredDeal = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			isDerived = false;
@@ -1264,13 +1282,14 @@ public class UnsecuredMarketTransaction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeredDeal";
 			definition = "Specifies whether the transaction is arranged via a third party broker or not.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.BrokeredDeal;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.BrokeredDeal);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmBrokeredDeal);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmBrokeredDeal;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BrokeredDeal1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Option12> callPutOption;
 	/**
 	 * Provides the option details, when the transaction reported is a call/put
 	 * option.
@@ -1305,34 +1324,35 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#CallPutOption
-	 * UnsecuredMarketTransaction4.CallPutOption}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmCallPutOption
+	 * UnsecuredMarketTransaction4.mmCallPutOption}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#CallPutOption
-	 * UnsecuredMarketTransaction2.CallPutOption}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmCallPutOption
+	 * UnsecuredMarketTransaction2.mmCallPutOption}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CallPutOption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCallPutOption = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			businessComponentTrace_lazy = () -> Option.mmObject();
+			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "CallPutOptn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallPutOption";
 			definition = "Provides the option details, when the transaction reported is a call/put option.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.CallPutOption;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.CallPutOption);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmCallPutOption);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmCallPutOption;
 			maxOccurs = 2;
-			type_lazy = () -> Option12.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Option12.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -1364,18 +1384,18 @@ public class UnsecuredMarketTransaction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#SupplementaryData
-	 * UnsecuredMarketTransaction4.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmSupplementaryData
+	 * UnsecuredMarketTransaction4.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#SupplementaryData
-	 * UnsecuredMarketTransaction2.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmSupplementaryData
+	 * UnsecuredMarketTransaction2.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			isDerived = false;
@@ -1383,35 +1403,187 @@ public class UnsecuredMarketTransaction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmSupplementaryData;
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction3.ReportedTransactionStatus, com.tools20022.repository.msg.UnsecuredMarketTransaction3.BranchIdentification,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.UniqueTransactionIdentifier, com.tools20022.repository.msg.UnsecuredMarketTransaction3.ProprietaryTransactionIdentification,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.CounterpartyProprietaryTransactionIdentification, com.tools20022.repository.msg.UnsecuredMarketTransaction3.CounterpartyIdentification,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.TradeDate, com.tools20022.repository.msg.UnsecuredMarketTransaction3.SettlementDate, com.tools20022.repository.msg.UnsecuredMarketTransaction3.MaturityDate,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.TransactionType, com.tools20022.repository.msg.UnsecuredMarketTransaction3.InstrumentType,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.TransactionNominalAmount, com.tools20022.repository.msg.UnsecuredMarketTransaction3.DealPrice,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.RateType, com.tools20022.repository.msg.UnsecuredMarketTransaction3.DealRate, com.tools20022.repository.msg.UnsecuredMarketTransaction3.FloatingRateNote,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.BrokeredDeal, com.tools20022.repository.msg.UnsecuredMarketTransaction3.CallPutOption,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction3.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmReportedTransactionStatus, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmBranchIdentification,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmUniqueTransactionIdentifier, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmProprietaryTransactionIdentification,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmCounterpartyProprietaryTransactionIdentification, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmCounterpartyIdentification,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmTradeDate, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmSettlementDate,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmMaturityDate, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmTransactionType,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmInstrumentType, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmTransactionNominalAmount,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmDealPrice, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmRateType, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmDealRate,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmFloatingRateNote, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmBrokeredDeal,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmCallPutOption, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmSupplementaryData);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnsecuredMarketTransaction3";
 				definition = "Provides the details of each individual un\r\nsecured market transaction.";
-				previousVersion_lazy = () -> UnsecuredMarketTransaction2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(UnsecuredMarketTransaction4.mmObject());
+				previousVersion_lazy = () -> UnsecuredMarketTransaction2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionOperationType1Code getReportedTransactionStatus() {
+		return reportedTransactionStatus;
+	}
+
+	public void setReportedTransactionStatus(TransactionOperationType1Code reportedTransactionStatus) {
+		this.reportedTransactionStatus = reportedTransactionStatus;
+	}
+
+	public LEIIdentifier getBranchIdentification() {
+		return branchIdentification;
+	}
+
+	public void setBranchIdentification(LEIIdentifier branchIdentification) {
+		this.branchIdentification = branchIdentification;
+	}
+
+	public Max105Text getUniqueTransactionIdentifier() {
+		return uniqueTransactionIdentifier;
+	}
+
+	public void setUniqueTransactionIdentifier(Max105Text uniqueTransactionIdentifier) {
+		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
+	}
+
+	public Max105Text getProprietaryTransactionIdentification() {
+		return proprietaryTransactionIdentification;
+	}
+
+	public void setProprietaryTransactionIdentification(Max105Text proprietaryTransactionIdentification) {
+		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
+	}
+
+	public Max105Text getCounterpartyProprietaryTransactionIdentification() {
+		return counterpartyProprietaryTransactionIdentification;
+	}
+
+	public void setCounterpartyProprietaryTransactionIdentification(Max105Text counterpartyProprietaryTransactionIdentification) {
+		this.counterpartyProprietaryTransactionIdentification = counterpartyProprietaryTransactionIdentification;
+	}
+
+	public CounterpartyIdentification2Choice getCounterpartyIdentification() {
+		return counterpartyIdentification;
+	}
+
+	public void setCounterpartyIdentification(CounterpartyIdentification2Choice counterpartyIdentification) {
+		this.counterpartyIdentification = counterpartyIdentification;
+	}
+
+	public DateAndDateTimeChoice getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(DateAndDateTimeChoice tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public ISODate getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public ISODate getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public MoneyMarketTransactionType1Code getTransactionType() {
+		return transactionType;
+	}
+
+	public void setTransactionType(MoneyMarketTransactionType1Code transactionType) {
+		this.transactionType = transactionType;
+	}
+
+	public FinancialInstrumentProductType1Code getInstrumentType() {
+		return instrumentType;
+	}
+
+	public void setInstrumentType(FinancialInstrumentProductType1Code instrumentType) {
+		this.instrumentType = instrumentType;
+	}
+
+	public ActiveCurrencyAndAmount getTransactionNominalAmount() {
+		return transactionNominalAmount;
+	}
+
+	public void setTransactionNominalAmount(ActiveCurrencyAndAmount transactionNominalAmount) {
+		this.transactionNominalAmount = transactionNominalAmount;
+	}
+
+	public PercentageRate getDealPrice() {
+		return dealPrice;
+	}
+
+	public void setDealPrice(PercentageRate dealPrice) {
+		this.dealPrice = dealPrice;
+	}
+
+	public InterestRateType1Code getRateType() {
+		return rateType;
+	}
+
+	public void setRateType(InterestRateType1Code rateType) {
+		this.rateType = rateType;
+	}
+
+	public Rate2 getDealRate() {
+		return dealRate;
+	}
+
+	public void setDealRate(com.tools20022.repository.msg.Rate2 dealRate) {
+		this.dealRate = dealRate;
+	}
+
+	public FloatingRateNote2 getFloatingRateNote() {
+		return floatingRateNote;
+	}
+
+	public void setFloatingRateNote(com.tools20022.repository.msg.FloatingRateNote2 floatingRateNote) {
+		this.floatingRateNote = floatingRateNote;
+	}
+
+	public BrokeredDeal1Code getBrokeredDeal() {
+		return brokeredDeal;
+	}
+
+	public void setBrokeredDeal(BrokeredDeal1Code brokeredDeal) {
+		this.brokeredDeal = brokeredDeal;
+	}
+
+	public List<Option12> getCallPutOption() {
+		return callPutOption;
+	}
+
+	public void setCallPutOption(List<com.tools20022.repository.msg.Option12> callPutOption) {
+		this.callPutOption = callPutOption;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

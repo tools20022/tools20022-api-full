@@ -42,94 +42,95 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#SecuritiesFinancingTradeIdentification
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmSecuritiesFinancingTradeIdentification
  * SecuritiesFinancingTransactionDetails19.
- * SecuritiesFinancingTradeIdentification}</li>
+ * mmSecuritiesFinancingTradeIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#ClosingLegIdentification
- * SecuritiesFinancingTransactionDetails19.ClosingLegIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmClosingLegIdentification
+ * SecuritiesFinancingTransactionDetails19.mmClosingLegIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TerminationDate
- * SecuritiesFinancingTransactionDetails19.TerminationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTerminationDate
+ * SecuritiesFinancingTransactionDetails19.mmTerminationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#RateChangeDate
- * SecuritiesFinancingTransactionDetails19.RateChangeDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmRateChangeDate
+ * SecuritiesFinancingTransactionDetails19.mmRateChangeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#EarliestCallBackDate
- * SecuritiesFinancingTransactionDetails19.EarliestCallBackDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmEarliestCallBackDate
+ * SecuritiesFinancingTransactionDetails19.mmEarliestCallBackDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#CommissionCalculationDate
- * SecuritiesFinancingTransactionDetails19.CommissionCalculationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmCommissionCalculationDate
+ * SecuritiesFinancingTransactionDetails19.mmCommissionCalculationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#RateType
- * SecuritiesFinancingTransactionDetails19.RateType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmRateType
+ * SecuritiesFinancingTransactionDetails19.mmRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#Revaluation
- * SecuritiesFinancingTransactionDetails19.Revaluation}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmRevaluation
+ * SecuritiesFinancingTransactionDetails19.mmRevaluation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#LegalFramework
- * SecuritiesFinancingTransactionDetails19.LegalFramework}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmLegalFramework
+ * SecuritiesFinancingTransactionDetails19.mmLegalFramework}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#InterestComputationMethod
- * SecuritiesFinancingTransactionDetails19.InterestComputationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmInterestComputationMethod
+ * SecuritiesFinancingTransactionDetails19.mmInterestComputationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#MaturityDateModification
- * SecuritiesFinancingTransactionDetails19.MaturityDateModification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmMaturityDateModification
+ * SecuritiesFinancingTransactionDetails19.mmMaturityDateModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#InterestPayment
- * SecuritiesFinancingTransactionDetails19.InterestPayment}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmInterestPayment
+ * SecuritiesFinancingTransactionDetails19.mmInterestPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#VariableRateSupport
- * SecuritiesFinancingTransactionDetails19.VariableRateSupport}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmVariableRateSupport
+ * SecuritiesFinancingTransactionDetails19.mmVariableRateSupport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#RepurchaseRate
- * SecuritiesFinancingTransactionDetails19.RepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmRepurchaseRate
+ * SecuritiesFinancingTransactionDetails19.mmRepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#StockLoanMargin
- * SecuritiesFinancingTransactionDetails19.StockLoanMargin}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmStockLoanMargin
+ * SecuritiesFinancingTransactionDetails19.mmStockLoanMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#SecuritiesHaircut
- * SecuritiesFinancingTransactionDetails19.SecuritiesHaircut}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmSecuritiesHaircut
+ * SecuritiesFinancingTransactionDetails19.mmSecuritiesHaircut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#ChargesRate
- * SecuritiesFinancingTransactionDetails19.ChargesRate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmChargesRate
+ * SecuritiesFinancingTransactionDetails19.mmChargesRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#PricingRate
- * SecuritiesFinancingTransactionDetails19.PricingRate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmPricingRate
+ * SecuritiesFinancingTransactionDetails19.mmPricingRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#Spread
- * SecuritiesFinancingTransactionDetails19.Spread}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmSpread
+ * SecuritiesFinancingTransactionDetails19.mmSpread}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TransactionCallDelay
- * SecuritiesFinancingTransactionDetails19.TransactionCallDelay}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTransactionCallDelay
+ * SecuritiesFinancingTransactionDetails19.mmTransactionCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TotalNumberOfCollateralInstructions
- * SecuritiesFinancingTransactionDetails19.TotalNumberOfCollateralInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#LocalBrokerCommission
- * SecuritiesFinancingTransactionDetails19.LocalBrokerCommission}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#DealAmount
- * SecuritiesFinancingTransactionDetails19.DealAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#AccruedInterestAmount
- * SecuritiesFinancingTransactionDetails19.AccruedInterestAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#ForfeitAmount
- * SecuritiesFinancingTransactionDetails19.ForfeitAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#PremiumAmount
- * SecuritiesFinancingTransactionDetails19.PremiumAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TerminationAmountPerPieceOfCollateral
- * SecuritiesFinancingTransactionDetails19.TerminationAmountPerPieceOfCollateral
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTotalNumberOfCollateralInstructions
+ * SecuritiesFinancingTransactionDetails19.mmTotalNumberOfCollateralInstructions
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#TerminationTransactionAmount
- * SecuritiesFinancingTransactionDetails19.TerminationTransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmLocalBrokerCommission
+ * SecuritiesFinancingTransactionDetails19.mmLocalBrokerCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#SecondLegNarrative
- * SecuritiesFinancingTransactionDetails19.SecondLegNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmDealAmount
+ * SecuritiesFinancingTransactionDetails19.mmDealAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmAccruedInterestAmount
+ * SecuritiesFinancingTransactionDetails19.mmAccruedInterestAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmForfeitAmount
+ * SecuritiesFinancingTransactionDetails19.mmForfeitAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmPremiumAmount
+ * SecuritiesFinancingTransactionDetails19.mmPremiumAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTerminationAmountPerPieceOfCollateral
+ * SecuritiesFinancingTransactionDetails19.
+ * mmTerminationAmountPerPieceOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmTerminationTransactionAmount
+ * SecuritiesFinancingTransactionDetails19.mmTerminationTransactionAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19#mmSecondLegNarrative
+ * SecuritiesFinancingTransactionDetails19.mmSecondLegNarrative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -140,20 +141,20 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV03#SecuritiesFinancingAdditionalDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV03#mmSecuritiesFinancingAdditionalDetails
  * SecuritiesFinancingModificationInstructionV03.
- * SecuritiesFinancingAdditionalDetails}</li>
+ * mmSecuritiesFinancingAdditionalDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV04#SecuritiesFinancingAdditionalDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV04#mmSecuritiesFinancingAdditionalDetails
  * SecuritiesFinancingModificationInstructionV04.
- * SecuritiesFinancingAdditionalDetails}</li>
+ * mmSecuritiesFinancingAdditionalDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -181,6 +182,7 @@ import java.util.function.Supplier;
 public class SecuritiesFinancingTransactionDetails19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text securitiesFinancingTradeIdentification;
 	/**
 	 * Unambiguous identification of the underlying securities financing trade
 	 * as assigned by the instructing party. The identification is common to all
@@ -214,14 +216,14 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#SecuritiesFinancingTradeIdentification
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmSecuritiesFinancingTradeIdentification
 	 * SecuritiesFinancingTransactionDetails27.
-	 * SecuritiesFinancingTradeIdentification}</li>
+	 * mmSecuritiesFinancingTradeIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesFinancingTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesFinancingTradeIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
 			isDerived = false;
@@ -229,12 +231,13 @@ public class SecuritiesFinancingTransactionDetails19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTradeIdentification";
 			definition = "Unambiguous identification of the underlying securities financing trade as assigned by the instructing party. The identification is common to all collateral pieces (one or many).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.SecuritiesFinancingTradeIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmSecuritiesFinancingTradeIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text closingLegIdentification;
 	/**
 	 * Unambiguous identification of the second leg of the transaction as known
 	 * by the account owner (or the instructing party acting on its behalf).
@@ -267,13 +270,13 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#ClosingLegIdentification
-	 * SecuritiesFinancingTransactionDetails27.ClosingLegIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmClosingLegIdentification
+	 * SecuritiesFinancingTransactionDetails27.mmClosingLegIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingLegIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
 			isDerived = false;
@@ -281,12 +284,13 @@ public class SecuritiesFinancingTransactionDetails19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingLegIdentification";
 			definition = "Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.ClosingLegIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmClosingLegIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TerminationDate2Choice terminationDate;
 	/**
 	 * Closing date/time or maturity date/time of the transaction.
 	 * <p>
@@ -299,8 +303,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TerminationDateTime
-	 * SecuritiesFinancing.TerminationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTerminationDateTime
+	 * SecuritiesFinancing.mmTerminationDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -322,28 +326,29 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TerminationDate
-	 * SecuritiesFinancingTransactionDetails27.TerminationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails27.mmTerminationDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TerminationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerminationDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationDateTime;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.TerminationDateTime;
 			isDerived = false;
 			xmlTag = "TermntnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationDate";
 			definition = "Closing date/time or maturity date/time of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TerminationDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTerminationDate);
 			maxOccurs = 1;
-			type_lazy = () -> TerminationDate2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> TerminationDate2Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice rateChangeDate;
 	/**
 	 * Date/Time at which rate change has taken place.
 	 * <p>
@@ -357,8 +362,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RateChangeDateTime
-	 * SecuritiesFinancing.RateChangeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRateChangeDateTime
+	 * SecuritiesFinancing.mmRateChangeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -379,27 +384,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#RateChangeDate
-	 * SecuritiesFinancingTransactionDetails27.RateChangeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails27.mmRateChangeDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateChangeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateChangeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRateChangeDateTime;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RateChangeDateTime;
 			isDerived = false;
 			xmlTag = "RateChngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChangeDate";
 			definition = "Date/Time at which rate change has taken place.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.RateChangeDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmRateChangeDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice earliestCallBackDate;
 	/**
 	 * Earliest date/time at which the call back can take place.
 	 * <p>
@@ -413,8 +419,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#EarliestCallBackDate
-	 * SecuritiesFinancing.EarliestCallBackDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmEarliestCallBackDate
+	 * SecuritiesFinancing.mmEarliestCallBackDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -436,27 +442,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#EarliestCallBackDate
-	 * SecuritiesFinancingTransactionDetails27.EarliestCallBackDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails27.mmEarliestCallBackDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestCallBackDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestCallBackDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmEarliestCallBackDate;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.EarliestCallBackDate;
 			isDerived = false;
 			xmlTag = "EarlstCallBckDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestCallBackDate";
 			definition = "Earliest date/time at which the call back can take place.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.EarliestCallBackDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmEarliestCallBackDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice commissionCalculationDate;
 	/**
 	 * Date/time at which the commission is calculated.
 	 * <p>
@@ -470,8 +477,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CalculationDate
-	 * Commission.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCalculationDate
+	 * Commission.mmCalculationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -492,27 +499,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#CommissionCalculationDate
-	 * SecuritiesFinancingTransactionDetails27.CommissionCalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmCommissionCalculationDate
+	 * SecuritiesFinancingTransactionDetails27.mmCommissionCalculationDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommissionCalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommissionCalculationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCalculationDate;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CalculationDate;
 			isDerived = false;
 			xmlTag = "ComssnClctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionCalculationDate";
 			definition = "Date/time at which the commission is calculated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.CommissionCalculationDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmCommissionCalculationDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected RateType5Choice rateType;
 	/**
 	 * Specifies whether the rate is fixed or variable.
 	 * <p>
@@ -526,8 +534,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#RateType
-	 * InterestCalculation.RateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRateType
+	 * InterestCalculation.mmRateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -548,27 +556,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#RateType
-	 * SecuritiesFinancingTransactionDetails27.RateType}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmRateType
+	 * SecuritiesFinancingTransactionDetails27.mmRateType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRateType;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.RateType;
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Specifies whether the rate is fixed or variable.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.RateType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmRateType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateType5Choice.mmObject();
 		}
 	};
+	protected RevaluationIndicator1Choice revaluation;
 	/**
 	 * Specifies whether the collateral position should be subject to automatic
 	 * revaluation by the account servicer.
@@ -583,8 +592,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RevaluationIndicator
-	 * SecuritiesFinancing.RevaluationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRevaluationIndicator
+	 * SecuritiesFinancing.mmRevaluationIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -607,27 +616,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#Revaluation
-	 * SecuritiesFinancingTransactionDetails27.Revaluation}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails27.mmRevaluation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Revaluation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRevaluation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RevaluationIndicator;
 			isDerived = false;
 			xmlTag = "Rvaltn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Revaluation";
 			definition = "Specifies whether the collateral position should be subject to automatic revaluation by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.Revaluation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmRevaluation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RevaluationIndicator1Choice.mmObject();
 		}
 	};
+	protected LegalFramework1Choice legalFramework;
 	/**
 	 * Legal framework of the transaction.
 	 * <p>
@@ -641,8 +651,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#LegalFramework
-	 * SecuritiesTrade.LegalFramework}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmLegalFramework
+	 * SecuritiesTrade.mmLegalFramework}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -663,27 +673,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#LegalFramework
-	 * SecuritiesFinancingTransactionDetails27.LegalFramework}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmLegalFramework
+	 * SecuritiesFinancingTransactionDetails27.mmLegalFramework}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalFramework = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalFramework = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmLegalFramework;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.LegalFramework;
 			isDerived = false;
 			xmlTag = "LglFrmwk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalFramework";
 			definition = "Legal framework of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.LegalFramework);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmLegalFramework);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> LegalFramework1Choice.mmObject();
 		}
 	};
+	protected InterestComputationMethodFormat1Choice interestComputationMethod;
 	/**
 	 * Identifies the computation method of accrued interest of the related
 	 * financial instrument.
@@ -698,8 +709,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#DayCountBasis
-	 * InterestCalculation.DayCountBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDayCountBasis
+	 * InterestCalculation.mmDayCountBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -722,27 +733,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#InterestComputationMethod
-	 * SecuritiesFinancingTransactionDetails27.InterestComputationMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmInterestComputationMethod
+	 * SecuritiesFinancingTransactionDetails27.mmInterestComputationMethod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestComputationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestComputationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.DayCountBasis;
 			isDerived = false;
 			xmlTag = "IntrstCmptnMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestComputationMethod";
 			definition = "Identifies the computation method of accrued interest of the related financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.InterestComputationMethod);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmInterestComputationMethod);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InterestComputationMethodFormat1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator maturityDateModification;
 	/**
 	 * Specifies whether the maturity date of the securities financing
 	 * transaction may be modified.
@@ -757,8 +769,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#MaturityDateModification
-	 * SecuritiesFinancing.MaturityDateModification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmMaturityDateModification
+	 * SecuritiesFinancing.mmMaturityDateModification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -781,27 +793,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#MaturityDateModification
-	 * SecuritiesFinancingTransactionDetails27.MaturityDateModification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails27.mmMaturityDateModification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDateModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDateModification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmMaturityDateModification;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.MaturityDateModification;
 			isDerived = false;
 			xmlTag = "MtrtyDtMod";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateModification";
 			definition = "Specifies whether the maturity date of the securities financing transaction may be modified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.MaturityDateModification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmMaturityDateModification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator interestPayment;
 	/**
 	 * Specifies whether the interest is to be paid to the collateral taker. If
 	 * set to no, the interest is paid to the collateral giver.
@@ -816,8 +829,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#InterestPayment
-	 * SecuritiesFinancing.InterestPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmInterestPayment
+	 * SecuritiesFinancing.mmInterestPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -840,27 +853,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#InterestPayment
-	 * SecuritiesFinancingTransactionDetails27.InterestPayment}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails27.mmInterestPayment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPayment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmInterestPayment;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.InterestPayment;
 			isDerived = false;
 			xmlTag = "IntrstPmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
 			definition = "Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.InterestPayment);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmInterestPayment);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected RateName1 variableRateSupport;
 	/**
 	 * Index or support rate used together with the spread to calculate the
 	 * repurchase rate.
@@ -874,8 +888,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#VariableRateSupport
-	 * SecuritiesFinancing.VariableRateSupport}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmVariableRateSupport
+	 * SecuritiesFinancing.mmVariableRateSupport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -898,27 +912,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#VariableRateSupport
-	 * SecuritiesFinancingTransactionDetails27.VariableRateSupport}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails27.mmVariableRateSupport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VariableRateSupport = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVariableRateSupport = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmVariableRateSupport;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.VariableRateSupport;
 			isDerived = false;
 			xmlTag = "VarblRateSpprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
 			definition = "Index or support rate used together with the spread to calculate the\nrepurchase rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.VariableRateSupport);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmVariableRateSupport);
 			maxOccurs = 1;
-			complexType_lazy = () -> RateName1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.RateName1.mmObject();
 		}
 	};
+	protected Rate2 repurchaseRate;
 	/**
 	 * Rate to be used to recalculate the repurchase amount.
 	 * <p>
@@ -930,8 +945,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RepurchaseRate
-	 * SecuritiesFinancing.RepurchaseRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRepurchaseRate
+	 * SecuritiesFinancing.mmRepurchaseRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -952,27 +967,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#RepurchaseRate
-	 * SecuritiesFinancingTransactionDetails27.RepurchaseRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails27.mmRepurchaseRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RepurchaseRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepurchaseRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseRate;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RepurchaseRate;
 			isDerived = false;
 			xmlTag = "RpRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
 			definition = "Rate to be used to recalculate the repurchase amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.RepurchaseRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmRepurchaseRate);
 			maxOccurs = 1;
-			complexType_lazy = () -> Rate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	protected Rate2 stockLoanMargin;
 	/**
 	 * Percentage mark-up on a loan consideration used to reflect the lender's
 	 * risk.
@@ -985,8 +1001,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#StockLoanMargin
-	 * SecuritiesFinancing.StockLoanMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmStockLoanMargin
+	 * SecuritiesFinancing.mmStockLoanMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1009,27 +1025,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#StockLoanMargin
-	 * SecuritiesFinancingTransactionDetails27.StockLoanMargin}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails27.mmStockLoanMargin}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StockLoanMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStockLoanMargin = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmStockLoanMargin;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.StockLoanMargin;
 			isDerived = false;
 			xmlTag = "StockLnMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanMargin";
 			definition = "Percentage mark-up on a loan consideration used to reflect the lender's risk.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.StockLoanMargin);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmStockLoanMargin);
 			maxOccurs = 1;
-			complexType_lazy = () -> Rate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	protected Rate2 securitiesHaircut;
 	/**
 	 * Haircut or valuation factor on the security expressed as a percentage.
 	 * <p>
@@ -1041,8 +1058,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#Haircut
-	 * AssetHolding.Haircut}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHaircut
+	 * AssetHolding.mmHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1064,27 +1081,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#SecuritiesHaircut
-	 * SecuritiesFinancingTransactionDetails27.SecuritiesHaircut}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails27.mmSecuritiesHaircut}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesHaircut = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHaircut;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.Haircut;
 			isDerived = false;
 			xmlTag = "SctiesHrcut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesHaircut";
 			definition = "Haircut or valuation factor on the security expressed as a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.SecuritiesHaircut);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmSecuritiesHaircut);
 			maxOccurs = 1;
-			complexType_lazy = () -> Rate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	protected Rate2 chargesRate;
 	/**
 	 * Interest rate paid in the context of a securities financing transaction.
 	 * <p>
@@ -1096,8 +1114,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#InterestCalculation
-	 * Interest.InterestCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmInterestCalculation
+	 * Interest.mmInterestCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1120,27 +1138,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#ChargesRate
-	 * SecuritiesFinancingTransactionDetails27.ChargesRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmChargesRate
+	 * SecuritiesFinancingTransactionDetails27.mmChargesRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargesRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargesRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.InterestCalculation;
 			isDerived = false;
 			xmlTag = "ChrgsRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesRate";
 			definition = "Interest rate paid in the context of a securities financing transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.ChargesRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmChargesRate);
 			maxOccurs = 1;
-			complexType_lazy = () -> Rate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	protected RateOrName1Choice pricingRate;
 	/**
 	 * Interest rate to be paid on the transaction amount, as agreed between the
 	 * counterparties.
@@ -1155,8 +1174,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#Interest
-	 * SecuritiesFinancing.Interest}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmInterest
+	 * SecuritiesFinancing.mmInterest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1179,27 +1198,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#PricingRate
-	 * SecuritiesFinancingTransactionDetails27.PricingRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails27.mmPricingRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PricingRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPricingRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmInterest;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.Interest;
 			isDerived = false;
 			xmlTag = "PricgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingRate";
 			definition = "Interest rate to be paid on the transaction amount, as agreed between the counterparties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.PricingRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmPricingRate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateOrName1Choice.mmObject();
 		}
 	};
+	protected Rate2 spread;
 	/**
 	 * Repurchase spread expressed as a rate; margin over or under an index that
 	 * determines the repurchase rate.
@@ -1212,8 +1232,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RepurchaseSpread
-	 * SecuritiesFinancing.RepurchaseSpread}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRepurchaseSpread
+	 * SecuritiesFinancing.mmRepurchaseSpread}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1236,27 +1256,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#Spread
-	 * SecuritiesFinancingTransactionDetails27.Spread}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmSpread
+	 * SecuritiesFinancingTransactionDetails27.mmSpread}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Spread = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseSpread;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RepurchaseSpread;
 			isDerived = false;
 			xmlTag = "Sprd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Repurchase spread expressed as a rate; margin over or under an index that determines the repurchase rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.Spread);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmSpread);
 			maxOccurs = 1;
-			complexType_lazy = () -> Rate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	protected Exact3NumericText transactionCallDelay;
 	/**
 	 * Minimum number of days' notice a counterparty needs for terminating the
 	 * transaction.
@@ -1271,8 +1292,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TransactionCallDelay
-	 * SecuritiesFinancing.TransactionCallDelay}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTransactionCallDelay
+	 * SecuritiesFinancing.mmTransactionCallDelay}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1295,27 +1316,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TransactionCallDelay
-	 * SecuritiesFinancingTransactionDetails27.TransactionCallDelay}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails27.mmTransactionCallDelay}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionCallDelay = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionCallDelay = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTransactionCallDelay;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.TransactionCallDelay;
 			isDerived = false;
 			xmlTag = "TxCallDely";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCallDelay";
 			definition = "Minimum number of days' notice a counterparty needs for terminating the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TransactionCallDelay);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTransactionCallDelay);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected Exact3NumericText totalNumberOfCollateralInstructions;
 	/**
 	 * Total number of collateral instructions involved in the transaction.
 	 * <p>
@@ -1329,8 +1351,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TotalNumberOfCollateralInstructions
-	 * SecuritiesFinancing.TotalNumberOfCollateralInstructions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancing.mmTotalNumberOfCollateralInstructions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1352,28 +1374,29 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TotalNumberOfCollateralInstructions
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTotalNumberOfCollateralInstructions
 	 * SecuritiesFinancingTransactionDetails27.
-	 * TotalNumberOfCollateralInstructions}</li>
+	 * mmTotalNumberOfCollateralInstructions}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfCollateralInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfCollateralInstructions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTotalNumberOfCollateralInstructions;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.TotalNumberOfCollateralInstructions;
 			isDerived = false;
 			xmlTag = "TtlNbOfCollInstrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfCollateralInstructions";
 			definition = "Total number of collateral instructions involved in the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TotalNumberOfCollateralInstructions);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTotalNumberOfCollateralInstructions);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected AmountAndDirection4 localBrokerCommission;
 	/**
 	 * Amount of commission paid to a local broker.
 	 * <p>
@@ -1387,8 +1410,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Broker#Commission
-	 * Broker.Commission}</li>
+	 * {@linkplain com.tools20022.repository.entity.Broker#mmCommission
+	 * Broker.mmCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1409,27 +1432,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#LocalBrokerCommission
-	 * SecuritiesFinancingTransactionDetails27.LocalBrokerCommission}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmLocalBrokerCommission
+	 * SecuritiesFinancingTransactionDetails27.mmLocalBrokerCommission}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalBrokerCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalBrokerCommission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Broker.mmCommission;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Broker.Commission;
 			isDerived = false;
 			xmlTag = "LclBrkrComssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalBrokerCommission";
 			definition = "Amount of commission paid to a local broker.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.LocalBrokerCommission);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmLocalBrokerCommission);
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected AmountAndDirection4 dealAmount;
 	/**
 	 * Principal amount of a trade (for second leg).
 	 * <p>
@@ -1443,8 +1467,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#DealAmount
-	 * SecuritiesFinancing.DealAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmDealAmount
+	 * SecuritiesFinancing.mmDealAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1465,27 +1489,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#DealAmount
-	 * SecuritiesFinancingTransactionDetails27.DealAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails27.mmDealAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmDealAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.DealAmount;
 			isDerived = false;
 			xmlTag = "DealAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealAmount";
 			definition = "Principal amount of a trade (for second leg).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.DealAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmDealAmount);
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected AmountAndDirection4 accruedInterestAmount;
 	/**
 	 * Interest amount that has accrued in between coupon payment periods.
 	 * <p>
@@ -1499,8 +1524,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1522,27 +1547,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#AccruedInterestAmount
-	 * SecuritiesFinancingTransactionDetails27.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmAccruedInterestAmount
+	 * SecuritiesFinancingTransactionDetails27.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.AccruedInterestAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmAccruedInterestAmount);
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected AmountAndDirection4 forfeitAmount;
 	/**
 	 * Fixed amount of money that has to be paid (instead of interest) in the
 	 * case of a recall or at the closing date.
@@ -1557,8 +1583,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#ForfeitRepurchaseAmount
-	 * SecuritiesFinancing.ForfeitRepurchaseAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmForfeitRepurchaseAmount
+	 * SecuritiesFinancing.mmForfeitRepurchaseAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1581,27 +1607,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#ForfeitAmount
-	 * SecuritiesFinancingTransactionDetails27.ForfeitAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails27.mmForfeitAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForfeitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForfeitAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmForfeitRepurchaseAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.ForfeitRepurchaseAmount;
 			isDerived = false;
 			xmlTag = "FrftAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitAmount";
 			definition = "Fixed amount of money that has to be paid (instead of interest) in the case of a recall or at the closing date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.ForfeitAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmForfeitAmount);
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected AmountAndDirection4 premiumAmount;
 	/**
 	 * Difference between the amount of money of the first leg and the amount of
 	 * the second leg of the transaction.
@@ -1616,8 +1643,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#PremiumAmount
-	 * SecuritiesFinancing.PremiumAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmPremiumAmount
+	 * SecuritiesFinancing.mmPremiumAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1640,27 +1667,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#PremiumAmount
-	 * SecuritiesFinancingTransactionDetails27.PremiumAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails27.mmPremiumAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PremiumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPremiumAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmPremiumAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.PremiumAmount;
 			isDerived = false;
 			xmlTag = "PrmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumAmount";
 			definition = "Difference between the amount of money of the first leg and the amount of the second leg of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.PremiumAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmPremiumAmount);
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected AmountAndDirection4 terminationAmountPerPieceOfCollateral;
 	/**
 	 * Amount of money to be settled per piece of collateral to terminate the
 	 * transaction.
@@ -1675,8 +1703,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TerminationAmountPerPieceOfCollateral
-	 * SecuritiesFinancing.TerminationAmountPerPieceOfCollateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancing.mmTerminationAmountPerPieceOfCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1699,28 +1727,29 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TerminationAmountPerPieceOfCollateral
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTerminationAmountPerPieceOfCollateral
 	 * SecuritiesFinancingTransactionDetails27.
-	 * TerminationAmountPerPieceOfCollateral}</li>
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TerminationAmountPerPieceOfCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTerminationAmountPerPieceOfCollateral = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationAmountPerPieceOfCollateral;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.TerminationAmountPerPieceOfCollateral;
 			isDerived = false;
 			xmlTag = "TermntnAmtPerPcOfColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationAmountPerPieceOfCollateral";
 			definition = "Amount of money to be settled per piece of collateral to terminate the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TerminationAmountPerPieceOfCollateral);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTerminationAmountPerPieceOfCollateral);
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected AmountAndDirection4 terminationTransactionAmount;
 	/**
 	 * Total amount of money to be settled to terminate the transaction.
 	 * <p>
@@ -1734,8 +1763,8 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#TerminationTransactionAmount
-	 * SecuritiesFinancing.TerminationTransactionAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmTerminationTransactionAmount
+	 * SecuritiesFinancing.mmTerminationTransactionAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1757,27 +1786,28 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#TerminationTransactionAmount
-	 * SecuritiesFinancingTransactionDetails27.TerminationTransactionAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails27.mmTerminationTransactionAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TerminationTransactionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTerminationTransactionAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationTransactionAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.TerminationTransactionAmount;
 			isDerived = false;
 			xmlTag = "TermntnTxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationTransactionAmount";
 			definition = "Total amount of money to be settled to terminate the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.TerminationTransactionAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmTerminationTransactionAmount);
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection4.mmObject();
 		}
 	};
+	protected Max140Text secondLegNarrative;
 	/**
 	 * Provides additional information about the second leg in narrative form.
 	 * <p>
@@ -1809,13 +1839,13 @@ public class SecuritiesFinancingTransactionDetails19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#SecondLegNarrative
-	 * SecuritiesFinancingTransactionDetails27.SecondLegNarrative}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27#mmSecondLegNarrative
+	 * SecuritiesFinancingTransactionDetails27.mmSecondLegNarrative}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondLegNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondLegNarrative = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
 			isDerived = false;
@@ -1823,9 +1853,9 @@ public class SecuritiesFinancingTransactionDetails19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLegNarrative";
 			definition = "Provides additional information about the second leg in narrative form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.SecondLegNarrative);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmSecondLegNarrative);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -1833,25 +1863,25 @@ public class SecuritiesFinancingTransactionDetails19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.SecuritiesFinancingTradeIdentification,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.ClosingLegIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TerminationDate,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.RateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.EarliestCallBackDate,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.CommissionCalculationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.RateType,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.Revaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.LegalFramework,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.InterestComputationMethod, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.MaturityDateModification,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.InterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.VariableRateSupport,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.RepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.StockLoanMargin,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.SecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.ChargesRate,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.PricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.Spread,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TotalNumberOfCollateralInstructions,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.LocalBrokerCommission, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.DealAmount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.AccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.ForfeitAmount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.PremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TerminationAmountPerPieceOfCollateral,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.TerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.SecondLegNarrative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmSecuritiesFinancingTradeIdentification,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmClosingLegIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTerminationDate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmEarliestCallBackDate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmCommissionCalculationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmRateType,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmRevaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmLegalFramework,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmInterestComputationMethod, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmMaturityDateModification,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmVariableRateSupport,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmStockLoanMargin,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmChargesRate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmSpread,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTotalNumberOfCollateralInstructions,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmLocalBrokerCommission, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmDealAmount,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmForfeitAmount,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmPremiumAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTerminationAmountPerPieceOfCollateral,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmSecondLegNarrative);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV03.mmSecuritiesFinancingAdditionalDetails,
+						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV04.mmSecuritiesFinancingAdditionalDetails);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV03.SecuritiesFinancingAdditionalDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV04.SecuritiesFinancingAdditionalDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1862,10 +1892,242 @@ public class SecuritiesFinancingTransactionDetails19 {
 				})).get();
 				name = "SecuritiesFinancingTransactionDetails19";
 				definition = "Details of the closing of the securities financing transaction.";
-				previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails27.mmObject());
+				previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSecuritiesFinancingTradeIdentification() {
+		return securitiesFinancingTradeIdentification;
+	}
+
+	public void setSecuritiesFinancingTradeIdentification(Max35Text securitiesFinancingTradeIdentification) {
+		this.securitiesFinancingTradeIdentification = securitiesFinancingTradeIdentification;
+	}
+
+	public Max35Text getClosingLegIdentification() {
+		return closingLegIdentification;
+	}
+
+	public void setClosingLegIdentification(Max35Text closingLegIdentification) {
+		this.closingLegIdentification = closingLegIdentification;
+	}
+
+	public TerminationDate2Choice getTerminationDate() {
+		return terminationDate;
+	}
+
+	public void setTerminationDate(TerminationDate2Choice terminationDate) {
+		this.terminationDate = terminationDate;
+	}
+
+	public DateAndDateTimeChoice getRateChangeDate() {
+		return rateChangeDate;
+	}
+
+	public void setRateChangeDate(DateAndDateTimeChoice rateChangeDate) {
+		this.rateChangeDate = rateChangeDate;
+	}
+
+	public DateAndDateTimeChoice getEarliestCallBackDate() {
+		return earliestCallBackDate;
+	}
+
+	public void setEarliestCallBackDate(DateAndDateTimeChoice earliestCallBackDate) {
+		this.earliestCallBackDate = earliestCallBackDate;
+	}
+
+	public DateAndDateTimeChoice getCommissionCalculationDate() {
+		return commissionCalculationDate;
+	}
+
+	public void setCommissionCalculationDate(DateAndDateTimeChoice commissionCalculationDate) {
+		this.commissionCalculationDate = commissionCalculationDate;
+	}
+
+	public RateType5Choice getRateType() {
+		return rateType;
+	}
+
+	public void setRateType(RateType5Choice rateType) {
+		this.rateType = rateType;
+	}
+
+	public RevaluationIndicator1Choice getRevaluation() {
+		return revaluation;
+	}
+
+	public void setRevaluation(RevaluationIndicator1Choice revaluation) {
+		this.revaluation = revaluation;
+	}
+
+	public LegalFramework1Choice getLegalFramework() {
+		return legalFramework;
+	}
+
+	public void setLegalFramework(LegalFramework1Choice legalFramework) {
+		this.legalFramework = legalFramework;
+	}
+
+	public InterestComputationMethodFormat1Choice getInterestComputationMethod() {
+		return interestComputationMethod;
+	}
+
+	public void setInterestComputationMethod(InterestComputationMethodFormat1Choice interestComputationMethod) {
+		this.interestComputationMethod = interestComputationMethod;
+	}
+
+	public YesNoIndicator getMaturityDateModification() {
+		return maturityDateModification;
+	}
+
+	public void setMaturityDateModification(YesNoIndicator maturityDateModification) {
+		this.maturityDateModification = maturityDateModification;
+	}
+
+	public YesNoIndicator getInterestPayment() {
+		return interestPayment;
+	}
+
+	public void setInterestPayment(YesNoIndicator interestPayment) {
+		this.interestPayment = interestPayment;
+	}
+
+	public RateName1 getVariableRateSupport() {
+		return variableRateSupport;
+	}
+
+	public void setVariableRateSupport(com.tools20022.repository.msg.RateName1 variableRateSupport) {
+		this.variableRateSupport = variableRateSupport;
+	}
+
+	public Rate2 getRepurchaseRate() {
+		return repurchaseRate;
+	}
+
+	public void setRepurchaseRate(com.tools20022.repository.msg.Rate2 repurchaseRate) {
+		this.repurchaseRate = repurchaseRate;
+	}
+
+	public Rate2 getStockLoanMargin() {
+		return stockLoanMargin;
+	}
+
+	public void setStockLoanMargin(com.tools20022.repository.msg.Rate2 stockLoanMargin) {
+		this.stockLoanMargin = stockLoanMargin;
+	}
+
+	public Rate2 getSecuritiesHaircut() {
+		return securitiesHaircut;
+	}
+
+	public void setSecuritiesHaircut(com.tools20022.repository.msg.Rate2 securitiesHaircut) {
+		this.securitiesHaircut = securitiesHaircut;
+	}
+
+	public Rate2 getChargesRate() {
+		return chargesRate;
+	}
+
+	public void setChargesRate(com.tools20022.repository.msg.Rate2 chargesRate) {
+		this.chargesRate = chargesRate;
+	}
+
+	public RateOrName1Choice getPricingRate() {
+		return pricingRate;
+	}
+
+	public void setPricingRate(RateOrName1Choice pricingRate) {
+		this.pricingRate = pricingRate;
+	}
+
+	public Rate2 getSpread() {
+		return spread;
+	}
+
+	public void setSpread(com.tools20022.repository.msg.Rate2 spread) {
+		this.spread = spread;
+	}
+
+	public Exact3NumericText getTransactionCallDelay() {
+		return transactionCallDelay;
+	}
+
+	public void setTransactionCallDelay(Exact3NumericText transactionCallDelay) {
+		this.transactionCallDelay = transactionCallDelay;
+	}
+
+	public Exact3NumericText getTotalNumberOfCollateralInstructions() {
+		return totalNumberOfCollateralInstructions;
+	}
+
+	public void setTotalNumberOfCollateralInstructions(Exact3NumericText totalNumberOfCollateralInstructions) {
+		this.totalNumberOfCollateralInstructions = totalNumberOfCollateralInstructions;
+	}
+
+	public AmountAndDirection4 getLocalBrokerCommission() {
+		return localBrokerCommission;
+	}
+
+	public void setLocalBrokerCommission(com.tools20022.repository.msg.AmountAndDirection4 localBrokerCommission) {
+		this.localBrokerCommission = localBrokerCommission;
+	}
+
+	public AmountAndDirection4 getDealAmount() {
+		return dealAmount;
+	}
+
+	public void setDealAmount(com.tools20022.repository.msg.AmountAndDirection4 dealAmount) {
+		this.dealAmount = dealAmount;
+	}
+
+	public AmountAndDirection4 getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection4 accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
+	}
+
+	public AmountAndDirection4 getForfeitAmount() {
+		return forfeitAmount;
+	}
+
+	public void setForfeitAmount(com.tools20022.repository.msg.AmountAndDirection4 forfeitAmount) {
+		this.forfeitAmount = forfeitAmount;
+	}
+
+	public AmountAndDirection4 getPremiumAmount() {
+		return premiumAmount;
+	}
+
+	public void setPremiumAmount(com.tools20022.repository.msg.AmountAndDirection4 premiumAmount) {
+		this.premiumAmount = premiumAmount;
+	}
+
+	public AmountAndDirection4 getTerminationAmountPerPieceOfCollateral() {
+		return terminationAmountPerPieceOfCollateral;
+	}
+
+	public void setTerminationAmountPerPieceOfCollateral(com.tools20022.repository.msg.AmountAndDirection4 terminationAmountPerPieceOfCollateral) {
+		this.terminationAmountPerPieceOfCollateral = terminationAmountPerPieceOfCollateral;
+	}
+
+	public AmountAndDirection4 getTerminationTransactionAmount() {
+		return terminationTransactionAmount;
+	}
+
+	public void setTerminationTransactionAmount(com.tools20022.repository.msg.AmountAndDirection4 terminationTransactionAmount) {
+		this.terminationTransactionAmount = terminationTransactionAmount;
+	}
+
+	public Max140Text getSecondLegNarrative() {
+		return secondLegNarrative;
+	}
+
+	public void setSecondLegNarrative(Max140Text secondLegNarrative) {
+		this.secondLegNarrative = secondLegNarrative;
 	}
 }

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveryParameters2#RegisteredAddressIndicator
- * DeliveryParameters2.RegisteredAddressIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveryParameters2#mmRegisteredAddressIndicator
+ * DeliveryParameters2.mmRegisteredAddressIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveryParameters2#NameAndAddress
- * DeliveryParameters2.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveryParameters2#mmNameAndAddress
+ * DeliveryParameters2.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeliveryParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator registeredAddressIndicator;
 	/**
 	 * Indicates whether the address for the physical delivery is the registered
 	 * address.
@@ -76,8 +77,8 @@ public class DeliveryParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#RegisteredAddressIndicator
-	 * PhysicalDelivery.RegisteredAddressIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRegisteredAddressIndicator
+	 * PhysicalDelivery.mmRegisteredAddressIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class DeliveryParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegisteredAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegisteredAddressIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmRegisteredAddressIndicator;
 			componentContext_lazy = () -> DeliveryParameters2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.RegisteredAddressIndicator;
 			isDerived = false;
 			xmlTag = "RegdAdrInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredAddressIndicator";
 			definition = "Indicates whether the address for the physical delivery is the registered address.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected NameAndAddress1 nameAndAddress;
 	/**
 	 * Name and address to/from which the physical delivery/receipt of the
 	 * financial instrument must take place.
@@ -125,8 +127,8 @@ public class DeliveryParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,32 +149,48 @@ public class DeliveryParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DeliveryParameters2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address to/from which the physical delivery/receipt of the financial instrument must take place.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters2.RegisteredAddressIndicator, com.tools20022.repository.msg.DeliveryParameters2.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters2.mmRegisteredAddressIndicator, com.tools20022.repository.msg.DeliveryParameters2.mmNameAndAddress);
 				trace_lazy = () -> PhysicalDelivery.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveryParameters2";
 				definition = "Parameters of a physical delivery.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getRegisteredAddressIndicator() {
+		return registeredAddressIndicator;
+	}
+
+	public void setRegisteredAddressIndicator(YesNoIndicator registeredAddressIndicator) {
+		this.registeredAddressIndicator = registeredAddressIndicator;
+	}
+
+	public NameAndAddress1 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(com.tools20022.repository.msg.NameAndAddress1 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

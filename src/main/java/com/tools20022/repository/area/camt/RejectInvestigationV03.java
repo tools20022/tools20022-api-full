@@ -76,21 +76,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#Assignment
- * RejectInvestigationV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#mmAssignment
+ * RejectInvestigationV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#Case
- * RejectInvestigationV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#mmCase
+ * RejectInvestigationV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#Justification
- * RejectInvestigationV03.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#mmJustification
+ * RejectInvestigationV03.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#identifier
- * RejectInvestigationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.031.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectInvestigationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment2 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -139,17 +138,18 @@ public class RejectInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -171,17 +171,18 @@ public class RejectInvestigationV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
 		}
 	};
+	protected InvestigationRejectionJustification1 justification;
 	/**
 	 * Specifies the reason for the rejection of an investigation.
 	 * <p>
@@ -206,42 +207,15 @@ public class RejectInvestigationV03 {
 	 * "Specifies the reason for the rejection of an investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Justification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Specifies the reason for the rejection of an investigation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestigationRejectionJustification1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "031"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "031";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -256,11 +230,42 @@ public class RejectInvestigationV03 {
 				rootElement = "Document";
 				xmlTag = "RjctInvstgtn";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectInvestigationV03.Assignment, com.tools20022.repository.area.camt.RejectInvestigationV03.Case,
-						com.tools20022.repository.area.camt.RejectInvestigationV03.Justification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.RejectInvestigationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectInvestigationV03.mmAssignment, com.tools20022.repository.area.camt.RejectInvestigationV03.mmCase,
+						com.tools20022.repository.area.camt.RejectInvestigationV03.mmJustification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "031";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment2 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment2 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case2 case_) {
+		this.case_ = case_;
+	}
+
+	public InvestigationRejectionJustification1 getJustification() {
+		return justification;
+	}
+
+	public void setJustification(InvestigationRejectionJustification1 justification) {
+		this.justification = justification;
 	}
 }

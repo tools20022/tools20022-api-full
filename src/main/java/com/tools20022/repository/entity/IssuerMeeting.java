@@ -40,31 +40,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#IssuerMeetingIdentification
- * IssuerMeeting.IssuerMeetingIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmIssuerMeetingIdentification
+ * IssuerMeeting.mmIssuerMeetingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#NomineePowerOfAttorneyIndicator
- * IssuerMeeting.NomineePowerOfAttorneyIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmNomineePowerOfAttorneyIndicator
+ * IssuerMeeting.mmNomineePowerOfAttorneyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#NomineeVotingIndicator
- * IssuerMeeting.NomineeVotingIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmNomineeVotingIndicator
+ * IssuerMeeting.mmNomineeVotingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#NomineeBeneficialOwnerIndicator
- * IssuerMeeting.NomineeBeneficialOwnerIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmNomineeBeneficialOwnerIndicator
+ * IssuerMeeting.mmNomineeBeneficialOwnerIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#ProxyVotingIndicator
- * IssuerMeeting.ProxyVotingIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmProxyVotingIndicator
+ * IssuerMeeting.mmProxyVotingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#ProxyBeneficialOwnerIndicator
- * IssuerMeeting.ProxyBeneficialOwnerIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmProxyBeneficialOwnerIndicator
+ * IssuerMeeting.mmProxyBeneficialOwnerIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#ProxyPowerOfAttorneyIndicator
- * IssuerMeeting.ProxyPowerOfAttorneyIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmProxyPowerOfAttorneyIndicator
+ * IssuerMeeting.mmProxyPowerOfAttorneyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IssuerMeeting#ValidCreditorIndicator
- * IssuerMeeting.ValidCreditorIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.IssuerMeeting#CapitalStock
- * IssuerMeeting.CapitalStock}</li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmValidCreditorIndicator
+ * IssuerMeeting.mmValidCreditorIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmCapitalStock
+ * IssuerMeeting.mmCapitalStock}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -72,8 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuerMeeting extends Meeting {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text issuerMeetingIdentification;
 	/**
 	 * Identification assigned to a meeting by the issuer. It must be unique for
 	 * the issuer.
@@ -99,48 +101,48 @@ public class IssuerMeeting extends Meeting {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1#IssuerMeetingIdentification
-	 * MeetingNotice1.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice2#IssuerMeetingIdentification
-	 * MeetingNotice2.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#IssuerMeetingIdentification
-	 * MeetingNotice3.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference1#IssuerMeetingIdentification
-	 * MeetingReference1.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference2#IssuerMeetingIdentification
-	 * MeetingReference2.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference5#IssuerMeetingIdentification
-	 * MeetingReference5.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference3#IssuerMeetingIdentification
-	 * MeetingReference3.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference4#IssuerMeetingIdentification
-	 * MeetingReference4.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference7#IssuerMeetingIdentification
-	 * MeetingReference7.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference6#IssuerMeetingIdentification
-	 * MeetingReference6.IssuerMeetingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice4#IssuerMeetingIdentification
-	 * MeetingNotice4.IssuerMeetingIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting IssuerMeeting}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice1#mmIssuerMeetingIdentification
+	 * MeetingNotice1.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice2#mmIssuerMeetingIdentification
+	 * MeetingNotice2.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmIssuerMeetingIdentification
+	 * MeetingNotice3.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference1#mmIssuerMeetingIdentification
+	 * MeetingReference1.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmIssuerMeetingIdentification
+	 * MeetingReference2.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference5#mmIssuerMeetingIdentification
+	 * MeetingReference5.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference3#mmIssuerMeetingIdentification
+	 * MeetingReference3.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference4#mmIssuerMeetingIdentification
+	 * MeetingReference4.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference7#mmIssuerMeetingIdentification
+	 * MeetingReference7.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference6#mmIssuerMeetingIdentification
+	 * MeetingReference6.mmIssuerMeetingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmIssuerMeetingIdentification
+	 * MeetingNotice4.mmIssuerMeetingIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -155,24 +157,25 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute IssuerMeetingIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIssuerMeetingIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingNotice1.IssuerMeetingIdentification, com.tools20022.repository.msg.MeetingNotice2.IssuerMeetingIdentification,
-					com.tools20022.repository.msg.MeetingNotice3.IssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference1.IssuerMeetingIdentification,
-					com.tools20022.repository.msg.MeetingReference2.IssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference5.IssuerMeetingIdentification,
-					com.tools20022.repository.msg.MeetingReference3.IssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference4.IssuerMeetingIdentification,
-					com.tools20022.repository.msg.MeetingReference7.IssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference6.IssuerMeetingIdentification,
-					com.tools20022.repository.msg.MeetingNotice4.IssuerMeetingIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingNotice1.mmIssuerMeetingIdentification, com.tools20022.repository.msg.MeetingNotice2.mmIssuerMeetingIdentification,
+					com.tools20022.repository.msg.MeetingNotice3.mmIssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference1.mmIssuerMeetingIdentification,
+					com.tools20022.repository.msg.MeetingReference2.mmIssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference5.mmIssuerMeetingIdentification,
+					com.tools20022.repository.msg.MeetingReference3.mmIssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference4.mmIssuerMeetingIdentification,
+					com.tools20022.repository.msg.MeetingReference7.mmIssuerMeetingIdentification, com.tools20022.repository.msg.MeetingReference6.mmIssuerMeetingIdentification,
+					com.tools20022.repository.msg.MeetingNotice4.mmIssuerMeetingIdentification);
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuerMeetingIdentification";
 			definition = "Identification assigned to a meeting by the issuer. It must be unique for the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator nomineePowerOfAttorneyIndicator;
 	/**
 	 * Indicates that a power of attorney must be provided by the beneficial
 	 * owner to the nominee in order for the nominee to vote on behalf of the
@@ -203,18 +206,19 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NomineePowerOfAttorneyIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNomineePowerOfAttorneyIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NomineePowerOfAttorneyIndicator";
 			definition = "Indicates that a power of attorney must be provided by the beneficial owner to the nominee in order for the nominee to vote on behalf of the beneficial owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator nomineeVotingIndicator;
 	/**
 	 * Indicates whether an agent can vote on behalf of the beneficial owners.
 	 * <p>
@@ -243,18 +247,19 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NomineeVotingIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNomineeVotingIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NomineeVotingIndicator";
 			definition = "Indicates whether an agent can vote on behalf of the beneficial owners.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator nomineeBeneficialOwnerIndicator;
 	/**
 	 * Indicates whether the beneficiary details, for example, name and address,
 	 * must be supplied in order to take part in the event.
@@ -284,18 +289,19 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NomineeBeneficialOwnerIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNomineeBeneficialOwnerIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NomineeBeneficialOwnerIndicator";
 			definition = "Indicates whether the beneficiary details, for example, name and address, must be supplied in order to take part in the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator proxyVotingIndicator;
 	/**
 	 * Indicates that the beneficial owner may give authority to a third party
 	 * to vote on his behalf.
@@ -325,18 +331,19 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProxyVotingIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProxyVotingIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProxyVotingIndicator";
 			definition = "Indicates that the beneficial owner may give authority to a third party to vote on his behalf.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator proxyBeneficialOwnerIndicator;
 	/**
 	 * Indicates whether the beneficiary details of the proxy, for example, name
 	 * and address, must be supplied in order to take part in the event.
@@ -366,18 +373,19 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProxyBeneficialOwnerIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProxyBeneficialOwnerIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProxyBeneficialOwnerIndicator";
 			definition = "Indicates whether the beneficiary details of the proxy, for example, name and address, must be supplied in order to take part in the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator proxyPowerOfAttorneyIndicator;
 	/**
 	 * Indicates that a power of attorney must be provided by the beneficial
 	 * owner to the proxy in order for the proxy to vote on behalf of the
@@ -408,18 +416,19 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProxyPowerOfAttorneyIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProxyPowerOfAttorneyIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProxyPowerOfAttorneyIndicator";
 			definition = "Indicates that a power of attorney must be provided by the beneficial owner to the proxy in order for the proxy to vote on behalf of the beneficial owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator validCreditorIndicator;
 	/**
 	 * Indicates that the participant must be a creditor of the company in order
 	 * to vote on the resolutions of the meeting.
@@ -449,18 +458,19 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ValidCreditorIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValidCreditorIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValidCreditorIndicator";
 			definition = "Indicates that the participant must be a creditor of the company in order to vote on the resolutions of the meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected CurrencyAndAmount capitalStock;
 	/**
 	 * Total amount of stock, common or preferred, that a corporation has issued
 	 * uder its certificate of incorporation or charter.
@@ -490,15 +500,15 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CapitalStock = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCapitalStock = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IssuerMeeting.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CapitalStock";
 			definition = "Total amount of stock, common or preferred, that a corporation has issued uder its certificate of incorporation or charter.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -506,17 +516,89 @@ public class IssuerMeeting extends Meeting {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerMeeting";
 				definition = "Information about the meeting, specifying the participation requirements and the voting procedures.";
 				superType_lazy = () -> Meeting.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IssuerMeeting.IssuerMeetingIdentification, com.tools20022.repository.entity.IssuerMeeting.NomineePowerOfAttorneyIndicator,
-						com.tools20022.repository.entity.IssuerMeeting.NomineeVotingIndicator, com.tools20022.repository.entity.IssuerMeeting.NomineeBeneficialOwnerIndicator,
-						com.tools20022.repository.entity.IssuerMeeting.ProxyVotingIndicator, com.tools20022.repository.entity.IssuerMeeting.ProxyBeneficialOwnerIndicator,
-						com.tools20022.repository.entity.IssuerMeeting.ProxyPowerOfAttorneyIndicator, com.tools20022.repository.entity.IssuerMeeting.ValidCreditorIndicator, com.tools20022.repository.entity.IssuerMeeting.CapitalStock);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IssuerMeeting.mmIssuerMeetingIdentification, com.tools20022.repository.entity.IssuerMeeting.mmNomineePowerOfAttorneyIndicator,
+						com.tools20022.repository.entity.IssuerMeeting.mmNomineeVotingIndicator, com.tools20022.repository.entity.IssuerMeeting.mmNomineeBeneficialOwnerIndicator,
+						com.tools20022.repository.entity.IssuerMeeting.mmProxyVotingIndicator, com.tools20022.repository.entity.IssuerMeeting.mmProxyBeneficialOwnerIndicator,
+						com.tools20022.repository.entity.IssuerMeeting.mmProxyPowerOfAttorneyIndicator, com.tools20022.repository.entity.IssuerMeeting.mmValidCreditorIndicator, com.tools20022.repository.entity.IssuerMeeting.mmCapitalStock);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIssuerMeetingIdentification() {
+		return issuerMeetingIdentification;
+	}
+
+	public void setIssuerMeetingIdentification(Max35Text issuerMeetingIdentification) {
+		this.issuerMeetingIdentification = issuerMeetingIdentification;
+	}
+
+	public YesNoIndicator getNomineePowerOfAttorneyIndicator() {
+		return nomineePowerOfAttorneyIndicator;
+	}
+
+	public void setNomineePowerOfAttorneyIndicator(YesNoIndicator nomineePowerOfAttorneyIndicator) {
+		this.nomineePowerOfAttorneyIndicator = nomineePowerOfAttorneyIndicator;
+	}
+
+	public YesNoIndicator getNomineeVotingIndicator() {
+		return nomineeVotingIndicator;
+	}
+
+	public void setNomineeVotingIndicator(YesNoIndicator nomineeVotingIndicator) {
+		this.nomineeVotingIndicator = nomineeVotingIndicator;
+	}
+
+	public YesNoIndicator getNomineeBeneficialOwnerIndicator() {
+		return nomineeBeneficialOwnerIndicator;
+	}
+
+	public void setNomineeBeneficialOwnerIndicator(YesNoIndicator nomineeBeneficialOwnerIndicator) {
+		this.nomineeBeneficialOwnerIndicator = nomineeBeneficialOwnerIndicator;
+	}
+
+	public YesNoIndicator getProxyVotingIndicator() {
+		return proxyVotingIndicator;
+	}
+
+	public void setProxyVotingIndicator(YesNoIndicator proxyVotingIndicator) {
+		this.proxyVotingIndicator = proxyVotingIndicator;
+	}
+
+	public YesNoIndicator getProxyBeneficialOwnerIndicator() {
+		return proxyBeneficialOwnerIndicator;
+	}
+
+	public void setProxyBeneficialOwnerIndicator(YesNoIndicator proxyBeneficialOwnerIndicator) {
+		this.proxyBeneficialOwnerIndicator = proxyBeneficialOwnerIndicator;
+	}
+
+	public YesNoIndicator getProxyPowerOfAttorneyIndicator() {
+		return proxyPowerOfAttorneyIndicator;
+	}
+
+	public void setProxyPowerOfAttorneyIndicator(YesNoIndicator proxyPowerOfAttorneyIndicator) {
+		this.proxyPowerOfAttorneyIndicator = proxyPowerOfAttorneyIndicator;
+	}
+
+	public YesNoIndicator getValidCreditorIndicator() {
+		return validCreditorIndicator;
+	}
+
+	public void setValidCreditorIndicator(YesNoIndicator validCreditorIndicator) {
+		this.validCreditorIndicator = validCreditorIndicator;
+	}
+
+	public CurrencyAndAmount getCapitalStock() {
+		return capitalStock;
+	}
+
+	public void setCapitalStock(CurrencyAndAmount capitalStock) {
+		this.capitalStock = capitalStock;
 	}
 }

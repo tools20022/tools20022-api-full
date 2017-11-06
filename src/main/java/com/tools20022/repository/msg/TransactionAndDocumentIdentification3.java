@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#TransactionIdentification
- * TransactionAndDocumentIdentification3.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#mmTransactionIdentification
+ * TransactionAndDocumentIdentification3.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#DocumentIdentification
- * TransactionAndDocumentIdentification3.DocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#mmDocumentIdentification
+ * TransactionAndDocumentIdentification3.mmDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#CreationDateTime
- * TransactionAndDocumentIdentification3.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#mmCreationDateTime
+ * TransactionAndDocumentIdentification3.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#CopyDuplicate
- * TransactionAndDocumentIdentification3.CopyDuplicate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionAndDocumentIdentification3#mmCopyDuplicate
+ * TransactionAndDocumentIdentification3.mmCopyDuplicate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionAndDocumentIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as know by the instructing
 	 * party.
@@ -96,7 +97,7 @@ public class TransactionAndDocumentIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionAndDocumentIdentification3.mmObject();
 			isDerived = false;
@@ -104,11 +105,12 @@ public class TransactionAndDocumentIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text documentIdentification;
 	/**
 	 * Unique identifier of the document (message) assigned by the sender of the
 	 * document.
@@ -139,7 +141,7 @@ public class TransactionAndDocumentIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionAndDocumentIdentification3.mmObject();
 			isDerived = false;
@@ -147,11 +149,12 @@ public class TransactionAndDocumentIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentIdentification";
 			definition = "Unique identifier of the document (message) assigned by the sender of the document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice creationDateTime;
 	/**
 	 * Date and time at which the transaction was created by the instructing
 	 * party in its business application.
@@ -183,7 +186,7 @@ public class TransactionAndDocumentIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionAndDocumentIdentification3.mmObject();
 			isDerived = false;
@@ -191,11 +194,12 @@ public class TransactionAndDocumentIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the transaction was created by the instructing party in its business application.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CopyDuplicate1Code copyDuplicate;
 	/**
 	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
 	 * copy.
@@ -227,7 +231,7 @@ public class TransactionAndDocumentIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionAndDocumentIdentification3.mmObject();
 			isDerived = false;
@@ -235,8 +239,8 @@ public class TransactionAndDocumentIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
@@ -244,15 +248,47 @@ public class TransactionAndDocumentIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionAndDocumentIdentification3.TransactionIdentification,
-						com.tools20022.repository.msg.TransactionAndDocumentIdentification3.DocumentIdentification, com.tools20022.repository.msg.TransactionAndDocumentIdentification3.CreationDateTime,
-						com.tools20022.repository.msg.TransactionAndDocumentIdentification3.CopyDuplicate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionAndDocumentIdentification3.mmTransactionIdentification,
+						com.tools20022.repository.msg.TransactionAndDocumentIdentification3.mmDocumentIdentification, com.tools20022.repository.msg.TransactionAndDocumentIdentification3.mmCreationDateTime,
+						com.tools20022.repository.msg.TransactionAndDocumentIdentification3.mmCopyDuplicate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionAndDocumentIdentification3";
 				definition = "Transaction and document identification details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Max35Text getDocumentIdentification() {
+		return documentIdentification;
+	}
+
+	public void setDocumentIdentification(Max35Text documentIdentification) {
+		this.documentIdentification = documentIdentification;
+	}
+
+	public DateAndDateTimeChoice getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public CopyDuplicate1Code getCopyDuplicate() {
+		return copyDuplicate;
+	}
+
+	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+		this.copyDuplicate = copyDuplicate;
 	}
 }

@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice#UnitsNumber
- * FinancialInstrumentQuantity27Choice.UnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice#mmUnitsNumber
+ * FinancialInstrumentQuantity27Choice.mmUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice#GrossAmount
- * FinancialInstrumentQuantity27Choice.GrossAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice#mmGrossAmount
+ * FinancialInstrumentQuantity27Choice.mmGrossAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice#NetAmount
- * FinancialInstrumentQuantity27Choice.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice#mmNetAmount
+ * FinancialInstrumentQuantity27Choice.mmNetAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentQuantity27Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber unitsNumber;
 	/**
 	 * Number of investment fund units to be subscribed.
 	 * <p>
@@ -86,8 +87,8 @@ public class FinancialInstrumentQuantity27Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#UnitsNumber
-	 * InvestmentFundOrder.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmUnitsNumber
+	 * InvestmentFundOrder.mmUnitsNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,27 +109,28 @@ public class FinancialInstrumentQuantity27Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#UnitsNumber
-	 * FinancialInstrumentQuantity28Choice.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#mmUnitsNumber
+	 * FinancialInstrumentQuantity28Choice.mmUnitsNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.UnitsNumber;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Number of investment fund units to be subscribed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.UnitsNumber);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmUnitsNumber);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount grossAmount;
 	/**
 	 * Amount of money to be paid by the investor when subscribing to fund
 	 * units. <br>
@@ -144,8 +146,8 @@ public class FinancialInstrumentQuantity27Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#GrossAmount
-	 * InvestmentFundOrder.GrossAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmGrossAmount
+	 * InvestmentFundOrder.mmGrossAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,27 +170,28 @@ public class FinancialInstrumentQuantity27Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#GrossAmount
-	 * FinancialInstrumentQuantity28Choice.GrossAmount}</li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#mmGrossAmount
+	 * FinancialInstrumentQuantity28Choice.mmGrossAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.GrossAmount;
 			isDerived = false;
 			xmlTag = "GrssAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money to be paid by the investor when subscribing to fund units. \r\nGross amount = (Quantity * Price) + (Fees + Taxes). ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.GrossAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmGrossAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount netAmount;
 	/**
 	 * Amount of money to be invested in the fund. <br>
 	 * Net Amount = Quantity * Price.
@@ -203,8 +206,8 @@ public class FinancialInstrumentQuantity27Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#NetAmount
-	 * InvestmentFundOrder.NetAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNetAmount
+	 * InvestmentFundOrder.mmNetAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -227,24 +230,24 @@ public class FinancialInstrumentQuantity27Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#NetAmount
-	 * FinancialInstrumentQuantity28Choice.NetAmount}</li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#mmNetAmount
+	 * FinancialInstrumentQuantity28Choice.mmNetAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.NetAmount;
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money to be invested in the fund. \r\nNet Amount = Quantity * Price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.NetAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmNetAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
@@ -252,9 +255,9 @@ public class FinancialInstrumentQuantity27Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.UnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.GrossAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.NetAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmGrossAmount,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmNetAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity27Choice";
 				definition = "Choice between formats for the specification of the number of units or amount of money.";
@@ -262,5 +265,29 @@ public class FinancialInstrumentQuantity27Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(DecimalNumber unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
+		return grossAmount;
+	}
+
+	public void setGrossAmount(ActiveOrHistoricCurrencyAndAmount grossAmount) {
+		this.grossAmount = grossAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(ActiveOrHistoricCurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
 	}
 }

@@ -32,17 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TypeOfDateCode TypeOfDateCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#Actual
- * TypeOfDate1Code.Actual}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#Estimated
- * TypeOfDate1Code.Estimated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#mmActual
+ * TypeOfDate1Code.mmActual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#mmEstimated
+ * TypeOfDate1Code.mmEstimated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +73,7 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	 * name} = "Actual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Actual = new MMCode() {
+	public static final MMCode mmActual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
@@ -95,7 +96,7 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	 * name} = "Estimated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Estimated = new MMCode() {
+	public static final MMCode mmEstimated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
@@ -106,11 +107,11 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfDate1Code";
 				definition = "Specifies whether a date is actual or estimated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDate1Code.Actual, com.tools20022.repository.codeset.TypeOfDate1Code.Estimated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDate1Code.mmActual, com.tools20022.repository.codeset.TypeOfDate1Code.mmEstimated);
 				trace_lazy = () -> TypeOfDateCode.mmObject();
 			}
 		});

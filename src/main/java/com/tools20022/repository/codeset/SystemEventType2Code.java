@@ -34,78 +34,78 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#LVPCutOff
- * SystemEventType2Code.LVPCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmLVPCutOff
+ * SystemEventType2Code.mmLVPCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#LVPCancellationCutOff
- * SystemEventType2Code.LVPCancellationCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmLVPCancellationCutOff
+ * SystemEventType2Code.mmLVPCancellationCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#LVPCutOffReportTime
- * SystemEventType2Code.LVPCutOffReportTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmLVPCutOffReportTime
+ * SystemEventType2Code.mmLVPCutOffReportTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#Euro1StartUp
- * SystemEventType2Code.Euro1StartUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmEuro1StartUp
+ * SystemEventType2Code.mmEuro1StartUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#Step1StartUp
- * SystemEventType2Code.Step1StartUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmStep1StartUp
+ * SystemEventType2Code.mmStep1StartUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#LimitWarningStartUp
- * SystemEventType2Code.LimitWarningStartUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmLimitWarningStartUp
+ * SystemEventType2Code.mmLimitWarningStartUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#Euro1CutOff
- * SystemEventType2Code.Euro1CutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmEuro1CutOff
+ * SystemEventType2Code.mmEuro1CutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#FinalReporting
- * SystemEventType2Code.FinalReporting}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmFinalReporting
+ * SystemEventType2Code.mmFinalReporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#StartOfDay
- * SystemEventType2Code.StartOfDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmStartOfDay
+ * SystemEventType2Code.mmStartOfDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#LTNCutOff
- * SystemEventType2Code.LTNCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmLTNCutOff
+ * SystemEventType2Code.mmLTNCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#CashReservationCutOff
- * SystemEventType2Code.CashReservationCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmCashReservationCutOff
+ * SystemEventType2Code.mmCashReservationCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#RecCutOff
- * SystemEventType2Code.RecCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmRecCutOff
+ * SystemEventType2Code.mmRecCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#LTGCutOff
- * SystemEventType2Code.LTGCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmLTGCutOff
+ * SystemEventType2Code.mmLTGCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#LTDCutOff
- * SystemEventType2Code.LTDCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmLTDCutOff
+ * SystemEventType2Code.mmLTDCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#CustomerCutOff
- * SystemEventType2Code.CustomerCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmCustomerCutOff
+ * SystemEventType2Code.mmCustomerCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#InterbankCutOff
- * SystemEventType2Code.InterbankCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmInterbankCutOff
+ * SystemEventType2Code.mmInterbankCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#SystemCutOff
- * SystemEventType2Code.SystemCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmSystemCutOff
+ * SystemEventType2Code.mmSystemCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#NetSSSReservationCutOff
- * SystemEventType2Code.NetSSSReservationCutOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmNetSSSReservationCutOff
+ * SystemEventType2Code.mmNetSSSReservationCutOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#ResumeOperation
- * SystemEventType2Code.ResumeOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmResumeOperation
+ * SystemEventType2Code.mmResumeOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#ProcessingCutOffTime
- * SystemEventType2Code.ProcessingCutOffTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmProcessingCutOffTime
+ * SystemEventType2Code.mmProcessingCutOffTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#NewPaymentCutOffTime
- * SystemEventType2Code.NewPaymentCutOffTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmNewPaymentCutOffTime
+ * SystemEventType2Code.mmNewPaymentCutOffTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#EndOfStandingFacilities
- * SystemEventType2Code.EndOfStandingFacilities}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemEventType2Code#mmEndOfStandingFacilities
+ * SystemEventType2Code.mmEndOfStandingFacilities}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -141,7 +141,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "LVPCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode LVPCutOff = new MMCode() {
+	public static final MMCode mmLVPCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LVPCutOff";
@@ -164,7 +164,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "LVPCancellationCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode LVPCancellationCutOff = new MMCode() {
+	public static final MMCode mmLVPCancellationCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LVPCancellationCutOff";
@@ -187,7 +187,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "LVPCutOffReportTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode LVPCutOffReportTime = new MMCode() {
+	public static final MMCode mmLVPCutOffReportTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LVPCutOffReportTime";
@@ -210,7 +210,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "Euro1StartUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode Euro1StartUp = new MMCode() {
+	public static final MMCode mmEuro1StartUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euro1StartUp";
@@ -233,7 +233,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "Step1StartUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode Step1StartUp = new MMCode() {
+	public static final MMCode mmStep1StartUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Step1StartUp";
@@ -256,7 +256,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "LimitWarningStartUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode LimitWarningStartUp = new MMCode() {
+	public static final MMCode mmLimitWarningStartUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWarningStartUp";
@@ -279,7 +279,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "Euro1CutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode Euro1CutOff = new MMCode() {
+	public static final MMCode mmEuro1CutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euro1CutOff";
@@ -302,7 +302,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "FinalReporting"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinalReporting = new MMCode() {
+	public static final MMCode mmFinalReporting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalReporting";
@@ -325,7 +325,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "StartOfDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode StartOfDay = new MMCode() {
+	public static final MMCode mmStartOfDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartOfDay";
@@ -348,7 +348,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "LTNCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode LTNCutOff = new MMCode() {
+	public static final MMCode mmLTNCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LTNCutOff";
@@ -371,7 +371,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "CashReservationCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashReservationCutOff = new MMCode() {
+	public static final MMCode mmCashReservationCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservationCutOff";
@@ -394,7 +394,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "RecCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode RecCutOff = new MMCode() {
+	public static final MMCode mmRecCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecCutOff";
@@ -417,7 +417,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "LTGCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode LTGCutOff = new MMCode() {
+	public static final MMCode mmLTGCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LTGCutOff";
@@ -440,7 +440,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "LTDCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode LTDCutOff = new MMCode() {
+	public static final MMCode mmLTDCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LTDCutOff";
@@ -463,7 +463,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "CustomerCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerCutOff = new MMCode() {
+	public static final MMCode mmCustomerCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCutOff";
@@ -486,7 +486,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "InterbankCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterbankCutOff = new MMCode() {
+	public static final MMCode mmInterbankCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankCutOff";
@@ -509,7 +509,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "SystemCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystemCutOff = new MMCode() {
+	public static final MMCode mmSystemCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCutOff";
@@ -532,7 +532,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "NetSSSReservationCutOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetSSSReservationCutOff = new MMCode() {
+	public static final MMCode mmNetSSSReservationCutOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservationCutOff";
@@ -555,7 +555,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "ResumeOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode ResumeOperation = new MMCode() {
+	public static final MMCode mmResumeOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResumeOperation";
@@ -578,7 +578,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "ProcessingCutOffTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingCutOffTime = new MMCode() {
+	public static final MMCode mmProcessingCutOffTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingCutOffTime";
@@ -601,7 +601,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "NewPaymentCutOffTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewPaymentCutOffTime = new MMCode() {
+	public static final MMCode mmNewPaymentCutOffTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPaymentCutOffTime";
@@ -624,7 +624,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 * name} = "EndOfStandingFacilities"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfStandingFacilities = new MMCode() {
+	public static final MMCode mmEndOfStandingFacilities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfStandingFacilities";
@@ -635,20 +635,21 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LVCO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemEventType2Code";
 				definition = "Specifies a type of event related to a system's operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemEventType2Code.LVPCutOff, com.tools20022.repository.codeset.SystemEventType2Code.LVPCancellationCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.LVPCutOffReportTime, com.tools20022.repository.codeset.SystemEventType2Code.Euro1StartUp, com.tools20022.repository.codeset.SystemEventType2Code.Step1StartUp,
-						com.tools20022.repository.codeset.SystemEventType2Code.LimitWarningStartUp, com.tools20022.repository.codeset.SystemEventType2Code.Euro1CutOff, com.tools20022.repository.codeset.SystemEventType2Code.FinalReporting,
-						com.tools20022.repository.codeset.SystemEventType2Code.StartOfDay, com.tools20022.repository.codeset.SystemEventType2Code.LTNCutOff, com.tools20022.repository.codeset.SystemEventType2Code.CashReservationCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.RecCutOff, com.tools20022.repository.codeset.SystemEventType2Code.LTGCutOff, com.tools20022.repository.codeset.SystemEventType2Code.LTDCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.CustomerCutOff, com.tools20022.repository.codeset.SystemEventType2Code.InterbankCutOff, com.tools20022.repository.codeset.SystemEventType2Code.SystemCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.NetSSSReservationCutOff, com.tools20022.repository.codeset.SystemEventType2Code.ResumeOperation,
-						com.tools20022.repository.codeset.SystemEventType2Code.ProcessingCutOffTime, com.tools20022.repository.codeset.SystemEventType2Code.NewPaymentCutOffTime,
-						com.tools20022.repository.codeset.SystemEventType2Code.EndOfStandingFacilities);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemEventType2Code.mmLVPCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmLVPCancellationCutOff,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmLVPCutOffReportTime, com.tools20022.repository.codeset.SystemEventType2Code.mmEuro1StartUp,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmStep1StartUp, com.tools20022.repository.codeset.SystemEventType2Code.mmLimitWarningStartUp,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmEuro1CutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmFinalReporting, com.tools20022.repository.codeset.SystemEventType2Code.mmStartOfDay,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmLTNCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmCashReservationCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmRecCutOff,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmLTGCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmLTDCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmCustomerCutOff,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmInterbankCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmSystemCutOff,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmNetSSSReservationCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmResumeOperation,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmProcessingCutOffTime, com.tools20022.repository.codeset.SystemEventType2Code.mmNewPaymentCutOffTime,
+						com.tools20022.repository.codeset.SystemEventType2Code.mmEndOfStandingFacilities);
 				trace_lazy = () -> SystemEventTypeCode.mmObject();
 			}
 		});

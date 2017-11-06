@@ -38,9 +38,9 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#SecuritiesAccountIdentificationOrCashAccountIdentificationRule
+ * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#mmSecuritiesAccountIdentificationOrCashAccountIdentificationRule
  * ProceedsDelivery1.
- * SecuritiesAccountIdentificationOrCashAccountIdentificationRule}</li>
+ * mmSecuritiesAccountIdentificationOrCashAccountIdentificationRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,17 +48,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#SecuritiesAccountIdentification
- * ProceedsDelivery1.SecuritiesAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#mmSecuritiesAccountIdentification
+ * ProceedsDelivery1.mmSecuritiesAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#CashAccountIdentification
- * ProceedsDelivery1.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#mmCashAccountIdentification
+ * ProceedsDelivery1.mmCashAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#AccountOwnerIdentification
- * ProceedsDelivery1.AccountOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#mmAccountOwnerIdentification
+ * ProceedsDelivery1.mmAccountOwnerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#AccountServicerIdentification
- * ProceedsDelivery1.AccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#mmAccountServicerIdentification
+ * ProceedsDelivery1.mmAccountServicerIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,8 +68,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,6 +84,7 @@ import java.util.function.Supplier;
 public class ProceedsDelivery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text securitiesAccountIdentification;
 	/**
 	 * identification of the securities account to which the securities have to
 	 * be delivered.
@@ -97,8 +98,8 @@ public class ProceedsDelivery1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,20 +120,21 @@ public class ProceedsDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> ProceedsDelivery1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "identification of the securities account to which the securities have to be delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CashAccountIdentification1Choice cashAccountIdentification;
 	/**
 	 * Identification of the cash account to which the cash has to be delivered.
 	 * <p>
@@ -146,8 +148,8 @@ public class ProceedsDelivery1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,20 +170,21 @@ public class ProceedsDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> ProceedsDelivery1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Identification of the cash account to which the cash has to be delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
 	 * Identification of the party that owns the account.
 	 * <p>
@@ -195,8 +198,8 @@ public class ProceedsDelivery1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,20 +218,21 @@ public class ProceedsDelivery1 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ProceedsDelivery1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice accountServicerIdentification;
 	/**
 	 * Identification of the institution servicing the account.
 	 * <p>
@@ -242,8 +246,8 @@ public class ProceedsDelivery1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,17 +266,17 @@ public class ProceedsDelivery1 {
 	 * definition} = "Identification of the institution servicing the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ProceedsDelivery1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identification of the institution servicing the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
@@ -286,11 +290,11 @@ public class ProceedsDelivery1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#SecuritiesAccountIdentification
-	 * ProceedsDelivery1.SecuritiesAccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#mmSecuritiesAccountIdentification
+	 * ProceedsDelivery1.mmSecuritiesAccountIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#CashAccountIdentification
-	 * ProceedsDelivery1.CashAccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProceedsDelivery1#mmCashAccountIdentification
+	 * ProceedsDelivery1.mmCashAccountIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -310,23 +314,23 @@ public class ProceedsDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor SecuritiesAccountIdentificationOrCashAccountIdentificationRule = new MMXor() {
+	public static final MMXor mmSecuritiesAccountIdentificationOrCashAccountIdentificationRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentificationOrCashAccountIdentificationRule";
 			definition = "Either SecuritiesAccountIdentification or CashAccountIdentification must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsDelivery1.SecuritiesAccountIdentification, com.tools20022.repository.msg.ProceedsDelivery1.CashAccountIdentification);
 			messageComponent_lazy = () -> ProceedsDelivery1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsDelivery1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.ProceedsDelivery1.mmCashAccountIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsDelivery1.SecuritiesAccountIdentification, com.tools20022.repository.msg.ProceedsDelivery1.CashAccountIdentification,
-						com.tools20022.repository.msg.ProceedsDelivery1.AccountOwnerIdentification, com.tools20022.repository.msg.ProceedsDelivery1.AccountServicerIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsDelivery1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.ProceedsDelivery1.mmCashAccountIdentification,
+						com.tools20022.repository.msg.ProceedsDelivery1.mmAccountOwnerIdentification, com.tools20022.repository.msg.ProceedsDelivery1.mmAccountServicerIdentification);
 				trace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -337,9 +341,41 @@ public class ProceedsDelivery1 {
 				})).get();
 				name = "ProceedsDelivery1";
 				definition = "Provides information about the account.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsDelivery1.SecuritiesAccountIdentificationOrCashAccountIdentificationRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsDelivery1.mmSecuritiesAccountIdentificationOrCashAccountIdentificationRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSecuritiesAccountIdentification() {
+		return securitiesAccountIdentification;
+	}
+
+	public void setSecuritiesAccountIdentification(Max35Text securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	}
+
+	public CashAccountIdentification1Choice getCashAccountIdentification() {
+		return cashAccountIdentification;
+	}
+
+	public void setCashAccountIdentification(CashAccountIdentification1Choice cashAccountIdentification) {
+		this.cashAccountIdentification = cashAccountIdentification;
+	}
+
+	public PartyIdentification2Choice getAccountOwnerIdentification() {
+		return accountOwnerIdentification;
+	}
+
+	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+		this.accountOwnerIdentification = accountOwnerIdentification;
+	}
+
+	public PartyIdentification2Choice getAccountServicerIdentification() {
+		return accountServicerIdentification;
+	}
+
+	public void setAccountServicerIdentification(PartyIdentification2Choice accountServicerIdentification) {
+		this.accountServicerIdentification = accountServicerIdentification;
 	}
 }

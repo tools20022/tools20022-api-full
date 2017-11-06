@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonalInformation1#NameOfFather
- * PersonalInformation1.NameOfFather}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonalInformation1#mmNameOfFather
+ * PersonalInformation1.mmNameOfFather}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonalInformation1#MaidenNameOfMother
- * PersonalInformation1.MaidenNameOfMother}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonalInformation1#mmMaidenNameOfMother
+ * PersonalInformation1.mmMaidenNameOfMother}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonalInformation1#NameOfPartner
- * PersonalInformation1.NameOfPartner}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonalInformation1#mmNameOfPartner
+ * PersonalInformation1.mmNameOfPartner}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text nameOfFather;
 	/**
 	 * Name of the father of the individual person.
 	 * <p>
@@ -76,8 +77,8 @@ public class PersonalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#BirthName
-	 * PersonName.BirthName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmBirthName
+	 * PersonName.mmBirthName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class PersonalInformation1 {
 	 * definition} = "Name of the father of the individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameOfFather = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameOfFather = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmBirthName;
 			componentContext_lazy = () -> PersonalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.BirthName;
 			isDerived = false;
 			xmlTag = "NmOfFthr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOfFather";
 			definition = "Name of the father of the individual person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text maidenNameOfMother;
 	/**
 	 * Maiden (unmarried) name of the mother of the individual person.
 	 * <p>
@@ -122,8 +124,8 @@ public class PersonalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +145,21 @@ public class PersonalInformation1 {
 	 * "Maiden (unmarried) name of the mother of the individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaidenNameOfMother = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaidenNameOfMother = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> PersonalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "MdnNmOfMthr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaidenNameOfMother";
 			definition = "Maiden (unmarried) name of the mother of the individual person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text nameOfPartner;
 	/**
 	 * Name of the partner of the individual person.
 	 * <p>
@@ -169,8 +172,8 @@ public class PersonalInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#GivenName
-	 * PersonName.GivenName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
+	 * PersonName.mmGivenName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -189,17 +192,17 @@ public class PersonalInformation1 {
 	 * definition} = "Name of the partner of the individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameOfPartner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameOfPartner = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
 			componentContext_lazy = () -> PersonalInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.GivenName;
 			isDerived = false;
 			xmlTag = "NmOfPrtnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOfPartner";
 			definition = "Name of the partner of the individual person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -207,15 +210,39 @@ public class PersonalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonalInformation1.NameOfFather, com.tools20022.repository.msg.PersonalInformation1.MaidenNameOfMother,
-						com.tools20022.repository.msg.PersonalInformation1.NameOfPartner);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonalInformation1.mmNameOfFather, com.tools20022.repository.msg.PersonalInformation1.mmMaidenNameOfMother,
+						com.tools20022.repository.msg.PersonalInformation1.mmNameOfPartner);
 				trace_lazy = () -> PersonName.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonalInformation1";
 				definition = "Information related to the identification of a person.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNameOfFather() {
+		return nameOfFather;
+	}
+
+	public void setNameOfFather(Max35Text nameOfFather) {
+		this.nameOfFather = nameOfFather;
+	}
+
+	public Max35Text getMaidenNameOfMother() {
+		return maidenNameOfMother;
+	}
+
+	public void setMaidenNameOfMother(Max35Text maidenNameOfMother) {
+		this.maidenNameOfMother = maidenNameOfMother;
+	}
+
+	public Max35Text getNameOfPartner() {
+		return nameOfPartner;
+	}
+
+	public void setNameOfPartner(Max35Text nameOfPartner) {
+		this.nameOfPartner = nameOfPartner;
 	}
 }

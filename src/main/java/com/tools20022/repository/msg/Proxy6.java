@@ -36,13 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy6#ProxyType
- * Proxy6.ProxyType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy6#PersonDetails
- * Proxy6.PersonDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy6#mmProxyType
+ * Proxy6.mmProxyType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy6#mmPersonDetails
+ * Proxy6.mmPersonDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Proxy6#VoteInstructionForAgendaResolution
- * Proxy6.VoteInstructionForAgendaResolution}</li>
+ * {@linkplain com.tools20022.repository.msg.Proxy6#mmVoteInstructionForAgendaResolution
+ * Proxy6.mmVoteInstructionForAgendaResolution}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Proxy6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProxyType2Code proxyType;
 	/**
 	 * Specifies the type of proxy.
 	 * <p>
@@ -83,8 +84,8 @@ public class Proxy6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProxyAppointment#ProxyType
-	 * ProxyAppointment.ProxyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmProxyType
+	 * ProxyAppointment.mmProxyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Proxy6
@@ -103,25 +104,26 @@ public class Proxy6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Proxy4#ProxyType
-	 * Proxy4.ProxyType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Proxy4#mmProxyType
+	 * Proxy4.mmProxyType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProxyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmProxyType;
 			componentContext_lazy = () -> Proxy6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.ProxyType;
 			isDerived = false;
 			xmlTag = "PrxyTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyType";
 			definition = "Specifies the type of proxy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.ProxyType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.mmProxyType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
 		}
 	};
+	protected IndividualPerson26 personDetails;
 	/**
 	 * Person, other than the chairman of the meeting, assigned by the security
 	 * holder as the proxy.
@@ -151,11 +153,11 @@ public class Proxy6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Proxy4#PersonDetails
-	 * Proxy4.PersonDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Proxy4#mmPersonDetails
+	 * Proxy4.mmPersonDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PersonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPersonDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Proxy6.mmObject();
 			isDerived = false;
@@ -163,13 +165,14 @@ public class Proxy6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonDetails";
 			definition = "Person, other than the chairman of the meeting, assigned by the security holder as the proxy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.PersonDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.mmPersonDetails;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson26.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson26.mmObject();
 		}
 	};
+	protected Vote3Choice voteInstructionForAgendaResolution;
 	/**
 	 * Indicates the vote instruction for the resolutions that are announced via
 	 * the meeting agenda in advance of the meeting.
@@ -199,11 +202,11 @@ public class Proxy6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Proxy4#VoteInstructionForAgendaResolution
-	 * Proxy4.VoteInstructionForAgendaResolution}</li>
+	 * {@linkplain com.tools20022.repository.msg.Proxy4#mmVoteInstructionForAgendaResolution
+	 * Proxy4.mmVoteInstructionForAgendaResolution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Proxy6.mmObject();
 			isDerived = false;
@@ -211,20 +214,20 @@ public class Proxy6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionForAgendaResolution";
 			definition = "Indicates the vote instruction for the resolutions that are announced via the meeting agenda in advance of the meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.VoteInstructionForAgendaResolution;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.mmVoteInstructionForAgendaResolution;
 			maxOccurs = 1;
-			type_lazy = () -> Vote3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Vote3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy6.ProxyType, com.tools20022.repository.msg.Proxy6.PersonDetails, com.tools20022.repository.msg.Proxy6.VoteInstructionForAgendaResolution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy6.mmProxyType, com.tools20022.repository.msg.Proxy6.mmPersonDetails, com.tools20022.repository.msg.Proxy6.mmVoteInstructionForAgendaResolution);
 				trace_lazy = () -> ProxyAppointment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Proxy6";
 				definition = "Specifies the elements that identify a proxy appointed to represent a party authorised to vote at a shareholders meeting.";
@@ -232,5 +235,29 @@ public class Proxy6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProxyType2Code getProxyType() {
+		return proxyType;
+	}
+
+	public void setProxyType(ProxyType2Code proxyType) {
+		this.proxyType = proxyType;
+	}
+
+	public IndividualPerson26 getPersonDetails() {
+		return personDetails;
+	}
+
+	public void setPersonDetails(com.tools20022.repository.msg.IndividualPerson26 personDetails) {
+		this.personDetails = personDetails;
+	}
+
+	public Vote3Choice getVoteInstructionForAgendaResolution() {
+		return voteInstructionForAgendaResolution;
+	}
+
+	public void setVoteInstructionForAgendaResolution(Vote3Choice voteInstructionForAgendaResolution) {
+		this.voteInstructionForAgendaResolution = voteInstructionForAgendaResolution;
 	}
 }

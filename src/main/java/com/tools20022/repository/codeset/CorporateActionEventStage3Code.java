@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#Approved
- * CorporateActionEventStage3Code.Approved}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmApproved
+ * CorporateActionEventStage3Code.mmApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#Deactivated
- * CorporateActionEventStage3Code.Deactivated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmDeactivated
+ * CorporateActionEventStage3Code.mmDeactivated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#CancellationAndReRun
- * CorporateActionEventStage3Code.CancellationAndReRun}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmCancellationAndReRun
+ * CorporateActionEventStage3Code.mmCancellationAndReRun}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#Lapsed
- * CorporateActionEventStage3Code.Lapsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmLapsed
+ * CorporateActionEventStage3Code.mmLapsed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#SupplementalCancellationAndReRun
- * CorporateActionEventStage3Code.SupplementalCancellationAndReRun}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmSupplementalCancellationAndReRun
+ * CorporateActionEventStage3Code.mmSupplementalCancellationAndReRun}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#ActionPeriod
- * CorporateActionEventStage3Code.ActionPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmActionPeriod
+ * CorporateActionEventStage3Code.mmActionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#SupplementalCancellation
- * CorporateActionEventStage3Code.SupplementalCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmSupplementalCancellation
+ * CorporateActionEventStage3Code.mmSupplementalCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#SubjectToApproval
- * CorporateActionEventStage3Code.SubjectToApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmSubjectToApproval
+ * CorporateActionEventStage3Code.mmSubjectToApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#UnconditionalAsToAcceptance
- * CorporateActionEventStage3Code.UnconditionalAsToAcceptance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmUnconditionalAsToAcceptance
+ * CorporateActionEventStage3Code.mmUnconditionalAsToAcceptance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#WhollyUnconditional
- * CorporateActionEventStage3Code.WhollyUnconditional}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage3Code#mmWhollyUnconditional
+ * CorporateActionEventStage3Code.mmWhollyUnconditional}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,7 +99,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "Approved"</li>
 	 * </ul>
 	 */
-	public static final MMCode Approved = new MMCode() {
+	public static final MMCode mmApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
@@ -122,7 +122,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "Deactivated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deactivated = new MMCode() {
+	public static final MMCode mmDeactivated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivated";
@@ -145,7 +145,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "CancellationAndReRun"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationAndReRun = new MMCode() {
+	public static final MMCode mmCancellationAndReRun = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAndReRun";
@@ -168,7 +168,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "Lapsed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lapsed = new MMCode() {
+	public static final MMCode mmLapsed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lapsed";
@@ -191,7 +191,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "SupplementalCancellationAndReRun"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalCancellationAndReRun = new MMCode() {
+	public static final MMCode mmSupplementalCancellationAndReRun = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellationAndReRun";
@@ -214,7 +214,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "ActionPeriod"</li>
 	 * </ul>
 	 */
-	public static final MMCode ActionPeriod = new MMCode() {
+	public static final MMCode mmActionPeriod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
@@ -237,7 +237,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "SupplementalCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalCancellation = new MMCode() {
+	public static final MMCode mmSupplementalCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellation";
@@ -260,7 +260,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "SubjectToApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubjectToApproval = new MMCode() {
+	public static final MMCode mmSubjectToApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToApproval";
@@ -283,7 +283,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "UnconditionalAsToAcceptance"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnconditionalAsToAcceptance = new MMCode() {
+	public static final MMCode mmUnconditionalAsToAcceptance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnconditionalAsToAcceptance";
@@ -306,7 +306,7 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	 * name} = "WhollyUnconditional"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhollyUnconditional = new MMCode() {
+	public static final MMCode mmWhollyUnconditional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhollyUnconditional";
@@ -317,15 +317,15 @@ public class CorporateActionEventStage3Code extends CorporateActionEventStageV2C
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStage3Code";
 				definition = "Specifies the stage of the CA event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStage3Code.Approved, com.tools20022.repository.codeset.CorporateActionEventStage3Code.Deactivated,
-						com.tools20022.repository.codeset.CorporateActionEventStage3Code.CancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStage3Code.Lapsed,
-						com.tools20022.repository.codeset.CorporateActionEventStage3Code.SupplementalCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStage3Code.ActionPeriod,
-						com.tools20022.repository.codeset.CorporateActionEventStage3Code.SupplementalCancellation, com.tools20022.repository.codeset.CorporateActionEventStage3Code.SubjectToApproval,
-						com.tools20022.repository.codeset.CorporateActionEventStage3Code.UnconditionalAsToAcceptance, com.tools20022.repository.codeset.CorporateActionEventStage3Code.WhollyUnconditional);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmApproved, com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmDeactivated,
+						com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmLapsed,
+						com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmSupplementalCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmActionPeriod,
+						com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmSupplementalCancellation, com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmSubjectToApproval,
+						com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmUnconditionalAsToAcceptance, com.tools20022.repository.codeset.CorporateActionEventStage3Code.mmWhollyUnconditional);
 				trace_lazy = () -> CorporateActionEventStageV2Code.mmObject();
 			}
 		});

@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode#Cancelled
- * AllegementStatusCode.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode#mmCancelled
+ * AllegementStatusCode.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode#Removed
- * AllegementStatusCode.Removed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode#mmRemoved
+ * AllegementStatusCode.mmRemoved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode#Pending
- * AllegementStatusCode.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode#mmPending
+ * AllegementStatusCode.mmPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class AllegementStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -129,7 +129,7 @@ public class AllegementStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Removed = new MMCode() {
+	public static final MMCode mmRemoved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Removed";
@@ -159,7 +159,7 @@ public class AllegementStatusCode {
 	 * definition} = "Allegement is pending."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -172,13 +172,13 @@ public class AllegementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AllegementStatusCode";
 				definition = "Specifies the status of an allegement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllegementStatusCode.Cancelled, com.tools20022.repository.codeset.AllegementStatusCode.Removed,
-						com.tools20022.repository.codeset.AllegementStatusCode.Pending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllegementStatusCode.mmCancelled, com.tools20022.repository.codeset.AllegementStatusCode.mmRemoved,
+						com.tools20022.repository.codeset.AllegementStatusCode.mmPending);
 				derivation_lazy = () -> Arrays.asList(AllegementStatus1Code.mmObject());
 			}
 		});

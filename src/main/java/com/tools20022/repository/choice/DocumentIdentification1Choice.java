@@ -38,11 +38,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DocumentIdentification1Choice#AccountServicerDocumentIdentification
- * DocumentIdentification1Choice.AccountServicerDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.DocumentIdentification1Choice#mmAccountServicerDocumentIdentification
+ * DocumentIdentification1Choice.mmAccountServicerDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DocumentIdentification1Choice#AccountOwnerDocumentIdentification
- * DocumentIdentification1Choice.AccountOwnerDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.DocumentIdentification1Choice#mmAccountOwnerDocumentIdentification
+ * DocumentIdentification1Choice.mmAccountOwnerDocumentIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,6 +76,7 @@ import java.util.function.Supplier;
 public class DocumentIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text accountServicerDocumentIdentification;
 	/**
 	 * Identification of the document asigned by the account servicer.
 	 * <p>
@@ -88,8 +89,8 @@ public class DocumentIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,27 +112,28 @@ public class DocumentIdentification1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DocumentIdentification3Choice#AccountServicerDocumentIdentification
-	 * DocumentIdentification3Choice.AccountServicerDocumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.DocumentIdentification3Choice#mmAccountServicerDocumentIdentification
+	 * DocumentIdentification3Choice.mmAccountServicerDocumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerDocumentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctSvcrDocId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDocumentIdentification";
 			definition = "Identification of the document asigned by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification3Choice.AccountServicerDocumentIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification3Choice.mmAccountServicerDocumentIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountOwnerDocumentIdentification;
 	/**
 	 * Identification of the document asigned by the account owner.
 	 * <p>
@@ -144,8 +146,8 @@ public class DocumentIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,24 +169,24 @@ public class DocumentIdentification1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DocumentIdentification3Choice#AccountOwnerDocumentIdentification
-	 * DocumentIdentification3Choice.AccountOwnerDocumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.choice.DocumentIdentification3Choice#mmAccountOwnerDocumentIdentification
+	 * DocumentIdentification3Choice.mmAccountOwnerDocumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerDocumentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrDocId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerDocumentIdentification";
 			definition = "Identification of the document asigned by the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification3Choice.AccountOwnerDocumentIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification3Choice.mmAccountOwnerDocumentIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -192,10 +194,10 @@ public class DocumentIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification1Choice.AccountServicerDocumentIdentification,
-						com.tools20022.repository.choice.DocumentIdentification1Choice.AccountOwnerDocumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification1Choice.mmAccountServicerDocumentIdentification,
+						com.tools20022.repository.choice.DocumentIdentification1Choice.mmAccountOwnerDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -210,5 +212,21 @@ public class DocumentIdentification1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAccountServicerDocumentIdentification() {
+		return accountServicerDocumentIdentification;
+	}
+
+	public void setAccountServicerDocumentIdentification(Max35Text accountServicerDocumentIdentification) {
+		this.accountServicerDocumentIdentification = accountServicerDocumentIdentification;
+	}
+
+	public Max35Text getAccountOwnerDocumentIdentification() {
+		return accountOwnerDocumentIdentification;
+	}
+
+	public void setAccountOwnerDocumentIdentification(Max35Text accountOwnerDocumentIdentification) {
+		this.accountOwnerDocumentIdentification = accountOwnerDocumentIdentification;
 	}
 }

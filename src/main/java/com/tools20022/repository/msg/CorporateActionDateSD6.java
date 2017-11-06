@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD6#PlaceAndName
- * CorporateActionDateSD6.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD6#mmPlaceAndName
+ * CorporateActionDateSD6.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD6#LotteryDate
- * CorporateActionDateSD6.LotteryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD6#mmLotteryDate
+ * CorporateActionDateSD6.mmLotteryDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDateSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -87,7 +88,7 @@ public class CorporateActionDateSD6 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD6.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class CorporateActionDateSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate lotteryDate;
 	/**
 	 * Date on which called positions are moved into either a segregated account
 	 * or a DTC Contra CUSIP(s).
@@ -130,7 +132,7 @@ public class CorporateActionDateSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotteryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD6.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class CorporateActionDateSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date on which called positions are moved into either a segregated account or a DTC Contra CUSIP(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class CorporateActionDateSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD6.PlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD6.LotteryDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD6.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD6.mmLotteryDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDateSD6";
 				definition = "Provides additional information regarding corporate action date details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODate getLotteryDate() {
+		return lotteryDate;
+	}
+
+	public void setLotteryDate(ISODate lotteryDate) {
+		this.lotteryDate = lotteryDate;
 	}
 }

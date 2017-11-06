@@ -38,16 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#LatestMatchDate
- * RequiredSubmission1.LatestMatchDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#mmLatestMatchDate
+ * RequiredSubmission1.mmLatestMatchDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#RequiredCommercialDataSet
- * RequiredSubmission1.RequiredCommercialDataSet}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#mmRequiredCommercialDataSet
+ * RequiredSubmission1.mmRequiredCommercialDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#RequiredTransportDataSet
- * RequiredSubmission1.RequiredTransportDataSet}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission1#Submitter
- * RequiredSubmission1.Submitter}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#mmRequiredTransportDataSet
+ * RequiredSubmission1.mmRequiredTransportDataSet}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#mmSubmitter
+ * RequiredSubmission1.mmSubmitter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequiredSubmission1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate latestMatchDate;
 	/**
 	 * Specifies the latest date on which a data set must be matched with a
 	 * baseline.
@@ -102,7 +104,7 @@ public class RequiredSubmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LatestMatchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLatestMatchDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
@@ -110,11 +112,12 @@ public class RequiredSubmission1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestMatchDate";
 			definition = "Specifies the latest date on which a data set must be matched with a baseline.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected YesNoIndicator requiredCommercialDataSet;
 	/**
 	 * Specifies whether the commercial documents must be submitted for the
 	 * current transaction or not.
@@ -146,7 +149,7 @@ public class RequiredSubmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredCommercialDataSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredCommercialDataSet = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
@@ -154,11 +157,12 @@ public class RequiredSubmission1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredCommercialDataSet";
 			definition = "Specifies whether the commercial documents must be submitted for the current transaction or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator requiredTransportDataSet;
 	/**
 	 * Specifies whether the transport documents must be submitted for the
 	 * current transaction or not.
@@ -190,7 +194,7 @@ public class RequiredSubmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredTransportDataSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredTransportDataSet = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
@@ -198,11 +202,12 @@ public class RequiredSubmission1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredTransportDataSet";
 			definition = "Specifies whether the transport documents must be submitted for the current transaction or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected BICIdentification1 submitter;
 	/**
 	 * Specifies the party that must submit the data sets.
 	 * <p>
@@ -234,34 +239,66 @@ public class RequiredSubmission1 {
 	 * definition} = "Specifies the party that must submit the data sets."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Submitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies the party that must submit the data sets.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission1.LatestMatchDate, com.tools20022.repository.msg.RequiredSubmission1.RequiredCommercialDataSet,
-						com.tools20022.repository.msg.RequiredSubmission1.RequiredTransportDataSet, com.tools20022.repository.msg.RequiredSubmission1.Submitter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission1.mmLatestMatchDate, com.tools20022.repository.msg.RequiredSubmission1.mmRequiredCommercialDataSet,
+						com.tools20022.repository.msg.RequiredSubmission1.mmRequiredTransportDataSet, com.tools20022.repository.msg.RequiredSubmission1.mmSubmitter);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequiredSubmission1";
 				definition = "Specifies per transaction which document must be submitted and under which conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getLatestMatchDate() {
+		return latestMatchDate;
+	}
+
+	public void setLatestMatchDate(ISODate latestMatchDate) {
+		this.latestMatchDate = latestMatchDate;
+	}
+
+	public YesNoIndicator getRequiredCommercialDataSet() {
+		return requiredCommercialDataSet;
+	}
+
+	public void setRequiredCommercialDataSet(YesNoIndicator requiredCommercialDataSet) {
+		this.requiredCommercialDataSet = requiredCommercialDataSet;
+	}
+
+	public YesNoIndicator getRequiredTransportDataSet() {
+		return requiredTransportDataSet;
+	}
+
+	public void setRequiredTransportDataSet(YesNoIndicator requiredTransportDataSet) {
+		this.requiredTransportDataSet = requiredTransportDataSet;
+	}
+
+	public BICIdentification1 getSubmitter() {
+		return submitter;
+	}
+
+	public void setSubmitter(com.tools20022.repository.msg.BICIdentification1 submitter) {
+		this.submitter = submitter;
 	}
 }

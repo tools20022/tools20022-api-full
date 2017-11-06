@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Pagination#PageNumber
- * Pagination.PageNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Pagination#LastPageIndicator
- * Pagination.LastPageIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Pagination#mmPageNumber
+ * Pagination.mmPageNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Pagination#mmLastPageIndicator
+ * Pagination.mmLastPageIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,390 +46,390 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#MessagePagination
- * PriceReportCancellationV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#mmMessagePagination
+ * PriceReportCancellationV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#MessagePagination
- * PriceReportCancellationV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmMessagePagination
+ * PriceReportCancellationV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#MessagePagination
- * PriceReportV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#mmMessagePagination
+ * PriceReportV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#MessagePagination
- * PriceReportV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#mmMessagePagination
+ * PriceReportV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01#Pagination
- * SecuritiesSettlementTransactionAuditTrailReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01#mmPagination
+ * SecuritiesSettlementTransactionAuditTrailReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#Pagination
- * CorporateActionInstructionStatementReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#mmPagination
+ * CorporateActionInstructionStatementReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV02#Pagination
- * CorporateActionInstructionStatementReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV02#mmPagination
+ * CorporateActionInstructionStatementReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV03#Pagination
- * CorporateActionInstructionStatementReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV03#mmPagination
+ * CorporateActionInstructionStatementReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04#Pagination
- * CorporateActionInstructionStatementReportV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04#mmPagination
+ * CorporateActionInstructionStatementReportV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03#Pagination
- * CorporateActionMovementPreliminaryAdviceV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03#mmPagination
+ * CorporateActionMovementPreliminaryAdviceV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04#Pagination
- * CorporateActionMovementPreliminaryAdviceV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04#mmPagination
+ * CorporateActionMovementPreliminaryAdviceV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV03#Pagination
- * CorporateActionNotificationV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV03#mmPagination
+ * CorporateActionNotificationV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV04#Pagination
- * CorporateActionNotificationV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV04#mmPagination
+ * CorporateActionNotificationV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#Pagination
- * IntraPositionMovementPostingReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#mmPagination
+ * IntraPositionMovementPostingReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02#Pagination
- * IntraPositionMovementPostingReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02#mmPagination
+ * IntraPositionMovementPostingReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03#Pagination
- * IntraPositionMovementPostingReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03#mmPagination
+ * IntraPositionMovementPostingReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#Pagination
- * IntraPositionMovementPostingReportV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmPagination
+ * IntraPositionMovementPostingReportV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#MessagePagination
- * AccountingStatementOfHoldings.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmMessagePagination
+ * AccountingStatementOfHoldings.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#MessagePagination
- * AccountingStatementOfHoldingsV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#mmMessagePagination
+ * AccountingStatementOfHoldingsV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#Pagination
- * SecuritiesBalanceAccountingReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#mmPagination
+ * SecuritiesBalanceAccountingReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04#Pagination
- * SecuritiesBalanceAccountingReportV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04#mmPagination
+ * SecuritiesBalanceAccountingReportV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05#Pagination
- * SecuritiesBalanceAccountingReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05#mmPagination
+ * SecuritiesBalanceAccountingReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06#Pagination
- * SecuritiesBalanceAccountingReportV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06#mmPagination
+ * SecuritiesBalanceAccountingReportV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#MessagePagination
- * CustodyStatementOfHoldings.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#mmMessagePagination
+ * CustodyStatementOfHoldings.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#MessagePagination
- * CustodyStatementOfHoldingsV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#mmMessagePagination
+ * CustodyStatementOfHoldingsV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#Pagination
- * SecuritiesBalanceCustodyReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#mmPagination
+ * SecuritiesBalanceCustodyReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04#Pagination
- * SecuritiesBalanceCustodyReportV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04#mmPagination
+ * SecuritiesBalanceCustodyReportV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05#Pagination
- * SecuritiesBalanceCustodyReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05#mmPagination
+ * SecuritiesBalanceCustodyReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06#Pagination
- * SecuritiesBalanceCustodyReportV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06#mmPagination
+ * SecuritiesBalanceCustodyReportV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#Pagination
- * SecuritiesTransactionPendingReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#mmPagination
+ * SecuritiesTransactionPendingReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02#Pagination
- * SecuritiesTransactionPendingReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02#mmPagination
+ * SecuritiesTransactionPendingReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03#Pagination
- * SecuritiesTransactionPendingReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03#mmPagination
+ * SecuritiesTransactionPendingReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04#Pagination
- * SecuritiesTransactionPendingReportV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04#mmPagination
+ * SecuritiesTransactionPendingReportV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#Pagination
- * SecuritiesTransactionPostingReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#mmPagination
+ * SecuritiesTransactionPostingReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02#Pagination
- * SecuritiesTransactionPostingReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02#mmPagination
+ * SecuritiesTransactionPostingReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03#Pagination
- * SecuritiesTransactionPostingReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03#mmPagination
+ * SecuritiesTransactionPostingReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04#Pagination
- * SecuritiesTransactionPostingReportV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04#mmPagination
+ * SecuritiesTransactionPostingReportV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeBulkStatusNotificationV02#MessagePagination
- * ForeignExchangeTradeBulkStatusNotificationV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeBulkStatusNotificationV02#mmMessagePagination
+ * ForeignExchangeTradeBulkStatusNotificationV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#MessagePagination
- * AccountingStatementOfHoldingsCancellation.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#mmMessagePagination
+ * AccountingStatementOfHoldingsCancellation.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#MessagePagination
- * AccountingStatementOfHoldingsCancellationV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#mmMessagePagination
+ * AccountingStatementOfHoldingsCancellationV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation#MessagePagination
- * CustodyStatementOfHoldingsCancellation.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation#mmMessagePagination
+ * CustodyStatementOfHoldingsCancellation.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#MessagePagination
- * CustodyStatementOfHoldingsCancellationV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmMessagePagination
+ * CustodyStatementOfHoldingsCancellationV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#MessagePagination
- * FundConfirmedCashForecastReportCancellationV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#mmMessagePagination
+ * FundConfirmedCashForecastReportCancellationV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#MessagePagination
- * FundConfirmedCashForecastReportV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#mmMessagePagination
+ * FundConfirmedCashForecastReportV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#MessagePagination
- * FundDetailedConfirmedCashForecastReportCancellationV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#mmMessagePagination
+ * FundDetailedConfirmedCashForecastReportCancellationV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#MessagePagination
- * FundDetailedConfirmedCashForecastReportV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#mmMessagePagination
+ * FundDetailedConfirmedCashForecastReportV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#MessagePagination
- * FundDetailedEstimatedCashForecastReportV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#mmMessagePagination
+ * FundDetailedEstimatedCashForecastReportV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#MessagePagination
- * FundEstimatedCashForecastReportV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmMessagePagination
+ * FundEstimatedCashForecastReportV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#MessagePagination
- * StatementOfInvestmentFundTransactionsCancellation.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#mmMessagePagination
+ * StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#MessagePagination
- * StatementOfInvestmentFundTransactionsCancellationV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#mmMessagePagination
+ * StatementOfInvestmentFundTransactionsCancellationV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions#MessagePagination
- * StatementOfInvestmentFundTransactions.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions#mmMessagePagination
+ * StatementOfInvestmentFundTransactions.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#MessagePagination
- * StatementOfInvestmentFundTransactionsV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmMessagePagination
+ * StatementOfInvestmentFundTransactionsV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#MessagePagination
- * SwitchOrderV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmMessagePagination
+ * SwitchOrderV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#Pagination
- * PortfolioTransferNotificationV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#mmPagination
+ * PortfolioTransferNotificationV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV02#Pagination
- * PortfolioTransferNotificationV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV02#mmPagination
+ * PortfolioTransferNotificationV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#Pagination
- * SecuritiesSettlementTransactionAllegementReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#mmPagination
+ * SecuritiesSettlementTransactionAllegementReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02#Pagination
- * SecuritiesSettlementTransactionAllegementReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02#mmPagination
+ * SecuritiesSettlementTransactionAllegementReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03#Pagination
- * SecuritiesSettlementTransactionAllegementReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03#mmPagination
+ * SecuritiesSettlementTransactionAllegementReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#Pagination
- * PortfolioTransferNotificationV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmPagination
+ * PortfolioTransferNotificationV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#Pagination
- * SecuritiesEndOfProcessReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#mmPagination
+ * SecuritiesEndOfProcessReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#Pagination
- * TotalPortfolioValuationReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmPagination
+ * TotalPortfolioValuationReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#Pagination
- * MarginReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmPagination
+ * MarginReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#MessagePagination
- * PriceReportCorrectionV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmMessagePagination
+ * PriceReportCorrectionV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05#Pagination
- * CorporateActionNotificationV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05#mmPagination
+ * CorporateActionNotificationV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05#Pagination
- * CorporateActionMovementPreliminaryAdviceV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05#mmPagination
+ * CorporateActionMovementPreliminaryAdviceV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05#Pagination
- * SecuritiesTransactionPendingReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05#mmPagination
+ * SecuritiesTransactionPendingReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05#Pagination
- * SecuritiesTransactionPostingReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05#mmPagination
+ * SecuritiesTransactionPostingReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#Pagination
- * SecuritiesBalanceCustodyReportV07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmPagination
+ * SecuritiesBalanceCustodyReportV07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07#Pagination
- * SecuritiesBalanceAccountingReportV07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07#mmPagination
+ * SecuritiesBalanceAccountingReportV07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04#Pagination
- * SecuritiesSettlementTransactionAllegementReportV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04#mmPagination
+ * SecuritiesSettlementTransactionAllegementReportV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#MessagePagination
- * FundDetailedEstimatedCashForecastReportV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#mmMessagePagination
+ * FundDetailedEstimatedCashForecastReportV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#MessagePagination
- * FundConfirmedCashForecastReportV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#mmMessagePagination
+ * FundConfirmedCashForecastReportV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#MessagePagination
- * FundDetailedConfirmedCashForecastReportCancellationV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#mmMessagePagination
+ * FundDetailedConfirmedCashForecastReportCancellationV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#MessagePagination
- * FundEstimatedCashForecastReportV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmMessagePagination
+ * FundEstimatedCashForecastReportV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#MessagePagination
- * StatementOfInvestmentFundTransactionsV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmMessagePagination
+ * StatementOfInvestmentFundTransactionsV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#MessagePagination
- * FundConfirmedCashForecastReportCancellationV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#mmMessagePagination
+ * FundConfirmedCashForecastReportCancellationV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#MessagePagination
- * StatementOfInvestmentFundTransactionsCancellationV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#mmMessagePagination
+ * StatementOfInvestmentFundTransactionsCancellationV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#MessagePagination
- * FundDetailedConfirmedCashForecastReportV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#mmMessagePagination
+ * FundDetailedConfirmedCashForecastReportV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#Pagination
- * NetPositionV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmPagination
+ * NetPositionV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#Pagination
- * TradeLegStatementV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmPagination
+ * TradeLegStatementV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#Pagination
- * SecuritiesBalanceCustodyReportV08.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmPagination
+ * SecuritiesBalanceCustodyReportV08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06#Pagination
- * SecuritiesTransactionPendingReportV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06#mmPagination
+ * SecuritiesTransactionPendingReportV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#Pagination
- * SecuritiesBalanceAccountingReportV08.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmPagination
+ * SecuritiesBalanceAccountingReportV08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#Pagination
- * SettlementObligationReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmPagination
+ * SettlementObligationReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02#Pagination
- * SecuritiesSettlementTransactionAuditTrailReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02#mmPagination
+ * SecuritiesSettlementTransactionAuditTrailReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06#Pagination
- * CorporateActionMovementPreliminaryAdviceV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06#mmPagination
+ * CorporateActionMovementPreliminaryAdviceV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV03#Pagination
- * InterestPaymentStatementV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV03#mmPagination
+ * InterestPaymentStatementV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#Pagination
- * CollateralAndExposureReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmPagination
+ * CollateralAndExposureReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#Pagination
- * SecuritiesBalanceCustodyReportV09.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmPagination
+ * SecuritiesBalanceCustodyReportV09.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#Pagination
- * PortfolioTransferNotificationV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#mmPagination
+ * PortfolioTransferNotificationV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06#Pagination
- * SecuritiesTransactionPostingReportV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06#mmPagination
+ * SecuritiesTransactionPostingReportV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#Pagination
- * IntraPositionMovementPostingReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05#mmPagination
+ * IntraPositionMovementPostingReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#Pagination
- * SecuritiesBalanceAccountingReportV09.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmPagination
+ * SecuritiesBalanceAccountingReportV09.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05#Pagination
- * SecuritiesSettlementTransactionAllegementReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05#mmPagination
+ * SecuritiesSettlementTransactionAllegementReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03#Pagination
- * SecuritiesSettlementTransactionAuditTrailReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03#mmPagination
+ * SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07#Pagination
- * SecuritiesTransactionPendingReportV07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07#mmPagination
+ * SecuritiesTransactionPendingReportV07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#Pagination
- * CorporateActionMovementPreliminaryAdviceV07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmPagination
+ * CorporateActionMovementPreliminaryAdviceV07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05#Pagination
- * CorporateActionInstructionStatementReportV05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05#mmPagination
+ * CorporateActionInstructionStatementReportV05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#Pagination
- * CorporateActionNotificationV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmPagination
+ * CorporateActionNotificationV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV04#Pagination
- * InterestPaymentStatementV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV04#mmPagination
+ * InterestPaymentStatementV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#Pagination
- * CollateralAndExposureReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmPagination
+ * CollateralAndExposureReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05#Pagination
- * SecuritiesSettlementTransactionAllegementReport002V05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05#mmPagination
+ * SecuritiesSettlementTransactionAllegementReport002V05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V04#Pagination
- * PortfolioTransferNotification002V04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V04#mmPagination
+ * PortfolioTransferNotification002V04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06#Pagination
- * SecuritiesTransactionPostingReport002V06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06#mmPagination
+ * SecuritiesTransactionPostingReport002V06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05#Pagination
- * IntraPositionMovementPostingReport002V05.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05#mmPagination
+ * IntraPositionMovementPostingReport002V05.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#Pagination
- * SecuritiesSettlementTransactionAuditTrailReport002V03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmPagination
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09#Pagination
- * SecuritiesBalanceAccountingReport002V09.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09#mmPagination
+ * SecuritiesBalanceAccountingReport002V09.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#Pagination
- * SecuritiesTransactionPendingReport002V07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmPagination
+ * SecuritiesTransactionPendingReport002V07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09#Pagination
- * SecuritiesBalanceCustodyReport002V09.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09#mmPagination
+ * SecuritiesBalanceCustodyReport002V09.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#Pagination
- * SecuritiesBalanceTransparencyReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmPagination
+ * SecuritiesBalanceTransparencyReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#MessagePagination
- * SwitchOrderV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmMessagePagination
+ * SwitchOrderV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#Pagination
- * CorporateActionNotificationV07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmPagination
+ * CorporateActionNotificationV07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06#Pagination
- * CorporateActionInstructionStatementReportV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06#mmPagination
+ * CorporateActionInstructionStatementReportV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#Pagination
- * CorporateActionMovementPreliminaryAdviceV08.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmPagination
+ * CorporateActionMovementPreliminaryAdviceV08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#MessagePagination
- * ForeignExchangeTradeBulkStatusNotificationV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#mmMessagePagination
+ * ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#Pagination
- * IntraPositionMovementPostingReportV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06#mmPagination
+ * IntraPositionMovementPostingReportV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06#Pagination
- * SecuritiesSettlementTransactionAllegementReportV06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06#mmPagination
+ * SecuritiesSettlementTransactionAllegementReportV06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08#Pagination
- * SecuritiesTransactionPendingReportV08.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08#mmPagination
+ * SecuritiesTransactionPendingReportV08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#Pagination
- * SecuritiesTransactionPostingReportV07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#mmPagination
+ * SecuritiesTransactionPostingReportV07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#Pagination
- * SecuritiesTransactionPendingReport002V08.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#mmPagination
+ * SecuritiesTransactionPendingReport002V08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08#Pagination
- * CorporateActionMovementPreliminaryAdvice002V08.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08#mmPagination
+ * CorporateActionMovementPreliminaryAdvice002V08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06#Pagination
- * IntraPositionMovementPostingReport002V06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06#mmPagination
+ * IntraPositionMovementPostingReport002V06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06#Pagination
- * SecuritiesSettlementTransactionAllegementReport002V06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06#mmPagination
+ * SecuritiesSettlementTransactionAllegementReport002V06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07#Pagination
- * CorporateActionNotification002V07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07#mmPagination
+ * CorporateActionNotification002V07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#Pagination
- * CorporateActionInstructionStatementReport002V06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#mmPagination
+ * CorporateActionInstructionStatementReport002V06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07#Pagination
- * SecuritiesTransactionPostingReport002V07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07#mmPagination
+ * SecuritiesTransactionPostingReport002V07.mmPagination}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -445,6 +445,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Pagination {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max5NumericText pageNumber;
 	/**
 	 * Page number.
 	 * <p>
@@ -472,7 +473,7 @@ public class Pagination {
 	 * definition} = "Page number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPageNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Pagination.mmObject();
 			isDerived = false;
@@ -480,11 +481,12 @@ public class Pagination {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PageNumber";
 			definition = "Page number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	protected YesNoIndicator lastPageIndicator;
 	/**
 	 * Indicates the last page.
 	 * <p>
@@ -512,7 +514,7 @@ public class Pagination {
 	 * definition} = "Indicates the last page."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastPageIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastPageIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Pagination.mmObject();
 			isDerived = false;
@@ -520,8 +522,8 @@ public class Pagination {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastPageIndicator";
 			definition = "Indicates the last page.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -529,76 +531,93 @@ public class Pagination {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pagination.PageNumber, com.tools20022.repository.msg.Pagination.LastPageIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV03.MessagePagination, com.tools20022.repository.area.reda.PriceReportCancellationV04.MessagePagination,
-						com.tools20022.repository.area.reda.PriceReportV03.MessagePagination, com.tools20022.repository.area.reda.PriceReportV04.MessagePagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.Pagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV02.Pagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV03.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04.Pagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.Pagination, com.tools20022.repository.area.seev.CorporateActionNotificationV03.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.Pagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.Pagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02.Pagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03.Pagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.Pagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.MessagePagination,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.MessagePagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06.Pagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.MessagePagination,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.MessagePagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06.Pagination, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02.Pagination, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.Pagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.Pagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04.Pagination, com.tools20022.repository.area.other.ForeignExchangeTradeBulkStatusNotificationV02.MessagePagination,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.MessagePagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.MessagePagination,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation.MessagePagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.MessagePagination,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.MessagePagination, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.MessagePagination,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.MessagePagination, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.MessagePagination,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.MessagePagination, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.MessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.MessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.MessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.MessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.MessagePagination,
-						com.tools20022.repository.area.setr.SwitchOrderV03.MessagePagination, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.Pagination,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.Pagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02.Pagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03.Pagination,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.Pagination, com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.Pagination,
-						com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.Pagination, com.tools20022.repository.area.secl.MarginReportV02.Pagination,
-						com.tools20022.repository.area.reda.PriceReportCorrectionV03.MessagePagination, com.tools20022.repository.area.seev.CorporateActionNotificationV05.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.Pagination, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07.Pagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04.Pagination,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.MessagePagination, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.MessagePagination,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.MessagePagination, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.MessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.MessagePagination, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.MessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.MessagePagination, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.MessagePagination,
-						com.tools20022.repository.area.secl.NetPositionV03.Pagination, com.tools20022.repository.area.secl.TradeLegStatementV03.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.Pagination,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.Pagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.Pagination, com.tools20022.repository.area.colr.InterestPaymentStatementV03.Pagination,
-						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.Pagination,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.Pagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.Pagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05.Pagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07.Pagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.Pagination, com.tools20022.repository.area.seev.CorporateActionNotificationV06.Pagination,
-						com.tools20022.repository.area.colr.InterestPaymentStatementV04.Pagination, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05.Pagination, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06.Pagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.Pagination, com.tools20022.repository.area.setr.SwitchOrderV04.MessagePagination,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.Pagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.Pagination, com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.MessagePagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.Pagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08.Pagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08.Pagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08.Pagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06.Pagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionNotification002V07.Pagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07.Pagination);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pagination.mmPageNumber, com.tools20022.repository.msg.Pagination.mmLastPageIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV03.mmMessagePagination, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessagePagination,
+						com.tools20022.repository.area.reda.PriceReportV03.mmMessagePagination, com.tools20022.repository.area.reda.PriceReportV04.mmMessagePagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV02.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV03.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmPagination, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmPagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmPagination,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02.mmPagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03.mmPagination,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmPagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmMessagePagination,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmMessagePagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06.mmPagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmMessagePagination,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmMessagePagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04.mmPagination, com.tools20022.repository.area.other.ForeignExchangeTradeBulkStatusNotificationV02.mmMessagePagination,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmMessagePagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmMessagePagination,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation.mmMessagePagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.mmMessagePagination, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.mmMessagePagination, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmMessagePagination, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmMessagePagination,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.mmMessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmMessagePagination,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmMessagePagination, com.tools20022.repository.area.setr.SwitchOrderV03.mmMessagePagination,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmPagination, com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03.mmPagination, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmPagination, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmPagination,
+						com.tools20022.repository.area.secl.MarginReportV02.mmPagination, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmMessagePagination,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04.mmPagination, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmMessagePagination, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmMessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.mmMessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmMessagePagination, com.tools20022.repository.area.secl.NetPositionV03.mmPagination,
+						com.tools20022.repository.area.secl.TradeLegStatementV03.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmPagination,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmPagination, com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmPagination,
+						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmPagination,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmPagination,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmPagination, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPagination,
+						com.tools20022.repository.area.colr.InterestPaymentStatementV04.mmPagination, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05.mmPagination, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06.mmPagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmPagination, com.tools20022.repository.area.setr.SwitchOrderV04.mmMessagePagination,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmPagination, com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08.mmPagination,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionNotification002V07.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07.mmPagination);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Pagination";
 				definition = "Number used to sequence pages when it is not possible for data to be conveyed in a single message and the data has to be split across several pages (messages).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max5NumericText getPageNumber() {
+		return pageNumber;
+	}
+
+	public void setPageNumber(Max5NumericText pageNumber) {
+		this.pageNumber = pageNumber;
+	}
+
+	public YesNoIndicator getLastPageIndicator() {
+		return lastPageIndicator;
+	}
+
+	public void setLastPageIndicator(YesNoIndicator lastPageIndicator) {
+		this.lastPageIndicator = lastPageIndicator;
 	}
 }

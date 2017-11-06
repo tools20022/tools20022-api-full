@@ -41,18 +41,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CRSStatus#CRSStatus
- * CRSStatus.CRSStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CRSStatus#mmCRSStatus
+ * CRSStatus.mmCRSStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CRSStatus#ExceptionalReportingCountry
- * CRSStatus.ExceptionalReportingCountry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CRSStatus#CRSSourceStatus
- * CRSStatus.CRSSourceStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CRSStatus#CRSReportingDate
- * CRSStatus.CRSReportingDate}</li>
+ * {@linkplain com.tools20022.repository.entity.CRSStatus#mmExceptionalReportingCountry
+ * CRSStatus.mmExceptionalReportingCountry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CRSStatus#mmCRSSourceStatus
+ * CRSStatus.mmCRSSourceStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CRSStatus#InvestmentAccountParty
- * CRSStatus.InvestmentAccountParty}</li>
+ * {@linkplain com.tools20022.repository.entity.CRSStatus#mmCRSReportingDate
+ * CRSStatus.mmCRSReportingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CRSStatus#mmInvestmentAccountParty
+ * CRSStatus.mmInvestmentAccountParty}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#CRSStatus
- * InvestmentAccountPartyRole.CRSStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmCRSStatus
+ * InvestmentAccountPartyRole.mmCRSStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -76,8 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CRSStatus {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CRSStatusCode cRSStatus;
 	/**
 	 * Common Reporting Standard (CRS) status of the investor.
 	 * <p>
@@ -103,19 +105,19 @@ public class CRSStatus {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CRSStatusCode
 	 * CRSStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CRSStatus4#Type
-	 * CRSStatus4.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.CRSStatus3Choice#Code
-	 * CRSStatus3Choice.Code}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CRSStatus
 	 * CRSStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CRSStatus4#mmType
+	 * CRSStatus4.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.CRSStatus3Choice#mmCode
+	 * CRSStatus3Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -127,19 +129,20 @@ public class CRSStatus {
 	 * definition} = "Common Reporting Standard (CRS) status of the investor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CRSStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCRSStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CRSStatus4.Type, com.tools20022.repository.choice.CRSStatus3Choice.Code);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CRSStatus4.mmType, com.tools20022.repository.choice.CRSStatus3Choice.mmCode);
+			elementContext_lazy = () -> CRSStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CRSStatus";
 			definition = "Common Reporting Standard (CRS) status of the investor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CRSStatusCode.mmObject();
 		}
 	};
+	protected CountryCode exceptionalReportingCountry;
 	/**
 	 * Reporting country for the CRS status when there is an exception at the
 	 * country level.
@@ -150,18 +153,18 @@ public class CRSStatus {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CRSStatus4#ExceptionalReportingCountry
-	 * CRSStatus4.ExceptionalReportingCountry}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CRSStatus
 	 * CRSStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CRSStatus4#mmExceptionalReportingCountry
+	 * CRSStatus4.mmExceptionalReportingCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -175,19 +178,20 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExceptionalReportingCountry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExceptionalReportingCountry = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CRSStatus4.ExceptionalReportingCountry);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CRSStatus4.mmExceptionalReportingCountry);
+			elementContext_lazy = () -> CRSStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalReportingCountry";
 			definition = "Reporting country for the CRS status when there is an exception at the country level.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CRSSourceStatusCode cRSSourceStatus;
 	/**
 	 * Source of the Common Reporting Standard (CRS) status expressed as a code.
 	 * <p>
@@ -198,17 +202,17 @@ public class CRSStatus {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CRSSourceStatusCode
 	 * CRSSourceStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CRSStatus4#Source
-	 * CRSStatus4.Source}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CRSStatus
 	 * CRSStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CRSStatus4#mmSource
+	 * CRSStatus4.mmSource}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -222,19 +226,20 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CRSSourceStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCRSSourceStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CRSStatus4.Source);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CRSStatus4.mmSource);
+			elementContext_lazy = () -> CRSStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRSSourceStatus";
 			definition = "Source of the Common Reporting Standard (CRS) status expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CRSSourceStatusCode.mmObject();
 		}
 	};
+	protected ISODate cRSReportingDate;
 	/**
 	 * Date provided by the account owner to inform the account servicer of the
 	 * date on which the holdings must be reported before the account is
@@ -246,24 +251,24 @@ public class CRSStatus {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#CRSReportingDate
-	 * AccountManagementStatusAndReason5.CRSReportingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#CRSReportingDate
-	 * InvestmentAccountOwnershipInformation15.CRSReportingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#CRSReportingDate
-	 * InvestmentAccountOwnershipInformation14.CRSReportingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CRSStatus
 	 * CRSStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmCRSReportingDate
+	 * AccountManagementStatusAndReason5.mmCRSReportingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmCRSReportingDate
+	 * InvestmentAccountOwnershipInformation15.mmCRSReportingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmCRSReportingDate
+	 * InvestmentAccountOwnershipInformation14.mmCRSReportingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -277,20 +282,21 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CRSReportingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCRSReportingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.CRSReportingDate, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.CRSReportingDate,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.CRSReportingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmCRSReportingDate, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmCRSReportingDate,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmCRSReportingDate);
+			elementContext_lazy = () -> CRSStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CRSReportingDate";
 			definition = "Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected InvestmentAccountPartyRole investmentAccountParty;
 	/**
 	 * Common Reporting Standard (CRS) status linked to an investment account
 	 * and played by a party in that context.
@@ -300,8 +306,8 @@ public class CRSStatus {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#CRSStatus
-	 * InvestmentAccountPartyRole.CRSStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmCRSStatus
+	 * InvestmentAccountPartyRole.mmCRSStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -327,34 +333,74 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentAccountParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentAccountParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmObject();
+			elementContext_lazy = () -> CRSStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountParty";
 			definition = "Common Reporting Standard (CRS) status linked to an investment account and played by a party in that context.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.CRSStatus;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmCRSStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CRSStatus";
 				definition = "Common Reporting Standard (CRS) status and the status source of the investor.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountPartyRole.CRSStatus);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CRSStatus.CRSStatus, com.tools20022.repository.entity.CRSStatus.ExceptionalReportingCountry, com.tools20022.repository.entity.CRSStatus.CRSSourceStatus,
-						com.tools20022.repository.entity.CRSStatus.CRSReportingDate, com.tools20022.repository.entity.CRSStatus.InvestmentAccountParty);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountPartyRole.mmCRSStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CRSStatus.mmCRSStatus, com.tools20022.repository.entity.CRSStatus.mmExceptionalReportingCountry,
+						com.tools20022.repository.entity.CRSStatus.mmCRSSourceStatus, com.tools20022.repository.entity.CRSStatus.mmCRSReportingDate, com.tools20022.repository.entity.CRSStatus.mmInvestmentAccountParty);
 				derivationComponent_lazy = () -> Arrays.asList(CRSStatus4.mmObject(), CRSStatus3Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CRSStatusCode getCRSStatus() {
+		return cRSStatus;
+	}
+
+	public void setCRSStatus(CRSStatusCode cRSStatus) {
+		this.cRSStatus = cRSStatus;
+	}
+
+	public CountryCode getExceptionalReportingCountry() {
+		return exceptionalReportingCountry;
+	}
+
+	public void setExceptionalReportingCountry(CountryCode exceptionalReportingCountry) {
+		this.exceptionalReportingCountry = exceptionalReportingCountry;
+	}
+
+	public CRSSourceStatusCode getCRSSourceStatus() {
+		return cRSSourceStatus;
+	}
+
+	public void setCRSSourceStatus(CRSSourceStatusCode cRSSourceStatus) {
+		this.cRSSourceStatus = cRSSourceStatus;
+	}
+
+	public ISODate getCRSReportingDate() {
+		return cRSReportingDate;
+	}
+
+	public void setCRSReportingDate(ISODate cRSReportingDate) {
+		this.cRSReportingDate = cRSReportingDate;
+	}
+
+	public InvestmentAccountPartyRole getInvestmentAccountParty() {
+		return investmentAccountParty;
+	}
+
+	public void setInvestmentAccountParty(com.tools20022.repository.entity.InvestmentAccountPartyRole investmentAccountParty) {
+		this.investmentAccountParty = investmentAccountParty;
 	}
 }

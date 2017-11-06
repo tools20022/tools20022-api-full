@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * ConversionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ConversionType1Code#Final
- * ConversionType1Code.Final}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConversionType1Code#Interim
- * ConversionType1Code.Interim}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConversionType1Code#mmFinal
+ * ConversionType1Code.mmFinal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ConversionType1Code#mmInterim
+ * ConversionType1Code.mmInterim}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class ConversionType1Code extends ConversionTypeCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
@@ -103,7 +104,7 @@ public class ConversionType1Code extends ConversionTypeCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
@@ -114,12 +115,12 @@ public class ConversionType1Code extends ConversionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FINL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConversionType1Code";
 				definition = "Specifies the type of conversion.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConversionType1Code.Final, com.tools20022.repository.codeset.ConversionType1Code.Interim);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConversionType1Code.mmFinal, com.tools20022.repository.codeset.ConversionType1Code.mmInterim);
 				trace_lazy = () -> ConversionTypeCode.mmObject();
 			}
 		});

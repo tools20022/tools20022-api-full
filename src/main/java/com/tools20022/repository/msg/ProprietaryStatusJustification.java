@@ -38,11 +38,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification#ProprietaryStatusReason
- * ProprietaryStatusJustification.ProprietaryStatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification#mmProprietaryStatusReason
+ * ProprietaryStatusJustification.mmProprietaryStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification#Reason
- * ProprietaryStatusJustification.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification#mmReason
+ * ProprietaryStatusJustification.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class ProprietaryStatusJustification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText proprietaryStatusReason;
 	/**
 	 * Defines the reason why the Target2 SSP system has rejected the
 	 * transaction.
@@ -81,8 +82,8 @@ public class ProprietaryStatusJustification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class ProprietaryStatusJustification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> ProprietaryStatusJustification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "PrtryStsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatusReason";
 			definition = "Defines the reason why the Target2 SSP system has rejected the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max256Text reason;
 	/**
 	 * Provides detailed information about the reason why the Target2 SSP system
 	 * has rejected the transaction.
@@ -130,8 +132,8 @@ public class ProprietaryStatusJustification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,17 +154,17 @@ public class ProprietaryStatusJustification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> ProprietaryStatusJustification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Provides detailed information about the reason why the Target2 SSP system has rejected the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -170,9 +172,9 @@ public class ProprietaryStatusJustification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryStatusJustification.ProprietaryStatusReason, com.tools20022.repository.msg.ProprietaryStatusJustification.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryStatusJustification.mmProprietaryStatusReason, com.tools20022.repository.msg.ProprietaryStatusJustification.mmReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -186,5 +188,21 @@ public class ProprietaryStatusJustification {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getProprietaryStatusReason() {
+		return proprietaryStatusReason;
+	}
+
+	public void setProprietaryStatusReason(Max4AlphaNumericText proprietaryStatusReason) {
+		this.proprietaryStatusReason = proprietaryStatusReason;
+	}
+
+	public Max256Text getReason() {
+		return reason;
+	}
+
+	public void setReason(Max256Text reason) {
+		this.reason = reason;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.AggregationTransaction1;
 import com.tools20022.repository.msg.AggregationTransaction2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Payment which contains a series of other payments which have been grouped
@@ -39,8 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#Groups
- * BulkPayment.Groups}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
+ * BulkPayment.mmGroups}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IndividualPayment#BulkPayment
- * IndividualPayment.BulkPayment}</li>
+ * {@linkplain com.tools20022.repository.entity.IndividualPayment#mmBulkPayment
+ * IndividualPayment.mmBulkPayment}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,89 +58,89 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2#BulkCashSettlementDetails
- * RedemptionBulkOrder2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2#mmBulkCashSettlementDetails
+ * RedemptionBulkOrder2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#BulkCashSettlementDetails
- * RedemptionBulkOrder3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#mmBulkCashSettlementDetails
+ * RedemptionBulkOrder3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#BulkCashSettlementDetails
- * RedemptionBulkExecution2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmBulkCashSettlementDetails
+ * RedemptionBulkExecution2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#BulkCashSettlementDetails
- * RedemptionBulkExecution3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#mmBulkCashSettlementDetails
+ * RedemptionBulkExecution3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#BulkCashSettlementDetails
- * RedemptionBulkOrder4.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#mmBulkCashSettlementDetails
+ * RedemptionBulkOrder4.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2#BulkCashSettlementDetails
- * RedemptionMultipleOrder2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2#mmBulkCashSettlementDetails
+ * RedemptionMultipleOrder2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#BulkCashSettlementDetails
- * RedemptionMultipleOrder3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#mmBulkCashSettlementDetails
+ * RedemptionMultipleOrder3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution2#BulkCashSettlementDetails
- * RedemptionMultipleExecution2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution2#mmBulkCashSettlementDetails
+ * RedemptionMultipleExecution2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#BulkCashSettlementDetails
- * RedemptionMultipleExecution3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#mmBulkCashSettlementDetails
+ * RedemptionMultipleExecution3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#BulkCashSettlementDetails
- * RedemptionMultipleOrder4.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#mmBulkCashSettlementDetails
+ * RedemptionMultipleOrder4.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder2#BulkCashSettlementDetails
- * SubscriptionBulkOrder2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder2#mmBulkCashSettlementDetails
+ * SubscriptionBulkOrder2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#BulkCashSettlementDetails
- * SubscriptionBulkOrder3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#mmBulkCashSettlementDetails
+ * SubscriptionBulkOrder3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2#BulkCashSettlementDetails
- * SubscriptionBulkExecution2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2#mmBulkCashSettlementDetails
+ * SubscriptionBulkExecution2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#BulkCashSettlementDetails
- * SubscriptionBulkExecution3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#mmBulkCashSettlementDetails
+ * SubscriptionBulkExecution3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#BulkCashSettlementDetails
- * SubscriptionBulkOrder4.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#mmBulkCashSettlementDetails
+ * SubscriptionBulkOrder4.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2#BulkCashSettlementDetails
- * SubscriptionMultipleOrder2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2#mmBulkCashSettlementDetails
+ * SubscriptionMultipleOrder2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#BulkCashSettlementDetails
- * SubscriptionMultipleOrder3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#mmBulkCashSettlementDetails
+ * SubscriptionMultipleOrder3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution2#BulkCashSettlementDetails
- * SubscriptionMultipleExecution2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution2#mmBulkCashSettlementDetails
+ * SubscriptionMultipleExecution2.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#BulkCashSettlementDetails
- * SubscriptionMultipleExecution3.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#mmBulkCashSettlementDetails
+ * SubscriptionMultipleExecution3.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#BulkCashSettlementDetails
- * SubscriptionMultipleOrder4.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#mmBulkCashSettlementDetails
+ * SubscriptionMultipleOrder4.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#BulkCashSettlementDetails
- * SubscriptionBulkOrder5.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#mmBulkCashSettlementDetails
+ * SubscriptionBulkOrder5.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#BulkCashSettlementDetails
- * RedemptionBulkExecution5.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#mmBulkCashSettlementDetails
+ * RedemptionBulkExecution5.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#BulkCashSettlementDetails
- * RedemptionMultipleExecution5.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#mmBulkCashSettlementDetails
+ * RedemptionMultipleExecution5.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#BulkCashSettlementDetails
- * RedemptionMultipleOrder6.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#mmBulkCashSettlementDetails
+ * RedemptionMultipleOrder6.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#BulkCashSettlementDetails
- * SubscriptionMultipleOrder6.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#mmBulkCashSettlementDetails
+ * SubscriptionMultipleOrder6.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4#BulkCashSettlementDetails
- * SubscriptionBulkExecution4.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4#mmBulkCashSettlementDetails
+ * SubscriptionBulkExecution4.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#BulkCashSettlementDetails
- * RedemptionBulkOrder6.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#mmBulkCashSettlementDetails
+ * RedemptionBulkOrder6.mmBulkCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5#BulkCashSettlementDetails
- * SubscriptionMultipleExecution5.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5#mmBulkCashSettlementDetails
+ * SubscriptionMultipleExecution5.mmBulkCashSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -157,8 +158,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -174,6 +175,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BulkPayment extends Payment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.IndividualPayment> groups;
 	/**
 	 * Indicates that a bulk payment groups several individual payments of the
 	 * same type (credit transfer or direct debit).
@@ -183,8 +185,8 @@ public class BulkPayment extends Payment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.IndividualPayment#BulkPayment
-	 * IndividualPayment.BulkPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.IndividualPayment#mmBulkPayment
+	 * IndividualPayment.mmBulkPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -209,7 +211,7 @@ public class BulkPayment extends Payment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Groups = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmGroups = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> BulkPayment.mmObject();
 			isDerived = false;
@@ -217,39 +219,47 @@ public class BulkPayment extends Payment {
 			name = "Groups";
 			definition = "Indicates that a bulk payment groups several individual payments of the same type (credit transfer or direct debit).";
 			minOccurs = 0;
-			type_lazy = () -> IndividualPayment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.IndividualPayment.BulkPayment;
+			opposite_lazy = () -> com.tools20022.repository.entity.IndividualPayment.mmBulkPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.IndividualPayment.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BulkPayment";
 				definition = "Payment which contains a series of other payments which have been grouped under specific criteria. A bulk payment can only contain individual payments of the same type (credit transfer or direct debit).";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndividualPayment.BulkPayment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.BulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkOrder3.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionBulkExecution2.BulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkExecution3.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionBulkOrder4.BulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder2.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionMultipleOrder3.BulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleExecution2.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionMultipleExecution3.BulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder4.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder2.BulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkOrder3.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkExecution2.BulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkExecution3.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder4.BulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder2.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder3.BulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution2.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleExecution3.BulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder4.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder5.BulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkExecution5.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionMultipleExecution5.BulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder6.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder6.BulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkExecution4.BulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionBulkOrder6.BulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution5.BulkCashSettlementDetails);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndividualPayment.mmBulkPayment);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkOrder3.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.RedemptionBulkExecution2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkExecution3.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.RedemptionBulkOrder4.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder2.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleExecution2.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.RedemptionMultipleExecution3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.SubscriptionBulkOrder2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.SubscriptionBulkExecution2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.SubscriptionBulkOrder4.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.SubscriptionBulkOrder5.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkExecution5.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.RedemptionMultipleExecution5.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder6.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkExecution4.mmBulkCashSettlementDetails,
+						com.tools20022.repository.msg.RedemptionBulkOrder6.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmBulkCashSettlementDetails);
 				superType_lazy = () -> Payment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BulkPayment.Groups);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BulkPayment.mmGroups);
 				derivationComponent_lazy = () -> Arrays.asList(AggregationTransaction1.mmObject(), AggregationTransaction2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<IndividualPayment> getGroups() {
+		return groups;
+	}
+
+	public void setGroups(List<com.tools20022.repository.entity.IndividualPayment> groups) {
+		this.groups = groups;
 	}
 }

@@ -29,22 +29,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#Declined
- * ResponseCode.Declined}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#Approved
- * ResponseCode.Approved}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#mmDeclined
+ * ResponseCode.mmDeclined}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#mmApproved
+ * ResponseCode.mmApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseCode#PartialApproved
- * ResponseCode.PartialApproved}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseCode#mmPartialApproved
+ * ResponseCode.mmPartialApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseCode#TechnicalError
- * ResponseCode.TechnicalError}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#FurtherAction
- * ResponseCode.FurtherAction}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#NotProcessed
- * ResponseCode.NotProcessed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#Processed
- * ResponseCode.Processed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseCode#mmTechnicalError
+ * ResponseCode.mmTechnicalError}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseCode#mmFurtherAction
+ * ResponseCode.mmFurtherAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseCode#mmNotProcessed
+ * ResponseCode.mmNotProcessed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#mmProcessed
+ * ResponseCode.mmProcessed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -104,7 +106,7 @@ public class ResponseCode {
 	 * definition} = "Service is declined."</li>
 	 * </ul>
 	 */
-	public static final MMCode Declined = new MMCode() {
+	public static final MMCode mmDeclined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Declined";
@@ -133,7 +135,7 @@ public class ResponseCode {
 	 * definition} = "Service has been successfuly provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode Approved = new MMCode() {
+	public static final MMCode mmApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Approved";
@@ -162,7 +164,7 @@ public class ResponseCode {
 	 * definition} = "Service has been partialy provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialApproved = new MMCode() {
+	public static final MMCode mmPartialApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartialApproved";
@@ -194,7 +196,7 @@ public class ResponseCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TechnicalError = new MMCode() {
+	public static final MMCode mmTechnicalError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TechnicalError";
@@ -226,7 +228,7 @@ public class ResponseCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FurtherAction = new MMCode() {
+	public static final MMCode mmFurtherAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherAction";
@@ -255,7 +257,7 @@ public class ResponseCode {
 	 * definition} = "Advice message could not be processed."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotProcessed = new MMCode() {
+	public static final MMCode mmNotProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotProcessed";
@@ -284,7 +286,7 @@ public class ResponseCode {
 	 * definition} = "Advice message is processed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Processed = new MMCode() {
+	public static final MMCode mmProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processed";
@@ -297,14 +299,14 @@ public class ResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DECL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResponseCode";
 				definition = "Response code of a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseCode.Declined, com.tools20022.repository.codeset.ResponseCode.Approved, com.tools20022.repository.codeset.ResponseCode.PartialApproved,
-						com.tools20022.repository.codeset.ResponseCode.TechnicalError, com.tools20022.repository.codeset.ResponseCode.FurtherAction, com.tools20022.repository.codeset.ResponseCode.NotProcessed,
-						com.tools20022.repository.codeset.ResponseCode.Processed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseCode.mmDeclined, com.tools20022.repository.codeset.ResponseCode.mmApproved, com.tools20022.repository.codeset.ResponseCode.mmPartialApproved,
+						com.tools20022.repository.codeset.ResponseCode.mmTechnicalError, com.tools20022.repository.codeset.ResponseCode.mmFurtherAction, com.tools20022.repository.codeset.ResponseCode.mmNotProcessed,
+						com.tools20022.repository.codeset.ResponseCode.mmProcessed);
 				derivation_lazy = () -> Arrays.asList(Response1Code.mmObject(), Response2Code.mmObject(), Response3Code.mmObject(), Response4Code.mmObject());
 			}
 		});

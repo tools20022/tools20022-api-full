@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.repository.entity.AmountRange;
+import com.tools20022.repository.msg.CurrencyAndAmountRange;
+import com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountRangeChoice#ImpliedCurrencyAndAmountRange
- * AmountRangeChoice.ImpliedCurrencyAndAmountRange}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountRangeChoice#mmImpliedCurrencyAndAmountRange
+ * AmountRangeChoice.mmImpliedCurrencyAndAmountRange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountRangeChoice#CurrencyAndAmountRange
- * AmountRangeChoice.CurrencyAndAmountRange}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountRangeChoice#mmCurrencyAndAmountRange
+ * AmountRangeChoice.mmCurrencyAndAmountRange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountRangeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmountRange impliedCurrencyAndAmountRange;
 	/**
 	 * Expresses an amount or an amount range with an explicit debit/credit
 	 * indicator and where the currency is implied.
@@ -95,21 +98,22 @@ public class AmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AmountRangeChoice.mmObject();
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
+			componentContext_lazy = () -> AmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ImpldCcyAndAmtRg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpliedCurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
 		}
 	};
+	protected CurrencyAndAmountRange currencyAndAmountRange;
 	/**
 	 * Expresses an amount or an amount range with the currency and where the
 	 * credit/debit indicator is explicit.
@@ -143,33 +147,49 @@ public class AmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AmountRangeChoice.mmObject();
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
+			componentContext_lazy = () -> AmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyAndAmtRg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with the currency and where the credit/debit indicator is explicit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyAndAmountRange.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CurrencyAndAmountRange.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountRangeChoice.ImpliedCurrencyAndAmountRange, com.tools20022.repository.choice.AmountRangeChoice.CurrencyAndAmountRange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountRangeChoice.mmImpliedCurrencyAndAmountRange, com.tools20022.repository.choice.AmountRangeChoice.mmCurrencyAndAmountRange);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountRangeChoice";
 				definition = "Search for an amount with or without the currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmountRange getImpliedCurrencyAndAmountRange() {
+		return impliedCurrencyAndAmountRange;
+	}
+
+	public void setImpliedCurrencyAndAmountRange(ImpliedCurrencyAndAmountRange impliedCurrencyAndAmountRange) {
+		this.impliedCurrencyAndAmountRange = impliedCurrencyAndAmountRange;
+	}
+
+	public CurrencyAndAmountRange getCurrencyAndAmountRange() {
+		return currencyAndAmountRange;
+	}
+
+	public void setCurrencyAndAmountRange(CurrencyAndAmountRange currencyAndAmountRange) {
+		this.currencyAndAmountRange = currencyAndAmountRange;
 	}
 }

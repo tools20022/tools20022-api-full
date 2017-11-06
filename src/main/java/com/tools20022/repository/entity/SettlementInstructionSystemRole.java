@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.CashSettlementInstructionPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identification of a specific system or set of rules and/or processes to be
@@ -38,8 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#System
- * SettlementInstructionSystemRole.System}</li>
+ * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#mmSystem
+ * SettlementInstructionSystemRole.mmSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystem#SystemRole
- * CashClearingSystem.SystemRole}</li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmSystemRole
+ * CashClearingSystem.mmSystemRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,14 +57,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstruction4#ClearingSystem
- * SettlementInstruction4.ClearingSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstruction4#mmClearingSystem
+ * SettlementInstruction4.mmClearingSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstruction1#ClearingSystem
- * SettlementInstruction1.ClearingSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstruction1#mmClearingSystem
+ * SettlementInstruction1.mmClearingSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInstruction2#ClearingSystem
- * SettlementInstruction2.ClearingSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstruction2#mmClearingSystem
+ * SettlementInstruction2.mmClearingSystem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementInstructionSystemRole extends CashSettlementInstructionPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.CashClearingSystem> system;
 	/**
 	 * Specifies the system which plays a role in the settlement of a payment.
 	 * <p>
@@ -98,8 +100,8 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#SystemRole
-	 * CashClearingSystem.SystemRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmSystemRole
+	 * CashClearingSystem.mmSystemRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -107,373 +109,373 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashClearingSystem
 	 * CashClearingSystem}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#CashClearingSystem
-	 * SettlementDetails50.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#CashClearingSystem
-	 * SettlementDetails51.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#CashClearingSystem
-	 * SettlementDetails9.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#CashClearingSystem
-	 * SettlementDetails17.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#CashClearingSystem
-	 * SettlementDetails30.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#CashClearingSystem
-	 * SettlementDetails32.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#CashClearingSystem
-	 * SettlementDetails60.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#CashClearingSystem
-	 * SettlementDetails64.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#CashClearingSystem
-	 * SettlementDetails3.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#CashClearingSystem
-	 * SettlementDetails16.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#CashClearingSystem
-	 * SettlementDetails31.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#CashClearingSystem
-	 * SettlementDetails40.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#CashClearingSystem
-	 * SettlementDetails62.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#CashClearingSystem
-	 * SettlementDetails63.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#CashClearingSystem
-	 * SettlementDetails6.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#CashClearingSystem
-	 * SettlementDetails20.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#CashClearingSystem
-	 * SettlementDetails24.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#CashClearingSystem
-	 * SettlementDetails33.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#CashClearingSystem
-	 * SettlementDetails45.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#CashClearingSystem
-	 * SettlementDetails54.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#CashClearingSystem
-	 * SettlementDetails1.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#CashClearingSystem
-	 * SettlementDetails19.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#CashClearingSystem
-	 * SettlementDetails22.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#CashClearingSystem
-	 * SettlementDetails35.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#CashClearingSystem
-	 * SettlementDetails42.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#CashClearingSystem
-	 * SettlementDetails52.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#CashClearingSystem
-	 * SettlementDetails8.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#CashClearingSystem
-	 * SettlementDetails11.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#CashClearingSystem
-	 * SettlementDetails23.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#CashClearingSystem
-	 * SettlementDetails37.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#CashClearingSystem
-	 * SettlementDetails44.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#CashClearingSystem
-	 * SettlementDetails53.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#CashClearingSystem
-	 * SettlementDetails7.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#CashClearingSystem
-	 * SettlementDetails12.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#CashClearingSystem
-	 * SettlementDetails28.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#CashClearingSystem
-	 * SettlementDetails38.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#CashClearingSystem
-	 * SettlementDetails47.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#CashClearingSystem
-	 * SettlementDetails56.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#CashClearingSystem
-	 * SettlementDetails2.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#CashClearingSystem
-	 * SettlementDetails13.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#CashClearingSystem
-	 * SettlementDetails27.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#CashClearingSystem
-	 * SettlementDetails39.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#CashClearingSystem
-	 * SettlementDetails48.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#CashClearingSystem
-	 * SettlementDetails57.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#CashClearingSystem
-	 * SettlementDetails43.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails10#CashClearingSystem
-	 * SettlementDetails10.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails29#CashClearingSystem
-	 * SettlementDetails29.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#CashClearingSystem
-	 * SettlementDetails5.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails25#CashClearingSystem
-	 * SettlementDetails25.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#CashClearingSystem
-	 * SettlementDetails26.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#CashClearingSystem
-	 * SettlementDetails65.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails14#CashClearingSystem
-	 * SettlementDetails14.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails41#CashClearingSystem
-	 * SettlementDetails41.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails61#CashClearingSystem
-	 * SettlementDetails61.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails59#CashClearingSystem
-	 * SettlementDetails59.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#CashClearingSystem
-	 * SettlementDetails15.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails34#CashClearingSystem
-	 * SettlementDetails34.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails49#CashClearingSystem
-	 * SettlementDetails49.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails58#CashClearingSystem
-	 * SettlementDetails58.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#CashClearingSystem
-	 * SettlementDetails36.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#CashClearingSystem
-	 * SettlementDetails66.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#CashClearingSystem
-	 * SettlementDetails67.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#CashClearingSystem
-	 * SettlementDetails70.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#CashClearingSystem
-	 * SettlementDetails68.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#CashClearingSystem
-	 * SettlementDetails69.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#CashClearingSystem
-	 * SettlementDetails71.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#CashClearingSystem
-	 * SettlementDetails72.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#CashClearingSystem
-	 * SettlementDetails75.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails73#CashClearingSystem
-	 * SettlementDetails73.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#CashClearingSystem
-	 * SettlementDetails74.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#CashClearingSystem
-	 * SettlementDetails81.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#CashClearingSystem
-	 * SettlementDetails76.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#CashClearingSystem
-	 * SettlementDetails80.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#CashClearingSystem
-	 * SettlementDetails78.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#CashClearingSystem
-	 * SettlementDetails77.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails79#CashClearingSystem
-	 * SettlementDetails79.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#CashClearingSystem
-	 * SettlementDetails87.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#CashClearingSystem
-	 * SettlementDetails83.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#CashClearingSystem
-	 * SettlementDetails86.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#CashClearingSystem
-	 * SettlementDetails85.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#CashClearingSystem
-	 * SettlementDetails93.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#CashClearingSystem
-	 * SettlementDetails90.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#CashClearingSystem
-	 * SettlementDetails96.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#CashClearingSystem
-	 * SettlementDetails97.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails99#CashClearingSystem
-	 * SettlementDetails99.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#CashClearingSystem
-	 * SettlementDetails94.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#CashClearingSystem
-	 * SettlementDetails95.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#CashClearingSystem
-	 * SettlementDetails91.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#CashClearingSystem
-	 * SettlementDetails92.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails98#CashClearingSystem
-	 * SettlementDetails98.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#CashClearingSystem
-	 * SettlementDetails101.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#CashClearingSystem
-	 * SettlementDetails105.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#CashClearingSystem
-	 * SettlementDetails106.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#CashClearingSystem
-	 * SettlementDetails104.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#CashClearingSystem
-	 * SettlementDetails111.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#CashClearingSystem
-	 * SettlementDetails112.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#CashClearingSystem
-	 * SettlementDetails110.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails108#CashClearingSystem
-	 * SettlementDetails108.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails107#CashClearingSystem
-	 * SettlementDetails107.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#CashClearingSystem
-	 * SettlementDetails115.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#CashClearingSystem
-	 * SettlementDetails117.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#CashClearingSystem
-	 * SettlementDetails116.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#CashClearingSystem
-	 * SettlementDetails113.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#CashClearingSystem
-	 * SettlementDetails128.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#CashClearingSystem
-	 * SettlementDetails120.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#CashClearingSystem
-	 * SettlementDetails119.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails125#CashClearingSystem
-	 * SettlementDetails125.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#CashClearingSystem
-	 * SettlementDetails126.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#CashClearingSystem
-	 * SettlementDetails122.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#CashClearingSystem
-	 * SettlementDetails127.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#CashClearingSystem
-	 * SettlementDetails121.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#CashClearingSystem
-	 * SettlementDetails134.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#CashClearingSystem
-	 * SettlementDetails137.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#CashClearingSystem
-	 * SettlementDetails132.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#CashClearingSystem
-	 * SettlementDetails138.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#CashClearingSystem
-	 * SettlementDetails130.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails131#CashClearingSystem
-	 * SettlementDetails131.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#CashClearingSystem
-	 * SettlementDetails133.CashClearingSystem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#CashClearingSystem
-	 * SettlementDetails139.CashClearingSystem}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole
 	 * SettlementInstructionSystemRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#mmCashClearingSystem
+	 * SettlementDetails50.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#mmCashClearingSystem
+	 * SettlementDetails51.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#mmCashClearingSystem
+	 * SettlementDetails9.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#mmCashClearingSystem
+	 * SettlementDetails17.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#mmCashClearingSystem
+	 * SettlementDetails30.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#mmCashClearingSystem
+	 * SettlementDetails32.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#mmCashClearingSystem
+	 * SettlementDetails60.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#mmCashClearingSystem
+	 * SettlementDetails64.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#mmCashClearingSystem
+	 * SettlementDetails3.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#mmCashClearingSystem
+	 * SettlementDetails16.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#mmCashClearingSystem
+	 * SettlementDetails31.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#mmCashClearingSystem
+	 * SettlementDetails40.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#mmCashClearingSystem
+	 * SettlementDetails62.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#mmCashClearingSystem
+	 * SettlementDetails63.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#mmCashClearingSystem
+	 * SettlementDetails6.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#mmCashClearingSystem
+	 * SettlementDetails20.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#mmCashClearingSystem
+	 * SettlementDetails24.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#mmCashClearingSystem
+	 * SettlementDetails33.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#mmCashClearingSystem
+	 * SettlementDetails45.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#mmCashClearingSystem
+	 * SettlementDetails54.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmCashClearingSystem
+	 * SettlementDetails1.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmCashClearingSystem
+	 * SettlementDetails19.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmCashClearingSystem
+	 * SettlementDetails22.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmCashClearingSystem
+	 * SettlementDetails35.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmCashClearingSystem
+	 * SettlementDetails42.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmCashClearingSystem
+	 * SettlementDetails52.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#mmCashClearingSystem
+	 * SettlementDetails8.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#mmCashClearingSystem
+	 * SettlementDetails11.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#mmCashClearingSystem
+	 * SettlementDetails23.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#mmCashClearingSystem
+	 * SettlementDetails37.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#mmCashClearingSystem
+	 * SettlementDetails44.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#mmCashClearingSystem
+	 * SettlementDetails53.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#mmCashClearingSystem
+	 * SettlementDetails7.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#mmCashClearingSystem
+	 * SettlementDetails12.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#mmCashClearingSystem
+	 * SettlementDetails28.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#mmCashClearingSystem
+	 * SettlementDetails38.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#mmCashClearingSystem
+	 * SettlementDetails47.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#mmCashClearingSystem
+	 * SettlementDetails56.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#mmCashClearingSystem
+	 * SettlementDetails2.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#mmCashClearingSystem
+	 * SettlementDetails13.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#mmCashClearingSystem
+	 * SettlementDetails27.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#mmCashClearingSystem
+	 * SettlementDetails39.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#mmCashClearingSystem
+	 * SettlementDetails48.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#mmCashClearingSystem
+	 * SettlementDetails57.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmCashClearingSystem
+	 * SettlementDetails43.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails10#mmCashClearingSystem
+	 * SettlementDetails10.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails29#mmCashClearingSystem
+	 * SettlementDetails29.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#mmCashClearingSystem
+	 * SettlementDetails5.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails25#mmCashClearingSystem
+	 * SettlementDetails25.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#mmCashClearingSystem
+	 * SettlementDetails26.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#mmCashClearingSystem
+	 * SettlementDetails65.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails14#mmCashClearingSystem
+	 * SettlementDetails14.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails41#mmCashClearingSystem
+	 * SettlementDetails41.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails61#mmCashClearingSystem
+	 * SettlementDetails61.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails59#mmCashClearingSystem
+	 * SettlementDetails59.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#mmCashClearingSystem
+	 * SettlementDetails15.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails34#mmCashClearingSystem
+	 * SettlementDetails34.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails49#mmCashClearingSystem
+	 * SettlementDetails49.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails58#mmCashClearingSystem
+	 * SettlementDetails58.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#mmCashClearingSystem
+	 * SettlementDetails36.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#mmCashClearingSystem
+	 * SettlementDetails66.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmCashClearingSystem
+	 * SettlementDetails67.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#mmCashClearingSystem
+	 * SettlementDetails70.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#mmCashClearingSystem
+	 * SettlementDetails68.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#mmCashClearingSystem
+	 * SettlementDetails69.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#mmCashClearingSystem
+	 * SettlementDetails71.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#mmCashClearingSystem
+	 * SettlementDetails72.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#mmCashClearingSystem
+	 * SettlementDetails75.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails73#mmCashClearingSystem
+	 * SettlementDetails73.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#mmCashClearingSystem
+	 * SettlementDetails74.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmCashClearingSystem
+	 * SettlementDetails81.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#mmCashClearingSystem
+	 * SettlementDetails76.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#mmCashClearingSystem
+	 * SettlementDetails80.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#mmCashClearingSystem
+	 * SettlementDetails78.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#mmCashClearingSystem
+	 * SettlementDetails77.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails79#mmCashClearingSystem
+	 * SettlementDetails79.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#mmCashClearingSystem
+	 * SettlementDetails87.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#mmCashClearingSystem
+	 * SettlementDetails83.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#mmCashClearingSystem
+	 * SettlementDetails86.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#mmCashClearingSystem
+	 * SettlementDetails85.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmCashClearingSystem
+	 * SettlementDetails93.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#mmCashClearingSystem
+	 * SettlementDetails90.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#mmCashClearingSystem
+	 * SettlementDetails96.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#mmCashClearingSystem
+	 * SettlementDetails97.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails99#mmCashClearingSystem
+	 * SettlementDetails99.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#mmCashClearingSystem
+	 * SettlementDetails94.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#mmCashClearingSystem
+	 * SettlementDetails95.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#mmCashClearingSystem
+	 * SettlementDetails91.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#mmCashClearingSystem
+	 * SettlementDetails92.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails98#mmCashClearingSystem
+	 * SettlementDetails98.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmCashClearingSystem
+	 * SettlementDetails101.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#mmCashClearingSystem
+	 * SettlementDetails105.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#mmCashClearingSystem
+	 * SettlementDetails106.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#mmCashClearingSystem
+	 * SettlementDetails104.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmCashClearingSystem
+	 * SettlementDetails111.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmCashClearingSystem
+	 * SettlementDetails112.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#mmCashClearingSystem
+	 * SettlementDetails110.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails108#mmCashClearingSystem
+	 * SettlementDetails108.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails107#mmCashClearingSystem
+	 * SettlementDetails107.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#mmCashClearingSystem
+	 * SettlementDetails115.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#mmCashClearingSystem
+	 * SettlementDetails117.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#mmCashClearingSystem
+	 * SettlementDetails116.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#mmCashClearingSystem
+	 * SettlementDetails113.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmCashClearingSystem
+	 * SettlementDetails128.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmCashClearingSystem
+	 * SettlementDetails120.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmCashClearingSystem
+	 * SettlementDetails119.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails125#mmCashClearingSystem
+	 * SettlementDetails125.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#mmCashClearingSystem
+	 * SettlementDetails126.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#mmCashClearingSystem
+	 * SettlementDetails122.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#mmCashClearingSystem
+	 * SettlementDetails127.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#mmCashClearingSystem
+	 * SettlementDetails121.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#mmCashClearingSystem
+	 * SettlementDetails134.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmCashClearingSystem
+	 * SettlementDetails137.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmCashClearingSystem
+	 * SettlementDetails132.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmCashClearingSystem
+	 * SettlementDetails138.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#mmCashClearingSystem
+	 * SettlementDetails130.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails131#mmCashClearingSystem
+	 * SettlementDetails131.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#mmCashClearingSystem
+	 * SettlementDetails133.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmCashClearingSystem
+	 * SettlementDetails139.mmCashClearingSystem}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -487,74 +489,82 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd System = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails51.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails9.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails17.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails30.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails32.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails60.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails64.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails3.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails16.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails31.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails40.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails62.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails63.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails6.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails20.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails24.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails33.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails45.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails54.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails1.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails19.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails22.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails35.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails42.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails52.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails8.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails11.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails23.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails37.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails44.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails53.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails7.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails12.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails28.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails38.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails47.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails56.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails2.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails13.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails27.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails39.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails48.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails57.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails43.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails10.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails29.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails5.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails25.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails26.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails65.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails14.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails41.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails61.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails59.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails15.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails34.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails49.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails58.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails36.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails66.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails67.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails70.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails68.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails69.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails71.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails72.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails75.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails73.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails74.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails81.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails76.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails80.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails78.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails77.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails79.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails87.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails83.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails86.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails85.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails93.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails90.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails96.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails97.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails99.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails94.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails95.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails91.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails92.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails98.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails101.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails105.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails106.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails104.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails111.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails112.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails110.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails108.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails107.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails115.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails117.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails116.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails113.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails128.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails120.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails119.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails125.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails126.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails122.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails127.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails121.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails134.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails137.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails132.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails138.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails130.CashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails131.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails133.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails139.CashClearingSystem);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails51.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails9.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails17.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails30.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails32.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails60.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails64.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails3.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails16.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails31.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails40.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails62.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails63.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails6.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails20.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails24.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails33.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails45.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails54.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails1.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails19.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails22.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails35.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails42.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails52.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails8.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails11.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails23.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails37.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails44.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails53.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails7.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails12.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails28.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails38.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails47.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails56.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails2.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails13.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails27.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails39.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails48.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails57.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails43.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails10.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails29.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails5.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails25.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails26.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails65.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails14.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails41.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails61.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails59.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails15.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails34.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails49.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails58.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails36.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails66.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails67.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails70.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails68.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails69.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails71.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails72.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails75.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails73.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails74.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails81.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails76.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails80.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails78.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails77.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails79.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails87.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails83.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails86.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails85.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails93.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails90.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails96.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails97.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails99.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails94.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails95.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails91.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails92.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails98.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails101.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails105.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails106.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails104.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails111.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails112.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails110.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails108.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails107.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails115.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails117.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails116.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails113.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails128.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails120.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails119.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails125.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails126.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails122.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails127.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails121.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails134.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails137.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails132.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails138.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails130.mmCashClearingSystem,
+					com.tools20022.repository.msg.SettlementDetails131.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails133.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails139.mmCashClearingSystem);
 			elementContext_lazy = () -> SettlementInstructionSystemRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "Specifies the system which plays a role in the settlement of a payment.";
 			minOccurs = 0;
-			type_lazy = () -> CashClearingSystem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.SystemRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmSystemRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionSystemRole";
 				definition = "Identification of a specific system or set of rules and/or processes to be applied at the settlement place.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.SystemRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstruction4.ClearingSystem, com.tools20022.repository.msg.SettlementInstruction1.ClearingSystem,
-						com.tools20022.repository.msg.SettlementInstruction2.ClearingSystem);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.mmSystemRole);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstruction4.mmClearingSystem, com.tools20022.repository.msg.SettlementInstruction1.mmClearingSystem,
+						com.tools20022.repository.msg.SettlementInstruction2.mmClearingSystem);
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementInstructionSystemRole.System);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementInstructionSystemRole.mmSystem);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CashClearingSystem> getSystem() {
+		return system;
+	}
+
+	public void setSystem(List<com.tools20022.repository.entity.CashClearingSystem> system) {
+		this.system = system;
 	}
 }

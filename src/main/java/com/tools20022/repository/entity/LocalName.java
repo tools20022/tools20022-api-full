@@ -39,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#FullName
- * LocalName.FullName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#RelatedSecurity
- * LocalName.RelatedSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#ShortName
- * LocalName.ShortName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#Language
- * LocalName.Language}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+ * LocalName.mmFullName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmRelatedSecurity
+ * LocalName.mmRelatedSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmShortName
+ * LocalName.mmShortName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmLanguage
+ * LocalName.mmLanguage}</li>
  * </ul>
  * </li>
  * <li>
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Name
- * SecuritiesIdentification.Name}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmName
+ * SecuritiesIdentification.mmName}</li>
  * </ul>
  * </li>
  * <li>
@@ -69,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LocalName {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text fullName;
 	/**
 	 * Name of the security.
 	 * <p>
@@ -93,137 +94,178 @@ public class LocalName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument16#Name
-	 * FinancialInstrument16.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#Name
-	 * SecurityIdentification1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument17#Name
-	 * FinancialInstrument17.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument6#Name
-	 * FinancialInstrument6.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument10#Name
-	 * FinancialInstrument10.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument29#Name
-	 * FinancialInstrument29.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument7#Name
-	 * FinancialInstrument7.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument12#Name
-	 * FinancialInstrument12.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument26#Name
-	 * FinancialInstrument26.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument30#Name
-	 * FinancialInstrument30.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument11#Name
-	 * FinancialInstrument11.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument25#Name
-	 * FinancialInstrument25.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument27#Name
-	 * FinancialInstrument27.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument32#Name
-	 * FinancialInstrument32.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument24#Name
-	 * FinancialInstrument24.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument33#Name
-	 * FinancialInstrument33.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument23#Name
-	 * FinancialInstrument23.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument31#Name
-	 * FinancialInstrument31.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument3#Name
-	 * FinancialInstrument3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument5#Name
-	 * FinancialInstrument5.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument8#Name
-	 * FinancialInstrument8.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument13#Name
-	 * FinancialInstrument13.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument4#Name
-	 * FinancialInstrument4.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#Name
-	 * FinancialInstrumentAttributes1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument9#Name
-	 * FinancialInstrument9.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument18#Name
-	 * FinancialInstrument18.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument19#Name
-	 * FinancialInstrument19.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ISOSecurityLongName
-	 * CommonFinancialInstrumentAttributes1.ISOSecurityLongName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#ISOLongName
-	 * FinancialInstrumentName1.ISOLongName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument37#Name
-	 * FinancialInstrument37.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument35#Name
-	 * FinancialInstrument35.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument34#Name
-	 * FinancialInstrument34.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument36#Name
-	 * FinancialInstrument36.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fund2#Name Fund2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fund1#Name Fund1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument40#Name
-	 * FinancialInstrument40.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument39#Name
-	 * FinancialInstrument39.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fund3#Name Fund3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fund4#Name Fund4.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument51#Name
-	 * FinancialInstrument51.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument50#Name
-	 * FinancialInstrument50.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument45#Name
-	 * FinancialInstrument45.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument49#Name
-	 * FinancialInstrument49.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument48#Name
-	 * FinancialInstrument48.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument47#Name
-	 * FinancialInstrument47.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument46#Name
-	 * FinancialInstrument46.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#FullName
-	 * SecurityInstrumentDescription9.FullName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#FullName
-	 * SecurityInstrumentDescription11.FullName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument57#Name
-	 * FinancialInstrument57.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument56#Name
-	 * FinancialInstrument56.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#FinancialInstrumentName
-	 * HoldBackInformation2.FinancialInstrumentName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument55#Name
-	 * FinancialInstrument55.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11#FullName
-	 * TransparencyDataReport11.FullName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport12#FullName
-	 * TransparencyDataReport12.FullName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#FullName
-	 * TransparencyDataReport10.FullName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport14#FullName
-	 * TransparencyDataReport14.FullName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#FinancialInstrumentName
-	 * HoldBackInformation3.FinancialInstrumentName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.LocalName
 	 * LocalName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument16#mmName
+	 * FinancialInstrument16.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmName
+	 * SecurityIdentification1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument17#mmName
+	 * FinancialInstrument17.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument6#mmName
+	 * FinancialInstrument6.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument10#mmName
+	 * FinancialInstrument10.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument29#mmName
+	 * FinancialInstrument29.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument7#mmName
+	 * FinancialInstrument7.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument12#mmName
+	 * FinancialInstrument12.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument26#mmName
+	 * FinancialInstrument26.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument30#mmName
+	 * FinancialInstrument30.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument11#mmName
+	 * FinancialInstrument11.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument25#mmName
+	 * FinancialInstrument25.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument27#mmName
+	 * FinancialInstrument27.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument32#mmName
+	 * FinancialInstrument32.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument24#mmName
+	 * FinancialInstrument24.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#mmName
+	 * FinancialInstrument33.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument23#mmName
+	 * FinancialInstrument23.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument31#mmName
+	 * FinancialInstrument31.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument3#mmName
+	 * FinancialInstrument3.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument5#mmName
+	 * FinancialInstrument5.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument8#mmName
+	 * FinancialInstrument8.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument13#mmName
+	 * FinancialInstrument13.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument4#mmName
+	 * FinancialInstrument4.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmName
+	 * FinancialInstrumentAttributes1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument9#mmName
+	 * FinancialInstrument9.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument18#mmName
+	 * FinancialInstrument18.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument19#mmName
+	 * FinancialInstrument19.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmISOSecurityLongName
+	 * CommonFinancialInstrumentAttributes1.mmISOSecurityLongName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#mmISOLongName
+	 * FinancialInstrumentName1.mmISOLongName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument37#mmName
+	 * FinancialInstrument37.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#mmName
+	 * FinancialInstrument35.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument34#mmName
+	 * FinancialInstrument34.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument36#mmName
+	 * FinancialInstrument36.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fund2#mmName Fund2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fund1#mmName Fund1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#mmName
+	 * FinancialInstrument40.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmName
+	 * FinancialInstrument39.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fund3#mmName Fund3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fund4#mmName Fund4.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmName
+	 * FinancialInstrument51.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument50#mmName
+	 * FinancialInstrument50.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument45#mmName
+	 * FinancialInstrument45.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument49#mmName
+	 * FinancialInstrument49.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#mmName
+	 * FinancialInstrument48.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#mmName
+	 * FinancialInstrument47.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmName
+	 * FinancialInstrument46.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#mmFullName
+	 * SecurityInstrumentDescription9.mmFullName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#mmFullName
+	 * SecurityInstrumentDescription11.mmFullName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument57#mmName
+	 * FinancialInstrument57.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmName
+	 * FinancialInstrument56.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmFinancialInstrumentName
+	 * HoldBackInformation2.mmFinancialInstrumentName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument55#mmName
+	 * FinancialInstrument55.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11#mmFullName
+	 * TransparencyDataReport11.mmFullName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport12#mmFullName
+	 * TransparencyDataReport12.mmFullName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmFullName
+	 * TransparencyDataReport10.mmFullName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport14#mmFullName
+	 * TransparencyDataReport14.mmFullName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmFinancialInstrumentName
+	 * HoldBackInformation3.mmFinancialInstrumentName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -235,36 +277,38 @@ public class LocalName {
 	 * definition} = "Name of the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FullName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFullName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.Name, com.tools20022.repository.msg.SecurityIdentification1.Name, com.tools20022.repository.msg.FinancialInstrument17.Name,
-					com.tools20022.repository.msg.FinancialInstrument6.Name, com.tools20022.repository.msg.FinancialInstrument10.Name, com.tools20022.repository.msg.FinancialInstrument29.Name,
-					com.tools20022.repository.msg.FinancialInstrument7.Name, com.tools20022.repository.msg.FinancialInstrument12.Name, com.tools20022.repository.msg.FinancialInstrument26.Name,
-					com.tools20022.repository.msg.FinancialInstrument30.Name, com.tools20022.repository.msg.FinancialInstrument11.Name, com.tools20022.repository.msg.FinancialInstrument25.Name,
-					com.tools20022.repository.msg.FinancialInstrument27.Name, com.tools20022.repository.msg.FinancialInstrument32.Name, com.tools20022.repository.msg.FinancialInstrument24.Name,
-					com.tools20022.repository.msg.FinancialInstrument33.Name, com.tools20022.repository.msg.FinancialInstrument23.Name, com.tools20022.repository.msg.FinancialInstrument31.Name,
-					com.tools20022.repository.msg.FinancialInstrument3.Name, com.tools20022.repository.msg.FinancialInstrument5.Name, com.tools20022.repository.msg.FinancialInstrument8.Name,
-					com.tools20022.repository.msg.FinancialInstrument13.Name, com.tools20022.repository.msg.FinancialInstrument4.Name, com.tools20022.repository.msg.FinancialInstrumentAttributes1.Name,
-					com.tools20022.repository.msg.FinancialInstrument9.Name, com.tools20022.repository.msg.FinancialInstrument18.Name, com.tools20022.repository.msg.FinancialInstrument19.Name,
-					com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ISOSecurityLongName, com.tools20022.repository.msg.FinancialInstrumentName1.ISOLongName, com.tools20022.repository.msg.FinancialInstrument37.Name,
-					com.tools20022.repository.msg.FinancialInstrument35.Name, com.tools20022.repository.msg.FinancialInstrument34.Name, com.tools20022.repository.msg.FinancialInstrument36.Name, com.tools20022.repository.msg.Fund2.Name,
-					com.tools20022.repository.msg.Fund1.Name, com.tools20022.repository.msg.FinancialInstrument40.Name, com.tools20022.repository.msg.FinancialInstrument39.Name, com.tools20022.repository.msg.Fund3.Name,
-					com.tools20022.repository.msg.Fund4.Name, com.tools20022.repository.msg.FinancialInstrument51.Name, com.tools20022.repository.msg.FinancialInstrument50.Name, com.tools20022.repository.msg.FinancialInstrument45.Name,
-					com.tools20022.repository.msg.FinancialInstrument49.Name, com.tools20022.repository.msg.FinancialInstrument48.Name, com.tools20022.repository.msg.FinancialInstrument47.Name,
-					com.tools20022.repository.msg.FinancialInstrument46.Name, com.tools20022.repository.msg.SecurityInstrumentDescription9.FullName, com.tools20022.repository.msg.SecurityInstrumentDescription11.FullName,
-					com.tools20022.repository.msg.FinancialInstrument57.Name, com.tools20022.repository.msg.FinancialInstrument56.Name, com.tools20022.repository.msg.HoldBackInformation2.FinancialInstrumentName,
-					com.tools20022.repository.msg.FinancialInstrument55.Name, com.tools20022.repository.msg.TransparencyDataReport11.FullName, com.tools20022.repository.msg.TransparencyDataReport12.FullName,
-					com.tools20022.repository.msg.TransparencyDataReport10.FullName, com.tools20022.repository.msg.TransparencyDataReport14.FullName, com.tools20022.repository.msg.HoldBackInformation3.FinancialInstrumentName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.mmName, com.tools20022.repository.msg.SecurityIdentification1.mmName, com.tools20022.repository.msg.FinancialInstrument17.mmName,
+					com.tools20022.repository.msg.FinancialInstrument6.mmName, com.tools20022.repository.msg.FinancialInstrument10.mmName, com.tools20022.repository.msg.FinancialInstrument29.mmName,
+					com.tools20022.repository.msg.FinancialInstrument7.mmName, com.tools20022.repository.msg.FinancialInstrument12.mmName, com.tools20022.repository.msg.FinancialInstrument26.mmName,
+					com.tools20022.repository.msg.FinancialInstrument30.mmName, com.tools20022.repository.msg.FinancialInstrument11.mmName, com.tools20022.repository.msg.FinancialInstrument25.mmName,
+					com.tools20022.repository.msg.FinancialInstrument27.mmName, com.tools20022.repository.msg.FinancialInstrument32.mmName, com.tools20022.repository.msg.FinancialInstrument24.mmName,
+					com.tools20022.repository.msg.FinancialInstrument33.mmName, com.tools20022.repository.msg.FinancialInstrument23.mmName, com.tools20022.repository.msg.FinancialInstrument31.mmName,
+					com.tools20022.repository.msg.FinancialInstrument3.mmName, com.tools20022.repository.msg.FinancialInstrument5.mmName, com.tools20022.repository.msg.FinancialInstrument8.mmName,
+					com.tools20022.repository.msg.FinancialInstrument13.mmName, com.tools20022.repository.msg.FinancialInstrument4.mmName, com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmName,
+					com.tools20022.repository.msg.FinancialInstrument9.mmName, com.tools20022.repository.msg.FinancialInstrument18.mmName, com.tools20022.repository.msg.FinancialInstrument19.mmName,
+					com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityLongName, com.tools20022.repository.msg.FinancialInstrumentName1.mmISOLongName, com.tools20022.repository.msg.FinancialInstrument37.mmName,
+					com.tools20022.repository.msg.FinancialInstrument35.mmName, com.tools20022.repository.msg.FinancialInstrument34.mmName, com.tools20022.repository.msg.FinancialInstrument36.mmName,
+					com.tools20022.repository.msg.Fund2.mmName, com.tools20022.repository.msg.Fund1.mmName, com.tools20022.repository.msg.FinancialInstrument40.mmName, com.tools20022.repository.msg.FinancialInstrument39.mmName,
+					com.tools20022.repository.msg.Fund3.mmName, com.tools20022.repository.msg.Fund4.mmName, com.tools20022.repository.msg.FinancialInstrument51.mmName, com.tools20022.repository.msg.FinancialInstrument50.mmName,
+					com.tools20022.repository.msg.FinancialInstrument45.mmName, com.tools20022.repository.msg.FinancialInstrument49.mmName, com.tools20022.repository.msg.FinancialInstrument48.mmName,
+					com.tools20022.repository.msg.FinancialInstrument47.mmName, com.tools20022.repository.msg.FinancialInstrument46.mmName, com.tools20022.repository.msg.SecurityInstrumentDescription9.mmFullName,
+					com.tools20022.repository.msg.SecurityInstrumentDescription11.mmFullName, com.tools20022.repository.msg.FinancialInstrument57.mmName, com.tools20022.repository.msg.FinancialInstrument56.mmName,
+					com.tools20022.repository.msg.HoldBackInformation2.mmFinancialInstrumentName, com.tools20022.repository.msg.FinancialInstrument55.mmName, com.tools20022.repository.msg.TransparencyDataReport11.mmFullName,
+					com.tools20022.repository.msg.TransparencyDataReport12.mmFullName, com.tools20022.repository.msg.TransparencyDataReport10.mmFullName, com.tools20022.repository.msg.TransparencyDataReport14.mmFullName,
+					com.tools20022.repository.msg.HoldBackInformation3.mmFinancialInstrumentName);
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FullName";
 			definition = "Name of the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SecuritiesIdentification relatedSecurity;
 	/**
 	 * Identification which contains a name.
 	 * <p>
@@ -273,8 +317,8 @@ public class LocalName {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Name
-	 * SecuritiesIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmName
+	 * SecuritiesIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -298,20 +342,21 @@ public class LocalName {
 	 * definition} = "Identification which contains a name."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedSecurity = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurity";
 			definition = "Identification which contains a name.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.Name;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmName;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 		}
 	};
+	protected Max35Text shortName;
 	/**
 	 * Short name of the security
 	 * <p>
@@ -321,54 +366,54 @@ public class LocalName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#ISOSecurityShortName
-	 * CommonFinancialInstrumentAttributes1.ISOSecurityShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#ISOShortName
-	 * FinancialInstrumentName1.ISOShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#ShortName
-	 * FinancialInstrument51.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument50#ShortName
-	 * FinancialInstrument50.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument45#ShortName
-	 * FinancialInstrument45.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument49#ShortName
-	 * FinancialInstrument49.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#ShortName
-	 * FinancialInstrument48.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#ShortName
-	 * FinancialInstrument47.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#ShortName
-	 * FinancialInstrument46.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#ShortName
-	 * SecurityInstrumentDescription9.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument57#ShortName
-	 * FinancialInstrument57.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#ShortName
-	 * FinancialInstrument56.ShortName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument55#ShortName
-	 * FinancialInstrument55.ShortName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.LocalName
 	 * LocalName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmISOSecurityShortName
+	 * CommonFinancialInstrumentAttributes1.mmISOSecurityShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#mmISOShortName
+	 * FinancialInstrumentName1.mmISOShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument51#mmShortName
+	 * FinancialInstrument51.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument50#mmShortName
+	 * FinancialInstrument50.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument45#mmShortName
+	 * FinancialInstrument45.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument49#mmShortName
+	 * FinancialInstrument49.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#mmShortName
+	 * FinancialInstrument48.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#mmShortName
+	 * FinancialInstrument47.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmShortName
+	 * FinancialInstrument46.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#mmShortName
+	 * SecurityInstrumentDescription9.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument57#mmShortName
+	 * FinancialInstrument57.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmShortName
+	 * FinancialInstrument56.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument55#mmShortName
+	 * FinancialInstrument55.mmShortName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -380,23 +425,24 @@ public class LocalName {
 	 * definition} = "Short name of the security"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ShortName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmShortName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.ISOSecurityShortName, com.tools20022.repository.msg.FinancialInstrumentName1.ISOShortName,
-					com.tools20022.repository.msg.FinancialInstrument51.ShortName, com.tools20022.repository.msg.FinancialInstrument50.ShortName, com.tools20022.repository.msg.FinancialInstrument45.ShortName,
-					com.tools20022.repository.msg.FinancialInstrument49.ShortName, com.tools20022.repository.msg.FinancialInstrument48.ShortName, com.tools20022.repository.msg.FinancialInstrument47.ShortName,
-					com.tools20022.repository.msg.FinancialInstrument46.ShortName, com.tools20022.repository.msg.SecurityInstrumentDescription9.ShortName, com.tools20022.repository.msg.FinancialInstrument57.ShortName,
-					com.tools20022.repository.msg.FinancialInstrument56.ShortName, com.tools20022.repository.msg.FinancialInstrument55.ShortName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, com.tools20022.repository.msg.FinancialInstrumentName1.mmISOShortName,
+					com.tools20022.repository.msg.FinancialInstrument51.mmShortName, com.tools20022.repository.msg.FinancialInstrument50.mmShortName, com.tools20022.repository.msg.FinancialInstrument45.mmShortName,
+					com.tools20022.repository.msg.FinancialInstrument49.mmShortName, com.tools20022.repository.msg.FinancialInstrument48.mmShortName, com.tools20022.repository.msg.FinancialInstrument47.mmShortName,
+					com.tools20022.repository.msg.FinancialInstrument46.mmShortName, com.tools20022.repository.msg.SecurityInstrumentDescription9.mmShortName, com.tools20022.repository.msg.FinancialInstrument57.mmShortName,
+					com.tools20022.repository.msg.FinancialInstrument56.mmShortName, com.tools20022.repository.msg.FinancialInstrument55.mmShortName);
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ShortName";
 			definition = "Short name of the security";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected LanguageCode language;
 	/**
 	 * Language in which the security name is expressed.
 	 * <p>
@@ -421,15 +467,15 @@ public class LocalName {
 	 * definition} = "Language in which the security name is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Language = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmLanguage = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Language";
 			definition = "Language in which the security name is expressed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
@@ -437,16 +483,48 @@ public class LocalName {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LocalName";
 				definition = "Name of the security.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.Name);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LocalName.FullName, com.tools20022.repository.entity.LocalName.RelatedSecurity, com.tools20022.repository.entity.LocalName.ShortName,
-						com.tools20022.repository.entity.LocalName.Language);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.mmName);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LocalName.mmFullName, com.tools20022.repository.entity.LocalName.mmRelatedSecurity, com.tools20022.repository.entity.LocalName.mmShortName,
+						com.tools20022.repository.entity.LocalName.mmLanguage);
 				derivationComponent_lazy = () -> Arrays.asList(FinancialInstrumentName1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(Max350Text fullName) {
+		this.fullName = fullName;
+	}
+
+	public SecuritiesIdentification getRelatedSecurity() {
+		return relatedSecurity;
+	}
+
+	public void setRelatedSecurity(com.tools20022.repository.entity.SecuritiesIdentification relatedSecurity) {
+		this.relatedSecurity = relatedSecurity;
+	}
+
+	public Max35Text getShortName() {
+		return shortName;
+	}
+
+	public void setShortName(Max35Text shortName) {
+		this.shortName = shortName;
+	}
+
+	public LanguageCode getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(LanguageCode language) {
+		this.language = language;
 	}
 }

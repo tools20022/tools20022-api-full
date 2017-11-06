@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a price report.
@@ -33,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceReport2#PriceValuationDetails
- * PriceReport2.PriceValuationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceReport2#Extension
- * PriceReport2.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceReport2#mmPriceValuationDetails
+ * PriceReport2.mmPriceValuationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceReport2#mmExtension
+ * PriceReport2.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,15 +45,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#PriceReportToBeCancelled
- * PriceReportCancellationV03.PriceReportToBeCancelled}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#mmPriceReportToBeCancelled
+ * PriceReportCancellationV03.mmPriceReportToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.PriceValuation3> priceValuationDetails;
 	/**
 	 * Information related to the price valuation of a financial instrument.
 	 * <p>
@@ -103,20 +105,21 @@ public class PriceReport2 {
 	 * "Information related to the price valuation of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceValuationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceValuationDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PriceReport2.mmObject();
 			businessComponentTrace_lazy = () -> NetAssetValueCalculation.mmObject();
+			componentContext_lazy = () -> PriceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "PricValtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValuationDetails";
 			definition = "Information related to the price valuation of a financial instrument.";
 			minOccurs = 1;
-			type_lazy = () -> PriceValuation3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -144,7 +147,7 @@ public class PriceReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PriceReport2.mmObject();
 			isDerived = false;
@@ -153,17 +156,17 @@ public class PriceReport2 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceReport2.PriceValuationDetails, com.tools20022.repository.msg.PriceReport2.Extension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV03.PriceReportToBeCancelled);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceReport2.mmPriceValuationDetails, com.tools20022.repository.msg.PriceReport2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV03.mmPriceReportToBeCancelled);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceReport2";
 				definition = "Information about a price report.";
@@ -171,5 +174,21 @@ public class PriceReport2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PriceValuation3> getPriceValuationDetails() {
+		return priceValuationDetails;
+	}
+
+	public void setPriceValuationDetails(List<com.tools20022.repository.msg.PriceValuation3> priceValuationDetails) {
+		this.priceValuationDetails = priceValuationDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

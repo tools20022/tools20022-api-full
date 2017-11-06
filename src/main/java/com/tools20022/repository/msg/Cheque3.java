@@ -36,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque3#Number Cheque3.Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque3#PayeeIdentification
- * Cheque3.PayeeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque3#DraweeIdentification
- * Cheque3.DraweeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque3#DrawerIdentification
- * Cheque3.DrawerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque3#mmNumber
+ * Cheque3.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque3#mmPayeeIdentification
+ * Cheque3.mmPayeeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque3#mmDraweeIdentification
+ * Cheque3.mmDraweeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque3#mmDrawerIdentification
+ * Cheque3.mmDrawerIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Cheque3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text number;
 	/**
 	 * Unique and unambiguous identifier for a cheque as assigned by the
 	 * financial institution.
@@ -87,8 +89,8 @@ public class Cheque3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#CreditInstrumentIdentification
-	 * CreditInstrument.CreditInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmCreditInstrumentIdentification
+	 * CreditInstrument.mmCreditInstrumentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque3
@@ -109,27 +111,28 @@ public class Cheque3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cheque9#Number
-	 * Cheque9.Number}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cheque9#mmNumber
+	 * Cheque9.mmNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification;
 			componentContext_lazy = () -> Cheque3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.CreditInstrumentIdentification;
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identifier for a cheque as assigned by the financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.Number);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.mmNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice payeeIdentification;
 	/**
 	 * Party to which a cheque is made payable.
 	 * <p>
@@ -143,8 +146,8 @@ public class Cheque3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque3
@@ -164,27 +167,28 @@ public class Cheque3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Cheque9#PayeeIdentification
-	 * Cheque9.PayeeIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque9#mmPayeeIdentification
+	 * Cheque9.mmPayeeIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayeeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Cheque3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "PyeeId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayeeIdentification";
 			definition = "Party to which a cheque is made payable.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.PayeeIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.mmPayeeIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification3Choice draweeIdentification;
 	/**
 	 * Financial institution on which a cheque is drawn, ie, the financial
 	 * institution that services the account of the entity that issued the
@@ -200,8 +204,8 @@ public class Cheque3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque3
@@ -223,27 +227,28 @@ public class Cheque3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Cheque9#DraweeIdentification
-	 * Cheque9.DraweeIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque9#mmDraweeIdentification
+	 * Cheque9.mmDraweeIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DraweeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDraweeIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Cheque3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "DrweeId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DraweeIdentification";
 			definition = "Financial institution on which a cheque is drawn, ie, the financial institution that services the account of the entity that issued the cheque.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.DraweeIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.mmDraweeIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice drawerIdentification;
 	/**
 	 * Account owner that issues a cheque ordering the drawee bank to pay a
 	 * specific amount, upon demand, to the payee.
@@ -258,8 +263,8 @@ public class Cheque3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque3
@@ -281,24 +286,24 @@ public class Cheque3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Cheque9#DrawerIdentification
-	 * Cheque9.DrawerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque9#mmDrawerIdentification
+	 * Cheque9.mmDrawerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DrawerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDrawerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Cheque3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DrwrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrawerIdentification";
 			definition = "Account owner that issues a cheque ordering the drawee bank to pay a specific amount, upon demand, to the payee.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.DrawerIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.mmDrawerIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
@@ -306,10 +311,10 @@ public class Cheque3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque3.Number, com.tools20022.repository.msg.Cheque3.PayeeIdentification, com.tools20022.repository.msg.Cheque3.DraweeIdentification,
-						com.tools20022.repository.msg.Cheque3.DrawerIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque3.mmNumber, com.tools20022.repository.msg.Cheque3.mmPayeeIdentification, com.tools20022.repository.msg.Cheque3.mmDraweeIdentification,
+						com.tools20022.repository.msg.Cheque3.mmDrawerIdentification);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Cheque3";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
@@ -317,5 +322,37 @@ public class Cheque3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNumber() {
+		return number;
+	}
+
+	public void setNumber(Max35Text number) {
+		this.number = number;
+	}
+
+	public PartyIdentification2Choice getPayeeIdentification() {
+		return payeeIdentification;
+	}
+
+	public void setPayeeIdentification(PartyIdentification2Choice payeeIdentification) {
+		this.payeeIdentification = payeeIdentification;
+	}
+
+	public FinancialInstitutionIdentification3Choice getDraweeIdentification() {
+		return draweeIdentification;
+	}
+
+	public void setDraweeIdentification(FinancialInstitutionIdentification3Choice draweeIdentification) {
+		this.draweeIdentification = draweeIdentification;
+	}
+
+	public PartyIdentification2Choice getDrawerIdentification() {
+		return drawerIdentification;
+	}
+
+	public void setDrawerIdentification(PartyIdentification2Choice drawerIdentification) {
+		this.drawerIdentification = drawerIdentification;
 	}
 }

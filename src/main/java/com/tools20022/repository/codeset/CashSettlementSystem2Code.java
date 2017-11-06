@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#GrossSettlementSystem
- * CashSettlementSystem2Code.GrossSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#mmGrossSettlementSystem
+ * CashSettlementSystem2Code.mmGrossSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#NetSettlementSystem
- * CashSettlementSystem2Code.NetSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#mmNetSettlementSystem
+ * CashSettlementSystem2Code.mmNetSettlementSystem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	 * name} = "GrossSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode GrossSettlementSystem = new MMCode() {
+	public static final MMCode mmGrossSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossSettlementSystem";
@@ -104,7 +104,7 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	 * name} = "NetSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetSettlementSystem = new MMCode() {
+	public static final MMCode mmNetSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSettlementSystem";
@@ -115,12 +115,12 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystem2Code";
 				definition = "Specifies the cash settlement system used.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystem2Code.GrossSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystem2Code.NetSettlementSystem);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystem2Code.mmGrossSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystem2Code.mmNetSettlementSystem);
 				trace_lazy = () -> CashSettlementSystemCode.mmObject();
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMConfigurationParameter1#Type
- * ATMConfigurationParameter1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMConfigurationParameter1#mmType
+ * ATMConfigurationParameter1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMConfigurationParameter1#Version
- * ATMConfigurationParameter1.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMConfigurationParameter1#mmVersion
+ * ATMConfigurationParameter1.mmVersion}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMConfigurationParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataSetCategory7Code type;
 	/**
 	 * Type of the ATM configuration.
 	 * <p>
@@ -94,7 +95,7 @@ public class ATMConfigurationParameter1 {
 	 * definition} = "Type of the ATM configuration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMConfigurationParameter1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class ATMConfigurationParameter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the ATM configuration.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory7Code.mmObject();
 		}
 	};
+	protected Max35Text version;
 	/**
 	 * Active version of the configuration.
 	 * <p>
@@ -134,7 +136,7 @@ public class ATMConfigurationParameter1 {
 	 * definition} = "Active version of the configuration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMConfigurationParameter1.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class ATMConfigurationParameter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Active version of the configuration.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -151,8 +153,8 @@ public class ATMConfigurationParameter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMConfigurationParameter1.Type, com.tools20022.repository.msg.ATMConfigurationParameter1.Version);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMConfigurationParameter1.mmType, com.tools20022.repository.msg.ATMConfigurationParameter1.mmVersion);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMConfigurationParameter1";
 				definition = "Configuration parameter version of the ATM.";
@@ -160,5 +162,21 @@ public class ATMConfigurationParameter1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataSetCategory7Code getType() {
+		return type;
+	}
+
+	public void setType(DataSetCategory7Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max35Text version) {
+		this.version = version;
 	}
 }

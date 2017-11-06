@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -75,48 +76,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#TransactionIdentification
- * MarginCallRequestV04.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmTransactionIdentification
+ * MarginCallRequestV04.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#Obligation
- * MarginCallRequestV04.Obligation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmObligation
+ * MarginCallRequestV04.mmObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#Agreement
- * MarginCallRequestV04.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmAgreement
+ * MarginCallRequestV04.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#MarginCallResult
- * MarginCallRequestV04.MarginCallResult}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmMarginCallResult
+ * MarginCallRequestV04.mmMarginCallResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#MarginDetailsDueToA
- * MarginCallRequestV04.MarginDetailsDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmMarginDetailsDueToA
+ * MarginCallRequestV04.mmMarginDetailsDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#MarginDetailsDueToB
- * MarginCallRequestV04.MarginDetailsDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmMarginDetailsDueToB
+ * MarginCallRequestV04.mmMarginDetailsDueToB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#RequirementDetailsDueToA
- * MarginCallRequestV04.RequirementDetailsDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmRequirementDetailsDueToA
+ * MarginCallRequestV04.mmRequirementDetailsDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#RequirementDetailsDueToB
- * MarginCallRequestV04.RequirementDetailsDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmRequirementDetailsDueToB
+ * MarginCallRequestV04.mmRequirementDetailsDueToB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#ExpectedCollateralDueToA
- * MarginCallRequestV04.ExpectedCollateralDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmExpectedCollateralDueToA
+ * MarginCallRequestV04.mmExpectedCollateralDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#ExpectedCollateralDueToB
- * MarginCallRequestV04.ExpectedCollateralDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmExpectedCollateralDueToB
+ * MarginCallRequestV04.mmExpectedCollateralDueToB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#MarginCallDetails
- * MarginCallRequestV04.MarginCallDetails}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmMarginCallDetails
+ * MarginCallRequestV04.mmMarginCallDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#SupplementaryData
- * MarginCallRequestV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#mmSupplementaryData
+ * MarginCallRequestV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV04#identifier
- * MarginCallRequestV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code colr.003.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,6 +135,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginCallRequestV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as know by the instructing
 	 * party.
@@ -162,22 +162,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#TransactionIdentification
-	 * MarginCallRequestV03.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmTransactionIdentification
+	 * MarginCallRequestV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.TransactionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Obligation4 obligation;
 	/**
 	 * Provides information like the identification of the party or parties
 	 * associated with the collateral agreement, the exposure type and the
@@ -205,22 +206,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#Obligation
-	 * MarginCallRequestV03.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmObligation
+	 * MarginCallRequestV03.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Obligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.Obligation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmObligation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
 	};
+	protected Agreement4 agreement;
 	/**
 	 * Agreement details for the over the counter market.
 	 * <p>
@@ -244,22 +246,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#Agreement
-	 * MarginCallRequestV03.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmAgreement
+	 * MarginCallRequestV03.mmAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Agreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.Agreement;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmAgreement;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
 		}
 	};
+	protected MarginCallResult3 marginCallResult;
 	/**
 	 * Summation of the call amounts per margin type. It is provided for the
 	 * purposes of carrying forward for future messages that are used to compare
@@ -289,22 +292,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#MarginCallResult
-	 * MarginCallRequestV03.MarginCallResult}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmMarginCallResult
+	 * MarginCallRequestV03.mmMarginCallResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarginCallResult = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarginCallResult = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MrgnCallRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResult";
 			definition = "Summation of the call amounts per margin type. It is provided for the purposes of carrying forward for future messages that are used to compare the margin call results to determine whether a call is agreed or full/partially disputed.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.MarginCallResult;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmMarginCallResult;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MarginCallResult3.mmObject();
 		}
 	};
+	protected MarginCall1 marginDetailsDueToA;
 	/**
 	 * Provides details about the margin calculation that would be due to party
 	 * A.
@@ -331,22 +335,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#MarginDetailsDueToA
-	 * MarginCallRequestV03.MarginDetailsDueToA}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmMarginDetailsDueToA
+	 * MarginCallRequestV03.mmMarginDetailsDueToA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarginDetailsDueToA = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarginDetailsDueToA = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MrgnDtlsDueToA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetailsDueToA";
 			definition = "Provides details about the margin calculation that would be due to party A.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.MarginDetailsDueToA;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmMarginDetailsDueToA;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarginCall1.mmObject();
 		}
 	};
+	protected MarginCall1 marginDetailsDueToB;
 	/**
 	 * Provides details about the margin calculation that would be due to party
 	 * B.
@@ -373,22 +378,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#MarginDetailsDueToB
-	 * MarginCallRequestV03.MarginDetailsDueToB}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmMarginDetailsDueToB
+	 * MarginCallRequestV03.mmMarginDetailsDueToB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarginDetailsDueToB = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarginDetailsDueToB = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MrgnDtlsDueToB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetailsDueToB";
 			definition = "Provides details about the margin calculation that would be due to party B.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.MarginDetailsDueToB;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmMarginDetailsDueToB;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarginCall1.mmObject();
 		}
 	};
+	protected MarginRequirement1Choice requirementDetailsDueToA;
 	/**
 	 * Amount of expected margin that will be either delivered to party A by
 	 * party B or recalled to party A from party B.
@@ -416,22 +422,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#RequirementDetailsDueToA
-	 * MarginCallRequestV03.RequirementDetailsDueToA}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmRequirementDetailsDueToA
+	 * MarginCallRequestV03.mmRequirementDetailsDueToA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequirementDetailsDueToA = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequirementDetailsDueToA = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RqrmntDtlsDueToA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequirementDetailsDueToA";
 			definition = "Amount of expected margin that will be either delivered to party A by party B or recalled to party A from party B.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.RequirementDetailsDueToA;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmRequirementDetailsDueToA;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarginRequirement1Choice.mmObject();
 		}
 	};
+	protected MarginRequirement1Choice requirementDetailsDueToB;
 	/**
 	 * Amount of expected margin that will be either delivered to party B by
 	 * party A or recalled to party B from party A.
@@ -459,22 +466,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#RequirementDetailsDueToB
-	 * MarginCallRequestV03.RequirementDetailsDueToB}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmRequirementDetailsDueToB
+	 * MarginCallRequestV03.mmRequirementDetailsDueToB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequirementDetailsDueToB = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequirementDetailsDueToB = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RqrmntDtlsDueToB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequirementDetailsDueToB";
 			definition = "Amount of expected margin that will be either delivered to party B by party A or recalled to party B from party A.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.RequirementDetailsDueToB;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmRequirementDetailsDueToB;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarginRequirement1Choice.mmObject();
 		}
 	};
+	protected ExpectedCollateral2Choice expectedCollateralDueToA;
 	/**
 	 * Provides details about the type of collateral that will be either
 	 * delivered to party A by party B or recalled to party A from party B.
@@ -502,22 +510,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#ExpectedCollateralDueToA
-	 * MarginCallRequestV03.ExpectedCollateralDueToA}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmExpectedCollateralDueToA
+	 * MarginCallRequestV03.mmExpectedCollateralDueToA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ExpectedCollateralDueToA = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExpectedCollateralDueToA = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "XpctdCollDueToA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCollateralDueToA";
 			definition = "Provides details about the type of collateral that will be either delivered to party A by party B or recalled to party A from party B.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.ExpectedCollateralDueToA;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmExpectedCollateralDueToA;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ExpectedCollateral2Choice.mmObject();
 		}
 	};
+	protected ExpectedCollateral2Choice expectedCollateralDueToB;
 	/**
 	 * Provides details about the type of collateral that will be either
 	 * delivered to party B by party A or recalled to party B from party A.
@@ -545,22 +554,23 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#ExpectedCollateralDueToB
-	 * MarginCallRequestV03.ExpectedCollateralDueToB}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmExpectedCollateralDueToB
+	 * MarginCallRequestV03.mmExpectedCollateralDueToB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ExpectedCollateralDueToB = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExpectedCollateralDueToB = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "XpctdCollDueToB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCollateralDueToB";
 			definition = "Provides details about the type of collateral that will be either delivered to party B by party A or recalled to party B from party A.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.ExpectedCollateralDueToB;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmExpectedCollateralDueToB;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ExpectedCollateral2Choice.mmObject();
 		}
 	};
+	protected List<MarginCall2> marginCallDetails;
 	/**
 	 * Allows the reporting of the margin requirements for multiple accounts and
 	 * report a single margin call amount made up of the aggregate of all the
@@ -587,7 +597,7 @@ public class MarginCallRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarginCallDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarginCallDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MrgnCallDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -597,6 +607,7 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> MarginCall2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -624,46 +635,19 @@ public class MarginCallRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#SupplementaryData
-	 * MarginCallRequestV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmSupplementaryData
+	 * MarginCallRequestV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "colr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "colr";
-			messageFunctionality = "003";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -678,15 +662,118 @@ public class MarginCallRequestV04 {
 				rootElement = "Document";
 				xmlTag = "MrgnCallReq";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV04.TransactionIdentification, com.tools20022.repository.area.colr.MarginCallRequestV04.Obligation,
-						com.tools20022.repository.area.colr.MarginCallRequestV04.Agreement, com.tools20022.repository.area.colr.MarginCallRequestV04.MarginCallResult,
-						com.tools20022.repository.area.colr.MarginCallRequestV04.MarginDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.MarginDetailsDueToB,
-						com.tools20022.repository.area.colr.MarginCallRequestV04.RequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.RequirementDetailsDueToB,
-						com.tools20022.repository.area.colr.MarginCallRequestV04.ExpectedCollateralDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.ExpectedCollateralDueToB,
-						com.tools20022.repository.area.colr.MarginCallRequestV04.MarginCallDetails, com.tools20022.repository.area.colr.MarginCallRequestV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.colr.MarginCallRequestV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV04.mmTransactionIdentification, com.tools20022.repository.area.colr.MarginCallRequestV04.mmObligation,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmAgreement, com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginCallResult,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginDetailsDueToB,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToB,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmExpectedCollateralDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmExpectedCollateralDueToB,
+						com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginCallDetails, com.tools20022.repository.area.colr.MarginCallRequestV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "colr";
+						messageFunctionality = "003";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Obligation4 getObligation() {
+		return obligation;
+	}
+
+	public void setObligation(Obligation4 obligation) {
+		this.obligation = obligation;
+	}
+
+	public Agreement4 getAgreement() {
+		return agreement;
+	}
+
+	public void setAgreement(Agreement4 agreement) {
+		this.agreement = agreement;
+	}
+
+	public MarginCallResult3 getMarginCallResult() {
+		return marginCallResult;
+	}
+
+	public void setMarginCallResult(MarginCallResult3 marginCallResult) {
+		this.marginCallResult = marginCallResult;
+	}
+
+	public MarginCall1 getMarginDetailsDueToA() {
+		return marginDetailsDueToA;
+	}
+
+	public void setMarginDetailsDueToA(MarginCall1 marginDetailsDueToA) {
+		this.marginDetailsDueToA = marginDetailsDueToA;
+	}
+
+	public MarginCall1 getMarginDetailsDueToB() {
+		return marginDetailsDueToB;
+	}
+
+	public void setMarginDetailsDueToB(MarginCall1 marginDetailsDueToB) {
+		this.marginDetailsDueToB = marginDetailsDueToB;
+	}
+
+	public MarginRequirement1Choice getRequirementDetailsDueToA() {
+		return requirementDetailsDueToA;
+	}
+
+	public void setRequirementDetailsDueToA(MarginRequirement1Choice requirementDetailsDueToA) {
+		this.requirementDetailsDueToA = requirementDetailsDueToA;
+	}
+
+	public MarginRequirement1Choice getRequirementDetailsDueToB() {
+		return requirementDetailsDueToB;
+	}
+
+	public void setRequirementDetailsDueToB(MarginRequirement1Choice requirementDetailsDueToB) {
+		this.requirementDetailsDueToB = requirementDetailsDueToB;
+	}
+
+	public ExpectedCollateral2Choice getExpectedCollateralDueToA() {
+		return expectedCollateralDueToA;
+	}
+
+	public void setExpectedCollateralDueToA(ExpectedCollateral2Choice expectedCollateralDueToA) {
+		this.expectedCollateralDueToA = expectedCollateralDueToA;
+	}
+
+	public ExpectedCollateral2Choice getExpectedCollateralDueToB() {
+		return expectedCollateralDueToB;
+	}
+
+	public void setExpectedCollateralDueToB(ExpectedCollateral2Choice expectedCollateralDueToB) {
+		this.expectedCollateralDueToB = expectedCollateralDueToB;
+	}
+
+	public List<MarginCall2> getMarginCallDetails() {
+		return marginCallDetails;
+	}
+
+	public void setMarginCallDetails(List<MarginCall2> marginCallDetails) {
+		this.marginCallDetails = marginCallDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -38,30 +38,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#CreditDebitIndicator
- * CorporateActionUnallocatedCashTransactionDetailsSD4.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#mmCreditDebitIndicator
+ * CorporateActionUnallocatedCashTransactionDetailsSD4.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#ReasonCode
- * CorporateActionUnallocatedCashTransactionDetailsSD4.ReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#mmReasonCode
+ * CorporateActionUnallocatedCashTransactionDetailsSD4.mmReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#TransactionAmount
- * CorporateActionUnallocatedCashTransactionDetailsSD4.TransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#mmTransactionAmount
+ * CorporateActionUnallocatedCashTransactionDetailsSD4.mmTransactionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#UnallocatedReasonCode
- * CorporateActionUnallocatedCashTransactionDetailsSD4.UnallocatedReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#mmUnallocatedReasonCode
+ * CorporateActionUnallocatedCashTransactionDetailsSD4.mmUnallocatedReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#ContraParticipantNumber
- * CorporateActionUnallocatedCashTransactionDetailsSD4.ContraParticipantNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#mmContraParticipantNumber
+ * CorporateActionUnallocatedCashTransactionDetailsSD4.mmContraParticipantNumber
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#EarliestPaymentDate
- * CorporateActionUnallocatedCashTransactionDetailsSD4.EarliestPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4#mmEarliestPaymentDate
+ * CorporateActionUnallocatedCashTransactionDetailsSD4.mmEarliestPaymentDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the value is a debit or a credit.
 	 * <p>
@@ -117,20 +119,20 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#CreditDebitIndicator
-	 * CorporateActionUnallocatedCashTransactionDetailsSD5.CreditDebitIndicator}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#mmCreditDebitIndicator
+	 * CorporateActionUnallocatedCashTransactionDetailsSD5.
+	 * mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#CreditDebitIndicator
-	 * CorporateActionUnallocatedCashTransactionDetailsSD3.CreditDebitIndicator}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#mmCreditDebitIndicator
+	 * CorporateActionUnallocatedCashTransactionDetailsSD3.
+	 * mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmObject();
 			isDerived = false;
@@ -138,13 +140,14 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.CreditDebitIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.CreditDebitIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmCreditDebitIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected DTCAdjustmentPaymentType3Code reasonCode;
 	/**
 	 * Transaction reason.
 	 * <p>
@@ -175,18 +178,18 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#ReasonCode
-	 * CorporateActionUnallocatedCashTransactionDetailsSD5.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#mmReasonCode
+	 * CorporateActionUnallocatedCashTransactionDetailsSD5.mmReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#ReasonCode
-	 * CorporateActionUnallocatedCashTransactionDetailsSD3.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#mmReasonCode
+	 * CorporateActionUnallocatedCashTransactionDetailsSD3.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmObject();
 			isDerived = false;
@@ -194,13 +197,14 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.ReasonCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.ReasonCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmReasonCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.mmReasonCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType3Code.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAndAmount transactionAmount;
 	/**
 	 * Resulting cash amount concerned in this transaction.
 	 * <p>
@@ -231,18 +235,18 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#TransactionAmount
-	 * CorporateActionUnallocatedCashTransactionDetailsSD5.TransactionAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#mmTransactionAmount
+	 * CorporateActionUnallocatedCashTransactionDetailsSD5.mmTransactionAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#TransactionAmount
-	 * CorporateActionUnallocatedCashTransactionDetailsSD3.TransactionAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#mmTransactionAmount
+	 * CorporateActionUnallocatedCashTransactionDetailsSD3.mmTransactionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmObject();
 			isDerived = false;
@@ -250,13 +254,14 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmount";
 			definition = "Resulting cash amount concerned in this transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.TransactionAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.TransactionAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmTransactionAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.mmTransactionAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DTCUnallocatedAdjustmentReason2Code unallocatedReasonCode;
 	/**
 	 * Reason for the unallocation.
 	 * <p>
@@ -287,20 +292,20 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#UnallocatedReasonCode
-	 * CorporateActionUnallocatedCashTransactionDetailsSD5.UnallocatedReasonCode
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#mmUnallocatedReasonCode
+	 * CorporateActionUnallocatedCashTransactionDetailsSD5.
+	 * mmUnallocatedReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#UnallocatedReasonCode
-	 * CorporateActionUnallocatedCashTransactionDetailsSD3.UnallocatedReasonCode
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#mmUnallocatedReasonCode
+	 * CorporateActionUnallocatedCashTransactionDetailsSD3.
+	 * mmUnallocatedReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnallocatedReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnallocatedReasonCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmObject();
 			isDerived = false;
@@ -308,13 +313,14 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedReasonCode";
 			definition = "Reason for the unallocation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.UnallocatedReasonCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.UnallocatedReasonCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmUnallocatedReasonCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.mmUnallocatedReasonCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCUnallocatedAdjustmentReason2Code.mmObject();
 		}
 	};
+	protected Max8Text contraParticipantNumber;
 	/**
 	 * Transaction contra participant identification when shares are distributed
 	 * / delivered to / from another participant.
@@ -347,20 +353,20 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#ContraParticipantNumber
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#mmContraParticipantNumber
 	 * CorporateActionUnallocatedCashTransactionDetailsSD5.
-	 * ContraParticipantNumber}</li>
+	 * mmContraParticipantNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#ContraParticipantNumber
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#mmContraParticipantNumber
 	 * CorporateActionUnallocatedCashTransactionDetailsSD3.
-	 * ContraParticipantNumber}</li>
+	 * mmContraParticipantNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmObject();
 			isDerived = false;
@@ -368,13 +374,14 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.ContraParticipantNumber;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.ContraParticipantNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmContraParticipantNumber);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.mmContraParticipantNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected DateFormat28Choice earliestPaymentDate;
 	/**
 	 * Date/time at which the movement was due to take place (cash and/or
 	 * securities).
@@ -408,18 +415,20 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#EarliestPaymentDate
-	 * CorporateActionUnallocatedCashTransactionDetailsSD5.EarliestPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5#mmEarliestPaymentDate
+	 * CorporateActionUnallocatedCashTransactionDetailsSD5.mmEarliestPaymentDate
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#EarliestPaymentDate
-	 * CorporateActionUnallocatedCashTransactionDetailsSD3.EarliestPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3#mmEarliestPaymentDate
+	 * CorporateActionUnallocatedCashTransactionDetailsSD3.mmEarliestPaymentDate
+	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmObject();
 			isDerived = false;
@@ -427,10 +436,10 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.EarliestPaymentDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.EarliestPaymentDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmEarliestPaymentDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.mmEarliestPaymentDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
 		}
 	};
@@ -438,18 +447,66 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.CreditDebitIndicator,
-						com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.ReasonCode, com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.TransactionAmount,
-						com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.UnallocatedReasonCode, com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.ContraParticipantNumber,
-						com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.EarliestPaymentDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.mmReasonCode, com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.mmTransactionAmount,
+						com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.mmUnallocatedReasonCode, com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.mmContraParticipantNumber,
+						com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4.mmEarliestPaymentDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedCashTransactionDetailsSD4";
 				definition = "Breakdown of unallocated cash transactions.";
-				previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD5.mmObject());
+				previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public DTCAdjustmentPaymentType3Code getReasonCode() {
+		return reasonCode;
+	}
+
+	public void setReasonCode(DTCAdjustmentPaymentType3Code reasonCode) {
+		this.reasonCode = reasonCode;
+	}
+
+	public RestrictedFINActiveCurrencyAndAmount getTransactionAmount() {
+		return transactionAmount;
+	}
+
+	public void setTransactionAmount(RestrictedFINActiveCurrencyAndAmount transactionAmount) {
+		this.transactionAmount = transactionAmount;
+	}
+
+	public DTCUnallocatedAdjustmentReason2Code getUnallocatedReasonCode() {
+		return unallocatedReasonCode;
+	}
+
+	public void setUnallocatedReasonCode(DTCUnallocatedAdjustmentReason2Code unallocatedReasonCode) {
+		this.unallocatedReasonCode = unallocatedReasonCode;
+	}
+
+	public Max8Text getContraParticipantNumber() {
+		return contraParticipantNumber;
+	}
+
+	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+		this.contraParticipantNumber = contraParticipantNumber;
+	}
+
+	public DateFormat28Choice getEarliestPaymentDate() {
+		return earliestPaymentDate;
+	}
+
+	public void setEarliestPaymentDate(DateFormat28Choice earliestPaymentDate) {
+		this.earliestPaymentDate = earliestPaymentDate;
 	}
 }

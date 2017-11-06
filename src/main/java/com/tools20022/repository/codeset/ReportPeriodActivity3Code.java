@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity3Code#NoTransaction
- * ReportPeriodActivity3Code.NoTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity3Code#mmNoTransaction
+ * ReportPeriodActivity3Code.mmNoTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity3Code#NoReportFromAgent
- * ReportPeriodActivity3Code.NoReportFromAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity3Code#mmNoReportFromAgent
+ * ReportPeriodActivity3Code.mmNoReportFromAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +76,7 @@ public class ReportPeriodActivity3Code extends ReportPeriodActivityCode {
 	 * name} = "NoTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoTransaction = new MMCode() {
+	public static final MMCode mmNoTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
@@ -99,7 +99,7 @@ public class ReportPeriodActivity3Code extends ReportPeriodActivityCode {
 	 * name} = "NoReportFromAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoReportFromAgent = new MMCode() {
+	public static final MMCode mmNoReportFromAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReportFromAgent";
@@ -110,11 +110,11 @@ public class ReportPeriodActivity3Code extends ReportPeriodActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivity3Code";
 				definition = "Specifies the type of report activity for a specific reporting period.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivity3Code.NoTransaction, com.tools20022.repository.codeset.ReportPeriodActivity3Code.NoReportFromAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivity3Code.mmNoTransaction, com.tools20022.repository.codeset.ReportPeriodActivity3Code.mmNoReportFromAgent);
 				trace_lazy = () -> ReportPeriodActivityCode.mmObject();
 			}
 		});

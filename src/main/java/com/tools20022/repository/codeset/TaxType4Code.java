@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType4Code#WithholdingOfForeignTax
- * TaxType4Code.WithholdingOfForeignTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType4Code#mmWithholdingOfForeignTax
+ * TaxType4Code.mmWithholdingOfForeignTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType4Code#WithholdingOfLocalTax
- * TaxType4Code.WithholdingOfLocalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType4Code#mmWithholdingOfLocalTax
+ * TaxType4Code.mmWithholdingOfLocalTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class TaxType4Code extends TaxTypeCode {
 	 * name} = "WithholdingOfForeignTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingOfForeignTax = new MMCode() {
+	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfForeignTax";
@@ -101,7 +101,7 @@ public class TaxType4Code extends TaxTypeCode {
 	 * name} = "WithholdingOfLocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingOfLocalTax = new MMCode() {
+	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfLocalTax";
@@ -112,12 +112,12 @@ public class TaxType4Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WITF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType4Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType4Code.WithholdingOfForeignTax, com.tools20022.repository.codeset.TaxType4Code.WithholdingOfLocalTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType4Code.mmWithholdingOfForeignTax, com.tools20022.repository.codeset.TaxType4Code.mmWithholdingOfLocalTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

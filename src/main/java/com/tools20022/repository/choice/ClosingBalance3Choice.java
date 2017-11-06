@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClosingBalance3Choice#FinalClosingBalance
- * ClosingBalance3Choice.FinalClosingBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.ClosingBalance3Choice#mmFinalClosingBalance
+ * ClosingBalance3Choice.mmFinalClosingBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClosingBalance3Choice#IntermediaryClosingBalance
- * ClosingBalance3Choice.IntermediaryClosingBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.ClosingBalance3Choice#mmIntermediaryClosingBalance
+ * ClosingBalance3Choice.mmIntermediaryClosingBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClosingBalance3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 finalClosingBalance;
 	/**
 	 * Closing balance of the financial instrument in the statement.
 	 * <p>
@@ -87,7 +88,7 @@ public class ClosingBalance3Choice {
 	 * "Closing balance of the financial instrument in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalClosingBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClosingBalance3Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class ClosingBalance3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalClosingBalance";
 			definition = "Closing balance of the financial instrument in the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 intermediaryClosingBalance;
 	/**
 	 * Closing Balance of this page only. Must be the intermediary opening
 	 * balance of the next page (part of the same statement).
@@ -131,7 +133,7 @@ public class ClosingBalance3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntermediaryClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntermediaryClosingBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClosingBalance3Choice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class ClosingBalance3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryClosingBalance";
 			definition = "Closing Balance of this page only. Must be the intermediary opening balance of the next page (part of the same statement).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class ClosingBalance3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance3Choice.FinalClosingBalance, com.tools20022.repository.choice.ClosingBalance3Choice.IntermediaryClosingBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance3Choice.mmFinalClosingBalance, com.tools20022.repository.choice.ClosingBalance3Choice.mmIntermediaryClosingBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClosingBalance3Choice";
 				definition = "Choice of final and intermediary balances.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getFinalClosingBalance() {
+		return finalClosingBalance;
+	}
+
+	public void setFinalClosingBalance(FinancialInstrumentQuantity1 finalClosingBalance) {
+		this.finalClosingBalance = finalClosingBalance;
+	}
+
+	public FinancialInstrumentQuantity1 getIntermediaryClosingBalance() {
+		return intermediaryClosingBalance;
+	}
+
+	public void setIntermediaryClosingBalance(FinancialInstrumentQuantity1 intermediaryClosingBalance) {
+		this.intermediaryClosingBalance = intermediaryClosingBalance;
 	}
 }

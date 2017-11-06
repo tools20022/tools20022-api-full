@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#Research
- * CustodianAction1Code.Research}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#mmResearch
+ * CustodianAction1Code.mmResearch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#SendInfo
- * CustodianAction1Code.SendInfo}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#mmSendInfo
+ * CustodianAction1Code.mmSendInfo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#Disagrees
- * CustodianAction1Code.Disagrees}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#mmDisagrees
+ * CustodianAction1Code.mmDisagrees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#NoAction
- * CustodianAction1Code.NoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianAction1Code#mmNoAction
+ * CustodianAction1Code.mmNoAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 * name} = "Research"</li>
 	 * </ul>
 	 */
-	public static final MMCode Research = new MMCode() {
+	public static final MMCode mmResearch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Research";
@@ -110,7 +110,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 * name} = "SendInfo"</li>
 	 * </ul>
 	 */
-	public static final MMCode SendInfo = new MMCode() {
+	public static final MMCode mmSendInfo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendInfo";
@@ -133,7 +133,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 * name} = "Disagrees"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disagrees = new MMCode() {
+	public static final MMCode mmDisagrees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagrees";
@@ -156,7 +156,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 * name} = "NoAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAction = new MMCode() {
+	public static final MMCode mmNoAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
@@ -167,13 +167,13 @@ public class CustodianAction1Code extends CustodianActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RSCH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustodianAction1Code";
 				definition = "Specifies custodian activity codes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianAction1Code.Research, com.tools20022.repository.codeset.CustodianAction1Code.SendInfo,
-						com.tools20022.repository.codeset.CustodianAction1Code.Disagrees, com.tools20022.repository.codeset.CustodianAction1Code.NoAction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianAction1Code.mmResearch, com.tools20022.repository.codeset.CustodianAction1Code.mmSendInfo,
+						com.tools20022.repository.codeset.CustodianAction1Code.mmDisagrees, com.tools20022.repository.codeset.CustodianAction1Code.mmNoAction);
 				trace_lazy = () -> CustodianActionCode.mmObject();
 			}
 		});

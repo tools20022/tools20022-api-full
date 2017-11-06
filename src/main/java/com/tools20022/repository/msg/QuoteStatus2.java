@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.RejectionReason3Code;
 import com.tools20022.repository.entity.Organisation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the status of a quote and if required, the rejection reason, and
@@ -36,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#QuoteStatus
- * QuoteStatus2.QuoteStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#RejectionReason
- * QuoteStatus2.RejectionReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#QuoteSetDetails
- * QuoteStatus2.QuoteSetDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#RelatedParties
- * QuoteStatus2.RelatedParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#mmQuoteStatus
+ * QuoteStatus2.mmQuoteStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#mmRejectionReason
+ * QuoteStatus2.mmRejectionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#mmQuoteSetDetails
+ * QuoteStatus2.mmQuoteSetDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteStatus2#mmRelatedParties
+ * QuoteStatus2.mmRelatedParties}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuoteStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuoteStatus1Code quoteStatus;
 	/**
 	 * Provides information related to the status of a quote.
 	 * <p>
@@ -93,7 +95,7 @@ public class QuoteStatus2 {
 	 * definition} = "Provides information related to the status of a quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
@@ -101,11 +103,12 @@ public class QuoteStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteStatus";
 			definition = "Provides information related to the status of a quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatus1Code.mmObject();
 		}
 	};
+	protected RejectionReason3Code rejectionReason;
 	/**
 	 * Provides information related to the rejection of the quote.
 	 * <p>
@@ -134,7 +137,7 @@ public class QuoteStatus2 {
 	 * "Provides information related to the rejection of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
@@ -142,11 +145,12 @@ public class QuoteStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Provides information related to the rejection of the quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReason3Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuoteSet2> quoteSetDetails;
 	/**
 	 * Provides details about a group of related quotes.
 	 * <p>
@@ -171,7 +175,7 @@ public class QuoteStatus2 {
 	 * definition} = "Provides details about a group of related quotes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuoteSetDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuoteSetDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
@@ -180,10 +184,11 @@ public class QuoteStatus2 {
 			name = "QuoteSetDetails";
 			definition = "Provides details about a group of related quotes.";
 			minOccurs = 0;
-			type_lazy = () -> QuoteSet2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary14> relatedParties;
 	/**
 	 * Parties used for acting parties that applies either to the whole message
 	 * or to individual sides.
@@ -216,32 +221,64 @@ public class QuoteStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
-			type_lazy = () -> Intermediary14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteStatus2.QuoteStatus, com.tools20022.repository.msg.QuoteStatus2.RejectionReason, com.tools20022.repository.msg.QuoteStatus2.QuoteSetDetails,
-						com.tools20022.repository.msg.QuoteStatus2.RelatedParties);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteStatus2.mmQuoteStatus, com.tools20022.repository.msg.QuoteStatus2.mmRejectionReason, com.tools20022.repository.msg.QuoteStatus2.mmQuoteSetDetails,
+						com.tools20022.repository.msg.QuoteStatus2.mmRelatedParties);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteStatus2";
 				definition = "Identifies the status of a quote and if required, the rejection reason, and the parties and the details of the quote.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuoteStatus1Code getQuoteStatus() {
+		return quoteStatus;
+	}
+
+	public void setQuoteStatus(QuoteStatus1Code quoteStatus) {
+		this.quoteStatus = quoteStatus;
+	}
+
+	public RejectionReason3Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReason3Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+
+	public List<QuoteSet2> getQuoteSetDetails() {
+		return quoteSetDetails;
+	}
+
+	public void setQuoteSetDetails(List<com.tools20022.repository.msg.QuoteSet2> quoteSetDetails) {
+		this.quoteSetDetails = quoteSetDetails;
+	}
+
+	public List<Intermediary14> getRelatedParties() {
+		return relatedParties;
+	}
+
+	public void setRelatedParties(List<com.tools20022.repository.msg.Intermediary14> relatedParties) {
+		this.relatedParties = relatedParties;
 	}
 }

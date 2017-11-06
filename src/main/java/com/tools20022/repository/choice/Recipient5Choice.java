@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient5Choice#IssuerAndSerialNumber
- * Recipient5Choice.IssuerAndSerialNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient5Choice#mmIssuerAndSerialNumber
+ * Recipient5Choice.mmIssuerAndSerialNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient5Choice#KeyIdentifier
- * Recipient5Choice.KeyIdentifier}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient5Choice#mmKeyIdentifier
+ * Recipient5Choice.mmKeyIdentifier}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Recipient5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IssuerAndSerialNumber1 issuerAndSerialNumber;
 	/**
 	 * Certificate issuer name and serial number (see ITU X.509).
 	 * <p>
@@ -90,7 +91,7 @@ public class Recipient5Choice {
 	 * "Certificate issuer name and serial number (see ITU X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssuerAndSerialNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuerAndSerialNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient5Choice.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class Recipient5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAndSerialNumber";
 			definition = "Certificate issuer name and serial number (see ITU X.509).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IssuerAndSerialNumber1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IssuerAndSerialNumber1.mmObject();
 		}
 	};
+	protected KEKIdentifier2 keyIdentifier;
 	/**
 	 * Identifier of a cryptographic asymmetric key, previously exchanged
 	 * between initiator and recipient.
@@ -134,11 +136,11 @@ public class Recipient5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Recipient4Choice#KeyIdentifier
-	 * Recipient4Choice.KeyIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient4Choice#mmKeyIdentifier
+	 * Recipient4Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KeyIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient5Choice.mmObject();
 			isDerived = false;
@@ -146,19 +148,19 @@ public class Recipient5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentifier";
 			definition = "Identifier of a cryptographic asymmetric key, previously exchanged between initiator and recipient.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient4Choice.KeyIdentifier;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient4Choice.mmKeyIdentifier;
 			maxOccurs = 1;
-			type_lazy = () -> KEKIdentifier2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> KEKIdentifier2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient5Choice.IssuerAndSerialNumber, com.tools20022.repository.choice.Recipient5Choice.KeyIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient5Choice.mmIssuerAndSerialNumber, com.tools20022.repository.choice.Recipient5Choice.mmKeyIdentifier);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Recipient5Choice";
 				definition = "Identification of a cryptographic asymmetric key.";
@@ -166,5 +168,21 @@ public class Recipient5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IssuerAndSerialNumber1 getIssuerAndSerialNumber() {
+		return issuerAndSerialNumber;
+	}
+
+	public void setIssuerAndSerialNumber(IssuerAndSerialNumber1 issuerAndSerialNumber) {
+		this.issuerAndSerialNumber = issuerAndSerialNumber;
+	}
+
+	public KEKIdentifier2 getKeyIdentifier() {
+		return keyIdentifier;
+	}
+
+	public void setKeyIdentifier(KEKIdentifier2 keyIdentifier) {
+		this.keyIdentifier = keyIdentifier;
 	}
 }

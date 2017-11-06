@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.msg.ProprietaryPrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements identifying the price information related to the underlying
@@ -37,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionPrice1Choice#DealPrice
- * TransactionPrice1Choice.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionPrice1Choice#mmDealPrice
+ * TransactionPrice1Choice.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionPrice1Choice#Proprietary
- * TransactionPrice1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionPrice1Choice#mmProprietary
+ * TransactionPrice1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionPrice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount dealPrice;
 	/**
 	 * Specifies the price of the traded financial instrument. This is the deal
 	 * price of the individual trade transaction. If there is only one trade
@@ -85,8 +87,8 @@ public class TransactionPrice1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +109,21 @@ public class TransactionPrice1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> TransactionPrice1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Specifies the price of the traded financial instrument.\nThis is the deal price of the individual trade transaction. \nIf there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<ProprietaryPrice1> proprietary;
 	/**
 	 * Proprietary price specification of the underlying transaction.
 	 * <p>
@@ -153,32 +156,48 @@ public class TransactionPrice1Choice {
 	 * "Proprietary price specification of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionPrice1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
+			componentContext_lazy = () -> TransactionPrice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary price specification of the underlying transaction.";
 			minOccurs = 1;
-			type_lazy = () -> ProprietaryPrice1.mmObject();
 			isComposite = true;
+			type_lazy = () -> ProprietaryPrice1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionPrice1Choice.DealPrice, com.tools20022.repository.choice.TransactionPrice1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionPrice1Choice.mmDealPrice, com.tools20022.repository.choice.TransactionPrice1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionPrice1Choice";
 				definition = "Set of elements identifying the price information related to the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getDealPrice() {
+		return dealPrice;
+	}
+
+	public void setDealPrice(CurrencyAndAmount dealPrice) {
+		this.dealPrice = dealPrice;
+	}
+
+	public List<ProprietaryPrice1> getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(List<ProprietaryPrice1> proprietary) {
+		this.proprietary = proprietary;
 	}
 }

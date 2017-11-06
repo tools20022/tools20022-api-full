@@ -32,19 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#POIGroup
- * PartyType15Code.POIGroup}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#POISystem
- * PartyType15Code.POISystem}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#SinglePOI
- * PartyType15Code.SinglePOI}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#mmPOIGroup
+ * PartyType15Code.mmPOIGroup}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType15Code#mmPOISystem
+ * PartyType15Code.mmPOISystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType15Code#mmSinglePOI
+ * PartyType15Code.mmSinglePOI}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +76,7 @@ public class PartyType15Code extends PartyTypeCode {
 	 * name} = "POIGroup"</li>
 	 * </ul>
 	 */
-	public static final MMCode POIGroup = new MMCode() {
+	public static final MMCode mmPOIGroup = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIGroup";
@@ -97,7 +99,7 @@ public class PartyType15Code extends PartyTypeCode {
 	 * name} = "POISystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode POISystem = new MMCode() {
+	public static final MMCode mmPOISystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POISystem";
@@ -120,7 +122,7 @@ public class PartyType15Code extends PartyTypeCode {
 	 * name} = "SinglePOI"</li>
 	 * </ul>
 	 */
-	public static final MMCode SinglePOI = new MMCode() {
+	public static final MMCode mmSinglePOI = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SinglePOI";
@@ -131,11 +133,11 @@ public class PartyType15Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyType15Code";
 				definition = "Party involved by the data set.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType15Code.POIGroup, com.tools20022.repository.codeset.PartyType15Code.POISystem, com.tools20022.repository.codeset.PartyType15Code.SinglePOI);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType15Code.mmPOIGroup, com.tools20022.repository.codeset.PartyType15Code.mmPOISystem, com.tools20022.repository.codeset.PartyType15Code.mmSinglePOI);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

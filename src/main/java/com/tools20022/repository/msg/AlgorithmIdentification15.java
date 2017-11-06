@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification15#Algorithm
- * AlgorithmIdentification15.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification15#mmAlgorithm
+ * AlgorithmIdentification15.mmAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification15#Parameter
- * AlgorithmIdentification15.Parameter}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification15#mmParameter
+ * AlgorithmIdentification15.mmParameter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmIdentification15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm12Code algorithm;
 	/**
 	 * Identification of the MAC algorithm.
 	 * <p>
@@ -95,11 +96,11 @@ public class AlgorithmIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#Algorithm
-	 * AlgorithmIdentification10.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#mmAlgorithm
+	 * AlgorithmIdentification10.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification15.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class AlgorithmIdentification15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the MAC algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification10.Algorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification10.mmAlgorithm;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm12Code.mmObject();
 		}
 	};
+	protected Parameter7 parameter;
 	/**
 	 * Parameters associated to the MAC algorithm.
 	 * <p>
@@ -139,11 +141,11 @@ public class AlgorithmIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#Parameter
-	 * AlgorithmIdentification10.Parameter}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#mmParameter
+	 * AlgorithmIdentification10.mmParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Parameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification15.mmObject();
 			isDerived = false;
@@ -151,19 +153,19 @@ public class AlgorithmIdentification15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the MAC algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification10.Parameter;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification10.mmParameter;
 			maxOccurs = 1;
-			type_lazy = () -> Parameter7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Parameter7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification15.Algorithm, com.tools20022.repository.msg.AlgorithmIdentification15.Parameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification15.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification15.mmParameter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification15";
 				definition = "Identification of a cryptographic algorithm and parameters for the MAC computation.";
@@ -171,5 +173,21 @@ public class AlgorithmIdentification15 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm12Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm12Code algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public Parameter7 getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(com.tools20022.repository.msg.Parameter7 parameter) {
+		this.parameter = parameter;
 	}
 }

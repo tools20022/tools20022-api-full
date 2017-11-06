@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Action8#ActionType
- * Action8.ActionType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action8#MessageToPresent
- * Action8.MessageToPresent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action8#mmActionType
+ * Action8.mmActionType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action8#mmMessageToPresent
+ * Action8.mmMessageToPresent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Action8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActionType7Code actionType;
 	/**
 	 * Type of action to be performed by the POI (Point Of Interaction) system.
 	 * <p>
@@ -78,8 +79,8 @@ public class Action8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#ActionType
-	 * CardPaymentAcquiring.ActionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionType
+	 * CardPaymentAcquiring.mmActionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Action8
@@ -100,25 +101,26 @@ public class Action8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Action6#ActionType
-	 * Action6.ActionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Action6#mmActionType
+	 * Action6.mmActionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmActionType;
 			componentContext_lazy = () -> Action8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.ActionType;
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action to be performed by the POI (Point Of Interaction) system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Action6.ActionType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Action6.mmActionType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
+	protected ActionMessage2 messageToPresent;
 	/**
 	 * Message to be displayed to the cardholder or the cashier.
 	 * <p>
@@ -130,8 +132,8 @@ public class Action8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#ActionMessage
-	 * CardPaymentAcquiring.ActionMessage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionMessage
+	 * CardPaymentAcquiring.mmActionMessage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Action8
@@ -151,33 +153,33 @@ public class Action8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Action6#MessageToPresent
-	 * Action6.MessageToPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.Action6#mmMessageToPresent
+	 * Action6.mmMessageToPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageToPresent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageToPresent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> Action8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.ActionMessage;
 			isDerived = false;
 			xmlTag = "MsgToPres";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageToPresent";
 			definition = "Message to be displayed to the cardholder or the cashier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Action6.MessageToPresent;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Action6.mmMessageToPresent;
 			maxOccurs = 1;
-			type_lazy = () -> ActionMessage2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ActionMessage2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Action8.ActionType, com.tools20022.repository.msg.Action8.MessageToPresent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Action8.mmActionType, com.tools20022.repository.msg.Action8.mmMessageToPresent);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Action8";
 				definition = "Set of actions to be performed by the POI (Point Of Interaction) system.";
@@ -185,5 +187,21 @@ public class Action8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActionType7Code getActionType() {
+		return actionType;
+	}
+
+	public void setActionType(ActionType7Code actionType) {
+		this.actionType = actionType;
+	}
+
+	public ActionMessage2 getMessageToPresent() {
+		return messageToPresent;
+	}
+
+	public void setMessageToPresent(com.tools20022.repository.msg.ActionMessage2 messageToPresent) {
+		this.messageToPresent = messageToPresent;
 	}
 }

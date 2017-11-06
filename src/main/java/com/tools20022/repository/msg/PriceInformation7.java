@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#Type
- * PriceInformation7.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#Value
- * PriceInformation7.Value}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#ValueType
- * PriceInformation7.ValueType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#mmType
+ * PriceInformation7.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#mmValue
+ * PriceInformation7.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#mmValueType
+ * PriceInformation7.mmValueType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation7#SourceOfPrice
- * PriceInformation7.SourceOfPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation7#mmSourceOfPrice
+ * PriceInformation7.mmSourceOfPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation7#QuotationDate
- * PriceInformation7.QuotationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation7#mmQuotationDate
+ * PriceInformation7.mmQuotationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TypeOfPrice7Choice type;
 	/**
 	 * Specifies the type of price and information about the price.
 	 * <p>
@@ -83,8 +84,8 @@ public class PriceInformation7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,21 +105,22 @@ public class PriceInformation7 {
 	 * "Specifies the type of price and information about the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> PriceInformation7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of price and information about the price.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TypeOfPrice7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TypeOfPrice7Choice.mmObject();
 		}
 	};
+	protected PriceRateOrAmountOrUnknown1Choice value;
 	/**
 	 * Value of the price, eg, as a currency and value.
 	 * <p>
@@ -151,21 +153,22 @@ public class PriceInformation7 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Value = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PriceInformation7.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
+			componentContext_lazy = () -> PriceInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, eg, as a currency and value.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PriceRateOrAmountOrUnknown1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PriceRateOrAmountOrUnknown1Choice.mmObject();
 		}
 	};
+	protected YieldedOrValueType1Choice valueType;
 	/**
 	 * Type of value in which the price is expressed.
 	 * <p>
@@ -178,8 +181,8 @@ public class PriceInformation7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#TypeOfRate
-	 * SecuritiesPricing.TypeOfRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfRate
+	 * SecuritiesPricing.mmTypeOfRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,21 +201,22 @@ public class PriceInformation7 {
 	 * definition} = "Type of value in which the price is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValueType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValueType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfRate;
 			componentContext_lazy = () -> PriceInformation7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.TypeOfRate;
 			isDerived = false;
 			xmlTag = "ValTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueType";
 			definition = "Type of value in which the price is expressed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> YieldedOrValueType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> YieldedOrValueType1Choice.mmObject();
 		}
 	};
+	protected MarketIdentification10 sourceOfPrice;
 	/**
 	 * Place from which the price was obtained.
 	 * <p>
@@ -224,8 +228,8 @@ public class PriceInformation7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SourceOfPrice#MarketIdentification
-	 * SourceOfPrice.MarketIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SourceOfPrice#mmMarketIdentification
+	 * SourceOfPrice.mmMarketIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -244,21 +248,22 @@ public class PriceInformation7 {
 	 * definition} = "Place from which the price was obtained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SourceOfPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSourceOfPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SourceOfPrice.mmMarketIdentification;
 			componentContext_lazy = () -> PriceInformation7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SourceOfPrice.MarketIdentification;
 			isDerived = false;
 			xmlTag = "SrcOfPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfPrice";
 			definition = "Place from which the price was obtained.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification10.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice quotationDate;
 	/**
 	 * Date on which the price is obtained. With an investment fund, this is as
 	 * stated in the prospectus.
@@ -272,8 +277,8 @@ public class PriceInformation7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#QuotationDate
-	 * SecuritiesPricing.QuotationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmQuotationDate
+	 * SecuritiesPricing.mmQuotationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -294,34 +299,74 @@ public class PriceInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuotationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuotationDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> PriceInformation7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.QuotationDate;
 			isDerived = false;
 			xmlTag = "QtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation7.Type, com.tools20022.repository.msg.PriceInformation7.Value, com.tools20022.repository.msg.PriceInformation7.ValueType,
-						com.tools20022.repository.msg.PriceInformation7.SourceOfPrice, com.tools20022.repository.msg.PriceInformation7.QuotationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation7.mmType, com.tools20022.repository.msg.PriceInformation7.mmValue, com.tools20022.repository.msg.PriceInformation7.mmValueType,
+						com.tools20022.repository.msg.PriceInformation7.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation7.mmQuotationDate);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation7";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TypeOfPrice7Choice getType() {
+		return type;
+	}
+
+	public void setType(TypeOfPrice7Choice type) {
+		this.type = type;
+	}
+
+	public PriceRateOrAmountOrUnknown1Choice getValue() {
+		return value;
+	}
+
+	public void setValue(PriceRateOrAmountOrUnknown1Choice value) {
+		this.value = value;
+	}
+
+	public YieldedOrValueType1Choice getValueType() {
+		return valueType;
+	}
+
+	public void setValueType(YieldedOrValueType1Choice valueType) {
+		this.valueType = valueType;
+	}
+
+	public MarketIdentification10 getSourceOfPrice() {
+		return sourceOfPrice;
+	}
+
+	public void setSourceOfPrice(com.tools20022.repository.msg.MarketIdentification10 sourceOfPrice) {
+		this.sourceOfPrice = sourceOfPrice;
+	}
+
+	public DateAndDateTimeChoice getQuotationDate() {
+		return quotationDate;
+	}
+
+	public void setQuotationDate(DateAndDateTimeChoice quotationDate) {
+		this.quotationDate = quotationDate;
 	}
 }

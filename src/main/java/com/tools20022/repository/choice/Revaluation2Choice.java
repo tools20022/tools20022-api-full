@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#Indicator
- * Revaluation2Choice.Indicator}</li>
+ * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#mmIndicator
+ * Revaluation2Choice.mmIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#Proprietary
- * Revaluation2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Revaluation2Choice#mmProprietary
+ * Revaluation2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Revaluation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator indicator;
 	/**
 	 * Specifies whether the collateral position should be subject to automatic
 	 * revaluation by the account servicer.
@@ -81,8 +82,8 @@ public class Revaluation2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RevaluationIndicator
-	 * SecuritiesFinancing.RevaluationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRevaluationIndicator
+	 * SecuritiesFinancing.mmRevaluationIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class Revaluation2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> Revaluation2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RevaluationIndicator;
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the collateral position should be subject to automatic revaluation by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification38 proprietary;
 	/**
 	 * Reevaluation is determined using a data source scheme.
 	 * <p>
@@ -129,8 +131,8 @@ public class Revaluation2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#RevaluationIndicator
-	 * SecuritiesFinancing.RevaluationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRevaluationIndicator
+	 * SecuritiesFinancing.mmRevaluationIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,33 +151,49 @@ public class Revaluation2Choice {
 	 * definition} = "Reevaluation is determined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> Revaluation2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.RevaluationIndicator;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reevaluation is determined using a data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification38.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification38.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Revaluation2Choice.Indicator, com.tools20022.repository.choice.Revaluation2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Revaluation2Choice.mmIndicator, com.tools20022.repository.choice.Revaluation2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Revaluation2Choice";
 				definition = "Choice between an indicator or a data source scheme to determine the revaluation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(YesNoIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public GenericIdentification38 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

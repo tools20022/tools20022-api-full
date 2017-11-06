@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a transfer out transaction.
@@ -37,20 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferOut17#RequestedTransferDate
- * TransferOut17.RequestedTransferDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut17#MasterReference
- * TransferOut17.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut17#mmRequestedTransferDate
+ * TransferOut17.mmRequestedTransferDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferOut17#TransferAndReferences
- * TransferOut17.TransferAndReferences}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut17#AccountDetails
- * TransferOut17.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut17#mmMasterReference
+ * TransferOut17.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferOut17#SettlementDetails
- * TransferOut17.SettlementDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut17#Extension
- * TransferOut17.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut17#mmTransferAndReferences
+ * TransferOut17.mmTransferAndReferences}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut17#mmAccountDetails
+ * TransferOut17.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut17#mmSettlementDetails
+ * TransferOut17.mmSettlementDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut17#mmExtension
+ * TransferOut17.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOut17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat1Choice requestedTransferDate;
 	/**
 	 * Requested date at which the instructing party places the transfer
 	 * instruction.
@@ -91,8 +94,8 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,25 +116,26 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#RequestedTransferDate
-	 * TransferOut15.RequestedTransferDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmRequestedTransferDate
+	 * TransferOut15.mmRequestedTransferDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedTransferDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedTransferDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> TransferOut17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "ReqdTrfDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTransferDate";
 			definition = "Requested date at which the instructing party places the transfer instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.RequestedTransferDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.mmRequestedTransferDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat1Choice.mmObject();
 		}
 	};
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual transfers as
 	 * assigned by the instructing party. This identifier links the individual
@@ -146,8 +150,8 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,25 +172,26 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#MasterReference
-	 * TransferOut15.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmMasterReference
+	 * TransferOut15.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> TransferOut17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransferOut18> transferAndReferences;
 	/**
 	 * Details of the transfer and cancellation.
 	 * <p>
@@ -218,25 +223,26 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#TransferAndReferences
-	 * TransferOut15.TransferAndReferences}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmTransferAndReferences
+	 * TransferOut15.mmTransferAndReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferAndReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferAndReferences = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut17.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
+			componentContext_lazy = () -> TransferOut17.mmObject();
 			isDerived = false;
 			xmlTag = "TrfAndRefs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAndReferences";
 			definition = "Details of the transfer and cancellation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.TransferAndReferences;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.mmTransferAndReferences;
 			minOccurs = 1;
-			type_lazy = () -> TransferOut18.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransferOut18.mmObject();
 		}
 	};
+	protected InvestmentAccount54 accountDetails;
 	/**
 	 * Information related to the account from which the financial instrument is
 	 * to be withdrawn.
@@ -271,26 +277,27 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#AccountDetails
-	 * TransferOut15.AccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmAccountDetails
+	 * TransferOut15.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut17.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> TransferOut17.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument is to be withdrawn.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.AccountDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.mmAccountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount54.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 		}
 	};
+	protected ReceiveInformation16 settlementDetails;
 	/**
 	 * Information related to the receiving side of the transfer.
 	 * <p>
@@ -302,8 +309,8 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#RelatedSettlement
-	 * SecuritiesTransfer.RelatedSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmRelatedSettlement
+	 * SecuritiesTransfer.mmRelatedSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -323,26 +330,27 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#SettlementDetails
-	 * TransferOut15.SettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmSettlementDetails
+	 * TransferOut15.mmSettlementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> TransferOut17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.RelatedSettlement;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.SettlementDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.mmSettlementDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ReceiveInformation16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReceiveInformation16.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -371,11 +379,11 @@ public class TransferOut17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#Extension
-	 * TransferOut15.Extension}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmExtension
+	 * TransferOut15.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransferOut17.mmObject();
 			isDerived = false;
@@ -383,21 +391,21 @@ public class TransferOut17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.Extension;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut15.mmExtension;
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.RequestedTransferDate, com.tools20022.repository.msg.TransferOut17.MasterReference,
-						com.tools20022.repository.msg.TransferOut17.TransferAndReferences, com.tools20022.repository.msg.TransferOut17.AccountDetails, com.tools20022.repository.msg.TransferOut17.SettlementDetails,
-						com.tools20022.repository.msg.TransferOut17.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.mmRequestedTransferDate, com.tools20022.repository.msg.TransferOut17.mmMasterReference,
+						com.tools20022.repository.msg.TransferOut17.mmTransferAndReferences, com.tools20022.repository.msg.TransferOut17.mmAccountDetails, com.tools20022.repository.msg.TransferOut17.mmSettlementDetails,
+						com.tools20022.repository.msg.TransferOut17.mmExtension);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferOut17";
 				definition = "Information about a transfer out transaction.";
@@ -405,5 +413,53 @@ public class TransferOut17 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat1Choice getRequestedTransferDate() {
+		return requestedTransferDate;
+	}
+
+	public void setRequestedTransferDate(DateFormat1Choice requestedTransferDate) {
+		this.requestedTransferDate = requestedTransferDate;
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public List<TransferOut18> getTransferAndReferences() {
+		return transferAndReferences;
+	}
+
+	public void setTransferAndReferences(List<com.tools20022.repository.msg.TransferOut18> transferAndReferences) {
+		this.transferAndReferences = transferAndReferences;
+	}
+
+	public InvestmentAccount54 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(com.tools20022.repository.msg.InvestmentAccount54 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public ReceiveInformation16 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(com.tools20022.repository.msg.ReceiveInformation16 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

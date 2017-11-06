@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies trades linked to treasury operations such as the exchange of
@@ -39,34 +40,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#TreasuryTradeSettlementStatus
- * TreasuryTrade.TreasuryTradeSettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasuryTradeSettlementStatus
+ * TreasuryTrade.mmTreasuryTradeSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#InformationPartyRole
- * TreasuryTrade.InformationPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmInformationPartyRole
+ * TreasuryTrade.mmInformationPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#TreasurySettlementPartyRole
- * TreasuryTrade.TreasurySettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TreasuryTrade#PartyRole
- * TreasuryTrade.PartyRole}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#TreasuryTrade
- * InformationPartyRole.TreasuryTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TreasuryTrade
- * TreasuryTradeSettlementStatus.TreasuryTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole#TreasuryTrade
- * TreasuryTradePartyRole.TreasuryTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasurySettlementPartyRole#TreasuryTrade
- * TreasurySettlementPartyRole.TreasuryTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasurySettlementPartyRole
+ * TreasuryTrade.mmTreasurySettlementPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasuryTrade#mmPartyRole
+ * TreasuryTrade.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -78,6 +61,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * ForeignExchangeSwap}</li>
  * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption
  * CurrencyOption}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmTreasuryTrade
+ * InformationPartyRole.mmTreasuryTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTreasuryTrade
+ * TreasuryTradeSettlementStatus.mmTreasuryTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole#mmTreasuryTrade
+ * TreasuryTradePartyRole.mmTreasuryTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasurySettlementPartyRole#mmTreasuryTrade
+ * TreasurySettlementPartyRole.mmTreasuryTrade}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -129,8 +130,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -146,6 +147,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TreasuryTrade extends Trade {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.TreasuryTradeSettlementStatus> treasuryTradeSettlementStatus;
 	/**
 	 * Specifies the settlement status of a treasury trade.
 	 * <p>
@@ -154,8 +156,8 @@ public class TreasuryTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TreasuryTrade
-	 * TreasuryTradeSettlementStatus.TreasuryTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTreasuryTrade
+	 * TreasuryTradeSettlementStatus.mmTreasuryTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -164,21 +166,21 @@ public class TreasuryTrade extends Trade {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SplitTradeDetails1#StatusDetails
-	 * SplitTradeDetails1.StatusDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#StatusDetails
-	 * SplitTradeDetails3.StatusDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade TreasuryTrade}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SplitTradeDetails1#mmStatusDetails
+	 * SplitTradeDetails1.mmStatusDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SplitTradeDetails3#mmStatusDetails
+	 * SplitTradeDetails3.mmStatusDetails}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -191,20 +193,21 @@ public class TreasuryTrade extends Trade {
 	 * definition} = "Specifies the settlement status of a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TreasuryTradeSettlementStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTreasuryTradeSettlementStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SplitTradeDetails1.StatusDetails, com.tools20022.repository.msg.SplitTradeDetails3.StatusDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SplitTradeDetails1.mmStatusDetails, com.tools20022.repository.msg.SplitTradeDetails3.mmStatusDetails);
 			elementContext_lazy = () -> TreasuryTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTradeSettlementStatus";
 			definition = "Specifies the settlement status of a treasury trade.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TreasuryTrade;
+			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTreasuryTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmObject();
 		}
 	};
+	protected InformationPartyRole informationPartyRole;
 	/**
 	 * Party which provides prices, interest rates or exchange rates.
 	 * <p>
@@ -213,8 +216,8 @@ public class TreasuryTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#TreasuryTrade
-	 * InformationPartyRole.TreasuryTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmTreasuryTrade
+	 * InformationPartyRole.mmTreasuryTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -240,20 +243,21 @@ public class TreasuryTrade extends Trade {
 	 * "Party which provides prices, interest rates or exchange rates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InformationPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInformationPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TreasuryTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InformationPartyRole";
 			definition = "Party which provides prices, interest rates or exchange rates.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.TreasuryTrade;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmTreasuryTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.TreasurySettlementPartyRole> treasurySettlementPartyRole;
 	/**
 	 * Role played by a party in the context of the settlement of a treasury
 	 * trade.
@@ -263,8 +267,8 @@ public class TreasuryTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TreasurySettlementPartyRole#TreasuryTrade
-	 * TreasurySettlementPartyRole.TreasuryTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasurySettlementPartyRole#mmTreasuryTrade
+	 * TreasurySettlementPartyRole.mmTreasuryTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -291,7 +295,7 @@ public class TreasuryTrade extends Trade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TreasurySettlementPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTreasurySettlementPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TreasuryTrade.mmObject();
 			isDerived = false;
@@ -299,11 +303,12 @@ public class TreasuryTrade extends Trade {
 			name = "TreasurySettlementPartyRole";
 			definition = "Role played by a party in the context of the settlement of a treasury trade.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.TreasurySettlementPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TreasurySettlementPartyRole.TreasuryTrade;
+			opposite_lazy = () -> com.tools20022.repository.entity.TreasurySettlementPartyRole.mmTreasuryTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TreasurySettlementPartyRole.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.TreasuryTradePartyRole> partyRole;
 	/**
 	 * Specifies each role played by a party in a treasury trade.
 	 * <p>
@@ -312,8 +317,8 @@ public class TreasuryTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole#TreasuryTrade
-	 * TreasuryTradePartyRole.TreasuryTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole#mmTreasuryTrade
+	 * TreasuryTradePartyRole.mmTreasuryTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -339,7 +344,7 @@ public class TreasuryTrade extends Trade {
 	 * "Specifies each role played by a party in a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TreasuryTrade.mmObject();
 			isDerived = false;
@@ -347,30 +352,62 @@ public class TreasuryTrade extends Trade {
 			name = "PartyRole";
 			definition = "Specifies each role played by a party in a treasury trade.";
 			minOccurs = 0;
-			type_lazy = () -> TreasuryTradePartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTradePartyRole.TreasuryTrade;
+			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTradePartyRole.mmTreasuryTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TreasuryTradePartyRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TreasuryTrade";
 				definition = "Specifies trades linked to treasury operations such as the exchange of currencies, the lending of cash amounts and the related derivatives trades (options and non deliverable trades).";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.TreasuryTrade, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TreasuryTrade,
-						com.tools20022.repository.entity.TreasuryTradePartyRole.TreasuryTrade, com.tools20022.repository.entity.TreasurySettlementPartyRole.TreasuryTrade);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.mmTreasuryTrade, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTreasuryTrade,
+						com.tools20022.repository.entity.TreasuryTradePartyRole.mmTreasuryTrade, com.tools20022.repository.entity.TreasurySettlementPartyRole.mmTreasuryTrade);
 				subType_lazy = () -> Arrays.asList(ForeignExchangeTrade.mmObject(), ForeignExchangeSwap.mmObject(), CurrencyOption.mmObject());
 				superType_lazy = () -> Trade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTrade.TreasuryTradeSettlementStatus, com.tools20022.repository.entity.TreasuryTrade.InformationPartyRole,
-						com.tools20022.repository.entity.TreasuryTrade.TreasurySettlementPartyRole, com.tools20022.repository.entity.TreasuryTrade.PartyRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTrade.mmTreasuryTradeSettlementStatus, com.tools20022.repository.entity.TreasuryTrade.mmInformationPartyRole,
+						com.tools20022.repository.entity.TreasuryTrade.mmTreasurySettlementPartyRole, com.tools20022.repository.entity.TreasuryTrade.mmPartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(TradeAgreement2.mmObject(), TradeAgreement4.mmObject(), TradeAgreement8.mmObject(), GeneralInformation4.mmObject(), TradeAgreement1.mmObject(), TradeAgreement3.mmObject(),
 						TradeAgreement7.mmObject(), TradeAgreement5.mmObject(), TradeAgreement9.mmObject(), SplitTradeDetails1.mmObject(), TradeAgreement11.mmObject(), TradeAgreement12.mmObject(), TradeAgreement10.mmObject(),
 						Trade2.mmObject(), Trade1.mmObject(), TreasuryProfile1.mmObject(), GeneralInformation5.mmObject(), TradeAgreement15.mmObject(), TradeAgreement14.mmObject(), SplitTradeDetails3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<TreasuryTradeSettlementStatus> getTreasuryTradeSettlementStatus() {
+		return treasuryTradeSettlementStatus;
+	}
+
+	public void setTreasuryTradeSettlementStatus(List<com.tools20022.repository.entity.TreasuryTradeSettlementStatus> treasuryTradeSettlementStatus) {
+		this.treasuryTradeSettlementStatus = treasuryTradeSettlementStatus;
+	}
+
+	public InformationPartyRole getInformationPartyRole() {
+		return informationPartyRole;
+	}
+
+	public void setInformationPartyRole(com.tools20022.repository.entity.InformationPartyRole informationPartyRole) {
+		this.informationPartyRole = informationPartyRole;
+	}
+
+	public List<TreasurySettlementPartyRole> getTreasurySettlementPartyRole() {
+		return treasurySettlementPartyRole;
+	}
+
+	public void setTreasurySettlementPartyRole(List<com.tools20022.repository.entity.TreasurySettlementPartyRole> treasurySettlementPartyRole) {
+		this.treasurySettlementPartyRole = treasurySettlementPartyRole;
+	}
+
+	public List<TreasuryTradePartyRole> getPartyRole() {
+		return partyRole;
+	}
+
+	public void setPartyRole(List<com.tools20022.repository.entity.TreasuryTradePartyRole> partyRole) {
+		this.partyRole = partyRole;
 	}
 }

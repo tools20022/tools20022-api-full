@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.KYCCheckType1Choice#Code
- * KYCCheckType1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.KYCCheckType1Choice#mmCode
+ * KYCCheckType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.KYCCheckType1Choice#Proprietary
- * KYCCheckType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.KYCCheckType1Choice#mmProprietary
+ * KYCCheckType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class KYCCheckType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected KnowYourCustomerCheckType1Code code;
 	/**
 	 * Type of Know Your Customer (KYC) check type expressed as a code.
 	 * <p>
@@ -75,8 +76,8 @@ public class KYCCheckType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile#KnowYourCustomerCheckType
-	 * PersonProfile.KnowYourCustomerCheckType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile#mmKnowYourCustomerCheckType
+	 * PersonProfile.mmKnowYourCustomerCheckType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class KYCCheckType1Choice {
 	 * "Type of Know Your Customer (KYC) check type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmKnowYourCustomerCheckType;
 			componentContext_lazy = () -> KYCCheckType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.KnowYourCustomerCheckType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of Know Your Customer (KYC) check type expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> KnowYourCustomerCheckType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Type of Know Your Customer (KYC) check type expressed as a proprietary
 	 * code.
@@ -123,8 +125,8 @@ public class KYCCheckType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile#KnowYourCustomerCheckType
-	 * PersonProfile.KnowYourCustomerCheckType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile#mmKnowYourCustomerCheckType
+	 * PersonProfile.mmKnowYourCustomerCheckType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,32 +147,48 @@ public class KYCCheckType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmKnowYourCustomerCheckType;
 			componentContext_lazy = () -> KYCCheckType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.KnowYourCustomerCheckType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of Know Your Customer (KYC) check type expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.KYCCheckType1Choice.Code, com.tools20022.repository.choice.KYCCheckType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.KYCCheckType1Choice.mmCode, com.tools20022.repository.choice.KYCCheckType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "KYCCheckType1Choice";
 				definition = "Choice of formats for the specification of the Know Your Customer (KYC) check type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public KnowYourCustomerCheckType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(KnowYourCustomerCheckType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

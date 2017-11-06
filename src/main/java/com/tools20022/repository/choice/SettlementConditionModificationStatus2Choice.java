@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice#Code
- * SettlementConditionModificationStatus2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice#mmCode
+ * SettlementConditionModificationStatus2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice#Proprietary
- * SettlementConditionModificationStatus2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice#mmProprietary
+ * SettlementConditionModificationStatus2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementConditionModificationStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementConditionModificationStatus1Code code;
 	/**
 	 * Provides the status of the securities settlement condition modification
 	 * request.
@@ -77,8 +78,8 @@ public class SettlementConditionModificationStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#SettlementConditionModificationStatus
-	 * SecuritiesTradeStatus.SettlementConditionModificationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmSettlementConditionModificationStatus
+	 * SecuritiesTradeStatus.mmSettlementConditionModificationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class SettlementConditionModificationStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
 			componentContext_lazy = () -> SettlementConditionModificationStatus2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.SettlementConditionModificationStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of the securities settlement condition modification request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Provides the status of the securities settlement condition modification
 	 * request.
@@ -143,7 +145,7 @@ public class SettlementConditionModificationStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementConditionModificationStatus2Choice.mmObject();
 			isDerived = false;
@@ -151,24 +153,40 @@ public class SettlementConditionModificationStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of the securities settlement condition modification request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice.Code, com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice.mmCode, com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationStatus2Choice";
 				definition = "Choice of processing change command status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementConditionModificationStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettlementConditionModificationStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

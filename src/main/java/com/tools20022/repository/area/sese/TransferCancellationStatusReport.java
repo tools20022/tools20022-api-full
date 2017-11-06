@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CancellationStatusAndReason;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -61,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#RelatedReferenceOrOtherReferenceRule
- * TransferCancellationStatusReport.RelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmRelatedReferenceOrOtherReferenceRule
+ * TransferCancellationStatusReport.mmRelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -72,21 +73,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#RelatedReference
- * TransferCancellationStatusReport.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmRelatedReference
+ * TransferCancellationStatusReport.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#OtherReference
- * TransferCancellationStatusReport.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmOtherReference
+ * TransferCancellationStatusReport.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#StatusReport
- * TransferCancellationStatusReport.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmStatusReport
+ * TransferCancellationStatusReport.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#identifier
- * TransferCancellationStatusReport.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,11 +120,11 @@ public class TransferCancellationStatusReport {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#RelatedReference
-	 * TransferCancellationStatusReport.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmRelatedReference
+	 * TransferCancellationStatusReport.mmRelatedReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#OtherReference
-	 * TransferCancellationStatusReport.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmOtherReference
+	 * TransferCancellationStatusReport.mmOtherReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -145,16 +144,17 @@ public class TransferCancellationStatusReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "If OtherReference is not present, then RelatedReference is mandatory. If OtherReference is present, then RelatedReference is not allowed.";
 			messageDefinition_lazy = () -> TransferCancellationStatusReport.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays
-					.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.RelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReport.OtherReference);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmRelatedReference,
+					com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmOtherReference);
 		}
 	};
+	protected List<AdditionalReference2> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -179,17 +179,18 @@ public class TransferCancellationStatusReport {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 1;
 			maxOccurs = 2;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 otherReference;
 	/**
 	 * Reference to the linked message sent in a proprietary way or the
 	 * reference of a system.
@@ -216,17 +217,18 @@ public class TransferCancellationStatusReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to the linked message sent in a proprietary way or the reference of a system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected CancellationStatusAndReason statusReport;
 	/**
 	 * Status of the transfer cancellation instruction.
 	 * <p>
@@ -250,42 +252,15 @@ public class TransferCancellationStatusReport {
 	 * definition} = "Status of the transfer cancellation instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
 			definition = "Status of the transfer cancellation instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CancellationStatusAndReason.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "010";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -297,16 +272,47 @@ public class TransferCancellationStatusReport {
 				definition = "Scope\r\nThe TransferCancellationStatusReport message is sent by an executing party to the instructing party.\r\nThe message gives the status of a transfer cancellation instruction that was previously sent by the instructing party.\r\nUsage\r\nThe TransferCancellationStatusReport message is sent by an executing party to the instructing party. The message can be used to report that either\r\n- the cancellation has been acted upon or\r\n- the cancellation is rejected.\r\nIn both cases, the reason must be specified using either a code or unstructured information.";
 				nextVersions_lazy = () -> Arrays.asList(TransferCancellationStatusReportV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.RelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmRelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "sese.010.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.010.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.RelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReport.OtherReference,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReport.StatusReport);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferCancellationStatusReport.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmRelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmOtherReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmStatusReport);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "010";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AdditionalReference2> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference2> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public AdditionalReference2 getOtherReference() {
+		return otherReference;
+	}
+
+	public void setOtherReference(AdditionalReference2 otherReference) {
+		this.otherReference = otherReference;
+	}
+
+	public CancellationStatusAndReason getStatusReport() {
+		return statusReport;
+	}
+
+	public void setStatusReport(CancellationStatusAndReason statusReport) {
+		this.statusReport = statusReport;
 	}
 }

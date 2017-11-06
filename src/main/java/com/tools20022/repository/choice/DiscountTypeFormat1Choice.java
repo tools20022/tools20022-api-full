@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#Code
- * DiscountTypeFormat1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#mmCode
+ * DiscountTypeFormat1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#Proprietary
- * DiscountTypeFormat1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.DiscountTypeFormat1Choice#mmProprietary
+ * DiscountTypeFormat1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DiscountTypeFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DiscountType1Code code;
 	/**
 	 * Standard code to specify the type of discount.
 	 * <p>
@@ -78,8 +79,8 @@ public class DiscountTypeFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountType
-	 * Discount.DiscountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountType
+	 * Discount.mmDiscountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class DiscountTypeFormat1Choice {
 	 * definition} = "Standard code to specify the type of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountType;
 			componentContext_lazy = () -> DiscountTypeFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of discount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DiscountType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code for specifying the type of discount.
 	 * <p>
@@ -125,8 +127,8 @@ public class DiscountTypeFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountType
-	 * Discount.DiscountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountType
+	 * Discount.mmDiscountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class DiscountTypeFormat1Choice {
 	 * definition} = "Proprietary code for specifying the type of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountType;
 			componentContext_lazy = () -> DiscountTypeFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code for specifying the type of discount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class DiscountTypeFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountTypeFormat1Choice.Code, com.tools20022.repository.choice.DiscountTypeFormat1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmCode, com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmProprietary);
 				trace_lazy = () -> Discount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DiscountTypeFormat1Choice";
 				definition = "Choice between a standard code or a proprietary code for specifying the type of discount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DiscountType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(DiscountType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

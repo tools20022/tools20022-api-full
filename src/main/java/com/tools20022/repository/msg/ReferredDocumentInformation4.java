@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the documents referred to in the remittance information.
@@ -36,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#Type
- * ReferredDocumentInformation4.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#mmType
+ * ReferredDocumentInformation4.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#Number
- * ReferredDocumentInformation4.Number}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#mmNumber
+ * ReferredDocumentInformation4.mmNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#RelatedDate
- * ReferredDocumentInformation4.RelatedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#mmRelatedDate
+ * ReferredDocumentInformation4.mmRelatedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#LineDetails
- * ReferredDocumentInformation4.LineDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#mmLineDetails
+ * ReferredDocumentInformation4.mmLineDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReferredDocumentInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReferredDocumentType2 type;
 	/**
 	 * Specifies the type of referred document.
 	 * <p>
@@ -85,8 +87,8 @@ public class ReferredDocumentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Type Document.Type}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmType
+	 * Document.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,26 +108,27 @@ public class ReferredDocumentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation3#Type
-	 * ReferredDocumentInformation3.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation3#mmType
+	 * ReferredDocumentInformation3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
 			componentContext_lazy = () -> ReferredDocumentInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.Type;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmType;
 			maxOccurs = 1;
-			type_lazy = () -> ReferredDocumentType2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType2.mmObject();
 		}
 	};
+	protected Max35Text number;
 	/**
 	 * Unique and unambiguous identification of the referred document.
 	 * <p>
@@ -155,11 +158,11 @@ public class ReferredDocumentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation3#Number
-	 * ReferredDocumentInformation3.Number}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation3#mmNumber
+	 * ReferredDocumentInformation3.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReferredDocumentInformation4.mmObject();
 			isDerived = false;
@@ -167,12 +170,13 @@ public class ReferredDocumentInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identification of the referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.Number;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate relatedDate;
 	/**
 	 * Date associated with the referred document.
 	 * <p>
@@ -185,8 +189,8 @@ public class ReferredDocumentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,25 +210,26 @@ public class ReferredDocumentInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation3#RelatedDate
-	 * ReferredDocumentInformation3.RelatedDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation3#mmRelatedDate
+	 * ReferredDocumentInformation3.mmRelatedDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> ReferredDocumentInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "RltdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDate";
 			definition = "Date associated with the referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.RelatedDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmRelatedDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DocumentLineInformation1> lineDetails;
 	/**
 	 * Set of elements used to provide the content of the referred document
 	 * line.
@@ -259,28 +264,28 @@ public class ReferredDocumentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LineDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLineDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReferredDocumentInformation4.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> ReferredDocumentInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "LineDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineDetails";
 			definition = "Set of elements used to provide the content of the referred document line.";
 			minOccurs = 0;
-			type_lazy = () -> DocumentLineInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentLineInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentInformation4.Type, com.tools20022.repository.msg.ReferredDocumentInformation4.Number,
-						com.tools20022.repository.msg.ReferredDocumentInformation4.RelatedDate, com.tools20022.repository.msg.ReferredDocumentInformation4.LineDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentInformation4.mmType, com.tools20022.repository.msg.ReferredDocumentInformation4.mmNumber,
+						com.tools20022.repository.msg.ReferredDocumentInformation4.mmRelatedDate, com.tools20022.repository.msg.ReferredDocumentInformation4.mmLineDetails);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReferredDocumentInformation4";
 				definition = "Identifies the documents referred to in the remittance information.";
@@ -288,5 +293,37 @@ public class ReferredDocumentInformation4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReferredDocumentType2 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.ReferredDocumentType2 type) {
+		this.type = type;
+	}
+
+	public Max35Text getNumber() {
+		return number;
+	}
+
+	public void setNumber(Max35Text number) {
+		this.number = number;
+	}
+
+	public ISODate getRelatedDate() {
+		return relatedDate;
+	}
+
+	public void setRelatedDate(ISODate relatedDate) {
+		this.relatedDate = relatedDate;
+	}
+
+	public List<DocumentLineInformation1> getLineDetails() {
+		return lineDetails;
+	}
+
+	public void setLineDetails(List<com.tools20022.repository.msg.DocumentLineInformation1> lineDetails) {
+		this.lineDetails = lineDetails;
 	}
 }

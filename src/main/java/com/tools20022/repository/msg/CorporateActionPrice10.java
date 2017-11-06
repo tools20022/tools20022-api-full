@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice10#IndicativeOrMarketPrice
- * CorporateActionPrice10.IndicativeOrMarketPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice10#mmIndicativeOrMarketPrice
+ * CorporateActionPrice10.mmIndicativeOrMarketPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice10#CashInLieuOfSharePrice
- * CorporateActionPrice10.CashInLieuOfSharePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice10#mmCashInLieuOfSharePrice
+ * CorporateActionPrice10.mmCashInLieuOfSharePrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPrice10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndicativeOrMarketPrice1Choice indicativeOrMarketPrice;
 	/**
 	 * Indicates whether the price is an indicative price or a market price.
 	 * <p>
@@ -97,21 +98,22 @@ public class CorporateActionPrice10 {
 	 * "Indicates whether the price is an indicative price or a market price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndicativeOrMarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionPrice10.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
+			componentContext_lazy = () -> CorporateActionPrice10.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvOrMktPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeOrMarketPrice";
 			definition = "Indicates whether the price is an indicative price or a market price.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IndicativeOrMarketPrice1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> IndicativeOrMarketPrice1Choice.mmObject();
 		}
 	};
+	protected PriceFormat11Choice cashInLieuOfSharePrice;
 	/**
 	 * Cash disbursement in lieu of equities; usually in lieu of fractional
 	 * quantity.
@@ -126,8 +128,8 @@ public class CorporateActionPrice10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#CashInLieuOfSharePrice
-	 * CorporateActionPrice.CashInLieuOfSharePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
+	 * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class CorporateActionPrice10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashInLieuOfSharePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashInLieuOfSharePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> CorporateActionPrice10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.CashInLieuOfSharePrice;
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat11Choice.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class CorporateActionPrice10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice10.IndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice10.CashInLieuOfSharePrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice10.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice10.mmCashInLieuOfSharePrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice10";
 				definition = "Specifies prices related to a corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndicativeOrMarketPrice1Choice getIndicativeOrMarketPrice() {
+		return indicativeOrMarketPrice;
+	}
+
+	public void setIndicativeOrMarketPrice(IndicativeOrMarketPrice1Choice indicativeOrMarketPrice) {
+		this.indicativeOrMarketPrice = indicativeOrMarketPrice;
+	}
+
+	public PriceFormat11Choice getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice;
+	}
+
+	public void setCashInLieuOfSharePrice(PriceFormat11Choice cashInLieuOfSharePrice) {
+		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 }

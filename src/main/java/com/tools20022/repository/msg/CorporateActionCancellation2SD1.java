@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation2SD1#PlaceAndName
- * CorporateActionCancellation2SD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation2SD1#mmPlaceAndName
+ * CorporateActionCancellation2SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation2SD1#LocalLanguageCancellationReason
- * CorporateActionCancellation2SD1.LocalLanguageCancellationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation2SD1#mmLocalLanguageCancellationReason
+ * CorporateActionCancellation2SD1.mmLocalLanguageCancellationReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionCancellation2SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -97,7 +98,7 @@ public class CorporateActionCancellation2SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellation2SD1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class CorporateActionCancellation2SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max450Text localLanguageCancellationReason;
 	/**
 	 * Cancellation reason information in the local language.
 	 * <p>
@@ -122,8 +124,8 @@ public class CorporateActionCancellation2SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#CorporateActionCancellationReason
-	 * CorporateActionStatusReason.CorporateActionCancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmCorporateActionCancellationReason
+	 * CorporateActionStatusReason.mmCorporateActionCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +144,17 @@ public class CorporateActionCancellation2SD1 {
 	 * definition} = "Cancellation reason information in the local language."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalLanguageCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalLanguageCancellationReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmCorporateActionCancellationReason;
 			componentContext_lazy = () -> CorporateActionCancellation2SD1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.CorporateActionCancellationReason;
 			isDerived = false;
 			xmlTag = "LclLangCxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalLanguageCancellationReason";
 			definition = "Cancellation reason information in the local language.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max450Text.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class CorporateActionCancellation2SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellation2SD1.PlaceAndName, com.tools20022.repository.msg.CorporateActionCancellation2SD1.LocalLanguageCancellationReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellation2SD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionCancellation2SD1.mmLocalLanguageCancellationReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionCancellation2SD1";
 				definition = "Extension to corporate action event cancellation status and reason.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max450Text getLocalLanguageCancellationReason() {
+		return localLanguageCancellationReason;
+	}
+
+	public void setLocalLanguageCancellationReason(Max450Text localLanguageCancellationReason) {
+		this.localLanguageCancellationReason = localLanguageCancellationReason;
 	}
 }

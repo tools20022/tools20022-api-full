@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code#Unit
- * OrderQuantityType3Code.Unit}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code#mmUnit
+ * OrderQuantityType3Code.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code#Amount
- * OrderQuantityType3Code.Amount}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code#mmAmount
+ * OrderQuantityType3Code.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code#UnitsOfMeasurePerTimeUnit
- * OrderQuantityType3Code.UnitsOfMeasurePerTimeUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityType3Code#mmUnitsOfMeasurePerTimeUnit
+ * OrderQuantityType3Code.mmUnitsOfMeasurePerTimeUnit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class OrderQuantityType3Code extends OrderQuantityTypeCode {
 	 * name} = "Unit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unit = new MMCode() {
+	public static final MMCode mmUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
@@ -110,7 +110,7 @@ public class OrderQuantityType3Code extends OrderQuantityTypeCode {
 	 * name} = "Amount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Amount = new MMCode() {
+	public static final MMCode mmAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
@@ -133,7 +133,7 @@ public class OrderQuantityType3Code extends OrderQuantityTypeCode {
 	 * name} = "UnitsOfMeasurePerTimeUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsOfMeasurePerTimeUnit = new MMCode() {
+	public static final MMCode mmUnitsOfMeasurePerTimeUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsOfMeasurePerTimeUnit";
@@ -144,13 +144,13 @@ public class OrderQuantityType3Code extends OrderQuantityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderQuantityType3Code";
 				definition = "Specifies how the order is placed, for example by quantity of units or by amount of money.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderQuantityType3Code.Unit, com.tools20022.repository.codeset.OrderQuantityType3Code.Amount,
-						com.tools20022.repository.codeset.OrderQuantityType3Code.UnitsOfMeasurePerTimeUnit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderQuantityType3Code.mmUnit, com.tools20022.repository.codeset.OrderQuantityType3Code.mmAmount,
+						com.tools20022.repository.codeset.OrderQuantityType3Code.mmUnitsOfMeasurePerTimeUnit);
 				trace_lazy = () -> OrderQuantityTypeCode.mmObject();
 			}
 		});

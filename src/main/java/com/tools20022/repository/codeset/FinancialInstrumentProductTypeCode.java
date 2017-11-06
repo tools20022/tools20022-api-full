@@ -30,260 +30,260 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#TermLoan
- * FinancialInstrumentProductTypeCode.TermLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmTermLoan
+ * FinancialInstrumentProductTypeCode.mmTermLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#RevolverLoan
- * FinancialInstrumentProductTypeCode.RevolverLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmRevolverLoan
+ * FinancialInstrumentProductTypeCode.mmRevolverLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#RevolverTermLoan
- * FinancialInstrumentProductTypeCode.RevolverTermLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmRevolverTermLoan
+ * FinancialInstrumentProductTypeCode.mmRevolverTermLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#BridgeLoan
- * FinancialInstrumentProductTypeCode.BridgeLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmBridgeLoan
+ * FinancialInstrumentProductTypeCode.mmBridgeLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#LetterOfCredit
- * FinancialInstrumentProductTypeCode.LetterOfCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmLetterOfCredit
+ * FinancialInstrumentProductTypeCode.mmLetterOfCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#SwingLineFacilityLoan
- * FinancialInstrumentProductTypeCode.SwingLineFacilityLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmSwingLineFacilityLoan
+ * FinancialInstrumentProductTypeCode.mmSwingLineFacilityLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#DebtorInPossession
- * FinancialInstrumentProductTypeCode.DebtorInPossession}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmDebtorInPossession
+ * FinancialInstrumentProductTypeCode.mmDebtorInPossession}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#DefaultedLoan
- * FinancialInstrumentProductTypeCode.DefaultedLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmDefaultedLoan
+ * FinancialInstrumentProductTypeCode.mmDefaultedLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#WithdrawnLoan
- * FinancialInstrumentProductTypeCode.WithdrawnLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmWithdrawnLoan
+ * FinancialInstrumentProductTypeCode.mmWithdrawnLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#ReplacedLoan
- * FinancialInstrumentProductTypeCode.ReplacedLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmReplacedLoan
+ * FinancialInstrumentProductTypeCode.mmReplacedLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MaturedLoan
- * FinancialInstrumentProductTypeCode.MaturedLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMaturedLoan
+ * FinancialInstrumentProductTypeCode.mmMaturedLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#AmendedRestatedLoan
- * FinancialInstrumentProductTypeCode.AmendedRestatedLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmAmendedRestatedLoan
+ * FinancialInstrumentProductTypeCode.mmAmendedRestatedLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#RetiredLoan
- * FinancialInstrumentProductTypeCode.RetiredLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmRetiredLoan
+ * FinancialInstrumentProductTypeCode.mmRetiredLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#BradyBond
- * FinancialInstrumentProductTypeCode.BradyBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmBradyBond
+ * FinancialInstrumentProductTypeCode.mmBradyBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#USTreasuryBond
- * FinancialInstrumentProductTypeCode.USTreasuryBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmUSTreasuryBond
+ * FinancialInstrumentProductTypeCode.mmUSTreasuryBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#STRIPS
- * FinancialInstrumentProductTypeCode.STRIPS}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmSTRIPS
+ * FinancialInstrumentProductTypeCode.mmSTRIPS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#TreasuryInflationProtectedSecurity
- * FinancialInstrumentProductTypeCode.TreasuryInflationProtectedSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmTreasuryInflationProtectedSecurity
+ * FinancialInstrumentProductTypeCode.mmTreasuryInflationProtectedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#PrincipalStripCallableBond
- * FinancialInstrumentProductTypeCode.PrincipalStripCallableBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmPrincipalStripCallableBond
+ * FinancialInstrumentProductTypeCode.mmPrincipalStripCallableBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#PrincipalStripNonCallableBond
- * FinancialInstrumentProductTypeCode.PrincipalStripNonCallableBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmPrincipalStripNonCallableBond
+ * FinancialInstrumentProductTypeCode.mmPrincipalStripNonCallableBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#USTreasuryNote
- * FinancialInstrumentProductTypeCode.USTreasuryNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmUSTreasuryNote
+ * FinancialInstrumentProductTypeCode.mmUSTreasuryNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#USTreasuryBill
- * FinancialInstrumentProductTypeCode.USTreasuryBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmUSTreasuryBill
+ * FinancialInstrumentProductTypeCode.mmUSTreasuryBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CommonStock
- * FinancialInstrumentProductTypeCode.CommonStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCommonStock
+ * FinancialInstrumentProductTypeCode.mmCommonStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#PreferredStock
- * FinancialInstrumentProductTypeCode.PreferredStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmPreferredStock
+ * FinancialInstrumentProductTypeCode.mmPreferredStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#NoSecurityType
- * FinancialInstrumentProductTypeCode.NoSecurityType}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmNoSecurityType
+ * FinancialInstrumentProductTypeCode.mmNoSecurityType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MutualFund
- * FinancialInstrumentProductTypeCode.MutualFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMutualFund
+ * FinancialInstrumentProductTypeCode.mmMutualFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MultiLeg
- * FinancialInstrumentProductTypeCode.MultiLeg}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMultiLeg
+ * FinancialInstrumentProductTypeCode.mmMultiLeg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#ForeignExchangeContract
- * FinancialInstrumentProductTypeCode.ForeignExchangeContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmForeignExchangeContract
+ * FinancialInstrumentProductTypeCode.mmForeignExchangeContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#OtherAnticipationNote
- * FinancialInstrumentProductTypeCode.OtherAnticipationNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmOtherAnticipationNote
+ * FinancialInstrumentProductTypeCode.mmOtherAnticipationNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CertificateOfObligation
- * FinancialInstrumentProductTypeCode.CertificateOfObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCertificateOfObligation
+ * FinancialInstrumentProductTypeCode.mmCertificateOfObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CertificateOfParticipation
- * FinancialInstrumentProductTypeCode.CertificateOfParticipation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCertificateOfParticipation
+ * FinancialInstrumentProductTypeCode.mmCertificateOfParticipation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#GeneralObligationBond
- * FinancialInstrumentProductTypeCode.GeneralObligationBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmGeneralObligationBond
+ * FinancialInstrumentProductTypeCode.mmGeneralObligationBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MandatoryTender
- * FinancialInstrumentProductTypeCode.MandatoryTender}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMandatoryTender
+ * FinancialInstrumentProductTypeCode.mmMandatoryTender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#RevenueAnticipationNote
- * FinancialInstrumentProductTypeCode.RevenueAnticipationNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmRevenueAnticipationNote
+ * FinancialInstrumentProductTypeCode.mmRevenueAnticipationNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#RevenueBond
- * FinancialInstrumentProductTypeCode.RevenueBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmRevenueBond
+ * FinancialInstrumentProductTypeCode.mmRevenueBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#SpecialAssessmentMunicipalBond
- * FinancialInstrumentProductTypeCode.SpecialAssessmentMunicipalBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmSpecialAssessmentMunicipalBond
+ * FinancialInstrumentProductTypeCode.mmSpecialAssessmentMunicipalBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#SpecialObligation
- * FinancialInstrumentProductTypeCode.SpecialObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmSpecialObligation
+ * FinancialInstrumentProductTypeCode.mmSpecialObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#SpecialTax
- * FinancialInstrumentProductTypeCode.SpecialTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmSpecialTax
+ * FinancialInstrumentProductTypeCode.mmSpecialTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#TaxAnticipationNote
- * FinancialInstrumentProductTypeCode.TaxAnticipationNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmTaxAnticipationNote
+ * FinancialInstrumentProductTypeCode.mmTaxAnticipationNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#TaxAllocation
- * FinancialInstrumentProductTypeCode.TaxAllocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmTaxAllocation
+ * FinancialInstrumentProductTypeCode.mmTaxAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#TaxExemptCommercialPaper
- * FinancialInstrumentProductTypeCode.TaxExemptCommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmTaxExemptCommercialPaper
+ * FinancialInstrumentProductTypeCode.mmTaxExemptCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#TaxRevenueAnticipationNote
- * FinancialInstrumentProductTypeCode.TaxRevenueAnticipationNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmTaxRevenueAnticipationNote
+ * FinancialInstrumentProductTypeCode.mmTaxRevenueAnticipationNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#VariableRateDemandNote
- * FinancialInstrumentProductTypeCode.VariableRateDemandNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmVariableRateDemandNote
+ * FinancialInstrumentProductTypeCode.mmVariableRateDemandNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#Warrant
- * FinancialInstrumentProductTypeCode.Warrant}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmWarrant
+ * FinancialInstrumentProductTypeCode.mmWarrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#AgencyPool
- * FinancialInstrumentProductTypeCode.AgencyPool}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmAgencyPool
+ * FinancialInstrumentProductTypeCode.mmAgencyPool}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#AssetBackedBond
- * FinancialInstrumentProductTypeCode.AssetBackedBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmAssetBackedBond
+ * FinancialInstrumentProductTypeCode.mmAssetBackedBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CollateralisedMortgageSecurity
- * FinancialInstrumentProductTypeCode.CollateralisedMortgageSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCollateralisedMortgageSecurity
+ * FinancialInstrumentProductTypeCode.mmCollateralisedMortgageSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CorporateMortgageBackedSecurity
- * FinancialInstrumentProductTypeCode.CorporateMortgageBackedSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCorporateMortgageBackedSecurity
+ * FinancialInstrumentProductTypeCode.mmCorporateMortgageBackedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#IOETTEMortgage
- * FinancialInstrumentProductTypeCode.IOETTEMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmIOETTEMortgage
+ * FinancialInstrumentProductTypeCode.mmIOETTEMortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MortgageBackedSecurity
- * FinancialInstrumentProductTypeCode.MortgageBackedSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMortgageBackedSecurity
+ * FinancialInstrumentProductTypeCode.mmMortgageBackedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MortgageInterestOnly
- * FinancialInstrumentProductTypeCode.MortgageInterestOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMortgageInterestOnly
+ * FinancialInstrumentProductTypeCode.mmMortgageInterestOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MortgagePrincipalOnly
- * FinancialInstrumentProductTypeCode.MortgagePrincipalOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMortgagePrincipalOnly
+ * FinancialInstrumentProductTypeCode.mmMortgagePrincipalOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MortgagePrivatePlacement
- * FinancialInstrumentProductTypeCode.MortgagePrivatePlacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMortgagePrivatePlacement
+ * FinancialInstrumentProductTypeCode.mmMortgagePrivatePlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MiscellaneousPassThrough
- * FinancialInstrumentProductTypeCode.MiscellaneousPassThrough}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMiscellaneousPassThrough
+ * FinancialInstrumentProductTypeCode.mmMiscellaneousPassThrough}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#ToBeAnnouncedMortgage
- * FinancialInstrumentProductTypeCode.ToBeAnnouncedMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmToBeAnnouncedMortgage
+ * FinancialInstrumentProductTypeCode.mmToBeAnnouncedMortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#FederalAgencyCoupon
- * FinancialInstrumentProductTypeCode.FederalAgencyCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmFederalAgencyCoupon
+ * FinancialInstrumentProductTypeCode.mmFederalAgencyCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#FederalAgencyDiscountNote
- * FinancialInstrumentProductTypeCode.FederalAgencyDiscountNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmFederalAgencyDiscountNote
+ * FinancialInstrumentProductTypeCode.mmFederalAgencyDiscountNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#PrivateExportFunding
- * FinancialInstrumentProductTypeCode.PrivateExportFunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmPrivateExportFunding
+ * FinancialInstrumentProductTypeCode.mmPrivateExportFunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#BankersAcceptance
- * FinancialInstrumentProductTypeCode.BankersAcceptance}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmBankersAcceptance
+ * FinancialInstrumentProductTypeCode.mmBankersAcceptance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#BankNote
- * FinancialInstrumentProductTypeCode.BankNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmBankNote
+ * FinancialInstrumentProductTypeCode.mmBankNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#BillOfExchange
- * FinancialInstrumentProductTypeCode.BillOfExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmBillOfExchange
+ * FinancialInstrumentProductTypeCode.mmBillOfExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CertificateOfDeposit
- * FinancialInstrumentProductTypeCode.CertificateOfDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCertificateOfDeposit
+ * FinancialInstrumentProductTypeCode.mmCertificateOfDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CallLoan
- * FinancialInstrumentProductTypeCode.CallLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCallLoan
+ * FinancialInstrumentProductTypeCode.mmCallLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CommercialPaper
- * FinancialInstrumentProductTypeCode.CommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCommercialPaper
+ * FinancialInstrumentProductTypeCode.mmCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#DepositNote
- * FinancialInstrumentProductTypeCode.DepositNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmDepositNote
+ * FinancialInstrumentProductTypeCode.mmDepositNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#LiquidityNote
- * FinancialInstrumentProductTypeCode.LiquidityNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmLiquidityNote
+ * FinancialInstrumentProductTypeCode.mmLiquidityNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#MediumTermNote
- * FinancialInstrumentProductTypeCode.MediumTermNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmMediumTermNote
+ * FinancialInstrumentProductTypeCode.mmMediumTermNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#OvernightDeposit
- * FinancialInstrumentProductTypeCode.OvernightDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmOvernightDeposit
+ * FinancialInstrumentProductTypeCode.mmOvernightDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#PromissoryNote
- * FinancialInstrumentProductTypeCode.PromissoryNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmPromissoryNote
+ * FinancialInstrumentProductTypeCode.mmPromissoryNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#RepurchaseAgreement
- * FinancialInstrumentProductTypeCode.RepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmRepurchaseAgreement
+ * FinancialInstrumentProductTypeCode.mmRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#ReverseRepurchaseAgreement
- * FinancialInstrumentProductTypeCode.ReverseRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmReverseRepurchaseAgreement
+ * FinancialInstrumentProductTypeCode.mmReverseRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#ShortTermLoanNote
- * FinancialInstrumentProductTypeCode.ShortTermLoanNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmShortTermLoanNote
+ * FinancialInstrumentProductTypeCode.mmShortTermLoanNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#TimeDeposit
- * FinancialInstrumentProductTypeCode.TimeDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmTimeDeposit
+ * FinancialInstrumentProductTypeCode.mmTimeDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#ExtendedCommercialNote
- * FinancialInstrumentProductTypeCode.ExtendedCommercialNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmExtendedCommercialNote
+ * FinancialInstrumentProductTypeCode.mmExtendedCommercialNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CorporateBond
- * FinancialInstrumentProductTypeCode.CorporateBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCorporateBond
+ * FinancialInstrumentProductTypeCode.mmCorporateBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CorporatePrivatePlacement
- * FinancialInstrumentProductTypeCode.CorporatePrivatePlacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCorporatePrivatePlacement
+ * FinancialInstrumentProductTypeCode.mmCorporatePrivatePlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#ConvertibleBond
- * FinancialInstrumentProductTypeCode.ConvertibleBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmConvertibleBond
+ * FinancialInstrumentProductTypeCode.mmConvertibleBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#DualCurrencyBond
- * FinancialInstrumentProductTypeCode.DualCurrencyBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmDualCurrencyBond
+ * FinancialInstrumentProductTypeCode.mmDualCurrencyBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#IndexedLinkedCorporateBond
- * FinancialInstrumentProductTypeCode.IndexedLinkedCorporateBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmIndexedLinkedCorporateBond
+ * FinancialInstrumentProductTypeCode.mmIndexedLinkedCorporateBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#StructuredNote
- * FinancialInstrumentProductTypeCode.StructuredNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmStructuredNote
+ * FinancialInstrumentProductTypeCode.mmStructuredNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#YankeeCorporateBond
- * FinancialInstrumentProductTypeCode.YankeeCorporateBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmYankeeCorporateBond
+ * FinancialInstrumentProductTypeCode.mmYankeeCorporateBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#AssetBackedCommercialPaper
- * FinancialInstrumentProductTypeCode.AssetBackedCommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmAssetBackedCommercialPaper
+ * FinancialInstrumentProductTypeCode.mmAssetBackedCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#FloatingRateNote
- * FinancialInstrumentProductTypeCode.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmFloatingRateNote
+ * FinancialInstrumentProductTypeCode.mmFloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#OtherShortTermDebtSecurities
- * FinancialInstrumentProductTypeCode.OtherShortTermDebtSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmOtherShortTermDebtSecurities
+ * FinancialInstrumentProductTypeCode.mmOtherShortTermDebtSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#CallAccountCallMoney
- * FinancialInstrumentProductTypeCode.CallAccountCallMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmCallAccountCallMoney
+ * FinancialInstrumentProductTypeCode.mmCallAccountCallMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#Deposit
- * FinancialInstrumentProductTypeCode.Deposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode#mmDeposit
+ * FinancialInstrumentProductTypeCode.mmDeposit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -297,8 +297,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -343,7 +343,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TermLoan = new MMCode() {
+	public static final MMCode mmTermLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TermLoan";
@@ -376,7 +376,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RevolverLoan = new MMCode() {
+	public static final MMCode mmRevolverLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RevolverLoan";
@@ -410,7 +410,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RevolverTermLoan = new MMCode() {
+	public static final MMCode mmRevolverTermLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RevolverTermLoan";
@@ -443,7 +443,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BridgeLoan = new MMCode() {
+	public static final MMCode mmBridgeLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BridgeLoan";
@@ -479,7 +479,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LetterOfCredit = new MMCode() {
+	public static final MMCode mmLetterOfCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LetterOfCredit";
@@ -513,7 +513,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SwingLineFacilityLoan = new MMCode() {
+	public static final MMCode mmSwingLineFacilityLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SwingLineFacilityLoan";
@@ -544,7 +544,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * "Firm that continues to operate under the Chapter 11 bankruptcy policy."</li>
 	 * </ul>
 	 */
-	public static final MMCode DebtorInPossession = new MMCode() {
+	public static final MMCode mmDebtorInPossession = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebtorInPossession";
@@ -577,7 +577,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DefaultedLoan = new MMCode() {
+	public static final MMCode mmDefaultedLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DefaultedLoan";
@@ -607,7 +607,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Loan that is disbursed against a security."</li>
 	 * </ul>
 	 */
-	public static final MMCode WithdrawnLoan = new MMCode() {
+	public static final MMCode mmWithdrawnLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WithdrawnLoan";
@@ -637,7 +637,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Loan that has been paid or replaced by a new loan."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReplacedLoan = new MMCode() {
+	public static final MMCode mmReplacedLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReplacedLoan";
@@ -670,7 +670,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MaturedLoan = new MMCode() {
+	public static final MMCode mmMaturedLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaturedLoan";
@@ -703,7 +703,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AmendedRestatedLoan = new MMCode() {
+	public static final MMCode mmAmendedRestatedLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AmendedRestatedLoan";
@@ -733,7 +733,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Loan that is no longer performing."</li>
 	 * </ul>
 	 */
-	public static final MMCode RetiredLoan = new MMCode() {
+	public static final MMCode mmRetiredLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RetiredLoan";
@@ -767,7 +767,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BradyBond = new MMCode() {
+	public static final MMCode mmBradyBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BradyBond";
@@ -802,7 +802,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode USTreasuryBond = new MMCode() {
+	public static final MMCode mmUSTreasuryBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USTreasuryBond";
@@ -838,7 +838,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode STRIPS = new MMCode() {
+	public static final MMCode mmSTRIPS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "STRIPS";
@@ -873,7 +873,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TreasuryInflationProtectedSecurity = new MMCode() {
+	public static final MMCode mmTreasuryInflationProtectedSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasuryInflationProtectedSecurity";
@@ -903,7 +903,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Principal strip portion of a bond with a call provision."</li>
 	 * </ul>
 	 */
-	public static final MMCode PrincipalStripCallableBond = new MMCode() {
+	public static final MMCode mmPrincipalStripCallableBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PrincipalStripCallableBond";
@@ -933,7 +933,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Principal strip of a bullet bond."</li>
 	 * </ul>
 	 */
-	public static final MMCode PrincipalStripNonCallableBond = new MMCode() {
+	public static final MMCode mmPrincipalStripNonCallableBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PrincipalStripNonCallableBond";
@@ -964,7 +964,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * "Bonds that mature more than 10 years from their issue date."</li>
 	 * </ul>
 	 */
-	public static final MMCode USTreasuryNote = new MMCode() {
+	public static final MMCode mmUSTreasuryNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USTreasuryNote";
@@ -998,7 +998,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode USTreasuryBill = new MMCode() {
+	public static final MMCode mmUSTreasuryBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USTreasuryBill";
@@ -1032,7 +1032,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CommonStock = new MMCode() {
+	public static final MMCode mmCommonStock = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommonStock";
@@ -1067,7 +1067,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PreferredStock = new MMCode() {
+	public static final MMCode mmPreferredStock = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PreferredStock";
@@ -1097,7 +1097,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "No security type specified."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoSecurityType = new MMCode() {
+	public static final MMCode mmNoSecurityType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NoSecurityType";
@@ -1130,7 +1130,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MutualFund = new MMCode() {
+	public static final MMCode mmMutualFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MutualFund";
@@ -1166,7 +1166,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MultiLeg = new MMCode() {
+	public static final MMCode mmMultiLeg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MultiLeg";
@@ -1200,7 +1200,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchangeContract = new MMCode() {
+	public static final MMCode mmForeignExchangeContract = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchangeContract";
@@ -1233,7 +1233,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OtherAnticipationNote = new MMCode() {
+	public static final MMCode mmOtherAnticipationNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OtherAnticipationNote";
@@ -1263,7 +1263,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Long-term debt issued by a city."</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateOfObligation = new MMCode() {
+	public static final MMCode mmCertificateOfObligation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CertificateOfObligation";
@@ -1300,7 +1300,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateOfParticipation = new MMCode() {
+	public static final MMCode mmCertificateOfParticipation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CertificateOfParticipation";
@@ -1333,7 +1333,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GeneralObligationBond = new MMCode() {
+	public static final MMCode mmGeneralObligationBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GeneralObligationBond";
@@ -1363,7 +1363,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Sinking fund feature."</li>
 	 * </ul>
 	 */
-	public static final MMCode MandatoryTender = new MMCode() {
+	public static final MMCode mmMandatoryTender = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MandatoryTender";
@@ -1397,7 +1397,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RevenueAnticipationNote = new MMCode() {
+	public static final MMCode mmRevenueAnticipationNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RevenueAnticipationNote";
@@ -1433,7 +1433,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RevenueBond = new MMCode() {
+	public static final MMCode mmRevenueBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RevenueBond";
@@ -1466,7 +1466,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialAssessmentMunicipalBond = new MMCode() {
+	public static final MMCode mmSpecialAssessmentMunicipalBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialAssessmentMunicipalBond";
@@ -1499,7 +1499,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialObligation = new MMCode() {
+	public static final MMCode mmSpecialObligation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialObligation";
@@ -1530,7 +1530,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * "Bond secured by a special tax, eg, gasoline tax or other excise tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialTax = new MMCode() {
+	public static final MMCode mmSpecialTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialTax";
@@ -1563,7 +1563,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxAnticipationNote = new MMCode() {
+	public static final MMCode mmTaxAnticipationNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxAnticipationNote";
@@ -1596,7 +1596,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxAllocation = new MMCode() {
+	public static final MMCode mmTaxAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxAllocation";
@@ -1633,7 +1633,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxExemptCommercialPaper = new MMCode() {
+	public static final MMCode mmTaxExemptCommercialPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxExemptCommercialPaper";
@@ -1667,7 +1667,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxRevenueAnticipationNote = new MMCode() {
+	public static final MMCode mmTaxRevenueAnticipationNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxRevenueAnticipationNote";
@@ -1702,7 +1702,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode VariableRateDemandNote = new MMCode() {
+	public static final MMCode mmVariableRateDemandNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VariableRateDemandNote";
@@ -1737,7 +1737,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Warrant = new MMCode() {
+	public static final MMCode mmWarrant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Warrant";
@@ -1782,7 +1782,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AgencyPool = new MMCode() {
+	public static final MMCode mmAgencyPool = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgencyPool";
@@ -1817,7 +1817,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AssetBackedBond = new MMCode() {
+	public static final MMCode mmAssetBackedBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AssetBackedBond";
@@ -1849,7 +1849,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralisedMortgageSecurity = new MMCode() {
+	public static final MMCode mmCollateralisedMortgageSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralisedMortgageSecurity";
@@ -1884,7 +1884,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateMortgageBackedSecurity = new MMCode() {
+	public static final MMCode mmCorporateMortgageBackedSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateMortgageBackedSecurity";
@@ -1916,7 +1916,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IOETTEMortgage = new MMCode() {
+	public static final MMCode mmIOETTEMortgage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IOETTEMortgage";
@@ -1950,7 +1950,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MortgageBackedSecurity = new MMCode() {
+	public static final MMCode mmMortgageBackedSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MortgageBackedSecurity";
@@ -1986,7 +1986,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MortgageInterestOnly = new MMCode() {
+	public static final MMCode mmMortgageInterestOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MortgageInterestOnly";
@@ -2023,7 +2023,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MortgagePrincipalOnly = new MMCode() {
+	public static final MMCode mmMortgagePrincipalOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MortgagePrincipalOnly";
@@ -2058,7 +2058,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MortgagePrivatePlacement = new MMCode() {
+	public static final MMCode mmMortgagePrivatePlacement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MortgagePrivatePlacement";
@@ -2094,7 +2094,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MiscellaneousPassThrough = new MMCode() {
+	public static final MMCode mmMiscellaneousPassThrough = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MiscellaneousPassThrough";
@@ -2129,7 +2129,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ToBeAnnouncedMortgage = new MMCode() {
+	public static final MMCode mmToBeAnnouncedMortgage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ToBeAnnouncedMortgage";
@@ -2163,7 +2163,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FederalAgencyCoupon = new MMCode() {
+	public static final MMCode mmFederalAgencyCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FederalAgencyCoupon";
@@ -2202,7 +2202,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FederalAgencyDiscountNote = new MMCode() {
+	public static final MMCode mmFederalAgencyDiscountNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FederalAgencyDiscountNote";
@@ -2236,7 +2236,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PrivateExportFunding = new MMCode() {
+	public static final MMCode mmPrivateExportFunding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PrivateExportFunding";
@@ -2274,7 +2274,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BankersAcceptance = new MMCode() {
+	public static final MMCode mmBankersAcceptance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankersAcceptance";
@@ -2309,7 +2309,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BankNote = new MMCode() {
+	public static final MMCode mmBankNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankNote";
@@ -2344,7 +2344,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BillOfExchange = new MMCode() {
+	public static final MMCode mmBillOfExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BillOfExchange";
@@ -2378,7 +2378,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateOfDeposit = new MMCode() {
+	public static final MMCode mmCertificateOfDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CertificateOfDeposit";
@@ -2409,7 +2409,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * "Loan repayable on demand. A call loan is also known as a broker loan."</li>
 	 * </ul>
 	 */
-	public static final MMCode CallLoan = new MMCode() {
+	public static final MMCode mmCallLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CallLoan";
@@ -2444,7 +2444,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialPaper = new MMCode() {
+	public static final MMCode mmCommercialPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommercialPaper";
@@ -2480,7 +2480,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DepositNote = new MMCode() {
+	public static final MMCode mmDepositNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DepositNote";
@@ -2513,7 +2513,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidityNote = new MMCode() {
+	public static final MMCode mmLiquidityNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LiquidityNote";
@@ -2551,7 +2551,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MediumTermNote = new MMCode() {
+	public static final MMCode mmMediumTermNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MediumTermNote";
@@ -2589,7 +2589,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OvernightDeposit = new MMCode() {
+	public static final MMCode mmOvernightDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OvernightDeposit";
@@ -2623,7 +2623,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PromissoryNote = new MMCode() {
+	public static final MMCode mmPromissoryNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PromissoryNote";
@@ -2659,7 +2659,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseAgreement = new MMCode() {
+	public static final MMCode mmRepurchaseAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseAgreement";
@@ -2696,7 +2696,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReverseRepurchaseAgreement = new MMCode() {
+	public static final MMCode mmReverseRepurchaseAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReverseRepurchaseAgreement";
@@ -2729,7 +2729,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ShortTermLoanNote = new MMCode() {
+	public static final MMCode mmShortTermLoanNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ShortTermLoanNote";
@@ -2764,7 +2764,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TimeDeposit = new MMCode() {
+	public static final MMCode mmTimeDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TimeDeposit";
@@ -2799,7 +2799,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ExtendedCommercialNote = new MMCode() {
+	public static final MMCode mmExtendedCommercialNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExtendedCommercialNote";
@@ -2829,7 +2829,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Debt obligations issued by private corporations."</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateBond = new MMCode() {
+	public static final MMCode mmCorporateBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateBond";
@@ -2863,7 +2863,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CorporatePrivatePlacement = new MMCode() {
+	public static final MMCode mmCorporatePrivatePlacement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporatePrivatePlacement";
@@ -2897,7 +2897,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConvertibleBond = new MMCode() {
+	public static final MMCode mmConvertibleBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConvertibleBond";
@@ -2930,7 +2930,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DualCurrencyBond = new MMCode() {
+	public static final MMCode mmDualCurrencyBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DualCurrencyBond";
@@ -2966,7 +2966,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IndexedLinkedCorporateBond = new MMCode() {
+	public static final MMCode mmIndexedLinkedCorporateBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IndexedLinkedCorporateBond";
@@ -3000,7 +3000,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode StructuredNote = new MMCode() {
+	public static final MMCode mmStructuredNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StructuredNote";
@@ -3034,7 +3034,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode YankeeCorporateBond = new MMCode() {
+	public static final MMCode mmYankeeCorporateBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "YankeeCorporateBond";
@@ -3068,7 +3068,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AssetBackedCommercialPaper = new MMCode() {
+	public static final MMCode mmAssetBackedCommercialPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetBackedCommercialPaper";
@@ -3103,7 +3103,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FloatingRateNote = new MMCode() {
+	public static final MMCode mmFloatingRateNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
@@ -3133,7 +3133,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * definition} = "Other short term debt securities issued."</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherShortTermDebtSecurities = new MMCode() {
+	public static final MMCode mmOtherShortTermDebtSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherShortTermDebtSecurities";
@@ -3167,7 +3167,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CallAccountCallMoney = new MMCode() {
+	public static final MMCode mmCallAccountCallMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallAccountCallMoney";
@@ -3202,7 +3202,7 @@ public class FinancialInstrumentProductTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Deposit = new MMCode() {
+	public static final MMCode mmDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deposit";
@@ -3215,54 +3215,54 @@ public class FinancialInstrumentProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TERM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentProductTypeCode";
 				definition = "Specifies the type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.TermLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.RevolverLoan,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.RevolverTermLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.BridgeLoan,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.LetterOfCredit, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.SwingLineFacilityLoan,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.DebtorInPossession, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.DefaultedLoan,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.WithdrawnLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.ReplacedLoan,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MaturedLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.AmendedRestatedLoan,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.RetiredLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.BradyBond,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.USTreasuryBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.STRIPS,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.TreasuryInflationProtectedSecurity, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.PrincipalStripCallableBond,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.PrincipalStripNonCallableBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.USTreasuryNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.USTreasuryBill, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CommonStock,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.PreferredStock, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.NoSecurityType,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MutualFund, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MultiLeg,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.ForeignExchangeContract, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.OtherAnticipationNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CertificateOfObligation, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CertificateOfParticipation,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.GeneralObligationBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MandatoryTender,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.RevenueAnticipationNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.RevenueBond,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.SpecialAssessmentMunicipalBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.SpecialObligation,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.SpecialTax, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.TaxAnticipationNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.TaxAllocation, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.TaxExemptCommercialPaper,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.TaxRevenueAnticipationNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.VariableRateDemandNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.Warrant, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.AgencyPool,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.AssetBackedBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CollateralisedMortgageSecurity,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CorporateMortgageBackedSecurity, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.IOETTEMortgage,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MortgageBackedSecurity, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MortgageInterestOnly,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MortgagePrincipalOnly, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MortgagePrivatePlacement,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MiscellaneousPassThrough, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.ToBeAnnouncedMortgage,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.FederalAgencyCoupon, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.FederalAgencyDiscountNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.PrivateExportFunding, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.BankersAcceptance,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.BankNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.BillOfExchange,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CertificateOfDeposit, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CallLoan,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CommercialPaper, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.DepositNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.LiquidityNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.MediumTermNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.OvernightDeposit, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.PromissoryNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.RepurchaseAgreement, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.ReverseRepurchaseAgreement,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.ShortTermLoanNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.TimeDeposit,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.ExtendedCommercialNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CorporateBond,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CorporatePrivatePlacement, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.ConvertibleBond,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.DualCurrencyBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.IndexedLinkedCorporateBond,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.StructuredNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.YankeeCorporateBond,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.AssetBackedCommercialPaper, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.FloatingRateNote,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.OtherShortTermDebtSecurities, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.CallAccountCallMoney,
-						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.Deposit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmTermLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmRevolverLoan,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmRevolverTermLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmBridgeLoan,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmLetterOfCredit, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmSwingLineFacilityLoan,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmDebtorInPossession, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmDefaultedLoan,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmWithdrawnLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmReplacedLoan,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMaturedLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmAmendedRestatedLoan,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmRetiredLoan, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmBradyBond,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmUSTreasuryBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmSTRIPS,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmTreasuryInflationProtectedSecurity, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmPrincipalStripCallableBond,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmPrincipalStripNonCallableBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmUSTreasuryNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmUSTreasuryBill, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCommonStock,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmPreferredStock, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmNoSecurityType,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMutualFund, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMultiLeg,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmForeignExchangeContract, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmOtherAnticipationNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCertificateOfObligation, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCertificateOfParticipation,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmGeneralObligationBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMandatoryTender,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmRevenueAnticipationNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmRevenueBond,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmSpecialAssessmentMunicipalBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmSpecialObligation,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmSpecialTax, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmTaxAnticipationNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmTaxAllocation, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmTaxExemptCommercialPaper,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmTaxRevenueAnticipationNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmVariableRateDemandNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmWarrant, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmAgencyPool,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmAssetBackedBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCollateralisedMortgageSecurity,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCorporateMortgageBackedSecurity, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmIOETTEMortgage,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMortgageBackedSecurity, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMortgageInterestOnly,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMortgagePrincipalOnly, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMortgagePrivatePlacement,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMiscellaneousPassThrough, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmToBeAnnouncedMortgage,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmFederalAgencyCoupon, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmFederalAgencyDiscountNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmPrivateExportFunding, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmBankersAcceptance,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmBankNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmBillOfExchange,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCertificateOfDeposit, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCallLoan,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCommercialPaper, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmDepositNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmLiquidityNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmMediumTermNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmOvernightDeposit, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmPromissoryNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmRepurchaseAgreement, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmReverseRepurchaseAgreement,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmShortTermLoanNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmTimeDeposit,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmExtendedCommercialNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCorporateBond,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCorporatePrivatePlacement, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmConvertibleBond,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmDualCurrencyBond, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmIndexedLinkedCorporateBond,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmStructuredNote, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmYankeeCorporateBond,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmAssetBackedCommercialPaper, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmFloatingRateNote,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmOtherShortTermDebtSecurities, com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmCallAccountCallMoney,
+						com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode.mmDeposit);
 				derivation_lazy = () -> Arrays.asList(FinancialInstrumentProductType1Code.mmObject());
 			}
 		});

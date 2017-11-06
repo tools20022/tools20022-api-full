@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the confirmation of a transfer out transaction.
@@ -33,14 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#TransferDetails
- * TransferOut8.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#AccountDetails
- * TransferOut8.AccountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#SettlementDetails
- * TransferOut8.SettlementDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#Extension
- * TransferOut8.Extension}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#mmTransferDetails
+ * TransferOut8.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#mmAccountDetails
+ * TransferOut8.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut8#mmSettlementDetails
+ * TransferOut8.mmSettlementDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#mmExtension
+ * TransferOut8.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,16 +53,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03#ReversalByTransferOutConfirmationDetails
- * ReversalOfTransferOutConfirmationV03.ReversalByTransferOutConfirmationDetails
- * }</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03#mmReversalByTransferOutConfirmationDetails
+ * ReversalOfTransferOutConfirmationV03.
+ * mmReversalByTransferOutConfirmationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOut8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.Transfer14> transferDetails;
 	/**
 	 * General information related to the transfer of a financial instrument.
 	 * <p>
@@ -114,20 +117,21 @@ public class TransferOut8 {
 	 * "General information related to the transfer of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut8.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
+			componentContext_lazy = () -> TransferOut8.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument.";
 			minOccurs = 1;
-			type_lazy = () -> Transfer14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Transfer14.mmObject();
 		}
 	};
+	protected InvestmentAccount22 accountDetails;
 	/**
 	 * Information related to the account from which the financial instrument
 	 * was withdrawn.
@@ -161,21 +165,22 @@ public class TransferOut8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut8.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> TransferOut8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument was withdrawn.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount22.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount22.mmObject();
 		}
 	};
+	protected ReceiveInformation8 settlementDetails;
 	/**
 	 * Information related to the receiving side of the transfer.
 	 * <p>
@@ -187,8 +192,8 @@ public class TransferOut8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#RelatedSettlement
-	 * SecuritiesTransfer.RelatedSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmRelatedSettlement
+	 * SecuritiesTransfer.mmRelatedSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,21 +212,22 @@ public class TransferOut8 {
 	 * "Information related to the receiving side of the transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> TransferOut8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.RelatedSettlement;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReceiveInformation8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReceiveInformation8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -249,7 +255,7 @@ public class TransferOut8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransferOut8.mmObject();
 			isDerived = false;
@@ -258,26 +264,58 @@ public class TransferOut8 {
 			name = "Extension";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut8.TransferDetails, com.tools20022.repository.msg.TransferOut8.AccountDetails, com.tools20022.repository.msg.TransferOut8.SettlementDetails,
-						com.tools20022.repository.msg.TransferOut8.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut8.mmTransferDetails, com.tools20022.repository.msg.TransferOut8.mmAccountDetails,
+						com.tools20022.repository.msg.TransferOut8.mmSettlementDetails, com.tools20022.repository.msg.TransferOut8.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03.mmReversalByTransferOutConfirmationDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03.ReversalByTransferOutConfirmationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferOut8";
 				definition = "Information about the confirmation of a transfer out transaction.";
-				previousVersion_lazy = () -> TransferOut6.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransferOut10.mmObject());
+				previousVersion_lazy = () -> TransferOut6.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Transfer14> getTransferDetails() {
+		return transferDetails;
+	}
+
+	public void setTransferDetails(List<com.tools20022.repository.msg.Transfer14> transferDetails) {
+		this.transferDetails = transferDetails;
+	}
+
+	public InvestmentAccount22 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(com.tools20022.repository.msg.InvestmentAccount22 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public ReceiveInformation8 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(com.tools20022.repository.msg.ReceiveInformation8 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

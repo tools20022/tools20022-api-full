@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeChoice#Code
- * ChargeTypeChoice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeChoice#mmCode
+ * ChargeTypeChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ChargeTypeChoice#ProprietaryCode
- * ChargeTypeChoice.ProprietaryCode}</li>
+ * {@linkplain com.tools20022.repository.choice.ChargeTypeChoice#mmProprietaryCode
+ * ChargeTypeChoice.mmProprietaryCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChargeTypeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargeType1Code code;
 	/**
 	 * Type of service for which a charge is asked or paid.
 	 * <p>
@@ -74,8 +75,8 @@ public class ChargeTypeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +95,21 @@ public class ChargeTypeChoice {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> ChargeTypeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of service for which a charge is asked or paid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType1Code.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText proprietaryCode;
 	/**
 	 * Type of charge is a bilaterally agreed code.
 	 * <p>
@@ -121,8 +123,8 @@ public class ChargeTypeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +143,17 @@ public class ChargeTypeChoice {
 	 * definition} = "Type of charge is a bilaterally agreed code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> ChargeTypeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "PrtryCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryCode";
 			definition = "Type of charge is a bilaterally agreed code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -159,14 +161,30 @@ public class ChargeTypeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeTypeChoice.Code, com.tools20022.repository.choice.ChargeTypeChoice.ProprietaryCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeTypeChoice.mmCode, com.tools20022.repository.choice.ChargeTypeChoice.mmProprietaryCode);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeTypeChoice";
 				definition = "Charge is expressed as a code or a bilaterally agreed code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargeType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ChargeType1Code code) {
+		this.code = code;
+	}
+
+	public Max4AlphaNumericText getProprietaryCode() {
+		return proprietaryCode;
+	}
+
+	public void setProprietaryCode(Max4AlphaNumericText proprietaryCode) {
+		this.proprietaryCode = proprietaryCode;
 	}
 }

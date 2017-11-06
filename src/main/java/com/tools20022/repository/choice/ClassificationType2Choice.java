@@ -38,11 +38,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClassificationType2Choice#ClassificationFinancialInstrument
- * ClassificationType2Choice.ClassificationFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.choice.ClassificationType2Choice#mmClassificationFinancialInstrument
+ * ClassificationType2Choice.mmClassificationFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClassificationType2Choice#AlternateClassification
- * ClassificationType2Choice.AlternateClassification}</li>
+ * {@linkplain com.tools20022.repository.choice.ClassificationType2Choice#mmAlternateClassification
+ * ClassificationType2Choice.mmAlternateClassification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class ClassificationType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CFIIdentifier classificationFinancialInstrument;
 	/**
 	 * ISO 10962 Classification of Financial Instrument (CFI)
 	 * <p>
@@ -80,8 +81,8 @@ public class ClassificationType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class ClassificationType2Choice {
 	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "ISO 10962 Classification of Financial Instrument (CFI)";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification19 alternateClassification;
 	/**
 	 * Proprietary classification of financial instrument.
 	 * <p>
@@ -127,8 +129,8 @@ public class ClassificationType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,17 +149,17 @@ public class ClassificationType2Choice {
 	 * definition} = "Proprietary classification of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "AltrnClssfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateClassification";
 			definition = "Proprietary classification of financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification19.mmObject();
 		}
 	};
@@ -165,9 +167,9 @@ public class ClassificationType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType2Choice.ClassificationFinancialInstrument, com.tools20022.repository.choice.ClassificationType2Choice.AlternateClassification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType2Choice.mmClassificationFinancialInstrument, com.tools20022.repository.choice.ClassificationType2Choice.mmAlternateClassification);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -181,5 +183,21 @@ public class ClassificationType2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CFIIdentifier getClassificationFinancialInstrument() {
+		return classificationFinancialInstrument;
+	}
+
+	public void setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
+		this.classificationFinancialInstrument = classificationFinancialInstrument;
+	}
+
+	public GenericIdentification19 getAlternateClassification() {
+		return alternateClassification;
+	}
+
+	public void setAlternateClassification(GenericIdentification19 alternateClassification) {
+		this.alternateClassification = alternateClassification;
 	}
 }

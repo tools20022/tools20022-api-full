@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition30Choice#Code
- * SettlementTransactionCondition30Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition30Choice#mmCode
+ * SettlementTransactionCondition30Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition30Choice#Proprietary
- * SettlementTransactionCondition30Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition30Choice#mmProprietary
+ * SettlementTransactionCondition30Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementTransactionCondition30Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementTransactionCondition11Code code;
 	/**
 	 * Settlement condition expressed as a code.
 	 * <p>
@@ -89,8 +90,8 @@ public class SettlementTransactionCondition30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementTransactionCondition
-	 * SecuritiesSettlement.SettlementTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
+	 * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,33 +112,34 @@ public class SettlementTransactionCondition30Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition8Choice#Code
-	 * TradeTransactionCondition8Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition8Choice#mmCode
+	 * TradeTransactionCondition8Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition16Choice#Code
-	 * SettlementTransactionCondition16Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition16Choice#mmCode
+	 * SettlementTransactionCondition16Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> SettlementTransactionCondition30Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementTransactionCondition;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Settlement condition expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition16Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeTransactionCondition8Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeTransactionCondition8Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition16Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementTransactionCondition11Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Settlement condition expressed as a proprietary code.
 	 * <p>
@@ -150,8 +152,8 @@ public class SettlementTransactionCondition30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementTransactionCondition
-	 * SecuritiesSettlement.SettlementTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
+	 * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,48 +174,64 @@ public class SettlementTransactionCondition30Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition8Choice#Proprietary
-	 * TradeTransactionCondition8Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition8Choice#mmProprietary
+	 * TradeTransactionCondition8Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition16Choice#Proprietary
-	 * SettlementTransactionCondition16Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition16Choice#mmProprietary
+	 * SettlementTransactionCondition16Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> SettlementTransactionCondition30Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementTransactionCondition;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settlement condition expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition16Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeTransactionCondition8Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeTransactionCondition8Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition16Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementTransactionCondition30Choice.Code, com.tools20022.repository.choice.SettlementTransactionCondition30Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementTransactionCondition30Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition30Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition30Choice";
 				definition = "Choice of format for the settlement transaction conditions.";
-				previousVersion_lazy = () -> SettlementTransactionCondition16Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TradeTransactionCondition8Choice.mmObject());
+				previousVersion_lazy = () -> SettlementTransactionCondition16Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementTransactionCondition11Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettlementTransactionCondition11Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

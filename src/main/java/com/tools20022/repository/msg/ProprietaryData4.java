@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData4#Type
- * ProprietaryData4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData4#Data
- * ProprietaryData4.Data}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData4#mmType
+ * ProprietaryData4.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData4#mmData
+ * ProprietaryData4.mmData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#Duplicate
- * DuplicateV03.Duplicate}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#mmDuplicate
+ * DuplicateV03.mmDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#ProprietaryData
- * ProprietaryFormatInvestigationV02.ProprietaryData}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV04#Duplicate
- * DuplicateV04.Duplicate}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#mmProprietaryData
+ * ProprietaryFormatInvestigationV02.mmProprietaryData}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV04#mmDuplicate
+ * DuplicateV04.mmDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV03#ProprietaryData
- * ProprietaryFormatInvestigationV03.ProprietaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV03#mmProprietaryData
+ * ProprietaryFormatInvestigationV03.mmProprietaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Specifies the type of proprietary document
 	 * <p>
@@ -103,7 +104,7 @@ public class ProprietaryData4 {
 	 * definition} = "Specifies the type of proprietary document"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryData4.mmObject();
 			isDerived = false;
@@ -111,11 +112,12 @@ public class ProprietaryData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of proprietary document";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ProprietaryData3 data;
 	/**
 	 * Proprietary data content.
 	 * <p>
@@ -142,7 +144,7 @@ public class ProprietaryData4 {
 	 * definition} = "Proprietary data content."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Data = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProprietaryData4.mmObject();
 			isDerived = false;
@@ -150,25 +152,41 @@ public class ProprietaryData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			definition = "Proprietary data content.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryData3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryData3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData4.Type, com.tools20022.repository.msg.ProprietaryData4.Data);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DuplicateV03.Duplicate, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.ProprietaryData,
-						com.tools20022.repository.area.camt.DuplicateV04.Duplicate, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV03.ProprietaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData4.mmType, com.tools20022.repository.msg.ProprietaryData4.mmData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DuplicateV03.mmDuplicate, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmProprietaryData,
+						com.tools20022.repository.area.camt.DuplicateV04.mmDuplicate, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV03.mmProprietaryData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryData4";
 				definition = "Container for proprietary information. Business content of this element is not specified.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public ProprietaryData3 getData() {
+		return data;
+	}
+
+	public void setData(com.tools20022.repository.msg.ProprietaryData3 data) {
+		this.data = data;
 	}
 }

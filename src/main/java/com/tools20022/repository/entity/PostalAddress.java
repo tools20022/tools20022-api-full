@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information that locates and identifies a specific address.
@@ -44,71 +45,75 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#AddressType
- * PostalAddress.AddressType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#StreetName
- * PostalAddress.StreetName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmAddressType
+ * PostalAddress.mmAddressType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetName
+ * PostalAddress.mmStreetName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#StreetBuildingIdentification
- * PostalAddress.StreetBuildingIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetBuildingIdentification
+ * PostalAddress.mmStreetBuildingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#PostCodeIdentification
- * PostalAddress.PostCodeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#TownName
- * PostalAddress.TownName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#State
- * PostalAddress.State}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#BuildingName
- * PostalAddress.BuildingName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#Floor
- * PostalAddress.Floor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#DistrictName
- * PostalAddress.DistrictName}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostCodeIdentification
+ * PostalAddress.mmPostCodeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmTownName
+ * PostalAddress.mmTownName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmState
+ * PostalAddress.mmState}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#RegionIdentification
- * PostalAddress.RegionIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingName
+ * PostalAddress.mmBuildingName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmFloor
+ * PostalAddress.mmFloor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#CountyIdentification
- * PostalAddress.CountyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#PostOfficeBox
- * PostalAddress.PostOfficeBox}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#Province
- * PostalAddress.Province}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#Department
- * PostalAddress.Department}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#SubDepartment
- * PostalAddress.SubDepartment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#Location
- * PostalAddress.Location}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#ChequeIssue
- * PostalAddress.ChequeIssue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#Country
- * PostalAddress.Country}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictName
+ * PostalAddress.mmDistrictName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#ValidityPeriod
- * PostalAddress.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmRegionIdentification
+ * PostalAddress.mmRegionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#SuiteIdentification
- * PostalAddress.SuiteIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountyIdentification
+ * PostalAddress.mmCountyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#BuildingIdentification
- * PostalAddress.BuildingIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostOfficeBox
+ * PostalAddress.mmPostOfficeBox}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmProvince
+ * PostalAddress.mmProvince}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmDepartment
+ * PostalAddress.mmDepartment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#MailDeliverySubLocation
- * PostalAddress.MailDeliverySubLocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#Block
- * PostalAddress.Block}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#Lot
- * PostalAddress.Lot}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSubDepartment
+ * PostalAddress.mmSubDepartment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLocation
+ * PostalAddress.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmChequeIssue
+ * PostalAddress.mmChequeIssue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+ * PostalAddress.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#DistrictSubDivisionIdentification
- * PostalAddress.DistrictSubDivisionIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmValidityPeriod
+ * PostalAddress.mmValidityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#MailingInstructions
- * PostalAddress.MailingInstructions}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSuiteIdentification
+ * PostalAddress.mmSuiteIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#PhysicalDelivery
- * PostalAddress.PhysicalDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingIdentification
+ * PostalAddress.mmBuildingIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailDeliverySubLocation
+ * PostalAddress.mmMailDeliverySubLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmBlock
+ * PostalAddress.mmBlock}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLot
+ * PostalAddress.mmLot}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictSubDivisionIdentification
+ * PostalAddress.mmDistrictSubDivisionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
+ * PostalAddress.mmMailingInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPhysicalDelivery
+ * PostalAddress.mmPhysicalDelivery}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,20 +121,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Country#PostalAddressSpecification
- * Country.PostalAddressSpecification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#Address
- * Location.Address}</li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmPostalAddressSpecification
+ * Country.mmPostalAddressSpecification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmAddress
+ * Location.mmAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedPostalAddress
- * DateTimePeriod.RelatedPostalAddress}</li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedPostalAddress
+ * DateTimePeriod.mmRelatedPostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MailingInstructions#RelatedPostalAddress
- * MailingInstructions.RelatedPostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#DeliverTo
- * ChequeIssue.DeliverTo}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#Address
- * PhysicalDelivery.Address}</li>
+ * {@linkplain com.tools20022.repository.entity.MailingInstructions#mmRelatedPostalAddress
+ * MailingInstructions.mmRelatedPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliverTo
+ * ChequeIssue.mmDeliverTo}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmAddress
+ * PhysicalDelivery.mmAddress}</li>
  * </ul>
  * </li>
  * <li>
@@ -137,343 +142,350 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactDetails1#FundManagerPostalAddress
- * ContactDetails1.FundManagerPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#PostalAddress
- * OrderDeskContactDetails.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ContactAttributes1#PostalAddress
- * ContactAttributes1.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#Unstructured
- * LongPostalAddress1Choice.Unstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#Structured
- * LongPostalAddress1Choice.Structured}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress2#Address
- * NameAndAddress2.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress5#Address
- * NameAndAddress5.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress1#Address
- * NameAndAddress1.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress4#Address
- * NameAndAddress4.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation2#PostalAddress
- * Organisation2.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson5#PostalAddress
- * IndividualPerson5.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson10#PostalAddress
- * IndividualPerson10.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BranchData#PostalAddress
- * BranchData.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation13#PostalAddress
- * Organisation13.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson20#PostalAddress
- * IndividualPerson20.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson8#IndividualInvestorAddress
- * IndividualPerson8.IndividualInvestorAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation4#CorporateInvestorAddress
- * Organisation4.CorporateInvestorAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation3#ModifiedPostalAddress
- * Organisation3.ModifiedPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ModifiedPostalAddress
- * IndividualPerson6.ModifiedPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson11#ModifiedPostalAddress
- * IndividualPerson11.ModifiedPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#PostalAddress
- * FinancialInstitutionIdentification8.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BranchData2#PostalAddress
- * BranchData2.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification8#PostalAddress
- * PartyIdentification8.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification32#PostalAddress
- * PartyIdentification32.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification43#PostalAddress
- * PartyIdentification43.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut3#InvestorAddress
- * TransferOut3.InvestorAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress7#PostalAddress
- * NameAndAddress7.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#PostalAddress
- * FinancialInstitutionIdentification3.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#PostalAddress
- * FinancialInstitutionIdentification7.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress13#Address
- * NameAndAddress13.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#PostalAddress
- * PartyIdentification6Choice.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification41#PostalAddress
- * PartyIdentification41.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification40#PostalAddress
- * PartyIdentification40.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation6#OperationalAddress
- * Organisation6.OperationalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation6#BusinessAddress
- * Organisation6.BusinessAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation6#LegalAddress
- * Organisation6.LegalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation12#BusinessAddress
- * Organisation12.BusinessAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation12#LegalAddress
- * Organisation12.LegalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation12#BillingAddress
- * Organisation12.BillingAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AddressModification1#Address
- * AddressModification1.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationModification1#BusinessAddress
- * OrganisationModification1.BusinessAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationModification1#LegalAddress
- * OrganisationModification1.LegalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationModification1#BillingAddress
- * OrganisationModification1.BillingAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation7#OperationalAddress
- * Organisation7.OperationalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation7#BusinessAddress
- * Organisation7.BusinessAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation7#LegalAddress
- * Organisation7.LegalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress3#Address
- * NameAndAddress3.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#RemittanceLocationPostalAddress
- * RemittanceLocation1.RemittanceLocationPostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress10#Address
- * NameAndAddress10.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceLocation2#RemittanceLocationPostalAddress
- * RemittanceLocation2.RemittanceLocationPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification42#PostalAddress
- * PartyIdentification42.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.NonExtension1#NotificationRecipientAddress
- * NonExtension1.NotificationRecipientAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#DeliverToAddress
- * CommunicationChannel1.DeliverToAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.AddressOrParty1Choice#NewAddress
- * AddressOrParty1Choice.NewAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress8#Address
- * NameAndAddress8.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification59#Address
- * PartyIdentification59.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation5#Address
- * Organisation5.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8#Address
- * Organisation8.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation9#Address
- * Organisation9.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification1#PostalAddress
- * PartyIdentification1.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#PostalAddress
- * FinancialInstitutionIdentification1.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson7#Address
- * IndividualPerson7.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice1#ProxyAppointmentNotificationAddress
- * MeetingNotice1.ProxyAppointmentNotificationAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods#VoteByMail
- * VoteMethods.VoteByMail}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters#VotingBallotRequestAddress
- * VoteParameters.VotingBallotRequestAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson14#Address
- * IndividualPerson14.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice2#ProxyAppointmentNotificationAddress
- * MeetingNotice2.ProxyAppointmentNotificationAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.LocationFormat1Choice#Address
- * LocationFormat1Choice.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VotingBallotRequestAddress
- * VoteParameters1.VotingBallotRequestAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.LongPostalAddress2Choice#Unstructured
- * LongPostalAddress2Choice.Unstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.LongPostalAddress2Choice#Structured
- * LongPostalAddress2Choice.Structured}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson16#Address
- * IndividualPerson16.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice3#ProxyAppointmentNotificationAddress
- * MeetingNotice3.ProxyAppointmentNotificationAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters2#VotingBallotRequestAddress
- * VoteParameters2.VotingBallotRequestAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#VoteByMail
- * VoteMethods2.VoteByMail}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters3#VotingBallotRequestAddress
- * VoteParameters3.VotingBallotRequestAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference1#Location
- * MeetingReference1.Location}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference2#Location
- * MeetingReference2.Location}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference5#Location
- * MeetingReference5.Location}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference3#Location
- * MeetingReference3.Location}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference4#Location
- * MeetingReference4.Location}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress9#Address
- * NameAndAddress9.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson13#Address
- * IndividualPerson13.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson17#Address
- * IndividualPerson17.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification45#PostalAddress
- * PartyIdentification45.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification9#PostalAddress
- * PartyIdentification9.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress6#Address
- * NameAndAddress6.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification26#PostalAddress
- * PartyIdentification26.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#PostalAddress
- * CommunicationAddressDetails.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification58#PostalAddress
- * PartyIdentification58.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification19#PostalAddress
- * PartyIdentification19.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification18#PostalAddress
- * PartyIdentification18.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification20#PostalAddress
- * PartyIdentification20.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification31#PostalAddress
- * PartyIdentification31.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification13#PostalAddress
- * PartyIdentification13.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification16#PostalAddress
- * PartyIdentification16.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress11#Address
- * NameAndAddress11.Address}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification5#PostalAddress
- * PartyIdentification5.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification24#PostalAddress
- * PartyIdentification24.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#InvestorAddress
- * TransferOut4.InvestorAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson21#ModifiedPostalAddress
- * IndividualPerson21.ModifiedPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson22#PostalAddress
- * IndividualPerson22.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation15#ModifiedPostalAddress
- * Organisation15.ModifiedPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceLocationDetails1#PostalAddress
- * RemittanceLocationDetails1.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation16#PostalAddress
- * Organisation16.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation17#ModifiedPostalAddress
- * Organisation17.ModifiedPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson23#PostalAddress
- * IndividualPerson23.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson24#ModifiedPostalAddress
- * IndividualPerson24.ModifiedPostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference7#Location
- * MeetingReference7.Location}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference6#Location
- * MeetingReference6.Location}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters4#VotingBallotRequestAddress
- * VoteParameters4.VotingBallotRequestAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#ProxyAppointmentNotificationAddress
- * MeetingNotice4.ProxyAppointmentNotificationAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson25#Address
- * IndividualPerson25.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson26#Address
- * IndividualPerson26.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation18#Location
- * Organisation18.Location}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddress5#PostalAddress
- * CommunicationAddress5.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification77#PostalAddress
- * PartyIdentification77.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation21#CorporateInvestorAddress
- * Organisation21.CorporateInvestorAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation22#ModifiedPostalAddress
- * Organisation22.ModifiedPostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation23#PostalAddress
- * Organisation23.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation24#PostalAddress
- * Organisation24.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson27#PostalAddress
- * IndividualPerson27.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope34#PostalAddress
- * ModificationScope34.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson29#PostalAddress
- * IndividualPerson29.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress15#PostalAddress
- * NameAndAddress15.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification112#PostalAddress
- * PartyIdentification112.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#PostalAddress
- * TaxOrganisationIdentification1.PostalAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation30#PostalAddress
- * Organisation30.PostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation29#ModifiedPostalAddress
- * Organisation29.ModifiedPostalAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson34#PostalAddress
- * IndividualPerson34.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactDetails1#mmFundManagerPostalAddress
+ * ContactDetails1.mmFundManagerPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmPostalAddress
+ * OrderDeskContactDetails.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ContactAttributes1#mmPostalAddress
+ * ContactAttributes1.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#mmUnstructured
+ * LongPostalAddress1Choice.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#mmStructured
+ * LongPostalAddress1Choice.mmStructured}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress2#mmAddress
+ * NameAndAddress2.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress5#mmAddress
+ * NameAndAddress5.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress1#mmAddress
+ * NameAndAddress1.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress4#mmAddress
+ * NameAndAddress4.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation2#mmPostalAddress
+ * Organisation2.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmPostalAddress
+ * IndividualPerson5.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmPostalAddress
+ * IndividualPerson10.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BranchData#mmPostalAddress
+ * BranchData.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation13#mmPostalAddress
+ * Organisation13.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson20#mmPostalAddress
+ * IndividualPerson20.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson8#mmIndividualInvestorAddress
+ * IndividualPerson8.mmIndividualInvestorAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation4#mmCorporateInvestorAddress
+ * Organisation4.mmCorporateInvestorAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation3#mmModifiedPostalAddress
+ * Organisation3.mmModifiedPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmModifiedPostalAddress
+ * IndividualPerson6.mmModifiedPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmModifiedPostalAddress
+ * IndividualPerson11.mmModifiedPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmPostalAddress
+ * FinancialInstitutionIdentification8.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BranchData2#mmPostalAddress
+ * BranchData2.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification8#mmPostalAddress
+ * PartyIdentification8.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification32#mmPostalAddress
+ * PartyIdentification32.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification43#mmPostalAddress
+ * PartyIdentification43.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut3#mmInvestorAddress
+ * TransferOut3.mmInvestorAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NameAndAddress7#mmPostalAddress
+ * NameAndAddress7.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#mmPostalAddress
+ * FinancialInstitutionIdentification3.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#mmPostalAddress
+ * FinancialInstitutionIdentification7.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress13#mmAddress
+ * NameAndAddress13.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#mmPostalAddress
+ * PartyIdentification6Choice.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification41#mmPostalAddress
+ * PartyIdentification41.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification40#mmPostalAddress
+ * PartyIdentification40.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation6#mmOperationalAddress
+ * Organisation6.mmOperationalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation6#mmBusinessAddress
+ * Organisation6.mmBusinessAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation6#mmLegalAddress
+ * Organisation6.mmLegalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation12#mmBusinessAddress
+ * Organisation12.mmBusinessAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation12#mmLegalAddress
+ * Organisation12.mmLegalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation12#mmBillingAddress
+ * Organisation12.mmBillingAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AddressModification1#mmAddress
+ * AddressModification1.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationModification1#mmBusinessAddress
+ * OrganisationModification1.mmBusinessAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationModification1#mmLegalAddress
+ * OrganisationModification1.mmLegalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationModification1#mmBillingAddress
+ * OrganisationModification1.mmBillingAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation7#mmOperationalAddress
+ * Organisation7.mmOperationalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation7#mmBusinessAddress
+ * Organisation7.mmBusinessAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation7#mmLegalAddress
+ * Organisation7.mmLegalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress3#mmAddress
+ * NameAndAddress3.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceLocation1#mmRemittanceLocationPostalAddress
+ * RemittanceLocation1.mmRemittanceLocationPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress10#mmAddress
+ * NameAndAddress10.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceLocation2#mmRemittanceLocationPostalAddress
+ * RemittanceLocation2.mmRemittanceLocationPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification42#mmPostalAddress
+ * PartyIdentification42.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NonExtension1#mmNotificationRecipientAddress
+ * NonExtension1.mmNotificationRecipientAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#mmDeliverToAddress
+ * CommunicationChannel1.mmDeliverToAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AddressOrParty1Choice#mmNewAddress
+ * AddressOrParty1Choice.mmNewAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress8#mmAddress
+ * NameAndAddress8.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmAddress
+ * PartyIdentification59.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation5#mmAddress
+ * Organisation5.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation8#mmAddress
+ * Organisation8.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation9#mmAddress
+ * Organisation9.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification1#mmPostalAddress
+ * PartyIdentification1.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#mmPostalAddress
+ * FinancialInstitutionIdentification1.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson7#mmAddress
+ * IndividualPerson7.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice1#mmProxyAppointmentNotificationAddress
+ * MeetingNotice1.mmProxyAppointmentNotificationAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods#mmVoteByMail
+ * VoteMethods.mmVoteByMail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters#mmVotingBallotRequestAddress
+ * VoteParameters.mmVotingBallotRequestAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson14#mmAddress
+ * IndividualPerson14.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice2#mmProxyAppointmentNotificationAddress
+ * MeetingNotice2.mmProxyAppointmentNotificationAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LocationFormat1Choice#mmAddress
+ * LocationFormat1Choice.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVotingBallotRequestAddress
+ * VoteParameters1.mmVotingBallotRequestAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LongPostalAddress2Choice#mmUnstructured
+ * LongPostalAddress2Choice.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LongPostalAddress2Choice#mmStructured
+ * LongPostalAddress2Choice.mmStructured}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson16#mmAddress
+ * IndividualPerson16.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmProxyAppointmentNotificationAddress
+ * MeetingNotice3.mmProxyAppointmentNotificationAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters2#mmVotingBallotRequestAddress
+ * VoteParameters2.mmVotingBallotRequestAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2#mmVoteByMail
+ * VoteMethods2.mmVoteByMail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters3#mmVotingBallotRequestAddress
+ * VoteParameters3.mmVotingBallotRequestAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference1#mmLocation
+ * MeetingReference1.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference2#mmLocation
+ * MeetingReference2.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference5#mmLocation
+ * MeetingReference5.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference3#mmLocation
+ * MeetingReference3.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference4#mmLocation
+ * MeetingReference4.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress9#mmAddress
+ * NameAndAddress9.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson13#mmAddress
+ * IndividualPerson13.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson17#mmAddress
+ * IndividualPerson17.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification45#mmPostalAddress
+ * PartyIdentification45.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification9#mmPostalAddress
+ * PartyIdentification9.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress6#mmAddress
+ * NameAndAddress6.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification26#mmPostalAddress
+ * PartyIdentification26.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#mmPostalAddress
+ * CommunicationAddressDetails.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification58#mmPostalAddress
+ * PartyIdentification58.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification19#mmPostalAddress
+ * PartyIdentification19.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification18#mmPostalAddress
+ * PartyIdentification18.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification20#mmPostalAddress
+ * PartyIdentification20.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification31#mmPostalAddress
+ * PartyIdentification31.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification13#mmPostalAddress
+ * PartyIdentification13.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification16#mmPostalAddress
+ * PartyIdentification16.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress11#mmAddress
+ * NameAndAddress11.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification5#mmPostalAddress
+ * PartyIdentification5.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification24#mmPostalAddress
+ * PartyIdentification24.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#mmInvestorAddress
+ * TransferOut4.mmInvestorAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson21#mmModifiedPostalAddress
+ * IndividualPerson21.mmModifiedPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson22#mmPostalAddress
+ * IndividualPerson22.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation15#mmModifiedPostalAddress
+ * Organisation15.mmModifiedPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceLocationDetails1#mmPostalAddress
+ * RemittanceLocationDetails1.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation16#mmPostalAddress
+ * Organisation16.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation17#mmModifiedPostalAddress
+ * Organisation17.mmModifiedPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson23#mmPostalAddress
+ * IndividualPerson23.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmModifiedPostalAddress
+ * IndividualPerson24.mmModifiedPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference7#mmLocation
+ * MeetingReference7.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference6#mmLocation
+ * MeetingReference6.mmLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters4#mmVotingBallotRequestAddress
+ * VoteParameters4.mmVotingBallotRequestAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmProxyAppointmentNotificationAddress
+ * MeetingNotice4.mmProxyAppointmentNotificationAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson25#mmAddress
+ * IndividualPerson25.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson26#mmAddress
+ * IndividualPerson26.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation18#mmLocation
+ * Organisation18.mmLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddress5#mmPostalAddress
+ * CommunicationAddress5.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmPostalAddress
+ * PartyIdentification77.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation21#mmCorporateInvestorAddress
+ * Organisation21.mmCorporateInvestorAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation22#mmModifiedPostalAddress
+ * Organisation22.mmModifiedPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation23#mmPostalAddress
+ * Organisation23.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation24#mmPostalAddress
+ * Organisation24.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson27#mmPostalAddress
+ * IndividualPerson27.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope34#mmPostalAddress
+ * ModificationScope34.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson29#mmPostalAddress
+ * IndividualPerson29.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NameAndAddress15#mmPostalAddress
+ * NameAndAddress15.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification112#mmPostalAddress
+ * PartyIdentification112.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#mmPostalAddress
+ * TaxOrganisationIdentification1.mmPostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation30#mmPostalAddress
+ * Organisation30.mmPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation29#mmModifiedPostalAddress
+ * Organisation29.mmModifiedPostalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmPostalAddress
+ * IndividualPerson34.mmPostalAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -525,8 +537,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -540,6 +552,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PostalAddress extends ContactPoint {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected AddressTypeCode addressType;
 	/**
 	 * Specifies the type of address.
 	 * <p>
@@ -550,35 +563,39 @@ public class PostalAddress extends ContactPoint {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AddressTypeCode
 	 * AddressTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1#AddressType
-	 * PostalAddress1.AddressType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress3#AddressType
-	 * PostalAddress3.AddressType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6#AddressType
-	 * PostalAddress6.AddressType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8#AddressType
-	 * PostalAddress8.AddressType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#AddressType
-	 * PostalAddress11.AddressType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#AddressType
-	 * PostalAddress19.AddressType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#AddressType
-	 * PostalAddress21.AddressType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#AddressType
-	 * CommunicationAddress6.AddressType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress1#mmAddressType
+	 * PostalAddress1.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress3#mmAddressType
+	 * PostalAddress3.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#mmAddressType
+	 * PostalAddress6.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress8#mmAddressType
+	 * PostalAddress8.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#mmAddressType
+	 * PostalAddress11.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmAddressType
+	 * PostalAddress19.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmAddressType
+	 * PostalAddress21.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#mmAddressType
+	 * CommunicationAddress6.mmAddressType}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -591,21 +608,22 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Specifies the type of address."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AddressType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAddressType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.AddressType, com.tools20022.repository.msg.PostalAddress3.AddressType, com.tools20022.repository.msg.PostalAddress6.AddressType,
-					com.tools20022.repository.msg.PostalAddress8.AddressType, com.tools20022.repository.msg.PostalAddress11.AddressType, com.tools20022.repository.msg.PostalAddress19.AddressType,
-					com.tools20022.repository.msg.PostalAddress21.AddressType, com.tools20022.repository.msg.CommunicationAddress6.AddressType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmAddressType, com.tools20022.repository.msg.PostalAddress3.mmAddressType, com.tools20022.repository.msg.PostalAddress6.mmAddressType,
+					com.tools20022.repository.msg.PostalAddress8.mmAddressType, com.tools20022.repository.msg.PostalAddress11.mmAddressType, com.tools20022.repository.msg.PostalAddress19.mmAddressType,
+					com.tools20022.repository.msg.PostalAddress21.mmAddressType, com.tools20022.repository.msg.CommunicationAddress6.mmAddressType);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AddressType";
 			definition = "Specifies the type of address.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AddressTypeCode.mmObject();
 		}
 	};
+	protected Max35Text streetName;
 	/**
 	 * Name of a street or thoroughfare.
 	 * <p>
@@ -615,44 +633,57 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1#StreetName
-	 * PostalAddress1.StreetName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#StreetName
-	 * StructuredLongPostalAddress1.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6#StreetName
-	 * PostalAddress6.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8#StreetName
-	 * PostalAddress8.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress2#StreetName
-	 * PostalAddress2.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress5#StreetName
-	 * PostalAddress5.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#StreetName
-	 * PostalAddress11.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress10#StreetName
-	 * PostalAddress10.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress9#StreetName
-	 * PostalAddress9.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress13#StreetName
-	 * PostalAddress13.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress17#StreetName
-	 * PostalAddress17.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#StreetName
-	 * PostalAddress19.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress18#StreetName
-	 * PostalAddress18.StreetName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#StreetName
-	 * PostalAddress21.StreetName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress1#mmStreetName
+	 * PostalAddress1.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmStreetName
+	 * StructuredLongPostalAddress1.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#mmStreetName
+	 * PostalAddress6.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress8#mmStreetName
+	 * PostalAddress8.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress2#mmStreetName
+	 * PostalAddress2.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress5#mmStreetName
+	 * PostalAddress5.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#mmStreetName
+	 * PostalAddress11.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress10#mmStreetName
+	 * PostalAddress10.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress9#mmStreetName
+	 * PostalAddress9.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress13#mmStreetName
+	 * PostalAddress13.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress17#mmStreetName
+	 * PostalAddress17.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmStreetName
+	 * PostalAddress19.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress18#mmStreetName
+	 * PostalAddress18.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmStreetName
+	 * PostalAddress21.mmStreetName}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -665,23 +696,24 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Name of a street or thoroughfare."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StreetName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStreetName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.StreetName, com.tools20022.repository.msg.StructuredLongPostalAddress1.StreetName, com.tools20022.repository.msg.PostalAddress6.StreetName,
-					com.tools20022.repository.msg.PostalAddress8.StreetName, com.tools20022.repository.msg.PostalAddress2.StreetName, com.tools20022.repository.msg.PostalAddress5.StreetName,
-					com.tools20022.repository.msg.PostalAddress11.StreetName, com.tools20022.repository.msg.PostalAddress10.StreetName, com.tools20022.repository.msg.PostalAddress9.StreetName,
-					com.tools20022.repository.msg.PostalAddress13.StreetName, com.tools20022.repository.msg.PostalAddress17.StreetName, com.tools20022.repository.msg.PostalAddress19.StreetName,
-					com.tools20022.repository.msg.PostalAddress18.StreetName, com.tools20022.repository.msg.PostalAddress21.StreetName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmStreetName, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmStreetName,
+					com.tools20022.repository.msg.PostalAddress6.mmStreetName, com.tools20022.repository.msg.PostalAddress8.mmStreetName, com.tools20022.repository.msg.PostalAddress2.mmStreetName,
+					com.tools20022.repository.msg.PostalAddress5.mmStreetName, com.tools20022.repository.msg.PostalAddress11.mmStreetName, com.tools20022.repository.msg.PostalAddress10.mmStreetName,
+					com.tools20022.repository.msg.PostalAddress9.mmStreetName, com.tools20022.repository.msg.PostalAddress13.mmStreetName, com.tools20022.repository.msg.PostalAddress17.mmStreetName,
+					com.tools20022.repository.msg.PostalAddress19.mmStreetName, com.tools20022.repository.msg.PostalAddress18.mmStreetName, com.tools20022.repository.msg.PostalAddress21.mmStreetName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StreetName";
 			definition = "Name of a street or thoroughfare.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text streetBuildingIdentification;
 	/**
 	 * Number that identifies the position of a building on a street.
 	 * <p>
@@ -691,51 +723,51 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress1#BuildingNumber
-	 * PostalAddress1.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#StreetBuildingIdentification
-	 * StructuredLongPostalAddress1.StreetBuildingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#BuildingNumber
-	 * PostalAddress6.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress8#BuildingNumber
-	 * PostalAddress8.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#BuildingNumber
-	 * PostalAddress11.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress10#BuildingNumber
-	 * PostalAddress10.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress9#BuildingNumber
-	 * PostalAddress9.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress13#BuildingNumber
-	 * PostalAddress13.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress17#BuildingNumber
-	 * PostalAddress17.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#BuildingNumber
-	 * PostalAddress19.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress18#BuildingNumber
-	 * PostalAddress18.BuildingNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#BuildingNumber
-	 * PostalAddress21.BuildingNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress1#mmBuildingNumber
+	 * PostalAddress1.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmStreetBuildingIdentification
+	 * StructuredLongPostalAddress1.mmStreetBuildingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#mmBuildingNumber
+	 * PostalAddress6.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress8#mmBuildingNumber
+	 * PostalAddress8.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#mmBuildingNumber
+	 * PostalAddress11.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress10#mmBuildingNumber
+	 * PostalAddress10.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress9#mmBuildingNumber
+	 * PostalAddress9.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress13#mmBuildingNumber
+	 * PostalAddress13.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress17#mmBuildingNumber
+	 * PostalAddress17.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmBuildingNumber
+	 * PostalAddress19.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress18#mmBuildingNumber
+	 * PostalAddress18.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmBuildingNumber
+	 * PostalAddress21.mmBuildingNumber}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -749,23 +781,24 @@ public class PostalAddress extends ContactPoint {
 	 * "Number that identifies the position of a building on a street."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StreetBuildingIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStreetBuildingIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.BuildingNumber, com.tools20022.repository.msg.StructuredLongPostalAddress1.StreetBuildingIdentification,
-					com.tools20022.repository.msg.PostalAddress6.BuildingNumber, com.tools20022.repository.msg.PostalAddress8.BuildingNumber, com.tools20022.repository.msg.PostalAddress11.BuildingNumber,
-					com.tools20022.repository.msg.PostalAddress10.BuildingNumber, com.tools20022.repository.msg.PostalAddress9.BuildingNumber, com.tools20022.repository.msg.PostalAddress13.BuildingNumber,
-					com.tools20022.repository.msg.PostalAddress17.BuildingNumber, com.tools20022.repository.msg.PostalAddress19.BuildingNumber, com.tools20022.repository.msg.PostalAddress18.BuildingNumber,
-					com.tools20022.repository.msg.PostalAddress21.BuildingNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmBuildingNumber, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmStreetBuildingIdentification,
+					com.tools20022.repository.msg.PostalAddress6.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress8.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress11.mmBuildingNumber,
+					com.tools20022.repository.msg.PostalAddress10.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress9.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress13.mmBuildingNumber,
+					com.tools20022.repository.msg.PostalAddress17.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress19.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress18.mmBuildingNumber,
+					com.tools20022.repository.msg.PostalAddress21.mmBuildingNumber);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StreetBuildingIdentification";
 			definition = "Number that identifies the position of a building on a street.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max16Text postCodeIdentification;
 	/**
 	 * Identifier consisting of a group of letters and/or numbers that is added
 	 * to a postal address to assist the sorting of mail.
@@ -776,48 +809,48 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max16Text
 	 * Max16Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1#PostCode
-	 * PostalAddress1.PostCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#PostCodeIdentification
-	 * StructuredLongPostalAddress1.PostCodeIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6#PostCode
-	 * PostalAddress6.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8#PostCode
-	 * PostalAddress8.PostCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress2#PostCodeIdentification
-	 * PostalAddress2.PostCodeIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress5#PostCodeIdentification
-	 * PostalAddress5.PostCodeIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#PostCode
-	 * PostalAddress11.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress7#PostCode
-	 * PostalAddress7.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress10#PostCode
-	 * PostalAddress10.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress9#PostCode
-	 * PostalAddress9.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress13#PostCode
-	 * PostalAddress13.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress17#PostCode
-	 * PostalAddress17.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#PostCode
-	 * PostalAddress19.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress18#PostCode
-	 * PostalAddress18.PostCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#PostCode
-	 * PostalAddress21.PostCode}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1#mmPostCode
+	 * PostalAddress1.mmPostCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmPostCodeIdentification
+	 * StructuredLongPostalAddress1.mmPostCodeIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6#mmPostCode
+	 * PostalAddress6.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8#mmPostCode
+	 * PostalAddress8.mmPostCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress2#mmPostCodeIdentification
+	 * PostalAddress2.mmPostCodeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress5#mmPostCodeIdentification
+	 * PostalAddress5.mmPostCodeIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#mmPostCode
+	 * PostalAddress11.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress7#mmPostCode
+	 * PostalAddress7.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress10#mmPostCode
+	 * PostalAddress10.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress9#mmPostCode
+	 * PostalAddress9.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress13#mmPostCode
+	 * PostalAddress13.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress17#mmPostCode
+	 * PostalAddress17.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#mmPostCode
+	 * PostalAddress19.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress18#mmPostCode
+	 * PostalAddress18.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmPostCode
+	 * PostalAddress21.mmPostCode}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -832,24 +865,25 @@ public class PostalAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PostCodeIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPostCodeIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.PostCode, com.tools20022.repository.msg.StructuredLongPostalAddress1.PostCodeIdentification,
-					com.tools20022.repository.msg.PostalAddress6.PostCode, com.tools20022.repository.msg.PostalAddress8.PostCode, com.tools20022.repository.msg.PostalAddress2.PostCodeIdentification,
-					com.tools20022.repository.msg.PostalAddress5.PostCodeIdentification, com.tools20022.repository.msg.PostalAddress11.PostCode, com.tools20022.repository.msg.PostalAddress7.PostCode,
-					com.tools20022.repository.msg.PostalAddress10.PostCode, com.tools20022.repository.msg.PostalAddress9.PostCode, com.tools20022.repository.msg.PostalAddress13.PostCode,
-					com.tools20022.repository.msg.PostalAddress17.PostCode, com.tools20022.repository.msg.PostalAddress19.PostCode, com.tools20022.repository.msg.PostalAddress18.PostCode,
-					com.tools20022.repository.msg.PostalAddress21.PostCode);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmPostCode, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmPostCodeIdentification,
+					com.tools20022.repository.msg.PostalAddress6.mmPostCode, com.tools20022.repository.msg.PostalAddress8.mmPostCode, com.tools20022.repository.msg.PostalAddress2.mmPostCodeIdentification,
+					com.tools20022.repository.msg.PostalAddress5.mmPostCodeIdentification, com.tools20022.repository.msg.PostalAddress11.mmPostCode, com.tools20022.repository.msg.PostalAddress7.mmPostCode,
+					com.tools20022.repository.msg.PostalAddress10.mmPostCode, com.tools20022.repository.msg.PostalAddress9.mmPostCode, com.tools20022.repository.msg.PostalAddress13.mmPostCode,
+					com.tools20022.repository.msg.PostalAddress17.mmPostCode, com.tools20022.repository.msg.PostalAddress19.mmPostCode, com.tools20022.repository.msg.PostalAddress18.mmPostCode,
+					com.tools20022.repository.msg.PostalAddress21.mmPostCode);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PostCodeIdentification";
 			definition = "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max35Text townName;
 	/**
 	 * Name of a built-up area, with defined boundaries, and a local government.
 	 * <p>
@@ -859,64 +893,64 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1#TownName
-	 * PostalAddress1.TownName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#TownName
-	 * StructuredLongPostalAddress1.TownName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#CityOfBirth
-	 * IndividualPerson10.CityOfBirth}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#CityOfBirth
-	 * IndividualPerson11.CityOfBirth}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6#TownName
-	 * PostalAddress6.TownName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DateAndPlaceOfBirth#CityOfBirth
-	 * DateAndPlaceOfBirth.CityOfBirth}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8#TownName
-	 * PostalAddress8.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress12#TownName
-	 * PostalAddress12.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress2#TownName
-	 * PostalAddress2.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.AirportDescription1#Town
-	 * AirportDescription1.Town}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress5#TownName
-	 * PostalAddress5.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#TownName
-	 * PostalAddress11.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress7#TownName
-	 * PostalAddress7.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress10#TownName
-	 * PostalAddress10.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress9#TownName
-	 * PostalAddress9.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress13#TownName
-	 * PostalAddress13.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress17#TownName
-	 * PostalAddress17.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#TownName
-	 * PostalAddress19.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress18#TownName
-	 * PostalAddress18.TownName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#Village
-	 * PostalAddress21.Village}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#TownName
-	 * PostalAddress21.TownName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarketIdentification92#City
-	 * MarketIdentification92.City}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1#mmTownName
+	 * PostalAddress1.mmTownName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmTownName
+	 * StructuredLongPostalAddress1.mmTownName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmCityOfBirth
+	 * IndividualPerson10.mmCityOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmCityOfBirth
+	 * IndividualPerson11.mmCityOfBirth}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6#mmTownName
+	 * PostalAddress6.mmTownName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DateAndPlaceOfBirth#mmCityOfBirth
+	 * DateAndPlaceOfBirth.mmCityOfBirth}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8#mmTownName
+	 * PostalAddress8.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress12#mmTownName
+	 * PostalAddress12.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress2#mmTownName
+	 * PostalAddress2.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AirportDescription1#mmTown
+	 * AirportDescription1.mmTown}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress5#mmTownName
+	 * PostalAddress5.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#mmTownName
+	 * PostalAddress11.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress7#mmTownName
+	 * PostalAddress7.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress10#mmTownName
+	 * PostalAddress10.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress9#mmTownName
+	 * PostalAddress9.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress13#mmTownName
+	 * PostalAddress13.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress17#mmTownName
+	 * PostalAddress17.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#mmTownName
+	 * PostalAddress19.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress18#mmTownName
+	 * PostalAddress18.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmVillage
+	 * PostalAddress21.mmVillage}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmTownName
+	 * PostalAddress21.mmTownName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmCity
+	 * MarketIdentification92.mmCity}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -931,26 +965,27 @@ public class PostalAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TownName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTownName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.TownName, com.tools20022.repository.msg.StructuredLongPostalAddress1.TownName, com.tools20022.repository.msg.IndividualPerson10.CityOfBirth,
-					com.tools20022.repository.msg.IndividualPerson11.CityOfBirth, com.tools20022.repository.msg.PostalAddress6.TownName, com.tools20022.repository.msg.DateAndPlaceOfBirth.CityOfBirth,
-					com.tools20022.repository.msg.PostalAddress8.TownName, com.tools20022.repository.msg.PostalAddress12.TownName, com.tools20022.repository.msg.PostalAddress2.TownName,
-					com.tools20022.repository.msg.AirportDescription1.Town, com.tools20022.repository.msg.PostalAddress5.TownName, com.tools20022.repository.msg.PostalAddress11.TownName,
-					com.tools20022.repository.msg.PostalAddress7.TownName, com.tools20022.repository.msg.PostalAddress10.TownName, com.tools20022.repository.msg.PostalAddress9.TownName,
-					com.tools20022.repository.msg.PostalAddress13.TownName, com.tools20022.repository.msg.PostalAddress17.TownName, com.tools20022.repository.msg.PostalAddress19.TownName,
-					com.tools20022.repository.msg.PostalAddress18.TownName, com.tools20022.repository.msg.PostalAddress21.Village, com.tools20022.repository.msg.PostalAddress21.TownName,
-					com.tools20022.repository.msg.MarketIdentification92.City);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmTownName, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmTownName,
+					com.tools20022.repository.msg.IndividualPerson10.mmCityOfBirth, com.tools20022.repository.msg.IndividualPerson11.mmCityOfBirth, com.tools20022.repository.msg.PostalAddress6.mmTownName,
+					com.tools20022.repository.msg.DateAndPlaceOfBirth.mmCityOfBirth, com.tools20022.repository.msg.PostalAddress8.mmTownName, com.tools20022.repository.msg.PostalAddress12.mmTownName,
+					com.tools20022.repository.msg.PostalAddress2.mmTownName, com.tools20022.repository.msg.AirportDescription1.mmTown, com.tools20022.repository.msg.PostalAddress5.mmTownName,
+					com.tools20022.repository.msg.PostalAddress11.mmTownName, com.tools20022.repository.msg.PostalAddress7.mmTownName, com.tools20022.repository.msg.PostalAddress10.mmTownName,
+					com.tools20022.repository.msg.PostalAddress9.mmTownName, com.tools20022.repository.msg.PostalAddress13.mmTownName, com.tools20022.repository.msg.PostalAddress17.mmTownName,
+					com.tools20022.repository.msg.PostalAddress19.mmTownName, com.tools20022.repository.msg.PostalAddress18.mmTownName, com.tools20022.repository.msg.PostalAddress21.mmVillage,
+					com.tools20022.repository.msg.PostalAddress21.mmTownName, com.tools20022.repository.msg.MarketIdentification92.mmCity);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TownName";
 			definition = "Name of a built-up area, with defined boundaries, and a local government.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text state;
 	/**
 	 * Organised political community or area forming a part of a federation.
 	 * <p>
@@ -960,65 +995,65 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress1#CountrySubDivision
-	 * PostalAddress1.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#State
-	 * StructuredLongPostalAddress1.State}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#CountrySubDivision
-	 * PostalAddress6.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress8#CountrySubDivision
-	 * PostalAddress8.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress12#CountrySubDivision
-	 * PostalAddress12.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress2#CountrySubDivision
-	 * PostalAddress2.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress5#CountrySubDivision
-	 * PostalAddress5.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#CountrySubDivision
-	 * PostalAddress11.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress10#CountrySubDivision
-	 * PostalAddress10.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress9#CountrySubDivision
-	 * PostalAddress9.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress13#CountrySubDivision
-	 * PostalAddress13.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress17#CountrySubDivision
-	 * PostalAddress17.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#CountrySubDivision
-	 * PostalAddress19.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress18#CountrySubDivision
-	 * PostalAddress18.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#CountrySubDivision
-	 * DerivativePartyIdentification1Choice.CountrySubDivision}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#State
-	 * PostalAddress21.State}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#State
-	 * GenericIdentification82.State}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress1#mmCountrySubDivision
+	 * PostalAddress1.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmState
+	 * StructuredLongPostalAddress1.mmState}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#mmCountrySubDivision
+	 * PostalAddress6.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress8#mmCountrySubDivision
+	 * PostalAddress8.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress12#mmCountrySubDivision
+	 * PostalAddress12.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress2#mmCountrySubDivision
+	 * PostalAddress2.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress5#mmCountrySubDivision
+	 * PostalAddress5.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#mmCountrySubDivision
+	 * PostalAddress11.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress10#mmCountrySubDivision
+	 * PostalAddress10.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress9#mmCountrySubDivision
+	 * PostalAddress9.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress13#mmCountrySubDivision
+	 * PostalAddress13.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress17#mmCountrySubDivision
+	 * PostalAddress17.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmCountrySubDivision
+	 * PostalAddress19.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress18#mmCountrySubDivision
+	 * PostalAddress18.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#mmCountrySubDivision
+	 * DerivativePartyIdentification1Choice.mmCountrySubDivision}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmState
+	 * PostalAddress21.mmState}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmState
+	 * GenericIdentification82.mmState}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1032,24 +1067,25 @@ public class PostalAddress extends ContactPoint {
 	 * "Organised political community or area forming a part of a federation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute State = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmState = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.CountrySubDivision, com.tools20022.repository.msg.StructuredLongPostalAddress1.State,
-					com.tools20022.repository.msg.PostalAddress6.CountrySubDivision, com.tools20022.repository.msg.PostalAddress8.CountrySubDivision, com.tools20022.repository.msg.PostalAddress12.CountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress2.CountrySubDivision, com.tools20022.repository.msg.PostalAddress5.CountrySubDivision, com.tools20022.repository.msg.PostalAddress11.CountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress10.CountrySubDivision, com.tools20022.repository.msg.PostalAddress9.CountrySubDivision, com.tools20022.repository.msg.PostalAddress13.CountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress17.CountrySubDivision, com.tools20022.repository.msg.PostalAddress19.CountrySubDivision, com.tools20022.repository.msg.PostalAddress18.CountrySubDivision,
-					com.tools20022.repository.choice.DerivativePartyIdentification1Choice.CountrySubDivision, com.tools20022.repository.msg.PostalAddress21.State, com.tools20022.repository.msg.GenericIdentification82.State);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmCountrySubDivision, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmState,
+					com.tools20022.repository.msg.PostalAddress6.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress8.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress12.mmCountrySubDivision,
+					com.tools20022.repository.msg.PostalAddress2.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress5.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress11.mmCountrySubDivision,
+					com.tools20022.repository.msg.PostalAddress10.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress9.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress13.mmCountrySubDivision,
+					com.tools20022.repository.msg.PostalAddress17.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress19.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress18.mmCountrySubDivision,
+					com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress21.mmState, com.tools20022.repository.msg.GenericIdentification82.mmState);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "State";
 			definition = "Organised political community or area forming a part of a federation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text buildingName;
 	/**
 	 * Name of the building or house.
 	 * <p>
@@ -1059,24 +1095,24 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#BuildingName
-	 * StructuredLongPostalAddress1.BuildingName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#BuildingName
-	 * PostalAddress11.BuildingName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#BuildingName
-	 * PostalAddress21.BuildingName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmBuildingName
+	 * StructuredLongPostalAddress1.mmBuildingName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#mmBuildingName
+	 * PostalAddress11.mmBuildingName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmBuildingName
+	 * PostalAddress21.mmBuildingName}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1089,20 +1125,21 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Name of the building or house."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BuildingName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBuildingName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.BuildingName, com.tools20022.repository.msg.PostalAddress11.BuildingName,
-					com.tools20022.repository.msg.PostalAddress21.BuildingName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmBuildingName, com.tools20022.repository.msg.PostalAddress11.mmBuildingName,
+					com.tools20022.repository.msg.PostalAddress21.mmBuildingName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BuildingName";
 			definition = "Name of the building or house.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max16Text floor;
 	/**
 	 * Floor or storey within a building.
 	 * <p>
@@ -1112,22 +1149,22 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max16Text
 	 * Max16Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#Floor
-	 * StructuredLongPostalAddress1.Floor}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#Floor
-	 * PostalAddress11.Floor}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#Floor
-	 * PostalAddress21.Floor}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmFloor
+	 * StructuredLongPostalAddress1.mmFloor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#mmFloor
+	 * PostalAddress11.mmFloor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmFloor
+	 * PostalAddress21.mmFloor}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1140,19 +1177,20 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Floor or storey within a building."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Floor = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFloor = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.Floor, com.tools20022.repository.msg.PostalAddress11.Floor, com.tools20022.repository.msg.PostalAddress21.Floor);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmFloor, com.tools20022.repository.msg.PostalAddress11.mmFloor, com.tools20022.repository.msg.PostalAddress21.mmFloor);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Floor";
 			definition = "Floor or storey within a building.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max35Text districtName;
 	/**
 	 * Name of a district, ie, a part of a town or region.
 	 * <p>
@@ -1162,24 +1200,24 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#DistrictName
-	 * StructuredLongPostalAddress1.DistrictName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#DistrictName
-	 * PostalAddress19.DistrictName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#DistrictName
-	 * PostalAddress21.DistrictName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmDistrictName
+	 * StructuredLongPostalAddress1.mmDistrictName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmDistrictName
+	 * PostalAddress19.mmDistrictName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmDistrictName
+	 * PostalAddress21.mmDistrictName}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1192,20 +1230,21 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Name of a district, ie, a part of a town or region."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DistrictName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDistrictName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.DistrictName, com.tools20022.repository.msg.PostalAddress19.DistrictName,
-					com.tools20022.repository.msg.PostalAddress21.DistrictName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmDistrictName, com.tools20022.repository.msg.PostalAddress19.mmDistrictName,
+					com.tools20022.repository.msg.PostalAddress21.mmDistrictName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DistrictName";
 			definition = "Name of a district, ie, a part of a town or region.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text regionIdentification;
 	/**
 	 * Identification of an administrative division of a country, state, or
 	 * territory.
@@ -1216,21 +1255,21 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#RegionIdentification
-	 * StructuredLongPostalAddress1.RegionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice#Area
-	 * ResidenceLocation1Choice.Area}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmRegionIdentification
+	 * StructuredLongPostalAddress1.mmRegionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice#mmArea
+	 * ResidenceLocation1Choice.mmArea}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1245,19 +1284,20 @@ public class PostalAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RegionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRegionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.RegionIdentification, com.tools20022.repository.choice.ResidenceLocation1Choice.Area);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmRegionIdentification, com.tools20022.repository.choice.ResidenceLocation1Choice.mmArea);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RegionIdentification";
 			definition = "Identification of an administrative division of a country, state, or territory.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text countyIdentification;
 	/**
 	 * Identifier of a county.
 	 * <p>
@@ -1267,33 +1307,33 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#CountyIdentification
-	 * StructuredLongPostalAddress1.CountyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CountrySubdivision1Choice#Code
-	 * CountrySubdivision1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CountrySubdivision1Choice#Proprietary
-	 * CountrySubdivision1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Location1#CountrySubDivision
-	 * Location1.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Location2#CountrySubDivision
-	 * Location2.CountrySubDivision}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#TownLocationName
-	 * PostalAddress19.TownLocationName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmCountyIdentification
+	 * StructuredLongPostalAddress1.mmCountyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CountrySubdivision1Choice#mmCode
+	 * CountrySubdivision1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CountrySubdivision1Choice#mmProprietary
+	 * CountrySubdivision1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Location1#mmCountrySubDivision
+	 * Location1.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Location2#mmCountrySubDivision
+	 * Location2.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmTownLocationName
+	 * PostalAddress19.mmTownLocationName}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1306,21 +1346,22 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Identifier of a county."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CountyIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCountyIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.CountyIdentification, com.tools20022.repository.choice.CountrySubdivision1Choice.Code,
-					com.tools20022.repository.choice.CountrySubdivision1Choice.Proprietary, com.tools20022.repository.msg.Location1.CountrySubDivision, com.tools20022.repository.msg.Location2.CountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress19.TownLocationName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmCountyIdentification, com.tools20022.repository.choice.CountrySubdivision1Choice.mmCode,
+					com.tools20022.repository.choice.CountrySubdivision1Choice.mmProprietary, com.tools20022.repository.msg.Location1.mmCountrySubDivision, com.tools20022.repository.msg.Location2.mmCountrySubDivision,
+					com.tools20022.repository.msg.PostalAddress19.mmTownLocationName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CountyIdentification";
 			definition = "Identifier of a county.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max16Text postOfficeBox;
 	/**
 	 * Numbered box in a post office, assigned to a person or organisation,
 	 * where letters are kept until called for.
@@ -1331,22 +1372,22 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max16Text
 	 * Max16Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#PostOfficeBox
-	 * StructuredLongPostalAddress1.PostOfficeBox}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#PostBox
-	 * PostalAddress11.PostBox}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#PostBox
-	 * PostalAddress21.PostBox}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1#mmPostOfficeBox
+	 * StructuredLongPostalAddress1.mmPostOfficeBox}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#mmPostBox
+	 * PostalAddress11.mmPostBox}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmPostBox
+	 * PostalAddress21.mmPostBox}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1361,19 +1402,20 @@ public class PostalAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PostOfficeBox = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPostOfficeBox = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.PostOfficeBox, com.tools20022.repository.msg.PostalAddress11.PostBox, com.tools20022.repository.msg.PostalAddress21.PostBox);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmPostOfficeBox, com.tools20022.repository.msg.PostalAddress11.mmPostBox, com.tools20022.repository.msg.PostalAddress21.mmPostBox);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PostOfficeBox";
 			definition = "Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max35Text province;
 	/**
 	 * A territory governed as an administrative or political unit of a country.
 	 * <p>
@@ -1383,30 +1425,30 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#ProvinceOfBirth
-	 * IndividualPerson5.ProvinceOfBirth}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#ProvinceOfBirth
-	 * IndividualPerson10.ProvinceOfBirth}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ProvinceOfBirth
-	 * IndividualPerson6.ProvinceOfBirth}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#ProvinceOfBirth
-	 * IndividualPerson11.ProvinceOfBirth}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DateAndPlaceOfBirth#ProvinceOfBirth
-	 * DateAndPlaceOfBirth.ProvinceOfBirth}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmProvinceOfBirth
+	 * IndividualPerson5.mmProvinceOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmProvinceOfBirth
+	 * IndividualPerson10.mmProvinceOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmProvinceOfBirth
+	 * IndividualPerson6.mmProvinceOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmProvinceOfBirth
+	 * IndividualPerson11.mmProvinceOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DateAndPlaceOfBirth#mmProvinceOfBirth
+	 * DateAndPlaceOfBirth.mmProvinceOfBirth}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1421,20 +1463,21 @@ public class PostalAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Province = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProvince = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.ProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson10.ProvinceOfBirth,
-					com.tools20022.repository.msg.IndividualPerson6.ProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson11.ProvinceOfBirth, com.tools20022.repository.msg.DateAndPlaceOfBirth.ProvinceOfBirth);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson10.mmProvinceOfBirth,
+					com.tools20022.repository.msg.IndividualPerson6.mmProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson11.mmProvinceOfBirth, com.tools20022.repository.msg.DateAndPlaceOfBirth.mmProvinceOfBirth);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Province";
 			definition = "A territory governed as an administrative or political unit of a country.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max70Text department;
 	/**
 	 * Identification of a division of a large organisation or building.
 	 * <p>
@@ -1444,23 +1487,26 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6#Department
-	 * PostalAddress6.Department}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#Department
-	 * Contacts3.Department}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11#Department
-	 * PostalAddress11.Department}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#Department
-	 * PostalAddress19.Department}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#mmDepartment
+	 * PostalAddress6.mmDepartment}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#mmDepartment
+	 * Contacts3.mmDepartment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#mmDepartment
+	 * PostalAddress11.mmDepartment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmDepartment
+	 * PostalAddress19.mmDepartment}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1474,20 +1520,21 @@ public class PostalAddress extends ContactPoint {
 	 * "Identification of a division of a large organisation or building."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Department = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDepartment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress6.Department, com.tools20022.repository.msg.Contacts3.Department, com.tools20022.repository.msg.PostalAddress11.Department,
-					com.tools20022.repository.msg.PostalAddress19.Department);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress6.mmDepartment, com.tools20022.repository.msg.Contacts3.mmDepartment, com.tools20022.repository.msg.PostalAddress11.mmDepartment,
+					com.tools20022.repository.msg.PostalAddress19.mmDepartment);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Department";
 			definition = "Identification of a division of a large organisation or building.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max70Text subDepartment;
 	/**
 	 * Identification of a sub-division of a large organisation or building.
 	 * <p>
@@ -1497,24 +1544,24 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#SubDepartment
-	 * PostalAddress6.SubDepartment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#SubDepartment
-	 * PostalAddress11.SubDepartment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#SubDepartment
-	 * PostalAddress19.SubDepartment}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress6#mmSubDepartment
+	 * PostalAddress6.mmSubDepartment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress11#mmSubDepartment
+	 * PostalAddress11.mmSubDepartment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmSubDepartment
+	 * PostalAddress19.mmSubDepartment}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1528,19 +1575,20 @@ public class PostalAddress extends ContactPoint {
 	 * "Identification of a sub-division of a large organisation or building."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SubDepartment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSubDepartment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress6.SubDepartment, com.tools20022.repository.msg.PostalAddress11.SubDepartment, com.tools20022.repository.msg.PostalAddress19.SubDepartment);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress6.mmSubDepartment, com.tools20022.repository.msg.PostalAddress11.mmSubDepartment, com.tools20022.repository.msg.PostalAddress19.mmSubDepartment);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SubDepartment";
 			definition = "Identification of a sub-division of a large organisation or building.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Location location;
 	/**
 	 * Specifies a place.
 	 * <p>
@@ -1549,8 +1597,8 @@ public class PostalAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Location#Address
-	 * Location.Address}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmAddress
+	 * Location.mmAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1573,20 +1621,21 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Specifies a place."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Location = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Location";
 			definition = "Specifies a place.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.Address;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmAddress;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
+	protected ChequeIssue chequeIssue;
 	/**
 	 * Cheque issue information for which a delivery address is specified.
 	 * <p>
@@ -1595,8 +1644,8 @@ public class PostalAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#DeliverTo
-	 * ChequeIssue.DeliverTo}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliverTo
+	 * ChequeIssue.mmDeliverTo}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1621,20 +1670,21 @@ public class PostalAddress extends ContactPoint {
 	 * "Cheque issue information for which a delivery address is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ChequeIssue = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmChequeIssue = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChequeIssue";
 			definition = "Cheque issue information for which a delivery address is specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ChequeIssue.DeliverTo;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmDeliverTo;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
 		}
 	};
+	protected Country country;
 	/**
 	 * Country of the address.
 	 * <p>
@@ -1643,135 +1693,136 @@ public class PostalAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Country#PostalAddressSpecification
-	 * Country.PostalAddressSpecification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmPostalAddressSpecification
+	 * Country.mmPostalAddressSpecification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#ValidDomicileCountry
-	 * CorporateActionOption10.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#ValidDomicileCountry
-	 * CorporateActionOption15.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#ValidDomicileCountry
-	 * CorporateActionOption20.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#ValidDomicileCountry
-	 * CorporateActionOption32.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#ValidDomicileCountry
-	 * CorporateActionOption35.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#ValidDomicileCountry
-	 * CorporateActionOption44.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#ValidDomicileCountry
-	 * CorporateActionOption52.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#ValidDomicileCountry
-	 * CorporateActionOption55.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#ValidDomicileCountry
-	 * CorporateActionOption3.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#ValidDomicileCountry
-	 * CorporateActionOption17.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#ValidDomicileCountry
-	 * CorporateActionOption19.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#ValidDomicileCountry
-	 * CorporateActionOption34.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#ValidDomicileCountry
-	 * CorporateActionOption36.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#ValidDomicileCountry
-	 * CorporateActionOption45.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#ValidDomicileCountry
-	 * CorporateActionOption51.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#ValidDomicileCountry
-	 * CorporateActionOption56.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#ValidDomicileCountry
-	 * CorporateActionOption100.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#ValidDomicileCountry
-	 * CorporateActionOption101.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#ValidDomicileCountry
-	 * CorporateActionOption108.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#ValidDomicileCountry
-	 * CorporateActionOption106.ValidDomicileCountry}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#CountryCode
-	 * Acquirer6.CountryCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SectorAndLocation1#Location
-	 * SectorAndLocation1.Location}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#CountryOfBranch
-	 * SecuritiesTransaction1.CountryOfBranch}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#NationalCompetentAuthority
-	 * TradingVenueIdentification1Choice.NationalCompetentAuthority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification76#CountryOfBranch
-	 * PartyIdentification76.CountryOfBranch}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#BankAccountDomiciliationCountry
-	 * TransactionCertificate1.BankAccountDomiciliationCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ShipmentAttribute1#CountryOfCounterParty
-	 * ShipmentAttribute1.CountryOfCounterParty}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#ValidDomicileCountry
-	 * CorporateActionOption115.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#ValidDomicileCountry
-	 * CorporateActionOption114.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#Country
-	 * DerivativePartyIdentification1Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#ValidDomicileCountry
-	 * CorporateActionOption125.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#ValidDomicileCountry
-	 * CorporateActionOption127.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1#Location
-	 * ReportedPartyIdentification1.Location}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#ValidDomicileCountry
-	 * CorporateActionOption130.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#ValidDomicileCountry
-	 * CorporateActionOption129.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#ValidDomicileCountry
-	 * CorporateActionOption135.ValidDomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#ValidDomicileCountry
-	 * CorporateActionOption133.ValidDomicileCountry}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1#Location
-	 * NameAndLocation1.Location}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmValidDomicileCountry
+	 * CorporateActionOption10.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmValidDomicileCountry
+	 * CorporateActionOption15.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmValidDomicileCountry
+	 * CorporateActionOption20.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmValidDomicileCountry
+	 * CorporateActionOption32.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmValidDomicileCountry
+	 * CorporateActionOption35.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmValidDomicileCountry
+	 * CorporateActionOption44.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmValidDomicileCountry
+	 * CorporateActionOption52.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmValidDomicileCountry
+	 * CorporateActionOption55.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmValidDomicileCountry
+	 * CorporateActionOption3.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmValidDomicileCountry
+	 * CorporateActionOption17.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmValidDomicileCountry
+	 * CorporateActionOption19.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmValidDomicileCountry
+	 * CorporateActionOption34.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmValidDomicileCountry
+	 * CorporateActionOption36.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmValidDomicileCountry
+	 * CorporateActionOption45.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmValidDomicileCountry
+	 * CorporateActionOption51.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmValidDomicileCountry
+	 * CorporateActionOption56.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmValidDomicileCountry
+	 * CorporateActionOption100.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmValidDomicileCountry
+	 * CorporateActionOption101.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmValidDomicileCountry
+	 * CorporateActionOption108.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmValidDomicileCountry
+	 * CorporateActionOption106.mmValidDomicileCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer6#mmCountryCode
+	 * Acquirer6.mmCountryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SectorAndLocation1#mmLocation
+	 * SectorAndLocation1.mmLocation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmCountryOfBranch
+	 * SecuritiesTransaction1.mmCountryOfBranch}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#mmNationalCompetentAuthority
+	 * TradingVenueIdentification1Choice.mmNationalCompetentAuthority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification76#mmCountryOfBranch
+	 * PartyIdentification76.mmCountryOfBranch}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmBankAccountDomiciliationCountry
+	 * TransactionCertificate1.mmBankAccountDomiciliationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ShipmentAttribute1#mmCountryOfCounterParty
+	 * ShipmentAttribute1.mmCountryOfCounterParty}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmValidDomicileCountry
+	 * CorporateActionOption115.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmValidDomicileCountry
+	 * CorporateActionOption114.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#mmCountry
+	 * DerivativePartyIdentification1Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmValidDomicileCountry
+	 * CorporateActionOption125.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmValidDomicileCountry
+	 * CorporateActionOption127.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1#mmLocation
+	 * ReportedPartyIdentification1.mmLocation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmValidDomicileCountry
+	 * CorporateActionOption130.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmValidDomicileCountry
+	 * CorporateActionOption129.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmValidDomicileCountry
+	 * CorporateActionOption135.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmValidDomicileCountry
+	 * CorporateActionOption133.mmValidDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NameAndLocation1#mmLocation
+	 * NameAndLocation1.mmLocation}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1784,38 +1835,39 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Country of the address."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Country = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption15.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption20.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption32.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption35.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption44.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption52.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption55.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption3.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption17.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption19.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption34.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption36.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption45.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption51.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption56.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption100.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption101.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption108.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption106.ValidDomicileCountry, com.tools20022.repository.msg.Acquirer6.CountryCode,
-					com.tools20022.repository.msg.SectorAndLocation1.Location, com.tools20022.repository.msg.SecuritiesTransaction1.CountryOfBranch,
-					com.tools20022.repository.choice.TradingVenueIdentification1Choice.NationalCompetentAuthority, com.tools20022.repository.msg.PartyIdentification76.CountryOfBranch,
-					com.tools20022.repository.msg.TransactionCertificate1.BankAccountDomiciliationCountry, com.tools20022.repository.msg.ShipmentAttribute1.CountryOfCounterParty,
-					com.tools20022.repository.msg.CorporateActionOption115.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption114.ValidDomicileCountry,
-					com.tools20022.repository.choice.DerivativePartyIdentification1Choice.Country, com.tools20022.repository.msg.CorporateActionOption125.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption127.ValidDomicileCountry, com.tools20022.repository.msg.ReportedPartyIdentification1.Location,
-					com.tools20022.repository.msg.CorporateActionOption130.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption129.ValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption135.ValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption133.ValidDomicileCountry, com.tools20022.repository.msg.NameAndLocation1.Location);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption15.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption20.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption32.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption35.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption44.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption52.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption55.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption3.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption17.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption19.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption34.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption36.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption45.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption51.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption56.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption100.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption101.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption108.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption106.mmValidDomicileCountry, com.tools20022.repository.msg.Acquirer6.mmCountryCode,
+					com.tools20022.repository.msg.SectorAndLocation1.mmLocation, com.tools20022.repository.msg.SecuritiesTransaction1.mmCountryOfBranch,
+					com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmNationalCompetentAuthority, com.tools20022.repository.msg.PartyIdentification76.mmCountryOfBranch,
+					com.tools20022.repository.msg.TransactionCertificate1.mmBankAccountDomiciliationCountry, com.tools20022.repository.msg.ShipmentAttribute1.mmCountryOfCounterParty,
+					com.tools20022.repository.msg.CorporateActionOption115.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption114.mmValidDomicileCountry,
+					com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountry, com.tools20022.repository.msg.CorporateActionOption125.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption127.mmValidDomicileCountry, com.tools20022.repository.msg.ReportedPartyIdentification1.mmLocation,
+					com.tools20022.repository.msg.CorporateActionOption130.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption129.mmValidDomicileCountry,
+					com.tools20022.repository.msg.CorporateActionOption135.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption133.mmValidDomicileCountry, com.tools20022.repository.msg.NameAndLocation1.mmLocation);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country of the address.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Country.PostalAddressSpecification;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmPostalAddressSpecification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod;
 	/**
 	 * Specifies the period during which a postal address is valid.
 	 * <p>
@@ -1824,8 +1876,8 @@ public class PostalAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedPostalAddress
-	 * DateTimePeriod.RelatedPostalAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedPostalAddress
+	 * DateTimePeriod.mmRelatedPostalAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1850,7 +1902,7 @@ public class PostalAddress extends ContactPoint {
 	 * "Specifies the period during which a postal address is valid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ValidityPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
@@ -1858,11 +1910,12 @@ public class PostalAddress extends ContactPoint {
 			name = "ValidityPeriod";
 			definition = "Specifies the period during which a postal address is valid.";
 			minOccurs = 0;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.RelatedPostalAddress;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedPostalAddress;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected Max35Text suiteIdentification;
 	/**
 	 * Identification of a suite or apartment.
 	 * <p>
@@ -1872,18 +1925,18 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#SuiteIdentification
-	 * PostalAddress21.SuiteIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmSuiteIdentification
+	 * PostalAddress21.mmSuiteIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1896,19 +1949,20 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Identification of a suite or apartment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SuiteIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSuiteIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress21.SuiteIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress21.mmSuiteIdentification);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SuiteIdentification";
 			definition = "Identification of a suite or apartment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text buildingIdentification;
 	/**
 	 * Identification of a building, within a group of buildings, that have the
 	 * same street number identifier.
@@ -1919,18 +1973,18 @@ public class PostalAddress extends ContactPoint {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#SideInBuilding
-	 * PostalAddress21.SideInBuilding}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmSideInBuilding
+	 * PostalAddress21.mmSideInBuilding}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -1945,19 +1999,20 @@ public class PostalAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BuildingIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBuildingIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress21.SideInBuilding);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress21.mmSideInBuilding);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BuildingIdentification";
 			definition = "Identification of a building, within a group of buildings, that have the same street number identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text mailDeliverySubLocation;
 	/**
 	 * Specific place to deliver mail within a pre-defined postal address.
 	 * <p>
@@ -1984,18 +2039,19 @@ public class PostalAddress extends ContactPoint {
 	 * "Specific place to deliver mail within a pre-defined postal address."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MailDeliverySubLocation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMailDeliverySubLocation = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MailDeliverySubLocation";
 			definition = "Specific place to deliver mail within a pre-defined postal address.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text block;
 	/**
 	 * Area of land bounded by streets.
 	 * <p>
@@ -2021,18 +2077,19 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Area of land bounded by streets."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Block = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBlock = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Block";
 			definition = "Area of land bounded by streets.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text lot;
 	/**
 	 * Identification of an allotment of land.
 	 * <p>
@@ -2058,18 +2115,19 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Identification of an allotment of land."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Lot = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmLot = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Lot";
 			definition = "Identification of an allotment of land.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text districtSubDivisionIdentification;
 	/**
 	 * Identification of a sub-division of a district.
 	 * <p>
@@ -2095,18 +2153,19 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Identification of a sub-division of a district."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DistrictSubDivisionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDistrictSubDivisionIdentification = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DistrictSubDivisionIdentification";
 			definition = "Identification of a sub-division of a district.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.MailingInstructions> mailingInstructions;
 	/**
 	 * Specifies the characteristics of an address.
 	 * <p>
@@ -2115,8 +2174,8 @@ public class PostalAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.MailingInstructions#RelatedPostalAddress
-	 * MailingInstructions.RelatedPostalAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.MailingInstructions#mmRelatedPostalAddress
+	 * MailingInstructions.mmRelatedPostalAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2140,7 +2199,7 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Specifies the characteristics of an address."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MailingInstructions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMailingInstructions = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
@@ -2148,11 +2207,12 @@ public class PostalAddress extends ContactPoint {
 			name = "MailingInstructions";
 			definition = "Specifies the characteristics of an address.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.MailingInstructions.RelatedPostalAddress;
+			opposite_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmRelatedPostalAddress;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 		}
 	};
+	protected PhysicalDelivery physicalDelivery;
 	/**
 	 * Physical delivery information related to an address.
 	 * <p>
@@ -2161,8 +2221,8 @@ public class PostalAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#Address
-	 * PhysicalDelivery.Address}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmAddress
+	 * PhysicalDelivery.mmAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2186,87 +2246,88 @@ public class PostalAddress extends ContactPoint {
 	 * definition} = "Physical delivery information related to an address."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PhysicalDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPhysicalDelivery = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PhysicalDelivery";
 			definition = "Physical delivery information related to an address.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.Address;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmAddress;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PostalAddress";
 				definition = "Information that locates and identifies a specific address.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.PostalAddressSpecification, com.tools20022.repository.entity.Location.Address,
-						com.tools20022.repository.entity.DateTimePeriod.RelatedPostalAddress, com.tools20022.repository.entity.MailingInstructions.RelatedPostalAddress, com.tools20022.repository.entity.ChequeIssue.DeliverTo,
-						com.tools20022.repository.entity.PhysicalDelivery.Address);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.FundManagerPostalAddress, com.tools20022.repository.msg.OrderDeskContactDetails.PostalAddress,
-						com.tools20022.repository.msg.ContactAttributes1.PostalAddress, com.tools20022.repository.choice.LongPostalAddress1Choice.Unstructured, com.tools20022.repository.choice.LongPostalAddress1Choice.Structured,
-						com.tools20022.repository.msg.NameAndAddress2.Address, com.tools20022.repository.msg.NameAndAddress5.Address, com.tools20022.repository.msg.NameAndAddress1.Address,
-						com.tools20022.repository.msg.NameAndAddress4.Address, com.tools20022.repository.msg.Organisation2.PostalAddress, com.tools20022.repository.msg.IndividualPerson5.PostalAddress,
-						com.tools20022.repository.msg.IndividualPerson10.PostalAddress, com.tools20022.repository.msg.BranchData.PostalAddress, com.tools20022.repository.msg.Organisation13.PostalAddress,
-						com.tools20022.repository.msg.IndividualPerson20.PostalAddress, com.tools20022.repository.msg.IndividualPerson8.IndividualInvestorAddress, com.tools20022.repository.msg.Organisation4.CorporateInvestorAddress,
-						com.tools20022.repository.msg.Organisation3.ModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson6.ModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson11.ModifiedPostalAddress,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification8.PostalAddress, com.tools20022.repository.msg.BranchData2.PostalAddress, com.tools20022.repository.msg.PartyIdentification8.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification32.PostalAddress, com.tools20022.repository.msg.PartyIdentification43.PostalAddress, com.tools20022.repository.msg.TransferOut3.InvestorAddress,
-						com.tools20022.repository.msg.NameAndAddress7.PostalAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification3.PostalAddress,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification7.PostalAddress, com.tools20022.repository.msg.NameAndAddress13.Address, com.tools20022.repository.msg.PartyIdentification6Choice.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification41.PostalAddress, com.tools20022.repository.msg.PartyIdentification40.PostalAddress, com.tools20022.repository.msg.Organisation6.OperationalAddress,
-						com.tools20022.repository.msg.Organisation6.BusinessAddress, com.tools20022.repository.msg.Organisation6.LegalAddress, com.tools20022.repository.msg.Organisation12.BusinessAddress,
-						com.tools20022.repository.msg.Organisation12.LegalAddress, com.tools20022.repository.msg.Organisation12.BillingAddress, com.tools20022.repository.msg.AddressModification1.Address,
-						com.tools20022.repository.msg.OrganisationModification1.BusinessAddress, com.tools20022.repository.msg.OrganisationModification1.LegalAddress, com.tools20022.repository.msg.OrganisationModification1.BillingAddress,
-						com.tools20022.repository.msg.Organisation7.OperationalAddress, com.tools20022.repository.msg.Organisation7.BusinessAddress, com.tools20022.repository.msg.Organisation7.LegalAddress,
-						com.tools20022.repository.msg.NameAndAddress3.Address, com.tools20022.repository.msg.RemittanceLocation1.RemittanceLocationPostalAddress, com.tools20022.repository.msg.NameAndAddress10.Address,
-						com.tools20022.repository.msg.RemittanceLocation2.RemittanceLocationPostalAddress, com.tools20022.repository.msg.PartyIdentification42.PostalAddress,
-						com.tools20022.repository.msg.NonExtension1.NotificationRecipientAddress, com.tools20022.repository.msg.CommunicationChannel1.DeliverToAddress, com.tools20022.repository.choice.AddressOrParty1Choice.NewAddress,
-						com.tools20022.repository.msg.NameAndAddress8.Address, com.tools20022.repository.msg.PartyIdentification59.Address, com.tools20022.repository.msg.Organisation5.Address,
-						com.tools20022.repository.msg.Organisation8.Address, com.tools20022.repository.msg.Organisation9.Address, com.tools20022.repository.msg.PartyIdentification1.PostalAddress,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification1.PostalAddress, com.tools20022.repository.msg.IndividualPerson7.Address,
-						com.tools20022.repository.msg.MeetingNotice1.ProxyAppointmentNotificationAddress, com.tools20022.repository.msg.VoteMethods.VoteByMail, com.tools20022.repository.msg.VoteParameters.VotingBallotRequestAddress,
-						com.tools20022.repository.msg.IndividualPerson14.Address, com.tools20022.repository.msg.MeetingNotice2.ProxyAppointmentNotificationAddress, com.tools20022.repository.choice.LocationFormat1Choice.Address,
-						com.tools20022.repository.msg.VoteParameters1.VotingBallotRequestAddress, com.tools20022.repository.choice.LongPostalAddress2Choice.Unstructured, com.tools20022.repository.choice.LongPostalAddress2Choice.Structured,
-						com.tools20022.repository.msg.IndividualPerson16.Address, com.tools20022.repository.msg.MeetingNotice3.ProxyAppointmentNotificationAddress, com.tools20022.repository.msg.VoteParameters2.VotingBallotRequestAddress,
-						com.tools20022.repository.msg.VoteMethods2.VoteByMail, com.tools20022.repository.msg.VoteParameters3.VotingBallotRequestAddress, com.tools20022.repository.msg.MeetingReference1.Location,
-						com.tools20022.repository.msg.MeetingReference2.Location, com.tools20022.repository.msg.MeetingReference5.Location, com.tools20022.repository.msg.MeetingReference3.Location,
-						com.tools20022.repository.msg.MeetingReference4.Location, com.tools20022.repository.msg.NameAndAddress9.Address, com.tools20022.repository.msg.IndividualPerson13.Address,
-						com.tools20022.repository.msg.IndividualPerson17.Address, com.tools20022.repository.msg.PartyIdentification45.PostalAddress, com.tools20022.repository.msg.PartyIdentification9.PostalAddress,
-						com.tools20022.repository.msg.NameAndAddress6.Address, com.tools20022.repository.msg.PartyIdentification26.PostalAddress, com.tools20022.repository.msg.CommunicationAddressDetails.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification58.PostalAddress, com.tools20022.repository.msg.PartyIdentification19.PostalAddress, com.tools20022.repository.msg.PartyIdentification18.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification20.PostalAddress, com.tools20022.repository.msg.PartyIdentification31.PostalAddress, com.tools20022.repository.msg.PartyIdentification13.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification16.PostalAddress, com.tools20022.repository.msg.NameAndAddress11.Address, com.tools20022.repository.msg.PartyIdentification5.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification24.PostalAddress, com.tools20022.repository.msg.TransferOut4.InvestorAddress, com.tools20022.repository.msg.IndividualPerson21.ModifiedPostalAddress,
-						com.tools20022.repository.msg.IndividualPerson22.PostalAddress, com.tools20022.repository.msg.Organisation15.ModifiedPostalAddress, com.tools20022.repository.msg.RemittanceLocationDetails1.PostalAddress,
-						com.tools20022.repository.msg.Organisation16.PostalAddress, com.tools20022.repository.msg.Organisation17.ModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson23.PostalAddress,
-						com.tools20022.repository.msg.IndividualPerson24.ModifiedPostalAddress, com.tools20022.repository.msg.MeetingReference7.Location, com.tools20022.repository.msg.MeetingReference6.Location,
-						com.tools20022.repository.msg.VoteParameters4.VotingBallotRequestAddress, com.tools20022.repository.msg.MeetingNotice4.ProxyAppointmentNotificationAddress, com.tools20022.repository.msg.IndividualPerson25.Address,
-						com.tools20022.repository.msg.IndividualPerson26.Address, com.tools20022.repository.msg.Organisation18.Location, com.tools20022.repository.msg.CommunicationAddress5.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification77.PostalAddress, com.tools20022.repository.msg.Organisation21.CorporateInvestorAddress, com.tools20022.repository.msg.Organisation22.ModifiedPostalAddress,
-						com.tools20022.repository.msg.Organisation23.PostalAddress, com.tools20022.repository.msg.Organisation24.PostalAddress, com.tools20022.repository.msg.IndividualPerson27.PostalAddress,
-						com.tools20022.repository.msg.ModificationScope34.PostalAddress, com.tools20022.repository.msg.IndividualPerson29.PostalAddress, com.tools20022.repository.msg.NameAndAddress15.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification112.PostalAddress, com.tools20022.repository.msg.TaxOrganisationIdentification1.PostalAddress, com.tools20022.repository.msg.Organisation30.PostalAddress,
-						com.tools20022.repository.msg.Organisation29.ModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson34.PostalAddress);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmPostalAddressSpecification, com.tools20022.repository.entity.Location.mmAddress,
+						com.tools20022.repository.entity.DateTimePeriod.mmRelatedPostalAddress, com.tools20022.repository.entity.MailingInstructions.mmRelatedPostalAddress, com.tools20022.repository.entity.ChequeIssue.mmDeliverTo,
+						com.tools20022.repository.entity.PhysicalDelivery.mmAddress);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmFundManagerPostalAddress, com.tools20022.repository.msg.OrderDeskContactDetails.mmPostalAddress,
+						com.tools20022.repository.msg.ContactAttributes1.mmPostalAddress, com.tools20022.repository.choice.LongPostalAddress1Choice.mmUnstructured, com.tools20022.repository.choice.LongPostalAddress1Choice.mmStructured,
+						com.tools20022.repository.msg.NameAndAddress2.mmAddress, com.tools20022.repository.msg.NameAndAddress5.mmAddress, com.tools20022.repository.msg.NameAndAddress1.mmAddress,
+						com.tools20022.repository.msg.NameAndAddress4.mmAddress, com.tools20022.repository.msg.Organisation2.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson5.mmPostalAddress,
+						com.tools20022.repository.msg.IndividualPerson10.mmPostalAddress, com.tools20022.repository.msg.BranchData.mmPostalAddress, com.tools20022.repository.msg.Organisation13.mmPostalAddress,
+						com.tools20022.repository.msg.IndividualPerson20.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson8.mmIndividualInvestorAddress, com.tools20022.repository.msg.Organisation4.mmCorporateInvestorAddress,
+						com.tools20022.repository.msg.Organisation3.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson6.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson11.mmModifiedPostalAddress,
+						com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmPostalAddress, com.tools20022.repository.msg.BranchData2.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification8.mmPostalAddress,
+						com.tools20022.repository.msg.PartyIdentification32.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification43.mmPostalAddress, com.tools20022.repository.msg.TransferOut3.mmInvestorAddress,
+						com.tools20022.repository.msg.NameAndAddress7.mmPostalAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmPostalAddress,
+						com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress13.mmAddress, com.tools20022.repository.msg.PartyIdentification6Choice.mmPostalAddress,
+						com.tools20022.repository.msg.PartyIdentification41.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification40.mmPostalAddress, com.tools20022.repository.msg.Organisation6.mmOperationalAddress,
+						com.tools20022.repository.msg.Organisation6.mmBusinessAddress, com.tools20022.repository.msg.Organisation6.mmLegalAddress, com.tools20022.repository.msg.Organisation12.mmBusinessAddress,
+						com.tools20022.repository.msg.Organisation12.mmLegalAddress, com.tools20022.repository.msg.Organisation12.mmBillingAddress, com.tools20022.repository.msg.AddressModification1.mmAddress,
+						com.tools20022.repository.msg.OrganisationModification1.mmBusinessAddress, com.tools20022.repository.msg.OrganisationModification1.mmLegalAddress,
+						com.tools20022.repository.msg.OrganisationModification1.mmBillingAddress, com.tools20022.repository.msg.Organisation7.mmOperationalAddress, com.tools20022.repository.msg.Organisation7.mmBusinessAddress,
+						com.tools20022.repository.msg.Organisation7.mmLegalAddress, com.tools20022.repository.msg.NameAndAddress3.mmAddress, com.tools20022.repository.msg.RemittanceLocation1.mmRemittanceLocationPostalAddress,
+						com.tools20022.repository.msg.NameAndAddress10.mmAddress, com.tools20022.repository.msg.RemittanceLocation2.mmRemittanceLocationPostalAddress, com.tools20022.repository.msg.PartyIdentification42.mmPostalAddress,
+						com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientAddress, com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToAddress,
+						com.tools20022.repository.choice.AddressOrParty1Choice.mmNewAddress, com.tools20022.repository.msg.NameAndAddress8.mmAddress, com.tools20022.repository.msg.PartyIdentification59.mmAddress,
+						com.tools20022.repository.msg.Organisation5.mmAddress, com.tools20022.repository.msg.Organisation8.mmAddress, com.tools20022.repository.msg.Organisation9.mmAddress,
+						com.tools20022.repository.msg.PartyIdentification1.mmPostalAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson7.mmAddress,
+						com.tools20022.repository.msg.MeetingNotice1.mmProxyAppointmentNotificationAddress, com.tools20022.repository.msg.VoteMethods.mmVoteByMail, com.tools20022.repository.msg.VoteParameters.mmVotingBallotRequestAddress,
+						com.tools20022.repository.msg.IndividualPerson14.mmAddress, com.tools20022.repository.msg.MeetingNotice2.mmProxyAppointmentNotificationAddress, com.tools20022.repository.choice.LocationFormat1Choice.mmAddress,
+						com.tools20022.repository.msg.VoteParameters1.mmVotingBallotRequestAddress, com.tools20022.repository.choice.LongPostalAddress2Choice.mmUnstructured,
+						com.tools20022.repository.choice.LongPostalAddress2Choice.mmStructured, com.tools20022.repository.msg.IndividualPerson16.mmAddress, com.tools20022.repository.msg.MeetingNotice3.mmProxyAppointmentNotificationAddress,
+						com.tools20022.repository.msg.VoteParameters2.mmVotingBallotRequestAddress, com.tools20022.repository.msg.VoteMethods2.mmVoteByMail, com.tools20022.repository.msg.VoteParameters3.mmVotingBallotRequestAddress,
+						com.tools20022.repository.msg.MeetingReference1.mmLocation, com.tools20022.repository.msg.MeetingReference2.mmLocation, com.tools20022.repository.msg.MeetingReference5.mmLocation,
+						com.tools20022.repository.msg.MeetingReference3.mmLocation, com.tools20022.repository.msg.MeetingReference4.mmLocation, com.tools20022.repository.msg.NameAndAddress9.mmAddress,
+						com.tools20022.repository.msg.IndividualPerson13.mmAddress, com.tools20022.repository.msg.IndividualPerson17.mmAddress, com.tools20022.repository.msg.PartyIdentification45.mmPostalAddress,
+						com.tools20022.repository.msg.PartyIdentification9.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress6.mmAddress, com.tools20022.repository.msg.PartyIdentification26.mmPostalAddress,
+						com.tools20022.repository.msg.CommunicationAddressDetails.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification58.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification19.mmPostalAddress,
+						com.tools20022.repository.msg.PartyIdentification18.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification20.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification31.mmPostalAddress,
+						com.tools20022.repository.msg.PartyIdentification13.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification16.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress11.mmAddress,
+						com.tools20022.repository.msg.PartyIdentification5.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification24.mmPostalAddress, com.tools20022.repository.msg.TransferOut4.mmInvestorAddress,
+						com.tools20022.repository.msg.IndividualPerson21.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson22.mmPostalAddress, com.tools20022.repository.msg.Organisation15.mmModifiedPostalAddress,
+						com.tools20022.repository.msg.RemittanceLocationDetails1.mmPostalAddress, com.tools20022.repository.msg.Organisation16.mmPostalAddress, com.tools20022.repository.msg.Organisation17.mmModifiedPostalAddress,
+						com.tools20022.repository.msg.IndividualPerson23.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson24.mmModifiedPostalAddress, com.tools20022.repository.msg.MeetingReference7.mmLocation,
+						com.tools20022.repository.msg.MeetingReference6.mmLocation, com.tools20022.repository.msg.VoteParameters4.mmVotingBallotRequestAddress,
+						com.tools20022.repository.msg.MeetingNotice4.mmProxyAppointmentNotificationAddress, com.tools20022.repository.msg.IndividualPerson25.mmAddress, com.tools20022.repository.msg.IndividualPerson26.mmAddress,
+						com.tools20022.repository.msg.Organisation18.mmLocation, com.tools20022.repository.msg.CommunicationAddress5.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification77.mmPostalAddress,
+						com.tools20022.repository.msg.Organisation21.mmCorporateInvestorAddress, com.tools20022.repository.msg.Organisation22.mmModifiedPostalAddress, com.tools20022.repository.msg.Organisation23.mmPostalAddress,
+						com.tools20022.repository.msg.Organisation24.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson27.mmPostalAddress, com.tools20022.repository.msg.ModificationScope34.mmPostalAddress,
+						com.tools20022.repository.msg.IndividualPerson29.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress15.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification112.mmPostalAddress,
+						com.tools20022.repository.msg.TaxOrganisationIdentification1.mmPostalAddress, com.tools20022.repository.msg.Organisation30.mmPostalAddress, com.tools20022.repository.msg.Organisation29.mmModifiedPostalAddress,
+						com.tools20022.repository.msg.IndividualPerson34.mmPostalAddress);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.AddressType, com.tools20022.repository.entity.PostalAddress.StreetName,
-						com.tools20022.repository.entity.PostalAddress.StreetBuildingIdentification, com.tools20022.repository.entity.PostalAddress.PostCodeIdentification, com.tools20022.repository.entity.PostalAddress.TownName,
-						com.tools20022.repository.entity.PostalAddress.State, com.tools20022.repository.entity.PostalAddress.BuildingName, com.tools20022.repository.entity.PostalAddress.Floor,
-						com.tools20022.repository.entity.PostalAddress.DistrictName, com.tools20022.repository.entity.PostalAddress.RegionIdentification, com.tools20022.repository.entity.PostalAddress.CountyIdentification,
-						com.tools20022.repository.entity.PostalAddress.PostOfficeBox, com.tools20022.repository.entity.PostalAddress.Province, com.tools20022.repository.entity.PostalAddress.Department,
-						com.tools20022.repository.entity.PostalAddress.SubDepartment, com.tools20022.repository.entity.PostalAddress.Location, com.tools20022.repository.entity.PostalAddress.ChequeIssue,
-						com.tools20022.repository.entity.PostalAddress.Country, com.tools20022.repository.entity.PostalAddress.ValidityPeriod, com.tools20022.repository.entity.PostalAddress.SuiteIdentification,
-						com.tools20022.repository.entity.PostalAddress.BuildingIdentification, com.tools20022.repository.entity.PostalAddress.MailDeliverySubLocation, com.tools20022.repository.entity.PostalAddress.Block,
-						com.tools20022.repository.entity.PostalAddress.Lot, com.tools20022.repository.entity.PostalAddress.DistrictSubDivisionIdentification, com.tools20022.repository.entity.PostalAddress.MailingInstructions,
-						com.tools20022.repository.entity.PostalAddress.PhysicalDelivery);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmAddressType, com.tools20022.repository.entity.PostalAddress.mmStreetName,
+						com.tools20022.repository.entity.PostalAddress.mmStreetBuildingIdentification, com.tools20022.repository.entity.PostalAddress.mmPostCodeIdentification, com.tools20022.repository.entity.PostalAddress.mmTownName,
+						com.tools20022.repository.entity.PostalAddress.mmState, com.tools20022.repository.entity.PostalAddress.mmBuildingName, com.tools20022.repository.entity.PostalAddress.mmFloor,
+						com.tools20022.repository.entity.PostalAddress.mmDistrictName, com.tools20022.repository.entity.PostalAddress.mmRegionIdentification, com.tools20022.repository.entity.PostalAddress.mmCountyIdentification,
+						com.tools20022.repository.entity.PostalAddress.mmPostOfficeBox, com.tools20022.repository.entity.PostalAddress.mmProvince, com.tools20022.repository.entity.PostalAddress.mmDepartment,
+						com.tools20022.repository.entity.PostalAddress.mmSubDepartment, com.tools20022.repository.entity.PostalAddress.mmLocation, com.tools20022.repository.entity.PostalAddress.mmChequeIssue,
+						com.tools20022.repository.entity.PostalAddress.mmCountry, com.tools20022.repository.entity.PostalAddress.mmValidityPeriod, com.tools20022.repository.entity.PostalAddress.mmSuiteIdentification,
+						com.tools20022.repository.entity.PostalAddress.mmBuildingIdentification, com.tools20022.repository.entity.PostalAddress.mmMailDeliverySubLocation, com.tools20022.repository.entity.PostalAddress.mmBlock,
+						com.tools20022.repository.entity.PostalAddress.mmLot, com.tools20022.repository.entity.PostalAddress.mmDistrictSubDivisionIdentification, com.tools20022.repository.entity.PostalAddress.mmMailingInstructions,
+						com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery);
 				derivationComponent_lazy = () -> Arrays.asList(PostalAddress1.mmObject(), StructuredLongPostalAddress1.mmObject(), LongPostalAddress1Choice.mmObject(), PostalAddress3.mmObject(), PostalAddress6.mmObject(),
 						PostalAddress8.mmObject(), AddressModification1.mmObject(), CountrySubdivision1Choice.mmObject(), PostalAddress12.mmObject(), LongPostalAddress2Choice.mmObject(), PostalAddress2.mmObject(),
 						PostalAddress5.mmObject(), PostalAddress11.mmObject(), PostalAddress4.mmObject(), PostalAddress7.mmObject(), PostalAddress10.mmObject(), PostalAddress9.mmObject(), PostalAddress13.mmObject(),
@@ -2274,5 +2335,221 @@ public class PostalAddress extends ContactPoint {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AddressTypeCode getAddressType() {
+		return addressType;
+	}
+
+	public void setAddressType(AddressTypeCode addressType) {
+		this.addressType = addressType;
+	}
+
+	public Max35Text getStreetName() {
+		return streetName;
+	}
+
+	public void setStreetName(Max35Text streetName) {
+		this.streetName = streetName;
+	}
+
+	public Max35Text getStreetBuildingIdentification() {
+		return streetBuildingIdentification;
+	}
+
+	public void setStreetBuildingIdentification(Max35Text streetBuildingIdentification) {
+		this.streetBuildingIdentification = streetBuildingIdentification;
+	}
+
+	public Max16Text getPostCodeIdentification() {
+		return postCodeIdentification;
+	}
+
+	public void setPostCodeIdentification(Max16Text postCodeIdentification) {
+		this.postCodeIdentification = postCodeIdentification;
+	}
+
+	public Max35Text getTownName() {
+		return townName;
+	}
+
+	public void setTownName(Max35Text townName) {
+		this.townName = townName;
+	}
+
+	public Max35Text getState() {
+		return state;
+	}
+
+	public void setState(Max35Text state) {
+		this.state = state;
+	}
+
+	public Max35Text getBuildingName() {
+		return buildingName;
+	}
+
+	public void setBuildingName(Max35Text buildingName) {
+		this.buildingName = buildingName;
+	}
+
+	public Max16Text getFloor() {
+		return floor;
+	}
+
+	public void setFloor(Max16Text floor) {
+		this.floor = floor;
+	}
+
+	public Max35Text getDistrictName() {
+		return districtName;
+	}
+
+	public void setDistrictName(Max35Text districtName) {
+		this.districtName = districtName;
+	}
+
+	public Max35Text getRegionIdentification() {
+		return regionIdentification;
+	}
+
+	public void setRegionIdentification(Max35Text regionIdentification) {
+		this.regionIdentification = regionIdentification;
+	}
+
+	public Max35Text getCountyIdentification() {
+		return countyIdentification;
+	}
+
+	public void setCountyIdentification(Max35Text countyIdentification) {
+		this.countyIdentification = countyIdentification;
+	}
+
+	public Max16Text getPostOfficeBox() {
+		return postOfficeBox;
+	}
+
+	public void setPostOfficeBox(Max16Text postOfficeBox) {
+		this.postOfficeBox = postOfficeBox;
+	}
+
+	public Max35Text getProvince() {
+		return province;
+	}
+
+	public void setProvince(Max35Text province) {
+		this.province = province;
+	}
+
+	public Max70Text getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Max70Text department) {
+		this.department = department;
+	}
+
+	public Max70Text getSubDepartment() {
+		return subDepartment;
+	}
+
+	public void setSubDepartment(Max70Text subDepartment) {
+		this.subDepartment = subDepartment;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(com.tools20022.repository.entity.Location location) {
+		this.location = location;
+	}
+
+	public ChequeIssue getChequeIssue() {
+		return chequeIssue;
+	}
+
+	public void setChequeIssue(com.tools20022.repository.entity.ChequeIssue chequeIssue) {
+		this.chequeIssue = chequeIssue;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(com.tools20022.repository.entity.Country country) {
+		this.country = country;
+	}
+
+	public List<DateTimePeriod> getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public Max35Text getSuiteIdentification() {
+		return suiteIdentification;
+	}
+
+	public void setSuiteIdentification(Max35Text suiteIdentification) {
+		this.suiteIdentification = suiteIdentification;
+	}
+
+	public Max35Text getBuildingIdentification() {
+		return buildingIdentification;
+	}
+
+	public void setBuildingIdentification(Max35Text buildingIdentification) {
+		this.buildingIdentification = buildingIdentification;
+	}
+
+	public Max35Text getMailDeliverySubLocation() {
+		return mailDeliverySubLocation;
+	}
+
+	public void setMailDeliverySubLocation(Max35Text mailDeliverySubLocation) {
+		this.mailDeliverySubLocation = mailDeliverySubLocation;
+	}
+
+	public Max35Text getBlock() {
+		return block;
+	}
+
+	public void setBlock(Max35Text block) {
+		this.block = block;
+	}
+
+	public Max35Text getLot() {
+		return lot;
+	}
+
+	public void setLot(Max35Text lot) {
+		this.lot = lot;
+	}
+
+	public Max35Text getDistrictSubDivisionIdentification() {
+		return districtSubDivisionIdentification;
+	}
+
+	public void setDistrictSubDivisionIdentification(Max35Text districtSubDivisionIdentification) {
+		this.districtSubDivisionIdentification = districtSubDivisionIdentification;
+	}
+
+	public List<MailingInstructions> getMailingInstructions() {
+		return mailingInstructions;
+	}
+
+	public void setMailingInstructions(List<com.tools20022.repository.entity.MailingInstructions> mailingInstructions) {
+		this.mailingInstructions = mailingInstructions;
+	}
+
+	public PhysicalDelivery getPhysicalDelivery() {
+		return physicalDelivery;
+	}
+
+	public void setPhysicalDelivery(com.tools20022.repository.entity.PhysicalDelivery physicalDelivery) {
+		this.physicalDelivery = physicalDelivery;
 	}
 }

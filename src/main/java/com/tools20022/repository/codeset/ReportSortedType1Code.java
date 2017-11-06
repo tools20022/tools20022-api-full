@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedType1Code#Country
- * ReportSortedType1Code.Country}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedType1Code#mmCountry
+ * ReportSortedType1Code.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedType1Code#Party
- * ReportSortedType1Code.Party}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedType1Code#mmParty
+ * ReportSortedType1Code.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedType1Code#Currency
- * ReportSortedType1Code.Currency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedType1Code#mmCurrency
+ * ReportSortedType1Code.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	 * name} = "Country"</li>
 	 * </ul>
 	 */
-	public static final MMCode Country = new MMCode() {
+	public static final MMCode mmCountry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
@@ -107,7 +107,7 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	 * name} = "Party"</li>
 	 * </ul>
 	 */
-	public static final MMCode Party = new MMCode() {
+	public static final MMCode mmParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
@@ -130,7 +130,7 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	 * name} = "Currency"</li>
 	 * </ul>
 	 */
-	public static final MMCode Currency = new MMCode() {
+	public static final MMCode mmCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
@@ -141,13 +141,13 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COUN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportSortedType1Code";
 				definition = "Specifies the type of criterion used to sort a report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportSortedType1Code.Country, com.tools20022.repository.codeset.ReportSortedType1Code.Party,
-						com.tools20022.repository.codeset.ReportSortedType1Code.Currency);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportSortedType1Code.mmCountry, com.tools20022.repository.codeset.ReportSortedType1Code.mmParty,
+						com.tools20022.repository.codeset.ReportSortedType1Code.mmCurrency);
 				trace_lazy = () -> ReportSortedTypeCode.mmObject();
 			}
 		});

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,36 +66,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#ClearingMember
- * TradeLegNotificationV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmClearingMember
+ * TradeLegNotificationV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#ClearingAccount
- * TradeLegNotificationV03.ClearingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmClearingAccount
+ * TradeLegNotificationV03.mmClearingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#DeliveryAccount
- * TradeLegNotificationV03.DeliveryAccount}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmDeliveryAccount
+ * TradeLegNotificationV03.mmDeliveryAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#NonClearingMember
- * TradeLegNotificationV03.NonClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmNonClearingMember
+ * TradeLegNotificationV03.mmNonClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#ClearingDetails
- * TradeLegNotificationV03.ClearingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmClearingDetails
+ * TradeLegNotificationV03.mmClearingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#TradeLegDetails
- * TradeLegNotificationV03.TradeLegDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmTradeLegDetails
+ * TradeLegNotificationV03.mmTradeLegDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#SettlementDetails
- * TradeLegNotificationV03.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmSettlementDetails
+ * TradeLegNotificationV03.mmSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#SupplementaryData
- * TradeLegNotificationV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmSupplementaryData
+ * TradeLegNotificationV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#identifier
- * TradeLegNotificationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.001.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeLegNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification35Choice clearingMember;
 	/**
 	 * Provides the identification of the clearing member (individual clearing
 	 * member or general clearing member).
@@ -136,17 +136,18 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the clearing member (individual clearing member or general clearing member).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount18 clearingAccount;
 	/**
 	 * Identifies the clearing member account at the CCP through which the trade
 	 * must be cleared (sometimes called position account).
@@ -173,17 +174,18 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the CCP through which the trade must be cleared (sometimes called position account).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount18.mmObject();
 		}
 	};
+	protected SecuritiesAccount19 deliveryAccount;
 	/**
 	 * An account opened by the central counterparty in the name of the clearing
 	 * member or its settlement agent within the account structure, for
@@ -212,17 +214,18 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DeliveryAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDeliveryAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvryAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAccount";
 			definition = "An account opened by the central counterparty in the name of the clearing member or its settlement agent within the account structure, for settlement purposes (gives information about the clearing member/its settlement agent account at the central securities depository).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
 	 * Provides details about the non clearing member identification and
 	 * account.
@@ -249,17 +252,18 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NonClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNonClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NonClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides details about the non clearing member identification and account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	protected Clearing4 clearingDetails;
 	/**
 	 * Provides clearing details such as the settlement netting (or not)
 	 * eligibility code or the clearing segment.
@@ -285,17 +289,18 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingDetails";
 			definition = "Provides clearing details such as the settlement netting (or not) eligibility code or the clearing segment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Clearing4.mmObject();
 		}
 	};
+	protected TradeLeg8 tradeLegDetails;
 	/**
 	 * Provides details about the trade leg such as the trade date, the
 	 * settlement date or the trading currency.
@@ -321,17 +326,18 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeLegDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeLegDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradLegDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLegDetails";
 			definition = "Provides details about the trade leg such as the trade date, the settlement date or the trading currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeLeg8.mmObject();
 		}
 	};
+	protected Settlement1 settlementDetails;
 	/**
 	 * Provides details about the settlement details of the trade leg such the
 	 * settlement amount or the place of settlement.
@@ -357,17 +363,18 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Provides details about the settlement details of the trade leg such the settlement amount or the place of settlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Settlement1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -394,7 +401,7 @@ public class TradeLegNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,33 +409,6 @@ public class TradeLegNotificationV03 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "001";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -442,13 +422,84 @@ public class TradeLegNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "TradLegNtfctn";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegNotificationV03.ClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationV03.ClearingAccount,
-						com.tools20022.repository.area.secl.TradeLegNotificationV03.DeliveryAccount, com.tools20022.repository.area.secl.TradeLegNotificationV03.NonClearingMember,
-						com.tools20022.repository.area.secl.TradeLegNotificationV03.ClearingDetails, com.tools20022.repository.area.secl.TradeLegNotificationV03.TradeLegDetails,
-						com.tools20022.repository.area.secl.TradeLegNotificationV03.SettlementDetails, com.tools20022.repository.area.secl.TradeLegNotificationV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.TradeLegNotificationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegNotificationV03.mmClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmClearingAccount,
+						com.tools20022.repository.area.secl.TradeLegNotificationV03.mmDeliveryAccount, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmNonClearingMember,
+						com.tools20022.repository.area.secl.TradeLegNotificationV03.mmClearingDetails, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmTradeLegDetails,
+						com.tools20022.repository.area.secl.TradeLegNotificationV03.mmSettlementDetails, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "001";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification35Choice getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public SecuritiesAccount18 getClearingAccount() {
+		return clearingAccount;
+	}
+
+	public void setClearingAccount(SecuritiesAccount18 clearingAccount) {
+		this.clearingAccount = clearingAccount;
+	}
+
+	public SecuritiesAccount19 getDeliveryAccount() {
+		return deliveryAccount;
+	}
+
+	public void setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
+		this.deliveryAccount = deliveryAccount;
+	}
+
+	public PartyIdentificationAndAccount31 getNonClearingMember() {
+		return nonClearingMember;
+	}
+
+	public void setNonClearingMember(PartyIdentificationAndAccount31 nonClearingMember) {
+		this.nonClearingMember = nonClearingMember;
+	}
+
+	public Clearing4 getClearingDetails() {
+		return clearingDetails;
+	}
+
+	public void setClearingDetails(Clearing4 clearingDetails) {
+		this.clearingDetails = clearingDetails;
+	}
+
+	public TradeLeg8 getTradeLegDetails() {
+		return tradeLegDetails;
+	}
+
+	public void setTradeLegDetails(TradeLeg8 tradeLegDetails) {
+		this.tradeLegDetails = tradeLegDetails;
+	}
+
+	public Settlement1 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(Settlement1 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

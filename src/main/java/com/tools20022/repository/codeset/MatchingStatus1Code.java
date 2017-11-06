@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#Matched
- * MatchingStatus1Code.Matched}</li>
+ * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#mmMatched
+ * MatchingStatus1Code.mmMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#Unmatched
- * MatchingStatus1Code.Unmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#mmUnmatched
+ * MatchingStatus1Code.mmUnmatched}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class MatchingStatus1Code extends MatchingStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Matched = new MMCode() {
+	public static final MMCode mmMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
@@ -107,7 +107,7 @@ public class MatchingStatus1Code extends MatchingStatusCode {
 	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unmatched = new MMCode() {
+	public static final MMCode mmUnmatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
@@ -118,12 +118,12 @@ public class MatchingStatus1Code extends MatchingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MACH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus1Code";
 				definition = "Provides the matching status of the instruction at the time the settlement instruction was sent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MatchingStatus1Code.Matched, com.tools20022.repository.codeset.MatchingStatus1Code.Unmatched);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MatchingStatus1Code.mmMatched, com.tools20022.repository.codeset.MatchingStatus1Code.mmUnmatched);
 				trace_lazy = () -> MatchingStatusCode.mmObject();
 			}
 		});

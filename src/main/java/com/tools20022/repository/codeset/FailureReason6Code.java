@@ -34,23 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#Compromised
- * FailureReason6Code.Compromised}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason6Code#Expired
- * FailureReason6Code.Expired}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmCompromised
+ * FailureReason6Code.mmCompromised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#InvalidKCV
- * FailureReason6Code.InvalidKCV}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmExpired
+ * FailureReason6Code.mmExpired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#KeyLoadError
- * FailureReason6Code.KeyLoadError}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmInvalidKCV
+ * FailureReason6Code.mmInvalidKCV}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmKeyLoadError
+ * FailureReason6Code.mmKeyLoadError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +81,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "Compromised"</li>
 	 * </ul>
 	 */
-	public static final MMCode Compromised = new MMCode() {
+	public static final MMCode mmCompromised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compromised";
@@ -103,7 +104,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "Expired"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expired = new MMCode() {
+	public static final MMCode mmExpired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
@@ -126,7 +127,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "InvalidKCV"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidKCV = new MMCode() {
+	public static final MMCode mmInvalidKCV = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidKCV";
@@ -149,7 +150,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "KeyLoadError"</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyLoadError = new MMCode() {
+	public static final MMCode mmKeyLoadError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyLoadError";
@@ -160,12 +161,12 @@ public class FailureReason6Code extends FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FailureReason6Code";
 				definition = "Reason for which the key has been stopped.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason6Code.Compromised, com.tools20022.repository.codeset.FailureReason6Code.Expired,
-						com.tools20022.repository.codeset.FailureReason6Code.InvalidKCV, com.tools20022.repository.codeset.FailureReason6Code.KeyLoadError);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason6Code.mmCompromised, com.tools20022.repository.codeset.FailureReason6Code.mmExpired,
+						com.tools20022.repository.codeset.FailureReason6Code.mmInvalidKCV, com.tools20022.repository.codeset.FailureReason6Code.mmKeyLoadError);
 				trace_lazy = () -> FailureReasonCode.mmObject();
 			}
 		});

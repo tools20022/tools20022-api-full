@@ -33,47 +33,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#ConsumptionTax
- * TaxType13Code.ConsumptionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmConsumptionTax
+ * TaxType13Code.mmConsumptionTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#EUTaxRetention
- * TaxType13Code.EUTaxRetention}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#LocalTax
- * TaxType13Code.LocalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#NationalTax
- * TaxType13Code.NationalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmEUTaxRetention
+ * TaxType13Code.mmEUTaxRetention}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmLocalTax
+ * TaxType13Code.mmLocalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#PaymentLevyTax
- * TaxType13Code.PaymentLevyTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#Provincial
- * TaxType13Code.Provincial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#StampDuty
- * TaxType13Code.StampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#StateTax
- * TaxType13Code.StateTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmNationalTax
+ * TaxType13Code.mmNationalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#StockExchangeTax
- * TaxType13Code.StockExchangeTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#TaxCredit
- * TaxType13Code.TaxCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmPaymentLevyTax
+ * TaxType13Code.mmPaymentLevyTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmProvincial
+ * TaxType13Code.mmProvincial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmStampDuty
+ * TaxType13Code.mmStampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmStateTax
+ * TaxType13Code.mmStateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#TransactionTax
- * TaxType13Code.TransactionTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#TransferTax
- * TaxType13Code.TransferTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmStockExchangeTax
+ * TaxType13Code.mmStockExchangeTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmTaxCredit
+ * TaxType13Code.mmTaxCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#ValueAddedTax
- * TaxType13Code.ValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmTransactionTax
+ * TaxType13Code.mmTransactionTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#WithholdingTax
- * TaxType13Code.WithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmTransferTax
+ * TaxType13Code.mmTransferTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmValueAddedTax
+ * TaxType13Code.mmValueAddedTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmWithholdingTax
+ * TaxType13Code.mmWithholdingTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -109,7 +111,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "ConsumptionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsumptionTax = new MMCode() {
+	public static final MMCode mmConsumptionTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
@@ -132,7 +134,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUTaxRetention = new MMCode() {
+	public static final MMCode mmEUTaxRetention = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
@@ -155,7 +157,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "LocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode LocalTax = new MMCode() {
+	public static final MMCode mmLocalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
@@ -178,7 +180,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "NationalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalTax = new MMCode() {
+	public static final MMCode mmNationalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
@@ -201,7 +203,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "PaymentLevyTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentLevyTax = new MMCode() {
+	public static final MMCode mmPaymentLevyTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentLevyTax";
@@ -224,7 +226,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "Provincial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Provincial = new MMCode() {
+	public static final MMCode mmProvincial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
@@ -247,7 +249,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode StampDuty = new MMCode() {
+	public static final MMCode mmStampDuty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
@@ -270,7 +272,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "StateTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode StateTax = new MMCode() {
+	public static final MMCode mmStateTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
@@ -293,7 +295,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "StockExchangeTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchangeTax = new MMCode() {
+	public static final MMCode mmStockExchangeTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
@@ -316,7 +318,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "TaxCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxCredit = new MMCode() {
+	public static final MMCode mmTaxCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
@@ -339,7 +341,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "TransactionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionTax = new MMCode() {
+	public static final MMCode mmTransactionTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
@@ -362,7 +364,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "TransferTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferTax = new MMCode() {
+	public static final MMCode mmTransferTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
@@ -385,7 +387,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -408,7 +410,7 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTax = new MMCode() {
+	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
@@ -419,16 +421,16 @@ public class TaxType13Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COAX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType13Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType13Code.ConsumptionTax, com.tools20022.repository.codeset.TaxType13Code.EUTaxRetention, com.tools20022.repository.codeset.TaxType13Code.LocalTax,
-						com.tools20022.repository.codeset.TaxType13Code.NationalTax, com.tools20022.repository.codeset.TaxType13Code.PaymentLevyTax, com.tools20022.repository.codeset.TaxType13Code.Provincial,
-						com.tools20022.repository.codeset.TaxType13Code.StampDuty, com.tools20022.repository.codeset.TaxType13Code.StateTax, com.tools20022.repository.codeset.TaxType13Code.StockExchangeTax,
-						com.tools20022.repository.codeset.TaxType13Code.TaxCredit, com.tools20022.repository.codeset.TaxType13Code.TransactionTax, com.tools20022.repository.codeset.TaxType13Code.TransferTax,
-						com.tools20022.repository.codeset.TaxType13Code.ValueAddedTax, com.tools20022.repository.codeset.TaxType13Code.WithholdingTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType13Code.mmConsumptionTax, com.tools20022.repository.codeset.TaxType13Code.mmEUTaxRetention, com.tools20022.repository.codeset.TaxType13Code.mmLocalTax,
+						com.tools20022.repository.codeset.TaxType13Code.mmNationalTax, com.tools20022.repository.codeset.TaxType13Code.mmPaymentLevyTax, com.tools20022.repository.codeset.TaxType13Code.mmProvincial,
+						com.tools20022.repository.codeset.TaxType13Code.mmStampDuty, com.tools20022.repository.codeset.TaxType13Code.mmStateTax, com.tools20022.repository.codeset.TaxType13Code.mmStockExchangeTax,
+						com.tools20022.repository.codeset.TaxType13Code.mmTaxCredit, com.tools20022.repository.codeset.TaxType13Code.mmTransactionTax, com.tools20022.repository.codeset.TaxType13Code.mmTransferTax,
+						com.tools20022.repository.codeset.TaxType13Code.mmValueAddedTax, com.tools20022.repository.codeset.TaxType13Code.mmWithholdingTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

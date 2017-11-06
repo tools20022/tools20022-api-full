@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#UnitsNumber
- * FinancialInstrumentQuantity3Choice.UnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#mmUnitsNumber
+ * FinancialInstrumentQuantity3Choice.mmUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#PercentageOfTotalSubscriptionAmount
- * FinancialInstrumentQuantity3Choice.PercentageOfTotalSubscriptionAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#mmPercentageOfTotalSubscriptionAmount
+ * FinancialInstrumentQuantity3Choice.mmPercentageOfTotalSubscriptionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#NetAmount
- * FinancialInstrumentQuantity3Choice.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#mmNetAmount
+ * FinancialInstrumentQuantity3Choice.mmNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#GrossAmount
- * FinancialInstrumentQuantity3Choice.GrossAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#mmGrossAmount
+ * FinancialInstrumentQuantity3Choice.mmGrossAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#HoldingsRedemptionRate
- * FinancialInstrumentQuantity3Choice.HoldingsRedemptionRate}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#mmHoldingsRedemptionRate
+ * FinancialInstrumentQuantity3Choice.mmHoldingsRedemptionRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentQuantity3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
 	 * Quantity of investment fund units redeemed.
 	 * <p>
@@ -90,8 +91,8 @@ public class FinancialInstrumentQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#UnitsNumber
-	 * InvestmentFundOrder.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmUnitsNumber
+	 * InvestmentFundOrder.mmUnitsNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class FinancialInstrumentQuantity3Choice {
 	 * definition} = "Quantity of investment fund units redeemed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> FinancialInstrumentQuantity3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.UnitsNumber;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Quantity of investment fund units redeemed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfTotalSubscriptionAmount;
 	/**
 	 * Percentage of the total switch amount (buy-driven) to be invested in a
 	 * particular investment fund or investment fund class.
@@ -138,8 +140,8 @@ public class FinancialInstrumentQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg#PercentageOfTotalSubscriptionAmount
-	 * SwitchRedemptionLeg.PercentageOfTotalSubscriptionAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg#mmPercentageOfTotalSubscriptionAmount
+	 * SwitchRedemptionLeg.mmPercentageOfTotalSubscriptionAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,20 +162,21 @@ public class FinancialInstrumentQuantity3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfTotalSubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfTotalSubscriptionAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchRedemptionLeg.mmPercentageOfTotalSubscriptionAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchRedemptionLeg.PercentageOfTotalSubscriptionAmount;
 			isDerived = false;
 			xmlTag = "PctgOfTtlSbcptAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfTotalSubscriptionAmount";
 			definition = "Percentage of the total switch amount (buy-driven) to be invested in a particular investment fund or investment fund class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount netAmount;
 	/**
 	 * Amount of money used to derive the quantity of investment fund units to
 	 * be sold.
@@ -188,8 +191,8 @@ public class FinancialInstrumentQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#NetAmount
-	 * InvestmentFundOrder.NetAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNetAmount
+	 * InvestmentFundOrder.mmNetAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +213,21 @@ public class FinancialInstrumentQuantity3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.NetAmount;
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be sold.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount grossAmount;
 	/**
 	 * Amount of money used to derive the quantity of investment fund units to
 	 * be sold, including all charges, commissions, and tax.
@@ -238,8 +242,8 @@ public class FinancialInstrumentQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#GrossAmount
-	 * InvestmentFundOrder.GrossAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmGrossAmount
+	 * InvestmentFundOrder.mmGrossAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +264,21 @@ public class FinancialInstrumentQuantity3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.GrossAmount;
 			isDerived = false;
 			xmlTag = "GrssAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be sold, including all charges, commissions, and tax.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate holdingsRedemptionRate;
 	/**
 	 * Portion of the investor's holdings, in a specific investment fund/ fund
 	 * class, that is redeemed.
@@ -288,8 +293,8 @@ public class FinancialInstrumentQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RedemptionOrder#HoldingsRedemptionRate
-	 * RedemptionOrder.HoldingsRedemptionRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.RedemptionOrder#mmHoldingsRedemptionRate
+	 * RedemptionOrder.mmHoldingsRedemptionRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,17 +315,17 @@ public class FinancialInstrumentQuantity3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingsRedemptionRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingsRedemptionRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.mmHoldingsRedemptionRate;
 			componentContext_lazy = () -> FinancialInstrumentQuantity3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.HoldingsRedemptionRate;
 			isDerived = false;
 			xmlTag = "HldgsRedRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRedemptionRate";
 			definition = "Portion of the investor's holdings, in a specific investment fund/ fund class, that is redeemed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -328,16 +333,56 @@ public class FinancialInstrumentQuantity3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.UnitsNumber,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.PercentageOfTotalSubscriptionAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.NetAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.GrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.HoldingsRedemptionRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmUnitsNumber,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmPercentageOfTotalSubscriptionAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmNetAmount,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmGrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmHoldingsRedemptionRate);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity3Choice";
 				definition = "Choice between ways to express the quantity of the financial instrument to be redeemed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public PercentageRate getPercentageOfTotalSubscriptionAmount() {
+		return percentageOfTotalSubscriptionAmount;
+	}
+
+	public void setPercentageOfTotalSubscriptionAmount(PercentageRate percentageOfTotalSubscriptionAmount) {
+		this.percentageOfTotalSubscriptionAmount = percentageOfTotalSubscriptionAmount;
+	}
+
+	public CurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(CurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
+	}
+
+	public ActiveCurrencyAndAmount getGrossAmount() {
+		return grossAmount;
+	}
+
+	public void setGrossAmount(ActiveCurrencyAndAmount grossAmount) {
+		this.grossAmount = grossAmount;
+	}
+
+	public PercentageRate getHoldingsRedemptionRate() {
+		return holdingsRedemptionRate;
+	}
+
+	public void setHoldingsRedemptionRate(PercentageRate holdingsRedemptionRate) {
+		this.holdingsRedemptionRate = holdingsRedemptionRate;
 	}
 }

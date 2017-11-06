@@ -34,46 +34,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#OpeningDate
- * PartyDataReturnCriteria1.OpeningDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmOpeningDate
+ * PartyDataReturnCriteria1.mmOpeningDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#ClosingDate
- * PartyDataReturnCriteria1.ClosingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#Type
- * PartyDataReturnCriteria1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmClosingDate
+ * PartyDataReturnCriteria1.mmClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#PartyIdentification
- * PartyDataReturnCriteria1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmType
+ * PartyDataReturnCriteria1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#CSDOrNCB
- * PartyDataReturnCriteria1.CSDOrNCB}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmPartyIdentification
+ * PartyDataReturnCriteria1.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#RestrictionIdentification
- * PartyDataReturnCriteria1.RestrictionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmCSDOrNCB
+ * PartyDataReturnCriteria1.mmCSDOrNCB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#RestrictedOnDate
- * PartyDataReturnCriteria1.RestrictedOnDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#Name
- * PartyDataReturnCriteria1.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmRestrictionIdentification
+ * PartyDataReturnCriteria1.mmRestrictionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#ShortName
- * PartyDataReturnCriteria1.ShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmRestrictedOnDate
+ * PartyDataReturnCriteria1.mmRestrictedOnDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#Address
- * PartyDataReturnCriteria1.Address}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmName
+ * PartyDataReturnCriteria1.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#TechnicalAddress
- * PartyDataReturnCriteria1.TechnicalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmShortName
+ * PartyDataReturnCriteria1.mmShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#MarketSpecificAttribute
- * PartyDataReturnCriteria1.MarketSpecificAttribute}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmAddress
+ * PartyDataReturnCriteria1.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmTechnicalAddress
+ * PartyDataReturnCriteria1.mmTechnicalAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataReturnCriteria1#mmMarketSpecificAttribute
+ * PartyDataReturnCriteria1.mmMarketSpecificAttribute}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyDataReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator openingDate;
 	/**
 	 * Indicates whether the opening date of the party is requested.
 	 * <p>
@@ -118,7 +121,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the opening date of the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -126,11 +129,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Indicates whether the opening date of the party is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator closingDate;
 	/**
 	 * Indicates whether the closing date of the party is requested.
 	 * <p>
@@ -160,7 +164,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the closing date of the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -168,11 +172,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Indicates whether the closing date of the party is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator type;
 	/**
 	 * Indicates whether the type is requested.
 	 * <p>
@@ -201,7 +206,7 @@ public class PartyDataReturnCriteria1 {
 	 * definition} = "Indicates whether the type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -209,11 +214,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates whether the type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator partyIdentification;
 	/**
 	 * Indicates whether the unique identification to unambiguously identify the
 	 * party within the system is requested.
@@ -245,7 +251,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -253,11 +259,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Indicates whether the unique identification to unambiguously identify the party within the system is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator cSDOrNCB;
 	/**
 	 * Indicates whether the central security depository or the national central
 	 * bank who initially created the party reference data is requested.
@@ -289,7 +296,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSDOrNCB = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSDOrNCB = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -297,11 +304,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Indicates whether the central security depository or the national central bank who initially created the party reference data is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator restrictionIdentification;
 	/**
 	 * Indicates whether the identification of the restriction is requested.
 	 * <p>
@@ -331,7 +339,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the identification of the restriction is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -339,11 +347,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIdentification";
 			definition = "Indicates whether the identification of the restriction is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator restrictedOnDate;
 	/**
 	 * Indicates whether the date at which a restriction for party has been
 	 * issued is requested.
@@ -375,7 +384,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictedOnDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictedOnDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -383,11 +392,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedOnDate";
 			definition = "Indicates whether the date at which a restriction for party has been issued is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator name;
 	/**
 	 * Indicates whether the name for the party is requested.
 	 * <p>
@@ -416,7 +426,7 @@ public class PartyDataReturnCriteria1 {
 	 * definition} = "Indicates whether the name for the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -424,11 +434,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Indicates whether the name for the party is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator shortName;
 	/**
 	 * Indicates whether the short name for the party is requested.
 	 * <p>
@@ -458,7 +469,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the short name for the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -466,11 +477,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Indicates whether the short name for the party is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator address;
 	/**
 	 * Indicates whether the address for the party is requested.
 	 * <p>
@@ -500,7 +512,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Address = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -508,11 +520,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Indicates whether the address for the party is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator technicalAddress;
 	/**
 	 * Indicates whether the technical addresses for the party are requested.
 	 * <p>
@@ -542,7 +555,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the technical addresses for the party are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -550,11 +563,12 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAddress";
 			definition = "Indicates whether the technical addresses for the party are requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator marketSpecificAttribute;
 	/**
 	 * Indicates whether the market specific attributes for the party are
 	 * requested.
@@ -586,7 +600,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketSpecificAttribute = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketSpecificAttribute = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -594,8 +608,8 @@ public class PartyDataReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
 			definition = "Indicates whether the market specific attributes  for the party are requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -603,17 +617,113 @@ public class PartyDataReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataReturnCriteria1.OpeningDate, com.tools20022.repository.msg.PartyDataReturnCriteria1.ClosingDate,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.Type, com.tools20022.repository.msg.PartyDataReturnCriteria1.PartyIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.CSDOrNCB,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.RestrictionIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.RestrictedOnDate, com.tools20022.repository.msg.PartyDataReturnCriteria1.Name,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.ShortName, com.tools20022.repository.msg.PartyDataReturnCriteria1.Address, com.tools20022.repository.msg.PartyDataReturnCriteria1.TechnicalAddress,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.MarketSpecificAttribute);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataReturnCriteria1.mmOpeningDate, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmClosingDate,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmType, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmPartyIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmCSDOrNCB,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictionIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictedOnDate,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmShortName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmAddress,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmTechnicalAddress, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataReturnCriteria1";
 				definition = "Return criteria for information to be returned in the report deriving from a query about party reference data. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(RequestedIndicator openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	public RequestedIndicator getClosingDate() {
+		return closingDate;
+	}
+
+	public void setClosingDate(RequestedIndicator closingDate) {
+		this.closingDate = closingDate;
+	}
+
+	public RequestedIndicator getType() {
+		return type;
+	}
+
+	public void setType(RequestedIndicator type) {
+		this.type = type;
+	}
+
+	public RequestedIndicator getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(RequestedIndicator partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public RequestedIndicator getCSDOrNCB() {
+		return cSDOrNCB;
+	}
+
+	public void setCSDOrNCB(RequestedIndicator cSDOrNCB) {
+		this.cSDOrNCB = cSDOrNCB;
+	}
+
+	public RequestedIndicator getRestrictionIdentification() {
+		return restrictionIdentification;
+	}
+
+	public void setRestrictionIdentification(RequestedIndicator restrictionIdentification) {
+		this.restrictionIdentification = restrictionIdentification;
+	}
+
+	public RequestedIndicator getRestrictedOnDate() {
+		return restrictedOnDate;
+	}
+
+	public void setRestrictedOnDate(RequestedIndicator restrictedOnDate) {
+		this.restrictedOnDate = restrictedOnDate;
+	}
+
+	public RequestedIndicator getName() {
+		return name;
+	}
+
+	public void setName(RequestedIndicator name) {
+		this.name = name;
+	}
+
+	public RequestedIndicator getShortName() {
+		return shortName;
+	}
+
+	public void setShortName(RequestedIndicator shortName) {
+		this.shortName = shortName;
+	}
+
+	public RequestedIndicator getAddress() {
+		return address;
+	}
+
+	public void setAddress(RequestedIndicator address) {
+		this.address = address;
+	}
+
+	public RequestedIndicator getTechnicalAddress() {
+		return technicalAddress;
+	}
+
+	public void setTechnicalAddress(RequestedIndicator technicalAddress) {
+		this.technicalAddress = technicalAddress;
+	}
+
+	public RequestedIndicator getMarketSpecificAttribute() {
+		return marketSpecificAttribute;
+	}
+
+	public void setMarketSpecificAttribute(RequestedIndicator marketSpecificAttribute) {
+		this.marketSpecificAttribute = marketSpecificAttribute;
 	}
 }

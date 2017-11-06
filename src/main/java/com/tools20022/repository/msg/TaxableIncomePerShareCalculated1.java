@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxableIncomePerShareCalculated1#Structured
- * TaxableIncomePerShareCalculated1.Structured}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxableIncomePerShareCalculated1#mmStructured
+ * TaxableIncomePerShareCalculated1.mmStructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxableIncomePerShareCalculated1#AdditionalInformation
- * TaxableIncomePerShareCalculated1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxableIncomePerShareCalculated1#mmAdditionalInformation
+ * TaxableIncomePerShareCalculated1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxableIncomePerShareCalculated1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxableIncomePerShareCalculated1Code structured;
 	/**
 	 * Structured format.
 	 * <p>
@@ -76,8 +77,8 @@ public class TaxableIncomePerShareCalculated1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerShareCalculated
-	 * SecuritiesTax.TaxableIncomePerShareCalculated}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
+	 * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class TaxableIncomePerShareCalculated1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> TaxableIncomePerShareCalculated1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerShareCalculated;
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Structured format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxableIncomePerShareCalculated1Code.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the type of tax.
 	 * <p>
@@ -137,7 +139,7 @@ public class TaxableIncomePerShareCalculated1 {
 	 * definition} = "Additional information about the type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxableIncomePerShareCalculated1.mmObject();
 			isDerived = false;
@@ -145,8 +147,8 @@ public class TaxableIncomePerShareCalculated1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the type of tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -154,14 +156,30 @@ public class TaxableIncomePerShareCalculated1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.Structured, com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.mmStructured, com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxableIncomePerShareCalculated1";
 				definition = "Specification of the taxable income per share.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxableIncomePerShareCalculated1Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(TaxableIncomePerShareCalculated1Code structured) {
+		this.structured = structured;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

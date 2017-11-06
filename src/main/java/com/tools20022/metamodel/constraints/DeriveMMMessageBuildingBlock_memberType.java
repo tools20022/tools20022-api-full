@@ -31,6 +31,6 @@ public class DeriveMMMessageBuildingBlock_memberType implements Function<MMMessa
 	 */
 	@Override
 	public MMRepositoryType apply(MMMessageBuildingBlock mmBean) {
-		throw new RuntimeException("Not implemented!");
+		return mmBean.getXmlMemberType();
 	}
 }

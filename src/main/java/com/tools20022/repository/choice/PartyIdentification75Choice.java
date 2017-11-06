@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#AnyBIC
- * PartyIdentification75Choice.AnyBIC}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#mmAnyBIC
+ * PartyIdentification75Choice.mmAnyBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#NameAndAddress
- * PartyIdentification75Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#mmNameAndAddress
+ * PartyIdentification75Choice.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#Country
- * PartyIdentification75Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#mmCountry
+ * PartyIdentification75Choice.mmCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification75Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier anyBIC;
 	/**
 	 * Identification of the party expressed as a BIC.
 	 * <p>
@@ -85,8 +86,8 @@ public class PartyIdentification75Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,25 +107,26 @@ public class PartyIdentification75Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#BICOrBEI
-	 * PartyIdentification12Choice.BICOrBEI}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#mmBICOrBEI
+	 * PartyIdentification12Choice.mmBICOrBEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification75Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.BICOrBEI;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.mmBICOrBEI;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Name and address of a party.
 	 * <p>
@@ -158,25 +160,26 @@ public class PartyIdentification75Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#NameAndAddress
-	 * PartyIdentification12Choice.NameAndAddress}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#mmNameAndAddress
+	 * PartyIdentification12Choice.mmNameAndAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification75Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification75Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.NameAndAddress;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.mmNameAndAddress;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country of the party.
 	 * <p>
@@ -189,7 +192,8 @@ public class PartyIdentification75Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -209,22 +213,22 @@ public class PartyIdentification75Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#Country
-	 * PartyIdentification12Choice.Country}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#mmCountry
+	 * PartyIdentification12Choice.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> PartyIdentification75Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.Country;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.mmCountry;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -232,10 +236,10 @@ public class PartyIdentification75Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification75Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification75Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification75Choice.Country);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification75Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification75Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification75Choice.mmCountry);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification75Choice";
 				definition = "Choice of identification of a party.";
@@ -243,5 +247,29 @@ public class PartyIdentification75Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getAnyBIC() {
+		return anyBIC;
+	}
+
+	public void setAnyBIC(AnyBICIdentifier anyBIC) {
+		this.anyBIC = anyBIC;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

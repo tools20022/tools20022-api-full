@@ -33,60 +33,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherAmounts1#AccruedInterestAmount
- * OtherAmounts1.AccruedInterestAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#ChargesFees
- * OtherAmounts1.ChargesFees}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmAccruedInterestAmount
+ * OtherAmounts1.mmAccruedInterestAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmChargesFees
+ * OtherAmounts1.mmChargesFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherAmounts1#CountryNationalFederalTax
- * OtherAmounts1.CountryNationalFederalTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#TradeAmount
- * OtherAmounts1.TradeAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmCountryNationalFederalTax
+ * OtherAmounts1.mmCountryNationalFederalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmTradeAmount
+ * OtherAmounts1.mmTradeAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherAmounts1#ExecutingBrokerAmount
- * OtherAmounts1.ExecutingBrokerAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmExecutingBrokerAmount
+ * OtherAmounts1.mmExecutingBrokerAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherAmounts1#IssueDiscountAllowance
- * OtherAmounts1.IssueDiscountAllowance}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#PaymentLevyTax
- * OtherAmounts1.PaymentLevyTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#LocalTax
- * OtherAmounts1.LocalTax}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmIssueDiscountAllowance
+ * OtherAmounts1.mmIssueDiscountAllowance}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmPaymentLevyTax
+ * OtherAmounts1.mmPaymentLevyTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmLocalTax
+ * OtherAmounts1.mmLocalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherAmounts1#LocalBrokerCommission
- * OtherAmounts1.LocalBrokerCommission}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#Margin
- * OtherAmounts1.Margin}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#Other
- * OtherAmounts1.Other}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#PostageAmount
- * OtherAmounts1.PostageAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#RegulatoryAmount
- * OtherAmounts1.RegulatoryAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#ShippingAmount
- * OtherAmounts1.ShippingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmLocalBrokerCommission
+ * OtherAmounts1.mmLocalBrokerCommission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmMargin
+ * OtherAmounts1.mmMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmOther
+ * OtherAmounts1.mmOther}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmPostageAmount
+ * OtherAmounts1.mmPostageAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherAmounts1#SpecialConcession
- * OtherAmounts1.SpecialConcession}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#StampDuty
- * OtherAmounts1.StampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#StockExchangeTax
- * OtherAmounts1.StockExchangeTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#TransferTax
- * OtherAmounts1.TransferTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#TransactionTax
- * OtherAmounts1.TransactionTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#ValueAddedTax
- * OtherAmounts1.ValueAddedTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#WithholdingTax
- * OtherAmounts1.WithholdingTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#NetGainLoss
- * OtherAmounts1.NetGainLoss}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#ConsumptionTax
- * OtherAmounts1.ConsumptionTax}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmRegulatoryAmount
+ * OtherAmounts1.mmRegulatoryAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmShippingAmount
+ * OtherAmounts1.mmShippingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherAmounts1#AccruedCapitalisationAmount
- * OtherAmounts1.AccruedCapitalisationAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmSpecialConcession
+ * OtherAmounts1.mmSpecialConcession}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmStampDuty
+ * OtherAmounts1.mmStampDuty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmStockExchangeTax
+ * OtherAmounts1.mmStockExchangeTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmTransferTax
+ * OtherAmounts1.mmTransferTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmTransactionTax
+ * OtherAmounts1.mmTransactionTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmValueAddedTax
+ * OtherAmounts1.mmValueAddedTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmWithholdingTax
+ * OtherAmounts1.mmWithholdingTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmNetGainLoss
+ * OtherAmounts1.mmNetGainLoss}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmConsumptionTax
+ * OtherAmounts1.mmConsumptionTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmAccruedCapitalisationAmount
+ * OtherAmounts1.mmAccruedCapitalisationAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -95,8 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherAmounts1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection1 accruedInterestAmount;
 	/**
 	 * Interest amount that has accrued in between coupon payment periods.
 	 * <p>
@@ -124,8 +127,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +147,21 @@ public class OtherAmounts1 {
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 chargesFees;
 	/**
 	 * Amount of money paid for the provision of financial services that cannot
 	 * be categorised by another qualifier.
@@ -172,8 +176,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,20 +197,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargesFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargesFees = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ChrgsFees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesFees";
 			definition = "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 countryNationalFederalTax;
 	/**
 	 * Amount of country, national or federal tax charged by the jurisdiction in
 	 * which the account servicer is located.
@@ -221,7 +226,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,20 +246,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryNationalFederalTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryNationalFederalTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "CtryNtlFdrlTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryNationalFederalTax";
 			definition = "Amount of country, national or federal tax charged by the jurisdiction in which the account servicer is located.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 tradeAmount;
 	/**
 	 * Principal amount of a trade (price multiplied by quantity).
 	 * <p>
@@ -268,8 +274,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeAmount
-	 * SecuritiesTrade.TradeAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeAmount
+	 * SecuritiesTrade.mmTradeAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,20 +294,21 @@ public class OtherAmounts1 {
 	 * "Principal amount of a trade (price multiplied by quantity)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeAmount;
 			isDerived = false;
 			xmlTag = "TradAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmount";
 			definition = "Principal amount of a trade (price multiplied by quantity).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 executingBrokerAmount;
 	/**
 	 * Amount of money paid to an executing broker as a commission.
 	 * <p>
@@ -315,8 +322,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,20 +342,21 @@ public class OtherAmounts1 {
 	 * "Amount of money paid to an executing broker as a commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutingBrokerAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutingBrokerAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ExctgBrkrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBrokerAmount";
 			definition = "Amount of money paid to an executing broker as a commission.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 issueDiscountAllowance;
 	/**
 	 * Amount of money defined as a discount on a new issue or on a tranche of
 	 * an existing issue.
@@ -363,8 +371,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#IssueDiscountAllowance
-	 * Issuance.IssueDiscountAllowance}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmIssueDiscountAllowance
+	 * Issuance.mmIssueDiscountAllowance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -384,20 +392,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDiscountAllowance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDiscountAllowance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDiscountAllowance;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.IssueDiscountAllowance;
 			isDerived = false;
 			xmlTag = "IsseDscntAllwnc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDiscountAllowance";
 			definition = "Amount of money defined as a discount on a new issue or on a tranche of an existing issue.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 paymentLevyTax;
 	/**
 	 * Amount of payment levy tax.
 	 * <p>
@@ -411,7 +420,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -429,20 +438,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of payment levy tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentLevyTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentLevyTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "PmtLevyTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentLevyTax";
 			definition = "Amount of payment levy tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 localTax;
 	/**
 	 * Amount of tax charged by the jurisdiction in which the financial
 	 * instrument settles.
@@ -457,7 +467,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -477,20 +487,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "LclTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
 			definition = "Amount of tax charged by the jurisdiction in which the financial instrument settles.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 localBrokerCommission;
 	/**
 	 * Amount of commission paid to a local broker.
 	 * <p>
@@ -504,8 +515,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -523,20 +534,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of commission paid to a local broker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalBrokerCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalBrokerCommission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "LclBrkrComssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalBrokerCommission";
 			definition = "Amount of commission paid to a local broker.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 margin;
 	/**
 	 * Amount of money deposited by the trading party in a margin account.
 	 * <p>
@@ -550,8 +562,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#CollateralAmount
-	 * Collateral.CollateralAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralAmount
+	 * Collateral.mmCollateralAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -570,20 +582,21 @@ public class OtherAmounts1 {
 	 * "Amount of money deposited by the trading party in a margin account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Margin = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMargin = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.CollateralAmount;
 			isDerived = false;
 			xmlTag = "Mrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Margin";
 			definition = "Amount of money deposited by the trading party in a margin account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 other;
 	/**
 	 * Amount of money that cannot be categorised.
 	 * <p>
@@ -611,7 +624,7 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of money that cannot be categorised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Other = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
 			isDerived = false;
@@ -619,11 +632,12 @@ public class OtherAmounts1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Amount of money that cannot be categorised.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 postageAmount;
 	/**
 	 * Amount of money paid for delivery by regular post mail.
 	 * <p>
@@ -637,8 +651,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#PostageFeeAmount
-	 * SecuritiesRelatedFees.PostageFeeAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmPostageFeeAmount
+	 * SecuritiesRelatedFees.mmPostageFeeAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -656,20 +670,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of money paid for delivery by regular post mail."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostageAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostageAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmPostageFeeAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.PostageFeeAmount;
 			isDerived = false;
 			xmlTag = "PstgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostageAmount";
 			definition = "Amount of money paid for delivery by regular post mail.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 regulatoryAmount;
 	/**
 	 * Amount of money charged by a regulatory authority, eg, Securities and
 	 * Exchange fees.
@@ -684,8 +699,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#RegulatoryFeesAmount
-	 * SecuritiesRelatedFees.RegulatoryFeesAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmRegulatoryFeesAmount
+	 * SecuritiesRelatedFees.mmRegulatoryFeesAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -705,20 +720,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegulatoryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegulatoryAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmRegulatoryFeesAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.RegulatoryFeesAmount;
 			isDerived = false;
 			xmlTag = "RgltryAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryAmount";
 			definition = "Amount of money charged by a regulatory authority, eg, Securities and Exchange fees.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 shippingAmount;
 	/**
 	 * Amount of money (including insurance) paid for delivery by carrier.
 	 * <p>
@@ -732,8 +748,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#ShippingFeesAmount
-	 * SecuritiesRelatedFees.ShippingFeesAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmShippingFeesAmount
+	 * SecuritiesRelatedFees.mmShippingFeesAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -752,20 +768,21 @@ public class OtherAmounts1 {
 	 * "Amount of money (including insurance) paid for delivery by carrier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShippingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShippingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmShippingFeesAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.ShippingFeesAmount;
 			isDerived = false;
 			xmlTag = "ShppgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingAmount";
 			definition = "Amount of money (including insurance) paid for delivery by carrier.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 specialConcession;
 	/**
 	 * Amount of drawdown or other reduction from or in addition to the deal
 	 * price.
@@ -780,8 +797,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#SpecialConcessionAmount
-	 * ProceedsDefinition.SpecialConcessionAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmSpecialConcessionAmount
+	 * ProceedsDefinition.mmSpecialConcessionAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -801,20 +818,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SpecialConcession = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSpecialConcession = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmSpecialConcessionAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.SpecialConcessionAmount;
 			isDerived = false;
 			xmlTag = "SpclCncssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConcession";
 			definition = "Amount of drawdown or other reduction from or in addition to the deal price.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 stampDuty;
 	/**
 	 * Amount of stamp duty.
 	 * <p>
@@ -828,7 +846,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -846,20 +864,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of stamp duty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StampDuty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "StmpDty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Amount of stamp duty.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 stockExchangeTax;
 	/**
 	 * Amount of stock exchange tax.
 	 * <p>
@@ -873,7 +892,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -891,20 +910,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of stock exchange tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StockExchangeTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStockExchangeTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "StockXchgTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
 			definition = "Amount of stock exchange tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 transferTax;
 	/**
 	 * Amount of tax levied on a transfer of ownership of financial instrument.
 	 * <p>
@@ -918,8 +938,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferTax
-	 * SecuritiesTransfer.TransferTax}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferTax
+	 * SecuritiesTransfer.mmTransferTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -939,20 +959,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferTax;
 			isDerived = false;
 			xmlTag = "TrfTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
 			definition = "Amount of tax levied on a transfer of ownership of financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 transactionTax;
 	/**
 	 * Amount of transaction tax.
 	 * <p>
@@ -966,7 +987,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -984,20 +1005,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of transaction tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TxTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
 			definition = "Amount of transaction tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 valueAddedTax;
 	/**
 	 * Amount of value-added tax.
 	 * <p>
@@ -1011,7 +1033,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1029,20 +1051,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of value-added tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueAddedTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueAddedTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "ValAddedTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			definition = "Amount of value-added tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 withholdingTax;
 	/**
 	 * Amount of money that will be withheld by a tax authority.
 	 * <p>
@@ -1056,7 +1079,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1075,20 +1098,21 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WithholdingTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWithholdingTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "WhldgTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			definition = "Amount of money that will be withheld by a tax authority.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 netGainLoss;
 	/**
 	 * Total net trade amount of all the trade transactions.
 	 * <p>
@@ -1102,8 +1126,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#NetGainLoss
-	 * SecuritiesBalance.NetGainLoss}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmNetGainLoss
+	 * SecuritiesBalance.mmNetGainLoss}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1121,20 +1145,21 @@ public class OtherAmounts1 {
 	 * definition} = "Total net trade amount of all the trade transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetGainLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetGainLoss = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmNetGainLoss;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.NetGainLoss;
 			isDerived = false;
 			xmlTag = "NetGnLoss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetGainLoss";
 			definition = "Total net trade amount of all the trade transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 consumptionTax;
 	/**
 	 * Amount of consumption tax. It is used in the UK market.
 	 * <p>
@@ -1148,7 +1173,7 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1166,20 +1191,21 @@ public class OtherAmounts1 {
 	 * definition} = "Amount of consumption tax. It is used in the UK market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConsumptionTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConsumptionTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "CsmptnTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
 			definition = "Amount of consumption tax. It is used in the UK market.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
+	protected AmountAndDirection1 accruedCapitalisationAmount;
 	/**
 	 * Amount of unpaid interest (on interest bearing instruments which have
 	 * defaulted and have subsequently restructured), which is capitalised and
@@ -1195,8 +1221,8 @@ public class OtherAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#AccruedCapitalisationAmount
-	 * Debt.AccruedCapitalisationAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmAccruedCapitalisationAmount
+	 * Debt.mmAccruedCapitalisationAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1216,40 +1242,232 @@ public class OtherAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedCapitalisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedCapitalisationAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmAccruedCapitalisationAmount;
 			componentContext_lazy = () -> OtherAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.AccruedCapitalisationAmount;
 			isDerived = false;
 			xmlTag = "AcrdCptlstnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedCapitalisationAmount";
 			definition = "Amount of unpaid interest (on interest bearing instruments which have defaulted and have subsequently restructured), which is capitalised and added to the original principal amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts1.AccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts1.ChargesFees,
-						com.tools20022.repository.msg.OtherAmounts1.CountryNationalFederalTax, com.tools20022.repository.msg.OtherAmounts1.TradeAmount, com.tools20022.repository.msg.OtherAmounts1.ExecutingBrokerAmount,
-						com.tools20022.repository.msg.OtherAmounts1.IssueDiscountAllowance, com.tools20022.repository.msg.OtherAmounts1.PaymentLevyTax, com.tools20022.repository.msg.OtherAmounts1.LocalTax,
-						com.tools20022.repository.msg.OtherAmounts1.LocalBrokerCommission, com.tools20022.repository.msg.OtherAmounts1.Margin, com.tools20022.repository.msg.OtherAmounts1.Other,
-						com.tools20022.repository.msg.OtherAmounts1.PostageAmount, com.tools20022.repository.msg.OtherAmounts1.RegulatoryAmount, com.tools20022.repository.msg.OtherAmounts1.ShippingAmount,
-						com.tools20022.repository.msg.OtherAmounts1.SpecialConcession, com.tools20022.repository.msg.OtherAmounts1.StampDuty, com.tools20022.repository.msg.OtherAmounts1.StockExchangeTax,
-						com.tools20022.repository.msg.OtherAmounts1.TransferTax, com.tools20022.repository.msg.OtherAmounts1.TransactionTax, com.tools20022.repository.msg.OtherAmounts1.ValueAddedTax,
-						com.tools20022.repository.msg.OtherAmounts1.WithholdingTax, com.tools20022.repository.msg.OtherAmounts1.NetGainLoss, com.tools20022.repository.msg.OtherAmounts1.ConsumptionTax,
-						com.tools20022.repository.msg.OtherAmounts1.AccruedCapitalisationAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts1.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts1.mmChargesFees,
+						com.tools20022.repository.msg.OtherAmounts1.mmCountryNationalFederalTax, com.tools20022.repository.msg.OtherAmounts1.mmTradeAmount, com.tools20022.repository.msg.OtherAmounts1.mmExecutingBrokerAmount,
+						com.tools20022.repository.msg.OtherAmounts1.mmIssueDiscountAllowance, com.tools20022.repository.msg.OtherAmounts1.mmPaymentLevyTax, com.tools20022.repository.msg.OtherAmounts1.mmLocalTax,
+						com.tools20022.repository.msg.OtherAmounts1.mmLocalBrokerCommission, com.tools20022.repository.msg.OtherAmounts1.mmMargin, com.tools20022.repository.msg.OtherAmounts1.mmOther,
+						com.tools20022.repository.msg.OtherAmounts1.mmPostageAmount, com.tools20022.repository.msg.OtherAmounts1.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts1.mmShippingAmount,
+						com.tools20022.repository.msg.OtherAmounts1.mmSpecialConcession, com.tools20022.repository.msg.OtherAmounts1.mmStampDuty, com.tools20022.repository.msg.OtherAmounts1.mmStockExchangeTax,
+						com.tools20022.repository.msg.OtherAmounts1.mmTransferTax, com.tools20022.repository.msg.OtherAmounts1.mmTransactionTax, com.tools20022.repository.msg.OtherAmounts1.mmValueAddedTax,
+						com.tools20022.repository.msg.OtherAmounts1.mmWithholdingTax, com.tools20022.repository.msg.OtherAmounts1.mmNetGainLoss, com.tools20022.repository.msg.OtherAmounts1.mmConsumptionTax,
+						com.tools20022.repository.msg.OtherAmounts1.mmAccruedCapitalisationAmount);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherAmounts1";
 				definition = "Amount of money debited and credited on the books of an account servicer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection1 getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection1 accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
+	}
+
+	public AmountAndDirection1 getChargesFees() {
+		return chargesFees;
+	}
+
+	public void setChargesFees(com.tools20022.repository.msg.AmountAndDirection1 chargesFees) {
+		this.chargesFees = chargesFees;
+	}
+
+	public AmountAndDirection1 getCountryNationalFederalTax() {
+		return countryNationalFederalTax;
+	}
+
+	public void setCountryNationalFederalTax(com.tools20022.repository.msg.AmountAndDirection1 countryNationalFederalTax) {
+		this.countryNationalFederalTax = countryNationalFederalTax;
+	}
+
+	public AmountAndDirection1 getTradeAmount() {
+		return tradeAmount;
+	}
+
+	public void setTradeAmount(com.tools20022.repository.msg.AmountAndDirection1 tradeAmount) {
+		this.tradeAmount = tradeAmount;
+	}
+
+	public AmountAndDirection1 getExecutingBrokerAmount() {
+		return executingBrokerAmount;
+	}
+
+	public void setExecutingBrokerAmount(com.tools20022.repository.msg.AmountAndDirection1 executingBrokerAmount) {
+		this.executingBrokerAmount = executingBrokerAmount;
+	}
+
+	public AmountAndDirection1 getIssueDiscountAllowance() {
+		return issueDiscountAllowance;
+	}
+
+	public void setIssueDiscountAllowance(com.tools20022.repository.msg.AmountAndDirection1 issueDiscountAllowance) {
+		this.issueDiscountAllowance = issueDiscountAllowance;
+	}
+
+	public AmountAndDirection1 getPaymentLevyTax() {
+		return paymentLevyTax;
+	}
+
+	public void setPaymentLevyTax(com.tools20022.repository.msg.AmountAndDirection1 paymentLevyTax) {
+		this.paymentLevyTax = paymentLevyTax;
+	}
+
+	public AmountAndDirection1 getLocalTax() {
+		return localTax;
+	}
+
+	public void setLocalTax(com.tools20022.repository.msg.AmountAndDirection1 localTax) {
+		this.localTax = localTax;
+	}
+
+	public AmountAndDirection1 getLocalBrokerCommission() {
+		return localBrokerCommission;
+	}
+
+	public void setLocalBrokerCommission(com.tools20022.repository.msg.AmountAndDirection1 localBrokerCommission) {
+		this.localBrokerCommission = localBrokerCommission;
+	}
+
+	public AmountAndDirection1 getMargin() {
+		return margin;
+	}
+
+	public void setMargin(com.tools20022.repository.msg.AmountAndDirection1 margin) {
+		this.margin = margin;
+	}
+
+	public AmountAndDirection1 getOther() {
+		return other;
+	}
+
+	public void setOther(com.tools20022.repository.msg.AmountAndDirection1 other) {
+		this.other = other;
+	}
+
+	public AmountAndDirection1 getPostageAmount() {
+		return postageAmount;
+	}
+
+	public void setPostageAmount(com.tools20022.repository.msg.AmountAndDirection1 postageAmount) {
+		this.postageAmount = postageAmount;
+	}
+
+	public AmountAndDirection1 getRegulatoryAmount() {
+		return regulatoryAmount;
+	}
+
+	public void setRegulatoryAmount(com.tools20022.repository.msg.AmountAndDirection1 regulatoryAmount) {
+		this.regulatoryAmount = regulatoryAmount;
+	}
+
+	public AmountAndDirection1 getShippingAmount() {
+		return shippingAmount;
+	}
+
+	public void setShippingAmount(com.tools20022.repository.msg.AmountAndDirection1 shippingAmount) {
+		this.shippingAmount = shippingAmount;
+	}
+
+	public AmountAndDirection1 getSpecialConcession() {
+		return specialConcession;
+	}
+
+	public void setSpecialConcession(com.tools20022.repository.msg.AmountAndDirection1 specialConcession) {
+		this.specialConcession = specialConcession;
+	}
+
+	public AmountAndDirection1 getStampDuty() {
+		return stampDuty;
+	}
+
+	public void setStampDuty(com.tools20022.repository.msg.AmountAndDirection1 stampDuty) {
+		this.stampDuty = stampDuty;
+	}
+
+	public AmountAndDirection1 getStockExchangeTax() {
+		return stockExchangeTax;
+	}
+
+	public void setStockExchangeTax(com.tools20022.repository.msg.AmountAndDirection1 stockExchangeTax) {
+		this.stockExchangeTax = stockExchangeTax;
+	}
+
+	public AmountAndDirection1 getTransferTax() {
+		return transferTax;
+	}
+
+	public void setTransferTax(com.tools20022.repository.msg.AmountAndDirection1 transferTax) {
+		this.transferTax = transferTax;
+	}
+
+	public AmountAndDirection1 getTransactionTax() {
+		return transactionTax;
+	}
+
+	public void setTransactionTax(com.tools20022.repository.msg.AmountAndDirection1 transactionTax) {
+		this.transactionTax = transactionTax;
+	}
+
+	public AmountAndDirection1 getValueAddedTax() {
+		return valueAddedTax;
+	}
+
+	public void setValueAddedTax(com.tools20022.repository.msg.AmountAndDirection1 valueAddedTax) {
+		this.valueAddedTax = valueAddedTax;
+	}
+
+	public AmountAndDirection1 getWithholdingTax() {
+		return withholdingTax;
+	}
+
+	public void setWithholdingTax(com.tools20022.repository.msg.AmountAndDirection1 withholdingTax) {
+		this.withholdingTax = withholdingTax;
+	}
+
+	public AmountAndDirection1 getNetGainLoss() {
+		return netGainLoss;
+	}
+
+	public void setNetGainLoss(com.tools20022.repository.msg.AmountAndDirection1 netGainLoss) {
+		this.netGainLoss = netGainLoss;
+	}
+
+	public AmountAndDirection1 getConsumptionTax() {
+		return consumptionTax;
+	}
+
+	public void setConsumptionTax(com.tools20022.repository.msg.AmountAndDirection1 consumptionTax) {
+		this.consumptionTax = consumptionTax;
+	}
+
+	public AmountAndDirection1 getAccruedCapitalisationAmount() {
+		return accruedCapitalisationAmount;
+	}
+
+	public void setAccruedCapitalisationAmount(com.tools20022.repository.msg.AmountAndDirection1 accruedCapitalisationAmount) {
+		this.accruedCapitalisationAmount = accruedCapitalisationAmount;
 	}
 }

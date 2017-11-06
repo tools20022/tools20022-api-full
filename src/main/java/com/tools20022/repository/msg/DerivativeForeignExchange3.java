@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeForeignExchange3#FXType
- * DerivativeForeignExchange3.FXType}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeForeignExchange3#mmFXType
+ * DerivativeForeignExchange3.mmFXType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeForeignExchange3#OtherNotionalCurrency
- * DerivativeForeignExchange3.OtherNotionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeForeignExchange3#mmOtherNotionalCurrency
+ * DerivativeForeignExchange3.mmOtherNotionalCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DerivativeForeignExchange3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetFXSubProductType1Code fXType;
 	/**
 	 * Type of the underlying currency
 	 * <p>
@@ -78,8 +79,8 @@ public class DerivativeForeignExchange3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#FinancialAssetCategory
-	 * Asset.FinancialAssetCategory}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmFinancialAssetCategory
+	 * Asset.mmFinancialAssetCategory}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class DerivativeForeignExchange3 {
 	 * definition} = "Type of the underlying currency"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FXType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFXType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmFinancialAssetCategory;
 			componentContext_lazy = () -> DerivativeForeignExchange3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.FinancialAssetCategory;
 			isDerived = false;
 			xmlTag = "FxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXType";
 			definition = "Type of the underlying currency";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetFXSubProductType1Code.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode otherNotionalCurrency;
 	/**
 	 * Underlying currency 2 of the currency pair (the currency 1 will be
 	 * populated in the notional currency).<br>
@@ -126,8 +128,8 @@ public class DerivativeForeignExchange3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrency
-	 * Derivative.NotionalCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
+	 * Derivative.mmNotionalCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class DerivativeForeignExchange3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> DerivativeForeignExchange3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrency;
 			isDerived = false;
 			xmlTag = "OthrNtnlCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNotionalCurrency";
 			definition = "Underlying currency 2 of the currency pair (the currency 1 will be populated in the notional currency).\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class DerivativeForeignExchange3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeForeignExchange3.FXType, com.tools20022.repository.msg.DerivativeForeignExchange3.OtherNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeForeignExchange3.mmFXType, com.tools20022.repository.msg.DerivativeForeignExchange3.mmOtherNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DerivativeForeignExchange3";
 				definition = "Attributes of non-financial instrument of type foreign exchange as underlying.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetFXSubProductType1Code getFXType() {
+		return fXType;
+	}
+
+	public void setFXType(AssetFXSubProductType1Code fXType) {
+		this.fXType = fXType;
+	}
+
+	public ActiveOrHistoricCurrencyCode getOtherNotionalCurrency() {
+		return otherNotionalCurrency;
+	}
+
+	public void setOtherNotionalCurrency(ActiveOrHistoricCurrencyCode otherNotionalCurrency) {
+		this.otherNotionalCurrency = otherNotionalCurrency;
 	}
 }

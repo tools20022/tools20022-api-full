@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode#Resident
- * ResidentialStatusCode.Resident}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode#mmResident
+ * ResidentialStatusCode.mmResident}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode#PermanentResident
- * ResidentialStatusCode.PermanentResident}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode#mmPermanentResident
+ * ResidentialStatusCode.mmPermanentResident}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode#NonResident
- * ResidentialStatusCode.NonResident}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode#mmNonResident
+ * ResidentialStatusCode.mmNonResident}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class ResidentialStatusCode {
 	 * definition} = "Resident."</li>
 	 * </ul>
 	 */
-	public static final MMCode Resident = new MMCode() {
+	public static final MMCode mmResident = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Resident";
@@ -122,7 +122,7 @@ public class ResidentialStatusCode {
 	 * definition} = "Permanent resident."</li>
 	 * </ul>
 	 */
-	public static final MMCode PermanentResident = new MMCode() {
+	public static final MMCode mmPermanentResident = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PermanentResident";
@@ -152,7 +152,7 @@ public class ResidentialStatusCode {
 	 * definition} = "Non-resident."</li>
 	 * </ul>
 	 */
-	public static final MMCode NonResident = new MMCode() {
+	public static final MMCode mmNonResident = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NonResident";
@@ -165,13 +165,13 @@ public class ResidentialStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RESI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResidentialStatusCode";
 				definition = "Specifies the residential status of an individual.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResidentialStatusCode.Resident, com.tools20022.repository.codeset.ResidentialStatusCode.PermanentResident,
-						com.tools20022.repository.codeset.ResidentialStatusCode.NonResident);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResidentialStatusCode.mmResident, com.tools20022.repository.codeset.ResidentialStatusCode.mmPermanentResident,
+						com.tools20022.repository.codeset.ResidentialStatusCode.mmNonResident);
 				derivation_lazy = () -> Arrays.asList(ResidentialStatus1Code.mmObject());
 			}
 		});

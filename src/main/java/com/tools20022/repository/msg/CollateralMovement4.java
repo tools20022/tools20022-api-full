@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CollateralProposal;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the agreed amount and the collateral movement direction.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralMovement4#AgreedAmount
- * CollateralMovement4.AgreedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralMovement4#mmAgreedAmount
+ * CollateralMovement4.mmAgreedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralMovement4#MovementDetails
- * CollateralMovement4.MovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralMovement4#mmMovementDetails
+ * CollateralMovement4.mmMovementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralMovement4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount agreedAmount;
 	/**
 	 * Provides the call amount that is agreed and that will result in a
 	 * collateral movement.
@@ -86,8 +88,8 @@ public class CollateralMovement4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#AgreedAmount
-	 * MarginCall.AgreedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmAgreedAmount
+	 * MarginCall.mmAgreedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,27 +112,28 @@ public class CollateralMovement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralMovement5#AgreedAmount
-	 * CollateralMovement5.AgreedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralMovement5#mmAgreedAmount
+	 * CollateralMovement5.mmAgreedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgreedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> CollateralMovement4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.AgreedAmount;
 			isDerived = false;
 			xmlTag = "AgrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmount";
 			definition = "Provides the call amount that is agreed and that will result in a collateral movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement5.AgreedAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement5.mmAgreedAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CollateralMovement2Choice> movementDetails;
 	/**
 	 * Provides the collateral movement direction that is a delivery and
 	 * optionaly a return, or a return only.
@@ -144,8 +147,8 @@ public class CollateralMovement4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#ProposedCollateralMovement
-	 * CollateralProposal.ProposedCollateralMovement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmProposedCollateralMovement
+	 * CollateralProposal.mmProposedCollateralMovement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,34 +171,34 @@ public class CollateralMovement4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralMovement5#MovementDirection
-	 * CollateralMovement5.MovementDirection}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralMovement5#mmMovementDirection
+	 * CollateralMovement5.mmMovementDirection}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMovementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralMovement4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.ProposedCollateralMovement;
 			isDerived = false;
 			xmlTag = "MvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementDetails";
 			definition = "Provides the collateral movement direction that is a delivery and optionaly a return, or a return only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement5.MovementDirection);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement5.mmMovementDirection);
 			minOccurs = 0;
-			type_lazy = () -> CollateralMovement2Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> CollateralMovement2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement4.AgreedAmount, com.tools20022.repository.msg.CollateralMovement4.MovementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement4.mmAgreedAmount, com.tools20022.repository.msg.CollateralMovement4.mmMovementDetails);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralMovement4";
 				definition = "Provides the agreed amount and the collateral movement direction.";
@@ -203,5 +206,21 @@ public class CollateralMovement4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAgreedAmount() {
+		return agreedAmount;
+	}
+
+	public void setAgreedAmount(ActiveCurrencyAndAmount agreedAmount) {
+		this.agreedAmount = agreedAmount;
+	}
+
+	public List<CollateralMovement2Choice> getMovementDetails() {
+		return movementDetails;
+	}
+
+	public void setMovementDetails(List<CollateralMovement2Choice> movementDetails) {
+		this.movementDetails = movementDetails;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies whether the transaction is on hold/blocked/frozen.
@@ -34,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.HoldIndicator7#Indicator
- * HoldIndicator7.Indicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.HoldIndicator7#Reason
- * HoldIndicator7.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldIndicator7#mmIndicator
+ * HoldIndicator7.mmIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldIndicator7#mmReason
+ * HoldIndicator7.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HoldIndicator7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator indicator;
 	/**
 	 * Specifies whether the transaction is on hold/blocked/frozen.
 	 * <p>
@@ -74,8 +76,8 @@ public class HoldIndicator7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#HoldIndicator
-	 * SecuritiesSettlement.HoldIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldIndicator
+	 * SecuritiesSettlement.mmHoldIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +96,21 @@ public class HoldIndicator7 {
 	 * "Specifies whether the transaction is on hold/blocked/frozen."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> HoldIndicator7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.HoldIndicator;
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the transaction is on hold/blocked/frozen.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.RegistrationReason6> reason;
 	/**
 	 * Specifies the reason of the registration staus.
 	 * <p>
@@ -119,8 +122,8 @@ public class HoldIndicator7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Registration
-	 * Security.Registration}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegistration
+	 * Security.mmRegistration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,32 +141,48 @@ public class HoldIndicator7 {
 	 * definition} = "Specifies the reason of the registration staus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
 			componentContext_lazy = () -> HoldIndicator7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Registration;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the registration staus.";
 			minOccurs = 0;
-			type_lazy = () -> RegistrationReason6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RegistrationReason6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldIndicator7.Indicator, com.tools20022.repository.msg.HoldIndicator7.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldIndicator7.mmIndicator, com.tools20022.repository.msg.HoldIndicator7.mmReason);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HoldIndicator7";
 				definition = "Specifies whether the transaction is on hold/blocked/frozen.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(YesNoIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public List<RegistrationReason6> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<com.tools20022.repository.msg.RegistrationReason6> reason) {
+		this.reason = reason;
 	}
 }

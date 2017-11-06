@@ -39,17 +39,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#UnitCurrency
- * ForeignExchangeTerms13.UnitCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#mmUnitCurrency
+ * ForeignExchangeTerms13.mmUnitCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#QuotedCurrency
- * ForeignExchangeTerms13.QuotedCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#mmQuotedCurrency
+ * ForeignExchangeTerms13.mmQuotedCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#ExchangeRate
- * ForeignExchangeTerms13.ExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#mmExchangeRate
+ * ForeignExchangeTerms13.mmExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#ResultingAmount
- * ForeignExchangeTerms13.ResultingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms13#mmResultingAmount
+ * ForeignExchangeTerms13.mmResultingAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,6 +82,7 @@ import java.util.function.Supplier;
 public class ForeignExchangeTerms13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyCode unitCurrency;
 	/**
 	 * Currency in which the rate of exchange is expressed in a currency
 	 * exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
@@ -96,8 +97,8 @@ public class ForeignExchangeTerms13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#UnitCurrency
-	 * CurrencyExchange.UnitCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmUnitCurrency
+	 * CurrencyExchange.mmUnitCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,27 +121,28 @@ public class ForeignExchangeTerms13 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#UnitCurrency
-	 * ForeignExchangeTerms24.UnitCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#mmUnitCurrency
+	 * ForeignExchangeTerms24.mmUnitCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.UnitCurrency;
 			isDerived = false;
 			xmlTag = "UnitCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.UnitCurrency);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.mmUnitCurrency);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode quotedCurrency;
 	/**
 	 * Currency into which the base currency is converted, in a currency
 	 * exchange.
@@ -155,8 +157,8 @@ public class ForeignExchangeTerms13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#QuotedCurrency
-	 * CurrencyExchange.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmQuotedCurrency
+	 * CurrencyExchange.mmQuotedCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,27 +181,28 @@ public class ForeignExchangeTerms13 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#QuotedCurrency
-	 * ForeignExchangeTerms24.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#mmQuotedCurrency
+	 * ForeignExchangeTerms24.mmQuotedCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.QuotedCurrency;
 			isDerived = false;
 			xmlTag = "QtdCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.QuotedCurrency);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.mmQuotedCurrency);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected BaseOneRate exchangeRate;
 	/**
 	 * Factor used for the conversion of an amount from one currency into
 	 * another. This reflects the price at which one currency was bought with
@@ -216,8 +219,8 @@ public class ForeignExchangeTerms13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,27 +243,28 @@ public class ForeignExchangeTerms13 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#ExchangeRate
-	 * ForeignExchangeTerms24.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#mmExchangeRate
+	 * ForeignExchangeTerms24.mmExchangeRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> ForeignExchangeTerms13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Factor used for the conversion of an amount from one currency into another. This reflects the price at which one currency was bought with another currency.\nUsage: ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.ExchangeRate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.mmExchangeRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount resultingAmount;
 	/**
 	 * Counter value of a foreign exchange conversion.
 	 * <p>
@@ -274,8 +278,8 @@ public class ForeignExchangeTerms13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ResultingAmount
-	 * CurrencyExchange.ResultingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmResultingAmount
+	 * CurrencyExchange.mmResultingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -296,24 +300,24 @@ public class ForeignExchangeTerms13 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#ResultingAmount
-	 * ForeignExchangeTerms24.ResultingAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24#mmResultingAmount
+	 * ForeignExchangeTerms24.mmResultingAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResultingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> ForeignExchangeTerms13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ResultingAmount;
 			isDerived = false;
 			xmlTag = "RsltgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultingAmount";
 			definition = "Counter value of a foreign exchange conversion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.ResultingAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.mmResultingAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -321,10 +325,10 @@ public class ForeignExchangeTerms13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms13.UnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms13.QuotedCurrency,
-						com.tools20022.repository.msg.ForeignExchangeTerms13.ExchangeRate, com.tools20022.repository.msg.ForeignExchangeTerms13.ResultingAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms13.mmUnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms13.mmQuotedCurrency,
+						com.tools20022.repository.msg.ForeignExchangeTerms13.mmExchangeRate, com.tools20022.repository.msg.ForeignExchangeTerms13.mmResultingAmount);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -339,5 +343,37 @@ public class ForeignExchangeTerms13 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyCode getUnitCurrency() {
+		return unitCurrency;
+	}
+
+	public void setUnitCurrency(ActiveCurrencyCode unitCurrency) {
+		this.unitCurrency = unitCurrency;
+	}
+
+	public ActiveCurrencyCode getQuotedCurrency() {
+		return quotedCurrency;
+	}
+
+	public void setQuotedCurrency(ActiveCurrencyCode quotedCurrency) {
+		this.quotedCurrency = quotedCurrency;
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public ActiveCurrencyAndAmount getResultingAmount() {
+		return resultingAmount;
+	}
+
+	public void setResultingAmount(ActiveCurrencyAndAmount resultingAmount) {
+		this.resultingAmount = resultingAmount;
 	}
 }

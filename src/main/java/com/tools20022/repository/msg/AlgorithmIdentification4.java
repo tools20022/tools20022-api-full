@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification4#Algorithm
- * AlgorithmIdentification4.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification4#mmAlgorithm
+ * AlgorithmIdentification4.mmAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm4Code algorithm;
 	/**
 	 * Identification of the algorithm.
 	 * <p>
@@ -101,13 +102,13 @@ public class AlgorithmIdentification4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification17#Algorithm
-	 * AlgorithmIdentification17.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification17#mmAlgorithm
+	 * AlgorithmIdentification17.mmAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification4.mmObject();
 			isDerived = false;
@@ -115,9 +116,9 @@ public class AlgorithmIdentification4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification17.Algorithm);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification17.mmAlgorithm);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm4Code.mmObject();
 		}
 	};
@@ -125,15 +126,23 @@ public class AlgorithmIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification4.Algorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification4.mmAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification4";
 				definition = "Identification of a cryptographic algorithm and parameters for digital signatures.";
-				previousVersion_lazy = () -> AlgorithmIdentification3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification5.mmObject(), AlgorithmIdentification17.mmObject());
+				previousVersion_lazy = () -> AlgorithmIdentification3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm4Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm4Code algorithm) {
+		this.algorithm = algorithm;
 	}
 }

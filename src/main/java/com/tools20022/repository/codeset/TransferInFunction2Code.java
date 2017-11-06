@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunction2Code#Confirmation
- * TransferInFunction2Code.Confirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunction2Code#mmConfirmation
+ * TransferInFunction2Code.mmConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunction2Code#Advice
- * TransferInFunction2Code.Advice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunction2Code#mmAdvice
+ * TransferInFunction2Code.mmAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class TransferInFunction2Code extends TransferInFunctionCode {
 	 * name} = "Confirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmation = new MMCode() {
+	public static final MMCode mmConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
@@ -98,7 +98,7 @@ public class TransferInFunction2Code extends TransferInFunctionCode {
 	 * name} = "Advice"</li>
 	 * </ul>
 	 */
-	public static final MMCode Advice = new MMCode() {
+	public static final MMCode mmAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advice";
@@ -109,11 +109,11 @@ public class TransferInFunction2Code extends TransferInFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferInFunction2Code";
 				definition = "Specifies the function of the transfer in confirmation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferInFunction2Code.Confirmation, com.tools20022.repository.codeset.TransferInFunction2Code.Advice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferInFunction2Code.mmConfirmation, com.tools20022.repository.codeset.TransferInFunction2Code.mmAdvice);
 				trace_lazy = () -> TransferInFunctionCode.mmObject();
 			}
 		});

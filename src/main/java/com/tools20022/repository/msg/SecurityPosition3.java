@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -35,16 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityPosition3#Identification
- * SecurityPosition3.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition3#Account
- * SecurityPosition3.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityPosition3#mmIdentification
+ * SecurityPosition3.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition3#mmAccount
+ * SecurityPosition3.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityPosition3#VoteInstruction
- * SecurityPosition3.VoteInstruction}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityPosition3#mmVoteInstruction
+ * SecurityPosition3.mmVoteInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityPosition3#SecuritySubPosition
- * SecurityPosition3.SecuritySubPosition}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityPosition3#mmSecuritySubPosition
+ * SecurityPosition3.mmSecuritySubPosition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityPosition3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification3 identification;
 	/**
 	 * Security held in an account on which the balance is calculated.
 	 * <p>
@@ -83,8 +85,8 @@ public class SecurityPosition3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +106,21 @@ public class SecurityPosition3 {
 	 * "Security held in an account on which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecurityPosition3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Security held in an account on which the balance is calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 		}
 	};
+	protected EligiblePosition1 account;
 	/**
 	 * Amount of securities that are eligible for the vote.
 	 * <p>
@@ -129,8 +132,8 @@ public class SecurityPosition3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesAccount
-	 * SecuritiesBalance.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesAccount
+	 * SecuritiesBalance.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,21 +152,22 @@ public class SecurityPosition3 {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesAccount;
 			componentContext_lazy = () -> SecurityPosition3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Amount of securities that are eligible for the vote.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> EligiblePosition1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
 		}
 	};
+	protected VoteInstruction1 voteInstruction;
 	/**
 	 * Specifies how a party has voted for each agenda item.
 	 * <p>
@@ -175,8 +179,8 @@ public class SecurityPosition3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#VoteInstruction
-	 * InstructionForMeeting.VoteInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmVoteInstruction
+	 * InstructionForMeeting.mmVoteInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,21 +199,22 @@ public class SecurityPosition3 {
 	 * definition} = "Specifies how a party has voted for each agenda item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VoteInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> SecurityPosition3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.VoteInstruction;
 			isDerived = false;
 			xmlTag = "VoteInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstruction";
 			definition = "Specifies how a party has voted for each agenda item.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> VoteInstruction1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityPosition4> securitySubPosition;
 	/**
 	 * Subdivision of an account used to segregate specific holdings.
 	 * <p>
@@ -221,8 +226,8 @@ public class SecurityPosition3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesSubBalance
-	 * SecuritiesBalance.SecuritiesSubBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesSubBalance
+	 * SecuritiesBalance.mmSecuritiesSubBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,34 +247,66 @@ public class SecurityPosition3 {
 	 * "Subdivision of an account used to segregate specific holdings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritySubPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritySubPosition = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> SecurityPosition3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesSubBalance;
 			isDerived = false;
 			xmlTag = "SctySubPos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritySubPosition";
 			definition = "Subdivision of an account used to segregate specific holdings.";
-			minOccurs = 0;
 			maxOccurs = 1000;
-			type_lazy = () -> SecurityPosition4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityPosition4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition3.Identification, com.tools20022.repository.msg.SecurityPosition3.Account,
-						com.tools20022.repository.msg.SecurityPosition3.VoteInstruction, com.tools20022.repository.msg.SecurityPosition3.SecuritySubPosition);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition3.mmIdentification, com.tools20022.repository.msg.SecurityPosition3.mmAccount,
+						com.tools20022.repository.msg.SecurityPosition3.mmVoteInstruction, com.tools20022.repository.msg.SecurityPosition3.mmSecuritySubPosition);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityPosition3";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification3 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification3 identification) {
+		this.identification = identification;
+	}
+
+	public EligiblePosition1 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.EligiblePosition1 account) {
+		this.account = account;
+	}
+
+	public VoteInstruction1 getVoteInstruction() {
+		return voteInstruction;
+	}
+
+	public void setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
+		this.voteInstruction = voteInstruction;
+	}
+
+	public List<SecurityPosition4> getSecuritySubPosition() {
+		return securitySubPosition;
+	}
+
+	public void setSecuritySubPosition(List<com.tools20022.repository.msg.SecurityPosition4> securitySubPosition) {
+		this.securitySubPosition = securitySubPosition;
 	}
 }

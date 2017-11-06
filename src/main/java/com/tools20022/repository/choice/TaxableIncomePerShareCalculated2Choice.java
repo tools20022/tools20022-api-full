@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice#Code
- * TaxableIncomePerShareCalculated2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice#mmCode
+ * TaxableIncomePerShareCalculated2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice#Proprietary
- * TaxableIncomePerShareCalculated2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice#mmProprietary
+ * TaxableIncomePerShareCalculated2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxableIncomePerShareCalculated2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxableIncomePerShareCalculated2Code code;
 	/**
 	 * Taxable income per share (TIS) calculated expressed as a code.
 	 * <p>
@@ -80,8 +81,8 @@ public class TaxableIncomePerShareCalculated2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerShareCalculated
-	 * SecuritiesTax.TaxableIncomePerShareCalculated}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
+	 * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,26 +103,27 @@ public class TaxableIncomePerShareCalculated2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice#TaxableIncomePerShareCalculated
+	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice#mmTaxableIncomePerShareCalculated
 	 * TaxableIncomePerShareCalculatedType1Choice.
-	 * TaxableIncomePerShareCalculated}</li>
+	 * mmTaxableIncomePerShareCalculated}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> TaxableIncomePerShareCalculated2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerShareCalculated;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Taxable income per share (TIS) calculated expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice.TaxableIncomePerShareCalculated;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice.mmTaxableIncomePerShareCalculated;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxableIncomePerShareCalculated2Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Taxable income per share calculated (TIS) expressed as a proprietary
 	 * code.
@@ -136,8 +138,8 @@ public class TaxableIncomePerShareCalculated2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerShareCalculated
-	 * SecuritiesTax.TaxableIncomePerShareCalculated}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
+	 * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,22 +161,22 @@ public class TaxableIncomePerShareCalculated2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice#Proprietary
-	 * TaxableIncomePerShareCalculatedType1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice#mmProprietary
+	 * TaxableIncomePerShareCalculatedType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> TaxableIncomePerShareCalculated2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerShareCalculated;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Taxable income per share calculated (TIS) expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -182,9 +184,9 @@ public class TaxableIncomePerShareCalculated2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice.Code, com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice.mmCode, com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxableIncomePerShareCalculated2Choice";
 				definition = "Choice of formats for taxable income per share calculated.";
@@ -192,5 +194,21 @@ public class TaxableIncomePerShareCalculated2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxableIncomePerShareCalculated2Code getCode() {
+		return code;
+	}
+
+	public void setCode(TaxableIncomePerShareCalculated2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

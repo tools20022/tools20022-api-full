@@ -30,23 +30,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#CashReservation
- * ReservationTypeCode.CashReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#mmCashReservation
+ * ReservationTypeCode.mmCashReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#UrgentPaymentReservation
- * ReservationTypeCode.UrgentPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#mmUrgentPaymentReservation
+ * ReservationTypeCode.mmUrgentPaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#NetSSSReservation
- * ReservationTypeCode.NetSSSReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#mmNetSSSReservation
+ * ReservationTypeCode.mmNetSSSReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#HighlyUrgentPaymentReservation
- * ReservationTypeCode.HighlyUrgentPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#mmHighlyUrgentPaymentReservation
+ * ReservationTypeCode.mmHighlyUrgentPaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#ThresholdForInvestment
- * ReservationTypeCode.ThresholdForInvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#mmThresholdForInvestment
+ * ReservationTypeCode.mmThresholdForInvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#Blocked
- * ReservationTypeCode.Blocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode#mmBlocked
+ * ReservationTypeCode.mmBlocked}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +106,7 @@ public class ReservationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashReservation = new MMCode() {
+	public static final MMCode mmCashReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservation";
@@ -140,7 +140,7 @@ public class ReservationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UrgentPaymentReservation = new MMCode() {
+	public static final MMCode mmUrgentPaymentReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgentPaymentReservation";
@@ -174,7 +174,7 @@ public class ReservationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NetSSSReservation = new MMCode() {
+	public static final MMCode mmNetSSSReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservation";
@@ -207,7 +207,7 @@ public class ReservationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HighlyUrgentPaymentReservation = new MMCode() {
+	public static final MMCode mmHighlyUrgentPaymentReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighlyUrgentPaymentReservation";
@@ -238,7 +238,7 @@ public class ReservationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ThresholdForInvestment = new MMCode() {
+	public static final MMCode mmThresholdForInvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdForInvestment";
@@ -271,7 +271,7 @@ public class ReservationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Blocked = new MMCode() {
+	public static final MMCode mmBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
@@ -284,14 +284,14 @@ public class ReservationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CARE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReservationTypeCode";
 				definition = "Specifies the precise type of reservation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationTypeCode.CashReservation, com.tools20022.repository.codeset.ReservationTypeCode.UrgentPaymentReservation,
-						com.tools20022.repository.codeset.ReservationTypeCode.NetSSSReservation, com.tools20022.repository.codeset.ReservationTypeCode.HighlyUrgentPaymentReservation,
-						com.tools20022.repository.codeset.ReservationTypeCode.ThresholdForInvestment, com.tools20022.repository.codeset.ReservationTypeCode.Blocked);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationTypeCode.mmCashReservation, com.tools20022.repository.codeset.ReservationTypeCode.mmUrgentPaymentReservation,
+						com.tools20022.repository.codeset.ReservationTypeCode.mmNetSSSReservation, com.tools20022.repository.codeset.ReservationTypeCode.mmHighlyUrgentPaymentReservation,
+						com.tools20022.repository.codeset.ReservationTypeCode.mmThresholdForInvestment, com.tools20022.repository.codeset.ReservationTypeCode.mmBlocked);
 				derivation_lazy = () -> Arrays.asList(ReservationType1Code.mmObject(), ReservationType2Code.mmObject());
 			}
 		});

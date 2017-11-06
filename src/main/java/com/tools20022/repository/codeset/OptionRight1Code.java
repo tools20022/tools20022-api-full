@@ -33,24 +33,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionRightCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionRight1Code#Exercise
- * OptionRight1Code.Exercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionRight1Code#Assignment
- * OptionRight1Code.Assignment}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRight1Code#mmExercise
+ * OptionRight1Code.mmExercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionRight1Code#Renouncement
- * OptionRight1Code.Renouncement}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRight1Code#mmAssignment
+ * OptionRight1Code.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionRight1Code#Expiration
- * OptionRight1Code.Expiration}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRight1Code#mmRenouncement
+ * OptionRight1Code.mmRenouncement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRight1Code#mmExpiration
+ * OptionRight1Code.mmExpiration}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +87,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 * name} = "Exercise"</li>
 	 * </ul>
 	 */
-	public static final MMCode Exercise = new MMCode() {
+	public static final MMCode mmExercise = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercise";
@@ -109,7 +110,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 * name} = "Assignment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Assignment = new MMCode() {
+	public static final MMCode mmAssignment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
@@ -132,7 +133,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 * name} = "Renouncement"</li>
 	 * </ul>
 	 */
-	public static final MMCode Renouncement = new MMCode() {
+	public static final MMCode mmRenouncement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Renouncement";
@@ -155,7 +156,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 * name} = "Expiration"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expiration = new MMCode() {
+	public static final MMCode mmExpiration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expiration";
@@ -166,13 +167,13 @@ public class OptionRight1Code extends OptionRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionRight1Code";
 				definition = "Specifies the option rights.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionRight1Code.Exercise, com.tools20022.repository.codeset.OptionRight1Code.Assignment, com.tools20022.repository.codeset.OptionRight1Code.Renouncement,
-						com.tools20022.repository.codeset.OptionRight1Code.Expiration);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionRight1Code.mmExercise, com.tools20022.repository.codeset.OptionRight1Code.mmAssignment,
+						com.tools20022.repository.codeset.OptionRight1Code.mmRenouncement, com.tools20022.repository.codeset.OptionRight1Code.mmExpiration);
 				trace_lazy = () -> OptionRightCode.mmObject();
 			}
 		});

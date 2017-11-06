@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information regarding the corporate action event.
@@ -33,28 +34,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#UnallocatedDistributionBalance
- * CorporateActionUnallocatedDetailsSD5.UnallocatedDistributionBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#mmUnallocatedDistributionBalance
+ * CorporateActionUnallocatedDetailsSD5.mmUnallocatedDistributionBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#UnallocatedRedemptionBalance
- * CorporateActionUnallocatedDetailsSD5.UnallocatedRedemptionBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#mmUnallocatedRedemptionBalance
+ * CorporateActionUnallocatedDetailsSD5.mmUnallocatedRedemptionBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#UnallocatedReorganisationBalance
- * CorporateActionUnallocatedDetailsSD5.UnallocatedReorganisationBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#mmUnallocatedReorganisationBalance
+ * CorporateActionUnallocatedDetailsSD5.mmUnallocatedReorganisationBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#UnallocatedSecuritiesTransactionDetails
- * CorporateActionUnallocatedDetailsSD5.UnallocatedSecuritiesTransactionDetails}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#mmUnallocatedSecuritiesTransactionDetails
+ * CorporateActionUnallocatedDetailsSD5.
+ * mmUnallocatedSecuritiesTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#UnallocatedCashTransactionDetails
- * CorporateActionUnallocatedDetailsSD5.UnallocatedCashTransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5#mmUnallocatedCashTransactionDetails
+ * CorporateActionUnallocatedDetailsSD5.mmUnallocatedCashTransactionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionUnallocatedDetailsSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionUnallocatedBalanceSD2Choice unallocatedDistributionBalance;
 	/**
 	 * Type of Participants positions distribution balance concerned in
 	 * unallocated payment.
@@ -104,11 +106,11 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#UnallocatedDistributionBalance
-	 * CorporateActionUnallocatedDetailsSD4.UnallocatedDistributionBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#mmUnallocatedDistributionBalance
+	 * CorporateActionUnallocatedDetailsSD4.mmUnallocatedDistributionBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnallocatedDistributionBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnallocatedDistributionBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
@@ -116,13 +118,14 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDistributionBalance";
 			definition = "Type of Participants positions distribution balance concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.UnallocatedDistributionBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedDistributionBalance;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 		}
 	};
+	protected CorporateActionUnallocatedBalanceSD1 unallocatedRedemptionBalance;
 	/**
 	 * Type of Participants positions redemption balance concerned in
 	 * unallocated payment.
@@ -154,11 +157,11 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#UnallocatedRedemptionBalance
-	 * CorporateActionUnallocatedDetailsSD4.UnallocatedRedemptionBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#mmUnallocatedRedemptionBalance
+	 * CorporateActionUnallocatedDetailsSD4.mmUnallocatedRedemptionBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnallocatedRedemptionBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnallocatedRedemptionBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
@@ -166,13 +169,14 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedRedemptionBalance";
 			definition = "Type of Participants positions redemption balance concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.UnallocatedRedemptionBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedRedemptionBalance;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 		}
 	};
+	protected CorporateActionUnallocatedBalanceSD2 unallocatedReorganisationBalance;
 	/**
 	 * Type of participants positions reorganisation balance concerned in
 	 * unallocated payment.
@@ -203,7 +207,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnallocatedReorganisationBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnallocatedReorganisationBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
@@ -211,12 +215,13 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedReorganisationBalance";
 			definition = "Type of participants positions reorganisation balance concerned in unallocated payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionUnallocatedBalanceSD2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6> unallocatedSecuritiesTransactionDetails;
 	/**
 	 * Details of the securities transactions concerned in unallocated payment.
 	 * <p>
@@ -247,12 +252,12 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#UnallocatedSecuritiesTransactionDetails
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#mmUnallocatedSecuritiesTransactionDetails
 	 * CorporateActionUnallocatedDetailsSD4.
-	 * UnallocatedSecuritiesTransactionDetails}</li>
+	 * mmUnallocatedSecuritiesTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnallocatedSecuritiesTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnallocatedSecuritiesTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
@@ -260,12 +265,13 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedSecuritiesTransactionDetails";
 			definition = "Details of the securities transactions concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.UnallocatedSecuritiesTransactionDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedSecuritiesTransactionDetails;
 			minOccurs = 0;
-			type_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5> unallocatedCashTransactionDetails;
 	/**
 	 * Details of the cash transactions concerned in unallocated payment.
 	 * <p>
@@ -295,11 +301,12 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#UnallocatedCashTransactionDetails
-	 * CorporateActionUnallocatedDetailsSD4.UnallocatedCashTransactionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4#mmUnallocatedCashTransactionDetails
+	 * CorporateActionUnallocatedDetailsSD4.mmUnallocatedCashTransactionDetails}
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnallocatedCashTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnallocatedCashTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
@@ -307,20 +314,20 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedCashTransactionDetails";
 			definition = "Details of the cash transactions concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.UnallocatedCashTransactionDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedCashTransactionDetails;
 			minOccurs = 0;
-			type_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.UnallocatedDistributionBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.UnallocatedRedemptionBalance, com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.UnallocatedReorganisationBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.UnallocatedSecuritiesTransactionDetails, com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.UnallocatedCashTransactionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedDistributionBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedRedemptionBalance, com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedReorganisationBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedSecuritiesTransactionDetails, com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedCashTransactionDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedDetailsSD5";
 				definition = "Provides additional information regarding the corporate action event.";
@@ -328,5 +335,45 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionUnallocatedBalanceSD2Choice getUnallocatedDistributionBalance() {
+		return unallocatedDistributionBalance;
+	}
+
+	public void setUnallocatedDistributionBalance(CorporateActionUnallocatedBalanceSD2Choice unallocatedDistributionBalance) {
+		this.unallocatedDistributionBalance = unallocatedDistributionBalance;
+	}
+
+	public CorporateActionUnallocatedBalanceSD1 getUnallocatedRedemptionBalance() {
+		return unallocatedRedemptionBalance;
+	}
+
+	public void setUnallocatedRedemptionBalance(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1 unallocatedRedemptionBalance) {
+		this.unallocatedRedemptionBalance = unallocatedRedemptionBalance;
+	}
+
+	public CorporateActionUnallocatedBalanceSD2 getUnallocatedReorganisationBalance() {
+		return unallocatedReorganisationBalance;
+	}
+
+	public void setUnallocatedReorganisationBalance(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2 unallocatedReorganisationBalance) {
+		this.unallocatedReorganisationBalance = unallocatedReorganisationBalance;
+	}
+
+	public List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD6> getUnallocatedSecuritiesTransactionDetails() {
+		return unallocatedSecuritiesTransactionDetails;
+	}
+
+	public void setUnallocatedSecuritiesTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6> unallocatedSecuritiesTransactionDetails) {
+		this.unallocatedSecuritiesTransactionDetails = unallocatedSecuritiesTransactionDetails;
+	}
+
+	public List<CorporateActionUnallocatedCashTransactionDetailsSD5> getUnallocatedCashTransactionDetails() {
+		return unallocatedCashTransactionDetails;
+	}
+
+	public void setUnallocatedCashTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5> unallocatedCashTransactionDetails) {
+		this.unallocatedCashTransactionDetails = unallocatedCashTransactionDetails;
 	}
 }

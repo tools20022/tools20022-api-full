@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.SideIndicator1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.ClearingBrokerIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1#SideIndicator
- * ClearingBrokerIdentification1.SideIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1#mmSideIndicator
+ * ClearingBrokerIdentification1.mmSideIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1#ClearingBrokerIdentification
- * ClearingBrokerIdentification1.ClearingBrokerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1#mmClearingBrokerIdentification
+ * ClearingBrokerIdentification1.mmClearingBrokerIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClearingBrokerIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SideIndicator1Code sideIndicator;
 	/**
 	 * Distinguishes the client leg from the central counterparty (CCP) leg in
 	 * the clearing broker identification.
@@ -81,8 +83,8 @@ public class ClearingBrokerIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingBrokerIdentification#SideIndicator
-	 * ClearingBrokerIdentification.SideIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClearingBrokerIdentification#mmSideIndicator
+	 * ClearingBrokerIdentification.mmSideIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class ClearingBrokerIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SideIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSideIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmSideIndicator;
 			componentContext_lazy = () -> ClearingBrokerIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.SideIndicator;
 			isDerived = false;
 			xmlTag = "SdInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideIndicator";
 			definition = "Distinguishes the client leg from the central counterparty (CCP) leg in the clearing broker identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SideIndicator1Code.mmObject();
 		}
 	};
+	protected Max35Text clearingBrokerIdentification;
 	/**
 	 * Specifies the identification assigned to the clearing broker.
 	 * <p>
@@ -129,8 +132,8 @@ public class ClearingBrokerIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingBrokerIdentification#Identification
-	 * ClearingBrokerIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClearingBrokerIdentification#mmIdentification
+	 * ClearingBrokerIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,17 +153,17 @@ public class ClearingBrokerIdentification1 {
 	 * "Specifies the identification assigned to the clearing broker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingBrokerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingBrokerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmIdentification;
 			componentContext_lazy = () -> ClearingBrokerIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.Identification;
 			isDerived = false;
 			xmlTag = "ClrBrkrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingBrokerIdentification";
 			definition = "Specifies the identification assigned to the clearing broker.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -168,14 +171,30 @@ public class ClearingBrokerIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingBrokerIdentification1.SideIndicator, com.tools20022.repository.msg.ClearingBrokerIdentification1.ClearingBrokerIdentification);
-				trace_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingBrokerIdentification1.mmSideIndicator, com.tools20022.repository.msg.ClearingBrokerIdentification1.mmClearingBrokerIdentification);
+				trace_lazy = () -> ClearingBrokerIdentification.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClearingBrokerIdentification1";
 				definition = "Specifies the reference number assigned by the clearing broker. A distinction can be made between the reference for the Central Counterparty (CCP) leg and the reference for the client leg of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SideIndicator1Code getSideIndicator() {
+		return sideIndicator;
+	}
+
+	public void setSideIndicator(SideIndicator1Code sideIndicator) {
+		this.sideIndicator = sideIndicator;
+	}
+
+	public Max35Text getClearingBrokerIdentification() {
+		return clearingBrokerIdentification;
+	}
+
+	public void setClearingBrokerIdentification(Max35Text clearingBrokerIdentification) {
+		this.clearingBrokerIdentification = clearingBrokerIdentification;
 	}
 }

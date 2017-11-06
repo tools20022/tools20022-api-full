@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the original notification, to which the cancellation advice
@@ -38,20 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification6#OriginalMessageIdentification
- * OriginalNotification6.OriginalMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification6#mmOriginalMessageIdentification
+ * OriginalNotification6.mmOriginalMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification6#OriginalCreationDateTime
- * OriginalNotification6.OriginalCreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification6#mmOriginalCreationDateTime
+ * OriginalNotification6.mmOriginalCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification6#OriginalNotificationIdentification
- * OriginalNotification6.OriginalNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification6#mmOriginalNotificationIdentification
+ * OriginalNotification6.mmOriginalNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification6#NotificationCancellation
- * OriginalNotification6.NotificationCancellation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification6#mmNotificationCancellation
+ * OriginalNotification6.mmNotificationCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification6#OriginalNotificationReference
- * OriginalNotification6.OriginalNotificationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification6#mmOriginalNotificationReference
+ * OriginalNotification6.mmOriginalNotificationReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,15 +63,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV03#OriginalNotification
- * NotificationToReceiveCancellationAdviceV03.OriginalNotification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV03#mmOriginalNotification
+ * NotificationToReceiveCancellationAdviceV03.mmOriginalNotification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalNotification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalMessageIdentification;
 	/**
 	 * Point to point reference, as assigned by the original sender, to
 	 * unambiguously identify the original notification to receive message.
@@ -125,13 +127,13 @@ public class OriginalNotification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#OriginalMessageIdentification
-	 * OriginalNotification8.OriginalMessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#mmOriginalMessageIdentification
+	 * OriginalNotification8.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification6.mmObject();
 			isDerived = false;
@@ -139,12 +141,13 @@ public class OriginalNotification6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original sender, to unambiguously identify the original notification to receive message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.OriginalMessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.mmOriginalMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalCreationDateTime;
 	/**
 	 * Date and time at which the original message was created.
 	 * <p>
@@ -157,8 +160,8 @@ public class OriginalNotification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,27 +182,28 @@ public class OriginalNotification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#OriginalCreationDateTime
-	 * OriginalNotification8.OriginalCreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#mmOriginalCreationDateTime
+	 * OriginalNotification8.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalNotification6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.OriginalCreationDateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.mmOriginalCreationDateTime);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text originalNotificationIdentification;
 	/**
 	 * Identification of the original notification.
 	 * <p>
@@ -229,13 +233,13 @@ public class OriginalNotification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#OriginalNotificationIdentification
-	 * OriginalNotification8.OriginalNotificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#mmOriginalNotificationIdentification
+	 * OriginalNotification8.mmOriginalNotificationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification6.mmObject();
 			isDerived = false;
@@ -243,12 +247,13 @@ public class OriginalNotification6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationIdentification";
 			definition = "Identification of the original notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.OriginalNotificationIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.mmOriginalNotificationIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GroupCancellationIndicator notificationCancellation;
 	/**
 	 * Indicates whether the cancellation applies to the complete original
 	 * notification or to individual items within the original notification.
@@ -282,13 +287,13 @@ public class OriginalNotification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#NotificationCancellation
-	 * OriginalNotification8.NotificationCancellation}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#mmNotificationCancellation
+	 * OriginalNotification8.mmNotificationCancellation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationCancellation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification6.mmObject();
 			isDerived = false;
@@ -296,12 +301,13 @@ public class OriginalNotification6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellation";
 			definition = "Indicates whether the cancellation applies to the complete original notification or to individual items within the original notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.NotificationCancellation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.mmNotificationCancellation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OriginalNotificationReference4> originalNotificationReference;
 	/**
 	 * Identifies the original notification item, to which the cancellation
 	 * advice refers.
@@ -339,37 +345,37 @@ public class OriginalNotification6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#OriginalNotificationReference
-	 * OriginalNotification8.OriginalNotificationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification8#mmOriginalNotificationReference
+	 * OriginalNotification8.mmOriginalNotificationReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalNotificationReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalNotificationReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalNotification6.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> OriginalNotification6.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtfctnRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationReference";
 			definition = "Identifies the original notification item, to which the cancellation advice refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.OriginalNotificationReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.mmOriginalNotificationReference);
 			minOccurs = 0;
-			type_lazy = () -> OriginalNotificationReference4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification6.OriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification6.OriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalNotification6.OriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification6.NotificationCancellation,
-						com.tools20022.repository.msg.OriginalNotification6.OriginalNotificationReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification6.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification6.mmOriginalCreationDateTime,
+						com.tools20022.repository.msg.OriginalNotification6.mmOriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification6.mmNotificationCancellation,
+						com.tools20022.repository.msg.OriginalNotification6.mmOriginalNotificationReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV03.mmOriginalNotification);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV03.OriginalNotification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotification6";
 				definition = "Identifies the original notification, to which the cancellation advice refers.";
@@ -377,5 +383,45 @@ public class OriginalNotification6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
+	}
+
+	public ISODateTime getOriginalCreationDateTime() {
+		return originalCreationDateTime;
+	}
+
+	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = originalCreationDateTime;
+	}
+
+	public Max35Text getOriginalNotificationIdentification() {
+		return originalNotificationIdentification;
+	}
+
+	public void setOriginalNotificationIdentification(Max35Text originalNotificationIdentification) {
+		this.originalNotificationIdentification = originalNotificationIdentification;
+	}
+
+	public GroupCancellationIndicator getNotificationCancellation() {
+		return notificationCancellation;
+	}
+
+	public void setNotificationCancellation(GroupCancellationIndicator notificationCancellation) {
+		this.notificationCancellation = notificationCancellation;
+	}
+
+	public List<OriginalNotificationReference4> getOriginalNotificationReference() {
+		return originalNotificationReference;
+	}
+
+	public void setOriginalNotificationReference(List<com.tools20022.repository.msg.OriginalNotificationReference4> originalNotificationReference) {
+		this.originalNotificationReference = originalNotificationReference;
 	}
 }

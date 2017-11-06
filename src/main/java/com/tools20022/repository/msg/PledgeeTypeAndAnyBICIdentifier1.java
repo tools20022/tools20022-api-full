@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#Identification
- * PledgeeTypeAndAnyBICIdentifier1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#mmIdentification
+ * PledgeeTypeAndAnyBICIdentifier1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#PledgeeType
- * PledgeeTypeAndAnyBICIdentifier1.PledgeeType}</li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#mmPledgeeType
+ * PledgeeTypeAndAnyBICIdentifier1.mmPledgeeType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PledgeeTypeAndAnyBICIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier identification;
 	/**
 	 * Identification of the entity to which the financial instruments are
 	 * pledged, expressed as a BIC.
@@ -100,20 +101,21 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PledgeeTypeAndAnyBICIdentifier1.mmObject();
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
+			componentContext_lazy = () -> PledgeeTypeAndAnyBICIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the entity to which the financial instruments are pledged, expressed as a BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected PledgeeType1Code pledgeeType;
 	/**
 	 * Entity to which the financial instruments are pledged expressed as a
 	 * code.
@@ -128,8 +130,8 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Pledgee#PledgeeType
-	 * Pledgee.PledgeeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Pledgee#mmPledgeeType
+	 * Pledgee.mmPledgeeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,17 +152,17 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PledgeeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPledgeeType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Pledgee.mmPledgeeType;
 			componentContext_lazy = () -> PledgeeTypeAndAnyBICIdentifier1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Pledgee.PledgeeType;
 			isDerived = false;
 			xmlTag = "PldgeeTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeeType";
 			definition = "Entity to which the financial instruments are pledged expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PledgeeType1Code.mmObject();
 		}
 	};
@@ -168,14 +170,30 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.Identification, com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.PledgeeType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.mmIdentification, com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.mmPledgeeType);
 				trace_lazy = () -> Pledgee.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PledgeeTypeAndAnyBICIdentifier1";
 				definition = "Identification of the entity to which the financial instruments are pledged expressed as a code and a BIC.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(AnyBICIdentifier identification) {
+		this.identification = identification;
+	}
+
+	public PledgeeType1Code getPledgeeType() {
+		return pledgeeType;
+	}
+
+	public void setPledgeeType(PledgeeType1Code pledgeeType) {
+		this.pledgeeType = pledgeeType;
 	}
 }

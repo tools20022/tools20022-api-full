@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountOrPercentage1Choice#DefinedAmount
- * AmountOrPercentage1Choice.DefinedAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountOrPercentage1Choice#mmDefinedAmount
+ * AmountOrPercentage1Choice.mmDefinedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountOrPercentage1Choice#PercentageAmount
- * AmountOrPercentage1Choice.PercentageAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountOrPercentage1Choice#mmPercentageAmount
+ * AmountOrPercentage1Choice.mmPercentageAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountOrPercentage1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingAmount4 definedAmount;
 	/**
 	 * Details related to a defined monetary amount.
 	 * <p>
@@ -94,21 +95,22 @@ public class AmountOrPercentage1Choice {
 	 * definition} = "Details related to a defined monetary amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DefinedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDefinedAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
+			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfndAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefinedAmount";
 			definition = "Details related to a defined monetary amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UndertakingAmount4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UndertakingAmount4.mmObject();
 		}
 	};
+	protected Percentage1 percentageAmount;
 	/**
 	 * Details related to an amount percentage.
 	 * <p>
@@ -140,33 +142,49 @@ public class AmountOrPercentage1Choice {
 	 * definition} = "Details related to an amount percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PercentageAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPercentageAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
+			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageAmount";
 			definition = "Details related to an amount percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Percentage1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Percentage1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrPercentage1Choice.DefinedAmount, com.tools20022.repository.choice.AmountOrPercentage1Choice.PercentageAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrPercentage1Choice.mmDefinedAmount, com.tools20022.repository.choice.AmountOrPercentage1Choice.mmPercentageAmount);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountOrPercentage1Choice";
 				definition = "Choice between an amount and percentage.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingAmount4 getDefinedAmount() {
+		return definedAmount;
+	}
+
+	public void setDefinedAmount(UndertakingAmount4 definedAmount) {
+		this.definedAmount = definedAmount;
+	}
+
+	public Percentage1 getPercentageAmount() {
+		return percentageAmount;
+	}
+
+	public void setPercentageAmount(Percentage1 percentageAmount) {
+		this.percentageAmount = percentageAmount;
 	}
 }

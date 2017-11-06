@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#SimpleIdentification
- * AccountIdentificationFormatChoice.SimpleIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#mmSimpleIdentification
+ * AccountIdentificationFormatChoice.mmSimpleIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#IdentificationAndPurpose
- * AccountIdentificationFormatChoice.IdentificationAndPurpose}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#mmIdentificationAndPurpose
+ * AccountIdentificationFormatChoice.mmIdentificationAndPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#IdentificationAsDSS
- * AccountIdentificationFormatChoice.IdentificationAsDSS}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#mmIdentificationAsDSS
+ * AccountIdentificationFormatChoice.mmIdentificationAsDSS}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentificationFormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification1 simpleIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -103,20 +104,21 @@ public class AccountIdentificationFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SimpleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSimpleIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SmplId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SimpleIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1.mmObject();
 		}
 	};
+	protected AccountIdentificationAndPurpose identificationAndPurpose;
 	/**
 	 * Identification of the account expressed with an account number and a
 	 * code.
@@ -153,20 +155,21 @@ public class AccountIdentificationFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationAndPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationAndPurpose = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAndPurp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAndPurpose";
 			definition = "Identification of the account expressed with an account number and a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationAndPurpose.mmObject();
 		}
 	};
+	protected AccountIdentification3 identificationAsDSS;
 	/**
 	 * Identification of the account expressed with a data source scheme, a code
 	 * used within the data source scheme and the account identification.
@@ -203,17 +206,17 @@ public class AccountIdentificationFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationAsDSS = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAsDSS";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAsDSS";
 			definition = "Identification of the account expressed with a data source scheme, a code used within the data source scheme and the account identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification3.mmObject();
 		}
 	};
@@ -221,15 +224,39 @@ public class AccountIdentificationFormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationFormatChoice.SimpleIdentification, com.tools20022.repository.choice.AccountIdentificationFormatChoice.IdentificationAndPurpose,
-						com.tools20022.repository.choice.AccountIdentificationFormatChoice.IdentificationAsDSS);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmSimpleIdentification,
+						com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAndPurpose, com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAsDSS);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentificationFormatChoice";
 				definition = "Choice between formats for account identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification1 getSimpleIdentification() {
+		return simpleIdentification;
+	}
+
+	public void setSimpleIdentification(AccountIdentification1 simpleIdentification) {
+		this.simpleIdentification = simpleIdentification;
+	}
+
+	public AccountIdentificationAndPurpose getIdentificationAndPurpose() {
+		return identificationAndPurpose;
+	}
+
+	public void setIdentificationAndPurpose(AccountIdentificationAndPurpose identificationAndPurpose) {
+		this.identificationAndPurpose = identificationAndPurpose;
+	}
+
+	public AccountIdentification3 getIdentificationAsDSS() {
+		return identificationAsDSS;
+	}
+
+	public void setIdentificationAsDSS(AccountIdentification3 identificationAsDSS) {
+		this.identificationAsDSS = identificationAsDSS;
 	}
 }

@@ -62,18 +62,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02#GroupHeader
- * NotificationToReceiveStatusReportV02.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02#mmGroupHeader
+ * NotificationToReceiveStatusReportV02.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02#OriginalNotificationAndStatus
- * NotificationToReceiveStatusReportV02.OriginalNotificationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02#mmOriginalNotificationAndStatus
+ * NotificationToReceiveStatusReportV02.mmOriginalNotificationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02#identifier
- * NotificationToReceiveStatusReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.059.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationToReceiveStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader44 groupHeader;
 	/**
 	 * Set of elements used to provide further details on the message.
 	 * <p>
@@ -120,17 +119,18 @@ public class NotificationToReceiveStatusReportV02 {
 	 * "Set of elements used to provide further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of elements used to provide further details on the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader44.mmObject();
 		}
 	};
+	protected OriginalNotification3 originalNotificationAndStatus;
 	/**
 	 * Set of elements used to identify the original notification and to provide
 	 * the status.
@@ -157,42 +157,15 @@ public class NotificationToReceiveStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalNotificationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalNotificationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlNtfctnAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationAndStatus";
 			definition = "Set of elements used to identify the original notification and to provide the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalNotification3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "059"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "059";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -207,11 +180,34 @@ public class NotificationToReceiveStatusReportV02 {
 				rootElement = "Document";
 				xmlTag = "NtfctnToRcvStsRpt";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02.GroupHeader,
-						com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02.OriginalNotificationAndStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02.mmGroupHeader,
+						com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV02.mmOriginalNotificationAndStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "059";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader44 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader44 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalNotification3 getOriginalNotificationAndStatus() {
+		return originalNotificationAndStatus;
+	}
+
+	public void setOriginalNotificationAndStatus(OriginalNotification3 originalNotificationAndStatus) {
+		this.originalNotificationAndStatus = originalNotificationAndStatus;
 	}
 }

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ShipmentDate1Choice#ProposedShipmentDate
- * ShipmentDate1Choice.ProposedShipmentDate}</li>
+ * {@linkplain com.tools20022.repository.choice.ShipmentDate1Choice#mmProposedShipmentDate
+ * ShipmentDate1Choice.mmProposedShipmentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ShipmentDate1Choice#ActualShipmentDate
- * ShipmentDate1Choice.ActualShipmentDate}</li>
+ * {@linkplain com.tools20022.repository.choice.ShipmentDate1Choice#mmActualShipmentDate
+ * ShipmentDate1Choice.mmActualShipmentDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ShipmentDate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate proposedShipmentDate;
 	/**
 	 * Proposed date on which the goods should be shipped.
 	 * <p>
@@ -74,8 +75,8 @@ public class ShipmentDate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#ShipmentDate
-	 * ShipmentDateRange.ShipmentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmShipmentDate
+	 * ShipmentDateRange.mmShipmentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +95,21 @@ public class ShipmentDate1Choice {
 	 * definition} = "Proposed date on which the goods should be shipped."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProposedShipmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProposedShipmentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> ShipmentDate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.ShipmentDate;
 			isDerived = false;
 			xmlTag = "PropsdShipmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedShipmentDate";
 			definition = "Proposed date on which the goods should be shipped.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate actualShipmentDate;
 	/**
 	 * Actual date whereby the goods were shipped.
 	 * <p>
@@ -120,8 +122,8 @@ public class ShipmentDate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#ShipmentDate
-	 * ShipmentDateRange.ShipmentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmShipmentDate
+	 * ShipmentDateRange.mmShipmentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,17 +142,17 @@ public class ShipmentDate1Choice {
 	 * definition} = "Actual date whereby the goods were shipped."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualShipmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualShipmentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> ShipmentDate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.ShipmentDate;
 			isDerived = false;
 			xmlTag = "ActlShipmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualShipmentDate";
 			definition = "Actual date whereby the goods were shipped.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -158,14 +160,30 @@ public class ShipmentDate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShipmentDate1Choice.ProposedShipmentDate, com.tools20022.repository.choice.ShipmentDate1Choice.ActualShipmentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShipmentDate1Choice.mmProposedShipmentDate, com.tools20022.repository.choice.ShipmentDate1Choice.mmActualShipmentDate);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ShipmentDate1Choice";
 				definition = "Choice between proposed and actual shipment date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getProposedShipmentDate() {
+		return proposedShipmentDate;
+	}
+
+	public void setProposedShipmentDate(ISODate proposedShipmentDate) {
+		this.proposedShipmentDate = proposedShipmentDate;
+	}
+
+	public ISODate getActualShipmentDate() {
+		return actualShipmentDate;
+	}
+
+	public void setActualShipmentDate(ISODate actualShipmentDate) {
+		this.actualShipmentDate = actualShipmentDate;
 	}
 }

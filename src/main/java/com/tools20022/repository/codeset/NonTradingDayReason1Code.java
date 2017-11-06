@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#TradingHoliday
- * NonTradingDayReason1Code.TradingHoliday}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#mmTradingHoliday
+ * NonTradingDayReason1Code.mmTradingHoliday}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#Other
- * NonTradingDayReason1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#mmOther
+ * NonTradingDayReason1Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#HalfDay
- * NonTradingDayReason1Code.HalfDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#mmHalfDay
+ * NonTradingDayReason1Code.mmHalfDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#PublicHoliday
- * NonTradingDayReason1Code.PublicHoliday}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#mmPublicHoliday
+ * NonTradingDayReason1Code.mmPublicHoliday}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#BankHoliday
- * NonTradingDayReason1Code.BankHoliday}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#mmBankHoliday
+ * NonTradingDayReason1Code.mmBankHoliday}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#Weekend
- * NonTradingDayReason1Code.Weekend}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code#mmWeekend
+ * NonTradingDayReason1Code.mmWeekend}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +87,7 @@ public class NonTradingDayReason1Code extends NonTradingDayReasonCode {
 	 * name} = "TradingHoliday"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradingHoliday = new MMCode() {
+	public static final MMCode mmTradingHoliday = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingHoliday";
@@ -110,7 +110,7 @@ public class NonTradingDayReason1Code extends NonTradingDayReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -133,7 +133,7 @@ public class NonTradingDayReason1Code extends NonTradingDayReasonCode {
 	 * name} = "HalfDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode HalfDay = new MMCode() {
+	public static final MMCode mmHalfDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HalfDay";
@@ -156,7 +156,7 @@ public class NonTradingDayReason1Code extends NonTradingDayReasonCode {
 	 * name} = "PublicHoliday"</li>
 	 * </ul>
 	 */
-	public static final MMCode PublicHoliday = new MMCode() {
+	public static final MMCode mmPublicHoliday = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicHoliday";
@@ -179,7 +179,7 @@ public class NonTradingDayReason1Code extends NonTradingDayReasonCode {
 	 * name} = "BankHoliday"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankHoliday = new MMCode() {
+	public static final MMCode mmBankHoliday = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankHoliday";
@@ -202,7 +202,7 @@ public class NonTradingDayReason1Code extends NonTradingDayReasonCode {
 	 * name} = "Weekend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Weekend = new MMCode() {
+	public static final MMCode mmWeekend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekend";
@@ -213,13 +213,13 @@ public class NonTradingDayReason1Code extends NonTradingDayReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NonTradingDayReason1Code";
 				definition = "Specifies the reason capturing a non trading day.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonTradingDayReason1Code.TradingHoliday, com.tools20022.repository.codeset.NonTradingDayReason1Code.Other,
-						com.tools20022.repository.codeset.NonTradingDayReason1Code.HalfDay, com.tools20022.repository.codeset.NonTradingDayReason1Code.PublicHoliday, com.tools20022.repository.codeset.NonTradingDayReason1Code.BankHoliday,
-						com.tools20022.repository.codeset.NonTradingDayReason1Code.Weekend);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonTradingDayReason1Code.mmTradingHoliday, com.tools20022.repository.codeset.NonTradingDayReason1Code.mmOther,
+						com.tools20022.repository.codeset.NonTradingDayReason1Code.mmHalfDay, com.tools20022.repository.codeset.NonTradingDayReason1Code.mmPublicHoliday,
+						com.tools20022.repository.codeset.NonTradingDayReason1Code.mmBankHoliday, com.tools20022.repository.codeset.NonTradingDayReason1Code.mmWeekend);
 				trace_lazy = () -> NonTradingDayReasonCode.mmObject();
 			}
 		});

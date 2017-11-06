@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the confirmation of a transfer in transaction.
@@ -33,14 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#TransferDetails
- * TransferIn8.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#AccountDetails
- * TransferIn8.AccountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#SettlementDetails
- * TransferIn8.SettlementDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#Extension
- * TransferIn8.Extension}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#mmTransferDetails
+ * TransferIn8.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#mmAccountDetails
+ * TransferIn8.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferIn8#mmSettlementDetails
+ * TransferIn8.mmSettlementDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#mmExtension
+ * TransferIn8.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferIn8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.Transfer25> transferDetails;
 	/**
 	 * General information related to the transfer of a financial instrument.
 	 * <p>
@@ -106,27 +109,28 @@ public class TransferIn8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn9#TransferDetails
-	 * TransferIn9.TransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn9#mmTransferDetails
+	 * TransferIn9.mmTransferDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferIn8.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
+			componentContext_lazy = () -> TransferIn8.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.TransferDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.mmTransferDetails);
 			minOccurs = 1;
-			type_lazy = () -> Transfer25.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Transfer25.mmObject();
 		}
 	};
+	protected InvestmentAccount22 accountDetails;
 	/**
 	 * Information related to the account into which the financial instrument
 	 * was received.
@@ -161,28 +165,30 @@ public class TransferIn8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransferIn9#AccountDetails
-	 * TransferIn9.AccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn9#mmAccountDetails
+	 * TransferIn9.mmAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferIn8.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> TransferIn8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account into which the financial instrument was received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.AccountDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.mmAccountDetails);
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount22.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount22.mmObject();
 		}
 	};
+	protected DeliverInformation11 settlementDetails;
 	/**
 	 * Information related to the delivering side of the transfer.
 	 * <p>
@@ -194,8 +200,8 @@ public class TransferIn8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#RelatedSettlement
-	 * SecuritiesTransfer.RelatedSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmRelatedSettlement
+	 * SecuritiesTransfer.mmRelatedSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,28 +222,29 @@ public class TransferIn8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn9#SettlementDetails
-	 * TransferIn9.SettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn9#mmSettlementDetails
+	 * TransferIn9.mmSettlementDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> TransferIn8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.RelatedSettlement;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the delivering side of the transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.SettlementDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.mmSettlementDetails);
 			maxOccurs = 1;
-			type_lazy = () -> DeliverInformation11.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DeliverInformation11.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -266,13 +273,13 @@ public class TransferIn8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransferIn9#Extension
-	 * TransferIn9.Extension}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TransferIn9#mmExtension
+	 * TransferIn9.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransferIn8.mmObject();
 			isDerived = false;
@@ -280,27 +287,59 @@ public class TransferIn8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn9.mmExtension);
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn8.TransferDetails, com.tools20022.repository.msg.TransferIn8.AccountDetails, com.tools20022.repository.msg.TransferIn8.SettlementDetails,
-						com.tools20022.repository.msg.TransferIn8.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn8.mmTransferDetails, com.tools20022.repository.msg.TransferIn8.mmAccountDetails,
+						com.tools20022.repository.msg.TransferIn8.mmSettlementDetails, com.tools20022.repository.msg.TransferIn8.mmExtension);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferIn8";
 				definition = "Information about the confirmation of a transfer in transaction.";
-				previousVersion_lazy = () -> TransferIn6.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransferIn9.mmObject());
+				previousVersion_lazy = () -> TransferIn6.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Transfer25> getTransferDetails() {
+		return transferDetails;
+	}
+
+	public void setTransferDetails(List<com.tools20022.repository.msg.Transfer25> transferDetails) {
+		this.transferDetails = transferDetails;
+	}
+
+	public InvestmentAccount22 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(com.tools20022.repository.msg.InvestmentAccount22 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public DeliverInformation11 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(com.tools20022.repository.msg.DeliverInformation11 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

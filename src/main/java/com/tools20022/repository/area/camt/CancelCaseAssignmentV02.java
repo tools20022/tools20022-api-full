@@ -81,18 +81,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#Assignment
- * CancelCaseAssignmentV02.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#mmAssignment
+ * CancelCaseAssignmentV02.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#Case
- * CancelCaseAssignmentV02.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#mmCase
+ * CancelCaseAssignmentV02.mmCase}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#identifier
- * CancelCaseAssignmentV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.032.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancelCaseAssignmentV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment2 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -145,17 +144,18 @@ public class CancelCaseAssignmentV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -177,42 +177,15 @@ public class CancelCaseAssignmentV02 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "032"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "032";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -222,16 +195,39 @@ public class CancelCaseAssignmentV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelCaseAssignmentV02";
 				definition = "Scope\r\nThe Cancel Case Assignment message is sent by a case creator or case assigner to a case assignee. This message is used to request the cancellation of a case.\r\nUsage\r\nThe Cancel Case Assignment message is used to stop the processing of a case at a case assignee when a case assignment is incorrect or when the root cause for the case disappears (such as the account owner was able to reconcile after sending a Claim Non Receipt message).\r\nThe Cancel Case Assignment message can be used to stop the processing of a:\r\n- request to cancel payment case\r\n- request to modify payment case\r\n- unable to apply case\r\n- claim non receipt case\r\nThe Cancel Case Assignment message covers one and only one case at a time. If several case assignments need to be cancelled, then multiple Cancel Case Assignment messages must be sent.\r\nThe Cancel Case Assignment message must be forwarded by all subsequent case assignee(s) in the case processing chain until it reaches the end point.\r\nWhen an agent re-assigns the Cancel Case Assignment to a subsequent case assignee, this agent must send a Notification Of Case Assignment message to its assigner.\r\nWhen the Cancel Case Assignment instruction has been acted upon by the relevant case assignee, a Resolution Of Investigation message is sent to the case assigner or case creator, in reply.\r\nThe Cancel Case Assignment message must not be used for other purposes. If, for example, a request to modify payment fails, and the case creator requests the cancellation of the payment, then a Customer or FIToFI Payment Cancellation Request message must be used, with the case identification of the original Request To Modify Payment message. In this context it is incorrect to use the Cancel Case Assignment message.";
-				previousVersion_lazy = () -> CancelCaseAssignment.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CancelCaseAssignmentV03.mmObject());
+				previousVersion_lazy = () -> CancelCaseAssignment.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "CclCaseAssgnmt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CancelCaseAssignmentV02.Assignment, com.tools20022.repository.area.camt.CancelCaseAssignmentV02.Case);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.CancelCaseAssignmentV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CancelCaseAssignmentV02.mmAssignment, com.tools20022.repository.area.camt.CancelCaseAssignmentV02.mmCase);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "032";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment2 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment2 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case2 case_) {
+		this.case_ = case_;
 	}
 }

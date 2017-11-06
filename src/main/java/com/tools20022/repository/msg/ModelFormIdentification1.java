@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModelFormIdentification1#Identification
- * ModelFormIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.ModelFormIdentification1#mmIdentification
+ * ModelFormIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModelFormIdentification1#Version
- * ModelFormIdentification1.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.ModelFormIdentification1#mmVersion
+ * ModelFormIdentification1.mmVersion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModelFormIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ModelFormIdentification1Choice identification;
 	/**
 	 * Identification of the model form.
 	 * <p>
@@ -75,8 +76,8 @@ public class ModelFormIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ModelForm#Identification
-	 * ModelForm.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ModelForm#mmIdentification
+	 * ModelForm.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class ModelFormIdentification1 {
 	 * definition} = "Identification of the model form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.mmIdentification;
 			componentContext_lazy = () -> ModelFormIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the model form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ModelFormIdentification1Choice.mmObject();
 		}
 	};
+	protected Max35Text version;
 	/**
 	 * Version of the model form.
 	 * <p>
@@ -121,8 +123,8 @@ public class ModelFormIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ModelForm#Version
-	 * ModelForm.Version}</li>
+	 * {@linkplain com.tools20022.repository.entity.ModelForm#mmVersion
+	 * ModelForm.mmVersion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +143,17 @@ public class ModelFormIdentification1 {
 	 * definition} = "Version of the model form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.mmVersion;
 			componentContext_lazy = () -> ModelFormIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.Version;
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the model form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -159,14 +161,30 @@ public class ModelFormIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModelFormIdentification1.Identification, com.tools20022.repository.msg.ModelFormIdentification1.Version);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModelFormIdentification1.mmIdentification, com.tools20022.repository.msg.ModelFormIdentification1.mmVersion);
 				trace_lazy = () -> ModelForm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModelFormIdentification1";
 				definition = "Identification of a model form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ModelFormIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ModelFormIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max35Text version) {
+		this.version = version;
 	}
 }

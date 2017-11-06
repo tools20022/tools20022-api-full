@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RejectionReason33#Reason
- * RejectionReason33.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RejectionReason33#mmReason
+ * RejectionReason33.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectionReason33#AdditionalReasonInformation
- * RejectionReason33.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectionReason33#mmAdditionalReasonInformation
+ * RejectionReason33.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectionReason33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectedReason17Choice reason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -79,8 +80,8 @@ public class RejectionReason33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectedStatusReason
-	 * StatusReason.RejectedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectedStatusReason
+	 * StatusReason.mmRejectedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,34 +101,35 @@ public class RejectionReason33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.RejectionReason32#Reason
-	 * RejectionReason32.Reason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RejectionReason32#mmReason
+	 * RejectionReason32.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason16#Reason
-	 * RejectionReason16.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason16#mmReason
+	 * RejectionReason16.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> RejectionReason33.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectedStatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectionReason16.Reason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason32.Reason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason32.mmReason);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectionReason16.mmReason;
 			maxOccurs = 1;
-			type_lazy = () -> RejectedReason17Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RejectedReason17Choice.mmObject();
 		}
 	};
+	protected Max350Text additionalReasonInformation;
 	/**
 	 * Additional information about the rejected status reason.
 	 * <p>
@@ -140,8 +142,8 @@ public class RejectionReason33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,30 +164,30 @@ public class RejectionReason33 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason32#AdditionalReasonInformation
-	 * RejectionReason32.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason32#mmAdditionalReasonInformation
+	 * RejectionReason32.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason16#AdditionalReasonInformation
-	 * RejectionReason16.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason16#mmAdditionalReasonInformation
+	 * RejectionReason16.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> RejectionReason33.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the rejected status reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectionReason16.AdditionalReasonInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason32.AdditionalReasonInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason32.mmAdditionalReasonInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectionReason16.mmAdditionalReasonInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -193,9 +195,9 @@ public class RejectionReason33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason33.Reason, com.tools20022.repository.msg.RejectionReason33.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason33.mmReason, com.tools20022.repository.msg.RejectionReason33.mmAdditionalReasonInformation);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason33";
 				definition = "Information about a rejected status.";
@@ -203,5 +205,21 @@ public class RejectionReason33 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectedReason17Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(RejectedReason17Choice reason) {
+		this.reason = reason;
+	}
+
+	public Max350Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max350Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

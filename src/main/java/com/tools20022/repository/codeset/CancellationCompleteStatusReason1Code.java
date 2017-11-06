@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#CancelledByYourself
- * CancellationCompleteStatusReason1Code.CancelledByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#mmCancelledByYourself
+ * CancellationCompleteStatusReason1Code.mmCancelledByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#CancelledBySystem
- * CancellationCompleteStatusReason1Code.CancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#mmCancelledBySystem
+ * CancellationCompleteStatusReason1Code.mmCancelledBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#CancelledByAgent
- * CancellationCompleteStatusReason1Code.CancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#mmCancelledByAgent
+ * CancellationCompleteStatusReason1Code.mmCancelledByAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#Other
- * CancellationCompleteStatusReason1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code#mmOther
+ * CancellationCompleteStatusReason1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 * name} = "CancelledByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByYourself = new MMCode() {
+	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
@@ -110,7 +110,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 * name} = "CancelledBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledBySystem = new MMCode() {
+	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
@@ -133,7 +133,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 * name} = "CancelledByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAgent = new MMCode() {
+	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
@@ -156,7 +156,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -167,13 +167,13 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationCompleteStatusReason1Code";
 				definition = "Specifies the reason for a cancellation complete status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.CancelledByYourself, com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.CancelledBySystem,
-						com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.CancelledByAgent, com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmCancelledByYourself, com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmCancelledBySystem,
+						com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmCancelledByAgent, com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmOther);
 				trace_lazy = () -> CancelledStatusReasonCode.mmObject();
 			}
 		});

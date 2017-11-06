@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.InvoiceTaxReportISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The InvoiceTaxReportStatusAdvice message is sent by the matching application
@@ -56,21 +57,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#StatusReportHeader
- * InvoiceTaxReportStatusAdviceV01.StatusReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#mmStatusReportHeader
+ * InvoiceTaxReportStatusAdviceV01.mmStatusReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#TransactionStatus
- * InvoiceTaxReportStatusAdviceV01.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#mmTransactionStatus
+ * InvoiceTaxReportStatusAdviceV01.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#SupplementaryData
- * InvoiceTaxReportStatusAdviceV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#mmSupplementaryData
+ * InvoiceTaxReportStatusAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#identifier
- * InvoiceTaxReportStatusAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.038.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceTaxReportStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected InvoiceTaxStatusReportHeader1 statusReportHeader;
 	/**
 	 * Provides the status on the InvoiceTaxReport.
 	 * <p>
@@ -109,17 +109,18 @@ public class InvoiceTaxReportStatusAdviceV01 {
 	 * definition} = "Provides the status on the InvoiceTaxReport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsRptHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReportHeader";
 			definition = "Provides the status on the InvoiceTaxReport.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvoiceTaxStatusReportHeader1.mmObject();
 		}
 	};
+	protected List<InvoiceTaxReportTransactionStatus1> transactionStatus;
 	/**
 	 * Provides the status on an individual transaction and the related reason
 	 * if required.
@@ -146,7 +147,7 @@ public class InvoiceTaxReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,6 +157,7 @@ public class InvoiceTaxReportStatusAdviceV01 {
 			complexType_lazy = () -> InvoiceTaxReportTransactionStatus1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific<br>
@@ -183,7 +185,7 @@ public class InvoiceTaxReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,33 +193,6 @@ public class InvoiceTaxReportStatusAdviceV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific\r\nblock.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "038";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -231,11 +206,42 @@ public class InvoiceTaxReportStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "InvcTaxRptStsAdvc";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.StatusReportHeader, com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.TransactionStatus,
-						com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.mmStatusReportHeader,
+						com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.mmTransactionStatus, com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "038";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvoiceTaxStatusReportHeader1 getStatusReportHeader() {
+		return statusReportHeader;
+	}
+
+	public void setStatusReportHeader(InvoiceTaxStatusReportHeader1 statusReportHeader) {
+		this.statusReportHeader = statusReportHeader;
+	}
+
+	public List<InvoiceTaxReportTransactionStatus1> getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(List<InvoiceTaxReportTransactionStatus1> transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

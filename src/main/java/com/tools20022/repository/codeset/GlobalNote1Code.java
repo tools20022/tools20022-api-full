@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#NewGlobalNote
- * GlobalNote1Code.NewGlobalNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#mmNewGlobalNote
+ * GlobalNote1Code.mmNewGlobalNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#ClassicalGlobalNote
- * GlobalNote1Code.ClassicalGlobalNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#mmClassicalGlobalNote
+ * GlobalNote1Code.mmClassicalGlobalNote}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	 * name} = "NewGlobalNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewGlobalNote = new MMCode() {
+	public static final MMCode mmNewGlobalNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewGlobalNote";
@@ -106,7 +106,7 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	 * name} = "ClassicalGlobalNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClassicalGlobalNote = new MMCode() {
+	public static final MMCode mmClassicalGlobalNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassicalGlobalNote";
@@ -117,12 +117,12 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NGNO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GlobalNote1Code";
 				definition = "Identifies if the security will be issued in New Global Note (NGN) or Classical Global Note (CGN).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GlobalNote1Code.NewGlobalNote, com.tools20022.repository.codeset.GlobalNote1Code.ClassicalGlobalNote);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GlobalNote1Code.mmNewGlobalNote, com.tools20022.repository.codeset.GlobalNote1Code.mmClassicalGlobalNote);
 				trace_lazy = () -> GlobalNoteCode.mmObject();
 			}
 		});

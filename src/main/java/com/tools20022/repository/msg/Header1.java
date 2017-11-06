@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of characteristics related to the protocol.
@@ -36,20 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Header1#MessageFunction
- * Header1.MessageFunction}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header1#ProtocolVersion
- * Header1.ProtocolVersion}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header1#ExchangeIdentification
- * Header1.ExchangeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header1#CreationDateTime
- * Header1.CreationDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header1#InitiatingParty
- * Header1.InitiatingParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header1#RecipientParty
- * Header1.RecipientParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Header1#Traceability
- * Header1.Traceability}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header1#mmMessageFunction
+ * Header1.mmMessageFunction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header1#mmProtocolVersion
+ * Header1.mmProtocolVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Header1#mmExchangeIdentification
+ * Header1.mmExchangeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header1#mmCreationDateTime
+ * Header1.mmCreationDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header1#mmInitiatingParty
+ * Header1.mmInitiatingParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header1#mmRecipientParty
+ * Header1.mmRecipientParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header1#mmTraceability
+ * Header1.mmTraceability}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,63 +59,63 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01#Header
- * AcceptorDiagnosticResponseV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01#mmHeader
+ * AcceptorDiagnosticResponseV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02#Header
- * AcceptorDiagnosticResponseV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02#mmHeader
+ * AcceptorDiagnosticResponseV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV01#Header
- * AcceptorAuthorisationRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV01#mmHeader
+ * AcceptorAuthorisationRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV02#Header
- * AcceptorAuthorisationRequestV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV02#mmHeader
+ * AcceptorAuthorisationRequestV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV01#Header
- * AcceptorReconciliationRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV01#mmHeader
+ * AcceptorReconciliationRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#Header
- * AcceptorReconciliationRequestV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#mmHeader
+ * AcceptorReconciliationRequestV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV01#Header
- * AcceptorReconciliationResponseV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV01#mmHeader
+ * AcceptorReconciliationResponseV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02#Header
- * AcceptorReconciliationResponseV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02#mmHeader
+ * AcceptorReconciliationResponseV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#Header
- * AcceptorCancellationRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#mmHeader
+ * AcceptorCancellationRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV02#Header
- * AcceptorCancellationRequestV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV02#mmHeader
+ * AcceptorCancellationRequestV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV01#Header
- * AcceptorCancellationResponseV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV01#mmHeader
+ * AcceptorCancellationResponseV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV02#Header
- * AcceptorCancellationResponseV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV02#mmHeader
+ * AcceptorCancellationResponseV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV01#Header
- * AcceptorDiagnosticRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV01#mmHeader
+ * AcceptorDiagnosticRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02#Header
- * AcceptorDiagnosticRequestV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02#mmHeader
+ * AcceptorDiagnosticRequestV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV01#Header
- * AcceptorRejectionV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV01#mmHeader
+ * AcceptorRejectionV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01#Header
- * AcceptorAuthorisationResponseV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01#mmHeader
+ * AcceptorAuthorisationResponseV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV02#Header
- * AcceptorAuthorisationResponseV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV02#mmHeader
+ * AcceptorAuthorisationResponseV02.mmHeader}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,6 +136,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Header1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageFunction1Code messageFunction;
 	/**
 	 * Identifies the type of process related to the message.
 	 * <p>
@@ -162,13 +165,13 @@ public class Header1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Header7#MessageFunction
-	 * Header7.MessageFunction}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header7#mmMessageFunction
+	 * Header7.mmMessageFunction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header1.mmObject();
 			isDerived = false;
@@ -176,12 +179,13 @@ public class Header1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.MessageFunction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.mmMessageFunction);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
+	protected Max6Text protocolVersion;
 	/**
 	 * Version of the acquirer protocol specifications.
 	 * <p>
@@ -209,13 +213,13 @@ public class Header1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Header7#ProtocolVersion
-	 * Header7.ProtocolVersion}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header7#mmProtocolVersion
+	 * Header7.mmProtocolVersion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProtocolVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header1.mmObject();
 			isDerived = false;
@@ -223,12 +227,13 @@ public class Header1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the acquirer protocol specifications.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.ProtocolVersion);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.mmProtocolVersion);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected Max3NumericText exchangeIdentification;
 	/**
 	 * Unique identification of an exchange occurrence.
 	 * <p>
@@ -258,13 +263,13 @@ public class Header1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Header7#ExchangeIdentification
-	 * Header7.ExchangeIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Header7#mmExchangeIdentification
+	 * Header7.mmExchangeIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header1.mmObject();
 			isDerived = false;
@@ -272,12 +277,13 @@ public class Header1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.ExchangeIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.mmExchangeIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created.
 	 * <p>
@@ -305,13 +311,13 @@ public class Header1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Header7#CreationDateTime
-	 * Header7.CreationDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header7#mmCreationDateTime
+	 * Header7.mmCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header1.mmObject();
 			isDerived = false;
@@ -319,12 +325,13 @@ public class Header1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.CreationDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.mmCreationDateTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected GenericIdentification32 initiatingParty;
 	/**
 	 * Unique identification of the partner that has initiated the exchange.
 	 * <p>
@@ -353,13 +360,13 @@ public class Header1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Header7#InitiatingParty
-	 * Header7.InitiatingParty}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header7#mmInitiatingParty
+	 * Header7.mmInitiatingParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Header1.mmObject();
 			isDerived = false;
@@ -367,13 +374,14 @@ public class Header1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.InitiatingParty);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.mmInitiatingParty);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected GenericIdentification32 recipientParty;
 	/**
 	 * Unique identification of the partner that is the recipient of the message
 	 * exchange.
@@ -404,13 +412,13 @@ public class Header1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Header7#RecipientParty
-	 * Header7.RecipientParty}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header7#mmRecipientParty
+	 * Header7.mmRecipientParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Header1.mmObject();
 			isDerived = false;
@@ -418,13 +426,14 @@ public class Header1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.RecipientParty);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.mmRecipientParty);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Traceability1> traceability;
 	/**
 	 * Identification of partners involved in exchange from the merchant to the
 	 * issuer, with the relative timestamp of their exchanges.
@@ -455,13 +464,13 @@ public class Header1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Header7#Traceability
-	 * Header7.Traceability}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header7#mmTraceability
+	 * Header7.mmTraceability}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Traceability = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTraceability = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Header1.mmObject();
 			isDerived = false;
@@ -469,28 +478,28 @@ public class Header1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.Traceability);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header7.mmTraceability);
 			minOccurs = 0;
-			complexType_lazy = () -> Traceability1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.Traceability1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.Header1.MessageFunction, com.tools20022.repository.msg.Header1.ProtocolVersion, com.tools20022.repository.msg.Header1.ExchangeIdentification,
-								com.tools20022.repository.msg.Header1.CreationDateTime, com.tools20022.repository.msg.Header1.InitiatingParty, com.tools20022.repository.msg.Header1.RecipientParty,
-								com.tools20022.repository.msg.Header1.Traceability);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01.Header, com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02.Header,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV01.Header, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV02.Header,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV01.Header, com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.Header,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV01.Header, com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02.Header,
-						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.Header, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV02.Header,
-						com.tools20022.repository.area.caaa.AcceptorCancellationResponseV01.Header, com.tools20022.repository.area.caaa.AcceptorCancellationResponseV02.Header,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV01.Header, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02.Header, com.tools20022.repository.area.caaa.AcceptorRejectionV01.Header,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01.Header, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV02.Header);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header1.mmMessageFunction, com.tools20022.repository.msg.Header1.mmProtocolVersion, com.tools20022.repository.msg.Header1.mmExchangeIdentification,
+						com.tools20022.repository.msg.Header1.mmCreationDateTime, com.tools20022.repository.msg.Header1.mmInitiatingParty, com.tools20022.repository.msg.Header1.mmRecipientParty,
+						com.tools20022.repository.msg.Header1.mmTraceability);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorCancellationResponseV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationResponseV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorRejectionV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV02.mmHeader);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Header1";
 				definition = "Set of characteristics related to the protocol.";
@@ -498,5 +507,61 @@ public class Header1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageFunction1Code getMessageFunction() {
+		return messageFunction;
+	}
+
+	public void setMessageFunction(MessageFunction1Code messageFunction) {
+		this.messageFunction = messageFunction;
+	}
+
+	public Max6Text getProtocolVersion() {
+		return protocolVersion;
+	}
+
+	public void setProtocolVersion(Max6Text protocolVersion) {
+		this.protocolVersion = protocolVersion;
+	}
+
+	public Max3NumericText getExchangeIdentification() {
+		return exchangeIdentification;
+	}
+
+	public void setExchangeIdentification(Max3NumericText exchangeIdentification) {
+		this.exchangeIdentification = exchangeIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public GenericIdentification32 getInitiatingParty() {
+		return initiatingParty;
+	}
+
+	public void setInitiatingParty(com.tools20022.repository.msg.GenericIdentification32 initiatingParty) {
+		this.initiatingParty = initiatingParty;
+	}
+
+	public GenericIdentification32 getRecipientParty() {
+		return recipientParty;
+	}
+
+	public void setRecipientParty(com.tools20022.repository.msg.GenericIdentification32 recipientParty) {
+		this.recipientParty = recipientParty;
+	}
+
+	public List<Traceability1> getTraceability() {
+		return traceability;
+	}
+
+	public void setTraceability(List<com.tools20022.repository.msg.Traceability1> traceability) {
+		this.traceability = traceability;
 	}
 }

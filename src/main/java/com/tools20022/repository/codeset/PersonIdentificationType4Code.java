@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#PassportNumber
- * PersonIdentificationType4Code.PassportNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmPassportNumber
+ * PersonIdentificationType4Code.mmPassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#DriversLicenseNumber
- * PersonIdentificationType4Code.DriversLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmDriversLicenseNumber
+ * PersonIdentificationType4Code.mmDriversLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#EmployeeNumber
- * PersonIdentificationType4Code.EmployeeNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmEmployeeNumber
+ * PersonIdentificationType4Code.mmEmployeeNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#DriverNumber
- * PersonIdentificationType4Code.DriverNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmDriverNumber
+ * PersonIdentificationType4Code.mmDriverNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "PassportNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode PassportNumber = new MMCode() {
+	public static final MMCode mmPassportNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
@@ -110,7 +110,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "DriversLicenseNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode DriversLicenseNumber = new MMCode() {
+	public static final MMCode mmDriversLicenseNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
@@ -133,7 +133,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "EmployeeNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmployeeNumber = new MMCode() {
+	public static final MMCode mmEmployeeNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeNumber";
@@ -156,7 +156,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "DriverNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode DriverNumber = new MMCode() {
+	public static final MMCode mmDriverNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriverNumber";
@@ -167,13 +167,13 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PASS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType4Code";
 				definition = "Type of identification used for the Cardholder.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType4Code.PassportNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.DriversLicenseNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType4Code.EmployeeNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.DriverNumber);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType4Code.mmPassportNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.mmDriversLicenseNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType4Code.mmEmployeeNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.mmDriverNumber);
 				trace_lazy = () -> PersonIdentificationTypeCode.mmObject();
 			}
 		});

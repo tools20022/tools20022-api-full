@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.TransportByRail;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to the transportation of goods by rail.
@@ -36,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRail5#PlaceOfReceipt
- * TransportByRail5.PlaceOfReceipt}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmPlaceOfReceipt
+ * TransportByRail5.mmPlaceOfReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRail5#PlaceOfDelivery
- * TransportByRail5.PlaceOfDelivery}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmPlaceOfDelivery
+ * TransportByRail5.mmPlaceOfDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRail5#RailCarrierName
- * TransportByRail5.RailCarrierName}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmRailCarrierName
+ * TransportByRail5.mmRailCarrierName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRail5#RailCarrierCountry
- * TransportByRail5.RailCarrierCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmRailCarrierCountry
+ * TransportByRail5.mmRailCarrierCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRail5#CarrierAgentName
- * TransportByRail5.CarrierAgentName}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmCarrierAgentName
+ * TransportByRail5.mmCarrierAgentName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRail5#CarrierAgentCountry
- * TransportByRail5.CarrierAgentCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmCarrierAgentCountry
+ * TransportByRail5.mmCarrierAgentCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportByRail5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> placeOfReceipt;
 	/**
 	 * Identifies the location where the goods are received for transportation.
 	 * <p>
@@ -91,8 +93,8 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,24 +116,25 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#PlaceOfReceipt
-	 * TransportByRail4.PlaceOfReceipt}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmPlaceOfReceipt
+	 * TransportByRail4.mmPlaceOfReceipt}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportByRail5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "PlcOfRct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfReceipt";
 			definition = "Identifies the location where the goods are received for transportation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.PlaceOfReceipt;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmPlaceOfReceipt;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> placeOfDelivery;
 	/**
 	 * Identifies the location of delivery of the goods.
 	 * <p>
@@ -144,8 +147,8 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,24 +168,25 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#PlaceOfDelivery
-	 * TransportByRail4.PlaceOfDelivery}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmPlaceOfDelivery
+	 * TransportByRail4.mmPlaceOfDelivery}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportByRail5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "PlcOfDlvry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfDelivery";
 			definition = "Identifies the location of delivery of the goods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.PlaceOfDelivery;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmPlaceOfDelivery;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max70Text railCarrierName;
 	/**
 	 * Identifies the party that is responsible for the conveyance of the goods
 	 * from one place to another.
@@ -196,8 +200,8 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,25 +223,26 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#RailCarrierName
-	 * TransportByRail4.RailCarrierName}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmRailCarrierName
+	 * TransportByRail4.mmRailCarrierName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RailCarrierName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRailCarrierName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> TransportByRail5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "RailCrrierNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RailCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.RailCarrierName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmRailCarrierName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode railCarrierCountry;
 	/**
 	 * Country in which the carrier of the goods, for example, shipping company,
 	 * is located or registered.
@@ -251,7 +256,8 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -273,25 +279,26 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#RailCarrierCountry
-	 * TransportByRail4.RailCarrierCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmRailCarrierCountry
+	 * TransportByRail4.mmRailCarrierCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RailCarrierCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRailCarrierCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> TransportByRail5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "RailCrrierCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RailCarrierCountry";
 			definition = "Country in which the carrier of the goods, for example, shipping company, is located or registered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.RailCarrierCountry;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmRailCarrierCountry;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max70Text carrierAgentName;
 	/**
 	 * Name of the carrier's (for example, shipping company's) agent that acts
 	 * on behalf of the carrier and may be the issuer of transport documents
@@ -306,8 +313,8 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -329,25 +336,26 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#CarrierAgentName
-	 * TransportByRail4.CarrierAgentName}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmCarrierAgentName
+	 * TransportByRail4.mmCarrierAgentName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CarrierAgentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> TransportByRail5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "CrrierAgtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierAgentName";
 			definition = "Name of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.CarrierAgentName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmCarrierAgentName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode carrierAgentCountry;
 	/**
 	 * Country of registration of the carrier's (for example, shipping
 	 * company's) agent that acts on behalf of the carrier and may be the issuer
@@ -362,7 +370,8 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -384,22 +393,22 @@ public class TransportByRail5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#CarrierAgentCountry
-	 * TransportByRail4.CarrierAgentCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmCarrierAgentCountry
+	 * TransportByRail4.mmCarrierAgentCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CarrierAgentCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> TransportByRail5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "CrrierAgtCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierAgentCountry";
 			definition = "Country of registration of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.CarrierAgentCountry;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmCarrierAgentCountry;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -407,11 +416,11 @@ public class TransportByRail5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRail5.PlaceOfReceipt, com.tools20022.repository.msg.TransportByRail5.PlaceOfDelivery,
-						com.tools20022.repository.msg.TransportByRail5.RailCarrierName, com.tools20022.repository.msg.TransportByRail5.RailCarrierCountry, com.tools20022.repository.msg.TransportByRail5.CarrierAgentName,
-						com.tools20022.repository.msg.TransportByRail5.CarrierAgentCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRail5.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRail5.mmPlaceOfDelivery,
+						com.tools20022.repository.msg.TransportByRail5.mmRailCarrierName, com.tools20022.repository.msg.TransportByRail5.mmRailCarrierCountry, com.tools20022.repository.msg.TransportByRail5.mmCarrierAgentName,
+						com.tools20022.repository.msg.TransportByRail5.mmCarrierAgentCountry);
 				trace_lazy = () -> TransportByRail.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportByRail5";
 				definition = "Information related to the transportation of goods by rail.";
@@ -419,5 +428,53 @@ public class TransportByRail5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getPlaceOfReceipt() {
+		return placeOfReceipt;
+	}
+
+	public void setPlaceOfReceipt(List<Max35Text> placeOfReceipt) {
+		this.placeOfReceipt = placeOfReceipt;
+	}
+
+	public List<Max35Text> getPlaceOfDelivery() {
+		return placeOfDelivery;
+	}
+
+	public void setPlaceOfDelivery(List<Max35Text> placeOfDelivery) {
+		this.placeOfDelivery = placeOfDelivery;
+	}
+
+	public Max70Text getRailCarrierName() {
+		return railCarrierName;
+	}
+
+	public void setRailCarrierName(Max70Text railCarrierName) {
+		this.railCarrierName = railCarrierName;
+	}
+
+	public CountryCode getRailCarrierCountry() {
+		return railCarrierCountry;
+	}
+
+	public void setRailCarrierCountry(CountryCode railCarrierCountry) {
+		this.railCarrierCountry = railCarrierCountry;
+	}
+
+	public Max70Text getCarrierAgentName() {
+		return carrierAgentName;
+	}
+
+	public void setCarrierAgentName(Max70Text carrierAgentName) {
+		this.carrierAgentName = carrierAgentName;
+	}
+
+	public CountryCode getCarrierAgentCountry() {
+		return carrierAgentCountry;
+	}
+
+	public void setCarrierAgentCountry(CountryCode carrierAgentCountry) {
+		this.carrierAgentCountry = carrierAgentCountry;
 	}
 }

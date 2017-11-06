@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition1#QueryType
- * IntraBalanceQueryDefinition1.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition1#mmQueryType
+ * IntraBalanceQueryDefinition1.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition1#SearchCriteria
- * IntraBalanceQueryDefinition1.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition1#mmSearchCriteria
+ * IntraBalanceQueryDefinition1.mmSearchCriteria}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceQueryDefinition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MovementResponseType1Code queryType;
 	/**
 	 * Defines the type of query.
 	 * <p>
@@ -91,7 +92,7 @@ public class IntraBalanceQueryDefinition1 {
 	 * definition} = "Defines the type of query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryDefinition1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class IntraBalanceQueryDefinition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
 		}
 	};
+	protected IntraBalanceQueryCriteria1 searchCriteria;
 	/**
 	 * Defines the criteria to extract the intra-balance movement instruction
 	 * information.
@@ -140,32 +142,48 @@ public class IntraBalanceQueryDefinition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SearchCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSearchCriteria = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryDefinition1.mmObject();
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
+			componentContext_lazy = () -> IntraBalanceQueryDefinition1.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to extract the intra-balance movement instruction information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryDefinition1.QueryType, com.tools20022.repository.msg.IntraBalanceQueryDefinition1.SearchCriteria);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryDefinition1.mmQueryType, com.tools20022.repository.msg.IntraBalanceQueryDefinition1.mmSearchCriteria);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryDefinition1";
 				definition = "Defines the information that is searched through specific criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MovementResponseType1Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(MovementResponseType1Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public IntraBalanceQueryCriteria1 getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(com.tools20022.repository.msg.IntraBalanceQueryCriteria1 searchCriteria) {
+		this.searchCriteria = searchCriteria;
 	}
 }

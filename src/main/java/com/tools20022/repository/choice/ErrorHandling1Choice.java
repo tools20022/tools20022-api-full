@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ErrorHandling1Choice#Code
- * ErrorHandling1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ErrorHandling1Choice#mmCode
+ * ErrorHandling1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ErrorHandling1Choice#Proprietary
- * ErrorHandling1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ErrorHandling1Choice#mmProprietary
+ * ErrorHandling1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ErrorHandling1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ErrorHandling1Code code;
 	/**
 	 * Specification of the error, in coded form.
 	 * <p>
@@ -96,13 +97,13 @@ public class ErrorHandling1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ErrorHandling2Choice#Code
-	 * ErrorHandling2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ErrorHandling2Choice#mmCode
+	 * ErrorHandling2Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ErrorHandling1Choice.mmObject();
 			isDerived = false;
@@ -110,12 +111,13 @@ public class ErrorHandling1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specification of the error, in coded form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling2Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling2Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ErrorHandling1Code.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText proprietary;
 	/**
 	 * Specification of the error, in free format.
 	 * <p>
@@ -146,13 +148,13 @@ public class ErrorHandling1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ErrorHandling2Choice#Proprietary
-	 * ErrorHandling2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ErrorHandling2Choice#mmProprietary
+	 * ErrorHandling2Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ErrorHandling1Choice.mmObject();
 			isDerived = false;
@@ -160,9 +162,9 @@ public class ErrorHandling1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specification of the error, in free format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling2Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling2Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -170,8 +172,8 @@ public class ErrorHandling1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling1Choice.Code, com.tools20022.repository.choice.ErrorHandling1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling1Choice.mmCode, com.tools20022.repository.choice.ErrorHandling1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorHandling1Choice";
 				definition = "Specifies the choice between the listed and the proprietary error codes.";
@@ -179,5 +181,21 @@ public class ErrorHandling1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ErrorHandling1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ErrorHandling1Code code) {
+		this.code = code;
+	}
+
+	public Max4AlphaNumericText getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max4AlphaNumericText proprietary) {
+		this.proprietary = proprietary;
 	}
 }

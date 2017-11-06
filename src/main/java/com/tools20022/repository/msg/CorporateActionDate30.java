@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate30#RecordDate
- * CorporateActionDate30.RecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate30#mmRecordDate
+ * CorporateActionDate30.mmRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate30#ExDividendDate
- * CorporateActionDate30.ExDividendDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate30#mmExDividendDate
+ * CorporateActionDate30.mmExDividendDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDate30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat19Choice recordDate;
 	/**
 	 * Date/time at which positions are struck at the end of the day to note
 	 * which parties will receive the relevant amount of entitlement, due to be
@@ -84,8 +85,8 @@ public class CorporateActionDate30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RecordDate
-	 * CorporateActionDeadline.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRecordDate
+	 * CorporateActionDeadline.mmRecordDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,31 +109,32 @@ public class CorporateActionDate30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate41#RecordDate
-	 * CorporateActionDate41.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate41#mmRecordDate
+	 * CorporateActionDate41.mmRecordDate}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate49#RecordDate
-	 * CorporateActionDate49.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate49#mmRecordDate
+	 * CorporateActionDate49.mmRecordDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecordDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecordDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> CorporateActionDate30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RecordDate;
 			isDerived = false;
 			xmlTag = "RcrdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate41.RecordDate, com.tools20022.repository.msg.CorporateActionDate49.RecordDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate41.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate49.mmRecordDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat19Choice.mmObject();
 		}
 	};
+	protected DateFormat19Choice exDividendDate;
 	/**
 	 * Date/time as from which trading (including exchange and OTC trading)
 	 * occurs on the underlying security without the benefit.
@@ -145,8 +147,8 @@ public class CorporateActionDate30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#ExDividendDate
-	 * Dividend.ExDividendDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmExDividendDate
+	 * Dividend.mmExDividendDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,38 +171,38 @@ public class CorporateActionDate30 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate41#ExDividendDate
-	 * CorporateActionDate41.ExDividendDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate41#mmExDividendDate
+	 * CorporateActionDate41.mmExDividendDate}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate49#ExDividendDate
-	 * CorporateActionDate49.ExDividendDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate49#mmExDividendDate
+	 * CorporateActionDate49.mmExDividendDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExDividendDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExDividendDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmExDividendDate;
 			componentContext_lazy = () -> CorporateActionDate30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.ExDividendDate;
 			isDerived = false;
 			xmlTag = "ExDvddDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate41.ExDividendDate, com.tools20022.repository.msg.CorporateActionDate49.ExDividendDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate41.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate49.mmExDividendDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat19Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate30.RecordDate, com.tools20022.repository.msg.CorporateActionDate30.ExDividendDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate30.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate30.mmExDividendDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate30";
 				definition = "Specifies corporate action dates.";
@@ -208,5 +210,21 @@ public class CorporateActionDate30 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat19Choice getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(DateFormat19Choice recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public DateFormat19Choice getExDividendDate() {
+		return exDividendDate;
+	}
+
+	public void setExDividendDate(DateFormat19Choice exDividendDate) {
+		this.exDividendDate = exDividendDate;
 	}
 }

@@ -34,66 +34,66 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#AccountServicerDeadlineMissed
- * RejectionReason43Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmAccountServicerDeadlineMissed
+ * RejectionReason43Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#IncorrectCertification
- * RejectionReason43Code.IncorrectCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmIncorrectCertification
+ * RejectionReason43Code.mmIncorrectCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#InvalidForTaxAuthorities
- * RejectionReason43Code.InvalidForTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmInvalidForTaxAuthorities
+ * RejectionReason43Code.mmInvalidForTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#InvalidOptionType
- * RejectionReason43Code.InvalidOptionType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmInvalidOptionType
+ * RejectionReason43Code.mmInvalidOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#InvalidReference
- * RejectionReason43Code.InvalidReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmInvalidReference
+ * RejectionReason43Code.mmInvalidReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#InvalidSecurity
- * RejectionReason43Code.InvalidSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmInvalidSecurity
+ * RejectionReason43Code.mmInvalidSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#LackofSecurities
- * RejectionReason43Code.LackofSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmLackofSecurities
+ * RejectionReason43Code.mmLackofSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#MarketDeadlineMissed
- * RejectionReason43Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmMarketDeadlineMissed
+ * RejectionReason43Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#Mismatch
- * RejectionReason43Code.Mismatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmMismatch
+ * RejectionReason43Code.mmMismatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#MissingBeneficiaryOwnerDetails
- * RejectionReason43Code.MissingBeneficiaryOwnerDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmMissingBeneficiaryOwnerDetails
+ * RejectionReason43Code.mmMissingBeneficiaryOwnerDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#OptionCancelled
- * RejectionReason43Code.OptionCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmOptionCancelled
+ * RejectionReason43Code.mmOptionCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#OptionInactive
- * RejectionReason43Code.OptionInactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmOptionInactive
+ * RejectionReason43Code.mmOptionInactive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#OptionNumberRejection
- * RejectionReason43Code.OptionNumberRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmOptionNumberRejection
+ * RejectionReason43Code.mmOptionNumberRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#Other
- * RejectionReason43Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmOther
+ * RejectionReason43Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#QuantityRejection
- * RejectionReason43Code.QuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmQuantityRejection
+ * RejectionReason43Code.mmQuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#RefusedByTaxAuthorities
- * RejectionReason43Code.RefusedByTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmRefusedByTaxAuthorities
+ * RejectionReason43Code.mmRefusedByTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#SafekeepingAccountRejection
- * RejectionReason43Code.SafekeepingAccountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmSafekeepingAccountRejection
+ * RejectionReason43Code.mmSafekeepingAccountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#UnrecognisedIdentification
- * RejectionReason43Code.UnrecognisedIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason43Code#mmUnrecognisedIdentification
+ * RejectionReason43Code.mmUnrecognisedIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,17 +133,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#AccountServicerDeadlineMissed
-	 * RejectionReason46Code.AccountServicerDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmAccountServicerDeadlineMissed
+	 * RejectionReason46Code.mmAccountServicerDeadlineMissed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.AccountServicerDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmAccountServicerDeadlineMissed);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -165,17 +165,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#IncorrectCertification
-	 * RejectionReason46Code.IncorrectCertification}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmIncorrectCertification
+	 * RejectionReason46Code.mmIncorrectCertification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCertification = new MMCode() {
+	public static final MMCode mmIncorrectCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCertification";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.IncorrectCertification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmIncorrectCertification);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -197,17 +197,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#InvalidForTaxAuthorities
-	 * RejectionReason46Code.InvalidForTaxAuthorities}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmInvalidForTaxAuthorities
+	 * RejectionReason46Code.mmInvalidForTaxAuthorities}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidForTaxAuthorities = new MMCode() {
+	public static final MMCode mmInvalidForTaxAuthorities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidForTaxAuthorities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.InvalidForTaxAuthorities);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmInvalidForTaxAuthorities);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -229,17 +229,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#InvalidOptionType
-	 * RejectionReason46Code.InvalidOptionType}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmInvalidOptionType
+	 * RejectionReason46Code.mmInvalidOptionType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOptionType = new MMCode() {
+	public static final MMCode mmInvalidOptionType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOptionType";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.InvalidOptionType);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmInvalidOptionType);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -261,17 +261,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#InvalidReference
-	 * RejectionReason46Code.InvalidReference}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmInvalidReference
+	 * RejectionReason46Code.mmInvalidReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidReference = new MMCode() {
+	public static final MMCode mmInvalidReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.InvalidReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmInvalidReference);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -293,17 +293,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#InvalidSecurity
-	 * RejectionReason46Code.InvalidSecurity}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmInvalidSecurity
+	 * RejectionReason46Code.mmInvalidSecurity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidSecurity = new MMCode() {
+	public static final MMCode mmInvalidSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.InvalidSecurity);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmInvalidSecurity);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -325,17 +325,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#LackofSecurities
-	 * RejectionReason46Code.LackofSecurities}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmLackofSecurities
+	 * RejectionReason46Code.mmLackofSecurities}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LackofSecurities = new MMCode() {
+	public static final MMCode mmLackofSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackofSecurities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.LackofSecurities);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmLackofSecurities);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -357,17 +357,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#MarketDeadlineMissed
-	 * RejectionReason46Code.MarketDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmMarketDeadlineMissed
+	 * RejectionReason46Code.mmMarketDeadlineMissed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.MarketDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmMarketDeadlineMissed);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -389,17 +389,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#Mismatch
-	 * RejectionReason46Code.Mismatch}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmMismatch
+	 * RejectionReason46Code.mmMismatch}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Mismatch = new MMCode() {
+	public static final MMCode mmMismatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mismatch";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.Mismatch);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmMismatch);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -421,17 +421,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#MissingBeneficiaryOwnerDetails
-	 * RejectionReason46Code.MissingBeneficiaryOwnerDetails}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmMissingBeneficiaryOwnerDetails
+	 * RejectionReason46Code.mmMissingBeneficiaryOwnerDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MissingBeneficiaryOwnerDetails = new MMCode() {
+	public static final MMCode mmMissingBeneficiaryOwnerDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingBeneficiaryOwnerDetails";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.MissingBeneficiaryOwnerDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmMissingBeneficiaryOwnerDetails);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -453,17 +453,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#OptionCancelled
-	 * RejectionReason46Code.OptionCancelled}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmOptionCancelled
+	 * RejectionReason46Code.mmOptionCancelled}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OptionCancelled = new MMCode() {
+	public static final MMCode mmOptionCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionCancelled";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.OptionCancelled);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmOptionCancelled);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -485,17 +485,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#OptionInactive
-	 * RejectionReason46Code.OptionInactive}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmOptionInactive
+	 * RejectionReason46Code.mmOptionInactive}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OptionInactive = new MMCode() {
+	public static final MMCode mmOptionInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionInactive";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.OptionInactive);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmOptionInactive);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -517,17 +517,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#OptionNumberRejection
-	 * RejectionReason46Code.OptionNumberRejection}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmOptionNumberRejection
+	 * RejectionReason46Code.mmOptionNumberRejection}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OptionNumberRejection = new MMCode() {
+	public static final MMCode mmOptionNumberRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRejection";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.OptionNumberRejection);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmOptionNumberRejection);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -549,17 +549,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#Other
-	 * RejectionReason46Code.Other}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmOther
+	 * RejectionReason46Code.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.Other);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmOther);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -581,17 +581,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#QuantityRejection
-	 * RejectionReason46Code.QuantityRejection}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmQuantityRejection
+	 * RejectionReason46Code.mmQuantityRejection}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityRejection = new MMCode() {
+	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.QuantityRejection);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmQuantityRejection);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -613,17 +613,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#RefusedByTaxAuthorities
-	 * RejectionReason46Code.RefusedByTaxAuthorities}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmRefusedByTaxAuthorities
+	 * RejectionReason46Code.mmRefusedByTaxAuthorities}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RefusedByTaxAuthorities = new MMCode() {
+	public static final MMCode mmRefusedByTaxAuthorities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefusedByTaxAuthorities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.RefusedByTaxAuthorities);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmRefusedByTaxAuthorities);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -645,17 +645,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#SafekeepingAccountRejection
-	 * RejectionReason46Code.SafekeepingAccountRejection}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmSafekeepingAccountRejection
+	 * RejectionReason46Code.mmSafekeepingAccountRejection}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccountRejection = new MMCode() {
+	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.SafekeepingAccountRejection);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmSafekeepingAccountRejection);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -677,17 +677,17 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#UnrecognisedIdentification
-	 * RejectionReason46Code.UnrecognisedIdentification}</li>
+	 * {@linkplain com.tools20022.repository.codeset.RejectionReason46Code#mmUnrecognisedIdentification
+	 * RejectionReason46Code.mmUnrecognisedIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnrecognisedIdentification = new MMCode() {
+	public static final MMCode mmUnrecognisedIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedIdentification";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.UnrecognisedIdentification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason46Code.mmUnrecognisedIdentification);
 			owner_lazy = () -> RejectionReason43Code.mmObject();
 		}
 	};
@@ -695,20 +695,20 @@ public class RejectionReason43Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason43Code";
 				definition = "Specifies the reason why the instruction request has a rejected status.";
 				nextVersions_lazy = () -> Arrays.asList(RejectionReason46Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason43Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason43Code.IncorrectCertification,
-						com.tools20022.repository.codeset.RejectionReason43Code.InvalidForTaxAuthorities, com.tools20022.repository.codeset.RejectionReason43Code.InvalidOptionType,
-						com.tools20022.repository.codeset.RejectionReason43Code.InvalidReference, com.tools20022.repository.codeset.RejectionReason43Code.InvalidSecurity,
-						com.tools20022.repository.codeset.RejectionReason43Code.LackofSecurities, com.tools20022.repository.codeset.RejectionReason43Code.MarketDeadlineMissed,
-						com.tools20022.repository.codeset.RejectionReason43Code.Mismatch, com.tools20022.repository.codeset.RejectionReason43Code.MissingBeneficiaryOwnerDetails,
-						com.tools20022.repository.codeset.RejectionReason43Code.OptionCancelled, com.tools20022.repository.codeset.RejectionReason43Code.OptionInactive,
-						com.tools20022.repository.codeset.RejectionReason43Code.OptionNumberRejection, com.tools20022.repository.codeset.RejectionReason43Code.Other,
-						com.tools20022.repository.codeset.RejectionReason43Code.QuantityRejection, com.tools20022.repository.codeset.RejectionReason43Code.RefusedByTaxAuthorities,
-						com.tools20022.repository.codeset.RejectionReason43Code.SafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason43Code.UnrecognisedIdentification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason43Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason43Code.mmIncorrectCertification,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmInvalidForTaxAuthorities, com.tools20022.repository.codeset.RejectionReason43Code.mmInvalidOptionType,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmInvalidReference, com.tools20022.repository.codeset.RejectionReason43Code.mmInvalidSecurity,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmLackofSecurities, com.tools20022.repository.codeset.RejectionReason43Code.mmMarketDeadlineMissed,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmMismatch, com.tools20022.repository.codeset.RejectionReason43Code.mmMissingBeneficiaryOwnerDetails,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmOptionCancelled, com.tools20022.repository.codeset.RejectionReason43Code.mmOptionInactive,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmOptionNumberRejection, com.tools20022.repository.codeset.RejectionReason43Code.mmOther,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmQuantityRejection, com.tools20022.repository.codeset.RejectionReason43Code.mmRefusedByTaxAuthorities,
+						com.tools20022.repository.codeset.RejectionReason43Code.mmSafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason43Code.mmUnrecognisedIdentification);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

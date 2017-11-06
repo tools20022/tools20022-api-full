@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Amount of money associated with a service.
@@ -37,21 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#TotalOverheadApplied
- * TotalFeesAndTaxes40.TotalOverheadApplied}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#TotalFees
- * TotalFeesAndTaxes40.TotalFees}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#TotalTaxes
- * TotalFeesAndTaxes40.TotalTaxes}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmTotalOverheadApplied
+ * TotalFeesAndTaxes40.mmTotalOverheadApplied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#CommercialAgreementReference
- * TotalFeesAndTaxes40.CommercialAgreementReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmTotalFees
+ * TotalFeesAndTaxes40.mmTotalFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#IndividualFee
- * TotalFeesAndTaxes40.IndividualFee}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmTotalTaxes
+ * TotalFeesAndTaxes40.mmTotalTaxes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#IndividualTax
- * TotalFeesAndTaxes40.IndividualTax}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmCommercialAgreementReference
+ * TotalFeesAndTaxes40.mmCommercialAgreementReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmIndividualFee
+ * TotalFeesAndTaxes40.mmIndividualFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmIndividualTax
+ * TotalFeesAndTaxes40.mmIndividualTax}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalFeesAndTaxes40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount totalOverheadApplied;
 	/**
 	 * Total amount of overhead applied to the transaction that impacts the
 	 * settlement amount.
@@ -92,8 +96,8 @@ public class TotalFeesAndTaxes40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,20 +118,21 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalOverheadApplied = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalOverheadApplied = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "TtlOvrhdApld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalOverheadApplied";
 			definition = "Total amount of overhead applied to the transaction that impacts the settlement amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalFees;
 	/**
 	 * Total amount of fees (charge/commissions) applied to the transaction that
 	 * impacts the settlement amount.
@@ -163,20 +168,21 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalFees = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			businessComponentTrace_lazy = () -> Charges.mmObject();
+			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "TtlFees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFees";
 			definition = "Total amount of fees (charge/commissions) applied to the transaction that impacts the settlement amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalTaxes;
 	/**
 	 * Total amount of taxes applied to the transaction that impacts the
 	 * settlement amount.
@@ -213,20 +219,21 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalTaxes = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalTaxes = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTaxs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxes";
 			definition = "Total amount of taxes applied to the transaction that impacts the settlement amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max35Text commercialAgreementReference;
 	/**
 	 * Reference to the agreement established between the fund and another
 	 * party. This element, amongst others, defines the conditions of the
@@ -241,8 +248,8 @@ public class TotalFeesAndTaxes40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommercialAgreementReference
-	 * Commission.CommercialAgreementReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommercialAgreementReference
+	 * Commission.mmCommercialAgreementReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -263,20 +270,21 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommercialAgreementReference;
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementReference";
 			definition = "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Fee2> individualFee;
 	/**
 	 * Individual fee (charge/commission).
 	 * <p>
@@ -307,27 +315,28 @@ public class TotalFeesAndTaxes40 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.FeeAndTax1#IndividualFee
-	 * FeeAndTax1.IndividualFee}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.FeeAndTax1#mmIndividualFee
+	 * FeeAndTax1.mmIndividualFee}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualFee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualFee = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			businessComponentTrace_lazy = () -> Charges.mmObject();
+			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "IndvFee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualFee";
 			definition = "Individual fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FeeAndTax1.IndividualFee);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FeeAndTax1.mmIndividualFee);
 			minOccurs = 0;
-			type_lazy = () -> Fee2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Fee2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax31> individualTax;
 	/**
 	 * Individual tax.
 	 * <p>
@@ -359,36 +368,36 @@ public class TotalFeesAndTaxes40 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.FeeAndTax1#IndividualTax
-	 * FeeAndTax1.IndividualTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.FeeAndTax1#mmIndividualTax
+	 * FeeAndTax1.mmIndividualTax}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualTax = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTax";
 			definition = "Individual tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FeeAndTax1.IndividualTax);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FeeAndTax1.mmIndividualTax);
 			minOccurs = 0;
-			type_lazy = () -> Tax31.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax31.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalFeesAndTaxes40.TotalOverheadApplied, com.tools20022.repository.msg.TotalFeesAndTaxes40.TotalFees,
-						com.tools20022.repository.msg.TotalFeesAndTaxes40.TotalTaxes, com.tools20022.repository.msg.TotalFeesAndTaxes40.CommercialAgreementReference, com.tools20022.repository.msg.TotalFeesAndTaxes40.IndividualFee,
-						com.tools20022.repository.msg.TotalFeesAndTaxes40.IndividualTax);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalOverheadApplied, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalFees,
+						com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalTaxes, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmCommercialAgreementReference, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualFee,
+						com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualTax);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalFeesAndTaxes40";
 				definition = "Amount of money associated with a service.";
@@ -396,5 +405,53 @@ public class TotalFeesAndTaxes40 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getTotalOverheadApplied() {
+		return totalOverheadApplied;
+	}
+
+	public void setTotalOverheadApplied(ActiveCurrencyAndAmount totalOverheadApplied) {
+		this.totalOverheadApplied = totalOverheadApplied;
+	}
+
+	public ActiveCurrencyAndAmount getTotalFees() {
+		return totalFees;
+	}
+
+	public void setTotalFees(ActiveCurrencyAndAmount totalFees) {
+		this.totalFees = totalFees;
+	}
+
+	public ActiveCurrencyAndAmount getTotalTaxes() {
+		return totalTaxes;
+	}
+
+	public void setTotalTaxes(ActiveCurrencyAndAmount totalTaxes) {
+		this.totalTaxes = totalTaxes;
+	}
+
+	public Max35Text getCommercialAgreementReference() {
+		return commercialAgreementReference;
+	}
+
+	public void setCommercialAgreementReference(Max35Text commercialAgreementReference) {
+		this.commercialAgreementReference = commercialAgreementReference;
+	}
+
+	public List<Fee2> getIndividualFee() {
+		return individualFee;
+	}
+
+	public void setIndividualFee(List<com.tools20022.repository.msg.Fee2> individualFee) {
+		this.individualFee = individualFee;
+	}
+
+	public List<Tax31> getIndividualTax() {
+		return individualTax;
+	}
+
+	public void setIndividualTax(List<com.tools20022.repository.msg.Tax31> individualTax) {
+		this.individualTax = individualTax;
 	}
 }

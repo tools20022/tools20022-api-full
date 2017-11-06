@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountChoice#AmountWithCurrency
- * AmountChoice.AmountWithCurrency}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountChoice#mmAmountWithCurrency
+ * AmountChoice.mmAmountWithCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountChoice#AmountWithoutCurrency
- * AmountChoice.AmountWithoutCurrency}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountChoice#mmAmountWithoutCurrency
+ * AmountChoice.mmAmountWithoutCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount amountWithCurrency;
 	/**
 	 * Number of monetary units specified in a currency where the unit of
 	 * currency is explicit.
@@ -89,7 +90,7 @@ public class AmountChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountWithCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountWithCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountChoice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class AmountChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountWithCurrency";
 			definition = "Number of monetary units specified in a currency where the unit of currency is explicit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount amountWithoutCurrency;
 	/**
 	 * Number of monetary units specified in a currency where the unit of
 	 * currency is implied by the context.
@@ -132,7 +134,7 @@ public class AmountChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountWithoutCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountWithoutCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountChoice.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class AmountChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountWithoutCurrency";
 			definition = "Number of monetary units specified in a currency where the unit of currency is implied by the context.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -149,13 +151,29 @@ public class AmountChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountChoice.AmountWithCurrency, com.tools20022.repository.choice.AmountChoice.AmountWithoutCurrency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountChoice.mmAmountWithCurrency, com.tools20022.repository.choice.AmountChoice.mmAmountWithoutCurrency);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountChoice";
 				definition = "Amount may be defined with or without the currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getAmountWithCurrency() {
+		return amountWithCurrency;
+	}
+
+	public void setAmountWithCurrency(CurrencyAndAmount amountWithCurrency) {
+		this.amountWithCurrency = amountWithCurrency;
+	}
+
+	public ImpliedCurrencyAndAmount getAmountWithoutCurrency() {
+		return amountWithoutCurrency;
+	}
+
+	public void setAmountWithoutCurrency(ImpliedCurrencyAndAmount amountWithoutCurrency) {
+		this.amountWithoutCurrency = amountWithoutCurrency;
 	}
 }

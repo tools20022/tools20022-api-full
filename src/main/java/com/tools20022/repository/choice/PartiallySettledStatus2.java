@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#Reason
- * PartiallySettledStatus2.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#mmReason
+ * PartiallySettledStatus2.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#Proprietary
- * PartiallySettledStatus2.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PartiallySettledStatus2#mmProprietary
+ * PartiallySettledStatus2.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartiallySettledStatus2 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartiallySettledStatusReason1Code reason;
 	/**
 	 * Reason for the partially settled status.
 	 * <p>
@@ -76,8 +77,8 @@ public class PartiallySettledStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#PartiallySettledStatusReason
-	 * SecuritiesOrderStatus.PartiallySettledStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmPartiallySettledStatusReason
+	 * SecuritiesOrderStatus.mmPartiallySettledStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class PartiallySettledStatus2 {
 	 * definition} = "Reason for the partially settled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> PartiallySettledStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.PartiallySettledStatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the partially settled status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Reason for the partially settled status.
 	 * <p>
@@ -123,8 +125,8 @@ public class PartiallySettledStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#PartiallySettledStatusReason
-	 * SecuritiesOrderStatus.PartiallySettledStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmPartiallySettledStatusReason
+	 * SecuritiesOrderStatus.mmPartiallySettledStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class PartiallySettledStatus2 {
 	 * definition} = "Reason for the partially settled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> PartiallySettledStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.PartiallySettledStatusReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the partially settled status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class PartiallySettledStatus2 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartiallySettledStatus2.Reason, com.tools20022.repository.choice.PartiallySettledStatus2.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartiallySettledStatus2.mmReason, com.tools20022.repository.choice.PartiallySettledStatus2.mmProprietary);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartiallySettledStatus2";
 				definition = "Partially settled status reason.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartiallySettledStatusReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(PartiallySettledStatusReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

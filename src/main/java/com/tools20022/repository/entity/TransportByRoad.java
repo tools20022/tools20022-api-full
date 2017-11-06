@@ -37,29 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportByRoad
- * SingleTransport1.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportByRoad
+ * SingleTransport1.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport4#TransportByRoad
- * SingleTransport4.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport4#mmTransportByRoad
+ * SingleTransport4.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport2#TransportByRoad
- * SingleTransport2.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport2#mmTransportByRoad
+ * SingleTransport2.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport5#TransportByRoad
- * SingleTransport5.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport5#mmTransportByRoad
+ * SingleTransport5.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport3#TransportByRoad
- * SingleTransport3.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport3#mmTransportByRoad
+ * SingleTransport3.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport6#TransportByRoad
- * SingleTransport6.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport6#mmTransportByRoad
+ * SingleTransport6.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport7#TransportByRoad
- * SingleTransport7.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport7#mmTransportByRoad
+ * SingleTransport7.mmTransportByRoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport8#TransportByRoad
- * SingleTransport8.TransportByRoad}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport8#mmTransportByRoad
+ * SingleTransport8.mmTransportByRoad}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -84,8 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,13 +103,13 @@ public class TransportByRoad extends Transport {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportByRoad";
 				definition = "Information related to the transportation of goods by road.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.TransportByRoad, com.tools20022.repository.msg.SingleTransport4.TransportByRoad,
-						com.tools20022.repository.msg.SingleTransport2.TransportByRoad, com.tools20022.repository.msg.SingleTransport5.TransportByRoad, com.tools20022.repository.msg.SingleTransport3.TransportByRoad,
-						com.tools20022.repository.msg.SingleTransport6.TransportByRoad, com.tools20022.repository.msg.SingleTransport7.TransportByRoad, com.tools20022.repository.msg.SingleTransport8.TransportByRoad);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport4.mmTransportByRoad,
+						com.tools20022.repository.msg.SingleTransport2.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport5.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport3.mmTransportByRoad,
+						com.tools20022.repository.msg.SingleTransport6.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport7.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport8.mmTransportByRoad);
 				superType_lazy = () -> Transport.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(TransportByRoad1.mmObject(), TransportByRoad3.mmObject(), TransportByRoad2.mmObject(), TransportByRoad4.mmObject(), TransportByRoad5.mmObject());
 			}

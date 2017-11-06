@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages40#Reference
- * Linkages40.Reference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages40#mmReference
+ * Linkages40.mmReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Linkages40 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected References47Choice reference;
 	/**
 	 * Reference to the linked transaction.
 	 * <p>
@@ -93,33 +94,33 @@ public class Linkages40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Linkages21#Reference
-	 * Linkages21.Reference}</li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages21#mmReference
+	 * Linkages21.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages40.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
+			componentContext_lazy = () -> Linkages40.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages21.Reference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages21.mmReference;
 			maxOccurs = 1;
-			type_lazy = () -> References47Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> References47Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages40.Reference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages40.mmReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Linkages40";
 				definition = "Information related to a linked transaction.";
@@ -127,5 +128,13 @@ public class Linkages40 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References47Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(References47Choice reference) {
+		this.reference = reference;
 	}
 }

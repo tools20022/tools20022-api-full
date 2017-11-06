@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#SeparateSettlement
- * DeliveryReceiptType2Code.SeparateSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#mmSeparateSettlement
+ * DeliveryReceiptType2Code.mmSeparateSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#AgainstPaymentSettlement
- * DeliveryReceiptType2Code.AgainstPaymentSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#mmAgainstPaymentSettlement
+ * DeliveryReceiptType2Code.mmAgainstPaymentSettlement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class DeliveryReceiptType2Code extends DeliveryReceiptTypeCode {
 	 * name} = "SeparateSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode SeparateSettlement = new MMCode() {
+	public static final MMCode mmSeparateSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeparateSettlement";
@@ -104,7 +104,7 @@ public class DeliveryReceiptType2Code extends DeliveryReceiptTypeCode {
 	 * name} = "AgainstPaymentSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode AgainstPaymentSettlement = new MMCode() {
+	public static final MMCode mmAgainstPaymentSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstPaymentSettlement";
@@ -115,12 +115,12 @@ public class DeliveryReceiptType2Code extends DeliveryReceiptTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FREE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveryReceiptType2Code";
 				definition = "Specifies how the transaction is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReceiptType2Code.SeparateSettlement, com.tools20022.repository.codeset.DeliveryReceiptType2Code.AgainstPaymentSettlement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReceiptType2Code.mmSeparateSettlement, com.tools20022.repository.codeset.DeliveryReceiptType2Code.mmAgainstPaymentSettlement);
 				trace_lazy = () -> DeliveryReceiptTypeCode.mmObject();
 			}
 		});

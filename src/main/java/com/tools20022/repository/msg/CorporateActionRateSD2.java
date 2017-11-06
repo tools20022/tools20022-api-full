@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD2#ReceiptBaseQuantity
- * CorporateActionRateSD2.ReceiptBaseQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD2#mmReceiptBaseQuantity
+ * CorporateActionRateSD2.mmReceiptBaseQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD2#OrdinaryShare
- * CorporateActionRateSD2.OrdinaryShare}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD2#mmOrdinaryShare
+ * CorporateActionRateSD2.mmOrdinaryShare}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionRateSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber receiptBaseQuantity;
 	/**
 	 * Receipts quantity (base) of the American or Global Depository Receipt(s)
 	 * per ordinary share(s) ratio.
@@ -91,7 +92,7 @@ public class CorporateActionRateSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiptBaseQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiptBaseQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD2.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class CorporateActionRateSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptBaseQuantity";
 			definition = "Receipts quantity (base) of the American or Global Depository Receipt(s) per ordinary share(s) ratio.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber ordinaryShare;
 	/**
 	 * Ordinary shares quantity of the American or Global Depository Receipt(s)
 	 * per ordinary share(s) ratio.
@@ -135,7 +137,7 @@ public class CorporateActionRateSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrdinaryShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrdinaryShare = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD2.mmObject();
 			isDerived = false;
@@ -143,8 +145,8 @@ public class CorporateActionRateSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryShare";
 			definition = " Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s)  ratio.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -152,13 +154,29 @@ public class CorporateActionRateSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD2.ReceiptBaseQuantity, com.tools20022.repository.msg.CorporateActionRateSD2.OrdinaryShare);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD2.mmReceiptBaseQuantity, com.tools20022.repository.msg.CorporateActionRateSD2.mmOrdinaryShare);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD2";
 				definition = "Ratio of the American or Global Depository Receipt(s) per ordinary share(s).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getReceiptBaseQuantity() {
+		return receiptBaseQuantity;
+	}
+
+	public void setReceiptBaseQuantity(DecimalNumber receiptBaseQuantity) {
+		this.receiptBaseQuantity = receiptBaseQuantity;
+	}
+
+	public DecimalNumber getOrdinaryShare() {
+		return ordinaryShare;
+	}
+
+	public void setOrdinaryShare(DecimalNumber ordinaryShare) {
+		this.ordinaryShare = ordinaryShare;
 	}
 }

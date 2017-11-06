@@ -38,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BaselineStatus#Status
- * BaselineStatus.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
+ * BaselineStatus.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BaselineStatus#CommercialTrade
- * BaselineStatus.CommercialTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmCommercialTrade
+ * BaselineStatus.mmCommercialTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#TransactionStatus
- * CommercialTrade.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
+ * CommercialTrade.mmTransactionStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -75,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BaselineStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaselineStatusCode status;
 	/**
 	 * Specifies the status of the processing of a baseline.
 	 * <p>
@@ -100,30 +101,37 @@ public class BaselineStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BaselineStatusCode
 	 * BaselineStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus1#Status
-	 * TransactionStatus1.Status}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus4#Status
-	 * TransactionStatus4.Status}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus3#Status
-	 * TransactionStatus3.Status}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus2#Status
-	 * TransactionStatus2.Status}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus5#Status
-	 * TransactionStatus5.Status}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatusReportItems1#Status
-	 * StatusReportItems1.Status}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatusReportItems2#Status
-	 * StatusReportItems2.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BaselineStatus
 	 * BaselineStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionStatus1#mmStatus
+	 * TransactionStatus1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionStatus4#mmStatus
+	 * TransactionStatus4.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionStatus3#mmStatus
+	 * TransactionStatus3.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionStatus2#mmStatus
+	 * TransactionStatus2.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionStatus5#mmStatus
+	 * TransactionStatus5.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportItems1#mmStatus
+	 * StatusReportItems1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportItems2#mmStatus
+	 * StatusReportItems2.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -135,21 +143,22 @@ public class BaselineStatus extends Status {
 	 * definition} = "Specifies the status of the processing of a baseline."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Status = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus1.Status, com.tools20022.repository.msg.TransactionStatus4.Status, com.tools20022.repository.msg.TransactionStatus3.Status,
-					com.tools20022.repository.msg.TransactionStatus2.Status, com.tools20022.repository.msg.TransactionStatus5.Status, com.tools20022.repository.msg.StatusReportItems1.Status,
-					com.tools20022.repository.msg.StatusReportItems2.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus1.mmStatus, com.tools20022.repository.msg.TransactionStatus4.mmStatus, com.tools20022.repository.msg.TransactionStatus3.mmStatus,
+					com.tools20022.repository.msg.TransactionStatus2.mmStatus, com.tools20022.repository.msg.TransactionStatus5.mmStatus, com.tools20022.repository.msg.StatusReportItems1.mmStatus,
+					com.tools20022.repository.msg.StatusReportItems2.mmStatus);
 			elementContext_lazy = () -> BaselineStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of the processing of a baseline.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatusCode.mmObject();
 		}
 	};
+	protected CommercialTrade commercialTrade;
 	/**
 	 * Commercial trade for which a status is provided.
 	 * <p>
@@ -158,8 +167,8 @@ public class BaselineStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#TransactionStatus
-	 * CommercialTrade.TransactionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
+	 * CommercialTrade.mmTransactionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -183,34 +192,50 @@ public class BaselineStatus extends Status {
 	 * definition} = "Commercial trade for which a status is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CommercialTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> BaselineStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
 			definition = "Commercial trade for which a status is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.TransactionStatus;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmTransactionStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatus";
 				definition = "Indicates the status of a baseline.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.TransactionStatus);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.mmTransactionStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BaselineStatus.Status, com.tools20022.repository.entity.BaselineStatus.CommercialTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BaselineStatus.mmStatus, com.tools20022.repository.entity.BaselineStatus.mmCommercialTrade);
 				derivationComponent_lazy = () -> Arrays.asList(TransactionStatus1.mmObject(), TransactionStatus4.mmObject(), TransactionStatus3.mmObject(), TransactionStatus2.mmObject(), TransactionStatus5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaselineStatusCode getStatus() {
+		return status;
+	}
+
+	public void setStatus(BaselineStatusCode status) {
+		this.status = status;
+	}
+
+	public CommercialTrade getCommercialTrade() {
+		return commercialTrade;
+	}
+
+	public void setCommercialTrade(com.tools20022.repository.entity.CommercialTrade commercialTrade) {
+		this.commercialTrade = commercialTrade;
 	}
 }

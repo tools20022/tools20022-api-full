@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification2Choice#CashAccountIdentification
- * AccountIdentification2Choice.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification2Choice#mmCashAccountIdentification
+ * AccountIdentification2Choice.mmCashAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification2Choice#SecuritiesAccountIdentification
- * AccountIdentification2Choice.SecuritiesAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification2Choice#mmSecuritiesAccountIdentification
+ * AccountIdentification2Choice.mmSecuritiesAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text cashAccountIdentification;
 	/**
 	 * Identification of a cash account.
 	 * <p>
@@ -75,8 +76,8 @@ public class AccountIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class AccountIdentification2Choice {
 	 * definition} = "Identification of a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AccountIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Identification of a cash account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text securitiesAccountIdentification;
 	/**
 	 * Identification of a securities account.
 	 * <p>
@@ -121,8 +123,8 @@ public class AccountIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +143,17 @@ public class AccountIdentification2Choice {
 	 * definition} = "Identification of a securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AccountIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Identification of a securities account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -159,15 +161,31 @@ public class AccountIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification2Choice.CashAccountIdentification,
-						com.tools20022.repository.choice.AccountIdentification2Choice.SecuritiesAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification2Choice.mmCashAccountIdentification,
+						com.tools20022.repository.choice.AccountIdentification2Choice.mmSecuritiesAccountIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification2Choice";
 				definition = "Choice between the identification of a cash or securities account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCashAccountIdentification() {
+		return cashAccountIdentification;
+	}
+
+	public void setCashAccountIdentification(Max35Text cashAccountIdentification) {
+		this.cashAccountIdentification = cashAccountIdentification;
+	}
+
+	public Max35Text getSecuritiesAccountIdentification() {
+		return securitiesAccountIdentification;
+	}
+
+	public void setSecuritiesAccountIdentification(Max35Text securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = securitiesAccountIdentification;
 	}
 }

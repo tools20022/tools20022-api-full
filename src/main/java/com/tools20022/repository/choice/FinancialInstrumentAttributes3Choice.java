@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#Identification
- * FinancialInstrumentAttributes3Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#mmIdentification
+ * FinancialInstrumentAttributes3Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#Other
- * FinancialInstrumentAttributes3Choice.Other}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#mmOther
+ * FinancialInstrumentAttributes3Choice.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributes3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINOct2015Identifier identification;
 	/**
 	 * Identification of a financial instrument admitted to trading.
 	 * <p>
@@ -76,8 +77,8 @@ public class FinancialInstrumentAttributes3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class FinancialInstrumentAttributes3Choice {
 	 * "Identification of a financial instrument admitted to trading."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> FinancialInstrumentAttributes3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a financial instrument admitted to trading.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected SecurityInstrumentDescription13 other;
 	/**
 	 * Description of the financial instrument, such as a a derivative, when the
 	 * instrument is not admitted to trading on a trading venue.
@@ -124,8 +126,8 @@ public class FinancialInstrumentAttributes3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#GenericIdentification
-	 * SecuritiesIdentification.GenericIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmGenericIdentification
+	 * SecuritiesIdentification.mmGenericIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,33 +148,49 @@ public class FinancialInstrumentAttributes3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmGenericIdentification;
 			componentContext_lazy = () -> FinancialInstrumentAttributes3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.GenericIdentification;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Description of the financial instrument, such as a a derivative, when the instrument is not admitted to trading on a trading venue.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityInstrumentDescription13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecurityInstrumentDescription13.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.Identification, com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmIdentification, com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmOther);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributes3Choice";
 				definition = "Specifies the attributes of the financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINOct2015Identifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ISINOct2015Identifier identification) {
+		this.identification = identification;
+	}
+
+	public SecurityInstrumentDescription13 getOther() {
+		return other;
+	}
+
+	public void setOther(SecurityInstrumentDescription13 other) {
+		this.other = other;
 	}
 }

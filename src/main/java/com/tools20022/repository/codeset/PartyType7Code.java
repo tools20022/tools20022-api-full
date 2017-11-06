@@ -33,26 +33,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType7Code#Acquirer
- * PartyType7Code.Acquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType7Code#mmAcquirer
+ * PartyType7Code.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType7Code#IntermediaryAgent
- * PartyType7Code.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType7Code#mmIntermediaryAgent
+ * PartyType7Code.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType7Code#POIComponent
- * PartyType7Code.POIComponent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType7Code#mmPOIComponent
+ * PartyType7Code.mmPOIComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType7Code#TerminalManager
- * PartyType7Code.TerminalManager}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType7Code#SaleSystem
- * PartyType7Code.SaleSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType7Code#mmTerminalManager
+ * PartyType7Code.mmTerminalManager}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType7Code#mmSaleSystem
+ * PartyType7Code.mmSaleSystem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +91,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -113,7 +114,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 * name} = "IntermediaryAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntermediaryAgent = new MMCode() {
+	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
@@ -136,7 +137,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 * name} = "POIComponent"</li>
 	 * </ul>
 	 */
-	public static final MMCode POIComponent = new MMCode() {
+	public static final MMCode mmPOIComponent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIComponent";
@@ -159,7 +160,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 * name} = "TerminalManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode TerminalManager = new MMCode() {
+	public static final MMCode mmTerminalManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManager";
@@ -182,7 +183,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 * name} = "SaleSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode SaleSystem = new MMCode() {
+	public static final MMCode mmSaleSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleSystem";
@@ -193,13 +194,13 @@ public class PartyType7Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACQR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyType7Code";
 				definition = "Party that communicate with a POI component (Point of Interaction), using a communication device.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType7Code.Acquirer, com.tools20022.repository.codeset.PartyType7Code.IntermediaryAgent, com.tools20022.repository.codeset.PartyType7Code.POIComponent,
-						com.tools20022.repository.codeset.PartyType7Code.TerminalManager, com.tools20022.repository.codeset.PartyType7Code.SaleSystem);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType7Code.mmAcquirer, com.tools20022.repository.codeset.PartyType7Code.mmIntermediaryAgent,
+						com.tools20022.repository.codeset.PartyType7Code.mmPOIComponent, com.tools20022.repository.codeset.PartyType7Code.mmTerminalManager, com.tools20022.repository.codeset.PartyType7Code.mmSaleSystem);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

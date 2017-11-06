@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancellationRejectionStatus1Choice#Code
- * CancellationRejectionStatus1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CancellationRejectionStatus1Choice#mmCode
+ * CancellationRejectionStatus1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancellationRejectionStatus1Choice#Proprietary
- * CancellationRejectionStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CancellationRejectionStatus1Choice#mmProprietary
+ * CancellationRejectionStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationRejectionStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectionReason2Code code;
 	/**
 	 * Reason advising the rejection of the instruction cancellation request in
 	 * the form of a code.
@@ -77,8 +78,8 @@ public class CancellationRejectionStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#InstructionRejectionReason
-	 * MeetingStatusReason.InstructionRejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#mmInstructionRejectionReason
+	 * MeetingStatusReason.mmInstructionRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class CancellationRejectionStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> CancellationRejectionStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.InstructionRejectionReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason advising the rejection of the instruction cancellation request in the form of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason2Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * This code can be used in case another reason is required.
 	 * <p>
@@ -126,8 +128,8 @@ public class CancellationRejectionStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#InstructionRejectionReason
-	 * MeetingStatusReason.InstructionRejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#mmInstructionRejectionReason
+	 * MeetingStatusReason.mmInstructionRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,17 +149,17 @@ public class CancellationRejectionStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> CancellationRejectionStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.InstructionRejectionReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "This code can be used in case another reason is required.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -165,14 +167,30 @@ public class CancellationRejectionStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationRejectionStatus1Choice.Code, com.tools20022.repository.choice.CancellationRejectionStatus1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationRejectionStatus1Choice.mmCode, com.tools20022.repository.choice.CancellationRejectionStatus1Choice.mmProprietary);
 				trace_lazy = () -> MeetingStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationRejectionStatus1Choice";
 				definition = "Choice of cancellation rejection status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectionReason2Code getCode() {
+		return code;
+	}
+
+	public void setCode(RejectionReason2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

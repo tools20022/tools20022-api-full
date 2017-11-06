@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#CommercialCard
- * CardProductType1Code.CommercialCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#mmCommercialCard
+ * CardProductType1Code.mmCommercialCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#ConsumerCard
- * CardProductType1Code.ConsumerCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#mmConsumerCard
+ * CardProductType1Code.mmConsumerCard}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class CardProductType1Code extends CardProductTypeCode {
 	 * name} = "CommercialCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialCard = new MMCode() {
+	public static final MMCode mmCommercialCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialCard";
@@ -98,7 +98,7 @@ public class CardProductType1Code extends CardProductTypeCode {
 	 * name} = "ConsumerCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsumerCard = new MMCode() {
+	public static final MMCode mmConsumerCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumerCard";
@@ -109,11 +109,11 @@ public class CardProductType1Code extends CardProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardProductType1Code";
 				definition = "Type of card product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardProductType1Code.CommercialCard, com.tools20022.repository.codeset.CardProductType1Code.ConsumerCard);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardProductType1Code.mmCommercialCard, com.tools20022.repository.codeset.CardProductType1Code.mmConsumerCard);
 				trace_lazy = () -> CardProductTypeCode.mmObject();
 			}
 		});

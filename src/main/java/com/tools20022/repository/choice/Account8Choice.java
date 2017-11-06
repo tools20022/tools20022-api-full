@@ -19,6 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.repository.entity.CashAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -31,13 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Account8Choice#CashAccount
- * Account8Choice.CashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Account8Choice#ChargesAccount
- * Account8Choice.ChargesAccount}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Account8Choice#TaxAccount
- * Account8Choice.TaxAccount}</li>
+ * {@linkplain com.tools20022.repository.choice.Account8Choice#mmCashAccount
+ * Account8Choice.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Account8Choice#mmChargesAccount
+ * Account8Choice.mmChargesAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Account8Choice#mmTaxAccount
+ * Account8Choice.mmTaxAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Account8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccountIdentification5Choice cashAccount;
 	/**
 	 * Account in which cash is maintained.
 	 * <p>
@@ -94,20 +97,21 @@ public class Account8Choice {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> Account8Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification5Choice.mmObject();
 		}
 	};
+	protected CashAccountIdentification5Choice chargesAccount;
 	/**
 	 * Account to be used for charges if different from the account for payment.
 	 * <p>
@@ -121,8 +125,8 @@ public class Account8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargesDebitAccount
-	 * Charges.ChargesDebitAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargesDebitAccount
+	 * Charges.mmChargesDebitAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +147,21 @@ public class Account8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargesAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargesAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargesDebitAccount;
 			componentContext_lazy = () -> Account8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargesDebitAccount;
 			isDerived = false;
 			xmlTag = "ChrgsAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccount";
 			definition = "Account to be used for charges if different from the account for payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification5Choice.mmObject();
 		}
 	};
+	protected CashAccountIdentification5Choice taxAccount;
 	/**
 	 * Account to be used for taxes if different from the account for payment.
 	 * <p>
@@ -170,8 +175,8 @@ public class Account8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxAccount
-	 * Tax.TaxAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxAccount
+	 * Tax.mmTaxAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,33 +197,57 @@ public class Account8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxAccount;
 			componentContext_lazy = () -> Account8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxAccount;
 			isDerived = false;
 			xmlTag = "TaxAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAccount";
 			definition = "Account to be used for taxes if different from the account for payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification5Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account8Choice.CashAccount, com.tools20022.repository.choice.Account8Choice.ChargesAccount,
-						com.tools20022.repository.choice.Account8Choice.TaxAccount);
-				trace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account8Choice.mmCashAccount, com.tools20022.repository.choice.Account8Choice.mmChargesAccount,
+						com.tools20022.repository.choice.Account8Choice.mmTaxAccount);
+				trace_lazy = () -> CashAccount.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Account8Choice";
 				definition = "Choice between a cash account, a charges account or a tax account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccountIdentification5Choice getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.choice.CashAccountIdentification5Choice cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public CashAccountIdentification5Choice getChargesAccount() {
+		return chargesAccount;
+	}
+
+	public void setChargesAccount(com.tools20022.repository.choice.CashAccountIdentification5Choice chargesAccount) {
+		this.chargesAccount = chargesAccount;
+	}
+
+	public CashAccountIdentification5Choice getTaxAccount() {
+		return taxAccount;
+	}
+
+	public void setTaxAccount(com.tools20022.repository.choice.CashAccountIdentification5Choice taxAccount) {
+		this.taxAccount = taxAccount;
 	}
 }

@@ -40,20 +40,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#Side
- * DisclosedBid1.Side}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#GrossIndicator
- * DisclosedBid1.GrossIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#mmSide
+ * DisclosedBid1.mmSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#mmGrossIndicator
+ * DisclosedBid1.mmGrossIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisclosedBid1#ListIdentification
- * DisclosedBid1.ListIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#TradingSession
- * DisclosedBid1.TradingSession}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#BiddingAccount
- * DisclosedBid1.BiddingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.DisclosedBid1#mmListIdentification
+ * DisclosedBid1.mmListIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#mmTradingSession
+ * DisclosedBid1.mmTradingSession}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1#mmBiddingAccount
+ * DisclosedBid1.mmBiddingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisclosedBid1#SettlementDetails
- * DisclosedBid1.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DisclosedBid1#mmSettlementDetails
+ * DisclosedBid1.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DisclosedBid1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Side1Code side;
 	/**
 	 * When used in request for a "Disclosed" bid indicates that bid is required
 	 * on assumption that SideValue1 is Buy or Sell. SideValue2 can be derived
@@ -93,8 +94,8 @@ public class DisclosedBid1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,20 +115,21 @@ public class DisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "When used in request for a \"Disclosed\" bid indicates that bid is required on assumption that SideValue1 is Buy or Sell. SideValue2 can be derived by inference.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected TrueFalseIndicator grossIndicator;
 	/**
 	 * Indicates whether an amount is a gross amount (including all charges,
 	 * commissions and tax), or a net amount.
@@ -142,8 +144,8 @@ public class DisclosedBid1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#GrossAmountIndicator
-	 * ListTrading.GrossAmountIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmGrossAmountIndicator
+	 * ListTrading.mmGrossAmountIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +165,21 @@ public class DisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.GrossAmountIndicator;
 			isDerived = false;
 			xmlTag = "GrssInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether an amount is a gross amount (including all charges, commissions and tax), or a net amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Max35Text listIdentification;
 	/**
 	 * Name or number assigned by an entity to enable recognition of that
 	 * entity, eg, account identifier.
@@ -190,8 +193,8 @@ public class DisclosedBid1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#ListIdentification
-	 * ListTrading.ListIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmListIdentification
+	 * ListTrading.mmListIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -211,20 +214,21 @@ public class DisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.ListIdentification;
 			isDerived = false;
 			xmlTag = "ListId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TradingSession1 tradingSession;
 	/**
 	 * Established constraints under which a market operates
 	 * <p>
@@ -236,8 +240,8 @@ public class DisclosedBid1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#ListTradingSession
-	 * ListTrading.ListTradingSession}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmListTradingSession
+	 * ListTrading.mmListTradingSession}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -255,21 +259,22 @@ public class DisclosedBid1 {
 	 * definition} = "Established constraints under which a market operates"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingSession = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListTradingSession;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.ListTradingSession;
 			isDerived = false;
 			xmlTag = "TradgSsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSession";
 			definition = "Established constraints under which a market operates";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TradingSession1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 		}
 	};
+	protected SecuritiesAccount2 biddingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -281,8 +286,8 @@ public class DisclosedBid1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderingAccount
-	 * SecuritiesOrder.OrderingAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderingAccount
+	 * SecuritiesOrder.mmOrderingAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,21 +305,22 @@ public class DisclosedBid1 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BiddingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBiddingAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderingAccount;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderingAccount;
 			isDerived = false;
 			xmlTag = "BiddgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BiddingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
 		}
 	};
+	protected SecuritiesSettlement2 settlementDetails;
 	/**
 	 * Parameters applied to the settlement of a security transfer.
 	 * <p>
@@ -326,8 +332,8 @@ public class DisclosedBid1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -346,34 +352,82 @@ public class DisclosedBid1 {
 	 * "Parameters applied to the settlement of a security transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Parameters applied to the settlement of a security transfer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlement2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisclosedBid1.Side, com.tools20022.repository.msg.DisclosedBid1.GrossIndicator, com.tools20022.repository.msg.DisclosedBid1.ListIdentification,
-						com.tools20022.repository.msg.DisclosedBid1.TradingSession, com.tools20022.repository.msg.DisclosedBid1.BiddingAccount, com.tools20022.repository.msg.DisclosedBid1.SettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisclosedBid1.mmSide, com.tools20022.repository.msg.DisclosedBid1.mmGrossIndicator, com.tools20022.repository.msg.DisclosedBid1.mmListIdentification,
+						com.tools20022.repository.msg.DisclosedBid1.mmTradingSession, com.tools20022.repository.msg.DisclosedBid1.mmBiddingAccount, com.tools20022.repository.msg.DisclosedBid1.mmSettlementDetails);
 				trace_lazy = () -> DisclosedListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DisclosedBid1";
 				definition = "List trading by which the buy-side details the exact stocks and sizes to be traded and the sell-side offers the buy-side a two-way price, to buy or to sell the indicated stocks. All sell-side firms see all of the stocks and quantities in the portfolio during the bidding phase regardless of whether or not they win the business.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public TrueFalseIndicator getGrossIndicator() {
+		return grossIndicator;
+	}
+
+	public void setGrossIndicator(TrueFalseIndicator grossIndicator) {
+		this.grossIndicator = grossIndicator;
+	}
+
+	public Max35Text getListIdentification() {
+		return listIdentification;
+	}
+
+	public void setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = listIdentification;
+	}
+
+	public TradingSession1 getTradingSession() {
+		return tradingSession;
+	}
+
+	public void setTradingSession(com.tools20022.repository.msg.TradingSession1 tradingSession) {
+		this.tradingSession = tradingSession;
+	}
+
+	public SecuritiesAccount2 getBiddingAccount() {
+		return biddingAccount;
+	}
+
+	public void setBiddingAccount(com.tools20022.repository.msg.SecuritiesAccount2 biddingAccount) {
+		this.biddingAccount = biddingAccount;
+	}
+
+	public SecuritiesSettlement2 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(com.tools20022.repository.msg.SecuritiesSettlement2 settlementDetails) {
+		this.settlementDetails = settlementDetails;
 	}
 }

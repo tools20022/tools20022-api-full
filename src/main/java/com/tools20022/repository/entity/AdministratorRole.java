@@ -36,36 +36,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties2#Administrator
- * AccountParties2.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#Administrator
- * AccountParties5.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties6#Administrator
- * AccountParties6.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Administrator
- * AccountParties3.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#Administrator
- * AccountParties4.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties7#Administrator
- * AccountParties7.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties9#Administrator
- * AccountParties9.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties8#Administrator
- * AccountParties8.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties11#Administrator
- * AccountParties11.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties10#Administrator
- * AccountParties10.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties12#Administrator
- * AccountParties12.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties13#Administrator
- * AccountParties13.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties14#Administrator
- * AccountParties14.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties15#Administrator
- * AccountParties15.Administrator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties16#Administrator
- * AccountParties16.Administrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties2#mmAdministrator
+ * AccountParties2.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties5#mmAdministrator
+ * AccountParties5.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties6#mmAdministrator
+ * AccountParties6.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmAdministrator
+ * AccountParties3.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties4#mmAdministrator
+ * AccountParties4.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties7#mmAdministrator
+ * AccountParties7.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties9#mmAdministrator
+ * AccountParties9.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties8#mmAdministrator
+ * AccountParties8.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties11#mmAdministrator
+ * AccountParties11.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties10#mmAdministrator
+ * AccountParties10.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties12#mmAdministrator
+ * AccountParties12.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties13#mmAdministrator
+ * AccountParties13.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties14#mmAdministrator
+ * AccountParties14.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties15#mmAdministrator
+ * AccountParties15.mmAdministrator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties16#mmAdministrator
+ * AccountParties16.mmAdministrator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -75,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,16 +111,16 @@ public class AdministratorRole extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdministratorRole";
 				definition = "Entity that has been appointed by a legal authority to act on behalf of a person or organisation that has gone bankrupt.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.Administrator, com.tools20022.repository.msg.AccountParties5.Administrator,
-						com.tools20022.repository.msg.AccountParties6.Administrator, com.tools20022.repository.msg.AccountParties3.Administrator, com.tools20022.repository.msg.AccountParties4.Administrator,
-						com.tools20022.repository.msg.AccountParties7.Administrator, com.tools20022.repository.msg.AccountParties9.Administrator, com.tools20022.repository.msg.AccountParties8.Administrator,
-						com.tools20022.repository.msg.AccountParties11.Administrator, com.tools20022.repository.msg.AccountParties10.Administrator, com.tools20022.repository.msg.AccountParties12.Administrator,
-						com.tools20022.repository.msg.AccountParties13.Administrator, com.tools20022.repository.msg.AccountParties14.Administrator, com.tools20022.repository.msg.AccountParties15.Administrator,
-						com.tools20022.repository.msg.AccountParties16.Administrator);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmAdministrator, com.tools20022.repository.msg.AccountParties5.mmAdministrator,
+						com.tools20022.repository.msg.AccountParties6.mmAdministrator, com.tools20022.repository.msg.AccountParties3.mmAdministrator, com.tools20022.repository.msg.AccountParties4.mmAdministrator,
+						com.tools20022.repository.msg.AccountParties7.mmAdministrator, com.tools20022.repository.msg.AccountParties9.mmAdministrator, com.tools20022.repository.msg.AccountParties8.mmAdministrator,
+						com.tools20022.repository.msg.AccountParties11.mmAdministrator, com.tools20022.repository.msg.AccountParties10.mmAdministrator, com.tools20022.repository.msg.AccountParties12.mmAdministrator,
+						com.tools20022.repository.msg.AccountParties13.mmAdministrator, com.tools20022.repository.msg.AccountParties14.mmAdministrator, com.tools20022.repository.msg.AccountParties15.mmAdministrator,
+						com.tools20022.repository.msg.AccountParties16.mmAdministrator);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

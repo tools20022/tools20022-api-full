@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking1#Confirmer
- * Undertaking1.Confirmer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking1#mmConfirmer
+ * Undertaking1.mmConfirmer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking3#ConfirmationPartyType
- * Undertaking3.ConfirmationPartyType}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking3#mmConfirmationPartyType
+ * Undertaking3.mmConfirmationPartyType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,11 +68,11 @@ public class UndertakingConfirmer extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingConfirmer";
 				definition = "Party that adds its confirmation to the undertaking.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking1.Confirmer, com.tools20022.repository.msg.Undertaking3.ConfirmationPartyType);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking1.mmConfirmer, com.tools20022.repository.msg.Undertaking3.mmConfirmationPartyType);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 			}
 		});

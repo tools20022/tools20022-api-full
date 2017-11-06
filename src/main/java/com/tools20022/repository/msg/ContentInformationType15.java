@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType15#ContentType
- * ContentInformationType15.ContentType}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType15#mmContentType
+ * ContentInformationType15.mmContentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType15#AuthenticatedData
- * ContentInformationType15.AuthenticatedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType15#mmAuthenticatedData
+ * ContentInformationType15.mmAuthenticatedData}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,240 +46,240 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#SecurityTrailer
- * ATMReconciliationAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#mmSecurityTrailer
+ * ATMReconciliationAdviceV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01#SecurityTrailer
- * ATMReconciliationAcknowledgementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01#mmSecurityTrailer
+ * ATMReconciliationAcknowledgementV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#SecurityTrailer
- * HostToATMAcknowledgementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#mmSecurityTrailer
+ * HostToATMAcknowledgementV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV01#SecurityTrailer
- * ATMDiagnosticResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV01#mmSecurityTrailer
+ * ATMDiagnosticResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV01#SecurityTrailer
- * ATMDiagnosticRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV01#mmSecurityTrailer
+ * ATMDiagnosticRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#SecurityTrailer
- * HostToATMRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#mmSecurityTrailer
+ * HostToATMRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#SecurityTrailer
- * ATMInquiryResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#mmSecurityTrailer
+ * ATMInquiryResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV01#SecurityTrailer
- * ATMInquiryRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV01#mmSecurityTrailer
+ * ATMInquiryRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV01#SecurityTrailer
- * ATMCompletionAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV01#mmSecurityTrailer
+ * ATMCompletionAdviceV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV01#SecurityTrailer
- * ATMWithdrawalResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV01#mmSecurityTrailer
+ * ATMWithdrawalResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01#SecurityTrailer
- * ATMCompletionAcknowledgementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01#mmSecurityTrailer
+ * ATMCompletionAcknowledgementV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01#SecurityTrailer
- * ATMWithdrawalCompletionAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01#mmSecurityTrailer
+ * ATMWithdrawalCompletionAdviceV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01#SecurityTrailer
- * ATMWithdrawalCompletionAcknowledgementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01#mmSecurityTrailer
+ * ATMWithdrawalCompletionAcknowledgementV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#SecurityTrailer
- * ATMWithdrawalRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#mmSecurityTrailer
+ * ATMWithdrawalRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#SecurityTrailer
- * ATMPINManagementRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#mmSecurityTrailer
+ * ATMPINManagementRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV01#SecurityTrailer
- * ATMPINManagementResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV01#mmSecurityTrailer
+ * ATMPINManagementResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#SecurityTrailer
- * NetworkManagementResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.NetworkManagementResponse#mmSecurityTrailer
+ * NetworkManagementResponse.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialResponse#SecurityTrailer
- * AcquirerFinancialResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialResponse#mmSecurityTrailer
+ * AcquirerFinancialResponse.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalInitiation#SecurityTrailer
- * AcquirerReversalInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalInitiation#mmSecurityTrailer
+ * AcquirerReversalInitiation.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#SecurityTrailer
- * AcquirerAuthorisationInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#mmSecurityTrailer
+ * AcquirerAuthorisationInitiation.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.ReconciliationInitiation#SecurityTrailer
- * ReconciliationInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.ReconciliationInitiation#mmSecurityTrailer
+ * ReconciliationInitiation.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#SecurityTrailer
- * AcquirerAuthorisationResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationResponse#mmSecurityTrailer
+ * AcquirerAuthorisationResponse.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.NetworkManagementInitiation#SecurityTrailer
- * NetworkManagementInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.NetworkManagementInitiation#mmSecurityTrailer
+ * NetworkManagementInitiation.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#SecurityTrailer
- * AcquirerReversalResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#mmSecurityTrailer
+ * AcquirerReversalResponse.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#SecurityTrailer
- * ReconciliationResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#mmSecurityTrailer
+ * ReconciliationResponse.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#SecurityTrailer
- * AcquirerFinancialInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialInitiation#mmSecurityTrailer
+ * AcquirerFinancialInitiation.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05#SecurityTrailer
- * AcceptorReconciliationRequestV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05#mmSecurityTrailer
+ * AcceptorReconciliationRequestV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV03#SecurityTrailer
- * AcceptorCurrencyConversionResponseV03.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV03#mmSecurityTrailer
+ * AcceptorCurrencyConversionResponseV03.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV05#SecurityTrailer
- * AcceptorCancellationResponseV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV05#mmSecurityTrailer
+ * AcceptorCancellationResponseV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV05#SecurityTrailer
- * AcceptorCancellationRequestV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV05#mmSecurityTrailer
+ * AcceptorCancellationRequestV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05#SecurityTrailer
- * AcceptorAuthorisationRequestV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05#mmSecurityTrailer
+ * AcceptorAuthorisationRequestV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV03#SecurityTrailer
- * AcceptorCurrencyConversionRequestV03.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV03#mmSecurityTrailer
+ * AcceptorCurrencyConversionRequestV03.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05#SecurityTrailer
- * AcceptorCompletionAdviceV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05#mmSecurityTrailer
+ * AcceptorCompletionAdviceV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV05#SecurityTrailer
- * AcceptorCompletionAdviceResponseV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV05#mmSecurityTrailer
+ * AcceptorCompletionAdviceResponseV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#SecurityTrailer
- * AcceptorDiagnosticRequestV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05#mmSecurityTrailer
+ * AcceptorDiagnosticRequestV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV05#SecurityTrailer
- * AcceptorReconciliationResponseV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV05#mmSecurityTrailer
+ * AcceptorReconciliationResponseV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV05#SecurityTrailer
- * AcceptorCancellationAdviceResponseV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV05#mmSecurityTrailer
+ * AcceptorCancellationAdviceResponseV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV05#SecurityTrailer
- * AcceptorDiagnosticResponseV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV05#mmSecurityTrailer
+ * AcceptorDiagnosticResponseV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05#SecurityTrailer
- * AcceptorCancellationAdviceV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05#mmSecurityTrailer
+ * AcceptorCancellationAdviceV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#SecurityTrailer
- * AcceptorAuthorisationResponseV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#mmSecurityTrailer
+ * AcceptorAuthorisationResponseV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01#SecurityTrailer
- * ATMExceptionAcknowledgementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01#mmSecurityTrailer
+ * ATMExceptionAcknowledgementV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV02#SecurityTrailer
- * ATMWithdrawalRequestV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV02#mmSecurityTrailer
+ * ATMWithdrawalRequestV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01#SecurityTrailer
- * ATMExceptionAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01#mmSecurityTrailer
+ * ATMExceptionAdviceV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV02#SecurityTrailer
- * ATMReconciliationAdviceV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV02#mmSecurityTrailer
+ * ATMReconciliationAdviceV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02#SecurityTrailer
- * ATMReconciliationAcknowledgementV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02#mmSecurityTrailer
+ * ATMReconciliationAcknowledgementV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositResponseV01#SecurityTrailer
- * ATMDepositResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositResponseV01#mmSecurityTrailer
+ * ATMDepositResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#SecurityTrailer
- * ATMDepositRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#mmSecurityTrailer
+ * ATMDepositRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02#SecurityTrailer
- * ATMWithdrawalCompletionAdviceV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02#mmSecurityTrailer
+ * ATMWithdrawalCompletionAdviceV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV02#SecurityTrailer
- * ATMInquiryResponseV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV02#mmSecurityTrailer
+ * ATMInquiryResponseV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01#SecurityTrailer
- * ATMDepositCompletionAcknowledgementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01#mmSecurityTrailer
+ * ATMDepositCompletionAcknowledgementV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV02#SecurityTrailer
- * ATMPINManagementRequestV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV02#mmSecurityTrailer
+ * ATMPINManagementRequestV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMTransferRequestV01#SecurityTrailer
- * ATMTransferRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMTransferRequestV01#mmSecurityTrailer
+ * ATMTransferRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#SecurityTrailer
- * ATMDiagnosticResponseV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#mmSecurityTrailer
+ * ATMDiagnosticResponseV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02#SecurityTrailer
- * ATMDiagnosticRequestV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02#mmSecurityTrailer
+ * ATMDiagnosticRequestV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV02#SecurityTrailer
- * ATMWithdrawalResponseV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV02#mmSecurityTrailer
+ * ATMWithdrawalResponseV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#SecurityTrailer
- * ATMWithdrawalCompletionAcknowledgementV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#mmSecurityTrailer
+ * ATMWithdrawalCompletionAcknowledgementV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV02#SecurityTrailer
- * ATMPINManagementResponseV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV02#mmSecurityTrailer
+ * ATMPINManagementResponseV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#SecurityTrailer
- * ATMDepositCompletionAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#mmSecurityTrailer
+ * ATMDepositCompletionAdviceV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV02#SecurityTrailer
- * ATMInquiryRequestV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV02#mmSecurityTrailer
+ * ATMInquiryRequestV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02#SecurityTrailer
- * ATMCompletionAcknowledgementV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02#mmSecurityTrailer
+ * ATMCompletionAcknowledgementV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV02#SecurityTrailer
- * ATMCompletionAdviceV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV02#mmSecurityTrailer
+ * ATMCompletionAdviceV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMTransferResponseV01#SecurityTrailer
- * ATMTransferResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMTransferResponseV01#mmSecurityTrailer
+ * ATMTransferResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#SecurityTrailer
- * AcceptorAuthorisationResponseV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#mmSecurityTrailer
+ * AcceptorAuthorisationResponseV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV06#SecurityTrailer
- * AcceptorAuthorisationRequestV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV06#mmSecurityTrailer
+ * AcceptorAuthorisationRequestV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV06#SecurityTrailer
- * AcceptorCancellationRequestV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV06#mmSecurityTrailer
+ * AcceptorCancellationRequestV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV06#SecurityTrailer
- * AcceptorCompletionAdviceResponseV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV06#mmSecurityTrailer
+ * AcceptorCompletionAdviceResponseV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV06#SecurityTrailer
- * AcceptorCancellationAdviceV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV06#mmSecurityTrailer
+ * AcceptorCancellationAdviceV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV04#SecurityTrailer
- * AcceptorCurrencyConversionResponseV04.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV04#mmSecurityTrailer
+ * AcceptorCurrencyConversionResponseV04.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV06#SecurityTrailer
- * AcceptorCompletionAdviceV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV06#mmSecurityTrailer
+ * AcceptorCompletionAdviceV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV04#SecurityTrailer
- * AcceptorCurrencyConversionRequestV04.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV04#mmSecurityTrailer
+ * AcceptorCurrencyConversionRequestV04.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV06#SecurityTrailer
- * AcceptorCancellationAdviceResponseV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV06#mmSecurityTrailer
+ * AcceptorCancellationAdviceResponseV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV06#SecurityTrailer
- * AcceptorCancellationResponseV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV06#mmSecurityTrailer
+ * AcceptorCancellationResponseV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV06#SecurityTrailer
- * AcceptorReconciliationRequestV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV06#mmSecurityTrailer
+ * AcceptorReconciliationRequestV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#SecurityTrailer
- * AcceptorDiagnosticRequestV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06#mmSecurityTrailer
+ * AcceptorDiagnosticRequestV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV01#SecurityTrailer
- * AcceptorCurrencyConversionAdviceResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV01#mmSecurityTrailer
+ * AcceptorCurrencyConversionAdviceResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#SecurityTrailer
- * AcceptorCurrencyConversionAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#mmSecurityTrailer
+ * AcceptorCurrencyConversionAdviceV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -298,6 +298,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContentInformationType15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType2Code contentType;
 	/**
 	 * Type of data protection.
 	 * <p>
@@ -327,11 +328,11 @@ public class ContentInformationType15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType11#ContentType
-	 * ContentInformationType11.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType11#mmContentType
+	 * ContentInformationType11.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ContentInformationType15.mmObject();
 			isDerived = false;
@@ -339,12 +340,13 @@ public class ContentInformationType15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.ContentType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmContentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	protected AuthenticatedData4 authenticatedData;
 	/**
 	 * Data protection by a message authentication code (MAC).
 	 * <p>
@@ -372,11 +374,11 @@ public class ContentInformationType15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType11#AuthenticatedData
-	 * ContentInformationType11.AuthenticatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType11#mmAuthenticatedData
+	 * ContentInformationType11.mmAuthenticatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType15.mmObject();
 			isDerived = false;
@@ -384,57 +386,57 @@ public class ContentInformationType15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.AuthenticatedData;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmAuthenticatedData;
 			maxOccurs = 1;
-			type_lazy = () -> AuthenticatedData4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType15.ContentType, com.tools20022.repository.msg.ContentInformationType15.AuthenticatedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.SecurityTrailer, com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.SecurityTrailer,
-						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.SecurityTrailer, com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.SecurityTrailer,
-						com.tools20022.repository.area.caam.ATMDiagnosticRequestV01.SecurityTrailer, com.tools20022.repository.area.caam.HostToATMRequestV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV01.SecurityTrailer, com.tools20022.repository.area.catp.ATMInquiryRequestV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMCompletionAdviceV01.SecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.SecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.SecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMPINManagementRequestV01.SecurityTrailer, com.tools20022.repository.area.catp.ATMPINManagementResponseV01.SecurityTrailer,
-						com.tools20022.repository.area.cain.NetworkManagementResponse.SecurityTrailer, com.tools20022.repository.area.cain.AcquirerFinancialResponse.SecurityTrailer,
-						com.tools20022.repository.area.cain.AcquirerReversalInitiation.SecurityTrailer, com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.SecurityTrailer,
-						com.tools20022.repository.area.cain.ReconciliationInitiation.SecurityTrailer, com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.SecurityTrailer,
-						com.tools20022.repository.area.cain.NetworkManagementInitiation.SecurityTrailer, com.tools20022.repository.area.cain.AcquirerReversalResponse.SecurityTrailer,
-						com.tools20022.repository.area.cain.ReconciliationResponse.SecurityTrailer, com.tools20022.repository.area.cain.AcquirerFinancialInitiation.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV03.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationResponseV05.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV05.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV03.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV05.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV05.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV05.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV05.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.SecurityTrailer,
-						com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.SecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalRequestV02.SecurityTrailer,
-						com.tools20022.repository.area.caam.ATMExceptionAdviceV01.SecurityTrailer, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.SecurityTrailer,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02.SecurityTrailer, com.tools20022.repository.area.catp.ATMDepositResponseV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMDepositRequestV01.SecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV02.SecurityTrailer, com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMPINManagementRequestV02.SecurityTrailer, com.tools20022.repository.area.catp.ATMTransferRequestV01.SecurityTrailer,
-						com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.SecurityTrailer, com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMWithdrawalResponseV02.SecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMPINManagementResponseV02.SecurityTrailer, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMInquiryRequestV02.SecurityTrailer, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.SecurityTrailer,
-						com.tools20022.repository.area.catp.ATMCompletionAdviceV02.SecurityTrailer, com.tools20022.repository.area.catp.ATMTransferResponseV01.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV06.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV06.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV06.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV06.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV04.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV06.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV04.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV06.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationResponseV06.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV06.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV01.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.SecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType15.mmContentType, com.tools20022.repository.msg.ContentInformationType15.mmAuthenticatedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmSecurityTrailer,
+						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmSecurityTrailer,
+						com.tools20022.repository.area.caam.ATMDiagnosticRequestV01.mmSecurityTrailer, com.tools20022.repository.area.caam.HostToATMRequestV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMInquiryRequestV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMCompletionAdviceV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMPINManagementResponseV01.mmSecurityTrailer,
+						com.tools20022.repository.area.cain.NetworkManagementResponse.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerFinancialResponse.mmSecurityTrailer,
+						com.tools20022.repository.area.cain.AcquirerReversalInitiation.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmSecurityTrailer,
+						com.tools20022.repository.area.cain.ReconciliationInitiation.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmSecurityTrailer,
+						com.tools20022.repository.area.cain.NetworkManagementInitiation.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerReversalResponse.mmSecurityTrailer,
+						com.tools20022.repository.area.cain.ReconciliationResponse.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerFinancialInitiation.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV03.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCancellationResponseV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV05.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV03.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV05.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV05.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV05.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.mmSecurityTrailer,
+						com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalRequestV02.mmSecurityTrailer,
+						com.tools20022.repository.area.caam.ATMExceptionAdviceV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmSecurityTrailer,
+						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMDepositResponseV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMDepositRequestV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMInquiryResponseV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMPINManagementRequestV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMTransferRequestV01.mmSecurityTrailer,
+						com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMWithdrawalResponseV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMInquiryRequestV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmSecurityTrailer,
+						com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMTransferResponseV01.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV06.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV06.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV04.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV04.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationResponseV06.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV01.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.mmSecurityTrailer);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType15";
 				definition = "General cryptographic message syntax (CMS) containing authenticated data.";
@@ -442,5 +444,21 @@ public class ContentInformationType15 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType2Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType2Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public AuthenticatedData4 getAuthenticatedData() {
+		return authenticatedData;
+	}
+
+	public void setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData4 authenticatedData) {
+		this.authenticatedData = authenticatedData;
 	}
 }

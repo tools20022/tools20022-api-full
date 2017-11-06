@@ -53,18 +53,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV02#Header
- * AcceptorRejectionV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV02#mmHeader
+ * AcceptorRejectionV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV02#Reject
- * AcceptorRejectionV02.Reject}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV02#mmReject
+ * AcceptorRejectionV02.mmReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV02#identifier
- * AcceptorRejectionV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.015.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorRejectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header5 header;
 	/**
 	 * Rejection message management information.
 	 * <p>
@@ -115,24 +114,25 @@ public class AcceptorRejectionV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#Header
-	 * AcceptorRejectionV03.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#mmHeader
+	 * AcceptorRejectionV03.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Rejection message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV03.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV03.mmHeader);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header5.mmObject();
 		}
 	};
+	protected AcceptorRejection1 reject;
 	/**
 	 * Information related to the reject.
 	 * <p>
@@ -158,49 +158,22 @@ public class AcceptorRejectionV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#Reject
-	 * AcceptorRejectionV03.Reject}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#mmReject
+	 * AcceptorRejectionV03.mmReject}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rjct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			definition = "Information related to the reject.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV03.Reject);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV03.mmReject);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "015"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "015";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -210,16 +183,39 @@ public class AcceptorRejectionV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorRejectionV02";
 				definition = "The AcceptorRejection message is sent by the acquirer (or its agent) to reject a message request or advice sent by an acceptor (or its agent), to indicate that the received message could not be processed.";
-				previousVersion_lazy = () -> AcceptorRejectionV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorRejectionV03.mmObject());
+				previousVersion_lazy = () -> AcceptorRejectionV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrRjctn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV02.Header, com.tools20022.repository.area.caaa.AcceptorRejectionV02.Reject);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorRejectionV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorRejectionV02.mmHeader, com.tools20022.repository.area.caaa.AcceptorRejectionV02.mmReject);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "015";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header5 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header5 header) {
+		this.header = header;
+	}
+
+	public AcceptorRejection1 getReject() {
+		return reject;
+	}
+
+	public void setReject(AcceptorRejection1 reject) {
+		this.reject = reject;
 	}
 }

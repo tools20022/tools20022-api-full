@@ -37,30 +37,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#InconsistencyIndicator
- * RecordTechnicalData3.InconsistencyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#mmInconsistencyIndicator
+ * RecordTechnicalData3.mmInconsistencyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#LastUpdate
- * RecordTechnicalData3.LastUpdate}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#mmLastUpdate
+ * RecordTechnicalData3.mmLastUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#SubmissionDateTime
- * RecordTechnicalData3.SubmissionDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#mmSubmissionDateTime
+ * RecordTechnicalData3.mmSubmissionDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#RelevantCompetentAuthority
- * RecordTechnicalData3.RelevantCompetentAuthority}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#mmRelevantCompetentAuthority
+ * RecordTechnicalData3.mmRelevantCompetentAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#PublicationPeriod
- * RecordTechnicalData3.PublicationPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#mmPublicationPeriod
+ * RecordTechnicalData3.mmPublicationPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#NeverPublished
- * RecordTechnicalData3.NeverPublished}</li>
+ * {@linkplain com.tools20022.repository.msg.RecordTechnicalData3#mmNeverPublished
+ * RecordTechnicalData3.mmNeverPublished}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RecordTechnicalData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator inconsistencyIndicator;
 	/**
 	 * Flag to say if there is an inconsistency across all submitting entities
 	 * records.
@@ -110,7 +111,7 @@ public class RecordTechnicalData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InconsistencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInconsistencyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -118,11 +119,12 @@ public class RecordTechnicalData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InconsistencyIndicator";
 			definition = "Flag to say if there is an inconsistency across all submitting entities records.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected ISODateTime lastUpdate;
 	/**
 	 * Last date for which data was received for this instrument.
 	 * <p>
@@ -151,7 +153,7 @@ public class RecordTechnicalData3 {
 	 * "Last date for which data was received for this instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastUpdate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastUpdate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -159,11 +161,12 @@ public class RecordTechnicalData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdate";
 			definition = "Last date for which data was received for this instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime submissionDateTime;
 	/**
 	 * Defines the date and time when this instrument was originally received at
 	 * the submission destination.
@@ -194,7 +197,7 @@ public class RecordTechnicalData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubmissionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -202,11 +205,12 @@ public class RecordTechnicalData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Defines the date and time when this instrument was originally received at the submission destination.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CountryCode relevantCompetentAuthority;
 	/**
 	 * Country code of the relevant competent authority of the instrument.
 	 * <p>
@@ -235,7 +239,7 @@ public class RecordTechnicalData3 {
 	 * "Country code of the relevant competent authority of the instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelevantCompetentAuthority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelevantCompetentAuthority = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -243,11 +247,12 @@ public class RecordTechnicalData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelevantCompetentAuthority";
 			definition = "Country code of the relevant competent authority of the instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Period4Choice publicationPeriod;
 	/**
 	 * Period for which the associated instrument has been publically available.
 	 * <p>
@@ -276,7 +281,7 @@ public class RecordTechnicalData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PublicationPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPublicationPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -284,12 +289,13 @@ public class RecordTechnicalData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicationPeriod";
 			definition = "Period for which the associated instrument has been publically available.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected TrueFalseIndicator neverPublished;
 	/**
 	 * Flag to say if the record has ever been published.
 	 * <p>
@@ -318,7 +324,7 @@ public class RecordTechnicalData3 {
 	 * definition} = "Flag to say if the record has ever been published."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NeverPublished = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNeverPublished = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -326,8 +332,8 @@ public class RecordTechnicalData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NeverPublished";
 			definition = "Flag to say if the record has ever been published.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -335,10 +341,10 @@ public class RecordTechnicalData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData3.InconsistencyIndicator, com.tools20022.repository.msg.RecordTechnicalData3.LastUpdate,
-						com.tools20022.repository.msg.RecordTechnicalData3.SubmissionDateTime, com.tools20022.repository.msg.RecordTechnicalData3.RelevantCompetentAuthority,
-						com.tools20022.repository.msg.RecordTechnicalData3.PublicationPeriod, com.tools20022.repository.msg.RecordTechnicalData3.NeverPublished);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData3.mmInconsistencyIndicator, com.tools20022.repository.msg.RecordTechnicalData3.mmLastUpdate,
+						com.tools20022.repository.msg.RecordTechnicalData3.mmSubmissionDateTime, com.tools20022.repository.msg.RecordTechnicalData3.mmRelevantCompetentAuthority,
+						com.tools20022.repository.msg.RecordTechnicalData3.mmPublicationPeriod, com.tools20022.repository.msg.RecordTechnicalData3.mmNeverPublished);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RecordTechnicalData3";
 				definition = "Instrument specific technical data to support identification.";
@@ -346,5 +352,53 @@ public class RecordTechnicalData3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getInconsistencyIndicator() {
+		return inconsistencyIndicator;
+	}
+
+	public void setInconsistencyIndicator(TrueFalseIndicator inconsistencyIndicator) {
+		this.inconsistencyIndicator = inconsistencyIndicator;
+	}
+
+	public ISODateTime getLastUpdate() {
+		return lastUpdate;
+	}
+
+	public void setLastUpdate(ISODateTime lastUpdate) {
+		this.lastUpdate = lastUpdate;
+	}
+
+	public ISODateTime getSubmissionDateTime() {
+		return submissionDateTime;
+	}
+
+	public void setSubmissionDateTime(ISODateTime submissionDateTime) {
+		this.submissionDateTime = submissionDateTime;
+	}
+
+	public CountryCode getRelevantCompetentAuthority() {
+		return relevantCompetentAuthority;
+	}
+
+	public void setRelevantCompetentAuthority(CountryCode relevantCompetentAuthority) {
+		this.relevantCompetentAuthority = relevantCompetentAuthority;
+	}
+
+	public Period4Choice getPublicationPeriod() {
+		return publicationPeriod;
+	}
+
+	public void setPublicationPeriod(Period4Choice publicationPeriod) {
+		this.publicationPeriod = publicationPeriod;
+	}
+
+	public TrueFalseIndicator getNeverPublished() {
+		return neverPublished;
+	}
+
+	public void setNeverPublished(TrueFalseIndicator neverPublished) {
+		this.neverPublished = neverPublished;
 	}
 }

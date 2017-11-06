@@ -35,42 +35,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#SafekeepingAccount
- * HoldingAccountLevel1Code.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmSafekeepingAccount
+ * HoldingAccountLevel1Code.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level1
- * HoldingAccountLevel1Code.Level1}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel1
+ * HoldingAccountLevel1Code.mmLevel1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level2
- * HoldingAccountLevel1Code.Level2}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel2
+ * HoldingAccountLevel1Code.mmLevel2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level3
- * HoldingAccountLevel1Code.Level3}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel3
+ * HoldingAccountLevel1Code.mmLevel3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level4
- * HoldingAccountLevel1Code.Level4}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel4
+ * HoldingAccountLevel1Code.mmLevel4}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level5
- * HoldingAccountLevel1Code.Level5}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel5
+ * HoldingAccountLevel1Code.mmLevel5}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level6
- * HoldingAccountLevel1Code.Level6}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel6
+ * HoldingAccountLevel1Code.mmLevel6}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level7
- * HoldingAccountLevel1Code.Level7}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel7
+ * HoldingAccountLevel1Code.mmLevel7}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level8
- * HoldingAccountLevel1Code.Level8}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel8
+ * HoldingAccountLevel1Code.mmLevel8}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#Level9
- * HoldingAccountLevel1Code.Level9}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code#mmLevel9
+ * HoldingAccountLevel1Code.mmLevel9}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,7 +102,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "SafekeepingAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccount = new MMCode() {
+	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
@@ -125,7 +125,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level1"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level1 = new MMCode() {
+	public static final MMCode mmLevel1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level1";
@@ -148,7 +148,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level2"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level2 = new MMCode() {
+	public static final MMCode mmLevel2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level2";
@@ -171,7 +171,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level3"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level3 = new MMCode() {
+	public static final MMCode mmLevel3 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level3";
@@ -194,7 +194,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level4"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level4 = new MMCode() {
+	public static final MMCode mmLevel4 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level4";
@@ -217,7 +217,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level5"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level5 = new MMCode() {
+	public static final MMCode mmLevel5 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level5";
@@ -240,7 +240,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level6"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level6 = new MMCode() {
+	public static final MMCode mmLevel6 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level6";
@@ -263,7 +263,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level7"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level7 = new MMCode() {
+	public static final MMCode mmLevel7 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level7";
@@ -286,7 +286,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level8"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level8 = new MMCode() {
+	public static final MMCode mmLevel8 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level8";
@@ -309,7 +309,7 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	 * name} = "Level9"</li>
 	 * </ul>
 	 */
-	public static final MMCode Level9 = new MMCode() {
+	public static final MMCode mmLevel9 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level9";
@@ -320,14 +320,14 @@ public class HoldingAccountLevel1Code extends HoldingAccountLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HoldingAccountLevel1Code";
 				definition = "Specifies the level at which the safekeeping holding account has been defined.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingAccountLevel1Code.SafekeepingAccount, com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level1,
-						com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level2, com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level3, com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level4,
-						com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level5, com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level6, com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level7,
-						com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level8, com.tools20022.repository.codeset.HoldingAccountLevel1Code.Level9);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmSafekeepingAccount, com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel1,
+						com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel2, com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel3, com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel4,
+						com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel5, com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel6, com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel7,
+						com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel8, com.tools20022.repository.codeset.HoldingAccountLevel1Code.mmLevel9);
 				trace_lazy = () -> HoldingAccountLevelCode.mmObject();
 			}
 		});

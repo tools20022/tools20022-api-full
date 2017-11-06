@@ -34,45 +34,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#AccountClosingInProcess
- * DisabledReason2Code.AccountClosingInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmAccountClosingInProcess
+ * DisabledReason2Code.mmAccountClosingInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Bankruptcy
- * DisabledReason2Code.Bankruptcy}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmBankruptcy
+ * DisabledReason2Code.mmBankruptcy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Commitment
- * DisabledReason2Code.Commitment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmCommitment
+ * DisabledReason2Code.mmCommitment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Confiscation
- * DisabledReason2Code.Confiscation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmConfiscation
+ * DisabledReason2Code.mmConfiscation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#MortisCausa
- * DisabledReason2Code.MortisCausa}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmMortisCausa
+ * DisabledReason2Code.mmMortisCausa}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#PendingComplianceVerification
- * DisabledReason2Code.PendingComplianceVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmPendingComplianceVerification
+ * DisabledReason2Code.mmPendingComplianceVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Pledged
- * DisabledReason2Code.Pledged}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmPledged
+ * DisabledReason2Code.mmPledged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Reregistration
- * DisabledReason2Code.Reregistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmReregistration
+ * DisabledReason2Code.mmReregistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Sanctions
- * DisabledReason2Code.Sanctions}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmSanctions
+ * DisabledReason2Code.mmSanctions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Transfer
- * DisabledReason2Code.Transfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmTransfer
+ * DisabledReason2Code.mmTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Rejected
- * DisabledReason2Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmRejected
+ * DisabledReason2Code.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,7 +102,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "AccountClosingInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountClosingInProcess = new MMCode() {
+	public static final MMCode mmAccountClosingInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosingInProcess";
@@ -125,7 +125,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Bankruptcy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bankruptcy = new MMCode() {
+	public static final MMCode mmBankruptcy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
@@ -148,7 +148,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Commitment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Commitment = new MMCode() {
+	public static final MMCode mmCommitment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commitment";
@@ -171,7 +171,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Confiscation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Confiscation = new MMCode() {
+	public static final MMCode mmConfiscation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confiscation";
@@ -194,7 +194,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "MortisCausa"</li>
 	 * </ul>
 	 */
-	public static final MMCode MortisCausa = new MMCode() {
+	public static final MMCode mmMortisCausa = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortisCausa";
@@ -217,7 +217,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "PendingComplianceVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingComplianceVerification = new MMCode() {
+	public static final MMCode mmPendingComplianceVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingComplianceVerification";
@@ -240,7 +240,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Pledged"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pledged = new MMCode() {
+	public static final MMCode mmPledged = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
@@ -263,7 +263,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Reregistration"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reregistration = new MMCode() {
+	public static final MMCode mmReregistration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reregistration";
@@ -286,7 +286,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Sanctions"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sanctions = new MMCode() {
+	public static final MMCode mmSanctions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sanctions";
@@ -309,7 +309,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Transfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Transfer = new MMCode() {
+	public static final MMCode mmTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
@@ -332,7 +332,7 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -343,15 +343,15 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DisabledReason2Code";
 				definition = "Specifies the reason an account is disabled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisabledReason2Code.AccountClosingInProcess, com.tools20022.repository.codeset.DisabledReason2Code.Bankruptcy,
-						com.tools20022.repository.codeset.DisabledReason2Code.Commitment, com.tools20022.repository.codeset.DisabledReason2Code.Confiscation, com.tools20022.repository.codeset.DisabledReason2Code.MortisCausa,
-						com.tools20022.repository.codeset.DisabledReason2Code.PendingComplianceVerification, com.tools20022.repository.codeset.DisabledReason2Code.Pledged,
-						com.tools20022.repository.codeset.DisabledReason2Code.Reregistration, com.tools20022.repository.codeset.DisabledReason2Code.Sanctions, com.tools20022.repository.codeset.DisabledReason2Code.Transfer,
-						com.tools20022.repository.codeset.DisabledReason2Code.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisabledReason2Code.mmAccountClosingInProcess, com.tools20022.repository.codeset.DisabledReason2Code.mmBankruptcy,
+						com.tools20022.repository.codeset.DisabledReason2Code.mmCommitment, com.tools20022.repository.codeset.DisabledReason2Code.mmConfiscation, com.tools20022.repository.codeset.DisabledReason2Code.mmMortisCausa,
+						com.tools20022.repository.codeset.DisabledReason2Code.mmPendingComplianceVerification, com.tools20022.repository.codeset.DisabledReason2Code.mmPledged,
+						com.tools20022.repository.codeset.DisabledReason2Code.mmReregistration, com.tools20022.repository.codeset.DisabledReason2Code.mmSanctions, com.tools20022.repository.codeset.DisabledReason2Code.mmTransfer,
+						com.tools20022.repository.codeset.DisabledReason2Code.mmRejected);
 				trace_lazy = () -> BlockedReasonCode.mmObject();
 			}
 		});

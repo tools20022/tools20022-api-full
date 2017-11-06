@@ -30,22 +30,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#HitLift
- * QuoteResponseTypeCode.HitLift}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmHitLift
+ * QuoteResponseTypeCode.mmHitLift}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#CounterQuote
- * QuoteResponseTypeCode.CounterQuote}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmCounterQuote
+ * QuoteResponseTypeCode.mmCounterQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#Expired
- * QuoteResponseTypeCode.Expired}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmExpired
+ * QuoteResponseTypeCode.mmExpired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#Cover
- * QuoteResponseTypeCode.Cover}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmCover
+ * QuoteResponseTypeCode.mmCover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#DoneAway
- * QuoteResponseTypeCode.DoneAway}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#Pass
- * QuoteResponseTypeCode.Pass}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmDoneAway
+ * QuoteResponseTypeCode.mmDoneAway}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmPass
+ * QuoteResponseTypeCode.mmPass}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +102,7 @@ public class QuoteResponseTypeCode {
 	 * definition} = "Acceptance by a party of the conditions of a quote."</li>
 	 * </ul>
 	 */
-	public static final MMCode HitLift = new MMCode() {
+	public static final MMCode mmHitLift = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HitLift";
@@ -134,7 +135,7 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CounterQuote = new MMCode() {
+	public static final MMCode mmCounterQuote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterQuote";
@@ -165,7 +166,7 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Expired = new MMCode() {
+	public static final MMCode mmExpired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
@@ -197,7 +198,7 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Cover = new MMCode() {
+	public static final MMCode mmCover = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cover";
@@ -227,7 +228,7 @@ public class QuoteResponseTypeCode {
 	 * definition} = "Trade completed with a third party, counter-party."</li>
 	 * </ul>
 	 */
-	public static final MMCode DoneAway = new MMCode() {
+	public static final MMCode mmDoneAway = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneAway";
@@ -260,7 +261,7 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Pass = new MMCode() {
+	public static final MMCode mmPass = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pass";
@@ -273,14 +274,14 @@ public class QuoteResponseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HILI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuoteResponseTypeCode";
 				definition = "Qualifies the nature of response to a previoulsy addressed quote.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteResponseTypeCode.HitLift, com.tools20022.repository.codeset.QuoteResponseTypeCode.CounterQuote,
-						com.tools20022.repository.codeset.QuoteResponseTypeCode.Expired, com.tools20022.repository.codeset.QuoteResponseTypeCode.Cover, com.tools20022.repository.codeset.QuoteResponseTypeCode.DoneAway,
-						com.tools20022.repository.codeset.QuoteResponseTypeCode.Pass);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteResponseTypeCode.mmHitLift, com.tools20022.repository.codeset.QuoteResponseTypeCode.mmCounterQuote,
+						com.tools20022.repository.codeset.QuoteResponseTypeCode.mmExpired, com.tools20022.repository.codeset.QuoteResponseTypeCode.mmCover, com.tools20022.repository.codeset.QuoteResponseTypeCode.mmDoneAway,
+						com.tools20022.repository.codeset.QuoteResponseTypeCode.mmPass);
 				derivation_lazy = () -> Arrays.asList(QuoteResponseType1Code.mmObject());
 			}
 		});

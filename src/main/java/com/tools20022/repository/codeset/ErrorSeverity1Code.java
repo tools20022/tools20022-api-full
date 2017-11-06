@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * ErrorSeverityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ErrorSeverity1Code#Fatal
- * ErrorSeverity1Code.Fatal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ErrorSeverity1Code#mmFatal
+ * ErrorSeverity1Code.mmFatal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ErrorSeverity1Code#Transient
- * ErrorSeverity1Code.Transient}</li>
+ * {@linkplain com.tools20022.repository.codeset.ErrorSeverity1Code#mmTransient
+ * ErrorSeverity1Code.mmTransient}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +74,7 @@ public class ErrorSeverity1Code extends ErrorSeverityCode {
 	 * name} = "Fatal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fatal = new MMCode() {
+	public static final MMCode mmFatal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fatal";
@@ -97,7 +97,7 @@ public class ErrorSeverity1Code extends ErrorSeverityCode {
 	 * name} = "Transient"</li>
 	 * </ul>
 	 */
-	public static final MMCode Transient = new MMCode() {
+	public static final MMCode mmTransient = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transient";
@@ -108,11 +108,11 @@ public class ErrorSeverity1Code extends ErrorSeverityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorSeverity1Code";
 				definition = "Indicates the severity of the related error.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ErrorSeverity1Code.Fatal, com.tools20022.repository.codeset.ErrorSeverity1Code.Transient);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ErrorSeverity1Code.mmFatal, com.tools20022.repository.codeset.ErrorSeverity1Code.mmTransient);
 				trace_lazy = () -> ErrorSeverityCode.mmObject();
 			}
 		});

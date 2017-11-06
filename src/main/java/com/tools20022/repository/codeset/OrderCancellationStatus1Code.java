@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code#SentToNextParty
- * OrderCancellationStatus1Code.SentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code#mmSentToNextParty
+ * OrderCancellationStatus1Code.mmSentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code#CancellationPending
- * OrderCancellationStatus1Code.CancellationPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code#mmCancellationPending
+ * OrderCancellationStatus1Code.mmCancellationPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code#CancellationCompleted
- * OrderCancellationStatus1Code.CancellationCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus1Code#mmCancellationCompleted
+ * OrderCancellationStatus1Code.mmCancellationCompleted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -108,7 +108,7 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	 * name} = "CancellationPending"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationPending = new MMCode() {
+	public static final MMCode mmCancellationPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationPending";
@@ -131,7 +131,7 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	 * name} = "CancellationCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationCompleted = new MMCode() {
+	public static final MMCode mmCancellationCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
@@ -142,13 +142,13 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STNP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderCancellationStatus1Code";
 				definition = "Specifies the current status of the order cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderCancellationStatus1Code.SentToNextParty, com.tools20022.repository.codeset.OrderCancellationStatus1Code.CancellationPending,
-						com.tools20022.repository.codeset.OrderCancellationStatus1Code.CancellationCompleted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderCancellationStatus1Code.mmSentToNextParty, com.tools20022.repository.codeset.OrderCancellationStatus1Code.mmCancellationPending,
+						com.tools20022.repository.codeset.OrderCancellationStatus1Code.mmCancellationCompleted);
 				trace_lazy = () -> OrderCancellationStatusCode.mmObject();
 			}
 		});

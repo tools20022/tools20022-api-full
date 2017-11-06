@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.References11;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,24 +74,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#MessageIdentification
- * ReversalOfTransferOutConfirmationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#References
- * ReversalOfTransferOutConfirmationV04.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#mmReferences
+ * ReversalOfTransferOutConfirmationV04.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#Reversal
- * ReversalOfTransferOutConfirmationV04.Reversal}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#mmReversal
+ * ReversalOfTransferOutConfirmationV04.mmReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#CopyDetails
- * ReversalOfTransferOutConfirmationV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#mmCopyDetails
+ * ReversalOfTransferOutConfirmationV04.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#identifier
- * ReversalOfTransferOutConfirmationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.004.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReversalOfTransferOutConfirmationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -146,24 +146,25 @@ public class ReversalOfTransferOutConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#MessageIdentification
-	 * ReversalOfTransferOutConfirmationV05.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#mmMessageIdentification
+	 * ReversalOfTransferOutConfirmationV05.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.mmMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<References11> references;
 	/**
 	 * Reference to the transaction identifier issued by the counterparty.
 	 * Building block may also be used to reference a previous transaction, or
@@ -192,23 +193,24 @@ public class ReversalOfTransferOutConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#References
-	 * ReversalOfTransferOutConfirmationV05.References}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#mmReferences
+	 * ReversalOfTransferOutConfirmationV05.mmReferences}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.References);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.mmReferences);
 			minOccurs = 1;
 			complexType_lazy = () -> References11.mmObject();
 		}
 	};
+	protected Reversal1Choice reversal;
 	/**
 	 * Choice between reversal by reference or by reversal details.
 	 * <p>
@@ -235,24 +237,25 @@ public class ReversalOfTransferOutConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#Reversal
-	 * ReversalOfTransferOutConfirmationV05.Reversal}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#mmReversal
+	 * ReversalOfTransferOutConfirmationV05.mmReversal}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reversal = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReversal = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rvsl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
 			definition = "Choice between reversal by reference or by reversal details.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.Reversal);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.mmReversal);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Reversal1Choice.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -279,49 +282,22 @@ public class ReversalOfTransferOutConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#CopyDetails
-	 * ReversalOfTransferOutConfirmationV05.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#mmCopyDetails
+	 * ReversalOfTransferOutConfirmationV05.mmCopyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.CopyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.mmCopyDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "004";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -331,18 +307,57 @@ public class ReversalOfTransferOutConfirmationV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReversalOfTransferOutConfirmationV04";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the ReversalOfTransferOutConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent TransferOutConfirmation message.\r\nUsage\r\nThe ReversalOfTransferOutConfirmation message is used to reverse a previously sent TransferOutConfirmation.\r\nThere are two ways to specify the reversal of the transfer out confirmation. Either:\r\n- the business references, for example, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,\r\n- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.\r\nThe message identification of the TransferOutConfirmation message in which the transfer out confirmation was conveyed may also be quoted in PreviousReference. The message identification of the TransferOutInstruction message in which the transfer out instruction was conveyed may also be quoted in RelatedReference.";
-				previousVersion_lazy = () -> ReversalOfTransferOutConfirmationV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferOutConfirmationV05.mmObject());
+				previousVersion_lazy = () -> ReversalOfTransferOutConfirmationV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "RvslOfTrfOutConf";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.References, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.Reversal,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.CopyDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.mmReferences, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.mmReversal,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.mmCopyDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "004";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public List<References11> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<References11> references) {
+		this.references = references;
+	}
+
+	public Reversal1Choice getReversal() {
+		return reversal;
+	}
+
+	public void setReversal(Reversal1Choice reversal) {
+		this.reversal = reversal;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
 	}
 }

@@ -29,21 +29,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#Cash
- * DividendTypeCode.Cash}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#Units
- * DividendTypeCode.Units}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#Scrip
- * DividendTypeCode.Scrip}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#InKind
- * DividendTypeCode.InKind}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#mmCash
+ * DividendTypeCode.mmCash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#mmUnits
+ * DividendTypeCode.mmUnits}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#mmScrip
+ * DividendTypeCode.mmScrip}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DividendTypeCode#mmInKind
+ * DividendTypeCode.mmInKind}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class DividendTypeCode {
 	 * definition} = "Dividend is paid in cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cash";
@@ -114,7 +114,7 @@ public class DividendTypeCode {
 	 * definition} = "Dividend is paid in units."</li>
 	 * </ul>
 	 */
-	public static final MMCode Units = new MMCode() {
+	public static final MMCode mmUnits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Units";
@@ -144,7 +144,7 @@ public class DividendTypeCode {
 	 * definition} = "Dividend is paid in the form of scrip."</li>
 	 * </ul>
 	 */
-	public static final MMCode Scrip = new MMCode() {
+	public static final MMCode mmScrip = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Scrip";
@@ -174,7 +174,7 @@ public class DividendTypeCode {
 	 * definition} = "Dividend is paid in kind."</li>
 	 * </ul>
 	 */
-	public static final MMCode InKind = new MMCode() {
+	public static final MMCode mmInKind = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InKind";
@@ -187,13 +187,13 @@ public class DividendTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DividendTypeCode";
 				definition = "Specifies the nature of the dividend.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DividendTypeCode.Cash, com.tools20022.repository.codeset.DividendTypeCode.Units, com.tools20022.repository.codeset.DividendTypeCode.Scrip,
-						com.tools20022.repository.codeset.DividendTypeCode.InKind);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DividendTypeCode.mmCash, com.tools20022.repository.codeset.DividendTypeCode.mmUnits, com.tools20022.repository.codeset.DividendTypeCode.mmScrip,
+						com.tools20022.repository.codeset.DividendTypeCode.mmInKind);
 			}
 		});
 		return mmObject_lazy.get();

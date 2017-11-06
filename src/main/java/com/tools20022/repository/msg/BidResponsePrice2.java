@@ -45,18 +45,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#Commission
- * BidResponsePrice2.Commission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmCommission
+ * BidResponsePrice2.mmCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#GrossIndicator
- * BidResponsePrice2.GrossIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#Price
- * BidResponsePrice2.Price}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#Side
- * BidResponsePrice2.Side}</li>
+ * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmGrossIndicator
+ * BidResponsePrice2.mmGrossIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmPrice
+ * BidResponsePrice2.mmPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmSide
+ * BidResponsePrice2.mmSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#NonDisclosedBidDetails
- * BidResponsePrice2.NonDisclosedBidDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmNonDisclosedBidDetails
+ * BidResponsePrice2.mmNonDisclosedBidDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BidResponsePrice2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Commission2 commission;
 	/**
 	 * Amount of money due to a party as compensation for a service.
 	 * <p>
@@ -93,8 +94,8 @@ public class BidResponsePrice2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#Commission
-	 * SecuritiesQuoteVariable.Commission}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmCommission
+	 * SecuritiesQuoteVariable.mmCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,20 +115,21 @@ public class BidResponsePrice2 {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Commission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmCommission;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.Commission;
 			isDerived = false;
 			xmlTag = "Comssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount of money due to a party as compensation for a service.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> Commission2.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
 		}
 	};
+	protected TrueFalseIndicator grossIndicator;
 	/**
 	 * Indicates whether the price is gross of commission and tax.
 	 * <p>
@@ -141,8 +143,8 @@ public class BidResponsePrice2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#GrossAmountIndicator
-	 * ListTrading.GrossAmountIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmGrossAmountIndicator
+	 * ListTrading.mmGrossAmountIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +164,21 @@ public class BidResponsePrice2 {
 	 * "Indicates whether the price is gross of commission and tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.GrossAmountIndicator;
 			isDerived = false;
 			xmlTag = "GrssInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether the price is gross of commission and tax.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Price1 price;
 	/**
 	 * Proposition of price for a financial instrument.
 	 * <p>
@@ -187,7 +190,8 @@ public class BidResponsePrice2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#Price Quote.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,20 +210,21 @@ public class BidResponsePrice2 {
 	 * definition} = "Proposition of price for a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmPrice;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.Price;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Proposition of price for a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Side1Code side;
 	/**
 	 * Indicates the side of the bid.
 	 * <p>
@@ -232,8 +237,8 @@ public class BidResponsePrice2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,20 +257,21 @@ public class BidResponsePrice2 {
 	 * definition} = "Indicates the side of the bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Indicates the side of the bid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected NonDisclosedBid2 nonDisclosedBidDetails;
 	/**
 	 * List trading by which the buy-side provides details to the sell-side
 	 * information about the sector, country, index and potential market impact
@@ -302,34 +308,74 @@ public class BidResponsePrice2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonDisclosedBidDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonDisclosedBidDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BidResponsePrice2.mmObject();
 			businessComponentTrace_lazy = () -> NonDisclosedListTrading.mmObject();
+			componentContext_lazy = () -> BidResponsePrice2.mmObject();
 			isDerived = false;
 			xmlTag = "NonDscldBidDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDisclosedBidDetails";
 			definition = "List trading by which the buy-side provides details to the sell-side information about the sector, country, index and potential market impact of the financial instrument to be bought or sold. Using this information, the sell-side firms bid for the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> NonDisclosedBid2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BidResponsePrice2.Commission, com.tools20022.repository.msg.BidResponsePrice2.GrossIndicator, com.tools20022.repository.msg.BidResponsePrice2.Price,
-						com.tools20022.repository.msg.BidResponsePrice2.Side, com.tools20022.repository.msg.BidResponsePrice2.NonDisclosedBidDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BidResponsePrice2.mmCommission, com.tools20022.repository.msg.BidResponsePrice2.mmGrossIndicator,
+						com.tools20022.repository.msg.BidResponsePrice2.mmPrice, com.tools20022.repository.msg.BidResponsePrice2.mmSide, com.tools20022.repository.msg.BidResponsePrice2.mmNonDisclosedBidDetails);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BidResponsePrice2";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Commission2 getCommission() {
+		return commission;
+	}
+
+	public void setCommission(com.tools20022.repository.msg.Commission2 commission) {
+		this.commission = commission;
+	}
+
+	public TrueFalseIndicator getGrossIndicator() {
+		return grossIndicator;
+	}
+
+	public void setGrossIndicator(TrueFalseIndicator grossIndicator) {
+		this.grossIndicator = grossIndicator;
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public NonDisclosedBid2 getNonDisclosedBidDetails() {
+		return nonDisclosedBidDetails;
+	}
+
+	public void setNonDisclosedBidDetails(com.tools20022.repository.msg.NonDisclosedBid2 nonDisclosedBidDetails) {
+		this.nonDisclosedBidDetails = nonDisclosedBidDetails;
 	}
 }

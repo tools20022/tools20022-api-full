@@ -33,35 +33,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * RepurchaseTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#Swap
- * RepurchaseType7Code.Swap}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmSwap
+ * RepurchaseType7Code.mmSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#RepurchaseCall
- * RepurchaseType7Code.RepurchaseCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmRepurchaseCall
+ * RepurchaseType7Code.mmRepurchaseCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#Pairoff
- * RepurchaseType7Code.Pairoff}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmPairoff
+ * RepurchaseType7Code.mmPairoff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#RepoRate
- * RepurchaseType7Code.RepoRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmRepoRate
+ * RepurchaseType7Code.mmRepoRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#Rollover
- * RepurchaseType7Code.Rollover}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#TopUp
- * RepurchaseType7Code.TopUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmRollover
+ * RepurchaseType7Code.mmRollover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#Withdrawal
- * RepurchaseType7Code.Withdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmTopUp
+ * RepurchaseType7Code.mmTopUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#PrincipalExposureAdjustment
- * RepurchaseType7Code.PrincipalExposureAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmWithdrawal
+ * RepurchaseType7Code.mmWithdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType7Code#mmPrincipalExposureAdjustment
+ * RepurchaseType7Code.mmPrincipalExposureAdjustment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +98,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "Swap"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swap = new MMCode() {
+	public static final MMCode mmSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
@@ -120,7 +121,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "RepurchaseCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseCall = new MMCode() {
+	public static final MMCode mmRepurchaseCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCall";
@@ -143,7 +144,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "Pairoff"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pairoff = new MMCode() {
+	public static final MMCode mmPairoff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pairoff";
@@ -166,7 +167,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "RepoRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepoRate = new MMCode() {
+	public static final MMCode mmRepoRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoRate";
@@ -189,7 +190,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "Rollover"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rollover = new MMCode() {
+	public static final MMCode mmRollover = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rollover";
@@ -212,7 +213,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "TopUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode TopUp = new MMCode() {
+	public static final MMCode mmTopUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUp";
@@ -235,7 +236,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "Withdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawal = new MMCode() {
+	public static final MMCode mmWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawal";
@@ -258,7 +259,7 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	 * name} = "PrincipalExposureAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrincipalExposureAdjustment = new MMCode() {
+	public static final MMCode mmPrincipalExposureAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalExposureAdjustment";
@@ -269,14 +270,14 @@ public class RepurchaseType7Code extends RepurchaseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CADJ");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseType7Code";
 				definition = "Specifies the type of repurchase transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType7Code.Swap, com.tools20022.repository.codeset.RepurchaseType7Code.RepurchaseCall,
-						com.tools20022.repository.codeset.RepurchaseType7Code.Pairoff, com.tools20022.repository.codeset.RepurchaseType7Code.RepoRate, com.tools20022.repository.codeset.RepurchaseType7Code.Rollover,
-						com.tools20022.repository.codeset.RepurchaseType7Code.TopUp, com.tools20022.repository.codeset.RepurchaseType7Code.Withdrawal, com.tools20022.repository.codeset.RepurchaseType7Code.PrincipalExposureAdjustment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType7Code.mmSwap, com.tools20022.repository.codeset.RepurchaseType7Code.mmRepurchaseCall,
+						com.tools20022.repository.codeset.RepurchaseType7Code.mmPairoff, com.tools20022.repository.codeset.RepurchaseType7Code.mmRepoRate, com.tools20022.repository.codeset.RepurchaseType7Code.mmRollover,
+						com.tools20022.repository.codeset.RepurchaseType7Code.mmTopUp, com.tools20022.repository.codeset.RepurchaseType7Code.mmWithdrawal, com.tools20022.repository.codeset.RepurchaseType7Code.mmPrincipalExposureAdjustment);
 				trace_lazy = () -> RepurchaseTypeCode.mmObject();
 			}
 		});

@@ -30,27 +30,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#SurvivingCompany
- * InstitutionalClassificationCode.SurvivingCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmSurvivingCompany
+ * InstitutionalClassificationCode.mmSurvivingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#DiscontinuedCompany
- * InstitutionalClassificationCode.DiscontinuedCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmDiscontinuedCompany
+ * InstitutionalClassificationCode.mmDiscontinuedCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#Subsidiary
- * InstitutionalClassificationCode.Subsidiary}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmSubsidiary
+ * InstitutionalClassificationCode.mmSubsidiary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#Unknown
- * InstitutionalClassificationCode.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmUnknown
+ * InstitutionalClassificationCode.mmUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#Parent
- * InstitutionalClassificationCode.Parent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmParent
+ * InstitutionalClassificationCode.mmParent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,7 +88,7 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SurvivingCompany = new MMCode() {
+	public static final MMCode mmSurvivingCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurvivingCompany";
@@ -121,7 +121,7 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DiscontinuedCompany = new MMCode() {
+	public static final MMCode mmDiscontinuedCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscontinuedCompany";
@@ -153,7 +153,7 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Subsidiary = new MMCode() {
+	public static final MMCode mmSubsidiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subsidiary";
@@ -186,7 +186,7 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -219,7 +219,7 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Parent = new MMCode() {
+	public static final MMCode mmParent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parent";
@@ -232,13 +232,13 @@ public class InstitutionalClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstitutionalClassificationCode";
 				definition = "TSE/JASDEC extension codes for mergers";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstitutionalClassificationCode.SurvivingCompany, com.tools20022.repository.codeset.InstitutionalClassificationCode.DiscontinuedCompany,
-						com.tools20022.repository.codeset.InstitutionalClassificationCode.Subsidiary, com.tools20022.repository.codeset.InstitutionalClassificationCode.Unknown,
-						com.tools20022.repository.codeset.InstitutionalClassificationCode.Parent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstitutionalClassificationCode.mmSurvivingCompany, com.tools20022.repository.codeset.InstitutionalClassificationCode.mmDiscontinuedCompany,
+						com.tools20022.repository.codeset.InstitutionalClassificationCode.mmSubsidiary, com.tools20022.repository.codeset.InstitutionalClassificationCode.mmUnknown,
+						com.tools20022.repository.codeset.InstitutionalClassificationCode.mmParent);
 			}
 		});
 		return mmObject_lazy.get();

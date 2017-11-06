@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SectorAndLocation1#Sector
- * SectorAndLocation1.Sector}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SectorAndLocation1#Location
- * SectorAndLocation1.Location}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SectorAndLocation1#mmSector
+ * SectorAndLocation1.mmSector}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SectorAndLocation1#mmLocation
+ * SectorAndLocation1.mmLocation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SectorAndLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SNA2008SectorIdentifier sector;
 	/**
 	 * Represents the counterparty institutional section (such as non-financial
 	 * corporation, central bank, ...).
@@ -88,8 +89,8 @@ public class SectorAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Sector#Identification
-	 * Sector.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Sector#mmIdentification
+	 * Sector.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,27 +113,28 @@ public class SectorAndLocation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.NameOrSector1Choice#Sector
-	 * NameOrSector1Choice.Sector}</li>
+	 * {@linkplain com.tools20022.repository.choice.NameOrSector1Choice#mmSector
+	 * NameOrSector1Choice.mmSector}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sector = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.mmIdentification;
 			componentContext_lazy = () -> SectorAndLocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.Identification;
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Represents the counterparty institutional section (such as non-financial corporation, central bank, ...).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NameOrSector1Choice.Sector);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NameOrSector1Choice.mmSector);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
 		}
 	};
+	protected CountryCode location;
 	/**
 	 * Location of the country in which the counterparty is incorporated.
 	 * <p>
@@ -145,8 +147,8 @@ public class SectorAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Country
-	 * PostalAddress.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+	 * PostalAddress.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,24 +170,24 @@ public class SectorAndLocation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1#Location
-	 * ReportedPartyIdentification1.Location}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1#mmLocation
+	 * ReportedPartyIdentification1.mmLocation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Location = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
 			componentContext_lazy = () -> SectorAndLocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Country;
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the country in which the counterparty is incorporated. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportedPartyIdentification1.Location);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportedPartyIdentification1.mmLocation);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -193,9 +195,9 @@ public class SectorAndLocation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SectorAndLocation1.Sector, com.tools20022.repository.msg.SectorAndLocation1.Location);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SectorAndLocation1.mmSector, com.tools20022.repository.msg.SectorAndLocation1.mmLocation);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SectorAndLocation1";
 				definition = "Provides the identification of the reported party through the sector and the location.";
@@ -203,5 +205,21 @@ public class SectorAndLocation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SNA2008SectorIdentifier getSector() {
+		return sector;
+	}
+
+	public void setSector(SNA2008SectorIdentifier sector) {
+		this.sector = sector;
+	}
+
+	public CountryCode getLocation() {
+		return location;
+	}
+
+	public void setLocation(CountryCode location) {
+		this.location = location;
 	}
 }

@@ -31,6 +31,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -87,27 +88,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#Assignment
- * DebitAuthorisationRequestV05.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#mmAssignment
+ * DebitAuthorisationRequestV05.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#Case
- * DebitAuthorisationRequestV05.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#mmCase
+ * DebitAuthorisationRequestV05.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#Underlying
- * DebitAuthorisationRequestV05.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#mmUnderlying
+ * DebitAuthorisationRequestV05.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#Detail
- * DebitAuthorisationRequestV05.Detail}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#mmDetail
+ * DebitAuthorisationRequestV05.mmDetail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#SupplementaryData
- * DebitAuthorisationRequestV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#mmSupplementaryData
+ * DebitAuthorisationRequestV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#identifier
- * DebitAuthorisationRequestV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.037.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,6 +126,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebitAuthorisationRequestV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -154,22 +154,23 @@ public class DebitAuthorisationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#Assignment
-	 * DebitAuthorisationRequestV04.Assignment}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#mmAssignment
+	 * DebitAuthorisationRequestV04.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.Assignment;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmAssignment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -192,22 +193,23 @@ public class DebitAuthorisationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#Case
-	 * DebitAuthorisationRequestV04.Case}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#mmCase
+	 * DebitAuthorisationRequestV04.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.Case;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmCase;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected UnderlyingTransaction3Choice underlying;
 	/**
 	 * Identifies the underlying payment instruction.
 	 * <p>
@@ -232,22 +234,23 @@ public class DebitAuthorisationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#Underlying
-	 * DebitAuthorisationRequestV04.Underlying}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#mmUnderlying
+	 * DebitAuthorisationRequestV04.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the underlying payment instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.Underlying;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmUnderlying;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction3Choice.mmObject();
 		}
 	};
+	protected DebitAuthorisation2 detail;
 	/**
 	 * Detailed information about the request.
 	 * <p>
@@ -272,22 +275,23 @@ public class DebitAuthorisationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#Detail
-	 * DebitAuthorisationRequestV04.Detail}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#mmDetail
+	 * DebitAuthorisationRequestV04.mmDetail}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Detail = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDetail = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Dtl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detail";
 			definition = "Detailed information about the request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.Detail;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmDetail;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DebitAuthorisation2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -315,46 +319,19 @@ public class DebitAuthorisationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#SupplementaryData
-	 * DebitAuthorisationRequestV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04#mmSupplementaryData
+	 * DebitAuthorisationRequestV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "037"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "037";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -369,12 +346,59 @@ public class DebitAuthorisationRequestV05 {
 				rootElement = "Document";
 				xmlTag = "DbtAuthstnReq";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.Assignment, com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.Case,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.Underlying, com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.Detail,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmCase,
+						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmUnderlying, com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmDetail,
+						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "037";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public UnderlyingTransaction3Choice getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(UnderlyingTransaction3Choice underlying) {
+		this.underlying = underlying;
+	}
+
+	public DebitAuthorisation2 getDetail() {
+		return detail;
+	}
+
+	public void setDetail(DebitAuthorisation2 detail) {
+		this.detail = detail;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubBalanceInformation3#Quantity
- * SubBalanceInformation3.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SubBalanceInformation3#mmQuantity
+ * SubBalanceInformation3.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubBalanceInformation3#SubBalanceType
- * SubBalanceInformation3.SubBalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.SubBalanceInformation3#mmSubBalanceType
+ * SubBalanceInformation3.mmSubBalanceType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubBalanceInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SubBalanceQuantity1Choice quantity;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -80,8 +81,8 @@ public class SubBalanceInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SubBalanceQuantity
-	 * SecuritiesBalance.SubBalanceQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSubBalanceQuantity
+	 * SecuritiesBalance.mmSubBalanceQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class SubBalanceInformation3 {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> SubBalanceInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SubBalanceQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities in the sub-balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity1Choice.mmObject();
 		}
 	};
+	protected SubBalanceType2Choice subBalanceType;
 	/**
 	 * Type of subbalance.
 	 * <p>
@@ -126,8 +128,8 @@ public class SubBalanceInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesBalanceType
-	 * SecuritiesBalance.SecuritiesBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+	 * SecuritiesBalance.mmSecuritiesBalanceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,33 +148,49 @@ public class SubBalanceInformation3 {
 	 * definition} = "Type of subbalance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubBalanceType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> SubBalanceInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesBalanceType;
 			isDerived = false;
 			xmlTag = "SubBalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceType";
 			definition = "Type of subbalance.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SubBalanceType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SubBalanceType2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubBalanceInformation3.Quantity, com.tools20022.repository.msg.SubBalanceInformation3.SubBalanceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubBalanceInformation3.mmQuantity, com.tools20022.repository.msg.SubBalanceInformation3.mmSubBalanceType);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubBalanceInformation3";
 				definition = "Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SubBalanceQuantity1Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(SubBalanceQuantity1Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public SubBalanceType2Choice getSubBalanceType() {
+		return subBalanceType;
+	}
+
+	public void setSubBalanceType(SubBalanceType2Choice subBalanceType) {
+		this.subBalanceType = subBalanceType;
 	}
 }

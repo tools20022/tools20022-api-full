@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderList
- * StandingOrderQueryType1Code.StandingOrderList}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderList
+ * StandingOrderQueryType1Code.mmStandingOrderList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderDetails
- * StandingOrderQueryType1Code.StandingOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderDetails
+ * StandingOrderQueryType1Code.mmStandingOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#TotalAmountPerStandingOrder
- * StandingOrderQueryType1Code.TotalAmountPerStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmTotalAmountPerStandingOrder
+ * StandingOrderQueryType1Code.mmTotalAmountPerStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderLinkSetList
- * StandingOrderQueryType1Code.StandingOrderLinkSetList}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderLinkSetList
+ * StandingOrderQueryType1Code.mmStandingOrderLinkSetList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderDetailsWithinLinkSet
- * StandingOrderQueryType1Code.StandingOrderDetailsWithinLinkSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderDetailsWithinLinkSet
+ * StandingOrderQueryType1Code.mmStandingOrderDetailsWithinLinkSet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderList"</li>
 	 * </ul>
 	 */
-	public static final MMCode StandingOrderList = new MMCode() {
+	public static final MMCode mmStandingOrderList = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderList";
@@ -116,7 +116,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode StandingOrderDetails = new MMCode() {
+	public static final MMCode mmStandingOrderDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetails";
@@ -139,7 +139,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "TotalAmountPerStandingOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalAmountPerStandingOrder = new MMCode() {
+	public static final MMCode mmTotalAmountPerStandingOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountPerStandingOrder";
@@ -162,7 +162,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderLinkSetList"</li>
 	 * </ul>
 	 */
-	public static final MMCode StandingOrderLinkSetList = new MMCode() {
+	public static final MMCode mmStandingOrderLinkSetList = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderLinkSetList";
@@ -185,7 +185,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderDetailsWithinLinkSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode StandingOrderDetailsWithinLinkSet = new MMCode() {
+	public static final MMCode mmStandingOrderDetailsWithinLinkSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetailsWithinLinkSet";
@@ -196,14 +196,14 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderQueryType1Code";
 				definition = "Defines the query type for standing orders queries, that identifies the predefined key attributes expected in the response to the query.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderList, com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderDetails,
-						com.tools20022.repository.codeset.StandingOrderQueryType1Code.TotalAmountPerStandingOrder, com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderLinkSetList,
-						com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderDetailsWithinLinkSet);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderList, com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderDetails,
+						com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmTotalAmountPerStandingOrder, com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderLinkSetList,
+						com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderDetailsWithinLinkSet);
 				trace_lazy = () -> StandingOrderQueryTypeCode.mmObject();
 			}
 		});

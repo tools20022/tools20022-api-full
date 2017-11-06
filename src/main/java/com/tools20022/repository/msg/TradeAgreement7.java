@@ -36,21 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement7#TradeDate
- * TradeAgreement7.TradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement7#mmTradeDate
+ * TradeAgreement7.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeAgreement7#OriginatorReference
- * TradeAgreement7.OriginatorReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeAgreement7#mmOriginatorReference
+ * TradeAgreement7.mmOriginatorReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeAgreement7#CommonReference
- * TradeAgreement7.CommonReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement7#OperationType
- * TradeAgreement7.OperationType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement7#OperationScope
- * TradeAgreement7.OperationScope}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeAgreement7#mmCommonReference
+ * TradeAgreement7.mmCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeAgreement7#SettlementSessionIdentifier
- * TradeAgreement7.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeAgreement7#mmOperationType
+ * TradeAgreement7.mmOperationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeAgreement7#mmOperationScope
+ * TradeAgreement7.mmOperationScope}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeAgreement7#mmSettlementSessionIdentifier
+ * TradeAgreement7.mmSettlementSessionIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,15 +63,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#TradeInformation
- * ForeignExchangeTradeInstructionV02.TradeInformation}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#mmTradeInformation
+ * ForeignExchangeTradeInstructionV02.mmTradeInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeAgreement7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate tradeDate;
 	/**
 	 * Date on which the trading parties agreed on the trade.
 	 * <p>
@@ -105,8 +108,8 @@ public class TradeAgreement7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -126,27 +129,29 @@ public class TradeAgreement7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement10#TradeDate
-	 * TradeAgreement10.TradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#mmTradeDate
+	 * TradeAgreement10.mmTradeDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TradeAgreement7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date on which the trading parties agreed on the trade. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.TradeDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.mmTradeDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text originatorReference;
 	/**
 	 * Reference of the present instruction assigned by the party issuing the
 	 * message. This reference must be unique amongst all messages of same type
@@ -180,13 +185,13 @@ public class TradeAgreement7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#OriginatorReference
-	 * TradeAgreement10.OriginatorReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#mmOriginatorReference
+	 * TradeAgreement10.mmOriginatorReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginatorReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginatorReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeAgreement7.mmObject();
 			isDerived = false;
@@ -194,12 +199,13 @@ public class TradeAgreement7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorReference";
 			definition = "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.OriginatorReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.mmOriginatorReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text commonReference;
 	/**
 	 * Reference common to both parties of the trade.
 	 * <p>
@@ -212,8 +218,8 @@ public class TradeAgreement7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -234,27 +240,28 @@ public class TradeAgreement7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#CommonReference
-	 * TradeAgreement10.CommonReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#mmCommonReference
+	 * TradeAgreement10.mmCommonReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> TradeAgreement7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmonRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to both parties of the trade. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.CommonReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.mmCommonReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max4Text operationType;
 	/**
 	 * Specifies the type of underlying transaction, for example cancellation
 	 * (CANC).
@@ -287,13 +294,13 @@ public class TradeAgreement7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#OperationType
-	 * TradeAgreement10.OperationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#mmOperationType
+	 * TradeAgreement10.mmOperationType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OperationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeAgreement7.mmObject();
 			isDerived = false;
@@ -301,12 +308,13 @@ public class TradeAgreement7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationType";
 			definition = "Specifies the type of underlying transaction, for example cancellation (CANC).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.OperationType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.mmOperationType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected Max4Text operationScope;
 	/**
 	 * Specifies the business role between the submitter and the trade party,
 	 * for example Agent (AGNT).
@@ -339,13 +347,13 @@ public class TradeAgreement7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#OperationScope
-	 * TradeAgreement10.OperationScope}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#mmOperationScope
+	 * TradeAgreement10.mmOperationScope}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OperationScope = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperationScope = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeAgreement7.mmObject();
 			isDerived = false;
@@ -353,12 +361,13 @@ public class TradeAgreement7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationScope";
 			definition = "Specifies the business role between the submitter and the trade party, for example Agent (AGNT).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.OperationScope);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.mmOperationScope);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -392,13 +401,13 @@ public class TradeAgreement7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#SettlementSessionIdentifier
-	 * TradeAgreement10.SettlementSessionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement10#mmSettlementSessionIdentifier
+	 * TradeAgreement10.mmSettlementSessionIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementSessionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeAgreement7.mmObject();
 			isDerived = false;
@@ -406,9 +415,9 @@ public class TradeAgreement7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.SettlementSessionIdentifier);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement10.mmSettlementSessionIdentifier);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
@@ -416,19 +425,67 @@ public class TradeAgreement7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement7.TradeDate, com.tools20022.repository.msg.TradeAgreement7.OriginatorReference,
-						com.tools20022.repository.msg.TradeAgreement7.CommonReference, com.tools20022.repository.msg.TradeAgreement7.OperationType, com.tools20022.repository.msg.TradeAgreement7.OperationScope,
-						com.tools20022.repository.msg.TradeAgreement7.SettlementSessionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement7.mmTradeDate, com.tools20022.repository.msg.TradeAgreement7.mmOriginatorReference,
+						com.tools20022.repository.msg.TradeAgreement7.mmCommonReference, com.tools20022.repository.msg.TradeAgreement7.mmOperationType, com.tools20022.repository.msg.TradeAgreement7.mmOperationScope,
+						com.tools20022.repository.msg.TradeAgreement7.mmSettlementSessionIdentifier);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmTradeInformation);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.TradeInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradeAgreement7";
 				definition = "Date and identification of a trade.";
-				previousVersion_lazy = () -> TradeAgreement3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TradeAgreement10.mmObject());
+				previousVersion_lazy = () -> TradeAgreement3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODate tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public Max35Text getOriginatorReference() {
+		return originatorReference;
+	}
+
+	public void setOriginatorReference(Max35Text originatorReference) {
+		this.originatorReference = originatorReference;
+	}
+
+	public Max35Text getCommonReference() {
+		return commonReference;
+	}
+
+	public void setCommonReference(Max35Text commonReference) {
+		this.commonReference = commonReference;
+	}
+
+	public Max4Text getOperationType() {
+		return operationType;
+	}
+
+	public void setOperationType(Max4Text operationType) {
+		this.operationType = operationType;
+	}
+
+	public Max4Text getOperationScope() {
+		return operationScope;
+	}
+
+	public void setOperationScope(Max4Text operationScope) {
+		this.operationScope = operationScope;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 }

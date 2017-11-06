@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PaymentStatusReasonCode5Choice;
 import com.tools20022.repository.entity.PaymentStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Payment status details.
@@ -36,12 +37,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#Code
- * PaymentStatus1.Code}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#DateTime
- * PaymentStatus1.DateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#Reason
- * PaymentStatus1.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#mmCode
+ * PaymentStatus1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#mmDateTime
+ * PaymentStatus1.mmDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#mmReason
+ * PaymentStatus1.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentStatusCode5Choice code;
 	/**
 	 * Status of a transfer, in coded form, as assigned by the transaction
 	 * administrator.
@@ -106,28 +108,29 @@ public class PaymentStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#Code
-	 * PaymentStatus2.Code}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#mmCode
+	 * PaymentStatus2.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentStatus1.mmObject();
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
+			componentContext_lazy = () -> PaymentStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of a transfer, in coded form, as  assigned by the transaction administrator.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus2.Code);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus2.mmCode);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentStatusCode5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PaymentStatusCode5Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice dateTime;
 	/**
 	 * Date and time at which the status was assigned to the transfer.
 	 * <p>
@@ -141,8 +144,8 @@ public class PaymentStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDateTime
-	 * Status.StatusDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
+	 * Status.mmStatusDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,27 +165,28 @@ public class PaymentStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#DateTime
-	 * PaymentStatus2.DateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#mmDateTime
+	 * PaymentStatus2.mmDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
 			componentContext_lazy = () -> PaymentStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDateTime;
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time at which the status was assigned to the transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus2.DateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus2.mmDateTime);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected List<PaymentStatusReasonCode5Choice> reason;
 	/**
 	 * Reason provided for the status of a transfer.
 	 * <p>
@@ -195,8 +199,8 @@ public class PaymentStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,34 +219,34 @@ public class PaymentStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#Reason
-	 * PaymentStatus2.Reason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#mmReason
+	 * PaymentStatus2.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> PaymentStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason provided for the status of a transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus2.Reason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus2.mmReason);
 			minOccurs = 0;
-			type_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus1.Code, com.tools20022.repository.msg.PaymentStatus1.DateTime, com.tools20022.repository.msg.PaymentStatus1.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus1.mmCode, com.tools20022.repository.msg.PaymentStatus1.mmDateTime, com.tools20022.repository.msg.PaymentStatus1.mmReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatus1";
 				definition = "Payment status details.";
@@ -250,5 +254,29 @@ public class PaymentStatus1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentStatusCode5Choice getCode() {
+		return code;
+	}
+
+	public void setCode(PaymentStatusCode5Choice code) {
+		this.code = code;
+	}
+
+	public DateAndDateTimeChoice getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(DateAndDateTimeChoice dateTime) {
+		this.dateTime = dateTime;
+	}
+
+	public List<PaymentStatusReasonCode5Choice> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<PaymentStatusReasonCode5Choice> reason) {
+		this.reason = reason;
 	}
 }

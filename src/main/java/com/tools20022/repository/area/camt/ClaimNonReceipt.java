@@ -21,7 +21,9 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
+import com.tools20022.repository.msg.MissingCover;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
@@ -66,23 +68,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#Assignment
- * ClaimNonReceipt.Assignment}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#Case
- * ClaimNonReceipt.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#mmAssignment
+ * ClaimNonReceipt.mmAssignment}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#mmCase
+ * ClaimNonReceipt.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#Underlying
- * ClaimNonReceipt.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#mmUnderlying
+ * ClaimNonReceipt.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#MissingCover
- * ClaimNonReceipt.MissingCover}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#mmMissingCover
+ * ClaimNonReceipt.mmMissingCover}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#identifier
- * ClaimNonReceipt.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.027.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClaimNonReceipt {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies an assignment.
 	 * <p>
@@ -120,17 +121,18 @@ public class ClaimNonReceipt {
 	 * definition} = "Identifies an assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies an assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies a case.
 	 * <p>
@@ -152,17 +154,18 @@ public class ClaimNonReceipt {
 	 * definition} = "Identifies a case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies a case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected PaymentInstructionExtract underlying;
 	/**
 	 * Identifies the payment instruction for which the Creditor has not
 	 * received the funds. Note: In case of a missing cover, it must be the
@@ -193,17 +196,18 @@ public class ClaimNonReceipt {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment instruction for which the Creditor has not received the funds.\nNote: \nIn case of a missing cover, it must be the Field 20 of the received MT103.\nIn case of a claim non receipt initiated by the Debtor, it must be the identification of the instruction (Field 20 of MT103, Instruction Identification of the Payment Initiation or the Bulk Credit Transfer).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 	};
+	protected MissingCover missingCover;
 	/**
 	 * Indicates if the claim non receipt is a missing cover. The absence of the
 	 * component means that the message is not for a missing cover.
@@ -229,42 +233,15 @@ public class ClaimNonReceipt {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MissingCover = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMissingCover = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MssngCover";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCover";
 			definition = "Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.MissingCover.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "027"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "027";
-			version = "01";
-			flavour = "001";
+			minOccurs = 0;
+			complexType_lazy = () -> MissingCover.mmObject();
 		}
 	};
 
@@ -279,11 +256,50 @@ public class ClaimNonReceipt {
 				xmlTag = "camt.027.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.027.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceipt.Assignment, com.tools20022.repository.area.camt.ClaimNonReceipt.Case,
-						com.tools20022.repository.area.camt.ClaimNonReceipt.Underlying, com.tools20022.repository.area.camt.ClaimNonReceipt.MissingCover);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceipt.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceipt.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceipt.mmCase,
+						com.tools20022.repository.area.camt.ClaimNonReceipt.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceipt.mmMissingCover);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "027";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public PaymentInstructionExtract getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(PaymentInstructionExtract underlying) {
+		this.underlying = underlying;
+	}
+
+	public MissingCover getMissingCover() {
+		return missingCover;
+	}
+
+	public void setMissingCover(MissingCover missingCover) {
+		this.missingCover = missingCover;
 	}
 }

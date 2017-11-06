@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContractForDifference2#UnderlyingType
- * ContractForDifference2.UnderlyingType}</li>
+ * {@linkplain com.tools20022.repository.msg.ContractForDifference2#mmUnderlyingType
+ * ContractForDifference2.mmUnderlyingType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContractForDifference2#NotionalCurrency1
- * ContractForDifference2.NotionalCurrency1}</li>
+ * {@linkplain com.tools20022.repository.msg.ContractForDifference2#mmNotionalCurrency1
+ * ContractForDifference2.mmNotionalCurrency1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContractForDifference2#NotionalCurrency2
- * ContractForDifference2.NotionalCurrency2}</li>
+ * {@linkplain com.tools20022.repository.msg.ContractForDifference2#mmNotionalCurrency2
+ * ContractForDifference2.mmNotionalCurrency2}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContractForDifference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnderlyingContractForDifferenceType3Code underlyingType;
 	/**
 	 * Underlying type of the contract for difference.
 	 * <p>
@@ -81,8 +82,8 @@ public class ContractForDifference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#UnderlyingAsset
-	 * Derivative.UnderlyingAsset}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
+	 * Derivative.mmUnderlyingAsset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class ContractForDifference2 {
 	 * definition} = "Underlying type of the contract for difference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnderlyingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnderlyingType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> ContractForDifference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.UnderlyingAsset;
 			isDerived = false;
 			xmlTag = "UndrlygTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingType";
 			definition = "Underlying type of the contract for difference.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode notionalCurrency1;
 	/**
 	 * Currency 1 of the underlying currency pair.
 	 * <p>
@@ -143,7 +145,7 @@ public class ContractForDifference2 {
 	 * definition} = "Currency 1 of the underlying currency pair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalCurrency1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalCurrency1 = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ContractForDifference2.mmObject();
 			isDerived = false;
@@ -151,11 +153,12 @@ public class ContractForDifference2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency1";
 			definition = "Currency 1 of the underlying currency pair.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode notionalCurrency2;
 	/**
 	 * Currency 2 of the underlying currency pair.
 	 * <p>
@@ -184,7 +187,7 @@ public class ContractForDifference2 {
 	 * definition} = "Currency 2 of the underlying currency pair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalCurrency2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalCurrency2 = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ContractForDifference2.mmObject();
 			isDerived = false;
@@ -192,8 +195,8 @@ public class ContractForDifference2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency2";
 			definition = "Currency 2 of the underlying currency pair.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
@@ -201,15 +204,39 @@ public class ContractForDifference2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractForDifference2.UnderlyingType, com.tools20022.repository.msg.ContractForDifference2.NotionalCurrency1,
-						com.tools20022.repository.msg.ContractForDifference2.NotionalCurrency2);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractForDifference2.mmUnderlyingType, com.tools20022.repository.msg.ContractForDifference2.mmNotionalCurrency1,
+						com.tools20022.repository.msg.ContractForDifference2.mmNotionalCurrency2);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContractForDifference2";
 				definition = "Transparency calculation specific details on a contract for difference, spread betting derivatives.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnderlyingContractForDifferenceType3Code getUnderlyingType() {
+		return underlyingType;
+	}
+
+	public void setUnderlyingType(UnderlyingContractForDifferenceType3Code underlyingType) {
+		this.underlyingType = underlyingType;
+	}
+
+	public ActiveOrHistoricCurrencyCode getNotionalCurrency1() {
+		return notionalCurrency1;
+	}
+
+	public void setNotionalCurrency1(ActiveOrHistoricCurrencyCode notionalCurrency1) {
+		this.notionalCurrency1 = notionalCurrency1;
+	}
+
+	public ActiveOrHistoricCurrencyCode getNotionalCurrency2() {
+		return notionalCurrency2;
+	}
+
+	public void setNotionalCurrency2(ActiveOrHistoricCurrencyCode notionalCurrency2) {
+		this.notionalCurrency2 = notionalCurrency2;
 	}
 }

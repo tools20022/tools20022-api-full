@@ -36,15 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetCashForecast1#SettlementDate
- * NetCashForecast1.SettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast1#NetAmount
- * NetCashForecast1.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.NetCashForecast1#mmSettlementDate
+ * NetCashForecast1.mmSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast1#mmNetAmount
+ * NetCashForecast1.mmNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetCashForecast1#NetUnitsNumber
- * NetCashForecast1.NetUnitsNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast1#FlowDirection
- * NetCashForecast1.FlowDirection}</li>
+ * {@linkplain com.tools20022.repository.msg.NetCashForecast1#mmNetUnitsNumber
+ * NetCashForecast1.mmNetUnitsNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetCashForecast1#mmFlowDirection
+ * NetCashForecast1.mmFlowDirection}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetCashForecast1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate settlementDate;
 	/**
 	 * Date on which cash is available.
 	 * <p>
@@ -81,8 +83,8 @@ public class NetCashForecast1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +103,21 @@ public class NetCashForecast1 {
 	 * definition} = "Date on which cash is available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> NetCashForecast1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which cash is available.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount netAmount;
 	/**
 	 * Net amount of the cash flow, expressed as an amount of money.
 	 * <p>
@@ -128,8 +131,8 @@ public class NetCashForecast1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,20 +152,21 @@ public class NetCashForecast1 {
 	 * "Net amount of the cash flow, expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> NetCashForecast1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Net amount of the cash flow, expressed as an amount of money.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 netUnitsNumber;
 	/**
 	 * Net amount, expressed as a number of units.
 	 * <p>
@@ -176,8 +180,8 @@ public class NetCashForecast1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,20 +200,21 @@ public class NetCashForecast1 {
 	 * definition} = "Net amount, expressed as a number of units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> NetCashForecast1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "NetUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetUnitsNumber";
 			definition = "Net amount, expressed as a number of units.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected FlowDirectionType1Code flowDirection;
 	/**
 	 * Specifies the direction of the cash flow from the perspective of the
 	 * fund.
@@ -224,8 +229,8 @@ public class NetCashForecast1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#FlowDirection
-	 * FundsCashFlow.FlowDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmFlowDirection
+	 * FundsCashFlow.mmFlowDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,17 +251,17 @@ public class NetCashForecast1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FlowDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFlowDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmFlowDirection;
 			componentContext_lazy = () -> NetCashForecast1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.FlowDirection;
 			isDerived = false;
 			xmlTag = "FlowDrctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlowDirection";
 			definition = "Specifies the direction of the cash flow from the perspective of the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FlowDirectionType1Code.mmObject();
 		}
 	};
@@ -264,15 +269,47 @@ public class NetCashForecast1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetCashForecast1.SettlementDate, com.tools20022.repository.msg.NetCashForecast1.NetAmount,
-						com.tools20022.repository.msg.NetCashForecast1.NetUnitsNumber, com.tools20022.repository.msg.NetCashForecast1.FlowDirection);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetCashForecast1.mmSettlementDate, com.tools20022.repository.msg.NetCashForecast1.mmNetAmount,
+						com.tools20022.repository.msg.NetCashForecast1.mmNetUnitsNumber, com.tools20022.repository.msg.NetCashForecast1.mmFlowDirection);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetCashForecast1";
 				definition = "Net cash movements to a fund as a result of investment funds transactions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(ActiveOrHistoricCurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
+	}
+
+	public FinancialInstrumentQuantity1 getNetUnitsNumber() {
+		return netUnitsNumber;
+	}
+
+	public void setNetUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 netUnitsNumber) {
+		this.netUnitsNumber = netUnitsNumber;
+	}
+
+	public FlowDirectionType1Code getFlowDirection() {
+		return flowDirection;
+	}
+
+	public void setFlowDirection(FlowDirectionType1Code flowDirection) {
+		this.flowDirection = flowDirection;
 	}
 }

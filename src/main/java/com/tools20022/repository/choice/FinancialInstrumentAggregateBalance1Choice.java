@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice#HoldingsIndicator
- * FinancialInstrumentAggregateBalance1Choice.HoldingsIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice#mmHoldingsIndicator
+ * FinancialInstrumentAggregateBalance1Choice.mmHoldingsIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice#HoldingBalance
- * FinancialInstrumentAggregateBalance1Choice.HoldingBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice#mmHoldingBalance
+ * FinancialInstrumentAggregateBalance1Choice.mmHoldingBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAggregateBalance1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator holdingsIndicator;
 	/**
 	 * Indicates whether holdings are present.
 	 * <p>
@@ -93,7 +94,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 	 * definition} = "Indicates whether holdings are present."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingsIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class FinancialInstrumentAggregateBalance1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsIndicator";
 			definition = "Indicates whether holdings are present.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected FinancialInstrumentAggregateBalance2 holdingBalance;
 	/**
 	 * Balance of holdings.
 	 * <p>
@@ -133,7 +135,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 	 * definition} = "Balance of holdings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd HoldingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHoldingBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
 			isDerived = false;
@@ -141,25 +143,41 @@ public class FinancialInstrumentAggregateBalance1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingBalance";
 			definition = "Balance of holdings.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.HoldingsIndicator,
-						com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.HoldingBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.mmHoldingsIndicator,
+						com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.mmHoldingBalance);
 				trace_lazy = () -> AssetHolding.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAggregateBalance1Choice";
 				definition = "Choice of holding indicator and aggregated position of holdings.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getHoldingsIndicator() {
+		return holdingsIndicator;
+	}
+
+	public void setHoldingsIndicator(YesNoIndicator holdingsIndicator) {
+		this.holdingsIndicator = holdingsIndicator;
+	}
+
+	public FinancialInstrumentAggregateBalance2 getHoldingBalance() {
+		return holdingBalance;
+	}
+
+	public void setHoldingBalance(FinancialInstrumentAggregateBalance2 holdingBalance) {
+		this.holdingBalance = holdingBalance;
 	}
 }

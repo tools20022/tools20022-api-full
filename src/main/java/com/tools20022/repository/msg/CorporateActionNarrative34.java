@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information such as the registration details.
@@ -34,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative34#RegistrationDetails
- * CorporateActionNarrative34.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative34#mmRegistrationDetails
+ * CorporateActionNarrative34.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative34#PartyContactNarrative
- * CorporateActionNarrative34.PartyContactNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative34#mmPartyContactNarrative
+ * CorporateActionNarrative34.mmPartyContactNarrative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative34#CertificationBreakdown
- * CorporateActionNarrative34.CertificationBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative34#mmCertificationBreakdown
+ * CorporateActionNarrative34.mmCertificationBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,15 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07#AdditionalInformation
- * CorporateActionInstruction002V07.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07#mmAdditionalInformation
+ * CorporateActionInstruction002V07.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<RestrictedFINXMax350Text> registrationDetails;
 	/**
 	 * Provides information required for the registration.
 	 * <p>
@@ -88,8 +90,8 @@ public class CorporateActionNarrative34 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#RegistrationDetails
-	 * CorporateActionEvent.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRegistrationDetails
+	 * CorporateActionEvent.mmRegistrationDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,10 +110,10 @@ public class CorporateActionNarrative34 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> CorporateActionNarrative34.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.RegistrationDetails;
 			isDerived = false;
 			xmlTag = "RegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,6 +123,7 @@ public class CorporateActionNarrative34 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	protected List<RestrictedFINXMax350Text> partyContactNarrative;
 	/**
 	 * Provides additional information regarding the party, for example, the
 	 * contact unit or person responsible for the transaction identified in the
@@ -136,8 +139,8 @@ public class CorporateActionNarrative34 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#ContactPersonRole
-	 * Role.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmContactPersonRole
+	 * Role.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,10 +161,10 @@ public class CorporateActionNarrative34 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative34.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,6 +174,7 @@ public class CorporateActionNarrative34 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	protected List<RestrictedFINXMax350Text> certificationBreakdown;
 	/**
 	 * Provides information required for the certification/breakdown.
 	 * <p>
@@ -200,7 +204,7 @@ public class CorporateActionNarrative34 {
 	 * "Provides information required for the certification/breakdown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationBreakdown = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative34.mmObject();
 			isDerived = false;
@@ -216,16 +220,40 @@ public class CorporateActionNarrative34 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative34.RegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative34.PartyContactNarrative,
-						com.tools20022.repository.msg.CorporateActionNarrative34.CertificationBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative34.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative34.mmPartyContactNarrative,
+						com.tools20022.repository.msg.CorporateActionNarrative34.mmCertificationBreakdown);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstruction002V07.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstruction002V07.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative34";
 				definition = "Provides additional information such as the registration details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<RestrictedFINXMax350Text> getRegistrationDetails() {
+		return registrationDetails;
+	}
+
+	public void setRegistrationDetails(List<RestrictedFINXMax350Text> registrationDetails) {
+		this.registrationDetails = registrationDetails;
+	}
+
+	public List<RestrictedFINXMax350Text> getPartyContactNarrative() {
+		return partyContactNarrative;
+	}
+
+	public void setPartyContactNarrative(List<RestrictedFINXMax350Text> partyContactNarrative) {
+		this.partyContactNarrative = partyContactNarrative;
+	}
+
+	public List<RestrictedFINXMax350Text> getCertificationBreakdown() {
+		return certificationBreakdown;
+	}
+
+	public void setCertificationBreakdown(List<RestrictedFINXMax350Text> certificationBreakdown) {
+		this.certificationBreakdown = certificationBreakdown;
 	}
 }

@@ -34,45 +34,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#CapitalPortion
- * GrossDividendRateType1Code.CapitalPortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmCapitalPortion
+ * GrossDividendRateType1Code.mmCapitalPortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#FullyFranked
- * GrossDividendRateType1Code.FullyFranked}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmFullyFranked
+ * GrossDividendRateType1Code.mmFullyFranked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#IncomePortion
- * GrossDividendRateType1Code.IncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmIncomePortion
+ * GrossDividendRateType1Code.mmIncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#Interest
- * GrossDividendRateType1Code.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmInterest
+ * GrossDividendRateType1Code.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#SundryOrOtherIncome
- * GrossDividendRateType1Code.SundryOrOtherIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmSundryOrOtherIncome
+ * GrossDividendRateType1Code.mmSundryOrOtherIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#TaxablePortion
- * GrossDividendRateType1Code.TaxablePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmTaxablePortion
+ * GrossDividendRateType1Code.mmTaxablePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#TaxDeferred
- * GrossDividendRateType1Code.TaxDeferred}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmTaxDeferred
+ * GrossDividendRateType1Code.mmTaxDeferred}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#TaxFree
- * GrossDividendRateType1Code.TaxFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmTaxFree
+ * GrossDividendRateType1Code.mmTaxFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#Unfranked
- * GrossDividendRateType1Code.Unfranked}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmUnfranked
+ * GrossDividendRateType1Code.mmUnfranked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#LongTermCapitalGain
- * GrossDividendRateType1Code.LongTermCapitalGain}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmLongTermCapitalGain
+ * GrossDividendRateType1Code.mmLongTermCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#ShortTermCapitalGain
- * GrossDividendRateType1Code.ShortTermCapitalGain}</li>
+ * {@linkplain com.tools20022.repository.codeset.GrossDividendRateType1Code#mmShortTermCapitalGain
+ * GrossDividendRateType1Code.mmShortTermCapitalGain}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +108,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "CapitalPortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalPortion = new MMCode() {
+	public static final MMCode mmCapitalPortion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalPortion";
@@ -131,7 +131,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "FullyFranked"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullyFranked = new MMCode() {
+	public static final MMCode mmFullyFranked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyFranked";
@@ -154,7 +154,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "IncomePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncomePortion = new MMCode() {
+	public static final MMCode mmIncomePortion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePortion";
@@ -177,7 +177,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "Interest"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
@@ -200,7 +200,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "SundryOrOtherIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode SundryOrOtherIncome = new MMCode() {
+	public static final MMCode mmSundryOrOtherIncome = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SundryOrOtherIncome";
@@ -223,7 +223,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "TaxablePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxablePortion = new MMCode() {
+	public static final MMCode mmTaxablePortion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxablePortion";
@@ -246,7 +246,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "TaxDeferred"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxDeferred = new MMCode() {
+	public static final MMCode mmTaxDeferred = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferred";
@@ -269,7 +269,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "TaxFree"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxFree = new MMCode() {
+	public static final MMCode mmTaxFree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFree";
@@ -292,7 +292,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "Unfranked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unfranked = new MMCode() {
+	public static final MMCode mmUnfranked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfranked";
@@ -315,7 +315,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "LongTermCapitalGain"</li>
 	 * </ul>
 	 */
-	public static final MMCode LongTermCapitalGain = new MMCode() {
+	public static final MMCode mmLongTermCapitalGain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongTermCapitalGain";
@@ -338,7 +338,7 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "ShortTermCapitalGain"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShortTermCapitalGain = new MMCode() {
+	public static final MMCode mmShortTermCapitalGain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermCapitalGain";
@@ -349,16 +349,17 @@ public class GrossDividendRateType1Code extends DividendRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAPO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GrossDividendRateType1Code";
 				definition = "Specifies the type of gross dividend rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GrossDividendRateType1Code.CapitalPortion, com.tools20022.repository.codeset.GrossDividendRateType1Code.FullyFranked,
-						com.tools20022.repository.codeset.GrossDividendRateType1Code.IncomePortion, com.tools20022.repository.codeset.GrossDividendRateType1Code.Interest,
-						com.tools20022.repository.codeset.GrossDividendRateType1Code.SundryOrOtherIncome, com.tools20022.repository.codeset.GrossDividendRateType1Code.TaxablePortion,
-						com.tools20022.repository.codeset.GrossDividendRateType1Code.TaxDeferred, com.tools20022.repository.codeset.GrossDividendRateType1Code.TaxFree, com.tools20022.repository.codeset.GrossDividendRateType1Code.Unfranked,
-						com.tools20022.repository.codeset.GrossDividendRateType1Code.LongTermCapitalGain, com.tools20022.repository.codeset.GrossDividendRateType1Code.ShortTermCapitalGain);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GrossDividendRateType1Code.mmCapitalPortion, com.tools20022.repository.codeset.GrossDividendRateType1Code.mmFullyFranked,
+						com.tools20022.repository.codeset.GrossDividendRateType1Code.mmIncomePortion, com.tools20022.repository.codeset.GrossDividendRateType1Code.mmInterest,
+						com.tools20022.repository.codeset.GrossDividendRateType1Code.mmSundryOrOtherIncome, com.tools20022.repository.codeset.GrossDividendRateType1Code.mmTaxablePortion,
+						com.tools20022.repository.codeset.GrossDividendRateType1Code.mmTaxDeferred, com.tools20022.repository.codeset.GrossDividendRateType1Code.mmTaxFree,
+						com.tools20022.repository.codeset.GrossDividendRateType1Code.mmUnfranked, com.tools20022.repository.codeset.GrossDividendRateType1Code.mmLongTermCapitalGain,
+						com.tools20022.repository.codeset.GrossDividendRateType1Code.mmShortTermCapitalGain);
 				trace_lazy = () -> DividendRateTypeCode.mmObject();
 			}
 		});

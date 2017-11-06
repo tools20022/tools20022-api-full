@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat1Choice#Code
- * InterestComputationMethodFormat1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat1Choice#mmCode
+ * InterestComputationMethodFormat1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat1Choice#Proprietary
- * InterestComputationMethodFormat1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat1Choice#mmProprietary
+ * InterestComputationMethodFormat1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InterestComputationMethodFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InterestComputationMethod2Code code;
 	/**
 	 * Standard code to specify the method used to compute accruing interest of
 	 * a financial instrument.
@@ -89,8 +90,8 @@ public class InterestComputationMethodFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#DayCountBasis
-	 * InterestCalculation.DayCountBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDayCountBasis
+	 * InterestCalculation.mmDayCountBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,27 +114,28 @@ public class InterestComputationMethodFormat1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat4Choice#Code
-	 * InterestComputationMethodFormat4Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat4Choice#mmCode
+	 * InterestComputationMethodFormat4Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> InterestComputationMethodFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.DayCountBasis;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the method used to compute accruing interest of a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestComputationMethodFormat4Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestComputationMethodFormat4Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InterestComputationMethod2Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the format of interest computation method.
 	 * <p>
@@ -146,8 +148,8 @@ public class InterestComputationMethodFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#DayCountBasis
-	 * InterestCalculation.DayCountBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDayCountBasis
+	 * InterestCalculation.mmDayCountBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,35 +172,35 @@ public class InterestComputationMethodFormat1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat4Choice#Proprietary
-	 * InterestComputationMethodFormat4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat4Choice#mmProprietary
+	 * InterestComputationMethodFormat4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> InterestComputationMethodFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.DayCountBasis;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the format of interest computation method.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestComputationMethodFormat4Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestComputationMethodFormat4Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestComputationMethodFormat1Choice.Code, com.tools20022.repository.choice.InterestComputationMethodFormat1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestComputationMethodFormat1Choice.mmCode, com.tools20022.repository.choice.InterestComputationMethodFormat1Choice.mmProprietary);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestComputationMethodFormat1Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of interest computation method.";
@@ -206,5 +208,21 @@ public class InterestComputationMethodFormat1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InterestComputationMethod2Code getCode() {
+		return code;
+	}
+
+	public void setCode(InterestComputationMethod2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

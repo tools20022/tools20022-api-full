@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Entitlement1Choice#EntitlementRatio
- * Entitlement1Choice.EntitlementRatio}</li>
+ * {@linkplain com.tools20022.repository.choice.Entitlement1Choice#mmEntitlementRatio
+ * Entitlement1Choice.mmEntitlementRatio}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Entitlement1Choice#EntitlementDescription
- * Entitlement1Choice.EntitlementDescription}</li>
+ * {@linkplain com.tools20022.repository.choice.Entitlement1Choice#mmEntitlementDescription
+ * Entitlement1Choice.mmEntitlementDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Entitlement1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber entitlementRatio;
 	/**
 	 * Number of votes assigned to one security.
 	 * <p>
@@ -73,8 +74,8 @@ public class Entitlement1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#EntitlementRatio
-	 * MeetingEntitlement.EntitlementRatio}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementRatio
+	 * MeetingEntitlement.mmEntitlementRatio}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class Entitlement1Choice {
 	 * definition} = "Number of votes assigned to one security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntitlementRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntitlementRatio = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementRatio;
 			componentContext_lazy = () -> Entitlement1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.EntitlementRatio;
 			isDerived = false;
 			xmlTag = "EntitlmntRatio";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementRatio";
 			definition = "Number of votes assigned to one security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected Max35Text entitlementDescription;
 	/**
 	 * Specifies the calculation method of the number of votes assigned to one
 	 * security. This element should be used when the entitlement calculation
@@ -143,17 +145,17 @@ public class Entitlement1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntitlementDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntitlementDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Entitlement1Choice.mmObject();
 			businessComponentTrace_lazy = () -> MeetingEntitlement.mmObject();
+			componentContext_lazy = () -> Entitlement1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDescription";
 			definition = "Specifies the calculation method of the number of votes assigned to one security. This element should be used when the entitlement calculation rule is complex.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -161,13 +163,29 @@ public class Entitlement1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Entitlement1Choice.EntitlementRatio, com.tools20022.repository.choice.Entitlement1Choice.EntitlementDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementRatio, com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Entitlement1Choice";
 				definition = "Choice of entitlement calculation method.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getEntitlementRatio() {
+		return entitlementRatio;
+	}
+
+	public void setEntitlementRatio(DecimalNumber entitlementRatio) {
+		this.entitlementRatio = entitlementRatio;
+	}
+
+	public Max35Text getEntitlementDescription() {
+		return entitlementDescription;
+	}
+
+	public void setEntitlementDescription(Max35Text entitlementDescription) {
+		this.entitlementDescription = entitlementDescription;
 	}
 }

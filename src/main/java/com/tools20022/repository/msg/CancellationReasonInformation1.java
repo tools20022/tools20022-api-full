@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.PaymentStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Further information on the cancellation reason of the transaction.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationReasonInformation1#CancellationOriginator
- * CancellationReasonInformation1.CancellationOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationReasonInformation1#mmCancellationOriginator
+ * CancellationReasonInformation1.mmCancellationOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationReasonInformation1#CancellationReason
- * CancellationReasonInformation1.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationReasonInformation1#mmCancellationReason
+ * CancellationReasonInformation1.mmCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationReasonInformation1#AdditionalCancellationReasonInformation
- * CancellationReasonInformation1.AdditionalCancellationReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationReasonInformation1#mmAdditionalCancellationReasonInformation
+ * CancellationReasonInformation1.mmAdditionalCancellationReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationReasonInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification8 cancellationOriginator;
 	/**
 	 * Party issuing the cancellation request.
 	 * <p>
@@ -79,8 +81,8 @@ public class CancellationReasonInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +101,22 @@ public class CancellationReasonInformation1 {
 	 * definition} = "Party issuing the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CancellationReasonInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "CxlOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationOriginator";
 			definition = "Party issuing the cancellation request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	protected CancellationReason1Choice cancellationReason;
 	/**
 	 * Specifies the reason for the cancellation.
 	 * <p>
@@ -126,8 +129,8 @@ public class CancellationReasonInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#CancellationReason
-	 * PaymentStatus.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmCancellationReason
+	 * PaymentStatus.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,21 +149,22 @@ public class CancellationReasonInformation1 {
 	 * definition} = "Specifies the reason for the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> CancellationReasonInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.CancellationReason;
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason for the cancellation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CancellationReason1Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalCancellationReasonInformation;
 	/**
 	 * Further details on the cancellation request reason.
 	 * 
@@ -176,8 +180,8 @@ public class CancellationReasonInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,10 +202,10 @@ public class CancellationReasonInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalCancellationReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalCancellationReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> CancellationReasonInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlCxlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,15 +219,39 @@ public class CancellationReasonInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReasonInformation1.CancellationOriginator, com.tools20022.repository.msg.CancellationReasonInformation1.CancellationReason,
-						com.tools20022.repository.msg.CancellationReasonInformation1.AdditionalCancellationReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReasonInformation1.mmCancellationOriginator, com.tools20022.repository.msg.CancellationReasonInformation1.mmCancellationReason,
+						com.tools20022.repository.msg.CancellationReasonInformation1.mmAdditionalCancellationReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationReasonInformation1";
 				definition = "Further information on the cancellation reason of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification8 getCancellationOriginator() {
+		return cancellationOriginator;
+	}
+
+	public void setCancellationOriginator(com.tools20022.repository.msg.PartyIdentification8 cancellationOriginator) {
+		this.cancellationOriginator = cancellationOriginator;
+	}
+
+	public CancellationReason1Choice getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(CancellationReason1Choice cancellationReason) {
+		this.cancellationReason = cancellationReason;
+	}
+
+	public List<Max105Text> getAdditionalCancellationReasonInformation() {
+		return additionalCancellationReasonInformation;
+	}
+
+	public void setAdditionalCancellationReasonInformation(List<Max105Text> additionalCancellationReasonInformation) {
+		this.additionalCancellationReasonInformation = additionalCancellationReasonInformation;
 	}
 }

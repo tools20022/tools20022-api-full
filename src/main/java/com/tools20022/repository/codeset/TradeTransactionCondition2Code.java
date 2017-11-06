@@ -34,51 +34,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialCumCoupon
- * TradeTransactionCondition2Code.SpecialCumCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialCumCoupon
+ * TradeTransactionCondition2Code.mmSpecialCumCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialExCoupon
- * TradeTransactionCondition2Code.SpecialExCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialExCoupon
+ * TradeTransactionCondition2Code.mmSpecialExCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialExBonus
- * TradeTransactionCondition2Code.SpecialExBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialExBonus
+ * TradeTransactionCondition2Code.mmSpecialExBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialCumBonus
- * TradeTransactionCondition2Code.SpecialCumBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialCumBonus
+ * TradeTransactionCondition2Code.mmSpecialCumBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialCumRights
- * TradeTransactionCondition2Code.SpecialCumRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialCumRights
+ * TradeTransactionCondition2Code.mmSpecialCumRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialExRights
- * TradeTransactionCondition2Code.SpecialExRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialExRights
+ * TradeTransactionCondition2Code.mmSpecialExRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialCumCapitalRepayments
- * TradeTransactionCondition2Code.SpecialCumCapitalRepayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialCumCapitalRepayments
+ * TradeTransactionCondition2Code.mmSpecialCumCapitalRepayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialExCapitalRepayments
- * TradeTransactionCondition2Code.SpecialExCapitalRepayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialExCapitalRepayments
+ * TradeTransactionCondition2Code.mmSpecialExCapitalRepayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#CashSettlement
- * TradeTransactionCondition2Code.CashSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmCashSettlement
+ * TradeTransactionCondition2Code.mmCashSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialPrice
- * TradeTransactionCondition2Code.SpecialPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialPrice
+ * TradeTransactionCondition2Code.mmSpecialPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialCumDividend
- * TradeTransactionCondition2Code.SpecialCumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialCumDividend
+ * TradeTransactionCondition2Code.mmSpecialCumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#SpecialExDividend
- * TradeTransactionCondition2Code.SpecialExDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmSpecialExDividend
+ * TradeTransactionCondition2Code.mmSpecialExDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#GuaranteedDelivery
- * TradeTransactionCondition2Code.GuaranteedDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code#mmGuaranteedDelivery
+ * TradeTransactionCondition2Code.mmGuaranteedDelivery}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -115,7 +115,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumCoupon = new MMCode() {
+	public static final MMCode mmSpecialCumCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumCoupon";
@@ -138,7 +138,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExCoupon = new MMCode() {
+	public static final MMCode mmSpecialExCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExCoupon";
@@ -161,7 +161,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExBonus"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExBonus = new MMCode() {
+	public static final MMCode mmSpecialExBonus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExBonus";
@@ -184,7 +184,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumBonus"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumBonus = new MMCode() {
+	public static final MMCode mmSpecialCumBonus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumBonus";
@@ -207,7 +207,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumRights = new MMCode() {
+	public static final MMCode mmSpecialCumRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumRights";
@@ -230,7 +230,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExRights = new MMCode() {
+	public static final MMCode mmSpecialExRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExRights";
@@ -253,7 +253,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumCapitalRepayments"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumCapitalRepayments = new MMCode() {
+	public static final MMCode mmSpecialCumCapitalRepayments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumCapitalRepayments";
@@ -276,7 +276,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExCapitalRepayments"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExCapitalRepayments = new MMCode() {
+	public static final MMCode mmSpecialExCapitalRepayments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExCapitalRepayments";
@@ -299,7 +299,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "CashSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashSettlement = new MMCode() {
+	public static final MMCode mmCashSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
@@ -322,7 +322,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialPrice = new MMCode() {
+	public static final MMCode mmSpecialPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialPrice";
@@ -345,7 +345,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCumDividend = new MMCode() {
+	public static final MMCode mmSpecialCumDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumDividend";
@@ -368,7 +368,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialExDividend = new MMCode() {
+	public static final MMCode mmSpecialExDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExDividend";
@@ -391,7 +391,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 * name} = "GuaranteedDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode GuaranteedDelivery = new MMCode() {
+	public static final MMCode mmGuaranteedDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedDelivery";
@@ -402,18 +402,18 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SPCC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionCondition2Code";
 				definition = "Specifies the conditions under which the order/trade is to be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialCumCoupon, com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialExCoupon,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialExBonus, com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialCumBonus,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialCumRights, com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialExRights,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialCumCapitalRepayments, com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialExCapitalRepayments,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.CashSettlement, com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialPrice,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialCumDividend, com.tools20022.repository.codeset.TradeTransactionCondition2Code.SpecialExDividend,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.GuaranteedDelivery);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumCoupon, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExCoupon,
+						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExBonus, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumBonus,
+						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumRights, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExRights,
+						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumCapitalRepayments, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExCapitalRepayments,
+						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmCashSettlement, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialPrice,
+						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumDividend, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExDividend,
+						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmGuaranteedDelivery);
 				trace_lazy = () -> TradeTransactionConditionCode.mmObject();
 			}
 		});

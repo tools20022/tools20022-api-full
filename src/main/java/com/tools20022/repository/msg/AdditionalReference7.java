@@ -34,14 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AdditionalReference7#Reference
- * AdditionalReference7.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference7#ReferenceIssuer
- * AdditionalReference7.ReferenceIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference7#mmReference
+ * AdditionalReference7.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference7#MessageName
- * AdditionalReference7.MessageName}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference7#mmReferenceIssuer
+ * AdditionalReference7.mmReferenceIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference7#mmMessageName
+ * AdditionalReference7.mmMessageName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,18 +53,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#CounterpartyReference
- * TransferInstructionStatusReportV05.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmCounterpartyReference
+ * TransferInstructionStatusReportV05.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05#CounterpartyReference
- * TransferCancellationStatusReportV05.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05#mmCounterpartyReference
+ * TransferCancellationStatusReportV05.mmCounterpartyReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalReference7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reference;
 	/**
 	 * Reference issued by a party to identify an instruction, transaction or a
 	 * message.
@@ -94,8 +96,8 @@ public class AdditionalReference7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,25 +119,26 @@ public class AdditionalReference7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference6#Reference
-	 * AdditionalReference6.Reference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference6#mmReference
+	 * AdditionalReference6.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference issued by a party to identify an instruction, transaction or a message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.Reference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification97Choice referenceIssuer;
 	/**
 	 * Party that issued the reference.
 	 * <p>
@@ -149,8 +152,8 @@ public class AdditionalReference7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,25 +173,26 @@ public class AdditionalReference7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference6#ReferenceIssuer
-	 * AdditionalReference6.ReferenceIssuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference6#mmReferenceIssuer
+	 * AdditionalReference6.mmReferenceIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RefIssr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Party that issued the reference.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.ReferenceIssuer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmReferenceIssuer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification97Choice.mmObject();
 		}
 	};
+	protected Max35Text messageName;
 	/**
 	 * Name of the message.
 	 * <p>
@@ -217,11 +221,11 @@ public class AdditionalReference7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference6#MessageName
-	 * AdditionalReference6.MessageName}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference6#mmMessageName
+	 * AdditionalReference6.mmMessageName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalReference7.mmObject();
 			isDerived = false;
@@ -229,9 +233,9 @@ public class AdditionalReference7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.MessageName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmMessageName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -239,12 +243,12 @@ public class AdditionalReference7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference7.Reference, com.tools20022.repository.msg.AdditionalReference7.ReferenceIssuer,
-						com.tools20022.repository.msg.AdditionalReference7.MessageName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference7.mmReference, com.tools20022.repository.msg.AdditionalReference7.mmReferenceIssuer,
+						com.tools20022.repository.msg.AdditionalReference7.mmMessageName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmCounterpartyReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.mmCounterpartyReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.CounterpartyReference,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.CounterpartyReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference7";
 				definition = "Reference to a related message or transaction.";
@@ -252,5 +256,29 @@ public class AdditionalReference7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public PartyIdentification97Choice getReferenceIssuer() {
+		return referenceIssuer;
+	}
+
+	public void setReferenceIssuer(PartyIdentification97Choice referenceIssuer) {
+		this.referenceIssuer = referenceIssuer;
+	}
+
+	public Max35Text getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(Max35Text messageName) {
+		this.messageName = messageName;
 	}
 }

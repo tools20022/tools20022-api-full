@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#Available
- * SecuritiesBalanceType6Code.Available}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#mmAvailable
+ * SecuritiesBalanceType6Code.mmAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#Restricted
- * SecuritiesBalanceType6Code.Restricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#mmRestricted
+ * SecuritiesBalanceType6Code.mmRestricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#TotalEntitled
- * SecuritiesBalanceType6Code.TotalEntitled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#mmTotalEntitled
+ * SecuritiesBalanceType6Code.mmTotalEntitled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#ReservedForDistribution
- * SecuritiesBalanceType6Code.ReservedForDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#mmReservedForDistribution
+ * SecuritiesBalanceType6Code.mmReservedForDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#ReservedForRemoval
- * SecuritiesBalanceType6Code.ReservedForRemoval}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType6Code#mmReservedForRemoval
+ * SecuritiesBalanceType6Code.mmReservedForRemoval}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class SecuritiesBalanceType6Code extends BalanceTypeCode {
 	 * name} = "Available"</li>
 	 * </ul>
 	 */
-	public static final MMCode Available = new MMCode() {
+	public static final MMCode mmAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
@@ -113,7 +113,7 @@ public class SecuritiesBalanceType6Code extends BalanceTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Restricted = new MMCode() {
+	public static final MMCode mmRestricted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
@@ -136,7 +136,7 @@ public class SecuritiesBalanceType6Code extends BalanceTypeCode {
 	 * name} = "TotalEntitled"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalEntitled = new MMCode() {
+	public static final MMCode mmTotalEntitled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEntitled";
@@ -159,7 +159,7 @@ public class SecuritiesBalanceType6Code extends BalanceTypeCode {
 	 * name} = "ReservedForDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReservedForDistribution = new MMCode() {
+	public static final MMCode mmReservedForDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservedForDistribution";
@@ -182,7 +182,7 @@ public class SecuritiesBalanceType6Code extends BalanceTypeCode {
 	 * name} = "ReservedForRemoval"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReservedForRemoval = new MMCode() {
+	public static final MMCode mmReservedForRemoval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservedForRemoval";
@@ -193,14 +193,14 @@ public class SecuritiesBalanceType6Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVLB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType6Code";
 				definition = "Specifies the type of securities balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType6Code.Available, com.tools20022.repository.codeset.SecuritiesBalanceType6Code.Restricted,
-						com.tools20022.repository.codeset.SecuritiesBalanceType6Code.TotalEntitled, com.tools20022.repository.codeset.SecuritiesBalanceType6Code.ReservedForDistribution,
-						com.tools20022.repository.codeset.SecuritiesBalanceType6Code.ReservedForRemoval);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType6Code.mmAvailable, com.tools20022.repository.codeset.SecuritiesBalanceType6Code.mmRestricted,
+						com.tools20022.repository.codeset.SecuritiesBalanceType6Code.mmTotalEntitled, com.tools20022.repository.codeset.SecuritiesBalanceType6Code.mmReservedForDistribution,
+						com.tools20022.repository.codeset.SecuritiesBalanceType6Code.mmReservedForRemoval);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

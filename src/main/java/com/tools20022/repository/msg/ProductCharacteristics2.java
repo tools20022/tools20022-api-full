@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProductCharacteristics2#Characteristic
- * ProductCharacteristics2.Characteristic}</li>
+ * {@linkplain com.tools20022.repository.msg.ProductCharacteristics2#mmCharacteristic
+ * ProductCharacteristics2.mmCharacteristic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProductCharacteristics2#ValueMeasure
- * ProductCharacteristics2.ValueMeasure}</li>
+ * {@linkplain com.tools20022.repository.msg.ProductCharacteristics2#mmValueMeasure
+ * ProductCharacteristics2.mmValueMeasure}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductCharacteristics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProductCharacteristics1Choice characteristic;
 	/**
 	 * Characteristics of the product.
 	 * <p>
@@ -82,8 +83,8 @@ public class ProductCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#Characteristics
-	 * ProductCharacteristics.Characteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmCharacteristics
+	 * ProductCharacteristics.mmCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,27 +105,28 @@ public class ProductCharacteristics2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics3#Characteristic
-	 * ProductCharacteristics3.Characteristic}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics3#mmCharacteristic
+	 * ProductCharacteristics3.mmCharacteristic}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Characteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmCharacteristics;
 			componentContext_lazy = () -> ProductCharacteristics2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.Characteristics;
 			isDerived = false;
 			xmlTag = "Chrtc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristic";
 			definition = "Characteristics of the product.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics3.Characteristic);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics3.mmCharacteristic);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProductCharacteristics1Choice.mmObject();
 		}
 	};
+	protected Quantity3 valueMeasure;
 	/**
 	 * Measurement value for this product characteristic.
 	 * <p>
@@ -154,13 +156,13 @@ public class ProductCharacteristics2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics3#ValueMeasure
-	 * ProductCharacteristics3.ValueMeasure}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics3#mmValueMeasure
+	 * ProductCharacteristics3.mmValueMeasure}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueMeasure = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProductCharacteristics2.mmObject();
 			isDerived = false;
@@ -168,19 +170,19 @@ public class ProductCharacteristics2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueMeasure";
 			definition = "Measurement value for this product characteristic.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics3.ValueMeasure);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics3.mmValueMeasure);
 			maxOccurs = 1;
-			complexType_lazy = () -> Quantity3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics2.Characteristic, com.tools20022.repository.msg.ProductCharacteristics2.ValueMeasure);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics2.mmCharacteristic, com.tools20022.repository.msg.ProductCharacteristics2.mmValueMeasure);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics2";
 				definition = "Product characteristic applicable to this trade product.";
@@ -188,5 +190,21 @@ public class ProductCharacteristics2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProductCharacteristics1Choice getCharacteristic() {
+		return characteristic;
+	}
+
+	public void setCharacteristic(ProductCharacteristics1Choice characteristic) {
+		this.characteristic = characteristic;
+	}
+
+	public Quantity3 getValueMeasure() {
+		return valueMeasure;
+	}
+
+	public void setValueMeasure(com.tools20022.repository.msg.Quantity3 valueMeasure) {
+		this.valueMeasure = valueMeasure;
 	}
 }

@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PriceAndDirection1#Value
- * PriceAndDirection1.Value}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceAndDirection1#Sign
- * PriceAndDirection1.Sign}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceAndDirection1#mmValue
+ * PriceAndDirection1.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceAndDirection1#mmSign
+ * PriceAndDirection1.mmSign}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceAndDirection1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAnd13DecimalAmount value;
 	/**
 	 * Currency and value.
 	 * <p>
@@ -75,8 +76,8 @@ public class PriceAndDirection1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class PriceAndDirection1 {
 	 * definition} = "Currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> PriceAndDirection1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Currency and value.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected PlusOrMinusIndicator sign;
 	/**
 	 * Indicates that the value is positive or negative.
 	 * <p>
@@ -137,7 +139,7 @@ public class PriceAndDirection1 {
 	 * definition} = "Indicates that the value is positive or negative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sign = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceAndDirection1.mmObject();
 			isDerived = false;
@@ -145,8 +147,8 @@ public class PriceAndDirection1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates that the value is positive or negative.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
@@ -154,14 +156,30 @@ public class PriceAndDirection1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceAndDirection1.Value, com.tools20022.repository.msg.PriceAndDirection1.Sign);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceAndDirection1.mmValue, com.tools20022.repository.msg.PriceAndDirection1.mmSign);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceAndDirection1";
 				definition = "Price and an indication of whether it is a increase or a decrease.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAnd13DecimalAmount getValue() {
+		return value;
+	}
+
+	public void setValue(ActiveOrHistoricCurrencyAnd13DecimalAmount value) {
+		this.value = value;
+	}
+
+	public PlusOrMinusIndicator getSign() {
+		return sign;
+	}
+
+	public void setSign(PlusOrMinusIndicator sign) {
+		this.sign = sign;
 	}
 }

@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice20#PriceType
- * UnitPrice20.PriceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice20#Value
- * UnitPrice20.Value}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice20#PriceMethod
- * UnitPrice20.PriceMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice20#mmPriceType
+ * UnitPrice20.mmPriceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice20#mmValue
+ * UnitPrice20.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice20#mmPriceMethod
+ * UnitPrice20.mmPriceMethod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitPrice20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnitPriceType2Choice priceType;
 	/**
 	 * Type of price.
 	 * <p>
@@ -80,8 +81,8 @@ public class UnitPrice20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +100,22 @@ public class UnitPrice20 {
 	 * definition} = "Type of price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> UnitPrice20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "PricTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceType";
 			definition = "Type of price.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UnitPriceType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UnitPriceType2Choice.mmObject();
 		}
 	};
+	protected PriceValue1 value;
 	/**
 	 * Value of the price, that is, as a currency and value.
 	 * <p>
@@ -126,8 +128,8 @@ public class UnitPrice20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,25 +148,26 @@ public class UnitPrice20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnitPrice11#Value
-	 * UnitPrice11.Value}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice11#mmValue
+	 * UnitPrice11.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> UnitPrice20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, that is, as a currency and value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice11.Value;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmValue;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValue1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	protected PriceMethod1Code priceMethod;
 	/**
 	 * Type of pricing calculation method.
 	 * <p>
@@ -178,8 +181,8 @@ public class UnitPrice20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceMethod
-	 * SecuritiesPricing.PriceMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceMethod
+	 * SecuritiesPricing.mmPriceMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,22 +201,22 @@ public class UnitPrice20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnitPrice11#PriceMethod
-	 * UnitPrice11.PriceMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice11#mmPriceMethod
+	 * UnitPrice11.mmPriceMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> UnitPrice20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceMethod;
 			isDerived = false;
 			xmlTag = "PricMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice11.PriceMethod;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmPriceMethod;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
 		}
 	};
@@ -221,9 +224,9 @@ public class UnitPrice20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice20.PriceType, com.tools20022.repository.msg.UnitPrice20.Value, com.tools20022.repository.msg.UnitPrice20.PriceMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice20.mmPriceType, com.tools20022.repository.msg.UnitPrice20.mmValue, com.tools20022.repository.msg.UnitPrice20.mmPriceMethod);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitPrice20";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
@@ -231,5 +234,29 @@ public class UnitPrice20 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnitPriceType2Choice getPriceType() {
+		return priceType;
+	}
+
+	public void setPriceType(UnitPriceType2Choice priceType) {
+		this.priceType = priceType;
+	}
+
+	public PriceValue1 getValue() {
+		return value;
+	}
+
+	public void setValue(com.tools20022.repository.msg.PriceValue1 value) {
+		this.value = value;
+	}
+
+	public PriceMethod1Code getPriceMethod() {
+		return priceMethod;
+	}
+
+	public void setPriceMethod(PriceMethod1Code priceMethod) {
+		this.priceMethod = priceMethod;
 	}
 }

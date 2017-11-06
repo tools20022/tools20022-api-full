@@ -72,27 +72,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#RejectionIdentification
- * StatusChangeRequestRejectionV02.RejectionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmRejectionIdentification
+ * StatusChangeRequestRejectionV02.mmRejectionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#TransactionIdentification
- * StatusChangeRequestRejectionV02.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmTransactionIdentification
+ * StatusChangeRequestRejectionV02.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#SubmitterTransactionReference
- * StatusChangeRequestRejectionV02.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmSubmitterTransactionReference
+ * StatusChangeRequestRejectionV02.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#RejectedStatusChange
- * StatusChangeRequestRejectionV02.RejectedStatusChange}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmRejectedStatusChange
+ * StatusChangeRequestRejectionV02.mmRejectedStatusChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#RejectionReason
- * StatusChangeRequestRejectionV02.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmRejectionReason
+ * StatusChangeRequestRejectionV02.mmRejectionReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#identifier
- * StatusChangeRequestRejectionV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.029.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusChangeRequestRejectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 rejectionIdentification;
 	/**
 	 * Identifies the rejection message.
 	 * <p>
@@ -131,17 +130,18 @@ public class StatusChangeRequestRejectionV02 {
 	 * definition} = "Identifies the rejection message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RejectionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRejectionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionIdentification";
 			definition = "Identifies the rejection message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -169,17 +169,18 @@ public class StatusChangeRequestRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the transaction for the requesting financial institution.
 	 * <p>
@@ -204,17 +205,18 @@ public class StatusChangeRequestRejectionV02 {
 	 * "Reference to the transaction for the requesting financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected TransactionStatus3 rejectedStatusChange;
 	/**
 	 * Specifies the status rejected.
 	 * <p>
@@ -238,17 +240,18 @@ public class StatusChangeRequestRejectionV02 {
 	 * definition} = "Specifies the status rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RejectedStatusChange = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRejectedStatusChange = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctdStsChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatusChange";
 			definition = "Specifies the status rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus3.mmObject();
 		}
 	};
+	protected Reason2 rejectionReason;
 	/**
 	 * Reason why the user cannot accept the request.
 	 * <p>
@@ -271,42 +274,15 @@ public class StatusChangeRequestRejectionV02 {
 	 * definition} = "Reason why the user cannot accept the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RejectionReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason why the user cannot accept the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Reason2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "029"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "029";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -320,12 +296,59 @@ public class StatusChangeRequestRejectionV02 {
 				rootElement = "Document";
 				xmlTag = "StsChngReqRjctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.RejectionIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.TransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.SubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.RejectedStatusChange, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.RejectionReason);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmRejectionIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmRejectedStatusChange, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmRejectionReason);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "029";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRejectionIdentification() {
+		return rejectionIdentification;
+	}
+
+	public void setRejectionIdentification(MessageIdentification1 rejectionIdentification) {
+		this.rejectionIdentification = rejectionIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public TransactionStatus3 getRejectedStatusChange() {
+		return rejectedStatusChange;
+	}
+
+	public void setRejectedStatusChange(TransactionStatus3 rejectedStatusChange) {
+		this.rejectedStatusChange = rejectedStatusChange;
+	}
+
+	public Reason2 getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(Reason2 rejectionReason) {
+		this.rejectionReason = rejectionReason;
 	}
 }

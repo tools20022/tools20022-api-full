@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#AgentIdentification
- * CorporateActionAgent1.AgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#mmAgentIdentification
+ * CorporateActionAgent1.mmAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#AgentRole
- * CorporateActionAgent1.AgentRole}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#mmAgentRole
+ * CorporateActionAgent1.mmAgentRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#ContactPerson
- * CorporateActionAgent1.ContactPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#mmContactPerson
+ * CorporateActionAgent1.mmContactPerson}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice agentIdentification;
 	/**
 	 * Identification of the agent.
 	 * <p>
@@ -79,8 +80,8 @@ public class CorporateActionAgent1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class CorporateActionAgent1 {
 	 * definition} = "Identification of the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionAgent1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AgtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentIdentification";
 			definition = "Identification of the agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected AgentRole1FormatChoice agentRole;
 	/**
 	 * Role played by the agent.
 	 * <p>
@@ -126,8 +128,8 @@ public class CorporateActionAgent1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#AgentRole
-	 * CorporateActionAgent.AgentRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
+	 * CorporateActionAgent.mmAgentRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +148,21 @@ public class CorporateActionAgent1 {
 	 * definition} = "Role played by the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentRole = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.mmAgentRole;
 			componentContext_lazy = () -> CorporateActionAgent1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.AgentRole;
 			isDerived = false;
 			xmlTag = "AgtRole";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentRole";
 			definition = "Role played by the agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AgentRole1FormatChoice.mmObject();
 		}
 	};
+	protected NameAndAddress5 contactPerson;
 	/**
 	 * Contact person at the agent.
 	 * <p>
@@ -172,8 +175,8 @@ public class CorporateActionAgent1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,33 +195,57 @@ public class CorporateActionAgent1 {
 	 * definition} = "Contact person at the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContactPerson = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContactPerson = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionAgent1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "CtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Contact person at the agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAgent1.AgentIdentification, com.tools20022.repository.msg.CorporateActionAgent1.AgentRole,
-						com.tools20022.repository.msg.CorporateActionAgent1.ContactPerson);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAgent1.mmAgentIdentification, com.tools20022.repository.msg.CorporateActionAgent1.mmAgentRole,
+						com.tools20022.repository.msg.CorporateActionAgent1.mmContactPerson);
 				trace_lazy = () -> CorporateActionAgent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAgent1";
 				definition = "Provides information about the agent.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getAgentIdentification() {
+		return agentIdentification;
+	}
+
+	public void setAgentIdentification(PartyIdentification2Choice agentIdentification) {
+		this.agentIdentification = agentIdentification;
+	}
+
+	public AgentRole1FormatChoice getAgentRole() {
+		return agentRole;
+	}
+
+	public void setAgentRole(AgentRole1FormatChoice agentRole) {
+		this.agentRole = agentRole;
+	}
+
+	public NameAndAddress5 getContactPerson() {
+		return contactPerson;
+	}
+
+	public void setContactPerson(com.tools20022.repository.msg.NameAndAddress5 contactPerson) {
+		this.contactPerson = contactPerson;
 	}
 }

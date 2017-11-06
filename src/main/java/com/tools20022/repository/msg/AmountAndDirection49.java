@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection49#Amount
- * AmountAndDirection49.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection49#mmAmount
+ * AmountAndDirection49.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection49#CreditDebitIndicator
- * AmountAndDirection49.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection49#mmCreditDebitIndicator
+ * AmountAndDirection49.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection49#OriginalCurrencyAndOrderedAmount
- * AmountAndDirection49.OriginalCurrencyAndOrderedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection49#mmOriginalCurrencyAndOrderedAmount
+ * AmountAndDirection49.mmOriginalCurrencyAndOrderedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndDirection49#ForeignExchangeDetails
- * AmountAndDirection49.ForeignExchangeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndDirection49#mmForeignExchangeDetails
+ * AmountAndDirection49.mmForeignExchangeDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +57,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05#OpeningSettlementAmount
- * SecuritiesFinancingModificationInstructionV05.OpeningSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05#mmOpeningSettlementAmount
+ * SecuritiesFinancingModificationInstructionV05.mmOpeningSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV06#OpeningSettlementAmount
- * SecuritiesFinancingModificationInstructionV06.OpeningSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV06#mmOpeningSettlementAmount
+ * SecuritiesFinancingModificationInstructionV06.mmOpeningSettlementAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountAndDirection49 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of money in the cash entry.
 	 * <p>
@@ -100,8 +101,8 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,25 +122,26 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#Amount
-	 * AmountAndDirection10.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#mmAmount
+	 * AmountAndDirection10.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> AmountAndDirection49.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether an entry is a credit or a debit.
 	 * <p>
@@ -153,8 +155,8 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreditDebitIndicator
-	 * PaymentExecution.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreditDebitIndicator
+	 * PaymentExecution.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,25 +176,26 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#CreditDebitIndicator
-	 * AmountAndDirection10.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#mmCreditDebitIndicator
+	 * AmountAndDirection10.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> AmountAndDirection49.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.CreditDebitIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount;
 	/**
 	 * Posting/settlement amount in its original currency when conversion
 	 * from/into another currency has occurred.
@@ -207,8 +210,8 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#OriginalAmount
-	 * CurrencyExchange.OriginalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmOriginalAmount
+	 * CurrencyExchange.mmOriginalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,25 +233,26 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#OriginalCurrencyAndOrderedAmount
-	 * AmountAndDirection10.OriginalCurrencyAndOrderedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection10.mmOriginalCurrencyAndOrderedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> AmountAndDirection49.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.OriginalAmount;
 			isDerived = false;
 			xmlTag = "OrgnlCcyAndOrdrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAndOrderedAmount";
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.OriginalCurrencyAndOrderedAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmOriginalCurrencyAndOrderedAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ForeignExchangeTerms23 foreignExchangeDetails;
 	/**
 	 * Information needed to process a currency exchange or conversion.
 	 * <p>
@@ -260,8 +264,8 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -282,36 +286,36 @@ public class AmountAndDirection49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#ForeignExchangeDetails
-	 * AmountAndDirection10.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection10#mmForeignExchangeDetails
+	 * AmountAndDirection10.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> AmountAndDirection49.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.ForeignExchangeDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmForeignExchangeDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ForeignExchangeTerms23.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection49.Amount, com.tools20022.repository.msg.AmountAndDirection49.CreditDebitIndicator,
-						com.tools20022.repository.msg.AmountAndDirection49.OriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection49.ForeignExchangeDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection49.mmAmount, com.tools20022.repository.msg.AmountAndDirection49.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.AmountAndDirection49.mmOriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection49.mmForeignExchangeDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05.mmOpeningSettlementAmount,
+						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV06.mmOpeningSettlementAmount);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05.OpeningSettlementAmount,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV06.OpeningSettlementAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection49";
 				definition = "Amount of money debited or credited on the books of an account servicer.";
@@ -319,5 +323,37 @@ public class AmountAndDirection49 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getOriginalCurrencyAndOrderedAmount() {
+		return originalCurrencyAndOrderedAmount;
+	}
+
+	public void setOriginalCurrencyAndOrderedAmount(ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount) {
+		this.originalCurrencyAndOrderedAmount = originalCurrencyAndOrderedAmount;
+	}
+
+	public ForeignExchangeTerms23 getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms23 foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
 	}
 }

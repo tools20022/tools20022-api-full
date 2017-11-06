@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.StatusReason;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies whether the status is provided with a reason or not.
@@ -32,7 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Reason3#Reason Reason3.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reason3#mmReason
+ * Reason3.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -41,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.ProprietaryReason3> reason;
 	/**
 	 * Specifies the reason of the Status.
 	 * <p>
@@ -86,32 +89,40 @@ public class Reason3 {
 	 * definition} = "Specifies the reason of the Status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Reason3.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> Reason3.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the Status.";
 			minOccurs = 0;
-			type_lazy = () -> ProprietaryReason3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reason3.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reason3.mmReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reason3";
 				definition = "Specifies whether the status is provided with a reason or not.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ProprietaryReason3> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<com.tools20022.repository.msg.ProprietaryReason3> reason) {
+		this.reason = reason;
 	}
 }

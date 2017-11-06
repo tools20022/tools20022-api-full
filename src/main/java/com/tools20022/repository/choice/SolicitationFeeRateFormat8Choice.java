@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice#Rate
- * SolicitationFeeRateFormat8Choice.Rate}</li>
+ * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice#mmRate
+ * SolicitationFeeRateFormat8Choice.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice#AmountToQuantity
- * SolicitationFeeRateFormat8Choice.AmountToQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice#mmAmountToQuantity
+ * SolicitationFeeRateFormat8Choice.mmAmountToQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice#Amount
- * SolicitationFeeRateFormat8Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice#mmAmount
+ * SolicitationFeeRateFormat8Choice.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SolicitationFeeRateFormat8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Value is expressed as a rate.
 	 * <p>
@@ -82,8 +83,8 @@ public class SolicitationFeeRateFormat8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Rate
-	 * RateAndAmount.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRate
+	 * RateAndAmount.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class SolicitationFeeRateFormat8Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmRate;
 			componentContext_lazy = () -> SolicitationFeeRateFormat8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected AmountAndQuantityRatio4 amountToQuantity;
 	/**
 	 * Ratio expressed as an amount to quantity ratio.
 	 * <p>
@@ -148,21 +150,22 @@ public class SolicitationFeeRateFormat8Choice {
 	 * definition} = "Ratio expressed as an amount to quantity ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SolicitationFeeRateFormat8Choice.mmObject();
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
+			componentContext_lazy = () -> SolicitationFeeRateFormat8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToQuantity";
 			definition = "Ratio expressed as an amount to quantity ratio.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndQuantityRatio4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountAndQuantityRatio4.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Cash amount.
 	 * <p>
@@ -176,8 +179,8 @@ public class SolicitationFeeRateFormat8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Amount
-	 * RateAndAmount.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAmount
+	 * RateAndAmount.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,17 +199,17 @@ public class SolicitationFeeRateFormat8Choice {
 	 * definition} = "Cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
 			componentContext_lazy = () -> SolicitationFeeRateFormat8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -214,15 +217,39 @@ public class SolicitationFeeRateFormat8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice.Rate, com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice.AmountToQuantity,
-						com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice.mmRate, com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice.mmAmountToQuantity,
+						com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice.mmAmount);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SolicitationFeeRateFormat8Choice";
 				definition = "Choice between a rate or an unspecified rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public AmountAndQuantityRatio4 getAmountToQuantity() {
+		return amountToQuantity;
+	}
+
+	public void setAmountToQuantity(AmountAndQuantityRatio4 amountToQuantity) {
+		this.amountToQuantity = amountToQuantity;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
 	}
 }

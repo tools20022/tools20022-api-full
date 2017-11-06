@@ -32,11 +32,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDiagnosticRequest2#Environment
- * ATMDiagnosticRequest2.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDiagnosticRequest2#mmEnvironment
+ * ATMDiagnosticRequest2.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDiagnosticRequest2#ATMGlobalStatus
- * ATMDiagnosticRequest2.ATMGlobalStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDiagnosticRequest2#mmATMGlobalStatus
+ * ATMDiagnosticRequest2.mmATMGlobalStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,15 +44,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02#ATMDiagnosticRequest
- * ATMDiagnosticRequestV02.ATMDiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02#mmATMDiagnosticRequest
+ * ATMDiagnosticRequestV02.mmATMDiagnosticRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDiagnosticRequest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment9 environment;
 	/**
 	 * Environment of the ATM.
 	 * <p>
@@ -93,7 +94,7 @@ public class ATMDiagnosticRequest2 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDiagnosticRequest2.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class ATMDiagnosticRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment9.mmObject();
 		}
 	};
+	protected ATMStatus1 aTMGlobalStatus;
 	/**
 	 * Global status of the ATM.
 	 * <p>
@@ -132,7 +134,7 @@ public class ATMDiagnosticRequest2 {
 	 * definition} = "Global status of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ATMGlobalStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmATMGlobalStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDiagnosticRequest2.mmObject();
 			isDerived = false;
@@ -140,24 +142,40 @@ public class ATMDiagnosticRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMGlobalStatus";
 			definition = "Global status of the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMStatus1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDiagnosticRequest2.Environment, com.tools20022.repository.msg.ATMDiagnosticRequest2.ATMGlobalStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.ATMDiagnosticRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDiagnosticRequest2.mmEnvironment, com.tools20022.repository.msg.ATMDiagnosticRequest2.mmATMGlobalStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmATMDiagnosticRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDiagnosticRequest2";
 				definition = "Information related to the request of a diagnostic from an ATM..";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment9 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment9 environment) {
+		this.environment = environment;
+	}
+
+	public ATMStatus1 getATMGlobalStatus() {
+		return aTMGlobalStatus;
+	}
+
+	public void setATMGlobalStatus(com.tools20022.repository.msg.ATMStatus1 aTMGlobalStatus) {
+		this.aTMGlobalStatus = aTMGlobalStatus;
 	}
 }

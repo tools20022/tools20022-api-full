@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#FullyCollateralised
- * CollateralisationIndicatorCode.FullyCollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#mmFullyCollateralised
+ * CollateralisationIndicatorCode.mmFullyCollateralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#OneWayCollateralised
- * CollateralisationIndicatorCode.OneWayCollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#mmOneWayCollateralised
+ * CollateralisationIndicatorCode.mmOneWayCollateralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#PartiallyCollateralised
- * CollateralisationIndicatorCode.PartiallyCollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#mmPartiallyCollateralised
+ * CollateralisationIndicatorCode.mmPartiallyCollateralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#Uncollateralised
- * CollateralisationIndicatorCode.Uncollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode#mmUncollateralised
+ * CollateralisationIndicatorCode.mmUncollateralised}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class CollateralisationIndicatorCode {
 	 * definition} = "Transaction is fully collateralised."</li>
 	 * </ul>
 	 */
-	public static final MMCode FullyCollateralised = new MMCode() {
+	public static final MMCode mmFullyCollateralised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyCollateralised";
@@ -126,7 +126,7 @@ public class CollateralisationIndicatorCode {
 	 * definition} = "Transaction is one-way collateralised."</li>
 	 * </ul>
 	 */
-	public static final MMCode OneWayCollateralised = new MMCode() {
+	public static final MMCode mmOneWayCollateralised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneWayCollateralised";
@@ -156,7 +156,7 @@ public class CollateralisationIndicatorCode {
 	 * definition} = "Transaction is partially collateralised."</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyCollateralised = new MMCode() {
+	public static final MMCode mmPartiallyCollateralised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyCollateralised";
@@ -186,7 +186,7 @@ public class CollateralisationIndicatorCode {
 	 * definition} = "Transaction is uncollateralised."</li>
 	 * </ul>
 	 */
-	public static final MMCode Uncollateralised = new MMCode() {
+	public static final MMCode mmUncollateralised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Uncollateralised";
@@ -199,13 +199,13 @@ public class CollateralisationIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FULL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralisationIndicatorCode";
 				definition = "Specifies whether the transaction is collateralised.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralisationIndicatorCode.FullyCollateralised, com.tools20022.repository.codeset.CollateralisationIndicatorCode.OneWayCollateralised,
-						com.tools20022.repository.codeset.CollateralisationIndicatorCode.PartiallyCollateralised, com.tools20022.repository.codeset.CollateralisationIndicatorCode.Uncollateralised);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralisationIndicatorCode.mmFullyCollateralised, com.tools20022.repository.codeset.CollateralisationIndicatorCode.mmOneWayCollateralised,
+						com.tools20022.repository.codeset.CollateralisationIndicatorCode.mmPartiallyCollateralised, com.tools20022.repository.codeset.CollateralisationIndicatorCode.mmUncollateralised);
 				derivation_lazy = () -> Arrays.asList(CollateralisationIndicator1Code.mmObject());
 			}
 		});

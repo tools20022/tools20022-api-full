@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionIdentification2#InstructionIdentification
- * InstructionIdentification2.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionIdentification2#mmInstructionIdentification
+ * InstructionIdentification2.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionIdentification2#CreationDateTime
- * InstructionIdentification2.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionIdentification2#mmCreationDateTime
+ * InstructionIdentification2.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructionIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text instructionIdentification;
 	/**
 	 * Point to point reference, as assigned by the sender, to unambiguously
 	 * identify an instruction.
@@ -89,7 +90,7 @@ public class InstructionIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionIdentification2.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class InstructionIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Point to point reference, as assigned by the sender, to unambiguously identify an instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the instruction was created.
 	 * <p>
@@ -129,7 +131,7 @@ public class InstructionIdentification2 {
 	 * definition} = "Date and time at which the instruction was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionIdentification2.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class InstructionIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the instruction was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class InstructionIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionIdentification2.InstructionIdentification, com.tools20022.repository.msg.InstructionIdentification2.CreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionIdentification2.mmInstructionIdentification, com.tools20022.repository.msg.InstructionIdentification2.mmCreationDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstructionIdentification2";
 				definition = "Identifies an instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getInstructionIdentification() {
+		return instructionIdentification;
+	}
+
+	public void setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = instructionIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

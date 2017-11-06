@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.ReportingRequest2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -61,18 +62,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV02#GroupHeader
- * AccountReportingRequestV02.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV02#mmGroupHeader
+ * AccountReportingRequestV02.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV02#ReportingRequest
- * AccountReportingRequestV02.ReportingRequest}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV02#mmReportingRequest
+ * AccountReportingRequestV02.mmReportingRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV02#identifier
- * AccountReportingRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.060.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountReportingRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader43 groupHeader;
 	/**
 	 * Set of elements used to provide further details on the message.
 	 * <p>
@@ -119,17 +119,18 @@ public class AccountReportingRequestV02 {
 	 * "Set of elements used to provide further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of elements used to provide further details on the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader43.mmObject();
 		}
 	};
+	protected List<ReportingRequest2> reportingRequest;
 	/**
 	 * Set of elements used to provide further details on the reporting request.
 	 * <p>
@@ -155,7 +156,7 @@ public class AccountReportingRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportingRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportingRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,33 +164,6 @@ public class AccountReportingRequestV02 {
 			definition = "Set of elements used to provide further details on the reporting request.";
 			minOccurs = 1;
 			complexType_lazy = () -> ReportingRequest2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "060"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "060";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -204,10 +178,33 @@ public class AccountReportingRequestV02 {
 				rootElement = "Document";
 				xmlTag = "AcctRptgReq";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AccountReportingRequestV02.GroupHeader, com.tools20022.repository.area.camt.AccountReportingRequestV02.ReportingRequest);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.AccountReportingRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AccountReportingRequestV02.mmGroupHeader, com.tools20022.repository.area.camt.AccountReportingRequestV02.mmReportingRequest);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "060";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader43 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader43 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<ReportingRequest2> getReportingRequest() {
+		return reportingRequest;
+	}
+
+	public void setReportingRequest(List<ReportingRequest2> reportingRequest) {
+		this.reportingRequest = reportingRequest;
 	}
 }

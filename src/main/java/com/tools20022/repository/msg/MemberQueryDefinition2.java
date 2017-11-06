@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberQueryDefinition2#QueryType
- * MemberQueryDefinition2.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberQueryDefinition2#mmQueryType
+ * MemberQueryDefinition2.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberQueryDefinition2#MemberCriteria
- * MemberQueryDefinition2.MemberCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberQueryDefinition2#mmMemberCriteria
+ * MemberQueryDefinition2.mmMemberCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberQueryDefinition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType2Code queryType;
 	/**
 	 * Specifies the type of matching items to be returned in the response to
 	 * the query.
@@ -91,7 +92,7 @@ public class MemberQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberQueryDefinition2.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class MemberQueryDefinition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	protected MemberCriteriaDefinitionChoice memberCriteria;
 	/**
 	 * Defines the member query criteria.
 	 * <p>
@@ -131,7 +133,7 @@ public class MemberQueryDefinition2 {
 	 * definition} = "Defines the member query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MemberCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMemberCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MemberQueryDefinition2.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class MemberQueryDefinition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberCriteria";
 			definition = "Defines the member query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MemberCriteriaDefinitionChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MemberCriteriaDefinitionChoice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberQueryDefinition2.QueryType, com.tools20022.repository.msg.MemberQueryDefinition2.MemberCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberQueryDefinition2.mmQueryType, com.tools20022.repository.msg.MemberQueryDefinition2.mmMemberCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberQueryDefinition2";
 				definition = "Defines the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType2Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType2Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public MemberCriteriaDefinitionChoice getMemberCriteria() {
+		return memberCriteria;
+	}
+
+	public void setMemberCriteria(MemberCriteriaDefinitionChoice memberCriteria) {
+		this.memberCriteria = memberCriteria;
 	}
 }

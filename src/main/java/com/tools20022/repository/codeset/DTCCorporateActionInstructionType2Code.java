@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code#InstructionWithdrawal
- * DTCCorporateActionInstructionType2Code.InstructionWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code#mmInstructionWithdrawal
+ * DTCCorporateActionInstructionType2Code.mmInstructionWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code#ProtectWithdrawal
- * DTCCorporateActionInstructionType2Code.ProtectWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code#mmProtectWithdrawal
+ * DTCCorporateActionInstructionType2Code.mmProtectWithdrawal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class DTCCorporateActionInstructionType2Code extends DTCCorporateActionIn
 	 * name} = "InstructionWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructionWithdrawal = new MMCode() {
+	public static final MMCode mmInstructionWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionWithdrawal";
@@ -104,7 +104,7 @@ public class DTCCorporateActionInstructionType2Code extends DTCCorporateActionIn
 	 * name} = "ProtectWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProtectWithdrawal = new MMCode() {
+	public static final MMCode mmProtectWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectWithdrawal";
@@ -115,12 +115,12 @@ public class DTCCorporateActionInstructionType2Code extends DTCCorporateActionIn
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WIIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCCorporateActionInstructionType2Code";
 				definition = "Specifies the type of the corporate action instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code.InstructionWithdrawal, com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code.ProtectWithdrawal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code.mmInstructionWithdrawal, com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code.mmProtectWithdrawal);
 				trace_lazy = () -> DTCCorporateActionInstructionTypeCode.mmObject();
 			}
 		});

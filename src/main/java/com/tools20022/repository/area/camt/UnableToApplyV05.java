@@ -31,6 +31,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -111,26 +112,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#Assignment
- * UnableToApplyV05.Assignment}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#Case
- * UnableToApplyV05.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#mmAssignment
+ * UnableToApplyV05.mmAssignment}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#mmCase
+ * UnableToApplyV05.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#Underlying
- * UnableToApplyV05.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#mmUnderlying
+ * UnableToApplyV05.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#Justification
- * UnableToApplyV05.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#mmJustification
+ * UnableToApplyV05.mmJustification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#SupplementaryData
- * UnableToApplyV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#mmSupplementaryData
+ * UnableToApplyV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#identifier
- * UnableToApplyV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.026.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -150,6 +149,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnableToApplyV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -177,22 +177,23 @@ public class UnableToApplyV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#Assignment
-	 * UnableToApplyV04.Assignment}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#mmAssignment
+	 * UnableToApplyV04.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.Assignment;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.mmAssignment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -215,22 +216,23 @@ public class UnableToApplyV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#Case
-	 * UnableToApplyV04.Case}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#mmCase
+	 * UnableToApplyV04.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.Case;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.mmCase;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected UnderlyingTransaction3Choice underlying;
 	/**
 	 * References the payment instruction or statement entry that a party is
 	 * unable to execute or unable to reconcile.
@@ -258,22 +260,23 @@ public class UnableToApplyV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#Underlying
-	 * UnableToApplyV04.Underlying}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#mmUnderlying
+	 * UnableToApplyV04.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "References the payment instruction or statement entry that a party is unable to execute or unable to reconcile.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.Underlying;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.mmUnderlying;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction3Choice.mmObject();
 		}
 	};
+	protected UnableToApplyJustification3Choice justification;
 	/**
 	 * Explains the reason why the case creator is unable to apply the
 	 * instruction.
@@ -301,22 +304,23 @@ public class UnableToApplyV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#Justification
-	 * UnableToApplyV04.Justification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#mmJustification
+	 * UnableToApplyV04.mmJustification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Justification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Explains the reason why the case creator is unable to apply the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.Justification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.mmJustification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnableToApplyJustification3Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -344,46 +348,19 @@ public class UnableToApplyV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#SupplementaryData
-	 * UnableToApplyV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV04#mmSupplementaryData
+	 * UnableToApplyV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "026"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "026";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -398,11 +375,58 @@ public class UnableToApplyV05 {
 				rootElement = "Document";
 				xmlTag = "UblToApply";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApplyV05.Assignment, com.tools20022.repository.area.camt.UnableToApplyV05.Case,
-						com.tools20022.repository.area.camt.UnableToApplyV05.Underlying, com.tools20022.repository.area.camt.UnableToApplyV05.Justification, com.tools20022.repository.area.camt.UnableToApplyV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.UnableToApplyV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApplyV05.mmAssignment, com.tools20022.repository.area.camt.UnableToApplyV05.mmCase,
+						com.tools20022.repository.area.camt.UnableToApplyV05.mmUnderlying, com.tools20022.repository.area.camt.UnableToApplyV05.mmJustification, com.tools20022.repository.area.camt.UnableToApplyV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "026";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public UnderlyingTransaction3Choice getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(UnderlyingTransaction3Choice underlying) {
+		this.underlying = underlying;
+	}
+
+	public UnableToApplyJustification3Choice getJustification() {
+		return justification;
+	}
+
+	public void setJustification(UnableToApplyJustification3Choice justification) {
+		this.justification = justification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

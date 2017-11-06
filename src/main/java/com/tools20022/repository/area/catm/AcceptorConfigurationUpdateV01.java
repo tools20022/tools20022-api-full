@@ -67,21 +67,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#Header
- * AcceptorConfigurationUpdateV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#mmHeader
+ * AcceptorConfigurationUpdateV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#AcceptorConfiguration
- * AcceptorConfigurationUpdateV01.AcceptorConfiguration}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#mmAcceptorConfiguration
+ * AcceptorConfigurationUpdateV01.mmAcceptorConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#SecurityTrailer
- * AcceptorConfigurationUpdateV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#mmSecurityTrailer
+ * AcceptorConfigurationUpdateV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#identifier
- * AcceptorConfigurationUpdateV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catm.003.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorConfigurationUpdateV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header4 header;
 	/**
 	 * Set of characteristics related to the transfer of the acceptor
 	 * parameters.
@@ -130,17 +129,18 @@ public class AcceptorConfigurationUpdateV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics related to the transfer of the acceptor parameters.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header4.mmObject();
 		}
 	};
+	protected AcceptorConfiguration1 acceptorConfiguration;
 	/**
 	 * Acceptor configuration to be downloaded from the terminal management
 	 * system.
@@ -167,17 +167,18 @@ public class AcceptorConfigurationUpdateV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcceptorConfiguration = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcceptorConfiguration = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptrCfgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorConfiguration";
 			definition = "Acceptor configuration to be downloaded from the terminal management system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorConfiguration1.mmObject();
 		}
 	};
+	protected ContentInformationType1 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -202,42 +203,15 @@ public class AcceptorConfigurationUpdateV01 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catm";
-			messageFunctionality = "003";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -252,11 +226,42 @@ public class AcceptorConfigurationUpdateV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrCfgtnUpd";
 				businessArea_lazy = () -> TerminalManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.Header, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.AcceptorConfiguration,
-						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmHeader, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmAcceptorConfiguration,
+						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catm";
+						messageFunctionality = "003";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header4 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header4 header) {
+		this.header = header;
+	}
+
+	public AcceptorConfiguration1 getAcceptorConfiguration() {
+		return acceptorConfiguration;
+	}
+
+	public void setAcceptorConfiguration(AcceptorConfiguration1 acceptorConfiguration) {
+		this.acceptorConfiguration = acceptorConfiguration;
+	}
+
+	public ContentInformationType1 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType1 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

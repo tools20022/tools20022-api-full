@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#Domestic
- * AccountingStatusCode.Domestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#mmDomestic
+ * AccountingStatusCode.mmDomestic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#NotDomestic
- * AccountingStatusCode.NotDomestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#mmNotDomestic
+ * AccountingStatusCode.mmNotDomestic}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +84,7 @@ public class AccountingStatusCode {
 	 * "Account or party is regarded as domestic for reporting purposes."</li>
 	 * </ul>
 	 */
-	public static final MMCode Domestic = new MMCode() {
+	public static final MMCode mmDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
@@ -115,7 +115,7 @@ public class AccountingStatusCode {
 	 * "Account or party is not regarded as domestic for reporting purposes."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDomestic = new MMCode() {
+	public static final MMCode mmNotDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDomestic";
@@ -128,11 +128,11 @@ public class AccountingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatusCode";
 				definition = "Specifies the accounting status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountingStatusCode.Domestic, com.tools20022.repository.codeset.AccountingStatusCode.NotDomestic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountingStatusCode.mmDomestic, com.tools20022.repository.codeset.AccountingStatusCode.mmNotDomestic);
 				derivation_lazy = () -> Arrays.asList(AccountingStatus1Code.mmObject());
 			}
 		});

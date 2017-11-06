@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria#QualifierIndicator
- * GeneralBusinessInformationReturnCriteria.QualifierIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria#mmQualifierIndicator
+ * GeneralBusinessInformationReturnCriteria.mmQualifierIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria#SubjectIndicator
- * GeneralBusinessInformationReturnCriteria.SubjectIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria#mmSubjectIndicator
+ * GeneralBusinessInformationReturnCriteria.mmSubjectIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria#SubjectDetailsIndicator
- * GeneralBusinessInformationReturnCriteria.SubjectDetailsIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria#mmSubjectDetailsIndicator
+ * GeneralBusinessInformationReturnCriteria.mmSubjectDetailsIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralBusinessInformationReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator qualifierIndicator;
 	/**
 	 * Indicates whether the qualifier is requested.
 	 * <p>
@@ -89,7 +90,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * definition} = "Indicates whether the qualifier is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QualifierIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQualifierIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class GeneralBusinessInformationReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifierIndicator";
 			definition = "Indicates whether the qualifier is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator subjectIndicator;
 	/**
 	 * Indicates whether the subject is requested.
 	 * <p>
@@ -130,7 +132,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * definition} = "Indicates whether the subject is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubjectIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubjectIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -138,11 +140,12 @@ public class GeneralBusinessInformationReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectIndicator";
 			definition = "Indicates whether the subject is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator subjectDetailsIndicator;
 	/**
 	 * Indicates whether the subject details are requested.
 	 * <p>
@@ -171,7 +174,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * definition} = "Indicates whether the subject details are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubjectDetailsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubjectDetailsIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -179,8 +182,8 @@ public class GeneralBusinessInformationReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectDetailsIndicator";
 			definition = "Indicates whether the subject details are requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -188,14 +191,38 @@ public class GeneralBusinessInformationReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.QualifierIndicator, com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.SubjectIndicator,
-						com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.SubjectDetailsIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmQualifierIndicator,
+						com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectIndicator, com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectDetailsIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessInformationReturnCriteria";
 				definition = "Defines the criteria used to report on business information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getQualifierIndicator() {
+		return qualifierIndicator;
+	}
+
+	public void setQualifierIndicator(RequestedIndicator qualifierIndicator) {
+		this.qualifierIndicator = qualifierIndicator;
+	}
+
+	public RequestedIndicator getSubjectIndicator() {
+		return subjectIndicator;
+	}
+
+	public void setSubjectIndicator(RequestedIndicator subjectIndicator) {
+		this.subjectIndicator = subjectIndicator;
+	}
+
+	public RequestedIndicator getSubjectDetailsIndicator() {
+		return subjectDetailsIndicator;
+	}
+
+	public void setSubjectDetailsIndicator(RequestedIndicator subjectDetailsIndicator) {
+		this.subjectDetailsIndicator = subjectDetailsIndicator;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,30 +74,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#Pagination
- * SecuritiesTransactionPendingReport002V07.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmPagination
+ * SecuritiesTransactionPendingReport002V07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#StatementGeneralDetails
- * SecuritiesTransactionPendingReport002V07.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmStatementGeneralDetails
+ * SecuritiesTransactionPendingReport002V07.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#AccountOwner
- * SecuritiesTransactionPendingReport002V07.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmAccountOwner
+ * SecuritiesTransactionPendingReport002V07.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#SafekeepingAccount
- * SecuritiesTransactionPendingReport002V07.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReport002V07.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#Status
- * SecuritiesTransactionPendingReport002V07.Status}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmStatus
+ * SecuritiesTransactionPendingReport002V07.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#Transactions
- * SecuritiesTransactionPendingReport002V07.Transactions}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmTransactions
+ * SecuritiesTransactionPendingReport002V07.mmTransactions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#identifier
- * SecuritiesTransactionPendingReport002V07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.018.002.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionPendingReport002V07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -146,17 +146,18 @@ public class SecuritiesTransactionPendingReport002V07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement55 statementGeneralDetails;
 	/**
 	 * Provides general information on the report.
 	 * <p>
@@ -179,17 +180,18 @@ public class SecuritiesTransactionPendingReport002V07 {
 	 * definition} = "Provides general information on the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "Provides general information on the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement55.mmObject();
 		}
 	};
+	protected PartyIdentification109 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -213,17 +215,18 @@ public class SecuritiesTransactionPendingReport002V07 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification109.mmObject();
 		}
 	};
+	protected SecuritiesAccount27 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -247,17 +250,18 @@ public class SecuritiesTransactionPendingReport002V07 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount27.mmObject();
 		}
 	};
+	protected List<StatusAndReason30> status;
 	/**
 	 * Status information.
 	 * <p>
@@ -281,7 +285,7 @@ public class SecuritiesTransactionPendingReport002V07 {
 	 * definition} = "Status information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Status = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,6 +295,7 @@ public class SecuritiesTransactionPendingReport002V07 {
 			complexType_lazy = () -> StatusAndReason30.mmObject();
 		}
 	};
+	protected List<Transaction49> transactions;
 	/**
 	 * Details of the transactions reported.
 	 * <p>
@@ -313,7 +318,7 @@ public class SecuritiesTransactionPendingReport002V07 {
 	 * definition} = "Details of the transactions reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Transactions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Txs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,33 +326,6 @@ public class SecuritiesTransactionPendingReport002V07 {
 			definition = "Details of the transactions reported.";
 			minOccurs = 0;
 			complexType_lazy = () -> Transaction49.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "018"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "018";
-			version = "07";
-			flavour = "002";
 		}
 	};
 
@@ -362,13 +340,68 @@ public class SecuritiesTransactionPendingReport002V07 {
 				rootElement = "Document";
 				xmlTag = "SctiesTxPdgRpt";
 				businessArea_lazy = () -> SecuritiesManagementPreviousversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.StatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.Status,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.Transactions);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmStatus,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmTransactions);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "018";
+						version = "07";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Statement55 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement55 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public PartyIdentification109 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification109 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount27 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount27 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<StatusAndReason30> getStatus() {
+		return status;
+	}
+
+	public void setStatus(List<StatusAndReason30> status) {
+		this.status = status;
+	}
+
+	public List<Transaction49> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(List<Transaction49> transactions) {
+		this.transactions = transactions;
 	}
 }

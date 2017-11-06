@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code#NoPoliticalExposure
- * PoliticalExposureType1Code.NoPoliticalExposure}</li>
+ * {@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code#mmNoPoliticalExposure
+ * PoliticalExposureType1Code.mmNoPoliticalExposure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code#PoliticalExposureForeign
- * PoliticalExposureType1Code.PoliticalExposureForeign}</li>
+ * {@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code#mmPoliticalExposureForeign
+ * PoliticalExposureType1Code.mmPoliticalExposureForeign}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code#PoliticalExposureDomestic
- * PoliticalExposureType1Code.PoliticalExposureDomestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code#mmPoliticalExposureDomestic
+ * PoliticalExposureType1Code.mmPoliticalExposureDomestic}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class PoliticalExposureType1Code extends PoliticalExposureTypeCode {
 	 * name} = "NoPoliticalExposure"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoPoliticalExposure = new MMCode() {
+	public static final MMCode mmNoPoliticalExposure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPoliticalExposure";
@@ -101,7 +101,7 @@ public class PoliticalExposureType1Code extends PoliticalExposureTypeCode {
 	 * name} = "PoliticalExposureForeign"</li>
 	 * </ul>
 	 */
-	public static final MMCode PoliticalExposureForeign = new MMCode() {
+	public static final MMCode mmPoliticalExposureForeign = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoliticalExposureForeign";
@@ -124,7 +124,7 @@ public class PoliticalExposureType1Code extends PoliticalExposureTypeCode {
 	 * name} = "PoliticalExposureDomestic"</li>
 	 * </ul>
 	 */
-	public static final MMCode PoliticalExposureDomestic = new MMCode() {
+	public static final MMCode mmPoliticalExposureDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoliticalExposureDomestic";
@@ -135,12 +135,12 @@ public class PoliticalExposureType1Code extends PoliticalExposureTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PoliticalExposureType1Code";
 				definition = "Specifies the political exposure type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PoliticalExposureType1Code.NoPoliticalExposure, com.tools20022.repository.codeset.PoliticalExposureType1Code.PoliticalExposureForeign,
-						com.tools20022.repository.codeset.PoliticalExposureType1Code.PoliticalExposureDomestic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PoliticalExposureType1Code.mmNoPoliticalExposure, com.tools20022.repository.codeset.PoliticalExposureType1Code.mmPoliticalExposureForeign,
+						com.tools20022.repository.codeset.PoliticalExposureType1Code.mmPoliticalExposureDomestic);
 				trace_lazy = () -> PoliticalExposureTypeCode.mmObject();
 			}
 		});

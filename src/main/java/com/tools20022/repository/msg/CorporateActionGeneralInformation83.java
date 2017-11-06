@@ -42,30 +42,31 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#CorporateActionEventIdentification
- * CorporateActionGeneralInformation83.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmCorporateActionEventIdentification
+ * CorporateActionGeneralInformation83.mmCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#OfficialCorporateActionEventIdentification
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmOfficialCorporateActionEventIdentification
  * CorporateActionGeneralInformation83.
- * OfficialCorporateActionEventIdentification}</li>
+ * mmOfficialCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#ClassActionNumber
- * CorporateActionGeneralInformation83.ClassActionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmClassActionNumber
+ * CorporateActionGeneralInformation83.mmClassActionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#EventType
- * CorporateActionGeneralInformation83.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmEventType
+ * CorporateActionGeneralInformation83.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#FinancialInstrumentIdentification
- * CorporateActionGeneralInformation83.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmFinancialInstrumentIdentification
+ * CorporateActionGeneralInformation83.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#AdditionalBusinessProcessIndicator
- * CorporateActionGeneralInformation83.AdditionalBusinessProcessIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmAdditionalBusinessProcessIndicator
+ * CorporateActionGeneralInformation83.mmAdditionalBusinessProcessIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#IntermediateSecuritiesDistributionType
- * CorporateActionGeneralInformation83.IntermediateSecuritiesDistributionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmIntermediateSecuritiesDistributionType
+ * CorporateActionGeneralInformation83.mmIntermediateSecuritiesDistributionType}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#FractionalQuantity
- * CorporateActionGeneralInformation83.FractionalQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmFractionalQuantity
+ * CorporateActionGeneralInformation83.mmFractionalQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,8 +75,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -90,6 +91,7 @@ import java.util.function.Supplier;
 public class CorporateActionGeneralInformation83 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax16Text corporateActionEventIdentification;
 	/**
 	 * Reference assigned by the account servicer to unambiguously identify a
 	 * corporate action event.
@@ -104,8 +106,8 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#CorporateActionEventIdentification
-	 * CorporateActionEventRegistration.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
+	 * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -126,20 +128,21 @@ public class CorporateActionGeneralInformation83 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.CorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text officialCorporateActionEventIdentification;
 	/**
 	 * Official and unique reference assigned by the official central
 	 * body/entity within each market at the beginning of a corporate action
@@ -155,9 +158,9 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#OfficialCorporateActionEventIdentification
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialCorporateActionEventIdentification
 	 * CorporateActionEventRegistration.
-	 * OfficialCorporateActionEventIdentification}</li>
+	 * mmOfficialCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -178,20 +181,21 @@ public class CorporateActionGeneralInformation83 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.OfficialCorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "OffclCorpActnEvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
 			definition = "Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text classActionNumber;
 	/**
 	 * Reference assigned by a court to a class action.
 	 * <p>
@@ -205,8 +209,8 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction#ClassActionNumber
-	 * ClassAction.ClassActionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClassAction#mmClassActionNumber
+	 * ClassAction.mmClassActionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,20 +229,21 @@ public class CorporateActionGeneralInformation83 {
 	 * definition} = "Reference assigned by a court to a class action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassActionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassActionNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.mmClassActionNumber;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.ClassActionNumber;
 			isDerived = false;
 			xmlTag = "ClssActnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionNumber";
 			definition = "Reference assigned by a court to a class action.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected CorporateActionEventType27Choice eventType;
 	/**
 	 * Type of corporate action event.
 	 * <p>
@@ -251,8 +256,8 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#Type
-	 * CorporateActionEvent.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmType
+	 * CorporateActionEvent.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -271,21 +276,22 @@ public class CorporateActionGeneralInformation83 {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.Type;
 			isDerived = false;
 			xmlTag = "EvtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Type of corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEventType27Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionEventType27Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification15 financialInstrumentIdentification;
 	/**
 	 * Identification of the security concerned by the corporate action.
 	 * <p>
@@ -298,8 +304,8 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -319,21 +325,22 @@ public class CorporateActionGeneralInformation83 {
 	 * "Identification of the security concerned by the corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the security concerned by the corporate action.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	protected AdditionalBusinessProcessFormat8Choice additionalBusinessProcessIndicator;
 	/**
 	 * Indicates that the additional business process relates to a claim on the
 	 * associated corporate action event.
@@ -347,8 +354,8 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AdditionalBusinessProcess
-	 * CorporateActionEvent.AdditionalBusinessProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAdditionalBusinessProcess
+	 * CorporateActionEvent.mmAdditionalBusinessProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -369,21 +376,22 @@ public class CorporateActionGeneralInformation83 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalBusinessProcessIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalBusinessProcessIndicator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AdditionalBusinessProcess;
 			isDerived = false;
 			xmlTag = "AddtlBizPrcInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBusinessProcessIndicator";
 			definition = "Indicates that the additional business process relates to a claim on the associated corporate action event.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalBusinessProcessFormat8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AdditionalBusinessProcessFormat8Choice.mmObject();
 		}
 	};
+	protected IntermediateSecuritiesDistributionTypeFormat14Choice intermediateSecuritiesDistributionType;
 	/**
 	 * Type of intermediates securities distribution.
 	 * <p>
@@ -397,8 +405,8 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#IntermediateSecuritiesDistributionType
-	 * SecuritiesProceedsDefinition.IntermediateSecuritiesDistributionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmIntermediateSecuritiesDistributionType
+	 * SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -417,20 +425,21 @@ public class CorporateActionGeneralInformation83 {
 	 * definition} = "Type of intermediates securities distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntermediateSecuritiesDistributionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntermediateSecuritiesDistributionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.IntermediateSecuritiesDistributionType;
 			isDerived = false;
 			xmlTag = "IntrmdtSctiesDstrbtnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionType";
 			definition = "Type of intermediates securities distribution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> IntermediateSecuritiesDistributionTypeFormat14Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice fractionalQuantity;
 	/**
 	 * Fractional quantity resulting from an event which will be paid with cash
 	 * in lieu.
@@ -445,8 +454,8 @@ public class CorporateActionGeneralInformation83 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#FractionalQuantity
-	 * CorporateActionEvent.FractionalQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmFractionalQuantity
+	 * CorporateActionEvent.mmFractionalQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -467,17 +476,17 @@ public class CorporateActionGeneralInformation83 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FractionalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFractionalQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmFractionalQuantity;
 			componentContext_lazy = () -> CorporateActionGeneralInformation83.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.FractionalQuantity;
 			isDerived = false;
 			xmlTag = "FrctnlQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalQuantity";
 			definition = "Fractional quantity resulting from an event which will be paid with cash in lieu. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
@@ -485,13 +494,13 @@ public class CorporateActionGeneralInformation83 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation83.CorporateActionEventIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformation83.OfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation83.ClassActionNumber,
-						com.tools20022.repository.msg.CorporateActionGeneralInformation83.EventType, com.tools20022.repository.msg.CorporateActionGeneralInformation83.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformation83.AdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation83.IntermediateSecuritiesDistributionType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformation83.FractionalQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmCorporateActionEventIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmOfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmClassActionNumber,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmIntermediateSecuritiesDistributionType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmFractionalQuantity);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -505,5 +514,69 @@ public class CorporateActionGeneralInformation83 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax16Text getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification;
+	}
+
+	public void setCorporateActionEventIdentification(RestrictedFINXMax16Text corporateActionEventIdentification) {
+		this.corporateActionEventIdentification = corporateActionEventIdentification;
+	}
+
+	public RestrictedFINXMax16Text getOfficialCorporateActionEventIdentification() {
+		return officialCorporateActionEventIdentification;
+	}
+
+	public void setOfficialCorporateActionEventIdentification(RestrictedFINXMax16Text officialCorporateActionEventIdentification) {
+		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
+	}
+
+	public RestrictedFINXMax16Text getClassActionNumber() {
+		return classActionNumber;
+	}
+
+	public void setClassActionNumber(RestrictedFINXMax16Text classActionNumber) {
+		this.classActionNumber = classActionNumber;
+	}
+
+	public CorporateActionEventType27Choice getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(CorporateActionEventType27Choice eventType) {
+		this.eventType = eventType;
+	}
+
+	public SecurityIdentification15 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification15 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public AdditionalBusinessProcessFormat8Choice getAdditionalBusinessProcessIndicator() {
+		return additionalBusinessProcessIndicator;
+	}
+
+	public void setAdditionalBusinessProcessIndicator(AdditionalBusinessProcessFormat8Choice additionalBusinessProcessIndicator) {
+		this.additionalBusinessProcessIndicator = additionalBusinessProcessIndicator;
+	}
+
+	public IntermediateSecuritiesDistributionTypeFormat14Choice getIntermediateSecuritiesDistributionType() {
+		return intermediateSecuritiesDistributionType;
+	}
+
+	public void setIntermediateSecuritiesDistributionType(IntermediateSecuritiesDistributionTypeFormat14Choice intermediateSecuritiesDistributionType) {
+		this.intermediateSecuritiesDistributionType = intermediateSecuritiesDistributionType;
+	}
+
+	public FinancialInstrumentQuantity15Choice getFractionalQuantity() {
+		return fractionalQuantity;
+	}
+
+	public void setFractionalQuantity(FinancialInstrumentQuantity15Choice fractionalQuantity) {
+		this.fractionalQuantity = fractionalQuantity;
 	}
 }

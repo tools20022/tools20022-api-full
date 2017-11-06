@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -62,42 +63,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#MessageIdentification
- * TransferInInstructionV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmMessageIdentification
+ * TransferInInstructionV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#PoolReference
- * TransferInInstructionV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmPoolReference
+ * TransferInInstructionV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#PreviousReference
- * TransferInInstructionV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmPreviousReference
+ * TransferInInstructionV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#RelatedReference
- * TransferInInstructionV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmRelatedReference
+ * TransferInInstructionV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#MasterReference
- * TransferInInstructionV04.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmMasterReference
+ * TransferInInstructionV04.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#TransferDetails
- * TransferInInstructionV04.TransferDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmTransferDetails
+ * TransferInInstructionV04.mmTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#AccountDetails
- * TransferInInstructionV04.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmAccountDetails
+ * TransferInInstructionV04.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#SettlementDetails
- * TransferInInstructionV04.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmSettlementDetails
+ * TransferInInstructionV04.mmSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#CopyDetails
- * TransferInInstructionV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmCopyDetails
+ * TransferInInstructionV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#Extension
- * TransferInInstructionV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmExtension
+ * TransferInInstructionV04.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#identifier
- * TransferInInstructionV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.005.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,6 +123,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferInInstructionV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -152,24 +152,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#MessageIdentification
-	 * TransferInInstructionV05.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmMessageIdentification
+	 * TransferInInstructionV05.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -195,24 +196,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#PoolReference
-	 * TransferInInstructionV05.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmPoolReference
+	 * TransferInInstructionV05.mmPoolReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.PoolReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmPoolReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference of the linked message that was previously sent.
 	 * <p>
@@ -239,24 +241,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#PreviousReference
-	 * TransferInInstructionV05.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmPreviousReference
+	 * TransferInInstructionV05.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.PreviousReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmPreviousReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -283,24 +286,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#RelatedReference
-	 * TransferInInstructionV05.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmRelatedReference
+	 * TransferInInstructionV05.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.RelatedReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmRelatedReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual transfers as
 	 * assigned by the instructing party. This identifier links the individual
@@ -329,24 +333,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#MasterReference
-	 * TransferInInstructionV05.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmMasterReference
+	 * TransferInInstructionV05.mmMasterReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.MasterReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmMasterReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Transfer21> transferDetails;
 	/**
 	 * General information related to the transfer of a financial instrument.
 	 * <p>
@@ -373,23 +378,24 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#TransferDetails
-	 * TransferInInstructionV05.TransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmTransferDetails
+	 * TransferInInstructionV05.mmTransferDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.TransferDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmTransferDetails);
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer21.mmObject();
 		}
 	};
+	protected InvestmentAccount22 accountDetails;
 	/**
 	 * Information related to the account into which the financial instrument is
 	 * to be received.
@@ -418,24 +424,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#AccountDetails
-	 * TransferInInstructionV05.AccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmAccountDetails
+	 * TransferInInstructionV05.mmAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account into which the financial instrument is to be received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.AccountDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmAccountDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount22.mmObject();
 		}
 	};
+	protected DeliverInformation9 settlementDetails;
 	/**
 	 * Information related to the delivering side of the transfer.
 	 * <p>
@@ -462,24 +469,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#SettlementDetails
-	 * TransferInInstructionV05.SettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmSettlementDetails
+	 * TransferInInstructionV05.mmSettlementDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the delivering side of the transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.SettlementDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmSettlementDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DeliverInformation9.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -506,24 +514,25 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#CopyDetails
-	 * TransferInInstructionV05.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmCopyDetails
+	 * TransferInInstructionV05.mmCopyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.CopyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmCopyDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -551,48 +560,21 @@ public class TransferInInstructionV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#Extension
-	 * TransferInInstructionV05.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmExtension
+	 * TransferInInstructionV05.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV05.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "005";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -602,20 +584,107 @@ public class TransferInInstructionV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferInInstructionV04";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the TransferInInstruction message to the executing party, for example, a transfer agent, to instruct the receipt of a financial instrument, free of payment, on a given date from a specified party.\r\nThis message may also be used to instruct the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.\r\nUsage\r\nThe TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party.";
-				previousVersion_lazy = () -> TransferInInstructionV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV05.mmObject());
+				previousVersion_lazy = () -> TransferInInstructionV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfInInstr";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV04.MessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV04.PoolReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV04.PreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV04.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV04.MasterReference, com.tools20022.repository.area.sese.TransferInInstructionV04.TransferDetails,
-						com.tools20022.repository.area.sese.TransferInInstructionV04.AccountDetails, com.tools20022.repository.area.sese.TransferInInstructionV04.SettlementDetails,
-						com.tools20022.repository.area.sese.TransferInInstructionV04.CopyDetails, com.tools20022.repository.area.sese.TransferInInstructionV04.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV04.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV04.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV04.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV04.mmMasterReference, com.tools20022.repository.area.sese.TransferInInstructionV04.mmTransferDetails,
+						com.tools20022.repository.area.sese.TransferInInstructionV04.mmAccountDetails, com.tools20022.repository.area.sese.TransferInInstructionV04.mmSettlementDetails,
+						com.tools20022.repository.area.sese.TransferInInstructionV04.mmCopyDetails, com.tools20022.repository.area.sese.TransferInInstructionV04.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "005";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public List<Transfer21> getTransferDetails() {
+		return transferDetails;
+	}
+
+	public void setTransferDetails(List<Transfer21> transferDetails) {
+		this.transferDetails = transferDetails;
+	}
+
+	public InvestmentAccount22 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(InvestmentAccount22 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public DeliverInformation9 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(DeliverInformation9 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

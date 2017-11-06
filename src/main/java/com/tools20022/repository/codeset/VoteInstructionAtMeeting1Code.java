@@ -35,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Chairman
- * VoteInstructionAtMeeting1Code.Chairman}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmChairman
+ * VoteInstructionAtMeeting1Code.mmChairman}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Against
- * VoteInstructionAtMeeting1Code.Against}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmAgainst
+ * VoteInstructionAtMeeting1Code.mmAgainst}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#For
- * VoteInstructionAtMeeting1Code.For}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmFor
+ * VoteInstructionAtMeeting1Code.mmFor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Abstain
- * VoteInstructionAtMeeting1Code.Abstain}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmAbstain
+ * VoteInstructionAtMeeting1Code.mmAbstain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Withhold
- * VoteInstructionAtMeeting1Code.Withhold}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmWithhold
+ * VoteInstructionAtMeeting1Code.mmWithhold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#WithManagement
- * VoteInstructionAtMeeting1Code.WithManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmWithManagement
+ * VoteInstructionAtMeeting1Code.mmWithManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#AgainstManagement
- * VoteInstructionAtMeeting1Code.AgainstManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmAgainstManagement
+ * VoteInstructionAtMeeting1Code.mmAgainstManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#NoAction
- * VoteInstructionAtMeeting1Code.NoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmNoAction
+ * VoteInstructionAtMeeting1Code.mmNoAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Chairman"</li>
 	 * </ul>
 	 */
-	public static final MMCode Chairman = new MMCode() {
+	public static final MMCode mmChairman = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Chairman";
@@ -125,7 +125,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Against"</li>
 	 * </ul>
 	 */
-	public static final MMCode Against = new MMCode() {
+	public static final MMCode mmAgainst = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
@@ -148,7 +148,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "For"</li>
 	 * </ul>
 	 */
-	public static final MMCode For = new MMCode() {
+	public static final MMCode mmFor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
@@ -171,7 +171,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Abstain"</li>
 	 * </ul>
 	 */
-	public static final MMCode Abstain = new MMCode() {
+	public static final MMCode mmAbstain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
@@ -194,7 +194,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Withhold"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withhold = new MMCode() {
+	public static final MMCode mmWithhold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
@@ -217,7 +217,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "WithManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithManagement = new MMCode() {
+	public static final MMCode mmWithManagement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithManagement";
@@ -240,7 +240,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "AgainstManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode AgainstManagement = new MMCode() {
+	public static final MMCode mmAgainstManagement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstManagement";
@@ -263,7 +263,7 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "NoAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAction = new MMCode() {
+	public static final MMCode mmNoAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
@@ -274,15 +274,15 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CHRM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VoteInstructionAtMeeting1Code";
 				definition = "Identifies the possible types of voting instructions for resolutions proposed at the meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Chairman, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Against,
-						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.For, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Abstain, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Withhold,
-						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.WithManagement, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.AgainstManagement,
-						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.NoAction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmChairman, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmAgainst,
+						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmFor, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmAbstain,
+						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmWithhold, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmWithManagement,
+						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmAgainstManagement, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmNoAction);
 				trace_lazy = () -> VoteInstructionCode.mmObject();
 			}
 		});

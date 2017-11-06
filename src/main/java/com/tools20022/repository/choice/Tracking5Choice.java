@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Tracking5Choice#Indicator
- * Tracking5Choice.Indicator}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Tracking5Choice#Proprietary
- * Tracking5Choice.Proprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Tracking5Choice#mmIndicator
+ * Tracking5Choice.mmIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Tracking5Choice#mmProprietary
+ * Tracking5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Tracking5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator indicator;
 	/**
 	 * Specifies whether the loan and/or collateral is tracked.
 	 * <p>
@@ -85,7 +87,7 @@ public class Tracking5Choice {
 	 * definition} = "Specifies whether the loan and/or collateral is tracked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Tracking5Choice.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class Tracking5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the loan and/or collateral is tracked.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Tracking information expressed as a proprietary code.
 	 * <p>
@@ -126,7 +129,7 @@ public class Tracking5Choice {
 	 * definition} = "Tracking information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Tracking5Choice.mmObject();
 			isDerived = false;
@@ -134,8 +137,8 @@ public class Tracking5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Tracking information expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -143,13 +146,29 @@ public class Tracking5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Tracking5Choice.Indicator, com.tools20022.repository.choice.Tracking5Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Tracking5Choice.mmIndicator, com.tools20022.repository.choice.Tracking5Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Tracking5Choice";
 				definition = "Choice of format for the tracking information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(YesNoIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

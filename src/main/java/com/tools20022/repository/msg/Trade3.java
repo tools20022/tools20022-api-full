@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the foreign exchange trade including Spot\Forward\NDF that is
@@ -37,38 +38,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#ExecutionPrice
- * Trade3.ExecutionPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#LastQuantity
- * Trade3.LastQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#SettlementType
- * Trade3.SettlementType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#SettlementDate
- * Trade3.SettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#ValuationRate
- * Trade3.ValuationRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#ForwardPoints
- * Trade3.ForwardPoints}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmExecutionPrice
+ * Trade3.mmExecutionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmLastQuantity
+ * Trade3.mmLastQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmSettlementType
+ * Trade3.mmSettlementType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmSettlementDate
+ * Trade3.mmSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmValuationRate
+ * Trade3.mmValuationRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmForwardPoints
+ * Trade3.mmForwardPoints}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Trade3#CalculatedCounterpartyCurrencyLastQuantity
- * Trade3.CalculatedCounterpartyCurrencyLastQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#ValueDate
- * Trade3.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#RiskAmount
- * Trade3.RiskAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#SecurityIdentification
- * Trade3.SecurityIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#FixingCurrency
- * Trade3.FixingCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#FixingDate
- * Trade3.FixingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#OptionIndicator
- * Trade3.OptionIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3#DeltaIndicator
- * Trade3.DeltaIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Trade3#mmCalculatedCounterpartyCurrencyLastQuantity
+ * Trade3.mmCalculatedCounterpartyCurrencyLastQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmValueDate
+ * Trade3.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmRiskAmount
+ * Trade3.mmRiskAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Trade3#AssociatedTradeReference
- * Trade3.AssociatedTradeReference}</li>
+ * {@linkplain com.tools20022.repository.msg.Trade3#mmSecurityIdentification
+ * Trade3.mmSecurityIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmFixingCurrency
+ * Trade3.mmFixingCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmFixingDate
+ * Trade3.mmFixingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmOptionIndicator
+ * Trade3.mmOptionIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmDeltaIndicator
+ * Trade3.mmDeltaIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Trade3#mmAssociatedTradeReference
+ * Trade3.mmAssociatedTradeReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -77,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Trade3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount executionPrice;
 	/**
 	 * Price of the execution of the trade.
 	 * <p>
@@ -121,7 +124,7 @@ public class Trade3 {
 	 * definition} = "Price of the execution of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutionPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -129,11 +132,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionPrice";
 			definition = "Price of the execution of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount lastQuantity;
 	/**
 	 * Amount of trade in trading currency.
 	 * <p>
@@ -161,7 +165,7 @@ public class Trade3 {
 	 * definition} = "Amount of trade in trading currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -169,11 +173,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastQuantity";
 			definition = "Amount of trade in trading currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected SettlementDateCode settlementType;
 	/**
 	 * Specifies the settlment period of the foreign exchange trade.
 	 * <p>
@@ -202,7 +207,7 @@ public class Trade3 {
 	 * "Specifies the settlment period of the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -210,11 +215,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "Specifies the settlment period of the foreign exchange trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDateCode.mmObject();
 		}
 	};
+	protected ISODate settlementDate;
 	/**
 	 * Specifies the date on which the trade will be settled.
 	 * <p>
@@ -227,8 +233,8 @@ public class Trade3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#SettlementDate
-	 * TreasuryTradeSettlementStatus.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmSettlementDate
+	 * TreasuryTradeSettlementStatus.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Trade3
@@ -246,20 +252,21 @@ public class Trade3 {
 	 * definition} = "Specifies the date on which the trade will be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlementDate;
 			componentContext_lazy = () -> Trade3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.SettlementDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Specifies the date on which the trade will be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected AgreedRate3 valuationRate;
 	/**
 	 * Specifies the valuation rate used for the trade.
 	 * <p>
@@ -271,8 +278,8 @@ public class Trade3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Trade3
@@ -290,21 +297,22 @@ public class Trade3 {
 	 * definition} = "Specifies the valuation rate used for the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValuationRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValuationRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> Trade3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "ValtnRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationRate";
 			definition = "Specifies the valuation rate used for the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AgreedRate3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 		}
 	};
+	protected DecimalNumber forwardPoints;
 	/**
 	 * Specifies the forward points of the trade if needed.
 	 * <p>
@@ -332,7 +340,7 @@ public class Trade3 {
 	 * definition} = "Specifies the forward points of the trade if needed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForwardPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForwardPoints = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -340,11 +348,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardPoints";
 			definition = "Specifies the forward points of the trade if needed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected CurrencyAndAmount calculatedCounterpartyCurrencyLastQuantity;
 	/**
 	 * Amount of trade in corresponding currency.
 	 * <p>
@@ -372,7 +381,7 @@ public class Trade3 {
 	 * definition} = "Amount of trade in corresponding currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -380,11 +389,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedCounterpartyCurrencyLastQuantity";
 			definition = "Amount of trade in corresponding currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Specifies the value date of spot transaction.
 	 * <p>
@@ -411,7 +421,7 @@ public class Trade3 {
 	 * definition} = "Specifies the value date of spot transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -419,11 +429,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Specifies the value date of spot transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount riskAmount;
 	/**
 	 * Measurement of the amount of the trade values converted in the US
 	 * dollars.
@@ -454,7 +465,7 @@ public class Trade3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RiskAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRiskAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -462,11 +473,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskAmount";
 			definition = "Measurement of the amount of the trade values converted in the US dollars.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected SecurityIdentification18 securityIdentification;
 	/**
 	 * Security identification of the trade.
 	 * <p>
@@ -493,7 +505,7 @@ public class Trade3 {
 	 * definition} = "Security identification of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -501,12 +513,13 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Security identification of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification18.mmObject();
 		}
 	};
+	protected CurrencyCode fixingCurrency;
 	/**
 	 * Specifies the ISO code of the fixing currency.
 	 * <p>
@@ -533,7 +546,7 @@ public class Trade3 {
 	 * definition} = "Specifies the ISO code of the fixing currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FixingCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFixingCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -541,11 +554,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingCurrency";
 			definition = "Specifies the ISO code of the fixing currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected ISODate fixingDate;
 	/**
 	 * Date at which the rate determination is made in the NDF trade.
 	 * <p>
@@ -558,8 +572,8 @@ public class Trade3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#SettlementDate
-	 * TreasuryTradeSettlementStatus.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmSettlementDate
+	 * TreasuryTradeSettlementStatus.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Trade3
@@ -578,20 +592,21 @@ public class Trade3 {
 	 * "Date at which the rate determination is made in the NDF trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFixingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlementDate;
 			componentContext_lazy = () -> Trade3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.SettlementDate;
 			isDerived = false;
 			xmlTag = "FxgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingDate";
 			definition = "Date at which the rate determination is made in the NDF trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected YesNoIndicator optionIndicator;
 	/**
 	 * Indicates whether the spot trade is produced by the option.
 	 * <p>
@@ -620,7 +635,7 @@ public class Trade3 {
 	 * "Indicates whether the spot trade is produced by the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -628,11 +643,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionIndicator";
 			definition = "Indicates whether the spot trade is produced by the option.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator deltaIndicator;
 	/**
 	 * Indicate the trade whether it's exchange delta.
 	 * <p>
@@ -660,7 +676,7 @@ public class Trade3 {
 	 * definition} = "Indicate the trade whether it's exchange delta."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeltaIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeltaIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -668,11 +684,12 @@ public class Trade3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaIndicator";
 			definition = "Indicate the trade whether it's exchange delta.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<Max70Text> associatedTradeReference;
 	/**
 	 * Some associated trade reference needs to be specified.
 	 * <p>
@@ -699,7 +716,7 @@ public class Trade3 {
 	 * definition} = "Some associated trade reference needs to be specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AssociatedTradeReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssociatedTradeReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
@@ -715,18 +732,138 @@ public class Trade3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade3.ExecutionPrice, com.tools20022.repository.msg.Trade3.LastQuantity, com.tools20022.repository.msg.Trade3.SettlementType,
-						com.tools20022.repository.msg.Trade3.SettlementDate, com.tools20022.repository.msg.Trade3.ValuationRate, com.tools20022.repository.msg.Trade3.ForwardPoints,
-						com.tools20022.repository.msg.Trade3.CalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.Trade3.ValueDate, com.tools20022.repository.msg.Trade3.RiskAmount,
-						com.tools20022.repository.msg.Trade3.SecurityIdentification, com.tools20022.repository.msg.Trade3.FixingCurrency, com.tools20022.repository.msg.Trade3.FixingDate,
-						com.tools20022.repository.msg.Trade3.OptionIndicator, com.tools20022.repository.msg.Trade3.DeltaIndicator, com.tools20022.repository.msg.Trade3.AssociatedTradeReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade3.mmExecutionPrice, com.tools20022.repository.msg.Trade3.mmLastQuantity, com.tools20022.repository.msg.Trade3.mmSettlementType,
+						com.tools20022.repository.msg.Trade3.mmSettlementDate, com.tools20022.repository.msg.Trade3.mmValuationRate, com.tools20022.repository.msg.Trade3.mmForwardPoints,
+						com.tools20022.repository.msg.Trade3.mmCalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.Trade3.mmValueDate, com.tools20022.repository.msg.Trade3.mmRiskAmount,
+						com.tools20022.repository.msg.Trade3.mmSecurityIdentification, com.tools20022.repository.msg.Trade3.mmFixingCurrency, com.tools20022.repository.msg.Trade3.mmFixingDate,
+						com.tools20022.repository.msg.Trade3.mmOptionIndicator, com.tools20022.repository.msg.Trade3.mmDeltaIndicator, com.tools20022.repository.msg.Trade3.mmAssociatedTradeReference);
 				trace_lazy = () -> ForeignExchangeTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Trade3";
 				definition = "Details of the foreign exchange trade including Spot\\Forward\\NDF that is captured";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getExecutionPrice() {
+		return executionPrice;
+	}
+
+	public void setExecutionPrice(ActiveCurrencyAnd13DecimalAmount executionPrice) {
+		this.executionPrice = executionPrice;
+	}
+
+	public CurrencyAndAmount getLastQuantity() {
+		return lastQuantity;
+	}
+
+	public void setLastQuantity(CurrencyAndAmount lastQuantity) {
+		this.lastQuantity = lastQuantity;
+	}
+
+	public SettlementDateCode getSettlementType() {
+		return settlementType;
+	}
+
+	public void setSettlementType(SettlementDateCode settlementType) {
+		this.settlementType = settlementType;
+	}
+
+	public ISODate getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public AgreedRate3 getValuationRate() {
+		return valuationRate;
+	}
+
+	public void setValuationRate(com.tools20022.repository.msg.AgreedRate3 valuationRate) {
+		this.valuationRate = valuationRate;
+	}
+
+	public DecimalNumber getForwardPoints() {
+		return forwardPoints;
+	}
+
+	public void setForwardPoints(DecimalNumber forwardPoints) {
+		this.forwardPoints = forwardPoints;
+	}
+
+	public CurrencyAndAmount getCalculatedCounterpartyCurrencyLastQuantity() {
+		return calculatedCounterpartyCurrencyLastQuantity;
+	}
+
+	public void setCalculatedCounterpartyCurrencyLastQuantity(CurrencyAndAmount calculatedCounterpartyCurrencyLastQuantity) {
+		this.calculatedCounterpartyCurrencyLastQuantity = calculatedCounterpartyCurrencyLastQuantity;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public ActiveCurrencyAndAmount getRiskAmount() {
+		return riskAmount;
+	}
+
+	public void setRiskAmount(ActiveCurrencyAndAmount riskAmount) {
+		this.riskAmount = riskAmount;
+	}
+
+	public SecurityIdentification18 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification18 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public CurrencyCode getFixingCurrency() {
+		return fixingCurrency;
+	}
+
+	public void setFixingCurrency(CurrencyCode fixingCurrency) {
+		this.fixingCurrency = fixingCurrency;
+	}
+
+	public ISODate getFixingDate() {
+		return fixingDate;
+	}
+
+	public void setFixingDate(ISODate fixingDate) {
+		this.fixingDate = fixingDate;
+	}
+
+	public YesNoIndicator getOptionIndicator() {
+		return optionIndicator;
+	}
+
+	public void setOptionIndicator(YesNoIndicator optionIndicator) {
+		this.optionIndicator = optionIndicator;
+	}
+
+	public YesNoIndicator getDeltaIndicator() {
+		return deltaIndicator;
+	}
+
+	public void setDeltaIndicator(YesNoIndicator deltaIndicator) {
+		this.deltaIndicator = deltaIndicator;
+	}
+
+	public List<Max70Text> getAssociatedTradeReference() {
+		return associatedTradeReference;
+	}
+
+	public void setAssociatedTradeReference(List<Max70Text> associatedTradeReference) {
+		this.associatedTradeReference = associatedTradeReference;
 	}
 }

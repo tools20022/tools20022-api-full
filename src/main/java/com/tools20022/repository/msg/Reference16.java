@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference16#CollateralMessageCancellationRequestIdentification
- * Reference16.CollateralMessageCancellationRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference16#mmCollateralMessageCancellationRequestIdentification
+ * Reference16.mmCollateralMessageCancellationRequestIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -42,18 +42,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#Reference
- * CollateralManagementCancellationStatusV03.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#mmReference
+ * CollateralManagementCancellationStatusV03.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#Reference
- * CollateralManagementCancellationStatusV04.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#mmReference
+ * CollateralManagementCancellationStatusV04.mmReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text collateralMessageCancellationRequestIdentification;
 	/**
 	 * Identification of the collateral message cancellation request.
 	 * <p>
@@ -96,7 +97,7 @@ public class Reference16 {
 	 * "Identification of the collateral message cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralMessageCancellationRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralMessageCancellationRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference16.mmObject();
 			isDerived = false;
@@ -104,8 +105,8 @@ public class Reference16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMessageCancellationRequestIdentification";
 			definition = "Identification of the collateral message cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -113,15 +114,23 @@ public class Reference16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference16.CollateralMessageCancellationRequestIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.Reference,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.Reference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference16.mmCollateralMessageCancellationRequestIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmReference,
+						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reference16";
 				definition = "Provides the identification of the collateral message cancellation request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCollateralMessageCancellationRequestIdentification() {
+		return collateralMessageCancellationRequestIdentification;
+	}
+
+	public void setCollateralMessageCancellationRequestIdentification(Max35Text collateralMessageCancellationRequestIdentification) {
+		this.collateralMessageCancellationRequestIdentification = collateralMessageCancellationRequestIdentification;
 	}
 }

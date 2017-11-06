@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#MakingChange
- * ATMServiceType6Code.MakingChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#mmMakingChange
+ * ATMServiceType6Code.mmMakingChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#NonVerifiedDeposit
- * ATMServiceType6Code.NonVerifiedDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#mmNonVerifiedDeposit
+ * ATMServiceType6Code.mmNonVerifiedDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#VerifiedDeposit
- * ATMServiceType6Code.VerifiedDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#mmVerifiedDeposit
+ * ATMServiceType6Code.mmVerifiedDeposit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,7 +79,7 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 * name} = "MakingChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode MakingChange = new MMCode() {
+	public static final MMCode mmMakingChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MakingChange";
@@ -102,7 +102,7 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 * name} = "NonVerifiedDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonVerifiedDeposit = new MMCode() {
+	public static final MMCode mmNonVerifiedDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonVerifiedDeposit";
@@ -125,7 +125,7 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 * name} = "VerifiedDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode VerifiedDeposit = new MMCode() {
+	public static final MMCode mmVerifiedDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VerifiedDeposit";
@@ -136,12 +136,12 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType6Code";
 				definition = "Describes the type of deposit service selected by the customer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType6Code.MakingChange, com.tools20022.repository.codeset.ATMServiceType6Code.NonVerifiedDeposit,
-						com.tools20022.repository.codeset.ATMServiceType6Code.VerifiedDeposit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType6Code.mmMakingChange, com.tools20022.repository.codeset.ATMServiceType6Code.mmNonVerifiedDeposit,
+						com.tools20022.repository.codeset.ATMServiceType6Code.mmVerifiedDeposit);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
 			}
 		});

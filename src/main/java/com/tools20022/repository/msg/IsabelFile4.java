@@ -34,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile4#Format
- * IsabelFile4.Format}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile4#Name
- * IsabelFile4.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelFile4#MIMEType
- * IsabelFile4.MIMEType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile4#mmFormat
+ * IsabelFile4.mmFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile4#mmName
+ * IsabelFile4.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelFile4#mmMIMEType
+ * IsabelFile4.mmMIMEType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelFile4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max16Text format;
 	/**
 	 * Format of the file.
 	 * <p>
@@ -86,7 +87,7 @@ public class IsabelFile4 {
 	 * definition} = "Format of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Format = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile4.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class IsabelFile4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format of the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max100AlphaNumericUnderscoreText name;
 	/**
 	 * Name of the mime file.
 	 * <p>
@@ -126,7 +128,7 @@ public class IsabelFile4 {
 	 * definition} = "Name of the mime file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile4.mmObject();
 			isDerived = false;
@@ -134,11 +136,12 @@ public class IsabelFile4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the mime file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max100AlphaNumericUnderscoreText.mmObject();
 		}
 	};
+	protected Max256Text mIMEType;
 	/**
 	 * Type of the mime file.
 	 * <p>
@@ -165,7 +168,7 @@ public class IsabelFile4 {
 	 * definition} = "Type of the mime file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MIMEType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMIMEType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelFile4.mmObject();
 			isDerived = false;
@@ -173,8 +176,8 @@ public class IsabelFile4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MIMEType";
 			definition = "Type of the mime file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -182,13 +185,37 @@ public class IsabelFile4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile4.Format, com.tools20022.repository.msg.IsabelFile4.Name, com.tools20022.repository.msg.IsabelFile4.MIMEType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile4.mmFormat, com.tools20022.repository.msg.IsabelFile4.mmName, com.tools20022.repository.msg.IsabelFile4.mmMIMEType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelFile4";
 				definition = "Specifies the parameters for an Isabel reporting file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max16Text getFormat() {
+		return format;
+	}
+
+	public void setFormat(Max16Text format) {
+		this.format = format;
+	}
+
+	public Max100AlphaNumericUnderscoreText getName() {
+		return name;
+	}
+
+	public void setName(Max100AlphaNumericUnderscoreText name) {
+		this.name = name;
+	}
+
+	public Max256Text getMIMEType() {
+		return mIMEType;
+	}
+
+	public void setMIMEType(Max256Text mIMEType) {
+		this.mIMEType = mIMEType;
 	}
 }

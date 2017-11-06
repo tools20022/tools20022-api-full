@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice24#IndicativeOrMarketPrice
- * CorporateActionPrice24.IndicativeOrMarketPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice24#mmIndicativeOrMarketPrice
+ * CorporateActionPrice24.mmIndicativeOrMarketPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice24#CashInLieuOfSharePrice
- * CorporateActionPrice24.CashInLieuOfSharePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice24#mmCashInLieuOfSharePrice
+ * CorporateActionPrice24.mmCashInLieuOfSharePrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPrice24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndicativeOrMarketPrice6Choice indicativeOrMarketPrice;
 	/**
 	 * Indicates whether the price is an indicative price or a market price.
 	 * <p>
@@ -96,21 +97,22 @@ public class CorporateActionPrice24 {
 	 * "Indicates whether the price is an indicative price or a market price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndicativeOrMarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionPrice24.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
+			componentContext_lazy = () -> CorporateActionPrice24.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvOrMktPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeOrMarketPrice";
 			definition = "Indicates whether the price is an indicative price or a market price.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IndicativeOrMarketPrice6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> IndicativeOrMarketPrice6Choice.mmObject();
 		}
 	};
+	protected PriceFormat25Choice cashInLieuOfSharePrice;
 	/**
 	 * Cash disbursement in lieu of equities; usually in lieu of fractional
 	 * quantity.
@@ -123,8 +125,8 @@ public class CorporateActionPrice24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#CashInLieuOfSharePrice
-	 * CorporateActionPrice.CashInLieuOfSharePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
+	 * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,33 +147,49 @@ public class CorporateActionPrice24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInLieuOfSharePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> CorporateActionPrice24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.CashInLieuOfSharePrice;
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PriceFormat25Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PriceFormat25Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice24.IndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice24.CashInLieuOfSharePrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice24.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice24.mmCashInLieuOfSharePrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice24";
 				definition = "Specifies prices related to a corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndicativeOrMarketPrice6Choice getIndicativeOrMarketPrice() {
+		return indicativeOrMarketPrice;
+	}
+
+	public void setIndicativeOrMarketPrice(IndicativeOrMarketPrice6Choice indicativeOrMarketPrice) {
+		this.indicativeOrMarketPrice = indicativeOrMarketPrice;
+	}
+
+	public PriceFormat25Choice getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice;
+	}
+
+	public void setCashInLieuOfSharePrice(PriceFormat25Choice cashInLieuOfSharePrice) {
+		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of settlement of a transaction.
@@ -35,69 +36,71 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#SecuritiesTransactionType
- * SettlementDetails138.SecuritiesTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmSecuritiesTransactionType
+ * SettlementDetails138.mmSecuritiesTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#SettlementTransactionCondition
- * SettlementDetails138.SettlementTransactionCondition}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmSettlementTransactionCondition
+ * SettlementDetails138.mmSettlementTransactionCondition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#BeneficialOwnership
- * SettlementDetails138.BeneficialOwnership}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmBeneficialOwnership
+ * SettlementDetails138.mmBeneficialOwnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#CCPEligibility
- * SettlementDetails138.CCPEligibility}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmCCPEligibility
+ * SettlementDetails138.mmCCPEligibility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#DeliveryReturnReason
- * SettlementDetails138.DeliveryReturnReason}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmDeliveryReturnReason
+ * SettlementDetails138.mmDeliveryReturnReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#CashClearingSystem
- * SettlementDetails138.CashClearingSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmCashClearingSystem
+ * SettlementDetails138.mmCashClearingSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#ExposureType
- * SettlementDetails138.ExposureType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmExposureType
+ * SettlementDetails138.mmExposureType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#FXStandingInstruction
- * SettlementDetails138.FXStandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmFXStandingInstruction
+ * SettlementDetails138.mmFXStandingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#MarketClientSide
- * SettlementDetails138.MarketClientSide}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmMarketClientSide
+ * SettlementDetails138.mmMarketClientSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#NettingEligibility
- * SettlementDetails138.NettingEligibility}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmNettingEligibility
+ * SettlementDetails138.mmNettingEligibility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#Registration
- * SettlementDetails138.Registration}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmRegistration
+ * SettlementDetails138.mmRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#LegalRestrictions
- * SettlementDetails138.LegalRestrictions}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmLegalRestrictions
+ * SettlementDetails138.mmLegalRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#SettlingCapacity
- * SettlementDetails138.SettlingCapacity}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmSettlingCapacity
+ * SettlementDetails138.mmSettlingCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#TaxCapacity
- * SettlementDetails138.TaxCapacity}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmTaxCapacity
+ * SettlementDetails138.mmTaxCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#StampDutyTaxBasis
- * SettlementDetails138.StampDutyTaxBasis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementDetails138#Tracking
- * SettlementDetails138.Tracking}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmStampDutyTaxBasis
+ * SettlementDetails138.mmStampDutyTaxBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#LetterOfGuarantee
- * SettlementDetails138.LetterOfGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementDetails138#ReturnLeg
- * SettlementDetails138.ReturnLeg}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmTracking
+ * SettlementDetails138.mmTracking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#ModificationCancellationAllowed
- * SettlementDetails138.ModificationCancellationAllowed}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmLetterOfGuarantee
+ * SettlementDetails138.mmLetterOfGuarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#EligibleForCollateral
- * SettlementDetails138.EligibleForCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmReturnLeg
+ * SettlementDetails138.mmReturnLeg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#SecuritiesSubBalanceType
- * SettlementDetails138.SecuritiesSubBalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmModificationCancellationAllowed
+ * SettlementDetails138.mmModificationCancellationAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails138#CashSubBalanceType
- * SettlementDetails138.CashSubBalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmEligibleForCollateral
+ * SettlementDetails138.mmEligibleForCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmSecuritiesSubBalanceType
+ * SettlementDetails138.mmSecuritiesSubBalanceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmCashSubBalanceType
+ * SettlementDetails138.mmCashSubBalanceType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -106,8 +109,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,6 +124,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementDetails138 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesTransactionType34Choice securitiesTransactionType;
 	/**
 	 * Identifies the type of securities transaction.
 	 * <p>
@@ -134,8 +138,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTransactionType
-	 * SecuritiesTrade.SecuritiesTransactionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTransactionType
+	 * SecuritiesTrade.mmSecuritiesTransactionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +158,21 @@ public class SettlementDetails138 {
 	 * definition} = "Identifies the type of securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesTransactionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTransactionType;
 			isDerived = false;
 			xmlTag = "SctiesTxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTransactionType34Choice.mmObject();
 		}
 	};
+	protected List<SettlementTransactionCondition28Choice> settlementTransactionCondition;
 	/**
 	 * Conditions under which the order/trade is to be settled.
 	 * <p>
@@ -181,8 +186,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementTransactionCondition
-	 * SecuritiesSettlement.SettlementTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
+	 * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,10 +206,10 @@ public class SettlementDetails138 {
 	 * definition} = "Conditions under which the order/trade is to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementTransactionCondition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementTransactionCondition = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementTransactionCondition;
 			isDerived = false;
 			xmlTag = "SttlmTxCond";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,6 +219,7 @@ public class SettlementDetails138 {
 			complexType_lazy = () -> SettlementTransactionCondition28Choice.mmObject();
 		}
 	};
+	protected BeneficialOwnership5Choice beneficialOwnership;
 	/**
 	 * Specifies whether there is change of beneficial ownership.
 	 * <p>
@@ -227,8 +233,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#BeneficialOwnershipIndicator
-	 * SecuritiesSettlement.BeneficialOwnershipIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBeneficialOwnershipIndicator
+	 * SecuritiesSettlement.mmBeneficialOwnershipIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,20 +254,21 @@ public class SettlementDetails138 {
 	 * "Specifies whether there is change of beneficial ownership."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficialOwnership = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficialOwnership = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmBeneficialOwnershipIndicator;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.BeneficialOwnershipIndicator;
 			isDerived = false;
 			xmlTag = "BnfclOwnrsh";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnership";
 			definition = "Specifies whether there is change of beneficial ownership.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BeneficialOwnership5Choice.mmObject();
 		}
 	};
+	protected CentralCounterPartyEligibility5Choice cCPEligibility;
 	/**
 	 * Specifies whether the settlement transaction is CCP (Central
 	 * Counterparty) eligible.
@@ -276,8 +283,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#CCPEligibility
-	 * SecuritiesDeliveryObligation.CCPEligibility}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmCCPEligibility
+	 * SecuritiesDeliveryObligation.mmCCPEligibility}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -298,20 +305,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CCPEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCCPEligibility = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmCCPEligibility;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.CCPEligibility;
 			isDerived = false;
 			xmlTag = "CCPElgblty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPEligibility";
 			definition = "Specifies whether the settlement transaction is CCP (Central Counterparty) eligible.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CentralCounterPartyEligibility5Choice.mmObject();
 		}
 	};
+	protected DeliveryReturn4Choice deliveryReturnReason;
 	/**
 	 * Specifies the reason of a delivery return.
 	 * <p>
@@ -325,8 +333,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#Reason
-	 * SecuritiesTradeStatus.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmReason
+	 * SecuritiesTradeStatus.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -345,20 +353,21 @@ public class SettlementDetails138 {
 	 * definition} = "Specifies the reason of a delivery return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryReturnReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryReturnReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.Reason;
 			isDerived = false;
 			xmlTag = "DlvryRtrRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryReturnReason";
 			definition = "Specifies the reason of a delivery return.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DeliveryReturn4Choice.mmObject();
 		}
 	};
+	protected CashSettlementSystem5Choice cashClearingSystem;
 	/**
 	 * Specifies the category of cash clearing system, for example, cheque
 	 * clearing.
@@ -373,8 +382,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#System
-	 * SettlementInstructionSystemRole.System}</li>
+	 * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#mmSystem
+	 * SettlementInstructionSystemRole.mmSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -395,20 +404,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashClearingSystem = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashClearingSystem = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.mmSystem;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.System;
 			isDerived = false;
 			xmlTag = "CshClrSys";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystem";
 			definition = "Specifies the category of cash clearing system, for example, cheque clearing.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashSettlementSystem5Choice.mmObject();
 		}
 	};
+	protected ExposureType17Choice exposureType;
 	/**
 	 * Specifies the underlying business area/type of trade causing the
 	 * collateral movement.
@@ -423,8 +433,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#ExposureType
-	 * ExposureTerm.ExposureType}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmExposureType
+	 * ExposureTerm.mmExposureType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -445,20 +455,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExposureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExposureType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.ExposureType;
 			isDerived = false;
 			xmlTag = "XpsrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposureType";
 			definition = "Specifies the underlying business area/type of trade causing the collateral movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ExposureType17Choice.mmObject();
 		}
 	};
+	protected FXStandingInstruction5Choice fXStandingInstruction;
 	/**
 	 * Specifies whether the forex standing instruction in place should apply.
 	 * <p>
@@ -472,8 +483,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Settlement#StandingSettlementInstruction
-	 * Settlement.StandingSettlementInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Settlement#mmStandingSettlementInstruction
+	 * Settlement.mmStandingSettlementInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -494,20 +505,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FXStandingInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFXStandingInstruction = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmStandingSettlementInstruction;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.StandingSettlementInstruction;
 			isDerived = false;
 			xmlTag = "FxStgInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstruction";
 			definition = "Specifies whether the forex standing instruction in place should apply.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FXStandingInstruction5Choice.mmObject();
 		}
 	};
+	protected MarketClientSide5Choice marketClientSide;
 	/**
 	 * Specifies if an instruction is for a market side or a client side
 	 * transaction.
@@ -522,8 +534,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#MarketClientSide
-	 * SecuritiesSettlement.MarketClientSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmMarketClientSide
+	 * SecuritiesSettlement.mmMarketClientSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -544,20 +556,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketClientSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketClientSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmMarketClientSide;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.MarketClientSide;
 			isDerived = false;
 			xmlTag = "MktClntSd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClientSide";
 			definition = "Specifies if an instruction is for a market side or a client side transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketClientSide5Choice.mmObject();
 		}
 	};
+	protected NettingEligibility5Choice nettingEligibility;
 	/**
 	 * Specifies whether the settlement transaction is eligible for netting.
 	 * <p>
@@ -571,8 +584,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#NettingEligibility
-	 * SecuritiesDeliveryObligation.NettingEligibility}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmNettingEligibility
+	 * SecuritiesDeliveryObligation.mmNettingEligibility}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -592,20 +605,21 @@ public class SettlementDetails138 {
 	 * "Specifies whether the settlement transaction is eligible for netting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NettingEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNettingEligibility = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmNettingEligibility;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.NettingEligibility;
 			isDerived = false;
 			xmlTag = "NetgElgblty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettingEligibility";
 			definition = "Specifies whether the settlement transaction is eligible for netting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> NettingEligibility5Choice.mmObject();
 		}
 	};
+	protected Registration11Choice registration;
 	/**
 	 * Specifies whether registration should occur upon receipt.
 	 * <p>
@@ -619,8 +633,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Registration
-	 * Security.Registration}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegistration
+	 * Security.mmRegistration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -640,20 +654,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Registration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistration = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Registration;
 			isDerived = false;
 			xmlTag = "Regn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registration";
 			definition = "Specifies whether registration should occur upon receipt.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Registration11Choice.mmObject();
 		}
 	};
+	protected Restriction6Choice legalRestrictions;
 	/**
 	 * Regulatory restrictions applicable to a security.
 	 * <p>
@@ -667,8 +682,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Restriction
-	 * Security.Restriction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRestriction
+	 * Security.mmRestriction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -687,20 +702,21 @@ public class SettlementDetails138 {
 	 * definition} = "Regulatory restrictions applicable to a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalRestrictions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalRestrictions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRestriction;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Restriction;
 			isDerived = false;
 			xmlTag = "LglRstrctns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRestrictions";
 			definition = "Regulatory restrictions applicable to a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Restriction6Choice.mmObject();
 		}
 	};
+	protected SettlingCapacity8Choice settlingCapacity;
 	/**
 	 * Role of a party in the settlement of the transaction.
 	 * <p>
@@ -714,8 +730,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#SettlingCapacity
-	 * SecuritiesSettlementPartyRole.SettlingCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmSettlingCapacity
+	 * SecuritiesSettlementPartyRole.mmSettlingCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -734,20 +750,21 @@ public class SettlementDetails138 {
 	 * definition} = "Role of a party in the settlement of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlingCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSettlingCapacity;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.SettlingCapacity;
 			isDerived = false;
 			xmlTag = "SttlgCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingCapacity";
 			definition = "Role of a party in the settlement of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlingCapacity8Choice.mmObject();
 		}
 	};
+	protected TaxCapacityParty5Choice taxCapacity;
 	/**
 	 * Tax role capacity of the instructing party.
 	 * <p>
@@ -761,8 +778,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#TaxCapacity
-	 * SecuritiesSettlementPartyRole.TaxCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmTaxCapacity
+	 * SecuritiesSettlementPartyRole.mmTaxCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -781,20 +798,21 @@ public class SettlementDetails138 {
 	 * definition} = "Tax role capacity of the instructing party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmTaxCapacity;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.TaxCapacity;
 			isDerived = false;
 			xmlTag = "TaxCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCapacity";
 			definition = "Tax role capacity of the instructing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TaxCapacityParty5Choice.mmObject();
 		}
 	};
+	protected GenericIdentification47 stampDutyTaxBasis;
 	/**
 	 * Specifies the stamp duty type or exemption reason applicable to the
 	 * settlement transaction.
@@ -809,8 +827,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#StampDutyTaxBasis
-	 * SecuritiesTax.StampDutyTaxBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyTaxBasis
+	 * SecuritiesTax.mmStampDutyTaxBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -831,20 +849,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StampDutyTaxBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStampDutyTaxBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmStampDutyTaxBasis;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.StampDutyTaxBasis;
 			isDerived = false;
 			xmlTag = "StmpDtyTaxBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyTaxBasis";
 			definition = "Specifies the stamp duty type or exemption reason applicable to the settlement transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
 		}
 	};
+	protected Tracking5Choice tracking;
 	/**
 	 * Specifies whether the loan and/or collateral is tracked.
 	 * <p>
@@ -858,8 +877,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#Tracking
-	 * SecuritiesSettlement.Tracking}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTracking
+	 * SecuritiesSettlement.mmTracking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -878,20 +897,21 @@ public class SettlementDetails138 {
 	 * definition} = "Specifies whether the loan and/or collateral is tracked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Tracking = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTracking = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTracking;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.Tracking;
 			isDerived = false;
 			xmlTag = "Trckg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tracking";
 			definition = "Specifies whether the loan and/or collateral is tracked.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Tracking5Choice.mmObject();
 		}
 	};
+	protected LetterOfGuarantee5Choice letterOfGuarantee;
 	/**
 	 * Specifies whether physical settlement may be executed using a letter of
 	 * guarantee or if the physical certificates should be used.
@@ -906,8 +926,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#LetterOfGuarantee
-	 * SecuritiesSettlement.LetterOfGuarantee}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmLetterOfGuarantee
+	 * SecuritiesSettlement.mmLetterOfGuarantee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -928,20 +948,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LetterOfGuarantee = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLetterOfGuarantee = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmLetterOfGuarantee;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.LetterOfGuarantee;
 			isDerived = false;
 			xmlTag = "LttrOfGrnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuarantee";
 			definition = "Specifies whether physical settlement may be executed using a letter of guarantee or if the physical certificates should be used.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> LetterOfGuarantee5Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator returnLeg;
 	/**
 	 * Specifies whether, for a securities lending/borrowing settlement
 	 * transaction, the lender will instruct the return leg as agreed with the
@@ -957,8 +978,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#ReturnLegInstruction
-	 * SecuritiesFinancing.ReturnLegInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmReturnLegInstruction
+	 * SecuritiesFinancing.mmReturnLegInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -979,20 +1000,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReturnLeg = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReturnLeg = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmReturnLegInstruction;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.ReturnLegInstruction;
 			isDerived = false;
 			xmlTag = "RtrLeg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnLeg";
 			definition = "Specifies whether, for a securities lending/borrowing settlement transaction, the lender will instruct the return leg as agreed with the borrower.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ModificationCancellationAllowed5Choice modificationCancellationAllowed;
 	/**
 	 * Specifies whether a third party is allowed to modify or cancel the
 	 * transaction.
@@ -1024,7 +1046,7 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationCancellationAllowed = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationCancellationAllowed = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
 			isDerived = false;
@@ -1032,11 +1054,12 @@ public class SettlementDetails138 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationCancellationAllowed";
 			definition = "Specifies whether a third party is allowed to modify or cancel the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ModificationCancellationAllowed5Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator eligibleForCollateral;
 	/**
 	 * Specifies whether securities should be included in the pool of securities
 	 * eligible for collateral purposes.
@@ -1051,8 +1074,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#EligibleForCollateral
-	 * SecuritiesSettlement.EligibleForCollateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmEligibleForCollateral
+	 * SecuritiesSettlement.mmEligibleForCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1073,20 +1096,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EligibleForCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEligibleForCollateral = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmEligibleForCollateral;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.EligibleForCollateral;
 			isDerived = false;
 			xmlTag = "ElgblForColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateral";
 			definition = "Specifies whether securities should be included in the pool of securities eligible for collateral purposes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification47 securitiesSubBalanceType;
 	/**
 	 * Specifies the securities sub balance type indicator (example restriction
 	 * type for a market infrastructure).
@@ -1101,7 +1125,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1122,20 +1147,21 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesSubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesSubBalanceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "SctiesSubBalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSubBalanceType";
 			definition = "Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
 		}
 	};
+	protected GenericIdentification47 cashSubBalanceType;
 	/**
 	 * Specifies the cash sub balance type indicator (example restriction type
 	 * for a market infrastructure).
@@ -1150,7 +1176,8 @@ public class SettlementDetails138 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1171,40 +1198,216 @@ public class SettlementDetails138 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSubBalanceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> SettlementDetails138.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "CshSubBalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSubBalanceType";
 			definition = "Specifies the cash sub balance type indicator (example restriction type for a market infrastructure).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails138.SecuritiesTransactionType, com.tools20022.repository.msg.SettlementDetails138.SettlementTransactionCondition,
-						com.tools20022.repository.msg.SettlementDetails138.BeneficialOwnership, com.tools20022.repository.msg.SettlementDetails138.CCPEligibility, com.tools20022.repository.msg.SettlementDetails138.DeliveryReturnReason,
-						com.tools20022.repository.msg.SettlementDetails138.CashClearingSystem, com.tools20022.repository.msg.SettlementDetails138.ExposureType, com.tools20022.repository.msg.SettlementDetails138.FXStandingInstruction,
-						com.tools20022.repository.msg.SettlementDetails138.MarketClientSide, com.tools20022.repository.msg.SettlementDetails138.NettingEligibility, com.tools20022.repository.msg.SettlementDetails138.Registration,
-						com.tools20022.repository.msg.SettlementDetails138.LegalRestrictions, com.tools20022.repository.msg.SettlementDetails138.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails138.TaxCapacity,
-						com.tools20022.repository.msg.SettlementDetails138.StampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails138.Tracking, com.tools20022.repository.msg.SettlementDetails138.LetterOfGuarantee,
-						com.tools20022.repository.msg.SettlementDetails138.ReturnLeg, com.tools20022.repository.msg.SettlementDetails138.ModificationCancellationAllowed,
-						com.tools20022.repository.msg.SettlementDetails138.EligibleForCollateral, com.tools20022.repository.msg.SettlementDetails138.SecuritiesSubBalanceType,
-						com.tools20022.repository.msg.SettlementDetails138.CashSubBalanceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails138.mmSecuritiesTransactionType, com.tools20022.repository.msg.SettlementDetails138.mmSettlementTransactionCondition,
+						com.tools20022.repository.msg.SettlementDetails138.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails138.mmCCPEligibility,
+						com.tools20022.repository.msg.SettlementDetails138.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails138.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails138.mmExposureType,
+						com.tools20022.repository.msg.SettlementDetails138.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails138.mmMarketClientSide,
+						com.tools20022.repository.msg.SettlementDetails138.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails138.mmRegistration, com.tools20022.repository.msg.SettlementDetails138.mmLegalRestrictions,
+						com.tools20022.repository.msg.SettlementDetails138.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails138.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails138.mmStampDutyTaxBasis,
+						com.tools20022.repository.msg.SettlementDetails138.mmTracking, com.tools20022.repository.msg.SettlementDetails138.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails138.mmReturnLeg,
+						com.tools20022.repository.msg.SettlementDetails138.mmModificationCancellationAllowed, com.tools20022.repository.msg.SettlementDetails138.mmEligibleForCollateral,
+						com.tools20022.repository.msg.SettlementDetails138.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails138.mmCashSubBalanceType);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails138";
 				definition = "Details of settlement of a transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesTransactionType34Choice getSecuritiesTransactionType() {
+		return securitiesTransactionType;
+	}
+
+	public void setSecuritiesTransactionType(SecuritiesTransactionType34Choice securitiesTransactionType) {
+		this.securitiesTransactionType = securitiesTransactionType;
+	}
+
+	public List<SettlementTransactionCondition28Choice> getSettlementTransactionCondition() {
+		return settlementTransactionCondition;
+	}
+
+	public void setSettlementTransactionCondition(List<SettlementTransactionCondition28Choice> settlementTransactionCondition) {
+		this.settlementTransactionCondition = settlementTransactionCondition;
+	}
+
+	public BeneficialOwnership5Choice getBeneficialOwnership() {
+		return beneficialOwnership;
+	}
+
+	public void setBeneficialOwnership(BeneficialOwnership5Choice beneficialOwnership) {
+		this.beneficialOwnership = beneficialOwnership;
+	}
+
+	public CentralCounterPartyEligibility5Choice getCCPEligibility() {
+		return cCPEligibility;
+	}
+
+	public void setCCPEligibility(CentralCounterPartyEligibility5Choice cCPEligibility) {
+		this.cCPEligibility = cCPEligibility;
+	}
+
+	public DeliveryReturn4Choice getDeliveryReturnReason() {
+		return deliveryReturnReason;
+	}
+
+	public void setDeliveryReturnReason(DeliveryReturn4Choice deliveryReturnReason) {
+		this.deliveryReturnReason = deliveryReturnReason;
+	}
+
+	public CashSettlementSystem5Choice getCashClearingSystem() {
+		return cashClearingSystem;
+	}
+
+	public void setCashClearingSystem(CashSettlementSystem5Choice cashClearingSystem) {
+		this.cashClearingSystem = cashClearingSystem;
+	}
+
+	public ExposureType17Choice getExposureType() {
+		return exposureType;
+	}
+
+	public void setExposureType(ExposureType17Choice exposureType) {
+		this.exposureType = exposureType;
+	}
+
+	public FXStandingInstruction5Choice getFXStandingInstruction() {
+		return fXStandingInstruction;
+	}
+
+	public void setFXStandingInstruction(FXStandingInstruction5Choice fXStandingInstruction) {
+		this.fXStandingInstruction = fXStandingInstruction;
+	}
+
+	public MarketClientSide5Choice getMarketClientSide() {
+		return marketClientSide;
+	}
+
+	public void setMarketClientSide(MarketClientSide5Choice marketClientSide) {
+		this.marketClientSide = marketClientSide;
+	}
+
+	public NettingEligibility5Choice getNettingEligibility() {
+		return nettingEligibility;
+	}
+
+	public void setNettingEligibility(NettingEligibility5Choice nettingEligibility) {
+		this.nettingEligibility = nettingEligibility;
+	}
+
+	public Registration11Choice getRegistration() {
+		return registration;
+	}
+
+	public void setRegistration(Registration11Choice registration) {
+		this.registration = registration;
+	}
+
+	public Restriction6Choice getLegalRestrictions() {
+		return legalRestrictions;
+	}
+
+	public void setLegalRestrictions(Restriction6Choice legalRestrictions) {
+		this.legalRestrictions = legalRestrictions;
+	}
+
+	public SettlingCapacity8Choice getSettlingCapacity() {
+		return settlingCapacity;
+	}
+
+	public void setSettlingCapacity(SettlingCapacity8Choice settlingCapacity) {
+		this.settlingCapacity = settlingCapacity;
+	}
+
+	public TaxCapacityParty5Choice getTaxCapacity() {
+		return taxCapacity;
+	}
+
+	public void setTaxCapacity(TaxCapacityParty5Choice taxCapacity) {
+		this.taxCapacity = taxCapacity;
+	}
+
+	public GenericIdentification47 getStampDutyTaxBasis() {
+		return stampDutyTaxBasis;
+	}
+
+	public void setStampDutyTaxBasis(com.tools20022.repository.msg.GenericIdentification47 stampDutyTaxBasis) {
+		this.stampDutyTaxBasis = stampDutyTaxBasis;
+	}
+
+	public Tracking5Choice getTracking() {
+		return tracking;
+	}
+
+	public void setTracking(Tracking5Choice tracking) {
+		this.tracking = tracking;
+	}
+
+	public LetterOfGuarantee5Choice getLetterOfGuarantee() {
+		return letterOfGuarantee;
+	}
+
+	public void setLetterOfGuarantee(LetterOfGuarantee5Choice letterOfGuarantee) {
+		this.letterOfGuarantee = letterOfGuarantee;
+	}
+
+	public YesNoIndicator getReturnLeg() {
+		return returnLeg;
+	}
+
+	public void setReturnLeg(YesNoIndicator returnLeg) {
+		this.returnLeg = returnLeg;
+	}
+
+	public ModificationCancellationAllowed5Choice getModificationCancellationAllowed() {
+		return modificationCancellationAllowed;
+	}
+
+	public void setModificationCancellationAllowed(ModificationCancellationAllowed5Choice modificationCancellationAllowed) {
+		this.modificationCancellationAllowed = modificationCancellationAllowed;
+	}
+
+	public YesNoIndicator getEligibleForCollateral() {
+		return eligibleForCollateral;
+	}
+
+	public void setEligibleForCollateral(YesNoIndicator eligibleForCollateral) {
+		this.eligibleForCollateral = eligibleForCollateral;
+	}
+
+	public GenericIdentification47 getSecuritiesSubBalanceType() {
+		return securitiesSubBalanceType;
+	}
+
+	public void setSecuritiesSubBalanceType(com.tools20022.repository.msg.GenericIdentification47 securitiesSubBalanceType) {
+		this.securitiesSubBalanceType = securitiesSubBalanceType;
+	}
+
+	public GenericIdentification47 getCashSubBalanceType() {
+		return cashSubBalanceType;
+	}
+
+	public void setCashSubBalanceType(com.tools20022.repository.msg.GenericIdentification47 cashSubBalanceType) {
+		this.cashSubBalanceType = cashSubBalanceType;
 	}
 }

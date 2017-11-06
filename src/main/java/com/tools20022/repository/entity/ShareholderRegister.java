@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ShareholderRegister#Identification
- * ShareholderRegister.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ShareholderRegister#Entry
- * ShareholderRegister.Entry}</li>
+ * {@linkplain com.tools20022.repository.entity.ShareholderRegister#mmIdentification
+ * ShareholderRegister.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ShareholderRegister#mmEntry
+ * ShareholderRegister.mmEntry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ShareholderRegister {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Uniquely identifies the shareholder registry.
 	 * <p>
@@ -87,18 +88,19 @@ public class ShareholderRegister {
 	 * definition} = "Uniquely identifies the shareholder registry."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> ShareholderRegister.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the shareholder registry.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DecimalNumber entry;
 	/**
 	 * Number of securities issued by the same entity and registered by owner.
 	 * <p>
@@ -127,15 +129,15 @@ public class ShareholderRegister {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Entry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEntry = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> ShareholderRegister.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Entry";
 			definition = "Number of securities issued by the same entity and registered by owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class ShareholderRegister {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ShareholderRegister";
 				definition = "Contains a list of owners and the quantity of securities they own.";
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ShareholderRegister.Identification, com.tools20022.repository.entity.ShareholderRegister.Entry);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ShareholderRegister.mmIdentification, com.tools20022.repository.entity.ShareholderRegister.mmEntry);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public DecimalNumber getEntry() {
+		return entry;
+	}
+
+	public void setEntry(DecimalNumber entry) {
+		this.entry = entry;
 	}
 }

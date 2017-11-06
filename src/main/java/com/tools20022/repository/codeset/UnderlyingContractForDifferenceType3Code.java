@@ -34,36 +34,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Bond
- * UnderlyingContractForDifferenceType3Code.Bond}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmBond
+ * UnderlyingContractForDifferenceType3Code.mmBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Commodity
- * UnderlyingContractForDifferenceType3Code.Commodity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmCommodity
+ * UnderlyingContractForDifferenceType3Code.mmCommodity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Currency
- * UnderlyingContractForDifferenceType3Code.Currency}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmCurrency
+ * UnderlyingContractForDifferenceType3Code.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#EmissionAllowance
- * UnderlyingContractForDifferenceType3Code.EmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmEmissionAllowance
+ * UnderlyingContractForDifferenceType3Code.mmEmissionAllowance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Equity
- * UnderlyingContractForDifferenceType3Code.Equity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmEquity
+ * UnderlyingContractForDifferenceType3Code.mmEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#FutureOnEquity
- * UnderlyingContractForDifferenceType3Code.FutureOnEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmFutureOnEquity
+ * UnderlyingContractForDifferenceType3Code.mmFutureOnEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#OptionOnEquity
- * UnderlyingContractForDifferenceType3Code.OptionOnEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmOptionOnEquity
+ * UnderlyingContractForDifferenceType3Code.mmOptionOnEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Other
- * UnderlyingContractForDifferenceType3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmOther
+ * UnderlyingContractForDifferenceType3Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,7 +94,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Bond"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bond = new MMCode() {
+	public static final MMCode mmBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
@@ -117,7 +117,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Commodity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Commodity = new MMCode() {
+	public static final MMCode mmCommodity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
@@ -140,7 +140,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Currency"</li>
 	 * </ul>
 	 */
-	public static final MMCode Currency = new MMCode() {
+	public static final MMCode mmCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
@@ -163,7 +163,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "EmissionAllowance"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmissionAllowance = new MMCode() {
+	public static final MMCode mmEmissionAllowance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
@@ -186,7 +186,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Equity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Equity = new MMCode() {
+	public static final MMCode mmEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
@@ -209,7 +209,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "FutureOnEquity"</li>
 	 * </ul>
 	 */
-	public static final MMCode FutureOnEquity = new MMCode() {
+	public static final MMCode mmFutureOnEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureOnEquity";
@@ -232,7 +232,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "OptionOnEquity"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionOnEquity = new MMCode() {
+	public static final MMCode mmOptionOnEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionOnEquity";
@@ -255,7 +255,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -266,14 +266,14 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingContractForDifferenceType3Code";
 				definition = "Specifies the type for an underlying contract for difference derivative.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Bond, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Commodity,
-						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Currency, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.EmissionAllowance,
-						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Equity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.FutureOnEquity,
-						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.OptionOnEquity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmBond, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmCommodity,
+						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmCurrency, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmEmissionAllowance,
+						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmEquity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmFutureOnEquity,
+						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmOptionOnEquity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmOther);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
 			}
 		});

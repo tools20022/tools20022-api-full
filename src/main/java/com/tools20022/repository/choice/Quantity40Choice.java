@@ -35,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity40Choice#Code
- * Quantity40Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity40Choice#mmCode
+ * Quantity40Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity40Choice#OriginalAndCurrentFaceAmount
- * Quantity40Choice.OriginalAndCurrentFaceAmount}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity40Choice#Quantity
- * Quantity40Choice.Quantity}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity40Choice#mmOriginalAndCurrentFaceAmount
+ * Quantity40Choice.mmOriginalAndCurrentFaceAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity40Choice#mmQuantity
+ * Quantity40Choice.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quantity40Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity1Code code;
 	/**
 	 * Standard code to specify quantity of a financial instrument.
 	 * <p>
@@ -78,8 +79,8 @@ public class Quantity40Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Code
-	 * SecuritiesQuantity.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCode
+	 * SecuritiesQuantity.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class Quantity40Choice {
 	 * "Standard code to specify quantity of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> Quantity40Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify quantity of a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Quantity1Code.mmObject();
 		}
 	};
+	protected OriginalAndCurrentQuantities4 originalAndCurrentFaceAmount;
 	/**
 	 * Face amount and amortised value of security.
 	 * <p>
@@ -145,21 +147,22 @@ public class Quantity40Choice {
 	 * definition} = "Face amount and amortised value of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity40Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> Quantity40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Face amount and amortised value of security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalAndCurrentQuantities4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OriginalAndCurrentQuantities4.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
 	 * Quantity of financial instrument in units, original face amount or
 	 * current face amount.
@@ -195,34 +198,58 @@ public class Quantity40Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity40Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> Quantity40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument in units, original face amount or current face amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity40Choice.Code, com.tools20022.repository.choice.Quantity40Choice.OriginalAndCurrentFaceAmount,
-						com.tools20022.repository.choice.Quantity40Choice.Quantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity40Choice.mmCode, com.tools20022.repository.choice.Quantity40Choice.mmOriginalAndCurrentFaceAmount,
+						com.tools20022.repository.choice.Quantity40Choice.mmQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quantity40Choice";
 				definition = "Choice between different quantity of security formats.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity1Code getCode() {
+		return code;
+	}
+
+	public void setCode(Quantity1Code code) {
+		this.code = code;
+	}
+
+	public OriginalAndCurrentQuantities4 getOriginalAndCurrentFaceAmount() {
+		return originalAndCurrentFaceAmount;
+	}
+
+	public void setOriginalAndCurrentFaceAmount(OriginalAndCurrentQuantities4 originalAndCurrentFaceAmount) {
+		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
+	}
+
+	public FinancialInstrumentQuantity15Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = quantity;
 	}
 }

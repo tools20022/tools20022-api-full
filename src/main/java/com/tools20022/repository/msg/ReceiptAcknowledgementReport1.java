@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport1#RelatedReference
- * ReceiptAcknowledgementReport1.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport1#mmRelatedReference
+ * ReceiptAcknowledgementReport1.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport1#RequestHandling
- * ReceiptAcknowledgementReport1.RequestHandling}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport1#mmRequestHandling
+ * ReceiptAcknowledgementReport1.mmRequestHandling}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport1#OriginalMessageIdentification
- * ReceiptAcknowledgementReport1.OriginalMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport1#mmOriginalMessageIdentification
+ * ReceiptAcknowledgementReport1.mmOriginalMessageIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReceiptAcknowledgementReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReferences relatedReference;
 	/**
 	 * Reference of the request.
 	 * <p>
@@ -89,7 +90,7 @@ public class ReceiptAcknowledgementReport1 {
 	 * definition} = "Reference of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
@@ -97,12 +98,13 @@ public class ReceiptAcknowledgementReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReferences.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalReferences.mmObject();
 		}
 	};
+	protected RequestHandling1 requestHandling;
 	/**
 	 * Gives the status of the request.
 	 * <p>
@@ -129,7 +131,7 @@ public class ReceiptAcknowledgementReport1 {
 	 * definition} = "Gives the status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestHandling = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
@@ -137,12 +139,13 @@ public class ReceiptAcknowledgementReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHandling";
 			definition = "Gives the status of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RequestHandling1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
 		}
 	};
+	protected MessageIdentification6 originalMessageIdentification;
 	/**
 	 * Identification of the original message for which the acknowledgement is
 	 * sent.
@@ -172,7 +175,7 @@ public class ReceiptAcknowledgementReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
@@ -180,24 +183,48 @@ public class ReceiptAcknowledgementReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Identification of the original message for which the acknowledgement is sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiptAcknowledgementReport1.RelatedReference, com.tools20022.repository.msg.ReceiptAcknowledgementReport1.RequestHandling,
-						com.tools20022.repository.msg.ReceiptAcknowledgementReport1.OriginalMessageIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmRelatedReference, com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmRequestHandling,
+						com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmOriginalMessageIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReceiptAcknowledgementReport1";
 				definition = "Provides details on the original request. Identifies the message being acknowledged and its status";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReferences getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(com.tools20022.repository.msg.AdditionalReferences relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public RequestHandling1 getRequestHandling() {
+		return requestHandling;
+	}
+
+	public void setRequestHandling(com.tools20022.repository.msg.RequestHandling1 requestHandling) {
+		this.requestHandling = requestHandling;
+	}
+
+	public MessageIdentification6 getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(com.tools20022.repository.msg.MessageIdentification6 originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
 	}
 }

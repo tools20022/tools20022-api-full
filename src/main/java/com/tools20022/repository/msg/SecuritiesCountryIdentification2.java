@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#Country
- * SecuritiesCountryIdentification2.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#mmCountry
+ * SecuritiesCountryIdentification2.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#EEACountry
- * SecuritiesCountryIdentification2.EEACountry}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#mmEEACountry
+ * SecuritiesCountryIdentification2.mmEEACountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#Modification
- * SecuritiesCountryIdentification2.Modification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#mmModification
+ * SecuritiesCountryIdentification2.mmModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#ValidityPeriod
- * SecuritiesCountryIdentification2.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#mmValidityPeriod
+ * SecuritiesCountryIdentification2.mmValidityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#LastUpdated
- * SecuritiesCountryIdentification2.LastUpdated}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCountryIdentification2#mmLastUpdated
+ * SecuritiesCountryIdentification2.mmLastUpdated}</li>
  * </ul>
  * </li>
  * <li>
@@ -58,15 +58,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01#CountryData
- * FinancialInstrumentReportingCountryCodeReportV01.CountryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01#mmCountryData
+ * FinancialInstrumentReportingCountryCodeReportV01.mmCountryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesCountryIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCodeAndName3 country;
 	/**
 	 * Two character country code and country name as per ISO 3166.
 	 * <p>
@@ -108,7 +109,7 @@ public class SecuritiesCountryIdentification2 {
 	 * "Two character country code and country name as per ISO 3166."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Country = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCountry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
@@ -116,12 +117,13 @@ public class SecuritiesCountryIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Two character country code and country name as per ISO 3166.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CountryCodeAndName3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName3.mmObject();
 		}
 	};
+	protected TrueFalseIndicator eEACountry;
 	/**
 	 * Flag which reflects if the country is a member of the EEA (European
 	 * Economic Area) or not.
@@ -153,7 +155,7 @@ public class SecuritiesCountryIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EEACountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEEACountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
@@ -161,11 +163,12 @@ public class SecuritiesCountryIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EEACountry";
 			definition = "Flag which reflects if the country is a member of the EEA (European Economic Area) or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Modification1Code modification;
 	/**
 	 * Modification status for the record compared to the previous report.
 	 * <p>
@@ -195,7 +198,7 @@ public class SecuritiesCountryIdentification2 {
 	 * "Modification status for the record compared to the previous report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Modification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
@@ -203,11 +206,12 @@ public class SecuritiesCountryIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification status for the record compared to the previous report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
 		}
 	};
+	protected Period4Choice validityPeriod;
 	/**
 	 * Details the validity of the specific record.
 	 * <p>
@@ -234,7 +238,7 @@ public class SecuritiesCountryIdentification2 {
 	 * definition} = "Details the validity of the specific record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
@@ -242,12 +246,13 @@ public class SecuritiesCountryIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Details the validity of the specific record.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected ISODate lastUpdated;
 	/**
 	 * Date when this record was last modified.
 	 * <p>
@@ -275,7 +280,7 @@ public class SecuritiesCountryIdentification2 {
 	 * definition} = "Date when this record was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastUpdated = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastUpdated = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
@@ -283,8 +288,8 @@ public class SecuritiesCountryIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdated";
 			definition = "Date when this record was last modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -292,16 +297,56 @@ public class SecuritiesCountryIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCountryIdentification2.Country, com.tools20022.repository.msg.SecuritiesCountryIdentification2.EEACountry,
-						com.tools20022.repository.msg.SecuritiesCountryIdentification2.Modification, com.tools20022.repository.msg.SecuritiesCountryIdentification2.ValidityPeriod,
-						com.tools20022.repository.msg.SecuritiesCountryIdentification2.LastUpdated);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.CountryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmCountry, com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmEEACountry,
+						com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmModification, com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmValidityPeriod,
+						com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmLastUpdated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.mmCountryData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCountryIdentification2";
 				definition = "Details an individual country including its name and country code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCodeAndName3 getCountry() {
+		return country;
+	}
+
+	public void setCountry(com.tools20022.repository.msg.CountryCodeAndName3 country) {
+		this.country = country;
+	}
+
+	public TrueFalseIndicator getEEACountry() {
+		return eEACountry;
+	}
+
+	public void setEEACountry(TrueFalseIndicator eEACountry) {
+		this.eEACountry = eEACountry;
+	}
+
+	public Modification1Code getModification() {
+		return modification;
+	}
+
+	public void setModification(Modification1Code modification) {
+		this.modification = modification;
+	}
+
+	public Period4Choice getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(Period4Choice validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public ISODate getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(ISODate lastUpdated) {
+		this.lastUpdated = lastUpdated;
 	}
 }

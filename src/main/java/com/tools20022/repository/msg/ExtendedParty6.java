@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExtendedParty6#ExtendedPartyRole
- * ExtendedParty6.ExtendedPartyRole}</li>
+ * {@linkplain com.tools20022.repository.msg.ExtendedParty6#mmExtendedPartyRole
+ * ExtendedParty6.mmExtendedPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExtendedParty6#OtherPartyDetails
- * ExtendedParty6.OtherPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ExtendedParty6#mmOtherPartyDetails
+ * ExtendedParty6.mmOtherPartyDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExtendedParty6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Extended350Code extendedPartyRole;
 	/**
 	 * Other type of party's role.
 	 * <p>
@@ -107,33 +108,34 @@ public class ExtendedParty6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExtendedParty7#ExtendedPartyRole
-	 * ExtendedParty7.ExtendedPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExtendedParty7#mmExtendedPartyRole
+	 * ExtendedParty7.mmExtendedPartyRole}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ExtendedParty3#ExtendedPartyRole
-	 * ExtendedParty3.ExtendedPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExtendedParty3#mmExtendedPartyRole
+	 * ExtendedParty3.mmExtendedPartyRole}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedPartyRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedPartyRole = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExtendedParty6.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			componentContext_lazy = () -> ExtendedParty6.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedPtyRole";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedPartyRole";
 			definition = "Other type of party's role.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ExtendedParty3.ExtendedPartyRole;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty7.ExtendedPartyRole);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty7.mmExtendedPartyRole);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ExtendedParty3.mmExtendedPartyRole;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected InvestmentAccountOwnershipInformation9 otherPartyDetails;
 	/**
 	 * Detailed ownership information about a party.
 	 * <p>
@@ -167,48 +169,64 @@ public class ExtendedParty6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExtendedParty7#OtherPartyDetails
-	 * ExtendedParty7.OtherPartyDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExtendedParty7#mmOtherPartyDetails
+	 * ExtendedParty7.mmOtherPartyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ExtendedParty3#OtherPartyDetails
-	 * ExtendedParty3.OtherPartyDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ExtendedParty3#mmOtherPartyDetails
+	 * ExtendedParty3.mmOtherPartyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherPartyDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExtendedParty6.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccountPartyRole.mmObject();
+			componentContext_lazy = () -> ExtendedParty6.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPartyDetails";
 			definition = "Detailed ownership information about a party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ExtendedParty3.OtherPartyDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty7.OtherPartyDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty7.mmOtherPartyDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ExtendedParty3.mmOtherPartyDetails;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountOwnershipInformation9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty6.ExtendedPartyRole, com.tools20022.repository.msg.ExtendedParty6.OtherPartyDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty6.mmExtendedPartyRole, com.tools20022.repository.msg.ExtendedParty6.mmOtherPartyDetails);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExtendedParty6";
 				definition = "Other type of party.";
-				previousVersion_lazy = () -> ExtendedParty3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ExtendedParty7.mmObject());
+				previousVersion_lazy = () -> ExtendedParty3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Extended350Code getExtendedPartyRole() {
+		return extendedPartyRole;
+	}
+
+	public void setExtendedPartyRole(Extended350Code extendedPartyRole) {
+		this.extendedPartyRole = extendedPartyRole;
+	}
+
+	public InvestmentAccountOwnershipInformation9 getOtherPartyDetails() {
+		return otherPartyDetails;
+	}
+
+	public void setOtherPartyDetails(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9 otherPartyDetails) {
+		this.otherPartyDetails = otherPartyDetails;
 	}
 }

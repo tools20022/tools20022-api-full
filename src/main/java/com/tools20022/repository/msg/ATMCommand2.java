@@ -36,27 +36,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand2#Type
- * ATMCommand2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand2#RequiredDateTime
- * ATMCommand2.RequiredDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand2#ProcessedDateTime
- * ATMCommand2.ProcessedDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand2#mmType
+ * ATMCommand2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand2#mmRequiredDateTime
+ * ATMCommand2.mmRequiredDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommand2#CommandIdentification
- * ATMCommand2.CommandIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand2#Result
- * ATMCommand2.Result}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand2#mmProcessedDateTime
+ * ATMCommand2.mmProcessedDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommand2#AdditionalErrorInformation
- * ATMCommand2.AdditionalErrorInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand2#mmCommandIdentification
+ * ATMCommand2.mmCommandIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand2#mmResult
+ * ATMCommand2.mmResult}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand2#mmAdditionalErrorInformation
+ * ATMCommand2.mmAdditionalErrorInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCommand2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCommand2Code type;
 	/**
 	 * Type of command to be performed by the ATM.
 	 * <p>
@@ -108,20 +110,20 @@ public class ATMCommand2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand3#Type
-	 * ATMCommand3.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand5#Type
-	 * ATMCommand5.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand3#mmType
+	 * ATMCommand3.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand5#mmType
+	 * ATMCommand5.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#Type
-	 * ATMCommand1.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmType
+	 * ATMCommand1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
@@ -129,13 +131,14 @@ public class ATMCommand2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.Type;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand3.Type, com.tools20022.repository.msg.ATMCommand5.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand3.mmType, com.tools20022.repository.msg.ATMCommand5.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand2Code.mmObject();
 		}
 	};
+	protected ISODateTime requiredDateTime;
 	/**
 	 * Date time on which the command has been requested to be performed.
 	 * <p>
@@ -165,18 +168,18 @@ public class ATMCommand2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#RequiredDateTime
-	 * ATMCommand5.RequiredDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmRequiredDateTime
+	 * ATMCommand5.mmRequiredDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#DateTime
-	 * ATMCommand1.DateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmDateTime
+	 * ATMCommand1.mmDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
@@ -184,13 +187,14 @@ public class ATMCommand2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredDateTime";
 			definition = "Date time on which the command has been requested to be performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.DateTime;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.RequiredDateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmRequiredDateTime);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime processedDateTime;
 	/**
 	 * Date time on which the command has been performed.
 	 * <p>
@@ -219,13 +223,13 @@ public class ATMCommand2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#ProcessedDateTime
-	 * ATMCommand5.ProcessedDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmProcessedDateTime
+	 * ATMCommand5.mmProcessedDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessedDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessedDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
@@ -233,12 +237,13 @@ public class ATMCommand2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedDateTime";
 			definition = "Date time on which the command has been performed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.ProcessedDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmProcessedDateTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ATMCommandIdentification1 commandIdentification;
 	/**
 	 * Identification of the entity issuing the command.
 	 * <p>
@@ -267,21 +272,21 @@ public class ATMCommand2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand3#CommandIdentification
-	 * ATMCommand3.CommandIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand3#mmCommandIdentification
+	 * ATMCommand3.mmCommandIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#CommandIdentification
-	 * ATMCommand5.CommandIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmCommandIdentification
+	 * ATMCommand5.mmCommandIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#CommandIdentification
-	 * ATMCommand1.CommandIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmCommandIdentification
+	 * ATMCommand1.mmCommandIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
@@ -289,14 +294,15 @@ public class ATMCommand2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.CommandIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand3.CommandIdentification, com.tools20022.repository.msg.ATMCommand5.CommandIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand3.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand5.mmCommandIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmCommandIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCommandIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
 		}
 	};
+	protected TerminalManagementActionResult2Code result;
 	/**
 	 * Final result of the processed command at the ATM.
 	 * <p>
@@ -325,13 +331,13 @@ public class ATMCommand2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand5#Result
-	 * ATMCommand5.Result}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand5#mmResult
+	 * ATMCommand5.mmResult}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Result = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
@@ -339,12 +345,13 @@ public class ATMCommand2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Final result of the processed command at the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.Result);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmResult);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
 	};
+	protected Max140Text additionalErrorInformation;
 	/**
 	 * Additional information on the failure to be logged for further
 	 * examination.
@@ -376,13 +383,13 @@ public class ATMCommand2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#AdditionalErrorInformation
-	 * ATMCommand5.AdditionalErrorInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmAdditionalErrorInformation
+	 * ATMCommand5.mmAdditionalErrorInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalErrorInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
@@ -390,9 +397,9 @@ public class ATMCommand2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalErrorInformation";
 			definition = "Additional information on the failure to be logged for further examination.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.AdditionalErrorInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmAdditionalErrorInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -400,16 +407,64 @@ public class ATMCommand2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand2.Type, com.tools20022.repository.msg.ATMCommand2.RequiredDateTime, com.tools20022.repository.msg.ATMCommand2.ProcessedDateTime,
-						com.tools20022.repository.msg.ATMCommand2.CommandIdentification, com.tools20022.repository.msg.ATMCommand2.Result, com.tools20022.repository.msg.ATMCommand2.AdditionalErrorInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand2.mmType, com.tools20022.repository.msg.ATMCommand2.mmRequiredDateTime, com.tools20022.repository.msg.ATMCommand2.mmProcessedDateTime,
+						com.tools20022.repository.msg.ATMCommand2.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand2.mmResult, com.tools20022.repository.msg.ATMCommand2.mmAdditionalErrorInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand2";
 				definition = "Result of a maintenance command performed by the ATM.";
-				previousVersion_lazy = () -> ATMCommand1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmObject(), ATMCommand5.mmObject());
+				previousVersion_lazy = () -> ATMCommand1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCommand2Code getType() {
+		return type;
+	}
+
+	public void setType(ATMCommand2Code type) {
+		this.type = type;
+	}
+
+	public ISODateTime getRequiredDateTime() {
+		return requiredDateTime;
+	}
+
+	public void setRequiredDateTime(ISODateTime requiredDateTime) {
+		this.requiredDateTime = requiredDateTime;
+	}
+
+	public ISODateTime getProcessedDateTime() {
+		return processedDateTime;
+	}
+
+	public void setProcessedDateTime(ISODateTime processedDateTime) {
+		this.processedDateTime = processedDateTime;
+	}
+
+	public ATMCommandIdentification1 getCommandIdentification() {
+		return commandIdentification;
+	}
+
+	public void setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+		this.commandIdentification = commandIdentification;
+	}
+
+	public TerminalManagementActionResult2Code getResult() {
+		return result;
+	}
+
+	public void setResult(TerminalManagementActionResult2Code result) {
+		this.result = result;
+	}
+
+	public Max140Text getAdditionalErrorInformation() {
+		return additionalErrorInformation;
+	}
+
+	public void setAdditionalErrorInformation(Max140Text additionalErrorInformation) {
+		this.additionalErrorInformation = additionalErrorInformation;
 	}
 }

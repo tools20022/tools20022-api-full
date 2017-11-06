@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice#TemporaryIndicator
- * TemporaryFinancialInstrumentIndicator4Choice.TemporaryIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice#mmTemporaryIndicator
+ * TemporaryFinancialInstrumentIndicator4Choice.mmTemporaryIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice#Proprietary
- * TemporaryFinancialInstrumentIndicator4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice#mmProprietary
+ * TemporaryFinancialInstrumentIndicator4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TemporaryFinancialInstrumentIndicator4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator temporaryIndicator;
 	/**
 	 * Temporary financial instrument identification used for processing
 	 * reasons.
@@ -80,8 +81,8 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#TemporaryFinancialInstrumentIndicator
-	 * Security.TemporaryFinancialInstrumentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmTemporaryFinancialInstrumentIndicator
+	 * Security.mmTemporaryFinancialInstrumentIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TemporaryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTemporaryIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> TemporaryFinancialInstrumentIndicator4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.TemporaryFinancialInstrumentIndicator;
 			isDerived = false;
 			xmlTag = "TempInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryIndicator";
 			definition = "Temporary financial instrument identification used for processing reasons.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Proprietary code to specify whether the security is a temporary security.
 	 * <p>
@@ -128,8 +130,8 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#TemporaryFinancialInstrumentIndicator
-	 * Security.TemporaryFinancialInstrumentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmTemporaryFinancialInstrumentIndicator
+	 * Security.mmTemporaryFinancialInstrumentIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,34 +152,50 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> TemporaryFinancialInstrumentIndicator4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.TemporaryFinancialInstrumentIndicator;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to specify whether the security is a temporary security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice.TemporaryIndicator,
-						com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice.mmTemporaryIndicator,
+						com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice.mmProprietary);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TemporaryFinancialInstrumentIndicator4Choice";
 				definition = "Choice between an indicator or a proprietary code to specify whether the security is a temporary security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getTemporaryIndicator() {
+		return temporaryIndicator;
+	}
+
+	public void setTemporaryIndicator(YesNoIndicator temporaryIndicator) {
+		this.temporaryIndicator = temporaryIndicator;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

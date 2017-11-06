@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType15Code#NonPrecious
- * AssetClassSubProductType15Code.NonPrecious}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType15Code#mmNonPrecious
+ * AssetClassSubProductType15Code.mmNonPrecious}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType15Code extends AssetClassSubProductTypeCode
 	 * name} = "NonPrecious"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonPrecious = new MMCode() {
+	public static final MMCode mmNonPrecious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPrecious";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType15Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType15Code";
 				definition = "Defines the sub-product of type Non Precious Metal.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType15Code.NonPrecious);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType15Code.mmNonPrecious);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

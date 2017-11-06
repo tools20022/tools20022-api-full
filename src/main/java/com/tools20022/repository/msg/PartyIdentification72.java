@@ -33,13 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification72#PartyIdentification
- * PartyIdentification72.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification72#mmPartyIdentification
+ * PartyIdentification72.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification72#LegalOrganisation
- * PartyIdentification72.LegalOrganisation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification72#TaxParty
- * PartyIdentification72.TaxParty}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification72#mmLegalOrganisation
+ * PartyIdentification72.mmLegalOrganisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification72#mmTaxParty
+ * PartyIdentification72.mmTaxParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification72 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 partyIdentification;
 	/**
 	 * Unique identification, as assigned by an organisation, to unambiguously
 	 * identify a party.
@@ -92,7 +94,7 @@ public class PartyIdentification72 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentification72.mmObject();
 			isDerived = false;
@@ -100,12 +102,13 @@ public class PartyIdentification72 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected LegalOrganisation1 legalOrganisation;
 	/**
 	 * Identifier and name of an organisation that is allocated by an
 	 * institution.
@@ -135,7 +138,7 @@ public class PartyIdentification72 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegalOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegalOrganisation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentification72.mmObject();
 			isDerived = false;
@@ -143,12 +146,13 @@ public class PartyIdentification72 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalOrganisation";
 			definition = "Identifier and name of an organisation that is allocated by an institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> LegalOrganisation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmObject();
 		}
 	};
+	protected TaxParty1 taxParty;
 	/**
 	 * Tax registration details.
 	 * <p>
@@ -174,7 +178,7 @@ public class PartyIdentification72 {
 	 * definition} = "Tax registration details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentification72.mmObject();
 			isDerived = false;
@@ -182,25 +186,49 @@ public class PartyIdentification72 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxParty";
 			definition = "Tax registration details.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TaxParty1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxParty1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification72.PartyIdentification, com.tools20022.repository.msg.PartyIdentification72.LegalOrganisation,
-						com.tools20022.repository.msg.PartyIdentification72.TaxParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification72.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification72.mmLegalOrganisation,
+						com.tools20022.repository.msg.PartyIdentification72.mmTaxParty);
 				trace_lazy = () -> BuyerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification72";
 				definition = "Set of elements used to identify an organization or a person.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.PartyIdentification43 partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public LegalOrganisation1 getLegalOrganisation() {
+		return legalOrganisation;
+	}
+
+	public void setLegalOrganisation(com.tools20022.repository.msg.LegalOrganisation1 legalOrganisation) {
+		this.legalOrganisation = legalOrganisation;
+	}
+
+	public TaxParty1 getTaxParty() {
+		return taxParty;
+	}
+
+	public void setTaxParty(com.tools20022.repository.msg.TaxParty1 taxParty) {
+		this.taxParty = taxParty;
 	}
 }

@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate2#Type
- * ProprietaryDate2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate2#Date
- * ProprietaryDate2.Date}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate2#mmType
+ * ProprietaryDate2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate2#mmDate
+ * ProprietaryDate2.mmDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryDate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Specifies the type of date.
 	 * <p>
@@ -84,7 +85,7 @@ public class ProprietaryDate2 {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryDate2.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class ProprietaryDate2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date in ISO format.
 	 * <p>
@@ -125,7 +127,7 @@ public class ProprietaryDate2 {
 	 * definition} = "Date in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryDate2.mmObject();
 			isDerived = false;
@@ -133,8 +135,8 @@ public class ProprietaryDate2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -142,13 +144,29 @@ public class ProprietaryDate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate2.Type, com.tools20022.repository.msg.ProprietaryDate2.Date);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate2.mmType, com.tools20022.repository.msg.ProprietaryDate2.mmDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryDate2";
 				definition = "Set of elements used to identify a proprietary date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(DateAndDateTimeChoice date) {
+		this.date = date;
 	}
 }

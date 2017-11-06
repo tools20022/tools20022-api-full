@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#Identification
- * PartyIdentification25Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#mmIdentification
+ * PartyIdentification25Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#NameAndAddress
- * PartyIdentification25Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#mmNameAndAddress
+ * PartyIdentification25Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification25Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification24Choice identification;
 	/**
 	 * Unique and unambiguous way to identify an organisation.
 	 * <p>
@@ -101,20 +102,21 @@ public class PartyIdentification25Choice {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification25Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification24Choice.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Postal address of a party.
 	 * <p>
@@ -146,33 +148,49 @@ public class PartyIdentification25Choice {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification25Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Postal address of a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification25Choice.Identification, com.tools20022.repository.choice.PartyIdentification25Choice.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification25Choice.mmIdentification, com.tools20022.repository.choice.PartyIdentification25Choice.mmNameAndAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyIdentification25Choice";
 				definition = "Choice of identification of a party. The party can be identified by providing either a Bank Identifier Code or a Business Entity Identifier or a Market Identifier Code or the name and address.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification24Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.choice.PartyIdentification24Choice identification) {
+		this.identification = identification;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

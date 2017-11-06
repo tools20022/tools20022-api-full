@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustodianOptionDateDetailsSD1#PlaceAndName
- * CustodianOptionDateDetailsSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CustodianOptionDateDetailsSD1#mmPlaceAndName
+ * CustodianOptionDateDetailsSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustodianOptionDateDetailsSD1#AgentDeadlineDate
- * CustodianOptionDateDetailsSD1.AgentDeadlineDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CustodianOptionDateDetailsSD1#mmAgentDeadlineDate
+ * CustodianOptionDateDetailsSD1.mmAgentDeadlineDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustodianOptionDateDetailsSD1#AgentDeadlineTime
- * CustodianOptionDateDetailsSD1.AgentDeadlineTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CustodianOptionDateDetailsSD1#mmAgentDeadlineTime
+ * CustodianOptionDateDetailsSD1.mmAgentDeadlineTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustodianOptionDateDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -91,7 +92,7 @@ public class CustodianOptionDateDetailsSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class CustodianOptionDateDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate agentDeadlineDate;
 	/**
 	 * Custodian deadline date for the option instructions. Applicable to
 	 * custodian service only.
@@ -134,7 +136,7 @@ public class CustodianOptionDateDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentDeadlineDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentDeadlineDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class CustodianOptionDateDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDeadlineDate";
 			definition = "Custodian deadline date for the option instructions. Applicable to custodian service only.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISOTime agentDeadlineTime;
 	/**
 	 * Custodian deadline time for the option instructions. Applicable to
 	 * custodian service only.
@@ -177,7 +180,7 @@ public class CustodianOptionDateDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentDeadlineTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentDeadlineTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
@@ -185,8 +188,8 @@ public class CustodianOptionDateDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDeadlineTime";
 			definition = "Custodian deadline time for the option instructions. Applicable to custodian service only.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -194,14 +197,38 @@ public class CustodianOptionDateDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.PlaceAndName, com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.AgentDeadlineDate,
-						com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.AgentDeadlineTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmAgentDeadlineDate,
+						com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmAgentDeadlineTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustodianOptionDateDetailsSD1";
 				definition = "Corporate action option information for the custodian record.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODate getAgentDeadlineDate() {
+		return agentDeadlineDate;
+	}
+
+	public void setAgentDeadlineDate(ISODate agentDeadlineDate) {
+		this.agentDeadlineDate = agentDeadlineDate;
+	}
+
+	public ISOTime getAgentDeadlineTime() {
+		return agentDeadlineTime;
+	}
+
+	public void setAgentDeadlineTime(ISOTime agentDeadlineTime) {
+		this.agentDeadlineTime = agentDeadlineTime;
 	}
 }

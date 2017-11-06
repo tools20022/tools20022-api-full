@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ErrorHandling1Code#DataNotYetAvailable
- * ErrorHandling1Code.DataNotYetAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ErrorHandling1Code#mmDataNotYetAvailable
+ * ErrorHandling1Code.mmDataNotYetAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ErrorHandling1Code#MessageSizeLimitExceeded
- * ErrorHandling1Code.MessageSizeLimitExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.ErrorHandling1Code#mmMessageSizeLimitExceeded
+ * ErrorHandling1Code.mmMessageSizeLimitExceeded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ErrorHandling1Code#DataNotAvailable
- * ErrorHandling1Code.DataNotAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ErrorHandling1Code#mmDataNotAvailable
+ * ErrorHandling1Code.mmDataNotAvailable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	 * name} = "DataNotYetAvailable"</li>
 	 * </ul>
 	 */
-	public static final MMCode DataNotYetAvailable = new MMCode() {
+	public static final MMCode mmDataNotYetAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataNotYetAvailable";
@@ -110,7 +110,7 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	 * name} = "MessageSizeLimitExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode MessageSizeLimitExceeded = new MMCode() {
+	public static final MMCode mmMessageSizeLimitExceeded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageSizeLimitExceeded";
@@ -133,7 +133,7 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	 * name} = "DataNotAvailable"</li>
 	 * </ul>
 	 */
-	public static final MMCode DataNotAvailable = new MMCode() {
+	public static final MMCode mmDataNotAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataNotAvailable";
@@ -144,13 +144,13 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("X020");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ErrorHandling1Code";
 				definition = "Error codes generated when the response to a query exceeds the maximum size or the data is not available.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ErrorHandling1Code.DataNotYetAvailable, com.tools20022.repository.codeset.ErrorHandling1Code.MessageSizeLimitExceeded,
-						com.tools20022.repository.codeset.ErrorHandling1Code.DataNotAvailable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ErrorHandling1Code.mmDataNotYetAvailable, com.tools20022.repository.codeset.ErrorHandling1Code.mmMessageSizeLimitExceeded,
+						com.tools20022.repository.codeset.ErrorHandling1Code.mmDataNotAvailable);
 				trace_lazy = () -> ErrorHandlingCode.mmObject();
 			}
 		});

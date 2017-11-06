@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The FinancialInstrumentReportingCountryCodeReport message provides the
@@ -56,18 +57,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01#CountryData
- * FinancialInstrumentReportingCountryCodeReportV01.CountryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01#mmCountryData
+ * FinancialInstrumentReportingCountryCodeReportV01.mmCountryData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01#SupplementaryData
- * FinancialInstrumentReportingCountryCodeReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01#mmSupplementaryData
+ * FinancialInstrumentReportingCountryCodeReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01#identifier
- * FinancialInstrumentReportingCountryCodeReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.047.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentReportingCountryCodeReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<SecuritiesCountryIdentification2> countryData;
 	/**
 	 * Report detailing all countries and their 2 character ISO 3166 code.
 	 * <p>
@@ -107,7 +107,7 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 	 * "Report detailing all countries and their 2 character ISO 3166 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CountryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCountryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,6 +117,7 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 			complexType_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -143,7 +144,7 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,33 +152,6 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "047"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "047";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -191,11 +165,34 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgCtryCdRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.CountryData,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.mmCountryData,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "047";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesCountryIdentification2> getCountryData() {
+		return countryData;
+	}
+
+	public void setCountryData(List<SecuritiesCountryIdentification2> countryData) {
+		this.countryData = countryData;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

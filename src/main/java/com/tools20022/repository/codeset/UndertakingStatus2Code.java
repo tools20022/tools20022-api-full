@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#Accepted
- * UndertakingStatus2Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#mmAccepted
+ * UndertakingStatus2Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#Rejected
- * UndertakingStatus2Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#mmRejected
+ * UndertakingStatus2Code.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class UndertakingStatus2Code extends UndertakingStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -104,7 +104,7 @@ public class UndertakingStatus2Code extends UndertakingStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -115,12 +115,12 @@ public class UndertakingStatus2Code extends UndertakingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatus2Code";
 				definition = "Specifies the undertaking amendment status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus2Code.Accepted, com.tools20022.repository.codeset.UndertakingStatus2Code.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus2Code.mmAccepted, com.tools20022.repository.codeset.UndertakingStatus2Code.mmRejected);
 				trace_lazy = () -> UndertakingStatusCode.mmObject();
 			}
 		});

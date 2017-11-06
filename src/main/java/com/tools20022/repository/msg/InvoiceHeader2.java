@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.ExternalDocumentPurpose1Code;
 import com.tools20022.repository.codeset.ExternalDocumentType1Code;
+import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
@@ -29,6 +30,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.DocumentIssuer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Collection of data for that is exchanged between two or more parties in
@@ -40,24 +42,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#Identification
- * InvoiceHeader2.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#TypeCode
- * InvoiceHeader2.TypeCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#Name
- * InvoiceHeader2.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#IssueDateTime
- * InvoiceHeader2.IssueDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#Issuer
- * InvoiceHeader2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#LanguageCode
- * InvoiceHeader2.LanguageCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#CopyIndicator
- * InvoiceHeader2.CopyIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#DocumentPurpose
- * InvoiceHeader2.DocumentPurpose}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#IncludedNote
- * InvoiceHeader2.IncludedNote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmIdentification
+ * InvoiceHeader2.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmTypeCode
+ * InvoiceHeader2.mmTypeCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmName
+ * InvoiceHeader2.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmIssueDateTime
+ * InvoiceHeader2.mmIssueDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmIssuer
+ * InvoiceHeader2.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmLanguageCode
+ * InvoiceHeader2.mmLanguageCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmCopyIndicator
+ * InvoiceHeader2.mmCopyIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmDocumentPurpose
+ * InvoiceHeader2.mmDocumentPurpose}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmIncludedNote
+ * InvoiceHeader2.mmIncludedNote}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identification of this invoice document.
 	 * <p>
@@ -97,8 +102,8 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,25 +122,26 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#Identification
-	 * InvoiceHeader1.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmIdentification
+	 * InvoiceHeader1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of this invoice document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ExternalDocumentType1Code typeCode;
 	/**
 	 * Specifies the type of the document, for example commercial invoice.
 	 * <p>
@@ -149,8 +155,8 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Type Document.Type}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmType
+	 * Document.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,25 +176,26 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#TypeCode
-	 * InvoiceHeader1.TypeCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmTypeCode
+	 * InvoiceHeader1.mmTypeCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TypeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Type;
 			isDerived = false;
 			xmlTag = "TpCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeCode";
 			definition = "Specifies the type of the document, for example commercial invoice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.TypeCode;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmTypeCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
 		}
 	};
+	protected List<Max35Text> name;
 	/**
 	 * Name of invoice document or transaction, for example, tax invoice.
 	 * <p>
@@ -201,8 +208,8 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#DocumentIdentification
-	 * Document.DocumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmDocumentIdentification
+	 * Document.mmDocumentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -222,24 +229,25 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#Name
-	 * InvoiceHeader1.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmName
+	 * InvoiceHeader1.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.DocumentIdentification;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of invoice document or transaction, for example, tax invoice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.Name;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmName;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime issueDateTime;
 	/**
 	 * Issue date of the document.
 	 * <p>
@@ -252,8 +260,8 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,25 +280,26 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#IssueDateTime
-	 * InvoiceHeader1.IssueDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmIssueDateTime
+	 * InvoiceHeader1.mmIssueDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "IsseDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDateTime";
 			definition = "Issue date of the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.IssueDateTime;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmIssueDateTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected TradeParty3 issuer;
 	/**
 	 * Party that issued this invoice document.
 	 * <p>
@@ -322,26 +331,27 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#Issuer
-	 * InvoiceHeader1.Issuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmIssuer
+	 * InvoiceHeader1.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvoiceHeader2.mmObject();
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
+			componentContext_lazy = () -> InvoiceHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issued this invoice document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.Issuer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmIssuer;
 			maxOccurs = 1;
-			type_lazy = () -> TradeParty3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 		}
 	};
+	protected LanguageCode languageCode;
 	/**
 	 * Unique identifier for a language used in this invoice document.
 	 * <p>
@@ -354,8 +364,8 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Language
-	 * Document.Language}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmLanguage
+	 * Document.mmLanguage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -375,25 +385,26 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#LanguageCode
-	 * InvoiceHeader1.LanguageCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmLanguageCode
+	 * InvoiceHeader1.mmLanguageCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LanguageCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmLanguage;
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Language;
 			isDerived = false;
 			xmlTag = "LangCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Unique identifier for a language used in this invoice document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.LanguageCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmLanguageCode;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.codeset.LanguageCode.mmObject();
+			minOccurs = 0;
+			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	protected YesNoIndicator copyIndicator;
 	/**
 	 * Indicator that the document is a copy of the original document.
 	 * <p>
@@ -423,11 +434,11 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#CopyIndicator
-	 * InvoiceHeader1.CopyIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmCopyIndicator
+	 * InvoiceHeader1.mmCopyIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
 			isDerived = false;
@@ -435,12 +446,13 @@ public class InvoiceHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicator that the document is a copy of the\noriginal document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.CopyIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmCopyIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ExternalDocumentPurpose1Code documentPurpose;
 	/**
 	 * Specifies the function of the document.
 	 * <p>
@@ -454,8 +466,8 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Purpose
-	 * Document.Purpose}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmPurpose
+	 * Document.mmPurpose}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -474,25 +486,26 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#DocumentPurpose
-	 * InvoiceHeader1.DocumentPurpose}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmDocumentPurpose
+	 * InvoiceHeader1.mmDocumentPurpose}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentPurpose = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPurpose;
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Purpose;
 			isDerived = false;
 			xmlTag = "DocPurp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentPurpose";
 			definition = "Specifies the function of the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.DocumentPurpose;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmDocumentPurpose;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExternalDocumentPurpose1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AdditionalInformation6> includedNote;
 	/**
 	 * Note included in this invoice document.
 	 * <p>
@@ -521,11 +534,11 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#IncludedNote
-	 * InvoiceHeader1.IncludedNote}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader1#mmIncludedNote
+	 * InvoiceHeader1.mmIncludedNote}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncludedNote = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncludedNote = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvoiceHeader2.mmObject();
 			isDerived = false;
@@ -533,20 +546,20 @@ public class InvoiceHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedNote";
 			definition = "Note included in this invoice document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.IncludedNote;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmIncludedNote;
 			minOccurs = 0;
-			complexType_lazy = () -> AdditionalInformation6.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalInformation6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.Identification, com.tools20022.repository.msg.InvoiceHeader2.TypeCode, com.tools20022.repository.msg.InvoiceHeader2.Name,
-						com.tools20022.repository.msg.InvoiceHeader2.IssueDateTime, com.tools20022.repository.msg.InvoiceHeader2.Issuer, com.tools20022.repository.msg.InvoiceHeader2.LanguageCode,
-						com.tools20022.repository.msg.InvoiceHeader2.CopyIndicator, com.tools20022.repository.msg.InvoiceHeader2.DocumentPurpose, com.tools20022.repository.msg.InvoiceHeader2.IncludedNote);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmIdentification, com.tools20022.repository.msg.InvoiceHeader2.mmTypeCode, com.tools20022.repository.msg.InvoiceHeader2.mmName,
+						com.tools20022.repository.msg.InvoiceHeader2.mmIssueDateTime, com.tools20022.repository.msg.InvoiceHeader2.mmIssuer, com.tools20022.repository.msg.InvoiceHeader2.mmLanguageCode,
+						com.tools20022.repository.msg.InvoiceHeader2.mmCopyIndicator, com.tools20022.repository.msg.InvoiceHeader2.mmDocumentPurpose, com.tools20022.repository.msg.InvoiceHeader2.mmIncludedNote);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvoiceHeader2";
 				definition = "Collection of data for that is exchanged between two or more parties in written, printed or electronic form.";
@@ -554,5 +567,77 @@ public class InvoiceHeader2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ExternalDocumentType1Code getTypeCode() {
+		return typeCode;
+	}
+
+	public void setTypeCode(ExternalDocumentType1Code typeCode) {
+		this.typeCode = typeCode;
+	}
+
+	public List<Max35Text> getName() {
+		return name;
+	}
+
+	public void setName(List<Max35Text> name) {
+		this.name = name;
+	}
+
+	public ISODateTime getIssueDateTime() {
+		return issueDateTime;
+	}
+
+	public void setIssueDateTime(ISODateTime issueDateTime) {
+		this.issueDateTime = issueDateTime;
+	}
+
+	public TradeParty3 getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(com.tools20022.repository.msg.TradeParty3 issuer) {
+		this.issuer = issuer;
+	}
+
+	public LanguageCode getLanguageCode() {
+		return languageCode;
+	}
+
+	public void setLanguageCode(LanguageCode languageCode) {
+		this.languageCode = languageCode;
+	}
+
+	public YesNoIndicator getCopyIndicator() {
+		return copyIndicator;
+	}
+
+	public void setCopyIndicator(YesNoIndicator copyIndicator) {
+		this.copyIndicator = copyIndicator;
+	}
+
+	public ExternalDocumentPurpose1Code getDocumentPurpose() {
+		return documentPurpose;
+	}
+
+	public void setDocumentPurpose(ExternalDocumentPurpose1Code documentPurpose) {
+		this.documentPurpose = documentPurpose;
+	}
+
+	public List<AdditionalInformation6> getIncludedNote() {
+		return includedNote;
+	}
+
+	public void setIncludedNote(List<com.tools20022.repository.msg.AdditionalInformation6> includedNote) {
+		this.includedNote = includedNote;
 	}
 }

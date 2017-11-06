@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMStatus1#CurrentStatus
- * ATMStatus1.CurrentStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMStatus1#DemandedStatus
- * ATMStatus1.DemandedStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMStatus1#mmCurrentStatus
+ * ATMStatus1.mmCurrentStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMStatus1#mmDemandedStatus
+ * ATMStatus1.mmDemandedStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMStatus1Code currentStatus;
 	/**
 	 * Actual status of the ATM.
 	 * <p>
@@ -83,7 +84,7 @@ public class ATMStatus1 {
 	 * definition} = "Actual status of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMStatus1.mmObject();
 			isDerived = false;
@@ -91,11 +92,12 @@ public class ATMStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatus";
 			definition = "Actual status of the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
 		}
 	};
+	protected ATMStatus1Code demandedStatus;
 	/**
 	 * Present if the status required by the ATM manager is different from the
 	 * current status.
@@ -126,7 +128,7 @@ public class ATMStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DemandedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDemandedStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMStatus1.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class ATMStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandedStatus";
 			definition = "Present if the status required by the ATM manager is different from the current status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class ATMStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMStatus1.CurrentStatus, com.tools20022.repository.msg.ATMStatus1.DemandedStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMStatus1.mmCurrentStatus, com.tools20022.repository.msg.ATMStatus1.mmDemandedStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus1";
 				definition = "Global status of the ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMStatus1Code getCurrentStatus() {
+		return currentStatus;
+	}
+
+	public void setCurrentStatus(ATMStatus1Code currentStatus) {
+		this.currentStatus = currentStatus;
+	}
+
+	public ATMStatus1Code getDemandedStatus() {
+		return demandedStatus;
+	}
+
+	public void setDemandedStatus(ATMStatus1Code demandedStatus) {
+		this.demandedStatus = demandedStatus;
 	}
 }

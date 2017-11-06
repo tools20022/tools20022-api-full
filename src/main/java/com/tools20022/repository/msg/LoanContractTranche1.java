@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#TrancheNumber
- * LoanContractTranche1.TrancheNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#mmTrancheNumber
+ * LoanContractTranche1.mmTrancheNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#ExpectedDate
- * LoanContractTranche1.ExpectedDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LoanContractTranche1#Amount
- * LoanContractTranche1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LoanContractTranche1#DueDate
- * LoanContractTranche1.DueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#mmExpectedDate
+ * LoanContractTranche1.mmExpectedDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LoanContractTranche1#mmAmount
+ * LoanContractTranche1.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LoanContractTranche1#mmDueDate
+ * LoanContractTranche1.mmDueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#DurationCode
- * LoanContractTranche1.DurationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#mmDurationCode
+ * LoanContractTranche1.mmDurationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#LastTrancheIndicator
- * LoanContractTranche1.LastTrancheIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.LoanContractTranche1#mmLastTrancheIndicator
+ * LoanContractTranche1.mmLastTrancheIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LoanContractTranche1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number trancheNumber;
 	/**
 	 * Unique sequence number of the tranche.
 	 * <p>
@@ -100,7 +101,7 @@ public class LoanContractTranche1 {
 	 * definition} = "Unique sequence number of the tranche."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TrancheNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTrancheNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
@@ -108,11 +109,12 @@ public class LoanContractTranche1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrancheNumber";
 			definition = "Unique sequence number of the tranche.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISODate expectedDate;
 	/**
 	 * Expected tranche payment date.
 	 * <p>
@@ -125,8 +127,8 @@ public class LoanContractTranche1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +147,21 @@ public class LoanContractTranche1 {
 	 * definition} = "Expected tranche payment date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "XpctdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDate";
 			definition = "Expected tranche payment date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of the tranche as defined in the loan contract.
 	 * <p>
@@ -172,8 +175,8 @@ public class LoanContractTranche1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#Amount
-	 * PaymentTerms.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmAmount
+	 * PaymentTerms.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,20 +195,21 @@ public class LoanContractTranche1 {
 	 * definition} = "Amount of the tranche as defined in the loan contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmAmount;
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the tranche as defined in the loan contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate dueDate;
 	/**
 	 * Loan tranche due date.
 	 * <p>
@@ -218,8 +222,8 @@ public class LoanContractTranche1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -238,20 +242,21 @@ public class LoanContractTranche1 {
 	 * definition} = "Loan tranche due date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "DueDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Loan tranche due date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Exact1NumericText durationCode;
 	/**
 	 * Loan tranche duration in a coded form.
 	 * <p>
@@ -280,7 +285,7 @@ public class LoanContractTranche1 {
 	 * definition} = "Loan tranche duration in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DurationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDurationCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
@@ -288,11 +293,12 @@ public class LoanContractTranche1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DurationCode";
 			definition = "Loan tranche duration in a coded form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact1NumericText.mmObject();
 		}
 	};
+	protected YesNoIndicator lastTrancheIndicator;
 	/**
 	 * Indicates whether this tranche is the last tranche of the full report.
 	 * <p>
@@ -322,7 +328,7 @@ public class LoanContractTranche1 {
 	 * "Indicates whether this tranche is the last tranche of the full report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastTrancheIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastTrancheIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
@@ -330,8 +336,8 @@ public class LoanContractTranche1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTrancheIndicator";
 			definition = "Indicates whether this tranche is the last tranche of the full report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -339,16 +345,64 @@ public class LoanContractTranche1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LoanContractTranche1.TrancheNumber, com.tools20022.repository.msg.LoanContractTranche1.ExpectedDate,
-						com.tools20022.repository.msg.LoanContractTranche1.Amount, com.tools20022.repository.msg.LoanContractTranche1.DueDate, com.tools20022.repository.msg.LoanContractTranche1.DurationCode,
-						com.tools20022.repository.msg.LoanContractTranche1.LastTrancheIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LoanContractTranche1.mmTrancheNumber, com.tools20022.repository.msg.LoanContractTranche1.mmExpectedDate,
+						com.tools20022.repository.msg.LoanContractTranche1.mmAmount, com.tools20022.repository.msg.LoanContractTranche1.mmDueDate, com.tools20022.repository.msg.LoanContractTranche1.mmDurationCode,
+						com.tools20022.repository.msg.LoanContractTranche1.mmLastTrancheIndicator);
 				trace_lazy = () -> Loan.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LoanContractTranche1";
 				definition = "Provides details on the tranches defined for the loan contract.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getTrancheNumber() {
+		return trancheNumber;
+	}
+
+	public void setTrancheNumber(Number trancheNumber) {
+		this.trancheNumber = trancheNumber;
+	}
+
+	public ISODate getExpectedDate() {
+		return expectedDate;
+	}
+
+	public void setExpectedDate(ISODate expectedDate) {
+		this.expectedDate = expectedDate;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public ISODate getDueDate() {
+		return dueDate;
+	}
+
+	public void setDueDate(ISODate dueDate) {
+		this.dueDate = dueDate;
+	}
+
+	public Exact1NumericText getDurationCode() {
+		return durationCode;
+	}
+
+	public void setDurationCode(Exact1NumericText durationCode) {
+		this.durationCode = durationCode;
+	}
+
+	public YesNoIndicator getLastTrancheIndicator() {
+		return lastTrancheIndicator;
+	}
+
+	public void setLastTrancheIndicator(YesNoIndicator lastTrancheIndicator) {
+		this.lastTrancheIndicator = lastTrancheIndicator;
 	}
 }

@@ -24,10 +24,12 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max15PlusSignedNumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.BankOperation;
 import com.tools20022.repository.entity.CashAccountMandate;
 import com.tools20022.repository.entity.Party;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information specifying the Mandate.
@@ -39,24 +41,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate1#Identification
- * OperationMandate1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmIdentification
+ * OperationMandate1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate1#RequiredSignatureNumber
- * OperationMandate1.RequiredSignatureNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmRequiredSignatureNumber
+ * OperationMandate1.mmRequiredSignatureNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate1#SignatureOrderIndicator
- * OperationMandate1.SignatureOrderIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmSignatureOrderIndicator
+ * OperationMandate1.mmSignatureOrderIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate1#MandateHolder
- * OperationMandate1.MandateHolder}</li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmMandateHolder
+ * OperationMandate1.mmMandateHolder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate1#BankOperation
- * OperationMandate1.BankOperation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1#StartDate
- * OperationMandate1.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1#EndDate
- * OperationMandate1.EndDate}</li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmBankOperation
+ * OperationMandate1.mmBankOperation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1#mmStartDate
+ * OperationMandate1.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1#mmEndDate
+ * OperationMandate1.mmEndDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,24 +69,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#Mandate
- * AccountMandateMaintenanceAmendmentRequestV01.Mandate}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#mmMandate
+ * AccountMandateMaintenanceAmendmentRequestV01.mmMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#Mandate
- * AccountMandateMaintenanceRequestV01.Mandate}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#mmMandate
+ * AccountMandateMaintenanceRequestV01.mmMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#Mandate
- * AccountOpeningAmendmentRequestV01.Mandate}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#mmMandate
+ * AccountOpeningAmendmentRequestV01.mmMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#Mandate
- * AccountOpeningRequestV01.Mandate}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#mmMandate
+ * AccountOpeningRequestV01.mmMandate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OperationMandate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification of the mandate.
 	 * <p>
@@ -117,8 +120,8 @@ public class OperationMandate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,20 +140,21 @@ public class OperationMandate1 {
 	 * definition} = "Unique and unambiguous identification of the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OperationMandate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max15PlusSignedNumericText requiredSignatureNumber;
 	/**
 	 * Number of required and necessary signatures by the mandate.
 	 * <p>
@@ -164,8 +168,8 @@ public class OperationMandate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Mandate#SignatureConditions
-	 * Mandate.SignatureConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Mandate#mmSignatureConditions
+	 * Mandate.mmSignatureConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,20 +189,21 @@ public class OperationMandate1 {
 	 * "Number of required and necessary signatures by the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredSignatureNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredSignatureNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmSignatureConditions;
 			componentContext_lazy = () -> OperationMandate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.SignatureConditions;
 			isDerived = false;
 			xmlTag = "ReqrdSgntrNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredSignatureNumber";
 			definition = "Number of required and necessary signatures by the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
 		}
 	};
+	protected YesNoIndicator signatureOrderIndicator;
 	/**
 	 * Indicator whether a certain order of signatures has to be respected or
 	 * not.
@@ -213,8 +218,8 @@ public class OperationMandate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#SignatureOrderIndicator
-	 * SignatureCondition.SignatureOrderIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignatureOrderIndicator
+	 * SignatureCondition.mmSignatureOrderIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,20 +240,21 @@ public class OperationMandate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignatureOrderIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignatureOrderIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmSignatureOrderIndicator;
 			componentContext_lazy = () -> OperationMandate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.SignatureOrderIndicator;
 			isDerived = false;
 			xmlTag = "SgntrOrdrInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureOrderIndicator";
 			definition = "Indicator whether a certain order of signatures has to be respected or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyAndCertificate1> mandateHolder;
 	/**
 	 * Holder of the mandate.
 	 * <p>
@@ -279,20 +285,21 @@ public class OperationMandate1 {
 	 * definition} = "Holder of the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MandateHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMandateHolder = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OperationMandate1.mmObject();
 			businessComponentTrace_lazy = () -> Party.mmObject();
+			componentContext_lazy = () -> OperationMandate1.mmObject();
 			isDerived = false;
 			xmlTag = "MndtHldr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateHolder";
 			definition = "Holder of the mandate.";
 			minOccurs = 0;
-			type_lazy = () -> PartyAndCertificate1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyAndCertificate1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BankTransactionCodeStructure4> bankOperation;
 	/**
 	 * Bank operation allowed by a mandate.
 	 * <p>
@@ -325,20 +332,21 @@ public class OperationMandate1 {
 	 * definition} = "Bank operation allowed by a mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BankOperation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBankOperation = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> BankOperation.mmObject();
 			componentContext_lazy = () -> OperationMandate1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.mmObject();
 			isDerived = false;
 			xmlTag = "BkOpr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOperation";
 			definition = "Bank operation allowed by a mandate.";
 			minOccurs = 1;
-			type_lazy = () -> BankTransactionCodeStructure4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
 		}
 	};
+	protected ISODate startDate;
 	/**
 	 * Is the date when the mandate becomes valid.
 	 * <p>
@@ -351,8 +359,8 @@ public class OperationMandate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -371,20 +379,21 @@ public class OperationMandate1 {
 	 * definition} = "Is the date when the mandate becomes valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> OperationMandate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Is the date when the mandate becomes valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate endDate;
 	/**
 	 * Is the date when the mandate stops to be valid.
 	 * <p>
@@ -397,8 +406,8 @@ public class OperationMandate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#ToDateTime
-	 * DateTimePeriod.ToDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmToDateTime
+	 * DateTimePeriod.mmToDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -417,17 +426,17 @@ public class OperationMandate1 {
 	 * definition} = "Is the date when the mandate stops to be valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> OperationMandate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.ToDateTime;
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "Is the date when the mandate stops to be valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -435,13 +444,13 @@ public class OperationMandate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OperationMandate1.Identification, com.tools20022.repository.msg.OperationMandate1.RequiredSignatureNumber,
-						com.tools20022.repository.msg.OperationMandate1.SignatureOrderIndicator, com.tools20022.repository.msg.OperationMandate1.MandateHolder, com.tools20022.repository.msg.OperationMandate1.BankOperation,
-						com.tools20022.repository.msg.OperationMandate1.StartDate, com.tools20022.repository.msg.OperationMandate1.EndDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OperationMandate1.mmIdentification, com.tools20022.repository.msg.OperationMandate1.mmRequiredSignatureNumber,
+						com.tools20022.repository.msg.OperationMandate1.mmSignatureOrderIndicator, com.tools20022.repository.msg.OperationMandate1.mmMandateHolder, com.tools20022.repository.msg.OperationMandate1.mmBankOperation,
+						com.tools20022.repository.msg.OperationMandate1.mmStartDate, com.tools20022.repository.msg.OperationMandate1.mmEndDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmMandate, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmMandate,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmMandate, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmMandate);
 				trace_lazy = () -> CashAccountMandate.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.Mandate, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.Mandate,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.Mandate, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.Mandate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OperationMandate1";
 				definition = "Information specifying the Mandate.";
@@ -449,5 +458,61 @@ public class OperationMandate1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max15PlusSignedNumericText getRequiredSignatureNumber() {
+		return requiredSignatureNumber;
+	}
+
+	public void setRequiredSignatureNumber(Max15PlusSignedNumericText requiredSignatureNumber) {
+		this.requiredSignatureNumber = requiredSignatureNumber;
+	}
+
+	public YesNoIndicator getSignatureOrderIndicator() {
+		return signatureOrderIndicator;
+	}
+
+	public void setSignatureOrderIndicator(YesNoIndicator signatureOrderIndicator) {
+		this.signatureOrderIndicator = signatureOrderIndicator;
+	}
+
+	public List<PartyAndCertificate1> getMandateHolder() {
+		return mandateHolder;
+	}
+
+	public void setMandateHolder(List<com.tools20022.repository.msg.PartyAndCertificate1> mandateHolder) {
+		this.mandateHolder = mandateHolder;
+	}
+
+	public List<BankTransactionCodeStructure4> getBankOperation() {
+		return bankOperation;
+	}
+
+	public void setBankOperation(List<com.tools20022.repository.msg.BankTransactionCodeStructure4> bankOperation) {
+		this.bankOperation = bankOperation;
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public ISODate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(ISODate endDate) {
+		this.endDate = endDate;
 	}
 }

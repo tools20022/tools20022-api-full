@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#SettlementPartiesDetails
- * ReceiveInformation1.SettlementPartiesDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#mmSettlementPartiesDetails
+ * ReceiveInformation1.mmSettlementPartiesDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#PhysicalTransferIndicator
- * ReceiveInformation1.PhysicalTransferIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#mmPhysicalTransferIndicator
+ * ReceiveInformation1.mmPhysicalTransferIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#PhysicalTransferDetails
- * ReceiveInformation1.PhysicalTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#mmPhysicalTransferDetails
+ * ReceiveInformation1.mmPhysicalTransferDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,15 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#SettlementDetails
- * TransferOutInstruction.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#mmSettlementDetails
+ * TransferOutInstruction.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReceiveInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReceivingPartiesAndAccount1 settlementPartiesDetails;
 	/**
 	 * Chain of parties involved in the settlement of a transaction.
 	 * <p>
@@ -87,8 +88,8 @@ public class ReceiveInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,21 +109,22 @@ public class ReceiveInformation1 {
 	 * "Chain of parties involved in the settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementPartiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> ReceiveInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReceivingPartiesAndAccount1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount1.mmObject();
 		}
 	};
+	protected YesNoIndicator physicalTransferIndicator;
 	/**
 	 * Indicates whether the financial instrument is to be physically delivered.
 	 * <p>
@@ -136,8 +138,8 @@ public class ReceiveInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
-	 * SecuritiesTransfer.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+	 * SecuritiesTransfer.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,20 +160,21 @@ public class ReceiveInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhysicalTransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhysicalTransferIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> ReceiveInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery;
 			isDerived = false;
 			xmlTag = "PhysTrfInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferIndicator";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DeliveryParameters2 physicalTransferDetails;
 	/**
 	 * Parameters of a physical delivery.
 	 * <p>
@@ -183,8 +186,8 @@ public class ReceiveInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
-	 * SecuritiesTransfer.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+	 * SecuritiesTransfer.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,35 +206,59 @@ public class ReceiveInformation1 {
 	 * definition} = "Parameters of a physical delivery."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PhysicalTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> ReceiveInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery;
 			isDerived = false;
 			xmlTag = "PhysTrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetails";
 			definition = "Parameters of a physical delivery.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DeliveryParameters2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation1.SettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation1.PhysicalTransferIndicator,
-						com.tools20022.repository.msg.ReceiveInformation1.PhysicalTransferDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation1.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferIndicator,
+						com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstruction.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstruction.SettlementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReceiveInformation1";
 				definition = "Parameters applied to the settlement of a security transfer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReceivingPartiesAndAccount1 getSettlementPartiesDetails() {
+		return settlementPartiesDetails;
+	}
+
+	public void setSettlementPartiesDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount1 settlementPartiesDetails) {
+		this.settlementPartiesDetails = settlementPartiesDetails;
+	}
+
+	public YesNoIndicator getPhysicalTransferIndicator() {
+		return physicalTransferIndicator;
+	}
+
+	public void setPhysicalTransferIndicator(YesNoIndicator physicalTransferIndicator) {
+		this.physicalTransferIndicator = physicalTransferIndicator;
+	}
+
+	public DeliveryParameters2 getPhysicalTransferDetails() {
+		return physicalTransferDetails;
+	}
+
+	public void setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters2 physicalTransferDetails) {
+		this.physicalTransferDetails = physicalTransferDetails;
 	}
 }

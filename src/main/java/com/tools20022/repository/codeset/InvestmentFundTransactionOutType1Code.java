@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#Redemption
- * InvestmentFundTransactionOutType1Code.Redemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#mmRedemption
+ * InvestmentFundTransactionOutType1Code.mmRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#SwitchOut
- * InvestmentFundTransactionOutType1Code.SwitchOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#mmSwitchOut
+ * InvestmentFundTransactionOutType1Code.mmSwitchOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#InSpecie
- * InvestmentFundTransactionOutType1Code.InSpecie}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#mmInSpecie
+ * InvestmentFundTransactionOutType1Code.mmInSpecie}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#CrossOut
- * InvestmentFundTransactionOutType1Code.CrossOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code#mmCrossOut
+ * InvestmentFundTransactionOutType1Code.mmCrossOut}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class InvestmentFundTransactionOutType1Code extends InvestmentFundTransac
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -113,7 +113,7 @@ public class InvestmentFundTransactionOutType1Code extends InvestmentFundTransac
 	 * name} = "SwitchOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchOut = new MMCode() {
+	public static final MMCode mmSwitchOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOut";
@@ -136,7 +136,7 @@ public class InvestmentFundTransactionOutType1Code extends InvestmentFundTransac
 	 * name} = "InSpecie"</li>
 	 * </ul>
 	 */
-	public static final MMCode InSpecie = new MMCode() {
+	public static final MMCode mmInSpecie = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
@@ -159,7 +159,7 @@ public class InvestmentFundTransactionOutType1Code extends InvestmentFundTransac
 	 * name} = "CrossOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossOut = new MMCode() {
+	public static final MMCode mmCrossOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossOut";
@@ -170,13 +170,13 @@ public class InvestmentFundTransactionOutType1Code extends InvestmentFundTransac
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REDM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionOutType1Code";
 				definition = "Specifies the type of investment fund transaction that results in a cash movement out of a fund.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.Redemption, com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.SwitchOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.InSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.CrossOut);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.mmRedemption, com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.mmSwitchOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.mmInSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionOutType1Code.mmCrossOut);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

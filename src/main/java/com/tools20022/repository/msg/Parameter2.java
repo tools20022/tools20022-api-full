@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter2#DigestAlgorithm
- * Parameter2.DigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter2#mmDigestAlgorithm
+ * Parameter2.mmDigestAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Parameter2#MaskGeneratorAlgorithm
- * Parameter2.MaskGeneratorAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.Parameter2#mmMaskGeneratorAlgorithm
+ * Parameter2.mmMaskGeneratorAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Parameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm5Code digestAlgorithm;
 	/**
 	 * Digest algorithm used in the RSAES-OAEP encryption algorithm (RSA
 	 * Encryption Scheme: Optimal Asymmetric Encryption Padding).
@@ -100,13 +101,14 @@ public class Parameter2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Parameter4#DigestAlgorithm
-	 * Parameter4.DigestAlgorithm}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter4#mmDigestAlgorithm
+	 * Parameter4.mmDigestAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter2.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class Parameter2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Digest algorithm used in the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter4.DigestAlgorithm);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter4.mmDigestAlgorithm);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
+	protected AlgorithmIdentification8 maskGeneratorAlgorithm;
 	/**
 	 * Mask generator function cryptographic algorithm and parameters.
 	 * <p>
@@ -150,13 +153,13 @@ public class Parameter2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Parameter4#MaskGeneratorAlgorithm
-	 * Parameter4.MaskGeneratorAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter4#mmMaskGeneratorAlgorithm
+	 * Parameter4.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter2.mmObject();
 			isDerived = false;
@@ -164,25 +167,41 @@ public class Parameter2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaskGeneratorAlgorithm";
 			definition = "Mask generator function cryptographic algorithm and parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter4.MaskGeneratorAlgorithm);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter4.mmMaskGeneratorAlgorithm);
 			maxOccurs = 1;
-			complexType_lazy = () -> AlgorithmIdentification8.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter2.DigestAlgorithm, com.tools20022.repository.msg.Parameter2.MaskGeneratorAlgorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter2.mmDigestAlgorithm, com.tools20022.repository.msg.Parameter2.mmMaskGeneratorAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Parameter2";
 				definition = "Parameters of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).";
-				previousVersion_lazy = () -> Parameter1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Parameter4.mmObject());
+				previousVersion_lazy = () -> Parameter1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm5Code getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(Algorithm5Code digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public AlgorithmIdentification8 getMaskGeneratorAlgorithm() {
+		return maskGeneratorAlgorithm;
+	}
+
+	public void setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification8 maskGeneratorAlgorithm) {
+		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
 	}
 }

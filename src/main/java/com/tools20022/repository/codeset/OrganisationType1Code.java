@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#InvestmentFund
- * OrganisationType1Code.InvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#mmInvestmentFund
+ * OrganisationType1Code.mmInvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#PrivateAssociation
- * OrganisationType1Code.PrivateAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#mmPrivateAssociation
+ * OrganisationType1Code.mmPrivateAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#Public
- * OrganisationType1Code.Public}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#mmPublic
+ * OrganisationType1Code.mmPublic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#PublicFund
- * OrganisationType1Code.PublicFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationType1Code#mmPublicFund
+ * OrganisationType1Code.mmPublicFund}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 * name} = "InvestmentFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentFund = new MMCode() {
+	public static final MMCode mmInvestmentFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFund";
@@ -104,7 +104,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 * name} = "PrivateAssociation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrivateAssociation = new MMCode() {
+	public static final MMCode mmPrivateAssociation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateAssociation";
@@ -127,7 +127,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 * name} = "Public"</li>
 	 * </ul>
 	 */
-	public static final MMCode Public = new MMCode() {
+	public static final MMCode mmPublic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Public";
@@ -150,7 +150,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 * name} = "PublicFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode PublicFund = new MMCode() {
+	public static final MMCode mmPublicFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicFund";
@@ -161,12 +161,12 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrganisationType1Code";
 				definition = "Specifies a type of organisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrganisationType1Code.InvestmentFund, com.tools20022.repository.codeset.OrganisationType1Code.PrivateAssociation,
-						com.tools20022.repository.codeset.OrganisationType1Code.Public, com.tools20022.repository.codeset.OrganisationType1Code.PublicFund);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrganisationType1Code.mmInvestmentFund, com.tools20022.repository.codeset.OrganisationType1Code.mmPrivateAssociation,
+						com.tools20022.repository.codeset.OrganisationType1Code.mmPublic, com.tools20022.repository.codeset.OrganisationType1Code.mmPublicFund);
 				trace_lazy = () -> OrganisationTypeCode.mmObject();
 			}
 		});

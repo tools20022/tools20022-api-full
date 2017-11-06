@@ -36,30 +36,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference1Choice#MarginCallRequestIdentification
- * Reference1Choice.MarginCallRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference1Choice#mmMarginCallRequestIdentification
+ * Reference1Choice.mmMarginCallRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference1Choice#MarginCallResponseIdentification
- * Reference1Choice.MarginCallResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference1Choice#mmMarginCallResponseIdentification
+ * Reference1Choice.mmMarginCallResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference1Choice#CollateralProposalIdentification
- * Reference1Choice.CollateralProposalIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference1Choice#mmCollateralProposalIdentification
+ * Reference1Choice.mmCollateralProposalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference1Choice#CollateralProposalResponseIdentification
- * Reference1Choice.CollateralProposalResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference1Choice#mmCollateralProposalResponseIdentification
+ * Reference1Choice.mmCollateralProposalResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference1Choice#DisputeNotificationIdentification
- * Reference1Choice.DisputeNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference1Choice#mmDisputeNotificationIdentification
+ * Reference1Choice.mmDisputeNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference1Choice#CollateralSubstitutionRequestIdentification
- * Reference1Choice.CollateralSubstitutionRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference1Choice#mmCollateralSubstitutionRequestIdentification
+ * Reference1Choice.mmCollateralSubstitutionRequestIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text marginCallRequestIdentification;
 	/**
 	 * Unique identifier of the margin call request.
 	 * <p>
@@ -102,7 +103,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
@@ -110,11 +111,12 @@ public class Reference1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Unique identifier of the margin call request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text marginCallResponseIdentification;
 	/**
 	 * Unique identifier of the margin call response.
 	 * <p>
@@ -142,7 +144,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the margin call response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
@@ -150,11 +152,12 @@ public class Reference1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResponseIdentification";
 			definition = "Unique identifier of the margin call response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralProposalIdentification;
 	/**
 	 * Unique identifier of the collateral proposal.
 	 * <p>
@@ -182,7 +185,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the collateral proposal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralProposalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralProposalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
@@ -190,11 +193,12 @@ public class Reference1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalIdentification";
 			definition = "Unique identifier of the collateral proposal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralProposalResponseIdentification;
 	/**
 	 * Unique identifier of the collateral proposal response.
 	 * <p>
@@ -222,7 +226,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the collateral proposal response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralProposalResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralProposalResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
@@ -230,11 +234,12 @@ public class Reference1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalResponseIdentification";
 			definition = "Unique identifier of the collateral proposal response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text disputeNotificationIdentification;
 	/**
 	 * Unique identifier of the dispute notification.
 	 * <p>
@@ -262,7 +267,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the dispute notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisputeNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisputeNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
@@ -270,11 +275,12 @@ public class Reference1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeNotificationIdentification";
 			definition = "Unique identifier of the dispute notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralSubstitutionRequestIdentification;
 	/**
 	 * Unique identifier of the collateral substitution request.
 	 * <p>
@@ -303,7 +309,7 @@ public class Reference1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
@@ -311,8 +317,8 @@ public class Reference1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Unique identifier of the collateral substitution request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -320,15 +326,63 @@ public class Reference1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reference1Choice.MarginCallRequestIdentification, com.tools20022.repository.choice.Reference1Choice.MarginCallResponseIdentification,
-						com.tools20022.repository.choice.Reference1Choice.CollateralProposalIdentification, com.tools20022.repository.choice.Reference1Choice.CollateralProposalResponseIdentification,
-						com.tools20022.repository.choice.Reference1Choice.DisputeNotificationIdentification, com.tools20022.repository.choice.Reference1Choice.CollateralSubstitutionRequestIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reference1Choice.mmMarginCallRequestIdentification, com.tools20022.repository.choice.Reference1Choice.mmMarginCallResponseIdentification,
+						com.tools20022.repository.choice.Reference1Choice.mmCollateralProposalIdentification, com.tools20022.repository.choice.Reference1Choice.mmCollateralProposalResponseIdentification,
+						com.tools20022.repository.choice.Reference1Choice.mmDisputeNotificationIdentification, com.tools20022.repository.choice.Reference1Choice.mmCollateralSubstitutionRequestIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference1Choice";
 				definition = "Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message or the MarginCallDisputeNotification message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMarginCallRequestIdentification() {
+		return marginCallRequestIdentification;
+	}
+
+	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	}
+
+	public Max35Text getMarginCallResponseIdentification() {
+		return marginCallResponseIdentification;
+	}
+
+	public void setMarginCallResponseIdentification(Max35Text marginCallResponseIdentification) {
+		this.marginCallResponseIdentification = marginCallResponseIdentification;
+	}
+
+	public Max35Text getCollateralProposalIdentification() {
+		return collateralProposalIdentification;
+	}
+
+	public void setCollateralProposalIdentification(Max35Text collateralProposalIdentification) {
+		this.collateralProposalIdentification = collateralProposalIdentification;
+	}
+
+	public Max35Text getCollateralProposalResponseIdentification() {
+		return collateralProposalResponseIdentification;
+	}
+
+	public void setCollateralProposalResponseIdentification(Max35Text collateralProposalResponseIdentification) {
+		this.collateralProposalResponseIdentification = collateralProposalResponseIdentification;
+	}
+
+	public Max35Text getDisputeNotificationIdentification() {
+		return disputeNotificationIdentification;
+	}
+
+	public void setDisputeNotificationIdentification(Max35Text disputeNotificationIdentification) {
+		this.disputeNotificationIdentification = disputeNotificationIdentification;
+	}
+
+	public Max35Text getCollateralSubstitutionRequestIdentification() {
+		return collateralSubstitutionRequestIdentification;
+	}
+
+	public void setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
+		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
 	}
 }

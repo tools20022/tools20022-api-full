@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferReference4#TransferReference
- * TransferReference4.TransferReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference4#mmTransferReference
+ * TransferReference4.mmTransferReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferReference4#CancellationReference
- * TransferReference4.CancellationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference4#mmCancellationReference
+ * TransferReference4.mmCancellationReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferReference4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transferReference;
 	/**
 	 * Identification assigned by the new plan manager to each transfer of
 	 * asset.
@@ -93,7 +94,7 @@ public class TransferReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferReference4.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class TransferReference4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Identification assigned by the new plan manager to each transfer of asset.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer cancellation, as
 	 * assigned by the instructing party.
@@ -136,7 +138,7 @@ public class TransferReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferReference4.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class TransferReference4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -153,13 +155,29 @@ public class TransferReference4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference4.TransferReference, com.tools20022.repository.msg.TransferReference4.CancellationReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference4.mmTransferReference, com.tools20022.repository.msg.TransferReference4.mmCancellationReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferReference4";
 				definition = "Transfer of a security on a securities account servicer after the receipt of a securities settlement instruction, or the transfer of cash on an account servicer after the receipt of a payment instruction. The transfer consists of a debit/credit operation in the books of the account servicer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransferReference() {
+		return transferReference;
+	}
+
+	public void setTransferReference(Max35Text transferReference) {
+		this.transferReference = transferReference;
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
 	}
 }

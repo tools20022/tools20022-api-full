@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -38,11 +39,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#BIC
- * OrganisationIdentification6.BIC}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#mmBIC
+ * OrganisationIdentification6.mmBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#Other
- * OrganisationIdentification6.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#mmOther
+ * OrganisationIdentification6.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,42 +55,42 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01#OrganisationIdentification
- * AccountAdditionalInformationRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01#mmOrganisationIdentification
+ * AccountAdditionalInformationRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01#OrganisationIdentification
- * AccountClosingAdditionalInformationRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01#mmOrganisationIdentification
+ * AccountClosingAdditionalInformationRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01#OrganisationIdentification
- * AccountClosingAmendmentRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01#mmOrganisationIdentification
+ * AccountClosingAmendmentRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#OrganisationIdentification
- * AccountClosingRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmOrganisationIdentification
+ * AccountClosingRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#OrganisationIdentification
- * AccountMandateMaintenanceAmendmentRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#mmOrganisationIdentification
+ * AccountMandateMaintenanceAmendmentRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#OrganisationIdentification
- * AccountMandateMaintenanceRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#mmOrganisationIdentification
+ * AccountMandateMaintenanceRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01#OrganisationIdentification
- * AccountOpeningAdditionalInformationRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01#mmOrganisationIdentification
+ * AccountOpeningAdditionalInformationRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#OrganisationIdentification
- * AccountReportRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmOrganisationIdentification
+ * AccountReportRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01#OrganisationIdentification
- * AccountRequestAcknowledgementV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01#mmOrganisationIdentification
+ * AccountRequestAcknowledgementV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#OrganisationIdentification
- * AccountRequestRejectionV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#mmOrganisationIdentification
+ * AccountRequestRejectionV01.mmOrganisationIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -104,6 +105,7 @@ import java.util.function.Supplier;
 public class OrganisationIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bIC;
 	/**
 	 * Code allocated to organisations by the ISO 9362 Registration Authority,
 	 * under an international identification scheme, as described in the latest
@@ -120,8 +122,8 @@ public class OrganisationIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,20 +144,21 @@ public class OrganisationIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> OrganisationIdentification6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Code allocated to organisations by the ISO 9362 Registration Authority, under an international identification scheme, as described in the latest version of the standard ISO 9362 Banking (Banking telecommunication messages, Business Identifier Codes).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericOrganisationIdentification1> other;
 	/**
 	 * Unique identification of an organisation, as assigned by an institution,
 	 * using an identification scheme.
@@ -169,8 +172,8 @@ public class OrganisationIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,33 +194,33 @@ public class OrganisationIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> OrganisationIdentification6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of an organisation, as assigned by an institution, using an identification scheme.";
 			minOccurs = 0;
-			type_lazy = () -> GenericOrganisationIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericOrganisationIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification6.BIC, com.tools20022.repository.msg.OrganisationIdentification6.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification6.mmBIC, com.tools20022.repository.msg.OrganisationIdentification6.mmOther);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmOrganisationIdentification);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.OrganisationIdentification, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.OrganisationIdentification, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.OrganisationIdentification, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.OrganisationIdentification, com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountRequestRejectionV01.OrganisationIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -231,5 +234,21 @@ public class OrganisationIdentification6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBIC() {
+		return bIC;
+	}
+
+	public void setBIC(AnyBICIdentifier bIC) {
+		this.bIC = bIC;
+	}
+
+	public List<GenericOrganisationIdentification1> getOther() {
+		return other;
+	}
+
+	public void setOther(List<com.tools20022.repository.msg.GenericOrganisationIdentification1> other) {
+		this.other = other;
 	}
 }

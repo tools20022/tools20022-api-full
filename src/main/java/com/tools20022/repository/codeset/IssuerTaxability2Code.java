@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerTaxability2Code#Taxable
- * IssuerTaxability2Code.Taxable}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerTaxability2Code#mmTaxable
+ * IssuerTaxability2Code.mmTaxable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +74,7 @@ public class IssuerTaxability2Code extends IssuerTaxabilityV2Code {
 	 * name} = "Taxable"</li>
 	 * </ul>
 	 */
-	public static final MMCode Taxable = new MMCode() {
+	public static final MMCode mmTaxable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Taxable";
@@ -85,11 +85,11 @@ public class IssuerTaxability2Code extends IssuerTaxabilityV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerTaxability2Code";
 				definition = "Specifies whether the corporate action proceeds are taxable at issuer level.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerTaxability2Code.Taxable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerTaxability2Code.mmTaxable);
 				trace_lazy = () -> IssuerTaxabilityV2Code.mmObject();
 			}
 		});

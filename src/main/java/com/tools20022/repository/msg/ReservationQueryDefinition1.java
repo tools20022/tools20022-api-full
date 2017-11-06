@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationQueryDefinition1#QueryType
- * ReservationQueryDefinition1.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationQueryDefinition1#mmQueryType
+ * ReservationQueryDefinition1.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationQueryDefinition1#ReservationCriteria
- * ReservationQueryDefinition1.ReservationCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationQueryDefinition1#mmReservationCriteria
+ * ReservationQueryDefinition1.mmReservationCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationQueryDefinition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType1Code queryType;
 	/**
 	 * Specifies if all matching items or only the new matching items since the
 	 * latest query are returned.
@@ -91,7 +92,7 @@ public class ReservationQueryDefinition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReservationQueryDefinition1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class ReservationQueryDefinition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies if all matching items or only the new matching items since the latest query are returned.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
 		}
 	};
+	protected ReservationCriteriaDefinition1Choice reservationCriteria;
 	/**
 	 * Defines the reservation query criteria.
 	 * <p>
@@ -131,7 +133,7 @@ public class ReservationQueryDefinition1 {
 	 * definition} = "Defines the reservation query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReservationCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReservationCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReservationQueryDefinition1.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class ReservationQueryDefinition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationCriteria";
 			definition = "Defines the reservation query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReservationCriteriaDefinition1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ReservationCriteriaDefinition1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationQueryDefinition1.QueryType, com.tools20022.repository.msg.ReservationQueryDefinition1.ReservationCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationQueryDefinition1.mmQueryType, com.tools20022.repository.msg.ReservationQueryDefinition1.mmReservationCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationQueryDefinition1";
 				definition = "Defines the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType1Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType1Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public ReservationCriteriaDefinition1Choice getReservationCriteria() {
+		return reservationCriteria;
+	}
+
+	public void setReservationCriteria(ReservationCriteriaDefinition1Choice reservationCriteria) {
+		this.reservationCriteria = reservationCriteria;
 	}
 }

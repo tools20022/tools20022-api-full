@@ -29,22 +29,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#BIC
- * IdentificationTypeCode.BIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#BankSortCode
- * IdentificationTypeCode.BankSortCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#mmBIC
+ * IdentificationTypeCode.mmBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#CFETS
- * IdentificationTypeCode.CFETS}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#CDC
- * IdentificationTypeCode.CDC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#mmBankSortCode
+ * IdentificationTypeCode.mmBankSortCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#RICCode
- * IdentificationTypeCode.RICCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#mmCFETS
+ * IdentificationTypeCode.mmCFETS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#UserDefined
- * IdentificationTypeCode.UserDefined}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#mmCDC
+ * IdentificationTypeCode.mmCDC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#mmRICCode
+ * IdentificationTypeCode.mmRICCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#mmUserDefined
+ * IdentificationTypeCode.mmUserDefined}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,7 +101,7 @@ public class IdentificationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BIC = new MMCode() {
+	public static final MMCode mmBIC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
@@ -129,7 +131,7 @@ public class IdentificationTypeCode {
 	 * definition} = "Specified source is bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode BankSortCode = new MMCode() {
+	public static final MMCode mmBankSortCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankSortCode";
@@ -168,7 +170,7 @@ public class IdentificationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CFETS = new MMCode() {
+	public static final MMCode mmCFETS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
@@ -202,7 +204,7 @@ public class IdentificationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CDC = new MMCode() {
+	public static final MMCode mmCDC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDC";
@@ -236,7 +238,7 @@ public class IdentificationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RICCode = new MMCode() {
+	public static final MMCode mmRICCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RICCode";
@@ -266,7 +268,7 @@ public class IdentificationTypeCode {
 	 * definition} = "User defined code."</li>
 	 * </ul>
 	 */
-	public static final MMCode UserDefined = new MMCode() {
+	public static final MMCode mmUserDefined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
@@ -279,13 +281,13 @@ public class IdentificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationTypeCode";
 				definition = "Indicates the type of identification of the party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationTypeCode.BIC, com.tools20022.repository.codeset.IdentificationTypeCode.BankSortCode,
-						com.tools20022.repository.codeset.IdentificationTypeCode.CFETS, com.tools20022.repository.codeset.IdentificationTypeCode.CDC, com.tools20022.repository.codeset.IdentificationTypeCode.RICCode,
-						com.tools20022.repository.codeset.IdentificationTypeCode.UserDefined);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationTypeCode.mmBIC, com.tools20022.repository.codeset.IdentificationTypeCode.mmBankSortCode,
+						com.tools20022.repository.codeset.IdentificationTypeCode.mmCFETS, com.tools20022.repository.codeset.IdentificationTypeCode.mmCDC, com.tools20022.repository.codeset.IdentificationTypeCode.mmRICCode,
+						com.tools20022.repository.codeset.IdentificationTypeCode.mmUserDefined);
 				derivation_lazy = () -> Arrays.asList(IdentificationType2Code.mmObject(), IdentificationType1Code.mmObject());
 			}
 		});

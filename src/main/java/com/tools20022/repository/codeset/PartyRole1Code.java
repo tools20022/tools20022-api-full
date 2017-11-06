@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PartyRoleCode PartyRoleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#Custodian
- * PartyRole1Code.Custodian}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#Investor
- * PartyRole1Code.Investor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#mmCustodian
+ * PartyRole1Code.mmCustodian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#mmInvestor
+ * PartyRole1Code.mmInvestor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class PartyRole1Code extends PartyRoleCode {
 	 * name} = "Custodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode Custodian = new MMCode() {
+	public static final MMCode mmCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custodian";
@@ -95,7 +95,7 @@ public class PartyRole1Code extends PartyRoleCode {
 	 * name} = "Investor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
@@ -106,11 +106,11 @@ public class PartyRole1Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyRole1Code";
 				definition = "Specifies the role of the party in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyRole1Code.Custodian, com.tools20022.repository.codeset.PartyRole1Code.Investor);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyRole1Code.mmCustodian, com.tools20022.repository.codeset.PartyRole1Code.mmInvestor);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

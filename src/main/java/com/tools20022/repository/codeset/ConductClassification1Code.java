@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConductClassification1Code#NonStandard
- * ConductClassification1Code.NonStandard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConductClassification1Code#mmNonStandard
+ * ConductClassification1Code.mmNonStandard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConductClassification1Code#Reluctant
- * ConductClassification1Code.Reluctant}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConductClassification1Code#mmReluctant
+ * ConductClassification1Code.mmReluctant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConductClassification1Code#Standard
- * ConductClassification1Code.Standard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConductClassification1Code#mmStandard
+ * ConductClassification1Code.mmStandard}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class ConductClassification1Code extends ConductClassificationCode {
 	 * name} = "NonStandard"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonStandard = new MMCode() {
+	public static final MMCode mmNonStandard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandard";
@@ -107,7 +107,7 @@ public class ConductClassification1Code extends ConductClassificationCode {
 	 * name} = "Reluctant"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reluctant = new MMCode() {
+	public static final MMCode mmReluctant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reluctant";
@@ -130,7 +130,7 @@ public class ConductClassification1Code extends ConductClassificationCode {
 	 * name} = "Standard"</li>
 	 * </ul>
 	 */
-	public static final MMCode Standard = new MMCode() {
+	public static final MMCode mmStandard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
@@ -141,13 +141,13 @@ public class ConductClassification1Code extends ConductClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NSTA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConductClassification1Code";
 				definition = "Specifies the classification of the conduct.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConductClassification1Code.NonStandard, com.tools20022.repository.codeset.ConductClassification1Code.Reluctant,
-						com.tools20022.repository.codeset.ConductClassification1Code.Standard);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConductClassification1Code.mmNonStandard, com.tools20022.repository.codeset.ConductClassification1Code.mmReluctant,
+						com.tools20022.repository.codeset.ConductClassification1Code.mmStandard);
 				trace_lazy = () -> ConductClassificationCode.mmObject();
 			}
 		});

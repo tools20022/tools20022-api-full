@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.AcceptedReason4Choice#Code
- * AcceptedReason4Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AcceptedReason4Choice#Proprietary
- * AcceptedReason4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedReason4Choice#mmCode
+ * AcceptedReason4Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedReason4Choice#mmProprietary
+ * AcceptedReason4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptedReason4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AcknowledgementReason8Code code;
 	/**
 	 * Standard code to specify additional information about the processed
 	 * instruction.
@@ -91,8 +93,8 @@ public class AcceptedReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#AcknowledgedAcceptedReason
-	 * StatusReason.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmAcknowledgedAcceptedReason
+	 * StatusReason.mmAcknowledgedAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,33 +117,34 @@ public class AcceptedReason4Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AcceptedReason9Choice#Code
-	 * AcceptedReason9Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcceptedReason9Choice#mmCode
+	 * AcceptedReason9Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AcceptedReason1Choice#Code
-	 * AcceptedReason1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcceptedReason1Choice#mmCode
+	 * AcceptedReason1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> AcceptedReason4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.AcknowledgedAcceptedReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify additional information about the processed instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AcceptedReason1Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedReason9Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedReason9Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AcceptedReason1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AcknowledgementReason8Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of additional information about the processed
 	 * instruction.
@@ -156,8 +159,8 @@ public class AcceptedReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#AcknowledgedAcceptedReason
-	 * StatusReason.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmAcknowledgedAcceptedReason
+	 * StatusReason.mmAcknowledgedAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,30 +183,30 @@ public class AcceptedReason4Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AcceptedReason9Choice#Proprietary
-	 * AcceptedReason9Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcceptedReason9Choice#mmProprietary
+	 * AcceptedReason9Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AcceptedReason1Choice#Proprietary
-	 * AcceptedReason1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcceptedReason1Choice#mmProprietary
+	 * AcceptedReason1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> AcceptedReason4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.AcknowledgedAcceptedReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of additional information about the processed instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AcceptedReason1Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedReason9Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedReason9Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AcceptedReason1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -211,16 +214,32 @@ public class AcceptedReason4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedReason4Choice.Code, com.tools20022.repository.choice.AcceptedReason4Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcceptedReason4Choice.mmCode, com.tools20022.repository.choice.AcceptedReason4Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptedReason4Choice";
 				definition = "Choice between a standard code or proprietary code to specify the reason why the instruction or cancellation request has a accepted status.";
-				previousVersion_lazy = () -> AcceptedReason1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptedReason9Choice.mmObject());
+				previousVersion_lazy = () -> AcceptedReason1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AcknowledgementReason8Code getCode() {
+		return code;
+	}
+
+	public void setCode(AcknowledgementReason8Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

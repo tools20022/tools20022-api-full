@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.PartyIdentification43;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The UndertakingAmendmentAdvice message is sent by an advising party to the
@@ -66,30 +67,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#AdvisingParty
- * UndertakingAmendmentAdviceV01.AdvisingParty}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#mmAdvisingParty
+ * UndertakingAmendmentAdviceV01.mmAdvisingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#SecondAdvisingParty
- * UndertakingAmendmentAdviceV01.SecondAdvisingParty}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#mmSecondAdvisingParty
+ * UndertakingAmendmentAdviceV01.mmSecondAdvisingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#DateOfAdvice
- * UndertakingAmendmentAdviceV01.DateOfAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#mmDateOfAdvice
+ * UndertakingAmendmentAdviceV01.mmDateOfAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#UndertakingAmendmentAdviceDetails
- * UndertakingAmendmentAdviceV01.UndertakingAmendmentAdviceDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#mmUndertakingAmendmentAdviceDetails
+ * UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#BankToBankInformation
- * UndertakingAmendmentAdviceV01.BankToBankInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#mmBankToBankInformation
+ * UndertakingAmendmentAdviceV01.mmBankToBankInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#DigitalSignature
- * UndertakingAmendmentAdviceV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#mmDigitalSignature
+ * UndertakingAmendmentAdviceV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01#identifier
- * UndertakingAmendmentAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.006.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAmendmentAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 advisingParty;
 	/**
 	 * Party advising the undertaking to the beneficiary or to another party.
 	 * <p>
@@ -129,17 +129,18 @@ public class UndertakingAmendmentAdviceV01 {
 	 * "Party advising the undertaking to the beneficiary or to another party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdvisingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdvisingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AdvsgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingParty";
 			definition = "Party advising the undertaking to the beneficiary or to another party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification43.mmObject();
 		}
 	};
+	protected PartyIdentification43 secondAdvisingParty;
 	/**
 	 * Additional party that advises the undertaking.
 	 * <p>
@@ -163,17 +164,18 @@ public class UndertakingAmendmentAdviceV01 {
 	 * definition} = "Additional party that advises the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecondAdvisingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecondAdvisingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndAdvsgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingParty";
 			definition = "Additional party that advises the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification43.mmObject();
 		}
 	};
+	protected ISODate dateOfAdvice;
 	/**
 	 * Date on which the undertaking is advised.
 	 * <p>
@@ -196,17 +198,18 @@ public class UndertakingAmendmentAdviceV01 {
 	 * definition} = "Date on which the undertaking is advised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DateOfAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDateOfAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DtOfAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfAdvice";
 			definition = "Date on which the undertaking is advised.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Amendment2 undertakingAmendmentAdviceDetails;
 	/**
 	 * Details related to the advice of the proposed amended undertaking.
 	 * <p>
@@ -230,17 +233,18 @@ public class UndertakingAmendmentAdviceV01 {
 	 * "Details related to the advice of the proposed amended undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingAmendmentAdviceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingAmendmentAdviceDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgAmdmntAdvcDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentAdviceDetails";
 			definition = "Details related to the advice of the proposed amended undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Amendment2.mmObject();
 		}
 	};
+	protected List<Max2000Text> bankToBankInformation;
 	/**
 	 * Additional information specific to the bank-to-bank communication.
 	 * <p>
@@ -264,17 +268,18 @@ public class UndertakingAmendmentAdviceV01 {
 	 * "Additional information specific to the bank-to-bank communication."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BankToBankInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBankToBankInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BkToBkInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankToBankInformation";
 			definition = "Additional information specific to the bank-to-bank communication.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the proposed amendment advice.
 	 * <p>
@@ -298,42 +303,15 @@ public class UndertakingAmendmentAdviceV01 {
 	 * definition} = "Digital signature of the proposed amendment advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the proposed amendment advice.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "006";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -347,12 +325,67 @@ public class UndertakingAmendmentAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgAmdmntAdvc";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.AdvisingParty, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.SecondAdvisingParty,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.DateOfAdvice, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.UndertakingAmendmentAdviceDetails,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.BankToBankInformation, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmAdvisingParty, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmSecondAdvisingParty,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDateOfAdvice, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmBankToBankInformation, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "006";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getAdvisingParty() {
+		return advisingParty;
+	}
+
+	public void setAdvisingParty(PartyIdentification43 advisingParty) {
+		this.advisingParty = advisingParty;
+	}
+
+	public PartyIdentification43 getSecondAdvisingParty() {
+		return secondAdvisingParty;
+	}
+
+	public void setSecondAdvisingParty(PartyIdentification43 secondAdvisingParty) {
+		this.secondAdvisingParty = secondAdvisingParty;
+	}
+
+	public ISODate getDateOfAdvice() {
+		return dateOfAdvice;
+	}
+
+	public void setDateOfAdvice(ISODate dateOfAdvice) {
+		this.dateOfAdvice = dateOfAdvice;
+	}
+
+	public Amendment2 getUndertakingAmendmentAdviceDetails() {
+		return undertakingAmendmentAdviceDetails;
+	}
+
+	public void setUndertakingAmendmentAdviceDetails(Amendment2 undertakingAmendmentAdviceDetails) {
+		this.undertakingAmendmentAdviceDetails = undertakingAmendmentAdviceDetails;
+	}
+
+	public List<Max2000Text> getBankToBankInformation() {
+		return bankToBankInformation;
+	}
+
+	public void setBankToBankInformation(List<Max2000Text> bankToBankInformation) {
+		this.bankToBankInformation = bankToBankInformation;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

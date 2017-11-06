@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateType1FormatChoice#Code
- * GrossDividendRateType1FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateType1FormatChoice#mmCode
+ * GrossDividendRateType1FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateType1FormatChoice#Proprietary
- * GrossDividendRateType1FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateType1FormatChoice#mmProprietary
+ * GrossDividendRateType1FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GrossDividendRateType1FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected GrossDividendRateType1Code code;
 	/**
 	 * Standard code to specify the type of gross dividend rate.
 	 * <p>
@@ -92,7 +93,7 @@ public class GrossDividendRateType1FormatChoice {
 	 * "Standard code to  specify the type of gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GrossDividendRateType1FormatChoice.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class GrossDividendRateType1FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to  specify the type of gross dividend rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> GrossDividendRateType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the type of gross dividend rate.
 	 * <p>
@@ -134,7 +136,7 @@ public class GrossDividendRateType1FormatChoice {
 	 * "Proprietary code to  express the type of gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GrossDividendRateType1FormatChoice.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class GrossDividendRateType1FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the type of gross dividend rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -151,14 +153,30 @@ public class GrossDividendRateType1FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GrossDividendRateType1FormatChoice.Code, com.tools20022.repository.choice.GrossDividendRateType1FormatChoice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GrossDividendRateType1FormatChoice.mmCode, com.tools20022.repository.choice.GrossDividendRateType1FormatChoice.mmProprietary);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GrossDividendRateType1FormatChoice";
 				definition = "Choice of formats to  express the type of gross dividend rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GrossDividendRateType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(GrossDividendRateType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

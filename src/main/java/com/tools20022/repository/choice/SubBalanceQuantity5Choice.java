@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity5Choice#Quantity
- * SubBalanceQuantity5Choice.Quantity}</li>
+ * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity5Choice#mmQuantity
+ * SubBalanceQuantity5Choice.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity5Choice#Proprietary
- * SubBalanceQuantity5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity5Choice#mmProprietary
+ * SubBalanceQuantity5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubBalanceQuantity5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1Choice quantity;
 	/**
 	 * Quantity of financial instrument in the sub-balance.
 	 * <p>
@@ -79,8 +80,8 @@ public class SubBalanceQuantity5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SubBalanceQuantity
-	 * SecuritiesBalance.SubBalanceQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSubBalanceQuantity
+	 * SecuritiesBalance.mmSubBalanceQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,25 +101,26 @@ public class SubBalanceQuantity5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity3Choice#Quantity
-	 * SubBalanceQuantity3Choice.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity3Choice#mmQuantity
+	 * SubBalanceQuantity3Choice.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> SubBalanceQuantity5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SubBalanceQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity3Choice.Quantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity3Choice.mmQuantity;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected GenericIdentification56 proprietary;
 	/**
 	 * Quantity of financial instrument in the sub-balance expressed in a
 	 * proprietary format.
@@ -133,8 +135,8 @@ public class SubBalanceQuantity5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SubBalanceQuantity
-	 * SecuritiesBalance.SubBalanceQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSubBalanceQuantity
+	 * SecuritiesBalance.mmSubBalanceQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,22 +158,22 @@ public class SubBalanceQuantity5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity3Choice#Proprietary
-	 * SubBalanceQuantity3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.SubBalanceQuantity3Choice#mmProprietary
+	 * SubBalanceQuantity3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> SubBalanceQuantity5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SubBalanceQuantity;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Quantity of financial instrument in the sub-balance expressed in a proprietary format.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity3Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity3Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification56.mmObject();
 		}
 	};
@@ -179,9 +181,9 @@ public class SubBalanceQuantity5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubBalanceQuantity5Choice.Quantity, com.tools20022.repository.choice.SubBalanceQuantity5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubBalanceQuantity5Choice.mmQuantity, com.tools20022.repository.choice.SubBalanceQuantity5Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubBalanceQuantity5Choice";
 				definition = "Choice between formats for the balance information.";
@@ -189,5 +191,21 @@ public class SubBalanceQuantity5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public GenericIdentification56 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification56 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

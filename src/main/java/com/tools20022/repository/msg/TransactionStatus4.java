@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus4#Status
- * TransactionStatus4.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus4#mmStatus
+ * TransactionStatus4.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,93 +45,93 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#TransactionStatus
- * AcknowledgementV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmTransactionStatus
+ * AcknowledgementV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#TransactionStatus
- * AmendmentAcceptanceNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmTransactionStatus
+ * AmendmentAcceptanceNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#TransactionStatus
- * AmendmentRejectionNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmTransactionStatus
+ * AmendmentRejectionNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#TransactionStatus
- * BaselineMatchReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmTransactionStatus
+ * BaselineMatchReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#TransactionStatus
- * BaselineReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmTransactionStatus
+ * BaselineReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#TransactionStatus
- * DataSetMatchReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmTransactionStatus
+ * DataSetMatchReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#TransactionStatus
- * DeltaReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmTransactionStatus
+ * DeltaReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#TransactionStatus
- * ErrorReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmTransactionStatus
+ * ErrorReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#TransactionStatus
- * FullPushThroughReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#mmTransactionStatus
+ * FullPushThroughReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#TransactionStatus
- * MisMatchAcceptanceNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#mmTransactionStatus
+ * MisMatchAcceptanceNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#TransactionStatus
- * MisMatchRejectionNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#mmTransactionStatus
+ * MisMatchRejectionNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#TransactionStatus
- * ActionReminderV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmTransactionStatus
+ * ActionReminderV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#TransactionStatus
- * StatusChangeNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#mmTransactionStatus
+ * StatusChangeNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#TransactionStatus
- * StatusChangeRequestNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmTransactionStatus
+ * StatusChangeRequestNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#TransactionStatus
- * StatusChangeRequestRejectionNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#mmTransactionStatus
+ * StatusChangeRequestRejectionNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#ExtendedStatus
- * StatusExtensionRequestAcceptanceV03.ExtendedStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#mmExtendedStatus
+ * StatusExtensionRequestAcceptanceV03.mmExtendedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03#StatusNotToBeExtended
- * StatusExtensionRequestRejectionV03.StatusNotToBeExtended}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03#mmStatusNotToBeExtended
+ * StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#NonExtendedStatus
- * StatusExtensionRejectionNotificationV03.NonExtendedStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#mmNonExtendedStatus
+ * StatusExtensionRejectionNotificationV03.mmNonExtendedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#TransactionStatus
- * TimeOutNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#mmTransactionStatus
+ * TimeOutNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#TransactionStatus
- * ForwardIntentToPayNotificationV01.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmTransactionStatus
+ * ForwardIntentToPayNotificationV01.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#TransactionStatus
- * SpecialNotificationV01.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#mmTransactionStatus
+ * SpecialNotificationV01.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#TransactionStatus
- * RoleAndBaselineAcceptanceNotificationV01.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#mmTransactionStatus
+ * RoleAndBaselineAcceptanceNotificationV01.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#TransactionStatus
- * RoleAndBaselineRejectionNotificationV01.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#mmTransactionStatus
+ * RoleAndBaselineRejectionNotificationV01.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#TransactionStatus
- * FullPushThroughReportV04.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#mmTransactionStatus
+ * FullPushThroughReportV04.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#TransactionStatus
- * ForwardIntentToPayNotificationV02.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#mmTransactionStatus
+ * ForwardIntentToPayNotificationV02.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#TransactionStatus
- * BaselineReportV04.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmTransactionStatus
+ * BaselineReportV04.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#TransactionStatus
- * FullPushThroughReportV05.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#mmTransactionStatus
+ * FullPushThroughReportV05.mmTransactionStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,6 +145,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionStatus4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaselineStatus3Code status;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -158,8 +159,8 @@ public class TransactionStatus4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#Status
-	 * BaselineStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
+	 * BaselineStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,17 +180,17 @@ public class TransactionStatus4 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
 			componentContext_lazy = () -> TransactionStatus4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus3Code.mmObject();
 		}
 	};
@@ -197,28 +198,36 @@ public class TransactionStatus4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus4.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus4.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.BaselineReportV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.ErrorReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmExtendedStatus,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmNonExtendedStatus,
+						com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmTransactionStatus, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmTransactionStatus, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmTransactionStatus, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmTransactionStatus);
 				trace_lazy = () -> BaselineStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.TransactionStatus, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.TransactionStatus, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.TransactionStatus, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.TransactionStatus, com.tools20022.repository.area.tsmt.ErrorReportV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.TransactionStatus, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.TransactionStatus, com.tools20022.repository.area.tsmt.ActionReminderV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.TransactionStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.TransactionStatus, com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.ExtendedStatus,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.StatusNotToBeExtended, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.NonExtendedStatus,
-						com.tools20022.repository.area.tsmt.TimeOutNotificationV03.TransactionStatus, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.TransactionStatus,
-						com.tools20022.repository.area.tsmt.SpecialNotificationV01.TransactionStatus, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.TransactionStatus,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.TransactionStatus, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.TransactionStatus,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.TransactionStatus, com.tools20022.repository.area.tsmt.BaselineReportV04.TransactionStatus,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.TransactionStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatus4";
 				definition = "Identifies the status of the transaction by means of a code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaselineStatus3Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(BaselineStatus3Code status) {
+		this.status = status;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateDerivative2Choice#SwapRelated
- * InterestRateDerivative2Choice.SwapRelated}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateDerivative2Choice#mmSwapRelated
+ * InterestRateDerivative2Choice.mmSwapRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateDerivative2Choice#Other
- * InterestRateDerivative2Choice.Other}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateDerivative2Choice#mmOther
+ * InterestRateDerivative2Choice.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InterestRateDerivative2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SwapType1Code swapRelated;
 	/**
 	 * Underlying interest rate type is a swap, swaption, a future on a swap or
 	 * a forward on a swap with regard to the underlying swap.
@@ -93,7 +94,7 @@ public class InterestRateDerivative2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SwapRelated = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSwapRelated = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InterestRateDerivative2Choice.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class InterestRateDerivative2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwapRelated";
 			definition = "Underlying interest rate type is a swap, swaption, a future on a swap or a forward on a swap with regard to the underlying swap.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SwapType1Code.mmObject();
 		}
 	};
+	protected UnderlyingInterestRateType3Code other;
 	/**
 	 * Where contract type is different from swaps, swaptions, futures on swaps
 	 * and forwards on a swap, this field is used.
@@ -137,7 +139,7 @@ public class InterestRateDerivative2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Other = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InterestRateDerivative2Choice.mmObject();
 			isDerived = false;
@@ -145,8 +147,8 @@ public class InterestRateDerivative2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Where contract type is different from swaps, swaptions, futures on swaps and forwards on a swap, this field is used.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
 		}
 	};
@@ -154,13 +156,29 @@ public class InterestRateDerivative2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateDerivative2Choice.SwapRelated, com.tools20022.repository.choice.InterestRateDerivative2Choice.Other);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateDerivative2Choice.mmSwapRelated, com.tools20022.repository.choice.InterestRateDerivative2Choice.mmOther);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestRateDerivative2Choice";
 				definition = "Choice element specifying the underlying types of an interest rate derivative. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SwapType1Code getSwapRelated() {
+		return swapRelated;
+	}
+
+	public void setSwapRelated(SwapType1Code swapRelated) {
+		this.swapRelated = swapRelated;
+	}
+
+	public UnderlyingInterestRateType3Code getOther() {
+		return other;
+	}
+
+	public void setOther(UnderlyingInterestRateType3Code other) {
+		this.other = other;
 	}
 }

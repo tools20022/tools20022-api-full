@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#ProcessedStatus
- * StandingInstructionCancellationStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#mmProcessedStatus
+ * StandingInstructionCancellationStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#RejectedStatus
- * StandingInstructionCancellationStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#mmRejectedStatus
+ * StandingInstructionCancellationStatus1Choice.mmRejectedStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,16 +51,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionCancellationRequestStatus
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionCancellationRequestStatus
  * AgentCAStandingInstructionStatusAdviceV01.
- * StandingInstructionCancellationRequestStatus}</li>
+ * mmStandingInstructionCancellationRequestStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingInstructionCancellationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionStandingInstructionCancellationProcessingStatus1 processedStatus;
 	/**
 	 * Provides information about the processing status of the cancellation
 	 * request.
@@ -111,21 +112,22 @@ public class StandingInstructionCancellationStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingInstructionCancellationStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> StandingInstructionCancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionStandingInstructionCancellationProcessingStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionStandingInstructionCancellationProcessingStatus1.mmObject();
 		}
 	};
+	protected CorporateActionStandingInstructionCancellationRejectionStatus1 rejectedStatus;
 	/**
 	 * Provides information about the rejection status.
 	 * <p>
@@ -158,35 +160,51 @@ public class StandingInstructionCancellationStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingInstructionCancellationStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> StandingInstructionCancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionStandingInstructionCancellationRejectionStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionStandingInstructionCancellationRejectionStatus1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.ProcessedStatus,
-						com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.RejectedStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.mmProcessedStatus,
+						com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionCancellationRequestStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingInstructionCancellationStatus1Choice";
 				definition = "Provides information about the status of a standing instruction cancellation request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionStandingInstructionCancellationProcessingStatus1 getProcessedStatus() {
+		return processedStatus;
+	}
+
+	public void setProcessedStatus(CorporateActionStandingInstructionCancellationProcessingStatus1 processedStatus) {
+		this.processedStatus = processedStatus;
+	}
+
+	public CorporateActionStandingInstructionCancellationRejectionStatus1 getRejectedStatus() {
+		return rejectedStatus;
+	}
+
+	public void setRejectedStatus(CorporateActionStandingInstructionCancellationRejectionStatus1 rejectedStatus) {
+		this.rejectedStatus = rejectedStatus;
 	}
 }

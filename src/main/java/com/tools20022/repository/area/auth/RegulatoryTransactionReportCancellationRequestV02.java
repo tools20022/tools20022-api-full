@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.TransactionDetails3;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -62,9 +63,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule
  * RegulatoryTransactionReportCancellationRequestV02.
- * CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule}</li>
+ * mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -74,32 +75,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#Identification
- * RegulatoryTransactionReportCancellationRequestV02.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmIdentification
+ * RegulatoryTransactionReportCancellationRequestV02.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#ReportingInstitution
- * RegulatoryTransactionReportCancellationRequestV02.ReportingInstitution}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmReportingInstitution
+ * RegulatoryTransactionReportCancellationRequestV02.mmReportingInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#ReportingAgent
- * RegulatoryTransactionReportCancellationRequestV02.ReportingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmReportingAgent
+ * RegulatoryTransactionReportCancellationRequestV02.mmReportingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#CancellationByTransactionDetails
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmCancellationByTransactionDetails
  * RegulatoryTransactionReportCancellationRequestV02.
- * CancellationByTransactionDetails}</li>
+ * mmCancellationByTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#PreviousReference
- * RegulatoryTransactionReportCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmPreviousReference
+ * RegulatoryTransactionReportCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#CancellationByTradeReference
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmCancellationByTradeReference
  * RegulatoryTransactionReportCancellationRequestV02.
- * CancellationByTradeReference}</li>
+ * mmCancellationByTradeReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#identifier
- * RegulatoryTransactionReportCancellationRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.009.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,16 +126,16 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#CancellationByTransactionDetails
+	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmCancellationByTransactionDetails
 	 * RegulatoryTransactionReportCancellationRequestV02.
-	 * CancellationByTransactionDetails}</li>
+	 * mmCancellationByTransactionDetails}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#PreviousReference
-	 * RegulatoryTransactionReportCancellationRequestV02.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmPreviousReference
+	 * RegulatoryTransactionReportCancellationRequestV02.mmPreviousReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#CancellationByTradeReference
+	 * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmCancellationByTradeReference
 	 * RegulatoryTransactionReportCancellationRequestV02.
-	 * CancellationByTradeReference}</li>
+	 * mmCancellationByTradeReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -158,18 +157,18 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule = new MMXor() {
+	public static final MMXor mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule";
 			definition = "Either PreviousReference or one or more instances of CancellationByTransactionDetails or one or more instances of CancellationByTradeReference must be present.";
 			messageDefinition_lazy = () -> RegulatoryTransactionReportCancellationRequestV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays
-					.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.CancellationByTransactionDetails,
-							com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.PreviousReference,
-							com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.CancellationByTradeReference);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmCancellationByTransactionDetails,
+					com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmPreviousReference,
+					com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmCancellationByTradeReference);
 		}
 	};
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification of the RegulatoryTransactionReportCancellationRequest
 	 * document.
@@ -196,17 +195,18 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the RegulatoryTransactionReportCancellationRequest document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected PartyIdentification23Choice reportingInstitution;
 	/**
 	 * Identification of the firm that executed the transaction.
 	 * <p>
@@ -231,17 +231,18 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * "Identification of the firm that executed the transaction.\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportingInstitution = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportingInstitution = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgInstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingInstitution";
 			definition = "Identification of the firm that executed the transaction.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
 		}
 	};
+	protected PartyIdentification24Choice reportingAgent;
 	/**
 	 * Identifies the intermediary which is reporting on behalf on the reporting
 	 * institution.
@@ -268,17 +269,18 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAgent";
 			definition = "Identifies the intermediary which is reporting on behalf on the reporting institution. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
 	};
+	protected List<TransactionDetails3> cancellationByTransactionDetails;
 	/**
 	 * Provides all the details of the transaction report that needs to be
 	 * cancelled. More than one set of details can be provided.
@@ -305,7 +307,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByTxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,6 +317,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			complexType_lazy = () -> TransactionDetails3.mmObject();
 		}
 	};
+	protected DocumentIdentification9 previousReference;
 	/**
 	 * Provides the reference of the RegulatoryTransactionReport document that
 	 * was previously sent and that needs to be cancelled in its entirety.
@@ -341,17 +344,18 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Provides the reference of the RegulatoryTransactionReport document that was previously sent and that needs to be cancelled in its entirety.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
 	};
+	protected List<TransactionDetails2> cancellationByTradeReference;
 	/**
 	 * Provides the trade reference of the transaction report that needs to be
 	 * cancelled. More than one reference may be provided.
@@ -378,7 +382,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByTradeReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByTradeReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByTradRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,33 +390,6 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			definition = "Provides the trade reference of the transaction report that needs to be cancelled. More than one reference may be provided.";
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionDetails2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "009";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -423,18 +400,73 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 				name = "RegulatoryTransactionReportCancellationRequestV02";
 				definition = "Scope\r\nA reporting institution, eg, an investment bank, sends the RegulatoryTransactionReportCancellationRequest to a regulator or to an intermediary (eg a reporting agent), to request a cancellation of a previously sent RegulatoryTransactionReport.\r\nUsage\r\nThe message definition can be used to cancel an entire RegulatoryTransactionReport or to cancel one or more individual transactions in a previously sent RegulatoryTransactionReport.";
 				messageSet_lazy = () -> Arrays.asList(TransactionRegulatoryReportingISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule);
 				rootElement = "Document";
 				xmlTag = "RgltryTxRptCxlReq";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.Identification,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.ReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.ReportingAgent,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.CancellationByTransactionDetails,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.PreviousReference,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.CancellationByTradeReference);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmIdentification,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmReportingAgent,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmCancellationByTransactionDetails,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmPreviousReference,
+						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmCancellationByTradeReference);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "009";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public PartyIdentification23Choice getReportingInstitution() {
+		return reportingInstitution;
+	}
+
+	public void setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
+		this.reportingInstitution = reportingInstitution;
+	}
+
+	public PartyIdentification24Choice getReportingAgent() {
+		return reportingAgent;
+	}
+
+	public void setReportingAgent(PartyIdentification24Choice reportingAgent) {
+		this.reportingAgent = reportingAgent;
+	}
+
+	public List<TransactionDetails3> getCancellationByTransactionDetails() {
+		return cancellationByTransactionDetails;
+	}
+
+	public void setCancellationByTransactionDetails(List<TransactionDetails3> cancellationByTransactionDetails) {
+		this.cancellationByTransactionDetails = cancellationByTransactionDetails;
+	}
+
+	public DocumentIdentification9 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(DocumentIdentification9 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public List<TransactionDetails2> getCancellationByTradeReference() {
+		return cancellationByTradeReference;
+	}
+
+	public void setCancellationByTradeReference(List<TransactionDetails2> cancellationByTradeReference) {
+		this.cancellationByTradeReference = cancellationByTradeReference;
 	}
 }

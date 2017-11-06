@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the account notification.
@@ -38,35 +39,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#Account
- * OriginalNotificationReference2.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmAccount
+ * OriginalNotificationReference2.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#AccountOwner
- * OriginalNotificationReference2.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmAccountOwner
+ * OriginalNotificationReference2.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#AccountServicer
- * OriginalNotificationReference2.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmAccountServicer
+ * OriginalNotificationReference2.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#RelatedAccount
- * OriginalNotificationReference2.RelatedAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmRelatedAccount
+ * OriginalNotificationReference2.mmRelatedAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#TotalAmount
- * OriginalNotificationReference2.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmTotalAmount
+ * OriginalNotificationReference2.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#ExpectedValueDate
- * OriginalNotificationReference2.ExpectedValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmExpectedValueDate
+ * OriginalNotificationReference2.mmExpectedValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#Debtor
- * OriginalNotificationReference2.Debtor}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmDebtor
+ * OriginalNotificationReference2.mmDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#DebtorAgent
- * OriginalNotificationReference2.DebtorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmDebtorAgent
+ * OriginalNotificationReference2.mmDebtorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#IntermediaryAgent
- * OriginalNotificationReference2.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmIntermediaryAgent
+ * OriginalNotificationReference2.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#OriginalItemAndStatus
- * OriginalNotificationReference2.OriginalItemAndStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmOriginalItemAndStatus
+ * OriginalNotificationReference2.mmOriginalItemAndStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -75,8 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalNotificationReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount16 account;
 	/**
 	 * Identifies the account to be credited with the incoming amount of money.
 	 * <p>
@@ -101,8 +103,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashAccount
-	 * CashEntry.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashAccount
+	 * CashEntry.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -123,21 +125,22 @@ public class OriginalNotificationReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identifies the account to be credited with the incoming amount of money.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected Party12Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -149,8 +152,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,21 +172,22 @@ public class OriginalNotificationReference2 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Party12Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Party12Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -199,8 +203,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,21 +225,22 @@ public class OriginalNotificationReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected CashAccount16 relatedAccount;
 	/**
 	 * Identifies the parent account of the account to be credited with the
 	 * incoming amount of money.
@@ -269,21 +274,22 @@ public class OriginalNotificationReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccount";
 			definition = "Identifies the parent account of the account to be credited with the incoming amount of money.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount totalAmount;
 	/**
 	 * Sum of the amounts in all the Item entries.
 	 * <p>
@@ -312,7 +318,7 @@ public class OriginalNotificationReference2 {
 	 * definition} = "Sum of the amounts in all the Item entries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
 			isDerived = false;
@@ -320,11 +326,12 @@ public class OriginalNotificationReference2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Sum of the amounts in all the Item entries.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate expectedValueDate;
 	/**
 	 * Date on which the first agent expects the cash to be available to the
 	 * final agent.
@@ -338,8 +345,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -360,20 +367,21 @@ public class OriginalNotificationReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "XpctdValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedValueDate";
 			definition = "Date on which the first agent expects the cash to be available to the final agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Party12Choice debtor;
 	/**
 	 * Party that owes an amount of money to the (ultimate) creditor.
 	 * <p>
@@ -385,8 +393,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -406,21 +414,22 @@ public class OriginalNotificationReference2 {
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Debtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Party12Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Party12Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 debtorAgent;
 	/**
 	 * Financial institution servicing an account for the debtor.
 	 * <p>
@@ -433,8 +442,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -454,21 +463,22 @@ public class OriginalNotificationReference2 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 intermediaryAgent;
 	/**
 	 * Agent between the debtor's agent and the creditor's agent.
 	 * <p>
@@ -481,8 +491,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -502,21 +512,22 @@ public class OriginalNotificationReference2 {
 	 * "Agent between the debtor's agent and the creditor's agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			definition = "Agent between the debtor's agent and the creditor's agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OriginalItemAndStatus2> originalItemAndStatus;
 	/**
 	 * Provides details of the expected amount on the account serviced by the
 	 * account servicer.
@@ -529,8 +540,8 @@ public class OriginalNotificationReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#Payment
-	 * PaymentExecution.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmPayment
+	 * PaymentExecution.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -551,36 +562,116 @@ public class OriginalNotificationReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalItemAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalItemAndStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
 			componentContext_lazy = () -> OriginalNotificationReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.Payment;
 			isDerived = false;
 			xmlTag = "OrgnlItmAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalItemAndStatus";
 			definition = "Provides details of the expected amount on the account serviced by the account servicer.";
 			minOccurs = 1;
-			type_lazy = () -> OriginalItemAndStatus2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotificationReference2.Account, com.tools20022.repository.msg.OriginalNotificationReference2.AccountOwner,
-						com.tools20022.repository.msg.OriginalNotificationReference2.AccountServicer, com.tools20022.repository.msg.OriginalNotificationReference2.RelatedAccount,
-						com.tools20022.repository.msg.OriginalNotificationReference2.TotalAmount, com.tools20022.repository.msg.OriginalNotificationReference2.ExpectedValueDate,
-						com.tools20022.repository.msg.OriginalNotificationReference2.Debtor, com.tools20022.repository.msg.OriginalNotificationReference2.DebtorAgent,
-						com.tools20022.repository.msg.OriginalNotificationReference2.IntermediaryAgent, com.tools20022.repository.msg.OriginalNotificationReference2.OriginalItemAndStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotificationReference2.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference2.mmAccountOwner,
+						com.tools20022.repository.msg.OriginalNotificationReference2.mmAccountServicer, com.tools20022.repository.msg.OriginalNotificationReference2.mmRelatedAccount,
+						com.tools20022.repository.msg.OriginalNotificationReference2.mmTotalAmount, com.tools20022.repository.msg.OriginalNotificationReference2.mmExpectedValueDate,
+						com.tools20022.repository.msg.OriginalNotificationReference2.mmDebtor, com.tools20022.repository.msg.OriginalNotificationReference2.mmDebtorAgent,
+						com.tools20022.repository.msg.OriginalNotificationReference2.mmIntermediaryAgent, com.tools20022.repository.msg.OriginalNotificationReference2.mmOriginalItemAndStatus);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotificationReference2";
 				definition = "Provides details on the account notification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount16 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount16 account) {
+		this.account = account;
+	}
+
+	public Party12Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(Party12Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public CashAccount16 getRelatedAccount() {
+		return relatedAccount;
+	}
+
+	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount16 relatedAccount) {
+		this.relatedAccount = relatedAccount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(ActiveOrHistoricCurrencyAndAmount totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public ISODate getExpectedValueDate() {
+		return expectedValueDate;
+	}
+
+	public void setExpectedValueDate(ISODate expectedValueDate) {
+		this.expectedValueDate = expectedValueDate;
+	}
+
+	public Party12Choice getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(Party12Choice debtor) {
+		this.debtor = debtor;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
+		return debtorAgent;
+	}
+
+	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+		this.debtorAgent = debtorAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent() {
+		return intermediaryAgent;
+	}
+
+	public void setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 intermediaryAgent) {
+		this.intermediaryAgent = intermediaryAgent;
+	}
+
+	public List<OriginalItemAndStatus2> getOriginalItemAndStatus() {
+		return originalItemAndStatus;
+	}
+
+	public void setOriginalItemAndStatus(List<com.tools20022.repository.msg.OriginalItemAndStatus2> originalItemAndStatus) {
+		this.originalItemAndStatus = originalItemAndStatus;
 	}
 }

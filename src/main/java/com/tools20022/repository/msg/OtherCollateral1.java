@@ -41,31 +41,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral1#LetterOfCreditAmount
- * OtherCollateral1.LetterOfCreditAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmLetterOfCreditAmount
+ * OtherCollateral1.mmLetterOfCreditAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral1#GuaranteeAmount
- * OtherCollateral1.GuaranteeAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmGuaranteeAmount
+ * OtherCollateral1.mmGuaranteeAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral1#OtherTypeOfCollateral
- * OtherCollateral1.OtherTypeOfCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#IssueDate
- * OtherCollateral1.IssueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#ExpiryDate
- * OtherCollateral1.ExpiryDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#Issuer
- * OtherCollateral1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#ValueDate
- * OtherCollateral1.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#ExchangeRate
- * OtherCollateral1.ExchangeRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#MarketValue
- * OtherCollateral1.MarketValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#Haircut
- * OtherCollateral1.Haircut}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmOtherTypeOfCollateral
+ * OtherCollateral1.mmOtherTypeOfCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#mmIssueDate
+ * OtherCollateral1.mmIssueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#mmExpiryDate
+ * OtherCollateral1.mmExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#mmIssuer
+ * OtherCollateral1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#mmValueDate
+ * OtherCollateral1.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral1#CollateralValue
- * OtherCollateral1.CollateralValue}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmExchangeRate
+ * OtherCollateral1.mmExchangeRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#mmMarketValue
+ * OtherCollateral1.mmMarketValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral1#mmHaircut
+ * OtherCollateral1.mmHaircut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmCollateralValue
+ * OtherCollateral1.mmCollateralValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount letterOfCreditAmount;
 	/**
 	 * Amount of the letter/documentary credit.
 	 * <p>
@@ -110,8 +112,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LetterOfCredit#Amount
-	 * LetterOfCredit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.LetterOfCredit#mmAmount
+	 * LetterOfCredit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -132,27 +134,28 @@ public class OtherCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#LetterOfCreditAmount
-	 * OtherCollateral2.LetterOfCreditAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmLetterOfCreditAmount
+	 * OtherCollateral2.mmLetterOfCreditAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LetterOfCreditAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLetterOfCreditAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmAmount;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.Amount;
 			isDerived = false;
 			xmlTag = "LttrOfCdtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfCreditAmount";
 			definition = "Amount of the letter/documentary credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.LetterOfCreditAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmLetterOfCreditAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount guaranteeAmount;
 	/**
 	 * Amount of the bank guarantee.
 	 * <p>
@@ -166,8 +169,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Guarantee#CoveredAmount
-	 * Guarantee.CoveredAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Guarantee#mmCoveredAmount
+	 * Guarantee.mmCoveredAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,27 +191,28 @@ public class OtherCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#GuaranteeAmount
-	 * OtherCollateral2.GuaranteeAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmGuaranteeAmount
+	 * OtherCollateral2.mmGuaranteeAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GuaranteeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGuaranteeAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.mmCoveredAmount;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.CoveredAmount;
 			isDerived = false;
 			xmlTag = "GrntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeAmount";
 			definition = "Amount of the bank guarantee.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.GuaranteeAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmGuaranteeAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected OtherTypeOfCollateral1 otherTypeOfCollateral;
 	/**
 	 * Provides a description and an amount of another type of collateral.
 	 * <p>
@@ -242,28 +246,29 @@ public class OtherCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#OtherTypeOfCollateral
-	 * OtherCollateral2.OtherTypeOfCollateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmOtherTypeOfCollateral
+	 * OtherCollateral2.mmOtherTypeOfCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherTypeOfCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherTypeOfCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
 			businessComponentTrace_lazy = () -> Asset.mmObject();
+			componentContext_lazy = () -> OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTpOfColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTypeOfCollateral";
 			definition = "Provides a description and an amount of another type of collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.OtherTypeOfCollateral);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmOtherTypeOfCollateral);
 			maxOccurs = 1;
-			type_lazy = () -> OtherTypeOfCollateral1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral1.mmObject();
 		}
 	};
+	protected DateFormat14Choice issueDate;
 	/**
 	 * Date on which the other collateral was issued.
 	 * <p>
@@ -275,8 +280,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#IssueDate
-	 * Issuance.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmIssueDate
+	 * Issuance.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -296,28 +301,30 @@ public class OtherCollateral1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#IssueDate
-	 * OtherCollateral2.IssueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmIssueDate
+	 * OtherCollateral2.mmIssueDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssueDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssueDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDate;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.IssueDate;
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date on which the other collateral was issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.IssueDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmIssueDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat14Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateFormat14Choice.mmObject();
 		}
 	};
+	protected DateFormat14Choice expiryDate;
 	/**
 	 * Date on which the other collateral expires.
 	 * <p>
@@ -329,8 +336,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#ExpiryDate
-	 * Asset.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmExpiryDate
+	 * Asset.mmExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -351,28 +358,29 @@ public class OtherCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#ExpiryDate
-	 * OtherCollateral2.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmExpiryDate
+	 * OtherCollateral2.mmExpiryDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExpiryDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.ExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which the other collateral expires.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.ExpiryDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmExpiryDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat14Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat14Choice.mmObject();
 		}
 	};
+	protected PartyIdentification33Choice issuer;
 	/**
 	 * Party that issues the bank guarantee or letter of / documentary credit.
 	 * <p>
@@ -385,8 +393,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -408,28 +416,29 @@ public class OtherCollateral1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#Issuer
-	 * OtherCollateral2.Issuer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#mmIssuer
+	 * OtherCollateral2.mmIssuer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issues the bank guarantee or letter of / documentary credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.Issuer);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmIssuer);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification33Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification33Choice.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Valuation date of the other collateral when it was taken as collateral.
 	 * <p>
@@ -442,8 +451,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#CollateralValuationDate
-	 * CollateralValuation.CollateralValuationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateralValuationDate
+	 * CollateralValuation.mmCollateralValuationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -465,27 +474,29 @@ public class OtherCollateral1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#ValueDate
-	 * OtherCollateral2.ValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmValueDate
+	 * OtherCollateral2.mmValueDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.CollateralValuationDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Valuation date of the other collateral when it was taken as collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.ValueDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmValueDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected BaseOneRate exchangeRate;
 	/**
 	 * Exchange rate.
 	 * <p>
@@ -498,8 +509,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#ExchangeRate
-	 * AssetHolding.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmExchangeRate
+	 * AssetHolding.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -520,27 +531,28 @@ public class OtherCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#ExchangeRate
-	 * OtherCollateral2.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmExchangeRate
+	 * OtherCollateral2.mmExchangeRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Exchange rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.ExchangeRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmExchangeRate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount marketValue;
 	/**
 	 * Value of the collateral based on current market prices.
 	 * <p>
@@ -554,8 +566,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#MarketValue
-	 * AssetHolding.MarketValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmMarketValue
+	 * AssetHolding.mmMarketValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -576,27 +588,28 @@ public class OtherCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#MarketValue
-	 * OtherCollateral2.MarketValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmMarketValue
+	 * OtherCollateral2.mmMarketValue}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.MarketValue;
 			isDerived = false;
 			xmlTag = "MktVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValue";
 			definition = "Value of the collateral based on current market prices.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.MarketValue);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmMarketValue);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate haircut;
 	/**
 	 * Haircut or valuation factor on the collateral expressed as a percentage.
 	 * <p>
@@ -610,8 +623,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#Haircut
-	 * HaircutValuation.Haircut}</li>
+	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmHaircut
+	 * HaircutValuation.mmHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -633,27 +646,28 @@ public class OtherCollateral1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#Haircut
-	 * OtherCollateral2.Haircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherCollateral2#mmHaircut
+	 * OtherCollateral2.mmHaircut}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Haircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.Haircut;
 			isDerived = false;
 			xmlTag = "Hrcut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Haircut";
 			definition = "Haircut or valuation factor on the collateral expressed as a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.Haircut);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmHaircut);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount collateralValue;
 	/**
 	 * Value of the collateral after taking into account the haircut, if any.
 	 * <p>
@@ -667,8 +681,8 @@ public class OtherCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#RiskAdjustedValue
-	 * AssetHolding.RiskAdjustedValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmRiskAdjustedValue
+	 * AssetHolding.mmRiskAdjustedValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -690,24 +704,24 @@ public class OtherCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#CollateralValue
-	 * OtherCollateral2.CollateralValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmCollateralValue
+	 * OtherCollateral2.mmCollateralValue}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmRiskAdjustedValue;
 			componentContext_lazy = () -> OtherCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.RiskAdjustedValue;
 			isDerived = false;
 			xmlTag = "CollVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Value of the collateral after taking into account the haircut, if any.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.CollateralValue);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral2.mmCollateralValue);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -715,12 +729,12 @@ public class OtherCollateral1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral1.LetterOfCreditAmount, com.tools20022.repository.msg.OtherCollateral1.GuaranteeAmount,
-						com.tools20022.repository.msg.OtherCollateral1.OtherTypeOfCollateral, com.tools20022.repository.msg.OtherCollateral1.IssueDate, com.tools20022.repository.msg.OtherCollateral1.ExpiryDate,
-						com.tools20022.repository.msg.OtherCollateral1.Issuer, com.tools20022.repository.msg.OtherCollateral1.ValueDate, com.tools20022.repository.msg.OtherCollateral1.ExchangeRate,
-						com.tools20022.repository.msg.OtherCollateral1.MarketValue, com.tools20022.repository.msg.OtherCollateral1.Haircut, com.tools20022.repository.msg.OtherCollateral1.CollateralValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral1.mmLetterOfCreditAmount, com.tools20022.repository.msg.OtherCollateral1.mmGuaranteeAmount,
+						com.tools20022.repository.msg.OtherCollateral1.mmOtherTypeOfCollateral, com.tools20022.repository.msg.OtherCollateral1.mmIssueDate, com.tools20022.repository.msg.OtherCollateral1.mmExpiryDate,
+						com.tools20022.repository.msg.OtherCollateral1.mmIssuer, com.tools20022.repository.msg.OtherCollateral1.mmValueDate, com.tools20022.repository.msg.OtherCollateral1.mmExchangeRate,
+						com.tools20022.repository.msg.OtherCollateral1.mmMarketValue, com.tools20022.repository.msg.OtherCollateral1.mmHaircut, com.tools20022.repository.msg.OtherCollateral1.mmCollateralValue);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherCollateral1";
 				definition = "Provides details about the letter of credit or bank guarantee, or other collateral, posted as collateral.";
@@ -728,5 +742,93 @@ public class OtherCollateral1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getLetterOfCreditAmount() {
+		return letterOfCreditAmount;
+	}
+
+	public void setLetterOfCreditAmount(ActiveCurrencyAndAmount letterOfCreditAmount) {
+		this.letterOfCreditAmount = letterOfCreditAmount;
+	}
+
+	public ActiveCurrencyAndAmount getGuaranteeAmount() {
+		return guaranteeAmount;
+	}
+
+	public void setGuaranteeAmount(ActiveCurrencyAndAmount guaranteeAmount) {
+		this.guaranteeAmount = guaranteeAmount;
+	}
+
+	public OtherTypeOfCollateral1 getOtherTypeOfCollateral() {
+		return otherTypeOfCollateral;
+	}
+
+	public void setOtherTypeOfCollateral(com.tools20022.repository.msg.OtherTypeOfCollateral1 otherTypeOfCollateral) {
+		this.otherTypeOfCollateral = otherTypeOfCollateral;
+	}
+
+	public DateFormat14Choice getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(DateFormat14Choice issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public DateFormat14Choice getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(DateFormat14Choice expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public PartyIdentification33Choice getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(PartyIdentification33Choice issuer) {
+		this.issuer = issuer;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public ActiveCurrencyAndAmount getMarketValue() {
+		return marketValue;
+	}
+
+	public void setMarketValue(ActiveCurrencyAndAmount marketValue) {
+		this.marketValue = marketValue;
+	}
+
+	public PercentageRate getHaircut() {
+		return haircut;
+	}
+
+	public void setHaircut(PercentageRate haircut) {
+		this.haircut = haircut;
+	}
+
+	public ActiveCurrencyAndAmount getCollateralValue() {
+		return collateralValue;
+	}
+
+	public void setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
+		this.collateralValue = collateralValue;
 	}
 }

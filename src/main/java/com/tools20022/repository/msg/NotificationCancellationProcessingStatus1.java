@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationCancellationProcessingStatus1#Status
- * NotificationCancellationProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationCancellationProcessingStatus1#mmStatus
+ * NotificationCancellationProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationCancellationProcessingStatus1#AdditionalInformation
- * NotificationCancellationProcessingStatus1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationCancellationProcessingStatus1#mmAdditionalInformation
+ * NotificationCancellationProcessingStatus1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationCancellationProcessingStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessedStatus2FormatChoice status;
 	/**
 	 * The processing status.
 	 * <p>
@@ -90,7 +91,7 @@ public class NotificationCancellationProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationCancellationProcessingStatus1.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class NotificationCancellationProcessingStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "The processing status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus2FormatChoice.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the status.
 	 * <p>
@@ -130,7 +132,7 @@ public class NotificationCancellationProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationCancellationProcessingStatus1.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class NotificationCancellationProcessingStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class NotificationCancellationProcessingStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationCancellationProcessingStatus1.Status, com.tools20022.repository.msg.NotificationCancellationProcessingStatus1.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationCancellationProcessingStatus1.mmStatus, com.tools20022.repository.msg.NotificationCancellationProcessingStatus1.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationCancellationProcessingStatus1";
 				definition = "Provide processing status information for a notification cancellation request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessedStatus2FormatChoice getStatus() {
+		return status;
+	}
+
+	public void setStatus(ProcessedStatus2FormatChoice status) {
+		this.status = status;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

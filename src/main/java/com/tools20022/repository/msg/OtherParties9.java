@@ -25,6 +25,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Other parties information.
@@ -35,17 +36,17 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#Investor
- * OtherParties9.Investor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#mmInvestor
+ * OtherParties9.mmInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherParties9#QualifiedForeignIntermediary
- * OtherParties9.QualifiedForeignIntermediary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#StockExchange
- * OtherParties9.StockExchange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#TradeRegulator
- * OtherParties9.TradeRegulator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#TripartyAgent
- * OtherParties9.TripartyAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherParties9#mmQualifiedForeignIntermediary
+ * OtherParties9.mmQualifiedForeignIntermediary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#mmStockExchange
+ * OtherParties9.mmStockExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#mmTradeRegulator
+ * OtherParties9.mmTradeRegulator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties9#mmTripartyAgent
+ * OtherParties9.mmTripartyAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,18 +56,18 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV02#OtherBusinessParties
- * SecuritiesFinancingConfirmationV02.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV02#mmOtherBusinessParties
+ * SecuritiesFinancingConfirmationV02.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV02#OtherBusinessParties
- * SecuritiesFinancingInstructionV02.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV02#mmOtherBusinessParties
+ * SecuritiesFinancingInstructionV02.mmOtherBusinessParties}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,6 +82,7 @@ import java.util.function.Supplier;
 public class OtherParties9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount36> investor;
 	/**
 	 * Party, either an individual or organisation, whose assets are being
 	 * invested.
@@ -94,8 +96,8 @@ public class OtherParties9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,20 +117,21 @@ public class OtherParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Investor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentificationAndAccount36.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount37 qualifiedForeignIntermediary;
 	/**
 	 * Foreign Financial Institution which has been authorised by local
 	 * authorities to act as account management institution in the country.
@@ -142,8 +145,8 @@ public class OtherParties9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,21 +166,22 @@ public class OtherParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QualifiedForeignIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQualifiedForeignIntermediary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "QlfdFrgnIntrmy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediary";
 			definition = "Foreign Financial Institution which has been authorised by local authorities to act as account management institution in the country.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount37.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount37.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount37 stockExchange;
 	/**
 	 * Identification of the stock exchange to which transaction reporting will
 	 * be done.
@@ -191,8 +195,8 @@ public class OtherParties9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,21 +216,22 @@ public class OtherParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StockXchg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			definition = "Identification of the stock exchange to which transaction reporting will be done.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount37.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount37.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount37 tradeRegulator;
 	/**
 	 * Institution to which a trade must be reported.
 	 * <p>
@@ -239,8 +244,8 @@ public class OtherParties9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,21 +263,22 @@ public class OtherParties9 {
 	 * definition} = "Institution to which a trade must be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeRegulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "TradRgltr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulator";
 			definition = "Institution to which a trade must be reported.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount37.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount37.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount37 tripartyAgent;
 	/**
 	 * Party responsible for the administration of a tri-party collateral
 	 * transaction including collateral allocation, marking to market and
@@ -287,8 +293,8 @@ public class OtherParties9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -308,31 +314,31 @@ public class OtherParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TripartyAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTripartyAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "TrptyAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgent";
 			definition = "Party responsible for the administration of a tri-party collateral transaction including collateral allocation, marking to market and substitution of collateral.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount37.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount37.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties9.Investor, com.tools20022.repository.msg.OtherParties9.QualifiedForeignIntermediary,
-						com.tools20022.repository.msg.OtherParties9.StockExchange, com.tools20022.repository.msg.OtherParties9.TradeRegulator, com.tools20022.repository.msg.OtherParties9.TripartyAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties9.mmInvestor, com.tools20022.repository.msg.OtherParties9.mmQualifiedForeignIntermediary,
+						com.tools20022.repository.msg.OtherParties9.mmStockExchange, com.tools20022.repository.msg.OtherParties9.mmTradeRegulator, com.tools20022.repository.msg.OtherParties9.mmTripartyAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV02.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV02.mmOtherBusinessParties);
 				trace_lazy = () -> Role.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV02.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV02.OtherBusinessParties);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -346,5 +352,45 @@ public class OtherParties9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PartyIdentificationAndAccount36> getInvestor() {
+		return investor;
+	}
+
+	public void setInvestor(List<com.tools20022.repository.msg.PartyIdentificationAndAccount36> investor) {
+		this.investor = investor;
+	}
+
+	public PartyIdentificationAndAccount37 getQualifiedForeignIntermediary() {
+		return qualifiedForeignIntermediary;
+	}
+
+	public void setQualifiedForeignIntermediary(com.tools20022.repository.msg.PartyIdentificationAndAccount37 qualifiedForeignIntermediary) {
+		this.qualifiedForeignIntermediary = qualifiedForeignIntermediary;
+	}
+
+	public PartyIdentificationAndAccount37 getStockExchange() {
+		return stockExchange;
+	}
+
+	public void setStockExchange(com.tools20022.repository.msg.PartyIdentificationAndAccount37 stockExchange) {
+		this.stockExchange = stockExchange;
+	}
+
+	public PartyIdentificationAndAccount37 getTradeRegulator() {
+		return tradeRegulator;
+	}
+
+	public void setTradeRegulator(com.tools20022.repository.msg.PartyIdentificationAndAccount37 tradeRegulator) {
+		this.tradeRegulator = tradeRegulator;
+	}
+
+	public PartyIdentificationAndAccount37 getTripartyAgent() {
+		return tripartyAgent;
+	}
+
+	public void setTripartyAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount37 tripartyAgent) {
+		this.tripartyAgent = tripartyAgent;
 	}
 }

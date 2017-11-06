@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#MasterReference
- * OrderStatusAndReason9.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#mmMasterReference
+ * OrderStatusAndReason9.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#CancellationStatus
- * OrderStatusAndReason9.CancellationStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#mmCancellationStatus
+ * OrderStatusAndReason9.mmCancellationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#StatusInitiator
- * OrderStatusAndReason9.StatusInitiator}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#mmStatusInitiator
+ * OrderStatusAndReason9.mmStatusInitiator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderStatusAndReason9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Reference assigned to a set of orders or trades in order to link them
 	 * together.
@@ -87,8 +88,8 @@ public class OrderStatusAndReason9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,25 +111,26 @@ public class OrderStatusAndReason9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#MasterReference
-	 * OrderStatusAndReason8.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#mmMasterReference
+	 * OrderStatusAndReason8.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> OrderStatusAndReason9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CancellationStatus22Choice cancellationStatus;
 	/**
 	 * Cancellation status of the order cancellation.
 	 * <p>
@@ -156,7 +158,7 @@ public class OrderStatusAndReason9 {
 	 * definition} = "Cancellation status of the order cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OrderStatusAndReason9.mmObject();
 			isDerived = false;
@@ -164,12 +166,13 @@ public class OrderStatusAndReason9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatus";
 			definition = "Cancellation status of the order cancellation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationStatus22Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CancellationStatus22Choice.mmObject();
 		}
 	};
+	protected PartyIdentification113 statusInitiator;
 	/**
 	 * Party that initiates the status of the order cancellation.
 	 * <p>
@@ -181,8 +184,8 @@ public class OrderStatusAndReason9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,34 +206,34 @@ public class OrderStatusAndReason9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#StatusInitiator
-	 * OrderStatusAndReason8.StatusInitiator}</li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#mmStatusInitiator
+	 * OrderStatusAndReason8.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OrderStatusAndReason9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order cancellation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.StatusInitiator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.mmStatusInitiator;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason9.MasterReference, com.tools20022.repository.msg.OrderStatusAndReason9.CancellationStatus,
-						com.tools20022.repository.msg.OrderStatusAndReason9.StatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason9.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason9.mmCancellationStatus,
+						com.tools20022.repository.msg.OrderStatusAndReason9.mmStatusInitiator);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderStatusAndReason9";
 				definition = "Status report of a bulk or multiple or switch order cancellation instruction that was previously received.";
@@ -238,5 +241,29 @@ public class OrderStatusAndReason9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public CancellationStatus22Choice getCancellationStatus() {
+		return cancellationStatus;
+	}
+
+	public void setCancellationStatus(CancellationStatus22Choice cancellationStatus) {
+		this.cancellationStatus = cancellationStatus;
+	}
+
+	public PartyIdentification113 getStatusInitiator() {
+		return statusInitiator;
+	}
+
+	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+		this.statusInitiator = statusInitiator;
 	}
 }

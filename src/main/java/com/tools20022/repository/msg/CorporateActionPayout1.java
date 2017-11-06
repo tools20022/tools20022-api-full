@@ -34,75 +34,75 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#PayoutNumber
- * CorporateActionPayout1.PayoutNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmPayoutNumber
+ * CorporateActionPayout1.mmPayoutNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#PayoutType
- * CorporateActionPayout1.PayoutType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmPayoutType
+ * CorporateActionPayout1.mmPayoutType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DTCCashRate
- * CorporateActionPayout1.DTCCashRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDTCCashRate
+ * CorporateActionPayout1.mmDTCCashRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#ProjectedAmount
- * CorporateActionPayout1.ProjectedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmProjectedAmount
+ * CorporateActionPayout1.mmProjectedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DTCDisbursedSecurity
- * CorporateActionPayout1.DTCDisbursedSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDTCDisbursedSecurity
+ * CorporateActionPayout1.mmDTCDisbursedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DTCDisbursedSecurityDescription
- * CorporateActionPayout1.DTCDisbursedSecurityDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDTCDisbursedSecurityDescription
+ * CorporateActionPayout1.mmDTCDisbursedSecurityDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#SubReasonCode
- * CorporateActionPayout1.SubReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmSubReasonCode
+ * CorporateActionPayout1.mmSubReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DTCSecurityRate
- * CorporateActionPayout1.DTCSecurityRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDTCSecurityRate
+ * CorporateActionPayout1.mmDTCSecurityRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#CashInLieuOfSharePrice
- * CorporateActionPayout1.CashInLieuOfSharePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmCashInLieuOfSharePrice
+ * CorporateActionPayout1.mmCashInLieuOfSharePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#PayingAgent
- * CorporateActionPayout1.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmPayingAgent
+ * CorporateActionPayout1.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#SecurityIdentification
- * CorporateActionPayout1.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmSecurityIdentification
+ * CorporateActionPayout1.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#SecurityDescription
- * CorporateActionPayout1.SecurityDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmSecurityDescription
+ * CorporateActionPayout1.mmSecurityDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DTCAssetClass
- * CorporateActionPayout1.DTCAssetClass}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDTCAssetClass
+ * CorporateActionPayout1.mmDTCAssetClass}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DTCAssetType
- * CorporateActionPayout1.DTCAssetType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDTCAssetType
+ * CorporateActionPayout1.mmDTCAssetType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DeclaredPayableDate
- * CorporateActionPayout1.DeclaredPayableDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDeclaredPayableDate
+ * CorporateActionPayout1.mmDeclaredPayableDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#EventType
- * CorporateActionPayout1.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmEventType
+ * CorporateActionPayout1.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#SubEventType
- * CorporateActionPayout1.SubEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmSubEventType
+ * CorporateActionPayout1.mmSubEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#Position
- * CorporateActionPayout1.Position}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmPosition
+ * CorporateActionPayout1.mmPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#FractionalPosition
- * CorporateActionPayout1.FractionalPosition}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmFractionalPosition
+ * CorporateActionPayout1.mmFractionalPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#DTCPositionCaptureDate
- * CorporateActionPayout1.DTCPositionCaptureDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmDTCPositionCaptureDate
+ * CorporateActionPayout1.mmDTCPositionCaptureDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#ParticipantCrossReference
- * CorporateActionPayout1.ParticipantCrossReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPayout1#mmParticipantCrossReference
+ * CorporateActionPayout1.mmParticipantCrossReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPayout1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText payoutNumber;
 	/**
 	 * Unique number associated with a payout within an option.
 	 * <p>
@@ -145,7 +146,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -153,11 +154,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected DTCCPayoutType2Code payoutType;
 	/**
 	 * Describes the type of payout associated with the event.
 	 * <p>
@@ -186,7 +188,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Describes the type of payout associated with the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -194,11 +196,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
 			definition = "Describes the type of payout associated with the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DTCCPayoutType2Code.mmObject();
 		}
 	};
+	protected DecimalNumber dTCCashRate;
 	/**
 	 * Rate of the dividend payable in cash at DTC (The Depository Trust
 	 * Corporation).
@@ -230,7 +233,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCCashRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCCashRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -238,11 +241,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCashRate";
 			definition = "Rate of the dividend payable in cash at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber projectedAmount;
 	/**
 	 * Projected cash amount based on the entitlement.
 	 * <p>
@@ -271,7 +275,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Projected cash amount based on the entitlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProjectedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProjectedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -279,11 +283,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProjectedAmount";
 			definition = "Projected cash amount based on the entitlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected CUSIPIdentification1 dTCDisbursedSecurity;
 	/**
 	 * Security identification that DTC (The Depository Trust Corporation) will
 	 * distribute as part of the entitlement. This can be the DTC contra CUSIP
@@ -316,7 +321,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCDisbursedSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCDisbursedSecurity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -324,11 +329,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurity";
 			definition = "Security identification that DTC (The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> CUSIPIdentification1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
 		}
 	};
+	protected RestrictedFINMax31Text dTCDisbursedSecurityDescription;
 	/**
 	 * Description of the security that will be disbursed by DTC (The Depository
 	 * Trust Corporation) as entitlement for the corporate action event.
@@ -360,7 +366,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCDisbursedSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCDisbursedSecurityDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -368,11 +374,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurityDescription";
 			definition = "Description of the security that will be disbursed by DTC (The Depository Trust Corporation) as entitlement for the corporate action event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax31Text.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText subReasonCode;
 	/**
 	 * Sub-reason for the adjustment.
 	 * <p>
@@ -401,7 +408,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Sub-reason for the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubReasonCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -409,11 +416,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubReasonCode";
 			definition = "Sub-reason for the adjustment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected DecimalNumber dTCSecurityRate;
 	/**
 	 * Rate of the dividend payable in stock rather than in cash at DTC (The
 	 * Depository Trust Corporation).
@@ -445,7 +453,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCSecurityRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -453,11 +461,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityRate";
 			definition = "Rate of the dividend payable in stock rather than in cash at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAnd13DecimalAmount cashInLieuOfSharePrice;
 	/**
 	 * Cash disbursement in lieu of equities; usually in lieu of fractional
 	 * quantity.
@@ -489,7 +498,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashInLieuOfSharePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashInLieuOfSharePrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -497,11 +506,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected Max8Text payingAgent;
 	/**
 	 * Paying agent for this corporate action event.
 	 * <p>
@@ -529,7 +539,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Paying agent for this corporate action event. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayingAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayingAgent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -537,11 +547,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Paying agent for this corporate action event. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected CUSIPIdentification1 securityIdentification;
 	/**
 	 * Identification of the underlying security.
 	 * <p>
@@ -570,7 +581,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Identification of the underlying security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -578,11 +589,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the underlying security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> CUSIPIdentification1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
 		}
 	};
+	protected RestrictedFINMax31Text securityDescription;
 	/**
 	 * Underlying security description.
 	 * <p>
@@ -611,7 +623,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Underlying security description."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -619,11 +631,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDescription";
 			definition = "Underlying security description.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax31Text.mmObject();
 		}
 	};
+	protected AssetClass1Code dTCAssetClass;
 	/**
 	 * Classification of instruments into asset classes at DTC (The Depository
 	 * Trust Corporation).
@@ -655,7 +668,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -663,11 +676,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
 		}
 	};
+	protected DTCAssetType1Code dTCAssetType;
 	/**
 	 * Further classification of instruments into (issue) asset types at DTC
 	 * (The Depository Trust Corporation).
@@ -699,7 +713,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -707,11 +721,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
 		}
 	};
+	protected ISODate declaredPayableDate;
 	/**
 	 * Date at which the movement has been declared payable by the issuer to
 	 * take place (cash and/or securities).
@@ -742,7 +757,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclaredPayableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclaredPayableDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -750,11 +765,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredPayableDate";
 			definition = "Date at which the movement has been declared payable by the issuer to take place (cash and/or securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ExtendedEventType1Code eventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action event type name. Used in place for the events that cannot be
@@ -791,7 +807,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -799,11 +815,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO Code and are marked as OTHR. Can be used in combination with DTCC sub event type (when provided) to identify the event. For an example: a distribution based on recapitalisation event will be presented as event type: OTHR in standard message. DTCC native event type would be Distribution (DIST) and DTCC sub event type would be Recapitalisation. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
 	};
+	protected DTCCSubEventType1Code subEventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action sub event type name further defines the event type. For an
@@ -838,7 +855,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -846,11 +863,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. For an example: a cash dividend event with currency election will be noted as event type: Cash Dividend (DVCA) and DTCC sub event type: Currency Election(CURR).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType1Code.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 position;
 	/**
 	 * Total eligible balance for a particular corporate action.
 	 * <p>
@@ -880,7 +898,7 @@ public class CorporateActionPayout1 {
 	 * "Total eligible balance for a particular corporate action. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Position = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -888,11 +906,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Total eligible balance for a particular corporate action. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 fractionalPosition;
 	/**
 	 * Fractional share quantity.
 	 * <p>
@@ -921,7 +940,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Fractional share quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FractionalPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFractionalPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -929,11 +948,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalPosition";
 			definition = "Fractional share quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected ISODate dTCPositionCaptureDate;
 	/**
 	 * Date when DTC positions are captured and entitlements are calculated in
 	 * the system.
@@ -964,7 +984,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPositionCaptureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -972,11 +992,12 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPositionCaptureDate";
 			definition = "Date when DTC positions are captured and entitlements are calculated in the system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max16Text participantCrossReference;
 	/**
 	 * Transaction identification that participant provides on the
 	 * reorganisation deposit.
@@ -1007,7 +1028,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ParticipantCrossReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParticipantCrossReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -1015,8 +1036,8 @@ public class CorporateActionPayout1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantCrossReference";
 			definition = "Transaction identification that participant provides on the reorganisation deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
@@ -1024,21 +1045,190 @@ public class CorporateActionPayout1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPayout1.PayoutNumber, com.tools20022.repository.msg.CorporateActionPayout1.PayoutType,
-						com.tools20022.repository.msg.CorporateActionPayout1.DTCCashRate, com.tools20022.repository.msg.CorporateActionPayout1.ProjectedAmount, com.tools20022.repository.msg.CorporateActionPayout1.DTCDisbursedSecurity,
-						com.tools20022.repository.msg.CorporateActionPayout1.DTCDisbursedSecurityDescription, com.tools20022.repository.msg.CorporateActionPayout1.SubReasonCode,
-						com.tools20022.repository.msg.CorporateActionPayout1.DTCSecurityRate, com.tools20022.repository.msg.CorporateActionPayout1.CashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPayout1.PayingAgent,
-						com.tools20022.repository.msg.CorporateActionPayout1.SecurityIdentification, com.tools20022.repository.msg.CorporateActionPayout1.SecurityDescription,
-						com.tools20022.repository.msg.CorporateActionPayout1.DTCAssetClass, com.tools20022.repository.msg.CorporateActionPayout1.DTCAssetType, com.tools20022.repository.msg.CorporateActionPayout1.DeclaredPayableDate,
-						com.tools20022.repository.msg.CorporateActionPayout1.EventType, com.tools20022.repository.msg.CorporateActionPayout1.SubEventType, com.tools20022.repository.msg.CorporateActionPayout1.Position,
-						com.tools20022.repository.msg.CorporateActionPayout1.FractionalPosition, com.tools20022.repository.msg.CorporateActionPayout1.DTCPositionCaptureDate,
-						com.tools20022.repository.msg.CorporateActionPayout1.ParticipantCrossReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPayout1.mmPayoutNumber, com.tools20022.repository.msg.CorporateActionPayout1.mmPayoutType,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmDTCCashRate, com.tools20022.repository.msg.CorporateActionPayout1.mmProjectedAmount,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmDTCDisbursedSecurity, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCDisbursedSecurityDescription,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmSubReasonCode, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCSecurityRate,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPayout1.mmPayingAgent,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmSecurityIdentification, com.tools20022.repository.msg.CorporateActionPayout1.mmSecurityDescription,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmDTCAssetClass, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCAssetType, com.tools20022.repository.msg.CorporateActionPayout1.mmDeclaredPayableDate,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmEventType, com.tools20022.repository.msg.CorporateActionPayout1.mmSubEventType, com.tools20022.repository.msg.CorporateActionPayout1.mmPosition,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmFractionalPosition, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCPositionCaptureDate,
+						com.tools20022.repository.msg.CorporateActionPayout1.mmParticipantCrossReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionPayout1";
 				definition = "Provides additional information regarding the securities or cash payout.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getPayoutNumber() {
+		return payoutNumber;
+	}
+
+	public void setPayoutNumber(Exact3NumericText payoutNumber) {
+		this.payoutNumber = payoutNumber;
+	}
+
+	public DTCCPayoutType2Code getPayoutType() {
+		return payoutType;
+	}
+
+	public void setPayoutType(DTCCPayoutType2Code payoutType) {
+		this.payoutType = payoutType;
+	}
+
+	public DecimalNumber getDTCCashRate() {
+		return dTCCashRate;
+	}
+
+	public void setDTCCashRate(DecimalNumber dTCCashRate) {
+		this.dTCCashRate = dTCCashRate;
+	}
+
+	public DecimalNumber getProjectedAmount() {
+		return projectedAmount;
+	}
+
+	public void setProjectedAmount(DecimalNumber projectedAmount) {
+		this.projectedAmount = projectedAmount;
+	}
+
+	public CUSIPIdentification1 getDTCDisbursedSecurity() {
+		return dTCDisbursedSecurity;
+	}
+
+	public void setDTCDisbursedSecurity(com.tools20022.repository.msg.CUSIPIdentification1 dTCDisbursedSecurity) {
+		this.dTCDisbursedSecurity = dTCDisbursedSecurity;
+	}
+
+	public RestrictedFINMax31Text getDTCDisbursedSecurityDescription() {
+		return dTCDisbursedSecurityDescription;
+	}
+
+	public void setDTCDisbursedSecurityDescription(RestrictedFINMax31Text dTCDisbursedSecurityDescription) {
+		this.dTCDisbursedSecurityDescription = dTCDisbursedSecurityDescription;
+	}
+
+	public Max4AlphaNumericText getSubReasonCode() {
+		return subReasonCode;
+	}
+
+	public void setSubReasonCode(Max4AlphaNumericText subReasonCode) {
+		this.subReasonCode = subReasonCode;
+	}
+
+	public DecimalNumber getDTCSecurityRate() {
+		return dTCSecurityRate;
+	}
+
+	public void setDTCSecurityRate(DecimalNumber dTCSecurityRate) {
+		this.dTCSecurityRate = dTCSecurityRate;
+	}
+
+	public RestrictedFINActiveCurrencyAnd13DecimalAmount getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice;
+	}
+
+	public void setCashInLieuOfSharePrice(RestrictedFINActiveCurrencyAnd13DecimalAmount cashInLieuOfSharePrice) {
+		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+	}
+
+	public Max8Text getPayingAgent() {
+		return payingAgent;
+	}
+
+	public void setPayingAgent(Max8Text payingAgent) {
+		this.payingAgent = payingAgent;
+	}
+
+	public CUSIPIdentification1 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.CUSIPIdentification1 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public RestrictedFINMax31Text getSecurityDescription() {
+		return securityDescription;
+	}
+
+	public void setSecurityDescription(RestrictedFINMax31Text securityDescription) {
+		this.securityDescription = securityDescription;
+	}
+
+	public AssetClass1Code getDTCAssetClass() {
+		return dTCAssetClass;
+	}
+
+	public void setDTCAssetClass(AssetClass1Code dTCAssetClass) {
+		this.dTCAssetClass = dTCAssetClass;
+	}
+
+	public DTCAssetType1Code getDTCAssetType() {
+		return dTCAssetType;
+	}
+
+	public void setDTCAssetType(DTCAssetType1Code dTCAssetType) {
+		this.dTCAssetType = dTCAssetType;
+	}
+
+	public ISODate getDeclaredPayableDate() {
+		return declaredPayableDate;
+	}
+
+	public void setDeclaredPayableDate(ISODate declaredPayableDate) {
+		this.declaredPayableDate = declaredPayableDate;
+	}
+
+	public ExtendedEventType1Code getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(ExtendedEventType1Code eventType) {
+		this.eventType = eventType;
+	}
+
+	public DTCCSubEventType1Code getSubEventType() {
+		return subEventType;
+	}
+
+	public void setSubEventType(DTCCSubEventType1Code subEventType) {
+		this.subEventType = subEventType;
+	}
+
+	public SignedQuantityFormat4 getPosition() {
+		return position;
+	}
+
+	public void setPosition(com.tools20022.repository.msg.SignedQuantityFormat4 position) {
+		this.position = position;
+	}
+
+	public SignedQuantityFormat4 getFractionalPosition() {
+		return fractionalPosition;
+	}
+
+	public void setFractionalPosition(com.tools20022.repository.msg.SignedQuantityFormat4 fractionalPosition) {
+		this.fractionalPosition = fractionalPosition;
+	}
+
+	public ISODate getDTCPositionCaptureDate() {
+		return dTCPositionCaptureDate;
+	}
+
+	public void setDTCPositionCaptureDate(ISODate dTCPositionCaptureDate) {
+		this.dTCPositionCaptureDate = dTCPositionCaptureDate;
+	}
+
+	public Max16Text getParticipantCrossReference() {
+		return participantCrossReference;
+	}
+
+	public void setParticipantCrossReference(Max16Text participantCrossReference) {
+		this.participantCrossReference = participantCrossReference;
 	}
 }

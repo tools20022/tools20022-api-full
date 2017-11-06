@@ -34,36 +34,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#CapitalGains
- * ReinvestmentIncomeClassification2Code.CapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmCapitalGains
+ * ReinvestmentIncomeClassification2Code.mmCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#CashDividend
- * ReinvestmentIncomeClassification2Code.CashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmCashDividend
+ * ReinvestmentIncomeClassification2Code.mmCashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#CashDividendSpecial
- * ReinvestmentIncomeClassification2Code.CashDividendSpecial}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmCashDividendSpecial
+ * ReinvestmentIncomeClassification2Code.mmCashDividendSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#Interest
- * ReinvestmentIncomeClassification2Code.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmInterest
+ * ReinvestmentIncomeClassification2Code.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#LongTermCapitalGains
- * ReinvestmentIncomeClassification2Code.LongTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmLongTermCapitalGains
+ * ReinvestmentIncomeClassification2Code.mmLongTermCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#Principal
- * ReinvestmentIncomeClassification2Code.Principal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmPrincipal
+ * ReinvestmentIncomeClassification2Code.mmPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#ReturnOfCapital
- * ReinvestmentIncomeClassification2Code.ReturnOfCapital}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmReturnOfCapital
+ * ReinvestmentIncomeClassification2Code.mmReturnOfCapital}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#ShortTermCapitalGains
- * ReinvestmentIncomeClassification2Code.ShortTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code#mmShortTermCapitalGains
+ * ReinvestmentIncomeClassification2Code.mmShortTermCapitalGains}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,7 +95,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "CapitalGains"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGains = new MMCode() {
+	public static final MMCode mmCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGains";
@@ -118,7 +118,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividend = new MMCode() {
+	public static final MMCode mmCashDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
@@ -141,7 +141,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "CashDividendSpecial"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividendSpecial = new MMCode() {
+	public static final MMCode mmCashDividendSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendSpecial";
@@ -164,7 +164,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "Interest"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
@@ -187,7 +187,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "LongTermCapitalGains"</li>
 	 * </ul>
 	 */
-	public static final MMCode LongTermCapitalGains = new MMCode() {
+	public static final MMCode mmLongTermCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongTermCapitalGains";
@@ -210,7 +210,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "Principal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Principal = new MMCode() {
+	public static final MMCode mmPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
@@ -233,7 +233,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "ReturnOfCapital"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReturnOfCapital = new MMCode() {
+	public static final MMCode mmReturnOfCapital = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOfCapital";
@@ -256,7 +256,7 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	 * name} = "ShortTermCapitalGains"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShortTermCapitalGains = new MMCode() {
+	public static final MMCode mmShortTermCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermCapitalGains";
@@ -267,14 +267,14 @@ public class ReinvestmentIncomeClassification2Code extends ReinvestmentIncomeCla
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReinvestmentIncomeClassification2Code";
 				definition = "Specifies the type of cash proceeds that the holder is eligible to reinvest.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.CapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.CashDividend,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.CashDividendSpecial, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.Interest,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.LongTermCapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.Principal,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.ReturnOfCapital, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.ShortTermCapitalGains);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmCapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmCashDividend,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmCashDividendSpecial, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmInterest,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmLongTermCapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmPrincipal,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmReturnOfCapital, com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code.mmShortTermCapitalGains);
 				trace_lazy = () -> ReinvestmentIncomeClassificationCode.mmObject();
 			}
 		});

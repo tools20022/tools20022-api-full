@@ -39,10 +39,10 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification5#Identification
- * MarketIdentification5.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification5#Type
- * MarketIdentification5.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification5#mmIdentification
+ * MarketIdentification5.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification5#mmType
+ * MarketIdentification5.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -69,6 +69,7 @@ import java.util.function.Supplier;
 public class MarketIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketIdentification1Choice identification;
 	/**
 	 * Code allocated to places of trade, ie, stock exchanges, regulated
 	 * markets, eg, Electronic Trading Platforms (ECN), and unregulated markets,
@@ -106,21 +107,22 @@ public class MarketIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarketIdentification5.mmObject();
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
+			componentContext_lazy = () -> MarketIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Code allocated to places of trade, ie, stock exchanges, regulated markets, eg, Electronic Trading Platforms (ECN), and unregulated markets, eg, Automated Trading Systems (ATS), as sources of prices and related information, in order to facilitate automated processing.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MarketIdentification1Choice.mmObject();
 		}
 	};
+	protected MarketType2Choice type;
 	/**
 	 * Nature of a market in which transactions take place.
 	 * <p>
@@ -132,8 +134,8 @@ public class MarketIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#Type
-	 * TradingMarket.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmType
+	 * TradingMarket.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,28 +154,28 @@ public class MarketIdentification5 {
 	 * definition} = "Nature of a market in which transactions take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmType;
 			componentContext_lazy = () -> MarketIdentification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of a market in which transactions take place.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarketType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarketType2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification5.Identification, com.tools20022.repository.msg.MarketIdentification5.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification5.mmIdentification, com.tools20022.repository.msg.MarketIdentification5.mmType);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -187,5 +189,21 @@ public class MarketIdentification5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(MarketIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public MarketType2Choice getType() {
+		return type;
+	}
+
+	public void setType(MarketType2Choice type) {
+		this.type = type;
 	}
 }

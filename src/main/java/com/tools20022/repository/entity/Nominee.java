@@ -37,47 +37,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties2#Nominee
- * AccountParties2.Nominee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#Nominee
- * AccountParties5.Nominee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties2#mmNominee
+ * AccountParties2.mmNominee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#mmNominee
+ * AccountParties5.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties1Choice#Nominee
- * AccountParties1Choice.Nominee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#Nominee
- * AccountParties3.Nominee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#Nominee
- * AccountParties4.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties1Choice#mmNominee
+ * AccountParties1Choice.mmNominee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmNominee
+ * AccountParties3.mmNominee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#mmNominee
+ * AccountParties4.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties2Choice#Nominee
- * AccountParties2Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties2Choice#mmNominee
+ * AccountParties2Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties3Choice#Nominee
- * AccountParties3Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties3Choice#mmNominee
+ * AccountParties3Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties4Choice#Nominee
- * AccountParties4Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties4Choice#mmNominee
+ * AccountParties4Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties7Choice#Nominee
- * AccountParties7Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties7Choice#mmNominee
+ * AccountParties7Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties6Choice#Nominee
- * AccountParties6Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties6Choice#mmNominee
+ * AccountParties6Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties5Choice#Nominee
- * AccountParties5Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties5Choice#mmNominee
+ * AccountParties5Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties9Choice#Nominee
- * AccountParties9Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties9Choice#mmNominee
+ * AccountParties9Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties8Choice#Nominee
- * AccountParties8Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties8Choice#mmNominee
+ * AccountParties8Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties11Choice#Nominee
- * AccountParties11Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties11Choice#mmNominee
+ * AccountParties11Choice.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties10Choice#Nominee
- * AccountParties10Choice.Nominee}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties10Choice#mmNominee
+ * AccountParties10Choice.mmNominee}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -87,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,15 +108,16 @@ public class Nominee extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Nominee";
 				definition = "Entity (the registered owner) named by the beneficial owner to act on its behalf, often to facilitate dealing, or to conceal the identity of the beneficiary. Securities and other assets are recorded in the nominee's name.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.Nominee, com.tools20022.repository.msg.AccountParties5.Nominee, com.tools20022.repository.choice.AccountParties1Choice.Nominee,
-						com.tools20022.repository.msg.AccountParties3.Nominee, com.tools20022.repository.msg.AccountParties4.Nominee, com.tools20022.repository.choice.AccountParties2Choice.Nominee,
-						com.tools20022.repository.choice.AccountParties3Choice.Nominee, com.tools20022.repository.choice.AccountParties4Choice.Nominee, com.tools20022.repository.choice.AccountParties7Choice.Nominee,
-						com.tools20022.repository.choice.AccountParties6Choice.Nominee, com.tools20022.repository.choice.AccountParties5Choice.Nominee, com.tools20022.repository.choice.AccountParties9Choice.Nominee,
-						com.tools20022.repository.choice.AccountParties8Choice.Nominee, com.tools20022.repository.choice.AccountParties11Choice.Nominee, com.tools20022.repository.choice.AccountParties10Choice.Nominee);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmNominee, com.tools20022.repository.msg.AccountParties5.mmNominee,
+						com.tools20022.repository.choice.AccountParties1Choice.mmNominee, com.tools20022.repository.msg.AccountParties3.mmNominee, com.tools20022.repository.msg.AccountParties4.mmNominee,
+						com.tools20022.repository.choice.AccountParties2Choice.mmNominee, com.tools20022.repository.choice.AccountParties3Choice.mmNominee, com.tools20022.repository.choice.AccountParties4Choice.mmNominee,
+						com.tools20022.repository.choice.AccountParties7Choice.mmNominee, com.tools20022.repository.choice.AccountParties6Choice.mmNominee, com.tools20022.repository.choice.AccountParties5Choice.mmNominee,
+						com.tools20022.repository.choice.AccountParties9Choice.mmNominee, com.tools20022.repository.choice.AccountParties8Choice.mmNominee, com.tools20022.repository.choice.AccountParties11Choice.mmNominee,
+						com.tools20022.repository.choice.AccountParties10Choice.mmNominee);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

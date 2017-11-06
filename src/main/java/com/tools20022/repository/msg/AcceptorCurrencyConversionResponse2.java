@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#Environment
- * AcceptorCurrencyConversionResponse2.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#mmEnvironment
+ * AcceptorCurrencyConversionResponse2.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#Transaction
- * AcceptorCurrencyConversionResponse2.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#mmTransaction
+ * AcceptorCurrencyConversionResponse2.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#CurrencyConversion
- * AcceptorCurrencyConversionResponse2.CurrencyConversion}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#mmCurrencyConversion
+ * AcceptorCurrencyConversionResponse2.mmCurrencyConversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV02#CurrencyConversionResponse
- * AcceptorCurrencyConversionResponseV02.CurrencyConversionResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV02#mmCurrencyConversionResponse
+ * AcceptorCurrencyConversionResponseV02.mmCurrencyConversionResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorCurrencyConversionResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardPaymentEnvironment33 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -118,34 +119,35 @@ public class AcceptorCurrencyConversionResponse2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#Environment
-	 * AcceptorCurrencyConversionResponse3.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#mmEnvironment
+	 * AcceptorCurrencyConversionResponse3.mmEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#Environment
-	 * AcceptorCurrencyConversionResponse1.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#mmEnvironment
+	 * AcceptorCurrencyConversionResponse1.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorCurrencyConversionResponse2.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> AcceptorCurrencyConversionResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.Environment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.Environment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.mmEnvironment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.mmEnvironment;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentEnvironment33.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment33.mmObject();
 		}
 	};
+	protected CardPaymentTransaction38 transaction;
 	/**
 	 * Currency conversion of a card payment transaction between an acceptor and
 	 * an acquirer.
@@ -182,34 +184,35 @@ public class AcceptorCurrencyConversionResponse2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#Transaction
-	 * AcceptorCurrencyConversionResponse3.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#mmTransaction
+	 * AcceptorCurrencyConversionResponse3.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#Transaction
-	 * AcceptorCurrencyConversionResponse1.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#mmTransaction
+	 * AcceptorCurrencyConversionResponse1.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorCurrencyConversionResponse2.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> AcceptorCurrencyConversionResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Currency conversion of a card payment transaction between an acceptor and an acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.Transaction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.Transaction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.mmTransaction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.mmTransaction;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentTransaction38.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction38.mmObject();
 		}
 	};
+	protected CurrencyConversion3 currencyConversion;
 	/**
 	 * Details of the currency conversion.
 	 * <p>
@@ -221,8 +224,8 @@ public class AcceptorCurrencyConversionResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyExchange
-	 * Payment.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+	 * Payment.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,50 +246,74 @@ public class AcceptorCurrencyConversionResponse2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#CurrencyConversionResult
-	 * AcceptorCurrencyConversionResponse3.CurrencyConversionResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionResponse3.mmCurrencyConversionResult}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#CurrencyConversion
-	 * AcceptorCurrencyConversionResponse1.CurrencyConversion}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#mmCurrencyConversion
+	 * AcceptorCurrencyConversionResponse1.mmCurrencyConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyConversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> AcceptorCurrencyConversionResponse2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "CcyConvs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversion";
 			definition = "Details of the currency conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.CurrencyConversion;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.CurrencyConversionResult);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.mmCurrencyConversionResult);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.mmCurrencyConversion;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyConversion3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.Environment, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.Transaction,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.CurrencyConversion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.mmEnvironment, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.mmTransaction,
+						com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.mmCurrencyConversion);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV02.mmCurrencyConversionResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV02.CurrencyConversionResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCurrencyConversionResponse2";
 				definition = "Currency conversion outcome from the service provider.";
-				previousVersion_lazy = () -> AcceptorCurrencyConversionResponse1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponse3.mmObject());
+				previousVersion_lazy = () -> AcceptorCurrencyConversionResponse1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardPaymentEnvironment33 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment33 environment) {
+		this.environment = environment;
+	}
+
+	public CardPaymentTransaction38 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardPaymentTransaction38 transaction) {
+		this.transaction = transaction;
+	}
+
+	public CurrencyConversion3 getCurrencyConversion() {
+		return currencyConversion;
+	}
+
+	public void setCurrencyConversion(com.tools20022.repository.msg.CurrencyConversion3 currencyConversion) {
+		this.currencyConversion = currencyConversion;
 	}
 }

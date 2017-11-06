@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PoliticalExposureType1Choice#Code
- * PoliticalExposureType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PoliticalExposureType1Choice#mmCode
+ * PoliticalExposureType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PoliticalExposureType1Choice#Proprietary
- * PoliticalExposureType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PoliticalExposureType1Choice#mmProprietary
+ * PoliticalExposureType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PoliticalExposureType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PoliticalExposureType1Code code;
 	/**
 	 * Type of political exposure expressed as a code.
 	 * <p>
@@ -74,8 +75,8 @@ public class PoliticalExposureType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile#PoliticalExposureType
-	 * PersonProfile.PoliticalExposureType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile#mmPoliticalExposureType
+	 * PersonProfile.mmPoliticalExposureType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +95,21 @@ public class PoliticalExposureType1Choice {
 	 * definition} = "Type of political exposure expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmPoliticalExposureType;
 			componentContext_lazy = () -> PoliticalExposureType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.PoliticalExposureType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of political exposure expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PoliticalExposureType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Type of political exposure expressed as a proprietary code.
 	 * <p>
@@ -120,8 +122,8 @@ public class PoliticalExposureType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonProfile#PoliticalExposureType
-	 * PersonProfile.PoliticalExposureType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonProfile#mmPoliticalExposureType
+	 * PersonProfile.mmPoliticalExposureType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,32 +143,48 @@ public class PoliticalExposureType1Choice {
 	 * "Type of political exposure expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmPoliticalExposureType;
 			componentContext_lazy = () -> PoliticalExposureType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.PoliticalExposureType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of political exposure expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PoliticalExposureType1Choice.Code, com.tools20022.repository.choice.PoliticalExposureType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PoliticalExposureType1Choice.mmCode, com.tools20022.repository.choice.PoliticalExposureType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PoliticalExposureType1Choice";
 				definition = "Choice of formats for the specification of the type of political exposure.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PoliticalExposureType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(PoliticalExposureType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

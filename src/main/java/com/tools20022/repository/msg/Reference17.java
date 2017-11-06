@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference17#CollateralSubstitutionRequestIdentification
- * Reference17.CollateralSubstitutionRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference17#mmCollateralSubstitutionRequestIdentification
+ * Reference17.mmCollateralSubstitutionRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference17#CollateralSubstitutionResponseIdentification
- * Reference17.CollateralSubstitutionResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference17#mmCollateralSubstitutionResponseIdentification
+ * Reference17.mmCollateralSubstitutionResponseIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text collateralSubstitutionRequestIdentification;
 	/**
 	 * Identification of the collateral substitution request.
 	 * <p>
@@ -84,7 +85,7 @@ public class Reference17 {
 	 * definition} = "Identification of the collateral substitution request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference17.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class Reference17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Identification of the collateral substitution request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralSubstitutionResponseIdentification;
 	/**
 	 * Identification of the collateral substitution response.
 	 * <p>
@@ -123,7 +125,7 @@ public class Reference17 {
 	 * definition} = "Identification of the collateral substitution response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference17.mmObject();
 			isDerived = false;
@@ -131,8 +133,8 @@ public class Reference17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionResponseIdentification";
 			definition = "Identification of the collateral substitution response.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -140,13 +142,29 @@ public class Reference17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference17.CollateralSubstitutionRequestIdentification, com.tools20022.repository.msg.Reference17.CollateralSubstitutionResponseIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference17.mmCollateralSubstitutionRequestIdentification, com.tools20022.repository.msg.Reference17.mmCollateralSubstitutionResponseIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reference17";
 				definition = "Information related to a linked transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCollateralSubstitutionRequestIdentification() {
+		return collateralSubstitutionRequestIdentification;
+	}
+
+	public void setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
+		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
+	}
+
+	public Max35Text getCollateralSubstitutionResponseIdentification() {
+		return collateralSubstitutionResponseIdentification;
+	}
+
+	public void setCollateralSubstitutionResponseIdentification(Max35Text collateralSubstitutionResponseIdentification) {
+		this.collateralSubstitutionResponseIdentification = collateralSubstitutionResponseIdentification;
 	}
 }

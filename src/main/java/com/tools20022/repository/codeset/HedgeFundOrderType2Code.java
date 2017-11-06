@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#NonUnitized
- * HedgeFundOrderType2Code.NonUnitized}</li>
+ * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#mmNonUnitized
+ * HedgeFundOrderType2Code.mmNonUnitized}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#SidePocketComponent
- * HedgeFundOrderType2Code.SidePocketComponent}</li>
+ * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#mmSidePocketComponent
+ * HedgeFundOrderType2Code.mmSidePocketComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#BedAndBreakfast
- * HedgeFundOrderType2Code.BedAndBreakfast}</li>
+ * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#mmBedAndBreakfast
+ * HedgeFundOrderType2Code.mmBedAndBreakfast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#SidePocketOrder
- * HedgeFundOrderType2Code.SidePocketOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#mmSidePocketOrder
+ * HedgeFundOrderType2Code.mmSidePocketOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#Unitized
- * HedgeFundOrderType2Code.Unitized}</li>
+ * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#mmUnitized
+ * HedgeFundOrderType2Code.mmUnitized}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#TopUp
- * HedgeFundOrderType2Code.TopUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#mmTopUp
+ * HedgeFundOrderType2Code.mmTopUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#HoldBack
- * HedgeFundOrderType2Code.HoldBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.HedgeFundOrderType2Code#mmHoldBack
+ * HedgeFundOrderType2Code.mmHoldBack}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "NonUnitized"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonUnitized = new MMCode() {
+	public static final MMCode mmNonUnitized = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonUnitized";
@@ -119,7 +119,7 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "SidePocketComponent"</li>
 	 * </ul>
 	 */
-	public static final MMCode SidePocketComponent = new MMCode() {
+	public static final MMCode mmSidePocketComponent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketComponent";
@@ -142,7 +142,7 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "BedAndBreakfast"</li>
 	 * </ul>
 	 */
-	public static final MMCode BedAndBreakfast = new MMCode() {
+	public static final MMCode mmBedAndBreakfast = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BedAndBreakfast";
@@ -165,7 +165,7 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "SidePocketOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode SidePocketOrder = new MMCode() {
+	public static final MMCode mmSidePocketOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketOrder";
@@ -188,7 +188,7 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "Unitized"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unitized = new MMCode() {
+	public static final MMCode mmUnitized = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unitized";
@@ -211,7 +211,7 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "TopUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode TopUp = new MMCode() {
+	public static final MMCode mmTopUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUp";
@@ -234,7 +234,7 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "HoldBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode HoldBack = new MMCode() {
+	public static final MMCode mmHoldBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBack";
@@ -245,14 +245,14 @@ public class HedgeFundOrderType2Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NUNI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HedgeFundOrderType2Code";
 				definition = "Specifies the type of the investment fund order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HedgeFundOrderType2Code.NonUnitized, com.tools20022.repository.codeset.HedgeFundOrderType2Code.SidePocketComponent,
-						com.tools20022.repository.codeset.HedgeFundOrderType2Code.BedAndBreakfast, com.tools20022.repository.codeset.HedgeFundOrderType2Code.SidePocketOrder,
-						com.tools20022.repository.codeset.HedgeFundOrderType2Code.Unitized, com.tools20022.repository.codeset.HedgeFundOrderType2Code.TopUp, com.tools20022.repository.codeset.HedgeFundOrderType2Code.HoldBack);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HedgeFundOrderType2Code.mmNonUnitized, com.tools20022.repository.codeset.HedgeFundOrderType2Code.mmSidePocketComponent,
+						com.tools20022.repository.codeset.HedgeFundOrderType2Code.mmBedAndBreakfast, com.tools20022.repository.codeset.HedgeFundOrderType2Code.mmSidePocketOrder,
+						com.tools20022.repository.codeset.HedgeFundOrderType2Code.mmUnitized, com.tools20022.repository.codeset.HedgeFundOrderType2Code.mmTopUp, com.tools20022.repository.codeset.HedgeFundOrderType2Code.mmHoldBack);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

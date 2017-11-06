@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemParty2#OpeningDate
- * SystemParty2.OpeningDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemParty2#ClosingDate
- * SystemParty2.ClosingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemParty2#mmOpeningDate
+ * SystemParty2.mmOpeningDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemParty2#mmClosingDate
+ * SystemParty2.mmClosingDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate openingDate;
 	/**
 	 * Specifies the opening date of the party.
 	 * <p>
@@ -90,7 +91,7 @@ public class SystemParty2 {
 	 * definition} = "Specifies the opening date of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemParty2.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class SystemParty2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Specifies the opening date of the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate closingDate;
 	/**
 	 * Specifies the closing date of the party
 	 * <p>
@@ -129,7 +131,7 @@ public class SystemParty2 {
 	 * definition} = "Specifies the closing date of the party"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemParty2.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class SystemParty2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Specifies the closing date of the party";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class SystemParty2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemParty2.OpeningDate, com.tools20022.repository.msg.SystemParty2.ClosingDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemParty2.mmOpeningDate, com.tools20022.repository.msg.SystemParty2.mmClosingDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemParty2";
 				definition = "Provides the definition of a party within a system. \r\nA party shall denote any legal or organisational entity required in the system. \r\nThis entity shall store the parties from the first three levels: the system operator, the central securities depositaries, the participants of the central securities depositaries, the national central banks and payment banks.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(ISODate openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	public ISODate getClosingDate() {
+		return closingDate;
+	}
+
+	public void setClosingDate(ISODate closingDate) {
+		this.closingDate = closingDate;
 	}
 }

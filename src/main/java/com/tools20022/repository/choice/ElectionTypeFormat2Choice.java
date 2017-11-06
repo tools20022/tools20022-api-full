@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#Code
- * ElectionTypeFormat2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#mmCode
+ * ElectionTypeFormat2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#Proprietary
- * ElectionTypeFormat2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat2Choice#mmProprietary
+ * ElectionTypeFormat2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ElectionTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ElectionMovementType2Code code;
 	/**
 	 * Standard code to specify the effect on the holdings of electing a
 	 * corporate action option.
@@ -77,8 +78,8 @@ public class ElectionTypeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#ElectionType
-	 * CorporateActionElection.ElectionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmElectionType
+	 * CorporateActionElection.mmElectionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class ElectionTypeFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmElectionType;
 			componentContext_lazy = () -> ElectionTypeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.ElectionType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the effect on the holdings of electing a corporate action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ElectionMovementType2Code.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Proprietary identification of the type of election of a corporate action
 	 * option.
@@ -126,8 +128,8 @@ public class ElectionTypeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#ElectionType
-	 * CorporateActionElection.ElectionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmElectionType
+	 * CorporateActionElection.mmElectionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,32 +150,48 @@ public class ElectionTypeFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmElectionType;
 			componentContext_lazy = () -> ElectionTypeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.ElectionType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of election of a corporate action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionTypeFormat2Choice.Code, com.tools20022.repository.choice.ElectionTypeFormat2Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmCode, com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElectionTypeFormat2Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of election movement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ElectionMovementType2Code getCode() {
+		return code;
+	}
+
+	public void setCode(ElectionMovementType2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

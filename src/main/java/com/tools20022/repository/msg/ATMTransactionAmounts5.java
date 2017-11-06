@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts5#DisplayFlag
- * ATMTransactionAmounts5.DisplayFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts5#mmDisplayFlag
+ * ATMTransactionAmounts5.mmDisplayFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts5#MaximumAmount
- * ATMTransactionAmounts5.MaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts5#mmMaximumAmount
+ * ATMTransactionAmounts5.mmMaximumAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransactionAmounts5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator displayFlag;
 	/**
 	 * True if limits may be displayed on the ATM to the customer.
 	 * <p>
@@ -93,11 +94,11 @@ public class ATMTransactionAmounts5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#DisplayFlag
-	 * ATMTransactionAmounts4.DisplayFlag}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#mmDisplayFlag
+	 * ATMTransactionAmounts4.mmDisplayFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisplayFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisplayFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransactionAmounts5.mmObject();
 			isDerived = false;
@@ -105,12 +106,13 @@ public class ATMTransactionAmounts5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayFlag";
 			definition = "True if limits may be displayed on the ATM to the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.DisplayFlag;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmDisplayFlag;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount maximumAmount;
 	/**
 	 * Maximum amount allowed for deposit on the account.
 	 * <p>
@@ -140,11 +142,11 @@ public class ATMTransactionAmounts5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#AvailableAmount
-	 * ATMTransactionAmounts4.AvailableAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransactionAmounts4#mmAvailableAmount
+	 * ATMTransactionAmounts4.mmAvailableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransactionAmounts5.mmObject();
 			isDerived = false;
@@ -152,9 +154,9 @@ public class ATMTransactionAmounts5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount allowed for deposit on the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.AvailableAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmAvailableAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -162,8 +164,8 @@ public class ATMTransactionAmounts5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts5.DisplayFlag, com.tools20022.repository.msg.ATMTransactionAmounts5.MaximumAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts5.mmDisplayFlag, com.tools20022.repository.msg.ATMTransactionAmounts5.mmMaximumAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts5";
 				definition = "Deposit limits for the account.";
@@ -171,5 +173,21 @@ public class ATMTransactionAmounts5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getDisplayFlag() {
+		return displayFlag;
+	}
+
+	public void setDisplayFlag(TrueFalseIndicator displayFlag) {
+		this.displayFlag = displayFlag;
+	}
+
+	public ImpliedCurrencyAndAmount getMaximumAmount() {
+		return maximumAmount;
+	}
+
+	public void setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
+		this.maximumAmount = maximumAmount;
 	}
 }

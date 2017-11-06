@@ -40,15 +40,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#SubscriptionDetails
- * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.SubscriptionDetails}
+ * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#mmSubscriptionDetails
+ * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.
+ * mmSubscriptionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#mmRedemptionDetails
+ * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmRedemptionDetails}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#RedemptionDetails
- * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.RedemptionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#SwitchDetails
- * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.SwitchDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#mmSwitchDetails
+ * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSwitchDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SubscriptionExecution8 subscriptionDetails;
 	/**
 	 * Subscription order confirmation data.
 	 * <p>
@@ -106,21 +108,22 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	 * definition} = "Subscription order confirmation data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			businessComponentTrace_lazy = () -> SubscriptionExecution.mmObject();
+			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionDetails";
 			definition = "Subscription order confirmation data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SubscriptionExecution8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SubscriptionExecution8.mmObject();
 		}
 	};
+	protected RedemptionExecution11 redemptionDetails;
 	/**
 	 * Redemption order confirmation data.
 	 * <p>
@@ -152,21 +155,22 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	 * definition} = "Redemption order confirmation data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RedemptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRedemptionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			businessComponentTrace_lazy = () -> RedemptionExecution.mmObject();
+			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "RedDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionDetails";
 			definition = "Redemption order confirmation data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RedemptionExecution11.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RedemptionExecution11.mmObject();
 		}
 	};
+	protected SwitchExecution5 switchDetails;
 	/**
 	 * Switch order confirmation data.
 	 * <p>
@@ -198,34 +202,59 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	 * definition} = "Switch order confirmation data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SwitchDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSwitchDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			businessComponentTrace_lazy = () -> SwitchExecution.mmObject();
+			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchDetails";
 			definition = "Switch order confirmation data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SwitchExecution5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SwitchExecution5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.SubscriptionDetails,
-						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.RedemptionDetails, com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.SwitchDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSubscriptionDetails,
+						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmRedemptionDetails,
+						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSwitchDetails);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice";
 				definition = "Choice of subscription details executed, or redemption details executed, or switch order details executed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SubscriptionExecution8 getSubscriptionDetails() {
+		return subscriptionDetails;
+	}
+
+	public void setSubscriptionDetails(SubscriptionExecution8 subscriptionDetails) {
+		this.subscriptionDetails = subscriptionDetails;
+	}
+
+	public RedemptionExecution11 getRedemptionDetails() {
+		return redemptionDetails;
+	}
+
+	public void setRedemptionDetails(RedemptionExecution11 redemptionDetails) {
+		this.redemptionDetails = redemptionDetails;
+	}
+
+	public SwitchExecution5 getSwitchDetails() {
+		return switchDetails;
+	}
+
+	public void setSwitchDetails(SwitchExecution5 switchDetails) {
+		this.switchDetails = switchDetails;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#Identification
- * AccountIdentificationAndName3.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#mmIdentification
+ * AccountIdentificationAndName3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#Name
- * AccountIdentificationAndName3.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#mmName
+ * AccountIdentificationAndName3.mmName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentificationAndName3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccountIdentification1Choice identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -109,27 +110,28 @@ public class AccountIdentificationAndName3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#Identification
-	 * AccountIdentificationAndName5.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#mmIdentification
+	 * AccountIdentificationAndName5.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationAndName3.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentificationAndName3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName5.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName5.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
 		}
 	};
+	protected Max35Text name;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -144,8 +146,8 @@ public class AccountIdentificationAndName3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,24 +170,24 @@ public class AccountIdentificationAndName3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#Name
-	 * AccountIdentificationAndName5.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#mmName
+	 * AccountIdentificationAndName5.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> AccountIdentificationAndName3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName5.Name);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName5.mmName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -193,9 +195,9 @@ public class AccountIdentificationAndName3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName3.Identification, com.tools20022.repository.msg.AccountIdentificationAndName3.Name);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName3.mmIdentification, com.tools20022.repository.msg.AccountIdentificationAndName3.mmName);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentificationAndName3";
 				definition = "Identification of the account expressed with a name and an account number.";
@@ -203,5 +205,21 @@ public class AccountIdentificationAndName3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccountIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(CashAccountIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
 	}
 }

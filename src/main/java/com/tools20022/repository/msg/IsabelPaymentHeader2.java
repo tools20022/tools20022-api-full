@@ -37,34 +37,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#ActualSenderIdentification
- * IsabelPaymentHeader2.ActualSenderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmActualSenderIdentification
+ * IsabelPaymentHeader2.mmActualSenderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#SenderPKIIdentification
- * IsabelPaymentHeader2.SenderPKIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmSenderPKIIdentification
+ * IsabelPaymentHeader2.mmSenderPKIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#ContractIdentification
- * IsabelPaymentHeader2.ContractIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmContractIdentification
+ * IsabelPaymentHeader2.mmContractIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#PayloadCreationDate
- * IsabelPaymentHeader2.PayloadCreationDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#File
- * IsabelPaymentHeader2.File}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmPayloadCreationDate
+ * IsabelPaymentHeader2.mmPayloadCreationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmFile
+ * IsabelPaymentHeader2.mmFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#QualifiedTransactionType
- * IsabelPaymentHeader2.QualifiedTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmQualifiedTransactionType
+ * IsabelPaymentHeader2.mmQualifiedTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#UrgencyCode
- * IsabelPaymentHeader2.UrgencyCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#Enhanced
- * IsabelPaymentHeader2.Enhanced}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmUrgencyCode
+ * IsabelPaymentHeader2.mmUrgencyCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IsabelPaymentHeader2#mmEnhanced
+ * IsabelPaymentHeader2.mmEnhanced}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelPaymentHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max13AlphaNumericText actualSenderIdentification;
 	/**
 	 * Unique identification of the actual sender of the file.
 	 * <p>
@@ -107,7 +109,7 @@ public class IsabelPaymentHeader2 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -115,11 +117,12 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualSenderIdentification";
 			definition = "Unique identification of the actual sender of the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	protected Max13AlphaNumericText senderPKIIdentification;
 	/**
 	 * Unique identification of the public key identification user
 	 * identification of the sender of the file.
@@ -151,7 +154,7 @@ public class IsabelPaymentHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderPKIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderPKIIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -159,11 +162,12 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderPKIIdentification";
 			definition = "Unique identification of the public key identification user identification of the sender of the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	protected Max13AlphaNumericText contractIdentification;
 	/**
 	 * Administrative contract identification of the e-banking contract in which
 	 * context this payment has been sent (and as such should be validated and
@@ -196,7 +200,7 @@ public class IsabelPaymentHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -204,11 +208,12 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractIdentification";
 			definition = "Administrative contract identification of the e-banking contract in which context this payment has been sent (and as such should be validated and executed).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice payloadCreationDate;
 	/**
 	 * Date and time at which the file in the payload was actually created.
 	 * <p>
@@ -237,7 +242,7 @@ public class IsabelPaymentHeader2 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -245,12 +250,13 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadCreationDate";
 			definition = "Date and time at which the file in the payload was actually created.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected IsabelFile1 file;
 	/**
 	 * Characteristics of the file contained in the payload.
 	 * <p>
@@ -277,7 +283,7 @@ public class IsabelPaymentHeader2 {
 	 * definition} = "Characteristics of the file contained in the payload."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd File = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFile = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -285,12 +291,13 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "File";
 			definition = "Characteristics of the file contained in the payload.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelFile1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 		}
 	};
+	protected Max6Text qualifiedTransactionType;
 	/**
 	 * High level category of transactions provided in the payload file, such as
 	 * a salary payment.
@@ -321,7 +328,7 @@ public class IsabelPaymentHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QualifiedTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQualifiedTransactionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -329,11 +336,12 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedTransactionType";
 			definition = "High level category of transactions provided in the payload file, such as a salary payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected Priority4Code urgencyCode;
 	/**
 	 * Urgency level of file in the payload.
 	 * <p>
@@ -362,7 +370,7 @@ public class IsabelPaymentHeader2 {
 	 * definition} = "Urgency level of file in the payload."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UrgencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUrgencyCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -370,11 +378,12 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgencyCode";
 			definition = "Urgency level of file in the payload.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Priority4Code.mmObject();
 		}
 	};
+	protected IsabelEnhancedHeader1 enhanced;
 	/**
 	 * Enhanced parameters for an Isabel payment initiation file.
 	 * <p>
@@ -402,7 +411,7 @@ public class IsabelPaymentHeader2 {
 	 * "Enhanced parameters for an Isabel payment initiation file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Enhanced = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnhanced = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -410,25 +419,89 @@ public class IsabelPaymentHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enhanced";
 			definition = "Enhanced parameters for an Isabel payment initiation file.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelPaymentHeader2.ActualSenderIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.SenderPKIIdentification,
-						com.tools20022.repository.msg.IsabelPaymentHeader2.ContractIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.PayloadCreationDate, com.tools20022.repository.msg.IsabelPaymentHeader2.File,
-						com.tools20022.repository.msg.IsabelPaymentHeader2.QualifiedTransactionType, com.tools20022.repository.msg.IsabelPaymentHeader2.UrgencyCode, com.tools20022.repository.msg.IsabelPaymentHeader2.Enhanced);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelPaymentHeader2.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.mmSenderPKIIdentification,
+						com.tools20022.repository.msg.IsabelPaymentHeader2.mmContractIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.mmPayloadCreationDate, com.tools20022.repository.msg.IsabelPaymentHeader2.mmFile,
+						com.tools20022.repository.msg.IsabelPaymentHeader2.mmQualifiedTransactionType, com.tools20022.repository.msg.IsabelPaymentHeader2.mmUrgencyCode, com.tools20022.repository.msg.IsabelPaymentHeader2.mmEnhanced);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelPaymentHeader2";
 				definition = "Specifies the header information for a payment initiation file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max13AlphaNumericText getActualSenderIdentification() {
+		return actualSenderIdentification;
+	}
+
+	public void setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
+		this.actualSenderIdentification = actualSenderIdentification;
+	}
+
+	public Max13AlphaNumericText getSenderPKIIdentification() {
+		return senderPKIIdentification;
+	}
+
+	public void setSenderPKIIdentification(Max13AlphaNumericText senderPKIIdentification) {
+		this.senderPKIIdentification = senderPKIIdentification;
+	}
+
+	public Max13AlphaNumericText getContractIdentification() {
+		return contractIdentification;
+	}
+
+	public void setContractIdentification(Max13AlphaNumericText contractIdentification) {
+		this.contractIdentification = contractIdentification;
+	}
+
+	public DateAndDateTimeChoice getPayloadCreationDate() {
+		return payloadCreationDate;
+	}
+
+	public void setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
+		this.payloadCreationDate = payloadCreationDate;
+	}
+
+	public IsabelFile1 getFile() {
+		return file;
+	}
+
+	public void setFile(com.tools20022.repository.msg.IsabelFile1 file) {
+		this.file = file;
+	}
+
+	public Max6Text getQualifiedTransactionType() {
+		return qualifiedTransactionType;
+	}
+
+	public void setQualifiedTransactionType(Max6Text qualifiedTransactionType) {
+		this.qualifiedTransactionType = qualifiedTransactionType;
+	}
+
+	public Priority4Code getUrgencyCode() {
+		return urgencyCode;
+	}
+
+	public void setUrgencyCode(Priority4Code urgencyCode) {
+		this.urgencyCode = urgencyCode;
+	}
+
+	public IsabelEnhancedHeader1 getEnhanced() {
+		return enhanced;
+	}
+
+	public void setEnhanced(com.tools20022.repository.msg.IsabelEnhancedHeader1 enhanced) {
+		this.enhanced = enhanced;
 	}
 }

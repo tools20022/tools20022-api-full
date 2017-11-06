@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party associated with an order to buy or sell securities.
@@ -37,17 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderPartyRole#SecuritiesOrder
- * SecuritiesOrderPartyRole.SecuritiesOrder}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#SecuritiesOrderPartyRole
- * SecuritiesOrder.SecuritiesOrderPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderPartyRole#mmSecuritiesOrder
+ * SecuritiesOrderPartyRole.mmSecuritiesOrder}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -64,13 +56,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderOriginationTrader}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSecuritiesOrderPartyRole
+ * SecuritiesOrder.mmSecuritiesOrderPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesOrderPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.SecuritiesOrder> securitiesOrder;
 	/**
 	 * Specifies the order for which a party plays a role.
 	 * <p>
@@ -93,8 +95,8 @@ public class SecuritiesOrderPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#SecuritiesOrderPartyRole
-	 * SecuritiesOrder.SecuritiesOrderPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSecuritiesOrderPartyRole
+	 * SecuritiesOrder.mmSecuritiesOrderPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -118,7 +120,7 @@ public class SecuritiesOrderPartyRole extends Role {
 	 * definition} = "Specifies the order for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesOrderPartyRole.mmObject();
 			isDerived = false;
@@ -126,25 +128,33 @@ public class SecuritiesOrderPartyRole extends Role {
 			name = "SecuritiesOrder";
 			definition = "Specifies the order for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.SecuritiesOrderPartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrderPartyRole";
 				definition = "Role played by a party associated with an order to buy or sell securities.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.SecuritiesOrderPartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderPartyRole);
 				subType_lazy = () -> Arrays.asList(IntroducingFirm.mmObject(), EnteringFirm.mmObject(), OrderOriginationFirm.mmObject(), SponsoringFirm.mmObject(), OrderOriginationTrader.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderPartyRole.SecuritiesOrder);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderPartyRole.mmSecuritiesOrder);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesOrder> getSecuritiesOrder() {
+		return securitiesOrder;
+	}
+
+	public void setSecuritiesOrder(List<com.tools20022.repository.entity.SecuritiesOrder> securitiesOrder) {
+		this.securitiesOrder = securitiesOrder;
 	}
 }

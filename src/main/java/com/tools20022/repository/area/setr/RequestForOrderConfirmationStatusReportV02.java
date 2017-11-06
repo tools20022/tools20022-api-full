@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -77,21 +78,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#MessageIdentification
- * RequestForOrderConfirmationStatusReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#mmMessageIdentification
+ * RequestForOrderConfirmationStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#RequestDetails
- * RequestForOrderConfirmationStatusReportV02.RequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#mmRequestDetails
+ * RequestForOrderConfirmationStatusReportV02.mmRequestDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#Extension
- * RequestForOrderConfirmationStatusReportV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#mmExtension
+ * RequestForOrderConfirmationStatusReportV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#identifier
- * RequestForOrderConfirmationStatusReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.058.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestForOrderConfirmationStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies the message from a business
 	 * application standpoint.
@@ -138,22 +138,23 @@ public class RequestForOrderConfirmationStatusReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#MessageIdentification
-	 * RequestForOrderConfirmationStatusReportV01.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#mmMessageIdentification
+	 * RequestForOrderConfirmationStatusReportV01.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies the message from a business application standpoint. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.MessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<MessageAndBusinessReference10> requestDetails;
 	/**
 	 * Information to identify the order confirmation for which the status is
 	 * requested.
@@ -181,21 +182,22 @@ public class RequestForOrderConfirmationStatusReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#RequestDetails
-	 * RequestForOrderConfirmationStatusReportV01.RequestDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#mmRequestDetails
+	 * RequestForOrderConfirmationStatusReportV01.mmRequestDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
 			definition = "Information to identify the order confirmation for which the status is requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.RequestDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.mmRequestDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference10.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -222,46 +224,19 @@ public class RequestForOrderConfirmationStatusReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#Extension
-	 * RequestForOrderConfirmationStatusReportV01.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#mmExtension
+	 * RequestForOrderConfirmationStatusReportV01.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.Extension;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "058"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "058";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -276,11 +251,42 @@ public class RequestForOrderConfirmationStatusReportV02 {
 				rootElement = "Document";
 				xmlTag = "ReqForOrdrConfStsRpt";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.MessageIdentification,
-						com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.RequestDetails, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.mmRequestDetails, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "058";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public List<MessageAndBusinessReference10> getRequestDetails() {
+		return requestDetails;
+	}
+
+	public void setRequestDetails(List<MessageAndBusinessReference10> requestDetails) {
+		this.requestDetails = requestDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

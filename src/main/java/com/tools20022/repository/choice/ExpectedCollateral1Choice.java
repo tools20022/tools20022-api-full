@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExpectedCollateral1Choice#ExpectedCollateralDetails
- * ExpectedCollateral1Choice.ExpectedCollateralDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.ExpectedCollateral1Choice#mmExpectedCollateralDetails
+ * ExpectedCollateral1Choice.mmExpectedCollateralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExpectedCollateral1Choice#SegregatedIndependentAmount
- * ExpectedCollateral1Choice.SegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.ExpectedCollateral1Choice#mmSegregatedIndependentAmount
+ * ExpectedCollateral1Choice.mmSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,18 +52,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#ExpectedCollateralDueToB
- * MarginCallRequestV03.ExpectedCollateralDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmExpectedCollateralDueToB
+ * MarginCallRequestV03.mmExpectedCollateralDueToB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#ExpectedCollateralDueToA
- * MarginCallRequestV03.ExpectedCollateralDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallRequestV03#mmExpectedCollateralDueToA
+ * MarginCallRequestV03.mmExpectedCollateralDueToA}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExpectedCollateral1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExpectedCollateral1 expectedCollateralDetails;
 	/**
 	 * Provides the expected collateral type and direction for the variation
 	 * margin and optionaly the segregated independent amount.
@@ -122,28 +123,29 @@ public class ExpectedCollateral1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExpectedCollateral2Choice#ExpectedCollateralDetails
-	 * ExpectedCollateral2Choice.ExpectedCollateralDetails}</li>
+	 * {@linkplain com.tools20022.repository.choice.ExpectedCollateral2Choice#mmExpectedCollateralDetails
+	 * ExpectedCollateral2Choice.mmExpectedCollateralDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExpectedCollateralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExpectedCollateralDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExpectedCollateral1Choice.mmObject();
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
+			componentContext_lazy = () -> ExpectedCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdCollDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCollateralDetails";
 			definition = "Provides the expected collateral type and direction for the variation margin and optionaly the segregated independent amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral2Choice.ExpectedCollateralDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral2Choice.mmExpectedCollateralDetails);
 			maxOccurs = 1;
-			type_lazy = () -> ExpectedCollateral1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ExpectedCollateral1.mmObject();
 		}
 	};
+	protected ExpectedCollateralMovement1 segregatedIndependentAmount;
 	/**
 	 * Provides the expected collateral type and direction for the segregated
 	 * independent amount.
@@ -181,36 +183,36 @@ public class ExpectedCollateral1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ExpectedCollateral2Choice#SegregatedIndependentAmount
-	 * ExpectedCollateral2Choice.SegregatedIndependentAmount}</li>
+	 * {@linkplain com.tools20022.repository.choice.ExpectedCollateral2Choice#mmSegregatedIndependentAmount
+	 * ExpectedCollateral2Choice.mmSegregatedIndependentAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExpectedCollateral1Choice.mmObject();
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
+			componentContext_lazy = () -> ExpectedCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides the expected collateral type and direction for the segregated independent amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral2Choice.SegregatedIndependentAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral2Choice.mmSegregatedIndependentAmount);
 			maxOccurs = 1;
-			type_lazy = () -> ExpectedCollateralMovement1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ExpectedCollateralMovement1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral1Choice.ExpectedCollateralDetails, com.tools20022.repository.choice.ExpectedCollateral1Choice.SegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral1Choice.mmExpectedCollateralDetails, com.tools20022.repository.choice.ExpectedCollateral1Choice.mmSegregatedIndependentAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV03.mmExpectedCollateralDueToB, com.tools20022.repository.area.colr.MarginCallRequestV03.mmExpectedCollateralDueToA);
 				trace_lazy = () -> ExpectedCollateralType.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV03.ExpectedCollateralDueToB, com.tools20022.repository.area.colr.MarginCallRequestV03.ExpectedCollateralDueToA);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExpectedCollateral1Choice";
 				definition = "Provides the expected collateral type and direction for the variation margin and the segregated independent amount, or the segregated independent amount only.";
@@ -218,5 +220,21 @@ public class ExpectedCollateral1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExpectedCollateral1 getExpectedCollateralDetails() {
+		return expectedCollateralDetails;
+	}
+
+	public void setExpectedCollateralDetails(ExpectedCollateral1 expectedCollateralDetails) {
+		this.expectedCollateralDetails = expectedCollateralDetails;
+	}
+
+	public ExpectedCollateralMovement1 getSegregatedIndependentAmount() {
+		return segregatedIndependentAmount;
+	}
+
+	public void setSegregatedIndependentAmount(ExpectedCollateralMovement1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = segregatedIndependentAmount;
 	}
 }

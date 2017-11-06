@@ -39,22 +39,23 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule
- * FailedSettlementStatus1.ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule}</li>
+ * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule
+ * FailedSettlementStatus1.mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#Reason
- * FailedSettlementStatus1.Reason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#DataSourceScheme
- * FailedSettlementStatus1.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmReason
+ * FailedSettlementStatus1.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#NoSpecifiedReason
- * FailedSettlementStatus1.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmDataSourceScheme
+ * FailedSettlementStatus1.mmDataSourceScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmNoSpecifiedReason
+ * FailedSettlementStatus1.mmNoSpecifiedReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -87,6 +88,7 @@ import java.util.function.Supplier;
 public class FailedSettlementStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text reason;
 	/**
 	 * Reason for the failed settlement status.
 	 * <p>
@@ -99,8 +101,8 @@ public class FailedSettlementStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,27 +123,28 @@ public class FailedSettlementStatus1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#Reason
-	 * FailedSettlementStatus2Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#mmReason
+	 * FailedSettlementStatus2Choice.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> FailedSettlementStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the failed settlement status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementStatus2Choice.Reason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementStatus2Choice.mmReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the failed settlement
 	 * status.
@@ -177,28 +180,29 @@ public class FailedSettlementStatus1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#DataSourceScheme
-	 * FailedSettlementStatus2Choice.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#mmDataSourceScheme
+	 * FailedSettlementStatus2Choice.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FailedSettlementStatus1.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> FailedSettlementStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the failed settlement status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementStatus2Choice.DataSourceScheme);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementStatus2Choice.mmDataSourceScheme);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -211,8 +215,8 @@ public class FailedSettlementStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -234,24 +238,24 @@ public class FailedSettlementStatus1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#NoSpecifiedReason
-	 * FailedSettlementStatus2Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#mmNoSpecifiedReason
+	 * FailedSettlementStatus2Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> FailedSettlementStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementStatus2Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementStatus2Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
@@ -265,14 +269,14 @@ public class FailedSettlementStatus1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#Reason
-	 * FailedSettlementStatus1.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmReason
+	 * FailedSettlementStatus1.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#DataSourceScheme
-	 * FailedSettlementStatus1.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmDataSourceScheme
+	 * FailedSettlementStatus1.mmDataSourceScheme}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#NoSpecifiedReason
-	 * FailedSettlementStatus1.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmNoSpecifiedReason
+	 * FailedSettlementStatus1.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -292,24 +296,24 @@ public class FailedSettlementStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule = new MMXor() {
+	public static final MMXor mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule";
 			definition = "One and only one message element in the list (Reason, DataSourceScheme, NoSpecifiedReason) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedSettlementStatus1.Reason, com.tools20022.repository.msg.FailedSettlementStatus1.DataSourceScheme,
-					com.tools20022.repository.msg.FailedSettlementStatus1.NoSpecifiedReason);
 			messageComponent_lazy = () -> FailedSettlementStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedSettlementStatus1.mmReason, com.tools20022.repository.msg.FailedSettlementStatus1.mmDataSourceScheme,
+					com.tools20022.repository.msg.FailedSettlementStatus1.mmNoSpecifiedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedSettlementStatus1.Reason, com.tools20022.repository.msg.FailedSettlementStatus1.DataSourceScheme,
-						com.tools20022.repository.msg.FailedSettlementStatus1.NoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedSettlementStatus1.mmReason, com.tools20022.repository.msg.FailedSettlementStatus1.mmDataSourceScheme,
+						com.tools20022.repository.msg.FailedSettlementStatus1.mmNoSpecifiedReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -321,9 +325,33 @@ public class FailedSettlementStatus1 {
 				name = "FailedSettlementStatus1";
 				definition = "Reason for the failed settlement status.";
 				nextVersions_lazy = () -> Arrays.asList(FailedSettlementStatus2Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedSettlementStatus1.ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedSettlementStatus1.mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getReason() {
+		return reason;
+	}
+
+	public void setReason(Max350Text reason) {
+		this.reason = reason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
 	}
 }

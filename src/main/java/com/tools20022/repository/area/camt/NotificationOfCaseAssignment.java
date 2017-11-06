@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.CaseForwardingNotification;
 import com.tools20022.repository.msg.ReportHeader;
@@ -79,24 +80,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#Header
- * NotificationOfCaseAssignment.Header}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#mmHeader
+ * NotificationOfCaseAssignment.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#Case
- * NotificationOfCaseAssignment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#mmCase
+ * NotificationOfCaseAssignment.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#Assignment
- * NotificationOfCaseAssignment.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#mmAssignment
+ * NotificationOfCaseAssignment.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#Notification
- * NotificationOfCaseAssignment.Notification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#mmNotification
+ * NotificationOfCaseAssignment.mmNotification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#identifier
- * NotificationOfCaseAssignment.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.030.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationOfCaseAssignment {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportHeader header;
 	/**
 	 * Specifies generic information about the notification. The receiver of a
 	 * notification is necessarily the party which assigned the case to the
@@ -138,17 +138,18 @@ public class NotificationOfCaseAssignment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Specifies generic information about the notification.\nThe receiver of a notification is necessarily the party which assigned the case to the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -170,17 +171,18 @@ public class NotificationOfCaseAssignment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies the current assignment of the case.
 	 * 
@@ -208,17 +210,18 @@ public class NotificationOfCaseAssignment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the current assignment of the case. \n\nThe Assigner must be the emitter of the notification.\nThe Assignee must be another Party in the payment chain.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected CaseForwardingNotification notification;
 	/**
 	 * Information about the type of action taken.
 	 * <p>
@@ -242,42 +245,15 @@ public class NotificationOfCaseAssignment {
 	 * definition} = "Information about the type of action taken."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Notification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notification";
 			definition = "Information about the type of action taken.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseForwardingNotification.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "030"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "030";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -292,11 +268,50 @@ public class NotificationOfCaseAssignment {
 				xmlTag = "camt.030.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.030.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignment.Header, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.Case,
-						com.tools20022.repository.area.camt.NotificationOfCaseAssignment.Assignment, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.Notification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.NotificationOfCaseAssignment.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmHeader, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmCase,
+						com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmAssignment, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmNotification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "030";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportHeader getHeader() {
+		return header;
+	}
+
+	public void setHeader(ReportHeader header) {
+		this.header = header;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public CaseForwardingNotification getNotification() {
+		return notification;
+	}
+
+	public void setNotification(CaseForwardingNotification notification) {
+		this.notification = notification;
 	}
 }

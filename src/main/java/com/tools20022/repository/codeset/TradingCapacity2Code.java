@@ -30,18 +30,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#TradingPrincipal
- * TradingCapacity2Code.TradingPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#mmTradingPrincipal
+ * TradingCapacity2Code.mmTradingPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#TradingAgent
- * TradingCapacity2Code.TradingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#mmTradingAgent
+ * TradingCapacity2Code.mmTradingAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class TradingCapacity2Code {
 	 * "Broker is buying or selling securities for its own account."</li>
 	 * </ul>
 	 */
-	public static final MMCode TradingPrincipal = new MMCode() {
+	public static final MMCode mmTradingPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradingPrincipal";
@@ -113,7 +113,7 @@ public class TradingCapacity2Code {
 	 * definition} = "Broker is trading on behalf of another party."</li>
 	 * </ul>
 	 */
-	public static final MMCode TradingAgent = new MMCode() {
+	public static final MMCode mmTradingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradingAgent";
@@ -126,12 +126,12 @@ public class TradingCapacity2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacity2Code";
 				definition = "Specifies the role of a trading party in a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity2Code.TradingPrincipal, com.tools20022.repository.codeset.TradingCapacity2Code.TradingAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity2Code.mmTradingPrincipal, com.tools20022.repository.codeset.TradingCapacity2Code.mmTradingAgent);
 			}
 		});
 		return mmObject_lazy.get();

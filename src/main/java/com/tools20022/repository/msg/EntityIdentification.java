@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EntityIdentification#Type
- * EntityIdentification.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntityIdentification#mmType
+ * EntityIdentification.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntityIdentification#EntityIdentifier
- * EntityIdentification.EntityIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.EntityIdentification#mmEntityIdentifier
+ * EntityIdentification.mmEntityIdentifier}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EntityIdentification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4Text type;
 	/**
 	 * Type of identification, eg, BIC or URI.
 	 * <p>
@@ -87,7 +88,7 @@ public class EntityIdentification {
 	 * definition} = "Type of identification, eg, BIC or URI."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EntityIdentification.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class EntityIdentification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of identification, eg, BIC or URI.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected Max30Text entityIdentifier;
 	/**
 	 * Actual identification of the entity.
 	 * <p>
@@ -127,7 +129,7 @@ public class EntityIdentification {
 	 * definition} = "Actual identification of the entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntityIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EntityIdentification.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class EntityIdentification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntityIdentifier";
 			definition = "Actual identification of the entity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class EntityIdentification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntityIdentification.Type, com.tools20022.repository.msg.EntityIdentification.EntityIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntityIdentification.mmType, com.tools20022.repository.msg.EntityIdentification.mmEntityIdentifier);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EntityIdentification";
 				definition = "Identification of a business entity, eg, corporate or financial institution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4Text getType() {
+		return type;
+	}
+
+	public void setType(Max4Text type) {
+		this.type = type;
+	}
+
+	public Max30Text getEntityIdentifier() {
+		return entityIdentifier;
+	}
+
+	public void setEntityIdentifier(Max30Text entityIdentifier) {
+		this.entityIdentifier = entityIdentifier;
 	}
 }

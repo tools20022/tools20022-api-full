@@ -36,14 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AdditionalReference8#Reference
- * AdditionalReference8.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference8#ReferenceIssuer
- * AdditionalReference8.ReferenceIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference8#mmReference
+ * AdditionalReference8.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference8#MessageName
- * AdditionalReference8.MessageName}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference8#mmReferenceIssuer
+ * AdditionalReference8.mmReferenceIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference8#mmMessageName
+ * AdditionalReference8.mmMessageName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,104 +55,106 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#PreviousReference
- * SubscriptionBulkOrderConfirmationV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#mmPreviousReference
+ * SubscriptionBulkOrderConfirmationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#RelatedReference
- * SubscriptionBulkOrderConfirmationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#mmRelatedReference
+ * SubscriptionBulkOrderConfirmationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04#PreviousReference
- * RedemptionBulkOrderV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04#mmPreviousReference
+ * RedemptionBulkOrderV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04#PreviousReference
- * SubscriptionBulkOrderCancellationRequestV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04#mmPreviousReference
+ * SubscriptionBulkOrderCancellationRequestV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV04#PreviousReference
- * RedemptionOrderV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV04#mmPreviousReference
+ * RedemptionOrderV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04#PreviousReference
- * SubscriptionOrderCancellationRequestV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04#mmPreviousReference
+ * SubscriptionOrderCancellationRequestV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#PreviousReference
- * RedemptionBulkOrderConfirmationCancellationInstructionV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#RelatedReference
- * RedemptionBulkOrderConfirmationCancellationInstructionV02.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#PreviousReference
- * RedemptionBulkOrderConfirmationV04.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#RelatedReference
- * RedemptionBulkOrderConfirmationV04.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#PreviousReference
- * RedemptionBulkOrderCancellationRequestV04.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#PreviousReference
- * SwitchOrderConfirmationV04.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#RelatedReference
- * SwitchOrderConfirmationV04.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#PreviousReference
- * SubscriptionOrderConfirmationV04.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#RelatedReference
- * SubscriptionOrderConfirmationV04.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#PreviousReference
- * SubscriptionOrderConfirmationCancellationInstructionV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#RelatedReference
- * SubscriptionOrderConfirmationCancellationInstructionV02.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04#PreviousReference
- * SwitchOrderCancellationRequestV04.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#PreviousReference
- * SwitchOrderV04.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#PreviousReference
- * RedemptionOrderConfirmationCancellationInstructionV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#RelatedReference
- * RedemptionOrderConfirmationCancellationInstructionV02.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#PreviousReference
- * RedemptionOrderConfirmationV04.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#RelatedReference
- * RedemptionOrderConfirmationV04.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#PreviousReference
- * SubscriptionBulkOrderConfirmationCancellationInstructionV02.PreviousReference
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#mmPreviousReference
+ * RedemptionBulkOrderConfirmationCancellationInstructionV02.mmPreviousReference
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#RelatedReference
- * SubscriptionBulkOrderConfirmationCancellationInstructionV02.RelatedReference}
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#mmRelatedReference
+ * RedemptionBulkOrderConfirmationCancellationInstructionV02.mmRelatedReference}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04#PreviousReference
- * RedemptionOrderCancellationRequestV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#mmPreviousReference
+ * RedemptionBulkOrderConfirmationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV04#PreviousReference
- * SubscriptionBulkOrderV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#mmRelatedReference
+ * RedemptionBulkOrderConfirmationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#PreviousReference
- * SwitchOrderConfirmationCancellationInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#mmPreviousReference
+ * RedemptionBulkOrderCancellationRequestV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#RelatedReference
- * SwitchOrderConfirmationCancellationInstructionV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#mmPreviousReference
+ * SwitchOrderConfirmationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#PreviousReference
- * SubscriptionOrderV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#mmRelatedReference
+ * SwitchOrderConfirmationV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#mmPreviousReference
+ * SubscriptionOrderConfirmationV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#mmRelatedReference
+ * SubscriptionOrderConfirmationV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmPreviousReference
+ * SubscriptionOrderConfirmationCancellationInstructionV02.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmRelatedReference
+ * SubscriptionOrderConfirmationCancellationInstructionV02.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04#mmPreviousReference
+ * SwitchOrderCancellationRequestV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmPreviousReference
+ * SwitchOrderV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#mmPreviousReference
+ * RedemptionOrderConfirmationCancellationInstructionV02.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#mmRelatedReference
+ * RedemptionOrderConfirmationCancellationInstructionV02.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#mmPreviousReference
+ * RedemptionOrderConfirmationV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#mmRelatedReference
+ * RedemptionOrderConfirmationV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#mmPreviousReference
+ * SubscriptionBulkOrderConfirmationCancellationInstructionV02.
+ * mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#mmRelatedReference
+ * SubscriptionBulkOrderConfirmationCancellationInstructionV02.
+ * mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04#mmPreviousReference
+ * RedemptionOrderCancellationRequestV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV04#mmPreviousReference
+ * SubscriptionBulkOrderV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmPreviousReference
+ * SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmRelatedReference
+ * SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#mmPreviousReference
+ * SubscriptionOrderV04.mmPreviousReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -178,6 +181,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalReference8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reference;
 	/**
 	 * Message identification of a message. This reference was assigned by the
 	 * party issuing the message.
@@ -191,8 +195,8 @@ public class AdditionalReference8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,33 +219,34 @@ public class AdditionalReference8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference9#Reference
-	 * AdditionalReference9.Reference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference9#mmReference
+	 * AdditionalReference9.mmReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference3#Reference
-	 * AdditionalReference3.Reference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference3#mmReference
+	 * AdditionalReference3.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Message identification of a message. This reference was assigned by the party issuing the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.Reference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.Reference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.mmReference);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification113 referenceIssuer;
 	/**
 	 * Issuer of the reference.
 	 * <p>
@@ -255,8 +260,8 @@ public class AdditionalReference8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -277,33 +282,34 @@ public class AdditionalReference8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference9#ReferenceIssuer
-	 * AdditionalReference9.ReferenceIssuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference9#mmReferenceIssuer
+	 * AdditionalReference9.mmReferenceIssuer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference3#ReferenceIssuer
-	 * AdditionalReference3.ReferenceIssuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference3#mmReferenceIssuer
+	 * AdditionalReference3.mmReferenceIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RefIssr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Issuer of the reference.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.ReferenceIssuer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.ReferenceIssuer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.mmReferenceIssuer);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmReferenceIssuer;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	protected Max35Text messageName;
 	/**
 	 * Name of the message.
 	 * <p>
@@ -333,18 +339,18 @@ public class AdditionalReference8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference9#MessageName
-	 * AdditionalReference9.MessageName}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference9#mmMessageName
+	 * AdditionalReference9.mmMessageName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference3#MessageName
-	 * AdditionalReference3.MessageName}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference3#mmMessageName
+	 * AdditionalReference3.mmMessageName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalReference8.mmObject();
 			isDerived = false;
@@ -352,10 +358,10 @@ public class AdditionalReference8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.MessageName;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.MessageName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.mmMessageName);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmMessageName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -363,33 +369,57 @@ public class AdditionalReference8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.Reference, com.tools20022.repository.msg.AdditionalReference8.ReferenceIssuer,
-						com.tools20022.repository.msg.AdditionalReference8.MessageName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.mmReference, com.tools20022.repository.msg.AdditionalReference8.mmReferenceIssuer,
+						com.tools20022.repository.msg.AdditionalReference8.mmMessageName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionOrderV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.mmRelatedReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.mmRelatedReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderV04.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionOrderV04.mmPreviousReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.RelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV04.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04.PreviousReference, com.tools20022.repository.area.setr.RedemptionOrderV04.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04.PreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.RelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.RelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.PreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.RelatedReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.PreviousReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.RelatedReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.RelatedReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderV04.PreviousReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.RelatedReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.RelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.RelatedReference, com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.PreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.RelatedReference, com.tools20022.repository.area.setr.SubscriptionOrderV04.PreviousReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference8";
 				definition = "References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.";
-				previousVersion_lazy = () -> AdditionalReference3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AdditionalReference9.mmObject());
+				previousVersion_lazy = () -> AdditionalReference3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public PartyIdentification113 getReferenceIssuer() {
+		return referenceIssuer;
+	}
+
+	public void setReferenceIssuer(com.tools20022.repository.msg.PartyIdentification113 referenceIssuer) {
+		this.referenceIssuer = referenceIssuer;
+	}
+
+	public Max35Text getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(Max35Text messageName) {
+		this.messageName = messageName;
 	}
 }

@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#Accepted
- * UndertakingStatus3Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#mmAccepted
+ * UndertakingStatus3Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#NonConfirmation
- * UndertakingStatus3Code.NonConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#mmNonConfirmation
+ * UndertakingStatus3Code.mmNonConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#Rejected
- * UndertakingStatus3Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#mmRejected
+ * UndertakingStatus3Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#Withdrawn
- * UndertakingStatus3Code.Withdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#mmWithdrawn
+ * UndertakingStatus3Code.mmWithdrawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#CounterUndertakingAmountChange
- * UndertakingStatus3Code.CounterUndertakingAmountChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#mmCounterUndertakingAmountChange
+ * UndertakingStatus3Code.mmCounterUndertakingAmountChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#UndertakingAmountChange
- * UndertakingStatus3Code.UndertakingAmountChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus3Code#mmUndertakingAmountChange
+ * UndertakingStatus3Code.mmUndertakingAmountChange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class UndertakingStatus3Code extends UndertakingStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -116,7 +116,7 @@ public class UndertakingStatus3Code extends UndertakingStatusCode {
 	 * name} = "NonConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonConfirmation = new MMCode() {
+	public static final MMCode mmNonConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonConfirmation";
@@ -139,7 +139,7 @@ public class UndertakingStatus3Code extends UndertakingStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -162,7 +162,7 @@ public class UndertakingStatus3Code extends UndertakingStatusCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawn = new MMCode() {
+	public static final MMCode mmWithdrawn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
@@ -185,7 +185,7 @@ public class UndertakingStatus3Code extends UndertakingStatusCode {
 	 * name} = "CounterUndertakingAmountChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterUndertakingAmountChange = new MMCode() {
+	public static final MMCode mmCounterUndertakingAmountChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingAmountChange";
@@ -208,7 +208,7 @@ public class UndertakingStatus3Code extends UndertakingStatusCode {
 	 * name} = "UndertakingAmountChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingAmountChange = new MMCode() {
+	public static final MMCode mmUndertakingAmountChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmountChange";
@@ -219,14 +219,14 @@ public class UndertakingStatus3Code extends UndertakingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatus3Code";
 				definition = "Specifies the undertaking status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus3Code.Accepted, com.tools20022.repository.codeset.UndertakingStatus3Code.NonConfirmation,
-						com.tools20022.repository.codeset.UndertakingStatus3Code.Rejected, com.tools20022.repository.codeset.UndertakingStatus3Code.Withdrawn,
-						com.tools20022.repository.codeset.UndertakingStatus3Code.CounterUndertakingAmountChange, com.tools20022.repository.codeset.UndertakingStatus3Code.UndertakingAmountChange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus3Code.mmAccepted, com.tools20022.repository.codeset.UndertakingStatus3Code.mmNonConfirmation,
+						com.tools20022.repository.codeset.UndertakingStatus3Code.mmRejected, com.tools20022.repository.codeset.UndertakingStatus3Code.mmWithdrawn,
+						com.tools20022.repository.codeset.UndertakingStatus3Code.mmCounterUndertakingAmountChange, com.tools20022.repository.codeset.UndertakingStatus3Code.mmUndertakingAmountChange);
 				trace_lazy = () -> UndertakingStatusCode.mmObject();
 			}
 		});

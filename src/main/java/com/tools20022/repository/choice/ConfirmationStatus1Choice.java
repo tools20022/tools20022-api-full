@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.msg.ConfirmationRejectedStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status of the confirmation.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#ConfirmationRejected
- * ConfirmationStatus1Choice.ConfirmationRejected}</li>
+ * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#mmConfirmationRejected
+ * ConfirmationStatus1Choice.mmConfirmationRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#AmendmentRejected
- * ConfirmationStatus1Choice.AmendmentRejected}</li>
+ * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#mmAmendmentRejected
+ * ConfirmationStatus1Choice.mmAmendmentRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#Status
- * ConfirmationStatus1Choice.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#mmStatus
+ * ConfirmationStatus1Choice.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ConfirmationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ConfirmationRejectedStatus2> confirmationRejected;
 	/**
 	 * Status of the order confirmation is rejected.
 	 * <p>
@@ -79,8 +81,8 @@ public class ConfirmationStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConfirmationRejectedStatusReason
-	 * SecuritiesOrderStatus.ConfirmationRejectedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationRejectedStatusReason
+	 * SecuritiesOrderStatus.mmConfirmationRejectedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +101,22 @@ public class ConfirmationStatus1Choice {
 	 * definition} = "Status of the order confirmation is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ConfirmationRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConfirmationRejected = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
 			componentContext_lazy = () -> ConfirmationStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.ConfirmationRejectedStatusReason;
 			isDerived = false;
 			xmlTag = "ConfRjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationRejected";
 			definition = "Status of the order confirmation is rejected.";
-			minOccurs = 1;
 			maxOccurs = 10;
-			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
 		}
 	};
+	protected List<ConfirmationRejectedStatus2> amendmentRejected;
 	/**
 	 * Status of the order confirmation amendment is rejected.
 	 * <p>
@@ -146,21 +149,22 @@ public class ConfirmationStatus1Choice {
 	 * definition} = "Status of the order confirmation amendment is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmendmentRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmendmentRejected = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ConfirmationStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
+			componentContext_lazy = () -> ConfirmationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntRjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentRejected";
 			definition = "Status of the order confirmation amendment is rejected.";
-			minOccurs = 1;
 			maxOccurs = 10;
-			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
 		}
 	};
+	protected OrderConfirmationStatus1Code status;
 	/**
 	 * Status of the order confirmation is accepted or received or sent to next
 	 * party or there is a communication problem with next party. There is no
@@ -176,8 +180,8 @@ public class ConfirmationStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConfirmationStatus
-	 * SecuritiesOrderStatus.ConfirmationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConfirmationStatus
+	 * SecuritiesOrderStatus.mmConfirmationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,17 +202,17 @@ public class ConfirmationStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationStatus;
 			componentContext_lazy = () -> ConfirmationStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.ConfirmationStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the order confirmation is accepted or received or sent to next party or there is a communication problem with next party. There is no reason attached.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderConfirmationStatus1Code.mmObject();
 		}
 	};
@@ -216,15 +220,39 @@ public class ConfirmationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConfirmationStatus1Choice.ConfirmationRejected, com.tools20022.repository.choice.ConfirmationStatus1Choice.AmendmentRejected,
-						com.tools20022.repository.choice.ConfirmationStatus1Choice.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConfirmationStatus1Choice.mmConfirmationRejected, com.tools20022.repository.choice.ConfirmationStatus1Choice.mmAmendmentRejected,
+						com.tools20022.repository.choice.ConfirmationStatus1Choice.mmStatus);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationStatus1Choice";
 				definition = "Status of the confirmation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ConfirmationRejectedStatus2> getConfirmationRejected() {
+		return confirmationRejected;
+	}
+
+	public void setConfirmationRejected(List<ConfirmationRejectedStatus2> confirmationRejected) {
+		this.confirmationRejected = confirmationRejected;
+	}
+
+	public List<ConfirmationRejectedStatus2> getAmendmentRejected() {
+		return amendmentRejected;
+	}
+
+	public void setAmendmentRejected(List<ConfirmationRejectedStatus2> amendmentRejected) {
+		this.amendmentRejected = amendmentRejected;
+	}
+
+	public OrderConfirmationStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderConfirmationStatus1Code status) {
+		this.status = status;
 	}
 }

@@ -37,11 +37,11 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification7#Type
- * MarketIdentification7.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification7#mmType
+ * MarketIdentification7.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification7#Identification
- * MarketIdentification7.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification7#mmIdentification
+ * MarketIdentification7.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class MarketIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketTypeFormat2Choice type;
 	/**
 	 * Specifies the type of market.
 	 * <p>
@@ -79,8 +80,8 @@ public class MarketIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#Type
-	 * TradingMarket.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmType
+	 * TradingMarket.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +100,22 @@ public class MarketIdentification7 {
 	 * definition} = "Specifies the type of market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmType;
 			componentContext_lazy = () -> MarketIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of market.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarketTypeFormat2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarketTypeFormat2Choice.mmObject();
 		}
 	};
+	protected MarketIdentification2Choice identification;
 	/**
 	 * Identifies the market.
 	 * <p>
@@ -146,28 +148,28 @@ public class MarketIdentification7 {
 	 * definition} = "Identifies the market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarketIdentification7.mmObject();
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
+			componentContext_lazy = () -> MarketIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the market.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MarketIdentification2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification7.Type, com.tools20022.repository.msg.MarketIdentification7.Identification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification7.mmType, com.tools20022.repository.msg.MarketIdentification7.mmIdentification);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -181,5 +183,21 @@ public class MarketIdentification7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketTypeFormat2Choice getType() {
+		return type;
+	}
+
+	public void setType(MarketTypeFormat2Choice type) {
+		this.type = type;
+	}
+
+	public MarketIdentification2Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(MarketIdentification2Choice identification) {
+		this.identification = identification;
 	}
 }

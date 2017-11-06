@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes the constituents of the basket.
@@ -34,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BasketDescription3#ISIN
- * BasketDescription3.ISIN}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BasketDescription3#Index
- * BasketDescription3.Index}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BasketDescription3#mmISIN
+ * BasketDescription3.mmISIN}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BasketDescription3#mmIndex
+ * BasketDescription3.mmIndex}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BasketDescription3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ISINOct2015Identifier> iSIN;
 	/**
 	 * International Securities Identification Number (ISIN). A numbering system
 	 * designed by the United Nation's International Organisation for
@@ -81,8 +83,8 @@ public class BasketDescription3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,10 +105,10 @@ public class BasketDescription3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> BasketDescription3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,6 +118,7 @@ public class BasketDescription3 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrument58> index;
 	/**
 	 * Index on which the financial instrument is based.
 	 * <p>
@@ -127,8 +130,8 @@ public class BasketDescription3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Index
-	 * SecuritiesPricing.Index}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmIndex
+	 * SecuritiesPricing.mmIndex}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,32 +150,48 @@ public class BasketDescription3 {
 	 * definition} = "Index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Index = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmIndex;
 			componentContext_lazy = () -> BasketDescription3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Index;
 			isDerived = false;
 			xmlTag = "Indx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Index on which the financial instrument is based.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrument58.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument58.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasketDescription3.ISIN, com.tools20022.repository.msg.BasketDescription3.Index);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasketDescription3.mmISIN, com.tools20022.repository.msg.BasketDescription3.mmIndex);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BasketDescription3";
 				definition = "Describes the constituents of the basket.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ISINOct2015Identifier> getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(List<ISINOct2015Identifier> iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public List<FinancialInstrument58> getIndex() {
+		return index;
+	}
+
+	public void setIndex(List<com.tools20022.repository.msg.FinancialInstrument58> index) {
+		this.index = index;
 	}
 }

@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Set of characteristics that unambiguously identify the global invoice
@@ -43,41 +44,41 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#GroupIdentification
- * RequestGroupInformation1.GroupIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmGroupIdentification
+ * RequestGroupInformation1.mmGroupIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#CreationDateTime
- * RequestGroupInformation1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmCreationDateTime
+ * RequestGroupInformation1.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#Authorisation
- * RequestGroupInformation1.Authorisation}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmAuthorisation
+ * RequestGroupInformation1.mmAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#NumberOfInvoiceRequests
- * RequestGroupInformation1.NumberOfInvoiceRequests}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmNumberOfInvoiceRequests
+ * RequestGroupInformation1.mmNumberOfInvoiceRequests}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#TotalBulkInvoiceAmount
- * RequestGroupInformation1.TotalBulkInvoiceAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmTotalBulkInvoiceAmount
+ * RequestGroupInformation1.mmTotalBulkInvoiceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#Currency
- * RequestGroupInformation1.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmCurrency
+ * RequestGroupInformation1.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#FinancingAgreement
- * RequestGroupInformation1.FinancingAgreement}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmFinancingAgreement
+ * RequestGroupInformation1.mmFinancingAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#FinancingRequestor
- * RequestGroupInformation1.FinancingRequestor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmFinancingRequestor
+ * RequestGroupInformation1.mmFinancingRequestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#IntermediaryAgent
- * RequestGroupInformation1.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmIntermediaryAgent
+ * RequestGroupInformation1.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#FirstAgent
- * RequestGroupInformation1.FirstAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmFirstAgent
+ * RequestGroupInformation1.mmFirstAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#AgreementClauses
- * RequestGroupInformation1.AgreementClauses}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmAgreementClauses
+ * RequestGroupInformation1.mmAgreementClauses}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#AdditionalInformation
- * RequestGroupInformation1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmAdditionalInformation
+ * RequestGroupInformation1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -89,15 +90,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#RequestGroupInformation
- * InvoiceFinancingRequestV01.RequestGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#mmRequestGroupInformation
+ * InvoiceFinancingRequestV01.mmRequestGroupInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -114,6 +115,7 @@ import java.util.function.Supplier;
 public class RequestGroupInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text groupIdentification;
 	/**
 	 * Point to point reference assigned by the financing requestor to
 	 * unambiguously identify the invoice financing request message.
@@ -147,7 +149,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class RequestGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Point to point reference assigned by the financing requestor  to unambiguously identify the invoice financing request message.\n\nUsage: The financing requestor has to make sure that 'GroupIdentification' is unique for a pre-agreed period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time on which the invoice financing request was created.
 	 * <p>
@@ -188,7 +191,7 @@ public class RequestGroupInformation1 {
 	 * "Date and time on which the invoice financing request was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -196,11 +199,12 @@ public class RequestGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time on which the invoice financing request was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<Max128Text> authorisation;
 	/**
 	 * User identification or any user key that allows to check if the financing
 	 * requestor is allowed to ask for invoice financing.
@@ -219,8 +223,8 @@ public class RequestGroupInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#Authorisation
-	 * InvoiceFinancingAgreement.Authorisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAuthorisation
+	 * InvoiceFinancingAgreement.mmAuthorisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,20 +245,21 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Authorisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAuthorisation;
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.Authorisation;
 			isDerived = false;
 			xmlTag = "Authstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "User identification or any user key that allows to check if the financing requestor is allowed to ask for invoice financing.\n\nUsage: the content is not of a technical nature, but reflects the organisational structure at the requesting side.\nThe authorisation element can typically be used in case the financing requestor acts on behalf of one or more suppliers.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfInvoiceRequests;
 	/**
 	 * Specifies the number of single invoice financing requests included in the
 	 * bulk request message.
@@ -286,7 +291,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfInvoiceRequests = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfInvoiceRequests = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -294,11 +299,12 @@ public class RequestGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfInvoiceRequests";
 			definition = "Specifies the number of single invoice financing requests included in the bulk request message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalBulkInvoiceAmount;
 	/**
 	 * Total amount of the bulk invoice financing request. It is composed by the
 	 * sum of the total amounts of all invoices included in the financing
@@ -331,7 +337,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalBulkInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalBulkInvoiceAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -339,11 +345,12 @@ public class RequestGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBulkInvoiceAmount";
 			definition = "Total amount of the bulk invoice financing request. It is composed by the sum of the total amounts of all invoices included in the financing request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Reference currency of the invoice financing request.
 	 * <p>
@@ -371,7 +378,7 @@ public class RequestGroupInformation1 {
 	 * definition} = "Reference currency of the invoice financing request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -379,11 +386,12 @@ public class RequestGroupInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Reference currency of the invoice financing request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected Max350Text financingAgreement;
 	/**
 	 * Specifies the financing method related to invoice financing (eg
 	 * collection mandate).
@@ -397,8 +405,8 @@ public class RequestGroupInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#FinancingMethod
-	 * InvoiceFinancingAgreement.FinancingMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmFinancingMethod
+	 * InvoiceFinancingAgreement.mmFinancingMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -419,20 +427,21 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancingAgreement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancingAgreement = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmFinancingMethod;
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.FinancingMethod;
 			isDerived = false;
 			xmlTag = "FincgAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingAgreement";
 			definition = "Specifies the financing method related to invoice financing (eg collection mandate).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount6 financingRequestor;
 	/**
 	 * Party that requests the invoice financing, on behalf of a creditor.
 	 * <p>
@@ -466,21 +475,22 @@ public class RequestGroupInformation1 {
 	 * "Party that requests the invoice financing, on behalf of a creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancingRequestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancingRequestor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			businessComponentTrace_lazy = () -> FinancingRequestorRole.mmObject();
+			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgRqstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingRequestor";
 			definition = "Party that requests the invoice financing, on behalf of a creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification6 intermediaryAgent;
 	/**
 	 * Financial institution that receives the request from the financing
 	 * requestor and forwards it to the first agent for execution.
@@ -516,21 +526,22 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			businessComponentTrace_lazy = () -> IntermediaryAgentRole.mmObject();
+			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			definition = "Financial institution that receives the request from the financing requestor and forwards it to the first agent for execution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification6 firstAgent;
 	/**
 	 * Financial institution of financing requestor to which an invoice
 	 * financing request is addressed.
@@ -566,21 +577,22 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FirstAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			businessComponentTrace_lazy = () -> FirstAgentRole.mmObject();
+			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution of financing requestor to which an invoice financing request is addressed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AgreementClauses1> agreementClauses;
 	/**
 	 * Agreements between financing requestor and his bank concerning conditions
 	 * about the service of invoice financing, based on specific contractual
@@ -611,7 +623,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AgreementClauses = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgreementClauses = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -620,10 +632,11 @@ public class RequestGroupInformation1 {
 			name = "AgreementClauses";
 			definition = "Agreements between financing requestor and his bank concerning conditions about the service of invoice financing, based on specific contractual schemes.";
 			minOccurs = 0;
-			type_lazy = () -> AgreementClauses1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AgreementClauses1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation;
 	/**
 	 * Additional information about the financing request.
 	 * <p>
@@ -650,7 +663,7 @@ public class RequestGroupInformation1 {
 	 * definition} = "Additional information about the financing request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -659,23 +672,23 @@ public class RequestGroupInformation1 {
 			name = "AdditionalInformation";
 			definition = "Additional information about the financing request.";
 			minOccurs = 0;
-			type_lazy = () -> AdditionalInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.GroupIdentification, com.tools20022.repository.msg.RequestGroupInformation1.CreationDateTime,
-						com.tools20022.repository.msg.RequestGroupInformation1.Authorisation, com.tools20022.repository.msg.RequestGroupInformation1.NumberOfInvoiceRequests,
-						com.tools20022.repository.msg.RequestGroupInformation1.TotalBulkInvoiceAmount, com.tools20022.repository.msg.RequestGroupInformation1.Currency,
-						com.tools20022.repository.msg.RequestGroupInformation1.FinancingAgreement, com.tools20022.repository.msg.RequestGroupInformation1.FinancingRequestor,
-						com.tools20022.repository.msg.RequestGroupInformation1.IntermediaryAgent, com.tools20022.repository.msg.RequestGroupInformation1.FirstAgent, com.tools20022.repository.msg.RequestGroupInformation1.AgreementClauses,
-						com.tools20022.repository.msg.RequestGroupInformation1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.mmGroupIdentification, com.tools20022.repository.msg.RequestGroupInformation1.mmCreationDateTime,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmAuthorisation, com.tools20022.repository.msg.RequestGroupInformation1.mmNumberOfInvoiceRequests,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmTotalBulkInvoiceAmount, com.tools20022.repository.msg.RequestGroupInformation1.mmCurrency,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingAgreement, com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingRequestor,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmIntermediaryAgent, com.tools20022.repository.msg.RequestGroupInformation1.mmFirstAgent,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmAgreementClauses, com.tools20022.repository.msg.RequestGroupInformation1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.mmRequestGroupInformation);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.RequestGroupInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -689,5 +702,101 @@ public class RequestGroupInformation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getGroupIdentification() {
+		return groupIdentification;
+	}
+
+	public void setGroupIdentification(Max35Text groupIdentification) {
+		this.groupIdentification = groupIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public List<Max128Text> getAuthorisation() {
+		return authorisation;
+	}
+
+	public void setAuthorisation(List<Max128Text> authorisation) {
+		this.authorisation = authorisation;
+	}
+
+	public Max15NumericText getNumberOfInvoiceRequests() {
+		return numberOfInvoiceRequests;
+	}
+
+	public void setNumberOfInvoiceRequests(Max15NumericText numberOfInvoiceRequests) {
+		this.numberOfInvoiceRequests = numberOfInvoiceRequests;
+	}
+
+	public ActiveCurrencyAndAmount getTotalBulkInvoiceAmount() {
+		return totalBulkInvoiceAmount;
+	}
+
+	public void setTotalBulkInvoiceAmount(ActiveCurrencyAndAmount totalBulkInvoiceAmount) {
+		this.totalBulkInvoiceAmount = totalBulkInvoiceAmount;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public Max350Text getFinancingAgreement() {
+		return financingAgreement;
+	}
+
+	public void setFinancingAgreement(Max350Text financingAgreement) {
+		this.financingAgreement = financingAgreement;
+	}
+
+	public PartyIdentificationAndAccount6 getFinancingRequestor() {
+		return financingRequestor;
+	}
+
+	public void setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
+		this.financingRequestor = financingRequestor;
+	}
+
+	public FinancialInstitutionIdentification6 getIntermediaryAgent() {
+		return intermediaryAgent;
+	}
+
+	public void setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
+		this.intermediaryAgent = intermediaryAgent;
+	}
+
+	public FinancialInstitutionIdentification6 getFirstAgent() {
+		return firstAgent;
+	}
+
+	public void setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
+		this.firstAgent = firstAgent;
+	}
+
+	public List<AgreementClauses1> getAgreementClauses() {
+		return agreementClauses;
+	}
+
+	public void setAgreementClauses(List<com.tools20022.repository.msg.AgreementClauses1> agreementClauses) {
+		this.agreementClauses = agreementClauses;
+	}
+
+	public List<AdditionalInformation1> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

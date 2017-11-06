@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReason1Code#SuspendedByYourself
- * SuspendedStatusReason1Code.SuspendedByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReason1Code#mmSuspendedByYourself
+ * SuspendedStatusReason1Code.mmSuspendedByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReason1Code#SuspendedBySystem
- * SuspendedStatusReason1Code.SuspendedBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReason1Code#mmSuspendedBySystem
+ * SuspendedStatusReason1Code.mmSuspendedBySystem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class SuspendedStatusReason1Code extends SuspendedStatusReasonCode {
 	 * name} = "SuspendedByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspendedByYourself = new MMCode() {
+	public static final MMCode mmSuspendedByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspendedByYourself";
@@ -105,7 +105,7 @@ public class SuspendedStatusReason1Code extends SuspendedStatusReasonCode {
 	 * name} = "SuspendedBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspendedBySystem = new MMCode() {
+	public static final MMCode mmSuspendedBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspendedBySystem";
@@ -116,12 +116,12 @@ public class SuspendedStatusReason1Code extends SuspendedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUBY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SuspendedStatusReason1Code";
 				definition = "Specifies the reason the transaction/instruction is suspended.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SuspendedStatusReason1Code.SuspendedByYourself, com.tools20022.repository.codeset.SuspendedStatusReason1Code.SuspendedBySystem);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SuspendedStatusReason1Code.mmSuspendedByYourself, com.tools20022.repository.codeset.SuspendedStatusReason1Code.mmSuspendedBySystem);
 				trace_lazy = () -> SuspendedStatusReasonCode.mmObject();
 			}
 		});

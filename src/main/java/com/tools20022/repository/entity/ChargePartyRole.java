@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of a paymentof charges.
@@ -35,16 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChargePartyRole#Adjustment
- * ChargePartyRole.Adjustment}</li>
- * </ul>
- * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#ChargesPartyRole
- * Adjustment.ChargesPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.ChargePartyRole#mmAdjustment
+ * ChargePartyRole.mmAdjustment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -58,13 +52,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * ChargeRecipient}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargesPartyRole
+ * Adjustment.mmChargesPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChargePartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Adjustment> adjustment;
 	/**
 	 * Identifies the adjustment for which a party plays a role.
 	 * <p>
@@ -87,8 +91,8 @@ public class ChargePartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargesPartyRole
-	 * Adjustment.ChargesPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargesPartyRole
+	 * Adjustment.mmChargesPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -113,7 +117,7 @@ public class ChargePartyRole extends Role {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Adjustment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAdjustment = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ChargePartyRole.mmObject();
 			isDerived = false;
@@ -121,25 +125,33 @@ public class ChargePartyRole extends Role {
 			name = "Adjustment";
 			definition = "Identifies the adjustment for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargesPartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargesPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargePartyRole";
 				definition = "Role played by a party in the context of a paymentof charges.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Adjustment.ChargesPartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Adjustment.mmChargesPartyRole);
 				subType_lazy = () -> Arrays.asList(ChargeAccountAgent.mmObject(), ChargeAgent.mmObject(), ChargeBearer.mmObject(), ChargeRecipient.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChargePartyRole.Adjustment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChargePartyRole.mmAdjustment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Adjustment> getAdjustment() {
+		return adjustment;
+	}
+
+	public void setAdjustment(List<com.tools20022.repository.entity.Adjustment> adjustment) {
+		this.adjustment = adjustment;
 	}
 }

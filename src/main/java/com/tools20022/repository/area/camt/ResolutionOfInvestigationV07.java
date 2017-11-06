@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -114,36 +115,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#Assignment
- * ResolutionOfInvestigationV07.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmAssignment
+ * ResolutionOfInvestigationV07.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#ResolvedCase
- * ResolutionOfInvestigationV07.ResolvedCase}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmResolvedCase
+ * ResolutionOfInvestigationV07.mmResolvedCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#Status
- * ResolutionOfInvestigationV07.Status}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmStatus
+ * ResolutionOfInvestigationV07.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#CancellationDetails
- * ResolutionOfInvestigationV07.CancellationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmCancellationDetails
+ * ResolutionOfInvestigationV07.mmCancellationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#StatementDetails
- * ResolutionOfInvestigationV07.StatementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmStatementDetails
+ * ResolutionOfInvestigationV07.mmStatementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#CorrectionTransaction
- * ResolutionOfInvestigationV07.CorrectionTransaction}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmCorrectionTransaction
+ * ResolutionOfInvestigationV07.mmCorrectionTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#ResolutionRelatedInformation
- * ResolutionOfInvestigationV07.ResolutionRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmResolutionRelatedInformation
+ * ResolutionOfInvestigationV07.mmResolutionRelatedInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#SupplementaryData
- * ResolutionOfInvestigationV07.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmSupplementaryData
+ * ResolutionOfInvestigationV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#identifier
- * ResolutionOfInvestigationV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.029.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -163,6 +162,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResolutionOfInvestigationV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -190,22 +190,23 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#Assignment
-	 * ResolutionOfInvestigationV06.Assignment}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmAssignment
+	 * ResolutionOfInvestigationV06.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.Assignment;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmAssignment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 resolvedCase;
 	/**
 	 * Identifies a resolved case.
 	 * <p>
@@ -228,22 +229,23 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#ResolvedCase
-	 * ResolutionOfInvestigationV06.ResolvedCase}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmResolvedCase
+	 * ResolutionOfInvestigationV06.mmResolvedCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ResolvedCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResolvedCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RslvdCase";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolvedCase";
 			definition = "Identifies a resolved case.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.ResolvedCase;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmResolvedCase;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected InvestigationStatus3Choice status;
 	/**
 	 * Indicates the status of the investigation.
 	 * <p>
@@ -268,22 +270,23 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#Status
-	 * ResolutionOfInvestigationV06.Status}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmStatus
+	 * ResolutionOfInvestigationV06.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Status = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates the status of the investigation.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.Status;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestigationStatus3Choice.mmObject();
 		}
 	};
+	protected List<UnderlyingTransaction17> cancellationDetails;
 	/**
 	 * Specifies the details of the underlying transactions being cancelled.
 	 * <p>
@@ -309,21 +312,22 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#CancellationDetails
-	 * ResolutionOfInvestigationV06.CancellationDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmCancellationDetails
+	 * ResolutionOfInvestigationV06.mmCancellationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationDetails";
 			definition = "Specifies the details of the underlying transactions being cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.CancellationDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmCancellationDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> UnderlyingTransaction17.mmObject();
 		}
 	};
+	protected StatementResolutionEntry2 statementDetails;
 	/**
 	 * Details on the underlying statement entry.
 	 * <p>
@@ -348,22 +352,23 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#StatementDetails
-	 * ResolutionOfInvestigationV06.StatementDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmStatementDetails
+	 * ResolutionOfInvestigationV06.mmStatementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDetails";
 			definition = "Details on the underlying statement entry.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.StatementDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmStatementDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementResolutionEntry2.mmObject();
 		}
 	};
+	protected CorrectiveTransaction2Choice correctionTransaction;
 	/**
 	 * References a transaction initiated to fix the case under investigation.
 	 * <p>
@@ -390,22 +395,23 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#CorrectionTransaction
-	 * ResolutionOfInvestigationV06.CorrectionTransaction}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmCorrectionTransaction
+	 * ResolutionOfInvestigationV06.mmCorrectionTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorrectionTransaction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorrectionTransaction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CrrctnTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectionTransaction";
 			definition = "References a transaction initiated to fix the case under investigation.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.CorrectionTransaction;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmCorrectionTransaction;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorrectiveTransaction2Choice.mmObject();
 		}
 	};
+	protected ResolutionInformation1 resolutionRelatedInformation;
 	/**
 	 * Reference of a return or a reversal initiated to fix the case under
 	 * investigation as part of the resolution.
@@ -433,22 +439,23 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#ResolutionRelatedInformation
-	 * ResolutionOfInvestigationV06.ResolutionRelatedInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmResolutionRelatedInformation
+	 * ResolutionOfInvestigationV06.mmResolutionRelatedInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ResolutionRelatedInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResolutionRelatedInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RsltnRltdInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolutionRelatedInformation";
 			definition = "Reference of a return or a reversal initiated to fix the case under investigation as part of the resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.ResolutionRelatedInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmResolutionRelatedInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ResolutionInformation1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -476,46 +483,19 @@ public class ResolutionOfInvestigationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#SupplementaryData
-	 * ResolutionOfInvestigationV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmSupplementaryData
+	 * ResolutionOfInvestigationV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "029"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "029";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -530,13 +510,84 @@ public class ResolutionOfInvestigationV07 {
 				rootElement = "Document";
 				xmlTag = "RsltnOfInvstgtn";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.Assignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.ResolvedCase,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.Status, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.CancellationDetails,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.StatementDetails, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.CorrectionTransaction,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.ResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmResolvedCase,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmStatus, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmCancellationDetails,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmStatementDetails, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmCorrectionTransaction,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "029";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getResolvedCase() {
+		return resolvedCase;
+	}
+
+	public void setResolvedCase(Case3 resolvedCase) {
+		this.resolvedCase = resolvedCase;
+	}
+
+	public InvestigationStatus3Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(InvestigationStatus3Choice status) {
+		this.status = status;
+	}
+
+	public List<UnderlyingTransaction17> getCancellationDetails() {
+		return cancellationDetails;
+	}
+
+	public void setCancellationDetails(List<UnderlyingTransaction17> cancellationDetails) {
+		this.cancellationDetails = cancellationDetails;
+	}
+
+	public StatementResolutionEntry2 getStatementDetails() {
+		return statementDetails;
+	}
+
+	public void setStatementDetails(StatementResolutionEntry2 statementDetails) {
+		this.statementDetails = statementDetails;
+	}
+
+	public CorrectiveTransaction2Choice getCorrectionTransaction() {
+		return correctionTransaction;
+	}
+
+	public void setCorrectionTransaction(CorrectiveTransaction2Choice correctionTransaction) {
+		this.correctionTransaction = correctionTransaction;
+	}
+
+	public ResolutionInformation1 getResolutionRelatedInformation() {
+		return resolutionRelatedInformation;
+	}
+
+	public void setResolutionRelatedInformation(ResolutionInformation1 resolutionRelatedInformation) {
+		this.resolutionRelatedInformation = resolutionRelatedInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

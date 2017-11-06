@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ShortPositionsReportDetails1#ParticipantIdentification
- * ShortPositionsReportDetails1.ParticipantIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ShortPositionsReportDetails1#mmParticipantIdentification
+ * ShortPositionsReportDetails1.mmParticipantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ShortPositionsReportDetails1#ParticipantAccount
- * ShortPositionsReportDetails1.ParticipantAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.ShortPositionsReportDetails1#mmParticipantAccount
+ * ShortPositionsReportDetails1.mmParticipantAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ShortPositionsReportDetails1#ShortPositionAmount
- * ShortPositionsReportDetails1.ShortPositionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ShortPositionsReportDetails1#mmShortPositionAmount
+ * ShortPositionsReportDetails1.mmShortPositionAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ShortPositionsReportDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BranchAndFinancialInstitutionIdentification5 participantIdentification;
 	/**
 	 * Identification of participant account.
 	 * <p>
@@ -89,7 +90,7 @@ public class ShortPositionsReportDetails1 {
 	 * definition} = "Identification of participant account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
@@ -97,12 +98,13 @@ public class ShortPositionsReportDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Identification of participant account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected CashAccount24 participantAccount;
 	/**
 	 * Information about participant account number.
 	 * <p>
@@ -129,7 +131,7 @@ public class ShortPositionsReportDetails1 {
 	 * definition} = "Information about participant account number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
@@ -137,12 +139,13 @@ public class ShortPositionsReportDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantAccount";
 			definition = "Information about participant account number.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount shortPositionAmount;
 	/**
 	 * Information about participant account balance.
 	 * <p>
@@ -171,7 +174,7 @@ public class ShortPositionsReportDetails1 {
 	 * definition} = "Information about participant account balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortPositionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortPositionAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
@@ -179,8 +182,8 @@ public class ShortPositionsReportDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortPositionAmount";
 			definition = "Information about participant account balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -188,14 +191,38 @@ public class ShortPositionsReportDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShortPositionsReportDetails1.ParticipantIdentification, com.tools20022.repository.msg.ShortPositionsReportDetails1.ParticipantAccount,
-						com.tools20022.repository.msg.ShortPositionsReportDetails1.ShortPositionAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShortPositionsReportDetails1.mmParticipantIdentification, com.tools20022.repository.msg.ShortPositionsReportDetails1.mmParticipantAccount,
+						com.tools20022.repository.msg.ShortPositionsReportDetails1.mmShortPositionAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ShortPositionsReportDetails1";
 				definition = "Information about short positions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getParticipantIdentification() {
+		return participantIdentification;
+	}
+
+	public void setParticipantIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 participantIdentification) {
+		this.participantIdentification = participantIdentification;
+	}
+
+	public CashAccount24 getParticipantAccount() {
+		return participantAccount;
+	}
+
+	public void setParticipantAccount(com.tools20022.repository.msg.CashAccount24 participantAccount) {
+		this.participantAccount = participantAccount;
+	}
+
+	public ActiveCurrencyAndAmount getShortPositionAmount() {
+		return shortPositionAmount;
+	}
+
+	public void setShortPositionAmount(ActiveCurrencyAndAmount shortPositionAmount) {
+		this.shortPositionAmount = shortPositionAmount;
 	}
 }

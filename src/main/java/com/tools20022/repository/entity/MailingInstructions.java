@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MailingInstructions#MailingIndicator
- * MailingInstructions.MailingIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.MailingInstructions#mmMailingIndicator
+ * MailingInstructions.mmMailingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MailingInstructions#RegistrationAddressIndicator
- * MailingInstructions.RegistrationAddressIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.MailingInstructions#mmRegistrationAddressIndicator
+ * MailingInstructions.mmRegistrationAddressIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MailingInstructions#RelatedPostalAddress
- * MailingInstructions.RelatedPostalAddress}</li>
+ * {@linkplain com.tools20022.repository.entity.MailingInstructions#mmRelatedPostalAddress
+ * MailingInstructions.mmRelatedPostalAddress}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#MailingInstructions
- * PostalAddress.MailingInstructions}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
+ * PostalAddress.mmMailingInstructions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MailingInstructions {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator mailingIndicator;
 	/**
 	 * Indicates whether mail should be sent to an address.
 	 * <p>
@@ -84,22 +85,22 @@ public class MailingInstructions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress3#MailingIndicator
-	 * PostalAddress3.MailingIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#MailingIndicator
-	 * PostalAddress21.MailingIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MailingInstructions
 	 * MailingInstructions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress3#mmMailingIndicator
+	 * PostalAddress3.mmMailingIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmMailingIndicator
+	 * PostalAddress21.mmMailingIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -111,19 +112,20 @@ public class MailingInstructions {
 	 * definition} = "Indicates whether mail should be sent to an address."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MailingIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMailingIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress3.MailingIndicator, com.tools20022.repository.msg.PostalAddress21.MailingIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress3.mmMailingIndicator, com.tools20022.repository.msg.PostalAddress21.mmMailingIndicator);
 			elementContext_lazy = () -> MailingInstructions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MailingIndicator";
 			definition = "Indicates whether mail should be sent to an address.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator registrationAddressIndicator;
 	/**
 	 * Indicates whether the address is the official address of the party.
 	 * <p>
@@ -134,22 +136,22 @@ public class MailingInstructions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress3#RegistrationAddressIndicator
-	 * PostalAddress3.RegistrationAddressIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#RegistrationAddressIndicator
-	 * PostalAddress21.RegistrationAddressIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MailingInstructions
 	 * MailingInstructions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress3#mmRegistrationAddressIndicator
+	 * PostalAddress3.mmRegistrationAddressIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress21#mmRegistrationAddressIndicator
+	 * PostalAddress21.mmRegistrationAddressIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -162,19 +164,20 @@ public class MailingInstructions {
 	 * "Indicates whether the address is the official address of the party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RegistrationAddressIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRegistrationAddressIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress3.RegistrationAddressIndicator, com.tools20022.repository.msg.PostalAddress21.RegistrationAddressIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress3.mmRegistrationAddressIndicator, com.tools20022.repository.msg.PostalAddress21.mmRegistrationAddressIndicator);
 			elementContext_lazy = () -> MailingInstructions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RegistrationAddressIndicator";
 			definition = "Indicates whether the address is the official address of the party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PostalAddress relatedPostalAddress;
 	/**
 	 * Postal address for which mailing instructions are specified.
 	 * <p>
@@ -183,8 +186,8 @@ public class MailingInstructions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#MailingInstructions
-	 * PostalAddress.MailingInstructions}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
+	 * PostalAddress.mmMailingInstructions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -209,33 +212,57 @@ public class MailingInstructions {
 	 * "Postal address for which mailing instructions are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedPostalAddress = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedPostalAddress = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MailingInstructions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedPostalAddress";
 			definition = "Postal address for which mailing instructions are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PostalAddress.MailingInstructions;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmMailingInstructions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MailingInstructions";
 				definition = "Characteristics of an address.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.MailingInstructions);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MailingInstructions.MailingIndicator, com.tools20022.repository.entity.MailingInstructions.RegistrationAddressIndicator,
-						com.tools20022.repository.entity.MailingInstructions.RelatedPostalAddress);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmMailingInstructions);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MailingInstructions.mmMailingIndicator, com.tools20022.repository.entity.MailingInstructions.mmRegistrationAddressIndicator,
+						com.tools20022.repository.entity.MailingInstructions.mmRelatedPostalAddress);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getMailingIndicator() {
+		return mailingIndicator;
+	}
+
+	public void setMailingIndicator(YesNoIndicator mailingIndicator) {
+		this.mailingIndicator = mailingIndicator;
+	}
+
+	public YesNoIndicator getRegistrationAddressIndicator() {
+		return registrationAddressIndicator;
+	}
+
+	public void setRegistrationAddressIndicator(YesNoIndicator registrationAddressIndicator) {
+		this.registrationAddressIndicator = registrationAddressIndicator;
+	}
+
+	public PostalAddress getRelatedPostalAddress() {
+		return relatedPostalAddress;
+	}
+
+	public void setRelatedPostalAddress(com.tools20022.repository.entity.PostalAddress relatedPostalAddress) {
+		this.relatedPostalAddress = relatedPostalAddress;
 	}
 }

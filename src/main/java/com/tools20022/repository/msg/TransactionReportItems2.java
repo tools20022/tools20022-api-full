@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Detailed description of the items that correspond to the parameters set in a
@@ -37,49 +38,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#TransactionIdentification
- * TransactionReportItems2.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmTransactionIdentification
+ * TransactionReportItems2.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#TSUBaselineIdentification
- * TransactionReportItems2.TSUBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmTSUBaselineIdentification
+ * TransactionReportItems2.mmTSUBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#TransactionStatus
- * TransactionReportItems2.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmTransactionStatus
+ * TransactionReportItems2.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#UserTransactionReference
- * TransactionReportItems2.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmUserTransactionReference
+ * TransactionReportItems2.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#PurchaseOrderReference
- * TransactionReportItems2.PurchaseOrderReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionReportItems2#Buyer
- * TransactionReportItems2.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionReportItems2#Seller
- * TransactionReportItems2.Seller}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmPurchaseOrderReference
+ * TransactionReportItems2.mmPurchaseOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#BuyerBank
- * TransactionReportItems2.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmBuyer
+ * TransactionReportItems2.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#BuyerBankCountry
- * TransactionReportItems2.BuyerBankCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmSeller
+ * TransactionReportItems2.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#SellerBank
- * TransactionReportItems2.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmBuyerBank
+ * TransactionReportItems2.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#SellerBankCountry
- * TransactionReportItems2.SellerBankCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmBuyerBankCountry
+ * TransactionReportItems2.mmBuyerBankCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#OutstandingAmount
- * TransactionReportItems2.OutstandingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmSellerBank
+ * TransactionReportItems2.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#PendingRequestForAction
- * TransactionReportItems2.PendingRequestForAction}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmSellerBankCountry
+ * TransactionReportItems2.mmSellerBankCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmOutstandingAmount
+ * TransactionReportItems2.mmOutstandingAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportItems2#mmPendingRequestForAction
+ * TransactionReportItems2.mmPendingRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionReportItems2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique identification assigned by the TSU to the transaction. This
 	 * identification is to be used in any communication between the parties and
@@ -126,7 +130,7 @@ public class TransactionReportItems2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -134,11 +138,12 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the TSU to the transaction.\nThis identification is to be used in any communication between the parties and with the TSU.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DocumentIdentification3 tSUBaselineIdentification;
 	/**
 	 * Unique Identification assigned by the TSU to the baseline included in the
 	 * transaction.
@@ -169,7 +174,7 @@ public class TransactionReportItems2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TSUBaselineIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTSUBaselineIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -177,12 +182,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TSUBaselineIdentification";
 			definition = "Unique Identification assigned by the TSU to the baseline included in the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification3.mmObject();
 		}
 	};
+	protected TransactionStatus1 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -210,7 +216,7 @@ public class TransactionReportItems2 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -218,12 +224,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference;
 	/**
 	 * Reference to the transaction for each financial institution which is a
 	 * party to the transaction.
@@ -254,7 +261,7 @@ public class TransactionReportItems2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UserTransactionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUserTransactionReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -262,12 +269,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			minOccurs = 1;
 			maxOccurs = 2;
-			type_lazy = () -> DocumentIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
 		}
 	};
+	protected DocumentIdentification7 purchaseOrderReference;
 	/**
 	 * Reference to the purchase order of the underlying transaction.
 	 * <p>
@@ -296,7 +304,7 @@ public class TransactionReportItems2 {
 	 * "Reference to the purchase order of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PurchaseOrderReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -304,12 +312,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
+	protected PartyIdentification9 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -337,7 +346,7 @@ public class TransactionReportItems2 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -345,12 +354,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected PartyIdentification9 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -378,7 +388,7 @@ public class TransactionReportItems2 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Seller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -386,12 +396,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected BICIdentification1 buyerBank;
 	/**
 	 * Financial institution of the buyer.
 	 * <p>
@@ -418,7 +429,7 @@ public class TransactionReportItems2 {
 	 * definition} = "Financial institution of the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BuyerBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyerBank = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -426,12 +437,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "Financial institution of the buyer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	protected CountryCode buyerBankCountry;
 	/**
 	 * Country of the buyer bank.
 	 * <p>
@@ -459,7 +471,7 @@ public class TransactionReportItems2 {
 	 * definition} = "Country of the buyer bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BuyerBankCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBuyerBankCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -467,11 +479,12 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankCountry";
 			definition = "Country of the buyer bank.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected BICIdentification1 sellerBank;
 	/**
 	 * Financial institution of the seller.
 	 * <p>
@@ -498,7 +511,7 @@ public class TransactionReportItems2 {
 	 * definition} = "Financial institution of the seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SellerBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSellerBank = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -506,12 +519,13 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "Financial institution of the seller.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	protected CountryCode sellerBankCountry;
 	/**
 	 * Country of the seller bank.
 	 * <p>
@@ -539,7 +553,7 @@ public class TransactionReportItems2 {
 	 * definition} = "Country of the seller bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SellerBankCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSellerBankCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -547,11 +561,12 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankCountry";
 			definition = "Country of the seller bank.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount outstandingAmount;
 	/**
 	 * Amount of baseline not yet utilised.
 	 * <p>
@@ -580,7 +595,7 @@ public class TransactionReportItems2 {
 	 * definition} = "Amount of baseline not yet utilised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OutstandingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOutstandingAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -588,11 +603,12 @@ public class TransactionReportItems2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingAmount";
 			definition = "Amount of baseline not yet utilised.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction;
 	/**
 	 * Next processing step required.
 	 * <p>
@@ -619,7 +635,7 @@ public class TransactionReportItems2 {
 	 * definition} = "Next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingRequestForAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingRequestForAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
@@ -628,26 +644,130 @@ public class TransactionReportItems2 {
 			name = "PendingRequestForAction";
 			definition = "Next processing step required.";
 			minOccurs = 0;
-			type_lazy = () -> PendingActivity1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PendingActivity1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportItems2.TransactionIdentification, com.tools20022.repository.msg.TransactionReportItems2.TSUBaselineIdentification,
-						com.tools20022.repository.msg.TransactionReportItems2.TransactionStatus, com.tools20022.repository.msg.TransactionReportItems2.UserTransactionReference,
-						com.tools20022.repository.msg.TransactionReportItems2.PurchaseOrderReference, com.tools20022.repository.msg.TransactionReportItems2.Buyer, com.tools20022.repository.msg.TransactionReportItems2.Seller,
-						com.tools20022.repository.msg.TransactionReportItems2.BuyerBank, com.tools20022.repository.msg.TransactionReportItems2.BuyerBankCountry, com.tools20022.repository.msg.TransactionReportItems2.SellerBank,
-						com.tools20022.repository.msg.TransactionReportItems2.SellerBankCountry, com.tools20022.repository.msg.TransactionReportItems2.OutstandingAmount,
-						com.tools20022.repository.msg.TransactionReportItems2.PendingRequestForAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportItems2.mmTransactionIdentification, com.tools20022.repository.msg.TransactionReportItems2.mmTSUBaselineIdentification,
+						com.tools20022.repository.msg.TransactionReportItems2.mmTransactionStatus, com.tools20022.repository.msg.TransactionReportItems2.mmUserTransactionReference,
+						com.tools20022.repository.msg.TransactionReportItems2.mmPurchaseOrderReference, com.tools20022.repository.msg.TransactionReportItems2.mmBuyer, com.tools20022.repository.msg.TransactionReportItems2.mmSeller,
+						com.tools20022.repository.msg.TransactionReportItems2.mmBuyerBank, com.tools20022.repository.msg.TransactionReportItems2.mmBuyerBankCountry, com.tools20022.repository.msg.TransactionReportItems2.mmSellerBank,
+						com.tools20022.repository.msg.TransactionReportItems2.mmSellerBankCountry, com.tools20022.repository.msg.TransactionReportItems2.mmOutstandingAmount,
+						com.tools20022.repository.msg.TransactionReportItems2.mmPendingRequestForAction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionReportItems2";
 				definition = "Detailed description of the items that correspond to the parameters set in a request and for which a report has been generated.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification3 getTSUBaselineIdentification() {
+		return tSUBaselineIdentification;
+	}
+
+	public void setTSUBaselineIdentification(com.tools20022.repository.msg.DocumentIdentification3 tSUBaselineIdentification) {
+		this.tSUBaselineIdentification = tSUBaselineIdentification;
+	}
+
+	public TransactionStatus1 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(com.tools20022.repository.msg.TransactionStatus1 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public DocumentIdentification7 getPurchaseOrderReference() {
+		return purchaseOrderReference;
+	}
+
+	public void setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+		this.purchaseOrderReference = purchaseOrderReference;
+	}
+
+	public PartyIdentification9 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(com.tools20022.repository.msg.PartyIdentification9 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PartyIdentification9 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(com.tools20022.repository.msg.PartyIdentification9 seller) {
+		this.seller = seller;
+	}
+
+	public BICIdentification1 getBuyerBank() {
+		return buyerBank;
+	}
+
+	public void setBuyerBank(com.tools20022.repository.msg.BICIdentification1 buyerBank) {
+		this.buyerBank = buyerBank;
+	}
+
+	public CountryCode getBuyerBankCountry() {
+		return buyerBankCountry;
+	}
+
+	public void setBuyerBankCountry(CountryCode buyerBankCountry) {
+		this.buyerBankCountry = buyerBankCountry;
+	}
+
+	public BICIdentification1 getSellerBank() {
+		return sellerBank;
+	}
+
+	public void setSellerBank(com.tools20022.repository.msg.BICIdentification1 sellerBank) {
+		this.sellerBank = sellerBank;
+	}
+
+	public CountryCode getSellerBankCountry() {
+		return sellerBankCountry;
+	}
+
+	public void setSellerBankCountry(CountryCode sellerBankCountry) {
+		this.sellerBankCountry = sellerBankCountry;
+	}
+
+	public CurrencyAndAmount getOutstandingAmount() {
+		return outstandingAmount;
+	}
+
+	public void setOutstandingAmount(CurrencyAndAmount outstandingAmount) {
+		this.outstandingAmount = outstandingAmount;
+	}
+
+	public List<PendingActivity1> getPendingRequestForAction() {
+		return pendingRequestForAction;
+	}
+
+	public void setPendingRequestForAction(List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction) {
+		this.pendingRequestForAction = pendingRequestForAction;
 	}
 }

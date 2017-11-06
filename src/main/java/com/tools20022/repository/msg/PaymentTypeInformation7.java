@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation7#ServiceLevel
- * PaymentTypeInformation7.ServiceLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation7#mmServiceLevel
+ * PaymentTypeInformation7.mmServiceLevel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTypeInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ServiceLevel4 serviceLevel;
 	/**
 	 * Agreement under which or rules under which the transaction should be
 	 * processed.
@@ -73,8 +74,8 @@ public class PaymentTypeInformation7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ServiceLevel
-	 * PaymentProcessing.ServiceLevel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
+	 * PaymentProcessing.mmServiceLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,33 +96,41 @@ public class PaymentTypeInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> PaymentTypeInformation7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ServiceLevel;
 			isDerived = false;
 			xmlTag = "SvcLvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevel";
 			definition = "Agreement under which or rules under which the transaction should be processed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ServiceLevel4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation7.ServiceLevel);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation7.mmServiceLevel);
 				trace_lazy = () -> PaymentProcessing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentTypeInformation7";
 				definition = "Set of elements that further details the information related to the type of payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ServiceLevel4 getServiceLevel() {
+		return serviceLevel;
+	}
+
+	public void setServiceLevel(com.tools20022.repository.msg.ServiceLevel4 serviceLevel) {
+		this.serviceLevel = serviceLevel;
 	}
 }

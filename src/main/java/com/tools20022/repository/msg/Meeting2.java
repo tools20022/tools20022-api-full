@@ -33,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Specifies the physical parameters of a shareholders meeting. Several dates
@@ -43,27 +44,27 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Meeting2#QuorumQuantityOrPercentageRule
- * Meeting2.QuorumQuantityOrPercentageRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Meeting2#mmQuorumQuantityOrPercentageRule
+ * Meeting2.mmQuorumQuantityOrPercentageRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Meeting2#DateAndTime
- * Meeting2.DateAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Meeting2#DateStatus
- * Meeting2.DateStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Meeting2#QuorumRequired
- * Meeting2.QuorumRequired}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Meeting2#Location
- * Meeting2.Location}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Meeting2#QuorumQuantity
- * Meeting2.QuorumQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Meeting2#mmDateAndTime
+ * Meeting2.mmDateAndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Meeting2#mmDateStatus
+ * Meeting2.mmDateStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Meeting2#mmQuorumRequired
+ * Meeting2.mmQuorumRequired}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Meeting2#mmLocation
+ * Meeting2.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Meeting2#mmQuorumQuantity
+ * Meeting2.mmQuorumQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Meeting2#QuorumQuantityPercentage
- * Meeting2.QuorumQuantityPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.Meeting2#mmQuorumQuantityPercentage
+ * Meeting2.mmQuorumQuantityPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,15 +74,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#MeetingDetails
- * MeetingNotificationV02.MeetingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmMeetingDetails
+ * MeetingNotificationV02.mmMeetingDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -98,6 +99,7 @@ import java.util.function.Supplier;
 public class Meeting2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat2Choice dateAndTime;
 	/**
 	 * Date and time at which the meeting will take place.
 	 * <p>
@@ -111,8 +113,8 @@ public class Meeting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#DateAndTime
-	 * Meeting.DateAndTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmDateAndTime
+	 * Meeting.mmDateAndTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Meeting2
@@ -130,20 +132,21 @@ public class Meeting2 {
 	 * definition} = "Date and time at which the meeting will take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateAndTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDateAndTime;
 			componentContext_lazy = () -> Meeting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.DateAndTime;
 			isDerived = false;
 			xmlTag = "DtAndTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndTime";
 			definition = "Date and time at which the meeting will take place.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected MeetingDateStatus1Code dateStatus;
 	/**
 	 * Indicates the status of a meeting date.
 	 * <p>
@@ -157,8 +160,8 @@ public class Meeting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#DateStatus
-	 * Meeting.DateStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmDateStatus
+	 * Meeting.mmDateStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Meeting2
@@ -176,20 +179,21 @@ public class Meeting2 {
 	 * definition} = "Indicates the status of a meeting date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDateStatus;
 			componentContext_lazy = () -> Meeting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.DateStatus;
 			isDerived = false;
 			xmlTag = "DtSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateStatus";
 			definition = "Indicates the status of a meeting date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MeetingDateStatus1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator quorumRequired;
 	/**
 	 * Specifies whether a minimum number of security representation is required
 	 * to hold a meeting.
@@ -204,8 +208,8 @@ public class Meeting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quorum#QuorumRequired
-	 * Quorum.QuorumRequired}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quorum#mmQuorumRequired
+	 * Quorum.mmQuorumRequired}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Meeting2
@@ -225,20 +229,21 @@ public class Meeting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuorumRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuorumRequired = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmQuorumRequired;
 			componentContext_lazy = () -> Meeting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.QuorumRequired;
 			isDerived = false;
 			xmlTag = "QrmReqrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumRequired";
 			definition = "Specifies whether a minimum number of security representation is required to hold a meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<LocationFormat1Choice> location;
 	/**
 	 * Specifies location where meeting will take place.
 	 * <p>
@@ -251,8 +256,8 @@ public class Meeting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#MeetingLocation
-	 * Meeting.MeetingLocation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmMeetingLocation
+	 * Meeting.mmMeetingLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Meeting2
@@ -270,21 +275,22 @@ public class Meeting2 {
 	 * definition} = "Specifies location where meeting will take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Location = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmMeetingLocation;
 			componentContext_lazy = () -> Meeting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.MeetingLocation;
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Specifies location where meeting will take place.";
-			minOccurs = 1;
 			maxOccurs = 5;
-			type_lazy = () -> LocationFormat1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LocationFormat1Choice.mmObject();
 		}
 	};
+	protected Max35Text quorumQuantity;
 	/**
 	 * Minimum quantity of securities required to hold a meeting.
 	 * <p>
@@ -297,8 +303,8 @@ public class Meeting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quorum#Quantity
-	 * Quorum.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quorum#mmQuantity
+	 * Quorum.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Meeting2
@@ -317,20 +323,21 @@ public class Meeting2 {
 	 * "Minimum quantity of securities required to hold a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuorumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmQuantity;
 			componentContext_lazy = () -> Meeting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.Quantity;
 			isDerived = false;
 			xmlTag = "QrmQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantity";
 			definition = "Minimum quantity of securities required to hold a meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PercentageRate quorumQuantityPercentage;
 	/**
 	 * Minimum quantity of securities, expressed as a percentage, required to
 	 * hold a meeting.
@@ -345,8 +352,8 @@ public class Meeting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quorum#Percentage
-	 * Quorum.Percentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quorum#mmPercentage
+	 * Quorum.mmPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Meeting2
@@ -366,17 +373,17 @@ public class Meeting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuorumQuantityPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuorumQuantityPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmPercentage;
 			componentContext_lazy = () -> Meeting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.Percentage;
 			isDerived = false;
 			xmlTag = "QrmQtyPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantityPercentage";
 			definition = "Minimum quantity of securities, expressed as a percentage, required to hold a meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -389,11 +396,11 @@ public class Meeting2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Meeting2#QuorumQuantity
-	 * Meeting2.QuorumQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Meeting2#mmQuorumQuantity
+	 * Meeting2.mmQuorumQuantity}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Meeting2#QuorumQuantityPercentage
-	 * Meeting2.QuorumQuantityPercentage}</li>
+	 * {@linkplain com.tools20022.repository.msg.Meeting2#mmQuorumQuantityPercentage
+	 * Meeting2.mmQuorumQuantityPercentage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -412,24 +419,24 @@ public class Meeting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor QuorumQuantityOrPercentageRule = new MMXor() {
+	public static final MMXor mmQuorumQuantityOrPercentageRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantityOrPercentageRule";
 			definition = "Either QuorumQuantity or QuorumQuantityPercentage may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.QuorumQuantity, com.tools20022.repository.msg.Meeting2.QuorumQuantityPercentage);
 			messageComponent_lazy = () -> Meeting2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.mmQuorumQuantity, com.tools20022.repository.msg.Meeting2.mmQuorumQuantityPercentage);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.DateAndTime, com.tools20022.repository.msg.Meeting2.DateStatus, com.tools20022.repository.msg.Meeting2.QuorumRequired,
-						com.tools20022.repository.msg.Meeting2.Location, com.tools20022.repository.msg.Meeting2.QuorumQuantity, com.tools20022.repository.msg.Meeting2.QuorumQuantityPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.mmDateAndTime, com.tools20022.repository.msg.Meeting2.mmDateStatus, com.tools20022.repository.msg.Meeting2.mmQuorumRequired,
+						com.tools20022.repository.msg.Meeting2.mmLocation, com.tools20022.repository.msg.Meeting2.mmQuorumQuantity, com.tools20022.repository.msg.Meeting2.mmQuorumQuantityPercentage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeetingDetails);
 				trace_lazy = () -> Meeting.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.MeetingDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -440,9 +447,57 @@ public class Meeting2 {
 				})).get();
 				name = "Meeting2";
 				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.QuorumQuantityOrPercentageRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.mmQuorumQuantityOrPercentageRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat2Choice getDateAndTime() {
+		return dateAndTime;
+	}
+
+	public void setDateAndTime(DateFormat2Choice dateAndTime) {
+		this.dateAndTime = dateAndTime;
+	}
+
+	public MeetingDateStatus1Code getDateStatus() {
+		return dateStatus;
+	}
+
+	public void setDateStatus(MeetingDateStatus1Code dateStatus) {
+		this.dateStatus = dateStatus;
+	}
+
+	public YesNoIndicator getQuorumRequired() {
+		return quorumRequired;
+	}
+
+	public void setQuorumRequired(YesNoIndicator quorumRequired) {
+		this.quorumRequired = quorumRequired;
+	}
+
+	public List<LocationFormat1Choice> getLocation() {
+		return location;
+	}
+
+	public void setLocation(List<LocationFormat1Choice> location) {
+		this.location = location;
+	}
+
+	public Max35Text getQuorumQuantity() {
+		return quorumQuantity;
+	}
+
+	public void setQuorumQuantity(Max35Text quorumQuantity) {
+		this.quorumQuantity = quorumQuantity;
+	}
+
+	public PercentageRate getQuorumQuantityPercentage() {
+		return quorumQuantityPercentage;
+	}
+
+	public void setQuorumQuantityPercentage(PercentageRate quorumQuantityPercentage) {
+		this.quorumQuantityPercentage = quorumQuantityPercentage;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -66,51 +67,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#MeetingNotificationIdentification
- * MeetingNotificationV02.MeetingNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmMeetingNotificationIdentification
+ * MeetingNotificationV02.mmMeetingNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Amendment
- * MeetingNotificationV02.Amendment}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmAmendment
+ * MeetingNotificationV02.mmAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#NotificationStatus
- * MeetingNotificationV02.NotificationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmNotificationStatus
+ * MeetingNotificationV02.mmNotificationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Meeting
- * MeetingNotificationV02.Meeting}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmMeeting
+ * MeetingNotificationV02.mmMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#MeetingDetails
- * MeetingNotificationV02.MeetingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmMeetingDetails
+ * MeetingNotificationV02.mmMeetingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#NotifyingParty
- * MeetingNotificationV02.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmNotifyingParty
+ * MeetingNotificationV02.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Issuer
- * MeetingNotificationV02.Issuer}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmIssuer
+ * MeetingNotificationV02.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#IssuerAgent
- * MeetingNotificationV02.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmIssuerAgent
+ * MeetingNotificationV02.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Security
- * MeetingNotificationV02.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmSecurity
+ * MeetingNotificationV02.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Resolution
- * MeetingNotificationV02.Resolution}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmResolution
+ * MeetingNotificationV02.mmResolution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Vote
- * MeetingNotificationV02.Vote}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmVote
+ * MeetingNotificationV02.mmVote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#EntitlementSpecification
- * MeetingNotificationV02.EntitlementSpecification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmEntitlementSpecification
+ * MeetingNotificationV02.mmEntitlementSpecification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#PowerOfAttorneyRequirements
- * MeetingNotificationV02.PowerOfAttorneyRequirements}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmPowerOfAttorneyRequirements
+ * MeetingNotificationV02.mmPowerOfAttorneyRequirements}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#identifier
- * MeetingNotificationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.001.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,6 +132,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 meetingNotificationIdentification;
 	/**
 	 * Identifies the meeting notification message.
 	 * <p>
@@ -156,17 +156,18 @@ public class MeetingNotificationV02 {
 	 * definition} = "Identifies the meeting notification message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingNotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgNtfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingNotificationIdentification";
 			definition = "Identifies the meeting notification message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AmendInformation1 amendment;
 	/**
 	 * Information specific to an amendment.
 	 * <p>
@@ -190,17 +191,18 @@ public class MeetingNotificationV02 {
 	 * definition} = "Information specific to an amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Amendment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAmendment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Amdmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Information specific to an amendment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AmendInformation1.mmObject();
 		}
 	};
+	protected NotificationStatus1 notificationStatus;
 	/**
 	 * Defines the global status of the event contained in the notification.
 	 * <p>
@@ -225,17 +227,18 @@ public class MeetingNotificationV02 {
 	 * "Defines the global status of the event contained in the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationStatus";
 			definition = "Defines the global status of the event contained in the notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NotificationStatus1.mmObject();
 		}
 	};
+	protected MeetingNotice2 meeting;
 	/**
 	 * Specifies information about the meeting. This component contains meeting
 	 * identifications, various deadlines, contact persons, electronic and
@@ -263,17 +266,18 @@ public class MeetingNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Meeting = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeeting = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mtg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Meeting";
 			definition = "Specifies information about the meeting. This component contains meeting identifications, various deadlines, contact persons, electronic and postal locations for accessing information and proxy assignment parameters.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingNotice2.mmObject();
 		}
 	};
+	protected List<Meeting2> meetingDetails;
 	/**
 	 * Dates and details of the shareholders meeting.
 	 * <p>
@@ -296,17 +300,18 @@ public class MeetingNotificationV02 {
 	 * definition} = "Dates and details of the shareholders meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingDetails";
 			definition = "Dates and details of the shareholders meeting.";
-			minOccurs = 1;
 			maxOccurs = 5;
+			minOccurs = 1;
 			complexType_lazy = () -> Meeting2.mmObject();
 		}
 	};
+	protected PartyIdentification9Choice notifyingParty;
 	/**
 	 * Party notifying the meeting.
 	 * <p>
@@ -330,17 +335,18 @@ public class MeetingNotificationV02 {
 	 * definition} = "Party notifying the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotifyingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotifyingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtifngPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Party notifying the meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected PartyIdentification9Choice issuer;
 	/**
 	 * Specifies the institution that is the issuer of the security to which the
 	 * meeting applies.
@@ -367,17 +373,18 @@ public class MeetingNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Issuer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIssuer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Specifies the institution that is the issuer of the security to which the meeting applies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected List<IssuerAgent1> issuerAgent;
 	/**
 	 * Agents of the issuer.
 	 * <p>
@@ -400,17 +407,18 @@ public class MeetingNotificationV02 {
 	 * definition} = "Agents of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IssuerAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIssuerAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IssrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgent";
 			definition = "Agents of the issuer.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> IssuerAgent1.mmObject();
 		}
 	};
+	protected List<SecurityPosition5> security;
 	/**
 	 * Net position of a segregated holding, in a single security, within the
 	 * overall position held in a securities account.
@@ -437,17 +445,18 @@ public class MeetingNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Security = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
-			minOccurs = 1;
 			maxOccurs = 200;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityPosition5.mmObject();
 		}
 	};
+	protected List<Resolution2> resolution;
 	/**
 	 * Detailed information of a resolution proposed to the vote.
 	 * <p>
@@ -471,17 +480,18 @@ public class MeetingNotificationV02 {
 	 * "Detailed information of a resolution proposed to the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Resolution = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResolution = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rsltn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution";
 			definition = "Detailed information of a resolution proposed to the vote.";
-			minOccurs = 0;
 			maxOccurs = 200;
+			minOccurs = 0;
 			complexType_lazy = () -> Resolution2.mmObject();
 		}
 	};
+	protected VoteParameters1 vote;
 	/**
 	 * Specifies the conditions to be allowed to vote, the different voting
 	 * methods and options, the voting deadlines and the parameters of the
@@ -508,17 +518,18 @@ public class MeetingNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Vote = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmVote = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Vote";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vote";
 			definition = "Specifies the conditions to be allowed to vote, the different voting methods and options, the voting deadlines and the parameters of the incentive premium.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> VoteParameters1.mmObject();
 		}
 	};
+	protected EntitlementAssessment1 entitlementSpecification;
 	/**
 	 * Specifies the entitlement ratio and the different deadlines for
 	 * calculating the entitlement.
@@ -545,17 +556,18 @@ public class MeetingNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EntitlementSpecification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEntitlementSpecification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EntitlmntSpcfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementSpecification";
 			definition = "Specifies the entitlement ratio and the different deadlines for calculating the entitlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> EntitlementAssessment1.mmObject();
 		}
 	};
+	protected PowerOfAttorneyRequirements2 powerOfAttorneyRequirements;
 	/**
 	 * Specifies requirements relative to the use of Power of Attorney.
 	 * <p>
@@ -580,42 +592,15 @@ public class MeetingNotificationV02 {
 	 * "Specifies requirements relative to the use of Power of Attorney."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PowerOfAttorneyRequirements = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPowerOfAttorneyRequirements = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PwrOfAttnyRqrmnts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerOfAttorneyRequirements";
 			definition = "Specifies requirements relative to the use of Power of Attorney.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PowerOfAttorneyRequirements2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "001";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -630,15 +615,126 @@ public class MeetingNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "MtgNtfctn";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.MeetingNotificationIdentification, com.tools20022.repository.area.seev.MeetingNotificationV02.Amendment,
-						com.tools20022.repository.area.seev.MeetingNotificationV02.NotificationStatus, com.tools20022.repository.area.seev.MeetingNotificationV02.Meeting,
-						com.tools20022.repository.area.seev.MeetingNotificationV02.MeetingDetails, com.tools20022.repository.area.seev.MeetingNotificationV02.NotifyingParty,
-						com.tools20022.repository.area.seev.MeetingNotificationV02.Issuer, com.tools20022.repository.area.seev.MeetingNotificationV02.IssuerAgent, com.tools20022.repository.area.seev.MeetingNotificationV02.Security,
-						com.tools20022.repository.area.seev.MeetingNotificationV02.Resolution, com.tools20022.repository.area.seev.MeetingNotificationV02.Vote,
-						com.tools20022.repository.area.seev.MeetingNotificationV02.EntitlementSpecification, com.tools20022.repository.area.seev.MeetingNotificationV02.PowerOfAttorneyRequirements);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingNotificationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeetingNotificationIdentification, com.tools20022.repository.area.seev.MeetingNotificationV02.mmAmendment,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmNotificationStatus, com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeeting,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeetingDetails, com.tools20022.repository.area.seev.MeetingNotificationV02.mmNotifyingParty,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuer, com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuerAgent, com.tools20022.repository.area.seev.MeetingNotificationV02.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmResolution, com.tools20022.repository.area.seev.MeetingNotificationV02.mmVote,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmEntitlementSpecification, com.tools20022.repository.area.seev.MeetingNotificationV02.mmPowerOfAttorneyRequirements);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "001";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMeetingNotificationIdentification() {
+		return meetingNotificationIdentification;
+	}
+
+	public void setMeetingNotificationIdentification(MessageIdentification1 meetingNotificationIdentification) {
+		this.meetingNotificationIdentification = meetingNotificationIdentification;
+	}
+
+	public AmendInformation1 getAmendment() {
+		return amendment;
+	}
+
+	public void setAmendment(AmendInformation1 amendment) {
+		this.amendment = amendment;
+	}
+
+	public NotificationStatus1 getNotificationStatus() {
+		return notificationStatus;
+	}
+
+	public void setNotificationStatus(NotificationStatus1 notificationStatus) {
+		this.notificationStatus = notificationStatus;
+	}
+
+	public MeetingNotice2 getMeeting() {
+		return meeting;
+	}
+
+	public void setMeeting(MeetingNotice2 meeting) {
+		this.meeting = meeting;
+	}
+
+	public List<Meeting2> getMeetingDetails() {
+		return meetingDetails;
+	}
+
+	public void setMeetingDetails(List<Meeting2> meetingDetails) {
+		this.meetingDetails = meetingDetails;
+	}
+
+	public PartyIdentification9Choice getNotifyingParty() {
+		return notifyingParty;
+	}
+
+	public void setNotifyingParty(PartyIdentification9Choice notifyingParty) {
+		this.notifyingParty = notifyingParty;
+	}
+
+	public PartyIdentification9Choice getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(PartyIdentification9Choice issuer) {
+		this.issuer = issuer;
+	}
+
+	public List<IssuerAgent1> getIssuerAgent() {
+		return issuerAgent;
+	}
+
+	public void setIssuerAgent(List<IssuerAgent1> issuerAgent) {
+		this.issuerAgent = issuerAgent;
+	}
+
+	public List<SecurityPosition5> getSecurity() {
+		return security;
+	}
+
+	public void setSecurity(List<SecurityPosition5> security) {
+		this.security = security;
+	}
+
+	public List<Resolution2> getResolution() {
+		return resolution;
+	}
+
+	public void setResolution(List<Resolution2> resolution) {
+		this.resolution = resolution;
+	}
+
+	public VoteParameters1 getVote() {
+		return vote;
+	}
+
+	public void setVote(VoteParameters1 vote) {
+		this.vote = vote;
+	}
+
+	public EntitlementAssessment1 getEntitlementSpecification() {
+		return entitlementSpecification;
+	}
+
+	public void setEntitlementSpecification(EntitlementAssessment1 entitlementSpecification) {
+		this.entitlementSpecification = entitlementSpecification;
+	}
+
+	public PowerOfAttorneyRequirements2 getPowerOfAttorneyRequirements() {
+		return powerOfAttorneyRequirements;
+	}
+
+	public void setPowerOfAttorneyRequirements(PowerOfAttorneyRequirements2 powerOfAttorneyRequirements) {
+		this.powerOfAttorneyRequirements = powerOfAttorneyRequirements;
 	}
 }

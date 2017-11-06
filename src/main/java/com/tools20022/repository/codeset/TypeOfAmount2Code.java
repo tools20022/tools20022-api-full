@@ -33,24 +33,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfAmountCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#Cashback
- * TypeOfAmount2Code.Cashback}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#Gratuity
- * TypeOfAmount2Code.Gratuity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#Fees
- * TypeOfAmount2Code.Fees}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#Rebates
- * TypeOfAmount2Code.Rebates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#ValueAddedTax
- * TypeOfAmount2Code.ValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#mmCashback
+ * TypeOfAmount2Code.mmCashback}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#mmGratuity
+ * TypeOfAmount2Code.mmGratuity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#mmFees
+ * TypeOfAmount2Code.mmFees}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#mmRebates
+ * TypeOfAmount2Code.mmRebates}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code#mmValueAddedTax
+ * TypeOfAmount2Code.mmValueAddedTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +89,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 * name} = "Cashback"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cashback = new MMCode() {
+	public static final MMCode mmCashback = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cashback";
@@ -109,7 +112,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 * name} = "Gratuity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gratuity = new MMCode() {
+	public static final MMCode mmGratuity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
@@ -132,7 +135,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 * name} = "Fees"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fees = new MMCode() {
+	public static final MMCode mmFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
@@ -155,7 +158,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 * name} = "Rebates"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rebates = new MMCode() {
+	public static final MMCode mmRebates = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebates";
@@ -178,7 +181,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -189,13 +192,13 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSHB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount2Code";
 				definition = "Identification of the type of amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount2Code.Cashback, com.tools20022.repository.codeset.TypeOfAmount2Code.Gratuity, com.tools20022.repository.codeset.TypeOfAmount2Code.Fees,
-						com.tools20022.repository.codeset.TypeOfAmount2Code.Rebates, com.tools20022.repository.codeset.TypeOfAmount2Code.ValueAddedTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount2Code.mmCashback, com.tools20022.repository.codeset.TypeOfAmount2Code.mmGratuity, com.tools20022.repository.codeset.TypeOfAmount2Code.mmFees,
+						com.tools20022.repository.codeset.TypeOfAmount2Code.mmRebates, com.tools20022.repository.codeset.TypeOfAmount2Code.mmValueAddedTax);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

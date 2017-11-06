@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.PortfolioStrategy;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Strategy is currency based.
@@ -36,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyStrategy#Currency
- * CurrencyStrategy.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyStrategy#mmCurrency
+ * CurrencyStrategy.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyStrategy extends PortfolioStrategy {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CurrencyCode> currency;
 	/**
 	 * Currency of the investment.
 	 * <p>
@@ -86,7 +88,7 @@ public class CurrencyStrategy extends PortfolioStrategy {
 	 * definition} = "Currency of the investment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Currency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CurrencyStrategy.mmObject();
 			isDerived = false;
@@ -101,14 +103,22 @@ public class CurrencyStrategy extends PortfolioStrategy {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyStrategy";
 				definition = "Strategy is currency based.";
 				superType_lazy = () -> PortfolioStrategy.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyStrategy.Currency);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyStrategy.mmCurrency);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CurrencyCode> getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(List<CurrencyCode> currency) {
+		this.currency = currency;
 	}
 }

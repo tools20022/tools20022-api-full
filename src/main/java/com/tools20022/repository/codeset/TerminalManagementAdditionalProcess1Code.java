@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code#ManualConfirmation
- * TerminalManagementAdditionalProcess1Code.ManualConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code#mmManualConfirmation
+ * TerminalManagementAdditionalProcess1Code.mmManualConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code#Reconciliation
- * TerminalManagementAdditionalProcess1Code.Reconciliation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code#mmReconciliation
+ * TerminalManagementAdditionalProcess1Code.mmReconciliation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code#RestartSystem
- * TerminalManagementAdditionalProcess1Code.RestartSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code#mmRestartSystem
+ * TerminalManagementAdditionalProcess1Code.mmRestartSystem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	 * name} = "ManualConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode ManualConfirmation = new MMCode() {
+	public static final MMCode mmManualConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualConfirmation";
@@ -110,7 +110,7 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	 * name} = "Reconciliation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reconciliation = new MMCode() {
+	public static final MMCode mmReconciliation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciliation";
@@ -133,7 +133,7 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	 * name} = "RestartSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode RestartSystem = new MMCode() {
+	public static final MMCode mmRestartSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestartSystem";
@@ -144,13 +144,13 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MANC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAdditionalProcess1Code";
 				definition = "Additional process to perform before starting or after a terminal management action by the point of interaction (POI).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.ManualConfirmation, com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.Reconciliation,
-						com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.RestartSystem);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.mmManualConfirmation, com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.mmReconciliation,
+						com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.mmRestartSystem);
 				trace_lazy = () -> TerminalManagementAdditionalProcessCode.mmObject();
 			}
 		});

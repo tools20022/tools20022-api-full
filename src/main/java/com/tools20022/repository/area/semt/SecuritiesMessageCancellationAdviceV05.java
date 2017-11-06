@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestvers
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -89,24 +90,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#Reference
- * SecuritiesMessageCancellationAdviceV05.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#mmReference
+ * SecuritiesMessageCancellationAdviceV05.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#AccountOwner
- * SecuritiesMessageCancellationAdviceV05.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#mmAccountOwner
+ * SecuritiesMessageCancellationAdviceV05.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#SafekeepingAccount
- * SecuritiesMessageCancellationAdviceV05.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#mmSafekeepingAccount
+ * SecuritiesMessageCancellationAdviceV05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#SupplementaryData
- * SecuritiesMessageCancellationAdviceV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#mmSupplementaryData
+ * SecuritiesMessageCancellationAdviceV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05#identifier
- * SecuritiesMessageCancellationAdviceV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.020.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,6 +125,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesMessageCancellationAdviceV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected References43Choice reference;
 	/**
 	 * Reference to the message advised to be cancelled by the account servicer
 	 * <p>
@@ -152,22 +152,23 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#Reference
-	 * SecuritiesMessageCancellationAdviceV04.Reference}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#mmReference
+	 * SecuritiesMessageCancellationAdviceV04.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the message advised to be cancelled by the account servicer";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.Reference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.mmReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> References43Choice.mmObject();
 		}
 	};
+	protected PartyIdentification98 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -192,22 +193,23 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#AccountOwner
-	 * SecuritiesMessageCancellationAdviceV04.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#mmAccountOwner
+	 * SecuritiesMessageCancellationAdviceV04.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.AccountOwner;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.mmAccountOwner;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
 	};
+	protected SecuritiesAccount24 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -232,22 +234,23 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#SafekeepingAccount
-	 * SecuritiesMessageCancellationAdviceV04.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#mmSafekeepingAccount
+	 * SecuritiesMessageCancellationAdviceV04.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.SafekeepingAccount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -275,46 +278,19 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#SupplementaryData
-	 * SecuritiesMessageCancellationAdviceV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04#mmSupplementaryData
+	 * SecuritiesMessageCancellationAdviceV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "020"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "020";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -329,11 +305,51 @@ public class SecuritiesMessageCancellationAdviceV05 {
 				rootElement = "Document";
 				xmlTag = "SctiesMsgCxlAdvc";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.Reference, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.mmReference,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "020";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References43Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(References43Choice reference) {
+		this.reference = reference;
+	}
+
+	public PartyIdentification98 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification98 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount24 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount24 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -33,13 +33,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReport5#POIIdentification
- * StatusReport5.POIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReport5#mmPOIIdentification
+ * StatusReport5.mmPOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReport5#TerminalManagerIdentification
- * StatusReport5.TerminalManagerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusReport5#DataSet
- * StatusReport5.DataSet}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReport5#mmTerminalManagerIdentification
+ * StatusReport5.mmTerminalManagerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReport5#mmDataSet
+ * StatusReport5.mmDataSet}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#StatusReport
- * StatusReportV05.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#mmStatusReport
+ * StatusReportV05.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReport5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification71 pOIIdentification;
 	/**
 	 * Identification of the point of interaction for terminal management.
 	 * <p>
@@ -109,18 +110,18 @@ public class StatusReport5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReport6#POIIdentification
-	 * StatusReport6.POIIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReport6#mmPOIIdentification
+	 * StatusReport6.mmPOIIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReport4#POIIdentification
-	 * StatusReport4.POIIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReport4#mmPOIIdentification
+	 * StatusReport4.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReport5.mmObject();
 			isDerived = false;
@@ -128,14 +129,15 @@ public class StatusReport5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction for terminal management.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport4.POIIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport6.POIIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport6.mmPOIIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmPOIIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification71.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	protected GenericIdentification71 terminalManagerIdentification;
 	/**
 	 * Identification of the terminal management system (TMS) to contact for the
 	 * maintenance.
@@ -167,18 +169,18 @@ public class StatusReport5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusReport6#TerminalManagerIdentification
-	 * StatusReport6.TerminalManagerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReport6#mmTerminalManagerIdentification
+	 * StatusReport6.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReport4#TerminalManagerIdentification
-	 * StatusReport4.TerminalManagerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReport4#mmTerminalManagerIdentification
+	 * StatusReport4.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReport5.mmObject();
 			isDerived = false;
@@ -186,14 +188,15 @@ public class StatusReport5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) to contact for the maintenance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport4.TerminalManagerIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport6.TerminalManagerIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport6.mmTerminalManagerIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmTerminalManagerIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification71.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	protected TerminalManagementDataSet16 dataSet;
 	/**
 	 * Data related to a status report of a point of interaction (POI).
 	 * <p>
@@ -222,18 +225,18 @@ public class StatusReport5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatusReport6#DataSet
-	 * StatusReport6.DataSet}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.StatusReport6#mmDataSet
+	 * StatusReport6.mmDataSet}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusReport4#DataSet
-	 * StatusReport4.DataSet}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReport4#mmDataSet
+	 * StatusReport4.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReport5.mmObject();
 			isDerived = false;
@@ -241,29 +244,53 @@ public class StatusReport5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data related to a status report of a point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport4.DataSet;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport6.DataSet);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport6.mmDataSet);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmDataSet;
 			maxOccurs = 1;
-			type_lazy = () -> TerminalManagementDataSet16.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet16.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport5.POIIdentification, com.tools20022.repository.msg.StatusReport5.TerminalManagerIdentification,
-						com.tools20022.repository.msg.StatusReport5.DataSet);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV05.StatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport5.mmPOIIdentification, com.tools20022.repository.msg.StatusReport5.mmTerminalManagerIdentification,
+						com.tools20022.repository.msg.StatusReport5.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV05.mmStatusReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusReport5";
 				definition = "Status of the acceptor system containing the identification of the POI (Point Of Interaction), its components and their installed versions.";
-				previousVersion_lazy = () -> StatusReport4.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(StatusReport6.mmObject());
+				previousVersion_lazy = () -> StatusReport4.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification71 getPOIIdentification() {
+		return pOIIdentification;
+	}
+
+	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification71 pOIIdentification) {
+		this.pOIIdentification = pOIIdentification;
+	}
+
+	public GenericIdentification71 getTerminalManagerIdentification() {
+		return terminalManagerIdentification;
+	}
+
+	public void setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+		this.terminalManagerIdentification = terminalManagerIdentification;
+	}
+
+	public TerminalManagementDataSet16 getDataSet() {
+		return dataSet;
+	}
+
+	public void setDataSet(com.tools20022.repository.msg.TerminalManagementDataSet16 dataSet) {
+		this.dataSet = dataSet;
 	}
 }

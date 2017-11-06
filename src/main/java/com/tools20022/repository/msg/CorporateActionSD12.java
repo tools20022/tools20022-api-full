@@ -35,17 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSD12#PlaceAndName
- * CorporateActionSD12.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionSD12#EventStage
- * CorporateActionSD12.EventStage}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD12#mmPlaceAndName
+ * CorporateActionSD12.mmPlaceAndName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD12#mmEventStage
+ * CorporateActionSD12.mmEventStage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionSD12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -87,7 +89,7 @@ public class CorporateActionSD12 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD12.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class CorporateActionSD12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CorporateActionEventStage4Code eventStage;
 	/**
 	 * Stage in the corporate action event life cycle.
 	 * <p>
@@ -133,17 +136,17 @@ public class CorporateActionSD12 {
 	 * definition} = "Stage in the corporate action event life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventStage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventStage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionSD12.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
+			componentContext_lazy = () -> CorporateActionSD12.mmObject();
 			isDerived = false;
 			xmlTag = "EvtStag";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CorporateActionEventStage4Code.mmObject();
 		}
 	};
@@ -151,13 +154,29 @@ public class CorporateActionSD12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD12.PlaceAndName, com.tools20022.repository.msg.CorporateActionSD12.EventStage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD12.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD12.mmEventStage);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD12";
 				definition = "Provides additional information regarding corporate action details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public CorporateActionEventStage4Code getEventStage() {
+		return eventStage;
+	}
+
+	public void setEventStage(CorporateActionEventStage4Code eventStage) {
+		this.eventStage = eventStage;
 	}
 }

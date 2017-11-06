@@ -36,12 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ContractDocument1#Reference
- * ContractDocument1.Reference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContractDocument1#SignOffDate
- * ContractDocument1.SignOffDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContractDocument1#Version
- * ContractDocument1.Version}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContractDocument1#mmReference
+ * ContractDocument1.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ContractDocument1#mmSignOffDate
+ * ContractDocument1.mmSignOffDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContractDocument1#mmVersion
+ * ContractDocument1.mmVersion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,56 +53,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01#UnderlyingMasterAgreement
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01#mmUnderlyingMasterAgreement
  * AccountExcludedMandateMaintenanceAmendmentRequestV01.
- * UnderlyingMasterAgreement}</li>
+ * mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#UnderlyingMasterAgreement
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#mmUnderlyingMasterAgreement
  * AccountExcludedMandateMaintenanceAmendmentRequestV02.
- * UnderlyingMasterAgreement}</li>
+ * mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#UnderlyingMasterAgreement
- * AccountExcludedMandateMaintenanceRequestV01.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#mmUnderlyingMasterAgreement
+ * AccountExcludedMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#UnderlyingMasterAgreement
- * AccountExcludedMandateMaintenanceRequestV02.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#mmUnderlyingMasterAgreement
+ * AccountExcludedMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#UnderlyingMasterAgreement
- * AccountMandateMaintenanceAmendmentRequestV01.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#mmUnderlyingMasterAgreement
+ * AccountMandateMaintenanceAmendmentRequestV01.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#UnderlyingMasterAgreement
- * AccountMandateMaintenanceAmendmentRequestV02.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#mmUnderlyingMasterAgreement
+ * AccountMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#UnderlyingMasterAgreement
- * AccountMandateMaintenanceRequestV01.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#mmUnderlyingMasterAgreement
+ * AccountMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#UnderlyingMasterAgreement
- * AccountMandateMaintenanceRequestV02.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#mmUnderlyingMasterAgreement
+ * AccountMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01#UnderlyingMasterAgreement
- * AccountOpeningAdditionalInformationRequestV01.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01#mmUnderlyingMasterAgreement
+ * AccountOpeningAdditionalInformationRequestV01.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02#UnderlyingMasterAgreement
- * AccountOpeningAdditionalInformationRequestV02.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02#mmUnderlyingMasterAgreement
+ * AccountOpeningAdditionalInformationRequestV02.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#UnderlyingMasterAgreement
- * AccountOpeningAmendmentRequestV01.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#mmUnderlyingMasterAgreement
+ * AccountOpeningAmendmentRequestV01.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#UnderlyingMasterAgreement
- * AccountOpeningAmendmentRequestV02.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmUnderlyingMasterAgreement
+ * AccountOpeningAmendmentRequestV02.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#UnderlyingMasterAgreement
- * AccountOpeningRequestV01.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#mmUnderlyingMasterAgreement
+ * AccountOpeningRequestV01.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#UnderlyingMasterAgreement
- * AccountOpeningRequestV02.UnderlyingMasterAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#mmUnderlyingMasterAgreement
+ * AccountOpeningRequestV02.mmUnderlyingMasterAgreement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +118,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContractDocument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reference;
 	/**
 	 * Account contract established between the organisation or the group to
 	 * which the organisation belongs, and the account servicer. This contract
@@ -131,8 +133,8 @@ public class ContractDocument1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Description
-	 * Agreement.Description}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDescription
+	 * Agreement.mmDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +155,21 @@ public class ContractDocument1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDescription;
 			componentContext_lazy = () -> ContractDocument1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Description;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate signOffDate;
 	/**
 	 * Signoff date of the document.
 	 * <p>
@@ -179,8 +182,8 @@ public class ContractDocument1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#DateSigned
-	 * Agreement.DateSigned}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDateSigned
+	 * Agreement.mmDateSigned}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,20 +202,21 @@ public class ContractDocument1 {
 	 * definition} = "Signoff date of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignOffDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignOffDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
 			componentContext_lazy = () -> ContractDocument1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.DateSigned;
 			isDerived = false;
 			xmlTag = "SgnOffDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOffDate";
 			definition = "Signoff date of the document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max6Text version;
 	/**
 	 * Identification of the version of the contract.
 	 * <p>
@@ -225,8 +229,8 @@ public class ContractDocument1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Version
-	 * Agreement.Version}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmVersion
+	 * Agreement.mmVersion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -245,17 +249,17 @@ public class ContractDocument1 {
 	 * definition} = "Identification of the version of the contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmVersion;
 			componentContext_lazy = () -> ContractDocument1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Version;
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Identification of the version of the contract.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
@@ -263,23 +267,49 @@ public class ContractDocument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractDocument1.Reference, com.tools20022.repository.msg.ContractDocument1.SignOffDate, com.tools20022.repository.msg.ContractDocument1.Version);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.ContractDocument1.mmReference, com.tools20022.repository.msg.ContractDocument1.mmSignOffDate, com.tools20022.repository.msg.ContractDocument1.mmVersion);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmUnderlyingMasterAgreement);
 				trace_lazy = () -> AccountContract.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.UnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.UnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.UnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.UnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.UnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.UnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningRequestV02.UnderlyingMasterAgreement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContractDocument1";
 				definition = "Document that contains the information of the contract agreed between both parties.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public ISODate getSignOffDate() {
+		return signOffDate;
+	}
+
+	public void setSignOffDate(ISODate signOffDate) {
+		this.signOffDate = signOffDate;
+	}
+
+	public Max6Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max6Text version) {
+		this.version = version;
 	}
 }

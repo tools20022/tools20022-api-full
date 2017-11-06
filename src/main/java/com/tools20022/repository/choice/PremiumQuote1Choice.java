@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#PercentageOfCallAmount
- * PremiumQuote1Choice.PercentageOfCallAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#mmPercentageOfCallAmount
+ * PremiumQuote1Choice.mmPercentageOfCallAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#PercentageOfPutAmount
- * PremiumQuote1Choice.PercentageOfPutAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#mmPercentageOfPutAmount
+ * PremiumQuote1Choice.mmPercentageOfPutAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#PointsOfCallAmount
- * PremiumQuote1Choice.PointsOfCallAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#mmPointsOfCallAmount
+ * PremiumQuote1Choice.mmPointsOfCallAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#PointsOfPutAmount
- * PremiumQuote1Choice.PointsOfPutAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.PremiumQuote1Choice#mmPointsOfPutAmount
+ * PremiumQuote1Choice.mmPointsOfPutAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PremiumQuote1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate percentageOfCallAmount;
 	/**
 	 * Premium calculation is based on a percentage of the call amount.
 	 * <p>
@@ -85,8 +86,8 @@ public class PremiumQuote1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#PercentageOfCallAmount
-	 * PremiumCalculation.PercentageOfCallAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPercentageOfCallAmount
+	 * PremiumCalculation.mmPercentageOfCallAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class PremiumQuote1Choice {
 	 * "Premium calculation is based on a percentage of the call amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfCallAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfCallAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmPercentageOfCallAmount;
 			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.PercentageOfCallAmount;
 			isDerived = false;
 			xmlTag = "PctgOfCallAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfCallAmount";
 			definition = "Premium calculation is based on a percentage of the call amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfPutAmount;
 	/**
 	 * Premium calculation is based on a percentage of the put amount.
 	 * <p>
@@ -133,8 +135,8 @@ public class PremiumQuote1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#PercentageOfPutAmount
-	 * PremiumCalculation.PercentageOfPutAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPercentageOfPutAmount
+	 * PremiumCalculation.mmPercentageOfPutAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class PremiumQuote1Choice {
 	 * "Premium calculation is based on a percentage of the put amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfPutAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfPutAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmPercentageOfPutAmount;
 			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.PercentageOfPutAmount;
 			isDerived = false;
 			xmlTag = "PctgOfPutAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfPutAmount";
 			definition = "Premium calculation is based on a percentage of the put amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected BaseOneRate pointsOfCallAmount;
 	/**
 	 * Premium calculation is based on points of the call amount.
 	 * <p>
@@ -180,8 +183,8 @@ public class PremiumQuote1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#PointsOfCallAmount
-	 * PremiumCalculation.PointsOfCallAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPointsOfCallAmount
+	 * PremiumCalculation.mmPointsOfCallAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,20 +204,21 @@ public class PremiumQuote1Choice {
 	 * "Premium calculation is based on points of the call amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PointsOfCallAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPointsOfCallAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmPointsOfCallAmount;
 			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.PointsOfCallAmount;
 			isDerived = false;
 			xmlTag = "PtsOfCallAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointsOfCallAmount";
 			definition = "Premium calculation is based on points of the call amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected BaseOneRate pointsOfPutAmount;
 	/**
 	 * Premium calculation is based on points of the put amount.
 	 * <p>
@@ -227,8 +231,8 @@ public class PremiumQuote1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#PointsOfPutAmount
-	 * PremiumCalculation.PointsOfPutAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmPointsOfPutAmount
+	 * PremiumCalculation.mmPointsOfPutAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,17 +252,17 @@ public class PremiumQuote1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PointsOfPutAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPointsOfPutAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmPointsOfPutAmount;
 			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.PointsOfPutAmount;
 			isDerived = false;
 			xmlTag = "PtsOfPutAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointsOfPutAmount";
 			definition = "Premium calculation is based on points of the put amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
@@ -266,15 +270,47 @@ public class PremiumQuote1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PremiumQuote1Choice.PercentageOfCallAmount, com.tools20022.repository.choice.PremiumQuote1Choice.PercentageOfPutAmount,
-						com.tools20022.repository.choice.PremiumQuote1Choice.PointsOfCallAmount, com.tools20022.repository.choice.PremiumQuote1Choice.PointsOfPutAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PremiumQuote1Choice.mmPercentageOfCallAmount, com.tools20022.repository.choice.PremiumQuote1Choice.mmPercentageOfPutAmount,
+						com.tools20022.repository.choice.PremiumQuote1Choice.mmPointsOfCallAmount, com.tools20022.repository.choice.PremiumQuote1Choice.mmPointsOfPutAmount);
 				trace_lazy = () -> PremiumCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PremiumQuote1Choice";
 				definition = "Specifies the amount of a premium on a currency option together with its calculation method.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getPercentageOfCallAmount() {
+		return percentageOfCallAmount;
+	}
+
+	public void setPercentageOfCallAmount(PercentageRate percentageOfCallAmount) {
+		this.percentageOfCallAmount = percentageOfCallAmount;
+	}
+
+	public PercentageRate getPercentageOfPutAmount() {
+		return percentageOfPutAmount;
+	}
+
+	public void setPercentageOfPutAmount(PercentageRate percentageOfPutAmount) {
+		this.percentageOfPutAmount = percentageOfPutAmount;
+	}
+
+	public BaseOneRate getPointsOfCallAmount() {
+		return pointsOfCallAmount;
+	}
+
+	public void setPointsOfCallAmount(BaseOneRate pointsOfCallAmount) {
+		this.pointsOfCallAmount = pointsOfCallAmount;
+	}
+
+	public BaseOneRate getPointsOfPutAmount() {
+		return pointsOfPutAmount;
+	}
+
+	public void setPointsOfPutAmount(BaseOneRate pointsOfPutAmount) {
+		this.pointsOfPutAmount = pointsOfPutAmount;
 	}
 }

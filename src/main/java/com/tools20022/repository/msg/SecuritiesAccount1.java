@@ -37,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#Identification
- * SecuritiesAccount1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1#Name
- * SecuritiesAccount1.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmIdentification
+ * SecuritiesAccount1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmName
+ * SecuritiesAccount1.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#FinancialInstrumentSupplementaryIdentification
- * SecuritiesAccount1.FinancialInstrumentSupplementaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmFinancialInstrumentSupplementaryIdentification
+ * SecuritiesAccount1.mmFinancialInstrumentSupplementaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#FinancialInstrumentIdentification
- * SecuritiesAccount1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmFinancialInstrumentIdentification
+ * SecuritiesAccount1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#FinancialInstrumentName
- * SecuritiesAccount1.FinancialInstrumentName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1#Status
- * SecuritiesAccount1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmFinancialInstrumentName
+ * SecuritiesAccount1.mmFinancialInstrumentName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmStatus
+ * SecuritiesAccount1.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification1 identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -89,8 +90,8 @@ public class SecuritiesAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +112,21 @@ public class SecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentification1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
 		}
 	};
+	protected Max35Text name;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -139,8 +141,8 @@ public class SecuritiesAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,20 +163,21 @@ public class SecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text financialInstrumentSupplementaryIdentification;
 	/**
 	 * Additional information about a financial instrument to help identify the
 	 * instrument.
@@ -188,8 +191,8 @@ public class SecuritiesAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +213,21 @@ public class SecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentSupplementaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentSupplementaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmSplmtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentSupplementaryIdentification";
 			definition = "Additional information about a financial instrument to help identify the instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SecurityIdentification1Choice financialInstrumentIdentification;
 	/**
 	 * Identification of a security, as assigned under a formal or proprietary
 	 * identification scheme.
@@ -238,8 +242,8 @@ public class SecuritiesAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +264,21 @@ public class SecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security, as assigned under a formal or proprietary identification scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification1Choice.mmObject();
 		}
 	};
+	protected Max350Text financialInstrumentName;
 	/**
 	 * Name of the financial instrument in free format text.
 	 * <p>
@@ -286,8 +291,8 @@ public class SecuritiesAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Name
-	 * SecuritiesIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmName
+	 * SecuritiesIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -306,20 +311,21 @@ public class SecuritiesAccount1 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.Name;
 			isDerived = false;
 			xmlTag = "FinInstrmNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentName";
 			definition = "Name of the financial instrument in free format text.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected AccountStatus1Code status;
 	/**
 	 * Specifies the current state of an account, eg, enabled or deleted.
 	 * <p>
@@ -333,8 +339,8 @@ public class SecuritiesAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus#Status
-	 * AccountStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus#mmStatus
+	 * AccountStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -354,17 +360,17 @@ public class SecuritiesAccount1 {
 	 * "Specifies the current state of an account, eg, enabled or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmStatus;
 			componentContext_lazy = () -> SecuritiesAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the current state of an account, eg, enabled or deleted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatus1Code.mmObject();
 		}
 	};
@@ -372,16 +378,64 @@ public class SecuritiesAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount1.Identification, com.tools20022.repository.msg.SecuritiesAccount1.Name,
-						com.tools20022.repository.msg.SecuritiesAccount1.FinancialInstrumentSupplementaryIdentification, com.tools20022.repository.msg.SecuritiesAccount1.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.SecuritiesAccount1.FinancialInstrumentName, com.tools20022.repository.msg.SecuritiesAccount1.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount1.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount1.mmName,
+						com.tools20022.repository.msg.SecuritiesAccount1.mmFinancialInstrumentSupplementaryIdentification, com.tools20022.repository.msg.SecuritiesAccount1.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SecuritiesAccount1.mmFinancialInstrumentName, com.tools20022.repository.msg.SecuritiesAccount1.mmStatus);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccount1";
 				definition = "Account to or from which a securities entry is made.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification1 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getFinancialInstrumentSupplementaryIdentification() {
+		return financialInstrumentSupplementaryIdentification;
+	}
+
+	public void setFinancialInstrumentSupplementaryIdentification(Max35Text financialInstrumentSupplementaryIdentification) {
+		this.financialInstrumentSupplementaryIdentification = financialInstrumentSupplementaryIdentification;
+	}
+
+	public SecurityIdentification1Choice getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification1Choice financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public Max350Text getFinancialInstrumentName() {
+		return financialInstrumentName;
+	}
+
+	public void setFinancialInstrumentName(Max350Text financialInstrumentName) {
+		this.financialInstrumentName = financialInstrumentName;
+	}
+
+	public AccountStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(AccountStatus1Code status) {
+		this.status = status;
 	}
 }

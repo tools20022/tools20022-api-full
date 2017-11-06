@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -83,39 +84,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#Identification
- * SecuritiesStatementQueryV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmIdentification
+ * SecuritiesStatementQueryV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#StatementRequested
- * SecuritiesStatementQueryV01.StatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmStatementRequested
+ * SecuritiesStatementQueryV01.mmStatementRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#StatementGeneralDetails
- * SecuritiesStatementQueryV01.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmStatementGeneralDetails
+ * SecuritiesStatementQueryV01.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#AccountOwner
- * SecuritiesStatementQueryV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmAccountOwner
+ * SecuritiesStatementQueryV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#SafekeepingAccount
- * SecuritiesStatementQueryV01.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmSafekeepingAccount
+ * SecuritiesStatementQueryV01.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#AdditionalQueryParameters
- * SecuritiesStatementQueryV01.AdditionalQueryParameters}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmAdditionalQueryParameters
+ * SecuritiesStatementQueryV01.mmAdditionalQueryParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#MessageOriginator
- * SecuritiesStatementQueryV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmMessageOriginator
+ * SecuritiesStatementQueryV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#MessageRecipient
- * SecuritiesStatementQueryV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmMessageRecipient
+ * SecuritiesStatementQueryV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#Extension
- * SecuritiesStatementQueryV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmExtension
+ * SecuritiesStatementQueryV01.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#identifier
- * SecuritiesStatementQueryV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.021.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,6 +138,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesStatementQueryV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification11 identification;
 	/**
 	 * Information that unambiguously identifies a SecuritiesStatementQuery
 	 * message as know by the account owner (or the instructing party acting on
@@ -166,17 +166,18 @@ public class SecuritiesStatementQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies a SecuritiesStatementQuery message as know by the account owner (or the instructing party acting on its behalf).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 	};
+	protected DocumentNumber1 statementRequested;
 	/**
 	 * Description of the statement requested.
 	 * <p>
@@ -199,17 +200,18 @@ public class SecuritiesStatementQueryV01 {
 	 * definition} = "Description of the statement requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementRequested = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementRequested = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtReqd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementRequested";
 			definition = "Description of the statement requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentNumber1.mmObject();
 		}
 	};
+	protected Statement16 statementGeneralDetails;
 	/**
 	 * General information related to report.
 	 * <p>
@@ -232,17 +234,18 @@ public class SecuritiesStatementQueryV01 {
 	 * definition} = "General information related to report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Statement16.mmObject();
 		}
 	};
+	protected PartyIdentification13Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -266,17 +269,18 @@ public class SecuritiesStatementQueryV01 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -300,17 +304,18 @@ public class SecuritiesStatementQueryV01 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 	};
+	protected List<AdditionalQueryParameters1> additionalQueryParameters;
 	/**
 	 * Additional specific query criteria.
 	 * <p>
@@ -334,7 +339,7 @@ public class SecuritiesStatementQueryV01 {
 	 * definition} = "Additional specific query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalQueryParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalQueryParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlQryParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,6 +349,7 @@ public class SecuritiesStatementQueryV01 {
 			complexType_lazy = () -> AdditionalQueryParameters1.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -368,17 +374,18 @@ public class SecuritiesStatementQueryV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageRecipient;
 	/**
 	 * Party that is the final destination of the message, if other than the
 	 * receiver.
@@ -405,17 +412,18 @@ public class SecuritiesStatementQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party that is the final destination of the message, if other than the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected List<Extension2> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -441,7 +449,7 @@ public class SecuritiesStatementQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -449,33 +457,6 @@ public class SecuritiesStatementQueryV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "021"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "021";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -490,14 +471,93 @@ public class SecuritiesStatementQueryV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesStmtQry";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.Identification, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.StatementRequested,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.StatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.AdditionalQueryParameters,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.MessageOriginator, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.MessageRecipient,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmIdentification, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmStatementRequested,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmAdditionalQueryParameters,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmMessageOriginator, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmMessageRecipient,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "021";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification11 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification11 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentNumber1 getStatementRequested() {
+		return statementRequested;
+	}
+
+	public void setStatementRequested(DocumentNumber1 statementRequested) {
+		this.statementRequested = statementRequested;
+	}
+
+	public Statement16 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement16 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public PartyIdentification13Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification13Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<AdditionalQueryParameters1> getAdditionalQueryParameters() {
+		return additionalQueryParameters;
+	}
+
+	public void setAdditionalQueryParameters(List<AdditionalQueryParameters1> additionalQueryParameters) {
+		this.additionalQueryParameters = additionalQueryParameters;
+	}
+
+	public PartyIdentification10Choice getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(PartyIdentification10Choice messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public PartyIdentification10Choice getMessageRecipient() {
+		return messageRecipient;
+	}
+
+	public void setMessageRecipient(PartyIdentification10Choice messageRecipient) {
+		this.messageRecipient = messageRecipient;
+	}
+
+	public List<Extension2> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension2> extension) {
+		this.extension = extension;
 	}
 }

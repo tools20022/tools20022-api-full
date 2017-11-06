@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -72,66 +73,64 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#MessageReference
- * PortfolioTransferInstructionV07.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmMessageReference
+ * PortfolioTransferInstructionV07.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#PoolReference
- * PortfolioTransferInstructionV07.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmPoolReference
+ * PortfolioTransferInstructionV07.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#PreviousReference
- * PortfolioTransferInstructionV07.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmPreviousReference
+ * PortfolioTransferInstructionV07.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#RelatedReference
- * PortfolioTransferInstructionV07.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmRelatedReference
+ * PortfolioTransferInstructionV07.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#PrimaryIndividualInvestor
- * PortfolioTransferInstructionV07.PrimaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmPrimaryIndividualInvestor
+ * PortfolioTransferInstructionV07.mmPrimaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#SecondaryIndividualInvestor
- * PortfolioTransferInstructionV07.SecondaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmSecondaryIndividualInvestor
+ * PortfolioTransferInstructionV07.mmSecondaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#OtherIndividualInvestor
- * PortfolioTransferInstructionV07.OtherIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmOtherIndividualInvestor
+ * PortfolioTransferInstructionV07.mmOtherIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#PrimaryCorporateInvestor
- * PortfolioTransferInstructionV07.PrimaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmPrimaryCorporateInvestor
+ * PortfolioTransferInstructionV07.mmPrimaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#SecondaryCorporateInvestor
- * PortfolioTransferInstructionV07.SecondaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmSecondaryCorporateInvestor
+ * PortfolioTransferInstructionV07.mmSecondaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#OtherCorporateInvestor
- * PortfolioTransferInstructionV07.OtherCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmOtherCorporateInvestor
+ * PortfolioTransferInstructionV07.mmOtherCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#TransferorAccount
- * PortfolioTransferInstructionV07.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmTransferorAccount
+ * PortfolioTransferInstructionV07.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#NomineeAccount
- * PortfolioTransferInstructionV07.NomineeAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmNomineeAccount
+ * PortfolioTransferInstructionV07.mmNomineeAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#Transferee
- * PortfolioTransferInstructionV07.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmTransferee
+ * PortfolioTransferInstructionV07.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#IntermediaryInformation
- * PortfolioTransferInstructionV07.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmIntermediaryInformation
+ * PortfolioTransferInstructionV07.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#CashAccount
- * PortfolioTransferInstructionV07.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmCashAccount
+ * PortfolioTransferInstructionV07.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#ProductTransfer
- * PortfolioTransferInstructionV07.ProductTransfer}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmProductTransfer
+ * PortfolioTransferInstructionV07.mmProductTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#MarketPracticeVersion
- * PortfolioTransferInstructionV07.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmMarketPracticeVersion
+ * PortfolioTransferInstructionV07.mmMarketPracticeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#Extension
- * PortfolioTransferInstructionV07.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmExtension
+ * PortfolioTransferInstructionV07.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#identifier
- * PortfolioTransferInstructionV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.012.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -151,6 +150,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PortfolioTransferInstructionV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageReference;
 	/**
 	 * Identifies the message.
 	 * <p>
@@ -175,22 +175,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#MessageReference
-	 * PortfolioTransferInstructionV06.MessageReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmMessageReference
+	 * PortfolioTransferInstructionV06.mmMessageReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Identifies the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.MessageReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmMessageReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference6 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -215,22 +216,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#PoolReference
-	 * PortfolioTransferInstructionV06.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmPoolReference
+	 * PortfolioTransferInstructionV06.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.PoolReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPoolReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected AdditionalReference6 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -255,22 +257,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#PreviousReference
-	 * PortfolioTransferInstructionV06.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmPreviousReference
+	 * PortfolioTransferInstructionV06.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.PreviousReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPreviousReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected AdditionalReference6 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -296,22 +299,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#RelatedReference
-	 * PortfolioTransferInstructionV06.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmRelatedReference
+	 * PortfolioTransferInstructionV06.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.RelatedReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmRelatedReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected IndividualPerson8 primaryIndividualInvestor;
 	/**
 	 * Information identifying the primary individual investor, for example,
 	 * name, address, social security number and date of birth.
@@ -339,22 +343,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#PrimaryIndividualInvestor
-	 * PortfolioTransferInstructionV06.PrimaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmPrimaryIndividualInvestor
+	 * PortfolioTransferInstructionV06.mmPrimaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PrimaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPrimaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, for example, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.PrimaryIndividualInvestor;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPrimaryIndividualInvestor;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 	};
+	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
 	 * Information identifying the secondary individual investor, for example,
 	 * name, address, social security number and date of birth.
@@ -382,22 +387,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#SecondaryIndividualInvestor
-	 * PortfolioTransferInstructionV06.SecondaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmSecondaryIndividualInvestor
+	 * PortfolioTransferInstructionV06.mmSecondaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecondaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecondaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, for example, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.SecondaryIndividualInvestor;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmSecondaryIndividualInvestor;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 	};
+	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
 	 * Information identifying the other individual investors, for example,
 	 * name, address, social security number and date of birth.
@@ -425,21 +431,22 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#OtherIndividualInvestor
-	 * PortfolioTransferInstructionV06.OtherIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmOtherIndividualInvestor
+	 * PortfolioTransferInstructionV06.mmOtherIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying the other individual investors, for example, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.OtherIndividualInvestor;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmOtherIndividualInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 	};
+	protected Organisation21 primaryCorporateInvestor;
 	/**
 	 * Information identifying the primary corporate investor, for example, name
 	 * and address.
@@ -466,22 +473,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#PrimaryCorporateInvestor
-	 * PortfolioTransferInstructionV06.PrimaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmPrimaryCorporateInvestor
+	 * PortfolioTransferInstructionV06.mmPrimaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PrimaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPrimaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, for example, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.PrimaryCorporateInvestor;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPrimaryCorporateInvestor;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
 		}
 	};
+	protected Organisation21 secondaryCorporateInvestor;
 	/**
 	 * Information identifying the secondary corporate investor, for example,
 	 * name and address.
@@ -508,22 +516,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#SecondaryCorporateInvestor
-	 * PortfolioTransferInstructionV06.SecondaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmSecondaryCorporateInvestor
+	 * PortfolioTransferInstructionV06.mmSecondaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecondaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecondaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, for example, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.SecondaryCorporateInvestor;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmSecondaryCorporateInvestor;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
 		}
 	};
+	protected List<Organisation21> otherCorporateInvestor;
 	/**
 	 * Information identifying the other corporate investors, for example, name
 	 * and address.
@@ -550,21 +559,22 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#OtherCorporateInvestor
-	 * PortfolioTransferInstructionV06.OtherCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmOtherCorporateInvestor
+	 * PortfolioTransferInstructionV06.mmOtherCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, for example, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.OtherCorporateInvestor;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmOtherCorporateInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
 		}
 	};
+	protected Account19 transferorAccount;
 	/**
 	 * Identification of an account owned by the investor at the old plan
 	 * manager (account servicer).
@@ -591,22 +601,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#TransferorAccount
-	 * PortfolioTransferInstructionV06.TransferorAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmTransferorAccount
+	 * PortfolioTransferInstructionV06.mmTransferorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferorAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferorAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.TransferorAccount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmTransferorAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Account19.mmObject();
 		}
 	};
+	protected Account19 nomineeAccount;
 	/**
 	 * Account held in the name of a party that is not the name of the
 	 * beneficial owner of the shares.
@@ -633,22 +644,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#NomineeAccount
-	 * PortfolioTransferInstructionV06.NomineeAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmNomineeAccount
+	 * PortfolioTransferInstructionV06.mmNomineeAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NomineeAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNomineeAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NmneeAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.NomineeAccount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmNomineeAccount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Account19.mmObject();
 		}
 	};
+	protected PartyIdentification70Choice transferee;
 	/**
 	 * Information related to the institution to which the financial instrument
 	 * is to be transferred.
@@ -676,22 +688,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#Transferee
-	 * PortfolioTransferInstructionV06.Transferee}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmTransferee
+	 * PortfolioTransferInstructionV06.mmTransferee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Transferee = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferee = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Trfee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.Transferee;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmTransferee;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	protected List<Intermediary34> intermediaryInformation;
 	/**
 	 * Identification of a related party or intermediary.
 	 * <p>
@@ -714,7 +727,7 @@ public class PortfolioTransferInstructionV07 {
 	 * definition} = "Identification of a related party or intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IntermediaryInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntermediaryInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrmyInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -724,6 +737,7 @@ public class PortfolioTransferInstructionV07 {
 			complexType_lazy = () -> Intermediary34.mmObject();
 		}
 	};
+	protected CashAccount34 cashAccount;
 	/**
 	 * Identification of an account owned by the investor to which a cash entry
 	 * is made based on the transfer of asset(s).
@@ -750,22 +764,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#CashAccount
-	 * PortfolioTransferInstructionV06.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmCashAccount
+	 * PortfolioTransferInstructionV06.mmCashAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CashAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCashAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.CashAccount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmCashAccount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashAccount34.mmObject();
 		}
 	};
+	protected List<ISATransfer22> productTransfer;
 	/**
 	 * Provides information related to the asset(s) transferred.
 	 * <p>
@@ -790,21 +805,22 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#ProductTransfer
-	 * PortfolioTransferInstructionV06.ProductTransfer}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmProductTransfer
+	 * PortfolioTransferInstructionV06.mmProductTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProductTransfer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProductTransfer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PdctTrf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.ProductTransfer;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmProductTransfer;
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer22.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -830,22 +846,23 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#MarketPracticeVersion
-	 * PortfolioTransferInstructionV06.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmMarketPracticeVersion
+	 * PortfolioTransferInstructionV06.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.MarketPracticeVersion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -872,46 +889,19 @@ public class PortfolioTransferInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#Extension
-	 * PortfolioTransferInstructionV06.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmExtension
+	 * PortfolioTransferInstructionV06.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.Extension;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "012";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -926,18 +916,169 @@ public class PortfolioTransferInstructionV07 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfInstr";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.MessageReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.PoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.PreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.RelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.PrimaryIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.SecondaryIndividualInvestor,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.OtherIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.PrimaryCorporateInvestor,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.SecondaryCorporateInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.OtherCorporateInvestor,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.TransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.NomineeAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.Transferee, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.IntermediaryInformation,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.CashAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.ProductTransfer,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.MarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmPrimaryIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmSecondaryIndividualInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmOtherIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmPrimaryCorporateInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmSecondaryCorporateInvestor, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmOtherCorporateInvestor,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmTransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmNomineeAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmIntermediaryInformation,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmCashAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmProductTransfer,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "012";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageReference() {
+		return messageReference;
+	}
+
+	public void setMessageReference(MessageIdentification1 messageReference) {
+		this.messageReference = messageReference;
+	}
+
+	public AdditionalReference6 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference6 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference6 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference6 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference6 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference6 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public IndividualPerson8 getPrimaryIndividualInvestor() {
+		return primaryIndividualInvestor;
+	}
+
+	public void setPrimaryIndividualInvestor(IndividualPerson8 primaryIndividualInvestor) {
+		this.primaryIndividualInvestor = primaryIndividualInvestor;
+	}
+
+	public IndividualPerson8 getSecondaryIndividualInvestor() {
+		return secondaryIndividualInvestor;
+	}
+
+	public void setSecondaryIndividualInvestor(IndividualPerson8 secondaryIndividualInvestor) {
+		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
+	}
+
+	public List<IndividualPerson8> getOtherIndividualInvestor() {
+		return otherIndividualInvestor;
+	}
+
+	public void setOtherIndividualInvestor(List<IndividualPerson8> otherIndividualInvestor) {
+		this.otherIndividualInvestor = otherIndividualInvestor;
+	}
+
+	public Organisation21 getPrimaryCorporateInvestor() {
+		return primaryCorporateInvestor;
+	}
+
+	public void setPrimaryCorporateInvestor(Organisation21 primaryCorporateInvestor) {
+		this.primaryCorporateInvestor = primaryCorporateInvestor;
+	}
+
+	public Organisation21 getSecondaryCorporateInvestor() {
+		return secondaryCorporateInvestor;
+	}
+
+	public void setSecondaryCorporateInvestor(Organisation21 secondaryCorporateInvestor) {
+		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
+	}
+
+	public List<Organisation21> getOtherCorporateInvestor() {
+		return otherCorporateInvestor;
+	}
+
+	public void setOtherCorporateInvestor(List<Organisation21> otherCorporateInvestor) {
+		this.otherCorporateInvestor = otherCorporateInvestor;
+	}
+
+	public Account19 getTransferorAccount() {
+		return transferorAccount;
+	}
+
+	public void setTransferorAccount(Account19 transferorAccount) {
+		this.transferorAccount = transferorAccount;
+	}
+
+	public Account19 getNomineeAccount() {
+		return nomineeAccount;
+	}
+
+	public void setNomineeAccount(Account19 nomineeAccount) {
+		this.nomineeAccount = nomineeAccount;
+	}
+
+	public PartyIdentification70Choice getTransferee() {
+		return transferee;
+	}
+
+	public void setTransferee(PartyIdentification70Choice transferee) {
+		this.transferee = transferee;
+	}
+
+	public List<Intermediary34> getIntermediaryInformation() {
+		return intermediaryInformation;
+	}
+
+	public void setIntermediaryInformation(List<Intermediary34> intermediaryInformation) {
+		this.intermediaryInformation = intermediaryInformation;
+	}
+
+	public CashAccount34 getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(CashAccount34 cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public List<ISATransfer22> getProductTransfer() {
+		return productTransfer;
+	}
+
+	public void setProductTransfer(List<ISATransfer22> productTransfer) {
+		this.productTransfer = productTransfer;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

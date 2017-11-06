@@ -40,12 +40,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TimePeriod#SystemAvailability
- * TimePeriod.SystemAvailability}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TimePeriod#FromTime
- * TimePeriod.FromTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TimePeriod#ToTime
- * TimePeriod.ToTime}</li>
+ * {@linkplain com.tools20022.repository.entity.TimePeriod#mmSystemAvailability
+ * TimePeriod.mmSystemAvailability}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TimePeriod#mmFromTime
+ * TimePeriod.mmFromTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TimePeriod#mmToTime
+ * TimePeriod.mmToTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemAvailability#AvailableSessionPeriod
- * SystemAvailability.AvailableSessionPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmAvailableSessionPeriod
+ * SystemAvailability.mmAvailableSessionPeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TimePeriod {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemAvailability systemAvailability;
 	/**
 	 * System for which a session period is specified.
 	 * <p>
@@ -95,8 +96,8 @@ public class TimePeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SystemAvailability#AvailableSessionPeriod
-	 * SystemAvailability.AvailableSessionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmAvailableSessionPeriod
+	 * SystemAvailability.mmAvailableSessionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -119,20 +120,21 @@ public class TimePeriod {
 	 * definition} = "System for which a session period is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SystemAvailability = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystemAvailability = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TimePeriod.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SystemAvailability";
 			definition = "System for which a session period is specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SystemAvailability.AvailableSessionPeriod;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 		}
 	};
+	protected ISOTime fromTime;
 	/**
 	 * Time at which the time span starts.
 	 * <p>
@@ -142,20 +144,21 @@ public class TimePeriod {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISOTime
 	 * ISOTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriodDetails#FromTime
-	 * TimePeriodDetails.FromTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TimePeriodDetails1#FromTime
-	 * TimePeriodDetails1.FromTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TimePeriod TimePeriod}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TimePeriodDetails#mmFromTime
+	 * TimePeriodDetails.mmFromTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TimePeriodDetails1#mmFromTime
+	 * TimePeriodDetails1.mmFromTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -167,19 +170,20 @@ public class TimePeriod {
 	 * definition} = "Time at which the time span starts."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FromTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFromTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimePeriodDetails.FromTime, com.tools20022.repository.msg.TimePeriodDetails1.FromTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimePeriodDetails.mmFromTime, com.tools20022.repository.msg.TimePeriodDetails1.mmFromTime);
 			elementContext_lazy = () -> TimePeriod.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FromTime";
 			definition = "Time at which the time span starts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected ISOTime toTime;
 	/**
 	 * Time at which the time span ends.
 	 * <p>
@@ -189,19 +193,20 @@ public class TimePeriod {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISOTime
 	 * ISOTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriodDetails#ToTime
-	 * TimePeriodDetails.ToTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriodDetails1#ToTime
-	 * TimePeriodDetails1.ToTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TimePeriod TimePeriod}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriodDetails#mmToTime
+	 * TimePeriodDetails.mmToTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TimePeriodDetails1#mmToTime
+	 * TimePeriodDetails1.mmToTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -213,16 +218,16 @@ public class TimePeriod {
 	 * definition} = "Time at which the time span ends."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ToTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmToTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimePeriodDetails.ToTime, com.tools20022.repository.msg.TimePeriodDetails1.ToTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimePeriodDetails.mmToTime, com.tools20022.repository.msg.TimePeriodDetails1.mmToTime);
 			elementContext_lazy = () -> TimePeriod.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ToTime";
 			definition = "Time at which the time span ends.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -230,15 +235,39 @@ public class TimePeriod {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TimePeriod";
 				definition = "Particular time span specified between a start time and an end time. The time period cannot exceed 24 hours.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemAvailability.AvailableSessionPeriod);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TimePeriod.SystemAvailability, com.tools20022.repository.entity.TimePeriod.FromTime, com.tools20022.repository.entity.TimePeriod.ToTime);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TimePeriod.mmSystemAvailability, com.tools20022.repository.entity.TimePeriod.mmFromTime, com.tools20022.repository.entity.TimePeriod.mmToTime);
 				derivationComponent_lazy = () -> Arrays.asList(TimePeriodDetails.mmObject(), TimePeriodDetails1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemAvailability getSystemAvailability() {
+		return systemAvailability;
+	}
+
+	public void setSystemAvailability(com.tools20022.repository.entity.SystemAvailability systemAvailability) {
+		this.systemAvailability = systemAvailability;
+	}
+
+	public ISOTime getFromTime() {
+		return fromTime;
+	}
+
+	public void setFromTime(ISOTime fromTime) {
+		this.fromTime = fromTime;
+	}
+
+	public ISOTime getToTime() {
+		return toTime;
+	}
+
+	public void setToTime(ISOTime toTime) {
+		this.toTime = toTime;
 	}
 }

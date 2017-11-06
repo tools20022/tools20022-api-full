@@ -34,81 +34,81 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#Blocked
- * SecuritiesBalanceType3Code.Blocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmBlocked
+ * SecuritiesBalanceType3Code.mmBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#Borrowed
- * SecuritiesBalanceType3Code.Borrowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmBorrowed
+ * SecuritiesBalanceType3Code.mmBorrowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#CollateralIn
- * SecuritiesBalanceType3Code.CollateralIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmCollateralIn
+ * SecuritiesBalanceType3Code.mmCollateralIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#CollateralOut
- * SecuritiesBalanceType3Code.CollateralOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmCollateralOut
+ * SecuritiesBalanceType3Code.mmCollateralOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#OnLoan
- * SecuritiesBalanceType3Code.OnLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmOnLoan
+ * SecuritiesBalanceType3Code.mmOnLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#DerivativesMargin
- * SecuritiesBalanceType3Code.DerivativesMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmDerivativesMargin
+ * SecuritiesBalanceType3Code.mmDerivativesMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#PendingDeliveryMatchedBalance
- * SecuritiesBalanceType3Code.PendingDeliveryMatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPendingDeliveryMatchedBalance
+ * SecuritiesBalanceType3Code.mmPendingDeliveryMatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#PendingReceiptMatchedBalance
- * SecuritiesBalanceType3Code.PendingReceiptMatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPendingReceiptMatchedBalance
+ * SecuritiesBalanceType3Code.mmPendingReceiptMatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#PendingReceiptUnmatchedBalance
- * SecuritiesBalanceType3Code.PendingReceiptUnmatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPendingReceiptUnmatchedBalance
+ * SecuritiesBalanceType3Code.mmPendingReceiptUnmatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#PendingCorporateAction
- * SecuritiesBalanceType3Code.PendingCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPendingCorporateAction
+ * SecuritiesBalanceType3Code.mmPendingCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#PendingDelivery
- * SecuritiesBalanceType3Code.PendingDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPendingDelivery
+ * SecuritiesBalanceType3Code.mmPendingDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#PendingReceipt
- * SecuritiesBalanceType3Code.PendingReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPendingReceipt
+ * SecuritiesBalanceType3Code.mmPendingReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#Pledged
- * SecuritiesBalanceType3Code.Pledged}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPledged
+ * SecuritiesBalanceType3Code.mmPledged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#PendingDeliveryUnmatchedBalance
- * SecuritiesBalanceType3Code.PendingDeliveryUnmatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmPendingDeliveryUnmatchedBalance
+ * SecuritiesBalanceType3Code.mmPendingDeliveryUnmatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#OutForRegistration
- * SecuritiesBalanceType3Code.OutForRegistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmOutForRegistration
+ * SecuritiesBalanceType3Code.mmOutForRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#Restricted
- * SecuritiesBalanceType3Code.Restricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmRestricted
+ * SecuritiesBalanceType3Code.mmRestricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#Unclassified
- * SecuritiesBalanceType3Code.Unclassified}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmUnclassified
+ * SecuritiesBalanceType3Code.mmUnclassified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#InTransshipment
- * SecuritiesBalanceType3Code.InTransshipment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmInTransshipment
+ * SecuritiesBalanceType3Code.mmInTransshipment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#Drawn
- * SecuritiesBalanceType3Code.Drawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmDrawn
+ * SecuritiesBalanceType3Code.mmDrawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#WaitingDocumentation
- * SecuritiesBalanceType3Code.WaitingDocumentation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmWaitingDocumentation
+ * SecuritiesBalanceType3Code.mmWaitingDocumentation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#BeingTransferred
- * SecuritiesBalanceType3Code.BeingTransferred}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmBeingTransferred
+ * SecuritiesBalanceType3Code.mmBeingTransferred}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#SidePocketComponent
- * SecuritiesBalanceType3Code.SidePocketComponent}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmSidePocketComponent
+ * SecuritiesBalanceType3Code.mmSidePocketComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#Holdback
- * SecuritiesBalanceType3Code.Holdback}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType3Code#mmHoldback
+ * SecuritiesBalanceType3Code.mmHoldback}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -145,7 +145,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Blocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Blocked = new MMCode() {
+	public static final MMCode mmBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
@@ -168,7 +168,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Borrowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Borrowed = new MMCode() {
+	public static final MMCode mmBorrowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowed";
@@ -191,7 +191,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "CollateralIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralIn = new MMCode() {
+	public static final MMCode mmCollateralIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIn";
@@ -214,7 +214,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "CollateralOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralOut = new MMCode() {
+	public static final MMCode mmCollateralOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOut";
@@ -237,7 +237,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "OnLoan"</li>
 	 * </ul>
 	 */
-	public static final MMCode OnLoan = new MMCode() {
+	public static final MMCode mmOnLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoan";
@@ -260,7 +260,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "DerivativesMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode DerivativesMargin = new MMCode() {
+	public static final MMCode mmDerivativesMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativesMargin";
@@ -283,7 +283,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingDeliveryMatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingDeliveryMatchedBalance = new MMCode() {
+	public static final MMCode mmPendingDeliveryMatchedBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryMatchedBalance";
@@ -306,7 +306,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingReceiptMatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingReceiptMatchedBalance = new MMCode() {
+	public static final MMCode mmPendingReceiptMatchedBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptMatchedBalance";
@@ -329,7 +329,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingReceiptUnmatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingReceiptUnmatchedBalance = new MMCode() {
+	public static final MMCode mmPendingReceiptUnmatchedBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptUnmatchedBalance";
@@ -352,7 +352,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingCorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingCorporateAction = new MMCode() {
+	public static final MMCode mmPendingCorporateAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCorporateAction";
@@ -375,7 +375,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingDelivery = new MMCode() {
+	public static final MMCode mmPendingDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDelivery";
@@ -398,7 +398,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingReceipt = new MMCode() {
+	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
@@ -421,7 +421,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Pledged"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pledged = new MMCode() {
+	public static final MMCode mmPledged = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
@@ -444,7 +444,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingDeliveryUnmatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingDeliveryUnmatchedBalance = new MMCode() {
+	public static final MMCode mmPendingDeliveryUnmatchedBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryUnmatchedBalance";
@@ -467,7 +467,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "OutForRegistration"</li>
 	 * </ul>
 	 */
-	public static final MMCode OutForRegistration = new MMCode() {
+	public static final MMCode mmOutForRegistration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistration";
@@ -490,7 +490,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Restricted = new MMCode() {
+	public static final MMCode mmRestricted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
@@ -513,7 +513,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unclassified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unclassified = new MMCode() {
+	public static final MMCode mmUnclassified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
@@ -536,7 +536,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "InTransshipment"</li>
 	 * </ul>
 	 */
-	public static final MMCode InTransshipment = new MMCode() {
+	public static final MMCode mmInTransshipment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransshipment";
@@ -559,7 +559,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Drawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Drawn = new MMCode() {
+	public static final MMCode mmDrawn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawn";
@@ -582,7 +582,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "WaitingDocumentation"</li>
 	 * </ul>
 	 */
-	public static final MMCode WaitingDocumentation = new MMCode() {
+	public static final MMCode mmWaitingDocumentation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingDocumentation";
@@ -605,7 +605,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "BeingTransferred"</li>
 	 * </ul>
 	 */
-	public static final MMCode BeingTransferred = new MMCode() {
+	public static final MMCode mmBeingTransferred = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeingTransferred";
@@ -628,7 +628,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "SidePocketComponent"</li>
 	 * </ul>
 	 */
-	public static final MMCode SidePocketComponent = new MMCode() {
+	public static final MMCode mmSidePocketComponent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketComponent";
@@ -651,7 +651,7 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Holdback"</li>
 	 * </ul>
 	 */
-	public static final MMCode Holdback = new MMCode() {
+	public static final MMCode mmHoldback = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holdback";
@@ -662,23 +662,23 @@ public class SecuritiesBalanceType3Code extends SecuritiesBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BLOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType3Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType3Code.Blocked, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.Borrowed,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.CollateralIn, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.CollateralOut,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.OnLoan, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.DerivativesMargin,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.PendingDeliveryMatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.PendingReceiptMatchedBalance,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.PendingReceiptUnmatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.PendingCorporateAction,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.PendingDelivery, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.PendingReceipt,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.Pledged, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.PendingDeliveryUnmatchedBalance,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.OutForRegistration, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.Restricted,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.Unclassified, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.InTransshipment,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.Drawn, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.WaitingDocumentation,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.BeingTransferred, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.SidePocketComponent,
-						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.Holdback);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmBlocked, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmBorrowed,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmCollateralIn, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmCollateralOut,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmOnLoan, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmDerivativesMargin,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPendingDeliveryMatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPendingReceiptMatchedBalance,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPendingReceiptUnmatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPendingCorporateAction,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPendingDelivery, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPendingReceipt,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPledged, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmPendingDeliveryUnmatchedBalance,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmOutForRegistration, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmRestricted,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmUnclassified, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmInTransshipment,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmDrawn, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmWaitingDocumentation,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmBeingTransferred, com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmSidePocketComponent,
+						com.tools20022.repository.codeset.SecuritiesBalanceType3Code.mmHoldback);
 				trace_lazy = () -> SecuritiesBalanceTypeCode.mmObject();
 			}
 		});

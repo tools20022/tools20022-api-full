@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradingPartyCapacity2Choice#Code
- * TradingPartyCapacity2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.TradingPartyCapacity2Choice#mmCode
+ * TradingPartyCapacity2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradingPartyCapacity2Choice#Proprietary
- * TradingPartyCapacity2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TradingPartyCapacity2Choice#mmProprietary
+ * TradingPartyCapacity2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradingPartyCapacity2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradingCapacity6Code code;
 	/**
 	 * Trading capacity expressed as an ISO 20022 code.
 	 * <p>
@@ -75,8 +76,8 @@ public class TradingPartyCapacity2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#TradingPartyCapacity
-	 * TradePartyRole.TradingPartyCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
+	 * TradePartyRole.mmTradingPartyCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class TradingPartyCapacity2Choice {
 	 * definition} = "Trading capacity expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> TradingPartyCapacity2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.TradingPartyCapacity;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trading capacity expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TradingCapacity6Code.mmObject();
 		}
 	};
+	protected GenericIdentification29 proprietary;
 	/**
 	 * Trading capacity expressed as a proprietary code.
 	 * <p>
@@ -122,8 +124,8 @@ public class TradingPartyCapacity2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#TradingPartyCapacity
-	 * TradePartyRole.TradingPartyCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
+	 * TradePartyRole.mmTradingPartyCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +144,17 @@ public class TradingPartyCapacity2Choice {
 	 * definition} = "Trading capacity expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> TradingPartyCapacity2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.TradingPartyCapacity;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trading capacity expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class TradingPartyCapacity2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingPartyCapacity2Choice.Code, com.tools20022.repository.choice.TradingPartyCapacity2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingPartyCapacity2Choice.mmCode, com.tools20022.repository.choice.TradingPartyCapacity2Choice.mmProprietary);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingPartyCapacity2Choice";
 				definition = "Choice of format for the trading capacity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradingCapacity6Code getCode() {
+		return code;
+	}
+
+	public void setCode(TradingCapacity6Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification29 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification29 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Liquidity set aside by the payer for specific purposes.
@@ -39,29 +40,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Reservation#ReservationType
- * Reservation.ReservationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#RelatedIntraPositionTransfer
- * Reservation.RelatedIntraPositionTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
+ * Reservation.mmReservationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#SettlementInstruction
- * Reservation.SettlementInstruction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reservation#AccountService
- * Reservation.AccountService}</li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmRelatedIntraPositionTransfer
+ * Reservation.mmRelatedIntraPositionTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmSettlementInstruction
+ * Reservation.mmSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmAccountService
+ * Reservation.mmAccountService}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AccountService#Reservation
- * AccountService.Reservation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#Reservation
- * CashSettlement.Reservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#Reservation
- * IntraPositionTransfer.Reservation}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountService#mmReservation
+ * AccountService.mmReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmReservation
+ * CashSettlement.mmReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmReservation
+ * IntraPositionTransfer.mmReservation}</li>
  * </ul>
  * </li>
  * <li>
@@ -69,72 +74,74 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#ReservationIdentification
- * ReservationIdentification1.ReservationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#mmReservationIdentification
+ * ReservationIdentification1.mmReservationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationCriteria1#SearchCriteria
- * ReservationCriteria1.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationCriteria1#mmSearchCriteria
+ * ReservationCriteria1.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#SearchCriteria
- * ReservationCriteria2.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationCriteria2#mmSearchCriteria
+ * ReservationCriteria2.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice#Current
- * CurrentOrDefaultReservation1Choice.Current}</li>
+ * {@linkplain com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice#mmCurrent
+ * CurrentOrDefaultReservation1Choice.mmCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice#Default
- * CurrentOrDefaultReservation1Choice.Default}</li>
+ * {@linkplain com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice#mmDefault
+ * CurrentOrDefaultReservation1Choice.mmDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationReport1#ReservationIdentification
- * ReservationReport1.ReservationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReservationReport1#Reservation
- * ReservationReport1.Reservation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport1#mmReservationIdentification
+ * ReservationReport1.mmReservationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reservations1#CurrentReservation
- * Reservations1.CurrentReservation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport1#mmReservation
+ * ReservationReport1.mmReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reservations1#DefaultReservation
- * Reservations1.DefaultReservation}</li>
+ * {@linkplain com.tools20022.repository.msg.Reservations1#mmCurrentReservation
+ * Reservations1.mmCurrentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationReport2#ReservationIdentification
- * ReservationReport2.ReservationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReservationReport2#Reservation
- * ReservationReport2.Reservation}</li>
+ * {@linkplain com.tools20022.repository.msg.Reservations1#mmDefaultReservation
+ * Reservations1.mmDefaultReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reservations2#CurrentReservation
- * Reservations2.CurrentReservation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport2#mmReservationIdentification
+ * ReservationReport2.mmReservationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reservations2#DefaultReservation
- * Reservations2.DefaultReservation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport2#mmReservation
+ * ReservationReport2.mmReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError3Choice#Reservation
- * ReservationOrError3Choice.Reservation}</li>
+ * {@linkplain com.tools20022.repository.msg.Reservations2#mmCurrentReservation
+ * Reservations2.mmCurrentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationReport3#ReservationIdentification
- * ReservationReport3.ReservationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reservations2#mmDefaultReservation
+ * Reservations2.mmDefaultReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#CurrentReservation
- * CurrentAndDefaultReservation1.CurrentReservation}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError3Choice#mmReservation
+ * ReservationOrError3Choice.mmReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#DefaultReservation
- * CurrentAndDefaultReservation1.DefaultReservation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport3#mmReservationIdentification
+ * ReservationReport3.mmReservationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError2Choice#BusinessReport
- * ReservationOrError2Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#mmCurrentReservation
+ * CurrentAndDefaultReservation1.mmCurrentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError4Choice#BusinessReport
- * ReservationOrError4Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#mmDefaultReservation
+ * CurrentAndDefaultReservation1.mmDefaultReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#CurrentReservation
- * CurrentAndDefaultReservation2.CurrentReservation}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError2Choice#mmBusinessReport
+ * ReservationOrError2Choice.mmBusinessReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#DefaultReservation
- * CurrentAndDefaultReservation2.DefaultReservation}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError4Choice#mmBusinessReport
+ * ReservationOrError4Choice.mmBusinessReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError5Choice#Reservation
- * ReservationOrError5Choice.Reservation}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#mmCurrentReservation
+ * CurrentAndDefaultReservation2.mmCurrentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationReport4#ReservationIdentification
- * ReservationReport4.ReservationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#mmDefaultReservation
+ * CurrentAndDefaultReservation2.mmDefaultReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError5Choice#mmReservation
+ * ReservationOrError5Choice.mmReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport4#mmReservationIdentification
+ * ReservationReport4.mmReservationIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -196,8 +203,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -211,6 +218,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reservation extends Limit {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReservationTypeCode reservationType;
 	/**
 	 * Nature of the reservation.
 	 * <p>
@@ -221,39 +229,39 @@ public class Reservation extends Limit {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode
 	 * ReservationTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReservationIdentificationDetails1#Type
-	 * ReservationIdentificationDetails1.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReservationType1Choice#Code
-	 * ReservationType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReservationType1Choice#Proprietary
-	 * ReservationType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#Type
-	 * ReservationIdentification1.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#DefaultReservationType
-	 * ReservationSearchCriteria1.DefaultReservationType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#CurrentReservationType
-	 * ReservationSearchCriteria1.CurrentReservationType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria2#DefaultReservationType
-	 * ReservationSearchCriteria2.DefaultReservationType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria2#CurrentReservationType
-	 * ReservationSearchCriteria2.CurrentReservationType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Reservation Reservation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationIdentificationDetails1#mmType
+	 * ReservationIdentificationDetails1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationType1Choice#mmCode
+	 * ReservationType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationType1Choice#mmProprietary
+	 * ReservationType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationIdentification1#mmType
+	 * ReservationIdentification1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#mmDefaultReservationType
+	 * ReservationSearchCriteria1.mmDefaultReservationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#mmCurrentReservationType
+	 * ReservationSearchCriteria1.mmCurrentReservationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria2#mmDefaultReservationType
+	 * ReservationSearchCriteria2.mmDefaultReservationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria2#mmCurrentReservationType
+	 * ReservationSearchCriteria2.mmCurrentReservationType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -265,22 +273,23 @@ public class Reservation extends Limit {
 	 * definition} = "Nature of the reservation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ReservationType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReservationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentificationDetails1.Type, com.tools20022.repository.choice.ReservationType1Choice.Code,
-					com.tools20022.repository.choice.ReservationType1Choice.Proprietary, com.tools20022.repository.msg.ReservationIdentification1.Type, com.tools20022.repository.msg.ReservationSearchCriteria1.DefaultReservationType,
-					com.tools20022.repository.msg.ReservationSearchCriteria1.CurrentReservationType, com.tools20022.repository.msg.ReservationSearchCriteria2.DefaultReservationType,
-					com.tools20022.repository.msg.ReservationSearchCriteria2.CurrentReservationType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentificationDetails1.mmType, com.tools20022.repository.choice.ReservationType1Choice.mmCode,
+					com.tools20022.repository.choice.ReservationType1Choice.mmProprietary, com.tools20022.repository.msg.ReservationIdentification1.mmType, com.tools20022.repository.msg.ReservationSearchCriteria1.mmDefaultReservationType,
+					com.tools20022.repository.msg.ReservationSearchCriteria1.mmCurrentReservationType, com.tools20022.repository.msg.ReservationSearchCriteria2.mmDefaultReservationType,
+					com.tools20022.repository.msg.ReservationSearchCriteria2.mmCurrentReservationType);
 			elementContext_lazy = () -> Reservation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReservationType";
 			definition = "Nature of the reservation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReservationTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.IntraPositionTransfer> relatedIntraPositionTransfer;
 	/**
 	 * Transfer process for which reservation information is provided.
 	 * <p>
@@ -289,8 +298,8 @@ public class Reservation extends Limit {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#Reservation
-	 * IntraPositionTransfer.Reservation}</li>
+	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmReservation
+	 * IntraPositionTransfer.mmReservation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -315,7 +324,7 @@ public class Reservation extends Limit {
 	 * "Transfer process for which reservation information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedIntraPositionTransfer = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedIntraPositionTransfer = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Reservation.mmObject();
 			isDerived = false;
@@ -323,11 +332,12 @@ public class Reservation extends Limit {
 			name = "RelatedIntraPositionTransfer";
 			definition = "Transfer process for which reservation information is provided.";
 			minOccurs = 0;
-			type_lazy = () -> IntraPositionTransfer.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.Reservation;
+			opposite_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmReservation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashSettlement> settlementInstruction;
 	/**
 	 * Specifies the instruction which originated the reservation.
 	 * <p>
@@ -336,8 +346,8 @@ public class Reservation extends Limit {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#Reservation
-	 * CashSettlement.Reservation}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmReservation
+	 * CashSettlement.mmReservation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -361,7 +371,7 @@ public class Reservation extends Limit {
 	 * "Specifies the instruction which originated the reservation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SettlementInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSettlementInstruction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Reservation.mmObject();
 			isDerived = false;
@@ -369,11 +379,12 @@ public class Reservation extends Limit {
 			name = "SettlementInstruction";
 			definition = "Specifies the instruction which originated the reservation.";
 			minOccurs = 0;
-			type_lazy = () -> CashSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlement.Reservation;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmReservation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 		}
 	};
+	protected AccountService accountService;
 	/**
 	 * Account services for which reservation information is specified.
 	 * <p>
@@ -382,8 +393,8 @@ public class Reservation extends Limit {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AccountService#Reservation
-	 * AccountService.Reservation}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountService#mmReservation
+	 * AccountService.mmReservation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -407,43 +418,44 @@ public class Reservation extends Limit {
 	 * "Account services for which reservation information is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AccountService = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccountService = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Reservation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccountService";
 			definition = "Account services for which reservation information is specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.Reservation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.mmReservation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reservation";
 				definition = "Liquidity set aside by the payer for specific purposes.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountService.Reservation, com.tools20022.repository.entity.CashSettlement.Reservation,
-						com.tools20022.repository.entity.IntraPositionTransfer.Reservation);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentification1.ReservationIdentification, com.tools20022.repository.msg.ReservationCriteria1.SearchCriteria,
-						com.tools20022.repository.msg.ReservationCriteria2.SearchCriteria, com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.Current,
-						com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.Default, com.tools20022.repository.msg.ReservationReport1.ReservationIdentification, com.tools20022.repository.msg.ReservationReport1.Reservation,
-						com.tools20022.repository.msg.Reservations1.CurrentReservation, com.tools20022.repository.msg.Reservations1.DefaultReservation, com.tools20022.repository.msg.ReservationReport2.ReservationIdentification,
-						com.tools20022.repository.msg.ReservationReport2.Reservation, com.tools20022.repository.msg.Reservations2.CurrentReservation, com.tools20022.repository.msg.Reservations2.DefaultReservation,
-						com.tools20022.repository.choice.ReservationOrError3Choice.Reservation, com.tools20022.repository.msg.ReservationReport3.ReservationIdentification,
-						com.tools20022.repository.msg.CurrentAndDefaultReservation1.CurrentReservation, com.tools20022.repository.msg.CurrentAndDefaultReservation1.DefaultReservation,
-						com.tools20022.repository.choice.ReservationOrError2Choice.BusinessReport, com.tools20022.repository.choice.ReservationOrError4Choice.BusinessReport,
-						com.tools20022.repository.msg.CurrentAndDefaultReservation2.CurrentReservation, com.tools20022.repository.msg.CurrentAndDefaultReservation2.DefaultReservation,
-						com.tools20022.repository.choice.ReservationOrError5Choice.Reservation, com.tools20022.repository.msg.ReservationReport4.ReservationIdentification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountService.mmReservation, com.tools20022.repository.entity.CashSettlement.mmReservation,
+						com.tools20022.repository.entity.IntraPositionTransfer.mmReservation);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentification1.mmReservationIdentification, com.tools20022.repository.msg.ReservationCriteria1.mmSearchCriteria,
+						com.tools20022.repository.msg.ReservationCriteria2.mmSearchCriteria, com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmCurrent,
+						com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmDefault, com.tools20022.repository.msg.ReservationReport1.mmReservationIdentification,
+						com.tools20022.repository.msg.ReservationReport1.mmReservation, com.tools20022.repository.msg.Reservations1.mmCurrentReservation, com.tools20022.repository.msg.Reservations1.mmDefaultReservation,
+						com.tools20022.repository.msg.ReservationReport2.mmReservationIdentification, com.tools20022.repository.msg.ReservationReport2.mmReservation, com.tools20022.repository.msg.Reservations2.mmCurrentReservation,
+						com.tools20022.repository.msg.Reservations2.mmDefaultReservation, com.tools20022.repository.choice.ReservationOrError3Choice.mmReservation,
+						com.tools20022.repository.msg.ReservationReport3.mmReservationIdentification, com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmCurrentReservation,
+						com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmDefaultReservation, com.tools20022.repository.choice.ReservationOrError2Choice.mmBusinessReport,
+						com.tools20022.repository.choice.ReservationOrError4Choice.mmBusinessReport, com.tools20022.repository.msg.CurrentAndDefaultReservation2.mmCurrentReservation,
+						com.tools20022.repository.msg.CurrentAndDefaultReservation2.mmDefaultReservation, com.tools20022.repository.choice.ReservationOrError5Choice.mmReservation,
+						com.tools20022.repository.msg.ReservationReport4.mmReservationIdentification);
 				superType_lazy = () -> Limit.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reservation.ReservationType, com.tools20022.repository.entity.Reservation.RelatedIntraPositionTransfer,
-						com.tools20022.repository.entity.Reservation.SettlementInstruction, com.tools20022.repository.entity.Reservation.AccountService);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reservation.mmReservationType, com.tools20022.repository.entity.Reservation.mmRelatedIntraPositionTransfer,
+						com.tools20022.repository.entity.Reservation.mmSettlementInstruction, com.tools20022.repository.entity.Reservation.mmAccountService);
 				derivationComponent_lazy = () -> Arrays.asList(ReservationIdentificationDetails1.mmObject(), ReservationType1Choice.mmObject(), ReservationIdentification1.mmObject(), ReservationSearchCriteria1.mmObject(),
 						ReservationCriteria1.mmObject(), ReservationSearchCriteria2.mmObject(), ReservationCriteria2.mmObject(), ReservationDetails2.mmObject(), CurrentOrDefaultReservation1Choice.mmObject(), Reservation2.mmObject(),
 						ReservationDetails1.mmObject(), ReservationReport1.mmObject(), Reservations1.mmObject(), ReservationReport2.mmObject(), Reservations2.mmObject(), ReservationStatus1Choice.mmObject(), Reservation1.mmObject(),
@@ -452,5 +464,37 @@ public class Reservation extends Limit {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReservationTypeCode getReservationType() {
+		return reservationType;
+	}
+
+	public void setReservationType(ReservationTypeCode reservationType) {
+		this.reservationType = reservationType;
+	}
+
+	public List<IntraPositionTransfer> getRelatedIntraPositionTransfer() {
+		return relatedIntraPositionTransfer;
+	}
+
+	public void setRelatedIntraPositionTransfer(List<com.tools20022.repository.entity.IntraPositionTransfer> relatedIntraPositionTransfer) {
+		this.relatedIntraPositionTransfer = relatedIntraPositionTransfer;
+	}
+
+	public List<CashSettlement> getSettlementInstruction() {
+		return settlementInstruction;
+	}
+
+	public void setSettlementInstruction(List<com.tools20022.repository.entity.CashSettlement> settlementInstruction) {
+		this.settlementInstruction = settlementInstruction;
+	}
+
+	public AccountService getAccountService() {
+		return accountService;
+	}
+
+	public void setAccountService(com.tools20022.repository.entity.AccountService accountService) {
+		this.accountService = accountService;
 	}
 }

@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Insurance1Code#LifeInsurance
- * Insurance1Code.LifeInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.Insurance1Code#mmLifeInsurance
+ * Insurance1Code.mmLifeInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Insurance1Code#PermanentDisabilityInsurance
- * Insurance1Code.PermanentDisabilityInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.Insurance1Code#mmPermanentDisabilityInsurance
+ * Insurance1Code.mmPermanentDisabilityInsurance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class Insurance1Code extends InsuranceCode {
 	 * name} = "LifeInsurance"</li>
 	 * </ul>
 	 */
-	public static final MMCode LifeInsurance = new MMCode() {
+	public static final MMCode mmLifeInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LifeInsurance";
@@ -103,7 +103,7 @@ public class Insurance1Code extends InsuranceCode {
 	 * name} = "PermanentDisabilityInsurance"</li>
 	 * </ul>
 	 */
-	public static final MMCode PermanentDisabilityInsurance = new MMCode() {
+	public static final MMCode mmPermanentDisabilityInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PermanentDisabilityInsurance";
@@ -114,12 +114,12 @@ public class Insurance1Code extends InsuranceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LIFE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Insurance1Code";
 				definition = "Specifies the type of insurance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Insurance1Code.LifeInsurance, com.tools20022.repository.codeset.Insurance1Code.PermanentDisabilityInsurance);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Insurance1Code.mmLifeInsurance, com.tools20022.repository.codeset.Insurance1Code.mmPermanentDisabilityInsurance);
 				trace_lazy = () -> InsuranceCode.mmObject();
 			}
 		});

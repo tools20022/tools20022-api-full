@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#Type Vehicle2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#EntryMode
- * Vehicle2.EntryMode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#Data Vehicle2.Data}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#mmType
+ * Vehicle2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#mmEntryMode
+ * Vehicle2.mmEntryMode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#mmData
+ * Vehicle2.mmData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Vehicle2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of information related to the vehicle.
 	 * <p>
@@ -86,7 +89,7 @@ public class Vehicle2 {
 	 * definition} = "Type of information related to the vehicle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle2.mmObject();
 			isDerived = false;
@@ -94,11 +97,12 @@ public class Vehicle2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of information related to the vehicle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CardDataReading5Code entryMode;
 	/**
 	 * Entry mode of the information.
 	 * <p>
@@ -127,11 +131,11 @@ public class Vehicle2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vehicle1#VehicleTagEntryMode
-	 * Vehicle1.VehicleTagEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vehicle1#mmVehicleTagEntryMode
+	 * Vehicle1.mmVehicleTagEntryMode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryMode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle2.mmObject();
 			isDerived = false;
@@ -139,12 +143,13 @@ public class Vehicle2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryMode";
 			definition = "Entry mode of the information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vehicle1.VehicleTagEntryMode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmVehicleTagEntryMode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
 		}
 	};
+	protected Max35Text data;
 	/**
 	 * Information related to the vehicle.
 	 * <p>
@@ -172,11 +177,11 @@ public class Vehicle2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vehicle1#AdditionalVehicleData
-	 * Vehicle1.AdditionalVehicleData}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vehicle1#mmAdditionalVehicleData
+	 * Vehicle1.mmAdditionalVehicleData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Data = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle2.mmObject();
 			isDerived = false;
@@ -184,9 +189,9 @@ public class Vehicle2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			definition = "Information related to the vehicle.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vehicle1.AdditionalVehicleData;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmAdditionalVehicleData;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -194,8 +199,8 @@ public class Vehicle2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.Type, com.tools20022.repository.msg.Vehicle2.EntryMode, com.tools20022.repository.msg.Vehicle2.Data);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmType, com.tools20022.repository.msg.Vehicle2.mmEntryMode, com.tools20022.repository.msg.Vehicle2.mmData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Vehicle2";
 				definition = "Additional information related to a vehicle.";
@@ -203,5 +208,29 @@ public class Vehicle2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public CardDataReading5Code getEntryMode() {
+		return entryMode;
+	}
+
+	public void setEntryMode(CardDataReading5Code entryMode) {
+		this.entryMode = entryMode;
+	}
+
+	public Max35Text getData() {
+		return data;
+	}
+
+	public void setData(Max35Text data) {
+		this.data = data;
 	}
 }

@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementBasis2Code#Settled
- * StatementBasis2Code.Settled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.StatementBasis2Code#Traded
- * StatementBasis2Code.Traded}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementBasis2Code#mmSettled
+ * StatementBasis2Code.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.StatementBasis2Code#mmTraded
+ * StatementBasis2Code.mmTraded}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class StatementBasis2Code extends StatementBasisCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -104,7 +105,7 @@ public class StatementBasis2Code extends StatementBasisCode {
 	 * name} = "Traded"</li>
 	 * </ul>
 	 */
-	public static final MMCode Traded = new MMCode() {
+	public static final MMCode mmTraded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traded";
@@ -115,12 +116,12 @@ public class StatementBasis2Code extends StatementBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SETT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementBasis2Code";
 				definition = "Specifies the type of balances on which the statement is prepared.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementBasis2Code.Settled, com.tools20022.repository.codeset.StatementBasis2Code.Traded);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementBasis2Code.mmSettled, com.tools20022.repository.codeset.StatementBasis2Code.mmTraded);
 				trace_lazy = () -> StatementBasisCode.mmObject();
 			}
 		});

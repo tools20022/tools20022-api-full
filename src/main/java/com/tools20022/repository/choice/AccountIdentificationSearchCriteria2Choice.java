@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice#Equal
- * AccountIdentificationSearchCriteria2Choice.Equal}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice#mmEqual
+ * AccountIdentificationSearchCriteria2Choice.mmEqual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice#ContainText
- * AccountIdentificationSearchCriteria2Choice.ContainText}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice#mmContainText
+ * AccountIdentificationSearchCriteria2Choice.mmContainText}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice#NotContainText
- * AccountIdentificationSearchCriteria2Choice.NotContainText}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice#mmNotContainText
+ * AccountIdentificationSearchCriteria2Choice.mmNotContainText}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentificationSearchCriteria2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification4Choice equal;
 	/**
 	 * Search for one or more accounts based on exact identification of the
 	 * account(s).
@@ -93,7 +94,7 @@ public class AccountIdentificationSearchCriteria2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Equal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class AccountIdentificationSearchCriteria2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equal";
 			definition = "Search for one or more accounts based on exact identification of the account(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected Max35Text containText;
 	/**
 	 * Search for one or more accounts based on partial identification of the
 	 * account(s).
@@ -136,7 +138,7 @@ public class AccountIdentificationSearchCriteria2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContainText = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContainText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 			isDerived = false;
@@ -144,11 +146,12 @@ public class AccountIdentificationSearchCriteria2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContainText";
 			definition = "Search for one or more accounts based on partial identification of the account(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text notContainText;
 	/**
 	 * Search for one or more accounts based on a pattern that cannot be
 	 * contained in the account identification.
@@ -179,7 +182,7 @@ public class AccountIdentificationSearchCriteria2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotContainText = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotContainText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 			isDerived = false;
@@ -187,8 +190,8 @@ public class AccountIdentificationSearchCriteria2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotContainText";
 			definition = "Search for one or more accounts based on a pattern that cannot be contained in the account identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -196,14 +199,38 @@ public class AccountIdentificationSearchCriteria2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.Equal, com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.ContainText,
-						com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.NotContainText);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.mmEqual, com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.mmContainText,
+						com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.mmNotContainText);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentificationSearchCriteria2Choice";
 				definition = "Choice between the different options to search for an account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification4Choice getEqual() {
+		return equal;
+	}
+
+	public void setEqual(com.tools20022.repository.choice.AccountIdentification4Choice equal) {
+		this.equal = equal;
+	}
+
+	public Max35Text getContainText() {
+		return containText;
+	}
+
+	public void setContainText(Max35Text containText) {
+		this.containText = containText;
+	}
+
+	public Max35Text getNotContainText() {
+		return notContainText;
+	}
+
+	public void setNotContainText(Max35Text notContainText) {
+		this.notContainText = notContainText;
 	}
 }

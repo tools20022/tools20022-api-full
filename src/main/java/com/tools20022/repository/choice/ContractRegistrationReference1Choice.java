@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ContractRegistrationReference1Choice#RegisteredContractIdentification
- * ContractRegistrationReference1Choice.RegisteredContractIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.ContractRegistrationReference1Choice#mmRegisteredContractIdentification
+ * ContractRegistrationReference1Choice.mmRegisteredContractIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ContractRegistrationReference1Choice#Contract
- * ContractRegistrationReference1Choice.Contract}</li>
+ * {@linkplain com.tools20022.repository.choice.ContractRegistrationReference1Choice#mmContract
+ * ContractRegistrationReference1Choice.mmContract}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContractRegistrationReference1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text registeredContractIdentification;
 	/**
 	 * Unique and unambiguous identification of the registered contract.
 	 * <p>
@@ -76,8 +77,8 @@ public class ContractRegistrationReference1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#Identification
-	 * RegisteredContract.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmIdentification
+	 * RegisteredContract.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class ContractRegistrationReference1Choice {
 	 * "Unique and unambiguous identification of the registered contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegisteredContractIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegisteredContractIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmIdentification;
 			componentContext_lazy = () -> ContractRegistrationReference1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.Identification;
 			isDerived = false;
 			xmlTag = "RegdCtrctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredContractIdentification";
 			definition = "Unique and unambiguous identification of the registered contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DocumentIdentification28 contract;
 	/**
 	 * Identification of the contract.
 	 * <p>
@@ -123,8 +125,8 @@ public class ContractRegistrationReference1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#DocumentIdentification
-	 * Document.DocumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmDocumentIdentification
+	 * Document.mmDocumentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,34 +145,50 @@ public class ContractRegistrationReference1Choice {
 	 * definition} = "Identification of the contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Contract = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContract = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
 			componentContext_lazy = () -> ContractRegistrationReference1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.DocumentIdentification;
 			isDerived = false;
 			xmlTag = "Ctrct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
 			definition = "Identification of the contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification28.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentIdentification28.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ContractRegistrationReference1Choice.RegisteredContractIdentification,
-						com.tools20022.repository.choice.ContractRegistrationReference1Choice.Contract);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ContractRegistrationReference1Choice.mmRegisteredContractIdentification,
+						com.tools20022.repository.choice.ContractRegistrationReference1Choice.mmContract);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContractRegistrationReference1Choice";
 				definition = "Reference details of the contract registration.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getRegisteredContractIdentification() {
+		return registeredContractIdentification;
+	}
+
+	public void setRegisteredContractIdentification(Max35Text registeredContractIdentification) {
+		this.registeredContractIdentification = registeredContractIdentification;
+	}
+
+	public DocumentIdentification28 getContract() {
+		return contract;
+	}
+
+	public void setContract(DocumentIdentification28 contract) {
+		this.contract = contract;
 	}
 }

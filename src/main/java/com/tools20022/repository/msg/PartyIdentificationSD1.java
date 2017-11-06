@@ -38,33 +38,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#PlaceAndName
- * PartyIdentificationSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#mmPlaceAndName
+ * PartyIdentificationSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#AgentType
- * PartyIdentificationSD1.AgentType}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#mmAgentType
+ * PartyIdentificationSD1.mmAgentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#AgentIdentification
- * PartyIdentificationSD1.AgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#mmAgentIdentification
+ * PartyIdentificationSD1.mmAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#AgentNameAndAddress
- * PartyIdentificationSD1.AgentNameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#mmAgentNameAndAddress
+ * PartyIdentificationSD1.mmAgentNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#AgentTelephoneNumber
- * PartyIdentificationSD1.AgentTelephoneNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#mmAgentTelephoneNumber
+ * PartyIdentificationSD1.mmAgentTelephoneNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#AgentEmailAddress
- * PartyIdentificationSD1.AgentEmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#mmAgentEmailAddress
+ * PartyIdentificationSD1.mmAgentEmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#ContactInformation
- * PartyIdentificationSD1.ContactInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD1#mmContactInformation
+ * PartyIdentificationSD1.mmContactInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -106,7 +107,7 @@ public class PartyIdentificationSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -114,11 +115,12 @@ public class PartyIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected AgentType1Code agentType;
 	/**
 	 * Function the agent is performing.
 	 * <p>
@@ -147,7 +149,7 @@ public class PartyIdentificationSD1 {
 	 * definition} = "Function the agent is performing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class PartyIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentType";
 			definition = "Function the agent is performing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AgentType1Code.mmObject();
 		}
 	};
+	protected Max8Text agentIdentification;
 	/**
 	 * DTC agent identification number.
 	 * <p>
@@ -187,7 +190,7 @@ public class PartyIdentificationSD1 {
 	 * definition} = "DTC agent identification number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class PartyIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentIdentification";
 			definition = "DTC agent identification number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected NameAndAddress5 agentNameAndAddress;
 	/**
 	 * Name and address of the agent.
 	 * <p>
@@ -227,7 +231,7 @@ public class PartyIdentificationSD1 {
 	 * definition} = "Name and address of the agent.  "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentNameAndAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -235,11 +239,12 @@ public class PartyIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentNameAndAddress";
 			definition = "Name and address of the agent.  ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
 		}
 	};
+	protected PhoneNumber agentTelephoneNumber;
 	/**
 	 * Telephone number of the agent.
 	 * <p>
@@ -267,7 +272,7 @@ public class PartyIdentificationSD1 {
 	 * definition} = "Telephone number of the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentTelephoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentTelephoneNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -275,11 +280,12 @@ public class PartyIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentTelephoneNumber";
 			definition = "Telephone number of the agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected Max256Text agentEmailAddress;
 	/**
 	 * Email address of the event agent.
 	 * <p>
@@ -307,7 +313,7 @@ public class PartyIdentificationSD1 {
 	 * definition} = "Email address of the event agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentEmailAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -315,11 +321,12 @@ public class PartyIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentEmailAddress";
 			definition = "Email address of the event agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected PartyIdentificationSD4 contactInformation;
 	/**
 	 * Agent designated contact Information details.
 	 * <p>
@@ -346,7 +353,7 @@ public class PartyIdentificationSD1 {
 	 * definition} = "Agent designated contact Information details. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -354,26 +361,82 @@ public class PartyIdentificationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
 			definition = "Agent designated contact Information details. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationSD4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationSD1.PlaceAndName, com.tools20022.repository.msg.PartyIdentificationSD1.AgentType,
-						com.tools20022.repository.msg.PartyIdentificationSD1.AgentIdentification, com.tools20022.repository.msg.PartyIdentificationSD1.AgentNameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationSD1.AgentTelephoneNumber, com.tools20022.repository.msg.PartyIdentificationSD1.AgentEmailAddress,
-						com.tools20022.repository.msg.PartyIdentificationSD1.ContactInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationSD1.mmPlaceAndName, com.tools20022.repository.msg.PartyIdentificationSD1.mmAgentType,
+						com.tools20022.repository.msg.PartyIdentificationSD1.mmAgentIdentification, com.tools20022.repository.msg.PartyIdentificationSD1.mmAgentNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationSD1.mmAgentTelephoneNumber, com.tools20022.repository.msg.PartyIdentificationSD1.mmAgentEmailAddress,
+						com.tools20022.repository.msg.PartyIdentificationSD1.mmContactInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationSD1";
 				definition = "Provides additional information regarding the new agent component. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public AgentType1Code getAgentType() {
+		return agentType;
+	}
+
+	public void setAgentType(AgentType1Code agentType) {
+		this.agentType = agentType;
+	}
+
+	public Max8Text getAgentIdentification() {
+		return agentIdentification;
+	}
+
+	public void setAgentIdentification(Max8Text agentIdentification) {
+		this.agentIdentification = agentIdentification;
+	}
+
+	public NameAndAddress5 getAgentNameAndAddress() {
+		return agentNameAndAddress;
+	}
+
+	public void setAgentNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 agentNameAndAddress) {
+		this.agentNameAndAddress = agentNameAndAddress;
+	}
+
+	public PhoneNumber getAgentTelephoneNumber() {
+		return agentTelephoneNumber;
+	}
+
+	public void setAgentTelephoneNumber(PhoneNumber agentTelephoneNumber) {
+		this.agentTelephoneNumber = agentTelephoneNumber;
+	}
+
+	public Max256Text getAgentEmailAddress() {
+		return agentEmailAddress;
+	}
+
+	public void setAgentEmailAddress(Max256Text agentEmailAddress) {
+		this.agentEmailAddress = agentEmailAddress;
+	}
+
+	public PartyIdentificationSD4 getContactInformation() {
+		return contactInformation;
+	}
+
+	public void setContactInformation(com.tools20022.repository.msg.PartyIdentificationSD4 contactInformation) {
+		this.contactInformation = contactInformation;
 	}
 }

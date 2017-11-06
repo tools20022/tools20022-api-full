@@ -37,41 +37,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#SenderName
- * AntiMoneyLaundering1.SenderName}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmSenderName
+ * AntiMoneyLaundering1.mmSenderName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#SenderAddress
- * AntiMoneyLaundering1.SenderAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmSenderAddress
+ * AntiMoneyLaundering1.mmSenderAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#SenderNationalIdentifier
- * AntiMoneyLaundering1.SenderNationalIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmSenderNationalIdentifier
+ * AntiMoneyLaundering1.mmSenderNationalIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#NationalIdentifierCountry
- * AntiMoneyLaundering1.NationalIdentifierCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmNationalIdentifierCountry
+ * AntiMoneyLaundering1.mmNationalIdentifierCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#SenderPassportNumber
- * AntiMoneyLaundering1.SenderPassportNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmSenderPassportNumber
+ * AntiMoneyLaundering1.mmSenderPassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#PassportIssuingCountry
- * AntiMoneyLaundering1.PassportIssuingCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmPassportIssuingCountry
+ * AntiMoneyLaundering1.mmPassportIssuingCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#SenderTaxIdentifier
- * AntiMoneyLaundering1.SenderTaxIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmSenderTaxIdentifier
+ * AntiMoneyLaundering1.mmSenderTaxIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#TaxCountry
- * AntiMoneyLaundering1.TaxCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmTaxCountry
+ * AntiMoneyLaundering1.mmTaxCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#SenderCustomerIdentifier
- * AntiMoneyLaundering1.SenderCustomerIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmSenderCustomerIdentifier
+ * AntiMoneyLaundering1.mmSenderCustomerIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#SenderDateAndPlaceOfBirth
- * AntiMoneyLaundering1.SenderDateAndPlaceOfBirth}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmSenderDateAndPlaceOfBirth
+ * AntiMoneyLaundering1.mmSenderDateAndPlaceOfBirth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#ReceiverName
- * AntiMoneyLaundering1.ReceiverName}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmReceiverName
+ * AntiMoneyLaundering1.mmReceiverName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#TransactionReference
- * AntiMoneyLaundering1.TransactionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1#mmTransactionReference
+ * AntiMoneyLaundering1.mmTransactionReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -80,8 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AntiMoneyLaundering1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text senderName;
 	/**
 	 * Name of the sender.
 	 * <p>
@@ -123,7 +124,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Name of the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -131,11 +132,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderName";
 			definition = "Name of the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected PostalAddress18 senderAddress;
 	/**
 	 * Address of the sender.
 	 * <p>
@@ -162,7 +164,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Address of the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SenderAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSenderAddress = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -170,12 +172,13 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderAddress";
 			definition = "Address of the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress18.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress18.mmObject();
 		}
 	};
+	protected Max35Text senderNationalIdentifier;
 	/**
 	 * National identifier number of the sender.
 	 * <p>
@@ -203,7 +206,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "National identifier number of the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderNationalIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderNationalIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -211,11 +214,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderNationalIdentifier";
 			definition = "National identifier number of the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Min2Max3AlphaText nationalIdentifierCountry;
 	/**
 	 * Country of the national identifier (ISO 3166-1 alpha-2 or alpha-3).
 	 * <p>
@@ -245,7 +249,7 @@ public class AntiMoneyLaundering1 {
 	 * "Country of the national identifier (ISO 3166-1 alpha-2 or alpha-3)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NationalIdentifierCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNationalIdentifierCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -253,11 +257,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalIdentifierCountry";
 			definition = "Country of the national identifier (ISO 3166-1 alpha-2 or alpha-3).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3AlphaText.mmObject();
 		}
 	};
+	protected Max35Text senderPassportNumber;
 	/**
 	 * Passport number of the sender.
 	 * <p>
@@ -285,7 +290,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Passport number of the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderPassportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderPassportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -293,11 +298,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderPassportNumber";
 			definition = "Passport number of the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Min2Max3AlphaText passportIssuingCountry;
 	/**
 	 * Country issuing the passport (ISO 3166-1 alpha-2 or alpha-3).
 	 * <p>
@@ -327,7 +333,7 @@ public class AntiMoneyLaundering1 {
 	 * "Country issuing the passport (ISO 3166-1 alpha-2 or alpha-3)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PassportIssuingCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPassportIssuingCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -335,11 +341,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportIssuingCountry";
 			definition = "Country issuing the passport (ISO 3166-1 alpha-2 or alpha-3).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3AlphaText.mmObject();
 		}
 	};
+	protected Max35Text senderTaxIdentifier;
 	/**
 	 * Tax identifier of the sender.
 	 * <p>
@@ -367,7 +374,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Tax identifier of the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderTaxIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderTaxIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -375,11 +382,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderTaxIdentifier";
 			definition = "Tax identifier of the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Min2Max3AlphaText taxCountry;
 	/**
 	 * Country of the tax (ISO 3166-1 alpha-2 or alpha-3).
 	 * <p>
@@ -408,7 +416,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Country of the tax (ISO 3166-1 alpha-2 or alpha-3)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -416,11 +424,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCountry";
 			definition = "Country of the tax (ISO 3166-1 alpha-2 or alpha-3).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3AlphaText.mmObject();
 		}
 	};
+	protected Max35Text senderCustomerIdentifier;
 	/**
 	 * Customer identifier of the sender.
 	 * <p>
@@ -448,7 +457,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Customer identifier of the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderCustomerIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderCustomerIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -456,11 +465,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderCustomerIdentifier";
 			definition = "Customer identifier of the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndPlaceOfBirth senderDateAndPlaceOfBirth;
 	/**
 	 * Date and place of birth of the sender.
 	 * <p>
@@ -487,7 +497,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Date and place of birth of the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SenderDateAndPlaceOfBirth = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSenderDateAndPlaceOfBirth = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -495,12 +505,13 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderDateAndPlaceOfBirth";
 			definition = "Date and place of birth of the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndPlaceOfBirth.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateAndPlaceOfBirth.mmObject();
 		}
 	};
+	protected Max70Text receiverName;
 	/**
 	 * Name of the receiver.
 	 * <p>
@@ -528,7 +539,7 @@ public class AntiMoneyLaundering1 {
 	 * definition} = "Name of the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiverName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiverName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -536,11 +547,12 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverName";
 			definition = "Name of the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max35Text transactionReference;
 	/**
 	 * Unique transaction reference number for sender and the receiver.
 	 * <p>
@@ -569,7 +581,7 @@ public class AntiMoneyLaundering1 {
 	 * "Unique transaction reference number for sender and the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
@@ -577,8 +589,8 @@ public class AntiMoneyLaundering1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionReference";
 			definition = "Unique transaction reference number for sender and the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -586,18 +598,115 @@ public class AntiMoneyLaundering1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AntiMoneyLaundering1.SenderName, com.tools20022.repository.msg.AntiMoneyLaundering1.SenderAddress,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.SenderNationalIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.NationalIdentifierCountry,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.SenderPassportNumber, com.tools20022.repository.msg.AntiMoneyLaundering1.PassportIssuingCountry,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.SenderTaxIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.TaxCountry, com.tools20022.repository.msg.AntiMoneyLaundering1.SenderCustomerIdentifier,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.SenderDateAndPlaceOfBirth, com.tools20022.repository.msg.AntiMoneyLaundering1.ReceiverName, com.tools20022.repository.msg.AntiMoneyLaundering1.TransactionReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderName, com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderAddress,
+						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderNationalIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.mmNationalIdentifierCountry,
+						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderPassportNumber, com.tools20022.repository.msg.AntiMoneyLaundering1.mmPassportIssuingCountry,
+						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderTaxIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.mmTaxCountry,
+						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderCustomerIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderDateAndPlaceOfBirth,
+						com.tools20022.repository.msg.AntiMoneyLaundering1.mmReceiverName, com.tools20022.repository.msg.AntiMoneyLaundering1.mmTransactionReference);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AntiMoneyLaundering1";
 				definition = "Information requested against money laundering for a transfer transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getSenderName() {
+		return senderName;
+	}
+
+	public void setSenderName(Max70Text senderName) {
+		this.senderName = senderName;
+	}
+
+	public PostalAddress18 getSenderAddress() {
+		return senderAddress;
+	}
+
+	public void setSenderAddress(com.tools20022.repository.msg.PostalAddress18 senderAddress) {
+		this.senderAddress = senderAddress;
+	}
+
+	public Max35Text getSenderNationalIdentifier() {
+		return senderNationalIdentifier;
+	}
+
+	public void setSenderNationalIdentifier(Max35Text senderNationalIdentifier) {
+		this.senderNationalIdentifier = senderNationalIdentifier;
+	}
+
+	public Min2Max3AlphaText getNationalIdentifierCountry() {
+		return nationalIdentifierCountry;
+	}
+
+	public void setNationalIdentifierCountry(Min2Max3AlphaText nationalIdentifierCountry) {
+		this.nationalIdentifierCountry = nationalIdentifierCountry;
+	}
+
+	public Max35Text getSenderPassportNumber() {
+		return senderPassportNumber;
+	}
+
+	public void setSenderPassportNumber(Max35Text senderPassportNumber) {
+		this.senderPassportNumber = senderPassportNumber;
+	}
+
+	public Min2Max3AlphaText getPassportIssuingCountry() {
+		return passportIssuingCountry;
+	}
+
+	public void setPassportIssuingCountry(Min2Max3AlphaText passportIssuingCountry) {
+		this.passportIssuingCountry = passportIssuingCountry;
+	}
+
+	public Max35Text getSenderTaxIdentifier() {
+		return senderTaxIdentifier;
+	}
+
+	public void setSenderTaxIdentifier(Max35Text senderTaxIdentifier) {
+		this.senderTaxIdentifier = senderTaxIdentifier;
+	}
+
+	public Min2Max3AlphaText getTaxCountry() {
+		return taxCountry;
+	}
+
+	public void setTaxCountry(Min2Max3AlphaText taxCountry) {
+		this.taxCountry = taxCountry;
+	}
+
+	public Max35Text getSenderCustomerIdentifier() {
+		return senderCustomerIdentifier;
+	}
+
+	public void setSenderCustomerIdentifier(Max35Text senderCustomerIdentifier) {
+		this.senderCustomerIdentifier = senderCustomerIdentifier;
+	}
+
+	public DateAndPlaceOfBirth getSenderDateAndPlaceOfBirth() {
+		return senderDateAndPlaceOfBirth;
+	}
+
+	public void setSenderDateAndPlaceOfBirth(com.tools20022.repository.msg.DateAndPlaceOfBirth senderDateAndPlaceOfBirth) {
+		this.senderDateAndPlaceOfBirth = senderDateAndPlaceOfBirth;
+	}
+
+	public Max70Text getReceiverName() {
+		return receiverName;
+	}
+
+	public void setReceiverName(Max70Text receiverName) {
+		this.receiverName = receiverName;
+	}
+
+	public Max35Text getTransactionReference() {
+		return transactionReference;
+	}
+
+	public void setTransactionReference(Max35Text transactionReference) {
+		this.transactionReference = transactionReference;
 	}
 }

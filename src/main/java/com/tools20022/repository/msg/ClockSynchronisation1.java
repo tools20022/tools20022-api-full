@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max70Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parameters to synchronise a real time clock.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClockSynchronisation1#POITimeZone
- * ClockSynchronisation1.POITimeZone}</li>
+ * {@linkplain com.tools20022.repository.msg.ClockSynchronisation1#mmPOITimeZone
+ * ClockSynchronisation1.mmPOITimeZone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClockSynchronisation1#SynchronisationServer
- * ClockSynchronisation1.SynchronisationServer}</li>
+ * {@linkplain com.tools20022.repository.msg.ClockSynchronisation1#mmSynchronisationServer
+ * ClockSynchronisation1.mmSynchronisationServer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClockSynchronisation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text pOITimeZone;
 	/**
 	 * Name of the time zone where is located the POI (Point Of Interaction), as
 	 * definined by the IANA (Internet Assigned Number Authority) time zone data
@@ -90,7 +92,7 @@ public class ClockSynchronisation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POITimeZone = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOITimeZone = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClockSynchronisation1.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class ClockSynchronisation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POITimeZone";
 			definition = "Name of the time zone where is located the POI (Point Of Interaction), as definined by the IANA (Internet Assigned Number Authority) time zone data base.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NetworkParameters2> synchronisationServer;
 	/**
 	 * Parameters to contact a time server.
 	 * <p>
@@ -129,7 +132,7 @@ public class ClockSynchronisation1 {
 	 * definition} = "Parameters to contact a time server."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SynchronisationServer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSynchronisationServer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClockSynchronisation1.mmObject();
 			isDerived = false;
@@ -138,21 +141,37 @@ public class ClockSynchronisation1 {
 			name = "SynchronisationServer";
 			definition = "Parameters to contact a time server.";
 			minOccurs = 0;
-			type_lazy = () -> NetworkParameters2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClockSynchronisation1.POITimeZone, com.tools20022.repository.msg.ClockSynchronisation1.SynchronisationServer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClockSynchronisation1.mmPOITimeZone, com.tools20022.repository.msg.ClockSynchronisation1.mmSynchronisationServer);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClockSynchronisation1";
 				definition = "Parameters to synchronise a real time clock.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getPOITimeZone() {
+		return pOITimeZone;
+	}
+
+	public void setPOITimeZone(Max70Text pOITimeZone) {
+		this.pOITimeZone = pOITimeZone;
+	}
+
+	public List<NetworkParameters2> getSynchronisationServer() {
+		return synchronisationServer;
+	}
+
+	public void setSynchronisationServer(List<com.tools20022.repository.msg.NetworkParameters2> synchronisationServer) {
+		this.synchronisationServer = synchronisationServer;
 	}
 }

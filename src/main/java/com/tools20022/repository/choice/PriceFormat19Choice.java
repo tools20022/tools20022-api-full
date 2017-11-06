@@ -40,14 +40,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat19Choice#PercentagePrice
- * PriceFormat19Choice.PercentagePrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat19Choice#mmPercentagePrice
+ * PriceFormat19Choice.mmPercentagePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat19Choice#AmountPrice
- * PriceFormat19Choice.AmountPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat19Choice#mmAmountPrice
+ * PriceFormat19Choice.mmAmountPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat19Choice#NotSpecifiedPrice
- * PriceFormat19Choice.NotSpecifiedPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat19Choice#mmNotSpecifiedPrice
+ * PriceFormat19Choice.mmNotSpecifiedPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,6 +83,7 @@ import java.util.function.Supplier;
 public class PriceFormat19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentagePrice1 percentagePrice;
 	/**
 	 * Price expressed as a percentage.
 	 * <p>
@@ -94,8 +95,8 @@ public class PriceFormat19Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,28 +117,29 @@ public class PriceFormat19Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriceFormat45Choice#PercentagePrice
-	 * PriceFormat45Choice.PercentagePrice}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormat45Choice#mmPercentagePrice
+	 * PriceFormat45Choice.mmPercentagePrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceFormat19Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "PctgPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePrice";
 			definition = "Price expressed as a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat45Choice.PercentagePrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat45Choice.mmPercentagePrice);
 			maxOccurs = 1;
-			type_lazy = () -> PercentagePrice1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PercentagePrice1.mmObject();
 		}
 	};
+	protected AmountPrice3 amountPrice;
 	/**
 	 * Price expressed as a currency and amount.
 	 * <p>
@@ -149,7 +151,8 @@ public class PriceFormat19Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,28 +173,29 @@ public class PriceFormat19Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriceFormat45Choice#AmountPrice
-	 * PriceFormat45Choice.AmountPrice}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormat45Choice#mmAmountPrice
+	 * PriceFormat45Choice.mmAmountPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> PriceFormat19Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "AmtPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPrice";
 			definition = "Price expressed as a currency and amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat45Choice.AmountPrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat45Choice.mmAmountPrice);
 			maxOccurs = 1;
-			type_lazy = () -> AmountPrice3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountPrice3.mmObject();
 		}
 	};
+	protected PriceValueType10Code notSpecifiedPrice;
 	/**
 	 * Value of the price not specified.
 	 * <p>
@@ -222,13 +226,13 @@ public class PriceFormat19Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriceFormat45Choice#NotSpecifiedPrice
-	 * PriceFormat45Choice.NotSpecifiedPrice}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormat45Choice#mmNotSpecifiedPrice
+	 * PriceFormat45Choice.mmNotSpecifiedPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceFormat19Choice.mmObject();
 			isDerived = false;
@@ -236,9 +240,9 @@ public class PriceFormat19Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat45Choice.NotSpecifiedPrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat45Choice.mmNotSpecifiedPrice);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
 		}
 	};
@@ -246,10 +250,10 @@ public class PriceFormat19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat19Choice.PercentagePrice, com.tools20022.repository.choice.PriceFormat19Choice.AmountPrice,
-						com.tools20022.repository.choice.PriceFormat19Choice.NotSpecifiedPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat19Choice.mmPercentagePrice, com.tools20022.repository.choice.PriceFormat19Choice.mmAmountPrice,
+						com.tools20022.repository.choice.PriceFormat19Choice.mmNotSpecifiedPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -264,5 +268,29 @@ public class PriceFormat19Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentagePrice1 getPercentagePrice() {
+		return percentagePrice;
+	}
+
+	public void setPercentagePrice(PercentagePrice1 percentagePrice) {
+		this.percentagePrice = percentagePrice;
+	}
+
+	public AmountPrice3 getAmountPrice() {
+		return amountPrice;
+	}
+
+	public void setAmountPrice(AmountPrice3 amountPrice) {
+		this.amountPrice = amountPrice;
+	}
+
+	public PriceValueType10Code getNotSpecifiedPrice() {
+		return notSpecifiedPrice;
+	}
+
+	public void setNotSpecifiedPrice(PriceValueType10Code notSpecifiedPrice) {
+		this.notSpecifiedPrice = notSpecifiedPrice;
 	}
 }

@@ -32,14 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerAuthorisationInitiation1#Environment
- * AcquirerAuthorisationInitiation1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerAuthorisationInitiation1#mmEnvironment
+ * AcquirerAuthorisationInitiation1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerAuthorisationInitiation1#Context
- * AcquirerAuthorisationInitiation1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerAuthorisationInitiation1#mmContext
+ * AcquirerAuthorisationInitiation1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerAuthorisationInitiation1#Transaction
- * AcquirerAuthorisationInitiation1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerAuthorisationInitiation1#mmTransaction
+ * AcquirerAuthorisationInitiation1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#AuthorisationInitiation
- * AcquirerAuthorisationInitiation.AuthorisationInitiation}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#mmAuthorisationInitiation
+ * AcquirerAuthorisationInitiation.mmAuthorisationInitiation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerAuthorisationInitiation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardTransactionEnvironment1 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -96,7 +97,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
@@ -104,12 +105,13 @@ public class AcquirerAuthorisationInitiation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionEnvironment1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment1.mmObject();
 		}
 	};
+	protected CardTransactionContext1 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -137,7 +139,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
@@ -145,12 +147,13 @@ public class AcquirerAuthorisationInitiation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionContext1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionContext1.mmObject();
 		}
 	};
+	protected CardTransaction15 transaction;
 	/**
 	 * Card transaction for which the authorisation is requested.
 	 * <p>
@@ -178,7 +181,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 * "Card transaction for which the authorisation is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
@@ -186,25 +189,49 @@ public class AcquirerAuthorisationInitiation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card transaction for which the authorisation is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransaction15.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransaction15.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.Environment, com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.Context,
-						com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.AuthorisationInitiation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmEnvironment, com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmContext,
+						com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmAuthorisationInitiation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcquirerAuthorisationInitiation1";
 				definition = "Information related to the authorisation initiation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardTransactionEnvironment1 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment1 environment) {
+		this.environment = environment;
+	}
+
+	public CardTransactionContext1 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.CardTransactionContext1 context) {
+		this.context = context;
+	}
+
+	public CardTransaction15 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardTransaction15 transaction) {
+		this.transaction = transaction;
 	}
 }

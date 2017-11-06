@@ -32,21 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RateBasisCode RateBasisCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#Days
- * RateBasis1Code.Days}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#Months
- * RateBasis1Code.Months}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#Weeks
- * RateBasis1Code.Weeks}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#Years
- * RateBasis1Code.Years}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#mmDays
+ * RateBasis1Code.mmDays}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#mmMonths
+ * RateBasis1Code.mmMonths}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#mmWeeks
+ * RateBasis1Code.mmWeeks}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasis1Code#mmYears
+ * RateBasis1Code.mmYears}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +76,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 * name} = "Days"</li>
 	 * </ul>
 	 */
-	public static final MMCode Days = new MMCode() {
+	public static final MMCode mmDays = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
@@ -99,7 +99,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 * name} = "Months"</li>
 	 * </ul>
 	 */
-	public static final MMCode Months = new MMCode() {
+	public static final MMCode mmMonths = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Months";
@@ -122,7 +122,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 * name} = "Weeks"</li>
 	 * </ul>
 	 */
-	public static final MMCode Weeks = new MMCode() {
+	public static final MMCode mmWeeks = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weeks";
@@ -145,7 +145,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 * name} = "Years"</li>
 	 * </ul>
 	 */
-	public static final MMCode Years = new MMCode() {
+	public static final MMCode mmYears = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Years";
@@ -156,12 +156,12 @@ public class RateBasis1Code extends RateBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateBasis1Code";
 				definition = "Specifies a rate basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateBasis1Code.Days, com.tools20022.repository.codeset.RateBasis1Code.Months, com.tools20022.repository.codeset.RateBasis1Code.Weeks,
-						com.tools20022.repository.codeset.RateBasis1Code.Years);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateBasis1Code.mmDays, com.tools20022.repository.codeset.RateBasis1Code.mmMonths, com.tools20022.repository.codeset.RateBasis1Code.mmWeeks,
+						com.tools20022.repository.codeset.RateBasis1Code.mmYears);
 				trace_lazy = () -> RateBasisCode.mmObject();
 			}
 		});

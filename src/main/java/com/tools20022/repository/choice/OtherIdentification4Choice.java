@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#Code
- * OtherIdentification4Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#mmCode
+ * OtherIdentification4Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#Proprietary
- * OtherIdentification4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#mmProprietary
+ * OtherIdentification4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherIdentification4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PersonIdentificationType6Code code;
 	/**
 	 * Type of identification expressed as a code.
 	 * <p>
@@ -103,25 +104,26 @@ public class OtherIdentification4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#Code
-	 * OtherIdentification2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#mmCode
+	 * OtherIdentification2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherIdentification4Choice.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> OtherIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of identification expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType6Code.mmObject();
 		}
 	};
+	protected GenericIdentification36 proprietary;
 	/**
 	 * Type of identification expressed as a proprietary code.
 	 * <p>
@@ -156,22 +158,22 @@ public class OtherIdentification4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#Proprietary
-	 * OtherIdentification2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#mmProprietary
+	 * OtherIdentification2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherIdentification4Choice.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> OtherIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of identification expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
 		}
 	};
@@ -179,9 +181,9 @@ public class OtherIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification4Choice.Code, com.tools20022.repository.choice.OtherIdentification4Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification4Choice.mmCode, com.tools20022.repository.choice.OtherIdentification4Choice.mmProprietary);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification4Choice";
 				definition = "Choice of formats for the specification of other identification.";
@@ -189,5 +191,21 @@ public class OtherIdentification4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PersonIdentificationType6Code getCode() {
+		return code;
+	}
+
+	public void setCode(PersonIdentificationType6Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification36 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification36 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IdentificationVerification1#Identification
- * IdentificationVerification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.IdentificationVerification1#mmIdentification
+ * IdentificationVerification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IdentificationVerification1#PartyAndAccountIdentification
- * IdentificationVerification1.PartyAndAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IdentificationVerification1#mmPartyAndAccountIdentification
+ * IdentificationVerification1.mmPartyAndAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +50,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01#Verification
- * IdentificationVerificationRequestV01.Verification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01#mmVerification
+ * IdentificationVerificationRequestV01.mmVerification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationVerification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identification, as assigned by a sending party, to unambiguously
 	 * identify the party and account identification information group within
@@ -105,7 +106,7 @@ public class IdentificationVerification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IdentificationVerification1.mmObject();
 			isDerived = false;
@@ -113,11 +114,12 @@ public class IdentificationVerification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the party and account identification information group within the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected IdentificationInformation1 partyAndAccountIdentification;
 	/**
 	 * Party and/or account identification information for which verification is
 	 * requested.
@@ -152,34 +154,50 @@ public class IdentificationVerification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyAndAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyAndAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IdentificationVerification1.mmObject();
 			businessComponentTrace_lazy = () -> Account.mmObject();
+			componentContext_lazy = () -> IdentificationVerification1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyAndAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyAndAccountIdentification";
 			definition = "Party and/or account identification information for which verification is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IdentificationInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IdentificationInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationVerification1.Identification, com.tools20022.repository.msg.IdentificationVerification1.PartyAndAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationVerification1.mmIdentification, com.tools20022.repository.msg.IdentificationVerification1.mmPartyAndAccountIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.mmVerification);
 				trace_lazy = () -> Account.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.Verification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationVerification1";
 				definition = "Set of elements used to provide information concerning the identification data that is requested to be verified.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public IdentificationInformation1 getPartyAndAccountIdentification() {
+		return partyAndAccountIdentification;
+	}
+
+	public void setPartyAndAccountIdentification(com.tools20022.repository.msg.IdentificationInformation1 partyAndAccountIdentification) {
+		this.partyAndAccountIdentification = partyAndAccountIdentification;
 	}
 }

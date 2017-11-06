@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#Received
- * ProcessingStatus43Choice.Received}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmReceived
+ * ProcessingStatus43Choice.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#Accepted
- * ProcessingStatus43Choice.Accepted}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmAccepted
+ * ProcessingStatus43Choice.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#PendingProcessing
- * ProcessingStatus43Choice.PendingProcessing}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmPendingProcessing
+ * ProcessingStatus43Choice.mmPendingProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#Rejected
- * ProcessingStatus43Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmRejected
+ * ProcessingStatus43Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#ProprietaryStatus
- * ProcessingStatus43Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmProprietaryStatus
+ * ProcessingStatus43Choice.mmProprietaryStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,15 +58,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#ProcessingStatus
- * StandingSettlementInstructionStatusAdviceV01.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#mmProcessingStatus
+ * StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessingStatus43Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReceivedStatusReason1 received;
 	/**
 	 * Status of the standing settlement instruction, cancellation or deletion
 	 * is received for further processing.
@@ -96,8 +97,8 @@ public class ProcessingStatus43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#CorporateActionInstructionProcessingStatus
-	 * CorporateActionStatus.CorporateActionInstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmCorporateActionInstructionProcessingStatus
+	 * CorporateActionStatus.mmCorporateActionInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,21 +119,22 @@ public class ProcessingStatus43Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Received = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceived = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmCorporateActionInstructionProcessingStatus;
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.CorporateActionInstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Rcvd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is received for further processing.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReceivedStatusReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ReceivedStatusReason1.mmObject();
 		}
 	};
+	protected AcceptedStatusReason7 accepted;
 	/**
 	 * Status of the standing settlement instruction, cancellation or deletion
 	 * is <br>
@@ -165,11 +167,11 @@ public class ProcessingStatus43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#AcknowledgedAccepted
-	 * ProcessingStatus36Choice.AcknowledgedAccepted}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus36Choice.mmAcknowledgedAccepted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Accepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -177,13 +179,14 @@ public class ProcessingStatus43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is \r\nacknowledged/accepted for further processing. The instruction has been received, is processable and has been validated for further processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.AcknowledgedAccepted;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmAcknowledgedAccepted;
 			maxOccurs = 1;
-			type_lazy = () -> AcceptedStatusReason7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AcceptedStatusReason7.mmObject();
 		}
 	};
+	protected PendingProcessingStatusReason1 pendingProcessing;
 	/**
 	 * Status of the standing settlement instruction, cancellation or deletion
 	 * is pending.
@@ -215,11 +218,11 @@ public class ProcessingStatus43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#PendingProcessing
-	 * ProcessingStatus36Choice.PendingProcessing}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#mmPendingProcessing
+	 * ProcessingStatus36Choice.mmPendingProcessing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingProcessing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingProcessing = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -227,13 +230,14 @@ public class ProcessingStatus43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is pending.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.PendingProcessing;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmPendingProcessing;
 			maxOccurs = 1;
-			type_lazy = () -> PendingProcessingStatusReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PendingProcessingStatusReason1.mmObject();
 		}
 	};
+	protected RejectedStatusReason12 rejected;
 	/**
 	 * Status of the standing settlement instruction, cancellation or deletion
 	 * is rejected.
@@ -264,11 +268,11 @@ public class ProcessingStatus43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#Rejected
-	 * ProcessingStatus36Choice.Rejected}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#mmRejected
+	 * ProcessingStatus36Choice.mmRejected}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -276,13 +280,14 @@ public class ProcessingStatus43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.Rejected;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmRejected;
 			maxOccurs = 1;
-			type_lazy = () -> RejectedStatusReason12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RejectedStatusReason12.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason5 proprietaryStatus;
 	/**
 	 * Status of the standing settlement instruction, cancellation or deletion
 	 * is expressed in a bilaterally agreed manner.
@@ -314,11 +319,11 @@ public class ProcessingStatus43Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#Proprietary
-	 * ProcessingStatus36Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus36Choice#mmProprietary
+	 * ProcessingStatus36Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -326,23 +331,23 @@ public class ProcessingStatus43Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is expressed in a bilaterally agreed manner.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus43Choice.Received, com.tools20022.repository.choice.ProcessingStatus43Choice.Accepted,
-						com.tools20022.repository.choice.ProcessingStatus43Choice.PendingProcessing, com.tools20022.repository.choice.ProcessingStatus43Choice.Rejected,
-						com.tools20022.repository.choice.ProcessingStatus43Choice.ProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus43Choice.mmReceived, com.tools20022.repository.choice.ProcessingStatus43Choice.mmAccepted,
+						com.tools20022.repository.choice.ProcessingStatus43Choice.mmPendingProcessing, com.tools20022.repository.choice.ProcessingStatus43Choice.mmRejected,
+						com.tools20022.repository.choice.ProcessingStatus43Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.ProcessingStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus43Choice";
 				definition = "Choice of formats for the specification of a status.";
@@ -350,5 +355,45 @@ public class ProcessingStatus43Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReceivedStatusReason1 getReceived() {
+		return received;
+	}
+
+	public void setReceived(ReceivedStatusReason1 received) {
+		this.received = received;
+	}
+
+	public AcceptedStatusReason7 getAccepted() {
+		return accepted;
+	}
+
+	public void setAccepted(AcceptedStatusReason7 accepted) {
+		this.accepted = accepted;
+	}
+
+	public PendingProcessingStatusReason1 getPendingProcessing() {
+		return pendingProcessing;
+	}
+
+	public void setPendingProcessing(PendingProcessingStatusReason1 pendingProcessing) {
+		this.pendingProcessing = pendingProcessing;
+	}
+
+	public RejectedStatusReason12 getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(RejectedStatusReason12 rejected) {
+		this.rejected = rejected;
+	}
+
+	public ProprietaryStatusAndReason5 getProprietaryStatus() {
+		return proprietaryStatus;
+	}
+
+	public void setProprietaryStatus(ProprietaryStatusAndReason5 proprietaryStatus) {
+		this.proprietaryStatus = proprietaryStatus;
 	}
 }

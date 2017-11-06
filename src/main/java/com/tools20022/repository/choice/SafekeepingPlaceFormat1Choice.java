@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#TypeAndIdentification
- * SafekeepingPlaceFormat1Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat1Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#Type
- * SafekeepingPlaceFormat1Choice.Type}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmType
+ * SafekeepingPlaceFormat1Choice.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#Proprietary
- * SafekeepingPlaceFormat1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmProprietary
+ * SafekeepingPlaceFormat1Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#Country
- * SafekeepingPlaceFormat1Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmCountry
+ * SafekeepingPlaceFormat1Choice.mmCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafekeepingPlaceFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlaceTypeAndAnyBICIdentifier1 typeAndIdentification;
 	/**
 	 * Identification of the place of safekeeping expressed as a code and a BIC.
 	 * <p>
@@ -106,21 +107,22 @@ public class SafekeepingPlaceFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTypeAndIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SafekeepingPlaceFormat1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
+			componentContext_lazy = () -> SafekeepingPlaceFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TpAndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndIdentification";
 			definition = "Identification of the place of safekeeping expressed as a code and a BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
 		}
 	};
+	protected SafekeepingPlaceTypeAndText1 type;
 	/**
 	 * Place identification of the place of safekeeping expressed as a code and
 	 * a narrative description.
@@ -156,21 +158,22 @@ public class SafekeepingPlaceFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SafekeepingPlaceFormat1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
+			componentContext_lazy = () -> SafekeepingPlaceFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Place identification of the place of safekeeping expressed as a code and a narrative description.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceTypeAndText1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceTypeAndText1.mmObject();
 		}
 	};
+	protected GenericIdentification14 proprietary;
 	/**
 	 * Place identification expressed as a proprietary type and narrative
 	 * description.
@@ -184,8 +187,8 @@ public class SafekeepingPlaceFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,21 +209,22 @@ public class SafekeepingPlaceFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> SafekeepingPlaceFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Place identification expressed as a proprietary type and narrative description.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification14.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Place of safekeeping expressed with a country code.
 	 * <p>
@@ -233,8 +237,8 @@ public class SafekeepingPlaceFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#Country
-	 * SafekeepingPlace.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmCountry
+	 * SafekeepingPlace.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,17 +257,17 @@ public class SafekeepingPlaceFormat1Choice {
 	 * definition} = "Place of safekeeping expressed with a country code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmCountry;
 			componentContext_lazy = () -> SafekeepingPlaceFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.Country;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Place of safekeeping expressed with a country code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -271,15 +275,47 @@ public class SafekeepingPlaceFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.TypeAndIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.Type,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.Proprietary, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.Country);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmTypeAndIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmType,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmProprietary, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmCountry);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SafekeepingPlaceFormat1Choice";
 				definition = "Choice of formats for the place of safekeeping.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlaceTypeAndAnyBICIdentifier1 getTypeAndIdentification() {
+		return typeAndIdentification;
+	}
+
+	public void setTypeAndIdentification(SafekeepingPlaceTypeAndAnyBICIdentifier1 typeAndIdentification) {
+		this.typeAndIdentification = typeAndIdentification;
+	}
+
+	public SafekeepingPlaceTypeAndText1 getType() {
+		return type;
+	}
+
+	public void setType(SafekeepingPlaceTypeAndText1 type) {
+		this.type = type;
+	}
+
+	public GenericIdentification14 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification14 proprietary) {
+		this.proprietary = proprietary;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

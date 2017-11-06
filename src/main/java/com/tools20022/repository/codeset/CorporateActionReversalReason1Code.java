@@ -35,39 +35,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#DayCountBasisDifference
- * CorporateActionReversalReason1Code.DayCountBasisDifference}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmDayCountBasisDifference
+ * CorporateActionReversalReason1Code.mmDayCountBasisDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#IncorrectValueDate
- * CorporateActionReversalReason1Code.IncorrectValueDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmIncorrectValueDate
+ * CorporateActionReversalReason1Code.mmIncorrectValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#IncorrectRecordDate
- * CorporateActionReversalReason1Code.IncorrectRecordDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmIncorrectRecordDate
+ * CorporateActionReversalReason1Code.mmIncorrectRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#IncorrectPrice
- * CorporateActionReversalReason1Code.IncorrectPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmIncorrectPrice
+ * CorporateActionReversalReason1Code.mmIncorrectPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#UnduePayment
- * CorporateActionReversalReason1Code.UnduePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmUnduePayment
+ * CorporateActionReversalReason1Code.mmUnduePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#IncorrectEventLevelTaxRate
- * CorporateActionReversalReason1Code.IncorrectEventLevelTaxRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmIncorrectEventLevelTaxRate
+ * CorporateActionReversalReason1Code.mmIncorrectEventLevelTaxRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#FundsNotReceived
- * CorporateActionReversalReason1Code.FundsNotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmFundsNotReceived
+ * CorporateActionReversalReason1Code.mmFundsNotReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#PaymentOutsideClearingSystem
- * CorporateActionReversalReason1Code.PaymentOutsideClearingSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmPaymentOutsideClearingSystem
+ * CorporateActionReversalReason1Code.mmPaymentOutsideClearingSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#IncorrectPaymentCurrency
- * CorporateActionReversalReason1Code.IncorrectPaymentCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReversalReason1Code#mmIncorrectPaymentCurrency
+ * CorporateActionReversalReason1Code.mmIncorrectPaymentCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "DayCountBasisDifference"</li>
 	 * </ul>
 	 */
-	public static final MMCode DayCountBasisDifference = new MMCode() {
+	public static final MMCode mmDayCountBasisDifference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayCountBasisDifference";
@@ -128,7 +128,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "IncorrectValueDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectValueDate = new MMCode() {
+	public static final MMCode mmIncorrectValueDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectValueDate";
@@ -151,7 +151,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "IncorrectRecordDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectRecordDate = new MMCode() {
+	public static final MMCode mmIncorrectRecordDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRecordDate";
@@ -174,7 +174,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "IncorrectPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectPrice = new MMCode() {
+	public static final MMCode mmIncorrectPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPrice";
@@ -197,7 +197,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "UnduePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnduePayment = new MMCode() {
+	public static final MMCode mmUnduePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnduePayment";
@@ -220,7 +220,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "IncorrectEventLevelTaxRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectEventLevelTaxRate = new MMCode() {
+	public static final MMCode mmIncorrectEventLevelTaxRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectEventLevelTaxRate";
@@ -243,7 +243,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "FundsNotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundsNotReceived = new MMCode() {
+	public static final MMCode mmFundsNotReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundsNotReceived";
@@ -266,7 +266,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "PaymentOutsideClearingSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentOutsideClearingSystem = new MMCode() {
+	public static final MMCode mmPaymentOutsideClearingSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOutsideClearingSystem";
@@ -289,7 +289,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 * name} = "IncorrectPaymentCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectPaymentCurrency = new MMCode() {
+	public static final MMCode mmIncorrectPaymentCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentCurrency";
@@ -300,16 +300,16 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DCBD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionReversalReason1Code";
 				definition = "The reason why a reversal of payment is taking place in corporate action processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionReversalReason1Code.DayCountBasisDifference, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.IncorrectValueDate,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.IncorrectRecordDate, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.IncorrectPrice,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.UnduePayment, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.IncorrectEventLevelTaxRate,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.FundsNotReceived, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.PaymentOutsideClearingSystem,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.IncorrectPaymentCurrency);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmDayCountBasisDifference, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectValueDate,
+						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectRecordDate, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectPrice,
+						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmUnduePayment, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectEventLevelTaxRate,
+						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmFundsNotReceived, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmPaymentOutsideClearingSystem,
+						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectPaymentCurrency);
 				trace_lazy = () -> CorporateActionReversalReasonCode.mmObject();
 			}
 		});

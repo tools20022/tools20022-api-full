@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements providing information specific to the individual credit
@@ -33,22 +34,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1#GroupHeader
- * FIToFICreditTransferTransactionInformationDetails1.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1#mmGroupHeader
+ * FIToFICreditTransferTransactionInformationDetails1.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1#CreditTransferTransactionInformation
+ * {@linkplain com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1#mmCreditTransferTransactionInformation
  * FIToFICreditTransferTransactionInformationDetails1.
- * CreditTransferTransactionInformation}</li>
+ * mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1#SupplementaryData
- * FIToFICreditTransferTransactionInformationDetails1.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1#mmSupplementaryData
+ * FIToFICreditTransferTransactionInformationDetails1.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FIToFICreditTransferTransactionInformationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader70 groupHeader;
 	/**
 	 * Common characteristics for all individual transactions included in the
 	 * message.
@@ -93,7 +95,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GroupHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -101,12 +103,13 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common characteristics for all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GroupHeader70.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GroupHeader70.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CreditTransferTransaction23> creditTransferTransactionInformation;
 	/**
 	 * Provide further details specific to the individual transaction(s)
 	 * included in the message.
@@ -137,7 +140,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditTransferTransactionInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditTransferTransactionInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -146,10 +149,11 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			name = "CreditTransferTransactionInformation";
 			definition = "Provide further details specific to the individual transaction(s) included in the message.";
 			minOccurs = 1;
-			type_lazy = () -> CreditTransferTransaction23.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CreditTransferTransaction23.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -179,7 +183,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -188,23 +192,47 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.GroupHeader,
-						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.CreditTransferTransactionInformation,
-						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.SupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmGroupHeader,
+						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmCreditTransferTransactionInformation,
+						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmSupplementaryData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FIToFICreditTransferTransactionInformationDetails1";
 				definition = "Set of elements providing information specific to the individual credit transfer(s).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader70 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(com.tools20022.repository.msg.GroupHeader70 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<CreditTransferTransaction23> getCreditTransferTransactionInformation() {
+		return creditTransferTransactionInformation;
+	}
+
+	public void setCreditTransferTransactionInformation(List<com.tools20022.repository.msg.CreditTransferTransaction23> creditTransferTransactionInformation) {
+		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

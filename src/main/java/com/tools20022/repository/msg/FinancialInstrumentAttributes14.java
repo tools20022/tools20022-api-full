@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Elements characterising a financial instrument.
@@ -40,129 +41,130 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PlaceOfListing
- * FinancialInstrumentAttributes14.PlaceOfListing}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPlaceOfListing
+ * FinancialInstrumentAttributes14.mmPlaceOfListing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#DayCountBasis
- * FinancialInstrumentAttributes14.DayCountBasis}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmDayCountBasis
+ * FinancialInstrumentAttributes14.mmDayCountBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#RegistrationForm
- * FinancialInstrumentAttributes14.RegistrationForm}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmRegistrationForm
+ * FinancialInstrumentAttributes14.mmRegistrationForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PaymentFrequency
- * FinancialInstrumentAttributes14.PaymentFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPaymentFrequency
+ * FinancialInstrumentAttributes14.mmPaymentFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PaymentStatus
- * FinancialInstrumentAttributes14.PaymentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPaymentStatus
+ * FinancialInstrumentAttributes14.mmPaymentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PaymentDirection
- * FinancialInstrumentAttributes14.PaymentDirection}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPaymentDirection
+ * FinancialInstrumentAttributes14.mmPaymentDirection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#VariableRateChangeFrequency
- * FinancialInstrumentAttributes14.VariableRateChangeFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmVariableRateChangeFrequency
+ * FinancialInstrumentAttributes14.mmVariableRateChangeFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PreferenceToIncome
- * FinancialInstrumentAttributes14.PreferenceToIncome}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPreferenceToIncome
+ * FinancialInstrumentAttributes14.mmPreferenceToIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#ClassificationType
- * FinancialInstrumentAttributes14.ClassificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmClassificationType
+ * FinancialInstrumentAttributes14.mmClassificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#OptionStyle
- * FinancialInstrumentAttributes14.OptionStyle}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmOptionStyle
+ * FinancialInstrumentAttributes14.mmOptionStyle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#OptionType
- * FinancialInstrumentAttributes14.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmOptionType
+ * FinancialInstrumentAttributes14.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#DenominationCurrency
- * FinancialInstrumentAttributes14.DenominationCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmDenominationCurrency
+ * FinancialInstrumentAttributes14.mmDenominationCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#CouponDate
- * FinancialInstrumentAttributes14.CouponDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmCouponDate
+ * FinancialInstrumentAttributes14.mmCouponDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#ExpiryDate
- * FinancialInstrumentAttributes14.ExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmExpiryDate
+ * FinancialInstrumentAttributes14.mmExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#FloatingRateFixingDate
- * FinancialInstrumentAttributes14.FloatingRateFixingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmFloatingRateFixingDate
+ * FinancialInstrumentAttributes14.mmFloatingRateFixingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#MaturityDate
- * FinancialInstrumentAttributes14.MaturityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmMaturityDate
+ * FinancialInstrumentAttributes14.mmMaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#IssueDate
- * FinancialInstrumentAttributes14.IssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmIssueDate
+ * FinancialInstrumentAttributes14.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#NextCallableDate
- * FinancialInstrumentAttributes14.NextCallableDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmNextCallableDate
+ * FinancialInstrumentAttributes14.mmNextCallableDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PutableDate
- * FinancialInstrumentAttributes14.PutableDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPutableDate
+ * FinancialInstrumentAttributes14.mmPutableDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#DatedDate
- * FinancialInstrumentAttributes14.DatedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmDatedDate
+ * FinancialInstrumentAttributes14.mmDatedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#FirstPaymentDate
- * FinancialInstrumentAttributes14.FirstPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmFirstPaymentDate
+ * FinancialInstrumentAttributes14.mmFirstPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PreviousFactor
- * FinancialInstrumentAttributes14.PreviousFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPreviousFactor
+ * FinancialInstrumentAttributes14.mmPreviousFactor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#CurrentFactor
- * FinancialInstrumentAttributes14.CurrentFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmCurrentFactor
+ * FinancialInstrumentAttributes14.mmCurrentFactor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#NextFactor
- * FinancialInstrumentAttributes14.NextFactor}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmNextFactor
+ * FinancialInstrumentAttributes14.mmNextFactor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#InterestRate
- * FinancialInstrumentAttributes14.InterestRate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmInterestRate
+ * FinancialInstrumentAttributes14.mmInterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#NextInterestRate
- * FinancialInstrumentAttributes14.NextInterestRate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmNextInterestRate
+ * FinancialInstrumentAttributes14.mmNextInterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#IndexRateBasis
- * FinancialInstrumentAttributes14.IndexRateBasis}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmIndexRateBasis
+ * FinancialInstrumentAttributes14.mmIndexRateBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#CouponAttachedNumber
- * FinancialInstrumentAttributes14.CouponAttachedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmCouponAttachedNumber
+ * FinancialInstrumentAttributes14.mmCouponAttachedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PoolNumber
- * FinancialInstrumentAttributes14.PoolNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPoolNumber
+ * FinancialInstrumentAttributes14.mmPoolNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#VariableRateIndicator
- * FinancialInstrumentAttributes14.VariableRateIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmVariableRateIndicator
+ * FinancialInstrumentAttributes14.mmVariableRateIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#CallableIndicator
- * FinancialInstrumentAttributes14.CallableIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmCallableIndicator
+ * FinancialInstrumentAttributes14.mmCallableIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PutableIndicator
- * FinancialInstrumentAttributes14.PutableIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPutableIndicator
+ * FinancialInstrumentAttributes14.mmPutableIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#MarketOrIndicativePrice
- * FinancialInstrumentAttributes14.MarketOrIndicativePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmMarketOrIndicativePrice
+ * FinancialInstrumentAttributes14.mmMarketOrIndicativePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#ExercisePrice
- * FinancialInstrumentAttributes14.ExercisePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmExercisePrice
+ * FinancialInstrumentAttributes14.mmExercisePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#SubscriptionPrice
- * FinancialInstrumentAttributes14.SubscriptionPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmSubscriptionPrice
+ * FinancialInstrumentAttributes14.mmSubscriptionPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#ConversionPrice
- * FinancialInstrumentAttributes14.ConversionPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmConversionPrice
+ * FinancialInstrumentAttributes14.mmConversionPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#StrikePrice
- * FinancialInstrumentAttributes14.StrikePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmStrikePrice
+ * FinancialInstrumentAttributes14.mmStrikePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#MinimumNominalQuantity
- * FinancialInstrumentAttributes14.MinimumNominalQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmMinimumNominalQuantity
+ * FinancialInstrumentAttributes14.mmMinimumNominalQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#ContractSize
- * FinancialInstrumentAttributes14.ContractSize}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmContractSize
+ * FinancialInstrumentAttributes14.mmContractSize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#UnderlyingFinancialInstrumentIdentification
- * FinancialInstrumentAttributes14.UnderlyingFinancialInstrumentIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#FinancialInstrumentAttributeAdditionalDetails
- * FinancialInstrumentAttributes14.FinancialInstrumentAttributeAdditionalDetails
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmUnderlyingFinancialInstrumentIdentification
+ * FinancialInstrumentAttributes14.mmUnderlyingFinancialInstrumentIdentification
  * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmFinancialInstrumentAttributeAdditionalDetails
+ * FinancialInstrumentAttributes14.
+ * mmFinancialInstrumentAttributeAdditionalDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -170,8 +172,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -186,6 +188,7 @@ import java.util.function.Supplier;
 public class FinancialInstrumentAttributes14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketIdentification9 placeOfListing;
 	/**
 	 * Market(s) on which the security is listed.
 	 * <p>
@@ -197,8 +200,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#PlaceOfListing
-	 * Security.PlaceOfListing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPlaceOfListing
+	 * Security.mmPlaceOfListing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -217,21 +220,22 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Market(s) on which the security is listed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlaceOfListing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlaceOfListing = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.PlaceOfListing;
 			isDerived = false;
 			xmlTag = "PlcOfListg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "Market(s) on which the security is listed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification9.mmObject();
 		}
 	};
+	protected InterestComputationMethodFormat2Choice dayCountBasis;
 	/**
 	 * Specifies the computation method of (accrued) interest of the security.
 	 * <p>
@@ -244,8 +248,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#DayCountBasis
-	 * InterestCalculation.DayCountBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDayCountBasis
+	 * InterestCalculation.mmDayCountBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -266,21 +270,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DayCountBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDayCountBasis = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.DayCountBasis;
 			isDerived = false;
 			xmlTag = "DayCntBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayCountBasis";
 			definition = "Specifies the computation method of (accrued) interest of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InterestComputationMethodFormat2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InterestComputationMethodFormat2Choice.mmObject();
 		}
 	};
+	protected FormOfSecurity3Choice registrationForm;
 	/**
 	 * Specifies the form, ie, ownership, of the security.
 	 * <p>
@@ -293,8 +298,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#RegistrationForm
-	 * Security.RegistrationForm}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegistrationForm
+	 * Security.mmRegistrationForm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -313,21 +318,22 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Specifies the form, ie, ownership, of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegistrationForm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegistrationForm = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.RegistrationForm;
 			isDerived = false;
 			xmlTag = "RegnForm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationForm";
 			definition = "Specifies the form, ie, ownership, of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FormOfSecurity3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FormOfSecurity3Choice.mmObject();
 		}
 	};
+	protected Frequency5Choice paymentFrequency;
 	/**
 	 * Specifies the frequency of an interest payment.
 	 * <p>
@@ -339,8 +345,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#PaymentFrequency
-	 * InterestCalculation.PaymentFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmPaymentFrequency
+	 * InterestCalculation.mmPaymentFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -359,21 +365,22 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Specifies the frequency of an interest payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentFrequency = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmPaymentFrequency;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.PaymentFrequency;
 			isDerived = false;
 			xmlTag = "PmtFrqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrequency";
 			definition = "Specifies the frequency of an interest payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Frequency5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Frequency5Choice.mmObject();
 		}
 	};
+	protected SecuritiesPaymentStatus3Choice paymentStatus;
 	/**
 	 * Status of payment of a security at a particular time.
 	 * <p>
@@ -386,8 +393,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#PaymentStatus
-	 * SecuritiesStatus.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
+	 * SecuritiesStatus.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -406,21 +413,22 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Status of payment of a security at a particular time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.PaymentStatus;
 			isDerived = false;
 			xmlTag = "PmtSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentStatus";
 			definition = "Status of payment of a security at a particular time.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPaymentStatus3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SecuritiesPaymentStatus3Choice.mmObject();
 		}
 	};
+	protected PaymentDirection3Choice paymentDirection;
 	/**
 	 * Indicates the direction of payment for asset or mortgage backed
 	 * securities, ie, whether the repaid capital is distributed (payment
@@ -435,8 +443,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#PaymentDirectionIndicator
-	 * Debt.PaymentDirectionIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmPaymentDirectionIndicator
+	 * Debt.mmPaymentDirectionIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -457,21 +465,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentDirection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentDirection = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.PaymentDirectionIndicator;
 			isDerived = false;
 			xmlTag = "PmtDrctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDirection";
 			definition = "Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentDirection3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PaymentDirection3Choice.mmObject();
 		}
 	};
+	protected Frequency5Choice variableRateChangeFrequency;
 	/**
 	 * Specifies the frequency of change to the variable rate of an interest
 	 * bearing instrument.
@@ -484,8 +493,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VariableInterest#VariableRateChangeFrequency
-	 * VariableInterest.VariableRateChangeFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariableInterest#mmVariableRateChangeFrequency
+	 * VariableInterest.mmVariableRateChangeFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -506,21 +515,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VariableRateChangeFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVariableRateChangeFrequency = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmVariableRateChangeFrequency;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.VariableRateChangeFrequency;
 			isDerived = false;
 			xmlTag = "VarblRateChngFrqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateChangeFrequency";
 			definition = "Specifies the frequency of change to the variable rate of an interest bearing instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Frequency5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Frequency5Choice.mmObject();
 		}
 	};
+	protected PreferenceToIncome3Choice preferenceToIncome;
 	/**
 	 * Indicates the level of priority to claim on income and assets of the
 	 * company in case of the payment of dividends and in the event of a
@@ -536,8 +546,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Equity#PreferenceToIncome
-	 * Equity.PreferenceToIncome}</li>
+	 * {@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
+	 * Equity.mmPreferenceToIncome}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -558,21 +568,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreferenceToIncome = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreferenceToIncome = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.PreferenceToIncome;
 			isDerived = false;
 			xmlTag = "PrefToIncm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferenceToIncome";
 			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PreferenceToIncome3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PreferenceToIncome3Choice.mmObject();
 		}
 	};
+	protected ClassificationType3Choice classificationType;
 	/**
 	 * Classification type of the financial instrument, as per the ISO
 	 * Classification of Financial Instrument (CFI) codification, for example,
@@ -587,8 +598,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -609,21 +620,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClassificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClassificationType3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ClassificationType3Choice.mmObject();
 		}
 	};
+	protected OptionStyle5Choice optionStyle;
 	/**
 	 * Specifies how an option can be exercised (American, European, Bermudan)
 	 * <p>
@@ -635,8 +647,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#OptionStyle
-	 * Option.OptionStyle}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionStyle
+	 * Option.mmOptionStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -657,21 +669,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionStyle = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionStyle = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.OptionStyle;
 			isDerived = false;
 			xmlTag = "OptnStyle";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
 			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OptionStyle5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> OptionStyle5Choice.mmObject();
 		}
 	};
+	protected OptionType3Choice optionType;
 	/**
 	 * Specifies whether it is a Call option (right to purchase a specific
 	 * underlying asset) or a Put option (right to sell a specific underlying
@@ -685,8 +698,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#OptionType
-	 * Option.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionType
+	 * Option.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -707,21 +720,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OptionType3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> OptionType3Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode denominationCurrency;
 	/**
 	 * Currency in which a security is issued or redenominated.
 	 * <p>
@@ -735,8 +749,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#DenominationCurrency
-	 * Security.DenominationCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmDenominationCurrency
+	 * Security.mmDenominationCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -755,20 +769,21 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DenominationCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDenominationCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDenominationCurrency;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.DenominationCurrency;
 			isDerived = false;
 			xmlTag = "DnmtnCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ISODate couponDate;
 	/**
 	 * Next payment date of an interest bearing financial instrument.
 	 * <p>
@@ -781,8 +796,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CouponAttached#Date
-	 * CouponAttached.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.CouponAttached#mmDate
+	 * CouponAttached.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -802,20 +817,21 @@ public class FinancialInstrumentAttributes14 {
 	 * "Next payment date of an interest bearing financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CouponDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCouponDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.Date;
 			isDerived = false;
 			xmlTag = "CpnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponDate";
 			definition = "Next payment date of an interest bearing financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate expiryDate;
 	/**
 	 * Date on which a privilege expires.
 	 * <p>
@@ -828,8 +844,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#ExpiryDate
-	 * Asset.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmExpiryDate
+	 * Asset.mmExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -848,20 +864,21 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Date on which a privilege expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.ExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which a privilege expires.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate floatingRateFixingDate;
 	/**
 	 * Date at which the interest rate of an interest bearing security will be
 	 * calculated and reset, according to the terms of the issue.
@@ -875,8 +892,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VariableInterest#FixingDate
-	 * VariableInterest.FixingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariableInterest#mmFixingDate
+	 * VariableInterest.mmFixingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -897,20 +914,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FloatingRateFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFloatingRateFixingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmFixingDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.FixingDate;
 			isDerived = false;
 			xmlTag = "FltgRateFxgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateFixingDate";
 			definition = "Date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate maturityDate;
 	/**
 	 * Planned final repayment date at the time of issuance.
 	 * <p>
@@ -923,8 +941,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -943,20 +961,21 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Planned final repayment date at the time of issuance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate issueDate;
 	/**
 	 * Date at which the security was made available.
 	 * <p>
@@ -969,8 +988,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Issuance#IssueDate
-	 * Issuance.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Issuance#mmIssueDate
+	 * Issuance.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -989,20 +1008,21 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Date at which the security was made available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.IssueDate;
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date at which the security was made available.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate nextCallableDate;
 	/**
 	 * Next date at which the issuer has the right to pay the security prior to
 	 * maturity.
@@ -1016,8 +1036,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#NextCallableDate
-	 * Debt.NextCallableDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmNextCallableDate
+	 * Debt.mmNextCallableDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1038,20 +1058,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NextCallableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNextCallableDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmNextCallableDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.NextCallableDate;
 			isDerived = false;
 			xmlTag = "NxtCllblDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCallableDate";
 			definition = "Next date at which the issuer has the right to pay the security prior to maturity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate putableDate;
 	/**
 	 * Date at which the holder has the right to ask for redemption of the
 	 * security prior to final maturity.
@@ -1065,8 +1086,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#PutableDate
-	 * Debt.PutableDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmPutableDate
+	 * Debt.mmPutableDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1087,20 +1108,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PutableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPutableDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPutableDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.PutableDate;
 			isDerived = false;
 			xmlTag = "PutblDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableDate";
 			definition = "Date at which the holder has the right to ask for redemption of the security prior to final maturity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate datedDate;
 	/**
 	 * First date at which a security begins to accrue interest.
 	 * <p>
@@ -1113,8 +1135,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#DatedDate
-	 * Debt.DatedDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmDatedDate
+	 * Debt.mmDatedDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1134,20 +1156,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatedDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmDatedDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.DatedDate;
 			isDerived = false;
 			xmlTag = "DtdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatedDate";
 			definition = "First date at which a security begins to accrue interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate firstPaymentDate;
 	/**
 	 * Date at which the first interest payment is due to holders of the
 	 * security.
@@ -1161,8 +1184,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#FirstPaymentDate
-	 * Debt.FirstPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmFirstPaymentDate
+	 * Debt.mmFirstPaymentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1183,20 +1206,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFirstPaymentDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.FirstPaymentDate;
 			isDerived = false;
 			xmlTag = "FrstPmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstPaymentDate";
 			definition = "Date at which the first interest payment is due to holders of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected BaseOneRate previousFactor;
 	/**
 	 * Rate expressed as a decimal between 0 and 1 that was applicable before
 	 * the current factor and defines the outstanding principal of the financial
@@ -1211,7 +1235,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#Factor Debt.Factor}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmFactor Debt.mmFactor}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1232,20 +1257,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousFactor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.Factor;
 			isDerived = false;
 			xmlTag = "PrvsFctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 that was applicable before the current factor and defines the outstanding principal of the financial instrument (for factored securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected BaseOneRate currentFactor;
 	/**
 	 * Rate expressed as a decimal between 0 and 1 defining the outstanding
 	 * principal of the financial instrument (for factored securities).
@@ -1259,7 +1285,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#Factor Debt.Factor}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmFactor Debt.mmFactor}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1280,20 +1307,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentFactor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.Factor;
 			isDerived = false;
 			xmlTag = "CurFctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 defining the outstanding principal of the financial instrument (for factored securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected BaseOneRate nextFactor;
 	/**
 	 * Rate expressed as a decimal between 0 and 1 that will be applicable as of
 	 * the next factor date and defines the outstanding principal of the
@@ -1308,7 +1336,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#Factor Debt.Factor}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmFactor Debt.mmFactor}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1329,20 +1358,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NextFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNextFactor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.Factor;
 			isDerived = false;
 			xmlTag = "NxtFctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 that will be applicable as of the next factor date and defines the outstanding principal of the financial instrument (for factored securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected PercentageRate interestRate;
 	/**
 	 * Per annum ratio of interest paid to the principal amount of the financial
 	 * instrument for a specific period of time.
@@ -1357,8 +1387,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#Rate
-	 * InterestCalculation.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRate
+	 * InterestCalculation.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1379,20 +1409,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.Rate;
 			isDerived = false;
 			xmlTag = "IntrstRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate nextInterestRate;
 	/**
 	 * Interest rate applicable to the next interest payment period in relation
 	 * to variable rate instruments.
@@ -1407,8 +1438,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#Rate
-	 * InterestCalculation.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRate
+	 * InterestCalculation.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1429,20 +1460,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NextInterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNextInterestRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.Rate;
 			isDerived = false;
 			xmlTag = "NxtIntrstRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextInterestRate";
 			definition = "Interest rate applicable to the next interest payment period in relation to variable rate instruments.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate indexRateBasis;
 	/**
 	 * Specifies the reference rate for fixed income instruments where the price
 	 * of the instrument is indexed to the price of an underlying benchmark.
@@ -1457,8 +1489,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Index#IndexRateBasis
-	 * Index.IndexRateBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Index#mmIndexRateBasis
+	 * Index.mmIndexRateBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1479,20 +1511,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IndexRateBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndexRateBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexRateBasis;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.IndexRateBasis;
 			isDerived = false;
 			xmlTag = "IndxRateBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexRateBasis";
 			definition = "Specifies the reference rate for fixed income instruments where the \nprice of the instrument is indexed to the price of an underlying benchmark.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Number4Choice couponAttachedNumber;
 	/**
 	 * Number of the coupon attached to the physical security.
 	 * <p>
@@ -1504,8 +1537,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CouponAttached#Number
-	 * CouponAttached.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.CouponAttached#mmNumber
+	 * CouponAttached.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1524,21 +1557,22 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Number of the coupon attached to the physical security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CouponAttachedNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCouponAttachedNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmNumber;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.Number;
 			isDerived = false;
 			xmlTag = "CpnAttchdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponAttachedNumber";
 			definition = "Number of the coupon attached to the physical security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Number4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Number4Choice.mmObject();
 		}
 	};
+	protected Number4Choice poolNumber;
 	/**
 	 * Number identifying a group of underlying assets assigned by the issuer of
 	 * a factored security.
@@ -1551,8 +1585,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#PoolNumber
-	 * Debt.PoolNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmPoolNumber
+	 * Debt.mmPoolNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1573,21 +1607,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PoolNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPoolNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolNumber;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.PoolNumber;
 			isDerived = false;
 			xmlTag = "PoolNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolNumber";
 			definition = "Number identifying a group of underlying assets assigned by the issuer of a factored security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Number4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Number4Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator variableRateIndicator;
 	/**
 	 * Indicates whether the interest rate of an interest bearing instrument is
 	 * reset periodically.
@@ -1602,8 +1637,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#VariableRateIndicator
-	 * Debt.VariableRateIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmVariableRateIndicator
+	 * Debt.mmVariableRateIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1624,20 +1659,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VariableRateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVariableRateIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmVariableRateIndicator;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.VariableRateIndicator;
 			isDerived = false;
 			xmlTag = "VarblRateInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateIndicator";
 			definition = "Indicates whether the interest rate of an interest bearing instrument is reset periodically.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator callableIndicator;
 	/**
 	 * Indicates whether the issuer has the right to pay the security prior to
 	 * maturity. Also called RetractableIndicator.
@@ -1652,8 +1688,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#CallableIndicator
-	 * Debt.CallableIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmCallableIndicator
+	 * Debt.mmCallableIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1674,20 +1710,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CallableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCallableIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmCallableIndicator;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.CallableIndicator;
 			isDerived = false;
 			xmlTag = "CllblInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallableIndicator";
 			definition = "Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator putableIndicator;
 	/**
 	 * Indicates whether the holder has the right to ask for redemption of the
 	 * security prior to final maturity. Also called RedeemableIndicator.
@@ -1702,8 +1739,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#PutableIndicator
-	 * Debt.PutableIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmPutableIndicator
+	 * Debt.mmPutableIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1724,20 +1761,21 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PutableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPutableIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPutableIndicator;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.PutableIndicator;
 			isDerived = false;
 			xmlTag = "PutblInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableIndicator";
 			definition = "Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PriceType2Choice marketOrIndicativePrice;
 	/**
 	 * Value of the price, for example, as a currency and value per unit or as a
 	 * percentage.
@@ -1767,7 +1805,7 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketOrIndicativePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketOrIndicativePrice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
 			isDerived = false;
@@ -1775,12 +1813,13 @@ public class FinancialInstrumentAttributes14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketOrIndicativePrice";
 			definition = "Value of the price, for example, as a currency and value per unit or as a percentage.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PriceType2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PriceType2Choice.mmObject();
 		}
 	};
+	protected Price3 exercisePrice;
 	/**
 	 * Predetermined price at which the holder of a derivative will buy or sell
 	 * the underlying instrument.
@@ -1792,8 +1831,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#ExercisePrice
-	 * Derivative.ExercisePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmExercisePrice
+	 * Derivative.mmExercisePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1814,21 +1853,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExercisePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExercisePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExercisePrice;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.ExercisePrice;
 			isDerived = false;
 			xmlTag = "ExrcPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "Predetermined price at which the holder of a derivative will buy or sell the underlying instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price3.mmObject();
 		}
 	};
+	protected Price3 subscriptionPrice;
 	/**
 	 * Pre-determined price at which the holder of a right is entitled to buy
 	 * the underlying instrument.
@@ -1840,8 +1880,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Warrant#SubscriptionPrice
-	 * Warrant.SubscriptionPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
+	 * Warrant.mmSubscriptionPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1862,21 +1902,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmSubscriptionPrice;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.SubscriptionPrice;
 			isDerived = false;
 			xmlTag = "SbcptPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Pre-determined price at which the holder of a right is entitled to buy the underlying instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price3.mmObject();
 		}
 	};
+	protected Price3 conversionPrice;
 	/**
 	 * Price of one target security in the conversion.
 	 * <p>
@@ -1887,8 +1928,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#ConversionPrice
-	 * SecuritiesConversion.ConversionPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmConversionPrice
+	 * SecuritiesConversion.mmConversionPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1907,21 +1948,22 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Price of one target security in the conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ConversionPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConversionPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionPrice;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.ConversionPrice;
 			isDerived = false;
 			xmlTag = "ConvsPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionPrice";
 			definition = "Price of one target security in the conversion.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price3.mmObject();
 		}
 	};
+	protected Price3 strikePrice;
 	/**
 	 * Predetermined price at which the holder will have to buy or sell the
 	 * underlying instrument.
@@ -1933,8 +1975,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#SecuritiesPricing
-	 * Price.SecuritiesPricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmSecuritiesPricing
+	 * Price.mmSecuritiesPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1955,21 +1997,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StrikePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStrikePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmSecuritiesPricing;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.SecuritiesPricing;
 			isDerived = false;
 			xmlTag = "StrkPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price3.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice minimumNominalQuantity;
 	/**
 	 * Indicates the minimum tradable quantity of a security.
 	 * <p>
@@ -1982,8 +2025,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#MinimumQuantity
-	 * Security.MinimumQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmMinimumQuantity
+	 * Security.mmMinimumQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2002,21 +2045,22 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Indicates the minimum tradable quantity of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MinimumNominalQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMinimumNominalQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmMinimumQuantity;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.MinimumQuantity;
 			isDerived = false;
 			xmlTag = "MinNmnlQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumNominalQuantity";
 			definition = "Indicates the minimum tradable quantity of a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice contractSize;
 	/**
 	 * Ratio or multiplying factor used to convert one contract into a quantity.
 	 * <p>
@@ -2029,8 +2073,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#ContractSize
-	 * SecuritiesConversion.ContractSize}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmContractSize
+	 * SecuritiesConversion.mmContractSize}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2051,21 +2095,22 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContractSize = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContractSize = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.ContractSize;
 			isDerived = false;
 			xmlTag = "CtrctSz";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSize";
 			definition = "Ratio or multiplying factor used to convert one contract into a quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification12> underlyingFinancialInstrumentIdentification;
 	/**
 	 * Identification of the underlying security by an ISIN.
 	 * <p>
@@ -2078,8 +2123,8 @@ public class FinancialInstrumentAttributes14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2098,20 +2143,21 @@ public class FinancialInstrumentAttributes14 {
 	 * definition} = "Identification of the underlying security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentIdentification";
 			definition = "Identification of the underlying security by an ISIN.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification12.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification12.mmObject();
 		}
 	};
+	protected RestrictedFINXMax350Text financialInstrumentAttributeAdditionalDetails;
 	/**
 	 * Provides additional information about the financial instrument in
 	 * narrative form.
@@ -2143,7 +2189,7 @@ public class FinancialInstrumentAttributes14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentAttributeAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentAttributeAdditionalDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributes14.mmObject();
 			isDerived = false;
@@ -2151,8 +2197,8 @@ public class FinancialInstrumentAttributes14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributeAdditionalDetails";
 			definition = "Provides additional information about the financial instrument in narrative form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
@@ -2160,29 +2206,29 @@ public class FinancialInstrumentAttributes14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes14.PlaceOfListing, com.tools20022.repository.msg.FinancialInstrumentAttributes14.DayCountBasis,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.RegistrationForm, com.tools20022.repository.msg.FinancialInstrumentAttributes14.PaymentFrequency,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.PaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes14.PaymentDirection,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.VariableRateChangeFrequency, com.tools20022.repository.msg.FinancialInstrumentAttributes14.PreferenceToIncome,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.ClassificationType, com.tools20022.repository.msg.FinancialInstrumentAttributes14.OptionStyle,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.OptionType, com.tools20022.repository.msg.FinancialInstrumentAttributes14.DenominationCurrency,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.CouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.ExpiryDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.FloatingRateFixingDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.MaturityDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.IssueDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.NextCallableDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.PutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.DatedDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.FirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.PreviousFactor,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.CurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes14.NextFactor,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.InterestRate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.NextInterestRate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.IndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes14.CouponAttachedNumber,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.PoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes14.VariableRateIndicator,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.CallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes14.PutableIndicator,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.MarketOrIndicativePrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.ExercisePrice,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.SubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.ConversionPrice,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.StrikePrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.MinimumNominalQuantity,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.ContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes14.UnderlyingFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes14.FinancialInstrumentAttributeAdditionalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPlaceOfListing, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmDayCountBasis,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmRegistrationForm, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPaymentFrequency,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPaymentDirection,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmVariableRateChangeFrequency, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPreferenceToIncome,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmClassificationType, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmOptionStyle,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmOptionType, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmDenominationCurrency,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmExpiryDate,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmFloatingRateFixingDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmMaturityDate,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmIssueDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmNextCallableDate,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmDatedDate,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPreviousFactor,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmNextFactor,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmInterestRate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmNextInterestRate,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCouponAttachedNumber,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmVariableRateIndicator,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPutableIndicator,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmMarketOrIndicativePrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmExercisePrice,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmConversionPrice,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmStrikePrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmMinimumNominalQuantity,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmUnderlyingFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmFinancialInstrumentAttributeAdditionalDetails);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -2196,5 +2242,333 @@ public class FinancialInstrumentAttributes14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketIdentification9 getPlaceOfListing() {
+		return placeOfListing;
+	}
+
+	public void setPlaceOfListing(com.tools20022.repository.msg.MarketIdentification9 placeOfListing) {
+		this.placeOfListing = placeOfListing;
+	}
+
+	public InterestComputationMethodFormat2Choice getDayCountBasis() {
+		return dayCountBasis;
+	}
+
+	public void setDayCountBasis(InterestComputationMethodFormat2Choice dayCountBasis) {
+		this.dayCountBasis = dayCountBasis;
+	}
+
+	public FormOfSecurity3Choice getRegistrationForm() {
+		return registrationForm;
+	}
+
+	public void setRegistrationForm(FormOfSecurity3Choice registrationForm) {
+		this.registrationForm = registrationForm;
+	}
+
+	public Frequency5Choice getPaymentFrequency() {
+		return paymentFrequency;
+	}
+
+	public void setPaymentFrequency(Frequency5Choice paymentFrequency) {
+		this.paymentFrequency = paymentFrequency;
+	}
+
+	public SecuritiesPaymentStatus3Choice getPaymentStatus() {
+		return paymentStatus;
+	}
+
+	public void setPaymentStatus(SecuritiesPaymentStatus3Choice paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
+
+	public PaymentDirection3Choice getPaymentDirection() {
+		return paymentDirection;
+	}
+
+	public void setPaymentDirection(PaymentDirection3Choice paymentDirection) {
+		this.paymentDirection = paymentDirection;
+	}
+
+	public Frequency5Choice getVariableRateChangeFrequency() {
+		return variableRateChangeFrequency;
+	}
+
+	public void setVariableRateChangeFrequency(Frequency5Choice variableRateChangeFrequency) {
+		this.variableRateChangeFrequency = variableRateChangeFrequency;
+	}
+
+	public PreferenceToIncome3Choice getPreferenceToIncome() {
+		return preferenceToIncome;
+	}
+
+	public void setPreferenceToIncome(PreferenceToIncome3Choice preferenceToIncome) {
+		this.preferenceToIncome = preferenceToIncome;
+	}
+
+	public ClassificationType3Choice getClassificationType() {
+		return classificationType;
+	}
+
+	public void setClassificationType(ClassificationType3Choice classificationType) {
+		this.classificationType = classificationType;
+	}
+
+	public OptionStyle5Choice getOptionStyle() {
+		return optionStyle;
+	}
+
+	public void setOptionStyle(OptionStyle5Choice optionStyle) {
+		this.optionStyle = optionStyle;
+	}
+
+	public OptionType3Choice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(OptionType3Choice optionType) {
+		this.optionType = optionType;
+	}
+
+	public ActiveOrHistoricCurrencyCode getDenominationCurrency() {
+		return denominationCurrency;
+	}
+
+	public void setDenominationCurrency(ActiveOrHistoricCurrencyCode denominationCurrency) {
+		this.denominationCurrency = denominationCurrency;
+	}
+
+	public ISODate getCouponDate() {
+		return couponDate;
+	}
+
+	public void setCouponDate(ISODate couponDate) {
+		this.couponDate = couponDate;
+	}
+
+	public ISODate getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(ISODate expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public ISODate getFloatingRateFixingDate() {
+		return floatingRateFixingDate;
+	}
+
+	public void setFloatingRateFixingDate(ISODate floatingRateFixingDate) {
+		this.floatingRateFixingDate = floatingRateFixingDate;
+	}
+
+	public ISODate getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public ISODate getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(ISODate issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public ISODate getNextCallableDate() {
+		return nextCallableDate;
+	}
+
+	public void setNextCallableDate(ISODate nextCallableDate) {
+		this.nextCallableDate = nextCallableDate;
+	}
+
+	public ISODate getPutableDate() {
+		return putableDate;
+	}
+
+	public void setPutableDate(ISODate putableDate) {
+		this.putableDate = putableDate;
+	}
+
+	public ISODate getDatedDate() {
+		return datedDate;
+	}
+
+	public void setDatedDate(ISODate datedDate) {
+		this.datedDate = datedDate;
+	}
+
+	public ISODate getFirstPaymentDate() {
+		return firstPaymentDate;
+	}
+
+	public void setFirstPaymentDate(ISODate firstPaymentDate) {
+		this.firstPaymentDate = firstPaymentDate;
+	}
+
+	public BaseOneRate getPreviousFactor() {
+		return previousFactor;
+	}
+
+	public void setPreviousFactor(BaseOneRate previousFactor) {
+		this.previousFactor = previousFactor;
+	}
+
+	public BaseOneRate getCurrentFactor() {
+		return currentFactor;
+	}
+
+	public void setCurrentFactor(BaseOneRate currentFactor) {
+		this.currentFactor = currentFactor;
+	}
+
+	public BaseOneRate getNextFactor() {
+		return nextFactor;
+	}
+
+	public void setNextFactor(BaseOneRate nextFactor) {
+		this.nextFactor = nextFactor;
+	}
+
+	public PercentageRate getInterestRate() {
+		return interestRate;
+	}
+
+	public void setInterestRate(PercentageRate interestRate) {
+		this.interestRate = interestRate;
+	}
+
+	public PercentageRate getNextInterestRate() {
+		return nextInterestRate;
+	}
+
+	public void setNextInterestRate(PercentageRate nextInterestRate) {
+		this.nextInterestRate = nextInterestRate;
+	}
+
+	public PercentageRate getIndexRateBasis() {
+		return indexRateBasis;
+	}
+
+	public void setIndexRateBasis(PercentageRate indexRateBasis) {
+		this.indexRateBasis = indexRateBasis;
+	}
+
+	public Number4Choice getCouponAttachedNumber() {
+		return couponAttachedNumber;
+	}
+
+	public void setCouponAttachedNumber(Number4Choice couponAttachedNumber) {
+		this.couponAttachedNumber = couponAttachedNumber;
+	}
+
+	public Number4Choice getPoolNumber() {
+		return poolNumber;
+	}
+
+	public void setPoolNumber(Number4Choice poolNumber) {
+		this.poolNumber = poolNumber;
+	}
+
+	public YesNoIndicator getVariableRateIndicator() {
+		return variableRateIndicator;
+	}
+
+	public void setVariableRateIndicator(YesNoIndicator variableRateIndicator) {
+		this.variableRateIndicator = variableRateIndicator;
+	}
+
+	public YesNoIndicator getCallableIndicator() {
+		return callableIndicator;
+	}
+
+	public void setCallableIndicator(YesNoIndicator callableIndicator) {
+		this.callableIndicator = callableIndicator;
+	}
+
+	public YesNoIndicator getPutableIndicator() {
+		return putableIndicator;
+	}
+
+	public void setPutableIndicator(YesNoIndicator putableIndicator) {
+		this.putableIndicator = putableIndicator;
+	}
+
+	public PriceType2Choice getMarketOrIndicativePrice() {
+		return marketOrIndicativePrice;
+	}
+
+	public void setMarketOrIndicativePrice(PriceType2Choice marketOrIndicativePrice) {
+		this.marketOrIndicativePrice = marketOrIndicativePrice;
+	}
+
+	public Price3 getExercisePrice() {
+		return exercisePrice;
+	}
+
+	public void setExercisePrice(com.tools20022.repository.msg.Price3 exercisePrice) {
+		this.exercisePrice = exercisePrice;
+	}
+
+	public Price3 getSubscriptionPrice() {
+		return subscriptionPrice;
+	}
+
+	public void setSubscriptionPrice(com.tools20022.repository.msg.Price3 subscriptionPrice) {
+		this.subscriptionPrice = subscriptionPrice;
+	}
+
+	public Price3 getConversionPrice() {
+		return conversionPrice;
+	}
+
+	public void setConversionPrice(com.tools20022.repository.msg.Price3 conversionPrice) {
+		this.conversionPrice = conversionPrice;
+	}
+
+	public Price3 getStrikePrice() {
+		return strikePrice;
+	}
+
+	public void setStrikePrice(com.tools20022.repository.msg.Price3 strikePrice) {
+		this.strikePrice = strikePrice;
+	}
+
+	public FinancialInstrumentQuantity15Choice getMinimumNominalQuantity() {
+		return minimumNominalQuantity;
+	}
+
+	public void setMinimumNominalQuantity(FinancialInstrumentQuantity15Choice minimumNominalQuantity) {
+		this.minimumNominalQuantity = minimumNominalQuantity;
+	}
+
+	public FinancialInstrumentQuantity15Choice getContractSize() {
+		return contractSize;
+	}
+
+	public void setContractSize(FinancialInstrumentQuantity15Choice contractSize) {
+		this.contractSize = contractSize;
+	}
+
+	public List<SecurityIdentification12> getUnderlyingFinancialInstrumentIdentification() {
+		return underlyingFinancialInstrumentIdentification;
+	}
+
+	public void setUnderlyingFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification12> underlyingFinancialInstrumentIdentification) {
+		this.underlyingFinancialInstrumentIdentification = underlyingFinancialInstrumentIdentification;
+	}
+
+	public RestrictedFINXMax350Text getFinancialInstrumentAttributeAdditionalDetails() {
+		return financialInstrumentAttributeAdditionalDetails;
+	}
+
+	public void setFinancialInstrumentAttributeAdditionalDetails(RestrictedFINXMax350Text financialInstrumentAttributeAdditionalDetails) {
+		this.financialInstrumentAttributeAdditionalDetails = financialInstrumentAttributeAdditionalDetails;
 	}
 }

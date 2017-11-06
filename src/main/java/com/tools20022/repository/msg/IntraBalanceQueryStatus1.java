@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus1#Type
- * IntraBalanceQueryStatus1.Type}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus1#DatePeriod
- * IntraBalanceQueryStatus1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus1#mmType
+ * IntraBalanceQueryStatus1.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus1#mmDatePeriod
+ * IntraBalanceQueryStatus1.mmDatePeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceQueryStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IntraBalanceStatusType1 type;
 	/**
 	 * Defines the status type of query criteria.
 	 * <p>
@@ -94,21 +96,22 @@ public class IntraBalanceQueryStatus1 {
 	 * definition} = "Defines the status type of query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryStatus1.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> IntraBalanceQueryStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines the status type of query criteria.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IntraBalanceStatusType1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType1.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice datePeriod;
 	/**
 	 * Specified date period of the status.
 	 * <p>
@@ -136,7 +139,7 @@ public class IntraBalanceQueryStatus1 {
 	 * definition} = "Specified date period of the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DatePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryStatus1.mmObject();
 			isDerived = false;
@@ -144,24 +147,40 @@ public class IntraBalanceQueryStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Specified date period of the status.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryStatus1.Type, com.tools20022.repository.msg.IntraBalanceQueryStatus1.DatePeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryStatus1.mmType, com.tools20022.repository.msg.IntraBalanceQueryStatus1.mmDatePeriod);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryStatus1";
 				definition = "Defines the intra-balance movement status query criteria including the status period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IntraBalanceStatusType1 getType() {
+		return type;
+	}
+
+	public void setType(com.tools20022.repository.msg.IntraBalanceStatusType1 type) {
+		this.type = type;
+	}
+
+	public DateAndDateTimeSearch2Choice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateAndDateTimeSearch2Choice datePeriod) {
+		this.datePeriod = datePeriod;
 	}
 }

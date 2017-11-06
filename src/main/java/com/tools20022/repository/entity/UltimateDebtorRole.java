@@ -36,22 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification2#UltimateDebtor
- * RequestedModification2.UltimateDebtor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmUltimateDebtor
+ * RequestedModification2.mmUltimateDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification3#UltimateDebtor
- * RequestedModification3.UltimateDebtor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Garnishment1#Garnishee
- * Garnishment1.Garnishee}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmUltimateDebtor
+ * RequestedModification3.mmUltimateDebtor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Garnishment1#mmGarnishee
+ * Garnishment1.mmGarnishee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification4#UltimateDebtor
- * RequestedModification4.UltimateDebtor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmUltimateDebtor
+ * RequestedModification4.mmUltimateDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification5#UltimateDebtor
- * RequestedModification5.UltimateDebtor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmUltimateDebtor
+ * RequestedModification5.mmUltimateDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification6#UltimateDebtor
- * RequestedModification6.UltimateDebtor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmUltimateDebtor
+ * RequestedModification6.mmUltimateDebtor}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -61,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,13 +81,13 @@ public class UltimateDebtorRole extends PaymentObligationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UltimateDebtorRole";
 				definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification2.UltimateDebtor, com.tools20022.repository.msg.RequestedModification3.UltimateDebtor,
-						com.tools20022.repository.msg.Garnishment1.Garnishee, com.tools20022.repository.msg.RequestedModification4.UltimateDebtor, com.tools20022.repository.msg.RequestedModification5.UltimateDebtor,
-						com.tools20022.repository.msg.RequestedModification6.UltimateDebtor);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification2.mmUltimateDebtor, com.tools20022.repository.msg.RequestedModification3.mmUltimateDebtor,
+						com.tools20022.repository.msg.Garnishment1.mmGarnishee, com.tools20022.repository.msg.RequestedModification4.mmUltimateDebtor, com.tools20022.repository.msg.RequestedModification5.mmUltimateDebtor,
+						com.tools20022.repository.msg.RequestedModification6.mmUltimateDebtor);
 				superType_lazy = () -> PaymentObligationPartyRole.mmObject();
 			}
 		});

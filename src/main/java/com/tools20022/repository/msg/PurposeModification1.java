@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PurposeModification1#ModificationCode
- * PurposeModification1.ModificationCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PurposeModification1#Purpose
- * PurposeModification1.Purpose}</li>
+ * {@linkplain com.tools20022.repository.msg.PurposeModification1#mmModificationCode
+ * PurposeModification1.mmModificationCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PurposeModification1#mmPurpose
+ * PurposeModification1.mmPurpose}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PurposeModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Modification1Code modificationCode;
 	/**
 	 * Specifies the type of change.
 	 * <p>
@@ -90,7 +91,7 @@ public class PurposeModification1 {
 	 * definition} = "Specifies the type of change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PurposeModification1.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class PurposeModification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationCode";
 			definition = "Specifies the type of change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
 		}
 	};
+	protected Max140Text purpose;
 	/**
 	 * Purpose.
 	 * <p>
@@ -115,8 +117,8 @@ public class PurposeModification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Purpose
-	 * Account.Purpose}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmPurpose
+	 * Account.mmPurpose}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,17 +137,17 @@ public class PurposeModification1 {
 	 * definition} = "Purpose."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Purpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmPurpose;
 			componentContext_lazy = () -> PurposeModification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Purpose;
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Purpose.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -153,14 +155,30 @@ public class PurposeModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PurposeModification1.ModificationCode, com.tools20022.repository.msg.PurposeModification1.Purpose);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PurposeModification1.mmModificationCode, com.tools20022.repository.msg.PurposeModification1.mmPurpose);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PurposeModification1";
 				definition = "Specifies the type of change to purpose.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Modification1Code getModificationCode() {
+		return modificationCode;
+	}
+
+	public void setModificationCode(Modification1Code modificationCode) {
+		this.modificationCode = modificationCode;
+	}
+
+	public Max140Text getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(Max140Text purpose) {
+		this.purpose = purpose;
 	}
 }

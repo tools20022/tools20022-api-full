@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#LotDescription
- * LotDetails1.LotDescription}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#TradeDate
- * LotDetails1.TradeDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#OrderReference
- * LotDetails1.OrderReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#DealReference
- * LotDetails1.DealReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#mmLotDescription
+ * LotDetails1.mmLotDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#mmTradeDate
+ * LotDetails1.mmTradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#mmOrderReference
+ * LotDetails1.mmOrderReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LotDetails1#mmDealReference
+ * LotDetails1.mmDealReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LotDetails1#LotQuantityAndAmount
- * LotDetails1.LotQuantityAndAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LotDetails1#mmLotQuantityAndAmount
+ * LotDetails1.mmLotQuantityAndAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LotDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text lotDescription;
 	/**
 	 * Description of the lot.
 	 * <p>
@@ -82,8 +83,8 @@ public class LotDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotIdentifier
-	 * LotBreakdown.LotIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotIdentifier
+	 * LotBreakdown.mmLotIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class LotDetails1 {
 	 * definition} = "Description of the lot."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotIdentifier;
 			componentContext_lazy = () -> LotDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotIdentifier;
 			isDerived = false;
 			xmlTag = "LotDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotDescription";
 			definition = "Description of the lot.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate tradeDate;
 	/**
 	 * Date the units were created.
 	 * <p>
@@ -127,8 +129,8 @@ public class LotDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotDateTime
-	 * LotBreakdown.LotDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotDateTime
+	 * LotBreakdown.mmLotDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +148,21 @@ public class LotDetails1 {
 	 * definition} = "Date the units were created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotDateTime;
 			componentContext_lazy = () -> LotDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date the units were created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier of the original order that resulted in
 	 * the lot.
@@ -173,8 +176,8 @@ public class LotDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,20 +197,21 @@ public class LotDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> LotDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier of the original order that resulted in the lot.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text dealReference;
 	/**
 	 * Deal reference of the original subscription execution that resulted in
 	 * the lot.
@@ -221,8 +225,8 @@ public class LotDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#DealIdentification
-	 * InvestmentFundOrderExecution.DealIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmDealIdentification
+	 * InvestmentFundOrderExecution.mmDealIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,20 +246,21 @@ public class LotDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> LotDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.DealIdentification;
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Deal reference of the original subscription execution that resulted in the lot.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SidePocketQuantityAndAmount1 lotQuantityAndAmount;
 	/**
 	 * Quantity of the lot.
 	 * <p>
@@ -268,8 +273,8 @@ public class LotDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#SecuritiesQuantity
-	 * LotBreakdown.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmSecuritiesQuantity
+	 * LotBreakdown.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,34 +292,74 @@ public class LotDetails1 {
 	 * definition} = "Quantity of the lot."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LotQuantityAndAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLotQuantityAndAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> LotDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "LotQtyAndAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantityAndAmount";
 			definition = "Quantity of the lot.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LotDetails1.LotDescription, com.tools20022.repository.msg.LotDetails1.TradeDate, com.tools20022.repository.msg.LotDetails1.OrderReference,
-						com.tools20022.repository.msg.LotDetails1.DealReference, com.tools20022.repository.msg.LotDetails1.LotQuantityAndAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LotDetails1.mmLotDescription, com.tools20022.repository.msg.LotDetails1.mmTradeDate, com.tools20022.repository.msg.LotDetails1.mmOrderReference,
+						com.tools20022.repository.msg.LotDetails1.mmDealReference, com.tools20022.repository.msg.LotDetails1.mmLotQuantityAndAmount);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LotDetails1";
 				definition = "Facilitates the redemption of one or more lots.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getLotDescription() {
+		return lotDescription;
+	}
+
+	public void setLotDescription(Max350Text lotDescription) {
+		this.lotDescription = lotDescription;
+	}
+
+	public ISODate getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODate tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getDealReference() {
+		return dealReference;
+	}
+
+	public void setDealReference(Max35Text dealReference) {
+		this.dealReference = dealReference;
+	}
+
+	public SidePocketQuantityAndAmount1 getLotQuantityAndAmount() {
+		return lotQuantityAndAmount;
+	}
+
+	public void setLotQuantityAndAmount(com.tools20022.repository.msg.SidePocketQuantityAndAmount1 lotQuantityAndAmount) {
+		this.lotQuantityAndAmount = lotQuantityAndAmount;
 	}
 }

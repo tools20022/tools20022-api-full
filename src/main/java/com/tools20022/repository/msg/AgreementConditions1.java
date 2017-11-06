@@ -36,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgreementConditions1#AgreementCode
- * AgreementConditions1.AgreementCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AgreementConditions1#Date
- * AgreementConditions1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AgreementConditions1#Version
- * AgreementConditions1.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.AgreementConditions1#mmAgreementCode
+ * AgreementConditions1.mmAgreementCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgreementConditions1#mmDate
+ * AgreementConditions1.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgreementConditions1#mmVersion
+ * AgreementConditions1.mmVersion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgreementConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max6AlphaText agreementCode;
 	/**
 	 * Specifies the type of agreement
 	 * <p>
@@ -78,8 +79,8 @@ public class AgreementConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MasterAgreement#MasterAgreementType
-	 * MasterAgreement.MasterAgreementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.MasterAgreement#mmMasterAgreementType
+	 * MasterAgreement.mmMasterAgreementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class AgreementConditions1 {
 	 * definition} = "Specifies the type of agreement"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgreementCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgreementCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> AgreementConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MasterAgreement.MasterAgreementType;
 			isDerived = false;
 			xmlTag = "AgrmtCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementCode";
 			definition = "Specifies the type of agreement";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6AlphaText.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Specifies the date of the agreement.
 	 * <p>
@@ -124,8 +126,8 @@ public class AgreementConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#DateSigned
-	 * Agreement.DateSigned}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDateSigned
+	 * Agreement.mmDateSigned}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +146,21 @@ public class AgreementConditions1 {
 	 * definition} = "Specifies the date of the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
 			componentContext_lazy = () -> AgreementConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.DateSigned;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specifies the date of the agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Exact4NumericText version;
 	/**
 	 * Specifies the version of the agreement.
 	 * <p>
@@ -171,8 +174,8 @@ public class AgreementConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Version
-	 * Agreement.Version}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmVersion
+	 * Agreement.mmVersion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,17 +194,17 @@ public class AgreementConditions1 {
 	 * definition} = "Specifies the version of the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmVersion;
 			componentContext_lazy = () -> AgreementConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Version;
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Specifies the version of the agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
 		}
 	};
@@ -209,15 +212,39 @@ public class AgreementConditions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.AgreementConditions1.AgreementCode, com.tools20022.repository.msg.AgreementConditions1.Date, com.tools20022.repository.msg.AgreementConditions1.Version);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreementConditions1.mmAgreementCode, com.tools20022.repository.msg.AgreementConditions1.mmDate,
+						com.tools20022.repository.msg.AgreementConditions1.mmVersion);
 				trace_lazy = () -> MasterAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgreementConditions1";
 				definition = "Specifies the type, date and version of the agreement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max6AlphaText getAgreementCode() {
+		return agreementCode;
+	}
+
+	public void setAgreementCode(Max6AlphaText agreementCode) {
+		this.agreementCode = agreementCode;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public Exact4NumericText getVersion() {
+		return version;
+	}
+
+	public void setVersion(Exact4NumericText version) {
+		this.version = version;
 	}
 }

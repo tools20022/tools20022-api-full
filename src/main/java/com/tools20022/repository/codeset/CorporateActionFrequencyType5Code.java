@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Final
- * CorporateActionFrequencyType5Code.Final}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmFinal
+ * CorporateActionFrequencyType5Code.mmFinal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Interim
- * CorporateActionFrequencyType5Code.Interim}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmInterim
+ * CorporateActionFrequencyType5Code.mmInterim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Reinvestment
- * CorporateActionFrequencyType5Code.Reinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmReinvestment
+ * CorporateActionFrequencyType5Code.mmReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Regular
- * CorporateActionFrequencyType5Code.Regular}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmRegular
+ * CorporateActionFrequencyType5Code.mmRegular}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Special
- * CorporateActionFrequencyType5Code.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmSpecial
+ * CorporateActionFrequencyType5Code.mmSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#SpecialDividendWithReinvestment
- * CorporateActionFrequencyType5Code.SpecialDividendWithReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmSpecialDividendWithReinvestment
+ * CorporateActionFrequencyType5Code.mmSpecialDividendWithReinvestment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,15 +93,15 @@ public class CorporateActionFrequencyType5Code extends CorporateActionFrequencyT
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Final
-	 * CorporateActionFrequencyType3Code.Final}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmFinal
+	 * CorporateActionFrequencyType3Code.mmFinal}</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Final;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmFinal;
 			owner_lazy = () -> CorporateActionFrequencyType5Code.mmObject();
 		}
 	};
@@ -122,15 +122,15 @@ public class CorporateActionFrequencyType5Code extends CorporateActionFrequencyT
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Interim
-	 * CorporateActionFrequencyType3Code.Interim}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmInterim
+	 * CorporateActionFrequencyType3Code.mmInterim}</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Interim;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmInterim;
 			owner_lazy = () -> CorporateActionFrequencyType5Code.mmObject();
 		}
 	};
@@ -151,15 +151,15 @@ public class CorporateActionFrequencyType5Code extends CorporateActionFrequencyT
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Reinvestment
-	 * CorporateActionFrequencyType3Code.Reinvestment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmReinvestment
+	 * CorporateActionFrequencyType3Code.mmReinvestment}</li>
 	 * </ul>
 	 */
-	public static final MMCode Reinvestment = new MMCode() {
+	public static final MMCode mmReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Reinvestment;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmReinvestment;
 			owner_lazy = () -> CorporateActionFrequencyType5Code.mmObject();
 		}
 	};
@@ -180,15 +180,15 @@ public class CorporateActionFrequencyType5Code extends CorporateActionFrequencyT
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Regular
-	 * CorporateActionFrequencyType3Code.Regular}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmRegular
+	 * CorporateActionFrequencyType3Code.mmRegular}</li>
 	 * </ul>
 	 */
-	public static final MMCode Regular = new MMCode() {
+	public static final MMCode mmRegular = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Regular;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmRegular;
 			owner_lazy = () -> CorporateActionFrequencyType5Code.mmObject();
 		}
 	};
@@ -209,15 +209,15 @@ public class CorporateActionFrequencyType5Code extends CorporateActionFrequencyT
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Special
-	 * CorporateActionFrequencyType3Code.Special}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmSpecial
+	 * CorporateActionFrequencyType3Code.mmSpecial}</li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Special;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmSpecial;
 			owner_lazy = () -> CorporateActionFrequencyType5Code.mmObject();
 		}
 	};
@@ -237,7 +237,7 @@ public class CorporateActionFrequencyType5Code extends CorporateActionFrequencyT
 	 * name} = "SpecialDividendWithReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialDividendWithReinvestment = new MMCode() {
+	public static final MMCode mmSpecialDividendWithReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividendWithReinvestment";
@@ -248,14 +248,14 @@ public class CorporateActionFrequencyType5Code extends CorporateActionFrequencyT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyType5Code";
 				definition = "Automatic Reinvestment of Cash distributed by accumulating funds.";
 				previousVersion_lazy = () -> CorporateActionFrequencyType3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.Final, com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.Interim,
-						com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.Reinvestment, com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.Regular,
-						com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.Special, com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.SpecialDividendWithReinvestment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.mmFinal, com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.mmInterim,
+						com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.mmReinvestment, com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.mmRegular,
+						com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.mmSpecial, com.tools20022.repository.codeset.CorporateActionFrequencyType5Code.mmSpecialDividendWithReinvestment);
 				trace_lazy = () -> CorporateActionFrequencyTypeV2Code.mmObject();
 			}
 		});

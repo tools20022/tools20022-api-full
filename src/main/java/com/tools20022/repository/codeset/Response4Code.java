@@ -32,20 +32,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ResponseCode ResponseCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Response4Code#Approved
- * Response4Code.Approved}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response4Code#Declined
- * Response4Code.Declined}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response4Code#mmApproved
+ * Response4Code.mmApproved}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response4Code#mmDeclined
+ * Response4Code.mmDeclined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Response4Code#PartialApproved
- * Response4Code.PartialApproved}</li>
+ * {@linkplain com.tools20022.repository.codeset.Response4Code#mmPartialApproved
+ * Response4Code.mmPartialApproved}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class Response4Code extends ResponseCode {
 	 * name} = "Approved"</li>
 	 * </ul>
 	 */
-	public static final MMCode Approved = new MMCode() {
+	public static final MMCode mmApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
@@ -98,7 +98,7 @@ public class Response4Code extends ResponseCode {
 	 * name} = "Declined"</li>
 	 * </ul>
 	 */
-	public static final MMCode Declined = new MMCode() {
+	public static final MMCode mmDeclined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
@@ -121,7 +121,7 @@ public class Response4Code extends ResponseCode {
 	 * name} = "PartialApproved"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialApproved = new MMCode() {
+	public static final MMCode mmPartialApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproved";
@@ -132,11 +132,11 @@ public class Response4Code extends ResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Response4Code";
 				definition = "Result of the performed service..";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response4Code.Approved, com.tools20022.repository.codeset.Response4Code.Declined, com.tools20022.repository.codeset.Response4Code.PartialApproved);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response4Code.mmApproved, com.tools20022.repository.codeset.Response4Code.mmDeclined, com.tools20022.repository.codeset.Response4Code.mmPartialApproved);
 				trace_lazy = () -> ResponseCode.mmObject();
 			}
 		});

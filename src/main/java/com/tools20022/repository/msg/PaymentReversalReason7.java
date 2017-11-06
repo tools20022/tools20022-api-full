@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.StatusReason;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides further details on the reason of the reversal of the transaction.
@@ -36,13 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentReversalReason7#Originator
- * PaymentReversalReason7.Originator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentReversalReason7#Reason
- * PaymentReversalReason7.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReversalReason7#mmOriginator
+ * PaymentReversalReason7.mmOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentReversalReason7#AdditionalInformation
- * PaymentReversalReason7.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReversalReason7#mmReason
+ * PaymentReversalReason7.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReversalReason7#mmAdditionalInformation
+ * PaymentReversalReason7.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentReversalReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 originator;
 	/**
 	 * Party that issues the reversal.
 	 * <p>
@@ -78,8 +81,8 @@ public class PaymentReversalReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +101,22 @@ public class PaymentReversalReason7 {
 	 * definition} = "Party that issues the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Originator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> PaymentReversalReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Orgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the reversal.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected ReversalReason4Choice reason;
 	/**
 	 * Specifies the reason for the reversal.
 	 * <p>
@@ -144,21 +148,22 @@ public class PaymentReversalReason7 {
 	 * definition} = "Specifies the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentReversalReason7.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> PaymentReversalReason7.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the reversal.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReversalReason4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ReversalReason4Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalInformation;
 	/**
 	 * Further details on the reversal reason.
 	 * <p>
@@ -171,8 +176,8 @@ public class PaymentReversalReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,10 +196,10 @@ public class PaymentReversalReason7 {
 	 * definition} = "Further details on the reversal reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> PaymentReversalReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,15 +213,39 @@ public class PaymentReversalReason7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentReversalReason7.Originator, com.tools20022.repository.msg.PaymentReversalReason7.Reason,
-						com.tools20022.repository.msg.PaymentReversalReason7.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentReversalReason7.mmOriginator, com.tools20022.repository.msg.PaymentReversalReason7.mmReason,
+						com.tools20022.repository.msg.PaymentReversalReason7.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentReversalReason7";
 				definition = "Provides further details on the reason of the reversal of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getOriginator() {
+		return originator;
+	}
+
+	public void setOriginator(com.tools20022.repository.msg.PartyIdentification43 originator) {
+		this.originator = originator;
+	}
+
+	public ReversalReason4Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(ReversalReason4Choice reason) {
+		this.reason = reason;
+	}
+
+	public List<Max105Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max105Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

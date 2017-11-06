@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope <br>
@@ -66,24 +67,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#StatusDetails
- * ForeignExchangeTradeBulkStatusNotificationV04.StatusDetails}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#mmStatusDetails
+ * ForeignExchangeTradeBulkStatusNotificationV04.mmStatusDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#TradeData
- * ForeignExchangeTradeBulkStatusNotificationV04.TradeData}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#mmTradeData
+ * ForeignExchangeTradeBulkStatusNotificationV04.mmTradeData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#MessagePagination
- * ForeignExchangeTradeBulkStatusNotificationV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#mmMessagePagination
+ * ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#SupplementaryData
- * ForeignExchangeTradeBulkStatusNotificationV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#mmSupplementaryData
+ * ForeignExchangeTradeBulkStatusNotificationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04#identifier
- * ForeignExchangeTradeBulkStatusNotificationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code fxtr.030.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeTradeBulkStatusNotificationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeData12 statusDetails;
 	/**
 	 * Information on the status of the trade in the central system.<br>
 	 * <p>
@@ -122,17 +122,18 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * "Information on the status of the trade in the central system.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDetails";
 			definition = "Information on the status of the trade in the central system.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeData12.mmObject();
 		}
 	};
+	protected List<TradeData11> tradeData;
 	/**
 	 * Identifies one or more trades for which the status notification is sent.<br>
 	 * <p>
@@ -157,7 +158,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,6 +168,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			complexType_lazy = () -> TradeData11.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Page number of the message (within the status report) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -193,17 +195,18 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Page number of the message (within the status report) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -230,7 +233,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,33 +241,6 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "fxtr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "030"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "fxtr";
-			messageFunctionality = "030";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -278,12 +254,51 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 				rootElement = "Document";
 				xmlTag = "FXTradBlkStsNtfctn";
 				businessArea_lazy = () -> ForeignExchangeTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.StatusDetails,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.TradeData, com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.MessagePagination,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmStatusDetails,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmTradeData, com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "fxtr";
+						messageFunctionality = "030";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeData12 getStatusDetails() {
+		return statusDetails;
+	}
+
+	public void setStatusDetails(TradeData12 statusDetails) {
+		this.statusDetails = statusDetails;
+	}
+
+	public List<TradeData11> getTradeData() {
+		return tradeData;
+	}
+
+	public void setTradeData(List<TradeData11> tradeData) {
+		this.tradeData = tradeData;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

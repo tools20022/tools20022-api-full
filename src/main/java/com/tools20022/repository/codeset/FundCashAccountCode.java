@@ -30,43 +30,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#CashAccount
- * FundCashAccountCode.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmCashAccount
+ * FundCashAccountCode.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#PensionFundOrdinary
- * FundCashAccountCode.PensionFundOrdinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmPensionFundOrdinary
+ * FundCashAccountCode.mmPensionFundOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#PensionFundSpecial
- * FundCashAccountCode.PensionFundSpecial}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmPensionFundSpecial
+ * FundCashAccountCode.mmPensionFundSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#RetirementScheme
- * FundCashAccountCode.RetirementScheme}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundCashAccountCode#Other
- * FundCashAccountCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmRetirementScheme
+ * FundCashAccountCode.mmRetirementScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#HedgeFund
- * FundCashAccountCode.HedgeFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmOther
+ * FundCashAccountCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#WorkplacePensionSchema
- * FundCashAccountCode.WorkplacePensionSchema}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmHedgeFund
+ * FundCashAccountCode.mmHedgeFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#PrivatePensionScheme
- * FundCashAccountCode.PrivatePensionScheme}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmWorkplacePensionSchema
+ * FundCashAccountCode.mmWorkplacePensionSchema}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#CSDParticipantAccount
- * FundCashAccountCode.CSDParticipantAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmPrivatePensionScheme
+ * FundCashAccountCode.mmPrivatePensionScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#CSDMirrorAccount
- * FundCashAccountCode.CSDMirrorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmCSDParticipantAccount
+ * FundCashAccountCode.mmCSDParticipantAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#InterCSDAccount
- * FundCashAccountCode.InterCSDAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmCSDMirrorAccount
+ * FundCashAccountCode.mmCSDMirrorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#TechnicalOffsetAccount
- * FundCashAccountCode.TechnicalOffsetAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmInterCSDAccount
+ * FundCashAccountCode.mmInterCSDAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#CSDOmnibusAccount
- * FundCashAccountCode.CSDOmnibusAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmTechnicalOffsetAccount
+ * FundCashAccountCode.mmTechnicalOffsetAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundCashAccountCode#mmCSDOmnibusAccount
+ * FundCashAccountCode.mmCSDOmnibusAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -85,8 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -127,7 +128,7 @@ public class FundCashAccountCode {
 	 * definition} = "Cash account."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashAccount = new MMCode() {
+	public static final MMCode mmCashAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
@@ -157,7 +158,7 @@ public class FundCashAccountCode {
 	 * definition} = "Central Provident Fund (CPF) ordinary account."</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionFundOrdinary = new MMCode() {
+	public static final MMCode mmPensionFundOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PensionFundOrdinary";
@@ -187,7 +188,7 @@ public class FundCashAccountCode {
 	 * definition} = "Central Provident Fund (CPF) special account."</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionFundSpecial = new MMCode() {
+	public static final MMCode mmPensionFundSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PensionFundSpecial";
@@ -217,7 +218,7 @@ public class FundCashAccountCode {
 	 * definition} = "Supplementary Retirement Scheme (SRS) account."</li>
 	 * </ul>
 	 */
-	public static final MMCode RetirementScheme = new MMCode() {
+	public static final MMCode mmRetirementScheme = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RetirementScheme";
@@ -247,7 +248,7 @@ public class FundCashAccountCode {
 	 * definition} = "Another type cash account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -277,7 +278,7 @@ public class FundCashAccountCode {
 	 * definition} = "Hedge fund account."</li>
 	 * </ul>
 	 */
-	public static final MMCode HedgeFund = new MMCode() {
+	public static final MMCode mmHedgeFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HedgeFund";
@@ -307,7 +308,7 @@ public class FundCashAccountCode {
 	 * definition} = "Workplace or company pension account."</li>
 	 * </ul>
 	 */
-	public static final MMCode WorkplacePensionSchema = new MMCode() {
+	public static final MMCode mmWorkplacePensionSchema = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WorkplacePensionSchema";
@@ -337,7 +338,7 @@ public class FundCashAccountCode {
 	 * definition} = "Private pension account."</li>
 	 * </ul>
 	 */
-	public static final MMCode PrivatePensionScheme = new MMCode() {
+	public static final MMCode mmPrivatePensionScheme = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivatePensionScheme";
@@ -367,7 +368,7 @@ public class FundCashAccountCode {
 	 * definition} = "Account owned by a CSD participant."</li>
 	 * </ul>
 	 */
-	public static final MMCode CSDParticipantAccount = new MMCode() {
+	public static final MMCode mmCSDParticipantAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDParticipantAccount";
@@ -397,7 +398,7 @@ public class FundCashAccountCode {
 	 * definition} = "Account operated by a CSD for mirroring positions."</li>
 	 * </ul>
 	 */
-	public static final MMCode CSDMirrorAccount = new MMCode() {
+	public static final MMCode mmCSDMirrorAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDMirrorAccount";
@@ -430,7 +431,7 @@ public class FundCashAccountCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InterCSDAccount = new MMCode() {
+	public static final MMCode mmInterCSDAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterCSDAccount";
@@ -461,7 +462,7 @@ public class FundCashAccountCode {
 	 * "Account operated by a CSD in a direct holding market context"</li>
 	 * </ul>
 	 */
-	public static final MMCode TechnicalOffsetAccount = new MMCode() {
+	public static final MMCode mmTechnicalOffsetAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalOffsetAccount";
@@ -492,7 +493,7 @@ public class FundCashAccountCode {
 	 * "Account operated by a CSD in cross-CSD settlement context."</li>
 	 * </ul>
 	 */
-	public static final MMCode CSDOmnibusAccount = new MMCode() {
+	public static final MMCode mmCSDOmnibusAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOmnibusAccount";
@@ -505,17 +506,17 @@ public class FundCashAccountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundCashAccountCode";
 				definition = "Specifies the cash account type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundCashAccountCode.CashAccount, com.tools20022.repository.codeset.FundCashAccountCode.PensionFundOrdinary,
-						com.tools20022.repository.codeset.FundCashAccountCode.PensionFundSpecial, com.tools20022.repository.codeset.FundCashAccountCode.RetirementScheme, com.tools20022.repository.codeset.FundCashAccountCode.Other,
-						com.tools20022.repository.codeset.FundCashAccountCode.HedgeFund, com.tools20022.repository.codeset.FundCashAccountCode.WorkplacePensionSchema,
-						com.tools20022.repository.codeset.FundCashAccountCode.PrivatePensionScheme, com.tools20022.repository.codeset.FundCashAccountCode.CSDParticipantAccount,
-						com.tools20022.repository.codeset.FundCashAccountCode.CSDMirrorAccount, com.tools20022.repository.codeset.FundCashAccountCode.InterCSDAccount,
-						com.tools20022.repository.codeset.FundCashAccountCode.TechnicalOffsetAccount, com.tools20022.repository.codeset.FundCashAccountCode.CSDOmnibusAccount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundCashAccountCode.mmCashAccount, com.tools20022.repository.codeset.FundCashAccountCode.mmPensionFundOrdinary,
+						com.tools20022.repository.codeset.FundCashAccountCode.mmPensionFundSpecial, com.tools20022.repository.codeset.FundCashAccountCode.mmRetirementScheme, com.tools20022.repository.codeset.FundCashAccountCode.mmOther,
+						com.tools20022.repository.codeset.FundCashAccountCode.mmHedgeFund, com.tools20022.repository.codeset.FundCashAccountCode.mmWorkplacePensionSchema,
+						com.tools20022.repository.codeset.FundCashAccountCode.mmPrivatePensionScheme, com.tools20022.repository.codeset.FundCashAccountCode.mmCSDParticipantAccount,
+						com.tools20022.repository.codeset.FundCashAccountCode.mmCSDMirrorAccount, com.tools20022.repository.codeset.FundCashAccountCode.mmInterCSDAccount,
+						com.tools20022.repository.codeset.FundCashAccountCode.mmTechnicalOffsetAccount, com.tools20022.repository.codeset.FundCashAccountCode.mmCSDOmnibusAccount);
 				derivation_lazy = () -> Arrays.asList(FundCashAccount2Code.mmObject(), FundCashAccount3Code.mmObject(), FundCashAccount1Code.mmObject(), FundCashAccount4Code.mmObject());
 			}
 		});

@@ -38,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Origin
- * CertifiedCharacteristics1Choice.Origin}</li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmOrigin
+ * CertifiedCharacteristics1Choice.mmOrigin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Quality
- * CertifiedCharacteristics1Choice.Quality}</li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmQuality
+ * CertifiedCharacteristics1Choice.mmQuality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Analysis
- * CertifiedCharacteristics1Choice.Analysis}</li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmAnalysis
+ * CertifiedCharacteristics1Choice.mmAnalysis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Weight
- * CertifiedCharacteristics1Choice.Weight}</li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmWeight
+ * CertifiedCharacteristics1Choice.mmWeight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Quantity
- * CertifiedCharacteristics1Choice.Quantity}</li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmQuantity
+ * CertifiedCharacteristics1Choice.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#HealthIndication
- * CertifiedCharacteristics1Choice.HealthIndication}</li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmHealthIndication
+ * CertifiedCharacteristics1Choice.mmHealthIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#PhytosanitaryIndication
- * CertifiedCharacteristics1Choice.PhytosanitaryIndication}</li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmPhytosanitaryIndication
+ * CertifiedCharacteristics1Choice.mmPhytosanitaryIndication}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CertifiedCharacteristics1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode origin;
 	/**
 	 * Country of origin of the goods, as proven by the certificate.
 	 * <p>
@@ -102,8 +103,8 @@ public class CertifiedCharacteristics1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#Origin
-	 * Product.Origin}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmOrigin
+	 * Product.mmOrigin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -125,27 +126,28 @@ public class CertifiedCharacteristics1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Origin
-	 * CertifiedCharacteristics2Choice.Origin}</li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmOrigin
+	 * CertifiedCharacteristics2Choice.mmOrigin}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Origin = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrigin = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmOrigin;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.Origin;
 			isDerived = false;
 			xmlTag = "Orgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Origin";
 			definition = "Country of origin of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Origin);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmOrigin);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max70Text quality;
 	/**
 	 * Quality of the goods, as proven by the certificate.
 	 * <p>
@@ -158,8 +160,8 @@ public class CertifiedCharacteristics1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#Quality
-	 * Product.Quality}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmQuality
+	 * Product.mmQuality}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,27 +182,28 @@ public class CertifiedCharacteristics1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Quality
-	 * CertifiedCharacteristics2Choice.Quality}</li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmQuality
+	 * CertifiedCharacteristics2Choice.mmQuality}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quality = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuality = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuality;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.Quality;
 			isDerived = false;
 			xmlTag = "Qlty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quality";
 			definition = "Quality of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Quality);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmQuality);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max70Text analysis;
 	/**
 	 * Analysis of the goods, as proven by the certificate.
 	 * <p>
@@ -213,8 +216,8 @@ public class CertifiedCharacteristics1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Goods#Analysis
-	 * Goods.Analysis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Goods#mmAnalysis
+	 * Goods.mmAnalysis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,27 +238,28 @@ public class CertifiedCharacteristics1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Analysis
-	 * CertifiedCharacteristics2Choice.Analysis}</li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmAnalysis
+	 * CertifiedCharacteristics2Choice.mmAnalysis}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Analysis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnalysis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.mmAnalysis;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.Analysis;
 			isDerived = false;
 			xmlTag = "Anlys";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Analysis";
 			definition = "Analysis of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Analysis);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmAnalysis);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Quantity4 weight;
 	/**
 	 * Weight of the goods, as proven by the certificate.
 	 * <p>
@@ -268,8 +272,8 @@ public class CertifiedCharacteristics1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#Quantity
-	 * Product.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmQuantity
+	 * Product.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -290,27 +294,28 @@ public class CertifiedCharacteristics1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Weight
-	 * CertifiedCharacteristics2Choice.Weight}</li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmWeight
+	 * CertifiedCharacteristics2Choice.mmWeight}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Weight = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWeight = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.Quantity;
 			isDerived = false;
 			xmlTag = "Wght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weight";
 			definition = "Weight of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Weight);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmWeight);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity4.mmObject();
 		}
 	};
+	protected Quantity4 quantity;
 	/**
 	 * Quantity of the goods, as proven by the certificate.
 	 * <p>
@@ -323,8 +328,8 @@ public class CertifiedCharacteristics1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#Quantity
-	 * Product.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmQuantity
+	 * Product.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -345,27 +350,28 @@ public class CertifiedCharacteristics1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Quantity
-	 * CertifiedCharacteristics2Choice.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmQuantity
+	 * CertifiedCharacteristics2Choice.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.Quantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Quantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmQuantity);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity4.mmObject();
 		}
 	};
+	protected YesNoIndicator healthIndication;
 	/**
 	 * Indicates if the goods have passed the health check.
 	 * <p>
@@ -379,8 +385,8 @@ public class CertifiedCharacteristics1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Goods#HealthCheck
-	 * Goods.HealthCheck}</li>
+	 * {@linkplain com.tools20022.repository.entity.Goods#mmHealthCheck
+	 * Goods.mmHealthCheck}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -401,27 +407,28 @@ public class CertifiedCharacteristics1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#HealthIndication
-	 * CertifiedCharacteristics2Choice.HealthIndication}</li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmHealthIndication
+	 * CertifiedCharacteristics2Choice.mmHealthIndication}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HealthIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHealthIndication = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.mmHealthCheck;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.HealthCheck;
 			isDerived = false;
 			xmlTag = "HlthIndctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HealthIndication";
 			definition = "Indicates if the goods have passed the health check.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.HealthIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmHealthIndication);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator phytosanitaryIndication;
 	/**
 	 * Indicates if the goods have passed the phytosanitary check.
 	 * <p>
@@ -435,8 +442,8 @@ public class CertifiedCharacteristics1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Goods#PhytosanitaryInspection
-	 * Goods.PhytosanitaryInspection}</li>
+	 * {@linkplain com.tools20022.repository.entity.Goods#mmPhytosanitaryInspection
+	 * Goods.mmPhytosanitaryInspection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -458,24 +465,24 @@ public class CertifiedCharacteristics1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#PhytosanitaryIndication
-	 * CertifiedCharacteristics2Choice.PhytosanitaryIndication}</li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmPhytosanitaryIndication
+	 * CertifiedCharacteristics2Choice.mmPhytosanitaryIndication}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhytosanitaryIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhytosanitaryIndication = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.mmPhytosanitaryInspection;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.PhytosanitaryInspection;
 			isDerived = false;
 			xmlTag = "PhytosntryIndctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhytosanitaryIndication";
 			definition = "Indicates if the goods have passed the phytosanitary check.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.PhytosanitaryIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -483,12 +490,12 @@ public class CertifiedCharacteristics1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Origin, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Quality,
-						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Analysis, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Weight,
-						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Quantity, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.HealthIndication,
-						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.PhytosanitaryIndication);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmOrigin, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuality,
+						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmAnalysis, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmWeight,
+						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuantity, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmHealthIndication,
+						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmPhytosanitaryIndication);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertifiedCharacteristics1Choice";
 				definition = "Characteristics of the goods that are certified, in the context of a commercial trade transaction.";
@@ -496,5 +503,61 @@ public class CertifiedCharacteristics1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(CountryCode origin) {
+		this.origin = origin;
+	}
+
+	public Max70Text getQuality() {
+		return quality;
+	}
+
+	public void setQuality(Max70Text quality) {
+		this.quality = quality;
+	}
+
+	public Max70Text getAnalysis() {
+		return analysis;
+	}
+
+	public void setAnalysis(Max70Text analysis) {
+		this.analysis = analysis;
+	}
+
+	public Quantity4 getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Quantity4 weight) {
+		this.weight = weight;
+	}
+
+	public Quantity4 getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Quantity4 quantity) {
+		this.quantity = quantity;
+	}
+
+	public YesNoIndicator getHealthIndication() {
+		return healthIndication;
+	}
+
+	public void setHealthIndication(YesNoIndicator healthIndication) {
+		this.healthIndication = healthIndication;
+	}
+
+	public YesNoIndicator getPhytosanitaryIndication() {
+		return phytosanitaryIndication;
+	}
+
+	public void setPhytosanitaryIndication(YesNoIndicator phytosanitaryIndication) {
+		this.phytosanitaryIndication = phytosanitaryIndication;
 	}
 }

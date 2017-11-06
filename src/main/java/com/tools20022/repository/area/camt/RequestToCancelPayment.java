@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.DebitAuthorisationDetails;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
@@ -84,24 +85,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#Assignment
- * RequestToCancelPayment.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#mmAssignment
+ * RequestToCancelPayment.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#Case
- * RequestToCancelPayment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#mmCase
+ * RequestToCancelPayment.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#Underlying
- * RequestToCancelPayment.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#mmUnderlying
+ * RequestToCancelPayment.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#Justification
- * RequestToCancelPayment.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#mmJustification
+ * RequestToCancelPayment.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#identifier
- * RequestToCancelPayment.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.008.002.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestToCancelPayment {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies the assignment of a case from an assigner to an assignee.
 	 * <p>
@@ -140,17 +140,18 @@ public class RequestToCancelPayment {
 	 * "Identifies the assignment of a case from an assigner to an assignee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of a case from an assigner to an assignee.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -172,17 +173,18 @@ public class RequestToCancelPayment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected PaymentInstructionExtract underlying;
 	/**
 	 * Identifies the payment instruction to be cancelled.
 	 * <p>
@@ -206,17 +208,18 @@ public class RequestToCancelPayment {
 	 * definition} = "Identifies the payment instruction to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment instruction to be cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 	};
+	protected DebitAuthorisationDetails justification;
 	/**
 	 * Defines the reason for requesting the cancellation.
 	 * <p>
@@ -240,42 +243,15 @@ public class RequestToCancelPayment {
 	 * definition} = "Defines the reason for requesting the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Justification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Defines the reason for requesting the cancellation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DebitAuthorisationDetails.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "008";
-			version = "01";
-			flavour = "002";
 		}
 	};
 
@@ -290,11 +266,50 @@ public class RequestToCancelPayment {
 				xmlTag = "camt.008.002.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.008.002.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToCancelPayment.Assignment, com.tools20022.repository.area.camt.RequestToCancelPayment.Case,
-						com.tools20022.repository.area.camt.RequestToCancelPayment.Underlying, com.tools20022.repository.area.camt.RequestToCancelPayment.Justification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.RequestToCancelPayment.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToCancelPayment.mmAssignment, com.tools20022.repository.area.camt.RequestToCancelPayment.mmCase,
+						com.tools20022.repository.area.camt.RequestToCancelPayment.mmUnderlying, com.tools20022.repository.area.camt.RequestToCancelPayment.mmJustification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "008";
+						version = "01";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public PaymentInstructionExtract getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(PaymentInstructionExtract underlying) {
+		this.underlying = underlying;
+	}
+
+	public DebitAuthorisationDetails getJustification() {
+		return justification;
+	}
+
+	public void setJustification(DebitAuthorisationDetails justification) {
+		this.justification = justification;
 	}
 }

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Certificate issuer name (see X.509).
@@ -32,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateIssuer1#RelativeDistinguishedName
- * CertificateIssuer1.RelativeDistinguishedName}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateIssuer1#mmRelativeDistinguishedName
+ * CertificateIssuer1.mmRelativeDistinguishedName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CertificateIssuer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.RelativeDistinguishedName1> relativeDistinguishedName;
 	/**
 	 * Relative distinguished name inside a X.509 certificate.
 	 * <p>
@@ -81,7 +83,7 @@ public class CertificateIssuer1 {
 	 * definition} = "Relative distinguished name inside a X.509 certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelativeDistinguishedName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelativeDistinguishedName = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificateIssuer1.mmObject();
 			isDerived = false;
@@ -90,21 +92,29 @@ public class CertificateIssuer1 {
 			name = "RelativeDistinguishedName";
 			definition = "Relative distinguished name inside a X.509 certificate.";
 			minOccurs = 1;
-			type_lazy = () -> RelativeDistinguishedName1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RelativeDistinguishedName1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateIssuer1.RelativeDistinguishedName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateIssuer1.mmRelativeDistinguishedName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertificateIssuer1";
 				definition = "Certificate issuer name (see X.509).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<RelativeDistinguishedName1> getRelativeDistinguishedName() {
+		return relativeDistinguishedName;
+	}
+
+	public void setRelativeDistinguishedName(List<com.tools20022.repository.msg.RelativeDistinguishedName1> relativeDistinguishedName) {
+		this.relativeDistinguishedName = relativeDistinguishedName;
 	}
 }

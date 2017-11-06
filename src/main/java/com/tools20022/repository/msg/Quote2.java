@@ -39,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Quote2#Type Quote2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote2#QuoteOriginator
- * Quote2.QuoteOriginator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote2#QuoteOriginatorRole
- * Quote2.QuoteOriginatorRole}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote2#RequestorEligibility
- * Quote2.RequestorEligibility}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote2#ResponseLevel
- * Quote2.ResponseLevel}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote2#QuoteChoice
- * Quote2.QuoteChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote2#mmType Quote2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote2#mmQuoteOriginator
+ * Quote2.mmQuoteOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote2#mmQuoteOriginatorRole
+ * Quote2.mmQuoteOriginatorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote2#mmRequestorEligibility
+ * Quote2.mmRequestorEligibility}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote2#mmResponseLevel
+ * Quote2.mmResponseLevel}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote2#mmQuoteChoice
+ * Quote2.mmQuoteChoice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quote2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuoteType1Code type;
 	/**
 	 * Indicates the scenario in which the quote is (requested to be) used (ie,
 	 * indicative, firm, restricted tradeable or counter).
@@ -88,8 +89,8 @@ public class Quote2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#Type
-	 * SecuritiesQuoteVariable.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmType
+	 * SecuritiesQuoteVariable.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Quote2
@@ -109,20 +110,21 @@ public class Quote2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmType;
 			componentContext_lazy = () -> Quote2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the scenario in which the quote is (requested to be) used (ie, indicative, firm, restricted tradeable or counter).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QuoteType1Code.mmObject();
 		}
 	};
+	protected PartyIdentification24Choice quoteOriginator;
 	/**
 	 * Originator of the quote.
 	 * <p>
@@ -150,7 +152,7 @@ public class Quote2 {
 	 * definition} = "Originator of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteOriginator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteOriginator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
@@ -158,11 +160,12 @@ public class Quote2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginator";
 			definition = "Originator of the quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
 	};
+	protected OriginatorRole1Code quoteOriginatorRole;
 	/**
 	 * Originator of the quote.
 	 * <p>
@@ -190,7 +193,7 @@ public class Quote2 {
 	 * definition} = "Originator of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteOriginatorRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteOriginatorRole = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
@@ -198,11 +201,12 @@ public class Quote2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginatorRole";
 			definition = "Originator of the quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OriginatorRole1Code.mmObject();
 		}
 	};
+	protected Eligibility1Code requestorEligibility;
 	/**
 	 * Identifies if the requestor of the quote is an elligible counterparty.
 	 * <p>
@@ -216,8 +220,8 @@ public class Quote2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.QuoteRequestor#RequestorEligibility
-	 * QuoteRequestor.RequestorEligibility}</li>
+	 * {@linkplain com.tools20022.repository.entity.QuoteRequestor#mmRequestorEligibility
+	 * QuoteRequestor.mmRequestorEligibility}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Quote2
@@ -236,20 +240,21 @@ public class Quote2 {
 	 * "Identifies if the requestor of the quote is an elligible counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestorEligibility = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility;
 			componentContext_lazy = () -> Quote2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteRequestor.RequestorEligibility;
 			isDerived = false;
 			xmlTag = "RqstrElgblty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestorEligibility";
 			definition = "Identifies if the requestor of the quote is an elligible counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
 		}
 	};
+	protected ResponseLevel1Code responseLevel;
 	/**
 	 * Indicates the level of response requested from the Receiver of the
 	 * message.
@@ -280,7 +285,7 @@ public class Quote2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseLevel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
@@ -288,11 +293,12 @@ public class Quote2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseLevel";
 			definition = "Indicates the level of response requested from the Receiver of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ResponseLevel1Code.mmObject();
 		}
 	};
+	protected SingleOrMassQuote1Choice quoteChoice;
 	/**
 	 * Identifies which type of quote (single or mass) the message is to be used
 	 * for.
@@ -322,7 +328,7 @@ public class Quote2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuoteChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuoteChoice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
@@ -330,25 +336,73 @@ public class Quote2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteChoice";
 			definition = "Identifies which type of quote (single or mass) the message is to be used for.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SingleOrMassQuote1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SingleOrMassQuote1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote2.Type, com.tools20022.repository.msg.Quote2.QuoteOriginator, com.tools20022.repository.msg.Quote2.QuoteOriginatorRole,
-						com.tools20022.repository.msg.Quote2.RequestorEligibility, com.tools20022.repository.msg.Quote2.ResponseLevel, com.tools20022.repository.msg.Quote2.QuoteChoice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote2.mmType, com.tools20022.repository.msg.Quote2.mmQuoteOriginator, com.tools20022.repository.msg.Quote2.mmQuoteOriginatorRole,
+						com.tools20022.repository.msg.Quote2.mmRequestorEligibility, com.tools20022.repository.msg.Quote2.mmResponseLevel, com.tools20022.repository.msg.Quote2.mmQuoteChoice);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Quote2";
 				definition = "Proposition of price for a financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuoteType1Code getType() {
+		return type;
+	}
+
+	public void setType(QuoteType1Code type) {
+		this.type = type;
+	}
+
+	public PartyIdentification24Choice getQuoteOriginator() {
+		return quoteOriginator;
+	}
+
+	public void setQuoteOriginator(PartyIdentification24Choice quoteOriginator) {
+		this.quoteOriginator = quoteOriginator;
+	}
+
+	public OriginatorRole1Code getQuoteOriginatorRole() {
+		return quoteOriginatorRole;
+	}
+
+	public void setQuoteOriginatorRole(OriginatorRole1Code quoteOriginatorRole) {
+		this.quoteOriginatorRole = quoteOriginatorRole;
+	}
+
+	public Eligibility1Code getRequestorEligibility() {
+		return requestorEligibility;
+	}
+
+	public void setRequestorEligibility(Eligibility1Code requestorEligibility) {
+		this.requestorEligibility = requestorEligibility;
+	}
+
+	public ResponseLevel1Code getResponseLevel() {
+		return responseLevel;
+	}
+
+	public void setResponseLevel(ResponseLevel1Code responseLevel) {
+		this.responseLevel = responseLevel;
+	}
+
+	public SingleOrMassQuote1Choice getQuoteChoice() {
+		return quoteChoice;
+	}
+
+	public void setQuoteChoice(SingleOrMassQuote1Choice quoteChoice) {
+		this.quoteChoice = quoteChoice;
 	}
 }

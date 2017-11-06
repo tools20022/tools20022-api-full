@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#HighestPriceValue12Months
- * StatisticsByPredefinedTimePeriods2.HighestPriceValue12Months}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#mmHighestPriceValue12Months
+ * StatisticsByPredefinedTimePeriods2.mmHighestPriceValue12Months}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#LowestPriceValue12Months
- * StatisticsByPredefinedTimePeriods2.LowestPriceValue12Months}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#mmLowestPriceValue12Months
+ * StatisticsByPredefinedTimePeriods2.mmLowestPriceValue12Months}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#OneYearPriceChange
- * StatisticsByPredefinedTimePeriods2.OneYearPriceChange}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#mmOneYearPriceChange
+ * StatisticsByPredefinedTimePeriods2.mmOneYearPriceChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#ThreeYearPriceChange
- * StatisticsByPredefinedTimePeriods2.ThreeYearPriceChange}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#mmThreeYearPriceChange
+ * StatisticsByPredefinedTimePeriods2.mmThreeYearPriceChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#FiveYearPriceChange
- * StatisticsByPredefinedTimePeriods2.FiveYearPriceChange}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2#mmFiveYearPriceChange
+ * StatisticsByPredefinedTimePeriods2.mmFiveYearPriceChange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatisticsByPredefinedTimePeriods2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceValue5 highestPriceValue12Months;
 	/**
 	 * Highest price for the referenced period.
 	 * <p>
@@ -82,8 +83,8 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#HighestPriceValue
-	 * ValuationStatistics.HighestPriceValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmHighestPriceValue
+	 * ValuationStatistics.mmHighestPriceValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * definition} = "Highest price for the referenced period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HighestPriceValue12Months = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHighestPriceValue12Months = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmHighestPriceValue;
 			componentContext_lazy = () -> StatisticsByPredefinedTimePeriods2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.HighestPriceValue;
 			isDerived = false;
 			xmlTag = "HghstPricVal12Mnths";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighestPriceValue12Months";
 			definition = "Highest price for the referenced period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValue5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue5.mmObject();
 		}
 	};
+	protected PriceValue5 lowestPriceValue12Months;
 	/**
 	 * Lowest price for the referenced period.
 	 * <p>
@@ -128,8 +130,8 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#LowestPriceValue
-	 * ValuationStatistics.LowestPriceValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmLowestPriceValue
+	 * ValuationStatistics.mmLowestPriceValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +150,21 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * definition} = "Lowest price for the referenced period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LowestPriceValue12Months = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLowestPriceValue12Months = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmLowestPriceValue;
 			componentContext_lazy = () -> StatisticsByPredefinedTimePeriods2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.LowestPriceValue;
 			isDerived = false;
 			xmlTag = "LwstPricVal12Mnths";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LowestPriceValue12Months";
 			definition = "Lowest price for the referenced period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValue5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue5.mmObject();
 		}
 	};
+	protected PriceValueChange1 oneYearPriceChange;
 	/**
 	 * Change in price over a one year period.
 	 * <p>
@@ -175,8 +178,8 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#PriceChange
-	 * ValuationStatistics.PriceChange}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
+	 * ValuationStatistics.mmPriceChange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,20 +198,21 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * definition} = "Change in price over a one year period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OneYearPriceChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOneYearPriceChange = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> StatisticsByPredefinedTimePeriods2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.PriceChange;
 			isDerived = false;
 			xmlTag = "OneYrPricChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneYearPriceChange";
 			definition = "Change in price over a one year period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValueChange1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 		}
 	};
+	protected PriceValueChange1 threeYearPriceChange;
 	/**
 	 * Change in price over a three year period.
 	 * <p>
@@ -222,8 +226,8 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#PriceChange
-	 * ValuationStatistics.PriceChange}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
+	 * ValuationStatistics.mmPriceChange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,20 +246,21 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * definition} = "Change in price over a three year period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ThreeYearPriceChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmThreeYearPriceChange = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> StatisticsByPredefinedTimePeriods2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.PriceChange;
 			isDerived = false;
 			xmlTag = "ThreeYrPricChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThreeYearPriceChange";
 			definition = "Change in price over a three year period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValueChange1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 		}
 	};
+	protected PriceValueChange1 fiveYearPriceChange;
 	/**
 	 * Change in price over a five year period.
 	 * <p>
@@ -269,8 +274,8 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#PriceChange
-	 * ValuationStatistics.PriceChange}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
+	 * ValuationStatistics.mmPriceChange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -289,34 +294,74 @@ public class StatisticsByPredefinedTimePeriods2 {
 	 * definition} = "Change in price over a five year period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FiveYearPriceChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFiveYearPriceChange = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> StatisticsByPredefinedTimePeriods2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.PriceChange;
 			isDerived = false;
 			xmlTag = "FiveYrPricChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiveYearPriceChange";
 			definition = "Change in price over a five year period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValueChange1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.HighestPriceValue12Months,
-						com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.LowestPriceValue12Months, com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.OneYearPriceChange,
-						com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.ThreeYearPriceChange, com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.FiveYearPriceChange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.mmHighestPriceValue12Months,
+						com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.mmLowestPriceValue12Months, com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.mmOneYearPriceChange,
+						com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.mmThreeYearPriceChange, com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.mmFiveYearPriceChange);
 				trace_lazy = () -> ValuationStatistics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatisticsByPredefinedTimePeriods2";
 				definition = "Statistical data related to the price change of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceValue5 getHighestPriceValue12Months() {
+		return highestPriceValue12Months;
+	}
+
+	public void setHighestPriceValue12Months(com.tools20022.repository.msg.PriceValue5 highestPriceValue12Months) {
+		this.highestPriceValue12Months = highestPriceValue12Months;
+	}
+
+	public PriceValue5 getLowestPriceValue12Months() {
+		return lowestPriceValue12Months;
+	}
+
+	public void setLowestPriceValue12Months(com.tools20022.repository.msg.PriceValue5 lowestPriceValue12Months) {
+		this.lowestPriceValue12Months = lowestPriceValue12Months;
+	}
+
+	public PriceValueChange1 getOneYearPriceChange() {
+		return oneYearPriceChange;
+	}
+
+	public void setOneYearPriceChange(com.tools20022.repository.msg.PriceValueChange1 oneYearPriceChange) {
+		this.oneYearPriceChange = oneYearPriceChange;
+	}
+
+	public PriceValueChange1 getThreeYearPriceChange() {
+		return threeYearPriceChange;
+	}
+
+	public void setThreeYearPriceChange(com.tools20022.repository.msg.PriceValueChange1 threeYearPriceChange) {
+		this.threeYearPriceChange = threeYearPriceChange;
+	}
+
+	public PriceValueChange1 getFiveYearPriceChange() {
+		return fiveYearPriceChange;
+	}
+
+	public void setFiveYearPriceChange(com.tools20022.repository.msg.PriceValueChange1 fiveYearPriceChange) {
+		this.fiveYearPriceChange = fiveYearPriceChange;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountingStatus1Code#Domestic
- * AccountingStatus1Code.Domestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountingStatus1Code#mmDomestic
+ * AccountingStatus1Code.mmDomestic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountingStatus1Code#NotDomestic
- * AccountingStatus1Code.NotDomestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountingStatus1Code#mmNotDomestic
+ * AccountingStatus1Code.mmNotDomestic}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class AccountingStatus1Code extends AccountingStatusCode {
 	 * name} = "Domestic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Domestic = new MMCode() {
+	public static final MMCode mmDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
@@ -98,7 +98,7 @@ public class AccountingStatus1Code extends AccountingStatusCode {
 	 * name} = "NotDomestic"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDomestic = new MMCode() {
+	public static final MMCode mmNotDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDomestic";
@@ -109,11 +109,11 @@ public class AccountingStatus1Code extends AccountingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatus1Code";
 				definition = "Specifies the accounting status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountingStatus1Code.Domestic, com.tools20022.repository.codeset.AccountingStatus1Code.NotDomestic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountingStatus1Code.mmDomestic, com.tools20022.repository.codeset.AccountingStatus1Code.mmNotDomestic);
 				trace_lazy = () -> AccountingStatusCode.mmObject();
 			}
 		});

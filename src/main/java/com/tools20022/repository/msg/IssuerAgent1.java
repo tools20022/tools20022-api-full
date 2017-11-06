@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1#Identification
- * IssuerAgent1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1#Role
- * IssuerAgent1.Role}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1#mmIdentification
+ * IssuerAgent1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1#mmRole
+ * IssuerAgent1.mmRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,21 +49,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#IssuerAgent
- * MeetingNotificationV02.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmIssuerAgent
+ * MeetingNotificationV02.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#IssuerAgent
- * MeetingNotificationV03.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#mmIssuerAgent
+ * MeetingNotificationV03.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#IssuerAgent
- * MeetingNotificationV04.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmIssuerAgent
+ * MeetingNotificationV04.mmIssuerAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuerAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification9Choice identification;
 	/**
 	 * Identifies Issuer Agent.
 	 * <p>
@@ -95,8 +96,8 @@ public class IssuerAgent1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,28 +117,29 @@ public class IssuerAgent1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IssuerAgent2#Identification
-	 * IssuerAgent2.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.IssuerAgent2#mmIdentification
+	 * IssuerAgent2.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> IssuerAgent1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies Issuer Agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected AgentRole1Code role;
 	/**
 	 * Specifies the role of the Issuer agent.
 	 * <p>
@@ -151,8 +153,8 @@ public class IssuerAgent1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#AgentRole
-	 * CorporateActionAgent.AgentRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
+	 * CorporateActionAgent.mmAgentRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,24 +173,24 @@ public class IssuerAgent1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#Role
-	 * IssuerAgent2.Role}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#mmRole
+	 * IssuerAgent2.mmRole}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Role = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.mmAgentRole;
 			componentContext_lazy = () -> IssuerAgent1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.AgentRole;
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Specifies the role of the Issuer agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.Role);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.mmRole);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AgentRole1Code.mmObject();
 		}
 	};
@@ -196,11 +198,11 @@ public class IssuerAgent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent1.Identification, com.tools20022.repository.msg.IssuerAgent1.Role);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent1.mmIdentification, com.tools20022.repository.msg.IssuerAgent1.mmRole);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuerAgent, com.tools20022.repository.area.seev.MeetingNotificationV03.mmIssuerAgent,
+						com.tools20022.repository.area.seev.MeetingNotificationV04.mmIssuerAgent);
 				trace_lazy = () -> CorporateActionAgent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.IssuerAgent, com.tools20022.repository.area.seev.MeetingNotificationV03.IssuerAgent,
-						com.tools20022.repository.area.seev.MeetingNotificationV04.IssuerAgent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerAgent1";
 				definition = "Specifies the role of the Issuer agent.";
@@ -208,5 +210,21 @@ public class IssuerAgent1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification9Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification9Choice identification) {
+		this.identification = identification;
+	}
+
+	public AgentRole1Code getRole() {
+		return role;
+	}
+
+	public void setRole(AgentRole1Code role) {
+		this.role = role;
 	}
 }

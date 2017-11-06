@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PriorityCode PriorityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#Normal
- * Priority4Code.Normal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#Urgent
- * Priority4Code.Urgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#mmNormal
+ * Priority4Code.mmNormal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#mmUrgent
+ * Priority4Code.mmUrgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class Priority4Code extends PriorityCode {
 	 * name} = "Normal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Normal = new MMCode() {
+	public static final MMCode mmNormal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Normal";
@@ -95,7 +95,7 @@ public class Priority4Code extends PriorityCode {
 	 * name} = "Urgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Urgent = new MMCode() {
+	public static final MMCode mmUrgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urgent";
@@ -106,11 +106,11 @@ public class Priority4Code extends PriorityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Priority4Code";
 				definition = "Specifies the priority level of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Priority4Code.Normal, com.tools20022.repository.codeset.Priority4Code.Urgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Priority4Code.mmNormal, com.tools20022.repository.codeset.Priority4Code.mmUrgent);
 				trace_lazy = () -> PriorityCode.mmObject();
 			}
 		});

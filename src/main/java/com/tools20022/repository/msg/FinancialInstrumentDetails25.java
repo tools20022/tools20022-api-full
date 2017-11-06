@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.Security;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reporting per financial instrument.
@@ -33,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#FinancialInstrumentIdentification
- * FinancialInstrumentDetails25.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#mmFinancialInstrumentIdentification
+ * FinancialInstrumentDetails25.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#PriceDetails
- * FinancialInstrumentDetails25.PriceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#mmPriceDetails
+ * FinancialInstrumentDetails25.mmPriceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#SafekeepingPlace
- * FinancialInstrumentDetails25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#mmSafekeepingPlace
+ * FinancialInstrumentDetails25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#OpeningBalance
- * FinancialInstrumentDetails25.OpeningBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#mmOpeningBalance
+ * FinancialInstrumentDetails25.mmOpeningBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#ClosingBalance
- * FinancialInstrumentDetails25.ClosingBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#mmClosingBalance
+ * FinancialInstrumentDetails25.mmClosingBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#Transaction
- * FinancialInstrumentDetails25.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#mmTransaction
+ * FinancialInstrumentDetails25.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,15 +61,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#FinancialInstrumentDetails
- * SecuritiesTransactionPostingReportV07.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#mmFinancialInstrumentDetails
+ * SecuritiesTransactionPostingReportV07.mmFinancialInstrumentDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentDetails25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification19 financialInstrumentIdentification;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -98,8 +101,8 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,26 +124,27 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#FinancialInstrumentIdentification
-	 * FinancialInstrumentDetails20.FinancialInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#mmFinancialInstrumentIdentification
+	 * FinancialInstrumentDetails20.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentDetails25.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.FinancialInstrumentIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification19.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
 		}
 	};
+	protected PriceInformation13 priceDetails;
 	/**
 	 * Information regarding the price of the instrument.
 	 * <p>
@@ -152,8 +156,8 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Pricing
-	 * Security.Pricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,26 +177,27 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#PriceDetails
-	 * FinancialInstrumentDetails20.PriceDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#mmPriceDetails
+	 * FinancialInstrumentDetails20.mmPriceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
 			componentContext_lazy = () -> FinancialInstrumentDetails25.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Pricing;
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Information regarding the price of the instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.PriceDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmPriceDetails;
 			maxOccurs = 1;
-			type_lazy = () -> PriceInformation13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PriceInformation13.mmObject();
 		}
 	};
+	protected SafeKeepingPlace1 safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -230,26 +235,27 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#SafekeepingPlace
-	 * FinancialInstrumentDetails20.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#mmSafekeepingPlace
+	 * FinancialInstrumentDetails20.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> FinancialInstrumentDetails25.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.SafekeepingPlace;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmSafekeepingPlace;
 			maxOccurs = 1;
-			type_lazy = () -> SafeKeepingPlace1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmObject();
 		}
 	};
+	protected OpeningBalance3 openingBalance;
 	/**
 	 * Opening balance for the statement period (first opening balance) or of
 	 * this page (intermediary opening balance).
@@ -262,8 +268,8 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#AggregateQuantityBalance
-	 * SecuritiesQuantity.AggregateQuantityBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAggregateQuantityBalance
+	 * SecuritiesQuantity.mmAggregateQuantityBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -285,26 +291,27 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#OpeningBalance
-	 * FinancialInstrumentDetails20.OpeningBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#mmOpeningBalance
+	 * FinancialInstrumentDetails20.mmOpeningBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OpeningBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOpeningBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> FinancialInstrumentDetails25.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.AggregateQuantityBalance;
 			isDerived = false;
 			xmlTag = "OpngBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBalance";
 			definition = "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.OpeningBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmOpeningBalance;
 			maxOccurs = 1;
-			type_lazy = () -> OpeningBalance3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OpeningBalance3.mmObject();
 		}
 	};
+	protected ClosingBalance3 closingBalance;
 	/**
 	 * Closing balance for the statement period (final closing balance) or of
 	 * this page (intermediary closing balance).
@@ -317,8 +324,8 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#AggregateQuantityBalance
-	 * SecuritiesQuantity.AggregateQuantityBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAggregateQuantityBalance
+	 * SecuritiesQuantity.mmAggregateQuantityBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -340,26 +347,27 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#ClosingBalance
-	 * FinancialInstrumentDetails20.ClosingBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#mmClosingBalance
+	 * FinancialInstrumentDetails20.mmClosingBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClosingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClosingBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> FinancialInstrumentDetails25.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.AggregateQuantityBalance;
 			isDerived = false;
 			xmlTag = "ClsgBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
 			definition = "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.ClosingBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmClosingBalance;
 			maxOccurs = 1;
-			type_lazy = () -> ClosingBalance3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ClosingBalance3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Transaction52> transaction;
 	/**
 	 * Transaction details.
 	 * <p>
@@ -371,8 +379,8 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Trade
-	 * SecuritiesQuantity.Trade}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTrade
+	 * SecuritiesQuantity.mmTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -392,35 +400,35 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#Transaction
-	 * FinancialInstrumentDetails20.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#mmTransaction
+	 * FinancialInstrumentDetails20.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmTrade;
 			componentContext_lazy = () -> FinancialInstrumentDetails25.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Trade;
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction details.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.Transaction;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmTransaction;
 			minOccurs = 1;
-			type_lazy = () -> Transaction52.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Transaction52.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails25.FinancialInstrumentIdentification, com.tools20022.repository.msg.FinancialInstrumentDetails25.PriceDetails,
-						com.tools20022.repository.msg.FinancialInstrumentDetails25.SafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails25.OpeningBalance,
-						com.tools20022.repository.msg.FinancialInstrumentDetails25.ClosingBalance, com.tools20022.repository.msg.FinancialInstrumentDetails25.Transaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails25.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.FinancialInstrumentDetails25.mmPriceDetails,
+						com.tools20022.repository.msg.FinancialInstrumentDetails25.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails25.mmOpeningBalance,
+						com.tools20022.repository.msg.FinancialInstrumentDetails25.mmClosingBalance, com.tools20022.repository.msg.FinancialInstrumentDetails25.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmFinancialInstrumentDetails);
 				trace_lazy = () -> Security.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.FinancialInstrumentDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentDetails25";
 				definition = "Reporting per financial instrument.";
@@ -428,5 +436,53 @@ public class FinancialInstrumentDetails25 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification19 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public PriceInformation13 getPriceDetails() {
+		return priceDetails;
+	}
+
+	public void setPriceDetails(com.tools20022.repository.msg.PriceInformation13 priceDetails) {
+		this.priceDetails = priceDetails;
+	}
+
+	public SafeKeepingPlace1 getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace1 safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public OpeningBalance3 getOpeningBalance() {
+		return openingBalance;
+	}
+
+	public void setOpeningBalance(com.tools20022.repository.msg.OpeningBalance3 openingBalance) {
+		this.openingBalance = openingBalance;
+	}
+
+	public ClosingBalance3 getClosingBalance() {
+		return closingBalance;
+	}
+
+	public void setClosingBalance(com.tools20022.repository.msg.ClosingBalance3 closingBalance) {
+		this.closingBalance = closingBalance;
+	}
+
+	public List<Transaction52> getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(List<com.tools20022.repository.msg.Transaction52> transaction) {
+		this.transaction = transaction;
 	}
 }

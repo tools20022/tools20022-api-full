@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#Complete
- * EventProcessingStatus2Choice.Complete}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#mmComplete
+ * EventProcessingStatus2Choice.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#Reconciled
- * EventProcessingStatus2Choice.Reconciled}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#mmReconciled
+ * EventProcessingStatus2Choice.mmReconciled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#Pending
- * EventProcessingStatus2Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#mmPending
+ * EventProcessingStatus2Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#ProprietaryStatus
- * EventProcessingStatus2Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#mmProprietaryStatus
+ * EventProcessingStatus2Choice.mmProprietaryStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EventProcessingStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoSpecifiedReason1 complete;
 	/**
 	 * Specifies that a corporate action event processing has been completed.
 	 * <p>
@@ -104,21 +105,22 @@ public class EventProcessingStatus2Choice {
 	 * "Specifies that a corporate action event processing has been completed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Complete = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmComplete = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EventProcessingStatus2Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> EventProcessingStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Specifies that a corporate action event processing has been completed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NoSpecifiedReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	protected NoSpecifiedReason1 reconciled;
 	/**
 	 * Corporate action event processing specifying that the funds paid have
 	 * been reconciled with the funds received from the agent (meaning that
@@ -154,21 +156,22 @@ public class EventProcessingStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reconciled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReconciled = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EventProcessingStatus2Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> EventProcessingStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rcncld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciled";
 			definition = "Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NoSpecifiedReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	protected PendingStatus5Choice pending;
 	/**
 	 * Specifies that a corporate action event processing has not been fully
 	 * completed and is therefore pending.
@@ -182,8 +185,8 @@ public class EventProcessingStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,21 +207,22 @@ public class EventProcessingStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> EventProcessingStatus2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Specifies that a corporate action event processing has not been fully completed and is therefore pending.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatus5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingStatus5Choice.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason2 proprietaryStatus;
 	/**
 	 * Proprietary status related to the event processing.
 	 * <p>
@@ -246,7 +250,7 @@ public class EventProcessingStatus2Choice {
 	 * definition} = "Proprietary status related to the event processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> EventProcessingStatus2Choice.mmObject();
 			isDerived = false;
@@ -254,25 +258,57 @@ public class EventProcessingStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Proprietary status related to the event processing.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EventProcessingStatus2Choice.Complete, com.tools20022.repository.choice.EventProcessingStatus2Choice.Reconciled,
-						com.tools20022.repository.choice.EventProcessingStatus2Choice.Pending, com.tools20022.repository.choice.EventProcessingStatus2Choice.ProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EventProcessingStatus2Choice.mmComplete, com.tools20022.repository.choice.EventProcessingStatus2Choice.mmReconciled,
+						com.tools20022.repository.choice.EventProcessingStatus2Choice.mmPending, com.tools20022.repository.choice.EventProcessingStatus2Choice.mmProprietaryStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventProcessingStatus2Choice";
 				definition = "Provides information about the status of a corporate action or the status of a payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoSpecifiedReason1 getComplete() {
+		return complete;
+	}
+
+	public void setComplete(NoSpecifiedReason1 complete) {
+		this.complete = complete;
+	}
+
+	public NoSpecifiedReason1 getReconciled() {
+		return reconciled;
+	}
+
+	public void setReconciled(NoSpecifiedReason1 reconciled) {
+		this.reconciled = reconciled;
+	}
+
+	public PendingStatus5Choice getPending() {
+		return pending;
+	}
+
+	public void setPending(com.tools20022.repository.choice.PendingStatus5Choice pending) {
+		this.pending = pending;
+	}
+
+	public ProprietaryStatusAndReason2 getProprietaryStatus() {
+		return proprietaryStatus;
+	}
+
+	public void setProprietaryStatus(ProprietaryStatusAndReason2 proprietaryStatus) {
+		this.proprietaryStatus = proprietaryStatus;
 	}
 }

@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent2#Type
- * ProprietaryAgent2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent2#Agent
- * ProprietaryAgent2.Agent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent2#mmType
+ * ProprietaryAgent2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent2#mmAgent
+ * ProprietaryAgent2.mmAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryAgent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Specifies the type of proprietary agent.
 	 * <p>
@@ -89,7 +90,7 @@ public class ProprietaryAgent2 {
 	 * definition} = "Specifies the type of proprietary agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryAgent2.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class ProprietaryAgent2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of proprietary agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification4 agent;
 	/**
 	 * Organisation established primarily to provide financial services.
 	 * <p>
@@ -135,33 +137,49 @@ public class ProprietaryAgent2 {
 	 * "Organisation established primarily to provide financial services."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Agent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProprietaryAgent2.mmObject();
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
+			componentContext_lazy = () -> ProprietaryAgent2.mmObject();
 			isDerived = false;
 			xmlTag = "Agt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Organisation established primarily to provide financial services.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryAgent2.Type, com.tools20022.repository.msg.ProprietaryAgent2.Agent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryAgent2.mmType, com.tools20022.repository.msg.ProprietaryAgent2.mmAgent);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryAgent2";
 				definition = "Set of elements used to identify a proprietary party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public BranchAndFinancialInstitutionIdentification4 getAgent() {
+		return agent;
+	}
+
+	public void setAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 agent) {
+		this.agent = agent;
 	}
 }

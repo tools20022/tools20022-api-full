@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking11#NewUndertakingAmount
- * Undertaking11.NewUndertakingAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking11#NewExpiryDetails
- * Undertaking11.NewExpiryDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking11#NewBeneficiary
- * Undertaking11.NewBeneficiary}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking11#mmNewUndertakingAmount
+ * Undertaking11.mmNewUndertakingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking11#NewUndertakingTermsAndConditions
- * Undertaking11.NewUndertakingTermsAndConditions}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking11#DeliveryChannel
- * Undertaking11.DeliveryChannel}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking11#mmNewExpiryDetails
+ * Undertaking11.mmNewExpiryDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking11#mmNewBeneficiary
+ * Undertaking11.mmNewBeneficiary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking11#mmNewUndertakingTermsAndConditions
+ * Undertaking11.mmNewUndertakingTermsAndConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking11#mmDeliveryChannel
+ * Undertaking11.mmDeliveryChannel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Undertaking11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingAmount2 newUndertakingAmount;
 	/**
 	 * Details related to the requested new amount for the local undertaking.
 	 * <p>
@@ -80,8 +83,8 @@ public class Undertaking11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingAmount
-	 * Undertaking.UndertakingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmount
+	 * Undertaking.mmUndertakingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +103,21 @@ public class Undertaking11 {
 	 * "Details related to the requested new amount for the local undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewUndertakingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewUndertakingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> Undertaking11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingAmount;
 			isDerived = false;
 			xmlTag = "NewUdrtkgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewUndertakingAmount";
 			definition = "Details related to the requested new amount for the local undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> UndertakingAmount2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
 		}
 	};
+	protected ExpiryDetails1 newExpiryDetails;
 	/**
 	 * Details related to the requested new expiry terms for the local
 	 * undertaking.
@@ -127,8 +131,8 @@ public class Undertaking11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Expiry
-	 * Undertaking.Expiry}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmExpiry
+	 * Undertaking.mmExpiry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +152,21 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewExpiryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewExpiryDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmExpiry;
 			componentContext_lazy = () -> Undertaking11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Expiry;
 			isDerived = false;
 			xmlTag = "NewXpryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewExpiryDetails";
 			definition = "Details related to the requested new expiry terms for the local undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ExpiryDetails1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
 		}
 	};
+	protected PartyIdentification43 newBeneficiary;
 	/**
 	 * Details related to the requested new beneficiary for the local
 	 * undertaking.
@@ -176,8 +181,8 @@ public class Undertaking11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,20 +202,21 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewBeneficiary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewBeneficiary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Undertaking11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "NewBnfcry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBeneficiary";
 			definition = "Details related to the requested new beneficiary for the local undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected Narrative1 newUndertakingTermsAndConditions;
 	/**
 	 * Details related to the requested new terms and conditions for the local
 	 * undertaking.
@@ -240,7 +246,7 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewUndertakingTermsAndConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewUndertakingTermsAndConditions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Undertaking11.mmObject();
 			isDerived = false;
@@ -248,11 +254,12 @@ public class Undertaking11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewUndertakingTermsAndConditions";
 			definition = "Details related to the requested new terms and conditions for the local undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Narrative1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Narrative1.mmObject();
 		}
 	};
+	protected CommunicationChannel1 deliveryChannel;
 	/**
 	 * Details related to the delivery channel for the amended local
 	 * undertaking.
@@ -267,8 +274,8 @@ public class Undertaking11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#CommunicationMethod
-	 * Presentation.CommunicationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmCommunicationMethod
+	 * Presentation.mmCommunicationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,33 +295,73 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveryChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveryChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Undertaking11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.CommunicationMethod;
 			isDerived = false;
 			xmlTag = "DlvryChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryChannel";
 			definition = "Details related to the delivery channel for the amended local undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> CommunicationChannel1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking11.NewUndertakingAmount, com.tools20022.repository.msg.Undertaking11.NewExpiryDetails,
-						com.tools20022.repository.msg.Undertaking11.NewBeneficiary, com.tools20022.repository.msg.Undertaking11.NewUndertakingTermsAndConditions, com.tools20022.repository.msg.Undertaking11.DeliveryChannel);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking11.mmNewUndertakingAmount, com.tools20022.repository.msg.Undertaking11.mmNewExpiryDetails,
+						com.tools20022.repository.msg.Undertaking11.mmNewBeneficiary, com.tools20022.repository.msg.Undertaking11.mmNewUndertakingTermsAndConditions, com.tools20022.repository.msg.Undertaking11.mmDeliveryChannel);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Undertaking11";
 				definition = "Details related to the local undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingAmount2 getNewUndertakingAmount() {
+		return newUndertakingAmount;
+	}
+
+	public void setNewUndertakingAmount(com.tools20022.repository.msg.UndertakingAmount2 newUndertakingAmount) {
+		this.newUndertakingAmount = newUndertakingAmount;
+	}
+
+	public ExpiryDetails1 getNewExpiryDetails() {
+		return newExpiryDetails;
+	}
+
+	public void setNewExpiryDetails(com.tools20022.repository.msg.ExpiryDetails1 newExpiryDetails) {
+		this.newExpiryDetails = newExpiryDetails;
+	}
+
+	public PartyIdentification43 getNewBeneficiary() {
+		return newBeneficiary;
+	}
+
+	public void setNewBeneficiary(com.tools20022.repository.msg.PartyIdentification43 newBeneficiary) {
+		this.newBeneficiary = newBeneficiary;
+	}
+
+	public Narrative1 getNewUndertakingTermsAndConditions() {
+		return newUndertakingTermsAndConditions;
+	}
+
+	public void setNewUndertakingTermsAndConditions(com.tools20022.repository.msg.Narrative1 newUndertakingTermsAndConditions) {
+		this.newUndertakingTermsAndConditions = newUndertakingTermsAndConditions;
+	}
+
+	public CommunicationChannel1 getDeliveryChannel() {
+		return deliveryChannel;
+	}
+
+	public void setDeliveryChannel(com.tools20022.repository.msg.CommunicationChannel1 deliveryChannel) {
+		this.deliveryChannel = deliveryChannel;
 	}
 }

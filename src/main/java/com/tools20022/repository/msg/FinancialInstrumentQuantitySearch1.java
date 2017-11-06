@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#FaceAmount
- * FinancialInstrumentQuantitySearch1.FaceAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#mmFaceAmount
+ * FinancialInstrumentQuantitySearch1.mmFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#AmortisedValue
- * FinancialInstrumentQuantitySearch1.AmortisedValue}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1#mmAmortisedValue
+ * FinancialInstrumentQuantitySearch1.mmAmortisedValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentQuantitySearch1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAmountRangeChoice faceAmount;
 	/**
 	 * Quantity expressed as an amount representing the face amount, that is the
 	 * principal, of a debt instrument.
@@ -76,8 +77,8 @@ public class FinancialInstrumentQuantitySearch1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#FaceAmount
-	 * AssetHolding.FaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmFaceAmount
+	 * AssetHolding.mmFaceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class FinancialInstrumentQuantitySearch1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantitySearch1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.FaceAmount;
 			isDerived = false;
 			xmlTag = "FaceAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, that is the principal, of a debt instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAmountRangeChoice amortisedValue;
 	/**
 	 * Quantity expressed as an amount representing the current amortised face
 	 * amount of a bond, for example, a periodic reduction/increase of a bond's
@@ -127,8 +129,8 @@ public class FinancialInstrumentQuantitySearch1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#AmortisedFaceValue
-	 * AssetHolding.AmortisedFaceValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmAmortisedFaceValue
+	 * AssetHolding.mmAmortisedFaceValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,17 +151,17 @@ public class FinancialInstrumentQuantitySearch1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> FinancialInstrumentQuantitySearch1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.AmortisedFaceValue;
 			isDerived = false;
 			xmlTag = "AmtsdVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisedValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 		}
 	};
@@ -167,14 +169,30 @@ public class FinancialInstrumentQuantitySearch1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.FaceAmount, com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.AmortisedValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.mmFaceAmount, com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.mmAmortisedValue);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentQuantitySearch1";
 				definition = "Choice between formats for the quantity of security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAmountRangeChoice getFaceAmount() {
+		return faceAmount;
+	}
+
+	public void setFaceAmount(ImpliedCurrencyAmountRangeChoice faceAmount) {
+		this.faceAmount = faceAmount;
+	}
+
+	public ImpliedCurrencyAmountRangeChoice getAmortisedValue() {
+		return amortisedValue;
+	}
+
+	public void setAmortisedValue(ImpliedCurrencyAmountRangeChoice amortisedValue) {
+		this.amortisedValue = amortisedValue;
 	}
 }

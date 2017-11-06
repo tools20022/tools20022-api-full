@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Single terminal management action to be performed by the point of
@@ -39,28 +40,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#Type
- * TMSAction3.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#Address
- * TMSAction3.Address}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmType
+ * TMSAction3.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmAddress
+ * TMSAction3.mmAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSAction3#DataSetIdentification
- * TMSAction3.DataSetIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#Trigger
- * TMSAction3.Trigger}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#AdditionalProcess
- * TMSAction3.AdditionalProcess}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#ReTry
- * TMSAction3.ReTry}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#TimeCondition
- * TMSAction3.TimeCondition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#TMChallenge
- * TMSAction3.TMChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSAction3#mmDataSetIdentification
+ * TMSAction3.mmDataSetIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmTrigger
+ * TMSAction3.mmTrigger}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmAdditionalProcess
+ * TMSAction3.mmAdditionalProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmReTry
+ * TMSAction3.mmReTry}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmTimeCondition
+ * TMSAction3.mmTimeCondition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmTMChallenge
+ * TMSAction3.mmTMChallenge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TMSAction3#KeyEnciphermentCertificate
- * TMSAction3.KeyEnciphermentCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#ErrorAction
- * TMSAction3.ErrorAction}</li>
+ * {@linkplain com.tools20022.repository.msg.TMSAction3#mmKeyEnciphermentCertificate
+ * TMSAction3.mmKeyEnciphermentCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction3#mmErrorAction
+ * TMSAction3.mmErrorAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -70,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TMSAction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TerminalManagementAction1Code type;
 	/**
 	 * Types of action to be performed by a point of interaction (POI).
 	 * <p>
@@ -109,8 +111,8 @@ public class TMSAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#Type
-	 * TerminalManagementAction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmType
+	 * TerminalManagementAction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TMSAction3
@@ -130,33 +132,34 @@ public class TMSAction3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#Type
-	 * TMSAction4.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#mmType
+	 * TMSAction4.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#Type
-	 * TMSAction2.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmType
+	 * TMSAction2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmType;
 			componentContext_lazy = () -> TMSAction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Types of action to be performed by a point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.Type;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
+	protected NetworkParameters1 address;
 	/**
 	 * Communication parameters of the terminal management system to contact.
 	 * <p>
@@ -168,8 +171,8 @@ public class TMSAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#NetworkAccess
-	 * TerminalManagementSystem.NetworkAccess}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmNetworkAccess
+	 * TerminalManagementSystem.mmNetworkAccess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TMSAction3
@@ -189,26 +192,27 @@ public class TMSAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#Address
-	 * TMSAction2.Address}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmAddress
+	 * TMSAction2.mmAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Address = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmNetworkAccess;
 			componentContext_lazy = () -> TMSAction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.NetworkAccess;
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Communication parameters of the terminal management system to contact.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.Address;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmAddress;
 			maxOccurs = 1;
-			type_lazy = () -> NetworkParameters1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 		}
 	};
+	protected DataSetIdentification3 dataSetIdentification;
 	/**
 	 * Data set on which the action has to be performed.
 	 * <p>
@@ -236,18 +240,18 @@ public class TMSAction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TMSAction4#DataSetIdentification
-	 * TMSAction4.DataSetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction4#mmDataSetIdentification
+	 * TMSAction4.mmDataSetIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#DataSetIdentification
-	 * TMSAction2.DataSetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmDataSetIdentification
+	 * TMSAction2.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TMSAction3.mmObject();
 			isDerived = false;
@@ -255,14 +259,15 @@ public class TMSAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Data set on which the action has to be performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.DataSetIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.DataSetIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmDataSetIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmDataSetIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification3.mmObject();
 		}
 	};
+	protected TerminalManagementActionTrigger1Code trigger;
 	/**
 	 * Event on which the action has to be activated by the point of interaction
 	 * (POI).
@@ -277,8 +282,8 @@ public class TMSAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#Trigger
-	 * TerminalManagementAction.Trigger}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmTrigger
+	 * TerminalManagementAction.mmTrigger}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TMSAction3
@@ -299,33 +304,34 @@ public class TMSAction3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#Trigger
-	 * TMSAction4.Trigger}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#mmTrigger
+	 * TMSAction4.mmTrigger}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#Trigger
-	 * TMSAction2.Trigger}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmTrigger
+	 * TMSAction2.mmTrigger}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Trigger = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTrigger = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmTrigger;
 			componentContext_lazy = () -> TMSAction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.Trigger;
 			isDerived = false;
 			xmlTag = "Trggr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trigger";
 			definition = "Event on which the action has to be activated by the point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.Trigger;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.Trigger);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmTrigger);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmTrigger;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionTrigger1Code.mmObject();
 		}
 	};
+	protected List<TerminalManagementAdditionalProcess1Code> additionalProcess;
 	/**
 	 * Additional process to perform before starting or after completing the
 	 * action by the point of interaction (POI).
@@ -340,8 +346,8 @@ public class TMSAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#AdditionalProcess
-	 * TerminalManagementAction.AdditionalProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmAdditionalProcess
+	 * TerminalManagementAction.mmAdditionalProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TMSAction3
@@ -363,32 +369,33 @@ public class TMSAction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TMSAction4#AdditionalProcess
-	 * TMSAction4.AdditionalProcess}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction4#mmAdditionalProcess
+	 * TMSAction4.mmAdditionalProcess}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#AdditionalProcess
-	 * TMSAction2.AdditionalProcess}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmAdditionalProcess
+	 * TMSAction2.mmAdditionalProcess}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalProcess = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmAdditionalProcess;
 			componentContext_lazy = () -> TMSAction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.AdditionalProcess;
 			isDerived = false;
 			xmlTag = "AddtlPrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProcess";
 			definition = "Additional process to perform before starting or after completing the action by the point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.AdditionalProcess;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.AdditionalProcess);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmAdditionalProcess);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmAdditionalProcess;
 			minOccurs = 0;
 			simpleType_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
 		}
 	};
+	protected ProcessRetry2 reTry;
 	/**
 	 * Definition of retry process if activation of the action fails.
 	 * <p>
@@ -416,13 +423,13 @@ public class TMSAction3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#ReTry
-	 * TMSAction4.ReTry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#mmReTry
+	 * TMSAction4.mmReTry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReTry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TMSAction3.mmObject();
 			isDerived = false;
@@ -430,13 +437,14 @@ public class TMSAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTry";
 			definition = "Definition of retry process if activation of the action fails.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.ReTry);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmReTry);
 			maxOccurs = 1;
-			type_lazy = () -> ProcessRetry2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 		}
 	};
+	protected ProcessTiming3 timeCondition;
 	/**
 	 * Date and time the action has to be performed.
 	 * <p>
@@ -463,18 +471,18 @@ public class TMSAction3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#TimeCondition
-	 * TMSAction4.TimeCondition}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#mmTimeCondition
+	 * TMSAction4.mmTimeCondition}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#TimeCondition
-	 * TMSAction2.TimeCondition}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmTimeCondition
+	 * TMSAction2.mmTimeCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TimeCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TMSAction3.mmObject();
 			isDerived = false;
@@ -482,14 +490,15 @@ public class TMSAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeCondition";
 			definition = "Date and time the action has to be performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.TimeCondition;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.TimeCondition);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmTimeCondition);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmTimeCondition;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessTiming3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
 		}
 	};
+	protected Max140Binary tMChallenge;
 	/**
 	 * Terminal manager challenge for cryptographic key injection.
 	 * <p>
@@ -519,18 +528,18 @@ public class TMSAction3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#TMChallenge
-	 * TMSAction4.TMChallenge}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#mmTMChallenge
+	 * TMSAction4.mmTMChallenge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#TMChallenge
-	 * TMSAction2.TMChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmTMChallenge
+	 * TMSAction2.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSAction3.mmObject();
 			isDerived = false;
@@ -538,13 +547,14 @@ public class TMSAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.TMChallenge;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.TMChallenge);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmTMChallenge);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmTMChallenge;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	protected List<Max10KBinary> keyEnciphermentCertificate;
 	/**
 	 * Certificate chain for the encryption of temporary transport key of the
 	 * key to inject.
@@ -577,18 +587,18 @@ public class TMSAction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TMSAction4#KeyEnciphermentCertificate
-	 * TMSAction4.KeyEnciphermentCertificate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction4#mmKeyEnciphermentCertificate
+	 * TMSAction4.mmKeyEnciphermentCertificate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#KeyEnciphermentCertificate
-	 * TMSAction2.KeyEnciphermentCertificate}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmKeyEnciphermentCertificate
+	 * TMSAction2.mmKeyEnciphermentCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyEnciphermentCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyEnciphermentCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSAction3.mmObject();
 			isDerived = false;
@@ -596,12 +606,13 @@ public class TMSAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEnciphermentCertificate";
 			definition = "Certificate chain for the encryption of temporary transport key of the key to inject.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.KeyEnciphermentCertificate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.KeyEnciphermentCertificate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmKeyEnciphermentCertificate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmKeyEnciphermentCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ErrorAction2> errorAction;
 	/**
 	 * Action to perform in case of error on the related action in progress.
 	 * <p>
@@ -634,49 +645,130 @@ public class TMSAction3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#ErrorAction
-	 * TMSAction4.ErrorAction}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction4#mmErrorAction
+	 * TMSAction4.mmErrorAction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TMSAction2#ErrorAction
-	 * TMSAction2.ErrorAction}</li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction2#mmErrorAction
+	 * TMSAction2.mmErrorAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ErrorAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmErrorAction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction3.mmObject();
 			businessComponentTrace_lazy = () -> TerminalManagementAction.mmObject();
+			componentContext_lazy = () -> TMSAction3.mmObject();
 			isDerived = false;
 			xmlTag = "ErrActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorAction";
 			definition = "Action to perform in case of error on the related action in progress.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.ErrorAction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.ErrorAction);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmErrorAction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmErrorAction;
 			minOccurs = 0;
-			type_lazy = () -> ErrorAction2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ErrorAction2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction3.Type, com.tools20022.repository.msg.TMSAction3.Address, com.tools20022.repository.msg.TMSAction3.DataSetIdentification,
-						com.tools20022.repository.msg.TMSAction3.Trigger, com.tools20022.repository.msg.TMSAction3.AdditionalProcess, com.tools20022.repository.msg.TMSAction3.ReTry, com.tools20022.repository.msg.TMSAction3.TimeCondition,
-						com.tools20022.repository.msg.TMSAction3.TMChallenge, com.tools20022.repository.msg.TMSAction3.KeyEnciphermentCertificate, com.tools20022.repository.msg.TMSAction3.ErrorAction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction3.mmType, com.tools20022.repository.msg.TMSAction3.mmAddress, com.tools20022.repository.msg.TMSAction3.mmDataSetIdentification,
+						com.tools20022.repository.msg.TMSAction3.mmTrigger, com.tools20022.repository.msg.TMSAction3.mmAdditionalProcess, com.tools20022.repository.msg.TMSAction3.mmReTry,
+						com.tools20022.repository.msg.TMSAction3.mmTimeCondition, com.tools20022.repository.msg.TMSAction3.mmTMChallenge, com.tools20022.repository.msg.TMSAction3.mmKeyEnciphermentCertificate,
+						com.tools20022.repository.msg.TMSAction3.mmErrorAction);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TMSAction3";
 				definition = "Single terminal management action to be performed by the point of interaction.";
-				previousVersion_lazy = () -> TMSAction2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TMSAction4.mmObject());
+				previousVersion_lazy = () -> TMSAction2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TerminalManagementAction1Code getType() {
+		return type;
+	}
+
+	public void setType(TerminalManagementAction1Code type) {
+		this.type = type;
+	}
+
+	public NetworkParameters1 getAddress() {
+		return address;
+	}
+
+	public void setAddress(com.tools20022.repository.msg.NetworkParameters1 address) {
+		this.address = address;
+	}
+
+	public DataSetIdentification3 getDataSetIdentification() {
+		return dataSetIdentification;
+	}
+
+	public void setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification3 dataSetIdentification) {
+		this.dataSetIdentification = dataSetIdentification;
+	}
+
+	public TerminalManagementActionTrigger1Code getTrigger() {
+		return trigger;
+	}
+
+	public void setTrigger(TerminalManagementActionTrigger1Code trigger) {
+		this.trigger = trigger;
+	}
+
+	public List<TerminalManagementAdditionalProcess1Code> getAdditionalProcess() {
+		return additionalProcess;
+	}
+
+	public void setAdditionalProcess(List<TerminalManagementAdditionalProcess1Code> additionalProcess) {
+		this.additionalProcess = additionalProcess;
+	}
+
+	public ProcessRetry2 getReTry() {
+		return reTry;
+	}
+
+	public void setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
+		this.reTry = reTry;
+	}
+
+	public ProcessTiming3 getTimeCondition() {
+		return timeCondition;
+	}
+
+	public void setTimeCondition(com.tools20022.repository.msg.ProcessTiming3 timeCondition) {
+		this.timeCondition = timeCondition;
+	}
+
+	public Max140Binary getTMChallenge() {
+		return tMChallenge;
+	}
+
+	public void setTMChallenge(Max140Binary tMChallenge) {
+		this.tMChallenge = tMChallenge;
+	}
+
+	public List<Max10KBinary> getKeyEnciphermentCertificate() {
+		return keyEnciphermentCertificate;
+	}
+
+	public void setKeyEnciphermentCertificate(List<Max10KBinary> keyEnciphermentCertificate) {
+		this.keyEnciphermentCertificate = keyEnciphermentCertificate;
+	}
+
+	public List<ErrorAction2> getErrorAction() {
+		return errorAction;
+	}
+
+	public void setErrorAction(List<com.tools20022.repository.msg.ErrorAction2> errorAction) {
+		this.errorAction = errorAction;
 	}
 }

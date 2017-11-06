@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalRight1Code#WrittenQuestionProposal
- * AdditionalRight1Code.WrittenQuestionProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalRight1Code#mmWrittenQuestionProposal
+ * AdditionalRight1Code.mmWrittenQuestionProposal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalRight1Code#ResolutionProposal
- * AdditionalRight1Code.ResolutionProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalRight1Code#mmResolutionProposal
+ * AdditionalRight1Code.mmResolutionProposal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalRight1Code#AgendaItemProposal
- * AdditionalRight1Code.AgendaItemProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalRight1Code#mmAgendaItemProposal
+ * AdditionalRight1Code.mmAgendaItemProposal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	 * name} = "WrittenQuestionProposal"</li>
 	 * </ul>
 	 */
-	public static final MMCode WrittenQuestionProposal = new MMCode() {
+	public static final MMCode mmWrittenQuestionProposal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrittenQuestionProposal";
@@ -111,7 +111,7 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	 * name} = "ResolutionProposal"</li>
 	 * </ul>
 	 */
-	public static final MMCode ResolutionProposal = new MMCode() {
+	public static final MMCode mmResolutionProposal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolutionProposal";
@@ -134,7 +134,7 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	 * name} = "AgendaItemProposal"</li>
 	 * </ul>
 	 */
-	public static final MMCode AgendaItemProposal = new MMCode() {
+	public static final MMCode mmAgendaItemProposal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgendaItemProposal";
@@ -145,13 +145,13 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WQPS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRight1Code";
 				definition = "Define specific rights that the shareholder has (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalRight1Code.WrittenQuestionProposal, com.tools20022.repository.codeset.AdditionalRight1Code.ResolutionProposal,
-						com.tools20022.repository.codeset.AdditionalRight1Code.AgendaItemProposal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalRight1Code.mmWrittenQuestionProposal, com.tools20022.repository.codeset.AdditionalRight1Code.mmResolutionProposal,
+						com.tools20022.repository.codeset.AdditionalRight1Code.mmAgendaItemProposal);
 				trace_lazy = () -> AdditionalRightCode.mmObject();
 			}
 		});

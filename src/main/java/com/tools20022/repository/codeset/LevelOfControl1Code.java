@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LevelOfControl1Code#Transactions
- * LevelOfControl1Code.Transactions}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LevelOfControl1Code#View
- * LevelOfControl1Code.View}</li>
+ * {@linkplain com.tools20022.repository.codeset.LevelOfControl1Code#mmTransactions
+ * LevelOfControl1Code.mmTransactions}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LevelOfControl1Code#mmView
+ * LevelOfControl1Code.mmView}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +74,7 @@ public class LevelOfControl1Code extends LevelOfControlCode {
 	 * name} = "Transactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode Transactions = new MMCode() {
+	public static final MMCode mmTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
@@ -97,7 +97,7 @@ public class LevelOfControl1Code extends LevelOfControlCode {
 	 * name} = "View"</li>
 	 * </ul>
 	 */
-	public static final MMCode View = new MMCode() {
+	public static final MMCode mmView = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
@@ -108,11 +108,11 @@ public class LevelOfControl1Code extends LevelOfControlCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LevelOfControl1Code";
 				definition = "Specifies the level of control.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LevelOfControl1Code.Transactions, com.tools20022.repository.codeset.LevelOfControl1Code.View);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LevelOfControl1Code.mmTransactions, com.tools20022.repository.codeset.LevelOfControl1Code.mmView);
 				trace_lazy = () -> LevelOfControlCode.mmObject();
 			}
 		});

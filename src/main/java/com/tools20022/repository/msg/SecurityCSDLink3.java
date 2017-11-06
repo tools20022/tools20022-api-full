@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCSDLink3#FinancialInstrumentIdentification
- * SecurityCSDLink3.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLink3#mmFinancialInstrumentIdentification
+ * SecurityCSDLink3.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCSDLink3#IssuerInvestorCSD
- * SecurityCSDLink3.IssuerInvestorCSD}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLink3#ValidFrom
- * SecurityCSDLink3.ValidFrom}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLink3#mmIssuerInvestorCSD
+ * SecurityCSDLink3.mmIssuerInvestorCSD}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLink3#mmValidFrom
+ * SecurityCSDLink3.mmValidFrom}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityCSDLink3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Identification of a security.
 	 * <p>
@@ -89,7 +90,7 @@ public class SecurityCSDLink3 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink3.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class SecurityCSDLink3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected IssuerOrInvestor1choice issuerInvestorCSD;
 	/**
 	 * CSD Issuer of a security.
 	 * <p>
@@ -130,7 +132,7 @@ public class SecurityCSDLink3 {
 	 * definition} = "CSD Issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerInvestorCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerInvestorCSD = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink3.mmObject();
 			isDerived = false;
@@ -138,11 +140,12 @@ public class SecurityCSDLink3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInvestorCSD";
 			definition = "CSD Issuer of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IssuerOrInvestor1choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice validFrom;
 	/**
 	 * Defines the date since when the CSD is linked to the security.
 	 * <p>
@@ -172,7 +175,7 @@ public class SecurityCSDLink3 {
 	 * "Defines the date since when the CSD is linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink3.mmObject();
 			isDerived = false;
@@ -180,8 +183,8 @@ public class SecurityCSDLink3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the CSD is linked to the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -189,14 +192,38 @@ public class SecurityCSDLink3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLink3.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityCSDLink3.IssuerInvestorCSD,
-						com.tools20022.repository.msg.SecurityCSDLink3.ValidFrom);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLink3.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityCSDLink3.mmIssuerInvestorCSD,
+						com.tools20022.repository.msg.SecurityCSDLink3.mmValidFrom);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCSDLink3";
 				definition = "Defines how the CSD is linked to the security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public IssuerOrInvestor1choice getIssuerInvestorCSD() {
+		return issuerInvestorCSD;
+	}
+
+	public void setIssuerInvestorCSD(IssuerOrInvestor1choice issuerInvestorCSD) {
+		this.issuerInvestorCSD = issuerInvestorCSD;
+	}
+
+	public DateAndDateTimeChoice getValidFrom() {
+		return validFrom;
+	}
+
+	public void setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = validFrom;
 	}
 }

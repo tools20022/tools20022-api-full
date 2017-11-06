@@ -31,12 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMInquiryRequest2#Environment
- * ATMInquiryRequest2.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMInquiryRequest2#Context
- * ATMInquiryRequest2.Context}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMInquiryRequest2#Transaction
- * ATMInquiryRequest2.Transaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMInquiryRequest2#mmEnvironment
+ * ATMInquiryRequest2.mmEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMInquiryRequest2#mmContext
+ * ATMInquiryRequest2.mmContext}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMInquiryRequest2#mmTransaction
+ * ATMInquiryRequest2.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV02#ATMInquiryRequest
- * ATMInquiryRequestV02.ATMInquiryRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV02#mmATMInquiryRequest
+ * ATMInquiryRequestV02.mmATMInquiryRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMInquiryRequest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment14 environment;
 	/**
 	 * Environment in which the inquiry is performed.
 	 * <p>
@@ -93,7 +96,7 @@ public class ATMInquiryRequest2 {
 	 * definition} = "Environment in which the inquiry is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMInquiryRequest2.mmObject();
 			isDerived = false;
@@ -101,12 +104,13 @@ public class ATMInquiryRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment in which the inquiry is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment14.mmObject();
 		}
 	};
+	protected ATMContext14 context;
 	/**
 	 * Context in which the inquiry is performed.
 	 * <p>
@@ -133,7 +137,7 @@ public class ATMInquiryRequest2 {
 	 * definition} = "Context in which the inquiry is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMInquiryRequest2.mmObject();
 			isDerived = false;
@@ -141,12 +145,13 @@ public class ATMInquiryRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the inquiry is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext14.mmObject();
 		}
 	};
+	protected ATMTransaction29 transaction;
 	/**
 	 * Inquiry information for the transaction.
 	 * <p>
@@ -173,7 +178,7 @@ public class ATMInquiryRequest2 {
 	 * definition} = "Inquiry information for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMInquiryRequest2.mmObject();
 			isDerived = false;
@@ -181,24 +186,49 @@ public class ATMInquiryRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Inquiry information for the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction29.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMInquiryRequest2.Environment, com.tools20022.repository.msg.ATMInquiryRequest2.Context, com.tools20022.repository.msg.ATMInquiryRequest2.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMInquiryRequestV02.ATMInquiryRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMInquiryRequest2.mmEnvironment, com.tools20022.repository.msg.ATMInquiryRequest2.mmContext,
+						com.tools20022.repository.msg.ATMInquiryRequest2.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMInquiryRequestV02.mmATMInquiryRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMInquiryRequest2";
 				definition = "Information related to the request of an inquiry from an ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment14 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment14 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext14 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext14 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction29 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction29 transaction) {
+		this.transaction = transaction;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DiscountAmountType1Choice#Code
- * DiscountAmountType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.DiscountAmountType1Choice#mmCode
+ * DiscountAmountType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DiscountAmountType1Choice#Proprietary
- * DiscountAmountType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.DiscountAmountType1Choice#mmProprietary
+ * DiscountAmountType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DiscountAmountType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalDiscountAmountType1Code code;
 	/**
 	 * Specifies the amount type, in a coded form.
 	 * <p>
@@ -75,8 +76,8 @@ public class DiscountAmountType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountType
-	 * Discount.DiscountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountType
+	 * Discount.mmDiscountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class DiscountAmountType1Choice {
 	 * definition} = "Specifies the amount type, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountType;
 			componentContext_lazy = () -> DiscountAmountType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the amount type, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDiscountAmountType1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Specifies the amount type, in a free-text form.
 	 * <p>
@@ -136,7 +138,7 @@ public class DiscountAmountType1Choice {
 	 * definition} = "Specifies the amount type, in a free-text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DiscountAmountType1Choice.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class DiscountAmountType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the amount type, in a free-text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -153,14 +155,30 @@ public class DiscountAmountType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountAmountType1Choice.Code, com.tools20022.repository.choice.DiscountAmountType1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountAmountType1Choice.mmCode, com.tools20022.repository.choice.DiscountAmountType1Choice.mmProprietary);
 				trace_lazy = () -> Discount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DiscountAmountType1Choice";
 				definition = "Specifies the amount type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalDiscountAmountType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalDiscountAmountType1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

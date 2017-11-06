@@ -37,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount60#AccountIdentification
- * InvestmentAccount60.AccountIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount60#Type
- * InvestmentAccount60.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount60#mmAccountIdentification
+ * InvestmentAccount60.mmAccountIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount60#mmType
+ * InvestmentAccount60.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccount60 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -83,8 +84,8 @@ public class InvestmentAccount60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,25 +107,26 @@ public class InvestmentAccount60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount20#AccountIdentification
-	 * InvestmentAccount20.AccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount20#mmAccountIdentification
+	 * InvestmentAccount20.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccount60.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount20.AccountIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount20.mmAccountIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected InvestmentAccountType1Choice type;
 	/**
 	 * Account type.
 	 * <p>
@@ -138,8 +140,8 @@ public class InvestmentAccount60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#InvestmentAccountType
-	 * InvestmentAccount.InvestmentAccountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountType
+	 * InvestmentAccount.mmInvestmentAccountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,22 +161,22 @@ public class InvestmentAccount60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount20#Type
-	 * InvestmentAccount20.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount20#mmType
+	 * InvestmentAccount20.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountType;
 			componentContext_lazy = () -> InvestmentAccount60.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.InvestmentAccountType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Account type.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount20.Type;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount20.mmType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountType1Choice.mmObject();
 		}
 	};
@@ -182,9 +184,9 @@ public class InvestmentAccount60 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount60.AccountIdentification, com.tools20022.repository.msg.InvestmentAccount60.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount60.mmAccountIdentification, com.tools20022.repository.msg.InvestmentAccount60.mmType);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccount60";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
@@ -192,5 +194,21 @@ public class InvestmentAccount60 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public InvestmentAccountType1Choice getType() {
+		return type;
+	}
+
+	public void setType(InvestmentAccountType1Choice type) {
+		this.type = type;
 	}
 }

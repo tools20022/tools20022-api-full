@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Contains additional information related to the message.
@@ -34,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation5#Information
- * AdditionalInformation5.Information}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation5#mmInformation
+ * AdditionalInformation5.mmInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,24 +47,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#AdditionalMessageInformation
- * AccountExcludedMandateMaintenanceRequestV01.AdditionalMessageInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#mmAdditionalMessageInformation
+ * AccountExcludedMandateMaintenanceRequestV01.mmAdditionalMessageInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#AdditionalMessageInformation
- * AccountExcludedMandateMaintenanceRequestV02.AdditionalMessageInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#mmAdditionalMessageInformation
+ * AccountExcludedMandateMaintenanceRequestV02.mmAdditionalMessageInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#AdditionalMessageInformation
- * AccountMandateMaintenanceRequestV01.AdditionalMessageInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#mmAdditionalMessageInformation
+ * AccountMandateMaintenanceRequestV01.mmAdditionalMessageInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#AdditionalMessageInformation
- * AccountMandateMaintenanceRequestV02.AdditionalMessageInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#mmAdditionalMessageInformation
+ * AccountMandateMaintenanceRequestV02.mmAdditionalMessageInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max256Text> information;
 	/**
 	 * Contains additional information related to the message.
 	 * <p>
@@ -104,7 +106,7 @@ public class AdditionalInformation5 {
 	 * definition} = "Contains additional information related to the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Information = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalInformation5.mmObject();
 			isDerived = false;
@@ -120,17 +122,25 @@ public class AdditionalInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation5.Information);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation5.mmInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmAdditionalMessageInformation,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmAdditionalMessageInformation, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmAdditionalMessageInformation,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmAdditionalMessageInformation);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.AdditionalMessageInformation,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.AdditionalMessageInformation, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.AdditionalMessageInformation,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.AdditionalMessageInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalInformation5";
 				definition = "Contains additional information related to the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max256Text> getInformation() {
+		return information;
+	}
+
+	public void setInformation(List<Max256Text> information) {
+		this.information = information;
 	}
 }

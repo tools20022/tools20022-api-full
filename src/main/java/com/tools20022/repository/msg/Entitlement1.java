@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the entitlement.
@@ -38,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Entitlement1#AccountOwnerIdentification
- * Entitlement1.AccountOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Entitlement1#mmAccountOwnerIdentification
+ * Entitlement1.mmAccountOwnerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Entitlement1#AccountIdentification
- * Entitlement1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Entitlement1#mmAccountIdentification
+ * Entitlement1.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Entitlement1#SecuritiesDistributionDetails
- * Entitlement1.SecuritiesDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Entitlement1#mmSecuritiesDistributionDetails
+ * Entitlement1.mmSecuritiesDistributionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Entitlement1#CashDistributionDetails
- * Entitlement1.CashDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Entitlement1#mmCashDistributionDetails
+ * Entitlement1.mmCashDistributionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Entitlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
 	 * Identification of the party that owns the account.
 	 * <p>
@@ -86,8 +88,8 @@ public class Entitlement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +107,21 @@ public class Entitlement1 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Entitlement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Max35Text accountIdentification;
 	/**
 	 * Idenfitication of the account.
 	 * <p>
@@ -131,8 +134,8 @@ public class Entitlement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Number
-	 * AccountIdentification.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmNumber
+	 * AccountIdentification.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +153,21 @@ public class Entitlement1 {
 	 * definition} = "Idenfitication of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmNumber;
 			componentContext_lazy = () -> Entitlement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Number;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Idenfitication of the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesEntitlement1> securitiesDistributionDetails;
 	/**
 	 * Provides information about the securities distribution.
 	 * <p>
@@ -194,20 +198,21 @@ public class Entitlement1 {
 	 * definition} = "Provides information about the securities distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesDistributionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesDistributionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Entitlement1.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmObject();
+			componentContext_lazy = () -> Entitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesDstrbtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesDistributionDetails";
 			definition = "Provides information about the securities distribution.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesEntitlement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesEntitlement1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashEntitlement1> cashDistributionDetails;
 	/**
 	 * Provides information about the cash distribution.
 	 * <p>
@@ -238,33 +243,65 @@ public class Entitlement1 {
 	 * definition} = "Provides information about the cash distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashDistributionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashDistributionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Entitlement1.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionCashEntitlement.mmObject();
+			componentContext_lazy = () -> Entitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "CshDstrbtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistributionDetails";
 			definition = "Provides information about the cash distribution.";
 			minOccurs = 0;
-			type_lazy = () -> CashEntitlement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashEntitlement1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Entitlement1.AccountOwnerIdentification, com.tools20022.repository.msg.Entitlement1.AccountIdentification,
-						com.tools20022.repository.msg.Entitlement1.SecuritiesDistributionDetails, com.tools20022.repository.msg.Entitlement1.CashDistributionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Entitlement1.mmAccountOwnerIdentification, com.tools20022.repository.msg.Entitlement1.mmAccountIdentification,
+						com.tools20022.repository.msg.Entitlement1.mmSecuritiesDistributionDetails, com.tools20022.repository.msg.Entitlement1.mmCashDistributionDetails);
 				trace_lazy = () -> CorporateActionEntitlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Entitlement1";
 				definition = "Provides information about the entitlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getAccountOwnerIdentification() {
+		return accountOwnerIdentification;
+	}
+
+	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+		this.accountOwnerIdentification = accountOwnerIdentification;
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<SecuritiesEntitlement1> getSecuritiesDistributionDetails() {
+		return securitiesDistributionDetails;
+	}
+
+	public void setSecuritiesDistributionDetails(List<com.tools20022.repository.msg.SecuritiesEntitlement1> securitiesDistributionDetails) {
+		this.securitiesDistributionDetails = securitiesDistributionDetails;
+	}
+
+	public List<CashEntitlement1> getCashDistributionDetails() {
+		return cashDistributionDetails;
+	}
+
+	public void setCashDistributionDetails(List<com.tools20022.repository.msg.CashEntitlement1> cashDistributionDetails) {
+		this.cashDistributionDetails = cashDistributionDetails;
 	}
 }

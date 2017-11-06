@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.PaymentInstruction5;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -54,18 +55,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01#GroupHeader
- * CreditorPaymentActivationRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01#mmGroupHeader
+ * CreditorPaymentActivationRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01#PaymentInformation
- * CreditorPaymentActivationRequestV01.PaymentInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01#mmPaymentInformation
+ * CreditorPaymentActivationRequestV01.mmPaymentInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01#identifier
- * CreditorPaymentActivationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.013.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditorPaymentActivationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader45 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -114,17 +114,18 @@ public class CreditorPaymentActivationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader45.mmObject();
 		}
 	};
+	protected List<PaymentInstruction5> paymentInformation;
 	/**
 	 * Set of characteristics that applies to the debit side of the payment
 	 * transactions included in the creditor payment initiation.
@@ -151,7 +152,7 @@ public class CreditorPaymentActivationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,33 +160,6 @@ public class CreditorPaymentActivationRequestV01 {
 			definition = "Set of characteristics that applies to the debit side of the payment transactions included in the creditor payment initiation.";
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstruction5.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "013";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -200,11 +174,34 @@ public class CreditorPaymentActivationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "CdtrPmtActvtnReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays
-						.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01.GroupHeader, com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01.PaymentInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01.mmGroupHeader,
+						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV01.mmPaymentInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "013";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader45 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader45 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<PaymentInstruction5> getPaymentInformation() {
+		return paymentInformation;
+	}
+
+	public void setPaymentInformation(List<PaymentInstruction5> paymentInformation) {
+		this.paymentInformation = paymentInformation;
 	}
 }

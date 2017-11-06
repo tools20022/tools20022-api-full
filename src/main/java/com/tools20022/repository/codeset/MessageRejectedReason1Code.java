@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#InvalidOrUnrecognisedReference
- * MessageRejectedReason1Code.InvalidOrUnrecognisedReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#mmInvalidOrUnrecognisedReference
+ * MessageRejectedReason1Code.mmInvalidOrUnrecognisedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#NotAllowedRequest
- * MessageRejectedReason1Code.NotAllowedRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#mmNotAllowedRequest
+ * MessageRejectedReason1Code.mmNotAllowedRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	 * name} = "InvalidOrUnrecognisedReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOrUnrecognisedReference = new MMCode() {
+	public static final MMCode mmInvalidOrUnrecognisedReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrUnrecognisedReference";
@@ -104,7 +104,7 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	 * name} = "NotAllowedRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAllowedRequest = new MMCode() {
+	public static final MMCode mmNotAllowedRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowedRequest";
@@ -115,12 +115,12 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageRejectedReason1Code";
 				definition = "Specifies the reason for a message rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageRejectedReason1Code.InvalidOrUnrecognisedReference, com.tools20022.repository.codeset.MessageRejectedReason1Code.NotAllowedRequest);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageRejectedReason1Code.mmInvalidOrUnrecognisedReference, com.tools20022.repository.codeset.MessageRejectedReason1Code.mmNotAllowedRequest);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

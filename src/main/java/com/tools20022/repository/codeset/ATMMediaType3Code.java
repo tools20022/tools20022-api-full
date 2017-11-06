@@ -34,27 +34,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Counterfeit
- * ATMMediaType3Code.Counterfeit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Fit
- * ATMMediaType3Code.Fit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmCounterfeit
+ * ATMMediaType3Code.mmCounterfeit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmFit
+ * ATMMediaType3Code.mmFit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#FitAndUnfit
- * ATMMediaType3Code.FitAndUnfit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Suspect
- * ATMMediaType3Code.Suspect}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Unfit
- * ATMMediaType3Code.Unfit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmFitAndUnfit
+ * ATMMediaType3Code.mmFitAndUnfit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Unrecognised
- * ATMMediaType3Code.Unrecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmSuspect
+ * ATMMediaType3Code.mmSuspect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmUnfit
+ * ATMMediaType3Code.mmUnfit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmUnrecognised
+ * ATMMediaType3Code.mmUnrecognised}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +85,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Counterfeit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Counterfeit = new MMCode() {
+	public static final MMCode mmCounterfeit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
@@ -107,7 +108,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Fit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fit = new MMCode() {
+	public static final MMCode mmFit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fit";
@@ -130,7 +131,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "FitAndUnfit"</li>
 	 * </ul>
 	 */
-	public static final MMCode FitAndUnfit = new MMCode() {
+	public static final MMCode mmFitAndUnfit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FitAndUnfit";
@@ -153,7 +154,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Suspect"</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspect = new MMCode() {
+	public static final MMCode mmSuspect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspect";
@@ -176,7 +177,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Unfit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unfit = new MMCode() {
+	public static final MMCode mmUnfit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
@@ -199,7 +200,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Unrecognised"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unrecognised = new MMCode() {
+	public static final MMCode mmUnrecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrecognised";
@@ -210,12 +211,13 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaType3Code";
 				definition = "Category of media items.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType3Code.Counterfeit, com.tools20022.repository.codeset.ATMMediaType3Code.Fit, com.tools20022.repository.codeset.ATMMediaType3Code.FitAndUnfit,
-						com.tools20022.repository.codeset.ATMMediaType3Code.Suspect, com.tools20022.repository.codeset.ATMMediaType3Code.Unfit, com.tools20022.repository.codeset.ATMMediaType3Code.Unrecognised);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType3Code.mmCounterfeit, com.tools20022.repository.codeset.ATMMediaType3Code.mmFit,
+						com.tools20022.repository.codeset.ATMMediaType3Code.mmFitAndUnfit, com.tools20022.repository.codeset.ATMMediaType3Code.mmSuspect, com.tools20022.repository.codeset.ATMMediaType3Code.mmUnfit,
+						com.tools20022.repository.codeset.ATMMediaType3Code.mmUnrecognised);
 				trace_lazy = () -> ATMMediaTypeCode.mmObject();
 			}
 		});

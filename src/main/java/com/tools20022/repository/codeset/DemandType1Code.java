@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.DemandTypeCode DemandTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandType1Code#PayOnly
- * DemandType1Code.PayOnly}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandType1Code#mmPayOnly
+ * DemandType1Code.mmPayOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DemandType1Code#PayOrExtend
- * DemandType1Code.PayOrExtend}</li>
+ * {@linkplain com.tools20022.repository.codeset.DemandType1Code#mmPayOrExtend
+ * DemandType1Code.mmPayOrExtend}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class DemandType1Code extends DemandTypeCode {
 	 * name} = "PayOnly"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayOnly = new MMCode() {
+	public static final MMCode mmPayOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayOnly";
@@ -102,7 +102,7 @@ public class DemandType1Code extends DemandTypeCode {
 	 * name} = "PayOrExtend"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayOrExtend = new MMCode() {
+	public static final MMCode mmPayOrExtend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayOrExtend";
@@ -113,12 +113,12 @@ public class DemandType1Code extends DemandTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PAYM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DemandType1Code";
 				definition = "Specifies the type of demand for payment";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandType1Code.PayOnly, com.tools20022.repository.codeset.DemandType1Code.PayOrExtend);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandType1Code.mmPayOnly, com.tools20022.repository.codeset.DemandType1Code.mmPayOrExtend);
 				trace_lazy = () -> DemandTypeCode.mmObject();
 			}
 		});

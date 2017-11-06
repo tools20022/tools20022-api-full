@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#Code
- * OptionFeaturesFormat9Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#mmCode
+ * OptionFeaturesFormat9Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#Proprietary
- * OptionFeaturesFormat9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#mmProprietary
+ * OptionFeaturesFormat9Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OptionFeaturesFormat9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OptionFeatures4Code code;
 	/**
 	 * Standard code to specify the features that may apply to a corporate
 	 * action option.
@@ -96,8 +97,8 @@ public class OptionFeaturesFormat9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionFeatures
-	 * CorporateActionOption.OptionFeatures}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionFeatures
+	 * CorporateActionOption.mmOptionFeatures}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,30 +121,31 @@ public class OptionFeaturesFormat9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#Code
-	 * OptionFeaturesFormat12Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#mmCode
+	 * OptionFeaturesFormat12Choice.mmCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#Code
-	 * OptionFeaturesFormat17Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#mmCode
+	 * OptionFeaturesFormat17Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> OptionFeaturesFormat9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionFeatures;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the features that may apply to a corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat12Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OptionFeatures4Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the features that may apply to a corporate
 	 * action option.
@@ -157,8 +159,8 @@ public class OptionFeaturesFormat9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionFeatures
-	 * CorporateActionOption.OptionFeatures}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionFeatures
+	 * CorporateActionOption.mmOptionFeatures}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,45 +183,61 @@ public class OptionFeaturesFormat9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#Proprietary
-	 * OptionFeaturesFormat12Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#mmProprietary
+	 * OptionFeaturesFormat12Choice.mmProprietary}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#Proprietary
-	 * OptionFeaturesFormat17Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#mmProprietary
+	 * OptionFeaturesFormat17Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> OptionFeaturesFormat9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionFeatures;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the features that may apply to a corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat12Choice.Proprietary, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat9Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat9Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionFeaturesFormat9Choice";
 				definition = "Choice between a standard code or a proprietary code to specify the features that may apply to a corporate action option.";
-				previousVersion_lazy = () -> OptionFeaturesFormat5Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(OptionFeaturesFormat12Choice.mmObject(), OptionFeaturesFormat17Choice.mmObject());
+				previousVersion_lazy = () -> OptionFeaturesFormat5Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OptionFeatures4Code getCode() {
+		return code;
+	}
+
+	public void setCode(OptionFeatures4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

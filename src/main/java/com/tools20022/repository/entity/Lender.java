@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties3#Lender
- * ConfirmationParties3.Lender}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#Lender
- * ConfirmationParties4.Lender}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties2#Lender
- * ConfirmationParties2.Lender}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SyndicatedLoan1#Lender
- * SyndicatedLoan1.Lender}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties3#mmLender
+ * ConfirmationParties3.mmLender}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmLender
+ * ConfirmationParties4.mmLender}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmLender
+ * ConfirmationParties2.mmLender}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SyndicatedLoan1#mmLender
+ * SyndicatedLoan1.mmLender}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,12 +73,12 @@ public class Lender extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Lender";
 				definition = "Party that has accepted under specific requirements to provide a monetary or securities loan to a borrower.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.Lender, com.tools20022.repository.msg.ConfirmationParties4.Lender, com.tools20022.repository.msg.ConfirmationParties2.Lender,
-						com.tools20022.repository.msg.SyndicatedLoan1.Lender);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.mmLender, com.tools20022.repository.msg.ConfirmationParties4.mmLender,
+						com.tools20022.repository.msg.ConfirmationParties2.mmLender, com.tools20022.repository.msg.SyndicatedLoan1.mmLender);
 				superType_lazy = () -> TradePartyRole.mmObject();
 			}
 		});

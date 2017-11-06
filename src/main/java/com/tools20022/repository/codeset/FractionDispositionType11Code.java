@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#BuyUp
- * FractionDispositionType11Code.BuyUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#mmBuyUp
+ * FractionDispositionType11Code.mmBuyUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#CashInLieuOfFraction
- * FractionDispositionType11Code.CashInLieuOfFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#mmCashInLieuOfFraction
+ * FractionDispositionType11Code.mmCashInLieuOfFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#IssueFraction
- * FractionDispositionType11Code.IssueFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#mmIssueFraction
+ * FractionDispositionType11Code.mmIssueFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#RoundDown
- * FractionDispositionType11Code.RoundDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#mmRoundDown
+ * FractionDispositionType11Code.mmRoundDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#RoundToNearest
- * FractionDispositionType11Code.RoundToNearest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#mmRoundToNearest
+ * FractionDispositionType11Code.mmRoundToNearest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#RoundUp
- * FractionDispositionType11Code.RoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType11Code#mmRoundUp
+ * FractionDispositionType11Code.mmRoundUp}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class FractionDispositionType11Code extends FractionDispositionTypeV2Code
 	 * name} = "BuyUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyUp = new MMCode() {
+	public static final MMCode mmBuyUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
@@ -117,7 +117,7 @@ public class FractionDispositionType11Code extends FractionDispositionTypeV2Code
 	 * name} = "CashInLieuOfFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashInLieuOfFraction = new MMCode() {
+	public static final MMCode mmCashInLieuOfFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFraction";
@@ -140,7 +140,7 @@ public class FractionDispositionType11Code extends FractionDispositionTypeV2Code
 	 * name} = "IssueFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssueFraction = new MMCode() {
+	public static final MMCode mmIssueFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
@@ -163,7 +163,7 @@ public class FractionDispositionType11Code extends FractionDispositionTypeV2Code
 	 * name} = "RoundDown"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDown = new MMCode() {
+	public static final MMCode mmRoundDown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
@@ -186,7 +186,7 @@ public class FractionDispositionType11Code extends FractionDispositionTypeV2Code
 	 * name} = "RoundToNearest"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundToNearest = new MMCode() {
+	public static final MMCode mmRoundToNearest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundToNearest";
@@ -209,7 +209,7 @@ public class FractionDispositionType11Code extends FractionDispositionTypeV2Code
 	 * name} = "RoundUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUp = new MMCode() {
+	public static final MMCode mmRoundUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
@@ -220,14 +220,14 @@ public class FractionDispositionType11Code extends FractionDispositionTypeV2Code
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType11Code";
 				definition = "Indicates that fractional value should be retained; no rounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType11Code.BuyUp, com.tools20022.repository.codeset.FractionDispositionType11Code.CashInLieuOfFraction,
-						com.tools20022.repository.codeset.FractionDispositionType11Code.IssueFraction, com.tools20022.repository.codeset.FractionDispositionType11Code.RoundDown,
-						com.tools20022.repository.codeset.FractionDispositionType11Code.RoundToNearest, com.tools20022.repository.codeset.FractionDispositionType11Code.RoundUp);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType11Code.mmBuyUp, com.tools20022.repository.codeset.FractionDispositionType11Code.mmCashInLieuOfFraction,
+						com.tools20022.repository.codeset.FractionDispositionType11Code.mmIssueFraction, com.tools20022.repository.codeset.FractionDispositionType11Code.mmRoundDown,
+						com.tools20022.repository.codeset.FractionDispositionType11Code.mmRoundToNearest, com.tools20022.repository.codeset.FractionDispositionType11Code.mmRoundUp);
 				trace_lazy = () -> FractionDispositionTypeV2Code.mmObject();
 			}
 		});

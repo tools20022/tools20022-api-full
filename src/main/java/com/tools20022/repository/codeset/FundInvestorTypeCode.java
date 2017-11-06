@@ -30,15 +30,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundInvestorTypeCode#Retail
- * FundInvestorTypeCode.Retail}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundInvestorTypeCode#mmRetail
+ * FundInvestorTypeCode.mmRetail}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class FundInvestorTypeCode {
 	 * definition} = "Investor is a retail investor."</li>
 	 * </ul>
 	 */
-	public static final MMCode Retail = new MMCode() {
+	public static final MMCode mmRetail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Retail";
@@ -91,12 +91,12 @@ public class FundInvestorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RETA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "FundInvestorTypeCode";
 				definition = "Specifies the type of investor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundInvestorTypeCode.Retail);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundInvestorTypeCode.mmRetail);
 			}
 		});
 		return mmObject_lazy.get();

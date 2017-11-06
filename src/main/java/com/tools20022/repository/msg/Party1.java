@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Party1#OrganisationIdentification
- * Party1.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Party1#mmOrganisationIdentification
+ * Party1.mmOrganisationIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Party1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrganisationIdentification26 organisationIdentification;
 	/**
 	 * Unique and unambiguous way to identify an organisation.
 	 * <p>
@@ -89,33 +91,41 @@ public class Party1 {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> Party1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrganisationIdentification26.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification26.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Party1.OrganisationIdentification);
-				trace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Party1.mmOrganisationIdentification);
+				trace_lazy = () -> OrganisationIdentification.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Party1";
 				definition = "Identification of the party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrganisationIdentification26 getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(com.tools20022.repository.msg.OrganisationIdentification26 organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
 	}
 }

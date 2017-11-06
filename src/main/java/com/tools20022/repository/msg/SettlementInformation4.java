@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.SettlementUnitType2Choice;
 import com.tools20022.repository.datatype.ISOYearMonth;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Settlement of the securities in a securities transaction, that is, the
@@ -37,27 +38,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation4#SecuritiesQuantityType
- * SettlementInformation4.SecuritiesQuantityType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation4#mmSecuritiesQuantityType
+ * SettlementInformation4.mmSecuritiesQuantityType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation4#ContractSettlementMonth
- * SettlementInformation4.ContractSettlementMonth}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation4#mmContractSettlementMonth
+ * SettlementInformation4.mmContractSettlementMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation4#MinimumDenomination
- * SettlementInformation4.MinimumDenomination}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation4#mmMinimumDenomination
+ * SettlementInformation4.mmMinimumDenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation4#MinimumMultipleQuantity
- * SettlementInformation4.MinimumMultipleQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation4#mmMinimumMultipleQuantity
+ * SettlementInformation4.mmMinimumMultipleQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation4#DeviatingSettlementUnit
- * SettlementInformation4.DeviatingSettlementUnit}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation4#mmDeviatingSettlementUnit
+ * SettlementInformation4.mmDeviatingSettlementUnit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementUnitType2Choice securitiesQuantityType;
 	/**
 	 * Choice between formats for the quantity of security.
 	 * <p>
@@ -101,7 +103,7 @@ public class SettlementInformation4 {
 	 * definition} = "Choice between formats for the quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesQuantityType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
@@ -109,11 +111,12 @@ public class SettlementInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantityType";
 			definition = "Choice between formats for the quantity of security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementUnitType2Choice.mmObject();
 		}
 	};
+	protected ISOYearMonth contractSettlementMonth;
 	/**
 	 * Specifies when the contract (i.e. MBS/TBA) will settle.
 	 * <p>
@@ -142,7 +145,7 @@ public class SettlementInformation4 {
 	 * definition} = "Specifies when the contract (i.e. MBS/TBA) will settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractSettlementMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractSettlementMonth = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
@@ -150,11 +153,12 @@ public class SettlementInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSettlementMonth";
 			definition = "Specifies when the contract (i.e. MBS/TBA) will settle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice minimumDenomination;
 	/**
 	 * Indicates the minimum quantity (unit or nominal) of a security.
 	 * <p>
@@ -184,7 +188,7 @@ public class SettlementInformation4 {
 	 * "Indicates the minimum quantity (unit or nominal) of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumDenomination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumDenomination = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
@@ -192,11 +196,12 @@ public class SettlementInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumDenomination";
 			definition = "Indicates the minimum quantity (unit or nominal) of a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice minimumMultipleQuantity;
 	/**
 	 * Minimum multiple quantity (unit or nominal) of securities.
 	 * <p>
@@ -226,7 +231,7 @@ public class SettlementInformation4 {
 	 * "Minimum multiple quantity (unit or nominal) of securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumMultipleQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumMultipleQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
@@ -234,11 +239,12 @@ public class SettlementInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMultipleQuantity";
 			definition = "Minimum multiple quantity (unit or nominal) of securities.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected List<FinancialInstrumentQuantity1Choice> deviatingSettlementUnit;
 	/**
 	 * Minimum quantity of securities that can be purchased without incurring a
 	 * larger fee. For example, if the round lot size is 100 and the trade is
@@ -272,7 +278,7 @@ public class SettlementInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeviatingSettlementUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeviatingSettlementUnit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
@@ -288,15 +294,55 @@ public class SettlementInformation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInformation4.SecuritiesQuantityType, com.tools20022.repository.msg.SettlementInformation4.ContractSettlementMonth,
-						com.tools20022.repository.msg.SettlementInformation4.MinimumDenomination, com.tools20022.repository.msg.SettlementInformation4.MinimumMultipleQuantity,
-						com.tools20022.repository.msg.SettlementInformation4.DeviatingSettlementUnit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInformation4.mmSecuritiesQuantityType, com.tools20022.repository.msg.SettlementInformation4.mmContractSettlementMonth,
+						com.tools20022.repository.msg.SettlementInformation4.mmMinimumDenomination, com.tools20022.repository.msg.SettlementInformation4.mmMinimumMultipleQuantity,
+						com.tools20022.repository.msg.SettlementInformation4.mmDeviatingSettlementUnit);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInformation4";
 				definition = "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementUnitType2Choice getSecuritiesQuantityType() {
+		return securitiesQuantityType;
+	}
+
+	public void setSecuritiesQuantityType(SettlementUnitType2Choice securitiesQuantityType) {
+		this.securitiesQuantityType = securitiesQuantityType;
+	}
+
+	public ISOYearMonth getContractSettlementMonth() {
+		return contractSettlementMonth;
+	}
+
+	public void setContractSettlementMonth(ISOYearMonth contractSettlementMonth) {
+		this.contractSettlementMonth = contractSettlementMonth;
+	}
+
+	public FinancialInstrumentQuantity1Choice getMinimumDenomination() {
+		return minimumDenomination;
+	}
+
+	public void setMinimumDenomination(FinancialInstrumentQuantity1Choice minimumDenomination) {
+		this.minimumDenomination = minimumDenomination;
+	}
+
+	public FinancialInstrumentQuantity1Choice getMinimumMultipleQuantity() {
+		return minimumMultipleQuantity;
+	}
+
+	public void setMinimumMultipleQuantity(FinancialInstrumentQuantity1Choice minimumMultipleQuantity) {
+		this.minimumMultipleQuantity = minimumMultipleQuantity;
+	}
+
+	public List<FinancialInstrumentQuantity1Choice> getDeviatingSettlementUnit() {
+		return deviatingSettlementUnit;
+	}
+
+	public void setDeviatingSettlementUnit(List<FinancialInstrumentQuantity1Choice> deviatingSettlementUnit) {
+		this.deviatingSettlementUnit = deviatingSettlementUnit;
 	}
 }

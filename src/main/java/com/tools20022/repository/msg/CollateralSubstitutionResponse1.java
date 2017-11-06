@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse1#CollateralSubstitutionRequestIdentification
- * CollateralSubstitutionResponse1.CollateralSubstitutionRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse1#mmCollateralSubstitutionRequestIdentification
+ * CollateralSubstitutionResponse1.mmCollateralSubstitutionRequestIdentification
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse1#AcceptedAmount
- * CollateralSubstitutionResponse1.AcceptedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse1#mmAcceptedAmount
+ * CollateralSubstitutionResponse1.mmAcceptedAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralSubstitutionResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text collateralSubstitutionRequestIdentification;
 	/**
 	 * Reference to the collateral substitution request identification.
 	 * <p>
@@ -91,7 +93,7 @@ public class CollateralSubstitutionResponse1 {
 	 * "Reference to the collateral substitution request identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralSubstitutionResponse1.mmObject();
 			isDerived = false;
@@ -99,11 +101,12 @@ public class CollateralSubstitutionResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Reference to the collateral substitution request identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount acceptedAmount;
 	/**
 	 * Provides the accepted collateral substitution amount.
 	 * <p>
@@ -117,8 +120,8 @@ public class CollateralSubstitutionResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#AcceptedAmount
-	 * CollateralSubstitution.AcceptedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmAcceptedAmount
+	 * CollateralSubstitution.mmAcceptedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,17 +140,17 @@ public class CollateralSubstitutionResponse1 {
 	 * definition} = "Provides the accepted collateral substitution amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcceptedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcceptedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.mmAcceptedAmount;
 			componentContext_lazy = () -> CollateralSubstitutionResponse1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.AcceptedAmount;
 			isDerived = false;
 			xmlTag = "AccptdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAmount";
 			definition = "Provides the accepted collateral substitution amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -155,15 +158,31 @@ public class CollateralSubstitutionResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitutionResponse1.CollateralSubstitutionRequestIdentification,
-						com.tools20022.repository.msg.CollateralSubstitutionResponse1.AcceptedAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmCollateralSubstitutionRequestIdentification,
+						com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmAcceptedAmount);
 				trace_lazy = () -> CollateralSubstitution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionResponse1";
 				definition = "Provides details about the accepted collateral substitution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCollateralSubstitutionRequestIdentification() {
+		return collateralSubstitutionRequestIdentification;
+	}
+
+	public void setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
+		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
+	}
+
+	public ActiveCurrencyAndAmount getAcceptedAmount() {
+		return acceptedAmount;
+	}
+
+	public void setAcceptedAmount(ActiveCurrencyAndAmount acceptedAmount) {
+		this.acceptedAmount = acceptedAmount;
 	}
 }

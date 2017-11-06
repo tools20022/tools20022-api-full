@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cancellation response from the acquirer.
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction10#AuthorisationResult
- * CardPaymentTransaction10.AuthorisationResult}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction10#mmAuthorisationResult
+ * CardPaymentTransaction10.mmAuthorisationResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction10#Action
- * CardPaymentTransaction10.Action}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction10#mmAction
+ * CardPaymentTransaction10.mmAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentTransaction10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuthorisationResult1 authorisationResult;
 	/**
 	 * Outcome of the authorisation, and actions to perform.
 	 * <p>
@@ -79,8 +81,8 @@ public class CardPaymentTransaction10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#Validation
-	 * CardPaymentAcquiring.Validation}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmValidation
+	 * CardPaymentAcquiring.mmValidation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,28 +103,29 @@ public class CardPaymentTransaction10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction27#AuthorisationResult
-	 * CardPaymentTransaction27.AuthorisationResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction27#mmAuthorisationResult
+	 * CardPaymentTransaction27.mmAuthorisationResult}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthorisationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> CardPaymentTransaction10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.Validation;
 			isDerived = false;
 			xmlTag = "AuthstnRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResult";
 			definition = "Outcome of the authorisation, and actions to perform.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction27.AuthorisationResult);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction27.mmAuthorisationResult);
 			maxOccurs = 1;
-			type_lazy = () -> AuthorisationResult1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Action1> action;
 	/**
 	 * Set of actions to be performed by the POI (Point Of Interaction) system.
 	 * <p>
@@ -133,8 +136,8 @@ public class CardPaymentTransaction10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#CardPaymentAcquiring
-	 * CardPayment.CardPaymentAcquiring}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
+	 * CardPayment.mmCardPaymentAcquiring}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,34 +160,34 @@ public class CardPaymentTransaction10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction27#Action
-	 * CardPaymentTransaction27.Action}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction27#mmAction
+	 * CardPaymentTransaction27.mmAction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Action = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> CardPaymentTransaction10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.CardPaymentAcquiring;
 			isDerived = false;
 			xmlTag = "Actn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Set of actions to be performed by the POI (Point Of Interaction) system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction27.Action);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction27.mmAction);
 			minOccurs = 0;
-			type_lazy = () -> Action1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Action1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction10.AuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction10.Action);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction10.mmAuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction10.mmAction);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction10";
 				definition = "Cancellation response from the acquirer.";
@@ -192,5 +195,21 @@ public class CardPaymentTransaction10 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuthorisationResult1 getAuthorisationResult() {
+		return authorisationResult;
+	}
+
+	public void setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult1 authorisationResult) {
+		this.authorisationResult = authorisationResult;
+	}
+
+	public List<Action1> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.msg.Action1> action) {
+		this.action = action;
 	}
 }

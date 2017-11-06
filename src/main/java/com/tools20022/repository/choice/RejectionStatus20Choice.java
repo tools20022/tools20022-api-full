@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionStatus20Choice#NoSpecifiedReason
- * RejectionStatus20Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionStatus20Choice#mmNoSpecifiedReason
+ * RejectionStatus20Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionStatus20Choice#Reason
- * RejectionStatus20Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionStatus20Choice#mmReason
+ * RejectionStatus20Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectionStatus20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -81,8 +82,8 @@ public class RejectionStatus20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,25 +104,26 @@ public class RejectionStatus20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RejectionStatus7Choice#NoSpecifiedReason
-	 * RejectionStatus7Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionStatus7Choice#mmNoSpecifiedReason
+	 * RejectionStatus7Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> RejectionStatus20Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionStatus7Choice.NoSpecifiedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionStatus7Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected RejectionReason29 reason;
 	/**
 	 * Specifies the reason of the rejection or repair status.
 	 * <p>
@@ -133,8 +135,8 @@ public class RejectionStatus20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,33 +156,33 @@ public class RejectionStatus20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RejectionStatus7Choice#Reason
-	 * RejectionStatus7Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionStatus7Choice#mmReason
+	 * RejectionStatus7Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> RejectionStatus20Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the rejection or repair status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionStatus7Choice.Reason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectionStatus7Choice.mmReason;
 			maxOccurs = 1;
-			type_lazy = () -> RejectionReason29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RejectionReason29.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus20Choice.NoSpecifiedReason, com.tools20022.repository.choice.RejectionStatus20Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus20Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.RejectionStatus20Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionStatus20Choice";
 				definition = "Choice of  rejection status.";
@@ -188,5 +190,21 @@ public class RejectionStatus20Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public RejectionReason29 getReason() {
+		return reason;
+	}
+
+	public void setReason(RejectionReason29 reason) {
+		this.reason = reason;
 	}
 }

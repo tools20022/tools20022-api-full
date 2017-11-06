@@ -33,22 +33,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.QuoteTypeCode QuoteTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteType1Code#Indicative
- * QuoteType1Code.Indicative}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteType1Code#Tradeable
- * QuoteType1Code.Tradeable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteType1Code#RestrictedTradeable
- * QuoteType1Code.RestrictedTradeable}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteType1Code#Counter
- * QuoteType1Code.Counter}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteType1Code#mmIndicative
+ * QuoteType1Code.mmIndicative}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteType1Code#mmTradeable
+ * QuoteType1Code.mmTradeable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteType1Code#mmRestrictedTradeable
+ * QuoteType1Code.mmRestrictedTradeable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteType1Code#mmCounter
+ * QuoteType1Code.mmCounter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +87,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 * name} = "Indicative"</li>
 	 * </ul>
 	 */
-	public static final MMCode Indicative = new MMCode() {
+	public static final MMCode mmIndicative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
@@ -109,7 +110,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 * name} = "Tradeable"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tradeable = new MMCode() {
+	public static final MMCode mmTradeable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tradeable";
@@ -132,7 +133,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 * name} = "RestrictedTradeable"</li>
 	 * </ul>
 	 */
-	public static final MMCode RestrictedTradeable = new MMCode() {
+	public static final MMCode mmRestrictedTradeable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedTradeable";
@@ -155,7 +156,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 * name} = "Counter"</li>
 	 * </ul>
 	 */
-	public static final MMCode Counter = new MMCode() {
+	public static final MMCode mmCounter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
@@ -166,13 +167,13 @@ public class QuoteType1Code extends QuoteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INDI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuoteType1Code";
 				definition = "Identifies the type of quote. Can be either an indicative, a tradeable or a restricted tradeable quote.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteType1Code.Indicative, com.tools20022.repository.codeset.QuoteType1Code.Tradeable, com.tools20022.repository.codeset.QuoteType1Code.RestrictedTradeable,
-						com.tools20022.repository.codeset.QuoteType1Code.Counter);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteType1Code.mmIndicative, com.tools20022.repository.codeset.QuoteType1Code.mmTradeable,
+						com.tools20022.repository.codeset.QuoteType1Code.mmRestrictedTradeable, com.tools20022.repository.codeset.QuoteType1Code.mmCounter);
 				trace_lazy = () -> QuoteTypeCode.mmObject();
 			}
 		});

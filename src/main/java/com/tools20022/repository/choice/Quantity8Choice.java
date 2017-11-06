@@ -37,11 +37,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity8Choice#QuantityChoice
- * Quantity8Choice.QuantityChoice}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity8Choice#mmQuantityChoice
+ * Quantity8Choice.mmQuantityChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity8Choice#ProprietaryQuantity
- * Quantity8Choice.ProprietaryQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity8Choice#mmProprietaryQuantity
+ * Quantity8Choice.mmProprietaryQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -66,6 +66,7 @@ import java.util.function.Supplier;
 public class Quantity8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity9Choice quantityChoice;
 	/**
 	 * Choice between different quantity of security formats.
 	 * <p>
@@ -92,7 +93,7 @@ public class Quantity8Choice {
 	 * definition} = "Choice between different quantity of security formats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity8Choice.mmObject();
 			isDerived = false;
@@ -100,12 +101,13 @@ public class Quantity8Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityChoice";
 			definition = "Choice between different quantity of security formats.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.Quantity9Choice.mmObject();
 		}
 	};
+	protected ProprietaryQuantity5 proprietaryQuantity;
 	/**
 	 * Proprietary quantity of security format.
 	 * <p>
@@ -132,7 +134,7 @@ public class Quantity8Choice {
 	 * definition} = "Proprietary quantity of security format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity8Choice.mmObject();
 			isDerived = false;
@@ -140,19 +142,19 @@ public class Quantity8Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryQuantity";
 			definition = "Proprietary quantity of security format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryQuantity5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryQuantity5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity8Choice.QuantityChoice, com.tools20022.repository.choice.Quantity8Choice.ProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity8Choice.mmQuantityChoice, com.tools20022.repository.choice.Quantity8Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -166,5 +168,21 @@ public class Quantity8Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity9Choice getQuantityChoice() {
+		return quantityChoice;
+	}
+
+	public void setQuantityChoice(com.tools20022.repository.choice.Quantity9Choice quantityChoice) {
+		this.quantityChoice = quantityChoice;
+	}
+
+	public ProprietaryQuantity5 getProprietaryQuantity() {
+		return proprietaryQuantity;
+	}
+
+	public void setProprietaryQuantity(ProprietaryQuantity5 proprietaryQuantity) {
+		this.proprietaryQuantity = proprietaryQuantity;
 	}
 }

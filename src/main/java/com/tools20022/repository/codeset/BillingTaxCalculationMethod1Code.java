@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#NoTaxes
- * BillingTaxCalculationMethod1Code.NoTaxes}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#mmNoTaxes
+ * BillingTaxCalculationMethod1Code.mmNoTaxes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#MethodA
- * BillingTaxCalculationMethod1Code.MethodA}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#mmMethodA
+ * BillingTaxCalculationMethod1Code.mmMethodA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#MethodB
- * BillingTaxCalculationMethod1Code.MethodB}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#mmMethodB
+ * BillingTaxCalculationMethod1Code.mmMethodB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#MethodC
- * BillingTaxCalculationMethod1Code.MethodC}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#mmMethodC
+ * BillingTaxCalculationMethod1Code.mmMethodC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#MethodD
- * BillingTaxCalculationMethod1Code.MethodD}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#mmMethodD
+ * BillingTaxCalculationMethod1Code.mmMethodD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#Undefined
- * BillingTaxCalculationMethod1Code.Undefined}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code#mmUndefined
+ * BillingTaxCalculationMethod1Code.mmUndefined}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class BillingTaxCalculationMethod1Code extends BillingTaxCalculationMetho
 	 * name} = "NoTaxes"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoTaxes = new MMCode() {
+	public static final MMCode mmNoTaxes = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTaxes";
@@ -116,7 +116,7 @@ public class BillingTaxCalculationMethod1Code extends BillingTaxCalculationMetho
 	 * name} = "MethodA"</li>
 	 * </ul>
 	 */
-	public static final MMCode MethodA = new MMCode() {
+	public static final MMCode mmMethodA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodA";
@@ -139,7 +139,7 @@ public class BillingTaxCalculationMethod1Code extends BillingTaxCalculationMetho
 	 * name} = "MethodB"</li>
 	 * </ul>
 	 */
-	public static final MMCode MethodB = new MMCode() {
+	public static final MMCode mmMethodB = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodB";
@@ -162,7 +162,7 @@ public class BillingTaxCalculationMethod1Code extends BillingTaxCalculationMetho
 	 * name} = "MethodC"</li>
 	 * </ul>
 	 */
-	public static final MMCode MethodC = new MMCode() {
+	public static final MMCode mmMethodC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodC";
@@ -185,7 +185,7 @@ public class BillingTaxCalculationMethod1Code extends BillingTaxCalculationMetho
 	 * name} = "MethodD"</li>
 	 * </ul>
 	 */
-	public static final MMCode MethodD = new MMCode() {
+	public static final MMCode mmMethodD = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodD";
@@ -208,7 +208,7 @@ public class BillingTaxCalculationMethod1Code extends BillingTaxCalculationMetho
 	 * name} = "Undefined"</li>
 	 * </ul>
 	 */
-	public static final MMCode Undefined = new MMCode() {
+	public static final MMCode mmUndefined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undefined";
@@ -219,14 +219,14 @@ public class BillingTaxCalculationMethod1Code extends BillingTaxCalculationMetho
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NTAX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingTaxCalculationMethod1Code";
 				definition = "Defines the tax calculation method";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.NoTaxes, com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.MethodA,
-						com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.MethodB, com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.MethodC,
-						com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.MethodD, com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.Undefined);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.mmNoTaxes, com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.mmMethodA,
+						com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.mmMethodB, com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.mmMethodC,
+						com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.mmMethodD, com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code.mmUndefined);
 				trace_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
 			}
 		});

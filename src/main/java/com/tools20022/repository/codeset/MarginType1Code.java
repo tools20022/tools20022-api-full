@@ -34,45 +34,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#SettlementRiskMargin
- * MarginType1Code.SettlementRiskMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmSettlementRiskMargin
+ * MarginType1Code.mmSettlementRiskMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#AdditionalDefaultFundMargin
- * MarginType1Code.AdditionalDefaultFundMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmAdditionalDefaultFundMargin
+ * MarginType1Code.mmAdditionalDefaultFundMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#ShortChargeMargin
- * MarginType1Code.ShortChargeMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmShortChargeMargin
+ * MarginType1Code.mmShortChargeMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#CouponMargin
- * MarginType1Code.CouponMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmCouponMargin
+ * MarginType1Code.mmCouponMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#UpfrontMargin
- * MarginType1Code.UpfrontMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmUpfrontMargin
+ * MarginType1Code.mmUpfrontMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#CreditEventMargin
- * MarginType1Code.CreditEventMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmCreditEventMargin
+ * MarginType1Code.mmCreditEventMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#InitialDeposit
- * MarginType1Code.InitialDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmInitialDeposit
+ * MarginType1Code.mmInitialDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#NegociationMargin
- * MarginType1Code.NegociationMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmNegociationMargin
+ * MarginType1Code.mmNegociationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#InitialMargin
- * MarginType1Code.InitialMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmInitialMargin
+ * MarginType1Code.mmInitialMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#VariationMargin
- * MarginType1Code.VariationMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmVariationMargin
+ * MarginType1Code.mmVariationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#IncreaseCoverageAmount
- * MarginType1Code.IncreaseCoverageAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmIncreaseCoverageAmount
+ * MarginType1Code.mmIncreaseCoverageAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -110,7 +110,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "SettlementRiskMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementRiskMargin = new MMCode() {
+	public static final MMCode mmSettlementRiskMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRiskMargin";
@@ -133,7 +133,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "AdditionalDefaultFundMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdditionalDefaultFundMargin = new MMCode() {
+	public static final MMCode mmAdditionalDefaultFundMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDefaultFundMargin";
@@ -156,7 +156,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "ShortChargeMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShortChargeMargin = new MMCode() {
+	public static final MMCode mmShortChargeMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortChargeMargin";
@@ -179,7 +179,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "CouponMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode CouponMargin = new MMCode() {
+	public static final MMCode mmCouponMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponMargin";
@@ -202,7 +202,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "UpfrontMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode UpfrontMargin = new MMCode() {
+	public static final MMCode mmUpfrontMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpfrontMargin";
@@ -225,7 +225,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "CreditEventMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditEventMargin = new MMCode() {
+	public static final MMCode mmCreditEventMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEventMargin";
@@ -248,7 +248,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "InitialDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode InitialDeposit = new MMCode() {
+	public static final MMCode mmInitialDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialDeposit";
@@ -271,7 +271,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "NegociationMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode NegociationMargin = new MMCode() {
+	public static final MMCode mmNegociationMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegociationMargin";
@@ -294,7 +294,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "InitialMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode InitialMargin = new MMCode() {
+	public static final MMCode mmInitialMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMargin";
@@ -317,7 +317,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "VariationMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode VariationMargin = new MMCode() {
+	public static final MMCode mmVariationMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
@@ -340,7 +340,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "IncreaseCoverageAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncreaseCoverageAmount = new MMCode() {
+	public static final MMCode mmIncreaseCoverageAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
@@ -351,15 +351,15 @@ public class MarginType1Code extends MarginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEMA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginType1Code";
 				definition = "Indicates the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginType1Code.SettlementRiskMargin, com.tools20022.repository.codeset.MarginType1Code.AdditionalDefaultFundMargin,
-						com.tools20022.repository.codeset.MarginType1Code.ShortChargeMargin, com.tools20022.repository.codeset.MarginType1Code.CouponMargin, com.tools20022.repository.codeset.MarginType1Code.UpfrontMargin,
-						com.tools20022.repository.codeset.MarginType1Code.CreditEventMargin, com.tools20022.repository.codeset.MarginType1Code.InitialDeposit, com.tools20022.repository.codeset.MarginType1Code.NegociationMargin,
-						com.tools20022.repository.codeset.MarginType1Code.InitialMargin, com.tools20022.repository.codeset.MarginType1Code.VariationMargin, com.tools20022.repository.codeset.MarginType1Code.IncreaseCoverageAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginType1Code.mmSettlementRiskMargin, com.tools20022.repository.codeset.MarginType1Code.mmAdditionalDefaultFundMargin,
+						com.tools20022.repository.codeset.MarginType1Code.mmShortChargeMargin, com.tools20022.repository.codeset.MarginType1Code.mmCouponMargin, com.tools20022.repository.codeset.MarginType1Code.mmUpfrontMargin,
+						com.tools20022.repository.codeset.MarginType1Code.mmCreditEventMargin, com.tools20022.repository.codeset.MarginType1Code.mmInitialDeposit, com.tools20022.repository.codeset.MarginType1Code.mmNegociationMargin,
+						com.tools20022.repository.codeset.MarginType1Code.mmInitialMargin, com.tools20022.repository.codeset.MarginType1Code.mmVariationMargin, com.tools20022.repository.codeset.MarginType1Code.mmIncreaseCoverageAmount);
 				trace_lazy = () -> MarginTypeCode.mmObject();
 			}
 		});

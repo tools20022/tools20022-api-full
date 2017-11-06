@@ -35,48 +35,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#ParticipantNameAndAddress
- * DirectoryParticipantInformation1.ParticipantNameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmParticipantNameAndAddress
+ * DirectoryParticipantInformation1.mmParticipantNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#AccountServicer
- * DirectoryParticipantInformation1.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmAccountServicer
+ * DirectoryParticipantInformation1.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#DirectParticipant
- * DirectoryParticipantInformation1.DirectParticipant}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmDirectParticipant
+ * DirectoryParticipantInformation1.mmDirectParticipant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#EntryCreationDate
- * DirectoryParticipantInformation1.EntryCreationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmEntryCreationDate
+ * DirectoryParticipantInformation1.mmEntryCreationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#EntryDeletionDate
- * DirectoryParticipantInformation1.EntryDeletionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmEntryDeletionDate
+ * DirectoryParticipantInformation1.mmEntryDeletionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#ServicerType
- * DirectoryParticipantInformation1.ServicerType}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmServicerType
+ * DirectoryParticipantInformation1.mmServicerType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#ServiceType
- * DirectoryParticipantInformation1.ServiceType}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmServiceType
+ * DirectoryParticipantInformation1.mmServiceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#ExchangeType
- * DirectoryParticipantInformation1.ExchangeType}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmExchangeType
+ * DirectoryParticipantInformation1.mmExchangeType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#RestrictionType
- * DirectoryParticipantInformation1.RestrictionType}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmRestrictionType
+ * DirectoryParticipantInformation1.mmRestrictionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#RestrictionEffectiveDate
- * DirectoryParticipantInformation1.RestrictionEffectiveDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmRestrictionEffectiveDate
+ * DirectoryParticipantInformation1.mmRestrictionEffectiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#ParticipantIdentification
- * DirectoryParticipantInformation1.ParticipantIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmParticipantIdentification
+ * DirectoryParticipantInformation1.mmParticipantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#MigrationDetails
- * DirectoryParticipantInformation1.MigrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryParticipantInformation1#mmMigrationDetails
+ * DirectoryParticipantInformation1.mmMigrationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DirectoryParticipantInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EnglishNameLocalNameAndAddress1 participantNameAndAddress;
 	/**
 	 * Name and address as in participant profile.
 	 * <p>
@@ -117,7 +118,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Name and address as in participant profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantNameAndAddress = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -125,12 +126,13 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantNameAndAddress";
 			definition = "Name and address as in participant profile.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
 	 * Branch and Head branch of the CBR servicing the account.
 	 * <p>
@@ -158,7 +160,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Branch and Head branch of the CBR servicing the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -166,12 +168,13 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Branch and Head branch of the CBR servicing the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification9 directParticipant;
 	/**
 	 * Direct participant of the CBR payment system.
 	 * <p>
@@ -199,7 +202,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Direct participant of the CBR payment system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DirectParticipant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDirectParticipant = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -207,12 +210,13 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectParticipant";
 			definition = "Direct participant of the CBR payment system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	protected ISODateTime entryCreationDate;
 	/**
 	 * Date when the entry was created.
 	 * <p>
@@ -240,7 +244,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Date when the entry was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryCreationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryCreationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -248,11 +252,12 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryCreationDate";
 			definition = "Date when the entry was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime entryDeletionDate;
 	/**
 	 * Date entry was deleted.
 	 * <p>
@@ -280,7 +285,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Date entry was deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryDeletionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryDeletionDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -288,11 +293,12 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDeletionDate";
 			definition = "Date entry was deleted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text servicerType;
 	/**
 	 * Specifies the type of the funds transfer participant.
 	 * <p>
@@ -320,7 +326,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Specifies the type of the funds transfer participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServicerType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServicerType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -328,11 +334,12 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServicerType";
 			definition = "Specifies the type of the funds transfer participant.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text serviceType;
 	/**
 	 * Specifies available types of the funds transfer services.
 	 * <p>
@@ -361,7 +368,7 @@ public class DirectoryParticipantInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -369,11 +376,12 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Specifies available types of the funds transfer services.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text exchangeType;
 	/**
 	 * Specifies whether the participant is a member of the exchange.
 	 * <p>
@@ -402,7 +410,7 @@ public class DirectoryParticipantInformation1 {
 	 * "Specifies whether the participant is a member of the exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -410,11 +418,12 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeType";
 			definition = "Specifies whether the participant is a member of the exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text restrictionType;
 	/**
 	 * Type of the restriction applied.
 	 * <p>
@@ -442,7 +451,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Type of the restriction applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -450,11 +459,12 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime restrictionEffectiveDate;
 	/**
 	 * Effective date of the restriction.
 	 * <p>
@@ -482,7 +492,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Effective date of the restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionEffectiveDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -490,11 +500,12 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionEffectiveDate";
 			definition = "Effective date of the restriction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification9 participantIdentification;
 	/**
 	 * Identifier of participant.
 	 * <p>
@@ -522,7 +533,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Identifier of participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -530,12 +541,13 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Identifier of participant.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	protected SystemMigration1 migrationDetails;
 	/**
 	 * Details related to migration to new payment system.
 	 * <p>
@@ -562,7 +574,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Details related to migration to new payment system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MigrationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMigrationDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -570,28 +582,124 @@ public class DirectoryParticipantInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MigrationDetails";
 			definition = "Details related to migration to new payment system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemMigration1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryParticipantInformation1.ParticipantNameAndAddress, com.tools20022.repository.msg.DirectoryParticipantInformation1.AccountServicer,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.DirectParticipant, com.tools20022.repository.msg.DirectoryParticipantInformation1.EntryCreationDate,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.EntryDeletionDate, com.tools20022.repository.msg.DirectoryParticipantInformation1.ServicerType,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.ServiceType, com.tools20022.repository.msg.DirectoryParticipantInformation1.ExchangeType,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.RestrictionType, com.tools20022.repository.msg.DirectoryParticipantInformation1.RestrictionEffectiveDate,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.ParticipantIdentification, com.tools20022.repository.msg.DirectoryParticipantInformation1.MigrationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryParticipantInformation1.mmParticipantNameAndAddress, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmAccountServicer,
+						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmDirectParticipant, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmEntryCreationDate,
+						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmEntryDeletionDate, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmServicerType,
+						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmServiceType, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmExchangeType,
+						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmRestrictionType, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmRestrictionEffectiveDate,
+						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmParticipantIdentification, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmMigrationDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryParticipantInformation1";
 				definition = "Information from the National BIC Directory.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EnglishNameLocalNameAndAddress1 getParticipantNameAndAddress() {
+		return participantNameAndAddress;
+	}
+
+	public void setParticipantNameAndAddress(com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1 participantNameAndAddress) {
+		this.participantNameAndAddress = participantNameAndAddress;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public FinancialInstitutionIdentification9 getDirectParticipant() {
+		return directParticipant;
+	}
+
+	public void setDirectParticipant(com.tools20022.repository.msg.FinancialInstitutionIdentification9 directParticipant) {
+		this.directParticipant = directParticipant;
+	}
+
+	public ISODateTime getEntryCreationDate() {
+		return entryCreationDate;
+	}
+
+	public void setEntryCreationDate(ISODateTime entryCreationDate) {
+		this.entryCreationDate = entryCreationDate;
+	}
+
+	public ISODateTime getEntryDeletionDate() {
+		return entryDeletionDate;
+	}
+
+	public void setEntryDeletionDate(ISODateTime entryDeletionDate) {
+		this.entryDeletionDate = entryDeletionDate;
+	}
+
+	public Max35Text getServicerType() {
+		return servicerType;
+	}
+
+	public void setServicerType(Max35Text servicerType) {
+		this.servicerType = servicerType;
+	}
+
+	public Max35Text getServiceType() {
+		return serviceType;
+	}
+
+	public void setServiceType(Max35Text serviceType) {
+		this.serviceType = serviceType;
+	}
+
+	public Max35Text getExchangeType() {
+		return exchangeType;
+	}
+
+	public void setExchangeType(Max35Text exchangeType) {
+		this.exchangeType = exchangeType;
+	}
+
+	public Max35Text getRestrictionType() {
+		return restrictionType;
+	}
+
+	public void setRestrictionType(Max35Text restrictionType) {
+		this.restrictionType = restrictionType;
+	}
+
+	public ISODateTime getRestrictionEffectiveDate() {
+		return restrictionEffectiveDate;
+	}
+
+	public void setRestrictionEffectiveDate(ISODateTime restrictionEffectiveDate) {
+		this.restrictionEffectiveDate = restrictionEffectiveDate;
+	}
+
+	public FinancialInstitutionIdentification9 getParticipantIdentification() {
+		return participantIdentification;
+	}
+
+	public void setParticipantIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification9 participantIdentification) {
+		this.participantIdentification = participantIdentification;
+	}
+
+	public SystemMigration1 getMigrationDetails() {
+		return migrationDetails;
+	}
+
+	public void setMigrationDetails(com.tools20022.repository.msg.SystemMigration1 migrationDetails) {
+		this.migrationDetails = migrationDetails;
 	}
 }

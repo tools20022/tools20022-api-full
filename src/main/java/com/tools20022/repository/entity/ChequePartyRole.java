@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of a payment by cheque.
@@ -35,16 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePartyRole#Cheque
- * ChequePartyRole.Cheque}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Cheque#ChequePartyRole
- * Cheque.ChequePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePartyRole#mmCheque
+ * ChequePartyRole.mmCheque}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -55,13 +48,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.Drawer Drawer}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Cheque#mmChequePartyRole
+ * Cheque.mmChequePartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChequePartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Cheque> cheque;
 	/**
 	 * Identifies the cheque for which a party plays a role.
 	 * <p>
@@ -84,8 +86,8 @@ public class ChequePartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#ChequePartyRole
-	 * Cheque.ChequePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmChequePartyRole
+	 * Cheque.mmChequePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -108,7 +110,7 @@ public class ChequePartyRole extends Role {
 	 * definition} = "Identifies the cheque for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Cheque = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ChequePartyRole.mmObject();
 			isDerived = false;
@@ -116,25 +118,33 @@ public class ChequePartyRole extends Role {
 			name = "Cheque";
 			definition = "Identifies the cheque for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.ChequePartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.mmChequePartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChequePartyRole";
 				definition = "Role played by a party in the context of a payment by cheque.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cheque.ChequePartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cheque.mmChequePartyRole);
 				subType_lazy = () -> Arrays.asList(Payee.mmObject(), Drawee.mmObject(), Drawer.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequePartyRole.Cheque);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequePartyRole.mmCheque);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Cheque> getCheque() {
+		return cheque;
+	}
+
+	public void setCheque(List<com.tools20022.repository.entity.Cheque> cheque) {
+		this.cheque = cheque;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.msg.RejectionReason6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies whether the status is provided with a reason or not.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionStatus6Choice#NoSpecifiedReason
- * RejectionStatus6Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionStatus6Choice#mmNoSpecifiedReason
+ * RejectionStatus6Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionStatus6Choice#Reason
- * RejectionStatus6Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectionStatus6Choice#mmReason
+ * RejectionStatus6Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectionStatus6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -89,8 +91,8 @@ public class RejectionStatus6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,27 +114,28 @@ public class RejectionStatus6Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RejectionStatus14Choice#NoSpecifiedReason
-	 * RejectionStatus14Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionStatus14Choice#mmNoSpecifiedReason
+	 * RejectionStatus14Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> RejectionStatus6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus14Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus14Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<RejectionReason6> reason;
 	/**
 	 * Specifies the reason of the RejectionStatus.
 	 * <p>
@@ -144,8 +147,8 @@ public class RejectionStatus6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,41 +169,57 @@ public class RejectionStatus6Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RejectionStatus14Choice#Reason
-	 * RejectionStatus14Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionStatus14Choice#mmReason
+	 * RejectionStatus14Choice.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> RejectionStatus6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the RejectionStatus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus14Choice.Reason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus14Choice.mmReason);
 			minOccurs = 1;
-			type_lazy = () -> RejectionReason6.mmObject();
 			isComposite = true;
+			type_lazy = () -> RejectionReason6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus6Choice.NoSpecifiedReason, com.tools20022.repository.choice.RejectionStatus6Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionStatus6Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.RejectionStatus6Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionStatus6Choice";
 				definition = "Specifies whether the status is provided with a reason or not.";
-				previousVersion_lazy = () -> RejectionStatus3Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RejectionStatus14Choice.mmObject());
+				previousVersion_lazy = () -> RejectionStatus3Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<RejectionReason6> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<RejectionReason6> reason) {
+		this.reason = reason;
 	}
 }

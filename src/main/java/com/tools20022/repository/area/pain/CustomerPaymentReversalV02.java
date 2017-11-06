@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.OriginalPaymentInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,21 +66,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV02#GroupHeader
- * CustomerPaymentReversalV02.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV02#mmGroupHeader
+ * CustomerPaymentReversalV02.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV02#OriginalGroupInformation
- * CustomerPaymentReversalV02.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV02#mmOriginalGroupInformation
+ * CustomerPaymentReversalV02.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV02#OriginalPaymentInformationAndReversal
- * CustomerPaymentReversalV02.OriginalPaymentInformationAndReversal}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV02#mmOriginalPaymentInformationAndReversal
+ * CustomerPaymentReversalV02.mmOriginalPaymentInformationAndReversal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV02#identifier
- * CustomerPaymentReversalV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.007.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomerPaymentReversalV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader40 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -132,17 +132,18 @@ public class CustomerPaymentReversalV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader40.mmObject();
 		}
 	};
+	protected OriginalGroupInformation22 originalGroupInformation;
 	/**
 	 * Information concerning the original group of transactions, to which the
 	 * message refers.
@@ -169,17 +170,18 @@ public class CustomerPaymentReversalV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation22.mmObject();
 		}
 	};
+	protected List<OriginalPaymentInformation2> originalPaymentInformationAndReversal;
 	/**
 	 * Information concerning the original payment information, to which the
 	 * reversal message refers.
@@ -206,7 +208,7 @@ public class CustomerPaymentReversalV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalPaymentInformationAndReversal = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndReversal = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlPmtInfAndRvsl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,33 +218,6 @@ public class CustomerPaymentReversalV02 {
 			complexType_lazy = () -> OriginalPaymentInformation2.mmObject();
 		}
 	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "007";
-			version = "02";
-			flavour = "001";
-		}
-	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
@@ -250,17 +225,48 @@ public class CustomerPaymentReversalV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentReversalV02";
 				definition = "Scope\r\nThe CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.\r\nThe CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentReversal message can be used in domestic and cross-border scenarios.";
-				previousVersion_lazy = () -> CustomerPaymentReversalV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV03.mmObject());
+				previousVersion_lazy = () -> CustomerPaymentReversalV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtRvsl";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV02.GroupHeader, com.tools20022.repository.area.pain.CustomerPaymentReversalV02.OriginalGroupInformation,
-						com.tools20022.repository.area.pain.CustomerPaymentReversalV02.OriginalPaymentInformationAndReversal);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.CustomerPaymentReversalV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV02.mmGroupHeader, com.tools20022.repository.area.pain.CustomerPaymentReversalV02.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pain.CustomerPaymentReversalV02.mmOriginalPaymentInformationAndReversal);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "007";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader40 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader40 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalGroupInformation22 getOriginalGroupInformation() {
+		return originalGroupInformation;
+	}
+
+	public void setOriginalGroupInformation(OriginalGroupInformation22 originalGroupInformation) {
+		this.originalGroupInformation = originalGroupInformation;
+	}
+
+	public List<OriginalPaymentInformation2> getOriginalPaymentInformationAndReversal() {
+		return originalPaymentInformationAndReversal;
+	}
+
+	public void setOriginalPaymentInformationAndReversal(List<OriginalPaymentInformation2> originalPaymentInformationAndReversal) {
+		this.originalPaymentInformationAndReversal = originalPaymentInformationAndReversal;
 	}
 }

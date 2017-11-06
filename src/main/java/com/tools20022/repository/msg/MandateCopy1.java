@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.MandateStatus1Choice;
 import com.tools20022.repository.choice.OriginalMandate4Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the mandate, for which a copy of the details is requested.
@@ -34,14 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateCopy1#OriginalMessageInformation
- * MandateCopy1.OriginalMessageInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateCopy1#OriginalMandate
- * MandateCopy1.OriginalMandate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateCopy1#MandateStatus
- * MandateCopy1.MandateStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateCopy1#SupplementaryData
- * MandateCopy1.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateCopy1#mmOriginalMessageInformation
+ * MandateCopy1.mmOriginalMessageInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateCopy1#mmOriginalMandate
+ * MandateCopy1.mmOriginalMandate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateCopy1#mmMandateStatus
+ * MandateCopy1.mmMandateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MandateCopy1#mmSupplementaryData
+ * MandateCopy1.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateCopyRequestV01#UnderlyingCopyRequestDetails
- * MandateCopyRequestV01.UnderlyingCopyRequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateCopyRequestV01#mmUnderlyingCopyRequestDetails
+ * MandateCopyRequestV01.mmUnderlyingCopyRequestDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalMessageInformation1 originalMessageInformation;
 	/**
 	 * Provides information on the original message.
 	 * <p>
@@ -98,7 +101,7 @@ public class MandateCopy1 {
 	 * definition} = "Provides information on the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateCopy1.mmObject();
 			isDerived = false;
@@ -106,12 +109,13 @@ public class MandateCopy1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageInformation";
 			definition = "Provides information on the original message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessageInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
 		}
 	};
+	protected OriginalMandate4Choice originalMandate;
 	/**
 	 * Provides the original mandate data.
 	 * <p>
@@ -138,7 +142,7 @@ public class MandateCopy1 {
 	 * definition} = "Provides the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateCopy1.mmObject();
 			isDerived = false;
@@ -146,12 +150,13 @@ public class MandateCopy1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Provides the original mandate data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMandate4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OriginalMandate4Choice.mmObject();
 		}
 	};
+	protected MandateStatus1Choice mandateStatus;
 	/**
 	 * Indicates the status of the mandate.
 	 * <p>
@@ -178,7 +183,7 @@ public class MandateCopy1 {
 	 * definition} = "Indicates the status of the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MandateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMandateStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateCopy1.mmObject();
 			isDerived = false;
@@ -186,12 +191,13 @@ public class MandateCopy1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateStatus";
 			definition = "Indicates the status of the mandate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MandateStatus1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MandateStatus1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -220,7 +226,7 @@ public class MandateCopy1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateCopy1.mmObject();
 			isDerived = false;
@@ -229,23 +235,55 @@ public class MandateCopy1 {
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateCopy1.OriginalMessageInformation, com.tools20022.repository.msg.MandateCopy1.OriginalMandate,
-						com.tools20022.repository.msg.MandateCopy1.MandateStatus, com.tools20022.repository.msg.MandateCopy1.SupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCopyRequestV01.UnderlyingCopyRequestDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateCopy1.mmOriginalMessageInformation, com.tools20022.repository.msg.MandateCopy1.mmOriginalMandate,
+						com.tools20022.repository.msg.MandateCopy1.mmMandateStatus, com.tools20022.repository.msg.MandateCopy1.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCopyRequestV01.mmUnderlyingCopyRequestDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateCopy1";
 				definition = "Identifies the mandate, for which a copy of the details is requested.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalMessageInformation1 getOriginalMessageInformation() {
+		return originalMessageInformation;
+	}
+
+	public void setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+		this.originalMessageInformation = originalMessageInformation;
+	}
+
+	public OriginalMandate4Choice getOriginalMandate() {
+		return originalMandate;
+	}
+
+	public void setOriginalMandate(OriginalMandate4Choice originalMandate) {
+		this.originalMandate = originalMandate;
+	}
+
+	public MandateStatus1Choice getMandateStatus() {
+		return mandateStatus;
+	}
+
+	public void setMandateStatus(MandateStatus1Choice mandateStatus) {
+		this.mandateStatus = mandateStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#Identification
- * DocumentIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#mmIdentification
+ * DocumentIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#Version
- * DocumentIdentification1.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#mmVersion
+ * DocumentIdentification1.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#Submitter
- * DocumentIdentification1.Submitter}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#mmSubmitter
+ * DocumentIdentification1.mmSubmitter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,15 +55,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#SubmitterProposedBaselineReference
- * DeltaReportV03.SubmitterProposedBaselineReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmSubmitterProposedBaselineReference
+ * DeltaReportV03.mmSubmitterProposedBaselineReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of a set of data.
 	 * <p>
@@ -91,8 +92,8 @@ public class DocumentIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +112,21 @@ public class DocumentIdentification1 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of data.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number version;
 	/**
 	 * Unambiguous identification of the version of a set of data. Example:
 	 * Version 1.
@@ -138,8 +140,8 @@ public class DocumentIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#DocumentVersion
-	 * Document.DocumentVersion}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmDocumentVersion
+	 * Document.mmDocumentVersion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,20 +162,21 @@ public class DocumentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentVersion;
 			componentContext_lazy = () -> DocumentIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.DocumentVersion;
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Unambiguous identification of the version of a set of data. Example: Version 1.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected BICIdentification1 submitter;
 	/**
 	 * Uniquely identifies the financial institution which has submitted the set
 	 * of data by using a BIC.
@@ -208,35 +211,59 @@ public class DocumentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Submitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> DocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Uniquely identifies the financial institution which has submitted the set of data by using a BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification1.Identification, com.tools20022.repository.msg.DocumentIdentification1.Version,
-						com.tools20022.repository.msg.DocumentIdentification1.Submitter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification1.mmIdentification, com.tools20022.repository.msg.DocumentIdentification1.mmVersion,
+						com.tools20022.repository.msg.DocumentIdentification1.mmSubmitter);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DeltaReportV03.mmSubmitterProposedBaselineReference);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DeltaReportV03.SubmitterProposedBaselineReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification1";
 				definition = "Identifies a document by a unique identification and a version together with the identification of the submitter of the document.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public BICIdentification1 getSubmitter() {
+		return submitter;
+	}
+
+	public void setSubmitter(com.tools20022.repository.msg.BICIdentification1 submitter) {
+		this.submitter = submitter;
 	}
 }

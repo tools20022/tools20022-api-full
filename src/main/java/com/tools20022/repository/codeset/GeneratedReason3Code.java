@@ -34,32 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#CollateralManagement
- * GeneratedReason3Code.CollateralManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#mmCollateralManagement
+ * GeneratedReason3Code.mmCollateralManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#MarketClaim
- * GeneratedReason3Code.MarketClaim}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#Other
- * GeneratedReason3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#mmMarketClaim
+ * GeneratedReason3Code.mmMarketClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#ReturnRefusedDumps
- * GeneratedReason3Code.ReturnRefusedDumps}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#mmOther
+ * GeneratedReason3Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#SplitShaping
- * GeneratedReason3Code.SplitShaping}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#mmReturnRefusedDumps
+ * GeneratedReason3Code.mmReturnRefusedDumps}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#ThirdParty
- * GeneratedReason3Code.ThirdParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#mmSplitShaping
+ * GeneratedReason3Code.mmSplitShaping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#Transformation
- * GeneratedReason3Code.Transformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#mmThirdParty
+ * GeneratedReason3Code.mmThirdParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason3Code#mmTransformation
+ * GeneratedReason3Code.mmTransformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,7 +90,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 * name} = "CollateralManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralManagement = new MMCode() {
+	public static final MMCode mmCollateralManagement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
@@ -112,7 +113,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 * name} = "MarketClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketClaim = new MMCode() {
+	public static final MMCode mmMarketClaim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaim";
@@ -135,7 +136,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -158,7 +159,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 * name} = "ReturnRefusedDumps"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReturnRefusedDumps = new MMCode() {
+	public static final MMCode mmReturnRefusedDumps = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnRefusedDumps";
@@ -181,7 +182,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 * name} = "SplitShaping"</li>
 	 * </ul>
 	 */
-	public static final MMCode SplitShaping = new MMCode() {
+	public static final MMCode mmSplitShaping = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitShaping";
@@ -204,7 +205,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 * name} = "ThirdParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode ThirdParty = new MMCode() {
+	public static final MMCode mmThirdParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdParty";
@@ -227,7 +228,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 * name} = "Transformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Transformation = new MMCode() {
+	public static final MMCode mmTransformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transformation";
@@ -238,13 +239,13 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeneratedReason3Code";
 				definition = "Specifies the reason why the transaction was generated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GeneratedReason3Code.CollateralManagement, com.tools20022.repository.codeset.GeneratedReason3Code.MarketClaim,
-						com.tools20022.repository.codeset.GeneratedReason3Code.Other, com.tools20022.repository.codeset.GeneratedReason3Code.ReturnRefusedDumps, com.tools20022.repository.codeset.GeneratedReason3Code.SplitShaping,
-						com.tools20022.repository.codeset.GeneratedReason3Code.ThirdParty, com.tools20022.repository.codeset.GeneratedReason3Code.Transformation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GeneratedReason3Code.mmCollateralManagement, com.tools20022.repository.codeset.GeneratedReason3Code.mmMarketClaim,
+						com.tools20022.repository.codeset.GeneratedReason3Code.mmOther, com.tools20022.repository.codeset.GeneratedReason3Code.mmReturnRefusedDumps, com.tools20022.repository.codeset.GeneratedReason3Code.mmSplitShaping,
+						com.tools20022.repository.codeset.GeneratedReason3Code.mmThirdParty, com.tools20022.repository.codeset.GeneratedReason3Code.mmTransformation);
 				trace_lazy = () -> GeneratedReasonCode.mmObject();
 			}
 		});

@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RequestType1Choice#PaymentControl
- * RequestType1Choice.PaymentControl}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RequestType1Choice#Enquiry
- * RequestType1Choice.Enquiry}</li>
+ * {@linkplain com.tools20022.repository.choice.RequestType1Choice#mmPaymentControl
+ * RequestType1Choice.mmPaymentControl}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RequestType1Choice#mmEnquiry
+ * RequestType1Choice.mmEnquiry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestType1Code paymentControl;
 	/**
 	 * Request type is a control command on a set of transactions.
 	 * <p>
@@ -87,7 +89,7 @@ public class RequestType1Choice {
 	 * "Request type is a control command on a set of transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentControl = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentControl = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestType1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class RequestType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentControl";
 			definition = "Request type is a control command on a set of transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestType1Code.mmObject();
 		}
 	};
+	protected RequestType2Code enquiry;
 	/**
 	 * Request type is an enquiry on the a position or a transaction.
 	 * <p>
@@ -129,7 +132,7 @@ public class RequestType1Choice {
 	 * "Request type is an enquiry on the a position or a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Enquiry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEnquiry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestType1Choice.mmObject();
 			isDerived = false;
@@ -137,8 +140,8 @@ public class RequestType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enquiry";
 			definition = "Request type is an enquiry on the a position or a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestType2Code.mmObject();
 		}
 	};
@@ -146,13 +149,29 @@ public class RequestType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RequestType1Choice.PaymentControl, com.tools20022.repository.choice.RequestType1Choice.Enquiry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RequestType1Choice.mmPaymentControl, com.tools20022.repository.choice.RequestType1Choice.mmEnquiry);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestType1Choice";
 				definition = "Defines the type of action to be performed in the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestType1Code getPaymentControl() {
+		return paymentControl;
+	}
+
+	public void setPaymentControl(RequestType1Code paymentControl) {
+		this.paymentControl = paymentControl;
+	}
+
+	public RequestType2Code getEnquiry() {
+		return enquiry;
+	}
+
+	public void setEnquiry(RequestType2Code enquiry) {
+		this.enquiry = enquiry;
 	}
 }

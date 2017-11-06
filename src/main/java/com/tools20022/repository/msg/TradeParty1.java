@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.entity.TaxPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies an entity involved in a trade activity.
@@ -35,12 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeParty1#PartyIdentification
- * TradeParty1.PartyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeParty1#LegalOrganisation
- * TradeParty1.LegalOrganisation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeParty1#TaxParty
- * TradeParty1.TaxParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeParty1#mmPartyIdentification
+ * TradeParty1.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeParty1#mmLegalOrganisation
+ * TradeParty1.mmLegalOrganisation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeParty1#mmTaxParty
+ * TradeParty1.mmTaxParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeParty1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification45 partyIdentification;
 	/**
 	 * Unique identification, as assigned by an organisation, to unambiguously
 	 * identify a party.
@@ -82,8 +85,8 @@ public class TradeParty1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,31 +108,32 @@ public class TradeParty1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeParty2#PartyIdentification
-	 * TradeParty2.PartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeParty2#mmPartyIdentification
+	 * TradeParty2.mmPartyIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeParty3#PartyIdentification
-	 * TradeParty3.PartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeParty3#mmPartyIdentification
+	 * TradeParty3.mmPartyIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TradeParty1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty2.PartyIdentification, com.tools20022.repository.msg.TradeParty3.PartyIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty2.mmPartyIdentification, com.tools20022.repository.msg.TradeParty3.mmPartyIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification45.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification45.mmObject();
 		}
 	};
+	protected LegalOrganisation1 legalOrganisation;
 	/**
 	 * Legally constituted organization specified for this trade party.
 	 * <p>
@@ -162,31 +166,32 @@ public class TradeParty1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeParty2#LegalOrganisation
-	 * TradeParty2.LegalOrganisation}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeParty2#mmLegalOrganisation
+	 * TradeParty2.mmLegalOrganisation}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeParty3#LegalOrganisation
-	 * TradeParty3.LegalOrganisation}</li>
+	 * {@linkplain com.tools20022.repository.msg.TradeParty3#mmLegalOrganisation
+	 * TradeParty3.mmLegalOrganisation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegalOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegalOrganisation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TradeParty1.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> TradeParty1.mmObject();
 			isDerived = false;
 			xmlTag = "LglOrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalOrganisation";
 			definition = "Legally constituted organization specified for this trade party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty2.LegalOrganisation, com.tools20022.repository.msg.TradeParty3.LegalOrganisation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty2.mmLegalOrganisation, com.tools20022.repository.msg.TradeParty3.mmLegalOrganisation);
 			maxOccurs = 1;
-			type_lazy = () -> LegalOrganisation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TaxParty3> taxParty;
 	/**
 	 * Entity involved in an activity.
 	 * <p>
@@ -216,36 +221,36 @@ public class TradeParty1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeParty2#TaxParty
-	 * TradeParty2.TaxParty}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeParty3#TaxParty
-	 * TradeParty3.TaxParty}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeParty2#mmTaxParty
+	 * TradeParty2.mmTaxParty}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeParty3#mmTaxParty
+	 * TradeParty3.mmTaxParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TradeParty1.mmObject();
 			businessComponentTrace_lazy = () -> TaxPartyRole.mmObject();
+			componentContext_lazy = () -> TradeParty1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxParty";
 			definition = "Entity involved in an activity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty2.TaxParty, com.tools20022.repository.msg.TradeParty3.TaxParty);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty2.mmTaxParty, com.tools20022.repository.msg.TradeParty3.mmTaxParty);
 			minOccurs = 0;
-			type_lazy = () -> TaxParty3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxParty3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty1.PartyIdentification, com.tools20022.repository.msg.TradeParty1.LegalOrganisation, com.tools20022.repository.msg.TradeParty1.TaxParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty1.mmPartyIdentification, com.tools20022.repository.msg.TradeParty1.mmLegalOrganisation, com.tools20022.repository.msg.TradeParty1.mmTaxParty);
 				trace_lazy = () -> Role.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeParty1";
 				definition = "Specifies an entity involved in a trade activity.";
@@ -253,5 +258,29 @@ public class TradeParty1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification45 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.PartyIdentification45 partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public LegalOrganisation1 getLegalOrganisation() {
+		return legalOrganisation;
+	}
+
+	public void setLegalOrganisation(com.tools20022.repository.msg.LegalOrganisation1 legalOrganisation) {
+		this.legalOrganisation = legalOrganisation;
+	}
+
+	public List<TaxParty3> getTaxParty() {
+		return taxParty;
+	}
+
+	public void setTaxParty(List<com.tools20022.repository.msg.TaxParty3> taxParty) {
+		this.taxParty = taxParty;
 	}
 }

@@ -38,23 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage2#OriginalSender
- * OriginalMessage2.OriginalSender}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalSender
+ * OriginalMessage2.mmOriginalSender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage2#OriginalMessageIdentification
- * OriginalMessage2.OriginalMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalMessageIdentification
+ * OriginalMessage2.mmOriginalMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage2#OriginalMessageNameIdentification
- * OriginalMessage2.OriginalMessageNameIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalMessageNameIdentification
+ * OriginalMessage2.mmOriginalMessageNameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage2#OriginalCreationDateTime
- * OriginalMessage2.OriginalCreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalCreationDateTime
+ * OriginalMessage2.mmOriginalCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage2#OriginalPackageIdentification
- * OriginalMessage2.OriginalPackageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalPackageIdentification
+ * OriginalMessage2.mmOriginalPackageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage2#OriginalRecordIdentification
- * OriginalMessage2.OriginalRecordIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalRecordIdentification
+ * OriginalMessage2.mmOriginalRecordIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalMessage2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Party28Choice originalSender;
 	/**
 	 * Original message sender used to identify the message.
 	 * <p>
@@ -122,28 +123,29 @@ public class OriginalMessage2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#OriginalSender
-	 * OriginalMessage3.OriginalSender}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#mmOriginalSender
+	 * OriginalMessage3.mmOriginalSender}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalSender = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalSender = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			businessComponentTrace_lazy = () -> InitiatingPartyRole.mmObject();
+			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlSndr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSender";
 			definition = "Original message sender used to identify the message. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.OriginalSender);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalSender);
 			maxOccurs = 1;
-			type_lazy = () -> Party28Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Party28Choice.mmObject();
 		}
 	};
+	protected Max35Text originalMessageIdentification;
 	/**
 	 * Point to point reference assigned by the original instructing party to
 	 * unambiguously identify the original group of individual transactions.
@@ -157,8 +159,8 @@ public class OriginalMessage2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,33 +183,34 @@ public class OriginalMessage2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#OriginalMessageIdentification
-	 * OriginalMessage3.OriginalMessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#mmOriginalMessageIdentification
+	 * OriginalMessage3.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation3#OriginalMessageIdentification
-	 * OriginalGroupInformation3.OriginalMessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation3#mmOriginalMessageIdentification
+	 * OriginalGroupInformation3.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.OriginalMessageIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.OriginalMessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalMessageIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmOriginalMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalMessageNameIdentification;
 	/**
 	 * Specifies the original message name identifier to which the message
 	 * refers, such as pacs.003.001.01 or MT103.
@@ -240,18 +243,18 @@ public class OriginalMessage2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#OriginalMessageNameIdentification
-	 * OriginalMessage3.OriginalMessageNameIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#mmOriginalMessageNameIdentification
+	 * OriginalMessage3.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation3#OriginalMessageNameIdentification
-	 * OriginalGroupInformation3.OriginalMessageNameIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation3#mmOriginalMessageNameIdentification
+	 * OriginalGroupInformation3.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
@@ -259,13 +262,14 @@ public class OriginalMessage2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers, such as pacs.003.001.01 or MT103.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.OriginalMessageNameIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.OriginalMessageNameIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalMessageNameIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmOriginalMessageNameIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalCreationDateTime;
 	/**
 	 * Original date and time at which the message was created.
 	 * <p>
@@ -278,8 +282,8 @@ public class OriginalMessage2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,33 +304,34 @@ public class OriginalMessage2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#OriginalCreationDateTime
-	 * OriginalMessage3.OriginalCreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalMessage3#mmOriginalCreationDateTime
+	 * OriginalMessage3.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation3#OriginalCreationDateTime
-	 * OriginalGroupInformation3.OriginalCreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation3#mmOriginalCreationDateTime
+	 * OriginalGroupInformation3.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Original date and time at which the message was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.OriginalCreationDateTime;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.OriginalCreationDateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalCreationDateTime);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmOriginalCreationDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text originalPackageIdentification;
 	/**
 	 * Specifies the identification of original package of instructions, entries
 	 * or records.
@@ -357,7 +362,7 @@ public class OriginalMessage2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalPackageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalPackageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
@@ -365,11 +370,12 @@ public class OriginalMessage2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPackageIdentification";
 			definition = "Specifies the identification of original package of instructions, entries or records.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalRecordIdentification;
 	/**
 	 * Specifies the identification of original entry, instruction or record
 	 * within the package.
@@ -400,7 +406,7 @@ public class OriginalMessage2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalRecordIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
@@ -408,8 +414,8 @@ public class OriginalMessage2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRecordIdentification";
 			definition = "Specifies the identification of original entry, instruction or record within the package. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -417,18 +423,66 @@ public class OriginalMessage2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage2.OriginalSender, com.tools20022.repository.msg.OriginalMessage2.OriginalMessageIdentification,
-						com.tools20022.repository.msg.OriginalMessage2.OriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalMessage2.OriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalMessage2.OriginalPackageIdentification, com.tools20022.repository.msg.OriginalMessage2.OriginalRecordIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage2.mmOriginalSender, com.tools20022.repository.msg.OriginalMessage2.mmOriginalMessageIdentification,
+						com.tools20022.repository.msg.OriginalMessage2.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalMessage2.mmOriginalCreationDateTime,
+						com.tools20022.repository.msg.OriginalMessage2.mmOriginalPackageIdentification, com.tools20022.repository.msg.OriginalMessage2.mmOriginalRecordIdentification);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalMessage2";
 				definition = "Unique and unambiguous identification of the original message references.";
-				previousVersion_lazy = () -> OriginalGroupInformation3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(OriginalMessage3.mmObject());
+				previousVersion_lazy = () -> OriginalGroupInformation3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Party28Choice getOriginalSender() {
+		return originalSender;
+	}
+
+	public void setOriginalSender(Party28Choice originalSender) {
+		this.originalSender = originalSender;
+	}
+
+	public Max35Text getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
+	}
+
+	public Max35Text getOriginalMessageNameIdentification() {
+		return originalMessageNameIdentification;
+	}
+
+	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+		this.originalMessageNameIdentification = originalMessageNameIdentification;
+	}
+
+	public ISODateTime getOriginalCreationDateTime() {
+		return originalCreationDateTime;
+	}
+
+	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = originalCreationDateTime;
+	}
+
+	public Max35Text getOriginalPackageIdentification() {
+		return originalPackageIdentification;
+	}
+
+	public void setOriginalPackageIdentification(Max35Text originalPackageIdentification) {
+		this.originalPackageIdentification = originalPackageIdentification;
+	}
+
+	public Max35Text getOriginalRecordIdentification() {
+		return originalRecordIdentification;
+	}
+
+	public void setOriginalRecordIdentification(Max35Text originalRecordIdentification) {
+		this.originalRecordIdentification = originalRecordIdentification;
 	}
 }

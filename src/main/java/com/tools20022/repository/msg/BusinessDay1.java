@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.BusinessDayReportOrError2Choice;
 import com.tools20022.repository.choice.SystemIdentification2Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on business day information.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDay1#SystemIdentification
- * BusinessDay1.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDay1#mmSystemIdentification
+ * BusinessDay1.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDay1#BusinessDayOrError
- * BusinessDay1.BusinessDayOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDay1#mmBusinessDayOrError
+ * BusinessDay1.mmBusinessDayOrError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessDay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<SystemIdentification2Choice> systemIdentification;
 	/**
 	 * Identification of a particular market infrastructure.
 	 * <p>
@@ -94,16 +96,16 @@ public class BusinessDay1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BusinessDay3#SystemIdentification
-	 * BusinessDay3.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay3#mmSystemIdentification
+	 * BusinessDay3.mmSystemIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BusinessDay5#SystemIdentification
-	 * BusinessDay5.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay5#mmSystemIdentification
+	 * BusinessDay5.mmSystemIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDay1.mmObject();
 			isDerived = false;
@@ -111,12 +113,13 @@ public class BusinessDay1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular market infrastructure.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay3.SystemIdentification, com.tools20022.repository.msg.BusinessDay5.SystemIdentification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay3.mmSystemIdentification, com.tools20022.repository.msg.BusinessDay5.mmSystemIdentification);
 			minOccurs = 1;
-			type_lazy = () -> SystemIdentification2Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
 	};
+	protected BusinessDayReportOrError2Choice businessDayOrError;
 	/**
 	 * Requested information on the system availability for a specific business
 	 * day or business error when information has not been found.
@@ -148,16 +151,16 @@ public class BusinessDay1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BusinessDay3#BusinessDayOrError
-	 * BusinessDay3.BusinessDayOrError}</li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay3#mmBusinessDayOrError
+	 * BusinessDay3.mmBusinessDayOrError}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BusinessDay5#BusinessDayOrError
-	 * BusinessDay5.BusinessDayOrError}</li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay5#mmBusinessDayOrError
+	 * BusinessDay5.mmBusinessDayOrError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessDayOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessDayOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDay1.mmObject();
 			isDerived = false;
@@ -165,19 +168,19 @@ public class BusinessDay1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDayOrError";
 			definition = "Requested information on the system availability for a specific business day or business error when information has not been found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay3.BusinessDayOrError, com.tools20022.repository.msg.BusinessDay5.BusinessDayOrError);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay3.mmBusinessDayOrError, com.tools20022.repository.msg.BusinessDay5.mmBusinessDayOrError);
 			maxOccurs = 1;
-			type_lazy = () -> BusinessDayReportOrError2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BusinessDayReportOrError2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay1.SystemIdentification, com.tools20022.repository.msg.BusinessDay1.BusinessDayOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay1.mmSystemIdentification, com.tools20022.repository.msg.BusinessDay1.mmBusinessDayOrError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDay1";
 				definition = "Reports on business day information.";
@@ -185,5 +188,21 @@ public class BusinessDay1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SystemIdentification2Choice> getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(List<SystemIdentification2Choice> systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public BusinessDayReportOrError2Choice getBusinessDayOrError() {
+		return businessDayOrError;
+	}
+
+	public void setBusinessDayOrError(BusinessDayReportOrError2Choice businessDayOrError) {
+		this.businessDayOrError = businessDayOrError;
 	}
 }

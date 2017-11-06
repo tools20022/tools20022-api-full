@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#PurchaseOrderServices
- * TradeFinanceServiceCode.PurchaseOrderServices}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#mmPurchaseOrderServices
+ * TradeFinanceServiceCode.mmPurchaseOrderServices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#Level1Services
- * TradeFinanceServiceCode.Level1Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#mmLevel1Services
+ * TradeFinanceServiceCode.mmLevel1Services}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#Level2Services
- * TradeFinanceServiceCode.Level2Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#mmLevel2Services
+ * TradeFinanceServiceCode.mmLevel2Services}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#Level3Services
- * TradeFinanceServiceCode.Level3Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode#mmLevel3Services
+ * TradeFinanceServiceCode.mmLevel3Services}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class TradeFinanceServiceCode {
 	 * definition} = "Code for purchase order services."</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseOrderServices = new MMCode() {
+	public static final MMCode mmPurchaseOrderServices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderServices";
@@ -125,7 +125,7 @@ public class TradeFinanceServiceCode {
 	 * definition} = "Code for level 1 services."</li>
 	 * </ul>
 	 */
-	public static final MMCode Level1Services = new MMCode() {
+	public static final MMCode mmLevel1Services = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level1Services";
@@ -155,7 +155,7 @@ public class TradeFinanceServiceCode {
 	 * definition} = "Code for level 2 services."</li>
 	 * </ul>
 	 */
-	public static final MMCode Level2Services = new MMCode() {
+	public static final MMCode mmLevel2Services = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level2Services";
@@ -185,7 +185,7 @@ public class TradeFinanceServiceCode {
 	 * definition} = "Code for level 3 services."</li>
 	 * </ul>
 	 */
-	public static final MMCode Level3Services = new MMCode() {
+	public static final MMCode mmLevel3Services = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level3Services";
@@ -198,13 +198,13 @@ public class TradeFinanceServiceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PORS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeFinanceServiceCode";
 				definition = "Specifies the type of bank service selected by the user.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeFinanceServiceCode.PurchaseOrderServices, com.tools20022.repository.codeset.TradeFinanceServiceCode.Level1Services,
-						com.tools20022.repository.codeset.TradeFinanceServiceCode.Level2Services, com.tools20022.repository.codeset.TradeFinanceServiceCode.Level3Services);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeFinanceServiceCode.mmPurchaseOrderServices, com.tools20022.repository.codeset.TradeFinanceServiceCode.mmLevel1Services,
+						com.tools20022.repository.codeset.TradeFinanceServiceCode.mmLevel2Services, com.tools20022.repository.codeset.TradeFinanceServiceCode.mmLevel3Services);
 				derivation_lazy = () -> Arrays.asList(TradeFinanceService2Code.mmObject());
 			}
 		});

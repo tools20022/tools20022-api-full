@@ -32,20 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType2Code#Unknown
- * RateValueType2Code.Unknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType2Code#Open
- * RateValueType2Code.Open}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateValueType2Code#NilPayment
- * RateValueType2Code.NilPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateValueType2Code#mmUnknown
+ * RateValueType2Code.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType2Code#mmOpen
+ * RateValueType2Code.mmOpen}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RateValueType2Code#mmNilPayment
+ * RateValueType2Code.mmNilPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class RateValueType2Code extends RateTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -104,7 +105,7 @@ public class RateValueType2Code extends RateTypeCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
@@ -127,7 +128,7 @@ public class RateValueType2Code extends RateTypeCode {
 	 * name} = "NilPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode NilPayment = new MMCode() {
+	public static final MMCode mmNilPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NilPayment";
@@ -138,12 +139,12 @@ public class RateValueType2Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateValueType2Code";
 				definition = "Specifies the value of a rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateValueType2Code.Unknown, com.tools20022.repository.codeset.RateValueType2Code.Open, com.tools20022.repository.codeset.RateValueType2Code.NilPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateValueType2Code.mmUnknown, com.tools20022.repository.codeset.RateValueType2Code.mmOpen, com.tools20022.repository.codeset.RateValueType2Code.mmNilPayment);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

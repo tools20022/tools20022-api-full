@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation1#InformationType
- * AdditionalInformation1.InformationType}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation1#mmInformationType
+ * AdditionalInformation1.mmInformationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation1#InformationValue
- * AdditionalInformation1.InformationValue}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation1#mmInformationValue
+ * AdditionalInformation1.mmInformationValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InformationType1Choice informationType;
 	/**
 	 * Specifies the type of additional information.
 	 * <p>
@@ -88,7 +89,7 @@ public class AdditionalInformation1 {
 	 * definition} = "Specifies the type of additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalInformation1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class AdditionalInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationType";
 			definition = "Specifies the type of additional information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InformationType1Choice.mmObject();
 		}
 	};
+	protected Max350Text informationValue;
 	/**
 	 * Contents of the additional information.
 	 * <p>
@@ -128,7 +130,7 @@ public class AdditionalInformation1 {
 	 * definition} = "Contents of the additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalInformation1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class AdditionalInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationValue";
 			definition = "Contents of the additional information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class AdditionalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation1.InformationType, com.tools20022.repository.msg.AdditionalInformation1.InformationValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation1.mmInformationType, com.tools20022.repository.msg.AdditionalInformation1.mmInformationValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalInformation1";
 				definition = "Additional information about a request (e.g. financing request).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InformationType1Choice getInformationType() {
+		return informationType;
+	}
+
+	public void setInformationType(InformationType1Choice informationType) {
+		this.informationType = informationType;
+	}
+
+	public Max350Text getInformationValue() {
+		return informationValue;
+	}
+
+	public void setInformationValue(Max350Text informationValue) {
+		this.informationValue = informationValue;
 	}
 }

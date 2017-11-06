@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType1Code#BrokerageFee
- * ChargeType1Code.BrokerageFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType1Code#Commission
- * ChargeType1Code.Commission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType1Code#mmBrokerageFee
+ * ChargeType1Code.mmBrokerageFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType1Code#mmCommission
+ * ChargeType1Code.mmCommission}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +80,7 @@ public class ChargeType1Code extends ChargeTypeCode {
 	 * name} = "BrokerageFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerageFee = new MMCode() {
+	public static final MMCode mmBrokerageFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageFee";
@@ -102,7 +103,7 @@ public class ChargeType1Code extends ChargeTypeCode {
 	 * name} = "Commission"</li>
 	 * </ul>
 	 */
-	public static final MMCode Commission = new MMCode() {
+	public static final MMCode mmCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
@@ -113,12 +114,12 @@ public class ChargeType1Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BRKF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType1Code";
 				definition = "Type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType1Code.BrokerageFee, com.tools20022.repository.codeset.ChargeType1Code.Commission);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType1Code.mmBrokerageFee, com.tools20022.repository.codeset.ChargeType1Code.mmCommission);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

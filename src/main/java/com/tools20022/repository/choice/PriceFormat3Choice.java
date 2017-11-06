@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PriceFormat3Choice#Amount
- * PriceFormat3Choice.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PriceFormat3Choice#Rate
- * PriceFormat3Choice.Rate}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PriceFormat3Choice#mmAmount
+ * PriceFormat3Choice.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PriceFormat3Choice#mmRate
+ * PriceFormat3Choice.mmRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceFormat3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountPrice1 amount;
 	/**
 	 * Price expressed as a currency and amount.
 	 * <p>
@@ -73,7 +74,8 @@ public class PriceFormat3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +94,21 @@ public class PriceFormat3Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> PriceFormat3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Price expressed as a currency and amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountPrice1.mmObject();
 		}
 	};
+	protected PriceRate1 rate;
 	/**
 	 * Price expressed as a rate, ie, percentage.
 	 * <p>
@@ -118,8 +121,8 @@ public class PriceFormat3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,17 +141,17 @@ public class PriceFormat3Choice {
 	 * definition} = "Price expressed as a rate, ie, percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceFormat3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Price expressed as a rate, ie, percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PriceRate1.mmObject();
 		}
 	};
@@ -156,14 +159,30 @@ public class PriceFormat3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat3Choice.Amount, com.tools20022.repository.choice.PriceFormat3Choice.Rate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat3Choice.mmAmount, com.tools20022.repository.choice.PriceFormat3Choice.mmRate);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceFormat3Choice";
 				definition = "Choice of formats to express a price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountPrice1 getAmount() {
+		return amount;
+	}
+
+	public void setAmount(AmountPrice1 amount) {
+		this.amount = amount;
+	}
+
+	public PriceRate1 getRate() {
+		return rate;
+	}
+
+	public void setRate(PriceRate1 rate) {
+		this.rate = rate;
 	}
 }

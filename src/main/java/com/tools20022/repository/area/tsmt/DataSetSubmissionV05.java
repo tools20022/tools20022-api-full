@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -79,45 +80,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#SubmissionIdentification
- * DataSetSubmissionV05.SubmissionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmSubmissionIdentification
+ * DataSetSubmissionV05.mmSubmissionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#RelatedTransactionReferences
- * DataSetSubmissionV05.RelatedTransactionReferences}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmRelatedTransactionReferences
+ * DataSetSubmissionV05.mmRelatedTransactionReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#CommonSubmissionReference
- * DataSetSubmissionV05.CommonSubmissionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmCommonSubmissionReference
+ * DataSetSubmissionV05.mmCommonSubmissionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#Instruction
- * DataSetSubmissionV05.Instruction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmInstruction
+ * DataSetSubmissionV05.mmInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#BuyerBank
- * DataSetSubmissionV05.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmBuyerBank
+ * DataSetSubmissionV05.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#SellerBank
- * DataSetSubmissionV05.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmSellerBank
+ * DataSetSubmissionV05.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#CommercialDataSet
- * DataSetSubmissionV05.CommercialDataSet}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmCommercialDataSet
+ * DataSetSubmissionV05.mmCommercialDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#TransportDataSet
- * DataSetSubmissionV05.TransportDataSet}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmTransportDataSet
+ * DataSetSubmissionV05.mmTransportDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#InsuranceDataSet
- * DataSetSubmissionV05.InsuranceDataSet}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmInsuranceDataSet
+ * DataSetSubmissionV05.mmInsuranceDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#CertificateDataSet
- * DataSetSubmissionV05.CertificateDataSet}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmCertificateDataSet
+ * DataSetSubmissionV05.mmCertificateDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#OtherCertificateDataSet
- * DataSetSubmissionV05.OtherCertificateDataSet}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmOtherCertificateDataSet
+ * DataSetSubmissionV05.mmOtherCertificateDataSet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#identifier
- * DataSetSubmissionV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.014.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,6 +136,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DataSetSubmissionV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 submissionIdentification;
 	/**
 	 * Identifies the submitted information.
 	 * <p>
@@ -161,22 +161,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#SubmissionIdentification
-	 * DataSetSubmissionV04.SubmissionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmSubmissionIdentification
+	 * DataSetSubmissionV04.mmSubmissionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmissionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmissionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmissnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionIdentification";
 			definition = "Identifies the submitted information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.SubmissionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmSubmissionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<DataSetSubmissionReferences3> relatedTransactionReferences;
 	/**
 	 * Identifies the transactions that this submission relates to and provides
 	 * associated information.
@@ -204,21 +205,22 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#RelatedTransactionReferences
-	 * DataSetSubmissionV04.RelatedTransactionReferences}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmRelatedTransactionReferences
+	 * DataSetSubmissionV04.mmRelatedTransactionReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedTransactionReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedTransactionReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdTxRefs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedTransactionReferences";
 			definition = "Identifies the transactions that this submission relates to and provides associated information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.RelatedTransactionReferences;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmRelatedTransactionReferences;
 			minOccurs = 1;
 			complexType_lazy = () -> DataSetSubmissionReferences3.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation commonSubmissionReference;
 	/**
 	 * This reference must be used for all data sets belonging to the same
 	 * submission group.
@@ -246,22 +248,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#CommonSubmissionReference
-	 * DataSetSubmissionV04.CommonSubmissionReference}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmCommonSubmissionReference
+	 * DataSetSubmissionV04.mmCommonSubmissionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CommonSubmissionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCommonSubmissionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmonSubmissnRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonSubmissionReference";
 			definition = "This reference must be used for all data sets belonging to the same submission group.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.CommonSubmissionReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmCommonSubmissionReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected InstructionType3 instruction;
 	/**
 	 * Specifies the instruction given by the submitter.
 	 * <p>
@@ -286,22 +289,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#Instruction
-	 * DataSetSubmissionV04.Instruction}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmInstruction
+	 * DataSetSubmissionV04.mmInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Instruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Instr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Specifies the instruction given by the submitter. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.Instruction;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmInstruction;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InstructionType3.mmObject();
 		}
 	};
+	protected BICIdentification1 buyerBank;
 	/**
 	 * The financial institution of the buyer, uniquely identified by its BIC.
 	 * <p>
@@ -328,22 +332,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#BuyerBank
-	 * DataSetSubmissionV04.BuyerBank}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmBuyerBank
+	 * DataSetSubmissionV04.mmBuyerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.BuyerBank;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmBuyerBank;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected BICIdentification1 sellerBank;
 	/**
 	 * The financial institution of the seller, uniquely identified by its BIC.
 	 * <p>
@@ -370,22 +375,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#SellerBank
-	 * DataSetSubmissionV04.SellerBank}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmSellerBank
+	 * DataSetSubmissionV04.mmSellerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.SellerBank;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmSellerBank;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected CommercialDataSet5 commercialDataSet;
 	/**
 	 * Commercial information that is submitted to the matching application for
 	 * processing.
@@ -413,22 +419,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#CommercialDataSet
-	 * DataSetSubmissionV04.CommercialDataSet}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmCommercialDataSet
+	 * DataSetSubmissionV04.mmCommercialDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CommercialDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCommercialDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ComrclDataSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDataSet";
 			definition = "Commercial information that is submitted to the matching application for processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.CommercialDataSet;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmCommercialDataSet;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CommercialDataSet5.mmObject();
 		}
 	};
+	protected TransportDataSet5 transportDataSet;
 	/**
 	 * Transport information that is submitted to the matching application for
 	 * processing.
@@ -456,22 +463,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#TransportDataSet
-	 * DataSetSubmissionV04.TransportDataSet}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmTransportDataSet
+	 * DataSetSubmissionV04.mmTransportDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransportDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransportDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrnsprtDataSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDataSet";
 			definition = "Transport information that is submitted to the matching application for processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.TransportDataSet;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmTransportDataSet;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransportDataSet5.mmObject();
 		}
 	};
+	protected InsuranceDataSet1 insuranceDataSet;
 	/**
 	 * Insurance information that is submitted to the matching application for
 	 * processing.
@@ -499,22 +507,23 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#InsuranceDataSet
-	 * DataSetSubmissionV04.InsuranceDataSet}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmInsuranceDataSet
+	 * DataSetSubmissionV04.mmInsuranceDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InsuranceDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInsuranceDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InsrncDataSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceDataSet";
 			definition = "Insurance information that is submitted to the matching application for processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.InsuranceDataSet;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmInsuranceDataSet;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InsuranceDataSet1.mmObject();
 		}
 	};
+	protected List<CertificateDataSet2> certificateDataSet;
 	/**
 	 * Certificate information that is submitted to the matching application for
 	 * processing.
@@ -542,21 +551,22 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#CertificateDataSet
-	 * DataSetSubmissionV04.CertificateDataSet}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmCertificateDataSet
+	 * DataSetSubmissionV04.mmCertificateDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CertificateDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCertificateDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CertDataSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDataSet";
 			definition = "Certificate information that is submitted to the matching application for processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.CertificateDataSet;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmCertificateDataSet;
 			minOccurs = 0;
 			complexType_lazy = () -> CertificateDataSet2.mmObject();
 		}
 	};
+	protected List<OtherCertificateDataSet2> otherCertificateDataSet;
 	/**
 	 * Other certificate information that is submitted to the matching
 	 * application for processing.
@@ -584,46 +594,19 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#OtherCertificateDataSet
-	 * DataSetSubmissionV04.OtherCertificateDataSet}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmOtherCertificateDataSet
+	 * DataSetSubmissionV04.mmOtherCertificateDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherCertificateDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherCertificateDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrCertDataSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCertificateDataSet";
 			definition = "Other certificate information that is submitted to the matching application for processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.OtherCertificateDataSet;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmOtherCertificateDataSet;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherCertificateDataSet2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "014"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "014";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -638,14 +621,110 @@ public class DataSetSubmissionV05 {
 				rootElement = "Document";
 				xmlTag = "DataSetSubmissn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV05.SubmissionIdentification, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.RelatedTransactionReferences,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.CommonSubmissionReference, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.Instruction,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.BuyerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.SellerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.CommercialDataSet,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.TransportDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.InsuranceDataSet,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.CertificateDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.OtherCertificateDataSet);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.DataSetSubmissionV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmRelatedTransactionReferences,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmCommonSubmissionReference, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmInstruction,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmBuyerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmSellerBank,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmCommercialDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmTransportDataSet,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmInsuranceDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmCertificateDataSet,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmOtherCertificateDataSet);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "014";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getSubmissionIdentification() {
+		return submissionIdentification;
+	}
+
+	public void setSubmissionIdentification(MessageIdentification1 submissionIdentification) {
+		this.submissionIdentification = submissionIdentification;
+	}
+
+	public List<DataSetSubmissionReferences3> getRelatedTransactionReferences() {
+		return relatedTransactionReferences;
+	}
+
+	public void setRelatedTransactionReferences(List<DataSetSubmissionReferences3> relatedTransactionReferences) {
+		this.relatedTransactionReferences = relatedTransactionReferences;
+	}
+
+	public SimpleIdentificationInformation getCommonSubmissionReference() {
+		return commonSubmissionReference;
+	}
+
+	public void setCommonSubmissionReference(SimpleIdentificationInformation commonSubmissionReference) {
+		this.commonSubmissionReference = commonSubmissionReference;
+	}
+
+	public InstructionType3 getInstruction() {
+		return instruction;
+	}
+
+	public void setInstruction(InstructionType3 instruction) {
+		this.instruction = instruction;
+	}
+
+	public BICIdentification1 getBuyerBank() {
+		return buyerBank;
+	}
+
+	public void setBuyerBank(BICIdentification1 buyerBank) {
+		this.buyerBank = buyerBank;
+	}
+
+	public BICIdentification1 getSellerBank() {
+		return sellerBank;
+	}
+
+	public void setSellerBank(BICIdentification1 sellerBank) {
+		this.sellerBank = sellerBank;
+	}
+
+	public CommercialDataSet5 getCommercialDataSet() {
+		return commercialDataSet;
+	}
+
+	public void setCommercialDataSet(CommercialDataSet5 commercialDataSet) {
+		this.commercialDataSet = commercialDataSet;
+	}
+
+	public TransportDataSet5 getTransportDataSet() {
+		return transportDataSet;
+	}
+
+	public void setTransportDataSet(TransportDataSet5 transportDataSet) {
+		this.transportDataSet = transportDataSet;
+	}
+
+	public InsuranceDataSet1 getInsuranceDataSet() {
+		return insuranceDataSet;
+	}
+
+	public void setInsuranceDataSet(InsuranceDataSet1 insuranceDataSet) {
+		this.insuranceDataSet = insuranceDataSet;
+	}
+
+	public List<CertificateDataSet2> getCertificateDataSet() {
+		return certificateDataSet;
+	}
+
+	public void setCertificateDataSet(List<CertificateDataSet2> certificateDataSet) {
+		this.certificateDataSet = certificateDataSet;
+	}
+
+	public List<OtherCertificateDataSet2> getOtherCertificateDataSet() {
+		return otherCertificateDataSet;
+	}
+
+	public void setOtherCertificateDataSet(List<OtherCertificateDataSet2> otherCertificateDataSet) {
+		this.otherCertificateDataSet = otherCertificateDataSet;
 	}
 }

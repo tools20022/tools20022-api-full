@@ -36,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationHierarchy#Organisation
- * OrganisationHierarchy.Organisation}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationHierarchy#mmOrganisation
+ * OrganisationHierarchy.mmOrganisation}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,15 +45,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationHierarchy
- * Organisation.OrganisationHierarchy}</li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationHierarchy
+ * Organisation.mmOrganisationHierarchy}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrganisationHierarchy {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Organisation organisation;
 	/**
 	 * Specifies the organisation which plays a specific role in the company
 	 * structure.
@@ -76,8 +77,8 @@ public class OrganisationHierarchy {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationHierarchy
-	 * Organisation.OrganisationHierarchy}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationHierarchy
+	 * Organisation.mmOrganisationHierarchy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -103,32 +104,40 @@ public class OrganisationHierarchy {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Organisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> OrganisationHierarchy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
 			definition = "Specifies the organisation which plays a specific role in the company structure.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationHierarchy;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationHierarchy;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrganisationHierarchy";
 				definition = "Description of the structure of a company.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.OrganisationHierarchy);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationHierarchy.Organisation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmOrganisationHierarchy);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationHierarchy.mmOrganisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Organisation getOrganisation() {
+		return organisation;
+	}
+
+	public void setOrganisation(com.tools20022.repository.entity.Organisation organisation) {
+		this.organisation = organisation;
 	}
 }

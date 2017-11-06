@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeMinimusApplicable1#NewIssuePermission
- * DeMinimusApplicable1.NewIssuePermission}</li>
+ * {@linkplain com.tools20022.repository.msg.DeMinimusApplicable1#mmNewIssuePermission
+ * DeMinimusApplicable1.mmNewIssuePermission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeMinimusApplicable1#Percentage
- * DeMinimusApplicable1.Percentage}</li>
+ * {@linkplain com.tools20022.repository.msg.DeMinimusApplicable1#mmPercentage
+ * DeMinimusApplicable1.mmPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeMinimusApplicable1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator newIssuePermission;
 	/**
 	 * Indicates whether the investor permits its beneficial owners that are
 	 * restricted persons, if any, to participate in profits and losses
@@ -80,8 +81,8 @@ public class DeMinimusApplicable1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Investor#NewIssuePermission
-	 * Investor.NewIssuePermission}</li>
+	 * {@linkplain com.tools20022.repository.entity.Investor#mmNewIssuePermission
+	 * Investor.mmNewIssuePermission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class DeMinimusApplicable1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewIssuePermission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewIssuePermission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmNewIssuePermission;
 			componentContext_lazy = () -> DeMinimusApplicable1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.NewIssuePermission;
 			isDerived = false;
 			xmlTag = "NewIssePrmssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssuePermission";
 			definition = "Indicates whether the investor permits its beneficial owners that are restricted persons, if any, to participate in profits and losses allocated to the investor that are attribute to new issue securities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PercentageRate percentage;
 	/**
 	 * Percentage of the new issue profits and losses that it receives to
 	 * beneficial owners that are restricted persons.
@@ -147,7 +149,7 @@ public class DeMinimusApplicable1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DeMinimusApplicable1.mmObject();
 			isDerived = false;
@@ -155,8 +157,8 @@ public class DeMinimusApplicable1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Percentage of the new issue profits and losses that it receives to beneficial owners that are restricted persons.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class DeMinimusApplicable1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeMinimusApplicable1.NewIssuePermission, com.tools20022.repository.msg.DeMinimusApplicable1.Percentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeMinimusApplicable1.mmNewIssuePermission, com.tools20022.repository.msg.DeMinimusApplicable1.mmPercentage);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeMinimusApplicable1";
 				definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getNewIssuePermission() {
+		return newIssuePermission;
+	}
+
+	public void setNewIssuePermission(YesNoIndicator newIssuePermission) {
+		this.newIssuePermission = newIssuePermission;
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
 	}
 }

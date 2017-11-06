@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeographicCoordinates1#Latitude
- * GeographicCoordinates1.Latitude}</li>
+ * {@linkplain com.tools20022.repository.msg.GeographicCoordinates1#mmLatitude
+ * GeographicCoordinates1.mmLatitude}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeographicCoordinates1#Longitude
- * GeographicCoordinates1.Longitude}</li>
+ * {@linkplain com.tools20022.repository.msg.GeographicCoordinates1#mmLongitude
+ * GeographicCoordinates1.mmLongitude}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeographicCoordinates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max16Text latitude;
 	/**
 	 * Latitude measured in degrees, minutes and seconds, following by 'N' for
 	 * the north and 'S' for the south of the equator (for example 48°51'29" N
@@ -92,7 +93,7 @@ public class GeographicCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Latitude = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLatitude = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeographicCoordinates1.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class GeographicCoordinates1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Latitude";
 			definition = "Latitude measured in degrees, minutes and seconds, following by 'N' for the north and 'S' for the south of the equator (for example 48°51'29\" N for the Eiffel Tower latitude).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max16Text longitude;
 	/**
 	 * Angular measurement of the distance of a location on the earth east or
 	 * west of the Greenwich observatory.<br>
@@ -138,7 +140,7 @@ public class GeographicCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Longitude = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLongitude = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeographicCoordinates1.mmObject();
 			isDerived = false;
@@ -146,8 +148,8 @@ public class GeographicCoordinates1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Longitude";
 			definition = "Angular measurement of the distance of a location on the earth east or west of the Greenwich observatory.\r\nThe longitude is measured in degrees, minutes and seconds, following by 'E' for the east and 'W' for the west (for example 2°17'40\" E for the Eiffel Tower longitude).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
@@ -155,13 +157,29 @@ public class GeographicCoordinates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeographicCoordinates1.Latitude, com.tools20022.repository.msg.GeographicCoordinates1.Longitude);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeographicCoordinates1.mmLatitude, com.tools20022.repository.msg.GeographicCoordinates1.mmLongitude);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeographicCoordinates1";
 				definition = "Location on the Earth specified by two numbers representing vertical and horizontal position.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max16Text getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(Max16Text latitude) {
+		this.latitude = latitude;
+	}
+
+	public Max16Text getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(Max16Text longitude) {
+		this.longitude = longitude;
 	}
 }

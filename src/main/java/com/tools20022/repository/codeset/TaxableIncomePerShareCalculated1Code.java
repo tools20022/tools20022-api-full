@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#FundCalculates
- * TaxableIncomePerShareCalculated1Code.FundCalculates}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#mmFundCalculates
+ * TaxableIncomePerShareCalculated1Code.mmFundCalculates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#FundDoesNotCalculate
- * TaxableIncomePerShareCalculated1Code.FundDoesNotCalculate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#mmFundDoesNotCalculate
+ * TaxableIncomePerShareCalculated1Code.mmFundDoesNotCalculate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#FundCalculatesUnknown
- * TaxableIncomePerShareCalculated1Code.FundCalculatesUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#mmFundCalculatesUnknown
+ * TaxableIncomePerShareCalculated1Code.mmFundCalculatesUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#Other
- * TaxableIncomePerShareCalculated1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code#mmOther
+ * TaxableIncomePerShareCalculated1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class TaxableIncomePerShareCalculated1Code extends TaxableIncomePerShareC
 	 * name} = "FundCalculates"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundCalculates = new MMCode() {
+	public static final MMCode mmFundCalculates = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCalculates";
@@ -111,7 +111,7 @@ public class TaxableIncomePerShareCalculated1Code extends TaxableIncomePerShareC
 	 * name} = "FundDoesNotCalculate"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundDoesNotCalculate = new MMCode() {
+	public static final MMCode mmFundDoesNotCalculate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDoesNotCalculate";
@@ -134,7 +134,7 @@ public class TaxableIncomePerShareCalculated1Code extends TaxableIncomePerShareC
 	 * name} = "FundCalculatesUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundCalculatesUnknown = new MMCode() {
+	public static final MMCode mmFundCalculatesUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCalculatesUnknown";
@@ -157,7 +157,7 @@ public class TaxableIncomePerShareCalculated1Code extends TaxableIncomePerShareC
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -168,13 +168,13 @@ public class TaxableIncomePerShareCalculated1Code extends TaxableIncomePerShareC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TSIY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxableIncomePerShareCalculated1Code";
 				definition = "Specifies whether the fund calculates a taxable interest per share (TIS).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.FundCalculates, com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.FundDoesNotCalculate,
-						com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.FundCalculatesUnknown, com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.mmFundCalculates, com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.mmFundDoesNotCalculate,
+						com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.mmFundCalculatesUnknown, com.tools20022.repository.codeset.TaxableIncomePerShareCalculated1Code.mmOther);
 				trace_lazy = () -> TaxableIncomePerShareCalculatedCode.mmObject();
 			}
 		});

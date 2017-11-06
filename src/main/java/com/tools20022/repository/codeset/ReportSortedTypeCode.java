@@ -30,13 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#Country
- * ReportSortedTypeCode.Country}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#Party
- * ReportSortedTypeCode.Party}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#mmCountry
+ * ReportSortedTypeCode.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#Currency
- * ReportSortedTypeCode.Currency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#mmParty
+ * ReportSortedTypeCode.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#mmCurrency
+ * ReportSortedTypeCode.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +92,7 @@ public class ReportSortedTypeCode {
 	 * definition} = "Type of criterion is a nation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Country = new MMCode() {
+	public static final MMCode mmCountry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Country";
@@ -122,7 +123,7 @@ public class ReportSortedTypeCode {
 	 * "Type of criterion is an entity, eg, a financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode Party = new MMCode() {
+	public static final MMCode mmParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Party";
@@ -152,7 +153,7 @@ public class ReportSortedTypeCode {
 	 * definition} = "Type of criterion is a currency, eg, the euro."</li>
 	 * </ul>
 	 */
-	public static final MMCode Currency = new MMCode() {
+	public static final MMCode mmCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Currency";
@@ -165,12 +166,13 @@ public class ReportSortedTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COUN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportSortedTypeCode";
 				definition = "Type of criterion is a country.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportSortedTypeCode.Country, com.tools20022.repository.codeset.ReportSortedTypeCode.Party, com.tools20022.repository.codeset.ReportSortedTypeCode.Currency);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportSortedTypeCode.mmCountry, com.tools20022.repository.codeset.ReportSortedTypeCode.mmParty,
+						com.tools20022.repository.codeset.ReportSortedTypeCode.mmCurrency);
 				derivation_lazy = () -> Arrays.asList(ReportSortedType1Code.mmObject());
 			}
 		});

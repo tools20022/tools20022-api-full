@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#InstructionIdentification
- * DetailedInstructionStatus8.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#mmInstructionIdentification
+ * DetailedInstructionStatus8.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#AccountIdentification
- * DetailedInstructionStatus8.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#mmAccountIdentification
+ * DetailedInstructionStatus8.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#SubAccountIdentification
- * DetailedInstructionStatus8.SubAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#mmSubAccountIdentification
+ * DetailedInstructionStatus8.mmSubAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#InstructionStatus
- * DetailedInstructionStatus8.InstructionStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#mmInstructionStatus
+ * DetailedInstructionStatus8.mmInstructionStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DetailedInstructionStatus8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text instructionIdentification;
 	/**
 	 * Identifies the detailed instruction within an instruction message.
 	 * <p>
@@ -108,13 +109,13 @@ public class DetailedInstructionStatus8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#InstructionIdentification
-	 * DetailedInstructionStatus11.InstructionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#mmInstructionIdentification
+	 * DetailedInstructionStatus11.mmInstructionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedInstructionStatus8.mmObject();
 			isDerived = false;
@@ -122,12 +123,13 @@ public class DetailedInstructionStatus8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identifies the detailed instruction within an instruction message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.InstructionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.mmInstructionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountIdentification;
 	/**
 	 * Identifies the safekeeping account.
 	 * <p>
@@ -140,8 +142,8 @@ public class DetailedInstructionStatus8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Number
-	 * AccountIdentification.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmNumber
+	 * AccountIdentification.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,27 +164,28 @@ public class DetailedInstructionStatus8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#AccountIdentification
-	 * DetailedInstructionStatus11.AccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#mmAccountIdentification
+	 * DetailedInstructionStatus11.mmAccountIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmNumber;
 			componentContext_lazy = () -> DetailedInstructionStatus8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Number;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identifies the safekeeping account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.AccountIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.mmAccountIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text subAccountIdentification;
 	/**
 	 * Identifies the subaccount of the safekeeping account.
 	 * <p>
@@ -195,8 +198,8 @@ public class DetailedInstructionStatus8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Number
-	 * AccountIdentification.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmNumber
+	 * AccountIdentification.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -217,27 +220,28 @@ public class DetailedInstructionStatus8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#SubAccountIdentification
-	 * DetailedInstructionStatus11.SubAccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#mmSubAccountIdentification
+	 * DetailedInstructionStatus11.mmSubAccountIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmNumber;
 			componentContext_lazy = () -> DetailedInstructionStatus8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Number;
 			isDerived = false;
 			xmlTag = "SubAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountIdentification";
 			definition = "Identifies the subaccount of the safekeeping account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.SubAccountIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.mmSubAccountIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected InstructionStatus4Choice instructionStatus;
 	/**
 	 * Status applying to individual instructions of a MeetingInstruction.
 	 * <p>
@@ -250,8 +254,8 @@ public class DetailedInstructionStatus8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -273,36 +277,36 @@ public class DetailedInstructionStatus8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#InstructionStatus
-	 * DetailedInstructionStatus11.InstructionStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#mmInstructionStatus
+	 * DetailedInstructionStatus11.mmInstructionStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> DetailedInstructionStatus8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "InstrSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionStatus";
 			definition = "Status applying to individual instructions of a MeetingInstruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.InstructionStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.mmInstructionStatus);
 			maxOccurs = 1;
-			type_lazy = () -> InstructionStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InstructionStatus4Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus8.InstructionIdentification, com.tools20022.repository.msg.DetailedInstructionStatus8.AccountIdentification,
-						com.tools20022.repository.msg.DetailedInstructionStatus8.SubAccountIdentification, com.tools20022.repository.msg.DetailedInstructionStatus8.InstructionStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus8.mmInstructionIdentification, com.tools20022.repository.msg.DetailedInstructionStatus8.mmAccountIdentification,
+						com.tools20022.repository.msg.DetailedInstructionStatus8.mmSubAccountIdentification, com.tools20022.repository.msg.DetailedInstructionStatus8.mmInstructionStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DetailedInstructionStatus8";
 				definition = "Status applying to individual instructions of a MeetingInstruction.";
@@ -310,5 +314,37 @@ public class DetailedInstructionStatus8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getInstructionIdentification() {
+		return instructionIdentification;
+	}
+
+	public void setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = instructionIdentification;
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public Max35Text getSubAccountIdentification() {
+		return subAccountIdentification;
+	}
+
+	public void setSubAccountIdentification(Max35Text subAccountIdentification) {
+		this.subAccountIdentification = subAccountIdentification;
+	}
+
+	public InstructionStatus4Choice getInstructionStatus() {
+		return instructionStatus;
+	}
+
+	public void setInstructionStatus(InstructionStatus4Choice instructionStatus) {
+		this.instructionStatus = instructionStatus;
 	}
 }

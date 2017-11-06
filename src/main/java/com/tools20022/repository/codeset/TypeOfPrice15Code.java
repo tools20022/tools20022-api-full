@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#Bid
- * TypeOfPrice15Code.Bid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#Offer
- * TypeOfPrice15Code.Offer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#mmBid
+ * TypeOfPrice15Code.mmBid}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#mmOffer
+ * TypeOfPrice15Code.mmOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#NetAssetValue
- * TypeOfPrice15Code.NetAssetValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#mmNetAssetValue
+ * TypeOfPrice15Code.mmNetAssetValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class TypeOfPrice15Code extends TypeOfPriceCode {
 	 * name} = "Bid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bid = new MMCode() {
+	public static final MMCode mmBid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
@@ -105,7 +105,7 @@ public class TypeOfPrice15Code extends TypeOfPriceCode {
 	 * name} = "Offer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offer = new MMCode() {
+	public static final MMCode mmOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
@@ -128,7 +128,7 @@ public class TypeOfPrice15Code extends TypeOfPriceCode {
 	 * name} = "NetAssetValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetAssetValue = new MMCode() {
+	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
@@ -139,12 +139,12 @@ public class TypeOfPrice15Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice15Code";
 				definition = "Specifies the type of price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice15Code.Bid, com.tools20022.repository.codeset.TypeOfPrice15Code.Offer, com.tools20022.repository.codeset.TypeOfPrice15Code.NetAssetValue);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice15Code.mmBid, com.tools20022.repository.codeset.TypeOfPrice15Code.mmOffer, com.tools20022.repository.codeset.TypeOfPrice15Code.mmNetAssetValue);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

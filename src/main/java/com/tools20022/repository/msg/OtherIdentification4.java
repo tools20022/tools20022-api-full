@@ -37,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherIdentification4#Identification
- * OtherIdentification4.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherIdentification4#Type
- * OtherIdentification4.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherIdentification4#mmIdentification
+ * OtherIdentification4.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherIdentification4#mmType
+ * OtherIdentification4.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the fund/sub fund.
 	 * <p>
@@ -83,8 +84,8 @@ public class OtherIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,25 +105,26 @@ public class OtherIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherIdentification1#Identification
-	 * OtherIdentification1.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherIdentification1#mmIdentification
+	 * OtherIdentification1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherIdentification1.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherIdentification1.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected IdentificationSource5Choice type;
 	/**
 	 * Identification source
 	 * <p>
@@ -135,8 +137,8 @@ public class OtherIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Scheme#Identification
-	 * Scheme.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Scheme#mmIdentification
+	 * Scheme.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,33 +158,33 @@ public class OtherIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherIdentification1#Type
-	 * OtherIdentification1.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherIdentification1#mmType
+	 * OtherIdentification1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.Identification;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identification source";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherIdentification1.Type;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherIdentification1.mmType;
 			maxOccurs = 1;
-			type_lazy = () -> IdentificationSource5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IdentificationSource5Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification4.Identification, com.tools20022.repository.msg.OtherIdentification4.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification4.mmIdentification, com.tools20022.repository.msg.OtherIdentification4.mmType);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification4";
 				definition = "Identification of a financial instrument using an accepted format other than an ISIN.";
@@ -190,5 +192,21 @@ public class OtherIdentification4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public IdentificationSource5Choice getType() {
+		return type;
+	}
+
+	public void setType(IdentificationSource5Choice type) {
+		this.type = type;
 	}
 }

@@ -33,45 +33,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#Average
- * TypeOfPrice1Code.Average}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmAverage
+ * TypeOfPrice1Code.mmAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#AverageOverride
- * TypeOfPrice1Code.AverageOverride}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#Combined
- * TypeOfPrice1Code.Combined}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmAverageOverride
+ * TypeOfPrice1Code.mmAverageOverride}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#GrossOfAll
- * TypeOfPrice1Code.GrossOfAll}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#Limit
- * TypeOfPrice1Code.Limit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#Net
- * TypeOfPrice1Code.Net}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmCombined
+ * TypeOfPrice1Code.mmCombined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#NetDisclosed
- * TypeOfPrice1Code.NetDisclosed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#NetOfAll
- * TypeOfPrice1Code.NetOfAll}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmGrossOfAll
+ * TypeOfPrice1Code.mmGrossOfAll}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmLimit
+ * TypeOfPrice1Code.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmNet
+ * TypeOfPrice1Code.mmNet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#NetUndisclosed
- * TypeOfPrice1Code.NetUndisclosed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmNetDisclosed
+ * TypeOfPrice1Code.mmNetDisclosed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#NotionalGross
- * TypeOfPrice1Code.NotionalGross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#ParValue
- * TypeOfPrice1Code.ParValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmNetOfAll
+ * TypeOfPrice1Code.mmNetOfAll}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#RoundedAverage
- * TypeOfPrice1Code.RoundedAverage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#Stop
- * TypeOfPrice1Code.Stop}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmNetUndisclosed
+ * TypeOfPrice1Code.mmNetUndisclosed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmNotionalGross
+ * TypeOfPrice1Code.mmNotionalGross}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmParValue
+ * TypeOfPrice1Code.mmParValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmRoundedAverage
+ * TypeOfPrice1Code.mmRoundedAverage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code#mmStop
+ * TypeOfPrice1Code.mmStop}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -107,7 +110,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "Average"</li>
 	 * </ul>
 	 */
-	public static final MMCode Average = new MMCode() {
+	public static final MMCode mmAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Average";
@@ -130,7 +133,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "AverageOverride"</li>
 	 * </ul>
 	 */
-	public static final MMCode AverageOverride = new MMCode() {
+	public static final MMCode mmAverageOverride = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageOverride";
@@ -153,7 +156,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "Combined"</li>
 	 * </ul>
 	 */
-	public static final MMCode Combined = new MMCode() {
+	public static final MMCode mmCombined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Combined";
@@ -176,7 +179,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "GrossOfAll"</li>
 	 * </ul>
 	 */
-	public static final MMCode GrossOfAll = new MMCode() {
+	public static final MMCode mmGrossOfAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossOfAll";
@@ -199,7 +202,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "Limit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Limit = new MMCode() {
+	public static final MMCode mmLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
@@ -222,7 +225,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "Net"</li>
 	 * </ul>
 	 */
-	public static final MMCode Net = new MMCode() {
+	public static final MMCode mmNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
@@ -245,7 +248,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "NetDisclosed"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetDisclosed = new MMCode() {
+	public static final MMCode mmNetDisclosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDisclosed";
@@ -268,7 +271,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "NetOfAll"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetOfAll = new MMCode() {
+	public static final MMCode mmNetOfAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetOfAll";
@@ -291,7 +294,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "NetUndisclosed"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetUndisclosed = new MMCode() {
+	public static final MMCode mmNetUndisclosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetUndisclosed";
@@ -314,7 +317,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "NotionalGross"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotionalGross = new MMCode() {
+	public static final MMCode mmNotionalGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalGross";
@@ -337,7 +340,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "ParValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode ParValue = new MMCode() {
+	public static final MMCode mmParValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParValue";
@@ -360,7 +363,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "RoundedAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundedAverage = new MMCode() {
+	public static final MMCode mmRoundedAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundedAverage";
@@ -383,7 +386,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 * name} = "Stop"</li>
 	 * </ul>
 	 */
-	public static final MMCode Stop = new MMCode() {
+	public static final MMCode mmStop = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stop";
@@ -394,16 +397,16 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice1Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice1Code.Average, com.tools20022.repository.codeset.TypeOfPrice1Code.AverageOverride, com.tools20022.repository.codeset.TypeOfPrice1Code.Combined,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.GrossOfAll, com.tools20022.repository.codeset.TypeOfPrice1Code.Limit, com.tools20022.repository.codeset.TypeOfPrice1Code.Net,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.NetDisclosed, com.tools20022.repository.codeset.TypeOfPrice1Code.NetOfAll, com.tools20022.repository.codeset.TypeOfPrice1Code.NetUndisclosed,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.NotionalGross, com.tools20022.repository.codeset.TypeOfPrice1Code.ParValue, com.tools20022.repository.codeset.TypeOfPrice1Code.RoundedAverage,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.Stop);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice1Code.mmAverage, com.tools20022.repository.codeset.TypeOfPrice1Code.mmAverageOverride,
+						com.tools20022.repository.codeset.TypeOfPrice1Code.mmCombined, com.tools20022.repository.codeset.TypeOfPrice1Code.mmGrossOfAll, com.tools20022.repository.codeset.TypeOfPrice1Code.mmLimit,
+						com.tools20022.repository.codeset.TypeOfPrice1Code.mmNet, com.tools20022.repository.codeset.TypeOfPrice1Code.mmNetDisclosed, com.tools20022.repository.codeset.TypeOfPrice1Code.mmNetOfAll,
+						com.tools20022.repository.codeset.TypeOfPrice1Code.mmNetUndisclosed, com.tools20022.repository.codeset.TypeOfPrice1Code.mmNotionalGross, com.tools20022.repository.codeset.TypeOfPrice1Code.mmParValue,
+						com.tools20022.repository.codeset.TypeOfPrice1Code.mmRoundedAverage, com.tools20022.repository.codeset.TypeOfPrice1Code.mmStop);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

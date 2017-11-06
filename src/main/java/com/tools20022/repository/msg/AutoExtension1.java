@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.UndertakingExtension;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Automatic extension information.
@@ -35,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AutoExtension1#Period
- * AutoExtension1.Period}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AutoExtension1#FinalExpiryDate
- * AutoExtension1.FinalExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AutoExtension1#mmPeriod
+ * AutoExtension1.mmPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AutoExtension1#NonExtensionNotification
- * AutoExtension1.NonExtensionNotification}</li>
+ * {@linkplain com.tools20022.repository.msg.AutoExtension1#mmFinalExpiryDate
+ * AutoExtension1.mmFinalExpiryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AutoExtension1#mmNonExtensionNotification
+ * AutoExtension1.mmNonExtensionNotification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AutoExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AutoExtend1Choice period;
 	/**
 	 * Indicates that the undertaking is automatically extendable and the period
 	 * of extension.
@@ -77,8 +80,8 @@ public class AutoExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension#AutoExtensionPeriod
-	 * UndertakingExtension.AutoExtensionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmAutoExtensionPeriod
+	 * UndertakingExtension.mmAutoExtensionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +101,22 @@ public class AutoExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Period = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmAutoExtensionPeriod;
 			componentContext_lazy = () -> AutoExtension1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.AutoExtensionPeriod;
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Indicates that the undertaking is automatically extendable and the period of extension.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AutoExtend1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AutoExtend1Choice.mmObject();
 		}
 	};
+	protected ISODate finalExpiryDate;
 	/**
 	 * Final expiry date after which the undertaking will no longer be subject
 	 * to automatic extension.
@@ -126,8 +130,8 @@ public class AutoExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension#AutoExtensionFinalExpiryDate
-	 * UndertakingExtension.AutoExtensionFinalExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmAutoExtensionFinalExpiryDate
+	 * UndertakingExtension.mmAutoExtensionFinalExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,20 +151,21 @@ public class AutoExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmAutoExtensionFinalExpiryDate;
 			componentContext_lazy = () -> AutoExtension1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.AutoExtensionFinalExpiryDate;
 			isDerived = false;
 			xmlTag = "FnlXpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalExpiryDate";
 			definition = "Final expiry date after which the undertaking will no longer be subject to automatic extension.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NonExtension1> nonExtensionNotification;
 	/**
 	 * Details related to the notification of the end of the period for
 	 * notification of non-extension of the expiry date.
@@ -189,7 +194,7 @@ public class AutoExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonExtensionNotification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonExtensionNotification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AutoExtension1.mmObject();
 			isDerived = false;
@@ -198,23 +203,47 @@ public class AutoExtension1 {
 			name = "NonExtensionNotification";
 			definition = "Details related to the notification of the end of the period for notification of non-extension of the expiry date.";
 			minOccurs = 0;
-			type_lazy = () -> NonExtension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NonExtension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutoExtension1.Period, com.tools20022.repository.msg.AutoExtension1.FinalExpiryDate,
-						com.tools20022.repository.msg.AutoExtension1.NonExtensionNotification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutoExtension1.mmPeriod, com.tools20022.repository.msg.AutoExtension1.mmFinalExpiryDate,
+						com.tools20022.repository.msg.AutoExtension1.mmNonExtensionNotification);
 				trace_lazy = () -> UndertakingExtension.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AutoExtension1";
 				definition = "Automatic extension information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AutoExtend1Choice getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(AutoExtend1Choice period) {
+		this.period = period;
+	}
+
+	public ISODate getFinalExpiryDate() {
+		return finalExpiryDate;
+	}
+
+	public void setFinalExpiryDate(ISODate finalExpiryDate) {
+		this.finalExpiryDate = finalExpiryDate;
+	}
+
+	public List<NonExtension1> getNonExtensionNotification() {
+		return nonExtensionNotification;
+	}
+
+	public void setNonExtensionNotification(List<com.tools20022.repository.msg.NonExtension1> nonExtensionNotification) {
+		this.nonExtensionNotification = nonExtensionNotification;
 	}
 }

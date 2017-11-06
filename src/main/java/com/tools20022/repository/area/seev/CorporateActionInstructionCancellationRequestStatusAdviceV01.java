@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -75,50 +76,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#Identification
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#InstructionCancellationRequestIdentification
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * InstructionCancellationRequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#OtherDocumentIdentification
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * OtherDocumentIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#CorporateActionGeneralInformation
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * CorporateActionGeneralInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#InstructionCancellationRequestStatus
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * InstructionCancellationRequestStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#CorporateActionInstruction
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * CorporateActionInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#AdditionalInformation
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#MessageOriginator
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#MessageRecipient
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.MessageRecipient
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmIdentification
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.mmIdentification
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#Extension
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmInstructionCancellationRequestIdentification
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmInstructionCancellationRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmOtherDocumentIdentification
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmCorporateActionGeneralInformation
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmCorporateActionGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmInstructionCancellationRequestStatus
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmInstructionCancellationRequestStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmCorporateActionInstruction
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmCorporateActionInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmAdditionalInformation
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmMessageOriginator
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmMessageRecipient
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmExtension
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#identifier
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.041.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,6 +142,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification11 identification;
 	/**
 	 * Information that unambiguously identifies a
 	 * CorporateActionInstructionCancellationRequestStatusAdvice message as know
@@ -169,17 +170,18 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies a CorporateActionInstructionCancellationRequestStatusAdvice message as know by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 	};
+	protected DocumentIdentification9 instructionCancellationRequestIdentification;
 	/**
 	 * Identification of a related instruction cancellation request document.
 	 * <p>
@@ -204,17 +206,18 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * "Identification of a related instruction cancellation request document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionCancellationRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionCancellationRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrCxlReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentification";
 			definition = "Identification of a related instruction cancellation request document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
 	};
+	protected List<DocumentIdentification14> otherDocumentIdentification;
 	/**
 	 * Identification of other documents as well as the document number.
 	 * <p>
@@ -239,7 +242,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * "Identification of other documents as well as the document number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherDocumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrDocId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,6 +252,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification14.mmObject();
 		}
 	};
+	protected CorporateActionGeneralInformation9 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -272,17 +276,18 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation9.mmObject();
 		}
 	};
+	protected List<InstructionCancellationRequestStatus1Choice> instructionCancellationRequestStatus;
 	/**
 	 * Provides information about the processing status of the instruction
 	 * cancellation request.
@@ -309,7 +314,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionCancellationRequestStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionCancellationRequestStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrCxlReqSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,6 +324,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			complexType_lazy = () -> InstructionCancellationRequestStatus1Choice.mmObject();
 		}
 	};
+	protected CorporateActionOption9 corporateActionInstruction;
 	/**
 	 * Information about the corporate action option.
 	 * <p>
@@ -342,17 +348,18 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * definition} = "Information about the corporate action option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionInstruction";
 			definition = "Information about the corporate action option.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption9.mmObject();
 		}
 	};
+	protected CorporateActionNarrative10 additionalInformation;
 	/**
 	 * Provides additional information.
 	 * <p>
@@ -376,17 +383,18 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * definition} = "Provides additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative10.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -411,17 +419,18 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageRecipient;
 	/**
 	 * Party that is the final destination of the message, if other than the
 	 * receiver.
@@ -448,17 +457,18 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party that is the final destination of the message, if other than the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected List<Extension2> extension;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -484,7 +494,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -492,33 +502,6 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "041"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "041";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -533,19 +516,106 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrCxlReqStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.Identification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.InstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.InstructionCancellationRequestStatus,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.CorporateActionInstruction,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.MessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmInstructionCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmInstructionCancellationRequestStatus,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmCorporateActionInstruction,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "041";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification11 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification11 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification9 getInstructionCancellationRequestIdentification() {
+		return instructionCancellationRequestIdentification;
+	}
+
+	public void setInstructionCancellationRequestIdentification(DocumentIdentification9 instructionCancellationRequestIdentification) {
+		this.instructionCancellationRequestIdentification = instructionCancellationRequestIdentification;
+	}
+
+	public List<DocumentIdentification14> getOtherDocumentIdentification() {
+		return otherDocumentIdentification;
+	}
+
+	public void setOtherDocumentIdentification(List<DocumentIdentification14> otherDocumentIdentification) {
+		this.otherDocumentIdentification = otherDocumentIdentification;
+	}
+
+	public CorporateActionGeneralInformation9 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation9 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public List<InstructionCancellationRequestStatus1Choice> getInstructionCancellationRequestStatus() {
+		return instructionCancellationRequestStatus;
+	}
+
+	public void setInstructionCancellationRequestStatus(List<InstructionCancellationRequestStatus1Choice> instructionCancellationRequestStatus) {
+		this.instructionCancellationRequestStatus = instructionCancellationRequestStatus;
+	}
+
+	public CorporateActionOption9 getCorporateActionInstruction() {
+		return corporateActionInstruction;
+	}
+
+	public void setCorporateActionInstruction(CorporateActionOption9 corporateActionInstruction) {
+		this.corporateActionInstruction = corporateActionInstruction;
+	}
+
+	public CorporateActionNarrative10 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(CorporateActionNarrative10 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public PartyIdentification10Choice getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(PartyIdentification10Choice messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public PartyIdentification10Choice getMessageRecipient() {
+		return messageRecipient;
+	}
+
+	public void setMessageRecipient(PartyIdentification10Choice messageRecipient) {
+		this.messageRecipient = messageRecipient;
+	}
+
+	public List<Extension2> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension2> extension) {
+		this.extension = extension;
 	}
 }

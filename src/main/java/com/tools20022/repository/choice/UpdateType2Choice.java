@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType2Choice#Code
- * UpdateType2Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType2Choice#mmCode
+ * UpdateType2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UpdateType2Choice#Proprietary
- * UpdateType2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType2Choice#mmProprietary
+ * UpdateType2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdateType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatementUpdateType1Code code;
 	/**
 	 * Indicates whether the report is complete or contains changes only.
 	 * <p>
@@ -95,13 +96,14 @@ public class UpdateType2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.UpdateType15Choice#Code
-	 * UpdateType15Choice.Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType15Choice#mmCode
+	 * UpdateType15Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdateType2Choice.mmObject();
 			isDerived = false;
@@ -109,12 +111,13 @@ public class UpdateType2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType15Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType15Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Indicates whether the report is complete or contains changes only.
 	 * <p>
@@ -146,13 +149,13 @@ public class UpdateType2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UpdateType15Choice#Proprietary
-	 * UpdateType15Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType15Choice#mmProprietary
+	 * UpdateType15Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdateType2Choice.mmObject();
 			isDerived = false;
@@ -160,9 +163,9 @@ public class UpdateType2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType15Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType15Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -170,8 +173,8 @@ public class UpdateType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType2Choice.Code, com.tools20022.repository.choice.UpdateType2Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType2Choice.mmCode, com.tools20022.repository.choice.UpdateType2Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UpdateType2Choice";
 				definition = "Choice of format for the update information.";
@@ -179,5 +182,21 @@ public class UpdateType2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatementUpdateType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(StatementUpdateType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CommercialTrade;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Detailed invoice data.
@@ -33,16 +34,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#InvoiceHeader
- * CardPaymentInvoice1.InvoiceHeader}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#mmInvoiceHeader
+ * CardPaymentInvoice1.mmInvoiceHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#TradeAgreement
- * CardPaymentInvoice1.TradeAgreement}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#mmTradeAgreement
+ * CardPaymentInvoice1.mmTradeAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#TradeDelivery
- * CardPaymentInvoice1.TradeDelivery}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#LineItem
- * CardPaymentInvoice1.LineItem}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#mmTradeDelivery
+ * CardPaymentInvoice1.mmTradeDelivery}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#mmLineItem
+ * CardPaymentInvoice1.mmLineItem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentInvoice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvoiceHeader1 invoiceHeader;
 	/**
 	 * General data relevant to the main body of the invoice such as date of
 	 * issue, currency code and identification number.
@@ -104,13 +106,13 @@ public class CardPaymentInvoice1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#InvoiceHeader
-	 * CardPaymentInvoice2.InvoiceHeader}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmInvoiceHeader
+	 * CardPaymentInvoice2.mmInvoiceHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvoiceHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoiceHeader = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
 			isDerived = false;
@@ -118,13 +120,14 @@ public class CardPaymentInvoice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceHeader";
 			definition = "General data relevant to the main body of the invoice such as date of issue, currency code and identification number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.InvoiceHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.mmInvoiceHeader);
 			maxOccurs = 1;
-			type_lazy = () -> InvoiceHeader1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
 		}
 	};
+	protected TradeAgreement6 tradeAgreement;
 	/**
 	 * Contractual details related to the agreement between parties.
 	 * <p>
@@ -136,8 +139,8 @@ public class CardPaymentInvoice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#GoverningDocument
-	 * Trade.GoverningDocument}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmGoverningDocument
+	 * Trade.mmGoverningDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,28 +162,29 @@ public class CardPaymentInvoice1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#TradeAgreement
-	 * CardPaymentInvoice2.TradeAgreement}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmTradeAgreement
+	 * CardPaymentInvoice2.mmTradeAgreement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeAgreement = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmGoverningDocument;
 			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.GoverningDocument;
 			isDerived = false;
 			xmlTag = "TradAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAgreement";
 			definition = "Contractual details related to the agreement between parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.TradeAgreement);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.mmTradeAgreement);
 			maxOccurs = 1;
-			type_lazy = () -> TradeAgreement6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
 		}
 	};
+	protected TradeDelivery1 tradeDelivery;
 	/**
 	 * Supply chain shipping arrangements for delivery of invoiced products
 	 * and/or services.
@@ -193,8 +197,8 @@ public class CardPaymentInvoice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#ProductDelivery
-	 * CommercialTradeSettlement.ProductDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmProductDelivery
+	 * CommercialTradeSettlement.mmProductDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -217,28 +221,29 @@ public class CardPaymentInvoice1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#TradeDelivery
-	 * CardPaymentInvoice2.TradeDelivery}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmTradeDelivery
+	 * CardPaymentInvoice2.mmTradeDelivery}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeDelivery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeDelivery = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmProductDelivery;
 			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.ProductDelivery;
 			isDerived = false;
 			xmlTag = "TradDlvry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDelivery";
 			definition = "Supply chain shipping arrangements for delivery of invoiced products and/or services.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.TradeDelivery);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.mmTradeDelivery);
 			maxOccurs = 1;
-			type_lazy = () -> TradeDelivery1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.LineItem10> lineItem;
 	/**
 	 * Unit of information showing the related provision of products and/or
 	 * services and monetary summations reported as a discrete line items.
@@ -250,8 +255,8 @@ public class CardPaymentInvoice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#LineItem
-	 * Invoice.LineItem}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
+	 * Invoice.mmLineItem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -274,35 +279,35 @@ public class CardPaymentInvoice1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#LineItem
-	 * CardPaymentInvoice2.LineItem}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmLineItem
+	 * CardPaymentInvoice2.mmLineItem}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LineItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLineItem = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmLineItem;
 			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.LineItem;
 			isDerived = false;
 			xmlTag = "LineItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItem";
 			definition = "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.LineItem);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.mmLineItem);
 			minOccurs = 0;
-			type_lazy = () -> LineItem10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LineItem10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice1.InvoiceHeader, com.tools20022.repository.msg.CardPaymentInvoice1.TradeAgreement,
-						com.tools20022.repository.msg.CardPaymentInvoice1.TradeDelivery, com.tools20022.repository.msg.CardPaymentInvoice1.LineItem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice1.mmInvoiceHeader, com.tools20022.repository.msg.CardPaymentInvoice1.mmTradeAgreement,
+						com.tools20022.repository.msg.CardPaymentInvoice1.mmTradeDelivery, com.tools20022.repository.msg.CardPaymentInvoice1.mmLineItem);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentInvoice1";
 				definition = "Detailed invoice data.";
@@ -310,5 +315,37 @@ public class CardPaymentInvoice1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvoiceHeader1 getInvoiceHeader() {
+		return invoiceHeader;
+	}
+
+	public void setInvoiceHeader(com.tools20022.repository.msg.InvoiceHeader1 invoiceHeader) {
+		this.invoiceHeader = invoiceHeader;
+	}
+
+	public TradeAgreement6 getTradeAgreement() {
+		return tradeAgreement;
+	}
+
+	public void setTradeAgreement(com.tools20022.repository.msg.TradeAgreement6 tradeAgreement) {
+		this.tradeAgreement = tradeAgreement;
+	}
+
+	public TradeDelivery1 getTradeDelivery() {
+		return tradeDelivery;
+	}
+
+	public void setTradeDelivery(com.tools20022.repository.msg.TradeDelivery1 tradeDelivery) {
+		this.tradeDelivery = tradeDelivery;
+	}
+
+	public List<LineItem10> getLineItem() {
+		return lineItem;
+	}
+
+	public void setLineItem(List<com.tools20022.repository.msg.LineItem10> lineItem) {
+		this.lineItem = lineItem;
 	}
 }

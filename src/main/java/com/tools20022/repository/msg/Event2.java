@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information on an event that happened in a system.
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Event2#EventCode
- * Event2.EventCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Event2#EventParameter
- * Event2.EventParameter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Event2#EventDescription
- * Event2.EventDescription}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Event2#EventTime
- * Event2.EventTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Event2#mmEventCode
+ * Event2.mmEventCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Event2#mmEventParameter
+ * Event2.mmEventParameter}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Event2#mmEventDescription
+ * Event2.mmEventDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Event2#mmEventTime
+ * Event2.mmEventTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventNotificationV02#EventInformation
- * SystemEventNotificationV02.EventInformation}</li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventNotificationV02#mmEventInformation
+ * SystemEventNotificationV02.mmEventInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Event2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText eventCode;
 	/**
 	 * Proprietary code used to specify an event that occurred in a system.
 	 * <p>
@@ -103,11 +105,11 @@ public class Event2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Event1#EventCode
-	 * Event1.EventCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.Event1#mmEventCode
+	 * Event1.mmEventCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Event2.mmObject();
 			isDerived = false;
@@ -115,12 +117,13 @@ public class Event2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCode";
 			definition = "Proprietary code used to specify an event that occurred in a system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.EventCode;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.mmEventCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected List<Max35Text> eventParameter;
 	/**
 	 * Describes the parameters of an event which occurred in a system.
 	 * <p>
@@ -149,11 +152,11 @@ public class Event2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Event1#EventParameter
-	 * Event1.EventParameter}</li>
+	 * {@linkplain com.tools20022.repository.msg.Event1#mmEventParameter
+	 * Event1.mmEventParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventParameter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Event2.mmObject();
 			isDerived = false;
@@ -161,11 +164,12 @@ public class Event2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventParameter";
 			definition = "Describes the parameters of an event which occurred in a system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.EventParameter;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.mmEventParameter;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max1000Text eventDescription;
 	/**
 	 * Free text used to describe an event which occurred in a system.
 	 * <p>
@@ -194,11 +198,11 @@ public class Event2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Event1#EventDescription
-	 * Event1.EventDescription}</li>
+	 * {@linkplain com.tools20022.repository.msg.Event1#mmEventDescription
+	 * Event1.mmEventDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Event2.mmObject();
 			isDerived = false;
@@ -206,12 +210,13 @@ public class Event2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventDescription";
 			definition = "Free text used to describe an event which occurred in a system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.EventDescription;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.mmEventDescription;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max1000Text.mmObject();
 		}
 	};
+	protected ISODateTime eventTime;
 	/**
 	 * Date and time at which the event occurred.
 	 * <p>
@@ -239,11 +244,11 @@ public class Event2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Event1#EventTime
-	 * Event1.EventTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.Event1#mmEventTime
+	 * Event1.mmEventTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Event2.mmObject();
 			isDerived = false;
@@ -251,9 +256,9 @@ public class Event2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTime";
 			definition = "Date and time at which the event occurred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.EventTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Event1.mmEventTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -261,10 +266,10 @@ public class Event2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Event2.EventCode, com.tools20022.repository.msg.Event2.EventParameter, com.tools20022.repository.msg.Event2.EventDescription,
-						com.tools20022.repository.msg.Event2.EventTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventNotificationV02.EventInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Event2.mmEventCode, com.tools20022.repository.msg.Event2.mmEventParameter, com.tools20022.repository.msg.Event2.mmEventDescription,
+						com.tools20022.repository.msg.Event2.mmEventTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventNotificationV02.mmEventInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Event2";
 				definition = "Provides information on an event that happened in a system.";
@@ -272,5 +277,37 @@ public class Event2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getEventCode() {
+		return eventCode;
+	}
+
+	public void setEventCode(Max4AlphaNumericText eventCode) {
+		this.eventCode = eventCode;
+	}
+
+	public List<Max35Text> getEventParameter() {
+		return eventParameter;
+	}
+
+	public void setEventParameter(List<Max35Text> eventParameter) {
+		this.eventParameter = eventParameter;
+	}
+
+	public Max1000Text getEventDescription() {
+		return eventDescription;
+	}
+
+	public void setEventDescription(Max1000Text eventDescription) {
+		this.eventDescription = eventDescription;
+	}
+
+	public ISODateTime getEventTime() {
+		return eventTime;
+	}
+
+	public void setEventTime(ISODateTime eventTime) {
+		this.eventTime = eventTime;
 	}
 }

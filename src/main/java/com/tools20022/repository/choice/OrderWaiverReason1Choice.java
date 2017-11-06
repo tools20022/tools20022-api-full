@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OrderWaiverReason1Choice#Reason
- * OrderWaiverReason1Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.OrderWaiverReason1Choice#mmReason
+ * OrderWaiverReason1Choice.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OrderWaiverReason1Choice#Proprietary
- * OrderWaiverReason1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OrderWaiverReason1Choice#mmProprietary
+ * OrderWaiverReason1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderWaiverReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderWaiverReason1Code reason;
 	/**
 	 * Reason why an order has to be handled differently, probably in a manual
 	 * fashion, because, for example, the investment manager has agreed a waiver
@@ -85,8 +86,8 @@ public class OrderWaiverReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderWaiverReason
-	 * InvestmentFundOrder.OrderWaiverReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderWaiverReason
+	 * InvestmentFundOrder.mmOrderWaiverReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +110,28 @@ public class OrderWaiverReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderWaiverReason3Choice#Code
-	 * OrderWaiverReason3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OrderWaiverReason3Choice#mmCode
+	 * OrderWaiverReason3Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> OrderWaiverReason1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderWaiverReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason why an order has to be handled differently, probably in a manual fashion, because, for example, the investment manager has agreed a waiver to the terms.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderWaiverReason3Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderWaiverReason3Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderWaiverReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Reason why an order has to be handled differently, probably in a manual
 	 * fashion, because, for example, the investment manager has agreed a waiver
@@ -145,8 +147,8 @@ public class OrderWaiverReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderWaiverReason
-	 * InvestmentFundOrder.OrderWaiverReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderWaiverReason
+	 * InvestmentFundOrder.mmOrderWaiverReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,24 +171,24 @@ public class OrderWaiverReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OrderWaiverReason3Choice#Proprietary
-	 * OrderWaiverReason3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OrderWaiverReason3Choice#mmProprietary
+	 * OrderWaiverReason3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> OrderWaiverReason1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderWaiverReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason why an order has to be handled differently, probably in a manual fashion, because, for example, the investment manager has agreed a waiver to the terms.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderWaiverReason3Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderWaiverReason3Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -194,9 +196,9 @@ public class OrderWaiverReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderWaiverReason1Choice.Reason, com.tools20022.repository.choice.OrderWaiverReason1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderWaiverReason1Choice.mmReason, com.tools20022.repository.choice.OrderWaiverReason1Choice.mmProprietary);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderWaiverReason1Choice";
 				definition = "Choice of order waiver reason.";
@@ -204,5 +206,21 @@ public class OrderWaiverReason1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderWaiverReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(OrderWaiverReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

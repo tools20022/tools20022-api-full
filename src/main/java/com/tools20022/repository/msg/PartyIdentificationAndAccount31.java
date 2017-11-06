@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#Identification
- * PartyIdentificationAndAccount31.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#mmIdentification
+ * PartyIdentificationAndAccount31.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#AlternateIdentification
- * PartyIdentificationAndAccount31.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#mmAlternateIdentification
+ * PartyIdentificationAndAccount31.mmAlternateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#AdditionalInformation
- * PartyIdentificationAndAccount31.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#mmAdditionalInformation
+ * PartyIdentificationAndAccount31.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#ClearingAccount
- * PartyIdentificationAndAccount31.ClearingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#mmClearingAccount
+ * PartyIdentificationAndAccount31.mmClearingAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +57,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#NonClearingMember
- * TradeLegNotificationV03.NonClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmNonClearingMember
+ * TradeLegNotificationV03.mmNonClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03#NonClearingMember
- * TradeLegNotificationCancellationV03.NonClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03#mmNonClearingMember
+ * TradeLegNotificationCancellationV03.mmNonClearingMember}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationAndAccount31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification33Choice identification;
 	/**
 	 * Identification of the party.
 	 * <p>
@@ -115,20 +116,21 @@ public class PartyIdentificationAndAccount31 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification33Choice.mmObject();
 		}
 	};
+	protected AlternatePartyIdentification4 alternateIdentification;
 	/**
 	 * Alternate identification for a party.
 	 * <p>
@@ -161,21 +163,22 @@ public class PartyIdentificationAndAccount31 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AlternatePartyIdentification4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification4.mmObject();
 		}
 	};
+	protected PartyTextInformation1 additionalInformation;
 	/**
 	 * Provides additional information to a party identification.
 	 * <p>
@@ -203,7 +206,7 @@ public class PartyIdentificationAndAccount31 {
 	 * "Provides additional information to a party identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
@@ -211,12 +214,13 @@ public class PartyIdentificationAndAccount31 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information to a party identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyTextInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyTextInformation1.mmObject();
 		}
 	};
+	protected SecuritiesAccount18 clearingAccount;
 	/**
 	 * Identifies the clearing member account at the Central counterparty
 	 * through which the trade must be cleared (sometimes called position
@@ -230,8 +234,8 @@ public class PartyIdentificationAndAccount31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#ClearingAccount
-	 * ClearingMemberRole.ClearingAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingAccount
+	 * ClearingMemberRole.mmClearingAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,35 +256,67 @@ public class PartyIdentificationAndAccount31 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.ClearingAccount;
 			isDerived = false;
 			xmlTag = "ClrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount18.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount31.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount31.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount31.AdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount31.ClearingAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmAdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmClearingAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegNotificationV03.mmNonClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmNonClearingMember);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegNotificationV03.NonClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.NonClearingMember);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount31";
 				definition = "Party and account details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification33Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification33Choice identification) {
+		this.identification = identification;
+	}
+
+	public AlternatePartyIdentification4 getAlternateIdentification() {
+		return alternateIdentification;
+	}
+
+	public void setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification4 alternateIdentification) {
+		this.alternateIdentification = alternateIdentification;
+	}
+
+	public PartyTextInformation1 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation1 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public SecuritiesAccount18 getClearingAccount() {
+		return clearingAccount;
+	}
+
+	public void setClearingAccount(com.tools20022.repository.msg.SecuritiesAccount18 clearingAccount) {
+		this.clearingAccount = clearingAccount;
 	}
 }

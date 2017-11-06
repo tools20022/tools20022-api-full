@@ -37,23 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD5#PlaceAndName
- * AccountBalanceSD5.PlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD5#TransactionPosition
- * AccountBalanceSD5.TransactionPosition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD5#AsOfDate
- * AccountBalanceSD5.AsOfDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD5#mmPlaceAndName
+ * AccountBalanceSD5.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountBalanceSD5#ContraParticipantNumber
- * AccountBalanceSD5.ContraParticipantNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD5#mmTransactionPosition
+ * AccountBalanceSD5.mmTransactionPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD5#mmAsOfDate
+ * AccountBalanceSD5.mmAsOfDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountBalanceSD5#mmContraParticipantNumber
+ * AccountBalanceSD5.mmContraParticipantNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountBalanceSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -105,13 +107,13 @@ public class AccountBalanceSD5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD7#PlaceAndName
-	 * AccountBalanceSD7.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD7#mmPlaceAndName
+	 * AccountBalanceSD7.mmPlaceAndName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -119,12 +121,13 @@ public class AccountBalanceSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD7.PlaceAndName);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD7.mmPlaceAndName);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected AdjustedBalanceTypeSD1Choice transactionPosition;
 	/**
 	 * Position that is concerned in transaction.
 	 * <p>
@@ -155,13 +158,13 @@ public class AccountBalanceSD5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD7#TransactionPosition
-	 * AccountBalanceSD7.TransactionPosition}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD7#mmTransactionPosition
+	 * AccountBalanceSD7.mmTransactionPosition}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -169,12 +172,13 @@ public class AccountBalanceSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionPosition";
 			definition = "Position that is concerned in transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD7.TransactionPosition);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD7.mmTransactionPosition);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 		}
 	};
+	protected ISODate asOfDate;
 	/**
 	 * Effective date of the transaction.
 	 * <p>
@@ -202,7 +206,7 @@ public class AccountBalanceSD5 {
 	 * definition} = "Effective date of the transaction. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAsOfDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -210,11 +214,12 @@ public class AccountBalanceSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
 			definition = "Effective date of the transaction. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max8Text contraParticipantNumber;
 	/**
 	 * Transaction contra participant identification for stock loans, repurchase
 	 * agreements (REPOs).
@@ -247,13 +252,13 @@ public class AccountBalanceSD5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD7#ContraParticipantNumber
-	 * AccountBalanceSD7.ContraParticipantNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD7#mmContraParticipantNumber
+	 * AccountBalanceSD7.mmContraParticipantNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -261,9 +266,9 @@ public class AccountBalanceSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification for stock loans, repurchase agreements (REPOs).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD7.ContraParticipantNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD7.mmContraParticipantNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
@@ -271,9 +276,9 @@ public class AccountBalanceSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD5.PlaceAndName, com.tools20022.repository.msg.AccountBalanceSD5.TransactionPosition,
-						com.tools20022.repository.msg.AccountBalanceSD5.AsOfDate, com.tools20022.repository.msg.AccountBalanceSD5.ContraParticipantNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD5.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceSD5.mmTransactionPosition,
+						com.tools20022.repository.msg.AccountBalanceSD5.mmAsOfDate, com.tools20022.repository.msg.AccountBalanceSD5.mmContraParticipantNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountBalanceSD5";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
@@ -281,5 +286,37 @@ public class AccountBalanceSD5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public AdjustedBalanceTypeSD1Choice getTransactionPosition() {
+		return transactionPosition;
+	}
+
+	public void setTransactionPosition(AdjustedBalanceTypeSD1Choice transactionPosition) {
+		this.transactionPosition = transactionPosition;
+	}
+
+	public ISODate getAsOfDate() {
+		return asOfDate;
+	}
+
+	public void setAsOfDate(ISODate asOfDate) {
+		this.asOfDate = asOfDate;
+	}
+
+	public Max8Text getContraParticipantNumber() {
+		return contraParticipantNumber;
+	}
+
+	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+		this.contraParticipantNumber = contraParticipantNumber;
 	}
 }

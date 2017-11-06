@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Jurisdiction1#Identification
- * Jurisdiction1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Jurisdiction1#Country
- * Jurisdiction1.Country}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Jurisdiction1#mmIdentification
+ * Jurisdiction1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Jurisdiction1#mmCountry
+ * Jurisdiction1.mmCountry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Jurisdiction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text identification;
 	/**
 	 * Specifies the jurisdiction (county, state, province, city).
 	 * <p>
@@ -85,7 +86,7 @@ public class Jurisdiction1 {
 	 * "Specifies the jurisdiction (county, state, province, city)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Jurisdiction1.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class Jurisdiction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Specifies the jurisdiction (county, state, province, city).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Specifies the country.
 	 * <p>
@@ -124,7 +126,7 @@ public class Jurisdiction1 {
 	 * definition} = "Specifies the country."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Jurisdiction1.mmObject();
 			isDerived = false;
@@ -132,8 +134,8 @@ public class Jurisdiction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Specifies the country.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -141,13 +143,29 @@ public class Jurisdiction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Jurisdiction1.Identification, com.tools20022.repository.msg.Jurisdiction1.Country);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Jurisdiction1.mmIdentification, com.tools20022.repository.msg.Jurisdiction1.mmCountry);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Jurisdiction1";
 				definition = "Specifies the jurisdiction (country, county, state, province, city).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max70Text identification) {
+		this.identification = identification;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

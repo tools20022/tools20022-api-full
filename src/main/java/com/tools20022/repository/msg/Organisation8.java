@@ -38,18 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8#Identification
- * Organisation8.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8#CommonName
- * Organisation8.CommonName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8#LocationCategory
- * Organisation8.LocationCategory}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8#Address
- * Organisation8.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8#CountryCode
- * Organisation8.CountryCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8#SchemeData
- * Organisation8.SchemeData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation8#mmIdentification
+ * Organisation8.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation8#mmCommonName
+ * Organisation8.mmCommonName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation8#mmLocationCategory
+ * Organisation8.mmLocationCategory}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation8#mmAddress
+ * Organisation8.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation8#mmCountryCode
+ * Organisation8.mmCountryCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation8#mmSchemeData
+ * Organisation8.mmSchemeData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Organisation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification32 identification;
 	/**
 	 * Identification of the merchant.
 	 * <p>
@@ -96,8 +98,8 @@ public class Organisation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,31 +119,32 @@ public class Organisation8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation18#Identification
-	 * Organisation18.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation18#mmIdentification
+	 * Organisation18.mmIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation25#Identification
-	 * Organisation25.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation25#mmIdentification
+	 * Organisation25.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> Organisation8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the merchant.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation18.Identification, com.tools20022.repository.msg.Organisation25.Identification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation18.mmIdentification, com.tools20022.repository.msg.Organisation25.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected Max70Text commonName;
 	/**
 	 * Name of the merchant as appearing on the receipt.
 	 * <p>
@@ -154,8 +157,8 @@ public class Organisation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,29 +177,32 @@ public class Organisation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation18#CommonName
-	 * Organisation18.CommonName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation25#CommonName
-	 * Organisation25.CommonName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation18#mmCommonName
+	 * Organisation18.mmCommonName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation25#mmCommonName
+	 * Organisation25.mmCommonName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> Organisation8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "CmonNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonName";
 			definition = "Name of the merchant as appearing on the receipt.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation18.CommonName, com.tools20022.repository.msg.Organisation25.CommonName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation18.mmCommonName, com.tools20022.repository.msg.Organisation25.mmCommonName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected LocationCategory1Code locationCategory;
 	/**
 	 * Location category of the place where the merchant actually performed the
 	 * transaction.
@@ -229,13 +235,13 @@ public class Organisation8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation25#LocationCategory
-	 * Organisation25.LocationCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation25#mmLocationCategory
+	 * Organisation25.mmLocationCategory}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocationCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Organisation8.mmObject();
 			isDerived = false;
@@ -243,12 +249,13 @@ public class Organisation8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
 			definition = "Location category of the place where the merchant actually performed the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation25.LocationCategory);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation25.mmLocationCategory);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory1Code.mmObject();
 		}
 	};
+	protected Max140Text address;
 	/**
 	 * Location of the merchant where the transaction took place, as appearing
 	 * on the receipt.
@@ -284,27 +291,28 @@ public class Organisation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation18#Location
-	 * Organisation18.Location}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation18#mmLocation
+	 * Organisation18.mmLocation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Address = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation8.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> Organisation8.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Location of the merchant where the transaction took place, as appearing on the receipt.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation18.Location);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation18.mmLocation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ISO3NumericCountryCode countryCode;
 	/**
 	 * Country of the merchant where the transaction took place.
 	 * <p>
@@ -318,7 +326,8 @@ public class Organisation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -337,20 +346,21 @@ public class Organisation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> Organisation8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "CtryCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryCode";
 			definition = "Country of the merchant where the transaction took place.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISO3NumericCountryCode.mmObject();
 		}
 	};
+	protected Max140Text schemeData;
 	/**
 	 * Additional merchant data required by a card scheme.
 	 * <p>
@@ -378,13 +388,14 @@ public class Organisation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation25#SchemeData
-	 * Organisation25.SchemeData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation25#mmSchemeData
+	 * Organisation25.mmSchemeData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SchemeData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Organisation8.mmObject();
 			isDerived = false;
@@ -392,9 +403,9 @@ public class Organisation8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeData";
 			definition = "Additional merchant data required by a card scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation25.SchemeData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation25.mmSchemeData);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -402,17 +413,66 @@ public class Organisation8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation8.Identification, com.tools20022.repository.msg.Organisation8.CommonName, com.tools20022.repository.msg.Organisation8.LocationCategory,
-						com.tools20022.repository.msg.Organisation8.Address, com.tools20022.repository.msg.Organisation8.CountryCode, com.tools20022.repository.msg.Organisation8.SchemeData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation8.mmIdentification, com.tools20022.repository.msg.Organisation8.mmCommonName,
+						com.tools20022.repository.msg.Organisation8.mmLocationCategory, com.tools20022.repository.msg.Organisation8.mmAddress, com.tools20022.repository.msg.Organisation8.mmCountryCode,
+						com.tools20022.repository.msg.Organisation8.mmSchemeData);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Organisation8";
 				definition = "Merchant performing the transaction.";
-				previousVersion_lazy = () -> Organisation5.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Organisation9.mmObject(), Organisation18.mmObject(), Organisation25.mmObject());
+				previousVersion_lazy = () -> Organisation5.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification32 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = identification;
+	}
+
+	public Max70Text getCommonName() {
+		return commonName;
+	}
+
+	public void setCommonName(Max70Text commonName) {
+		this.commonName = commonName;
+	}
+
+	public LocationCategory1Code getLocationCategory() {
+		return locationCategory;
+	}
+
+	public void setLocationCategory(LocationCategory1Code locationCategory) {
+		this.locationCategory = locationCategory;
+	}
+
+	public Max140Text getAddress() {
+		return address;
+	}
+
+	public void setAddress(Max140Text address) {
+		this.address = address;
+	}
+
+	public ISO3NumericCountryCode getCountryCode() {
+		return countryCode;
+	}
+
+	public void setCountryCode(ISO3NumericCountryCode countryCode) {
+		this.countryCode = countryCode;
+	}
+
+	public Max140Text getSchemeData() {
+		return schemeData;
+	}
+
+	public void setSchemeData(Max140Text schemeData) {
+		this.schemeData = schemeData;
 	}
 }

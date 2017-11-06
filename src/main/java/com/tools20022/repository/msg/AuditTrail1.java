@@ -36,25 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#FieldName
- * AuditTrail1.FieldName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#OldFieldValue
- * AuditTrail1.OldFieldValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#NewFieldValue
- * AuditTrail1.NewFieldValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#OperationTimeStamp
- * AuditTrail1.OperationTimeStamp}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#InstructingUser
- * AuditTrail1.InstructingUser}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#ApprovingUser
- * AuditTrail1.ApprovingUser}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#mmFieldName
+ * AuditTrail1.mmFieldName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#mmOldFieldValue
+ * AuditTrail1.mmOldFieldValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#mmNewFieldValue
+ * AuditTrail1.mmNewFieldValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AuditTrail1#mmOperationTimeStamp
+ * AuditTrail1.mmOperationTimeStamp}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#mmInstructingUser
+ * AuditTrail1.mmInstructingUser}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuditTrail1#mmApprovingUser
+ * AuditTrail1.mmApprovingUser}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AuditTrail1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text fieldName;
 	/**
 	 * Name of the field whose value has been changed.
 	 * <p>
@@ -96,7 +98,7 @@ public class AuditTrail1 {
 	 * definition} = "Name of the field whose value has been changed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class AuditTrail1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FieldName";
 			definition = "Name of the field whose value has been changed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text oldFieldValue;
 	/**
 	 * Value of the field before the change.
 	 * <p>
@@ -135,7 +138,7 @@ public class AuditTrail1 {
 	 * definition} = "Value of the field before the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
@@ -143,11 +146,12 @@ public class AuditTrail1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldFieldValue";
 			definition = "Value of the field before the change.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text newFieldValue;
 	/**
 	 * Value of the field after the change.
 	 * <p>
@@ -174,7 +178,7 @@ public class AuditTrail1 {
 	 * definition} = "Value of the field after the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
@@ -182,11 +186,12 @@ public class AuditTrail1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewFieldValue";
 			definition = "Value of the field after the change.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODateTime operationTimeStamp;
 	/**
 	 * Timestamp of the change.
 	 * <p>
@@ -213,7 +218,7 @@ public class AuditTrail1 {
 	 * definition} = "Timestamp of the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
@@ -221,11 +226,12 @@ public class AuditTrail1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationTimeStamp";
 			definition = "Timestamp of the change.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max256Text instructingUser;
 	/**
 	 * User who instructed the change.
 	 * <p>
@@ -252,7 +258,7 @@ public class AuditTrail1 {
 	 * definition} = "User who instructed the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructingUser = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructingUser = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
@@ -260,11 +266,12 @@ public class AuditTrail1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingUser";
 			definition = "User who instructed the change.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected Max256Text approvingUser;
 	/**
 	 * User who approved the change instructed by the instructing user.
 	 * <p>
@@ -292,7 +299,7 @@ public class AuditTrail1 {
 	 * "User who approved the change instructed by the instructing user."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApprovingUser = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApprovingUser = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
@@ -300,8 +307,8 @@ public class AuditTrail1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovingUser";
 			definition = "User who approved the change instructed by the instructing user.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -309,14 +316,62 @@ public class AuditTrail1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuditTrail1.FieldName, com.tools20022.repository.msg.AuditTrail1.OldFieldValue, com.tools20022.repository.msg.AuditTrail1.NewFieldValue,
-						com.tools20022.repository.msg.AuditTrail1.OperationTimeStamp, com.tools20022.repository.msg.AuditTrail1.InstructingUser, com.tools20022.repository.msg.AuditTrail1.ApprovingUser);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuditTrail1.mmFieldName, com.tools20022.repository.msg.AuditTrail1.mmOldFieldValue, com.tools20022.repository.msg.AuditTrail1.mmNewFieldValue,
+						com.tools20022.repository.msg.AuditTrail1.mmOperationTimeStamp, com.tools20022.repository.msg.AuditTrail1.mmInstructingUser, com.tools20022.repository.msg.AuditTrail1.mmApprovingUser);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AuditTrail1";
 				definition = "Describes information needed to identify a change for a static data, the time when it was performed and the user requesting the change and approving it.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getFieldName() {
+		return fieldName;
+	}
+
+	public void setFieldName(Max35Text fieldName) {
+		this.fieldName = fieldName;
+	}
+
+	public Max350Text getOldFieldValue() {
+		return oldFieldValue;
+	}
+
+	public void setOldFieldValue(Max350Text oldFieldValue) {
+		this.oldFieldValue = oldFieldValue;
+	}
+
+	public Max350Text getNewFieldValue() {
+		return newFieldValue;
+	}
+
+	public void setNewFieldValue(Max350Text newFieldValue) {
+		this.newFieldValue = newFieldValue;
+	}
+
+	public ISODateTime getOperationTimeStamp() {
+		return operationTimeStamp;
+	}
+
+	public void setOperationTimeStamp(ISODateTime operationTimeStamp) {
+		this.operationTimeStamp = operationTimeStamp;
+	}
+
+	public Max256Text getInstructingUser() {
+		return instructingUser;
+	}
+
+	public void setInstructingUser(Max256Text instructingUser) {
+		this.instructingUser = instructingUser;
+	}
+
+	public Max256Text getApprovingUser() {
+		return approvingUser;
+	}
+
+	public void setApprovingUser(Max256Text approvingUser) {
+		this.approvingUser = approvingUser;
 	}
 }

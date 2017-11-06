@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationReturnCriteria#StartDateTimeIndicator
- * ReservationReturnCriteria.StartDateTimeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReturnCriteria#mmStartDateTimeIndicator
+ * ReservationReturnCriteria.mmStartDateTimeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationReturnCriteria#StatusIndicator
- * ReservationReturnCriteria.StatusIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReturnCriteria#mmStatusIndicator
+ * ReservationReturnCriteria.mmStatusIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator startDateTimeIndicator;
 	/**
 	 * Indicates whether the reservation start date time is requested.
 	 * <p>
@@ -87,7 +88,7 @@ public class ReservationReturnCriteria {
 	 * "Indicates whether the reservation start date time is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDateTimeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDateTimeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReservationReturnCriteria.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class ReservationReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDateTimeIndicator";
 			definition = "Indicates whether the reservation start date time is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator statusIndicator;
 	/**
 	 * Indicates whether the reservation status is requested.
 	 * <p>
@@ -128,7 +130,7 @@ public class ReservationReturnCriteria {
 	 * definition} = "Indicates whether the reservation status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReservationReturnCriteria.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class ReservationReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIndicator";
 			definition = "Indicates whether the reservation status is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class ReservationReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReturnCriteria.StartDateTimeIndicator, com.tools20022.repository.msg.ReservationReturnCriteria.StatusIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReturnCriteria.mmStartDateTimeIndicator, com.tools20022.repository.msg.ReservationReturnCriteria.mmStatusIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationReturnCriteria";
 				definition = "Defines the criteria used to report on reservation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getStartDateTimeIndicator() {
+		return startDateTimeIndicator;
+	}
+
+	public void setStartDateTimeIndicator(RequestedIndicator startDateTimeIndicator) {
+		this.startDateTimeIndicator = startDateTimeIndicator;
+	}
+
+	public RequestedIndicator getStatusIndicator() {
+		return statusIndicator;
+	}
+
+	public void setStatusIndicator(RequestedIndicator statusIndicator) {
+		this.statusIndicator = statusIndicator;
 	}
 }

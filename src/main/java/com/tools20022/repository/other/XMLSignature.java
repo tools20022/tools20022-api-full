@@ -40,8 +40,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -62,7 +62,7 @@ public class XMLSignature {
 	final static public MMUserDefined mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMUserDefined() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -73,9 +73,9 @@ public class XMLSignature {
 				})).get();
 				name = "XMLSignature";
 				definition = "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/";
-				processContents = com.tools20022.metamodel.MMProcessContent.LAX;
 				namespaceList = "http://www.w3.org/2000/09/xmldsig#";
 				namespace = com.tools20022.metamodel.MMNamespace.list;
+				processContents = com.tools20022.metamodel.MMProcessContent.LAX;
 			}
 		});
 		return mmObject_lazy.get();

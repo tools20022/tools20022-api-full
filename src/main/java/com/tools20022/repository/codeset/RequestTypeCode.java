@@ -31,33 +31,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#ReleasePending
- * RequestTypeCode.ReleasePending}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RequestTypeCode#HoldNormal
- * RequestTypeCode.HoldNormal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmReleasePending
+ * RequestTypeCode.mmReleasePending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#Cancellation
- * RequestTypeCode.Cancellation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RequestTypeCode#ReSequence
- * RequestTypeCode.ReSequence}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmHoldNormal
+ * RequestTypeCode.mmHoldNormal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#ReleaseSuspicious
- * RequestTypeCode.ReleaseSuspicious}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmCancellation
+ * RequestTypeCode.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#BankPositionEnquiry
- * RequestTypeCode.BankPositionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmReSequence
+ * RequestTypeCode.mmReSequence}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#SpecificTransactionEnquiry
- * RequestTypeCode.SpecificTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmReleaseSuspicious
+ * RequestTypeCode.mmReleaseSuspicious}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#QueuedTransactionEnquiry
- * RequestTypeCode.QueuedTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmBankPositionEnquiry
+ * RequestTypeCode.mmBankPositionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#SuspiciousTransactionEnquiry
- * RequestTypeCode.SuspiciousTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmSpecificTransactionEnquiry
+ * RequestTypeCode.mmSpecificTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#PendingInwardCreditsEnquiry
- * RequestTypeCode.PendingInwardCreditsEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmQueuedTransactionEnquiry
+ * RequestTypeCode.mmQueuedTransactionEnquiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmSuspiciousTransactionEnquiry
+ * RequestTypeCode.mmSuspiciousTransactionEnquiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmPendingInwardCreditsEnquiry
+ * RequestTypeCode.mmPendingInwardCreditsEnquiry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -72,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -116,7 +118,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is a request to release the pending transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReleasePending = new MMCode() {
+	public static final MMCode mmReleasePending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleasePending";
@@ -146,7 +148,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is a request to hold normal transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode HoldNormal = new MMCode() {
+	public static final MMCode mmHoldNormal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldNormal";
@@ -176,7 +178,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is a request to cancellation a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -207,7 +209,7 @@ public class RequestTypeCode {
 	 * "Type is a request to change the sequence of the  transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReSequence = new MMCode() {
+	public static final MMCode mmReSequence = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSequence";
@@ -238,7 +240,7 @@ public class RequestTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReleaseSuspicious = new MMCode() {
+	public static final MMCode mmReleaseSuspicious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleaseSuspicious";
@@ -268,7 +270,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on the bank's position."</li>
 	 * </ul>
 	 */
-	public static final MMCode BankPositionEnquiry = new MMCode() {
+	public static final MMCode mmBankPositionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPositionEnquiry";
@@ -298,7 +300,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on a specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecificTransactionEnquiry = new MMCode() {
+	public static final MMCode mmSpecificTransactionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificTransactionEnquiry";
@@ -328,7 +330,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on a queued transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode QueuedTransactionEnquiry = new MMCode() {
+	public static final MMCode mmQueuedTransactionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueuedTransactionEnquiry";
@@ -358,7 +360,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on a suspicious transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspiciousTransactionEnquiry = new MMCode() {
+	public static final MMCode mmSuspiciousTransactionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousTransactionEnquiry";
@@ -388,7 +390,7 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on pending inward credits."</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingInwardCreditsEnquiry = new MMCode() {
+	public static final MMCode mmPendingInwardCreditsEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingInwardCreditsEnquiry";
@@ -401,15 +403,16 @@ public class RequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RT01");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestTypeCode";
 				definition = "Specifies the request used to further detail the type of information that will be queried.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestTypeCode.ReleasePending, com.tools20022.repository.codeset.RequestTypeCode.HoldNormal, com.tools20022.repository.codeset.RequestTypeCode.Cancellation,
-						com.tools20022.repository.codeset.RequestTypeCode.ReSequence, com.tools20022.repository.codeset.RequestTypeCode.ReleaseSuspicious, com.tools20022.repository.codeset.RequestTypeCode.BankPositionEnquiry,
-						com.tools20022.repository.codeset.RequestTypeCode.SpecificTransactionEnquiry, com.tools20022.repository.codeset.RequestTypeCode.QueuedTransactionEnquiry,
-						com.tools20022.repository.codeset.RequestTypeCode.SuspiciousTransactionEnquiry, com.tools20022.repository.codeset.RequestTypeCode.PendingInwardCreditsEnquiry);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestTypeCode.mmReleasePending, com.tools20022.repository.codeset.RequestTypeCode.mmHoldNormal,
+						com.tools20022.repository.codeset.RequestTypeCode.mmCancellation, com.tools20022.repository.codeset.RequestTypeCode.mmReSequence, com.tools20022.repository.codeset.RequestTypeCode.mmReleaseSuspicious,
+						com.tools20022.repository.codeset.RequestTypeCode.mmBankPositionEnquiry, com.tools20022.repository.codeset.RequestTypeCode.mmSpecificTransactionEnquiry,
+						com.tools20022.repository.codeset.RequestTypeCode.mmQueuedTransactionEnquiry, com.tools20022.repository.codeset.RequestTypeCode.mmSuspiciousTransactionEnquiry,
+						com.tools20022.repository.codeset.RequestTypeCode.mmPendingInwardCreditsEnquiry);
 				derivation_lazy = () -> Arrays.asList(RequestType1Code.mmObject(), RequestType2Code.mmObject());
 			}
 		});

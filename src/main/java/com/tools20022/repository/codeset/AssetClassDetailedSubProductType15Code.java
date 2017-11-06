@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType15Code#MillingWheat
- * AssetClassDetailedSubProductType15Code.MillingWheat}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType15Code#mmMillingWheat
+ * AssetClassDetailedSubProductType15Code.mmMillingWheat}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class AssetClassDetailedSubProductType15Code extends AssetClassDetailedSu
 	 * name} = "MillingWheat"</li>
 	 * </ul>
 	 */
-	public static final MMCode MillingWheat = new MMCode() {
+	public static final MMCode mmMillingWheat = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MillingWheat";
@@ -84,11 +84,11 @@ public class AssetClassDetailedSubProductType15Code extends AssetClassDetailedSu
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType15Code";
 				definition = "Further sub product code list for commodity derivative Grain.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType15Code.MillingWheat);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType15Code.mmMillingWheat);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

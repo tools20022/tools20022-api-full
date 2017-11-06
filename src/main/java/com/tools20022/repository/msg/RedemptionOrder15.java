@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.RedemptionOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Instruction from an investor to sell investment fund units back to the fund.
@@ -39,86 +40,87 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#OrderReference
- * RedemptionOrder15.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmOrderReference
+ * RedemptionOrder15.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#ClientReference
- * RedemptionOrder15.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmClientReference
+ * RedemptionOrder15.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#InvestmentAccountDetails
- * RedemptionOrder15.InvestmentAccountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder15#OrderType
- * RedemptionOrder15.OrderType}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmInvestmentAccountDetails
+ * RedemptionOrder15.mmInvestmentAccountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmOrderType
+ * RedemptionOrder15.mmOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#BeneficiaryDetails
- * RedemptionOrder15.BeneficiaryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmBeneficiaryDetails
+ * RedemptionOrder15.mmBeneficiaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#AmountOrUnitsOrPercentage
- * RedemptionOrder15.AmountOrUnitsOrPercentage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder15#Rounding
- * RedemptionOrder15.Rounding}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmAmountOrUnitsOrPercentage
+ * RedemptionOrder15.mmAmountOrUnitsOrPercentage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmRounding
+ * RedemptionOrder15.mmRounding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#SettlementAmount
- * RedemptionOrder15.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmSettlementAmount
+ * RedemptionOrder15.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#CashSettlementDate
- * RedemptionOrder15.CashSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmCashSettlementDate
+ * RedemptionOrder15.mmCashSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#SettlementMethod
- * RedemptionOrder15.SettlementMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmSettlementMethod
+ * RedemptionOrder15.mmSettlementMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#ForeignExchangeDetails
- * RedemptionOrder15.ForeignExchangeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmForeignExchangeDetails
+ * RedemptionOrder15.mmForeignExchangeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#IncomePreference
- * RedemptionOrder15.IncomePreference}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmIncomePreference
+ * RedemptionOrder15.mmIncomePreference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#Group1Or2Units
- * RedemptionOrder15.Group1Or2Units}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmGroup1Or2Units
+ * RedemptionOrder15.mmGroup1Or2Units}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#TransactionOverhead
- * RedemptionOrder15.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmTransactionOverhead
+ * RedemptionOrder15.mmTransactionOverhead}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#SettlementAndCustodyDetails
- * RedemptionOrder15.SettlementAndCustodyDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmSettlementAndCustodyDetails
+ * RedemptionOrder15.mmSettlementAndCustodyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#PhysicalDeliveryIndicator
- * RedemptionOrder15.PhysicalDeliveryIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmPhysicalDeliveryIndicator
+ * RedemptionOrder15.mmPhysicalDeliveryIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#PhysicalDeliveryDetails
- * RedemptionOrder15.PhysicalDeliveryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmPhysicalDeliveryDetails
+ * RedemptionOrder15.mmPhysicalDeliveryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#CashSettlementDetails
- * RedemptionOrder15.CashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmCashSettlementDetails
+ * RedemptionOrder15.mmCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#NonStandardSettlementInformation
- * RedemptionOrder15.NonStandardSettlementInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmNonStandardSettlementInformation
+ * RedemptionOrder15.mmNonStandardSettlementInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#StaffClientBreakdown
- * RedemptionOrder15.StaffClientBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmStaffClientBreakdown
+ * RedemptionOrder15.mmStaffClientBreakdown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#FinancialAdvice
- * RedemptionOrder15.FinancialAdvice}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmFinancialAdvice
+ * RedemptionOrder15.mmFinancialAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#NegotiatedTrade
- * RedemptionOrder15.NegotiatedTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmNegotiatedTrade
+ * RedemptionOrder15.mmNegotiatedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#RelatedPartyDetails
- * RedemptionOrder15.RelatedPartyDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder15#Equalisation
- * RedemptionOrder15.Equalisation}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmRelatedPartyDetails
+ * RedemptionOrder15.mmRelatedPartyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#CustomerConductClassification
- * RedemptionOrder15.CustomerConductClassification}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmEqualisation
+ * RedemptionOrder15.mmEqualisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#TransactionChannelType
- * RedemptionOrder15.TransactionChannelType}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmCustomerConductClassification
+ * RedemptionOrder15.mmCustomerConductClassification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#SignatureType
- * RedemptionOrder15.SignatureType}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmTransactionChannelType
+ * RedemptionOrder15.mmTransactionChannelType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#OrderWaiverDetails
- * RedemptionOrder15.OrderWaiverDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmSignatureType
+ * RedemptionOrder15.mmSignatureType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmOrderWaiverDetails
+ * RedemptionOrder15.mmOrderWaiverDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -127,8 +129,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,6 +149,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RedemptionOrder15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for the order, as assigned by the
 	 * instructing party.
@@ -160,8 +163,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,25 +186,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#OrderReference
-	 * RedemptionOrder7.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmOrderReference
+	 * RedemptionOrder7.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for the order, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.OrderReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmOrderReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of the order. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -216,8 +220,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,25 +243,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#ClientReference
-	 * RedemptionOrder7.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmClientReference
+	 * RedemptionOrder7.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.ClientReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmClientReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected InvestmentAccount58 investmentAccountDetails;
 	/**
 	 * Account impacted by the investment fund order.
 	 * <p>
@@ -269,8 +274,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentAccount
-	 * InvestmentFundTransaction.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentAccount
+	 * InvestmentFundTransaction.mmInvestmentAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -290,26 +295,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#InvestmentAccountDetails
-	 * RedemptionOrder7.InvestmentAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmInvestmentAccountDetails
+	 * RedemptionOrder7.mmInvestmentAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentAccount;
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account impacted by the investment fund order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.InvestmentAccountDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmInvestmentAccountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount58.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
 		}
 	};
+	protected List<FundOrderType4Choice> orderType;
 	/**
 	 * Category of the investment fund order.
 	 * <p>
@@ -322,8 +328,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderType
-	 * InvestmentFundOrder.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderType
+	 * InvestmentFundOrder.mmOrderType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -343,26 +349,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#OrderType
-	 * RedemptionOrder7.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmOrderType
+	 * RedemptionOrder7.mmOrderType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderType;
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Category of the investment fund order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.OrderType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmOrderType;
 			maxOccurs = 10;
-			type_lazy = () -> FundOrderType4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FundOrderType4Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IndividualPerson32> beneficiaryDetails;
 	/**
 	 * Additional information about the investor.
 	 * <p>
@@ -394,25 +401,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#BeneficiaryDetails
-	 * RedemptionOrder7.BeneficiaryDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmBeneficiaryDetails
+	 * RedemptionOrder7.mmBeneficiaryDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BeneficiaryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficiaryDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryDetails";
 			definition = "Additional information about the investor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.BeneficiaryDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmBeneficiaryDetails;
 			minOccurs = 0;
-			type_lazy = () -> IndividualPerson32.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson32.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity28Choice amountOrUnitsOrPercentage;
 	/**
 	 * Amount of money or the number of units or percentage to be redeemed for
 	 * the redemption order.
@@ -426,8 +434,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -448,21 +456,22 @@ public class RedemptionOrder15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountOrUnitsOrPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountOrUnitsOrPercentage = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "AmtOrUnitsOrPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrUnitsOrPercentage";
 			definition = "Amount of money or the number of units or percentage to be redeemed for the redemption order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity28Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity28Choice.mmObject();
 		}
 	};
+	protected RoundingDirection2Code rounding;
 	/**
 	 * Indicates the rounding direction applied to nearest unit.
 	 * <p>
@@ -476,8 +485,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#RoundingDirection
-	 * RoundingParameters.RoundingDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingDirection
+	 * RoundingParameters.mmRoundingDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -498,25 +507,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#Rounding
-	 * RedemptionOrder7.Rounding}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmRounding
+	 * RedemptionOrder7.mmRounding}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rounding = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRounding = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.RoundingDirection;
 			isDerived = false;
 			xmlTag = "Rndg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rounding";
 			definition = "Indicates the rounding direction applied to nearest unit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.Rounding;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmRounding;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RoundingDirection2Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
 	 * Total amount of money paid /to be paid or received in exchange for the
 	 * financial instrument in the individual order.
@@ -531,8 +541,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -554,25 +564,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#SettlementAmount
-	 * RedemptionOrder7.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmSettlementAmount
+	 * RedemptionOrder7.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.SettlementAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmSettlementAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate cashSettlementDate;
 	/**
 	 * Date on which cash is available.
 	 * <p>
@@ -585,8 +596,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -606,25 +617,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#CashSettlementDate
-	 * RedemptionOrder7.CashSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmCashSettlementDate
+	 * RedemptionOrder7.mmCashSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDate";
 			definition = "Date on which cash is available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.CashSettlementDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmCashSettlementDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code settlementMethod;
 	/**
 	 * Method by which the transaction is settled.
 	 * <p>
@@ -638,8 +650,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -659,25 +671,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#SettlementMethod
-	 * RedemptionOrder7.SettlementMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmSettlementMethod
+	 * RedemptionOrder7.mmSettlementMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "SttlmMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method by which the transaction is settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.SettlementMethod;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmSettlementMethod;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected ForeignExchangeTerms32 foreignExchangeDetails;
 	/**
 	 * Information needed to process a currency exchange or conversion.<br>
 	 * How the exchange rate is expressed determines which currency is the Unit
@@ -701,8 +714,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -724,26 +737,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#ForeignExchangeDetails
-	 * RedemptionOrder7.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmForeignExchangeDetails
+	 * RedemptionOrder7.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.\r\nHow the exchange rate is expressed determines which currency is the Unit Currency and Quoted Currency. If the amounts concerned are EUR 1000 and USD 1300, the exchange rate may be expressed as per either of the following examples:\r\nEXAMPLE 1 \r\nUnitCurrency  EUR\r\nQuotedCurrency  USD\r\nExchangeRate  1.300\r\nEXAMPLE 2\r\nUnitCurrency  USD\r\nQuotedCurrency  EUR\r\nExchangeRate  0.769";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.ForeignExchangeDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmForeignExchangeDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ForeignExchangeTerms32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms32.mmObject();
 		}
 	};
+	protected IncomePreference1Code incomePreference;
 	/**
 	 * Dividend option chosen by the account owner based on the options offered
 	 * in the prospectus.
@@ -758,8 +772,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#IncomePreference
-	 * InvestmentAccountService.IncomePreference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmIncomePreference
+	 * InvestmentAccountService.mmIncomePreference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -781,25 +795,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#IncomePreference
-	 * RedemptionOrder7.IncomePreference}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmIncomePreference
+	 * RedemptionOrder7.mmIncomePreference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncomePreference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.IncomePreference;
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.IncomePreference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmIncomePreference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
 		}
 	};
+	protected UKTaxGroupUnit1Code group1Or2Units;
 	/**
 	 * Tax group to which the purchased investment fund units belong. The
 	 * investor indicates to the intermediary operating pooled nominees, which
@@ -815,8 +830,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Group1Or2Units
-	 * SecuritiesQuantity.Group1Or2Units}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmGroup1Or2Units
+	 * SecuritiesQuantity.mmGroup1Or2Units}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -838,25 +853,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#Group1Or2Units
-	 * RedemptionOrder7.Group1Or2Units}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmGroup1Or2Units
+	 * RedemptionOrder7.mmGroup1Or2Units}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Group1Or2Units = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Group1Or2Units;
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Or2Units";
 			definition = "Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.Group1Or2Units;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmGroup1Or2Units;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> UKTaxGroupUnit1Code.mmObject();
 		}
 	};
+	protected FeeAndTax1 transactionOverhead;
 	/**
 	 * Fees (charges/commission) and tax to be applied to the gross amount.
 	 * <p>
@@ -888,21 +904,22 @@ public class RedemptionOrder15 {
 	 * "Fees (charges/commission) and tax to be applied to the gross amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionOverhead = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionOverhead = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			isDerived = false;
 			xmlTag = "TxOvrhd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOverhead";
 			definition = "Fees (charges/commission) and tax to be applied to the gross amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FeeAndTax1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FeeAndTax1.mmObject();
 		}
 	};
+	protected FundSettlementParameters12 settlementAndCustodyDetails;
 	/**
 	 * Parameters used to execute the settlement of an investment fund order.
 	 * <p>
@@ -915,8 +932,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -937,26 +954,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#SettlementAndCustodyDetails
-	 * RedemptionOrder7.SettlementAndCustodyDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmSettlementAndCustodyDetails
+	 * RedemptionOrder7.mmSettlementAndCustodyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAndCustodyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SttlmAndCtdyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndCustodyDetails";
 			definition = "Parameters used to execute the settlement of an investment fund order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.SettlementAndCustodyDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmSettlementAndCustodyDetails;
 			maxOccurs = 1;
-			type_lazy = () -> FundSettlementParameters12.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 		}
 	};
+	protected YesNoIndicator physicalDeliveryIndicator;
 	/**
 	 * Indicates whether the financial instrument is to be physically delivered.
 	 * <p>
@@ -988,11 +1006,11 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#PhysicalDeliveryIndicator
-	 * RedemptionOrder7.PhysicalDeliveryIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmPhysicalDeliveryIndicator
+	 * RedemptionOrder7.mmPhysicalDeliveryIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhysicalDeliveryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhysicalDeliveryIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			isDerived = false;
@@ -1000,12 +1018,13 @@ public class RedemptionOrder15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryIndicator";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.PhysicalDeliveryIndicator;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmPhysicalDeliveryIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DeliveryParameters3 physicalDeliveryDetails;
 	/**
 	 * Information related to the physical delivery of the securities.
 	 * <p>
@@ -1017,8 +1036,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
-	 * SecuritiesTransfer.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+	 * SecuritiesTransfer.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1039,26 +1058,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#PhysicalDeliveryDetails
-	 * RedemptionOrder7.PhysicalDeliveryDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmPhysicalDeliveryDetails
+	 * RedemptionOrder7.mmPhysicalDeliveryDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PhysicalDeliveryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery;
 			isDerived = false;
 			xmlTag = "PhysDlvryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails";
 			definition = "Information related to the physical delivery of the securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.PhysicalDeliveryDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmPhysicalDeliveryDetails;
 			maxOccurs = 1;
-			type_lazy = () -> DeliveryParameters3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters3.mmObject();
 		}
 	};
+	protected PaymentTransaction72 cashSettlementDetails;
 	/**
 	 * Payment process for the transfer of cash from the debtor to the creditor.
 	 * <p>
@@ -1070,8 +1090,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentOffset
-	 * PaymentObligation.PaymentOffset}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentOffset
+	 * PaymentObligation.mmPaymentOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1093,26 +1113,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#CashSettlementDetails
-	 * RedemptionOrder7.CashSettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmCashSettlementDetails
+	 * RedemptionOrder7.mmCashSettlementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentOffset;
 			isDerived = false;
 			xmlTag = "CshSttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDetails";
 			definition = "Payment process for the transfer of cash from the debtor to the creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.CashSettlementDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmCashSettlementDetails;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentTransaction72.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction72.mmObject();
 		}
 	};
+	protected Max350Text nonStandardSettlementInformation;
 	/**
 	 * Additional specific settlement information for non-regulated traded
 	 * funds.
@@ -1126,8 +1147,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#NonStandardSettlementInformation
-	 * InvestmentFundOrderExecution.NonStandardSettlementInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmNonStandardSettlementInformation
+	 * InvestmentFundOrderExecution.mmNonStandardSettlementInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1149,25 +1170,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#NonStandardSettlementInformation
-	 * RedemptionOrder7.NonStandardSettlementInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmNonStandardSettlementInformation
+	 * RedemptionOrder7.mmNonStandardSettlementInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonStandardSettlementInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.NonStandardSettlementInformation;
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.NonStandardSettlementInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmNonStandardSettlementInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2> staffClientBreakdown;
 	/**
 	 * Breakdown of the net amount per type of order.
 	 * <p>
@@ -1201,26 +1223,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#StaffClientBreakdown
-	 * RedemptionOrder7.StaffClientBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmStaffClientBreakdown
+	 * RedemptionOrder7.mmStaffClientBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StaffClientBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStaffClientBreakdown = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			businessComponentTrace_lazy = () -> RedemptionOrder.mmObject();
+			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			isDerived = false;
 			xmlTag = "StffClntBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffClientBreakdown";
 			definition = "Breakdown of the net amount per type of order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.StaffClientBreakdown;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmStaffClientBreakdown;
 			maxOccurs = 4;
-			type_lazy = () -> InvestmentFundsOrderBreakdown2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2.mmObject();
 		}
 	};
+	protected FinancialAdvice1Code financialAdvice;
 	/**
 	 * Specifies if advice has been received from an independent financial
 	 * advisor.
@@ -1235,8 +1258,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#FinancialAdvice
-	 * InvestmentFundOrder.FinancialAdvice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmFinancialAdvice
+	 * InvestmentFundOrder.mmFinancialAdvice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1258,25 +1281,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#FinancialAdvice
-	 * RedemptionOrder7.FinancialAdvice}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmFinancialAdvice
+	 * RedemptionOrder7.mmFinancialAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialAdvice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialAdvice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmFinancialAdvice;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.FinancialAdvice;
 			isDerived = false;
 			xmlTag = "FinAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvice";
 			definition = "Specifies if advice has been received from an independent financial advisor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.FinancialAdvice;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmFinancialAdvice;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FinancialAdvice1Code.mmObject();
 		}
 	};
+	protected NegotiatedTrade1Code negotiatedTrade;
 	/**
 	 * Specifies whether the trade is negotiated.
 	 * <p>
@@ -1290,8 +1314,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#NegotiatedTrade
-	 * InvestmentFundOrder.NegotiatedTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNegotiatedTrade
+	 * InvestmentFundOrder.mmNegotiatedTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1311,25 +1335,26 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#NegotiatedTrade
-	 * RedemptionOrder7.NegotiatedTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmNegotiatedTrade
+	 * RedemptionOrder7.mmNegotiatedTrade}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NegotiatedTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNegotiatedTrade = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNegotiatedTrade;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.NegotiatedTrade;
 			isDerived = false;
 			xmlTag = "NgtdTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiatedTrade";
 			definition = "Specifies whether the trade is negotiated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.NegotiatedTrade;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmNegotiatedTrade;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NegotiatedTrade1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary40> relatedPartyDetails;
 	/**
 	 * Party related to the transaction.
 	 * <p>
@@ -1341,8 +1366,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1362,26 +1387,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#RelatedPartyDetails
-	 * RedemptionOrder7.RelatedPartyDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmRelatedPartyDetails
+	 * RedemptionOrder7.mmRelatedPartyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Party related to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.RelatedPartyDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmRelatedPartyDetails;
 			maxOccurs = 10;
-			type_lazy = () -> Intermediary40.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary40.mmObject();
 		}
 	};
+	protected Equalisation1 equalisation;
 	/**
 	 * Part of an investor's retained subscription amount that is returned by
 	 * the fund in order to reimburse preliminary incentive/performance fees.
@@ -1394,8 +1420,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#Equalisation
-	 * InvestmentFundClass.Equalisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmEqualisation
+	 * InvestmentFundClass.mmEqualisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1417,26 +1443,27 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#Equalisation
-	 * RedemptionOrder7.Equalisation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmEqualisation
+	 * RedemptionOrder7.mmEqualisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Equalisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEqualisation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.Equalisation;
 			isDerived = false;
 			xmlTag = "Equlstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equalisation";
 			definition = "Part of an investor's retained subscription amount that is returned by the fund in order to reimburse preliminary incentive/performance fees.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.Equalisation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RedemptionOrder7.mmEqualisation;
 			maxOccurs = 1;
-			type_lazy = () -> Equalisation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Equalisation1.mmObject();
 		}
 	};
+	protected CustomerConductClassification1Choice customerConductClassification;
 	/**
 	 * Assessment of the customer’s behaviour at the time of the account opening
 	 * application.
@@ -1468,7 +1495,7 @@ public class RedemptionOrder15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerConductClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerConductClassification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
 			isDerived = false;
@@ -1476,11 +1503,12 @@ public class RedemptionOrder15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerConductClassification";
 			definition = "Assessment of the customer’s behaviour at the time of the account opening application.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CustomerConductClassification1Choice.mmObject();
 		}
 	};
+	protected TransactionChannelType1Choice transactionChannelType;
 	/**
 	 * Means by which the investor or account owner submits the open account
 	 * form.
@@ -1494,8 +1522,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#TransactionChannel
-	 * AccountContract.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmTransactionChannel
+	 * AccountContract.mmTransactionChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1516,21 +1544,22 @@ public class RedemptionOrder15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionChannelType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionChannelType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTransactionChannel;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.TransactionChannel;
 			isDerived = false;
 			xmlTag = "TxChanlTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannelType";
 			definition = "Means by which the investor or account owner submits the open account form. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionChannelType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> TransactionChannelType1Choice.mmObject();
 		}
 	};
+	protected SignatureType1Choice signatureType;
 	/**
 	 * Type of signature.
 	 * <p>
@@ -1544,8 +1573,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#SignatureRequired
-	 * InvestmentFundClassProcessingCharacteristics.SignatureRequired}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmSignatureRequired
+	 * InvestmentFundClassProcessingCharacteristics.mmSignatureRequired}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1564,20 +1593,21 @@ public class RedemptionOrder15 {
 	 * definition} = "Type of signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignatureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignatureType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSignatureRequired;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.SignatureRequired;
 			isDerived = false;
 			xmlTag = "SgntrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureType";
 			definition = "Type of signature.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SignatureType1Choice.mmObject();
 		}
 	};
+	protected OrderWaiver1 orderWaiverDetails;
 	/**
 	 * Information about a non-standard order.
 	 * <p>
@@ -1589,8 +1619,8 @@ public class RedemptionOrder15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderWaiverReason
-	 * InvestmentFundOrder.OrderWaiverReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderWaiverReason
+	 * InvestmentFundOrder.mmOrderWaiverReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1609,38 +1639,38 @@ public class RedemptionOrder15 {
 	 * definition} = "Information about a non-standard order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderWaiverDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderWaiverDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> RedemptionOrder15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderWaiverReason;
 			isDerived = false;
 			xmlTag = "OrdrWvrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderWaiverDetails";
 			definition = "Information about a non-standard order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OrderWaiver1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrderWaiver1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder15.OrderReference, com.tools20022.repository.msg.RedemptionOrder15.ClientReference,
-						com.tools20022.repository.msg.RedemptionOrder15.InvestmentAccountDetails, com.tools20022.repository.msg.RedemptionOrder15.OrderType, com.tools20022.repository.msg.RedemptionOrder15.BeneficiaryDetails,
-						com.tools20022.repository.msg.RedemptionOrder15.AmountOrUnitsOrPercentage, com.tools20022.repository.msg.RedemptionOrder15.Rounding, com.tools20022.repository.msg.RedemptionOrder15.SettlementAmount,
-						com.tools20022.repository.msg.RedemptionOrder15.CashSettlementDate, com.tools20022.repository.msg.RedemptionOrder15.SettlementMethod, com.tools20022.repository.msg.RedemptionOrder15.ForeignExchangeDetails,
-						com.tools20022.repository.msg.RedemptionOrder15.IncomePreference, com.tools20022.repository.msg.RedemptionOrder15.Group1Or2Units, com.tools20022.repository.msg.RedemptionOrder15.TransactionOverhead,
-						com.tools20022.repository.msg.RedemptionOrder15.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionOrder15.PhysicalDeliveryIndicator,
-						com.tools20022.repository.msg.RedemptionOrder15.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder15.CashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionOrder15.NonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionOrder15.StaffClientBreakdown,
-						com.tools20022.repository.msg.RedemptionOrder15.FinancialAdvice, com.tools20022.repository.msg.RedemptionOrder15.NegotiatedTrade, com.tools20022.repository.msg.RedemptionOrder15.RelatedPartyDetails,
-						com.tools20022.repository.msg.RedemptionOrder15.Equalisation, com.tools20022.repository.msg.RedemptionOrder15.CustomerConductClassification, com.tools20022.repository.msg.RedemptionOrder15.TransactionChannelType,
-						com.tools20022.repository.msg.RedemptionOrder15.SignatureType, com.tools20022.repository.msg.RedemptionOrder15.OrderWaiverDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder15.mmOrderReference, com.tools20022.repository.msg.RedemptionOrder15.mmClientReference,
+						com.tools20022.repository.msg.RedemptionOrder15.mmInvestmentAccountDetails, com.tools20022.repository.msg.RedemptionOrder15.mmOrderType, com.tools20022.repository.msg.RedemptionOrder15.mmBeneficiaryDetails,
+						com.tools20022.repository.msg.RedemptionOrder15.mmAmountOrUnitsOrPercentage, com.tools20022.repository.msg.RedemptionOrder15.mmRounding, com.tools20022.repository.msg.RedemptionOrder15.mmSettlementAmount,
+						com.tools20022.repository.msg.RedemptionOrder15.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionOrder15.mmSettlementMethod, com.tools20022.repository.msg.RedemptionOrder15.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.RedemptionOrder15.mmIncomePreference, com.tools20022.repository.msg.RedemptionOrder15.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionOrder15.mmTransactionOverhead,
+						com.tools20022.repository.msg.RedemptionOrder15.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionOrder15.mmPhysicalDeliveryIndicator,
+						com.tools20022.repository.msg.RedemptionOrder15.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder15.mmCashSettlementDetails,
+						com.tools20022.repository.msg.RedemptionOrder15.mmNonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionOrder15.mmStaffClientBreakdown,
+						com.tools20022.repository.msg.RedemptionOrder15.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionOrder15.mmNegotiatedTrade, com.tools20022.repository.msg.RedemptionOrder15.mmRelatedPartyDetails,
+						com.tools20022.repository.msg.RedemptionOrder15.mmEqualisation, com.tools20022.repository.msg.RedemptionOrder15.mmCustomerConductClassification,
+						com.tools20022.repository.msg.RedemptionOrder15.mmTransactionChannelType, com.tools20022.repository.msg.RedemptionOrder15.mmSignatureType, com.tools20022.repository.msg.RedemptionOrder15.mmOrderWaiverDetails);
 				trace_lazy = () -> RedemptionOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RedemptionOrder15";
 				definition = "Instruction from an investor to sell investment fund units back to the fund.";
@@ -1648,5 +1678,229 @@ public class RedemptionOrder15 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public InvestmentAccount58 getInvestmentAccountDetails() {
+		return investmentAccountDetails;
+	}
+
+	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+		this.investmentAccountDetails = investmentAccountDetails;
+	}
+
+	public List<FundOrderType4Choice> getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(List<FundOrderType4Choice> orderType) {
+		this.orderType = orderType;
+	}
+
+	public List<IndividualPerson32> getBeneficiaryDetails() {
+		return beneficiaryDetails;
+	}
+
+	public void setBeneficiaryDetails(List<com.tools20022.repository.msg.IndividualPerson32> beneficiaryDetails) {
+		this.beneficiaryDetails = beneficiaryDetails;
+	}
+
+	public FinancialInstrumentQuantity28Choice getAmountOrUnitsOrPercentage() {
+		return amountOrUnitsOrPercentage;
+	}
+
+	public void setAmountOrUnitsOrPercentage(FinancialInstrumentQuantity28Choice amountOrUnitsOrPercentage) {
+		this.amountOrUnitsOrPercentage = amountOrUnitsOrPercentage;
+	}
+
+	public RoundingDirection2Code getRounding() {
+		return rounding;
+	}
+
+	public void setRounding(RoundingDirection2Code rounding) {
+		this.rounding = rounding;
+	}
+
+	public ActiveCurrencyAndAmount getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public ISODate getCashSettlementDate() {
+		return cashSettlementDate;
+	}
+
+	public void setCashSettlementDate(ISODate cashSettlementDate) {
+		this.cashSettlementDate = cashSettlementDate;
+	}
+
+	public DeliveryReceiptType2Code getSettlementMethod() {
+		return settlementMethod;
+	}
+
+	public void setSettlementMethod(DeliveryReceiptType2Code settlementMethod) {
+		this.settlementMethod = settlementMethod;
+	}
+
+	public ForeignExchangeTerms32 getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms32 foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
+	}
+
+	public IncomePreference1Code getIncomePreference() {
+		return incomePreference;
+	}
+
+	public void setIncomePreference(IncomePreference1Code incomePreference) {
+		this.incomePreference = incomePreference;
+	}
+
+	public UKTaxGroupUnit1Code getGroup1Or2Units() {
+		return group1Or2Units;
+	}
+
+	public void setGroup1Or2Units(UKTaxGroupUnit1Code group1Or2Units) {
+		this.group1Or2Units = group1Or2Units;
+	}
+
+	public FeeAndTax1 getTransactionOverhead() {
+		return transactionOverhead;
+	}
+
+	public void setTransactionOverhead(com.tools20022.repository.msg.FeeAndTax1 transactionOverhead) {
+		this.transactionOverhead = transactionOverhead;
+	}
+
+	public FundSettlementParameters12 getSettlementAndCustodyDetails() {
+		return settlementAndCustodyDetails;
+	}
+
+	public void setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters12 settlementAndCustodyDetails) {
+		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
+	}
+
+	public YesNoIndicator getPhysicalDeliveryIndicator() {
+		return physicalDeliveryIndicator;
+	}
+
+	public void setPhysicalDeliveryIndicator(YesNoIndicator physicalDeliveryIndicator) {
+		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
+	}
+
+	public DeliveryParameters3 getPhysicalDeliveryDetails() {
+		return physicalDeliveryDetails;
+	}
+
+	public void setPhysicalDeliveryDetails(com.tools20022.repository.msg.DeliveryParameters3 physicalDeliveryDetails) {
+		this.physicalDeliveryDetails = physicalDeliveryDetails;
+	}
+
+	public PaymentTransaction72 getCashSettlementDetails() {
+		return cashSettlementDetails;
+	}
+
+	public void setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction72 cashSettlementDetails) {
+		this.cashSettlementDetails = cashSettlementDetails;
+	}
+
+	public Max350Text getNonStandardSettlementInformation() {
+		return nonStandardSettlementInformation;
+	}
+
+	public void setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
+		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
+	}
+
+	public List<InvestmentFundsOrderBreakdown2> getStaffClientBreakdown() {
+		return staffClientBreakdown;
+	}
+
+	public void setStaffClientBreakdown(List<com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2> staffClientBreakdown) {
+		this.staffClientBreakdown = staffClientBreakdown;
+	}
+
+	public FinancialAdvice1Code getFinancialAdvice() {
+		return financialAdvice;
+	}
+
+	public void setFinancialAdvice(FinancialAdvice1Code financialAdvice) {
+		this.financialAdvice = financialAdvice;
+	}
+
+	public NegotiatedTrade1Code getNegotiatedTrade() {
+		return negotiatedTrade;
+	}
+
+	public void setNegotiatedTrade(NegotiatedTrade1Code negotiatedTrade) {
+		this.negotiatedTrade = negotiatedTrade;
+	}
+
+	public List<Intermediary40> getRelatedPartyDetails() {
+		return relatedPartyDetails;
+	}
+
+	public void setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary40> relatedPartyDetails) {
+		this.relatedPartyDetails = relatedPartyDetails;
+	}
+
+	public Equalisation1 getEqualisation() {
+		return equalisation;
+	}
+
+	public void setEqualisation(com.tools20022.repository.msg.Equalisation1 equalisation) {
+		this.equalisation = equalisation;
+	}
+
+	public CustomerConductClassification1Choice getCustomerConductClassification() {
+		return customerConductClassification;
+	}
+
+	public void setCustomerConductClassification(CustomerConductClassification1Choice customerConductClassification) {
+		this.customerConductClassification = customerConductClassification;
+	}
+
+	public TransactionChannelType1Choice getTransactionChannelType() {
+		return transactionChannelType;
+	}
+
+	public void setTransactionChannelType(TransactionChannelType1Choice transactionChannelType) {
+		this.transactionChannelType = transactionChannelType;
+	}
+
+	public SignatureType1Choice getSignatureType() {
+		return signatureType;
+	}
+
+	public void setSignatureType(SignatureType1Choice signatureType) {
+		this.signatureType = signatureType;
+	}
+
+	public OrderWaiver1 getOrderWaiverDetails() {
+		return orderWaiverDetails;
+	}
+
+	public void setOrderWaiverDetails(com.tools20022.repository.msg.OrderWaiver1 orderWaiverDetails) {
+		this.orderWaiverDetails = orderWaiverDetails;
 	}
 }

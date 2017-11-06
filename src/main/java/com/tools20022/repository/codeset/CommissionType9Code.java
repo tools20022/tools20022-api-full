@@ -34,45 +34,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#ClientDirected
- * CommissionType9Code.ClientDirected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmClientDirected
+ * CommissionType9Code.mmClientDirected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#StepOut
- * CommissionType9Code.StepOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmStepOut
+ * CommissionType9Code.mmStepOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#SoftDollar
- * CommissionType9Code.SoftDollar}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmSoftDollar
+ * CommissionType9Code.mmSoftDollar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#PercentageOfPrincipal
- * CommissionType9Code.PercentageOfPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmPercentageOfPrincipal
+ * CommissionType9Code.mmPercentageOfPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#FlatFee
- * CommissionType9Code.FlatFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmFlatFee
+ * CommissionType9Code.mmFlatFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#PerUnit
- * CommissionType9Code.PerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmPerUnit
+ * CommissionType9Code.mmPerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#PercentageCommissionWaivedAsCashDiscount
- * CommissionType9Code.PercentageCommissionWaivedAsCashDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmPercentageCommissionWaivedAsCashDiscount
+ * CommissionType9Code.mmPercentageCommissionWaivedAsCashDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#PercentageCommissionWaivedAsAdditionalUnits
- * CommissionType9Code.PercentageCommissionWaivedAsAdditionalUnits}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmPercentageCommissionWaivedAsAdditionalUnits
+ * CommissionType9Code.mmPercentageCommissionWaivedAsAdditionalUnits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#BrokerageRate
- * CommissionType9Code.BrokerageRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmBrokerageRate
+ * CommissionType9Code.mmBrokerageRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#DifferentialOrDeferredPayment
- * CommissionType9Code.DifferentialOrDeferredPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmDifferentialOrDeferredPayment
+ * CommissionType9Code.mmDifferentialOrDeferredPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#PointsPerBondOrContract
- * CommissionType9Code.PointsPerBondOrContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType9Code#mmPointsPerBondOrContract
+ * CommissionType9Code.mmPointsPerBondOrContract}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +108,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "ClientDirected"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClientDirected = new MMCode() {
+	public static final MMCode mmClientDirected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientDirected";
@@ -131,7 +131,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "StepOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode StepOut = new MMCode() {
+	public static final MMCode mmStepOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepOut";
@@ -154,7 +154,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "SoftDollar"</li>
 	 * </ul>
 	 */
-	public static final MMCode SoftDollar = new MMCode() {
+	public static final MMCode mmSoftDollar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftDollar";
@@ -177,7 +177,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "PercentageOfPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode PercentageOfPrincipal = new MMCode() {
+	public static final MMCode mmPercentageOfPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfPrincipal";
@@ -200,7 +200,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "FlatFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode FlatFee = new MMCode() {
+	public static final MMCode mmFlatFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatFee";
@@ -223,7 +223,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode PerUnit = new MMCode() {
+	public static final MMCode mmPerUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
@@ -246,7 +246,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "PercentageCommissionWaivedAsCashDiscount"</li>
 	 * </ul>
 	 */
-	public static final MMCode PercentageCommissionWaivedAsCashDiscount = new MMCode() {
+	public static final MMCode mmPercentageCommissionWaivedAsCashDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsCashDiscount";
@@ -269,7 +269,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "PercentageCommissionWaivedAsAdditionalUnits"</li>
 	 * </ul>
 	 */
-	public static final MMCode PercentageCommissionWaivedAsAdditionalUnits = new MMCode() {
+	public static final MMCode mmPercentageCommissionWaivedAsAdditionalUnits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsAdditionalUnits";
@@ -292,7 +292,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "BrokerageRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerageRate = new MMCode() {
+	public static final MMCode mmBrokerageRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageRate";
@@ -315,7 +315,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "DifferentialOrDeferredPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DifferentialOrDeferredPayment = new MMCode() {
+	public static final MMCode mmDifferentialOrDeferredPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DifferentialOrDeferredPayment";
@@ -338,7 +338,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 * name} = "PointsPerBondOrContract"</li>
 	 * </ul>
 	 */
-	public static final MMCode PointsPerBondOrContract = new MMCode() {
+	public static final MMCode mmPointsPerBondOrContract = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointsPerBondOrContract";
@@ -349,16 +349,16 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLDI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommissionType9Code";
 				definition = "Type of service for which the commission is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType9Code.ClientDirected, com.tools20022.repository.codeset.CommissionType9Code.StepOut,
-						com.tools20022.repository.codeset.CommissionType9Code.SoftDollar, com.tools20022.repository.codeset.CommissionType9Code.PercentageOfPrincipal, com.tools20022.repository.codeset.CommissionType9Code.FlatFee,
-						com.tools20022.repository.codeset.CommissionType9Code.PerUnit, com.tools20022.repository.codeset.CommissionType9Code.PercentageCommissionWaivedAsCashDiscount,
-						com.tools20022.repository.codeset.CommissionType9Code.PercentageCommissionWaivedAsAdditionalUnits, com.tools20022.repository.codeset.CommissionType9Code.BrokerageRate,
-						com.tools20022.repository.codeset.CommissionType9Code.DifferentialOrDeferredPayment, com.tools20022.repository.codeset.CommissionType9Code.PointsPerBondOrContract);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType9Code.mmClientDirected, com.tools20022.repository.codeset.CommissionType9Code.mmStepOut,
+						com.tools20022.repository.codeset.CommissionType9Code.mmSoftDollar, com.tools20022.repository.codeset.CommissionType9Code.mmPercentageOfPrincipal, com.tools20022.repository.codeset.CommissionType9Code.mmFlatFee,
+						com.tools20022.repository.codeset.CommissionType9Code.mmPerUnit, com.tools20022.repository.codeset.CommissionType9Code.mmPercentageCommissionWaivedAsCashDiscount,
+						com.tools20022.repository.codeset.CommissionType9Code.mmPercentageCommissionWaivedAsAdditionalUnits, com.tools20022.repository.codeset.CommissionType9Code.mmBrokerageRate,
+						com.tools20022.repository.codeset.CommissionType9Code.mmDifferentialOrDeferredPayment, com.tools20022.repository.codeset.CommissionType9Code.mmPointsPerBondOrContract);
 				trace_lazy = () -> CommissionTypeV2Code.mmObject();
 			}
 		});

@@ -57,15 +57,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.StatusNotificationV02#TradeData
- * StatusNotificationV02.TradeData}</li>
+ * {@linkplain com.tools20022.repository.area.trea.StatusNotificationV02#mmTradeData
+ * StatusNotificationV02.mmTradeData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.trea.StatusNotificationV02#identifier
- * StatusNotificationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code trea.008.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeData1 tradeData;
 	/**
 	 * Provides information on the status of a trade in a system.
 	 * <p>
@@ -104,42 +103,15 @@ public class StatusNotificationV02 {
 	 * "Provides information on the status of a trade in a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeData";
 			definition = "Provides information on the status of a trade in a system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "trea"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "trea";
-			messageFunctionality = "008";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -154,10 +126,25 @@ public class StatusNotificationV02 {
 				xmlTag = "trea.008.001.02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
 				xmlName = "trea.008.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.StatusNotificationV02.TradeData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.trea.StatusNotificationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.StatusNotificationV02.mmTradeData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "trea";
+						messageFunctionality = "008";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeData1 getTradeData() {
+		return tradeData;
+	}
+
+	public void setTradeData(TradeData1 tradeData) {
+		this.tradeData = tradeData;
 	}
 }

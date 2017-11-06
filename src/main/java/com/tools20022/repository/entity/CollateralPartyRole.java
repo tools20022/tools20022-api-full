@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.CollateralOwnership1;
 import com.tools20022.repository.msg.CollateralOwnership2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of collateral.
@@ -38,29 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#Collateral
- * CollateralPartyRole.Collateral}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralPartyRole
- * Collateral.CollateralPartyRole}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralOwnership1#ClientName
- * CollateralOwnership1.ClientName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralOwnership2#ClientName
- * CollateralOwnership2.ClientName}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#mmCollateral
+ * CollateralPartyRole.mmCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -72,6 +52,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.TakerRole TakerRole}</li>
  * <li>{@linkplain com.tools20022.repository.entity.TripartyAgent TripartyAgent}
  * </li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralPartyRole
+ * Collateral.mmCollateralPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralOwnership1#mmClientName
+ * CollateralOwnership1.mmClientName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralOwnership2#mmClientName
+ * CollateralOwnership2.mmClientName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -89,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Collateral> collateral;
 	/**
 	 * Specifies the collateral for which a party plays a role.
 	 * <p>
@@ -112,8 +114,8 @@ public class CollateralPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#CollateralPartyRole
-	 * Collateral.CollateralPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralPartyRole
+	 * Collateral.mmCollateralPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -137,7 +139,7 @@ public class CollateralPartyRole extends Role {
 	 * definition} = "Specifies the collateral for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Collateral = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CollateralPartyRole.mmObject();
 			isDerived = false;
@@ -145,27 +147,35 @@ public class CollateralPartyRole extends Role {
 			name = "Collateral";
 			definition = "Specifies the collateral for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.CollateralPartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralPartyRole";
 				definition = "Role played by a party in the context of collateral.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.CollateralPartyRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralOwnership1.ClientName, com.tools20022.repository.msg.CollateralOwnership2.ClientName);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.mmCollateralPartyRole);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralOwnership1.mmClientName, com.tools20022.repository.msg.CollateralOwnership2.mmClientName);
 				subType_lazy = () -> Arrays.asList(ServicingPartyRole.mmObject(), GiverRole.mmObject(), TakerRole.mmObject(), TripartyAgent.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralPartyRole.Collateral);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralPartyRole.mmCollateral);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralOwnership1.mmObject(), CollateralOwnership2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Collateral> getCollateral() {
+		return collateral;
+	}
+
+	public void setCollateral(List<com.tools20022.repository.entity.Collateral> collateral) {
+		this.collateral = collateral;
 	}
 }

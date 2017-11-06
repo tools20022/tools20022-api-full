@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionNumber1Code#Unsolicited
- * OptionNumber1Code.Unsolicited}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionNumber1Code#mmUnsolicited
+ * OptionNumber1Code.mmUnsolicited}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class OptionNumber1Code extends OptionNumberCode {
 	 * name} = "Unsolicited"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unsolicited = new MMCode() {
+	public static final MMCode mmUnsolicited = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsolicited";
@@ -89,12 +89,12 @@ public class OptionNumber1Code extends OptionNumberCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNSO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionNumber1Code";
 				definition = "Code identifying special corporate action option numbers.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionNumber1Code.Unsolicited);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionNumber1Code.mmUnsolicited);
 				trace_lazy = () -> OptionNumberCode.mmObject();
 			}
 		});

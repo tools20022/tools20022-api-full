@@ -38,16 +38,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#TechnicalRecordIdentification
- * SecuritiesIndexReport1.TechnicalRecordIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#mmTechnicalRecordIdentification
+ * SecuritiesIndexReport1.mmTechnicalRecordIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#RequestingEntity
- * SecuritiesIndexReport1.RequestingEntity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#Index
- * SecuritiesIndexReport1.Index}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#mmRequestingEntity
+ * SecuritiesIndexReport1.mmRequestingEntity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#mmIndex
+ * SecuritiesIndexReport1.mmIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#ValidityPeriod
- * SecuritiesIndexReport1.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesIndexReport1#mmValidityPeriod
+ * SecuritiesIndexReport1.mmValidityPeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -55,15 +55,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01#IndexData
- * FinancialInstrumentReportingReferenceDataIndexReportV01.IndexData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01#mmIndexData
+ * FinancialInstrumentReportingReferenceDataIndexReportV01.mmIndexData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesIndexReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text technicalRecordIdentification;
 	/**
 	 * Unique identifier of a record in a message used as part of error
 	 * management and feedback messages.<br>
@@ -112,7 +113,7 @@ public class SecuritiesIndexReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -120,11 +121,12 @@ public class SecuritiesIndexReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and feedback messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice sent back.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CountryCode requestingEntity;
 	/**
 	 * Country code of the entity that wishes to express an interest in
 	 * receiving transaction reports for the requested indexes.
@@ -155,7 +157,7 @@ public class SecuritiesIndexReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestingEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestingEntity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -163,11 +165,12 @@ public class SecuritiesIndexReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestingEntity";
 			definition = "Country code of the entity that wishes to express an interest in receiving transaction reports for the requested indexes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected FinancialInstrument46Choice index;
 	/**
 	 * Details the index that is being requested.
 	 * <p>
@@ -195,7 +198,7 @@ public class SecuritiesIndexReport1 {
 	 * definition} = "Details the index that is being requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Index = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -203,12 +206,13 @@ public class SecuritiesIndexReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Details the index that is being requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument46Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrument46Choice.mmObject();
 		}
 	};
+	protected Period4Choice validityPeriod;
 	/**
 	 * Date when the national competent authority last expressed its interest in
 	 * this index.
@@ -238,7 +242,7 @@ public class SecuritiesIndexReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -246,25 +250,57 @@ public class SecuritiesIndexReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Date when the national competent authority last expressed its interest in this index.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesIndexReport1.TechnicalRecordIdentification, com.tools20022.repository.msg.SecuritiesIndexReport1.RequestingEntity,
-						com.tools20022.repository.msg.SecuritiesIndexReport1.Index, com.tools20022.repository.msg.SecuritiesIndexReport1.ValidityPeriod);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01.IndexData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesIndexReport1.mmTechnicalRecordIdentification, com.tools20022.repository.msg.SecuritiesIndexReport1.mmRequestingEntity,
+						com.tools20022.repository.msg.SecuritiesIndexReport1.mmIndex, com.tools20022.repository.msg.SecuritiesIndexReport1.mmValidityPeriod);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01.mmIndexData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesIndexReport1";
 				definition = "Provides details on the securities index request operations for national competent authorities.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTechnicalRecordIdentification() {
+		return technicalRecordIdentification;
+	}
+
+	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+		this.technicalRecordIdentification = technicalRecordIdentification;
+	}
+
+	public CountryCode getRequestingEntity() {
+		return requestingEntity;
+	}
+
+	public void setRequestingEntity(CountryCode requestingEntity) {
+		this.requestingEntity = requestingEntity;
+	}
+
+	public FinancialInstrument46Choice getIndex() {
+		return index;
+	}
+
+	public void setIndex(FinancialInstrument46Choice index) {
+		this.index = index;
+	}
+
+	public Period4Choice getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(Period4Choice validityPeriod) {
+		this.validityPeriod = validityPeriod;
 	}
 }

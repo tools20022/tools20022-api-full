@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClosurePendingStatusReason1#Code
- * ClosurePendingStatusReason1.Code}</li>
+ * {@linkplain com.tools20022.repository.msg.ClosurePendingStatusReason1#mmCode
+ * ClosurePendingStatusReason1.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClosurePendingStatusReason1#AdditionalInformation
- * ClosurePendingStatusReason1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ClosurePendingStatusReason1#mmAdditionalInformation
+ * ClosurePendingStatusReason1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClosurePendingStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ClosurePendingStatusReason2Choice code;
 	/**
 	 * Reason for the closure pending status.
 	 * <p>
@@ -80,8 +81,8 @@ public class ClosurePendingStatusReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,26 +102,27 @@ public class ClosurePendingStatusReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ClosedStatusReason1#Code
-	 * ClosedStatusReason1.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.ClosedStatusReason1#mmCode
+	 * ClosedStatusReason1.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> ClosurePendingStatusReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the closure pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ClosedStatusReason1.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ClosedStatusReason1.mmCode;
 			maxOccurs = 1;
-			type_lazy = () -> ClosurePendingStatusReason2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ClosurePendingStatusReason2Choice.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the reason for the closure pending status.
 	 * <p>
@@ -151,11 +153,11 @@ public class ClosurePendingStatusReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ClosedStatusReason1#AdditionalInformation
-	 * ClosedStatusReason1.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.ClosedStatusReason1#mmAdditionalInformation
+	 * ClosedStatusReason1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClosurePendingStatusReason1.mmObject();
 			isDerived = false;
@@ -163,9 +165,9 @@ public class ClosurePendingStatusReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the reason for the closure pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ClosedStatusReason1.AdditionalInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ClosedStatusReason1.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -173,9 +175,9 @@ public class ClosurePendingStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosurePendingStatusReason1.Code, com.tools20022.repository.msg.ClosurePendingStatusReason1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosurePendingStatusReason1.mmCode, com.tools20022.repository.msg.ClosurePendingStatusReason1.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClosurePendingStatusReason1";
 				definition = "Reason for a closure pending status.";
@@ -183,5 +185,21 @@ public class ClosurePendingStatusReason1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ClosurePendingStatusReason2Choice getCode() {
+		return code;
+	}
+
+	public void setCode(ClosurePendingStatusReason2Choice code) {
+		this.code = code;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

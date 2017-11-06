@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Tax;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Species the tax applicable for this settlement.
@@ -35,15 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1#TypeCode
- * SettlementTax1.TypeCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1#mmTypeCode
+ * SettlementTax1.mmTypeCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTax1#CalculatedAmount
- * SettlementTax1.CalculatedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1#BasisAmount
- * SettlementTax1.BasisAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1#TaxPointDate
- * SettlementTax1.TaxPointDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTax1#mmCalculatedAmount
+ * SettlementTax1.mmCalculatedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1#mmBasisAmount
+ * SettlementTax1.mmBasisAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1#mmTaxPointDate
+ * SettlementTax1.mmTaxPointDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxTypeFormat1Choice typeCode;
 	/**
 	 * Type of tax applied.
 	 * <p>
@@ -79,7 +81,7 @@ public class SettlementTax1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Type Tax.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +99,21 @@ public class SettlementTax1 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TypeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Type;
 			isDerived = false;
 			xmlTag = "TpCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeCode";
 			definition = "Type of tax applied.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TaxTypeFormat1Choice.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> calculatedAmount;
 	/**
 	 * Monetary value resulting from the calculation of this tax, levy or duty.
 	 * <p>
@@ -124,7 +127,7 @@ public class SettlementTax1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,10 +147,10 @@ public class SettlementTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculatedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "ClctdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,6 +160,7 @@ public class SettlementTax1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> basisAmount;
 	/**
 	 * Monetary value used as the basis on which this tax, levy or duty is
 	 * calculated.
@@ -171,7 +175,7 @@ public class SettlementTax1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,10 +195,10 @@ public class SettlementTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BasisAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "BsisAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,6 +208,7 @@ public class SettlementTax1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate taxPointDate;
 	/**
 	 * Date of the tax point when this tax, levy or duty becomes applicable.
 	 * <p>
@@ -216,7 +221,8 @@ public class SettlementTax1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxDate Tax.TaxDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxDate Tax.mmTaxDate}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,17 +241,17 @@ public class SettlementTax1 {
 	 * "Date of the tax point when this tax, levy or duty becomes applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxPointDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxPointDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxDate;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxDate;
 			isDerived = false;
 			xmlTag = "TaxPtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPointDate";
 			definition = "Date of the tax point when this tax, levy or duty becomes applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -253,15 +259,47 @@ public class SettlementTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTax1.TypeCode, com.tools20022.repository.msg.SettlementTax1.CalculatedAmount, com.tools20022.repository.msg.SettlementTax1.BasisAmount,
-						com.tools20022.repository.msg.SettlementTax1.TaxPointDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTax1.mmTypeCode, com.tools20022.repository.msg.SettlementTax1.mmCalculatedAmount, com.tools20022.repository.msg.SettlementTax1.mmBasisAmount,
+						com.tools20022.repository.msg.SettlementTax1.mmTaxPointDate);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementTax1";
 				definition = "Species the tax applicable for this settlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxTypeFormat1Choice getTypeCode() {
+		return typeCode;
+	}
+
+	public void setTypeCode(TaxTypeFormat1Choice typeCode) {
+		this.typeCode = typeCode;
+	}
+
+	public List<CurrencyAndAmount> getCalculatedAmount() {
+		return calculatedAmount;
+	}
+
+	public void setCalculatedAmount(List<CurrencyAndAmount> calculatedAmount) {
+		this.calculatedAmount = calculatedAmount;
+	}
+
+	public List<CurrencyAndAmount> getBasisAmount() {
+		return basisAmount;
+	}
+
+	public void setBasisAmount(List<CurrencyAndAmount> basisAmount) {
+		this.basisAmount = basisAmount;
+	}
+
+	public ISODate getTaxPointDate() {
+		return taxPointDate;
+	}
+
+	public void setTaxPointDate(ISODate taxPointDate) {
+		this.taxPointDate = taxPointDate;
 	}
 }

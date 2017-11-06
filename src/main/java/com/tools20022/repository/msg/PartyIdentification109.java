@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification109#Identification
- * PartyIdentification109.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification109#LEI
- * PartyIdentification109.LEI}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification109#mmIdentification
+ * PartyIdentification109.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification109#mmLEI
+ * PartyIdentification109.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,61 +51,61 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04#AccountOwner
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04#mmAccountOwner
  * SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.
- * AccountOwner}</li>
+ * mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05#AccountOwner
- * SecuritiesSettlementTransactionAllegementReport002V05.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05#mmAccountOwner
+ * SecuritiesSettlementTransactionAllegementReport002V05.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V04#AccountOwner
- * PortfolioTransferNotification002V04.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V04#mmAccountOwner
+ * PortfolioTransferNotification002V04.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06#AccountOwner
- * SecuritiesTransactionPostingReport002V06.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06#mmAccountOwner
+ * SecuritiesTransactionPostingReport002V06.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#AccountOwner
- * SecuritiesSettlementTransactionAuditTrailReport002V03.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmAccountOwner
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#AccountOwner
- * SecuritiesSettlementAllegementRemovalAdvice002V04.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmAccountOwner
+ * SecuritiesSettlementAllegementRemovalAdvice002V04.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V06#AccountOwner
- * SecuritiesSettlementConditionsModificationRequest002V06.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V06#mmAccountOwner
+ * SecuritiesSettlementConditionsModificationRequest002V06.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04#AccountOwner
- * SecuritiesTransactionStatusQuery002V04.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04#mmAccountOwner
+ * SecuritiesTransactionStatusQuery002V04.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05#AccountOwner
- * SecuritiesMessageCancellationAdvice002V05.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05#mmAccountOwner
+ * SecuritiesMessageCancellationAdvice002V05.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09#AccountOwner
- * SecuritiesBalanceAccountingReport002V09.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09#mmAccountOwner
+ * SecuritiesBalanceAccountingReport002V09.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#AccountOwner
- * SecuritiesTransactionPendingReport002V07.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmAccountOwner
+ * SecuritiesTransactionPendingReport002V07.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06#AccountOwner
- * SecuritiesStatementQuery002V06.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06#mmAccountOwner
+ * SecuritiesStatementQuery002V06.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09#AccountOwner
- * SecuritiesBalanceCustodyReport002V09.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09#mmAccountOwner
+ * SecuritiesBalanceCustodyReport002V09.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdvice002V04#AccountOwner
- * SecuritiesStatusOrStatementQueryStatusAdvice002V04.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdvice002V04#mmAccountOwner
+ * SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05#AccountOwner
- * SecuritiesTransactionCancellationRequest002V05.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05#mmAccountOwner
+ * SecuritiesTransactionCancellationRequest002V05.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#AccountOwner
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmAccountOwner
+ * SecuritiesSettlementConditionModificationStatusAdvice002V07.mmAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,6 +130,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification109 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification114Choice identification;
 	/**
 	 * Unique identification of the party.
 	 * <p>
@@ -164,34 +165,35 @@ public class PartyIdentification109 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification119#Identification
-	 * PartyIdentification119.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification119#mmIdentification
+	 * PartyIdentification119.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification98#Identification
-	 * PartyIdentification98.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification98#mmIdentification
+	 * PartyIdentification98.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification109.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification109.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.Identification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification119.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification119.mmIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification114Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification114Choice.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identification as an alternate identification for a party.
 	 * <p>
@@ -223,18 +225,19 @@ public class PartyIdentification109 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification119#LEI
-	 * PartyIdentification119.LEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification119#mmLEI
+	 * PartyIdentification119.mmLEI}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification98#LEI
-	 * PartyIdentification98.LEI}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification98#mmLEI
+	 * PartyIdentification98.mmLEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentification109.mmObject();
 			isDerived = false;
@@ -242,10 +245,10 @@ public class PartyIdentification109 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.LEI;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification119.LEI);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification119.mmLEI);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.mmLEI;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -253,25 +256,41 @@ public class PartyIdentification109 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification109.Identification, com.tools20022.repository.msg.PartyIdentification109.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification109.mmIdentification, com.tools20022.repository.msg.PartyIdentification109.mmLEI);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05.mmAccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V06.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05.AccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06.AccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.AccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V06.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04.AccountOwner, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09.AccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06.AccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdvice002V04.AccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.AccountOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification109";
 				definition = "Identification of the party.";
-				previousVersion_lazy = () -> PartyIdentification98.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmObject());
+				previousVersion_lazy = () -> PartyIdentification98.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification114Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification114Choice identification) {
+		this.identification = identification;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

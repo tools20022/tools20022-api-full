@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#Repo
- * SecuritiesFinancingTransactionType2Code.Repo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#mmRepo
+ * SecuritiesFinancingTransactionType2Code.mmRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#ReverseRepo
- * SecuritiesFinancingTransactionType2Code.ReverseRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#mmReverseRepo
+ * SecuritiesFinancingTransactionType2Code.mmReverseRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#SecuritiesBorrowing
- * SecuritiesFinancingTransactionType2Code.SecuritiesBorrowing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#mmSecuritiesBorrowing
+ * SecuritiesFinancingTransactionType2Code.mmSecuritiesBorrowing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#SecuritiesLending
- * SecuritiesFinancingTransactionType2Code.SecuritiesLending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#mmSecuritiesLending
+ * SecuritiesFinancingTransactionType2Code.mmSecuritiesLending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#BuySellBack
- * SecuritiesFinancingTransactionType2Code.BuySellBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#mmBuySellBack
+ * SecuritiesFinancingTransactionType2Code.mmBuySellBack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#SellBuyBack
- * SecuritiesFinancingTransactionType2Code.SellBuyBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code#mmSellBuyBack
+ * SecuritiesFinancingTransactionType2Code.mmSellBuyBack}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,15 +98,15 @@ public class SecuritiesFinancingTransactionType2Code extends SecuritiesTransacti
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#Repo
-	 * SecuritiesFinancingTransactionType1Code.Repo}</li>
+	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#mmRepo
+	 * SecuritiesFinancingTransactionType1Code.mmRepo}</li>
 	 * </ul>
 	 */
-	public static final MMCode Repo = new MMCode() {
+	public static final MMCode mmRepo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.Repo;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.mmRepo;
 			owner_lazy = () -> SecuritiesFinancingTransactionType2Code.mmObject();
 		}
 	};
@@ -127,15 +127,15 @@ public class SecuritiesFinancingTransactionType2Code extends SecuritiesTransacti
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#ReverseRepo
-	 * SecuritiesFinancingTransactionType1Code.ReverseRepo}</li>
+	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#mmReverseRepo
+	 * SecuritiesFinancingTransactionType1Code.mmReverseRepo}</li>
 	 * </ul>
 	 */
-	public static final MMCode ReverseRepo = new MMCode() {
+	public static final MMCode mmReverseRepo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRepo";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.ReverseRepo;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.mmReverseRepo;
 			owner_lazy = () -> SecuritiesFinancingTransactionType2Code.mmObject();
 		}
 	};
@@ -156,15 +156,15 @@ public class SecuritiesFinancingTransactionType2Code extends SecuritiesTransacti
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#SecuritiesBorrowing
-	 * SecuritiesFinancingTransactionType1Code.SecuritiesBorrowing}</li>
+	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#mmSecuritiesBorrowing
+	 * SecuritiesFinancingTransactionType1Code.mmSecuritiesBorrowing}</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesBorrowing = new MMCode() {
+	public static final MMCode mmSecuritiesBorrowing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBorrowing";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.SecuritiesBorrowing;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.mmSecuritiesBorrowing;
 			owner_lazy = () -> SecuritiesFinancingTransactionType2Code.mmObject();
 		}
 	};
@@ -185,15 +185,15 @@ public class SecuritiesFinancingTransactionType2Code extends SecuritiesTransacti
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#SecuritiesLending
-	 * SecuritiesFinancingTransactionType1Code.SecuritiesLending}</li>
+	 * {@linkplain com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code#mmSecuritiesLending
+	 * SecuritiesFinancingTransactionType1Code.mmSecuritiesLending}</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesLending = new MMCode() {
+	public static final MMCode mmSecuritiesLending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLending";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.SecuritiesLending;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.SecuritiesFinancingTransactionType1Code.mmSecuritiesLending;
 			owner_lazy = () -> SecuritiesFinancingTransactionType2Code.mmObject();
 		}
 	};
@@ -213,7 +213,7 @@ public class SecuritiesFinancingTransactionType2Code extends SecuritiesTransacti
 	 * name} = "BuySellBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuySellBack = new MMCode() {
+	public static final MMCode mmBuySellBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySellBack";
@@ -236,7 +236,7 @@ public class SecuritiesFinancingTransactionType2Code extends SecuritiesTransacti
 	 * name} = "SellBuyBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellBuyBack = new MMCode() {
+	public static final MMCode mmSellBuyBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellBuyBack";
@@ -247,15 +247,15 @@ public class SecuritiesFinancingTransactionType2Code extends SecuritiesTransacti
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REPU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingTransactionType2Code";
 				definition = "Specifies the type of securities financing transaction.";
 				previousVersion_lazy = () -> SecuritiesFinancingTransactionType1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.Repo, com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.ReverseRepo,
-						com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.SecuritiesBorrowing, com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.SecuritiesLending,
-						com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.BuySellBack, com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.SellBuyBack);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.mmRepo, com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.mmReverseRepo,
+						com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.mmSecuritiesBorrowing, com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.mmSecuritiesLending,
+						com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.mmBuySellBack, com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code.mmSellBuyBack);
 				trace_lazy = () -> SecuritiesTransactionTypeV2Code.mmObject();
 			}
 		});

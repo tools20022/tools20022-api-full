@@ -35,20 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType10Choice#Addition
- * UpdateType10Choice.Addition}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType10Choice#Deletion
- * UpdateType10Choice.Deletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UpdateType10Choice#Modification
- * UpdateType10Choice.Modification}</li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType10Choice#mmAddition
+ * UpdateType10Choice.mmAddition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType10Choice#mmDeletion
+ * UpdateType10Choice.mmDeletion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType10Choice#mmModification
+ * UpdateType10Choice.mmModification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdateType10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesSettlementTransactionDetails11 addition;
 	/**
 	 * Addition of information to the securities transaction.
 	 * <p>
@@ -91,7 +94,7 @@ public class UpdateType10Choice {
 	 * definition} = "Addition of information to the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Addition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType10Choice.mmObject();
 			isDerived = false;
@@ -99,12 +102,13 @@ public class UpdateType10Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
 			definition = "Addition of information to the securities transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlementTransactionDetails11.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesSettlementTransactionDetails11.mmObject();
 		}
 	};
+	protected SecuritiesSettlementTransactionDetails12 deletion;
 	/**
 	 * Deletion of information in the securities transaction.
 	 * <p>
@@ -132,7 +136,7 @@ public class UpdateType10Choice {
 	 * definition} = "Deletion of information in the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Deletion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType10Choice.mmObject();
 			isDerived = false;
@@ -140,12 +144,13 @@ public class UpdateType10Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
 			definition = "Deletion of information in the securities transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlementTransactionDetails12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesSettlementTransactionDetails12.mmObject();
 		}
 	};
+	protected SecuritiesSettlementTransactionDetails13 modification;
 	/**
 	 * Modification of information in the securities transaction.
 	 * <p>
@@ -174,7 +179,7 @@ public class UpdateType10Choice {
 	 * "Modification of information in the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Modification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType10Choice.mmObject();
 			isDerived = false;
@@ -182,24 +187,48 @@ public class UpdateType10Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification of information in the securities transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlementTransactionDetails13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesSettlementTransactionDetails13.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType10Choice.Addition, com.tools20022.repository.choice.UpdateType10Choice.Deletion,
-						com.tools20022.repository.choice.UpdateType10Choice.Modification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType10Choice.mmAddition, com.tools20022.repository.choice.UpdateType10Choice.mmDeletion,
+						com.tools20022.repository.choice.UpdateType10Choice.mmModification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType10Choice";
 				definition = "Specifies the type of update requested. That is addition, deletion or modification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesSettlementTransactionDetails11 getAddition() {
+		return addition;
+	}
+
+	public void setAddition(SecuritiesSettlementTransactionDetails11 addition) {
+		this.addition = addition;
+	}
+
+	public SecuritiesSettlementTransactionDetails12 getDeletion() {
+		return deletion;
+	}
+
+	public void setDeletion(SecuritiesSettlementTransactionDetails12 deletion) {
+		this.deletion = deletion;
+	}
+
+	public SecuritiesSettlementTransactionDetails13 getModification() {
+		return modification;
+	}
+
+	public void setModification(SecuritiesSettlementTransactionDetails13 modification) {
+		this.modification = modification;
 	}
 }

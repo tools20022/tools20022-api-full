@@ -86,9 +86,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CancellationByReferenceOrByOrderDetailsRule
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCancellationByReferenceOrByOrderDetailsRule
  * RedemptionBulkOrderCancellationRequestV03.
- * CancellationByReferenceOrByOrderDetailsRule}</li>
+ * mmCancellationByReferenceOrByOrderDetailsRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -98,30 +98,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#MessageIdentification
- * RedemptionBulkOrderCancellationRequestV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmMessageIdentification
+ * RedemptionBulkOrderCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#PoolReference
- * RedemptionBulkOrderCancellationRequestV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmPoolReference
+ * RedemptionBulkOrderCancellationRequestV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#PreviousReference
- * RedemptionBulkOrderCancellationRequestV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmPreviousReference
+ * RedemptionBulkOrderCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CancellationByReference
- * RedemptionBulkOrderCancellationRequestV03.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCancellationByReference
+ * RedemptionBulkOrderCancellationRequestV03.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CancellationByOrderDetails
- * RedemptionBulkOrderCancellationRequestV03.CancellationByOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCancellationByOrderDetails
+ * RedemptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CopyDetails
- * RedemptionBulkOrderCancellationRequestV03.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCopyDetails
+ * RedemptionBulkOrderCancellationRequestV03.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#identifier
- * RedemptionBulkOrderCancellationRequestV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.002.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -160,11 +158,11 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CancellationByReference
-	 * RedemptionBulkOrderCancellationRequestV03.CancellationByReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCancellationByReference
+	 * RedemptionBulkOrderCancellationRequestV03.mmCancellationByReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CancellationByOrderDetails
-	 * RedemptionBulkOrderCancellationRequestV03.CancellationByOrderDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCancellationByOrderDetails
+	 * RedemptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -184,16 +182,17 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CancellationByReferenceOrByOrderDetailsRule = new MMXor() {
+	public static final MMXor mmCancellationByReferenceOrByOrderDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderDetailsRule";
 			definition = "Either CancellationByOrderDetails or CancellationByReference may be present, but not both.";
 			messageDefinition_lazy = () -> RedemptionBulkOrderCancellationRequestV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CancellationByReference,
-					com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CancellationByOrderDetails);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByReference,
+					com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails);
 		}
 	};
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -222,24 +221,25 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#MessageIdentification
-	 * RedemptionBulkOrderCancellationRequestV04.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#mmMessageIdentification
+	 * RedemptionBulkOrderCancellationRequestV04.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -265,24 +265,25 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#PoolReference
-	 * RedemptionBulkOrderCancellationRequestV04.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#mmPoolReference
+	 * RedemptionBulkOrderCancellationRequestV04.mmPoolReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.PoolReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmPoolReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -308,24 +309,25 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#PreviousReference
-	 * RedemptionBulkOrderCancellationRequestV04.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#mmPreviousReference
+	 * RedemptionBulkOrderCancellationRequestV04.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.PreviousReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmPreviousReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected InvestmentFundOrder1 cancellationByReference;
 	/**
 	 * References of the orders to be cancelled.
 	 * <p>
@@ -349,17 +351,18 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * definition} = "References of the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReference";
 			definition = "References of the orders to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder1.mmObject();
 		}
 	};
+	protected RedemptionBulkOrderInstruction2 cancellationByOrderDetails;
 	/**
 	 * Common information related to all the orders to be cancelled.
 	 * <p>
@@ -384,17 +387,18 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * "Common information related to all the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByOrderDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByOrderDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByOrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByOrderDetails";
 			definition = "Common information related to all the orders to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RedemptionBulkOrderInstruction2.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Message is a copy.
 	 * <p>
@@ -420,49 +424,22 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#CopyDetails
-	 * RedemptionBulkOrderCancellationRequestV04.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#mmCopyDetails
+	 * RedemptionBulkOrderCancellationRequestV04.mmCopyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Message is a copy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.CopyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmCopyDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "002";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -472,20 +449,75 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderCancellationRequestV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the RedemptionBulkOrderCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent RedemptionBulkOrder instruction.\r\nUsage\r\nThe RedemptionBulkOrderCancellationRequest message is used to either:\r\n- request the cancellation of an entire RedemptionBulkOrder message, that is, all the individual orders that it contained, or,\r\n- request the cancellation of one or more individual orders included in a previously sent RedemptionBulkOrder message. There is no amendment, but a cancellation and re-instruct policy.\r\nThere are two ways to use the message.\r\n(1) When the RedemptionBulkOrderCancellationRequest message is used to request the cancellation of an entire RedemptionBulkOrder message, this can be done by either:\r\n- quoting the order references of all the individual orders listed in the RedemptionBulkOrder message, or,\r\n- quoting the details of all the individual orders (this includes the OrderReference) listed in RedemptionBulkOrder message, but this is not recommended.\r\nThe message identification of the RedemptionBulkOrder message may also be quoted in PreviousReference.\r\nIt is also possible to request the cancellation of an entire RedemptionBulkOrder message by quoting its message identification in PreviousReference, but this is not recommended.\r\n(2) When the RedemptionBulkOrderCancellationRequest message is used to request the cancellation of one or more individual orders, this can be done by either:\r\n- quoting the OrderReference of each individual order listed in the RedemptionOrder message, or,\r\n- quoting the details of each individual order (including the OrderReference) listed in RedemptionOrder message, but this is not recommended.\r\nThe message identification of the RedemptionBulkOrder message in which the individual order was conveyed may also be quoted in PreviousReference.\r\nThe deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.";
-				previousVersion_lazy = () -> RedemptionBulkOrderCancellationInstructionV02.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RedemptionBulkOrderCancellationRequestV04.mmObject());
+				previousVersion_lazy = () -> RedemptionBulkOrderCancellationInstructionV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CancellationByReferenceOrByOrderDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByReferenceOrByOrderDetailsRule);
 				rootElement = "Document";
 				xmlTag = "RedBlkOrdrCxlReqV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.PoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CancellationByReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CancellationByOrderDetails,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CopyDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmPoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCopyDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "002";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public InvestmentFundOrder1 getCancellationByReference() {
+		return cancellationByReference;
+	}
+
+	public void setCancellationByReference(InvestmentFundOrder1 cancellationByReference) {
+		this.cancellationByReference = cancellationByReference;
+	}
+
+	public RedemptionBulkOrderInstruction2 getCancellationByOrderDetails() {
+		return cancellationByOrderDetails;
+	}
+
+	public void setCancellationByOrderDetails(RedemptionBulkOrderInstruction2 cancellationByOrderDetails) {
+		this.cancellationByOrderDetails = cancellationByOrderDetails;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
 	}
 }

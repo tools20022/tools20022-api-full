@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType3Code#Various
- * DateType3Code.Various}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType3Code#mmVarious
+ * DateType3Code.mmVarious}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +76,7 @@ public class DateType3Code extends DateTypeCode {
 	 * name} = "Various"</li>
 	 * </ul>
 	 */
-	public static final MMCode Various = new MMCode() {
+	public static final MMCode mmVarious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
@@ -87,12 +87,12 @@ public class DateType3Code extends DateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VARI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateType3Code";
 				definition = "Specifies a type of date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType3Code.Various);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType3Code.mmVarious);
 				trace_lazy = () -> DateTypeCode.mmObject();
 			}
 		});

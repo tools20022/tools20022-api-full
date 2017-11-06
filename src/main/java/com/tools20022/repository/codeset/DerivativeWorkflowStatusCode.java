@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#Preliminary
- * DerivativeWorkflowStatusCode.Preliminary}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#mmPreliminary
+ * DerivativeWorkflowStatusCode.mmPreliminary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#Adjustment
- * DerivativeWorkflowStatusCode.Adjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#mmAdjustment
+ * DerivativeWorkflowStatusCode.mmAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#NoAction
- * DerivativeWorkflowStatusCode.NoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#mmNoAction
+ * DerivativeWorkflowStatusCode.mmNoAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#Unconfirmed
- * DerivativeWorkflowStatusCode.Unconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#mmUnconfirmed
+ * DerivativeWorkflowStatusCode.mmUnconfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#Deleted
- * DerivativeWorkflowStatusCode.Deleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeWorkflowStatusCode#mmDeleted
+ * DerivativeWorkflowStatusCode.mmDeleted}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +101,7 @@ public class DerivativeWorkflowStatusCode {
 	 * "Notice is an advance warning that an adjustment may be applied."</li>
 	 * </ul>
 	 */
-	public static final MMCode Preliminary = new MMCode() {
+	public static final MMCode mmPreliminary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Preliminary";
@@ -131,7 +131,7 @@ public class DerivativeWorkflowStatusCode {
 	 * definition} = "Notice confirms that an adjustment will be applied."</li>
 	 * </ul>
 	 */
-	public static final MMCode Adjustment = new MMCode() {
+	public static final MMCode mmAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
@@ -161,7 +161,7 @@ public class DerivativeWorkflowStatusCode {
 	 * definition} = "Notice confirms that no adjustment will be applied."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAction = new MMCode() {
+	public static final MMCode mmNoAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
@@ -194,7 +194,7 @@ public class DerivativeWorkflowStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Unconfirmed = new MMCode() {
+	public static final MMCode mmUnconfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unconfirmed";
@@ -225,7 +225,7 @@ public class DerivativeWorkflowStatusCode {
 	 * "Details were entered in error. All data should be ignored."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deleted = new MMCode() {
+	public static final MMCode mmDeleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
@@ -238,14 +238,14 @@ public class DerivativeWorkflowStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PREL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DerivativeWorkflowStatusCode";
 				definition = "Specifies the status of exchange's notice of change on a derivative.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.Preliminary, com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.Adjustment,
-						com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.NoAction, com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.Unconfirmed,
-						com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.Deleted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.mmPreliminary, com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.mmAdjustment,
+						com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.mmNoAction, com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.mmUnconfirmed,
+						com.tools20022.repository.codeset.DerivativeWorkflowStatusCode.mmDeleted);
 				derivation_lazy = () -> Arrays.asList(DerivativeWorkflowStatus1Code.mmObject());
 			}
 		});

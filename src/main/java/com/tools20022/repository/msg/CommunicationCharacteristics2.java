@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.POICommunicationType1Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Low level communication of the hardware or software component toward another
@@ -36,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics2#CommunicationType
- * CommunicationCharacteristics2.CommunicationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics2#mmCommunicationType
+ * CommunicationCharacteristics2.mmCommunicationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics2#RemoteParty
- * CommunicationCharacteristics2.RemoteParty}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics2#mmRemoteParty
+ * CommunicationCharacteristics2.mmRemoteParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics2#Active
- * CommunicationCharacteristics2.Active}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics2#mmActive
+ * CommunicationCharacteristics2.mmActive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommunicationCharacteristics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected POICommunicationType1Code communicationType;
 	/**
 	 * Type of low level communication.
 	 * <p>
@@ -107,18 +109,18 @@ public class CommunicationCharacteristics2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics3#CommunicationType
-	 * CommunicationCharacteristics3.CommunicationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics3#mmCommunicationType
+	 * CommunicationCharacteristics3.mmCommunicationType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics1#CommunicationType
-	 * CommunicationCharacteristics1.CommunicationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics1#mmCommunicationType
+	 * CommunicationCharacteristics1.mmCommunicationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommunicationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommunicationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommunicationCharacteristics2.mmObject();
 			isDerived = false;
@@ -126,13 +128,14 @@ public class CommunicationCharacteristics2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationType";
 			definition = "Type of low level communication.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.CommunicationType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics3.CommunicationType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics3.mmCommunicationType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmCommunicationType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
+	protected List<PartyType7Code> remoteParty;
 	/**
 	 * Entity that communicate with the current component, using this
 	 * communication device.
@@ -166,18 +169,18 @@ public class CommunicationCharacteristics2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics3#RemoteParty
-	 * CommunicationCharacteristics3.RemoteParty}</li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics3#mmRemoteParty
+	 * CommunicationCharacteristics3.mmRemoteParty}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics1#RemoteParty
-	 * CommunicationCharacteristics1.RemoteParty}</li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics1#mmRemoteParty
+	 * CommunicationCharacteristics1.mmRemoteParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemoteParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemoteParty = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommunicationCharacteristics2.mmObject();
 			isDerived = false;
@@ -185,12 +188,13 @@ public class CommunicationCharacteristics2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoteParty";
 			definition = "Entity that communicate with the current component, using this communication device.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.RemoteParty;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics3.RemoteParty);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics3.mmRemoteParty);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmRemoteParty;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyType7Code.mmObject();
 		}
 	};
+	protected TrueFalseIndicator active;
 	/**
 	 * Communication hardware is activated.
 	 * <p>
@@ -221,18 +225,18 @@ public class CommunicationCharacteristics2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics3#Active
-	 * CommunicationCharacteristics3.Active}</li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics3#mmActive
+	 * CommunicationCharacteristics3.mmActive}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics1#Active
-	 * CommunicationCharacteristics1.Active}</li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationCharacteristics1#mmActive
+	 * CommunicationCharacteristics1.mmActive}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Active = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActive = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommunicationCharacteristics2.mmObject();
 			isDerived = false;
@@ -240,10 +244,10 @@ public class CommunicationCharacteristics2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			definition = "Communication hardware is activated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.Active;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics3.Active);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics3.mmActive);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmActive;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -251,16 +255,40 @@ public class CommunicationCharacteristics2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics2.CommunicationType, com.tools20022.repository.msg.CommunicationCharacteristics2.RemoteParty,
-						com.tools20022.repository.msg.CommunicationCharacteristics2.Active);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics2.mmCommunicationType, com.tools20022.repository.msg.CommunicationCharacteristics2.mmRemoteParty,
+						com.tools20022.repository.msg.CommunicationCharacteristics2.mmActive);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommunicationCharacteristics2";
 				definition = "Low level communication of the hardware or software component toward another component or an external entity.";
-				previousVersion_lazy = () -> CommunicationCharacteristics1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CommunicationCharacteristics3.mmObject());
+				previousVersion_lazy = () -> CommunicationCharacteristics1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public POICommunicationType1Code getCommunicationType() {
+		return communicationType;
+	}
+
+	public void setCommunicationType(POICommunicationType1Code communicationType) {
+		this.communicationType = communicationType;
+	}
+
+	public List<PartyType7Code> getRemoteParty() {
+		return remoteParty;
+	}
+
+	public void setRemoteParty(List<PartyType7Code> remoteParty) {
+		this.remoteParty = remoteParty;
+	}
+
+	public TrueFalseIndicator getActive() {
+		return active;
+	}
+
+	public void setActive(TrueFalseIndicator active) {
+		this.active = active;
 	}
 }

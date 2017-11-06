@@ -41,17 +41,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#Rate
- * InterestRateUsedForPaymentFormat5Choice.Rate}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#mmRate
+ * InterestRateUsedForPaymentFormat5Choice.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#Amount
- * InterestRateUsedForPaymentFormat5Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#mmAmount
+ * InterestRateUsedForPaymentFormat5Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#RateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat5Choice.RateTypeAndAmountAndRateStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#NotSpecifiedRate
- * InterestRateUsedForPaymentFormat5Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#mmNotSpecifiedRate
+ * InterestRateUsedForPaymentFormat5Choice.mmNotSpecifiedRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,6 +83,7 @@ import java.util.function.Supplier;
 public class InterestRateUsedForPaymentFormat5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Value is expressed as a rate.
 	 * <p>
@@ -96,8 +97,8 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,27 +119,28 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#Rate
-	 * InterestRateUsedForPaymentFormat8Choice.Rate}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#mmRate
+	 * InterestRateUsedForPaymentFormat8Choice.mmRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.Rate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Number of monetary units specified in a currency.
 	 * <p>
@@ -152,8 +154,8 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Amount
-	 * Interest.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAmount
+	 * Interest.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,27 +176,28 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#Amount
-	 * InterestRateUsedForPaymentFormat8Choice.Amount}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#mmAmount
+	 * InterestRateUsedForPaymentFormat8Choice.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.Amount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected RateTypeAndAmountAndStatus3 rateTypeAndAmountAndRateStatus;
 	/**
 	 * Specifies different formats for interest rate used for payment.
 	 * <p>
@@ -229,28 +232,30 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#RateTypeAndAmountAndRateStatus
-	 * InterestRateUsedForPaymentFormat8Choice.RateTypeAndAmountAndRateStatus}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#mmRateTypeAndAmountAndRateStatus
+	 * InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
 			businessComponentTrace_lazy = () -> Interest.mmObject();
+			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndAmtAndRateSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for interest rate used for payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.RateTypeAndAmountAndRateStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus);
 			maxOccurs = 1;
-			type_lazy = () -> RateTypeAndAmountAndStatus3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateTypeAndAmountAndStatus3.mmObject();
 		}
 	};
+	protected RateType13Code notSpecifiedRate;
 	/**
 	 * Value of the rate not specified.
 	 * <p>
@@ -281,13 +286,13 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#NotSpecifiedRate
-	 * InterestRateUsedForPaymentFormat8Choice.NotSpecifiedRate}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#mmNotSpecifiedRate
+	 * InterestRateUsedForPaymentFormat8Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
 			isDerived = false;
@@ -295,9 +300,9 @@ public class InterestRateUsedForPaymentFormat5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.NotSpecifiedRate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmNotSpecifiedRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateType13Code.mmObject();
 		}
 	};
@@ -305,10 +310,10 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.Rate, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.Amount,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.RateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.NotSpecifiedRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmRate, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmAmount,
+						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmNotSpecifiedRate);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -323,5 +328,37 @@ public class InterestRateUsedForPaymentFormat5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public RateTypeAndAmountAndStatus3 getRateTypeAndAmountAndRateStatus() {
+		return rateTypeAndAmountAndRateStatus;
+	}
+
+	public void setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus3 rateTypeAndAmountAndRateStatus) {
+		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
+	}
+
+	public RateType13Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateType13Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
 	}
 }

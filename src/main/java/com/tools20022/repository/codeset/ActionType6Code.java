@@ -33,44 +33,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#AcceptCurrencyConversion
- * ActionType6Code.AcceptCurrencyConversion}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType6Code#AcceptFees
- * ActionType6Code.AcceptFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmAcceptCurrencyConversion
+ * ActionType6Code.mmAcceptCurrencyConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#AcceptHigherAmount
- * ActionType6Code.AcceptHigherAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmAcceptFees
+ * ActionType6Code.mmAcceptFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#AcceptLowerAmount
- * ActionType6Code.AcceptLowerAmount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType6Code#Busy
- * ActionType6Code.Busy}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmAcceptHigherAmount
+ * ActionType6Code.mmAcceptHigherAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#CaptureCard
- * ActionType6Code.CaptureCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmAcceptLowerAmount
+ * ActionType6Code.mmAcceptLowerAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType6Code#mmBusy
+ * ActionType6Code.mmBusy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#DisplayMessage
- * ActionType6Code.DisplayMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmCaptureCard
+ * ActionType6Code.mmCaptureCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#DistributeCoupon
- * ActionType6Code.DistributeCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmDisplayMessage
+ * ActionType6Code.mmDisplayMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#PerformRequest
- * ActionType6Code.PerformRequest}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType6Code#PINLastTry
- * ActionType6Code.PINLastTry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType6Code#PINRetry
- * ActionType6Code.PINRetry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmDistributeCoupon
+ * ActionType6Code.mmDistributeCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType6Code#UpdateTrack
- * ActionType6Code.UpdateTrack}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmPerformRequest
+ * ActionType6Code.mmPerformRequest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmPINLastTry
+ * ActionType6Code.mmPINLastTry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType6Code#mmPINRetry
+ * ActionType6Code.mmPINRetry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType6Code#mmUpdateTrack
+ * ActionType6Code.mmUpdateTrack}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,7 +102,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "AcceptCurrencyConversion"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptCurrencyConversion = new MMCode() {
+	public static final MMCode mmAcceptCurrencyConversion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptCurrencyConversion";
@@ -123,7 +125,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "AcceptFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptFees = new MMCode() {
+	public static final MMCode mmAcceptFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptFees";
@@ -146,7 +148,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "AcceptHigherAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptHigherAmount = new MMCode() {
+	public static final MMCode mmAcceptHigherAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptHigherAmount";
@@ -169,7 +171,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "AcceptLowerAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptLowerAmount = new MMCode() {
+	public static final MMCode mmAcceptLowerAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptLowerAmount";
@@ -192,7 +194,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "Busy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Busy = new MMCode() {
+	public static final MMCode mmBusy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
@@ -215,7 +217,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "CaptureCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode CaptureCard = new MMCode() {
+	public static final MMCode mmCaptureCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
@@ -238,7 +240,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "DisplayMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode DisplayMessage = new MMCode() {
+	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
@@ -261,7 +263,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "DistributeCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode DistributeCoupon = new MMCode() {
+	public static final MMCode mmDistributeCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributeCoupon";
@@ -284,7 +286,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "PerformRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode PerformRequest = new MMCode() {
+	public static final MMCode mmPerformRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerformRequest";
@@ -307,7 +309,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "PINLastTry"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINLastTry = new MMCode() {
+	public static final MMCode mmPINLastTry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
@@ -330,7 +332,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "PINRetry"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINRetry = new MMCode() {
+	public static final MMCode mmPINRetry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
@@ -353,7 +355,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 * name} = "UpdateTrack"</li>
 	 * </ul>
 	 */
-	public static final MMCode UpdateTrack = new MMCode() {
+	public static final MMCode mmUpdateTrack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateTrack";
@@ -364,15 +366,15 @@ public class ActionType6Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionType6Code";
 				definition = "Type of action to be performed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType6Code.AcceptCurrencyConversion, com.tools20022.repository.codeset.ActionType6Code.AcceptFees,
-						com.tools20022.repository.codeset.ActionType6Code.AcceptHigherAmount, com.tools20022.repository.codeset.ActionType6Code.AcceptLowerAmount, com.tools20022.repository.codeset.ActionType6Code.Busy,
-						com.tools20022.repository.codeset.ActionType6Code.CaptureCard, com.tools20022.repository.codeset.ActionType6Code.DisplayMessage, com.tools20022.repository.codeset.ActionType6Code.DistributeCoupon,
-						com.tools20022.repository.codeset.ActionType6Code.PerformRequest, com.tools20022.repository.codeset.ActionType6Code.PINLastTry, com.tools20022.repository.codeset.ActionType6Code.PINRetry,
-						com.tools20022.repository.codeset.ActionType6Code.UpdateTrack);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType6Code.mmAcceptCurrencyConversion, com.tools20022.repository.codeset.ActionType6Code.mmAcceptFees,
+						com.tools20022.repository.codeset.ActionType6Code.mmAcceptHigherAmount, com.tools20022.repository.codeset.ActionType6Code.mmAcceptLowerAmount, com.tools20022.repository.codeset.ActionType6Code.mmBusy,
+						com.tools20022.repository.codeset.ActionType6Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType6Code.mmDisplayMessage, com.tools20022.repository.codeset.ActionType6Code.mmDistributeCoupon,
+						com.tools20022.repository.codeset.ActionType6Code.mmPerformRequest, com.tools20022.repository.codeset.ActionType6Code.mmPINLastTry, com.tools20022.repository.codeset.ActionType6Code.mmPINRetry,
+						com.tools20022.repository.codeset.ActionType6Code.mmUpdateTrack);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

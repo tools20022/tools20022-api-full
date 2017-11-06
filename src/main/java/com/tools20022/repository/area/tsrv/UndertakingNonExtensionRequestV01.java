@@ -56,18 +56,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01#UndertakingNonExtensionRequestDetails
- * UndertakingNonExtensionRequestV01.UndertakingNonExtensionRequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01#mmUndertakingNonExtensionRequestDetails
+ * UndertakingNonExtensionRequestV01.mmUndertakingNonExtensionRequestDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01#DigitalSignature
- * UndertakingNonExtensionRequestV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01#mmDigitalSignature
+ * UndertakingNonExtensionRequestV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01#identifier
- * UndertakingNonExtensionRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingNonExtensionRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingNonExtensionRequest1 undertakingNonExtensionRequestDetails;
 	/**
 	 * Details of the non extension request.
 	 * <p>
@@ -106,17 +105,18 @@ public class UndertakingNonExtensionRequestV01 {
 	 * definition} = "Details of the non extension request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingNonExtensionRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingNonExtensionRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgNonXtnsnReqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingNonExtensionRequestDetails";
 			definition = "Details of the non extension request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UndertakingNonExtensionRequest1.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the request.
 	 * <p>
@@ -140,42 +140,15 @@ public class UndertakingNonExtensionRequestV01 {
 	 * definition} = "Digital signature of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "010";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -189,11 +162,34 @@ public class UndertakingNonExtensionRequestV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgNonXtnsnReq";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.UndertakingNonExtensionRequestDetails,
-						com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.mmUndertakingNonExtensionRequestDetails,
+						com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "010";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingNonExtensionRequest1 getUndertakingNonExtensionRequestDetails() {
+		return undertakingNonExtensionRequestDetails;
+	}
+
+	public void setUndertakingNonExtensionRequestDetails(UndertakingNonExtensionRequest1 undertakingNonExtensionRequestDetails) {
+		this.undertakingNonExtensionRequestDetails = undertakingNonExtensionRequestDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

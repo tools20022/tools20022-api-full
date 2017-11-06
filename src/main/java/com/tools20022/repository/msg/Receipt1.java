@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the request.
@@ -32,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Receipt1#OriginalMessageIdentification
- * Receipt1.OriginalMessageIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Receipt1#RequestHandling
- * Receipt1.RequestHandling}</li>
+ * {@linkplain com.tools20022.repository.msg.Receipt1#mmOriginalMessageIdentification
+ * Receipt1.mmOriginalMessageIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Receipt1#mmRequestHandling
+ * Receipt1.mmRequestHandling}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Receipt1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalMessageAndIssuer1 originalMessageIdentification;
 	/**
 	 * Identification of the original request message.
 	 * <p>
@@ -82,7 +84,7 @@ public class Receipt1 {
 	 * definition} = "Identification of the original request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Receipt1.mmObject();
 			isDerived = false;
@@ -90,12 +92,13 @@ public class Receipt1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Identification of the original request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessageAndIssuer1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.RequestHandling> requestHandling;
 	/**
 	 * Gives the status of the request.
 	 * <p>
@@ -121,7 +124,7 @@ public class Receipt1 {
 	 * definition} = "Gives the status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestHandling = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Receipt1.mmObject();
 			isDerived = false;
@@ -130,21 +133,37 @@ public class Receipt1 {
 			name = "RequestHandling";
 			definition = "Gives the status of the request.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.msg.RequestHandling.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RequestHandling.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Receipt1.OriginalMessageIdentification, com.tools20022.repository.msg.Receipt1.RequestHandling);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Receipt1.mmOriginalMessageIdentification, com.tools20022.repository.msg.Receipt1.mmRequestHandling);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Receipt1";
 				definition = "Provides details on the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalMessageAndIssuer1 getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(com.tools20022.repository.msg.OriginalMessageAndIssuer1 originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
+	}
+
+	public List<RequestHandling> getRequestHandling() {
+		return requestHandling;
+	}
+
+	public void setRequestHandling(List<com.tools20022.repository.msg.RequestHandling> requestHandling) {
+		this.requestHandling = requestHandling;
 	}
 }

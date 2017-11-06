@@ -75,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
- * GeneratedRepository.catalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
+ * GeneratedRepository.mmcatalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class ForexNotificationsISOArchive {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.catalogue;
+				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Forex Notifications - ISO - Archive";
 				definition = "Set of messages used to notify Non Deliverable Forward and Foreign Exchange Option operations (such as creation, valuation, amendment, cancellation) to and from a central settlement system.\r\n";

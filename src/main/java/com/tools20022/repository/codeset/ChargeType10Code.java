@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType10Code#BackEndLoad
- * ChargeType10Code.BackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType10Code#mmBackEndLoad
+ * ChargeType10Code.mmBackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType10Code#FrontEndLoad
- * ChargeType10Code.FrontEndLoad}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType10Code#Penalty
- * ChargeType10Code.Penalty}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType10Code#mmFrontEndLoad
+ * ChargeType10Code.mmFrontEndLoad}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType10Code#mmPenalty
+ * ChargeType10Code.mmPenalty}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class ChargeType10Code extends ChargeTypeCode {
 	 * name} = "BackEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode BackEndLoad = new MMCode() {
+	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
@@ -106,7 +106,7 @@ public class ChargeType10Code extends ChargeTypeCode {
 	 * name} = "FrontEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrontEndLoad = new MMCode() {
+	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
@@ -129,7 +129,7 @@ public class ChargeType10Code extends ChargeTypeCode {
 	 * name} = "Penalty"</li>
 	 * </ul>
 	 */
-	public static final MMCode Penalty = new MMCode() {
+	public static final MMCode mmPenalty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Penalty";
@@ -140,12 +140,13 @@ public class ChargeType10Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType10Code";
 				definition = "Specifies the type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType10Code.BackEndLoad, com.tools20022.repository.codeset.ChargeType10Code.FrontEndLoad, com.tools20022.repository.codeset.ChargeType10Code.Penalty);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType10Code.mmBackEndLoad, com.tools20022.repository.codeset.ChargeType10Code.mmFrontEndLoad,
+						com.tools20022.repository.codeset.ChargeType10Code.mmPenalty);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

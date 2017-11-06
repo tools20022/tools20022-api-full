@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Item that is offered for sale. Products can be services or goods.
@@ -41,70 +42,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Product#CardPayment
- * Product.CardPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#UnitPrice
- * Product.UnitPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#ProductCategory
- * Product.ProductCategory}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#LineItem
- * Product.LineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmCardPayment
+ * Product.mmCardPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmUnitPrice
+ * Product.mmUnitPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmProductCategory
+ * Product.mmProductCategory}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmLineItem
+ * Product.mmLineItem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Product#ProductIdentification
- * Product.ProductIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Name Product.Name}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Description
- * Product.Description}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Origin
- * Product.Origin}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Characteristics
- * Product.Characteristics}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#NetPrice
- * Product.NetPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Quantity
- * Product.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#GrossPrice
- * Product.GrossPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Quality
- * Product.Quality}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Delivery
- * Product.Delivery}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#PurchaseOrder
- * Product.PurchaseOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Product#Tax Product.Tax}</li>
- * </ul>
+ * {@linkplain com.tools20022.repository.entity.Product#mmProductIdentification
+ * Product.mmProductIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmName
+ * Product.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmDescription
+ * Product.mmDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmOrigin
+ * Product.mmOrigin}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmCharacteristics
+ * Product.mmCharacteristics}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmNetPrice
+ * Product.mmNetPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmQuantity
+ * Product.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmGrossPrice
+ * Product.mmGrossPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmQuality
+ * Product.mmQuality}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmDelivery
+ * Product.mmDelivery}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmPurchaseOrder
+ * Product.mmPurchaseOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmTax Product.mmTax}
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Country#ProducedProducts
- * Country.ProducedProducts}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#Product Tax.Product}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#Product
- * CardPayment.Product}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Price#UnitPriceProduct
- * Price.UnitPriceProduct}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Price#NetPriceProduct
- * Price.NetPriceProduct}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Price#GrossPriceProduct
- * Price.GrossPriceProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductIdentification#Product
- * ProductIdentification.Product}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductQuantity#Product
- * ProductQuantity.Product}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#Product
- * ProductCategory.Product}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#InvoicedProduct
- * LineItem.InvoicedProduct}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#Product
- * ProductDelivery.Product}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#Product
- * ProductCharacteristics.Product}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PurchaseOrder#Product
- * PurchaseOrder.Product}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -114,6 +84,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.Goods Goods}</li>
  * <li>{@linkplain com.tools20022.repository.entity.FinancialProduct
  * FinancialProduct}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmProducedProducts
+ * Country.mmProducedProducts}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmProduct Tax.mmProduct}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmProduct
+ * CardPayment.mmProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Price#mmUnitPriceProduct
+ * Price.mmUnitPriceProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Price#mmNetPriceProduct
+ * Price.mmNetPriceProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Price#mmGrossPriceProduct
+ * Price.mmGrossPriceProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmProduct
+ * ProductIdentification.mmProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductQuantity#mmProduct
+ * ProductQuantity.mmProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductCategory#mmProduct
+ * ProductCategory.mmProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmInvoicedProduct
+ * LineItem.mmInvoicedProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#mmProduct
+ * ProductDelivery.mmProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmProduct
+ * ProductCharacteristics.mmProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PurchaseOrder#mmProduct
+ * PurchaseOrder.mmProduct}</li>
  * </ul>
  * </li>
  * <li>
@@ -140,8 +144,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -156,6 +160,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Product {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardPayment cardPayment;
 	/**
 	 * Card payment for which a product was specified.
 	 * <p>
@@ -164,8 +169,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#Product
-	 * CardPayment.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmProduct
+	 * CardPayment.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -188,20 +193,21 @@ public class Product {
 	 * definition} = "Card payment for which a product was specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CardPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPayment";
 			definition = "Card payment for which a product was specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CardPayment.Product;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CardPayment.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Price> unitPrice;
 	/**
 	 * Price per unit of product.
 	 * <p>
@@ -210,77 +216,81 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Price#UnitPriceProduct
-	 * Price.UnitPriceProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmUnitPriceProduct
+	 * Price.mmUnitPriceProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Price Price}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Product2#UnitPrice
-	 * Product2.UnitPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Product1#UnitPrice
-	 * Product1.UnitPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails4#UnitPrice
-	 * LineItemDetails4.UnitPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails7#UnitPrice
-	 * LineItemDetails7.UnitPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails6#UnitPrice
-	 * LineItemDetails6.UnitPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails9#UnitPrice
-	 * LineItemDetails9.UnitPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServicesAmount1#PricingAmount
-	 * BillingServicesAmount1.PricingAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServicesAmount2#PricingAmount
-	 * BillingServicesAmount2.PricingAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BillingService1#Price
-	 * BillingService1.Price}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingService1#OriginalChargePrice
-	 * BillingService1.OriginalChargePrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceParameters2#UnitPrice
-	 * BillingServiceParameters2.UnitPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1#PriceChange
-	 * BillingServiceAdjustment1.PriceChange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1#OriginalPrice
-	 * BillingServiceAdjustment1.OriginalPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1#NewPrice
-	 * BillingServiceAdjustment1.NewPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#UnitPrice
-	 * LineItemDetails10.UnitPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#UnitPrice
-	 * LineItemDetails11.UnitPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#UnitPrice
-	 * LineItemDetails13.UnitPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#UnitPrice
-	 * LineItemDetails14.UnitPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BillingService2#Price
-	 * BillingService2.Price}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingService2#OriginalChargePrice
-	 * BillingService2.OriginalChargePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Product3#UnitPrice
-	 * Product3.UnitPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Product2#mmUnitPrice
+	 * Product2.mmUnitPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Product1#mmUnitPrice
+	 * Product1.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#mmUnitPrice
+	 * LineItemDetails4.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmUnitPrice
+	 * LineItemDetails7.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#mmUnitPrice
+	 * LineItemDetails6.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#mmUnitPrice
+	 * LineItemDetails9.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServicesAmount1#mmPricingAmount
+	 * BillingServicesAmount1.mmPricingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServicesAmount2#mmPricingAmount
+	 * BillingServicesAmount2.mmPricingAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BillingService1#mmPrice
+	 * BillingService1.mmPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingService1#mmOriginalChargePrice
+	 * BillingService1.mmOriginalChargePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceParameters2#mmUnitPrice
+	 * BillingServiceParameters2.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1#mmPriceChange
+	 * BillingServiceAdjustment1.mmPriceChange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1#mmOriginalPrice
+	 * BillingServiceAdjustment1.mmOriginalPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1#mmNewPrice
+	 * BillingServiceAdjustment1.mmNewPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmUnitPrice
+	 * LineItemDetails10.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#mmUnitPrice
+	 * LineItemDetails11.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmUnitPrice
+	 * LineItemDetails13.mmUnitPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#mmUnitPrice
+	 * LineItemDetails14.mmUnitPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BillingService2#mmPrice
+	 * BillingService2.mmPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingService2#mmOriginalChargePrice
+	 * BillingService2.mmOriginalChargePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Product3#mmUnitPrice
+	 * Product3.mmUnitPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -292,26 +302,27 @@ public class Product {
 	 * definition} = "Price per unit of product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd UnitPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUnitPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product2.UnitPrice, com.tools20022.repository.msg.Product1.UnitPrice, com.tools20022.repository.msg.LineItemDetails4.UnitPrice,
-					com.tools20022.repository.msg.LineItemDetails7.UnitPrice, com.tools20022.repository.msg.LineItemDetails6.UnitPrice, com.tools20022.repository.msg.LineItemDetails9.UnitPrice,
-					com.tools20022.repository.msg.BillingServicesAmount1.PricingAmount, com.tools20022.repository.msg.BillingServicesAmount2.PricingAmount, com.tools20022.repository.msg.BillingService1.Price,
-					com.tools20022.repository.msg.BillingService1.OriginalChargePrice, com.tools20022.repository.msg.BillingServiceParameters2.UnitPrice, com.tools20022.repository.msg.BillingServiceAdjustment1.PriceChange,
-					com.tools20022.repository.msg.BillingServiceAdjustment1.OriginalPrice, com.tools20022.repository.msg.BillingServiceAdjustment1.NewPrice, com.tools20022.repository.msg.LineItemDetails10.UnitPrice,
-					com.tools20022.repository.msg.LineItemDetails11.UnitPrice, com.tools20022.repository.msg.LineItemDetails13.UnitPrice, com.tools20022.repository.msg.LineItemDetails14.UnitPrice,
-					com.tools20022.repository.msg.BillingService2.Price, com.tools20022.repository.msg.BillingService2.OriginalChargePrice, com.tools20022.repository.msg.Product3.UnitPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product2.mmUnitPrice, com.tools20022.repository.msg.Product1.mmUnitPrice, com.tools20022.repository.msg.LineItemDetails4.mmUnitPrice,
+					com.tools20022.repository.msg.LineItemDetails7.mmUnitPrice, com.tools20022.repository.msg.LineItemDetails6.mmUnitPrice, com.tools20022.repository.msg.LineItemDetails9.mmUnitPrice,
+					com.tools20022.repository.msg.BillingServicesAmount1.mmPricingAmount, com.tools20022.repository.msg.BillingServicesAmount2.mmPricingAmount, com.tools20022.repository.msg.BillingService1.mmPrice,
+					com.tools20022.repository.msg.BillingService1.mmOriginalChargePrice, com.tools20022.repository.msg.BillingServiceParameters2.mmUnitPrice, com.tools20022.repository.msg.BillingServiceAdjustment1.mmPriceChange,
+					com.tools20022.repository.msg.BillingServiceAdjustment1.mmOriginalPrice, com.tools20022.repository.msg.BillingServiceAdjustment1.mmNewPrice, com.tools20022.repository.msg.LineItemDetails10.mmUnitPrice,
+					com.tools20022.repository.msg.LineItemDetails11.mmUnitPrice, com.tools20022.repository.msg.LineItemDetails13.mmUnitPrice, com.tools20022.repository.msg.LineItemDetails14.mmUnitPrice,
+					com.tools20022.repository.msg.BillingService2.mmPrice, com.tools20022.repository.msg.BillingService2.mmOriginalChargePrice, com.tools20022.repository.msg.Product3.mmUnitPrice);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnitPrice";
 			definition = "Price per unit of product.";
 			minOccurs = 0;
-			type_lazy = () -> Price.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.UnitPriceProduct;
+			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmUnitPriceProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ProductCategory> productCategory;
 	/**
 	 * Category of the product.
 	 * <p>
@@ -320,8 +331,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCategory#Product
-	 * ProductCategory.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCategory#mmProduct
+	 * ProductCategory.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -329,60 +340,60 @@ public class Product {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ProductCategory
 	 * ProductCategory}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData4#ProductType
-	 * TradeData4.ProductType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData5#ProductType
-	 * TradeData5.ProductType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData6#ProductType
-	 * TradeData6.ProductType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#ProductCategory
-	 * TradeProduct1.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#ProductCategory
-	 * LineItemDetails4.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#ProductCategory
-	 * LineItemDetails7.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#ProductCategory
-	 * LineItemDetails5.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#ProductCategory
-	 * LineItemDetails8.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#ProductCategory
-	 * LineItemDetails6.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#ProductCategory
-	 * LineItemDetails9.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#ProductCategory
-	 * LineItemDetails10.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#ProductCategory
-	 * LineItemDetails11.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#ProductCategory
-	 * LineItemDetails13.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#ProductCategory
-	 * LineItemDetails12.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#ProductCategory
-	 * LineItemDetails14.ProductCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#ProductCategory
-	 * TradeProduct2.ProductCategory}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData4#mmProductType
+	 * TradeData4.mmProductType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData5#mmProductType
+	 * TradeData5.mmProductType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData6#mmProductType
+	 * TradeData6.mmProductType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#mmProductCategory
+	 * TradeProduct1.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#mmProductCategory
+	 * LineItemDetails4.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmProductCategory
+	 * LineItemDetails7.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#mmProductCategory
+	 * LineItemDetails5.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#mmProductCategory
+	 * LineItemDetails8.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#mmProductCategory
+	 * LineItemDetails6.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#mmProductCategory
+	 * LineItemDetails9.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmProductCategory
+	 * LineItemDetails10.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#mmProductCategory
+	 * LineItemDetails11.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmProductCategory
+	 * LineItemDetails13.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#mmProductCategory
+	 * LineItemDetails12.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#mmProductCategory
+	 * LineItemDetails14.mmProductCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#mmProductCategory
+	 * TradeProduct2.mmProductCategory}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -394,25 +405,26 @@ public class Product {
 	 * definition} = "Category of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ProductCategory = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProductCategory = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData4.ProductType, com.tools20022.repository.msg.TradeData5.ProductType, com.tools20022.repository.msg.TradeData6.ProductType,
-					com.tools20022.repository.msg.TradeProduct1.ProductCategory, com.tools20022.repository.msg.LineItemDetails4.ProductCategory, com.tools20022.repository.msg.LineItemDetails7.ProductCategory,
-					com.tools20022.repository.msg.LineItemDetails5.ProductCategory, com.tools20022.repository.msg.LineItemDetails8.ProductCategory, com.tools20022.repository.msg.LineItemDetails6.ProductCategory,
-					com.tools20022.repository.msg.LineItemDetails9.ProductCategory, com.tools20022.repository.msg.LineItemDetails10.ProductCategory, com.tools20022.repository.msg.LineItemDetails11.ProductCategory,
-					com.tools20022.repository.msg.LineItemDetails13.ProductCategory, com.tools20022.repository.msg.LineItemDetails12.ProductCategory, com.tools20022.repository.msg.LineItemDetails14.ProductCategory,
-					com.tools20022.repository.msg.TradeProduct2.ProductCategory);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData4.mmProductType, com.tools20022.repository.msg.TradeData5.mmProductType, com.tools20022.repository.msg.TradeData6.mmProductType,
+					com.tools20022.repository.msg.TradeProduct1.mmProductCategory, com.tools20022.repository.msg.LineItemDetails4.mmProductCategory, com.tools20022.repository.msg.LineItemDetails7.mmProductCategory,
+					com.tools20022.repository.msg.LineItemDetails5.mmProductCategory, com.tools20022.repository.msg.LineItemDetails8.mmProductCategory, com.tools20022.repository.msg.LineItemDetails6.mmProductCategory,
+					com.tools20022.repository.msg.LineItemDetails9.mmProductCategory, com.tools20022.repository.msg.LineItemDetails10.mmProductCategory, com.tools20022.repository.msg.LineItemDetails11.mmProductCategory,
+					com.tools20022.repository.msg.LineItemDetails13.mmProductCategory, com.tools20022.repository.msg.LineItemDetails12.mmProductCategory, com.tools20022.repository.msg.LineItemDetails14.mmProductCategory,
+					com.tools20022.repository.msg.TradeProduct2.mmProductCategory);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProductCategory";
 			definition = "Category of the product.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductCategory.Product;
+			opposite_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmObject();
 		}
 	};
+	protected LineItem lineItem;
 	/**
 	 * Specifies the line item in which the product is specified.
 	 * <p>
@@ -421,8 +433,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.LineItem#InvoicedProduct
-	 * LineItem.InvoicedProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.LineItem#mmInvoicedProduct
+	 * LineItem.mmInvoicedProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -445,20 +457,21 @@ public class Product {
 	 * "Specifies the line item in which the product is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd LineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
 			definition = "Specifies the line item in which the product is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.InvoicedProduct;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmInvoicedProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ProductIdentification> productIdentification;
 	/**
 	 * Identification of the product.
 	 * <p>
@@ -467,8 +480,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#Product
-	 * ProductIdentification.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmProduct
+	 * ProductIdentification.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -477,54 +490,54 @@ public class Product {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.ProductIdentification
 	 * ProductIdentification}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#Identification
-	 * TradeProduct1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#ProductIdentifier
-	 * LineItemDetails4.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#ProductIdentifier
-	 * LineItemDetails7.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#ProductIdentifier
-	 * LineItemDetails5.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#ProductIdentifier
-	 * LineItemDetails8.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#ProductIdentifier
-	 * LineItemDetails6.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#ProductIdentifier
-	 * LineItemDetails9.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#ProductIdentifier
-	 * LineItemDetails10.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#ProductIdentifier
-	 * LineItemDetails11.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#ProductIdentifier
-	 * LineItemDetails13.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#ProductIdentifier
-	 * LineItemDetails12.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#ProductIdentifier
-	 * LineItemDetails14.ProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#Identification
-	 * TradeProduct2.Identification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#mmIdentification
+	 * TradeProduct1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#mmProductIdentifier
+	 * LineItemDetails4.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmProductIdentifier
+	 * LineItemDetails7.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#mmProductIdentifier
+	 * LineItemDetails5.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#mmProductIdentifier
+	 * LineItemDetails8.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#mmProductIdentifier
+	 * LineItemDetails6.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#mmProductIdentifier
+	 * LineItemDetails9.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmProductIdentifier
+	 * LineItemDetails10.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#mmProductIdentifier
+	 * LineItemDetails11.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmProductIdentifier
+	 * LineItemDetails13.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#mmProductIdentifier
+	 * LineItemDetails12.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#mmProductIdentifier
+	 * LineItemDetails14.mmProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#mmIdentification
+	 * TradeProduct2.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -536,24 +549,25 @@ public class Product {
 	 * definition} = "Identification of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ProductIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProductIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.Identification, com.tools20022.repository.msg.LineItemDetails4.ProductIdentifier,
-					com.tools20022.repository.msg.LineItemDetails7.ProductIdentifier, com.tools20022.repository.msg.LineItemDetails5.ProductIdentifier, com.tools20022.repository.msg.LineItemDetails8.ProductIdentifier,
-					com.tools20022.repository.msg.LineItemDetails6.ProductIdentifier, com.tools20022.repository.msg.LineItemDetails9.ProductIdentifier, com.tools20022.repository.msg.LineItemDetails10.ProductIdentifier,
-					com.tools20022.repository.msg.LineItemDetails11.ProductIdentifier, com.tools20022.repository.msg.LineItemDetails13.ProductIdentifier, com.tools20022.repository.msg.LineItemDetails12.ProductIdentifier,
-					com.tools20022.repository.msg.LineItemDetails14.ProductIdentifier, com.tools20022.repository.msg.TradeProduct2.Identification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.mmIdentification, com.tools20022.repository.msg.LineItemDetails4.mmProductIdentifier,
+					com.tools20022.repository.msg.LineItemDetails7.mmProductIdentifier, com.tools20022.repository.msg.LineItemDetails5.mmProductIdentifier, com.tools20022.repository.msg.LineItemDetails8.mmProductIdentifier,
+					com.tools20022.repository.msg.LineItemDetails6.mmProductIdentifier, com.tools20022.repository.msg.LineItemDetails9.mmProductIdentifier, com.tools20022.repository.msg.LineItemDetails10.mmProductIdentifier,
+					com.tools20022.repository.msg.LineItemDetails11.mmProductIdentifier, com.tools20022.repository.msg.LineItemDetails13.mmProductIdentifier, com.tools20022.repository.msg.LineItemDetails12.mmProductIdentifier,
+					com.tools20022.repository.msg.LineItemDetails14.mmProductIdentifier, com.tools20022.repository.msg.TradeProduct2.mmIdentification);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProductIdentification";
 			definition = "Identification of the product.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductIdentification.Product;
+			opposite_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmObject();
 		}
 	};
+	protected Max35Text name;
 	/**
 	 * Name of a product.
 	 * <p>
@@ -563,58 +577,58 @@ public class Product {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeProduct1#Name
-	 * TradeProduct1.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#ProductName
-	 * LineItemDetails4.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#ProductName
-	 * LineItemDetails7.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#ProductName
-	 * LineItemDetails5.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#ProductName
-	 * LineItemDetails8.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#ProductName
-	 * LineItemDetails6.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#ProductName
-	 * LineItemDetails9.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceIdentification1#Identification
-	 * BillingServiceIdentification1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#ProductName
-	 * LineItemDetails10.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#ProductName
-	 * LineItemDetails11.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#ProductName
-	 * LineItemDetails13.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#ProductName
-	 * LineItemDetails12.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#ProductName
-	 * LineItemDetails14.ProductName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingServiceIdentification3#Identification
-	 * BillingServiceIdentification3.Identification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeProduct2#Name
-	 * TradeProduct2.Name}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeProduct1#mmName
+	 * TradeProduct1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#mmProductName
+	 * LineItemDetails4.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmProductName
+	 * LineItemDetails7.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#mmProductName
+	 * LineItemDetails5.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#mmProductName
+	 * LineItemDetails8.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#mmProductName
+	 * LineItemDetails6.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#mmProductName
+	 * LineItemDetails9.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceIdentification1#mmIdentification
+	 * BillingServiceIdentification1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmProductName
+	 * LineItemDetails10.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#mmProductName
+	 * LineItemDetails11.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmProductName
+	 * LineItemDetails13.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#mmProductName
+	 * LineItemDetails12.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#mmProductName
+	 * LineItemDetails14.mmProductName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingServiceIdentification3#mmIdentification
+	 * BillingServiceIdentification3.mmIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeProduct2#mmName
+	 * TradeProduct2.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -626,23 +640,24 @@ public class Product {
 	 * definition} = "Name of a product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Name = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.Name, com.tools20022.repository.msg.LineItemDetails4.ProductName, com.tools20022.repository.msg.LineItemDetails7.ProductName,
-					com.tools20022.repository.msg.LineItemDetails5.ProductName, com.tools20022.repository.msg.LineItemDetails8.ProductName, com.tools20022.repository.msg.LineItemDetails6.ProductName,
-					com.tools20022.repository.msg.LineItemDetails9.ProductName, com.tools20022.repository.msg.BillingServiceIdentification1.Identification, com.tools20022.repository.msg.LineItemDetails10.ProductName,
-					com.tools20022.repository.msg.LineItemDetails11.ProductName, com.tools20022.repository.msg.LineItemDetails13.ProductName, com.tools20022.repository.msg.LineItemDetails12.ProductName,
-					com.tools20022.repository.msg.LineItemDetails14.ProductName, com.tools20022.repository.msg.BillingServiceIdentification3.Identification, com.tools20022.repository.msg.TradeProduct2.Name);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.mmName, com.tools20022.repository.msg.LineItemDetails4.mmProductName, com.tools20022.repository.msg.LineItemDetails7.mmProductName,
+					com.tools20022.repository.msg.LineItemDetails5.mmProductName, com.tools20022.repository.msg.LineItemDetails8.mmProductName, com.tools20022.repository.msg.LineItemDetails6.mmProductName,
+					com.tools20022.repository.msg.LineItemDetails9.mmProductName, com.tools20022.repository.msg.BillingServiceIdentification1.mmIdentification, com.tools20022.repository.msg.LineItemDetails10.mmProductName,
+					com.tools20022.repository.msg.LineItemDetails11.mmProductName, com.tools20022.repository.msg.LineItemDetails13.mmProductName, com.tools20022.repository.msg.LineItemDetails12.mmProductName,
+					com.tools20022.repository.msg.LineItemDetails14.mmProductName, com.tools20022.repository.msg.BillingServiceIdentification3.mmIdentification, com.tools20022.repository.msg.TradeProduct2.mmName);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of a product.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Information about the goods and/or services of a trade transaction.
 	 * <p>
@@ -652,41 +667,45 @@ public class Product {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeProduct1#Description
-	 * TradeProduct1.Description}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#GoodsDescription
-	 * LineItem5.GoodsDescription}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#GoodsDescription
-	 * LineItem7.GoodsDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportedGoods1#GoodsDescription
-	 * TransportedGoods1.GoodsDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InsuranceDataSet1#InsuredGoodsDescription
-	 * InsuranceDataSet1.InsuredGoodsDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet1#GoodsDescription
-	 * CertificateDataSet1.GoodsDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem11#GoodsDescription
-	 * LineItem11.GoodsDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet2#GoodsDescription
-	 * CertificateDataSet2.GoodsDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem13#GoodsAndOrServicesDescription
-	 * LineItem13.GoodsAndOrServicesDescription}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeProduct2#Description
-	 * TradeProduct2.Description}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#mmDescription
+	 * TradeProduct1.mmDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem5#mmGoodsDescription
+	 * LineItem5.mmGoodsDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem7#mmGoodsDescription
+	 * LineItem7.mmGoodsDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportedGoods1#mmGoodsDescription
+	 * TransportedGoods1.mmGoodsDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InsuranceDataSet1#mmInsuredGoodsDescription
+	 * InsuranceDataSet1.mmInsuredGoodsDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet1#mmGoodsDescription
+	 * CertificateDataSet1.mmGoodsDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11#mmGoodsDescription
+	 * LineItem11.mmGoodsDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet2#mmGoodsDescription
+	 * CertificateDataSet2.mmGoodsDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13#mmGoodsAndOrServicesDescription
+	 * LineItem13.mmGoodsAndOrServicesDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#mmDescription
+	 * TradeProduct2.mmDescription}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -699,22 +718,23 @@ public class Product {
 	 * "Information about the goods and/or services of a trade transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Description = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.Description, com.tools20022.repository.msg.LineItem5.GoodsDescription, com.tools20022.repository.msg.LineItem7.GoodsDescription,
-					com.tools20022.repository.msg.TransportedGoods1.GoodsDescription, com.tools20022.repository.msg.InsuranceDataSet1.InsuredGoodsDescription, com.tools20022.repository.msg.CertificateDataSet1.GoodsDescription,
-					com.tools20022.repository.msg.LineItem11.GoodsDescription, com.tools20022.repository.msg.CertificateDataSet2.GoodsDescription, com.tools20022.repository.msg.LineItem13.GoodsAndOrServicesDescription,
-					com.tools20022.repository.msg.TradeProduct2.Description);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.mmDescription, com.tools20022.repository.msg.LineItem5.mmGoodsDescription, com.tools20022.repository.msg.LineItem7.mmGoodsDescription,
+					com.tools20022.repository.msg.TransportedGoods1.mmGoodsDescription, com.tools20022.repository.msg.InsuranceDataSet1.mmInsuredGoodsDescription, com.tools20022.repository.msg.CertificateDataSet1.mmGoodsDescription,
+					com.tools20022.repository.msg.LineItem11.mmGoodsDescription, com.tools20022.repository.msg.CertificateDataSet2.mmGoodsDescription, com.tools20022.repository.msg.LineItem13.mmGoodsAndOrServicesDescription,
+					com.tools20022.repository.msg.TradeProduct2.mmDescription);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Information about the goods and/or services of a trade transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Country origin;
 	/**
 	 * Country from which the product originates.
 	 * <p>
@@ -723,35 +743,35 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Country#ProducedProducts
-	 * Country.ProducedProducts}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmProducedProducts
+	 * Country.mmProducedProducts}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#CountryOfOrigin
-	 * TradeProduct1.CountryOfOrigin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Origin
-	 * CertifiedCharacteristics1Choice.Origin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Origin
-	 * CertifiedCharacteristics2Choice.Origin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#CountryOfOrigin
-	 * TradeProduct2.CountryOfOrigin}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#mmCountryOfOrigin
+	 * TradeProduct1.mmCountryOfOrigin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmOrigin
+	 * CertifiedCharacteristics1Choice.mmOrigin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmOrigin
+	 * CertifiedCharacteristics2Choice.mmOrigin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#mmCountryOfOrigin
+	 * TradeProduct2.mmCountryOfOrigin}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -763,22 +783,23 @@ public class Product {
 	 * definition} = "Country from which the product originates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Origin = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOrigin = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.CountryOfOrigin, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Origin,
-					com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Origin, com.tools20022.repository.msg.TradeProduct2.CountryOfOrigin);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.mmCountryOfOrigin, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmOrigin,
+					com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmOrigin, com.tools20022.repository.msg.TradeProduct2.mmCountryOfOrigin);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Origin";
 			definition = "Country from which the product originates.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Country.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Country.ProducedProducts;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmProducedProducts;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ProductCharacteristics> characteristics;
 	/**
 	 * Characteristics of the product.
 	 * <p>
@@ -787,8 +808,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#Product
-	 * ProductCharacteristics.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmProduct
+	 * ProductCharacteristics.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -797,54 +818,54 @@ public class Product {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics
 	 * ProductCharacteristics}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#ProductCharacteristics
-	 * TradeProduct1.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#ProductCharacteristics
-	 * LineItemDetails4.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#ProductCharacteristics
-	 * LineItemDetails7.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#ProductCharacteristics
-	 * LineItemDetails5.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#ProductCharacteristics
-	 * LineItemDetails8.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#ProductCharacteristics
-	 * LineItemDetails6.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#ProductCharacteristics
-	 * LineItemDetails9.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#ProductCharacteristics
-	 * LineItemDetails10.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#ProductCharacteristics
-	 * LineItemDetails11.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#ProductCharacteristics
-	 * LineItemDetails13.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#ProductCharacteristics
-	 * LineItemDetails12.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#ProductCharacteristics
-	 * LineItemDetails14.ProductCharacteristics}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#ProductCharacteristics
-	 * TradeProduct2.ProductCharacteristics}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct1#mmProductCharacteristics
+	 * TradeProduct1.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#mmProductCharacteristics
+	 * LineItemDetails4.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmProductCharacteristics
+	 * LineItemDetails7.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#mmProductCharacteristics
+	 * LineItemDetails5.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#mmProductCharacteristics
+	 * LineItemDetails8.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#mmProductCharacteristics
+	 * LineItemDetails6.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#mmProductCharacteristics
+	 * LineItemDetails9.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmProductCharacteristics
+	 * LineItemDetails10.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#mmProductCharacteristics
+	 * LineItemDetails11.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmProductCharacteristics
+	 * LineItemDetails13.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#mmProductCharacteristics
+	 * LineItemDetails12.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#mmProductCharacteristics
+	 * LineItemDetails14.mmProductCharacteristics}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#mmProductCharacteristics
+	 * TradeProduct2.mmProductCharacteristics}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -856,24 +877,25 @@ public class Product {
 	 * definition} = "Characteristics of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Characteristics = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCharacteristics = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.ProductCharacteristics, com.tools20022.repository.msg.LineItemDetails4.ProductCharacteristics,
-					com.tools20022.repository.msg.LineItemDetails7.ProductCharacteristics, com.tools20022.repository.msg.LineItemDetails5.ProductCharacteristics, com.tools20022.repository.msg.LineItemDetails8.ProductCharacteristics,
-					com.tools20022.repository.msg.LineItemDetails6.ProductCharacteristics, com.tools20022.repository.msg.LineItemDetails9.ProductCharacteristics, com.tools20022.repository.msg.LineItemDetails10.ProductCharacteristics,
-					com.tools20022.repository.msg.LineItemDetails11.ProductCharacteristics, com.tools20022.repository.msg.LineItemDetails13.ProductCharacteristics, com.tools20022.repository.msg.LineItemDetails12.ProductCharacteristics,
-					com.tools20022.repository.msg.LineItemDetails14.ProductCharacteristics, com.tools20022.repository.msg.TradeProduct2.ProductCharacteristics);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct1.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails4.mmProductCharacteristics,
+					com.tools20022.repository.msg.LineItemDetails7.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails5.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails8.mmProductCharacteristics,
+					com.tools20022.repository.msg.LineItemDetails6.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails9.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails10.mmProductCharacteristics,
+					com.tools20022.repository.msg.LineItemDetails11.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails13.mmProductCharacteristics,
+					com.tools20022.repository.msg.LineItemDetails12.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails14.mmProductCharacteristics, com.tools20022.repository.msg.TradeProduct2.mmProductCharacteristics);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Characteristics";
 			definition = "Characteristics of the product.";
 			minOccurs = 0;
-			type_lazy = () -> ProductCharacteristics.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.Product;
+			opposite_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmObject();
 		}
 	};
+	protected Price netPrice;
 	/**
 	 * Net price of the goods and/or service.
 	 * <p>
@@ -882,27 +904,27 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Price#NetPriceProduct
-	 * Price.NetPriceProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmNetPriceProduct
+	 * Price.mmNetPriceProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Price Price}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#NetPrice
-	 * LineItem10.NetPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#NetPrice
-	 * LineItem16.NetPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#mmNetPrice
+	 * LineItem10.mmNetPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmNetPrice
+	 * LineItem16.mmNetPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -914,21 +936,22 @@ public class Product {
 	 * definition} = "Net price of the goods and/or service."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd NetPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNetPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.NetPrice, com.tools20022.repository.msg.LineItem16.NetPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmNetPrice, com.tools20022.repository.msg.LineItem16.mmNetPrice);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetPrice";
 			definition = "Net price of the goods and/or service.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.NetPriceProduct;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmNetPriceProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ProductQuantity> quantity;
 	/**
 	 * Specifies the quantity of the product.
 	 * <p>
@@ -937,8 +960,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#Product
-	 * ProductQuantity.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmProduct
+	 * ProductQuantity.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -946,66 +969,73 @@ public class Product {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ProductQuantity
 	 * ProductQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem10#NetPriceQuantity
-	 * LineItem10.NetPriceQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem10#GrossPriceQuantity
-	 * LineItem10.GrossPriceQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#GrossWeight
-	 * LineItem10.GrossWeight}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails7#Quantity
-	 * LineItemDetails7.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#OrderedQuantity
-	 * LineItemDetails5.OrderedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#OrderedQuantity
-	 * LineItemDetails8.OrderedQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails6#Quantity
-	 * LineItemDetails6.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails9#Quantity
-	 * LineItemDetails9.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Weight
-	 * CertifiedCharacteristics1Choice.Weight}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Quantity
-	 * CertifiedCharacteristics1Choice.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails10#Quantity
-	 * LineItemDetails10.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails11#Quantity
-	 * LineItemDetails11.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Weight
-	 * CertifiedCharacteristics2Choice.Weight}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Quantity
-	 * CertifiedCharacteristics2Choice.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails13#Quantity
-	 * LineItemDetails13.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#OrderedQuantity
-	 * LineItemDetails12.OrderedQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails14#Quantity
-	 * LineItemDetails14.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem16#NetPriceQuantity
-	 * LineItem16.NetPriceQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem16#GrossPriceQuantity
-	 * LineItem16.GrossPriceQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#GrossWeight
-	 * LineItem16.GrossWeight}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem10#mmNetPriceQuantity
+	 * LineItem10.mmNetPriceQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem10#mmGrossPriceQuantity
+	 * LineItem10.mmGrossPriceQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#mmGrossWeight
+	 * LineItem10.mmGrossWeight}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmQuantity
+	 * LineItemDetails7.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails5#mmOrderedQuantity
+	 * LineItemDetails5.mmOrderedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails8#mmOrderedQuantity
+	 * LineItemDetails8.mmOrderedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#mmQuantity
+	 * LineItemDetails6.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#mmQuantity
+	 * LineItemDetails9.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmWeight
+	 * CertifiedCharacteristics1Choice.mmWeight}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmQuantity
+	 * CertifiedCharacteristics1Choice.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmQuantity
+	 * LineItemDetails10.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#mmQuantity
+	 * LineItemDetails11.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmWeight
+	 * CertifiedCharacteristics2Choice.mmWeight}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmQuantity
+	 * CertifiedCharacteristics2Choice.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmQuantity
+	 * LineItemDetails13.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails12#mmOrderedQuantity
+	 * LineItemDetails12.mmOrderedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#mmQuantity
+	 * LineItemDetails14.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmNetPriceQuantity
+	 * LineItem16.mmNetPriceQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmGrossPriceQuantity
+	 * LineItem16.mmGrossPriceQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmGrossWeight
+	 * LineItem16.mmGrossWeight}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1017,26 +1047,27 @@ public class Product {
 	 * definition} = "Specifies the quantity of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Quantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.NetPriceQuantity, com.tools20022.repository.msg.LineItem10.GrossPriceQuantity, com.tools20022.repository.msg.LineItem10.GrossWeight,
-					com.tools20022.repository.msg.LineItemDetails7.Quantity, com.tools20022.repository.msg.LineItemDetails5.OrderedQuantity, com.tools20022.repository.msg.LineItemDetails8.OrderedQuantity,
-					com.tools20022.repository.msg.LineItemDetails6.Quantity, com.tools20022.repository.msg.LineItemDetails9.Quantity, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Weight,
-					com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Quantity, com.tools20022.repository.msg.LineItemDetails10.Quantity, com.tools20022.repository.msg.LineItemDetails11.Quantity,
-					com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Weight, com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Quantity, com.tools20022.repository.msg.LineItemDetails13.Quantity,
-					com.tools20022.repository.msg.LineItemDetails12.OrderedQuantity, com.tools20022.repository.msg.LineItemDetails14.Quantity, com.tools20022.repository.msg.LineItem16.NetPriceQuantity,
-					com.tools20022.repository.msg.LineItem16.GrossPriceQuantity, com.tools20022.repository.msg.LineItem16.GrossWeight);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmNetPriceQuantity, com.tools20022.repository.msg.LineItem10.mmGrossPriceQuantity, com.tools20022.repository.msg.LineItem10.mmGrossWeight,
+					com.tools20022.repository.msg.LineItemDetails7.mmQuantity, com.tools20022.repository.msg.LineItemDetails5.mmOrderedQuantity, com.tools20022.repository.msg.LineItemDetails8.mmOrderedQuantity,
+					com.tools20022.repository.msg.LineItemDetails6.mmQuantity, com.tools20022.repository.msg.LineItemDetails9.mmQuantity, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmWeight,
+					com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuantity, com.tools20022.repository.msg.LineItemDetails10.mmQuantity, com.tools20022.repository.msg.LineItemDetails11.mmQuantity,
+					com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmWeight, com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmQuantity, com.tools20022.repository.msg.LineItemDetails13.mmQuantity,
+					com.tools20022.repository.msg.LineItemDetails12.mmOrderedQuantity, com.tools20022.repository.msg.LineItemDetails14.mmQuantity, com.tools20022.repository.msg.LineItem16.mmNetPriceQuantity,
+					com.tools20022.repository.msg.LineItem16.mmGrossPriceQuantity, com.tools20022.repository.msg.LineItem16.mmGrossWeight);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of the product.";
 			minOccurs = 0;
-			type_lazy = () -> ProductQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.Product;
+			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
+	protected Price grossPrice;
 	/**
 	 * Gross price of the goods and/or service.
 	 * <p>
@@ -1045,27 +1076,27 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Price#GrossPriceProduct
-	 * Price.GrossPriceProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmGrossPriceProduct
+	 * Price.mmGrossPriceProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Price Price}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#GrossPrice
-	 * LineItem10.GrossPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#GrossPrice
-	 * LineItem16.GrossPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#mmGrossPrice
+	 * LineItem10.mmGrossPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmGrossPrice
+	 * LineItem16.mmGrossPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1077,21 +1108,22 @@ public class Product {
 	 * definition} = "Gross price of the goods and/or service."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd GrossPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmGrossPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.GrossPrice, com.tools20022.repository.msg.LineItem16.GrossPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmGrossPrice, com.tools20022.repository.msg.LineItem16.mmGrossPrice);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GrossPrice";
 			definition = "Gross price of the goods and/or service.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.GrossPriceProduct;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmGrossPriceProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 		}
 	};
+	protected Max70Text quality;
 	/**
 	 * Quality of the product.
 	 * <p>
@@ -1101,21 +1133,21 @@ public class Product {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#Quality
-	 * CertifiedCharacteristics1Choice.Quality}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#Quality
-	 * CertifiedCharacteristics2Choice.Quality}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice#mmQuality
+	 * CertifiedCharacteristics1Choice.mmQuality}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice#mmQuality
+	 * CertifiedCharacteristics2Choice.mmQuality}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1127,19 +1159,20 @@ public class Product {
 	 * definition} = "Quality of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Quality = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmQuality = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.Quality, com.tools20022.repository.choice.CertifiedCharacteristics2Choice.Quality);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuality, com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmQuality);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Quality";
 			definition = "Quality of the product.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ProductDelivery delivery;
 	/**
 	 * Delivery process of a product
 	 * <p>
@@ -1148,8 +1181,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ProductDelivery#Product
-	 * ProductDelivery.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmProduct
+	 * ProductDelivery.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1172,20 +1205,21 @@ public class Product {
 	 * definition} = "Delivery process of a product"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Delivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDelivery = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Delivery";
 			definition = "Delivery process of a product";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProductDelivery.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.Product;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PurchaseOrder> purchaseOrder;
 	/**
 	 * Specifies the purchase order in which a specific product is ordered.
 	 * <p>
@@ -1194,8 +1228,8 @@ public class Product {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PurchaseOrder#Product
-	 * PurchaseOrder.Product}</li>
+	 * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmProduct
+	 * PurchaseOrder.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1219,7 +1253,7 @@ public class Product {
 	 * "Specifies the purchase order in which a specific product is ordered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PurchaseOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPurchaseOrder = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
@@ -1227,11 +1261,12 @@ public class Product {
 			name = "PurchaseOrder";
 			definition = "Specifies the purchase order in which a specific product is ordered.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.Product;
+			opposite_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Tax> tax;
 	/**
 	 * Amount of money due to the government or tax authority, according to
 	 * various pre-defined parameters linked to the value of the goods and
@@ -1241,70 +1276,70 @@ public class Product {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Tax#Product
-	 * Tax.Product}</li>
+	 * opposite} = {@linkplain com.tools20022.repository.entity.Tax#mmProduct
+	 * Tax.mmProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement1#Tax
-	 * TradeSettlement1.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#SubTotalCalculatedTax
-	 * TradeSettlement1.SubTotalCalculatedTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#Tax
-	 * LineItem10.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails4#Tax
-	 * LineItemDetails4.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#Tax
-	 * LineItem5.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails7#Tax
-	 * LineItemDetails7.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#Tax
-	 * LineItem7.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails6#Tax
-	 * LineItemDetails6.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#Tax
-	 * LineItem4.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails9#Tax
-	 * LineItemDetails9.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#Tax
-	 * LineItem9.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingService1#TaxCalculation
-	 * BillingService1.TaxCalculation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#Tax
-	 * LineItem11.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails10#Tax
-	 * LineItemDetails10.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem12#Tax
-	 * LineItem12.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails11#Tax
-	 * LineItemDetails11.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails13#Tax
-	 * LineItemDetails13.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#Tax
-	 * LineItem13.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem15#Tax
-	 * LineItem15.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails14#Tax
-	 * LineItemDetails14.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingService2#TaxCalculation
-	 * BillingService2.TaxCalculation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#Tax
-	 * LineItem16.Tax}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Product
 	 * Product}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement1#mmTax
+	 * TradeSettlement1.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#mmSubTotalCalculatedTax
+	 * TradeSettlement1.mmSubTotalCalculatedTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#mmTax
+	 * LineItem10.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails4#mmTax
+	 * LineItemDetails4.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#mmTax
+	 * LineItem5.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails7#mmTax
+	 * LineItemDetails7.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#mmTax
+	 * LineItem7.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails6#mmTax
+	 * LineItemDetails6.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmTax
+	 * LineItem4.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails9#mmTax
+	 * LineItemDetails9.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#mmTax
+	 * LineItem9.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingService1#mmTaxCalculation
+	 * BillingService1.mmTaxCalculation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#mmTax
+	 * LineItem11.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails10#mmTax
+	 * LineItemDetails10.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem12#mmTax
+	 * LineItem12.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails11#mmTax
+	 * LineItemDetails11.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails13#mmTax
+	 * LineItemDetails13.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#mmTax
+	 * LineItem13.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem15#mmTax
+	 * LineItem15.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails14#mmTax
+	 * LineItemDetails14.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingService2#mmTaxCalculation
+	 * BillingService2.mmTaxCalculation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmTax
+	 * LineItem16.mmTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1318,48 +1353,176 @@ public class Product {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Tax = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.Tax, com.tools20022.repository.msg.TradeSettlement1.SubTotalCalculatedTax, com.tools20022.repository.msg.LineItem10.Tax,
-					com.tools20022.repository.msg.LineItemDetails4.Tax, com.tools20022.repository.msg.LineItem5.Tax, com.tools20022.repository.msg.LineItemDetails7.Tax, com.tools20022.repository.msg.LineItem7.Tax,
-					com.tools20022.repository.msg.LineItemDetails6.Tax, com.tools20022.repository.msg.LineItem4.Tax, com.tools20022.repository.msg.LineItemDetails9.Tax, com.tools20022.repository.msg.LineItem9.Tax,
-					com.tools20022.repository.msg.BillingService1.TaxCalculation, com.tools20022.repository.msg.LineItem11.Tax, com.tools20022.repository.msg.LineItemDetails10.Tax, com.tools20022.repository.msg.LineItem12.Tax,
-					com.tools20022.repository.msg.LineItemDetails11.Tax, com.tools20022.repository.msg.LineItemDetails13.Tax, com.tools20022.repository.msg.LineItem13.Tax, com.tools20022.repository.msg.LineItem15.Tax,
-					com.tools20022.repository.msg.LineItemDetails14.Tax, com.tools20022.repository.msg.BillingService2.TaxCalculation, com.tools20022.repository.msg.LineItem16.Tax);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmTax, com.tools20022.repository.msg.TradeSettlement1.mmSubTotalCalculatedTax, com.tools20022.repository.msg.LineItem10.mmTax,
+					com.tools20022.repository.msg.LineItemDetails4.mmTax, com.tools20022.repository.msg.LineItem5.mmTax, com.tools20022.repository.msg.LineItemDetails7.mmTax, com.tools20022.repository.msg.LineItem7.mmTax,
+					com.tools20022.repository.msg.LineItemDetails6.mmTax, com.tools20022.repository.msg.LineItem4.mmTax, com.tools20022.repository.msg.LineItemDetails9.mmTax, com.tools20022.repository.msg.LineItem9.mmTax,
+					com.tools20022.repository.msg.BillingService1.mmTaxCalculation, com.tools20022.repository.msg.LineItem11.mmTax, com.tools20022.repository.msg.LineItemDetails10.mmTax, com.tools20022.repository.msg.LineItem12.mmTax,
+					com.tools20022.repository.msg.LineItemDetails11.mmTax, com.tools20022.repository.msg.LineItemDetails13.mmTax, com.tools20022.repository.msg.LineItem13.mmTax, com.tools20022.repository.msg.LineItem15.mmTax,
+					com.tools20022.repository.msg.LineItemDetails14.mmTax, com.tools20022.repository.msg.BillingService2.mmTaxCalculation, com.tools20022.repository.msg.LineItem16.mmTax);
 			elementContext_lazy = () -> Product.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters linked to the value of the goods and services in a trade transaction.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.Product;
+			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmProduct;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Product";
 				definition = "Item that is offered for sale. Products can be services or goods.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.ProducedProducts, com.tools20022.repository.entity.Tax.Product, com.tools20022.repository.entity.CardPayment.Product,
-						com.tools20022.repository.entity.Price.UnitPriceProduct, com.tools20022.repository.entity.Price.NetPriceProduct, com.tools20022.repository.entity.Price.GrossPriceProduct,
-						com.tools20022.repository.entity.ProductIdentification.Product, com.tools20022.repository.entity.ProductQuantity.Product, com.tools20022.repository.entity.ProductCategory.Product,
-						com.tools20022.repository.entity.LineItem.InvoicedProduct, com.tools20022.repository.entity.ProductDelivery.Product, com.tools20022.repository.entity.ProductCharacteristics.Product,
-						com.tools20022.repository.entity.PurchaseOrder.Product);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmProducedProducts, com.tools20022.repository.entity.Tax.mmProduct, com.tools20022.repository.entity.CardPayment.mmProduct,
+						com.tools20022.repository.entity.Price.mmUnitPriceProduct, com.tools20022.repository.entity.Price.mmNetPriceProduct, com.tools20022.repository.entity.Price.mmGrossPriceProduct,
+						com.tools20022.repository.entity.ProductIdentification.mmProduct, com.tools20022.repository.entity.ProductQuantity.mmProduct, com.tools20022.repository.entity.ProductCategory.mmProduct,
+						com.tools20022.repository.entity.LineItem.mmInvoicedProduct, com.tools20022.repository.entity.ProductDelivery.mmProduct, com.tools20022.repository.entity.ProductCharacteristics.mmProduct,
+						com.tools20022.repository.entity.PurchaseOrder.mmProduct);
 				subType_lazy = () -> Arrays.asList(Service.mmObject(), Goods.mmObject(), FinancialProduct.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.CardPayment, com.tools20022.repository.entity.Product.UnitPrice, com.tools20022.repository.entity.Product.ProductCategory,
-						com.tools20022.repository.entity.Product.LineItem, com.tools20022.repository.entity.Product.ProductIdentification, com.tools20022.repository.entity.Product.Name, com.tools20022.repository.entity.Product.Description,
-						com.tools20022.repository.entity.Product.Origin, com.tools20022.repository.entity.Product.Characteristics, com.tools20022.repository.entity.Product.NetPrice, com.tools20022.repository.entity.Product.Quantity,
-						com.tools20022.repository.entity.Product.GrossPrice, com.tools20022.repository.entity.Product.Quality, com.tools20022.repository.entity.Product.Delivery, com.tools20022.repository.entity.Product.PurchaseOrder,
-						com.tools20022.repository.entity.Product.Tax);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmCardPayment, com.tools20022.repository.entity.Product.mmUnitPrice, com.tools20022.repository.entity.Product.mmProductCategory,
+						com.tools20022.repository.entity.Product.mmLineItem, com.tools20022.repository.entity.Product.mmProductIdentification, com.tools20022.repository.entity.Product.mmName,
+						com.tools20022.repository.entity.Product.mmDescription, com.tools20022.repository.entity.Product.mmOrigin, com.tools20022.repository.entity.Product.mmCharacteristics,
+						com.tools20022.repository.entity.Product.mmNetPrice, com.tools20022.repository.entity.Product.mmQuantity, com.tools20022.repository.entity.Product.mmGrossPrice, com.tools20022.repository.entity.Product.mmQuality,
+						com.tools20022.repository.entity.Product.mmDelivery, com.tools20022.repository.entity.Product.mmPurchaseOrder, com.tools20022.repository.entity.Product.mmTax);
 				derivationComponent_lazy = () -> Arrays.asList(Product2.mmObject(), Product1.mmObject(), TradeProduct1.mmObject(), CertifiedCharacteristics1Choice.mmObject(), ServiceItemTotals1.mmObject(),
 						CertifiedCharacteristics2Choice.mmObject(), Product3.mmObject(), Product4.mmObject(), Product5.mmObject(), TradeProduct2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardPayment getCardPayment() {
+		return cardPayment;
+	}
+
+	public void setCardPayment(com.tools20022.repository.entity.CardPayment cardPayment) {
+		this.cardPayment = cardPayment;
+	}
+
+	public List<Price> getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(List<com.tools20022.repository.entity.Price> unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
+	public List<ProductCategory> getProductCategory() {
+		return productCategory;
+	}
+
+	public void setProductCategory(List<com.tools20022.repository.entity.ProductCategory> productCategory) {
+		this.productCategory = productCategory;
+	}
+
+	public LineItem getLineItem() {
+		return lineItem;
+	}
+
+	public void setLineItem(com.tools20022.repository.entity.LineItem lineItem) {
+		this.lineItem = lineItem;
+	}
+
+	public List<ProductIdentification> getProductIdentification() {
+		return productIdentification;
+	}
+
+	public void setProductIdentification(List<com.tools20022.repository.entity.ProductIdentification> productIdentification) {
+		this.productIdentification = productIdentification;
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
+	}
+
+	public Country getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(com.tools20022.repository.entity.Country origin) {
+		this.origin = origin;
+	}
+
+	public List<ProductCharacteristics> getCharacteristics() {
+		return characteristics;
+	}
+
+	public void setCharacteristics(List<com.tools20022.repository.entity.ProductCharacteristics> characteristics) {
+		this.characteristics = characteristics;
+	}
+
+	public Price getNetPrice() {
+		return netPrice;
+	}
+
+	public void setNetPrice(com.tools20022.repository.entity.Price netPrice) {
+		this.netPrice = netPrice;
+	}
+
+	public List<ProductQuantity> getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(List<com.tools20022.repository.entity.ProductQuantity> quantity) {
+		this.quantity = quantity;
+	}
+
+	public Price getGrossPrice() {
+		return grossPrice;
+	}
+
+	public void setGrossPrice(com.tools20022.repository.entity.Price grossPrice) {
+		this.grossPrice = grossPrice;
+	}
+
+	public Max70Text getQuality() {
+		return quality;
+	}
+
+	public void setQuality(Max70Text quality) {
+		this.quality = quality;
+	}
+
+	public ProductDelivery getDelivery() {
+		return delivery;
+	}
+
+	public void setDelivery(com.tools20022.repository.entity.ProductDelivery delivery) {
+		this.delivery = delivery;
+	}
+
+	public List<PurchaseOrder> getPurchaseOrder() {
+		return purchaseOrder;
+	}
+
+	public void setPurchaseOrder(List<com.tools20022.repository.entity.PurchaseOrder> purchaseOrder) {
+		this.purchaseOrder = purchaseOrder;
+	}
+
+	public List<Tax> getTax() {
+		return tax;
+	}
+
+	public void setTax(List<com.tools20022.repository.entity.Tax> tax) {
+		this.tax = tax;
 	}
 }

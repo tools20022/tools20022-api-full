@@ -35,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#CancelledByYourself
- * CancelledStatusReason4Code.CancelledByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmCancelledByYourself
+ * CancelledStatusReason4Code.mmCancelledByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#CancelledBySystem
- * CancelledStatusReason4Code.CancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmCancelledBySystem
+ * CancelledStatusReason4Code.mmCancelledBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#CancelledByAgent
- * CancelledStatusReason4Code.CancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmCancelledByAgent
+ * CancelledStatusReason4Code.mmCancelledByAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#EndOfLife
- * CancelledStatusReason4Code.EndOfLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmEndOfLife
+ * CancelledStatusReason4Code.mmEndOfLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#CancelledDueToTransformation
- * CancelledStatusReason4Code.CancelledDueToTransformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmCancelledDueToTransformation
+ * CancelledStatusReason4Code.mmCancelledDueToTransformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#CancelledSplitPartialSettlement
- * CancelledStatusReason4Code.CancelledSplitPartialSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmCancelledSplitPartialSettlement
+ * CancelledStatusReason4Code.mmCancelledSplitPartialSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#CancelledDueToCorporateAction
- * CancelledStatusReason4Code.CancelledDueToCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmCancelledDueToCorporateAction
+ * CancelledStatusReason4Code.mmCancelledDueToCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#SecuritiesNoLongerEligible
- * CancelledStatusReason4Code.SecuritiesNoLongerEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason4Code#mmSecuritiesNoLongerEligible
+ * CancelledStatusReason4Code.mmSecuritiesNoLongerEligible}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByYourself = new MMCode() {
+	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
@@ -125,7 +125,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledBySystem = new MMCode() {
+	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
@@ -148,7 +148,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAgent = new MMCode() {
+	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
@@ -171,7 +171,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "EndOfLife"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfLife = new MMCode() {
+	public static final MMCode mmEndOfLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfLife";
@@ -194,7 +194,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledDueToTransformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledDueToTransformation = new MMCode() {
+	public static final MMCode mmCancelledDueToTransformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToTransformation";
@@ -217,7 +217,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledSplitPartialSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledSplitPartialSettlement = new MMCode() {
+	public static final MMCode mmCancelledSplitPartialSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledSplitPartialSettlement";
@@ -240,7 +240,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledDueToCorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledDueToCorporateAction = new MMCode() {
+	public static final MMCode mmCancelledDueToCorporateAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToCorporateAction";
@@ -263,7 +263,7 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	 * name} = "SecuritiesNoLongerEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesNoLongerEligible = new MMCode() {
+	public static final MMCode mmSecuritiesNoLongerEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesNoLongerEligible";
@@ -274,15 +274,15 @@ public class CancelledStatusReason4Code extends CancelledStatusReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason4Code";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason4Code.CancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason4Code.CancelledBySystem,
-						com.tools20022.repository.codeset.CancelledStatusReason4Code.CancelledByAgent, com.tools20022.repository.codeset.CancelledStatusReason4Code.EndOfLife,
-						com.tools20022.repository.codeset.CancelledStatusReason4Code.CancelledDueToTransformation, com.tools20022.repository.codeset.CancelledStatusReason4Code.CancelledSplitPartialSettlement,
-						com.tools20022.repository.codeset.CancelledStatusReason4Code.CancelledDueToCorporateAction, com.tools20022.repository.codeset.CancelledStatusReason4Code.SecuritiesNoLongerEligible);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason4Code.mmCancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason4Code.mmCancelledBySystem,
+						com.tools20022.repository.codeset.CancelledStatusReason4Code.mmCancelledByAgent, com.tools20022.repository.codeset.CancelledStatusReason4Code.mmEndOfLife,
+						com.tools20022.repository.codeset.CancelledStatusReason4Code.mmCancelledDueToTransformation, com.tools20022.repository.codeset.CancelledStatusReason4Code.mmCancelledSplitPartialSettlement,
+						com.tools20022.repository.codeset.CancelledStatusReason4Code.mmCancelledDueToCorporateAction, com.tools20022.repository.codeset.CancelledStatusReason4Code.mmSecuritiesNoLongerEligible);
 				trace_lazy = () -> CancelledStatusReasonV2Code.mmObject();
 			}
 		});

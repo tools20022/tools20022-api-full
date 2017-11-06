@@ -35,15 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentMethod5Code#CreditTransfer
- * PaymentMethod5Code.CreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethod5Code#mmCreditTransfer
+ * PaymentMethod5Code.mmCreditTransfer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class PaymentMethod5Code extends PaymentMethodCode {
 	 * name} = "CreditTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditTransfer = new MMCode() {
+	public static final MMCode mmCreditTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransfer";
@@ -92,12 +92,12 @@ public class PaymentMethod5Code extends PaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentMethod5Code";
 				definition = "Specifies the transfer method that will be used to transfer an amount of money.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod5Code.CreditTransfer);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod5Code.mmCreditTransfer);
 				trace_lazy = () -> PaymentMethodCode.mmObject();
 			}
 		});

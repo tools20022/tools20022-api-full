@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#FiveDayMovingAverage
- * LiquidityIndicatorType1Code.FiveDayMovingAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#mmFiveDayMovingAverage
+ * LiquidityIndicatorType1Code.mmFiveDayMovingAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#TwentyDayMovingAverage
- * LiquidityIndicatorType1Code.TwentyDayMovingAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#mmTwentyDayMovingAverage
+ * LiquidityIndicatorType1Code.mmTwentyDayMovingAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#NormalMarketSize
- * LiquidityIndicatorType1Code.NormalMarketSize}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#mmNormalMarketSize
+ * LiquidityIndicatorType1Code.mmNormalMarketSize}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
 	 * name} = "FiveDayMovingAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode FiveDayMovingAverage = new MMCode() {
+	public static final MMCode mmFiveDayMovingAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiveDayMovingAverage";
@@ -110,7 +110,7 @@ public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
 	 * name} = "TwentyDayMovingAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode TwentyDayMovingAverage = new MMCode() {
+	public static final MMCode mmTwentyDayMovingAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwentyDayMovingAverage";
@@ -133,7 +133,7 @@ public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
 	 * name} = "NormalMarketSize"</li>
 	 * </ul>
 	 */
-	public static final MMCode NormalMarketSize = new MMCode() {
+	public static final MMCode mmNormalMarketSize = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalMarketSize";
@@ -144,13 +144,13 @@ public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIVE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LiquidityIndicatorType1Code";
 				definition = "Specifies the market and statistic conditions upon which a liquidity indicator has been computed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiquidityIndicatorType1Code.FiveDayMovingAverage, com.tools20022.repository.codeset.LiquidityIndicatorType1Code.TwentyDayMovingAverage,
-						com.tools20022.repository.codeset.LiquidityIndicatorType1Code.NormalMarketSize);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiquidityIndicatorType1Code.mmFiveDayMovingAverage, com.tools20022.repository.codeset.LiquidityIndicatorType1Code.mmTwentyDayMovingAverage,
+						com.tools20022.repository.codeset.LiquidityIndicatorType1Code.mmNormalMarketSize);
 				trace_lazy = () -> LiquidityIndicatorTypeCode.mmObject();
 			}
 		});

@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.PaymentTransactionInformation3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,21 +74,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#GroupHeader
- * PaymentCancellationRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#mmGroupHeader
+ * PaymentCancellationRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#OriginalGroupInformation
- * PaymentCancellationRequestV01.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#mmOriginalGroupInformation
+ * PaymentCancellationRequestV01.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#TransactionInformation
- * PaymentCancellationRequestV01.TransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#mmTransactionInformation
+ * PaymentCancellationRequestV01.mmTransactionInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.PaymentCancellationRequestV01#identifier
- * PaymentCancellationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.006.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader7 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -136,17 +136,18 @@ public class PaymentCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader7.mmObject();
 		}
 	};
+	protected OriginalGroupInformation4 originalGroupInformation;
 	/**
 	 * Information concerning the original group of transactions, to which the
 	 * message refers.
@@ -173,17 +174,18 @@ public class PaymentCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation4.mmObject();
 		}
 	};
+	protected List<PaymentTransactionInformation3> transactionInformation;
 	/**
 	 * Information concerning the original transactions, to which the
 	 * cancellation request message refers.
@@ -210,7 +212,7 @@ public class PaymentCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,33 +220,6 @@ public class PaymentCancellationRequestV01 {
 			definition = "Information concerning the original transactions, to which the cancellation request message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransactionInformation3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "006";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -260,11 +235,42 @@ public class PaymentCancellationRequestV01 {
 				xmlTag = "pacs.006.001.01";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
 				xmlName = "pacs.006.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.GroupHeader, com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.OriginalGroupInformation,
-						com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.TransactionInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmTransactionInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "006";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader7 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader7 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalGroupInformation4 getOriginalGroupInformation() {
+		return originalGroupInformation;
+	}
+
+	public void setOriginalGroupInformation(OriginalGroupInformation4 originalGroupInformation) {
+		this.originalGroupInformation = originalGroupInformation;
+	}
+
+	public List<PaymentTransactionInformation3> getTransactionInformation() {
+		return transactionInformation;
+	}
+
+	public void setTransactionInformation(List<PaymentTransactionInformation3> transactionInformation) {
+		this.transactionInformation = transactionInformation;
 	}
 }

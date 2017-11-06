@@ -42,21 +42,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification59#PartyName
- * PartyIdentification59.PartyName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification59#AnyBIC
- * PartyIdentification59.AnyBIC}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmPartyName
+ * PartyIdentification59.mmPartyName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification59#mmAnyBIC
+ * PartyIdentification59.mmAnyBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification59#AccountNumber
- * PartyIdentification59.AccountNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification59#Address
- * PartyIdentification59.Address}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmAccountNumber
+ * PartyIdentification59.mmAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification59#ClearingSystemIdentification
- * PartyIdentification59.ClearingSystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmAddress
+ * PartyIdentification59.mmAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification59#LegalEntityIdentifier
- * PartyIdentification59.LegalEntityIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmClearingSystemIdentification
+ * PartyIdentification59.mmClearingSystemIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmLegalEntityIdentifier
+ * PartyIdentification59.mmLegalEntityIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification59 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max34Text partyName;
 	/**
 	 * Identification of the party expressed as the party's name.
 	 * <p>
@@ -95,8 +97,8 @@ public class PartyIdentification59 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,20 +118,21 @@ public class PartyIdentification59 {
 	 * "Identification of the party expressed as the party's name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "PtyNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyName";
 			definition = "Identification of the party expressed as the party's name.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max34Text.mmObject();
 		}
 	};
+	protected PartyIdentification44 anyBIC;
 	/**
 	 * Identification of the party expressed as a BIC and an optional
 	 * alternative identifier.
@@ -142,8 +145,8 @@ public class PartyIdentification59 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,21 +167,22 @@ public class PartyIdentification59 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AnyBIC = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAnyBIC = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC and an optional alternative identifier.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification44.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification44.mmObject();
 		}
 	};
+	protected Max34Text accountNumber;
 	/**
 	 * Identification of the party's account number.
 	 * <p>
@@ -191,8 +195,8 @@ public class PartyIdentification59 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountPartyRole#Account
-	 * AccountPartyRole.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountPartyRole#mmAccount
+	 * AccountPartyRole.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -211,20 +215,21 @@ public class PartyIdentification59 {
 	 * definition} = "Identification of the party's account number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.Account;
 			isDerived = false;
 			xmlTag = "AcctNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountNumber";
 			definition = "Identification of the party's account number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max34Text.mmObject();
 		}
 	};
+	protected Max105Text address;
 	/**
 	 * Identification of the party's address.
 	 * <p>
@@ -257,20 +262,21 @@ public class PartyIdentification59 {
 	 * definition} = "Identification of the party's address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Address = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Identification of the party's address.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected ClearingSystemIdentification2Choice clearingSystemIdentification;
 	/**
 	 * Choice of a clearing system identifier.
 	 * <p>
@@ -284,8 +290,8 @@ public class PartyIdentification59 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#ClearingSystemMemberIdentificationType
-	 * OrganisationIdentification.ClearingSystemMemberIdentificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
+	 * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -304,20 +310,21 @@ public class PartyIdentification59 {
 	 * definition} = "Choice of a clearing system identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.ClearingSystemMemberIdentificationType;
 			isDerived = false;
 			xmlTag = "ClrSysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemIdentification";
 			definition = "Choice of a clearing system identifier.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ClearingSystemIdentification2Choice.mmObject();
 		}
 	};
+	protected LEIIdentifier legalEntityIdentifier;
 	/**
 	 * Identification of the Legal Entity Identifier. This is a code allocated
 	 * to a party as described in ISO 17442
@@ -355,17 +362,17 @@ public class PartyIdentification59 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
+			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalEntityIdentifier";
 			definition = "Identification of the Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -373,16 +380,64 @@ public class PartyIdentification59 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification59.PartyName, com.tools20022.repository.msg.PartyIdentification59.AnyBIC,
-						com.tools20022.repository.msg.PartyIdentification59.AccountNumber, com.tools20022.repository.msg.PartyIdentification59.Address, com.tools20022.repository.msg.PartyIdentification59.ClearingSystemIdentification,
-						com.tools20022.repository.msg.PartyIdentification59.LegalEntityIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification59.mmPartyName, com.tools20022.repository.msg.PartyIdentification59.mmAnyBIC,
+						com.tools20022.repository.msg.PartyIdentification59.mmAccountNumber, com.tools20022.repository.msg.PartyIdentification59.mmAddress, com.tools20022.repository.msg.PartyIdentification59.mmClearingSystemIdentification,
+						com.tools20022.repository.msg.PartyIdentification59.mmLegalEntityIdentifier);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification59";
 				definition = "Identification of a party. The party can be identified by providing the party's name and optionally, the BIC, account number, address, clearing system identification or LEI can also be provided.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max34Text getPartyName() {
+		return partyName;
+	}
+
+	public void setPartyName(Max34Text partyName) {
+		this.partyName = partyName;
+	}
+
+	public PartyIdentification44 getAnyBIC() {
+		return anyBIC;
+	}
+
+	public void setAnyBIC(com.tools20022.repository.msg.PartyIdentification44 anyBIC) {
+		this.anyBIC = anyBIC;
+	}
+
+	public Max34Text getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(Max34Text accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public Max105Text getAddress() {
+		return address;
+	}
+
+	public void setAddress(Max105Text address) {
+		this.address = address;
+	}
+
+	public ClearingSystemIdentification2Choice getClearingSystemIdentification() {
+		return clearingSystemIdentification;
+	}
+
+	public void setClearingSystemIdentification(ClearingSystemIdentification2Choice clearingSystemIdentification) {
+		this.clearingSystemIdentification = clearingSystemIdentification;
+	}
+
+	public LEIIdentifier getLegalEntityIdentifier() {
+		return legalEntityIdentifier;
+	}
+
+	public void setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
+		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 }

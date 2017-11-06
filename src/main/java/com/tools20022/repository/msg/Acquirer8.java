@@ -33,10 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer8#Identification
- * Acquirer8.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer8#ApplicationVersion
- * Acquirer8.ApplicationVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer8#mmIdentification
+ * Acquirer8.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer8#mmApplicationVersion
+ * Acquirer8.mmApplicationVersion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Acquirer8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the ATM manager.
 	 * <p>
@@ -75,8 +76,8 @@ public class Acquirer8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Acquirer8
@@ -95,25 +96,26 @@ public class Acquirer8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Acquirer7#AcquiringInstitution
-	 * Acquirer7.AcquiringInstitution}</li>
+	 * {@linkplain com.tools20022.repository.msg.Acquirer7#mmAcquiringInstitution
+	 * Acquirer7.mmAcquiringInstitution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Acquirer8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the ATM manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer7.AcquiringInstitution;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer7.mmAcquiringInstitution;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text applicationVersion;
 	/**
 	 * Software version of the application.
 	 * <p>
@@ -141,11 +143,11 @@ public class Acquirer8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Acquirer7#Branch
-	 * Acquirer7.Branch}</li>
+	 * {@linkplain com.tools20022.repository.msg.Acquirer7#mmBranch
+	 * Acquirer7.mmBranch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicationVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicationVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Acquirer8.mmObject();
 			isDerived = false;
@@ -153,9 +155,9 @@ public class Acquirer8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationVersion";
 			definition = "Software version of the application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer7.Branch;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer7.mmBranch;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -163,9 +165,9 @@ public class Acquirer8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer8.Identification, com.tools20022.repository.msg.Acquirer8.ApplicationVersion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer8.mmIdentification, com.tools20022.repository.msg.Acquirer8.mmApplicationVersion);
 				trace_lazy = () -> AcquirerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Acquirer8";
 				definition = "Institution in charge of managing the ATM.";
@@ -173,5 +175,21 @@ public class Acquirer8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getApplicationVersion() {
+		return applicationVersion;
+	}
+
+	public void setApplicationVersion(Max35Text applicationVersion) {
+		this.applicationVersion = applicationVersion;
 	}
 }

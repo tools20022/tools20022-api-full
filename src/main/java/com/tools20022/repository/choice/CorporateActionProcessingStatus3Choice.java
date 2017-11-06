@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#Code
- * CorporateActionProcessingStatus3Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#mmCode
+ * CorporateActionProcessingStatus3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#Proprietary
- * CorporateActionProcessingStatus3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#mmProprietary
+ * CorporateActionProcessingStatus3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionProcessingStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionProcessingStatus1Choice code;
 	/**
 	 * Specifies the status of the details of the corporate action event.
 	 * <p>
@@ -88,8 +89,8 @@ public class CorporateActionProcessingStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#ProcessingStatus
-	 * CorporateActionStatus.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmProcessingStatus
+	 * CorporateActionStatus.mmProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,27 +112,28 @@ public class CorporateActionProcessingStatus3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#Code
-	 * CorporateActionProcessingStatus4Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#mmCode
+	 * CorporateActionProcessingStatus4Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionProcessingStatus3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.ProcessingStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the status of the details of the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmCode);
 			maxOccurs = 1;
-			complexType_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Information related to an identification, for example, party
 	 * identification or account identification.
@@ -146,8 +148,8 @@ public class CorporateActionProcessingStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#ProcessingStatus
-	 * CorporateActionStatus.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmProcessingStatus
+	 * CorporateActionStatus.mmProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,24 +172,24 @@ public class CorporateActionProcessingStatus3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#Proprietary
-	 * CorporateActionProcessingStatus4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#mmProprietary
+	 * CorporateActionProcessingStatus4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionProcessingStatus3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.ProcessingStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Information related to an identification, for example, party identification or account identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
@@ -195,16 +197,32 @@ public class CorporateActionProcessingStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.Code, com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmCode, com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProcessingStatus3Choice";
 				definition = "Specifies the status of the details of the corporate action event.";
-				previousVersion_lazy = () -> CorporateActionProcessingStatus2Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionProcessingStatus4Choice.mmObject());
+				previousVersion_lazy = () -> CorporateActionProcessingStatus2Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionProcessingStatus1Choice getCode() {
+		return code;
+	}
+
+	public void setCode(com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice code) {
+		this.code = code;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

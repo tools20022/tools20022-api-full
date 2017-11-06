@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#AccountServicerDeadlineMissed
- * PendingCancellationReason1Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#mmAccountServicerDeadlineMissed
+ * PendingCancellationReason1Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#AwaitingConfirmation
- * PendingCancellationReason1Code.AwaitingConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#mmAwaitingConfirmation
+ * PendingCancellationReason1Code.mmAwaitingConfirmation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class PendingCancellationReason1Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -107,7 +107,7 @@ public class PendingCancellationReason1Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingConfirmation = new MMCode() {
+	public static final MMCode mmAwaitingConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
@@ -118,12 +118,12 @@ public class PendingCancellationReason1Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason1Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason1Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason1Code.AwaitingConfirmation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason1Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason1Code.mmAwaitingConfirmation);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

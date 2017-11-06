@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType3Code#Basket
- * UnderlyingEquityType3Code.Basket}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType3Code#mmBasket
+ * UnderlyingEquityType3Code.mmBasket}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class UnderlyingEquityType3Code extends UnderlyingTypeV2Code {
 	 * name} = "Basket"</li>
 	 * </ul>
 	 */
-	public static final MMCode Basket = new MMCode() {
+	public static final MMCode mmBasket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
@@ -83,11 +83,11 @@ public class UnderlyingEquityType3Code extends UnderlyingTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingEquityType3Code";
 				definition = "Specifies the type for a contract for equity derivatives.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType3Code.Basket);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType3Code.mmBasket);
 				trace_lazy = () -> UnderlyingTypeV2Code.mmObject();
 			}
 		});

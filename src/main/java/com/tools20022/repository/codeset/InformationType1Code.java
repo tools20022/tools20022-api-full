@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationType1Code#ProcessingInstructions
- * InformationType1Code.ProcessingInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationType1Code#mmProcessingInstructions
+ * InformationType1Code.mmProcessingInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationType1Code#RelayInstructions
- * InformationType1Code.RelayInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationType1Code#mmRelayInstructions
+ * InformationType1Code.mmRelayInstructions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class InformationType1Code extends InformationTypeCode {
 	 * name} = "ProcessingInstructions"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingInstructions = new MMCode() {
+	public static final MMCode mmProcessingInstructions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingInstructions";
@@ -104,7 +104,7 @@ public class InformationType1Code extends InformationTypeCode {
 	 * name} = "RelayInstructions"</li>
 	 * </ul>
 	 */
-	public static final MMCode RelayInstructions = new MMCode() {
+	public static final MMCode mmRelayInstructions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelayInstructions";
@@ -115,12 +115,12 @@ public class InformationType1Code extends InformationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InformationType1Code";
 				definition = "Specifies the coded type of additional information provided.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationType1Code.ProcessingInstructions, com.tools20022.repository.codeset.InformationType1Code.RelayInstructions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationType1Code.mmProcessingInstructions, com.tools20022.repository.codeset.InformationType1Code.mmRelayInstructions);
 				trace_lazy = () -> InformationTypeCode.mmObject();
 			}
 		});

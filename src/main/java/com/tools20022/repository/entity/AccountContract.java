@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Contract;
 import com.tools20022.repository.msg.ContractDocument1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Agreement between an account servicer and an account owner about the services
@@ -43,47 +44,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountContract#TargetClosingDate
- * AccountContract.TargetClosingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountContract#UrgencyFlag
- * AccountContract.UrgencyFlag}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmTargetClosingDate
+ * AccountContract.mmTargetClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountContract#RemovalIndicator
- * AccountContract.RemovalIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmUrgencyFlag
+ * AccountContract.mmUrgencyFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountContract#TargetGoLiveDate
- * AccountContract.TargetGoLiveDate}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmRemovalIndicator
+ * AccountContract.mmRemovalIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountContract#AccountService
- * AccountContract.AccountService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountContract#Account
- * AccountContract.Account}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountContract#Interest
- * AccountContract.Interest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountContract#RequestDate
- * AccountContract.RequestDate}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmTargetGoLiveDate
+ * AccountContract.mmTargetGoLiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountContract#AccountAuthorisation
- * AccountContract.AccountAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmAccountService
+ * AccountContract.mmAccountService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountContract#mmAccount
+ * AccountContract.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountContract#mmInterest
+ * AccountContract.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountContract#TransactionChannel
- * AccountContract.TransactionChannel}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmRequestDate
+ * AccountContract.mmRequestDate}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#AccountContract
- * Account.AccountContract}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmAccountAuthorisation
+ * AccountContract.mmAccountAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountService#AccountContract
- * AccountService.AccountContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#RelatedAccountContract
- * Interest.RelatedAccountContract}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#AccountContract
- * Mandate.AccountContract}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountContract#mmTransactionChannel
+ * AccountContract.mmTransactionChannel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -93,6 +80,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccountContract}</li>
  * <li>{@linkplain com.tools20022.repository.entity.CashAccountContract
  * CashAccountContract}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmAccountContract
+ * Account.mmAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountContract
+ * AccountService.mmAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAccountContract
+ * Interest.mmRelatedAccountContract}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmAccountContract
+ * Mandate.mmAccountContract}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -108,8 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountContract extends Contract {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime targetClosingDate;
 	/**
 	 * Date on which the account and related services are expected to cease to
 	 * be operational for the account owner.
@@ -135,25 +139,25 @@ public class AccountContract extends Contract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract4#TargetClosingDate
-	 * AccountContract4.TargetClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract2#TargetClosingDate
-	 * AccountContract2.TargetClosingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract3#TargetClosingDate
-	 * AccountContract3.TargetClosingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountContract
 	 * AccountContract}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract4#mmTargetClosingDate
+	 * AccountContract4.mmTargetClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract2#mmTargetClosingDate
+	 * AccountContract2.mmTargetClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract3#mmTargetClosingDate
+	 * AccountContract3.mmTargetClosingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -167,20 +171,21 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TargetClosingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTargetClosingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.TargetClosingDate, com.tools20022.repository.msg.AccountContract2.TargetClosingDate,
-					com.tools20022.repository.msg.AccountContract3.TargetClosingDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.mmTargetClosingDate, com.tools20022.repository.msg.AccountContract2.mmTargetClosingDate,
+					com.tools20022.repository.msg.AccountContract3.mmTargetClosingDate);
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TargetClosingDate";
 			definition = "Date on which the account and related services are expected to cease to be operational for the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected TrueFalseIndicator urgencyFlag;
 	/**
 	 * Indicator that the change to the contract needs to be treated urgently.
 	 * <p>
@@ -191,25 +196,25 @@ public class AccountContract extends Contract {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract4#UrgencyFlag
-	 * AccountContract4.UrgencyFlag}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract2#UrgencyFlag
-	 * AccountContract2.UrgencyFlag}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract3#UrgencyFlag
-	 * AccountContract3.UrgencyFlag}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountContract
 	 * AccountContract}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract4#mmUrgencyFlag
+	 * AccountContract4.mmUrgencyFlag}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract2#mmUrgencyFlag
+	 * AccountContract2.mmUrgencyFlag}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract3#mmUrgencyFlag
+	 * AccountContract3.mmUrgencyFlag}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,19 +228,20 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute UrgencyFlag = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmUrgencyFlag = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.UrgencyFlag, com.tools20022.repository.msg.AccountContract2.UrgencyFlag, com.tools20022.repository.msg.AccountContract3.UrgencyFlag);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.mmUrgencyFlag, com.tools20022.repository.msg.AccountContract2.mmUrgencyFlag, com.tools20022.repository.msg.AccountContract3.mmUrgencyFlag);
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UrgencyFlag";
 			definition = "Indicator that the change to the contract needs to be treated urgently.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator removalIndicator;
 	/**
 	 * Indicates removal of the account. After removal, an account will not
 	 * appear anymore in reports.
@@ -247,22 +253,22 @@ public class AccountContract extends Contract {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract4#RemovalIndicator
-	 * AccountContract4.RemovalIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract3#RemovalIndicator
-	 * AccountContract3.RemovalIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountContract
 	 * AccountContract}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract4#mmRemovalIndicator
+	 * AccountContract4.mmRemovalIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract3#mmRemovalIndicator
+	 * AccountContract3.mmRemovalIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -276,19 +282,20 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RemovalIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRemovalIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.RemovalIndicator, com.tools20022.repository.msg.AccountContract3.RemovalIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract4.mmRemovalIndicator, com.tools20022.repository.msg.AccountContract3.mmRemovalIndicator);
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RemovalIndicator";
 			definition = "Indicates removal of the account. After removal, an account will not appear anymore in reports.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISODateTime targetGoLiveDate;
 	/**
 	 * Date on which the account and related services are expected to cease/to
 	 * be operational for the account owner.
@@ -299,22 +306,22 @@ public class AccountContract extends Contract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract2#TargetGoLiveDate
-	 * AccountContract2.TargetGoLiveDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountContract3#TargetGoLiveDate
-	 * AccountContract3.TargetGoLiveDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountContract
 	 * AccountContract}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract2#mmTargetGoLiveDate
+	 * AccountContract2.mmTargetGoLiveDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountContract3#mmTargetGoLiveDate
+	 * AccountContract3.mmTargetGoLiveDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -328,19 +335,20 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TargetGoLiveDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTargetGoLiveDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract2.TargetGoLiveDate, com.tools20022.repository.msg.AccountContract3.TargetGoLiveDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract2.mmTargetGoLiveDate, com.tools20022.repository.msg.AccountContract3.mmTargetGoLiveDate);
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TargetGoLiveDate";
 			definition = "Date on which the account and related services are expected to cease/to be operational for the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected AccountService accountService;
 	/**
 	 * Operations on a bank account that are allowed as part of the services
 	 * offered to the owners of a bank account,
@@ -350,8 +358,8 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AccountService#AccountContract
-	 * AccountService.AccountContract}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountContract
+	 * AccountService.mmAccountContract}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -377,20 +385,21 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AccountService = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccountService = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccountService";
 			definition = "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account,";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.AccountContract;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.mmAccountContract;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Account> account;
 	/**
 	 * Specifies the account which is managed by a contract.
 	 * <p>
@@ -399,8 +408,8 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#AccountContract
-	 * Account.AccountContract}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmAccountContract
+	 * Account.mmAccountContract}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -423,7 +432,7 @@ public class AccountContract extends Contract {
 	 * definition} = "Specifies the account which is managed by a contract."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Account = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
@@ -431,11 +440,12 @@ public class AccountContract extends Contract {
 			name = "Account";
 			definition = "Specifies the account which is managed by a contract.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.AccountContract;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmAccountContract;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Interest> interest;
 	/**
 	 * Interest that applies to the account.
 	 * <p>
@@ -444,8 +454,8 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#RelatedAccountContract
-	 * Interest.RelatedAccountContract}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAccountContract
+	 * Interest.mmRelatedAccountContract}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -468,7 +478,7 @@ public class AccountContract extends Contract {
 	 * definition} = "Interest that applies to the account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Interest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
@@ -476,11 +486,12 @@ public class AccountContract extends Contract {
 			name = "Interest";
 			definition = "Interest that applies to the account.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Interest.RelatedAccountContract;
+			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmRelatedAccountContract;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
+	protected ISODateTime requestDate;
 	/**
 	 * Date of the request.
 	 * <p>
@@ -506,18 +517,19 @@ public class AccountContract extends Contract {
 	 * definition} = "Date of the request."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RequestDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRequestDate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RequestDate";
 			definition = "Date of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Mandate> accountAuthorisation;
 	/**
 	 * Specifies the services which are assigned to another party.
 	 * <p>
@@ -526,8 +538,8 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Mandate#AccountContract
-	 * Mandate.AccountContract}</li>
+	 * {@linkplain com.tools20022.repository.entity.Mandate#mmAccountContract
+	 * Mandate.mmAccountContract}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -551,7 +563,7 @@ public class AccountContract extends Contract {
 	 * "Specifies the services which are assigned to another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AccountAuthorisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccountAuthorisation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
@@ -559,11 +571,12 @@ public class AccountContract extends Contract {
 			name = "AccountAuthorisation";
 			definition = "Specifies the services which are assigned to another party.";
 			minOccurs = 0;
-			type_lazy = () -> Mandate.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Mandate.AccountContract;
+			opposite_lazy = () -> com.tools20022.repository.entity.Mandate.mmAccountContract;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 		}
 	};
+	protected TransactionChannelCode transactionChannel;
 	/**
 	 * Specifies the means by which the account owner submits the open account
 	 * form.
@@ -575,85 +588,85 @@ public class AccountContract extends Contract {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TransactionChannelCode
 	 * TransactionChannelCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#TransactionChannelType
-	 * InvestmentAccount38.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#TransactionChannelType
-	 * InvestmentAccount37.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#TransactionChannelType
-	 * InvestmentAccount39.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TransactionChannelType1Choice#Code
-	 * TransactionChannelType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TransactionChannelType1Choice#Proprietary
-	 * TransactionChannelType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#TransactionChannelType
-	 * InvestmentAccount46.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#TransactionChannelType
-	 * InvestmentAccount47.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#TransactionChannelType
-	 * InvestmentAccount49.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#TransactionChannelType
-	 * InvestmentAccount51.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#TransactionChannelType
-	 * InvestmentAccount50.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#TransactionChannelType
-	 * InvestmentAccount61.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#TransactionChannelType
-	 * SwitchExecution7.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#TransactionChannelType
-	 * InvestmentAccount63.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7#TransactionChannelType
-	 * SwitchOrder7.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#TransactionChannelType
-	 * InvestmentAccount62.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#TransactionChannelType
-	 * RedemptionOrder14.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#TransactionChannelType
-	 * SubscriptionExecution13.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#TransactionChannelType
-	 * SubscriptionExecution12.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#TransactionChannelType
-	 * SubscriptionOrder15.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#TransactionChannelType
-	 * RedemptionOrder15.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#TransactionChannelType
-	 * RedemptionExecution16.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#TransactionChannelType
-	 * SubscriptionOrder14.TransactionChannelType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#TransactionChannelType
-	 * RedemptionExecution15.TransactionChannelType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountContract
 	 * AccountContract}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#mmTransactionChannelType
+	 * InvestmentAccount38.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#mmTransactionChannelType
+	 * InvestmentAccount37.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmTransactionChannelType
+	 * InvestmentAccount39.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionChannelType1Choice#mmCode
+	 * TransactionChannelType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionChannelType1Choice#mmProprietary
+	 * TransactionChannelType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#mmTransactionChannelType
+	 * InvestmentAccount46.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmTransactionChannelType
+	 * InvestmentAccount47.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#mmTransactionChannelType
+	 * InvestmentAccount49.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmTransactionChannelType
+	 * InvestmentAccount51.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#mmTransactionChannelType
+	 * InvestmentAccount50.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#mmTransactionChannelType
+	 * InvestmentAccount61.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#mmTransactionChannelType
+	 * SwitchExecution7.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#mmTransactionChannelType
+	 * InvestmentAccount63.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmTransactionChannelType
+	 * SwitchOrder7.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#mmTransactionChannelType
+	 * InvestmentAccount62.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#mmTransactionChannelType
+	 * RedemptionOrder14.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmTransactionChannelType
+	 * SubscriptionExecution13.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmTransactionChannelType
+	 * SubscriptionExecution12.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#mmTransactionChannelType
+	 * SubscriptionOrder15.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmTransactionChannelType
+	 * RedemptionOrder15.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmTransactionChannelType
+	 * RedemptionExecution16.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#mmTransactionChannelType
+	 * SubscriptionOrder14.mmTransactionChannelType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmTransactionChannelType
+	 * RedemptionExecution15.mmTransactionChannelType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -667,25 +680,27 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransactionChannel = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransactionChannel = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount38.TransactionChannelType, com.tools20022.repository.msg.InvestmentAccount37.TransactionChannelType,
-					com.tools20022.repository.msg.InvestmentAccount39.TransactionChannelType, com.tools20022.repository.choice.TransactionChannelType1Choice.Code, com.tools20022.repository.choice.TransactionChannelType1Choice.Proprietary,
-					com.tools20022.repository.msg.InvestmentAccount46.TransactionChannelType, com.tools20022.repository.msg.InvestmentAccount47.TransactionChannelType,
-					com.tools20022.repository.msg.InvestmentAccount49.TransactionChannelType, com.tools20022.repository.msg.InvestmentAccount51.TransactionChannelType,
-					com.tools20022.repository.msg.InvestmentAccount50.TransactionChannelType, com.tools20022.repository.msg.InvestmentAccount61.TransactionChannelType, com.tools20022.repository.msg.SwitchExecution7.TransactionChannelType,
-					com.tools20022.repository.msg.InvestmentAccount63.TransactionChannelType, com.tools20022.repository.msg.SwitchOrder7.TransactionChannelType, com.tools20022.repository.msg.InvestmentAccount62.TransactionChannelType,
-					com.tools20022.repository.msg.RedemptionOrder14.TransactionChannelType, com.tools20022.repository.msg.SubscriptionExecution13.TransactionChannelType,
-					com.tools20022.repository.msg.SubscriptionExecution12.TransactionChannelType, com.tools20022.repository.msg.SubscriptionOrder15.TransactionChannelType,
-					com.tools20022.repository.msg.RedemptionOrder15.TransactionChannelType, com.tools20022.repository.msg.RedemptionExecution16.TransactionChannelType,
-					com.tools20022.repository.msg.SubscriptionOrder14.TransactionChannelType, com.tools20022.repository.msg.RedemptionExecution15.TransactionChannelType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount38.mmTransactionChannelType, com.tools20022.repository.msg.InvestmentAccount37.mmTransactionChannelType,
+					com.tools20022.repository.msg.InvestmentAccount39.mmTransactionChannelType, com.tools20022.repository.choice.TransactionChannelType1Choice.mmCode,
+					com.tools20022.repository.choice.TransactionChannelType1Choice.mmProprietary, com.tools20022.repository.msg.InvestmentAccount46.mmTransactionChannelType,
+					com.tools20022.repository.msg.InvestmentAccount47.mmTransactionChannelType, com.tools20022.repository.msg.InvestmentAccount49.mmTransactionChannelType,
+					com.tools20022.repository.msg.InvestmentAccount51.mmTransactionChannelType, com.tools20022.repository.msg.InvestmentAccount50.mmTransactionChannelType,
+					com.tools20022.repository.msg.InvestmentAccount61.mmTransactionChannelType, com.tools20022.repository.msg.SwitchExecution7.mmTransactionChannelType,
+					com.tools20022.repository.msg.InvestmentAccount63.mmTransactionChannelType, com.tools20022.repository.msg.SwitchOrder7.mmTransactionChannelType,
+					com.tools20022.repository.msg.InvestmentAccount62.mmTransactionChannelType, com.tools20022.repository.msg.RedemptionOrder14.mmTransactionChannelType,
+					com.tools20022.repository.msg.SubscriptionExecution13.mmTransactionChannelType, com.tools20022.repository.msg.SubscriptionExecution12.mmTransactionChannelType,
+					com.tools20022.repository.msg.SubscriptionOrder15.mmTransactionChannelType, com.tools20022.repository.msg.RedemptionOrder15.mmTransactionChannelType,
+					com.tools20022.repository.msg.RedemptionExecution16.mmTransactionChannelType, com.tools20022.repository.msg.SubscriptionOrder14.mmTransactionChannelType,
+					com.tools20022.repository.msg.RedemptionExecution15.mmTransactionChannelType);
 			elementContext_lazy = () -> AccountContract.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransactionChannel";
 			definition = "Specifies the means by which the account owner submits the open account form. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransactionChannelCode.mmObject();
 		}
 	};
@@ -693,21 +708,101 @@ public class AccountContract extends Contract {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountContract";
 				definition = "Agreement between an account servicer and an account owner about the services linked to an account.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.AccountContract, com.tools20022.repository.entity.AccountService.AccountContract,
-						com.tools20022.repository.entity.Interest.RelatedAccountContract, com.tools20022.repository.entity.Mandate.AccountContract);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmAccountContract, com.tools20022.repository.entity.AccountService.mmAccountContract,
+						com.tools20022.repository.entity.Interest.mmRelatedAccountContract, com.tools20022.repository.entity.Mandate.mmAccountContract);
 				subType_lazy = () -> Arrays.asList(InvestmentAccountContract.mmObject(), CashAccountContract.mmObject());
 				superType_lazy = () -> Contract.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountContract.TargetClosingDate, com.tools20022.repository.entity.AccountContract.UrgencyFlag,
-						com.tools20022.repository.entity.AccountContract.RemovalIndicator, com.tools20022.repository.entity.AccountContract.TargetGoLiveDate, com.tools20022.repository.entity.AccountContract.AccountService,
-						com.tools20022.repository.entity.AccountContract.Account, com.tools20022.repository.entity.AccountContract.Interest, com.tools20022.repository.entity.AccountContract.RequestDate,
-						com.tools20022.repository.entity.AccountContract.AccountAuthorisation, com.tools20022.repository.entity.AccountContract.TransactionChannel);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountContract.mmTargetClosingDate, com.tools20022.repository.entity.AccountContract.mmUrgencyFlag,
+						com.tools20022.repository.entity.AccountContract.mmRemovalIndicator, com.tools20022.repository.entity.AccountContract.mmTargetGoLiveDate, com.tools20022.repository.entity.AccountContract.mmAccountService,
+						com.tools20022.repository.entity.AccountContract.mmAccount, com.tools20022.repository.entity.AccountContract.mmInterest, com.tools20022.repository.entity.AccountContract.mmRequestDate,
+						com.tools20022.repository.entity.AccountContract.mmAccountAuthorisation, com.tools20022.repository.entity.AccountContract.mmTransactionChannel);
 				derivationComponent_lazy = () -> Arrays.asList(ContractDocument1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getTargetClosingDate() {
+		return targetClosingDate;
+	}
+
+	public void setTargetClosingDate(ISODateTime targetClosingDate) {
+		this.targetClosingDate = targetClosingDate;
+	}
+
+	public TrueFalseIndicator getUrgencyFlag() {
+		return urgencyFlag;
+	}
+
+	public void setUrgencyFlag(TrueFalseIndicator urgencyFlag) {
+		this.urgencyFlag = urgencyFlag;
+	}
+
+	public YesNoIndicator getRemovalIndicator() {
+		return removalIndicator;
+	}
+
+	public void setRemovalIndicator(YesNoIndicator removalIndicator) {
+		this.removalIndicator = removalIndicator;
+	}
+
+	public ISODateTime getTargetGoLiveDate() {
+		return targetGoLiveDate;
+	}
+
+	public void setTargetGoLiveDate(ISODateTime targetGoLiveDate) {
+		this.targetGoLiveDate = targetGoLiveDate;
+	}
+
+	public AccountService getAccountService() {
+		return accountService;
+	}
+
+	public void setAccountService(com.tools20022.repository.entity.AccountService accountService) {
+		this.accountService = accountService;
+	}
+
+	public List<Account> getAccount() {
+		return account;
+	}
+
+	public void setAccount(List<com.tools20022.repository.entity.Account> account) {
+		this.account = account;
+	}
+
+	public List<Interest> getInterest() {
+		return interest;
+	}
+
+	public void setInterest(List<com.tools20022.repository.entity.Interest> interest) {
+		this.interest = interest;
+	}
+
+	public ISODateTime getRequestDate() {
+		return requestDate;
+	}
+
+	public void setRequestDate(ISODateTime requestDate) {
+		this.requestDate = requestDate;
+	}
+
+	public List<Mandate> getAccountAuthorisation() {
+		return accountAuthorisation;
+	}
+
+	public void setAccountAuthorisation(List<com.tools20022.repository.entity.Mandate> accountAuthorisation) {
+		this.accountAuthorisation = accountAuthorisation;
+	}
+
+	public TransactionChannelCode getTransactionChannel() {
+		return transactionChannel;
+	}
+
+	public void setTransactionChannel(TransactionChannelCode transactionChannel) {
+		this.transactionChannel = transactionChannel;
 	}
 }

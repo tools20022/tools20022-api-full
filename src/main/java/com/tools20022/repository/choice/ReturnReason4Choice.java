@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ReturnReason4Choice#Code
- * ReturnReason4Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ReturnReason4Choice#mmCode
+ * ReturnReason4Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReturnReason4Choice#Proprietary
- * ReturnReason4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ReturnReason4Choice#mmProprietary
+ * ReturnReason4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReturnReason4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionReturnReason1Code code;
 	/**
 	 * Reason for the return in a coded form.
 	 * <p>
@@ -94,20 +95,21 @@ public class ReturnReason4Choice {
 	 * definition} = "Reason for the return in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReturnReason4Choice.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> ReturnReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the return in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransactionReturnReason1Code.mmObject();
 		}
 	};
+	protected RestrictedRR01SL01CodeText proprietary;
 	/**
 	 * Reason for the return not catered for by the available codes.
 	 * <p>
@@ -141,17 +143,17 @@ public class ReturnReason4Choice {
 	 * "Reason for the return not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReturnReason4Choice.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> ReturnReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the return not catered for by the available codes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedRR01SL01CodeText.mmObject();
 		}
 	};
@@ -159,14 +161,30 @@ public class ReturnReason4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReturnReason4Choice.Code, com.tools20022.repository.choice.ReturnReason4Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReturnReason4Choice.mmCode, com.tools20022.repository.choice.ReturnReason4Choice.mmProprietary);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnReason4Choice";
 				definition = "Reason for the return of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionReturnReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(TransactionReturnReason1Code code) {
+		this.code = code;
+	}
+
+	public RestrictedRR01SL01CodeText getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(RestrictedRR01SL01CodeText proprietary) {
+		this.proprietary = proprietary;
 	}
 }

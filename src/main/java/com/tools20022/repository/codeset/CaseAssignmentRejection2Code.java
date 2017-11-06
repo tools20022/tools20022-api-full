@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#UnderlyingPaymentNotFound
- * CaseAssignmentRejection2Code.UnderlyingPaymentNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#mmUnderlyingPaymentNotFound
+ * CaseAssignmentRejection2Code.mmUnderlyingPaymentNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#NotAuthorisedToInvestigate
- * CaseAssignmentRejection2Code.NotAuthorisedToInvestigate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#mmNotAuthorisedToInvestigate
+ * CaseAssignmentRejection2Code.mmNotAuthorisedToInvestigate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#UnknownCase
- * CaseAssignmentRejection2Code.UnknownCase}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#mmUnknownCase
+ * CaseAssignmentRejection2Code.mmUnknownCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#PaymentPreviouslyCancelledOrRejected
- * CaseAssignmentRejection2Code.PaymentPreviouslyCancelledOrRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code#mmPaymentPreviouslyCancelledOrRejected
+ * CaseAssignmentRejection2Code.mmPaymentPreviouslyCancelledOrRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CaseAssignmentRejection2Code extends CaseAssignmentRejectionCode {
 	 * name} = "UnderlyingPaymentNotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderlyingPaymentNotFound = new MMCode() {
+	public static final MMCode mmUnderlyingPaymentNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingPaymentNotFound";
@@ -110,7 +110,7 @@ public class CaseAssignmentRejection2Code extends CaseAssignmentRejectionCode {
 	 * name} = "NotAuthorisedToInvestigate"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAuthorisedToInvestigate = new MMCode() {
+	public static final MMCode mmNotAuthorisedToInvestigate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorisedToInvestigate";
@@ -133,7 +133,7 @@ public class CaseAssignmentRejection2Code extends CaseAssignmentRejectionCode {
 	 * name} = "UnknownCase"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownCase = new MMCode() {
+	public static final MMCode mmUnknownCase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownCase";
@@ -156,7 +156,7 @@ public class CaseAssignmentRejection2Code extends CaseAssignmentRejectionCode {
 	 * name} = "PaymentPreviouslyCancelledOrRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentPreviouslyCancelledOrRejected = new MMCode() {
+	public static final MMCode mmPaymentPreviouslyCancelledOrRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentPreviouslyCancelledOrRejected";
@@ -167,13 +167,13 @@ public class CaseAssignmentRejection2Code extends CaseAssignmentRejectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NFND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignmentRejection2Code";
 				definition = "Specifies the reason for not accepting a Case.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseAssignmentRejection2Code.UnderlyingPaymentNotFound, com.tools20022.repository.codeset.CaseAssignmentRejection2Code.NotAuthorisedToInvestigate,
-						com.tools20022.repository.codeset.CaseAssignmentRejection2Code.UnknownCase, com.tools20022.repository.codeset.CaseAssignmentRejection2Code.PaymentPreviouslyCancelledOrRejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseAssignmentRejection2Code.mmUnderlyingPaymentNotFound, com.tools20022.repository.codeset.CaseAssignmentRejection2Code.mmNotAuthorisedToInvestigate,
+						com.tools20022.repository.codeset.CaseAssignmentRejection2Code.mmUnknownCase, com.tools20022.repository.codeset.CaseAssignmentRejection2Code.mmPaymentPreviouslyCancelledOrRejected);
 				trace_lazy = () -> CaseAssignmentRejectionCode.mmObject();
 			}
 		});

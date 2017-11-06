@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Transaction between two counterparties in which they agree to buy and sell a
@@ -46,65 +47,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#StampDutyIndicator
- * SecuritiesTradeExecution.StampDutyIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmStampDutyIndicator
+ * SecuritiesTradeExecution.mmStampDutyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#ProcessingPosition
- * SecuritiesTradeExecution.ProcessingPosition}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmProcessingPosition
+ * SecuritiesTradeExecution.mmProcessingPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
- * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+ * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#DealPrice
- * SecuritiesTradeExecution.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmDealPrice
+ * SecuritiesTradeExecution.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#MarginAmount
- * SecuritiesTradeExecution.MarginAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmMarginAmount
+ * SecuritiesTradeExecution.mmMarginAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#ExecutedTradeQuantity
- * SecuritiesTradeExecution.ExecutedTradeQuantity}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmExecutedTradeQuantity
+ * SecuritiesTradeExecution.mmExecutedTradeQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#OffMarketReason
- * SecuritiesTradeExecution.OffMarketReason}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmOffMarketReason
+ * SecuritiesTradeExecution.mmOffMarketReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#RelatedTrade
- * SecuritiesTradeExecution.RelatedTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmRelatedTrade
+ * SecuritiesTradeExecution.mmRelatedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#DealExecutionAmount
- * SecuritiesTradeExecution.DealExecutionAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmDealExecutionAmount
+ * SecuritiesTradeExecution.mmDealExecutionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#PaymentObligation
- * SecuritiesTradeExecution.PaymentObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmPaymentObligation
+ * SecuritiesTradeExecution.mmPaymentObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesDeliveryObligation
- * SecuritiesTradeExecution.SecuritiesDeliveryObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesDeliveryObligation
+ * SecuritiesTradeExecution.mmSecuritiesDeliveryObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#ReportingType
- * SecuritiesTradeExecution.ReportingType}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#SecuritiesTradeExecution
- * SecuritiesPricing.SecuritiesTradeExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#ExecutedSecuritiesTrade
- * PaymentObligation.ExecutedSecuritiesTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#SecuritiesTradeExecution
- * SecuritiesQuantity.SecuritiesTradeExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradingExecution
- * SecuritiesTrade.TradingExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SecuritiesTradeExecution
- * SecuritiesSettlement.SecuritiesTradeExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#SecuritiesTradeExecution
- * SecuritiesDeliveryObligation.SecuritiesTradeExecution}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmReportingType
+ * SecuritiesTradeExecution.mmReportingType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -113,6 +90,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
  * InvestmentFundOrderExecution}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecuritiesTradeExecution
+ * SecuritiesPricing.mmSecuritiesTradeExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmExecutedSecuritiesTrade
+ * PaymentObligation.mmExecutedSecuritiesTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTradeExecution
+ * SecuritiesQuantity.mmSecuritiesTradeExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradingExecution
+ * SecuritiesTrade.mmTradingExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesTradeExecution
+ * SecuritiesSettlement.mmSecuritiesTradeExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesTradeExecution
+ * SecuritiesDeliveryObligation.mmSecuritiesTradeExecution}</li>
  * </ul>
  * </li>
  * <li>
@@ -144,8 +145,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -161,6 +162,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTradeExecution {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator stampDutyIndicator;
 	/**
 	 * Whether the net proceeds include stamp duty amount.
 	 * <p>
@@ -171,70 +173,70 @@ public class SecuritiesTradeExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4#StampDutyIndicator
-	 * DeliverInformation4.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4#StampDutyIndicator
-	 * ReceiveInformation4.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection32#StampDutyIndicator
-	 * AmountAndDirection32.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection33#StampDutyIndicator
-	 * AmountAndDirection33.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3#StampDutyIndicator
-	 * DeliverInformation3.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3#StampDutyIndicator
-	 * ReceiveInformation3.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection2#StampDutyIndicator
-	 * AmountAndDirection2.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection16#StampDutyIndicator
-	 * AmountAndDirection16.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#StampDutyIndicator
-	 * SettlementDetails43.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection28#StampDutyIndicator
-	 * AmountAndDirection28.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#StampDutyIndicator
-	 * AmountAndDirection36.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection37#StampDutyIndicator
-	 * AmountAndDirection37.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection38#StampDutyIndicator
-	 * AmountAndDirection38.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection40#StampDutyIndicator
-	 * AmountAndDirection40.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#StampDutyIndicator
-	 * AmountAndDirection46.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection45#StampDutyIndicator
-	 * AmountAndDirection45.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection60#StampDutyIndicator
-	 * AmountAndDirection60.StampDutyIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection85#StampDutyIndicator
-	 * AmountAndDirection85.StampDutyIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4#mmStampDutyIndicator
+	 * DeliverInformation4.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4#mmStampDutyIndicator
+	 * ReceiveInformation4.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection32#mmStampDutyIndicator
+	 * AmountAndDirection32.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection33#mmStampDutyIndicator
+	 * AmountAndDirection33.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3#mmStampDutyIndicator
+	 * DeliverInformation3.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3#mmStampDutyIndicator
+	 * ReceiveInformation3.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection2#mmStampDutyIndicator
+	 * AmountAndDirection2.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection16#mmStampDutyIndicator
+	 * AmountAndDirection16.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmStampDutyIndicator
+	 * SettlementDetails43.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection28#mmStampDutyIndicator
+	 * AmountAndDirection28.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmStampDutyIndicator
+	 * AmountAndDirection36.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection37#mmStampDutyIndicator
+	 * AmountAndDirection37.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection38#mmStampDutyIndicator
+	 * AmountAndDirection38.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection40#mmStampDutyIndicator
+	 * AmountAndDirection40.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmStampDutyIndicator
+	 * AmountAndDirection46.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection45#mmStampDutyIndicator
+	 * AmountAndDirection45.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection60#mmStampDutyIndicator
+	 * AmountAndDirection60.mmStampDutyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection85#mmStampDutyIndicator
+	 * AmountAndDirection85.mmStampDutyIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,25 +248,26 @@ public class SecuritiesTradeExecution {
 	 * definition} = "Whether the net proceeds include stamp duty amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StampDutyIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStampDutyIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation4.StampDutyIndicator, com.tools20022.repository.msg.ReceiveInformation4.StampDutyIndicator,
-					com.tools20022.repository.msg.AmountAndDirection32.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection33.StampDutyIndicator, com.tools20022.repository.msg.DeliverInformation3.StampDutyIndicator,
-					com.tools20022.repository.msg.ReceiveInformation3.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection2.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection16.StampDutyIndicator,
-					com.tools20022.repository.msg.SettlementDetails43.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection28.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection36.StampDutyIndicator,
-					com.tools20022.repository.msg.AmountAndDirection37.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection38.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection40.StampDutyIndicator,
-					com.tools20022.repository.msg.AmountAndDirection46.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection45.StampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection60.StampDutyIndicator,
-					com.tools20022.repository.msg.AmountAndDirection85.StampDutyIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation4.mmStampDutyIndicator, com.tools20022.repository.msg.ReceiveInformation4.mmStampDutyIndicator,
+					com.tools20022.repository.msg.AmountAndDirection32.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection33.mmStampDutyIndicator, com.tools20022.repository.msg.DeliverInformation3.mmStampDutyIndicator,
+					com.tools20022.repository.msg.ReceiveInformation3.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection2.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection16.mmStampDutyIndicator,
+					com.tools20022.repository.msg.SettlementDetails43.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection28.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection36.mmStampDutyIndicator,
+					com.tools20022.repository.msg.AmountAndDirection37.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection38.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection40.mmStampDutyIndicator,
+					com.tools20022.repository.msg.AmountAndDirection46.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection45.mmStampDutyIndicator, com.tools20022.repository.msg.AmountAndDirection60.mmStampDutyIndicator,
+					com.tools20022.repository.msg.AmountAndDirection85.mmStampDutyIndicator);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StampDutyIndicator";
 			definition = "Whether the net proceeds include stamp duty amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ProcessingPositionCode processingPosition;
 	/**
 	 * When the transaction is to be executed relative to a linked transaction.
 	 * <p>
@@ -293,18 +296,19 @@ public class SecuritiesTradeExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProcessingPosition = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProcessingPosition = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingPositionCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement;
 	/**
 	 * Process of settling securities.
 	 * <p>
@@ -313,8 +317,8 @@ public class SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SecuritiesTradeExecution
-	 * SecuritiesSettlement.SecuritiesTradeExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesTradeExecution
+	 * SecuritiesSettlement.mmSecuritiesTradeExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -323,700 +327,708 @@ public class SecuritiesTradeExecution {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
 	 * SecuritiesSettlement}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References1Choice#SecuritiesSettlementTransactionIdentification
-	 * References1Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages1#LinkedQuantity
-	 * Linkages1.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References12Choice#SecuritiesSettlementTransactionIdentification
-	 * References12Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages4#LinkedQuantity
-	 * Linkages4.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References28Choice#SecuritiesSettlementTransactionIdentification
-	 * References28Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References14Choice#SecuritiesSettlementTransactionIdentification
-	 * References14Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages9#LinkedQuantity
-	 * Linkages9.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References16Choice#SecuritiesSettlementTransactionIdentification
-	 * References16Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages14#LinkedQuantity
-	 * Linkages14.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References25Choice#SecuritiesSettlementTransactionIdentification
-	 * References25Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages17#LinkedQuantity
-	 * Linkages17.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References32Choice#SecuritiesSettlementTransactionIdentification
-	 * References32Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages24#LinkedQuantity
-	 * Linkages24.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References3Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References3Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References3Choice#SecuritiesSettlementTransactionAllegementReportIdentification
-	 * References3Choice.
-	 * SecuritiesSettlementTransactionAllegementReportIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References3Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References3Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References3Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References3Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References9Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References9Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References9Choice#SecuritiesSettlementTransactionAllegementReportIdentification
-	 * References9Choice.
-	 * SecuritiesSettlementTransactionAllegementReportIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References9Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References9Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References9Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References9Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References18Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References18Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References18Choice#SecuritiesSettlementTransactionAllegementReportIdentification
-	 * References18Choice.
-	 * SecuritiesSettlementTransactionAllegementReportIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References18Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References18Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References18Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References18Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References20Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References20Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References20Choice#SecuritiesSettlementTransactionAllegementReportIdentification
-	 * References20Choice.
-	 * SecuritiesSettlementTransactionAllegementReportIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References20Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References20Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References20Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References20Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References29Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References29Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References29Choice#SecuritiesSettlementTransactionAllegementReportIdentification
-	 * References29Choice.
-	 * SecuritiesSettlementTransactionAllegementReportIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References29Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References29Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References29Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References29Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References37Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References37Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References37Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References37Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References38Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References38Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References38Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References38Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References38Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References38Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References13Choice#SecuritiesSettlementTransactionIdentification
-	 * References13Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References15Choice#SecuritiesSettlementTransactionIdentification
-	 * References15Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References24Choice#SecuritiesSettlementTransactionIdentification
-	 * References24Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References31Choice#SecuritiesSettlementTransactionIdentification
-	 * References31Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages7#LinkedQuantity
-	 * Linkages7.LinkedQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages12#LinkedQuantity
-	 * Linkages12.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#SettlementParameters
-	 * TransactionDetails5.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#SettlementParameters
-	 * TransactionDetails9.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#SettlementParameters
-	 * TransactionDetails22.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#SettlementParameters
-	 * TransactionDetails23.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#SettlementParameters
-	 * TransactionDetails36.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#SettlementParameters
-	 * TransactionDetails47.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#SettlementParameters
-	 * TransactionDetails53.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#SettlementParameters
-	 * TransactionDetails58.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#SettlementParameters
-	 * TransactionDetails7.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#SettlementParameters
-	 * TransactionDetails8.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#SettlementParameters
-	 * TransactionDetails16.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#SettlementParameters
-	 * TransactionDetails17.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#SettlementParameters
-	 * TransactionDetails26.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#SettlementParameters
-	 * TransactionDetails25.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#SettlementParameters
-	 * TransactionDetails27.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#SettlementParameters
-	 * TransactionDetails33.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#SettlementParameters
-	 * TransactionDetails39.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#SettlementParameters
-	 * TransactionDetails50.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#SettlementParameters
-	 * TransactionDetails56.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#SettlementParameters
-	 * TransactionDetails59.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6#SettlementParameters
-	 * TransactionDetails6.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18#SettlementParameters
-	 * TransactionDetails18.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24#SettlementParameters
-	 * TransactionDetails24.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34#SettlementParameters
-	 * TransactionDetails34.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37#SettlementParameters
-	 * TransactionDetails37.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48#SettlementParameters
-	 * TransactionDetails48.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SettlementParameters
-	 * TransactionDetails57.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60#SettlementParameters
-	 * TransactionDetails60.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Order16#CurrencyToBuyOrSell
-	 * Order16.CurrencyToBuyOrSell}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Order14#CurrencyToBuyOrSell
-	 * Order14.CurrencyToBuyOrSell}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#ClosingAmountPerPiecesOfCollateral
-	 * SecuritiesFinancing10.ClosingAmountPerPiecesOfCollateral}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder3#SettlementAndCustodyDetails
-	 * RedemptionOrder3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#SettlementAndCustodyDetails
-	 * RedemptionOrder5.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution3#SettlementAndCustodyDetails
-	 * RedemptionExecution3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#SettlementAndCustodyDetails
-	 * RedemptionExecution5.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#SettlementAndCustodyDetails
-	 * RedemptionOrder7.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder4#SettlementAndCustodyDetails
-	 * RedemptionOrder4.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#SettlementAndCustodyDetails
-	 * RedemptionOrder6.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution4#SettlementAndCustodyDetails
-	 * RedemptionExecution4.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#SettlementAndCustodyDetails
-	 * RedemptionExecution6.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#SettlementAndCustodyDetails
-	 * RedemptionOrder8.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder3#SettlementAndCustodyDetails
-	 * SubscriptionOrder3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#SettlementAndCustodyDetails
-	 * SubscriptionOrder5.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution3#SettlementAndCustodyDetails
-	 * SubscriptionExecution3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#SettlementAndCustodyDetails
-	 * SubscriptionExecution5.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#SettlementAndCustodyDetails
-	 * SubscriptionOrder7.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder4#SettlementAndCustodyDetails
-	 * SubscriptionOrder4.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#SettlementAndCustodyDetails
-	 * SubscriptionOrder6.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution4#SettlementAndCustodyDetails
-	 * SubscriptionExecution4.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#SettlementAndCustodyDetails
-	 * SubscriptionExecution6.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#SettlementAndCustodyDetails
-	 * SubscriptionOrder8.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution2#SettlementAndCustodyDetails
-	 * SwitchRedemptionLegExecution2.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution3#SettlementAndCustodyDetails
-	 * SwitchRedemptionLegExecution3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#SettlementParameters
-	 * SecuritiesTradeDetails7.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#SettlementParameters
-	 * SecuritiesTradeDetails19.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails4.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#SettlementParameters
-	 * SecuritiesTradeDetails4.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails17.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#SettlementParameters
-	 * SecuritiesTradeDetails17.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References4Choice#SecuritiesFinancingTransactionIdentification
-	 * References4Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References4Choice#SecuritiesSettlementTransactionIdentification
-	 * References4Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References22Choice#SecuritiesFinancingTransactionIdentification
-	 * References22Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References22Choice#SecuritiesSettlementTransactionIdentification
-	 * References22Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References2Choice#SecuritiesSettlementTransactionIdentification
-	 * References2Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References2Choice#SecuritiesFinancingTransactionIdentification
-	 * References2Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails10.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#SettlementParameters
-	 * SecuritiesTradeDetails10.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails22.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#SettlementParameters
-	 * SecuritiesTradeDetails22.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails23.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#SettlementParameters
-	 * SecuritiesTradeDetails23.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails29.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#SettlementParameters
-	 * SecuritiesTradeDetails29.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References8Choice#SecuritiesSettlementTransactionIdentification
-	 * References8Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References8Choice#SecuritiesFinancingTransactionIdentification
-	 * References8Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References17Choice#SecuritiesSettlementTransactionIdentification
-	 * References17Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References17Choice#SecuritiesFinancingTransactionIdentification
-	 * References17Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References7Choice#SecuritiesFinancingTransactionIdentification
-	 * References7Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References7Choice#SecuritiesSettlementTransactionIdentification
-	 * References7Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References23Choice#SecuritiesFinancingTransactionIdentification
-	 * References23Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References23Choice#SecuritiesSettlementTransactionIdentification
-	 * References23Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References30Choice#SecuritiesFinancingTransactionIdentification
-	 * References30Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References30Choice#SecuritiesSettlementTransactionIdentification
-	 * References30Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#SettlementParameters
-	 * SecuritiesTradeDetails14.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#SettlementParameters
-	 * SecuritiesTradeDetails20.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#SettlementParameters
-	 * SecuritiesTradeDetails24.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#SettlementParameters
-	 * SecuritiesTradeDetails30.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeLeg3#SettlementDetails
-	 * TradeLeg3.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeLeg6#SettlementDetails
-	 * TradeLeg6.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder11#SettlementAndCustodyDetails
-	 * RedemptionOrder11.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12#SettlementAndCustodyDetails
-	 * RedemptionExecution12.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder11#SettlementAndCustodyDetails
-	 * SubscriptionOrder11.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution9#SettlementAndCustodyDetails
-	 * SubscriptionExecution9.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References34Choice#SecuritiesSettlementTransactionIdentification
-	 * References34Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51#SettlementParameters
-	 * TransactionDetails51.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification2#RequestDetails
-	 * IntraBalanceModification2.RequestDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order9#SettlementDetails
-	 * Order9.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry2#SettlementDetails
-	 * QuoteEntry2.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#SettlementDetails
-	 * QuoteEntry1.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DisclosedBid1#SettlementDetails
-	 * DisclosedBid1.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#SettlementDetails
-	 * BidResponsePrice1.SettlementDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order6#SettlementDetails
-	 * Order6.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#SettlementParameters
-	 * TransactionDetails61.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#SettlementParameters
-	 * TransactionDetails62.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SettlementParameters
-	 * TransactionDetails63.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails35.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#SettlementParameters
-	 * SecuritiesTradeDetails35.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Order17#CurrencyToBuyOrSell
-	 * Order17.CurrencyToBuyOrSell}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Order18#CurrencyToBuyOrSell
-	 * Order18.CurrencyToBuyOrSell}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#SettlementParameters
-	 * TransactionDetails66.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails42.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#SettlementParameters
-	 * SecuritiesTradeDetails42.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#SettlementParameters
-	 * TransactionDetails67.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68#SettlementParameters
-	 * TransactionDetails68.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#SettlementParameters
-	 * TransactionDetails70.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#SettlementParameters
-	 * TransactionDetails69.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeLeg9#SettlementDetails
-	 * TradeLeg9.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#SettlementParameters
-	 * TransactionDetails71.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#SettlementParameters
-	 * TransactionDetails72.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails49.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#SettlementParameters
-	 * SecuritiesTradeDetails49.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#SettlementParameters
-	 * TransactionDetails79.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#SettlementParameters
-	 * SecuritiesTradeDetails48.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#SettlementParameters
-	 * TransactionDetails75.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SettlementParameters
-	 * TransactionDetails78.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References45Choice#SecuritiesSettlementTransactionIdentification
-	 * References45Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References45Choice#SecuritiesFinancingTransactionIdentification
-	 * References45Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages37#LinkedQuantity
-	 * Linkages37.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References43Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References43Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References43Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References43Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages38#LinkedQuantity
-	 * Linkages38.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References46Choice#SecuritiesSettlementTransactionIdentification
-	 * References46Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References41Choice#SecuritiesSettlementTransactionIdentification
-	 * References41Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References44Choice#SecuritiesFinancingTransactionIdentification
-	 * References44Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References44Choice#SecuritiesSettlementTransactionIdentification
-	 * References44Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References47Choice#SecuritiesSettlementTransactionIdentification
-	 * References47Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#SettlementParameters
-	 * SecuritiesTradeDetails57.SettlementParameters}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages43#LinkedQuantity
-	 * Linkages43.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References60Choice#SecuritiesSettlementTransactionIdentification
-	 * References60Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References60Choice#SecuritiesFinancingTransactionIdentification
-	 * References60Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails61.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#SettlementParameters
-	 * SecuritiesTradeDetails61.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References53Choice#SecuritiesSettlementTransactionConfirmationIdentification
-	 * References53Choice.
-	 * SecuritiesSettlementTransactionConfirmationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References53Choice#SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * References53Choice.
-	 * SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
-	 * }</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References53Choice#SecuritiesSettlementTransactionGenerationNotificationIdentification
-	 * References53Choice.
-	 * SecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#SettlementParameters
-	 * TransactionDetails87.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References58Choice#SecuritiesSettlementTransactionIdentification
-	 * References58Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails91#SettlementParameters
-	 * TransactionDetails91.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References50Choice#SecuritiesSettlementTransactionIdentification
-	 * References50Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#SettlementParameters
-	 * TransactionDetails90.SettlementParameters}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages48#LinkedQuantity
-	 * Linkages48.LinkedQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References59Choice#SecuritiesFinancingTransactionIdentification
-	 * References59Choice.SecuritiesFinancingTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References59Choice#SecuritiesSettlementTransactionIdentification
-	 * References59Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.References54Choice#SecuritiesSettlementTransactionIdentification
-	 * References54Choice.SecuritiesSettlementTransactionIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#SettlementAndCustodyDetails
-	 * RedemptionOrder14.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#SettlementAndCustodyDetails
-	 * SubscriptionExecution13.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#SettlementAndCustodyDetails
-	 * SubscriptionExecution12.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#SettlementAndCustodyDetails
-	 * SubscriptionOrder15.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#SettlementAndCustodyDetails
-	 * RedemptionOrder15.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#SettlementAndCustodyDetails
-	 * RedemptionExecution16.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#SettlementAndCustodyDetails
-	 * SubscriptionOrder14.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#SettlementAndCustodyDetails
-	 * RedemptionExecution15.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#SettlementAndCustodyDetails
-	 * SwitchRedemptionLegExecution4.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails68.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#SettlementParameters
-	 * SecuritiesTradeDetails68.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#SettlementParameters
-	 * TransactionDetails97.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#SettlementParameters
-	 * TransactionDetails96.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails95#SettlementParameters
-	 * TransactionDetails95.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#QuantityAndAccountDetails
-	 * SecuritiesTradeDetails69.QuantityAndAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#SettlementParameters
-	 * SecuritiesTradeDetails69.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#SettlementParameters
-	 * TransactionDetails100.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#SettlementParameters
-	 * TransactionDetails99.SettlementParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#SettlementParameters
-	 * TransactionDetails98.SettlementParameters}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References1Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References1Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages1#mmLinkedQuantity
+	 * Linkages1.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References12Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References12Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages4#mmLinkedQuantity
+	 * Linkages4.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References28Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References28Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References14Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References14Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages9#mmLinkedQuantity
+	 * Linkages9.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References16Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References16Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages14#mmLinkedQuantity
+	 * Linkages14.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References25Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References25Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages17#mmLinkedQuantity
+	 * Linkages17.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References32Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References32Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages24#mmLinkedQuantity
+	 * Linkages24.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References3Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References3Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References3Choice#mmSecuritiesSettlementTransactionAllegementReportIdentification
+	 * References3Choice.
+	 * mmSecuritiesSettlementTransactionAllegementReportIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References3Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References3Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References3Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References3Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References9Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References9Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References9Choice#mmSecuritiesSettlementTransactionAllegementReportIdentification
+	 * References9Choice.
+	 * mmSecuritiesSettlementTransactionAllegementReportIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References9Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References9Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References9Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References9Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References18Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References18Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References18Choice#mmSecuritiesSettlementTransactionAllegementReportIdentification
+	 * References18Choice.
+	 * mmSecuritiesSettlementTransactionAllegementReportIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References18Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References18Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References18Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References18Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References20Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References20Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References20Choice#mmSecuritiesSettlementTransactionAllegementReportIdentification
+	 * References20Choice.
+	 * mmSecuritiesSettlementTransactionAllegementReportIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References20Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References20Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References20Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References20Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References29Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References29Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References29Choice#mmSecuritiesSettlementTransactionAllegementReportIdentification
+	 * References29Choice.
+	 * mmSecuritiesSettlementTransactionAllegementReportIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References29Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References29Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References29Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References29Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References37Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References37Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References37Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References37Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References38Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References38Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References38Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References38Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References38Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References38Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References13Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References13Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References15Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References15Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References24Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References24Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References31Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References31Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages7#mmLinkedQuantity
+	 * Linkages7.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages12#mmLinkedQuantity
+	 * Linkages12.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#mmSettlementParameters
+	 * TransactionDetails5.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#mmSettlementParameters
+	 * TransactionDetails9.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#mmSettlementParameters
+	 * TransactionDetails22.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#mmSettlementParameters
+	 * TransactionDetails23.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#mmSettlementParameters
+	 * TransactionDetails36.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#mmSettlementParameters
+	 * TransactionDetails47.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#mmSettlementParameters
+	 * TransactionDetails53.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#mmSettlementParameters
+	 * TransactionDetails58.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#mmSettlementParameters
+	 * TransactionDetails7.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#mmSettlementParameters
+	 * TransactionDetails8.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#mmSettlementParameters
+	 * TransactionDetails16.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#mmSettlementParameters
+	 * TransactionDetails17.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#mmSettlementParameters
+	 * TransactionDetails26.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#mmSettlementParameters
+	 * TransactionDetails25.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#mmSettlementParameters
+	 * TransactionDetails27.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#mmSettlementParameters
+	 * TransactionDetails33.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#mmSettlementParameters
+	 * TransactionDetails39.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#mmSettlementParameters
+	 * TransactionDetails50.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#mmSettlementParameters
+	 * TransactionDetails56.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#mmSettlementParameters
+	 * TransactionDetails59.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6#mmSettlementParameters
+	 * TransactionDetails6.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18#mmSettlementParameters
+	 * TransactionDetails18.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24#mmSettlementParameters
+	 * TransactionDetails24.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34#mmSettlementParameters
+	 * TransactionDetails34.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37#mmSettlementParameters
+	 * TransactionDetails37.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48#mmSettlementParameters
+	 * TransactionDetails48.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSettlementParameters
+	 * TransactionDetails57.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60#mmSettlementParameters
+	 * TransactionDetails60.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmCurrencyToBuyOrSell
+	 * Order16.mmCurrencyToBuyOrSell}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Order14#mmCurrencyToBuyOrSell
+	 * Order14.mmCurrencyToBuyOrSell}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmClosingAmountPerPiecesOfCollateral
+	 * SecuritiesFinancing10.mmClosingAmountPerPiecesOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder3#mmSettlementAndCustodyDetails
+	 * RedemptionOrder3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#mmSettlementAndCustodyDetails
+	 * RedemptionOrder5.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution3#mmSettlementAndCustodyDetails
+	 * RedemptionExecution3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#mmSettlementAndCustodyDetails
+	 * RedemptionExecution5.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmSettlementAndCustodyDetails
+	 * RedemptionOrder7.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder4#mmSettlementAndCustodyDetails
+	 * RedemptionOrder4.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#mmSettlementAndCustodyDetails
+	 * RedemptionOrder6.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution4#mmSettlementAndCustodyDetails
+	 * RedemptionExecution4.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#mmSettlementAndCustodyDetails
+	 * RedemptionExecution6.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#mmSettlementAndCustodyDetails
+	 * RedemptionOrder8.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder3#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder5.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution3#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution5.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder7.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder4#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder4.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder6.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution4#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution4.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution6.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder8.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution2#mmSettlementAndCustodyDetails
+	 * SwitchRedemptionLegExecution2.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution3#mmSettlementAndCustodyDetails
+	 * SwitchRedemptionLegExecution3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#mmSettlementParameters
+	 * SecuritiesTradeDetails7.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#mmSettlementParameters
+	 * SecuritiesTradeDetails19.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails4.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmSettlementParameters
+	 * SecuritiesTradeDetails4.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails17.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#mmSettlementParameters
+	 * SecuritiesTradeDetails17.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References4Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References4Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References4Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References4Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References22Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References22Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References22Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References22Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References2Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References2Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References2Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References2Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails10.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmSettlementParameters
+	 * SecuritiesTradeDetails10.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails22.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#mmSettlementParameters
+	 * SecuritiesTradeDetails22.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails23.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#mmSettlementParameters
+	 * SecuritiesTradeDetails23.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails29.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#mmSettlementParameters
+	 * SecuritiesTradeDetails29.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References8Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References8Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References8Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References8Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References17Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References17Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References17Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References17Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References7Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References7Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References7Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References7Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References23Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References23Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References23Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References23Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References30Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References30Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References30Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References30Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#mmSettlementParameters
+	 * SecuritiesTradeDetails14.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#mmSettlementParameters
+	 * SecuritiesTradeDetails20.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#mmSettlementParameters
+	 * SecuritiesTradeDetails24.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#mmSettlementParameters
+	 * SecuritiesTradeDetails30.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLeg3#mmSettlementDetails
+	 * TradeLeg3.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLeg6#mmSettlementDetails
+	 * TradeLeg6.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder11#mmSettlementAndCustodyDetails
+	 * RedemptionOrder11.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12#mmSettlementAndCustodyDetails
+	 * RedemptionExecution12.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder11#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder11.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution9#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution9.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References34Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References34Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51#mmSettlementParameters
+	 * TransactionDetails51.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification2#mmRequestDetails
+	 * IntraBalanceModification2.mmRequestDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order9#mmSettlementDetails
+	 * Order9.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry2#mmSettlementDetails
+	 * QuoteEntry2.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmSettlementDetails
+	 * QuoteEntry1.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DisclosedBid1#mmSettlementDetails
+	 * DisclosedBid1.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmSettlementDetails
+	 * BidResponsePrice1.mmSettlementDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order6#mmSettlementDetails
+	 * Order6.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#mmSettlementParameters
+	 * TransactionDetails61.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#mmSettlementParameters
+	 * TransactionDetails62.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSettlementParameters
+	 * TransactionDetails63.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails35.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#mmSettlementParameters
+	 * SecuritiesTradeDetails35.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Order17#mmCurrencyToBuyOrSell
+	 * Order17.mmCurrencyToBuyOrSell}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Order18#mmCurrencyToBuyOrSell
+	 * Order18.mmCurrencyToBuyOrSell}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#mmSettlementParameters
+	 * TransactionDetails66.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails42.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#mmSettlementParameters
+	 * SecuritiesTradeDetails42.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#mmSettlementParameters
+	 * TransactionDetails67.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68#mmSettlementParameters
+	 * TransactionDetails68.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#mmSettlementParameters
+	 * TransactionDetails70.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#mmSettlementParameters
+	 * TransactionDetails69.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLeg9#mmSettlementDetails
+	 * TradeLeg9.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#mmSettlementParameters
+	 * TransactionDetails71.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#mmSettlementParameters
+	 * TransactionDetails72.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails49.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#mmSettlementParameters
+	 * SecuritiesTradeDetails49.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#mmSettlementParameters
+	 * TransactionDetails79.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#mmSettlementParameters
+	 * SecuritiesTradeDetails48.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#mmSettlementParameters
+	 * TransactionDetails75.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSettlementParameters
+	 * TransactionDetails78.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References45Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References45Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References45Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References45Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages37#mmLinkedQuantity
+	 * Linkages37.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References43Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References43Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References43Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References43Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages38#mmLinkedQuantity
+	 * Linkages38.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References46Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References46Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References41Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References41Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References44Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References44Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References44Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References44Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References47Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References47Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#mmSettlementParameters
+	 * SecuritiesTradeDetails57.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages43#mmLinkedQuantity
+	 * Linkages43.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References60Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References60Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References60Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References60Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails61.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#mmSettlementParameters
+	 * SecuritiesTradeDetails61.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References53Choice#mmSecuritiesSettlementTransactionConfirmationIdentification
+	 * References53Choice.
+	 * mmSecuritiesSettlementTransactionConfirmationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References53Choice#mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * References53Choice.
+	 * mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References53Choice#mmSecuritiesSettlementTransactionGenerationNotificationIdentification
+	 * References53Choice.
+	 * mmSecuritiesSettlementTransactionGenerationNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#mmSettlementParameters
+	 * TransactionDetails87.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References58Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References58Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails91#mmSettlementParameters
+	 * TransactionDetails91.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References50Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References50Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmSettlementParameters
+	 * TransactionDetails90.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages48#mmLinkedQuantity
+	 * Linkages48.mmLinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References59Choice#mmSecuritiesFinancingTransactionIdentification
+	 * References59Choice.mmSecuritiesFinancingTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References59Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References59Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References54Choice#mmSecuritiesSettlementTransactionIdentification
+	 * References54Choice.mmSecuritiesSettlementTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#mmSettlementAndCustodyDetails
+	 * RedemptionOrder14.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution13.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution12.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder15.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmSettlementAndCustodyDetails
+	 * RedemptionOrder15.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmSettlementAndCustodyDetails
+	 * RedemptionExecution16.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#mmSettlementAndCustodyDetails
+	 * SubscriptionOrder14.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmSettlementAndCustodyDetails
+	 * RedemptionExecution15.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmSettlementAndCustodyDetails
+	 * SwitchRedemptionLegExecution4.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails68.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#mmSettlementParameters
+	 * SecuritiesTradeDetails68.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmSettlementParameters
+	 * TransactionDetails97.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmSettlementParameters
+	 * TransactionDetails96.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails95#mmSettlementParameters
+	 * TransactionDetails95.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmQuantityAndAccountDetails
+	 * SecuritiesTradeDetails69.mmQuantityAndAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmSettlementParameters
+	 * SecuritiesTradeDetails69.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#mmSettlementParameters
+	 * TransactionDetails100.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmSettlementParameters
+	 * TransactionDetails99.mmSettlementParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmSettlementParameters
+	 * TransactionDetails98.mmSettlementParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1028,132 +1040,140 @@ public class SecuritiesTradeExecution {
 	 * definition} = "Process of settling securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References1Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages1.LinkedQuantity,
-					com.tools20022.repository.choice.References12Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages4.LinkedQuantity,
-					com.tools20022.repository.choice.References28Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References14Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.msg.Linkages9.LinkedQuantity, com.tools20022.repository.choice.References16Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages14.LinkedQuantity,
-					com.tools20022.repository.choice.References25Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages17.LinkedQuantity,
-					com.tools20022.repository.choice.References32Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages24.LinkedQuantity,
-					com.tools20022.repository.choice.References3Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References3Choice.SecuritiesSettlementTransactionAllegementReportIdentification,
-					com.tools20022.repository.choice.References3Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References3Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification,
-					com.tools20022.repository.choice.References9Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References9Choice.SecuritiesSettlementTransactionAllegementReportIdentification,
-					com.tools20022.repository.choice.References9Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References9Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification,
-					com.tools20022.repository.choice.References18Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References18Choice.SecuritiesSettlementTransactionAllegementReportIdentification,
-					com.tools20022.repository.choice.References18Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References18Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification,
-					com.tools20022.repository.choice.References20Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References20Choice.SecuritiesSettlementTransactionAllegementReportIdentification,
-					com.tools20022.repository.choice.References20Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References20Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification,
-					com.tools20022.repository.choice.References29Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References29Choice.SecuritiesSettlementTransactionAllegementReportIdentification,
-					com.tools20022.repository.choice.References29Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References29Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification,
-					com.tools20022.repository.choice.References37Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References37Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References37Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification,
-					com.tools20022.repository.choice.References38Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References38Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References38Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.choice.References13Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References15Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References24Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References31Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages7.LinkedQuantity, com.tools20022.repository.msg.Linkages12.LinkedQuantity,
-					com.tools20022.repository.msg.TransactionDetails5.SettlementParameters, com.tools20022.repository.msg.TransactionDetails9.SettlementParameters, com.tools20022.repository.msg.TransactionDetails22.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails23.SettlementParameters, com.tools20022.repository.msg.TransactionDetails36.SettlementParameters, com.tools20022.repository.msg.TransactionDetails47.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails53.SettlementParameters, com.tools20022.repository.msg.TransactionDetails58.SettlementParameters, com.tools20022.repository.msg.TransactionDetails7.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails8.SettlementParameters, com.tools20022.repository.msg.TransactionDetails16.SettlementParameters, com.tools20022.repository.msg.TransactionDetails17.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails26.SettlementParameters, com.tools20022.repository.msg.TransactionDetails25.SettlementParameters, com.tools20022.repository.msg.TransactionDetails27.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails33.SettlementParameters, com.tools20022.repository.msg.TransactionDetails39.SettlementParameters, com.tools20022.repository.msg.TransactionDetails50.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails56.SettlementParameters, com.tools20022.repository.msg.TransactionDetails59.SettlementParameters, com.tools20022.repository.msg.TransactionDetails6.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails18.SettlementParameters, com.tools20022.repository.msg.TransactionDetails24.SettlementParameters, com.tools20022.repository.msg.TransactionDetails34.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails37.SettlementParameters, com.tools20022.repository.msg.TransactionDetails48.SettlementParameters, com.tools20022.repository.msg.TransactionDetails57.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails60.SettlementParameters, com.tools20022.repository.msg.Order16.CurrencyToBuyOrSell, com.tools20022.repository.msg.Order14.CurrencyToBuyOrSell,
-					com.tools20022.repository.msg.SecuritiesFinancing10.ClosingAmountPerPiecesOfCollateral, com.tools20022.repository.msg.RedemptionOrder3.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.RedemptionOrder5.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution3.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.RedemptionExecution5.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionOrder7.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.RedemptionOrder4.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionOrder6.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.RedemptionExecution4.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution6.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.RedemptionOrder8.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder3.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionOrder5.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution3.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionExecution5.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder7.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionOrder4.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder6.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionExecution4.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution6.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionOrder8.SettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution2.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.SettlementAndCustodyDetails, com.tools20022.repository.msg.SecuritiesTradeDetails7.SettlementParameters,
-					com.tools20022.repository.msg.SecuritiesTradeDetails19.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails4.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails4.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails17.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails17.SettlementParameters, com.tools20022.repository.choice.References4Choice.SecuritiesFinancingTransactionIdentification,
-					com.tools20022.repository.choice.References4Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References22Choice.SecuritiesFinancingTransactionIdentification,
-					com.tools20022.repository.choice.References22Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References2Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References2Choice.SecuritiesFinancingTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails10.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails22.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails22.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails23.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails23.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails29.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.SettlementParameters, com.tools20022.repository.choice.References8Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References8Choice.SecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References17Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References17Choice.SecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References7Choice.SecuritiesFinancingTransactionIdentification,
-					com.tools20022.repository.choice.References7Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References23Choice.SecuritiesFinancingTransactionIdentification,
-					com.tools20022.repository.choice.References23Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References30Choice.SecuritiesFinancingTransactionIdentification,
-					com.tools20022.repository.choice.References30Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails14.SettlementParameters,
-					com.tools20022.repository.msg.SecuritiesTradeDetails20.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails24.SettlementParameters,
-					com.tools20022.repository.msg.SecuritiesTradeDetails30.SettlementParameters, com.tools20022.repository.msg.TradeLeg3.SettlementDetails, com.tools20022.repository.msg.TradeLeg6.SettlementDetails,
-					com.tools20022.repository.msg.RedemptionOrder11.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution12.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionOrder11.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution9.SettlementAndCustodyDetails,
-					com.tools20022.repository.choice.References34Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.TransactionDetails51.SettlementParameters,
-					com.tools20022.repository.msg.IntraBalanceModification2.RequestDetails, com.tools20022.repository.msg.Order9.SettlementDetails, com.tools20022.repository.msg.QuoteEntry2.SettlementDetails,
-					com.tools20022.repository.msg.QuoteEntry1.SettlementDetails, com.tools20022.repository.msg.DisclosedBid1.SettlementDetails, com.tools20022.repository.msg.BidResponsePrice1.SettlementDetails,
-					com.tools20022.repository.msg.Order6.SettlementDetails, com.tools20022.repository.msg.TransactionDetails61.SettlementParameters, com.tools20022.repository.msg.TransactionDetails62.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails63.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails35.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails35.SettlementParameters, com.tools20022.repository.msg.Order17.CurrencyToBuyOrSell, com.tools20022.repository.msg.Order18.CurrencyToBuyOrSell,
-					com.tools20022.repository.msg.TransactionDetails66.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails42.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails42.SettlementParameters, com.tools20022.repository.msg.TransactionDetails67.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails68.SettlementParameters, com.tools20022.repository.msg.TransactionDetails70.SettlementParameters, com.tools20022.repository.msg.TransactionDetails69.SettlementParameters,
-					com.tools20022.repository.msg.TradeLeg9.SettlementDetails, com.tools20022.repository.msg.TransactionDetails71.SettlementParameters, com.tools20022.repository.msg.TransactionDetails72.SettlementParameters,
-					com.tools20022.repository.msg.SecuritiesTradeDetails49.QuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesTradeDetails49.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails79.SettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails48.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails75.SettlementParameters, com.tools20022.repository.msg.TransactionDetails78.SettlementParameters,
-					com.tools20022.repository.choice.References45Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References45Choice.SecuritiesFinancingTransactionIdentification,
-					com.tools20022.repository.msg.Linkages37.LinkedQuantity, com.tools20022.repository.choice.References43Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References43Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References43Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.msg.Linkages38.LinkedQuantity,
-					com.tools20022.repository.choice.References46Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References41Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References44Choice.SecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References44Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References47Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails57.SettlementParameters,
-					com.tools20022.repository.msg.Linkages43.LinkedQuantity, com.tools20022.repository.choice.References60Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.choice.References60Choice.SecuritiesFinancingTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails61.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails61.SettlementParameters, com.tools20022.repository.choice.References53Choice.SecuritiesSettlementTransactionConfirmationIdentification,
-					com.tools20022.repository.choice.References53Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-					com.tools20022.repository.choice.References53Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.msg.TransactionDetails87.SettlementParameters,
-					com.tools20022.repository.choice.References58Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.TransactionDetails91.SettlementParameters,
-					com.tools20022.repository.choice.References50Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.TransactionDetails90.SettlementParameters,
-					com.tools20022.repository.msg.Linkages48.LinkedQuantity, com.tools20022.repository.choice.References59Choice.SecuritiesFinancingTransactionIdentification,
-					com.tools20022.repository.choice.References59Choice.SecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References54Choice.SecuritiesSettlementTransactionIdentification,
-					com.tools20022.repository.msg.RedemptionOrder14.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution13.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionExecution12.SettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder15.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.RedemptionOrder15.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution16.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SubscriptionOrder14.SettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution15.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.SettlementAndCustodyDetails, com.tools20022.repository.msg.SecuritiesTradeDetails68.QuantityAndAccountDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails68.SettlementParameters, com.tools20022.repository.msg.TransactionDetails97.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails96.SettlementParameters, com.tools20022.repository.msg.TransactionDetails95.SettlementParameters,
-					com.tools20022.repository.msg.SecuritiesTradeDetails69.QuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesTradeDetails69.SettlementParameters,
-					com.tools20022.repository.msg.TransactionDetails100.SettlementParameters, com.tools20022.repository.msg.TransactionDetails99.SettlementParameters, com.tools20022.repository.msg.TransactionDetails98.SettlementParameters);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References1Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages1.mmLinkedQuantity,
+					com.tools20022.repository.choice.References12Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages4.mmLinkedQuantity,
+					com.tools20022.repository.choice.References28Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References14Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.msg.Linkages9.mmLinkedQuantity, com.tools20022.repository.choice.References16Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages14.mmLinkedQuantity,
+					com.tools20022.repository.choice.References25Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages17.mmLinkedQuantity,
+					com.tools20022.repository.choice.References32Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.Linkages24.mmLinkedQuantity,
+					com.tools20022.repository.choice.References3Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References3Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification,
+					com.tools20022.repository.choice.References3Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References3Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification,
+					com.tools20022.repository.choice.References9Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References9Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification,
+					com.tools20022.repository.choice.References9Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References9Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification,
+					com.tools20022.repository.choice.References18Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References18Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification,
+					com.tools20022.repository.choice.References18Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References18Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification,
+					com.tools20022.repository.choice.References20Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References20Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification,
+					com.tools20022.repository.choice.References20Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References20Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification,
+					com.tools20022.repository.choice.References29Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References29Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification,
+					com.tools20022.repository.choice.References29Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References29Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification,
+					com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification,
+					com.tools20022.repository.choice.References38Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References38Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References38Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification,
+					com.tools20022.repository.choice.References13Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References15Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References24Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References31Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.msg.Linkages7.mmLinkedQuantity, com.tools20022.repository.msg.Linkages12.mmLinkedQuantity, com.tools20022.repository.msg.TransactionDetails5.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails9.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails22.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails23.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails36.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails47.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails53.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails58.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails7.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails8.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails16.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails17.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails26.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails25.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails27.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails33.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails39.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails50.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails56.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails59.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails6.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails18.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails24.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails34.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails37.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails48.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails57.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails60.mmSettlementParameters, com.tools20022.repository.msg.Order16.mmCurrencyToBuyOrSell, com.tools20022.repository.msg.Order14.mmCurrencyToBuyOrSell,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmClosingAmountPerPiecesOfCollateral, com.tools20022.repository.msg.RedemptionOrder3.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.RedemptionOrder5.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution3.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.RedemptionExecution5.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionOrder7.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.RedemptionOrder4.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionOrder6.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.RedemptionExecution4.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution6.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.RedemptionOrder8.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder3.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionOrder5.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution3.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionExecution5.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder7.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionOrder4.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder6.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionExecution4.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionOrder8.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SecuritiesTradeDetails7.mmSettlementParameters,
+					com.tools20022.repository.msg.SecuritiesTradeDetails19.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails17.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmSettlementParameters, com.tools20022.repository.choice.References4Choice.mmSecuritiesFinancingTransactionIdentification,
+					com.tools20022.repository.choice.References4Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References22Choice.mmSecuritiesFinancingTransactionIdentification,
+					com.tools20022.repository.choice.References22Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References2Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References2Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails22.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails23.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails29.mmSettlementParameters, com.tools20022.repository.choice.References8Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References8Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References17Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References17Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References7Choice.mmSecuritiesFinancingTransactionIdentification,
+					com.tools20022.repository.choice.References7Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References23Choice.mmSecuritiesFinancingTransactionIdentification,
+					com.tools20022.repository.choice.References23Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References30Choice.mmSecuritiesFinancingTransactionIdentification,
+					com.tools20022.repository.choice.References30Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails14.mmSettlementParameters,
+					com.tools20022.repository.msg.SecuritiesTradeDetails20.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails24.mmSettlementParameters,
+					com.tools20022.repository.msg.SecuritiesTradeDetails30.mmSettlementParameters, com.tools20022.repository.msg.TradeLeg3.mmSettlementDetails, com.tools20022.repository.msg.TradeLeg6.mmSettlementDetails,
+					com.tools20022.repository.msg.RedemptionOrder11.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution12.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionOrder11.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution9.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.choice.References34Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.TransactionDetails51.mmSettlementParameters,
+					com.tools20022.repository.msg.IntraBalanceModification2.mmRequestDetails, com.tools20022.repository.msg.Order9.mmSettlementDetails, com.tools20022.repository.msg.QuoteEntry2.mmSettlementDetails,
+					com.tools20022.repository.msg.QuoteEntry1.mmSettlementDetails, com.tools20022.repository.msg.DisclosedBid1.mmSettlementDetails, com.tools20022.repository.msg.BidResponsePrice1.mmSettlementDetails,
+					com.tools20022.repository.msg.Order6.mmSettlementDetails, com.tools20022.repository.msg.TransactionDetails61.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails62.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails63.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails35.mmSettlementParameters, com.tools20022.repository.msg.Order17.mmCurrencyToBuyOrSell, com.tools20022.repository.msg.Order18.mmCurrencyToBuyOrSell,
+					com.tools20022.repository.msg.TransactionDetails66.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails42.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails67.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails68.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails70.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails69.mmSettlementParameters, com.tools20022.repository.msg.TradeLeg9.mmSettlementDetails, com.tools20022.repository.msg.TransactionDetails71.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails72.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails49.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails79.mmSettlementParameters,
+					com.tools20022.repository.msg.SecuritiesTradeDetails48.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails75.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails78.mmSettlementParameters, com.tools20022.repository.choice.References45Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References45Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.msg.Linkages37.mmLinkedQuantity,
+					com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.msg.Linkages38.mmLinkedQuantity,
+					com.tools20022.repository.choice.References46Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References41Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References44Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References44Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References47Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails57.mmSettlementParameters,
+					com.tools20022.repository.msg.Linkages43.mmLinkedQuantity, com.tools20022.repository.choice.References60Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.choice.References60Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails61.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmSettlementParameters, com.tools20022.repository.choice.References53Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
+					com.tools20022.repository.choice.References53Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+					com.tools20022.repository.choice.References53Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.msg.TransactionDetails87.mmSettlementParameters,
+					com.tools20022.repository.choice.References58Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.TransactionDetails91.mmSettlementParameters,
+					com.tools20022.repository.choice.References50Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.msg.TransactionDetails90.mmSettlementParameters,
+					com.tools20022.repository.msg.Linkages48.mmLinkedQuantity, com.tools20022.repository.choice.References59Choice.mmSecuritiesFinancingTransactionIdentification,
+					com.tools20022.repository.choice.References59Choice.mmSecuritiesSettlementTransactionIdentification, com.tools20022.repository.choice.References54Choice.mmSecuritiesSettlementTransactionIdentification,
+					com.tools20022.repository.msg.RedemptionOrder14.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution13.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionExecution12.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionOrder15.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.RedemptionOrder15.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution16.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SubscriptionOrder14.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.RedemptionExecution15.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SecuritiesTradeDetails68.mmQuantityAndAccountDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails97.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails96.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails95.mmSettlementParameters,
+					com.tools20022.repository.msg.SecuritiesTradeDetails69.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails100.mmSettlementParameters, com.tools20022.repository.msg.TransactionDetails99.mmSettlementParameters,
+					com.tools20022.repository.msg.TransactionDetails98.mmSettlementParameters);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
 			definition = "Process of settling securities.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SecuritiesTradeExecution;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesTradeExecution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
+	protected SecuritiesPricing dealPrice;
 	/**
 	 * Specifies the price of the traded financial instrument. This is the deal
 	 * price of the individual trade transaction. If there is only one trade
@@ -1167,8 +1187,8 @@ public class SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#SecuritiesTradeExecution
-	 * SecuritiesPricing.SecuritiesTradeExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmSecuritiesTradeExecution
+	 * SecuritiesPricing.mmSecuritiesTradeExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1176,252 +1196,252 @@ public class SecuritiesTradeExecution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#DealPrice
-	 * SecuritiesTradeDetails25.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#DealPrice
-	 * SecuritiesTradeDetails26.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#DealPrice
-	 * SecuritiesTradeDetails27.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#DealPrice
-	 * SecuritiesTradeDetails28.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#DealPrice
-	 * SecuritiesTradeDetails6.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#DealPrice
-	 * SecuritiesTradeDetails13.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#DealPrice
-	 * SecuritiesTradeDetails3.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#DealPrice
-	 * SecuritiesTradeDetails11.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#DealPrice
-	 * SecuritiesTradeDetails2.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#DealPrice
-	 * SecuritiesTradeDetails16.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#DealPrice
-	 * SecuritiesTradeDetails1.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#DealPrice
-	 * SecuritiesTradeDetails15.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#RelatedPrice
-	 * EntryTransaction1.RelatedPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#RelatedPrice
-	 * EntryTransaction2.RelatedPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#RelatedPrice
-	 * EntryTransaction3.RelatedPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#RelatedPrice
-	 * EntryTransaction4.RelatedPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails3#ExecutedTradePrice
-	 * TransactionDetails3.ExecutedTradePrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#DealPrice
-	 * SecuritiesTradeDetails8.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails18#DealPrice
-	 * SecuritiesTradeDetails18.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#DealPrice
-	 * SecuritiesTradeDetails4.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#DealPrice
-	 * SecuritiesTradeDetails17.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#DealPrice
-	 * SecuritiesTradeDetails9.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails21#DealPrice
-	 * SecuritiesTradeDetails21.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#DealPrice
-	 * SecuritiesTradeDetails10.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#DealPrice
-	 * SecuritiesTradeDetails22.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#DealPrice
-	 * SecuritiesTradeDetails23.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#DealPrice
-	 * SecuritiesTradeDetails29.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation1#DealPrice
-	 * SettlementObligation1.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation6#DealPrice
-	 * SettlementObligation6.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg2#DealPrice
-	 * TradeLeg2.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg5#DealPrice
-	 * TradeLeg5.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg1#DealPrice
-	 * TradeLeg1.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg3#DealPrice
-	 * TradeLeg3.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg6#DealPrice
-	 * TradeLeg6.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg4#DealPrice
-	 * TradeLeg4.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg7#DealPrice
-	 * TradeLeg7.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#DealPrice
-	 * SecuritiesTradeDetails31.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#DealPrice
-	 * SecuritiesTradeDetails33.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#DealPrice
-	 * SecuritiesTradeDetails35.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#DealPrice
-	 * SecuritiesTradeDetails38.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#DealPrice
-	 * SecuritiesTradeDetails37.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails36#DealPrice
-	 * SecuritiesTradeDetails36.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#DealPrice
-	 * SecuritiesTradeDetails34.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#DealPrice
-	 * SecuritiesTradeDetails32.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#DealPrice
-	 * SecuritiesTradeDetails44.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#DealPrice
-	 * SecuritiesTradeDetails39.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#DealPrice
-	 * SecuritiesTradeDetails43.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails41#DealPrice
-	 * SecuritiesTradeDetails41.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#DealPrice
-	 * SecuritiesTradeDetails40.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#DealPrice
-	 * SecuritiesTradeDetails42.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#DealPrice
-	 * SecuritiesTradeDetails46.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#DealPrice
-	 * SecuritiesTradeDetails47.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#RelatedPrice
-	 * EntryTransaction7.RelatedPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg8#DealPrice
-	 * TradeLeg8.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation7#DealPrice
-	 * SettlementObligation7.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg10#DealPrice
-	 * TradeLeg10.DealPrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg9#DealPrice
-	 * TradeLeg9.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction1#DealPrice
-	 * UnsecuredMarketTransaction1.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#DealPrice
-	 * SecuritiesTradeDetails49.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#DealPrice
-	 * SecuritiesTradeDetails51.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#DealPrice
-	 * SecuritiesTradeDetails53.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#DealPrice
-	 * SecuritiesTradeDetails55.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#DealPrice
-	 * SecuritiesTradeDetails56.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails54#DealPrice
-	 * SecuritiesTradeDetails54.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#DealPrice
-	 * SecuritiesTradeDetails52.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#DealPrice
-	 * SecuritiesTradeDetails50.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#RelatedPrice
-	 * EntryTransaction8.RelatedPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#DealPrice
-	 * SecuritiesTradeDetails59.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#DealPrice
-	 * SecuritiesTradeDetails58.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#DealPrice
-	 * SecuritiesTradeDetails61.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#DealPrice
-	 * SecuritiesTradeDetails63.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#DealPrice
-	 * SecuritiesTradeDetails62.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails60#DealPrice
-	 * SecuritiesTradeDetails60.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#DealPrice
-	 * SecuritiesTradeDetails65.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#DealPrice
-	 * SecuritiesTradeDetails66.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#DealPrice
-	 * UnsecuredMarketTransaction2.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#DealPrice
-	 * UnsecuredMarketTransaction3.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#DealPrice
-	 * SecuritiesTradeDetails67.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#DealPrice
-	 * SecuritiesTradeDetails68.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#DealPrice
-	 * SecuritiesTradeDetails69.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#DealPrice
-	 * SecuritiesTradeDetails70.DealPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#DealPrice
-	 * UnsecuredMarketTransaction4.DealPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#mmDealPrice
+	 * SecuritiesTradeDetails25.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#mmDealPrice
+	 * SecuritiesTradeDetails26.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#mmDealPrice
+	 * SecuritiesTradeDetails27.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#mmDealPrice
+	 * SecuritiesTradeDetails28.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#mmDealPrice
+	 * SecuritiesTradeDetails6.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#mmDealPrice
+	 * SecuritiesTradeDetails13.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#mmDealPrice
+	 * SecuritiesTradeDetails3.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#mmDealPrice
+	 * SecuritiesTradeDetails11.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#mmDealPrice
+	 * SecuritiesTradeDetails2.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#mmDealPrice
+	 * SecuritiesTradeDetails16.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#mmDealPrice
+	 * SecuritiesTradeDetails1.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#mmDealPrice
+	 * SecuritiesTradeDetails15.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmRelatedPrice
+	 * EntryTransaction1.mmRelatedPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmRelatedPrice
+	 * EntryTransaction2.mmRelatedPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmRelatedPrice
+	 * EntryTransaction3.mmRelatedPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmRelatedPrice
+	 * EntryTransaction4.mmRelatedPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails3#mmExecutedTradePrice
+	 * TransactionDetails3.mmExecutedTradePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#mmDealPrice
+	 * SecuritiesTradeDetails8.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails18#mmDealPrice
+	 * SecuritiesTradeDetails18.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmDealPrice
+	 * SecuritiesTradeDetails4.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#mmDealPrice
+	 * SecuritiesTradeDetails17.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#mmDealPrice
+	 * SecuritiesTradeDetails9.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails21#mmDealPrice
+	 * SecuritiesTradeDetails21.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmDealPrice
+	 * SecuritiesTradeDetails10.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#mmDealPrice
+	 * SecuritiesTradeDetails22.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#mmDealPrice
+	 * SecuritiesTradeDetails23.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#mmDealPrice
+	 * SecuritiesTradeDetails29.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation1#mmDealPrice
+	 * SettlementObligation1.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation6#mmDealPrice
+	 * SettlementObligation6.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg2#mmDealPrice
+	 * TradeLeg2.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg5#mmDealPrice
+	 * TradeLeg5.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg1#mmDealPrice
+	 * TradeLeg1.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg3#mmDealPrice
+	 * TradeLeg3.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg6#mmDealPrice
+	 * TradeLeg6.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg4#mmDealPrice
+	 * TradeLeg4.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg7#mmDealPrice
+	 * TradeLeg7.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#mmDealPrice
+	 * SecuritiesTradeDetails31.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#mmDealPrice
+	 * SecuritiesTradeDetails33.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#mmDealPrice
+	 * SecuritiesTradeDetails35.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#mmDealPrice
+	 * SecuritiesTradeDetails38.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#mmDealPrice
+	 * SecuritiesTradeDetails37.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails36#mmDealPrice
+	 * SecuritiesTradeDetails36.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#mmDealPrice
+	 * SecuritiesTradeDetails34.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#mmDealPrice
+	 * SecuritiesTradeDetails32.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#mmDealPrice
+	 * SecuritiesTradeDetails44.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#mmDealPrice
+	 * SecuritiesTradeDetails39.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#mmDealPrice
+	 * SecuritiesTradeDetails43.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails41#mmDealPrice
+	 * SecuritiesTradeDetails41.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#mmDealPrice
+	 * SecuritiesTradeDetails40.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#mmDealPrice
+	 * SecuritiesTradeDetails42.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#mmDealPrice
+	 * SecuritiesTradeDetails46.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#mmDealPrice
+	 * SecuritiesTradeDetails47.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmRelatedPrice
+	 * EntryTransaction7.mmRelatedPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg8#mmDealPrice
+	 * TradeLeg8.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation7#mmDealPrice
+	 * SettlementObligation7.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg10#mmDealPrice
+	 * TradeLeg10.mmDealPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg9#mmDealPrice
+	 * TradeLeg9.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction1#mmDealPrice
+	 * UnsecuredMarketTransaction1.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#mmDealPrice
+	 * SecuritiesTradeDetails49.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#mmDealPrice
+	 * SecuritiesTradeDetails51.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#mmDealPrice
+	 * SecuritiesTradeDetails53.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#mmDealPrice
+	 * SecuritiesTradeDetails55.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#mmDealPrice
+	 * SecuritiesTradeDetails56.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails54#mmDealPrice
+	 * SecuritiesTradeDetails54.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#mmDealPrice
+	 * SecuritiesTradeDetails52.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#mmDealPrice
+	 * SecuritiesTradeDetails50.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmRelatedPrice
+	 * EntryTransaction8.mmRelatedPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#mmDealPrice
+	 * SecuritiesTradeDetails59.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#mmDealPrice
+	 * SecuritiesTradeDetails58.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#mmDealPrice
+	 * SecuritiesTradeDetails61.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#mmDealPrice
+	 * SecuritiesTradeDetails63.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#mmDealPrice
+	 * SecuritiesTradeDetails62.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails60#mmDealPrice
+	 * SecuritiesTradeDetails60.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#mmDealPrice
+	 * SecuritiesTradeDetails65.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmDealPrice
+	 * SecuritiesTradeDetails66.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmDealPrice
+	 * UnsecuredMarketTransaction2.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmDealPrice
+	 * UnsecuredMarketTransaction3.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#mmDealPrice
+	 * SecuritiesTradeDetails67.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#mmDealPrice
+	 * SecuritiesTradeDetails68.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmDealPrice
+	 * SecuritiesTradeDetails69.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmDealPrice
+	 * SecuritiesTradeDetails70.mmDealPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmDealPrice
+	 * UnsecuredMarketTransaction4.mmDealPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1435,47 +1455,49 @@ public class SecuritiesTradeExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd DealPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDealPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails26.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails27.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails28.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails6.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails13.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails3.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails11.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails2.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails16.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails1.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails15.DealPrice, com.tools20022.repository.msg.EntryTransaction1.RelatedPrice, com.tools20022.repository.msg.EntryTransaction2.RelatedPrice,
-					com.tools20022.repository.msg.EntryTransaction3.RelatedPrice, com.tools20022.repository.msg.EntryTransaction4.RelatedPrice, com.tools20022.repository.msg.TransactionDetails3.ExecutedTradePrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails8.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails18.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails4.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails17.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails9.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails21.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails22.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails23.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.DealPrice, com.tools20022.repository.msg.SettlementObligation1.DealPrice, com.tools20022.repository.msg.SettlementObligation6.DealPrice,
-					com.tools20022.repository.msg.TradeLeg2.DealPrice, com.tools20022.repository.msg.TradeLeg5.DealPrice, com.tools20022.repository.msg.TradeLeg1.DealPrice, com.tools20022.repository.msg.TradeLeg3.DealPrice,
-					com.tools20022.repository.msg.TradeLeg6.DealPrice, com.tools20022.repository.msg.TradeLeg4.DealPrice, com.tools20022.repository.msg.TradeLeg7.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails31.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails33.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails35.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails38.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails37.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails36.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails34.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails32.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails44.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails39.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails43.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails41.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails40.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails42.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails46.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails47.DealPrice,
-					com.tools20022.repository.msg.EntryTransaction7.RelatedPrice, com.tools20022.repository.msg.TradeLeg8.DealPrice, com.tools20022.repository.msg.SettlementObligation7.DealPrice,
-					com.tools20022.repository.msg.TradeLeg10.DealPrice, com.tools20022.repository.msg.TradeLeg9.DealPrice, com.tools20022.repository.msg.UnsecuredMarketTransaction1.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails49.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails51.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails53.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails55.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails56.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails54.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails52.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails50.DealPrice, com.tools20022.repository.msg.EntryTransaction8.RelatedPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails59.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails58.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails61.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails63.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails62.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails60.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails65.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails66.DealPrice, com.tools20022.repository.msg.UnsecuredMarketTransaction2.DealPrice,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction3.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails67.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails68.DealPrice,
-					com.tools20022.repository.msg.SecuritiesTradeDetails69.DealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails70.DealPrice, com.tools20022.repository.msg.UnsecuredMarketTransaction4.DealPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails27.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails28.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails6.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails13.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails3.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails11.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails2.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails16.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails1.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails15.mmDealPrice, com.tools20022.repository.msg.EntryTransaction1.mmRelatedPrice, com.tools20022.repository.msg.EntryTransaction2.mmRelatedPrice,
+					com.tools20022.repository.msg.EntryTransaction3.mmRelatedPrice, com.tools20022.repository.msg.EntryTransaction4.mmRelatedPrice, com.tools20022.repository.msg.TransactionDetails3.mmExecutedTradePrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails8.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails18.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails9.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails21.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails29.mmDealPrice, com.tools20022.repository.msg.SettlementObligation1.mmDealPrice, com.tools20022.repository.msg.SettlementObligation6.mmDealPrice,
+					com.tools20022.repository.msg.TradeLeg2.mmDealPrice, com.tools20022.repository.msg.TradeLeg5.mmDealPrice, com.tools20022.repository.msg.TradeLeg1.mmDealPrice, com.tools20022.repository.msg.TradeLeg3.mmDealPrice,
+					com.tools20022.repository.msg.TradeLeg6.mmDealPrice, com.tools20022.repository.msg.TradeLeg4.mmDealPrice, com.tools20022.repository.msg.TradeLeg7.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails31.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails33.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails38.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails37.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails36.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails34.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails32.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails39.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails43.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails41.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails40.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails46.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails47.mmDealPrice, com.tools20022.repository.msg.EntryTransaction7.mmRelatedPrice, com.tools20022.repository.msg.TradeLeg8.mmDealPrice,
+					com.tools20022.repository.msg.SettlementObligation7.mmDealPrice, com.tools20022.repository.msg.TradeLeg10.mmDealPrice, com.tools20022.repository.msg.TradeLeg9.mmDealPrice,
+					com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails51.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails53.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails55.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails56.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails54.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails52.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails50.mmDealPrice,
+					com.tools20022.repository.msg.EntryTransaction8.mmRelatedPrice, com.tools20022.repository.msg.SecuritiesTradeDetails59.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails58.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails63.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails62.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails60.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails65.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails66.mmDealPrice,
+					com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmDealPrice, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails67.mmDealPrice,
+					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmDealPrice, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmDealPrice,
+					com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmDealPrice);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DealPrice";
 			definition = "Specifies the price of the traded financial instrument.\nThis is the deal price of the individual trade transaction. \nIf there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.SecuritiesTradeExecution;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmSecuritiesTradeExecution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected CurrencyAndAmount marginAmount;
 	/**
 	 * Difference in prices at which a dealer will buy and sell.
 	 * <p>
@@ -1503,18 +1525,19 @@ public class SecuritiesTradeExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MarginAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMarginAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarginAmount";
 			definition = "Difference in prices at which a dealer will buy and sell.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesQuantity> executedTradeQuantity;
 	/**
 	 * Quantity of financial instrument executed by the trading party.
 	 * <p>
@@ -1523,8 +1546,8 @@ public class SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#SecuritiesTradeExecution
-	 * SecuritiesQuantity.SecuritiesTradeExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTradeExecution
+	 * SecuritiesQuantity.mmSecuritiesTradeExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1532,19 +1555,19 @@ public class SecuritiesTradeExecution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails3#ExecutedTradeQuantity
-	 * TransactionDetails3.ExecutedTradeQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails3#mmExecutedTradeQuantity
+	 * TransactionDetails3.mmExecutedTradeQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1557,20 +1580,21 @@ public class SecuritiesTradeExecution {
 	 * "Quantity of financial instrument executed by the trading party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ExecutedTradeQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmExecutedTradeQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails3.ExecutedTradeQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails3.mmExecutedTradeQuantity);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExecutedTradeQuantity";
 			definition = "Quantity of financial instrument executed by the trading party.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.SecuritiesTradeExecution;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTradeExecution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected OffMarketCode offMarketReason;
 	/**
 	 * Reason for which the trade was executed off-market.
 	 * <p>
@@ -1581,19 +1605,19 @@ public class SecuritiesTradeExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OffMarketCode
 	 * OffMarketCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#OffMarketIndicator
-	 * OffMarket1Choice.OffMarketIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#mmOffMarketIndicator
+	 * OffMarket1Choice.mmOffMarketIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1605,19 +1629,20 @@ public class SecuritiesTradeExecution {
 	 * definition} = "Reason for which the trade was executed off-market."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OffMarketReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOffMarketReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OffMarket1Choice.OffMarketIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OffMarket1Choice.mmOffMarketIndicator);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OffMarketReason";
 			definition = "Reason for which the trade was executed off-market.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OffMarketCode.mmObject();
 		}
 	};
+	protected SecuritiesTrade relatedTrade;
 	/**
 	 * Trade which is executed through one or more execution trades.
 	 * <p>
@@ -1626,8 +1651,8 @@ public class SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradingExecution
-	 * SecuritiesTrade.TradingExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradingExecution
+	 * SecuritiesTrade.mmTradingExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1635,115 +1660,115 @@ public class SecuritiesTradeExecution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
 	 * SecuritiesTrade}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3#TradeDetails
-	 * SecuritiesSettlementTransactionDetails3.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4#TradeDetails
-	 * SecuritiesSettlementTransactionDetails4.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2#TradeDetails
-	 * SecuritiesSettlementTransactionDetails2.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5#TradeDetails
-	 * SecuritiesSettlementTransactionDetails5.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6#TradeDetails
-	 * SecuritiesSettlementTransactionDetails6.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7#TradeDetails
-	 * SecuritiesSettlementTransactionDetails7.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8#TradeDetails
-	 * SecuritiesSettlementTransactionDetails8.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9#TradeDetails
-	 * SecuritiesSettlementTransactionDetails9.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10#TradeDetails
-	 * SecuritiesSettlementTransactionDetails10.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11#TradeDetails
-	 * SecuritiesSettlementTransactionDetails11.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12#TradeDetails
-	 * SecuritiesSettlementTransactionDetails12.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13#TradeDetails
-	 * SecuritiesSettlementTransactionDetails13.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Clearing1#NonGuaranteedTrade
-	 * Clearing1.NonGuaranteedTrade}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Clearing2#NonGuaranteedTrade
-	 * Clearing2.NonGuaranteedTrade}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16#TradeDetails
-	 * SecuritiesSettlementTransactionDetails16.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14#TradeDetails
-	 * SecuritiesSettlementTransactionDetails14.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15#TradeDetails
-	 * SecuritiesSettlementTransactionDetails15.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17#TradeDetails
-	 * SecuritiesSettlementTransactionDetails17.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18#TradeDetails
-	 * SecuritiesSettlementTransactionDetails18.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19#TradeDetails
-	 * SecuritiesSettlementTransactionDetails19.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Clearing4#NonGuaranteedTrade
-	 * Clearing4.NonGuaranteedTrade}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21#TradeDetails
-	 * SecuritiesSettlementTransactionDetails21.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22#TradeDetails
-	 * SecuritiesSettlementTransactionDetails22.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20#TradeDetails
-	 * SecuritiesSettlementTransactionDetails20.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23#TradeDetails
-	 * SecuritiesSettlementTransactionDetails23.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25#TradeDetails
-	 * SecuritiesSettlementTransactionDetails25.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24#TradeDetails
-	 * SecuritiesSettlementTransactionDetails24.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27#TradeDetails
-	 * SecuritiesSettlementTransactionDetails27.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28#TradeDetails
-	 * SecuritiesSettlementTransactionDetails28.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26#TradeDetails
-	 * SecuritiesSettlementTransactionDetails26.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30#TradeDetails
-	 * SecuritiesSettlementTransactionDetails30.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29#TradeDetails
-	 * SecuritiesSettlementTransactionDetails29.TradeDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#TradeDetails
-	 * SecuritiesSettlementTransactionDetails31.TradeDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails3.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails4.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails2.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails5.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails6.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails7.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails8.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails9.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails10.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails11.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails12.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails13.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Clearing1#mmNonGuaranteedTrade
+	 * Clearing1.mmNonGuaranteedTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Clearing2#mmNonGuaranteedTrade
+	 * Clearing2.mmNonGuaranteedTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails16.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails14.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails15.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails17.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails18.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails19.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Clearing4#mmNonGuaranteedTrade
+	 * Clearing4.mmNonGuaranteedTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails21.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails22.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails20.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails23.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails25.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails24.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails27.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails28.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails26.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails30.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails29.mmTradeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails31.mmTradeDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1756,36 +1781,37 @@ public class SecuritiesTradeExecution {
 	 * "Trade which is executed through one or more execution trades."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedTrade = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.TradeDetails,
-					com.tools20022.repository.msg.Clearing1.NonGuaranteedTrade, com.tools20022.repository.msg.Clearing2.NonGuaranteedTrade, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.TradeDetails, com.tools20022.repository.msg.Clearing4.NonGuaranteedTrade,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.TradeDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.TradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.TradeDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmTradeDetails,
+					com.tools20022.repository.msg.Clearing1.mmNonGuaranteedTrade, com.tools20022.repository.msg.Clearing2.mmNonGuaranteedTrade, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmTradeDetails, com.tools20022.repository.msg.Clearing4.mmNonGuaranteedTrade,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmTradeDetails,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmTradeDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmTradeDetails);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedTrade";
 			definition = "Trade which is executed through one or more execution trades.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradingExecution;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradingExecution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 		}
 	};
+	protected CurrencyAndAmount dealExecutionAmount;
 	/**
 	 * Deal price multiplied by the quantity of a financial instrument traded
 	 * for the specific trade transaction i.e. the partially filled quantity.
@@ -1815,18 +1841,19 @@ public class SecuritiesTradeExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DealExecutionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDealExecutionAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DealExecutionAmount";
 			definition = "Deal price multiplied by the quantity of a financial instrument traded for the specific trade transaction i.e. the partially filled quantity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentObligation> paymentObligation;
 	/**
 	 * Specifies the cash delivery obligations resulting from the trade.
 	 * <p>
@@ -1835,8 +1862,8 @@ public class SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#ExecutedSecuritiesTrade
-	 * PaymentObligation.ExecutedSecuritiesTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmExecutedSecuritiesTrade
+	 * PaymentObligation.mmExecutedSecuritiesTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1861,7 +1888,7 @@ public class SecuritiesTradeExecution {
 	 * "Specifies the cash delivery obligations resulting from the trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
@@ -1869,11 +1896,12 @@ public class SecuritiesTradeExecution {
 			name = "PaymentObligation";
 			definition = "Specifies the cash delivery obligations resulting from the trade.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.ExecutedSecuritiesTrade;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmExecutedSecuritiesTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation;
 	/**
 	 * Specifies the securities delivery obligations resulting from the trade.
 	 * <p>
@@ -1882,8 +1910,8 @@ public class SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#SecuritiesTradeExecution
-	 * SecuritiesDeliveryObligation.SecuritiesTradeExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesTradeExecution
+	 * SecuritiesDeliveryObligation.mmSecuritiesTradeExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1892,25 +1920,25 @@ public class SecuritiesTradeExecution {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
 	 * SecuritiesDeliveryObligation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation2#AdditionalSettlementObligationDetails
-	 * SettlementObligation2.AdditionalSettlementObligationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation4#AdditionalSettlementObligationDetails
-	 * SettlementObligation4.AdditionalSettlementObligationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation8#AdditionalSettlementObligationDetails
-	 * SettlementObligation8.AdditionalSettlementObligationDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation2#mmAdditionalSettlementObligationDetails
+	 * SettlementObligation2.mmAdditionalSettlementObligationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation4#mmAdditionalSettlementObligationDetails
+	 * SettlementObligation4.mmAdditionalSettlementObligationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation8#mmAdditionalSettlementObligationDetails
+	 * SettlementObligation8.mmAdditionalSettlementObligationDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1924,21 +1952,22 @@ public class SecuritiesTradeExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation2.AdditionalSettlementObligationDetails, com.tools20022.repository.msg.SettlementObligation4.AdditionalSettlementObligationDetails,
-					com.tools20022.repository.msg.SettlementObligation8.AdditionalSettlementObligationDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation2.mmAdditionalSettlementObligationDetails, com.tools20022.repository.msg.SettlementObligation4.mmAdditionalSettlementObligationDetails,
+					com.tools20022.repository.msg.SettlementObligation8.mmAdditionalSettlementObligationDetails);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesDeliveryObligation";
 			definition = "Specifies the securities delivery obligations resulting from the trade.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.SecuritiesTradeExecution;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTradeExecution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 		}
 	};
+	protected ReportingCode reportingType;
 	/**
 	 * Specifies that a trade is to be reported to a third party.
 	 * <p>
@@ -1949,72 +1978,72 @@ public class SecuritiesTradeExecution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ReportingCode
 	 * ReportingCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting2Choice#Code
-	 * Reporting2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting2Choice#Proprietary
-	 * Reporting2Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting3Choice#Code
-	 * Reporting3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting3Choice#Proprietary
-	 * Reporting3Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting5Choice#Code
-	 * Reporting5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting5Choice#Proprietary
-	 * Reporting5Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order16#Reporting
-	 * Order16.Reporting}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order14#Reporting
-	 * Order14.Reporting}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting1Choice#Code
-	 * Reporting1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting1Choice#Proprietary
-	 * Reporting1Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting4Choice#Code
-	 * Reporting4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting4Choice#Proprietary
-	 * Reporting4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderParameters1#ReportingIndicator
-	 * OrderParameters1.ReportingIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order17#Reporting
-	 * Order17.Reporting}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order18#Reporting
-	 * Order18.Reporting}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting6Choice#Code
-	 * Reporting6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting6Choice#Proprietary
-	 * Reporting6Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting7Choice#Code
-	 * Reporting7Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting7Choice#Proprietary
-	 * Reporting7Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting8Choice#Code
-	 * Reporting8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting8Choice#Proprietary
-	 * Reporting8Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Reporting9Choice#Code
-	 * Reporting9Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reporting9Choice#Proprietary
-	 * Reporting9Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
 	 * SecuritiesTradeExecution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting2Choice#mmCode
+	 * Reporting2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting2Choice#mmProprietary
+	 * Reporting2Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting3Choice#mmCode
+	 * Reporting3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting3Choice#mmProprietary
+	 * Reporting3Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting5Choice#mmCode
+	 * Reporting5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting5Choice#mmProprietary
+	 * Reporting5Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order16#mmReporting
+	 * Order16.mmReporting}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order14#mmReporting
+	 * Order14.mmReporting}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting1Choice#mmCode
+	 * Reporting1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting1Choice#mmProprietary
+	 * Reporting1Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting4Choice#mmCode
+	 * Reporting4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting4Choice#mmProprietary
+	 * Reporting4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderParameters1#mmReportingIndicator
+	 * OrderParameters1.mmReportingIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order17#mmReporting
+	 * Order17.mmReporting}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order18#mmReporting
+	 * Order18.mmReporting}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting6Choice#mmCode
+	 * Reporting6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting6Choice#mmProprietary
+	 * Reporting6Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting7Choice#mmCode
+	 * Reporting7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting7Choice#mmProprietary
+	 * Reporting7Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting8Choice#mmCode
+	 * Reporting8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting8Choice#mmProprietary
+	 * Reporting8Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Reporting9Choice#mmCode
+	 * Reporting9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reporting9Choice#mmProprietary
+	 * Reporting9Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2027,22 +2056,23 @@ public class SecuritiesTradeExecution {
 	 * "Specifies that a trade is to be reported to a third party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ReportingType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReportingType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reporting2Choice.Code, com.tools20022.repository.choice.Reporting2Choice.Proprietary, com.tools20022.repository.choice.Reporting3Choice.Code,
-					com.tools20022.repository.choice.Reporting3Choice.Proprietary, com.tools20022.repository.choice.Reporting5Choice.Code, com.tools20022.repository.choice.Reporting5Choice.Proprietary,
-					com.tools20022.repository.msg.Order16.Reporting, com.tools20022.repository.msg.Order14.Reporting, com.tools20022.repository.choice.Reporting1Choice.Code, com.tools20022.repository.choice.Reporting1Choice.Proprietary,
-					com.tools20022.repository.choice.Reporting4Choice.Code, com.tools20022.repository.choice.Reporting4Choice.Proprietary, com.tools20022.repository.msg.OrderParameters1.ReportingIndicator,
-					com.tools20022.repository.msg.Order17.Reporting, com.tools20022.repository.msg.Order18.Reporting, com.tools20022.repository.choice.Reporting6Choice.Code, com.tools20022.repository.choice.Reporting6Choice.Proprietary,
-					com.tools20022.repository.choice.Reporting7Choice.Code, com.tools20022.repository.choice.Reporting7Choice.Proprietary, com.tools20022.repository.choice.Reporting8Choice.Code,
-					com.tools20022.repository.choice.Reporting8Choice.Proprietary, com.tools20022.repository.choice.Reporting9Choice.Code, com.tools20022.repository.choice.Reporting9Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reporting2Choice.mmCode, com.tools20022.repository.choice.Reporting2Choice.mmProprietary, com.tools20022.repository.choice.Reporting3Choice.mmCode,
+					com.tools20022.repository.choice.Reporting3Choice.mmProprietary, com.tools20022.repository.choice.Reporting5Choice.mmCode, com.tools20022.repository.choice.Reporting5Choice.mmProprietary,
+					com.tools20022.repository.msg.Order16.mmReporting, com.tools20022.repository.msg.Order14.mmReporting, com.tools20022.repository.choice.Reporting1Choice.mmCode,
+					com.tools20022.repository.choice.Reporting1Choice.mmProprietary, com.tools20022.repository.choice.Reporting4Choice.mmCode, com.tools20022.repository.choice.Reporting4Choice.mmProprietary,
+					com.tools20022.repository.msg.OrderParameters1.mmReportingIndicator, com.tools20022.repository.msg.Order17.mmReporting, com.tools20022.repository.msg.Order18.mmReporting,
+					com.tools20022.repository.choice.Reporting6Choice.mmCode, com.tools20022.repository.choice.Reporting6Choice.mmProprietary, com.tools20022.repository.choice.Reporting7Choice.mmCode,
+					com.tools20022.repository.choice.Reporting7Choice.mmProprietary, com.tools20022.repository.choice.Reporting8Choice.mmCode, com.tools20022.repository.choice.Reporting8Choice.mmProprietary,
+					com.tools20022.repository.choice.Reporting9Choice.mmCode, com.tools20022.repository.choice.Reporting9Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesTradeExecution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReportingType";
 			definition = "Specifies that a trade is to be reported to a third party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportingCode.mmObject();
 		}
 	};
@@ -2050,24 +2080,120 @@ public class SecuritiesTradeExecution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeExecution";
 				definition = "Transaction between two counterparties in which they agree to buy and sell a financial instrument. A trade transaction occurs with the matching of the two counterparties orders. There could be several trade transactions necessary to execute the trade.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.SecuritiesTradeExecution, com.tools20022.repository.entity.PaymentObligation.ExecutedSecuritiesTrade,
-						com.tools20022.repository.entity.SecuritiesQuantity.SecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesTrade.TradingExecution,
-						com.tools20022.repository.entity.SecuritiesSettlement.SecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesDeliveryObligation.SecuritiesTradeExecution);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmSecuritiesTradeExecution, com.tools20022.repository.entity.PaymentObligation.mmExecutedSecuritiesTrade,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesTrade.mmTradingExecution,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTradeExecution);
 				subType_lazy = () -> Arrays.asList(InvestmentFundOrderExecution.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTradeExecution.StampDutyIndicator, com.tools20022.repository.entity.SecuritiesTradeExecution.ProcessingPosition,
-						com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement, com.tools20022.repository.entity.SecuritiesTradeExecution.DealPrice,
-						com.tools20022.repository.entity.SecuritiesTradeExecution.MarginAmount, com.tools20022.repository.entity.SecuritiesTradeExecution.ExecutedTradeQuantity,
-						com.tools20022.repository.entity.SecuritiesTradeExecution.OffMarketReason, com.tools20022.repository.entity.SecuritiesTradeExecution.RelatedTrade,
-						com.tools20022.repository.entity.SecuritiesTradeExecution.DealExecutionAmount, com.tools20022.repository.entity.SecuritiesTradeExecution.PaymentObligation,
-						com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesDeliveryObligation, com.tools20022.repository.entity.SecuritiesTradeExecution.ReportingType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTradeExecution.mmStampDutyIndicator, com.tools20022.repository.entity.SecuritiesTradeExecution.mmProcessingPosition,
+						com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement, com.tools20022.repository.entity.SecuritiesTradeExecution.mmDealPrice,
+						com.tools20022.repository.entity.SecuritiesTradeExecution.mmMarginAmount, com.tools20022.repository.entity.SecuritiesTradeExecution.mmExecutedTradeQuantity,
+						com.tools20022.repository.entity.SecuritiesTradeExecution.mmOffMarketReason, com.tools20022.repository.entity.SecuritiesTradeExecution.mmRelatedTrade,
+						com.tools20022.repository.entity.SecuritiesTradeExecution.mmDealExecutionAmount, com.tools20022.repository.entity.SecuritiesTradeExecution.mmPaymentObligation,
+						com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesDeliveryObligation, com.tools20022.repository.entity.SecuritiesTradeExecution.mmReportingType);
 				derivationComponent_lazy = () -> Arrays.asList(Reporting2Choice.mmObject(), Reporting3Choice.mmObject(), Reporting5Choice.mmObject(), OffMarket1Choice.mmObject(), Reporting1Choice.mmObject(), Reporting4Choice.mmObject(),
 						Reporting6Choice.mmObject(), Reporting7Choice.mmObject(), Reporting8Choice.mmObject(), Reporting9Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getStampDutyIndicator() {
+		return stampDutyIndicator;
+	}
+
+	public void setStampDutyIndicator(YesNoIndicator stampDutyIndicator) {
+		this.stampDutyIndicator = stampDutyIndicator;
+	}
+
+	public ProcessingPositionCode getProcessingPosition() {
+		return processingPosition;
+	}
+
+	public void setProcessingPosition(ProcessingPositionCode processingPosition) {
+		this.processingPosition = processingPosition;
+	}
+
+	public List<SecuritiesSettlement> getSecuritiesSettlement() {
+		return securitiesSettlement;
+	}
+
+	public void setSecuritiesSettlement(List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement) {
+		this.securitiesSettlement = securitiesSettlement;
+	}
+
+	public SecuritiesPricing getDealPrice() {
+		return dealPrice;
+	}
+
+	public void setDealPrice(com.tools20022.repository.entity.SecuritiesPricing dealPrice) {
+		this.dealPrice = dealPrice;
+	}
+
+	public CurrencyAndAmount getMarginAmount() {
+		return marginAmount;
+	}
+
+	public void setMarginAmount(CurrencyAndAmount marginAmount) {
+		this.marginAmount = marginAmount;
+	}
+
+	public List<SecuritiesQuantity> getExecutedTradeQuantity() {
+		return executedTradeQuantity;
+	}
+
+	public void setExecutedTradeQuantity(List<com.tools20022.repository.entity.SecuritiesQuantity> executedTradeQuantity) {
+		this.executedTradeQuantity = executedTradeQuantity;
+	}
+
+	public OffMarketCode getOffMarketReason() {
+		return offMarketReason;
+	}
+
+	public void setOffMarketReason(OffMarketCode offMarketReason) {
+		this.offMarketReason = offMarketReason;
+	}
+
+	public SecuritiesTrade getRelatedTrade() {
+		return relatedTrade;
+	}
+
+	public void setRelatedTrade(com.tools20022.repository.entity.SecuritiesTrade relatedTrade) {
+		this.relatedTrade = relatedTrade;
+	}
+
+	public CurrencyAndAmount getDealExecutionAmount() {
+		return dealExecutionAmount;
+	}
+
+	public void setDealExecutionAmount(CurrencyAndAmount dealExecutionAmount) {
+		this.dealExecutionAmount = dealExecutionAmount;
+	}
+
+	public List<PaymentObligation> getPaymentObligation() {
+		return paymentObligation;
+	}
+
+	public void setPaymentObligation(List<com.tools20022.repository.entity.PaymentObligation> paymentObligation) {
+		this.paymentObligation = paymentObligation;
+	}
+
+	public List<SecuritiesDeliveryObligation> getSecuritiesDeliveryObligation() {
+		return securitiesDeliveryObligation;
+	}
+
+	public void setSecuritiesDeliveryObligation(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation) {
+		this.securitiesDeliveryObligation = securitiesDeliveryObligation;
+	}
+
+	public ReportingCode getReportingType() {
+		return reportingType;
+	}
+
+	public void setReportingType(ReportingCode reportingType) {
+		this.reportingType = reportingType;
 	}
 }

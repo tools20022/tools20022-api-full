@@ -34,20 +34,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NamedKeyEncryptedData2#Version
- * NamedKeyEncryptedData2.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NamedKeyEncryptedData2#KeyName
- * NamedKeyEncryptedData2.KeyName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NamedKeyEncryptedData2#EncryptedContent
- * NamedKeyEncryptedData2.EncryptedContent}</li>
+ * {@linkplain com.tools20022.repository.msg.NamedKeyEncryptedData2#mmVersion
+ * NamedKeyEncryptedData2.mmVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NamedKeyEncryptedData2#mmKeyName
+ * NamedKeyEncryptedData2.mmKeyName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NamedKeyEncryptedData2#mmEncryptedContent
+ * NamedKeyEncryptedData2.mmEncryptedContent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NamedKeyEncryptedData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the data structure.
 	 * <p>
@@ -93,7 +96,7 @@ public class NamedKeyEncryptedData2 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
@@ -101,11 +104,12 @@ public class NamedKeyEncryptedData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max140Text keyName;
 	/**
 	 * Name of the key encryption key (KEK).
 	 * <p>
@@ -133,7 +137,7 @@ public class NamedKeyEncryptedData2 {
 	 * definition} = "Name of the key encryption key (KEK)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
@@ -141,11 +145,12 @@ public class NamedKeyEncryptedData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyName";
 			definition = "Name of the key encryption key (KEK).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected EncryptedContent2 encryptedContent;
 	/**
 	 * Encrypted data with an encryption key.
 	 * <p>
@@ -172,7 +177,7 @@ public class NamedKeyEncryptedData2 {
 	 * definition} = "Encrypted data with an encryption key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncryptedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncryptedContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
@@ -180,19 +185,19 @@ public class NamedKeyEncryptedData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedContent";
 			definition = "Encrypted data with an encryption key.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> EncryptedContent2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NamedKeyEncryptedData2.Version, com.tools20022.repository.msg.NamedKeyEncryptedData2.KeyName,
-						com.tools20022.repository.msg.NamedKeyEncryptedData2.EncryptedContent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NamedKeyEncryptedData2.mmVersion, com.tools20022.repository.msg.NamedKeyEncryptedData2.mmKeyName,
+						com.tools20022.repository.msg.NamedKeyEncryptedData2.mmEncryptedContent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NamedKeyEncryptedData2";
 				definition = "Encrypted data with an encryption key identified with a name.";
@@ -200,5 +205,29 @@ public class NamedKeyEncryptedData2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public Max140Text getKeyName() {
+		return keyName;
+	}
+
+	public void setKeyName(Max140Text keyName) {
+		this.keyName = keyName;
+	}
+
+	public EncryptedContent2 getEncryptedContent() {
+		return encryptedContent;
+	}
+
+	public void setEncryptedContent(com.tools20022.repository.msg.EncryptedContent2 encryptedContent) {
+		this.encryptedContent = encryptedContent;
 	}
 }

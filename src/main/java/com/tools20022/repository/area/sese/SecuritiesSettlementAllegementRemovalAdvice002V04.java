@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022Varia
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -77,32 +78,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#AccountServicerTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmAccountServicerTransactionIdentification
  * SecuritiesSettlementAllegementRemovalAdvice002V04.
- * AccountServicerTransactionIdentification}</li>
+ * mmAccountServicerTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#MarketInfrastructureTransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmMarketInfrastructureTransactionIdentification
  * SecuritiesSettlementAllegementRemovalAdvice002V04.
- * MarketInfrastructureTransactionIdentification}</li>
+ * mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#AccountOwner
- * SecuritiesSettlementAllegementRemovalAdvice002V04.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmAccountOwner
+ * SecuritiesSettlementAllegementRemovalAdvice002V04.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#SafekeepingAccount
- * SecuritiesSettlementAllegementRemovalAdvice002V04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmSafekeepingAccount
+ * SecuritiesSettlementAllegementRemovalAdvice002V04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#TransactionDetails
- * SecuritiesSettlementAllegementRemovalAdvice002V04.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmTransactionDetails
+ * SecuritiesSettlementAllegementRemovalAdvice002V04.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#SupplementaryData
- * SecuritiesSettlementAllegementRemovalAdvice002V04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#mmSupplementaryData
+ * SecuritiesSettlementAllegementRemovalAdvice002V04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04#identifier
- * SecuritiesSettlementAllegementRemovalAdvice002V04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.029.002.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected SettlementTypeAndIdentification22 accountServicerTransactionIdentification;
 	/**
 	 * Provides transaction type and identification information.
 	 * <p>
@@ -142,17 +142,18 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicerTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicerTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Provides transaction type and identification information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SettlementTypeAndIdentification22.mmObject();
 		}
 	};
+	protected Identification16 marketInfrastructureTransactionIdentification;
 	/**
 	 * Identification of a transaction assigned by a market infrastructure other
 	 * than a central securities depository, for example, Target2-Securities.
@@ -179,17 +180,18 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketInfrastructureTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketInfrastructureTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktInfrstrctrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Identification16.mmObject();
 		}
 	};
+	protected PartyIdentification109 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -213,17 +215,18 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification109.mmObject();
 		}
 	};
+	protected SecuritiesAccount30 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -247,17 +250,18 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount30.mmObject();
 		}
 	};
+	protected TransactionDetails83 transactionDetails;
 	/**
 	 * Identifies the details of the transaction.
 	 * <p>
@@ -281,17 +285,18 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 	 * definition} = "Identifies the details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails83.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -318,7 +323,7 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,33 +331,6 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "029"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "029";
-			version = "04";
-			flavour = "002";
 		}
 	};
 
@@ -367,13 +345,68 @@ public class SecuritiesSettlementAllegementRemovalAdvice002V04 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmAllgmtRmvlAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.AccountServicerTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.AccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.TransactionDetails, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmAccountServicerTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmTransactionDetails, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "029";
+						version = "04";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementTypeAndIdentification22 getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification;
+	}
+
+	public void setAccountServicerTransactionIdentification(SettlementTypeAndIdentification22 accountServicerTransactionIdentification) {
+		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+	}
+
+	public Identification16 getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification;
+	}
+
+	public void setMarketInfrastructureTransactionIdentification(Identification16 marketInfrastructureTransactionIdentification) {
+		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+	}
+
+	public PartyIdentification109 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification109 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount30 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount30 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public TransactionDetails83 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(TransactionDetails83 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -38,30 +38,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#PlaceAndName
- * CorporateActionMovementCashMovementDetailsSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#mmPlaceAndName
+ * CorporateActionMovementCashMovementDetailsSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#CreditDebitIndicator
- * CorporateActionMovementCashMovementDetailsSD1.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#mmCreditDebitIndicator
+ * CorporateActionMovementCashMovementDetailsSD1.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#TransactionAmount
- * CorporateActionMovementCashMovementDetailsSD1.TransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#mmTransactionAmount
+ * CorporateActionMovementCashMovementDetailsSD1.mmTransactionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#TransactionReasonCode
- * CorporateActionMovementCashMovementDetailsSD1.TransactionReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#mmTransactionReasonCode
+ * CorporateActionMovementCashMovementDetailsSD1.mmTransactionReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#ContraParticipantNumber
- * CorporateActionMovementCashMovementDetailsSD1.ContraParticipantNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#mmContraParticipantNumber
+ * CorporateActionMovementCashMovementDetailsSD1.mmContraParticipantNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#EarliestPaymentDate
- * CorporateActionMovementCashMovementDetailsSD1.EarliestPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1#mmEarliestPaymentDate
+ * CorporateActionMovementCashMovementDetailsSD1.mmEarliestPaymentDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionMovementCashMovementDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -114,13 +115,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#PlaceAndName
-	 * CorporateActionMovementCashMovementDetailsSD2.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#mmPlaceAndName
+	 * CorporateActionMovementCashMovementDetailsSD2.mmPlaceAndName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionMovementCashMovementDetailsSD1.mmObject();
 			isDerived = false;
@@ -128,12 +129,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.PlaceAndName);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.mmPlaceAndName);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the value is a debit or a credit.
 	 * <p>
@@ -164,13 +166,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#CreditDebitIndicator
-	 * CorporateActionMovementCashMovementDetailsSD2.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#mmCreditDebitIndicator
+	 * CorporateActionMovementCashMovementDetailsSD2.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionMovementCashMovementDetailsSD1.mmObject();
 			isDerived = false;
@@ -178,12 +180,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.CreditDebitIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.mmCreditDebitIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAndAmount transactionAmount;
 	/**
 	 * Resulting cash amount concerned in this transaction.
 	 * <p>
@@ -214,13 +217,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#TransactionAmount
-	 * CorporateActionMovementCashMovementDetailsSD2.TransactionAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#mmTransactionAmount
+	 * CorporateActionMovementCashMovementDetailsSD2.mmTransactionAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionMovementCashMovementDetailsSD1.mmObject();
 			isDerived = false;
@@ -228,12 +231,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmount";
 			definition = "Resulting cash amount concerned in this transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.TransactionAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.mmTransactionAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DTCAdjustmentPaymentType1Code transactionReasonCode;
 	/**
 	 * Transaction reason.
 	 * <p>
@@ -264,13 +268,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#ReasonCode
-	 * CorporateActionMovementCashMovementDetailsSD2.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#mmReasonCode
+	 * CorporateActionMovementCashMovementDetailsSD2.mmReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionReasonCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionMovementCashMovementDetailsSD1.mmObject();
 			isDerived = false;
@@ -278,12 +282,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionReasonCode";
 			definition = "Transaction reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.ReasonCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.mmReasonCode);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
 		}
 	};
+	protected Max8Text contraParticipantNumber;
 	/**
 	 * Transaction contra participant identification when shares are distributed
 	 * / delivered to / from another participant.
@@ -316,13 +321,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#ContraParticipantNumber
-	 * CorporateActionMovementCashMovementDetailsSD2.ContraParticipantNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#mmContraParticipantNumber
+	 * CorporateActionMovementCashMovementDetailsSD2.mmContraParticipantNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionMovementCashMovementDetailsSD1.mmObject();
 			isDerived = false;
@@ -330,12 +335,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.ContraParticipantNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.mmContraParticipantNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected DateFormat22Choice earliestPaymentDate;
 	/**
 	 * Date/Time on which the posting / draft of cash is scheduled to take place
 	 * for a transaction.
@@ -369,13 +375,13 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#EarliestPaymentDate
-	 * CorporateActionMovementCashMovementDetailsSD2.EarliestPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2#mmEarliestPaymentDate
+	 * CorporateActionMovementCashMovementDetailsSD2.mmEarliestPaymentDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionMovementCashMovementDetailsSD1.mmObject();
 			isDerived = false;
@@ -383,9 +389,9 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/Time on which the posting / draft of  cash is scheduled to take place for a transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.EarliestPaymentDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD2.mmEarliestPaymentDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
@@ -393,11 +399,11 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.CreditDebitIndicator, com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.TransactionAmount,
-						com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.TransactionReasonCode, com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.ContraParticipantNumber,
-						com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.EarliestPaymentDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.mmCreditDebitIndicator, com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.mmTransactionAmount,
+						com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.mmTransactionReasonCode, com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.mmContraParticipantNumber,
+						com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD1.mmEarliestPaymentDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionMovementCashMovementDetailsSD1";
 				definition = "Provides additional information regarding corporate action movement details.";
@@ -405,5 +411,53 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public RestrictedFINActiveCurrencyAndAmount getTransactionAmount() {
+		return transactionAmount;
+	}
+
+	public void setTransactionAmount(RestrictedFINActiveCurrencyAndAmount transactionAmount) {
+		this.transactionAmount = transactionAmount;
+	}
+
+	public DTCAdjustmentPaymentType1Code getTransactionReasonCode() {
+		return transactionReasonCode;
+	}
+
+	public void setTransactionReasonCode(DTCAdjustmentPaymentType1Code transactionReasonCode) {
+		this.transactionReasonCode = transactionReasonCode;
+	}
+
+	public Max8Text getContraParticipantNumber() {
+		return contraParticipantNumber;
+	}
+
+	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+		this.contraParticipantNumber = contraParticipantNumber;
+	}
+
+	public DateFormat22Choice getEarliestPaymentDate() {
+		return earliestPaymentDate;
+	}
+
+	public void setEarliestPaymentDate(DateFormat22Choice earliestPaymentDate) {
+		this.earliestPaymentDate = earliestPaymentDate;
 	}
 }

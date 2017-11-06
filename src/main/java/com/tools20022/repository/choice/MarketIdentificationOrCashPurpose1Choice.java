@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ExternalMarketArea1Code;
 import com.tools20022.repository.msg.MarketIdentification87;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of cash purpose or a securities market identifier.
@@ -35,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice#SettlementInstructionMarketIdentification
+ * {@linkplain com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice#mmSettlementInstructionMarketIdentification
  * MarketIdentificationOrCashPurpose1Choice.
- * SettlementInstructionMarketIdentification}</li>
+ * mmSettlementInstructionMarketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice#CashSSIPurpose
- * MarketIdentificationOrCashPurpose1Choice.CashSSIPurpose}</li>
+ * {@linkplain com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice#mmCashSSIPurpose
+ * MarketIdentificationOrCashPurpose1Choice.mmCashSSIPurpose}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,24 +49,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#MarketIdentification
- * StandingSettlementInstructionV01.MarketIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmMarketIdentification
+ * StandingSettlementInstructionV01.mmMarketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01#MarketIdentification
- * StandingSettlementInstructionCancellationV01.MarketIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01#mmMarketIdentification
+ * StandingSettlementInstructionCancellationV01.mmMarketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#MarketIdentification
- * StandingSettlementInstructionStatusAdviceV01.MarketIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#mmMarketIdentification
+ * StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01#MarketIdentification
- * StandingSettlementInstructionDeletionV01.MarketIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01#mmMarketIdentification
+ * StandingSettlementInstructionDeletionV01.mmMarketIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketIdentificationOrCashPurpose1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketIdentification87 settlementInstructionMarketIdentification;
 	/**
 	 * Identifies the market for the settlement. This consists of the country
 	 * code and the asset class. For example, if the SSI is for equities in the
@@ -109,7 +111,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementInstructionMarketIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementInstructionMarketIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
@@ -117,12 +119,13 @@ public class MarketIdentificationOrCashPurpose1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionMarketIdentification";
 			definition = "Identifies the market for the settlement. This consists of the country code and the asset class. For example, if the SSI is for equities in the DTCC, the country code is ‘US’ and the classification type is ‘equity’.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification87.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarketIdentification87.mmObject();
 		}
 	};
+	protected List<ExternalMarketArea1Code> cashSSIPurpose;
 	/**
 	 * Underlying reason for the payment SSI instruction, expressed as a code.
 	 * <p>
@@ -153,7 +156,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSSIPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSSIPurpose = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
@@ -169,17 +172,33 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.SettlementInstructionMarketIdentification,
-						com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.CashSSIPurpose);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.MarketIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.MarketIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.MarketIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.MarketIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmSettlementInstructionMarketIdentification,
+						com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmCashSSIPurpose);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmMarketIdentification,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmMarketIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.mmMarketIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentificationOrCashPurpose1Choice";
 				definition = "Choice of cash purpose or a securities market identifier.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketIdentification87 getSettlementInstructionMarketIdentification() {
+		return settlementInstructionMarketIdentification;
+	}
+
+	public void setSettlementInstructionMarketIdentification(MarketIdentification87 settlementInstructionMarketIdentification) {
+		this.settlementInstructionMarketIdentification = settlementInstructionMarketIdentification;
+	}
+
+	public List<ExternalMarketArea1Code> getCashSSIPurpose() {
+		return cashSSIPurpose;
+	}
+
+	public void setCashSSIPurpose(List<ExternalMarketArea1Code> cashSSIPurpose) {
+		this.cashSSIPurpose = cashSSIPurpose;
 	}
 }

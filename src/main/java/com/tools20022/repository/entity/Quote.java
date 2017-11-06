@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.MassQuote1;
 import com.tools20022.repository.msg.QuoteSide1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Indicates whether the quote details are indicated as an offer, a bid or a mid
@@ -43,96 +44,103 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#MaximumQuantity
- * Quote.MaximumQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#Quantity
- * Quote.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#MinimumQuantity
- * Quote.MinimumQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#PartyRole
- * Quote.PartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#RelatedNegotiation
- * Quote.RelatedNegotiation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#QuotedRate
- * Quote.QuotedRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#PreviousClosingPrice
- * Quote.PreviousClosingPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#RequestedPrice
- * Quote.RequestedPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#Price Quote.Price}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#MarketPrice
- * Quote.MarketPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#MidSideQuoteVariable
- * Quote.MidSideQuoteVariable}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#BidSideQuoteVariable
- * Quote.BidSideQuoteVariable}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMaximumQuantity
+ * Quote.mmMaximumQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuantity
+ * Quote.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMinimumQuantity
+ * Quote.mmMinimumQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPartyRole
+ * Quote.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRelatedNegotiation
+ * Quote.mmRelatedNegotiation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedRate
+ * Quote.mmQuotedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Quote#OfferSideQuoteVariable
- * Quote.OfferSideQuoteVariable}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#SecurityQuoteVariable
- * Quote.SecurityQuoteVariable}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#QuoteSwap
- * Quote.QuoteSwap}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#ValidUntilDateTime
- * Quote.ValidUntilDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#Currency
- * Quote.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#Status Quote.Status}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#QuotedSecurity
- * Quote.QuotedSecurity}</li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmPreviousClosingPrice
+ * Quote.mmPreviousClosingPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRequestedPrice
+ * Quote.mmRequestedPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMarketPrice
+ * Quote.mmMarketPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmMidSideQuoteVariable
+ * Quote.mmMidSideQuoteVariable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmBidSideQuoteVariable
+ * Quote.mmBidSideQuoteVariable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmOfferSideQuoteVariable
+ * Quote.mmOfferSideQuoteVariable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmSecurityQuoteVariable
+ * Quote.mmSecurityQuoteVariable}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuoteSwap
+ * Quote.mmQuoteSwap}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmValidUntilDateTime
+ * Quote.mmValidUntilDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmCurrency
+ * Quote.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmStatus
+ * Quote.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedSecurity
+ * Quote.mmQuotedSecurity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#Quote
- * Security.Quote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InformationPartyRole#Quote
- * InformationPartyRole.Quote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmQuote
+ * Security.mmQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PreviousClosingPriceRelatedQuote
- * SecuritiesPricing.PreviousClosingPriceRelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmQuote
+ * InformationPartyRole.mmQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RequestedPriceRelatedQuote
- * SecuritiesPricing.RequestedPriceRelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPreviousClosingPriceRelatedQuote
+ * SecuritiesPricing.mmPreviousClosingPriceRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceRelatedQuote
- * SecuritiesPricing.PriceRelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRequestedPriceRelatedQuote
+ * SecuritiesPricing.mmRequestedPriceRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#MarketPriceRelatedQuote
- * SecuritiesPricing.MarketPriceRelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceRelatedQuote
+ * SecuritiesPricing.mmPriceRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MaximumQuantityRelatedQuote
- * SecuritiesQuantity.MaximumQuantityRelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMarketPriceRelatedQuote
+ * SecuritiesPricing.mmMarketPriceRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#QuantityRelatedQuote
- * SecuritiesQuantity.QuantityRelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityRelatedQuote
+ * SecuritiesQuantity.mmMaximumQuantityRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MinimumQuantityRelatedQuote
- * SecuritiesQuantity.MinimumQuantityRelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmQuantityRelatedQuote
+ * SecuritiesQuantity.mmQuantityRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CurrencyExchangeForSecuritiesQuote
- * CurrencyExchange.CurrencyExchangeForSecuritiesQuote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Negotiation#Quote
- * Negotiation.Quote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#RelatedQuote
- * QuoteStatus.RelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityRelatedQuote
+ * SecuritiesQuantity.mmMinimumQuantityRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#RelatedQuote
- * FinancialInstrumentSwap.RelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForSecuritiesQuote
+ * CurrencyExchange.mmCurrencyExchangeForSecuritiesQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Negotiation#mmQuote
+ * Negotiation.mmQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteStatus#mmRelatedQuote
+ * QuoteStatus.mmRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#MidSide
- * SecuritiesQuoteVariable.MidSide}</li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmRelatedQuote
+ * FinancialInstrumentSwap.mmRelatedQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#BidSide
- * SecuritiesQuoteVariable.BidSide}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmMidSide
+ * SecuritiesQuoteVariable.mmMidSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#OfferSide
- * SecuritiesQuoteVariable.OfferSide}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmBidSide
+ * SecuritiesQuoteVariable.mmBidSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#RelatedQuote
- * SecuritiesQuoteVariable.RelatedQuote}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmOfferSide
+ * SecuritiesQuoteVariable.mmOfferSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmRelatedQuote
+ * SecuritiesQuoteVariable.mmRelatedQuote}</li>
  * </ul>
  * </li>
  * <li>
@@ -150,8 +158,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -167,6 +175,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quote {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesQuantity maximumQuantity;
 	/**
 	 * Specifies the maximum quantity of the financial instrument.
 	 * <p>
@@ -175,8 +184,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MaximumQuantityRelatedQuote
-	 * SecuritiesQuantity.MaximumQuantityRelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityRelatedQuote
+	 * SecuritiesQuantity.mmMaximumQuantityRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -184,17 +193,18 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#MaximumQuantity
-	 * QuoteSide1.MaximumQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSide1#mmMaximumQuantity
+	 * QuoteSide1.mmMaximumQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -207,21 +217,22 @@ public class Quote {
 	 * "Specifies the maximum quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MaximumQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMaximumQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.MaximumQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.mmMaximumQuantity);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumQuantity";
 			definition = "Specifies the maximum quantity of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.MaximumQuantityRelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumQuantityRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected SecuritiesQuantity quantity;
 	/**
 	 * Quantity of a Financial Instrument.
 	 * <p>
@@ -230,8 +241,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#QuantityRelatedQuote
-	 * SecuritiesQuantity.QuantityRelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmQuantityRelatedQuote
+	 * SecuritiesQuantity.mmQuantityRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -239,25 +250,26 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#Quantity
-	 * QuoteSide1.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#DefaultBidSize
-	 * MassQuote1.DefaultBidSize}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MassQuote1#DefaultOfferSize
-	 * MassQuote1.DefaultOfferSize}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#IOIQuantity
-	 * IndicationOfInterest1.IOIQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmQuantity
+	 * QuoteSide1.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MassQuote1#mmDefaultBidSize
+	 * MassQuote1.mmDefaultBidSize}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MassQuote1#mmDefaultOfferSize
+	 * MassQuote1.mmDefaultOfferSize}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmIOIQuantity
+	 * IndicationOfInterest1.mmIOIQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -269,22 +281,23 @@ public class Quote {
 	 * definition} = "Quantity of a Financial Instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Quantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.Quantity, com.tools20022.repository.msg.MassQuote1.DefaultBidSize, com.tools20022.repository.msg.MassQuote1.DefaultOfferSize,
-					com.tools20022.repository.msg.IndicationOfInterest1.IOIQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.mmQuantity, com.tools20022.repository.msg.MassQuote1.mmDefaultBidSize, com.tools20022.repository.msg.MassQuote1.mmDefaultOfferSize,
+					com.tools20022.repository.msg.IndicationOfInterest1.mmIOIQuantity);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of a Financial Instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.QuantityRelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmQuantityRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected SecuritiesQuantity minimumQuantity;
 	/**
 	 * Specifies the minimal quantity of the financial instrument.
 	 * <p>
@@ -293,8 +306,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MinimumQuantityRelatedQuote
-	 * SecuritiesQuantity.MinimumQuantityRelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityRelatedQuote
+	 * SecuritiesQuantity.mmMinimumQuantityRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -302,17 +315,18 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#MinimumQuantity
-	 * QuoteSide1.MinimumQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSide1#mmMinimumQuantity
+	 * QuoteSide1.mmMinimumQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -325,21 +339,22 @@ public class Quote {
 	 * "Specifies the minimal quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MinimumQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMinimumQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.MinimumQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.mmMinimumQuantity);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantity";
 			definition = "Specifies the minimal quantity of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.MinimumQuantityRelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InformationPartyRole> partyRole;
 	/**
 	 * Specifies each role played by a party in a quotation process.
 	 * <p>
@@ -348,8 +363,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#Quote
-	 * InformationPartyRole.Quote}</li>
+	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmQuote
+	 * InformationPartyRole.mmQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -374,7 +389,7 @@ public class Quote {
 	 * "Specifies each role played by a party in a quotation process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
@@ -382,11 +397,12 @@ public class Quote {
 			name = "PartyRole";
 			definition = "Specifies each role played by a party in a quotation process.";
 			minOccurs = 0;
-			type_lazy = () -> InformationPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.Quote;
+			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmObject();
 		}
 	};
+	protected Negotiation relatedNegotiation;
 	/**
 	 * Negotiation process during which quotes are provided.
 	 * <p>
@@ -395,8 +411,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Negotiation#Quote
-	 * Negotiation.Quote}</li>
+	 * {@linkplain com.tools20022.repository.entity.Negotiation#mmQuote
+	 * Negotiation.mmQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -419,20 +435,21 @@ public class Quote {
 	 * definition} = "Negotiation process during which quotes are provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedNegotiation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedNegotiation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedNegotiation";
 			definition = "Negotiation process during which quotes are provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Negotiation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Negotiation.Quote;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Negotiation.mmQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CurrencyExchange> quotedRate;
 	/**
 	 * Exchange rate specified in a quote.
 	 * <p>
@@ -441,8 +458,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CurrencyExchangeForSecuritiesQuote
-	 * CurrencyExchange.CurrencyExchangeForSecuritiesQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForSecuritiesQuote
+	 * CurrencyExchange.mmCurrencyExchangeForSecuritiesQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -465,7 +482,7 @@ public class Quote {
 	 * definition} = "Exchange rate specified in a quote."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd QuotedRate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmQuotedRate = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
@@ -473,11 +490,12 @@ public class Quote {
 			name = "QuotedRate";
 			definition = "Exchange rate specified in a quote.";
 			minOccurs = 0;
-			type_lazy = () -> CurrencyExchange.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.CurrencyExchangeForSecuritiesQuote;
+			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForSecuritiesQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
+	protected SecuritiesPricing previousClosingPrice;
 	/**
 	 * Previous closing price of the financial instrument - Useful for verifying
 	 * its identification.
@@ -487,8 +505,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PreviousClosingPriceRelatedQuote
-	 * SecuritiesPricing.PreviousClosingPriceRelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPreviousClosingPriceRelatedQuote
+	 * SecuritiesPricing.mmPreviousClosingPriceRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -496,18 +514,18 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quote3#PreviousClosingPrice
-	 * Quote3.PreviousClosingPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quote3#mmPreviousClosingPrice
+	 * Quote3.mmPreviousClosingPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -521,21 +539,22 @@ public class Quote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PreviousClosingPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPreviousClosingPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.PreviousClosingPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.mmPreviousClosingPrice);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PreviousClosingPrice";
 			definition = "Previous closing price of the financial instrument - Useful for verifying its identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PreviousClosingPriceRelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPreviousClosingPriceRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected SecuritiesPricing requestedPrice;
 	/**
 	 * Is used to specify the desired currency of the quoted price when they
 	 * differ from the normal trading currency of the instrument being quote
@@ -546,8 +565,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RequestedPriceRelatedQuote
-	 * SecuritiesPricing.RequestedPriceRelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRequestedPriceRelatedQuote
+	 * SecuritiesPricing.mmRequestedPriceRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -555,17 +574,17 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Quote3#RequestedPrice
-	 * Quote3.RequestedPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Quote3#mmRequestedPrice
+	 * Quote3.mmRequestedPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -579,21 +598,22 @@ public class Quote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RequestedPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRequestedPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.RequestedPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.mmRequestedPrice);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RequestedPrice";
 			definition = "Is used to specify the desired currency of the quoted price when they differ from the normal trading currency of the instrument being quote requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.RequestedPriceRelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRequestedPriceRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected SecuritiesPricing price;
 	/**
 	 * Indicates the price of the instrument, applicable to the quote.
 	 * <p>
@@ -602,8 +622,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceRelatedQuote
-	 * SecuritiesPricing.PriceRelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceRelatedQuote
+	 * SecuritiesPricing.mmPriceRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -611,21 +631,21 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#Price
-	 * QuoteSide1.Price}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#Price
-	 * BidResponsePrice1.Price}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#Price
-	 * BidResponsePrice2.Price}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmPrice
+	 * QuoteSide1.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmPrice
+	 * BidResponsePrice1.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmPrice
+	 * BidResponsePrice2.mmPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -638,21 +658,22 @@ public class Quote {
 	 * "Indicates the price of the instrument, applicable to the quote."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Price = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.Price, com.tools20022.repository.msg.BidResponsePrice1.Price, com.tools20022.repository.msg.BidResponsePrice2.Price);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.mmPrice, com.tools20022.repository.msg.BidResponsePrice1.mmPrice, com.tools20022.repository.msg.BidResponsePrice2.mmPrice);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Indicates the price of the instrument, applicable to the quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceRelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected SecuritiesPricing marketPrice;
 	/**
 	 * Used by markets to indicate the current best bid and offer.
 	 * <p>
@@ -661,8 +682,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#MarketPriceRelatedQuote
-	 * SecuritiesPricing.MarketPriceRelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMarketPriceRelatedQuote
+	 * SecuritiesPricing.mmMarketPriceRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -670,17 +691,17 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#MarketPrice
-	 * QuoteSide1.MarketPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmMarketPrice
+	 * QuoteSide1.mmMarketPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -693,21 +714,22 @@ public class Quote {
 	 * "Used by markets to indicate the current best bid and offer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MarketPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMarketPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.MarketPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.mmMarketPrice);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarketPrice";
 			definition = "Used by markets to indicate the current best bid and offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.MarketPriceRelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmMarketPriceRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected SecuritiesQuoteVariable midSideQuoteVariable;
 	/**
 	 * Quote details for which mid information is provided.
 	 * <p>
@@ -716,8 +738,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#MidSide
-	 * SecuritiesQuoteVariable.MidSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmMidSide
+	 * SecuritiesQuoteVariable.mmMidSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -741,20 +763,21 @@ public class Quote {
 	 * definition} = "Quote details for which mid information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MidSideQuoteVariable = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMidSideQuoteVariable = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MidSideQuoteVariable";
 			definition = "Quote details for which mid information is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuoteVariable.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.MidSide;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmMidSide;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 		}
 	};
+	protected SecuritiesQuoteVariable bidSideQuoteVariable;
 	/**
 	 * Quote details for which bid information is provided.
 	 * <p>
@@ -763,8 +786,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#BidSide
-	 * SecuritiesQuoteVariable.BidSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmBidSide
+	 * SecuritiesQuoteVariable.mmBidSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -788,20 +811,21 @@ public class Quote {
 	 * definition} = "Quote details for which bid information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd BidSideQuoteVariable = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBidSideQuoteVariable = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BidSideQuoteVariable";
 			definition = "Quote details for which bid information is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuoteVariable.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.BidSide;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 		}
 	};
+	protected SecuritiesQuoteVariable offerSideQuoteVariable;
 	/**
 	 * Quote details for which offer information is provided.
 	 * <p>
@@ -810,8 +834,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#OfferSide
-	 * SecuritiesQuoteVariable.OfferSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmOfferSide
+	 * SecuritiesQuoteVariable.mmOfferSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -835,20 +859,21 @@ public class Quote {
 	 * definition} = "Quote details for which offer information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OfferSideQuoteVariable = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOfferSideQuoteVariable = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OfferSideQuoteVariable";
 			definition = "Quote details for which offer information is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuoteVariable.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.OfferSide;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmOfferSide;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 		}
 	};
+	protected SecuritiesQuoteVariable securityQuoteVariable;
 	/**
 	 * Proposition of price for a financial instrument.
 	 * <p>
@@ -857,8 +882,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#RelatedQuote
-	 * SecuritiesQuoteVariable.RelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmRelatedQuote
+	 * SecuritiesQuoteVariable.mmRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -867,17 +892,18 @@ public class Quote {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable
 	 * SecuritiesQuoteVariable}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#QuoteSetDetails
-	 * MassQuote1.QuoteSetDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MassQuote1#mmQuoteSetDetails
+	 * MassQuote1.mmQuoteSetDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -889,21 +915,22 @@ public class Quote {
 	 * definition} = "Proposition of price for a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecurityQuoteVariable = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecurityQuoteVariable = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MassQuote1.QuoteSetDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MassQuote1.mmQuoteSetDetails);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecurityQuoteVariable";
 			definition = "Proposition of price for a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuoteVariable.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.RelatedQuote;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
 		}
 	};
+	protected FinancialInstrumentSwap quoteSwap;
 	/**
 	 * Characteristics and conditions, quoted by the seller, by which a borrower
 	 * can exchange one type of fund for another.
@@ -913,8 +940,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#RelatedQuote
-	 * FinancialInstrumentSwap.RelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmRelatedQuote
+	 * FinancialInstrumentSwap.mmRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -940,20 +967,21 @@ public class Quote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd QuoteSwap = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmQuoteSwap = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "QuoteSwap";
 			definition = "Characteristics and conditions, quoted by the seller, by which a borrower can exchange one type of fund for another.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentSwap.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.RelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmObject();
 		}
 	};
+	protected ISODateTime validUntilDateTime;
 	/**
 	 * Expresses the validity date and time of the Quote.
 	 * <p>
@@ -963,40 +991,42 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry2#ValidUntilDateTime
-	 * QuoteEntry2.ValidUntilDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteSet2#ValidUntilDateTime
-	 * QuoteSet2.ValidUntilDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#ValidUntilDateTime
-	 * QuoteEntry1.ValidUntilDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteSet1#ValidUntilDateTime
-	 * QuoteSet1.ValidUntilDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SingleQuote1#ValidUntilDateTime
-	 * SingleQuote1.ValidUntilDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#ValidUntilDateTime
-	 * IndicationOfInterest1.ValidUntilDateTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Quote3#ValidUntilDateTime
-	 * Quote3.ValidUntilDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteRequest1#ExpiryDateTime
-	 * QuoteRequest1.ExpiryDateTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Quote1#ValidUntilDateTime
-	 * Quote1.ValidUntilDateTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry2#mmValidUntilDateTime
+	 * QuoteEntry2.mmValidUntilDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSet2#mmValidUntilDateTime
+	 * QuoteSet2.mmValidUntilDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmValidUntilDateTime
+	 * QuoteEntry1.mmValidUntilDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSet1#mmValidUntilDateTime
+	 * QuoteSet1.mmValidUntilDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SingleQuote1#mmValidUntilDateTime
+	 * SingleQuote1.mmValidUntilDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmValidUntilDateTime
+	 * IndicationOfInterest1.mmValidUntilDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quote3#mmValidUntilDateTime
+	 * Quote3.mmValidUntilDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmExpiryDateTime
+	 * QuoteRequest1.mmExpiryDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quote1#mmValidUntilDateTime
+	 * Quote1.mmValidUntilDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1008,21 +1038,22 @@ public class Quote {
 	 * definition} = "Expresses the validity date and time of the Quote."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ValidUntilDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValidUntilDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry2.ValidUntilDateTime, com.tools20022.repository.msg.QuoteSet2.ValidUntilDateTime, com.tools20022.repository.msg.QuoteEntry1.ValidUntilDateTime,
-					com.tools20022.repository.msg.QuoteSet1.ValidUntilDateTime, com.tools20022.repository.msg.SingleQuote1.ValidUntilDateTime, com.tools20022.repository.msg.IndicationOfInterest1.ValidUntilDateTime,
-					com.tools20022.repository.msg.Quote3.ValidUntilDateTime, com.tools20022.repository.msg.QuoteRequest1.ExpiryDateTime, com.tools20022.repository.msg.Quote1.ValidUntilDateTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry2.mmValidUntilDateTime, com.tools20022.repository.msg.QuoteSet2.mmValidUntilDateTime, com.tools20022.repository.msg.QuoteEntry1.mmValidUntilDateTime,
+					com.tools20022.repository.msg.QuoteSet1.mmValidUntilDateTime, com.tools20022.repository.msg.SingleQuote1.mmValidUntilDateTime, com.tools20022.repository.msg.IndicationOfInterest1.mmValidUntilDateTime,
+					com.tools20022.repository.msg.Quote3.mmValidUntilDateTime, com.tools20022.repository.msg.QuoteRequest1.mmExpiryDateTime, com.tools20022.repository.msg.Quote1.mmValidUntilDateTime);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Expresses the validity date and time of the Quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Can be used to specify the desired currency of the quoted price that may
 	 * differ from the normal trading currency of the instrument being quote
@@ -1034,21 +1065,21 @@ public class Quote {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry2#Currency
-	 * QuoteEntry2.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Quote3#Currency
-	 * Quote3.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Quote1#Currency
-	 * Quote1.Currency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.QuoteEntry2#mmCurrency
+	 * QuoteEntry2.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Quote3#mmCurrency
+	 * Quote3.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmCurrency
+	 * Quote1.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1062,19 +1093,20 @@ public class Quote {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Currency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry2.Currency, com.tools20022.repository.msg.Quote3.Currency, com.tools20022.repository.msg.Quote1.Currency);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry2.mmCurrency, com.tools20022.repository.msg.Quote3.mmCurrency, com.tools20022.repository.msg.Quote1.mmCurrency);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Can be used to specify the desired currency of the quoted price that may differ from the normal trading currency of the instrument being quote requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected QuoteStatus status;
 	/**
 	 * Provide the status for the quote.
 	 * <p>
@@ -1083,8 +1115,8 @@ public class Quote {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.QuoteStatus#RelatedQuote
-	 * QuoteStatus.RelatedQuote}</li>
+	 * {@linkplain com.tools20022.repository.entity.QuoteStatus#mmRelatedQuote
+	 * QuoteStatus.mmRelatedQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1107,20 +1139,21 @@ public class Quote {
 	 * definition} = "Provide the status for the quote."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Status = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Provide the status for the quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QuoteStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.QuoteStatus.RelatedQuote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmRelatedQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmObject();
 		}
 	};
+	protected Security quotedSecurity;
 	/**
 	 * Security specified in a quote.
 	 * <p>
@@ -1128,47 +1161,48 @@ public class Quote {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Security#Quote
-	 * Security.Quote}</li>
+	 * opposite} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmQuote
+	 * Security.mmQuote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry2#FinancialInstrumentAttributes
-	 * QuoteEntry2.FinancialInstrumentAttributes}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteSet2#UnderlyingFinancialInstrumentAttributes
-	 * QuoteSet2.UnderlyingFinancialInstrumentAttributes}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteSet2#UnderlyingStipulations
-	 * QuoteSet2.UnderlyingStipulations}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#FinancialInstrumentAttributes
-	 * QuoteEntry1.FinancialInstrumentAttributes}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#LegFinancialInstrumentAttributes
-	 * QuoteEntry1.LegFinancialInstrumentAttributes}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#LegStipulations
-	 * QuoteEntry1.LegStipulations}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteSet1#UnderlyingFinancialInstrumentAttributes
-	 * QuoteSet1.UnderlyingFinancialInstrumentAttributes}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QuoteSet1#UnderlyingStipulations
-	 * QuoteSet1.UnderlyingStipulations}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Quote
 	 * Quote}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry2#mmFinancialInstrumentAttributes
+	 * QuoteEntry2.mmFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSet2#mmUnderlyingFinancialInstrumentAttributes
+	 * QuoteSet2.mmUnderlyingFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSet2#mmUnderlyingStipulations
+	 * QuoteSet2.mmUnderlyingStipulations}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmFinancialInstrumentAttributes
+	 * QuoteEntry1.mmFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmLegFinancialInstrumentAttributes
+	 * QuoteEntry1.mmLegFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteEntry1#mmLegStipulations
+	 * QuoteEntry1.mmLegStipulations}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSet1#mmUnderlyingFinancialInstrumentAttributes
+	 * QuoteSet1.mmUnderlyingFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuoteSet1#mmUnderlyingStipulations
+	 * QuoteSet1.mmUnderlyingStipulations}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1180,48 +1214,201 @@ public class Quote {
 	 * definition} = "Security specified in a quote."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd QuotedSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmQuotedSecurity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry2.FinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteSet2.UnderlyingFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.QuoteSet2.UnderlyingStipulations, com.tools20022.repository.msg.QuoteEntry1.FinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteEntry1.LegFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.QuoteEntry1.LegStipulations, com.tools20022.repository.msg.QuoteSet1.UnderlyingFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteSet1.UnderlyingStipulations);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteEntry2.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteSet2.mmUnderlyingFinancialInstrumentAttributes,
+					com.tools20022.repository.msg.QuoteSet2.mmUnderlyingStipulations, com.tools20022.repository.msg.QuoteEntry1.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteEntry1.mmLegFinancialInstrumentAttributes,
+					com.tools20022.repository.msg.QuoteEntry1.mmLegStipulations, com.tools20022.repository.msg.QuoteSet1.mmUnderlyingFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteSet1.mmUnderlyingStipulations);
 			elementContext_lazy = () -> Quote.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "QuotedSecurity";
 			definition = "Security specified in a quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Security.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.Quote;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmQuote;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quote";
 				definition = "Indicates whether the quote details are indicated as an offer, a bid or a mid of a security, commodity, currency (the latter being an average of the offer and the bid).";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.Quote, com.tools20022.repository.entity.InformationPartyRole.Quote,
-						com.tools20022.repository.entity.SecuritiesPricing.PreviousClosingPriceRelatedQuote, com.tools20022.repository.entity.SecuritiesPricing.RequestedPriceRelatedQuote,
-						com.tools20022.repository.entity.SecuritiesPricing.PriceRelatedQuote, com.tools20022.repository.entity.SecuritiesPricing.MarketPriceRelatedQuote,
-						com.tools20022.repository.entity.SecuritiesQuantity.MaximumQuantityRelatedQuote, com.tools20022.repository.entity.SecuritiesQuantity.QuantityRelatedQuote,
-						com.tools20022.repository.entity.SecuritiesQuantity.MinimumQuantityRelatedQuote, com.tools20022.repository.entity.CurrencyExchange.CurrencyExchangeForSecuritiesQuote,
-						com.tools20022.repository.entity.Negotiation.Quote, com.tools20022.repository.entity.QuoteStatus.RelatedQuote, com.tools20022.repository.entity.FinancialInstrumentSwap.RelatedQuote,
-						com.tools20022.repository.entity.SecuritiesQuoteVariable.MidSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.BidSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.OfferSide,
-						com.tools20022.repository.entity.SecuritiesQuoteVariable.RelatedQuote);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quote.MaximumQuantity, com.tools20022.repository.entity.Quote.Quantity, com.tools20022.repository.entity.Quote.MinimumQuantity,
-						com.tools20022.repository.entity.Quote.PartyRole, com.tools20022.repository.entity.Quote.RelatedNegotiation, com.tools20022.repository.entity.Quote.QuotedRate,
-						com.tools20022.repository.entity.Quote.PreviousClosingPrice, com.tools20022.repository.entity.Quote.RequestedPrice, com.tools20022.repository.entity.Quote.Price, com.tools20022.repository.entity.Quote.MarketPrice,
-						com.tools20022.repository.entity.Quote.MidSideQuoteVariable, com.tools20022.repository.entity.Quote.BidSideQuoteVariable, com.tools20022.repository.entity.Quote.OfferSideQuoteVariable,
-						com.tools20022.repository.entity.Quote.SecurityQuoteVariable, com.tools20022.repository.entity.Quote.QuoteSwap, com.tools20022.repository.entity.Quote.ValidUntilDateTime,
-						com.tools20022.repository.entity.Quote.Currency, com.tools20022.repository.entity.Quote.Status, com.tools20022.repository.entity.Quote.QuotedSecurity);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmQuote, com.tools20022.repository.entity.InformationPartyRole.mmQuote,
+						com.tools20022.repository.entity.SecuritiesPricing.mmPreviousClosingPriceRelatedQuote, com.tools20022.repository.entity.SecuritiesPricing.mmRequestedPriceRelatedQuote,
+						com.tools20022.repository.entity.SecuritiesPricing.mmPriceRelatedQuote, com.tools20022.repository.entity.SecuritiesPricing.mmMarketPriceRelatedQuote,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumQuantityRelatedQuote, com.tools20022.repository.entity.SecuritiesQuantity.mmQuantityRelatedQuote,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityRelatedQuote, com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForSecuritiesQuote,
+						com.tools20022.repository.entity.Negotiation.mmQuote, com.tools20022.repository.entity.QuoteStatus.mmRelatedQuote, com.tools20022.repository.entity.FinancialInstrumentSwap.mmRelatedQuote,
+						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmMidSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide, com.tools20022.repository.entity.SecuritiesQuoteVariable.mmOfferSide,
+						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmRelatedQuote);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quote.mmMaximumQuantity, com.tools20022.repository.entity.Quote.mmQuantity, com.tools20022.repository.entity.Quote.mmMinimumQuantity,
+						com.tools20022.repository.entity.Quote.mmPartyRole, com.tools20022.repository.entity.Quote.mmRelatedNegotiation, com.tools20022.repository.entity.Quote.mmQuotedRate,
+						com.tools20022.repository.entity.Quote.mmPreviousClosingPrice, com.tools20022.repository.entity.Quote.mmRequestedPrice, com.tools20022.repository.entity.Quote.mmPrice,
+						com.tools20022.repository.entity.Quote.mmMarketPrice, com.tools20022.repository.entity.Quote.mmMidSideQuoteVariable, com.tools20022.repository.entity.Quote.mmBidSideQuoteVariable,
+						com.tools20022.repository.entity.Quote.mmOfferSideQuoteVariable, com.tools20022.repository.entity.Quote.mmSecurityQuoteVariable, com.tools20022.repository.entity.Quote.mmQuoteSwap,
+						com.tools20022.repository.entity.Quote.mmValidUntilDateTime, com.tools20022.repository.entity.Quote.mmCurrency, com.tools20022.repository.entity.Quote.mmStatus,
+						com.tools20022.repository.entity.Quote.mmQuotedSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(QuoteSide1.mmObject(), MassQuote1.mmObject(), BidResponsePrice1.mmObject(), BidResponsePrice2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesQuantity getMaximumQuantity() {
+		return maximumQuantity;
+	}
+
+	public void setMaximumQuantity(com.tools20022.repository.entity.SecuritiesQuantity maximumQuantity) {
+		this.maximumQuantity = maximumQuantity;
+	}
+
+	public SecuritiesQuantity getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.entity.SecuritiesQuantity quantity) {
+		this.quantity = quantity;
+	}
+
+	public SecuritiesQuantity getMinimumQuantity() {
+		return minimumQuantity;
+	}
+
+	public void setMinimumQuantity(com.tools20022.repository.entity.SecuritiesQuantity minimumQuantity) {
+		this.minimumQuantity = minimumQuantity;
+	}
+
+	public List<InformationPartyRole> getPartyRole() {
+		return partyRole;
+	}
+
+	public void setPartyRole(List<com.tools20022.repository.entity.InformationPartyRole> partyRole) {
+		this.partyRole = partyRole;
+	}
+
+	public Negotiation getRelatedNegotiation() {
+		return relatedNegotiation;
+	}
+
+	public void setRelatedNegotiation(com.tools20022.repository.entity.Negotiation relatedNegotiation) {
+		this.relatedNegotiation = relatedNegotiation;
+	}
+
+	public List<CurrencyExchange> getQuotedRate() {
+		return quotedRate;
+	}
+
+	public void setQuotedRate(List<com.tools20022.repository.entity.CurrencyExchange> quotedRate) {
+		this.quotedRate = quotedRate;
+	}
+
+	public SecuritiesPricing getPreviousClosingPrice() {
+		return previousClosingPrice;
+	}
+
+	public void setPreviousClosingPrice(com.tools20022.repository.entity.SecuritiesPricing previousClosingPrice) {
+		this.previousClosingPrice = previousClosingPrice;
+	}
+
+	public SecuritiesPricing getRequestedPrice() {
+		return requestedPrice;
+	}
+
+	public void setRequestedPrice(com.tools20022.repository.entity.SecuritiesPricing requestedPrice) {
+		this.requestedPrice = requestedPrice;
+	}
+
+	public SecuritiesPricing getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
+		this.price = price;
+	}
+
+	public SecuritiesPricing getMarketPrice() {
+		return marketPrice;
+	}
+
+	public void setMarketPrice(com.tools20022.repository.entity.SecuritiesPricing marketPrice) {
+		this.marketPrice = marketPrice;
+	}
+
+	public SecuritiesQuoteVariable getMidSideQuoteVariable() {
+		return midSideQuoteVariable;
+	}
+
+	public void setMidSideQuoteVariable(com.tools20022.repository.entity.SecuritiesQuoteVariable midSideQuoteVariable) {
+		this.midSideQuoteVariable = midSideQuoteVariable;
+	}
+
+	public SecuritiesQuoteVariable getBidSideQuoteVariable() {
+		return bidSideQuoteVariable;
+	}
+
+	public void setBidSideQuoteVariable(com.tools20022.repository.entity.SecuritiesQuoteVariable bidSideQuoteVariable) {
+		this.bidSideQuoteVariable = bidSideQuoteVariable;
+	}
+
+	public SecuritiesQuoteVariable getOfferSideQuoteVariable() {
+		return offerSideQuoteVariable;
+	}
+
+	public void setOfferSideQuoteVariable(com.tools20022.repository.entity.SecuritiesQuoteVariable offerSideQuoteVariable) {
+		this.offerSideQuoteVariable = offerSideQuoteVariable;
+	}
+
+	public SecuritiesQuoteVariable getSecurityQuoteVariable() {
+		return securityQuoteVariable;
+	}
+
+	public void setSecurityQuoteVariable(com.tools20022.repository.entity.SecuritiesQuoteVariable securityQuoteVariable) {
+		this.securityQuoteVariable = securityQuoteVariable;
+	}
+
+	public FinancialInstrumentSwap getQuoteSwap() {
+		return quoteSwap;
+	}
+
+	public void setQuoteSwap(com.tools20022.repository.entity.FinancialInstrumentSwap quoteSwap) {
+		this.quoteSwap = quoteSwap;
+	}
+
+	public ISODateTime getValidUntilDateTime() {
+		return validUntilDateTime;
+	}
+
+	public void setValidUntilDateTime(ISODateTime validUntilDateTime) {
+		this.validUntilDateTime = validUntilDateTime;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public QuoteStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.tools20022.repository.entity.QuoteStatus status) {
+		this.status = status;
+	}
+
+	public Security getQuotedSecurity() {
+		return quotedSecurity;
+	}
+
+	public void setQuotedSecurity(com.tools20022.repository.entity.Security quotedSecurity) {
+		this.quotedSecurity = quotedSecurity;
 	}
 }

@@ -80,8 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
- * GeneratedRepository.catalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
+ * GeneratedRepository.mmcatalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,7 +101,7 @@ public class BankAccountManagementISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.catalogue;
+				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bank Account Management - ISO - Previous version";
 				definition = "Set of messages that allows an organisation to open, maintain and close cash accounts serviced by a financial institution. It is designed for existing customers that have an established relationship with a bank or for a new legal entity of this customer. It covers mandates, allows electronic signature, and references to supporting documents.";

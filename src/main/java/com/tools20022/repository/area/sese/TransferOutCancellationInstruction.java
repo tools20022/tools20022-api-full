@@ -63,24 +63,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#PreviousReference
- * TransferOutCancellationInstruction.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#mmPreviousReference
+ * TransferOutCancellationInstruction.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#PoolReference
- * TransferOutCancellationInstruction.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#mmPoolReference
+ * TransferOutCancellationInstruction.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#RelatedReference
- * TransferOutCancellationInstruction.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#mmRelatedReference
+ * TransferOutCancellationInstruction.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#TransferOutToBeCancelled
- * TransferOutCancellationInstruction.TransferOutToBeCancelled}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#mmTransferOutToBeCancelled
+ * TransferOutCancellationInstruction.mmTransferOutToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#identifier
- * TransferOutCancellationInstruction.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOutCancellationInstruction {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -127,17 +126,18 @@ public class TransferOutCancellationInstruction {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -161,17 +161,18 @@ public class TransferOutCancellationInstruction {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -196,17 +197,18 @@ public class TransferOutCancellationInstruction {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected TransferOut2 transferOutToBeCancelled;
 	/**
 	 * (No doc)
 	 * <p>
@@ -226,41 +228,14 @@ public class TransferOutCancellationInstruction {
 	 * name} = "TransferOutToBeCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferOutToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferOutToBeCancelled = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfOutToBeCanc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOutToBeCancelled";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransferOut2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "002";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -276,11 +251,51 @@ public class TransferOutCancellationInstruction {
 				xmlTag = "sese.002.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.002.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationInstruction.PreviousReference, com.tools20022.repository.area.sese.TransferOutCancellationInstruction.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.RelatedReference, com.tools20022.repository.area.sese.TransferOutCancellationInstruction.TransferOutToBeCancelled);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferOutCancellationInstruction.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmPoolReference, com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmTransferOutToBeCancelled);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "002";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public TransferOut2 getTransferOutToBeCancelled() {
+		return transferOutToBeCancelled;
+	}
+
+	public void setTransferOutToBeCancelled(TransferOut2 transferOutToBeCancelled) {
+		this.transferOutToBeCancelled = transferOutToBeCancelled;
 	}
 }

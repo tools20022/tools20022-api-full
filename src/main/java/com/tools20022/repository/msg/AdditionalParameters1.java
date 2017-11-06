@@ -34,20 +34,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AdditionalParameters1#Country
- * AdditionalParameters1.Country}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AdditionalParameters1#Currency
- * AdditionalParameters1.Currency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalParameters1#GeographicalArea
- * AdditionalParameters1.GeographicalArea}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalParameters1#mmCountry
+ * AdditionalParameters1.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalParameters1#mmCurrency
+ * AdditionalParameters1.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalParameters1#mmGeographicalArea
+ * AdditionalParameters1.mmGeographicalArea}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Specifies the country.
 	 * <p>
@@ -88,7 +91,7 @@ public class AdditionalParameters1 {
 	 * definition} = "Specifies the country."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalParameters1.mmObject();
 			isDerived = false;
@@ -96,11 +99,12 @@ public class AdditionalParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Specifies the country.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode currency;
 	/**
 	 * Specifies the currency.
 	 * <p>
@@ -129,7 +133,7 @@ public class AdditionalParameters1 {
 	 * definition} = "Specifies the currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalParameters1.mmObject();
 			isDerived = false;
@@ -137,11 +141,12 @@ public class AdditionalParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Specifies the currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected Max35Text geographicalArea;
 	/**
 	 * Specifies the geographical area, eg, Asia-Pacific, Europe, Middle-East.
 	 * <p>
@@ -171,7 +176,7 @@ public class AdditionalParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GeographicalArea = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGeographicalArea = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalParameters1.mmObject();
 			isDerived = false;
@@ -179,8 +184,8 @@ public class AdditionalParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeographicalArea";
 			definition = "Specifies the geographical area, eg, Asia-Pacific, Europe, Middle-East.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -188,14 +193,38 @@ public class AdditionalParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters1.Country, com.tools20022.repository.msg.AdditionalParameters1.Currency,
-						com.tools20022.repository.msg.AdditionalParameters1.GeographicalArea);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters1.mmCountry, com.tools20022.repository.msg.AdditionalParameters1.mmCurrency,
+						com.tools20022.repository.msg.AdditionalParameters1.mmGeographicalArea);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalParameters1";
 				definition = "Sort criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public ActiveOrHistoricCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public Max35Text getGeographicalArea() {
+		return geographicalArea;
+	}
+
+	public void setGeographicalArea(Max35Text geographicalArea) {
+		this.geographicalArea = geographicalArea;
 	}
 }

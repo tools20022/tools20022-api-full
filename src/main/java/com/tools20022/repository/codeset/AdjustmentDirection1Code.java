@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentDirection1Code#Added
- * AdjustmentDirection1Code.Added}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentDirection1Code#mmAdded
+ * AdjustmentDirection1Code.mmAdded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentDirection1Code#Substracted
- * AdjustmentDirection1Code.Substracted}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentDirection1Code#mmSubstracted
+ * AdjustmentDirection1Code.mmSubstracted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class AdjustmentDirection1Code extends AdjustmentDirectionCode {
 	 * name} = "Added"</li>
 	 * </ul>
 	 */
-	public static final MMCode Added = new MMCode() {
+	public static final MMCode mmAdded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Added";
@@ -106,7 +106,7 @@ public class AdjustmentDirection1Code extends AdjustmentDirectionCode {
 	 * name} = "Substracted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Substracted = new MMCode() {
+	public static final MMCode mmSubstracted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Substracted";
@@ -117,12 +117,12 @@ public class AdjustmentDirection1Code extends AdjustmentDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADDD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentDirection1Code";
 				definition = "Specifies whether the adjustment is added or subtracted to the total amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentDirection1Code.Added, com.tools20022.repository.codeset.AdjustmentDirection1Code.Substracted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentDirection1Code.mmAdded, com.tools20022.repository.codeset.AdjustmentDirection1Code.mmSubstracted);
 				trace_lazy = () -> AdjustmentDirectionCode.mmObject();
 			}
 		});

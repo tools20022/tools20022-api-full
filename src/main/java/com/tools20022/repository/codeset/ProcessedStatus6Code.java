@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code#Received
- * ProcessedStatus6Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code#mmReceived
+ * ProcessedStatus6Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code#WaitingDeactivationDate
- * ProcessedStatus6Code.WaitingDeactivationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code#mmWaitingDeactivationDate
+ * ProcessedStatus6Code.mmWaitingDeactivationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code#Completed
- * ProcessedStatus6Code.Completed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus6Code#mmCompleted
+ * ProcessedStatus6Code.mmCompleted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class ProcessedStatus6Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -108,7 +108,7 @@ public class ProcessedStatus6Code extends CorporateActionProcessedStatusCode {
 	 * name} = "WaitingDeactivationDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode WaitingDeactivationDate = new MMCode() {
+	public static final MMCode mmWaitingDeactivationDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingDeactivationDate";
@@ -131,7 +131,7 @@ public class ProcessedStatus6Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
@@ -142,13 +142,13 @@ public class ProcessedStatus6Code extends CorporateActionProcessedStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus6Code";
 				definition = "Specifies the processing status of a deactivation instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus6Code.Received, com.tools20022.repository.codeset.ProcessedStatus6Code.WaitingDeactivationDate,
-						com.tools20022.repository.codeset.ProcessedStatus6Code.Completed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus6Code.mmReceived, com.tools20022.repository.codeset.ProcessedStatus6Code.mmWaitingDeactivationDate,
+						com.tools20022.repository.codeset.ProcessedStatus6Code.mmCompleted);
 				trace_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
 			}
 		});

@@ -36,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PlaceOfSettlement#SettlementMarket
- * PlaceOfSettlement.SettlementMarket}</li>
+ * {@linkplain com.tools20022.repository.entity.PlaceOfSettlement#mmSettlementMarket
+ * PlaceOfSettlement.mmSettlementMarket}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#RelatedPlaceOfSettlement
- * TradingMarket.RelatedPlaceOfSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmRelatedPlaceOfSettlement
+ * TradingMarket.mmRelatedPlaceOfSettlement}</li>
  * </ul>
  * </li>
  * <li>
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommodityDerivate6#SettlementLocation
- * CommodityDerivate6.SettlementLocation}</li>
+ * {@linkplain com.tools20022.repository.msg.CommodityDerivate6#mmSettlementLocation
+ * CommodityDerivate6.mmSettlementLocation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlaceOfSettlement extends SecuritiesSettlementPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradingMarket settlementMarket;
 	/**
 	 * Identifies the market for the settlement.
 	 * <p>
@@ -88,8 +89,8 @@ public class PlaceOfSettlement extends SecuritiesSettlementPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#RelatedPlaceOfSettlement
-	 * TradingMarket.RelatedPlaceOfSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmRelatedPlaceOfSettlement
+	 * TradingMarket.mmRelatedPlaceOfSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -113,34 +114,42 @@ public class PlaceOfSettlement extends SecuritiesSettlementPartyRole {
 	 * definition} = "Identifies the market for the settlement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SettlementMarket = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSettlementMarket = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PlaceOfSettlement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMarket";
 			definition = "Identifies the market for the settlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradingMarket.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.RelatedPlaceOfSettlement;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmRelatedPlaceOfSettlement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfSettlement";
 				definition = "Place where settlement of securities occurs.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.RelatedPlaceOfSettlement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate6.SettlementLocation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.mmRelatedPlaceOfSettlement);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate6.mmSettlementLocation);
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PlaceOfSettlement.SettlementMarket);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PlaceOfSettlement.mmSettlementMarket);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradingMarket getSettlementMarket() {
+		return settlementMarket;
+	}
+
+	public void setSettlementMarket(com.tools20022.repository.entity.TradingMarket settlementMarket) {
+		this.settlementMarket = settlementMarket;
 	}
 }

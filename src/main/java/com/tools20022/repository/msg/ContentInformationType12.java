@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType12#ContentType
- * ContentInformationType12.ContentType}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType12#mmContentType
+ * ContentInformationType12.mmContentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType12#EnvelopedData
- * ContentInformationType12.EnvelopedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType12#mmEnvelopedData
+ * ContentInformationType12.mmEnvelopedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType12#AuthenticatedData
- * ContentInformationType12.AuthenticatedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType12#mmAuthenticatedData
+ * ContentInformationType12.mmAuthenticatedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType12#SignedData
- * ContentInformationType12.SignedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType12#mmSignedData
+ * ContentInformationType12.mmSignedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType12#DigestedData
- * ContentInformationType12.DigestedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType12#mmDigestedData
+ * ContentInformationType12.mmDigestedData}</li>
  * </ul>
  * </li>
  * <li>
@@ -55,78 +55,78 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04#SecurityTrailer
- * AcceptorConfigurationUpdateV04.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04#mmSecurityTrailer
+ * AcceptorConfigurationUpdateV04.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV04#SecurityTrailer
- * ManagementPlanReplacementV04.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV04#mmSecurityTrailer
+ * ManagementPlanReplacementV04.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#SecurityTrailer
- * StatusReportV04.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV04#mmSecurityTrailer
+ * StatusReportV04.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01#SecurityTrailer
- * MaintenanceDelegationResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01#mmSecurityTrailer
+ * MaintenanceDelegationResponseV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#SecurityTrailer
- * MaintenanceDelegationRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#mmSecurityTrailer
+ * MaintenanceDelegationRequestV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04#SecurityTrailer
- * AcceptorBatchTransferResponseV04.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04#mmSecurityTrailer
+ * AcceptorBatchTransferResponseV04.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV04#SecurityTrailer
- * AcceptorBatchTransferV04.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV04#mmSecurityTrailer
+ * AcceptorBatchTransferV04.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.KeyExchangeResponse#SecurityTrailer
- * KeyExchangeResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.KeyExchangeResponse#mmSecurityTrailer
+ * KeyExchangeResponse.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#SecurityTrailer
- * KeyExchangeInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.KeyExchangeInitiation#mmSecurityTrailer
+ * KeyExchangeInitiation.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05#SecurityTrailer
- * AcceptorBatchTransferResponseV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05#mmSecurityTrailer
+ * AcceptorBatchTransferResponseV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV05#SecurityTrailer
- * AcceptorBatchTransferV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV05#mmSecurityTrailer
+ * AcceptorBatchTransferV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02#SecurityTrailer
- * MaintenanceDelegationResponseV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02#mmSecurityTrailer
+ * MaintenanceDelegationResponseV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#SecurityTrailer
- * MaintenanceDelegationRequestV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#mmSecurityTrailer
+ * MaintenanceDelegationRequestV02.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05#SecurityTrailer
- * AcceptorConfigurationUpdateV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05#mmSecurityTrailer
+ * AcceptorConfigurationUpdateV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#SecurityTrailer
- * StatusReportV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV05#mmSecurityTrailer
+ * StatusReportV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV05#SecurityTrailer
- * ManagementPlanReplacementV05.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV05#mmSecurityTrailer
+ * ManagementPlanReplacementV05.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#SecurityTrailer
- * StatusReportV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV06#mmSecurityTrailer
+ * StatusReportV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06#SecurityTrailer
- * AcceptorConfigurationUpdateV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06#mmSecurityTrailer
+ * AcceptorConfigurationUpdateV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03#SecurityTrailer
- * MaintenanceDelegationRequestV03.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03#mmSecurityTrailer
+ * MaintenanceDelegationRequestV03.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV06#SecurityTrailer
- * ManagementPlanReplacementV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV06#mmSecurityTrailer
+ * ManagementPlanReplacementV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV06#SecurityTrailer
- * AcceptorBatchTransferResponseV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV06#mmSecurityTrailer
+ * AcceptorBatchTransferResponseV06.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV06#SecurityTrailer
- * AcceptorBatchTransferV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV06#mmSecurityTrailer
+ * AcceptorBatchTransferV06.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -154,6 +154,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContentInformationType12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType2Code contentType;
 	/**
 	 * Type of data protection.
 	 * <p>
@@ -184,21 +185,21 @@ public class ContentInformationType12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType13#ContentType
-	 * ContentInformationType13.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType13#mmContentType
+	 * ContentInformationType13.mmContentType}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType14#ContentType
-	 * ContentInformationType14.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType14#mmContentType
+	 * ContentInformationType14.mmContentType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#ContentType
-	 * ContentInformationType9.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#mmContentType
+	 * ContentInformationType9.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
@@ -206,13 +207,14 @@ public class ContentInformationType12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.ContentType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.ContentType, com.tools20022.repository.msg.ContentInformationType14.ContentType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.mmContentType, com.tools20022.repository.msg.ContentInformationType14.mmContentType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmContentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	protected EnvelopedData4 envelopedData;
 	/**
 	 * Data protection by encryption, with a session key.
 	 * <p>
@@ -240,11 +242,11 @@ public class ContentInformationType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#EnvelopedData
-	 * ContentInformationType9.EnvelopedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#mmEnvelopedData
+	 * ContentInformationType9.mmEnvelopedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
@@ -252,13 +254,14 @@ public class ContentInformationType12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption, with a session key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.EnvelopedData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmEnvelopedData;
 			maxOccurs = 1;
-			type_lazy = () -> EnvelopedData4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData4.mmObject();
 		}
 	};
+	protected AuthenticatedData4 authenticatedData;
 	/**
 	 * Data protection by a message authentication code (MAC).
 	 * <p>
@@ -287,18 +290,18 @@ public class ContentInformationType12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType13#AuthenticatedData
-	 * ContentInformationType13.AuthenticatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType13#mmAuthenticatedData
+	 * ContentInformationType13.mmAuthenticatedData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#AuthenticatedData
-	 * ContentInformationType9.AuthenticatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#mmAuthenticatedData
+	 * ContentInformationType9.mmAuthenticatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
@@ -306,14 +309,15 @@ public class ContentInformationType12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.AuthenticatedData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.AuthenticatedData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.mmAuthenticatedData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmAuthenticatedData;
 			maxOccurs = 1;
-			type_lazy = () -> AuthenticatedData4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 		}
 	};
+	protected SignedData4 signedData;
 	/**
 	 * Data protected by a digital signatures.
 	 * <p>
@@ -342,21 +346,21 @@ public class ContentInformationType12 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType13#SignedData
-	 * ContentInformationType13.SignedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType13#mmSignedData
+	 * ContentInformationType13.mmSignedData}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType14#SignedData
-	 * ContentInformationType14.SignedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType14#mmSignedData
+	 * ContentInformationType14.mmSignedData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#SignedData
-	 * ContentInformationType9.SignedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#mmSignedData
+	 * ContentInformationType9.mmSignedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
@@ -364,14 +368,15 @@ public class ContentInformationType12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
 			definition = "Data protected by a digital signatures.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.SignedData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.SignedData, com.tools20022.repository.msg.ContentInformationType14.SignedData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.mmSignedData, com.tools20022.repository.msg.ContentInformationType14.mmSignedData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmSignedData;
 			maxOccurs = 1;
-			type_lazy = () -> SignedData4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedData4.mmObject();
 		}
 	};
+	protected DigestedData4 digestedData;
 	/**
 	 * Data protected by a digest.
 	 * <p>
@@ -399,11 +404,11 @@ public class ContentInformationType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#DigestedData
-	 * ContentInformationType9.DigestedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType9#mmDigestedData
+	 * ContentInformationType9.mmDigestedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigestedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigestedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
@@ -411,38 +416,78 @@ public class ContentInformationType12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
 			definition = "Data protected by a digest.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.DigestedData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmDigestedData;
 			maxOccurs = 1;
-			type_lazy = () -> DigestedData4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DigestedData4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType12.ContentType, com.tools20022.repository.msg.ContentInformationType12.EnvelopedData,
-						com.tools20022.repository.msg.ContentInformationType12.AuthenticatedData, com.tools20022.repository.msg.ContentInformationType12.SignedData, com.tools20022.repository.msg.ContentInformationType12.DigestedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.SecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV04.SecurityTrailer,
-						com.tools20022.repository.area.catm.StatusReportV04.SecurityTrailer, com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01.SecurityTrailer,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferV04.SecurityTrailer, com.tools20022.repository.area.cain.KeyExchangeResponse.SecurityTrailer,
-						com.tools20022.repository.area.cain.KeyExchangeInitiation.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferV05.SecurityTrailer, com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02.SecurityTrailer,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.SecurityTrailer, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05.SecurityTrailer,
-						com.tools20022.repository.area.catm.StatusReportV05.SecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV05.SecurityTrailer,
-						com.tools20022.repository.area.catm.StatusReportV06.SecurityTrailer, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06.SecurityTrailer,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.SecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV06.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV06.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferV06.SecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType12.mmContentType, com.tools20022.repository.msg.ContentInformationType12.mmEnvelopedData,
+						com.tools20022.repository.msg.ContentInformationType12.mmAuthenticatedData, com.tools20022.repository.msg.ContentInformationType12.mmSignedData, com.tools20022.repository.msg.ContentInformationType12.mmDigestedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.mmSecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV04.mmSecurityTrailer,
+						com.tools20022.repository.area.catm.StatusReportV04.mmSecurityTrailer, com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorBatchTransferV04.mmSecurityTrailer, com.tools20022.repository.area.cain.KeyExchangeResponse.mmSecurityTrailer,
+						com.tools20022.repository.area.cain.KeyExchangeInitiation.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorBatchTransferV05.mmSecurityTrailer, com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02.mmSecurityTrailer,
+						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmSecurityTrailer, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05.mmSecurityTrailer,
+						com.tools20022.repository.area.catm.StatusReportV05.mmSecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV05.mmSecurityTrailer,
+						com.tools20022.repository.area.catm.StatusReportV06.mmSecurityTrailer, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06.mmSecurityTrailer,
+						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmSecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV06.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferV06.mmSecurityTrailer);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType12";
 				definition = "General cryptographic message syntax (CMS) containing protected data.";
-				previousVersion_lazy = () -> ContentInformationType9.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmObject(), ContentInformationType14.mmObject());
+				previousVersion_lazy = () -> ContentInformationType9.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType2Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType2Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public EnvelopedData4 getEnvelopedData() {
+		return envelopedData;
+	}
+
+	public void setEnvelopedData(com.tools20022.repository.msg.EnvelopedData4 envelopedData) {
+		this.envelopedData = envelopedData;
+	}
+
+	public AuthenticatedData4 getAuthenticatedData() {
+		return authenticatedData;
+	}
+
+	public void setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData4 authenticatedData) {
+		this.authenticatedData = authenticatedData;
+	}
+
+	public SignedData4 getSignedData() {
+		return signedData;
+	}
+
+	public void setSignedData(com.tools20022.repository.msg.SignedData4 signedData) {
+		this.signedData = signedData;
+	}
+
+	public DigestedData4 getDigestedData() {
+		return digestedData;
+	}
+
+	public void setDigestedData(com.tools20022.repository.msg.DigestedData4 digestedData) {
+		this.digestedData = digestedData;
 	}
 }

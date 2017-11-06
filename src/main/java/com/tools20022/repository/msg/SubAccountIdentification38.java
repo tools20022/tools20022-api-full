@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Account to or from which a securities entry is made.
@@ -36,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#AccountOwner
- * SubAccountIdentification38.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#mmAccountOwner
+ * SubAccountIdentification38.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#SafekeepingAccount
- * SubAccountIdentification38.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#mmSafekeepingAccount
+ * SubAccountIdentification38.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#ActivityIndicator
- * SubAccountIdentification38.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#mmActivityIndicator
+ * SubAccountIdentification38.mmActivityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#BalanceForSubAccount
- * SubAccountIdentification38.BalanceForSubAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification38#mmBalanceForSubAccount
+ * SubAccountIdentification38.mmBalanceForSubAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,15 +58,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#SubAccountDetails
- * SecuritiesBalanceAccountingReportV08.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08#mmSubAccountDetails
+ * SecuritiesBalanceAccountingReportV08.mmSubAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubAccountIdentification38 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification36Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -102,8 +104,8 @@ public class SubAccountIdentification38 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -124,34 +126,35 @@ public class SubAccountIdentification38 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#AccountOwner
-	 * SubAccountIdentification43.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#mmAccountOwner
+	 * SubAccountIdentification43.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#AccountOwner
-	 * SubAccountIdentification29.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#mmAccountOwner
+	 * SubAccountIdentification29.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SubAccountIdentification38.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.AccountOwner;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.AccountOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.mmAccountOwner);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.mmAccountOwner;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification36Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount14 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -185,34 +188,35 @@ public class SubAccountIdentification38 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#SafekeepingAccount
-	 * SubAccountIdentification43.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#mmSafekeepingAccount
+	 * SubAccountIdentification43.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#SafekeepingAccount
-	 * SubAccountIdentification29.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#mmSafekeepingAccount
+	 * SubAccountIdentification29.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubAccountIdentification38.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> SubAccountIdentification38.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.SafekeepingAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.SafekeepingAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.mmSafekeepingAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.mmSafekeepingAccount;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount14.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -246,18 +250,18 @@ public class SubAccountIdentification38 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#ActivityIndicator
-	 * SubAccountIdentification43.ActivityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#mmActivityIndicator
+	 * SubAccountIdentification43.mmActivityIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#ActivityIndicator
-	 * SubAccountIdentification29.ActivityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#mmActivityIndicator
+	 * SubAccountIdentification29.mmActivityIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SubAccountIdentification38.mmObject();
 			isDerived = false;
@@ -265,13 +269,14 @@ public class SubAccountIdentification38 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.ActivityIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.ActivityIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.mmActivityIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.mmActivityIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AggregateBalanceInformation26> balanceForSubAccount;
 	/**
 	 * Net position of a segregated holding, in a single security, within the
 	 * overall position held in a securities subaccount.
@@ -285,8 +290,8 @@ public class SubAccountIdentification38 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#SecuritiesBalance
-	 * SecuritiesAccount.SecuritiesBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesBalance
+	 * SecuritiesAccount.mmSecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -309,49 +314,81 @@ public class SubAccountIdentification38 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#BalanceForSubAccount
-	 * SubAccountIdentification43.BalanceForSubAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification43#mmBalanceForSubAccount
+	 * SubAccountIdentification43.mmBalanceForSubAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#BalanceForSubAccount
-	 * SubAccountIdentification29.BalanceForSubAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification29#mmBalanceForSubAccount
+	 * SubAccountIdentification29.mmBalanceForSubAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceForSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceForSubAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> SubAccountIdentification38.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.SecuritiesBalance;
 			isDerived = false;
 			xmlTag = "BalForSubAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForSubAccount";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities subaccount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.BalanceForSubAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.BalanceForSubAccount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification43.mmBalanceForSubAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification29.mmBalanceForSubAccount;
 			minOccurs = 0;
-			type_lazy = () -> AggregateBalanceInformation26.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation26.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification38.AccountOwner, com.tools20022.repository.msg.SubAccountIdentification38.SafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification38.ActivityIndicator, com.tools20022.repository.msg.SubAccountIdentification38.BalanceForSubAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification38.mmAccountOwner, com.tools20022.repository.msg.SubAccountIdentification38.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SubAccountIdentification38.mmActivityIndicator, com.tools20022.repository.msg.SubAccountIdentification38.mmBalanceForSubAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmSubAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.SubAccountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubAccountIdentification38";
 				definition = "Account to or from which a securities entry is made.";
-				previousVersion_lazy = () -> SubAccountIdentification29.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification43.mmObject());
+				previousVersion_lazy = () -> SubAccountIdentification29.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification36Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount14 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount14 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
+	}
+
+	public List<AggregateBalanceInformation26> getBalanceForSubAccount() {
+		return balanceForSubAccount;
+	}
+
+	public void setBalanceForSubAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation26> balanceForSubAccount) {
+		this.balanceForSubAccount = balanceForSubAccount;
 	}
 }

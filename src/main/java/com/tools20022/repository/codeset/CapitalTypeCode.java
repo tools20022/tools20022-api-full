@@ -29,46 +29,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#Approved
- * CapitalTypeCode.Approved}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmApproved
+ * CapitalTypeCode.mmApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#IssuedVotingRights
- * CapitalTypeCode.IssuedVotingRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmIssuedVotingRights
+ * CapitalTypeCode.mmIssuedVotingRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#MaximumIncrease
- * CapitalTypeCode.MaximumIncrease}</li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmMaximumIncrease
+ * CapitalTypeCode.mmMaximumIncrease}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#Outstanding
- * CapitalTypeCode.Outstanding}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#Redeemed
- * CapitalTypeCode.Redeemed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmOutstanding
+ * CapitalTypeCode.mmOutstanding}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmRedeemed
+ * CapitalTypeCode.mmRedeemed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#StatedCapital
- * CapitalTypeCode.StatedCapital}</li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmStatedCapital
+ * CapitalTypeCode.mmStatedCapital}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#TreasuryStock
- * CapitalTypeCode.TreasuryStock}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#Unissued
- * CapitalTypeCode.Unissued}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#Withdrawn
- * CapitalTypeCode.Withdrawn}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#Authorised
- * CapitalTypeCode.Authorised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmTreasuryStock
+ * CapitalTypeCode.mmTreasuryStock}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmUnissued
+ * CapitalTypeCode.mmUnissued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#InCirculation
- * CapitalTypeCode.InCirculation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#Issued
- * CapitalTypeCode.Issued}</li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmWithdrawn
+ * CapitalTypeCode.mmWithdrawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#IssuedReserveCapital
- * CapitalTypeCode.IssuedReserveCapital}</li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmAuthorised
+ * CapitalTypeCode.mmAuthorised}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmInCirculation
+ * CapitalTypeCode.mmInCirculation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmIssued
+ * CapitalTypeCode.mmIssued}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CapitalTypeCode#mmIssuedReserveCapital
+ * CapitalTypeCode.mmIssuedReserveCapital}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -109,7 +111,7 @@ public class CapitalTypeCode {
 	 * definition} = "Approved capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Approved = new MMCode() {
+	public static final MMCode mmApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Approved";
@@ -139,7 +141,7 @@ public class CapitalTypeCode {
 	 * definition} = "Issued voting rights."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuedVotingRights = new MMCode() {
+	public static final MMCode mmIssuedVotingRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuedVotingRights";
@@ -169,7 +171,7 @@ public class CapitalTypeCode {
 	 * definition} = "Maximum amount of increase."</li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumIncrease = new MMCode() {
+	public static final MMCode mmMaximumIncrease = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumIncrease";
@@ -199,7 +201,7 @@ public class CapitalTypeCode {
 	 * definition} = "Outstanding capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Outstanding = new MMCode() {
+	public static final MMCode mmOutstanding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Outstanding";
@@ -229,7 +231,7 @@ public class CapitalTypeCode {
 	 * definition} = "Redeemed capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Redeemed = new MMCode() {
+	public static final MMCode mmRedeemed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Redeemed";
@@ -259,7 +261,7 @@ public class CapitalTypeCode {
 	 * definition} = "Stated capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode StatedCapital = new MMCode() {
+	public static final MMCode mmStatedCapital = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StatedCapital";
@@ -289,7 +291,7 @@ public class CapitalTypeCode {
 	 * definition} = "Issued reserve capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode TreasuryStock = new MMCode() {
+	public static final MMCode mmTreasuryStock = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasuryStock";
@@ -319,7 +321,7 @@ public class CapitalTypeCode {
 	 * definition} = "Contingent capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unissued = new MMCode() {
+	public static final MMCode mmUnissued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Unissued";
@@ -349,7 +351,7 @@ public class CapitalTypeCode {
 	 * definition} = "Withdrawn capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawn = new MMCode() {
+	public static final MMCode mmWithdrawn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Withdrawn";
@@ -379,7 +381,7 @@ public class CapitalTypeCode {
 	 * definition} = "Authorised capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Authorised = new MMCode() {
+	public static final MMCode mmAuthorised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Authorised";
@@ -409,7 +411,7 @@ public class CapitalTypeCode {
 	 * definition} = "In circulation."</li>
 	 * </ul>
 	 */
-	public static final MMCode InCirculation = new MMCode() {
+	public static final MMCode mmInCirculation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InCirculation";
@@ -439,7 +441,7 @@ public class CapitalTypeCode {
 	 * definition} = "Issued capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Issued = new MMCode() {
+	public static final MMCode mmIssued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Issued";
@@ -469,7 +471,7 @@ public class CapitalTypeCode {
 	 * definition} = "Issued reserve capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuedReserveCapital = new MMCode() {
+	public static final MMCode mmIssuedReserveCapital = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuedReserveCapital";
@@ -482,16 +484,16 @@ public class CapitalTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APPD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CapitalTypeCode";
 				definition = "Specifies the type of capital.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CapitalTypeCode.Approved, com.tools20022.repository.codeset.CapitalTypeCode.IssuedVotingRights,
-						com.tools20022.repository.codeset.CapitalTypeCode.MaximumIncrease, com.tools20022.repository.codeset.CapitalTypeCode.Outstanding, com.tools20022.repository.codeset.CapitalTypeCode.Redeemed,
-						com.tools20022.repository.codeset.CapitalTypeCode.StatedCapital, com.tools20022.repository.codeset.CapitalTypeCode.TreasuryStock, com.tools20022.repository.codeset.CapitalTypeCode.Unissued,
-						com.tools20022.repository.codeset.CapitalTypeCode.Withdrawn, com.tools20022.repository.codeset.CapitalTypeCode.Authorised, com.tools20022.repository.codeset.CapitalTypeCode.InCirculation,
-						com.tools20022.repository.codeset.CapitalTypeCode.Issued, com.tools20022.repository.codeset.CapitalTypeCode.IssuedReserveCapital);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CapitalTypeCode.mmApproved, com.tools20022.repository.codeset.CapitalTypeCode.mmIssuedVotingRights,
+						com.tools20022.repository.codeset.CapitalTypeCode.mmMaximumIncrease, com.tools20022.repository.codeset.CapitalTypeCode.mmOutstanding, com.tools20022.repository.codeset.CapitalTypeCode.mmRedeemed,
+						com.tools20022.repository.codeset.CapitalTypeCode.mmStatedCapital, com.tools20022.repository.codeset.CapitalTypeCode.mmTreasuryStock, com.tools20022.repository.codeset.CapitalTypeCode.mmUnissued,
+						com.tools20022.repository.codeset.CapitalTypeCode.mmWithdrawn, com.tools20022.repository.codeset.CapitalTypeCode.mmAuthorised, com.tools20022.repository.codeset.CapitalTypeCode.mmInCirculation,
+						com.tools20022.repository.codeset.CapitalTypeCode.mmIssued, com.tools20022.repository.codeset.CapitalTypeCode.mmIssuedReserveCapital);
 			}
 		});
 		return mmObject_lazy.get();

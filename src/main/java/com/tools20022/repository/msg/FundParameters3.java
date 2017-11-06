@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundParameters3#FinancialInstrumentDetails
- * FundParameters3.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundParameters3#mmFinancialInstrumentDetails
+ * FundParameters3.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundParameters3#ValuationDateTime
- * FundParameters3.ValuationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.FundParameters3#mmValuationDateTime
+ * FundParameters3.mmValuationDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrument17 financialInstrumentDetails;
 	/**
 	 * Financial instrument for which the fund processing passport report report
 	 * is requested.
@@ -75,8 +76,8 @@ public class FundParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#InvestmentFundClass
-	 * InvestmentFund.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmInvestmentFundClass
+	 * InvestmentFund.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,21 +98,22 @@ public class FundParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument for which the fund processing passport report report is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument17.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice valuationDateTime;
 	/**
 	 * Date and time of the price valuation for the investment fund/fund class.
 	 * <p>
@@ -125,8 +127,8 @@ public class FundParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#ValuationDateTime
-	 * NetAssetValueCalculation.ValuationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmValuationDateTime
+	 * NetAssetValueCalculation.mmValuationDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,17 +149,17 @@ public class FundParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> FundParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.ValuationDateTime;
 			isDerived = false;
 			xmlTag = "ValtnDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDateTime";
 			definition = "Date and time of the price valuation for the investment fund/fund class.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -165,14 +167,30 @@ public class FundParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundParameters3.FinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters3.ValuationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundParameters3.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters3.mmValuationDateTime);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundParameters3";
 				definition = "Fund parameters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrument17 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public DateAndDateTimeChoice getValuationDateTime() {
+		return valuationDateTime;
+	}
+
+	public void setValuationDateTime(DateAndDateTimeChoice valuationDateTime) {
+		this.valuationDateTime = valuationDateTime;
 	}
 }

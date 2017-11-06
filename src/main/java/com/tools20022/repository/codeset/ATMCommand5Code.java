@@ -32,21 +32,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ATMCommandCode ATMCommandCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand5Code#ATMBalance
- * ATMCommand5Code.ATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#CountersInquiry
- * ATMCommand5Code.CountersInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#mmATMBalance
+ * ATMCommand5Code.mmATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#CountersReport
- * ATMCommand5Code.CountersReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#mmCountersInquiry
+ * ATMCommand5Code.mmCountersInquiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#mmCountersReport
+ * ATMCommand5Code.mmCountersReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +77,7 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 * name} = "ATMBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMBalance = new MMCode() {
+	public static final MMCode mmATMBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
@@ -99,7 +100,7 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 * name} = "CountersInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode CountersInquiry = new MMCode() {
+	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
@@ -122,7 +123,7 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 * name} = "CountersReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode CountersReport = new MMCode() {
+	public static final MMCode mmCountersReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersReport";
@@ -133,12 +134,12 @@ public class ATMCommand5Code extends ATMCommandCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand5Code";
 				definition = "Type of command performed by the ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand5Code.ATMBalance, com.tools20022.repository.codeset.ATMCommand5Code.CountersInquiry,
-						com.tools20022.repository.codeset.ATMCommand5Code.CountersReport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand5Code.mmATMBalance, com.tools20022.repository.codeset.ATMCommand5Code.mmCountersInquiry,
+						com.tools20022.repository.codeset.ATMCommand5Code.mmCountersReport);
 				trace_lazy = () -> ATMCommandCode.mmObject();
 			}
 		});

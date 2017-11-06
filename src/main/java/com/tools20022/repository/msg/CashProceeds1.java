@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashProceedsDefinition;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the cash proceeds.
@@ -36,13 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1#PostingAmount
- * CashProceeds1.PostingAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1#mmPostingAmount
+ * CashProceeds1.mmPostingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashProceeds1#ReconciliationDetails
- * CashProceeds1.ReconciliationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1#AccountDetails
- * CashProceeds1.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CashProceeds1#mmReconciliationDetails
+ * CashProceeds1.mmReconciliationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1#mmAccountDetails
+ * CashProceeds1.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashProceeds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount postingAmount;
 	/**
 	 * Cash amount which is posted.
 	 * <p>
@@ -79,8 +81,8 @@ public class CashProceeds1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +100,21 @@ public class CashProceeds1 {
 	 * definition} = "Cash amount which is posted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> CashProceeds1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "PstngAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Cash amount which is posted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max350Text reconciliationDetails;
 	/**
 	 * Reconciliation information.
 	 * <p>
@@ -138,7 +141,7 @@ public class CashProceeds1 {
 	 * definition} = "Reconciliation information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashProceeds1.mmObject();
 			isDerived = false;
@@ -146,11 +149,12 @@ public class CashProceeds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationDetails";
 			definition = "Reconciliation information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccount19> accountDetails;
 	/**
 	 * Provides information about the debited securities account.
 	 * <p>
@@ -181,34 +185,58 @@ public class CashProceeds1 {
 	 * "Provides information about the debited securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashProceeds1.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> CashProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the debited securities account.";
-			minOccurs = 1;
 			maxOccurs = 2;
-			type_lazy = () -> CashAccount19.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount19.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashProceeds1.PostingAmount, com.tools20022.repository.msg.CashProceeds1.ReconciliationDetails,
-						com.tools20022.repository.msg.CashProceeds1.AccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashProceeds1.mmPostingAmount, com.tools20022.repository.msg.CashProceeds1.mmReconciliationDetails,
+						com.tools20022.repository.msg.CashProceeds1.mmAccountDetails);
 				trace_lazy = () -> CashProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashProceeds1";
 				definition = "Provides information about the cash proceeds.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getPostingAmount() {
+		return postingAmount;
+	}
+
+	public void setPostingAmount(ActiveCurrencyAndAmount postingAmount) {
+		this.postingAmount = postingAmount;
+	}
+
+	public Max350Text getReconciliationDetails() {
+		return reconciliationDetails;
+	}
+
+	public void setReconciliationDetails(Max350Text reconciliationDetails) {
+		this.reconciliationDetails = reconciliationDetails;
+	}
+
+	public List<CashAccount19> getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(List<com.tools20022.repository.msg.CashAccount19> accountDetails) {
+		this.accountDetails = accountDetails;
 	}
 }

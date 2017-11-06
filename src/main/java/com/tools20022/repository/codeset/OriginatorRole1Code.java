@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#SystematicInternaliser
- * OriginatorRole1Code.SystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#mmSystematicInternaliser
+ * OriginatorRole1Code.mmSystematicInternaliser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#MultilateralTradingFacility
- * OriginatorRole1Code.MultilateralTradingFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#mmMultilateralTradingFacility
+ * OriginatorRole1Code.mmMultilateralTradingFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#RegulatedMarket
- * OriginatorRole1Code.RegulatedMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#mmRegulatedMarket
+ * OriginatorRole1Code.mmRegulatedMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#MarketMaker
- * OriginatorRole1Code.MarketMaker}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#mmMarketMaker
+ * OriginatorRole1Code.mmMarketMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#Investor
- * OriginatorRole1Code.Investor}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRole1Code#mmInvestor
+ * OriginatorRole1Code.mmInvestor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 * name} = "SystematicInternaliser"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystematicInternaliser = new MMCode() {
+	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
@@ -114,7 +114,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 * name} = "MultilateralTradingFacility"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultilateralTradingFacility = new MMCode() {
+	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralTradingFacility";
@@ -137,7 +137,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 * name} = "RegulatedMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatedMarket = new MMCode() {
+	public static final MMCode mmRegulatedMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatedMarket";
@@ -160,7 +160,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 * name} = "MarketMaker"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketMaker = new MMCode() {
+	public static final MMCode mmMarketMaker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
@@ -183,7 +183,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 * name} = "Investor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
@@ -194,13 +194,13 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SINT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginatorRole1Code";
 				definition = "Specifies in what capacity (role) the originator of a quote is acting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OriginatorRole1Code.SystematicInternaliser, com.tools20022.repository.codeset.OriginatorRole1Code.MultilateralTradingFacility,
-						com.tools20022.repository.codeset.OriginatorRole1Code.RegulatedMarket, com.tools20022.repository.codeset.OriginatorRole1Code.MarketMaker, com.tools20022.repository.codeset.OriginatorRole1Code.Investor);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OriginatorRole1Code.mmSystematicInternaliser, com.tools20022.repository.codeset.OriginatorRole1Code.mmMultilateralTradingFacility,
+						com.tools20022.repository.codeset.OriginatorRole1Code.mmRegulatedMarket, com.tools20022.repository.codeset.OriginatorRole1Code.mmMarketMaker, com.tools20022.repository.codeset.OriginatorRole1Code.mmInvestor);
 				trace_lazy = () -> OriginatorRoleCode.mmObject();
 			}
 		});

@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat41Choice#Date
- * DateFormat41Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat41Choice#DateCode
- * DateFormat41Choice.DateCode}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat41Choice#mmDate
+ * DateFormat41Choice.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat41Choice#mmDateCode
+ * DateFormat41Choice.mmDateCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateFormat41Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Date expressed as a calendar date.
 	 * <p>
@@ -84,7 +86,7 @@ public class DateFormat41Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat41Choice.mmObject();
 			isDerived = false;
@@ -92,11 +94,12 @@ public class DateFormat41Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateCode22Choice dateCode;
 	/**
 	 * Specifies the type of date.
 	 * <p>
@@ -123,7 +126,7 @@ public class DateFormat41Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateFormat41Choice.mmObject();
 			isDerived = false;
@@ -131,23 +134,39 @@ public class DateFormat41Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateCode22Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.DateCode22Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat41Choice.Date, com.tools20022.repository.choice.DateFormat41Choice.DateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat41Choice.mmDate, com.tools20022.repository.choice.DateFormat41Choice.mmDateCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateFormat41Choice";
 				definition = "Choice between an ISODate format or a date code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public DateCode22Choice getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(com.tools20022.repository.choice.DateCode22Choice dateCode) {
+		this.dateCode = dateCode;
 	}
 }

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope1Code#Local
- * PriceProtectionScope1Code.Local}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope1Code#mmLocal
+ * PriceProtectionScope1Code.mmLocal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope1Code#National
- * PriceProtectionScope1Code.National}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope1Code#mmNational
+ * PriceProtectionScope1Code.mmNational}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope1Code#Global
- * PriceProtectionScope1Code.Global}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope1Code#mmGlobal
+ * PriceProtectionScope1Code.mmGlobal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	 * name} = "Local"</li>
 	 * </ul>
 	 */
-	public static final MMCode Local = new MMCode() {
+	public static final MMCode mmLocal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Local";
@@ -108,7 +108,7 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	 * name} = "National"</li>
 	 * </ul>
 	 */
-	public static final MMCode National = new MMCode() {
+	public static final MMCode mmNational = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "National";
@@ -131,7 +131,7 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode Global = new MMCode() {
+	public static final MMCode mmGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
@@ -142,13 +142,13 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LOCA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceProtectionScope1Code";
 				definition = "Defines the type of price protection the customer requires on their order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceProtectionScope1Code.Local, com.tools20022.repository.codeset.PriceProtectionScope1Code.National,
-						com.tools20022.repository.codeset.PriceProtectionScope1Code.Global);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceProtectionScope1Code.mmLocal, com.tools20022.repository.codeset.PriceProtectionScope1Code.mmNational,
+						com.tools20022.repository.codeset.PriceProtectionScope1Code.mmGlobal);
 				trace_lazy = () -> PriceProtectionScopeCode.mmObject();
 			}
 		});

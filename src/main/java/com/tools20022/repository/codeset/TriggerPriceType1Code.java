@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#BestOffer
- * TriggerPriceType1Code.BestOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#mmBestOffer
+ * TriggerPriceType1Code.mmBestOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#LastTrade
- * TriggerPriceType1Code.LastTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#mmLastTrade
+ * TriggerPriceType1Code.mmLastTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#BestBid
- * TriggerPriceType1Code.BestBid}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#mmBestBid
+ * TriggerPriceType1Code.mmBestBid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#BestBidOrLastTrade
- * TriggerPriceType1Code.BestBidOrLastTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#mmBestBidOrLastTrade
+ * TriggerPriceType1Code.mmBestBidOrLastTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#BestOfferOrLastTrade
- * TriggerPriceType1Code.BestOfferOrLastTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#mmBestOfferOrLastTrade
+ * TriggerPriceType1Code.mmBestOfferOrLastTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#BestMid
- * TriggerPriceType1Code.BestMid}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceType1Code#mmBestMid
+ * TriggerPriceType1Code.mmBestMid}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 * name} = "BestOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode BestOffer = new MMCode() {
+	public static final MMCode mmBestOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestOffer";
@@ -116,7 +116,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 * name} = "LastTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode LastTrade = new MMCode() {
+	public static final MMCode mmLastTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTrade";
@@ -139,7 +139,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 * name} = "BestBid"</li>
 	 * </ul>
 	 */
-	public static final MMCode BestBid = new MMCode() {
+	public static final MMCode mmBestBid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestBid";
@@ -162,7 +162,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 * name} = "BestBidOrLastTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode BestBidOrLastTrade = new MMCode() {
+	public static final MMCode mmBestBidOrLastTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestBidOrLastTrade";
@@ -185,7 +185,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 * name} = "BestOfferOrLastTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode BestOfferOrLastTrade = new MMCode() {
+	public static final MMCode mmBestOfferOrLastTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestOfferOrLastTrade";
@@ -208,7 +208,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 * name} = "BestMid"</li>
 	 * </ul>
 	 */
-	public static final MMCode BestMid = new MMCode() {
+	public static final MMCode mmBestMid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestMid";
@@ -219,14 +219,14 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEOF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TriggerPriceType1Code";
 				definition = "Specifies the type of price that the trigger is compared to.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerPriceType1Code.BestOffer, com.tools20022.repository.codeset.TriggerPriceType1Code.LastTrade,
-						com.tools20022.repository.codeset.TriggerPriceType1Code.BestBid, com.tools20022.repository.codeset.TriggerPriceType1Code.BestBidOrLastTrade,
-						com.tools20022.repository.codeset.TriggerPriceType1Code.BestOfferOrLastTrade, com.tools20022.repository.codeset.TriggerPriceType1Code.BestMid);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestOffer, com.tools20022.repository.codeset.TriggerPriceType1Code.mmLastTrade,
+						com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestBid, com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestBidOrLastTrade,
+						com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestOfferOrLastTrade, com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestMid);
 				trace_lazy = () -> TriggerPriceTypeCode.mmObject();
 			}
 		});

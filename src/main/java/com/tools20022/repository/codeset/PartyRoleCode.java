@@ -30,85 +30,92 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#LiquidityManager
- * PartyRoleCode.LiquidityManager}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#LimitManager
- * PartyRoleCode.LimitManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmLiquidityManager
+ * PartyRoleCode.mmLiquidityManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#PaymentManager
- * PartyRoleCode.PaymentManager}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Reader
- * PartyRoleCode.Reader}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmLimitManager
+ * PartyRoleCode.mmLimitManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#BackupManager
- * PartyRoleCode.BackupManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmPaymentManager
+ * PartyRoleCode.mmPaymentManager}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmReader
+ * PartyRoleCode.mmReader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#SettlementManager
- * PartyRoleCode.SettlementManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmBackupManager
+ * PartyRoleCode.mmBackupManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#FundManagementCompany
- * PartyRoleCode.FundManagementCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmSettlementManager
+ * PartyRoleCode.mmSettlementManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#TransferAgent
- * PartyRoleCode.TransferAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmFundManagementCompany
+ * PartyRoleCode.mmFundManagementCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#FundAccountant
- * PartyRoleCode.FundAccountant}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Registrar
- * PartyRoleCode.Registrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmTransferAgent
+ * PartyRoleCode.mmTransferAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#InvestmentManager
- * PartyRoleCode.InvestmentManager}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Custodian
- * PartyRoleCode.Custodian}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Auditor
- * PartyRoleCode.Auditor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#PayingAgent
- * PartyRoleCode.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmFundAccountant
+ * PartyRoleCode.mmFundAccountant}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmRegistrar
+ * PartyRoleCode.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#CashCorrespondent
- * PartyRoleCode.CashCorrespondent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#DataProvider
- * PartyRoleCode.DataProvider}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#FinalAgent
- * PartyRoleCode.FinalAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Investor
- * PartyRoleCode.Investor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#FirstAgent
- * PartyRoleCode.FirstAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Intermediary
- * PartyRoleCode.Intermediary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Distributor
- * PartyRoleCode.Distributor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Concentrator
- * PartyRoleCode.Concentrator}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmInvestmentManager
+ * PartyRoleCode.mmInvestmentManager}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmCustodian
+ * PartyRoleCode.mmCustodian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmAuditor
+ * PartyRoleCode.mmAuditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#UnderlyingClient1
- * PartyRoleCode.UnderlyingClient1}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmPayingAgent
+ * PartyRoleCode.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#UnderlyingClient2
- * PartyRoleCode.UnderlyingClient2}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmCashCorrespondent
+ * PartyRoleCode.mmCashCorrespondent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#TransmittingAgent
- * PartyRoleCode.TransmittingAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#FundBroker
- * PartyRoleCode.FundBroker}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmDataProvider
+ * PartyRoleCode.mmDataProvider}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmFinalAgent
+ * PartyRoleCode.mmFinalAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmInvestor
+ * PartyRoleCode.mmInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmFirstAgent
+ * PartyRoleCode.mmFirstAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#FinancialAdvisor
- * PartyRoleCode.FinancialAdvisor}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmIntermediary
+ * PartyRoleCode.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#ContactPersonAtInstructingPartyInstitution
- * PartyRoleCode.ContactPersonAtInstructingPartyInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmDistributor
+ * PartyRoleCode.mmDistributor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#ContactPersonAtExecutingPartyInstitution
- * PartyRoleCode.ContactPersonAtExecutingPartyInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmConcentrator
+ * PartyRoleCode.mmConcentrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#NameOfAgentToOrder
- * PartyRoleCode.NameOfAgentToOrder}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#PrimeBroker
- * PartyRoleCode.PrimeBroker}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#Internal
- * PartyRoleCode.Internal}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmUnderlyingClient1
+ * PartyRoleCode.mmUnderlyingClient1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmUnderlyingClient2
+ * PartyRoleCode.mmUnderlyingClient2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmTransmittingAgent
+ * PartyRoleCode.mmTransmittingAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmFundBroker
+ * PartyRoleCode.mmFundBroker}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmFinancialAdvisor
+ * PartyRoleCode.mmFinancialAdvisor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmContactPersonAtInstructingPartyInstitution
+ * PartyRoleCode.mmContactPersonAtInstructingPartyInstitution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmContactPersonAtExecutingPartyInstitution
+ * PartyRoleCode.mmContactPersonAtExecutingPartyInstitution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmNameOfAgentToOrder
+ * PartyRoleCode.mmNameOfAgentToOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmPrimeBroker
+ * PartyRoleCode.mmPrimeBroker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRoleCode#mmInternal
+ * PartyRoleCode.mmInternal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -139,8 +146,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -186,7 +193,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidityManager = new MMCode() {
+	public static final MMCode mmLiquidityManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LiquidityManager";
@@ -221,7 +228,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LimitManager = new MMCode() {
+	public static final MMCode mmLimitManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LimitManager";
@@ -255,7 +262,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentManager = new MMCode() {
+	public static final MMCode mmPaymentManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentManager";
@@ -288,7 +295,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Reader = new MMCode() {
+	public static final MMCode mmReader = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Reader";
@@ -321,7 +328,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BackupManager = new MMCode() {
+	public static final MMCode mmBackupManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BackupManager";
@@ -354,7 +361,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementManager = new MMCode() {
+	public static final MMCode mmSettlementManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementManager";
@@ -388,7 +395,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FundManagementCompany = new MMCode() {
+	public static final MMCode mmFundManagementCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FundManagementCompany";
@@ -428,7 +435,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TransferAgent = new MMCode() {
+	public static final MMCode mmTransferAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferAgent";
@@ -462,7 +469,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FundAccountant = new MMCode() {
+	public static final MMCode mmFundAccountant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FundAccountant";
@@ -497,7 +504,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Registrar = new MMCode() {
+	public static final MMCode mmRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Registrar";
@@ -532,7 +539,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentManager = new MMCode() {
+	public static final MMCode mmInvestmentManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentManager";
@@ -563,7 +570,7 @@ public class PartyRoleCode {
 	 * "Party that safekeeps and administers assets on behalf of the owner."</li>
 	 * </ul>
 	 */
-	public static final MMCode Custodian = new MMCode() {
+	public static final MMCode mmCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Custodian";
@@ -594,7 +601,7 @@ public class PartyRoleCode {
 	 * "Party that regularly monitors compliance with the legal regulations."</li>
 	 * </ul>
 	 */
-	public static final MMCode Auditor = new MMCode() {
+	public static final MMCode mmAuditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Auditor";
@@ -632,7 +639,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PayingAgent = new MMCode() {
+	public static final MMCode mmPayingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PayingAgent";
@@ -665,7 +672,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashCorrespondent = new MMCode() {
+	public static final MMCode mmCashCorrespondent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashCorrespondent";
@@ -699,7 +706,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DataProvider = new MMCode() {
+	public static final MMCode mmDataProvider = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DataProvider";
@@ -732,7 +739,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FinalAgent = new MMCode() {
+	public static final MMCode mmFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinalAgent";
@@ -765,7 +772,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Investor";
@@ -798,7 +805,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FirstAgent = new MMCode() {
+	public static final MMCode mmFirstAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FirstAgent";
@@ -839,7 +846,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Intermediary";
@@ -869,7 +876,7 @@ public class PartyRoleCode {
 	 * definition} = "Party that act as an wholesaler of funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode Distributor = new MMCode() {
+	public static final MMCode mmDistributor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Distributor";
@@ -900,7 +907,7 @@ public class PartyRoleCode {
 	 * "Party that acts as an aggregator of funds, also called a funds hub."</li>
 	 * </ul>
 	 */
-	public static final MMCode Concentrator = new MMCode() {
+	public static final MMCode mmConcentrator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Concentrator";
@@ -930,7 +937,7 @@ public class PartyRoleCode {
 	 * definition} = "Underlying client of the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderlyingClient1 = new MMCode() {
+	public static final MMCode mmUnderlyingClient1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingClient1";
@@ -960,7 +967,7 @@ public class PartyRoleCode {
 	 * definition} = "Underlying client of underlying client 1."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderlyingClient2 = new MMCode() {
+	public static final MMCode mmUnderlyingClient2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingClient2";
@@ -991,7 +998,7 @@ public class PartyRoleCode {
 	 * "Party that transmits the instruction, advice, notification or report."</li>
 	 * </ul>
 	 */
-	public static final MMCode TransmittingAgent = new MMCode() {
+	public static final MMCode mmTransmittingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransmittingAgent";
@@ -1024,7 +1031,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FundBroker = new MMCode() {
+	public static final MMCode mmFundBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FundBroker";
@@ -1055,7 +1062,7 @@ public class PartyRoleCode {
 	 * "Party that supplies information and advice on investment products."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialAdvisor = new MMCode() {
+	public static final MMCode mmFinancialAdvisor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialAdvisor";
@@ -1087,7 +1094,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ContactPersonAtInstructingPartyInstitution = new MMCode() {
+	public static final MMCode mmContactPersonAtInstructingPartyInstitution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPersonAtInstructingPartyInstitution";
@@ -1118,7 +1125,7 @@ public class PartyRoleCode {
 	 * "Party acting as the contact person at the executing party institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode ContactPersonAtExecutingPartyInstitution = new MMCode() {
+	public static final MMCode mmContactPersonAtExecutingPartyInstitution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPersonAtExecutingPartyInstitution";
@@ -1149,7 +1156,7 @@ public class PartyRoleCode {
 	 * "Name of Agent to the order, if different from the instructing party."</li>
 	 * </ul>
 	 */
-	public static final MMCode NameOfAgentToOrder = new MMCode() {
+	public static final MMCode mmNameOfAgentToOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOfAgentToOrder";
@@ -1184,7 +1191,7 @@ public class PartyRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PrimeBroker = new MMCode() {
+	public static final MMCode mmPrimeBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimeBroker";
@@ -1214,7 +1221,7 @@ public class PartyRoleCode {
 	 * definition} = "Party acting as an internal agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode Internal = new MMCode() {
+	public static final MMCode mmInternal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Internal";
@@ -1227,22 +1234,23 @@ public class PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LQMG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyRoleCode";
 				definition = "Specifies the role of the party in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyRoleCode.LiquidityManager, com.tools20022.repository.codeset.PartyRoleCode.LimitManager, com.tools20022.repository.codeset.PartyRoleCode.PaymentManager,
-						com.tools20022.repository.codeset.PartyRoleCode.Reader, com.tools20022.repository.codeset.PartyRoleCode.BackupManager, com.tools20022.repository.codeset.PartyRoleCode.SettlementManager,
-						com.tools20022.repository.codeset.PartyRoleCode.FundManagementCompany, com.tools20022.repository.codeset.PartyRoleCode.TransferAgent, com.tools20022.repository.codeset.PartyRoleCode.FundAccountant,
-						com.tools20022.repository.codeset.PartyRoleCode.Registrar, com.tools20022.repository.codeset.PartyRoleCode.InvestmentManager, com.tools20022.repository.codeset.PartyRoleCode.Custodian,
-						com.tools20022.repository.codeset.PartyRoleCode.Auditor, com.tools20022.repository.codeset.PartyRoleCode.PayingAgent, com.tools20022.repository.codeset.PartyRoleCode.CashCorrespondent,
-						com.tools20022.repository.codeset.PartyRoleCode.DataProvider, com.tools20022.repository.codeset.PartyRoleCode.FinalAgent, com.tools20022.repository.codeset.PartyRoleCode.Investor,
-						com.tools20022.repository.codeset.PartyRoleCode.FirstAgent, com.tools20022.repository.codeset.PartyRoleCode.Intermediary, com.tools20022.repository.codeset.PartyRoleCode.Distributor,
-						com.tools20022.repository.codeset.PartyRoleCode.Concentrator, com.tools20022.repository.codeset.PartyRoleCode.UnderlyingClient1, com.tools20022.repository.codeset.PartyRoleCode.UnderlyingClient2,
-						com.tools20022.repository.codeset.PartyRoleCode.TransmittingAgent, com.tools20022.repository.codeset.PartyRoleCode.FundBroker, com.tools20022.repository.codeset.PartyRoleCode.FinancialAdvisor,
-						com.tools20022.repository.codeset.PartyRoleCode.ContactPersonAtInstructingPartyInstitution, com.tools20022.repository.codeset.PartyRoleCode.ContactPersonAtExecutingPartyInstitution,
-						com.tools20022.repository.codeset.PartyRoleCode.NameOfAgentToOrder, com.tools20022.repository.codeset.PartyRoleCode.PrimeBroker, com.tools20022.repository.codeset.PartyRoleCode.Internal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyRoleCode.mmLiquidityManager, com.tools20022.repository.codeset.PartyRoleCode.mmLimitManager,
+						com.tools20022.repository.codeset.PartyRoleCode.mmPaymentManager, com.tools20022.repository.codeset.PartyRoleCode.mmReader, com.tools20022.repository.codeset.PartyRoleCode.mmBackupManager,
+						com.tools20022.repository.codeset.PartyRoleCode.mmSettlementManager, com.tools20022.repository.codeset.PartyRoleCode.mmFundManagementCompany, com.tools20022.repository.codeset.PartyRoleCode.mmTransferAgent,
+						com.tools20022.repository.codeset.PartyRoleCode.mmFundAccountant, com.tools20022.repository.codeset.PartyRoleCode.mmRegistrar, com.tools20022.repository.codeset.PartyRoleCode.mmInvestmentManager,
+						com.tools20022.repository.codeset.PartyRoleCode.mmCustodian, com.tools20022.repository.codeset.PartyRoleCode.mmAuditor, com.tools20022.repository.codeset.PartyRoleCode.mmPayingAgent,
+						com.tools20022.repository.codeset.PartyRoleCode.mmCashCorrespondent, com.tools20022.repository.codeset.PartyRoleCode.mmDataProvider, com.tools20022.repository.codeset.PartyRoleCode.mmFinalAgent,
+						com.tools20022.repository.codeset.PartyRoleCode.mmInvestor, com.tools20022.repository.codeset.PartyRoleCode.mmFirstAgent, com.tools20022.repository.codeset.PartyRoleCode.mmIntermediary,
+						com.tools20022.repository.codeset.PartyRoleCode.mmDistributor, com.tools20022.repository.codeset.PartyRoleCode.mmConcentrator, com.tools20022.repository.codeset.PartyRoleCode.mmUnderlyingClient1,
+						com.tools20022.repository.codeset.PartyRoleCode.mmUnderlyingClient2, com.tools20022.repository.codeset.PartyRoleCode.mmTransmittingAgent, com.tools20022.repository.codeset.PartyRoleCode.mmFundBroker,
+						com.tools20022.repository.codeset.PartyRoleCode.mmFinancialAdvisor, com.tools20022.repository.codeset.PartyRoleCode.mmContactPersonAtInstructingPartyInstitution,
+						com.tools20022.repository.codeset.PartyRoleCode.mmContactPersonAtExecutingPartyInstitution, com.tools20022.repository.codeset.PartyRoleCode.mmNameOfAgentToOrder,
+						com.tools20022.repository.codeset.PartyRoleCode.mmPrimeBroker, com.tools20022.repository.codeset.PartyRoleCode.mmInternal);
 				derivation_lazy = () -> Arrays.asList(InvestmentFundRole1Code.mmObject(), InvestmentFundRole3Code.mmObject(), InvestmentFundRole2Code.mmObject(), PaymentRole1Code.mmObject(), InvestmentFundRole4Code.mmObject(),
 						InvestmentFundRole5Code.mmObject(), InvestmentFundRole6Code.mmObject(), InvestmentFundRole7Code.mmObject(), InternalPartyRole1Code.mmObject(), PartyRole1Code.mmObject());
 			}

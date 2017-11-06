@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#Code
- * WarrantStyle2Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#mmCode
+ * WarrantStyle2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#Proprietary
- * WarrantStyle2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.WarrantStyle2Choice#mmProprietary
+ * WarrantStyle2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class WarrantStyle2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected WarrantStyle1Code code;
 	/**
 	 * Warrant style expressed as an ISO 20022 code.
 	 * <p>
@@ -75,8 +76,8 @@ public class WarrantStyle2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Warrant#Style Warrant.Style}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Warrant#mmStyle
+	 * Warrant.mmStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class WarrantStyle2Choice {
 	 * definition} = "Warrant style expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmStyle;
 			componentContext_lazy = () -> WarrantStyle2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.Style;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Warrant style expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> WarrantStyle1Code.mmObject();
 		}
 	};
+	protected GenericIdentification40 proprietary;
 	/**
 	 * Warrant style expressed as a proprietary code.
 	 * <p>
@@ -121,8 +123,8 @@ public class WarrantStyle2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Warrant#Style Warrant.Style}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Warrant#mmStyle
+	 * Warrant.mmStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,33 +143,49 @@ public class WarrantStyle2Choice {
 	 * definition} = "Warrant style expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmStyle;
 			componentContext_lazy = () -> WarrantStyle2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.Style;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Warrant style expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification40.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.WarrantStyle2Choice.Code, com.tools20022.repository.choice.WarrantStyle2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.WarrantStyle2Choice.mmCode, com.tools20022.repository.choice.WarrantStyle2Choice.mmProprietary);
 				trace_lazy = () -> Warrant.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "WarrantStyle2Choice";
 				definition = "Choice of format for warrant style.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public WarrantStyle1Code getCode() {
+		return code;
+	}
+
+	public void setCode(WarrantStyle1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification40 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification40 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

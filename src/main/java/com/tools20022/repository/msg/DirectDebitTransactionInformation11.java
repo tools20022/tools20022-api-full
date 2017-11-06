@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.DirectDebit;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides further details specific to the individual direct debit
@@ -39,56 +40,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#PaymentIdentification
- * DirectDebitTransactionInformation11.PaymentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmPaymentIdentification
+ * DirectDebitTransactionInformation11.mmPaymentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#PaymentTypeInformation
- * DirectDebitTransactionInformation11.PaymentTypeInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmPaymentTypeInformation
+ * DirectDebitTransactionInformation11.mmPaymentTypeInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#InstructedAmount
- * DirectDebitTransactionInformation11.InstructedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmInstructedAmount
+ * DirectDebitTransactionInformation11.mmInstructedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#ChargeBearer
- * DirectDebitTransactionInformation11.ChargeBearer}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmChargeBearer
+ * DirectDebitTransactionInformation11.mmChargeBearer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#DirectDebitTransaction
- * DirectDebitTransactionInformation11.DirectDebitTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmDirectDebitTransaction
+ * DirectDebitTransactionInformation11.mmDirectDebitTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#UltimateCreditor
- * DirectDebitTransactionInformation11.UltimateCreditor}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmUltimateCreditor
+ * DirectDebitTransactionInformation11.mmUltimateCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#DebtorAgent
- * DirectDebitTransactionInformation11.DebtorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmDebtorAgent
+ * DirectDebitTransactionInformation11.mmDebtorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#DebtorAgentAccount
- * DirectDebitTransactionInformation11.DebtorAgentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmDebtorAgentAccount
+ * DirectDebitTransactionInformation11.mmDebtorAgentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#Debtor
- * DirectDebitTransactionInformation11.Debtor}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmDebtor
+ * DirectDebitTransactionInformation11.mmDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#DebtorAccount
- * DirectDebitTransactionInformation11.DebtorAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmDebtorAccount
+ * DirectDebitTransactionInformation11.mmDebtorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#UltimateDebtor
- * DirectDebitTransactionInformation11.UltimateDebtor}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmUltimateDebtor
+ * DirectDebitTransactionInformation11.mmUltimateDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#InstructionForCreditorAgent
- * DirectDebitTransactionInformation11.InstructionForCreditorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmInstructionForCreditorAgent
+ * DirectDebitTransactionInformation11.mmInstructionForCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#Purpose
- * DirectDebitTransactionInformation11.Purpose}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmPurpose
+ * DirectDebitTransactionInformation11.mmPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#RegulatoryReporting
- * DirectDebitTransactionInformation11.RegulatoryReporting}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmRegulatoryReporting
+ * DirectDebitTransactionInformation11.mmRegulatoryReporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#Tax
- * DirectDebitTransactionInformation11.Tax}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmTax
+ * DirectDebitTransactionInformation11.mmTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#RelatedRemittanceInformation
- * DirectDebitTransactionInformation11.RelatedRemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmRelatedRemittanceInformation
+ * DirectDebitTransactionInformation11.mmRelatedRemittanceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#RemittanceInformation
- * DirectDebitTransactionInformation11.RemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmRemittanceInformation
+ * DirectDebitTransactionInformation11.mmRemittanceInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -97,8 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,6 +123,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DirectDebitTransactionInformation11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentIdentification1 paymentIdentification;
 	/**
 	 * Set of elements used to reference a payment instruction.
 	 * <p>
@@ -133,8 +135,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentRelatedIdentifications
-	 * Payment.PaymentRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
+	 * Payment.mmPaymentRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,21 +155,22 @@ public class DirectDebitTransactionInformation11 {
 	 * definition} = "Set of elements used to reference a payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "PmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Set of elements used to reference a payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentIdentification1.mmObject();
 		}
 	};
+	protected PaymentTypeInformation24 paymentTypeInformation;
 	/**
 	 * Set of elements used to further specify the type of transaction.
 	 * <p>
@@ -180,8 +183,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentExecution
-	 * Payment.PaymentExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentExecution
+	 * Payment.mmPaymentExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,21 +204,22 @@ public class DirectDebitTransactionInformation11 {
 	 * "Set of elements used to further specify the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTypeInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentExecution;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentExecution;
 			isDerived = false;
 			xmlTag = "PmtTpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentTypeInformation24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation24.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount instructedAmount;
 	/**
 	 * Amount of money to be moved between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency as ordered by the
@@ -231,8 +235,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,20 +257,21 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ChargeBearerType1Code chargeBearer;
 	/**
 	 * Specifies which party/parties will bear the charges associated with the
 	 * processing of the payment transaction.
@@ -281,8 +286,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#BearerType
-	 * Charges.BearerType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmBearerType
+	 * Charges.mmBearerType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -303,20 +308,21 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargeBearer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmBearerType;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.BearerType;
 			isDerived = false;
 			xmlTag = "ChrgBr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
 	};
+	protected DirectDebitTransaction7 directDebitTransaction;
 	/**
 	 * Provides information specific to the direct debit mandate.
 	 * <p>
@@ -349,21 +355,22 @@ public class DirectDebitTransactionInformation11 {
 	 * "Provides information specific to the direct debit mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DirectDebitTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDirectDebitTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
+			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebitTransaction";
 			definition = "Provides information specific to the direct debit mandate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DirectDebitTransaction7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction7.mmObject();
 		}
 	};
+	protected PartyIdentification43 ultimateCreditor;
 	/**
 	 * Ultimate party to which an amount of money is due.
 	 * <p>
@@ -375,8 +382,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -395,21 +402,22 @@ public class DirectDebitTransactionInformation11 {
 	 * definition} = "Ultimate party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UltimateCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "UltmtCdtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate party to which an amount of money is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 debtorAgent;
 	/**
 	 * Financial institution servicing an account for the debtor.
 	 * <p>
@@ -422,8 +430,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -443,21 +451,22 @@ public class DirectDebitTransactionInformation11 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected CashAccount24 debtorAgentAccount;
 	/**
 	 * Unambiguous identification of the account of the debtor agent at its
 	 * servicing agent in the payment chain.
@@ -470,8 +479,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -492,21 +501,22 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAgentAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "DbtrAgtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected PartyIdentification43 debtor;
 	/**
 	 * Party that owes an amount of money to the (ultimate) creditor.
 	 * <p>
@@ -518,8 +528,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -539,21 +549,22 @@ public class DirectDebitTransactionInformation11 {
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Debtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected CashAccount24 debtorAccount;
 	/**
 	 * Unambiguous identification of the account of the debtor to which a debit
 	 * entry will be made as a result of the transaction.
@@ -566,8 +577,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -588,21 +599,22 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected PartyIdentification43 ultimateDebtor;
 	/**
 	 * Ultimate party that owes an amount of money to the (ultimate) creditor.
 	 * <p>
@@ -614,8 +626,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -636,21 +648,22 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UltimateDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "UltmtDbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected Max140Text instructionForCreditorAgent;
 	/**
 	 * Further information, related to the processing of the payment
 	 * instruction, that may need to be acted upon by the creditor agent,
@@ -665,8 +678,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructionForCreditorAgent
-	 * Payment.InstructionForCreditorAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForCreditorAgent
+	 * Payment.mmInstructionForCreditorAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -687,20 +700,21 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionForCreditorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionForCreditorAgent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructionForCreditorAgent;
 			isDerived = false;
 			xmlTag = "InstrForCdtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgent";
 			definition = "Further information, related to the processing of the payment instruction, that may need to be acted upon by the creditor agent, depending on agreement between creditor and the creditor agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Purpose2Choice purpose;
 	/**
 	 * Underlying reason for the payment transaction. Usage: Purpose is used by
 	 * the end-customers, that is initiating party, (ultimate) debtor,
@@ -716,8 +730,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#CategoryPurpose
-	 * PaymentProcessing.CategoryPurpose}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmCategoryPurpose
+	 * PaymentProcessing.mmCategoryPurpose}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -738,21 +752,22 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Purpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.CategoryPurpose;
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Purpose2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Purpose2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.RegulatoryReporting3> regulatoryReporting;
 	/**
 	 * Information needed due to regulatory and statutory requirements.
 	 * <p>
@@ -764,8 +779,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction#RegulatoryReport
-	 * FinancialTransaction.RegulatoryReport}</li>
+	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmRegulatoryReport
+	 * FinancialTransaction.mmRegulatoryReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -785,21 +800,22 @@ public class DirectDebitTransactionInformation11 {
 	 * "Information needed due to regulatory and statutory requirements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegulatoryReporting = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegulatoryReporting = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmRegulatoryReport;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.RegulatoryReport;
 			isDerived = false;
 			xmlTag = "RgltryRptg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryReporting";
 			definition = "Information needed due to regulatory and statutory requirements.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> RegulatoryReporting3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting3.mmObject();
 		}
 	};
+	protected TaxInformation3 tax;
 	/**
 	 * Provides details on the tax.
 	 * <p>
@@ -811,8 +827,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#TaxOnPayment
-	 * Payment.TaxOnPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmTaxOnPayment
+	 * Payment.mmTaxOnPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -831,21 +847,22 @@ public class DirectDebitTransactionInformation11 {
 	 * definition} = "Provides details on the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Tax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmTaxOnPayment;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.TaxOnPayment;
 			isDerived = false;
 			xmlTag = "Tax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Provides details on the tax.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TaxInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxInformation3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.RemittanceLocation2> relatedRemittanceInformation;
 	/**
 	 * Provides information related to the handling of the remittance
 	 * information by any of the agents in the transaction processing chain.
@@ -858,8 +875,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#PlaceOfStorage
-	 * Document.PlaceOfStorage}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmPlaceOfStorage
+	 * Document.mmPlaceOfStorage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -880,21 +897,22 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedRemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedRemittanceInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPlaceOfStorage;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.PlaceOfStorage;
 			isDerived = false;
 			xmlTag = "RltdRmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedRemittanceInformation";
 			definition = "Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> RemittanceLocation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RemittanceLocation2.mmObject();
 		}
 	};
+	protected RemittanceInformation7 remittanceInformation;
 	/**
 	 * Information supplied to enable the matching of an entry with the items
 	 * that the transfer is intended to settle, such as commercial invoices in
@@ -908,8 +926,8 @@ public class DirectDebitTransactionInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#AssociatedDocument
-	 * PaymentObligation.AssociatedDocument}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAssociatedDocument
+	 * PaymentObligation.mmAssociatedDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -930,36 +948,36 @@ public class DirectDebitTransactionInformation11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> DirectDebitTransactionInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.AssociatedDocument;
 			isDerived = false;
 			xmlTag = "RmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RemittanceInformation7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RemittanceInformation7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation11.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation11.PaymentTypeInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.InstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation11.ChargeBearer,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.DirectDebitTransaction, com.tools20022.repository.msg.DirectDebitTransactionInformation11.UltimateCreditor,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.DebtorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation11.DebtorAgentAccount,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.Debtor, com.tools20022.repository.msg.DirectDebitTransactionInformation11.DebtorAccount,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.UltimateDebtor, com.tools20022.repository.msg.DirectDebitTransactionInformation11.InstructionForCreditorAgent,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.Purpose, com.tools20022.repository.msg.DirectDebitTransactionInformation11.RegulatoryReporting,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.Tax, com.tools20022.repository.msg.DirectDebitTransactionInformation11.RelatedRemittanceInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation11.RemittanceInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmPaymentIdentification,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmPaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmInstructedAmount,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmDirectDebitTransaction,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmUltimateCreditor, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmDebtorAgent,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmDebtorAgentAccount, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmDebtor,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmDebtorAccount, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmUltimateDebtor,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmInstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmPurpose,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmTax,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmRelatedRemittanceInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmRemittanceInformation);
 				trace_lazy = () -> DirectDebit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DirectDebitTransactionInformation11";
 				definition = "Provides further details specific to the individual direct debit transaction(s) included in the message.";
@@ -967,5 +985,141 @@ public class DirectDebitTransactionInformation11 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentIdentification1 getPaymentIdentification() {
+		return paymentIdentification;
+	}
+
+	public void setPaymentIdentification(com.tools20022.repository.msg.PaymentIdentification1 paymentIdentification) {
+		this.paymentIdentification = paymentIdentification;
+	}
+
+	public PaymentTypeInformation24 getPaymentTypeInformation() {
+		return paymentTypeInformation;
+	}
+
+	public void setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation24 paymentTypeInformation) {
+		this.paymentTypeInformation = paymentTypeInformation;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getInstructedAmount() {
+		return instructedAmount;
+	}
+
+	public void setInstructedAmount(ActiveOrHistoricCurrencyAndAmount instructedAmount) {
+		this.instructedAmount = instructedAmount;
+	}
+
+	public ChargeBearerType1Code getChargeBearer() {
+		return chargeBearer;
+	}
+
+	public void setChargeBearer(ChargeBearerType1Code chargeBearer) {
+		this.chargeBearer = chargeBearer;
+	}
+
+	public DirectDebitTransaction7 getDirectDebitTransaction() {
+		return directDebitTransaction;
+	}
+
+	public void setDirectDebitTransaction(com.tools20022.repository.msg.DirectDebitTransaction7 directDebitTransaction) {
+		this.directDebitTransaction = directDebitTransaction;
+	}
+
+	public PartyIdentification43 getUltimateCreditor() {
+		return ultimateCreditor;
+	}
+
+	public void setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification43 ultimateCreditor) {
+		this.ultimateCreditor = ultimateCreditor;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
+		return debtorAgent;
+	}
+
+	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+		this.debtorAgent = debtorAgent;
+	}
+
+	public CashAccount24 getDebtorAgentAccount() {
+		return debtorAgentAccount;
+	}
+
+	public void setDebtorAgentAccount(com.tools20022.repository.msg.CashAccount24 debtorAgentAccount) {
+		this.debtorAgentAccount = debtorAgentAccount;
+	}
+
+	public PartyIdentification43 getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(com.tools20022.repository.msg.PartyIdentification43 debtor) {
+		this.debtor = debtor;
+	}
+
+	public CashAccount24 getDebtorAccount() {
+		return debtorAccount;
+	}
+
+	public void setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
+		this.debtorAccount = debtorAccount;
+	}
+
+	public PartyIdentification43 getUltimateDebtor() {
+		return ultimateDebtor;
+	}
+
+	public void setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification43 ultimateDebtor) {
+		this.ultimateDebtor = ultimateDebtor;
+	}
+
+	public Max140Text getInstructionForCreditorAgent() {
+		return instructionForCreditorAgent;
+	}
+
+	public void setInstructionForCreditorAgent(Max140Text instructionForCreditorAgent) {
+		this.instructionForCreditorAgent = instructionForCreditorAgent;
+	}
+
+	public Purpose2Choice getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(Purpose2Choice purpose) {
+		this.purpose = purpose;
+	}
+
+	public List<RegulatoryReporting3> getRegulatoryReporting() {
+		return regulatoryReporting;
+	}
+
+	public void setRegulatoryReporting(List<com.tools20022.repository.msg.RegulatoryReporting3> regulatoryReporting) {
+		this.regulatoryReporting = regulatoryReporting;
+	}
+
+	public TaxInformation3 getTax() {
+		return tax;
+	}
+
+	public void setTax(com.tools20022.repository.msg.TaxInformation3 tax) {
+		this.tax = tax;
+	}
+
+	public List<RemittanceLocation2> getRelatedRemittanceInformation() {
+		return relatedRemittanceInformation;
+	}
+
+	public void setRelatedRemittanceInformation(List<com.tools20022.repository.msg.RemittanceLocation2> relatedRemittanceInformation) {
+		this.relatedRemittanceInformation = relatedRemittanceInformation;
+	}
+
+	public RemittanceInformation7 getRemittanceInformation() {
+		return remittanceInformation;
+	}
+
+	public void setRemittanceInformation(com.tools20022.repository.msg.RemittanceInformation7 remittanceInformation) {
+		this.remittanceInformation = remittanceInformation;
 	}
 }

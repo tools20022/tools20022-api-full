@@ -23,8 +23,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Organised structure that is set up for a particular purpose, for example, a
@@ -36,12 +38,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation23#Name
- * Organisation23.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation23#ShortName
- * Organisation23.ShortName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation23#PostalAddress
- * Organisation23.PostalAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation23#mmName
+ * Organisation23.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation23#mmShortName
+ * Organisation23.mmShortName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation23#mmPostalAddress
+ * Organisation23.mmPostalAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Organisation23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -83,8 +86,8 @@ public class Organisation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,25 +108,26 @@ public class Organisation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Organisation24#Name
-	 * Organisation24.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation24#mmName
+	 * Organisation24.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> Organisation23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.Name;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.mmName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text shortName;
 	/**
 	 * Name of the organisation in short form.
 	 * <p>
@@ -136,8 +140,8 @@ public class Organisation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationName#ShortName
-	 * OrganisationName.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationName#mmShortName
+	 * OrganisationName.mmShortName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,25 +160,26 @@ public class Organisation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Organisation24#ShortName
-	 * Organisation24.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation24#mmShortName
+	 * Organisation24.mmShortName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmShortName;
 			componentContext_lazy = () -> Organisation23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.ShortName;
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Name of the organisation in short form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.ShortName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.mmShortName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PostalAddress21> postalAddress;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services.
@@ -209,33 +214,33 @@ public class Organisation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Organisation24#PostalAddress
-	 * Organisation24.PostalAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation24#mmPostalAddress
+	 * Organisation24.mmPostalAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> Organisation23.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.PostalAddress;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.mmPostalAddress;
 			maxOccurs = 5;
-			type_lazy = () -> PostalAddress21.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation23.Name, com.tools20022.repository.msg.Organisation23.ShortName, com.tools20022.repository.msg.Organisation23.PostalAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation23.mmName, com.tools20022.repository.msg.Organisation23.mmShortName, com.tools20022.repository.msg.Organisation23.mmPostalAddress);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Organisation23";
 				definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
@@ -243,5 +248,29 @@ public class Organisation23 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getShortName() {
+		return shortName;
+	}
+
+	public void setShortName(Max35Text shortName) {
+		this.shortName = shortName;
+	}
+
+	public List<PostalAddress21> getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(List<com.tools20022.repository.msg.PostalAddress21> postalAddress) {
+		this.postalAddress = postalAddress;
 	}
 }

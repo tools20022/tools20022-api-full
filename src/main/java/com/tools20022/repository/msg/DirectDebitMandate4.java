@@ -39,36 +39,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#DebtorAccount
- * DirectDebitMandate4.DebtorAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate4#Debtor
- * DirectDebitMandate4.Debtor}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtorAccount
+ * DirectDebitMandate4.mmDebtorAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtor
+ * DirectDebitMandate4.mmDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#DebtorTaxIdentificationNumber
- * DirectDebitMandate4.DebtorTaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtorTaxIdentificationNumber
+ * DirectDebitMandate4.mmDebtorTaxIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#DebtorNationalRegistrationNumber
- * DirectDebitMandate4.DebtorNationalRegistrationNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate4#Creditor
- * DirectDebitMandate4.Creditor}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtorNationalRegistrationNumber
+ * DirectDebitMandate4.mmDebtorNationalRegistrationNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmCreditor
+ * DirectDebitMandate4.mmCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#DebtorAgent
- * DirectDebitMandate4.DebtorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtorAgent
+ * DirectDebitMandate4.mmDebtorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#DebtorAgentBranch
- * DirectDebitMandate4.DebtorAgentBranch}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtorAgentBranch
+ * DirectDebitMandate4.mmDebtorAgentBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#CreditorAgent
- * DirectDebitMandate4.CreditorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmCreditorAgent
+ * DirectDebitMandate4.mmCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#CreditorAgentBranch
- * DirectDebitMandate4.CreditorAgentBranch}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmCreditorAgentBranch
+ * DirectDebitMandate4.mmCreditorAgentBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#RegistrationIdentification
- * DirectDebitMandate4.RegistrationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmRegistrationIdentification
+ * DirectDebitMandate4.mmRegistrationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#MandateIdentification
- * DirectDebitMandate4.MandateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmMandateIdentification
+ * DirectDebitMandate4.mmMandateIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -77,8 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DirectDebitMandate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentificationAndName3 debtorAccount;
 	/**
 	 * Unambiguous identification of the account of the debtor to which a debit
 	 * entry will be made as a result of the transaction.
@@ -117,8 +118,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,30 +142,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#DebtorAccount
-	 * DirectDebitMandate5.DebtorAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtorAccount
+	 * DirectDebitMandate5.mmDebtorAccount}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#DebtorAccount
-	 * DirectDebitMandate6.DebtorAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorAccount
+	 * DirectDebitMandate6.mmDebtorAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebtorAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtorAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.DebtorAccount, com.tools20022.repository.msg.DirectDebitMandate6.DebtorAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorAccount, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorAccount);
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentificationAndName3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice debtor;
 	/**
 	 * Party that owes the cash to the creditor/final party. The debtor is also
 	 * the debit account owner.
@@ -179,8 +181,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,29 +204,32 @@ public class DirectDebitMandate4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate5#Debtor
-	 * DirectDebitMandate5.Debtor}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate6#Debtor
-	 * DirectDebitMandate6.Debtor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtor
+	 * DirectDebitMandate5.mmDebtor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtor
+	 * DirectDebitMandate6.mmDebtor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Debtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes the cash to the creditor/final party. The debtor is also the debit account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.Debtor, com.tools20022.repository.msg.DirectDebitMandate6.Debtor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmDebtor, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtor);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Max35Text debtorTaxIdentificationNumber;
 	/**
 	 * Number assigned by a tax authority to an entity.
 	 * <p>
@@ -237,8 +242,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,30 +264,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#DebtorTaxIdentificationNumber
-	 * DirectDebitMandate5.DebtorTaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtorTaxIdentificationNumber
+	 * DirectDebitMandate5.mmDebtorTaxIdentificationNumber}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#DebtorTaxIdentificationNumber
-	 * DirectDebitMandate6.DebtorTaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorTaxIdentificationNumber
+	 * DirectDebitMandate6.mmDebtorTaxIdentificationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebtorTaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtorTaxIdentificationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "DbtrTaxIdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorTaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.DebtorTaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate6.DebtorTaxIdentificationNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorTaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorTaxIdentificationNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text debtorNationalRegistrationNumber;
 	/**
 	 * Number assigned by a national registration authority to an entity.
 	 * <p>
@@ -295,8 +301,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#NationalRegistrationNumber
-	 * PartyIdentificationInformation.NationalRegistrationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmNationalRegistrationNumber
+	 * PartyIdentificationInformation.mmNationalRegistrationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -318,30 +324,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#DebtorNationalRegistrationNumber
-	 * DirectDebitMandate5.DebtorNationalRegistrationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtorNationalRegistrationNumber
+	 * DirectDebitMandate5.mmDebtorNationalRegistrationNumber}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#DebtorNationalRegistrationNumber
-	 * DirectDebitMandate6.DebtorNationalRegistrationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorNationalRegistrationNumber
+	 * DirectDebitMandate6.mmDebtorNationalRegistrationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebtorNationalRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtorNationalRegistrationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmNationalRegistrationNumber;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.NationalRegistrationNumber;
 			isDerived = false;
 			xmlTag = "DbtrNtlRegnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorNationalRegistrationNumber";
 			definition = "Number assigned by a national registration authority to an entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.DebtorNationalRegistrationNumber, com.tools20022.repository.msg.DirectDebitMandate6.DebtorNationalRegistrationNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorNationalRegistrationNumber, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorNationalRegistrationNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice creditor;
 	/**
 	 * Party that receives an amount of money from the debtor. In the context of
 	 * the payment model, the creditor is also the credit account owner.
@@ -356,8 +363,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -380,30 +387,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#Creditor
-	 * DirectDebitMandate5.Creditor}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmCreditor
+	 * DirectDebitMandate5.mmCreditor}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#Creditor
-	 * DirectDebitMandate6.Creditor}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmCreditor
+	 * DirectDebitMandate6.mmCreditor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Creditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.Creditor, com.tools20022.repository.msg.DirectDebitMandate6.Creditor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmCreditor, com.tools20022.repository.msg.DirectDebitMandate6.mmCreditor);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification3Choice debtorAgent;
 	/**
 	 * Financial institution that receives the direct debit instruction from the
 	 * creditor or other authorised party.
@@ -418,8 +426,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -442,30 +450,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#DebtorAgent
-	 * DirectDebitMandate5.DebtorAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtorAgent
+	 * DirectDebitMandate5.mmDebtorAgent}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#DebtorAgent
-	 * DirectDebitMandate6.DebtorAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorAgent
+	 * DirectDebitMandate6.mmDebtorAgent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebtorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtorAgent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution that receives the direct debit instruction from the creditor or other authorised party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.DebtorAgent, com.tools20022.repository.msg.DirectDebitMandate6.DebtorAgent);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorAgent, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorAgent);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
 		}
 	};
+	protected BranchData debtorAgentBranch;
 	/**
 	 * Information identifying a specific branch of a financial institution.
 	 * 
@@ -482,8 +491,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#Branch
-	 * Organisation.Branch}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmBranch
+	 * Organisation.mmBranch}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -506,30 +515,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#DebtorAgentBranch
-	 * DirectDebitMandate5.DebtorAgentBranch}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtorAgentBranch
+	 * DirectDebitMandate5.mmDebtorAgentBranch}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#DebtorAgentBranch
-	 * DirectDebitMandate6.DebtorAgentBranch}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorAgentBranch
+	 * DirectDebitMandate6.mmDebtorAgentBranch}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebtorAgentBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtorAgentBranch = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmBranch;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.Branch;
 			isDerived = false;
 			xmlTag = "DbtrAgtBrnch";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentBranch";
 			definition = "Information identifying a specific branch of a financial institution.\n\nUsage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.DebtorAgentBranch, com.tools20022.repository.msg.DirectDebitMandate6.DebtorAgentBranch);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorAgentBranch, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorAgentBranch);
 			maxOccurs = 1;
-			complexType_lazy = () -> BranchData.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification3Choice creditorAgent;
 	/**
 	 * Financial institution that receives the payment transaction on behalf of
 	 * the creditor, or other nominated party, and credits the account.
@@ -544,8 +554,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -568,30 +578,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#CreditorAgent
-	 * DirectDebitMandate5.CreditorAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmCreditorAgent
+	 * DirectDebitMandate5.mmCreditorAgent}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#CreditorAgent
-	 * DirectDebitMandate6.CreditorAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmCreditorAgent
+	 * DirectDebitMandate6.mmCreditorAgent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditorAgent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution that receives the payment transaction on behalf of the creditor, or other nominated party, and credits the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.CreditorAgent, com.tools20022.repository.msg.DirectDebitMandate6.CreditorAgent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmCreditorAgent, com.tools20022.repository.msg.DirectDebitMandate6.mmCreditorAgent);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
 		}
 	};
+	protected BranchData creditorAgentBranch;
 	/**
 	 * Information identifying a specific branch of a financial institution.
 	 * 
@@ -608,8 +619,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -632,30 +643,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#CreditorAgentBranch
-	 * DirectDebitMandate5.CreditorAgentBranch}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmCreditorAgentBranch
+	 * DirectDebitMandate5.mmCreditorAgentBranch}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#CreditorAgentBranch
-	 * DirectDebitMandate6.CreditorAgentBranch}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmCreditorAgentBranch
+	 * DirectDebitMandate6.mmCreditorAgentBranch}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditorAgentBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditorAgentBranch = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "CdtrAgtBrnch";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentBranch";
 			definition = "Information identifying a specific branch of a financial institution.\n\nUsage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.CreditorAgentBranch, com.tools20022.repository.msg.DirectDebitMandate6.CreditorAgentBranch);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmCreditorAgentBranch, com.tools20022.repository.msg.DirectDebitMandate6.mmCreditorAgentBranch);
 			maxOccurs = 1;
-			complexType_lazy = () -> BranchData.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
 		}
 	};
+	protected Max35Text registrationIdentification;
 	/**
 	 * Reference assigned to a creditor by its financial institution, or
 	 * relevant authority, authorising the creditor to take part in a direct
@@ -670,8 +682,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit#RegistrationIdentification
-	 * DirectDebit.RegistrationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit#mmRegistrationIdentification
+	 * DirectDebit.mmRegistrationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -694,30 +706,31 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#RegistrationIdentification
-	 * DirectDebitMandate5.RegistrationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmRegistrationIdentification
+	 * DirectDebitMandate5.mmRegistrationIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#RegistrationIdentification
-	 * DirectDebitMandate6.RegistrationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmRegistrationIdentification
+	 * DirectDebitMandate6.mmRegistrationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmRegistrationIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.RegistrationIdentification;
 			isDerived = false;
 			xmlTag = "RegnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationIdentification";
 			definition = "Reference assigned to a creditor by its financial institution, or relevant authority, authorising the creditor to take part in a direct debit scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.RegistrationIdentification, com.tools20022.repository.msg.DirectDebitMandate6.RegistrationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmRegistrationIdentification, com.tools20022.repository.msg.DirectDebitMandate6.mmRegistrationIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text mandateIdentification;
 	/**
 	 * Reference of the direct debit mandate that has been agreed upon by the
 	 * debtor and creditor.
@@ -731,8 +744,8 @@ public class DirectDebitMandate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -755,27 +768,27 @@ public class DirectDebitMandate4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#MandateIdentification
-	 * DirectDebitMandate5.MandateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmMandateIdentification
+	 * DirectDebitMandate5.mmMandateIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#MandateIdentification
-	 * DirectDebitMandate6.MandateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmMandateIdentification
+	 * DirectDebitMandate6.mmMandateIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DirectDebitMandate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "MndtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateIdentification";
 			definition = "Reference of the direct debit mandate that has been agreed upon by the debtor and creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.MandateIdentification, com.tools20022.repository.msg.DirectDebitMandate6.MandateIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate5.mmMandateIdentification, com.tools20022.repository.msg.DirectDebitMandate6.mmMandateIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -783,13 +796,13 @@ public class DirectDebitMandate4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate4.DebtorAccount, com.tools20022.repository.msg.DirectDebitMandate4.Debtor,
-						com.tools20022.repository.msg.DirectDebitMandate4.DebtorTaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate4.DebtorNationalRegistrationNumber,
-						com.tools20022.repository.msg.DirectDebitMandate4.Creditor, com.tools20022.repository.msg.DirectDebitMandate4.DebtorAgent, com.tools20022.repository.msg.DirectDebitMandate4.DebtorAgentBranch,
-						com.tools20022.repository.msg.DirectDebitMandate4.CreditorAgent, com.tools20022.repository.msg.DirectDebitMandate4.CreditorAgentBranch, com.tools20022.repository.msg.DirectDebitMandate4.RegistrationIdentification,
-						com.tools20022.repository.msg.DirectDebitMandate4.MandateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorAccount, com.tools20022.repository.msg.DirectDebitMandate4.mmDebtor,
+						com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorTaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorNationalRegistrationNumber,
+						com.tools20022.repository.msg.DirectDebitMandate4.mmCreditor, com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorAgent, com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorAgentBranch,
+						com.tools20022.repository.msg.DirectDebitMandate4.mmCreditorAgent, com.tools20022.repository.msg.DirectDebitMandate4.mmCreditorAgentBranch,
+						com.tools20022.repository.msg.DirectDebitMandate4.mmRegistrationIdentification, com.tools20022.repository.msg.DirectDebitMandate4.mmMandateIdentification);
 				trace_lazy = () -> DirectDebit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DirectDebitMandate4";
 				definition = "Instruction, initiated by the creditor, to debit a debtor's account in favour of the creditor. A direct debit can be pre-authorised or not. In most countries, authorisation is in the form of a mandate between the debtor and creditor.";
@@ -797,5 +810,93 @@ public class DirectDebitMandate4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentificationAndName3 getDebtorAccount() {
+		return debtorAccount;
+	}
+
+	public void setDebtorAccount(com.tools20022.repository.msg.AccountIdentificationAndName3 debtorAccount) {
+		this.debtorAccount = debtorAccount;
+	}
+
+	public PartyIdentification2Choice getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(PartyIdentification2Choice debtor) {
+		this.debtor = debtor;
+	}
+
+	public Max35Text getDebtorTaxIdentificationNumber() {
+		return debtorTaxIdentificationNumber;
+	}
+
+	public void setDebtorTaxIdentificationNumber(Max35Text debtorTaxIdentificationNumber) {
+		this.debtorTaxIdentificationNumber = debtorTaxIdentificationNumber;
+	}
+
+	public Max35Text getDebtorNationalRegistrationNumber() {
+		return debtorNationalRegistrationNumber;
+	}
+
+	public void setDebtorNationalRegistrationNumber(Max35Text debtorNationalRegistrationNumber) {
+		this.debtorNationalRegistrationNumber = debtorNationalRegistrationNumber;
+	}
+
+	public PartyIdentification2Choice getCreditor() {
+		return creditor;
+	}
+
+	public void setCreditor(PartyIdentification2Choice creditor) {
+		this.creditor = creditor;
+	}
+
+	public FinancialInstitutionIdentification3Choice getDebtorAgent() {
+		return debtorAgent;
+	}
+
+	public void setDebtorAgent(FinancialInstitutionIdentification3Choice debtorAgent) {
+		this.debtorAgent = debtorAgent;
+	}
+
+	public BranchData getDebtorAgentBranch() {
+		return debtorAgentBranch;
+	}
+
+	public void setDebtorAgentBranch(com.tools20022.repository.msg.BranchData debtorAgentBranch) {
+		this.debtorAgentBranch = debtorAgentBranch;
+	}
+
+	public FinancialInstitutionIdentification3Choice getCreditorAgent() {
+		return creditorAgent;
+	}
+
+	public void setCreditorAgent(FinancialInstitutionIdentification3Choice creditorAgent) {
+		this.creditorAgent = creditorAgent;
+	}
+
+	public BranchData getCreditorAgentBranch() {
+		return creditorAgentBranch;
+	}
+
+	public void setCreditorAgentBranch(com.tools20022.repository.msg.BranchData creditorAgentBranch) {
+		this.creditorAgentBranch = creditorAgentBranch;
+	}
+
+	public Max35Text getRegistrationIdentification() {
+		return registrationIdentification;
+	}
+
+	public void setRegistrationIdentification(Max35Text registrationIdentification) {
+		this.registrationIdentification = registrationIdentification;
+	}
+
+	public Max35Text getMandateIdentification() {
+		return mandateIdentification;
+	}
+
+	public void setMandateIdentification(Max35Text mandateIdentification) {
+		this.mandateIdentification = mandateIdentification;
 	}
 }

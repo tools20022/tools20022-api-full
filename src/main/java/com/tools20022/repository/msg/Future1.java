@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Future1#ContractSize
- * Future1.ContractSize}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Future1#ExercisePrice
- * Future1.ExercisePrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Future1#ExpiryDate
- * Future1.ExpiryDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Future1#FutureDate
- * Future1.FutureDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Future1#MinimumSize
- * Future1.MinimumSize}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Future1#UnitOfMeasure
- * Future1.UnitOfMeasure}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Future1#TimeUnit
- * Future1.TimeUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future1#mmContractSize
+ * Future1.mmContractSize}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future1#mmExercisePrice
+ * Future1.mmExercisePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future1#mmExpiryDate
+ * Future1.mmExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future1#mmFutureDate
+ * Future1.mmFutureDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future1#mmMinimumSize
+ * Future1.mmMinimumSize}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future1#mmUnitOfMeasure
+ * Future1.mmUnitOfMeasure}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future1#mmTimeUnit
+ * Future1.mmTimeUnit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Future1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaseOneRate contractSize;
 	/**
 	 * Ratio or multiplying factor used to convert one contract into a quantity.
 	 * <p>
@@ -88,8 +89,8 @@ public class Future1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#ContractSize
-	 * SecuritiesConversion.ContractSize}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmContractSize
+	 * SecuritiesConversion.mmContractSize}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Future1
@@ -109,20 +110,21 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractSize = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> Future1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.ContractSize;
 			isDerived = false;
 			xmlTag = "CtrctSz";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSize";
 			definition = "Ratio or multiplying factor used to convert one contract into a quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected Price1 exercisePrice;
 	/**
 	 * Predetermined price at which the holder of a Future will have to buy or
 	 * sell the underlying instrument.
@@ -135,8 +137,8 @@ public class Future1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#ExercisePrice
-	 * Derivative.ExercisePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmExercisePrice
+	 * Derivative.mmExercisePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Future1
@@ -156,20 +158,21 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExercisePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExercisePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExercisePrice;
 			componentContext_lazy = () -> Future1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.ExercisePrice;
 			isDerived = false;
 			xmlTag = "ExrcPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "Predetermined price at which the holder of a Future will have  to buy or sell the underlying instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected ISODateTime expiryDate;
 	/**
 	 * Date and time upon which the future expires.
 	 * <p>
@@ -182,8 +185,8 @@ public class Future1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#ExpiryDate
-	 * Asset.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmExpiryDate
+	 * Asset.mmExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Future1
@@ -201,20 +204,21 @@ public class Future1 {
 	 * definition} = "Date and time upon which the future expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
 			componentContext_lazy = () -> Future1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.ExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date and time upon which the future expires.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime futureDate;
 	/**
 	 * Date on which future contracts settle.
 	 * <p>
@@ -227,8 +231,8 @@ public class Future1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Future#FutureDate
-	 * Future.FutureDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Future#mmFutureDate
+	 * Future.mmFutureDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Future1
@@ -246,20 +250,21 @@ public class Future1 {
 	 * definition} = "Date on which future contracts settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FutureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFutureDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmFutureDate;
 			componentContext_lazy = () -> Future1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.FutureDate;
 			isDerived = false;
 			xmlTag = "FutrDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureDate";
 			definition = "Date on which future contracts settle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount minimumSize;
 	/**
 	 * Specifies the minimum ratio or multiply factor used to convert from
 	 * contracts to shares.
@@ -274,8 +279,8 @@ public class Future1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Future#MinimumSize
-	 * Future.MinimumSize}</li>
+	 * {@linkplain com.tools20022.repository.entity.Future#mmMinimumSize
+	 * Future.mmMinimumSize}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Future1
@@ -295,20 +300,21 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumSize = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmMinimumSize;
 			componentContext_lazy = () -> Future1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.MinimumSize;
 			isDerived = false;
 			xmlTag = "MinSz";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSize";
 			definition = "Specifies the minimum ratio or multiply factor used to convert from contracts to shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected UnitOfMeasure3Code unitOfMeasure;
 	/**
 	 * Used to indicate the size of the underlying commodity on which the
 	 * contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude
@@ -324,8 +330,8 @@ public class Future1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Future#UnitOfMeasure
-	 * Future.UnitOfMeasure}</li>
+	 * {@linkplain com.tools20022.repository.entity.Future#mmUnitOfMeasure
+	 * Future.mmUnitOfMeasure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Future1
@@ -345,20 +351,21 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmUnitOfMeasure;
 			componentContext_lazy = () -> Future1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.UnitOfMeasure;
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
 	};
+	protected TimeUnit1Code timeUnit;
 	/**
 	 * Used to indicate a time unit for the contract (e.g., days, weeks, months,
 	 * etc.)
@@ -373,8 +380,8 @@ public class Future1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FutureRule#TimeType
-	 * FutureRule.TimeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.FutureRule#mmTimeType
+	 * FutureRule.mmTimeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Future1
@@ -394,17 +401,17 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TimeUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTimeUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FutureRule.mmTimeType;
 			componentContext_lazy = () -> Future1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FutureRule.TimeType;
 			isDerived = false;
 			xmlTag = "TmUnit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeUnit";
 			definition = "Used to indicate a time unit for the contract (e.g., days, weeks, months, etc.)";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TimeUnit1Code.mmObject();
 		}
 	};
@@ -412,15 +419,71 @@ public class Future1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.ContractSize, com.tools20022.repository.msg.Future1.ExercisePrice, com.tools20022.repository.msg.Future1.ExpiryDate,
-						com.tools20022.repository.msg.Future1.FutureDate, com.tools20022.repository.msg.Future1.MinimumSize, com.tools20022.repository.msg.Future1.UnitOfMeasure, com.tools20022.repository.msg.Future1.TimeUnit);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.mmContractSize, com.tools20022.repository.msg.Future1.mmExercisePrice, com.tools20022.repository.msg.Future1.mmExpiryDate,
+						com.tools20022.repository.msg.Future1.mmFutureDate, com.tools20022.repository.msg.Future1.mmMinimumSize, com.tools20022.repository.msg.Future1.mmUnitOfMeasure, com.tools20022.repository.msg.Future1.mmTimeUnit);
 				trace_lazy = () -> Future.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Future1";
 				definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaseOneRate getContractSize() {
+		return contractSize;
+	}
+
+	public void setContractSize(BaseOneRate contractSize) {
+		this.contractSize = contractSize;
+	}
+
+	public Price1 getExercisePrice() {
+		return exercisePrice;
+	}
+
+	public void setExercisePrice(com.tools20022.repository.msg.Price1 exercisePrice) {
+		this.exercisePrice = exercisePrice;
+	}
+
+	public ISODateTime getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(ISODateTime expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public ISODateTime getFutureDate() {
+		return futureDate;
+	}
+
+	public void setFutureDate(ISODateTime futureDate) {
+		this.futureDate = futureDate;
+	}
+
+	public ActiveCurrencyAndAmount getMinimumSize() {
+		return minimumSize;
+	}
+
+	public void setMinimumSize(ActiveCurrencyAndAmount minimumSize) {
+		this.minimumSize = minimumSize;
+	}
+
+	public UnitOfMeasure3Code getUnitOfMeasure() {
+		return unitOfMeasure;
+	}
+
+	public void setUnitOfMeasure(UnitOfMeasure3Code unitOfMeasure) {
+		this.unitOfMeasure = unitOfMeasure;
+	}
+
+	public TimeUnit1Code getTimeUnit() {
+		return timeUnit;
+	}
+
+	public void setTimeUnit(TimeUnit1Code timeUnit) {
+		this.timeUnit = timeUnit;
 	}
 }

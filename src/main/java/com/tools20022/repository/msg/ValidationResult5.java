@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Detailed description of the differences.
@@ -36,24 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationResult5#SequenceNumber
- * ValidationResult5.SequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationResult5#mmSequenceNumber
+ * ValidationResult5.mmSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationResult5#RuleIdentification
- * ValidationResult5.RuleIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationResult5#mmRuleIdentification
+ * ValidationResult5.mmRuleIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationResult5#RuleDescription
- * ValidationResult5.RuleDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationResult5#mmRuleDescription
+ * ValidationResult5.mmRuleDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationResult5#MisMatchedElement
- * ValidationResult5.MisMatchedElement}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationResult5#mmMisMatchedElement
+ * ValidationResult5.mmMisMatchedElement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ValidationResult5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number sequenceNumber;
 	/**
 	 * Sequential number assigned to the mismatch.
 	 * <p>
@@ -94,7 +96,7 @@ public class ValidationResult5 {
 	 * definition} = "Sequential number assigned to the mismatch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
@@ -102,11 +104,12 @@ public class ValidationResult5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Sequential number assigned to the mismatch.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35Text ruleIdentification;
 	/**
 	 * Coded identification of the matching rule that is violated.
 	 * <p>
@@ -135,7 +138,7 @@ public class ValidationResult5 {
 	 * "Coded identification of the matching rule that is violated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RuleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRuleIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
@@ -143,11 +146,12 @@ public class ValidationResult5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleIdentification";
 			definition = "Coded identification of the matching rule that is violated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text ruleDescription;
 	/**
 	 * Detailed description of the rule.
 	 * <p>
@@ -175,7 +179,7 @@ public class ValidationResult5 {
 	 * definition} = "Detailed description of the rule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RuleDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRuleDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
@@ -183,11 +187,12 @@ public class ValidationResult5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleDescription";
 			definition = "Detailed description of the rule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ElementIdentification1> misMatchedElement;
 	/**
 	 * Description of the element that creates the mismatch.
 	 * <p>
@@ -214,7 +219,7 @@ public class ValidationResult5 {
 	 * definition} = "Description of the element that creates the mismatch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MisMatchedElement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMisMatchedElement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
@@ -223,22 +228,54 @@ public class ValidationResult5 {
 			name = "MisMatchedElement";
 			definition = "Description of the element that creates the mismatch.";
 			minOccurs = 0;
-			type_lazy = () -> ElementIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ElementIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationResult5.SequenceNumber, com.tools20022.repository.msg.ValidationResult5.RuleIdentification,
-						com.tools20022.repository.msg.ValidationResult5.RuleDescription, com.tools20022.repository.msg.ValidationResult5.MisMatchedElement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationResult5.mmSequenceNumber, com.tools20022.repository.msg.ValidationResult5.mmRuleIdentification,
+						com.tools20022.repository.msg.ValidationResult5.mmRuleDescription, com.tools20022.repository.msg.ValidationResult5.mmMisMatchedElement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValidationResult5";
 				definition = "Detailed description of the differences.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(Number sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	public Max35Text getRuleIdentification() {
+		return ruleIdentification;
+	}
+
+	public void setRuleIdentification(Max35Text ruleIdentification) {
+		this.ruleIdentification = ruleIdentification;
+	}
+
+	public Max350Text getRuleDescription() {
+		return ruleDescription;
+	}
+
+	public void setRuleDescription(Max350Text ruleDescription) {
+		this.ruleDescription = ruleDescription;
+	}
+
+	public List<ElementIdentification1> getMisMatchedElement() {
+		return misMatchedElement;
+	}
+
+	public void setMisMatchedElement(List<com.tools20022.repository.msg.ElementIdentification1> misMatchedElement) {
+		this.misMatchedElement = misMatchedElement;
 	}
 }

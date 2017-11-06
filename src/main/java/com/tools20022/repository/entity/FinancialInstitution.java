@@ -37,66 +37,74 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemMember2#MemberIdentification
- * SystemMember2.MemberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Party7Choice#Agent
- * Party7Choice.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#Agent
- * Party12Choice.Agent}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemMember2#mmMemberIdentification
+ * SystemMember2.mmMemberIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party7Choice#mmAgent
+ * Party7Choice.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#mmAgent
+ * Party12Choice.mmAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification5#IdentificationIssuer
- * DocumentIdentification5.IdentificationIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification5#mmIdentificationIssuer
+ * DocumentIdentification5.mmIdentificationIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#Submitter
- * DocumentIdentification1.Submitter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission1#Submitter
- * RequiredSubmission1.Submitter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline2#BuyerBank
- * Baseline2.BuyerBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline2#SellerBank
- * Baseline2.SellerBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentObligation1#ObligorBank
- * PaymentObligation1.ObligorBank}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification1#mmSubmitter
+ * DocumentIdentification1.mmSubmitter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentObligation1#RecipientBank
- * PaymentObligation1.RecipientBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission3#Submitter
- * RequiredSubmission3.Submitter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission4#Submitter
- * RequiredSubmission4.Submitter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission5#Submitter
- * RequiredSubmission5.Submitter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline3#BuyerBank
- * Baseline3.BuyerBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline3#SellerBank
- * Baseline3.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission1#mmSubmitter
+ * RequiredSubmission1.mmSubmitter}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline2#mmBuyerBank
+ * Baseline2.mmBuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline2#mmSellerBank
+ * Baseline2.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification4#Submitter
- * DocumentIdentification4.Submitter}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentObligation1#mmObligorBank
+ * PaymentObligation1.mmObligorBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification2#Submitter
- * DocumentIdentification2.Submitter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Member2#ReturnAddress
- * Member2.ReturnAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline4#BuyerBank
- * Baseline4.BuyerBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline4#SellerBank
- * Baseline4.SellerBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentObligation2#ObligorBank
- * PaymentObligation2.ObligorBank}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentObligation1#mmRecipientBank
+ * PaymentObligation1.mmRecipientBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentObligation2#RecipientBank
- * PaymentObligation2.RecipientBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline5#BuyerBank
- * Baseline5.BuyerBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline5#SellerBank
- * Baseline5.SellerBank}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission6#Submitter
- * RequiredSubmission6.Submitter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer7#AcquiringInstitution
- * Acquirer7.AcquiringInstitution}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#Agent
- * Party28Choice.Agent}</li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission3#mmSubmitter
+ * RequiredSubmission3.mmSubmitter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission4#mmSubmitter
+ * RequiredSubmission4.mmSubmitter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission5#mmSubmitter
+ * RequiredSubmission5.mmSubmitter}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline3#mmBuyerBank
+ * Baseline3.mmBuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline3#mmSellerBank
+ * Baseline3.mmSellerBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification4#mmSubmitter
+ * DocumentIdentification4.mmSubmitter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification2#mmSubmitter
+ * DocumentIdentification2.mmSubmitter}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Member2#mmReturnAddress
+ * Member2.mmReturnAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline4#mmBuyerBank
+ * Baseline4.mmBuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline4#mmSellerBank
+ * Baseline4.mmSellerBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentObligation2#mmObligorBank
+ * PaymentObligation2.mmObligorBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentObligation2#mmRecipientBank
+ * PaymentObligation2.mmRecipientBank}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline5#mmBuyerBank
+ * Baseline5.mmBuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline5#mmSellerBank
+ * Baseline5.mmSellerBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequiredSubmission6#mmSubmitter
+ * RequiredSubmission6.mmSubmitter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Acquirer7#mmAcquiringInstitution
+ * Acquirer7.mmAcquiringInstitution}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#mmAgent
+ * Party28Choice.mmAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -113,8 +121,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,19 +141,19 @@ public class FinancialInstitution extends Organisation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitution";
 				definition = "Organisation established primarily to provide financial services.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMember2.MemberIdentification, com.tools20022.repository.choice.Party7Choice.Agent, com.tools20022.repository.choice.Party12Choice.Agent,
-						com.tools20022.repository.msg.DocumentIdentification5.IdentificationIssuer, com.tools20022.repository.msg.DocumentIdentification1.Submitter, com.tools20022.repository.msg.RequiredSubmission1.Submitter,
-						com.tools20022.repository.msg.Baseline2.BuyerBank, com.tools20022.repository.msg.Baseline2.SellerBank, com.tools20022.repository.msg.PaymentObligation1.ObligorBank,
-						com.tools20022.repository.msg.PaymentObligation1.RecipientBank, com.tools20022.repository.msg.RequiredSubmission3.Submitter, com.tools20022.repository.msg.RequiredSubmission4.Submitter,
-						com.tools20022.repository.msg.RequiredSubmission5.Submitter, com.tools20022.repository.msg.Baseline3.BuyerBank, com.tools20022.repository.msg.Baseline3.SellerBank,
-						com.tools20022.repository.msg.DocumentIdentification4.Submitter, com.tools20022.repository.msg.DocumentIdentification2.Submitter, com.tools20022.repository.msg.Member2.ReturnAddress,
-						com.tools20022.repository.msg.Baseline4.BuyerBank, com.tools20022.repository.msg.Baseline4.SellerBank, com.tools20022.repository.msg.PaymentObligation2.ObligorBank,
-						com.tools20022.repository.msg.PaymentObligation2.RecipientBank, com.tools20022.repository.msg.Baseline5.BuyerBank, com.tools20022.repository.msg.Baseline5.SellerBank,
-						com.tools20022.repository.msg.RequiredSubmission6.Submitter, com.tools20022.repository.msg.Acquirer7.AcquiringInstitution, com.tools20022.repository.choice.Party28Choice.Agent);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMember2.mmMemberIdentification, com.tools20022.repository.choice.Party7Choice.mmAgent, com.tools20022.repository.choice.Party12Choice.mmAgent,
+						com.tools20022.repository.msg.DocumentIdentification5.mmIdentificationIssuer, com.tools20022.repository.msg.DocumentIdentification1.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission1.mmSubmitter,
+						com.tools20022.repository.msg.Baseline2.mmBuyerBank, com.tools20022.repository.msg.Baseline2.mmSellerBank, com.tools20022.repository.msg.PaymentObligation1.mmObligorBank,
+						com.tools20022.repository.msg.PaymentObligation1.mmRecipientBank, com.tools20022.repository.msg.RequiredSubmission3.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission4.mmSubmitter,
+						com.tools20022.repository.msg.RequiredSubmission5.mmSubmitter, com.tools20022.repository.msg.Baseline3.mmBuyerBank, com.tools20022.repository.msg.Baseline3.mmSellerBank,
+						com.tools20022.repository.msg.DocumentIdentification4.mmSubmitter, com.tools20022.repository.msg.DocumentIdentification2.mmSubmitter, com.tools20022.repository.msg.Member2.mmReturnAddress,
+						com.tools20022.repository.msg.Baseline4.mmBuyerBank, com.tools20022.repository.msg.Baseline4.mmSellerBank, com.tools20022.repository.msg.PaymentObligation2.mmObligorBank,
+						com.tools20022.repository.msg.PaymentObligation2.mmRecipientBank, com.tools20022.repository.msg.Baseline5.mmBuyerBank, com.tools20022.repository.msg.Baseline5.mmSellerBank,
+						com.tools20022.repository.msg.RequiredSubmission6.mmSubmitter, com.tools20022.repository.msg.Acquirer7.mmAcquiringInstitution, com.tools20022.repository.choice.Party28Choice.mmAgent);
 				superType_lazy = () -> Organisation.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(BICIdentification1.mmObject());
 			}

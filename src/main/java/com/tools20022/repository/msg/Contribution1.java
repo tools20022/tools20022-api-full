@@ -36,16 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Contribution1#Account
- * Contribution1.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Contribution1#RequiredAmount
- * Contribution1.RequiredAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Contribution1#mmAccount
+ * Contribution1.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Contribution1#mmRequiredAmount
+ * Contribution1.mmRequiredAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Contribution1#IncreaseCoverageAmount
- * Contribution1.IncreaseCoverageAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.Contribution1#mmIncreaseCoverageAmount
+ * Contribution1.mmIncreaseCoverageAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Contribution1#NonClearingMember
- * Contribution1.NonClearingMember}</li>
+ * {@linkplain com.tools20022.repository.msg.Contribution1#mmNonClearingMember
+ * Contribution1.mmNonClearingMember}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Contribution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification4Choice account;
 	/**
 	 * Segregation done by the central counterparty based on trading
 	 * venues/products or other attributes.
@@ -86,8 +87,8 @@ public class Contribution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +108,21 @@ public class Contribution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Account = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> Contribution1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Segregation done by the central counterparty based on trading venues/products or other attributes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount requiredAmount;
 	/**
 	 * Total contribution required by the clearing member to participate to the
 	 * default fund.
@@ -135,8 +137,8 @@ public class Contribution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFund#TotalAmount
-	 * DefaultFund.TotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.DefaultFund#mmTotalAmount
+	 * DefaultFund.mmTotalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +158,21 @@ public class Contribution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmTotalAmount;
 			componentContext_lazy = () -> Contribution1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.TotalAmount;
 			isDerived = false;
 			xmlTag = "ReqrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredAmount";
 			definition = "Total contribution required by the clearing member to participate to the default fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount increaseCoverageAmount;
 	/**
 	 * Additional amount that the clearing member will have to provide to cover
 	 * a risk increase. This results from a risk management decision depending
@@ -185,8 +188,8 @@ public class Contribution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#ExcessOrDeficitAmount
-	 * DefaultFundContribution.ExcessOrDeficitAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmExcessOrDeficitAmount
+	 * DefaultFundContribution.mmExcessOrDeficitAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,20 +209,21 @@ public class Contribution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncreaseCoverageAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncreaseCoverageAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> Contribution1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.ExcessOrDeficitAmount;
 			isDerived = false;
 			xmlTag = "IncrCvrgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
 			definition = "Additional amount that the clearing member will have to provide to cover a risk increase. This results from a risk management decision depending on central counterparty specific criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
 	 * Provides the identification for the non-clearing member.
 	 * <p>
@@ -232,8 +236,8 @@ public class Contribution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -251,34 +255,66 @@ public class Contribution1 {
 	 * definition} = "Provides the identification for the non-clearing member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Contribution1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Contribution1.Account, com.tools20022.repository.msg.Contribution1.RequiredAmount, com.tools20022.repository.msg.Contribution1.IncreaseCoverageAmount,
-						com.tools20022.repository.msg.Contribution1.NonClearingMember);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Contribution1.mmAccount, com.tools20022.repository.msg.Contribution1.mmRequiredAmount,
+						com.tools20022.repository.msg.Contribution1.mmIncreaseCoverageAmount, com.tools20022.repository.msg.Contribution1.mmNonClearingMember);
 				trace_lazy = () -> DefaultFundContribution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Contribution1";
 				definition = "Provides additional information such as the contribution account identification or the requirement amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification4Choice getAccount() {
+		return account;
+	}
+
+	public void setAccount(AccountIdentification4Choice account) {
+		this.account = account;
+	}
+
+	public ActiveCurrencyAndAmount getRequiredAmount() {
+		return requiredAmount;
+	}
+
+	public void setRequiredAmount(ActiveCurrencyAndAmount requiredAmount) {
+		this.requiredAmount = requiredAmount;
+	}
+
+	public ActiveCurrencyAndAmount getIncreaseCoverageAmount() {
+		return increaseCoverageAmount;
+	}
+
+	public void setIncreaseCoverageAmount(ActiveCurrencyAndAmount increaseCoverageAmount) {
+		this.increaseCoverageAmount = increaseCoverageAmount;
+	}
+
+	public PartyIdentificationAndAccount31 getNonClearingMember() {
+		return nonClearingMember;
+	}
+
+	public void setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+		this.nonClearingMember = nonClearingMember;
 	}
 }

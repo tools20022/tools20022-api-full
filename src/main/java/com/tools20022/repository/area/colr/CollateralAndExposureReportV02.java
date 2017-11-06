@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -68,30 +69,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#ReportParameters
- * CollateralAndExposureReportV02.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmReportParameters
+ * CollateralAndExposureReportV02.mmReportParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#Pagination
- * CollateralAndExposureReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmPagination
+ * CollateralAndExposureReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#Obligation
- * CollateralAndExposureReportV02.Obligation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmObligation
+ * CollateralAndExposureReportV02.mmObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#Agreement
- * CollateralAndExposureReportV02.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmAgreement
+ * CollateralAndExposureReportV02.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#CollateralReport
- * CollateralAndExposureReportV02.CollateralReport}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmCollateralReport
+ * CollateralAndExposureReportV02.mmCollateralReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#SupplementaryData
- * CollateralAndExposureReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#mmSupplementaryData
+ * CollateralAndExposureReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV02#identifier
- * CollateralAndExposureReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code colr.016.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,6 +114,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralAndExposureReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportParameters2 reportParameters;
 	/**
 	 * Provides information about the report such as the report identification,
 	 * the report date and time or the report frequency.
@@ -143,24 +143,25 @@ public class CollateralAndExposureReportV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#ReportParameters
-	 * CollateralAndExposureReportV03.ReportParameters}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmReportParameters
+	 * CollateralAndExposureReportV03.mmReportParameters}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameters";
 			definition = "Provides information about the report such as the report identification, the report date and time or the report frequency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.ReportParameters);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmReportParameters);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters2.mmObject();
 		}
 	};
+	protected Pagination pagination;
 	/**
 	 * Specifies the page number and an indicator of whether it is the only or
 	 * last page, or if there are additional pages. <br>
@@ -188,24 +189,25 @@ public class CollateralAndExposureReportV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#Pagination
-	 * CollateralAndExposureReportV03.Pagination}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmPagination
+	 * CollateralAndExposureReportV03.mmPagination}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Specifies the page number and an indicator of whether it is the only or last page, or if there are additional pages. \r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.Pagination);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmPagination);
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Obligation3 obligation;
 	/**
 	 * Provides information like the identification of the party or parties
 	 * associated with the collateral agreement, the exposure type and the
@@ -234,24 +236,25 @@ public class CollateralAndExposureReportV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#Obligation
-	 * CollateralAndExposureReportV03.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmObligation
+	 * CollateralAndExposureReportV03.mmObligation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Obligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.Obligation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmObligation);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Obligation3.mmObject();
 		}
 	};
+	protected Agreement2 agreement;
 	/**
 	 * Agreement details for the over the counter market.
 	 * <p>
@@ -276,24 +279,25 @@ public class CollateralAndExposureReportV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#Agreement
-	 * CollateralAndExposureReportV03.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmAgreement
+	 * CollateralAndExposureReportV03.mmAgreement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Agreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.Agreement);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmAgreement);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Agreement2.mmObject();
 		}
 	};
+	protected List<Collateral9> collateralReport;
 	/**
 	 * Provides details on the collateral report.
 	 * <p>
@@ -318,23 +322,24 @@ public class CollateralAndExposureReportV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#CollateralReport
-	 * CollateralAndExposureReportV03.CollateralReport}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmCollateralReport
+	 * CollateralAndExposureReportV03.mmCollateralReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CollateralReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCollateralReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CollRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralReport";
 			definition = "Provides details on the collateral report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.CollateralReport);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmCollateralReport);
 			minOccurs = 1;
 			complexType_lazy = () -> Collateral9.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -363,48 +368,21 @@ public class CollateralAndExposureReportV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#SupplementaryData
-	 * CollateralAndExposureReportV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmSupplementaryData
+	 * CollateralAndExposureReportV03.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "colr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "016"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "colr";
-			messageFunctionality = "016";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -419,12 +397,67 @@ public class CollateralAndExposureReportV02 {
 				rootElement = "Document";
 				xmlTag = "CollAndXpsrRpt";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV02.ReportParameters, com.tools20022.repository.area.colr.CollateralAndExposureReportV02.Pagination,
-						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.Obligation, com.tools20022.repository.area.colr.CollateralAndExposureReportV02.Agreement,
-						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.CollateralReport, com.tools20022.repository.area.colr.CollateralAndExposureReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.colr.CollateralAndExposureReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmReportParameters, com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmPagination,
+						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmObligation, com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmAgreement,
+						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmCollateralReport, com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "colr";
+						messageFunctionality = "016";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportParameters2 getReportParameters() {
+		return reportParameters;
+	}
+
+	public void setReportParameters(ReportParameters2 reportParameters) {
+		this.reportParameters = reportParameters;
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Obligation3 getObligation() {
+		return obligation;
+	}
+
+	public void setObligation(Obligation3 obligation) {
+		this.obligation = obligation;
+	}
+
+	public Agreement2 getAgreement() {
+		return agreement;
+	}
+
+	public void setAgreement(Agreement2 agreement) {
+		this.agreement = agreement;
+	}
+
+	public List<Collateral9> getCollateralReport() {
+		return collateralReport;
+	}
+
+	public void setCollateralReport(List<Collateral9> collateralReport) {
+		this.collateralReport = collateralReport;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

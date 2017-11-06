@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -132,27 +133,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#Assignment
- * RequestToModifyPaymentV01.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#mmAssignment
+ * RequestToModifyPaymentV01.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#Case
- * RequestToModifyPaymentV01.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#mmCase
+ * RequestToModifyPaymentV01.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#Underlying
- * RequestToModifyPaymentV01.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#mmUnderlying
+ * RequestToModifyPaymentV01.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#Modification
- * RequestToModifyPaymentV01.Modification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#mmModification
+ * RequestToModifyPaymentV01.mmModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#SupplementaryData
- * RequestToModifyPaymentV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#mmSupplementaryData
+ * RequestToModifyPaymentV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV01#identifier
- * RequestToModifyPaymentV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.087.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -180,6 +179,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestToModifyPaymentV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -208,24 +208,25 @@ public class RequestToModifyPaymentV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#Assignment
-	 * RequestToModifyPaymentV02.Assignment}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmAssignment
+	 * RequestToModifyPaymentV02.mmAssignment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.Assignment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.mmAssignment);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -249,24 +250,25 @@ public class RequestToModifyPaymentV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#Case
-	 * RequestToModifyPaymentV02.Case}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmCase
+	 * RequestToModifyPaymentV02.mmCase}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.Case);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.mmCase);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected UnderlyingTransaction2Choice underlying;
 	/**
 	 * Identifies the payment transaction to be modified.
 	 * <p>
@@ -292,24 +294,25 @@ public class RequestToModifyPaymentV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#Underlying
-	 * RequestToModifyPaymentV02.Underlying}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmUnderlying
+	 * RequestToModifyPaymentV02.mmUnderlying}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment transaction to be modified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.Underlying);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.mmUnderlying);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
 	};
+	protected RequestedModification3 modification;
 	/**
 	 * Identifies the list of modifications requested.
 	 * <p>
@@ -335,24 +338,25 @@ public class RequestToModifyPaymentV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#Modification
-	 * RequestToModifyPaymentV02.Modification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmModification
+	 * RequestToModifyPaymentV02.mmModification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Modification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Identifies the list of modifications requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.Modification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.mmModification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestedModification3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -381,48 +385,21 @@ public class RequestToModifyPaymentV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#SupplementaryData
-	 * RequestToModifyPaymentV02.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV02#mmSupplementaryData
+	 * RequestToModifyPaymentV02.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV02.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "087"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "087";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -432,18 +409,65 @@ public class RequestToModifyPaymentV01 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestToModifyPaymentV01";
 				definition = "Scope\r\nThe Request To Modify Payment message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the modification of characteristics of an original payment instruction.\r\nUsage\r\nThe Request To Modify Payment message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested modification\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested modification but fails to do so (too late, irrevocable instruction, one requested element cannot be modified, ...)\r\n- Reject Case Assignment message when the case assignee is unable or not authorised to perform the requested modification\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nThe Request To Modify Payment message covers one and only one original instruction at a time. If several original payment instructions need to be modified, then multiple Request To Modify Payment messages must be sent.\r\nThe Request To Modify Payment message can be sent to request the modification of one or several elements of the original payment instruction. If many elements need to be modified, it is recommended to cancel the original payment instruction and initiate a new one.\r\nThe Request To Modify Payment must be processed on an all or nothing basis. If one of the elements to be modified cannot be altered, the assignment must be rejected in full by means of a negative Resolution Of Investigation message. (See section on Resolution Of Investigation for more details.)\r\nThe Request To Modify Payment message must never be sent to request the modification of the currency of the original payment instruction. If the currency is wrong, use Request To Cancel Payment message to cancel it and issue and a new payment instruction.\r\nThe Request To Modify Payment message may be forwarded to subsequent case assignee(s).\r\nWhen a Request To Modify Payment message is used to decrease the amount of the original payment instruction, the modification will trigger a return of funds from the case assignee to the case creator. The assignee may indicate, within the Resolution Of Investigation message, the amount to be returned, the date it is or will be returned and the channel through which the return will be done.\r\nThe Request To Modify Payment message must never be sent to request the increase of the amount of the original payment instruction. To increase the amount in a payment, the debtor can do one of the following:\r\n- Cancel the first payment using a Request To Cancel Payment message and make a new payment with a higher and correct amount.\r\n- Simply send a second payment with the supplementary amount.\r\nDepending on the requested modification(s) and the processing stage of the original payment instruction, the processing of a request to modify payment case may end with one of the following:\r\n- an Additional Payment Information message sent to the creditor of the original payment instruction\r\n- a Debit Authorisation Request message sent to the creditor of the original payment instruction\r\n- a Request To Cancel Payment message sent to a subsequent case assignee\r\nThe Request To Modify Payment message can be sent to correct characteristics of an original payment instruction following receipt of an Unable To Apply message. In this scenario, the case identification will remain the same.\r\nThe RequestToModifyPayment message has the following main characteristics:\r\nThe case creator assigns a unique case identification. This information will be passed unchanged to all subsequent case assignee(s).\r\nLowering the amount of an original payment instruction for which cover is provided by a separate instruction will systematically mean the modification of the whole transaction, including the cover. The case assignee performing the amount modification must initiate the return of funds in excess to the case creator.\r\nThe modification of the agent's or agents' information on an original payment instruction for which cover is provided by a separate instruction will systematically mean the whole transaction is modified, i.e., the cover is executed through the agent(s) mentioned in the Request To Modify Payment message. The cover payment must not be modified separately.\r\nThe modification of a payment instruction can be initiated by either the debtor or any subsequent agent in the payment processing chain.\r\nThe case creator provides the information to be modified in line with agreements made with the case assignee. If the case assignee needs in turn to assign the case to a subsequent case assignee, the requested modification(s) must be in line with the agreement made with the next case assignee and a Notification Of Case Assignment message must be sent to the case assigner. Otherwise, the request to modify payment case must be rejected (by means of a negative Resolution Of Investigation message).";
-				previousVersion_lazy = () -> RequestToModifyPaymentV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RequestToModifyPaymentV02.mmObject());
+				previousVersion_lazy = () -> RequestToModifyPaymentV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "ReqToModfyPmt";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV01.Assignment, com.tools20022.repository.area.camt.RequestToModifyPaymentV01.Case,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV01.Underlying, com.tools20022.repository.area.camt.RequestToModifyPaymentV01.Modification,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPaymentV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPaymentV01.mmAssignment, com.tools20022.repository.area.camt.RequestToModifyPaymentV01.mmCase,
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV01.mmUnderlying, com.tools20022.repository.area.camt.RequestToModifyPaymentV01.mmModification,
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "087";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public UnderlyingTransaction2Choice getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(UnderlyingTransaction2Choice underlying) {
+		this.underlying = underlying;
+	}
+
+	public RequestedModification3 getModification() {
+		return modification;
+	}
+
+	public void setModification(RequestedModification3 modification) {
+		this.modification = modification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

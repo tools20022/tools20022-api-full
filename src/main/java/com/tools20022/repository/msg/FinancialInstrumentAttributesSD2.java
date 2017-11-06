@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD2#DeclaredDisbursedSecurityIdentification
- * FinancialInstrumentAttributesSD2.DeclaredDisbursedSecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD2#mmDeclaredDisbursedSecurityIdentification
+ * FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD2#DeclaredDisbursedSecurityDescription
- * FinancialInstrumentAttributesSD2.DeclaredDisbursedSecurityDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD2#mmDeclaredDisbursedSecurityDescription
+ * FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributesSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification15 declaredDisbursedSecurityIdentification;
 	/**
 	 * Security identification of the security that is being distributed as a
 	 * result of a corporate action as declared by the issuer or offeror on the
@@ -93,7 +94,7 @@ public class FinancialInstrumentAttributesSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclaredDisbursedSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclaredDisbursedSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class FinancialInstrumentAttributesSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityIdentification";
 			definition = "Security identification of the security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	protected Max140Text declaredDisbursedSecurityDescription;
 	/**
 	 * Declared disbursed security description.
 	 * <p>
@@ -133,7 +135,7 @@ public class FinancialInstrumentAttributesSD2 {
 	 * definition} = "Declared disbursed security description."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclaredDisbursedSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclaredDisbursedSecurityDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
@@ -141,8 +143,8 @@ public class FinancialInstrumentAttributesSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityDescription";
 			definition = "Declared disbursed security description.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -150,14 +152,30 @@ public class FinancialInstrumentAttributesSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.DeclaredDisbursedSecurityIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.DeclaredDisbursedSecurityDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD2";
 				definition = "Provides additional information regarding security that will be distributed as part of entitlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification15 getDeclaredDisbursedSecurityIdentification() {
+		return declaredDisbursedSecurityIdentification;
+	}
+
+	public void setDeclaredDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 declaredDisbursedSecurityIdentification) {
+		this.declaredDisbursedSecurityIdentification = declaredDisbursedSecurityIdentification;
+	}
+
+	public Max140Text getDeclaredDisbursedSecurityDescription() {
+		return declaredDisbursedSecurityDescription;
+	}
+
+	public void setDeclaredDisbursedSecurityDescription(Max140Text declaredDisbursedSecurityDescription) {
+		this.declaredDisbursedSecurityDescription = declaredDisbursedSecurityDescription;
 	}
 }

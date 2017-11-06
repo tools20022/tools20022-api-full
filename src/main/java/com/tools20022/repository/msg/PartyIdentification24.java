@@ -22,8 +22,10 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identification of a person, or a non-financial institution.
@@ -34,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification24#Name
- * PartyIdentification24.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification24#mmName
+ * PartyIdentification24.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification24#PostalAddress
- * PartyIdentification24.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification24#mmPostalAddress
+ * PartyIdentification24.mmPostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification24#TaxIdentification
- * PartyIdentification24.TaxIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification24#mmTaxIdentification
+ * PartyIdentification24.mmTaxIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification24#ProprietaryIdentification
- * PartyIdentification24.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification24#mmProprietaryIdentification
+ * PartyIdentification24.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -82,8 +85,8 @@ public class PartyIdentification24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +107,21 @@ public class PartyIdentification24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected PostalAddress1 postalAddress;
 	/**
 	 * Postal address of a party.
 	 * <p>
@@ -149,21 +153,22 @@ public class PartyIdentification24 {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> PartyIdentification24.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Postal address of a party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	protected TaxIdentification1 taxIdentification;
 	/**
 	 * Specifies identification information given to a party by a tax authority.
 	 * <p>
@@ -175,8 +180,8 @@ public class PartyIdentification24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,21 +202,22 @@ public class PartyIdentification24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> PartyIdentification24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "TaxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentification";
 			definition = "Specifies identification information given to a party by a tax authority.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TaxIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification4> proprietaryIdentification;
 	/**
 	 * Specifies a proprietary identification (type and value) for a party.
 	 * <p>
@@ -223,8 +229,8 @@ public class PartyIdentification24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -244,33 +250,65 @@ public class PartyIdentification24 {
 	 * "Specifies a proprietary identification (type and value) for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Specifies a proprietary identification (type and value) for a party.";
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification24.Name, com.tools20022.repository.msg.PartyIdentification24.PostalAddress,
-						com.tools20022.repository.msg.PartyIdentification24.TaxIdentification, com.tools20022.repository.msg.PartyIdentification24.ProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification24.mmName, com.tools20022.repository.msg.PartyIdentification24.mmPostalAddress,
+						com.tools20022.repository.msg.PartyIdentification24.mmTaxIdentification, com.tools20022.repository.msg.PartyIdentification24.mmProprietaryIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyIdentification24";
 				definition = "Identification of a person, or a non-financial institution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public PostalAddress1 getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+		this.postalAddress = postalAddress;
+	}
+
+	public TaxIdentification1 getTaxIdentification() {
+		return taxIdentification;
+	}
+
+	public void setTaxIdentification(com.tools20022.repository.msg.TaxIdentification1 taxIdentification) {
+		this.taxIdentification = taxIdentification;
+	}
+
+	public List<GenericIdentification4> getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(List<com.tools20022.repository.msg.GenericIdentification4> proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

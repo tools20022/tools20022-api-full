@@ -36,43 +36,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties2#SecondaryOwner
- * AccountParties2.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#SecondaryOwner
- * AccountParties5.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties6#SecondaryOwner
- * AccountParties6.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#SecondaryOwner
- * AccountParties3.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#SecondaryOwner
- * AccountParties4.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties7#SecondaryOwner
- * AccountParties7.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties9#SecondaryOwner
- * AccountParties9.SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties8#SecondaryOwner
- * AccountParties8.SecondaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties11#SecondaryOwner
- * AccountParties11.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties2#mmSecondaryOwner
+ * AccountParties2.mmSecondaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties10#SecondaryOwner
- * AccountParties10.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties5#mmSecondaryOwner
+ * AccountParties5.mmSecondaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties12#SecondaryOwner
- * AccountParties12.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties6#mmSecondaryOwner
+ * AccountParties6.mmSecondaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties13#SecondaryOwner
- * AccountParties13.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmSecondaryOwner
+ * AccountParties3.mmSecondaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties14#SecondaryOwner
- * AccountParties14.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties4#mmSecondaryOwner
+ * AccountParties4.mmSecondaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties15#SecondaryOwner
- * AccountParties15.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties7#mmSecondaryOwner
+ * AccountParties7.mmSecondaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties16#SecondaryOwner
- * AccountParties16.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties9#mmSecondaryOwner
+ * AccountParties9.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties8#mmSecondaryOwner
+ * AccountParties8.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties11#mmSecondaryOwner
+ * AccountParties11.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties10#mmSecondaryOwner
+ * AccountParties10.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties12#mmSecondaryOwner
+ * AccountParties12.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties13#mmSecondaryOwner
+ * AccountParties13.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties14#mmSecondaryOwner
+ * AccountParties14.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties15#mmSecondaryOwner
+ * AccountParties15.mmSecondaryOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties16#mmSecondaryOwner
+ * AccountParties16.mmSecondaryOwner}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -82,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,16 +111,16 @@ public class SecondaryOwner extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecondaryOwner";
 				definition = "Entity that is not the primary owner when the ownership of the investment account is split among several owners.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.SecondaryOwner, com.tools20022.repository.msg.AccountParties5.SecondaryOwner,
-						com.tools20022.repository.msg.AccountParties6.SecondaryOwner, com.tools20022.repository.msg.AccountParties3.SecondaryOwner, com.tools20022.repository.msg.AccountParties4.SecondaryOwner,
-						com.tools20022.repository.msg.AccountParties7.SecondaryOwner, com.tools20022.repository.msg.AccountParties9.SecondaryOwner, com.tools20022.repository.msg.AccountParties8.SecondaryOwner,
-						com.tools20022.repository.msg.AccountParties11.SecondaryOwner, com.tools20022.repository.msg.AccountParties10.SecondaryOwner, com.tools20022.repository.msg.AccountParties12.SecondaryOwner,
-						com.tools20022.repository.msg.AccountParties13.SecondaryOwner, com.tools20022.repository.msg.AccountParties14.SecondaryOwner, com.tools20022.repository.msg.AccountParties15.SecondaryOwner,
-						com.tools20022.repository.msg.AccountParties16.SecondaryOwner);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties5.mmSecondaryOwner,
+						com.tools20022.repository.msg.AccountParties6.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties3.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties4.mmSecondaryOwner,
+						com.tools20022.repository.msg.AccountParties7.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties9.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties8.mmSecondaryOwner,
+						com.tools20022.repository.msg.AccountParties11.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties10.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties12.mmSecondaryOwner,
+						com.tools20022.repository.msg.AccountParties13.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties14.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties15.mmSecondaryOwner,
+						com.tools20022.repository.msg.AccountParties16.mmSecondaryOwner);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

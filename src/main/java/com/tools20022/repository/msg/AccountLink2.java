@@ -34,12 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLink2#SecuritiesAccount
- * AccountLink2.SecuritiesAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLink2#CashAccount
- * AccountLink2.CashAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLink2#ValidFrom
- * AccountLink2.ValidFrom}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountLink2#mmSecuritiesAccount
+ * AccountLink2.mmSecuritiesAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLink2#mmCashAccount
+ * AccountLink2.mmCashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLink2#mmValidFrom
+ * AccountLink2.mmValidFrom}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountLink2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount13 securitiesAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -77,8 +79,8 @@ public class AccountLink2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountLink#SecuritiesAccount
-	 * AccountLink.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountLink#mmSecuritiesAccount
+	 * AccountLink.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +98,21 @@ public class AccountLink2 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.mmSecuritiesAccount;
 			componentContext_lazy = () -> AccountLink2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "SctiesAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected CashAccount24 cashAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -121,8 +124,8 @@ public class AccountLink2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountLink#CashAccount
-	 * AccountLink.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountLink#mmCashAccount
+	 * AccountLink.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,21 +143,22 @@ public class AccountLink2 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.mmCashAccount;
 			componentContext_lazy = () -> AccountLink2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.CashAccount;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice validFrom;
 	/**
 	 * Defines the date since when the securities account is linked to the cash
 	 * account.
@@ -169,8 +173,8 @@ public class AccountLink2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -190,17 +194,17 @@ public class AccountLink2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> AccountLink2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the securities account is linked to the cash account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -208,14 +212,38 @@ public class AccountLink2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink2.SecuritiesAccount, com.tools20022.repository.msg.AccountLink2.CashAccount, com.tools20022.repository.msg.AccountLink2.ValidFrom);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink2.mmSecuritiesAccount, com.tools20022.repository.msg.AccountLink2.mmCashAccount, com.tools20022.repository.msg.AccountLink2.mmValidFrom);
 				trace_lazy = () -> AccountLink.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLink2";
 				definition = "Defines how the securities account is linked to the cash account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount13 getSecuritiesAccount() {
+		return securitiesAccount;
+	}
+
+	public void setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccount) {
+		this.securitiesAccount = securitiesAccount;
+	}
+
+	public CashAccount24 getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public DateAndDateTimeChoice getValidFrom() {
+		return validFrom;
+	}
+
+	public void setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = validFrom;
 	}
 }

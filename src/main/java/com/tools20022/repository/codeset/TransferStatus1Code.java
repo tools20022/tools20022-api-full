@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#Accepted
- * TransferStatus1Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#mmAccepted
+ * TransferStatus1Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#SentToNextParty
- * TransferStatus1Code.SentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#mmSentToNextParty
+ * TransferStatus1Code.mmSentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#Matched
- * TransferStatus1Code.Matched}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#mmMatched
+ * TransferStatus1Code.mmMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#AlreadyExecuted
- * TransferStatus1Code.AlreadyExecuted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#mmAlreadyExecuted
+ * TransferStatus1Code.mmAlreadyExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#CancellationPending
- * TransferStatus1Code.CancellationPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#mmCancellationPending
+ * TransferStatus1Code.mmCancellationPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#Reversed
- * TransferStatus1Code.Reversed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#mmReversed
+ * TransferStatus1Code.mmReversed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#Cancelled
- * TransferStatus1Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus1Code#mmCancelled
+ * TransferStatus1Code.mmCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class TransferStatus1Code extends TransferStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -119,7 +119,7 @@ public class TransferStatus1Code extends TransferStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -142,7 +142,7 @@ public class TransferStatus1Code extends TransferStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Matched = new MMCode() {
+	public static final MMCode mmMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
@@ -165,7 +165,7 @@ public class TransferStatus1Code extends TransferStatusCode {
 	 * name} = "AlreadyExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlreadyExecuted = new MMCode() {
+	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
@@ -188,7 +188,7 @@ public class TransferStatus1Code extends TransferStatusCode {
 	 * name} = "CancellationPending"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationPending = new MMCode() {
+	public static final MMCode mmCancellationPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationPending";
@@ -211,7 +211,7 @@ public class TransferStatus1Code extends TransferStatusCode {
 	 * name} = "Reversed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reversed = new MMCode() {
+	public static final MMCode mmReversed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversed";
@@ -234,7 +234,7 @@ public class TransferStatus1Code extends TransferStatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -245,14 +245,14 @@ public class TransferStatus1Code extends TransferStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferStatus1Code";
 				definition = "Specifies the transfer or settlement instruction status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferStatus1Code.Accepted, com.tools20022.repository.codeset.TransferStatus1Code.SentToNextParty,
-						com.tools20022.repository.codeset.TransferStatus1Code.Matched, com.tools20022.repository.codeset.TransferStatus1Code.AlreadyExecuted, com.tools20022.repository.codeset.TransferStatus1Code.CancellationPending,
-						com.tools20022.repository.codeset.TransferStatus1Code.Reversed, com.tools20022.repository.codeset.TransferStatus1Code.Cancelled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferStatus1Code.mmAccepted, com.tools20022.repository.codeset.TransferStatus1Code.mmSentToNextParty,
+						com.tools20022.repository.codeset.TransferStatus1Code.mmMatched, com.tools20022.repository.codeset.TransferStatus1Code.mmAlreadyExecuted, com.tools20022.repository.codeset.TransferStatus1Code.mmCancellationPending,
+						com.tools20022.repository.codeset.TransferStatus1Code.mmReversed, com.tools20022.repository.codeset.TransferStatus1Code.mmCancelled);
 				trace_lazy = () -> TransferStatusCode.mmObject();
 			}
 		});

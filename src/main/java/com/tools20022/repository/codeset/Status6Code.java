@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#Rejected
- * Status6Code.Rejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#Completed
- * Status6Code.Completed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#Queued
- * Status6Code.Queued}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#mmRejected
+ * Status6Code.mmRejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#mmCompleted
+ * Status6Code.mmCompleted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#mmQueued
+ * Status6Code.mmQueued}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class Status6Code extends StatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -101,7 +101,7 @@ public class Status6Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
@@ -123,7 +123,7 @@ public class Status6Code extends StatusCode {
 	 * name} = "Queued"</li>
 	 * </ul>
 	 */
-	public static final MMCode Queued = new MMCode() {
+	public static final MMCode mmQueued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Queued";
@@ -134,12 +134,12 @@ public class Status6Code extends StatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REJT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Status6Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status6Code.Rejected, com.tools20022.repository.codeset.Status6Code.Completed, com.tools20022.repository.codeset.Status6Code.Queued);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status6Code.mmRejected, com.tools20022.repository.codeset.Status6Code.mmCompleted, com.tools20022.repository.codeset.Status6Code.mmQueued);
 				trace_lazy = () -> StatusCode.mmObject();
 			}
 		});

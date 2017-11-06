@@ -34,26 +34,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DirectoryEntry1#AccountOwner
- * DirectoryEntry1.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectoryEntry1#ChangeType
- * DirectoryEntry1.ChangeType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectoryEntry1#mmAccountOwner
+ * DirectoryEntry1.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectoryEntry1#mmChangeType
+ * DirectoryEntry1.mmChangeType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryEntry1#ChangeIdentification
- * DirectoryEntry1.ChangeIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryEntry1#mmChangeIdentification
+ * DirectoryEntry1.mmChangeIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryEntry1#DirectoryCommonDetails
- * DirectoryEntry1.DirectoryCommonDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryEntry1#mmDirectoryCommonDetails
+ * DirectoryEntry1.mmDirectoryCommonDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryEntry1#ParticipantProfile
- * DirectoryEntry1.ParticipantProfile}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryEntry1#mmParticipantProfile
+ * DirectoryEntry1.mmParticipantProfile}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DirectoryEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstitutionIdentification9 accountOwner;
 	/**
 	 * Owner of the account identification.
 	 * <p>
@@ -94,7 +95,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Owner of the account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class DirectoryEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	protected Max35Text changeType;
 	/**
 	 * Type of the change.
 	 * <p>
@@ -135,7 +137,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Type of the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChangeType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class DirectoryEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeType";
 			definition = "Type of the change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number changeIdentification;
 	/**
 	 * Identification number of the entry change.
 	 * <p>
@@ -175,7 +178,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Identification number of the entry change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChangeIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -183,11 +186,12 @@ public class DirectoryEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeIdentification";
 			definition = "Identification number of the entry change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected DirectoryInformation1 directoryCommonDetails;
 	/**
 	 * Information details from National BIC directory.
 	 * <p>
@@ -214,7 +218,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Information details from National BIC directory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DirectoryCommonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDirectoryCommonDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -222,12 +226,13 @@ public class DirectoryEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectoryCommonDetails";
 			definition = "Information details from National BIC directory.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DirectoryInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 		}
 	};
+	protected ParticipantProfile1 participantProfile;
 	/**
 	 * Participant information from National BIC Directory.
 	 * <p>
@@ -254,7 +259,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Participant information from National BIC Directory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantProfile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantProfile = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -262,24 +267,64 @@ public class DirectoryEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantProfile";
 			definition = "Participant information from National BIC Directory.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ParticipantProfile1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ParticipantProfile1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryEntry1.AccountOwner, com.tools20022.repository.msg.DirectoryEntry1.ChangeType,
-						com.tools20022.repository.msg.DirectoryEntry1.ChangeIdentification, com.tools20022.repository.msg.DirectoryEntry1.DirectoryCommonDetails, com.tools20022.repository.msg.DirectoryEntry1.ParticipantProfile);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryEntry1.mmAccountOwner, com.tools20022.repository.msg.DirectoryEntry1.mmChangeType,
+						com.tools20022.repository.msg.DirectoryEntry1.mmChangeIdentification, com.tools20022.repository.msg.DirectoryEntry1.mmDirectoryCommonDetails, com.tools20022.repository.msg.DirectoryEntry1.mmParticipantProfile);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryEntry1";
 				definition = "Record details from National BIC directory.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstitutionIdentification9 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public Max35Text getChangeType() {
+		return changeType;
+	}
+
+	public void setChangeType(Max35Text changeType) {
+		this.changeType = changeType;
+	}
+
+	public Number getChangeIdentification() {
+		return changeIdentification;
+	}
+
+	public void setChangeIdentification(Number changeIdentification) {
+		this.changeIdentification = changeIdentification;
+	}
+
+	public DirectoryInformation1 getDirectoryCommonDetails() {
+		return directoryCommonDetails;
+	}
+
+	public void setDirectoryCommonDetails(com.tools20022.repository.msg.DirectoryInformation1 directoryCommonDetails) {
+		this.directoryCommonDetails = directoryCommonDetails;
+	}
+
+	public ParticipantProfile1 getParticipantProfile() {
+		return participantProfile;
+	}
+
+	public void setParticipantProfile(com.tools20022.repository.msg.ParticipantProfile1 participantProfile) {
+		this.participantProfile = participantProfile;
 	}
 }

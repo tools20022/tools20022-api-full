@@ -37,28 +37,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageHeader5#MessageIdentification
- * MessageHeader5.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageHeader5#mmMessageIdentification
+ * MessageHeader5.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageHeader5#CreationDateTime
- * MessageHeader5.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageHeader5#mmCreationDateTime
+ * MessageHeader5.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageHeader5#MessagePagination
- * MessageHeader5.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageHeader5#mmMessagePagination
+ * MessageHeader5.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageHeader5#OriginalBusinessQuery
- * MessageHeader5.OriginalBusinessQuery}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MessageHeader5#RequestType
- * MessageHeader5.RequestType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MessageHeader5#QueryName
- * MessageHeader5.QueryName}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageHeader5#mmOriginalBusinessQuery
+ * MessageHeader5.mmOriginalBusinessQuery}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageHeader5#mmRequestType
+ * MessageHeader5.mmRequestType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageHeader5#mmQueryName
+ * MessageHeader5.mmQueryName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageHeader5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference, as assigned by the sender, to unambiguously
 	 * identify the message. Usage: The sender has to make sure that
@@ -104,7 +105,7 @@ public class MessageHeader5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class MessageHeader5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the sender, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created.
 	 * <p>
@@ -143,7 +145,7 @@ public class MessageHeader5 {
 	 * definition} = "Date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
@@ -151,11 +153,12 @@ public class MessageHeader5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message. Usage: the pagination of the message is only
 	 * allowed when agreed between the parties.
@@ -185,7 +188,7 @@ public class MessageHeader5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessagePagination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessagePagination = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
@@ -193,11 +196,12 @@ public class MessageHeader5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.\nUsage: the pagination of the message is only allowed when agreed between the parties.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Pagination.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	protected OriginalBusinessQuery1 originalBusinessQuery;
 	/**
 	 * Unique identification of the original query message.
 	 * <p>
@@ -223,7 +227,7 @@ public class MessageHeader5 {
 	 * definition} = "Unique identification of the original query message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalBusinessQuery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalBusinessQuery = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
@@ -231,12 +235,13 @@ public class MessageHeader5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBusinessQuery";
 			definition = "Unique identification of the original query message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalBusinessQuery1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalBusinessQuery1.mmObject();
 		}
 	};
+	protected RequestType2Choice requestType;
 	/**
 	 * Specific actions to be executed through the request.
 	 * <p>
@@ -264,7 +269,7 @@ public class MessageHeader5 {
 	 * definition} = "Specific actions to be executed through the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
@@ -272,11 +277,12 @@ public class MessageHeader5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Specific actions to be executed through the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RequestType2Choice.mmObject();
 		}
 	};
+	protected Max35Text queryName;
 	/**
 	 * Recalls the criteria (search and return criteria) defined in a preceding
 	 * query.
@@ -306,7 +312,7 @@ public class MessageHeader5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
@@ -314,8 +320,8 @@ public class MessageHeader5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -323,15 +329,63 @@ public class MessageHeader5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader5.MessageIdentification, com.tools20022.repository.msg.MessageHeader5.CreationDateTime,
-						com.tools20022.repository.msg.MessageHeader5.MessagePagination, com.tools20022.repository.msg.MessageHeader5.OriginalBusinessQuery, com.tools20022.repository.msg.MessageHeader5.RequestType,
-						com.tools20022.repository.msg.MessageHeader5.QueryName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader5.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader5.mmCreationDateTime,
+						com.tools20022.repository.msg.MessageHeader5.mmMessagePagination, com.tools20022.repository.msg.MessageHeader5.mmOriginalBusinessQuery, com.tools20022.repository.msg.MessageHeader5.mmRequestType,
+						com.tools20022.repository.msg.MessageHeader5.mmQueryName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader5";
 				definition = "Set of characteristics, such as the identification or the creation date and time, specific to the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public OriginalBusinessQuery1 getOriginalBusinessQuery() {
+		return originalBusinessQuery;
+	}
+
+	public void setOriginalBusinessQuery(com.tools20022.repository.msg.OriginalBusinessQuery1 originalBusinessQuery) {
+		this.originalBusinessQuery = originalBusinessQuery;
+	}
+
+	public RequestType2Choice getRequestType() {
+		return requestType;
+	}
+
+	public void setRequestType(RequestType2Choice requestType) {
+		this.requestType = requestType;
+	}
+
+	public Max35Text getQueryName() {
+		return queryName;
+	}
+
+	public void setQueryName(Max35Text queryName) {
+		this.queryName = queryName;
 	}
 }

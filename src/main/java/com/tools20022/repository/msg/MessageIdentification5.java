@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageIdentification5#MessageIdentification
- * MessageIdentification5.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageIdentification5#mmMessageIdentification
+ * MessageIdentification5.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageIdentification5#CreationDateTime
- * MessageIdentification5.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageIdentification5#mmCreationDateTime
+ * MessageIdentification5.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageIdentification5#FirstAgent
- * MessageIdentification5.FirstAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageIdentification5#mmFirstAgent
+ * MessageIdentification5.mmFirstAgent}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,15 +50,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationReportV02#OriginalAssignment
- * IdentificationVerificationReportV02.OriginalAssignment}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationReportV02#mmOriginalAssignment
+ * IdentificationVerificationReportV02.mmOriginalAssignment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference, as assigned by the assigner, and sent to the
 	 * next party in the chain to unambiguously identify the message.<br>
@@ -107,7 +108,7 @@ public class MessageIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageIdentification5.mmObject();
 			isDerived = false;
@@ -115,11 +116,12 @@ public class MessageIdentification5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the assigner, and sent to the next party in the chain to unambiguously identify the message.\r\n\r\nUsage: The assigner has to make sure that MessageIdentification is unique per assignee for a pre-agreed period.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created.
 	 * <p>
@@ -147,7 +149,7 @@ public class MessageIdentification5 {
 	 * definition} = "Date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageIdentification5.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class MessageIdentification5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 firstAgent;
 	/**
 	 * Identifies the first agent in the identification chain, following the
 	 * payment initiating party.
@@ -191,7 +194,7 @@ public class MessageIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageIdentification5.mmObject();
 			isDerived = false;
@@ -199,24 +202,48 @@ public class MessageIdentification5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Identifies the first agent in the identification chain, following the payment initiating party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification5.MessageIdentification, com.tools20022.repository.msg.MessageIdentification5.CreationDateTime,
-						com.tools20022.repository.msg.MessageIdentification5.FirstAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationReportV02.OriginalAssignment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification5.mmMessageIdentification, com.tools20022.repository.msg.MessageIdentification5.mmCreationDateTime,
+						com.tools20022.repository.msg.MessageIdentification5.mmFirstAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationReportV02.mmOriginalAssignment);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageIdentification5";
 				definition = "Identifies a message by a unique identifier and the date and time when the message was created by the sender.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getFirstAgent() {
+		return firstAgent;
+	}
+
+	public void setFirstAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 firstAgent) {
+		this.firstAgent = firstAgent;
 	}
 }

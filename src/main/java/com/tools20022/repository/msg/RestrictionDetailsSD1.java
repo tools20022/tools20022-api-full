@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RestrictionDetailsSD1#RestrictionType
- * RestrictionDetailsSD1.RestrictionType}</li>
+ * {@linkplain com.tools20022.repository.msg.RestrictionDetailsSD1#mmRestrictionType
+ * RestrictionDetailsSD1.mmRestrictionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RestrictionDetailsSD1#FiscalDomicile
- * RestrictionDetailsSD1.FiscalDomicile}</li>
+ * {@linkplain com.tools20022.repository.msg.RestrictionDetailsSD1#mmFiscalDomicile
+ * RestrictionDetailsSD1.mmFiscalDomicile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RestrictionDetailsSD1#Identification
- * RestrictionDetailsSD1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.RestrictionDetailsSD1#mmIdentification
+ * RestrictionDetailsSD1.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RestrictionDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification36 restrictionType;
 	/**
 	 * Type of restriction.
 	 * <p>
@@ -90,7 +91,7 @@ public class RestrictionDetailsSD1 {
 	 * definition} = "Type of restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RestrictionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRestrictionType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class RestrictionDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of restriction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
 		}
 	};
+	protected CountryCode fiscalDomicile;
 	/**
 	 * Country in which the account owner has one's fiscal domicile.
 	 * <p>
@@ -132,7 +134,7 @@ public class RestrictionDetailsSD1 {
 	 * "Country in which the account owner has one's fiscal domicile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FiscalDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
 			isDerived = false;
@@ -140,11 +142,12 @@ public class RestrictionDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalDomicile";
 			definition = "Country in which the account owner has one's fiscal domicile.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Reference to the applicable restriction.
 	 * <p>
@@ -172,7 +175,7 @@ public class RestrictionDetailsSD1 {
 	 * definition} = "Reference to the applicable restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
 			isDerived = false;
@@ -180,8 +183,8 @@ public class RestrictionDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Reference to the applicable restriction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -189,14 +192,38 @@ public class RestrictionDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RestrictionDetailsSD1.RestrictionType, com.tools20022.repository.msg.RestrictionDetailsSD1.FiscalDomicile,
-						com.tools20022.repository.msg.RestrictionDetailsSD1.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RestrictionDetailsSD1.mmRestrictionType, com.tools20022.repository.msg.RestrictionDetailsSD1.mmFiscalDomicile,
+						com.tools20022.repository.msg.RestrictionDetailsSD1.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RestrictionDetailsSD1";
 				definition = "Restriction information details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification36 getRestrictionType() {
+		return restrictionType;
+	}
+
+	public void setRestrictionType(com.tools20022.repository.msg.GenericIdentification36 restrictionType) {
+		this.restrictionType = restrictionType;
+	}
+
+	public CountryCode getFiscalDomicile() {
+		return fiscalDomicile;
+	}
+
+	public void setFiscalDomicile(CountryCode fiscalDomicile) {
+		this.fiscalDomicile = fiscalDomicile;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

@@ -40,11 +40,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument14Choice#CreditTransferDetails
- * PaymentInstrument14Choice.CreditTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument14Choice#mmCreditTransferDetails
+ * PaymentInstrument14Choice.mmCreditTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument14Choice#CashAccountDetails
- * PaymentInstrument14Choice.CashAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument14Choice#mmCashAccountDetails
+ * PaymentInstrument14Choice.mmCashAccountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,6 +70,7 @@ import java.util.function.Supplier;
 public class PaymentInstrument14Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditTransfer7 creditTransferDetails;
 	/**
 	 * Payment instrument between a debtor and a creditor, which flows through
 	 * one or more financial institutions or systems.
@@ -104,21 +105,22 @@ public class PaymentInstrument14Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentInstrument14Choice.mmObject();
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
+			componentContext_lazy = () -> PaymentInstrument14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferDetails";
 			definition = "Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CreditTransfer7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CreditTransfer7.mmObject();
 		}
 	};
+	protected InvestmentAccount32 cashAccountDetails;
 	/**
 	 * Part of the investment account to or from which cash entries are made.
 	 * <p>
@@ -130,8 +132,8 @@ public class PaymentInstrument14Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#CashAccount
-	 * InvestmentAccount.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCashAccount
+	 * InvestmentAccount.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,28 +153,28 @@ public class PaymentInstrument14Choice {
 	 * "Part of the investment account to or from which cash entries are made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> PaymentInstrument14Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.CashAccount;
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountDetails";
 			definition = "Part of the investment account to or from which cash entries are made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InvestmentAccount32.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument14Choice.CreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument14Choice.CashAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument14Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument14Choice.mmCashAccountDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -186,5 +188,21 @@ public class PaymentInstrument14Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditTransfer7 getCreditTransferDetails() {
+		return creditTransferDetails;
+	}
+
+	public void setCreditTransferDetails(CreditTransfer7 creditTransferDetails) {
+		this.creditTransferDetails = creditTransferDetails;
+	}
+
+	public InvestmentAccount32 getCashAccountDetails() {
+		return cashAccountDetails;
+	}
+
+	public void setCashAccountDetails(InvestmentAccount32 cashAccountDetails) {
+		this.cashAccountDetails = cashAccountDetails;
 	}
 }

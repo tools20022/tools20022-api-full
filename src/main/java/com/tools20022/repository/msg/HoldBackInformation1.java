@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#HoldBackAmount
- * HoldBackInformation1.HoldBackAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#mmHoldBackAmount
+ * HoldBackInformation1.mmHoldBackAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#HoldBackReleaseDate
- * HoldBackInformation1.HoldBackReleaseDate}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#mmHoldBackReleaseDate
+ * HoldBackInformation1.mmHoldBackReleaseDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HoldBackInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount holdBackAmount;
 	/**
 	 * Value of the redemption amount subject to hold back.
 	 * <p>
@@ -83,8 +84,8 @@ public class HoldBackInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#HoldBackAmount
-	 * InvestmentFundClass.HoldBackAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackAmount
+	 * InvestmentFundClass.mmHoldBackAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,27 +106,28 @@ public class HoldBackInformation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#Amount
-	 * HoldBackInformation2.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmAmount
+	 * HoldBackInformation2.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldBackAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldBackAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackAmount;
 			componentContext_lazy = () -> HoldBackInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.HoldBackAmount;
 			isDerived = false;
 			xmlTag = "HldBckAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackAmount";
 			definition = "Value of the redemption amount subject to hold back.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.Amount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate holdBackReleaseDate;
 	/**
 	 * Date on which the hold back amount is to be released.
 	 * <p>
@@ -138,8 +140,8 @@ public class HoldBackInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#HoldBackReleaseDate
-	 * InvestmentFundClass.HoldBackReleaseDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackReleaseDate
+	 * InvestmentFundClass.mmHoldBackReleaseDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,24 +162,24 @@ public class HoldBackInformation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#ExpectedReleaseDate
-	 * HoldBackInformation2.ExpectedReleaseDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmExpectedReleaseDate
+	 * HoldBackInformation2.mmExpectedReleaseDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldBackReleaseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldBackReleaseDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackReleaseDate;
 			componentContext_lazy = () -> HoldBackInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.HoldBackReleaseDate;
 			isDerived = false;
 			xmlTag = "HldBckRlsDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackReleaseDate";
 			definition = "Date on which the hold back amount is to be released.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.ExpectedReleaseDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.mmExpectedReleaseDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -185,9 +187,9 @@ public class HoldBackInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation1.HoldBackAmount, com.tools20022.repository.msg.HoldBackInformation1.HoldBackReleaseDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackAmount, com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackReleaseDate);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "HoldBackInformation1";
 				definition = "Information about hold back.";
@@ -195,5 +197,21 @@ public class HoldBackInformation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getHoldBackAmount() {
+		return holdBackAmount;
+	}
+
+	public void setHoldBackAmount(ActiveCurrencyAndAmount holdBackAmount) {
+		this.holdBackAmount = holdBackAmount;
+	}
+
+	public ISODate getHoldBackReleaseDate() {
+		return holdBackReleaseDate;
+	}
+
+	public void setHoldBackReleaseDate(ISODate holdBackReleaseDate) {
+		this.holdBackReleaseDate = holdBackReleaseDate;
 	}
 }

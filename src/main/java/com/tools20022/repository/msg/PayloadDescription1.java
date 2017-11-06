@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Contains information about the payload.
@@ -32,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayloadDescription1#PayloadDetails
- * PayloadDescription1.PayloadDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PayloadDescription1#mmPayloadDetails
+ * PayloadDescription1.mmPayloadDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayloadDescription1#ApplicationSpecificInformation
- * PayloadDescription1.ApplicationSpecificInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PayloadDescription1#mmApplicationSpecificInformation
+ * PayloadDescription1.mmApplicationSpecificInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayloadDescription1#PayloadTypeDetails
- * PayloadDescription1.PayloadTypeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PayloadDescription1#mmPayloadTypeDetails
+ * PayloadDescription1.mmPayloadTypeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PayloadDescription1#ManifestDetails
- * PayloadDescription1.ManifestDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PayloadDescription1#mmManifestDetails
+ * PayloadDescription1.mmManifestDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayloadDescription1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PayloadDetails1 payloadDetails;
 	/**
 	 * This component is used to identify the instance of the document
 	 * exchanged.
@@ -92,7 +94,7 @@ public class PayloadDescription1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PayloadDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayloadDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
@@ -100,12 +102,13 @@ public class PayloadDescription1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadDetails";
 			definition = "This component is used to identify the instance of the document exchanged.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PayloadDetails1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PayloadDetails1.mmObject();
 		}
 	};
+	protected ApplicationSpecifics1 applicationSpecificInformation;
 	/**
 	 * Contains business information that is considered as necessary by the
 	 * service provider.
@@ -135,7 +138,7 @@ public class PayloadDescription1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ApplicationSpecificInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmApplicationSpecificInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
@@ -143,12 +146,13 @@ public class PayloadDescription1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationSpecificInformation";
 			definition = "Contains business information that is considered as necessary by the service provider.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ApplicationSpecifics1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 		}
 	};
+	protected PayloadTypeDetails1 payloadTypeDetails;
 	/**
 	 * Identification of the type of payload.
 	 * <p>
@@ -175,7 +179,7 @@ public class PayloadDescription1 {
 	 * definition} = "Identification of the type of payload."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PayloadTypeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayloadTypeDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
@@ -183,12 +187,13 @@ public class PayloadDescription1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadTypeDetails";
 			definition = "Identification of the type of payload.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PayloadTypeDetails1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PayloadTypeDetails1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ManifestDetails1> manifestDetails;
 	/**
 	 * Manifest that describes the related items or attachments.<br>
 	 * This block is repeated for each different type of item.
@@ -218,7 +223,7 @@ public class PayloadDescription1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ManifestDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmManifestDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
@@ -227,22 +232,54 @@ public class PayloadDescription1 {
 			name = "ManifestDetails";
 			definition = "Manifest that describes the related items or attachments.\r\nThis block is repeated for each different type of item.";
 			minOccurs = 0;
-			type_lazy = () -> ManifestDetails1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ManifestDetails1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadDescription1.PayloadDetails, com.tools20022.repository.msg.PayloadDescription1.ApplicationSpecificInformation,
-						com.tools20022.repository.msg.PayloadDescription1.PayloadTypeDetails, com.tools20022.repository.msg.PayloadDescription1.ManifestDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadDescription1.mmPayloadDetails, com.tools20022.repository.msg.PayloadDescription1.mmApplicationSpecificInformation,
+						com.tools20022.repository.msg.PayloadDescription1.mmPayloadTypeDetails, com.tools20022.repository.msg.PayloadDescription1.mmManifestDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PayloadDescription1";
 				definition = "Contains information about the payload.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PayloadDetails1 getPayloadDetails() {
+		return payloadDetails;
+	}
+
+	public void setPayloadDetails(com.tools20022.repository.msg.PayloadDetails1 payloadDetails) {
+		this.payloadDetails = payloadDetails;
+	}
+
+	public ApplicationSpecifics1 getApplicationSpecificInformation() {
+		return applicationSpecificInformation;
+	}
+
+	public void setApplicationSpecificInformation(com.tools20022.repository.msg.ApplicationSpecifics1 applicationSpecificInformation) {
+		this.applicationSpecificInformation = applicationSpecificInformation;
+	}
+
+	public PayloadTypeDetails1 getPayloadTypeDetails() {
+		return payloadTypeDetails;
+	}
+
+	public void setPayloadTypeDetails(com.tools20022.repository.msg.PayloadTypeDetails1 payloadTypeDetails) {
+		this.payloadTypeDetails = payloadTypeDetails;
+	}
+
+	public List<ManifestDetails1> getManifestDetails() {
+		return manifestDetails;
+	}
+
+	public void setManifestDetails(List<com.tools20022.repository.msg.ManifestDetails1> manifestDetails) {
+		this.manifestDetails = manifestDetails;
 	}
 }

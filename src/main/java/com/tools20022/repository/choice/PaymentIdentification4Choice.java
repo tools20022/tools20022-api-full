@@ -41,20 +41,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#TransactionIdentification
- * PaymentIdentification4Choice.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#mmTransactionIdentification
+ * PaymentIdentification4Choice.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#QueueIdentification
- * PaymentIdentification4Choice.QueueIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#mmQueueIdentification
+ * PaymentIdentification4Choice.mmQueueIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#LongBusinessIdentification
- * PaymentIdentification4Choice.LongBusinessIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#mmLongBusinessIdentification
+ * PaymentIdentification4Choice.mmLongBusinessIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#ShortBusinessIdentification
- * PaymentIdentification4Choice.ShortBusinessIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#mmShortBusinessIdentification
+ * PaymentIdentification4Choice.mmShortBusinessIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#ProprietaryIdentification
- * PaymentIdentification4Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentification4Choice#mmProprietaryIdentification
+ * PaymentIdentification4Choice.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentIdentification4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique identification, as assigned by the first instructing agent, to
 	 * unambiguously identify the transaction that is passed on, unchanged,
@@ -99,8 +100,8 @@ public class PaymentIdentification4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#TransactionIdentification
-	 * PaymentIdentification.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmTransactionIdentification
+	 * PaymentIdentification.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,20 +122,21 @@ public class PaymentIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.\nUsage: this is the former PaymentInstructionReference element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected QueueTransactionIdentificationDetails queueIdentification;
 	/**
 	 * Identification of the payment instruction by its position in a queue
 	 * managed by the clearing agent.
@@ -165,7 +167,7 @@ public class PaymentIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QueueIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQueueIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
@@ -173,12 +175,13 @@ public class PaymentIdentification4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueIdentification";
 			definition = "Identification of the payment instruction by its position in a queue managed by the clearing agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 		}
 	};
+	protected LongPaymentIdentification1 longBusinessIdentification;
 	/**
 	 * Business identification of the payment instruction given by the clearing
 	 * agent.
@@ -214,21 +217,22 @@ public class PaymentIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LongBusinessIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLongBusinessIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngBizId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LongPaymentIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LongPaymentIdentification1.mmObject();
 		}
 	};
+	protected ShortPaymentIdentification1 shortBusinessIdentification;
 	/**
 	 * Business identification of the payment instruction given by the clearing
 	 * agent.
@@ -264,21 +268,22 @@ public class PaymentIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ShortBusinessIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmShortBusinessIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtBizId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ShortPaymentIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ShortPaymentIdentification1.mmObject();
 		}
 	};
+	protected Max70Text proprietaryIdentification;
 	/**
 	 * Unique reference of the underlying payment instruction assigned by
 	 * Target2 SSP.
@@ -309,7 +314,7 @@ public class PaymentIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
@@ -317,8 +322,8 @@ public class PaymentIdentification4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique reference of the underlying payment instruction assigned by Target2 SSP.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -326,16 +331,56 @@ public class PaymentIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentIdentification4Choice.TransactionIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.QueueIdentification,
-						com.tools20022.repository.choice.PaymentIdentification4Choice.LongBusinessIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.ShortBusinessIdentification,
-						com.tools20022.repository.choice.PaymentIdentification4Choice.ProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentIdentification4Choice.mmTransactionIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.mmQueueIdentification,
+						com.tools20022.repository.choice.PaymentIdentification4Choice.mmLongBusinessIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.mmShortBusinessIdentification,
+						com.tools20022.repository.choice.PaymentIdentification4Choice.mmProprietaryIdentification);
 				trace_lazy = () -> PaymentIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentIdentification4Choice";
 				definition = "Choice between ways of identifying a payment instruction by its references and business identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public QueueTransactionIdentificationDetails getQueueIdentification() {
+		return queueIdentification;
+	}
+
+	public void setQueueIdentification(QueueTransactionIdentificationDetails queueIdentification) {
+		this.queueIdentification = queueIdentification;
+	}
+
+	public LongPaymentIdentification1 getLongBusinessIdentification() {
+		return longBusinessIdentification;
+	}
+
+	public void setLongBusinessIdentification(LongPaymentIdentification1 longBusinessIdentification) {
+		this.longBusinessIdentification = longBusinessIdentification;
+	}
+
+	public ShortPaymentIdentification1 getShortBusinessIdentification() {
+		return shortBusinessIdentification;
+	}
+
+	public void setShortBusinessIdentification(ShortPaymentIdentification1 shortBusinessIdentification) {
+		this.shortBusinessIdentification = shortBusinessIdentification;
+	}
+
+	public Max70Text getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(Max70Text proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

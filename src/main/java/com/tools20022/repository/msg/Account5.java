@@ -38,12 +38,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Account5#Identification
- * Account5.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Account5#Designation
- * Account5.Designation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Account5#Servicer
- * Account5.Servicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account5#mmIdentification
+ * Account5.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account5#mmDesignation
+ * Account5.mmDesignation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account5#mmServicer
+ * Account5.mmServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,45 +54,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#ClientAccount
- * PEPOrISAOrPortfolioInformationV01.ClientAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#mmClientAccount
+ * PEPOrISAOrPortfolioInformationV01.mmClientAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#TransferorAccount
- * AccountHoldingInformationV02.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#mmTransferorAccount
+ * AccountHoldingInformationV02.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#TransferorAccount
- * AccountHoldingInformationV03.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#mmTransferorAccount
+ * AccountHoldingInformationV03.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#ClientAccount
- * PEPOrISAOrPortfolioTransferConfirmationV02.ClientAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#mmClientAccount
+ * PEPOrISAOrPortfolioTransferConfirmationV02.mmClientAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#TransferorAccount
- * PortfolioTransferConfirmationV03.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#mmTransferorAccount
+ * PortfolioTransferConfirmationV03.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#TransferorAccount
- * PortfolioTransferConfirmationV04.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#mmTransferorAccount
+ * PortfolioTransferConfirmationV04.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#ClientAccount
- * PEPOrISAOrPortfolioTransferInstructionV02.ClientAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#mmClientAccount
+ * PEPOrISAOrPortfolioTransferInstructionV02.mmClientAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#TransferorAccount
- * PortfolioTransferInstructionV03.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#mmTransferorAccount
+ * PortfolioTransferInstructionV03.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#TransferorAccount
- * PortfolioTransferInstructionV04.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#mmTransferorAccount
+ * PortfolioTransferInstructionV04.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#ClientAccount
- * RequestForPEPOrISAOrPortfolioInformationV01.ClientAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#mmClientAccount
+ * RequestForPEPOrISAOrPortfolioInformationV01.mmClientAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#TransferorAccount
- * AccountHoldingInformationRequestV02.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmTransferorAccount
+ * AccountHoldingInformationRequestV02.mmTransferorAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +114,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Account5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -127,8 +128,8 @@ public class Account5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Account5
@@ -149,27 +150,28 @@ public class Account5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Account15#Identification
-	 * Account15.Identification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account15#mmIdentification
+	 * Account15.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> Account5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account15.Identification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account15.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text designation;
 	/**
 	 * Supplementary registration information applying to a specific block of
 	 * units for dealing and reporting purposes. The supplementary registration
@@ -186,8 +188,8 @@ public class Account5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#Designation
-	 * InvestmentAccount.Designation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDesignation
+	 * InvestmentAccount.mmDesignation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Account5
@@ -208,27 +210,28 @@ public class Account5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Account15#Designation
-	 * Account15.Designation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account15#mmDesignation
+	 * Account15.mmDesignation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Designation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> Account5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.Designation;
 			isDerived = false;
 			xmlTag = "Dsgnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Designation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account15.Designation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account15.mmDesignation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice servicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -266,41 +269,41 @@ public class Account5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Account15#Servicer
-	 * Account15.Servicer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account15#mmServicer
+	 * Account15.mmServicer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Servicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Account5.mmObject();
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
+			componentContext_lazy = () -> Account5.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account15.Servicer);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account15.mmServicer);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account5.Identification, com.tools20022.repository.msg.Account5.Designation, com.tools20022.repository.msg.Account5.Servicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account5.mmIdentification, com.tools20022.repository.msg.Account5.mmDesignation, com.tools20022.repository.msg.Account5.mmServicer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmClientAccount, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmTransferorAccount,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmTransferorAccount, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmClientAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmTransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmTransferorAccount,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmClientAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmTransferorAccount,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmTransferorAccount, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmClientAccount,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmTransferorAccount);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.ClientAccount, com.tools20022.repository.area.sese.AccountHoldingInformationV02.TransferorAccount,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV03.TransferorAccount, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.ClientAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.TransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.TransferorAccount,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.ClientAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.TransferorAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.TransferorAccount, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.ClientAccount,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.TransferorAccount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Account5";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
@@ -308,5 +311,29 @@ public class Account5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(Max35Text designation) {
+		this.designation = designation;
+	}
+
+	public PartyIdentification2Choice getServicer() {
+		return servicer;
+	}
+
+	public void setServicer(PartyIdentification2Choice servicer) {
+		this.servicer = servicer;
 	}
 }

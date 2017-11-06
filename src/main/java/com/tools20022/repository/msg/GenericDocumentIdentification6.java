@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification6#MessageNumber
- * GenericDocumentIdentification6.MessageNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification6#mmMessageNumber
+ * GenericDocumentIdentification6.mmMessageNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification6#Identification
- * GenericDocumentIdentification6.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericDocumentIdentification6#mmIdentification
+ * GenericDocumentIdentification6.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericDocumentIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber16Choice messageNumber;
 	/**
 	 * Message type number/message identifier of the message referenced in the
 	 * linkage sequence.
@@ -90,7 +91,7 @@ public class GenericDocumentIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericDocumentIdentification6.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class GenericDocumentIdentification6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber16Choice.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text identification;
 	/**
 	 * Identification of the document.
 	 * <p>
@@ -131,7 +133,7 @@ public class GenericDocumentIdentification6 {
 	 * definition} = "Identification of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericDocumentIdentification6.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class GenericDocumentIdentification6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class GenericDocumentIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification6.MessageNumber, com.tools20022.repository.msg.GenericDocumentIdentification6.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification6.mmMessageNumber, com.tools20022.repository.msg.GenericDocumentIdentification6.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GenericDocumentIdentification6";
 				definition = "Generic identification scheme for a document.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber16Choice getMessageNumber() {
+		return messageNumber;
+	}
+
+	public void setMessageNumber(DocumentNumber16Choice messageNumber) {
+		this.messageNumber = messageNumber;
+	}
+
+	public RestrictedFINXMax16Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(RestrictedFINXMax16Text identification) {
+		this.identification = identification;
 	}
 }

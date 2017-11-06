@@ -37,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#CashAccountIdentification
- * CashAccountReferenceDataChange1.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#mmCashAccountIdentification
+ * CashAccountReferenceDataChange1.mmCashAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#FieldName
- * CashAccountReferenceDataChange1.FieldName}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#mmFieldName
+ * CashAccountReferenceDataChange1.mmFieldName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#OldFieldValue
- * CashAccountReferenceDataChange1.OldFieldValue}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#mmOldFieldValue
+ * CashAccountReferenceDataChange1.mmOldFieldValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#NewFieldValue
- * CashAccountReferenceDataChange1.NewFieldValue}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#mmNewFieldValue
+ * CashAccountReferenceDataChange1.mmNewFieldValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#OperationTimeStamp
- * CashAccountReferenceDataChange1.OperationTimeStamp}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountReferenceDataChange1#mmOperationTimeStamp
+ * CashAccountReferenceDataChange1.mmOperationTimeStamp}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountReferenceDataChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount24 cashAccountIdentification;
 	/**
 	 * Identifies the cash account for which the changes are listed in the
 	 * advice.
@@ -102,7 +103,7 @@ public class CashAccountReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -110,12 +111,13 @@ public class CashAccountReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Identifies the cash account for which the changes are listed in the advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected Max35Text fieldName;
 	/**
 	 * Name of the element, as specified in the short tag name for the field in
 	 * the message.
@@ -146,7 +148,7 @@ public class CashAccountReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -154,11 +156,12 @@ public class CashAccountReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FieldName";
 			definition = "Name of the element, as specified in the short tag name for the field in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text oldFieldValue;
 	/**
 	 * Value of the related field before the change was applied.
 	 * <p>
@@ -187,7 +190,7 @@ public class CashAccountReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class CashAccountReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldFieldValue";
 			definition = "Value of the related field before the change was applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text newFieldValue;
 	/**
 	 * Value of the related field after the change was applied.
 	 * <p>
@@ -227,7 +231,7 @@ public class CashAccountReferenceDataChange1 {
 	 * definition} = "Value of the related field after the change was applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -235,11 +239,12 @@ public class CashAccountReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewFieldValue";
 			definition = "Value of the related field after the change was applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODateTime operationTimeStamp;
 	/**
 	 * Specifies the timestamp of the operation.
 	 * <p>
@@ -267,7 +272,7 @@ public class CashAccountReferenceDataChange1 {
 	 * definition} = "Specifies the timestamp of the operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -275,8 +280,8 @@ public class CashAccountReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationTimeStamp";
 			definition = "Specifies the timestamp of the operation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -284,15 +289,55 @@ public class CashAccountReferenceDataChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountReferenceDataChange1.CashAccountIdentification, com.tools20022.repository.msg.CashAccountReferenceDataChange1.FieldName,
-						com.tools20022.repository.msg.CashAccountReferenceDataChange1.OldFieldValue, com.tools20022.repository.msg.CashAccountReferenceDataChange1.NewFieldValue,
-						com.tools20022.repository.msg.CashAccountReferenceDataChange1.OperationTimeStamp);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmCashAccountIdentification, com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmFieldName,
+						com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmOldFieldValue, com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmNewFieldValue,
+						com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmOperationTimeStamp);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountReferenceDataChange1";
 				definition = "Describes the comparison between the currently established baseline elements and the proposed ones.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount24 getCashAccountIdentification() {
+		return cashAccountIdentification;
+	}
+
+	public void setCashAccountIdentification(com.tools20022.repository.msg.CashAccount24 cashAccountIdentification) {
+		this.cashAccountIdentification = cashAccountIdentification;
+	}
+
+	public Max35Text getFieldName() {
+		return fieldName;
+	}
+
+	public void setFieldName(Max35Text fieldName) {
+		this.fieldName = fieldName;
+	}
+
+	public Max350Text getOldFieldValue() {
+		return oldFieldValue;
+	}
+
+	public void setOldFieldValue(Max350Text oldFieldValue) {
+		this.oldFieldValue = oldFieldValue;
+	}
+
+	public Max350Text getNewFieldValue() {
+		return newFieldValue;
+	}
+
+	public void setNewFieldValue(Max350Text newFieldValue) {
+		this.newFieldValue = newFieldValue;
+	}
+
+	public ISODateTime getOperationTimeStamp() {
+		return operationTimeStamp;
+	}
+
+	public void setOperationTimeStamp(ISODateTime operationTimeStamp) {
+		this.operationTimeStamp = operationTimeStamp;
 	}
 }

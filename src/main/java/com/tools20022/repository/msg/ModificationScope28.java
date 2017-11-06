@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope28#ModificationScopeIndication
- * ModificationScope28.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope28#mmModificationScopeIndication
+ * ModificationScope28.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope28#InvestmentPlan
- * ModificationScope28.InvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope28#mmInvestmentPlan
+ * ModificationScope28.mmInvestmentPlan}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,18 +46,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#ModifiedSavingsInvestmentPlan
- * AccountModificationInstructionV06.ModifiedSavingsInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#mmModifiedSavingsInvestmentPlan
+ * AccountModificationInstructionV06.mmModifiedSavingsInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#ModifiedWithdrawalInvestmentPlan
- * AccountModificationInstructionV06.ModifiedWithdrawalInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#mmModifiedWithdrawalInvestmentPlan
+ * AccountModificationInstructionV06.mmModifiedWithdrawalInvestmentPlan}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied.
 	 * <p>
@@ -114,18 +115,18 @@ public class ModificationScope28 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope37#ModificationScopeIndication
-	 * ModificationScope37.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope37#mmModificationScopeIndication
+	 * ModificationScope37.mmModificationScopeIndication}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope25#ModificationScopeIndication
-	 * ModificationScope25.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope25#mmModificationScopeIndication
+	 * ModificationScope25.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope28.mmObject();
 			isDerived = false;
@@ -133,13 +134,14 @@ public class ModificationScope28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope25.ModificationScopeIndication;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope37.ModificationScopeIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope37.mmModificationScopeIndication);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope25.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected InvestmentPlan13 investmentPlan;
 	/**
 	 * Plan that allows investors to schedule periodical investments or
 	 * divestments, according to pre-defined criteria.
@@ -171,18 +173,18 @@ public class ModificationScope28 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope37#InvestmentPlan
-	 * ModificationScope37.InvestmentPlan}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope37#mmInvestmentPlan
+	 * ModificationScope37.mmInvestmentPlan}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope25#InvestmentPlan
-	 * ModificationScope25.InvestmentPlan}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope25#mmInvestmentPlan
+	 * ModificationScope25.mmInvestmentPlan}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentPlan = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentPlan = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope28.mmObject();
 			isDerived = false;
@@ -190,29 +192,45 @@ public class ModificationScope28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Plan that allows investors to schedule periodical investments or divestments, according to pre-defined criteria.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope25.InvestmentPlan;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope37.InvestmentPlan);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope37.mmInvestmentPlan);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope25.mmInvestmentPlan;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentPlan13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentPlan13.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope28.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope28.InvestmentPlan);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.ModifiedSavingsInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.ModifiedWithdrawalInvestmentPlan);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope28.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope28.mmInvestmentPlan);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedSavingsInvestmentPlan,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedWithdrawalInvestmentPlan);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope28";
 				definition = "Scope of the modification to be applied on an identified set of information.";
-				previousVersion_lazy = () -> ModificationScope25.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope37.mmObject());
+				previousVersion_lazy = () -> ModificationScope25.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public InvestmentPlan13 getInvestmentPlan() {
+		return investmentPlan;
+	}
+
+	public void setInvestmentPlan(com.tools20022.repository.msg.InvestmentPlan13 investmentPlan) {
+		this.investmentPlan = investmentPlan;
 	}
 }

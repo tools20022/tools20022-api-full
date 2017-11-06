@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FutureAndOptionContractTypeCode#Ordinary
- * FutureAndOptionContractTypeCode.Ordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.FutureAndOptionContractTypeCode#mmOrdinary
+ * FutureAndOptionContractTypeCode.mmOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FutureAndOptionContractTypeCode#Index
- * FutureAndOptionContractTypeCode.Index}</li>
+ * {@linkplain com.tools20022.repository.codeset.FutureAndOptionContractTypeCode#mmIndex
+ * FutureAndOptionContractTypeCode.mmIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FutureAndOptionContractTypeCode#ExercisedFuture
- * FutureAndOptionContractTypeCode.ExercisedFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.FutureAndOptionContractTypeCode#mmExercisedFuture
+ * FutureAndOptionContractTypeCode.mmExercisedFuture}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class FutureAndOptionContractTypeCode {
 	 * definition} = "Ordinary future and option contract."</li>
 	 * </ul>
 	 */
-	public static final MMCode Ordinary = new MMCode() {
+	public static final MMCode mmOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
@@ -126,7 +126,7 @@ public class FutureAndOptionContractTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Index = new MMCode() {
+	public static final MMCode mmIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
@@ -157,7 +157,7 @@ public class FutureAndOptionContractTypeCode {
 	 * "Receipt of future contract when an option on a future is exercised."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExercisedFuture = new MMCode() {
+	public static final MMCode mmExercisedFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisedFuture";
@@ -170,13 +170,13 @@ public class FutureAndOptionContractTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORDY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FutureAndOptionContractTypeCode";
 				definition = "Future And Option Contract Type";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.Ordinary, com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.Index,
-						com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.ExercisedFuture);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.mmOrdinary, com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.mmIndex,
+						com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.mmExercisedFuture);
 				derivation_lazy = () -> Arrays.asList(FutureAndOptionContractType1Code.mmObject());
 			}
 		});

@@ -33,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Information regarding the total amount of taxes.
@@ -42,37 +43,38 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#EUDividendStatusOrExtendedEUDividendStatusRule
- * TotalTaxes3.EUDividendStatusOrExtendedEUDividendStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUDividendStatusOrExtendedEUDividendStatusRule
+ * TotalTaxes3.mmEUDividendStatusOrExtendedEUDividendStatusRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#EUCapitalGainOrExtendedEUCapitalGainRule
- * TotalTaxes3.EUCapitalGainOrExtendedEUCapitalGainRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUCapitalGainOrExtendedEUCapitalGainRule
+ * TotalTaxes3.mmEUCapitalGainOrExtendedEUCapitalGainRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#TotalAmountOfTaxes
- * TotalTaxes3.TotalAmountOfTaxes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#TaxableIncomePerDividend
- * TotalTaxes3.TaxableIncomePerDividend}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#EUCapitalGain
- * TotalTaxes3.EUCapitalGain}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmTotalAmountOfTaxes
+ * TotalTaxes3.mmTotalAmountOfTaxes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#ExtendedEUCapitalGain
- * TotalTaxes3.ExtendedEUCapitalGain}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#EUDividendStatus
- * TotalTaxes3.EUDividendStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmTaxableIncomePerDividend
+ * TotalTaxes3.mmTaxableIncomePerDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUCapitalGain
+ * TotalTaxes3.mmEUCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#ExtendedEUDividendStatus
- * TotalTaxes3.ExtendedEUDividendStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmExtendedEUCapitalGain
+ * TotalTaxes3.mmExtendedEUCapitalGain}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUDividendStatus
+ * TotalTaxes3.mmEUDividendStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#PercentageOfDebtClaim
- * TotalTaxes3.PercentageOfDebtClaim}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#TaxDetails
- * TotalTaxes3.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmExtendedEUDividendStatus
+ * TotalTaxes3.mmExtendedEUDividendStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmPercentageOfDebtClaim
+ * TotalTaxes3.mmPercentageOfDebtClaim}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#mmTaxDetails
+ * TotalTaxes3.mmTaxDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -81,8 +83,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -104,6 +106,7 @@ import java.util.function.Supplier;
 public class TotalTaxes3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount totalAmountOfTaxes;
 	/**
 	 * Total value of the taxes for a specific order.
 	 * <p>
@@ -117,7 +120,7 @@ public class TotalTaxes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,20 +138,21 @@ public class TotalTaxes3 {
 	 * definition} = "Total value of the taxes for a specific order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmountOfTaxes = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmountOfTaxes = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> TotalTaxes3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TtlAmtOfTaxs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountOfTaxes";
 			definition = "Total value of the taxes for a specific order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxableIncomePerDividend;
 	/**
 	 * Amount included in the dividend that corresponds to gains directly or
 	 * indirectly derived from interest payment in the scope of the European
@@ -164,8 +168,8 @@ public class TotalTaxes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerDividend
-	 * SecuritiesTax.TaxableIncomePerDividend}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerDividend
+	 * SecuritiesTax.mmTaxableIncomePerDividend}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,20 +189,21 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxableIncomePerDividend = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxableIncomePerDividend = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerDividend;
 			componentContext_lazy = () -> TotalTaxes3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerDividend;
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvdd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerDividend";
 			definition = "Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected EUCapitalGain2Code eUCapitalGain;
 	/**
 	 * Specifies whether capital gain is in the scope of the European directive
 	 * on taxation of savings income in the form of interest payments (Council
@@ -215,8 +220,8 @@ public class TotalTaxes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,20 +241,21 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> TotalTaxes3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "EUCptlGn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedEUCapitalGain;
 	/**
 	 * Specifies whether capital gain is in the scope of the European directive
 	 * on taxation of savings income in the form of interest payments (Council
@@ -266,8 +272,8 @@ public class TotalTaxes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,20 +293,21 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedEUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedEUCapitalGain = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> TotalTaxes3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "XtndedEUCptlGn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedEUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected EUDividendStatus1Code eUDividendStatus;
 	/**
 	 * Specifies whether dividend is in the scope of the European directive on
 	 * taxation of savings income in the form of interest payments (Council
@@ -317,8 +324,8 @@ public class TotalTaxes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUDividendStatus
-	 * SecuritiesTax.EUDividendStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUDividendStatus
+	 * SecuritiesTax.mmEUDividendStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -338,20 +345,21 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EUDividendStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> TotalTaxes3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUDividendStatus;
 			isDerived = false;
 			xmlTag = "EUDvddSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUDividendStatus";
 			definition = "Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedEUDividendStatus;
 	/**
 	 * Specifies whether dividend is in the scope of the European directive on
 	 * taxation of savings income in the form of interest payments (Council
@@ -368,8 +376,8 @@ public class TotalTaxes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUDividendStatus
-	 * SecuritiesTax.EUDividendStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUDividendStatus
+	 * SecuritiesTax.mmEUDividendStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -389,20 +397,21 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedEUDividendStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedEUDividendStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> TotalTaxes3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUDividendStatus;
 			isDerived = false;
 			xmlTag = "XtndedEUDvddSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedEUDividendStatus";
 			definition = "Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfDebtClaim;
 	/**
 	 * Percentage of the underlying assets of the funds that represents a debt
 	 * and is in the scope of the European directive on taxation of savings
@@ -419,8 +428,8 @@ public class TotalTaxes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#PercentageOfDebtClaim
-	 * InvestmentFundTax.PercentageOfDebtClaim}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageOfDebtClaim
+	 * InvestmentFundTax.mmPercentageOfDebtClaim}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -440,20 +449,21 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfDebtClaim = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> TotalTaxes3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.PercentageOfDebtClaim;
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax14> taxDetails;
 	/**
 	 * Information related to a specific tax.
 	 * <p>
@@ -483,18 +493,18 @@ public class TotalTaxes3 {
 	 * definition} = "Information related to a specific tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Information related to a specific tax.";
 			minOccurs = 0;
-			type_lazy = () -> Tax14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax14.mmObject();
 		}
 	};
 	/**
@@ -507,11 +517,11 @@ public class TotalTaxes3 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#EUDividendStatus
-	 * TotalTaxes3.EUDividendStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUDividendStatus
+	 * TotalTaxes3.mmEUDividendStatus}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#ExtendedEUDividendStatus
-	 * TotalTaxes3.ExtendedEUDividendStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmExtendedEUDividendStatus
+	 * TotalTaxes3.mmExtendedEUDividendStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -530,13 +540,13 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor EUDividendStatusOrExtendedEUDividendStatusRule = new MMXor() {
+	public static final MMXor mmEUDividendStatusOrExtendedEUDividendStatusRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUDividendStatusOrExtendedEUDividendStatusRule";
 			definition = "Either EUDividendStatus or ExtendedEUDividendStatus may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.EUDividendStatus, com.tools20022.repository.msg.TotalTaxes3.ExtendedEUDividendStatus);
 			messageComponent_lazy = () -> TotalTaxes3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.mmEUDividendStatus, com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUDividendStatus);
 		}
 	};
 	/**
@@ -548,11 +558,12 @@ public class TotalTaxes3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#EUCapitalGain
-	 * TotalTaxes3.EUCapitalGain}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#ExtendedEUCapitalGain
-	 * TotalTaxes3.ExtendedEUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUCapitalGain
+	 * TotalTaxes3.mmEUCapitalGain}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmExtendedEUCapitalGain
+	 * TotalTaxes3.mmExtendedEUCapitalGain}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -571,24 +582,24 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor EUCapitalGainOrExtendedEUCapitalGainRule = new MMXor() {
+	public static final MMXor mmEUCapitalGainOrExtendedEUCapitalGainRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGainOrExtendedEUCapitalGainRule";
 			definition = "Either EUCapitalGain or ExtendedEUCapitalGain may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.EUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.ExtendedEUCapitalGain);
 			messageComponent_lazy = () -> TotalTaxes3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.mmEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUCapitalGain);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.TotalAmountOfTaxes, com.tools20022.repository.msg.TotalTaxes3.TaxableIncomePerDividend,
-						com.tools20022.repository.msg.TotalTaxes3.EUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.ExtendedEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.EUDividendStatus,
-						com.tools20022.repository.msg.TotalTaxes3.ExtendedEUDividendStatus, com.tools20022.repository.msg.TotalTaxes3.PercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes3.TaxDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.mmTotalAmountOfTaxes, com.tools20022.repository.msg.TotalTaxes3.mmTaxableIncomePerDividend,
+						com.tools20022.repository.msg.TotalTaxes3.mmEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.mmEUDividendStatus,
+						com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUDividendStatus, com.tools20022.repository.msg.TotalTaxes3.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes3.mmTaxDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -600,9 +611,73 @@ public class TotalTaxes3 {
 				name = "TotalTaxes3";
 				definition = "Information regarding the total amount of taxes.";
 				nextVersions_lazy = () -> Arrays.asList(InformativeTax1.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.EUDividendStatusOrExtendedEUDividendStatusRule, com.tools20022.repository.msg.TotalTaxes3.EUCapitalGainOrExtendedEUCapitalGainRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.mmEUDividendStatusOrExtendedEUDividendStatusRule, com.tools20022.repository.msg.TotalTaxes3.mmEUCapitalGainOrExtendedEUCapitalGainRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getTotalAmountOfTaxes() {
+		return totalAmountOfTaxes;
+	}
+
+	public void setTotalAmountOfTaxes(ActiveCurrencyAnd13DecimalAmount totalAmountOfTaxes) {
+		this.totalAmountOfTaxes = totalAmountOfTaxes;
+	}
+
+	public ActiveCurrencyAndAmount getTaxableIncomePerDividend() {
+		return taxableIncomePerDividend;
+	}
+
+	public void setTaxableIncomePerDividend(ActiveCurrencyAndAmount taxableIncomePerDividend) {
+		this.taxableIncomePerDividend = taxableIncomePerDividend;
+	}
+
+	public EUCapitalGain2Code getEUCapitalGain() {
+		return eUCapitalGain;
+	}
+
+	public void setEUCapitalGain(EUCapitalGain2Code eUCapitalGain) {
+		this.eUCapitalGain = eUCapitalGain;
+	}
+
+	public Extended350Code getExtendedEUCapitalGain() {
+		return extendedEUCapitalGain;
+	}
+
+	public void setExtendedEUCapitalGain(Extended350Code extendedEUCapitalGain) {
+		this.extendedEUCapitalGain = extendedEUCapitalGain;
+	}
+
+	public EUDividendStatus1Code getEUDividendStatus() {
+		return eUDividendStatus;
+	}
+
+	public void setEUDividendStatus(EUDividendStatus1Code eUDividendStatus) {
+		this.eUDividendStatus = eUDividendStatus;
+	}
+
+	public Extended350Code getExtendedEUDividendStatus() {
+		return extendedEUDividendStatus;
+	}
+
+	public void setExtendedEUDividendStatus(Extended350Code extendedEUDividendStatus) {
+		this.extendedEUDividendStatus = extendedEUDividendStatus;
+	}
+
+	public PercentageRate getPercentageOfDebtClaim() {
+		return percentageOfDebtClaim;
+	}
+
+	public void setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
+		this.percentageOfDebtClaim = percentageOfDebtClaim;
+	}
+
+	public List<Tax14> getTaxDetails() {
+		return taxDetails;
+	}
+
+	public void setTaxDetails(List<com.tools20022.repository.msg.Tax14> taxDetails) {
+		this.taxDetails = taxDetails;
 	}
 }

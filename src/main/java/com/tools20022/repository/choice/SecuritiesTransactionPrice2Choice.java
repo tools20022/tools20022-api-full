@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#MonetaryValue
- * SecuritiesTransactionPrice2Choice.MonetaryValue}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#mmMonetaryValue
+ * SecuritiesTransactionPrice2Choice.mmMonetaryValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#Percentage
- * SecuritiesTransactionPrice2Choice.Percentage}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#mmPercentage
+ * SecuritiesTransactionPrice2Choice.mmPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#Yield
- * SecuritiesTransactionPrice2Choice.Yield}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#mmYield
+ * SecuritiesTransactionPrice2Choice.mmYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#BasisPoints
- * SecuritiesTransactionPrice2Choice.BasisPoints}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#mmBasisPoints
+ * SecuritiesTransactionPrice2Choice.mmBasisPoints}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionPrice2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection61 monetaryValue;
 	/**
 	 * Price expressed as a monetary value.
 	 * <p>
@@ -82,8 +83,8 @@ public class SecuritiesTransactionPrice2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,21 +103,22 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as a monetary value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MonetaryValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMonetaryValue = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "MntryVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonetaryValue";
 			definition = "Price expressed as a monetary value.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection61.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountAndDirection61.mmObject();
 		}
 	};
+	protected PercentageRate percentage;
 	/**
 	 * Price expressed as a rate, that is a percentage.
 	 * <p>
@@ -130,8 +132,8 @@ public class SecuritiesTransactionPrice2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as a rate, that is a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "Pctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Price expressed as a rate, that is a percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate yield;
 	/**
 	 * Price expressed as a yield.
 	 * <p>
@@ -177,8 +180,8 @@ public class SecuritiesTransactionPrice2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#Value
-	 * YieldCalculation.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmValue
+	 * YieldCalculation.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,20 +200,21 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as a yield."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Yield = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValue;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.Value;
 			isDerived = false;
 			xmlTag = "Yld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
 			definition = "Price expressed as a yield.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected DecimalNumber basisPoints;
 	/**
 	 * Price expressed as basis points.
 	 * <p>
@@ -224,8 +228,8 @@ public class SecuritiesTransactionPrice2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Index#IndexPoints
-	 * Index.IndexPoints}</li>
+	 * {@linkplain com.tools20022.repository.entity.Index#mmIndexPoints
+	 * Index.mmIndexPoints}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -244,17 +248,17 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as basis points."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BasisPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasisPoints = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexPoints;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.IndexPoints;
 			isDerived = false;
 			xmlTag = "BsisPts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPoints";
 			definition = "Price expressed as basis points.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -262,15 +266,47 @@ public class SecuritiesTransactionPrice2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.MonetaryValue, com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.Percentage,
-						com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.Yield, com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.BasisPoints);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmMonetaryValue, com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmPercentage,
+						com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmYield, com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmBasisPoints);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPrice2Choice";
 				definition = "Choice to define the price of the securities transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection61 getMonetaryValue() {
+		return monetaryValue;
+	}
+
+	public void setMonetaryValue(AmountAndDirection61 monetaryValue) {
+		this.monetaryValue = monetaryValue;
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
+	}
+
+	public PercentageRate getYield() {
+		return yield;
+	}
+
+	public void setYield(PercentageRate yield) {
+		this.yield = yield;
+	}
+
+	public DecimalNumber getBasisPoints() {
+		return basisPoints;
+	}
+
+	public void setBasisPoints(DecimalNumber basisPoints) {
+		this.basisPoints = basisPoints;
 	}
 }

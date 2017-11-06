@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * InputSourceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InputSource1Code#Encoded
- * InputSource1Code.Encoded}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InputSource1Code#mmEncoded
+ * InputSource1Code.mmEncoded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InputSource1Code#UploadedManually
- * InputSource1Code.UploadedManually}</li>
+ * {@linkplain com.tools20022.repository.codeset.InputSource1Code#mmUploadedManually
+ * InputSource1Code.mmUploadedManually}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InputSource1Code#UploadedViaCIS
- * InputSource1Code.UploadedViaCIS}</li>
+ * {@linkplain com.tools20022.repository.codeset.InputSource1Code#mmUploadedViaCIS
+ * InputSource1Code.mmUploadedViaCIS}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,7 +77,7 @@ public class InputSource1Code extends InputSourceCode {
 	 * name} = "Encoded"</li>
 	 * </ul>
 	 */
-	public static final MMCode Encoded = new MMCode() {
+	public static final MMCode mmEncoded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Encoded";
@@ -100,7 +100,7 @@ public class InputSource1Code extends InputSourceCode {
 	 * name} = "UploadedManually"</li>
 	 * </ul>
 	 */
-	public static final MMCode UploadedManually = new MMCode() {
+	public static final MMCode mmUploadedManually = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedManually";
@@ -123,7 +123,7 @@ public class InputSource1Code extends InputSourceCode {
 	 * name} = "UploadedViaCIS"</li>
 	 * </ul>
 	 */
-	public static final MMCode UploadedViaCIS = new MMCode() {
+	public static final MMCode mmUploadedViaCIS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedViaCIS";
@@ -134,12 +134,12 @@ public class InputSource1Code extends InputSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InputSource1Code";
 				definition = "Specifies the input source for the generation of the file.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InputSource1Code.Encoded, com.tools20022.repository.codeset.InputSource1Code.UploadedManually,
-						com.tools20022.repository.codeset.InputSource1Code.UploadedViaCIS);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InputSource1Code.mmEncoded, com.tools20022.repository.codeset.InputSource1Code.mmUploadedManually,
+						com.tools20022.repository.codeset.InputSource1Code.mmUploadedViaCIS);
 				trace_lazy = () -> InputSourceCode.mmObject();
 			}
 		});

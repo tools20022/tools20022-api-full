@@ -36,19 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount21#Account
- * SecuritiesAccount21.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount21#SubAccount
- * SecuritiesAccount21.SubAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount21#mmAccount
+ * SecuritiesAccount21.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount21#BaseCurrency
- * SecuritiesAccount21.BaseCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount21#mmSubAccount
+ * SecuritiesAccount21.mmSubAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount21#ReportingCurrency
- * SecuritiesAccount21.ReportingCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount21#mmBaseCurrency
+ * SecuritiesAccount21.mmBaseCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount21#ForeignExchangeRate
- * SecuritiesAccount21.ForeignExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount21#mmReportingCurrency
+ * SecuritiesAccount21.mmReportingCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount21#mmForeignExchangeRate
+ * SecuritiesAccount21.mmForeignExchangeRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,15 +60,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#AccountDetails
- * TotalPortfolioValuationReportV01.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmAccountDetails
+ * TotalPortfolioValuationReportV01.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccount21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification5 account;
 	/**
 	 * Account identification.
 	 * <p>
@@ -94,8 +96,8 @@ public class SecuritiesAccount21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,21 +116,22 @@ public class SecuritiesAccount21 {
 	 * definition} = "Account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification5.mmObject();
 		}
 	};
+	protected AccountIdentification5 subAccount;
 	/**
 	 * Sub-account identification.
 	 * <p>
@@ -160,21 +163,22 @@ public class SecuritiesAccount21 {
 	 * definition} = "Sub-account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount";
 			definition = "Sub-account identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification5.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode baseCurrency;
 	/**
 	 * Base currency for the account.
 	 * <p>
@@ -188,8 +192,8 @@ public class SecuritiesAccount21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#BaseCurrency
-	 * Account.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,20 +212,21 @@ public class SecuritiesAccount21 {
 	 * definition} = "Base currency for the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.BaseCurrency;
 			isDerived = false;
 			xmlTag = "BaseCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Base currency for the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode reportingCurrency;
 	/**
 	 * Currency chosen for reporting purposes by the account owner in agreement
 	 * with the account servicer.
@@ -236,8 +241,8 @@ public class SecuritiesAccount21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#ReportingCurrency
-	 * Account.ReportingCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmReportingCurrency
+	 * Account.mmReportingCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,20 +263,21 @@ public class SecuritiesAccount21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportingCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportingCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmReportingCurrency;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.ReportingCurrency;
 			isDerived = false;
 			xmlTag = "RptgCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingCurrency";
 			definition = "Currency chosen for reporting purposes by the account owner in agreement with the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected BaseOneRate foreignExchangeRate;
 	/**
 	 * Foreign exchange rate applied between the reporting and base currencies.
 	 * It is assumed the valuation date is the same as the report date.
@@ -285,8 +291,8 @@ public class SecuritiesAccount21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -307,17 +313,17 @@ public class SecuritiesAccount21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "FXRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRate";
 			definition = "Foreign exchange rate applied between the reporting and base currencies. It is assumed the valuation date is the same as the report date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
@@ -325,16 +331,56 @@ public class SecuritiesAccount21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount21.Account, com.tools20022.repository.msg.SecuritiesAccount21.SubAccount,
-						com.tools20022.repository.msg.SecuritiesAccount21.BaseCurrency, com.tools20022.repository.msg.SecuritiesAccount21.ReportingCurrency, com.tools20022.repository.msg.SecuritiesAccount21.ForeignExchangeRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount21.mmAccount, com.tools20022.repository.msg.SecuritiesAccount21.mmSubAccount,
+						com.tools20022.repository.msg.SecuritiesAccount21.mmBaseCurrency, com.tools20022.repository.msg.SecuritiesAccount21.mmReportingCurrency, com.tools20022.repository.msg.SecuritiesAccount21.mmForeignExchangeRate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.AccountDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount21";
 				definition = "Unambiguous identification for the account between the account owner and the account servicer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification5 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.AccountIdentification5 account) {
+		this.account = account;
+	}
+
+	public AccountIdentification5 getSubAccount() {
+		return subAccount;
+	}
+
+	public void setSubAccount(com.tools20022.repository.msg.AccountIdentification5 subAccount) {
+		this.subAccount = subAccount;
+	}
+
+	public ActiveOrHistoricCurrencyCode getBaseCurrency() {
+		return baseCurrency;
+	}
+
+	public void setBaseCurrency(ActiveOrHistoricCurrencyCode baseCurrency) {
+		this.baseCurrency = baseCurrency;
+	}
+
+	public ActiveOrHistoricCurrencyCode getReportingCurrency() {
+		return reportingCurrency;
+	}
+
+	public void setReportingCurrency(ActiveOrHistoricCurrencyCode reportingCurrency) {
+		this.reportingCurrency = reportingCurrency;
+	}
+
+	public BaseOneRate getForeignExchangeRate() {
+		return foreignExchangeRate;
+	}
+
+	public void setForeignExchangeRate(BaseOneRate foreignExchangeRate) {
+		this.foreignExchangeRate = foreignExchangeRate;
 	}
 }

@@ -34,51 +34,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#JointAccountWithSurvivorshipRights
- * AccountOwnershipType2Code.JointAccountWithSurvivorshipRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmJointAccountWithSurvivorshipRights
+ * AccountOwnershipType2Code.mmJointAccountWithSurvivorshipRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#JointAccountInCommon
- * AccountOwnershipType2Code.JointAccountInCommon}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmJointAccountInCommon
+ * AccountOwnershipType2Code.mmJointAccountInCommon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#CustodialAccount
- * AccountOwnershipType2Code.CustodialAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmCustodialAccount
+ * AccountOwnershipType2Code.mmCustodialAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#SingleOwnerAccount
- * AccountOwnershipType2Code.SingleOwnerAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmSingleOwnerAccount
+ * AccountOwnershipType2Code.mmSingleOwnerAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#JointAccount
- * AccountOwnershipType2Code.JointAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmJointAccount
+ * AccountOwnershipType2Code.mmJointAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#Corporation
- * AccountOwnershipType2Code.Corporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmCorporation
+ * AccountOwnershipType2Code.mmCorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#FormalPartnership
- * AccountOwnershipType2Code.FormalPartnership}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmFormalPartnership
+ * AccountOwnershipType2Code.mmFormalPartnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#FormalTrust
- * AccountOwnershipType2Code.FormalTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmFormalTrust
+ * AccountOwnershipType2Code.mmFormalTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#Nominee
- * AccountOwnershipType2Code.Nominee}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmNominee
+ * AccountOwnershipType2Code.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#NonProfitOrganisation
- * AccountOwnershipType2Code.NonProfitOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmNonProfitOrganisation
+ * AccountOwnershipType2Code.mmNonProfitOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#OtherNonIndividual
- * AccountOwnershipType2Code.OtherNonIndividual}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmOtherNonIndividual
+ * AccountOwnershipType2Code.mmOtherNonIndividual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#EUResidualEntity
- * AccountOwnershipType2Code.EUResidualEntity}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmEUResidualEntity
+ * AccountOwnershipType2Code.mmEUResidualEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#GovernmentOrganisation
- * AccountOwnershipType2Code.GovernmentOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmGovernmentOrganisation
+ * AccountOwnershipType2Code.mmGovernmentOrganisation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -114,7 +114,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "JointAccountWithSurvivorshipRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode JointAccountWithSurvivorshipRights = new MMCode() {
+	public static final MMCode mmJointAccountWithSurvivorshipRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccountWithSurvivorshipRights";
@@ -137,7 +137,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "JointAccountInCommon"</li>
 	 * </ul>
 	 */
-	public static final MMCode JointAccountInCommon = new MMCode() {
+	public static final MMCode mmJointAccountInCommon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccountInCommon";
@@ -160,7 +160,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "CustodialAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodialAccount = new MMCode() {
+	public static final MMCode mmCustodialAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodialAccount";
@@ -183,7 +183,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "SingleOwnerAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleOwnerAccount = new MMCode() {
+	public static final MMCode mmSingleOwnerAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOwnerAccount";
@@ -206,7 +206,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "JointAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode JointAccount = new MMCode() {
+	public static final MMCode mmJointAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccount";
@@ -229,7 +229,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "Corporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Corporation = new MMCode() {
+	public static final MMCode mmCorporation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Corporation";
@@ -252,7 +252,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "FormalPartnership"</li>
 	 * </ul>
 	 */
-	public static final MMCode FormalPartnership = new MMCode() {
+	public static final MMCode mmFormalPartnership = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormalPartnership";
@@ -275,7 +275,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "FormalTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode FormalTrust = new MMCode() {
+	public static final MMCode mmFormalTrust = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormalTrust";
@@ -298,7 +298,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "Nominee"</li>
 	 * </ul>
 	 */
-	public static final MMCode Nominee = new MMCode() {
+	public static final MMCode mmNominee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nominee";
@@ -321,7 +321,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "NonProfitOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonProfitOrganisation = new MMCode() {
+	public static final MMCode mmNonProfitOrganisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonProfitOrganisation";
@@ -344,7 +344,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "OtherNonIndividual"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherNonIndividual = new MMCode() {
+	public static final MMCode mmOtherNonIndividual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonIndividual";
@@ -367,7 +367,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "EUResidualEntity"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUResidualEntity = new MMCode() {
+	public static final MMCode mmEUResidualEntity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUResidualEntity";
@@ -390,7 +390,7 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "GovernmentOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentOrganisation = new MMCode() {
+	public static final MMCode mmGovernmentOrganisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentOrganisation";
@@ -401,18 +401,18 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("JOIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnershipType2Code";
 				definition = "Specifies the type of account ownership.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnershipType2Code.JointAccountWithSurvivorshipRights, com.tools20022.repository.codeset.AccountOwnershipType2Code.JointAccountInCommon,
-						com.tools20022.repository.codeset.AccountOwnershipType2Code.CustodialAccount, com.tools20022.repository.codeset.AccountOwnershipType2Code.SingleOwnerAccount,
-						com.tools20022.repository.codeset.AccountOwnershipType2Code.JointAccount, com.tools20022.repository.codeset.AccountOwnershipType2Code.Corporation,
-						com.tools20022.repository.codeset.AccountOwnershipType2Code.FormalPartnership, com.tools20022.repository.codeset.AccountOwnershipType2Code.FormalTrust,
-						com.tools20022.repository.codeset.AccountOwnershipType2Code.Nominee, com.tools20022.repository.codeset.AccountOwnershipType2Code.NonProfitOrganisation,
-						com.tools20022.repository.codeset.AccountOwnershipType2Code.OtherNonIndividual, com.tools20022.repository.codeset.AccountOwnershipType2Code.EUResidualEntity,
-						com.tools20022.repository.codeset.AccountOwnershipType2Code.GovernmentOrganisation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnershipType2Code.mmJointAccountWithSurvivorshipRights, com.tools20022.repository.codeset.AccountOwnershipType2Code.mmJointAccountInCommon,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.mmCustodialAccount, com.tools20022.repository.codeset.AccountOwnershipType2Code.mmSingleOwnerAccount,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.mmJointAccount, com.tools20022.repository.codeset.AccountOwnershipType2Code.mmCorporation,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.mmFormalPartnership, com.tools20022.repository.codeset.AccountOwnershipType2Code.mmFormalTrust,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.mmNominee, com.tools20022.repository.codeset.AccountOwnershipType2Code.mmNonProfitOrganisation,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.mmOtherNonIndividual, com.tools20022.repository.codeset.AccountOwnershipType2Code.mmEUResidualEntity,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.mmGovernmentOrganisation);
 				trace_lazy = () -> AccountOwnershipTypeCode.mmObject();
 			}
 		});

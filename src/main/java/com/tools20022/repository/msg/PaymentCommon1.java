@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Common details for all payment instruction.
@@ -36,22 +37,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#PaymentFrom
- * PaymentCommon1.PaymentFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#PaymentTo
- * PaymentCommon1.PaymentTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#CommonStatus
- * PaymentCommon1.CommonStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#mmPaymentFrom
+ * PaymentCommon1.mmPaymentFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#mmPaymentTo
+ * PaymentCommon1.mmPaymentTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#mmCommonStatus
+ * PaymentCommon1.mmCommonStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentCommon1#RequestedExecutionDate
- * PaymentCommon1.RequestedExecutionDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#EntryDate
- * PaymentCommon1.EntryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentCommon1#mmRequestedExecutionDate
+ * PaymentCommon1.mmRequestedExecutionDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#mmEntryDate
+ * PaymentCommon1.mmEntryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentCommon1#CreditDebitIndicator
- * PaymentCommon1.CreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#PaymentMethod
- * PaymentCommon1.PaymentMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentCommon1#mmCreditDebitIndicator
+ * PaymentCommon1.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon1#mmPaymentMethod
+ * PaymentCommon1.mmPaymentMethod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentCommon1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected System1 paymentFrom;
 	/**
 	 * Origin of the payment (be it a member or a system or both).
 	 * <p>
@@ -107,13 +109,14 @@ public class PaymentCommon1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon2#PaymentFrom
-	 * PaymentCommon2.PaymentFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#mmPaymentFrom
+	 * PaymentCommon2.mmPaymentFrom}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentCommon1.mmObject();
 			isDerived = false;
@@ -121,13 +124,14 @@ public class PaymentCommon1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Origin of the payment (be it a member or a system or both).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.PaymentFrom);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmPaymentFrom);
 			maxOccurs = 1;
-			type_lazy = () -> System1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	protected System1 paymentTo;
 	/**
 	 * Destination of the payment (be it a member or a system or both).
 	 * <p>
@@ -154,13 +158,13 @@ public class PaymentCommon1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon2#PaymentTo
-	 * PaymentCommon2.PaymentTo}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon2#mmPaymentTo
+	 * PaymentCommon2.mmPaymentTo}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentCommon1.mmObject();
 			isDerived = false;
@@ -168,13 +172,14 @@ public class PaymentCommon1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Destination of the payment (be it a member or a system or both).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.PaymentTo);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmPaymentTo);
 			maxOccurs = 1;
-			type_lazy = () -> System1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentStatus1> commonStatus;
 	/**
 	 * Status of a transfer.
 	 * <p>
@@ -186,8 +191,8 @@ public class PaymentCommon1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentStatus
-	 * Payment.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+	 * Payment.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,27 +212,28 @@ public class PaymentCommon1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#CommonStatus
-	 * PaymentCommon2.CommonStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#mmCommonStatus
+	 * PaymentCommon2.mmCommonStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommonStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommonStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
 			componentContext_lazy = () -> PaymentCommon1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentStatus;
 			isDerived = false;
 			xmlTag = "CmonSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonStatus";
 			definition = "Status of a transfer.\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.CommonStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmCommonStatus);
 			minOccurs = 0;
-			type_lazy = () -> PaymentStatus1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice requestedExecutionDate;
 	/**
 	 * Date and time at which the cash is at the disposal of the credit account
 	 * owner, or ceases to be at the disposal of the debit account owner.
@@ -242,8 +248,8 @@ public class PaymentCommon1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#RequestedExecutionDate
-	 * PaymentExecution.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmRequestedExecutionDate
+	 * PaymentExecution.mmRequestedExecutionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,27 +271,28 @@ public class PaymentCommon1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#RequestedExecutionDate
-	 * PaymentCommon2.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#mmRequestedExecutionDate
+	 * PaymentCommon2.mmRequestedExecutionDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> PaymentCommon1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.RequestedExecutionDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.RequestedExecutionDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmRequestedExecutionDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice entryDate;
 	/**
 	 * Date and time at which an entry is posted to an account on the account
 	 * servicer's books.
@@ -300,8 +307,8 @@ public class PaymentCommon1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -322,27 +329,28 @@ public class PaymentCommon1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon2#EntryDate
-	 * PaymentCommon2.EntryDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon2#mmEntryDate
+	 * PaymentCommon2.mmEntryDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> PaymentCommon1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "NtryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDate";
 			definition = "Date and time at which an entry is posted to an account on the account servicer's books.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.EntryDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmEntryDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the payment instruction is a debit or a credit.
 	 * <p>
@@ -356,8 +364,8 @@ public class PaymentCommon1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#CreditDebitIndicator
-	 * Entry.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmCreditDebitIndicator
+	 * Entry.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -378,27 +386,28 @@ public class PaymentCommon1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#CreditDebitIndicator
-	 * PaymentCommon2.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#mmCreditDebitIndicator
+	 * PaymentCommon2.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> PaymentCommon1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the payment instruction is a debit or a credit.\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.CreditDebitIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmCreditDebitIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected PaymentOrigin1Choice paymentMethod;
 	/**
 	 * Indicates the message or event from which an instruction has been
 	 * initiated.
@@ -412,8 +421,8 @@ public class PaymentCommon1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#Payment
-	 * PaymentExecution.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmPayment
+	 * PaymentExecution.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -435,37 +444,37 @@ public class PaymentCommon1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#PaymentMethod
-	 * PaymentCommon2.PaymentMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#mmPaymentMethod
+	 * PaymentCommon2.mmPaymentMethod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
 			componentContext_lazy = () -> PaymentCommon1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.Payment;
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Indicates the message or event from which an instruction has been initiated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.PaymentMethod);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmPaymentMethod);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentOrigin1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PaymentOrigin1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon1.PaymentFrom, com.tools20022.repository.msg.PaymentCommon1.PaymentTo, com.tools20022.repository.msg.PaymentCommon1.CommonStatus,
-						com.tools20022.repository.msg.PaymentCommon1.RequestedExecutionDate, com.tools20022.repository.msg.PaymentCommon1.EntryDate, com.tools20022.repository.msg.PaymentCommon1.CreditDebitIndicator,
-						com.tools20022.repository.msg.PaymentCommon1.PaymentMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon1.mmPaymentFrom, com.tools20022.repository.msg.PaymentCommon1.mmPaymentTo, com.tools20022.repository.msg.PaymentCommon1.mmCommonStatus,
+						com.tools20022.repository.msg.PaymentCommon1.mmRequestedExecutionDate, com.tools20022.repository.msg.PaymentCommon1.mmEntryDate, com.tools20022.repository.msg.PaymentCommon1.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.PaymentCommon1.mmPaymentMethod);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentCommon1";
 				definition = "Common details for all payment instruction.";
@@ -473,5 +482,61 @@ public class PaymentCommon1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public System1 getPaymentFrom() {
+		return paymentFrom;
+	}
+
+	public void setPaymentFrom(com.tools20022.repository.msg.System1 paymentFrom) {
+		this.paymentFrom = paymentFrom;
+	}
+
+	public System1 getPaymentTo() {
+		return paymentTo;
+	}
+
+	public void setPaymentTo(com.tools20022.repository.msg.System1 paymentTo) {
+		this.paymentTo = paymentTo;
+	}
+
+	public List<PaymentStatus1> getCommonStatus() {
+		return commonStatus;
+	}
+
+	public void setCommonStatus(List<com.tools20022.repository.msg.PaymentStatus1> commonStatus) {
+		this.commonStatus = commonStatus;
+	}
+
+	public DateAndDateTimeChoice getRequestedExecutionDate() {
+		return requestedExecutionDate;
+	}
+
+	public void setRequestedExecutionDate(DateAndDateTimeChoice requestedExecutionDate) {
+		this.requestedExecutionDate = requestedExecutionDate;
+	}
+
+	public DateAndDateTimeChoice getEntryDate() {
+		return entryDate;
+	}
+
+	public void setEntryDate(DateAndDateTimeChoice entryDate) {
+		this.entryDate = entryDate;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public PaymentOrigin1Choice getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
+		this.paymentMethod = paymentMethod;
 	}
 }

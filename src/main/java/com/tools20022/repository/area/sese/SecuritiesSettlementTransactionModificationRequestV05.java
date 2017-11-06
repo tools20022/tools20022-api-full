@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestvers
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -78,19 +79,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05#ModifiedTransactionDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05#mmModifiedTransactionDetails
  * SecuritiesSettlementTransactionModificationRequestV05.
- * ModifiedTransactionDetails}</li>
+ * mmModifiedTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05#UpdateType
- * SecuritiesSettlementTransactionModificationRequestV05.UpdateType}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05#mmUpdateType
+ * SecuritiesSettlementTransactionModificationRequestV05.mmUpdateType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05#identifier
- * SecuritiesSettlementTransactionModificationRequestV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.038.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementTransactionModificationRequestV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactionDetails76 modifiedTransactionDetails;
 	/**
 	 * Identifies the details of the transaction that is being modified.
 	 * <p>
@@ -135,23 +135,24 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04#ModifiedTransactionDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04#mmModifiedTransactionDetails
 	 * SecuritiesSettlementTransactionModificationRequestV04.
-	 * ModifiedTransactionDetails}</li>
+	 * mmModifiedTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdTxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedTransactionDetails";
 			definition = "Identifies the details of the transaction that is being modified.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04.ModifiedTransactionDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04.mmModifiedTransactionDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionDetails76.mmObject();
 		}
 	};
+	protected List<UpdateType25Choice> updateType;
 	/**
 	 * Specifies the type of update requested.
 	 * <p>
@@ -176,47 +177,20 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04#UpdateType
-	 * SecuritiesSettlementTransactionModificationRequestV04.UpdateType}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04#mmUpdateType
+	 * SecuritiesSettlementTransactionModificationRequestV04.mmUpdateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UpdateType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUpdateType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UpdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Specifies the type of update requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04.UpdateType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04.mmUpdateType;
 			maxOccurs = 3;
+			minOccurs = 1;
 			complexType_lazy = () -> UpdateType25Choice.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "038";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -231,11 +205,34 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxModReq";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05.ModifiedTransactionDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05.UpdateType);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05.mmModifiedTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05.mmUpdateType);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "038";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionDetails76 getModifiedTransactionDetails() {
+		return modifiedTransactionDetails;
+	}
+
+	public void setModifiedTransactionDetails(TransactionDetails76 modifiedTransactionDetails) {
+		this.modifiedTransactionDetails = modifiedTransactionDetails;
+	}
+
+	public List<UpdateType25Choice> getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(List<UpdateType25Choice> updateType) {
+		this.updateType = updateType;
 	}
 }

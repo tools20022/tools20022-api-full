@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information of the certificate to create.
@@ -33,24 +34,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CertificationRequest2#Version
- * CertificationRequest2.Version}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificationRequest2#SubjectName
- * CertificationRequest2.SubjectName}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificationRequest2#mmVersion
+ * CertificationRequest2.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificationRequest2#SubjectPublicKeyInformation
- * CertificationRequest2.SubjectPublicKeyInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificationRequest2#mmSubjectName
+ * CertificationRequest2.mmSubjectName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificationRequest2#Attribute
- * CertificationRequest2.Attribute}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificationRequest2#mmSubjectPublicKeyInformation
+ * CertificationRequest2.mmSubjectPublicKeyInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CertificationRequest2#mmAttribute
+ * CertificationRequest2.mmAttribute}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CertificationRequest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the certificate request information data structure.
 	 * <p>
@@ -97,11 +100,11 @@ public class CertificationRequest2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CertificationRequest1#KeyIdentification
-	 * CertificationRequest1.KeyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CertificationRequest1#mmKeyIdentification
+	 * CertificationRequest1.mmKeyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
@@ -109,12 +112,13 @@ public class CertificationRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the certificate request information data structure.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.KeyIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmKeyIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected CertificateIssuer1 subjectName;
 	/**
 	 * Distinguished name of the certificate subject, the entity whose public
 	 * key is to be certified.
@@ -144,7 +148,7 @@ public class CertificationRequest2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubjectName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubjectName = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
@@ -152,12 +156,13 @@ public class CertificationRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectName";
 			definition = "Distinguished name of the certificate subject, the entity whose public key is to be certified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CertificateIssuer1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CertificateIssuer1.mmObject();
 		}
 	};
+	protected PublicRSAKey2 subjectPublicKeyInformation;
 	/**
 	 * Information about the public key being certified.
 	 * <p>
@@ -184,7 +189,7 @@ public class CertificationRequest2 {
 	 * definition} = "Information about the public key being certified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubjectPublicKeyInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubjectPublicKeyInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
@@ -192,12 +197,13 @@ public class CertificationRequest2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectPublicKeyInformation";
 			definition = "Information about the public key being certified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PublicRSAKey2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PublicRSAKey2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.RelativeDistinguishedName2> attribute;
 	/**
 	 * Attribute of the certificate service to be put in the certificate
 	 * extensions, or to be used for the request.
@@ -228,7 +234,7 @@ public class CertificationRequest2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Attribute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAttribute = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
@@ -237,17 +243,17 @@ public class CertificationRequest2 {
 			name = "Attribute";
 			definition = "Attribute of the certificate service to be put in the certificate extensions, or to be used for the request.";
 			minOccurs = 1;
-			type_lazy = () -> RelativeDistinguishedName2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RelativeDistinguishedName2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.Version, com.tools20022.repository.msg.CertificationRequest2.SubjectName,
-						com.tools20022.repository.msg.CertificationRequest2.SubjectPublicKeyInformation, com.tools20022.repository.msg.CertificationRequest2.Attribute);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmVersion, com.tools20022.repository.msg.CertificationRequest2.mmSubjectName,
+						com.tools20022.repository.msg.CertificationRequest2.mmSubjectPublicKeyInformation, com.tools20022.repository.msg.CertificationRequest2.mmAttribute);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertificationRequest2";
 				definition = "Information of the certificate to create.";
@@ -255,5 +261,37 @@ public class CertificationRequest2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public CertificateIssuer1 getSubjectName() {
+		return subjectName;
+	}
+
+	public void setSubjectName(com.tools20022.repository.msg.CertificateIssuer1 subjectName) {
+		this.subjectName = subjectName;
+	}
+
+	public PublicRSAKey2 getSubjectPublicKeyInformation() {
+		return subjectPublicKeyInformation;
+	}
+
+	public void setSubjectPublicKeyInformation(com.tools20022.repository.msg.PublicRSAKey2 subjectPublicKeyInformation) {
+		this.subjectPublicKeyInformation = subjectPublicKeyInformation;
+	}
+
+	public List<RelativeDistinguishedName2> getAttribute() {
+		return attribute;
+	}
+
+	public void setAttribute(List<com.tools20022.repository.msg.RelativeDistinguishedName2> attribute) {
+		this.attribute = attribute;
 	}
 }

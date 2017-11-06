@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.RequestGroupInformation1;
 import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -89,18 +90,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#RequestGroupInformation
- * InvoiceFinancingRequestV01.RequestGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#mmRequestGroupInformation
+ * InvoiceFinancingRequestV01.mmRequestGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#InvoiceRequestInformation
- * InvoiceFinancingRequestV01.InvoiceRequestInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#mmInvoiceRequestInformation
+ * InvoiceFinancingRequestV01.mmInvoiceRequestInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#identifier
- * InvoiceFinancingRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsin.001.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceFinancingRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected RequestGroupInformation1 requestGroupInformation;
 	/**
 	 * Specifies a set of characteristics that unambiguously identify the
 	 * invoice financing request, such as group identification, creation date
@@ -143,17 +143,18 @@ public class InvoiceFinancingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestGroupInformation";
 			definition = "Specifies a set of characteristics that unambiguously identify the invoice financing request, such as group identification, creation date time, number of single invoice financing requests.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestGroupInformation1.mmObject();
 		}
 	};
+	protected List<InvoiceRequestInformation1> invoiceRequestInformation;
 	/**
 	 * Set of characteristics that unambiguously identify the single invoice
 	 * financing request related to the entire invoice or a specific instalment
@@ -182,7 +183,7 @@ public class InvoiceFinancingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InvoiceRequestInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvoiceRequestInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvcReqInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,33 +191,6 @@ public class InvoiceFinancingRequestV01 {
 			definition = "Set of characteristics that unambiguously identify the single invoice financing request related to the entire invoice or a specific instalment of the invoice settlement, such as actors involved, invoice totals or payment method.";
 			minOccurs = 1;
 			complexType_lazy = () -> InvoiceRequestInformation1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsin"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsin";
-			messageFunctionality = "001";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -230,11 +204,34 @@ public class InvoiceFinancingRequestV01 {
 				rootElement = "Document";
 				xmlTag = "InvcFincgReq";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.RequestGroupInformation,
-						com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.InvoiceRequestInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.mmRequestGroupInformation,
+						com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.mmInvoiceRequestInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsin";
+						messageFunctionality = "001";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestGroupInformation1 getRequestGroupInformation() {
+		return requestGroupInformation;
+	}
+
+	public void setRequestGroupInformation(RequestGroupInformation1 requestGroupInformation) {
+		this.requestGroupInformation = requestGroupInformation;
+	}
+
+	public List<InvoiceRequestInformation1> getInvoiceRequestInformation() {
+		return invoiceRequestInformation;
+	}
+
+	public void setInvoiceRequestInformation(List<InvoiceRequestInformation1> invoiceRequestInformation) {
+		this.invoiceRequestInformation = invoiceRequestInformation;
 	}
 }

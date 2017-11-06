@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#AuthenticationToken
- * AuthenticationMethod7Code.AuthenticationToken}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmAuthenticationToken
+ * AuthenticationMethod7Code.mmAuthenticationToken}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#Biometry
- * AuthenticationMethod7Code.Biometry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmBiometry
+ * AuthenticationMethod7Code.mmBiometry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#Mobile
- * AuthenticationMethod7Code.Mobile}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmMobile
+ * AuthenticationMethod7Code.mmMobile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#Other
- * AuthenticationMethod7Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmOther
+ * AuthenticationMethod7Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#OfflinePIN
- * AuthenticationMethod7Code.OfflinePIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmOfflinePIN
+ * AuthenticationMethod7Code.mmOfflinePIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#OnLinePIN
- * AuthenticationMethod7Code.OnLinePIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmOnLinePIN
+ * AuthenticationMethod7Code.mmOnLinePIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#Password
- * AuthenticationMethod7Code.Password}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmPassword
+ * AuthenticationMethod7Code.mmPassword}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#SecureCertificate
- * AuthenticationMethod7Code.SecureCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmSecureCertificate
+ * AuthenticationMethod7Code.mmSecureCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#SecuredChannel
- * AuthenticationMethod7Code.SecuredChannel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod7Code#mmSecuredChannel
+ * AuthenticationMethod7Code.mmSecuredChannel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "AuthenticationToken"</li>
 	 * </ul>
 	 */
-	public static final MMCode AuthenticationToken = new MMCode() {
+	public static final MMCode mmAuthenticationToken = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationToken";
@@ -119,7 +119,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "Biometry"</li>
 	 * </ul>
 	 */
-	public static final MMCode Biometry = new MMCode() {
+	public static final MMCode mmBiometry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Biometry";
@@ -142,7 +142,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "Mobile"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mobile = new MMCode() {
+	public static final MMCode mmMobile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mobile";
@@ -165,7 +165,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -188,7 +188,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "OfflinePIN"</li>
 	 * </ul>
 	 */
-	public static final MMCode OfflinePIN = new MMCode() {
+	public static final MMCode mmOfflinePIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflinePIN";
@@ -211,7 +211,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "OnLinePIN"</li>
 	 * </ul>
 	 */
-	public static final MMCode OnLinePIN = new MMCode() {
+	public static final MMCode mmOnLinePIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLinePIN";
@@ -234,7 +234,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "Password"</li>
 	 * </ul>
 	 */
-	public static final MMCode Password = new MMCode() {
+	public static final MMCode mmPassword = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Password";
@@ -257,7 +257,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "SecureCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecureCertificate = new MMCode() {
+	public static final MMCode mmSecureCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureCertificate";
@@ -280,7 +280,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 * name} = "SecuredChannel"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuredChannel = new MMCode() {
+	public static final MMCode mmSecuredChannel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredChannel";
@@ -291,14 +291,14 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationMethod7Code";
 				definition = "Method to authenticate the customer or its card.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationMethod7Code.AuthenticationToken, com.tools20022.repository.codeset.AuthenticationMethod7Code.Biometry,
-						com.tools20022.repository.codeset.AuthenticationMethod7Code.Mobile, com.tools20022.repository.codeset.AuthenticationMethod7Code.Other, com.tools20022.repository.codeset.AuthenticationMethod7Code.OfflinePIN,
-						com.tools20022.repository.codeset.AuthenticationMethod7Code.OnLinePIN, com.tools20022.repository.codeset.AuthenticationMethod7Code.Password,
-						com.tools20022.repository.codeset.AuthenticationMethod7Code.SecureCertificate, com.tools20022.repository.codeset.AuthenticationMethod7Code.SecuredChannel);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationMethod7Code.mmAuthenticationToken, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmBiometry,
+						com.tools20022.repository.codeset.AuthenticationMethod7Code.mmMobile, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmOther, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmOfflinePIN,
+						com.tools20022.repository.codeset.AuthenticationMethod7Code.mmOnLinePIN, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmPassword,
+						com.tools20022.repository.codeset.AuthenticationMethod7Code.mmSecureCertificate, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmSecuredChannel);
 				trace_lazy = () -> AuthenticationMethodCode.mmObject();
 			}
 		});

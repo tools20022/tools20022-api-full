@@ -37,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#SingleLegDeliveringParty
- * BusinessFlowType1Code.SingleLegDeliveringParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#mmSingleLegDeliveringParty
+ * BusinessFlowType1Code.mmSingleLegDeliveringParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#SingleLegReceivingParty
- * BusinessFlowType1Code.SingleLegReceivingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#mmSingleLegReceivingParty
+ * BusinessFlowType1Code.mmSingleLegReceivingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#DoubleLegProcess
- * BusinessFlowType1Code.DoubleLegProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#mmDoubleLegProcess
+ * BusinessFlowType1Code.mmDoubleLegProcess}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class BusinessFlowType1Code extends BusinessFlowTypeCode {
 	 * name} = "SingleLegDeliveringParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleLegDeliveringParty = new MMCode() {
+	public static final MMCode mmSingleLegDeliveringParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleLegDeliveringParty";
@@ -112,7 +112,7 @@ public class BusinessFlowType1Code extends BusinessFlowTypeCode {
 	 * name} = "SingleLegReceivingParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleLegReceivingParty = new MMCode() {
+	public static final MMCode mmSingleLegReceivingParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleLegReceivingParty";
@@ -135,7 +135,7 @@ public class BusinessFlowType1Code extends BusinessFlowTypeCode {
 	 * name} = "DoubleLegProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode DoubleLegProcess = new MMCode() {
+	public static final MMCode mmDoubleLegProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoubleLegProcess";
@@ -146,13 +146,13 @@ public class BusinessFlowType1Code extends BusinessFlowTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLDP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BusinessFlowType1Code";
 				definition = "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessFlowType1Code.SingleLegDeliveringParty, com.tools20022.repository.codeset.BusinessFlowType1Code.SingleLegReceivingParty,
-						com.tools20022.repository.codeset.BusinessFlowType1Code.DoubleLegProcess);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessFlowType1Code.mmSingleLegDeliveringParty, com.tools20022.repository.codeset.BusinessFlowType1Code.mmSingleLegReceivingParty,
+						com.tools20022.repository.codeset.BusinessFlowType1Code.mmDoubleLegProcess);
 				trace_lazy = () -> BusinessFlowTypeCode.mmObject();
 			}
 		});

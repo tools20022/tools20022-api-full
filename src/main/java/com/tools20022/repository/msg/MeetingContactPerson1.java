@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#ContactPerson
- * MeetingContactPerson1.ContactPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#mmContactPerson
+ * MeetingContactPerson1.mmContactPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#EmployingParty
- * MeetingContactPerson1.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#mmEmployingParty
+ * MeetingContactPerson1.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#PlaceOfListing
- * MeetingContactPerson1.PlaceOfListing}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#mmPlaceOfListing
+ * MeetingContactPerson1.mmPlaceOfListing}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingContactPerson1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContactIdentification1 contactPerson;
 	/**
 	 * Identifies a contact person by a name, a given name and an address.
 	 * <p>
@@ -87,8 +88,8 @@ public class MeetingContactPerson1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#ContactPersonRole
-	 * Role.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmContactPersonRole
+	 * Role.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,28 +111,29 @@ public class MeetingContactPerson1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#ContactPerson
-	 * MeetingContactPerson2.ContactPerson}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#mmContactPerson
+	 * MeetingContactPerson2.mmContactPerson}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
 			componentContext_lazy = () -> MeetingContactPerson1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "CtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Identifies a contact person by a name, a given name and an address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson2.ContactPerson);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson2.mmContactPerson);
 			maxOccurs = 1;
-			type_lazy = () -> ContactIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentification9Choice employingParty;
 	/**
 	 * Identifies the organisation which is represented by a person or for which
 	 * a person works.
@@ -145,8 +147,8 @@ public class MeetingContactPerson1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,28 +171,29 @@ public class MeetingContactPerson1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#EmployingParty
-	 * MeetingContactPerson2.EmployingParty}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#mmEmployingParty
+	 * MeetingContactPerson2.mmEmployingParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EmployingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> MeetingContactPerson1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "EmplngPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployingParty";
 			definition = "Identifies the organisation which is represented by a person or for which a person works.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson2.EmployingParty);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson2.mmEmployingParty);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected MICIdentifier placeOfListing;
 	/**
 	 * The identification of a financial market, as stipulated in the norm ISO
 	 * 10383 'Codes for exchanges and market identifications'.
@@ -205,8 +208,8 @@ public class MeetingContactPerson1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -229,24 +232,24 @@ public class MeetingContactPerson1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#PlaceOfListing
-	 * MeetingContactPerson2.PlaceOfListing}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#mmPlaceOfListing
+	 * MeetingContactPerson2.mmPlaceOfListing}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> MeetingContactPerson1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "PlcOfListg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "The identification of a financial market, as stipulated in the norm ISO 10383 'Codes for exchanges and market identifications'.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson2.PlaceOfListing);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson2.mmPlaceOfListing);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
@@ -254,10 +257,10 @@ public class MeetingContactPerson1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson1.ContactPerson, com.tools20022.repository.msg.MeetingContactPerson1.EmployingParty,
-						com.tools20022.repository.msg.MeetingContactPerson1.PlaceOfListing);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson1.mmContactPerson, com.tools20022.repository.msg.MeetingContactPerson1.mmEmployingParty,
+						com.tools20022.repository.msg.MeetingContactPerson1.mmPlaceOfListing);
 				trace_lazy = () -> Meeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingContactPerson1";
 				definition = "Contact person at the party organising the meeting, at the issuer or at an intermediary.";
@@ -265,5 +268,29 @@ public class MeetingContactPerson1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContactIdentification1 getContactPerson() {
+		return contactPerson;
+	}
+
+	public void setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+		this.contactPerson = contactPerson;
+	}
+
+	public PartyIdentification9Choice getEmployingParty() {
+		return employingParty;
+	}
+
+	public void setEmployingParty(PartyIdentification9Choice employingParty) {
+		this.employingParty = employingParty;
+	}
+
+	public MICIdentifier getPlaceOfListing() {
+		return placeOfListing;
+	}
+
+	public void setPlaceOfListing(MICIdentifier placeOfListing) {
+		this.placeOfListing = placeOfListing;
 	}
 }

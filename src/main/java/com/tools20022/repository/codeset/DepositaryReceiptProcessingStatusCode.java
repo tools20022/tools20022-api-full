@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode#NoRecordFound
- * DepositaryReceiptProcessingStatusCode.NoRecordFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode#mmNoRecordFound
+ * DepositaryReceiptProcessingStatusCode.mmNoRecordFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode#Pending
- * DepositaryReceiptProcessingStatusCode.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode#mmPending
+ * DepositaryReceiptProcessingStatusCode.mmPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class DepositaryReceiptProcessingStatusCode {
 	 * "No record of the transaction for which a status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoRecordFound = new MMCode() {
+	public static final MMCode mmNoRecordFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRecordFound";
@@ -121,7 +121,7 @@ public class DepositaryReceiptProcessingStatusCode {
 	 * definition} = "Depositary receipt is pending completion."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -134,12 +134,12 @@ public class DepositaryReceiptProcessingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NORE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DepositaryReceiptProcessingStatusCode";
 				definition = "Specifies the status of a depositary receipt processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode.NoRecordFound, com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode.Pending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode.mmNoRecordFound, com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode.mmPending);
 				derivation_lazy = () -> Arrays.asList(DepositaryReceiptProcessingStatus1Code.mmObject());
 			}
 		});

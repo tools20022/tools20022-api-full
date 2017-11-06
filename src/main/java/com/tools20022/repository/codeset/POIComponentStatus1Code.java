@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#WaitingActivation
- * POIComponentStatus1Code.WaitingActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#mmWaitingActivation
+ * POIComponentStatus1Code.mmWaitingActivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#OutOfOrder
- * POIComponentStatus1Code.OutOfOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#mmOutOfOrder
+ * POIComponentStatus1Code.mmOutOfOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#InOperation
- * POIComponentStatus1Code.InOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#mmInOperation
+ * POIComponentStatus1Code.mmInOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#Deactivated
- * POIComponentStatus1Code.Deactivated}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code#mmDeactivated
+ * POIComponentStatus1Code.mmDeactivated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 * name} = "WaitingActivation"</li>
 	 * </ul>
 	 */
-	public static final MMCode WaitingActivation = new MMCode() {
+	public static final MMCode mmWaitingActivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingActivation";
@@ -111,7 +111,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 * name} = "OutOfOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode OutOfOrder = new MMCode() {
+	public static final MMCode mmOutOfOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfOrder";
@@ -134,7 +134,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 * name} = "InOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InOperation = new MMCode() {
+	public static final MMCode mmInOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
@@ -157,7 +157,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 * name} = "Deactivated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deactivated = new MMCode() {
+	public static final MMCode mmDeactivated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivated";
@@ -168,13 +168,13 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WAIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "POIComponentStatus1Code";
 				definition = "Status of a component belonging to a POI Terminal (Point of Interaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentStatus1Code.WaitingActivation, com.tools20022.repository.codeset.POIComponentStatus1Code.OutOfOrder,
-						com.tools20022.repository.codeset.POIComponentStatus1Code.InOperation, com.tools20022.repository.codeset.POIComponentStatus1Code.Deactivated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentStatus1Code.mmWaitingActivation, com.tools20022.repository.codeset.POIComponentStatus1Code.mmOutOfOrder,
+						com.tools20022.repository.codeset.POIComponentStatus1Code.mmInOperation, com.tools20022.repository.codeset.POIComponentStatus1Code.mmDeactivated);
 				trace_lazy = () -> POIComponentStatusCode.mmObject();
 			}
 		});

@@ -34,15 +34,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Term1#Operator Term1.Operator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Term1#Value Term1.Value}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Term1#mmOperator
+ * Term1.mmOperator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Term1#mmValue Term1.mmValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Term1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Operator1Code operator;
 	/**
 	 * Provides the relationship between a variable and a fixed value.
 	 * <p>
@@ -85,7 +87,7 @@ public class Term1 {
 	 * "Provides the relationship between a variable and a fixed value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Operator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Term1.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class Term1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operator";
 			definition = "Provides the relationship between a variable and a fixed value.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Operator1Code.mmObject();
 		}
 	};
+	protected RateOrAbsoluteValue1Choice value;
 	/**
 	 * Indicates the value.
 	 * <p>
@@ -124,7 +127,7 @@ public class Term1 {
 	 * definition} = "Indicates the value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Value = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Term1.mmObject();
 			isDerived = false;
@@ -132,23 +135,39 @@ public class Term1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Indicates the value.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateOrAbsoluteValue1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateOrAbsoluteValue1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Term1.Operator, com.tools20022.repository.msg.Term1.Value);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Term1.mmOperator, com.tools20022.repository.msg.Term1.mmValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Term1";
 				definition = "Indicates one of the constraints of a range of business values.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Operator1Code getOperator() {
+		return operator;
+	}
+
+	public void setOperator(Operator1Code operator) {
+		this.operator = operator;
+	}
+
+	public RateOrAbsoluteValue1Choice getValue() {
+		return value;
+	}
+
+	public void setValue(RateOrAbsoluteValue1Choice value) {
+		this.value = value;
 	}
 }

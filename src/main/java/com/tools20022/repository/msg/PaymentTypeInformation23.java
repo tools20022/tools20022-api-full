@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#InstructionPriority
- * PaymentTypeInformation23.InstructionPriority}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#mmInstructionPriority
+ * PaymentTypeInformation23.mmInstructionPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#ClearingChannel
- * PaymentTypeInformation23.ClearingChannel}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#mmClearingChannel
+ * PaymentTypeInformation23.mmClearingChannel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#ServiceLevel
- * PaymentTypeInformation23.ServiceLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#mmServiceLevel
+ * PaymentTypeInformation23.mmServiceLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#LocalInstrument
- * PaymentTypeInformation23.LocalInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation23#mmLocalInstrument
+ * PaymentTypeInformation23.mmLocalInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTypeInformation23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Priority2Code instructionPriority;
 	/**
 	 * Indicator of the urgency or order of importance that the instructing
 	 * party would like the instructed party to apply to the processing of the
@@ -88,8 +89,8 @@ public class PaymentTypeInformation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#Priority
-	 * PaymentProcessing.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPriority
+	 * PaymentProcessing.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> PaymentTypeInformation23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.Priority;
 			isDerived = false;
 			xmlTag = "InstrPrty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionPriority";
 			definition = "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Priority2Code.mmObject();
 		}
 	};
+	protected ClearingChannel2Code clearingChannel;
 	/**
 	 * Specifies the clearing channel to be used to process the payment
 	 * instruction.
@@ -138,8 +140,8 @@ public class PaymentTypeInformation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ClearingChannel
-	 * PaymentProcessing.ClearingChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
+	 * PaymentProcessing.mmClearingChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,20 +162,21 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> PaymentTypeInformation23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ClearingChannel;
 			isDerived = false;
 			xmlTag = "ClrChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
 		}
 	};
+	protected ServiceLevel8Choice serviceLevel;
 	/**
 	 * Agreement under which or rules under which the transaction should be
 	 * processed.
@@ -186,8 +189,8 @@ public class PaymentTypeInformation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ServiceLevel
-	 * PaymentProcessing.ServiceLevel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
+	 * PaymentProcessing.mmServiceLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,21 +211,22 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> PaymentTypeInformation23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ServiceLevel;
 			isDerived = false;
 			xmlTag = "SvcLvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevel";
 			definition = "Agreement under which or rules under which the transaction should be processed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ServiceLevel8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ServiceLevel8Choice.mmObject();
 		}
 	};
+	protected LocalInstrument2Choice localInstrument;
 	/**
 	 * User community specific instrument. Usage: This element is used to
 	 * specify a local instrument, local clearing option and/or further qualify
@@ -237,8 +241,8 @@ public class PaymentTypeInformation23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#LocalInstrument
-	 * PaymentProcessing.LocalInstrument}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmLocalInstrument
+	 * PaymentProcessing.mmLocalInstrument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,34 +263,66 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> PaymentTypeInformation23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.LocalInstrument;
 			isDerived = false;
 			xmlTag = "LclInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalInstrument";
 			definition = "User community specific instrument.\nUsage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> LocalInstrument2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> LocalInstrument2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation23.InstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation23.ClearingChannel,
-						com.tools20022.repository.msg.PaymentTypeInformation23.ServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation23.LocalInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation23.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation23.mmClearingChannel,
+						com.tools20022.repository.msg.PaymentTypeInformation23.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation23.mmLocalInstrument);
 				trace_lazy = () -> PaymentProcessing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTypeInformation23";
 				definition = "Set of elements used to provide further details of the type of payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Priority2Code getInstructionPriority() {
+		return instructionPriority;
+	}
+
+	public void setInstructionPriority(Priority2Code instructionPriority) {
+		this.instructionPriority = instructionPriority;
+	}
+
+	public ClearingChannel2Code getClearingChannel() {
+		return clearingChannel;
+	}
+
+	public void setClearingChannel(ClearingChannel2Code clearingChannel) {
+		this.clearingChannel = clearingChannel;
+	}
+
+	public ServiceLevel8Choice getServiceLevel() {
+		return serviceLevel;
+	}
+
+	public void setServiceLevel(ServiceLevel8Choice serviceLevel) {
+		this.serviceLevel = serviceLevel;
+	}
+
+	public LocalInstrument2Choice getLocalInstrument() {
+		return localInstrument;
+	}
+
+	public void setLocalInstrument(LocalInstrument2Choice localInstrument) {
+		this.localInstrument = localInstrument;
 	}
 }

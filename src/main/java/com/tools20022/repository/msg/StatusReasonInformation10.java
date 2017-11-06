@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation10#Reason
- * StatusReasonInformation10.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation10#mmReason
+ * StatusReasonInformation10.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation10#AdditionalInformation
- * StatusReasonInformation10.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation10#mmAdditionalInformation
+ * StatusReasonInformation10.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReasonInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatusReason6Choice reason;
 	/**
 	 * Specifies the reason for the status report.
 	 * <p>
@@ -76,8 +77,8 @@ public class StatusReasonInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class StatusReasonInformation10 {
 	 * definition} = "Specifies the reason for the status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> StatusReasonInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the status report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> StatusReason6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> StatusReason6Choice.mmObject();
 		}
 	};
+	protected Max140Text additionalInformation;
 	/**
 	 * Further details on the status reason.
 	 * 
@@ -143,7 +145,7 @@ public class StatusReasonInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusReasonInformation10.mmObject();
 			isDerived = false;
@@ -151,8 +153,8 @@ public class StatusReasonInformation10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the status reason.\n\nUsage: Additional information can be used for several purposes such as the reporting of repaired information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class StatusReasonInformation10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation10.Reason, com.tools20022.repository.msg.StatusReasonInformation10.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation10.mmReason, com.tools20022.repository.msg.StatusReasonInformation10.mmAdditionalInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusReasonInformation10";
 				definition = "Provides information on the status reason of the instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatusReason6Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(StatusReason6Choice reason) {
+		this.reason = reason;
+	}
+
+	public Max140Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max140Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

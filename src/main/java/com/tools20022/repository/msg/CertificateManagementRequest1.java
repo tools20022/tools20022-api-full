@@ -37,29 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#POIIdentification
- * CertificateManagementRequest1.POIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmPOIIdentification
+ * CertificateManagementRequest1.mmPOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#TMIdentification
- * CertificateManagementRequest1.TMIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmTMIdentification
+ * CertificateManagementRequest1.mmTMIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#CertificateService
- * CertificateManagementRequest1.CertificateService}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmCertificateService
+ * CertificateManagementRequest1.mmCertificateService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#SecurityDomain
- * CertificateManagementRequest1.SecurityDomain}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmSecurityDomain
+ * CertificateManagementRequest1.mmSecurityDomain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#BinaryCertificationRequest
- * CertificateManagementRequest1.BinaryCertificationRequest}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmBinaryCertificationRequest
+ * CertificateManagementRequest1.mmBinaryCertificationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#CertificationRequest
- * CertificateManagementRequest1.CertificationRequest}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmCertificationRequest
+ * CertificateManagementRequest1.mmCertificationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#ClientCertificate
- * CertificateManagementRequest1.ClientCertificate}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmClientCertificate
+ * CertificateManagementRequest1.mmClientCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#WhiteListIdentification
- * CertificateManagementRequest1.WhiteListIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CertificateManagementRequest1#mmWhiteListIdentification
+ * CertificateManagementRequest1.mmWhiteListIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -67,15 +67,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV01#CertificateManagementRequest
- * CertificateManagementRequestV01.CertificateManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV01#mmCertificateManagementRequest
+ * CertificateManagementRequestV01.mmCertificateManagementRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CertificateManagementRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification72 pOIIdentification;
 	/**
 	 * Identification of the terminal or system using the certificate management
 	 * service.
@@ -120,7 +121,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -128,12 +129,13 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the terminal or system using the certificate management service.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification72.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	protected GenericIdentification72 tMIdentification;
 	/**
 	 * Identification of the TM or the MTM providing the Certificate Authority
 	 * service.
@@ -164,7 +166,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TMIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTMIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -172,12 +174,13 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMIdentification";
 			definition = "Identification of the TM or the MTM providing the Certificate Authority service.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification72.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	protected CardPaymentServiceType10Code certificateService;
 	/**
 	 * Requested certificate management service.
 	 * <p>
@@ -206,7 +209,7 @@ public class CertificateManagementRequest1 {
 	 * definition} = "Requested certificate management service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateService = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateService = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -214,11 +217,12 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateService";
 			definition = "Requested certificate management service.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CardPaymentServiceType10Code.mmObject();
 		}
 	};
+	protected Max70Text securityDomain;
 	/**
 	 * Identification of the client and server public key infrastructures
 	 * containing the certificate. In addition, it may identify specific
@@ -250,7 +254,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityDomain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityDomain = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -258,11 +262,12 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDomain";
 			definition = "Identification of the client and server public key infrastructures containing the certificate. In addition, it may identify specific requirements of the customer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max20000Text binaryCertificationRequest;
 	/**
 	 * PKCS#10 (Public Key Certificate Standard 10) certification request coded
 	 * in base64 ASN.1/DER (Abstract Syntax Notation 1, Distinguished Encoding
@@ -295,7 +300,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BinaryCertificationRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBinaryCertificationRequest = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -303,11 +308,12 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BinaryCertificationRequest";
 			definition = "PKCS#10 (Public Key Certificate Standard 10) certification request coded in base64 ASN.1/DER (Abstract Syntax Notation 1, Distinguished Encoding Rules) or PEM (Privacy Enhanced Message) format.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
 	};
+	protected CertificationRequest1 certificationRequest;
 	/**
 	 * Certification request PKCS#10 (Public Key Certificate Standard 10) for
 	 * creation or renewal of an X.509 certificate.
@@ -337,7 +343,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CertificationRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificationRequest = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -345,12 +351,13 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationRequest";
 			definition = "Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CertificationRequest1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
 		}
 	};
+	protected Max10KBinary clientCertificate;
 	/**
 	 * Created certificate. The certificate is ASN.1/DER encoded, for renewal or
 	 * revocation of certificate.
@@ -382,7 +389,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -390,11 +397,12 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCertificate";
 			definition = "Created certificate. The certificate is ASN.1/DER encoded, for renewal or revocation of certificate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
 	};
+	protected PointOfInteraction6 whiteListIdentification;
 	/**
 	 * Identification of the white list element, for white list addition or
 	 * removal.
@@ -424,7 +432,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd WhiteListIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmWhiteListIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -432,27 +440,91 @@ public class CertificateManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhiteListIdentification";
 			definition = "Identification of the white list element, for white list addition or removal.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteraction6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateManagementRequest1.POIIdentification, com.tools20022.repository.msg.CertificateManagementRequest1.TMIdentification,
-						com.tools20022.repository.msg.CertificateManagementRequest1.CertificateService, com.tools20022.repository.msg.CertificateManagementRequest1.SecurityDomain,
-						com.tools20022.repository.msg.CertificateManagementRequest1.BinaryCertificationRequest, com.tools20022.repository.msg.CertificateManagementRequest1.CertificationRequest,
-						com.tools20022.repository.msg.CertificateManagementRequest1.ClientCertificate, com.tools20022.repository.msg.CertificateManagementRequest1.WhiteListIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.CertificateManagementRequestV01.CertificateManagementRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateManagementRequest1.mmPOIIdentification, com.tools20022.repository.msg.CertificateManagementRequest1.mmTMIdentification,
+						com.tools20022.repository.msg.CertificateManagementRequest1.mmCertificateService, com.tools20022.repository.msg.CertificateManagementRequest1.mmSecurityDomain,
+						com.tools20022.repository.msg.CertificateManagementRequest1.mmBinaryCertificationRequest, com.tools20022.repository.msg.CertificateManagementRequest1.mmCertificationRequest,
+						com.tools20022.repository.msg.CertificateManagementRequest1.mmClientCertificate, com.tools20022.repository.msg.CertificateManagementRequest1.mmWhiteListIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.CertificateManagementRequestV01.mmCertificateManagementRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementRequest1";
 				definition = "Information related to the request of certificate management.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification72 getPOIIdentification() {
+		return pOIIdentification;
+	}
+
+	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification72 pOIIdentification) {
+		this.pOIIdentification = pOIIdentification;
+	}
+
+	public GenericIdentification72 getTMIdentification() {
+		return tMIdentification;
+	}
+
+	public void setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
+		this.tMIdentification = tMIdentification;
+	}
+
+	public CardPaymentServiceType10Code getCertificateService() {
+		return certificateService;
+	}
+
+	public void setCertificateService(CardPaymentServiceType10Code certificateService) {
+		this.certificateService = certificateService;
+	}
+
+	public Max70Text getSecurityDomain() {
+		return securityDomain;
+	}
+
+	public void setSecurityDomain(Max70Text securityDomain) {
+		this.securityDomain = securityDomain;
+	}
+
+	public Max20000Text getBinaryCertificationRequest() {
+		return binaryCertificationRequest;
+	}
+
+	public void setBinaryCertificationRequest(Max20000Text binaryCertificationRequest) {
+		this.binaryCertificationRequest = binaryCertificationRequest;
+	}
+
+	public CertificationRequest1 getCertificationRequest() {
+		return certificationRequest;
+	}
+
+	public void setCertificationRequest(com.tools20022.repository.msg.CertificationRequest1 certificationRequest) {
+		this.certificationRequest = certificationRequest;
+	}
+
+	public Max10KBinary getClientCertificate() {
+		return clientCertificate;
+	}
+
+	public void setClientCertificate(Max10KBinary clientCertificate) {
+		this.clientCertificate = clientCertificate;
+	}
+
+	public PointOfInteraction6 getWhiteListIdentification() {
+		return whiteListIdentification;
+	}
+
+	public void setWhiteListIdentification(com.tools20022.repository.msg.PointOfInteraction6 whiteListIdentification) {
+		this.whiteListIdentification = whiteListIdentification;
 	}
 }

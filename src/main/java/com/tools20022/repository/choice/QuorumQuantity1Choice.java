@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuorumQuantity1Choice#QuorumQuantity
- * QuorumQuantity1Choice.QuorumQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.QuorumQuantity1Choice#mmQuorumQuantity
+ * QuorumQuantity1Choice.mmQuorumQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.QuorumQuantity1Choice#QuorumQuantityPercentage
- * QuorumQuantity1Choice.QuorumQuantityPercentage}</li>
+ * {@linkplain com.tools20022.repository.choice.QuorumQuantity1Choice#mmQuorumQuantityPercentage
+ * QuorumQuantity1Choice.mmQuorumQuantityPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuorumQuantity1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text quorumQuantity;
 	/**
 	 * Minimum quantity of securities required to hold a meeting.
 	 * <p>
@@ -74,8 +75,8 @@ public class QuorumQuantity1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quorum#Quantity
-	 * Quorum.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quorum#mmQuantity
+	 * Quorum.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class QuorumQuantity1Choice {
 	 * "Minimum quantity of securities required to hold a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuorumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmQuantity;
 			componentContext_lazy = () -> QuorumQuantity1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.Quantity;
 			isDerived = false;
 			xmlTag = "QrmQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantity";
 			definition = "Minimum quantity of securities required to hold a meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PercentageRate quorumQuantityPercentage;
 	/**
 	 * Minimum quantity of securities, expressed as a percentage, required to
 	 * hold a meeting.
@@ -123,8 +125,8 @@ public class QuorumQuantity1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quorum#Percentage
-	 * Quorum.Percentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quorum#mmPercentage
+	 * Quorum.mmPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class QuorumQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuorumQuantityPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuorumQuantityPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmPercentage;
 			componentContext_lazy = () -> QuorumQuantity1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.Percentage;
 			isDerived = false;
 			xmlTag = "QrmQtyPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantityPercentage";
 			definition = "Minimum quantity of securities, expressed as a percentage, required to hold a meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class QuorumQuantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuorumQuantity1Choice.QuorumQuantity, com.tools20022.repository.choice.QuorumQuantity1Choice.QuorumQuantityPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantity, com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantityPercentage);
 				trace_lazy = () -> Quorum.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuorumQuantity1Choice";
 				definition = "Choice of quorum quantity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQuorumQuantity() {
+		return quorumQuantity;
+	}
+
+	public void setQuorumQuantity(Max35Text quorumQuantity) {
+		this.quorumQuantity = quorumQuantity;
+	}
+
+	public PercentageRate getQuorumQuantityPercentage() {
+		return quorumQuantityPercentage;
+	}
+
+	public void setQuorumQuantityPercentage(PercentageRate quorumQuantityPercentage) {
+		this.quorumQuantityPercentage = quorumQuantityPercentage;
 	}
 }

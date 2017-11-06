@@ -37,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Amendment3#NewBeneficiary
- * Amendment3.NewBeneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking2#Beneficiary
- * Undertaking2.Beneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking1#Beneficiary
- * Undertaking1.Beneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#Beneficiary
- * Undertaking4.Beneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking3#Beneficiary
- * Undertaking3.Beneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amendment3#mmNewBeneficiary
+ * Amendment3.mmNewBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking2#mmBeneficiary
+ * Undertaking2.mmBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking1#mmBeneficiary
+ * Undertaking1.mmBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmBeneficiary
+ * Undertaking4.mmBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking3#mmBeneficiary
+ * Undertaking3.mmBeneficiary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,12 +83,12 @@ public class UndertakingBeneficiary extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingBeneficiary";
 				definition = "Party in whose favour the undertaking (or counter-undertaking) is issued.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment3.NewBeneficiary, com.tools20022.repository.msg.Undertaking2.Beneficiary, com.tools20022.repository.msg.Undertaking1.Beneficiary,
-						com.tools20022.repository.msg.Undertaking4.Beneficiary, com.tools20022.repository.msg.Undertaking3.Beneficiary);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment3.mmNewBeneficiary, com.tools20022.repository.msg.Undertaking2.mmBeneficiary, com.tools20022.repository.msg.Undertaking1.mmBeneficiary,
+						com.tools20022.repository.msg.Undertaking4.mmBeneficiary, com.tools20022.repository.msg.Undertaking3.mmBeneficiary);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Beneficiary1.mmObject());
 			}

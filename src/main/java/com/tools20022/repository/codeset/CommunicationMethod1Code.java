@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#SWIFTMT
- * CommunicationMethod1Code.SWIFTMT}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmSWIFTMT
+ * CommunicationMethod1Code.mmSWIFTMT}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#SWIFTMX
- * CommunicationMethod1Code.SWIFTMX}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmSWIFTMX
+ * CommunicationMethod1Code.mmSWIFTMX}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#Fax
- * CommunicationMethod1Code.Fax}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmFax
+ * CommunicationMethod1Code.mmFax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#Email
- * CommunicationMethod1Code.Email}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmEmail
+ * CommunicationMethod1Code.mmEmail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#Proprietary
- * CommunicationMethod1Code.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmProprietary
+ * CommunicationMethod1Code.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "SWIFTMT"</li>
 	 * </ul>
 	 */
-	public static final MMCode SWIFTMT = new MMCode() {
+	public static final MMCode mmSWIFTMT = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SWIFTMT";
@@ -113,7 +113,7 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "SWIFTMX"</li>
 	 * </ul>
 	 */
-	public static final MMCode SWIFTMX = new MMCode() {
+	public static final MMCode mmSWIFTMX = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SWIFTMX";
@@ -136,7 +136,7 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "Fax"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fax = new MMCode() {
+	public static final MMCode mmFax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fax";
@@ -159,7 +159,7 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "Email"</li>
 	 * </ul>
 	 */
-	public static final MMCode Email = new MMCode() {
+	public static final MMCode mmEmail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Email";
@@ -182,7 +182,7 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "Proprietary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Proprietary = new MMCode() {
+	public static final MMCode mmProprietary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
@@ -193,13 +193,13 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SWMT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommunicationMethod1Code";
 				definition = "Communication method used for the transmission of documents.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommunicationMethod1Code.SWIFTMT, com.tools20022.repository.codeset.CommunicationMethod1Code.SWIFTMX,
-						com.tools20022.repository.codeset.CommunicationMethod1Code.Fax, com.tools20022.repository.codeset.CommunicationMethod1Code.Email, com.tools20022.repository.codeset.CommunicationMethod1Code.Proprietary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommunicationMethod1Code.mmSWIFTMT, com.tools20022.repository.codeset.CommunicationMethod1Code.mmSWIFTMX,
+						com.tools20022.repository.codeset.CommunicationMethod1Code.mmFax, com.tools20022.repository.codeset.CommunicationMethod1Code.mmEmail, com.tools20022.repository.codeset.CommunicationMethod1Code.mmProprietary);
 				trace_lazy = () -> CommunicationMethodCode.mmObject();
 			}
 		});

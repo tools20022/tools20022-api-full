@@ -30,8 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode#AccountClosureInstructionError
- * AccountStatusUpdateRequestReasonCode.AccountClosureInstructionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode#mmAccountClosureInstructionError
+ * AccountStatusUpdateRequestReasonCode.mmAccountClosureInstructionError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,7 +82,7 @@ public class AccountStatusUpdateRequestReasonCode {
 	 * definition} = "Previous account closure instruction was sent in error."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountClosureInstructionError = new MMCode() {
+	public static final MMCode mmAccountClosureInstructionError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosureInstructionError";
@@ -95,11 +95,11 @@ public class AccountStatusUpdateRequestReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateRequestReasonCode";
 				definition = "Specifies the reason for an instruction to change to an account status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode.AccountClosureInstructionError);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode.mmAccountClosureInstructionError);
 				derivation_lazy = () -> Arrays.asList(AccountStatusUpdateRequestReason1Code.mmObject());
 			}
 		});

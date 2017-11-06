@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ATMSecurityScheme2Code;
 import com.tools20022.repository.datatype.Max140Binary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to security commands.
@@ -36,26 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#CurrentSecurityScheme
- * ATMSecurityContext1.CurrentSecurityScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#mmCurrentSecurityScheme
+ * ATMSecurityContext1.mmCurrentSecurityScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#SecuritySchemeCapabilities
- * ATMSecurityContext1.SecuritySchemeCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#mmSecuritySchemeCapabilities
+ * ATMSecurityContext1.mmSecuritySchemeCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#SecurityDevice
- * ATMSecurityContext1.SecurityDevice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMSecurityContext1#Key
- * ATMSecurityContext1.Key}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#mmSecurityDevice
+ * ATMSecurityContext1.mmSecurityDevice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMSecurityContext1#mmKey
+ * ATMSecurityContext1.mmKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#HostChallenge
- * ATMSecurityContext1.HostChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#mmHostChallenge
+ * ATMSecurityContext1.mmHostChallenge}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMSecurityContext1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMSecurityScheme1Code currentSecurityScheme;
 	/**
 	 * Key exchange security scheme in activation on the ATM for the host
 	 * manager.
@@ -109,13 +111,13 @@ public class ATMSecurityContext1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#CurrentSecurityScheme
-	 * ATMSecurityContext2.CurrentSecurityScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#mmCurrentSecurityScheme
+	 * ATMSecurityContext2.mmCurrentSecurityScheme}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentSecurityScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentSecurityScheme = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
@@ -123,12 +125,13 @@ public class ATMSecurityContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSecurityScheme";
 			definition = "Key exchange security scheme in activation on the ATM for the host manager.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext2.CurrentSecurityScheme);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentSecurityScheme);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme1Code.mmObject();
 		}
 	};
+	protected List<ATMSecurityScheme2Code> securitySchemeCapabilities;
 	/**
 	 * Key exchange security schemes implemented in the hardware security module
 	 * of the ATM.
@@ -160,7 +163,7 @@ public class ATMSecurityContext1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritySchemeCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritySchemeCapabilities = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
@@ -172,6 +175,7 @@ public class ATMSecurityContext1 {
 			simpleType_lazy = () -> ATMSecurityScheme2Code.mmObject();
 		}
 	};
+	protected ATMSecurityDevice1 securityDevice;
 	/**
 	 * Hardware security module of the ATM.
 	 * <p>
@@ -198,7 +202,7 @@ public class ATMSecurityContext1 {
 	 * definition} = "Hardware security module of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecurityDevice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecurityDevice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
@@ -206,12 +210,13 @@ public class ATMSecurityContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDevice";
 			definition = "Hardware security module of the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMSecurityDevice1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CryptographicKey7> key;
 	/**
 	 * Cryptographic keys stored in the hardware security module of the ATM.
 	 * <p>
@@ -239,7 +244,7 @@ public class ATMSecurityContext1 {
 	 * "Cryptographic keys stored in the hardware security module of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Key = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
@@ -248,10 +253,11 @@ public class ATMSecurityContext1 {
 			name = "Key";
 			definition = "Cryptographic keys stored in the hardware security module of the ATM.";
 			minOccurs = 0;
-			type_lazy = () -> CryptographicKey7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 		}
 	};
+	protected Max140Binary hostChallenge;
 	/**
 	 * Random value from the host provided during a previous exchange.
 	 * <p>
@@ -281,7 +287,7 @@ public class ATMSecurityContext1 {
 	 * "Random value from the host provided during a previous exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
@@ -289,8 +295,8 @@ public class ATMSecurityContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostChallenge";
 			definition = "Random value from the host provided during a previous exchange.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
@@ -298,9 +304,9 @@ public class ATMSecurityContext1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext1.CurrentSecurityScheme, com.tools20022.repository.msg.ATMSecurityContext1.SecuritySchemeCapabilities,
-						com.tools20022.repository.msg.ATMSecurityContext1.SecurityDevice, com.tools20022.repository.msg.ATMSecurityContext1.Key, com.tools20022.repository.msg.ATMSecurityContext1.HostChallenge);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext1.mmCurrentSecurityScheme, com.tools20022.repository.msg.ATMSecurityContext1.mmSecuritySchemeCapabilities,
+						com.tools20022.repository.msg.ATMSecurityContext1.mmSecurityDevice, com.tools20022.repository.msg.ATMSecurityContext1.mmKey, com.tools20022.repository.msg.ATMSecurityContext1.mmHostChallenge);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityContext1";
 				definition = "Information related to security commands.";
@@ -308,5 +314,45 @@ public class ATMSecurityContext1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMSecurityScheme1Code getCurrentSecurityScheme() {
+		return currentSecurityScheme;
+	}
+
+	public void setCurrentSecurityScheme(ATMSecurityScheme1Code currentSecurityScheme) {
+		this.currentSecurityScheme = currentSecurityScheme;
+	}
+
+	public List<ATMSecurityScheme2Code> getSecuritySchemeCapabilities() {
+		return securitySchemeCapabilities;
+	}
+
+	public void setSecuritySchemeCapabilities(List<ATMSecurityScheme2Code> securitySchemeCapabilities) {
+		this.securitySchemeCapabilities = securitySchemeCapabilities;
+	}
+
+	public ATMSecurityDevice1 getSecurityDevice() {
+		return securityDevice;
+	}
+
+	public void setSecurityDevice(com.tools20022.repository.msg.ATMSecurityDevice1 securityDevice) {
+		this.securityDevice = securityDevice;
+	}
+
+	public List<CryptographicKey7> getKey() {
+		return key;
+	}
+
+	public void setKey(List<com.tools20022.repository.msg.CryptographicKey7> key) {
+		this.key = key;
+	}
+
+	public Max140Binary getHostChallenge() {
+		return hostChallenge;
+	}
+
+	public void setHostChallenge(Max140Binary hostChallenge) {
+		this.hostChallenge = hostChallenge;
 	}
 }

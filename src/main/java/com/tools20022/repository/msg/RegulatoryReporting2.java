@@ -35,13 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#DebitCreditReportingIndicator
- * RegulatoryReporting2.DebitCreditReportingIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryReporting2#Authority
- * RegulatoryReporting2.Authority}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#mmDebitCreditReportingIndicator
+ * RegulatoryReporting2.mmDebitCreditReportingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#RegulatoryDetails
- * RegulatoryReporting2.RegulatoryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#mmAuthority
+ * RegulatoryReporting2.mmAuthority}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#mmRegulatoryDetails
+ * RegulatoryReporting2.mmRegulatoryDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegulatoryReporting2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RegulatoryReportingType1Code debitCreditReportingIndicator;
 	/**
 	 * Identifies whether the regulatory reporting information applies to the
 	 * debit side, to the credit side or to both debit and credit sides of the
@@ -81,8 +83,8 @@ public class RegulatoryReporting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport#DebitCreditReportingIndicator
-	 * RegulatoryReport.DebitCreditReportingIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmDebitCreditReportingIndicator
+	 * RegulatoryReport.mmDebitCreditReportingIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class RegulatoryReporting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebitCreditReportingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebitCreditReportingIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmDebitCreditReportingIndicator;
 			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.DebitCreditReportingIndicator;
 			isDerived = false;
 			xmlTag = "DbtCdtRptgInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCreditReportingIndicator";
 			definition = "Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RegulatoryReportingType1Code.mmObject();
 		}
 	};
+	protected RegulatoryAuthority authority;
 	/**
 	 * Entity requiring the regulatory reporting information.
 	 * <p>
@@ -128,8 +131,8 @@ public class RegulatoryReporting2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport#Authority
-	 * RegulatoryReport.Authority}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmAuthority
+	 * RegulatoryReport.mmAuthority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,21 +151,22 @@ public class RegulatoryReporting2 {
 	 * definition} = "Entity requiring the regulatory reporting information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Authority = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthority = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmAuthority;
 			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.Authority;
 			isDerived = false;
 			xmlTag = "Authrty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authority";
 			definition = "Entity requiring the regulatory reporting information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RegulatoryAuthority.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RegulatoryAuthority.mmObject();
 		}
 	};
+	protected StructuredRegulatoryReporting2 regulatoryDetails;
 	/**
 	 * Details related to the regulatory reporting information.
 	 * <p>
@@ -195,34 +199,58 @@ public class RegulatoryReporting2 {
 	 * definition} = "Details related to the regulatory reporting information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegulatoryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegulatoryDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
 			businessComponentTrace_lazy = () -> RegulatoryReport.mmObject();
+			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryDetails";
 			definition = "Details related to the regulatory reporting information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> StructuredRegulatoryReporting2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.DebitCreditReportingIndicator, com.tools20022.repository.msg.RegulatoryReporting2.Authority,
-						com.tools20022.repository.msg.RegulatoryReporting2.RegulatoryDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.mmDebitCreditReportingIndicator, com.tools20022.repository.msg.RegulatoryReporting2.mmAuthority,
+						com.tools20022.repository.msg.RegulatoryReporting2.mmRegulatoryDetails);
 				trace_lazy = () -> RegulatoryReport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryReporting2";
 				definition = "Information needed due to regulatory and/or statutory requirements.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RegulatoryReportingType1Code getDebitCreditReportingIndicator() {
+		return debitCreditReportingIndicator;
+	}
+
+	public void setDebitCreditReportingIndicator(RegulatoryReportingType1Code debitCreditReportingIndicator) {
+		this.debitCreditReportingIndicator = debitCreditReportingIndicator;
+	}
+
+	public RegulatoryAuthority getAuthority() {
+		return authority;
+	}
+
+	public void setAuthority(com.tools20022.repository.msg.RegulatoryAuthority authority) {
+		this.authority = authority;
+	}
+
+	public StructuredRegulatoryReporting2 getRegulatoryDetails() {
+		return regulatoryDetails;
+	}
+
+	public void setRegulatoryDetails(com.tools20022.repository.msg.StructuredRegulatoryReporting2 regulatoryDetails) {
+		this.regulatoryDetails = regulatoryDetails;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.DebitAuthorisation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the reason for requesting a debit authorisation as well as the
@@ -39,17 +40,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#CancellationReason
- * DebitAuthorisationDetails3.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#mmCancellationReason
+ * DebitAuthorisationDetails3.mmCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#AmountToDebit
- * DebitAuthorisationDetails3.AmountToDebit}</li>
+ * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#mmAmountToDebit
+ * DebitAuthorisationDetails3.mmAmountToDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#ValueDateToDebit
- * DebitAuthorisationDetails3.ValueDateToDebit}</li>
+ * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#mmValueDateToDebit
+ * DebitAuthorisationDetails3.mmValueDateToDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#AdditionalCancellationReasonInformation
- * DebitAuthorisationDetails3.AdditionalCancellationReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3#mmAdditionalCancellationReasonInformation
+ * DebitAuthorisationDetails3.mmAdditionalCancellationReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,15 +61,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#Detail
- * DebitAuthorisationRequestV03.Detail}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#mmDetail
+ * DebitAuthorisationRequestV03.mmDetail}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebitAuthorisationDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationReason2Choice cancellationReason;
 	/**
 	 * Specifies the reason for the cancellation request.
 	 * <p>
@@ -96,8 +98,8 @@ public class DebitAuthorisationDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#CancellationReason
-	 * PaymentStatus.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmCancellationReason
+	 * PaymentStatus.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,21 +118,22 @@ public class DebitAuthorisationDetails3 {
 	 * definition} = "Specifies the reason for the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> DebitAuthorisationDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.CancellationReason;
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason for the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationReason2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CancellationReason2Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount amountToDebit;
 	/**
 	 * Amount of money requested for debit authorisation.
 	 * <p>
@@ -144,8 +147,8 @@ public class DebitAuthorisationDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#AmountToDebit
-	 * DebitAuthorisation.AmountToDebit}</li>
+	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmAmountToDebit
+	 * DebitAuthorisation.mmAmountToDebit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,20 +167,21 @@ public class DebitAuthorisationDetails3 {
 	 * definition} = "Amount of money requested for debit authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmAmountToDebit;
 			componentContext_lazy = () -> DebitAuthorisationDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.AmountToDebit;
 			isDerived = false;
 			xmlTag = "AmtToDbt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToDebit";
 			definition = "Amount of money requested for debit authorisation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate valueDateToDebit;
 	/**
 	 * Value date for debiting the amount.
 	 * <p>
@@ -190,8 +194,8 @@ public class DebitAuthorisationDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#ValueDateToDebit
-	 * DebitAuthorisation.ValueDateToDebit}</li>
+	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmValueDateToDebit
+	 * DebitAuthorisation.mmValueDateToDebit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class DebitAuthorisationDetails3 {
 	 * definition} = "Value date for debiting the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDateToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmValueDateToDebit;
 			componentContext_lazy = () -> DebitAuthorisationDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.ValueDateToDebit;
 			isDerived = false;
 			xmlTag = "ValDtToDbt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateToDebit";
 			definition = "Value date for debiting the amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalCancellationReasonInformation;
 	/**
 	 * Further details on the cancellation request reason.
 	 * <p>
@@ -251,7 +256,7 @@ public class DebitAuthorisationDetails3 {
 	 * definition} = "Further details on the cancellation request reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalCancellationReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalCancellationReasonInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DebitAuthorisationDetails3.mmObject();
 			isDerived = false;
@@ -267,16 +272,48 @@ public class DebitAuthorisationDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationDetails3.CancellationReason, com.tools20022.repository.msg.DebitAuthorisationDetails3.AmountToDebit,
-						com.tools20022.repository.msg.DebitAuthorisationDetails3.ValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationDetails3.AdditionalCancellationReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationDetails3.mmCancellationReason, com.tools20022.repository.msg.DebitAuthorisationDetails3.mmAmountToDebit,
+						com.tools20022.repository.msg.DebitAuthorisationDetails3.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationDetails3.mmAdditionalCancellationReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.mmDetail);
 				trace_lazy = () -> DebitAuthorisation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.Detail);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisationDetails3";
 				definition = "Provides the reason for requesting a debit authorisation as well as the amount of the requested debit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationReason2Choice getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(CancellationReason2Choice cancellationReason) {
+		this.cancellationReason = cancellationReason;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAmountToDebit() {
+		return amountToDebit;
+	}
+
+	public void setAmountToDebit(ActiveOrHistoricCurrencyAndAmount amountToDebit) {
+		this.amountToDebit = amountToDebit;
+	}
+
+	public ISODate getValueDateToDebit() {
+		return valueDateToDebit;
+	}
+
+	public void setValueDateToDebit(ISODate valueDateToDebit) {
+		this.valueDateToDebit = valueDateToDebit;
+	}
+
+	public List<Max105Text> getAdditionalCancellationReasonInformation() {
+		return additionalCancellationReasonInformation;
+	}
+
+	public void setAdditionalCancellationReasonInformation(List<Max105Text> additionalCancellationReasonInformation) {
+		this.additionalCancellationReasonInformation = additionalCancellationReasonInformation;
 	}
 }

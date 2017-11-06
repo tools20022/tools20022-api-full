@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CardServiceType3Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Key exchange transaction.
@@ -35,25 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction13#KeyExchangeType
- * CardTransaction13.KeyExchangeType}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction13#mmKeyExchangeType
+ * CardTransaction13.mmKeyExchangeType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction13#InitiatorDateTime
- * CardTransaction13.InitiatorDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction13#RequestedKey
- * CardTransaction13.RequestedKey}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction13#Key
- * CardTransaction13.Key}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction13#mmInitiatorDateTime
+ * CardTransaction13.mmInitiatorDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction13#TransactionResponse
- * CardTransaction13.TransactionResponse}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction13#mmRequestedKey
+ * CardTransaction13.mmRequestedKey}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction13#mmKey
+ * CardTransaction13.mmKey}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction13#mmTransactionResponse
+ * CardTransaction13.mmTransactionResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransaction13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardServiceType3Code keyExchangeType;
 	/**
 	 * Type of key exchange.
 	 * <p>
@@ -106,7 +109,7 @@ public class CardTransaction13 {
 	 * definition} = "Type of key exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyExchangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyExchangeType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction13.mmObject();
 			isDerived = false;
@@ -114,11 +117,12 @@ public class CardTransaction13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeType";
 			definition = "Type of key exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CardServiceType3Code.mmObject();
 		}
 	};
+	protected ISODateTime initiatorDateTime;
 	/**
 	 * Date and time of the transaction.
 	 * <p>
@@ -146,7 +150,7 @@ public class CardTransaction13 {
 	 * definition} = "Date and time of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitiatorDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitiatorDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction13.mmObject();
 			isDerived = false;
@@ -154,11 +158,12 @@ public class CardTransaction13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorDateTime";
 			definition = "Date and time of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.KEKIdentifier3> requestedKey;
 	/**
 	 * Key that must be created and sent in the response, or that must be
 	 * verified..
@@ -188,7 +193,7 @@ public class CardTransaction13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedKey = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardTransaction13.mmObject();
 			isDerived = false;
@@ -197,10 +202,11 @@ public class CardTransaction13 {
 			name = "RequestedKey";
 			definition = "Key that must be created and sent in the response, or that must be verified..";
 			minOccurs = 0;
-			type_lazy = () -> KEKIdentifier3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CryptographicKey6> key;
 	/**
 	 * Created key to be stored.
 	 * <p>
@@ -228,13 +234,13 @@ public class CardTransaction13 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardTransaction14#Key
-	 * CardTransaction14.Key}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardTransaction14#mmKey
+	 * CardTransaction14.mmKey}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Key = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardTransaction13.mmObject();
 			isDerived = false;
@@ -242,12 +248,13 @@ public class CardTransaction13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Created key to be stored.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction14.Key);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction14.mmKey);
 			minOccurs = 0;
-			type_lazy = () -> CryptographicKey6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmObject();
 		}
 	};
+	protected ResponseType2 transactionResponse;
 	/**
 	 * Response to the key exchange request.
 	 * <p>
@@ -274,7 +281,7 @@ public class CardTransaction13 {
 	 * definition} = "Response to the key exchange request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardTransaction13.mmObject();
 			isDerived = false;
@@ -282,26 +289,66 @@ public class CardTransaction13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the key exchange request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ResponseType2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ResponseType2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction13.KeyExchangeType, com.tools20022.repository.msg.CardTransaction13.InitiatorDateTime,
-						com.tools20022.repository.msg.CardTransaction13.RequestedKey, com.tools20022.repository.msg.CardTransaction13.Key, com.tools20022.repository.msg.CardTransaction13.TransactionResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction13.mmKeyExchangeType, com.tools20022.repository.msg.CardTransaction13.mmInitiatorDateTime,
+						com.tools20022.repository.msg.CardTransaction13.mmRequestedKey, com.tools20022.repository.msg.CardTransaction13.mmKey, com.tools20022.repository.msg.CardTransaction13.mmTransactionResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction13";
 				definition = "Key exchange transaction.";
-				previousVersion_lazy = () -> CardTransaction12.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardTransaction14.mmObject());
+				previousVersion_lazy = () -> CardTransaction12.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardServiceType3Code getKeyExchangeType() {
+		return keyExchangeType;
+	}
+
+	public void setKeyExchangeType(CardServiceType3Code keyExchangeType) {
+		this.keyExchangeType = keyExchangeType;
+	}
+
+	public ISODateTime getInitiatorDateTime() {
+		return initiatorDateTime;
+	}
+
+	public void setInitiatorDateTime(ISODateTime initiatorDateTime) {
+		this.initiatorDateTime = initiatorDateTime;
+	}
+
+	public List<KEKIdentifier3> getRequestedKey() {
+		return requestedKey;
+	}
+
+	public void setRequestedKey(List<com.tools20022.repository.msg.KEKIdentifier3> requestedKey) {
+		this.requestedKey = requestedKey;
+	}
+
+	public List<CryptographicKey6> getKey() {
+		return key;
+	}
+
+	public void setKey(List<com.tools20022.repository.msg.CryptographicKey6> key) {
+		this.key = key;
+	}
+
+	public ResponseType2 getTransactionResponse() {
+		return transactionResponse;
+	}
+
+	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+		this.transactionResponse = transactionResponse;
 	}
 }

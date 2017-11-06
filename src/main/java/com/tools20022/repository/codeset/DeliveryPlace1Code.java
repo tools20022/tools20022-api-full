@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#Employer
- * DeliveryPlace1Code.Employer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmEmployer
+ * DeliveryPlace1Code.mmEmployer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#Individual
- * DeliveryPlace1Code.Individual}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmIndividual
+ * DeliveryPlace1Code.mmIndividual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#EntranceOfMeeting
- * DeliveryPlace1Code.EntranceOfMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmEntranceOfMeeting
+ * DeliveryPlace1Code.mmEntranceOfMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#OtherAddress
- * DeliveryPlace1Code.OtherAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmOtherAddress
+ * DeliveryPlace1Code.mmOtherAddress}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "Employer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Employer = new MMCode() {
+	public static final MMCode mmEmployer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Employer";
@@ -110,7 +110,7 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "Individual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Individual = new MMCode() {
+	public static final MMCode mmIndividual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
@@ -133,7 +133,7 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "EntranceOfMeeting"</li>
 	 * </ul>
 	 */
-	public static final MMCode EntranceOfMeeting = new MMCode() {
+	public static final MMCode mmEntranceOfMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntranceOfMeeting";
@@ -156,7 +156,7 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "OtherAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherAddress = new MMCode() {
+	public static final MMCode mmOtherAddress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAddress";
@@ -167,13 +167,13 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EMPL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveryPlace1Code";
 				definition = "Specifies where the attendance card should be delivered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryPlace1Code.Employer, com.tools20022.repository.codeset.DeliveryPlace1Code.Individual,
-						com.tools20022.repository.codeset.DeliveryPlace1Code.EntranceOfMeeting, com.tools20022.repository.codeset.DeliveryPlace1Code.OtherAddress);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryPlace1Code.mmEmployer, com.tools20022.repository.codeset.DeliveryPlace1Code.mmIndividual,
+						com.tools20022.repository.codeset.DeliveryPlace1Code.mmEntranceOfMeeting, com.tools20022.repository.codeset.DeliveryPlace1Code.mmOtherAddress);
 				trace_lazy = () -> DeliveryPlaceCode.mmObject();
 			}
 		});

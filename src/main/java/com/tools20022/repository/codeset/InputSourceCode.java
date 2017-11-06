@@ -29,14 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InputSourceCode#Encoded
- * InputSourceCode.Encoded}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InputSourceCode#mmEncoded
+ * InputSourceCode.mmEncoded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InputSourceCode#UploadedViaCIS
- * InputSourceCode.UploadedViaCIS}</li>
+ * {@linkplain com.tools20022.repository.codeset.InputSourceCode#mmUploadedViaCIS
+ * InputSourceCode.mmUploadedViaCIS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InputSourceCode#UploadedManually
- * InputSourceCode.UploadedManually}</li>
+ * {@linkplain com.tools20022.repository.codeset.InputSourceCode#mmUploadedManually
+ * InputSourceCode.mmUploadedManually}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class InputSourceCode {
 	 * definition} = "File has been encoded."</li>
 	 * </ul>
 	 */
-	public static final MMCode Encoded = new MMCode() {
+	public static final MMCode mmEncoded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Encoded";
@@ -118,7 +118,7 @@ public class InputSourceCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UploadedViaCIS = new MMCode() {
+	public static final MMCode mmUploadedViaCIS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedViaCIS";
@@ -148,7 +148,7 @@ public class InputSourceCode {
 	 * definition} = "File has been uploaded manually."</li>
 	 * </ul>
 	 */
-	public static final MMCode UploadedManually = new MMCode() {
+	public static final MMCode mmUploadedManually = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedManually";
@@ -161,12 +161,12 @@ public class InputSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InputSourceCode";
 				definition = "Specifies the input source for the generation of the file.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.InputSourceCode.Encoded, com.tools20022.repository.codeset.InputSourceCode.UploadedViaCIS, com.tools20022.repository.codeset.InputSourceCode.UploadedManually);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InputSourceCode.mmEncoded, com.tools20022.repository.codeset.InputSourceCode.mmUploadedViaCIS,
+						com.tools20022.repository.codeset.InputSourceCode.mmUploadedManually);
 				derivation_lazy = () -> Arrays.asList(InputSource1Code.mmObject());
 			}
 		});

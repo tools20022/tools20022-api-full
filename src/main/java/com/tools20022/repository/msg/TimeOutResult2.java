@@ -32,8 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TimeOutResult2#TransactionFutureStatus
- * TimeOutResult2.TransactionFutureStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TimeOutResult2#mmTransactionFutureStatus
+ * TimeOutResult2.mmTransactionFutureStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -41,15 +41,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#TimeOutDescription
- * TimeOutNotificationV03.TimeOutDescription}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#mmTimeOutDescription
+ * TimeOutNotificationV03.mmTimeOutDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TimeOutResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionStatus5 transactionFutureStatus;
 	/**
 	 * Specifies the status of the transaction if no action is taken by the
 	 * user.
@@ -91,7 +92,7 @@ public class TimeOutResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionFutureStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionFutureStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TimeOutResult2.mmObject();
 			isDerived = false;
@@ -99,24 +100,32 @@ public class TimeOutResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionFutureStatus";
 			definition = "Specifies the status of the transaction if no action is taken by the user.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionStatus5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeOutResult2.TransactionFutureStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.TimeOutNotificationV03.TimeOutDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeOutResult2.mmTransactionFutureStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmTimeOutDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TimeOutResult2";
 				definition = "Describes the time-out consequences.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionStatus5 getTransactionFutureStatus() {
+		return transactionFutureStatus;
+	}
+
+	public void setTransactionFutureStatus(com.tools20022.repository.msg.TransactionStatus5 transactionFutureStatus) {
+		this.transactionFutureStatus = transactionFutureStatus;
 	}
 }

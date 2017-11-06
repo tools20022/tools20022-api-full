@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#BaseLoad
- * AssetClassDetailedSubProductType5Code.BaseLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmBaseLoad
+ * AssetClassDetailedSubProductType5Code.mmBaseLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#FinancialTransmissionRights
- * AssetClassDetailedSubProductType5Code.FinancialTransmissionRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmFinancialTransmissionRights
+ * AssetClassDetailedSubProductType5Code.mmFinancialTransmissionRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#PeakLoad
- * AssetClassDetailedSubProductType5Code.PeakLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmPeakLoad
+ * AssetClassDetailedSubProductType5Code.mmPeakLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#OffPeak
- * AssetClassDetailedSubProductType5Code.OffPeak}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmOffPeak
+ * AssetClassDetailedSubProductType5Code.mmOffPeak}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#Other
- * AssetClassDetailedSubProductType5Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmOther
+ * AssetClassDetailedSubProductType5Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "BaseLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode BaseLoad = new MMCode() {
+	public static final MMCode mmBaseLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseLoad";
@@ -108,7 +108,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "FinancialTransmissionRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialTransmissionRights = new MMCode() {
+	public static final MMCode mmFinancialTransmissionRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransmissionRights";
@@ -131,7 +131,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "PeakLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode PeakLoad = new MMCode() {
+	public static final MMCode mmPeakLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeakLoad";
@@ -154,7 +154,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "OffPeak"</li>
 	 * </ul>
 	 */
-	public static final MMCode OffPeak = new MMCode() {
+	public static final MMCode mmOffPeak = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffPeak";
@@ -177,7 +177,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -188,13 +188,13 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType5Code";
 				definition = "Further sub product code list for commodity derivative Electricity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.BaseLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.FinancialTransmissionRights,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.PeakLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.OffPeak,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmBaseLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmFinancialTransmissionRights,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmPeakLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmOffPeak,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmOther);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

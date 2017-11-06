@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * InterestRateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#Fixed
- * RateType1Code.Fixed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#Forfeit
- * RateType1Code.Forfeit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#Variable
- * RateType1Code.Variable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#mmFixed
+ * RateType1Code.mmFixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#mmForfeit
+ * RateType1Code.mmForfeit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#mmVariable
+ * RateType1Code.mmVariable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class RateType1Code extends InterestRateTypeCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fixed = new MMCode() {
+	public static final MMCode mmFixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
@@ -105,7 +105,7 @@ public class RateType1Code extends InterestRateTypeCode {
 	 * name} = "Forfeit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Forfeit = new MMCode() {
+	public static final MMCode mmForfeit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forfeit";
@@ -128,7 +128,7 @@ public class RateType1Code extends InterestRateTypeCode {
 	 * name} = "Variable"</li>
 	 * </ul>
 	 */
-	public static final MMCode Variable = new MMCode() {
+	public static final MMCode mmVariable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Variable";
@@ -139,12 +139,12 @@ public class RateType1Code extends InterestRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType1Code";
 				definition = "Specifies whether the rate is fixed or variable or a forfeit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType1Code.Fixed, com.tools20022.repository.codeset.RateType1Code.Forfeit, com.tools20022.repository.codeset.RateType1Code.Variable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType1Code.mmFixed, com.tools20022.repository.codeset.RateType1Code.mmForfeit, com.tools20022.repository.codeset.RateType1Code.mmVariable);
 				trace_lazy = () -> InterestRateTypeCode.mmObject();
 			}
 		});

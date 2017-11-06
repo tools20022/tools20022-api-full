@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.Response2Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Acknowledgement of the exception advice.
@@ -34,19 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction28#TransactionIdentification
- * ATMTransaction28.TransactionIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction28#Response
- * ATMTransaction28.Response}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction28#Command
- * ATMTransaction28.Command}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction28#mmTransactionIdentification
+ * ATMTransaction28.mmTransactionIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction28#mmResponse
+ * ATMTransaction28.mmResponse}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction28#mmCommand
+ * ATMTransaction28.mmCommand}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransaction28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifier1 transactionIdentification;
 	/**
 	 * Identification of the transaction assigned by the ATM.
 	 * <p>
@@ -90,11 +92,11 @@ public class ATMTransaction28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction22#TransactionIdentification
-	 * ATMTransaction22.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmTransactionIdentification
+	 * ATMTransaction22.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction28.mmObject();
 			isDerived = false;
@@ -102,13 +104,14 @@ public class ATMTransaction28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.TransactionIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.mmTransactionIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	protected Response2Code response;
 	/**
 	 * Response to the advice.
 	 * <p>
@@ -138,11 +141,11 @@ public class ATMTransaction28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction22#TransactionResponse
-	 * ATMTransaction22.TransactionResponse}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmTransactionResponse
+	 * ATMTransaction22.mmTransactionResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Response = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction28.mmObject();
 			isDerived = false;
@@ -150,12 +153,13 @@ public class ATMTransaction28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Response to the advice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.TransactionResponse;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.mmTransactionResponse;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Response2Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMCommand7> command;
 	/**
 	 * Maintenance command to perform on the ATM.
 	 * <p>
@@ -183,11 +187,11 @@ public class ATMTransaction28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction22#Command
-	 * ATMTransaction22.Command}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction22#mmCommand
+	 * ATMTransaction22.mmCommand}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Command = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction28.mmObject();
 			isDerived = false;
@@ -195,19 +199,19 @@ public class ATMTransaction28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.Command;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.mmCommand;
 			minOccurs = 0;
-			type_lazy = () -> ATMCommand7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.TransactionIdentification, com.tools20022.repository.msg.ATMTransaction28.Response,
-						com.tools20022.repository.msg.ATMTransaction28.Command);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction28.mmResponse,
+						com.tools20022.repository.msg.ATMTransaction28.mmCommand);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction28";
 				definition = "Acknowledgement of the exception advice.";
@@ -215,5 +219,29 @@ public class ATMTransaction28 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifier1 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Response2Code getResponse() {
+		return response;
+	}
+
+	public void setResponse(Response2Code response) {
+		this.response = response;
+	}
+
+	public List<ATMCommand7> getCommand() {
+		return command;
+	}
+
+	public void setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
+		this.command = command;
 	}
 }

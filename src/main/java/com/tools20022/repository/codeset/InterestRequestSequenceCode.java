@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#Initial
- * InterestRequestSequenceCode.Initial}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#mmInitial
+ * InterestRequestSequenceCode.mmInitial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#Updated
- * InterestRequestSequenceCode.Updated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#mmUpdated
+ * InterestRequestSequenceCode.mmUpdated}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class InterestRequestSequenceCode {
 	 * definition} = "Indicates this is a new interest payment request."</li>
 	 * </ul>
 	 */
-	public static final MMCode Initial = new MMCode() {
+	public static final MMCode mmInitial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
@@ -120,7 +120,7 @@ public class InterestRequestSequenceCode {
 	 * definition} = "Indicates this is an updated interest payement request."</li>
 	 * </ul>
 	 */
-	public static final MMCode Updated = new MMCode() {
+	public static final MMCode mmUpdated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Updated";
@@ -133,12 +133,12 @@ public class InterestRequestSequenceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestRequestSequenceCode";
 				definition = "Indicates whether the interest request is new or updated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRequestSequenceCode.Initial, com.tools20022.repository.codeset.InterestRequestSequenceCode.Updated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRequestSequenceCode.mmInitial, com.tools20022.repository.codeset.InterestRequestSequenceCode.mmUpdated);
 				derivation_lazy = () -> Arrays.asList(InterestRequestSequence1Code.mmObject());
 			}
 		});

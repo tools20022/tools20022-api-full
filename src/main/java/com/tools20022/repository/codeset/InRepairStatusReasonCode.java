@@ -30,8 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InRepairStatusReasonCode#CommercialAgreement
- * InRepairStatusReasonCode.CommercialAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.InRepairStatusReasonCode#mmCommercialAgreement
+ * InRepairStatusReasonCode.mmCommercialAgreement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class InRepairStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialAgreement = new MMCode() {
+	public static final MMCode mmCommercialAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreement";
@@ -102,12 +102,12 @@ public class InRepairStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatusReasonCode";
 				definition = "Specifies the reason for a In Repair status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InRepairStatusReasonCode.CommercialAgreement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InRepairStatusReasonCode.mmCommercialAgreement);
 				derivation_lazy = () -> Arrays.asList(InRepairStatusReason1Code.mmObject());
 			}
 		});

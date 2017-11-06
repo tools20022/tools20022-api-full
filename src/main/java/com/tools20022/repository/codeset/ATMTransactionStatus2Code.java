@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code#Full
- * ATMTransactionStatus2Code.Full}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code#mmFull
+ * ATMTransactionStatus2Code.mmFull}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code#Partial
- * ATMTransactionStatus2Code.Partial}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code#mmPartial
+ * ATMTransactionStatus2Code.mmPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code#None
- * ATMTransactionStatus2Code.None}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code#mmNone
+ * ATMTransactionStatus2Code.mmNone}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,7 +79,7 @@ public class ATMTransactionStatus2Code extends ATMTransactionStatusCode {
 	 * name} = "Full"</li>
 	 * </ul>
 	 */
-	public static final MMCode Full = new MMCode() {
+	public static final MMCode mmFull = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Full";
@@ -102,7 +102,7 @@ public class ATMTransactionStatus2Code extends ATMTransactionStatusCode {
 	 * name} = "Partial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Partial = new MMCode() {
+	public static final MMCode mmPartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Partial";
@@ -125,7 +125,7 @@ public class ATMTransactionStatus2Code extends ATMTransactionStatusCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -136,12 +136,12 @@ public class ATMTransactionStatus2Code extends ATMTransactionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionStatus2Code";
 				definition = "Status of the amount presented to the customer in the last bundle.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMTransactionStatus2Code.Full, com.tools20022.repository.codeset.ATMTransactionStatus2Code.Partial,
-						com.tools20022.repository.codeset.ATMTransactionStatus2Code.None);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMTransactionStatus2Code.mmFull, com.tools20022.repository.codeset.ATMTransactionStatus2Code.mmPartial,
+						com.tools20022.repository.codeset.ATMTransactionStatus2Code.mmNone);
 				trace_lazy = () -> ATMTransactionStatusCode.mmObject();
 			}
 		});

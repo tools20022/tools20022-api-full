@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType4Code#Lampante
- * AssetClassDetailedSubProductType4Code.Lampante}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType4Code#mmLampante
+ * AssetClassDetailedSubProductType4Code.mmLampante}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class AssetClassDetailedSubProductType4Code extends AssetClassDetailedSub
 	 * name} = "Lampante"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lampante = new MMCode() {
+	public static final MMCode mmLampante = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lampante";
@@ -84,11 +84,11 @@ public class AssetClassDetailedSubProductType4Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType4Code";
 				definition = "Further sub product code list for commodity derivative Olive Oil.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType4Code.Lampante);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType4Code.mmLampante);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

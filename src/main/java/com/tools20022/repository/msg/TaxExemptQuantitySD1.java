@@ -35,20 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD1#PlaceAndName
- * TaxExemptQuantitySD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD1#mmPlaceAndName
+ * TaxExemptQuantitySD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD1#ControlIdentification
- * TaxExemptQuantitySD1.ControlIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD1#Quantity
- * TaxExemptQuantitySD1.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD1#mmControlIdentification
+ * TaxExemptQuantitySD1.mmControlIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD1#mmQuantity
+ * TaxExemptQuantitySD1.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxExemptQuantitySD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -89,7 +91,7 @@ public class TaxExemptQuantitySD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class TaxExemptQuantitySD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max6Text controlIdentification;
 	/**
 	 * Tax control ID.
 	 * <p>
@@ -129,7 +132,7 @@ public class TaxExemptQuantitySD1 {
 	 * definition} = "Tax control ID."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ControlIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmControlIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
@@ -137,11 +140,12 @@ public class TaxExemptQuantitySD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlIdentification";
 			definition = "Tax control ID.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
 	 * Elected quantity.
 	 * <p>
@@ -170,7 +174,7 @@ public class TaxExemptQuantitySD1 {
 	 * definition} = "Elected quantity. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
@@ -178,8 +182,8 @@ public class TaxExemptQuantitySD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Elected quantity. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
@@ -187,14 +191,38 @@ public class TaxExemptQuantitySD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxExemptQuantitySD1.PlaceAndName, com.tools20022.repository.msg.TaxExemptQuantitySD1.ControlIdentification,
-						com.tools20022.repository.msg.TaxExemptQuantitySD1.Quantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxExemptQuantitySD1.mmPlaceAndName, com.tools20022.repository.msg.TaxExemptQuantitySD1.mmControlIdentification,
+						com.tools20022.repository.msg.TaxExemptQuantitySD1.mmQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxExemptQuantitySD1";
 				definition = "Tax exempt election details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max6Text getControlIdentification() {
+		return controlIdentification;
+	}
+
+	public void setControlIdentification(Max6Text controlIdentification) {
+		this.controlIdentification = controlIdentification;
+	}
+
+	public FinancialInstrumentQuantity15Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = quantity;
 	}
 }

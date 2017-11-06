@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Process of matching different documents submitted by parties to a trade.
@@ -34,29 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#System
- * Reconciliation.System}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#Document
- * Reconciliation.Document}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmSystem
+ * Reconciliation.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmDocument
+ * Reconciliation.mmDocument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Reconciliation#ReconciledTrades
- * Reconciliation.ReconciledTrades}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#Account
- * Reconciliation.Account}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#Reconciliation
- * Account.Reconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#Reconciliation
- * Trade.Reconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#Reconciliation
- * Document.Reconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#Reconciliation
- * System.Reconciliation}</li>
+ * {@linkplain com.tools20022.repository.entity.Reconciliation#mmReconciledTrades
+ * Reconciliation.mmReconciledTrades}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmAccount
+ * Reconciliation.mmAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -67,10 +54,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmReconciliation
+ * Account.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmReconciliation
+ * Trade.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmReconciliation
+ * Document.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
+ * System.mmReconciliation}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reconciliation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.System> system;
 	/**
 	 * System which provides the reconciliation process.
 	 * <p>
@@ -93,8 +95,8 @@ public class Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.System#Reconciliation
-	 * System.Reconciliation}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmReconciliation
+	 * System.mmReconciliation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -117,7 +119,7 @@ public class Reconciliation {
 	 * definition} = "System which provides the reconciliation process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd System = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
@@ -125,11 +127,12 @@ public class Reconciliation {
 			name = "System";
 			definition = "System which provides the reconciliation process.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.System.Reconciliation;
+			opposite_lazy = () -> com.tools20022.repository.entity.System.mmReconciliation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
+	protected Document document;
 	/**
 	 * Document submitted in a reconciliation process.
 	 * <p>
@@ -138,8 +141,8 @@ public class Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Reconciliation
-	 * Document.Reconciliation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmReconciliation
+	 * Document.mmReconciliation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -162,20 +165,21 @@ public class Reconciliation {
 	 * definition} = "Document submitted in a reconciliation process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Document = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDocument = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Document";
 			definition = "Document submitted in a reconciliation process.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Document.Reconciliation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmReconciliation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
+	protected Trade reconciledTrades;
 	/**
 	 * Trades which are reconciled with entries in an account.
 	 * <p>
@@ -184,8 +188,8 @@ public class Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#Reconciliation
-	 * Trade.Reconciliation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmReconciliation
+	 * Trade.mmReconciliation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -208,20 +212,21 @@ public class Reconciliation {
 	 * definition} = "Trades which are reconciled with entries in an account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ReconciledTrades = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmReconciledTrades = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReconciledTrades";
 			definition = "Trades which are reconciled with entries in an account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Trade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Trade.Reconciliation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmReconciliation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
+	protected Account account;
 	/**
 	 * Account for which a reconciliation process is performed.
 	 * <p>
@@ -230,27 +235,27 @@ public class Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Reconciliation
-	 * Account.Reconciliation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmReconciliation
+	 * Account.mmReconciliation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#Account
-	 * TransactionCertificate1.Account}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Reconciliation
 	 * Reconciliation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmAccount
+	 * TransactionCertificate1.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -262,36 +267,68 @@ public class Reconciliation {
 	 * definition} = "Account for which a reconciliation process is performed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Account = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate1.Account);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate1.mmAccount);
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account for which a reconciliation process is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.Reconciliation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmReconciliation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reconciliation";
 				definition = "Process of matching different documents submitted by parties to a trade.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.Reconciliation, com.tools20022.repository.entity.Trade.Reconciliation, com.tools20022.repository.entity.Document.Reconciliation,
-						com.tools20022.repository.entity.System.Reconciliation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmReconciliation, com.tools20022.repository.entity.Trade.mmReconciliation, com.tools20022.repository.entity.Document.mmReconciliation,
+						com.tools20022.repository.entity.System.mmReconciliation);
 				subType_lazy = () -> Arrays.asList(ReconciliationTransaction.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reconciliation.System, com.tools20022.repository.entity.Reconciliation.Document, com.tools20022.repository.entity.Reconciliation.ReconciledTrades,
-						com.tools20022.repository.entity.Reconciliation.Account);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reconciliation.mmSystem, com.tools20022.repository.entity.Reconciliation.mmDocument, com.tools20022.repository.entity.Reconciliation.mmReconciledTrades,
+						com.tools20022.repository.entity.Reconciliation.mmAccount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<System> getSystem() {
+		return system;
+	}
+
+	public void setSystem(List<com.tools20022.repository.entity.System> system) {
+		this.system = system;
+	}
+
+	public Document getDocument() {
+		return document;
+	}
+
+	public void setDocument(com.tools20022.repository.entity.Document document) {
+		this.document = document;
+	}
+
+	public Trade getReconciledTrades() {
+		return reconciledTrades;
+	}
+
+	public void setReconciledTrades(com.tools20022.repository.entity.Trade reconciledTrades) {
+		this.reconciledTrades = reconciledTrades;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.entity.Account account) {
+		this.account = account;
 	}
 }

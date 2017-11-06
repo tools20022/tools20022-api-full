@@ -22,8 +22,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice;
 import com.tools20022.repository.choice.SecuritiesBalanceType3Choice;
 import com.tools20022.repository.entity.IntraPositionTransfer;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the intra-position movement.
@@ -35,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#SafekeepingPlace
- * IntraPositionDetails20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#mmSafekeepingPlace
+ * IntraPositionDetails20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#BalanceFrom
- * IntraPositionDetails20.BalanceFrom}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#mmBalanceFrom
+ * IntraPositionDetails20.mmBalanceFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#IntraPositionMovement
- * IntraPositionDetails20.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#mmIntraPositionMovement
+ * IntraPositionDetails20.mmIntraPositionMovement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionDetails20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlaceFormat3Choice safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -114,21 +117,22 @@ public class IntraPositionDetails20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> IntraPositionDetails20.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
 		}
 	};
+	protected SecuritiesBalanceType3Choice balanceFrom;
 	/**
 	 * Balance from which the securities were moved.
 	 * <p>
@@ -141,8 +145,8 @@ public class IntraPositionDetails20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesBalanceType
-	 * SecuritiesBalance.SecuritiesBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+	 * SecuritiesBalance.mmSecuritiesBalanceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,21 +165,22 @@ public class IntraPositionDetails20 {
 	 * definition} = "Balance from which the securities were moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> IntraPositionDetails20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesBalanceType;
 			isDerived = false;
 			xmlTag = "BalFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the securities were moved.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesBalanceType3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesBalanceType3Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IntraPositionMovementDetails7> intraPositionMovement;
 	/**
 	 * Intra-position movement(s) having been performed.
 	 * <p>
@@ -208,35 +213,59 @@ public class IntraPositionDetails20 {
 	 * definition} = "Intra-position movement(s) having been performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntraPositionMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraPositionDetails20.mmObject();
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
+			componentContext_lazy = () -> IntraPositionDetails20.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			definition = "Intra-position movement(s) having been performed.";
 			minOccurs = 1;
-			type_lazy = () -> IntraPositionMovementDetails7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails20.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails20.BalanceFrom,
-						com.tools20022.repository.msg.IntraPositionDetails20.IntraPositionMovement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails20.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails20.mmBalanceFrom,
+						com.tools20022.repository.msg.IntraPositionDetails20.mmIntraPositionMovement);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionDetails20";
 				definition = "Details of the intra-position movement.";
-				previousVersion_lazy = () -> IntraPositionDetails17.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(IntraPositionDetails28.mmObject());
+				previousVersion_lazy = () -> IntraPositionDetails17.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat3Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public SecuritiesBalanceType3Choice getBalanceFrom() {
+		return balanceFrom;
+	}
+
+	public void setBalanceFrom(SecuritiesBalanceType3Choice balanceFrom) {
+		this.balanceFrom = balanceFrom;
+	}
+
+	public List<IntraPositionMovementDetails7> getIntraPositionMovement() {
+		return intraPositionMovement;
+	}
+
+	public void setIntraPositionMovement(List<com.tools20022.repository.msg.IntraPositionMovementDetails7> intraPositionMovement) {
+		this.intraPositionMovement = intraPositionMovement;
 	}
 }

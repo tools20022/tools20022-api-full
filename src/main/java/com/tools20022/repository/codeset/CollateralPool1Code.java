@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * CollateralPoolCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralPool1Code#NoPool
- * CollateralPool1Code.NoPool}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralPool1Code#Pool
- * CollateralPool1Code.Pool}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralPool1Code#mmNoPool
+ * CollateralPool1Code.mmNoPool}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralPool1Code#mmPool
+ * CollateralPool1Code.mmPool}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +75,7 @@ public class CollateralPool1Code extends CollateralPoolCode {
 	 * name} = "NoPool"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoPool = new MMCode() {
+	public static final MMCode mmNoPool = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPool";
@@ -97,7 +98,7 @@ public class CollateralPool1Code extends CollateralPoolCode {
 	 * name} = "Pool"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pool = new MMCode() {
+	public static final MMCode mmPool = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pool";
@@ -108,11 +109,11 @@ public class CollateralPool1Code extends CollateralPoolCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralPool1Code";
 				definition = "Specifies whether the collateral is a pool collateral or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPool1Code.NoPool, com.tools20022.repository.codeset.CollateralPool1Code.Pool);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPool1Code.mmNoPool, com.tools20022.repository.codeset.CollateralPool1Code.mmPool);
 				trace_lazy = () -> CollateralPoolCode.mmObject();
 			}
 		});

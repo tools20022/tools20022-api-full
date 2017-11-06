@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#LegalDecision
- * PaymentCancellationRejection1Code.LegalDecision}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#mmLegalDecision
+ * PaymentCancellationRejection1Code.mmLegalDecision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#AgentDecision
- * PaymentCancellationRejection1Code.AgentDecision}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#mmAgentDecision
+ * PaymentCancellationRejection1Code.mmAgentDecision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#CustomerDecision
- * PaymentCancellationRejection1Code.CustomerDecision}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#mmCustomerDecision
+ * PaymentCancellationRejection1Code.mmCustomerDecision}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 * name} = "LegalDecision"</li>
 	 * </ul>
 	 */
-	public static final MMCode LegalDecision = new MMCode() {
+	public static final MMCode mmLegalDecision = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalDecision";
@@ -107,7 +107,7 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 * name} = "AgentDecision"</li>
 	 * </ul>
 	 */
-	public static final MMCode AgentDecision = new MMCode() {
+	public static final MMCode mmAgentDecision = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDecision";
@@ -130,7 +130,7 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 * name} = "CustomerDecision"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerDecision = new MMCode() {
+	public static final MMCode mmCustomerDecision = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDecision";
@@ -141,13 +141,13 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LEGL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationRejection1Code";
 				definition = "Returned when a request for cancellation cannot be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCancellationRejection1Code.LegalDecision, com.tools20022.repository.codeset.PaymentCancellationRejection1Code.AgentDecision,
-						com.tools20022.repository.codeset.PaymentCancellationRejection1Code.CustomerDecision);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmLegalDecision, com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmAgentDecision,
+						com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmCustomerDecision);
 				trace_lazy = () -> PaymentCancellationRejectionCode.mmObject();
 			}
 		});

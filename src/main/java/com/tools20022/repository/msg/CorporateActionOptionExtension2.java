@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionExtension2#PlaceAndName
- * CorporateActionOptionExtension2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionExtension2#mmPlaceAndName
+ * CorporateActionOptionExtension2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionExtension2#DTCCOptionType
- * CorporateActionOptionExtension2.DTCCOptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionExtension2#mmDTCCOptionType
+ * CorporateActionOptionExtension2.mmDTCCOptionType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOptionExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -87,7 +88,7 @@ public class CorporateActionOptionExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionExtension2.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class CorporateActionOptionExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText dTCCOptionType;
 	/**
 	 * Used for the option types that cannot be classified in ISO and marked as
 	 * Option Type: OTHR. Options like convert and dividend reinvestment, or DTC
@@ -134,7 +136,7 @@ public class CorporateActionOptionExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCCOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCCOptionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionExtension2.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class CorporateActionOptionExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCOptionType";
 			definition = "Used for the option types that cannot be classified in ISO and marked as Option Type: OTHR. Options like convert and dividend reinvestment, or DTC (The Depository Trust Corporation)  special option types for the instances where the event and security are eligible for DTC (The Depository Trust Corporation) services like Foreign Tax, Foreign Currency Payments, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -151,13 +153,29 @@ public class CorporateActionOptionExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionExtension2.PlaceAndName, com.tools20022.repository.msg.CorporateActionOptionExtension2.DTCCOptionType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionExtension2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionExtension2.mmDTCCOptionType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionExtension2";
 				definition = "Provides additional information regarding corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max4AlphaNumericText getDTCCOptionType() {
+		return dTCCOptionType;
+	}
+
+	public void setDTCCOptionType(Max4AlphaNumericText dTCCOptionType) {
+		this.dTCCOptionType = dTCCOptionType;
 	}
 }

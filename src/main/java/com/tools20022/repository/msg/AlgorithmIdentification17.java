@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification17#Algorithm
- * AlgorithmIdentification17.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification17#mmAlgorithm
+ * AlgorithmIdentification17.mmAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification17#Parameter
- * AlgorithmIdentification17.Parameter}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification17#mmParameter
+ * AlgorithmIdentification17.mmParameter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmIdentification17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm14Code algorithm;
 	/**
 	 * Identification of the algorithm.
 	 * <p>
@@ -95,11 +96,11 @@ public class AlgorithmIdentification17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification4#Algorithm
-	 * AlgorithmIdentification4.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification4#mmAlgorithm
+	 * AlgorithmIdentification4.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification17.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class AlgorithmIdentification17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification4.Algorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification4.mmAlgorithm;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm14Code.mmObject();
 		}
 	};
+	protected Parameter8 parameter;
 	/**
 	 * Parameters of the RSASSA-PSS digital signature algorithm (RSA signature
 	 * algorithm with appendix: Probabilistic Signature Scheme).
@@ -141,7 +143,7 @@ public class AlgorithmIdentification17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Parameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification17.mmObject();
 			isDerived = false;
@@ -149,18 +151,18 @@ public class AlgorithmIdentification17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Parameter8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification17.Algorithm, com.tools20022.repository.msg.AlgorithmIdentification17.Parameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification17.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification17.mmParameter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification17";
 				definition = "Identification of a cryptographic algorithm and parameters for digital signatures.";
@@ -168,5 +170,21 @@ public class AlgorithmIdentification17 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm14Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm14Code algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public Parameter8 getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(com.tools20022.repository.msg.Parameter8 parameter) {
+		this.parameter = parameter;
 	}
 }

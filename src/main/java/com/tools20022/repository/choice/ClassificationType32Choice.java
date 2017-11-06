@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClassificationType32Choice#ClassificationFinancialInstrument
- * ClassificationType32Choice.ClassificationFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.choice.ClassificationType32Choice#mmClassificationFinancialInstrument
+ * ClassificationType32Choice.mmClassificationFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClassificationType32Choice#AlternateClassification
- * ClassificationType32Choice.AlternateClassification}</li>
+ * {@linkplain com.tools20022.repository.choice.ClassificationType32Choice#mmAlternateClassification
+ * ClassificationType32Choice.mmAlternateClassification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClassificationType32Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CFIOct2015Identifier classificationFinancialInstrument;
 	/**
 	 * ISO 10962 Classification of Financial Instrument (CFI)
 	 * <p>
@@ -80,8 +81,8 @@ public class ClassificationType32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,25 +102,26 @@ public class ClassificationType32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ClassificationType30Choice#ClassificationFinancialInstrument
-	 * ClassificationType30Choice.ClassificationFinancialInstrument}</li>
+	 * {@linkplain com.tools20022.repository.choice.ClassificationType30Choice#mmClassificationFinancialInstrument
+	 * ClassificationType30Choice.mmClassificationFinancialInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType32Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "ISO 10962 Classification of Financial Instrument (CFI)";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.ClassificationFinancialInstrument;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.mmClassificationFinancialInstrument;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
 		}
 	};
+	protected GenericIdentification36 alternateClassification;
 	/**
 	 * Proprietary classification of financial instrument.
 	 * <p>
@@ -133,8 +135,8 @@ public class ClassificationType32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,22 +156,22 @@ public class ClassificationType32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ClassificationType30Choice#AlternateClassification
-	 * ClassificationType30Choice.AlternateClassification}</li>
+	 * {@linkplain com.tools20022.repository.choice.ClassificationType30Choice#mmAlternateClassification
+	 * ClassificationType30Choice.mmAlternateClassification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType32Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "AltrnClssfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateClassification";
 			definition = "Proprietary classification of financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.AlternateClassification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.mmAlternateClassification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
 		}
 	};
@@ -177,9 +179,10 @@ public class ClassificationType32Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType32Choice.ClassificationFinancialInstrument, com.tools20022.repository.choice.ClassificationType32Choice.AlternateClassification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType32Choice.mmClassificationFinancialInstrument,
+						com.tools20022.repository.choice.ClassificationType32Choice.mmAlternateClassification);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClassificationType32Choice";
 				definition = "Choice of format for the classification.";
@@ -187,5 +190,21 @@ public class ClassificationType32Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CFIOct2015Identifier getClassificationFinancialInstrument() {
+		return classificationFinancialInstrument;
+	}
+
+	public void setClassificationFinancialInstrument(CFIOct2015Identifier classificationFinancialInstrument) {
+		this.classificationFinancialInstrument = classificationFinancialInstrument;
+	}
+
+	public GenericIdentification36 getAlternateClassification() {
+		return alternateClassification;
+	}
+
+	public void setAlternateClassification(GenericIdentification36 alternateClassification) {
+		this.alternateClassification = alternateClassification;
 	}
 }

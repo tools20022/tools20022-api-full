@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Party that is responsible for delivering securities as part of a chain of
@@ -38,287 +39,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#DeliveringSettlementParty
- * DeliveringSettlementParty.DeliveringSettlementParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#NextParty
- * DeliveringSettlementParty.NextParty}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#DeliveringSettlementParty
- * DeliveringSettlementParty.DeliveringSettlementParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#NextParty
- * DeliveringSettlementParty.NextParty}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction4#OtherDeliveringSettlementParties
- * StandingSettlementInstruction4.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails3.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails4.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails2.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction7#OtherDeliveringSettlementParties
- * StandingSettlementInstruction7.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails5.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails6.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails7.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#DeliveringSettlementParties
- * SecuritiesOption3.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#DeliveringSettlementParties
- * SecuritiesOption8.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#DeliveringSettlementParties
- * SecuritiesOption18.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#DeliveringSettlementParties
- * SecuritiesOption20.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#DeliveringSettlementParties
- * SecuritiesOption26.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#DeliveringSettlementParties
- * SecuritiesOption31.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#DeliveringSettlementParties
- * SecuritiesOption35.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#DeliveringSettlementParties
- * SecuritiesOption36.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction3#OtherDeliveringSettlementParties
- * StandingSettlementInstruction3.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction6#OtherDeliveringSettlementParties
- * StandingSettlementInstruction6.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails8.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails9.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails10.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails11.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails12.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails13.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Order3#DeliveringSettlementParties
- * Order3.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction9#OtherDeliveringSettlementParties
- * StandingSettlementInstruction9.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails2.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails8.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction5#OtherDeliveringSettlementParties
- * StandingSettlementInstruction5.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails6.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails10.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails17.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails18.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#OtherDeliveringSettlementParties
- * StandingSettlementInstruction8.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementParties2Choice#DeliveringSettlementParties
- * SettlementParties2Choice.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#DeliveringParties
- * NonGuaranteedTrade1.DeliveringParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade2#DeliveringParties
- * NonGuaranteedTrade2.DeliveringParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Order9#DeliveringSettlementParties
- * Order9.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#DeliveringSettlementParties
- * InstrumentLeg2.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SingleQuote1#DeliveringSettlementParties
- * SingleQuote1.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MassQuote1#DeliveringSettlementParties
- * MassQuote1.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg3#DeliveringSettlementParties
- * InstrumentLeg3.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#DeliveringSettlementParties
- * IndicationOfInterest1.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Order6#DeliveringSettlementParties
- * Order6.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Order11#DeliveringSettlementParties
- * Order11.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteRequest1#DeliveringSettlementParties
- * QuoteRequest1.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#DeliveringSettlementParties
- * RequestForQuote.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails16.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails14.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails15.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails21.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#DeliveringSettlementParties
- * SecuritiesOption42.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#DeliveringSettlementParties
- * SecuritiesOption48.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails22.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails17.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails18.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails19.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails24.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementParties3Choice#DeliveringSettlementParties
- * SettlementParties3Choice.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade3#DeliveringParties
- * NonGuaranteedTrade3.DeliveringParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementParties4Choice#DeliveringSettlementParties
- * SettlementParties4Choice.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails25.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction11#OtherDeliveringSettlementParties
- * StandingSettlementInstruction11.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails26.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails21.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails22.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails20.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#DeliveringSettlementParties
- * SecuritiesOption50.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementParties5Choice#DeliveringSettlementParties
- * SettlementParties5Choice.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#DeliveringSettlementParties
- * SecuritiesOption55.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails33.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction12#OtherDeliveringSettlementParties
- * StandingSettlementInstruction12.OtherDeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails23.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails25.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails24.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#DeliveringSettlementParties
- * SecuritiesOption60.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails35.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails27.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails28.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails26.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementParties7Choice#DeliveringSettlementParties
- * SettlementParties7Choice.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#DeliveringSettlementParties
- * SecuritiesFinancingTransactionDetails36.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails30.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#DeliveringSettlementParties
- * SecuritiesOption63.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails29.DeliveringSettlementParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#DeliveringSettlementParties
- * SecuritiesSettlementTransactionDetails31.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmDeliveringSettlementParty
+ * DeliveringSettlementParty.mmDeliveringSettlementParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmNextParty
+ * DeliveringSettlementParty.mmNextParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -328,6 +53,282 @@ import java.util.concurrent.atomic.AtomicReference;
  * DeliveringDepositoryRole}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmDeliveringSettlementParty
+ * DeliveringSettlementParty.mmDeliveringSettlementParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmNextParty
+ * DeliveringSettlementParty.mmNextParty}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction4#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction4.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails3.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails4.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails2.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction7#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction7.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails5.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails6.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails7.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#mmDeliveringSettlementParties
+ * SecuritiesOption3.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#mmDeliveringSettlementParties
+ * SecuritiesOption8.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#mmDeliveringSettlementParties
+ * SecuritiesOption18.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#mmDeliveringSettlementParties
+ * SecuritiesOption20.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#mmDeliveringSettlementParties
+ * SecuritiesOption26.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#mmDeliveringSettlementParties
+ * SecuritiesOption31.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#mmDeliveringSettlementParties
+ * SecuritiesOption35.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#mmDeliveringSettlementParties
+ * SecuritiesOption36.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction3#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction3.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction6#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction6.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails8.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails9.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails10.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails11.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails12.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails13.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Order3#mmDeliveringSettlementParties
+ * Order3.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction9#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction9.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails2.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails8.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction5#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction5.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails6.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails10.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails17.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails18.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction8.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementParties2Choice#mmDeliveringSettlementParties
+ * SettlementParties2Choice.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade1#mmDeliveringParties
+ * NonGuaranteedTrade1.mmDeliveringParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade2#mmDeliveringParties
+ * NonGuaranteedTrade2.mmDeliveringParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Order9#mmDeliveringSettlementParties
+ * Order9.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmDeliveringSettlementParties
+ * InstrumentLeg2.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SingleQuote1#mmDeliveringSettlementParties
+ * SingleQuote1.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MassQuote1#mmDeliveringSettlementParties
+ * MassQuote1.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg3#mmDeliveringSettlementParties
+ * InstrumentLeg3.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmDeliveringSettlementParties
+ * IndicationOfInterest1.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Order6#mmDeliveringSettlementParties
+ * Order6.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Order11#mmDeliveringSettlementParties
+ * Order11.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmDeliveringSettlementParties
+ * QuoteRequest1.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmDeliveringSettlementParties
+ * RequestForQuote.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails16.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails14.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails15.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails21.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#mmDeliveringSettlementParties
+ * SecuritiesOption42.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#mmDeliveringSettlementParties
+ * SecuritiesOption48.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails22.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails17.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails18.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails19.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails24.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementParties3Choice#mmDeliveringSettlementParties
+ * SettlementParties3Choice.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NonGuaranteedTrade3#mmDeliveringParties
+ * NonGuaranteedTrade3.mmDeliveringParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementParties4Choice#mmDeliveringSettlementParties
+ * SettlementParties4Choice.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails25.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction11#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction11.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails26.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails21.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails22.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails20.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#mmDeliveringSettlementParties
+ * SecuritiesOption50.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementParties5Choice#mmDeliveringSettlementParties
+ * SettlementParties5Choice.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmDeliveringSettlementParties
+ * SecuritiesOption55.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails33.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction12#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction12.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails23.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails25.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails24.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#mmDeliveringSettlementParties
+ * SecuritiesOption60.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails35.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails27.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails28.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails26.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementParties7Choice#mmDeliveringSettlementParties
+ * SettlementParties7Choice.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmDeliveringSettlementParties
+ * SecuritiesFinancingTransactionDetails36.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails30.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmDeliveringSettlementParties
+ * SecuritiesOption63.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails29.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} =
  * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
@@ -335,8 +336,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -352,6 +353,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected DeliveringSettlementParty deliveringSettlementParty;
 	/**
 	 * Specifies the settlement party which is followed by another party.
 	 * <p>
@@ -360,8 +362,8 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#NextParty
-	 * DeliveringSettlementParty.NextParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmNextParty
+	 * DeliveringSettlementParty.mmNextParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -387,20 +389,21 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 	 * "Specifies the settlement party which is followed by another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd DeliveringSettlementParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDeliveringSettlementParty = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveringSettlementParty";
 			definition = "Specifies the settlement party which is followed by another party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.NextParty;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmNextParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.DeliveringSettlementParty> nextParty;
 	/**
 	 * Next party in the delivering side of the settlement the transaction
 	 * chain.
@@ -410,8 +413,8 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#DeliveringSettlementParty
-	 * DeliveringSettlementParty.DeliveringSettlementParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.DeliveringSettlementParty#mmDeliveringSettlementParty
+	 * DeliveringSettlementParty.mmDeliveringSettlementParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -438,7 +441,7 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd NextParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNextParty = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
 			isDerived = false;
@@ -446,67 +449,84 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 			name = "NextParty";
 			definition = "Next party in the delivering side of the settlement the transaction chain.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.DeliveringSettlementParty;
+			opposite_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmDeliveringSettlementParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveringSettlementParty";
 				definition = "Party that is responsible for delivering securities as part of a chain of settlement parties or as party that sells them.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DeliveringSettlementParty.DeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty.NextParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction4.OtherDeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.DeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction7.OtherDeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption3.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption8.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption18.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption20.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption26.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption31.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption35.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption36.DeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction3.OtherDeliveringSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction6.OtherDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.DeliveringSettlementParties, com.tools20022.repository.msg.Order3.DeliveringSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction9.OtherDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.DeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction5.OtherDeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.DeliveringSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction8.OtherDeliveringSettlementParties, com.tools20022.repository.choice.SettlementParties2Choice.DeliveringSettlementParties,
-						com.tools20022.repository.msg.NonGuaranteedTrade1.DeliveringParties, com.tools20022.repository.msg.NonGuaranteedTrade2.DeliveringParties, com.tools20022.repository.msg.Order9.DeliveringSettlementParties,
-						com.tools20022.repository.msg.InstrumentLeg2.DeliveringSettlementParties, com.tools20022.repository.msg.SingleQuote1.DeliveringSettlementParties, com.tools20022.repository.msg.MassQuote1.DeliveringSettlementParties,
-						com.tools20022.repository.msg.InstrumentLeg3.DeliveringSettlementParties, com.tools20022.repository.msg.IndicationOfInterest1.DeliveringSettlementParties,
-						com.tools20022.repository.msg.Order6.DeliveringSettlementParties, com.tools20022.repository.msg.Order11.DeliveringSettlementParties, com.tools20022.repository.msg.QuoteRequest1.DeliveringSettlementParties,
-						com.tools20022.repository.msg.RequestForQuote.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption42.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption48.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.DeliveringSettlementParties,
-						com.tools20022.repository.choice.SettlementParties3Choice.DeliveringSettlementParties, com.tools20022.repository.msg.NonGuaranteedTrade3.DeliveringParties,
-						com.tools20022.repository.choice.SettlementParties4Choice.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.DeliveringSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction11.OtherDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption50.DeliveringSettlementParties,
-						com.tools20022.repository.choice.SettlementParties5Choice.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption55.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.DeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction12.OtherDeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption60.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.DeliveringSettlementParties,
-						com.tools20022.repository.choice.SettlementParties7Choice.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption63.DeliveringSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.DeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.DeliveringSettlementParties);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DeliveringSettlementParty.mmDeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty.mmNextParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction4.mmOtherDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmDeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction7.mmOtherDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption3.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesOption8.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption18.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesOption20.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption26.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesOption31.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption35.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesOption36.mmDeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction3.mmOtherDeliveringSettlementParties,
+						com.tools20022.repository.msg.StandingSettlementInstruction6.mmOtherDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmDeliveringSettlementParties, com.tools20022.repository.msg.Order3.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.StandingSettlementInstruction9.mmOtherDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmDeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction5.mmOtherDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.StandingSettlementInstruction8.mmOtherDeliveringSettlementParties, com.tools20022.repository.choice.SettlementParties2Choice.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.NonGuaranteedTrade1.mmDeliveringParties, com.tools20022.repository.msg.NonGuaranteedTrade2.mmDeliveringParties, com.tools20022.repository.msg.Order9.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.InstrumentLeg2.mmDeliveringSettlementParties, com.tools20022.repository.msg.SingleQuote1.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.MassQuote1.mmDeliveringSettlementParties, com.tools20022.repository.msg.InstrumentLeg3.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.IndicationOfInterest1.mmDeliveringSettlementParties, com.tools20022.repository.msg.Order6.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.Order11.mmDeliveringSettlementParties, com.tools20022.repository.msg.QuoteRequest1.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.RequestForQuote.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption42.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesOption48.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmDeliveringSettlementParties,
+						com.tools20022.repository.choice.SettlementParties3Choice.mmDeliveringSettlementParties, com.tools20022.repository.msg.NonGuaranteedTrade3.mmDeliveringParties,
+						com.tools20022.repository.choice.SettlementParties4Choice.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.StandingSettlementInstruction11.mmOtherDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption50.mmDeliveringSettlementParties,
+						com.tools20022.repository.choice.SettlementParties5Choice.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption55.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmDeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction12.mmOtherDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption60.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmDeliveringSettlementParties,
+						com.tools20022.repository.choice.SettlementParties7Choice.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesOption63.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties);
 				subType_lazy = () -> Arrays.asList(DeliveringDepositoryRole.mmObject());
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DeliveringSettlementParty.DeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty.NextParty);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DeliveringSettlementParty.mmDeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty.mmNextParty);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DeliveringSettlementParty getDeliveringSettlementParty() {
+		return deliveringSettlementParty;
+	}
+
+	public void setDeliveringSettlementParty(com.tools20022.repository.entity.DeliveringSettlementParty deliveringSettlementParty) {
+		this.deliveringSettlementParty = deliveringSettlementParty;
+	}
+
+	public List<DeliveringSettlementParty> getNextParty() {
+		return nextParty;
+	}
+
+	public void setNextParty(List<com.tools20022.repository.entity.DeliveringSettlementParty> nextParty) {
+		this.nextParty = nextParty;
 	}
 }

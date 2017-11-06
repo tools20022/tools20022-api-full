@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * BalanceStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceStatus1Code#Pending
- * BalanceStatus1Code.Pending}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceStatus1Code#Settled
- * BalanceStatus1Code.Settled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceStatus1Code#mmPending
+ * BalanceStatus1Code.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceStatus1Code#mmSettled
+ * BalanceStatus1Code.mmSettled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +81,7 @@ public class BalanceStatus1Code extends BalanceStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -102,7 +104,7 @@ public class BalanceStatus1Code extends BalanceStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -113,12 +115,12 @@ public class BalanceStatus1Code extends BalanceStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PDNG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceStatus1Code";
 				definition = "Specifies the balance of transactions with a certain status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceStatus1Code.Pending, com.tools20022.repository.codeset.BalanceStatus1Code.Settled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceStatus1Code.mmPending, com.tools20022.repository.codeset.BalanceStatus1Code.mmSettled);
 				trace_lazy = () -> BalanceStatusCode.mmObject();
 			}
 		});

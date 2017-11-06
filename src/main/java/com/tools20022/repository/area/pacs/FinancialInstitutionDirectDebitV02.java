@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestve
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope:<br>
@@ -69,21 +70,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02#GroupHeader
- * FinancialInstitutionDirectDebitV02.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02#mmGroupHeader
+ * FinancialInstitutionDirectDebitV02.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02#CreditInstruction
- * FinancialInstitutionDirectDebitV02.CreditInstruction}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02#mmCreditInstruction
+ * FinancialInstitutionDirectDebitV02.mmCreditInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02#SupplementaryData
- * FinancialInstitutionDirectDebitV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02#mmSupplementaryData
+ * FinancialInstitutionDirectDebitV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02#identifier
- * FinancialInstitutionDirectDebitV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.010.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstitutionDirectDebitV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader63 groupHeader;
 	/**
 	 * Common characteristics for all individual transactions included in the
 	 * message.
@@ -124,17 +124,18 @@ public class FinancialInstitutionDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common characteristics for all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader63.mmObject();
 		}
 	};
+	protected List<CreditTransferTransaction9> creditInstruction;
 	/**
 	 * Characteristics that apply to the credit side of the payment
 	 * transaction(s) included in the message.
@@ -161,7 +162,7 @@ public class FinancialInstitutionDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CreditInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCreditInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CdtInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,6 +172,7 @@ public class FinancialInstitutionDirectDebitV02 {
 			complexType_lazy = () -> CreditTransferTransaction9.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -197,7 +199,7 @@ public class FinancialInstitutionDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,33 +207,6 @@ public class FinancialInstitutionDirectDebitV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "010";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -245,11 +220,42 @@ public class FinancialInstitutionDirectDebitV02 {
 				rootElement = "Document";
 				xmlTag = "FIDrctDbt";
 				businessArea_lazy = () -> PaymentsClearingandSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.GroupHeader, com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.CreditInstruction,
-						com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.mmCreditInstruction, com.tools20022.repository.area.pacs.FinancialInstitutionDirectDebitV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "010";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader63 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader63 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<CreditTransferTransaction9> getCreditInstruction() {
+		return creditInstruction;
+	}
+
+	public void setCreditInstruction(List<CreditTransferTransaction9> creditInstruction) {
+		this.creditInstruction = creditInstruction;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestve
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -78,24 +79,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#GroupHeader
- * FIToFIPaymentStatusRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#mmGroupHeader
+ * FIToFIPaymentStatusRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#OriginalGroupInformation
- * FIToFIPaymentStatusRequestV01.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#mmOriginalGroupInformation
+ * FIToFIPaymentStatusRequestV01.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#TransactionInformation
- * FIToFIPaymentStatusRequestV01.TransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#mmTransactionInformation
+ * FIToFIPaymentStatusRequestV01.mmTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#SupplementaryData
- * FIToFIPaymentStatusRequestV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#mmSupplementaryData
+ * FIToFIPaymentStatusRequestV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#identifier
- * FIToFIPaymentStatusRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.028.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FIToFIPaymentStatusRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader53 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the status request message.
@@ -136,17 +136,18 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the status request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader53.mmObject();
 		}
 	};
+	protected List<OriginalGroupInformation27> originalGroupInformation;
 	/**
 	 * Original group information concerning the group of transactions, to which
 	 * the status request message refers to.
@@ -173,7 +174,7 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,6 +184,7 @@ public class FIToFIPaymentStatusRequestV01 {
 			complexType_lazy = () -> OriginalGroupInformation27.mmObject();
 		}
 	};
+	protected List<PaymentTransaction73> transactionInformation;
 	/**
 	 * Information concerning the original transaction, to which the status
 	 * request message refers.
@@ -209,7 +211,7 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,6 +221,7 @@ public class FIToFIPaymentStatusRequestV01 {
 			complexType_lazy = () -> PaymentTransaction73.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -245,7 +248,7 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,33 +256,6 @@ public class FIToFIPaymentStatusRequestV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "028"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "028";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -293,11 +269,50 @@ public class FIToFIPaymentStatusRequestV01 {
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtStsReq";
 				businessArea_lazy = () -> PaymentsClearingandSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.GroupHeader, com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.OriginalGroupInformation,
-						com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.TransactionInformation, com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.mmGroupHeader, com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.mmTransactionInformation, com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "028";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader53 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader53 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<OriginalGroupInformation27> getOriginalGroupInformation() {
+		return originalGroupInformation;
+	}
+
+	public void setOriginalGroupInformation(List<OriginalGroupInformation27> originalGroupInformation) {
+		this.originalGroupInformation = originalGroupInformation;
+	}
+
+	public List<PaymentTransaction73> getTransactionInformation() {
+		return transactionInformation;
+	}
+
+	public void setTransactionInformation(List<PaymentTransaction73> transactionInformation) {
+		this.transactionInformation = transactionInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

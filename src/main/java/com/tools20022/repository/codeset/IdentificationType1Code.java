@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#BankSortCode
- * IdentificationType1Code.BankSortCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#mmBankSortCode
+ * IdentificationType1Code.mmBankSortCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#BIC
- * IdentificationType1Code.BIC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#mmBIC
+ * IdentificationType1Code.mmBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#CFETS
- * IdentificationType1Code.CFETS}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#mmCFETS
+ * IdentificationType1Code.mmCFETS}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 * name} = "BankSortCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankSortCode = new MMCode() {
+	public static final MMCode mmBankSortCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankSortCode";
@@ -101,7 +101,7 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 * name} = "BIC"</li>
 	 * </ul>
 	 */
-	public static final MMCode BIC = new MMCode() {
+	public static final MMCode mmBIC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
@@ -124,7 +124,7 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 * name} = "CFETS"</li>
 	 * </ul>
 	 */
-	public static final MMCode CFETS = new MMCode() {
+	public static final MMCode mmCFETS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
@@ -135,12 +135,12 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType1Code";
 				definition = "Indicates the source of the party identification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType1Code.BankSortCode, com.tools20022.repository.codeset.IdentificationType1Code.BIC,
-						com.tools20022.repository.codeset.IdentificationType1Code.CFETS);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType1Code.mmBankSortCode, com.tools20022.repository.codeset.IdentificationType1Code.mmBIC,
+						com.tools20022.repository.codeset.IdentificationType1Code.mmCFETS);
 				trace_lazy = () -> IdentificationTypeCode.mmObject();
 			}
 		});

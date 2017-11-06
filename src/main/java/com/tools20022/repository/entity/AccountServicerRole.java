@@ -37,52 +37,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Account5#Servicer
- * Account5.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Account6#Servicer
- * Account6.Servicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account5#mmServicer
+ * Account5.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account6#mmServicer
+ * Account6.mmServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport1#TransferAccountServicerIdentification
- * AccountReport1.TransferAccountServicerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount1#Servicer
- * ParentCashAccount1.Servicer}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport1#mmTransferAccountServicerIdentification
+ * AccountReport1.mmTransferAccountServicerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount1#mmServicer
+ * ParentCashAccount1.mmServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport14#TransferAccountServicerIdentification
- * AccountReport14.TransferAccountServicerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Account15#Servicer
- * Account15.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Account16#Servicer
- * Account16.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount3#Servicer
- * CardAccount3.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount1#Servicer
- * CardAccount1.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount6#Servicer
- * CardAccount6.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount4#Servicer
- * CardAccount4.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount5#Servicer
- * CardAccount5.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#Servicer
- * CardAccount2.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount2#Servicer
- * ParentCashAccount2.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Account19#Servicer
- * Account19.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount10#Servicer
- * CardAccount10.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount9#Servicer
- * CardAccount9.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount8#Servicer
- * CardAccount8.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount11#Servicer
- * CardAccount11.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount13#Servicer
- * CardAccount13.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount7#Servicer
- * CardAccount7.Servicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAccount12#Servicer
- * CardAccount12.Servicer}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport14#mmTransferAccountServicerIdentification
+ * AccountReport14.mmTransferAccountServicerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account15#mmServicer
+ * Account15.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account16#mmServicer
+ * Account16.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount3#mmServicer
+ * CardAccount3.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount1#mmServicer
+ * CardAccount1.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount6#mmServicer
+ * CardAccount6.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount4#mmServicer
+ * CardAccount4.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount5#mmServicer
+ * CardAccount5.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#mmServicer
+ * CardAccount2.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount2#mmServicer
+ * ParentCashAccount2.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account19#mmServicer
+ * Account19.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount10#mmServicer
+ * CardAccount10.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount9#mmServicer
+ * CardAccount9.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount8#mmServicer
+ * CardAccount8.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount11#mmServicer
+ * CardAccount11.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount13#mmServicer
+ * CardAccount13.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount7#mmServicer
+ * CardAccount7.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount12#mmServicer
+ * CardAccount12.mmServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -91,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,17 +112,18 @@ public class AccountServicerRole extends AccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountServicerRole";
 				definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account5.Servicer, com.tools20022.repository.msg.Account6.Servicer,
-						com.tools20022.repository.msg.AccountReport1.TransferAccountServicerIdentification, com.tools20022.repository.msg.ParentCashAccount1.Servicer,
-						com.tools20022.repository.msg.AccountReport14.TransferAccountServicerIdentification, com.tools20022.repository.msg.Account15.Servicer, com.tools20022.repository.msg.Account16.Servicer,
-						com.tools20022.repository.msg.CardAccount3.Servicer, com.tools20022.repository.msg.CardAccount1.Servicer, com.tools20022.repository.msg.CardAccount6.Servicer, com.tools20022.repository.msg.CardAccount4.Servicer,
-						com.tools20022.repository.msg.CardAccount5.Servicer, com.tools20022.repository.msg.CardAccount2.Servicer, com.tools20022.repository.msg.ParentCashAccount2.Servicer, com.tools20022.repository.msg.Account19.Servicer,
-						com.tools20022.repository.msg.CardAccount10.Servicer, com.tools20022.repository.msg.CardAccount9.Servicer, com.tools20022.repository.msg.CardAccount8.Servicer, com.tools20022.repository.msg.CardAccount11.Servicer,
-						com.tools20022.repository.msg.CardAccount13.Servicer, com.tools20022.repository.msg.CardAccount7.Servicer, com.tools20022.repository.msg.CardAccount12.Servicer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account5.mmServicer, com.tools20022.repository.msg.Account6.mmServicer,
+						com.tools20022.repository.msg.AccountReport1.mmTransferAccountServicerIdentification, com.tools20022.repository.msg.ParentCashAccount1.mmServicer,
+						com.tools20022.repository.msg.AccountReport14.mmTransferAccountServicerIdentification, com.tools20022.repository.msg.Account15.mmServicer, com.tools20022.repository.msg.Account16.mmServicer,
+						com.tools20022.repository.msg.CardAccount3.mmServicer, com.tools20022.repository.msg.CardAccount1.mmServicer, com.tools20022.repository.msg.CardAccount6.mmServicer,
+						com.tools20022.repository.msg.CardAccount4.mmServicer, com.tools20022.repository.msg.CardAccount5.mmServicer, com.tools20022.repository.msg.CardAccount2.mmServicer,
+						com.tools20022.repository.msg.ParentCashAccount2.mmServicer, com.tools20022.repository.msg.Account19.mmServicer, com.tools20022.repository.msg.CardAccount10.mmServicer,
+						com.tools20022.repository.msg.CardAccount9.mmServicer, com.tools20022.repository.msg.CardAccount8.mmServicer, com.tools20022.repository.msg.CardAccount11.mmServicer,
+						com.tools20022.repository.msg.CardAccount13.mmServicer, com.tools20022.repository.msg.CardAccount7.mmServicer, com.tools20022.repository.msg.CardAccount12.mmServicer);
 				superType_lazy = () -> AccountPartyRole.mmObject();
 			}
 		});

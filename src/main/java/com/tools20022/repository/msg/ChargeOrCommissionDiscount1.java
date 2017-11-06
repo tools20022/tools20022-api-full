@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1#Amount
- * ChargeOrCommissionDiscount1.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1#mmAmount
+ * ChargeOrCommissionDiscount1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1#Rate
- * ChargeOrCommissionDiscount1.Rate}</li>
+ * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1#mmRate
+ * ChargeOrCommissionDiscount1.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1#Basis
- * ChargeOrCommissionDiscount1.Basis}</li>
+ * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1#mmBasis
+ * ChargeOrCommissionDiscount1.mmBasis}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChargeOrCommissionDiscount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Difference between the standard fee (charge/commission) amount and the
 	 * applied fee (charge/commission) amount.<br>
@@ -86,8 +87,8 @@ public class ChargeOrCommissionDiscount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionAmount
-	 * Commission.CommissionAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionAmount
+	 * Commission.mmCommissionAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class ChargeOrCommissionDiscount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionAmount;
 			componentContext_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Difference between the standard fee (charge/commission) amount and the applied fee (charge/commission) amount.\r\nEXAMPLE:\r\nStandard charge is EUR 100\r\nDiscount is EUR 30\r\nApplied charge is EUR 70.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Difference between the standard fee (charge/commission) rate and the
 	 * applied rate of the fee (charge/commission).<br>
@@ -140,8 +142,8 @@ public class ChargeOrCommissionDiscount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +164,21 @@ public class ChargeOrCommissionDiscount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Difference between the standard fee (charge/commission) rate and the applied rate of the fee (charge/commission).\r\nEXAMPLE:\r\nStandard rate is 5%\r\nDiscount rate is 3%\r\nApplied rate is 2%";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected WaivingInstruction2Choice basis;
 	/**
 	 * Form of the discount or rebate, for example, cash.
 	 * <p>
@@ -188,8 +191,8 @@ public class ChargeOrCommissionDiscount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionWaiving
-	 * Commission.CommissionWaiving}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionWaiving
+	 * Commission.mmCommissionWaiving}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,34 +211,58 @@ public class ChargeOrCommissionDiscount1 {
 	 * definition} = "Form of the discount or rebate, for example, cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Basis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionWaiving;
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Form of the discount or rebate, for example, cash.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> WaivingInstruction2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> WaivingInstruction2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargeOrCommissionDiscount1.Amount, com.tools20022.repository.msg.ChargeOrCommissionDiscount1.Rate,
-						com.tools20022.repository.msg.ChargeOrCommissionDiscount1.Basis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmAmount, com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmRate,
+						com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmBasis);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeOrCommissionDiscount1";
 				definition = "Information about discounts or waivers to charges and commissions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public WaivingInstruction2Choice getBasis() {
+		return basis;
+	}
+
+	public void setBasis(WaivingInstruction2Choice basis) {
+		this.basis = basis;
 	}
 }

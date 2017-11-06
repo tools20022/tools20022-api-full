@@ -35,32 +35,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#MessageIdentification
- * TransactionReferences1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmMessageIdentification
+ * TransactionReferences1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#AccountServicerReference
- * TransactionReferences1.AccountServicerReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmAccountServicerReference
+ * TransactionReferences1.mmAccountServicerReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#InstructionIdentification
- * TransactionReferences1.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmInstructionIdentification
+ * TransactionReferences1.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#EndToEndIdentification
- * TransactionReferences1.EndToEndIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmEndToEndIdentification
+ * TransactionReferences1.mmEndToEndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#TransactionIdentification
- * TransactionReferences1.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmTransactionIdentification
+ * TransactionReferences1.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#MandateIdentification
- * TransactionReferences1.MandateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmMandateIdentification
+ * TransactionReferences1.mmMandateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#ChequeNumber
- * TransactionReferences1.ChequeNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmChequeNumber
+ * TransactionReferences1.mmChequeNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#ClearingSystemReference
- * TransactionReferences1.ClearingSystemReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmClearingSystemReference
+ * TransactionReferences1.mmClearingSystemReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReferences1#Proprietary
- * TransactionReferences1.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReferences1#mmProprietary
+ * TransactionReferences1.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionReferences1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference assigned by the instructing party of the
 	 * underlying message.
@@ -114,7 +115,7 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
 			isDerived = false;
@@ -122,11 +123,12 @@ public class TransactionReferences1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference assigned by the instructing party of the underlying message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountServicerReference;
 	/**
 	 * The account servicing institution's reference for the transaction.
 	 * <p>
@@ -139,8 +141,8 @@ public class TransactionReferences1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#AccountServicerTransactionIdentification
-	 * Entry.AccountServicerTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmAccountServicerTransactionIdentification
+	 * Entry.mmAccountServicerTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,20 +162,21 @@ public class TransactionReferences1 {
 	 * "The account servicing institution's reference for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.AccountServicerTransactionIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "The account servicing institution's reference for the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text instructionIdentification;
 	/**
 	 * Unique identification as assigned by an instructing party for an
 	 * instructed party to unambiguously identify the instruction.
@@ -192,8 +195,8 @@ public class TransactionReferences1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#InstructionIdentification
-	 * PaymentIdentification.InstructionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmInstructionIdentification
+	 * PaymentIdentification.mmInstructionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,20 +217,21 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.InstructionIdentification;
 			isDerived = false;
 			xmlTag = "InstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Unique identification as assigned by an instructing party for an instructed party to unambiguously identify the instruction.\n\nUsage: the  instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text endToEndIdentification;
 	/**
 	 * Unique identification assigned by the initiating party to unumbiguously
 	 * identify the transaction. This identification is passed on, unchanged,
@@ -250,8 +254,8 @@ public class TransactionReferences1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#EndToEndIdentification
-	 * PaymentIdentification.EndToEndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+	 * PaymentIdentification.mmEndToEndIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,20 +276,21 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.EndToEndIdentification;
 			isDerived = false;
 			xmlTag = "EndToEndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification assigned by the initiating party to unumbiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\n\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.\n\nUsage: In case there are technical limitations to carry on multiple references, the end-to-end identification must be carried on throughout the entire end-to-end chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique identification assigned by the first instructing agent to
 	 * unambiguously identify the transaction and passed on, unchanged,
@@ -305,8 +310,8 @@ public class TransactionReferences1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#TransactionIdentification
-	 * PaymentIdentification.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmTransactionIdentification
+	 * PaymentIdentification.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -327,20 +332,21 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the first instructing agent to unambiguously identify the transaction and passed on, unchanged, throughout the entire interbank chain. \n\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. \nUsage: The instructing agent has to make sure the transaction identification is unique for a pre-agreed period.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text mandateIdentification;
 	/**
 	 * Reference of the direct debit mandate that has been signed between by the
 	 * debtor and the creditor.
@@ -354,8 +360,8 @@ public class TransactionReferences1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Mandate#MandateIdentification
-	 * Mandate.MandateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Mandate#mmMandateIdentification
+	 * Mandate.mmMandateIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -376,20 +382,21 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.MandateIdentification;
 			isDerived = false;
 			xmlTag = "MndtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateIdentification";
 			definition = "Reference of the direct debit mandate that has been signed between by the debtor and the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text chequeNumber;
 	/**
 	 * Identifies the cheque number.
 	 * <p>
@@ -402,8 +409,8 @@ public class TransactionReferences1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#Number Cheque.Number}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmNumber
+	 * Cheque.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -422,20 +429,21 @@ public class TransactionReferences1 {
 	 * definition} = "Identifies the cheque number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChequeNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChequeNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.mmNumber;
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.Number;
 			isDerived = false;
 			xmlTag = "ChqNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeNumber";
 			definition = "Identifies the cheque number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clearingSystemReference;
 	/**
 	 * Unique and unambiguous identifier for a payment instruction, assigned by
 	 * the clearing system.
@@ -449,8 +457,8 @@ public class TransactionReferences1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ClearingSystemReference
-	 * PaymentIdentification.ClearingSystemReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmClearingSystemReference
+	 * PaymentIdentification.mmClearingSystemReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -471,20 +479,21 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSystemReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSystemReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmClearingSystemReference;
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ClearingSystemReference;
 			isDerived = false;
 			xmlTag = "ClrSysRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemReference";
 			definition = "Unique and unambiguous identifier for a payment instruction,  assigned by the clearing system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ProprietaryReference1 proprietary;
 	/**
 	 * Proprietary reference of an underlying transaction.
 	 * <p>
@@ -511,7 +520,7 @@ public class TransactionReferences1 {
 	 * definition} = "Proprietary reference of an underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReferences1.mmObject();
 			isDerived = false;
@@ -519,27 +528,101 @@ public class TransactionReferences1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary reference of an underlying transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReference1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReference1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReferences1.MessageIdentification, com.tools20022.repository.msg.TransactionReferences1.AccountServicerReference,
-						com.tools20022.repository.msg.TransactionReferences1.InstructionIdentification, com.tools20022.repository.msg.TransactionReferences1.EndToEndIdentification,
-						com.tools20022.repository.msg.TransactionReferences1.TransactionIdentification, com.tools20022.repository.msg.TransactionReferences1.MandateIdentification,
-						com.tools20022.repository.msg.TransactionReferences1.ChequeNumber, com.tools20022.repository.msg.TransactionReferences1.ClearingSystemReference, com.tools20022.repository.msg.TransactionReferences1.Proprietary);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.TransactionReferences1.mmMessageIdentification, com.tools20022.repository.msg.TransactionReferences1.mmAccountServicerReference,
+								com.tools20022.repository.msg.TransactionReferences1.mmInstructionIdentification, com.tools20022.repository.msg.TransactionReferences1.mmEndToEndIdentification,
+								com.tools20022.repository.msg.TransactionReferences1.mmTransactionIdentification, com.tools20022.repository.msg.TransactionReferences1.mmMandateIdentification,
+								com.tools20022.repository.msg.TransactionReferences1.mmChequeNumber, com.tools20022.repository.msg.TransactionReferences1.mmClearingSystemReference,
+								com.tools20022.repository.msg.TransactionReferences1.mmProprietary);
 				trace_lazy = () -> TradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionReferences1";
 				definition = "Set of elements that identify the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getAccountServicerReference() {
+		return accountServicerReference;
+	}
+
+	public void setAccountServicerReference(Max35Text accountServicerReference) {
+		this.accountServicerReference = accountServicerReference;
+	}
+
+	public Max35Text getInstructionIdentification() {
+		return instructionIdentification;
+	}
+
+	public void setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = instructionIdentification;
+	}
+
+	public Max35Text getEndToEndIdentification() {
+		return endToEndIdentification;
+	}
+
+	public void setEndToEndIdentification(Max35Text endToEndIdentification) {
+		this.endToEndIdentification = endToEndIdentification;
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Max35Text getMandateIdentification() {
+		return mandateIdentification;
+	}
+
+	public void setMandateIdentification(Max35Text mandateIdentification) {
+		this.mandateIdentification = mandateIdentification;
+	}
+
+	public Max35Text getChequeNumber() {
+		return chequeNumber;
+	}
+
+	public void setChequeNumber(Max35Text chequeNumber) {
+		this.chequeNumber = chequeNumber;
+	}
+
+	public Max35Text getClearingSystemReference() {
+		return clearingSystemReference;
+	}
+
+	public void setClearingSystemReference(Max35Text clearingSystemReference) {
+		this.clearingSystemReference = clearingSystemReference;
+	}
+
+	public ProprietaryReference1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(com.tools20022.repository.msg.ProprietaryReference1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

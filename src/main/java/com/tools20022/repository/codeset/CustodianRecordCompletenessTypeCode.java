@@ -31,14 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#Complete
- * CustodianRecordCompletenessTypeCode.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#mmComplete
+ * CustodianRecordCompletenessTypeCode.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#Incomplete
- * CustodianRecordCompletenessTypeCode.Incomplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#mmIncomplete
+ * CustodianRecordCompletenessTypeCode.mmIncomplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#ConditionallyComplete
- * CustodianRecordCompletenessTypeCode.ConditionallyComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#mmConditionallyComplete
+ * CustodianRecordCompletenessTypeCode.mmConditionallyComplete}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class CustodianRecordCompletenessTypeCode {
 	 * definition} = "Custodian record is complete."</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -126,7 +126,7 @@ public class CustodianRecordCompletenessTypeCode {
 	 * definition} = "Custodian record is incomplete."</li>
 	 * </ul>
 	 */
-	public static final MMCode Incomplete = new MMCode() {
+	public static final MMCode mmIncomplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
@@ -156,7 +156,7 @@ public class CustodianRecordCompletenessTypeCode {
 	 * definition} = "Custodian record is conditionally complete."</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionallyComplete = new MMCode() {
+	public static final MMCode mmConditionallyComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyComplete";
@@ -169,13 +169,13 @@ public class CustodianRecordCompletenessTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustodianRecordCompletenessTypeCode";
 				definition = "Specifies the state of details of the composite record on the system. Applicable to custodian service only.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.Complete, com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.Incomplete,
-						com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.ConditionallyComplete);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.mmComplete, com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.mmIncomplete,
+						com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.mmConditionallyComplete);
 				derivation_lazy = () -> Arrays.asList(CustodianRecordCompletenessType1Code.mmObject());
 			}
 		});

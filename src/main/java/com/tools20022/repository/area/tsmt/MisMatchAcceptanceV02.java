@@ -71,24 +71,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#AcceptanceIdentification
- * MisMatchAcceptanceV02.AcceptanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#mmAcceptanceIdentification
+ * MisMatchAcceptanceV02.mmAcceptanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#TransactionIdentification
- * MisMatchAcceptanceV02.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#mmTransactionIdentification
+ * MisMatchAcceptanceV02.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#SubmitterTransactionReference
- * MisMatchAcceptanceV02.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#mmSubmitterTransactionReference
+ * MisMatchAcceptanceV02.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#DataSetMatchReportReference
- * MisMatchAcceptanceV02.DataSetMatchReportReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#mmDataSetMatchReportReference
+ * MisMatchAcceptanceV02.mmDataSetMatchReportReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#identifier
- * MisMatchAcceptanceV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.020.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MisMatchAcceptanceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 acceptanceIdentification;
 	/**
 	 * Identifies the acceptance message.
 	 * <p>
@@ -127,17 +126,18 @@ public class MisMatchAcceptanceV02 {
 	 * definition} = "Identifies the acceptance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcceptanceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcceptanceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptncId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceIdentification";
 			definition = "Identifies the acceptance message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -165,17 +165,18 @@ public class MisMatchAcceptanceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the transaction for the requesting financial institution.
 	 * <p>
@@ -200,17 +201,18 @@ public class MisMatchAcceptanceV02 {
 	 * "Reference to the transaction for the requesting financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected MessageIdentification1 dataSetMatchReportReference;
 	/**
 	 * Reference to the identification of the report that contained the
 	 * difference.
@@ -237,42 +239,15 @@ public class MisMatchAcceptanceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DataSetMatchReportReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDataSetMatchReportReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DataSetMtchRptRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetMatchReportReference";
 			definition = "Reference to the identification of the report that contained the difference. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "020"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "020";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -286,11 +261,50 @@ public class MisMatchAcceptanceV02 {
 				rootElement = "Document";
 				xmlTag = "MisMtchAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.AcceptanceIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.SubmitterTransactionReference, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.DataSetMatchReportReference);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmAcceptanceIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmDataSetMatchReportReference);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "020";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getAcceptanceIdentification() {
+		return acceptanceIdentification;
+	}
+
+	public void setAcceptanceIdentification(MessageIdentification1 acceptanceIdentification) {
+		this.acceptanceIdentification = acceptanceIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public MessageIdentification1 getDataSetMatchReportReference() {
+		return dataSetMatchReportReference;
+	}
+
+	public void setDataSetMatchReportReference(MessageIdentification1 dataSetMatchReportReference) {
+		this.dataSetMatchReportReference = dataSetMatchReportReference;
 	}
 }

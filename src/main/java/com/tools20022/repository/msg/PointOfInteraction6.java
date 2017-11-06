@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction6#ManufacturerIdentifier
- * PointOfInteraction6.ManufacturerIdentifier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction6#Model
- * PointOfInteraction6.Model}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction6#mmManufacturerIdentifier
+ * PointOfInteraction6.mmManufacturerIdentifier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction6#mmModel
+ * PointOfInteraction6.mmModel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction6#SerialNumber
- * PointOfInteraction6.SerialNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction6#mmSerialNumber
+ * PointOfInteraction6.mmSerialNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PointOfInteraction6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text manufacturerIdentifier;
 	/**
 	 * Identifier of the terminal manufacturer.
 	 * <p>
@@ -87,7 +88,7 @@ public class PointOfInteraction6 {
 	 * definition} = "Identifier of the terminal manufacturer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ManufacturerIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmManufacturerIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteraction6.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class PointOfInteraction6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManufacturerIdentifier";
 			definition = "Identifier of the terminal manufacturer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text model;
 	/**
 	 * Identifier of the terminal model.
 	 * <p>
@@ -127,7 +129,7 @@ public class PointOfInteraction6 {
 	 * definition} = "Identifier of the terminal model."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Model = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteraction6.mmObject();
 			isDerived = false;
@@ -135,11 +137,12 @@ public class PointOfInteraction6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Model";
 			definition = "Identifier of the terminal model.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text serialNumber;
 	/**
 	 * Serial number of the terminal manufacturer.
 	 * <p>
@@ -167,7 +170,7 @@ public class PointOfInteraction6 {
 	 * definition} = "Serial number of the terminal manufacturer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteraction6.mmObject();
 			isDerived = false;
@@ -175,8 +178,8 @@ public class PointOfInteraction6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of the terminal manufacturer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -184,14 +187,38 @@ public class PointOfInteraction6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction6.ManufacturerIdentifier, com.tools20022.repository.msg.PointOfInteraction6.Model,
-						com.tools20022.repository.msg.PointOfInteraction6.SerialNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction6.mmManufacturerIdentifier, com.tools20022.repository.msg.PointOfInteraction6.mmModel,
+						com.tools20022.repository.msg.PointOfInteraction6.mmSerialNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteraction6";
 				definition = "Identification of a point of interaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getManufacturerIdentifier() {
+		return manufacturerIdentifier;
+	}
+
+	public void setManufacturerIdentifier(Max35Text manufacturerIdentifier) {
+		this.manufacturerIdentifier = manufacturerIdentifier;
+	}
+
+	public Max35Text getModel() {
+		return model;
+	}
+
+	public void setModel(Max35Text model) {
+		this.model = model;
+	}
+
+	public Max35Text getSerialNumber() {
+		return serialNumber;
+	}
+
+	public void setSerialNumber(Max35Text serialNumber) {
+		this.serialNumber = serialNumber;
 	}
 }

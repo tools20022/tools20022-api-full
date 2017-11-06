@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Payment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cash settlement parties and accounts.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashSettlement2#ModificationScopeIndication
- * CashSettlement2.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.CashSettlement2#mmModificationScopeIndication
+ * CashSettlement2.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashSettlement2#CashAccountDetails
- * CashSettlement2.CashAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CashSettlement2#mmCashAccountDetails
+ * CashSettlement2.mmCashAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashSettlement2#OtherCashSettlementDetails
- * CashSettlement2.OtherCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CashSettlement2#mmOtherCashSettlementDetails
+ * CashSettlement2.mmOtherCashSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,18 +54,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#ModifiedCashSettlement
- * AccountModificationInstructionV06.ModifiedCashSettlement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#mmModifiedCashSettlement
+ * AccountModificationInstructionV06.mmModifiedCashSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#ModifiedCashSettlement
- * AccountModificationInstructionV07.ModifiedCashSettlement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#mmModifiedCashSettlement
+ * AccountModificationInstructionV07.mmModifiedCashSettlement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashSettlement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied.
 	 * <p>
@@ -110,11 +112,11 @@ public class CashSettlement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#ModificationScopeIndication
-	 * InvestmentFundCashSettlementInformation8.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmModificationScopeIndication
+	 * InvestmentFundCashSettlementInformation8.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashSettlement2.mmObject();
 			isDerived = false;
@@ -122,12 +124,13 @@ public class CashSettlement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.ModificationScopeIndication;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccount33> cashAccountDetails;
 	/**
 	 * Account to credit or debit. When this is an account to debit, this is for
 	 * the payment of a subscription to an investment fund, a savings plan
@@ -167,20 +170,21 @@ public class CashSettlement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashSettlement2.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> CashSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountDetails";
 			definition = "Account to credit or debit. When this is an account to debit, this is for the payment of a subscription to an investment fund, a savings plan payment, the purchase of securities or the payment of charges. When this is an account to credit,  this is for the payment of an amount as a result of a redemption of investment fund units, the sale of securities, interest and dividend payments. A single account may be specified for all cash movements on the account or cash accounts may be specified for specific types of transactions on the account.";
 			minOccurs = 0;
-			type_lazy = () -> CashAccount33.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount33.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentInstrument13> otherCashSettlementDetails;
 	/**
 	 * Method of payment other than a cash account.
 	 * <p>
@@ -211,30 +215,30 @@ public class CashSettlement2 {
 	 * definition} = "Method of payment other than a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherCashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashSettlement2.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> CashSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCshSttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCashSettlementDetails";
 			definition = "Method of payment other than a cash account.";
 			minOccurs = 0;
-			type_lazy = () -> PaymentInstrument13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashSettlement2.ModificationScopeIndication, com.tools20022.repository.msg.CashSettlement2.CashAccountDetails,
-						com.tools20022.repository.msg.CashSettlement2.OtherCashSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashSettlement2.mmModificationScopeIndication, com.tools20022.repository.msg.CashSettlement2.mmCashAccountDetails,
+						com.tools20022.repository.msg.CashSettlement2.mmOtherCashSettlementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedCashSettlement,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedCashSettlement);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.ModifiedCashSettlement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.ModifiedCashSettlement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashSettlement2";
 				definition = "Cash settlement parties and accounts.";
@@ -242,5 +246,29 @@ public class CashSettlement2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public List<CashAccount33> getCashAccountDetails() {
+		return cashAccountDetails;
+	}
+
+	public void setCashAccountDetails(List<com.tools20022.repository.msg.CashAccount33> cashAccountDetails) {
+		this.cashAccountDetails = cashAccountDetails;
+	}
+
+	public List<PaymentInstrument13> getOtherCashSettlementDetails() {
+		return otherCashSettlementDetails;
+	}
+
+	public void setOtherCashSettlementDetails(List<com.tools20022.repository.msg.PaymentInstrument13> otherCashSettlementDetails) {
+		this.otherCashSettlementDetails = otherCashSettlementDetails;
 	}
 }

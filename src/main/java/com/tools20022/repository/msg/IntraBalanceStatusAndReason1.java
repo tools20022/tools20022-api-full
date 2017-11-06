@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.SettlementStatus9Choice;
 import com.tools20022.repository.entity.Status;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of the intra-balance movement status type.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason1#ProcessingStatus
- * IntraBalanceStatusAndReason1.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason1#mmProcessingStatus
+ * IntraBalanceStatusAndReason1.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason1#SettlementStatus
- * IntraBalanceStatusAndReason1.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason1#mmSettlementStatus
+ * IntraBalanceStatusAndReason1.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason1#Settled
- * IntraBalanceStatusAndReason1.Settled}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason1#mmSettled
+ * IntraBalanceStatusAndReason1.mmSettled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ProcessingStatus35Choice> processingStatus;
 	/**
 	 * Provides details on the processing status of the transaction.
 	 * <p>
@@ -79,8 +81,8 @@ public class IntraBalanceStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,10 +102,10 @@ public class IntraBalanceStatusAndReason1 {
 	 * "Provides details on the processing status of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> IntraBalanceStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,6 +115,7 @@ public class IntraBalanceStatusAndReason1 {
 			complexType_lazy = () -> ProcessingStatus35Choice.mmObject();
 		}
 	};
+	protected List<SettlementStatus9Choice> settlementStatus;
 	/**
 	 * Provides the settlement status of a transaction
 	 * <p>
@@ -125,8 +128,8 @@ public class IntraBalanceStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#SettlementStatus
-	 * Status.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
+	 * Status.mmSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +148,21 @@ public class IntraBalanceStatusAndReason1 {
 	 * definition} = "Provides the settlement status of a transaction"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
 			componentContext_lazy = () -> IntraBalanceStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.SettlementStatus;
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the settlement status of a transaction";
 			minOccurs = 0;
-			type_lazy = () -> SettlementStatus9Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SettlementStatus9Choice.mmObject();
 		}
 	};
+	protected ProprietaryReason1 settled;
 	/**
 	 * Specifies the state or the condition.
 	 * <p>
@@ -170,8 +174,8 @@ public class IntraBalanceStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -190,34 +194,58 @@ public class IntraBalanceStatusAndReason1 {
 	 * definition} = "Specifies the state or the condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Settled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> IntraBalanceStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Sttld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Specifies the state or the condition.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceStatusAndReason1.ProcessingStatus, com.tools20022.repository.msg.IntraBalanceStatusAndReason1.SettlementStatus,
-						com.tools20022.repository.msg.IntraBalanceStatusAndReason1.Settled);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceStatusAndReason1.mmProcessingStatus, com.tools20022.repository.msg.IntraBalanceStatusAndReason1.mmSettlementStatus,
+						com.tools20022.repository.msg.IntraBalanceStatusAndReason1.mmSettled);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceStatusAndReason1";
 				definition = "Choice of the intra-balance movement status type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ProcessingStatus35Choice> getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(List<ProcessingStatus35Choice> processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public List<SettlementStatus9Choice> getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(List<SettlementStatus9Choice> settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public ProprietaryReason1 getSettled() {
+		return settled;
+	}
+
+	public void setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+		this.settled = settled;
 	}
 }

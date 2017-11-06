@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType3Code#Environmental
- * AssetClassProductType3Code.Environmental}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType3Code#mmEnvironmental
+ * AssetClassProductType3Code.mmEnvironmental}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class AssetClassProductType3Code extends AssetClassProductTypeCode {
 	 * name} = "Environmental"</li>
 	 * </ul>
 	 */
-	public static final MMCode Environmental = new MMCode() {
+	public static final MMCode mmEnvironmental = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environmental";
@@ -84,11 +84,11 @@ public class AssetClassProductType3Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType3Code";
 				definition = "Commodity derivative base product code list for Environmental.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType3Code.Environmental);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType3Code.mmEnvironmental);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

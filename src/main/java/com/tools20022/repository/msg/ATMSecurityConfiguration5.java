@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.PINFormat4Code;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Configuration of the PIN online verification.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration5#PINFormat
- * ATMSecurityConfiguration5.PINFormat}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration5#mmPINFormat
+ * ATMSecurityConfiguration5.mmPINFormat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration5#PINLengthCapabilities
- * ATMSecurityConfiguration5.PINLengthCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration5#mmPINLengthCapabilities
+ * ATMSecurityConfiguration5.mmPINLengthCapabilities}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMSecurityConfiguration5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<PINFormat4Code> pINFormat;
 	/**
 	 * PIN block format the security module is able to manage for online
 	 * verification of the PIN.
@@ -94,7 +96,7 @@ public class ATMSecurityConfiguration5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PINFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPINFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
@@ -106,6 +108,7 @@ public class ATMSecurityConfiguration5 {
 			simpleType_lazy = () -> PINFormat4Code.mmObject();
 		}
 	};
+	protected Number pINLengthCapabilities;
 	/**
 	 * Maximum number of digits the security module is able to accept when the
 	 * cardholder enters its PIN.
@@ -136,7 +139,7 @@ public class ATMSecurityConfiguration5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PINLengthCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPINLengthCapabilities = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
@@ -144,8 +147,8 @@ public class ATMSecurityConfiguration5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLengthCapabilities";
 			definition = "Maximum number of digits the security module is able to accept when the cardholder enters its PIN.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -153,8 +156,8 @@ public class ATMSecurityConfiguration5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration5.PINFormat, com.tools20022.repository.msg.ATMSecurityConfiguration5.PINLengthCapabilities);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration5.mmPINFormat, com.tools20022.repository.msg.ATMSecurityConfiguration5.mmPINLengthCapabilities);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration5";
 				definition = "Configuration of the PIN online verification.";
@@ -162,5 +165,21 @@ public class ATMSecurityConfiguration5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PINFormat4Code> getPINFormat() {
+		return pINFormat;
+	}
+
+	public void setPINFormat(List<PINFormat4Code> pINFormat) {
+		this.pINFormat = pINFormat;
+	}
+
+	public Number getPINLengthCapabilities() {
+		return pINLengthCapabilities;
+	}
+
+	public void setPINLengthCapabilities(Number pINLengthCapabilities) {
+		this.pINLengthCapabilities = pINLengthCapabilities;
 	}
 }

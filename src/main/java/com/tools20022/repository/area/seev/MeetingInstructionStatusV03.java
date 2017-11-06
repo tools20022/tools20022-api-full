@@ -79,30 +79,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#Identification
- * MeetingInstructionStatusV03.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmIdentification
+ * MeetingInstructionStatusV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#InstructionType
- * MeetingInstructionStatusV03.InstructionType}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmInstructionType
+ * MeetingInstructionStatusV03.mmInstructionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#MeetingReference
- * MeetingInstructionStatusV03.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmMeetingReference
+ * MeetingInstructionStatusV03.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#ReportingParty
- * MeetingInstructionStatusV03.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmReportingParty
+ * MeetingInstructionStatusV03.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#SecurityIdentification
- * MeetingInstructionStatusV03.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmSecurityIdentification
+ * MeetingInstructionStatusV03.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#InstructionTypeStatus
- * MeetingInstructionStatusV03.InstructionTypeStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmInstructionTypeStatus
+ * MeetingInstructionStatusV03.mmInstructionTypeStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#identifier
- * MeetingInstructionStatusV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.006.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingInstructionStatusV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 identification;
 	/**
 	 * Identifies the meeting instruction status message.
 	 * <p>
@@ -153,17 +152,18 @@ public class MeetingInstructionStatusV03 {
 	 * definition} = "Identifies the meeting instruction status message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the meeting instruction status message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected InstructionType1Choice instructionType;
 	/**
 	 * Type of instruction.
 	 * <p>
@@ -187,17 +187,18 @@ public class MeetingInstructionStatusV03 {
 	 * definition} = "Type of instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionType";
 			definition = "Type of instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InstructionType1Choice.mmObject();
 		}
 	};
+	protected MeetingReference4 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -221,17 +222,18 @@ public class MeetingInstructionStatusV03 {
 	 * definition} = "Series of elements which allow to identify a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference4.mmObject();
 		}
 	};
+	protected PartyIdentification9Choice reportingParty;
 	/**
 	 * Party reporting the status.
 	 * <p>
@@ -255,17 +257,18 @@ public class MeetingInstructionStatusV03 {
 	 * definition} = "Party reporting the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Party reporting the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification11 securityIdentification;
 	/**
 	 * Identifies the securities for which the meeting is organised.
 	 * <p>
@@ -290,17 +293,18 @@ public class MeetingInstructionStatusV03 {
 	 * "Identifies the securities for which the meeting is organised. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the securities for which the meeting is organised. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification11.mmObject();
 		}
 	};
+	protected InstructionTypeStatus1Choice instructionTypeStatus;
 	/**
 	 * Type of instruction status.
 	 * <p>
@@ -324,42 +328,15 @@ public class MeetingInstructionStatusV03 {
 	 * definition} = "Type of instruction status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionTypeStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionTypeStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrTpSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionTypeStatus";
 			definition = "Type of instruction status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InstructionTypeStatus1Choice.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "006";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -369,18 +346,73 @@ public class MeetingInstructionStatusV03 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionStatusV03";
 				definition = "Scope\r\nThe Receiver of the MeetingInstruction or MeetingInstructionCancellationRequest sends the MeetingInstructionStatus message to the Sender of these messages.\r\nThe message gives the status of a complete message or of one or more specific instructions within the message.\r\nUsage\r\nThe MeetingInstructionStatus message is used for four purposes.\r\nFirst, it provides the status on the processing of a MeetingInstructionCancellationRequest message, for example, whether the request message is rejected or accepted.\r\nSecond, it is used to provide a global processing or rejection status of a MeetingInstruction message.\r\nThird, it is used to provide a detailed processing or rejection status of a MeetingInstruction message, for example, for each instruction in the MeetingInstruction message the processing or rejection status is individually reported by using the InstructionIdentification element. This identification allows the receiver of the status message to link the status confirmation to its original instruction.\r\nThe blocking of securities should be confirmed via an MT 508 (Intra-Position Advice).\r\nFourth, it is used as a reminder to request voting instructions. This is done by indicating NONREF in the Identification element of the InstructionIdentification component and by using the status code NotReceived in the ProcessingStatus.";
-				previousVersion_lazy = () -> MeetingInstructionStatusV02.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(MeetingInstructionStatusV04.mmObject());
+				previousVersion_lazy = () -> MeetingInstructionStatusV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "MtgInstrSts";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV03.Identification, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.InstructionType,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV03.MeetingReference, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.ReportingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV03.SecurityIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.InstructionTypeStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionStatusV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmInstructionType,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmMeetingReference, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmReportingParty,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmSecurityIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmInstructionTypeStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "006";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(MessageIdentification1 identification) {
+		this.identification = identification;
+	}
+
+	public InstructionType1Choice getInstructionType() {
+		return instructionType;
+	}
+
+	public void setInstructionType(InstructionType1Choice instructionType) {
+		this.instructionType = instructionType;
+	}
+
+	public MeetingReference4 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference4 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public PartyIdentification9Choice getReportingParty() {
+		return reportingParty;
+	}
+
+	public void setReportingParty(PartyIdentification9Choice reportingParty) {
+		this.reportingParty = reportingParty;
+	}
+
+	public SecurityIdentification11 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(SecurityIdentification11 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public InstructionTypeStatus1Choice getInstructionTypeStatus() {
+		return instructionTypeStatus;
+	}
+
+	public void setInstructionTypeStatus(InstructionTypeStatus1Choice instructionTypeStatus) {
+		this.instructionTypeStatus = instructionTypeStatus;
 	}
 }

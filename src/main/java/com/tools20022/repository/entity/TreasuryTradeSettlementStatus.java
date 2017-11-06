@@ -46,32 +46,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TradeStatus
- * TreasuryTradeSettlementStatus.TradeStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTradeStatus
+ * TreasuryTradeSettlementStatus.mmTradeStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#AllegedTrade
- * TreasuryTradeSettlementStatus.AllegedTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmAllegedTrade
+ * TreasuryTradeSettlementStatus.mmAllegedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TreasuryTrade
- * TreasuryTradeSettlementStatus.TreasuryTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTreasuryTrade
+ * TreasuryTradeSettlementStatus.mmTreasuryTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#Settlement
- * TreasuryTradeSettlementStatus.Settlement}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmSettlement
+ * TreasuryTradeSettlementStatus.mmSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#RejectedAmount
- * TreasuryTradeSettlementStatus.RejectedAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmRejectedAmount
+ * TreasuryTradeSettlementStatus.mmRejectedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#SettlementSuspended
- * TreasuryTradeSettlementStatus.SettlementSuspended}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmSettlementSuspended
+ * TreasuryTradeSettlementStatus.mmSettlementSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#PendingSettlement
- * TreasuryTradeSettlementStatus.PendingSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmPendingSettlement
+ * TreasuryTradeSettlementStatus.mmPendingSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#SettlementDate
- * TreasuryTradeSettlementStatus.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmSettlementDate
+ * TreasuryTradeSettlementStatus.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#WithdrawalReason
- * TreasuryTradeSettlementStatus.WithdrawalReason}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmWithdrawalReason
+ * TreasuryTradeSettlementStatus.mmWithdrawalReason}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,84 +79,84 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#TreasuryTradeSettlementStatus
- * TreasuryTrade.TreasuryTradeSettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasuryTradeSettlementStatus
+ * TreasuryTrade.mmTreasuryTradeSettlementStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData10#CurrentStatus
- * TradeData10.CurrentStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData10#mmCurrentStatus
+ * TradeData10.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData10#CurrentStatusSubType
- * TradeData10.CurrentStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData10#PreviousStatus
- * TradeData10.PreviousStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData10#mmCurrentStatusSubType
+ * TradeData10.mmCurrentStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData10#mmPreviousStatus
+ * TradeData10.mmPreviousStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData10#PreviousStatusSubType
- * TradeData10.PreviousStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData9#CurrentStatus
- * TradeData9.CurrentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData10#mmPreviousStatusSubType
+ * TradeData10.mmPreviousStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData9#mmCurrentStatus
+ * TradeData9.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData9#CurrentStatusSubType
- * TradeData9.CurrentStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData9#PreviousStatus
- * TradeData9.PreviousStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData9#mmCurrentStatusSubType
+ * TradeData9.mmCurrentStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData9#mmPreviousStatus
+ * TradeData9.mmPreviousStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData9#PreviousStatusSubType
- * TradeData9.PreviousStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData7#CurrentStatus
- * TradeData7.CurrentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData9#mmPreviousStatusSubType
+ * TradeData9.mmPreviousStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData7#mmCurrentStatus
+ * TradeData7.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData7#CurrentStatusSubType
- * TradeData7.CurrentStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData7#PreviousStatus
- * TradeData7.PreviousStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData7#mmCurrentStatusSubType
+ * TradeData7.mmCurrentStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData7#mmPreviousStatus
+ * TradeData7.mmPreviousStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData7#PreviousStatusSubType
- * TradeData7.PreviousStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData14#CurrentStatus
- * TradeData14.CurrentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData7#mmPreviousStatusSubType
+ * TradeData7.mmPreviousStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData14#mmCurrentStatus
+ * TradeData14.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData14#CurrentStatusSubType
- * TradeData14.CurrentStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData14#PreviousStatus
- * TradeData14.PreviousStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData14#mmCurrentStatusSubType
+ * TradeData14.mmCurrentStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData14#mmPreviousStatus
+ * TradeData14.mmPreviousStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData14#PreviousStatusSubType
- * TradeData14.PreviousStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData12#CurrentStatus
- * TradeData12.CurrentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData14#mmPreviousStatusSubType
+ * TradeData14.mmPreviousStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData12#mmCurrentStatus
+ * TradeData12.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData12#CurrentStatusSubType
- * TradeData12.CurrentStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData12#PreviousStatus
- * TradeData12.PreviousStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData12#mmCurrentStatusSubType
+ * TradeData12.mmCurrentStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData12#mmPreviousStatus
+ * TradeData12.mmPreviousStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData12#PreviousStatusSubType
- * TradeData12.PreviousStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData15#CurrentStatus
- * TradeData15.CurrentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData12#mmPreviousStatusSubType
+ * TradeData12.mmPreviousStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData15#mmCurrentStatus
+ * TradeData15.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData15#CurrentStatusSubType
- * TradeData15.CurrentStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData15#PreviousStatus
- * TradeData15.PreviousStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData15#mmCurrentStatusSubType
+ * TradeData15.mmCurrentStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData15#mmPreviousStatus
+ * TradeData15.mmPreviousStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData15#PreviousStatusSubType
- * TradeData15.PreviousStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData16#CurrentStatus
- * TradeData16.CurrentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData15#mmPreviousStatusSubType
+ * TradeData15.mmPreviousStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData16#mmCurrentStatus
+ * TradeData16.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData16#CurrentStatusSubType
- * TradeData16.CurrentStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData16#PreviousStatus
- * TradeData16.PreviousStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData16#mmCurrentStatusSubType
+ * TradeData16.mmCurrentStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData16#mmPreviousStatus
+ * TradeData16.mmPreviousStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData16#PreviousStatusSubType
- * TradeData16.PreviousStatusSubType}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData16#mmPreviousStatusSubType
+ * TradeData16.mmPreviousStatusSubType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -195,8 +195,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -211,6 +211,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TreasuryTradeSettlementStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradeStatusCode tradeStatus;
 	/**
 	 * Status of a treasury trade in a central matching/settlement system.
 	 * <p>
@@ -221,107 +222,110 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TradeStatusCode
 	 * TradeStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData1#CurrentStatus
-	 * TradeData1.CurrentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData1#ExtendedCurrentStatus
-	 * TradeData1.ExtendedCurrentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData1#CurrentStatusSubType
-	 * TradeData1.CurrentStatusSubType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData1#PreviousStatus
-	 * TradeData1.PreviousStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData1#ExtendedPreviousStatus
-	 * TradeData1.ExtendedPreviousStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData1#PreviousStatusSubType
-	 * TradeData1.PreviousStatusSubType}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Status5Choice#Code
-	 * Status5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status5Choice#Proprietary
-	 * Status5Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData4#CurrentStatus
-	 * TradeData4.CurrentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData4#CurrentStatusSubType
-	 * TradeData4.CurrentStatusSubType}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Status13Choice#Code
-	 * Status13Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status13Choice#Proprietary
-	 * Status13Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#StatusCode
-	 * StatusAndSubStatus1.StatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#SubStatusCode
-	 * StatusAndSubStatus1.SubStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData3#CurrentStatus
-	 * TradeData3.CurrentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData3#CurrentStatusSubType
-	 * TradeData3.CurrentStatusSubType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData2#CurrentStatus
-	 * TradeData2.CurrentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData2#ExtendedCurrentStatus
-	 * TradeData2.ExtendedCurrentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData2#CurrentStatusSubType
-	 * TradeData2.CurrentStatusSubType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData2#PreviousStatus
-	 * TradeData2.PreviousStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData2#ExtendedPreviousStatus
-	 * TradeData2.ExtendedPreviousStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData2#PreviousStatusSubType
-	 * TradeData2.PreviousStatusSubType}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Status6Choice#Code
-	 * Status6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status6Choice#Proprietary
-	 * Status6Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData6#CurrentStatus
-	 * TradeData6.CurrentStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeData6#CurrentStatusSubType
-	 * TradeData6.CurrentStatusSubType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeStatus1#Status
-	 * TradeStatus1.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeStatus1#ExtendedStatus
-	 * TradeStatus1.ExtendedStatus}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeStatus1#StatusSubType
-	 * TradeStatus1.StatusSubType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#StatusCode
-	 * StatusAndSubStatus2.StatusCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#SubStatusCode
-	 * StatusAndSubStatus2.SubStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Status28Choice#Code
-	 * Status28Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status28Choice#Proprietary
-	 * Status28Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.Status27Choice#Code
-	 * Status27Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status27Choice#Proprietary
-	 * Status27Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData1#mmCurrentStatus
+	 * TradeData1.mmCurrentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData1#mmExtendedCurrentStatus
+	 * TradeData1.mmExtendedCurrentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData1#mmCurrentStatusSubType
+	 * TradeData1.mmCurrentStatusSubType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData1#mmPreviousStatus
+	 * TradeData1.mmPreviousStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData1#mmExtendedPreviousStatus
+	 * TradeData1.mmExtendedPreviousStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData1#mmPreviousStatusSubType
+	 * TradeData1.mmPreviousStatusSubType}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Status5Choice#mmCode
+	 * Status5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status5Choice#mmProprietary
+	 * Status5Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData4#mmCurrentStatus
+	 * TradeData4.mmCurrentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData4#mmCurrentStatusSubType
+	 * TradeData4.mmCurrentStatusSubType}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Status13Choice#mmCode
+	 * Status13Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status13Choice#mmProprietary
+	 * Status13Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#mmStatusCode
+	 * StatusAndSubStatus1.mmStatusCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#mmSubStatusCode
+	 * StatusAndSubStatus1.mmSubStatusCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData3#mmCurrentStatus
+	 * TradeData3.mmCurrentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData3#mmCurrentStatusSubType
+	 * TradeData3.mmCurrentStatusSubType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData2#mmCurrentStatus
+	 * TradeData2.mmCurrentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData2#mmExtendedCurrentStatus
+	 * TradeData2.mmExtendedCurrentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData2#mmCurrentStatusSubType
+	 * TradeData2.mmCurrentStatusSubType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData2#mmPreviousStatus
+	 * TradeData2.mmPreviousStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData2#mmExtendedPreviousStatus
+	 * TradeData2.mmExtendedPreviousStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData2#mmPreviousStatusSubType
+	 * TradeData2.mmPreviousStatusSubType}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Status6Choice#mmCode
+	 * Status6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status6Choice#mmProprietary
+	 * Status6Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData6#mmCurrentStatus
+	 * TradeData6.mmCurrentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeData6#mmCurrentStatusSubType
+	 * TradeData6.mmCurrentStatusSubType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeStatus1#mmStatus
+	 * TradeStatus1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeStatus1#mmExtendedStatus
+	 * TradeStatus1.mmExtendedStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeStatus1#mmStatusSubType
+	 * TradeStatus1.mmStatusSubType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#mmStatusCode
+	 * StatusAndSubStatus2.mmStatusCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#mmSubStatusCode
+	 * StatusAndSubStatus2.mmSubStatusCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Status28Choice#mmCode
+	 * Status28Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status28Choice#mmProprietary
+	 * Status28Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Status27Choice#mmCode
+	 * Status27Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status27Choice#mmProprietary
+	 * Status27Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -334,30 +338,31 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * "Status of a treasury trade in a central matching/settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TradeStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTradeStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData1.CurrentStatus, com.tools20022.repository.msg.TradeData1.ExtendedCurrentStatus, com.tools20022.repository.msg.TradeData1.CurrentStatusSubType,
-					com.tools20022.repository.msg.TradeData1.PreviousStatus, com.tools20022.repository.msg.TradeData1.ExtendedPreviousStatus, com.tools20022.repository.msg.TradeData1.PreviousStatusSubType,
-					com.tools20022.repository.choice.Status5Choice.Code, com.tools20022.repository.choice.Status5Choice.Proprietary, com.tools20022.repository.msg.TradeData4.CurrentStatus,
-					com.tools20022.repository.msg.TradeData4.CurrentStatusSubType, com.tools20022.repository.choice.Status13Choice.Code, com.tools20022.repository.choice.Status13Choice.Proprietary,
-					com.tools20022.repository.msg.StatusAndSubStatus1.StatusCode, com.tools20022.repository.msg.StatusAndSubStatus1.SubStatusCode, com.tools20022.repository.msg.TradeData3.CurrentStatus,
-					com.tools20022.repository.msg.TradeData3.CurrentStatusSubType, com.tools20022.repository.msg.TradeData2.CurrentStatus, com.tools20022.repository.msg.TradeData2.ExtendedCurrentStatus,
-					com.tools20022.repository.msg.TradeData2.CurrentStatusSubType, com.tools20022.repository.msg.TradeData2.PreviousStatus, com.tools20022.repository.msg.TradeData2.ExtendedPreviousStatus,
-					com.tools20022.repository.msg.TradeData2.PreviousStatusSubType, com.tools20022.repository.choice.Status6Choice.Code, com.tools20022.repository.choice.Status6Choice.Proprietary,
-					com.tools20022.repository.msg.TradeData6.CurrentStatus, com.tools20022.repository.msg.TradeData6.CurrentStatusSubType, com.tools20022.repository.msg.TradeStatus1.Status,
-					com.tools20022.repository.msg.TradeStatus1.ExtendedStatus, com.tools20022.repository.msg.TradeStatus1.StatusSubType, com.tools20022.repository.msg.StatusAndSubStatus2.StatusCode,
-					com.tools20022.repository.msg.StatusAndSubStatus2.SubStatusCode, com.tools20022.repository.choice.Status28Choice.Code, com.tools20022.repository.choice.Status28Choice.Proprietary,
-					com.tools20022.repository.choice.Status27Choice.Code, com.tools20022.repository.choice.Status27Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData1.mmCurrentStatus, com.tools20022.repository.msg.TradeData1.mmExtendedCurrentStatus, com.tools20022.repository.msg.TradeData1.mmCurrentStatusSubType,
+					com.tools20022.repository.msg.TradeData1.mmPreviousStatus, com.tools20022.repository.msg.TradeData1.mmExtendedPreviousStatus, com.tools20022.repository.msg.TradeData1.mmPreviousStatusSubType,
+					com.tools20022.repository.choice.Status5Choice.mmCode, com.tools20022.repository.choice.Status5Choice.mmProprietary, com.tools20022.repository.msg.TradeData4.mmCurrentStatus,
+					com.tools20022.repository.msg.TradeData4.mmCurrentStatusSubType, com.tools20022.repository.choice.Status13Choice.mmCode, com.tools20022.repository.choice.Status13Choice.mmProprietary,
+					com.tools20022.repository.msg.StatusAndSubStatus1.mmStatusCode, com.tools20022.repository.msg.StatusAndSubStatus1.mmSubStatusCode, com.tools20022.repository.msg.TradeData3.mmCurrentStatus,
+					com.tools20022.repository.msg.TradeData3.mmCurrentStatusSubType, com.tools20022.repository.msg.TradeData2.mmCurrentStatus, com.tools20022.repository.msg.TradeData2.mmExtendedCurrentStatus,
+					com.tools20022.repository.msg.TradeData2.mmCurrentStatusSubType, com.tools20022.repository.msg.TradeData2.mmPreviousStatus, com.tools20022.repository.msg.TradeData2.mmExtendedPreviousStatus,
+					com.tools20022.repository.msg.TradeData2.mmPreviousStatusSubType, com.tools20022.repository.choice.Status6Choice.mmCode, com.tools20022.repository.choice.Status6Choice.mmProprietary,
+					com.tools20022.repository.msg.TradeData6.mmCurrentStatus, com.tools20022.repository.msg.TradeData6.mmCurrentStatusSubType, com.tools20022.repository.msg.TradeStatus1.mmStatus,
+					com.tools20022.repository.msg.TradeStatus1.mmExtendedStatus, com.tools20022.repository.msg.TradeStatus1.mmStatusSubType, com.tools20022.repository.msg.StatusAndSubStatus2.mmStatusCode,
+					com.tools20022.repository.msg.StatusAndSubStatus2.mmSubStatusCode, com.tools20022.repository.choice.Status28Choice.mmCode, com.tools20022.repository.choice.Status28Choice.mmProprietary,
+					com.tools20022.repository.choice.Status27Choice.mmCode, com.tools20022.repository.choice.Status27Choice.mmProprietary);
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradeStatus";
 			definition = "Status of a treasury trade in a central matching/settlement system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TradeStatusCode.mmObject();
 		}
 	};
+	protected YesNoIndicator allegedTrade;
 	/**
 	 * Specifies whether a trade is alleged (notified by the counterparty) or
 	 * not.
@@ -369,22 +374,23 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData9#AllegedTrade
-	 * TradeData9.AllegedTrade}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeStatus1#AllegedTrade
-	 * TradeStatus1.AllegedTrade}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeData14#AllegedTrade
-	 * TradeData14.AllegedTrade}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData9#mmAllegedTrade
+	 * TradeData9.mmAllegedTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeStatus1#mmAllegedTrade
+	 * TradeStatus1.mmAllegedTrade}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeData14#mmAllegedTrade
+	 * TradeData14.mmAllegedTrade}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -398,19 +404,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AllegedTrade = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAllegedTrade = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData9.AllegedTrade, com.tools20022.repository.msg.TradeStatus1.AllegedTrade, com.tools20022.repository.msg.TradeData14.AllegedTrade);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData9.mmAllegedTrade, com.tools20022.repository.msg.TradeStatus1.mmAllegedTrade, com.tools20022.repository.msg.TradeData14.mmAllegedTrade);
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AllegedTrade";
 			definition = "Specifies whether a trade is alleged (notified by the counterparty) or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected TreasuryTrade treasuryTrade;
 	/**
 	 * Treasury trade for which a settlement status is provided.
 	 * <p>
@@ -419,8 +426,8 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade#TreasuryTradeSettlementStatus
-	 * TreasuryTrade.TreasuryTradeSettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasuryTradeSettlementStatus
+	 * TreasuryTrade.mmTreasuryTradeSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -445,20 +452,21 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TreasuryTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTreasuryTrade = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTrade";
 			definition = "Treasury trade for which a settlement status is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.TreasuryTradeSettlementStatus;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmTreasuryTradeSettlementStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
 		}
 	};
+	protected SettlementStatusCode settlement;
 	/**
 	 * Specifies the status of a settlement eg rejected, settled or awaiting
 	 * authorisation.
@@ -470,22 +478,22 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementStatusCode
 	 * SettlementStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementStatus
-	 * SettlementData1.SettlementStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData2#SettlementStatus
-	 * SettlementData2.SettlementStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementStatus
+	 * SettlementData1.mmSettlementStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData2#mmSettlementStatus
+	 * SettlementData2.mmSettlementStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -499,19 +507,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Settlement = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSettlement = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.SettlementStatus, com.tools20022.repository.msg.SettlementData2.SettlementStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.mmSettlementStatus, com.tools20022.repository.msg.SettlementData2.mmSettlementStatus);
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Settlement";
 			definition = "Specifies the status of a settlement eg rejected, settled or awaiting authorisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStatusCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount rejectedAmount;
 	/**
 	 * Amount that cannot be settled for instance by a settlement system.
 	 * <p>
@@ -522,22 +531,22 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData1#RejectedAmount
-	 * SettlementData1.RejectedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData2#RejectedAmount
-	 * SettlementData2.RejectedAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmRejectedAmount
+	 * SettlementData1.mmRejectedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData2#mmRejectedAmount
+	 * SettlementData2.mmRejectedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -550,19 +559,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * "Amount that cannot be settled for instance by a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RejectedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRejectedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.RejectedAmount, com.tools20022.repository.msg.SettlementData2.RejectedAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.mmRejectedAmount, com.tools20022.repository.msg.SettlementData2.mmRejectedAmount);
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RejectedAmount";
 			definition = "Amount that cannot be settled for instance by a settlement system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected YesNoIndicator settlementSuspended;
 	/**
 	 * Cash settlement is suspended.
 	 * <p>
@@ -573,20 +583,22 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#Suspended
-	 * SettlementData1.Suspended}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SettlementData2#Suspended
-	 * SettlementData2.Suspended}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSuspended
+	 * SettlementData1.mmSuspended}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData2#mmSuspended
+	 * SettlementData2.mmSuspended}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -598,19 +610,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Cash settlement is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SettlementSuspended = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSettlementSuspended = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.Suspended, com.tools20022.repository.msg.SettlementData2.Suspended);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.mmSuspended, com.tools20022.repository.msg.SettlementData2.mmSuspended);
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementSuspended";
 			definition = "Cash settlement is suspended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator pendingSettlement;
 	/**
 	 * Cash settlement is pending.
 	 * <p>
@@ -621,20 +634,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#Pending
-	 * SettlementData1.Pending}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SettlementData2#Pending
-	 * SettlementData2.Pending}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#mmPending
+	 * SettlementData1.mmPending}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SettlementData2#mmPending
+	 * SettlementData2.mmPending}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -646,19 +659,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Cash settlement is pending."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PendingSettlement = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPendingSettlement = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.Pending, com.tools20022.repository.msg.SettlementData2.Pending);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.mmPending, com.tools20022.repository.msg.SettlementData2.mmPending);
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PendingSettlement";
 			definition = "Cash settlement is pending.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISODateTime settlementDate;
 	/**
 	 * Date on which the trade is actually settled.
 	 * <p>
@@ -668,20 +682,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Trade3#SettlementDate
-	 * Trade3.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Trade3#FixingDate
-	 * Trade3.FixingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus
 	 * TreasuryTradeSettlementStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmSettlementDate
+	 * Trade3.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Trade3#mmFixingDate
+	 * Trade3.mmFixingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -693,19 +707,20 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Date on which the trade is actually settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade3.SettlementDate, com.tools20022.repository.msg.Trade3.FixingDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade3.mmSettlementDate, com.tools20022.repository.msg.Trade3.mmFixingDate);
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the trade is actually settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text withdrawalReason;
 	/**
 	 * Reason that an alleged trade is withdrawn.
 	 * <p>
@@ -731,15 +746,15 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Reason that an alleged trade is withdrawn."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute WithdrawalReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmWithdrawalReason = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WithdrawalReason";
 			definition = "Reason that an alleged trade is withdrawn.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -747,32 +762,104 @@ public class TreasuryTradeSettlementStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TreasuryTradeSettlementStatus";
 				definition = "Specifies the status of a treasury trade at a specified time.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTrade.TreasuryTradeSettlementStatus);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData10.CurrentStatus, com.tools20022.repository.msg.TradeData10.CurrentStatusSubType, com.tools20022.repository.msg.TradeData10.PreviousStatus,
-						com.tools20022.repository.msg.TradeData10.PreviousStatusSubType, com.tools20022.repository.msg.TradeData9.CurrentStatus, com.tools20022.repository.msg.TradeData9.CurrentStatusSubType,
-						com.tools20022.repository.msg.TradeData9.PreviousStatus, com.tools20022.repository.msg.TradeData9.PreviousStatusSubType, com.tools20022.repository.msg.TradeData7.CurrentStatus,
-						com.tools20022.repository.msg.TradeData7.CurrentStatusSubType, com.tools20022.repository.msg.TradeData7.PreviousStatus, com.tools20022.repository.msg.TradeData7.PreviousStatusSubType,
-						com.tools20022.repository.msg.TradeData14.CurrentStatus, com.tools20022.repository.msg.TradeData14.CurrentStatusSubType, com.tools20022.repository.msg.TradeData14.PreviousStatus,
-						com.tools20022.repository.msg.TradeData14.PreviousStatusSubType, com.tools20022.repository.msg.TradeData12.CurrentStatus, com.tools20022.repository.msg.TradeData12.CurrentStatusSubType,
-						com.tools20022.repository.msg.TradeData12.PreviousStatus, com.tools20022.repository.msg.TradeData12.PreviousStatusSubType, com.tools20022.repository.msg.TradeData15.CurrentStatus,
-						com.tools20022.repository.msg.TradeData15.CurrentStatusSubType, com.tools20022.repository.msg.TradeData15.PreviousStatus, com.tools20022.repository.msg.TradeData15.PreviousStatusSubType,
-						com.tools20022.repository.msg.TradeData16.CurrentStatus, com.tools20022.repository.msg.TradeData16.CurrentStatusSubType, com.tools20022.repository.msg.TradeData16.PreviousStatus,
-						com.tools20022.repository.msg.TradeData16.PreviousStatusSubType);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTrade.mmTreasuryTradeSettlementStatus);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData10.mmCurrentStatus, com.tools20022.repository.msg.TradeData10.mmCurrentStatusSubType,
+						com.tools20022.repository.msg.TradeData10.mmPreviousStatus, com.tools20022.repository.msg.TradeData10.mmPreviousStatusSubType, com.tools20022.repository.msg.TradeData9.mmCurrentStatus,
+						com.tools20022.repository.msg.TradeData9.mmCurrentStatusSubType, com.tools20022.repository.msg.TradeData9.mmPreviousStatus, com.tools20022.repository.msg.TradeData9.mmPreviousStatusSubType,
+						com.tools20022.repository.msg.TradeData7.mmCurrentStatus, com.tools20022.repository.msg.TradeData7.mmCurrentStatusSubType, com.tools20022.repository.msg.TradeData7.mmPreviousStatus,
+						com.tools20022.repository.msg.TradeData7.mmPreviousStatusSubType, com.tools20022.repository.msg.TradeData14.mmCurrentStatus, com.tools20022.repository.msg.TradeData14.mmCurrentStatusSubType,
+						com.tools20022.repository.msg.TradeData14.mmPreviousStatus, com.tools20022.repository.msg.TradeData14.mmPreviousStatusSubType, com.tools20022.repository.msg.TradeData12.mmCurrentStatus,
+						com.tools20022.repository.msg.TradeData12.mmCurrentStatusSubType, com.tools20022.repository.msg.TradeData12.mmPreviousStatus, com.tools20022.repository.msg.TradeData12.mmPreviousStatusSubType,
+						com.tools20022.repository.msg.TradeData15.mmCurrentStatus, com.tools20022.repository.msg.TradeData15.mmCurrentStatusSubType, com.tools20022.repository.msg.TradeData15.mmPreviousStatus,
+						com.tools20022.repository.msg.TradeData15.mmPreviousStatusSubType, com.tools20022.repository.msg.TradeData16.mmCurrentStatus, com.tools20022.repository.msg.TradeData16.mmCurrentStatusSubType,
+						com.tools20022.repository.msg.TradeData16.mmPreviousStatus, com.tools20022.repository.msg.TradeData16.mmPreviousStatusSubType);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TradeStatus, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.AllegedTrade,
-						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TreasuryTrade, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.Settlement,
-						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.RejectedAmount, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.SettlementSuspended,
-						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.PendingSettlement, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.SettlementDate,
-						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.WithdrawalReason);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmAllegedTrade,
+						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTreasuryTrade, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlement,
+						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmRejectedAmount, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlementSuspended,
+						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmPendingSettlement, com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlementDate,
+						com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmWithdrawalReason);
 				derivationComponent_lazy = () -> Arrays.asList(TradeData1.mmObject(), Status5Choice.mmObject(), Status13Choice.mmObject(), StatusAndSubStatus1.mmObject(), TradeData10.mmObject(), TradeData8.mmObject(),
 						TradeData9.mmObject(), Status6Choice.mmObject(), TradeData7.mmObject(), TradeStatus1.mmObject(), TradeData11.mmObject(), TradeData14.mmObject(), TradeData12.mmObject(), TradeData15.mmObject(),
 						StatusAndSubStatus2.mmObject(), Status28Choice.mmObject(), Status27Choice.mmObject(), TradeData16.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeStatusCode getTradeStatus() {
+		return tradeStatus;
+	}
+
+	public void setTradeStatus(TradeStatusCode tradeStatus) {
+		this.tradeStatus = tradeStatus;
+	}
+
+	public YesNoIndicator getAllegedTrade() {
+		return allegedTrade;
+	}
+
+	public void setAllegedTrade(YesNoIndicator allegedTrade) {
+		this.allegedTrade = allegedTrade;
+	}
+
+	public TreasuryTrade getTreasuryTrade() {
+		return treasuryTrade;
+	}
+
+	public void setTreasuryTrade(com.tools20022.repository.entity.TreasuryTrade treasuryTrade) {
+		this.treasuryTrade = treasuryTrade;
+	}
+
+	public SettlementStatusCode getSettlement() {
+		return settlement;
+	}
+
+	public void setSettlement(SettlementStatusCode settlement) {
+		this.settlement = settlement;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getRejectedAmount() {
+		return rejectedAmount;
+	}
+
+	public void setRejectedAmount(ActiveOrHistoricCurrencyAndAmount rejectedAmount) {
+		this.rejectedAmount = rejectedAmount;
+	}
+
+	public YesNoIndicator getSettlementSuspended() {
+		return settlementSuspended;
+	}
+
+	public void setSettlementSuspended(YesNoIndicator settlementSuspended) {
+		this.settlementSuspended = settlementSuspended;
+	}
+
+	public YesNoIndicator getPendingSettlement() {
+		return pendingSettlement;
+	}
+
+	public void setPendingSettlement(YesNoIndicator pendingSettlement) {
+		this.pendingSettlement = pendingSettlement;
+	}
+
+	public ISODateTime getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(ISODateTime settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public Max35Text getWithdrawalReason() {
+		return withdrawalReason;
+	}
+
+	public void setWithdrawalReason(Max35Text withdrawalReason) {
+		this.withdrawalReason = withdrawalReason;
 	}
 }

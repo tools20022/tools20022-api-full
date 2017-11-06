@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed1Choice#Indicator
- * ModificationCancellationAllowed1Choice.Indicator}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed1Choice#mmIndicator
+ * ModificationCancellationAllowed1Choice.mmIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed1Choice#Proprietary
- * ModificationCancellationAllowed1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed1Choice#mmProprietary
+ * ModificationCancellationAllowed1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationCancellationAllowed1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator indicator;
 	/**
 	 * Specifies whether physical settlement may be executed using a letter of
 	 * guarantee or if the physical certificates should be used.
@@ -101,13 +102,13 @@ public class ModificationCancellationAllowed1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed4Choice#Indicator
-	 * ModificationCancellationAllowed4Choice.Indicator}</li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed4Choice#mmIndicator
+	 * ModificationCancellationAllowed4Choice.mmIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationCancellationAllowed1Choice.mmObject();
 			isDerived = false;
@@ -115,12 +116,13 @@ public class ModificationCancellationAllowed1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether physical settlement may be executed using a letter of guarantee or if the physical certificates should be used.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.Indicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Modification, cancellation allowed information expressed as a proprietary
 	 * code.
@@ -154,13 +156,13 @@ public class ModificationCancellationAllowed1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed4Choice#Proprietary
-	 * ModificationCancellationAllowed4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationCancellationAllowed4Choice#mmProprietary
+	 * ModificationCancellationAllowed4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationCancellationAllowed1Choice.mmObject();
 			isDerived = false;
@@ -168,9 +170,9 @@ public class ModificationCancellationAllowed1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Modification, cancellation allowed information expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -178,8 +180,8 @@ public class ModificationCancellationAllowed1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationCancellationAllowed1Choice.Indicator, com.tools20022.repository.choice.ModificationCancellationAllowed1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationCancellationAllowed1Choice.mmIndicator, com.tools20022.repository.choice.ModificationCancellationAllowed1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationCancellationAllowed1Choice";
 				definition = "Choice of format for the ModificationCancellation information.";
@@ -187,5 +189,21 @@ public class ModificationCancellationAllowed1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(YesNoIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

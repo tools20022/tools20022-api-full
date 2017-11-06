@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
 import java.util.function.Supplier;
 
 /**
@@ -36,27 +37,27 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryDate1#DateOrDateTime
- * ProprietaryDate1.DateOrDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryDate1#mmDateOrDateTime
+ * ProprietaryDate1.mmDateOrDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#Type
- * ProprietaryDate1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#Date
- * ProprietaryDate1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#DateTime
- * ProprietaryDate1.DateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#mmType
+ * ProprietaryDate1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#mmDate
+ * ProprietaryDate1.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#mmDateTime
+ * ProprietaryDate1.mmDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -71,6 +72,7 @@ import java.util.function.Supplier;
 public class ProprietaryDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Identifies the type of date reported.
 	 * <p>
@@ -98,7 +100,7 @@ public class ProprietaryDate1 {
 	 * definition} = "Identifies the type of date reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryDate1.mmObject();
 			isDerived = false;
@@ -106,11 +108,12 @@ public class ProprietaryDate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of date reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Date in ISO format.
 	 * <p>
@@ -138,7 +141,7 @@ public class ProprietaryDate1 {
 	 * definition} = "Date in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryDate1.mmObject();
 			isDerived = false;
@@ -146,11 +149,12 @@ public class ProprietaryDate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime dateTime;
 	/**
 	 * Date and time in ISO format.
 	 * <p>
@@ -178,7 +182,7 @@ public class ProprietaryDate1 {
 	 * definition} = "Date and time in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryDate1.mmObject();
 			isDerived = false;
@@ -186,8 +190,8 @@ public class ProprietaryDate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time in ISO format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -200,10 +204,11 @@ public class ProprietaryDate1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#Date
-	 * ProprietaryDate1.Date}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#DateTime
-	 * ProprietaryDate1.DateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate1#mmDate
+	 * ProprietaryDate1.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryDate1#mmDateTime
+	 * ProprietaryDate1.mmDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -223,23 +228,23 @@ public class ProprietaryDate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor DateOrDateTime = new MMXor() {
+	public static final MMXor mmDateOrDateTime = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrDateTime";
 			definition = "If Date is present, then DateTime is not allowed.\nIf DateTime is present, then Date is not allowed.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.Date, com.tools20022.repository.msg.ProprietaryDate1.DateTime);
 			messageComponent_lazy = () -> ProprietaryDate1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmDate, com.tools20022.repository.msg.ProprietaryDate1.mmDateTime);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.Type, com.tools20022.repository.msg.ProprietaryDate1.Date, com.tools20022.repository.msg.ProprietaryDate1.DateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmType, com.tools20022.repository.msg.ProprietaryDate1.mmDate, com.tools20022.repository.msg.ProprietaryDate1.mmDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
-				removalDate = ((Supplier<java.util.Date>) (() -> {
+				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
 					} catch (Exception e) {
@@ -248,9 +253,33 @@ public class ProprietaryDate1 {
 				})).get();
 				name = "ProprietaryDate1";
 				definition = "Proprietary date information.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.DateOrDateTime);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmDateOrDateTime);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public ISODateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(ISODateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 }

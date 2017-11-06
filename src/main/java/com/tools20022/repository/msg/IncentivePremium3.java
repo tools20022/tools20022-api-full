@@ -37,14 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IncentivePremium3#Description
- * IncentivePremium3.Description}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IncentivePremium3#Amount
- * IncentivePremium3.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IncentivePremium3#Type
- * IncentivePremium3.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IncentivePremium3#PaymentDate
- * IncentivePremium3.PaymentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IncentivePremium3#mmDescription
+ * IncentivePremium3.mmDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IncentivePremium3#mmAmount
+ * IncentivePremium3.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IncentivePremium3#mmType
+ * IncentivePremium3.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IncentivePremium3#mmPaymentDate
+ * IncentivePremium3.mmPaymentDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IncentivePremium3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text description;
 	/**
 	 * Description of the premium.
 	 * <p>
@@ -82,8 +85,8 @@ public class IncentivePremium3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#Description
-	 * IncentivePremium.Description}</li>
+	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmDescription
+	 * IncentivePremium.mmDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +105,21 @@ public class IncentivePremium3 {
 	 * definition} = "Description of the premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmDescription;
 			componentContext_lazy = () -> IncentivePremium3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.Description;
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the premium.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PriceRateOrAmountChoice amount;
 	/**
 	 * Cash premium paid per security, per vote or per attendee.
 	 * <p>
@@ -129,8 +133,8 @@ public class IncentivePremium3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#PremiumAmount
-	 * IncentivePremium.PremiumAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmPremiumAmount
+	 * IncentivePremium.mmPremiumAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +154,21 @@ public class IncentivePremium3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPremiumAmount;
 			componentContext_lazy = () -> IncentivePremium3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.PremiumAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash premium paid per security, per vote or per attendee.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
 		}
 	};
+	protected IncentivePremiumType1Choice type;
 	/**
 	 * Type of incentive premium.
 	 * <p>
@@ -197,20 +202,21 @@ public class IncentivePremium3 {
 	 * definition} = "Type of incentive premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IncentivePremium3.mmObject();
 			businessComponentTrace_lazy = () -> IncentivePremium.mmObject();
+			componentContext_lazy = () -> IncentivePremium3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of incentive premium.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IncentivePremiumType1Choice.mmObject();
 		}
 	};
+	protected DateFormat3Choice paymentDate;
 	/**
 	 * Date/time for the payment of the premium.
 	 * <p>
@@ -224,8 +230,8 @@ public class IncentivePremium3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#PaymentDate
-	 * IncentivePremium.PaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmPaymentDate
+	 * IncentivePremium.mmPaymentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -244,17 +250,17 @@ public class IncentivePremium3 {
 	 * definition} = "Date/time for the payment of the premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPaymentDate;
 			componentContext_lazy = () -> IncentivePremium3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.PaymentDate;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time for the payment of the premium.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat3Choice.mmObject();
 		}
 	};
@@ -262,15 +268,47 @@ public class IncentivePremium3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium3.Description, com.tools20022.repository.msg.IncentivePremium3.Amount, com.tools20022.repository.msg.IncentivePremium3.Type,
-						com.tools20022.repository.msg.IncentivePremium3.PaymentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium3.mmDescription, com.tools20022.repository.msg.IncentivePremium3.mmAmount, com.tools20022.repository.msg.IncentivePremium3.mmType,
+						com.tools20022.repository.msg.IncentivePremium3.mmPaymentDate);
 				trace_lazy = () -> IncentivePremium.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IncentivePremium3";
 				definition = "Cash premium made available if the securities holder consents or participates to an event.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max350Text description) {
+		this.description = description;
+	}
+
+	public PriceRateOrAmountChoice getAmount() {
+		return amount;
+	}
+
+	public void setAmount(PriceRateOrAmountChoice amount) {
+		this.amount = amount;
+	}
+
+	public IncentivePremiumType1Choice getType() {
+		return type;
+	}
+
+	public void setType(IncentivePremiumType1Choice type) {
+		this.type = type;
+	}
+
+	public DateFormat3Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat3Choice paymentDate) {
+		this.paymentDate = paymentDate;
 	}
 }

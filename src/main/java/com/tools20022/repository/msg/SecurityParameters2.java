@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max140Binary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Point of interaction parameters related to the security of software
@@ -34,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityParameters2#POIChallenge
- * SecurityParameters2.POIChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityParameters2#mmPOIChallenge
+ * SecurityParameters2.mmPOIChallenge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityParameters2#TMChallenge
- * SecurityParameters2.TMChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityParameters2#mmTMChallenge
+ * SecurityParameters2.mmTMChallenge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityParameters2#SymmetricKey
- * SecurityParameters2.SymmetricKey}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityParameters2#mmSymmetricKey
+ * SecurityParameters2.mmSymmetricKey}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Binary pOIChallenge;
 	/**
 	 * Point of interaction challenge for cryptographic key injection.
 	 * <p>
@@ -106,18 +108,18 @@ public class SecurityParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters3#POIChallenge
-	 * SecurityParameters3.POIChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters3#mmPOIChallenge
+	 * SecurityParameters3.mmPOIChallenge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters1#POIChallenge
-	 * SecurityParameters1.POIChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters1#mmPOIChallenge
+	 * SecurityParameters1.mmPOIChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POIChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOIChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityParameters2.mmObject();
 			isDerived = false;
@@ -125,13 +127,14 @@ public class SecurityParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIChallenge";
 			definition = "Point of interaction challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.POIChallenge;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters3.POIChallenge);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters3.mmPOIChallenge);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.mmPOIChallenge;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	protected Max140Binary tMChallenge;
 	/**
 	 * Terminal manager challenge for cryptographic key injection.
 	 * <p>
@@ -163,18 +166,18 @@ public class SecurityParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters3#TMChallenge
-	 * SecurityParameters3.TMChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters3#mmTMChallenge
+	 * SecurityParameters3.mmTMChallenge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters1#TMChallenge
-	 * SecurityParameters1.TMChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters1#mmTMChallenge
+	 * SecurityParameters1.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityParameters2.mmObject();
 			isDerived = false;
@@ -182,13 +185,14 @@ public class SecurityParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.TMChallenge;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters3.TMChallenge);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters3.mmTMChallenge);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.mmTMChallenge;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CryptographicKey4> symmetricKey;
 	/**
 	 * Key to inject in the point of interaction, protected by the temporary key
 	 * previously sent.
@@ -222,18 +226,18 @@ public class SecurityParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters3#SymmetricKey
-	 * SecurityParameters3.SymmetricKey}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters3#mmSymmetricKey
+	 * SecurityParameters3.mmSymmetricKey}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters1#SymmetricKey
-	 * SecurityParameters1.SymmetricKey}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters1#mmSymmetricKey
+	 * SecurityParameters1.mmSymmetricKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SymmetricKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSymmetricKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityParameters2.mmObject();
 			isDerived = false;
@@ -241,26 +245,50 @@ public class SecurityParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricKey";
 			definition = "Key to inject in the point of interaction, protected by the temporary key previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.SymmetricKey;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters3.SymmetricKey);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters3.mmSymmetricKey);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.mmSymmetricKey;
 			minOccurs = 0;
-			complexType_lazy = () -> CryptographicKey4.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters2.POIChallenge, com.tools20022.repository.msg.SecurityParameters2.TMChallenge,
-						com.tools20022.repository.msg.SecurityParameters2.SymmetricKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters2.mmPOIChallenge, com.tools20022.repository.msg.SecurityParameters2.mmTMChallenge,
+						com.tools20022.repository.msg.SecurityParameters2.mmSymmetricKey);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters2";
 				definition = "Point of interaction parameters related to the security of software application and application protocol.";
-				previousVersion_lazy = () -> SecurityParameters1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecurityParameters3.mmObject());
+				previousVersion_lazy = () -> SecurityParameters1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Binary getPOIChallenge() {
+		return pOIChallenge;
+	}
+
+	public void setPOIChallenge(Max140Binary pOIChallenge) {
+		this.pOIChallenge = pOIChallenge;
+	}
+
+	public Max140Binary getTMChallenge() {
+		return tMChallenge;
+	}
+
+	public void setTMChallenge(Max140Binary tMChallenge) {
+		this.tMChallenge = tMChallenge;
+	}
+
+	public List<CryptographicKey4> getSymmetricKey() {
+		return symmetricKey;
+	}
+
+	public void setSymmetricKey(List<com.tools20022.repository.msg.CryptographicKey4> symmetricKey) {
+		this.symmetricKey = symmetricKey;
 	}
 }

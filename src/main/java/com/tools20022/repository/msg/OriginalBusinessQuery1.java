@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalBusinessQuery1#MessageIdentification
- * OriginalBusinessQuery1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalBusinessQuery1#mmMessageIdentification
+ * OriginalBusinessQuery1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalBusinessQuery1#MessageNameIdentification
- * OriginalBusinessQuery1.MessageNameIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalBusinessQuery1#mmMessageNameIdentification
+ * OriginalBusinessQuery1.mmMessageNameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalBusinessQuery1#CreationDateTime
- * OriginalBusinessQuery1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalBusinessQuery1#mmCreationDateTime
+ * OriginalBusinessQuery1.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalBusinessQuery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference, as assigned by the original initiating party,
 	 * to unambiguously identify the original query message.
@@ -95,7 +96,7 @@ public class OriginalBusinessQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalBusinessQuery1.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class OriginalBusinessQuery1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the original initiating party, to unambiguously identify the original query message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text messageNameIdentification;
 	/**
 	 * Specifies the query message name identifier to which the message refers.
 	 * <p>
@@ -137,7 +139,7 @@ public class OriginalBusinessQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalBusinessQuery1.mmObject();
 			isDerived = false;
@@ -145,11 +147,12 @@ public class OriginalBusinessQuery1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameIdentification";
 			definition = "Specifies the query message name identifier to which the message refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created.
 	 * <p>
@@ -177,7 +180,7 @@ public class OriginalBusinessQuery1 {
 	 * definition} = "Date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalBusinessQuery1.mmObject();
 			isDerived = false;
@@ -185,8 +188,8 @@ public class OriginalBusinessQuery1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -194,14 +197,38 @@ public class OriginalBusinessQuery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalBusinessQuery1.MessageIdentification, com.tools20022.repository.msg.OriginalBusinessQuery1.MessageNameIdentification,
-						com.tools20022.repository.msg.OriginalBusinessQuery1.CreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalBusinessQuery1.mmMessageIdentification, com.tools20022.repository.msg.OriginalBusinessQuery1.mmMessageNameIdentification,
+						com.tools20022.repository.msg.OriginalBusinessQuery1.mmCreationDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalBusinessQuery1";
 				definition = "Unique identification, as assigned by the original requestor, to unambiguously identify the business query message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getMessageNameIdentification() {
+		return messageNameIdentification;
+	}
+
+	public void setMessageNameIdentification(Max35Text messageNameIdentification) {
+		this.messageNameIdentification = messageNameIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

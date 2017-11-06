@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#CentralSecuritiesDepository
- * SystemPartyTypeCode.CentralSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#mmCentralSecuritiesDepository
+ * SystemPartyTypeCode.mmCentralSecuritiesDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#NationalCentralBank
- * SystemPartyTypeCode.NationalCentralBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#mmNationalCentralBank
+ * SystemPartyTypeCode.mmNationalCentralBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#PaymentBank
- * SystemPartyTypeCode.PaymentBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#mmPaymentBank
+ * SystemPartyTypeCode.mmPaymentBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#CentralSecuritiesDepositoryParticipant
- * SystemPartyTypeCode.CentralSecuritiesDepositoryParticipant}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#mmCentralSecuritiesDepositoryParticipant
+ * SystemPartyTypeCode.mmCentralSecuritiesDepositoryParticipant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#ExternalCentralSecuritiesDepository
- * SystemPartyTypeCode.ExternalCentralSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#mmExternalCentralSecuritiesDepository
+ * SystemPartyTypeCode.mmExternalCentralSecuritiesDepository}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -104,7 +104,7 @@ public class SystemPartyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CentralSecuritiesDepository = new MMCode() {
+	public static final MMCode mmCentralSecuritiesDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepository";
@@ -139,7 +139,7 @@ public class SystemPartyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NationalCentralBank = new MMCode() {
+	public static final MMCode mmNationalCentralBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalCentralBank";
@@ -174,7 +174,7 @@ public class SystemPartyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentBank = new MMCode() {
+	public static final MMCode mmPaymentBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentBank";
@@ -207,7 +207,7 @@ public class SystemPartyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CentralSecuritiesDepositoryParticipant = new MMCode() {
+	public static final MMCode mmCentralSecuritiesDepositoryParticipant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepositoryParticipant";
@@ -244,7 +244,7 @@ public class SystemPartyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ExternalCentralSecuritiesDepository = new MMCode() {
+	public static final MMCode mmExternalCentralSecuritiesDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalCentralSecuritiesDepository";
@@ -257,14 +257,14 @@ public class SystemPartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSDY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemPartyTypeCode";
 				definition = "Specifies the type of the party within a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemPartyTypeCode.CentralSecuritiesDepository, com.tools20022.repository.codeset.SystemPartyTypeCode.NationalCentralBank,
-						com.tools20022.repository.codeset.SystemPartyTypeCode.PaymentBank, com.tools20022.repository.codeset.SystemPartyTypeCode.CentralSecuritiesDepositoryParticipant,
-						com.tools20022.repository.codeset.SystemPartyTypeCode.ExternalCentralSecuritiesDepository);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemPartyTypeCode.mmCentralSecuritiesDepository, com.tools20022.repository.codeset.SystemPartyTypeCode.mmNationalCentralBank,
+						com.tools20022.repository.codeset.SystemPartyTypeCode.mmPaymentBank, com.tools20022.repository.codeset.SystemPartyTypeCode.mmCentralSecuritiesDepositoryParticipant,
+						com.tools20022.repository.codeset.SystemPartyTypeCode.mmExternalCentralSecuritiesDepository);
 				derivation_lazy = () -> Arrays.asList(SystemPartyType1Code.mmObject());
 			}
 		});

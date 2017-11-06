@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.StatusOriginator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,35 +38,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData3#MatchingSystemUniqueReference
- * TradeData3.MatchingSystemUniqueReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData3#mmMatchingSystemUniqueReference
+ * TradeData3.mmMatchingSystemUniqueReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData3#MatchingSystemMatchingReference
- * TradeData3.MatchingSystemMatchingReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData3#StatusOriginator
- * TradeData3.StatusOriginator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData3#CurrentStatus
- * TradeData3.CurrentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData3#mmMatchingSystemMatchingReference
+ * TradeData3.mmMatchingSystemMatchingReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData3#mmStatusOriginator
+ * TradeData3.mmStatusOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData3#mmCurrentStatus
+ * TradeData3.mmCurrentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData3#CurrentStatusSubType
- * TradeData3.CurrentStatusSubType}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData3#mmCurrentStatusSubType
+ * TradeData3.mmCurrentStatusSubType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData3#CurrentStatusDateTime
- * TradeData3.CurrentStatusDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData3#PreviousStatus
- * TradeData3.PreviousStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData3#AllegedTrade
- * TradeData3.AllegedTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData3#mmCurrentStatusDateTime
+ * TradeData3.mmCurrentStatusDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData3#mmPreviousStatus
+ * TradeData3.mmPreviousStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData3#mmAllegedTrade
+ * TradeData3.mmAllegedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData3#PreviousStatusSubType
- * TradeData3.PreviousStatusSubType}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData3#mmPreviousStatusSubType
+ * TradeData3.mmPreviousStatusSubType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text matchingSystemUniqueReference;
 	/**
 	 * Reference to the unique system identification assigned to the trade by
 	 * the central matching system.
@@ -114,7 +116,7 @@ public class TradeData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchingSystemUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchingSystemUniqueReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData3.mmObject();
 			isDerived = false;
@@ -122,11 +124,12 @@ public class TradeData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference to the unique system identification assigned to the trade by the central matching system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text matchingSystemMatchingReference;
 	/**
 	 * Reference to the unique matching identification assigned to the trade and
 	 * to the matching trade from the counterparty by the central matching
@@ -157,7 +160,7 @@ public class TradeData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchingSystemMatchingReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchingSystemMatchingReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData3.mmObject();
 			isDerived = false;
@@ -165,11 +168,12 @@ public class TradeData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemMatchingReference";
 			definition = "Reference to the unique matching identification assigned to the trade and to the matching trade from the counterparty by the central matching system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text statusOriginator;
 	/**
 	 * Party that assigned the status to the trade.
 	 * <p>
@@ -201,20 +205,21 @@ public class TradeData3 {
 	 * definition} = "Party that assigned the status to the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusOriginator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusOriginator = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> StatusOriginator.mmObject();
 			componentContext_lazy = () -> TradeData3.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.StatusOriginator.mmObject();
 			isDerived = false;
 			xmlTag = "StsOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOriginator";
 			definition = "Party that assigned the status to the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Status5Choice currentStatus;
 	/**
 	 * Specifies the new status of the trade.
 	 * <p>
@@ -228,8 +233,8 @@ public class TradeData3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TradeStatus
-	 * TreasuryTradeSettlementStatus.TradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTradeStatus
+	 * TreasuryTradeSettlementStatus.mmTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TradeData3
@@ -247,20 +252,21 @@ public class TradeData3 {
 	 * definition} = "Specifies the new status of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> TradeData3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TradeStatus;
 			isDerived = false;
 			xmlTag = "CurSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatus";
 			definition = "Specifies the new status of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Status5Choice.mmObject();
 		}
 	};
+	protected Max70Text currentStatusSubType;
 	/**
 	 * Additional information about the current status of the trade.
 	 * <p>
@@ -273,8 +279,8 @@ public class TradeData3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TradeStatus
-	 * TreasuryTradeSettlementStatus.TradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTradeStatus
+	 * TreasuryTradeSettlementStatus.mmTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TradeData3
@@ -293,20 +299,21 @@ public class TradeData3 {
 	 * "Additional information about the current status of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentStatusSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentStatusSubType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> TradeData3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TradeStatus;
 			isDerived = false;
 			xmlTag = "CurStsSubTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatusSubType";
 			definition = "Additional information about the current status of the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ISODateTime currentStatusDateTime;
 	/**
 	 * Specifies the date and time at which the current status was assigned.
 	 * <p>
@@ -334,7 +341,7 @@ public class TradeData3 {
 	 * "Specifies the date and time at which the current status was assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentStatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentStatusDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData3.mmObject();
 			isDerived = false;
@@ -342,11 +349,12 @@ public class TradeData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatusDateTime";
 			definition = "Specifies the date and time at which the current status was assigned.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Status5Choice previousStatus;
 	/**
 	 * Specifies the previous status of the trade.
 	 * <p>
@@ -374,7 +382,7 @@ public class TradeData3 {
 	 * definition} = "Specifies the previous status of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData3.mmObject();
 			isDerived = false;
@@ -382,11 +390,12 @@ public class TradeData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousStatus";
 			definition = "Specifies the previous status of the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Status5Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator allegedTrade;
 	/**
 	 * Specifies whether a trade is alleged or not.
 	 * <p>
@@ -414,7 +423,7 @@ public class TradeData3 {
 	 * definition} = "Specifies whether a trade is alleged or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllegedTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllegedTrade = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData3.mmObject();
 			isDerived = false;
@@ -422,11 +431,12 @@ public class TradeData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegedTrade";
 			definition = "Specifies whether a trade is alleged or not.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max70Text previousStatusSubType;
 	/**
 	 * Additional information on the previous status of a trade in a central
 	 * system.
@@ -456,7 +466,7 @@ public class TradeData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousStatusSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousStatusSubType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData3.mmObject();
 			isDerived = false;
@@ -464,8 +474,8 @@ public class TradeData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousStatusSubType";
 			definition = "Additional information on the previous status of a trade in a central system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -473,11 +483,11 @@ public class TradeData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData3.MatchingSystemUniqueReference, com.tools20022.repository.msg.TradeData3.MatchingSystemMatchingReference,
-						com.tools20022.repository.msg.TradeData3.StatusOriginator, com.tools20022.repository.msg.TradeData3.CurrentStatus, com.tools20022.repository.msg.TradeData3.CurrentStatusSubType,
-						com.tools20022.repository.msg.TradeData3.CurrentStatusDateTime, com.tools20022.repository.msg.TradeData3.PreviousStatus, com.tools20022.repository.msg.TradeData3.AllegedTrade,
-						com.tools20022.repository.msg.TradeData3.PreviousStatusSubType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData3.mmMatchingSystemUniqueReference, com.tools20022.repository.msg.TradeData3.mmMatchingSystemMatchingReference,
+						com.tools20022.repository.msg.TradeData3.mmStatusOriginator, com.tools20022.repository.msg.TradeData3.mmCurrentStatus, com.tools20022.repository.msg.TradeData3.mmCurrentStatusSubType,
+						com.tools20022.repository.msg.TradeData3.mmCurrentStatusDateTime, com.tools20022.repository.msg.TradeData3.mmPreviousStatus, com.tools20022.repository.msg.TradeData3.mmAllegedTrade,
+						com.tools20022.repository.msg.TradeData3.mmPreviousStatusSubType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeData3";
 				definition = "Provides information on the status of a trade.";
@@ -485,5 +495,77 @@ public class TradeData3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMatchingSystemUniqueReference() {
+		return matchingSystemUniqueReference;
+	}
+
+	public void setMatchingSystemUniqueReference(Max35Text matchingSystemUniqueReference) {
+		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
+	}
+
+	public Max35Text getMatchingSystemMatchingReference() {
+		return matchingSystemMatchingReference;
+	}
+
+	public void setMatchingSystemMatchingReference(Max35Text matchingSystemMatchingReference) {
+		this.matchingSystemMatchingReference = matchingSystemMatchingReference;
+	}
+
+	public Max35Text getStatusOriginator() {
+		return statusOriginator;
+	}
+
+	public void setStatusOriginator(Max35Text statusOriginator) {
+		this.statusOriginator = statusOriginator;
+	}
+
+	public Status5Choice getCurrentStatus() {
+		return currentStatus;
+	}
+
+	public void setCurrentStatus(Status5Choice currentStatus) {
+		this.currentStatus = currentStatus;
+	}
+
+	public Max70Text getCurrentStatusSubType() {
+		return currentStatusSubType;
+	}
+
+	public void setCurrentStatusSubType(Max70Text currentStatusSubType) {
+		this.currentStatusSubType = currentStatusSubType;
+	}
+
+	public ISODateTime getCurrentStatusDateTime() {
+		return currentStatusDateTime;
+	}
+
+	public void setCurrentStatusDateTime(ISODateTime currentStatusDateTime) {
+		this.currentStatusDateTime = currentStatusDateTime;
+	}
+
+	public Status5Choice getPreviousStatus() {
+		return previousStatus;
+	}
+
+	public void setPreviousStatus(Status5Choice previousStatus) {
+		this.previousStatus = previousStatus;
+	}
+
+	public YesNoIndicator getAllegedTrade() {
+		return allegedTrade;
+	}
+
+	public void setAllegedTrade(YesNoIndicator allegedTrade) {
+		this.allegedTrade = allegedTrade;
+	}
+
+	public Max70Text getPreviousStatusSubType() {
+		return previousStatusSubType;
+	}
+
+	public void setPreviousStatusSubType(Max70Text previousStatusSubType) {
+		this.previousStatusSubType = previousStatusSubType;
 	}
 }

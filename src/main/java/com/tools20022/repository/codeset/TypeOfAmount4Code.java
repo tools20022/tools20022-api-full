@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfAmountCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code#Actual
- * TypeOfAmount4Code.Actual}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code#mmActual
+ * TypeOfAmount4Code.mmActual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code#Estimated
- * TypeOfAmount4Code.Estimated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code#mmEstimated
+ * TypeOfAmount4Code.mmEstimated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +74,7 @@ public class TypeOfAmount4Code extends TypeOfAmountCode {
 	 * name} = "Actual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Actual = new MMCode() {
+	public static final MMCode mmActual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
@@ -97,7 +97,7 @@ public class TypeOfAmount4Code extends TypeOfAmountCode {
 	 * name} = "Estimated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Estimated = new MMCode() {
+	public static final MMCode mmEstimated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
@@ -108,11 +108,11 @@ public class TypeOfAmount4Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount4Code";
 				definition = "Identification or qualification of the type of amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount4Code.Actual, com.tools20022.repository.codeset.TypeOfAmount4Code.Estimated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount4Code.mmActual, com.tools20022.repository.codeset.TypeOfAmount4Code.mmEstimated);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

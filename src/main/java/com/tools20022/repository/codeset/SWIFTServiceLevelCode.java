@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode#SWIFTPay
- * SWIFTServiceLevelCode.SWIFTPay}</li>
+ * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode#mmSWIFTPay
+ * SWIFTServiceLevelCode.mmSWIFTPay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode#Priority
- * SWIFTServiceLevelCode.Priority}</li>
+ * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode#mmPriority
+ * SWIFTServiceLevelCode.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode#Standard
- * SWIFTServiceLevelCode.Standard}</li>
+ * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode#mmStandard
+ * SWIFTServiceLevelCode.mmStandard}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class SWIFTServiceLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SWIFTPay = new MMCode() {
+	public static final MMCode mmSWIFTPay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SWIFTPay";
@@ -129,7 +129,7 @@ public class SWIFTServiceLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Priority = new MMCode() {
+	public static final MMCode mmPriority = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Priority";
@@ -162,7 +162,7 @@ public class SWIFTServiceLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Standard = new MMCode() {
+	public static final MMCode mmStandard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Standard";
@@ -175,13 +175,13 @@ public class SWIFTServiceLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SPAY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SWIFTServiceLevelCode";
 				definition = "Specifies the SWIFT service level that applies to the payment instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SWIFTServiceLevelCode.SWIFTPay, com.tools20022.repository.codeset.SWIFTServiceLevelCode.Priority,
-						com.tools20022.repository.codeset.SWIFTServiceLevelCode.Standard);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SWIFTServiceLevelCode.mmSWIFTPay, com.tools20022.repository.codeset.SWIFTServiceLevelCode.mmPriority,
+						com.tools20022.repository.codeset.SWIFTServiceLevelCode.mmStandard);
 				derivation_lazy = () -> Arrays.asList(SWIFTServiceLevel2Code.mmObject());
 			}
 		});

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#Bilateral
- * BalanceCounterparty1Code.Bilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#mmBilateral
+ * BalanceCounterparty1Code.mmBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#Multilateral
- * BalanceCounterparty1Code.Multilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#mmMultilateral
+ * BalanceCounterparty1Code.mmMultilateral}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	 * name} = "Bilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bilateral = new MMCode() {
+	public static final MMCode mmBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
@@ -107,7 +107,7 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	 * name} = "Multilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Multilateral = new MMCode() {
+	public static final MMCode mmMultilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
@@ -118,12 +118,12 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BILA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceCounterparty1Code";
 				definition = "Specifies the type of counterparty to be taken into account for calculation of the balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceCounterparty1Code.Bilateral, com.tools20022.repository.codeset.BalanceCounterparty1Code.Multilateral);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceCounterparty1Code.mmBilateral, com.tools20022.repository.codeset.BalanceCounterparty1Code.mmMultilateral);
 				trace_lazy = () -> BalanceCounterpartyCode.mmObject();
 			}
 		});

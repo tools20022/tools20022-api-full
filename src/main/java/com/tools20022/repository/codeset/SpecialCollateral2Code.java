@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateral2Code#GeneralCollateral
- * SpecialCollateral2Code.GeneralCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateral2Code#mmGeneralCollateral
+ * SpecialCollateral2Code.mmGeneralCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateral2Code#SpecialCollateral
- * SpecialCollateral2Code.SpecialCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateral2Code#mmSpecialCollateral
+ * SpecialCollateral2Code.mmSpecialCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateral2Code#MatchedAndReverseRepurchaseAgreement
- * SpecialCollateral2Code.MatchedAndReverseRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateral2Code#mmMatchedAndReverseRepurchaseAgreement
+ * SpecialCollateral2Code.mmMatchedAndReverseRepurchaseAgreement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	 * name} = "GeneralCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode GeneralCollateral = new MMCode() {
+	public static final MMCode mmGeneralCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralCollateral";
@@ -104,7 +104,7 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	 * name} = "SpecialCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCollateral = new MMCode() {
+	public static final MMCode mmSpecialCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCollateral";
@@ -127,7 +127,7 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	 * name} = "MatchedAndReverseRepurchaseAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode MatchedAndReverseRepurchaseAgreement = new MMCode() {
+	public static final MMCode mmMatchedAndReverseRepurchaseAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedAndReverseRepurchaseAgreement";
@@ -138,12 +138,12 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SpecialCollateral2Code";
 				definition = "Specifies the collateral type against which all repurchase agreements are conducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SpecialCollateral2Code.GeneralCollateral, com.tools20022.repository.codeset.SpecialCollateral2Code.SpecialCollateral,
-						com.tools20022.repository.codeset.SpecialCollateral2Code.MatchedAndReverseRepurchaseAgreement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SpecialCollateral2Code.mmGeneralCollateral, com.tools20022.repository.codeset.SpecialCollateral2Code.mmSpecialCollateral,
+						com.tools20022.repository.codeset.SpecialCollateral2Code.mmMatchedAndReverseRepurchaseAgreement);
 				trace_lazy = () -> SpecialCollateralCode.mmObject();
 			}
 		});

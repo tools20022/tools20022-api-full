@@ -29,10 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliverReturnCode#Deliver
- * DeliverReturnCode.Deliver}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliverReturnCode#Return
- * DeliverReturnCode.Return}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DeliverReturnCode#mmDeliver
+ * DeliverReturnCode.mmDeliver}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliverReturnCode#mmReturn
+ * DeliverReturnCode.mmReturn}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +88,7 @@ public class DeliverReturnCode {
 	 * definition} = "Specifies that the collateral is to be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deliver = new MMCode() {
+	public static final MMCode mmDeliver = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliver";
@@ -117,7 +118,7 @@ public class DeliverReturnCode {
 	 * definition} = "Specifies that the collateral is to be returned."</li>
 	 * </ul>
 	 */
-	public static final MMCode Return = new MMCode() {
+	public static final MMCode mmReturn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
@@ -130,12 +131,12 @@ public class DeliverReturnCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DELV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliverReturnCode";
 				definition = "Specifies if the collateral is to be delivered or returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliverReturnCode.Deliver, com.tools20022.repository.codeset.DeliverReturnCode.Return);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliverReturnCode.mmDeliver, com.tools20022.repository.codeset.DeliverReturnCode.mmReturn);
 				derivation_lazy = () -> Arrays.asList(DeliverReturn1Code.mmObject());
 			}
 		});

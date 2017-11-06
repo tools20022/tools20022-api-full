@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification31#Identification
- * DocumentIdentification31.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification31#mmIdentification
+ * DocumentIdentification31.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification31#LinkageType
- * DocumentIdentification31.LinkageType}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification31#mmLinkageType
+ * DocumentIdentification31.mmLinkageType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,86 +50,92 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#MovementPreliminaryAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06#mmMovementPreliminaryAdviceIdentification
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.
- * MovementPreliminaryAdviceIdentification}</li>
+ * mmMovementPreliminaryAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06#CancelledInstructionIdentification
- * CorporateActionInstructionV06.CancelledInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06#mmCancelledInstructionIdentification
+ * CorporateActionInstructionV06.mmCancelledInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06#InstructionCancellationRequestIdentification
- * CorporateActionInstructionV06.InstructionCancellationRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06#mmInstructionCancellationRequestIdentification
+ * CorporateActionInstructionV06.mmInstructionCancellationRequestIdentification}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#PreviousMovementPreliminaryAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmPreviousMovementPreliminaryAdviceIdentification
  * CorporateActionMovementPreliminaryAdviceV07.
- * PreviousMovementPreliminaryAdviceIdentification}</li>
+ * mmPreviousMovementPreliminaryAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#NotificationIdentification
- * CorporateActionMovementPreliminaryAdviceV07.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmNotificationIdentification
+ * CorporateActionMovementPreliminaryAdviceV07.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#MovementConfirmationIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07#mmMovementConfirmationIdentification
  * CorporateActionMovementPreliminaryAdviceV07.
- * MovementConfirmationIdentification}</li>
+ * mmMovementConfirmationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#NotificationIdentification
- * CorporateActionMovementConfirmationV07.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#mmNotificationIdentification
+ * CorporateActionMovementConfirmationV07.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#MovementPreliminaryAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07#mmMovementPreliminaryAdviceIdentification
  * CorporateActionMovementConfirmationV07.
- * MovementPreliminaryAdviceIdentification}</li>
+ * mmMovementPreliminaryAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#PreviousNotificationIdentification
- * CorporateActionNotificationV06.PreviousNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmPreviousNotificationIdentification
+ * CorporateActionNotificationV06.mmPreviousNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV06#InstructionIdentification
- * CorporateActionInstructionCancellationRequestV06.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV06#mmInstructionIdentification
+ * CorporateActionInstructionCancellationRequestV06.mmInstructionIdentification}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#MovementConfirmationIdentification
- * CorporateActionMovementReversalAdviceV07.MovementConfirmationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#mmMovementConfirmationIdentification
+ * CorporateActionMovementReversalAdviceV07.mmMovementConfirmationIdentification
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#PreviousNotificationIdentification
- * CorporateActionNotificationV07.PreviousNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmPreviousNotificationIdentification
+ * CorporateActionNotificationV07.mmPreviousNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#NotificationIdentification
- * CorporateActionMovementConfirmationV08.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#mmNotificationIdentification
+ * CorporateActionMovementConfirmationV08.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#MovementPreliminaryAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08#mmMovementPreliminaryAdviceIdentification
  * CorporateActionMovementConfirmationV08.
- * MovementPreliminaryAdviceIdentification}</li>
+ * mmMovementPreliminaryAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV07#InstructionIdentification
- * CorporateActionInstructionCancellationRequestV07.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV07#mmInstructionIdentification
+ * CorporateActionInstructionCancellationRequestV07.mmInstructionIdentification}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#PreviousMovementPreliminaryAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmPreviousMovementPreliminaryAdviceIdentification
  * CorporateActionMovementPreliminaryAdviceV08.
- * PreviousMovementPreliminaryAdviceIdentification}</li>
+ * mmPreviousMovementPreliminaryAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#NotificationIdentification
- * CorporateActionMovementPreliminaryAdviceV08.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmNotificationIdentification
+ * CorporateActionMovementPreliminaryAdviceV08.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#MovementConfirmationIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmMovementConfirmationIdentification
  * CorporateActionMovementPreliminaryAdviceV08.
- * MovementConfirmationIdentification}</li>
+ * mmMovementConfirmationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#MovementConfirmationIdentification
- * CorporateActionMovementReversalAdviceV08.MovementConfirmationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmMovementConfirmationIdentification
+ * CorporateActionMovementReversalAdviceV08.mmMovementConfirmationIdentification
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#MovementPreliminaryAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmMovementPreliminaryAdviceIdentification
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
- * MovementPreliminaryAdviceIdentification}</li>
+ * mmMovementPreliminaryAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#CancelledInstructionIdentification
- * CorporateActionInstructionV07.CancelledInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmCancelledInstructionIdentification
+ * CorporateActionInstructionV07.mmCancelledInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#InstructionCancellationRequestIdentification
- * CorporateActionInstructionV07.InstructionCancellationRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmInstructionCancellationRequestIdentification
+ * CorporateActionInstructionV07.mmInstructionCancellationRequestIdentification}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,6 +153,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identifies the document.
 	 * <p>
@@ -159,8 +166,8 @@ public class DocumentIdentification31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,25 +187,26 @@ public class DocumentIdentification31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification15#Identification
-	 * DocumentIdentification15.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification15#mmIdentification
+	 * DocumentIdentification15.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification31.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification15.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification15.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ProcessingPosition7Choice linkageType;
 	/**
 	 * Specifies when this document is to be processed relative to an other
 	 * referred document.
@@ -230,11 +238,11 @@ public class DocumentIdentification31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification15#LinkageType
-	 * DocumentIdentification15.LinkageType}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification15#mmLinkageType
+	 * DocumentIdentification15.mmLinkageType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentIdentification31.mmObject();
 			isDerived = false;
@@ -242,38 +250,41 @@ public class DocumentIdentification31 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this document is to be processed relative to an other referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification15.LinkageType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification15.mmLinkageType;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingPosition7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProcessingPosition7Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification31.Identification, com.tools20022.repository.msg.DocumentIdentification31.LinkageType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification31.mmIdentification, com.tools20022.repository.msg.DocumentIdentification31.mmLinkageType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmCancelledInstructionIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmInstructionCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmPreviousMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmMovementConfirmationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPreviousNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV06.mmInstructionIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmMovementConfirmationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPreviousNotificationIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV07.mmInstructionIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmPreviousMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmMovementConfirmationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmMovementConfirmationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmCancelledInstructionIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmInstructionCancellationRequestIdentification);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.MovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV06.CancelledInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionV06.InstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.PreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.NotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.MovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.NotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.MovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV06.PreviousNotificationIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV06.InstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.MovementConfirmationIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV07.PreviousNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.NotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.MovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV07.InstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.PreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.NotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.MovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.MovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.MovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV07.CancelledInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionV07.InstructionCancellationRequestIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification31";
 				definition = "Identification of a document and type of link.";
@@ -281,5 +292,21 @@ public class DocumentIdentification31 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ProcessingPosition7Choice getLinkageType() {
+		return linkageType;
+	}
+
+	public void setLinkageType(ProcessingPosition7Choice linkageType) {
+		this.linkageType = linkageType;
 	}
 }

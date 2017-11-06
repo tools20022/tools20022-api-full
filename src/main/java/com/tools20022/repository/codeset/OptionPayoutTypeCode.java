@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#Vanilla
- * OptionPayoutTypeCode.Vanilla}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#mmVanilla
+ * OptionPayoutTypeCode.mmVanilla}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#Capped
- * OptionPayoutTypeCode.Capped}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#mmCapped
+ * OptionPayoutTypeCode.mmCapped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#Binary
- * OptionPayoutTypeCode.Binary}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#mmBinary
+ * OptionPayoutTypeCode.mmBinary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +87,7 @@ public class OptionPayoutTypeCode {
 	 * definition} = "Indicates the type of vanilla option."</li>
 	 * </ul>
 	 */
-	public static final MMCode Vanilla = new MMCode() {
+	public static final MMCode mmVanilla = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vanilla";
@@ -117,7 +117,7 @@ public class OptionPayoutTypeCode {
 	 * definition} = "Indicates the type of capped option."</li>
 	 * </ul>
 	 */
-	public static final MMCode Capped = new MMCode() {
+	public static final MMCode mmCapped = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capped";
@@ -147,7 +147,7 @@ public class OptionPayoutTypeCode {
 	 * definition} = "Indicates the type of binaryoption."</li>
 	 * </ul>
 	 */
-	public static final MMCode Binary = new MMCode() {
+	public static final MMCode mmBinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Binary";
@@ -160,11 +160,12 @@ public class OptionPayoutTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionPayoutTypeCode";
 				definition = "Indicates the type of payout that will result from an in-the-money option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionPayoutTypeCode.Vanilla, com.tools20022.repository.codeset.OptionPayoutTypeCode.Capped, com.tools20022.repository.codeset.OptionPayoutTypeCode.Binary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionPayoutTypeCode.mmVanilla, com.tools20022.repository.codeset.OptionPayoutTypeCode.mmCapped,
+						com.tools20022.repository.codeset.OptionPayoutTypeCode.mmBinary);
 				derivation_lazy = () -> Arrays.asList(OptionPayoutType1Code.mmObject());
 			}
 		});

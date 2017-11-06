@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.NetworkAccess;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parameters to communicate with a host.
@@ -37,18 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters3#Address
- * NetworkParameters3.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters3#UserName
- * NetworkParameters3.UserName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters3#AccessCode
- * NetworkParameters3.AccessCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters3#mmAddress
+ * NetworkParameters3.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters3#mmUserName
+ * NetworkParameters3.mmUserName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters3#ServerCertificate
- * NetworkParameters3.ServerCertificate}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters3#mmAccessCode
+ * NetworkParameters3.mmAccessCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters3#ServerCertificateIdentifier
- * NetworkParameters3.ServerCertificateIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters3#mmServerCertificate
+ * NetworkParameters3.mmServerCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters3#mmServerCertificateIdentifier
+ * NetworkParameters3.mmServerCertificateIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetworkParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.NetworkParameters4> address;
 	/**
 	 * Network addresses of the host.
 	 * <p>
@@ -114,13 +117,14 @@ public class NetworkParameters3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters5#Address
-	 * NetworkParameters5.Address}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#mmAddress
+	 * NetworkParameters5.mmAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Address = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
@@ -128,12 +132,13 @@ public class NetworkParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Network addresses of the host.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.Address);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmAddress);
 			minOccurs = 1;
-			type_lazy = () -> NetworkParameters4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
 		}
 	};
+	protected Max35Text userName;
 	/**
 	 * User name identifying the client.
 	 * <p>
@@ -146,8 +151,8 @@ public class NetworkParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#UserName
-	 * NetworkAccess.UserName}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmUserName
+	 * NetworkAccess.mmUserName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,33 +173,34 @@ public class NetworkParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#UserName
-	 * NetworkParameters5.UserName}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#mmUserName
+	 * NetworkParameters5.mmUserName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters1#UserName
-	 * NetworkParameters1.UserName}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmUserName
+	 * NetworkParameters1.mmUserName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UserName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmUserName;
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.UserName;
 			isDerived = false;
 			xmlTag = "UsrNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserName";
 			definition = "User name identifying the client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.UserName;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.UserName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmUserName);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmUserName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Binary accessCode;
 	/**
 	 * Password authenticating the client.
 	 * <p>
@@ -207,8 +213,8 @@ public class NetworkParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#AccessCode
-	 * NetworkAccess.AccessCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmAccessCode
+	 * NetworkAccess.mmAccessCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -229,35 +235,37 @@ public class NetworkParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#AccessCode
-	 * NetworkParameters5.AccessCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters6#Access
-	 * NetworkParameters6.Access}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#mmAccessCode
+	 * NetworkParameters5.mmAccessCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters6#mmAccess
+	 * NetworkParameters6.mmAccess}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters1#AccessCode
-	 * NetworkParameters1.AccessCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters1#mmAccessCode
+	 * NetworkParameters1.mmAccessCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccessCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmAccessCode;
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.AccessCode;
 			isDerived = false;
 			xmlTag = "AccsCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccessCode";
 			definition = "Password authenticating the client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.AccessCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.AccessCode, com.tools20022.repository.msg.NetworkParameters6.Access);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmAccessCode, com.tools20022.repository.msg.NetworkParameters6.mmAccess);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmAccessCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
+	protected List<Max3000Binary> serverCertificate;
 	/**
 	 * X.509 Certificate required to authenticate the server.
 	 * <p>
@@ -288,13 +296,13 @@ public class NetworkParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#ServerCertificate
-	 * NetworkParameters5.ServerCertificate}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#mmServerCertificate
+	 * NetworkParameters5.mmServerCertificate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServerCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServerCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
@@ -302,11 +310,12 @@ public class NetworkParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServerCertificate";
 			definition = "X.509 Certificate required to authenticate the server.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.ServerCertificate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmServerCertificate);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	protected List<Max140Binary> serverCertificateIdentifier;
 	/**
 	 * Identification of the X.509 Certificate required to authenticate the
 	 * server, for instance a digest of the certificate.
@@ -340,13 +349,13 @@ public class NetworkParameters3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#ServerCertificateIdentifier
-	 * NetworkParameters5.ServerCertificateIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.NetworkParameters5#mmServerCertificateIdentifier
+	 * NetworkParameters5.mmServerCertificateIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServerCertificateIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServerCertificateIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
@@ -354,7 +363,7 @@ public class NetworkParameters3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServerCertificateIdentifier";
 			definition = "Identification of the X.509 Certificate required to authenticate the server, for instance a digest of the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.ServerCertificateIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmServerCertificateIdentifier);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
@@ -363,17 +372,57 @@ public class NetworkParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.Address, com.tools20022.repository.msg.NetworkParameters3.UserName, com.tools20022.repository.msg.NetworkParameters3.AccessCode,
-						com.tools20022.repository.msg.NetworkParameters3.ServerCertificate, com.tools20022.repository.msg.NetworkParameters3.ServerCertificateIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.mmAddress, com.tools20022.repository.msg.NetworkParameters3.mmUserName,
+						com.tools20022.repository.msg.NetworkParameters3.mmAccessCode, com.tools20022.repository.msg.NetworkParameters3.mmServerCertificate, com.tools20022.repository.msg.NetworkParameters3.mmServerCertificateIdentifier);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters3";
 				definition = "Parameters to communicate with a host.";
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters4.mmObject(), NetworkParameters5.mmObject(), NetworkParameters6.mmObject());
 				previousVersion_lazy = () -> NetworkParameters1.mmObject();
-				nextVersions_lazy = () -> Arrays.asList(NetworkParameters4.mmObject(), NetworkParameters5.mmObject(), NetworkParameters6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<NetworkParameters4> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<com.tools20022.repository.msg.NetworkParameters4> address) {
+		this.address = address;
+	}
+
+	public Max35Text getUserName() {
+		return userName;
+	}
+
+	public void setUserName(Max35Text userName) {
+		this.userName = userName;
+	}
+
+	public Max35Binary getAccessCode() {
+		return accessCode;
+	}
+
+	public void setAccessCode(Max35Binary accessCode) {
+		this.accessCode = accessCode;
+	}
+
+	public List<Max3000Binary> getServerCertificate() {
+		return serverCertificate;
+	}
+
+	public void setServerCertificate(List<Max3000Binary> serverCertificate) {
+		this.serverCertificate = serverCertificate;
+	}
+
+	public List<Max140Binary> getServerCertificateIdentifier() {
+		return serverCertificateIdentifier;
+	}
+
+	public void setServerCertificateIdentifier(List<Max140Binary> serverCertificateIdentifier) {
+		this.serverCertificateIdentifier = serverCertificateIdentifier;
 	}
 }

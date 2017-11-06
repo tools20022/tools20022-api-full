@@ -31,17 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#All
- * QueryType1Code.All}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#Changes
- * QueryType1Code.Changes}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#mmAll
+ * QueryType1Code.mmAll}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#mmChanges
+ * QueryType1Code.mmChanges}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class QueryType1Code {
 	 * "Specifies that the query requests that all matching items be returned."</li>
 	 * </ul>
 	 */
-	public static final MMCode All = new MMCode() {
+	public static final MMCode mmAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
@@ -118,7 +118,7 @@ public class QueryType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Changes = new MMCode() {
+	public static final MMCode mmChanges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changes";
@@ -131,12 +131,12 @@ public class QueryType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QueryType1Code";
 				definition = "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType1Code.All, com.tools20022.repository.codeset.QueryType1Code.Changes);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType1Code.mmAll, com.tools20022.repository.codeset.QueryType1Code.mmChanges);
 			}
 		});
 		return mmObject_lazy.get();

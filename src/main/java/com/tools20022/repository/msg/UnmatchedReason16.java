@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UnmatchedReason16#Code
- * UnmatchedReason16.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnmatchedReason16#mmCode
+ * UnmatchedReason16.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnmatchedReason16#AdditionalReasonInformation
- * UnmatchedReason16.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UnmatchedReason16#mmAdditionalReasonInformation
+ * UnmatchedReason16.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnmatchedReason16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnmatchedReason23Choice code;
 	/**
 	 * Specifies the reason why the instruction has an unmatched status.
 	 * <p>
@@ -80,8 +81,8 @@ public class UnmatchedReason16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#UnmatchedReason
-	 * SecuritiesTradeStatusReason.UnmatchedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmUnmatchedReason
+	 * SecuritiesTradeStatusReason.mmUnmatchedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,26 +103,27 @@ public class UnmatchedReason16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnmatchedReason6#Code
-	 * UnmatchedReason6.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnmatchedReason6#mmCode
+	 * UnmatchedReason6.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> UnmatchedReason16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.UnmatchedReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction has an unmatched status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnmatchedReason6.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnmatchedReason6.mmCode;
 			maxOccurs = 1;
-			type_lazy = () -> UnmatchedReason23Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UnmatchedReason23Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Provides additional reason information that cannot be provided in a
 	 * structured field.
@@ -135,8 +137,8 @@ public class UnmatchedReason16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,22 +160,22 @@ public class UnmatchedReason16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnmatchedReason6#AdditionalReasonInformation
-	 * UnmatchedReason6.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnmatchedReason6#mmAdditionalReasonInformation
+	 * UnmatchedReason6.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> UnmatchedReason16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional reason information that cannot be provided in a structured field.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnmatchedReason6.AdditionalReasonInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnmatchedReason6.mmAdditionalReasonInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -181,9 +183,9 @@ public class UnmatchedReason16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnmatchedReason16.Code, com.tools20022.repository.msg.UnmatchedReason16.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnmatchedReason16.mmCode, com.tools20022.repository.msg.UnmatchedReason16.mmAdditionalReasonInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason16";
 				definition = "Specifies the reason why the instruction has an unmatched status.";
@@ -191,5 +193,21 @@ public class UnmatchedReason16 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnmatchedReason23Choice getCode() {
+		return code;
+	}
+
+	public void setCode(UnmatchedReason23Choice code) {
+		this.code = code;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

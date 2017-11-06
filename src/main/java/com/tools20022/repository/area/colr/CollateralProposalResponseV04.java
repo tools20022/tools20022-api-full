@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -68,24 +69,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#TransactionIdentification
- * CollateralProposalResponseV04.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#mmTransactionIdentification
+ * CollateralProposalResponseV04.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#Obligation
- * CollateralProposalResponseV04.Obligation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#mmObligation
+ * CollateralProposalResponseV04.mmObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#ProposalResponse
- * CollateralProposalResponseV04.ProposalResponse}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#mmProposalResponse
+ * CollateralProposalResponseV04.mmProposalResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#SupplementaryData
- * CollateralProposalResponseV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#mmSupplementaryData
+ * CollateralProposalResponseV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV04#identifier
- * CollateralProposalResponseV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code colr.008.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,6 +112,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralProposalResponseV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as know by the instructing
 	 * party.
@@ -140,30 +140,31 @@ public class CollateralProposalResponseV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#TransactionIdentification
-	 * CollateralProposalResponseV05.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#mmTransactionIdentification
+	 * CollateralProposalResponseV05.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#TransactionIdentification
-	 * CollateralProposalResponseV03.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#mmTransactionIdentification
+	 * CollateralProposalResponseV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.TransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.mmTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Obligation4 obligation;
 	/**
 	 * Provides information like the identification of the party or parties
 	 * associated with the collateral agreement, the exposure type and the
@@ -192,30 +193,31 @@ public class CollateralProposalResponseV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#Obligation
-	 * CollateralProposalResponseV05.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#mmObligation
+	 * CollateralProposalResponseV05.mmObligation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#Obligation
-	 * CollateralProposalResponseV03.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#mmObligation
+	 * CollateralProposalResponseV03.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Obligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.Obligation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.Obligation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.mmObligation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.mmObligation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
 	};
+	protected CollateralProposalResponse2Choice proposalResponse;
 	/**
 	 * Details the response to the collateral which has been proposed for the
 	 * margin call. The proposed collateral can be accepted or rejected.<br>
@@ -244,30 +246,31 @@ public class CollateralProposalResponseV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#ProposalResponse
-	 * CollateralProposalResponseV05.ProposalResponse}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#mmProposalResponse
+	 * CollateralProposalResponseV05.mmProposalResponse}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#ProposalResponse
-	 * CollateralProposalResponseV03.ProposalResponse}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#mmProposalResponse
+	 * CollateralProposalResponseV03.mmProposalResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProposalResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProposalResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrpslRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalResponse";
 			definition = "Details the response to the collateral which has been proposed for the margin call. The proposed collateral can be accepted or rejected.\r\n";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.ProposalResponse;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.ProposalResponse);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.mmProposalResponse);
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.mmProposalResponse;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CollateralProposalResponse2Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -296,54 +299,27 @@ public class CollateralProposalResponseV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#SupplementaryData
-	 * CollateralProposalResponseV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV05#mmSupplementaryData
+	 * CollateralProposalResponseV05.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#SupplementaryData
-	 * CollateralProposalResponseV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalResponseV03#mmSupplementaryData
+	 * CollateralProposalResponseV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "colr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "colr";
-			messageFunctionality = "008";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -353,17 +329,56 @@ public class CollateralProposalResponseV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposalResponseV04";
 				definition = "Scope\r\nThe CollateralProposalResponse message is sent by the collateral taker or its collateral manager to the collateral giver or its collateral manager to either accept or reject the collateral which has been proposed for the margin call. This message applies to both initial and counter proposals. If the collateral proposal is rejected then a new collateral proposal must be made.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe CollateralProposalResponse message can be sent in response to a previously received CollateralProposal message in order to accept or reject the collateral that has been proposed to cover the margin call.";
-				previousVersion_lazy = () -> CollateralProposalResponseV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CollateralProposalResponseV05.mmObject());
+				previousVersion_lazy = () -> CollateralProposalResponseV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CollateralManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CollPrpslRspn";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV04.TransactionIdentification, com.tools20022.repository.area.colr.CollateralProposalResponseV04.Obligation,
-						com.tools20022.repository.area.colr.CollateralProposalResponseV04.ProposalResponse, com.tools20022.repository.area.colr.CollateralProposalResponseV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalResponseV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV04.mmTransactionIdentification, com.tools20022.repository.area.colr.CollateralProposalResponseV04.mmObligation,
+						com.tools20022.repository.area.colr.CollateralProposalResponseV04.mmProposalResponse, com.tools20022.repository.area.colr.CollateralProposalResponseV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "colr";
+						messageFunctionality = "008";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Obligation4 getObligation() {
+		return obligation;
+	}
+
+	public void setObligation(Obligation4 obligation) {
+		this.obligation = obligation;
+	}
+
+	public CollateralProposalResponse2Choice getProposalResponse() {
+		return proposalResponse;
+	}
+
+	public void setProposalResponse(CollateralProposalResponse2Choice proposalResponse) {
+		this.proposalResponse = proposalResponse;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

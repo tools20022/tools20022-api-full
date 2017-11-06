@@ -37,25 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IndividualPayment#BulkPayment
- * IndividualPayment.BulkPayment}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#Groups
- * BulkPayment.Groups}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#ReferredDocument
- * TransactionCertificate2.ReferredDocument}</li>
+ * {@linkplain com.tools20022.repository.entity.IndividualPayment#mmBulkPayment
+ * IndividualPayment.mmBulkPayment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -70,13 +53,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * CreditTransfer}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
+ * BulkPayment.mmGroups}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#mmReferredDocument
+ * TransactionCertificate2.mmReferredDocument}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndividualPayment extends Payment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected BulkPayment bulkPayment;
 	/**
 	 * Payment hich groups a series of individual payments.
 	 * <p>
@@ -100,8 +101,8 @@ public class IndividualPayment extends Payment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BulkPayment#Groups
-	 * BulkPayment.Groups}</li>
+	 * {@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
+	 * BulkPayment.mmGroups}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -125,35 +126,43 @@ public class IndividualPayment extends Payment {
 	 * definition} = "Payment hich groups a series of individual payments."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd BulkPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBulkPayment = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> IndividualPayment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BulkPayment";
 			definition = "Payment hich groups a series of individual payments.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BulkPayment.Groups;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmGroups;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndividualPayment";
 				definition = "Payment which consists of one single transaction. This payment may be grouped with other similar payments to form a bulk payment.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BulkPayment.Groups);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate2.ReferredDocument);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BulkPayment.mmGroups);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate2.mmReferredDocument);
 				subType_lazy = () -> Arrays.asList(ChequePayment.mmObject(), CardPayment.mmObject(), DirectDebit.mmObject(), CashDeposit.mmObject(), CreditTransfer.mmObject());
 				superType_lazy = () -> Payment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndividualPayment.BulkPayment);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndividualPayment.mmBulkPayment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BulkPayment getBulkPayment() {
+		return bulkPayment;
+	}
+
+	public void setBulkPayment(com.tools20022.repository.entity.BulkPayment bulkPayment) {
+		this.bulkPayment = bulkPayment;
 	}
 }

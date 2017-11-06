@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfCancellationsPerStatus1#DetailedNumberOfTransactions
- * NumberOfCancellationsPerStatus1.DetailedNumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfCancellationsPerStatus1#mmDetailedNumberOfTransactions
+ * NumberOfCancellationsPerStatus1.mmDetailedNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfCancellationsPerStatus1#DetailedStatus
- * NumberOfCancellationsPerStatus1.DetailedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfCancellationsPerStatus1#mmDetailedStatus
+ * NumberOfCancellationsPerStatus1.mmDetailedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfCancellationsPerStatus1#DetailedControlSum
- * NumberOfCancellationsPerStatus1.DetailedControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfCancellationsPerStatus1#mmDetailedControlSum
+ * NumberOfCancellationsPerStatus1.mmDetailedControlSum}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NumberOfCancellationsPerStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15NumericText detailedNumberOfTransactions;
 	/**
 	 * Number of individual cancellation requests contained in the message,
 	 * detailed per status.
@@ -97,7 +98,7 @@ public class NumberOfCancellationsPerStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfCancellationsPerStatus1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class NumberOfCancellationsPerStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedNumberOfTransactions";
 			definition = "Number of individual cancellation requests contained in the message, detailed per status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected CancellationIndividualStatus1Code detailedStatus;
 	/**
 	 * Common cancellation request status for all individual cancellation
 	 * requests reported.
@@ -141,7 +143,7 @@ public class NumberOfCancellationsPerStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfCancellationsPerStatus1.mmObject();
 			isDerived = false;
@@ -149,11 +151,12 @@ public class NumberOfCancellationsPerStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedStatus";
 			definition = "Common cancellation request status for all individual cancellation requests reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancellationIndividualStatus1Code.mmObject();
 		}
 	};
+	protected DecimalNumber detailedControlSum;
 	/**
 	 * Total of all individual amounts included in the message, irrespective of
 	 * currencies, detailed per status.
@@ -185,7 +188,7 @@ public class NumberOfCancellationsPerStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfCancellationsPerStatus1.mmObject();
 			isDerived = false;
@@ -193,8 +196,8 @@ public class NumberOfCancellationsPerStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies, detailed per status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -202,14 +205,38 @@ public class NumberOfCancellationsPerStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfCancellationsPerStatus1.DetailedNumberOfTransactions, com.tools20022.repository.msg.NumberOfCancellationsPerStatus1.DetailedStatus,
-						com.tools20022.repository.msg.NumberOfCancellationsPerStatus1.DetailedControlSum);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfCancellationsPerStatus1.mmDetailedNumberOfTransactions, com.tools20022.repository.msg.NumberOfCancellationsPerStatus1.mmDetailedStatus,
+						com.tools20022.repository.msg.NumberOfCancellationsPerStatus1.mmDetailedControlSum);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NumberOfCancellationsPerStatus1";
 				definition = "Set of elements used to provide detailed information on the number of transactions that are reported with a specific cancellation status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15NumericText getDetailedNumberOfTransactions() {
+		return detailedNumberOfTransactions;
+	}
+
+	public void setDetailedNumberOfTransactions(Max15NumericText detailedNumberOfTransactions) {
+		this.detailedNumberOfTransactions = detailedNumberOfTransactions;
+	}
+
+	public CancellationIndividualStatus1Code getDetailedStatus() {
+		return detailedStatus;
+	}
+
+	public void setDetailedStatus(CancellationIndividualStatus1Code detailedStatus) {
+		this.detailedStatus = detailedStatus;
+	}
+
+	public DecimalNumber getDetailedControlSum() {
+		return detailedControlSum;
+	}
+
+	public void setDetailedControlSum(DecimalNumber detailedControlSum) {
+		this.detailedControlSum = detailedControlSum;
 	}
 }

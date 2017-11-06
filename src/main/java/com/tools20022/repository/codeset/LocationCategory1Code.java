@@ -35,26 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#Fixed
- * LocationCategory1Code.Fixed}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#mmFixed
+ * LocationCategory1Code.mmFixed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#Aboard
- * LocationCategory1Code.Aboard}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#mmAboard
+ * LocationCategory1Code.mmAboard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#Nomadic
- * LocationCategory1Code.Nomadic}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#mmNomadic
+ * LocationCategory1Code.mmNomadic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#MailOrderTelephoneOrder
- * LocationCategory1Code.MailOrderTelephoneOrder}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory1Code#Home
- * LocationCategory1Code.Home}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#mmMailOrderTelephoneOrder
+ * LocationCategory1Code.mmMailOrderTelephoneOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory1Code#mmHome
+ * LocationCategory1Code.mmHome}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +93,7 @@ public class LocationCategory1Code extends LocationCategoryCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fixed = new MMCode() {
+	public static final MMCode mmFixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
@@ -115,7 +116,7 @@ public class LocationCategory1Code extends LocationCategoryCode {
 	 * name} = "Aboard"</li>
 	 * </ul>
 	 */
-	public static final MMCode Aboard = new MMCode() {
+	public static final MMCode mmAboard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aboard";
@@ -138,7 +139,7 @@ public class LocationCategory1Code extends LocationCategoryCode {
 	 * name} = "Nomadic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Nomadic = new MMCode() {
+	public static final MMCode mmNomadic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nomadic";
@@ -161,7 +162,7 @@ public class LocationCategory1Code extends LocationCategoryCode {
 	 * name} = "MailOrderTelephoneOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode MailOrderTelephoneOrder = new MMCode() {
+	public static final MMCode mmMailOrderTelephoneOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailOrderTelephoneOrder";
@@ -184,7 +185,7 @@ public class LocationCategory1Code extends LocationCategoryCode {
 	 * name} = "Home"</li>
 	 * </ul>
 	 */
-	public static final MMCode Home = new MMCode() {
+	public static final MMCode mmHome = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Home";
@@ -195,13 +196,13 @@ public class LocationCategory1Code extends LocationCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LocationCategory1Code";
 				definition = "Location category code of the place where the merchant actually performed the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategory1Code.Fixed, com.tools20022.repository.codeset.LocationCategory1Code.Aboard, com.tools20022.repository.codeset.LocationCategory1Code.Nomadic,
-						com.tools20022.repository.codeset.LocationCategory1Code.MailOrderTelephoneOrder, com.tools20022.repository.codeset.LocationCategory1Code.Home);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategory1Code.mmFixed, com.tools20022.repository.codeset.LocationCategory1Code.mmAboard,
+						com.tools20022.repository.codeset.LocationCategory1Code.mmNomadic, com.tools20022.repository.codeset.LocationCategory1Code.mmMailOrderTelephoneOrder, com.tools20022.repository.codeset.LocationCategory1Code.mmHome);
 				trace_lazy = () -> LocationCategoryCode.mmObject();
 			}
 		});

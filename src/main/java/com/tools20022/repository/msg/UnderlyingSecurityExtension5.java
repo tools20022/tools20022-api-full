@@ -38,21 +38,21 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension5#PlaceAndName
- * UnderlyingSecurityExtension5.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension5#mmPlaceAndName
+ * UnderlyingSecurityExtension5.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension5#DTCAssetType
- * UnderlyingSecurityExtension5.DTCAssetType}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension5#mmDTCAssetType
+ * UnderlyingSecurityExtension5.mmDTCAssetType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension5#DTCAssetClass
- * UnderlyingSecurityExtension5.DTCAssetClass}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension5#mmDTCAssetClass
+ * UnderlyingSecurityExtension5.mmDTCAssetClass}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -68,6 +68,7 @@ import java.util.function.Supplier;
 public class UnderlyingSecurityExtension5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -95,7 +96,7 @@ public class UnderlyingSecurityExtension5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension5.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class UnderlyingSecurityExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DTCAssetType1Code dTCAssetType;
 	/**
 	 * Further classification of instruments into (issue) asset types at DTC
 	 * (The Depository Trust Corporation).
@@ -139,7 +141,7 @@ public class UnderlyingSecurityExtension5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension5.mmObject();
 			isDerived = false;
@@ -147,11 +149,12 @@ public class UnderlyingSecurityExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
 		}
 	};
+	protected AssetClass1Code dTCAssetClass;
 	/**
 	 * Classification of instruments into asset classes at DTC (The Depository
 	 * Trust Corporation).
@@ -183,7 +186,7 @@ public class UnderlyingSecurityExtension5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension5.mmObject();
 			isDerived = false;
@@ -191,8 +194,8 @@ public class UnderlyingSecurityExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
 		}
 	};
@@ -200,9 +203,9 @@ public class UnderlyingSecurityExtension5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityExtension5.PlaceAndName, com.tools20022.repository.msg.UnderlyingSecurityExtension5.DTCAssetType,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension5.DTCAssetClass);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityExtension5.mmPlaceAndName, com.tools20022.repository.msg.UnderlyingSecurityExtension5.mmDTCAssetType,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension5.mmDTCAssetClass);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -216,5 +219,29 @@ public class UnderlyingSecurityExtension5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public DTCAssetType1Code getDTCAssetType() {
+		return dTCAssetType;
+	}
+
+	public void setDTCAssetType(DTCAssetType1Code dTCAssetType) {
+		this.dTCAssetType = dTCAssetType;
+	}
+
+	public AssetClass1Code getDTCAssetClass() {
+		return dTCAssetClass;
+	}
+
+	public void setDTCAssetClass(AssetClass1Code dTCAssetClass) {
+		this.dTCAssetClass = dTCAssetClass;
 	}
 }

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cancellation response from the acquirer.
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction58#AuthorisationResult
- * CardPaymentTransaction58.AuthorisationResult}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction58#mmAuthorisationResult
+ * CardPaymentTransaction58.mmAuthorisationResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction58#Action
- * CardPaymentTransaction58.Action}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction58#mmAction
+ * CardPaymentTransaction58.mmAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentTransaction58 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuthorisationResult12 authorisationResult;
 	/**
 	 * Outcome of the authorisation, and actions to perform.
 	 * <p>
@@ -83,8 +85,8 @@ public class CardPaymentTransaction58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#Validation
-	 * CardPaymentAcquiring.Validation}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmValidation
+	 * CardPaymentAcquiring.mmValidation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,34 +107,35 @@ public class CardPaymentTransaction58 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction68#AuthorisationResult
-	 * CardPaymentTransaction68.AuthorisationResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction68#mmAuthorisationResult
+	 * CardPaymentTransaction68.mmAuthorisationResult}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction43#AuthorisationResult
-	 * CardPaymentTransaction43.AuthorisationResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction43#mmAuthorisationResult
+	 * CardPaymentTransaction43.mmAuthorisationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthorisationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> CardPaymentTransaction58.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.Validation;
 			isDerived = false;
 			xmlTag = "AuthstnRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResult";
 			definition = "Outcome of the authorisation, and actions to perform.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction43.AuthorisationResult;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction68.AuthorisationResult);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction68.mmAuthorisationResult);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction43.mmAuthorisationResult;
 			maxOccurs = 1;
-			type_lazy = () -> AuthorisationResult12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult12.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Action6> action;
 	/**
 	 * Set of actions to be performed by the POI (Point Of Interaction) system.
 	 * <p>
@@ -162,18 +165,18 @@ public class CardPaymentTransaction58 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction68#Action
-	 * CardPaymentTransaction68.Action}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction68#mmAction
+	 * CardPaymentTransaction68.mmAction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction43#Action
-	 * CardPaymentTransaction43.Action}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction43#mmAction
+	 * CardPaymentTransaction43.mmAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Action = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentTransaction58.mmObject();
 			isDerived = false;
@@ -181,27 +184,43 @@ public class CardPaymentTransaction58 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Set of actions to be performed by the POI (Point Of Interaction) system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction43.Action;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction68.Action);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction68.mmAction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction43.mmAction;
 			minOccurs = 0;
-			type_lazy = () -> Action6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Action6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction58.AuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction58.Action);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction58.mmAuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction58.mmAction);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction58";
 				definition = "Cancellation response from the acquirer.";
-				previousVersion_lazy = () -> CardPaymentTransaction43.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction68.mmObject());
+				previousVersion_lazy = () -> CardPaymentTransaction43.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuthorisationResult12 getAuthorisationResult() {
+		return authorisationResult;
+	}
+
+	public void setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult12 authorisationResult) {
+		this.authorisationResult = authorisationResult;
+	}
+
+	public List<Action6> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.msg.Action6> action) {
+		this.action = action;
 	}
 }

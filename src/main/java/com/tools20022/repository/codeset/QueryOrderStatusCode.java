@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#QueryUnconfirmedOrder
- * QueryOrderStatusCode.QueryUnconfirmedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#mmQueryUnconfirmedOrder
+ * QueryOrderStatusCode.mmQueryUnconfirmedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#QueryAllOrders
- * QueryOrderStatusCode.QueryAllOrders}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#mmQueryAllOrders
+ * QueryOrderStatusCode.mmQueryAllOrders}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#QueryPartiallyExecutedOrder
- * QueryOrderStatusCode.QueryPartiallyExecutedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#mmQueryPartiallyExecutedOrder
+ * QueryOrderStatusCode.mmQueryPartiallyExecutedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#QueryFullyExecutedOrder
- * QueryOrderStatusCode.QueryFullyExecutedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#mmQueryFullyExecutedOrder
+ * QueryOrderStatusCode.mmQueryFullyExecutedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#QueryOrdersForTheParty
- * QueryOrderStatusCode.QueryOrdersForTheParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#mmQueryOrdersForTheParty
+ * QueryOrderStatusCode.mmQueryOrdersForTheParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,7 +92,7 @@ public class QueryOrderStatusCode {
 	 * definition} = "Query for orders which are not confirmed by a party."</li>
 	 * </ul>
 	 */
-	public static final MMCode QueryUnconfirmedOrder = new MMCode() {
+	public static final MMCode mmQueryUnconfirmedOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryUnconfirmedOrder";
@@ -122,7 +122,7 @@ public class QueryOrderStatusCode {
 	 * definition} = "Query for all orders.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode QueryAllOrders = new MMCode() {
+	public static final MMCode mmQueryAllOrders = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryAllOrders";
@@ -152,7 +152,7 @@ public class QueryOrderStatusCode {
 	 * definition} = "Query for orders have been partially executed.  "</li>
 	 * </ul>
 	 */
-	public static final MMCode QueryPartiallyExecutedOrder = new MMCode() {
+	public static final MMCode mmQueryPartiallyExecutedOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPartiallyExecutedOrder";
@@ -182,7 +182,7 @@ public class QueryOrderStatusCode {
 	 * definition} = "Query for orders have been completely executed.  "</li>
 	 * </ul>
 	 */
-	public static final MMCode QueryFullyExecutedOrder = new MMCode() {
+	public static final MMCode mmQueryFullyExecutedOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryFullyExecutedOrder";
@@ -212,7 +212,7 @@ public class QueryOrderStatusCode {
 	 * definition} = "Query for all orders for a party."</li>
 	 * </ul>
 	 */
-	public static final MMCode QueryOrdersForTheParty = new MMCode() {
+	public static final MMCode mmQueryOrdersForTheParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryOrdersForTheParty";
@@ -225,13 +225,13 @@ public class QueryOrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QueryOrderStatusCode";
 				definition = "Specifies the inquiry status of order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryOrderStatusCode.QueryUnconfirmedOrder, com.tools20022.repository.codeset.QueryOrderStatusCode.QueryAllOrders,
-						com.tools20022.repository.codeset.QueryOrderStatusCode.QueryPartiallyExecutedOrder, com.tools20022.repository.codeset.QueryOrderStatusCode.QueryFullyExecutedOrder,
-						com.tools20022.repository.codeset.QueryOrderStatusCode.QueryOrdersForTheParty);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryUnconfirmedOrder, com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryAllOrders,
+						com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryPartiallyExecutedOrder, com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryFullyExecutedOrder,
+						com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryOrdersForTheParty);
 				derivation_lazy = () -> Arrays.asList(QueryOrderStatus1Code.mmObject());
 			}
 		});

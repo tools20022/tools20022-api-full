@@ -34,22 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCollateral1#HeldByPartyA
- * MarginCollateral1.HeldByPartyA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCollateral1#HeldByPartyB
- * MarginCollateral1.HeldByPartyB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCollateral1#PriorAgreedToPartyA
- * MarginCollateral1.PriorAgreedToPartyA}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCollateral1#mmHeldByPartyA
+ * MarginCollateral1.mmHeldByPartyA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCollateral1#PriorAgreedToPartyB
- * MarginCollateral1.PriorAgreedToPartyB}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCollateral1#mmHeldByPartyB
+ * MarginCollateral1.mmHeldByPartyB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCollateral1#InTransitToPartyA
- * MarginCollateral1.InTransitToPartyA}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCollateral1#mmPriorAgreedToPartyA
+ * MarginCollateral1.mmPriorAgreedToPartyA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCollateral1#InTransitToPartyB
- * MarginCollateral1.InTransitToPartyB}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCollateral1#mmPriorAgreedToPartyB
+ * MarginCollateral1.mmPriorAgreedToPartyB}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarginCollateral1#mmInTransitToPartyA
+ * MarginCollateral1.mmInTransitToPartyA}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarginCollateral1#mmInTransitToPartyB
+ * MarginCollateral1.mmInTransitToPartyB}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount heldByPartyA;
 	/**
 	 * Post haircut market value of all margin collateral held by party A.
 	 * <p>
@@ -88,8 +91,8 @@ public class MarginCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#HeldAmount
-	 * CollateralBalance.HeldAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmHeldAmount
+	 * CollateralBalance.mmHeldAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,20 +112,21 @@ public class MarginCollateral1 {
 	 * "Post haircut market value of all margin collateral held by party A."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HeldByPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHeldByPartyA = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.HeldAmount;
 			isDerived = false;
 			xmlTag = "HeldByPtyA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldByPartyA";
 			definition = "Post haircut market value of all margin collateral held by party A.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount heldByPartyB;
 	/**
 	 * Post haircut market value of all margin collateral held by party B.
 	 * <p>
@@ -136,8 +140,8 @@ public class MarginCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#HeldAmount
-	 * CollateralBalance.HeldAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmHeldAmount
+	 * CollateralBalance.mmHeldAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +161,21 @@ public class MarginCollateral1 {
 	 * "Post haircut market value of all margin collateral held by party B."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HeldByPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHeldByPartyB = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.HeldAmount;
 			isDerived = false;
 			xmlTag = "HeldByPtyB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldByPartyB";
 			definition = "Post haircut market value of all margin collateral held by party B.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount priorAgreedToPartyA;
 	/**
 	 * Sum of all margin agreed amounts due to party A from prior days’
 	 * collateral calls where collateral movements have not yet been agreed.
@@ -185,8 +190,8 @@ public class MarginCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#PriorAgreed
-	 * CollateralBalance.PriorAgreed}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmPriorAgreed
+	 * CollateralBalance.mmPriorAgreed}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,20 +212,21 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriorAgreedToPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriorAgreedToPartyA = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmPriorAgreed;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.PriorAgreed;
 			isDerived = false;
 			xmlTag = "PrrAgrdToPtyA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorAgreedToPartyA";
 			definition = "Sum of all margin agreed amounts due to party A from prior days’ collateral calls where collateral movements have not yet been agreed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount priorAgreedToPartyB;
 	/**
 	 * Sum of all margin agreed amounts due to party B from prior days’
 	 * collateral calls where collateral movements have not yet been agreed.
@@ -235,8 +241,8 @@ public class MarginCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#PriorAgreed
-	 * CollateralBalance.PriorAgreed}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmPriorAgreed
+	 * CollateralBalance.mmPriorAgreed}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,20 +263,21 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriorAgreedToPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriorAgreedToPartyB = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmPriorAgreed;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.PriorAgreed;
 			isDerived = false;
 			xmlTag = "PrrAgrdToPtyB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorAgreedToPartyB";
 			definition = "Sum of all margin agreed amounts due to party B from prior days’ collateral calls where collateral movements have not yet been agreed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount inTransitToPartyA;
 	/**
 	 * Sum of all margin collateral movements due to party A in progress but not
 	 * yet settled.
@@ -285,8 +292,8 @@ public class MarginCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#InTransit
-	 * CollateralBalance.InTransit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmInTransit
+	 * CollateralBalance.mmInTransit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -307,20 +314,21 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InTransitToPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInTransitToPartyA = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.InTransit;
 			isDerived = false;
 			xmlTag = "InTrnstToPtyA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransitToPartyA";
 			definition = "Sum of all margin collateral movements due to party A in progress but not yet settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount inTransitToPartyB;
 	/**
 	 * Sum of all margin collateral movements due to party B in progress but not
 	 * yet settled.
@@ -335,8 +343,8 @@ public class MarginCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#InTransit
-	 * CollateralBalance.InTransit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmInTransit
+	 * CollateralBalance.mmInTransit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,17 +365,17 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InTransitToPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInTransitToPartyB = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.InTransit;
 			isDerived = false;
 			xmlTag = "InTrnstToPtyB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransitToPartyB";
 			definition = "Sum of all margin collateral movements due to party B in progress but not yet settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -375,16 +383,64 @@ public class MarginCollateral1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCollateral1.HeldByPartyA, com.tools20022.repository.msg.MarginCollateral1.HeldByPartyB,
-						com.tools20022.repository.msg.MarginCollateral1.PriorAgreedToPartyA, com.tools20022.repository.msg.MarginCollateral1.PriorAgreedToPartyB, com.tools20022.repository.msg.MarginCollateral1.InTransitToPartyA,
-						com.tools20022.repository.msg.MarginCollateral1.InTransitToPartyB);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCollateral1.mmHeldByPartyA, com.tools20022.repository.msg.MarginCollateral1.mmHeldByPartyB,
+						com.tools20022.repository.msg.MarginCollateral1.mmPriorAgreedToPartyA, com.tools20022.repository.msg.MarginCollateral1.mmPriorAgreedToPartyB, com.tools20022.repository.msg.MarginCollateral1.mmInTransitToPartyA,
+						com.tools20022.repository.msg.MarginCollateral1.mmInTransitToPartyB);
 				trace_lazy = () -> CollateralBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginCollateral1";
 				definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getHeldByPartyA() {
+		return heldByPartyA;
+	}
+
+	public void setHeldByPartyA(ActiveCurrencyAndAmount heldByPartyA) {
+		this.heldByPartyA = heldByPartyA;
+	}
+
+	public ActiveCurrencyAndAmount getHeldByPartyB() {
+		return heldByPartyB;
+	}
+
+	public void setHeldByPartyB(ActiveCurrencyAndAmount heldByPartyB) {
+		this.heldByPartyB = heldByPartyB;
+	}
+
+	public ActiveCurrencyAndAmount getPriorAgreedToPartyA() {
+		return priorAgreedToPartyA;
+	}
+
+	public void setPriorAgreedToPartyA(ActiveCurrencyAndAmount priorAgreedToPartyA) {
+		this.priorAgreedToPartyA = priorAgreedToPartyA;
+	}
+
+	public ActiveCurrencyAndAmount getPriorAgreedToPartyB() {
+		return priorAgreedToPartyB;
+	}
+
+	public void setPriorAgreedToPartyB(ActiveCurrencyAndAmount priorAgreedToPartyB) {
+		this.priorAgreedToPartyB = priorAgreedToPartyB;
+	}
+
+	public ActiveCurrencyAndAmount getInTransitToPartyA() {
+		return inTransitToPartyA;
+	}
+
+	public void setInTransitToPartyA(ActiveCurrencyAndAmount inTransitToPartyA) {
+		this.inTransitToPartyA = inTransitToPartyA;
+	}
+
+	public ActiveCurrencyAndAmount getInTransitToPartyB() {
+		return inTransitToPartyB;
+	}
+
+	public void setInTransitToPartyB(ActiveCurrencyAndAmount inTransitToPartyB) {
+		this.inTransitToPartyB = inTransitToPartyB;
 	}
 }

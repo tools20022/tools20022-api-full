@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -75,33 +76,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#Identification
- * AgentCAMovementInstructionV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmIdentification
+ * AgentCAMovementInstructionV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#AgentCAElectionAdviceIdentification
- * AgentCAMovementInstructionV01.AgentCAElectionAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmAgentCAElectionAdviceIdentification
+ * AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#CorporateActionGeneralInformation
- * AgentCAMovementInstructionV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmCorporateActionGeneralInformation
+ * AgentCAMovementInstructionV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#MovementGeneralInformation
- * AgentCAMovementInstructionV01.MovementGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmMovementGeneralInformation
+ * AgentCAMovementInstructionV01.mmMovementGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#UnderlyingSecuritiesMovementDetails
- * AgentCAMovementInstructionV01.UnderlyingSecuritiesMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmUnderlyingSecuritiesMovementDetails
+ * AgentCAMovementInstructionV01.mmUnderlyingSecuritiesMovementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#UnderlyingCashMovementDetails
- * AgentCAMovementInstructionV01.UnderlyingCashMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmUnderlyingCashMovementDetails
+ * AgentCAMovementInstructionV01.mmUnderlyingCashMovementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#ProceedsMovementDetails
- * AgentCAMovementInstructionV01.ProceedsMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmProceedsMovementDetails
+ * AgentCAMovementInstructionV01.mmProceedsMovementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#identifier
- * AgentCAMovementInstructionV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.019.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCAMovementInstructionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * instruction.
@@ -143,17 +143,18 @@ public class AgentCAMovementInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
 	 * Identification of the Agent CA ElectionAdvice when the movements are the
 	 * result of an ElectionAdvice.
@@ -180,17 +181,18 @@ public class AgentCAMovementInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAElctnAdvcId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionAdviceIdentification";
 			definition = "Identification of the Agent CA ElectionAdvice when the movements are the result of an ElectionAdvice.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -214,17 +216,18 @@ public class AgentCAMovementInstructionV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected CorporateActionMovement1 movementGeneralInformation;
 	/**
 	 * Provides general information about the movement.
 	 * <p>
@@ -248,17 +251,18 @@ public class AgentCAMovementInstructionV01 {
 	 * definition} = "Provides general information about the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MovementGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMovementGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MvmntGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementGeneralInformation";
 			definition = "Provides general information about the movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionMovement1.mmObject();
 		}
 	};
+	protected List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails;
 	/**
 	 * Information related to the movement of the underlying securities.
 	 * <p>
@@ -283,7 +287,7 @@ public class AgentCAMovementInstructionV01 {
 	 * "Information related to the movement of the underlying securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingSecuritiesMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingSecuritiesMovementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygSctiesMvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,6 +297,7 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> UnderlyingSecurityMovement1.mmObject();
 		}
 	};
+	protected List<CashMovement2> underlyingCashMovementDetails;
 	/**
 	 * Information related to the movement of the underlying cash.
 	 * <p>
@@ -316,7 +321,7 @@ public class AgentCAMovementInstructionV01 {
 	 * "Information related to the movement of the underlying cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingCashMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingCashMovementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygCshMvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,6 +331,7 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> CashMovement2.mmObject();
 		}
 	};
+	protected ProceedsMovement1 proceedsMovementDetails;
 	/**
 	 * Information related to the movement of the CA proceeds.
 	 * <p>
@@ -349,42 +355,15 @@ public class AgentCAMovementInstructionV01 {
 	 * definition} = "Information related to the movement of the CA proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProceedsMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProceedsMovementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcdsMvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsMovementDetails";
 			definition = "Information related to the movement of the CA proceeds.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProceedsMovement1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "019"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "019";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -398,13 +377,76 @@ public class AgentCAMovementInstructionV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCAMvmntInstr";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.AgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.MovementGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.UnderlyingSecuritiesMovementDetails,
-						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.UnderlyingCashMovementDetails, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.ProceedsMovementDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmMovementGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmUnderlyingSecuritiesMovementDetails,
+						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmUnderlyingCashMovementDetails, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmProceedsMovementDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "019";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
+		return agentCAElectionAdviceIdentification;
+	}
+
+	public void setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
+		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public CorporateActionMovement1 getMovementGeneralInformation() {
+		return movementGeneralInformation;
+	}
+
+	public void setMovementGeneralInformation(CorporateActionMovement1 movementGeneralInformation) {
+		this.movementGeneralInformation = movementGeneralInformation;
+	}
+
+	public List<UnderlyingSecurityMovement1> getUnderlyingSecuritiesMovementDetails() {
+		return underlyingSecuritiesMovementDetails;
+	}
+
+	public void setUnderlyingSecuritiesMovementDetails(List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
+		this.underlyingSecuritiesMovementDetails = underlyingSecuritiesMovementDetails;
+	}
+
+	public List<CashMovement2> getUnderlyingCashMovementDetails() {
+		return underlyingCashMovementDetails;
+	}
+
+	public void setUnderlyingCashMovementDetails(List<CashMovement2> underlyingCashMovementDetails) {
+		this.underlyingCashMovementDetails = underlyingCashMovementDetails;
+	}
+
+	public ProceedsMovement1 getProceedsMovementDetails() {
+		return proceedsMovementDetails;
+	}
+
+	public void setProceedsMovementDetails(ProceedsMovement1 proceedsMovementDetails) {
+		this.proceedsMovementDetails = proceedsMovementDetails;
 	}
 }

@@ -39,32 +39,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#ExpectedTradeDateTime
- * ExpectedExecutionDetails3.ExpectedTradeDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmExpectedTradeDateTime
+ * ExpectedExecutionDetails3.mmExpectedTradeDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#ExpectedCashSettlementDate
- * ExpectedExecutionDetails3.ExpectedCashSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmExpectedCashSettlementDate
+ * ExpectedExecutionDetails3.mmExpectedCashSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#ExpectedExecutedAmount
- * ExpectedExecutionDetails3.ExpectedExecutedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmExpectedExecutedAmount
+ * ExpectedExecutionDetails3.mmExpectedExecutedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#PaymentInIndicator
- * ExpectedExecutionDetails3.PaymentInIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmPaymentInIndicator
+ * ExpectedExecutionDetails3.mmPaymentInIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#PaymentReference
- * ExpectedExecutionDetails3.PaymentReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmPaymentReference
+ * ExpectedExecutionDetails3.mmPaymentReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#PrepaymentDate
- * ExpectedExecutionDetails3.PrepaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmPrepaymentDate
+ * ExpectedExecutionDetails3.mmPrepaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#TopUpAmount
- * ExpectedExecutionDetails3.TopUpAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmTopUpAmount
+ * ExpectedExecutionDetails3.mmTopUpAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#HoldBackDetails
- * ExpectedExecutionDetails3.HoldBackDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmHoldBackDetails
+ * ExpectedExecutionDetails3.mmHoldBackDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#SidePocketQuantity
- * ExpectedExecutionDetails3.SidePocketQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmSidePocketQuantity
+ * ExpectedExecutionDetails3.mmSidePocketQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExpectedExecutionDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice expectedTradeDateTime;
 	/**
 	 * Expected date and time at which the price is applied, ie, the expected
 	 * execution date for the order.
@@ -104,8 +105,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -126,20 +127,21 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedTradeDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "XpctdTradDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedTradeDateTime";
 			definition = "Expected date and time at which the price is applied, ie, the expected execution date for the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected ISODate expectedCashSettlementDate;
 	/**
 	 * Expected date on which the cash will be available.
 	 * <p>
@@ -152,8 +154,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,20 +174,21 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Expected date on which the cash will be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedCashSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "XpctdCshSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCashSettlementDate";
 			definition = "Expected date on which the cash will be available.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount expectedExecutedAmount;
 	/**
 	 * Expected execution amount.
 	 * <p>
@@ -199,8 +202,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementAmount
-	 * Obligation.RequestedSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementAmount
+	 * Obligation.mmRequestedSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,20 +222,21 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Expected execution amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedExecutedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedExecutedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementAmount;
 			isDerived = false;
 			xmlTag = "XpctdExctdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedExecutedAmount";
 			definition = "Expected execution amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected YesNoIndicator paymentInIndicator;
 	/**
 	 * Indicates, for the status of a subscription, whether payment has been
 	 * received by the executing party.
@@ -264,7 +268,7 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
@@ -272,11 +276,12 @@ public class ExpectedExecutionDetails3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInIndicator";
 			definition = "Indicates, for the status of a subscription, whether payment has been received by the executing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text paymentReference;
 	/**
 	 * Unique and unambiguous identifier for a payment transaction, as assigned
 	 * by the originator. The payment transaction reference is used for
@@ -291,8 +296,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#EndToEndIdentification
-	 * PaymentIdentification.EndToEndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+	 * PaymentIdentification.mmEndToEndIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -313,20 +318,21 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.EndToEndIdentification;
 			isDerived = false;
 			xmlTag = "PmtRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReference";
 			definition = "Unique and unambiguous identifier for a payment transaction, as assigned by the originator. The payment transaction reference is used for reconciliation or to link tasks relating to the payment transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate prepaymentDate;
 	/**
 	 * Date of the prepayment, if applicable.
 	 * <p>
@@ -339,8 +345,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
-	 * ObligationFulfilment.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+	 * ObligationFulfilment.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -359,20 +365,21 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Date of the prepayment, if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrepaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrepaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.Date;
 			isDerived = false;
 			xmlTag = "PrepmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrepaymentDate";
 			definition = "Date of the prepayment, if applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount topUpAmount;
 	/**
 	 * Additional amount of money (top-up amount) required to meet the minimum
 	 * subscription amount.
@@ -387,8 +394,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#TopUpAmount
-	 * InvestmentFundClass.TopUpAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmTopUpAmount
+	 * InvestmentFundClass.mmTopUpAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -409,20 +416,21 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TopUpAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTopUpAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmTopUpAmount;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.TopUpAmount;
 			isDerived = false;
 			xmlTag = "TopUpAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUpAmount";
 			definition = "Additional amount of money (top-up amount) required to meet the minimum subscription amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected HoldBackInformation1 holdBackDetails;
 	/**
 	 * Information about hold back of redemption proceeds.
 	 * <p>
@@ -434,8 +442,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentFundClass
-	 * InvestmentFundTransaction.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundClass
+	 * InvestmentFundTransaction.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -454,21 +462,22 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Information about hold back of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd HoldBackDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHoldBackDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "HldBckDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackDetails";
 			definition = "Information about hold back of redemption proceeds.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> HoldBackInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.mmObject();
 		}
 	};
+	protected SidePocketQuantityAndAmount1 sidePocketQuantity;
 	/**
 	 * Quantity of the side pocket.
 	 * <p>
@@ -481,8 +490,8 @@ public class ExpectedExecutionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#SidePocket
-	 * SecuritiesQuantity.SidePocket}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSidePocket
+	 * SecuritiesQuantity.mmSidePocket}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -501,36 +510,109 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Quantity of the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SidePocketQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSidePocketQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSidePocket;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.SidePocket;
 			isDerived = false;
 			xmlTag = "SdPcktQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketQuantity";
 			definition = "Quantity of the side pocket.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedExecutionDetails3.ExpectedTradeDateTime, com.tools20022.repository.msg.ExpectedExecutionDetails3.ExpectedCashSettlementDate,
-						com.tools20022.repository.msg.ExpectedExecutionDetails3.ExpectedExecutedAmount, com.tools20022.repository.msg.ExpectedExecutionDetails3.PaymentInIndicator,
-						com.tools20022.repository.msg.ExpectedExecutionDetails3.PaymentReference, com.tools20022.repository.msg.ExpectedExecutionDetails3.PrepaymentDate, com.tools20022.repository.msg.ExpectedExecutionDetails3.TopUpAmount,
-						com.tools20022.repository.msg.ExpectedExecutionDetails3.HoldBackDetails, com.tools20022.repository.msg.ExpectedExecutionDetails3.SidePocketQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedTradeDateTime, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedCashSettlementDate,
+						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedExecutedAmount, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPaymentInIndicator,
+						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPaymentReference, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPrepaymentDate,
+						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmTopUpAmount, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmHoldBackDetails,
+						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmSidePocketQuantity);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExpectedExecutionDetails3";
 				definition = "Expected trade date and expected settlement date of the order execution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getExpectedTradeDateTime() {
+		return expectedTradeDateTime;
+	}
+
+	public void setExpectedTradeDateTime(DateAndDateTimeChoice expectedTradeDateTime) {
+		this.expectedTradeDateTime = expectedTradeDateTime;
+	}
+
+	public ISODate getExpectedCashSettlementDate() {
+		return expectedCashSettlementDate;
+	}
+
+	public void setExpectedCashSettlementDate(ISODate expectedCashSettlementDate) {
+		this.expectedCashSettlementDate = expectedCashSettlementDate;
+	}
+
+	public ActiveCurrencyAndAmount getExpectedExecutedAmount() {
+		return expectedExecutedAmount;
+	}
+
+	public void setExpectedExecutedAmount(ActiveCurrencyAndAmount expectedExecutedAmount) {
+		this.expectedExecutedAmount = expectedExecutedAmount;
+	}
+
+	public YesNoIndicator getPaymentInIndicator() {
+		return paymentInIndicator;
+	}
+
+	public void setPaymentInIndicator(YesNoIndicator paymentInIndicator) {
+		this.paymentInIndicator = paymentInIndicator;
+	}
+
+	public Max35Text getPaymentReference() {
+		return paymentReference;
+	}
+
+	public void setPaymentReference(Max35Text paymentReference) {
+		this.paymentReference = paymentReference;
+	}
+
+	public ISODate getPrepaymentDate() {
+		return prepaymentDate;
+	}
+
+	public void setPrepaymentDate(ISODate prepaymentDate) {
+		this.prepaymentDate = prepaymentDate;
+	}
+
+	public ActiveCurrencyAndAmount getTopUpAmount() {
+		return topUpAmount;
+	}
+
+	public void setTopUpAmount(ActiveCurrencyAndAmount topUpAmount) {
+		this.topUpAmount = topUpAmount;
+	}
+
+	public HoldBackInformation1 getHoldBackDetails() {
+		return holdBackDetails;
+	}
+
+	public void setHoldBackDetails(com.tools20022.repository.msg.HoldBackInformation1 holdBackDetails) {
+		this.holdBackDetails = holdBackDetails;
+	}
+
+	public SidePocketQuantityAndAmount1 getSidePocketQuantity() {
+		return sidePocketQuantity;
+	}
+
+	public void setSidePocketQuantity(com.tools20022.repository.msg.SidePocketQuantityAndAmount1 sidePocketQuantity) {
+		this.sidePocketQuantity = sidePocketQuantity;
 	}
 }

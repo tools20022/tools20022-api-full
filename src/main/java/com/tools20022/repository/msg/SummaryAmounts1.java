@@ -36,48 +36,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#ThresholdAmount
- * SummaryAmounts1.ThresholdAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SummaryAmounts1#ThresholdType
- * SummaryAmounts1.ThresholdType}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmThresholdAmount
+ * SummaryAmounts1.mmThresholdAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#PreHaircutCollateralValue
- * SummaryAmounts1.PreHaircutCollateralValue}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmThresholdType
+ * SummaryAmounts1.mmThresholdType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#AdjustedExposure
- * SummaryAmounts1.AdjustedExposure}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmPreHaircutCollateralValue
+ * SummaryAmounts1.mmPreHaircutCollateralValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#CollateralRequired
- * SummaryAmounts1.CollateralRequired}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmAdjustedExposure
+ * SummaryAmounts1.mmAdjustedExposure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#MinimumTransferAmount
- * SummaryAmounts1.MinimumTransferAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SummaryAmounts1#RoundingAmount
- * SummaryAmounts1.RoundingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmCollateralRequired
+ * SummaryAmounts1.mmCollateralRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#PreviousExposureValue
- * SummaryAmounts1.PreviousExposureValue}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmMinimumTransferAmount
+ * SummaryAmounts1.mmMinimumTransferAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#PreviousCollateralValue
- * SummaryAmounts1.PreviousCollateralValue}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmRoundingAmount
+ * SummaryAmounts1.mmRoundingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#TotalPendingIncomingCollateral
- * SummaryAmounts1.TotalPendingIncomingCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmPreviousExposureValue
+ * SummaryAmounts1.mmPreviousExposureValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#TotalPendingOutgoingCollateral
- * SummaryAmounts1.TotalPendingOutgoingCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmPreviousCollateralValue
+ * SummaryAmounts1.mmPreviousCollateralValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#TotalAccruedInterestAmount
- * SummaryAmounts1.TotalAccruedInterestAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SummaryAmounts1#TotalFees
- * SummaryAmounts1.TotalFees}</li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmTotalPendingIncomingCollateral
+ * SummaryAmounts1.mmTotalPendingIncomingCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmTotalPendingOutgoingCollateral
+ * SummaryAmounts1.mmTotalPendingOutgoingCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmTotalAccruedInterestAmount
+ * SummaryAmounts1.mmTotalAccruedInterestAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SummaryAmounts1#mmTotalFees
+ * SummaryAmounts1.mmTotalFees}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SummaryAmounts1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount thresholdAmount;
 	/**
 	 * Amount of unsecured exposure a counterparty will accept before issuing a
 	 * margin call in the base currency.
@@ -106,8 +109,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#ThresholdAmount
-	 * VariationMarginTerm.ThresholdAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#mmThresholdAmount
+	 * VariationMarginTerm.mmThresholdAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,20 +131,21 @@ public class SummaryAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ThresholdAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmThresholdAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.ThresholdAmount;
 			isDerived = false;
 			xmlTag = "ThrshldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdAmount";
 			definition = "Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ThresholdType1Code thresholdType;
 	/**
 	 * Specifies if the threshold amount is secured or unsecured.
 	 * <p>
@@ -155,8 +159,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#ThresholdType
-	 * VariationMarginTerm.ThresholdType}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariationMarginTerm#mmThresholdType
+	 * VariationMarginTerm.mmThresholdType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,20 +180,21 @@ public class SummaryAmounts1 {
 	 * "Specifies if the threshold amount is secured or unsecured."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ThresholdType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmThresholdType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdType;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.ThresholdType;
 			isDerived = false;
 			xmlTag = "ThrshldTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdType";
 			definition = "Specifies if the threshold amount is secured or unsecured.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ThresholdType1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount preHaircutCollateralValue;
 	/**
 	 * Total value of posted collateral (pre-haircut) held by the taker.
 	 * <p>
@@ -203,8 +208,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#TotalCollateralCurrentValue
-	 * ExposureCalculation.TotalCollateralCurrentValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralCurrentValue
+	 * ExposureCalculation.mmTotalCollateralCurrentValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -224,20 +229,21 @@ public class SummaryAmounts1 {
 	 * "Total value of posted collateral (pre-haircut) held by the taker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreHaircutCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreHaircutCollateralValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.TotalCollateralCurrentValue;
 			isDerived = false;
 			xmlTag = "PreHrcutCollVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreHaircutCollateralValue";
 			definition = "Total value of posted collateral (pre-haircut) held by the taker.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount adjustedExposure;
 	/**
 	 * Total amount of collateral required (unrounded).
 	 * <p>
@@ -251,8 +257,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#TotalExposedAmount
-	 * ExposureCalculation.TotalExposedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalExposedAmount
+	 * ExposureCalculation.mmTotalExposedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -271,20 +277,21 @@ public class SummaryAmounts1 {
 	 * definition} = "Total amount of collateral required (unrounded)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdjustedExposure = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdjustedExposure = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.TotalExposedAmount;
 			isDerived = false;
 			xmlTag = "AdjstdXpsr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedExposure";
 			definition = "Total amount of collateral required (unrounded).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount collateralRequired;
 	/**
 	 * Total amount of collateral required (rounded).
 	 * <p>
@@ -317,20 +324,21 @@ public class SummaryAmounts1 {
 	 * definition} = "Total amount of collateral required (rounded)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralRequired = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
+			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "CollReqrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralRequired";
 			definition = "Total amount of collateral required (rounded).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount minimumTransferAmount;
 	/**
 	 * Minimum amount to pay/receive as specified in the agreement in the base
 	 * currency (to avoid the need to transfer an inconveniently small amount of
@@ -346,8 +354,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#MinimumTransferAmount
-	 * ExposureTerm.MinimumTransferAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumTransferAmount
+	 * ExposureTerm.mmMinimumTransferAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -368,20 +376,21 @@ public class SummaryAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumTransferAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.MinimumTransferAmount;
 			isDerived = false;
 			xmlTag = "MinTrfAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTransferAmount";
 			definition = "Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of collateral).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount roundingAmount;
 	/**
 	 * Amount specified to avoid the need to transfer uneven amounts of
 	 * collateral.
@@ -396,8 +405,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#RoundingAmount
-	 * ExposureTerm.RoundingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingAmount
+	 * ExposureTerm.mmRoundingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -418,20 +427,21 @@ public class SummaryAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.RoundingAmount;
 			isDerived = false;
 			xmlTag = "RndgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
 			definition = "Amount specified to avoid the need to transfer uneven amounts of collateral.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount previousExposureValue;
 	/**
 	 * Exposure value at previous valuation.
 	 * <p>
@@ -445,8 +455,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#TotalExposedAmount
-	 * ExposureCalculation.TotalExposedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalExposedAmount
+	 * ExposureCalculation.mmTotalExposedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -465,20 +475,21 @@ public class SummaryAmounts1 {
 	 * definition} = "Exposure value at previous valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousExposureValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousExposureValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.TotalExposedAmount;
 			isDerived = false;
 			xmlTag = "PrvsXpsrVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousExposureValue";
 			definition = "Exposure value at previous valuation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount previousCollateralValue;
 	/**
 	 * Value of collateral at previous valuation.
 	 * <p>
@@ -492,8 +503,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#TotalCollateralCurrentValue
-	 * ExposureCalculation.TotalCollateralCurrentValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralCurrentValue
+	 * ExposureCalculation.mmTotalCollateralCurrentValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -512,20 +523,21 @@ public class SummaryAmounts1 {
 	 * definition} = "Value of collateral at previous valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousCollateralValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.TotalCollateralCurrentValue;
 			isDerived = false;
 			xmlTag = "PrvsCollVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousCollateralValue";
 			definition = "Value of collateral at previous valuation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalPendingIncomingCollateral;
 	/**
 	 * Value of incoming collateral, to be settled.
 	 * <p>
@@ -539,8 +551,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#InTransit
-	 * CollateralBalance.InTransit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmInTransit
+	 * CollateralBalance.mmInTransit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -559,20 +571,21 @@ public class SummaryAmounts1 {
 	 * definition} = "Value of incoming collateral, to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalPendingIncomingCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalPendingIncomingCollateral = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.InTransit;
 			isDerived = false;
 			xmlTag = "TtlPdgIncmgColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPendingIncomingCollateral";
 			definition = "Value of incoming collateral, to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalPendingOutgoingCollateral;
 	/**
 	 * Value of outgoing collateral, to be settled.
 	 * <p>
@@ -586,8 +599,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#InTransit
-	 * CollateralBalance.InTransit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmInTransit
+	 * CollateralBalance.mmInTransit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -606,20 +619,21 @@ public class SummaryAmounts1 {
 	 * definition} = "Value of outgoing collateral, to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalPendingOutgoingCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalPendingOutgoingCollateral = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.InTransit;
 			isDerived = false;
 			xmlTag = "TtlPdgOutgngColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPendingOutgoingCollateral";
 			definition = "Value of outgoing collateral, to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalAccruedInterestAmount;
 	/**
 	 * Sum of accrued interest.
 	 * <p>
@@ -633,8 +647,8 @@ public class SummaryAmounts1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -653,20 +667,21 @@ public class SummaryAmounts1 {
 	 * definition} = "Sum of accrued interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAccruedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "TtlAcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAccruedInterestAmount";
 			definition = "Sum of accrued interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalFees;
 	/**
 	 * Sum of fees/commissions.
 	 * <p>
@@ -699,17 +714,17 @@ public class SummaryAmounts1 {
 	 * definition} = "Sum of fees/commissions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalFees = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			businessComponentTrace_lazy = () -> Commission.mmObject();
+			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlFees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFees";
 			definition = "Sum of fees/commissions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -717,17 +732,121 @@ public class SummaryAmounts1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SummaryAmounts1.ThresholdAmount, com.tools20022.repository.msg.SummaryAmounts1.ThresholdType,
-						com.tools20022.repository.msg.SummaryAmounts1.PreHaircutCollateralValue, com.tools20022.repository.msg.SummaryAmounts1.AdjustedExposure, com.tools20022.repository.msg.SummaryAmounts1.CollateralRequired,
-						com.tools20022.repository.msg.SummaryAmounts1.MinimumTransferAmount, com.tools20022.repository.msg.SummaryAmounts1.RoundingAmount, com.tools20022.repository.msg.SummaryAmounts1.PreviousExposureValue,
-						com.tools20022.repository.msg.SummaryAmounts1.PreviousCollateralValue, com.tools20022.repository.msg.SummaryAmounts1.TotalPendingIncomingCollateral,
-						com.tools20022.repository.msg.SummaryAmounts1.TotalPendingOutgoingCollateral, com.tools20022.repository.msg.SummaryAmounts1.TotalAccruedInterestAmount, com.tools20022.repository.msg.SummaryAmounts1.TotalFees);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SummaryAmounts1.mmThresholdAmount, com.tools20022.repository.msg.SummaryAmounts1.mmThresholdType,
+						com.tools20022.repository.msg.SummaryAmounts1.mmPreHaircutCollateralValue, com.tools20022.repository.msg.SummaryAmounts1.mmAdjustedExposure, com.tools20022.repository.msg.SummaryAmounts1.mmCollateralRequired,
+						com.tools20022.repository.msg.SummaryAmounts1.mmMinimumTransferAmount, com.tools20022.repository.msg.SummaryAmounts1.mmRoundingAmount, com.tools20022.repository.msg.SummaryAmounts1.mmPreviousExposureValue,
+						com.tools20022.repository.msg.SummaryAmounts1.mmPreviousCollateralValue, com.tools20022.repository.msg.SummaryAmounts1.mmTotalPendingIncomingCollateral,
+						com.tools20022.repository.msg.SummaryAmounts1.mmTotalPendingOutgoingCollateral, com.tools20022.repository.msg.SummaryAmounts1.mmTotalAccruedInterestAmount, com.tools20022.repository.msg.SummaryAmounts1.mmTotalFees);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SummaryAmounts1";
 				definition = "Provides amounts taken in to account to calculate the collateral position.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getThresholdAmount() {
+		return thresholdAmount;
+	}
+
+	public void setThresholdAmount(ActiveCurrencyAndAmount thresholdAmount) {
+		this.thresholdAmount = thresholdAmount;
+	}
+
+	public ThresholdType1Code getThresholdType() {
+		return thresholdType;
+	}
+
+	public void setThresholdType(ThresholdType1Code thresholdType) {
+		this.thresholdType = thresholdType;
+	}
+
+	public ActiveCurrencyAndAmount getPreHaircutCollateralValue() {
+		return preHaircutCollateralValue;
+	}
+
+	public void setPreHaircutCollateralValue(ActiveCurrencyAndAmount preHaircutCollateralValue) {
+		this.preHaircutCollateralValue = preHaircutCollateralValue;
+	}
+
+	public ActiveCurrencyAndAmount getAdjustedExposure() {
+		return adjustedExposure;
+	}
+
+	public void setAdjustedExposure(ActiveCurrencyAndAmount adjustedExposure) {
+		this.adjustedExposure = adjustedExposure;
+	}
+
+	public ActiveCurrencyAndAmount getCollateralRequired() {
+		return collateralRequired;
+	}
+
+	public void setCollateralRequired(ActiveCurrencyAndAmount collateralRequired) {
+		this.collateralRequired = collateralRequired;
+	}
+
+	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
+		return minimumTransferAmount;
+	}
+
+	public void setMinimumTransferAmount(ActiveCurrencyAndAmount minimumTransferAmount) {
+		this.minimumTransferAmount = minimumTransferAmount;
+	}
+
+	public ActiveCurrencyAndAmount getRoundingAmount() {
+		return roundingAmount;
+	}
+
+	public void setRoundingAmount(ActiveCurrencyAndAmount roundingAmount) {
+		this.roundingAmount = roundingAmount;
+	}
+
+	public ActiveCurrencyAndAmount getPreviousExposureValue() {
+		return previousExposureValue;
+	}
+
+	public void setPreviousExposureValue(ActiveCurrencyAndAmount previousExposureValue) {
+		this.previousExposureValue = previousExposureValue;
+	}
+
+	public ActiveCurrencyAndAmount getPreviousCollateralValue() {
+		return previousCollateralValue;
+	}
+
+	public void setPreviousCollateralValue(ActiveCurrencyAndAmount previousCollateralValue) {
+		this.previousCollateralValue = previousCollateralValue;
+	}
+
+	public ActiveCurrencyAndAmount getTotalPendingIncomingCollateral() {
+		return totalPendingIncomingCollateral;
+	}
+
+	public void setTotalPendingIncomingCollateral(ActiveCurrencyAndAmount totalPendingIncomingCollateral) {
+		this.totalPendingIncomingCollateral = totalPendingIncomingCollateral;
+	}
+
+	public ActiveCurrencyAndAmount getTotalPendingOutgoingCollateral() {
+		return totalPendingOutgoingCollateral;
+	}
+
+	public void setTotalPendingOutgoingCollateral(ActiveCurrencyAndAmount totalPendingOutgoingCollateral) {
+		this.totalPendingOutgoingCollateral = totalPendingOutgoingCollateral;
+	}
+
+	public ActiveCurrencyAndAmount getTotalAccruedInterestAmount() {
+		return totalAccruedInterestAmount;
+	}
+
+	public void setTotalAccruedInterestAmount(ActiveCurrencyAndAmount totalAccruedInterestAmount) {
+		this.totalAccruedInterestAmount = totalAccruedInterestAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTotalFees() {
+		return totalFees;
+	}
+
+	public void setTotalFees(ActiveCurrencyAndAmount totalFees) {
+		this.totalFees = totalFees;
 	}
 }

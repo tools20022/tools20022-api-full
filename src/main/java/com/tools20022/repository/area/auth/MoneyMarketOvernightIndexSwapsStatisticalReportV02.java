@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The MoneyMarketOvernightIndexSwapsStatisticalReport message is sent by the
@@ -56,22 +57,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02#ReportHeader
- * MoneyMarketOvernightIndexSwapsStatisticalReportV02.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02#mmReportHeader
+ * MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02#OvernightIndexSwapsReport
- * MoneyMarketOvernightIndexSwapsStatisticalReportV02.OvernightIndexSwapsReport}
- * </li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02#mmOvernightIndexSwapsReport
+ * MoneyMarketOvernightIndexSwapsStatisticalReportV02.
+ * mmOvernightIndexSwapsReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02#SupplementaryData
- * MoneyMarketOvernightIndexSwapsStatisticalReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02#mmSupplementaryData
+ * MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02#identifier
- * MoneyMarketOvernightIndexSwapsStatisticalReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.015.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MoneyMarketReportHeader1 reportHeader;
 	/**
 	 * Provides the elements specific to the report.
 	 * <p>
@@ -115,22 +115,23 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01#ReportHeader
-	 * MoneyMarketOvernightIndexSwapsStatisticalReportV01.ReportHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01#mmReportHeader
+	 * MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Provides the elements specific to the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.ReportHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
 		}
 	};
+	protected OvernightIndexSwap4Choice overnightIndexSwapsReport;
 	/**
 	 * Provides the reason why no activity is reported or the required list of
 	 * transactions for the overnight index swaps segment.
@@ -158,23 +159,24 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01#OvernightIndexSwapsReport
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01#mmOvernightIndexSwapsReport
 	 * MoneyMarketOvernightIndexSwapsStatisticalReportV01.
-	 * OvernightIndexSwapsReport}</li>
+	 * mmOvernightIndexSwapsReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OvernightIndexSwapsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOvernightIndexSwapsReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OvrnghtIndxSwpsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightIndexSwapsReport";
 			definition = "Provides the reason why no activity is reported or the required list of transactions for the overnight index swaps segment.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.OvernightIndexSwapsReport;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmOvernightIndexSwapsReport;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OvernightIndexSwap4Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -202,46 +204,19 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01#SupplementaryData
-	 * MoneyMarketOvernightIndexSwapsStatisticalReportV01.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01#mmSupplementaryData
+	 * MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "015"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "015";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -256,12 +231,43 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 				rootElement = "Document";
 				xmlTag = "MnyMktOvrnghtIndxSwpsSttstclRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.ReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.OvernightIndexSwapsReport,
-						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmReportHeader,
+						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmOvernightIndexSwapsReport,
+						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "015";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MoneyMarketReportHeader1 getReportHeader() {
+		return reportHeader;
+	}
+
+	public void setReportHeader(MoneyMarketReportHeader1 reportHeader) {
+		this.reportHeader = reportHeader;
+	}
+
+	public OvernightIndexSwap4Choice getOvernightIndexSwapsReport() {
+		return overnightIndexSwapsReport;
+	}
+
+	public void setOvernightIndexSwapsReport(OvernightIndexSwap4Choice overnightIndexSwapsReport) {
+		this.overnightIndexSwapsReport = overnightIndexSwapsReport;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

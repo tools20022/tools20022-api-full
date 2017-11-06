@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to the control of an ATM device.
@@ -31,10 +32,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDeviceControl1#Environment
- * ATMDeviceControl1.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDeviceControl1#Command
- * ATMDeviceControl1.Command}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMDeviceControl1#mmEnvironment
+ * ATMDeviceControl1.mmEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDeviceControl1#mmCommand
+ * ATMDeviceControl1.mmCommand}</li>
  * </ul>
  * </li>
  * <li>
@@ -42,18 +44,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV01#ATMDeviceControl
- * ATMDeviceControlV01.ATMDeviceControl}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV01#mmATMDeviceControl
+ * ATMDeviceControlV01.mmATMDeviceControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV02#ATMDeviceControl
- * ATMDeviceControlV02.ATMDeviceControl}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV02#mmATMDeviceControl
+ * ATMDeviceControlV02.mmATMDeviceControl}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDeviceControl1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment7 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -93,7 +96,7 @@ public class ATMDeviceControl1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDeviceControl1.mmObject();
 			isDerived = false;
@@ -101,12 +104,13 @@ public class ATMDeviceControl1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment7.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMCommand4> command;
 	/**
 	 * Maintenance command the ATM must perform.
 	 * <p>
@@ -133,7 +137,7 @@ public class ATMDeviceControl1 {
 	 * definition} = "Maintenance command the ATM must perform."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Command = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDeviceControl1.mmObject();
 			isDerived = false;
@@ -142,22 +146,38 @@ public class ATMDeviceControl1 {
 			name = "Command";
 			definition = "Maintenance command the ATM must perform.";
 			minOccurs = 0;
-			type_lazy = () -> ATMCommand4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDeviceControl1.Environment, com.tools20022.repository.msg.ATMDeviceControl1.Command);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDeviceControlV01.ATMDeviceControl, com.tools20022.repository.area.caam.ATMDeviceControlV02.ATMDeviceControl);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDeviceControl1.mmEnvironment, com.tools20022.repository.msg.ATMDeviceControl1.mmCommand);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDeviceControlV01.mmATMDeviceControl, com.tools20022.repository.area.caam.ATMDeviceControlV02.mmATMDeviceControl);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDeviceControl1";
 				definition = "Information related to the control of an ATM device.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment7 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment7 environment) {
+		this.environment = environment;
+	}
+
+	public List<ATMCommand4> getCommand() {
+		return command;
+	}
+
+	public void setCommand(List<com.tools20022.repository.msg.ATMCommand4> command) {
+		this.command = command;
 	}
 }

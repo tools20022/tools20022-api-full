@@ -38,19 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitIdentification1#SystemIdentification
- * LimitIdentification1.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitIdentification1#mmSystemIdentification
+ * LimitIdentification1.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitIdentification1#BilateralLimitCounterpartyIdentification
- * LimitIdentification1.BilateralLimitCounterpartyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification1#Type
- * LimitIdentification1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitIdentification1#mmBilateralLimitCounterpartyIdentification
+ * LimitIdentification1.mmBilateralLimitCounterpartyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification1#mmType
+ * LimitIdentification1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitIdentification1#AccountOwner
- * LimitIdentification1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitIdentification1#mmAccountOwner
+ * LimitIdentification1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitIdentification1#AccountIdentification
- * LimitIdentification1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitIdentification1#mmAccountIdentification
+ * LimitIdentification1.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemIdentification2Choice systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -89,8 +90,8 @@ public class LimitIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashClearingSystem
-	 * TransactionAdministrator.CashClearingSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashClearingSystem
+	 * TransactionAdministrator.mmCashClearingSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,20 +110,21 @@ public class LimitIdentification1 {
 	 * definition} = "Identification of a particular cash clearing system. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> LimitIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.CashClearingSystem;
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification;
 	/**
 	 * Identification of the system member for which the limit is established.
 	 * <p>
@@ -135,8 +137,8 @@ public class LimitIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,21 +159,22 @@ public class LimitIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> LimitIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Identification of the system member for which the limit is established.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected LimitType1Choice type;
 	/**
 	 * Nature of the risk management limit.
 	 * <p>
@@ -183,7 +186,7 @@ public class LimitIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Type Limit.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmType Limit.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,21 +205,22 @@ public class LimitIdentification1 {
 	 * definition} = "Nature of the risk management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
 			componentContext_lazy = () -> LimitIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the risk management limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LimitType1Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountOwner;
 	/**
 	 * Owner of the account which is being queried.
 	 * <p>
@@ -229,8 +233,8 @@ public class LimitIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,21 +253,22 @@ public class LimitIdentification1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> LimitIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -277,8 +282,8 @@ public class LimitIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,34 +304,74 @@ public class LimitIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> LimitIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitIdentification1.SystemIdentification, com.tools20022.repository.msg.LimitIdentification1.BilateralLimitCounterpartyIdentification,
-						com.tools20022.repository.msg.LimitIdentification1.Type, com.tools20022.repository.msg.LimitIdentification1.AccountOwner, com.tools20022.repository.msg.LimitIdentification1.AccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitIdentification1.mmSystemIdentification, com.tools20022.repository.msg.LimitIdentification1.mmBilateralLimitCounterpartyIdentification,
+						com.tools20022.repository.msg.LimitIdentification1.mmType, com.tools20022.repository.msg.LimitIdentification1.mmAccountOwner, com.tools20022.repository.msg.LimitIdentification1.mmAccountIdentification);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LimitIdentification1";
 				definition = "Defines the identification details to uniquely identify a limit within the system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemIdentification2Choice getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(SystemIdentification2Choice systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification;
+	}
+
+	public void setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
+		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
+	}
+
+	public LimitType1Choice getType() {
+		return type;
+	}
+
+	public void setType(LimitType1Choice type) {
+		this.type = type;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public AccountIdentification4Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
 	}
 }

@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AllegmentMatchingReason1#Code
- * AllegmentMatchingReason1.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AllegmentMatchingReason1#AdditionalReasonInformation
- * AllegmentMatchingReason1.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AllegmentMatchingReason1#mmCode
+ * AllegmentMatchingReason1.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AllegmentMatchingReason1#mmAdditionalReasonInformation
+ * AllegmentMatchingReason1.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AllegmentMatchingReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AllegmentReason1Choice code;
 	/**
 	 * Specifies the reason why the instruction has been alleged.
 	 * <p>
@@ -106,27 +108,28 @@ public class AllegmentMatchingReason1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AllegementMatchingReason1#Code
-	 * AllegementMatchingReason1.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.AllegementMatchingReason1#mmCode
+	 * AllegementMatchingReason1.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AllegmentMatchingReason1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> AllegmentMatchingReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction has been alleged.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AllegementMatchingReason1.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AllegementMatchingReason1.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AllegmentReason1Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Provides additional information about the reason in narrative form.
 	 * <p>
@@ -139,8 +142,8 @@ public class AllegmentMatchingReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,24 +165,24 @@ public class AllegmentMatchingReason1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AllegementMatchingReason1#AdditionalReasonInformation
-	 * AllegementMatchingReason1.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AllegementMatchingReason1#mmAdditionalReasonInformation
+	 * AllegementMatchingReason1.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> AllegmentMatchingReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the reason in narrative form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AllegementMatchingReason1.AdditionalReasonInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AllegementMatchingReason1.mmAdditionalReasonInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -187,9 +190,9 @@ public class AllegmentMatchingReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AllegmentMatchingReason1.Code, com.tools20022.repository.msg.AllegmentMatchingReason1.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AllegmentMatchingReason1.mmCode, com.tools20022.repository.msg.AllegmentMatchingReason1.mmAdditionalReasonInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AllegmentMatchingReason1";
 				definition = "The status of an instruction, advice or request.";
@@ -197,5 +200,21 @@ public class AllegmentMatchingReason1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AllegmentReason1Choice getCode() {
+		return code;
+	}
+
+	public void setCode(AllegmentReason1Choice code) {
+		this.code = code;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status of a securities trade.
@@ -41,50 +42,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
- * SecuritiesTradeStatus.MatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+ * SecuritiesTradeStatus.mmMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#AffirmationStatus
- * SecuritiesTradeStatus.AffirmationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmAffirmationStatus
+ * SecuritiesTradeStatus.mmAffirmationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#Reason
- * SecuritiesTradeStatus.Reason}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmReason
+ * SecuritiesTradeStatus.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#SecuritiesTrade
- * SecuritiesTradeStatus.SecuritiesTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmSecuritiesTrade
+ * SecuritiesTradeStatus.mmSecuritiesTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#TransactionStatus
- * SecuritiesTradeStatus.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmTransactionStatus
+ * SecuritiesTradeStatus.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#ReplacementProcessingStatus
- * SecuritiesTradeStatus.ReplacementProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmReplacementProcessingStatus
+ * SecuritiesTradeStatus.mmReplacementProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#CancellationStatus
- * SecuritiesTradeStatus.CancellationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmCancellationStatus
+ * SecuritiesTradeStatus.mmCancellationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#CancellationRight
- * SecuritiesTradeStatus.CancellationRight}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmCancellationRight
+ * SecuritiesTradeStatus.mmCancellationRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#TransferStatus
- * SecuritiesTradeStatus.TransferStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmTransferStatus
+ * SecuritiesTradeStatus.mmTransferStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#AllegedStatus
- * SecuritiesTradeStatus.AllegedStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmAllegedStatus
+ * SecuritiesTradeStatus.mmAllegedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#CollateralAllocationStatus
- * SecuritiesTradeStatus.CollateralAllocationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmCollateralAllocationStatus
+ * SecuritiesTradeStatus.mmCollateralAllocationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#RepoCallRequestStatus
- * SecuritiesTradeStatus.RepoCallRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRepoCallRequestStatus
+ * SecuritiesTradeStatus.mmRepoCallRequestStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#SettlementConditionModificationStatus
- * SecuritiesTradeStatus.SettlementConditionModificationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmSettlementConditionModificationStatus
+ * SecuritiesTradeStatus.mmSettlementConditionModificationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingProcess
- * SecuritiesTradeStatus.MatchingProcess}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingProcess
+ * SecuritiesTradeStatus.mmMatchingProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#RelatedSecuritiesTransfer
- * SecuritiesTradeStatus.RelatedSecuritiesTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRelatedSecuritiesTransfer
+ * SecuritiesTradeStatus.mmRelatedSecuritiesTransfer}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,13 +93,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTradeStatus
- * SecuritiesTrade.SecuritiesTradeStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Status
- * SecuritiesTransfer.Status}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeStatus
+ * SecuritiesTrade.mmSecuritiesTradeStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmStatus
+ * SecuritiesTransfer.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#SecuritiesTradeStatus
- * SecuritiesTradeStatusReason.SecuritiesTradeStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmSecuritiesTradeStatus
+ * SecuritiesTradeStatusReason.mmSecuritiesTradeStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,290 +107,292 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus2Choice#Proprietary
- * MatchingStatus2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus2Choice#mmProprietary
+ * MatchingStatus2Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus7Choice#Proprietary
- * MatchingStatus7Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus7Choice#mmProprietary
+ * MatchingStatus7Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus2Choice#Pending
- * SettlementStatus2Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus2Choice#mmPending
+ * SettlementStatus2Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus2Choice#Failing
- * SettlementStatus2Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus2Choice#mmFailing
+ * SettlementStatus2Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus2Choice#Proprietary
- * SettlementStatus2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus2Choice#mmProprietary
+ * SettlementStatus2Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus7Choice#Pending
- * SettlementStatus7Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus7Choice#mmPending
+ * SettlementStatus7Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus7Choice#Failing
- * SettlementStatus7Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus7Choice#mmFailing
+ * SettlementStatus7Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus7Choice#Proprietary
- * SettlementStatus7Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus7Choice#mmProprietary
+ * SettlementStatus7Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus18Choice#Proprietary
- * MatchingStatus18Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus18Choice#mmProprietary
+ * MatchingStatus18Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus13Choice#Pending
- * SettlementStatus13Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus13Choice#mmPending
+ * SettlementStatus13Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus13Choice#Failing
- * SettlementStatus13Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus13Choice#mmFailing
+ * SettlementStatus13Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus13Choice#Proprietary
- * SettlementStatus13Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus13Choice#mmProprietary
+ * SettlementStatus13Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus6Choice#Proprietary
- * MatchingStatus6Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus6Choice#mmProprietary
+ * MatchingStatus6Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus4Choice#Pending
- * SettlementStatus4Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus4Choice#mmPending
+ * SettlementStatus4Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus4Choice#Failing
- * SettlementStatus4Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus4Choice#mmFailing
+ * SettlementStatus4Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus4Choice#Proprietary
- * SettlementStatus4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus4Choice#mmProprietary
+ * SettlementStatus4Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#ProprietaryStatus
- * MatchingStatus9Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmProprietaryStatus
+ * MatchingStatus9Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#ProprietaryStatus
- * CancellationProcessingStatus6Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#mmProprietaryStatus
+ * CancellationProcessingStatus6Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#Status
- * CancellationStatusAndReason.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#mmStatus
+ * CancellationStatusAndReason.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#Status
- * CancellationStatusAndReason2.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferStatusAndReason#Status
- * TransferStatusAndReason.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmStatus
+ * CancellationStatusAndReason2.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#Status
- * TransferStatusAndReason2.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#mmStatus
+ * TransferStatusAndReason.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus3Choice#Proprietary
- * MatchingStatus3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmStatus
+ * TransferStatusAndReason2.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus2Choice#Proprietary
- * RepoCallRequestStatus2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus3Choice#mmProprietary
+ * MatchingStatus3Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters1#Status
- * AdditionalQueryParameters1.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus2Choice#mmProprietary
+ * RepoCallRequestStatus2Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#Status
- * AdditionalQueryParameters3.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters1#mmStatus
+ * AdditionalQueryParameters1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus4Choice#Proprietary
- * MatchingStatus4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#mmStatus
+ * AdditionalQueryParameters3.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus4Choice#Proprietary
- * RepoCallRequestStatus4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus4Choice#mmProprietary
+ * MatchingStatus4Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus12Choice#Proprietary
- * MatchingStatus12Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus4Choice#mmProprietary
+ * RepoCallRequestStatus4Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus10Choice#Pending
- * SettlementStatus10Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus12Choice#mmProprietary
+ * MatchingStatus12Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus10Choice#Failing
- * SettlementStatus10Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus10Choice#mmPending
+ * SettlementStatus10Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus10Choice#Proprietary
- * SettlementStatus10Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus10Choice#mmFailing
+ * SettlementStatus10Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#Proprietary
- * RepoCallRequestStatus5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus10Choice#mmProprietary
+ * SettlementStatus10Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus16Choice#Proprietary
- * MatchingStatus16Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus5Choice#mmProprietary
+ * RepoCallRequestStatus5Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus12Choice#Pending
- * SettlementStatus12Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus16Choice#mmProprietary
+ * MatchingStatus16Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus12Choice#Failing
- * SettlementStatus12Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus12Choice#mmPending
+ * SettlementStatus12Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus12Choice#Proprietary
- * SettlementStatus12Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus12Choice#mmFailing
+ * SettlementStatus12Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus6Choice#Proprietary
- * RepoCallRequestStatus6Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus12Choice#mmProprietary
+ * SettlementStatus12Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters2#Status
- * AdditionalQueryParameters2.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus6Choice#mmProprietary
+ * RepoCallRequestStatus6Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters4#Status
- * AdditionalQueryParameters4.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters2#mmStatus
+ * AdditionalQueryParameters2.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters5#Status
- * AdditionalQueryParameters5.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters4#mmStatus
+ * AdditionalQueryParameters4.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters6#Status
- * AdditionalQueryParameters6.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters5#mmStatus
+ * AdditionalQueryParameters5.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#Pending
- * SettlementStatus9Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters6#mmStatus
+ * AdditionalQueryParameters6.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#Failing
- * SettlementStatus9Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#mmPending
+ * SettlementStatus9Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#Proprietary
- * SettlementStatus9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#mmFailing
+ * SettlementStatus9Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus15Choice#Pending
- * SettlementStatus15Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus9Choice#mmProprietary
+ * SettlementStatus9Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus15Choice#Failing
- * SettlementStatus15Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus15Choice#mmPending
+ * SettlementStatus15Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus15Choice#Proprietary
- * SettlementStatus15Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus15Choice#mmFailing
+ * SettlementStatus15Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus34Choice#Proprietary
- * ProcessingStatus34Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus15Choice#mmProprietary
+ * SettlementStatus15Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#SettlementStatus
- * IntraPositionStatusAndReason1.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus34Choice#mmProprietary
+ * ProcessingStatus34Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#Settled
- * IntraPositionStatusAndReason1.Settled}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus1#Type
- * IntraPositionQueryStatus1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#mmSettlementStatus
+ * IntraPositionStatusAndReason1.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferStatus1Choice#Status
- * TransferStatus1Choice.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#mmSettled
+ * IntraPositionStatusAndReason1.mmSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters7#Status
- * AdditionalQueryParameters7.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus1#mmType
+ * IntraPositionQueryStatus1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus20Choice#Proprietary
- * MatchingStatus20Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferStatus1Choice#mmStatus
+ * TransferStatus1Choice.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus19Choice#Proprietary
- * MatchingStatus19Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters7#mmStatus
+ * AdditionalQueryParameters7.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus37Choice#Proprietary
- * ProcessingStatus37Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus20Choice#mmProprietary
+ * MatchingStatus20Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus21Choice#Proprietary
- * MatchingStatus21Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus19Choice#mmProprietary
+ * MatchingStatus19Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters8#Status
- * AdditionalQueryParameters8.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus37Choice#mmProprietary
+ * ProcessingStatus37Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus42Choice#Proprietary
- * ProcessingStatus42Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus21Choice#mmProprietary
+ * MatchingStatus21Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus22Choice#Proprietary
- * MatchingStatus22Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters8#mmStatus
+ * AdditionalQueryParameters8.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#ProprietaryStatus
- * MatchingStatus23Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus42Choice#mmProprietary
+ * ProcessingStatus42Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters9#Status
- * AdditionalQueryParameters9.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus22Choice#mmProprietary
+ * MatchingStatus22Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters10#Status
- * AdditionalQueryParameters10.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmProprietaryStatus
+ * MatchingStatus23Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#Pending
- * SettlementStatus16Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters9#mmStatus
+ * AdditionalQueryParameters9.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#Failing
- * SettlementStatus16Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters10#mmStatus
+ * AdditionalQueryParameters10.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#Proprietary
- * SettlementStatus16Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#mmPending
+ * SettlementStatus16Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus48Choice#Proprietary
- * ProcessingStatus48Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#mmFailing
+ * SettlementStatus16Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus24Choice#Proprietary
- * MatchingStatus24Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus16Choice#mmProprietary
+ * SettlementStatus16Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus17Choice#Pending
- * SettlementStatus17Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus48Choice#mmProprietary
+ * ProcessingStatus48Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus17Choice#Failing
- * SettlementStatus17Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus24Choice#mmProprietary
+ * MatchingStatus24Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus17Choice#Proprietary
- * SettlementStatus17Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus17Choice#mmPending
+ * SettlementStatus17Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters11#Status
- * AdditionalQueryParameters11.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus17Choice#mmFailing
+ * SettlementStatus17Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus26Choice#Proprietary
- * MatchingStatus26Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus17Choice#mmProprietary
+ * SettlementStatus17Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#Proprietary
- * RepoCallRequestStatus7Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters11#mmStatus
+ * AdditionalQueryParameters11.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus18Choice#Pending
- * SettlementStatus18Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus26Choice#mmProprietary
+ * MatchingStatus26Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus18Choice#Failing
- * SettlementStatus18Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus7Choice#mmProprietary
+ * RepoCallRequestStatus7Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus18Choice#Proprietary
- * SettlementStatus18Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus18Choice#mmPending
+ * SettlementStatus18Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus25Choice#Proprietary
- * MatchingStatus25Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus18Choice#mmFailing
+ * SettlementStatus18Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferStatus2Choice#Status
- * TransferStatus2Choice.Status}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Status21Choice#Status
- * Status21Choice.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus18Choice#mmProprietary
+ * SettlementStatus18Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus21Choice#Pending
- * SettlementStatus21Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus25Choice#mmProprietary
+ * MatchingStatus25Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus21Choice#Failing
- * SettlementStatus21Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferStatus2Choice#mmStatus
+ * TransferStatus2Choice.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Status21Choice#mmStatus
+ * Status21Choice.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus21Choice#Proprietary
- * SettlementStatus21Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus21Choice#mmPending
+ * SettlementStatus21Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus9Choice#Proprietary
- * RepoCallRequestStatus9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus21Choice#mmFailing
+ * SettlementStatus21Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus29Choice#Proprietary
- * MatchingStatus29Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus21Choice#mmProprietary
+ * SettlementStatus21Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters12#Status
- * AdditionalQueryParameters12.Status}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus9Choice#mmProprietary
+ * RepoCallRequestStatus9Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus20Choice#Pending
- * SettlementStatus20Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus29Choice#mmProprietary
+ * MatchingStatus29Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus20Choice#Failing
- * SettlementStatus20Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters12#mmStatus
+ * AdditionalQueryParameters12.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus20Choice#Proprietary
- * SettlementStatus20Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus20Choice#mmPending
+ * SettlementStatus20Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingStatus63Choice#Proprietary
- * ProcessingStatus63Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus20Choice#mmFailing
+ * SettlementStatus20Choice.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus32Choice#Proprietary
- * MatchingStatus32Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus20Choice#mmProprietary
+ * SettlementStatus20Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MatchingStatus30Choice#Proprietary
- * MatchingStatus30Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus63Choice#mmProprietary
+ * ProcessingStatus63Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus22Choice#Pending
- * SettlementStatus22Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus32Choice#mmProprietary
+ * MatchingStatus32Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus22Choice#Failing
- * SettlementStatus22Choice.Failing}</li>
+ * {@linkplain com.tools20022.repository.choice.MatchingStatus30Choice#mmProprietary
+ * MatchingStatus30Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStatus22Choice#Proprietary
- * SettlementStatus22Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus22Choice#mmPending
+ * SettlementStatus22Choice.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus22Choice#mmFailing
+ * SettlementStatus22Choice.mmFailing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStatus22Choice#mmProprietary
+ * SettlementStatus22Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -647,8 +650,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -662,6 +665,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTradeStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected MatchingStatusCode matchingStatus;
 	/**
 	 * Status of matching of a trade.
 	 * <p>
@@ -672,372 +676,372 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MatchingStatusCode
 	 * MatchingStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus2Choice#Matched
-	 * MatchingStatus2Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus7Choice#Matched
-	 * MatchingStatus7Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail2#InferredMatchingStatus
-	 * StatusTrail2.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail2#MatchingStatus
-	 * StatusTrail2.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus18Choice#Matched
-	 * MatchingStatus18Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail3#InferredMatchingStatus
-	 * StatusTrail3.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail3#MatchingStatus
-	 * StatusTrail3.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus1Choice#Code
-	 * MatchingStatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus1Choice#Proprietary
-	 * MatchingStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#MatchingStatus
-	 * SecuritiesTradeDetails25.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#MatchingStatus
-	 * SecuritiesTradeDetails26.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus5Choice#Code
-	 * MatchingStatus5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus5Choice#Proprietary
-	 * MatchingStatus5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#MatchingStatus
-	 * SecuritiesTradeDetails27.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#MatchingStatus
-	 * SecuritiesTradeDetails28.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#MatchingStatus
-	 * SecuritiesTradeDetails3.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#MatchingStatus
-	 * SecuritiesTradeDetails11.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#MatchingStatus
-	 * SecuritiesTradeDetails1.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason3#InferredMatchingStatus
-	 * StatusAndReason3.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason3#MatchingStatus
-	 * StatusAndReason3.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#MatchingStatus
-	 * SecuritiesTradeDetails15.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus6Choice#Matched
-	 * MatchingStatus6Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason6#InferredMatchingStatus
-	 * StatusAndReason6.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason6#MatchingStatus
-	 * StatusAndReason6.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason12#InferredMatchingStatus
-	 * StatusAndReason12.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason12#MatchingStatus
-	 * StatusAndReason12.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason14#InferredMatchingStatus
-	 * StatusAndReason14.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason14#MatchingStatus
-	 * StatusAndReason14.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status2Choice#MatchingStatus
-	 * Status2Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status2Choice#InferredMatchingStatus
-	 * Status2Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status4Choice#MatchingStatus
-	 * Status4Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status4Choice#InferredMatchingStatus
-	 * Status4Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status9Choice#MatchingStatus
-	 * Status9Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status9Choice#InferredMatchingStatus
-	 * Status9Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status11Choice#MatchingStatus
-	 * Status11Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status11Choice#InferredMatchingStatus
-	 * Status11Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#Matched
-	 * MatchingStatus9Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#MatchedWithTolerance
-	 * MatchingStatus9Choice.MatchedWithTolerance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#MatchingAlleged
-	 * MatchingStatus9Choice.MatchingAlleged}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#Code
-	 * MatchingStatus8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#Proprietary
-	 * MatchingStatus8Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order16#MatchStatus
-	 * Order16.MatchStatus}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order14#MatchStatus
-	 * Order14.MatchStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus3Choice#Matched
-	 * MatchingStatus3Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice#InferredMatchingStatus
-	 * Status1Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice#MatchingStatus
-	 * Status1Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status8Choice#InferredMatchingStatus
-	 * Status8Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status8Choice#MatchingStatus
-	 * Status8Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus4Choice#Matched
-	 * MatchingStatus4Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus12Choice#Matched
-	 * MatchingStatus12Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus16Choice#Matched
-	 * MatchingStatus16Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status3Choice#InferredMatchingStatus
-	 * Status3Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status3Choice#MatchingStatus
-	 * Status3Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status10Choice#InferredMatchingStatus
-	 * Status10Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status10Choice#MatchingStatus
-	 * Status10Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status15Choice#MatchingStatus
-	 * Status15Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status15Choice#InferredMatchingStatus
-	 * Status15Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus20Choice#Matched
-	 * MatchingStatus20Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#MatchingStatus
-	 * SecuritiesTradeDetails33.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason19#InferredMatchingStatus
-	 * StatusAndReason19.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason19#MatchingStatus
-	 * StatusAndReason19.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus19Choice#Matched
-	 * MatchingStatus19Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#MatchingStatus
-	 * SecuritiesTradeDetails37.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#MatchingStatus
-	 * SecuritiesTradeDetails34.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#MatchingStatus
-	 * SecuritiesTradeDetails32.MatchingStatus}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order17#MatchStatus
-	 * Order17.MatchStatus}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order18#MatchStatus
-	 * Order18.MatchStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#MatchingStatus
-	 * SecuritiesTradeDetails44.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason20#InferredMatchingStatus
-	 * StatusAndReason20.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason20#MatchingStatus
-	 * StatusAndReason20.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus21Choice#Matched
-	 * MatchingStatus21Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#MatchingStatus
-	 * SecuritiesTradeDetails40.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus22Choice#Matched
-	 * MatchingStatus22Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status16Choice#MatchingStatus
-	 * Status16Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status16Choice#InferredMatchingStatus
-	 * Status16Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#MatchingStatus
-	 * SecuritiesTradeDetails46.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#MatchingStatus
-	 * SecuritiesTradeDetails47.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#Matched
-	 * MatchingStatus23Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#MatchedWithTolerance
-	 * MatchingStatus23Choice.MatchedWithTolerance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#MatchingAlleged
-	 * MatchingStatus23Choice.MatchingAlleged}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail4#InferredMatchingStatus
-	 * StatusTrail4.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail4#MatchingStatus
-	 * StatusTrail4.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail5#InferredMatchingStatus
-	 * StatusTrail5.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail5#MatchingStatus
-	 * StatusTrail5.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason28#InferredMatchingStatus
-	 * StatusAndReason28.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason28#MatchingStatus
-	 * StatusAndReason28.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#MatchingStatus
-	 * SecuritiesTradeDetails51.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail6#InferredMatchingStatus
-	 * StatusTrail6.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail6#MatchingStatus
-	 * StatusTrail6.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus24Choice#Matched
-	 * MatchingStatus24Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#MatchingStatus
-	 * SecuritiesTradeDetails56.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus26Choice#Matched
-	 * MatchingStatus26Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#MatchingStatus
-	 * SecuritiesTradeDetails52.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus27Choice#Code
-	 * MatchingStatus27Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus27Choice#Proprietary
-	 * MatchingStatus27Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status18Choice#MatchingStatus
-	 * Status18Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status18Choice#InferredMatchingStatus
-	 * Status18Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#MatchingStatus
-	 * SecuritiesTradeDetails50.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus25Choice#Matched
-	 * MatchingStatus25Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status19Choice#InferredMatchingStatus
-	 * Status19Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status19Choice#MatchingStatus
-	 * Status19Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#MatchingStatus
-	 * SecuritiesTradeDetails59.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus29Choice#Matched
-	 * MatchingStatus29Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#MatchingStatus
-	 * SecuritiesTradeDetails63.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason29#InferredMatchingStatus
-	 * StatusAndReason29.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason29#MatchingStatus
-	 * StatusAndReason29.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail7#InferredMatchingStatus
-	 * StatusTrail7.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusTrail7#MatchingStatus
-	 * StatusTrail7.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus32Choice#Matched
-	 * MatchingStatus32Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus28Choice#Code
-	 * MatchingStatus28Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus28Choice#Proprietary
-	 * MatchingStatus28Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice#InferredMatchingStatus
-	 * Status22Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice#MatchingStatus
-	 * Status22Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status23Choice#MatchingStatus
-	 * Status23Choice.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status23Choice#InferredMatchingStatus
-	 * Status23Choice.InferredMatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus30Choice#Matched
-	 * MatchingStatus30Choice.Matched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#MatchingStatus
-	 * SecuritiesTradeDetails65.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#MatchingStatus
-	 * SecuritiesTradeDetails66.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#MatchingStatus
-	 * SecuritiesTradeDetails67.MatchingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#MatchingStatus
-	 * SecuritiesTradeDetails70.MatchingStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus2Choice#mmMatched
+	 * MatchingStatus2Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus7Choice#mmMatched
+	 * MatchingStatus7Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmInferredMatchingStatus
+	 * StatusTrail2.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmMatchingStatus
+	 * StatusTrail2.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus18Choice#mmMatched
+	 * MatchingStatus18Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmInferredMatchingStatus
+	 * StatusTrail3.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmMatchingStatus
+	 * StatusTrail3.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus1Choice#mmCode
+	 * MatchingStatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus1Choice#mmProprietary
+	 * MatchingStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#mmMatchingStatus
+	 * SecuritiesTradeDetails25.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#mmMatchingStatus
+	 * SecuritiesTradeDetails26.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus5Choice#mmCode
+	 * MatchingStatus5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus5Choice#mmProprietary
+	 * MatchingStatus5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#mmMatchingStatus
+	 * SecuritiesTradeDetails27.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#mmMatchingStatus
+	 * SecuritiesTradeDetails28.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#mmMatchingStatus
+	 * SecuritiesTradeDetails3.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#mmMatchingStatus
+	 * SecuritiesTradeDetails11.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#mmMatchingStatus
+	 * SecuritiesTradeDetails1.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason3#mmInferredMatchingStatus
+	 * StatusAndReason3.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason3#mmMatchingStatus
+	 * StatusAndReason3.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#mmMatchingStatus
+	 * SecuritiesTradeDetails15.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus6Choice#mmMatched
+	 * MatchingStatus6Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason6#mmInferredMatchingStatus
+	 * StatusAndReason6.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason6#mmMatchingStatus
+	 * StatusAndReason6.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason12#mmInferredMatchingStatus
+	 * StatusAndReason12.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason12#mmMatchingStatus
+	 * StatusAndReason12.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason14#mmInferredMatchingStatus
+	 * StatusAndReason14.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason14#mmMatchingStatus
+	 * StatusAndReason14.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status2Choice#mmMatchingStatus
+	 * Status2Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status2Choice#mmInferredMatchingStatus
+	 * Status2Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status4Choice#mmMatchingStatus
+	 * Status4Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status4Choice#mmInferredMatchingStatus
+	 * Status4Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status9Choice#mmMatchingStatus
+	 * Status9Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status9Choice#mmInferredMatchingStatus
+	 * Status9Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status11Choice#mmMatchingStatus
+	 * Status11Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status11Choice#mmInferredMatchingStatus
+	 * Status11Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmMatched
+	 * MatchingStatus9Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmMatchedWithTolerance
+	 * MatchingStatus9Choice.mmMatchedWithTolerance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmMatchingAlleged
+	 * MatchingStatus9Choice.mmMatchingAlleged}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#mmCode
+	 * MatchingStatus8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus8Choice#mmProprietary
+	 * MatchingStatus8Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order16#mmMatchStatus
+	 * Order16.mmMatchStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order14#mmMatchStatus
+	 * Order14.mmMatchStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus3Choice#mmMatched
+	 * MatchingStatus3Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice#mmInferredMatchingStatus
+	 * Status1Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice#mmMatchingStatus
+	 * Status1Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status8Choice#mmInferredMatchingStatus
+	 * Status8Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status8Choice#mmMatchingStatus
+	 * Status8Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus4Choice#mmMatched
+	 * MatchingStatus4Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus12Choice#mmMatched
+	 * MatchingStatus12Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus16Choice#mmMatched
+	 * MatchingStatus16Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status3Choice#mmInferredMatchingStatus
+	 * Status3Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status3Choice#mmMatchingStatus
+	 * Status3Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status10Choice#mmInferredMatchingStatus
+	 * Status10Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status10Choice#mmMatchingStatus
+	 * Status10Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status15Choice#mmMatchingStatus
+	 * Status15Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status15Choice#mmInferredMatchingStatus
+	 * Status15Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus20Choice#mmMatched
+	 * MatchingStatus20Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#mmMatchingStatus
+	 * SecuritiesTradeDetails33.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason19#mmInferredMatchingStatus
+	 * StatusAndReason19.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason19#mmMatchingStatus
+	 * StatusAndReason19.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus19Choice#mmMatched
+	 * MatchingStatus19Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#mmMatchingStatus
+	 * SecuritiesTradeDetails37.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#mmMatchingStatus
+	 * SecuritiesTradeDetails34.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#mmMatchingStatus
+	 * SecuritiesTradeDetails32.mmMatchingStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order17#mmMatchStatus
+	 * Order17.mmMatchStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order18#mmMatchStatus
+	 * Order18.mmMatchStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#mmMatchingStatus
+	 * SecuritiesTradeDetails44.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason20#mmInferredMatchingStatus
+	 * StatusAndReason20.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason20#mmMatchingStatus
+	 * StatusAndReason20.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus21Choice#mmMatched
+	 * MatchingStatus21Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#mmMatchingStatus
+	 * SecuritiesTradeDetails40.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus22Choice#mmMatched
+	 * MatchingStatus22Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status16Choice#mmMatchingStatus
+	 * Status16Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status16Choice#mmInferredMatchingStatus
+	 * Status16Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#mmMatchingStatus
+	 * SecuritiesTradeDetails46.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#mmMatchingStatus
+	 * SecuritiesTradeDetails47.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmMatched
+	 * MatchingStatus23Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmMatchedWithTolerance
+	 * MatchingStatus23Choice.mmMatchedWithTolerance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmMatchingAlleged
+	 * MatchingStatus23Choice.mmMatchingAlleged}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmInferredMatchingStatus
+	 * StatusTrail4.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmMatchingStatus
+	 * StatusTrail4.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmInferredMatchingStatus
+	 * StatusTrail5.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmMatchingStatus
+	 * StatusTrail5.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason28#mmInferredMatchingStatus
+	 * StatusAndReason28.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason28#mmMatchingStatus
+	 * StatusAndReason28.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#mmMatchingStatus
+	 * SecuritiesTradeDetails51.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmInferredMatchingStatus
+	 * StatusTrail6.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmMatchingStatus
+	 * StatusTrail6.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus24Choice#mmMatched
+	 * MatchingStatus24Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#mmMatchingStatus
+	 * SecuritiesTradeDetails56.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus26Choice#mmMatched
+	 * MatchingStatus26Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#mmMatchingStatus
+	 * SecuritiesTradeDetails52.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus27Choice#mmCode
+	 * MatchingStatus27Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus27Choice#mmProprietary
+	 * MatchingStatus27Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status18Choice#mmMatchingStatus
+	 * Status18Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status18Choice#mmInferredMatchingStatus
+	 * Status18Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#mmMatchingStatus
+	 * SecuritiesTradeDetails50.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus25Choice#mmMatched
+	 * MatchingStatus25Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status19Choice#mmInferredMatchingStatus
+	 * Status19Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status19Choice#mmMatchingStatus
+	 * Status19Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#mmMatchingStatus
+	 * SecuritiesTradeDetails59.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus29Choice#mmMatched
+	 * MatchingStatus29Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#mmMatchingStatus
+	 * SecuritiesTradeDetails63.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason29#mmInferredMatchingStatus
+	 * StatusAndReason29.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason29#mmMatchingStatus
+	 * StatusAndReason29.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmInferredMatchingStatus
+	 * StatusTrail7.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmMatchingStatus
+	 * StatusTrail7.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus32Choice#mmMatched
+	 * MatchingStatus32Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus28Choice#mmCode
+	 * MatchingStatus28Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus28Choice#mmProprietary
+	 * MatchingStatus28Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmInferredMatchingStatus
+	 * Status22Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmMatchingStatus
+	 * Status22Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status23Choice#mmMatchingStatus
+	 * Status23Choice.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status23Choice#mmInferredMatchingStatus
+	 * Status23Choice.mmInferredMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus30Choice#mmMatched
+	 * MatchingStatus30Choice.mmMatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#mmMatchingStatus
+	 * SecuritiesTradeDetails65.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmMatchingStatus
+	 * SecuritiesTradeDetails66.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#mmMatchingStatus
+	 * SecuritiesTradeDetails67.mmMatchingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmMatchingStatus
+	 * SecuritiesTradeDetails70.mmMatchingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1049,59 +1053,60 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Status of matching of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MatchingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMatchingStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus2Choice.Matched, com.tools20022.repository.choice.MatchingStatus7Choice.Matched,
-					com.tools20022.repository.msg.StatusTrail2.InferredMatchingStatus, com.tools20022.repository.msg.StatusTrail2.MatchingStatus, com.tools20022.repository.choice.MatchingStatus18Choice.Matched,
-					com.tools20022.repository.msg.StatusTrail3.InferredMatchingStatus, com.tools20022.repository.msg.StatusTrail3.MatchingStatus, com.tools20022.repository.choice.MatchingStatus1Choice.Code,
-					com.tools20022.repository.choice.MatchingStatus1Choice.Proprietary, com.tools20022.repository.msg.SecuritiesTradeDetails25.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails26.MatchingStatus,
-					com.tools20022.repository.choice.MatchingStatus5Choice.Code, com.tools20022.repository.choice.MatchingStatus5Choice.Proprietary, com.tools20022.repository.msg.SecuritiesTradeDetails27.MatchingStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails28.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails3.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails11.MatchingStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails1.MatchingStatus, com.tools20022.repository.msg.StatusAndReason3.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason3.MatchingStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails15.MatchingStatus, com.tools20022.repository.choice.MatchingStatus6Choice.Matched, com.tools20022.repository.msg.StatusAndReason6.InferredMatchingStatus,
-					com.tools20022.repository.msg.StatusAndReason6.MatchingStatus, com.tools20022.repository.msg.StatusAndReason12.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason12.MatchingStatus,
-					com.tools20022.repository.msg.StatusAndReason14.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason14.MatchingStatus, com.tools20022.repository.choice.Status2Choice.MatchingStatus,
-					com.tools20022.repository.choice.Status2Choice.InferredMatchingStatus, com.tools20022.repository.choice.Status4Choice.MatchingStatus, com.tools20022.repository.choice.Status4Choice.InferredMatchingStatus,
-					com.tools20022.repository.choice.Status9Choice.MatchingStatus, com.tools20022.repository.choice.Status9Choice.InferredMatchingStatus, com.tools20022.repository.choice.Status11Choice.MatchingStatus,
-					com.tools20022.repository.choice.Status11Choice.InferredMatchingStatus, com.tools20022.repository.choice.MatchingStatus9Choice.Matched, com.tools20022.repository.choice.MatchingStatus9Choice.MatchedWithTolerance,
-					com.tools20022.repository.choice.MatchingStatus9Choice.MatchingAlleged, com.tools20022.repository.choice.MatchingStatus8Choice.Code, com.tools20022.repository.choice.MatchingStatus8Choice.Proprietary,
-					com.tools20022.repository.msg.Order16.MatchStatus, com.tools20022.repository.msg.Order14.MatchStatus, com.tools20022.repository.choice.MatchingStatus3Choice.Matched,
-					com.tools20022.repository.choice.Status1Choice.InferredMatchingStatus, com.tools20022.repository.choice.Status1Choice.MatchingStatus, com.tools20022.repository.choice.Status8Choice.InferredMatchingStatus,
-					com.tools20022.repository.choice.Status8Choice.MatchingStatus, com.tools20022.repository.choice.MatchingStatus4Choice.Matched, com.tools20022.repository.choice.MatchingStatus12Choice.Matched,
-					com.tools20022.repository.choice.MatchingStatus16Choice.Matched, com.tools20022.repository.choice.Status3Choice.InferredMatchingStatus, com.tools20022.repository.choice.Status3Choice.MatchingStatus,
-					com.tools20022.repository.choice.Status10Choice.InferredMatchingStatus, com.tools20022.repository.choice.Status10Choice.MatchingStatus, com.tools20022.repository.choice.Status15Choice.MatchingStatus,
-					com.tools20022.repository.choice.Status15Choice.InferredMatchingStatus, com.tools20022.repository.choice.MatchingStatus20Choice.Matched, com.tools20022.repository.msg.SecuritiesTradeDetails33.MatchingStatus,
-					com.tools20022.repository.msg.StatusAndReason19.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason19.MatchingStatus, com.tools20022.repository.choice.MatchingStatus19Choice.Matched,
-					com.tools20022.repository.msg.SecuritiesTradeDetails37.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails34.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails32.MatchingStatus,
-					com.tools20022.repository.msg.Order17.MatchStatus, com.tools20022.repository.msg.Order18.MatchStatus, com.tools20022.repository.msg.SecuritiesTradeDetails44.MatchingStatus,
-					com.tools20022.repository.msg.StatusAndReason20.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason20.MatchingStatus, com.tools20022.repository.choice.MatchingStatus21Choice.Matched,
-					com.tools20022.repository.msg.SecuritiesTradeDetails40.MatchingStatus, com.tools20022.repository.choice.MatchingStatus22Choice.Matched, com.tools20022.repository.choice.Status16Choice.MatchingStatus,
-					com.tools20022.repository.choice.Status16Choice.InferredMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails46.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails47.MatchingStatus,
-					com.tools20022.repository.choice.MatchingStatus23Choice.Matched, com.tools20022.repository.choice.MatchingStatus23Choice.MatchedWithTolerance, com.tools20022.repository.choice.MatchingStatus23Choice.MatchingAlleged,
-					com.tools20022.repository.msg.StatusTrail4.InferredMatchingStatus, com.tools20022.repository.msg.StatusTrail4.MatchingStatus, com.tools20022.repository.msg.StatusTrail5.InferredMatchingStatus,
-					com.tools20022.repository.msg.StatusTrail5.MatchingStatus, com.tools20022.repository.msg.StatusAndReason28.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason28.MatchingStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails51.MatchingStatus, com.tools20022.repository.msg.StatusTrail6.InferredMatchingStatus, com.tools20022.repository.msg.StatusTrail6.MatchingStatus,
-					com.tools20022.repository.choice.MatchingStatus24Choice.Matched, com.tools20022.repository.msg.SecuritiesTradeDetails56.MatchingStatus, com.tools20022.repository.choice.MatchingStatus26Choice.Matched,
-					com.tools20022.repository.msg.SecuritiesTradeDetails52.MatchingStatus, com.tools20022.repository.choice.MatchingStatus27Choice.Code, com.tools20022.repository.choice.MatchingStatus27Choice.Proprietary,
-					com.tools20022.repository.choice.Status18Choice.MatchingStatus, com.tools20022.repository.choice.Status18Choice.InferredMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails50.MatchingStatus,
-					com.tools20022.repository.choice.MatchingStatus25Choice.Matched, com.tools20022.repository.choice.Status19Choice.InferredMatchingStatus, com.tools20022.repository.choice.Status19Choice.MatchingStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails59.MatchingStatus, com.tools20022.repository.choice.MatchingStatus29Choice.Matched, com.tools20022.repository.msg.SecuritiesTradeDetails63.MatchingStatus,
-					com.tools20022.repository.msg.StatusAndReason29.InferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason29.MatchingStatus, com.tools20022.repository.msg.StatusTrail7.InferredMatchingStatus,
-					com.tools20022.repository.msg.StatusTrail7.MatchingStatus, com.tools20022.repository.choice.MatchingStatus32Choice.Matched, com.tools20022.repository.choice.MatchingStatus28Choice.Code,
-					com.tools20022.repository.choice.MatchingStatus28Choice.Proprietary, com.tools20022.repository.choice.Status22Choice.InferredMatchingStatus, com.tools20022.repository.choice.Status22Choice.MatchingStatus,
-					com.tools20022.repository.choice.Status23Choice.MatchingStatus, com.tools20022.repository.choice.Status23Choice.InferredMatchingStatus, com.tools20022.repository.choice.MatchingStatus30Choice.Matched,
-					com.tools20022.repository.msg.SecuritiesTradeDetails65.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails66.MatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails67.MatchingStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails70.MatchingStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus2Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus7Choice.mmMatched,
+					com.tools20022.repository.msg.StatusTrail2.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusTrail2.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus18Choice.mmMatched,
+					com.tools20022.repository.msg.StatusTrail3.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusTrail3.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus1Choice.mmCode,
+					com.tools20022.repository.choice.MatchingStatus1Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails25.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmMatchingStatus,
+					com.tools20022.repository.choice.MatchingStatus5Choice.mmCode, com.tools20022.repository.choice.MatchingStatus5Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails27.mmMatchingStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails28.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails3.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails11.mmMatchingStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails1.mmMatchingStatus, com.tools20022.repository.msg.StatusAndReason3.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason3.mmMatchingStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails15.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus6Choice.mmMatched, com.tools20022.repository.msg.StatusAndReason6.mmInferredMatchingStatus,
+					com.tools20022.repository.msg.StatusAndReason6.mmMatchingStatus, com.tools20022.repository.msg.StatusAndReason12.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason12.mmMatchingStatus,
+					com.tools20022.repository.msg.StatusAndReason14.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason14.mmMatchingStatus, com.tools20022.repository.choice.Status2Choice.mmMatchingStatus,
+					com.tools20022.repository.choice.Status2Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.Status4Choice.mmMatchingStatus, com.tools20022.repository.choice.Status4Choice.mmInferredMatchingStatus,
+					com.tools20022.repository.choice.Status9Choice.mmMatchingStatus, com.tools20022.repository.choice.Status9Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.Status11Choice.mmMatchingStatus,
+					com.tools20022.repository.choice.Status11Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.MatchingStatus9Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus9Choice.mmMatchedWithTolerance,
+					com.tools20022.repository.choice.MatchingStatus9Choice.mmMatchingAlleged, com.tools20022.repository.choice.MatchingStatus8Choice.mmCode, com.tools20022.repository.choice.MatchingStatus8Choice.mmProprietary,
+					com.tools20022.repository.msg.Order16.mmMatchStatus, com.tools20022.repository.msg.Order14.mmMatchStatus, com.tools20022.repository.choice.MatchingStatus3Choice.mmMatched,
+					com.tools20022.repository.choice.Status1Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.Status1Choice.mmMatchingStatus, com.tools20022.repository.choice.Status8Choice.mmInferredMatchingStatus,
+					com.tools20022.repository.choice.Status8Choice.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus4Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus12Choice.mmMatched,
+					com.tools20022.repository.choice.MatchingStatus16Choice.mmMatched, com.tools20022.repository.choice.Status3Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.Status3Choice.mmMatchingStatus,
+					com.tools20022.repository.choice.Status10Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.Status10Choice.mmMatchingStatus, com.tools20022.repository.choice.Status15Choice.mmMatchingStatus,
+					com.tools20022.repository.choice.Status15Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.MatchingStatus20Choice.mmMatched, com.tools20022.repository.msg.SecuritiesTradeDetails33.mmMatchingStatus,
+					com.tools20022.repository.msg.StatusAndReason19.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason19.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus19Choice.mmMatched,
+					com.tools20022.repository.msg.SecuritiesTradeDetails37.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails34.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails32.mmMatchingStatus,
+					com.tools20022.repository.msg.Order17.mmMatchStatus, com.tools20022.repository.msg.Order18.mmMatchStatus, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmMatchingStatus,
+					com.tools20022.repository.msg.StatusAndReason20.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason20.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus21Choice.mmMatched,
+					com.tools20022.repository.msg.SecuritiesTradeDetails40.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus22Choice.mmMatched, com.tools20022.repository.choice.Status16Choice.mmMatchingStatus,
+					com.tools20022.repository.choice.Status16Choice.mmInferredMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails46.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails47.mmMatchingStatus,
+					com.tools20022.repository.choice.MatchingStatus23Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus23Choice.mmMatchedWithTolerance,
+					com.tools20022.repository.choice.MatchingStatus23Choice.mmMatchingAlleged, com.tools20022.repository.msg.StatusTrail4.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusTrail4.mmMatchingStatus,
+					com.tools20022.repository.msg.StatusTrail5.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusTrail5.mmMatchingStatus, com.tools20022.repository.msg.StatusAndReason28.mmInferredMatchingStatus,
+					com.tools20022.repository.msg.StatusAndReason28.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails51.mmMatchingStatus, com.tools20022.repository.msg.StatusTrail6.mmInferredMatchingStatus,
+					com.tools20022.repository.msg.StatusTrail6.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus24Choice.mmMatched, com.tools20022.repository.msg.SecuritiesTradeDetails56.mmMatchingStatus,
+					com.tools20022.repository.choice.MatchingStatus26Choice.mmMatched, com.tools20022.repository.msg.SecuritiesTradeDetails52.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus27Choice.mmCode,
+					com.tools20022.repository.choice.MatchingStatus27Choice.mmProprietary, com.tools20022.repository.choice.Status18Choice.mmMatchingStatus, com.tools20022.repository.choice.Status18Choice.mmInferredMatchingStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails50.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus25Choice.mmMatched, com.tools20022.repository.choice.Status19Choice.mmInferredMatchingStatus,
+					com.tools20022.repository.choice.Status19Choice.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails59.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus29Choice.mmMatched,
+					com.tools20022.repository.msg.SecuritiesTradeDetails63.mmMatchingStatus, com.tools20022.repository.msg.StatusAndReason29.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason29.mmMatchingStatus,
+					com.tools20022.repository.msg.StatusTrail7.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusTrail7.mmMatchingStatus, com.tools20022.repository.choice.MatchingStatus32Choice.mmMatched,
+					com.tools20022.repository.choice.MatchingStatus28Choice.mmCode, com.tools20022.repository.choice.MatchingStatus28Choice.mmProprietary, com.tools20022.repository.choice.Status22Choice.mmInferredMatchingStatus,
+					com.tools20022.repository.choice.Status22Choice.mmMatchingStatus, com.tools20022.repository.choice.Status23Choice.mmMatchingStatus, com.tools20022.repository.choice.Status23Choice.mmInferredMatchingStatus,
+					com.tools20022.repository.choice.MatchingStatus30Choice.mmMatched, com.tools20022.repository.msg.SecuritiesTradeDetails65.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails66.mmMatchingStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails67.mmMatchingStatus, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmMatchingStatus);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MatchingStatus";
 			definition = "Status of matching of a trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MatchingStatusCode.mmObject();
 		}
 	};
+	protected AffirmationStatusCode affirmationStatus;
 	/**
 	 * Status of affirmation of a trade.
 	 * <p>
@@ -1112,154 +1117,154 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AffirmationStatusCode
 	 * AffirmationStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus1Choice#Code
-	 * AffirmationStatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus1Choice#Proprietary
-	 * AffirmationStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#AffirmationStatus
-	 * SecuritiesTradeDetails25.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#AffirmationStatus
-	 * SecuritiesTradeDetails26.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus2Choice#Code
-	 * AffirmationStatus2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus2Choice#Proprietary
-	 * AffirmationStatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#AffirmationStatus
-	 * SecuritiesTradeDetails27.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#AffirmationStatus
-	 * SecuritiesTradeDetails28.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#AffirmationStatus
-	 * SecuritiesTradeDetails3.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#AffirmationStatus
-	 * SecuritiesTradeDetails11.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#AffirmationStatus
-	 * SecuritiesTradeDetails1.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#AffirmationStatus
-	 * SecuritiesTradeDetails15.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus7Choice#Code
-	 * AffirmationStatus7Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus7Choice#Proprietary
-	 * AffirmationStatus7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason10#AffirmationStatus
-	 * StatusAndReason10.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus6Choice#Affirmed
-	 * AffirmationStatus6Choice.Affirmed}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus6Choice#Unaffirmed
-	 * AffirmationStatus6Choice.Unaffirmed}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus6Choice#ProprietaryStatus
-	 * AffirmationStatus6Choice.ProprietaryStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice#AffirmationStatus
-	 * Status1Choice.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status8Choice#AffirmationStatus
-	 * Status8Choice.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status3Choice#AffirmationStatus
-	 * Status3Choice.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status10Choice#AffirmationStatus
-	 * Status10Choice.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#AffirmationStatus
-	 * SecuritiesTradeDetails33.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#AffirmationStatus
-	 * SecuritiesTradeDetails37.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#AffirmationStatus
-	 * SecuritiesTradeDetails34.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#AffirmationStatus
-	 * SecuritiesTradeDetails32.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#AffirmationStatus
-	 * SecuritiesTradeDetails44.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#AffirmationStatus
-	 * SecuritiesTradeDetails40.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#AffirmationStatus
-	 * SecuritiesTradeDetails46.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#AffirmationStatus
-	 * SecuritiesTradeDetails47.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#AffirmationStatus
-	 * SecuritiesTradeDetails51.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#AffirmationStatus
-	 * SecuritiesTradeDetails56.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus8Choice#Code
-	 * AffirmationStatus8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus8Choice#Proprietary
-	 * AffirmationStatus8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#AffirmationStatus
-	 * SecuritiesTradeDetails52.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#AffirmationStatus
-	 * SecuritiesTradeDetails50.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status19Choice#AffirmationStatus
-	 * Status19Choice.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#AffirmationStatus
-	 * SecuritiesTradeDetails59.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#AffirmationStatus
-	 * SecuritiesTradeDetails63.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus9Choice#Code
-	 * AffirmationStatus9Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus9Choice#Proprietary
-	 * AffirmationStatus9Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice#AffirmationStatus
-	 * Status22Choice.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#AffirmationStatus
-	 * SecuritiesTradeDetails65.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#AffirmationStatus
-	 * SecuritiesTradeDetails66.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#AffirmationStatus
-	 * SecuritiesTradeDetails67.AffirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#AffirmationStatus
-	 * SecuritiesTradeDetails70.AffirmationStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus1Choice#mmCode
+	 * AffirmationStatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus1Choice#mmProprietary
+	 * AffirmationStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#mmAffirmationStatus
+	 * SecuritiesTradeDetails25.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#mmAffirmationStatus
+	 * SecuritiesTradeDetails26.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus2Choice#mmCode
+	 * AffirmationStatus2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus2Choice#mmProprietary
+	 * AffirmationStatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#mmAffirmationStatus
+	 * SecuritiesTradeDetails27.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#mmAffirmationStatus
+	 * SecuritiesTradeDetails28.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#mmAffirmationStatus
+	 * SecuritiesTradeDetails3.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#mmAffirmationStatus
+	 * SecuritiesTradeDetails11.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#mmAffirmationStatus
+	 * SecuritiesTradeDetails1.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#mmAffirmationStatus
+	 * SecuritiesTradeDetails15.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus7Choice#mmCode
+	 * AffirmationStatus7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus7Choice#mmProprietary
+	 * AffirmationStatus7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason10#mmAffirmationStatus
+	 * StatusAndReason10.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus6Choice#mmAffirmed
+	 * AffirmationStatus6Choice.mmAffirmed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus6Choice#mmUnaffirmed
+	 * AffirmationStatus6Choice.mmUnaffirmed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus6Choice#mmProprietaryStatus
+	 * AffirmationStatus6Choice.mmProprietaryStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice#mmAffirmationStatus
+	 * Status1Choice.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status8Choice#mmAffirmationStatus
+	 * Status8Choice.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status3Choice#mmAffirmationStatus
+	 * Status3Choice.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status10Choice#mmAffirmationStatus
+	 * Status10Choice.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#mmAffirmationStatus
+	 * SecuritiesTradeDetails33.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#mmAffirmationStatus
+	 * SecuritiesTradeDetails37.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#mmAffirmationStatus
+	 * SecuritiesTradeDetails34.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#mmAffirmationStatus
+	 * SecuritiesTradeDetails32.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#mmAffirmationStatus
+	 * SecuritiesTradeDetails44.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#mmAffirmationStatus
+	 * SecuritiesTradeDetails40.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#mmAffirmationStatus
+	 * SecuritiesTradeDetails46.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#mmAffirmationStatus
+	 * SecuritiesTradeDetails47.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#mmAffirmationStatus
+	 * SecuritiesTradeDetails51.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#mmAffirmationStatus
+	 * SecuritiesTradeDetails56.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus8Choice#mmCode
+	 * AffirmationStatus8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus8Choice#mmProprietary
+	 * AffirmationStatus8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#mmAffirmationStatus
+	 * SecuritiesTradeDetails52.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#mmAffirmationStatus
+	 * SecuritiesTradeDetails50.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status19Choice#mmAffirmationStatus
+	 * Status19Choice.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#mmAffirmationStatus
+	 * SecuritiesTradeDetails59.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#mmAffirmationStatus
+	 * SecuritiesTradeDetails63.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus9Choice#mmCode
+	 * AffirmationStatus9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AffirmationStatus9Choice#mmProprietary
+	 * AffirmationStatus9Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmAffirmationStatus
+	 * Status22Choice.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#mmAffirmationStatus
+	 * SecuritiesTradeDetails65.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmAffirmationStatus
+	 * SecuritiesTradeDetails66.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#mmAffirmationStatus
+	 * SecuritiesTradeDetails67.mmAffirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmAffirmationStatus
+	 * SecuritiesTradeDetails70.mmAffirmationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1271,36 +1276,39 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AffirmationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAffirmationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AffirmationStatus1Choice.Code, com.tools20022.repository.choice.AffirmationStatus1Choice.Proprietary,
-					com.tools20022.repository.msg.SecuritiesTradeDetails25.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails26.AffirmationStatus, com.tools20022.repository.choice.AffirmationStatus2Choice.Code,
-					com.tools20022.repository.choice.AffirmationStatus2Choice.Proprietary, com.tools20022.repository.msg.SecuritiesTradeDetails27.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails28.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails3.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails11.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails1.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails15.AffirmationStatus, com.tools20022.repository.choice.AffirmationStatus7Choice.Code, com.tools20022.repository.choice.AffirmationStatus7Choice.Proprietary,
-					com.tools20022.repository.msg.StatusAndReason10.AffirmationStatus, com.tools20022.repository.choice.AffirmationStatus6Choice.Affirmed, com.tools20022.repository.choice.AffirmationStatus6Choice.Unaffirmed,
-					com.tools20022.repository.choice.AffirmationStatus6Choice.ProprietaryStatus, com.tools20022.repository.choice.Status1Choice.AffirmationStatus, com.tools20022.repository.choice.Status8Choice.AffirmationStatus,
-					com.tools20022.repository.choice.Status3Choice.AffirmationStatus, com.tools20022.repository.choice.Status10Choice.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails33.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails37.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails34.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails32.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails44.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails40.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails46.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails47.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails51.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails56.AffirmationStatus, com.tools20022.repository.choice.AffirmationStatus8Choice.Code, com.tools20022.repository.choice.AffirmationStatus8Choice.Proprietary,
-					com.tools20022.repository.msg.SecuritiesTradeDetails52.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails50.AffirmationStatus, com.tools20022.repository.choice.Status19Choice.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails59.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails63.AffirmationStatus, com.tools20022.repository.choice.AffirmationStatus9Choice.Code,
-					com.tools20022.repository.choice.AffirmationStatus9Choice.Proprietary, com.tools20022.repository.choice.Status22Choice.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails65.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails66.AffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails67.AffirmationStatus,
-					com.tools20022.repository.msg.SecuritiesTradeDetails70.AffirmationStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AffirmationStatus1Choice.mmCode, com.tools20022.repository.choice.AffirmationStatus1Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesTradeDetails25.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmAffirmationStatus, com.tools20022.repository.choice.AffirmationStatus2Choice.mmCode,
+					com.tools20022.repository.choice.AffirmationStatus2Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails27.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails28.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails3.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails11.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails1.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails15.mmAffirmationStatus, com.tools20022.repository.choice.AffirmationStatus7Choice.mmCode, com.tools20022.repository.choice.AffirmationStatus7Choice.mmProprietary,
+					com.tools20022.repository.msg.StatusAndReason10.mmAffirmationStatus, com.tools20022.repository.choice.AffirmationStatus6Choice.mmAffirmed, com.tools20022.repository.choice.AffirmationStatus6Choice.mmUnaffirmed,
+					com.tools20022.repository.choice.AffirmationStatus6Choice.mmProprietaryStatus, com.tools20022.repository.choice.Status1Choice.mmAffirmationStatus, com.tools20022.repository.choice.Status8Choice.mmAffirmationStatus,
+					com.tools20022.repository.choice.Status3Choice.mmAffirmationStatus, com.tools20022.repository.choice.Status10Choice.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails33.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails37.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails34.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails32.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails40.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails46.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails47.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails51.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails56.mmAffirmationStatus, com.tools20022.repository.choice.AffirmationStatus8Choice.mmCode, com.tools20022.repository.choice.AffirmationStatus8Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesTradeDetails52.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails50.mmAffirmationStatus,
+					com.tools20022.repository.choice.Status19Choice.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails59.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails63.mmAffirmationStatus, com.tools20022.repository.choice.AffirmationStatus9Choice.mmCode, com.tools20022.repository.choice.AffirmationStatus9Choice.mmProprietary,
+					com.tools20022.repository.choice.Status22Choice.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails65.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails66.mmAffirmationStatus, com.tools20022.repository.msg.SecuritiesTradeDetails67.mmAffirmationStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails70.mmAffirmationStatus);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Status of affirmation of a trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AffirmationStatusCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesTradeStatusReason> reason;
 	/**
 	 * Specifies the reasons for the status. It is derived from the relationship
 	 * between Status and Status Reason.
@@ -1310,8 +1318,8 @@ public class SecuritiesTradeStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#SecuritiesTradeStatus
-	 * SecuritiesTradeStatusReason.SecuritiesTradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmSecuritiesTradeStatus
+	 * SecuritiesTradeStatusReason.mmSecuritiesTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1320,214 +1328,214 @@ public class SecuritiesTradeStatus extends Status {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason
 	 * SecuritiesTradeStatusReason}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus2Choice#Unmatched
-	 * MatchingStatus2Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus7Choice#Unmatched
-	 * MatchingStatus7Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus18Choice#Unmatched
-	 * MatchingStatus18Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#DeliveryReturnReason
-	 * SettlementDetails50.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#DeliveryReturnReason
-	 * SettlementDetails51.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#DeliveryReturnReason
-	 * SettlementDetails1.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#DeliveryReturnReason
-	 * SettlementDetails19.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus6Choice#Unmatched
-	 * MatchingStatus6Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#DeliveryReturnReason
-	 * SettlementDetails22.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#DeliveryReturnReason
-	 * SettlementDetails35.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#DeliveryReturnReason
-	 * SettlementDetails42.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#DeliveryReturnReason
-	 * SettlementDetails52.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#Unmatched
-	 * MatchingStatus9Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#CancellationPending
-	 * CancellationProcessingStatus6Choice.CancellationPending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#Rejected
-	 * CancellationStatusAndReason.Rejected}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#Complete
-	 * CancellationStatusAndReason.Complete}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#Rejected
-	 * CancellationStatusAndReason2.Rejected}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#Complete
-	 * CancellationStatusAndReason2.Complete}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#Pending
-	 * CancellationStatusAndReason2.Pending}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#PendingSettlement
-	 * TransferStatusAndReason.PendingSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#Unmatched
-	 * TransferStatusAndReason.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#InRepair
-	 * TransferStatusAndReason.InRepair}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#Rejected
-	 * TransferStatusAndReason.Rejected}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#PendingSettlement
-	 * TransferStatusAndReason2.PendingSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#Unmatched
-	 * TransferStatusAndReason2.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#InRepair
-	 * TransferStatusAndReason2.InRepair}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#Rejected
-	 * TransferStatusAndReason2.Rejected}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#FailedSettlement
-	 * TransferStatusAndReason2.FailedSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#Cancelled
-	 * TransferStatusAndReason2.Cancelled}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#Reversed
-	 * TransferStatusAndReason2.Reversed}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus3Choice#Unmatched
-	 * MatchingStatus3Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus4Choice#Unmatched
-	 * MatchingStatus4Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus12Choice#Unmatched
-	 * MatchingStatus12Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus16Choice#Unmatched
-	 * MatchingStatus16Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#ProcessingStatus
-	 * IntraPositionStatusAndReason1.ProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification2#ProcessingStatus
-	 * IntraPositionModification2.ProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification1#ProcessingStatus
-	 * IntraPositionModification1.ProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TransferStatus1Choice#Reversed
-	 * TransferStatus1Choice.Reversed}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#DeliveryReturnReason
-	 * SettlementDetails67.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#DeliveryReturnReason
-	 * SettlementDetails68.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus20Choice#Unmatched
-	 * MatchingStatus20Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus19Choice#Unmatched
-	 * MatchingStatus19Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#DeliveryReturnReason
-	 * SettlementDetails81.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus21Choice#Unmatched
-	 * MatchingStatus21Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus22Choice#Unmatched
-	 * MatchingStatus22Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#DeliveryReturnReason
-	 * SettlementDetails83.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#Unmatched
-	 * MatchingStatus23Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#DeliveryReturnReason
-	 * SettlementDetails93.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus24Choice#Unmatched
-	 * MatchingStatus24Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus26Choice#Unmatched
-	 * MatchingStatus26Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#DeliveryReturnReason
-	 * SettlementDetails94.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus25Choice#Unmatched
-	 * MatchingStatus25Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TransferStatus2Choice#Reversed
-	 * TransferStatus2Choice.Reversed}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#DeliveryReturnReason
-	 * SettlementDetails101.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus29Choice#Unmatched
-	 * MatchingStatus29Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#DeliveryReturnReason
-	 * SettlementDetails111.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#DeliveryReturnReason
-	 * SettlementDetails112.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus32Choice#Unmatched
-	 * MatchingStatus32Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MatchingStatus30Choice#Unmatched
-	 * MatchingStatus30Choice.Unmatched}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#DeliveryReturnReason
-	 * SettlementDetails113.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#DeliveryReturnReason
-	 * SettlementDetails120.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#DeliveryReturnReason
-	 * SettlementDetails119.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#DeliveryReturnReason
-	 * SettlementDetails122.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#DeliveryReturnReason
-	 * SettlementDetails137.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#DeliveryReturnReason
-	 * SettlementDetails132.DeliveryReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#DeliveryReturnReason
-	 * SettlementDetails138.DeliveryReturnReason}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus2Choice#mmUnmatched
+	 * MatchingStatus2Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus7Choice#mmUnmatched
+	 * MatchingStatus7Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus18Choice#mmUnmatched
+	 * MatchingStatus18Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#mmDeliveryReturnReason
+	 * SettlementDetails50.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#mmDeliveryReturnReason
+	 * SettlementDetails51.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmDeliveryReturnReason
+	 * SettlementDetails1.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmDeliveryReturnReason
+	 * SettlementDetails19.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus6Choice#mmUnmatched
+	 * MatchingStatus6Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmDeliveryReturnReason
+	 * SettlementDetails22.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmDeliveryReturnReason
+	 * SettlementDetails35.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmDeliveryReturnReason
+	 * SettlementDetails42.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmDeliveryReturnReason
+	 * SettlementDetails52.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus9Choice#mmUnmatched
+	 * MatchingStatus9Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#mmCancellationPending
+	 * CancellationProcessingStatus6Choice.mmCancellationPending}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#mmRejected
+	 * CancellationStatusAndReason.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#mmComplete
+	 * CancellationStatusAndReason.mmComplete}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmRejected
+	 * CancellationStatusAndReason2.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmComplete
+	 * CancellationStatusAndReason2.mmComplete}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmPending
+	 * CancellationStatusAndReason2.mmPending}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#mmPendingSettlement
+	 * TransferStatusAndReason.mmPendingSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#mmUnmatched
+	 * TransferStatusAndReason.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#mmInRepair
+	 * TransferStatusAndReason.mmInRepair}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#mmRejected
+	 * TransferStatusAndReason.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmPendingSettlement
+	 * TransferStatusAndReason2.mmPendingSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmUnmatched
+	 * TransferStatusAndReason2.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmInRepair
+	 * TransferStatusAndReason2.mmInRepair}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmRejected
+	 * TransferStatusAndReason2.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmFailedSettlement
+	 * TransferStatusAndReason2.mmFailedSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmCancelled
+	 * TransferStatusAndReason2.mmCancelled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmReversed
+	 * TransferStatusAndReason2.mmReversed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus3Choice#mmUnmatched
+	 * MatchingStatus3Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus4Choice#mmUnmatched
+	 * MatchingStatus4Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus12Choice#mmUnmatched
+	 * MatchingStatus12Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus16Choice#mmUnmatched
+	 * MatchingStatus16Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason1#mmProcessingStatus
+	 * IntraPositionStatusAndReason1.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification2#mmProcessingStatus
+	 * IntraPositionModification2.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification1#mmProcessingStatus
+	 * IntraPositionModification1.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransferStatus1Choice#mmReversed
+	 * TransferStatus1Choice.mmReversed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmDeliveryReturnReason
+	 * SettlementDetails67.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#mmDeliveryReturnReason
+	 * SettlementDetails68.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus20Choice#mmUnmatched
+	 * MatchingStatus20Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus19Choice#mmUnmatched
+	 * MatchingStatus19Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmDeliveryReturnReason
+	 * SettlementDetails81.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus21Choice#mmUnmatched
+	 * MatchingStatus21Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus22Choice#mmUnmatched
+	 * MatchingStatus22Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#mmDeliveryReturnReason
+	 * SettlementDetails83.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus23Choice#mmUnmatched
+	 * MatchingStatus23Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmDeliveryReturnReason
+	 * SettlementDetails93.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus24Choice#mmUnmatched
+	 * MatchingStatus24Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus26Choice#mmUnmatched
+	 * MatchingStatus26Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#mmDeliveryReturnReason
+	 * SettlementDetails94.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus25Choice#mmUnmatched
+	 * MatchingStatus25Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransferStatus2Choice#mmReversed
+	 * TransferStatus2Choice.mmReversed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmDeliveryReturnReason
+	 * SettlementDetails101.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus29Choice#mmUnmatched
+	 * MatchingStatus29Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmDeliveryReturnReason
+	 * SettlementDetails111.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmDeliveryReturnReason
+	 * SettlementDetails112.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus32Choice#mmUnmatched
+	 * MatchingStatus32Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MatchingStatus30Choice#mmUnmatched
+	 * MatchingStatus30Choice.mmUnmatched}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#mmDeliveryReturnReason
+	 * SettlementDetails113.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmDeliveryReturnReason
+	 * SettlementDetails120.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmDeliveryReturnReason
+	 * SettlementDetails119.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#mmDeliveryReturnReason
+	 * SettlementDetails122.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmDeliveryReturnReason
+	 * SettlementDetails137.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmDeliveryReturnReason
+	 * SettlementDetails132.mmDeliveryReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmDeliveryReturnReason
+	 * SettlementDetails138.mmDeliveryReturnReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1541,42 +1549,45 @@ public class SecuritiesTradeStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Reason = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmReason = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus2Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus7Choice.Unmatched,
-					com.tools20022.repository.choice.MatchingStatus18Choice.Unmatched, com.tools20022.repository.msg.SettlementDetails50.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails51.DeliveryReturnReason,
-					com.tools20022.repository.msg.SettlementDetails1.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails19.DeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus6Choice.Unmatched,
-					com.tools20022.repository.msg.SettlementDetails22.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails35.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails42.DeliveryReturnReason,
-					com.tools20022.repository.msg.SettlementDetails52.DeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus9Choice.Unmatched,
-					com.tools20022.repository.choice.CancellationProcessingStatus6Choice.CancellationPending, com.tools20022.repository.msg.CancellationStatusAndReason.Rejected,
-					com.tools20022.repository.msg.CancellationStatusAndReason.Complete, com.tools20022.repository.msg.CancellationStatusAndReason2.Rejected, com.tools20022.repository.msg.CancellationStatusAndReason2.Complete,
-					com.tools20022.repository.msg.CancellationStatusAndReason2.Pending, com.tools20022.repository.msg.TransferStatusAndReason.PendingSettlement, com.tools20022.repository.msg.TransferStatusAndReason.Unmatched,
-					com.tools20022.repository.msg.TransferStatusAndReason.InRepair, com.tools20022.repository.msg.TransferStatusAndReason.Rejected, com.tools20022.repository.msg.TransferStatusAndReason2.PendingSettlement,
-					com.tools20022.repository.msg.TransferStatusAndReason2.Unmatched, com.tools20022.repository.msg.TransferStatusAndReason2.InRepair, com.tools20022.repository.msg.TransferStatusAndReason2.Rejected,
-					com.tools20022.repository.msg.TransferStatusAndReason2.FailedSettlement, com.tools20022.repository.msg.TransferStatusAndReason2.Cancelled, com.tools20022.repository.msg.TransferStatusAndReason2.Reversed,
-					com.tools20022.repository.choice.MatchingStatus3Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus4Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus12Choice.Unmatched,
-					com.tools20022.repository.choice.MatchingStatus16Choice.Unmatched, com.tools20022.repository.msg.IntraPositionStatusAndReason1.ProcessingStatus, com.tools20022.repository.msg.IntraPositionModification2.ProcessingStatus,
-					com.tools20022.repository.msg.IntraPositionModification1.ProcessingStatus, com.tools20022.repository.choice.TransferStatus1Choice.Reversed, com.tools20022.repository.msg.SettlementDetails67.DeliveryReturnReason,
-					com.tools20022.repository.msg.SettlementDetails68.DeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus20Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus19Choice.Unmatched,
-					com.tools20022.repository.msg.SettlementDetails81.DeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus21Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus22Choice.Unmatched,
-					com.tools20022.repository.msg.SettlementDetails83.DeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus23Choice.Unmatched, com.tools20022.repository.msg.SettlementDetails93.DeliveryReturnReason,
-					com.tools20022.repository.choice.MatchingStatus24Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus26Choice.Unmatched, com.tools20022.repository.msg.SettlementDetails94.DeliveryReturnReason,
-					com.tools20022.repository.choice.MatchingStatus25Choice.Unmatched, com.tools20022.repository.choice.TransferStatus2Choice.Reversed, com.tools20022.repository.msg.SettlementDetails101.DeliveryReturnReason,
-					com.tools20022.repository.choice.MatchingStatus29Choice.Unmatched, com.tools20022.repository.msg.SettlementDetails111.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails112.DeliveryReturnReason,
-					com.tools20022.repository.choice.MatchingStatus32Choice.Unmatched, com.tools20022.repository.choice.MatchingStatus30Choice.Unmatched, com.tools20022.repository.msg.SettlementDetails113.DeliveryReturnReason,
-					com.tools20022.repository.msg.SettlementDetails120.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails119.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails122.DeliveryReturnReason,
-					com.tools20022.repository.msg.SettlementDetails137.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails132.DeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails138.DeliveryReturnReason);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus2Choice.mmUnmatched, com.tools20022.repository.choice.MatchingStatus7Choice.mmUnmatched,
+					com.tools20022.repository.choice.MatchingStatus18Choice.mmUnmatched, com.tools20022.repository.msg.SettlementDetails50.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails51.mmDeliveryReturnReason,
+					com.tools20022.repository.msg.SettlementDetails1.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails19.mmDeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus6Choice.mmUnmatched,
+					com.tools20022.repository.msg.SettlementDetails22.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails35.mmDeliveryReturnReason,
+					com.tools20022.repository.msg.SettlementDetails42.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails52.mmDeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus9Choice.mmUnmatched,
+					com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmCancellationPending, com.tools20022.repository.msg.CancellationStatusAndReason.mmRejected,
+					com.tools20022.repository.msg.CancellationStatusAndReason.mmComplete, com.tools20022.repository.msg.CancellationStatusAndReason2.mmRejected, com.tools20022.repository.msg.CancellationStatusAndReason2.mmComplete,
+					com.tools20022.repository.msg.CancellationStatusAndReason2.mmPending, com.tools20022.repository.msg.TransferStatusAndReason.mmPendingSettlement, com.tools20022.repository.msg.TransferStatusAndReason.mmUnmatched,
+					com.tools20022.repository.msg.TransferStatusAndReason.mmInRepair, com.tools20022.repository.msg.TransferStatusAndReason.mmRejected, com.tools20022.repository.msg.TransferStatusAndReason2.mmPendingSettlement,
+					com.tools20022.repository.msg.TransferStatusAndReason2.mmUnmatched, com.tools20022.repository.msg.TransferStatusAndReason2.mmInRepair, com.tools20022.repository.msg.TransferStatusAndReason2.mmRejected,
+					com.tools20022.repository.msg.TransferStatusAndReason2.mmFailedSettlement, com.tools20022.repository.msg.TransferStatusAndReason2.mmCancelled, com.tools20022.repository.msg.TransferStatusAndReason2.mmReversed,
+					com.tools20022.repository.choice.MatchingStatus3Choice.mmUnmatched, com.tools20022.repository.choice.MatchingStatus4Choice.mmUnmatched, com.tools20022.repository.choice.MatchingStatus12Choice.mmUnmatched,
+					com.tools20022.repository.choice.MatchingStatus16Choice.mmUnmatched, com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmProcessingStatus,
+					com.tools20022.repository.msg.IntraPositionModification2.mmProcessingStatus, com.tools20022.repository.msg.IntraPositionModification1.mmProcessingStatus,
+					com.tools20022.repository.choice.TransferStatus1Choice.mmReversed, com.tools20022.repository.msg.SettlementDetails67.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails68.mmDeliveryReturnReason,
+					com.tools20022.repository.choice.MatchingStatus20Choice.mmUnmatched, com.tools20022.repository.choice.MatchingStatus19Choice.mmUnmatched, com.tools20022.repository.msg.SettlementDetails81.mmDeliveryReturnReason,
+					com.tools20022.repository.choice.MatchingStatus21Choice.mmUnmatched, com.tools20022.repository.choice.MatchingStatus22Choice.mmUnmatched, com.tools20022.repository.msg.SettlementDetails83.mmDeliveryReturnReason,
+					com.tools20022.repository.choice.MatchingStatus23Choice.mmUnmatched, com.tools20022.repository.msg.SettlementDetails93.mmDeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus24Choice.mmUnmatched,
+					com.tools20022.repository.choice.MatchingStatus26Choice.mmUnmatched, com.tools20022.repository.msg.SettlementDetails94.mmDeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus25Choice.mmUnmatched,
+					com.tools20022.repository.choice.TransferStatus2Choice.mmReversed, com.tools20022.repository.msg.SettlementDetails101.mmDeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus29Choice.mmUnmatched,
+					com.tools20022.repository.msg.SettlementDetails111.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails112.mmDeliveryReturnReason, com.tools20022.repository.choice.MatchingStatus32Choice.mmUnmatched,
+					com.tools20022.repository.choice.MatchingStatus30Choice.mmUnmatched, com.tools20022.repository.msg.SettlementDetails113.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails120.mmDeliveryReturnReason,
+					com.tools20022.repository.msg.SettlementDetails119.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails122.mmDeliveryReturnReason,
+					com.tools20022.repository.msg.SettlementDetails137.mmDeliveryReturnReason, com.tools20022.repository.msg.SettlementDetails132.mmDeliveryReturnReason,
+					com.tools20022.repository.msg.SettlementDetails138.mmDeliveryReturnReason);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reasons for the status. It is derived from the relationship between Status and Status Reason.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.SecuritiesTradeStatus;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmSecuritiesTradeStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesTrade> securitiesTrade;
 	/**
 	 * Specifies the trade which has a specific status.
 	 * <p>
@@ -1585,8 +1596,8 @@ public class SecuritiesTradeStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTradeStatus
-	 * SecuritiesTrade.SecuritiesTradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeStatus
+	 * SecuritiesTrade.mmSecuritiesTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1610,7 +1621,7 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Specifies the trade which has a specific status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
@@ -1618,11 +1629,12 @@ public class SecuritiesTradeStatus extends Status {
 			name = "SecuritiesTrade";
 			definition = "Specifies the trade which has a specific status.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTradeStatus;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 		}
 	};
+	protected TransactionStatusCode transactionStatus;
 	/**
 	 * Status of an investment fund transaction.
 	 * <p>
@@ -1633,25 +1645,25 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode
 	 * TransactionStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2#BookingStatus
-	 * InvestmentFundTransaction2.BookingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction3#BookingStatus
-	 * InvestmentFundTransaction3.BookingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction4#BookingStatus
-	 * InvestmentFundTransaction4.BookingStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2#mmBookingStatus
+	 * InvestmentFundTransaction2.mmBookingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction3#mmBookingStatus
+	 * InvestmentFundTransaction3.mmBookingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction4#mmBookingStatus
+	 * InvestmentFundTransaction4.mmBookingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1663,20 +1675,21 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Status of an investment fund transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransactionStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransactionStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransaction2.BookingStatus, com.tools20022.repository.msg.InvestmentFundTransaction3.BookingStatus,
-					com.tools20022.repository.msg.InvestmentFundTransaction4.BookingStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransaction2.mmBookingStatus, com.tools20022.repository.msg.InvestmentFundTransaction3.mmBookingStatus,
+					com.tools20022.repository.msg.InvestmentFundTransaction4.mmBookingStatus);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransactionStatus";
 			definition = "Status of an investment fund transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransactionStatusCode.mmObject();
 		}
 	};
+	protected ReplacementProcessingStatusCode replacementProcessingStatus;
 	/**
 	 * Provides the processing status of the replacement request.
 	 * <p>
@@ -1687,28 +1700,28 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatusCode
 	 * ReplacementProcessingStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus1Choice#Code
-	 * ReplacementProcessingStatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus2Choice#Code
-	 * ReplacementProcessingStatus2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus8Choice#Code
-	 * ReplacementProcessingStatus8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus9Choice#Code
-	 * ReplacementProcessingStatus9Choice.Code}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus1Choice#mmCode
+	 * ReplacementProcessingStatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus2Choice#mmCode
+	 * ReplacementProcessingStatus2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus8Choice#mmCode
+	 * ReplacementProcessingStatus8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus9Choice#mmCode
+	 * ReplacementProcessingStatus9Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1721,20 +1734,21 @@ public class SecuritiesTradeStatus extends Status {
 	 * "Provides the processing status of the replacement request."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ReplacementProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReplacementProcessingStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReplacementProcessingStatus1Choice.Code, com.tools20022.repository.choice.ReplacementProcessingStatus2Choice.Code,
-					com.tools20022.repository.choice.ReplacementProcessingStatus8Choice.Code, com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.Code);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReplacementProcessingStatus1Choice.mmCode, com.tools20022.repository.choice.ReplacementProcessingStatus2Choice.mmCode,
+					com.tools20022.repository.choice.ReplacementProcessingStatus8Choice.mmCode, com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.mmCode);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReplacementProcessingStatus";
 			definition = "Provides the processing status of the replacement request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReplacementProcessingStatusCode.mmObject();
 		}
 	};
+	protected CancellationStatusCode cancellationStatus;
 	/**
 	 * Status of the cancellation of a trade.
 	 * <p>
@@ -1745,28 +1759,28 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CancellationStatusCode
 	 * CancellationStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#CancellationRequested
-	 * CancellationProcessingStatus6Choice.CancellationRequested}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#CancellationCompleted
-	 * CancellationProcessingStatus6Choice.CancellationCompleted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus#Status
-	 * TransferCancellationStatus.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus2#Status
-	 * TransferCancellationStatus2.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#mmCancellationRequested
+	 * CancellationProcessingStatus6Choice.mmCancellationRequested}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus6Choice#mmCancellationCompleted
+	 * CancellationProcessingStatus6Choice.mmCancellationCompleted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus#mmStatus
+	 * TransferCancellationStatus.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationStatus2#mmStatus
+	 * TransferCancellationStatus2.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1778,20 +1792,21 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Status of the cancellation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CancellationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCancellationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationProcessingStatus6Choice.CancellationRequested, com.tools20022.repository.choice.CancellationProcessingStatus6Choice.CancellationCompleted,
-					com.tools20022.repository.msg.TransferCancellationStatus.Status, com.tools20022.repository.msg.TransferCancellationStatus2.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmCancellationRequested, com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmCancellationCompleted,
+					com.tools20022.repository.msg.TransferCancellationStatus.mmStatus, com.tools20022.repository.msg.TransferCancellationStatus2.mmStatus);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationStatus";
 			definition = "Status of the cancellation of a trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancellationStatusCode.mmObject();
 		}
 	};
+	protected CancellationRightCode cancellationRight;
 	/**
 	 * Cancellation right of an investor with respect to an order.
 	 * <p>
@@ -1802,19 +1817,19 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CancellationRightCode
 	 * CancellationRightCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationRight1#Structured
-	 * CancellationRight1.Structured}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationRight1#mmStructured
+	 * CancellationRight1.mmStructured}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1827,19 +1842,20 @@ public class SecuritiesTradeStatus extends Status {
 	 * "Cancellation right of an investor with respect to an order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CancellationRight = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCancellationRight = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRight1.Structured);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRight1.mmStructured);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationRight";
 			definition = "Cancellation right of an investor with respect to an order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancellationRightCode.mmObject();
 		}
 	};
+	protected TransferStatusCode transferStatus;
 	/**
 	 * Status of the transfer is accepted, sent to next party, matched, already
 	 * executed, or settled.
@@ -1851,34 +1867,34 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferStatusCode
 	 * TransferStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus#Status
-	 * TransferInstructionStatus.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus2#Status
-	 * TransferInstructionStatus2.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason3#TransferStatus
-	 * TransferStatusAndReason3.TransferStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus3#Status
-	 * TransferInstructionStatus3.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason4#TransferStatus
-	 * TransferStatusAndReason4.TransferStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus4#Status
-	 * TransferInstructionStatus4.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus#mmStatus
+	 * TransferInstructionStatus.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus2#mmStatus
+	 * TransferInstructionStatus2.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason3#mmTransferStatus
+	 * TransferStatusAndReason3.mmTransferStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus3#mmStatus
+	 * TransferInstructionStatus3.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason4#mmTransferStatus
+	 * TransferStatusAndReason4.mmTransferStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferInstructionStatus4#mmStatus
+	 * TransferInstructionStatus4.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1892,21 +1908,22 @@ public class SecuritiesTradeStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransferStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransferStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferInstructionStatus.Status, com.tools20022.repository.msg.TransferInstructionStatus2.Status,
-					com.tools20022.repository.msg.TransferStatusAndReason3.TransferStatus, com.tools20022.repository.msg.TransferInstructionStatus3.Status, com.tools20022.repository.msg.TransferStatusAndReason4.TransferStatus,
-					com.tools20022.repository.msg.TransferInstructionStatus4.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferInstructionStatus.mmStatus, com.tools20022.repository.msg.TransferInstructionStatus2.mmStatus,
+					com.tools20022.repository.msg.TransferStatusAndReason3.mmTransferStatus, com.tools20022.repository.msg.TransferInstructionStatus3.mmStatus, com.tools20022.repository.msg.TransferStatusAndReason4.mmTransferStatus,
+					com.tools20022.repository.msg.TransferInstructionStatus4.mmStatus);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferStatus";
 			definition = "Status of the transfer is accepted, sent to next party, matched, already executed, or settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransferStatusCode.mmObject();
 		}
 	};
+	protected AllegementStatusCode allegedStatus;
 	/**
 	 * Provides the status of an allegement.
 	 * <p>
@@ -1917,76 +1934,76 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode
 	 * AllegementStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus1Choice#Code
-	 * AllegementStatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus1Choice#Proprietary
-	 * AllegementStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#Status
-	 * SecuritiesTradeDetails4.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#Status
-	 * SecuritiesTradeDetails17.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus2Choice#Code
-	 * AllegementStatus2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus2Choice#Proprietary
-	 * AllegementStatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#Status
-	 * SecuritiesTradeDetails10.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#Status
-	 * SecuritiesTradeDetails22.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#Status
-	 * SecuritiesTradeDetails23.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#Status
-	 * SecuritiesTradeDetails29.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#Status
-	 * SecuritiesTradeDetails35.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#Status
-	 * SecuritiesTradeDetails42.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#Status
-	 * SecuritiesTradeDetails49.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus3Choice#Code
-	 * AllegementStatus3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus3Choice#Proprietary
-	 * AllegementStatus3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#Status
-	 * SecuritiesTradeDetails61.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus4Choice#Code
-	 * AllegementStatus4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllegementStatus4Choice#Proprietary
-	 * AllegementStatus4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#Status
-	 * SecuritiesTradeDetails68.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#Status
-	 * SecuritiesTradeDetails69.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus1Choice#mmCode
+	 * AllegementStatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus1Choice#mmProprietary
+	 * AllegementStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmStatus
+	 * SecuritiesTradeDetails4.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#mmStatus
+	 * SecuritiesTradeDetails17.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus2Choice#mmCode
+	 * AllegementStatus2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus2Choice#mmProprietary
+	 * AllegementStatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmStatus
+	 * SecuritiesTradeDetails10.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#mmStatus
+	 * SecuritiesTradeDetails22.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#mmStatus
+	 * SecuritiesTradeDetails23.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#mmStatus
+	 * SecuritiesTradeDetails29.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#mmStatus
+	 * SecuritiesTradeDetails35.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#mmStatus
+	 * SecuritiesTradeDetails42.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#mmStatus
+	 * SecuritiesTradeDetails49.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus3Choice#mmCode
+	 * AllegementStatus3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus3Choice#mmProprietary
+	 * AllegementStatus3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#mmStatus
+	 * SecuritiesTradeDetails61.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus4Choice#mmCode
+	 * AllegementStatus4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllegementStatus4Choice#mmProprietary
+	 * AllegementStatus4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#mmStatus
+	 * SecuritiesTradeDetails68.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmStatus
+	 * SecuritiesTradeDetails69.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1998,25 +2015,26 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Provides the status of an allegement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AllegedStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAllegedStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AllegementStatus1Choice.Code, com.tools20022.repository.choice.AllegementStatus1Choice.Proprietary,
-					com.tools20022.repository.msg.SecuritiesTradeDetails4.Status, com.tools20022.repository.msg.SecuritiesTradeDetails17.Status, com.tools20022.repository.choice.AllegementStatus2Choice.Code,
-					com.tools20022.repository.choice.AllegementStatus2Choice.Proprietary, com.tools20022.repository.msg.SecuritiesTradeDetails10.Status, com.tools20022.repository.msg.SecuritiesTradeDetails22.Status,
-					com.tools20022.repository.msg.SecuritiesTradeDetails23.Status, com.tools20022.repository.msg.SecuritiesTradeDetails29.Status, com.tools20022.repository.msg.SecuritiesTradeDetails35.Status,
-					com.tools20022.repository.msg.SecuritiesTradeDetails42.Status, com.tools20022.repository.msg.SecuritiesTradeDetails49.Status, com.tools20022.repository.choice.AllegementStatus3Choice.Code,
-					com.tools20022.repository.choice.AllegementStatus3Choice.Proprietary, com.tools20022.repository.msg.SecuritiesTradeDetails61.Status, com.tools20022.repository.choice.AllegementStatus4Choice.Code,
-					com.tools20022.repository.choice.AllegementStatus4Choice.Proprietary, com.tools20022.repository.msg.SecuritiesTradeDetails68.Status, com.tools20022.repository.msg.SecuritiesTradeDetails69.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AllegementStatus1Choice.mmCode, com.tools20022.repository.choice.AllegementStatus1Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmStatus, com.tools20022.repository.msg.SecuritiesTradeDetails17.mmStatus, com.tools20022.repository.choice.AllegementStatus2Choice.mmCode,
+					com.tools20022.repository.choice.AllegementStatus2Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmStatus, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails23.mmStatus, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmStatus, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmStatus,
+					com.tools20022.repository.msg.SecuritiesTradeDetails42.mmStatus, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmStatus, com.tools20022.repository.choice.AllegementStatus3Choice.mmCode,
+					com.tools20022.repository.choice.AllegementStatus3Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails61.mmStatus, com.tools20022.repository.choice.AllegementStatus4Choice.mmCode,
+					com.tools20022.repository.choice.AllegementStatus4Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails68.mmStatus, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmStatus);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AllegedStatus";
 			definition = "Provides the status of an allegement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AllegementStatusCode.mmObject();
 		}
 	};
+	protected AllocationStatusCode collateralAllocationStatus;
 	/**
 	 * Provides the status of allocation of collateral to cover the instruction.
 	 * <p>
@@ -2027,58 +2045,58 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AllocationStatusCode
 	 * AllocationStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus1Choice#Code
-	 * AllocationSatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus1Choice#Proprietary
-	 * AllocationSatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice#AllocationStatus
-	 * Status1Choice.AllocationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status8Choice#AllocationStatus
-	 * Status8Choice.AllocationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus2Choice#Code
-	 * AllocationSatus2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus2Choice#Proprietary
-	 * AllocationSatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status3Choice#AllocationStatus
-	 * Status3Choice.AllocationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status10Choice#AllocationStatus
-	 * Status10Choice.AllocationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus3Choice#Code
-	 * AllocationSatus3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus3Choice#Proprietary
-	 * AllocationSatus3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status19Choice#AllocationStatus
-	 * Status19Choice.AllocationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice#AllocationStatus
-	 * Status22Choice.AllocationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus4Choice#Code
-	 * AllocationSatus4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AllocationSatus4Choice#Proprietary
-	 * AllocationSatus4Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus1Choice#mmCode
+	 * AllocationSatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus1Choice#mmProprietary
+	 * AllocationSatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice#mmAllocationStatus
+	 * Status1Choice.mmAllocationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status8Choice#mmAllocationStatus
+	 * Status8Choice.mmAllocationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus2Choice#mmCode
+	 * AllocationSatus2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus2Choice#mmProprietary
+	 * AllocationSatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status3Choice#mmAllocationStatus
+	 * Status3Choice.mmAllocationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status10Choice#mmAllocationStatus
+	 * Status10Choice.mmAllocationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus3Choice#mmCode
+	 * AllocationSatus3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus3Choice#mmProprietary
+	 * AllocationSatus3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status19Choice#mmAllocationStatus
+	 * Status19Choice.mmAllocationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmAllocationStatus
+	 * Status22Choice.mmAllocationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus4Choice#mmCode
+	 * AllocationSatus4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AllocationSatus4Choice#mmProprietary
+	 * AllocationSatus4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2092,23 +2110,24 @@ public class SecuritiesTradeStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CollateralAllocationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCollateralAllocationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AllocationSatus1Choice.Code, com.tools20022.repository.choice.AllocationSatus1Choice.Proprietary,
-					com.tools20022.repository.choice.Status1Choice.AllocationStatus, com.tools20022.repository.choice.Status8Choice.AllocationStatus, com.tools20022.repository.choice.AllocationSatus2Choice.Code,
-					com.tools20022.repository.choice.AllocationSatus2Choice.Proprietary, com.tools20022.repository.choice.Status3Choice.AllocationStatus, com.tools20022.repository.choice.Status10Choice.AllocationStatus,
-					com.tools20022.repository.choice.AllocationSatus3Choice.Code, com.tools20022.repository.choice.AllocationSatus3Choice.Proprietary, com.tools20022.repository.choice.Status19Choice.AllocationStatus,
-					com.tools20022.repository.choice.Status22Choice.AllocationStatus, com.tools20022.repository.choice.AllocationSatus4Choice.Code, com.tools20022.repository.choice.AllocationSatus4Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AllocationSatus1Choice.mmCode, com.tools20022.repository.choice.AllocationSatus1Choice.mmProprietary,
+					com.tools20022.repository.choice.Status1Choice.mmAllocationStatus, com.tools20022.repository.choice.Status8Choice.mmAllocationStatus, com.tools20022.repository.choice.AllocationSatus2Choice.mmCode,
+					com.tools20022.repository.choice.AllocationSatus2Choice.mmProprietary, com.tools20022.repository.choice.Status3Choice.mmAllocationStatus, com.tools20022.repository.choice.Status10Choice.mmAllocationStatus,
+					com.tools20022.repository.choice.AllocationSatus3Choice.mmCode, com.tools20022.repository.choice.AllocationSatus3Choice.mmProprietary, com.tools20022.repository.choice.Status19Choice.mmAllocationStatus,
+					com.tools20022.repository.choice.Status22Choice.mmAllocationStatus, com.tools20022.repository.choice.AllocationSatus4Choice.mmCode, com.tools20022.repository.choice.AllocationSatus4Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralAllocationStatus";
 			definition = "Provides the status of allocation of collateral to cover the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AllocationStatusCode.mmObject();
 		}
 	};
+	protected RepoCallRequestStatusCode repoCallRequestStatus;
 	/**
 	 * Specifies additional information about the status of the repurchase
 	 * agreement call processed instruction.
@@ -2120,58 +2139,58 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode
 	 * RepoCallRequestStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#Code
-	 * RepoCallRequestStatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#Proprietary
-	 * RepoCallRequestStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice#RepoCallRequestStatus
-	 * Status1Choice.RepoCallRequestStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status8Choice#RepoCallRequestStatus
-	 * Status8Choice.RepoCallRequestStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus3Choice#Code
-	 * RepoCallRequestStatus3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus3Choice#Proprietary
-	 * RepoCallRequestStatus3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status3Choice#RepoCallRequestStatus
-	 * Status3Choice.RepoCallRequestStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status10Choice#RepoCallRequestStatus
-	 * Status10Choice.RepoCallRequestStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#Code
-	 * RepoCallRequestStatus8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#Proprietary
-	 * RepoCallRequestStatus8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status19Choice#RepoCallRequestStatus
-	 * Status19Choice.RepoCallRequestStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice#RepoCallRequestStatus
-	 * Status22Choice.RepoCallRequestStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus10Choice#Code
-	 * RepoCallRequestStatus10Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus10Choice#Proprietary
-	 * RepoCallRequestStatus10Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#mmCode
+	 * RepoCallRequestStatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#mmProprietary
+	 * RepoCallRequestStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice#mmRepoCallRequestStatus
+	 * Status1Choice.mmRepoCallRequestStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status8Choice#mmRepoCallRequestStatus
+	 * Status8Choice.mmRepoCallRequestStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus3Choice#mmCode
+	 * RepoCallRequestStatus3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus3Choice#mmProprietary
+	 * RepoCallRequestStatus3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status3Choice#mmRepoCallRequestStatus
+	 * Status3Choice.mmRepoCallRequestStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status10Choice#mmRepoCallRequestStatus
+	 * Status10Choice.mmRepoCallRequestStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#mmCode
+	 * RepoCallRequestStatus8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#mmProprietary
+	 * RepoCallRequestStatus8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status19Choice#mmRepoCallRequestStatus
+	 * Status19Choice.mmRepoCallRequestStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmRepoCallRequestStatus
+	 * Status22Choice.mmRepoCallRequestStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus10Choice#mmCode
+	 * RepoCallRequestStatus10Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus10Choice#mmProprietary
+	 * RepoCallRequestStatus10Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2185,23 +2204,25 @@ public class SecuritiesTradeStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RepoCallRequestStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRepoCallRequestStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus1Choice.Code, com.tools20022.repository.choice.RepoCallRequestStatus1Choice.Proprietary,
-					com.tools20022.repository.choice.Status1Choice.RepoCallRequestStatus, com.tools20022.repository.choice.Status8Choice.RepoCallRequestStatus, com.tools20022.repository.choice.RepoCallRequestStatus3Choice.Code,
-					com.tools20022.repository.choice.RepoCallRequestStatus3Choice.Proprietary, com.tools20022.repository.choice.Status3Choice.RepoCallRequestStatus, com.tools20022.repository.choice.Status10Choice.RepoCallRequestStatus,
-					com.tools20022.repository.choice.RepoCallRequestStatus8Choice.Code, com.tools20022.repository.choice.RepoCallRequestStatus8Choice.Proprietary, com.tools20022.repository.choice.Status19Choice.RepoCallRequestStatus,
-					com.tools20022.repository.choice.Status22Choice.RepoCallRequestStatus, com.tools20022.repository.choice.RepoCallRequestStatus10Choice.Code, com.tools20022.repository.choice.RepoCallRequestStatus10Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus1Choice.mmCode, com.tools20022.repository.choice.RepoCallRequestStatus1Choice.mmProprietary,
+					com.tools20022.repository.choice.Status1Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.Status8Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.RepoCallRequestStatus3Choice.mmCode,
+					com.tools20022.repository.choice.RepoCallRequestStatus3Choice.mmProprietary, com.tools20022.repository.choice.Status3Choice.mmRepoCallRequestStatus,
+					com.tools20022.repository.choice.Status10Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.RepoCallRequestStatus8Choice.mmCode, com.tools20022.repository.choice.RepoCallRequestStatus8Choice.mmProprietary,
+					com.tools20022.repository.choice.Status19Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.Status22Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.RepoCallRequestStatus10Choice.mmCode,
+					com.tools20022.repository.choice.RepoCallRequestStatus10Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RepoCallRequestStatus";
 			definition = "Specifies additional information about the status of the repurchase agreement call processed instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RepoCallRequestStatusCode.mmObject();
 		}
 	};
+	protected SettlementConditionModificationStatusStatusCode settlementConditionModificationStatus;
 	/**
 	 * Provides the status of the securities settlement condition modification
 	 * request.
@@ -2213,46 +2234,46 @@ public class SecuritiesTradeStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode
 	 * SettlementConditionModificationStatusStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice#Code
-	 * SettlementConditionModificationStatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice#SettlementConditionModificationStatus
-	 * Status1Choice.SettlementConditionModificationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status8Choice#SettlementConditionModificationStatus
-	 * Status8Choice.SettlementConditionModificationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice#Code
-	 * SettlementConditionModificationStatus2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status3Choice#SettlementConditionModificationStatus
-	 * Status3Choice.SettlementConditionModificationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status10Choice#SettlementConditionModificationStatus
-	 * Status10Choice.SettlementConditionModificationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status19Choice#SettlementConditionModificationStatus
-	 * Status19Choice.SettlementConditionModificationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus3Choice#Code
-	 * SettlementConditionModificationStatus3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice#SettlementConditionModificationStatus
-	 * Status22Choice.SettlementConditionModificationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice#Code
-	 * SettlementConditionModificationStatus4Choice.Code}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice#mmCode
+	 * SettlementConditionModificationStatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice#mmSettlementConditionModificationStatus
+	 * Status1Choice.mmSettlementConditionModificationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status8Choice#mmSettlementConditionModificationStatus
+	 * Status8Choice.mmSettlementConditionModificationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice#mmCode
+	 * SettlementConditionModificationStatus2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status3Choice#mmSettlementConditionModificationStatus
+	 * Status3Choice.mmSettlementConditionModificationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status10Choice#mmSettlementConditionModificationStatus
+	 * Status10Choice.mmSettlementConditionModificationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status19Choice#mmSettlementConditionModificationStatus
+	 * Status19Choice.mmSettlementConditionModificationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus3Choice#mmCode
+	 * SettlementConditionModificationStatus3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmSettlementConditionModificationStatus
+	 * Status22Choice.mmSettlementConditionModificationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice#mmCode
+	 * SettlementConditionModificationStatus4Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2266,23 +2287,24 @@ public class SecuritiesTradeStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SettlementConditionModificationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSettlementConditionModificationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice.Code, com.tools20022.repository.choice.Status1Choice.SettlementConditionModificationStatus,
-					com.tools20022.repository.choice.Status8Choice.SettlementConditionModificationStatus, com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice.Code,
-					com.tools20022.repository.choice.Status3Choice.SettlementConditionModificationStatus, com.tools20022.repository.choice.Status10Choice.SettlementConditionModificationStatus,
-					com.tools20022.repository.choice.Status19Choice.SettlementConditionModificationStatus, com.tools20022.repository.choice.SettlementConditionModificationStatus3Choice.Code,
-					com.tools20022.repository.choice.Status22Choice.SettlementConditionModificationStatus, com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice.Code);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice.mmCode, com.tools20022.repository.choice.Status1Choice.mmSettlementConditionModificationStatus,
+					com.tools20022.repository.choice.Status8Choice.mmSettlementConditionModificationStatus, com.tools20022.repository.choice.SettlementConditionModificationStatus2Choice.mmCode,
+					com.tools20022.repository.choice.Status3Choice.mmSettlementConditionModificationStatus, com.tools20022.repository.choice.Status10Choice.mmSettlementConditionModificationStatus,
+					com.tools20022.repository.choice.Status19Choice.mmSettlementConditionModificationStatus, com.tools20022.repository.choice.SettlementConditionModificationStatus3Choice.mmCode,
+					com.tools20022.repository.choice.Status22Choice.mmSettlementConditionModificationStatus, com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice.mmCode);
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementConditionModificationStatus";
 			definition = "Provides the status of the securities settlement condition modification request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
 		}
 	};
+	protected MatchingProcessCode matchingProcess;
 	/**
 	 * Specifies the matching status of a trade.
 	 * <p>
@@ -2309,18 +2331,19 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Specifies the matching status of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MatchingProcess = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMatchingProcess = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MatchingProcess";
 			definition = "Specifies the matching status of a trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MatchingProcessCode.mmObject();
 		}
 	};
+	protected SecuritiesTransfer relatedSecuritiesTransfer;
 	/**
 	 * Transfer operation for which a status is provided
 	 * <p>
@@ -2329,8 +2352,8 @@ public class SecuritiesTradeStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Status
-	 * SecuritiesTransfer.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmStatus
+	 * SecuritiesTransfer.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2354,71 +2377,72 @@ public class SecuritiesTradeStatus extends Status {
 	 * definition} = "Transfer operation for which a status is provided"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedSecuritiesTransfer = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedSecuritiesTransfer = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesTradeStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesTransfer";
 			definition = "Transfer operation for which a status is provided";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransfer.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.Status;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeStatus";
 				definition = "Status of a securities trade.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTradeStatus, com.tools20022.repository.entity.SecuritiesTransfer.Status,
-						com.tools20022.repository.entity.SecuritiesTradeStatusReason.SecuritiesTradeStatus);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus2Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus7Choice.Proprietary,
-						com.tools20022.repository.choice.SettlementStatus2Choice.Pending, com.tools20022.repository.choice.SettlementStatus2Choice.Failing, com.tools20022.repository.choice.SettlementStatus2Choice.Proprietary,
-						com.tools20022.repository.choice.SettlementStatus7Choice.Pending, com.tools20022.repository.choice.SettlementStatus7Choice.Failing, com.tools20022.repository.choice.SettlementStatus7Choice.Proprietary,
-						com.tools20022.repository.choice.MatchingStatus18Choice.Proprietary, com.tools20022.repository.choice.SettlementStatus13Choice.Pending, com.tools20022.repository.choice.SettlementStatus13Choice.Failing,
-						com.tools20022.repository.choice.SettlementStatus13Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus6Choice.Proprietary, com.tools20022.repository.choice.SettlementStatus4Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus4Choice.Failing, com.tools20022.repository.choice.SettlementStatus4Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus9Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.CancellationProcessingStatus6Choice.ProprietaryStatus, com.tools20022.repository.msg.CancellationStatusAndReason.Status,
-						com.tools20022.repository.msg.CancellationStatusAndReason2.Status, com.tools20022.repository.msg.TransferStatusAndReason.Status, com.tools20022.repository.msg.TransferStatusAndReason2.Status,
-						com.tools20022.repository.choice.MatchingStatus3Choice.Proprietary, com.tools20022.repository.choice.RepoCallRequestStatus2Choice.Proprietary, com.tools20022.repository.msg.AdditionalQueryParameters1.Status,
-						com.tools20022.repository.msg.AdditionalQueryParameters3.Status, com.tools20022.repository.choice.MatchingStatus4Choice.Proprietary, com.tools20022.repository.choice.RepoCallRequestStatus4Choice.Proprietary,
-						com.tools20022.repository.choice.MatchingStatus12Choice.Proprietary, com.tools20022.repository.choice.SettlementStatus10Choice.Pending, com.tools20022.repository.choice.SettlementStatus10Choice.Failing,
-						com.tools20022.repository.choice.SettlementStatus10Choice.Proprietary, com.tools20022.repository.choice.RepoCallRequestStatus5Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus16Choice.Proprietary,
-						com.tools20022.repository.choice.SettlementStatus12Choice.Pending, com.tools20022.repository.choice.SettlementStatus12Choice.Failing, com.tools20022.repository.choice.SettlementStatus12Choice.Proprietary,
-						com.tools20022.repository.choice.RepoCallRequestStatus6Choice.Proprietary, com.tools20022.repository.msg.AdditionalQueryParameters2.Status, com.tools20022.repository.msg.AdditionalQueryParameters4.Status,
-						com.tools20022.repository.msg.AdditionalQueryParameters5.Status, com.tools20022.repository.msg.AdditionalQueryParameters6.Status, com.tools20022.repository.choice.SettlementStatus9Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus9Choice.Failing, com.tools20022.repository.choice.SettlementStatus9Choice.Proprietary, com.tools20022.repository.choice.SettlementStatus15Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus15Choice.Failing, com.tools20022.repository.choice.SettlementStatus15Choice.Proprietary, com.tools20022.repository.choice.ProcessingStatus34Choice.Proprietary,
-						com.tools20022.repository.msg.IntraPositionStatusAndReason1.SettlementStatus, com.tools20022.repository.msg.IntraPositionStatusAndReason1.Settled, com.tools20022.repository.msg.IntraPositionQueryStatus1.Type,
-						com.tools20022.repository.choice.TransferStatus1Choice.Status, com.tools20022.repository.msg.AdditionalQueryParameters7.Status, com.tools20022.repository.choice.MatchingStatus20Choice.Proprietary,
-						com.tools20022.repository.choice.MatchingStatus19Choice.Proprietary, com.tools20022.repository.choice.ProcessingStatus37Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus21Choice.Proprietary,
-						com.tools20022.repository.msg.AdditionalQueryParameters8.Status, com.tools20022.repository.choice.ProcessingStatus42Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus22Choice.Proprietary,
-						com.tools20022.repository.choice.MatchingStatus23Choice.ProprietaryStatus, com.tools20022.repository.msg.AdditionalQueryParameters9.Status, com.tools20022.repository.msg.AdditionalQueryParameters10.Status,
-						com.tools20022.repository.choice.SettlementStatus16Choice.Pending, com.tools20022.repository.choice.SettlementStatus16Choice.Failing, com.tools20022.repository.choice.SettlementStatus16Choice.Proprietary,
-						com.tools20022.repository.choice.ProcessingStatus48Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus24Choice.Proprietary, com.tools20022.repository.choice.SettlementStatus17Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus17Choice.Failing, com.tools20022.repository.choice.SettlementStatus17Choice.Proprietary, com.tools20022.repository.msg.AdditionalQueryParameters11.Status,
-						com.tools20022.repository.choice.MatchingStatus26Choice.Proprietary, com.tools20022.repository.choice.RepoCallRequestStatus7Choice.Proprietary, com.tools20022.repository.choice.SettlementStatus18Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus18Choice.Failing, com.tools20022.repository.choice.SettlementStatus18Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus25Choice.Proprietary,
-						com.tools20022.repository.choice.TransferStatus2Choice.Status, com.tools20022.repository.choice.Status21Choice.Status, com.tools20022.repository.choice.SettlementStatus21Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus21Choice.Failing, com.tools20022.repository.choice.SettlementStatus21Choice.Proprietary, com.tools20022.repository.choice.RepoCallRequestStatus9Choice.Proprietary,
-						com.tools20022.repository.choice.MatchingStatus29Choice.Proprietary, com.tools20022.repository.msg.AdditionalQueryParameters12.Status, com.tools20022.repository.choice.SettlementStatus20Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus20Choice.Failing, com.tools20022.repository.choice.SettlementStatus20Choice.Proprietary, com.tools20022.repository.choice.ProcessingStatus63Choice.Proprietary,
-						com.tools20022.repository.choice.MatchingStatus32Choice.Proprietary, com.tools20022.repository.choice.MatchingStatus30Choice.Proprietary, com.tools20022.repository.choice.SettlementStatus22Choice.Pending,
-						com.tools20022.repository.choice.SettlementStatus22Choice.Failing, com.tools20022.repository.choice.SettlementStatus22Choice.Proprietary);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeStatus, com.tools20022.repository.entity.SecuritiesTransfer.mmStatus,
+						com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmSecuritiesTradeStatus);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus2Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus7Choice.mmProprietary,
+						com.tools20022.repository.choice.SettlementStatus2Choice.mmPending, com.tools20022.repository.choice.SettlementStatus2Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus2Choice.mmProprietary,
+						com.tools20022.repository.choice.SettlementStatus7Choice.mmPending, com.tools20022.repository.choice.SettlementStatus7Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus7Choice.mmProprietary,
+						com.tools20022.repository.choice.MatchingStatus18Choice.mmProprietary, com.tools20022.repository.choice.SettlementStatus13Choice.mmPending, com.tools20022.repository.choice.SettlementStatus13Choice.mmFailing,
+						com.tools20022.repository.choice.SettlementStatus13Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus6Choice.mmProprietary, com.tools20022.repository.choice.SettlementStatus4Choice.mmPending,
+						com.tools20022.repository.choice.SettlementStatus4Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus4Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus9Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmProprietaryStatus, com.tools20022.repository.msg.CancellationStatusAndReason.mmStatus,
+						com.tools20022.repository.msg.CancellationStatusAndReason2.mmStatus, com.tools20022.repository.msg.TransferStatusAndReason.mmStatus, com.tools20022.repository.msg.TransferStatusAndReason2.mmStatus,
+						com.tools20022.repository.choice.MatchingStatus3Choice.mmProprietary, com.tools20022.repository.choice.RepoCallRequestStatus2Choice.mmProprietary, com.tools20022.repository.msg.AdditionalQueryParameters1.mmStatus,
+						com.tools20022.repository.msg.AdditionalQueryParameters3.mmStatus, com.tools20022.repository.choice.MatchingStatus4Choice.mmProprietary, com.tools20022.repository.choice.RepoCallRequestStatus4Choice.mmProprietary,
+						com.tools20022.repository.choice.MatchingStatus12Choice.mmProprietary, com.tools20022.repository.choice.SettlementStatus10Choice.mmPending, com.tools20022.repository.choice.SettlementStatus10Choice.mmFailing,
+						com.tools20022.repository.choice.SettlementStatus10Choice.mmProprietary, com.tools20022.repository.choice.RepoCallRequestStatus5Choice.mmProprietary,
+						com.tools20022.repository.choice.MatchingStatus16Choice.mmProprietary, com.tools20022.repository.choice.SettlementStatus12Choice.mmPending, com.tools20022.repository.choice.SettlementStatus12Choice.mmFailing,
+						com.tools20022.repository.choice.SettlementStatus12Choice.mmProprietary, com.tools20022.repository.choice.RepoCallRequestStatus6Choice.mmProprietary,
+						com.tools20022.repository.msg.AdditionalQueryParameters2.mmStatus, com.tools20022.repository.msg.AdditionalQueryParameters4.mmStatus, com.tools20022.repository.msg.AdditionalQueryParameters5.mmStatus,
+						com.tools20022.repository.msg.AdditionalQueryParameters6.mmStatus, com.tools20022.repository.choice.SettlementStatus9Choice.mmPending, com.tools20022.repository.choice.SettlementStatus9Choice.mmFailing,
+						com.tools20022.repository.choice.SettlementStatus9Choice.mmProprietary, com.tools20022.repository.choice.SettlementStatus15Choice.mmPending, com.tools20022.repository.choice.SettlementStatus15Choice.mmFailing,
+						com.tools20022.repository.choice.SettlementStatus15Choice.mmProprietary, com.tools20022.repository.choice.ProcessingStatus34Choice.mmProprietary,
+						com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmSettlementStatus, com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmSettled, com.tools20022.repository.msg.IntraPositionQueryStatus1.mmType,
+						com.tools20022.repository.choice.TransferStatus1Choice.mmStatus, com.tools20022.repository.msg.AdditionalQueryParameters7.mmStatus, com.tools20022.repository.choice.MatchingStatus20Choice.mmProprietary,
+						com.tools20022.repository.choice.MatchingStatus19Choice.mmProprietary, com.tools20022.repository.choice.ProcessingStatus37Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus21Choice.mmProprietary,
+						com.tools20022.repository.msg.AdditionalQueryParameters8.mmStatus, com.tools20022.repository.choice.ProcessingStatus42Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus22Choice.mmProprietary,
+						com.tools20022.repository.choice.MatchingStatus23Choice.mmProprietaryStatus, com.tools20022.repository.msg.AdditionalQueryParameters9.mmStatus, com.tools20022.repository.msg.AdditionalQueryParameters10.mmStatus,
+						com.tools20022.repository.choice.SettlementStatus16Choice.mmPending, com.tools20022.repository.choice.SettlementStatus16Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus16Choice.mmProprietary,
+						com.tools20022.repository.choice.ProcessingStatus48Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus24Choice.mmProprietary, com.tools20022.repository.choice.SettlementStatus17Choice.mmPending,
+						com.tools20022.repository.choice.SettlementStatus17Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus17Choice.mmProprietary, com.tools20022.repository.msg.AdditionalQueryParameters11.mmStatus,
+						com.tools20022.repository.choice.MatchingStatus26Choice.mmProprietary, com.tools20022.repository.choice.RepoCallRequestStatus7Choice.mmProprietary,
+						com.tools20022.repository.choice.SettlementStatus18Choice.mmPending, com.tools20022.repository.choice.SettlementStatus18Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus18Choice.mmProprietary,
+						com.tools20022.repository.choice.MatchingStatus25Choice.mmProprietary, com.tools20022.repository.choice.TransferStatus2Choice.mmStatus, com.tools20022.repository.choice.Status21Choice.mmStatus,
+						com.tools20022.repository.choice.SettlementStatus21Choice.mmPending, com.tools20022.repository.choice.SettlementStatus21Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus21Choice.mmProprietary,
+						com.tools20022.repository.choice.RepoCallRequestStatus9Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus29Choice.mmProprietary, com.tools20022.repository.msg.AdditionalQueryParameters12.mmStatus,
+						com.tools20022.repository.choice.SettlementStatus20Choice.mmPending, com.tools20022.repository.choice.SettlementStatus20Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus20Choice.mmProprietary,
+						com.tools20022.repository.choice.ProcessingStatus63Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus32Choice.mmProprietary, com.tools20022.repository.choice.MatchingStatus30Choice.mmProprietary,
+						com.tools20022.repository.choice.SettlementStatus22Choice.mmPending, com.tools20022.repository.choice.SettlementStatus22Choice.mmFailing, com.tools20022.repository.choice.SettlementStatus22Choice.mmProprietary);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.AffirmationStatus,
-						com.tools20022.repository.entity.SecuritiesTradeStatus.Reason, com.tools20022.repository.entity.SecuritiesTradeStatus.SecuritiesTrade, com.tools20022.repository.entity.SecuritiesTradeStatus.TransactionStatus,
-						com.tools20022.repository.entity.SecuritiesTradeStatus.ReplacementProcessingStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.CancellationStatus,
-						com.tools20022.repository.entity.SecuritiesTradeStatus.CancellationRight, com.tools20022.repository.entity.SecuritiesTradeStatus.TransferStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.AllegedStatus,
-						com.tools20022.repository.entity.SecuritiesTradeStatus.CollateralAllocationStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.RepoCallRequestStatus,
-						com.tools20022.repository.entity.SecuritiesTradeStatus.SettlementConditionModificationStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingProcess,
-						com.tools20022.repository.entity.SecuritiesTradeStatus.RelatedSecuritiesTransfer);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus,
+						com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason, com.tools20022.repository.entity.SecuritiesTradeStatus.mmSecuritiesTrade, com.tools20022.repository.entity.SecuritiesTradeStatus.mmTransactionStatus,
+						com.tools20022.repository.entity.SecuritiesTradeStatus.mmReplacementProcessingStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.mmCancellationStatus,
+						com.tools20022.repository.entity.SecuritiesTradeStatus.mmCancellationRight, com.tools20022.repository.entity.SecuritiesTradeStatus.mmTransferStatus,
+						com.tools20022.repository.entity.SecuritiesTradeStatus.mmAllegedStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.mmCollateralAllocationStatus,
+						com.tools20022.repository.entity.SecuritiesTradeStatus.mmRepoCallRequestStatus, com.tools20022.repository.entity.SecuritiesTradeStatus.mmSettlementConditionModificationStatus,
+						com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingProcess, com.tools20022.repository.entity.SecuritiesTradeStatus.mmRelatedSecuritiesTransfer);
 				derivationComponent_lazy = () -> Arrays.asList(MatchingStatus2Choice.mmObject(), MatchingStatus7Choice.mmObject(), SettlementStatus2Choice.mmObject(), SettlementStatus7Choice.mmObject(), MatchingStatus18Choice.mmObject(),
 						SettlementStatus13Choice.mmObject(), MatchingStatus1Choice.mmObject(), AffirmationStatus1Choice.mmObject(), MatchingStatus5Choice.mmObject(), AffirmationStatus2Choice.mmObject(), MatchingStatus6Choice.mmObject(),
 						SettlementStatus4Choice.mmObject(), AffirmationStatus7Choice.mmObject(), AffirmationStatus6Choice.mmObject(), InstructionProcessingStatus2Choice.mmObject(), MatchingStatus9Choice.mmObject(),
@@ -2444,5 +2468,125 @@ public class SecuritiesTradeStatus extends Status {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MatchingStatusCode getMatchingStatus() {
+		return matchingStatus;
+	}
+
+	public void setMatchingStatus(MatchingStatusCode matchingStatus) {
+		this.matchingStatus = matchingStatus;
+	}
+
+	public AffirmationStatusCode getAffirmationStatus() {
+		return affirmationStatus;
+	}
+
+	public void setAffirmationStatus(AffirmationStatusCode affirmationStatus) {
+		this.affirmationStatus = affirmationStatus;
+	}
+
+	public List<SecuritiesTradeStatusReason> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<com.tools20022.repository.entity.SecuritiesTradeStatusReason> reason) {
+		this.reason = reason;
+	}
+
+	public List<SecuritiesTrade> getSecuritiesTrade() {
+		return securitiesTrade;
+	}
+
+	public void setSecuritiesTrade(List<com.tools20022.repository.entity.SecuritiesTrade> securitiesTrade) {
+		this.securitiesTrade = securitiesTrade;
+	}
+
+	public TransactionStatusCode getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatusCode transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public ReplacementProcessingStatusCode getReplacementProcessingStatus() {
+		return replacementProcessingStatus;
+	}
+
+	public void setReplacementProcessingStatus(ReplacementProcessingStatusCode replacementProcessingStatus) {
+		this.replacementProcessingStatus = replacementProcessingStatus;
+	}
+
+	public CancellationStatusCode getCancellationStatus() {
+		return cancellationStatus;
+	}
+
+	public void setCancellationStatus(CancellationStatusCode cancellationStatus) {
+		this.cancellationStatus = cancellationStatus;
+	}
+
+	public CancellationRightCode getCancellationRight() {
+		return cancellationRight;
+	}
+
+	public void setCancellationRight(CancellationRightCode cancellationRight) {
+		this.cancellationRight = cancellationRight;
+	}
+
+	public TransferStatusCode getTransferStatus() {
+		return transferStatus;
+	}
+
+	public void setTransferStatus(TransferStatusCode transferStatus) {
+		this.transferStatus = transferStatus;
+	}
+
+	public AllegementStatusCode getAllegedStatus() {
+		return allegedStatus;
+	}
+
+	public void setAllegedStatus(AllegementStatusCode allegedStatus) {
+		this.allegedStatus = allegedStatus;
+	}
+
+	public AllocationStatusCode getCollateralAllocationStatus() {
+		return collateralAllocationStatus;
+	}
+
+	public void setCollateralAllocationStatus(AllocationStatusCode collateralAllocationStatus) {
+		this.collateralAllocationStatus = collateralAllocationStatus;
+	}
+
+	public RepoCallRequestStatusCode getRepoCallRequestStatus() {
+		return repoCallRequestStatus;
+	}
+
+	public void setRepoCallRequestStatus(RepoCallRequestStatusCode repoCallRequestStatus) {
+		this.repoCallRequestStatus = repoCallRequestStatus;
+	}
+
+	public SettlementConditionModificationStatusStatusCode getSettlementConditionModificationStatus() {
+		return settlementConditionModificationStatus;
+	}
+
+	public void setSettlementConditionModificationStatus(SettlementConditionModificationStatusStatusCode settlementConditionModificationStatus) {
+		this.settlementConditionModificationStatus = settlementConditionModificationStatus;
+	}
+
+	public MatchingProcessCode getMatchingProcess() {
+		return matchingProcess;
+	}
+
+	public void setMatchingProcess(MatchingProcessCode matchingProcess) {
+		this.matchingProcess = matchingProcess;
+	}
+
+	public SecuritiesTransfer getRelatedSecuritiesTransfer() {
+		return relatedSecuritiesTransfer;
+	}
+
+	public void setRelatedSecuritiesTransfer(com.tools20022.repository.entity.SecuritiesTransfer relatedSecuritiesTransfer) {
+		this.relatedSecuritiesTransfer = relatedSecuritiesTransfer;
 	}
 }

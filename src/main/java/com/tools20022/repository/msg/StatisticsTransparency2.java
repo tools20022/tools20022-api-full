@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency2#TotalNumberOfTransactionsExecuted
- * StatisticsTransparency2.TotalNumberOfTransactionsExecuted}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency2#mmTotalNumberOfTransactionsExecuted
+ * StatisticsTransparency2.mmTotalNumberOfTransactionsExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency2#TotalVolumeOfTransactionsExecuted
- * StatisticsTransparency2.TotalVolumeOfTransactionsExecuted}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency2#mmTotalVolumeOfTransactionsExecuted
+ * StatisticsTransparency2.mmTotalVolumeOfTransactionsExecuted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatisticsTransparency2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number totalNumberOfTransactionsExecuted;
 	/**
 	 * Total number of transactions that have been performed on this market.
 	 * <p>
@@ -90,7 +91,7 @@ public class StatisticsTransparency2 {
 	 * "Total number of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfTransactionsExecuted = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency2.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class StatisticsTransparency2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfTransactionsExecuted";
 			definition = "Total number of transactions that have been performed on this market.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected DecimalNumber totalVolumeOfTransactionsExecuted;
 	/**
 	 * Total volume of transactions that have been performed on this market.
 	 * <p>
@@ -132,7 +134,7 @@ public class StatisticsTransparency2 {
 	 * "Total volume of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalVolumeOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalVolumeOfTransactionsExecuted = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency2.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class StatisticsTransparency2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalVolumeOfTransactionsExecuted";
 			definition = "Total volume of transactions that have been performed on this market.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -149,13 +151,29 @@ public class StatisticsTransparency2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsTransparency2.TotalNumberOfTransactionsExecuted, com.tools20022.repository.msg.StatisticsTransparency2.TotalVolumeOfTransactionsExecuted);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsTransparency2.mmTotalNumberOfTransactionsExecuted, com.tools20022.repository.msg.StatisticsTransparency2.mmTotalVolumeOfTransactionsExecuted);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatisticsTransparency2";
 				definition = "Statistics for a financial instrument generated as part of transparency calculations.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getTotalNumberOfTransactionsExecuted() {
+		return totalNumberOfTransactionsExecuted;
+	}
+
+	public void setTotalNumberOfTransactionsExecuted(Number totalNumberOfTransactionsExecuted) {
+		this.totalNumberOfTransactionsExecuted = totalNumberOfTransactionsExecuted;
+	}
+
+	public DecimalNumber getTotalVolumeOfTransactionsExecuted() {
+		return totalVolumeOfTransactionsExecuted;
+	}
+
+	public void setTotalVolumeOfTransactionsExecuted(DecimalNumber totalVolumeOfTransactionsExecuted) {
+		this.totalVolumeOfTransactionsExecuted = totalVolumeOfTransactionsExecuted;
 	}
 }

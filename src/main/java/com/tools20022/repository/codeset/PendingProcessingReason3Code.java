@@ -35,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#AccountServicerDeadlineMissed
- * PendingProcessingReason3Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmAccountServicerDeadlineMissed
+ * PendingProcessingReason3Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#AccountBlocked
- * PendingProcessingReason3Code.AccountBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmAccountBlocked
+ * PendingProcessingReason3Code.mmAccountBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#MultipleSettlementAmount
- * PendingProcessingReason3Code.MultipleSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmMultipleSettlementAmount
+ * PendingProcessingReason3Code.mmMultipleSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#NextProcess
- * PendingProcessingReason3Code.NextProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmNextProcess
+ * PendingProcessingReason3Code.mmNextProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#MinimumSettlementAmount
- * PendingProcessingReason3Code.MinimumSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmMinimumSettlementAmount
+ * PendingProcessingReason3Code.mmMinimumSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#Other
- * PendingProcessingReason3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmOther
+ * PendingProcessingReason3Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#UnavailableDeliverableDenominatedQuantity
- * PendingProcessingReason3Code.UnavailableDeliverableDenominatedQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmUnavailableDeliverableDenominatedQuantity
+ * PendingProcessingReason3Code.mmUnavailableDeliverableDenominatedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#WrongCertificatesNumbers
- * PendingProcessingReason3Code.WrongCertificatesNumbers}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code#mmWrongCertificatesNumbers
+ * PendingProcessingReason3Code.mmWrongCertificatesNumbers}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -125,7 +125,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AccountBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlocked = new MMCode() {
+	public static final MMCode mmAccountBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
@@ -148,7 +148,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "MultipleSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleSettlementAmount = new MMCode() {
+	public static final MMCode mmMultipleSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementAmount";
@@ -171,7 +171,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NextProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode NextProcess = new MMCode() {
+	public static final MMCode mmNextProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextProcess";
@@ -194,7 +194,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "MinimumSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumSettlementAmount = new MMCode() {
+	public static final MMCode mmMinimumSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementAmount";
@@ -217,7 +217,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -240,7 +240,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "UnavailableDeliverableDenominatedQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnavailableDeliverableDenominatedQuantity = new MMCode() {
+	public static final MMCode mmUnavailableDeliverableDenominatedQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailableDeliverableDenominatedQuantity";
@@ -263,7 +263,7 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	 * name} = "WrongCertificatesNumbers"</li>
 	 * </ul>
 	 */
-	public static final MMCode WrongCertificatesNumbers = new MMCode() {
+	public static final MMCode mmWrongCertificatesNumbers = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCertificatesNumbers";
@@ -274,15 +274,15 @@ public class PendingProcessingReason3Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingProcessingReason3Code";
 				definition = "Specifies the reason the transaction/instruction is failing settlement. Settlement on the instructed settlement date is no longer possible.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingProcessingReason3Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingProcessingReason3Code.AccountBlocked,
-						com.tools20022.repository.codeset.PendingProcessingReason3Code.MultipleSettlementAmount, com.tools20022.repository.codeset.PendingProcessingReason3Code.NextProcess,
-						com.tools20022.repository.codeset.PendingProcessingReason3Code.MinimumSettlementAmount, com.tools20022.repository.codeset.PendingProcessingReason3Code.Other,
-						com.tools20022.repository.codeset.PendingProcessingReason3Code.UnavailableDeliverableDenominatedQuantity, com.tools20022.repository.codeset.PendingProcessingReason3Code.WrongCertificatesNumbers);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingProcessingReason3Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingProcessingReason3Code.mmAccountBlocked,
+						com.tools20022.repository.codeset.PendingProcessingReason3Code.mmMultipleSettlementAmount, com.tools20022.repository.codeset.PendingProcessingReason3Code.mmNextProcess,
+						com.tools20022.repository.codeset.PendingProcessingReason3Code.mmMinimumSettlementAmount, com.tools20022.repository.codeset.PendingProcessingReason3Code.mmOther,
+						com.tools20022.repository.codeset.PendingProcessingReason3Code.mmUnavailableDeliverableDenominatedQuantity, com.tools20022.repository.codeset.PendingProcessingReason3Code.mmWrongCertificatesNumbers);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Tax;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details for the tax calculation method A.
@@ -35,15 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingMethod1#ServiceChargeHostAmount
- * BillingMethod1.ServiceChargeHostAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod1#ServiceTax
- * BillingMethod1.ServiceTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod1#TotalCharge
- * BillingMethod1.TotalCharge}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingMethod1#mmServiceChargeHostAmount
+ * BillingMethod1.mmServiceChargeHostAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingMethod1#mmServiceTax
+ * BillingMethod1.mmServiceTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingMethod1#mmTotalCharge
+ * BillingMethod1.mmTotalCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingMethod1#TaxIdentification
- * BillingMethod1.TaxIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingMethod1#mmTaxIdentification
+ * BillingMethod1.mmTaxIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingMethod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection34 serviceChargeHostAmount;
 	/**
 	 * Amount of the original charge expressed in the host currency.
 	 * <p>
@@ -77,7 +79,7 @@ public class BillingMethod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +98,22 @@ public class BillingMethod1 {
 	 * "Amount of the original charge expressed in the host currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ServiceChargeHostAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServiceChargeHostAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> BillingMethod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "SvcChrgHstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceChargeHostAmount";
 			definition = "Amount of the original charge expressed in the host currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection34.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection34.mmObject();
 		}
 	};
+	protected BillingServicesAmount1 serviceTax;
 	/**
 	 * Provides for the regional taxes on the service. Up to three regional
 	 * taxes may be defined for the same service.
@@ -146,20 +149,21 @@ public class BillingMethod1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceTax = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BillingMethod1.mmObject();
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
+			componentContext_lazy = () -> BillingMethod1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceTax";
 			definition = "Provides for the regional taxes on the service. Up to three regional taxes may be defined for the same service.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> BillingServicesAmount1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.BillingServicesAmount1.mmObject();
 		}
 	};
+	protected BillingServicesAmount2 totalCharge;
 	/**
 	 * Specifies the total charge for a service (including taxes).
 	 * <p>
@@ -193,20 +197,21 @@ public class BillingMethod1 {
 	 * "Specifies the total charge for a service (including taxes)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalCharge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalCharge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BillingMethod1.mmObject();
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
+			componentContext_lazy = () -> BillingMethod1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlChrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCharge";
 			definition = "Specifies the total charge for a service (including taxes).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> BillingServicesAmount2.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.BillingServicesAmount2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BillingServicesTax1> taxIdentification;
 	/**
 	 * Provides for the specific tax identification within the same tax region. <br>
 	 * <br>
@@ -223,7 +228,7 @@ public class BillingMethod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Record Tax.Record}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRecord Tax.mmRecord}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,33 +248,65 @@ public class BillingMethod1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRecord;
 			componentContext_lazy = () -> BillingMethod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Record;
 			isDerived = false;
 			xmlTag = "TaxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentification";
 			definition = "Provides for the specific tax identification within the same tax region. \r\n\r\nUsage: This element allows for a maximum of three regional taxes on the same service.";
-			minOccurs = 1;
 			maxOccurs = 3;
-			complexType_lazy = () -> BillingServicesTax1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.BillingServicesTax1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingMethod1.ServiceChargeHostAmount, com.tools20022.repository.msg.BillingMethod1.ServiceTax,
-						com.tools20022.repository.msg.BillingMethod1.TotalCharge, com.tools20022.repository.msg.BillingMethod1.TaxIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingMethod1.mmServiceChargeHostAmount, com.tools20022.repository.msg.BillingMethod1.mmServiceTax,
+						com.tools20022.repository.msg.BillingMethod1.mmTotalCharge, com.tools20022.repository.msg.BillingMethod1.mmTaxIdentification);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingMethod1";
 				definition = "Provides the details for the tax calculation method A.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection34 getServiceChargeHostAmount() {
+		return serviceChargeHostAmount;
+	}
+
+	public void setServiceChargeHostAmount(com.tools20022.repository.msg.AmountAndDirection34 serviceChargeHostAmount) {
+		this.serviceChargeHostAmount = serviceChargeHostAmount;
+	}
+
+	public BillingServicesAmount1 getServiceTax() {
+		return serviceTax;
+	}
+
+	public void setServiceTax(com.tools20022.repository.msg.BillingServicesAmount1 serviceTax) {
+		this.serviceTax = serviceTax;
+	}
+
+	public BillingServicesAmount2 getTotalCharge() {
+		return totalCharge;
+	}
+
+	public void setTotalCharge(com.tools20022.repository.msg.BillingServicesAmount2 totalCharge) {
+		this.totalCharge = totalCharge;
+	}
+
+	public List<BillingServicesTax1> getTaxIdentification() {
+		return taxIdentification;
+	}
+
+	public void setTaxIdentification(List<com.tools20022.repository.msg.BillingServicesTax1> taxIdentification) {
+		this.taxIdentification = taxIdentification;
 	}
 }

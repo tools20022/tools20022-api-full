@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SubscriptionExecution;
 import com.tools20022.repository.entity.SubscriptionOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Execution of a subscription order.
@@ -39,136 +40,137 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#OrderReference
- * SubscriptionExecution6.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmOrderReference
+ * SubscriptionExecution6.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#ClientReference
- * SubscriptionExecution6.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmClientReference
+ * SubscriptionExecution6.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#DealReference
- * SubscriptionExecution6.DealReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmDealReference
+ * SubscriptionExecution6.mmDealReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#OrderType
- * SubscriptionExecution6.OrderType}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmOrderType
+ * SubscriptionExecution6.mmOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#FinancialInstrumentDetails
- * SubscriptionExecution6.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmFinancialInstrumentDetails
+ * SubscriptionExecution6.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#SubAccountForHolding
- * SubscriptionExecution6.SubAccountForHolding}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmSubAccountForHolding
+ * SubscriptionExecution6.mmSubAccountForHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#UnitsNumber
- * SubscriptionExecution6.UnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmUnitsNumber
+ * SubscriptionExecution6.mmUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#NetAmount
- * SubscriptionExecution6.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmNetAmount
+ * SubscriptionExecution6.mmNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#GrossAmount
- * SubscriptionExecution6.GrossAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmGrossAmount
+ * SubscriptionExecution6.mmGrossAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#Rounding
- * SubscriptionExecution6.Rounding}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmRounding
+ * SubscriptionExecution6.mmRounding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#TradeDateTime
- * SubscriptionExecution6.TradeDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmTradeDateTime
+ * SubscriptionExecution6.mmTradeDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#DealingPriceDetails
- * SubscriptionExecution6.DealingPriceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmDealingPriceDetails
+ * SubscriptionExecution6.mmDealingPriceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#InformativePriceDetails
- * SubscriptionExecution6.InformativePriceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmInformativePriceDetails
+ * SubscriptionExecution6.mmInformativePriceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#SettlementAmount
- * SubscriptionExecution6.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmSettlementAmount
+ * SubscriptionExecution6.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#CashSettlementDate
- * SubscriptionExecution6.CashSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmCashSettlementDate
+ * SubscriptionExecution6.mmCashSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#SettlementMethod
- * SubscriptionExecution6.SettlementMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmSettlementMethod
+ * SubscriptionExecution6.mmSettlementMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#PartiallyExecutedIndicator
- * SubscriptionExecution6.PartiallyExecutedIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmPartiallyExecutedIndicator
+ * SubscriptionExecution6.mmPartiallyExecutedIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#BestExecution
- * SubscriptionExecution6.BestExecution}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmBestExecution
+ * SubscriptionExecution6.mmBestExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#CumDividendIndicator
- * SubscriptionExecution6.CumDividendIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmCumDividendIndicator
+ * SubscriptionExecution6.mmCumDividendIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#InterimProfitAmount
- * SubscriptionExecution6.InterimProfitAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmInterimProfitAmount
+ * SubscriptionExecution6.mmInterimProfitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#ForeignExchangeDetails
- * SubscriptionExecution6.ForeignExchangeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmForeignExchangeDetails
+ * SubscriptionExecution6.mmForeignExchangeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#IncomePreference
- * SubscriptionExecution6.IncomePreference}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmIncomePreference
+ * SubscriptionExecution6.mmIncomePreference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#LetterIntentReference
- * SubscriptionExecution6.LetterIntentReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmLetterIntentReference
+ * SubscriptionExecution6.mmLetterIntentReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#AccumulationRightReference
- * SubscriptionExecution6.AccumulationRightReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmAccumulationRightReference
+ * SubscriptionExecution6.mmAccumulationRightReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#ChargeGeneralDetails
- * SubscriptionExecution6.ChargeGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmChargeGeneralDetails
+ * SubscriptionExecution6.mmChargeGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#CommissionGeneralDetails
- * SubscriptionExecution6.CommissionGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmCommissionGeneralDetails
+ * SubscriptionExecution6.mmCommissionGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#TaxGeneralDetails
- * SubscriptionExecution6.TaxGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmTaxGeneralDetails
+ * SubscriptionExecution6.mmTaxGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#SettlementAndCustodyDetails
- * SubscriptionExecution6.SettlementAndCustodyDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmSettlementAndCustodyDetails
+ * SubscriptionExecution6.mmSettlementAndCustodyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#PhysicalDeliveryIndicator
- * SubscriptionExecution6.PhysicalDeliveryIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmPhysicalDeliveryIndicator
+ * SubscriptionExecution6.mmPhysicalDeliveryIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#PhysicalDeliveryDetails
- * SubscriptionExecution6.PhysicalDeliveryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmPhysicalDeliveryDetails
+ * SubscriptionExecution6.mmPhysicalDeliveryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#RequestedSettlementCurrency
- * SubscriptionExecution6.RequestedSettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmRequestedSettlementCurrency
+ * SubscriptionExecution6.mmRequestedSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#RequestedNAVCurrency
- * SubscriptionExecution6.RequestedNAVCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution6#Refund
- * SubscriptionExecution6.Refund}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmRequestedNAVCurrency
+ * SubscriptionExecution6.mmRequestedNAVCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#SubscriptionInterest
- * SubscriptionExecution6.SubscriptionInterest}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmRefund
+ * SubscriptionExecution6.mmRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#CashSettlementDetails
- * SubscriptionExecution6.CashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmSubscriptionInterest
+ * SubscriptionExecution6.mmSubscriptionInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#NonStandardSettlementInformation
- * SubscriptionExecution6.NonStandardSettlementInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmCashSettlementDetails
+ * SubscriptionExecution6.mmCashSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#PartialSettlementOfUnits
- * SubscriptionExecution6.PartialSettlementOfUnits}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmNonStandardSettlementInformation
+ * SubscriptionExecution6.mmNonStandardSettlementInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#PartialSettlementOfCash
- * SubscriptionExecution6.PartialSettlementOfCash}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmPartialSettlementOfUnits
+ * SubscriptionExecution6.mmPartialSettlementOfUnits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#StaffClientBreakdown
- * SubscriptionExecution6.StaffClientBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmPartialSettlementOfCash
+ * SubscriptionExecution6.mmPartialSettlementOfCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#FinancialAdvice
- * SubscriptionExecution6.FinancialAdvice}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmStaffClientBreakdown
+ * SubscriptionExecution6.mmStaffClientBreakdown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#NegotiatedTrade
- * SubscriptionExecution6.NegotiatedTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmFinancialAdvice
+ * SubscriptionExecution6.mmFinancialAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#LateReport
- * SubscriptionExecution6.LateReport}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmNegotiatedTrade
+ * SubscriptionExecution6.mmNegotiatedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#RelatedPartyDetails
- * SubscriptionExecution6.RelatedPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmLateReport
+ * SubscriptionExecution6.mmLateReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#Equalisation
- * SubscriptionExecution6.Equalisation}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmRelatedPartyDetails
+ * SubscriptionExecution6.mmRelatedPartyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmEqualisation
+ * SubscriptionExecution6.mmEqualisation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -177,8 +179,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -199,6 +201,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubscriptionExecution6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for an order, as assigned by the
 	 * instructing party.
@@ -212,8 +215,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,27 +239,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#OrderReference
-	 * SubscriptionExecution13.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmOrderReference
+	 * SubscriptionExecution13.mmOrderReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.OrderReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmOrderReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of an order. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -271,8 +275,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,27 +299,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#ClientReference
-	 * SubscriptionExecution13.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmClientReference
+	 * SubscriptionExecution13.mmClientReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.ClientReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmClientReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text dealReference;
 	/**
 	 * Unique and unambiguous identifier for an order execution, as assigned by
 	 * a confirming party.
@@ -329,8 +334,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#DealIdentification
-	 * InvestmentFundOrderExecution.DealIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmDealIdentification
+	 * InvestmentFundOrderExecution.mmDealIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -353,27 +358,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#DealReference
-	 * SubscriptionExecution13.DealReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmDealReference
+	 * SubscriptionExecution13.mmDealReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.DealIdentification;
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Unique and unambiguous identifier for an order execution, as assigned by a confirming party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.DealReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmDealReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FundOrderType3> orderType;
 	/**
 	 * Specifies the category of the investment fund order.
 	 * <p>
@@ -385,8 +391,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderType
-	 * InvestmentFundOrder.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderType
+	 * InvestmentFundOrder.mmOrderType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -407,28 +413,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#OrderType
-	 * SubscriptionExecution13.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmOrderType
+	 * SubscriptionExecution13.mmOrderType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderType;
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Specifies the category of the investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.OrderType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmOrderType);
 			maxOccurs = 10;
-			type_lazy = () -> FundOrderType3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundOrderType3.mmObject();
 		}
 	};
+	protected FinancialInstrument10 financialInstrumentDetails;
 	/**
 	 * Investment fund class to which an investment fund order execution is
 	 * related.
@@ -441,8 +448,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentFundClass
-	 * InvestmentFundTransaction.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundClass
+	 * InvestmentFundTransaction.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -465,28 +472,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#FinancialInstrumentDetails
-	 * SubscriptionExecution13.FinancialInstrumentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmFinancialInstrumentDetails
+	 * SubscriptionExecution13.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class to which an investment fund order execution is related.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.FinancialInstrumentDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmFinancialInstrumentDetails);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument10.mmObject();
 		}
 	};
+	protected SubAccount1 subAccountForHolding;
 	/**
 	 * Subdivision of an account used to segregate specific holdings.
 	 * <p>
@@ -498,8 +506,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#SubAccount
-	 * Account.SubAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmSubAccount
+	 * Account.mmSubAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -521,28 +529,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#SubAccountForHolding
-	 * SubscriptionExecution13.SubAccountForHolding}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmSubAccountForHolding
+	 * SubscriptionExecution13.mmSubAccountForHolding}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubAccountForHolding = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubAccountForHolding = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmSubAccount;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.SubAccount;
 			isDerived = false;
 			xmlTag = "SubAcctForHldg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountForHolding";
 			definition = "Subdivision of an account used to segregate specific holdings.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.SubAccountForHolding);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmSubAccountForHolding);
 			maxOccurs = 1;
-			type_lazy = () -> SubAccount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubAccount1.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
 	 * Number of investment fund units subscribed.
 	 * <p>
@@ -556,8 +565,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#UnitsNumber
-	 * InvestmentFundOrderExecution.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmUnitsNumber
+	 * InvestmentFundOrderExecution.mmUnitsNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -578,27 +587,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#UnitsNumber
-	 * SubscriptionExecution13.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmUnitsNumber
+	 * SubscriptionExecution13.mmUnitsNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.UnitsNumber;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Number of investment fund units subscribed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.UnitsNumber);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmUnitsNumber);
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount netAmount;
 	/**
 	 * Amount of money invested in a specific financial instrument by an
 	 * investor, after deduction of charges, commissions and taxes. [Quantity *
@@ -614,8 +624,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#InvestedNetAmount
-	 * SubscriptionExecution.InvestedNetAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmInvestedNetAmount
+	 * SubscriptionExecution.mmInvestedNetAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -638,27 +648,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#NetAmount
-	 * SubscriptionExecution13.NetAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmNetAmount
+	 * SubscriptionExecution13.mmNetAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmInvestedNetAmount;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.InvestedNetAmount;
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money invested in a specific financial instrument by an investor, after deduction of charges, commissions and taxes.\n[Quantity * Price]";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.NetAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmNetAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount grossAmount;
 	/**
 	 * Amount of money invested in a specific financial instrument by an
 	 * investor, before deduction of charges, commissions, and taxes. [(Quantity
@@ -674,8 +685,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#GrossAmount
-	 * InvestmentFundOrder.GrossAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmGrossAmount
+	 * InvestmentFundOrder.mmGrossAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -698,27 +709,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#GrossAmount
-	 * SubscriptionExecution13.GrossAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmGrossAmount
+	 * SubscriptionExecution13.mmGrossAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.GrossAmount;
 			isDerived = false;
 			xmlTag = "GrssAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money invested in a specific financial instrument by an investor, before deduction of  charges, commissions, and taxes.\n[(Quantity * Price) + (Charges + Commissions +Taxes)]";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.GrossAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmGrossAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected RoundingDirection2Code rounding;
 	/**
 	 * Indicates the rounding direction applied to nearest unit.
 	 * <p>
@@ -732,8 +744,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#RoundingDirection
-	 * RoundingParameters.RoundingDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingDirection
+	 * RoundingParameters.mmRoundingDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -755,27 +767,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#Rounding
-	 * SubscriptionExecution13.Rounding}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmRounding
+	 * SubscriptionExecution13.mmRounding}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rounding = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRounding = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.RoundingDirection;
 			isDerived = false;
 			xmlTag = "Rndg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rounding";
 			definition = "Indicates the rounding direction applied to nearest unit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.Rounding);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmRounding);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RoundingDirection2Code.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice tradeDateTime;
 	/**
 	 * Date and time at which a price is applied, according to the terms stated
 	 * in the prospectus.
@@ -790,8 +803,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -814,27 +827,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#TradeDateTime
-	 * SubscriptionExecution13.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmTradeDateTime
+	 * SubscriptionExecution13.mmTradeDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateTime";
 			definition = "Date and time at which a price is applied, according to the terms stated in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.TradeDateTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmTradeDateTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected UnitPrice10 dealingPriceDetails;
 	/**
 	 * Price at which the order was executed.
 	 * <p>
@@ -846,8 +860,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#ExecutedTradePrice
-	 * InvestmentFundOrderExecution.ExecutedTradePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmExecutedTradePrice
+	 * InvestmentFundOrderExecution.mmExecutedTradePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -868,28 +882,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#DealingPriceDetails
-	 * SubscriptionExecution13.DealingPriceDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmDealingPriceDetails
+	 * SubscriptionExecution13.mmDealingPriceDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DealingPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDealingPriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmExecutedTradePrice;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.ExecutedTradePrice;
 			isDerived = false;
 			xmlTag = "DealgPricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingPriceDetails";
 			definition = "Price at which the order was executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.DealingPriceDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmDealingPriceDetails);
 			maxOccurs = 1;
-			type_lazy = () -> UnitPrice10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.UnitPrice10> informativePriceDetails;
 	/**
 	 * Other quoted price than the one at which the order was executed.
 	 * <p>
@@ -901,8 +916,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#InformativePrice
-	 * InvestmentFundOrderExecution.InformativePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmInformativePrice
+	 * InvestmentFundOrderExecution.mmInformativePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -924,28 +939,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#InformativePriceDetails
-	 * SubscriptionExecution13.InformativePriceDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmInformativePriceDetails
+	 * SubscriptionExecution13.mmInformativePriceDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InformativePriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInformativePriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInformativePrice;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.InformativePrice;
 			isDerived = false;
 			xmlTag = "InftvPricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformativePriceDetails";
 			definition = "Other quoted price than the one at which the order was executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.InformativePriceDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmInformativePriceDetails);
 			maxOccurs = 2;
-			type_lazy = () -> UnitPrice10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
 	 * Total amount of money paid /to be paid or received in exchange for the
 	 * financial instrument in the individual order.
@@ -960,8 +976,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -984,27 +1000,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#SettlementAmount
-	 * SubscriptionExecution13.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmSettlementAmount
+	 * SubscriptionExecution13.mmSettlementAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.SettlementAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmSettlementAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate cashSettlementDate;
 	/**
 	 * Date on which cash is available.
 	 * <p>
@@ -1017,8 +1034,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1039,27 +1056,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#CashSettlementDate
-	 * SubscriptionExecution13.CashSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmCashSettlementDate
+	 * SubscriptionExecution13.mmCashSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDate";
 			definition = "Date on which cash is available.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.CashSettlementDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmCashSettlementDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code settlementMethod;
 	/**
 	 * Method by which the transaction is settled.
 	 * <p>
@@ -1073,8 +1091,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1095,27 +1113,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#SettlementMethod
-	 * SubscriptionExecution13.SettlementMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmSettlementMethod
+	 * SubscriptionExecution13.mmSettlementMethod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "SttlmMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method by which the transaction is settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.SettlementMethod);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmSettlementMethod);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected YesNoIndicator partiallyExecutedIndicator;
 	/**
 	 * Indicates whether the order has been partially executed, ie, the
 	 * confirmed quantity does not match the ordered quantity for a given
@@ -1131,8 +1150,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#PartiallyExecutedIndicator
-	 * InvestmentFundOrderExecution.PartiallyExecutedIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmPartiallyExecutedIndicator
+	 * InvestmentFundOrderExecution.mmPartiallyExecutedIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1155,27 +1174,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#PartiallyExecutedIndicator
-	 * SubscriptionExecution13.PartiallyExecutedIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmPartiallyExecutedIndicator
+	 * SubscriptionExecution13.mmPartiallyExecutedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartiallyExecutedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartiallyExecutedIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmPartiallyExecutedIndicator;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.PartiallyExecutedIndicator;
 			isDerived = false;
 			xmlTag = "PrtlyExctdInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyExecutedIndicator";
 			definition = "Indicates whether the order has been partially executed, ie, the confirmed quantity does not match the ordered quantity for a given financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.PartiallyExecutedIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmPartiallyExecutedIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected BestExecution1Code bestExecution;
 	/**
 	 * Specifies that the execution was subject to best execution rules as
 	 * defined by MiFID.
@@ -1190,8 +1210,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#BestExecution
-	 * InvestmentFundOrderExecution.BestExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmBestExecution
+	 * InvestmentFundOrderExecution.mmBestExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1214,27 +1234,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#BestExecution
-	 * SubscriptionExecution13.BestExecution}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmBestExecution
+	 * SubscriptionExecution13.mmBestExecution}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BestExecution = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBestExecution = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmBestExecution;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.BestExecution;
 			isDerived = false;
 			xmlTag = "BestExctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestExecution";
 			definition = "Specifies that the execution was subject to best execution rules as defined by MiFID.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.BestExecution);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmBestExecution);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BestExecution1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator cumDividendIndicator;
 	/**
 	 * Indicates whether the dividend is included, ie, cum-dividend, in the
 	 * executed price. When the dividend is not included, the price will be
@@ -1250,8 +1271,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#CumDividendIndicator
-	 * SecuritiesPricing.CumDividendIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmCumDividendIndicator
+	 * SecuritiesPricing.mmCumDividendIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1274,27 +1295,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#CumDividendIndicator
-	 * SubscriptionExecution13.CumDividendIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmCumDividendIndicator
+	 * SubscriptionExecution13.mmCumDividendIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CumDividendIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmCumDividendIndicator;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.CumDividendIndicator;
 			isDerived = false;
 			xmlTag = "CumDvddInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumDividendIndicator";
 			definition = "Indicates whether the dividend is included, ie, cum-dividend, in the executed price. When the dividend is not included, the price will be ex-dividend.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.CumDividendIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmCumDividendIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ProfitAndLoss1Choice interimProfitAmount;
 	/**
 	 * Part of the price deemed as accrued income or profit rather than capital.
 	 * The interim profit amount is used for tax purposes.
@@ -1309,8 +1331,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#InterimProfitAmount
-	 * InvestmentFundOrderExecution.InterimProfitAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmInterimProfitAmount
+	 * InvestmentFundOrderExecution.mmInterimProfitAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1333,27 +1355,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#InterimProfitAmount
-	 * SubscriptionExecution13.InterimProfitAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmInterimProfitAmount
+	 * SubscriptionExecution13.mmInterimProfitAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterimProfitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterimProfitAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.InterimProfitAmount;
 			isDerived = false;
 			xmlTag = "IntrmPrftAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimProfitAmount";
 			definition = "Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.InterimProfitAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmInterimProfitAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProfitAndLoss1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ForeignExchangeTerms7> foreignExchangeDetails;
 	/**
 	 * Information needed to process a currency exchange or conversion.
 	 * <p>
@@ -1365,8 +1388,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1388,27 +1411,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#ForeignExchangeDetails
-	 * SubscriptionExecution13.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmForeignExchangeDetails
+	 * SubscriptionExecution13.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.ForeignExchangeDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmForeignExchangeDetails);
 			minOccurs = 0;
-			type_lazy = () -> ForeignExchangeTerms7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmObject();
 		}
 	};
+	protected IncomePreference1Code incomePreference;
 	/**
 	 * Dividend option chosen by the account owner based on the options offered
 	 * in the prospectus.
@@ -1423,8 +1447,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#IncomePreference
-	 * InvestmentAccountService.IncomePreference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmIncomePreference
+	 * InvestmentAccountService.mmIncomePreference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1447,27 +1471,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#IncomePreference
-	 * SubscriptionExecution13.IncomePreference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmIncomePreference
+	 * SubscriptionExecution13.mmIncomePreference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncomePreference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.IncomePreference;
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.IncomePreference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmIncomePreference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
 		}
 	};
+	protected Max35Text letterIntentReference;
 	/**
 	 * Reference of a letter of intent program, in which sales commissions are
 	 * reduced based on the aggregate of a customer's actual purchase and
@@ -1483,8 +1508,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#InvestmentAccountContract
-	 * InvestmentAccount.InvestmentAccountContract}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentAccountContract
+	 * InvestmentAccount.mmInvestmentAccountContract}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1507,27 +1532,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#LetterIntentReference
-	 * SubscriptionExecution13.LetterIntentReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmLetterIntentReference
+	 * SubscriptionExecution13.mmLetterIntentReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LetterIntentReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLetterIntentReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountContract;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.InvestmentAccountContract;
 			isDerived = false;
 			xmlTag = "LttrInttRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterIntentReference";
 			definition = "Reference of a letter of intent program, in which sales commissions are reduced based on the aggregate of a customer's actual purchase and anticipated purchases, over a specific period of time, and as agreed by the customer. A letter of intent program is mainly used in the US market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.LetterIntentReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmLetterIntentReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accumulationRightReference;
 	/**
 	 * Reference of an accumulation right program, in which sales commissions
 	 * are based on a customer's present purchases of shares and the aggregate
@@ -1543,8 +1569,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#AccumulationRightReference
-	 * InvestmentAccountContract.AccumulationRightReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#mmAccumulationRightReference
+	 * InvestmentAccountContract.mmAccumulationRightReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1567,27 +1593,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#AccumulationRightReference
-	 * SubscriptionExecution13.AccumulationRightReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmAccumulationRightReference
+	 * SubscriptionExecution13.mmAccumulationRightReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccumulationRightReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccumulationRightReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmAccumulationRightReference;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.AccumulationRightReference;
 			isDerived = false;
 			xmlTag = "AcmltnRghtRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulationRightReference";
 			definition = "Reference of an accumulation right program, in which sales commissions are based on a customer's present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.AccumulationRightReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmAccumulationRightReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TotalCharges3 chargeGeneralDetails;
 	/**
 	 * Amount of money associated with a service.
 	 * <p>
@@ -1599,8 +1626,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#TransactionCharge
-	 * InvestmentFundTransaction.TransactionCharge}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmTransactionCharge
+	 * InvestmentFundTransaction.mmTransactionCharge}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1619,21 +1646,22 @@ public class SubscriptionExecution6 {
 	 * definition} = "Amount of money associated with a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargeGeneralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargeGeneralDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.TransactionCharge;
 			isDerived = false;
 			xmlTag = "ChrgGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeGeneralDetails";
 			definition = "Amount of money associated with a service.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TotalCharges3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalCharges3.mmObject();
 		}
 	};
+	protected TotalCommissions3 commissionGeneralDetails;
 	/**
 	 * Amount of money due to a party as compensation for a service.
 	 * <p>
@@ -1645,8 +1673,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeCommission
-	 * Trade.TradeCommission}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeCommission
+	 * Trade.mmTradeCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1666,21 +1694,22 @@ public class SubscriptionExecution6 {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommissionGeneralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommissionGeneralDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeCommission;
 			isDerived = false;
 			xmlTag = "ComssnGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionGeneralDetails";
 			definition = "Amount of money due to a party as compensation for a service.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TotalCommissions3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalCommissions3.mmObject();
 		}
 	};
+	protected TotalTaxes3 taxGeneralDetails;
 	/**
 	 * Tax related to an investment fund order.
 	 * <p>
@@ -1692,8 +1721,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#TransactionTax
-	 * InvestmentFundTransaction.TransactionTax}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmTransactionTax
+	 * InvestmentFundTransaction.mmTransactionTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1712,21 +1741,22 @@ public class SubscriptionExecution6 {
 	 * definition} = "Tax related to an investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxGeneralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxGeneralDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionTax;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.TransactionTax;
 			isDerived = false;
 			xmlTag = "TaxGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxGeneralDetails";
 			definition = "Tax related to an investment fund order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TotalTaxes3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 		}
 	};
+	protected FundSettlementParameters3 settlementAndCustodyDetails;
 	/**
 	 * Parameters used to execute the settlement of an investment fund order.
 	 * <p>
@@ -1739,8 +1769,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1762,28 +1792,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#SettlementAndCustodyDetails
-	 * SubscriptionExecution13.SettlementAndCustodyDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmSettlementAndCustodyDetails
+	 * SubscriptionExecution13.mmSettlementAndCustodyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAndCustodyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "SttlmAndCtdyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndCustodyDetails";
 			definition = "Parameters used to execute the settlement of an investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.SettlementAndCustodyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmSettlementAndCustodyDetails);
 			maxOccurs = 1;
-			type_lazy = () -> FundSettlementParameters3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters3.mmObject();
 		}
 	};
+	protected YesNoIndicator physicalDeliveryIndicator;
 	/**
 	 * Indicates whether the financial instrument is to be physically delivered.
 	 * <p>
@@ -1816,13 +1847,13 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#PhysicalDeliveryIndicator
-	 * SubscriptionExecution13.PhysicalDeliveryIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmPhysicalDeliveryIndicator
+	 * SubscriptionExecution13.mmPhysicalDeliveryIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhysicalDeliveryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhysicalDeliveryIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
 			isDerived = false;
@@ -1830,12 +1861,13 @@ public class SubscriptionExecution6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryIndicator";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.PhysicalDeliveryIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmPhysicalDeliveryIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DeliveryParameters3 physicalDeliveryDetails;
 	/**
 	 * Information related to physical delivery of the securities.
 	 * <p>
@@ -1847,8 +1879,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
-	 * SecuritiesTransfer.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+	 * SecuritiesTransfer.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1870,28 +1902,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#PhysicalDeliveryDetails
-	 * SubscriptionExecution13.PhysicalDeliveryDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmPhysicalDeliveryDetails
+	 * SubscriptionExecution13.mmPhysicalDeliveryDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PhysicalDeliveryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery;
 			isDerived = false;
 			xmlTag = "PhysDlvryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails";
 			definition = "Information related to physical delivery of the securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.PhysicalDeliveryDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmPhysicalDeliveryDetails);
 			maxOccurs = 1;
-			type_lazy = () -> DeliveryParameters3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters3.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode requestedSettlementCurrency;
 	/**
 	 * Currency requested for settlement of cash proceeds.
 	 * <p>
@@ -1905,8 +1938,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#RequestedSettlementCurrency
-	 * InvestmentFundOrder.RequestedSettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRequestedSettlementCurrency
+	 * InvestmentFundOrder.mmRequestedSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1927,27 +1960,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#RequestedSettlementCurrency
-	 * SubscriptionExecution13.RequestedSettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmRequestedSettlementCurrency
+	 * SubscriptionExecution13.mmRequestedSettlementCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedSettlementCurrency;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.RequestedSettlementCurrency;
 			isDerived = false;
 			xmlTag = "ReqdSttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementCurrency";
 			definition = "Currency requested for settlement of cash proceeds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.RequestedSettlementCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmRequestedSettlementCurrency);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode requestedNAVCurrency;
 	/**
 	 * Currency to be used for pricing the fund. This currency must be among the
 	 * set of currencies in which the price may be expressed, as stated in the
@@ -1963,8 +1997,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#RequestedNAVCurrency
-	 * InvestmentFundClass.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmRequestedNAVCurrency
+	 * InvestmentFundClass.mmRequestedNAVCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1987,27 +2021,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#RequestedNAVCurrency
-	 * SubscriptionExecution13.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmRequestedNAVCurrency
+	 * SubscriptionExecution13.mmRequestedNAVCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedNAVCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.RequestedNAVCurrency;
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.RequestedNAVCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmRequestedNAVCurrency);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount refund;
 	/**
 	 * Return of cash that has been overpaid for a subscription.
 	 * <p>
@@ -2021,8 +2056,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#Refund
-	 * SubscriptionExecution.Refund}</li>
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmRefund
+	 * SubscriptionExecution.mmRefund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2044,27 +2079,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#Refund
-	 * SubscriptionExecution13.Refund}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmRefund
+	 * SubscriptionExecution13.mmRefund}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Refund = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRefund = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmRefund;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.Refund;
 			isDerived = false;
 			xmlTag = "Rfnd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refund";
 			definition = "Return of cash that has been overpaid for a subscription.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.Refund);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmRefund);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount subscriptionInterest;
 	/**
 	 * Interest received when a subscription amount is paid in advance and then
 	 * invested by the fund.
@@ -2079,8 +2115,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#SubscriptionInterest
-	 * SubscriptionExecution.SubscriptionInterest}</li>
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmSubscriptionInterest
+	 * SubscriptionExecution.mmSubscriptionInterest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2103,27 +2139,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#SubscriptionInterest
-	 * SubscriptionExecution13.SubscriptionInterest}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmSubscriptionInterest
+	 * SubscriptionExecution13.mmSubscriptionInterest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionInterest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionInterest = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmSubscriptionInterest;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.SubscriptionInterest;
 			isDerived = false;
 			xmlTag = "SbcptIntrst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionInterest";
 			definition = "Interest received when a subscription amount is paid in advance and then invested by the fund.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.SubscriptionInterest);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmSubscriptionInterest);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PaymentTransaction24 cashSettlementDetails;
 	/**
 	 * Payment transaction resulting from the investment fund order execution.
 	 * <p>
@@ -2135,8 +2172,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentOffset
-	 * PaymentObligation.PaymentOffset}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentOffset
+	 * PaymentObligation.mmPaymentOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2159,28 +2196,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#CashSettlementDetails
-	 * SubscriptionExecution13.CashSettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmCashSettlementDetails
+	 * SubscriptionExecution13.mmCashSettlementDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentOffset;
 			isDerived = false;
 			xmlTag = "CshSttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDetails";
 			definition = "Payment transaction resulting from the investment fund order execution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.CashSettlementDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmCashSettlementDetails);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentTransaction24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction24.mmObject();
 		}
 	};
+	protected Max350Text nonStandardSettlementInformation;
 	/**
 	 * Additional specific settlement information for non-regulated traded
 	 * funds.
@@ -2194,8 +2232,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#NonStandardSettlementInformation
-	 * InvestmentFundOrderExecution.NonStandardSettlementInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmNonStandardSettlementInformation
+	 * InvestmentFundOrderExecution.mmNonStandardSettlementInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2218,27 +2256,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#NonStandardSettlementInformation
-	 * SubscriptionExecution13.NonStandardSettlementInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmNonStandardSettlementInformation
+	 * SubscriptionExecution13.mmNonStandardSettlementInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonStandardSettlementInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.NonStandardSettlementInformation;
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.NonStandardSettlementInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmNonStandardSettlementInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PercentageRate partialSettlementOfUnits;
 	/**
 	 * Percentage of units partially settled.
 	 * <p>
@@ -2252,8 +2291,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#PartialSettlementOfUnits
-	 * InvestmentFundOrderExecution.PartialSettlementOfUnits}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmPartialSettlementOfUnits
+	 * InvestmentFundOrderExecution.mmPartialSettlementOfUnits}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2274,27 +2313,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#PartialSettlementOfUnits
-	 * SubscriptionExecution13.PartialSettlementOfUnits}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmPartialSettlementOfUnits
+	 * SubscriptionExecution13.mmPartialSettlementOfUnits}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialSettlementOfUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialSettlementOfUnits = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmPartialSettlementOfUnits;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.PartialSettlementOfUnits;
 			isDerived = false;
 			xmlTag = "PrtlSttlmOfUnits";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementOfUnits";
 			definition = "Percentage of units partially settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.PartialSettlementOfUnits);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmPartialSettlementOfUnits);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate partialSettlementOfCash;
 	/**
 	 * Percentage of cash partially settled.
 	 * <p>
@@ -2308,8 +2348,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#PartialSettlementOfCash
-	 * InvestmentFundOrderExecution.PartialSettlementOfCash}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmPartialSettlementOfCash
+	 * InvestmentFundOrderExecution.mmPartialSettlementOfCash}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2330,27 +2370,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#PartialSettlementOfCash
-	 * SubscriptionExecution13.PartialSettlementOfCash}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmPartialSettlementOfCash
+	 * SubscriptionExecution13.mmPartialSettlementOfCash}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialSettlementOfCash = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialSettlementOfCash = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmPartialSettlementOfCash;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.PartialSettlementOfCash;
 			isDerived = false;
 			xmlTag = "PrtlSttlmOfCsh";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementOfCash";
 			definition = "Percentage of cash partially settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.PartialSettlementOfCash);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmPartialSettlementOfCash);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1> staffClientBreakdown;
 	/**
 	 * Breakdown of the net amount per type of order.
 	 * <p>
@@ -2385,28 +2426,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#StaffClientBreakdown
-	 * SubscriptionExecution13.StaffClientBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmStaffClientBreakdown
+	 * SubscriptionExecution13.mmStaffClientBreakdown}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StaffClientBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStaffClientBreakdown = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
 			businessComponentTrace_lazy = () -> SubscriptionOrder.mmObject();
+			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
 			isDerived = false;
 			xmlTag = "StffClntBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffClientBreakdown";
 			definition = "Breakdown of the net amount per type of order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.StaffClientBreakdown);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmStaffClientBreakdown);
 			maxOccurs = 4;
-			type_lazy = () -> InvestmentFundsOrderBreakdown1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmObject();
 		}
 	};
+	protected FinancialAdvice1Code financialAdvice;
 	/**
 	 * Specifies if advice has been received from an independent financial
 	 * advisor.
@@ -2421,8 +2463,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#FinancialAdvice
-	 * InvestmentFundOrder.FinancialAdvice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmFinancialAdvice
+	 * InvestmentFundOrder.mmFinancialAdvice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2445,27 +2487,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#FinancialAdvice
-	 * SubscriptionExecution13.FinancialAdvice}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmFinancialAdvice
+	 * SubscriptionExecution13.mmFinancialAdvice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialAdvice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialAdvice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmFinancialAdvice;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.FinancialAdvice;
 			isDerived = false;
 			xmlTag = "FinAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvice";
 			definition = "Specifies if advice has been received from an independent financial advisor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.FinancialAdvice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmFinancialAdvice);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FinancialAdvice1Code.mmObject();
 		}
 	};
+	protected NegotiatedTrade1Code negotiatedTrade;
 	/**
 	 * Specifies whether the trade is negotiated.
 	 * <p>
@@ -2479,8 +2522,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#NegotiatedTrade
-	 * InvestmentFundOrder.NegotiatedTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNegotiatedTrade
+	 * InvestmentFundOrder.mmNegotiatedTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2501,27 +2544,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#NegotiatedTrade
-	 * SubscriptionExecution13.NegotiatedTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmNegotiatedTrade
+	 * SubscriptionExecution13.mmNegotiatedTrade}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NegotiatedTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNegotiatedTrade = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNegotiatedTrade;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.NegotiatedTrade;
 			isDerived = false;
 			xmlTag = "NgtdTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiatedTrade";
 			definition = "Specifies whether the trade is negotiated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.NegotiatedTrade);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmNegotiatedTrade);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NegotiatedTrade1Code.mmObject();
 		}
 	};
+	protected LateReport1Code lateReport;
 	/**
 	 * Specifies whether the order execution confirmation is late.
 	 * <p>
@@ -2535,8 +2579,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#LateReport
-	 * InvestmentFundOrderExecution.LateReport}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmLateReport
+	 * InvestmentFundOrderExecution.mmLateReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2558,27 +2602,28 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#LateReport
-	 * SubscriptionExecution13.LateReport}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmLateReport
+	 * SubscriptionExecution13.mmLateReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LateReport = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLateReport = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmLateReport;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.LateReport;
 			isDerived = false;
 			xmlTag = "LateRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateReport";
 			definition = "Specifies whether the order execution confirmation is late.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.LateReport);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmLateReport);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LateReport1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary9> relatedPartyDetails;
 	/**
 	 * Information about parties related to the transaction.
 	 * <p>
@@ -2590,8 +2635,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2612,28 +2657,29 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#RelatedPartyDetails
-	 * SubscriptionExecution13.RelatedPartyDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmRelatedPartyDetails
+	 * SubscriptionExecution13.mmRelatedPartyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.RelatedPartyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmRelatedPartyDetails);
 			maxOccurs = 10;
-			type_lazy = () -> Intermediary9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
 		}
 	};
+	protected Equalisation1 equalisation;
 	/**
 	 * Part of an investor's subscription amount that is held by the fund in
 	 * order to pay incentive / performance fees at the end of the fiscal year.
@@ -2646,8 +2692,8 @@ public class SubscriptionExecution6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#Equalisation
-	 * InvestmentFundClass.Equalisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmEqualisation
+	 * InvestmentFundClass.mmEqualisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2670,53 +2716,55 @@ public class SubscriptionExecution6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#Equalisation
-	 * SubscriptionExecution13.Equalisation}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmEqualisation
+	 * SubscriptionExecution13.mmEqualisation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Equalisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEqualisation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation;
 			componentContext_lazy = () -> SubscriptionExecution6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.Equalisation;
 			isDerived = false;
 			xmlTag = "Equlstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equalisation";
 			definition = "Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.Equalisation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmEqualisation);
 			maxOccurs = 1;
-			type_lazy = () -> Equalisation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Equalisation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution6.OrderReference, com.tools20022.repository.msg.SubscriptionExecution6.ClientReference,
-						com.tools20022.repository.msg.SubscriptionExecution6.DealReference, com.tools20022.repository.msg.SubscriptionExecution6.OrderType, com.tools20022.repository.msg.SubscriptionExecution6.FinancialInstrumentDetails,
-						com.tools20022.repository.msg.SubscriptionExecution6.SubAccountForHolding, com.tools20022.repository.msg.SubscriptionExecution6.UnitsNumber, com.tools20022.repository.msg.SubscriptionExecution6.NetAmount,
-						com.tools20022.repository.msg.SubscriptionExecution6.GrossAmount, com.tools20022.repository.msg.SubscriptionExecution6.Rounding, com.tools20022.repository.msg.SubscriptionExecution6.TradeDateTime,
-						com.tools20022.repository.msg.SubscriptionExecution6.DealingPriceDetails, com.tools20022.repository.msg.SubscriptionExecution6.InformativePriceDetails,
-						com.tools20022.repository.msg.SubscriptionExecution6.SettlementAmount, com.tools20022.repository.msg.SubscriptionExecution6.CashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution6.SettlementMethod,
-						com.tools20022.repository.msg.SubscriptionExecution6.PartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution6.BestExecution,
-						com.tools20022.repository.msg.SubscriptionExecution6.CumDividendIndicator, com.tools20022.repository.msg.SubscriptionExecution6.InterimProfitAmount,
-						com.tools20022.repository.msg.SubscriptionExecution6.ForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionExecution6.IncomePreference,
-						com.tools20022.repository.msg.SubscriptionExecution6.LetterIntentReference, com.tools20022.repository.msg.SubscriptionExecution6.AccumulationRightReference,
-						com.tools20022.repository.msg.SubscriptionExecution6.ChargeGeneralDetails, com.tools20022.repository.msg.SubscriptionExecution6.CommissionGeneralDetails,
-						com.tools20022.repository.msg.SubscriptionExecution6.TaxGeneralDetails, com.tools20022.repository.msg.SubscriptionExecution6.SettlementAndCustodyDetails,
-						com.tools20022.repository.msg.SubscriptionExecution6.PhysicalDeliveryIndicator, com.tools20022.repository.msg.SubscriptionExecution6.PhysicalDeliveryDetails,
-						com.tools20022.repository.msg.SubscriptionExecution6.RequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionExecution6.RequestedNAVCurrency,
-						com.tools20022.repository.msg.SubscriptionExecution6.Refund, com.tools20022.repository.msg.SubscriptionExecution6.SubscriptionInterest, com.tools20022.repository.msg.SubscriptionExecution6.CashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionExecution6.NonStandardSettlementInformation, com.tools20022.repository.msg.SubscriptionExecution6.PartialSettlementOfUnits,
-						com.tools20022.repository.msg.SubscriptionExecution6.PartialSettlementOfCash, com.tools20022.repository.msg.SubscriptionExecution6.StaffClientBreakdown,
-						com.tools20022.repository.msg.SubscriptionExecution6.FinancialAdvice, com.tools20022.repository.msg.SubscriptionExecution6.NegotiatedTrade, com.tools20022.repository.msg.SubscriptionExecution6.LateReport,
-						com.tools20022.repository.msg.SubscriptionExecution6.RelatedPartyDetails, com.tools20022.repository.msg.SubscriptionExecution6.Equalisation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution6.mmOrderReference, com.tools20022.repository.msg.SubscriptionExecution6.mmClientReference,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmDealReference, com.tools20022.repository.msg.SubscriptionExecution6.mmOrderType,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmSubAccountForHolding,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionExecution6.mmNetAmount, com.tools20022.repository.msg.SubscriptionExecution6.mmGrossAmount,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmRounding, com.tools20022.repository.msg.SubscriptionExecution6.mmTradeDateTime, com.tools20022.repository.msg.SubscriptionExecution6.mmDealingPriceDetails,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmInformativePriceDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmSettlementAmount,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution6.mmSettlementMethod,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution6.mmBestExecution,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmCumDividendIndicator, com.tools20022.repository.msg.SubscriptionExecution6.mmInterimProfitAmount,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmIncomePreference,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmLetterIntentReference, com.tools20022.repository.msg.SubscriptionExecution6.mmAccumulationRightReference,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmChargeGeneralDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmCommissionGeneralDetails,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmTaxGeneralDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmSettlementAndCustodyDetails,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmPhysicalDeliveryIndicator, com.tools20022.repository.msg.SubscriptionExecution6.mmPhysicalDeliveryDetails,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionExecution6.mmRequestedNAVCurrency,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmRefund, com.tools20022.repository.msg.SubscriptionExecution6.mmSubscriptionInterest,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmCashSettlementDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmNonStandardSettlementInformation,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmPartialSettlementOfUnits, com.tools20022.repository.msg.SubscriptionExecution6.mmPartialSettlementOfCash,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionExecution6.mmFinancialAdvice,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmNegotiatedTrade, com.tools20022.repository.msg.SubscriptionExecution6.mmLateReport, com.tools20022.repository.msg.SubscriptionExecution6.mmRelatedPartyDetails,
+						com.tools20022.repository.msg.SubscriptionExecution6.mmEqualisation);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionExecution6";
 				definition = "Execution of a subscription order.";
@@ -2724,5 +2772,357 @@ public class SubscriptionExecution6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public Max35Text getDealReference() {
+		return dealReference;
+	}
+
+	public void setDealReference(Max35Text dealReference) {
+		this.dealReference = dealReference;
+	}
+
+	public List<FundOrderType3> getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(List<com.tools20022.repository.msg.FundOrderType3> orderType) {
+		this.orderType = orderType;
+	}
+
+	public FinancialInstrument10 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument10 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public SubAccount1 getSubAccountForHolding() {
+		return subAccountForHolding;
+	}
+
+	public void setSubAccountForHolding(com.tools20022.repository.msg.SubAccount1 subAccountForHolding) {
+		this.subAccountForHolding = subAccountForHolding;
+	}
+
+	public FinancialInstrumentQuantity1 getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public ActiveCurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(ActiveCurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
+	}
+
+	public ActiveCurrencyAndAmount getGrossAmount() {
+		return grossAmount;
+	}
+
+	public void setGrossAmount(ActiveCurrencyAndAmount grossAmount) {
+		this.grossAmount = grossAmount;
+	}
+
+	public RoundingDirection2Code getRounding() {
+		return rounding;
+	}
+
+	public void setRounding(RoundingDirection2Code rounding) {
+		this.rounding = rounding;
+	}
+
+	public DateAndDateTimeChoice getTradeDateTime() {
+		return tradeDateTime;
+	}
+
+	public void setTradeDateTime(DateAndDateTimeChoice tradeDateTime) {
+		this.tradeDateTime = tradeDateTime;
+	}
+
+	public UnitPrice10 getDealingPriceDetails() {
+		return dealingPriceDetails;
+	}
+
+	public void setDealingPriceDetails(com.tools20022.repository.msg.UnitPrice10 dealingPriceDetails) {
+		this.dealingPriceDetails = dealingPriceDetails;
+	}
+
+	public List<UnitPrice10> getInformativePriceDetails() {
+		return informativePriceDetails;
+	}
+
+	public void setInformativePriceDetails(List<com.tools20022.repository.msg.UnitPrice10> informativePriceDetails) {
+		this.informativePriceDetails = informativePriceDetails;
+	}
+
+	public ActiveCurrencyAndAmount getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public ISODate getCashSettlementDate() {
+		return cashSettlementDate;
+	}
+
+	public void setCashSettlementDate(ISODate cashSettlementDate) {
+		this.cashSettlementDate = cashSettlementDate;
+	}
+
+	public DeliveryReceiptType2Code getSettlementMethod() {
+		return settlementMethod;
+	}
+
+	public void setSettlementMethod(DeliveryReceiptType2Code settlementMethod) {
+		this.settlementMethod = settlementMethod;
+	}
+
+	public YesNoIndicator getPartiallyExecutedIndicator() {
+		return partiallyExecutedIndicator;
+	}
+
+	public void setPartiallyExecutedIndicator(YesNoIndicator partiallyExecutedIndicator) {
+		this.partiallyExecutedIndicator = partiallyExecutedIndicator;
+	}
+
+	public BestExecution1Code getBestExecution() {
+		return bestExecution;
+	}
+
+	public void setBestExecution(BestExecution1Code bestExecution) {
+		this.bestExecution = bestExecution;
+	}
+
+	public YesNoIndicator getCumDividendIndicator() {
+		return cumDividendIndicator;
+	}
+
+	public void setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
+		this.cumDividendIndicator = cumDividendIndicator;
+	}
+
+	public ProfitAndLoss1Choice getInterimProfitAmount() {
+		return interimProfitAmount;
+	}
+
+	public void setInterimProfitAmount(ProfitAndLoss1Choice interimProfitAmount) {
+		this.interimProfitAmount = interimProfitAmount;
+	}
+
+	public List<ForeignExchangeTerms7> getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms7> foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
+	}
+
+	public IncomePreference1Code getIncomePreference() {
+		return incomePreference;
+	}
+
+	public void setIncomePreference(IncomePreference1Code incomePreference) {
+		this.incomePreference = incomePreference;
+	}
+
+	public Max35Text getLetterIntentReference() {
+		return letterIntentReference;
+	}
+
+	public void setLetterIntentReference(Max35Text letterIntentReference) {
+		this.letterIntentReference = letterIntentReference;
+	}
+
+	public Max35Text getAccumulationRightReference() {
+		return accumulationRightReference;
+	}
+
+	public void setAccumulationRightReference(Max35Text accumulationRightReference) {
+		this.accumulationRightReference = accumulationRightReference;
+	}
+
+	public TotalCharges3 getChargeGeneralDetails() {
+		return chargeGeneralDetails;
+	}
+
+	public void setChargeGeneralDetails(com.tools20022.repository.msg.TotalCharges3 chargeGeneralDetails) {
+		this.chargeGeneralDetails = chargeGeneralDetails;
+	}
+
+	public TotalCommissions3 getCommissionGeneralDetails() {
+		return commissionGeneralDetails;
+	}
+
+	public void setCommissionGeneralDetails(com.tools20022.repository.msg.TotalCommissions3 commissionGeneralDetails) {
+		this.commissionGeneralDetails = commissionGeneralDetails;
+	}
+
+	public TotalTaxes3 getTaxGeneralDetails() {
+		return taxGeneralDetails;
+	}
+
+	public void setTaxGeneralDetails(com.tools20022.repository.msg.TotalTaxes3 taxGeneralDetails) {
+		this.taxGeneralDetails = taxGeneralDetails;
+	}
+
+	public FundSettlementParameters3 getSettlementAndCustodyDetails() {
+		return settlementAndCustodyDetails;
+	}
+
+	public void setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters3 settlementAndCustodyDetails) {
+		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
+	}
+
+	public YesNoIndicator getPhysicalDeliveryIndicator() {
+		return physicalDeliveryIndicator;
+	}
+
+	public void setPhysicalDeliveryIndicator(YesNoIndicator physicalDeliveryIndicator) {
+		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
+	}
+
+	public DeliveryParameters3 getPhysicalDeliveryDetails() {
+		return physicalDeliveryDetails;
+	}
+
+	public void setPhysicalDeliveryDetails(com.tools20022.repository.msg.DeliveryParameters3 physicalDeliveryDetails) {
+		this.physicalDeliveryDetails = physicalDeliveryDetails;
+	}
+
+	public ActiveCurrencyCode getRequestedSettlementCurrency() {
+		return requestedSettlementCurrency;
+	}
+
+	public void setRequestedSettlementCurrency(ActiveCurrencyCode requestedSettlementCurrency) {
+		this.requestedSettlementCurrency = requestedSettlementCurrency;
+	}
+
+	public ActiveOrHistoricCurrencyCode getRequestedNAVCurrency() {
+		return requestedNAVCurrency;
+	}
+
+	public void setRequestedNAVCurrency(ActiveOrHistoricCurrencyCode requestedNAVCurrency) {
+		this.requestedNAVCurrency = requestedNAVCurrency;
+	}
+
+	public ActiveCurrencyAndAmount getRefund() {
+		return refund;
+	}
+
+	public void setRefund(ActiveCurrencyAndAmount refund) {
+		this.refund = refund;
+	}
+
+	public ActiveCurrencyAndAmount getSubscriptionInterest() {
+		return subscriptionInterest;
+	}
+
+	public void setSubscriptionInterest(ActiveCurrencyAndAmount subscriptionInterest) {
+		this.subscriptionInterest = subscriptionInterest;
+	}
+
+	public PaymentTransaction24 getCashSettlementDetails() {
+		return cashSettlementDetails;
+	}
+
+	public void setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction24 cashSettlementDetails) {
+		this.cashSettlementDetails = cashSettlementDetails;
+	}
+
+	public Max350Text getNonStandardSettlementInformation() {
+		return nonStandardSettlementInformation;
+	}
+
+	public void setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
+		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
+	}
+
+	public PercentageRate getPartialSettlementOfUnits() {
+		return partialSettlementOfUnits;
+	}
+
+	public void setPartialSettlementOfUnits(PercentageRate partialSettlementOfUnits) {
+		this.partialSettlementOfUnits = partialSettlementOfUnits;
+	}
+
+	public PercentageRate getPartialSettlementOfCash() {
+		return partialSettlementOfCash;
+	}
+
+	public void setPartialSettlementOfCash(PercentageRate partialSettlementOfCash) {
+		this.partialSettlementOfCash = partialSettlementOfCash;
+	}
+
+	public List<InvestmentFundsOrderBreakdown1> getStaffClientBreakdown() {
+		return staffClientBreakdown;
+	}
+
+	public void setStaffClientBreakdown(List<com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1> staffClientBreakdown) {
+		this.staffClientBreakdown = staffClientBreakdown;
+	}
+
+	public FinancialAdvice1Code getFinancialAdvice() {
+		return financialAdvice;
+	}
+
+	public void setFinancialAdvice(FinancialAdvice1Code financialAdvice) {
+		this.financialAdvice = financialAdvice;
+	}
+
+	public NegotiatedTrade1Code getNegotiatedTrade() {
+		return negotiatedTrade;
+	}
+
+	public void setNegotiatedTrade(NegotiatedTrade1Code negotiatedTrade) {
+		this.negotiatedTrade = negotiatedTrade;
+	}
+
+	public LateReport1Code getLateReport() {
+		return lateReport;
+	}
+
+	public void setLateReport(LateReport1Code lateReport) {
+		this.lateReport = lateReport;
+	}
+
+	public List<Intermediary9> getRelatedPartyDetails() {
+		return relatedPartyDetails;
+	}
+
+	public void setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary9> relatedPartyDetails) {
+		this.relatedPartyDetails = relatedPartyDetails;
+	}
+
+	public Equalisation1 getEqualisation() {
+		return equalisation;
+	}
+
+	public void setEqualisation(com.tools20022.repository.msg.Equalisation1 equalisation) {
+		this.equalisation = equalisation;
 	}
 }

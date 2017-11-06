@@ -32,15 +32,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.NoCriteriaCode NoCriteriaCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NoCriteria1Code#NoCriteria
- * NoCriteria1Code.NoCriteria}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NoCriteria1Code#mmNoCriteria
+ * NoCriteria1Code.mmNoCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +77,7 @@ public class NoCriteria1Code extends NoCriteriaCode {
 	 * name} = "NoCriteria"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoCriteria = new MMCode() {
+	public static final MMCode mmNoCriteria = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCriteria";
@@ -87,12 +88,12 @@ public class NoCriteria1Code extends NoCriteriaCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NOCR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NoCriteria1Code";
 				definition = "Specifies that there is no criteria.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoCriteria1Code.NoCriteria);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoCriteria1Code.mmNoCriteria);
 				trace_lazy = () -> NoCriteriaCode.mmObject();
 			}
 		});

@@ -36,9 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Pledgee1#PledgeeTypeAndIdentification
- * Pledgee1.PledgeeTypeAndIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Pledgee1#LEI Pledgee1.LEI}</li>
+ * {@linkplain com.tools20022.repository.msg.Pledgee1#mmPledgeeTypeAndIdentification
+ * Pledgee1.mmPledgeeTypeAndIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Pledgee1#mmLEI Pledgee1.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Pledgee1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PledgeeFormat3Choice pledgeeTypeAndIdentification;
 	/**
 	 * Unique identification of the party.
 	 * <p>
@@ -97,28 +98,29 @@ public class Pledgee1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Pledgee2#PledgeeTypeAndIdentification
-	 * Pledgee2.PledgeeTypeAndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Pledgee2#mmPledgeeTypeAndIdentification
+	 * Pledgee2.mmPledgeeTypeAndIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PledgeeTypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPledgeeTypeAndIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Pledgee1.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> Pledgee1.mmObject();
 			isDerived = false;
 			xmlTag = "PldgeeTpAndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeeTypeAndIdentification";
 			definition = "Unique identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pledgee2.PledgeeTypeAndIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pledgee2.mmPledgeeTypeAndIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PledgeeFormat3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PledgeeFormat3Choice.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identification as an alternate identification for a party.
 	 * <p>
@@ -149,12 +151,13 @@ public class Pledgee1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Pledgee2#LEI Pledgee2.LEI}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Pledgee2#mmLEI
+	 * Pledgee2.mmLEI}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Pledgee1.mmObject();
 			isDerived = false;
@@ -162,9 +165,9 @@ public class Pledgee1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pledgee2.LEI);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pledgee2.mmLEI);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -172,14 +175,30 @@ public class Pledgee1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pledgee1.PledgeeTypeAndIdentification, com.tools20022.repository.msg.Pledgee1.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pledgee1.mmPledgeeTypeAndIdentification, com.tools20022.repository.msg.Pledgee1.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Pledgee1";
 				definition = "Identifies the entity to which the financial instruments are pledged.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PledgeeFormat3Choice getPledgeeTypeAndIdentification() {
+		return pledgeeTypeAndIdentification;
+	}
+
+	public void setPledgeeTypeAndIdentification(PledgeeFormat3Choice pledgeeTypeAndIdentification) {
+		this.pledgeeTypeAndIdentification = pledgeeTypeAndIdentification;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

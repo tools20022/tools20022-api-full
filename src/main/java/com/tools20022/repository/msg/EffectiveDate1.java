@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EffectiveDate1#EffectiveDate
- * EffectiveDate1.EffectiveDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EffectiveDate1#mmEffectiveDate
+ * EffectiveDate1.mmEffectiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EffectiveDate1#EffectiveDateParameter
- * EffectiveDate1.EffectiveDateParameter}</li>
+ * {@linkplain com.tools20022.repository.msg.EffectiveDate1#mmEffectiveDateParameter
+ * EffectiveDate1.mmEffectiveDateParameter}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,24 +45,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#EffectiveDateDetails
- * StandingSettlementInstructionV01.EffectiveDateDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmEffectiveDateDetails
+ * StandingSettlementInstructionV01.mmEffectiveDateDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01#EffectiveDateDetails
- * StandingSettlementInstructionCancellationV01.EffectiveDateDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01#mmEffectiveDateDetails
+ * StandingSettlementInstructionCancellationV01.mmEffectiveDateDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#EffectiveDateDetails
- * StandingSettlementInstructionStatusAdviceV01.EffectiveDateDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#mmEffectiveDateDetails
+ * StandingSettlementInstructionStatusAdviceV01.mmEffectiveDateDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01#EffectiveDateDetails
- * StandingSettlementInstructionDeletionV01.EffectiveDateDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01#mmEffectiveDateDetails
+ * StandingSettlementInstructionDeletionV01.mmEffectiveDateDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EffectiveDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate effectiveDate;
 	/**
 	 * Date on which the SSI is effective. If the SSI is effective on a future
 	 * date, then the date must be provided.
@@ -105,7 +106,7 @@ public class EffectiveDate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EffectiveDate1.mmObject();
 			isDerived = false;
@@ -113,11 +114,12 @@ public class EffectiveDate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date on which the SSI is effective. If the SSI is effective on a future date, then the date must be provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ExternalEffectiveDateParameter1Code effectiveDateParameter;
 	/**
 	 * Specifies how the SSI update effective date is to be applied.
 	 * <p>
@@ -146,7 +148,7 @@ public class EffectiveDate1 {
 	 * "Specifies how the SSI update effective date is to be applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveDateParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveDateParameter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EffectiveDate1.mmObject();
 			isDerived = false;
@@ -154,8 +156,8 @@ public class EffectiveDate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateParameter";
 			definition = "Specifies how the SSI update effective date is to be applied.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExternalEffectiveDateParameter1Code.mmObject();
 		}
 	};
@@ -163,16 +165,32 @@ public class EffectiveDate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EffectiveDate1.EffectiveDate, com.tools20022.repository.msg.EffectiveDate1.EffectiveDateParameter);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.EffectiveDateDetails,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.EffectiveDateDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.EffectiveDateDetails,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.EffectiveDateDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EffectiveDate1.mmEffectiveDate, com.tools20022.repository.msg.EffectiveDate1.mmEffectiveDateParameter);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmEffectiveDateDetails,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmEffectiveDateDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmEffectiveDateDetails,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.mmEffectiveDateDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EffectiveDate1";
 				definition = "Date and date parameters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getEffectiveDate() {
+		return effectiveDate;
+	}
+
+	public void setEffectiveDate(ISODate effectiveDate) {
+		this.effectiveDate = effectiveDate;
+	}
+
+	public ExternalEffectiveDateParameter1Code getEffectiveDateParameter() {
+		return effectiveDateParameter;
+	}
+
+	public void setEffectiveDateParameter(ExternalEffectiveDateParameter1Code effectiveDateParameter) {
+		this.effectiveDateParameter = effectiveDateParameter;
 	}
 }

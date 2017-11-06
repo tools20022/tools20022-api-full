@@ -35,13 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Amount1#AgreedAmount
- * Amount1.AgreedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amount1#mmAgreedAmount
+ * Amount1.mmAgreedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amount1#MarginCallRequestIdentification
- * Amount1.MarginCallRequestIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Amount1#AdditionalInformation
- * Amount1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Amount1#mmMarginCallRequestIdentification
+ * Amount1.mmMarginCallRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Amount1#mmAdditionalInformation
+ * Amount1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Amount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount agreedAmount;
 	/**
 	 * Undisputed amount of the margin call request.
 	 * <p>
@@ -77,8 +79,8 @@ public class Amount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#AgreedAmount
-	 * MarginCall.AgreedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmAgreedAmount
+	 * MarginCall.mmAgreedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Amount1
@@ -96,20 +98,21 @@ public class Amount1 {
 	 * definition} = "Undisputed amount of the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgreedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> Amount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.AgreedAmount;
 			isDerived = false;
 			xmlTag = "AgrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmount";
 			definition = "Undisputed amount of the margin call request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max35Text marginCallRequestIdentification;
 	/**
 	 * Unique identifier for the margin call request.
 	 * <p>
@@ -136,7 +139,7 @@ public class Amount1 {
 	 * definition} = "Unique identifier for the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amount1.mmObject();
 			isDerived = false;
@@ -144,11 +147,12 @@ public class Amount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Unique identifier for the margin call request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max210Text additionalInformation;
 	/**
 	 * Provides additional information related to the margin call amount that
 	 * has been agreed.
@@ -178,7 +182,7 @@ public class Amount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amount1.mmObject();
 			isDerived = false;
@@ -186,8 +190,8 @@ public class Amount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information related to the margin call amount that has been agreed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -195,15 +199,39 @@ public class Amount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amount1.AgreedAmount, com.tools20022.repository.msg.Amount1.MarginCallRequestIdentification,
-						com.tools20022.repository.msg.Amount1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amount1.mmAgreedAmount, com.tools20022.repository.msg.Amount1.mmMarginCallRequestIdentification,
+						com.tools20022.repository.msg.Amount1.mmAdditionalInformation);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Amount1";
 				definition = "Margin amount payable by one party to the other party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAgreedAmount() {
+		return agreedAmount;
+	}
+
+	public void setAgreedAmount(ActiveCurrencyAndAmount agreedAmount) {
+		this.agreedAmount = agreedAmount;
+	}
+
+	public Max35Text getMarginCallRequestIdentification() {
+		return marginCallRequestIdentification;
+	}
+
+	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	}
+
+	public Max210Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max210Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

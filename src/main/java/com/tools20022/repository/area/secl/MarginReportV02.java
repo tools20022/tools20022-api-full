@@ -22,13 +22,11 @@ import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
-import com.tools20022.repository.msg.MarginCalculation1;
-import com.tools20022.repository.msg.MarginReport2;
-import com.tools20022.repository.msg.ReportParameters3;
-import com.tools20022.repository.msg.SupplementaryData1;
+import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -81,30 +79,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#ReportParameters
- * MarginReportV02.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmReportParameters
+ * MarginReportV02.mmReportParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#Pagination
- * MarginReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmPagination
+ * MarginReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#ClearingMember
- * MarginReportV02.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmClearingMember
+ * MarginReportV02.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#ReportSummary
- * MarginReportV02.ReportSummary}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmReportSummary
+ * MarginReportV02.mmReportSummary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#ReportDetails
- * MarginReportV02.ReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmReportDetails
+ * MarginReportV02.mmReportDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#SupplementaryData
- * MarginReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmSupplementaryData
+ * MarginReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#identifier
- * MarginReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportParameters3 reportParameters;
 	/**
 	 * Provides parameters of the margin report such as the creation date and
 	 * time, the report currency or the calculation date and time.
@@ -146,17 +143,18 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameters";
 			definition = "Provides parameters of the margin report such as the creation date and time, the report currency or the calculation date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters3.mmObject();
 		}
 	};
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a report) and continuation indicator
 	 * to indicate that the report is to continue or that the message is the
@@ -183,17 +181,18 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingMember;
 	/**
 	 * Provides the identification of the account owner, that is the clearing
 	 * member (individual clearing member or general clearing member).
@@ -220,17 +219,18 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the account owner, that is the clearing member (individual clearing member or general clearing member).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected MarginCalculation1 reportSummary;
 	/**
 	 * Provides details on the valuation of the collateral on deposit.
 	 * <p>
@@ -255,17 +255,18 @@ public class MarginReportV02 {
 	 * "Provides details on the valuation of the collateral on deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportSummary = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportSummary = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptSummry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportSummary";
 			definition = "Provides details on the valuation of the collateral on deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarginCalculation1.mmObject();
 		}
 	};
+	protected List<MarginReport2> reportDetails;
 	/**
 	 * Provides the margin report details.
 	 * <p>
@@ -288,7 +289,7 @@ public class MarginReportV02 {
 	 * definition} = "Provides the margin report details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,6 +299,7 @@ public class MarginReportV02 {
 			complexType_lazy = () -> MarginReport2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can't be captured in the structured fields
 	 * and/or any other specific block.
@@ -324,7 +326,7 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,33 +334,6 @@ public class MarginReportV02 {
 			definition = "Additional information that can't be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "005";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -372,12 +347,67 @@ public class MarginReportV02 {
 				rootElement = "Document";
 				xmlTag = "MrgnRpt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.ReportParameters, com.tools20022.repository.area.secl.MarginReportV02.Pagination,
-						com.tools20022.repository.area.secl.MarginReportV02.ClearingMember, com.tools20022.repository.area.secl.MarginReportV02.ReportSummary, com.tools20022.repository.area.secl.MarginReportV02.ReportDetails,
-						com.tools20022.repository.area.secl.MarginReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.MarginReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.mmReportParameters, com.tools20022.repository.area.secl.MarginReportV02.mmPagination,
+						com.tools20022.repository.area.secl.MarginReportV02.mmClearingMember, com.tools20022.repository.area.secl.MarginReportV02.mmReportSummary, com.tools20022.repository.area.secl.MarginReportV02.mmReportDetails,
+						com.tools20022.repository.area.secl.MarginReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "005";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportParameters3 getReportParameters() {
+		return reportParameters;
+	}
+
+	public void setReportParameters(ReportParameters3 reportParameters) {
+		this.reportParameters = reportParameters;
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public PartyIdentification35Choice getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public MarginCalculation1 getReportSummary() {
+		return reportSummary;
+	}
+
+	public void setReportSummary(MarginCalculation1 reportSummary) {
+		this.reportSummary = reportSummary;
+	}
+
+	public List<MarginReport2> getReportDetails() {
+		return reportDetails;
+	}
+
+	public void setReportDetails(List<MarginReport2> reportDetails) {
+		this.reportDetails = reportDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

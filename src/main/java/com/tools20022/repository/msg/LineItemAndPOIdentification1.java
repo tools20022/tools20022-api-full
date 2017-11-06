@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.LineItem;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the line item number and the purchase order.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemAndPOIdentification1#LineItemIdentification
- * LineItemAndPOIdentification1.LineItemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemAndPOIdentification1#mmLineItemIdentification
+ * LineItemAndPOIdentification1.mmLineItemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemAndPOIdentification1#PurchaseOrderReference
- * LineItemAndPOIdentification1.PurchaseOrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemAndPOIdentification1#mmPurchaseOrderReference
+ * LineItemAndPOIdentification1.mmPurchaseOrderReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LineItemAndPOIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max70Text> lineItemIdentification;
 	/**
 	 * Identification assigned to a line item.
 	 * <p>
@@ -73,8 +75,8 @@ public class LineItemAndPOIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LineItem#Identification
-	 * LineItem.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.LineItem#mmIdentification
+	 * LineItem.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,10 +95,10 @@ public class LineItemAndPOIdentification1 {
 	 * definition} = "Identification assigned to a line item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LineItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLineItemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmIdentification;
 			componentContext_lazy = () -> LineItemAndPOIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.Identification;
 			isDerived = false;
 			xmlTag = "LineItmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,6 +108,7 @@ public class LineItemAndPOIdentification1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected DocumentIdentification7 purchaseOrderReference;
 	/**
 	 * Reference to the purchase order containing the line item.
 	 * <p>
@@ -119,8 +122,8 @@ public class LineItemAndPOIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#PurchaseOrder
-	 * CommercialTrade.PurchaseOrder}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPurchaseOrder
+	 * CommercialTrade.mmPurchaseOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,32 +143,48 @@ public class LineItemAndPOIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PurchaseOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPurchaseOrder;
 			componentContext_lazy = () -> LineItemAndPOIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.PurchaseOrder;
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order containing the line item.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DocumentIdentification7.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAndPOIdentification1.LineItemIdentification, com.tools20022.repository.msg.LineItemAndPOIdentification1.PurchaseOrderReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAndPOIdentification1.mmLineItemIdentification, com.tools20022.repository.msg.LineItemAndPOIdentification1.mmPurchaseOrderReference);
 				trace_lazy = () -> LineItem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LineItemAndPOIdentification1";
 				definition = "Identifies the line item number and the purchase order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max70Text> getLineItemIdentification() {
+		return lineItemIdentification;
+	}
+
+	public void setLineItemIdentification(List<Max70Text> lineItemIdentification) {
+		this.lineItemIdentification = lineItemIdentification;
+	}
+
+	public DocumentIdentification7 getPurchaseOrderReference() {
+		return purchaseOrderReference;
+	}
+
+	public void setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+		this.purchaseOrderReference = purchaseOrderReference;
 	}
 }

@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6#AmountPriceType
- * AmountPricePerFinancialInstrumentQuantity6.AmountPriceType}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6#mmAmountPriceType
+ * AmountPricePerFinancialInstrumentQuantity6.mmAmountPriceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6#PriceValue
- * AmountPricePerFinancialInstrumentQuantity6.PriceValue}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6#mmPriceValue
+ * AmountPricePerFinancialInstrumentQuantity6.mmPriceValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6#FinancialInstrumentQuantity
- * AmountPricePerFinancialInstrumentQuantity6.FinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6#mmFinancialInstrumentQuantity
+ * AmountPricePerFinancialInstrumentQuantity6.mmFinancialInstrumentQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountPricePerFinancialInstrumentQuantity6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountPriceType1Code amountPriceType;
 	/**
 	 * Type of amount price.
 	 * <p>
@@ -86,8 +87,8 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#TypeOfAmount
-	 * SecuritiesPricing.TypeOfAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfAmount
+	 * SecuritiesPricing.mmTypeOfAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,25 +108,26 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3#AmountPriceType
-	 * AmountPricePerFinancialInstrumentQuantity3.AmountPriceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3#mmAmountPriceType
+	 * AmountPricePerFinancialInstrumentQuantity3.mmAmountPriceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.TypeOfAmount;
 			isDerived = false;
 			xmlTag = "AmtPricTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPriceType";
 			definition = "Type of amount price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3.AmountPriceType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3.mmAmountPriceType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AmountPriceType1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount priceValue;
 	/**
 	 * Value of the price.
 	 * <p>
@@ -139,8 +141,8 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,25 +162,26 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3#PriceValue
-	 * AmountPricePerFinancialInstrumentQuantity3.PriceValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3#mmPriceValue
+	 * AmountPricePerFinancialInstrumentQuantity3.mmPriceValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "PricVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Value of the price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3.PriceValue;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3.mmPriceValue;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice financialInstrumentQuantity;
 	/**
 	 * Quantity of financial instrument.
 	 * <p>
@@ -191,8 +194,8 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,34 +215,35 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3#FinancialInstrumentQuantity
-	 * AmountPricePerFinancialInstrumentQuantity3.FinancialInstrumentQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3#mmFinancialInstrumentQuantity
+	 * AmountPricePerFinancialInstrumentQuantity3.mmFinancialInstrumentQuantity}
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "FinInstrmQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			definition = "Quantity of financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3.FinancialInstrumentQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity3.mmFinancialInstrumentQuantity;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.AmountPriceType, com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.PriceValue,
-						com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.FinancialInstrumentQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.mmAmountPriceType, com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.mmPriceValue,
+						com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.mmFinancialInstrumentQuantity);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountPricePerFinancialInstrumentQuantity6";
 				definition = "Specifies a ratio: amount price per financial instrument quantity.";
@@ -247,5 +251,29 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountPriceType1Code getAmountPriceType() {
+		return amountPriceType;
+	}
+
+	public void setAmountPriceType(AmountPriceType1Code amountPriceType) {
+		this.amountPriceType = amountPriceType;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getPriceValue() {
+		return priceValue;
+	}
+
+	public void setPriceValue(ActiveCurrencyAnd13DecimalAmount priceValue) {
+		this.priceValue = priceValue;
+	}
+
+	public FinancialInstrumentQuantity1Choice getFinancialInstrumentQuantity() {
+		return financialInstrumentQuantity;
+	}
+
+	public void setFinancialInstrumentQuantity(FinancialInstrumentQuantity1Choice financialInstrumentQuantity) {
+		this.financialInstrumentQuantity = financialInstrumentQuantity;
 	}
 }

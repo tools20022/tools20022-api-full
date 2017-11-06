@@ -37,11 +37,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#BIC
- * MemberIdentificationChoice.BIC}</li>
+ * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#mmBIC
+ * MemberIdentificationChoice.mmBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#ClearingSystemMemberIdentification
- * MemberIdentificationChoice.ClearingSystemMemberIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#mmClearingSystemMemberIdentification
+ * MemberIdentificationChoice.mmClearingSystemMemberIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +67,7 @@ import java.util.function.Supplier;
 public class MemberIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICIdentifier bIC;
 	/**
 	 * Code allocated to a financial institution by the ISO 9362 Registration
 	 * Authority as described in ISO 9362
@@ -83,8 +84,8 @@ public class MemberIdentificationChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class MemberIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> MemberIdentificationChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification;
 	/**
 	 * Unique and unambiguous identifier of a clearing system member, as
 	 * assigned by the system or system administrator.
@@ -133,8 +135,8 @@ public class MemberIdentificationChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#ClearingSystemMemberIdentificationType
-	 * OrganisationIdentification.ClearingSystemMemberIdentificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
+	 * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,27 +157,27 @@ public class MemberIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSystemMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSystemMemberIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> MemberIdentificationChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.ClearingSystemMemberIdentificationType;
 			isDerived = false;
 			xmlTag = "ClrSysMmbId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemMemberIdentification";
 			definition = "Unique and unambiguous identifier of a clearing system member, as assigned by the system or system administrator.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> ClearingSystemMemberIdentificationChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberIdentificationChoice.BIC, com.tools20022.repository.choice.MemberIdentificationChoice.ClearingSystemMemberIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberIdentificationChoice.mmBIC, com.tools20022.repository.choice.MemberIdentificationChoice.mmClearingSystemMemberIdentification);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -189,5 +191,21 @@ public class MemberIdentificationChoice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICIdentifier getBIC() {
+		return bIC;
+	}
+
+	public void setBIC(BICIdentifier bIC) {
+		this.bIC = bIC;
+	}
+
+	public ClearingSystemMemberIdentificationChoice getClearingSystemMemberIdentification() {
+		return clearingSystemMemberIdentification;
+	}
+
+	public void setClearingSystemMemberIdentification(com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
+		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
 	}
 }

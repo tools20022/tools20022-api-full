@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.UndertakingApplicant;
 import com.tools20022.repository.entity.UndertakingBeneficiary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about an undertaking.
@@ -42,65 +43,66 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#Name
- * Undertaking4.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#Type
- * Undertaking4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#Applicant
- * Undertaking4.Applicant}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#Beneficiary
- * Undertaking4.Beneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#DateOfIssuance
- * Undertaking4.DateOfIssuance}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#AdvisingParty
- * Undertaking4.AdvisingParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmName
+ * Undertaking4.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmType
+ * Undertaking4.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmApplicant
+ * Undertaking4.mmApplicant}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmBeneficiary
+ * Undertaking4.mmBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmDateOfIssuance
+ * Undertaking4.mmDateOfIssuance}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmAdvisingParty
+ * Undertaking4.mmAdvisingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#SecondAdvisingParty
- * Undertaking4.SecondAdvisingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmSecondAdvisingParty
+ * Undertaking4.mmSecondAdvisingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#LocalUndertakingAmount
- * Undertaking4.LocalUndertakingAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#ExpiryDetails
- * Undertaking4.ExpiryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmLocalUndertakingAmount
+ * Undertaking4.mmLocalUndertakingAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmExpiryDetails
+ * Undertaking4.mmExpiryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#ConfirmationIndicator
- * Undertaking4.ConfirmationIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#AdditionalParty
- * Undertaking4.AdditionalParty}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmConfirmationIndicator
+ * Undertaking4.mmConfirmationIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmAdditionalParty
+ * Undertaking4.mmAdditionalParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#GovernanceRulesAndLaw
- * Undertaking4.GovernanceRulesAndLaw}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmGovernanceRulesAndLaw
+ * Undertaking4.mmGovernanceRulesAndLaw}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#UnderlyingTransaction
- * Undertaking4.UnderlyingTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmUnderlyingTransaction
+ * Undertaking4.mmUnderlyingTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#PresentationDetails
- * Undertaking4.PresentationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmPresentationDetails
+ * Undertaking4.mmPresentationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#UndertakingWording
- * Undertaking4.UndertakingWording}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmUndertakingWording
+ * Undertaking4.mmUndertakingWording}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#MultipleDemandIndicator
- * Undertaking4.MultipleDemandIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmMultipleDemandIndicator
+ * Undertaking4.mmMultipleDemandIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#PartialDemandIndicator
- * Undertaking4.PartialDemandIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmPartialDemandIndicator
+ * Undertaking4.mmPartialDemandIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#ConfirmationChargesPayableBy
- * Undertaking4.ConfirmationChargesPayableBy}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmConfirmationChargesPayableBy
+ * Undertaking4.mmConfirmationChargesPayableBy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#TransferChargesPayableBy
- * Undertaking4.TransferChargesPayableBy}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmTransferChargesPayableBy
+ * Undertaking4.mmTransferChargesPayableBy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#AutomaticAmountVariation
- * Undertaking4.AutomaticAmountVariation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#DeliveryChannel
- * Undertaking4.DeliveryChannel}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#TransferIndicator
- * Undertaking4.TransferIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmAutomaticAmountVariation
+ * Undertaking4.mmAutomaticAmountVariation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking4#mmDeliveryChannel
+ * Undertaking4.mmDeliveryChannel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#AdditionalInformation
- * Undertaking4.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmTransferIndicator
+ * Undertaking4.mmTransferIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmAdditionalInformation
+ * Undertaking4.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -109,8 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,6 +126,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Undertaking4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingName1Code name;
 	/**
 	 * Name of the requested local undertaking such as, demand guarantee,
 	 * standby letter of credit, surety.
@@ -138,8 +141,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingName
-	 * Undertaking.UndertakingName}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingName
+	 * Undertaking.mmUndertakingName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +162,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingName;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the requested local undertaking such as, demand guarantee, standby letter of credit, surety.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UndertakingName1Code.mmObject();
 		}
 	};
+	protected ExternalUndertakingType1Code type;
 	/**
 	 * Type of the requested local undertaking such as performance, payment.
 	 * <p>
@@ -186,8 +190,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Type
-	 * Undertaking.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmType
+	 * Undertaking.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,20 +210,21 @@ public class Undertaking4 {
 	 * "Type of the requested local undertaking such as performance, payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmType;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the requested local undertaking such as performance, payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingType1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentification43> applicant;
 	/**
 	 * Party requested to be named in the local undertaking as the party on
 	 * whose behalf the undertaking is issued.
@@ -253,20 +258,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Applicant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmApplicant = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Undertaking4.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingApplicant.mmObject();
+			componentContext_lazy = () -> Undertaking4.mmObject();
 			isDerived = false;
 			xmlTag = "Applcnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant";
 			definition = "Party requested to be named in the local undertaking as the party on whose behalf the undertaking is issued. ";
 			minOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentification43> beneficiary;
 	/**
 	 * Party in whose favour the requested local undertaking is to be issued.
 	 * <p>
@@ -298,20 +304,21 @@ public class Undertaking4 {
 	 * "Party in whose favour the requested local undertaking is to be issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Beneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficiary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Undertaking4.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingBeneficiary.mmObject();
+			componentContext_lazy = () -> Undertaking4.mmObject();
 			isDerived = false;
 			xmlTag = "Bnfcry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Beneficiary";
 			definition = "Party in whose favour the requested local undertaking is to be issued.";
 			minOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected ISODate dateOfIssuance;
 	/**
 	 * Date on which the requested local undertaking is to be issued.
 	 * <p>
@@ -324,8 +331,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -344,20 +351,21 @@ public class Undertaking4 {
 	 * "Date on which the requested local undertaking is to be issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateOfIssuance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateOfIssuance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "DtOfIssnc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfIssuance";
 			definition = "Date on which the requested local undertaking is to be issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyIdentification43 advisingParty;
 	/**
 	 * Party asked to advise the requested local undertaking to the beneficiary
 	 * or to another advising party at the request of the local undertaking
@@ -371,8 +379,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -392,21 +400,22 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdvisingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdvisingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AdvsgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingParty";
 			definition = "Party asked to advise the requested local undertaking to the beneficiary or to another advising party at the request of the local undertaking issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected PartyIdentification43 secondAdvisingParty;
 	/**
 	 * Additional party asked to advise the requested local undertaking.
 	 * <p>
@@ -438,21 +447,22 @@ public class Undertaking4 {
 	 * "Additional party asked to advise the requested local undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondAdvisingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondAdvisingParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Undertaking4.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingAdvisingParty.mmObject();
+			componentContext_lazy = () -> Undertaking4.mmObject();
 			isDerived = false;
 			xmlTag = "ScndAdvsgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingParty";
 			definition = "Additional party asked to advise the requested local undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected UndertakingAmount1 localUndertakingAmount;
 	/**
 	 * Details related to the amount of the local undertaking.
 	 * <p>
@@ -464,8 +474,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingAmount
-	 * Undertaking.UndertakingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmount
+	 * Undertaking.mmUndertakingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -483,21 +493,22 @@ public class Undertaking4 {
 	 * definition} = "Details related to the amount of the local undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LocalUndertakingAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocalUndertakingAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingAmount;
 			isDerived = false;
 			xmlTag = "LclUdrtkgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalUndertakingAmount";
 			definition = "Details related to the amount of the local undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UndertakingAmount1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmount1.mmObject();
 		}
 	};
+	protected ExpiryDetails1 expiryDetails;
 	/**
 	 * Details related to the expiry of the requested local undertaking.
 	 * <p>
@@ -509,8 +520,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Expiry
-	 * Undertaking.Expiry}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmExpiry
+	 * Undertaking.mmExpiry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -529,21 +540,22 @@ public class Undertaking4 {
 	 * "Details related to the expiry of the requested local undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExpiryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExpiryDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmExpiry;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Expiry;
 			isDerived = false;
 			xmlTag = "XpryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDetails";
 			definition = "Details related to the expiry of the requested local undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ExpiryDetails1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
 		}
 	};
+	protected YesNoIndicator confirmationIndicator;
 	/**
 	 * Indicates whether or not the advising bank (confirmer) is requested to
 	 * add its confirmation to the undertaking.
@@ -558,8 +570,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#ConfirmationIndicator
-	 * Undertaking.ConfirmationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmConfirmationIndicator
+	 * Undertaking.mmConfirmationIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -579,20 +591,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmConfirmationIndicator;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.ConfirmationIndicator;
 			isDerived = false;
 			xmlTag = "ConfInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationIndicator";
 			definition = "Indicates whether or not the advising bank (confirmer) is requested to add its confirmation to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyAndType1> additionalParty;
 	/**
 	 * Party, in addition to the other parties specified in the requested local
 	 * undertaking, that is also related to the requested local undertaking.
@@ -605,8 +618,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#PartyRole
-	 * Undertaking.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmPartyRole
+	 * Undertaking.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -626,20 +639,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPartyRole;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.PartyRole;
 			isDerived = false;
 			xmlTag = "AddtlPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParty";
 			definition = "Party, in addition to the other parties specified in the requested local undertaking, that is also related to the requested local undertaking. ";
 			minOccurs = 0;
-			type_lazy = () -> PartyAndType1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyAndType1.mmObject();
 		}
 	};
+	protected GovernanceRules1 governanceRulesAndLaw;
 	/**
 	 * Rules and laws governing the requested local undertaking.
 	 * <p>
@@ -651,8 +665,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ModelForm#GovernanceRules
-	 * ModelForm.GovernanceRules}</li>
+	 * {@linkplain com.tools20022.repository.entity.ModelForm#mmGovernanceRules
+	 * ModelForm.mmGovernanceRules}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -671,21 +685,22 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GovernanceRulesAndLaw = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGovernanceRulesAndLaw = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.mmGovernanceRules;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.GovernanceRules;
 			isDerived = false;
 			xmlTag = "GovncRulesAndLaw";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernanceRulesAndLaw";
 			definition = "Rules and laws governing the requested local undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GovernanceRules1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GovernanceRules1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.UnderlyingTradeTransaction1> underlyingTransaction;
 	/**
 	 * Details of the underlying transaction for which the undertaking is
 	 * issued.
@@ -699,8 +714,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UnderlyingTransaction
-	 * Undertaking.UnderlyingTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUnderlyingTransaction
+	 * Undertaking.mmUnderlyingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -720,20 +735,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingTransaction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUnderlyingTransaction;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.UnderlyingTransaction;
 			isDerived = false;
 			xmlTag = "UndrlygTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingTransaction";
 			definition = "Details of the underlying transaction for which the undertaking is issued.";
 			minOccurs = 0;
-			type_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
 		}
 	};
+	protected Presentation1 presentationDetails;
 	/**
 	 * Presentation details related to the undertaking.
 	 * <p>
@@ -745,8 +761,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Presentation
-	 * Undertaking.Presentation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmPresentation
+	 * Undertaking.mmPresentation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -764,21 +780,22 @@ public class Undertaking4 {
 	 * definition} = "Presentation details related to the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PresentationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPresentationDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPresentation;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Presentation;
 			isDerived = false;
 			xmlTag = "PresntnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationDetails";
 			definition = "Presentation details related to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Presentation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Presentation1.mmObject();
 		}
 	};
+	protected UndertakingWording1 undertakingWording;
 	/**
 	 * Wording details and text for the requested local undertaking.
 	 * <p>
@@ -790,8 +807,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#ModelForm
-	 * Undertaking.ModelForm}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmModelForm
+	 * Undertaking.mmModelForm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -810,21 +827,22 @@ public class Undertaking4 {
 	 * "Wording details and text for the requested local undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingWording = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingWording = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmModelForm;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.ModelForm;
 			isDerived = false;
 			xmlTag = "UdrtkgWrdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingWording";
 			definition = "Wording details and text for the requested local undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UndertakingWording1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingWording1.mmObject();
 		}
 	};
+	protected YesNoIndicator multipleDemandIndicator;
 	/**
 	 * Indicates that multiple demands are not permitted.
 	 * <p>
@@ -838,8 +856,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#MultipleDemandIndicator
-	 * Undertaking.MultipleDemandIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmMultipleDemandIndicator
+	 * Undertaking.mmMultipleDemandIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -857,20 +875,21 @@ public class Undertaking4 {
 	 * definition} = "Indicates that multiple demands are not permitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MultipleDemandIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMultipleDemandIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmMultipleDemandIndicator;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.MultipleDemandIndicator;
 			isDerived = false;
 			xmlTag = "MltplDmndInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleDemandIndicator";
 			definition = "Indicates that multiple demands are not permitted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator partialDemandIndicator;
 	/**
 	 * Indicates that partial demands/drawings are not permitted.
 	 * <p>
@@ -884,8 +903,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#PartialDemandIndicator
-	 * Undertaking.PartialDemandIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmPartialDemandIndicator
+	 * Undertaking.mmPartialDemandIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -904,20 +923,21 @@ public class Undertaking4 {
 	 * "Indicates that partial demands/drawings are not permitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialDemandIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialDemandIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPartialDemandIndicator;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.PartialDemandIndicator;
 			isDerived = false;
 			xmlTag = "PrtlDmndInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDemandIndicator";
 			definition = "Indicates that partial demands/drawings are not permitted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ExternalTypeOfParty1Code confirmationChargesPayableBy;
 	/**
 	 * Indicates whether the applicant/obligor or beneficiary is responsible for
 	 * payment of the confirmation charges.
@@ -932,8 +952,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#RelatedChargesPayableBy
-	 * Undertaking.RelatedChargesPayableBy}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmRelatedChargesPayableBy
+	 * Undertaking.mmRelatedChargesPayableBy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -953,20 +973,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationChargesPayableBy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationChargesPayableBy = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmRelatedChargesPayableBy;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.RelatedChargesPayableBy;
 			isDerived = false;
 			xmlTag = "ConfChrgsPyblBy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationChargesPayableBy";
 			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();
 		}
 	};
+	protected ExternalTypeOfParty1Code transferChargesPayableBy;
 	/**
 	 * Indicates whether the applicant/obligor or beneficiary is responsible for
 	 * payment of the transfer charges.
@@ -981,8 +1002,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#RelatedChargesPayableBy
-	 * Undertaking.RelatedChargesPayableBy}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmRelatedChargesPayableBy
+	 * Undertaking.mmRelatedChargesPayableBy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1002,20 +1023,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferChargesPayableBy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferChargesPayableBy = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmRelatedChargesPayableBy;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.RelatedChargesPayableBy;
 			isDerived = false;
 			xmlTag = "TrfChrgsPyblBy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferChargesPayableBy";
 			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AutomaticVariation1> automaticAmountVariation;
 	/**
 	 * Details related to a variation in amount that is automatically applied.
 	 * <p>
@@ -1027,8 +1049,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#PredefinedVariation
-	 * Undertaking.PredefinedVariation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmPredefinedVariation
+	 * Undertaking.mmPredefinedVariation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1048,20 +1070,21 @@ public class Undertaking4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AutomaticAmountVariation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAutomaticAmountVariation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPredefinedVariation;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.PredefinedVariation;
 			isDerived = false;
 			xmlTag = "AutomtcAmtVartn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticAmountVariation";
 			definition = "Details related to a variation in amount that is automatically applied.";
 			minOccurs = 0;
-			type_lazy = () -> AutomaticVariation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AutomaticVariation1.mmObject();
 		}
 	};
+	protected CommunicationChannel1 deliveryChannel;
 	/**
 	 * Details of the communication channel.
 	 * <p>
@@ -1073,8 +1096,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#CommunicationMethod
-	 * Presentation.CommunicationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmCommunicationMethod
+	 * Presentation.mmCommunicationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1092,21 +1115,22 @@ public class Undertaking4 {
 	 * definition} = "Details of the communication channel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveryChannel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveryChannel = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.CommunicationMethod;
 			isDerived = false;
 			xmlTag = "DlvryChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryChannel";
 			definition = "Details of the communication channel.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommunicationChannel1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
 		}
 	};
+	protected YesNoIndicator transferIndicator;
 	/**
 	 * Indicates whether the requested local undertaking is transferable.
 	 * <p>
@@ -1120,8 +1144,8 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#TransferIndicator
-	 * Undertaking.TransferIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmTransferIndicator
+	 * Undertaking.mmTransferIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1140,20 +1164,21 @@ public class Undertaking4 {
 	 * "Indicates whether the requested local undertaking is transferable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmTransferIndicator;
 			componentContext_lazy = () -> Undertaking4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.TransferIndicator;
 			isDerived = false;
 			xmlTag = "TrfInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIndicator";
 			definition = "Indicates whether the requested local undertaking is transferable.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the requested local undertaking.
 	 * <p>
@@ -1181,7 +1206,7 @@ public class Undertaking4 {
 	 * "Additional information related to the requested local undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Undertaking4.mmObject();
 			isDerived = false;
@@ -1189,8 +1214,8 @@ public class Undertaking4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the requested local undertaking.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -1198,21 +1223,205 @@ public class Undertaking4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking4.Name, com.tools20022.repository.msg.Undertaking4.Type, com.tools20022.repository.msg.Undertaking4.Applicant,
-						com.tools20022.repository.msg.Undertaking4.Beneficiary, com.tools20022.repository.msg.Undertaking4.DateOfIssuance, com.tools20022.repository.msg.Undertaking4.AdvisingParty,
-						com.tools20022.repository.msg.Undertaking4.SecondAdvisingParty, com.tools20022.repository.msg.Undertaking4.LocalUndertakingAmount, com.tools20022.repository.msg.Undertaking4.ExpiryDetails,
-						com.tools20022.repository.msg.Undertaking4.ConfirmationIndicator, com.tools20022.repository.msg.Undertaking4.AdditionalParty, com.tools20022.repository.msg.Undertaking4.GovernanceRulesAndLaw,
-						com.tools20022.repository.msg.Undertaking4.UnderlyingTransaction, com.tools20022.repository.msg.Undertaking4.PresentationDetails, com.tools20022.repository.msg.Undertaking4.UndertakingWording,
-						com.tools20022.repository.msg.Undertaking4.MultipleDemandIndicator, com.tools20022.repository.msg.Undertaking4.PartialDemandIndicator, com.tools20022.repository.msg.Undertaking4.ConfirmationChargesPayableBy,
-						com.tools20022.repository.msg.Undertaking4.TransferChargesPayableBy, com.tools20022.repository.msg.Undertaking4.AutomaticAmountVariation, com.tools20022.repository.msg.Undertaking4.DeliveryChannel,
-						com.tools20022.repository.msg.Undertaking4.TransferIndicator, com.tools20022.repository.msg.Undertaking4.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking4.mmName, com.tools20022.repository.msg.Undertaking4.mmType, com.tools20022.repository.msg.Undertaking4.mmApplicant,
+						com.tools20022.repository.msg.Undertaking4.mmBeneficiary, com.tools20022.repository.msg.Undertaking4.mmDateOfIssuance, com.tools20022.repository.msg.Undertaking4.mmAdvisingParty,
+						com.tools20022.repository.msg.Undertaking4.mmSecondAdvisingParty, com.tools20022.repository.msg.Undertaking4.mmLocalUndertakingAmount, com.tools20022.repository.msg.Undertaking4.mmExpiryDetails,
+						com.tools20022.repository.msg.Undertaking4.mmConfirmationIndicator, com.tools20022.repository.msg.Undertaking4.mmAdditionalParty, com.tools20022.repository.msg.Undertaking4.mmGovernanceRulesAndLaw,
+						com.tools20022.repository.msg.Undertaking4.mmUnderlyingTransaction, com.tools20022.repository.msg.Undertaking4.mmPresentationDetails, com.tools20022.repository.msg.Undertaking4.mmUndertakingWording,
+						com.tools20022.repository.msg.Undertaking4.mmMultipleDemandIndicator, com.tools20022.repository.msg.Undertaking4.mmPartialDemandIndicator, com.tools20022.repository.msg.Undertaking4.mmConfirmationChargesPayableBy,
+						com.tools20022.repository.msg.Undertaking4.mmTransferChargesPayableBy, com.tools20022.repository.msg.Undertaking4.mmAutomaticAmountVariation, com.tools20022.repository.msg.Undertaking4.mmDeliveryChannel,
+						com.tools20022.repository.msg.Undertaking4.mmTransferIndicator, com.tools20022.repository.msg.Undertaking4.mmAdditionalInformation);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Undertaking4";
 				definition = "Information about an undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingName1Code getName() {
+		return name;
+	}
+
+	public void setName(UndertakingName1Code name) {
+		this.name = name;
+	}
+
+	public ExternalUndertakingType1Code getType() {
+		return type;
+	}
+
+	public void setType(ExternalUndertakingType1Code type) {
+		this.type = type;
+	}
+
+	public List<PartyIdentification43> getApplicant() {
+		return applicant;
+	}
+
+	public void setApplicant(List<com.tools20022.repository.msg.PartyIdentification43> applicant) {
+		this.applicant = applicant;
+	}
+
+	public List<PartyIdentification43> getBeneficiary() {
+		return beneficiary;
+	}
+
+	public void setBeneficiary(List<com.tools20022.repository.msg.PartyIdentification43> beneficiary) {
+		this.beneficiary = beneficiary;
+	}
+
+	public ISODate getDateOfIssuance() {
+		return dateOfIssuance;
+	}
+
+	public void setDateOfIssuance(ISODate dateOfIssuance) {
+		this.dateOfIssuance = dateOfIssuance;
+	}
+
+	public PartyIdentification43 getAdvisingParty() {
+		return advisingParty;
+	}
+
+	public void setAdvisingParty(com.tools20022.repository.msg.PartyIdentification43 advisingParty) {
+		this.advisingParty = advisingParty;
+	}
+
+	public PartyIdentification43 getSecondAdvisingParty() {
+		return secondAdvisingParty;
+	}
+
+	public void setSecondAdvisingParty(com.tools20022.repository.msg.PartyIdentification43 secondAdvisingParty) {
+		this.secondAdvisingParty = secondAdvisingParty;
+	}
+
+	public UndertakingAmount1 getLocalUndertakingAmount() {
+		return localUndertakingAmount;
+	}
+
+	public void setLocalUndertakingAmount(com.tools20022.repository.msg.UndertakingAmount1 localUndertakingAmount) {
+		this.localUndertakingAmount = localUndertakingAmount;
+	}
+
+	public ExpiryDetails1 getExpiryDetails() {
+		return expiryDetails;
+	}
+
+	public void setExpiryDetails(com.tools20022.repository.msg.ExpiryDetails1 expiryDetails) {
+		this.expiryDetails = expiryDetails;
+	}
+
+	public YesNoIndicator getConfirmationIndicator() {
+		return confirmationIndicator;
+	}
+
+	public void setConfirmationIndicator(YesNoIndicator confirmationIndicator) {
+		this.confirmationIndicator = confirmationIndicator;
+	}
+
+	public List<PartyAndType1> getAdditionalParty() {
+		return additionalParty;
+	}
+
+	public void setAdditionalParty(List<com.tools20022.repository.msg.PartyAndType1> additionalParty) {
+		this.additionalParty = additionalParty;
+	}
+
+	public GovernanceRules1 getGovernanceRulesAndLaw() {
+		return governanceRulesAndLaw;
+	}
+
+	public void setGovernanceRulesAndLaw(com.tools20022.repository.msg.GovernanceRules1 governanceRulesAndLaw) {
+		this.governanceRulesAndLaw = governanceRulesAndLaw;
+	}
+
+	public List<UnderlyingTradeTransaction1> getUnderlyingTransaction() {
+		return underlyingTransaction;
+	}
+
+	public void setUnderlyingTransaction(List<com.tools20022.repository.msg.UnderlyingTradeTransaction1> underlyingTransaction) {
+		this.underlyingTransaction = underlyingTransaction;
+	}
+
+	public Presentation1 getPresentationDetails() {
+		return presentationDetails;
+	}
+
+	public void setPresentationDetails(com.tools20022.repository.msg.Presentation1 presentationDetails) {
+		this.presentationDetails = presentationDetails;
+	}
+
+	public UndertakingWording1 getUndertakingWording() {
+		return undertakingWording;
+	}
+
+	public void setUndertakingWording(com.tools20022.repository.msg.UndertakingWording1 undertakingWording) {
+		this.undertakingWording = undertakingWording;
+	}
+
+	public YesNoIndicator getMultipleDemandIndicator() {
+		return multipleDemandIndicator;
+	}
+
+	public void setMultipleDemandIndicator(YesNoIndicator multipleDemandIndicator) {
+		this.multipleDemandIndicator = multipleDemandIndicator;
+	}
+
+	public YesNoIndicator getPartialDemandIndicator() {
+		return partialDemandIndicator;
+	}
+
+	public void setPartialDemandIndicator(YesNoIndicator partialDemandIndicator) {
+		this.partialDemandIndicator = partialDemandIndicator;
+	}
+
+	public ExternalTypeOfParty1Code getConfirmationChargesPayableBy() {
+		return confirmationChargesPayableBy;
+	}
+
+	public void setConfirmationChargesPayableBy(ExternalTypeOfParty1Code confirmationChargesPayableBy) {
+		this.confirmationChargesPayableBy = confirmationChargesPayableBy;
+	}
+
+	public ExternalTypeOfParty1Code getTransferChargesPayableBy() {
+		return transferChargesPayableBy;
+	}
+
+	public void setTransferChargesPayableBy(ExternalTypeOfParty1Code transferChargesPayableBy) {
+		this.transferChargesPayableBy = transferChargesPayableBy;
+	}
+
+	public List<AutomaticVariation1> getAutomaticAmountVariation() {
+		return automaticAmountVariation;
+	}
+
+	public void setAutomaticAmountVariation(List<com.tools20022.repository.msg.AutomaticVariation1> automaticAmountVariation) {
+		this.automaticAmountVariation = automaticAmountVariation;
+	}
+
+	public CommunicationChannel1 getDeliveryChannel() {
+		return deliveryChannel;
+	}
+
+	public void setDeliveryChannel(com.tools20022.repository.msg.CommunicationChannel1 deliveryChannel) {
+		this.deliveryChannel = deliveryChannel;
+	}
+
+	public YesNoIndicator getTransferIndicator() {
+		return transferIndicator;
+	}
+
+	public void setTransferIndicator(YesNoIndicator transferIndicator) {
+		this.transferIndicator = transferIndicator;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

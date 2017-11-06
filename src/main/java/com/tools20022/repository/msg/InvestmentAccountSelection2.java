@@ -37,9 +37,9 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#AccountIdentificationOrOtherAccountSelectionCriteriaRule
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#mmAccountIdentificationOrOtherAccountSelectionCriteriaRule
  * InvestmentAccountSelection2.
- * AccountIdentificationOrOtherAccountSelectionCriteriaRule}</li>
+ * mmAccountIdentificationOrOtherAccountSelectionCriteriaRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,11 +47,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#AccountIdentification
- * InvestmentAccountSelection2.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#mmAccountIdentification
+ * InvestmentAccountSelection2.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#OtherAccountSelectionData
- * InvestmentAccountSelection2.OtherAccountSelectionData}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#mmOtherAccountSelectionData
+ * InvestmentAccountSelection2.mmOtherAccountSelectionData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,24 +62,24 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#InvestmentAccountSelection
- * AccountModificationInstructionV02.InvestmentAccountSelection}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmInvestmentAccountSelection
+ * AccountModificationInstructionV02.mmInvestmentAccountSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#InvestmentAccountSelection
- * AccountModificationInstructionV03.InvestmentAccountSelection}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#mmInvestmentAccountSelection
+ * AccountModificationInstructionV03.mmInvestmentAccountSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#InvestmentAccountSelection
- * AccountModificationInstructionV04.InvestmentAccountSelection}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#mmInvestmentAccountSelection
+ * AccountModificationInstructionV04.mmInvestmentAccountSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#InvestmentAccountSelection
- * AccountModificationInstructionV05.InvestmentAccountSelection}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#mmInvestmentAccountSelection
+ * AccountModificationInstructionV05.mmInvestmentAccountSelection}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -96,6 +96,7 @@ import java.util.function.Supplier;
 public class InvestmentAccountSelection2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification1 accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -110,8 +111,8 @@ public class InvestmentAccountSelection2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -132,20 +133,21 @@ public class InvestmentAccountSelection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccountSelection2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentification1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
 		}
 	};
+	protected InvestmentAccount29 otherAccountSelectionData;
 	/**
 	 * Various investment account information used to select a specific account.
 	 * <p>
@@ -179,19 +181,19 @@ public class InvestmentAccountSelection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherAccountSelectionData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherAccountSelectionData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentAccountSelection2.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> InvestmentAccountSelection2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAcctSelctnData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAccountSelectionData";
 			definition = "Various investment account information used to select a specific account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount29.mmObject();
 		}
 	};
 	/**
@@ -204,11 +206,11 @@ public class InvestmentAccountSelection2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#AccountIdentification
-	 * InvestmentAccountSelection2.AccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#mmAccountIdentification
+	 * InvestmentAccountSelection2.mmAccountIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#OtherAccountSelectionData
-	 * InvestmentAccountSelection2.OtherAccountSelectionData}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2#mmOtherAccountSelectionData
+	 * InvestmentAccountSelection2.mmOtherAccountSelectionData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -228,25 +230,25 @@ public class InvestmentAccountSelection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor AccountIdentificationOrOtherAccountSelectionCriteriaRule = new MMXor() {
+	public static final MMXor mmAccountIdentificationOrOtherAccountSelectionCriteriaRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationOrOtherAccountSelectionCriteriaRule";
 			definition = "Either AccountIdentification or OtherAccountSelectionCriteria must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.AccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection2.OtherAccountSelectionData);
 			messageComponent_lazy = () -> InvestmentAccountSelection2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.mmAccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection2.mmOtherAccountSelectionData);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.AccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection2.OtherAccountSelectionData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.mmAccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection2.mmOtherAccountSelectionData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInvestmentAccountSelection,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmInvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmInvestmentAccountSelection,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmInvestmentAccountSelection);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.InvestmentAccountSelection,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.InvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.InvestmentAccountSelection,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.InvestmentAccountSelection);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -257,9 +259,25 @@ public class InvestmentAccountSelection2 {
 				})).get();
 				name = "InvestmentAccountSelection2";
 				definition = "Choice between a unique account identification and a set of account selection criteria.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.AccountIdentificationOrOtherAccountSelectionCriteriaRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.mmAccountIdentificationOrOtherAccountSelectionCriteriaRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification1 getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public InvestmentAccount29 getOtherAccountSelectionData() {
+		return otherAccountSelectionData;
+	}
+
+	public void setOtherAccountSelectionData(com.tools20022.repository.msg.InvestmentAccount29 otherAccountSelectionData) {
+		this.otherAccountSelectionData = otherAccountSelectionData;
 	}
 }

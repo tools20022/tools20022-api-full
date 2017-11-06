@@ -35,15 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExtensionEnvelope2#ExtensionContents
- * ExtensionEnvelope2.ExtensionContents}</li>
+ * {@linkplain com.tools20022.repository.msg.ExtensionEnvelope2#mmExtensionContents
+ * ExtensionEnvelope2.mmExtensionContents}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExtensionEnvelope2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExtensionContents2 extensionContents;
 	/**
 	 * Technical element that specifies the extension.
 	 * <p>
@@ -87,7 +88,7 @@ public class ExtensionEnvelope2 {
 	 * definition} = "Technical element that specifies the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtensionContents = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtensionContents = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ExtensionEnvelope2.mmObject();
 			isDerived = false;
@@ -95,8 +96,8 @@ public class ExtensionEnvelope2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtensionContents";
 			definition = "Technical element that specifies the extension.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ExtensionContents2.mmObject();
 		}
 	};
@@ -104,13 +105,21 @@ public class ExtensionEnvelope2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtensionEnvelope2.ExtensionContents);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtensionEnvelope2.mmExtensionContents);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExtensionEnvelope2";
 				definition = "Technical component that contains the validated extension information. This technical envelope allows to segregate the extension information from any other information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExtensionContents2 getExtensionContents() {
+		return extensionContents;
+	}
+
+	public void setExtensionContents(ExtensionContents2 extensionContents) {
+		this.extensionContents = extensionContents;
 	}
 }

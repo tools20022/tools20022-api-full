@@ -40,17 +40,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#Identification
- * DocumentIdentification12.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#mmIdentification
+ * DocumentIdentification12.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#CreationDateTime
- * DocumentIdentification12.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#mmCreationDateTime
+ * DocumentIdentification12.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#CopyDuplicate
- * DocumentIdentification12.CopyDuplicate}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#mmCopyDuplicate
+ * DocumentIdentification12.mmCopyDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#ChangeInstructionIndicator
- * DocumentIdentification12.ChangeInstructionIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification12#mmChangeInstructionIndicator
+ * DocumentIdentification12.mmChangeInstructionIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,18 +60,18 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#Identification
- * CorporateActionInstructionV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#mmIdentification
+ * CorporateActionInstructionV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#Identification
- * CorporateActionInstructionCancellationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#mmIdentification
+ * CorporateActionInstructionCancellationRequestV01.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -86,6 +86,7 @@ import java.util.function.Supplier;
 public class DocumentIdentification12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identifier of the document (message) assigned by the sender of the
 	 * document.
@@ -99,8 +100,8 @@ public class DocumentIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,20 +122,21 @@ public class DocumentIdentification12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned by the sender of the document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice creationDateTime;
 	/**
 	 * Date and time at which the document (message) was created by the sender.
 	 * <p>
@@ -148,8 +150,8 @@ public class DocumentIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,20 +172,21 @@ public class DocumentIdentification12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentIdentification12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the document (message) was created by the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CopyDuplicate1Code copyDuplicate;
 	/**
 	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
 	 * copy.
@@ -198,8 +201,8 @@ public class DocumentIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#CopyDuplicate
-	 * Document.CopyDuplicate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmCopyDuplicate
+	 * Document.mmCopyDuplicate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -220,20 +223,21 @@ public class DocumentIdentification12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmCopyDuplicate;
 			componentContext_lazy = () -> DocumentIdentification12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.CopyDuplicate;
 			isDerived = false;
 			xmlTag = "CpyDplct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator changeInstructionIndicator;
 	/**
 	 * When used in a corporate action instruction, indicates that the current
 	 * instruction is replacing a previous one that was cancelled earlier. When
@@ -268,7 +272,7 @@ public class DocumentIdentification12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChangeInstructionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChangeInstructionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentIdentification12.mmObject();
 			isDerived = false;
@@ -276,8 +280,8 @@ public class DocumentIdentification12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicator";
 			definition = "When used in a corporate action instruction, indicates that the current instruction is replacing a previous one that was cancelled earlier. When used in a corporate action instruction cancellation request, indicates that cancelled instruction will be replaced by a new corporate action instruction to be sent later.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -285,12 +289,12 @@ public class DocumentIdentification12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification12.Identification, com.tools20022.repository.msg.DocumentIdentification12.CreationDateTime,
-						com.tools20022.repository.msg.DocumentIdentification12.CopyDuplicate, com.tools20022.repository.msg.DocumentIdentification12.ChangeInstructionIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification12.mmIdentification, com.tools20022.repository.msg.DocumentIdentification12.mmCreationDateTime,
+						com.tools20022.repository.msg.DocumentIdentification12.mmCopyDuplicate, com.tools20022.repository.msg.DocumentIdentification12.mmChangeInstructionIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmIdentification);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV01.Identification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -304,5 +308,37 @@ public class DocumentIdentification12 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public DateAndDateTimeChoice getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public CopyDuplicate1Code getCopyDuplicate() {
+		return copyDuplicate;
+	}
+
+	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+		this.copyDuplicate = copyDuplicate;
+	}
+
+	public YesNoIndicator getChangeInstructionIndicator() {
+		return changeInstructionIndicator;
+	}
+
+	public void setChangeInstructionIndicator(YesNoIndicator changeInstructionIndicator) {
+		this.changeInstructionIndicator = changeInstructionIndicator;
 	}
 }

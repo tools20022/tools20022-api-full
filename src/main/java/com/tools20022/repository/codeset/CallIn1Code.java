@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CallIn1Code#CallForAccountValue
- * CallIn1Code.CallForAccountValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CallIn1Code#mmCallForAccountValue
+ * CallIn1Code.mmCallForAccountValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CallIn1Code#CallForSettlement
- * CallIn1Code.CallForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CallIn1Code#mmCallForSettlement
+ * CallIn1Code.mmCallForSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CallIn1Code#CallForCurrencyClose
- * CallIn1Code.CallForCurrencyClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CallIn1Code#mmCallForCurrencyClose
+ * CallIn1Code.mmCallForCurrencyClose}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class CallIn1Code extends CallInCode {
 	 * name} = "CallForAccountValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode CallForAccountValue = new MMCode() {
+	public static final MMCode mmCallForAccountValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForAccountValue";
@@ -104,7 +104,7 @@ public class CallIn1Code extends CallInCode {
 	 * name} = "CallForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode CallForSettlement = new MMCode() {
+	public static final MMCode mmCallForSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForSettlement";
@@ -126,7 +126,7 @@ public class CallIn1Code extends CallInCode {
 	 * name} = "CallForCurrencyClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode CallForCurrencyClose = new MMCode() {
+	public static final MMCode mmCallForCurrencyClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForCurrencyClose";
@@ -137,13 +137,13 @@ public class CallIn1Code extends CallInCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CFAV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CallIn1Code";
 				definition = "Specifies the type of pay-in call report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallIn1Code.CallForAccountValue, com.tools20022.repository.codeset.CallIn1Code.CallForSettlement,
-						com.tools20022.repository.codeset.CallIn1Code.CallForCurrencyClose);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallIn1Code.mmCallForAccountValue, com.tools20022.repository.codeset.CallIn1Code.mmCallForSettlement,
+						com.tools20022.repository.codeset.CallIn1Code.mmCallForCurrencyClose);
 				trace_lazy = () -> CallInCode.mmObject();
 			}
 		});

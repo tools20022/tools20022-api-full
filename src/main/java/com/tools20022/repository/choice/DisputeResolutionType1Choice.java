@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DisputeResolutionType1Choice#Code
- * DisputeResolutionType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.DisputeResolutionType1Choice#mmCode
+ * DisputeResolutionType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DisputeResolutionType1Choice#ProprietaryIdentification
- * DisputeResolutionType1Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.DisputeResolutionType1Choice#mmProprietaryIdentification
+ * DisputeResolutionType1Choice.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DisputeResolutionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DisputeResolutionType1Code code;
 	/**
 	 * Code to specify the type of dispute that is to be resolved regarding the
 	 * disputed collateral amount.
@@ -80,8 +81,8 @@ public class DisputeResolutionType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#DisputeResolutionType
-	 * DisputeManagement.DisputeResolutionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputeResolutionType
+	 * DisputeManagement.mmDisputeResolutionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class DisputeResolutionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmDisputeResolutionType;
 			componentContext_lazy = () -> DisputeResolutionType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.DisputeResolutionType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Code to specify the type of dispute that is to be resolved regarding the disputed collateral amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DisputeResolutionType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietaryIdentification;
 	/**
 	 * Proprietary identification of the type of dispute that is to be resolved
 	 * regarding the disputed collateral amount.
@@ -130,8 +132,8 @@ public class DisputeResolutionType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#DisputeResolutionType
-	 * DisputeManagement.DisputeResolutionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputeResolutionType
+	 * DisputeManagement.mmDisputeResolutionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,17 +154,17 @@ public class DisputeResolutionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmDisputeResolutionType;
 			componentContext_lazy = () -> DisputeResolutionType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.DisputeResolutionType;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Proprietary identification of the type of dispute that is to be resolved regarding the disputed collateral amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -170,14 +172,30 @@ public class DisputeResolutionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisputeResolutionType1Choice.Code, com.tools20022.repository.choice.DisputeResolutionType1Choice.ProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisputeResolutionType1Choice.mmCode, com.tools20022.repository.choice.DisputeResolutionType1Choice.mmProprietaryIdentification);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DisputeResolutionType1Choice";
 				definition = "Choice between a code or a proprietary code as to the nature of the dispute about the collateral amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DisputeResolutionType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(DisputeResolutionType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification30 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

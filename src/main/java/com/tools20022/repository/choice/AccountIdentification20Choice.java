@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification20Choice#SecuritiesAccountIdentification
- * AccountIdentification20Choice.SecuritiesAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification20Choice#mmSecuritiesAccountIdentification
+ * AccountIdentification20Choice.mmSecuritiesAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification20Choice#CashAccountIdentification
- * AccountIdentification20Choice.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification20Choice#mmCashAccountIdentification
+ * AccountIdentification20Choice.mmCashAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount13 securitiesAccountIdentification;
 	/**
 	 * Unique identification of the securities account as assigned by the
 	 * account servicer.
@@ -102,20 +103,21 @@ public class AccountIdentification20Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Unique identification of the securities account as assigned by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice cashAccountIdentification;
 	/**
 	 * Unique identification of the cash account, as assigned by the account
 	 * servicer.
@@ -152,33 +154,49 @@ public class AccountIdentification20Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Unique identification of the cash account, as assigned by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification4Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification20Choice.SecuritiesAccountIdentification,
-						com.tools20022.repository.choice.AccountIdentification20Choice.CashAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification20Choice.mmSecuritiesAccountIdentification,
+						com.tools20022.repository.choice.AccountIdentification20Choice.mmCashAccountIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentification20Choice";
 				definition = "Unique identification of the securities account or the cash account owned by the customer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount13 getSecuritiesAccountIdentification() {
+		return securitiesAccountIdentification;
+	}
+
+	public void setSecuritiesAccountIdentification(SecuritiesAccount13 securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	}
+
+	public AccountIdentification4Choice getCashAccountIdentification() {
+		return cashAccountIdentification;
+	}
+
+	public void setCashAccountIdentification(com.tools20022.repository.choice.AccountIdentification4Choice cashAccountIdentification) {
+		this.cashAccountIdentification = cashAccountIdentification;
 	}
 }

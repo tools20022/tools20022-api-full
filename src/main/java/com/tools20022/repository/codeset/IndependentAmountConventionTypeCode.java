@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IndependentAmountConventionTypeCode#NettedBeforeThreshold
- * IndependentAmountConventionTypeCode.NettedBeforeThreshold}</li>
+ * {@linkplain com.tools20022.repository.codeset.IndependentAmountConventionTypeCode#mmNettedBeforeThreshold
+ * IndependentAmountConventionTypeCode.mmNettedBeforeThreshold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IndependentAmountConventionTypeCode#NettedAfterThreshold
- * IndependentAmountConventionTypeCode.NettedAfterThreshold}</li>
+ * {@linkplain com.tools20022.repository.codeset.IndependentAmountConventionTypeCode#mmNettedAfterThreshold
+ * IndependentAmountConventionTypeCode.mmNettedAfterThreshold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IndependentAmountConventionTypeCode#Segregated
- * IndependentAmountConventionTypeCode.Segregated}</li>
+ * {@linkplain com.tools20022.repository.codeset.IndependentAmountConventionTypeCode#mmSegregated
+ * IndependentAmountConventionTypeCode.mmSegregated}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class IndependentAmountConventionTypeCode {
 	 * definition} = "Independent amount is an add on to exposure."</li>
 	 * </ul>
 	 */
-	public static final MMCode NettedBeforeThreshold = new MMCode() {
+	public static final MMCode mmNettedBeforeThreshold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettedBeforeThreshold";
@@ -128,7 +128,7 @@ public class IndependentAmountConventionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NettedAfterThreshold = new MMCode() {
+	public static final MMCode mmNettedAfterThreshold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettedAfterThreshold";
@@ -161,7 +161,7 @@ public class IndependentAmountConventionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Segregated = new MMCode() {
+	public static final MMCode mmSegregated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segregated";
@@ -174,13 +174,13 @@ public class IndependentAmountConventionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NBTR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndependentAmountConventionTypeCode";
 				definition = "Determines how the independent amount was applied in the margin calculation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IndependentAmountConventionTypeCode.NettedBeforeThreshold, com.tools20022.repository.codeset.IndependentAmountConventionTypeCode.NettedAfterThreshold,
-						com.tools20022.repository.codeset.IndependentAmountConventionTypeCode.Segregated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IndependentAmountConventionTypeCode.mmNettedBeforeThreshold, com.tools20022.repository.codeset.IndependentAmountConventionTypeCode.mmNettedAfterThreshold,
+						com.tools20022.repository.codeset.IndependentAmountConventionTypeCode.mmSegregated);
 				derivation_lazy = () -> Arrays.asList(IndependentAmountConventionType1Code.mmObject());
 			}
 		});

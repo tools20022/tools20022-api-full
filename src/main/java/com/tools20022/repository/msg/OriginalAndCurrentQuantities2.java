@@ -38,14 +38,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#ShortLongPosition
- * OriginalAndCurrentQuantities2.ShortLongPosition}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#mmShortLongPosition
+ * OriginalAndCurrentQuantities2.mmShortLongPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#FaceAmount
- * OriginalAndCurrentQuantities2.FaceAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#mmFaceAmount
+ * OriginalAndCurrentQuantities2.mmFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#AmortisedValue
- * OriginalAndCurrentQuantities2.AmortisedValue}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2#mmAmortisedValue
+ * OriginalAndCurrentQuantities2.mmAmortisedValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -77,6 +77,7 @@ import java.util.function.Supplier;
 public class OriginalAndCurrentQuantities2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongPosition;
 	/**
 	 * Sign of the quantity of security.
 	 * <p>
@@ -107,13 +108,13 @@ public class OriginalAndCurrentQuantities2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#ShortLongPosition
-	 * OriginalAndCurrentQuantities6.ShortLongPosition}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#mmShortLongPosition
+	 * OriginalAndCurrentQuantities6.mmShortLongPosition}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalAndCurrentQuantities2.mmObject();
 			isDerived = false;
@@ -121,12 +122,13 @@ public class OriginalAndCurrentQuantities2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongPosition";
 			definition = "Sign of the quantity of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities6.ShortLongPosition);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities6.mmShortLongPosition);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount faceAmount;
 	/**
 	 * Quantity expressed as an amount representing the face amount, that is,
 	 * the principal, of a debt instrument.
@@ -141,8 +143,8 @@ public class OriginalAndCurrentQuantities2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#FaceAmount
-	 * AssetHolding.FaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmFaceAmount
+	 * AssetHolding.mmFaceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,27 +167,28 @@ public class OriginalAndCurrentQuantities2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#FaceAmount
-	 * OriginalAndCurrentQuantities6.FaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#mmFaceAmount
+	 * OriginalAndCurrentQuantities6.mmFaceAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> OriginalAndCurrentQuantities2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.FaceAmount;
 			isDerived = false;
 			xmlTag = "FaceAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, that is, the principal, of a debt instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities6.FaceAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities6.mmFaceAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount amortisedValue;
 	/**
 	 * Quantity expressed as an amount representing the current amortised face
 	 * amount of a bond, for example, a periodic reduction/increase of a bond's
@@ -201,8 +204,8 @@ public class OriginalAndCurrentQuantities2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#AmortisedFaceValue
-	 * AssetHolding.AmortisedFaceValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmAmortisedFaceValue
+	 * AssetHolding.mmAmortisedFaceValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,24 +228,24 @@ public class OriginalAndCurrentQuantities2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#AmortisedValue
-	 * OriginalAndCurrentQuantities6.AmortisedValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6#mmAmortisedValue
+	 * OriginalAndCurrentQuantities6.mmAmortisedValue}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> OriginalAndCurrentQuantities2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.AmortisedFaceValue;
 			isDerived = false;
 			xmlTag = "AmtsdVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisedValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities6.AmortisedValue);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities6.mmAmortisedValue);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -250,10 +253,10 @@ public class OriginalAndCurrentQuantities2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities2.ShortLongPosition, com.tools20022.repository.msg.OriginalAndCurrentQuantities2.FaceAmount,
-						com.tools20022.repository.msg.OriginalAndCurrentQuantities2.AmortisedValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities2.mmShortLongPosition, com.tools20022.repository.msg.OriginalAndCurrentQuantities2.mmFaceAmount,
+						com.tools20022.repository.msg.OriginalAndCurrentQuantities2.mmAmortisedValue);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -268,5 +271,29 @@ public class OriginalAndCurrentQuantities2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongPosition() {
+		return shortLongPosition;
+	}
+
+	public void setShortLongPosition(ShortLong1Code shortLongPosition) {
+		this.shortLongPosition = shortLongPosition;
+	}
+
+	public ImpliedCurrencyAndAmount getFaceAmount() {
+		return faceAmount;
+	}
+
+	public void setFaceAmount(ImpliedCurrencyAndAmount faceAmount) {
+		this.faceAmount = faceAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getAmortisedValue() {
+		return amortisedValue;
+	}
+
+	public void setAmortisedValue(ImpliedCurrencyAndAmount amortisedValue) {
+		this.amortisedValue = amortisedValue;
 	}
 }

@@ -35,21 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate8SD1#PlaceAndName
- * SecurityDate8SD1.PlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityDate8SD1#SettlementDateOfNewSecurity
- * SecurityDate8SD1.SettlementDateOfNewSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityDate8SD1#mmPlaceAndName
+ * SecurityDate8SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityDate8SD1#TradingSuspendedDate
- * SecurityDate8SD1.TradingSuspendedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityDate8SD1#mmSettlementDateOfNewSecurity
+ * SecurityDate8SD1.mmSettlementDateOfNewSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityDate8SD1#mmTradingSuspendedDate
+ * SecurityDate8SD1.mmTradingSuspendedDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityDate8SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -97,7 +99,7 @@ public class SecurityDate8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
 			isDerived = false;
@@ -105,11 +107,12 @@ public class SecurityDate8SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DateFormat22Choice settlementDateOfNewSecurity;
 	/**
 	 * Settlement date for the transaction where the new security is issued. <br>
 	 * 発行日決済日程情報/決済日
@@ -141,7 +144,7 @@ public class SecurityDate8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDateOfNewSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDateOfNewSecurity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
 			isDerived = false;
@@ -149,11 +152,12 @@ public class SecurityDate8SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateOfNewSecurity";
 			definition = "Settlement date for the transaction where the new security is issued. \r\n発行日決済日程情報/決済日";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice tradingSuspendedDate;
 	/**
 	 * Date/time at which trading of a security is suspended as the result of an
 	 * event.<br>
@@ -183,7 +187,7 @@ public class SecurityDate8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingSuspendedDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingSuspendedDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
 			isDerived = false;
@@ -191,24 +195,48 @@ public class SecurityDate8SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSuspendedDate";
 			definition = "Date/time at which trading of a security is suspended as the result of an event.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate8SD1.PlaceAndName, com.tools20022.repository.msg.SecurityDate8SD1.SettlementDateOfNewSecurity,
-						com.tools20022.repository.msg.SecurityDate8SD1.TradingSuspendedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate8SD1.mmPlaceAndName, com.tools20022.repository.msg.SecurityDate8SD1.mmSettlementDateOfNewSecurity,
+						com.tools20022.repository.msg.SecurityDate8SD1.mmTradingSuspendedDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityDate8SD1";
 				definition = "Extension to provide information about the dates related to securities movement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public DateFormat22Choice getSettlementDateOfNewSecurity() {
+		return settlementDateOfNewSecurity;
+	}
+
+	public void setSettlementDateOfNewSecurity(DateFormat22Choice settlementDateOfNewSecurity) {
+		this.settlementDateOfNewSecurity = settlementDateOfNewSecurity;
+	}
+
+	public DateFormat22Choice getTradingSuspendedDate() {
+		return tradingSuspendedDate;
+	}
+
+	public void setTradingSuspendedDate(DateFormat22Choice tradingSuspendedDate) {
+		this.tradingSuspendedDate = tradingSuspendedDate;
 	}
 }

@@ -44,17 +44,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#Header
- * EncapsulatedBusinessMessage1.Header}</li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmHeader
+ * EncapsulatedBusinessMessage1.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#Prefix
- * EncapsulatedBusinessMessage1.Prefix}</li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmPrefix
+ * EncapsulatedBusinessMessage1.mmPrefix}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#Partial
- * EncapsulatedBusinessMessage1.Partial}</li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmPartial
+ * EncapsulatedBusinessMessage1.mmPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#Message
- * EncapsulatedBusinessMessage1.Message}</li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmMessage
+ * EncapsulatedBusinessMessage1.mmMessage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,45 +64,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01#AttachedMessage
- * InvoicePaymentReconciliationAdviceV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01#mmAttachedMessage
+ * InvoicePaymentReconciliationAdviceV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01#AttachedMessage
- * InvoiceAssignmentRequestV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01#mmAttachedMessage
+ * InvoiceAssignmentRequestV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01#AttachedMessage
- * PartyRegistrationAndGuaranteeAcknowledgementV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01#mmAttachedMessage
+ * PartyRegistrationAndGuaranteeAcknowledgementV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#AttachedMessage
- * PartyEventAdviceV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#mmAttachedMessage
+ * PartyEventAdviceV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#AttachedMessage
- * PartyRegistrationAndGuaranteeStatusV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmAttachedMessage
+ * PartyRegistrationAndGuaranteeStatusV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#AttachedMessage
- * PartyRegistrationAndGuaranteeNotificationV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmAttachedMessage
+ * PartyRegistrationAndGuaranteeNotificationV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01#AttachedMessage
- * InvoiceAssignmentNotificationV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01#mmAttachedMessage
+ * InvoiceAssignmentNotificationV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01#AttachedMessage
- * InvoiceAssignmentAcknowledgementV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01#mmAttachedMessage
+ * InvoiceAssignmentAcknowledgementV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01#AttachedMessage
- * InvoiceAssignmentStatusV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01#mmAttachedMessage
+ * InvoiceAssignmentStatusV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01#AttachedMessage
- * PartyRegistrationAndGuaranteeRequestV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01#mmAttachedMessage
+ * PartyRegistrationAndGuaranteeRequestV01.mmAttachedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#AttachedMessage
- * InvoicePaymentReconciliationStatusV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmAttachedMessage
+ * InvoicePaymentReconciliationStatusV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,6 +118,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EncapsulatedBusinessMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BusinessApplicationHeader1 header;
 	/**
 	 * The Business Application Header associated to the encapsulated message if
 	 * it exists.
@@ -152,21 +153,22 @@ public class EncapsulatedBusinessMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Header = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "The Business Application Header associated to the encapsulated message if it exists.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BusinessApplicationHeader1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader1.mmObject();
 		}
 	};
+	protected ID prefix;
 	/**
 	 * Prefix of ID/IDREFs in the encapsulated message to be removed before
 	 * signature verification.
@@ -196,7 +198,7 @@ public class EncapsulatedBusinessMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Prefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrefix = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
@@ -204,11 +206,12 @@ public class EncapsulatedBusinessMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prefix";
 			definition = "Prefix of ID/IDREFs in the encapsulated message to be removed before signature verification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ID.mmObject();
 		}
 	};
+	protected YesNoIndicator partial;
 	/**
 	 * If yes, the Msg element contains only a subset of the original message.
 	 * <p>
@@ -239,7 +242,7 @@ public class EncapsulatedBusinessMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Partial = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartial = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
@@ -247,11 +250,12 @@ public class EncapsulatedBusinessMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Partial";
 			definition = "If yes, the Msg element contains only a subset of the original message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected StrictPayload message;
 	/**
 	 * The encapsulated ISO 20022 message.
 	 * <p>
@@ -283,17 +287,17 @@ public class EncapsulatedBusinessMessage1 {
 	 * definition} = "The encapsulated ISO 20022 message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Message = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "Msg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Message";
 			definition = "The encapsulated ISO 20022 message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StrictPayload.mmObject();
 		}
 	};
@@ -301,21 +305,53 @@ public class EncapsulatedBusinessMessage1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedBusinessMessage1.Header, com.tools20022.repository.msg.EncapsulatedBusinessMessage1.Prefix,
-						com.tools20022.repository.msg.EncapsulatedBusinessMessage1.Partial, com.tools20022.repository.msg.EncapsulatedBusinessMessage1.Message);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmHeader, com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmPrefix,
+						com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmPartial, com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmAttachedMessage, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmAttachedMessage,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmAttachedMessage, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmAttachedMessage,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmAttachedMessage, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmAttachedMessage,
+						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmAttachedMessage, com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.mmAttachedMessage,
+						com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.mmAttachedMessage, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmAttachedMessage,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmAttachedMessage);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.AttachedMessage, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.AttachedMessage,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.AttachedMessage, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.AttachedMessage,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.AttachedMessage, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.AttachedMessage,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.AttachedMessage, com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.AttachedMessage,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.AttachedMessage, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.AttachedMessage,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.AttachedMessage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EncapsulatedBusinessMessage1";
 				definition = "Defines an encapsulated form of an ISO 20022 message and, if present, its associated Business Application Header. The encapsulation guarantees uniqueness of ID/IDREFs though the use of the Prefix element. This element can be added during message preparation to ID/IDREFs. In order to verify the signature in the Hdr element or inside the encapsulated message, for each occurrence of an ID orIDREF that possesses the same value as a prefix, the prefix part is removed before signature verification. This is not done for surrounding signatures.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BusinessApplicationHeader1 getHeader() {
+		return header;
+	}
+
+	public void setHeader(com.tools20022.repository.msg.BusinessApplicationHeader1 header) {
+		this.header = header;
+	}
+
+	public ID getPrefix() {
+		return prefix;
+	}
+
+	public void setPrefix(ID prefix) {
+		this.prefix = prefix;
+	}
+
+	public YesNoIndicator getPartial() {
+		return partial;
+	}
+
+	public void setPartial(YesNoIndicator partial) {
+		this.partial = partial;
+	}
+
+	public StrictPayload getMessage() {
+		return message;
+	}
+
+	public void setMessage(StrictPayload message) {
+		this.message = message;
 	}
 }

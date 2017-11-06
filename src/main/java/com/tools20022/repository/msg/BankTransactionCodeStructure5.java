@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure5#Code
- * BankTransactionCodeStructure5.Code}</li>
+ * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure5#mmCode
+ * BankTransactionCodeStructure5.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure5#Family
- * BankTransactionCodeStructure5.Family}</li>
+ * {@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure5#mmFamily
+ * BankTransactionCodeStructure5.mmFamily}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankTransactionCodeStructure5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalBankTransactionDomain1Code code;
 	/**
 	 * Specifies the business area of the underlying transaction.
 	 * <p>
@@ -79,8 +80,8 @@ public class BankTransactionCodeStructure5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BankTransaction#Domain
-	 * BankTransaction.Domain}</li>
+	 * {@linkplain com.tools20022.repository.entity.BankTransaction#mmDomain
+	 * BankTransaction.mmDomain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class BankTransactionCodeStructure5 {
 	 * "Specifies the business area of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmDomain;
 			componentContext_lazy = () -> BankTransactionCodeStructure5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.Domain;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the business area of the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBankTransactionDomain1Code.mmObject();
 		}
 	};
+	protected BankTransactionCodeStructure6 family;
 	/**
 	 * Specifies the family and the sub-family of the bank transaction code,
 	 * within a specific domain, in a structured and hierarchical format.
@@ -127,8 +129,8 @@ public class BankTransactionCodeStructure5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BankTransaction#Family
-	 * BankTransaction.Family}</li>
+	 * {@linkplain com.tools20022.repository.entity.BankTransaction#mmFamily
+	 * BankTransaction.mmFamily}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,33 +151,49 @@ public class BankTransactionCodeStructure5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Family = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFamily = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmFamily;
 			componentContext_lazy = () -> BankTransactionCodeStructure5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.Family;
 			isDerived = false;
 			xmlTag = "Fmly";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Family";
 			definition = "Specifies the family and the sub-family of the bank transaction code, within a specific domain, in a structured and hierarchical format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BankTransactionCodeStructure6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure5.Code, com.tools20022.repository.msg.BankTransactionCodeStructure5.Family);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure5.mmCode, com.tools20022.repository.msg.BankTransactionCodeStructure5.mmFamily);
 				trace_lazy = () -> BankTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BankTransactionCodeStructure5";
 				definition = "Set of elements used to identify the type or operations code of a transaction entry.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalBankTransactionDomain1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalBankTransactionDomain1Code code) {
+		this.code = code;
+	}
+
+	public BankTransactionCodeStructure6 getFamily() {
+		return family;
+	}
+
+	public void setFamily(com.tools20022.repository.msg.BankTransactionCodeStructure6 family) {
+		this.family = family;
 	}
 }

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msg.RequestedModification;
@@ -132,24 +133,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#Assignment
- * RequestToModifyPayment.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#mmAssignment
+ * RequestToModifyPayment.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#Case
- * RequestToModifyPayment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#mmCase
+ * RequestToModifyPayment.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#Underlying
- * RequestToModifyPayment.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#mmUnderlying
+ * RequestToModifyPayment.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#Modification
- * RequestToModifyPayment.Modification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#mmModification
+ * RequestToModifyPayment.mmModification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#identifier
- * RequestToModifyPayment.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.007.002.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -165,6 +164,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestToModifyPayment {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies the assignment.
 	 * <p>
@@ -187,17 +187,18 @@ public class RequestToModifyPayment {
 	 * definition} = "Identifies the assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -219,17 +220,18 @@ public class RequestToModifyPayment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected PaymentInstructionExtract underlying;
 	/**
 	 * Identifies the Payment Transaction to modify.
 	 * <p>
@@ -253,17 +255,18 @@ public class RequestToModifyPayment {
 	 * definition} = "Identifies the Payment Transaction to modify."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the Payment Transaction to modify.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 	};
+	protected RequestedModification modification;
 	/**
 	 * (No doc)
 	 * <p>
@@ -284,41 +287,14 @@ public class RequestToModifyPayment {
 	 * name} = "Modification"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Modification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestedModification.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "007";
-			version = "01";
-			flavour = "002";
 		}
 	};
 
@@ -333,11 +309,50 @@ public class RequestToModifyPayment {
 				xmlTag = "camt.007.002.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.007.002.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.Assignment, com.tools20022.repository.area.camt.RequestToModifyPayment.Case,
-						com.tools20022.repository.area.camt.RequestToModifyPayment.Underlying, com.tools20022.repository.area.camt.RequestToModifyPayment.Modification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.RequestToModifyPayment.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmAssignment, com.tools20022.repository.area.camt.RequestToModifyPayment.mmCase,
+						com.tools20022.repository.area.camt.RequestToModifyPayment.mmUnderlying, com.tools20022.repository.area.camt.RequestToModifyPayment.mmModification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "007";
+						version = "01";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public PaymentInstructionExtract getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(PaymentInstructionExtract underlying) {
+		this.underlying = underlying;
+	}
+
+	public RequestedModification getModification() {
+		return modification;
+	}
+
+	public void setModification(RequestedModification modification) {
+		this.modification = modification;
 	}
 }

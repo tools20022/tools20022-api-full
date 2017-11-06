@@ -29,12 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#Payment
- * PaymentReceiptCode.Payment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#Receipt
- * PaymentReceiptCode.Receipt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#None
- * PaymentReceiptCode.None}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#mmPayment
+ * PaymentReceiptCode.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#mmReceipt
+ * PaymentReceiptCode.mmReceipt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#mmNone
+ * PaymentReceiptCode.mmNone}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +86,7 @@ public class PaymentReceiptCode {
 	 * definition} = "Operation is a payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Payment = new MMCode() {
+	public static final MMCode mmPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
@@ -114,7 +116,7 @@ public class PaymentReceiptCode {
 	 * definition} = "Operation is a receipt."</li>
 	 * </ul>
 	 */
-	public static final MMCode Receipt = new MMCode() {
+	public static final MMCode mmReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receipt";
@@ -144,7 +146,7 @@ public class PaymentReceiptCode {
 	 * definition} = "Operation is null."</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -157,11 +159,11 @@ public class PaymentReceiptCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentReceiptCode";
 				definition = "Specifies if an operation is a payment, or a receipt or none.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentReceiptCode.Payment, com.tools20022.repository.codeset.PaymentReceiptCode.Receipt, com.tools20022.repository.codeset.PaymentReceiptCode.None);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentReceiptCode.mmPayment, com.tools20022.repository.codeset.PaymentReceiptCode.mmReceipt, com.tools20022.repository.codeset.PaymentReceiptCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(PaymentReceipt1Code.mmObject());
 			}
 		});

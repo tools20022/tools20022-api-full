@@ -32,8 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportType3#Type
- * ReportType3.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportType3#mmType
+ * ReportType3.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -41,15 +41,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#SubmissionType
- * DataSetMatchReportV03.SubmissionType}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmSubmissionType
+ * DataSetMatchReportV03.mmSubmissionType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportType3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InstructionType3Code type;
 	/**
 	 * Specifies whether the report is for a matched or pre-matched data set.
 	 * <p>
@@ -91,7 +92,7 @@ public class ReportType3 {
 	 * "Specifies whether the report is for a matched or pre-matched data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportType3.mmObject();
 			isDerived = false;
@@ -99,8 +100,8 @@ public class ReportType3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the report is for a matched or pre-matched data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InstructionType3Code.mmObject();
 		}
 	};
@@ -108,14 +109,22 @@ public class ReportType3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportType3.Type);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetMatchReportV03.SubmissionType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportType3.mmType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmSubmissionType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportType3";
 				definition = "Specifies the type of report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InstructionType3Code getType() {
+		return type;
+	}
+
+	public void setType(InstructionType3Code type) {
+		this.type = type;
 	}
 }

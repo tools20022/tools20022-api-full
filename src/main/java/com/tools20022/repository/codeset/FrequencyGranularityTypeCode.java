@@ -30,47 +30,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#Daily
- * FrequencyGranularityTypeCode.Daily}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmDaily
+ * FrequencyGranularityTypeCode.mmDaily}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#EndOfMonth
- * FrequencyGranularityTypeCode.EndOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmEndOfMonth
+ * FrequencyGranularityTypeCode.mmEndOfMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#Weekly
- * FrequencyGranularityTypeCode.Weekly}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmWeekly
+ * FrequencyGranularityTypeCode.mmWeekly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#EndOfWeek
- * FrequencyGranularityTypeCode.EndOfWeek}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmEndOfWeek
+ * FrequencyGranularityTypeCode.mmEndOfWeek}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#EndOfDay
- * FrequencyGranularityTypeCode.EndOfDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmEndOfDay
+ * FrequencyGranularityTypeCode.mmEndOfDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#Monthly
- * FrequencyGranularityTypeCode.Monthly}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmMonthly
+ * FrequencyGranularityTypeCode.mmMonthly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#Quarterly
- * FrequencyGranularityTypeCode.Quarterly}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmQuarterly
+ * FrequencyGranularityTypeCode.mmQuarterly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#EndOfQuarter
- * FrequencyGranularityTypeCode.EndOfQuarter}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmEndOfQuarter
+ * FrequencyGranularityTypeCode.mmEndOfQuarter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#Yearly
- * FrequencyGranularityTypeCode.Yearly}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmYearly
+ * FrequencyGranularityTypeCode.mmYearly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#Semiannually
- * FrequencyGranularityTypeCode.Semiannually}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmSemiannually
+ * FrequencyGranularityTypeCode.mmSemiannually}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#EndOfSemester
- * FrequencyGranularityTypeCode.EndOfSemester}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmEndOfSemester
+ * FrequencyGranularityTypeCode.mmEndOfSemester}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#EndOfFortnight
- * FrequencyGranularityTypeCode.EndOfFortnight}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmEndOfFortnight
+ * FrequencyGranularityTypeCode.mmEndOfFortnight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#Fortnightly
- * FrequencyGranularityTypeCode.Fortnightly}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmFortnightly
+ * FrequencyGranularityTypeCode.mmFortnightly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#EndOfYear
- * FrequencyGranularityTypeCode.EndOfYear}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrequencyGranularityTypeCode#mmEndOfYear
+ * FrequencyGranularityTypeCode.mmEndOfYear}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -84,8 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,7 +121,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place every day."</li>
 	 * </ul>
 	 */
-	public static final MMCode Daily = new MMCode() {
+	public static final MMCode mmDaily = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
@@ -152,7 +152,7 @@ public class FrequencyGranularityTypeCode {
 	 * "Event takes place at the end of each month or period of one  month."</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfMonth = new MMCode() {
+	public static final MMCode mmEndOfMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonth";
@@ -182,7 +182,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place once a week."</li>
 	 * </ul>
 	 */
-	public static final MMCode Weekly = new MMCode() {
+	public static final MMCode mmWeekly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekly";
@@ -212,7 +212,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place at the end of each week."</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfWeek = new MMCode() {
+	public static final MMCode mmEndOfWeek = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfWeek";
@@ -242,7 +242,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place at the end of each day."</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfDay = new MMCode() {
+	public static final MMCode mmEndOfDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfDay";
@@ -272,7 +272,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place every month or once a month."</li>
 	 * </ul>
 	 */
-	public static final MMCode Monthly = new MMCode() {
+	public static final MMCode mmMonthly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
@@ -303,7 +303,7 @@ public class FrequencyGranularityTypeCode {
 	 * "Event takes place every three months or four times a year."</li>
 	 * </ul>
 	 */
-	public static final MMCode Quarterly = new MMCode() {
+	public static final MMCode mmQuarterly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quarterly";
@@ -336,7 +336,7 @@ public class FrequencyGranularityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfQuarter = new MMCode() {
+	public static final MMCode mmEndOfQuarter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfQuarter";
@@ -366,7 +366,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place every year or once a year."</li>
 	 * </ul>
 	 */
-	public static final MMCode Yearly = new MMCode() {
+	public static final MMCode mmYearly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yearly";
@@ -396,7 +396,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place every six months or two times a year."</li>
 	 * </ul>
 	 */
-	public static final MMCode Semiannually = new MMCode() {
+	public static final MMCode mmSemiannually = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Semiannually";
@@ -427,7 +427,7 @@ public class FrequencyGranularityTypeCode {
 	 * "Event takes place at the end of each six months (or two times a year)."</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfSemester = new MMCode() {
+	public static final MMCode mmEndOfSemester = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfSemester";
@@ -457,7 +457,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place at the end of each two weeks."</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfFortnight = new MMCode() {
+	public static final MMCode mmEndOfFortnight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfFortnight";
@@ -487,7 +487,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place every two weeks."</li>
 	 * </ul>
 	 */
-	public static final MMCode Fortnightly = new MMCode() {
+	public static final MMCode mmFortnightly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fortnightly";
@@ -517,7 +517,7 @@ public class FrequencyGranularityTypeCode {
 	 * definition} = "Event takes place at the end of each year."</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfYear = new MMCode() {
+	public static final MMCode mmEndOfYear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfYear";
@@ -530,17 +530,17 @@ public class FrequencyGranularityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FrequencyGranularityTypeCode";
 				definition = "Specifies the granularity of the frequency used for the reporting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrequencyGranularityTypeCode.Daily, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.EndOfMonth,
-						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.Weekly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.EndOfWeek,
-						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.EndOfDay, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.Monthly,
-						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.Quarterly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.EndOfQuarter,
-						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.Yearly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.Semiannually,
-						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.EndOfSemester, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.EndOfFortnight,
-						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.Fortnightly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.EndOfYear);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmDaily, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmEndOfMonth,
+						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmWeekly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmEndOfWeek,
+						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmEndOfDay, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmMonthly,
+						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmQuarterly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmEndOfQuarter,
+						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmYearly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmSemiannually,
+						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmEndOfSemester, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmEndOfFortnight,
+						com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmFortnightly, com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmEndOfYear);
 				derivation_lazy = () -> Arrays.asList(FrequencyGranularityType1Code.mmObject());
 			}
 		});

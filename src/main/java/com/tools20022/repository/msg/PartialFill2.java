@@ -36,25 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartialFill2#ConfirmationQuantity
- * PartialFill2.ConfirmationQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartialFill2#DealPrice
- * PartialFill2.DealPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartialFill2#TradeDate
- * PartialFill2.TradeDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartialFill2#PlaceOfTrade
- * PartialFill2.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.PartialFill2#mmConfirmationQuantity
+ * PartialFill2.mmConfirmationQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartialFill2#mmDealPrice
+ * PartialFill2.mmDealPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartialFill2#mmTradeDate
+ * PartialFill2.mmTradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartialFill2#mmPlaceOfTrade
+ * PartialFill2.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartialFill2#OriginalOrderedQuantity
- * PartialFill2.OriginalOrderedQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.PartialFill2#mmOriginalOrderedQuantity
+ * PartialFill2.mmOriginalOrderedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartialFill2#PreviouslyExecutedQuantity
- * PartialFill2.PreviouslyExecutedQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartialFill2#RemainingQuantity
- * PartialFill2.RemainingQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.PartialFill2#mmPreviouslyExecutedQuantity
+ * PartialFill2.mmPreviouslyExecutedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartialFill2#MatchIncrementQuantity
- * PartialFill2.MatchIncrementQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.PartialFill2#mmRemainingQuantity
+ * PartialFill2.mmRemainingQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartialFill2#mmMatchIncrementQuantity
+ * PartialFill2.mmMatchIncrementQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartialFill2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity6Choice confirmationQuantity;
 	/**
 	 * Quantity of financial instrument to be ordered.
 	 * <p>
@@ -95,8 +97,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,25 +117,26 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#ConfirmationQuantity
-	 * PartialFill1.ConfirmationQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmConfirmationQuantity
+	 * PartialFill1.mmConfirmationQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "ConfQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationQuantity";
 			definition = "Quantity of financial instrument to be ordered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.ConfirmationQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmConfirmationQuantity;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity6Choice.mmObject();
 		}
 	};
+	protected Price4 dealPrice;
 	/**
 	 * Amount of money for which goods or services are offered, sold, or bought.
 	 * <p>
@@ -145,8 +148,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderPrice
-	 * SecuritiesOrder.OrderPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderPrice
+	 * SecuritiesOrder.mmOrderPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,25 +170,26 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#DealPrice
-	 * PartialFill1.DealPrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmDealPrice
+	 * PartialFill1.mmDealPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderPrice;
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.DealPrice;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmDealPrice;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected TradeDate4Choice tradeDate;
 	/**
 	 * Specifies the date/time on which the trade was executed.
 	 * <p>
@@ -199,8 +203,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,25 +223,26 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#TradeDate
-	 * PartialFill1.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmTradeDate
+	 * PartialFill1.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.TradeDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmTradeDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
 		}
 	};
+	protected MarketIdentification80 placeOfTrade;
 	/**
 	 * Market in which a trade transaction is to be or has been executed.
 	 * <p>
@@ -251,8 +256,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingSession#Market
-	 * TradingSession.Market}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingSession#mmMarket
+	 * TradingSession.mmMarket}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,25 +277,26 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#PlaceOfTrade
-	 * PartialFill1.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmPlaceOfTrade
+	 * PartialFill1.mmPlaceOfTrade}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.mmMarket;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.Market;
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which a trade transaction is to be or has been executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.PlaceOfTrade;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmPlaceOfTrade;
 			maxOccurs = 1;
-			complexType_lazy = () -> MarketIdentification80.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification80.mmObject();
 		}
 	};
+	protected QuantityOrAmount1Choice originalOrderedQuantity;
 	/**
 	 * Quantity of financial instrument ordered.
 	 * <p>
@@ -304,8 +310,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -324,25 +330,26 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#OriginalOrderedQuantity
-	 * PartialFill1.OriginalOrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmOriginalOrderedQuantity
+	 * PartialFill1.mmOriginalOrderedQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalOrderedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalOrderedQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "OrgnlOrdrdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrderedQuantity";
 			definition = "Quantity of financial instrument ordered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.OriginalOrderedQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmOriginalOrderedQuantity;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	protected QuantityOrAmount1Choice previouslyExecutedQuantity;
 	/**
 	 * Quantity of financial instrument that has been previously executed.
 	 * <p>
@@ -356,8 +363,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -377,25 +384,26 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#PreviouslyExecutedQuantity
-	 * PartialFill1.PreviouslyExecutedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmPreviouslyExecutedQuantity
+	 * PartialFill1.mmPreviouslyExecutedQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviouslyExecutedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviouslyExecutedQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "PrevslyExctdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyExecutedQuantity";
 			definition = "Quantity of financial instrument that has been previously executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.PreviouslyExecutedQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmPreviouslyExecutedQuantity;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	protected QuantityOrAmount1Choice remainingQuantity;
 	/**
 	 * Quantity of financial instrument that is remaining in order.
 	 * <p>
@@ -409,8 +417,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#RemainingQuantity
-	 * SecuritiesOrderStatus.RemainingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmRemainingQuantity
+	 * SecuritiesOrderStatus.mmRemainingQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -430,25 +438,26 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#RemainingQuantity
-	 * PartialFill1.RemainingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmRemainingQuantity
+	 * PartialFill1.mmRemainingQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemainingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmRemainingQuantity;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.RemainingQuantity;
 			isDerived = false;
 			xmlTag = "RmngQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingQuantity";
 			definition = "Quantity of financial instrument that is remaining in order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.RemainingQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmRemainingQuantity;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	protected QuantityOrAmount1Choice matchIncrementQuantity;
 	/**
 	 * Minimum quantity that applies to every execution. The order may still
 	 * fill against smaller orders, but the cumulative quantity of the execution
@@ -464,8 +473,8 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#MatchIncrement
-	 * SecuritiesOrderParameters.MatchIncrement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmMatchIncrement
+	 * SecuritiesOrderParameters.mmMatchIncrement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -486,22 +495,22 @@ public class PartialFill2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartialFill1#MatchIncrementQuantity
-	 * PartialFill1.MatchIncrementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartialFill1#mmMatchIncrementQuantity
+	 * PartialFill1.mmMatchIncrementQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchIncrementQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchIncrementQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmMatchIncrement;
 			componentContext_lazy = () -> PartialFill2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.MatchIncrement;
 			isDerived = false;
 			xmlTag = "MtchIncrmtQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIncrementQuantity";
 			definition = "Minimum quantity that applies to every execution. The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the Match Increment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.MatchIncrementQuantity;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmMatchIncrementQuantity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
@@ -509,11 +518,11 @@ public class PartialFill2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.ConfirmationQuantity, com.tools20022.repository.msg.PartialFill2.DealPrice, com.tools20022.repository.msg.PartialFill2.TradeDate,
-						com.tools20022.repository.msg.PartialFill2.PlaceOfTrade, com.tools20022.repository.msg.PartialFill2.OriginalOrderedQuantity, com.tools20022.repository.msg.PartialFill2.PreviouslyExecutedQuantity,
-						com.tools20022.repository.msg.PartialFill2.RemainingQuantity, com.tools20022.repository.msg.PartialFill2.MatchIncrementQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmConfirmationQuantity, com.tools20022.repository.msg.PartialFill2.mmDealPrice, com.tools20022.repository.msg.PartialFill2.mmTradeDate,
+						com.tools20022.repository.msg.PartialFill2.mmPlaceOfTrade, com.tools20022.repository.msg.PartialFill2.mmOriginalOrderedQuantity, com.tools20022.repository.msg.PartialFill2.mmPreviouslyExecutedQuantity,
+						com.tools20022.repository.msg.PartialFill2.mmRemainingQuantity, com.tools20022.repository.msg.PartialFill2.mmMatchIncrementQuantity);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartialFill2";
 				definition = "Intention to transfer an ownership of a financial instrument.";
@@ -521,5 +530,69 @@ public class PartialFill2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity6Choice getConfirmationQuantity() {
+		return confirmationQuantity;
+	}
+
+	public void setConfirmationQuantity(Quantity6Choice confirmationQuantity) {
+		this.confirmationQuantity = confirmationQuantity;
+	}
+
+	public Price4 getDealPrice() {
+		return dealPrice;
+	}
+
+	public void setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+		this.dealPrice = dealPrice;
+	}
+
+	public TradeDate4Choice getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(TradeDate4Choice tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public MarketIdentification80 getPlaceOfTrade() {
+		return placeOfTrade;
+	}
+
+	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification80 placeOfTrade) {
+		this.placeOfTrade = placeOfTrade;
+	}
+
+	public QuantityOrAmount1Choice getOriginalOrderedQuantity() {
+		return originalOrderedQuantity;
+	}
+
+	public void setOriginalOrderedQuantity(QuantityOrAmount1Choice originalOrderedQuantity) {
+		this.originalOrderedQuantity = originalOrderedQuantity;
+	}
+
+	public QuantityOrAmount1Choice getPreviouslyExecutedQuantity() {
+		return previouslyExecutedQuantity;
+	}
+
+	public void setPreviouslyExecutedQuantity(QuantityOrAmount1Choice previouslyExecutedQuantity) {
+		this.previouslyExecutedQuantity = previouslyExecutedQuantity;
+	}
+
+	public QuantityOrAmount1Choice getRemainingQuantity() {
+		return remainingQuantity;
+	}
+
+	public void setRemainingQuantity(QuantityOrAmount1Choice remainingQuantity) {
+		this.remainingQuantity = remainingQuantity;
+	}
+
+	public QuantityOrAmount1Choice getMatchIncrementQuantity() {
+		return matchIncrementQuantity;
+	}
+
+	public void setMatchIncrementQuantity(QuantityOrAmount1Choice matchIncrementQuantity) {
+		this.matchIncrementQuantity = matchIncrementQuantity;
 	}
 }

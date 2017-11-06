@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information such as the registration details.
@@ -34,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#AdditionalText
- * CorporateActionNarrative7.AdditionalText}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#mmAdditionalText
+ * CorporateActionNarrative7.mmAdditionalText}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#NarrativeVersion
- * CorporateActionNarrative7.NarrativeVersion}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#mmNarrativeVersion
+ * CorporateActionNarrative7.mmNarrativeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#RegistrationDetails
- * CorporateActionNarrative7.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#mmRegistrationDetails
+ * CorporateActionNarrative7.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#PartyContactNarrative
- * CorporateActionNarrative7.PartyContactNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#mmPartyContactNarrative
+ * CorporateActionNarrative7.mmPartyContactNarrative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#Disclaimer
- * CorporateActionNarrative7.Disclaimer}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#mmDisclaimer
+ * CorporateActionNarrative7.mmDisclaimer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#BasketOrIndexInformation
- * CorporateActionNarrative7.BasketOrIndexInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative7#mmBasketOrIndexInformation
+ * CorporateActionNarrative7.mmBasketOrIndexInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,18 +62,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#AdditionalInformation
- * CorporateActionInstructionV01.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#mmAdditionalInformation
+ * CorporateActionInstructionV01.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV02#AdditionalInformation
- * CorporateActionInstructionV02.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV02#mmAdditionalInformation
+ * CorporateActionInstructionV02.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max350Text> additionalText;
 	/**
 	 * Provides additional information or specifies in more detail the content
 	 * of a message. This field may only be used when the information to be
@@ -125,7 +127,7 @@ public class CorporateActionNarrative7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative7.mmObject();
 			isDerived = false;
@@ -137,6 +139,7 @@ public class CorporateActionNarrative7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> narrativeVersion;
 	/**
 	 * Provides information that can be ignored for automated processing; -
 	 * reiteration of information that has been included within structured
@@ -169,7 +172,7 @@ public class CorporateActionNarrative7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NarrativeVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNarrativeVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative7.mmObject();
 			isDerived = false;
@@ -181,6 +184,7 @@ public class CorporateActionNarrative7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> registrationDetails;
 	/**
 	 * Provides information required for the registration.
 	 * <p>
@@ -193,8 +197,8 @@ public class CorporateActionNarrative7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#RegistrationDetails
-	 * CorporateActionEvent.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRegistrationDetails
+	 * CorporateActionEvent.mmRegistrationDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -213,10 +217,10 @@ public class CorporateActionNarrative7 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> CorporateActionNarrative7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.RegistrationDetails;
 			isDerived = false;
 			xmlTag = "RegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,6 +230,7 @@ public class CorporateActionNarrative7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> partyContactNarrative;
 	/**
 	 * Provides additional information regarding the party, for example, the
 	 * contact unit or person responsible for the transaction identified in the
@@ -240,8 +245,8 @@ public class CorporateActionNarrative7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#ContactPersonRole
-	 * Role.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmContactPersonRole
+	 * Role.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,10 +267,10 @@ public class CorporateActionNarrative7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,6 +280,7 @@ public class CorporateActionNarrative7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> disclaimer;
 	/**
 	 * Disclaimer relative to the information provided in the message. It may be
 	 * ignored for automated processing. No information about the instruction
@@ -306,7 +312,7 @@ public class CorporateActionNarrative7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Disclaimer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative7.mmObject();
 			isDerived = false;
@@ -318,6 +324,7 @@ public class CorporateActionNarrative7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> basketOrIndexInformation;
 	/**
 	 * Provides additional information on the basket or index underlying a
 	 * security, for example a warrant.
@@ -331,8 +338,8 @@ public class CorporateActionNarrative7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#BasketOrIndexInformation
-	 * CorporateActionEvent.BasketOrIndexInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBasketOrIndexInformation
+	 * CorporateActionEvent.mmBasketOrIndexInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -353,10 +360,10 @@ public class CorporateActionNarrative7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BasketOrIndexInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasketOrIndexInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmBasketOrIndexInformation;
 			componentContext_lazy = () -> CorporateActionNarrative7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.BasketOrIndexInformation;
 			isDerived = false;
 			xmlTag = "BsktOrIndxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -370,13 +377,13 @@ public class CorporateActionNarrative7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative7.AdditionalText, com.tools20022.repository.msg.CorporateActionNarrative7.NarrativeVersion,
-						com.tools20022.repository.msg.CorporateActionNarrative7.RegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative7.PartyContactNarrative,
-						com.tools20022.repository.msg.CorporateActionNarrative7.Disclaimer, com.tools20022.repository.msg.CorporateActionNarrative7.BasketOrIndexInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative7.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative7.mmNarrativeVersion,
+						com.tools20022.repository.msg.CorporateActionNarrative7.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative7.mmPartyContactNarrative,
+						com.tools20022.repository.msg.CorporateActionNarrative7.mmDisclaimer, com.tools20022.repository.msg.CorporateActionNarrative7.mmBasketOrIndexInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV02.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV01.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV02.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative7";
 				definition = "Provides additional information such as the registration details.";
@@ -384,5 +391,53 @@ public class CorporateActionNarrative7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max350Text> getAdditionalText() {
+		return additionalText;
+	}
+
+	public void setAdditionalText(List<Max350Text> additionalText) {
+		this.additionalText = additionalText;
+	}
+
+	public List<Max350Text> getNarrativeVersion() {
+		return narrativeVersion;
+	}
+
+	public void setNarrativeVersion(List<Max350Text> narrativeVersion) {
+		this.narrativeVersion = narrativeVersion;
+	}
+
+	public List<Max350Text> getRegistrationDetails() {
+		return registrationDetails;
+	}
+
+	public void setRegistrationDetails(List<Max350Text> registrationDetails) {
+		this.registrationDetails = registrationDetails;
+	}
+
+	public List<Max350Text> getPartyContactNarrative() {
+		return partyContactNarrative;
+	}
+
+	public void setPartyContactNarrative(List<Max350Text> partyContactNarrative) {
+		this.partyContactNarrative = partyContactNarrative;
+	}
+
+	public List<Max350Text> getDisclaimer() {
+		return disclaimer;
+	}
+
+	public void setDisclaimer(List<Max350Text> disclaimer) {
+		this.disclaimer = disclaimer;
+	}
+
+	public List<Max350Text> getBasketOrIndexInformation() {
+		return basketOrIndexInformation;
+	}
+
+	public void setBasketOrIndexInformation(List<Max350Text> basketOrIndexInformation) {
+		this.basketOrIndexInformation = basketOrIndexInformation;
 	}
 }

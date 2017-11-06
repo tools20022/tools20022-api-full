@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1#TaxRate
- * EarlyPaymentsVAT1.TaxRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1#mmTaxRate
+ * EarlyPaymentsVAT1.mmTaxRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1#DiscountTaxType
- * EarlyPaymentsVAT1.DiscountTaxType}</li>
+ * {@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1#mmDiscountTaxType
+ * EarlyPaymentsVAT1.mmDiscountTaxType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1#DiscountTaxAmount
- * EarlyPaymentsVAT1.DiscountTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1#mmDiscountTaxAmount
+ * EarlyPaymentsVAT1.mmDiscountTaxAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EarlyPaymentsVAT1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate taxRate;
 	/**
 	 * Tax rate to be applied for early payment.
 	 * <p>
@@ -95,7 +96,7 @@ public class EarlyPaymentsVAT1 {
 	 * definition} = "Tax rate to be applied for early payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class EarlyPaymentsVAT1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRate";
 			definition = "Tax rate to be applied for early payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Max4Text discountTaxType;
 	/**
 	 * Type of tax applied.
 	 * <p>
@@ -135,7 +137,7 @@ public class EarlyPaymentsVAT1 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DiscountTaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscountTaxType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class EarlyPaymentsVAT1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountTaxType";
 			definition = "Type of tax applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount discountTaxAmount;
 	/**
 	 * Early payment discount tax amount calculated using defined tax rate.
 	 * <p>
@@ -177,7 +180,7 @@ public class EarlyPaymentsVAT1 {
 	 * "Early payment discount tax amount calculated using defined tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DiscountTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscountTaxAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
@@ -185,8 +188,8 @@ public class EarlyPaymentsVAT1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountTaxAmount";
 			definition = "Early payment discount tax amount calculated using defined tax rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -194,15 +197,39 @@ public class EarlyPaymentsVAT1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPaymentsVAT1.TaxRate, com.tools20022.repository.msg.EarlyPaymentsVAT1.DiscountTaxType,
-						com.tools20022.repository.msg.EarlyPaymentsVAT1.DiscountTaxAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPaymentsVAT1.mmTaxRate, com.tools20022.repository.msg.EarlyPaymentsVAT1.mmDiscountTaxType,
+						com.tools20022.repository.msg.EarlyPaymentsVAT1.mmDiscountTaxAmount);
 				trace_lazy = () -> CommercialTradeSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EarlyPaymentsVAT1";
 				definition = "Specifies the payment terms of the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getTaxRate() {
+		return taxRate;
+	}
+
+	public void setTaxRate(PercentageRate taxRate) {
+		this.taxRate = taxRate;
+	}
+
+	public Max4Text getDiscountTaxType() {
+		return discountTaxType;
+	}
+
+	public void setDiscountTaxType(Max4Text discountTaxType) {
+		this.discountTaxType = discountTaxType;
+	}
+
+	public CurrencyAndAmount getDiscountTaxAmount() {
+		return discountTaxAmount;
+	}
+
+	public void setDiscountTaxAmount(CurrencyAndAmount discountTaxAmount) {
+		this.discountTaxAmount = discountTaxAmount;
 	}
 }

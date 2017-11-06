@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#Approved
- * CorporateActionEventStage1Code.Approved}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmApproved
+ * CorporateActionEventStage1Code.mmApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#Deactivated
- * CorporateActionEventStage1Code.Deactivated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmDeactivated
+ * CorporateActionEventStage1Code.mmDeactivated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#ActionPeriod
- * CorporateActionEventStage1Code.ActionPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmActionPeriod
+ * CorporateActionEventStage1Code.mmActionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#SubjectToApproval
- * CorporateActionEventStage1Code.SubjectToApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmSubjectToApproval
+ * CorporateActionEventStage1Code.mmSubjectToApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#UnconditionalAsToAcceptance
- * CorporateActionEventStage1Code.UnconditionalAsToAcceptance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmUnconditionalAsToAcceptance
+ * CorporateActionEventStage1Code.mmUnconditionalAsToAcceptance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#WhollyUnconditional
- * CorporateActionEventStage1Code.WhollyUnconditional}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmWhollyUnconditional
+ * CorporateActionEventStage1Code.mmWhollyUnconditional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#FullReversalLotteryNotification
- * CorporateActionEventStage1Code.FullReversalLotteryNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmFullReversalLotteryNotification
+ * CorporateActionEventStage1Code.mmFullReversalLotteryNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#Lapsed
- * CorporateActionEventStage1Code.Lapsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmLapsed
+ * CorporateActionEventStage1Code.mmLapsed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#PartialReversalLotteryNotification
- * CorporateActionEventStage1Code.PartialReversalLotteryNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmPartialReversalLotteryNotification
+ * CorporateActionEventStage1Code.mmPartialReversalLotteryNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#RescissionReversalLotteryNotification
- * CorporateActionEventStage1Code.RescissionReversalLotteryNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage1Code#mmRescissionReversalLotteryNotification
+ * CorporateActionEventStage1Code.mmRescissionReversalLotteryNotification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "Approved"</li>
 	 * </ul>
 	 */
-	public static final MMCode Approved = new MMCode() {
+	public static final MMCode mmApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
@@ -128,7 +128,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "Deactivated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deactivated = new MMCode() {
+	public static final MMCode mmDeactivated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivated";
@@ -151,7 +151,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "ActionPeriod"</li>
 	 * </ul>
 	 */
-	public static final MMCode ActionPeriod = new MMCode() {
+	public static final MMCode mmActionPeriod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
@@ -174,7 +174,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "SubjectToApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubjectToApproval = new MMCode() {
+	public static final MMCode mmSubjectToApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToApproval";
@@ -197,7 +197,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "UnconditionalAsToAcceptance"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnconditionalAsToAcceptance = new MMCode() {
+	public static final MMCode mmUnconditionalAsToAcceptance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnconditionalAsToAcceptance";
@@ -220,7 +220,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "WhollyUnconditional"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhollyUnconditional = new MMCode() {
+	public static final MMCode mmWhollyUnconditional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhollyUnconditional";
@@ -243,7 +243,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "FullReversalLotteryNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullReversalLotteryNotification = new MMCode() {
+	public static final MMCode mmFullReversalLotteryNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullReversalLotteryNotification";
@@ -266,7 +266,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "Lapsed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lapsed = new MMCode() {
+	public static final MMCode mmLapsed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lapsed";
@@ -289,7 +289,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "PartialReversalLotteryNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialReversalLotteryNotification = new MMCode() {
+	public static final MMCode mmPartialReversalLotteryNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialReversalLotteryNotification";
@@ -312,7 +312,7 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	 * name} = "RescissionReversalLotteryNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode RescissionReversalLotteryNotification = new MMCode() {
+	public static final MMCode mmRescissionReversalLotteryNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RescissionReversalLotteryNotification";
@@ -323,16 +323,16 @@ public class CorporateActionEventStage1Code extends CorporateActionEventStageCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APPD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStage1Code";
 				definition = "Specifies the stage of the CA event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStage1Code.Approved, com.tools20022.repository.codeset.CorporateActionEventStage1Code.Deactivated,
-						com.tools20022.repository.codeset.CorporateActionEventStage1Code.ActionPeriod, com.tools20022.repository.codeset.CorporateActionEventStage1Code.SubjectToApproval,
-						com.tools20022.repository.codeset.CorporateActionEventStage1Code.UnconditionalAsToAcceptance, com.tools20022.repository.codeset.CorporateActionEventStage1Code.WhollyUnconditional,
-						com.tools20022.repository.codeset.CorporateActionEventStage1Code.FullReversalLotteryNotification, com.tools20022.repository.codeset.CorporateActionEventStage1Code.Lapsed,
-						com.tools20022.repository.codeset.CorporateActionEventStage1Code.PartialReversalLotteryNotification, com.tools20022.repository.codeset.CorporateActionEventStage1Code.RescissionReversalLotteryNotification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmApproved, com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmDeactivated,
+						com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmActionPeriod, com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmSubjectToApproval,
+						com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmUnconditionalAsToAcceptance, com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmWhollyUnconditional,
+						com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmFullReversalLotteryNotification, com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmLapsed,
+						com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmPartialReversalLotteryNotification, com.tools20022.repository.codeset.CorporateActionEventStage1Code.mmRescissionReversalLotteryNotification);
 				trace_lazy = () -> CorporateActionEventStageCode.mmObject();
 			}
 		});

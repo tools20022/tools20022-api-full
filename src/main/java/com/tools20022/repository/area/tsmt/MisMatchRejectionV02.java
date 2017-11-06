@@ -72,27 +72,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#RejectionIdentification
- * MisMatchRejectionV02.RejectionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#mmRejectionIdentification
+ * MisMatchRejectionV02.mmRejectionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#TransactionIdentification
- * MisMatchRejectionV02.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#mmTransactionIdentification
+ * MisMatchRejectionV02.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#SubmitterTransactionReference
- * MisMatchRejectionV02.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#mmSubmitterTransactionReference
+ * MisMatchRejectionV02.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#DataSetMatchReportReference
- * MisMatchRejectionV02.DataSetMatchReportReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#mmDataSetMatchReportReference
+ * MisMatchRejectionV02.mmDataSetMatchReportReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#RejectionReason
- * MisMatchRejectionV02.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#mmRejectionReason
+ * MisMatchRejectionV02.mmRejectionReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#identifier
- * MisMatchRejectionV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.022.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MisMatchRejectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 rejectionIdentification;
 	/**
 	 * Identifies the rejection message.
 	 * <p>
@@ -131,17 +130,18 @@ public class MisMatchRejectionV02 {
 	 * definition} = "Identifies the rejection message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RejectionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRejectionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionIdentification";
 			definition = "Identifies the rejection message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -169,17 +169,18 @@ public class MisMatchRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the transaction for the requesting financial institution.
 	 * <p>
@@ -204,17 +205,18 @@ public class MisMatchRejectionV02 {
 	 * "Reference to the transaction for the requesting financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected MessageIdentification1 dataSetMatchReportReference;
 	/**
 	 * Reference to the identification of the report that contained the
 	 * difference.
@@ -241,17 +243,18 @@ public class MisMatchRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DataSetMatchReportReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDataSetMatchReportReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DataSetMtchRptRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetMatchReportReference";
 			definition = "Reference to the identification of the report that contained the difference. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected RejectionReason1Choice rejectionReason;
 	/**
 	 * Reason why the user cannot accept the request.
 	 * <p>
@@ -275,42 +278,15 @@ public class MisMatchRejectionV02 {
 	 * definition} = "Reason why the user cannot accept the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RejectionReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason why the user cannot accept the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason1Choice.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "022"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "022";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -324,12 +300,59 @@ public class MisMatchRejectionV02 {
 				rootElement = "Document";
 				xmlTag = "MisMtchRjctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.MisMatchRejectionV02.RejectionIdentification, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.SubmitterTransactionReference, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.DataSetMatchReportReference,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.RejectionReason);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.MisMatchRejectionV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmRejectionIdentification, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmDataSetMatchReportReference,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmRejectionReason);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "022";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRejectionIdentification() {
+		return rejectionIdentification;
+	}
+
+	public void setRejectionIdentification(MessageIdentification1 rejectionIdentification) {
+		this.rejectionIdentification = rejectionIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public MessageIdentification1 getDataSetMatchReportReference() {
+		return dataSetMatchReportReference;
+	}
+
+	public void setDataSetMatchReportReference(MessageIdentification1 dataSetMatchReportReference) {
+		this.dataSetMatchReportReference = dataSetMatchReportReference;
+	}
+
+	public RejectionReason1Choice getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReason1Choice rejectionReason) {
+		this.rejectionReason = rejectionReason;
 	}
 }

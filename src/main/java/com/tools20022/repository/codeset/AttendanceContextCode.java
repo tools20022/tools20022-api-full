@@ -30,29 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#Attended
- * AttendanceContextCode.Attended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmAttended
+ * AttendanceContextCode.mmAttended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#SemiAttended
- * AttendanceContextCode.SemiAttended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmSemiAttended
+ * AttendanceContextCode.mmSemiAttended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#Unattended
- * AttendanceContextCode.Unattended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmUnattended
+ * AttendanceContextCode.mmUnattended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#AttendantDelivery
- * AttendanceContextCode.AttendantDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmAttendantDelivery
+ * AttendanceContextCode.mmAttendantDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#CustomerDelivery
- * AttendanceContextCode.CustomerDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmCustomerDelivery
+ * AttendanceContextCode.mmCustomerDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#CarrierDelivery
- * AttendanceContextCode.CarrierDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmCarrierDelivery
+ * AttendanceContextCode.mmCarrierDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#FullServe
- * AttendanceContextCode.FullServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmFullServe
+ * AttendanceContextCode.mmFullServe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#SelfServe
- * AttendanceContextCode.SelfServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmSelfServe
+ * AttendanceContextCode.mmSelfServe}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -67,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -109,7 +109,7 @@ public class AttendanceContextCode {
 	 * definition} = "Attended payment, with an attendant."</li>
 	 * </ul>
 	 */
-	public static final MMCode Attended = new MMCode() {
+	public static final MMCode mmAttended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Attended";
@@ -142,7 +142,7 @@ public class AttendanceContextCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SemiAttended = new MMCode() {
+	public static final MMCode mmSemiAttended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SemiAttended";
@@ -172,7 +172,7 @@ public class AttendanceContextCode {
 	 * definition} = "Unattended payment, no attendant present."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unattended = new MMCode() {
+	public static final MMCode mmUnattended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Unattended";
@@ -202,7 +202,7 @@ public class AttendanceContextCode {
 	 * definition} = "Delivery by an attendant."</li>
 	 * </ul>
 	 */
-	public static final MMCode AttendantDelivery = new MMCode() {
+	public static final MMCode mmAttendantDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendantDelivery";
@@ -232,7 +232,7 @@ public class AttendanceContextCode {
 	 * definition} = "Delivery by the customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerDelivery = new MMCode() {
+	public static final MMCode mmCustomerDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDelivery";
@@ -262,7 +262,7 @@ public class AttendanceContextCode {
 	 * definition} = "Delivery by a carrier."</li>
 	 * </ul>
 	 */
-	public static final MMCode CarrierDelivery = new MMCode() {
+	public static final MMCode mmCarrierDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierDelivery";
@@ -292,7 +292,7 @@ public class AttendanceContextCode {
 	 * definition} = "Full service for fuel distribution."</li>
 	 * </ul>
 	 */
-	public static final MMCode FullServe = new MMCode() {
+	public static final MMCode mmFullServe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullServe";
@@ -322,7 +322,7 @@ public class AttendanceContextCode {
 	 * definition} = "Self service for fuel distribution."</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfServe = new MMCode() {
+	public static final MMCode mmSelfServe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfServe";
@@ -335,15 +335,15 @@ public class AttendanceContextCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ATTD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AttendanceContextCode";
 				definition = "Human attendance at the POI location during the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContextCode.Attended, com.tools20022.repository.codeset.AttendanceContextCode.SemiAttended,
-						com.tools20022.repository.codeset.AttendanceContextCode.Unattended, com.tools20022.repository.codeset.AttendanceContextCode.AttendantDelivery,
-						com.tools20022.repository.codeset.AttendanceContextCode.CustomerDelivery, com.tools20022.repository.codeset.AttendanceContextCode.CarrierDelivery, com.tools20022.repository.codeset.AttendanceContextCode.FullServe,
-						com.tools20022.repository.codeset.AttendanceContextCode.SelfServe);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContextCode.mmAttended, com.tools20022.repository.codeset.AttendanceContextCode.mmSemiAttended,
+						com.tools20022.repository.codeset.AttendanceContextCode.mmUnattended, com.tools20022.repository.codeset.AttendanceContextCode.mmAttendantDelivery,
+						com.tools20022.repository.codeset.AttendanceContextCode.mmCustomerDelivery, com.tools20022.repository.codeset.AttendanceContextCode.mmCarrierDelivery,
+						com.tools20022.repository.codeset.AttendanceContextCode.mmFullServe, com.tools20022.repository.codeset.AttendanceContextCode.mmSelfServe);
 				derivation_lazy = () -> Arrays.asList(AttendanceContext1Code.mmObject(), AttendanceContext2Code.mmObject());
 			}
 		});

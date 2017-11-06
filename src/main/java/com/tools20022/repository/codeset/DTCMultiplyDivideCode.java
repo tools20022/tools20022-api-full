@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#Multiply
- * DTCMultiplyDivideCode.Multiply}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#mmMultiply
+ * DTCMultiplyDivideCode.mmMultiply}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#Divide
- * DTCMultiplyDivideCode.Divide}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#mmDivide
+ * DTCMultiplyDivideCode.mmDivide}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class DTCMultiplyDivideCode {
 	 * definition} = "Positions multiplied by rate. "</li>
 	 * </ul>
 	 */
-	public static final MMCode Multiply = new MMCode() {
+	public static final MMCode mmMultiply = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiply";
@@ -121,7 +121,7 @@ public class DTCMultiplyDivideCode {
 	 * definition} = "Positions divided by rate."</li>
 	 * </ul>
 	 */
-	public static final MMCode Divide = new MMCode() {
+	public static final MMCode mmDivide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Divide";
@@ -134,12 +134,12 @@ public class DTCMultiplyDivideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MULT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCMultiplyDivideCode";
 				definition = "Specifies DTC (The Depository Trust Company) entitlement calculation logic.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCMultiplyDivideCode.Multiply, com.tools20022.repository.codeset.DTCMultiplyDivideCode.Divide);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCMultiplyDivideCode.mmMultiply, com.tools20022.repository.codeset.DTCMultiplyDivideCode.mmDivide);
 				derivation_lazy = () -> Arrays.asList(DTCMultiplyDivide1Code.mmObject());
 			}
 		});

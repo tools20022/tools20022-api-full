@@ -41,20 +41,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#OutsideIndex
- * ExchangeForPhysicalTrade.OutsideIndex}</li>
+ * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmOutsideIndex
+ * ExchangeForPhysicalTrade.mmOutsideIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#FairValue
- * ExchangeForPhysicalTrade.FairValue}</li>
+ * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmFairValue
+ * ExchangeForPhysicalTrade.mmFairValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#ValueForFutures
- * ExchangeForPhysicalTrade.ValueForFutures}</li>
+ * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmValueForFutures
+ * ExchangeForPhysicalTrade.mmValueForFutures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#OutMainCountryIndex
- * ExchangeForPhysicalTrade.OutMainCountryIndex}</li>
+ * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmOutMainCountryIndex
+ * ExchangeForPhysicalTrade.mmOutMainCountryIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#SecuritiesOrder
- * ExchangeForPhysicalTrade.SecuritiesOrder}</li>
+ * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade#mmSecuritiesOrder
+ * ExchangeForPhysicalTrade.mmSecuritiesOrder}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#ExchangeForPhysicalTrade
- * SecuritiesOrder.ExchangeForPhysicalTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmExchangeForPhysicalTrade
+ * SecuritiesOrder.mmExchangeForPhysicalTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -78,8 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExchangeForPhysicalTrade {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate outsideIndex;
 	/**
 	 * Unexpected divergence between the price behaviour of an underlying
 	 * position or portfolio and the price behaviour of a hedging position or
@@ -107,19 +108,19 @@ public class ExchangeForPhysicalTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#OutsideIndex
-	 * ExchangeForPhysicalTradeParameters1.OutsideIndex}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#mmOutsideIndex
+	 * ExchangeForPhysicalTradeParameters1.mmOutsideIndex}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -133,19 +134,20 @@ public class ExchangeForPhysicalTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OutsideIndex = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOutsideIndex = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.OutsideIndex);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmOutsideIndex);
 			elementContext_lazy = () -> ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OutsideIndex";
 			definition = "Unexpected divergence between the price behaviour of an underlying position or portfolio and the price behaviour of a hedging position or benchmark.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount fairValue;
 	/**
 	 * Difference between the value of a future and the value of the underlying
 	 * equities after allowing for the discounted cash flows associated with the
@@ -158,24 +160,25 @@ public class ExchangeForPhysicalTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#FairValue
-	 * ExchangeForPhysicalTradeParameters1.FairValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#FairValue
-	 * BidResponsePrice1.FairValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NonDisclosedBid2#FairValue
-	 * NonDisclosedBid2.FairValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#mmFairValue
+	 * ExchangeForPhysicalTradeParameters1.mmFairValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BidResponsePrice1#mmFairValue
+	 * BidResponsePrice1.mmFairValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonDisclosedBid2#mmFairValue
+	 * NonDisclosedBid2.mmFairValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -189,20 +192,21 @@ public class ExchangeForPhysicalTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FairValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFairValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.FairValue, com.tools20022.repository.msg.BidResponsePrice1.FairValue,
-					com.tools20022.repository.msg.NonDisclosedBid2.FairValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmFairValue, com.tools20022.repository.msg.BidResponsePrice1.mmFairValue,
+					com.tools20022.repository.msg.NonDisclosedBid2.mmFairValue);
 			elementContext_lazy = () -> ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount valueForFutures;
 	/**
 	 * Value of a futures position involved in an Exchange For Physical trade.
 	 * <p>
@@ -213,19 +217,19 @@ public class ExchangeForPhysicalTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#ValueForFutures
-	 * ExchangeForPhysicalTradeParameters1.ValueForFutures}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1#mmValueForFutures
+	 * ExchangeForPhysicalTradeParameters1.mmValueForFutures}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -239,19 +243,20 @@ public class ExchangeForPhysicalTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ValueForFutures = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValueForFutures = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.ValueForFutures);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmValueForFutures);
 			elementContext_lazy = () -> ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValueForFutures";
 			definition = "Value of a futures position involved in an Exchange For Physical trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount outMainCountryIndex;
 	/**
 	 * Accepted value of stocks composing an index located outside its country
 	 * of origin.
@@ -263,19 +268,19 @@ public class ExchangeForPhysicalTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LiquidityAndStatistics1#OutMainCountryIndex
-	 * LiquidityAndStatistics1.OutMainCountryIndex}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LiquidityAndStatistics1#mmOutMainCountryIndex
+	 * LiquidityAndStatistics1.mmOutMainCountryIndex}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -289,19 +294,20 @@ public class ExchangeForPhysicalTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OutMainCountryIndex = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOutMainCountryIndex = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityAndStatistics1.OutMainCountryIndex);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityAndStatistics1.mmOutMainCountryIndex);
 			elementContext_lazy = () -> ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OutMainCountryIndex";
 			definition = "Accepted value of stocks composing an index located outside its country of origin.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected SecuritiesOrder securitiesOrder;
 	/**
 	 * Order for which parameters for exchange for physical trading are
 	 * specified.
@@ -311,8 +317,8 @@ public class ExchangeForPhysicalTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#ExchangeForPhysicalTrade
-	 * SecuritiesOrder.ExchangeForPhysicalTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmExchangeForPhysicalTrade
+	 * SecuritiesOrder.mmExchangeForPhysicalTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -338,35 +344,75 @@ public class ExchangeForPhysicalTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesOrder";
 			definition = "Order for which parameters for exchange for physical trading are specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.ExchangeForPhysicalTrade;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmExchangeForPhysicalTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExchangeForPhysicalTrade";
 				definition = "Technique whereby a position in the underlying is traded for a futures position in the physical commodity markets.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.ExchangeForPhysicalTrade);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExchangeForPhysicalTrade.OutsideIndex, com.tools20022.repository.entity.ExchangeForPhysicalTrade.FairValue,
-						com.tools20022.repository.entity.ExchangeForPhysicalTrade.ValueForFutures, com.tools20022.repository.entity.ExchangeForPhysicalTrade.OutMainCountryIndex,
-						com.tools20022.repository.entity.ExchangeForPhysicalTrade.SecuritiesOrder);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmExchangeForPhysicalTrade);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmOutsideIndex, com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmFairValue,
+						com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmValueForFutures, com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmOutMainCountryIndex,
+						com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmSecuritiesOrder);
 				derivationComponent_lazy = () -> Arrays.asList(ExchangeForPhysicalTradeParameters1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getOutsideIndex() {
+		return outsideIndex;
+	}
+
+	public void setOutsideIndex(PercentageRate outsideIndex) {
+		this.outsideIndex = outsideIndex;
+	}
+
+	public CurrencyAndAmount getFairValue() {
+		return fairValue;
+	}
+
+	public void setFairValue(CurrencyAndAmount fairValue) {
+		this.fairValue = fairValue;
+	}
+
+	public CurrencyAndAmount getValueForFutures() {
+		return valueForFutures;
+	}
+
+	public void setValueForFutures(CurrencyAndAmount valueForFutures) {
+		this.valueForFutures = valueForFutures;
+	}
+
+	public CurrencyAndAmount getOutMainCountryIndex() {
+		return outMainCountryIndex;
+	}
+
+	public void setOutMainCountryIndex(CurrencyAndAmount outMainCountryIndex) {
+		this.outMainCountryIndex = outMainCountryIndex;
+	}
+
+	public SecuritiesOrder getSecuritiesOrder() {
+		return securitiesOrder;
+	}
+
+	public void setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
+		this.securitiesOrder = securitiesOrder;
 	}
 }

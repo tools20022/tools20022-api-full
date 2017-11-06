@@ -35,23 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction9#TransactionIdentification
- * ATMTransaction9.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction9#mmTransactionIdentification
+ * ATMTransaction9.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction9#ReconciliationIdentification
- * ATMTransaction9.ReconciliationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction9#mmReconciliationIdentification
+ * ATMTransaction9.mmReconciliationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction9#CardholderNewPIN
- * ATMTransaction9.CardholderNewPIN}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction9#ICCRelatedData
- * ATMTransaction9.ICCRelatedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction9#mmCardholderNewPIN
+ * ATMTransaction9.mmCardholderNewPIN}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction9#mmICCRelatedData
+ * ATMTransaction9.mmICCRelatedData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransaction9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifier1 transactionIdentification;
 	/**
 	 * Identification of the transaction assigned by the ATM.
 	 * <p>
@@ -95,11 +97,11 @@ public class ATMTransaction9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#TransactionIdentification
-	 * ATMTransaction6.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#mmTransactionIdentification
+	 * ATMTransaction6.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
@@ -107,13 +109,14 @@ public class ATMTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction6.TransactionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction6.mmTransactionIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	protected Max35Text reconciliationIdentification;
 	/**
 	 * Identification of the reconciliation period assigned by the ATM manager.
 	 * <p>
@@ -143,7 +146,7 @@ public class ATMTransaction9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
@@ -151,11 +154,12 @@ public class ATMTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation period assigned by the ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OnLinePIN5 cardholderNewPIN;
 	/**
 	 * Encrypted personal identification number (PIN) and related information.
 	 * <p>
@@ -183,7 +187,7 @@ public class ATMTransaction9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CardholderNewPIN = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCardholderNewPIN = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
@@ -191,12 +195,13 @@ public class ATMTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderNewPIN";
 			definition = "Encrypted personal identification number (PIN) and related information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OnLinePIN5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OnLinePIN5.mmObject();
 		}
 	};
+	protected Max10000Binary iCCRelatedData;
 	/**
 	 * Sequence of one or more TLV data elements from the ATM application, in
 	 * accordance with ISO 7816-6, not in a specific order. Present if the
@@ -230,11 +235,11 @@ public class ATMTransaction9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#ICCRelatedData
-	 * ATMTransaction6.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#mmICCRelatedData
+	 * ATMTransaction6.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
@@ -242,9 +247,9 @@ public class ATMTransaction9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction6.ICCRelatedData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction6.mmICCRelatedData;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
@@ -252,9 +257,9 @@ public class ATMTransaction9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction9.TransactionIdentification, com.tools20022.repository.msg.ATMTransaction9.ReconciliationIdentification,
-						com.tools20022.repository.msg.ATMTransaction9.CardholderNewPIN, com.tools20022.repository.msg.ATMTransaction9.ICCRelatedData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction9.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction9.mmReconciliationIdentification,
+						com.tools20022.repository.msg.ATMTransaction9.mmCardholderNewPIN, com.tools20022.repository.msg.ATMTransaction9.mmICCRelatedData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction9";
 				definition = "Transaction for which the service is requested.";
@@ -262,5 +267,37 @@ public class ATMTransaction9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifier1 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Max35Text getReconciliationIdentification() {
+		return reconciliationIdentification;
+	}
+
+	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+		this.reconciliationIdentification = reconciliationIdentification;
+	}
+
+	public OnLinePIN5 getCardholderNewPIN() {
+		return cardholderNewPIN;
+	}
+
+	public void setCardholderNewPIN(com.tools20022.repository.msg.OnLinePIN5 cardholderNewPIN) {
+		this.cardholderNewPIN = cardholderNewPIN;
+	}
+
+	public Max10000Binary getICCRelatedData() {
+		return iCCRelatedData;
+	}
+
+	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+		this.iCCRelatedData = iCCRelatedData;
 	}
 }

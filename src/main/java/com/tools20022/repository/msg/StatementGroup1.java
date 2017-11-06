@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Group of the statement header reporting the bank services billing and the
@@ -35,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementGroup1#GroupIdentification
- * StatementGroup1.GroupIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementGroup1#Sender
- * StatementGroup1.Sender}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementGroup1#mmGroupIdentification
+ * StatementGroup1.mmGroupIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementGroup1#mmSender
+ * StatementGroup1.mmSender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementGroup1#SenderIndividualContact
- * StatementGroup1.SenderIndividualContact}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementGroup1#Receiver
- * StatementGroup1.Receiver}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementGroup1#mmSenderIndividualContact
+ * StatementGroup1.mmSenderIndividualContact}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementGroup1#mmReceiver
+ * StatementGroup1.mmReceiver}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementGroup1#ReceiverIndividualContact
- * StatementGroup1.ReceiverIndividualContact}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementGroup1#mmReceiverIndividualContact
+ * StatementGroup1.mmReceiverIndividualContact}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementGroup1#BillingStatement
- * StatementGroup1.BillingStatement}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementGroup1#mmBillingStatement
+ * StatementGroup1.mmBillingStatement}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,15 +58,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01#BillingStatementGroup
- * BankServicesBillingStatementV01.BillingStatementGroup}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01#mmBillingStatementGroup
+ * BankServicesBillingStatementV01.mmBillingStatementGroup}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementGroup1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text groupIdentification;
 	/**
 	 * Identification of a group of customer billing statements.
 	 * <p>
@@ -118,13 +120,13 @@ public class StatementGroup1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#GroupIdentification
-	 * StatementGroup2.GroupIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#mmGroupIdentification
+	 * StatementGroup2.mmGroupIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
@@ -132,12 +134,13 @@ public class StatementGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Identification of a group of customer billing statements.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.GroupIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmGroupIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification58 sender;
 	/**
 	 * Originating financial institution sending the statement.
 	 * <p>
@@ -165,13 +168,13 @@ public class StatementGroup1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatementGroup2#Sender
-	 * StatementGroup2.Sender}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.StatementGroup2#mmSender
+	 * StatementGroup2.mmSender}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Sender = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSender = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
@@ -179,13 +182,14 @@ public class StatementGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sender";
 			definition = "Originating financial institution sending the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.Sender);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmSender);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification58.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification58.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ContactDetails3> senderIndividualContact;
 	/**
 	 * Specifies the individual to contact in case of technical problems at the
 	 * sender's location.
@@ -218,13 +222,13 @@ public class StatementGroup1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#SenderIndividualContact
-	 * StatementGroup2.SenderIndividualContact}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#mmSenderIndividualContact
+	 * StatementGroup2.mmSenderIndividualContact}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderIndividualContact = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderIndividualContact = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
@@ -232,12 +236,13 @@ public class StatementGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderIndividualContact";
 			definition = "Specifies the individual to contact in case of technical problems at the sender's location.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.SenderIndividualContact);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmSenderIndividualContact);
 			maxOccurs = 2;
-			complexType_lazy = () -> ContactDetails3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
 		}
 	};
+	protected PartyIdentification58 receiver;
 	/**
 	 * Financial institution customer receiving the statement.
 	 * <p>
@@ -265,13 +270,13 @@ public class StatementGroup1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatementGroup2#Receiver
-	 * StatementGroup2.Receiver}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.StatementGroup2#mmReceiver
+	 * StatementGroup2.mmReceiver}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Receiver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceiver = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
@@ -279,13 +284,14 @@ public class StatementGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receiver";
 			definition = "Financial institution customer receiving the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.Receiver);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmReceiver);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification58.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification58.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ContactDetails3> receiverIndividualContact;
 	/**
 	 * Specifies the individual to contact in case of technical problems at the
 	 * receiver's location.
@@ -318,13 +324,13 @@ public class StatementGroup1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#ReceiverIndividualContact
-	 * StatementGroup2.ReceiverIndividualContact}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#mmReceiverIndividualContact
+	 * StatementGroup2.mmReceiverIndividualContact}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiverIndividualContact = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiverIndividualContact = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
@@ -332,12 +338,13 @@ public class StatementGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverIndividualContact";
 			definition = "Specifies the individual to contact in case of technical problems at the receiver's location.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.ReceiverIndividualContact);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmReceiverIndividualContact);
 			maxOccurs = 2;
-			complexType_lazy = () -> ContactDetails3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BillingStatement1> billingStatement;
 	/**
 	 * Provides the bank services billing statement recounting of all service
 	 * chargeable events that occurred during a reporting cycle, such as the end
@@ -370,13 +377,13 @@ public class StatementGroup1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#BillingStatement
-	 * StatementGroup2.BillingStatement}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatementGroup2#mmBillingStatement
+	 * StatementGroup2.mmBillingStatement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BillingStatement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBillingStatement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
@@ -384,21 +391,21 @@ public class StatementGroup1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingStatement";
 			definition = "Provides the bank services billing statement recounting of all service chargeable events that occurred during a reporting cycle, such as the end of the month reporting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.BillingStatement);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmBillingStatement);
 			minOccurs = 1;
-			type_lazy = () -> BillingStatement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BillingStatement1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup1.GroupIdentification, com.tools20022.repository.msg.StatementGroup1.Sender,
-						com.tools20022.repository.msg.StatementGroup1.SenderIndividualContact, com.tools20022.repository.msg.StatementGroup1.Receiver, com.tools20022.repository.msg.StatementGroup1.ReceiverIndividualContact,
-						com.tools20022.repository.msg.StatementGroup1.BillingStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV01.BillingStatementGroup);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup1.mmGroupIdentification, com.tools20022.repository.msg.StatementGroup1.mmSender,
+						com.tools20022.repository.msg.StatementGroup1.mmSenderIndividualContact, com.tools20022.repository.msg.StatementGroup1.mmReceiver, com.tools20022.repository.msg.StatementGroup1.mmReceiverIndividualContact,
+						com.tools20022.repository.msg.StatementGroup1.mmBillingStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmBillingStatementGroup);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementGroup1";
 				definition = "Group of the statement header reporting the bank services billing and the billing statement.";
@@ -406,5 +413,53 @@ public class StatementGroup1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getGroupIdentification() {
+		return groupIdentification;
+	}
+
+	public void setGroupIdentification(Max35Text groupIdentification) {
+		this.groupIdentification = groupIdentification;
+	}
+
+	public PartyIdentification58 getSender() {
+		return sender;
+	}
+
+	public void setSender(com.tools20022.repository.msg.PartyIdentification58 sender) {
+		this.sender = sender;
+	}
+
+	public List<ContactDetails3> getSenderIndividualContact() {
+		return senderIndividualContact;
+	}
+
+	public void setSenderIndividualContact(List<com.tools20022.repository.msg.ContactDetails3> senderIndividualContact) {
+		this.senderIndividualContact = senderIndividualContact;
+	}
+
+	public PartyIdentification58 getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(com.tools20022.repository.msg.PartyIdentification58 receiver) {
+		this.receiver = receiver;
+	}
+
+	public List<ContactDetails3> getReceiverIndividualContact() {
+		return receiverIndividualContact;
+	}
+
+	public void setReceiverIndividualContact(List<com.tools20022.repository.msg.ContactDetails3> receiverIndividualContact) {
+		this.receiverIndividualContact = receiverIndividualContact;
+	}
+
+	public List<BillingStatement1> getBillingStatement() {
+		return billingStatement;
+	}
+
+	public void setBillingStatement(List<com.tools20022.repository.msg.BillingStatement1> billingStatement) {
+		this.billingStatement = billingStatement;
 	}
 }

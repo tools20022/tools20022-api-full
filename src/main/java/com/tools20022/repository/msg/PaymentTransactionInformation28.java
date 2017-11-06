@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide reference and status information on the
@@ -39,29 +40,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#ReversalIdentification
- * PaymentTransactionInformation28.ReversalIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmReversalIdentification
+ * PaymentTransactionInformation28.mmReversalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#OriginalInstructionIdentification
- * PaymentTransactionInformation28.OriginalInstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmOriginalInstructionIdentification
+ * PaymentTransactionInformation28.mmOriginalInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#OriginalEndToEndIdentification
- * PaymentTransactionInformation28.OriginalEndToEndIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmOriginalEndToEndIdentification
+ * PaymentTransactionInformation28.mmOriginalEndToEndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#OriginalInstructedAmount
- * PaymentTransactionInformation28.OriginalInstructedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmOriginalInstructedAmount
+ * PaymentTransactionInformation28.mmOriginalInstructedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#ReversedInstructedAmount
- * PaymentTransactionInformation28.ReversedInstructedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmReversedInstructedAmount
+ * PaymentTransactionInformation28.mmReversedInstructedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#ChargeBearer
- * PaymentTransactionInformation28.ChargeBearer}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmChargeBearer
+ * PaymentTransactionInformation28.mmChargeBearer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#ReversalReasonInformation
- * PaymentTransactionInformation28.ReversalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmReversalReasonInformation
+ * PaymentTransactionInformation28.mmReversalReasonInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#OriginalTransactionReference
- * PaymentTransactionInformation28.OriginalTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmOriginalTransactionReference
+ * PaymentTransactionInformation28.mmOriginalTransactionReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTransactionInformation28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reversalIdentification;
 	/**
 	 * Unique identification, as assigned by an instructing party for an
 	 * instructed party, to unambiguously identify the reversed transaction.
@@ -119,7 +121,7 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReversalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReversalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
 			isDerived = false;
@@ -127,11 +129,12 @@ public class PaymentTransactionInformation28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIdentification";
 			definition = "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed transaction.\nUsage: The instructing party is the party sending the reversal message and not the party that sent the original instruction that is being reversed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalInstructionIdentification;
 	/**
 	 * Unique identification, as assigned by the original instructing party for
 	 * the original instructed party, to unambiguously identify the original
@@ -146,8 +149,8 @@ public class PaymentTransactionInformation28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#InstructionIdentification
-	 * PaymentIdentification.InstructionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmInstructionIdentification
+	 * PaymentIdentification.mmInstructionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,20 +171,21 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.InstructionIdentification;
 			isDerived = false;
 			xmlTag = "OrgnlInstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalEndToEndIdentification;
 	/**
 	 * Unique identification, as assigned by the original initiating party, to
 	 * unambiguously identify the original transaction.
@@ -195,8 +199,8 @@ public class PaymentTransactionInformation28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#EndToEndIdentification
-	 * PaymentIdentification.EndToEndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+	 * PaymentIdentification.mmEndToEndIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -217,20 +221,21 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.EndToEndIdentification;
 			isDerived = false;
 			xmlTag = "OrgnlEndToEndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount originalInstructedAmount;
 	/**
 	 * Amount of money, as provided in the original transaction, to be moved
 	 * between the debtor and the creditor, before deduction of charges,
@@ -246,8 +251,8 @@ public class PaymentTransactionInformation28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -268,20 +273,21 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalInstructedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "OrgnlInstdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructedAmount";
 			definition = "Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount reversedInstructedAmount;
 	/**
 	 * Amount of money to be moved between the debtor and the creditor, before
 	 * deduction of charges, in the reversed transaction.
@@ -296,8 +302,8 @@ public class PaymentTransactionInformation28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -318,20 +324,21 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReversedInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReversedInstructedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "RvsdInstdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInstructedAmount";
 			definition = "Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the reversed transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ChargeBearerType1Code chargeBearer;
 	/**
 	 * Specifies if the creditor and/or debtor will bear the charges associated
 	 * with the processing of the payment transaction.
@@ -349,8 +356,8 @@ public class PaymentTransactionInformation28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#BearerType
-	 * Charges.BearerType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmBearerType
+	 * Charges.mmBearerType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -371,20 +378,21 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargeBearer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmBearerType;
 			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.BearerType;
 			isDerived = false;
 			xmlTag = "ChrgBr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.\n\nUsage: The ChargeBearer applies to the reversal message, not to the original instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReversalReasonInformation6> reversalReasonInformation;
 	/**
 	 * Set of elements used to provide detailed information on the reversal
 	 * reason.
@@ -398,8 +406,8 @@ public class PaymentTransactionInformation28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentStatus
-	 * Payment.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+	 * Payment.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -420,20 +428,21 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReversalReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
 			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentStatus;
 			isDerived = false;
 			xmlTag = "RvslRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalReasonInformation";
 			definition = "Set of elements used to provide detailed information on the reversal reason.";
 			minOccurs = 0;
-			type_lazy = () -> ReversalReasonInformation6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation6.mmObject();
 		}
 	};
+	protected OriginalTransactionReference13 originalTransactionReference;
 	/**
 	 * Set of key elements used to identify the original transaction that is
 	 * being referred to.
@@ -468,37 +477,101 @@ public class PaymentTransactionInformation28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalTransactionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalTransactionReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> PaymentTransactionInformation28.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionReference";
 			definition = "Set of key elements used to identify the original transaction that is being referred to.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalTransactionReference13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalTransactionReference13.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionInformation28.ReversalIdentification,
-						com.tools20022.repository.msg.PaymentTransactionInformation28.OriginalInstructionIdentification, com.tools20022.repository.msg.PaymentTransactionInformation28.OriginalEndToEndIdentification,
-						com.tools20022.repository.msg.PaymentTransactionInformation28.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation28.ReversedInstructedAmount,
-						com.tools20022.repository.msg.PaymentTransactionInformation28.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation28.ReversalReasonInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation28.OriginalTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionInformation28.mmReversalIdentification,
+						com.tools20022.repository.msg.PaymentTransactionInformation28.mmOriginalInstructionIdentification, com.tools20022.repository.msg.PaymentTransactionInformation28.mmOriginalEndToEndIdentification,
+						com.tools20022.repository.msg.PaymentTransactionInformation28.mmOriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation28.mmReversedInstructedAmount,
+						com.tools20022.repository.msg.PaymentTransactionInformation28.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation28.mmReversalReasonInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation28.mmOriginalTransactionReference);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransactionInformation28";
 				definition = "Set of elements used to provide reference and status information on the original transactions, included in the original instruction, to which the reversal message applies.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReversalIdentification() {
+		return reversalIdentification;
+	}
+
+	public void setReversalIdentification(Max35Text reversalIdentification) {
+		this.reversalIdentification = reversalIdentification;
+	}
+
+	public Max35Text getOriginalInstructionIdentification() {
+		return originalInstructionIdentification;
+	}
+
+	public void setOriginalInstructionIdentification(Max35Text originalInstructionIdentification) {
+		this.originalInstructionIdentification = originalInstructionIdentification;
+	}
+
+	public Max35Text getOriginalEndToEndIdentification() {
+		return originalEndToEndIdentification;
+	}
+
+	public void setOriginalEndToEndIdentification(Max35Text originalEndToEndIdentification) {
+		this.originalEndToEndIdentification = originalEndToEndIdentification;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getOriginalInstructedAmount() {
+		return originalInstructedAmount;
+	}
+
+	public void setOriginalInstructedAmount(ActiveOrHistoricCurrencyAndAmount originalInstructedAmount) {
+		this.originalInstructedAmount = originalInstructedAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getReversedInstructedAmount() {
+		return reversedInstructedAmount;
+	}
+
+	public void setReversedInstructedAmount(ActiveOrHistoricCurrencyAndAmount reversedInstructedAmount) {
+		this.reversedInstructedAmount = reversedInstructedAmount;
+	}
+
+	public ChargeBearerType1Code getChargeBearer() {
+		return chargeBearer;
+	}
+
+	public void setChargeBearer(ChargeBearerType1Code chargeBearer) {
+		this.chargeBearer = chargeBearer;
+	}
+
+	public List<ReversalReasonInformation6> getReversalReasonInformation() {
+		return reversalReasonInformation;
+	}
+
+	public void setReversalReasonInformation(List<com.tools20022.repository.msg.ReversalReasonInformation6> reversalReasonInformation) {
+		this.reversalReasonInformation = reversalReasonInformation;
+	}
+
+	public OriginalTransactionReference13 getOriginalTransactionReference() {
+		return originalTransactionReference;
+	}
+
+	public void setOriginalTransactionReference(com.tools20022.repository.msg.OriginalTransactionReference13 originalTransactionReference) {
+		this.originalTransactionReference = originalTransactionReference;
 	}
 }

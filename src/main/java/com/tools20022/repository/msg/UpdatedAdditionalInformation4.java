@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Additional information with update description and date.
@@ -38,21 +39,21 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation4#UpdateDescription
- * UpdatedAdditionalInformation4.UpdateDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation4#mmUpdateDescription
+ * UpdatedAdditionalInformation4.mmUpdateDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation4#UpdateDate
- * UpdatedAdditionalInformation4.UpdateDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation4#mmUpdateDate
+ * UpdatedAdditionalInformation4.mmUpdateDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation4#AdditionalInformation
- * UpdatedAdditionalInformation4.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation4#mmAdditionalInformation
+ * UpdatedAdditionalInformation4.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -67,6 +68,7 @@ import java.util.function.Supplier;
 public class UpdatedAdditionalInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax140Text updateDescription;
 	/**
 	 * Specifies the amendments made to the narrative since the last message.
 	 * <p>
@@ -96,7 +98,7 @@ public class UpdatedAdditionalInformation4 {
 	 * "Specifies the amendments made to the narrative since the last message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation4.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class UpdatedAdditionalInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDescription";
 			definition = "Specifies the amendments made to the narrative since the last message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
 		}
 	};
+	protected ISODate updateDate;
 	/**
 	 * Specifies the date at which the narrative has been updated.
 	 * <p>
@@ -137,7 +140,7 @@ public class UpdatedAdditionalInformation4 {
 	 * "Specifies the date at which the narrative has been updated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation4.mmObject();
 			isDerived = false;
@@ -145,11 +148,12 @@ public class UpdatedAdditionalInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDate";
 			definition = "Specifies the date at which the narrative has been updated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<RestrictedFINZMax8000Text> additionalInformation;
 	/**
 	 * Provides additional textual information.
 	 * <p>
@@ -178,7 +182,7 @@ public class UpdatedAdditionalInformation4 {
 	 * definition} = "Provides additional textual information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation4.mmObject();
 			isDerived = false;
@@ -194,9 +198,9 @@ public class UpdatedAdditionalInformation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation4.UpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation4.UpdateDate,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation4.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation4.mmUpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation4.mmUpdateDate,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation4.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -210,5 +214,29 @@ public class UpdatedAdditionalInformation4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax140Text getUpdateDescription() {
+		return updateDescription;
+	}
+
+	public void setUpdateDescription(RestrictedFINXMax140Text updateDescription) {
+		this.updateDescription = updateDescription;
+	}
+
+	public ISODate getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(ISODate updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public List<RestrictedFINZMax8000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<RestrictedFINZMax8000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

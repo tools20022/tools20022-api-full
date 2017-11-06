@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType6Code#IndustrialProduct
- * AssetClassProductType6Code.IndustrialProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType6Code#mmIndustrialProduct
+ * AssetClassProductType6Code.mmIndustrialProduct}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class AssetClassProductType6Code extends AssetClassProductTypeCode {
 	 * name} = "IndustrialProduct"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndustrialProduct = new MMCode() {
+	public static final MMCode mmIndustrialProduct = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndustrialProduct";
@@ -84,11 +84,11 @@ public class AssetClassProductType6Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType6Code";
 				definition = "Commodity derivative base product code list for Industrial Product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType6Code.IndustrialProduct);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType6Code.mmIndustrialProduct);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

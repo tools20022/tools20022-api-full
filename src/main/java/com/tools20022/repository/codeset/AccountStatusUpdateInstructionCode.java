@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode#Reactive
- * AccountStatusUpdateInstructionCode.Reactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode#mmReactive
+ * AccountStatusUpdateInstructionCode.mmReactive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode#Close
- * AccountStatusUpdateInstructionCode.Close}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode#mmClose
+ * AccountStatusUpdateInstructionCode.mmClose}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +87,7 @@ public class AccountStatusUpdateInstructionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Reactive = new MMCode() {
+	public static final MMCode mmReactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reactive";
@@ -117,7 +117,7 @@ public class AccountStatusUpdateInstructionCode {
 	 * definition} = "Account is to be closed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Close = new MMCode() {
+	public static final MMCode mmClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Close";
@@ -130,11 +130,11 @@ public class AccountStatusUpdateInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstructionCode";
 				definition = "Specifies the type of account status update instructed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode.Reactive, com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode.Close);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode.mmReactive, com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode.mmClose);
 				derivation_lazy = () -> Arrays.asList(AccountStatusUpdateInstruction1Code.mmObject());
 			}
 		});

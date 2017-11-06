@@ -35,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking9#Identification
- * Undertaking9.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking9#Issuer
- * Undertaking9.Issuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking9#mmIdentification
+ * Undertaking9.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Undertaking9#mmIssuer
+ * Undertaking9.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking9#ApplicantReferenceNumber
- * Undertaking9.ApplicantReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking9#mmApplicantReferenceNumber
+ * Undertaking9.mmApplicantReferenceNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Undertaking9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identifier assigned by the issuer to the
 	 * undertaking, for example the guarantee or standby number.
@@ -78,8 +79,8 @@ public class Undertaking9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Identification
-	 * Undertaking.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmIdentification
+	 * Undertaking.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class Undertaking9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmIdentification;
 			componentContext_lazy = () -> Undertaking9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the issuer to the undertaking, for example the guarantee or standby number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification43 issuer;
 	/**
 	 * Party that issues the undertaking.
 	 * <p>
@@ -143,21 +145,22 @@ public class Undertaking9 {
 	 * definition} = "Party that issues the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Undertaking9.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingIssuer.mmObject();
+			componentContext_lazy = () -> Undertaking9.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issues the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected Max35Text applicantReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the applicant to the
 	 * undertaking.
@@ -187,7 +190,7 @@ public class Undertaking9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicantReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicantReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Undertaking9.mmObject();
 			isDerived = false;
@@ -195,8 +198,8 @@ public class Undertaking9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicantReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the applicant to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -204,14 +207,39 @@ public class Undertaking9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking9.Identification, com.tools20022.repository.msg.Undertaking9.Issuer, com.tools20022.repository.msg.Undertaking9.ApplicantReferenceNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking9.mmIdentification, com.tools20022.repository.msg.Undertaking9.mmIssuer,
+						com.tools20022.repository.msg.Undertaking9.mmApplicantReferenceNumber);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Undertaking9";
 				definition = "Information about an undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public PartyIdentification43 getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
+		this.issuer = issuer;
+	}
+
+	public Max35Text getApplicantReferenceNumber() {
+		return applicantReferenceNumber;
+	}
+
+	public void setApplicantReferenceNumber(Max35Text applicantReferenceNumber) {
+		this.applicantReferenceNumber = applicantReferenceNumber;
 	}
 }

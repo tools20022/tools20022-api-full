@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Notification to the acquirer of the completion of the card payment at the
@@ -34,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#Environment
- * AcceptorCompletionAdvice5.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#mmEnvironment
+ * AcceptorCompletionAdvice5.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#Context
- * AcceptorCompletionAdvice5.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#mmContext
+ * AcceptorCompletionAdvice5.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#Transaction
- * AcceptorCompletionAdvice5.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#mmTransaction
+ * AcceptorCompletionAdvice5.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#SupplementaryData
- * AcceptorCompletionAdvice5.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5#mmSupplementaryData
+ * AcceptorCompletionAdvice5.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,15 +56,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05#CompletionAdvice
- * AcceptorCompletionAdviceV05.CompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05#mmCompletionAdvice
+ * AcceptorCompletionAdviceV05.mmCompletionAdvice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorCompletionAdvice5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardPaymentEnvironment47 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -123,34 +125,35 @@ public class AcceptorCompletionAdvice5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#Environment
-	 * AcceptorCompletionAdvice6.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#mmEnvironment
+	 * AcceptorCompletionAdvice6.mmEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#Environment
-	 * AcceptorCompletionAdvice4.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#mmEnvironment
+	 * AcceptorCompletionAdvice4.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorCompletionAdvice5.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> AcceptorCompletionAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.Environment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.Environment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmEnvironment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.mmEnvironment;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentEnvironment47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment47.mmObject();
 		}
 	};
+	protected CardPaymentContext15 context;
 	/**
 	 * Context in which the transaction is performed (payment and sale).
 	 * <p>
@@ -162,8 +165,8 @@ public class AcceptorCompletionAdvice5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#CardPaymentAcquiring
-	 * CardPayment.CardPaymentAcquiring}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
+	 * CardPayment.mmCardPaymentAcquiring}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,34 +188,35 @@ public class AcceptorCompletionAdvice5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#Context
-	 * AcceptorCompletionAdvice6.Context}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#mmContext
+	 * AcceptorCompletionAdvice6.mmContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#Context
-	 * AcceptorCompletionAdvice4.Context}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#mmContext
+	 * AcceptorCompletionAdvice4.mmContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> AcceptorCompletionAdvice5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.CardPaymentAcquiring;
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.Context;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.Context);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.mmContext;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentContext15.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentContext15.mmObject();
 		}
 	};
+	protected CardPaymentTransaction55 transaction;
 	/**
 	 * Card payment transaction between an acceptor and an acquirer.
 	 * <p>
@@ -247,34 +251,35 @@ public class AcceptorCompletionAdvice5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#Transaction
-	 * AcceptorCompletionAdvice6.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#mmTransaction
+	 * AcceptorCompletionAdvice6.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#Transaction
-	 * AcceptorCompletionAdvice4.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#mmTransaction
+	 * AcceptorCompletionAdvice4.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorCompletionAdvice5.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> AcceptorCompletionAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction between an acceptor and an acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.Transaction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.Transaction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmTransaction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.mmTransaction;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentTransaction55.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction55.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information incorporated as an extension to the message.
 	 * <p>
@@ -304,18 +309,18 @@ public class AcceptorCompletionAdvice5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#SupplementaryData
-	 * AcceptorCompletionAdvice6.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6#mmSupplementaryData
+	 * AcceptorCompletionAdvice6.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#SupplementaryData
-	 * AcceptorCompletionAdvice4.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4#mmSupplementaryData
+	 * AcceptorCompletionAdvice4.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcceptorCompletionAdvice5.mmObject();
 			isDerived = false;
@@ -323,29 +328,61 @@ public class AcceptorCompletionAdvice5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information incorporated as an extension to the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice4.mmSupplementaryData;
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice5.Environment, com.tools20022.repository.msg.AcceptorCompletionAdvice5.Context,
-						com.tools20022.repository.msg.AcceptorCompletionAdvice5.Transaction, com.tools20022.repository.msg.AcceptorCompletionAdvice5.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmContext,
+						com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmTransaction, com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.mmCompletionAdvice);
 				trace_lazy = () -> CardPayment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.CompletionAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCompletionAdvice5";
 				definition = "Notification to the acquirer of the completion of the card payment at the acceptor.";
-				previousVersion_lazy = () -> AcceptorCompletionAdvice4.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdvice6.mmObject());
+				previousVersion_lazy = () -> AcceptorCompletionAdvice4.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardPaymentEnvironment47 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment47 environment) {
+		this.environment = environment;
+	}
+
+	public CardPaymentContext15 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.CardPaymentContext15 context) {
+		this.context = context;
+	}
+
+	public CardPaymentTransaction55 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardPaymentTransaction55 transaction) {
+		this.transaction = transaction;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

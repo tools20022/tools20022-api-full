@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ControlData1#NumberOfTransactions
- * ControlData1.NumberOfTransactions}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ControlData1#ControlSum
- * ControlData1.ControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.ControlData1#mmNumberOfTransactions
+ * ControlData1.mmNumberOfTransactions}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ControlData1#mmControlSum
+ * ControlData1.mmControlSum}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,48 +46,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01#ControlData
- * CustomerPaymentCancellationRequestV01.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01#mmControlData
+ * CustomerPaymentCancellationRequestV01.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02#ControlData
- * CustomerPaymentCancellationRequestV02.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02#mmControlData
+ * CustomerPaymentCancellationRequestV02.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV03#ControlData
- * CustomerPaymentCancellationRequestV03.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV03#mmControlData
+ * CustomerPaymentCancellationRequestV03.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#ControlData
- * FIToFIPaymentCancellationRequestV01.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#mmControlData
+ * FIToFIPaymentCancellationRequestV01.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV02#ControlData
- * FIToFIPaymentCancellationRequestV02.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV02#mmControlData
+ * FIToFIPaymentCancellationRequestV02.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV03#ControlData
- * FIToFIPaymentCancellationRequestV03.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV03#mmControlData
+ * FIToFIPaymentCancellationRequestV03.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV04#ControlData
- * FIToFIPaymentCancellationRequestV04.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV04#mmControlData
+ * FIToFIPaymentCancellationRequestV04.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04#ControlData
- * CustomerPaymentCancellationRequestV04.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04#mmControlData
+ * CustomerPaymentCancellationRequestV04.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05#ControlData
- * FIToFIPaymentCancellationRequestV05.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05#mmControlData
+ * FIToFIPaymentCancellationRequestV05.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#ControlData
- * CustomerPaymentCancellationRequestV05.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05#mmControlData
+ * CustomerPaymentCancellationRequestV05.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#ControlData
- * CustomerPaymentCancellationRequestV06.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06#mmControlData
+ * CustomerPaymentCancellationRequestV06.mmControlData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06#ControlData
- * FIToFIPaymentCancellationRequestV06.ControlData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06#mmControlData
+ * FIToFIPaymentCancellationRequestV06.mmControlData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ControlData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15NumericText numberOfTransactions;
 	/**
 	 * Number of individual transactions contained in the message.
 	 * <p>
@@ -131,7 +132,7 @@ public class ControlData1 {
 	 * "Number of individual transactions contained in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ControlData1.mmObject();
 			isDerived = false;
@@ -139,11 +140,12 @@ public class ControlData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions contained in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in the message, irrespective of
 	 * currencies.
@@ -174,7 +176,7 @@ public class ControlData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ControlData1.mmObject();
 			isDerived = false;
@@ -182,8 +184,8 @@ public class ControlData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -191,19 +193,36 @@ public class ControlData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ControlData1.NumberOfTransactions, com.tools20022.repository.msg.ControlData1.ControlSum);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.ControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.ControlData,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV03.ControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01.ControlData,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV02.ControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV03.ControlData,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV04.ControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04.ControlData,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.ControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.ControlData,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.ControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06.ControlData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ControlData1.mmNumberOfTransactions, com.tools20022.repository.msg.ControlData1.mmControlSum);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmControlData,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV03.mmControlData,
+						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01.mmControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV02.mmControlData,
+						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV03.mmControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV04.mmControlData,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04.mmControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmControlData,
+						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmControlData,
+						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06.mmControlData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ControlData1";
 				definition = "Provides details of the number of transactions and the control sum of the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15NumericText getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = numberOfTransactions;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
 	}
 }

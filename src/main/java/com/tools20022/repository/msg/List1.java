@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ListTrading;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details for negotiating and trading a large number of securities
@@ -46,35 +47,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.List1#ListIdentification
- * List1.ListIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#NumberOfListOrders
- * List1.NumberOfListOrders}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#TotalNumberOfListOrders
- * List1.TotalNumberOfListOrders}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1#mmListIdentification
+ * List1.mmListIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1#mmNumberOfListOrders
+ * List1.mmNumberOfListOrders}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.List1#ImmediateExecutionIndicator
- * List1.ImmediateExecutionIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#ExecutionInstruction
- * List1.ExecutionInstruction}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#ProgressReportIndicator
- * List1.ProgressReportIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#ProgressPeriodInterval
- * List1.ProgressPeriodInterval}</li>
+ * {@linkplain com.tools20022.repository.msg.List1#mmTotalNumberOfListOrders
+ * List1.mmTotalNumberOfListOrders}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.List1#RealTimeExecutionReportIndicator
- * List1.RealTimeExecutionReportIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#BidType List1.BidType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#MoneyLaunderingStatus
- * List1.MoneyLaunderingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.List1#mmImmediateExecutionIndicator
+ * List1.mmImmediateExecutionIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1#mmExecutionInstruction
+ * List1.mmExecutionInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.List1#AllowableOneSidednessPercent
- * List1.AllowableOneSidednessPercent}</li>
+ * {@linkplain com.tools20022.repository.msg.List1#mmProgressReportIndicator
+ * List1.mmProgressReportIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1#mmProgressPeriodInterval
+ * List1.mmProgressPeriodInterval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.List1#AllowableOneSidednessValue
- * List1.AllowableOneSidednessValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1#OrderDetails
- * List1.OrderDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.List1#mmRealTimeExecutionReportIndicator
+ * List1.mmRealTimeExecutionReportIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1#mmBidType
+ * List1.mmBidType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1#mmMoneyLaunderingStatus
+ * List1.mmMoneyLaunderingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.List1#mmAllowableOneSidednessPercent
+ * List1.mmAllowableOneSidednessPercent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.List1#mmAllowableOneSidednessValue
+ * List1.mmAllowableOneSidednessValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1#mmOrderDetails
+ * List1.mmOrderDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -83,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class List1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text listIdentification;
 	/**
 	 * Unique identifier for a list, as assigned by the trading party. The
 	 * identifier must be unique within a single trading day.
@@ -113,8 +118,8 @@ public class List1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#ListIdentification
-	 * ListTrading.ListIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmListIdentification
+	 * ListTrading.mmListIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.List1
@@ -134,20 +139,21 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
 			componentContext_lazy = () -> List1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.ListIdentification;
 			isDerived = false;
 			xmlTag = "ListId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number numberOfListOrders;
 	/**
 	 * Identifies the number of orders in this message.
 	 * <p>
@@ -174,7 +180,7 @@ public class List1 {
 	 * definition} = "Identifies the number of orders in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfListOrders = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfListOrders = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -182,11 +188,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfListOrders";
 			definition = "Identifies the number of orders in this message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number totalNumberOfListOrders;
 	/**
 	 * Identifies the total number of orders across all ListOrder messages with
 	 * the same ListIdentification. It should be the sum of all
@@ -217,7 +224,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfListOrders = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfListOrders = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -225,11 +232,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfListOrders";
 			definition = "Identifies the total number of orders across all ListOrder messages with the same ListIdentification. It should be the sum of all NumberOfListOrders in each ListOrder message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator immediateExecutionIndicator;
 	/**
 	 * Indicates whether the list order should be immediately executed or not.
 	 * Yes means immediate No means wait for a ListExecution or phone call
@@ -261,7 +269,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ImmediateExecutionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmImmediateExecutionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -269,11 +277,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateExecutionIndicator";
 			definition = "Indicates whether the list order should be immediately executed or not.\nYes means immediate\nNo means wait for a ListExecution or phone call before proceeding with execution of the list order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max140Text executionInstruction;
 	/**
 	 * Additional list handling or execution instructions.
 	 * <p>
@@ -300,7 +309,7 @@ public class List1 {
 	 * definition} = "Additional list handling or execution instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutionInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutionInstruction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -308,11 +317,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionInstruction";
 			definition = "Additional list handling or execution instructions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected YesNoIndicator progressReportIndicator;
 	/**
 	 * Indicates the request to receive a report on the progress of the order or
 	 * not. Yes means to receive periodical ListStatus No means no request to
@@ -346,7 +356,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProgressReportIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProgressReportIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -354,11 +364,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressReportIndicator";
 			definition = "Indicates the request to receive a report on the progress of the order or not.\nYes means to receive periodical ListStatus\nNo means no request to receive periodical ListStatus, they will be requested by a StatusRequest. However, a ListStatus with status 'done' could be sent in an unsolicited fashion.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISOTime progressPeriodInterval;
 	/**
 	 * Identifies the interval period in minutes between each ListStatus you
 	 * wish to receive.
@@ -388,7 +399,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProgressPeriodInterval = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProgressPeriodInterval = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -396,11 +407,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressPeriodInterval";
 			definition = "Identifies the interval period in minutes between each ListStatus you wish to receive.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected YesNoIndicator realTimeExecutionReportIndicator;
 	/**
 	 * Identifies the request to receive a real time execution report.
 	 * <p>
@@ -429,7 +441,7 @@ public class List1 {
 	 * "Identifies the request to receive a real time execution report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RealTimeExecutionReportIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRealTimeExecutionReportIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -437,11 +449,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealTimeExecutionReportIndicator";
 			definition = "Identifies the request to receive a real time execution report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected BidType1Code bidType;
 	/**
 	 * Indicates if the list order is related to a "Non disclosed"or "Disclosed"
 	 * bid or to no bid.
@@ -455,8 +468,8 @@ public class List1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#BidType
-	 * ListTrading.BidType}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmBidType
+	 * ListTrading.mmBidType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.List1
@@ -476,20 +489,21 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BidType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBidType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmBidType;
 			componentContext_lazy = () -> List1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.BidType;
 			isDerived = false;
 			xmlTag = "BidTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidType";
 			definition = "Indicates if the list order is related to a \"Non disclosed\"or \"Disclosed\" bid or to no bid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BidType1Code.mmObject();
 		}
 	};
+	protected OldMoneyLaunderingCheck1Code moneyLaunderingStatus;
 	/**
 	 * Provides the status of an identity check to prevent money laundering.
 	 * <p>
@@ -503,8 +517,8 @@ public class List1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#MoneyLaunderingCheck
-	 * Party.MoneyLaunderingCheck}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmMoneyLaunderingCheck
+	 * Party.mmMoneyLaunderingCheck}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.List1
@@ -523,20 +537,21 @@ public class List1 {
 	 * "Provides the status of an identity check to prevent money laundering."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MoneyLaunderingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMoneyLaunderingStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> List1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.MoneyLaunderingCheck;
 			isDerived = false;
 			xmlTag = "MnyLndrgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyLaunderingStatus";
 			definition = "Provides the status of an identity check to prevent money laundering.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OldMoneyLaunderingCheck1Code.mmObject();
 		}
 	};
+	protected PercentageRate allowableOneSidednessPercent;
 	/**
 	 * The maximum percentage that execution of one side of a program trade can
 	 * exceed execution of the other.
@@ -567,7 +582,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllowableOneSidednessPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllowableOneSidednessPercent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -575,11 +590,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowableOneSidednessPercent";
 			definition = "The maximum percentage that execution of one side of a program trade can exceed execution of the other.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount allowableOneSidednessValue;
 	/**
 	 * The maximum amount (expressed in currency) that execution of one side of
 	 * a program trade can exceed execution of the other.
@@ -610,7 +626,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllowableOneSidednessValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllowableOneSidednessValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> List1.mmObject();
 			isDerived = false;
@@ -618,11 +634,12 @@ public class List1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowableOneSidednessValue";
 			definition = "The maximum amount (expressed in currency) that execution of one side of a program trade can exceed execution of the other.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Order6> orderDetails;
 	/**
 	 * The intention to transfer an ownership of a financial instrument.
 	 * <p>
@@ -633,8 +650,8 @@ public class List1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#SecuritiesListOrder
-	 * ListTrading.SecuritiesListOrder}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmSecuritiesListOrder
+	 * ListTrading.mmSecuritiesListOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.List1
@@ -653,36 +670,140 @@ public class List1 {
 	 * "The intention to transfer an ownership of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmSecuritiesListOrder;
 			componentContext_lazy = () -> List1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.SecuritiesListOrder;
 			isDerived = false;
 			xmlTag = "OrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetails";
 			definition = "The intention to transfer an ownership of a financial instrument.";
 			minOccurs = 1;
-			type_lazy = () -> Order6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Order6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List1.ListIdentification, com.tools20022.repository.msg.List1.NumberOfListOrders, com.tools20022.repository.msg.List1.TotalNumberOfListOrders,
-						com.tools20022.repository.msg.List1.ImmediateExecutionIndicator, com.tools20022.repository.msg.List1.ExecutionInstruction, com.tools20022.repository.msg.List1.ProgressReportIndicator,
-						com.tools20022.repository.msg.List1.ProgressPeriodInterval, com.tools20022.repository.msg.List1.RealTimeExecutionReportIndicator, com.tools20022.repository.msg.List1.BidType,
-						com.tools20022.repository.msg.List1.MoneyLaunderingStatus, com.tools20022.repository.msg.List1.AllowableOneSidednessPercent, com.tools20022.repository.msg.List1.AllowableOneSidednessValue,
-						com.tools20022.repository.msg.List1.OrderDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List1.mmListIdentification, com.tools20022.repository.msg.List1.mmNumberOfListOrders, com.tools20022.repository.msg.List1.mmTotalNumberOfListOrders,
+						com.tools20022.repository.msg.List1.mmImmediateExecutionIndicator, com.tools20022.repository.msg.List1.mmExecutionInstruction, com.tools20022.repository.msg.List1.mmProgressReportIndicator,
+						com.tools20022.repository.msg.List1.mmProgressPeriodInterval, com.tools20022.repository.msg.List1.mmRealTimeExecutionReportIndicator, com.tools20022.repository.msg.List1.mmBidType,
+						com.tools20022.repository.msg.List1.mmMoneyLaunderingStatus, com.tools20022.repository.msg.List1.mmAllowableOneSidednessPercent, com.tools20022.repository.msg.List1.mmAllowableOneSidednessValue,
+						com.tools20022.repository.msg.List1.mmOrderDetails);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "List1";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getListIdentification() {
+		return listIdentification;
+	}
+
+	public void setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = listIdentification;
+	}
+
+	public Number getNumberOfListOrders() {
+		return numberOfListOrders;
+	}
+
+	public void setNumberOfListOrders(Number numberOfListOrders) {
+		this.numberOfListOrders = numberOfListOrders;
+	}
+
+	public Number getTotalNumberOfListOrders() {
+		return totalNumberOfListOrders;
+	}
+
+	public void setTotalNumberOfListOrders(Number totalNumberOfListOrders) {
+		this.totalNumberOfListOrders = totalNumberOfListOrders;
+	}
+
+	public YesNoIndicator getImmediateExecutionIndicator() {
+		return immediateExecutionIndicator;
+	}
+
+	public void setImmediateExecutionIndicator(YesNoIndicator immediateExecutionIndicator) {
+		this.immediateExecutionIndicator = immediateExecutionIndicator;
+	}
+
+	public Max140Text getExecutionInstruction() {
+		return executionInstruction;
+	}
+
+	public void setExecutionInstruction(Max140Text executionInstruction) {
+		this.executionInstruction = executionInstruction;
+	}
+
+	public YesNoIndicator getProgressReportIndicator() {
+		return progressReportIndicator;
+	}
+
+	public void setProgressReportIndicator(YesNoIndicator progressReportIndicator) {
+		this.progressReportIndicator = progressReportIndicator;
+	}
+
+	public ISOTime getProgressPeriodInterval() {
+		return progressPeriodInterval;
+	}
+
+	public void setProgressPeriodInterval(ISOTime progressPeriodInterval) {
+		this.progressPeriodInterval = progressPeriodInterval;
+	}
+
+	public YesNoIndicator getRealTimeExecutionReportIndicator() {
+		return realTimeExecutionReportIndicator;
+	}
+
+	public void setRealTimeExecutionReportIndicator(YesNoIndicator realTimeExecutionReportIndicator) {
+		this.realTimeExecutionReportIndicator = realTimeExecutionReportIndicator;
+	}
+
+	public BidType1Code getBidType() {
+		return bidType;
+	}
+
+	public void setBidType(BidType1Code bidType) {
+		this.bidType = bidType;
+	}
+
+	public OldMoneyLaunderingCheck1Code getMoneyLaunderingStatus() {
+		return moneyLaunderingStatus;
+	}
+
+	public void setMoneyLaunderingStatus(OldMoneyLaunderingCheck1Code moneyLaunderingStatus) {
+		this.moneyLaunderingStatus = moneyLaunderingStatus;
+	}
+
+	public PercentageRate getAllowableOneSidednessPercent() {
+		return allowableOneSidednessPercent;
+	}
+
+	public void setAllowableOneSidednessPercent(PercentageRate allowableOneSidednessPercent) {
+		this.allowableOneSidednessPercent = allowableOneSidednessPercent;
+	}
+
+	public ActiveCurrencyAndAmount getAllowableOneSidednessValue() {
+		return allowableOneSidednessValue;
+	}
+
+	public void setAllowableOneSidednessValue(ActiveCurrencyAndAmount allowableOneSidednessValue) {
+		this.allowableOneSidednessValue = allowableOneSidednessValue;
+	}
+
+	public List<Order6> getOrderDetails() {
+		return orderDetails;
+	}
+
+	public void setOrderDetails(List<com.tools20022.repository.msg.Order6> orderDetails) {
+		this.orderDetails = orderDetails;
 	}
 }

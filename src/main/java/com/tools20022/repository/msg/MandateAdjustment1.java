@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateAdjustment1#DateAdjustmentRuleIndicator
- * MandateAdjustment1.DateAdjustmentRuleIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAdjustment1#Category
- * MandateAdjustment1.Category}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAdjustment1#Amount
- * MandateAdjustment1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAdjustment1#Rate
- * MandateAdjustment1.Rate}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateAdjustment1#mmDateAdjustmentRuleIndicator
+ * MandateAdjustment1.mmDateAdjustmentRuleIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAdjustment1#mmCategory
+ * MandateAdjustment1.mmCategory}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAdjustment1#mmAmount
+ * MandateAdjustment1.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAdjustment1#mmRate
+ * MandateAdjustment1.mmRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateAdjustment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator dateAdjustmentRuleIndicator;
 	/**
 	 * Specifies whether an adjustment is to be applied on pre-agreed collection
 	 * date or not.
@@ -100,7 +101,7 @@ public class MandateAdjustment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateAdjustmentRuleIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateAdjustmentRuleIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MandateAdjustment1.mmObject();
 			isDerived = false;
@@ -108,11 +109,12 @@ public class MandateAdjustment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAdjustmentRuleIndicator";
 			definition = "Specifies whether an adjustment is to be applied on pre-agreed collection date or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Frequency37Choice category;
 	/**
 	 * Defines the category of adjustment.
 	 * <p>
@@ -124,8 +126,8 @@ public class MandateAdjustment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#Frequency
-	 * DirectDebitMandate.Frequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFrequency
+	 * DirectDebitMandate.mmFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,21 +146,22 @@ public class MandateAdjustment1 {
 	 * definition} = "Defines the category of adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Category = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCategory = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmFrequency;
 			componentContext_lazy = () -> MandateAdjustment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.Frequency;
 			isDerived = false;
 			xmlTag = "Ctgy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Category";
 			definition = "Defines the category of adjustment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Frequency37Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Frequency37Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Pre-agreed amount to increase or decrease the mandate amount as justified
 	 * per information in the category.
@@ -173,8 +176,8 @@ public class MandateAdjustment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#CollectionAmount
-	 * DirectDebitMandate.CollectionAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmCollectionAmount
+	 * DirectDebitMandate.mmCollectionAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,20 +198,21 @@ public class MandateAdjustment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmCollectionAmount;
 			componentContext_lazy = () -> MandateAdjustment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.CollectionAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Pre-agreed amount to increase or decrease the mandate amount as justified per information in the category.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Pre-agreed increase or decrease rate that will be applied to the
 	 * collection amount.
@@ -223,7 +227,8 @@ public class MandateAdjustment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Mandate#Rate Mandate.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Mandate#mmRate
+	 * Mandate.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -244,17 +249,17 @@ public class MandateAdjustment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmRate;
 			componentContext_lazy = () -> MandateAdjustment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Pre-agreed increase or decrease rate that will be applied to the collection amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -262,15 +267,47 @@ public class MandateAdjustment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAdjustment1.DateAdjustmentRuleIndicator, com.tools20022.repository.msg.MandateAdjustment1.Category,
-						com.tools20022.repository.msg.MandateAdjustment1.Amount, com.tools20022.repository.msg.MandateAdjustment1.Rate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAdjustment1.mmDateAdjustmentRuleIndicator, com.tools20022.repository.msg.MandateAdjustment1.mmCategory,
+						com.tools20022.repository.msg.MandateAdjustment1.mmAmount, com.tools20022.repository.msg.MandateAdjustment1.mmRate);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateAdjustment1";
 				definition = "Specifies the details for the adjustment of the mandate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getDateAdjustmentRuleIndicator() {
+		return dateAdjustmentRuleIndicator;
+	}
+
+	public void setDateAdjustmentRuleIndicator(TrueFalseIndicator dateAdjustmentRuleIndicator) {
+		this.dateAdjustmentRuleIndicator = dateAdjustmentRuleIndicator;
+	}
+
+	public Frequency37Choice getCategory() {
+		return category;
+	}
+
+	public void setCategory(Frequency37Choice category) {
+		this.category = category;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
 	}
 }

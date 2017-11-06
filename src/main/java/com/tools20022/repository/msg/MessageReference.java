@@ -32,8 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MessageReference#Reference
- * MessageReference.Reference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageReference#mmReference
+ * MessageReference.mmReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -41,18 +41,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.WithdrawalNotificationV01#MatchingSystemUniqueReference
- * WithdrawalNotificationV01.MatchingSystemUniqueReference}</li>
+ * {@linkplain com.tools20022.repository.area.trea.WithdrawalNotificationV01#mmMatchingSystemUniqueReference
+ * WithdrawalNotificationV01.mmMatchingSystemUniqueReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.MessageRejectV01#RelatedReference
- * MessageRejectV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.admi.MessageRejectV01#mmRelatedReference
+ * MessageRejectV01.mmRelatedReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageReference {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reference;
 	/**
 	 * Business reference of the present message assigned by the party issuing
 	 * the message. This reference must be unique amongst all messages of the
@@ -97,7 +98,7 @@ public class MessageReference {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageReference.mmObject();
 			isDerived = false;
@@ -105,8 +106,8 @@ public class MessageReference {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Business reference of the present message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -114,14 +115,22 @@ public class MessageReference {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageReference.Reference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.WithdrawalNotificationV01.MatchingSystemUniqueReference, com.tools20022.repository.area.admi.MessageRejectV01.RelatedReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageReference.mmReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.WithdrawalNotificationV01.mmMatchingSystemUniqueReference, com.tools20022.repository.area.admi.MessageRejectV01.mmRelatedReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageReference";
 				definition = "Message reference of relevance to the present message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
 	}
 }

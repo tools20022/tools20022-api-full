@@ -39,19 +39,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BuyIn3#BuyInNotificationIdentification
- * BuyIn3.BuyInNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BuyIn3#mmBuyInNotificationIdentification
+ * BuyIn3.mmBuyInNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BuyIn3#RequestForDelayIndicator
- * BuyIn3.RequestForDelayIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#NumberOfDays
- * BuyIn3.NumberOfDays}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#InitialQuantity
- * BuyIn3.InitialQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#CoveredQuantity
- * BuyIn3.CoveredQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#UncoveredQuantity
- * BuyIn3.UncoveredQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.BuyIn3#mmRequestForDelayIndicator
+ * BuyIn3.mmRequestForDelayIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#mmNumberOfDays
+ * BuyIn3.mmNumberOfDays}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#mmInitialQuantity
+ * BuyIn3.mmInitialQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#mmCoveredQuantity
+ * BuyIn3.mmCoveredQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#mmUncoveredQuantity
+ * BuyIn3.mmUncoveredQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,15 +61,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#BuyInResponseDetails
- * BuyInResponseV03.BuyInResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#mmBuyInResponseDetails
+ * BuyInResponseV03.mmBuyInResponseDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BuyIn3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text buyInNotificationIdentification;
 	/**
 	 * Indicates the reference of the BuyInNotification message.
 	 * <p>
@@ -112,7 +113,7 @@ public class BuyIn3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BuyInNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBuyInNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
@@ -120,11 +121,12 @@ public class BuyIn3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInNotificationIdentification";
 			definition = "Indicates the reference of the BuyInNotification message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator requestForDelayIndicator;
 	/**
 	 * Specific continuous net settlement case where the central counterparty
 	 * can call for buy-in at a date anterior to "theoretical" buy-in date, the
@@ -156,7 +158,7 @@ public class BuyIn3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestForDelayIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestForDelayIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
@@ -164,11 +166,12 @@ public class BuyIn3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForDelayIndicator";
 			definition = "Specific continuous net settlement case where the central counterparty can call for buy-in at a date anterior to \"theoretical\" buy-in date, the clearing member may request a delay.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Number numberOfDays;
 	/**
 	 * Number of days associated to the request for delay.
 	 * <p>
@@ -195,7 +198,7 @@ public class BuyIn3 {
 	 * definition} = "Number of days associated to the request for delay."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
@@ -203,11 +206,12 @@ public class BuyIn3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Number of days associated to the request for delay.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice initialQuantity;
 	/**
 	 * Buy in quantity called initially by the central counterparty.
 	 * <p>
@@ -220,8 +224,8 @@ public class BuyIn3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#SecuritiesCompensation
-	 * BuyIn.SecuritiesCompensation}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmSecuritiesCompensation
+	 * BuyIn.mmSecuritiesCompensation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn3
@@ -240,21 +244,22 @@ public class BuyIn3 {
 	 * "Buy in quantity called initially by the central counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InitialQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitialQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> BuyIn3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.SecuritiesCompensation;
 			isDerived = false;
 			xmlTag = "InitlQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialQuantity";
 			definition = "Buy in quantity called initially by the central counterparty.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice coveredQuantity;
 	/**
 	 * Quantity amount covered by the clearing member after notification.
 	 * <p>
@@ -267,8 +272,8 @@ public class BuyIn3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn3
@@ -287,21 +292,22 @@ public class BuyIn3 {
 	 * "Quantity amount covered by the clearing member after notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CoveredQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCoveredQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> BuyIn3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "CvrdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredQuantity";
 			definition = "Quantity amount covered by the clearing member after notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice uncoveredQuantity;
 	/**
 	 * Quantity amount non covered by the clearing member after notification
 	 * (this is, new buy in amount to be executed).
@@ -315,8 +321,8 @@ public class BuyIn3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#SecuritiesCompensation
-	 * BuyIn.SecuritiesCompensation}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmSecuritiesCompensation
+	 * BuyIn.mmSecuritiesCompensation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn3
@@ -336,35 +342,84 @@ public class BuyIn3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UncoveredQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUncoveredQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> BuyIn3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.SecuritiesCompensation;
 			isDerived = false;
 			xmlTag = "UcvrdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UncoveredQuantity";
 			definition = "Quantity amount non covered by the clearing member after notification (this is, new buy in amount to be executed).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn3.BuyInNotificationIdentification, com.tools20022.repository.msg.BuyIn3.RequestForDelayIndicator,
-						com.tools20022.repository.msg.BuyIn3.NumberOfDays, com.tools20022.repository.msg.BuyIn3.InitialQuantity, com.tools20022.repository.msg.BuyIn3.CoveredQuantity, com.tools20022.repository.msg.BuyIn3.UncoveredQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn3.mmBuyInNotificationIdentification, com.tools20022.repository.msg.BuyIn3.mmRequestForDelayIndicator,
+						com.tools20022.repository.msg.BuyIn3.mmNumberOfDays, com.tools20022.repository.msg.BuyIn3.mmInitialQuantity, com.tools20022.repository.msg.BuyIn3.mmCoveredQuantity,
+						com.tools20022.repository.msg.BuyIn3.mmUncoveredQuantity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInResponseV03.mmBuyInResponseDetails);
 				trace_lazy = () -> BuyIn.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInResponseV03.BuyInResponseDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BuyIn3";
 				definition = "Specifies elements related to the response sent by the clearing member to the central counterparty in the context of the buy in process.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getBuyInNotificationIdentification() {
+		return buyInNotificationIdentification;
+	}
+
+	public void setBuyInNotificationIdentification(Max35Text buyInNotificationIdentification) {
+		this.buyInNotificationIdentification = buyInNotificationIdentification;
+	}
+
+	public YesNoIndicator getRequestForDelayIndicator() {
+		return requestForDelayIndicator;
+	}
+
+	public void setRequestForDelayIndicator(YesNoIndicator requestForDelayIndicator) {
+		this.requestForDelayIndicator = requestForDelayIndicator;
+	}
+
+	public Number getNumberOfDays() {
+		return numberOfDays;
+	}
+
+	public void setNumberOfDays(Number numberOfDays) {
+		this.numberOfDays = numberOfDays;
+	}
+
+	public FinancialInstrumentQuantity1Choice getInitialQuantity() {
+		return initialQuantity;
+	}
+
+	public void setInitialQuantity(FinancialInstrumentQuantity1Choice initialQuantity) {
+		this.initialQuantity = initialQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getCoveredQuantity() {
+		return coveredQuantity;
+	}
+
+	public void setCoveredQuantity(FinancialInstrumentQuantity1Choice coveredQuantity) {
+		this.coveredQuantity = coveredQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getUncoveredQuantity() {
+		return uncoveredQuantity;
+	}
+
+	public void setUncoveredQuantity(FinancialInstrumentQuantity1Choice uncoveredQuantity) {
+		this.uncoveredQuantity = uncoveredQuantity;
 	}
 }

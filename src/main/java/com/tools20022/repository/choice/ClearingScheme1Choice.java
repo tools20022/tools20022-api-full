@@ -34,18 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ClearingScheme1Choice#Code
- * ClearingScheme1Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingScheme1Choice#Proprietary
- * ClearingScheme1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ClearingScheme1Choice#mmCode
+ * ClearingScheme1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingScheme1Choice#mmProprietary
+ * ClearingScheme1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClearingScheme1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalPurpose1Code code;
 	/**
 	 * CBRF clearing scheme code.
 	 * <p>
@@ -88,7 +90,7 @@ public class ClearingScheme1Choice {
 	 * definition} = "CBRF clearing scheme code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClearingScheme1Choice.mmObject();
 			isDerived = false;
@@ -96,11 +98,12 @@ public class ClearingScheme1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "CBRF clearing scheme code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPurpose1Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Nature or use of the account in a proprietary form.
 	 * <p>
@@ -127,7 +130,7 @@ public class ClearingScheme1Choice {
 	 * definition} = "Nature or use of the account in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClearingScheme1Choice.mmObject();
 			isDerived = false;
@@ -135,23 +138,39 @@ public class ClearingScheme1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Nature or use of the account in a proprietary form.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClearingScheme1Choice.Code, com.tools20022.repository.choice.ClearingScheme1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClearingScheme1Choice.mmCode, com.tools20022.repository.choice.ClearingScheme1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClearingScheme1Choice";
 				definition = "Clearing scheme codes related to Registry of the Clearing Positions (RCP).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalPurpose1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalPurpose1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

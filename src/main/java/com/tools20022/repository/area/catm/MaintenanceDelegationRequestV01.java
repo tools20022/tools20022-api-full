@@ -60,21 +60,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#Header
- * MaintenanceDelegationRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#mmHeader
+ * MaintenanceDelegationRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#MaintenanceDelegationRequest
- * MaintenanceDelegationRequestV01.MaintenanceDelegationRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#mmMaintenanceDelegationRequest
+ * MaintenanceDelegationRequestV01.mmMaintenanceDelegationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#SecurityTrailer
- * MaintenanceDelegationRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#mmSecurityTrailer
+ * MaintenanceDelegationRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#identifier
- * MaintenanceDelegationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catm.005.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MaintenanceDelegationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header16 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -122,24 +121,25 @@ public class MaintenanceDelegationRequestV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#Header
-	 * MaintenanceDelegationRequestV02.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#mmHeader
+	 * MaintenanceDelegationRequestV02.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmHeader);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header16.mmObject();
 		}
 	};
+	protected MaintenanceDelegationRequest1 maintenanceDelegationRequest;
 	/**
 	 * Information related to the request of maintenance delegations.
 	 * <p>
@@ -166,24 +166,25 @@ public class MaintenanceDelegationRequestV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#MaintenanceDelegationRequest
-	 * MaintenanceDelegationRequestV02.MaintenanceDelegationRequest}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#mmMaintenanceDelegationRequest
+	 * MaintenanceDelegationRequestV02.mmMaintenanceDelegationRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MaintenanceDelegationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMaintenanceDelegationRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MntncDlgtnReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceDelegationRequest";
 			definition = "Information related to the request of maintenance delegations.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.MaintenanceDelegationRequest);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmMaintenanceDelegationRequest);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MaintenanceDelegationRequest1.mmObject();
 		}
 	};
+	protected ContentInformationType12 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -210,49 +211,22 @@ public class MaintenanceDelegationRequestV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#SecurityTrailer
-	 * MaintenanceDelegationRequestV02.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02#mmSecurityTrailer
+	 * MaintenanceDelegationRequestV02.mmSecurityTrailer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.SecurityTrailer);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmSecurityTrailer);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catm";
-			messageFunctionality = "005";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -267,11 +241,42 @@ public class MaintenanceDelegationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "MntncDlgtnReq";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.Header, com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.MaintenanceDelegationRequest,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.mmHeader,
+						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.mmMaintenanceDelegationRequest, com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catm";
+						messageFunctionality = "005";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header16 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header16 header) {
+		this.header = header;
+	}
+
+	public MaintenanceDelegationRequest1 getMaintenanceDelegationRequest() {
+		return maintenanceDelegationRequest;
+	}
+
+	public void setMaintenanceDelegationRequest(MaintenanceDelegationRequest1 maintenanceDelegationRequest) {
+		this.maintenanceDelegationRequest = maintenanceDelegationRequest;
+	}
+
+	public ContentInformationType12 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

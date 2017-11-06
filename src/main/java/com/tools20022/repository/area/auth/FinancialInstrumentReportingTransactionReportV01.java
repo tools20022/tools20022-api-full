@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The FinancialInstrumentReportingTransactionReport message is sent by the
@@ -57,18 +58,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01#Transaction
- * FinancialInstrumentReportingTransactionReportV01.Transaction}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01#mmTransaction
+ * FinancialInstrumentReportingTransactionReportV01.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01#SupplementaryData
- * FinancialInstrumentReportingTransactionReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01#mmSupplementaryData
+ * FinancialInstrumentReportingTransactionReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01#identifier
- * FinancialInstrumentReportingTransactionReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.016.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentReportingTransactionReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<ReportingTransactionType1Choice> transaction;
 	/**
 	 * Provides the details of the reported securities transactions.
 	 * <p>
@@ -108,7 +108,7 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 	 * "Provides the details of the reported securities transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Transaction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransaction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,6 +118,7 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 			complexType_lazy = () -> ReportingTransactionType1Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -144,7 +145,7 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,33 +153,6 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "016"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "016";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -192,11 +166,34 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgTxRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.Transaction,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.mmTransaction,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "016";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ReportingTransactionType1Choice> getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(List<ReportingTransactionType1Choice> transaction) {
+		this.transaction = transaction;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

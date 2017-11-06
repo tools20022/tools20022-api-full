@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection14#Amount
- * AmountAndDirection14.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection14#Sign
- * AmountAndDirection14.Sign}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection14#mmAmount
+ * AmountAndDirection14.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection14#mmSign
+ * AmountAndDirection14.mmSign}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountAndDirection14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINActiveOrHistoricCurrencyAndAmount amount;
 	/**
 	 * Amount of money in the cash entry.
 	 * <p>
@@ -77,8 +78,8 @@ public class AmountAndDirection14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class AmountAndDirection14 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> AmountAndDirection14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PlusOrMinusIndicator sign;
 	/**
 	 * Indicates that the amount value is positive or negative.
 	 * <p>
@@ -139,7 +141,7 @@ public class AmountAndDirection14 {
 	 * definition} = "Indicates that the amount value is positive or negative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sign = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndDirection14.mmObject();
 			isDerived = false;
@@ -147,8 +149,8 @@ public class AmountAndDirection14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates that the amount value is positive or negative.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
@@ -156,14 +158,30 @@ public class AmountAndDirection14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection14.Amount, com.tools20022.repository.msg.AmountAndDirection14.Sign);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection14.mmAmount, com.tools20022.repository.msg.AmountAndDirection14.mmSign);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection14";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINActiveOrHistoricCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(RestrictedFINActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PlusOrMinusIndicator getSign() {
+		return sign;
+	}
+
+	public void setSign(PlusOrMinusIndicator sign) {
+		this.sign = sign;
 	}
 }

@@ -38,35 +38,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LimitJournalEntry1#JournalDate
- * LimitJournalEntry1.JournalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#CreditDebitIndicator
- * LimitJournalEntry1.CreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitJournalEntry1#Amount
- * LimitJournalEntry1.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmJournalDate
+ * LimitJournalEntry1.mmJournalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#EntryReference
- * LimitJournalEntry1.EntryReference}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmCreditDebitIndicator
+ * LimitJournalEntry1.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmAmount
+ * LimitJournalEntry1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#TransactionIdentification
- * LimitJournalEntry1.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmEntryReference
+ * LimitJournalEntry1.mmEntryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#AccountServicerReference
- * LimitJournalEntry1.AccountServicerReference}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmTransactionIdentification
+ * LimitJournalEntry1.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#ProcessorTransactionIdentification
- * LimitJournalEntry1.ProcessorTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmAccountServicerReference
+ * LimitJournalEntry1.mmAccountServicerReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#AdditionalEntryInformation
- * LimitJournalEntry1.AdditionalEntryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmProcessorTransactionIdentification
+ * LimitJournalEntry1.mmProcessorTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournalEntry1#mmAdditionalEntryInformation
+ * LimitJournalEntry1.mmAdditionalEntryInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitJournalEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice journalDate;
 	/**
 	 * Date and time for which the limit journal entry applies.
 	 * <p>
@@ -109,7 +111,7 @@ public class LimitJournalEntry1 {
 	 * definition} = "Date and time for which the limit journal entry applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd JournalDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmJournalDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -117,12 +119,13 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalDate";
 			definition = "Date and time for which the limit journal entry applies.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the entry is a credit or a debit entry.
 	 * <p>
@@ -152,7 +155,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -160,11 +163,12 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the entry is a credit or a debit entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected Amount2Choice amount;
 	/**
 	 * Amount of money of individual entry impacting the limit.
 	 * <p>
@@ -193,7 +197,7 @@ public class LimitJournalEntry1 {
 	 * definition} = "Amount of money of individual entry impacting the limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -201,11 +205,12 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of individual entry impacting the limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	protected Max35Text entryReference;
 	/**
 	 * Unique reference for the entry, as assigned by the market infrastructure.
 	 * <p>
@@ -235,7 +240,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -243,11 +248,12 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryReference";
 			definition = "Unique reference for the entry, as assigned by the market infrastructure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique reference as assigned by the account owner institution to
 	 * unambiguously identify the entry.
@@ -278,7 +284,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -286,11 +292,12 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique reference as assigned by the account owner institution to unambiguously identify the entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountServicerReference;
 	/**
 	 * Unique reference as assigned by the account servicing institution to
 	 * unambiguously identify the entry.
@@ -321,7 +328,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -329,11 +336,12 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Unique reference as assigned by the account servicing institution to unambiguously identify the entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text processorTransactionIdentification;
 	/**
 	 * Identification of the transaction assigned by the processor.
 	 * <p>
@@ -362,7 +370,7 @@ public class LimitJournalEntry1 {
 	 * "Identification of the transaction assigned by the processor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -370,11 +378,12 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max500Text additionalEntryInformation;
 	/**
 	 * Further details of the entry.
 	 * <p>
@@ -402,7 +411,7 @@ public class LimitJournalEntry1 {
 	 * definition} = "Further details of the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalEntryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -410,8 +419,8 @@ public class LimitJournalEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalEntryInformation";
 			definition = "Further details of the entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
@@ -419,16 +428,80 @@ public class LimitJournalEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournalEntry1.JournalDate, com.tools20022.repository.msg.LimitJournalEntry1.CreditDebitIndicator,
-						com.tools20022.repository.msg.LimitJournalEntry1.Amount, com.tools20022.repository.msg.LimitJournalEntry1.EntryReference, com.tools20022.repository.msg.LimitJournalEntry1.TransactionIdentification,
-						com.tools20022.repository.msg.LimitJournalEntry1.AccountServicerReference, com.tools20022.repository.msg.LimitJournalEntry1.ProcessorTransactionIdentification,
-						com.tools20022.repository.msg.LimitJournalEntry1.AdditionalEntryInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournalEntry1.mmJournalDate, com.tools20022.repository.msg.LimitJournalEntry1.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.LimitJournalEntry1.mmAmount, com.tools20022.repository.msg.LimitJournalEntry1.mmEntryReference, com.tools20022.repository.msg.LimitJournalEntry1.mmTransactionIdentification,
+						com.tools20022.repository.msg.LimitJournalEntry1.mmAccountServicerReference, com.tools20022.repository.msg.LimitJournalEntry1.mmProcessorTransactionIdentification,
+						com.tools20022.repository.msg.LimitJournalEntry1.mmAdditionalEntryInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalEntry1";
 				definition = "Journal entries track changes to the utilisation of the limit. Entries exist for all activity impacting the limit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getJournalDate() {
+		return journalDate;
+	}
+
+	public void setJournalDate(DateAndDateTimeChoice journalDate) {
+		this.journalDate = journalDate;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public Amount2Choice getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Amount2Choice amount) {
+		this.amount = amount;
+	}
+
+	public Max35Text getEntryReference() {
+		return entryReference;
+	}
+
+	public void setEntryReference(Max35Text entryReference) {
+		this.entryReference = entryReference;
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Max35Text getAccountServicerReference() {
+		return accountServicerReference;
+	}
+
+	public void setAccountServicerReference(Max35Text accountServicerReference) {
+		this.accountServicerReference = accountServicerReference;
+	}
+
+	public Max35Text getProcessorTransactionIdentification() {
+		return processorTransactionIdentification;
+	}
+
+	public void setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
+		this.processorTransactionIdentification = processorTransactionIdentification;
+	}
+
+	public Max500Text getAdditionalEntryInformation() {
+		return additionalEntryInformation;
+	}
+
+	public void setAdditionalEntryInformation(Max500Text additionalEntryInformation) {
+		this.additionalEntryInformation = additionalEntryInformation;
 	}
 }

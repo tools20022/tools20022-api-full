@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice#Code
- * TaxableIncomePerShareCalculatedFormat1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice#mmCode
+ * TaxableIncomePerShareCalculatedFormat1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice#Proprietary
- * TaxableIncomePerShareCalculatedFormat1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice#mmProprietary
+ * TaxableIncomePerShareCalculatedFormat1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxableIncomePerShareCalculatedFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionTaxableIncomePerShareCalculated1Code code;
 	/**
 	 * Standard code to specify whether the fund calculates the taxable income
 	 * per dividend/taxable income per share (TID/TIS).
@@ -89,8 +90,8 @@ public class TaxableIncomePerShareCalculatedFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerShareCalculated
-	 * SecuritiesTax.TaxableIncomePerShareCalculated}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
+	 * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,27 +114,28 @@ public class TaxableIncomePerShareCalculatedFormat1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice#Code
-	 * TaxableIncomePerShareCalculatedFormat3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice#mmCode
+	 * TaxableIncomePerShareCalculatedFormat3Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> TaxableIncomePerShareCalculatedFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerShareCalculated;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionTaxableIncomePerShareCalculated1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification to specify whether the fund calculates the
 	 * taxable income per dividend/taxable income per share (TID/TIS).
@@ -147,8 +149,8 @@ public class TaxableIncomePerShareCalculatedFormat1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerShareCalculated
-	 * SecuritiesTax.TaxableIncomePerShareCalculated}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
+	 * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,35 +173,35 @@ public class TaxableIncomePerShareCalculatedFormat1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice#Proprietary
-	 * TaxableIncomePerShareCalculatedFormat3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice#mmProprietary
+	 * TaxableIncomePerShareCalculatedFormat3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> TaxableIncomePerShareCalculatedFormat1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerShareCalculated;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification to specify whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice.Code, com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice.mmCode, com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxableIncomePerShareCalculatedFormat1Choice";
 				definition = "Choice between a standard code or proprietary code to specify whether the taxable income per share or per dividend is calculated.";
@@ -207,5 +209,21 @@ public class TaxableIncomePerShareCalculatedFormat1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionTaxableIncomePerShareCalculated1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionTaxableIncomePerShareCalculated1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

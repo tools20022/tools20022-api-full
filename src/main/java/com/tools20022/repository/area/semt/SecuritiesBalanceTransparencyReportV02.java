@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TransparencyOfHoldingsMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -98,33 +99,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#MessageIdentification
- * SecuritiesBalanceTransparencyReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmMessageIdentification
+ * SecuritiesBalanceTransparencyReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#SenderIdentification
- * SecuritiesBalanceTransparencyReportV02.SenderIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmSenderIdentification
+ * SecuritiesBalanceTransparencyReportV02.mmSenderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#ReceiverIdentification
- * SecuritiesBalanceTransparencyReportV02.ReceiverIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmReceiverIdentification
+ * SecuritiesBalanceTransparencyReportV02.mmReceiverIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#Pagination
- * SecuritiesBalanceTransparencyReportV02.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmPagination
+ * SecuritiesBalanceTransparencyReportV02.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#StatementGeneralDetails
- * SecuritiesBalanceTransparencyReportV02.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmStatementGeneralDetails
+ * SecuritiesBalanceTransparencyReportV02.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#SafekeepingAccountAndHoldings
- * SecuritiesBalanceTransparencyReportV02.SafekeepingAccountAndHoldings}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmSafekeepingAccountAndHoldings
+ * SecuritiesBalanceTransparencyReportV02.mmSafekeepingAccountAndHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#SupplementaryData
- * SecuritiesBalanceTransparencyReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmSupplementaryData
+ * SecuritiesBalanceTransparencyReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#identifier
- * SecuritiesBalanceTransparencyReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.041.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -140,6 +139,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesBalanceTransparencyReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Unique and unambiguous identification of the message. When the report has
 	 * multiple pages, one message equals one page. Therefore, the
@@ -167,17 +167,18 @@ public class SecuritiesBalanceTransparencyReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identification of the message. When the report has multiple pages, one message equals one page. Therefore, the MessageIdentification uniquely identifies the page.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentification100 senderIdentification;
 	/**
 	 * Identification of the party that is the sender of the message.
 	 * <p>
@@ -202,17 +203,18 @@ public class SecuritiesBalanceTransparencyReportV02 {
 	 * "Identification of the party that is the sender of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SenderIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSenderIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SndrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderIdentification";
 			definition = "Identification of the party that is the sender of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification100.mmObject();
 		}
 	};
+	protected PartyIdentification100 receiverIdentification;
 	/**
 	 * Identification of the party that is the receiver of the message.
 	 * <p>
@@ -237,17 +239,18 @@ public class SecuritiesBalanceTransparencyReportV02 {
 	 * "Identification of the party that is the receiver of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReceiverIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReceiverIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverIdentification";
 			definition = "Identification of the party that is the receiver of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification100.mmObject();
 		}
 	};
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -274,17 +277,18 @@ public class SecuritiesBalanceTransparencyReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement59 statementGeneralDetails;
 	/**
 	 * Provides general information on the statement.
 	 * <p>
@@ -307,17 +311,18 @@ public class SecuritiesBalanceTransparencyReportV02 {
 	 * definition} = "Provides general information on the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "Provides general information on the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement59.mmObject();
 		}
 	};
+	protected List<SafekeepingAccount7> safekeepingAccountAndHoldings;
 	/**
 	 * Details of the account, account sub-levels and the holdings.
 	 * <p>
@@ -342,7 +347,7 @@ public class SecuritiesBalanceTransparencyReportV02 {
 	 * "Details of the account, account sub-levels and the holdings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccountAndHoldings = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccountAndHoldings = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcctAndHldgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,6 +357,7 @@ public class SecuritiesBalanceTransparencyReportV02 {
 			complexType_lazy = () -> SafekeepingAccount7.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -378,7 +384,7 @@ public class SecuritiesBalanceTransparencyReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,33 +392,6 @@ public class SecuritiesBalanceTransparencyReportV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "041"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "041";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -426,13 +405,76 @@ public class SecuritiesBalanceTransparencyReportV02 {
 				rootElement = "Document";
 				xmlTag = "SctiesBalTrnsprncyRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.MessageIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.SenderIdentification, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.ReceiverIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.Pagination, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.StatementGeneralDetails,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.SafekeepingAccountAndHoldings, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmSenderIdentification, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmReceiverIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmStatementGeneralDetails,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmSafekeepingAccountAndHoldings, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "041";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public PartyIdentification100 getSenderIdentification() {
+		return senderIdentification;
+	}
+
+	public void setSenderIdentification(PartyIdentification100 senderIdentification) {
+		this.senderIdentification = senderIdentification;
+	}
+
+	public PartyIdentification100 getReceiverIdentification() {
+		return receiverIdentification;
+	}
+
+	public void setReceiverIdentification(PartyIdentification100 receiverIdentification) {
+		this.receiverIdentification = receiverIdentification;
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Statement59 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement59 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public List<SafekeepingAccount7> getSafekeepingAccountAndHoldings() {
+		return safekeepingAccountAndHoldings;
+	}
+
+	public void setSafekeepingAccountAndHoldings(List<SafekeepingAccount7> safekeepingAccountAndHoldings) {
+		this.safekeepingAccountAndHoldings = safekeepingAccountAndHoldings;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

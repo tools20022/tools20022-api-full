@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction3#RequestedExecutionDateTime
- * PaymentInstruction3.RequestedExecutionDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction3#mmRequestedExecutionDateTime
+ * PaymentInstruction3.mmRequestedExecutionDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstruction3#PaymentType
- * PaymentInstruction3.PaymentType}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction3#mmPaymentType
+ * PaymentInstruction3.mmPaymentType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInstruction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime requestedExecutionDateTime;
 	/**
 	 * Date at which the initiating party requests that the payment instruction
 	 * be processed.
@@ -87,8 +88,8 @@ public class PaymentInstruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#RequestedExecutionDate
-	 * PaymentExecution.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmRequestedExecutionDate
+	 * PaymentExecution.mmRequestedExecutionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,27 +112,28 @@ public class PaymentInstruction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction13#RequestedExecutionDateTime
-	 * PaymentInstruction13.RequestedExecutionDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction13#mmRequestedExecutionDateTime
+	 * PaymentInstruction13.mmRequestedExecutionDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> PaymentInstruction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.RequestedExecutionDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDateTime";
 			definition = "Date at which the initiating party requests that the payment instruction be processed. \n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction13.RequestedExecutionDateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction13.mmRequestedExecutionDateTime);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected PaymentType3Choice paymentType;
 	/**
 	 * Type, or nature, of the payment, for example an express payment.<br>
 	 * <p>
@@ -145,7 +147,8 @@ public class PaymentInstruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Type Payment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmType
+	 * Payment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,24 +170,24 @@ public class PaymentInstruction3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction13#PaymentType
-	 * PaymentInstruction13.PaymentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction13#mmPaymentType
+	 * PaymentInstruction13.mmPaymentType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmType;
 			componentContext_lazy = () -> PaymentInstruction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Type;
 			isDerived = false;
 			xmlTag = "PmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentType";
 			definition = "Type, or nature, of the payment, for example an express payment.\r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction13.PaymentType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction13.mmPaymentType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PaymentType3Choice.mmObject();
 		}
 	};
@@ -192,9 +195,9 @@ public class PaymentInstruction3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction3.RequestedExecutionDateTime, com.tools20022.repository.msg.PaymentInstruction3.PaymentType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction3.mmRequestedExecutionDateTime, com.tools20022.repository.msg.PaymentInstruction3.mmPaymentType);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentInstruction3";
 				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
@@ -202,5 +205,21 @@ public class PaymentInstruction3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getRequestedExecutionDateTime() {
+		return requestedExecutionDateTime;
+	}
+
+	public void setRequestedExecutionDateTime(ISODateTime requestedExecutionDateTime) {
+		this.requestedExecutionDateTime = requestedExecutionDateTime;
+	}
+
+	public PaymentType3Choice getPaymentType() {
+		return paymentType;
+	}
+
+	public void setPaymentType(PaymentType3Choice paymentType) {
+		this.paymentType = paymentType;
 	}
 }

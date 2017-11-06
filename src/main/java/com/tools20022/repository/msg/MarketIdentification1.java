@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification1#Identification
- * MarketIdentification1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification1#Type
- * MarketIdentification1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification1#mmIdentification
+ * MarketIdentification1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification1#mmType
+ * MarketIdentification1.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification6Choice identification;
 	/**
 	 * Unique and unambiguous way to identify an organisation.
 	 * <p>
@@ -77,8 +78,8 @@ public class MarketIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,21 +98,22 @@ public class MarketIdentification1 {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> MarketIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
 		}
 	};
+	protected MarketType1Code type;
 	/**
 	 * Nature of a market in which transactions take place.
 	 * <p>
@@ -125,8 +127,8 @@ public class MarketIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#Type
-	 * TradingMarket.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmType
+	 * TradingMarket.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class MarketIdentification1 {
 	 * definition} = "Nature of a market in which transactions take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmType;
 			componentContext_lazy = () -> MarketIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of a market in which transactions take place.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MarketType1Code.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class MarketIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification1.Identification, com.tools20022.repository.msg.MarketIdentification1.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification1.mmIdentification, com.tools20022.repository.msg.MarketIdentification1.mmType);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarketIdentification1";
 				definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification6Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.PartyIdentification6Choice identification) {
+		this.identification = identification;
+	}
+
+	public MarketType1Code getType() {
+		return type;
+	}
+
+	public void setType(MarketType1Code type) {
+		this.type = type;
 	}
 }

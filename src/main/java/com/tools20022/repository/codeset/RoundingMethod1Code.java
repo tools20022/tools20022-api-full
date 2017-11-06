@@ -35,21 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * RoundingMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#Down
- * RoundingMethod1Code.Down}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#Up
- * RoundingMethod1Code.Up}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#None
- * RoundingMethod1Code.None}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#Closer
- * RoundingMethod1Code.Closer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#mmDown
+ * RoundingMethod1Code.mmDown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#mmUp
+ * RoundingMethod1Code.mmUp}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#mmNone
+ * RoundingMethod1Code.mmNone}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingMethod1Code#mmCloser
+ * RoundingMethod1Code.mmCloser}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +88,7 @@ public class RoundingMethod1Code extends RoundingMethodCode {
 	 * name} = "Down"</li>
 	 * </ul>
 	 */
-	public static final MMCode Down = new MMCode() {
+	public static final MMCode mmDown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Down";
@@ -110,7 +111,7 @@ public class RoundingMethod1Code extends RoundingMethodCode {
 	 * name} = "Up"</li>
 	 * </ul>
 	 */
-	public static final MMCode Up = new MMCode() {
+	public static final MMCode mmUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Up";
@@ -133,7 +134,7 @@ public class RoundingMethod1Code extends RoundingMethodCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -156,7 +157,7 @@ public class RoundingMethod1Code extends RoundingMethodCode {
 	 * name} = "Closer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closer = new MMCode() {
+	public static final MMCode mmCloser = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closer";
@@ -167,13 +168,13 @@ public class RoundingMethod1Code extends RoundingMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DRDW");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RoundingMethod1Code";
 				definition = "Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingMethod1Code.Down, com.tools20022.repository.codeset.RoundingMethod1Code.Up, com.tools20022.repository.codeset.RoundingMethod1Code.None,
-						com.tools20022.repository.codeset.RoundingMethod1Code.Closer);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingMethod1Code.mmDown, com.tools20022.repository.codeset.RoundingMethod1Code.mmUp, com.tools20022.repository.codeset.RoundingMethod1Code.mmNone,
+						com.tools20022.repository.codeset.RoundingMethod1Code.mmCloser);
 				trace_lazy = () -> RoundingMethodCode.mmObject();
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.StandardisationCode;
 import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of format for standardisation.
@@ -34,18 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Standardisation1Choice#Code
- * Standardisation1Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Standardisation1Choice#Proprietary
- * Standardisation1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Standardisation1Choice#mmCode
+ * Standardisation1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Standardisation1Choice#mmProprietary
+ * Standardisation1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Standardisation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<StandardisationCode> code;
 	/**
 	 * Standardisation expressed as an ISO 20022 code.
 	 * <p>
@@ -87,7 +90,7 @@ public class Standardisation1Choice {
 	 * definition} = "Standardisation expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Standardisation1Choice.mmObject();
 			isDerived = false;
@@ -99,6 +102,7 @@ public class Standardisation1Choice {
 			simpleType_lazy = () -> StandardisationCode.mmObject();
 		}
 	};
+	protected GenericIdentification40 proprietary;
 	/**
 	 * Standardisation expressed as a proprietary code.
 	 * <p>
@@ -126,7 +130,7 @@ public class Standardisation1Choice {
 	 * definition} = "Standardisation expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Standardisation1Choice.mmObject();
 			isDerived = false;
@@ -134,23 +138,39 @@ public class Standardisation1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Standardisation expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification40.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Standardisation1Choice.Code, com.tools20022.repository.choice.Standardisation1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Standardisation1Choice.mmCode, com.tools20022.repository.choice.Standardisation1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Standardisation1Choice";
 				definition = "Choice of format for standardisation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<StandardisationCode> getCode() {
+		return code;
+	}
+
+	public void setCode(List<StandardisationCode> code) {
+		this.code = code;
+	}
+
+	public GenericIdentification40 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification40 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

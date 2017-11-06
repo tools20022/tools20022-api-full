@@ -30,13 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CopyDuplicateCode#CopyDuplicate
- * CopyDuplicateCode.CopyDuplicate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CopyDuplicateCode#Copy
- * CopyDuplicateCode.Copy}</li>
+ * {@linkplain com.tools20022.repository.codeset.CopyDuplicateCode#mmCopyDuplicate
+ * CopyDuplicateCode.mmCopyDuplicate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CopyDuplicateCode#mmCopy
+ * CopyDuplicateCode.mmCopy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CopyDuplicateCode#Duplicate
- * CopyDuplicateCode.Duplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CopyDuplicateCode#mmDuplicate
+ * CopyDuplicateCode.mmDuplicate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +97,7 @@ public class CopyDuplicateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CopyDuplicate = new MMCode() {
+	public static final MMCode mmCopyDuplicate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CopyDuplicate";
@@ -130,7 +130,7 @@ public class CopyDuplicateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Copy = new MMCode() {
+	public static final MMCode mmCopy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Copy";
@@ -163,7 +163,7 @@ public class CopyDuplicateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Duplicate = new MMCode() {
+	public static final MMCode mmDuplicate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Duplicate";
@@ -176,12 +176,13 @@ public class CopyDuplicateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CODU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CopyDuplicateCode";
 				definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CopyDuplicateCode.CopyDuplicate, com.tools20022.repository.codeset.CopyDuplicateCode.Copy, com.tools20022.repository.codeset.CopyDuplicateCode.Duplicate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CopyDuplicateCode.mmCopyDuplicate, com.tools20022.repository.codeset.CopyDuplicateCode.mmCopy,
+						com.tools20022.repository.codeset.CopyDuplicateCode.mmDuplicate);
 				derivation_lazy = () -> Arrays.asList(CopyDuplicate1Code.mmObject());
 			}
 		});

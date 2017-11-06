@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The MoneyMarketSecuredMarketStatisticalReport message is sent by the
@@ -56,21 +57,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02#ReportHeader
- * MoneyMarketSecuredMarketStatisticalReportV02.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02#mmReportHeader
+ * MoneyMarketSecuredMarketStatisticalReportV02.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02#SecuredMarketReport
- * MoneyMarketSecuredMarketStatisticalReportV02.SecuredMarketReport}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02#mmSecuredMarketReport
+ * MoneyMarketSecuredMarketStatisticalReportV02.mmSecuredMarketReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02#SupplementaryData
- * MoneyMarketSecuredMarketStatisticalReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02#mmSupplementaryData
+ * MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02#identifier
- * MoneyMarketSecuredMarketStatisticalReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.012.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MoneyMarketSecuredMarketStatisticalReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MoneyMarketReportHeader1 reportHeader;
 	/**
 	 * Provides the elements specific to the report.
 	 * <p>
@@ -114,22 +114,23 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01#ReportHeader
-	 * MoneyMarketSecuredMarketStatisticalReportV01.ReportHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01#mmReportHeader
+	 * MoneyMarketSecuredMarketStatisticalReportV01.mmReportHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Provides the elements specific to the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.ReportHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.mmReportHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
 		}
 	};
+	protected SecuredMarketReport4Choice securedMarketReport;
 	/**
 	 * Provides the reason why no activity is reported or the required list of
 	 * transactions for the secured market segment.
@@ -157,22 +158,23 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01#SecuredMarketReport
-	 * MoneyMarketSecuredMarketStatisticalReportV01.SecuredMarketReport}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01#mmSecuredMarketReport
+	 * MoneyMarketSecuredMarketStatisticalReportV01.mmSecuredMarketReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecuredMarketReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecuredMarketReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScrdMktRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredMarketReport";
 			definition = "Provides the reason why no activity is reported or the required list of transactions for the secured market segment.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.SecuredMarketReport;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.mmSecuredMarketReport;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuredMarketReport4Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -200,46 +202,19 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01#SupplementaryData
-	 * MoneyMarketSecuredMarketStatisticalReportV01.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01#mmSupplementaryData
+	 * MoneyMarketSecuredMarketStatisticalReportV01.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "012";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -254,11 +229,42 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 				rootElement = "Document";
 				xmlTag = "MnyMktScrdMktSttstclRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.ReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.SecuredMarketReport, com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmReportHeader,
+						com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmSecuredMarketReport, com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "012";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MoneyMarketReportHeader1 getReportHeader() {
+		return reportHeader;
+	}
+
+	public void setReportHeader(MoneyMarketReportHeader1 reportHeader) {
+		this.reportHeader = reportHeader;
+	}
+
+	public SecuredMarketReport4Choice getSecuredMarketReport() {
+		return securedMarketReport;
+	}
+
+	public void setSecuredMarketReport(SecuredMarketReport4Choice securedMarketReport) {
+		this.securedMarketReport = securedMarketReport;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

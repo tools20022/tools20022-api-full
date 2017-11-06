@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventWorkflowStatus2Code#Deleted
- * EventWorkflowStatus2Code.Deleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventWorkflowStatus2Code#mmDeleted
+ * EventWorkflowStatus2Code.mmDeleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventWorkflowStatus2Code#Cancelled
- * EventWorkflowStatus2Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventWorkflowStatus2Code#mmCancelled
+ * EventWorkflowStatus2Code.mmCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class EventWorkflowStatus2Code extends EventWorkflowStatusCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deleted = new MMCode() {
+	public static final MMCode mmDeleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
@@ -107,7 +107,7 @@ public class EventWorkflowStatus2Code extends EventWorkflowStatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -118,12 +118,12 @@ public class EventWorkflowStatus2Code extends EventWorkflowStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WSDE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventWorkflowStatus2Code";
 				definition = "Specifies the workflow status of the announcement record based on validation procedure.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventWorkflowStatus2Code.Deleted, com.tools20022.repository.codeset.EventWorkflowStatus2Code.Cancelled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventWorkflowStatus2Code.mmDeleted, com.tools20022.repository.codeset.EventWorkflowStatus2Code.mmCancelled);
 				trace_lazy = () -> EventWorkflowStatusCode.mmObject();
 			}
 		});

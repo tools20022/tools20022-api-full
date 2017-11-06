@@ -29,47 +29,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#Accepted
- * QuoteStatusCode.Accepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmAccepted
+ * QuoteStatusCode.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#CancelSymbol
- * QuoteStatusCode.CancelSymbol}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmCancelSymbol
+ * QuoteStatusCode.mmCancelSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#CancelSecurity
- * QuoteStatusCode.CancelSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmCancelSecurity
+ * QuoteStatusCode.mmCancelSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#CancelUnderlying
- * QuoteStatusCode.CancelUnderlying}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#CancelAll
- * QuoteStatusCode.CancelAll}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#Rejected
- * QuoteStatusCode.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmCancelUnderlying
+ * QuoteStatusCode.mmCancelUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#RemovedFromMarket
- * QuoteStatusCode.RemovedFromMarket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#Expired
- * QuoteStatusCode.Expired}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#Query
- * QuoteStatusCode.Query}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmCancelAll
+ * QuoteStatusCode.mmCancelAll}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmRejected
+ * QuoteStatusCode.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#QuoteNotFound
- * QuoteStatusCode.QuoteNotFound}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#Pending
- * QuoteStatusCode.Pending}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#Pass
- * QuoteStatusCode.Pass}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmRemovedFromMarket
+ * QuoteStatusCode.mmRemovedFromMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmExpired
+ * QuoteStatusCode.mmExpired}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmQuery
+ * QuoteStatusCode.mmQuery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#LockedMarketWarning
- * QuoteStatusCode.LockedMarketWarning}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmQuoteNotFound
+ * QuoteStatusCode.mmQuoteNotFound}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmPending
+ * QuoteStatusCode.mmPending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmPass
+ * QuoteStatusCode.mmPass}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#CrossMarketWarning
- * QuoteStatusCode.CrossMarketWarning}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmLockedMarketWarning
+ * QuoteStatusCode.mmLockedMarketWarning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#CanceledDueToLockMarket
- * QuoteStatusCode.CanceledDueToLockMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmCrossMarketWarning
+ * QuoteStatusCode.mmCrossMarketWarning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#CanceledDueToCrossMarket
- * QuoteStatusCode.CanceledDueToCrossMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmCanceledDueToLockMarket
+ * QuoteStatusCode.mmCanceledDueToLockMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteStatusCode#mmCanceledDueToCrossMarket
+ * QuoteStatusCode.mmCanceledDueToCrossMarket}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -84,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -127,7 +128,7 @@ public class QuoteStatusCode {
 	 * "Indicates that the quote is accepted for further negotiation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -160,7 +161,7 @@ public class QuoteStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CancelSymbol = new MMCode() {
+	public static final MMCode mmCancelSymbol = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelSymbol";
@@ -191,7 +192,7 @@ public class QuoteStatusCode {
 	 * "Indicates that all quotes are cancelled for a specific security."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelSecurity = new MMCode() {
+	public static final MMCode mmCancelSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelSecurity";
@@ -224,7 +225,7 @@ public class QuoteStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CancelUnderlying = new MMCode() {
+	public static final MMCode mmCancelUnderlying = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelUnderlying";
@@ -254,7 +255,7 @@ public class QuoteStatusCode {
 	 * definition} = "Indicates that all quotes are cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelAll = new MMCode() {
+	public static final MMCode mmCancelAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelAll";
@@ -284,7 +285,7 @@ public class QuoteStatusCode {
 	 * definition} = "Indicates that the quote is not accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -314,7 +315,7 @@ public class QuoteStatusCode {
 	 * definition} = "Indicates that all quotes are removed from the market."</li>
 	 * </ul>
 	 */
-	public static final MMCode RemovedFromMarket = new MMCode() {
+	public static final MMCode mmRemovedFromMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemovedFromMarket";
@@ -344,7 +345,7 @@ public class QuoteStatusCode {
 	 * definition} = "Indicates that the quote is not valid anymore."</li>
 	 * </ul>
 	 */
-	public static final MMCode Expired = new MMCode() {
+	public static final MMCode mmExpired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
@@ -374,7 +375,7 @@ public class QuoteStatusCode {
 	 * definition} = "Indicates that the quote is being requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode Query = new MMCode() {
+	public static final MMCode mmQuery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Query";
@@ -404,7 +405,7 @@ public class QuoteStatusCode {
 	 * definition} = "Indicates that no quote can be computed or communicated."</li>
 	 * </ul>
 	 */
-	public static final MMCode QuoteNotFound = new MMCode() {
+	public static final MMCode mmQuoteNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteNotFound";
@@ -434,7 +435,7 @@ public class QuoteStatusCode {
 	 * definition} = "Indicates that the quote is being processed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -465,7 +466,7 @@ public class QuoteStatusCode {
 	 * "Indicates that the counterparty is not interested in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pass = new MMCode() {
+	public static final MMCode mmPass = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pass";
@@ -495,7 +496,7 @@ public class QuoteStatusCode {
 	 * definition} = "Warning due to a situation of locked market."</li>
 	 * </ul>
 	 */
-	public static final MMCode LockedMarketWarning = new MMCode() {
+	public static final MMCode mmLockedMarketWarning = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LockedMarketWarning";
@@ -525,7 +526,7 @@ public class QuoteStatusCode {
 	 * definition} = "Warning due to a situation of cross market."</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossMarketWarning = new MMCode() {
+	public static final MMCode mmCrossMarketWarning = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossMarketWarning";
@@ -557,7 +558,7 @@ public class QuoteStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CanceledDueToLockMarket = new MMCode() {
+	public static final MMCode mmCanceledDueToLockMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanceledDueToLockMarket";
@@ -589,7 +590,7 @@ public class QuoteStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CanceledDueToCrossMarket = new MMCode() {
+	public static final MMCode mmCanceledDueToCrossMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanceledDueToCrossMarket";
@@ -602,17 +603,17 @@ public class QuoteStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACPT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuoteStatusCode";
 				definition = "Identifies the status of a quote acknowledgement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteStatusCode.Accepted, com.tools20022.repository.codeset.QuoteStatusCode.CancelSymbol, com.tools20022.repository.codeset.QuoteStatusCode.CancelSecurity,
-						com.tools20022.repository.codeset.QuoteStatusCode.CancelUnderlying, com.tools20022.repository.codeset.QuoteStatusCode.CancelAll, com.tools20022.repository.codeset.QuoteStatusCode.Rejected,
-						com.tools20022.repository.codeset.QuoteStatusCode.RemovedFromMarket, com.tools20022.repository.codeset.QuoteStatusCode.Expired, com.tools20022.repository.codeset.QuoteStatusCode.Query,
-						com.tools20022.repository.codeset.QuoteStatusCode.QuoteNotFound, com.tools20022.repository.codeset.QuoteStatusCode.Pending, com.tools20022.repository.codeset.QuoteStatusCode.Pass,
-						com.tools20022.repository.codeset.QuoteStatusCode.LockedMarketWarning, com.tools20022.repository.codeset.QuoteStatusCode.CrossMarketWarning, com.tools20022.repository.codeset.QuoteStatusCode.CanceledDueToLockMarket,
-						com.tools20022.repository.codeset.QuoteStatusCode.CanceledDueToCrossMarket);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteStatusCode.mmAccepted, com.tools20022.repository.codeset.QuoteStatusCode.mmCancelSymbol,
+						com.tools20022.repository.codeset.QuoteStatusCode.mmCancelSecurity, com.tools20022.repository.codeset.QuoteStatusCode.mmCancelUnderlying, com.tools20022.repository.codeset.QuoteStatusCode.mmCancelAll,
+						com.tools20022.repository.codeset.QuoteStatusCode.mmRejected, com.tools20022.repository.codeset.QuoteStatusCode.mmRemovedFromMarket, com.tools20022.repository.codeset.QuoteStatusCode.mmExpired,
+						com.tools20022.repository.codeset.QuoteStatusCode.mmQuery, com.tools20022.repository.codeset.QuoteStatusCode.mmQuoteNotFound, com.tools20022.repository.codeset.QuoteStatusCode.mmPending,
+						com.tools20022.repository.codeset.QuoteStatusCode.mmPass, com.tools20022.repository.codeset.QuoteStatusCode.mmLockedMarketWarning, com.tools20022.repository.codeset.QuoteStatusCode.mmCrossMarketWarning,
+						com.tools20022.repository.codeset.QuoteStatusCode.mmCanceledDueToLockMarket, com.tools20022.repository.codeset.QuoteStatusCode.mmCanceledDueToCrossMarket);
 				derivation_lazy = () -> Arrays.asList(QuoteStatus1Code.mmObject(), QuoteStatus2Code.mmObject());
 			}
 		});

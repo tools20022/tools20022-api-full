@@ -40,25 +40,26 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#ReasonOrExtendedReasonOrDSSRule
- * SuspendedStatusReason2.ReasonOrExtendedReasonOrDSSRule}</li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmReasonOrExtendedReasonOrDSSRule
+ * SuspendedStatusReason2.mmReasonOrExtendedReasonOrDSSRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#Reason
- * SuspendedStatusReason2.Reason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#ExtendedReason
- * SuspendedStatusReason2.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmReason
+ * SuspendedStatusReason2.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#DataSourceScheme
- * SuspendedStatusReason2.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmExtendedReason
+ * SuspendedStatusReason2.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#AdditionalInformation
- * SuspendedStatusReason2.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmDataSourceScheme
+ * SuspendedStatusReason2.mmDataSourceScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmAdditionalInformation
+ * SuspendedStatusReason2.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +68,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -93,6 +94,7 @@ import java.util.function.Supplier;
 public class SuspendedStatusReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SuspendedStatusReason3Code reason;
 	/**
 	 * Reason for the suspended status.
 	 * <p>
@@ -106,8 +108,8 @@ public class SuspendedStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#SuspendedStatusReason
-	 * SecuritiesOrderStatus.SuspendedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmSuspendedStatusReason
+	 * SecuritiesOrderStatus.mmSuspendedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -126,20 +128,21 @@ public class SuspendedStatusReason2 {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> SuspendedStatusReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.SuspendedStatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the suspended status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason3Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the suspended status.
 	 * <p>
@@ -168,7 +171,7 @@ public class SuspendedStatusReason2 {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SuspendedStatusReason2.mmObject();
 			isDerived = false;
@@ -176,11 +179,12 @@ public class SuspendedStatusReason2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the suspended status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the suspended status.
 	 * <p>
@@ -192,8 +196,8 @@ public class SuspendedStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -213,21 +217,22 @@ public class SuspendedStatusReason2 {
 	 * "Proprietary identification of the reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> SuspendedStatusReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the suspended status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the suspended status reason.
 	 * <p>
@@ -240,8 +245,8 @@ public class SuspendedStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -261,17 +266,17 @@ public class SuspendedStatusReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> SuspendedStatusReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the suspended status reason.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -285,14 +290,14 @@ public class SuspendedStatusReason2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#Reason
-	 * SuspendedStatusReason2.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmReason
+	 * SuspendedStatusReason2.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#ExtendedReason
-	 * SuspendedStatusReason2.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmExtendedReason
+	 * SuspendedStatusReason2.mmExtendedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#DataSourceScheme
-	 * SuspendedStatusReason2.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason2#mmDataSourceScheme
+	 * SuspendedStatusReason2.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -312,24 +317,24 @@ public class SuspendedStatusReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonOrExtendedReasonOrDSSRule = new MMXor() {
+	public static final MMXor mmReasonOrExtendedReasonOrDSSRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonOrDSSRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason2.Reason, com.tools20022.repository.msg.SuspendedStatusReason2.ExtendedReason,
-					com.tools20022.repository.msg.SuspendedStatusReason2.DataSourceScheme);
 			messageComponent_lazy = () -> SuspendedStatusReason2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason2.mmReason, com.tools20022.repository.msg.SuspendedStatusReason2.mmExtendedReason,
+					com.tools20022.repository.msg.SuspendedStatusReason2.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason2.Reason, com.tools20022.repository.msg.SuspendedStatusReason2.ExtendedReason,
-						com.tools20022.repository.msg.SuspendedStatusReason2.DataSourceScheme, com.tools20022.repository.msg.SuspendedStatusReason2.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason2.mmReason, com.tools20022.repository.msg.SuspendedStatusReason2.mmExtendedReason,
+						com.tools20022.repository.msg.SuspendedStatusReason2.mmDataSourceScheme, com.tools20022.repository.msg.SuspendedStatusReason2.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -341,9 +346,41 @@ public class SuspendedStatusReason2 {
 				name = "SuspendedStatusReason2";
 				definition = "Identification of the reason for the suspended status.";
 				nextVersions_lazy = () -> Arrays.asList(SuspendedStatusReason5Choice.mmObject(), SuspendedStatusReason4.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason2.ReasonOrExtendedReasonOrDSSRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason2.mmReasonOrExtendedReasonOrDSSRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SuspendedStatusReason3Code getReason() {
+		return reason;
+	}
+
+	public void setReason(SuspendedStatusReason3Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

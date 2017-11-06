@@ -36,36 +36,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties2#LegalGuardian
- * AccountParties2.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#LegalGuardian
- * AccountParties5.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties6#LegalGuardian
- * AccountParties6.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#LegalGuardian
- * AccountParties3.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#LegalGuardian
- * AccountParties4.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties7#LegalGuardian
- * AccountParties7.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties9#LegalGuardian
- * AccountParties9.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties8#LegalGuardian
- * AccountParties8.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties11#LegalGuardian
- * AccountParties11.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties10#LegalGuardian
- * AccountParties10.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties12#LegalGuardian
- * AccountParties12.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties13#LegalGuardian
- * AccountParties13.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties14#LegalGuardian
- * AccountParties14.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties15#LegalGuardian
- * AccountParties15.LegalGuardian}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties16#LegalGuardian
- * AccountParties16.LegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties2#mmLegalGuardian
+ * AccountParties2.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties5#mmLegalGuardian
+ * AccountParties5.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties6#mmLegalGuardian
+ * AccountParties6.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmLegalGuardian
+ * AccountParties3.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties4#mmLegalGuardian
+ * AccountParties4.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties7#mmLegalGuardian
+ * AccountParties7.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties9#mmLegalGuardian
+ * AccountParties9.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties8#mmLegalGuardian
+ * AccountParties8.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties11#mmLegalGuardian
+ * AccountParties11.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties10#mmLegalGuardian
+ * AccountParties10.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties12#mmLegalGuardian
+ * AccountParties12.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties13#mmLegalGuardian
+ * AccountParties13.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties14#mmLegalGuardian
+ * AccountParties14.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties15#mmLegalGuardian
+ * AccountParties15.mmLegalGuardian}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties16#mmLegalGuardian
+ * AccountParties16.mmLegalGuardian}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -75,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,16 +111,16 @@ public class LegalGuardianRole extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LegalGuardianRole";
 				definition = "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.LegalGuardian, com.tools20022.repository.msg.AccountParties5.LegalGuardian,
-						com.tools20022.repository.msg.AccountParties6.LegalGuardian, com.tools20022.repository.msg.AccountParties3.LegalGuardian, com.tools20022.repository.msg.AccountParties4.LegalGuardian,
-						com.tools20022.repository.msg.AccountParties7.LegalGuardian, com.tools20022.repository.msg.AccountParties9.LegalGuardian, com.tools20022.repository.msg.AccountParties8.LegalGuardian,
-						com.tools20022.repository.msg.AccountParties11.LegalGuardian, com.tools20022.repository.msg.AccountParties10.LegalGuardian, com.tools20022.repository.msg.AccountParties12.LegalGuardian,
-						com.tools20022.repository.msg.AccountParties13.LegalGuardian, com.tools20022.repository.msg.AccountParties14.LegalGuardian, com.tools20022.repository.msg.AccountParties15.LegalGuardian,
-						com.tools20022.repository.msg.AccountParties16.LegalGuardian);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmLegalGuardian, com.tools20022.repository.msg.AccountParties5.mmLegalGuardian,
+						com.tools20022.repository.msg.AccountParties6.mmLegalGuardian, com.tools20022.repository.msg.AccountParties3.mmLegalGuardian, com.tools20022.repository.msg.AccountParties4.mmLegalGuardian,
+						com.tools20022.repository.msg.AccountParties7.mmLegalGuardian, com.tools20022.repository.msg.AccountParties9.mmLegalGuardian, com.tools20022.repository.msg.AccountParties8.mmLegalGuardian,
+						com.tools20022.repository.msg.AccountParties11.mmLegalGuardian, com.tools20022.repository.msg.AccountParties10.mmLegalGuardian, com.tools20022.repository.msg.AccountParties12.mmLegalGuardian,
+						com.tools20022.repository.msg.AccountParties13.mmLegalGuardian, com.tools20022.repository.msg.AccountParties14.mmLegalGuardian, com.tools20022.repository.msg.AccountParties15.mmLegalGuardian,
+						com.tools20022.repository.msg.AccountParties16.mmLegalGuardian);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

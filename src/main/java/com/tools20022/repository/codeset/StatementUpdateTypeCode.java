@@ -30,18 +30,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeCode#Complete
- * StatementUpdateTypeCode.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeCode#mmComplete
+ * StatementUpdateTypeCode.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeCode#Delta
- * StatementUpdateTypeCode.Delta}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeCode#mmDelta
+ * StatementUpdateTypeCode.mmDelta}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class StatementUpdateTypeCode {
 	 * definition} = "Statement is complete."</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Complete";
@@ -114,7 +114,7 @@ public class StatementUpdateTypeCode {
 	 * definition} = "Statement contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMCode Delta = new MMCode() {
+	public static final MMCode mmDelta = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Delta";
@@ -127,12 +127,12 @@ public class StatementUpdateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateTypeCode";
 				definition = "Specifies the nature of a statement update, eg, it is a complete statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateTypeCode.Complete, com.tools20022.repository.codeset.StatementUpdateTypeCode.Delta);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateTypeCode.mmComplete, com.tools20022.repository.codeset.StatementUpdateTypeCode.mmDelta);
 			}
 		});
 		return mmObject_lazy.get();

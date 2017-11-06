@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxInformation3#Creditor
- * TaxInformation3.Creditor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxInformation4#Creditor
- * TaxInformation4.Creditor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxInformation3#mmCreditor
+ * TaxInformation3.mmCreditor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxInformation4#mmCreditor
+ * TaxInformation4.mmCreditor}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,11 +67,11 @@ public class CreditSideTaxDebtor extends TaxPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditSideTaxDebtor";
 				definition = "Party on the credit side of the transaction to which the tax applies.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxInformation3.Creditor, com.tools20022.repository.msg.TaxInformation4.Creditor);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxInformation3.mmCreditor, com.tools20022.repository.msg.TaxInformation4.mmCreditor);
 				superType_lazy = () -> TaxPartyRole.mmObject();
 			}
 		});

@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#Unit
- * FinancialInstrumentQuantity25Choice.Unit}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmUnit
+ * FinancialInstrumentQuantity25Choice.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#NominalValue
- * FinancialInstrumentQuantity25Choice.NominalValue}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmNominalValue
+ * FinancialInstrumentQuantity25Choice.mmNominalValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#MonetaryValue
- * FinancialInstrumentQuantity25Choice.MonetaryValue}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmMonetaryValue
+ * FinancialInstrumentQuantity25Choice.mmMonetaryValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentQuantity25Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber unit;
 	/**
 	 * Quantity expressed as a number, such as a number of shares.
 	 * <p>
@@ -79,8 +80,8 @@ public class FinancialInstrumentQuantity25Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class FinancialInstrumentQuantity25Choice {
 	 * "Quantity expressed as a number, such as a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> FinancialInstrumentQuantity25Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity expressed as a number, such as a number of shares.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount nominalValue;
 	/**
 	 * TBC
 	 * <p>
@@ -127,8 +129,8 @@ public class FinancialInstrumentQuantity25Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#FaceAmount
-	 * AssetHolding.FaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmFaceAmount
+	 * AssetHolding.mmFaceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,20 +149,21 @@ public class FinancialInstrumentQuantity25Choice {
 	 * definition} = "TBC"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NominalValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNominalValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity25Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.FaceAmount;
 			isDerived = false;
 			xmlTag = "NmnlVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalValue";
 			definition = "TBC";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount monetaryValue;
 	/**
 	 * TBC
 	 * <p>
@@ -174,8 +177,8 @@ public class FinancialInstrumentQuantity25Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#AmortisedFaceValue
-	 * AssetHolding.AmortisedFaceValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmAmortisedFaceValue
+	 * AssetHolding.mmAmortisedFaceValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,17 +197,17 @@ public class FinancialInstrumentQuantity25Choice {
 	 * definition} = "TBC"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MonetaryValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMonetaryValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> FinancialInstrumentQuantity25Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.AmortisedFaceValue;
 			isDerived = false;
 			xmlTag = "MntryVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonetaryValue";
 			definition = "TBC";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
@@ -212,15 +215,39 @@ public class FinancialInstrumentQuantity25Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.Unit, com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.NominalValue,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.MonetaryValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmNominalValue,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmMonetaryValue);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity25Choice";
 				definition = "Defines the format for the quantity of security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getUnit() {
+		return unit;
+	}
+
+	public void setUnit(DecimalNumber unit) {
+		this.unit = unit;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getNominalValue() {
+		return nominalValue;
+	}
+
+	public void setNominalValue(ActiveOrHistoricCurrencyAndAmount nominalValue) {
+		this.nominalValue = nominalValue;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getMonetaryValue() {
+		return monetaryValue;
+	}
+
+	public void setMonetaryValue(ActiveOrHistoricCurrencyAndAmount monetaryValue) {
+		this.monetaryValue = monetaryValue;
 	}
 }

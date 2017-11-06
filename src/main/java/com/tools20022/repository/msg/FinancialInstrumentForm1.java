@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentForm1#BookingAppearance
- * FinancialInstrumentForm1.BookingAppearance}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentForm1#mmBookingAppearance
+ * FinancialInstrumentForm1.mmBookingAppearance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentForm1#LegalForm
- * FinancialInstrumentForm1.LegalForm}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentForm1#mmLegalForm
+ * FinancialInstrumentForm1.mmLegalForm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentForm1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Appearance2Choice bookingAppearance;
 	/**
 	 * Indicates the booking appareance of the financial Instrument
 	 * <p>
@@ -88,7 +89,7 @@ public class FinancialInstrumentForm1 {
 	 * "Indicates the booking appareance of the financial Instrument"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BookingAppearance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBookingAppearance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentForm1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class FinancialInstrumentForm1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingAppearance";
 			definition = "Indicates the booking appareance of the financial Instrument";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Appearance2Choice.mmObject();
 		}
 	};
+	protected FormOfSecurity5Choice legalForm;
 	/**
 	 * Specifies the form, ie, ownership, of the security.
 	 * <p>
@@ -129,7 +131,7 @@ public class FinancialInstrumentForm1 {
 	 * definition} = "Specifies the form, ie, ownership, of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalForm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentForm1.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class FinancialInstrumentForm1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalForm";
 			definition = "Specifies the form, ie, ownership, of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FormOfSecurity5Choice.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class FinancialInstrumentForm1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentForm1.BookingAppearance, com.tools20022.repository.msg.FinancialInstrumentForm1.LegalForm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentForm1.mmBookingAppearance, com.tools20022.repository.msg.FinancialInstrumentForm1.mmLegalForm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentForm1";
 				definition = "Indicates the form of the financial Instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Appearance2Choice getBookingAppearance() {
+		return bookingAppearance;
+	}
+
+	public void setBookingAppearance(Appearance2Choice bookingAppearance) {
+		this.bookingAppearance = bookingAppearance;
+	}
+
+	public FormOfSecurity5Choice getLegalForm() {
+		return legalForm;
+	}
+
+	public void setLegalForm(FormOfSecurity5Choice legalForm) {
+		this.legalForm = legalForm;
 	}
 }

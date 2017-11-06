@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionQuantities1Choice#Quantity
- * TransactionQuantities1Choice.Quantity}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionQuantities1Choice#mmQuantity
+ * TransactionQuantities1Choice.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionQuantities1Choice#Proprietary
- * TransactionQuantities1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionQuantities1Choice#mmProprietary
+ * TransactionQuantities1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionQuantities1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantityChoice quantity;
 	/**
 	 * Specifies the quantity (eg of securities) in the underlying transaction.
 	 * <p>
@@ -97,21 +98,22 @@ public class TransactionQuantities1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionQuantities1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> TransactionQuantities1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity (eg of securities) in the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected ProprietaryQuantity1 proprietary;
 	/**
 	 * Proprietary quantities specification defined in the underlying
 	 * transaction.
@@ -146,33 +148,49 @@ public class TransactionQuantities1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionQuantities1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> TransactionQuantities1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary quantities specification defined in the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryQuantity1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryQuantity1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionQuantities1Choice.Quantity, com.tools20022.repository.choice.TransactionQuantities1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionQuantities1Choice.mmQuantity, com.tools20022.repository.choice.TransactionQuantities1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionQuantities1Choice";
 				definition = "Specifies the quantities (eg of securities) in the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantityChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public ProprietaryQuantity1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(ProprietaryQuantity1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

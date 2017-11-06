@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#LastResort
- * AutomaticBorrowing1Code.LastResort}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#mmLastResort
+ * AutomaticBorrowing1Code.mmLastResort}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#NoAutomatic
- * AutomaticBorrowing1Code.NoAutomatic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#mmNoAutomatic
+ * AutomaticBorrowing1Code.mmNoAutomatic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#Automatic
- * AutomaticBorrowing1Code.Automatic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#mmAutomatic
+ * AutomaticBorrowing1Code.mmAutomatic}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class AutomaticBorrowing1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LastResort = new MMCode() {
+	public static final MMCode mmLastResort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "LastResort";
@@ -118,7 +118,7 @@ public class AutomaticBorrowing1Code {
 	 * definition} = "No automatic borrowing may take place."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAutomatic = new MMCode() {
+	public static final MMCode mmNoAutomatic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "NoAutomatic";
@@ -151,7 +151,7 @@ public class AutomaticBorrowing1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Automatic = new MMCode() {
+	public static final MMCode mmAutomatic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Automatic";
@@ -164,13 +164,13 @@ public class AutomaticBorrowing1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LAST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "AutomaticBorrowing1Code";
 				definition = "Specifies the condition under which automatic borrowing is allowed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutomaticBorrowing1Code.LastResort, com.tools20022.repository.codeset.AutomaticBorrowing1Code.NoAutomatic,
-						com.tools20022.repository.codeset.AutomaticBorrowing1Code.Automatic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmLastResort, com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmNoAutomatic,
+						com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmAutomatic);
 			}
 		});
 		return mmObject_lazy.get();

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a transfer out transaction.
@@ -35,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferOut18#CancellationReference
- * TransferOut18.CancellationReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut18#TransferDetails
- * TransferOut18.TransferDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut18#mmCancellationReference
+ * TransferOut18.mmCancellationReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut18#mmTransferDetails
+ * TransferOut18.mmTransferDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOut18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer cancellation, as
 	 * assigned by the instructing party.
@@ -95,11 +98,11 @@ public class TransferOut18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut13#CancellationReference
-	 * TransferOut13.CancellationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut13#mmCancellationReference
+	 * TransferOut13.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferOut18.mmObject();
 			isDerived = false;
@@ -107,12 +110,13 @@ public class TransferOut18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut13.CancellationReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut13.mmCancellationReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Transfer30> transferDetails;
 	/**
 	 * General information related to the transfer of a financial instrument.
 	 * <p>
@@ -144,32 +148,32 @@ public class TransferOut18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferOut13#TransferDetails
-	 * TransferOut13.TransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut13#mmTransferDetails
+	 * TransferOut13.mmTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut18.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
+			componentContext_lazy = () -> TransferOut18.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut13.TransferDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut13.mmTransferDetails;
 			minOccurs = 1;
-			type_lazy = () -> Transfer30.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Transfer30.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut18.CancellationReference, com.tools20022.repository.msg.TransferOut18.TransferDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut18.mmCancellationReference, com.tools20022.repository.msg.TransferOut18.mmTransferDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferOut18";
 				definition = "Information about a transfer out transaction.";
@@ -177,5 +181,21 @@ public class TransferOut18 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
+	}
+
+	public List<Transfer30> getTransferDetails() {
+		return transferDetails;
+	}
+
+	public void setTransferDetails(List<com.tools20022.repository.msg.Transfer30> transferDetails) {
+		this.transferDetails = transferDetails;
 	}
 }

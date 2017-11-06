@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#CancelledByYourself
- * CancelledStatusReason1Code.CancelledByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#mmCancelledByYourself
+ * CancelledStatusReason1Code.mmCancelledByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#CancelledBySystem
- * CancelledStatusReason1Code.CancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#mmCancelledBySystem
+ * CancelledStatusReason1Code.mmCancelledBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#CancelledByAgent
- * CancelledStatusReason1Code.CancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#mmCancelledByAgent
+ * CancelledStatusReason1Code.mmCancelledByAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByYourself = new MMCode() {
+	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
@@ -110,7 +110,7 @@ public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledBySystem = new MMCode() {
+	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
@@ -133,7 +133,7 @@ public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAgent = new MMCode() {
+	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
@@ -144,13 +144,13 @@ public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason1Code";
 				definition = "Specifies the underlying reason for cancellation of the associated transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason1Code.CancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason1Code.CancelledBySystem,
-						com.tools20022.repository.codeset.CancelledStatusReason1Code.CancelledByAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason1Code.mmCancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason1Code.mmCancelledBySystem,
+						com.tools20022.repository.codeset.CancelledStatusReason1Code.mmCancelledByAgent);
 				trace_lazy = () -> CancelledStatusReasonCode.mmObject();
 			}
 		});

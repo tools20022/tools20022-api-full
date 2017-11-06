@@ -36,23 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#PlaceAndName
- * UpdatedAdditionalInformation5SD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#mmPlaceAndName
+ * UpdatedAdditionalInformation5SD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#DistributionAmountPerShare
- * UpdatedAdditionalInformation5SD3.DistributionAmountPerShare}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#mmDistributionAmountPerShare
+ * UpdatedAdditionalInformation5SD3.mmDistributionAmountPerShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#NetAssetDecreaseRatio
- * UpdatedAdditionalInformation5SD3.NetAssetDecreaseRatio}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#mmNetAssetDecreaseRatio
+ * UpdatedAdditionalInformation5SD3.mmNetAssetDecreaseRatio}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#AccumulatedProfitPerShare
- * UpdatedAdditionalInformation5SD3.AccumulatedProfitPerShare}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#mmAccumulatedProfitPerShare
+ * UpdatedAdditionalInformation5SD3.mmAccumulatedProfitPerShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#DeemedDividendPerShare
- * UpdatedAdditionalInformation5SD3.DeemedDividendPerShare}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#mmDeemedDividendPerShare
+ * UpdatedAdditionalInformation5SD3.mmDeemedDividendPerShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#ResidualDistributionAmountPerShare
- * UpdatedAdditionalInformation5SD3.ResidualDistributionAmountPerShare}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3#mmResidualDistributionAmountPerShare
+ * UpdatedAdditionalInformation5SD3.mmResidualDistributionAmountPerShare}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdatedAdditionalInformation5SD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -112,11 +113,11 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#PlaceAndName
-	 * UpdatedAdditionalInformation5SD1.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#mmPlaceAndName
+	 * UpdatedAdditionalInformation5SD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD3.mmObject();
 			isDerived = false;
@@ -124,12 +125,13 @@ public class UpdatedAdditionalInformation5SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.PlaceAndName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmPlaceAndName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RateAndAmountFormat36Choice distributionAmountPerShare;
 	/**
 	 * Total distribution fund rate per share.<br>
 	 * 一株あたりの交付金先等の額
@@ -160,11 +162,11 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#DistributionAmountPerShare
-	 * UpdatedAdditionalInformation5SD1.DistributionAmountPerShare}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#mmDistributionAmountPerShare
+	 * UpdatedAdditionalInformation5SD1.mmDistributionAmountPerShare}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DistributionAmountPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDistributionAmountPerShare = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD3.mmObject();
 			isDerived = false;
@@ -172,12 +174,13 @@ public class UpdatedAdditionalInformation5SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionAmountPerShare";
 			definition = "Total distribution fund rate per share.\r\n一株あたりの交付金先等の額";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.DistributionAmountPerShare;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmDistributionAmountPerShare;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat36Choice.mmObject();
 		}
 	};
+	protected PercentageRate netAssetDecreaseRatio;
 	/**
 	 * Rate information of how much net asset decrease happens as a result of
 	 * the fund distribution.
@@ -192,8 +195,8 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#GrossDividend
-	 * Dividend.GrossDividend}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmGrossDividend
+	 * Dividend.mmGrossDividend}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,25 +218,26 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#NetAssetDecreaseRatio
-	 * UpdatedAdditionalInformation5SD1.NetAssetDecreaseRatio}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#mmNetAssetDecreaseRatio
+	 * UpdatedAdditionalInformation5SD1.mmNetAssetDecreaseRatio}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAssetDecreaseRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAssetDecreaseRatio = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmGrossDividend;
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.GrossDividend;
 			isDerived = false;
 			xmlTag = "NetAsstDcrRatio";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetDecreaseRatio";
 			definition = "Rate information of how much net asset decrease happens as a result of the fund distribution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.NetAssetDecreaseRatio;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmNetAssetDecreaseRatio;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RateAndAmountFormat36Choice accumulatedProfitPerShare;
 	/**
 	 * Distribution amount of accumulated profit per share.<br>
 	 * 一株あたり利益剰余金の額
@@ -248,8 +252,8 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#GrossDividend
-	 * Dividend.GrossDividend}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmGrossDividend
+	 * Dividend.mmGrossDividend}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -270,25 +274,26 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#AccumulatedProfitPerShare
-	 * UpdatedAdditionalInformation5SD1.AccumulatedProfitPerShare}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#mmAccumulatedProfitPerShare
+	 * UpdatedAdditionalInformation5SD1.mmAccumulatedProfitPerShare}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccumulatedProfitPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccumulatedProfitPerShare = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmGrossDividend;
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.GrossDividend;
 			isDerived = false;
 			xmlTag = "AcmltdPrftPerShr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulatedProfitPerShare";
 			definition = "Distribution amount of accumulated profit per share.\r\n一株あたり利益剰余金の額";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.AccumulatedProfitPerShare;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmAccumulatedProfitPerShare;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat36Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat36Choice deemedDividendPerShare;
 	/**
 	 * Taxable distribution amount of dividend.<br>
 	 * 一株あたりみなし配当の額
@@ -319,11 +324,11 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#DeemedDividendPerShare
-	 * UpdatedAdditionalInformation5SD1.DeemedDividendPerShare}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#mmDeemedDividendPerShare
+	 * UpdatedAdditionalInformation5SD1.mmDeemedDividendPerShare}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeemedDividendPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeemedDividendPerShare = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD3.mmObject();
 			isDerived = false;
@@ -331,12 +336,13 @@ public class UpdatedAdditionalInformation5SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedDividendPerShare";
 			definition = "Taxable distribution amount of dividend.\r\n一株あたりみなし配当の額";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.DeemedDividendPerShare;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmDeemedDividendPerShare;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat36Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat36Choice residualDistributionAmountPerShare;
 	/**
 	 * Tax exempted distribution amount of dividend. <br>
 	 * 一株あたりみなし譲渡収入の額
@@ -368,11 +374,11 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#ResidualDistributionAmountPerShare
-	 * UpdatedAdditionalInformation5SD1.ResidualDistributionAmountPerShare}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1#mmResidualDistributionAmountPerShare
+	 * UpdatedAdditionalInformation5SD1.mmResidualDistributionAmountPerShare}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResidualDistributionAmountPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResidualDistributionAmountPerShare = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD3.mmObject();
 			isDerived = false;
@@ -380,9 +386,9 @@ public class UpdatedAdditionalInformation5SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualDistributionAmountPerShare";
 			definition = "Tax exempted distribution amount of dividend.  \r\n一株あたりみなし譲渡収入の額";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.ResidualDistributionAmountPerShare;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmResidualDistributionAmountPerShare;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat36Choice.mmObject();
 		}
 	};
@@ -390,11 +396,11 @@ public class UpdatedAdditionalInformation5SD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.PlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.DistributionAmountPerShare,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.NetAssetDecreaseRatio, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.AccumulatedProfitPerShare,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.DeemedDividendPerShare, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.ResidualDistributionAmountPerShare);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmPlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmDistributionAmountPerShare,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmNetAssetDecreaseRatio, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmAccumulatedProfitPerShare,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmDeemedDividendPerShare, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmResidualDistributionAmountPerShare);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdatedAdditionalInformation5SD3";
 				definition = "Extension for updated additional information";
@@ -402,5 +408,53 @@ public class UpdatedAdditionalInformation5SD3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public RateAndAmountFormat36Choice getDistributionAmountPerShare() {
+		return distributionAmountPerShare;
+	}
+
+	public void setDistributionAmountPerShare(RateAndAmountFormat36Choice distributionAmountPerShare) {
+		this.distributionAmountPerShare = distributionAmountPerShare;
+	}
+
+	public PercentageRate getNetAssetDecreaseRatio() {
+		return netAssetDecreaseRatio;
+	}
+
+	public void setNetAssetDecreaseRatio(PercentageRate netAssetDecreaseRatio) {
+		this.netAssetDecreaseRatio = netAssetDecreaseRatio;
+	}
+
+	public RateAndAmountFormat36Choice getAccumulatedProfitPerShare() {
+		return accumulatedProfitPerShare;
+	}
+
+	public void setAccumulatedProfitPerShare(RateAndAmountFormat36Choice accumulatedProfitPerShare) {
+		this.accumulatedProfitPerShare = accumulatedProfitPerShare;
+	}
+
+	public RateAndAmountFormat36Choice getDeemedDividendPerShare() {
+		return deemedDividendPerShare;
+	}
+
+	public void setDeemedDividendPerShare(RateAndAmountFormat36Choice deemedDividendPerShare) {
+		this.deemedDividendPerShare = deemedDividendPerShare;
+	}
+
+	public RateAndAmountFormat36Choice getResidualDistributionAmountPerShare() {
+		return residualDistributionAmountPerShare;
+	}
+
+	public void setResidualDistributionAmountPerShare(RateAndAmountFormat36Choice residualDistributionAmountPerShare) {
+		this.residualDistributionAmountPerShare = residualDistributionAmountPerShare;
 	}
 }

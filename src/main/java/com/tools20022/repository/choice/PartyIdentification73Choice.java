@@ -39,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#NameAndAddress
- * PartyIdentification73Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#mmNameAndAddress
+ * PartyIdentification73Choice.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#AnyBIC
- * PartyIdentification73Choice.AnyBIC}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#mmAnyBIC
+ * PartyIdentification73Choice.mmAnyBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#PartyIdentification
- * PartyIdentification73Choice.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#mmPartyIdentification
+ * PartyIdentification73Choice.mmPartyIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,24 +58,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#PartyIdentification
- * PayInCallV02.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInCallV02#mmPartyIdentification
+ * PayInCallV02.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#PartyIdentification
- * PayInScheduleV03.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmPartyIdentification
+ * PayInScheduleV03.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetServiceParticipantIdentification
- * NetReportV01.NetServiceParticipantIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetServiceParticipantIdentification
+ * NetReportV01.mmNetServiceParticipantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetServiceCounterpartyIdentification
- * NetReportV01.NetServiceCounterpartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetServiceCounterpartyIdentification
+ * NetReportV01.mmNetServiceCounterpartyIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification73Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NameAndAddress8 nameAndAddress;
 	/**
 	 * Identification of the party expressed as name and an optional address and
 	 * an optional alternative identifier.
@@ -129,21 +130,22 @@ public class PartyIdentification73Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Identification of the party expressed as name and an optional address and an optional alternative identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NameAndAddress8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NameAndAddress8.mmObject();
 		}
 	};
+	protected PartyIdentification44 anyBIC;
 	/**
 	 * Identification of the party expressed as a BIC and an optional
 	 * alternative identifier.
@@ -178,21 +180,22 @@ public class PartyIdentification73Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AnyBIC = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAnyBIC = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
+			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC and an optional alternative identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification44.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification44.mmObject();
 		}
 	};
+	protected PartyIdentification59 partyIdentification;
 	/**
 	 * Party Identification specified as a list of values per element
 	 * <p>
@@ -227,17 +230,17 @@ public class PartyIdentification73Choice {
 	 * "Party Identification specified as a list of values per element"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party Identification specified as a list of values per element";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification59.mmObject();
 		}
 	};
@@ -245,12 +248,12 @@ public class PartyIdentification73Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification73Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification73Choice.AnyBIC,
-						com.tools20022.repository.choice.PartyIdentification73Choice.PartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification73Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification73Choice.mmAnyBIC,
+						com.tools20022.repository.choice.PartyIdentification73Choice.mmPartyIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInCallV02.mmPartyIdentification, com.tools20022.repository.area.camt.PayInScheduleV03.mmPartyIdentification,
+						com.tools20022.repository.area.camt.NetReportV01.mmNetServiceParticipantIdentification, com.tools20022.repository.area.camt.NetReportV01.mmNetServiceCounterpartyIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInCallV02.PartyIdentification, com.tools20022.repository.area.camt.PayInScheduleV03.PartyIdentification,
-						com.tools20022.repository.area.camt.NetReportV01.NetServiceParticipantIdentification, com.tools20022.repository.area.camt.NetReportV01.NetServiceCounterpartyIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification73Choice";
 				definition = "Identification of a party by a choice between a BIC or a name and address or an LEI.";
@@ -258,5 +261,29 @@ public class PartyIdentification73Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NameAndAddress8 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress8 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
+	}
+
+	public PartyIdentification44 getAnyBIC() {
+		return anyBIC;
+	}
+
+	public void setAnyBIC(PartyIdentification44 anyBIC) {
+		this.anyBIC = anyBIC;
+	}
+
+	public PartyIdentification59 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(PartyIdentification59 partyIdentification) {
+		this.partyIdentification = partyIdentification;
 	}
 }

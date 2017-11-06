@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.NamePrefix1Code;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.entity.ContactPersonRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,25 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification4#Name
- * ContactIdentification4.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification4#mmName
+ * ContactIdentification4.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactIdentification4#NamePrefix
- * ContactIdentification4.NamePrefix}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmNamePrefix
+ * ContactIdentification4.mmNamePrefix}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactIdentification4#GivenName
- * ContactIdentification4.GivenName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification4#Role
- * ContactIdentification4.Role}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmGivenName
+ * ContactIdentification4.mmGivenName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification4#mmRole
+ * ContactIdentification4.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactIdentification4#PhoneNumber
- * ContactIdentification4.PhoneNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmPhoneNumber
+ * ContactIdentification4.mmPhoneNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactIdentification4#FaxNumber
- * ContactIdentification4.FaxNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmFaxNumber
+ * ContactIdentification4.mmFaxNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContactIdentification4#EmailAddress
- * ContactIdentification4.EmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmEmailAddress
+ * ContactIdentification4.mmEmailAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContactIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -91,8 +93,8 @@ public class ContactIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,20 +115,21 @@ public class ContactIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> ContactIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected NamePrefix1Code namePrefix;
 	/**
 	 * Specifies the terms used to formally address a person, eg, Ms.
 	 * <p>
@@ -140,8 +143,8 @@ public class ContactIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#NamePrefix
-	 * PersonName.NamePrefix}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmNamePrefix
+	 * PersonName.mmNamePrefix}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,20 +164,21 @@ public class ContactIdentification4 {
 	 * "Specifies the terms used to formally address a person, eg, Ms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmNamePrefix;
 			componentContext_lazy = () -> ContactIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.NamePrefix;
 			isDerived = false;
 			xmlTag = "NmPrfx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NamePrefix";
 			definition = "Specifies the terms used to formally address a person, eg, Ms.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
 		}
 	};
+	protected Max350Text givenName;
 	/**
 	 * First name of a person.
 	 * <p>
@@ -187,8 +191,8 @@ public class ContactIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#GivenName
-	 * PersonName.GivenName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
+	 * PersonName.mmGivenName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,20 +211,21 @@ public class ContactIdentification4 {
 	 * definition} = "First name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GivenName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
 			componentContext_lazy = () -> ContactIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.GivenName;
 			isDerived = false;
 			xmlTag = "GvnNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GivenName";
 			definition = "First name of a person.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text role;
 	/**
 	 * Role of the party in the activity.
 	 * <p>
@@ -233,8 +238,8 @@ public class ContactIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RolePlayer#Role
-	 * RolePlayer.Role}</li>
+	 * {@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
+	 * RolePlayer.mmRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,20 +258,21 @@ public class ContactIdentification4 {
 	 * definition} = "Role of the party in the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Role = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmRole;
 			componentContext_lazy = () -> ContactIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.Role;
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Role of the party in the activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PhoneNumber phoneNumber;
 	/**
 	 * Collection of information that identifies a phone number, as defined by
 	 * telecom services.
@@ -280,8 +286,8 @@ public class ContactIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#PhoneNumber
-	 * PhoneAddress.PhoneNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#mmPhoneNumber
+	 * PhoneAddress.mmPhoneNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -302,20 +308,21 @@ public class ContactIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> ContactIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.PhoneNumber;
 			isDerived = false;
 			xmlTag = "PhneNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.PhoneNumber.mmObject();
+			minOccurs = 0;
+			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected PhoneNumber faxNumber;
 	/**
 	 * Collection of information that identifies a FAX number, as defined by
 	 * telecom services.
@@ -329,8 +336,8 @@ public class ContactIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#FaxNumber
-	 * PhoneAddress.FaxNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#mmFaxNumber
+	 * PhoneAddress.mmFaxNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -351,20 +358,21 @@ public class ContactIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FaxNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> ContactIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.FaxNumber;
 			isDerived = false;
 			xmlTag = "FaxNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.PhoneNumber.mmObject();
+			minOccurs = 0;
+			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected Max256Text emailAddress;
 	/**
 	 * Address for electronic mail (e-mail).
 	 * <p>
@@ -377,8 +385,8 @@ public class ContactIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#EmailAddress
-	 * ElectronicAddress.EmailAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
+	 * ElectronicAddress.mmEmailAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -397,17 +405,17 @@ public class ContactIdentification4 {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> ContactIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.EmailAddress;
 			isDerived = false;
 			xmlTag = "EmailAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -415,16 +423,72 @@ public class ContactIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactIdentification4.Name, com.tools20022.repository.msg.ContactIdentification4.NamePrefix,
-						com.tools20022.repository.msg.ContactIdentification4.GivenName, com.tools20022.repository.msg.ContactIdentification4.Role, com.tools20022.repository.msg.ContactIdentification4.PhoneNumber,
-						com.tools20022.repository.msg.ContactIdentification4.FaxNumber, com.tools20022.repository.msg.ContactIdentification4.EmailAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactIdentification4.mmName, com.tools20022.repository.msg.ContactIdentification4.mmNamePrefix,
+						com.tools20022.repository.msg.ContactIdentification4.mmGivenName, com.tools20022.repository.msg.ContactIdentification4.mmRole, com.tools20022.repository.msg.ContactIdentification4.mmPhoneNumber,
+						com.tools20022.repository.msg.ContactIdentification4.mmFaxNumber, com.tools20022.repository.msg.ContactIdentification4.mmEmailAddress);
 				trace_lazy = () -> ContactPersonRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContactIdentification4";
 				definition = "Information needed to contact a physical person.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public NamePrefix1Code getNamePrefix() {
+		return namePrefix;
+	}
+
+	public void setNamePrefix(NamePrefix1Code namePrefix) {
+		this.namePrefix = namePrefix;
+	}
+
+	public Max350Text getGivenName() {
+		return givenName;
+	}
+
+	public void setGivenName(Max350Text givenName) {
+		this.givenName = givenName;
+	}
+
+	public Max35Text getRole() {
+		return role;
+	}
+
+	public void setRole(Max35Text role) {
+		this.role = role;
+	}
+
+	public PhoneNumber getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(PhoneNumber phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public PhoneNumber getFaxNumber() {
+		return faxNumber;
+	}
+
+	public void setFaxNumber(PhoneNumber faxNumber) {
+		this.faxNumber = faxNumber;
+	}
+
+	public Max256Text getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(Max256Text emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 }

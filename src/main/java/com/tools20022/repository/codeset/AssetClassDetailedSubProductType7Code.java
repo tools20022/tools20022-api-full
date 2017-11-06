@@ -34,84 +34,84 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Bakken
- * AssetClassDetailedSubProductType7Code.Bakken}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmBakken
+ * AssetClassDetailedSubProductType7Code.mmBakken}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Biodiesel
- * AssetClassDetailedSubProductType7Code.Biodiesel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmBiodiesel
+ * AssetClassDetailedSubProductType7Code.mmBiodiesel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Brent
- * AssetClassDetailedSubProductType7Code.Brent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmBrent
+ * AssetClassDetailedSubProductType7Code.mmBrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#BrentNX
- * AssetClassDetailedSubProductType7Code.BrentNX}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmBrentNX
+ * AssetClassDetailedSubProductType7Code.mmBrentNX}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Canadian
- * AssetClassDetailedSubProductType7Code.Canadian}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmCanadian
+ * AssetClassDetailedSubProductType7Code.mmCanadian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Condensate
- * AssetClassDetailedSubProductType7Code.Condensate}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmCondensate
+ * AssetClassDetailedSubProductType7Code.mmCondensate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Diesel
- * AssetClassDetailedSubProductType7Code.Diesel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmDiesel
+ * AssetClassDetailedSubProductType7Code.mmDiesel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Dubai
- * AssetClassDetailedSubProductType7Code.Dubai}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmDubai
+ * AssetClassDetailedSubProductType7Code.mmDubai}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#ESPO
- * AssetClassDetailedSubProductType7Code.ESPO}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmESPO
+ * AssetClassDetailedSubProductType7Code.mmESPO}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Ethanol
- * AssetClassDetailedSubProductType7Code.Ethanol}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmEthanol
+ * AssetClassDetailedSubProductType7Code.mmEthanol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Fuel
- * AssetClassDetailedSubProductType7Code.Fuel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmFuel
+ * AssetClassDetailedSubProductType7Code.mmFuel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#FuelOil
- * AssetClassDetailedSubProductType7Code.FuelOil}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmFuelOil
+ * AssetClassDetailedSubProductType7Code.mmFuelOil}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Gasoil
- * AssetClassDetailedSubProductType7Code.Gasoil}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmGasoil
+ * AssetClassDetailedSubProductType7Code.mmGasoil}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Gasoline
- * AssetClassDetailedSubProductType7Code.Gasoline}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmGasoline
+ * AssetClassDetailedSubProductType7Code.mmGasoline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#HeatingOil
- * AssetClassDetailedSubProductType7Code.HeatingOil}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmHeatingOil
+ * AssetClassDetailedSubProductType7Code.mmHeatingOil}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#JetFuel
- * AssetClassDetailedSubProductType7Code.JetFuel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmJetFuel
+ * AssetClassDetailedSubProductType7Code.mmJetFuel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Kerosene
- * AssetClassDetailedSubProductType7Code.Kerosene}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmKerosene
+ * AssetClassDetailedSubProductType7Code.mmKerosene}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#LightLouisianaSweet
- * AssetClassDetailedSubProductType7Code.LightLouisianaSweet}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmLightLouisianaSweet
+ * AssetClassDetailedSubProductType7Code.mmLightLouisianaSweet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Mars
- * AssetClassDetailedSubProductType7Code.Mars}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmMars
+ * AssetClassDetailedSubProductType7Code.mmMars}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Naphta
- * AssetClassDetailedSubProductType7Code.Naphta}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmNaphta
+ * AssetClassDetailedSubProductType7Code.mmNaphta}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#NGL
- * AssetClassDetailedSubProductType7Code.NGL}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmNGL
+ * AssetClassDetailedSubProductType7Code.mmNGL}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Tapis
- * AssetClassDetailedSubProductType7Code.Tapis}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmTapis
+ * AssetClassDetailedSubProductType7Code.mmTapis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#WTI
- * AssetClassDetailedSubProductType7Code.WTI}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmWTI
+ * AssetClassDetailedSubProductType7Code.mmWTI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#Urals
- * AssetClassDetailedSubProductType7Code.Urals}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code#mmUrals
+ * AssetClassDetailedSubProductType7Code.mmUrals}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,7 +141,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Bakken"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bakken = new MMCode() {
+	public static final MMCode mmBakken = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bakken";
@@ -164,7 +164,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Biodiesel"</li>
 	 * </ul>
 	 */
-	public static final MMCode Biodiesel = new MMCode() {
+	public static final MMCode mmBiodiesel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Biodiesel";
@@ -187,7 +187,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Brent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Brent = new MMCode() {
+	public static final MMCode mmBrent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Brent";
@@ -210,7 +210,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "BrentNX"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrentNX = new MMCode() {
+	public static final MMCode mmBrentNX = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrentNX";
@@ -233,7 +233,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Canadian"</li>
 	 * </ul>
 	 */
-	public static final MMCode Canadian = new MMCode() {
+	public static final MMCode mmCanadian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Canadian";
@@ -256,7 +256,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Condensate"</li>
 	 * </ul>
 	 */
-	public static final MMCode Condensate = new MMCode() {
+	public static final MMCode mmCondensate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Condensate";
@@ -279,7 +279,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Diesel"</li>
 	 * </ul>
 	 */
-	public static final MMCode Diesel = new MMCode() {
+	public static final MMCode mmDiesel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Diesel";
@@ -302,7 +302,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Dubai"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dubai = new MMCode() {
+	public static final MMCode mmDubai = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dubai";
@@ -325,7 +325,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "ESPO"</li>
 	 * </ul>
 	 */
-	public static final MMCode ESPO = new MMCode() {
+	public static final MMCode mmESPO = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ESPO";
@@ -348,7 +348,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Ethanol"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ethanol = new MMCode() {
+	public static final MMCode mmEthanol = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ethanol";
@@ -371,7 +371,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Fuel"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fuel = new MMCode() {
+	public static final MMCode mmFuel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fuel";
@@ -394,7 +394,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "FuelOil"</li>
 	 * </ul>
 	 */
-	public static final MMCode FuelOil = new MMCode() {
+	public static final MMCode mmFuelOil = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FuelOil";
@@ -417,7 +417,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Gasoil"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gasoil = new MMCode() {
+	public static final MMCode mmGasoil = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gasoil";
@@ -440,7 +440,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Gasoline"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gasoline = new MMCode() {
+	public static final MMCode mmGasoline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gasoline";
@@ -463,7 +463,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "HeatingOil"</li>
 	 * </ul>
 	 */
-	public static final MMCode HeatingOil = new MMCode() {
+	public static final MMCode mmHeatingOil = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeatingOil";
@@ -486,7 +486,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "JetFuel"</li>
 	 * </ul>
 	 */
-	public static final MMCode JetFuel = new MMCode() {
+	public static final MMCode mmJetFuel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JetFuel";
@@ -509,7 +509,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Kerosene"</li>
 	 * </ul>
 	 */
-	public static final MMCode Kerosene = new MMCode() {
+	public static final MMCode mmKerosene = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Kerosene";
@@ -532,7 +532,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "LightLouisianaSweet"</li>
 	 * </ul>
 	 */
-	public static final MMCode LightLouisianaSweet = new MMCode() {
+	public static final MMCode mmLightLouisianaSweet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LightLouisianaSweet";
@@ -555,7 +555,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Mars"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mars = new MMCode() {
+	public static final MMCode mmMars = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mars";
@@ -578,7 +578,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Naphta"</li>
 	 * </ul>
 	 */
-	public static final MMCode Naphta = new MMCode() {
+	public static final MMCode mmNaphta = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Naphta";
@@ -601,7 +601,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "NGL"</li>
 	 * </ul>
 	 */
-	public static final MMCode NGL = new MMCode() {
+	public static final MMCode mmNGL = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NGL";
@@ -624,7 +624,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Tapis"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tapis = new MMCode() {
+	public static final MMCode mmTapis = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tapis";
@@ -647,7 +647,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "WTI"</li>
 	 * </ul>
 	 */
-	public static final MMCode WTI = new MMCode() {
+	public static final MMCode mmWTI = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WTI";
@@ -670,7 +670,7 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	 * name} = "Urals"</li>
 	 * </ul>
 	 */
-	public static final MMCode Urals = new MMCode() {
+	public static final MMCode mmUrals = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urals";
@@ -681,22 +681,22 @@ public class AssetClassDetailedSubProductType7Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType7Code";
 				definition = "Further sub product code list for commodity derivative Oil.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Bakken, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Biodiesel,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Brent, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.BrentNX,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Canadian, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Condensate,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Diesel, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Dubai,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.ESPO, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Ethanol,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Fuel, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.FuelOil,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Gasoil, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Gasoline,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.HeatingOil, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.JetFuel,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Kerosene, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.LightLouisianaSweet,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Mars, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Naphta,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.NGL, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Tapis,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.WTI, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.Urals);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmBakken, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmBiodiesel,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmBrent, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmBrentNX,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmCanadian, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmCondensate,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmDiesel, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmDubai,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmESPO, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmEthanol,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmFuel, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmFuelOil,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmGasoil, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmGasoline,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmHeatingOil, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmJetFuel,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmKerosene, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmLightLouisianaSweet,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmMars, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmNaphta,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmNGL, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmTapis,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmWTI, com.tools20022.repository.codeset.AssetClassDetailedSubProductType7Code.mmUrals);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

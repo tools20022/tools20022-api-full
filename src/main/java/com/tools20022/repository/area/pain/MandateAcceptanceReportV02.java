@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -68,21 +69,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV02#GroupHeader
- * MandateAcceptanceReportV02.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV02#mmGroupHeader
+ * MandateAcceptanceReportV02.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV02#UnderlyingAcceptanceDetails
- * MandateAcceptanceReportV02.UnderlyingAcceptanceDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV02#mmUnderlyingAcceptanceDetails
+ * MandateAcceptanceReportV02.mmUnderlyingAcceptanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV02#SupplementaryData
- * MandateAcceptanceReportV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV02#mmSupplementaryData
+ * MandateAcceptanceReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV02#identifier
- * MandateAcceptanceReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.012.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateAcceptanceReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader47 groupHeader;
 	/**
 	 * Set of characteristics to identify the message and parties playing a role
 	 * in the mandate acceptance, but which are not part of the mandate.
@@ -135,17 +135,18 @@ public class MandateAcceptanceReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the mandate acceptance, but which are not part of the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 	};
+	protected MandateAcceptance2 underlyingAcceptanceDetails;
 	/**
 	 * Set of elements used to provide information on the acception or rejection
 	 * of the mandate request.
@@ -172,17 +173,18 @@ public class MandateAcceptanceReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingAcceptanceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingAcceptanceDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygAccptncDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingAcceptanceDetails";
 			definition = "Set of elements used to provide information on the acception or rejection of the mandate request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MandateAcceptance2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -209,7 +211,7 @@ public class MandateAcceptanceReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,33 +221,6 @@ public class MandateAcceptanceReportV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "012";
-			version = "02";
-			flavour = "001";
-		}
-	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
@@ -253,17 +228,48 @@ public class MandateAcceptanceReportV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateAcceptanceReportV02";
 				definition = "Scope\r\nThe MandateAcceptanceReport message is sent from the agent of the receiver (debtor or creditor) of the MandateRequest message (initiation, amendment or cancellation) to the agent of the initiator of the MandateRequest message (debtor or creditor).\r\nA MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message. Where acceptance is part of the full process flow, a MandateRequest message only becomes valid after a confirmation of acceptance is received through a MandateAcceptanceReport message from the agent of the receiver.\r\nUsage\r\nThe MandateAcceptanceReport message can contain only one confirmation of acceptance of rejection of one specific MandateRequest message.\r\nThe messages can be exchanged between debtor agent and creditor agent and between debtor agent and debtor and creditor agent and creditor.\r\nThe MandateAcceptanceReport message can be used in domestic and cross-border scenarios.";
-				previousVersion_lazy = () -> MandateAcceptanceReportV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(MandateAcceptanceReportV03.mmObject());
+				previousVersion_lazy = () -> MandateAcceptanceReportV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "MndtAccptncRpt";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV02.GroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV02.UnderlyingAcceptanceDetails,
-						com.tools20022.repository.area.pain.MandateAcceptanceReportV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.MandateAcceptanceReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV02.mmGroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV02.mmUnderlyingAcceptanceDetails,
+						com.tools20022.repository.area.pain.MandateAcceptanceReportV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "012";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader47 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader47 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public MandateAcceptance2 getUnderlyingAcceptanceDetails() {
+		return underlyingAcceptanceDetails;
+	}
+
+	public void setUnderlyingAcceptanceDetails(MandateAcceptance2 underlyingAcceptanceDetails) {
+		this.underlyingAcceptanceDetails = underlyingAcceptanceDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

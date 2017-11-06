@@ -35,17 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceTotals1#TotalTaxableAmount
- * InvoiceTotals1.TotalTaxableAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals1#TotalTaxAmount
- * InvoiceTotals1.TotalTaxAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals1#Adjustment
- * InvoiceTotals1.Adjustment}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTotals1#mmTotalTaxableAmount
+ * InvoiceTotals1.mmTotalTaxableAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceTotals1#TotalInvoiceAmount
- * InvoiceTotals1.TotalInvoiceAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals1#PaymentDueDate
- * InvoiceTotals1.PaymentDueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTotals1#mmTotalTaxAmount
+ * InvoiceTotals1.mmTotalTaxAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals1#mmAdjustment
+ * InvoiceTotals1.mmAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTotals1#mmTotalInvoiceAmount
+ * InvoiceTotals1.mmTotalInvoiceAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTotals1#mmPaymentDueDate
+ * InvoiceTotals1.mmPaymentDueDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount totalTaxableAmount;
 	/**
 	 * Total amount subject to tax.
 	 * <p>
@@ -81,8 +84,8 @@ public class InvoiceTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxableBaseAmount
-	 * Tax.TaxableBaseAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
+	 * Tax.mmTaxableBaseAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +103,21 @@ public class InvoiceTotals1 {
 	 * definition} = "Total amount subject to tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> InvoiceTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxableBaseAmount;
 			isDerived = false;
 			xmlTag = "TtlTaxblAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxableAmount";
 			definition = "Total amount subject to tax.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalTaxAmount;
 	/**
 	 * Sum of all tax amounts related to the invoice.
 	 * <p>
@@ -127,7 +131,7 @@ public class InvoiceTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +149,21 @@ public class InvoiceTotals1 {
 	 * definition} = "Sum of all tax amounts related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> InvoiceTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TtlTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Sum of all tax amounts related to the invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Adjustment5 adjustment;
 	/**
 	 * Variance on invoice amount taking into account discounts, allowances and
 	 * charges.
@@ -172,8 +177,8 @@ public class InvoiceTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LineItem#FinancialAdjustment
-	 * LineItem.FinancialAdjustment}</li>
+	 * {@linkplain com.tools20022.repository.entity.LineItem#mmFinancialAdjustment
+	 * LineItem.mmFinancialAdjustment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,20 +198,21 @@ public class InvoiceTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Adjustment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdjustment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmFinancialAdjustment;
 			componentContext_lazy = () -> InvoiceTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.FinancialAdjustment;
 			isDerived = false;
 			xmlTag = "Adjstmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			definition = "Variance on invoice amount taking into account discounts, allowances and charges.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Adjustment5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Adjustment5.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalInvoiceAmount;
 	/**
 	 * Total amount of the invoice, being the sum of total invoice lines
 	 * amounts, total invoice adjustment amount (discounts, allowances and
@@ -222,8 +228,8 @@ public class InvoiceTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Amount
-	 * Document.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmAmount
+	 * Document.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,20 +249,21 @@ public class InvoiceTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
 			componentContext_lazy = () -> InvoiceTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Amount;
 			isDerived = false;
 			xmlTag = "TtlInvcAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice adjustment amount (discounts, allowances and charges) and total tax amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate paymentDueDate;
 	/**
 	 * Due date for the payment of the invoice.
 	 * <p>
@@ -269,8 +276,8 @@ public class InvoiceTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentDueDate
-	 * PaymentObligation.PaymentDueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentDueDate
+	 * PaymentObligation.mmPaymentDueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,17 +295,17 @@ public class InvoiceTotals1 {
 	 * definition} = "Due date for the payment of the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> InvoiceTotals1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentDueDate;
 			isDerived = false;
 			xmlTag = "PmtDueDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDueDate";
 			definition = "Due date for the payment of the invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -306,15 +313,55 @@ public class InvoiceTotals1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTotals1.TotalTaxableAmount, com.tools20022.repository.msg.InvoiceTotals1.TotalTaxAmount,
-						com.tools20022.repository.msg.InvoiceTotals1.Adjustment, com.tools20022.repository.msg.InvoiceTotals1.TotalInvoiceAmount, com.tools20022.repository.msg.InvoiceTotals1.PaymentDueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTotals1.mmTotalTaxableAmount, com.tools20022.repository.msg.InvoiceTotals1.mmTotalTaxAmount,
+						com.tools20022.repository.msg.InvoiceTotals1.mmAdjustment, com.tools20022.repository.msg.InvoiceTotals1.mmTotalInvoiceAmount, com.tools20022.repository.msg.InvoiceTotals1.mmPaymentDueDate);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvoiceTotals1";
 				definition = "Specifies totals related to the invoice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getTotalTaxableAmount() {
+		return totalTaxableAmount;
+	}
+
+	public void setTotalTaxableAmount(ActiveCurrencyAndAmount totalTaxableAmount) {
+		this.totalTaxableAmount = totalTaxableAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTotalTaxAmount() {
+		return totalTaxAmount;
+	}
+
+	public void setTotalTaxAmount(ActiveCurrencyAndAmount totalTaxAmount) {
+		this.totalTaxAmount = totalTaxAmount;
+	}
+
+	public Adjustment5 getAdjustment() {
+		return adjustment;
+	}
+
+	public void setAdjustment(com.tools20022.repository.msg.Adjustment5 adjustment) {
+		this.adjustment = adjustment;
+	}
+
+	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
+		return totalInvoiceAmount;
+	}
+
+	public void setTotalInvoiceAmount(ActiveCurrencyAndAmount totalInvoiceAmount) {
+		this.totalInvoiceAmount = totalInvoiceAmount;
+	}
+
+	public ISODate getPaymentDueDate() {
+		return paymentDueDate;
+	}
+
+	public void setPaymentDueDate(ISODate paymentDueDate) {
+		this.paymentDueDate = paymentDueDate;
 	}
 }

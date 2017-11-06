@@ -35,21 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages28#ProcessingPosition
- * Linkages28.ProcessingPosition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages28#MessageNumber
- * Linkages28.MessageNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages28#Reference
- * Linkages28.Reference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages28#ReferenceOwner
- * Linkages28.ReferenceOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Linkages28#mmProcessingPosition
+ * Linkages28.mmProcessingPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages28#mmMessageNumber
+ * Linkages28.mmMessageNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages28#mmReference
+ * Linkages28.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages28#mmReferenceOwner
+ * Linkages28.mmReferenceOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Linkages28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessingPosition6Choice processingPosition;
 	/**
 	 * When the transaction is to be executed relative to a linked transaction.
 	 * <p>
@@ -91,7 +93,7 @@ public class Linkages28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingPosition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages28.mmObject();
 			isDerived = false;
@@ -99,12 +101,13 @@ public class Linkages28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingPosition6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProcessingPosition6Choice.mmObject();
 		}
 	};
+	protected DocumentNumber3Choice messageNumber;
 	/**
 	 * Message type number/message identifier of the message referenced in the
 	 * linkage sequence.
@@ -134,7 +137,7 @@ public class Linkages28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages28.mmObject();
 			isDerived = false;
@@ -142,12 +145,13 @@ public class Linkages28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber3Choice.mmObject();
 		}
 	};
+	protected References31Choice reference;
 	/**
 	 * Reference to the linked transaction.
 	 * <p>
@@ -173,7 +177,7 @@ public class Linkages28 {
 	 * definition} = "Reference to the linked transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages28.mmObject();
 			isDerived = false;
@@ -181,12 +185,13 @@ public class Linkages28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> References31Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> References31Choice.mmObject();
 		}
 	};
+	protected PartyIdentification51Choice referenceOwner;
 	/**
 	 * Party that generates the reference.
 	 * <p>
@@ -213,7 +218,7 @@ public class Linkages28 {
 	 * definition} = "Party that generates the reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReferenceOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferenceOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages28.mmObject();
 			isDerived = false;
@@ -221,24 +226,56 @@ public class Linkages28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOwner";
 			definition = "Party that generates the reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification51Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification51Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages28.ProcessingPosition, com.tools20022.repository.msg.Linkages28.MessageNumber, com.tools20022.repository.msg.Linkages28.Reference,
-						com.tools20022.repository.msg.Linkages28.ReferenceOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages28.mmProcessingPosition, com.tools20022.repository.msg.Linkages28.mmMessageNumber, com.tools20022.repository.msg.Linkages28.mmReference,
+						com.tools20022.repository.msg.Linkages28.mmReferenceOwner);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Linkages28";
 				definition = "Information related to a linked transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessingPosition6Choice getProcessingPosition() {
+		return processingPosition;
+	}
+
+	public void setProcessingPosition(ProcessingPosition6Choice processingPosition) {
+		this.processingPosition = processingPosition;
+	}
+
+	public DocumentNumber3Choice getMessageNumber() {
+		return messageNumber;
+	}
+
+	public void setMessageNumber(DocumentNumber3Choice messageNumber) {
+		this.messageNumber = messageNumber;
+	}
+
+	public References31Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(References31Choice reference) {
+		this.reference = reference;
+	}
+
+	public PartyIdentification51Choice getReferenceOwner() {
+		return referenceOwner;
+	}
+
+	public void setReferenceOwner(PartyIdentification51Choice referenceOwner) {
+		this.referenceOwner = referenceOwner;
 	}
 }

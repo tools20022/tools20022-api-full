@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -35,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityPosition#Identification
- * SecurityPosition.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition#Position
- * SecurityPosition.Position}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityPosition#mmIdentification
+ * SecurityPosition.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition#mmPosition
+ * SecurityPosition.mmPosition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityPosition {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification3 identification;
 	/**
 	 * Security held in an account on which the balance is calculated.
 	 * <p>
@@ -77,8 +79,8 @@ public class SecurityPosition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +100,21 @@ public class SecurityPosition {
 	 * "Security held in an account on which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecurityPosition.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Security held in an account on which the balance is calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.EligiblePosition> position;
 	/**
 	 * Amount of securities that are eligible for the vote.
 	 * <p>
@@ -123,8 +126,8 @@ public class SecurityPosition {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesSubBalance
-	 * SecuritiesBalance.SecuritiesSubBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesSubBalance
+	 * SecuritiesBalance.mmSecuritiesSubBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,33 +146,49 @@ public class SecurityPosition {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Position = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> SecurityPosition.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesSubBalance;
 			isDerived = false;
 			xmlTag = "Pos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Amount of securities that are eligible for the vote.";
-			minOccurs = 0;
 			maxOccurs = 1000;
-			type_lazy = () -> EligiblePosition.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition.Identification, com.tools20022.repository.msg.SecurityPosition.Position);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition.mmIdentification, com.tools20022.repository.msg.SecurityPosition.mmPosition);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityPosition";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification3 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification3 identification) {
+		this.identification = identification;
+	}
+
+	public List<EligiblePosition> getPosition() {
+		return position;
+	}
+
+	public void setPosition(List<com.tools20022.repository.msg.EligiblePosition> position) {
+		this.position = position;
 	}
 }

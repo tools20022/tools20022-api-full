@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.entity.Status;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the history of status and reasons for a pending, posted or cancelled
@@ -37,33 +38,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#StatusDate
- * StatusTrail7.StatusDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#mmStatusDate
+ * StatusTrail7.mmStatusDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#SendingOrganisationIdentification
- * StatusTrail7.SendingOrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmSendingOrganisationIdentification
+ * StatusTrail7.mmSendingOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#UserIdentification
- * StatusTrail7.UserIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#ProcessingStatus
- * StatusTrail7.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmUserIdentification
+ * StatusTrail7.mmUserIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#InferredMatchingStatus
- * StatusTrail7.InferredMatchingStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#MatchingStatus
- * StatusTrail7.MatchingStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#SettlementStatus
- * StatusTrail7.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmProcessingStatus
+ * StatusTrail7.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#ModificationProcessingStatus
- * StatusTrail7.ModificationProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmInferredMatchingStatus
+ * StatusTrail7.mmInferredMatchingStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#mmMatchingStatus
+ * StatusTrail7.mmMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#CancellationStatus
- * StatusTrail7.CancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#Settled
- * StatusTrail7.Settled}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#SupplementaryData
- * StatusTrail7.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmSettlementStatus
+ * StatusTrail7.mmSettlementStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmModificationProcessingStatus
+ * StatusTrail7.mmModificationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmCancellationStatus
+ * StatusTrail7.mmCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#mmSettled
+ * StatusTrail7.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmSupplementaryData
+ * StatusTrail7.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,15 +77,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#StatusTrail
- * SecuritiesSettlementTransactionAuditTrailReport002V03.StatusTrail}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmStatusTrail
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmStatusTrail}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusTrail7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime statusDate;
 	/**
 	 * Date and time at which the status was assigned.
 	 * <p>
@@ -109,8 +114,8 @@ public class StatusTrail7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDateTime
-	 * Status.StatusDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
+	 * Status.mmStatusDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,20 +133,21 @@ public class StatusTrail7 {
 	 * definition} = "Date and time at which the status was assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
 			componentContext_lazy = () -> StatusTrail7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDateTime;
 			isDerived = false;
 			xmlTag = "StsDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected OrganisationIdentification9 sendingOrganisationIdentification;
 	/**
 	 * Unique and unambiguous way to identify the organisation that sent the
 	 * message instance.
@@ -172,7 +178,7 @@ public class StatusTrail7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SendingOrganisationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSendingOrganisationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusTrail7.mmObject();
 			isDerived = false;
@@ -180,11 +186,12 @@ public class StatusTrail7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendingOrganisationIdentification";
 			definition = "Unique and unambiguous way to identify the organisation that sent the message instance.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> OrganisationIdentification9.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification9.mmObject();
 		}
 	};
+	protected RestrictedFINXMax35Text userIdentification;
 	/**
 	 * Unique and unambiguous way to identify the user that created the message
 	 * instance.
@@ -215,7 +222,7 @@ public class StatusTrail7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UserIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUserIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusTrail7.mmObject();
 			isDerived = false;
@@ -223,11 +230,12 @@ public class StatusTrail7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserIdentification";
 			definition = "Unique and unambiguous way to identify the user that created the message instance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	protected ProcessingStatus60Choice processingStatus;
 	/**
 	 * Provides details on the processing status of the transaction.
 	 * <p>
@@ -259,21 +267,22 @@ public class StatusTrail7 {
 	 * "Provides details on the processing status of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusTrail7.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> StatusTrail7.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingStatus60Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProcessingStatus60Choice.mmObject();
 		}
 	};
+	protected MatchingStatus30Choice inferredMatchingStatus;
 	/**
 	 * Provides the matching status of an instruction as per the account
 	 * servicer or the Market Infrastructure based on an allegement. At this
@@ -288,8 +297,8 @@ public class StatusTrail7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -309,21 +318,22 @@ public class StatusTrail7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> StatusTrail7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as per the account servicer or the Market Infrastructure based on an allegement. At this time no matching took place on the market (at the CSD/ICSD/MI).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingStatus30Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MatchingStatus30Choice.mmObject();
 		}
 	};
+	protected MatchingStatus30Choice matchingStatus;
 	/**
 	 * Provides the matching status of the instruction.
 	 * <p>
@@ -336,8 +346,8 @@ public class StatusTrail7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -355,21 +365,22 @@ public class StatusTrail7 {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> StatusTrail7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "MtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingStatus30Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MatchingStatus30Choice.mmObject();
 		}
 	};
+	protected SettlementStatus22Choice settlementStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -382,8 +393,8 @@ public class StatusTrail7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#SettlementStatus
-	 * Status.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
+	 * Status.mmSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -401,21 +412,22 @@ public class StatusTrail7 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
 			componentContext_lazy = () -> StatusTrail7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.SettlementStatus;
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementStatus22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SettlementStatus22Choice.mmObject();
 		}
 	};
+	protected ModificationProcessingStatus8Choice modificationProcessingStatus;
 	/**
 	 * Provides details on the modification processing status of the
 	 * transaction.
@@ -449,21 +461,22 @@ public class StatusTrail7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ModificationProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModificationProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusTrail7.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> StatusTrail7.mmObject();
 			isDerived = false;
 			xmlTag = "ModPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationProcessingStatus";
 			definition = "Provides details on the modification processing status of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ModificationProcessingStatus8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ModificationProcessingStatus8Choice.mmObject();
 		}
 	};
+	protected ProcessingStatus61Choice cancellationStatus;
 	/**
 	 * Provides details on the processing status of the cancellation request.
 	 * <p>
@@ -495,21 +508,22 @@ public class StatusTrail7 {
 	 * "Provides details on the processing status of the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusTrail7.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> StatusTrail7.mmObject();
 			isDerived = false;
 			xmlTag = "CxlSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatus";
 			definition = "Provides details on the processing status of the cancellation request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingStatus61Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProcessingStatus61Choice.mmObject();
 		}
 	};
+	protected ProprietaryReason5 settled;
 	/**
 	 * Status is settled.
 	 * <p>
@@ -539,21 +553,22 @@ public class StatusTrail7 {
 	 * definition} = "Status is settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Settled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusTrail7.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> StatusTrail7.mmObject();
 			isDerived = false;
 			xmlTag = "Sttld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Status is settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -582,7 +597,7 @@ public class StatusTrail7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusTrail7.mmObject();
 			isDerived = false;
@@ -591,26 +606,114 @@ public class StatusTrail7 {
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail7.StatusDate, com.tools20022.repository.msg.StatusTrail7.SendingOrganisationIdentification,
-						com.tools20022.repository.msg.StatusTrail7.UserIdentification, com.tools20022.repository.msg.StatusTrail7.ProcessingStatus, com.tools20022.repository.msg.StatusTrail7.InferredMatchingStatus,
-						com.tools20022.repository.msg.StatusTrail7.MatchingStatus, com.tools20022.repository.msg.StatusTrail7.SettlementStatus, com.tools20022.repository.msg.StatusTrail7.ModificationProcessingStatus,
-						com.tools20022.repository.msg.StatusTrail7.CancellationStatus, com.tools20022.repository.msg.StatusTrail7.Settled, com.tools20022.repository.msg.StatusTrail7.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail7.mmStatusDate, com.tools20022.repository.msg.StatusTrail7.mmSendingOrganisationIdentification,
+						com.tools20022.repository.msg.StatusTrail7.mmUserIdentification, com.tools20022.repository.msg.StatusTrail7.mmProcessingStatus, com.tools20022.repository.msg.StatusTrail7.mmInferredMatchingStatus,
+						com.tools20022.repository.msg.StatusTrail7.mmMatchingStatus, com.tools20022.repository.msg.StatusTrail7.mmSettlementStatus, com.tools20022.repository.msg.StatusTrail7.mmModificationProcessingStatus,
+						com.tools20022.repository.msg.StatusTrail7.mmCancellationStatus, com.tools20022.repository.msg.StatusTrail7.mmSettled, com.tools20022.repository.msg.StatusTrail7.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmStatusTrail);
 				trace_lazy = () -> Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.StatusTrail);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusTrail7";
 				definition = "Provides the history of status and reasons for a pending, posted or cancelled transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getStatusDate() {
+		return statusDate;
+	}
+
+	public void setStatusDate(ISODateTime statusDate) {
+		this.statusDate = statusDate;
+	}
+
+	public OrganisationIdentification9 getSendingOrganisationIdentification() {
+		return sendingOrganisationIdentification;
+	}
+
+	public void setSendingOrganisationIdentification(com.tools20022.repository.msg.OrganisationIdentification9 sendingOrganisationIdentification) {
+		this.sendingOrganisationIdentification = sendingOrganisationIdentification;
+	}
+
+	public RestrictedFINXMax35Text getUserIdentification() {
+		return userIdentification;
+	}
+
+	public void setUserIdentification(RestrictedFINXMax35Text userIdentification) {
+		this.userIdentification = userIdentification;
+	}
+
+	public ProcessingStatus60Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus60Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public MatchingStatus30Choice getInferredMatchingStatus() {
+		return inferredMatchingStatus;
+	}
+
+	public void setInferredMatchingStatus(MatchingStatus30Choice inferredMatchingStatus) {
+		this.inferredMatchingStatus = inferredMatchingStatus;
+	}
+
+	public MatchingStatus30Choice getMatchingStatus() {
+		return matchingStatus;
+	}
+
+	public void setMatchingStatus(MatchingStatus30Choice matchingStatus) {
+		this.matchingStatus = matchingStatus;
+	}
+
+	public SettlementStatus22Choice getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(SettlementStatus22Choice settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public ModificationProcessingStatus8Choice getModificationProcessingStatus() {
+		return modificationProcessingStatus;
+	}
+
+	public void setModificationProcessingStatus(ModificationProcessingStatus8Choice modificationProcessingStatus) {
+		this.modificationProcessingStatus = modificationProcessingStatus;
+	}
+
+	public ProcessingStatus61Choice getCancellationStatus() {
+		return cancellationStatus;
+	}
+
+	public void setCancellationStatus(ProcessingStatus61Choice cancellationStatus) {
+		this.cancellationStatus = cancellationStatus;
+	}
+
+	public ProprietaryReason5 getSettled() {
+		return settled;
+	}
+
+	public void setSettled(com.tools20022.repository.msg.ProprietaryReason5 settled) {
+		this.settled = settled;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm7Code#RSAEncryption
- * Algorithm7Code.RSAEncryption}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm7Code#RSAESOAEP
- * Algorithm7Code.RSAESOAEP}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm7Code#mmRSAEncryption
+ * Algorithm7Code.mmRSAEncryption}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm7Code#mmRSAESOAEP
+ * Algorithm7Code.mmRSAESOAEP}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class Algorithm7Code extends AlgorithmCode {
 	 * name} = "RSAEncryption"</li>
 	 * </ul>
 	 */
-	public static final MMCode RSAEncryption = new MMCode() {
+	public static final MMCode mmRSAEncryption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAEncryption";
@@ -102,7 +102,7 @@ public class Algorithm7Code extends AlgorithmCode {
 	 * name} = "RSAES-OAEP"</li>
 	 * </ul>
 	 */
-	public static final MMCode RSAESOAEP = new MMCode() {
+	public static final MMCode mmRSAESOAEP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAES-OAEP";
@@ -113,12 +113,12 @@ public class Algorithm7Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ERSA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm7Code";
 				definition = "Asymmetric encryption algorithm of a transport key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm7Code.RSAEncryption, com.tools20022.repository.codeset.Algorithm7Code.RSAESOAEP);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm7Code.mmRSAEncryption, com.tools20022.repository.codeset.Algorithm7Code.mmRSAESOAEP);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

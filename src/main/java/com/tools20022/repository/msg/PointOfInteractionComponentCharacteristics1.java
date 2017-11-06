@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Physical and logical characteristics of a POI component (Point of
@@ -35,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#Memory
- * PointOfInteractionComponentCharacteristics1.Memory}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#mmMemory
+ * PointOfInteractionComponentCharacteristics1.mmMemory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#Communication
- * PointOfInteractionComponentCharacteristics1.Communication}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#mmCommunication
+ * PointOfInteractionComponentCharacteristics1.mmCommunication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#SecurityAccessModules
- * PointOfInteractionComponentCharacteristics1.SecurityAccessModules}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#mmSecurityAccessModules
+ * PointOfInteractionComponentCharacteristics1.mmSecurityAccessModules}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#SubscriberIdentityModules
- * PointOfInteractionComponentCharacteristics1.SubscriberIdentityModules}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#mmSubscriberIdentityModules
+ * PointOfInteractionComponentCharacteristics1.mmSubscriberIdentityModules}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#KeyCheckValue
- * PointOfInteractionComponentCharacteristics1.KeyCheckValue}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1#mmKeyCheckValue
+ * PointOfInteractionComponentCharacteristics1.mmKeyCheckValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PointOfInteractionComponentCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.MemoryCharacteristics1> memory;
 	/**
 	 * Memory characteristics of the component.
 	 * <p>
@@ -109,13 +111,13 @@ public class PointOfInteractionComponentCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#Memory
-	 * PointOfInteractionComponentCharacteristics2.Memory}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#mmMemory
+	 * PointOfInteractionComponentCharacteristics2.mmMemory}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Memory = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMemory = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
@@ -123,11 +125,12 @@ public class PointOfInteractionComponentCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Memory";
 			definition = "Memory characteristics of the component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.Memory);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmMemory);
 			minOccurs = 0;
-			complexType_lazy = () -> MemoryCharacteristics1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CommunicationCharacteristics1> communication;
 	/**
 	 * Low level communication of the hardware or software component toward
 	 * another component or an external entity.
@@ -161,13 +164,13 @@ public class PointOfInteractionComponentCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#Communication
-	 * PointOfInteractionComponentCharacteristics2.Communication}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#mmCommunication
+	 * PointOfInteractionComponentCharacteristics2.mmCommunication}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Communication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommunication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
@@ -175,11 +178,12 @@ public class PointOfInteractionComponentCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Communication";
 			definition = "Low level communication of the hardware or software component toward another component or an external entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.Communication);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmCommunication);
 			minOccurs = 0;
-			complexType_lazy = () -> CommunicationCharacteristics1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmObject();
 		}
 	};
+	protected Number securityAccessModules;
 	/**
 	 * Number of security access modules (SAM).
 	 * <p>
@@ -209,13 +213,13 @@ public class PointOfInteractionComponentCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#SecurityAccessModules
-	 * PointOfInteractionComponentCharacteristics2.SecurityAccessModules}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#mmSecurityAccessModules
+	 * PointOfInteractionComponentCharacteristics2.mmSecurityAccessModules}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityAccessModules = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityAccessModules = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
@@ -223,12 +227,13 @@ public class PointOfInteractionComponentCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityAccessModules";
 			definition = "Number of security access modules (SAM).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.SecurityAccessModules);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmSecurityAccessModules);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number subscriberIdentityModules;
 	/**
 	 * Number of subscriber identity modules (SIM).
 	 * <p>
@@ -258,13 +263,13 @@ public class PointOfInteractionComponentCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#SubscriberIdentityModules
-	 * PointOfInteractionComponentCharacteristics2.SubscriberIdentityModules}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#mmSubscriberIdentityModules
+	 * PointOfInteractionComponentCharacteristics2.mmSubscriberIdentityModules}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriberIdentityModules = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriberIdentityModules = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
@@ -272,12 +277,13 @@ public class PointOfInteractionComponentCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriberIdentityModules";
 			definition = "Number of subscriber identity modules (SIM).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.SubscriberIdentityModules);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmSubscriberIdentityModules);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35Binary keyCheckValue;
 	/**
 	 * Value for checking a cryptographic key security parameter.
 	 * <p>
@@ -308,13 +314,13 @@ public class PointOfInteractionComponentCharacteristics1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#KeyCheckValue
-	 * PointOfInteractionComponentCharacteristics2.KeyCheckValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2#mmKeyCheckValue
+	 * PointOfInteractionComponentCharacteristics2.mmKeyCheckValue}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyCheckValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyCheckValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
@@ -322,9 +328,9 @@ public class PointOfInteractionComponentCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyCheckValue";
 			definition = "Value for checking a cryptographic key security parameter.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.KeyCheckValue);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmKeyCheckValue);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
@@ -332,10 +338,10 @@ public class PointOfInteractionComponentCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.Memory, com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.Communication,
-						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.SecurityAccessModules, com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.SubscriberIdentityModules,
-						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.KeyCheckValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmMemory, com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmCommunication,
+						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmSecurityAccessModules, com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmSubscriberIdentityModules,
+						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmKeyCheckValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentCharacteristics1";
 				definition = "Physical and logical characteristics of a POI component (Point of Interaction).";
@@ -343,5 +349,45 @@ public class PointOfInteractionComponentCharacteristics1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<MemoryCharacteristics1> getMemory() {
+		return memory;
+	}
+
+	public void setMemory(List<com.tools20022.repository.msg.MemoryCharacteristics1> memory) {
+		this.memory = memory;
+	}
+
+	public List<CommunicationCharacteristics1> getCommunication() {
+		return communication;
+	}
+
+	public void setCommunication(List<com.tools20022.repository.msg.CommunicationCharacteristics1> communication) {
+		this.communication = communication;
+	}
+
+	public Number getSecurityAccessModules() {
+		return securityAccessModules;
+	}
+
+	public void setSecurityAccessModules(Number securityAccessModules) {
+		this.securityAccessModules = securityAccessModules;
+	}
+
+	public Number getSubscriberIdentityModules() {
+		return subscriberIdentityModules;
+	}
+
+	public void setSubscriberIdentityModules(Number subscriberIdentityModules) {
+		this.subscriberIdentityModules = subscriberIdentityModules;
+	}
+
+	public Max35Binary getKeyCheckValue() {
+		return keyCheckValue;
+	}
+
+	public void setKeyCheckValue(Max35Binary keyCheckValue) {
+		this.keyCheckValue = keyCheckValue;
 	}
 }

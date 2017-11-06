@@ -33,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#Type
- * InvestorProfile1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#Status
- * InvestorProfile1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#Treasury
- * InvestorProfile1.Treasury}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#mmType
+ * InvestorProfile1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#mmStatus
+ * InvestorProfile1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#mmTreasury
+ * InvestorProfile1.mmTreasury}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestorProfile1#HighFrequencyTrading
- * InvestorProfile1.HighFrequencyTrading}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#MarketMaker
- * InvestorProfile1.MarketMaker}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestorProfile1#mmHighFrequencyTrading
+ * InvestorProfile1.mmHighFrequencyTrading}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestorProfile1#mmMarketMaker
+ * InvestorProfile1.mmMarketMaker}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestorProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProfileType1Choice type;
 	/**
 	 * Type of profile.
 	 * <p>
@@ -90,7 +91,7 @@ public class InvestorProfile1 {
 	 * definition} = "Type of profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class InvestorProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of profile.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProfileType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProfileType1Choice.mmObject();
 		}
 	};
+	protected InvestorProfileStatus1Choice status;
 	/**
 	 * Status of the profile.
 	 * <p>
@@ -131,7 +133,7 @@ public class InvestorProfile1 {
 	 * definition} = "Status of the profile. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Status = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
@@ -139,12 +141,13 @@ public class InvestorProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the profile. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestorProfileStatus1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InvestorProfileStatus1Choice.mmObject();
 		}
 	};
+	protected TreasuryProfile1 treasury;
 	/**
 	 * Information about the profile for treasury trading.
 	 * <p>
@@ -171,7 +174,7 @@ public class InvestorProfile1 {
 	 * definition} = "Information about the profile for treasury trading. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Treasury = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTreasury = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
@@ -179,12 +182,13 @@ public class InvestorProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
 			definition = "Information about the profile for treasury trading. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TreasuryProfile1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TreasuryProfile1.mmObject();
 		}
 	};
+	protected HighFrequencyTradingProfile1 highFrequencyTrading;
 	/**
 	 * Information about the profile for high frequency trading.
 	 * <p>
@@ -213,7 +217,7 @@ public class InvestorProfile1 {
 	 * "Information about the profile for high frequency trading. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd HighFrequencyTrading = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHighFrequencyTrading = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
@@ -221,12 +225,13 @@ public class InvestorProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrading";
 			definition = "Information about the profile for high frequency trading. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> HighFrequencyTradingProfile1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmObject();
 		}
 	};
+	protected MarketMakerProfile1 marketMaker;
 	/**
 	 * Information about the profile for a market marker.
 	 * <p>
@@ -253,7 +258,7 @@ public class InvestorProfile1 {
 	 * definition} = "Information about the profile for a market marker. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketMaker = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketMaker = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
@@ -261,24 +266,64 @@ public class InvestorProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
 			definition = "Information about the profile for a market marker. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketMakerProfile1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketMakerProfile1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestorProfile1.Type, com.tools20022.repository.msg.InvestorProfile1.Status, com.tools20022.repository.msg.InvestorProfile1.Treasury,
-						com.tools20022.repository.msg.InvestorProfile1.HighFrequencyTrading, com.tools20022.repository.msg.InvestorProfile1.MarketMaker);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestorProfile1.mmType, com.tools20022.repository.msg.InvestorProfile1.mmStatus, com.tools20022.repository.msg.InvestorProfile1.mmTreasury,
+						com.tools20022.repository.msg.InvestorProfile1.mmHighFrequencyTrading, com.tools20022.repository.msg.InvestorProfile1.mmMarketMaker);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestorProfile1";
 				definition = "Information about actions that may be taken on an account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProfileType1Choice getType() {
+		return type;
+	}
+
+	public void setType(ProfileType1Choice type) {
+		this.type = type;
+	}
+
+	public InvestorProfileStatus1Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(InvestorProfileStatus1Choice status) {
+		this.status = status;
+	}
+
+	public TreasuryProfile1 getTreasury() {
+		return treasury;
+	}
+
+	public void setTreasury(com.tools20022.repository.msg.TreasuryProfile1 treasury) {
+		this.treasury = treasury;
+	}
+
+	public HighFrequencyTradingProfile1 getHighFrequencyTrading() {
+		return highFrequencyTrading;
+	}
+
+	public void setHighFrequencyTrading(com.tools20022.repository.msg.HighFrequencyTradingProfile1 highFrequencyTrading) {
+		this.highFrequencyTrading = highFrequencyTrading;
+	}
+
+	public MarketMakerProfile1 getMarketMaker() {
+		return marketMaker;
+	}
+
+	public void setMarketMaker(com.tools20022.repository.msg.MarketMakerProfile1 marketMaker) {
+		this.marketMaker = marketMaker;
 	}
 }

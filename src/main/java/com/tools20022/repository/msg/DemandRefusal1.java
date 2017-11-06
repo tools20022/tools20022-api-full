@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Refused7Text;
 import com.tools20022.repository.entity.UndertakingStatusReason;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the refusal of a demand.
@@ -37,29 +38,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandRefusal1#UndertakingIdentification
- * DemandRefusal1.UndertakingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandRefusal1#mmUndertakingIdentification
+ * DemandRefusal1.mmUndertakingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandRefusal1#AdvisingPartyReferenceNumber
- * DemandRefusal1.AdvisingPartyReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandRefusal1#mmAdvisingPartyReferenceNumber
+ * DemandRefusal1.mmAdvisingPartyReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandRefusal1#SecondAdvisingPartyReferenceNumber
- * DemandRefusal1.SecondAdvisingPartyReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandRefusal1#mmSecondAdvisingPartyReferenceNumber
+ * DemandRefusal1.mmSecondAdvisingPartyReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandRefusal1#ConfirmerReferenceNumber
- * DemandRefusal1.ConfirmerReferenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1#DemandDetails
- * DemandRefusal1.DemandDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1#Status
- * DemandRefusal1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1#Discrepancy
- * DemandRefusal1.Discrepancy}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandRefusal1#mmConfirmerReferenceNumber
+ * DemandRefusal1.mmConfirmerReferenceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1#mmDemandDetails
+ * DemandRefusal1.mmDemandDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1#mmStatus
+ * DemandRefusal1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1#mmDiscrepancy
+ * DemandRefusal1.mmDiscrepancy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandRefusal1#DispositionOfDocuments
- * DemandRefusal1.DispositionOfDocuments}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandRefusal1#mmDispositionOfDocuments
+ * DemandRefusal1.mmDispositionOfDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandRefusal1#AdditionalInformation
- * DemandRefusal1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandRefusal1#mmAdditionalInformation
+ * DemandRefusal1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -71,15 +72,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#DemandRefusalNotificationDetails
- * DemandRefusalNotificationV01.DemandRefusalNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#mmDemandRefusalNotificationDetails
+ * DemandRefusalNotificationV01.mmDemandRefusalNotificationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DemandRefusal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Undertaking9 undertakingIdentification;
 	/**
 	 * Details related to the identification of the undertaking.
 	 * <p>
@@ -104,8 +106,8 @@ public class DemandRefusal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#Undertaking
-	 * UndertakingStatus.Undertaking}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmUndertaking
+	 * UndertakingStatus.mmUndertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -124,21 +126,22 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.Undertaking;
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Undertaking9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
 		}
 	};
+	protected Max35Text advisingPartyReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the advising party to the
 	 * undertaking.
@@ -168,7 +171,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
 			isDerived = false;
@@ -176,11 +179,12 @@ public class DemandRefusal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the advising party to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text secondAdvisingPartyReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the second advising party
 	 * to the undertaking.
@@ -210,7 +214,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondAdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
 			isDerived = false;
@@ -218,11 +222,12 @@ public class DemandRefusal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the second advising party to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text confirmerReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the confirmer to the
 	 * undertaking.
@@ -252,7 +257,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmerReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
 			isDerived = false;
@@ -260,11 +265,12 @@ public class DemandRefusal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmerReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Demand2 demandDetails;
 	/**
 	 * Details related to the demand.
 	 * <p>
@@ -275,8 +281,8 @@ public class DemandRefusal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Demand
-	 * Undertaking.Demand}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmDemand
+	 * Undertaking.mmDemand}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -294,21 +300,22 @@ public class DemandRefusal1 {
 	 * definition} = "Details related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DemandDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmDemand;
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Demand;
 			isDerived = false;
 			xmlTag = "DmndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandDetails";
 			definition = "Details related to the demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Demand2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Demand2.mmObject();
 		}
 	};
+	protected Refused7Text status;
 	/**
 	 * Expicit indication of 'REFUSED' as the processing status reported by the
 	 * issuer.
@@ -323,8 +330,8 @@ public class DemandRefusal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#DemandStatus
-	 * UndertakingStatus.DemandStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmDemandStatus
+	 * UndertakingStatus.mmDemandStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -344,20 +351,21 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmDemandStatus;
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.DemandStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Expicit indication of 'REFUSED' as the processing status reported by the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Refused7Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Discrepancy1> discrepancy;
 	/**
 	 * Details related to the discrepancies.
 	 * <p>
@@ -369,8 +377,8 @@ public class DemandRefusal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatusReason#Discrepancy
-	 * UndertakingStatusReason.Discrepancy}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatusReason#mmDiscrepancy
+	 * UndertakingStatusReason.mmDiscrepancy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -388,20 +396,21 @@ public class DemandRefusal1 {
 	 * definition} = "Details related to the discrepancies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Discrepancy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDiscrepancy = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmDiscrepancy;
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.Discrepancy;
 			isDerived = false;
 			xmlTag = "Dscrpncy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discrepancy";
 			definition = "Details related to the discrepancies.";
 			minOccurs = 0;
-			type_lazy = () -> Discrepancy1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Discrepancy1.mmObject();
 		}
 	};
+	protected List<Max2000Text> dispositionOfDocuments;
 	/**
 	 * Indication of how the demand presentation documents will be handled as a
 	 * consequence of the demand refusal.
@@ -431,7 +440,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DispositionOfDocuments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDispositionOfDocuments = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
 			isDerived = false;
@@ -439,11 +448,12 @@ public class DemandRefusal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DispositionOfDocuments";
 			definition = "Indication of how the demand presentation documents will be handled as a consequence of the demand refusal.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the notification.
 	 * <p>
@@ -470,7 +480,7 @@ public class DemandRefusal1 {
 	 * definition} = "Additional information related to the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandRefusal1.mmObject();
 			isDerived = false;
@@ -478,8 +488,8 @@ public class DemandRefusal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the notification.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -487,18 +497,90 @@ public class DemandRefusal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DemandRefusal1.UndertakingIdentification, com.tools20022.repository.msg.DemandRefusal1.AdvisingPartyReferenceNumber,
-						com.tools20022.repository.msg.DemandRefusal1.SecondAdvisingPartyReferenceNumber, com.tools20022.repository.msg.DemandRefusal1.ConfirmerReferenceNumber, com.tools20022.repository.msg.DemandRefusal1.DemandDetails,
-						com.tools20022.repository.msg.DemandRefusal1.Status, com.tools20022.repository.msg.DemandRefusal1.Discrepancy, com.tools20022.repository.msg.DemandRefusal1.DispositionOfDocuments,
-						com.tools20022.repository.msg.DemandRefusal1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DemandRefusal1.mmUndertakingIdentification, com.tools20022.repository.msg.DemandRefusal1.mmAdvisingPartyReferenceNumber,
+						com.tools20022.repository.msg.DemandRefusal1.mmSecondAdvisingPartyReferenceNumber, com.tools20022.repository.msg.DemandRefusal1.mmConfirmerReferenceNumber,
+						com.tools20022.repository.msg.DemandRefusal1.mmDemandDetails, com.tools20022.repository.msg.DemandRefusal1.mmStatus, com.tools20022.repository.msg.DemandRefusal1.mmDiscrepancy,
+						com.tools20022.repository.msg.DemandRefusal1.mmDispositionOfDocuments, com.tools20022.repository.msg.DemandRefusal1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.mmDemandRefusalNotificationDetails);
 				trace_lazy = () -> UndertakingStatusReason.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.DemandRefusalNotificationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DemandRefusal1";
 				definition = "Information about the refusal of a demand.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Undertaking9 getUndertakingIdentification() {
+		return undertakingIdentification;
+	}
+
+	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+		this.undertakingIdentification = undertakingIdentification;
+	}
+
+	public Max35Text getAdvisingPartyReferenceNumber() {
+		return advisingPartyReferenceNumber;
+	}
+
+	public void setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
+		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
+	}
+
+	public Max35Text getSecondAdvisingPartyReferenceNumber() {
+		return secondAdvisingPartyReferenceNumber;
+	}
+
+	public void setSecondAdvisingPartyReferenceNumber(Max35Text secondAdvisingPartyReferenceNumber) {
+		this.secondAdvisingPartyReferenceNumber = secondAdvisingPartyReferenceNumber;
+	}
+
+	public Max35Text getConfirmerReferenceNumber() {
+		return confirmerReferenceNumber;
+	}
+
+	public void setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
+		this.confirmerReferenceNumber = confirmerReferenceNumber;
+	}
+
+	public Demand2 getDemandDetails() {
+		return demandDetails;
+	}
+
+	public void setDemandDetails(com.tools20022.repository.msg.Demand2 demandDetails) {
+		this.demandDetails = demandDetails;
+	}
+
+	public Refused7Text getStatus() {
+		return status;
+	}
+
+	public void setStatus(Refused7Text status) {
+		this.status = status;
+	}
+
+	public List<Discrepancy1> getDiscrepancy() {
+		return discrepancy;
+	}
+
+	public void setDiscrepancy(List<com.tools20022.repository.msg.Discrepancy1> discrepancy) {
+		this.discrepancy = discrepancy;
+	}
+
+	public List<Max2000Text> getDispositionOfDocuments() {
+		return dispositionOfDocuments;
+	}
+
+	public void setDispositionOfDocuments(List<Max2000Text> dispositionOfDocuments) {
+		this.dispositionOfDocuments = dispositionOfDocuments;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

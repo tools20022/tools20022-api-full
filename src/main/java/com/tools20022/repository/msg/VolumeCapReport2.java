@@ -36,29 +36,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#TechnicalRecordIdentification
- * VolumeCapReport2.TechnicalRecordIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#mmTechnicalRecordIdentification
+ * VolumeCapReport2.mmTechnicalRecordIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#Identification
- * VolumeCapReport2.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VolumeCapReport2#Currency
- * VolumeCapReport2.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#mmIdentification
+ * VolumeCapReport2.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VolumeCapReport2#mmCurrency
+ * VolumeCapReport2.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#TotalTradingVolume
- * VolumeCapReport2.TotalTradingVolume}</li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#mmTotalTradingVolume
+ * VolumeCapReport2.mmTotalTradingVolume}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#TotalReferencePriceTradingVolume
- * VolumeCapReport2.TotalReferencePriceTradingVolume}</li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#mmTotalReferencePriceTradingVolume
+ * VolumeCapReport2.mmTotalReferencePriceTradingVolume}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#TotalNegotiatedTransactionsTradingVolume
- * VolumeCapReport2.TotalNegotiatedTransactionsTradingVolume}</li>
+ * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#mmTotalNegotiatedTransactionsTradingVolume
+ * VolumeCapReport2.mmTotalNegotiatedTransactionsTradingVolume}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VolumeCapReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text technicalRecordIdentification;
 	/**
 	 * Unique identifier of a record in a message used as part of error
 	 * management and feedback messages.<br>
@@ -105,7 +106,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -113,11 +114,12 @@ public class VolumeCapReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and feedback messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISINOct2015Identifier identification;
 	/**
 	 * Identifies the financial instrument using an ISIN.
 	 * <p>
@@ -131,8 +133,8 @@ public class VolumeCapReport2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,20 +153,21 @@ public class VolumeCapReport2 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode currency;
 	/**
 	 * Currency of the transaction.
 	 * <p>
@@ -193,7 +196,7 @@ public class VolumeCapReport2 {
 	 * definition} = "Currency of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -201,11 +204,12 @@ public class VolumeCapReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount totalTradingVolume;
 	/**
 	 * Total traded volume of the instrument in this specific reporting period.
 	 * <p>
@@ -236,7 +240,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalTradingVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalTradingVolume = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -244,11 +248,12 @@ public class VolumeCapReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTradingVolume";
 			definition = "Total traded volume of the instrument in this specific reporting period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount totalReferencePriceTradingVolume;
 	/**
 	 * Total volume of trading under reference price waiver as defined under the
 	 * local regulation
@@ -280,7 +285,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalReferencePriceTradingVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalReferencePriceTradingVolume = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -288,11 +293,12 @@ public class VolumeCapReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReferencePriceTradingVolume";
 			definition = "Total volume of trading under reference price waiver as defined under the local regulation";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount totalNegotiatedTransactionsTradingVolume;
 	/**
 	 * Total volume of trading under negotiated transactions waiver as defined
 	 * under the local regulation.
@@ -324,7 +330,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNegotiatedTransactionsTradingVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNegotiatedTransactionsTradingVolume = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -332,8 +338,8 @@ public class VolumeCapReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNegotiatedTransactionsTradingVolume";
 			definition = "Total volume of trading under negotiated transactions waiver as defined under the local regulation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -341,15 +347,63 @@ public class VolumeCapReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VolumeCapReport2.TechnicalRecordIdentification, com.tools20022.repository.msg.VolumeCapReport2.Identification,
-						com.tools20022.repository.msg.VolumeCapReport2.Currency, com.tools20022.repository.msg.VolumeCapReport2.TotalTradingVolume, com.tools20022.repository.msg.VolumeCapReport2.TotalReferencePriceTradingVolume,
-						com.tools20022.repository.msg.VolumeCapReport2.TotalNegotiatedTransactionsTradingVolume);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VolumeCapReport2.mmTechnicalRecordIdentification, com.tools20022.repository.msg.VolumeCapReport2.mmIdentification,
+						com.tools20022.repository.msg.VolumeCapReport2.mmCurrency, com.tools20022.repository.msg.VolumeCapReport2.mmTotalTradingVolume, com.tools20022.repository.msg.VolumeCapReport2.mmTotalReferencePriceTradingVolume,
+						com.tools20022.repository.msg.VolumeCapReport2.mmTotalNegotiatedTransactionsTradingVolume);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VolumeCapReport2";
 				definition = "Double volume cap report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTechnicalRecordIdentification() {
+		return technicalRecordIdentification;
+	}
+
+	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+		this.technicalRecordIdentification = technicalRecordIdentification;
+	}
+
+	public ISINOct2015Identifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ISINOct2015Identifier identification) {
+		this.identification = identification;
+	}
+
+	public ActiveOrHistoricCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ImpliedCurrencyAndAmount getTotalTradingVolume() {
+		return totalTradingVolume;
+	}
+
+	public void setTotalTradingVolume(ImpliedCurrencyAndAmount totalTradingVolume) {
+		this.totalTradingVolume = totalTradingVolume;
+	}
+
+	public ImpliedCurrencyAndAmount getTotalReferencePriceTradingVolume() {
+		return totalReferencePriceTradingVolume;
+	}
+
+	public void setTotalReferencePriceTradingVolume(ImpliedCurrencyAndAmount totalReferencePriceTradingVolume) {
+		this.totalReferencePriceTradingVolume = totalReferencePriceTradingVolume;
+	}
+
+	public ImpliedCurrencyAndAmount getTotalNegotiatedTransactionsTradingVolume() {
+		return totalNegotiatedTransactionsTradingVolume;
+	}
+
+	public void setTotalNegotiatedTransactionsTradingVolume(ImpliedCurrencyAndAmount totalNegotiatedTransactionsTradingVolume) {
+		this.totalNegotiatedTransactionsTradingVolume = totalNegotiatedTransactionsTradingVolume;
 	}
 }

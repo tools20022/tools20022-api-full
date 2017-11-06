@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Repartition1#Percentage
- * Repartition1.Percentage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Repartition1#mmPercentage
+ * Repartition1.mmPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Repartition1#FinancialInstrument
- * Repartition1.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.Repartition1#mmFinancialInstrument
+ * Repartition1.mmFinancialInstrument}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Repartition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate percentage;
 	/**
 	 * Percentage of amount invested in a funds.
 	 * <p>
@@ -94,7 +95,7 @@ public class Repartition1 {
 	 * definition} = "Percentage of amount invested in a funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Repartition1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class Repartition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Percentage of amount invested in a funds.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected FinancialInstrument10 financialInstrument;
 	/**
 	 * Security that is a sub-set of an investment fund, and is governed by the
 	 * same investment fund policy, eg, dividend option or valuation currency.
@@ -140,27 +142,27 @@ public class Repartition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Repartition1.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> Repartition1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition1.Percentage, com.tools20022.repository.msg.Repartition1.FinancialInstrument);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition1.mmPercentage, com.tools20022.repository.msg.Repartition1.mmFinancialInstrument);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Repartition1";
 				definition = "Indicates how the amount of the investment plan is split amongst the funds.";
@@ -168,5 +170,21 @@ public class Repartition1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
+	}
+
+	public FinancialInstrument10 getFinancialInstrument() {
+		return financialInstrument;
+	}
+
+	public void setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument10 financialInstrument) {
+		this.financialInstrument = financialInstrument;
 	}
 }

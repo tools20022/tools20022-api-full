@@ -36,16 +36,17 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages17#ProcessingPosition
- * Linkages17.ProcessingPosition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages17#MessageNumber
- * Linkages17.MessageNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages17#Reference
- * Linkages17.Reference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages17#LinkedQuantity
- * Linkages17.LinkedQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages17#ReferenceOwner
- * Linkages17.ReferenceOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Linkages17#mmProcessingPosition
+ * Linkages17.mmProcessingPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmMessageNumber
+ * Linkages17.mmMessageNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmReference
+ * Linkages17.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmLinkedQuantity
+ * Linkages17.mmLinkedQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmReferenceOwner
+ * Linkages17.mmReferenceOwner}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,39 +58,39 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV03#Linkages
- * SecuritiesFinancingInstructionV03.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV03#mmLinkages
+ * SecuritiesFinancingInstructionV03.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV03#Linkages
- * SecuritiesSettlementTransactionGenerationNotificationV03.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV03#mmLinkages
+ * SecuritiesSettlementTransactionGenerationNotificationV03.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#Linkages
- * SecuritiesSettlementTransactionGenerationNotificationV04.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04#mmLinkages
+ * SecuritiesSettlementTransactionGenerationNotificationV04.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV03#Linkages
- * SecuritiesSettlementTransactionInstructionV03.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV03#mmLinkages
+ * SecuritiesSettlementTransactionInstructionV03.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV04#Linkages
- * SecuritiesSettlementTransactionInstructionV04.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV04#mmLinkages
+ * SecuritiesSettlementTransactionInstructionV04.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV04#Linkages
- * SecuritiesFinancingInstructionV04.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV04#mmLinkages
+ * SecuritiesFinancingInstructionV04.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#Linkages
- * SecuritiesSettlementTransactionGenerationNotificationV05.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05#mmLinkages
+ * SecuritiesSettlementTransactionGenerationNotificationV05.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV05#Linkages
- * SecuritiesFinancingInstructionV05.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV05#mmLinkages
+ * SecuritiesFinancingInstructionV05.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05#Linkages
- * SecuritiesSettlementTransactionInstructionV05.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05#mmLinkages
+ * SecuritiesSettlementTransactionInstructionV05.mmLinkages}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -113,6 +114,7 @@ import java.util.function.Supplier;
 public class Linkages17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessingPosition1Choice processingPosition;
 	/**
 	 * When the transaction is to be executed relative to a linked transaction.
 	 * <p>
@@ -143,13 +145,13 @@ public class Linkages17 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Linkages37#ProcessingPosition
-	 * Linkages37.ProcessingPosition}</li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages37#mmProcessingPosition
+	 * Linkages37.mmProcessingPosition}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingPosition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages17.mmObject();
 			isDerived = false;
@@ -157,13 +159,14 @@ public class Linkages17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.ProcessingPosition);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.mmProcessingPosition);
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingPosition1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProcessingPosition1Choice.mmObject();
 		}
 	};
+	protected DocumentNumber1Choice messageNumber;
 	/**
 	 * Message type number/message identifier of the message referenced in the
 	 * linkage sequence.
@@ -194,13 +197,13 @@ public class Linkages17 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages37#MessageNumber
-	 * Linkages37.MessageNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages37#mmMessageNumber
+	 * Linkages37.mmMessageNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Linkages17.mmObject();
 			isDerived = false;
@@ -208,13 +211,14 @@ public class Linkages17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.MessageNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.mmMessageNumber);
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber1Choice.mmObject();
 		}
 	};
+	protected References25Choice reference;
 	/**
 	 * Reference to the linked transaction.
 	 * <p>
@@ -246,28 +250,29 @@ public class Linkages17 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages37#Reference
-	 * Linkages37.Reference}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages37#mmReference
+	 * Linkages37.mmReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages17.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
+			componentContext_lazy = () -> Linkages17.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.Reference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.mmReference);
 			maxOccurs = 1;
-			type_lazy = () -> References25Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> References25Choice.mmObject();
 		}
 	};
+	protected PairedOrTurnedQuantity1Choice linkedQuantity;
 	/**
 	 * Quantity of financial instruments of the linked transaction to be
 	 * paired-off or turned.
@@ -281,8 +286,8 @@ public class Linkages17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Linkages17
@@ -303,28 +308,30 @@ public class Linkages17 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages37#LinkedQuantity
-	 * Linkages37.LinkedQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages37#mmLinkedQuantity
+	 * Linkages37.mmLinkedQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LinkedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkedQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> Linkages17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "LkdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off or turned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.LinkedQuantity);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.mmLinkedQuantity);
 			maxOccurs = 1;
-			type_lazy = () -> PairedOrTurnedQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PairedOrTurnedQuantity1Choice.mmObject();
 		}
 	};
+	protected PartyIdentification36Choice referenceOwner;
 	/**
 	 * Party that generates the reference.
 	 * <p>
@@ -337,8 +344,8 @@ public class Linkages17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Linkages17
@@ -357,41 +364,42 @@ public class Linkages17 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Linkages37#ReferenceOwner
-	 * Linkages37.ReferenceOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages37#mmReferenceOwner
+	 * Linkages37.mmReferenceOwner}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReferenceOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferenceOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Linkages17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RefOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOwner";
 			definition = "Party that generates the reference.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.ReferenceOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.mmReferenceOwner);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification36Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages17.ProcessingPosition, com.tools20022.repository.msg.Linkages17.MessageNumber, com.tools20022.repository.msg.Linkages17.Reference,
-						com.tools20022.repository.msg.Linkages17.LinkedQuantity, com.tools20022.repository.msg.Linkages17.ReferenceOwner);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages17.mmProcessingPosition, com.tools20022.repository.msg.Linkages17.mmMessageNumber, com.tools20022.repository.msg.Linkages17.mmReference,
+						com.tools20022.repository.msg.Linkages17.mmLinkedQuantity, com.tools20022.repository.msg.Linkages17.mmReferenceOwner);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV03.mmLinkages,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV03.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmLinkages,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV03.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV04.mmLinkages,
+						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV04.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmLinkages,
+						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV05.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05.mmLinkages);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV03.Linkages,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV03.Linkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.Linkages,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV03.Linkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV04.Linkages,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV04.Linkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.Linkages,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV05.Linkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05.Linkages);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -402,10 +410,50 @@ public class Linkages17 {
 				})).get();
 				name = "Linkages17";
 				definition = "Information related to a linked transaction.";
-				previousVersion_lazy = () -> Linkages9.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Linkages37.mmObject());
+				previousVersion_lazy = () -> Linkages9.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessingPosition1Choice getProcessingPosition() {
+		return processingPosition;
+	}
+
+	public void setProcessingPosition(ProcessingPosition1Choice processingPosition) {
+		this.processingPosition = processingPosition;
+	}
+
+	public DocumentNumber1Choice getMessageNumber() {
+		return messageNumber;
+	}
+
+	public void setMessageNumber(DocumentNumber1Choice messageNumber) {
+		this.messageNumber = messageNumber;
+	}
+
+	public References25Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(References25Choice reference) {
+		this.reference = reference;
+	}
+
+	public PairedOrTurnedQuantity1Choice getLinkedQuantity() {
+		return linkedQuantity;
+	}
+
+	public void setLinkedQuantity(PairedOrTurnedQuantity1Choice linkedQuantity) {
+		this.linkedQuantity = linkedQuantity;
+	}
+
+	public PartyIdentification36Choice getReferenceOwner() {
+		return referenceOwner;
+	}
+
+	public void setReferenceOwner(PartyIdentification36Choice referenceOwner) {
+		this.referenceOwner = referenceOwner;
 	}
 }

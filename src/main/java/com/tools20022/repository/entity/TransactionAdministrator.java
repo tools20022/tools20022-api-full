@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.SystemPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of integrated applications that provides centralised services such as
@@ -40,20 +41,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashClearingSystem
- * TransactionAdministrator.CashClearingSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashClearingSystem
+ * TransactionAdministrator.mmCashClearingSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#Currency
- * TransactionAdministrator.Currency}</li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrency
+ * TransactionAdministrator.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CurrencyExchange
- * TransactionAdministrator.CurrencyExchange}</li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrencyExchange
+ * TransactionAdministrator.mmCurrencyExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashManagementService
- * TransactionAdministrator.CashManagementService}</li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashManagementService
+ * TransactionAdministrator.mmCashManagementService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#SettlementInstruction
- * TransactionAdministrator.SettlementInstruction}</li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmSettlementInstruction
+ * TransactionAdministrator.mmSettlementInstruction}</li>
  * </ul>
  * </li>
  * <li>
@@ -61,17 +62,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystem#TransactionAdministrator
- * CashClearingSystem.TransactionAdministrator}</li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmTransactionAdministrator
+ * CashClearingSystem.mmTransactionAdministrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#RelatedTransactionAdministrator
- * CashSettlement.RelatedTransactionAdministrator}</li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedTransactionAdministrator
+ * CashSettlement.mmRelatedTransactionAdministrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashManagementService#RelatedTransactionAdministrator
- * CashManagementService.RelatedTransactionAdministrator}</li>
+ * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRelatedTransactionAdministrator
+ * CashManagementService.mmRelatedTransactionAdministrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CurrencyExchangeForTransactionAdministrator
- * CurrencyExchange.CurrencyExchangeForTransactionAdministrator}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForTransactionAdministrator
+ * CurrencyExchange.mmCurrencyExchangeForTransactionAdministrator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -80,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionAdministrator extends SystemPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashClearingSystem cashClearingSystem;
 	/**
 	 * System where the clearing takes place.
 	 * <p>
@@ -105,8 +107,8 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#TransactionAdministrator
-	 * CashClearingSystem.TransactionAdministrator}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmTransactionAdministrator
+	 * CashClearingSystem.mmTransactionAdministrator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -114,46 +116,46 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashClearingSystem
 	 * CashClearingSystem}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#SystemIdentification
-	 * RiskManagementLimitIdentificationDetails.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1#SystemIdentification
-	 * LimitIdentificationDetails1.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2#SystemIdentification
-	 * LimitIdentificationDetails2.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails3#SystemIdentification
-	 * LimitIdentificationDetails3.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentification1#SystemIdentification
-	 * LimitIdentification1.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentification2#SystemIdentification
-	 * LimitIdentification2.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria1#SystemIdentification
-	 * LimitSearchCriteria1.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria2#SystemIdentification
-	 * LimitSearchCriteria2.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#SystemIdentification
-	 * LimitSearchCriteria3.SystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails#SystemIdentification
-	 * LiquidityManagementLimitIdentificationDetails.SystemIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator
 	 * TransactionAdministrator}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails#mmSystemIdentification
+	 * RiskManagementLimitIdentificationDetails.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1#mmSystemIdentification
+	 * LimitIdentificationDetails1.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2#mmSystemIdentification
+	 * LimitIdentificationDetails2.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails3#mmSystemIdentification
+	 * LimitIdentificationDetails3.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentification1#mmSystemIdentification
+	 * LimitIdentification1.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentification2#mmSystemIdentification
+	 * LimitIdentification2.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria1#mmSystemIdentification
+	 * LimitSearchCriteria1.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria2#mmSystemIdentification
+	 * LimitSearchCriteria2.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmSystemIdentification
+	 * LimitSearchCriteria3.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails#mmSystemIdentification
+	 * LiquidityManagementLimitIdentificationDetails.mmSystemIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -165,25 +167,26 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * definition} = "System where the clearing takes place."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashClearingSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashClearingSystem = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.SystemIdentification, com.tools20022.repository.msg.LimitIdentificationDetails1.SystemIdentification,
-					com.tools20022.repository.msg.LimitIdentificationDetails2.SystemIdentification, com.tools20022.repository.msg.LimitIdentificationDetails3.SystemIdentification,
-					com.tools20022.repository.msg.LimitIdentification1.SystemIdentification, com.tools20022.repository.msg.LimitIdentification2.SystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria1.SystemIdentification,
-					com.tools20022.repository.msg.LimitSearchCriteria2.SystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria3.SystemIdentification,
-					com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.SystemIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmSystemIdentification, com.tools20022.repository.msg.LimitIdentificationDetails1.mmSystemIdentification,
+					com.tools20022.repository.msg.LimitIdentificationDetails2.mmSystemIdentification, com.tools20022.repository.msg.LimitIdentificationDetails3.mmSystemIdentification,
+					com.tools20022.repository.msg.LimitIdentification1.mmSystemIdentification, com.tools20022.repository.msg.LimitIdentification2.mmSystemIdentification,
+					com.tools20022.repository.msg.LimitSearchCriteria1.mmSystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria2.mmSystemIdentification,
+					com.tools20022.repository.msg.LimitSearchCriteria3.mmSystemIdentification, com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmSystemIdentification);
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashClearingSystem";
 			definition = "System where the clearing takes place.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.TransactionAdministrator;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmTransactionAdministrator;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmObject();
 		}
 	};
+	protected CurrencyCode currency;
 	/**
 	 * Currency which may be processed by the system. A system may process
 	 * transactions in a single currency or in multiple currencies.
@@ -194,22 +197,22 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#SystemCurrency
-	 * SystemAvailabilityAndEventsDetails1.SystemCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1#SystemCurrency
-	 * SystemAvailabilityAndEvents1.SystemCurrency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator
 	 * TransactionAdministrator}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#mmSystemCurrency
+	 * SystemAvailabilityAndEventsDetails1.mmSystemCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1#mmSystemCurrency
+	 * SystemAvailabilityAndEvents1.mmSystemCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,19 +226,20 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Currency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.SystemCurrency, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.SystemCurrency);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmSystemCurrency, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmSystemCurrency);
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
 	/**
 	 * Static data maintained by the transaction administrator and related to
 	 * currency exchange details as maintained for system operations.
@@ -245,8 +249,8 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CurrencyExchangeForTransactionAdministrator
-	 * CurrencyExchange.CurrencyExchangeForTransactionAdministrator}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForTransactionAdministrator
+	 * CurrencyExchange.mmCurrencyExchangeForTransactionAdministrator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -272,7 +276,7 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CurrencyExchange = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
@@ -280,11 +284,12 @@ public class TransactionAdministrator extends SystemPartyRole {
 			name = "CurrencyExchange";
 			definition = "Static data maintained by the transaction administrator and related to currency exchange details as maintained for system operations.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.CurrencyExchangeForTransactionAdministrator;
+			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForTransactionAdministrator;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashManagementService> cashManagementService;
 	/**
 	 * Set of applications that provides services which facilitate the
 	 * management of cash positions on an account.
@@ -294,8 +299,8 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashManagementService#RelatedTransactionAdministrator
-	 * CashManagementService.RelatedTransactionAdministrator}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRelatedTransactionAdministrator
+	 * CashManagementService.mmRelatedTransactionAdministrator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -322,7 +327,7 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashManagementService = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashManagementService = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
@@ -330,11 +335,12 @@ public class TransactionAdministrator extends SystemPartyRole {
 			name = "CashManagementService";
 			definition = "Set of applications that provides services which facilitate the management of cash positions on an account.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashManagementService.RelatedTransactionAdministrator;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmRelatedTransactionAdministrator;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashSettlement> settlementInstruction;
 	/**
 	 * Specifies the settlement instruction managed by the transaction
 	 * administrator.
@@ -344,8 +350,8 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#RelatedTransactionAdministrator
-	 * CashSettlement.RelatedTransactionAdministrator}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedTransactionAdministrator
+	 * CashSettlement.mmRelatedTransactionAdministrator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -371,7 +377,7 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SettlementInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSettlementInstruction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
@@ -379,27 +385,67 @@ public class TransactionAdministrator extends SystemPartyRole {
 			name = "SettlementInstruction";
 			definition = "Specifies the settlement instruction managed by the transaction administrator.";
 			minOccurs = 0;
-			type_lazy = () -> CashSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlement.RelatedTransactionAdministrator;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmRelatedTransactionAdministrator;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionAdministrator";
 				definition = "Set of integrated applications that provides centralised services such as clearing and settlement.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.TransactionAdministrator, com.tools20022.repository.entity.CashSettlement.RelatedTransactionAdministrator,
-						com.tools20022.repository.entity.CashManagementService.RelatedTransactionAdministrator, com.tools20022.repository.entity.CurrencyExchange.CurrencyExchangeForTransactionAdministrator);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.mmTransactionAdministrator, com.tools20022.repository.entity.CashSettlement.mmRelatedTransactionAdministrator,
+						com.tools20022.repository.entity.CashManagementService.mmRelatedTransactionAdministrator, com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForTransactionAdministrator);
 				superType_lazy = () -> SystemPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransactionAdministrator.CashClearingSystem, com.tools20022.repository.entity.TransactionAdministrator.Currency,
-						com.tools20022.repository.entity.TransactionAdministrator.CurrencyExchange, com.tools20022.repository.entity.TransactionAdministrator.CashManagementService,
-						com.tools20022.repository.entity.TransactionAdministrator.SettlementInstruction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem, com.tools20022.repository.entity.TransactionAdministrator.mmCurrency,
+						com.tools20022.repository.entity.TransactionAdministrator.mmCurrencyExchange, com.tools20022.repository.entity.TransactionAdministrator.mmCashManagementService,
+						com.tools20022.repository.entity.TransactionAdministrator.mmSettlementInstruction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashClearingSystem getCashClearingSystem() {
+		return cashClearingSystem;
+	}
+
+	public void setCashClearingSystem(com.tools20022.repository.entity.CashClearingSystem cashClearingSystem) {
+		this.cashClearingSystem = cashClearingSystem;
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public List<CurrencyExchange> getCurrencyExchange() {
+		return currencyExchange;
+	}
+
+	public void setCurrencyExchange(List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange) {
+		this.currencyExchange = currencyExchange;
+	}
+
+	public List<CashManagementService> getCashManagementService() {
+		return cashManagementService;
+	}
+
+	public void setCashManagementService(List<com.tools20022.repository.entity.CashManagementService> cashManagementService) {
+		this.cashManagementService = cashManagementService;
+	}
+
+	public List<CashSettlement> getSettlementInstruction() {
+		return settlementInstruction;
+	}
+
+	public void setSettlementInstruction(List<com.tools20022.repository.entity.CashSettlement> settlementInstruction) {
+		this.settlementInstruction = settlementInstruction;
 	}
 }

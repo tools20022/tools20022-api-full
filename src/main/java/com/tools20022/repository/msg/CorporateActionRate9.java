@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#ProposedRate
- * CorporateActionRate9.ProposedRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#mmProposedRate
+ * CorporateActionRate9.mmProposedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#OversubscriptionRate
- * CorporateActionRate9.OversubscriptionRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#mmOversubscriptionRate
+ * CorporateActionRate9.mmOversubscriptionRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#RequestedTaxationRate
- * CorporateActionRate9.RequestedTaxationRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#mmRequestedTaxationRate
+ * CorporateActionRate9.mmRequestedTaxationRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionRate9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate proposedRate;
 	/**
 	 * Rate proposed in a remarketing of variable rate notes.
 	 * <p>
@@ -80,8 +81,8 @@ public class CorporateActionRate9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#ProposedRate
-	 * BiddingConditions.ProposedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmProposedRate
+	 * BiddingConditions.mmProposedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class CorporateActionRate9 {
 	 * definition} = "Rate proposed in a remarketing of variable rate notes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProposedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProposedRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmProposedRate;
 			componentContext_lazy = () -> CorporateActionRate9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.ProposedRate;
 			isDerived = false;
 			xmlTag = "PropsdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedRate";
 			definition = "Rate proposed in a remarketing of variable rate notes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RateAndAmountFormat13Choice oversubscriptionRate;
 	/**
 	 * Rate of allowed over-subscription.
 	 * <p>
@@ -126,8 +128,8 @@ public class CorporateActionRate9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#OversubscriptionRate
-	 * BiddingConditions.OversubscriptionRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmOversubscriptionRate
+	 * BiddingConditions.mmOversubscriptionRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,21 +148,22 @@ public class CorporateActionRate9 {
 	 * definition} = "Rate of allowed over-subscription."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OversubscriptionRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOversubscriptionRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmOversubscriptionRate;
 			componentContext_lazy = () -> CorporateActionRate9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.OversubscriptionRate;
 			isDerived = false;
 			xmlTag = "OvrsbcptRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OversubscriptionRate";
 			definition = "Rate of allowed over-subscription.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmountFormat13Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat13Choice.mmObject();
 		}
 	};
+	protected PercentageRate requestedTaxationRate;
 	/**
 	 * Requested tax rate in case of breakdown of tax rate, for example, used
 	 * for adjustment of tax rate. This is the new requested applicable rate.
@@ -175,8 +178,8 @@ public class CorporateActionRate9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#RequestedTaxationRate
-	 * TaxVoucher.RequestedTaxationRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRequestedTaxationRate
+	 * TaxVoucher.mmRequestedTaxationRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,17 +200,17 @@ public class CorporateActionRate9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedTaxationRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedTaxationRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmRequestedTaxationRate;
 			componentContext_lazy = () -> CorporateActionRate9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.RequestedTaxationRate;
 			isDerived = false;
 			xmlTag = "ReqdTaxtnRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTaxationRate";
 			definition = "Requested tax rate in case of breakdown of tax rate, for example, used for adjustment of tax rate. This is the new requested applicable rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -215,15 +218,39 @@ public class CorporateActionRate9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate9.ProposedRate, com.tools20022.repository.msg.CorporateActionRate9.OversubscriptionRate,
-						com.tools20022.repository.msg.CorporateActionRate9.RequestedTaxationRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate9.mmProposedRate, com.tools20022.repository.msg.CorporateActionRate9.mmOversubscriptionRate,
+						com.tools20022.repository.msg.CorporateActionRate9.mmRequestedTaxationRate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate9";
 				definition = "Specifies rates related to a corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getProposedRate() {
+		return proposedRate;
+	}
+
+	public void setProposedRate(PercentageRate proposedRate) {
+		this.proposedRate = proposedRate;
+	}
+
+	public RateAndAmountFormat13Choice getOversubscriptionRate() {
+		return oversubscriptionRate;
+	}
+
+	public void setOversubscriptionRate(RateAndAmountFormat13Choice oversubscriptionRate) {
+		this.oversubscriptionRate = oversubscriptionRate;
+	}
+
+	public PercentageRate getRequestedTaxationRate() {
+		return requestedTaxationRate;
+	}
+
+	public void setRequestedTaxationRate(PercentageRate requestedTaxationRate) {
+		this.requestedTaxationRate = requestedTaxationRate;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceValueType5FormatChoice#Code
- * PriceValueType5FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceValueType5FormatChoice#mmCode
+ * PriceValueType5FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceValueType5FormatChoice#Proprietary
- * PriceValueType5FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceValueType5FormatChoice#mmProprietary
+ * PriceValueType5FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceValueType5FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceValueType5Code code;
 	/**
 	 * Standard code to specify the value of a price.
 	 * <p>
@@ -87,7 +88,7 @@ public class PriceValueType5FormatChoice {
 	 * definition} = "Standard code to  specify the value of a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceValueType5FormatChoice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class PriceValueType5FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to  specify the value of a price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType5Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the value of a price.
 	 * <p>
@@ -128,7 +130,7 @@ public class PriceValueType5FormatChoice {
 	 * definition} = "Proprietary code to  express  the value of a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceValueType5FormatChoice.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class PriceValueType5FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express  the value of a price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class PriceValueType5FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceValueType5FormatChoice.Code, com.tools20022.repository.choice.PriceValueType5FormatChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceValueType5FormatChoice.mmCode, com.tools20022.repository.choice.PriceValueType5FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType5FormatChoice";
 				definition = "Choice of formats to  express  the value of a price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceValueType5Code getCode() {
+		return code;
+	}
+
+	public void setCode(PriceValueType5Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

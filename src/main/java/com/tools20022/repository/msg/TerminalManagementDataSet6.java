@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet6#Identification
- * TerminalManagementDataSet6.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet6#mmIdentification
+ * TerminalManagementDataSet6.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet6#SequenceCounter
- * TerminalManagementDataSet6.SequenceCounter}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet6#mmSequenceCounter
+ * TerminalManagementDataSet6.mmSequenceCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet6#Content
- * TerminalManagementDataSet6.Content}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet6#mmContent
+ * TerminalManagementDataSet6.mmContent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalManagementDataSet6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataSetIdentification3 identification;
 	/**
 	 * Identification of the data set transferred.
 	 * <p>
@@ -107,13 +108,13 @@ public class TerminalManagementDataSet6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet11#Identification
-	 * TerminalManagementDataSet11.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet11#mmIdentification
+	 * TerminalManagementDataSet11.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet6.mmObject();
 			isDerived = false;
@@ -121,13 +122,14 @@ public class TerminalManagementDataSet6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the data set transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet11.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet11.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification3.mmObject();
 		}
 	};
+	protected Max9NumericText sequenceCounter;
 	/**
 	 * Counter to identify a single data set within the whole transfer.
 	 * <p>
@@ -159,13 +161,13 @@ public class TerminalManagementDataSet6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet11#SequenceCounter
-	 * TerminalManagementDataSet11.SequenceCounter}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet11#mmSequenceCounter
+	 * TerminalManagementDataSet11.mmSequenceCounter}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet6.mmObject();
 			isDerived = false;
@@ -173,12 +175,13 @@ public class TerminalManagementDataSet6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Counter to identify a single data set within the whole transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet11.SequenceCounter);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet11.mmSequenceCounter);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected AcceptorConfigurationContent2 content;
 	/**
 	 * Content of the acceptor parameters.
 	 * <p>
@@ -208,13 +211,13 @@ public class TerminalManagementDataSet6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet11#Content
-	 * TerminalManagementDataSet11.Content}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet11#mmContent
+	 * TerminalManagementDataSet11.mmContent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Content = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet6.mmObject();
 			isDerived = false;
@@ -222,28 +225,52 @@ public class TerminalManagementDataSet6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Content of the acceptor parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet11.Content);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet11.mmContent);
 			maxOccurs = 1;
-			type_lazy = () -> AcceptorConfigurationContent2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet6.Identification, com.tools20022.repository.msg.TerminalManagementDataSet6.SequenceCounter,
-						com.tools20022.repository.msg.TerminalManagementDataSet6.Content);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet6.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet6.mmSequenceCounter,
+						com.tools20022.repository.msg.TerminalManagementDataSet6.mmContent);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet6";
 				definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
-				previousVersion_lazy = () -> TerminalManagementDataSet3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet11.mmObject());
+				previousVersion_lazy = () -> TerminalManagementDataSet3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataSetIdentification3 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification3 identification) {
+		this.identification = identification;
+	}
+
+	public Max9NumericText getSequenceCounter() {
+		return sequenceCounter;
+	}
+
+	public void setSequenceCounter(Max9NumericText sequenceCounter) {
+		this.sequenceCounter = sequenceCounter;
+	}
+
+	public AcceptorConfigurationContent2 getContent() {
+		return content;
+	}
+
+	public void setContent(com.tools20022.repository.msg.AcceptorConfigurationContent2 content) {
+		this.content = content;
 	}
 }

@@ -33,53 +33,55 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#ConsumptionTax
- * TaxType16Code.ConsumptionTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#TaxCredit
- * TaxType16Code.TaxCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmConsumptionTax
+ * TaxType16Code.mmConsumptionTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmTaxCredit
+ * TaxType16Code.mmTaxCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#EUTaxRetention
- * TaxType16Code.EUTaxRetention}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmEUTaxRetention
+ * TaxType16Code.mmEUTaxRetention}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#PaymentLevyTax
- * TaxType16Code.PaymentLevyTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#LocalTax
- * TaxType16Code.LocalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#NationalTax
- * TaxType16Code.NationalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#Provincial
- * TaxType16Code.Provincial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#StampDuty
- * TaxType16Code.StampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#StateTax
- * TaxType16Code.StateTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmPaymentLevyTax
+ * TaxType16Code.mmPaymentLevyTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmLocalTax
+ * TaxType16Code.mmLocalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#StockExchangeTax
- * TaxType16Code.StockExchangeTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#TransferTax
- * TaxType16Code.TransferTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmNationalTax
+ * TaxType16Code.mmNationalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmProvincial
+ * TaxType16Code.mmProvincial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmStampDuty
+ * TaxType16Code.mmStampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmStateTax
+ * TaxType16Code.mmStateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#TransactionTax
- * TaxType16Code.TransactionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmStockExchangeTax
+ * TaxType16Code.mmStockExchangeTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#ValueAddedTax
- * TaxType16Code.ValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmTransferTax
+ * TaxType16Code.mmTransferTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#WithholdingTax
- * TaxType16Code.WithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmTransactionTax
+ * TaxType16Code.mmTransactionTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#CapitalLossCredit
- * TaxType16Code.CapitalLossCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmValueAddedTax
+ * TaxType16Code.mmValueAddedTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#CapitalGainTax
- * TaxType16Code.CapitalGainTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmWithholdingTax
+ * TaxType16Code.mmWithholdingTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmCapitalLossCredit
+ * TaxType16Code.mmCapitalLossCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmCapitalGainTax
+ * TaxType16Code.mmCapitalGainTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,7 +111,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "ConsumptionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsumptionTax = new MMCode() {
+	public static final MMCode mmConsumptionTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
@@ -132,7 +134,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "TaxCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxCredit = new MMCode() {
+	public static final MMCode mmTaxCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
@@ -155,7 +157,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUTaxRetention = new MMCode() {
+	public static final MMCode mmEUTaxRetention = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
@@ -178,7 +180,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "PaymentLevyTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentLevyTax = new MMCode() {
+	public static final MMCode mmPaymentLevyTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentLevyTax";
@@ -201,7 +203,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "LocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode LocalTax = new MMCode() {
+	public static final MMCode mmLocalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
@@ -224,7 +226,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "NationalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalTax = new MMCode() {
+	public static final MMCode mmNationalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
@@ -247,7 +249,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "Provincial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Provincial = new MMCode() {
+	public static final MMCode mmProvincial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
@@ -270,7 +272,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode StampDuty = new MMCode() {
+	public static final MMCode mmStampDuty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
@@ -293,7 +295,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "StateTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode StateTax = new MMCode() {
+	public static final MMCode mmStateTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
@@ -316,7 +318,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "StockExchangeTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchangeTax = new MMCode() {
+	public static final MMCode mmStockExchangeTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
@@ -339,7 +341,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "TransferTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferTax = new MMCode() {
+	public static final MMCode mmTransferTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
@@ -362,7 +364,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "TransactionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionTax = new MMCode() {
+	public static final MMCode mmTransactionTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
@@ -385,7 +387,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -408,7 +410,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTax = new MMCode() {
+	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
@@ -431,7 +433,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "CapitalLossCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalLossCredit = new MMCode() {
+	public static final MMCode mmCapitalLossCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalLossCredit";
@@ -454,7 +456,7 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "CapitalGainTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGainTax = new MMCode() {
+	public static final MMCode mmCapitalGainTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainTax";
@@ -465,16 +467,16 @@ public class TaxType16Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType16Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType16Code.ConsumptionTax, com.tools20022.repository.codeset.TaxType16Code.TaxCredit, com.tools20022.repository.codeset.TaxType16Code.EUTaxRetention,
-						com.tools20022.repository.codeset.TaxType16Code.PaymentLevyTax, com.tools20022.repository.codeset.TaxType16Code.LocalTax, com.tools20022.repository.codeset.TaxType16Code.NationalTax,
-						com.tools20022.repository.codeset.TaxType16Code.Provincial, com.tools20022.repository.codeset.TaxType16Code.StampDuty, com.tools20022.repository.codeset.TaxType16Code.StateTax,
-						com.tools20022.repository.codeset.TaxType16Code.StockExchangeTax, com.tools20022.repository.codeset.TaxType16Code.TransferTax, com.tools20022.repository.codeset.TaxType16Code.TransactionTax,
-						com.tools20022.repository.codeset.TaxType16Code.ValueAddedTax, com.tools20022.repository.codeset.TaxType16Code.WithholdingTax, com.tools20022.repository.codeset.TaxType16Code.CapitalLossCredit,
-						com.tools20022.repository.codeset.TaxType16Code.CapitalGainTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType16Code.mmConsumptionTax, com.tools20022.repository.codeset.TaxType16Code.mmTaxCredit,
+						com.tools20022.repository.codeset.TaxType16Code.mmEUTaxRetention, com.tools20022.repository.codeset.TaxType16Code.mmPaymentLevyTax, com.tools20022.repository.codeset.TaxType16Code.mmLocalTax,
+						com.tools20022.repository.codeset.TaxType16Code.mmNationalTax, com.tools20022.repository.codeset.TaxType16Code.mmProvincial, com.tools20022.repository.codeset.TaxType16Code.mmStampDuty,
+						com.tools20022.repository.codeset.TaxType16Code.mmStateTax, com.tools20022.repository.codeset.TaxType16Code.mmStockExchangeTax, com.tools20022.repository.codeset.TaxType16Code.mmTransferTax,
+						com.tools20022.repository.codeset.TaxType16Code.mmTransactionTax, com.tools20022.repository.codeset.TaxType16Code.mmValueAddedTax, com.tools20022.repository.codeset.TaxType16Code.mmWithholdingTax,
+						com.tools20022.repository.codeset.TaxType16Code.mmCapitalLossCredit, com.tools20022.repository.codeset.TaxType16Code.mmCapitalGainTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

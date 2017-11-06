@@ -35,13 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType22Choice#Addition
- * UpdateType22Choice.Addition}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType22Choice#Deletion
- * UpdateType22Choice.Deletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UpdateType22Choice#Modification
- * UpdateType22Choice.Modification}</li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType22Choice#mmAddition
+ * UpdateType22Choice.mmAddition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType22Choice#mmDeletion
+ * UpdateType22Choice.mmDeletion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType22Choice#mmModification
+ * UpdateType22Choice.mmModification}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04#UpdateType
- * SecuritiesSettlementTransactionModificationRequest002V04.UpdateType}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04#mmUpdateType
+ * SecuritiesSettlementTransactionModificationRequest002V04.mmUpdateType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdateType22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesSettlementTransactionDetails23 addition;
 	/**
 	 * Addition of information to the securities transaction.
 	 * <p>
@@ -100,7 +103,7 @@ public class UpdateType22Choice {
 	 * definition} = "Addition of information to the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Addition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType22Choice.mmObject();
 			isDerived = false;
@@ -108,12 +111,13 @@ public class UpdateType22Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
 			definition = "Addition of information to the securities transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlementTransactionDetails23.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesSettlementTransactionDetails23.mmObject();
 		}
 	};
+	protected SecuritiesSettlementTransactionDetails24 deletion;
 	/**
 	 * Deletion of information in the securities transaction.
 	 * <p>
@@ -141,7 +145,7 @@ public class UpdateType22Choice {
 	 * definition} = "Deletion of information in the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Deletion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType22Choice.mmObject();
 			isDerived = false;
@@ -149,12 +153,13 @@ public class UpdateType22Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
 			definition = "Deletion of information in the securities transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlementTransactionDetails24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesSettlementTransactionDetails24.mmObject();
 		}
 	};
+	protected SecuritiesSettlementTransactionDetails25 modification;
 	/**
 	 * Modification of information in the securities transaction.
 	 * <p>
@@ -183,7 +188,7 @@ public class UpdateType22Choice {
 	 * "Modification of information in the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Modification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType22Choice.mmObject();
 			isDerived = false;
@@ -191,25 +196,49 @@ public class UpdateType22Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification of information in the securities transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlementTransactionDetails25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesSettlementTransactionDetails25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType22Choice.Addition, com.tools20022.repository.choice.UpdateType22Choice.Deletion,
-						com.tools20022.repository.choice.UpdateType22Choice.Modification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04.UpdateType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType22Choice.mmAddition, com.tools20022.repository.choice.UpdateType22Choice.mmDeletion,
+						com.tools20022.repository.choice.UpdateType22Choice.mmModification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04.mmUpdateType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UpdateType22Choice";
 				definition = "Specifies the type of update requested. That is addition, deletion or modification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesSettlementTransactionDetails23 getAddition() {
+		return addition;
+	}
+
+	public void setAddition(SecuritiesSettlementTransactionDetails23 addition) {
+		this.addition = addition;
+	}
+
+	public SecuritiesSettlementTransactionDetails24 getDeletion() {
+		return deletion;
+	}
+
+	public void setDeletion(SecuritiesSettlementTransactionDetails24 deletion) {
+		this.deletion = deletion;
+	}
+
+	public SecuritiesSettlementTransactionDetails25 getModification() {
+		return modification;
+	}
+
+	public void setModification(SecuritiesSettlementTransactionDetails25 modification) {
+		this.modification = modification;
 	}
 }

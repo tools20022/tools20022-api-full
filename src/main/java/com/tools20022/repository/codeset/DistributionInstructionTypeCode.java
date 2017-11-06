@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#GlobalDebitOrder
- * DistributionInstructionTypeCode.GlobalDebitOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmGlobalDebitOrder
+ * DistributionInstructionTypeCode.mmGlobalDebitOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#IndividualOrder
- * DistributionInstructionTypeCode.IndividualOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmIndividualOrder
+ * DistributionInstructionTypeCode.mmIndividualOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#GlobalReturnOrder
- * DistributionInstructionTypeCode.GlobalReturnOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmGlobalReturnOrder
+ * DistributionInstructionTypeCode.mmGlobalReturnOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#OptionChangeOrder
- * DistributionInstructionTypeCode.OptionChangeOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmOptionChangeOrder
+ * DistributionInstructionTypeCode.mmOptionChangeOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#IndividualReturnOrder
- * DistributionInstructionTypeCode.IndividualReturnOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmIndividualReturnOrder
+ * DistributionInstructionTypeCode.mmIndividualReturnOrder}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -103,7 +103,7 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalDebitOrder = new MMCode() {
+	public static final MMCode mmGlobalDebitOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GlobalDebitOrder";
@@ -137,7 +137,7 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IndividualOrder = new MMCode() {
+	public static final MMCode mmIndividualOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IndividualOrder";
@@ -170,7 +170,7 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalReturnOrder = new MMCode() {
+	public static final MMCode mmGlobalReturnOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GlobalReturnOrder";
@@ -204,7 +204,7 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OptionChangeOrder = new MMCode() {
+	public static final MMCode mmOptionChangeOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OptionChangeOrder";
@@ -237,7 +237,7 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IndividualReturnOrder = new MMCode() {
+	public static final MMCode mmIndividualReturnOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IndividualReturnOrder";
@@ -250,14 +250,14 @@ public class DistributionInstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GDEB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DistributionInstructionTypeCode";
 				definition = "Specifies the type of distribution instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionInstructionTypeCode.GlobalDebitOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.IndividualOrder,
-						com.tools20022.repository.codeset.DistributionInstructionTypeCode.GlobalReturnOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.OptionChangeOrder,
-						com.tools20022.repository.codeset.DistributionInstructionTypeCode.IndividualReturnOrder);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmGlobalDebitOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmIndividualOrder,
+						com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmGlobalReturnOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmOptionChangeOrder,
+						com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmIndividualReturnOrder);
 				derivation_lazy = () -> Arrays.asList(DistributionInstructionType1Code.mmObject());
 			}
 		});

@@ -39,8 +39,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#CurrentYearTypeOrExtendedCurrentYearTypeRule
- * ISAYearsOfIssue2.CurrentYearTypeOrExtendedCurrentYearTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmCurrentYearTypeOrExtendedCurrentYearTypeRule
+ * ISAYearsOfIssue2.mmCurrentYearTypeOrExtendedCurrentYearTypeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,13 +48,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#CurrentYearType
- * ISAYearsOfIssue2.CurrentYearType}</li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmCurrentYearType
+ * ISAYearsOfIssue2.mmCurrentYearType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#ExtendedCurrentYearType
- * ISAYearsOfIssue2.ExtendedCurrentYearType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#PreviousYears
- * ISAYearsOfIssue2.PreviousYears}</li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmExtendedCurrentYearType
+ * ISAYearsOfIssue2.mmExtendedCurrentYearType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmPreviousYears
+ * ISAYearsOfIssue2.mmPreviousYears}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,6 +80,7 @@ import java.util.function.Supplier;
 public class ISAYearsOfIssue2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISAType2Code currentYearType;
 	/**
 	 * ISA that was issued during the current fiscal year.
 	 * <p>
@@ -91,8 +93,8 @@ public class ISAYearsOfIssue2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#CurrentYearISAType
-	 * PortfolioTransfer.CurrentYearISAType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCurrentYearISAType
+	 * PortfolioTransfer.mmCurrentYearISAType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +113,21 @@ public class ISAYearsOfIssue2 {
 	 * definition} = "ISA that was issued during the current fiscal year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentYearType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentYearType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> ISAYearsOfIssue2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.CurrentYearISAType;
 			isDerived = false;
 			xmlTag = "CurYrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearType";
 			definition = "ISA that was issued during the current fiscal year.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISAType2Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedCurrentYearType;
 	/**
 	 * Current year ISA is an ISA that was issued during the current fiscal
 	 * year.
@@ -139,8 +142,8 @@ public class ISAYearsOfIssue2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#CurrentYearISAType
-	 * PortfolioTransfer.CurrentYearISAType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCurrentYearISAType
+	 * PortfolioTransfer.mmCurrentYearISAType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,20 +164,21 @@ public class ISAYearsOfIssue2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedCurrentYearType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedCurrentYearType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> ISAYearsOfIssue2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.CurrentYearISAType;
 			isDerived = false;
 			xmlTag = "XtndedCurYrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedCurrentYearType";
 			definition = "Current year ISA is an ISA that was issued during the current fiscal year.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected PreviousYearChoice previousYears;
 	/**
 	 * Selection of investment plans issued during previous years.
 	 * <p>
@@ -207,19 +211,19 @@ public class ISAYearsOfIssue2 {
 	 * "Selection of investment plans issued during previous years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousYears = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousYears = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISAYearsOfIssue2.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> ISAYearsOfIssue2.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousYears";
 			definition = "Selection of investment plans issued during previous years.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PreviousYearChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PreviousYearChoice.mmObject();
 		}
 	};
 	/**
@@ -232,11 +236,11 @@ public class ISAYearsOfIssue2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#CurrentYearType
-	 * ISAYearsOfIssue2.CurrentYearType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmCurrentYearType
+	 * ISAYearsOfIssue2.mmCurrentYearType}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#ExtendedCurrentYearType
-	 * ISAYearsOfIssue2.ExtendedCurrentYearType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmExtendedCurrentYearType
+	 * ISAYearsOfIssue2.mmExtendedCurrentYearType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -256,23 +260,23 @@ public class ISAYearsOfIssue2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CurrentYearTypeOrExtendedCurrentYearTypeRule = new MMXor() {
+	public static final MMXor mmCurrentYearTypeOrExtendedCurrentYearTypeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearTypeOrExtendedCurrentYearTypeRule";
 			definition = "Either CurrentYearType  or ExtendedCurrentYearType  may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue2.CurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue2.ExtendedCurrentYearType);
 			messageComponent_lazy = () -> ISAYearsOfIssue2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue2.mmCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue2.mmExtendedCurrentYearType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue2.CurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue2.ExtendedCurrentYearType,
-						com.tools20022.repository.msg.ISAYearsOfIssue2.PreviousYears);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue2.mmCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue2.mmExtendedCurrentYearType,
+						com.tools20022.repository.msg.ISAYearsOfIssue2.mmPreviousYears);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -283,9 +287,33 @@ public class ISAYearsOfIssue2 {
 				})).get();
 				name = "ISAYearsOfIssue2";
 				definition = "Year in which the ISA plan is issued.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue2.CurrentYearTypeOrExtendedCurrentYearTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue2.mmCurrentYearTypeOrExtendedCurrentYearTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISAType2Code getCurrentYearType() {
+		return currentYearType;
+	}
+
+	public void setCurrentYearType(ISAType2Code currentYearType) {
+		this.currentYearType = currentYearType;
+	}
+
+	public Extended350Code getExtendedCurrentYearType() {
+		return extendedCurrentYearType;
+	}
+
+	public void setExtendedCurrentYearType(Extended350Code extendedCurrentYearType) {
+		this.extendedCurrentYearType = extendedCurrentYearType;
+	}
+
+	public PreviousYearChoice getPreviousYears() {
+		return previousYears;
+	}
+
+	public void setPreviousYears(PreviousYearChoice previousYears) {
+		this.previousYears = previousYears;
 	}
 }

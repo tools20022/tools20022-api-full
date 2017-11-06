@@ -29,16 +29,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatusCode#Enabled
- * AccountStatusCode.Enabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatusCode#Disabled
- * AccountStatusCode.Disabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatusCode#Deleted
- * AccountStatusCode.Deleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatusCode#ProForma
- * AccountStatusCode.ProForma}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatusCode#Pending
- * AccountStatusCode.Pending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusCode#mmEnabled
+ * AccountStatusCode.mmEnabled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusCode#mmDisabled
+ * AccountStatusCode.mmDisabled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusCode#mmDeleted
+ * AccountStatusCode.mmDeleted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusCode#mmProForma
+ * AccountStatusCode.mmProForma}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusCode#mmPending
+ * AccountStatusCode.mmPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +104,7 @@ public class AccountStatusCode {
 	 * definition} = "Account can be used for its intended purpose."</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabled = new MMCode() {
+	public static final MMCode mmEnabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Enabled";
@@ -132,7 +137,7 @@ public class AccountStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Disabled = new MMCode() {
+	public static final MMCode mmDisabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Disabled";
@@ -162,7 +167,7 @@ public class AccountStatusCode {
 	 * definition} = "Account cannot be used any longer."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deleted = new MMCode() {
+	public static final MMCode mmDeleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Deleted";
@@ -196,7 +201,7 @@ public class AccountStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ProForma = new MMCode() {
+	public static final MMCode mmProForma = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProForma";
@@ -226,7 +231,7 @@ public class AccountStatusCode {
 	 * definition} = "Account change is pending approval."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -239,13 +244,13 @@ public class AccountStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENAB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusCode";
 				definition = "Specifies the current state of an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusCode.Enabled, com.tools20022.repository.codeset.AccountStatusCode.Disabled, com.tools20022.repository.codeset.AccountStatusCode.Deleted,
-						com.tools20022.repository.codeset.AccountStatusCode.ProForma, com.tools20022.repository.codeset.AccountStatusCode.Pending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusCode.mmEnabled, com.tools20022.repository.codeset.AccountStatusCode.mmDisabled, com.tools20022.repository.codeset.AccountStatusCode.mmDeleted,
+						com.tools20022.repository.codeset.AccountStatusCode.mmProForma, com.tools20022.repository.codeset.AccountStatusCode.mmPending);
 				derivation_lazy = () -> Arrays.asList(AccountStatus2Code.mmObject(), AccountStatus1Code.mmObject(), AccountStatus3Code.mmObject(), AccountStatus4Code.mmObject());
 			}
 		});

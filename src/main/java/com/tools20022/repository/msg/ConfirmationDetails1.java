@@ -36,15 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationDetails1#PayInScheduleReference
- * ConfirmationDetails1.PayInScheduleReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationDetails1#mmPayInScheduleReference
+ * ConfirmationDetails1.mmPayInScheduleReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ConfirmationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text payInScheduleReference;
 	/**
 	 * Reference to the pay in schedule confirmed.
 	 * <p>
@@ -95,7 +96,7 @@ public class ConfirmationDetails1 {
 	 * definition} = "Reference to the pay in schedule confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayInScheduleReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayInScheduleReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ConfirmationDetails1.mmObject();
 			isDerived = false;
@@ -103,8 +104,8 @@ public class ConfirmationDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInScheduleReference";
 			definition = "Reference to the pay in schedule confirmed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -112,8 +113,8 @@ public class ConfirmationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationDetails1.PayInScheduleReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationDetails1.mmPayInScheduleReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationDetails1";
 				definition = "Reference of the PayInSchedule being confirmed. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message";
@@ -121,5 +122,13 @@ public class ConfirmationDetails1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPayInScheduleReference() {
+		return payInScheduleReference;
+	}
+
+	public void setPayInScheduleReference(Max35Text payInScheduleReference) {
+		this.payInScheduleReference = payInScheduleReference;
 	}
 }

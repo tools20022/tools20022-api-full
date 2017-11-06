@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Transfer by the delivering account servicer to the receiving account servicer
@@ -44,43 +45,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferredYear
- * PortfolioTransfer.TransferredYear}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredYear
+ * PortfolioTransfer.mmTransferredYear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#CashComponentIndicator
- * PortfolioTransfer.CashComponentIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCashComponentIndicator
+ * PortfolioTransfer.mmCashComponentIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#AccountFrom
- * PortfolioTransfer.AccountFrom}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PortfolioTransfer#AccountTo
- * PortfolioTransfer.AccountTo}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountFrom
+ * PortfolioTransfer.mmAccountFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#PaymentObligation
- * PortfolioTransfer.PaymentObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmAccountTo
+ * PortfolioTransfer.mmAccountTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferredPortfolio
- * PortfolioTransfer.TransferredPortfolio}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmPaymentObligation
+ * PortfolioTransfer.mmPaymentObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#SecuritiesDeliveryObligation
- * PortfolioTransfer.SecuritiesDeliveryObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredPortfolio
+ * PortfolioTransfer.mmTransferredPortfolio}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferredAmount
- * PortfolioTransfer.TransferredAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmSecuritiesDeliveryObligation
+ * PortfolioTransfer.mmSecuritiesDeliveryObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferredPercentage
- * PortfolioTransfer.TransferredPercentage}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredAmount
+ * PortfolioTransfer.mmTransferredAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferDate
- * PortfolioTransfer.TransferDate}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredPercentage
+ * PortfolioTransfer.mmTransferredPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#NomineeAccount
- * PortfolioTransfer.NomineeAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferDate
+ * PortfolioTransfer.mmTransferDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#PEPOrISAPlan
- * PortfolioTransfer.PEPOrISAPlan}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmNomineeAccount
+ * PortfolioTransfer.mmNomineeAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#CurrentYearISAType
- * PortfolioTransfer.CurrentYearISAType}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmPEPOrISAPlan
+ * PortfolioTransfer.mmPEPOrISAPlan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCurrentYearISAType
+ * PortfolioTransfer.mmCurrentYearISAType}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,22 +90,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#DebitPortfolioTransfer
- * InvestmentAccount.DebitPortfolioTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDebitPortfolioTransfer
+ * InvestmentAccount.mmDebitPortfolioTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#CreditPortfolioTransfer
- * InvestmentAccount.CreditPortfolioTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCreditPortfolioTransfer
+ * InvestmentAccount.mmCreditPortfolioTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#RelatedPortfolioTransfer
- * InvestmentAccount.RelatedPortfolioTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmRelatedPortfolioTransfer
+ * InvestmentAccount.mmRelatedPortfolioTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentSourcePortfolioTransfer
- * PaymentObligation.PaymentSourcePortfolioTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#Transfer
- * Portfolio.Transfer}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentSourcePortfolioTransfer
+ * PaymentObligation.mmPaymentSourcePortfolioTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
+ * Portfolio.mmTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#RelatedPortfolioTransfer
- * SecuritiesDeliveryObligation.RelatedPortfolioTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmRelatedPortfolioTransfer
+ * SecuritiesDeliveryObligation.mmRelatedPortfolioTransfer}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,82 +113,93 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreviousYearChoice#AllPreviousYears
- * PreviousYearChoice.AllPreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#PreviousYears
- * ISAYearsOfIssue.PreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#ISA
- * PEPISATransfer1.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#PEP
- * PEPISATransfer1.PEP}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PreviousYear1#AllPreviousYears
- * PreviousYear1.AllPreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#PreviousYears
- * ISAYearsOfIssue1.PreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer6#ISA
- * PEPISATransfer6.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer6#PEP
- * PEPISATransfer6.PEP}</li>
+ * {@linkplain com.tools20022.repository.choice.PreviousYearChoice#mmAllPreviousYears
+ * PreviousYearChoice.mmAllPreviousYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#AllPreviousYears
- * PreviousYear1Choice.AllPreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue4#PreviousYears
- * ISAYearsOfIssue4.PreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer8#ISA
- * PEPISATransfer8.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer8#PEP
- * PEPISATransfer8.PEP}</li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#mmPreviousYears
+ * ISAYearsOfIssue.mmPreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmISA
+ * PEPISATransfer1.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmPEP
+ * PEPISATransfer1.mmPEP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer7#ProductTransfer
- * PEPISATransfer7.ProductTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmAllPreviousYears
+ * PreviousYear1.mmAllPreviousYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#ProductTransfer
- * PEPISATransfer11.ProductTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer9#ProductTransfer
- * ISATransfer9.ProductTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer2#ISA
- * PEPISATransfer2.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer2#PEP
- * PEPISATransfer2.PEP}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#PreviousYears
- * ISAYearsOfIssue3.PreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer4#ISA
- * PEPISATransfer4.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer4#PEP
- * PEPISATransfer4.PEP}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5#PreviousYears
- * ISAYearsOfIssue5.PreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer3#ISA
- * PEPISATransfer3.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer3#PEP
- * PEPISATransfer3.PEP}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#PreviousYears
- * ISAYearsOfIssue2.PreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer5#ISA
- * PEPISATransfer5.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer5#PEP
- * PEPISATransfer5.PEP}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue6#PreviousYears
- * ISAYearsOfIssue6.PreviousYears}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#ISA
- * PEPOrISAChoice.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#PEP
- * PEPOrISAChoice.PEP}</li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#mmPreviousYears
+ * ISAYearsOfIssue1.mmPreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer6#mmISA
+ * PEPISATransfer6.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer6#mmPEP
+ * PEPISATransfer6.mmPEP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer12#ProductTransferAndReference
- * ISATransfer12.ProductTransferAndReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer17#ProductTransfer
- * ISATransfer17.ProductTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer20#ProductTransfer
- * ISATransfer20.ProductTransfer}</li>
+ * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#mmAllPreviousYears
+ * PreviousYear1Choice.mmAllPreviousYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer19#ProductTransferAndReference
- * ISATransfer19.ProductTransferAndReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer25#ProductTransfer
- * ISATransfer25.ProductTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue4#mmPreviousYears
+ * ISAYearsOfIssue4.mmPreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer8#mmISA
+ * PEPISATransfer8.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer8#mmPEP
+ * PEPISATransfer8.mmPEP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer24#ProductTransferAndReference
- * ISATransfer24.ProductTransferAndReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer7#mmProductTransfer
+ * PEPISATransfer7.mmProductTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmProductTransfer
+ * PEPISATransfer11.mmProductTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ISATransfer9#mmProductTransfer
+ * ISATransfer9.mmProductTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer2#mmISA
+ * PEPISATransfer2.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer2#mmPEP
+ * PEPISATransfer2.mmPEP}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#mmPreviousYears
+ * ISAYearsOfIssue3.mmPreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer4#mmISA
+ * PEPISATransfer4.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer4#mmPEP
+ * PEPISATransfer4.mmPEP}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5#mmPreviousYears
+ * ISAYearsOfIssue5.mmPreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer3#mmISA
+ * PEPISATransfer3.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer3#mmPEP
+ * PEPISATransfer3.mmPEP}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmPreviousYears
+ * ISAYearsOfIssue2.mmPreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer5#mmISA
+ * PEPISATransfer5.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer5#mmPEP
+ * PEPISATransfer5.mmPEP}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue6#mmPreviousYears
+ * ISAYearsOfIssue6.mmPreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#mmISA
+ * PEPOrISAChoice.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#mmPEP
+ * PEPOrISAChoice.mmPEP}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmProductTransferAndReference
+ * ISATransfer12.mmProductTransferAndReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer17#mmProductTransfer
+ * ISATransfer17.mmProductTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer20#mmProductTransfer
+ * ISATransfer20.mmProductTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmProductTransferAndReference
+ * ISATransfer19.mmProductTransferAndReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer25#mmProductTransfer
+ * ISATransfer25.mmProductTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer24#mmProductTransferAndReference
+ * ISATransfer24.mmProductTransferAndReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -273,8 +286,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -290,6 +303,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PortfolioTransfer {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISOYear transferredYear;
 	/**
 	 * Specifies the year during which the investment plan to be transferred was
 	 * issued.
@@ -300,34 +314,35 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISOYear
 	 * ISOYear}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreviousYearChoice#SpecificPreviousYears
-	 * PreviousYearChoice.SpecificPreviousYears}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#SpecificPreviousYears
-	 * PreviousYear1.SpecificPreviousYears}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#SpecificPreviousYears
-	 * PreviousYear1Choice.SpecificPreviousYears}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear2#PreviousYears
-	 * PreviousYear2.PreviousYears}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PreviousYear3#PreviousYear
-	 * PreviousYear3.PreviousYear}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#Year
-	 * PEPISACashTransfer1.Year}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#Year
-	 * PEPISACashTransfer2.Year}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreviousYearChoice#mmSpecificPreviousYears
+	 * PreviousYearChoice.mmSpecificPreviousYears}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmSpecificPreviousYears
+	 * PreviousYear1.mmSpecificPreviousYears}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#mmSpecificPreviousYears
+	 * PreviousYear1Choice.mmSpecificPreviousYears}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear2#mmPreviousYears
+	 * PreviousYear2.mmPreviousYears}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear3#mmPreviousYear
+	 * PreviousYear3.mmPreviousYear}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#mmYear
+	 * PEPISACashTransfer1.mmYear}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#mmYear
+	 * PEPISACashTransfer2.mmYear}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -341,21 +356,22 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransferredYear = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransferredYear = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreviousYearChoice.SpecificPreviousYears, com.tools20022.repository.msg.PreviousYear1.SpecificPreviousYears,
-					com.tools20022.repository.choice.PreviousYear1Choice.SpecificPreviousYears, com.tools20022.repository.msg.PreviousYear2.PreviousYears, com.tools20022.repository.msg.PreviousYear3.PreviousYear,
-					com.tools20022.repository.msg.PEPISACashTransfer1.Year, com.tools20022.repository.msg.PEPISACashTransfer2.Year);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreviousYearChoice.mmSpecificPreviousYears, com.tools20022.repository.msg.PreviousYear1.mmSpecificPreviousYears,
+					com.tools20022.repository.choice.PreviousYear1Choice.mmSpecificPreviousYears, com.tools20022.repository.msg.PreviousYear2.mmPreviousYears, com.tools20022.repository.msg.PreviousYear3.mmPreviousYear,
+					com.tools20022.repository.msg.PEPISACashTransfer1.mmYear, com.tools20022.repository.msg.PEPISACashTransfer2.mmYear);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferredYear";
 			definition = "Specifies the year during which the investment plan to be transferred was issued.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOYear.mmObject();
 		}
 	};
+	protected YesNoIndicator cashComponentIndicator;
 	/**
 	 * Indicates whether an ISA investment plan contains a cash component asset
 	 * for transfer.
@@ -367,37 +383,37 @@ public class PortfolioTransfer {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#CashComponentIndicator
-	 * PreviousYear1.CashComponentIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#CashComponentIndicator
-	 * ISAYearsOfIssue1.CashComponentIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear2#CashComponentIndicator
-	 * PreviousYear2.CashComponentIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue4#CashComponentIndicator
-	 * ISAYearsOfIssue4.CashComponentIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#CashComponentIndicator
-	 * ISAYearsOfIssue3.CashComponentIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear3#CashComponentIndicator
-	 * PreviousYear3.CashComponentIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5#CashComponentIndicator
-	 * ISAYearsOfIssue5.CashComponentIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmCashComponentIndicator
+	 * PreviousYear1.mmCashComponentIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#mmCashComponentIndicator
+	 * ISAYearsOfIssue1.mmCashComponentIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear2#mmCashComponentIndicator
+	 * PreviousYear2.mmCashComponentIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue4#mmCashComponentIndicator
+	 * ISAYearsOfIssue4.mmCashComponentIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#mmCashComponentIndicator
+	 * ISAYearsOfIssue3.mmCashComponentIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear3#mmCashComponentIndicator
+	 * PreviousYear3.mmCashComponentIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5#mmCashComponentIndicator
+	 * ISAYearsOfIssue5.mmCashComponentIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -411,21 +427,22 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CashComponentIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCashComponentIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.CashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue1.CashComponentIndicator,
-					com.tools20022.repository.msg.PreviousYear2.CashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue4.CashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue3.CashComponentIndicator,
-					com.tools20022.repository.msg.PreviousYear3.CashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue5.CashComponentIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.mmCashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue1.mmCashComponentIndicator,
+					com.tools20022.repository.msg.PreviousYear2.mmCashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue4.mmCashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue3.mmCashComponentIndicator,
+					com.tools20022.repository.msg.PreviousYear3.mmCashComponentIndicator, com.tools20022.repository.msg.ISAYearsOfIssue5.mmCashComponentIndicator);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashComponentIndicator";
 			definition = "Indicates whether an ISA investment plan contains a cash component asset for transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InvestmentAccount> accountFrom;
 	/**
 	 * Specifies the account owned by an investor and from which the assets are
 	 * transferred.
@@ -435,8 +452,8 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#DebitPortfolioTransfer
-	 * InvestmentAccount.DebitPortfolioTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDebitPortfolioTransfer
+	 * InvestmentAccount.mmDebitPortfolioTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -444,34 +461,34 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
 	 * InvestmentAccount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer7#ClientAccount
-	 * PEPISATransfer7.ClientAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#TransferorAccount
-	 * PEPISATransfer11.TransferorAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#TransferorAccount
-	 * ISATransfer9.TransferorAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer12#TransferorAccount
-	 * ISATransfer12.TransferorAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#TransferorAccount
-	 * ISATransfer19.TransferorAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer24#TransferorAccount
-	 * ISATransfer24.TransferorAccount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer7#mmClientAccount
+	 * PEPISATransfer7.mmClientAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmTransferorAccount
+	 * PEPISATransfer11.mmTransferorAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmTransferorAccount
+	 * ISATransfer9.mmTransferorAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmTransferorAccount
+	 * ISATransfer12.mmTransferorAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmTransferorAccount
+	 * ISATransfer19.mmTransferorAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer24#mmTransferorAccount
+	 * ISATransfer24.mmTransferorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -485,21 +502,23 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AccountFrom = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccountFrom = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer7.ClientAccount, com.tools20022.repository.msg.PEPISATransfer11.TransferorAccount, com.tools20022.repository.msg.ISATransfer9.TransferorAccount,
-					com.tools20022.repository.msg.ISATransfer12.TransferorAccount, com.tools20022.repository.msg.ISATransfer19.TransferorAccount, com.tools20022.repository.msg.ISATransfer24.TransferorAccount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer7.mmClientAccount, com.tools20022.repository.msg.PEPISATransfer11.mmTransferorAccount,
+					com.tools20022.repository.msg.ISATransfer9.mmTransferorAccount, com.tools20022.repository.msg.ISATransfer12.mmTransferorAccount, com.tools20022.repository.msg.ISATransfer19.mmTransferorAccount,
+					com.tools20022.repository.msg.ISATransfer24.mmTransferorAccount);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccountFrom";
 			definition = "Specifies the account owned by an investor and from which the assets are transferred.";
 			minOccurs = 0;
-			type_lazy = () -> InvestmentAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.DebitPortfolioTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmDebitPortfolioTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InvestmentAccount> accountTo;
 	/**
 	 * Specifies the account owned by an investor and to which the assets are
 	 * transferred.
@@ -509,8 +528,8 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#CreditPortfolioTransfer
-	 * InvestmentAccount.CreditPortfolioTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCreditPortfolioTransfer
+	 * InvestmentAccount.mmCreditPortfolioTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -536,7 +555,7 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AccountTo = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccountTo = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
@@ -544,11 +563,12 @@ public class PortfolioTransfer {
 			name = "AccountTo";
 			definition = "Specifies the account owned by an investor and to which the assets are transferred.";
 			minOccurs = 0;
-			type_lazy = () -> InvestmentAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.CreditPortfolioTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCreditPortfolioTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentObligation> paymentObligation;
 	/**
 	 * Specifies the cash amount to be transferred in relation with a portfolio
 	 * transfer.
@@ -558,8 +578,8 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentSourcePortfolioTransfer
-	 * PaymentObligation.PaymentSourcePortfolioTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentSourcePortfolioTransfer
+	 * PaymentObligation.mmPaymentSourcePortfolioTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -585,7 +605,7 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
@@ -593,11 +613,12 @@ public class PortfolioTransfer {
 			name = "PaymentObligation";
 			definition = "Specifies the cash amount to be transferred in relation with a portfolio transfer.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentSourcePortfolioTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentSourcePortfolioTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Portfolio> transferredPortfolio;
 	/**
 	 * Specifies the portfolio which has to be transferred.
 	 * <p>
@@ -606,8 +627,8 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Portfolio#Transfer
-	 * Portfolio.Transfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
+	 * Portfolio.mmTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -615,64 +636,69 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Portfolio Portfolio}
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer6#Portfolio
-	 * PEPISATransfer6.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer4#Portfolio
-	 * ISATransfer4.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer6#Portfolio
-	 * ISATransfer6.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer8#Portfolio
-	 * PEPISATransfer8.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer3#Portfolio
-	 * ISATransfer3.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer8#Portfolio
-	 * ISATransfer8.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer4#Portfolio
-	 * PEPISATransfer4.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer2#Portfolio
-	 * ISATransfer2.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer10#Portfolio
-	 * ISATransfer10.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer3#Portfolio
-	 * PEPISATransfer3.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer1#Portfolio
-	 * ISATransfer1.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer7#Portfolio
-	 * ISATransfer7.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer5#Portfolio
-	 * PEPISATransfer5.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer5#Portfolio
-	 * ISATransfer5.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer15#Portfolio
-	 * ISATransfer15.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer16#Portfolio
-	 * ISATransfer16.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer13#Portfolio
-	 * ISATransfer13.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer14#Portfolio
-	 * ISATransfer14.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer21#Portfolio
-	 * ISATransfer21.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer18#Portfolio
-	 * ISATransfer18.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer23#Portfolio
-	 * ISATransfer23.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer26#Portfolio
-	 * ISATransfer26.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer27#Portfolio
-	 * ISATransfer27.Portfolio}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer22#Portfolio
-	 * ISATransfer22.Portfolio}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer6#mmPortfolio
+	 * PEPISATransfer6.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer4#mmPortfolio
+	 * ISATransfer4.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer6#mmPortfolio
+	 * ISATransfer6.mmPortfolio}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer8#mmPortfolio
+	 * PEPISATransfer8.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer3#mmPortfolio
+	 * ISATransfer3.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer8#mmPortfolio
+	 * ISATransfer8.mmPortfolio}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer4#mmPortfolio
+	 * PEPISATransfer4.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer2#mmPortfolio
+	 * ISATransfer2.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer10#mmPortfolio
+	 * ISATransfer10.mmPortfolio}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer3#mmPortfolio
+	 * PEPISATransfer3.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer1#mmPortfolio
+	 * ISATransfer1.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer7#mmPortfolio
+	 * ISATransfer7.mmPortfolio}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer5#mmPortfolio
+	 * PEPISATransfer5.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer5#mmPortfolio
+	 * ISATransfer5.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer15#mmPortfolio
+	 * ISATransfer15.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer16#mmPortfolio
+	 * ISATransfer16.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer13#mmPortfolio
+	 * ISATransfer13.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer14#mmPortfolio
+	 * ISATransfer14.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer21#mmPortfolio
+	 * ISATransfer21.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer18#mmPortfolio
+	 * ISATransfer18.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer23#mmPortfolio
+	 * ISATransfer23.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer26#mmPortfolio
+	 * ISATransfer26.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer27#mmPortfolio
+	 * ISATransfer27.mmPortfolio}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer22#mmPortfolio
+	 * ISATransfer22.mmPortfolio}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -684,27 +710,28 @@ public class PortfolioTransfer {
 	 * definition} = "Specifies the portfolio which has to be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransferredPortfolio = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransferredPortfolio = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer6.Portfolio, com.tools20022.repository.msg.ISATransfer4.Portfolio, com.tools20022.repository.msg.ISATransfer6.Portfolio,
-					com.tools20022.repository.msg.PEPISATransfer8.Portfolio, com.tools20022.repository.msg.ISATransfer3.Portfolio, com.tools20022.repository.msg.ISATransfer8.Portfolio,
-					com.tools20022.repository.msg.PEPISATransfer4.Portfolio, com.tools20022.repository.msg.ISATransfer2.Portfolio, com.tools20022.repository.msg.ISATransfer10.Portfolio,
-					com.tools20022.repository.msg.PEPISATransfer3.Portfolio, com.tools20022.repository.msg.ISATransfer1.Portfolio, com.tools20022.repository.msg.ISATransfer7.Portfolio,
-					com.tools20022.repository.msg.PEPISATransfer5.Portfolio, com.tools20022.repository.msg.ISATransfer5.Portfolio, com.tools20022.repository.msg.ISATransfer15.Portfolio,
-					com.tools20022.repository.msg.ISATransfer16.Portfolio, com.tools20022.repository.msg.ISATransfer13.Portfolio, com.tools20022.repository.msg.ISATransfer14.Portfolio, com.tools20022.repository.msg.ISATransfer21.Portfolio,
-					com.tools20022.repository.msg.ISATransfer18.Portfolio, com.tools20022.repository.msg.ISATransfer23.Portfolio, com.tools20022.repository.msg.ISATransfer26.Portfolio, com.tools20022.repository.msg.ISATransfer27.Portfolio,
-					com.tools20022.repository.msg.ISATransfer22.Portfolio);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer6.mmPortfolio, com.tools20022.repository.msg.ISATransfer4.mmPortfolio, com.tools20022.repository.msg.ISATransfer6.mmPortfolio,
+					com.tools20022.repository.msg.PEPISATransfer8.mmPortfolio, com.tools20022.repository.msg.ISATransfer3.mmPortfolio, com.tools20022.repository.msg.ISATransfer8.mmPortfolio,
+					com.tools20022.repository.msg.PEPISATransfer4.mmPortfolio, com.tools20022.repository.msg.ISATransfer2.mmPortfolio, com.tools20022.repository.msg.ISATransfer10.mmPortfolio,
+					com.tools20022.repository.msg.PEPISATransfer3.mmPortfolio, com.tools20022.repository.msg.ISATransfer1.mmPortfolio, com.tools20022.repository.msg.ISATransfer7.mmPortfolio,
+					com.tools20022.repository.msg.PEPISATransfer5.mmPortfolio, com.tools20022.repository.msg.ISATransfer5.mmPortfolio, com.tools20022.repository.msg.ISATransfer15.mmPortfolio,
+					com.tools20022.repository.msg.ISATransfer16.mmPortfolio, com.tools20022.repository.msg.ISATransfer13.mmPortfolio, com.tools20022.repository.msg.ISATransfer14.mmPortfolio,
+					com.tools20022.repository.msg.ISATransfer21.mmPortfolio, com.tools20022.repository.msg.ISATransfer18.mmPortfolio, com.tools20022.repository.msg.ISATransfer23.mmPortfolio,
+					com.tools20022.repository.msg.ISATransfer26.mmPortfolio, com.tools20022.repository.msg.ISATransfer27.mmPortfolio, com.tools20022.repository.msg.ISATransfer22.mmPortfolio);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferredPortfolio";
 			definition = "Specifies the portfolio which has to be transferred.";
 			minOccurs = 0;
-			type_lazy = () -> Portfolio.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.Transfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.mmTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation;
 	/**
 	 * Specifies the financial instrument to be transferred in relation with a
 	 * portfolio transfer.
@@ -714,8 +741,8 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#RelatedPortfolioTransfer
-	 * SecuritiesDeliveryObligation.RelatedPortfolioTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmRelatedPortfolioTransfer
+	 * SecuritiesDeliveryObligation.mmRelatedPortfolioTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -742,7 +769,7 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
@@ -750,11 +777,12 @@ public class PortfolioTransfer {
 			name = "SecuritiesDeliveryObligation";
 			definition = "Specifies the financial instrument to be transferred in relation with a portfolio transfer.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.RelatedPortfolioTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedPortfolioTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 		}
 	};
+	protected CurrencyAndAmount transferredAmount;
 	/**
 	 * Quantity of financial instrument to transfer expressed as an amount of
 	 * money.
@@ -784,18 +812,19 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransferredAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransferredAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferredAmount";
 			definition = "Quantity of financial instrument to transfer expressed as an amount of money.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate transferredPercentage;
 	/**
 	 * Quantity of financial instrument to transfer expressed as a percentage of
 	 * the investor's total holding.
@@ -807,22 +836,22 @@ public class PortfolioTransfer {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#PercentageToBeTransferred
-	 * PEPISACashTransfer1.PercentageToBeTransferred}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#PercentageToBeTransferred
-	 * PEPISACashTransfer2.PercentageToBeTransferred}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#mmPercentageToBeTransferred
+	 * PEPISACashTransfer1.mmPercentageToBeTransferred}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#mmPercentageToBeTransferred
+	 * PEPISACashTransfer2.mmPercentageToBeTransferred}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -836,19 +865,20 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransferredPercentage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransferredPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer1.PercentageToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer2.PercentageToBeTransferred);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer1.mmPercentageToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer2.mmPercentageToBeTransferred);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferredPercentage";
 			definition = "Quantity of financial instrument to transfer expressed as a percentage of the investor's total holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ISODateTime transferDate;
 	/**
 	 * Execution date of the transfer instruction.
 	 * <p>
@@ -858,55 +888,55 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer2#ActualTransferDate
-	 * PEPISATransfer2.ActualTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer4#ActualTransferDate
-	 * PEPISATransfer4.ActualTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer2#ActualTransferDate
-	 * ISATransfer2.ActualTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer10#ActualTransferDate
-	 * ISATransfer10.ActualTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer1#RequestedTransferDate
-	 * ISATransfer1.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer7#RequestedTransferDate
-	 * ISATransfer7.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#SettlementDate
-	 * PEPISACashTransfer2.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer16#RequestedTransferDate
-	 * ISATransfer16.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer13#ActualTransferDate
-	 * ISATransfer13.ActualTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer21#ActualTransferDate
-	 * ISATransfer21.ActualTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer18#RequestedTransferDate
-	 * ISATransfer18.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer26#ActualTransferDate
-	 * ISATransfer26.ActualTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer22#RequestedTransferDate
-	 * ISATransfer22.RequestedTransferDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer2#mmActualTransferDate
+	 * PEPISATransfer2.mmActualTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer4#mmActualTransferDate
+	 * PEPISATransfer4.mmActualTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer2#mmActualTransferDate
+	 * ISATransfer2.mmActualTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer10#mmActualTransferDate
+	 * ISATransfer10.mmActualTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer1#mmRequestedTransferDate
+	 * ISATransfer1.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer7#mmRequestedTransferDate
+	 * ISATransfer7.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#mmSettlementDate
+	 * PEPISACashTransfer2.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer16#mmRequestedTransferDate
+	 * ISATransfer16.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer13#mmActualTransferDate
+	 * ISATransfer13.mmActualTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer21#mmActualTransferDate
+	 * ISATransfer21.mmActualTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer18#mmRequestedTransferDate
+	 * ISATransfer18.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer26#mmActualTransferDate
+	 * ISATransfer26.mmActualTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer22#mmRequestedTransferDate
+	 * ISATransfer22.mmRequestedTransferDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -918,23 +948,24 @@ public class PortfolioTransfer {
 	 * definition} = "Execution date of the transfer instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransferDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransferDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer2.ActualTransferDate, com.tools20022.repository.msg.PEPISATransfer4.ActualTransferDate,
-					com.tools20022.repository.msg.ISATransfer2.ActualTransferDate, com.tools20022.repository.msg.ISATransfer10.ActualTransferDate, com.tools20022.repository.msg.ISATransfer1.RequestedTransferDate,
-					com.tools20022.repository.msg.ISATransfer7.RequestedTransferDate, com.tools20022.repository.msg.PEPISACashTransfer2.SettlementDate, com.tools20022.repository.msg.ISATransfer16.RequestedTransferDate,
-					com.tools20022.repository.msg.ISATransfer13.ActualTransferDate, com.tools20022.repository.msg.ISATransfer21.ActualTransferDate, com.tools20022.repository.msg.ISATransfer18.RequestedTransferDate,
-					com.tools20022.repository.msg.ISATransfer26.ActualTransferDate, com.tools20022.repository.msg.ISATransfer22.RequestedTransferDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer2.mmActualTransferDate, com.tools20022.repository.msg.PEPISATransfer4.mmActualTransferDate,
+					com.tools20022.repository.msg.ISATransfer2.mmActualTransferDate, com.tools20022.repository.msg.ISATransfer10.mmActualTransferDate, com.tools20022.repository.msg.ISATransfer1.mmRequestedTransferDate,
+					com.tools20022.repository.msg.ISATransfer7.mmRequestedTransferDate, com.tools20022.repository.msg.PEPISACashTransfer2.mmSettlementDate, com.tools20022.repository.msg.ISATransfer16.mmRequestedTransferDate,
+					com.tools20022.repository.msg.ISATransfer13.mmActualTransferDate, com.tools20022.repository.msg.ISATransfer21.mmActualTransferDate, com.tools20022.repository.msg.ISATransfer18.mmRequestedTransferDate,
+					com.tools20022.repository.msg.ISATransfer26.mmActualTransferDate, com.tools20022.repository.msg.ISATransfer22.mmRequestedTransferDate);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferDate";
 			definition = "Execution date of the transfer instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected InvestmentAccount nomineeAccount;
 	/**
 	 * Account held in the name of a party that is not the name of the
 	 * beneficial owner of the shares.
@@ -944,8 +975,8 @@ public class PortfolioTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#RelatedPortfolioTransfer
-	 * InvestmentAccount.RelatedPortfolioTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmRelatedPortfolioTransfer
+	 * InvestmentAccount.mmRelatedPortfolioTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -953,34 +984,34 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentAccount
 	 * InvestmentAccount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer7#NomineeAccount
-	 * PEPISATransfer7.NomineeAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#NomineeAccount
-	 * PEPISATransfer11.NomineeAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#NomineeAccount
-	 * ISATransfer9.NomineeAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer12#NomineeAccount
-	 * ISATransfer12.NomineeAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#NomineeAccount
-	 * ISATransfer19.NomineeAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer24#NomineeAccount
-	 * ISATransfer24.NomineeAccount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer7#mmNomineeAccount
+	 * PEPISATransfer7.mmNomineeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer11#mmNomineeAccount
+	 * PEPISATransfer11.mmNomineeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer9#mmNomineeAccount
+	 * ISATransfer9.mmNomineeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer12#mmNomineeAccount
+	 * ISATransfer12.mmNomineeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer19#mmNomineeAccount
+	 * ISATransfer19.mmNomineeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer24#mmNomineeAccount
+	 * ISATransfer24.mmNomineeAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -994,22 +1025,23 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd NomineeAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNomineeAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer7.NomineeAccount, com.tools20022.repository.msg.PEPISATransfer11.NomineeAccount, com.tools20022.repository.msg.ISATransfer9.NomineeAccount,
-					com.tools20022.repository.msg.ISATransfer12.NomineeAccount, com.tools20022.repository.msg.ISATransfer19.NomineeAccount, com.tools20022.repository.msg.ISATransfer24.NomineeAccount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer7.mmNomineeAccount, com.tools20022.repository.msg.PEPISATransfer11.mmNomineeAccount, com.tools20022.repository.msg.ISATransfer9.mmNomineeAccount,
+					com.tools20022.repository.msg.ISATransfer12.mmNomineeAccount, com.tools20022.repository.msg.ISATransfer19.mmNomineeAccount, com.tools20022.repository.msg.ISATransfer24.mmNomineeAccount);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.RelatedPortfolioTransfer;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmRelatedPortfolioTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 		}
 	};
+	protected PEPISACode pEPOrISAPlan;
 	/**
 	 * Specifies whether the investment plan is a PEP or ISA type.
 	 * <p>
@@ -1019,20 +1051,20 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.PEPISACode
 	 * PEPISACode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#Type
-	 * PEPISACashTransfer1.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#Type
-	 * PEPISACashTransfer2.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#mmType
+	 * PEPISACashTransfer1.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PEPISACashTransfer2#mmType
+	 * PEPISACashTransfer2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1045,19 +1077,20 @@ public class PortfolioTransfer {
 	 * "Specifies whether the investment plan is a PEP or ISA type."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PEPOrISAPlan = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPEPOrISAPlan = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer1.Type, com.tools20022.repository.msg.PEPISACashTransfer2.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer1.mmType, com.tools20022.repository.msg.PEPISACashTransfer2.mmType);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PEPOrISAPlan";
 			definition = "Specifies whether the investment plan is a PEP or ISA type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PEPISACode.mmObject();
 		}
 	};
+	protected ISATypeCode currentYearISAType;
 	/**
 	 * Current year ISA is an ISA that was issued during the current fiscal
 	 * year.
@@ -1068,58 +1101,58 @@ public class PortfolioTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.ISATypeCode
 	 * ISATypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#CurrentYear
-	 * ISAYearsOfIssue.CurrentYear}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#CurrentYearType
-	 * ISAYearsOfIssue1.CurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#ExtendedCurrentYearType
-	 * ISAYearsOfIssue1.ExtendedCurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CurrentYearType1Choice#CurrentYearType
-	 * CurrentYearType1Choice.CurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CurrentYearType1Choice#ExtendedCurrentYearType
-	 * CurrentYearType1Choice.ExtendedCurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue4#CurrentYear
-	 * ISAYearsOfIssue4.CurrentYear}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#CurrentYearType
-	 * ISAYearsOfIssue3.CurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#ExtendedCurrentYearType
-	 * ISAYearsOfIssue3.ExtendedCurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5#CurrentYear
-	 * ISAYearsOfIssue5.CurrentYear}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#CurrentYearType
-	 * ISAYearsOfIssue2.CurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#ExtendedCurrentYearType
-	 * ISAYearsOfIssue2.ExtendedCurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CurrentYearType2Choice#CurrentYearType
-	 * CurrentYearType2Choice.CurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CurrentYearType2Choice#ExtendedCurrentYearType
-	 * CurrentYearType2Choice.ExtendedCurrentYearType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue6#CurrentYear
-	 * ISAYearsOfIssue6.CurrentYear}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer
 	 * PortfolioTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue#mmCurrentYear
+	 * ISAYearsOfIssue.mmCurrentYear}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#mmCurrentYearType
+	 * ISAYearsOfIssue1.mmCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue1#mmExtendedCurrentYearType
+	 * ISAYearsOfIssue1.mmExtendedCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CurrentYearType1Choice#mmCurrentYearType
+	 * CurrentYearType1Choice.mmCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CurrentYearType1Choice#mmExtendedCurrentYearType
+	 * CurrentYearType1Choice.mmExtendedCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue4#mmCurrentYear
+	 * ISAYearsOfIssue4.mmCurrentYear}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#mmCurrentYearType
+	 * ISAYearsOfIssue3.mmCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue3#mmExtendedCurrentYearType
+	 * ISAYearsOfIssue3.mmExtendedCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue5#mmCurrentYear
+	 * ISAYearsOfIssue5.mmCurrentYear}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmCurrentYearType
+	 * ISAYearsOfIssue2.mmCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue2#mmExtendedCurrentYearType
+	 * ISAYearsOfIssue2.mmExtendedCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CurrentYearType2Choice#mmCurrentYearType
+	 * CurrentYearType2Choice.mmCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CurrentYearType2Choice#mmExtendedCurrentYearType
+	 * CurrentYearType2Choice.mmExtendedCurrentYearType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue6#mmCurrentYear
+	 * ISAYearsOfIssue6.mmCurrentYear}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1133,21 +1166,21 @@ public class PortfolioTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CurrentYearISAType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCurrentYearISAType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue.CurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue1.CurrentYearType,
-					com.tools20022.repository.msg.ISAYearsOfIssue1.ExtendedCurrentYearType, com.tools20022.repository.choice.CurrentYearType1Choice.CurrentYearType,
-					com.tools20022.repository.choice.CurrentYearType1Choice.ExtendedCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue4.CurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue3.CurrentYearType,
-					com.tools20022.repository.msg.ISAYearsOfIssue3.ExtendedCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue5.CurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue2.CurrentYearType,
-					com.tools20022.repository.msg.ISAYearsOfIssue2.ExtendedCurrentYearType, com.tools20022.repository.choice.CurrentYearType2Choice.CurrentYearType,
-					com.tools20022.repository.choice.CurrentYearType2Choice.ExtendedCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue6.CurrentYear);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue.mmCurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue1.mmCurrentYearType,
+					com.tools20022.repository.msg.ISAYearsOfIssue1.mmExtendedCurrentYearType, com.tools20022.repository.choice.CurrentYearType1Choice.mmCurrentYearType,
+					com.tools20022.repository.choice.CurrentYearType1Choice.mmExtendedCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue4.mmCurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue3.mmCurrentYearType,
+					com.tools20022.repository.msg.ISAYearsOfIssue3.mmExtendedCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue5.mmCurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue2.mmCurrentYearType,
+					com.tools20022.repository.msg.ISAYearsOfIssue2.mmExtendedCurrentYearType, com.tools20022.repository.choice.CurrentYearType2Choice.mmCurrentYearType,
+					com.tools20022.repository.choice.CurrentYearType2Choice.mmExtendedCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue6.mmCurrentYear);
 			elementContext_lazy = () -> PortfolioTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CurrentYearISAType";
 			definition = "Current year ISA is an ISA that was issued during the current fiscal year.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISATypeCode.mmObject();
 		}
 	};
@@ -1155,30 +1188,30 @@ public class PortfolioTransfer {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransfer";
 				definition = "Transfer by the delivering account servicer to the receiving account servicer of a retail or institutional client portfolio. A portfolio can be any grouping of  investments, for example  stocks, bonds, options, warrants. held by an institution or an individual.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.DebitPortfolioTransfer, com.tools20022.repository.entity.InvestmentAccount.CreditPortfolioTransfer,
-						com.tools20022.repository.entity.InvestmentAccount.RelatedPortfolioTransfer, com.tools20022.repository.entity.PaymentObligation.PaymentSourcePortfolioTransfer, com.tools20022.repository.entity.Portfolio.Transfer,
-						com.tools20022.repository.entity.SecuritiesDeliveryObligation.RelatedPortfolioTransfer);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreviousYearChoice.AllPreviousYears, com.tools20022.repository.msg.ISAYearsOfIssue.PreviousYears,
-						com.tools20022.repository.msg.PEPISATransfer1.ISA, com.tools20022.repository.msg.PEPISATransfer1.PEP, com.tools20022.repository.msg.PreviousYear1.AllPreviousYears,
-						com.tools20022.repository.msg.ISAYearsOfIssue1.PreviousYears, com.tools20022.repository.msg.PEPISATransfer6.ISA, com.tools20022.repository.msg.PEPISATransfer6.PEP,
-						com.tools20022.repository.choice.PreviousYear1Choice.AllPreviousYears, com.tools20022.repository.msg.ISAYearsOfIssue4.PreviousYears, com.tools20022.repository.msg.PEPISATransfer8.ISA,
-						com.tools20022.repository.msg.PEPISATransfer8.PEP, com.tools20022.repository.msg.PEPISATransfer7.ProductTransfer, com.tools20022.repository.msg.PEPISATransfer11.ProductTransfer,
-						com.tools20022.repository.msg.ISATransfer9.ProductTransfer, com.tools20022.repository.msg.PEPISATransfer2.ISA, com.tools20022.repository.msg.PEPISATransfer2.PEP,
-						com.tools20022.repository.msg.ISAYearsOfIssue3.PreviousYears, com.tools20022.repository.msg.PEPISATransfer4.ISA, com.tools20022.repository.msg.PEPISATransfer4.PEP,
-						com.tools20022.repository.msg.ISAYearsOfIssue5.PreviousYears, com.tools20022.repository.msg.PEPISATransfer3.ISA, com.tools20022.repository.msg.PEPISATransfer3.PEP,
-						com.tools20022.repository.msg.ISAYearsOfIssue2.PreviousYears, com.tools20022.repository.msg.PEPISATransfer5.ISA, com.tools20022.repository.msg.PEPISATransfer5.PEP,
-						com.tools20022.repository.msg.ISAYearsOfIssue6.PreviousYears, com.tools20022.repository.choice.PEPOrISAChoice.ISA, com.tools20022.repository.choice.PEPOrISAChoice.PEP,
-						com.tools20022.repository.msg.ISATransfer12.ProductTransferAndReference, com.tools20022.repository.msg.ISATransfer17.ProductTransfer, com.tools20022.repository.msg.ISATransfer20.ProductTransfer,
-						com.tools20022.repository.msg.ISATransfer19.ProductTransferAndReference, com.tools20022.repository.msg.ISATransfer25.ProductTransfer, com.tools20022.repository.msg.ISATransfer24.ProductTransferAndReference);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioTransfer.TransferredYear, com.tools20022.repository.entity.PortfolioTransfer.CashComponentIndicator,
-						com.tools20022.repository.entity.PortfolioTransfer.AccountFrom, com.tools20022.repository.entity.PortfolioTransfer.AccountTo, com.tools20022.repository.entity.PortfolioTransfer.PaymentObligation,
-						com.tools20022.repository.entity.PortfolioTransfer.TransferredPortfolio, com.tools20022.repository.entity.PortfolioTransfer.SecuritiesDeliveryObligation,
-						com.tools20022.repository.entity.PortfolioTransfer.TransferredAmount, com.tools20022.repository.entity.PortfolioTransfer.TransferredPercentage, com.tools20022.repository.entity.PortfolioTransfer.TransferDate,
-						com.tools20022.repository.entity.PortfolioTransfer.NomineeAccount, com.tools20022.repository.entity.PortfolioTransfer.PEPOrISAPlan, com.tools20022.repository.entity.PortfolioTransfer.CurrentYearISAType);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.mmDebitPortfolioTransfer, com.tools20022.repository.entity.InvestmentAccount.mmCreditPortfolioTransfer,
+						com.tools20022.repository.entity.InvestmentAccount.mmRelatedPortfolioTransfer, com.tools20022.repository.entity.PaymentObligation.mmPaymentSourcePortfolioTransfer,
+						com.tools20022.repository.entity.Portfolio.mmTransfer, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedPortfolioTransfer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreviousYearChoice.mmAllPreviousYears, com.tools20022.repository.msg.ISAYearsOfIssue.mmPreviousYears,
+						com.tools20022.repository.msg.PEPISATransfer1.mmISA, com.tools20022.repository.msg.PEPISATransfer1.mmPEP, com.tools20022.repository.msg.PreviousYear1.mmAllPreviousYears,
+						com.tools20022.repository.msg.ISAYearsOfIssue1.mmPreviousYears, com.tools20022.repository.msg.PEPISATransfer6.mmISA, com.tools20022.repository.msg.PEPISATransfer6.mmPEP,
+						com.tools20022.repository.choice.PreviousYear1Choice.mmAllPreviousYears, com.tools20022.repository.msg.ISAYearsOfIssue4.mmPreviousYears, com.tools20022.repository.msg.PEPISATransfer8.mmISA,
+						com.tools20022.repository.msg.PEPISATransfer8.mmPEP, com.tools20022.repository.msg.PEPISATransfer7.mmProductTransfer, com.tools20022.repository.msg.PEPISATransfer11.mmProductTransfer,
+						com.tools20022.repository.msg.ISATransfer9.mmProductTransfer, com.tools20022.repository.msg.PEPISATransfer2.mmISA, com.tools20022.repository.msg.PEPISATransfer2.mmPEP,
+						com.tools20022.repository.msg.ISAYearsOfIssue3.mmPreviousYears, com.tools20022.repository.msg.PEPISATransfer4.mmISA, com.tools20022.repository.msg.PEPISATransfer4.mmPEP,
+						com.tools20022.repository.msg.ISAYearsOfIssue5.mmPreviousYears, com.tools20022.repository.msg.PEPISATransfer3.mmISA, com.tools20022.repository.msg.PEPISATransfer3.mmPEP,
+						com.tools20022.repository.msg.ISAYearsOfIssue2.mmPreviousYears, com.tools20022.repository.msg.PEPISATransfer5.mmISA, com.tools20022.repository.msg.PEPISATransfer5.mmPEP,
+						com.tools20022.repository.msg.ISAYearsOfIssue6.mmPreviousYears, com.tools20022.repository.choice.PEPOrISAChoice.mmISA, com.tools20022.repository.choice.PEPOrISAChoice.mmPEP,
+						com.tools20022.repository.msg.ISATransfer12.mmProductTransferAndReference, com.tools20022.repository.msg.ISATransfer17.mmProductTransfer, com.tools20022.repository.msg.ISATransfer20.mmProductTransfer,
+						com.tools20022.repository.msg.ISATransfer19.mmProductTransferAndReference, com.tools20022.repository.msg.ISATransfer25.mmProductTransfer, com.tools20022.repository.msg.ISATransfer24.mmProductTransferAndReference);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioTransfer.mmTransferredYear, com.tools20022.repository.entity.PortfolioTransfer.mmCashComponentIndicator,
+						com.tools20022.repository.entity.PortfolioTransfer.mmAccountFrom, com.tools20022.repository.entity.PortfolioTransfer.mmAccountTo, com.tools20022.repository.entity.PortfolioTransfer.mmPaymentObligation,
+						com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPortfolio, com.tools20022.repository.entity.PortfolioTransfer.mmSecuritiesDeliveryObligation,
+						com.tools20022.repository.entity.PortfolioTransfer.mmTransferredAmount, com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPercentage, com.tools20022.repository.entity.PortfolioTransfer.mmTransferDate,
+						com.tools20022.repository.entity.PortfolioTransfer.mmNomineeAccount, com.tools20022.repository.entity.PortfolioTransfer.mmPEPOrISAPlan, com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType);
 				derivationComponent_lazy = () -> Arrays.asList(PreviousYearChoice.mmObject(), ISAYearsOfIssue.mmObject(), PEPISATransfer1.mmObject(), PreviousYear1.mmObject(), ISAYearsOfIssue1.mmObject(), PEPISATransfer6.mmObject(),
 						CurrentYearType1Choice.mmObject(), PreviousYear1Choice.mmObject(), PreviousYear2.mmObject(), ISAYearsOfIssue4.mmObject(), ISATransfer4.mmObject(), ISATransfer6.mmObject(), PEPISATransfer8.mmObject(),
 						PEPISATransfer7.mmObject(), ISATransfer3.mmObject(), PEPISATransfer11.mmObject(), ISATransfer8.mmObject(), ISATransfer9.mmObject(), PEPISATransfer2.mmObject(), ISAYearsOfIssue3.mmObject(),
@@ -1190,5 +1223,109 @@ public class PortfolioTransfer {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISOYear getTransferredYear() {
+		return transferredYear;
+	}
+
+	public void setTransferredYear(ISOYear transferredYear) {
+		this.transferredYear = transferredYear;
+	}
+
+	public YesNoIndicator getCashComponentIndicator() {
+		return cashComponentIndicator;
+	}
+
+	public void setCashComponentIndicator(YesNoIndicator cashComponentIndicator) {
+		this.cashComponentIndicator = cashComponentIndicator;
+	}
+
+	public List<InvestmentAccount> getAccountFrom() {
+		return accountFrom;
+	}
+
+	public void setAccountFrom(List<com.tools20022.repository.entity.InvestmentAccount> accountFrom) {
+		this.accountFrom = accountFrom;
+	}
+
+	public List<InvestmentAccount> getAccountTo() {
+		return accountTo;
+	}
+
+	public void setAccountTo(List<com.tools20022.repository.entity.InvestmentAccount> accountTo) {
+		this.accountTo = accountTo;
+	}
+
+	public List<PaymentObligation> getPaymentObligation() {
+		return paymentObligation;
+	}
+
+	public void setPaymentObligation(List<com.tools20022.repository.entity.PaymentObligation> paymentObligation) {
+		this.paymentObligation = paymentObligation;
+	}
+
+	public List<Portfolio> getTransferredPortfolio() {
+		return transferredPortfolio;
+	}
+
+	public void setTransferredPortfolio(List<com.tools20022.repository.entity.Portfolio> transferredPortfolio) {
+		this.transferredPortfolio = transferredPortfolio;
+	}
+
+	public List<SecuritiesDeliveryObligation> getSecuritiesDeliveryObligation() {
+		return securitiesDeliveryObligation;
+	}
+
+	public void setSecuritiesDeliveryObligation(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation) {
+		this.securitiesDeliveryObligation = securitiesDeliveryObligation;
+	}
+
+	public CurrencyAndAmount getTransferredAmount() {
+		return transferredAmount;
+	}
+
+	public void setTransferredAmount(CurrencyAndAmount transferredAmount) {
+		this.transferredAmount = transferredAmount;
+	}
+
+	public PercentageRate getTransferredPercentage() {
+		return transferredPercentage;
+	}
+
+	public void setTransferredPercentage(PercentageRate transferredPercentage) {
+		this.transferredPercentage = transferredPercentage;
+	}
+
+	public ISODateTime getTransferDate() {
+		return transferDate;
+	}
+
+	public void setTransferDate(ISODateTime transferDate) {
+		this.transferDate = transferDate;
+	}
+
+	public InvestmentAccount getNomineeAccount() {
+		return nomineeAccount;
+	}
+
+	public void setNomineeAccount(com.tools20022.repository.entity.InvestmentAccount nomineeAccount) {
+		this.nomineeAccount = nomineeAccount;
+	}
+
+	public PEPISACode getPEPOrISAPlan() {
+		return pEPOrISAPlan;
+	}
+
+	public void setPEPOrISAPlan(PEPISACode pEPOrISAPlan) {
+		this.pEPOrISAPlan = pEPOrISAPlan;
+	}
+
+	public ISATypeCode getCurrentYearISAType() {
+		return currentYearISAType;
+	}
+
+	public void setCurrentYearISAType(ISATypeCode currentYearISAType) {
+		this.currentYearISAType = currentYearISAType;
 	}
 }

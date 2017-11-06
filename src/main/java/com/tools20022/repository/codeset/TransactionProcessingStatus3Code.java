@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#Cancelled
- * TransactionProcessingStatus3Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmCancelled
+ * TransactionProcessingStatus3Code.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#AcknowledgedAccepted
- * TransactionProcessingStatus3Code.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmAcknowledgedAccepted
+ * TransactionProcessingStatus3Code.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#Rejected
- * TransactionProcessingStatus3Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmRejected
+ * TransactionProcessingStatus3Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#InRepair
- * TransactionProcessingStatus3Code.InRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmInRepair
+ * TransactionProcessingStatus3Code.mmInRepair}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -112,7 +112,7 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgedAccepted = new MMCode() {
+	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
@@ -135,7 +135,7 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -158,7 +158,7 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "InRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode InRepair = new MMCode() {
+	public static final MMCode mmInRepair = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
@@ -169,13 +169,13 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionProcessingStatus3Code";
 				definition = "Provides the processing status of a transaction (at account servicer level).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionProcessingStatus3Code.Cancelled, com.tools20022.repository.codeset.TransactionProcessingStatus3Code.AcknowledgedAccepted,
-						com.tools20022.repository.codeset.TransactionProcessingStatus3Code.Rejected, com.tools20022.repository.codeset.TransactionProcessingStatus3Code.InRepair);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmCancelled, com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmAcknowledgedAccepted,
+						com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmRejected, com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmInRepair);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
 			}
 		});

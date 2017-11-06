@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GeographicLocation1Choice#GeographicCoordinates
- * GeographicLocation1Choice.GeographicCoordinates}</li>
+ * {@linkplain com.tools20022.repository.choice.GeographicLocation1Choice#mmGeographicCoordinates
+ * GeographicLocation1Choice.mmGeographicCoordinates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GeographicLocation1Choice#UTMCoordinates
- * GeographicLocation1Choice.UTMCoordinates}</li>
+ * {@linkplain com.tools20022.repository.choice.GeographicLocation1Choice#mmUTMCoordinates
+ * GeographicLocation1Choice.mmUTMCoordinates}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeographicLocation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected GeographicCoordinates1 geographicCoordinates;
 	/**
 	 * Location on the earth specified by two numbers representing vertical and
 	 * horizontal position.
@@ -91,7 +92,7 @@ public class GeographicLocation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GeographicCoordinates = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGeographicCoordinates = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GeographicLocation1Choice.mmObject();
 			isDerived = false;
@@ -99,12 +100,13 @@ public class GeographicLocation1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeographicCoordinates";
 			definition = "Location on the earth specified by two numbers representing vertical and horizontal position.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GeographicCoordinates1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GeographicCoordinates1.mmObject();
 		}
 	};
+	protected UTMCoordinates1 uTMCoordinates;
 	/**
 	 * Location on the earth specified by the Universal Transverse Mercator
 	 * coordinate system, using the WGS84 geodesic system.
@@ -134,7 +136,7 @@ public class GeographicLocation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UTMCoordinates = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUTMCoordinates = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GeographicLocation1Choice.mmObject();
 			isDerived = false;
@@ -142,23 +144,39 @@ public class GeographicLocation1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMCoordinates";
 			definition = "Location on the earth specified by the Universal Transverse Mercator coordinate system, using the WGS84 geodesic system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UTMCoordinates1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UTMCoordinates1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeographicLocation1Choice.GeographicCoordinates, com.tools20022.repository.choice.GeographicLocation1Choice.UTMCoordinates);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeographicLocation1Choice.mmGeographicCoordinates, com.tools20022.repository.choice.GeographicLocation1Choice.mmUTMCoordinates);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeographicLocation1Choice";
 				definition = "Geographic location of the ATM specified by geographic coordinates or UTM coordinates.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GeographicCoordinates1 getGeographicCoordinates() {
+		return geographicCoordinates;
+	}
+
+	public void setGeographicCoordinates(GeographicCoordinates1 geographicCoordinates) {
+		this.geographicCoordinates = geographicCoordinates;
+	}
+
+	public UTMCoordinates1 getUTMCoordinates() {
+		return uTMCoordinates;
+	}
+
+	public void setUTMCoordinates(UTMCoordinates1 uTMCoordinates) {
+		this.uTMCoordinates = uTMCoordinates;
 	}
 }

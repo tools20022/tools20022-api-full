@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType30Code#Weather
- * AssetClassSubProductType30Code.Weather}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType30Code#mmWeather
+ * AssetClassSubProductType30Code.mmWeather}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType30Code extends AssetClassSubProductTypeCode
 	 * name} = "Weather"</li>
 	 * </ul>
 	 */
-	public static final MMCode Weather = new MMCode() {
+	public static final MMCode mmWeather = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weather";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType30Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType30Code";
 				definition = "Defines the sub-product of type Weather.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType30Code.Weather);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType30Code.mmWeather);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

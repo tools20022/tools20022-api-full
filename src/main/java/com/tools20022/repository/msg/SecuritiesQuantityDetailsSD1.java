@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1#PlaceAndName
- * SecuritiesQuantityDetailsSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1#mmPlaceAndName
+ * SecuritiesQuantityDetailsSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1#OversubscriptionQuantity
- * SecuritiesQuantityDetailsSD1.OversubscriptionQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1#mmOversubscriptionQuantity
+ * SecuritiesQuantityDetailsSD1.mmOversubscriptionQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesQuantityDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -90,7 +91,7 @@ public class SecuritiesQuantityDetailsSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesQuantityDetailsSD1.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class SecuritiesQuantityDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Quantity40Choice oversubscriptionQuantity;
 	/**
 	 * For rights subscription events with an oversubscription feature, the
 	 * quantity of the oversubscription for the given instruction.
@@ -132,7 +134,7 @@ public class SecuritiesQuantityDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOversubscriptionQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesQuantityDetailsSD1.mmObject();
 			isDerived = false;
@@ -140,23 +142,39 @@ public class SecuritiesQuantityDetailsSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OversubscriptionQuantity";
 			definition = "For rights subscription events with an oversubscription feature, the quantity of the oversubscription for the given instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity40Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Quantity40Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.PlaceAndName, com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.OversubscriptionQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.mmOversubscriptionQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesQuantityDetailsSD1";
 				definition = "Provides information about securities quantity linked to a corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Quantity40Choice getOversubscriptionQuantity() {
+		return oversubscriptionQuantity;
+	}
+
+	public void setOversubscriptionQuantity(Quantity40Choice oversubscriptionQuantity) {
+		this.oversubscriptionQuantity = oversubscriptionQuantity;
 	}
 }

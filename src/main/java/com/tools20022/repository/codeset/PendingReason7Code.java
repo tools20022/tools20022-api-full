@@ -35,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason7Code#AccountServicerDeadlineMissed
- * PendingReason7Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason7Code#mmAccountServicerDeadlineMissed
+ * PendingReason7Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason7Code#AwaitingConfirmation
- * PendingReason7Code.AwaitingConfirmation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason7Code#Other
- * PendingReason7Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason7Code#mmAwaitingConfirmation
+ * PendingReason7Code.mmAwaitingConfirmation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason7Code#mmOther
+ * PendingReason7Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason7Code#QuantityDisagreement
- * PendingReason7Code.QuantityDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason7Code#mmQuantityDisagreement
+ * PendingReason7Code.mmQuantityDisagreement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class PendingReason7Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -112,7 +112,7 @@ public class PendingReason7Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingConfirmation = new MMCode() {
+	public static final MMCode mmAwaitingConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
@@ -135,7 +135,7 @@ public class PendingReason7Code extends PendingFailingReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -158,7 +158,7 @@ public class PendingReason7Code extends PendingFailingReasonCode {
 	 * name} = "QuantityDisagreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityDisagreement = new MMCode() {
+	public static final MMCode mmQuantityDisagreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
@@ -169,13 +169,13 @@ public class PendingReason7Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingReason7Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason7Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason7Code.AwaitingConfirmation,
-						com.tools20022.repository.codeset.PendingReason7Code.Other, com.tools20022.repository.codeset.PendingReason7Code.QuantityDisagreement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason7Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason7Code.mmAwaitingConfirmation,
+						com.tools20022.repository.codeset.PendingReason7Code.mmOther, com.tools20022.repository.codeset.PendingReason7Code.mmQuantityDisagreement);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

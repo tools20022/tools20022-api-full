@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RepurchaseAgreement#PaymentObligation
- * RepurchaseAgreement.PaymentObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.RepurchaseAgreement#mmPaymentObligation
+ * RepurchaseAgreement.mmPaymentObligation}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#RepurchaseAgreement
- * PaymentObligation.RepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmRepurchaseAgreement
+ * PaymentObligation.mmRepurchaseAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,17 +62,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction1#FloatingRateRepurchaseAgreement
- * SecuredMarketTransaction1.FloatingRateRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction1#mmFloatingRateRepurchaseAgreement
+ * SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2#FloatingRateRepurchaseAgreement
- * SecuredMarketTransaction2.FloatingRateRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2#mmFloatingRateRepurchaseAgreement
+ * SecuredMarketTransaction2.mmFloatingRateRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#FloatingRateRepurchaseAgreement
- * SecuredMarketTransaction3.FloatingRateRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#mmFloatingRateRepurchaseAgreement
+ * SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4#FloatingRateRepurchaseAgreement
- * SecuredMarketTransaction4.FloatingRateRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4#mmFloatingRateRepurchaseAgreement
+ * SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -96,8 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RepurchaseAgreement extends SecuritiesFinancing {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentObligation paymentObligation;
 	/**
 	 * Obligation covered by a repurchase agreement.
 	 * <p>
@@ -121,8 +122,8 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#RepurchaseAgreement
-	 * PaymentObligation.RepurchaseAgreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmRepurchaseAgreement
+	 * PaymentObligation.mmRepurchaseAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -146,36 +147,45 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 	 * definition} = "Obligation covered by a repurchase agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> RepurchaseAgreement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Obligation covered by a repurchase agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.RepurchaseAgreement;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmRepurchaseAgreement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseAgreement";
 				definition = "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. ";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.RepurchaseAgreement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuredMarketTransaction1.FloatingRateRepurchaseAgreement, com.tools20022.repository.msg.SecuredMarketTransaction2.FloatingRateRepurchaseAgreement,
-						com.tools20022.repository.msg.SecuredMarketTransaction3.FloatingRateRepurchaseAgreement, com.tools20022.repository.msg.SecuredMarketTransaction4.FloatingRateRepurchaseAgreement);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmRepurchaseAgreement);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement,
+						com.tools20022.repository.msg.SecuredMarketTransaction2.mmFloatingRateRepurchaseAgreement, com.tools20022.repository.msg.SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement,
+						com.tools20022.repository.msg.SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement);
 				superType_lazy = () -> SecuritiesFinancing.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RepurchaseAgreement.PaymentObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RepurchaseAgreement.mmPaymentObligation);
 				derivationComponent_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmObject(), SecuredMarketTransaction2.mmObject(), SecuredMarketTransaction3.mmObject(), SecuredMarketTransaction4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentObligation getPaymentObligation() {
+		return paymentObligation;
+	}
+
+	public void setPaymentObligation(com.tools20022.repository.entity.PaymentObligation paymentObligation) {
+		this.paymentObligation = paymentObligation;
 	}
 }

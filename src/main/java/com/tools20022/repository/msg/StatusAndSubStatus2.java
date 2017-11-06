@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#StatusCode
- * StatusAndSubStatus2.StatusCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#SubStatusCode
- * StatusAndSubStatus2.SubStatusCode}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#mmStatusCode
+ * StatusAndSubStatus2.mmStatusCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus2#mmSubStatusCode
+ * StatusAndSubStatus2.mmSubStatusCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusAndSubStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status27Choice statusCode;
 	/**
 	 * Status expressed as a code.
 	 * <p>
@@ -80,8 +82,8 @@ public class StatusAndSubStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TradeStatus
-	 * TreasuryTradeSettlementStatus.TradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTradeStatus
+	 * TreasuryTradeSettlementStatus.mmTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,25 +103,26 @@ public class StatusAndSubStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#StatusCode
-	 * StatusAndSubStatus1.StatusCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#mmStatusCode
+	 * StatusAndSubStatus1.mmStatusCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> StatusAndSubStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TradeStatus;
 			isDerived = false;
 			xmlTag = "StsCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusCode";
 			definition = "Status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus1.StatusCode;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus1.mmStatusCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Status27Choice.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText subStatusCode;
 	/**
 	 * Sub status expressed as a code.
 	 * <p>
@@ -133,8 +136,8 @@ public class StatusAndSubStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#TradeStatus
-	 * TreasuryTradeSettlementStatus.TradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmTradeStatus
+	 * TreasuryTradeSettlementStatus.mmTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,22 +157,22 @@ public class StatusAndSubStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#SubStatusCode
-	 * StatusAndSubStatus1.SubStatusCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndSubStatus1#mmSubStatusCode
+	 * StatusAndSubStatus1.mmSubStatusCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubStatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubStatusCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> StatusAndSubStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.TradeStatus;
 			isDerived = false;
 			xmlTag = "SubStsCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubStatusCode";
 			definition = "Sub status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus1.SubStatusCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus1.mmSubStatusCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
@@ -177,9 +180,9 @@ public class StatusAndSubStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndSubStatus2.StatusCode, com.tools20022.repository.msg.StatusAndSubStatus2.SubStatusCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndSubStatus2.mmStatusCode, com.tools20022.repository.msg.StatusAndSubStatus2.mmSubStatusCode);
 				trace_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusAndSubStatus2";
 				definition = "Specifies the status and optionally the sub status.";
@@ -187,5 +190,21 @@ public class StatusAndSubStatus2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status27Choice getStatusCode() {
+		return statusCode;
+	}
+
+	public void setStatusCode(Status27Choice statusCode) {
+		this.statusCode = statusCode;
+	}
+
+	public Exact4AlphaNumericText getSubStatusCode() {
+		return subStatusCode;
+	}
+
+	public void setSubStatusCode(Exact4AlphaNumericText subStatusCode) {
+		this.subStatusCode = subStatusCode;
 	}
 }

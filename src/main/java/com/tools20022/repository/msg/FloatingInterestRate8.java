@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FloatingInterestRate8#ReferenceRate
- * FloatingInterestRate8.ReferenceRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FloatingInterestRate8#Term
- * FloatingInterestRate8.Term}</li>
+ * {@linkplain com.tools20022.repository.msg.FloatingInterestRate8#mmReferenceRate
+ * FloatingInterestRate8.mmReferenceRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FloatingInterestRate8#mmTerm
+ * FloatingInterestRate8.mmTerm}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FloatingInterestRate8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BenchmarkCurveName5Choice referenceRate;
 	/**
 	 * Identifies the reference index for the instrument. <br>
 	 * <br>
@@ -81,8 +82,8 @@ public class FloatingInterestRate8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Index#Identification
-	 * Index.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Index#mmIdentification
+	 * Index.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class FloatingInterestRate8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIdentification;
 			componentContext_lazy = () -> FloatingInterestRate8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.Identification;
 			isDerived = false;
 			xmlTag = "RefRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRate";
 			definition = "Identifies the reference index for the instrument. \r\n\r\nUsage:\r\nIndex or name if the reference rate is not included in the index list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BenchmarkCurveName5Choice.mmObject();
 		}
 	};
+	protected InterestRateContractTerm2 term;
 	/**
 	 * Term of the reference rate.
 	 * <p>
@@ -129,8 +131,8 @@ public class FloatingInterestRate8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VariableInterest#DurationCalculation
-	 * VariableInterest.DurationCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariableInterest#mmDurationCalculation
+	 * VariableInterest.mmDurationCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,33 +151,49 @@ public class FloatingInterestRate8 {
 	 * definition} = "Term of the reference rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Term = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerm = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmDurationCalculation;
 			componentContext_lazy = () -> FloatingInterestRate8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.DurationCalculation;
 			isDerived = false;
 			xmlTag = "Term";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Term";
 			definition = "Term of the reference rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InterestRateContractTerm2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate8.ReferenceRate, com.tools20022.repository.msg.FloatingInterestRate8.Term);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate8.mmReferenceRate, com.tools20022.repository.msg.FloatingInterestRate8.mmTerm);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FloatingInterestRate8";
 				definition = "Provides the index used to define the rate and optionally the basis point spread.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BenchmarkCurveName5Choice getReferenceRate() {
+		return referenceRate;
+	}
+
+	public void setReferenceRate(BenchmarkCurveName5Choice referenceRate) {
+		this.referenceRate = referenceRate;
+	}
+
+	public InterestRateContractTerm2 getTerm() {
+		return term;
+	}
+
+	public void setTerm(com.tools20022.repository.msg.InterestRateContractTerm2 term) {
+		this.term = term;
 	}
 }

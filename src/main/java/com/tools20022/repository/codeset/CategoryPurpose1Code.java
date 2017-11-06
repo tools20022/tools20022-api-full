@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#IntraCompanyPayment
- * CategoryPurpose1Code.IntraCompanyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#mmIntraCompanyPayment
+ * CategoryPurpose1Code.mmIntraCompanyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#TradeSettlementPayment
- * CategoryPurpose1Code.TradeSettlementPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#mmTradeSettlementPayment
+ * CategoryPurpose1Code.mmTradeSettlementPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,7 +77,7 @@ public class CategoryPurpose1Code {
 	 * name} = "IntraCompanyPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntraCompanyPayment = new MMCode() {
+	public static final MMCode mmIntraCompanyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraCompanyPayment";
@@ -100,7 +100,7 @@ public class CategoryPurpose1Code {
 	 * name} = "TradeSettlementPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeSettlementPayment = new MMCode() {
+	public static final MMCode mmTradeSettlementPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlementPayment";
@@ -111,11 +111,11 @@ public class CategoryPurpose1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CategoryPurpose1Code";
 				definition = "Specifies the high level purpose of the instruction based on a set of pre-defined categories.\r\nUsage: This is used by the initiating party to provide information concerning the processing of the payment. It is likely to trigger special processing by any of the agents involved in the payment chain.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CategoryPurpose1Code.IntraCompanyPayment, com.tools20022.repository.codeset.CategoryPurpose1Code.TradeSettlementPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CategoryPurpose1Code.mmIntraCompanyPayment, com.tools20022.repository.codeset.CategoryPurpose1Code.mmTradeSettlementPayment);
 			}
 		});
 		return mmObject_lazy.get();

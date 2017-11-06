@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RateType12FormatChoice#Code
- * RateType12FormatChoice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateType12FormatChoice#Proprietary
- * RateType12FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RateType12FormatChoice#mmCode
+ * RateType12FormatChoice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateType12FormatChoice#mmProprietary
+ * RateType12FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateType12FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateType12Code code;
 	/**
 	 * Standard code to specify the type of rate.
 	 * <p>
@@ -86,7 +88,7 @@ public class RateType12FormatChoice {
 	 * definition} = "Standard code to specify the type of rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateType12FormatChoice.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class RateType12FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateType12Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the type of rate.
 	 * <p>
@@ -127,7 +130,7 @@ public class RateType12FormatChoice {
 	 * definition} = "Proprietary code to  express the type of rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateType12FormatChoice.mmObject();
 			isDerived = false;
@@ -135,8 +138,8 @@ public class RateType12FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the type of rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -144,13 +147,29 @@ public class RateType12FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType12FormatChoice.Code, com.tools20022.repository.choice.RateType12FormatChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType12FormatChoice.mmCode, com.tools20022.repository.choice.RateType12FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType12FormatChoice";
 				definition = "Choice of formats to  express the type of rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateType12Code getCode() {
+		return code;
+	}
+
+	public void setCode(RateType12Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

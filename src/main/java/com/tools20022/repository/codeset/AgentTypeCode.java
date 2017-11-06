@@ -31,10 +31,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentTypeCode#DropAgentBearer
- * AgentTypeCode.DropAgentBearer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentTypeCode#Other
- * AgentTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgentTypeCode#mmDropAgentBearer
+ * AgentTypeCode.mmDropAgentBearer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentTypeCode#mmOther
+ * AgentTypeCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class AgentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DropAgentBearer = new MMCode() {
+	public static final MMCode mmDropAgentBearer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgentBearer";
@@ -126,7 +126,7 @@ public class AgentTypeCode {
 	 * "Agent that cannot be classified as any listed type of agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -139,12 +139,12 @@ public class AgentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DAGB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgentTypeCode";
 				definition = "Specifies the function that the agent is performing (for example, event agent, information agent).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentTypeCode.DropAgentBearer, com.tools20022.repository.codeset.AgentTypeCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentTypeCode.mmDropAgentBearer, com.tools20022.repository.codeset.AgentTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(AgentType1Code.mmObject());
 			}
 		});

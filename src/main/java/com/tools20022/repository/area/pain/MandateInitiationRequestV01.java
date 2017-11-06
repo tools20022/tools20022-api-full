@@ -67,18 +67,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateInitiationRequestV01#GroupHeader
- * MandateInitiationRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateInitiationRequestV01#mmGroupHeader
+ * MandateInitiationRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateInitiationRequestV01#Mandate
- * MandateInitiationRequestV01.Mandate}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateInitiationRequestV01#mmMandate
+ * MandateInitiationRequestV01.mmMandate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.MandateInitiationRequestV01#identifier
- * MandateInitiationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.009.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateInitiationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader31 groupHeader;
 	/**
 	 * Set of characteristics to identify the message and parties playing a role
 	 * in the mandate initiation, but which are not part of the mandate.
@@ -127,17 +126,18 @@ public class MandateInitiationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the mandate initiation, but which are not part of the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
 	};
+	protected MandateInformation2 mandate;
 	/**
 	 * Set of elements used to provide the details of the mandate signed between
 	 * the (ultimate) creditor and the (ultimate) debtor.
@@ -164,42 +164,15 @@ public class MandateInitiationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Mandate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMandate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mndt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Set of elements used to provide the details of the mandate signed between the (ultimate) creditor and the (ultimate) debtor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MandateInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "009";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -214,10 +187,33 @@ public class MandateInitiationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "MndtInitnReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateInitiationRequestV01.GroupHeader, com.tools20022.repository.area.pain.MandateInitiationRequestV01.Mandate);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.MandateInitiationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateInitiationRequestV01.mmGroupHeader, com.tools20022.repository.area.pain.MandateInitiationRequestV01.mmMandate);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "009";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader31 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader31 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public MandateInformation2 getMandate() {
+		return mandate;
+	}
+
+	public void setMandate(MandateInformation2 mandate) {
+		this.mandate = mandate;
 	}
 }

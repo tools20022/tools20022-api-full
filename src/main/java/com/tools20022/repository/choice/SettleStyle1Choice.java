@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of format for settle style.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SettleStyle1Choice#Code
- * SettleStyle1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SettleStyle1Choice#mmCode
+ * SettleStyle1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettleStyle1Choice#Proprietary
- * SettleStyle1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettleStyle1Choice#mmProprietary
+ * SettleStyle1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettleStyle1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<SettleStyle1Code> code;
 	/**
 	 * Settle style expressed as an ISO 20022 code.
 	 * <p>
@@ -75,8 +77,8 @@ public class SettleStyle1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#SettleStyle
-	 * Option.SettleStyle}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmSettleStyle
+	 * Option.mmSettleStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,10 +97,10 @@ public class SettleStyle1Choice {
 	 * definition} = "Settle style expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmSettleStyle;
 			componentContext_lazy = () -> SettleStyle1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.SettleStyle;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,6 +110,7 @@ public class SettleStyle1Choice {
 			simpleType_lazy = () -> SettleStyle1Code.mmObject();
 		}
 	};
+	protected GenericIdentification40 proprietary;
 	/**
 	 * Settle style expressed as a proprietary code.
 	 * <p>
@@ -120,8 +123,8 @@ public class SettleStyle1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#SettleStyle
-	 * Option.SettleStyle}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmSettleStyle
+	 * Option.mmSettleStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,33 +143,49 @@ public class SettleStyle1Choice {
 	 * definition} = "Settle style expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmSettleStyle;
 			componentContext_lazy = () -> SettleStyle1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.SettleStyle;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settle style expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification40.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettleStyle1Choice.Code, com.tools20022.repository.choice.SettleStyle1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettleStyle1Choice.mmCode, com.tools20022.repository.choice.SettleStyle1Choice.mmProprietary);
 				trace_lazy = () -> Option.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettleStyle1Choice";
 				definition = "Choice of format for settle style.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SettleStyle1Code> getCode() {
+		return code;
+	}
+
+	public void setCode(List<SettleStyle1Code> code) {
+		this.code = code;
+	}
+
+	public GenericIdentification40 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification40 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

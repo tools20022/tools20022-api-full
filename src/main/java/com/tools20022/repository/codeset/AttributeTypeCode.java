@@ -30,25 +30,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#CommonName
- * AttributeTypeCode.CommonName}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AttributeTypeCode#Locality
- * AttributeTypeCode.Locality}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmCommonName
+ * AttributeTypeCode.mmCommonName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#OrganisationName
- * AttributeTypeCode.OrganisationName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmLocality
+ * AttributeTypeCode.mmLocality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#OrganisationUnitName
- * AttributeTypeCode.OrganisationUnitName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmOrganisationName
+ * AttributeTypeCode.mmOrganisationName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#CountryName
- * AttributeTypeCode.CountryName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmOrganisationUnitName
+ * AttributeTypeCode.mmOrganisationUnitName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#EmailAddress
- * AttributeTypeCode.EmailAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmCountryName
+ * AttributeTypeCode.mmCountryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#ChallengePassword
- * AttributeTypeCode.ChallengePassword}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmEmailAddress
+ * AttributeTypeCode.mmEmailAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmChallengePassword
+ * AttributeTypeCode.mmChallengePassword}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -107,7 +108,7 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CommonName = new MMCode() {
+	public static final MMCode mmCommonName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommonName";
@@ -139,7 +140,7 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Locality = new MMCode() {
+	public static final MMCode mmLocality = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Locality";
@@ -172,7 +173,7 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OrganisationName = new MMCode() {
+	public static final MMCode mmOrganisationName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OrganisationName";
@@ -205,7 +206,7 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OrganisationUnitName = new MMCode() {
+	public static final MMCode mmOrganisationUnitName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OrganisationUnitName";
@@ -238,7 +239,7 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CountryName = new MMCode() {
+	public static final MMCode mmCountryName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CountryName";
@@ -268,7 +269,7 @@ public class AttributeTypeCode {
 	 * definition} = "Email address of the certificate subject."</li>
 	 * </ul>
 	 */
-	public static final MMCode EmailAddress = new MMCode() {
+	public static final MMCode mmEmailAddress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
@@ -299,7 +300,7 @@ public class AttributeTypeCode {
 	 * "Password by which an entity may request certificate revocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChallengePassword = new MMCode() {
+	public static final MMCode mmChallengePassword = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChallengePassword";
@@ -312,14 +313,14 @@ public class AttributeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CNAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AttributeTypeCode";
 				definition = "Type of attribute of a distinguished name (DN).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeTypeCode.CommonName, com.tools20022.repository.codeset.AttributeTypeCode.Locality,
-						com.tools20022.repository.codeset.AttributeTypeCode.OrganisationName, com.tools20022.repository.codeset.AttributeTypeCode.OrganisationUnitName, com.tools20022.repository.codeset.AttributeTypeCode.CountryName,
-						com.tools20022.repository.codeset.AttributeTypeCode.EmailAddress, com.tools20022.repository.codeset.AttributeTypeCode.ChallengePassword);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeTypeCode.mmCommonName, com.tools20022.repository.codeset.AttributeTypeCode.mmLocality,
+						com.tools20022.repository.codeset.AttributeTypeCode.mmOrganisationName, com.tools20022.repository.codeset.AttributeTypeCode.mmOrganisationUnitName, com.tools20022.repository.codeset.AttributeTypeCode.mmCountryName,
+						com.tools20022.repository.codeset.AttributeTypeCode.mmEmailAddress, com.tools20022.repository.codeset.AttributeTypeCode.mmChallengePassword);
 				derivation_lazy = () -> Arrays.asList(AttributeType1Code.mmObject(), AttributeType2Code.mmObject());
 			}
 		});

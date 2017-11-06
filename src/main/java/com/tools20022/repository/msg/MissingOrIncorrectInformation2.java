@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code;
 import com.tools20022.repository.datatype.AMLIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide further information on the reason for the
@@ -36,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation2#AntiMoneyLaunderingRequest
- * MissingOrIncorrectInformation2.AntiMoneyLaunderingRequest}</li>
+ * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation2#mmAntiMoneyLaunderingRequest
+ * MissingOrIncorrectInformation2.mmAntiMoneyLaunderingRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation2#MissingInformation
- * MissingOrIncorrectInformation2.MissingInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation2#mmMissingInformation
+ * MissingOrIncorrectInformation2.mmMissingInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation2#IncorrectInformation
- * MissingOrIncorrectInformation2.IncorrectInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation2#mmIncorrectInformation
+ * MissingOrIncorrectInformation2.mmIncorrectInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MissingOrIncorrectInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AMLIndicator antiMoneyLaunderingRequest;
 	/**
 	 * Indicates whether the request is related to an AML (Anti Money
 	 * Laundering) investigation or not.
@@ -106,13 +108,13 @@ public class MissingOrIncorrectInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation3#AntiMoneyLaunderingRequest
-	 * MissingOrIncorrectInformation3.AntiMoneyLaunderingRequest}</li>
+	 * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation3#mmAntiMoneyLaunderingRequest
+	 * MissingOrIncorrectInformation3.mmAntiMoneyLaunderingRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AntiMoneyLaunderingRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAntiMoneyLaunderingRequest = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
@@ -120,12 +122,13 @@ public class MissingOrIncorrectInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AntiMoneyLaunderingRequest";
 			definition = "Indicates whether the request is related to an AML (Anti Money Laundering) investigation or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.AntiMoneyLaunderingRequest);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.mmAntiMoneyLaunderingRequest);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AMLIndicator.mmObject();
 		}
 	};
+	protected List<UnableToApplyMissingInformation2Code> missingInformation;
 	/**
 	 * Indicates the missing information.
 	 * <p>
@@ -156,13 +159,13 @@ public class MissingOrIncorrectInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation3#MissingInformation
-	 * MissingOrIncorrectInformation3.MissingInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation3#mmMissingInformation
+	 * MissingOrIncorrectInformation3.mmMissingInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MissingInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMissingInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
@@ -170,12 +173,13 @@ public class MissingOrIncorrectInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInformation";
 			definition = "Indicates the missing information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.MissingInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.mmMissingInformation);
 			maxOccurs = 10;
+			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
 		}
 	};
+	protected List<UnableToApplyIncorrectInformation3Code> incorrectInformation;
 	/**
 	 * Indicates, in a coded form, the incorrect information.
 	 * <p>
@@ -206,13 +210,13 @@ public class MissingOrIncorrectInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation3#IncorrectInformation
-	 * MissingOrIncorrectInformation3.IncorrectInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.MissingOrIncorrectInformation3#mmIncorrectInformation
+	 * MissingOrIncorrectInformation3.mmIncorrectInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncorrectInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncorrectInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
@@ -220,9 +224,9 @@ public class MissingOrIncorrectInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInformation";
 			definition = "Indicates, in a coded form, the incorrect information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.IncorrectInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.mmIncorrectInformation);
 			maxOccurs = 10;
+			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyIncorrectInformation3Code.mmObject();
 		}
 	};
@@ -230,9 +234,9 @@ public class MissingOrIncorrectInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation2.AntiMoneyLaunderingRequest, com.tools20022.repository.msg.MissingOrIncorrectInformation2.MissingInformation,
-						com.tools20022.repository.msg.MissingOrIncorrectInformation2.IncorrectInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmAntiMoneyLaunderingRequest, com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmMissingInformation,
+						com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmIncorrectInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MissingOrIncorrectInformation2";
 				definition = "Set of elements used to provide further information on the reason for the unable to apply investigation.";
@@ -240,5 +244,29 @@ public class MissingOrIncorrectInformation2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AMLIndicator getAntiMoneyLaunderingRequest() {
+		return antiMoneyLaunderingRequest;
+	}
+
+	public void setAntiMoneyLaunderingRequest(AMLIndicator antiMoneyLaunderingRequest) {
+		this.antiMoneyLaunderingRequest = antiMoneyLaunderingRequest;
+	}
+
+	public List<UnableToApplyMissingInformation2Code> getMissingInformation() {
+		return missingInformation;
+	}
+
+	public void setMissingInformation(List<UnableToApplyMissingInformation2Code> missingInformation) {
+		this.missingInformation = missingInformation;
+	}
+
+	public List<UnableToApplyIncorrectInformation3Code> getIncorrectInformation() {
+		return incorrectInformation;
+	}
+
+	public void setIncorrectInformation(List<UnableToApplyIncorrectInformation3Code> incorrectInformation) {
+		this.incorrectInformation = incorrectInformation;
 	}
 }

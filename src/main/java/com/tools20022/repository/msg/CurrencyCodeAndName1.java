@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyCodeAndName1#Code
- * CurrencyCodeAndName1.Code}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyCodeAndName1#Name
- * CurrencyCodeAndName1.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyCodeAndName1#mmCode
+ * CurrencyCodeAndName1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyCodeAndName1#mmName
+ * CurrencyCodeAndName1.mmName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyCodeAndName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyCode code;
 	/**
 	 * Currency is specified by its code.
 	 * <p>
@@ -85,7 +86,7 @@ public class CurrencyCodeAndName1 {
 	 * definition} = "Currency is specified by its code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyCodeAndName1.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class CurrencyCodeAndName1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Currency is specified by its code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected Max70Text name;
 	/**
 	 * Currency is specified by its name.
 	 * <p>
@@ -125,7 +127,7 @@ public class CurrencyCodeAndName1 {
 	 * definition} = "Currency is specified by its name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyCodeAndName1.mmObject();
 			isDerived = false;
@@ -133,8 +135,8 @@ public class CurrencyCodeAndName1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Currency is specified by its name.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -142,13 +144,29 @@ public class CurrencyCodeAndName1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyCodeAndName1.Code, com.tools20022.repository.msg.CurrencyCodeAndName1.Name);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyCodeAndName1.mmCode, com.tools20022.repository.msg.CurrencyCodeAndName1.mmName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyCodeAndName1";
 				definition = "Specifies a currency by its code or its name.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyCode getCode() {
+		return code;
+	}
+
+	public void setCode(ActiveOrHistoricCurrencyCode code) {
+		this.code = code;
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
 	}
 }

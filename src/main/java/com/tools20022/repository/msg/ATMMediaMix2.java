@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
+import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMMediaMix2#Number
- * ATMMediaMix2.Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMMediaMix2#UnitValue
- * ATMMediaMix2.UnitValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMMediaMix2#mmNumber
+ * ATMMediaMix2.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMMediaMix2#mmUnitValue
+ * ATMMediaMix2.mmUnitValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMMediaMix2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number number;
 	/**
 	 * Number of notes or coins.
 	 * <p>
@@ -86,11 +88,11 @@ public class ATMMediaMix2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMMediaMix1#Number
-	 * ATMMediaMix1.Number}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMMediaMix1#mmNumber
+	 * ATMMediaMix1.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMMediaMix2.mmObject();
 			isDerived = false;
@@ -98,12 +100,13 @@ public class ATMMediaMix2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number of notes or coins.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.Number;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmNumber;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.Number.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount unitValue;
 	/**
 	 * Unit value.
 	 * <p>
@@ -132,11 +135,11 @@ public class ATMMediaMix2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMMediaMix1#UnitValue
-	 * ATMMediaMix1.UnitValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMMediaMix1#mmUnitValue
+	 * ATMMediaMix1.mmUnitValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMMediaMix2.mmObject();
 			isDerived = false;
@@ -144,9 +147,9 @@ public class ATMMediaMix2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitValue";
 			definition = "Unit value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.UnitValue;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmUnitValue;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -154,8 +157,8 @@ public class ATMMediaMix2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMediaMix2.Number, com.tools20022.repository.msg.ATMMediaMix2.UnitValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMediaMix2.mmNumber, com.tools20022.repository.msg.ATMMediaMix2.mmUnitValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaMix2";
 				definition = "Media mix selected.";
@@ -163,5 +166,21 @@ public class ATMMediaMix2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getNumber() {
+		return number;
+	}
+
+	public void setNumber(Number number) {
+		this.number = number;
+	}
+
+	public ImpliedCurrencyAndAmount getUnitValue() {
+		return unitValue;
+	}
+
+	public void setUnitValue(ImpliedCurrencyAndAmount unitValue) {
+		this.unitValue = unitValue;
 	}
 }

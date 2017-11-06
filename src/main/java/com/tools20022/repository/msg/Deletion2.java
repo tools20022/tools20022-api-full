@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Deletion2#DeletedValue
- * Deletion2.DeletedValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Deletion2#mmDeletedValue
+ * Deletion2.mmDeletedValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Deletion2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text deletedValue;
 	/**
 	 * Content of the deleted element.
 	 * <p>
@@ -80,7 +81,7 @@ public class Deletion2 {
 	 * definition} = "Content of the deleted element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeletedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeletedValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Deletion2.mmObject();
 			isDerived = false;
@@ -88,8 +89,8 @@ public class Deletion2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeletedValue";
 			definition = "Content of the deleted element.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -97,13 +98,21 @@ public class Deletion2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Deletion2.DeletedValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Deletion2.mmDeletedValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Deletion2";
 				definition = "Deletion of the current element.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getDeletedValue() {
+		return deletedValue;
+	}
+
+	public void setDeletedValue(Max350Text deletedValue) {
+		this.deletedValue = deletedValue;
 	}
 }

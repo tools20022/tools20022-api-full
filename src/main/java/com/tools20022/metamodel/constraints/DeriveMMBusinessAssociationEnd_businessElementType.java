@@ -32,6 +32,6 @@ public class DeriveMMBusinessAssociationEnd_businessElementType implements Funct
 	 */
 	@Override
 	public MMBusinessElementType apply(MMBusinessAssociationEnd mmBean) {
-		throw new RuntimeException("Not implemented!");
+		return mmBean.getType();
 	}
 }

@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#BillingIdentification
- * BillingSearchCriteria1.BillingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmBillingIdentification
+ * BillingSearchCriteria1.mmBillingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#BillingPeriod
- * BillingSearchCriteria1.BillingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmBillingPeriod
+ * BillingSearchCriteria1.mmBillingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#CSDOrNCB
- * BillingSearchCriteria1.CSDOrNCB}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmCSDOrNCB
+ * BillingSearchCriteria1.mmCSDOrNCB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#BilledCustomerIdentification
- * BillingSearchCriteria1.BilledCustomerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmBilledCustomerIdentification
+ * BillingSearchCriteria1.mmBilledCustomerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#AccountIdentification
- * BillingSearchCriteria1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmAccountIdentification
+ * BillingSearchCriteria1.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BillingIdentification1 billingIdentification;
 	/**
 	 * Identification of the billing report.
 	 * <p>
@@ -86,8 +87,8 @@ public class BillingSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class BillingSearchCriteria1 {
 	 * definition} = "Identification of the billing report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BillingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BillingSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "BllgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingIdentification";
 			definition = "Identification of the billing report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> BillingIdentification1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.BillingIdentification1.mmObject();
 		}
 	};
+	protected DatePeriodDetails billingPeriod;
 	/**
 	 * General information for each invoice invoicing request or month end
 	 * billing event is stored.
@@ -132,8 +134,8 @@ public class BillingSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#PeriodCovered
-	 * Invoice.PeriodCovered}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmPeriodCovered
+	 * Invoice.mmPeriodCovered}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,21 +156,22 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BillingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBillingPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> BillingSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.PeriodCovered;
 			isDerived = false;
 			xmlTag = "BllgPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingPeriod";
 			definition = "General information for each invoice invoicing request or month end billing event is stored.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DatePeriodDetails.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
 		}
 	};
+	protected CSDOrNCB1Choice cSDOrNCB;
 	/**
 	 * Party identification of the CSD or the NCB which has a contractual
 	 * relationship with T2S party.
@@ -181,8 +184,8 @@ public class BillingSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#PartyRole
-	 * CashSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmPartyRole
+	 * CashSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,21 +206,22 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CSDOrNCB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmPartyRole;
 			componentContext_lazy = () -> BillingSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "CSDOrNCB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Party identification of the CSD or the NCB which has a contractual relationship with T2S party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CSDOrNCB1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CSDOrNCB1Choice.mmObject();
 		}
 	};
+	protected BICFIIdentifier billedCustomerIdentification;
 	/**
 	 * Participant of the CSD or NCB who has to pay the bill in the end chain.
 	 * <p>
@@ -231,8 +235,8 @@ public class BillingSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,20 +257,21 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BilledCustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBilledCustomerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> BillingSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BlldCstmrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilledCustomerIdentification";
 			definition = "Participant of the CSD or NCB who has to pay the bill in the end chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected AccountIdentification20Choice accountIdentification;
 	/**
 	 * Either securities account or dedicated cash account number.
 	 * <p>
@@ -279,8 +284,8 @@ public class BillingSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,35 +305,75 @@ public class BillingSearchCriteria1 {
 	 * "Either securities account or dedicated cash account number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> BillingSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Either securities account or dedicated cash account number.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification20Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification20Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingSearchCriteria1.BillingIdentification, com.tools20022.repository.msg.BillingSearchCriteria1.BillingPeriod,
-						com.tools20022.repository.msg.BillingSearchCriteria1.CSDOrNCB, com.tools20022.repository.msg.BillingSearchCriteria1.BilledCustomerIdentification,
-						com.tools20022.repository.msg.BillingSearchCriteria1.AccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingSearchCriteria1.mmBillingIdentification, com.tools20022.repository.msg.BillingSearchCriteria1.mmBillingPeriod,
+						com.tools20022.repository.msg.BillingSearchCriteria1.mmCSDOrNCB, com.tools20022.repository.msg.BillingSearchCriteria1.mmBilledCustomerIdentification,
+						com.tools20022.repository.msg.BillingSearchCriteria1.mmAccountIdentification);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingSearchCriteria1";
 				definition = "Defines the criteria to be used to extract";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BillingIdentification1 getBillingIdentification() {
+		return billingIdentification;
+	}
+
+	public void setBillingIdentification(com.tools20022.repository.msg.BillingIdentification1 billingIdentification) {
+		this.billingIdentification = billingIdentification;
+	}
+
+	public DatePeriodDetails getBillingPeriod() {
+		return billingPeriod;
+	}
+
+	public void setBillingPeriod(com.tools20022.repository.msg.DatePeriodDetails billingPeriod) {
+		this.billingPeriod = billingPeriod;
+	}
+
+	public CSDOrNCB1Choice getCSDOrNCB() {
+		return cSDOrNCB;
+	}
+
+	public void setCSDOrNCB(CSDOrNCB1Choice cSDOrNCB) {
+		this.cSDOrNCB = cSDOrNCB;
+	}
+
+	public BICFIIdentifier getBilledCustomerIdentification() {
+		return billedCustomerIdentification;
+	}
+
+	public void setBilledCustomerIdentification(BICFIIdentifier billedCustomerIdentification) {
+		this.billedCustomerIdentification = billedCustomerIdentification;
+	}
+
+	public AccountIdentification20Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification20Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
 	}
 }

@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessageAndIssuer1#MessageIdentification
- * OriginalMessageAndIssuer1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessageAndIssuer1#mmMessageIdentification
+ * OriginalMessageAndIssuer1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessageAndIssuer1#MessageNameIdentification
- * OriginalMessageAndIssuer1.MessageNameIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessageAndIssuer1#mmMessageNameIdentification
+ * OriginalMessageAndIssuer1.mmMessageNameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessageAndIssuer1#OriginatorName
- * OriginalMessageAndIssuer1.OriginatorName}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessageAndIssuer1#mmOriginatorName
+ * OriginalMessageAndIssuer1.mmOriginatorName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalMessageAndIssuer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unambiguous identification of the original message to which the message
 	 * refers.
@@ -95,7 +96,7 @@ public class OriginalMessageAndIssuer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class OriginalMessageAndIssuer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unambiguous identification of the original message to which the message refers. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text messageNameIdentification;
 	/**
 	 * Specifies the original message name identifier to which the message
 	 * refers.
@@ -138,7 +140,7 @@ public class OriginalMessageAndIssuer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
@@ -146,11 +148,12 @@ public class OriginalMessageAndIssuer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max70Text originatorName;
 	/**
 	 * Name of the original party that assigned the original message
 	 * identification.
@@ -181,7 +184,7 @@ public class OriginalMessageAndIssuer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginatorName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginatorName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
@@ -189,8 +192,8 @@ public class OriginalMessageAndIssuer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorName";
 			definition = "Name of the original party that assigned the original message identification. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -198,14 +201,38 @@ public class OriginalMessageAndIssuer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessageAndIssuer1.MessageIdentification, com.tools20022.repository.msg.OriginalMessageAndIssuer1.MessageNameIdentification,
-						com.tools20022.repository.msg.OriginalMessageAndIssuer1.OriginatorName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmMessageIdentification, com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmMessageNameIdentification,
+						com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmOriginatorName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OriginalMessageAndIssuer1";
 				definition = "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.\n\n";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getMessageNameIdentification() {
+		return messageNameIdentification;
+	}
+
+	public void setMessageNameIdentification(Max35Text messageNameIdentification) {
+		this.messageNameIdentification = messageNameIdentification;
+	}
+
+	public Max70Text getOriginatorName() {
+		return originatorName;
+	}
+
+	public void setOriginatorName(Max70Text originatorName) {
+		this.originatorName = originatorName;
 	}
 }

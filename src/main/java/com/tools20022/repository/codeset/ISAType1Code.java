@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ISATypeCode ISATypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code#MiniEquity
- * ISAType1Code.MiniEquity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code#Maxi
- * ISAType1Code.Maxi}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code#MiniCash
- * ISAType1Code.MiniCash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code#mmMiniEquity
+ * ISAType1Code.mmMiniEquity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code#mmMaxi
+ * ISAType1Code.mmMaxi}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code#mmMiniCash
+ * ISAType1Code.mmMiniCash}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class ISAType1Code extends ISATypeCode {
 	 * name} = "MiniEquity"</li>
 	 * </ul>
 	 */
-	public static final MMCode MiniEquity = new MMCode() {
+	public static final MMCode mmMiniEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniEquity";
@@ -101,7 +101,7 @@ public class ISAType1Code extends ISATypeCode {
 	 * name} = "Maxi"</li>
 	 * </ul>
 	 */
-	public static final MMCode Maxi = new MMCode() {
+	public static final MMCode mmMaxi = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maxi";
@@ -123,7 +123,7 @@ public class ISAType1Code extends ISATypeCode {
 	 * name} = "MiniCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode MiniCash = new MMCode() {
+	public static final MMCode mmMiniCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniCash";
@@ -134,12 +134,12 @@ public class ISAType1Code extends ISATypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MINE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ISAType1Code";
 				definition = "Specifies the type of the current year ISA.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ISAType1Code.MiniEquity, com.tools20022.repository.codeset.ISAType1Code.Maxi, com.tools20022.repository.codeset.ISAType1Code.MiniCash);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ISAType1Code.mmMiniEquity, com.tools20022.repository.codeset.ISAType1Code.mmMaxi, com.tools20022.repository.codeset.ISAType1Code.mmMiniCash);
 				trace_lazy = () -> ISATypeCode.mmObject();
 			}
 		});

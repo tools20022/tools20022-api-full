@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation3#MessageIdentification
- * GeneralInformation3.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation3#mmMessageIdentification
+ * GeneralInformation3.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation3#MessageFunction
- * GeneralInformation3.MessageFunction}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation3#mmMessageFunction
+ * GeneralInformation3.mmMessageFunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation3#RequestReference
- * GeneralInformation3.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation3#mmRequestReference
+ * GeneralInformation3.mmRequestReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for the message, as assigned by the
 	 * sender.
@@ -93,7 +94,7 @@ public class GeneralInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralInformation3.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class GeneralInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected MessageFunction2Code messageFunction;
 	/**
 	 * Indicates whether the message is sent as a request or as a response.
 	 * <p>
@@ -135,7 +137,7 @@ public class GeneralInformation3 {
 	 * "Indicates whether the message is sent as a request or as a response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralInformation3.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class GeneralInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Indicates whether the message is sent as a request or as a response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction2Code.mmObject();
 		}
 	};
+	protected Max35Text requestReference;
 	/**
 	 * Reference to the request message for which the notification is sent.
 	 * <p>
@@ -176,7 +179,7 @@ public class GeneralInformation3 {
 	 * "Reference to the request message for which the notification is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralInformation3.mmObject();
 			isDerived = false;
@@ -184,8 +187,8 @@ public class GeneralInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReference";
 			definition = "Reference to the request message for which the notification is sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -193,14 +196,38 @@ public class GeneralInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralInformation3.MessageIdentification, com.tools20022.repository.msg.GeneralInformation3.MessageFunction,
-						com.tools20022.repository.msg.GeneralInformation3.RequestReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralInformation3.mmMessageIdentification, com.tools20022.repository.msg.GeneralInformation3.mmMessageFunction,
+						com.tools20022.repository.msg.GeneralInformation3.mmRequestReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeneralInformation3";
 				definition = "General Information, indicating the function of the  message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public MessageFunction2Code getMessageFunction() {
+		return messageFunction;
+	}
+
+	public void setMessageFunction(MessageFunction2Code messageFunction) {
+		this.messageFunction = messageFunction;
+	}
+
+	public Max35Text getRequestReference() {
+		return requestReference;
+	}
+
+	public void setRequestReference(Max35Text requestReference) {
+		this.requestReference = requestReference;
 	}
 }

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportType1Code#ForwardInitialSubmission
- * ReportType1Code.ForwardInitialSubmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportType1Code#mmForwardInitialSubmission
+ * ReportType1Code.mmForwardInitialSubmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportType1Code#ForwardReSubmission
- * ReportType1Code.ForwardReSubmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportType1Code#mmForwardReSubmission
+ * ReportType1Code.mmForwardReSubmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportType1Code#ForwardAmend
- * ReportType1Code.ForwardAmend}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportType1Code#mmForwardAmend
+ * ReportType1Code.mmForwardAmend}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class ReportType1Code extends ReportTypeCode {
 	 * name} = "ForwardInitialSubmission"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardInitialSubmission = new MMCode() {
+	public static final MMCode mmForwardInitialSubmission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardInitialSubmission";
@@ -109,7 +109,7 @@ public class ReportType1Code extends ReportTypeCode {
 	 * name} = "ForwardReSubmission"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardReSubmission = new MMCode() {
+	public static final MMCode mmForwardReSubmission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardReSubmission";
@@ -132,7 +132,7 @@ public class ReportType1Code extends ReportTypeCode {
 	 * name} = "ForwardAmend"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardAmend = new MMCode() {
+	public static final MMCode mmForwardAmend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardAmend";
@@ -143,13 +143,13 @@ public class ReportType1Code extends ReportTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FWIS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportType1Code";
 				definition = "Specifies whether the report contains a new, a resubmitted or an amended baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportType1Code.ForwardInitialSubmission, com.tools20022.repository.codeset.ReportType1Code.ForwardReSubmission,
-						com.tools20022.repository.codeset.ReportType1Code.ForwardAmend);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportType1Code.mmForwardInitialSubmission, com.tools20022.repository.codeset.ReportType1Code.mmForwardReSubmission,
+						com.tools20022.repository.codeset.ReportType1Code.mmForwardAmend);
 				trace_lazy = () -> ReportTypeCode.mmObject();
 			}
 		});

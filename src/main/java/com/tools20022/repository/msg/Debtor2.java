@@ -34,11 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Debtor2#Debtor Debtor2.Debtor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Debtor2#AccountIdentification
- * Debtor2.AccountIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Debtor2#FirstAgent
- * Debtor2.FirstAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Debtor2#mmDebtor
+ * Debtor2.mmDebtor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Debtor2#mmAccountIdentification
+ * Debtor2.mmAccountIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Debtor2#mmFirstAgent
+ * Debtor2.mmFirstAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Debtor2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice debtor;
 	/**
 	 * Party that owes an amount of money to the (ultimate) creditor. In the
 	 * context of the payment model, the debtor is also the debit account owner.
@@ -75,8 +78,8 @@ public class Debtor2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Debtor2
@@ -96,20 +99,21 @@ public class Debtor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Debtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Debtor2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected AccountIdentificationAndName3 accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -124,8 +128,8 @@ public class Debtor2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Debtor2
@@ -145,20 +149,21 @@ public class Debtor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> Debtor2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentificationAndName3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification3Choice firstAgent;
 	/**
 	 * Financial institution that receives the payment transaction from the
 	 * account owner, or other authorised party, and processes the instruction.
@@ -173,8 +178,8 @@ public class Debtor2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Debtor2
@@ -194,17 +199,17 @@ public class Debtor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Debtor2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution that receives the payment transaction from the account owner, or other authorised party, and processes the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
 		}
 	};
@@ -212,14 +217,38 @@ public class Debtor2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debtor2.Debtor, com.tools20022.repository.msg.Debtor2.AccountIdentification, com.tools20022.repository.msg.Debtor2.FirstAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debtor2.mmDebtor, com.tools20022.repository.msg.Debtor2.mmAccountIdentification, com.tools20022.repository.msg.Debtor2.mmFirstAgent);
 				trace_lazy = () -> DebtorRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Debtor2";
 				definition = "Information about the debtor.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(PartyIdentification2Choice debtor) {
+		this.debtor = debtor;
+	}
+
+	public AccountIdentificationAndName3 getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public FinancialInstitutionIdentification3Choice getFirstAgent() {
+		return firstAgent;
+	}
+
+	public void setFirstAgent(FinancialInstitutionIdentification3Choice firstAgent) {
+		this.firstAgent = firstAgent;
 	}
 }

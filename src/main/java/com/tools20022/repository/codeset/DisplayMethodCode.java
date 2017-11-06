@@ -29,12 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#Initial
- * DisplayMethodCode.Initial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#New
- * DisplayMethodCode.New}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#Random
- * DisplayMethodCode.Random}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DisplayMethodCode#mmInitial
+ * DisplayMethodCode.mmInitial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#mmNew
+ * DisplayMethodCode.mmNew}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#mmRandom
+ * DisplayMethodCode.mmRandom}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +90,7 @@ public class DisplayMethodCode {
 	 * definition} = "Indicates that original quantity must be used."</li>
 	 * </ul>
 	 */
-	public static final MMCode Initial = new MMCode() {
+	public static final MMCode mmInitial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
@@ -119,7 +120,7 @@ public class DisplayMethodCode {
 	 * definition} = "Indicates that Quantity must be refreshed."</li>
 	 * </ul>
 	 */
-	public static final MMCode New = new MMCode() {
+	public static final MMCode mmNew = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
@@ -149,7 +150,7 @@ public class DisplayMethodCode {
 	 * definition} = "Randomize value."</li>
 	 * </ul>
 	 */
-	public static final MMCode Random = new MMCode() {
+	public static final MMCode mmRandom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Random";
@@ -162,12 +163,12 @@ public class DisplayMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DisplayMethodCode";
 				definition = "Instructions for the use of display quantity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisplayMethodCode.Initial, com.tools20022.repository.codeset.DisplayMethodCode.New, com.tools20022.repository.codeset.DisplayMethodCode.Random);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisplayMethodCode.mmInitial, com.tools20022.repository.codeset.DisplayMethodCode.mmNew, com.tools20022.repository.codeset.DisplayMethodCode.mmRandom);
 				derivation_lazy = () -> Arrays.asList(DisplayMethod1Code.mmObject());
 			}
 		});

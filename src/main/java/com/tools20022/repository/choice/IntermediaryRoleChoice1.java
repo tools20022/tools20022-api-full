@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1#Role
- * IntermediaryRoleChoice1.Role}</li>
+ * {@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1#mmRole
+ * IntermediaryRoleChoice1.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1#Proprietary
- * IntermediaryRoleChoice1.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1#mmProprietary
+ * IntermediaryRoleChoice1.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntermediaryRoleChoice1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentFundRole4Code role;
 	/**
 	 * Role of the party in the activity.
 	 * <p>
@@ -97,20 +98,21 @@ public class IntermediaryRoleChoice1 {
 	 * definition} = "Role of the party in the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Role = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundPartyRole.mmObject();
+			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Role of the party in the activity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Role of the party in the activity.
 	 * <p>
@@ -144,17 +146,17 @@ public class IntermediaryRoleChoice1 {
 	 * definition} = "Role of the party in the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundPartyRole.mmObject();
+			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Role of the party in the activity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -162,14 +164,30 @@ public class IntermediaryRoleChoice1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediaryRoleChoice1.Role, com.tools20022.repository.choice.IntermediaryRoleChoice1.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediaryRoleChoice1.mmRole, com.tools20022.repository.choice.IntermediaryRoleChoice1.mmProprietary);
 				trace_lazy = () -> InvestmentFundPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntermediaryRoleChoice1";
 				definition = "Choice of intermediary role.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentFundRole4Code getRole() {
+		return role;
+	}
+
+	public void setRole(InvestmentFundRole4Code role) {
+		this.role = role;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

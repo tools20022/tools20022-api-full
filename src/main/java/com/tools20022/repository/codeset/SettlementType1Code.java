@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#Principal
- * SettlementType1Code.Principal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#mmPrincipal
+ * SettlementType1Code.mmPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#NettedOff
- * SettlementType1Code.NettedOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#mmNettedOff
+ * SettlementType1Code.mmNettedOff}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class SettlementType1Code extends SettlementTypeCode {
 	 * name} = "Principal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Principal = new MMCode() {
+	public static final MMCode mmPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
@@ -104,7 +104,7 @@ public class SettlementType1Code extends SettlementTypeCode {
 	 * name} = "NettedOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode NettedOff = new MMCode() {
+	public static final MMCode mmNettedOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettedOff";
@@ -115,12 +115,12 @@ public class SettlementType1Code extends SettlementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementType1Code";
 				definition = "Indicates how an option trade is settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementType1Code.Principal, com.tools20022.repository.codeset.SettlementType1Code.NettedOff);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementType1Code.mmPrincipal, com.tools20022.repository.codeset.SettlementType1Code.mmNettedOff);
 				trace_lazy = () -> SettlementTypeCode.mmObject();
 			}
 		});

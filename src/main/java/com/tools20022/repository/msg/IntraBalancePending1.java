@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.BookEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the data for the pending intra-balance movements.
@@ -33,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalancePending1#StatusAndReason
- * IntraBalancePending1.StatusAndReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePending1#Movement
- * IntraBalancePending1.Movement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalancePending1#mmStatusAndReason
+ * IntraBalancePending1.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalancePending1#mmMovement
+ * IntraBalancePending1.mmMovement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalancePending1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingStatusAndReason1 statusAndReason;
 	/**
 	 * Status and status reason of the transaction.
 	 * <p>
@@ -71,8 +74,8 @@ public class IntraBalancePending1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentStatus
-	 * Payment.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+	 * Payment.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -91,21 +94,22 @@ public class IntraBalancePending1 {
 	 * definition} = "Status and status reason of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
 			componentContext_lazy = () -> IntraBalancePending1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentStatus;
 			isDerived = false;
 			xmlTag = "StsAndRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatusAndReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IntraBalancePending2> movement;
 	/**
 	 * Identifies the individual transaction.
 	 * <p>
@@ -136,32 +140,48 @@ public class IntraBalancePending1 {
 	 * definition} = "Identifies the individual transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Movement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalancePending1.mmObject();
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
+			componentContext_lazy = () -> IntraBalancePending1.mmObject();
 			isDerived = false;
 			xmlTag = "Mvmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Movement";
 			definition = "Identifies the individual transaction.";
 			minOccurs = 1;
-			type_lazy = () -> IntraBalancePending2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraBalancePending2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalancePending1.StatusAndReason, com.tools20022.repository.msg.IntraBalancePending1.Movement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalancePending1.mmStatusAndReason, com.tools20022.repository.msg.IntraBalancePending1.mmMovement);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalancePending1";
 				definition = "Provides the data for the pending intra-balance movements.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingStatusAndReason1 getStatusAndReason() {
+		return statusAndReason;
+	}
+
+	public void setStatusAndReason(com.tools20022.repository.msg.PendingStatusAndReason1 statusAndReason) {
+		this.statusAndReason = statusAndReason;
+	}
+
+	public List<IntraBalancePending2> getMovement() {
+		return movement;
+	}
+
+	public void setMovement(List<com.tools20022.repository.msg.IntraBalancePending2> movement) {
+		this.movement = movement;
 	}
 }

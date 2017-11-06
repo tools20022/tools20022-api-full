@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#PaymentType
- * PaymentType2Choice.PaymentType}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#mmPaymentType
+ * PaymentType2Choice.mmPaymentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#ProprietaryPaymentType
- * PaymentType2Choice.ProprietaryPaymentType}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#mmProprietaryPaymentType
+ * PaymentType2Choice.mmProprietaryPaymentType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentType3Code paymentType;
 	/**
 	 * Type, or nature, of the payment, eg, express payment.
 	 * <p>
@@ -78,7 +79,8 @@ public class PaymentType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Type Payment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmType
+	 * Payment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +99,21 @@ public class PaymentType2Choice {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmType;
 			componentContext_lazy = () -> PaymentType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Type;
 			isDerived = false;
 			xmlTag = "PmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentType";
 			definition = "Type, or nature, of the payment, eg, express payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentType3Code.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText proprietaryPaymentType;
 	/**
 	 * Payment type that is not included in a predefined list.
 	 * <p>
@@ -124,7 +127,8 @@ public class PaymentType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Type Payment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmType
+	 * Payment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +147,17 @@ public class PaymentType2Choice {
 	 * definition} = "Payment type that is not included in a predefined list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryPaymentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmType;
 			componentContext_lazy = () -> PaymentType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Type;
 			isDerived = false;
 			xmlTag = "PrtryPmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryPaymentType";
 			definition = "Payment type that is not included in a predefined list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -161,14 +165,30 @@ public class PaymentType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentType2Choice.PaymentType, com.tools20022.repository.choice.PaymentType2Choice.ProprietaryPaymentType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentType2Choice.mmPaymentType, com.tools20022.repository.choice.PaymentType2Choice.mmProprietaryPaymentType);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentType2Choice";
 				definition = "Choice beween a payment type from a predefined list and a proprietary payment type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentType3Code getPaymentType() {
+		return paymentType;
+	}
+
+	public void setPaymentType(PaymentType3Code paymentType) {
+		this.paymentType = paymentType;
+	}
+
+	public Max4AlphaNumericText getProprietaryPaymentType() {
+		return proprietaryPaymentType;
+	}
+
+	public void setProprietaryPaymentType(Max4AlphaNumericText proprietaryPaymentType) {
+		this.proprietaryPaymentType = proprietaryPaymentType;
 	}
 }

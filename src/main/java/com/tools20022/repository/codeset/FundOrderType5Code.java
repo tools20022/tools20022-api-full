@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#NormalStaffPortion
- * FundOrderType5Code.NormalStaffPortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#mmNormalStaffPortion
+ * FundOrderType5Code.mmNormalStaffPortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#NormalClientPortion
- * FundOrderType5Code.NormalClientPortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#mmNormalClientPortion
+ * FundOrderType5Code.mmNormalClientPortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#StaffWithSavingsPlan
- * FundOrderType5Code.StaffWithSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#mmStaffWithSavingsPlan
+ * FundOrderType5Code.mmStaffWithSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#ClientWithSavingsPlan
- * FundOrderType5Code.ClientWithSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType5Code#mmClientWithSavingsPlan
+ * FundOrderType5Code.mmClientWithSavingsPlan}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 * name} = "NormalStaffPortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode NormalStaffPortion = new MMCode() {
+	public static final MMCode mmNormalStaffPortion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalStaffPortion";
@@ -110,7 +110,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 * name} = "NormalClientPortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode NormalClientPortion = new MMCode() {
+	public static final MMCode mmNormalClientPortion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalClientPortion";
@@ -133,7 +133,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 * name} = "StaffWithSavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode StaffWithSavingsPlan = new MMCode() {
+	public static final MMCode mmStaffWithSavingsPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffWithSavingsPlan";
@@ -156,7 +156,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 * name} = "ClientWithSavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClientWithSavingsPlan = new MMCode() {
+	public static final MMCode mmClientWithSavingsPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientWithSavingsPlan";
@@ -167,13 +167,13 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NSPN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType5Code";
 				definition = "Specifies the category of the investment fund order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType5Code.NormalStaffPortion, com.tools20022.repository.codeset.FundOrderType5Code.NormalClientPortion,
-						com.tools20022.repository.codeset.FundOrderType5Code.StaffWithSavingsPlan, com.tools20022.repository.codeset.FundOrderType5Code.ClientWithSavingsPlan);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType5Code.mmNormalStaffPortion, com.tools20022.repository.codeset.FundOrderType5Code.mmNormalClientPortion,
+						com.tools20022.repository.codeset.FundOrderType5Code.mmStaffWithSavingsPlan, com.tools20022.repository.codeset.FundOrderType5Code.mmClientWithSavingsPlan);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

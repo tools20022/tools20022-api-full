@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInformation15#PaymentMethod
- * PaymentInformation15.PaymentMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInformation15#mmPaymentMethod
+ * PaymentInformation15.mmPaymentMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInformation15#PaymentAccount
- * PaymentInformation15.PaymentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInformation15#mmPaymentAccount
+ * PaymentInformation15.mmPaymentAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInformation15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentMethod4Code paymentMethod;
 	/**
 	 * Payment method that will be used for invoice payment to transfer the
 	 * funds to the creditor.
@@ -78,8 +79,8 @@ public class PaymentInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#Method
-	 * CreditInstrument.Method}</li>
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmMethod
+	 * CreditInstrument.mmMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class PaymentInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmMethod;
 			componentContext_lazy = () -> PaymentInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.Method;
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Payment method that will be used for invoice payment to transfer the funds to the creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethod4Code.mmObject();
 		}
 	};
+	protected CashAccount7 paymentAccount;
 	/**
 	 * Unambiguous identification of the account used for payment settlement.
 	 * <p>
@@ -125,8 +127,8 @@ public class PaymentInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#SettlementAccount
-	 * CashSettlement.SettlementAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
+	 * CashSettlement.mmSettlementAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,33 +148,49 @@ public class PaymentInformation15 {
 	 * "Unambiguous identification of the account used for payment settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> PaymentInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.SettlementAccount;
 			isDerived = false;
 			xmlTag = "PmtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentAccount";
 			definition = "Unambiguous identification of the account used for payment settlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInformation15.PaymentMethod, com.tools20022.repository.msg.PaymentInformation15.PaymentAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInformation15.mmPaymentMethod, com.tools20022.repository.msg.PaymentInformation15.mmPaymentAccount);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInformation15";
 				definition = "Payment terms and conditions related to a single invoice to be financed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentMethod4Code getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(PaymentMethod4Code paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	public CashAccount7 getPaymentAccount() {
+		return paymentAccount;
+	}
+
+	public void setPaymentAccount(com.tools20022.repository.msg.CashAccount7 paymentAccount) {
+		this.paymentAccount = paymentAccount;
 	}
 }

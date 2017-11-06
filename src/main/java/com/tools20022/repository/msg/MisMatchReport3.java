@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Description of the mis-matched situation between two baselines or between a
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MisMatchReport3#NumberOfMisMatches
- * MisMatchReport3.NumberOfMisMatches}</li>
+ * {@linkplain com.tools20022.repository.msg.MisMatchReport3#mmNumberOfMisMatches
+ * MisMatchReport3.mmNumberOfMisMatches}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MisMatchReport3#MisMatchInformation
- * MisMatchReport3.MisMatchInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MisMatchReport3#mmMisMatchInformation
+ * MisMatchReport3.mmMisMatchInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,18 +48,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#Report
- * BaselineMatchReportV03.Report}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmReport
+ * BaselineMatchReportV03.mmReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#Report
- * DataSetMatchReportV03.Report}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmReport
+ * DataSetMatchReportV03.mmReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MisMatchReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number numberOfMisMatches;
 	/**
 	 * Total number of mismatches between two baselines or between one baseline
 	 * and one data set.
@@ -104,7 +106,7 @@ public class MisMatchReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfMisMatches = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfMisMatches = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MisMatchReport3.mmObject();
 			isDerived = false;
@@ -112,11 +114,12 @@ public class MisMatchReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfMisMatches";
 			definition = "Total number of mismatches between two baselines or between one baseline and one data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ValidationResult5> misMatchInformation;
 	/**
 	 * Details of each mismatch occurrence.
 	 * <p>
@@ -143,7 +146,7 @@ public class MisMatchReport3 {
 	 * definition} = "Details of each mismatch occurrence."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MisMatchInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMisMatchInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MisMatchReport3.mmObject();
 			isDerived = false;
@@ -152,22 +155,38 @@ public class MisMatchReport3 {
 			name = "MisMatchInformation";
 			definition = "Details of each mismatch occurrence.";
 			minOccurs = 0;
-			type_lazy = () -> ValidationResult5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationResult5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MisMatchReport3.NumberOfMisMatches, com.tools20022.repository.msg.MisMatchReport3.MisMatchInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.Report, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.Report);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MisMatchReport3.mmNumberOfMisMatches, com.tools20022.repository.msg.MisMatchReport3.mmMisMatchInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmReport, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MisMatchReport3";
 				definition = "Description of the mis-matched situation between two baselines or between a baseline and a data set.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getNumberOfMisMatches() {
+		return numberOfMisMatches;
+	}
+
+	public void setNumberOfMisMatches(Number numberOfMisMatches) {
+		this.numberOfMisMatches = numberOfMisMatches;
+	}
+
+	public List<ValidationResult5> getMisMatchInformation() {
+		return misMatchInformation;
+	}
+
+	public void setMisMatchInformation(List<com.tools20022.repository.msg.ValidationResult5> misMatchInformation) {
+		this.misMatchInformation = misMatchInformation;
 	}
 }

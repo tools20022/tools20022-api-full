@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddress4#EmailAddress
- * CommunicationAddress4.EmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddress4#mmEmailAddress
+ * CommunicationAddress4.mmEmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddress4#URLAddress
- * CommunicationAddress4.URLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddress4#mmURLAddress
+ * CommunicationAddress4.mmURLAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,24 +49,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV02#AdditionalInformation
- * MeetingResultDisseminationV02.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV02#mmAdditionalInformation
+ * MeetingResultDisseminationV02.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#AdditionalInformation
- * MeetingResultDisseminationV03.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#mmAdditionalInformation
+ * MeetingResultDisseminationV03.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#AdditionalInformation
- * MeetingResultDisseminationV04.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmAdditionalInformation
+ * MeetingResultDisseminationV04.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#AdditionalInformation
- * MeetingResultDisseminationV05.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmAdditionalInformation
+ * MeetingResultDisseminationV05.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommunicationAddress4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max256Text emailAddress;
 	/**
 	 * Address for electronic mail (e-mail).
 	 * <p>
@@ -93,8 +94,8 @@ public class CommunicationAddress4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#EmailAddress
-	 * ElectronicAddress.EmailAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
+	 * ElectronicAddress.mmEmailAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,20 +114,21 @@ public class CommunicationAddress4 {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> CommunicationAddress4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.EmailAddress;
 			isDerived = false;
 			xmlTag = "EmailAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected Max256Text uRLAddress;
 	/**
 	 * Address for the Universal Resource Locator (URL), eg, used over the www
 	 * (HTTP) service.
@@ -140,8 +142,8 @@ public class CommunicationAddress4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#URLAddress
-	 * ElectronicAddress.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+	 * ElectronicAddress.mmURLAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,17 +164,17 @@ public class CommunicationAddress4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute URLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> CommunicationAddress4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.URLAddress;
 			isDerived = false;
 			xmlTag = "URLAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -180,17 +182,33 @@ public class CommunicationAddress4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress4.EmailAddress, com.tools20022.repository.msg.CommunicationAddress4.URLAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress4.mmEmailAddress, com.tools20022.repository.msg.CommunicationAddress4.mmURLAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmAdditionalInformation, com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmAdditionalInformation);
 				trace_lazy = () -> ContactPoint.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV02.AdditionalInformation,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV03.AdditionalInformation, com.tools20022.repository.area.seev.MeetingResultDisseminationV04.AdditionalInformation,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommunicationAddress4";
 				definition = "Communication device number or electronic address used for communication.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max256Text getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(Max256Text emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public Max256Text getURLAddress() {
+		return uRLAddress;
+	}
+
+	public void setURLAddress(Max256Text uRLAddress) {
+		this.uRLAddress = uRLAddress;
 	}
 }

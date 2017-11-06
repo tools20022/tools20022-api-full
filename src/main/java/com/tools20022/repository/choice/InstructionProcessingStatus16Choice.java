@@ -36,26 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#Cancelled
- * InstructionProcessingStatus16Choice.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmCancelled
+ * InstructionProcessingStatus16Choice.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#AcceptedForFurtherProcessing
- * InstructionProcessingStatus16Choice.AcceptedForFurtherProcessing}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmAcceptedForFurtherProcessing
+ * InstructionProcessingStatus16Choice.mmAcceptedForFurtherProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#Rejected
- * InstructionProcessingStatus16Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmRejected
+ * InstructionProcessingStatus16Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#Pending
- * InstructionProcessingStatus16Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmPending
+ * InstructionProcessingStatus16Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#DefaultAction
- * InstructionProcessingStatus16Choice.DefaultAction}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmDefaultAction
+ * InstructionProcessingStatus16Choice.mmDefaultAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#StandingInstruction
- * InstructionProcessingStatus16Choice.StandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmStandingInstruction
+ * InstructionProcessingStatus16Choice.mmStandingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#ProprietaryStatus
- * InstructionProcessingStatus16Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmProprietaryStatus
+ * InstructionProcessingStatus16Choice.mmProprietaryStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructionProcessingStatus16Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancelledStatus4Choice cancelled;
 	/**
 	 * Provides status information related to an instruction request cancelled.
 	 * <p>
@@ -92,8 +93,8 @@ public class InstructionProcessingStatus16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,21 +115,22 @@ public class InstructionProcessingStatus16Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Cancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Canc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Provides status information related to an instruction request cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancelledStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CancelledStatus4Choice.mmObject();
 		}
 	};
+	protected AcceptedStatus5Choice acceptedForFurtherProcessing;
 	/**
 	 * Provides status information related to an instruction request that is
 	 * accepted. This means that the instruction has been received, is
@@ -143,8 +145,8 @@ public class InstructionProcessingStatus16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#AcceptedReason
-	 * CorporateActionStatusReason.AcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmAcceptedReason
+	 * CorporateActionStatusReason.mmAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,21 +167,22 @@ public class InstructionProcessingStatus16Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcceptedForFurtherProcessing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcceptedForFurtherProcessing = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmAcceptedReason;
 			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.AcceptedReason;
 			isDerived = false;
 			xmlTag = "AccptdForFrthrPrcg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForFurtherProcessing";
 			definition = "Provides status information related to an instruction request that is accepted. This means that the instruction has been received, is processable and has been validated for further processing.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AcceptedStatus5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.AcceptedStatus5Choice.mmObject();
 		}
 	};
+	protected RejectedStatus11Choice rejected;
 	/**
 	 * Provides status information related to an instruction request rejected
 	 * for further processing due to system reasons.
@@ -193,8 +196,8 @@ public class InstructionProcessingStatus16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,21 +218,22 @@ public class InstructionProcessingStatus16Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Provides status information related to an instruction request rejected for further processing due to system reasons.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RejectedStatus11Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RejectedStatus11Choice.mmObject();
 		}
 	};
+	protected PendingStatus33Choice pending;
 	/**
 	 * Provides status information related to a pending instruction.
 	 * <p>
@@ -242,8 +246,8 @@ public class InstructionProcessingStatus16Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -263,21 +267,22 @@ public class InstructionProcessingStatus16Choice {
 	 * "Provides status information related to a pending instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Provides status information related to a pending instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatus33Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingStatus33Choice.mmObject();
 		}
 	};
+	protected NoSpecifiedReason1 defaultAction;
 	/**
 	 * Default action is taken.
 	 * <p>
@@ -309,21 +314,22 @@ public class InstructionProcessingStatus16Choice {
 	 * definition} = "Default action is taken."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DefaultAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDefaultAction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
+			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfltActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultAction";
 			definition = "Default action is taken.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NoSpecifiedReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	protected NoSpecifiedReason1 standingInstruction;
 	/**
 	 * Standing instruction has been applied.
 	 * <p>
@@ -355,21 +361,22 @@ public class InstructionProcessingStatus16Choice {
 	 * definition} = "Standing instruction has been applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StandingInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStandingInstruction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
+			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
 			definition = "Standing instruction has been applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NoSpecifiedReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason2 proprietaryStatus;
 	/**
 	 * Proprietary status related to an instruction.
 	 * <p>
@@ -402,36 +409,92 @@ public class InstructionProcessingStatus16Choice {
 	 * definition} = "Proprietary status related to an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> InstructionProcessingStatus16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Proprietary status related to an instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionProcessingStatus16Choice.Cancelled, com.tools20022.repository.choice.InstructionProcessingStatus16Choice.AcceptedForFurtherProcessing,
-						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.Rejected, com.tools20022.repository.choice.InstructionProcessingStatus16Choice.Pending,
-						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.DefaultAction, com.tools20022.repository.choice.InstructionProcessingStatus16Choice.StandingInstruction,
-						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.ProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmCancelled,
+						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmAcceptedForFurtherProcessing, com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmRejected,
+						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmPending, com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmDefaultAction,
+						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmStandingInstruction, com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmProprietaryStatus);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionProcessingStatus16Choice";
 				definition = "Choice between different instruction processing statuses.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancelledStatus4Choice getCancelled() {
+		return cancelled;
+	}
+
+	public void setCancelled(com.tools20022.repository.choice.CancelledStatus4Choice cancelled) {
+		this.cancelled = cancelled;
+	}
+
+	public AcceptedStatus5Choice getAcceptedForFurtherProcessing() {
+		return acceptedForFurtherProcessing;
+	}
+
+	public void setAcceptedForFurtherProcessing(com.tools20022.repository.choice.AcceptedStatus5Choice acceptedForFurtherProcessing) {
+		this.acceptedForFurtherProcessing = acceptedForFurtherProcessing;
+	}
+
+	public RejectedStatus11Choice getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(com.tools20022.repository.choice.RejectedStatus11Choice rejected) {
+		this.rejected = rejected;
+	}
+
+	public PendingStatus33Choice getPending() {
+		return pending;
+	}
+
+	public void setPending(com.tools20022.repository.choice.PendingStatus33Choice pending) {
+		this.pending = pending;
+	}
+
+	public NoSpecifiedReason1 getDefaultAction() {
+		return defaultAction;
+	}
+
+	public void setDefaultAction(NoSpecifiedReason1 defaultAction) {
+		this.defaultAction = defaultAction;
+	}
+
+	public NoSpecifiedReason1 getStandingInstruction() {
+		return standingInstruction;
+	}
+
+	public void setStandingInstruction(NoSpecifiedReason1 standingInstruction) {
+		this.standingInstruction = standingInstruction;
+	}
+
+	public ProprietaryStatusAndReason2 getProprietaryStatus() {
+		return proprietaryStatus;
+	}
+
+	public void setProprietaryStatus(ProprietaryStatusAndReason2 proprietaryStatus) {
+		this.proprietaryStatus = proprietaryStatus;
 	}
 }

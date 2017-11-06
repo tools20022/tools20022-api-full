@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.TransactionIdentifications32;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -77,36 +78,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#TransactionIdentification
- * SecuritiesFinancingStatusAdviceV06.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmTransactionIdentification
+ * SecuritiesFinancingStatusAdviceV06.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#ProcessingStatus
- * SecuritiesFinancingStatusAdviceV06.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmProcessingStatus
+ * SecuritiesFinancingStatusAdviceV06.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#MatchingStatus
- * SecuritiesFinancingStatusAdviceV06.MatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmMatchingStatus
+ * SecuritiesFinancingStatusAdviceV06.mmMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#InferredMatchingStatus
- * SecuritiesFinancingStatusAdviceV06.InferredMatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmInferredMatchingStatus
+ * SecuritiesFinancingStatusAdviceV06.mmInferredMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#SettlementStatus
- * SecuritiesFinancingStatusAdviceV06.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmSettlementStatus
+ * SecuritiesFinancingStatusAdviceV06.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#RepoCallRequestStatus
- * SecuritiesFinancingStatusAdviceV06.RepoCallRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmRepoCallRequestStatus
+ * SecuritiesFinancingStatusAdviceV06.mmRepoCallRequestStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#TransactionDetails
- * SecuritiesFinancingStatusAdviceV06.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmTransactionDetails
+ * SecuritiesFinancingStatusAdviceV06.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#SupplementaryData
- * SecuritiesFinancingStatusAdviceV06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#mmSupplementaryData
+ * SecuritiesFinancingStatusAdviceV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06#identifier
- * SecuritiesFinancingStatusAdviceV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.034.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,6 +133,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesFinancingStatusAdviceV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifications32 transactionIdentification;
 	/**
 	 * Provides unambiguous transaction identification information.
 	 * <p>
@@ -160,30 +160,31 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#TransactionIdentification
-	 * SecuritiesFinancingStatusAdviceV07.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmTransactionIdentification
+	 * SecuritiesFinancingStatusAdviceV07.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#TransactionIdentification
-	 * SecuritiesFinancingStatusAdviceV05.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmTransactionIdentification
+	 * SecuritiesFinancingStatusAdviceV05.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Provides unambiguous transaction identification information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.TransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionIdentifications32.mmObject();
 		}
 	};
+	protected ProcessingStatus51Choice processingStatus;
 	/**
 	 * Processing status of the transaction.
 	 * <p>
@@ -209,30 +210,31 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#ProcessingStatus
-	 * SecuritiesFinancingStatusAdviceV07.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmProcessingStatus
+	 * SecuritiesFinancingStatusAdviceV07.mmProcessingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#ProcessingStatus
-	 * SecuritiesFinancingStatusAdviceV05.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmProcessingStatus
+	 * SecuritiesFinancingStatusAdviceV05.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Processing status of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.ProcessingStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.ProcessingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmProcessingStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmProcessingStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus51Choice.mmObject();
 		}
 	};
+	protected MatchingStatus26Choice matchingStatus;
 	/**
 	 * Provides the matching status of the instruction.
 	 * <p>
@@ -258,30 +260,31 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#MatchingStatus
-	 * SecuritiesFinancingStatusAdviceV07.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmMatchingStatus
+	 * SecuritiesFinancingStatusAdviceV07.mmMatchingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#MatchingStatus
-	 * SecuritiesFinancingStatusAdviceV05.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmMatchingStatus
+	 * SecuritiesFinancingStatusAdviceV05.mmMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MatchingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMatchingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.MatchingStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.MatchingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmMatchingStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmMatchingStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus26Choice.mmObject();
 		}
 	};
+	protected MatchingStatus26Choice inferredMatchingStatus;
 	/**
 	 * Provides the matching status of an instruction as per the account
 	 * servicer based on an allegement. At this time no matching took place on
@@ -311,30 +314,31 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#InferredMatchingStatus
-	 * SecuritiesFinancingStatusAdviceV07.InferredMatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmInferredMatchingStatus
+	 * SecuritiesFinancingStatusAdviceV07.mmInferredMatchingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#InferredMatchingStatus
-	 * SecuritiesFinancingStatusAdviceV05.InferredMatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmInferredMatchingStatus
+	 * SecuritiesFinancingStatusAdviceV05.mmInferredMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InferredMatchingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInferredMatchingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.InferredMatchingStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.InferredMatchingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmInferredMatchingStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmInferredMatchingStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus26Choice.mmObject();
 		}
 	};
+	protected SettlementStatus18Choice settlementStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -360,30 +364,31 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#SettlementStatus
-	 * SecuritiesFinancingStatusAdviceV07.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmSettlementStatus
+	 * SecuritiesFinancingStatusAdviceV07.mmSettlementStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#SettlementStatus
-	 * SecuritiesFinancingStatusAdviceV05.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmSettlementStatus
+	 * SecuritiesFinancingStatusAdviceV05.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.SettlementStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.SettlementStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmSettlementStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmSettlementStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus18Choice.mmObject();
 		}
 	};
+	protected RepoCallRequestStatus7Choice repoCallRequestStatus;
 	/**
 	 * Provides the status of the repurchase agreement call request.
 	 * <p>
@@ -410,30 +415,31 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#RepoCallRequestStatus
-	 * SecuritiesFinancingStatusAdviceV07.RepoCallRequestStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmRepoCallRequestStatus
+	 * SecuritiesFinancingStatusAdviceV07.mmRepoCallRequestStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#RepoCallRequestStatus
-	 * SecuritiesFinancingStatusAdviceV05.RepoCallRequestStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmRepoCallRequestStatus
+	 * SecuritiesFinancingStatusAdviceV05.mmRepoCallRequestStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RepoCallRequestStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRepoCallRequestStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RepoCallReqSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoCallRequestStatus";
 			definition = "Provides the status of the repurchase agreement call request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.RepoCallRequestStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.RepoCallRequestStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmRepoCallRequestStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmRepoCallRequestStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RepoCallRequestStatus7Choice.mmObject();
 		}
 	};
+	protected SecuritiesFinancingTransactionDetails26 transactionDetails;
 	/**
 	 * Identifies the details of the transaction.
 	 * <p>
@@ -459,30 +465,31 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#TransactionDetails
-	 * SecuritiesFinancingStatusAdviceV07.TransactionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmTransactionDetails
+	 * SecuritiesFinancingStatusAdviceV07.mmTransactionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#TransactionDetails
-	 * SecuritiesFinancingStatusAdviceV05.TransactionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmTransactionDetails
+	 * SecuritiesFinancingStatusAdviceV05.mmTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.TransactionDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.TransactionDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmTransactionDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmTransactionDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesFinancingTransactionDetails26.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -511,54 +518,27 @@ public class SecuritiesFinancingStatusAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#SupplementaryData
-	 * SecuritiesFinancingStatusAdviceV07.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07#mmSupplementaryData
+	 * SecuritiesFinancingStatusAdviceV07.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#SupplementaryData
-	 * SecuritiesFinancingStatusAdviceV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05#mmSupplementaryData
+	 * SecuritiesFinancingStatusAdviceV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "034"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "034";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -568,20 +548,91 @@ public class SecuritiesFinancingStatusAdviceV06 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingStatusAdviceV06";
 				definition = "Scope\r\nAn securities financing transaction account servicer sends a SecuritiesFinancingStatusAdvice to an account owner to advise the status of a securities financing transaction previously instructed by the account owner.\r\nThe status advice may be sent as a response to the request of the account owner or not.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants\r\n- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or\r\n- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
-				previousVersion_lazy = () -> SecuritiesFinancingStatusAdviceV05.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingStatusAdviceV07.mmObject());
+				previousVersion_lazy = () -> SecuritiesFinancingStatusAdviceV05.mmObject();
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesFincgStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.TransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.ProcessingStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.MatchingStatus,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.InferredMatchingStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.SettlementStatus,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.RepoCallRequestStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.TransactionDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmProcessingStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmMatchingStatus,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmInferredMatchingStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmSettlementStatus,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmRepoCallRequestStatus, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "034";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifications32 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(TransactionIdentifications32 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public ProcessingStatus51Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus51Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public MatchingStatus26Choice getMatchingStatus() {
+		return matchingStatus;
+	}
+
+	public void setMatchingStatus(MatchingStatus26Choice matchingStatus) {
+		this.matchingStatus = matchingStatus;
+	}
+
+	public MatchingStatus26Choice getInferredMatchingStatus() {
+		return inferredMatchingStatus;
+	}
+
+	public void setInferredMatchingStatus(MatchingStatus26Choice inferredMatchingStatus) {
+		this.inferredMatchingStatus = inferredMatchingStatus;
+	}
+
+	public SettlementStatus18Choice getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(SettlementStatus18Choice settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public RepoCallRequestStatus7Choice getRepoCallRequestStatus() {
+		return repoCallRequestStatus;
+	}
+
+	public void setRepoCallRequestStatus(RepoCallRequestStatus7Choice repoCallRequestStatus) {
+		this.repoCallRequestStatus = repoCallRequestStatus;
+	}
+
+	public SecuritiesFinancingTransactionDetails26 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(SecuritiesFinancingTransactionDetails26 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

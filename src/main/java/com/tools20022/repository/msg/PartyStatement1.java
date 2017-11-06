@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.ISODate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides system date for all of the changes occurred for an entity.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyStatement1#SystemDate
- * PartyStatement1.SystemDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyStatement1#Change
- * PartyStatement1.Change}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyStatement1#mmSystemDate
+ * PartyStatement1.mmSystemDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyStatement1#mmChange
+ * PartyStatement1.mmChange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate systemDate;
 	/**
 	 * Date for which the statement is valid.
 	 * <p>
@@ -85,7 +87,7 @@ public class PartyStatement1 {
 	 * definition} = "Date for which the statement is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyStatement1.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class PartyStatement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the statement is valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyReferenceDataChange1> change;
 	/**
 	 * Provides information on the actual change occurred to a party.
 	 * <p>
@@ -126,7 +129,7 @@ public class PartyStatement1 {
 	 * "Provides information on the actual change occurred to a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Change = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyStatement1.mmObject();
 			isDerived = false;
@@ -135,21 +138,37 @@ public class PartyStatement1 {
 			name = "Change";
 			definition = "Provides information on the actual change occurred to a party.";
 			minOccurs = 0;
-			type_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyReferenceDataChange1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyStatement1.SystemDate, com.tools20022.repository.msg.PartyStatement1.Change);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyStatement1.mmSystemDate, com.tools20022.repository.msg.PartyStatement1.mmChange);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyStatement1";
 				definition = "Provides system date for all of the changes occurred for an entity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getSystemDate() {
+		return systemDate;
+	}
+
+	public void setSystemDate(ISODate systemDate) {
+		this.systemDate = systemDate;
+	}
+
+	public List<PartyReferenceDataChange1> getChange() {
+		return change;
+	}
+
+	public void setChange(List<com.tools20022.repository.msg.PartyReferenceDataChange1> change) {
+		this.change = change;
 	}
 }

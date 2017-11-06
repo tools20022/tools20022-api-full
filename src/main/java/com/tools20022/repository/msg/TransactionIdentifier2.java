@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionIdentifier2#ReconciliationDate
- * TransactionIdentifier2.ReconciliationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionIdentifier2#mmReconciliationDate
+ * TransactionIdentifier2.mmReconciliationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionIdentifier2#ReconciliationIdentification
- * TransactionIdentifier2.ReconciliationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionIdentifier2#mmReconciliationIdentification
+ * TransactionIdentifier2.mmReconciliationIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionIdentifier2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate reconciliationDate;
 	/**
 	 * Date of the reconciliation.<br>
 	 * It correspond to the ISO 8583 field number 28 for the versions 1993 and
@@ -101,7 +102,7 @@ public class TransactionIdentifier2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionIdentifier2.mmObject();
 			isDerived = false;
@@ -109,11 +110,12 @@ public class TransactionIdentifier2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationDate";
 			definition = "Date of the reconciliation.\r\nIt correspond to the ISO 8583 field number 28 for the versions 1993 and 2003.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text reconciliationIdentification;
 	/**
 	 * Identification of the reconciliation.<br>
 	 * It correspond to the ISO 8583 field number 29 for the versions 1993 and
@@ -128,8 +130,8 @@ public class TransactionIdentifier2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#ReconciliationIdentification
-	 * ReconciliationTransaction.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmReconciliationIdentification
+	 * ReconciliationTransaction.mmReconciliationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,17 +152,17 @@ public class TransactionIdentifier2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> TransactionIdentifier2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.ReconciliationIdentification;
 			isDerived = false;
 			xmlTag = "RcncltnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation.\r\nIt correspond to the ISO 8583 field number 29 for the versions 1993 and 2003.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -168,9 +170,9 @@ public class TransactionIdentifier2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifier2.ReconciliationDate, com.tools20022.repository.msg.TransactionIdentifier2.ReconciliationIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifier2.mmReconciliationDate, com.tools20022.repository.msg.TransactionIdentifier2.mmReconciliationIdentification);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionIdentifier2";
 				definition = "Identification of the reconciliation period between the acquirer and the issuer or their respective agents.";
@@ -178,5 +180,21 @@ public class TransactionIdentifier2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getReconciliationDate() {
+		return reconciliationDate;
+	}
+
+	public void setReconciliationDate(ISODate reconciliationDate) {
+		this.reconciliationDate = reconciliationDate;
+	}
+
+	public Max35Text getReconciliationIdentification() {
+		return reconciliationIdentification;
+	}
+
+	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+		this.reconciliationIdentification = reconciliationIdentification;
 	}
 }

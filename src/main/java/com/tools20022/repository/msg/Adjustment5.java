@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment5#Direction
- * Adjustment5.Direction}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment5#Amount
- * Adjustment5.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment5#mmDirection
+ * Adjustment5.mmDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment5#mmAmount
+ * Adjustment5.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Adjustment5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdjustmentDirection1Code direction;
 	/**
 	 * Specifies whether the adjustment must be substracted or added to the
 	 * total amount.
@@ -77,8 +78,8 @@ public class Adjustment5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Direction
-	 * Adjustment.Direction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmDirection
+	 * Adjustment.mmDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class Adjustment5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Direction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmDirection;
 			componentContext_lazy = () -> Adjustment5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Direction;
 			isDerived = false;
 			xmlTag = "Drctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direction";
 			definition = "Specifies whether the adjustment must be substracted or added to the total amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Specifies the monetary amount of the adjustment.
 	 * <p>
@@ -125,8 +127,8 @@ public class Adjustment5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,17 +146,17 @@ public class Adjustment5 {
 	 * definition} = "Specifies the monetary amount of the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Adjustment5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specifies the monetary amount of the adjustment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -162,14 +164,30 @@ public class Adjustment5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment5.Direction, com.tools20022.repository.msg.Adjustment5.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment5.mmDirection, com.tools20022.repository.msg.Adjustment5.mmAmount);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Adjustment5";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdjustmentDirection1Code getDirection() {
+		return direction;
+	}
+
+	public void setDirection(AdjustmentDirection1Code direction) {
+		this.direction = direction;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

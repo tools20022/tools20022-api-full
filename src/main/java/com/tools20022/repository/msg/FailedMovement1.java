@@ -38,24 +38,24 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FailedMovement1#CashAmountOrSecuritiesQuantityRule
- * FailedMovement1.CashAmountOrSecuritiesQuantityRule}</li>
+ * {@linkplain com.tools20022.repository.msg.FailedMovement1#mmCashAmountOrSecuritiesQuantityRule
+ * FailedMovement1.mmCashAmountOrSecuritiesQuantityRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FailedMovement1#CashAmount
- * FailedMovement1.CashAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FailedMovement1#mmCashAmount
+ * FailedMovement1.mmCashAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FailedMovement1#SecuritiesQuantity
- * FailedMovement1.SecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.FailedMovement1#mmSecuritiesQuantity
+ * FailedMovement1.mmSecuritiesQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FailedMovement1#SecurityIdentification
- * FailedMovement1.SecurityIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FailedMovement1#Reason
- * FailedMovement1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.FailedMovement1#mmSecurityIdentification
+ * FailedMovement1.mmSecurityIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FailedMovement1#mmReason
+ * FailedMovement1.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,6 +81,7 @@ import java.util.function.Supplier;
 public class FailedMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount cashAmount;
 	/**
 	 * Amount of cash.
 	 * <p>
@@ -94,8 +95,8 @@ public class FailedMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Amount
-	 * PaymentObligation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAmount
+	 * PaymentObligation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,20 +115,21 @@ public class FailedMovement1 {
 	 * definition} = "Amount of cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
 			componentContext_lazy = () -> FailedMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Amount;
 			isDerived = false;
 			xmlTag = "CshAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmount";
 			definition = "Amount of cash.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice securitiesQuantity;
 	/**
 	 * Quantity of the financial instrument.
 	 * <p>
@@ -141,8 +143,8 @@ public class FailedMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,20 +163,21 @@ public class FailedMovement1 {
 	 * definition} = "Quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> FailedMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "SctiesQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Quantity of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification7 securityIdentification;
 	/**
 	 * Identification of the financial instrument.
 	 * <p>
@@ -188,8 +191,8 @@ public class FailedMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,20 +211,21 @@ public class FailedMovement1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FailedMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected FailedSettlementReason1FormatChoice reason;
 	/**
 	 * The reason for the settlement failure.
 	 * <p>
@@ -235,8 +239,8 @@ public class FailedMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#MovementFailureReason
-	 * CorporateActionStatusReason.MovementFailureReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmMovementFailureReason
+	 * CorporateActionStatusReason.mmMovementFailureReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -255,17 +259,17 @@ public class FailedMovement1 {
 	 * definition} = "The reason for the settlement failure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmMovementFailureReason;
 			componentContext_lazy = () -> FailedMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.MovementFailureReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "The reason for the settlement failure.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FailedSettlementReason1FormatChoice.mmObject();
 		}
 	};
@@ -277,11 +281,12 @@ public class FailedMovement1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.FailedMovement1#CashAmount
-	 * FailedMovement1.CashAmount}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FailedMovement1#SecuritiesQuantity
-	 * FailedMovement1.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.FailedMovement1#mmCashAmount
+	 * FailedMovement1.mmCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FailedMovement1#mmSecuritiesQuantity
+	 * FailedMovement1.mmSecuritiesQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -299,23 +304,23 @@ public class FailedMovement1 {
 	 * definition} = "Either CashAmount or SecuritiesQuantity must be present."</li>
 	 * </ul>
 	 */
-	public static final MMXor CashAmountOrSecuritiesQuantityRule = new MMXor() {
+	public static final MMXor mmCashAmountOrSecuritiesQuantityRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmountOrSecuritiesQuantityRule";
 			definition = "Either CashAmount or SecuritiesQuantity must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.CashAmount, com.tools20022.repository.msg.FailedMovement1.SecuritiesQuantity);
 			messageComponent_lazy = () -> FailedMovement1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.mmCashAmount, com.tools20022.repository.msg.FailedMovement1.mmSecuritiesQuantity);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.CashAmount, com.tools20022.repository.msg.FailedMovement1.SecuritiesQuantity,
-						com.tools20022.repository.msg.FailedMovement1.SecurityIdentification, com.tools20022.repository.msg.FailedMovement1.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.mmCashAmount, com.tools20022.repository.msg.FailedMovement1.mmSecuritiesQuantity,
+						com.tools20022.repository.msg.FailedMovement1.mmSecurityIdentification, com.tools20022.repository.msg.FailedMovement1.mmReason);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -326,9 +331,41 @@ public class FailedMovement1 {
 				})).get();
 				name = "FailedMovement1";
 				definition = "Provides information about  a movement that failed the settlement.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.CashAmountOrSecuritiesQuantityRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.mmCashAmountOrSecuritiesQuantityRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getCashAmount() {
+		return cashAmount;
+	}
+
+	public void setCashAmount(ActiveCurrencyAndAmount cashAmount) {
+		this.cashAmount = cashAmount;
+	}
+
+	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
+		return securitiesQuantity;
+	}
+
+	public void setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
+		this.securitiesQuantity = securitiesQuantity;
+	}
+
+	public SecurityIdentification7 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public FailedSettlementReason1FormatChoice getReason() {
+		return reason;
+	}
+
+	public void setReason(FailedSettlementReason1FormatChoice reason) {
+		this.reason = reason;
 	}
 }

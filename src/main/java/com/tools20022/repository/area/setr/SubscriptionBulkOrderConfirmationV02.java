@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -68,36 +69,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#MasterReference
- * SubscriptionBulkOrderConfirmationV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmMasterReference
+ * SubscriptionBulkOrderConfirmationV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#PoolReference
- * SubscriptionBulkOrderConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmPoolReference
+ * SubscriptionBulkOrderConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#PreviousReference
- * SubscriptionBulkOrderConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmPreviousReference
+ * SubscriptionBulkOrderConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#RelatedReference
- * SubscriptionBulkOrderConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmRelatedReference
+ * SubscriptionBulkOrderConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#BulkExecutionDetails
- * SubscriptionBulkOrderConfirmationV02.BulkExecutionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmBulkExecutionDetails
+ * SubscriptionBulkOrderConfirmationV02.mmBulkExecutionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#IntermediaryDetails
- * SubscriptionBulkOrderConfirmationV02.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmIntermediaryDetails
+ * SubscriptionBulkOrderConfirmationV02.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#CopyDetails
- * SubscriptionBulkOrderConfirmationV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmCopyDetails
+ * SubscriptionBulkOrderConfirmationV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#Extension
- * SubscriptionBulkOrderConfirmationV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmExtension
+ * SubscriptionBulkOrderConfirmationV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#identifier
- * SubscriptionBulkOrderConfirmationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.009.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,6 +120,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubscriptionBulkOrderConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference3 masterReference;
 	/**
 	 * Reference assigned to a set of orders or trades in order to link them
 	 * together.
@@ -147,17 +147,18 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -181,17 +182,18 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -215,7 +217,7 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,6 +227,7 @@ public class SubscriptionBulkOrderConfirmationV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -249,17 +252,18 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected SubscriptionBulkExecution2 bulkExecutionDetails;
 	/**
 	 * General information related to the execution of investment orders.
 	 * <p>
@@ -284,17 +288,18 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * "General information related to the execution of investment orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BulkExecutionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBulkExecutionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BlkExctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkExecutionDetails";
 			definition = "General information related to the execution of investment orders.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SubscriptionBulkExecution2.mmObject();
 		}
 	};
+	protected List<Intermediary4> intermediaryDetails;
 	/**
 	 * Information related to an intermediary.
 	 * <p>
@@ -317,17 +322,18 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * definition} = "Information related to an intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IntermediaryDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntermediaryDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrmyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryDetails";
 			definition = "Information related to an intermediary.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> Intermediary4.mmObject();
 		}
 	};
+	protected CopyInformation1 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -352,17 +358,18 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * "Information provided when the message is a copy of a previous message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation1.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -388,7 +395,7 @@ public class SubscriptionBulkOrderConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -396,33 +403,6 @@ public class SubscriptionBulkOrderConfirmationV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "009";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -438,14 +418,85 @@ public class SubscriptionBulkOrderConfirmationV02 {
 				xmlTag = "setr.009.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.009.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.MasterReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.PoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.RelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.BulkExecutionDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.IntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmMasterReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmBulkExecutionDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "009";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference3 getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(AdditionalReference3 masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public List<AdditionalReference3> getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference3 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference3 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public SubscriptionBulkExecution2 getBulkExecutionDetails() {
+		return bulkExecutionDetails;
+	}
+
+	public void setBulkExecutionDetails(SubscriptionBulkExecution2 bulkExecutionDetails) {
+		this.bulkExecutionDetails = bulkExecutionDetails;
+	}
+
+	public List<Intermediary4> getIntermediaryDetails() {
+		return intermediaryDetails;
+	}
+
+	public void setIntermediaryDetails(List<Intermediary4> intermediaryDetails) {
+		this.intermediaryDetails = intermediaryDetails;
+	}
+
+	public CopyInformation1 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation1 copyDetails) {
+		this.copyDetails = copyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

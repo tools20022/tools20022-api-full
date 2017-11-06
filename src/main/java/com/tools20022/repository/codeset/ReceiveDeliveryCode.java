@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode#Delivery
- * ReceiveDeliveryCode.Delivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode#mmDelivery
+ * ReceiveDeliveryCode.mmDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode#Receive
- * ReceiveDeliveryCode.Receive}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode#mmReceive
+ * ReceiveDeliveryCode.mmReceive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class ReceiveDeliveryCode {
 	 * "Financial instruments will be debited from the safekeeping account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Delivery = new MMCode() {
+	public static final MMCode mmDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Delivery";
@@ -122,7 +122,7 @@ public class ReceiveDeliveryCode {
 	 * "Financial instruments will be credited to the safekeeping account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Receive = new MMCode() {
+	public static final MMCode mmReceive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Receive";
@@ -135,12 +135,12 @@ public class ReceiveDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DELI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReceiveDeliveryCode";
 				definition = "Specifies whether the settlement transaction is a delivery or receipt.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReceiveDeliveryCode.Delivery, com.tools20022.repository.codeset.ReceiveDeliveryCode.Receive);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReceiveDeliveryCode.mmDelivery, com.tools20022.repository.codeset.ReceiveDeliveryCode.mmReceive);
 				derivation_lazy = () -> Arrays.asList(ReceiveDelivery1Code.mmObject());
 			}
 		});

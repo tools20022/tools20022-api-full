@@ -35,21 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification87#Country
- * MarketIdentification87.Country}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification87#ClassificationType
- * MarketIdentification87.ClassificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification87#mmCountry
+ * MarketIdentification87.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification87#SettlementPurpose
- * MarketIdentification87.SettlementPurpose}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification87#mmClassificationType
+ * MarketIdentification87.mmClassificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification87#mmSettlementPurpose
+ * MarketIdentification87.mmSettlementPurpose}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketIdentification87 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country in which the financial instrument is to be settled.
 	 * <p>
@@ -91,7 +93,7 @@ public class MarketIdentification87 {
 	 * "Country in which the financial instrument is to be settled. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketIdentification87.mmObject();
 			isDerived = false;
@@ -99,11 +101,12 @@ public class MarketIdentification87 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the financial instrument is to be settled. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ClassificationType1Choice classificationType;
 	/**
 	 * Type of instrument covered by the SSI instruction.
 	 * <p>
@@ -131,7 +134,7 @@ public class MarketIdentification87 {
 	 * definition} = "Type of instrument covered by the SSI instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClassificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MarketIdentification87.mmObject();
 			isDerived = false;
@@ -139,12 +142,13 @@ public class MarketIdentification87 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Type of instrument covered by the SSI instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ClassificationType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ClassificationType1Choice.mmObject();
 		}
 	};
+	protected Purpose3Choice settlementPurpose;
 	/**
 	 * Purpose of the instruction, for example, whether for regular payments,
 	 * margin payments related to a collateral movement, securities settlements
@@ -175,7 +179,7 @@ public class MarketIdentification87 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementPurpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementPurpose = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MarketIdentification87.mmObject();
 			isDerived = false;
@@ -183,24 +187,48 @@ public class MarketIdentification87 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPurpose";
 			definition = "Purpose of the instruction,  for example, whether for regular payments, margin payments related to a collateral movement, securities settlements , securities lending. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Purpose3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Purpose3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification87.Country, com.tools20022.repository.msg.MarketIdentification87.ClassificationType,
-						com.tools20022.repository.msg.MarketIdentification87.SettlementPurpose);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification87.mmCountry, com.tools20022.repository.msg.MarketIdentification87.mmClassificationType,
+						com.tools20022.repository.msg.MarketIdentification87.mmSettlementPurpose);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentification87";
 				definition = "Identifies the market and purpose for the settlement. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public ClassificationType1Choice getClassificationType() {
+		return classificationType;
+	}
+
+	public void setClassificationType(ClassificationType1Choice classificationType) {
+		this.classificationType = classificationType;
+	}
+
+	public Purpose3Choice getSettlementPurpose() {
+		return settlementPurpose;
+	}
+
+	public void setSettlementPurpose(Purpose3Choice settlementPurpose) {
+		this.settlementPurpose = settlementPurpose;
 	}
 }

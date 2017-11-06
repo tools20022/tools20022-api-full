@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress11#Name
- * NameAndAddress11.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress11#Address
- * NameAndAddress11.Address}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress11#mmName
+ * NameAndAddress11.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndAddress11#mmAddress
+ * NameAndAddress11.mmAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NameAndAddress11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINMax35Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -77,8 +78,8 @@ public class NameAndAddress11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class NameAndAddress11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> NameAndAddress11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax35Text.mmObject();
 		}
 	};
+	protected PostalAddress7 address;
 	/**
 	 * Postal address of a party.
 	 * <p>
@@ -144,33 +146,49 @@ public class NameAndAddress11 {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Address = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NameAndAddress11.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> NameAndAddress11.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Postal address of a party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NameAndAddress11.Name, com.tools20022.repository.msg.NameAndAddress11.Address);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NameAndAddress11.mmName, com.tools20022.repository.msg.NameAndAddress11.mmAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NameAndAddress11";
 				definition = "Information that locates and identifies a party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINMax35Text getName() {
+		return name;
+	}
+
+	public void setName(RestrictedFINMax35Text name) {
+		this.name = name;
+	}
+
+	public PostalAddress7 getAddress() {
+		return address;
+	}
+
+	public void setAddress(com.tools20022.repository.msg.PostalAddress7 address) {
+		this.address = address;
 	}
 }

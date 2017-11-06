@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#VoteInstructionOrShareholder
- * VoteInstructionForMeetingResolution.VoteInstructionOrShareholder}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#mmVoteInstructionOrShareholder
+ * VoteInstructionForMeetingResolution.mmVoteInstructionOrShareholder}</li>
  * </ul>
  * </li>
  * <li>
@@ -43,11 +43,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#VoteIndication
- * VoteInstructionForMeetingResolution.VoteIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#mmVoteIndication
+ * VoteInstructionForMeetingResolution.mmVoteIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#Shareholder
- * VoteInstructionForMeetingResolution.Shareholder}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#mmShareholder
+ * VoteInstructionForMeetingResolution.mmShareholder}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VoteInstructionForMeetingResolution {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected VoteInstructionAtMeeting1Code voteIndication;
 	/**
 	 * Specifies the vote recommendation for resolutions added during the
 	 * meeting.
@@ -86,8 +87,8 @@ public class VoteInstructionForMeetingResolution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#VoteForMeetingResolution
-	 * VoteInstructionRequest.VoteForMeetingResolution}</li>
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteForMeetingResolution
+	 * VoteInstructionRequest.mmVoteForMeetingResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class VoteInstructionForMeetingResolution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteIndication = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> VoteInstructionForMeetingResolution.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.VoteForMeetingResolution;
 			isDerived = false;
 			xmlTag = "VoteIndctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteIndication";
 			definition = "Specifies the vote recommendation for resolutions added during the meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
 		}
 	};
+	protected NameAndAddress5 shareholder;
 	/**
 	 * Specifies the name and address of the shareholder to whom the rights to
 	 * vote are transferred for resolutions added during the meeting.
@@ -134,8 +136,8 @@ public class VoteInstructionForMeetingResolution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,19 +158,19 @@ public class VoteInstructionForMeetingResolution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Shareholder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmShareholder = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> VoteInstructionForMeetingResolution.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Shrhldr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Shareholder";
 			definition = "Specifies the name and address of the shareholder to whom the rights to vote are transferred for resolutions added during the meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
 		}
 	};
 	/**
@@ -180,11 +182,11 @@ public class VoteInstructionForMeetingResolution {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#VoteIndication
-	 * VoteInstructionForMeetingResolution.VoteIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#mmVoteIndication
+	 * VoteInstructionForMeetingResolution.mmVoteIndication}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#Shareholder
-	 * VoteInstructionForMeetingResolution.Shareholder}</li>
+	 * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution#mmShareholder
+	 * VoteInstructionForMeetingResolution.mmShareholder}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -203,28 +205,44 @@ public class VoteInstructionForMeetingResolution {
 	 * "Either VoteInstruction or Shareholder must be present but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor VoteInstructionOrShareholder = new MMXor() {
+	public static final MMXor mmVoteInstructionOrShareholder = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionOrShareholder";
 			definition = "Either VoteInstruction or Shareholder must be present but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution.VoteIndication, com.tools20022.repository.msg.VoteInstructionForMeetingResolution.Shareholder);
 			messageComponent_lazy = () -> VoteInstructionForMeetingResolution.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmVoteIndication, com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmShareholder);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution.VoteIndication, com.tools20022.repository.msg.VoteInstructionForMeetingResolution.Shareholder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmVoteIndication, com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmShareholder);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VoteInstructionForMeetingResolution";
 				definition = "Vote instruction applying to resolution added during the meeting.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution.VoteInstructionOrShareholder);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmVoteInstructionOrShareholder);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public VoteInstructionAtMeeting1Code getVoteIndication() {
+		return voteIndication;
+	}
+
+	public void setVoteIndication(VoteInstructionAtMeeting1Code voteIndication) {
+		this.voteIndication = voteIndication;
+	}
+
+	public NameAndAddress5 getShareholder() {
+		return shareholder;
+	}
+
+	public void setShareholder(com.tools20022.repository.msg.NameAndAddress5 shareholder) {
+		this.shareholder = shareholder;
 	}
 }

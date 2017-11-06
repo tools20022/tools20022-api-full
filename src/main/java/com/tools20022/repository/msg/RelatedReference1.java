@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedReference1#TransactionUniqueIdentifier
- * RelatedReference1.TransactionUniqueIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedReference1#mmTransactionUniqueIdentifier
+ * RelatedReference1.mmTransactionUniqueIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RelatedReference1#MessageReference
- * RelatedReference1.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RelatedReference1#mmMessageReference
+ * RelatedReference1.mmMessageReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RelatedReference1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max105Text transactionUniqueIdentifier;
 	/**
 	 * Unique transaction identifier assigned by the local application.
 	 * <p>
@@ -77,8 +78,8 @@ public class RelatedReference1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#TransactionIdentification
-	 * PaymentIdentification.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmTransactionIdentification
+	 * PaymentIdentification.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class RelatedReference1 {
 	 * "Unique transaction identifier assigned by the local application."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionUniqueIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionUniqueIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> RelatedReference1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "TxUnqIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionUniqueIdentifier";
 			definition = "Unique transaction identifier assigned by the local application.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max35Text messageReference;
 	/**
 	 * Message reference assigned by the original message sender.
 	 * <p>
@@ -124,8 +126,8 @@ public class RelatedReference1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#TransactionIdentification
-	 * PaymentIdentification.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmTransactionIdentification
+	 * PaymentIdentification.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class RelatedReference1 {
 	 * "Message reference assigned by the original message sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> RelatedReference1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "MsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Message reference assigned by the original message sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class RelatedReference1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelatedReference1.TransactionUniqueIdentifier, com.tools20022.repository.msg.RelatedReference1.MessageReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelatedReference1.mmTransactionUniqueIdentifier, com.tools20022.repository.msg.RelatedReference1.mmMessageReference);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RelatedReference1";
 				definition = "Reference of the message previously received and for which the delivery status is notified.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max105Text getTransactionUniqueIdentifier() {
+		return transactionUniqueIdentifier;
+	}
+
+	public void setTransactionUniqueIdentifier(Max105Text transactionUniqueIdentifier) {
+		this.transactionUniqueIdentifier = transactionUniqueIdentifier;
+	}
+
+	public Max35Text getMessageReference() {
+		return messageReference;
+	}
+
+	public void setMessageReference(Max35Text messageReference) {
+		this.messageReference = messageReference;
 	}
 }

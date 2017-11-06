@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,24 +75,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#MessageIdentification
- * InvestmentFundReportRequestV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#mmMessageIdentification
+ * InvestmentFundReportRequestV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#PreviousReference
- * InvestmentFundReportRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#mmPreviousReference
+ * InvestmentFundReportRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#RelatedReference
- * InvestmentFundReportRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#mmRelatedReference
+ * InvestmentFundReportRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#FundProcessingPassportReport
- * InvestmentFundReportRequestV02.FundProcessingPassportReport}</li>
+ * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#mmFundProcessingPassportReport
+ * InvestmentFundReportRequestV02.mmFundProcessingPassportReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#identifier
- * InvestmentFundReportRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code reda.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundReportRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -133,17 +133,18 @@ public class InvestmentFundReportRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -167,17 +168,18 @@ public class InvestmentFundReportRequestV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -202,17 +204,18 @@ public class InvestmentFundReportRequestV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<FundParameters3Choice> fundProcessingPassportReport;
 	/**
 	 * Parameters for which the fund processing passport report is requested.
 	 * <p>
@@ -237,7 +240,7 @@ public class InvestmentFundReportRequestV02 {
 	 * "Parameters for which the fund processing passport report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FundProcessingPassportReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFundProcessingPassportReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FPPRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,33 +248,6 @@ public class InvestmentFundReportRequestV02 {
 			definition = "Parameters for which the fund processing passport report is requested.";
 			minOccurs = 1;
 			complexType_lazy = () -> FundParameters3Choice.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "reda"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "reda";
-			messageFunctionality = "005";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -285,11 +261,51 @@ public class InvestmentFundReportRequestV02 {
 				rootElement = "Document";
 				xmlTag = "InvstmtFndRptReq";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.MessageIdentification, com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.PreviousReference,
-						com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.RelatedReference, com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.FundProcessingPassportReport);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmMessageIdentification,
+						com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmPreviousReference, com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmRelatedReference,
+						com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmFundProcessingPassportReport);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "reda";
+						messageFunctionality = "005";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference3 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference3 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public List<FundParameters3Choice> getFundProcessingPassportReport() {
+		return fundProcessingPassportReport;
+	}
+
+	public void setFundProcessingPassportReport(List<FundParameters3Choice> fundProcessingPassportReport) {
+		this.fundProcessingPassportReport = fundProcessingPassportReport;
 	}
 }

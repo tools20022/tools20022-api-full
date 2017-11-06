@@ -32,21 +32,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#StreetName
- * RegistrationCode.StreetName}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmStreetName
+ * RegistrationCode.mmStreetName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#Registered
- * RegistrationCode.Registered}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RegistrationCode#PartyHold
- * RegistrationCode.PartyHold}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RegistrationCode#CSDHold
- * RegistrationCode.CSDHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmRegistered
+ * RegistrationCode.mmRegistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#ConditionalDelivery
- * RegistrationCode.ConditionalDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmPartyHold
+ * RegistrationCode.mmPartyHold}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RegistrationCode#mmCSDHold
+ * RegistrationCode.mmCSDHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#CSDValidation
- * RegistrationCode.CSDValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmConditionalDelivery
+ * RegistrationCode.mmConditionalDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmCSDValidation
+ * RegistrationCode.mmCSDValidation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -109,7 +110,7 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode StreetName = new MMCode() {
+	public static final MMCode mmStreetName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StreetName";
@@ -143,7 +144,7 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Registered = new MMCode() {
+	public static final MMCode mmRegistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Registered";
@@ -175,7 +176,7 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartyHold = new MMCode() {
+	public static final MMCode mmPartyHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartyHold";
@@ -208,7 +209,7 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CSDHold = new MMCode() {
+	public static final MMCode mmCSDHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CSDHold";
@@ -242,7 +243,7 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalDelivery = new MMCode() {
+	public static final MMCode mmConditionalDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConditionalDelivery";
@@ -276,7 +277,7 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CSDValidation = new MMCode() {
+	public static final MMCode mmCSDValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CSDValidation";
@@ -289,13 +290,14 @@ public class RegistrationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NREG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegistrationCode";
 				definition = "Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegistrationCode.StreetName, com.tools20022.repository.codeset.RegistrationCode.Registered, com.tools20022.repository.codeset.RegistrationCode.PartyHold,
-						com.tools20022.repository.codeset.RegistrationCode.CSDHold, com.tools20022.repository.codeset.RegistrationCode.ConditionalDelivery, com.tools20022.repository.codeset.RegistrationCode.CSDValidation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegistrationCode.mmStreetName, com.tools20022.repository.codeset.RegistrationCode.mmRegistered,
+						com.tools20022.repository.codeset.RegistrationCode.mmPartyHold, com.tools20022.repository.codeset.RegistrationCode.mmCSDHold, com.tools20022.repository.codeset.RegistrationCode.mmConditionalDelivery,
+						com.tools20022.repository.codeset.RegistrationCode.mmCSDValidation);
 				derivation_lazy = () -> Arrays.asList(Registration1Code.mmObject(), Registration2Code.mmObject());
 			}
 		});

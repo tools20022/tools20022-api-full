@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderType1#Structured
- * FundOrderType1.Structured}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundOrderType1#mmStructured
+ * FundOrderType1.mmStructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundOrderType1#AdditionalInformation
- * FundOrderType1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderType1#mmAdditionalInformation
+ * FundOrderType1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundOrderType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FundOrderType2Code structured;
 	/**
 	 * Structured format.
 	 * <p>
@@ -97,7 +98,7 @@ public class FundOrderType1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundOrderType1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class FundOrderType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Structured format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType2Code.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the type of identification
 	 * <p>
@@ -136,7 +138,7 @@ public class FundOrderType1 {
 	 * definition} = "Additional information about the type of identification"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundOrderType1.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class FundOrderType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the type of identification";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -153,9 +155,9 @@ public class FundOrderType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType1.Structured, com.tools20022.repository.msg.FundOrderType1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType1.mmStructured, com.tools20022.repository.msg.FundOrderType1.mmAdditionalInformation);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType1";
 				definition = "Specification of the fund order type.";
@@ -163,5 +165,21 @@ public class FundOrderType1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FundOrderType2Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(FundOrderType2Code structured) {
+		this.structured = structured;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

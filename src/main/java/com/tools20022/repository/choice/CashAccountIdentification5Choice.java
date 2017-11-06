@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#IBAN
- * CashAccountIdentification5Choice.IBAN}</li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#mmIBAN
+ * CashAccountIdentification5Choice.mmIBAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#Proprietary
- * CashAccountIdentification5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#mmProprietary
+ * CashAccountIdentification5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountIdentification5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IBAN2007Identifier iBAN;
 	/**
 	 * International Bank Account Number (IBAN) - identifier used
 	 * internationally by financial institutions to uniquely identify the
@@ -82,8 +83,8 @@ public class CashAccountIdentification5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#IBAN
-	 * AccountIdentification.IBAN}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmIBAN
+	 * AccountIdentification.mmIBAN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class CashAccountIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> CashAccountIdentification5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.IBAN;
 			isDerived = false;
 			xmlTag = "IBAN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IBAN2007Identifier.mmObject();
 		}
 	};
+	protected Max34Text proprietary;
 	/**
 	 * Unique identifier for an account. It is assigned by the account servicer
 	 * using a proprietary identification scheme.
@@ -131,8 +133,8 @@ public class CashAccountIdentification5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#ProprietaryIdentification
-	 * AccountIdentification.ProprietaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+	 * AccountIdentification.mmProprietaryIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,17 +155,17 @@ public class CashAccountIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> CashAccountIdentification5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.ProprietaryIdentification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max34Text.mmObject();
 		}
 	};
@@ -171,14 +173,30 @@ public class CashAccountIdentification5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAccountIdentification5Choice.IBAN, com.tools20022.repository.choice.CashAccountIdentification5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAccountIdentification5Choice.mmIBAN, com.tools20022.repository.choice.CashAccountIdentification5Choice.mmProprietary);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountIdentification5Choice";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IBAN2007Identifier getIBAN() {
+		return iBAN;
+	}
+
+	public void setIBAN(IBAN2007Identifier iBAN) {
+		this.iBAN = iBAN;
+	}
+
+	public Max34Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max34Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

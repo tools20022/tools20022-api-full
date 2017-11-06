@@ -36,16 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransportPartyRole#Transport
- * TransportPartyRole.Transport}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#PartyRole
- * Transport.PartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.TransportPartyRole#mmTransport
+ * TransportPartyRole.mmTransport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -57,13 +49,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.CarrierAgent CarrierAgent}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmPartyRole
+ * Transport.mmPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Transport transport;
 	/**
 	 * Identifies the transport process for which a party plays a role.
 	 * <p>
@@ -85,8 +86,8 @@ public class TransportPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PartyRole
-	 * Transport.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPartyRole
+	 * Transport.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -111,34 +112,42 @@ public class TransportPartyRole extends Role {
 	 * "Identifies the transport process for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Transport = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TransportPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Identifies the transport process for which a party plays a role.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Transport.PartyRole;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportPartyRole";
 				definition = "Role played by a party in the context of transporting goods.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.PartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(Consignor.mmObject(), Consignee.mmObject(), Carrier.mmObject(), CarrierAgent.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportPartyRole.Transport);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportPartyRole.mmTransport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Transport getTransport() {
+		return transport;
+	}
+
+	public void setTransport(com.tools20022.repository.entity.Transport transport) {
+		this.transport = transport;
 	}
 }

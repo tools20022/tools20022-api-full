@@ -39,28 +39,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#ChequeType
- * Cheque5.ChequeType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#ChequeNumber
- * Cheque5.ChequeNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#ChequeFrom
- * Cheque5.ChequeFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#DeliveryMethod
- * Cheque5.DeliveryMethod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#DeliverTo
- * Cheque5.DeliverTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#InstructionPriority
- * Cheque5.InstructionPriority}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#ChequeMaturityDate
- * Cheque5.ChequeMaturityDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#FormsCode
- * Cheque5.FormsCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#MemoField
- * Cheque5.MemoField}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#RegionalClearingZone
- * Cheque5.RegionalClearingZone}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque5#PrintLocation
- * Cheque5.PrintLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmChequeType
+ * Cheque5.mmChequeType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmChequeNumber
+ * Cheque5.mmChequeNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmChequeFrom
+ * Cheque5.mmChequeFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmDeliveryMethod
+ * Cheque5.mmDeliveryMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmDeliverTo
+ * Cheque5.mmDeliverTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmInstructionPriority
+ * Cheque5.mmInstructionPriority}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmChequeMaturityDate
+ * Cheque5.mmChequeMaturityDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmFormsCode
+ * Cheque5.mmFormsCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmMemoField
+ * Cheque5.mmMemoField}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmRegionalClearingZone
+ * Cheque5.mmRegionalClearingZone}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque5#mmPrintLocation
+ * Cheque5.mmPrintLocation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Cheque5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChequeType2Code chequeType;
 	/**
 	 * Specifies the type of cheque to be issued by the first agent.
 	 * <p>
@@ -99,8 +100,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#ChequeType
-	 * Cheque.ChequeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmChequeType
+	 * Cheque.mmChequeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -119,20 +120,21 @@ public class Cheque5 {
 	 * "Specifies the type of cheque to be issued by the first agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChequeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChequeType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.mmChequeType;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.ChequeType;
 			isDerived = false;
 			xmlTag = "ChqTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeType";
 			definition = "Specifies the type of cheque to be issued by the first agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ChequeType2Code.mmObject();
 		}
 	};
+	protected Max35Text chequeNumber;
 	/**
 	 * Identifies the cheque number.
 	 * <p>
@@ -145,8 +147,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#CreditInstrumentIdentification
-	 * CreditInstrument.CreditInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmCreditInstrumentIdentification
+	 * CreditInstrument.mmCreditInstrumentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -164,20 +166,21 @@ public class Cheque5 {
 	 * definition} = "Identifies the cheque number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChequeNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChequeNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.CreditInstrumentIdentification;
 			isDerived = false;
 			xmlTag = "ChqNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeNumber";
 			definition = "Identifies the cheque number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected NameAndAddress3 chequeFrom;
 	/**
 	 * Identifies the party that ordered the issuance of the cheque.
 	 * <p>
@@ -190,8 +193,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -210,20 +213,21 @@ public class Cheque5 {
 	 * "Identifies the party that ordered the issuance of the cheque."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChequeFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChequeFrom = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "ChqFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeFrom";
 			definition = "Identifies the party that ordered the issuance of the cheque.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress3.mmObject();
 		}
 	};
+	protected ChequeDeliveryMethod1Choice deliveryMethod;
 	/**
 	 * Specifies the delivery method of the cheque by the debtor's agent.
 	 * <p>
@@ -236,8 +240,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#DeliveryMethod
-	 * ChequeIssue.DeliveryMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliveryMethod
+	 * ChequeIssue.mmDeliveryMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -256,21 +260,22 @@ public class Cheque5 {
 	 * "Specifies the delivery method of the cheque by the debtor's agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveryMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveryMethod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmDeliveryMethod;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.DeliveryMethod;
 			isDerived = false;
 			xmlTag = "DlvryMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryMethod";
 			definition = "Specifies the delivery method of the cheque by the debtor's agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ChequeDeliveryMethod1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ChequeDeliveryMethod1Choice.mmObject();
 		}
 	};
+	protected NameAndAddress3 deliverTo;
 	/**
 	 * Identifies the party to whom the debtor's agent should send the cheque.
 	 * <p>
@@ -283,8 +288,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#DeliverTo
-	 * ChequeIssue.DeliverTo}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#mmDeliverTo
+	 * ChequeIssue.mmDeliverTo}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -304,20 +309,21 @@ public class Cheque5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliverTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliverTo = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmDeliverTo;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.DeliverTo;
 			isDerived = false;
 			xmlTag = "DlvrTo";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverTo";
 			definition = "Identifies the party to whom the debtor's agent should send the cheque.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress3.mmObject();
 		}
 	};
+	protected Priority2Code instructionPriority;
 	/**
 	 * Urgency or order of importance that the originator would like the
 	 * recipient of the payment instruction to apply to the processing of the
@@ -333,8 +339,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Priority
-	 * Payment.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPriority
+	 * Payment.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -354,20 +360,21 @@ public class Cheque5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPriority;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Priority;
 			isDerived = false;
 			xmlTag = "InstrPrty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionPriority";
 			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Priority2Code.mmObject();
 		}
 	};
+	protected ISODate chequeMaturityDate;
 	/**
 	 * Date when the draft becomes payable and the debtor's account is debited.
 	 * <p>
@@ -380,8 +387,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#MaturityDate
-	 * Cheque.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmMaturityDate
+	 * Cheque.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -401,20 +408,21 @@ public class Cheque5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChequeMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChequeMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.mmMaturityDate;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.MaturityDate;
 			isDerived = false;
 			xmlTag = "ChqMtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeMaturityDate";
 			definition = "Date when the draft becomes payable and the debtor's account is debited.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text formsCode;
 	/**
 	 * Code agreed between the initiating party and the debtor's agent, that
 	 * specifies the cheque layout, company logo and digitised signature to be
@@ -429,8 +437,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#FormsCode
-	 * Cheque.FormsCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmFormsCode
+	 * Cheque.mmFormsCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -450,20 +458,21 @@ public class Cheque5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FormsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormsCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.mmFormsCode;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.FormsCode;
 			isDerived = false;
 			xmlTag = "FrmsCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormsCode";
 			definition = "Code agreed between the initiating party and the debtor's agent, that specifies the cheque layout, company logo and digitised signature to be used to print the cheque.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text memoField;
 	/**
 	 * Information that needs to be printed on a cheque, used by the payer to
 	 * add miscellaneous information.
@@ -477,8 +486,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#MemoField
-	 * Cheque.MemoField}</li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmMemoField
+	 * Cheque.mmMemoField}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -498,20 +507,21 @@ public class Cheque5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MemoField = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMemoField = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.mmMemoField;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.MemoField;
 			isDerived = false;
 			xmlTag = "MemoFld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemoField";
 			definition = "Information that needs to be printed on a cheque, used by the payer to add miscellaneous information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text regionalClearingZone;
 	/**
 	 * Regional area in which the cheque can be cleared, when a country has no
 	 * nation-wide cheque clearing organisation.
@@ -525,8 +535,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#RegionalClearingZone
-	 * Cheque.RegionalClearingZone}</li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmRegionalClearingZone
+	 * Cheque.mmRegionalClearingZone}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -546,20 +556,21 @@ public class Cheque5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegionalClearingZone = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegionalClearingZone = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.mmRegionalClearingZone;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Cheque.RegionalClearingZone;
 			isDerived = false;
 			xmlTag = "RgnlClrZone";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegionalClearingZone";
 			definition = "Regional area in which the cheque can be cleared, when a country has no nation-wide cheque clearing organisation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text printLocation;
 	/**
 	 * Specifies the print location of the cheque.
 	 * <p>
@@ -572,8 +583,8 @@ public class Cheque5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#PrintLocation
-	 * ChequeIssue.PrintLocation}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChequeIssue#mmPrintLocation
+	 * ChequeIssue.mmPrintLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque5
@@ -591,17 +602,17 @@ public class Cheque5 {
 	 * definition} = "Specifies the print location of the cheque."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrintLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrintLocation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmPrintLocation;
 			componentContext_lazy = () -> Cheque5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.PrintLocation;
 			isDerived = false;
 			xmlTag = "PrtLctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintLocation";
 			definition = "Specifies the print location of the cheque.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -609,17 +620,105 @@ public class Cheque5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque5.ChequeType, com.tools20022.repository.msg.Cheque5.ChequeNumber, com.tools20022.repository.msg.Cheque5.ChequeFrom,
-						com.tools20022.repository.msg.Cheque5.DeliveryMethod, com.tools20022.repository.msg.Cheque5.DeliverTo, com.tools20022.repository.msg.Cheque5.InstructionPriority,
-						com.tools20022.repository.msg.Cheque5.ChequeMaturityDate, com.tools20022.repository.msg.Cheque5.FormsCode, com.tools20022.repository.msg.Cheque5.MemoField, com.tools20022.repository.msg.Cheque5.RegionalClearingZone,
-						com.tools20022.repository.msg.Cheque5.PrintLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque5.mmChequeType, com.tools20022.repository.msg.Cheque5.mmChequeNumber, com.tools20022.repository.msg.Cheque5.mmChequeFrom,
+						com.tools20022.repository.msg.Cheque5.mmDeliveryMethod, com.tools20022.repository.msg.Cheque5.mmDeliverTo, com.tools20022.repository.msg.Cheque5.mmInstructionPriority,
+						com.tools20022.repository.msg.Cheque5.mmChequeMaturityDate, com.tools20022.repository.msg.Cheque5.mmFormsCode, com.tools20022.repository.msg.Cheque5.mmMemoField,
+						com.tools20022.repository.msg.Cheque5.mmRegionalClearingZone, com.tools20022.repository.msg.Cheque5.mmPrintLocation);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Cheque5";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChequeType2Code getChequeType() {
+		return chequeType;
+	}
+
+	public void setChequeType(ChequeType2Code chequeType) {
+		this.chequeType = chequeType;
+	}
+
+	public Max35Text getChequeNumber() {
+		return chequeNumber;
+	}
+
+	public void setChequeNumber(Max35Text chequeNumber) {
+		this.chequeNumber = chequeNumber;
+	}
+
+	public NameAndAddress3 getChequeFrom() {
+		return chequeFrom;
+	}
+
+	public void setChequeFrom(com.tools20022.repository.msg.NameAndAddress3 chequeFrom) {
+		this.chequeFrom = chequeFrom;
+	}
+
+	public ChequeDeliveryMethod1Choice getDeliveryMethod() {
+		return deliveryMethod;
+	}
+
+	public void setDeliveryMethod(ChequeDeliveryMethod1Choice deliveryMethod) {
+		this.deliveryMethod = deliveryMethod;
+	}
+
+	public NameAndAddress3 getDeliverTo() {
+		return deliverTo;
+	}
+
+	public void setDeliverTo(com.tools20022.repository.msg.NameAndAddress3 deliverTo) {
+		this.deliverTo = deliverTo;
+	}
+
+	public Priority2Code getInstructionPriority() {
+		return instructionPriority;
+	}
+
+	public void setInstructionPriority(Priority2Code instructionPriority) {
+		this.instructionPriority = instructionPriority;
+	}
+
+	public ISODate getChequeMaturityDate() {
+		return chequeMaturityDate;
+	}
+
+	public void setChequeMaturityDate(ISODate chequeMaturityDate) {
+		this.chequeMaturityDate = chequeMaturityDate;
+	}
+
+	public Max35Text getFormsCode() {
+		return formsCode;
+	}
+
+	public void setFormsCode(Max35Text formsCode) {
+		this.formsCode = formsCode;
+	}
+
+	public Max35Text getMemoField() {
+		return memoField;
+	}
+
+	public void setMemoField(Max35Text memoField) {
+		this.memoField = memoField;
+	}
+
+	public Max35Text getRegionalClearingZone() {
+		return regionalClearingZone;
+	}
+
+	public void setRegionalClearingZone(Max35Text regionalClearingZone) {
+		this.regionalClearingZone = regionalClearingZone;
+	}
+
+	public Max35Text getPrintLocation() {
+		return printLocation;
+	}
+
+	public void setPrintLocation(Max35Text printLocation) {
+		this.printLocation = printLocation;
 	}
 }

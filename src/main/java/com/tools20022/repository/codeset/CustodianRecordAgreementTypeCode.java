@@ -31,14 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#Agree
- * CustodianRecordAgreementTypeCode.Agree}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#mmAgree
+ * CustodianRecordAgreementTypeCode.mmAgree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#Disagree
- * CustodianRecordAgreementTypeCode.Disagree}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#mmDisagree
+ * CustodianRecordAgreementTypeCode.mmDisagree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#NoComposite
- * CustodianRecordAgreementTypeCode.NoComposite}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#mmNoComposite
+ * CustodianRecordAgreementTypeCode.mmNoComposite}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class CustodianRecordAgreementTypeCode {
 	 * definition} = "Custodian record agrees with the composite record."</li>
 	 * </ul>
 	 */
-	public static final MMCode Agree = new MMCode() {
+	public static final MMCode mmAgree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agree";
@@ -126,7 +126,7 @@ public class CustodianRecordAgreementTypeCode {
 	 * definition} = "Custodian record disagrees with the composite record."</li>
 	 * </ul>
 	 */
-	public static final MMCode Disagree = new MMCode() {
+	public static final MMCode mmDisagree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagree";
@@ -156,7 +156,7 @@ public class CustodianRecordAgreementTypeCode {
 	 * definition} = "No composite record available."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoComposite = new MMCode() {
+	public static final MMCode mmNoComposite = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoComposite";
@@ -169,13 +169,13 @@ public class CustodianRecordAgreementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGRE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustodianRecordAgreementTypeCode";
 				definition = "Specifies the state of the agreement of the custodian record when compared to composite record.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.Agree, com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.Disagree,
-						com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.NoComposite);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.mmAgree, com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.mmDisagree,
+						com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.mmNoComposite);
 				derivation_lazy = () -> Arrays.asList(CustodianRecordAgreementType1Code.mmObject());
 			}
 		});

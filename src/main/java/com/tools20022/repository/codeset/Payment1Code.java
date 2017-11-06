@@ -32,18 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PaymentCode PaymentCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Payment1Code#ActualPayment
- * Payment1Code.ActualPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Payment1Code#ContractualPayment
- * Payment1Code.ContractualPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.Payment1Code#mmActualPayment
+ * Payment1Code.mmActualPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Payment1Code#mmContractualPayment
+ * Payment1Code.mmContractualPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +79,7 @@ public class Payment1Code extends PaymentCode {
 	 * name} = "ActualPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ActualPayment = new MMCode() {
+	public static final MMCode mmActualPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualPayment";
@@ -100,7 +101,7 @@ public class Payment1Code extends PaymentCode {
 	 * name} = "ContractualPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ContractualPayment = new MMCode() {
+	public static final MMCode mmContractualPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractualPayment";
@@ -111,12 +112,12 @@ public class Payment1Code extends PaymentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Payment1Code";
 				definition = "Specifies the type of payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Payment1Code.ActualPayment, com.tools20022.repository.codeset.Payment1Code.ContractualPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Payment1Code.mmActualPayment, com.tools20022.repository.codeset.Payment1Code.mmContractualPayment);
 				trace_lazy = () -> PaymentCode.mmObject();
 			}
 		});

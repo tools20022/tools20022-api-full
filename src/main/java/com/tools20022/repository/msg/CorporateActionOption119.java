@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CashProceedsDefinition;
 import com.tools20022.repository.entity.CorporateActionOption;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the corporate action option.
@@ -36,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#OptionNumber
- * CorporateActionOption119.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#mmOptionNumber
+ * CorporateActionOption119.mmOptionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#OptionType
- * CorporateActionOption119.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#mmOptionType
+ * CorporateActionOption119.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#SecuritiesMovementDetails
- * CorporateActionOption119.SecuritiesMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#mmSecuritiesMovementDetails
+ * CorporateActionOption119.mmSecuritiesMovementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#CashMovementDetails
- * CorporateActionOption119.CashMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#mmCashMovementDetails
+ * CorporateActionOption119.mmCashMovementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,18 +58,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#CorporateActionConfirmationDetails
- * CorporateActionMovementReversalAdviceV07.CorporateActionConfirmationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07#mmCorporateActionConfirmationDetails
+ * CorporateActionMovementReversalAdviceV07.mmCorporateActionConfirmationDetails
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#CorporateActionConfirmationDetails
- * CorporateActionMovementReversalAdviceV08.CorporateActionConfirmationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmCorporateActionConfirmationDetails
+ * CorporateActionMovementReversalAdviceV08.mmCorporateActionConfirmationDetails
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOption119 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OptionNumber1Choice optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -97,8 +101,8 @@ public class CorporateActionOption119 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,26 +123,27 @@ public class CorporateActionOption119 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#OptionNumber
-	 * CorporateActionOption39.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#mmOptionNumber
+	 * CorporateActionOption39.mmOptionNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionOption119.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.OptionNumber;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.mmOptionNumber;
 			maxOccurs = 1;
-			type_lazy = () -> OptionNumber1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OptionNumber1Choice.mmObject();
 		}
 	};
+	protected CorporateActionOption19Choice optionType;
 	/**
 	 * Specifies the corporate action options available to the account owner.
 	 * <p>
@@ -151,8 +156,8 @@ public class CorporateActionOption119 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
-	 * CorporateActionOption.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+	 * CorporateActionOption.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,26 +178,27 @@ public class CorporateActionOption119 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#OptionType
-	 * CorporateActionOption39.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#mmOptionType
+	 * CorporateActionOption39.mmOptionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionOption119.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.OptionType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.mmOptionType;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionOption19Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionOption19Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesOption53> securitiesMovementDetails;
 	/**
 	 * Provides information about the securities movement linked to the
 	 * corporate action option.
@@ -205,8 +211,8 @@ public class CorporateActionOption119 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#SecuritiesProceedsMovement
-	 * CorporateActionProceedsDeliveryInstruction.SecuritiesProceedsMovement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
+	 * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,25 +234,26 @@ public class CorporateActionOption119 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#SecuritiesMovementDetails
-	 * CorporateActionOption39.SecuritiesMovementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#mmSecuritiesMovementDetails
+	 * CorporateActionOption39.mmSecuritiesMovementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesMovementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
 			componentContext_lazy = () -> CorporateActionOption119.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.SecuritiesProceedsMovement;
 			isDerived = false;
 			xmlTag = "SctiesMvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementDetails";
 			definition = "Provides information about the securities movement linked to the corporate action option.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.SecuritiesMovementDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.mmSecuritiesMovementDetails;
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesOption53.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesOption53.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashOption45> cashMovementDetails;
 	/**
 	 * Provides information about the cash movement related to a corporate
 	 * action option.
@@ -282,35 +289,35 @@ public class CorporateActionOption119 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#CashMovementDetails
-	 * CorporateActionOption39.CashMovementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#mmCashMovementDetails
+	 * CorporateActionOption39.mmCashMovementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashMovementDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionOption119.mmObject();
 			businessComponentTrace_lazy = () -> CashProceedsDefinition.mmObject();
+			componentContext_lazy = () -> CorporateActionOption119.mmObject();
 			isDerived = false;
 			xmlTag = "CshMvmntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovementDetails";
 			definition = "Provides information about the cash movement related to a corporate action option.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.CashMovementDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOption39.mmCashMovementDetails;
 			minOccurs = 0;
-			type_lazy = () -> CashOption45.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashOption45.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption119.OptionNumber, com.tools20022.repository.msg.CorporateActionOption119.OptionType,
-						com.tools20022.repository.msg.CorporateActionOption119.SecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption119.CashMovementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption119.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption119.mmOptionType,
+						com.tools20022.repository.msg.CorporateActionOption119.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption119.mmCashMovementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmCorporateActionConfirmationDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmCorporateActionConfirmationDetails);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.CorporateActionConfirmationDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.CorporateActionConfirmationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption119";
 				definition = "Provides information about the corporate action option.";
@@ -318,5 +325,37 @@ public class CorporateActionOption119 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OptionNumber1Choice getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(OptionNumber1Choice optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public CorporateActionOption19Choice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOption19Choice optionType) {
+		this.optionType = optionType;
+	}
+
+	public List<SecuritiesOption53> getSecuritiesMovementDetails() {
+		return securitiesMovementDetails;
+	}
+
+	public void setSecuritiesMovementDetails(List<com.tools20022.repository.msg.SecuritiesOption53> securitiesMovementDetails) {
+		this.securitiesMovementDetails = securitiesMovementDetails;
+	}
+
+	public List<CashOption45> getCashMovementDetails() {
+		return cashMovementDetails;
+	}
+
+	public void setCashMovementDetails(List<com.tools20022.repository.msg.CashOption45> cashMovementDetails) {
+		this.cashMovementDetails = cashMovementDetails;
 	}
 }

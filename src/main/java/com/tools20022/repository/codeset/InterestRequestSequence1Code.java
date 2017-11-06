@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRequestSequence1Code#Initial
- * InterestRequestSequence1Code.Initial}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRequestSequence1Code#mmInitial
+ * InterestRequestSequence1Code.mmInitial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRequestSequence1Code#Updated
- * InterestRequestSequence1Code.Updated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRequestSequence1Code#mmUpdated
+ * InterestRequestSequence1Code.mmUpdated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class InterestRequestSequence1Code extends InterestRequestSequenceCode {
 	 * name} = "Initial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Initial = new MMCode() {
+	public static final MMCode mmInitial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
@@ -104,7 +104,7 @@ public class InterestRequestSequence1Code extends InterestRequestSequenceCode {
 	 * name} = "Updated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Updated = new MMCode() {
+	public static final MMCode mmUpdated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Updated";
@@ -115,12 +115,12 @@ public class InterestRequestSequence1Code extends InterestRequestSequenceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestRequestSequence1Code";
 				definition = "Indicates whether the interest request is new or updated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRequestSequence1Code.Initial, com.tools20022.repository.codeset.InterestRequestSequence1Code.Updated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRequestSequence1Code.mmInitial, com.tools20022.repository.codeset.InterestRequestSequence1Code.mmUpdated);
 				trace_lazy = () -> InterestRequestSequenceCode.mmObject();
 			}
 		});

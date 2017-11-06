@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#Completed
- * Status2Code.Completed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#Pending
- * Status2Code.Pending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#mmCompleted
+ * Status2Code.mmCompleted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#mmPending
+ * Status2Code.mmPending}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +77,7 @@ public class Status2Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
@@ -99,7 +99,7 @@ public class Status2Code extends StatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -110,12 +110,12 @@ public class Status2Code extends StatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Status2Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status2Code.Completed, com.tools20022.repository.codeset.Status2Code.Pending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status2Code.mmCompleted, com.tools20022.repository.codeset.Status2Code.mmPending);
 				trace_lazy = () -> StatusCode.mmObject();
 			}
 		});

@@ -34,46 +34,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#Proposed
- * BaselineStatus3Code.Proposed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#Closed
- * BaselineStatus3Code.Closed}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmProposed
+ * BaselineStatus3Code.mmProposed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#PartiallyMatched
- * BaselineStatus3Code.PartiallyMatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmClosed
+ * BaselineStatus3Code.mmClosed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#Established
- * BaselineStatus3Code.Established}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#Active
- * BaselineStatus3Code.Active}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmPartiallyMatched
+ * BaselineStatus3Code.mmPartiallyMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#Complete
- * BaselineStatus3Code.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmEstablished
+ * BaselineStatus3Code.mmEstablished}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#AmendmentRequested
- * BaselineStatus3Code.AmendmentRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmActive
+ * BaselineStatus3Code.mmActive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#ReActivateRequested
- * BaselineStatus3Code.ReActivateRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmComplete
+ * BaselineStatus3Code.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#CloseRequested
- * BaselineStatus3Code.CloseRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmAmendmentRequested
+ * BaselineStatus3Code.mmAmendmentRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#CompleteRequested
- * BaselineStatus3Code.CompleteRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmReActivateRequested
+ * BaselineStatus3Code.mmReActivateRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#StatusExtensionRequested
- * BaselineStatus3Code.StatusExtensionRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmCloseRequested
+ * BaselineStatus3Code.mmCloseRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#DataSetAcceptanceRequested
- * BaselineStatus3Code.DataSetAcceptanceRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmCompleteRequested
+ * BaselineStatus3Code.mmCompleteRequested}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmStatusExtensionRequested
+ * BaselineStatus3Code.mmStatusExtensionRequested}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus3Code#mmDataSetAcceptanceRequested
+ * BaselineStatus3Code.mmDataSetAcceptanceRequested}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -109,7 +111,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "Proposed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Proposed = new MMCode() {
+	public static final MMCode mmProposed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proposed";
@@ -132,7 +134,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closed = new MMCode() {
+	public static final MMCode mmClosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
@@ -155,7 +157,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "PartiallyMatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyMatched = new MMCode() {
+	public static final MMCode mmPartiallyMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyMatched";
@@ -178,7 +180,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "Established"</li>
 	 * </ul>
 	 */
-	public static final MMCode Established = new MMCode() {
+	public static final MMCode mmEstablished = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Established";
@@ -201,7 +203,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -224,7 +226,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -247,7 +249,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "AmendmentRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode AmendmentRequested = new MMCode() {
+	public static final MMCode mmAmendmentRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentRequested";
@@ -270,7 +272,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "ReActivateRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReActivateRequested = new MMCode() {
+	public static final MMCode mmReActivateRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReActivateRequested";
@@ -293,7 +295,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "CloseRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode CloseRequested = new MMCode() {
+	public static final MMCode mmCloseRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CloseRequested";
@@ -316,7 +318,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "CompleteRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode CompleteRequested = new MMCode() {
+	public static final MMCode mmCompleteRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteRequested";
@@ -339,7 +341,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "StatusExtensionRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode StatusExtensionRequested = new MMCode() {
+	public static final MMCode mmStatusExtensionRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusExtensionRequested";
@@ -362,7 +364,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 * name} = "DataSetAcceptanceRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode DataSetAcceptanceRequested = new MMCode() {
+	public static final MMCode mmDataSetAcceptanceRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAcceptanceRequested";
@@ -373,16 +375,17 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatus3Code";
 				definition = "Indicates the status of a baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatus3Code.Proposed, com.tools20022.repository.codeset.BaselineStatus3Code.Closed,
-						com.tools20022.repository.codeset.BaselineStatus3Code.PartiallyMatched, com.tools20022.repository.codeset.BaselineStatus3Code.Established, com.tools20022.repository.codeset.BaselineStatus3Code.Active,
-						com.tools20022.repository.codeset.BaselineStatus3Code.Complete, com.tools20022.repository.codeset.BaselineStatus3Code.AmendmentRequested, com.tools20022.repository.codeset.BaselineStatus3Code.ReActivateRequested,
-						com.tools20022.repository.codeset.BaselineStatus3Code.CloseRequested, com.tools20022.repository.codeset.BaselineStatus3Code.CompleteRequested,
-						com.tools20022.repository.codeset.BaselineStatus3Code.StatusExtensionRequested, com.tools20022.repository.codeset.BaselineStatus3Code.DataSetAcceptanceRequested);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatus3Code.mmProposed, com.tools20022.repository.codeset.BaselineStatus3Code.mmClosed,
+						com.tools20022.repository.codeset.BaselineStatus3Code.mmPartiallyMatched, com.tools20022.repository.codeset.BaselineStatus3Code.mmEstablished, com.tools20022.repository.codeset.BaselineStatus3Code.mmActive,
+						com.tools20022.repository.codeset.BaselineStatus3Code.mmComplete, com.tools20022.repository.codeset.BaselineStatus3Code.mmAmendmentRequested,
+						com.tools20022.repository.codeset.BaselineStatus3Code.mmReActivateRequested, com.tools20022.repository.codeset.BaselineStatus3Code.mmCloseRequested,
+						com.tools20022.repository.codeset.BaselineStatus3Code.mmCompleteRequested, com.tools20022.repository.codeset.BaselineStatus3Code.mmStatusExtensionRequested,
+						com.tools20022.repository.codeset.BaselineStatus3Code.mmDataSetAcceptanceRequested);
 				trace_lazy = () -> BaselineStatusCode.mmObject();
 			}
 		});

@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferenceToIncome1Code#Ordinary
- * PreferenceToIncome1Code.Ordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferenceToIncome1Code#mmOrdinary
+ * PreferenceToIncome1Code.mmOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferenceToIncome1Code#Preferred
- * PreferenceToIncome1Code.Preferred}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferenceToIncome1Code#mmPreferred
+ * PreferenceToIncome1Code.mmPreferred}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class PreferenceToIncome1Code extends PreferenceToIncomeCode {
 	 * name} = "Ordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ordinary = new MMCode() {
+	public static final MMCode mmOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
@@ -108,7 +108,7 @@ public class PreferenceToIncome1Code extends PreferenceToIncomeCode {
 	 * name} = "Preferred"</li>
 	 * </ul>
 	 */
-	public static final MMCode Preferred = new MMCode() {
+	public static final MMCode mmPreferred = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Preferred";
@@ -119,12 +119,12 @@ public class PreferenceToIncome1Code extends PreferenceToIncomeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORDN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PreferenceToIncome1Code";
 				definition = "Indicates the  level of priority to claim on income and assets of \nthe company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreferenceToIncome1Code.Ordinary, com.tools20022.repository.codeset.PreferenceToIncome1Code.Preferred);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreferenceToIncome1Code.mmOrdinary, com.tools20022.repository.codeset.PreferenceToIncome1Code.mmPreferred);
 				trace_lazy = () -> PreferenceToIncomeCode.mmObject();
 			}
 		});

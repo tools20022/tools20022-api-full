@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FlowDirectionTypeCode#Incoming
- * FlowDirectionTypeCode.Incoming}</li>
+ * {@linkplain com.tools20022.repository.codeset.FlowDirectionTypeCode#mmIncoming
+ * FlowDirectionTypeCode.mmIncoming}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FlowDirectionTypeCode#Outgoing
- * FlowDirectionTypeCode.Outgoing}</li>
+ * {@linkplain com.tools20022.repository.codeset.FlowDirectionTypeCode#mmOutgoing
+ * FlowDirectionTypeCode.mmOutgoing}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class FlowDirectionTypeCode {
 	 * definition} = "Amount of money received."</li>
 	 * </ul>
 	 */
-	public static final MMCode Incoming = new MMCode() {
+	public static final MMCode mmIncoming = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Incoming";
@@ -119,7 +119,7 @@ public class FlowDirectionTypeCode {
 	 * definition} = "Amount of money paid out."</li>
 	 * </ul>
 	 */
-	public static final MMCode Outgoing = new MMCode() {
+	public static final MMCode mmOutgoing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Outgoing";
@@ -132,12 +132,12 @@ public class FlowDirectionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INCG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FlowDirectionTypeCode";
 				definition = "Specifies the direction of a cash flow.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FlowDirectionTypeCode.Incoming, com.tools20022.repository.codeset.FlowDirectionTypeCode.Outgoing);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FlowDirectionTypeCode.mmIncoming, com.tools20022.repository.codeset.FlowDirectionTypeCode.mmOutgoing);
 				derivation_lazy = () -> Arrays.asList(FlowDirectionType1Code.mmObject());
 			}
 		});

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat7#ShortLongPosition
- * SignedQuantityFormat7.ShortLongPosition}</li>
+ * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat7#mmShortLongPosition
+ * SignedQuantityFormat7.mmShortLongPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat7#QuantityChoice
- * SignedQuantityFormat7.QuantityChoice}</li>
+ * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat7#mmQuantityChoice
+ * SignedQuantityFormat7.mmQuantityChoice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SignedQuantityFormat7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongPosition;
 	/**
 	 * Sign of the quantity of security.
 	 * <p>
@@ -81,8 +82,8 @@ public class SignedQuantityFormat7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#ShortLong
-	 * SecuritiesBalance.ShortLong}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmShortLong
+	 * SecuritiesBalance.mmShortLong}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,25 +103,26 @@ public class SignedQuantityFormat7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat1#ShortLongPosition
-	 * SignedQuantityFormat1.ShortLongPosition}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat1#mmShortLongPosition
+	 * SignedQuantityFormat1.mmShortLongPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> SignedQuantityFormat7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.ShortLong;
 			isDerived = false;
 			xmlTag = "ShrtLngPos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongPosition";
 			definition = "Sign of the quantity of security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.ShortLongPosition;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.mmShortLongPosition;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected Quantity19Choice quantityChoice;
 	/**
 	 * Choice between different quantity of security formats.
 	 * <p>
@@ -132,8 +134,8 @@ public class SignedQuantityFormat7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AggregateQuantity
-	 * SecuritiesBalance.AggregateQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+	 * SecuritiesBalance.mmAggregateQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,33 +155,33 @@ public class SignedQuantityFormat7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat1#QuantityChoice
-	 * SignedQuantityFormat1.QuantityChoice}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedQuantityFormat1#mmQuantityChoice
+	 * SignedQuantityFormat1.mmQuantityChoice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> SignedQuantityFormat7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AggregateQuantity;
 			isDerived = false;
 			xmlTag = "QtyChc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityChoice";
 			definition = "Choice between different quantity of security formats.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.QuantityChoice;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.mmQuantityChoice;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity19Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Quantity19Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat7.ShortLongPosition, com.tools20022.repository.msg.SignedQuantityFormat7.QuantityChoice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat7.mmShortLongPosition, com.tools20022.repository.msg.SignedQuantityFormat7.mmQuantityChoice);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignedQuantityFormat7";
 				definition = "Signed quantity of security formats.";
@@ -187,5 +189,21 @@ public class SignedQuantityFormat7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongPosition() {
+		return shortLongPosition;
+	}
+
+	public void setShortLongPosition(ShortLong1Code shortLongPosition) {
+		this.shortLongPosition = shortLongPosition;
+	}
+
+	public Quantity19Choice getQuantityChoice() {
+		return quantityChoice;
+	}
+
+	public void setQuantityChoice(Quantity19Choice quantityChoice) {
+		this.quantityChoice = quantityChoice;
 	}
 }

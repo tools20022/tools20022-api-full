@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProrationType1Code#NotDecided
- * ProrationType1Code.NotDecided}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProrationType1Code#NotUsed
- * ProrationType1Code.NotUsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProrationType1Code#mmNotDecided
+ * ProrationType1Code.mmNotDecided}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProrationType1Code#mmNotUsed
+ * ProrationType1Code.mmNotUsed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +77,7 @@ public class ProrationType1Code extends ProrationTypeCode {
 	 * name} = "NotDecided"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDecided = new MMCode() {
+	public static final MMCode mmNotDecided = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDecided";
@@ -102,7 +103,7 @@ public class ProrationType1Code extends ProrationTypeCode {
 	 * name} = "NotUsed"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotUsed = new MMCode() {
+	public static final MMCode mmNotUsed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotUsed";
@@ -114,11 +115,11 @@ public class ProrationType1Code extends ProrationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProrationType1Code";
 				definition = "Jasdec codes for the specific use of pro ration.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProrationType1Code.NotDecided, com.tools20022.repository.codeset.ProrationType1Code.NotUsed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProrationType1Code.mmNotDecided, com.tools20022.repository.codeset.ProrationType1Code.mmNotUsed);
 				trace_lazy = () -> ProrationTypeCode.mmObject();
 			}
 		});

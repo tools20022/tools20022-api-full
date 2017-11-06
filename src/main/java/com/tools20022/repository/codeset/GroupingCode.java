@@ -29,12 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#Single
- * GroupingCode.Single}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#Grouped
- * GroupingCode.Grouped}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#Mixed
- * GroupingCode.Mixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmSingle
+ * GroupingCode.mmSingle}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmGrouped
+ * GroupingCode.mmGrouped}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmMixed
+ * GroupingCode.mmMixed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class GroupingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Single = new MMCode() {
+	public static final MMCode mmSingle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
@@ -123,7 +123,7 @@ public class GroupingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Grouped = new MMCode() {
+	public static final MMCode mmGrouped = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grouped";
@@ -156,7 +156,7 @@ public class GroupingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Mixed = new MMCode() {
+	public static final MMCode mmMixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mixed";
@@ -169,12 +169,12 @@ public class GroupingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SNGL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GroupingCode";
 				definition = "Specifies the grouping options of the payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GroupingCode.Single, com.tools20022.repository.codeset.GroupingCode.Grouped, com.tools20022.repository.codeset.GroupingCode.Mixed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GroupingCode.mmSingle, com.tools20022.repository.codeset.GroupingCode.mmGrouped, com.tools20022.repository.codeset.GroupingCode.mmMixed);
 				derivation_lazy = () -> Arrays.asList(Grouping1Code.mmObject());
 			}
 		});

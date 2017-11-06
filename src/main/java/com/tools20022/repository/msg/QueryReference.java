@@ -32,17 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QueryReference#QueryReference
- * QueryReference.QueryReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QueryReference#QueryName
- * QueryReference.QueryName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QueryReference#mmQueryReference
+ * QueryReference.mmQueryReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QueryReference#mmQueryName
+ * QueryReference.mmQueryName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QueryReference {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queryReference;
 	/**
 	 * Unique and unambiguous identification of the query.
 	 * <p>
@@ -82,19 +84,20 @@ public class QueryReference {
 	 * definition} = "Unique and unambiguous identification of the query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> com.tools20022.repository.msg.QueryReference.mmObject();
+			componentContext_lazy = () -> QueryReference.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Unique and unambiguous identification of the query.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text queryName;
 	/**
 	 * Name of the query.
 	 * <p>
@@ -121,16 +124,16 @@ public class QueryReference {
 	 * definition} = "Name of the query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> com.tools20022.repository.msg.QueryReference.mmObject();
+			componentContext_lazy = () -> QueryReference.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Name of the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -138,13 +141,29 @@ public class QueryReference {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueryReference.QueryReference, com.tools20022.repository.msg.QueryReference.QueryName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueryReference.mmQueryReference, com.tools20022.repository.msg.QueryReference.mmQueryName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QueryReference";
 				definition = "Gives the name and the reference of the query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(Max35Text queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public Max35Text getQueryName() {
+		return queryName;
+	}
+
+	public void setQueryName(Max35Text queryName) {
+		this.queryName = queryName;
 	}
 }

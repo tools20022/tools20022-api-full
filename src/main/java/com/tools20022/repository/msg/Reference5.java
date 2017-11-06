@@ -32,23 +32,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Reference5#QuoteIdentification
- * Reference5.QuoteIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference5#QuoteRequestIdentification
- * Reference5.QuoteRequestIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Reference5#IOIIdentification
- * Reference5.IOIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference5#mmQuoteIdentification
+ * Reference5.mmQuoteIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference5#ClientOrderIdentification
- * Reference5.ClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference5#mmQuoteRequestIdentification
+ * Reference5.mmQuoteRequestIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reference5#mmIOIIdentification
+ * Reference5.mmIOIIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Reference5#mmClientOrderIdentification
+ * Reference5.mmClientOrderIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text quoteIdentification;
 	/**
 	 * Unique identifier for quote.
 	 * <p>
@@ -88,7 +90,7 @@ public class Reference5 {
 	 * definition} = "Unique identifier for quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference5.mmObject();
 			isDerived = false;
@@ -96,11 +98,12 @@ public class Reference5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text quoteRequestIdentification;
 	/**
 	 * Unique identifier for quote request.
 	 * <p>
@@ -127,7 +130,7 @@ public class Reference5 {
 	 * definition} = "Unique identifier for quote request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference5.mmObject();
 			isDerived = false;
@@ -135,11 +138,12 @@ public class Reference5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteRequestIdentification";
 			definition = "Unique identifier for quote request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text iOIIdentification;
 	/**
 	 * Unique identifier of indication of interest message.
 	 * <p>
@@ -166,7 +170,7 @@ public class Reference5 {
 	 * definition} = "Unique identifier of indication of interest message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIOIIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference5.mmObject();
 			isDerived = false;
@@ -174,11 +178,12 @@ public class Reference5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIIdentification";
 			definition = "Unique identifier of indication of interest message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientOrderIdentification;
 	/**
 	 * Unique identifier for order as assigned by the buy-side ( institution,
 	 * broker, intermediary..).
@@ -208,7 +213,7 @@ public class Reference5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference5.mmObject();
 			isDerived = false;
@@ -216,8 +221,8 @@ public class Reference5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for order as assigned by the buy-side ( institution, broker, intermediary..).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -225,14 +230,46 @@ public class Reference5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference5.QuoteIdentification, com.tools20022.repository.msg.Reference5.QuoteRequestIdentification,
-						com.tools20022.repository.msg.Reference5.IOIIdentification, com.tools20022.repository.msg.Reference5.ClientOrderIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference5.mmQuoteIdentification, com.tools20022.repository.msg.Reference5.mmQuoteRequestIdentification,
+						com.tools20022.repository.msg.Reference5.mmIOIIdentification, com.tools20022.repository.msg.Reference5.mmClientOrderIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference5";
 				definition = "Additional references linked to the quote response.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQuoteIdentification() {
+		return quoteIdentification;
+	}
+
+	public void setQuoteIdentification(Max35Text quoteIdentification) {
+		this.quoteIdentification = quoteIdentification;
+	}
+
+	public Max35Text getQuoteRequestIdentification() {
+		return quoteRequestIdentification;
+	}
+
+	public void setQuoteRequestIdentification(Max35Text quoteRequestIdentification) {
+		this.quoteRequestIdentification = quoteRequestIdentification;
+	}
+
+	public Max35Text getIOIIdentification() {
+		return iOIIdentification;
+	}
+
+	public void setIOIIdentification(Max35Text iOIIdentification) {
+		this.iOIIdentification = iOIIdentification;
+	}
+
+	public Max35Text getClientOrderIdentification() {
+		return clientOrderIdentification;
+	}
+
+	public void setClientOrderIdentification(Max35Text clientOrderIdentification) {
+		this.clientOrderIdentification = clientOrderIdentification;
 	}
 }

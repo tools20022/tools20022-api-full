@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#Local
- * PriceProtectionScope2Code.Local}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#mmLocal
+ * PriceProtectionScope2Code.mmLocal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#National
- * PriceProtectionScope2Code.National}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#mmNational
+ * PriceProtectionScope2Code.mmNational}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#Global
- * PriceProtectionScope2Code.Global}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#mmGlobal
+ * PriceProtectionScope2Code.mmGlobal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#NationalExcludingLocal
- * PriceProtectionScope2Code.NationalExcludingLocal}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceProtectionScope2Code#mmNationalExcludingLocal
+ * PriceProtectionScope2Code.mmNationalExcludingLocal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class PriceProtectionScope2Code extends PriceProtectionScopeCode {
 	 * name} = "Local"</li>
 	 * </ul>
 	 */
-	public static final MMCode Local = new MMCode() {
+	public static final MMCode mmLocal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Local";
@@ -114,7 +114,7 @@ public class PriceProtectionScope2Code extends PriceProtectionScopeCode {
 	 * name} = "National"</li>
 	 * </ul>
 	 */
-	public static final MMCode National = new MMCode() {
+	public static final MMCode mmNational = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "National";
@@ -137,7 +137,7 @@ public class PriceProtectionScope2Code extends PriceProtectionScopeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode Global = new MMCode() {
+	public static final MMCode mmGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
@@ -160,7 +160,7 @@ public class PriceProtectionScope2Code extends PriceProtectionScopeCode {
 	 * name} = "NationalExcludingLocal"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalExcludingLocal = new MMCode() {
+	public static final MMCode mmNationalExcludingLocal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalExcludingLocal";
@@ -171,13 +171,13 @@ public class PriceProtectionScope2Code extends PriceProtectionScopeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LOCA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceProtectionScope2Code";
 				definition = "Defines the type of price protection the customer requires on their order. Defines the scope of the \"related to\" price of the peg or the scope of \"related to\" price of the discretion (for example, local, global etc).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceProtectionScope2Code.Local, com.tools20022.repository.codeset.PriceProtectionScope2Code.National,
-						com.tools20022.repository.codeset.PriceProtectionScope2Code.Global, com.tools20022.repository.codeset.PriceProtectionScope2Code.NationalExcludingLocal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceProtectionScope2Code.mmLocal, com.tools20022.repository.codeset.PriceProtectionScope2Code.mmNational,
+						com.tools20022.repository.codeset.PriceProtectionScope2Code.mmGlobal, com.tools20022.repository.codeset.PriceProtectionScope2Code.mmNationalExcludingLocal);
 				trace_lazy = () -> PriceProtectionScopeCode.mmObject();
 			}
 		});

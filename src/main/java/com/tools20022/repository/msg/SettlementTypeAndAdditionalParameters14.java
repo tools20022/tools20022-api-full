@@ -37,20 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#SecuritiesMovementType
- * SettlementTypeAndAdditionalParameters14.SecuritiesMovementType}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#mmSecuritiesMovementType
+ * SettlementTypeAndAdditionalParameters14.mmSecuritiesMovementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#Payment
- * SettlementTypeAndAdditionalParameters14.Payment}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#mmPayment
+ * SettlementTypeAndAdditionalParameters14.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#CommonIdentification
- * SettlementTypeAndAdditionalParameters14.CommonIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#mmCommonIdentification
+ * SettlementTypeAndAdditionalParameters14.mmCommonIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#CorporateActionEventIdentification
- * SettlementTypeAndAdditionalParameters14.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#mmCorporateActionEventIdentification
+ * SettlementTypeAndAdditionalParameters14.mmCorporateActionEventIdentification}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#ReconciliationIndicator
- * SettlementTypeAndAdditionalParameters14.ReconciliationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14#mmReconciliationIndicator
+ * SettlementTypeAndAdditionalParameters14.mmReconciliationIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementTypeAndAdditionalParameters14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReceiveDelivery1Code securitiesMovementType;
 	/**
 	 * Specifies if the movement on a securities account results from a deliver
 	 * or a receive instruction.
@@ -92,8 +94,8 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SecuritiesMovementType
-	 * SecuritiesSettlement.SecuritiesMovementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesMovementType
+	 * SecuritiesSettlement.mmSecuritiesMovementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,25 +117,26 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#SecuritiesMovementType
-	 * SettlementTypeAndAdditionalParameters5.SecuritiesMovementType}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#mmSecuritiesMovementType
+	 * SettlementTypeAndAdditionalParameters5.mmSecuritiesMovementType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesMovementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SecuritiesMovementType;
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.SecuritiesMovementType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.mmSecuritiesMovementType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code payment;
 	/**
 	 * Specifies how the transaction is to be settled, for example, against
 	 * payment.
@@ -148,8 +151,8 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,25 +174,26 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#Payment
-	 * SettlementTypeAndAdditionalParameters5.Payment}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#mmPayment
+	 * SettlementTypeAndAdditionalParameters5.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.Payment;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.mmPayment;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected Max35Text commonIdentification;
 	/**
 	 * Unique reference agreed upon by the two trade counterparties to identify
 	 * the trade.
@@ -203,8 +207,8 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,25 +230,26 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#CommonIdentification
-	 * SettlementTypeAndAdditionalParameters5.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#mmCommonIdentification
+	 * SettlementTypeAndAdditionalParameters5.mmCommonIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmonId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.CommonIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.mmCommonIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text corporateActionEventIdentification;
 	/**
 	 * Identification assigned by the account servicer to unambiguously identify
 	 * a corporate action event.
@@ -258,8 +263,8 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#CorporateActionEventIdentification
-	 * CorporateActionEventRegistration.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
+	 * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -281,26 +286,27 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#CorporateActionEventIdentification
-	 * SettlementTypeAndAdditionalParameters5.CorporateActionEventIdentification
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#mmCorporateActionEventIdentification
+	 * SettlementTypeAndAdditionalParameters5.
+	 * mmCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.CorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.CorporateActionEventIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator reconciliationIndicator;
 	/**
 	 * Indicates whether the settlement transaction was already sent on the
 	 * market and that it is only sent by an account owner to an account
@@ -334,11 +340,11 @@ public class SettlementTypeAndAdditionalParameters14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#ReconciliationIndicator
-	 * SettlementTypeAndAdditionalParameters5.ReconciliationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5#mmReconciliationIndicator
+	 * SettlementTypeAndAdditionalParameters5.mmReconciliationIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters14.mmObject();
 			isDerived = false;
@@ -346,9 +352,9 @@ public class SettlementTypeAndAdditionalParameters14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIndicator";
 			definition = "Indicates whether the settlement transaction was already sent on the market and that it is only sent by an account owner to an account servicer for reconciliation purposes.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.ReconciliationIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.mmReconciliationIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -356,11 +362,11 @@ public class SettlementTypeAndAdditionalParameters14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.SecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.Payment,
-						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.CommonIdentification, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.CorporateActionEventIdentification,
-						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.ReconciliationIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.mmPayment,
+						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.mmCommonIdentification, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.mmCorporateActionEventIdentification,
+						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.mmReconciliationIndicator);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementTypeAndAdditionalParameters14";
 				definition = "Provides transaction type and identification information.";
@@ -368,5 +374,45 @@ public class SettlementTypeAndAdditionalParameters14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReceiveDelivery1Code getSecuritiesMovementType() {
+		return securitiesMovementType;
+	}
+
+	public void setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
+		this.securitiesMovementType = securitiesMovementType;
+	}
+
+	public DeliveryReceiptType2Code getPayment() {
+		return payment;
+	}
+
+	public void setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = payment;
+	}
+
+	public Max35Text getCommonIdentification() {
+		return commonIdentification;
+	}
+
+	public void setCommonIdentification(Max35Text commonIdentification) {
+		this.commonIdentification = commonIdentification;
+	}
+
+	public Max35Text getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification;
+	}
+
+	public void setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
+		this.corporateActionEventIdentification = corporateActionEventIdentification;
+	}
+
+	public YesNoIndicator getReconciliationIndicator() {
+		return reconciliationIndicator;
+	}
+
+	public void setReconciliationIndicator(YesNoIndicator reconciliationIndicator) {
+		this.reconciliationIndicator = reconciliationIndicator;
 	}
 }

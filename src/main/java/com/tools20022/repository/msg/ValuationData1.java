@@ -38,16 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationData1#ValuationReference
- * ValuationData1.ValuationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationData1#mmValuationReference
+ * ValuationData1.mmValuationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationData1#SettlementCurrency
- * ValuationData1.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationData1#mmSettlementCurrency
+ * ValuationData1.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationData1#AdditionalValuationInformation
- * ValuationData1.AdditionalValuationInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ValuationData1#SettlementParty
- * ValuationData1.SettlementParty}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationData1#mmAdditionalValuationInformation
+ * ValuationData1.mmAdditionalValuationInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ValuationData1#mmSettlementParty
+ * ValuationData1.mmSettlementParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ValuationData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text valuationReference;
 	/**
 	 * Reference to the latest trade identification of the NDF opening trade.
 	 * <p>
@@ -100,7 +102,7 @@ public class ValuationData1 {
 	 * "Reference to the latest trade identification of the NDF opening trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationData1.mmObject();
 			isDerived = false;
@@ -108,11 +110,12 @@ public class ValuationData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationReference";
 			definition = "Reference to the latest trade identification of the NDF opening trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode settlementCurrency;
 	/**
 	 * Specifies the currency in which the non deliverable trade has to be
 	 * settled ie the deliverable currency.
@@ -127,8 +130,8 @@ public class ValuationData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#SettlementCurrency
-	 * NonDeliverableTrade.SettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmSettlementCurrency
+	 * NonDeliverableTrade.mmSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +151,21 @@ public class ValuationData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmSettlementCurrency;
 			componentContext_lazy = () -> ValuationData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.SettlementCurrency;
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Specifies the currency in which the non deliverable trade has to be settled ie the deliverable currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected Max140Text additionalValuationInformation;
 	/**
 	 * Free format text that may contain information on the valuation such as
 	 * the currency, the place, the time or the source of the rate.
@@ -191,7 +195,7 @@ public class ValuationData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalValuationInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalValuationInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationData1.mmObject();
 			isDerived = false;
@@ -199,11 +203,12 @@ public class ValuationData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalValuationInformation";
 			definition = "Free format text that may contain information on the valuation such as the currency, the place, the time or the source of the rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PartyIdentification7Choice settlementParty;
 	/**
 	 * Party through which the settlement will take place. It may contain the
 	 * BIC of a central settlement system eg CLSBUS33.
@@ -218,8 +223,8 @@ public class ValuationData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,17 +244,17 @@ public class ValuationData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementParty = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ValuationData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "SttlmPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParty";
 			definition = "Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification7Choice.mmObject();
 		}
 	};
@@ -257,15 +262,47 @@ public class ValuationData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationData1.ValuationReference, com.tools20022.repository.msg.ValuationData1.SettlementCurrency,
-						com.tools20022.repository.msg.ValuationData1.AdditionalValuationInformation, com.tools20022.repository.msg.ValuationData1.SettlementParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationData1.mmValuationReference, com.tools20022.repository.msg.ValuationData1.mmSettlementCurrency,
+						com.tools20022.repository.msg.ValuationData1.mmAdditionalValuationInformation, com.tools20022.repository.msg.ValuationData1.mmSettlementParty);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ValuationData1";
 				definition = "Set of data which contains the link to the opening of the non deliverable trade and supplementary information on its valuation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getValuationReference() {
+		return valuationReference;
+	}
+
+	public void setValuationReference(Max35Text valuationReference) {
+		this.valuationReference = valuationReference;
+	}
+
+	public ActiveOrHistoricCurrencyCode getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(ActiveOrHistoricCurrencyCode settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public Max140Text getAdditionalValuationInformation() {
+		return additionalValuationInformation;
+	}
+
+	public void setAdditionalValuationInformation(Max140Text additionalValuationInformation) {
+		this.additionalValuationInformation = additionalValuationInformation;
+	}
+
+	public PartyIdentification7Choice getSettlementParty() {
+		return settlementParty;
+	}
+
+	public void setSettlementParty(PartyIdentification7Choice settlementParty) {
+		this.settlementParty = settlementParty;
 	}
 }

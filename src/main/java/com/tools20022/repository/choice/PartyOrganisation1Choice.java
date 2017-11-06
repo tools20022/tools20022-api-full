@@ -19,6 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.msg.OrganisationIdentification3;
 import java.util.Arrays;
@@ -35,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyOrganisation1Choice#OrganisationIdentification
- * PartyOrganisation1Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyOrganisation1Choice#mmOrganisationIdentification
+ * PartyOrganisation1Choice.mmOrganisationIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyOrganisation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrganisationIdentification3 organisationIdentification;
 	/**
 	 * Unique and unambiguous way of identifying an organisation.
 	 * <p>
@@ -96,33 +98,41 @@ public class PartyOrganisation1Choice {
 	 * "Unique and unambiguous way of identifying an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> PartyOrganisation1Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way of identifying an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrganisationIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OrganisationIdentification3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrganisation1Choice.OrganisationIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrganisation1Choice.mmOrganisationIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyOrganisation1Choice";
 				definition = "Choice between the identification of a person and the identification of a non-financial institution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrganisationIdentification3 getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(OrganisationIdentification3 organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
 	}
 }

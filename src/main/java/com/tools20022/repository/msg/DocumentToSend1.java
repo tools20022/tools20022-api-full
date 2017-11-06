@@ -39,24 +39,24 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentToSend1#MethodOfTransmissionXorExtendedMethodOfTransmissionRule
- * DocumentToSend1.MethodOfTransmissionXorExtendedMethodOfTransmissionRule}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentToSend1#mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule
+ * DocumentToSend1.mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DocumentToSend1#Type
- * DocumentToSend1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DocumentToSend1#Recipient
- * DocumentToSend1.Recipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentToSend1#mmType
+ * DocumentToSend1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentToSend1#mmRecipient
+ * DocumentToSend1.mmRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentToSend1#MethodOfTransmission
- * DocumentToSend1.MethodOfTransmission}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentToSend1#mmMethodOfTransmission
+ * DocumentToSend1.mmMethodOfTransmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentToSend1#ExtendedMethodOfTransmission
- * DocumentToSend1.ExtendedMethodOfTransmission}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentToSend1#mmExtendedMethodOfTransmission
+ * DocumentToSend1.mmExtendedMethodOfTransmission}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,30 +64,30 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#ServiceLevelAgreement
- * AccountDetailsConfirmationV02.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmServiceLevelAgreement
+ * AccountDetailsConfirmationV02.mmServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#ServiceLevelAgreement
- * AccountDetailsConfirmationV03.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#mmServiceLevelAgreement
+ * AccountDetailsConfirmationV03.mmServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#ServiceLevelAgreement
- * AccountOpeningInstructionV02.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#mmServiceLevelAgreement
+ * AccountOpeningInstructionV02.mmServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#ServiceLevelAgreement
- * AccountOpeningInstructionV03.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#mmServiceLevelAgreement
+ * AccountOpeningInstructionV03.mmServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#ServiceLevelAgreement
- * AccountDetailsConfirmationV04.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#mmServiceLevelAgreement
+ * AccountDetailsConfirmationV04.mmServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#ServiceLevelAgreement
- * AccountOpeningInstructionV04.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#mmServiceLevelAgreement
+ * AccountOpeningInstructionV04.mmServiceLevelAgreement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -111,6 +111,7 @@ import java.util.function.Supplier;
 public class DocumentToSend1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text type;
 	/**
 	 * Type of document.
 	 * <p>
@@ -139,13 +140,13 @@ public class DocumentToSend1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DocumentToSend2#Type
-	 * DocumentToSend2.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DocumentToSend2#mmType
+	 * DocumentToSend2.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentToSend1.mmObject();
 			isDerived = false;
@@ -153,12 +154,13 @@ public class DocumentToSend1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend2.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend2.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice recipient;
 	/**
 	 * Party that should receive the document.
 	 * <p>
@@ -188,13 +190,14 @@ public class DocumentToSend1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DocumentToSend2#Recipient
-	 * DocumentToSend2.Recipient}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentToSend2#mmRecipient
+	 * DocumentToSend2.mmRecipient}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Recipient = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecipient = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentToSend1.mmObject();
 			isDerived = false;
@@ -202,12 +205,13 @@ public class DocumentToSend1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Party that should receive the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend2.Recipient);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend2.mmRecipient);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected CommunicationMethod1Code methodOfTransmission;
 	/**
 	 * Communication method to be used.
 	 * <p>
@@ -236,7 +240,7 @@ public class DocumentToSend1 {
 	 * definition} = "Communication method to be used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MethodOfTransmission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMethodOfTransmission = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentToSend1.mmObject();
 			isDerived = false;
@@ -244,11 +248,12 @@ public class DocumentToSend1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodOfTransmission";
 			definition = "Communication method to be used.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CommunicationMethod1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedMethodOfTransmission;
 	/**
 	 * Communication means used to send information.
 	 * <p>
@@ -277,7 +282,7 @@ public class DocumentToSend1 {
 	 * definition} = "Communication means used to send information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedMethodOfTransmission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedMethodOfTransmission = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentToSend1.mmObject();
 			isDerived = false;
@@ -285,8 +290,8 @@ public class DocumentToSend1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedMethodOfTransmission";
 			definition = "Communication means used to send information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
@@ -300,11 +305,11 @@ public class DocumentToSend1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DocumentToSend1#MethodOfTransmission
-	 * DocumentToSend1.MethodOfTransmission}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentToSend1#mmMethodOfTransmission
+	 * DocumentToSend1.mmMethodOfTransmission}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DocumentToSend1#ExtendedMethodOfTransmission
-	 * DocumentToSend1.ExtendedMethodOfTransmission}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentToSend1#mmExtendedMethodOfTransmission
+	 * DocumentToSend1.mmExtendedMethodOfTransmission}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -324,26 +329,26 @@ public class DocumentToSend1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor MethodOfTransmissionXorExtendedMethodOfTransmissionRule = new MMXor() {
+	public static final MMXor mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodOfTransmissionXorExtendedMethodOfTransmissionRule";
 			definition = "Either MethodOfTransmission or ExtendedMethodOfTransmission must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.MethodOfTransmission, com.tools20022.repository.msg.DocumentToSend1.ExtendedMethodOfTransmission);
 			messageComponent_lazy = () -> DocumentToSend1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.mmMethodOfTransmission, com.tools20022.repository.msg.DocumentToSend1.mmExtendedMethodOfTransmission);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.Type, com.tools20022.repository.msg.DocumentToSend1.Recipient, com.tools20022.repository.msg.DocumentToSend1.MethodOfTransmission,
-						com.tools20022.repository.msg.DocumentToSend1.ExtendedMethodOfTransmission);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.ServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.ServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.ServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.ServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.ServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.ServiceLevelAgreement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.mmType, com.tools20022.repository.msg.DocumentToSend1.mmRecipient,
+						com.tools20022.repository.msg.DocumentToSend1.mmMethodOfTransmission, com.tools20022.repository.msg.DocumentToSend1.mmExtendedMethodOfTransmission);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmServiceLevelAgreement,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmServiceLevelAgreement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmServiceLevelAgreement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmServiceLevelAgreement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -355,9 +360,41 @@ public class DocumentToSend1 {
 				name = "DocumentToSend1";
 				definition = "Determine the type of document and the type of communication method to be used to notify a Party.";
 				nextVersions_lazy = () -> Arrays.asList(DocumentToSend2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.MethodOfTransmissionXorExtendedMethodOfTransmissionRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getType() {
+		return type;
+	}
+
+	public void setType(Max140Text type) {
+		this.type = type;
+	}
+
+	public PartyIdentification2Choice getRecipient() {
+		return recipient;
+	}
+
+	public void setRecipient(PartyIdentification2Choice recipient) {
+		this.recipient = recipient;
+	}
+
+	public CommunicationMethod1Code getMethodOfTransmission() {
+		return methodOfTransmission;
+	}
+
+	public void setMethodOfTransmission(CommunicationMethod1Code methodOfTransmission) {
+		this.methodOfTransmission = methodOfTransmission;
+	}
+
+	public Extended350Code getExtendedMethodOfTransmission() {
+		return extendedMethodOfTransmission;
+	}
+
+	public void setExtendedMethodOfTransmission(Extended350Code extendedMethodOfTransmission) {
+		this.extendedMethodOfTransmission = extendedMethodOfTransmission;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RateType23Choice#Code
- * RateType23Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType23Choice#mmCode
+ * RateType23Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateType23Choice#Proprietary
- * RateType23Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RateType23Choice#mmProprietary
+ * RateType23Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateType23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NetDividendRateType3Code code;
 	/**
 	 * Standard code to specify the type of net dividend rate.
 	 * <p>
@@ -87,8 +88,8 @@ public class RateType23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#RateType
-	 * Dividend.RateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmRateType
+	 * Dividend.mmRateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,27 +109,28 @@ public class RateType23Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.RateType41Choice#Code
-	 * RateType41Choice.Code}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.RateType41Choice#mmCode
+	 * RateType41Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmRateType;
 			componentContext_lazy = () -> RateType23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.RateType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of net dividend rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType41Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType41Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NetDividendRateType3Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the type of net dividend rate.
 	 * <p>
@@ -141,8 +143,8 @@ public class RateType23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#RateType
-	 * Dividend.RateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmRateType
+	 * Dividend.mmRateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,42 +166,58 @@ public class RateType23Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateType41Choice#Proprietary
-	 * RateType41Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateType41Choice#mmProprietary
+	 * RateType41Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmRateType;
 			componentContext_lazy = () -> RateType23Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.RateType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of net dividend rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType41Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType41Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType23Choice.Code, com.tools20022.repository.choice.RateType23Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType23Choice.mmCode, com.tools20022.repository.choice.RateType23Choice.mmProprietary);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType23Choice";
 				definition = "Choice between a standard code or proprietary code to specify a rate type.";
-				previousVersion_lazy = () -> RateType7Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RateType41Choice.mmObject());
+				previousVersion_lazy = () -> RateType7Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NetDividendRateType3Code getCode() {
+		return code;
+	}
+
+	public void setCode(NetDividendRateType3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

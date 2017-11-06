@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.InvoiceeRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information supplied to enable the matching/reconciliation of an entry with
@@ -38,23 +39,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#ReferredDocumentInformation
- * StructuredRemittanceInformation8.ReferredDocumentInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmReferredDocumentInformation
+ * StructuredRemittanceInformation8.mmReferredDocumentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#ReferredDocumentAmount
- * StructuredRemittanceInformation8.ReferredDocumentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmReferredDocumentAmount
+ * StructuredRemittanceInformation8.mmReferredDocumentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#CreditorReferenceInformation
- * StructuredRemittanceInformation8.CreditorReferenceInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmCreditorReferenceInformation
+ * StructuredRemittanceInformation8.mmCreditorReferenceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#Invoicer
- * StructuredRemittanceInformation8.Invoicer}</li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmInvoicer
+ * StructuredRemittanceInformation8.mmInvoicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#Invoicee
- * StructuredRemittanceInformation8.Invoicee}</li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmInvoicee
+ * StructuredRemittanceInformation8.mmInvoicee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#AdditionalRemittanceInformation
- * StructuredRemittanceInformation8.AdditionalRemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation8.mmAdditionalRemittanceInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StructuredRemittanceInformation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.ReferredDocumentInformation3> referredDocumentInformation;
 	/**
 	 * Set of elements used to identify the documents referred to in the
 	 * remittance information.
@@ -113,20 +115,21 @@ public class StructuredRemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReferredDocumentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferredDocumentInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentInformation";
 			definition = "Set of elements used to identify the documents referred to in the remittance information.";
 			minOccurs = 0;
-			type_lazy = () -> ReferredDocumentInformation3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmObject();
 		}
 	};
+	protected RemittanceAmount1 referredDocumentAmount;
 	/**
 	 * Set of elements used to provide details on the amounts of the referred
 	 * document.
@@ -139,8 +142,8 @@ public class StructuredRemittanceInformation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Amount
-	 * Document.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmAmount
+	 * Document.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,21 +164,22 @@ public class StructuredRemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReferredDocumentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferredDocumentAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
 			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Amount;
 			isDerived = false;
 			xmlTag = "RfrdDocAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentAmount";
 			definition = "Set of elements used to provide details on the amounts of the referred document.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RemittanceAmount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RemittanceAmount1.mmObject();
 		}
 	};
+	protected CreditorReferenceInformation2 creditorReferenceInformation;
 	/**
 	 * Reference information provided by the creditor to allow the
 	 * identification of the underlying documents.
@@ -189,8 +193,8 @@ public class StructuredRemittanceInformation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#CreditorReference
-	 * PaymentIdentification.CreditorReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmCreditorReference
+	 * PaymentIdentification.mmCreditorReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -211,21 +215,22 @@ public class StructuredRemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorReferenceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorReferenceInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.CreditorReference;
 			isDerived = false;
 			xmlTag = "CdtrRefInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorReferenceInformation";
 			definition = "Reference information provided by the creditor to allow the identification of the underlying documents.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CreditorReferenceInformation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CreditorReferenceInformation2.mmObject();
 		}
 	};
+	protected PartyIdentification43 invoicer;
 	/**
 	 * Identification of the organisation issuing the invoice, when it is
 	 * different from the creditor or ultimate creditor.
@@ -238,8 +243,8 @@ public class StructuredRemittanceInformation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,21 +265,22 @@ public class StructuredRemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Invoicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicer";
 			definition = "Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected PartyIdentification43 invoicee;
 	/**
 	 * Identification of the party to whom an invoice is issued, when it is
 	 * different from the debtor or ultimate debtor.
@@ -308,21 +314,22 @@ public class StructuredRemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Invoicee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoicee = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
 			businessComponentTrace_lazy = () -> InvoiceeRole.mmObject();
+			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "Invcee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicee";
 			definition = "Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected List<Max140Text> additionalRemittanceInformation;
 	/**
 	 * Additional information, in free text form, to complement the structured
 	 * remittance information.
@@ -357,17 +364,17 @@ public class StructuredRemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRemittanceInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRemittanceInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> StructuredRemittanceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRemittanceInformation";
 			definition = "Additional information, in free text form, to complement the structured remittance information.";
-			minOccurs = 0;
 			maxOccurs = 3;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -375,16 +382,65 @@ public class StructuredRemittanceInformation8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRemittanceInformation8.ReferredDocumentInformation, com.tools20022.repository.msg.StructuredRemittanceInformation8.ReferredDocumentAmount,
-						com.tools20022.repository.msg.StructuredRemittanceInformation8.CreditorReferenceInformation, com.tools20022.repository.msg.StructuredRemittanceInformation8.Invoicer,
-						com.tools20022.repository.msg.StructuredRemittanceInformation8.Invoicee, com.tools20022.repository.msg.StructuredRemittanceInformation8.AdditionalRemittanceInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRemittanceInformation8.mmReferredDocumentInformation,
+						com.tools20022.repository.msg.StructuredRemittanceInformation8.mmReferredDocumentAmount, com.tools20022.repository.msg.StructuredRemittanceInformation8.mmCreditorReferenceInformation,
+						com.tools20022.repository.msg.StructuredRemittanceInformation8.mmInvoicer, com.tools20022.repository.msg.StructuredRemittanceInformation8.mmInvoicee,
+						com.tools20022.repository.msg.StructuredRemittanceInformation8.mmAdditionalRemittanceInformation);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StructuredRemittanceInformation8";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ReferredDocumentInformation3> getReferredDocumentInformation() {
+		return referredDocumentInformation;
+	}
+
+	public void setReferredDocumentInformation(List<com.tools20022.repository.msg.ReferredDocumentInformation3> referredDocumentInformation) {
+		this.referredDocumentInformation = referredDocumentInformation;
+	}
+
+	public RemittanceAmount1 getReferredDocumentAmount() {
+		return referredDocumentAmount;
+	}
+
+	public void setReferredDocumentAmount(com.tools20022.repository.msg.RemittanceAmount1 referredDocumentAmount) {
+		this.referredDocumentAmount = referredDocumentAmount;
+	}
+
+	public CreditorReferenceInformation2 getCreditorReferenceInformation() {
+		return creditorReferenceInformation;
+	}
+
+	public void setCreditorReferenceInformation(com.tools20022.repository.msg.CreditorReferenceInformation2 creditorReferenceInformation) {
+		this.creditorReferenceInformation = creditorReferenceInformation;
+	}
+
+	public PartyIdentification43 getInvoicer() {
+		return invoicer;
+	}
+
+	public void setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
+		this.invoicer = invoicer;
+	}
+
+	public PartyIdentification43 getInvoicee() {
+		return invoicee;
+	}
+
+	public void setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
+		this.invoicee = invoicee;
+	}
+
+	public List<Max140Text> getAdditionalRemittanceInformation() {
+		return additionalRemittanceInformation;
+	}
+
+	public void setAdditionalRemittanceInformation(List<Max140Text> additionalRemittanceInformation) {
+		this.additionalRemittanceInformation = additionalRemittanceInformation;
 	}
 }

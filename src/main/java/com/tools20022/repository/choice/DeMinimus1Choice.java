@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DeMinimus1Choice#DeMinimusApplicable
- * DeMinimus1Choice.DeMinimusApplicable}</li>
+ * {@linkplain com.tools20022.repository.choice.DeMinimus1Choice#mmDeMinimusApplicable
+ * DeMinimus1Choice.mmDeMinimusApplicable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DeMinimus1Choice#DeMinimusNotApplicable
- * DeMinimus1Choice.DeMinimusNotApplicable}</li>
+ * {@linkplain com.tools20022.repository.choice.DeMinimus1Choice#mmDeMinimusNotApplicable
+ * DeMinimus1Choice.mmDeMinimusNotApplicable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeMinimus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DeMinimusApplicable1 deMinimusApplicable;
 	/**
 	 * Conditions applicable when the investor is covered by the "de minimis"
 	 * exemption.
@@ -74,8 +75,8 @@ public class DeMinimus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Investor#DeMinimusApplicable
-	 * Investor.DeMinimusApplicable}</li>
+	 * {@linkplain com.tools20022.repository.entity.Investor#mmDeMinimusApplicable
+	 * Investor.mmDeMinimusApplicable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class DeMinimus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeMinimusApplicable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeMinimusApplicable = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> DeMinimus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.DeMinimusApplicable;
 			isDerived = false;
 			xmlTag = "DeMnmsAplbl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusApplicable";
 			definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DeMinimusApplicable1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DeMinimusApplicable1.mmObject();
 		}
 	};
+	protected DeMinimusNotApplicable1 deMinimusNotApplicable;
 	/**
 	 * Conditions applicable when the investor is not covered by the
 	 * "de minimis" exemption.
@@ -124,8 +126,8 @@ public class DeMinimus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Investor#DeMinimusApplicable
-	 * Investor.DeMinimusApplicable}</li>
+	 * {@linkplain com.tools20022.repository.entity.Investor#mmDeMinimusApplicable
+	 * Investor.mmDeMinimusApplicable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,33 +148,49 @@ public class DeMinimus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeMinimusNotApplicable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeMinimusNotApplicable = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> DeMinimus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.DeMinimusApplicable;
 			isDerived = false;
 			xmlTag = "DeMnmsNotAplbl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusNotApplicable";
 			definition = "Conditions applicable when the investor is not covered by the \"de minimis\" exemption.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DeMinimusNotApplicable1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DeMinimusNotApplicable1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeMinimus1Choice.DeMinimusApplicable, com.tools20022.repository.choice.DeMinimus1Choice.DeMinimusNotApplicable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeMinimus1Choice.mmDeMinimusApplicable, com.tools20022.repository.choice.DeMinimus1Choice.mmDeMinimusNotApplicable);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeMinimus1Choice";
 				definition = "De minimus applicability conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DeMinimusApplicable1 getDeMinimusApplicable() {
+		return deMinimusApplicable;
+	}
+
+	public void setDeMinimusApplicable(DeMinimusApplicable1 deMinimusApplicable) {
+		this.deMinimusApplicable = deMinimusApplicable;
+	}
+
+	public DeMinimusNotApplicable1 getDeMinimusNotApplicable() {
+		return deMinimusNotApplicable;
+	}
+
+	public void setDeMinimusNotApplicable(DeMinimusNotApplicable1 deMinimusNotApplicable) {
+		this.deMinimusNotApplicable = deMinimusNotApplicable;
 	}
 }

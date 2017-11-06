@@ -38,31 +38,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AnalyticsValue#Amount
- * AnalyticsValue.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AnalyticsValue#Rate
- * AnalyticsValue.Rate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AnalyticsValue#mmAmount
+ * AnalyticsValue.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AnalyticsValue#mmRate
+ * AnalyticsValue.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AnalyticsValue#NumberOfYears
- * AnalyticsValue.NumberOfYears}</li>
+ * {@linkplain com.tools20022.repository.entity.AnalyticsValue#mmNumberOfYears
+ * AnalyticsValue.mmNumberOfYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AnalyticsValue#AnalyticsCalculation
- * AnalyticsValue.AnalyticsCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.AnalyticsValue#mmAnalyticsCalculation
+ * AnalyticsValue.mmAnalyticsCalculation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AnalyticsCalculation#Value
- * AnalyticsCalculation.Value}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#mmValue
+ * AnalyticsCalculation.mmValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AnalyticsValue {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount amount;
 	/**
 	 * Analytics expressed as a currency and value.
 	 * <p>
@@ -102,18 +104,19 @@ public class AnalyticsValue {
 	 * definition} = "Analytics expressed as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Amount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Analytics expressed as a currency and value.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Analytics expressed as a rate.
 	 * <p>
@@ -140,18 +143,19 @@ public class AnalyticsValue {
 	 * definition} = "Analytics expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Rate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Analytics expressed as a rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Number numberOfYears;
 	/**
 	 * Analytics expressed as a number of years.
 	 * <p>
@@ -177,18 +181,19 @@ public class AnalyticsValue {
 	 * definition} = "Analytics expressed as a number of years."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NumberOfYears = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNumberOfYears = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NumberOfYears";
 			definition = "Analytics expressed as a number of years.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected AnalyticsCalculation analyticsCalculation;
 	/**
 	 * Analytics calculation for which an analytics value is specified.
 	 * <p>
@@ -197,8 +202,8 @@ public class AnalyticsValue {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#Value
-	 * AnalyticsCalculation.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#mmValue
+	 * AnalyticsCalculation.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -224,33 +229,65 @@ public class AnalyticsValue {
 	 * "Analytics calculation for which an analytics value is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AnalyticsCalculation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAnalyticsCalculation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AnalyticsValue.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AnalyticsCalculation";
 			definition = "Analytics calculation for which an analytics value is specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.AnalyticsCalculation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AnalyticsCalculation.Value;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.AnalyticsCalculation.mmValue;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AnalyticsCalculation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AnalyticsValue";
 				definition = "Value given to a price analytic.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AnalyticsCalculation.Value);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AnalyticsValue.Amount, com.tools20022.repository.entity.AnalyticsValue.Rate, com.tools20022.repository.entity.AnalyticsValue.NumberOfYears,
-						com.tools20022.repository.entity.AnalyticsValue.AnalyticsCalculation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AnalyticsCalculation.mmValue);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AnalyticsValue.mmAmount, com.tools20022.repository.entity.AnalyticsValue.mmRate, com.tools20022.repository.entity.AnalyticsValue.mmNumberOfYears,
+						com.tools20022.repository.entity.AnalyticsValue.mmAnalyticsCalculation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public Number getNumberOfYears() {
+		return numberOfYears;
+	}
+
+	public void setNumberOfYears(Number numberOfYears) {
+		this.numberOfYears = numberOfYears;
+	}
+
+	public AnalyticsCalculation getAnalyticsCalculation() {
+		return analyticsCalculation;
+	}
+
+	public void setAnalyticsCalculation(com.tools20022.repository.entity.AnalyticsCalculation analyticsCalculation) {
+		this.analyticsCalculation = analyticsCalculation;
 	}
 }

@@ -19,6 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.repository.entity.CashAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -31,13 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Account9Choice#CashAccount
- * Account9Choice.CashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Account9Choice#ChargesAccount
- * Account9Choice.ChargesAccount}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Account9Choice#TaxAccount
- * Account9Choice.TaxAccount}</li>
+ * {@linkplain com.tools20022.repository.choice.Account9Choice#mmCashAccount
+ * Account9Choice.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Account9Choice#mmChargesAccount
+ * Account9Choice.mmChargesAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Account9Choice#mmTaxAccount
+ * Account9Choice.mmTaxAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Account9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccountIdentification6Choice cashAccount;
 	/**
 	 * Account in which cash is maintained.
 	 * <p>
@@ -93,21 +96,22 @@ public class Account9Choice {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> Account9Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
 		}
 	};
+	protected CashAccountIdentification6Choice chargesAccount;
 	/**
 	 * Account to be used for charges if different from the account for payment.
 	 * <p>
@@ -120,8 +124,8 @@ public class Account9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargesDebitAccount
-	 * Charges.ChargesDebitAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargesDebitAccount
+	 * Charges.mmChargesDebitAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,21 +146,22 @@ public class Account9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargesAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargesDebitAccount;
 			componentContext_lazy = () -> Account9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargesDebitAccount;
 			isDerived = false;
 			xmlTag = "ChrgsAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccount";
 			definition = "Account to be used for charges if different from the account for payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
 		}
 	};
+	protected CashAccountIdentification6Choice taxAccount;
 	/**
 	 * Account to be used for taxes if different from the account for payment.
 	 * <p>
@@ -169,8 +174,8 @@ public class Account9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxAccount
-	 * Tax.TaxAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxAccount
+	 * Tax.mmTaxAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,34 +196,58 @@ public class Account9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxAccount;
 			componentContext_lazy = () -> Account9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxAccount;
 			isDerived = false;
 			xmlTag = "TaxAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAccount";
 			definition = "Account to be used for taxes if different from the account for payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account9Choice.CashAccount, com.tools20022.repository.choice.Account9Choice.ChargesAccount,
-						com.tools20022.repository.choice.Account9Choice.TaxAccount);
-				trace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account9Choice.mmCashAccount, com.tools20022.repository.choice.Account9Choice.mmChargesAccount,
+						com.tools20022.repository.choice.Account9Choice.mmTaxAccount);
+				trace_lazy = () -> CashAccount.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Account9Choice";
 				definition = "Choice between a cash account, a charges account or a tax account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccountIdentification6Choice getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.choice.CashAccountIdentification6Choice cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public CashAccountIdentification6Choice getChargesAccount() {
+		return chargesAccount;
+	}
+
+	public void setChargesAccount(com.tools20022.repository.choice.CashAccountIdentification6Choice chargesAccount) {
+		this.chargesAccount = chargesAccount;
+	}
+
+	public CashAccountIdentification6Choice getTaxAccount() {
+		return taxAccount;
+	}
+
+	public void setTaxAccount(com.tools20022.repository.choice.CashAccountIdentification6Choice taxAccount) {
+		this.taxAccount = taxAccount;
 	}
 }

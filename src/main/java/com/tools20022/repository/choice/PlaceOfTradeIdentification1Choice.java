@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#Country
- * PlaceOfTradeIdentification1Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#mmCountry
+ * PlaceOfTradeIdentification1Choice.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#Exchange
- * PlaceOfTradeIdentification1Choice.Exchange}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#mmExchange
+ * PlaceOfTradeIdentification1Choice.mmExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#Party
- * PlaceOfTradeIdentification1Choice.Party}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#mmParty
+ * PlaceOfTradeIdentification1Choice.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#OverTheCounter
- * PlaceOfTradeIdentification1Choice.OverTheCounter}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#mmOverTheCounter
+ * PlaceOfTradeIdentification1Choice.mmOverTheCounter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlaceOfTradeIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country in which the transaction is executed.
 	 * <p>
@@ -86,7 +87,8 @@ public class PlaceOfTradeIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +107,21 @@ public class PlaceOfTradeIdentification1Choice {
 	 * definition} = "Country in which the transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the transaction is executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected MICIdentifier exchange;
 	/**
 	 * Exchange at which the transaction is executed.
 	 * <p>
@@ -132,8 +135,8 @@ public class PlaceOfTradeIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,20 +155,21 @@ public class PlaceOfTradeIdentification1Choice {
 	 * definition} = "Exchange at which the transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Exchange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchange = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "Xchg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
 			definition = "Exchange at which the transaction is executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected AnyBICIdentifier party;
 	/**
 	 * Party's location at which the transaction is executed.
 	 * <p>
@@ -179,8 +183,8 @@ public class PlaceOfTradeIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,20 +203,21 @@ public class PlaceOfTradeIdentification1Choice {
 	 * definition} = "Party's location at which the transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Party = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party's location at which the transaction is executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected Max35Text overTheCounter;
 	/**
 	 * Place at which the Over-the-Counter (OTC) transaction is executed.
 	 * <p>
@@ -241,7 +246,7 @@ public class PlaceOfTradeIdentification1Choice {
 	 * "Place at which the Over-the-Counter (OTC) transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OverTheCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOverTheCounter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
 			isDerived = false;
@@ -249,8 +254,8 @@ public class PlaceOfTradeIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
 			definition = "Place at which the Over-the-Counter (OTC) transaction is executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -258,15 +263,47 @@ public class PlaceOfTradeIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.Country, com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.Exchange,
-						com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.Party, com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.OverTheCounter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmCountry, com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmExchange,
+						com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmParty, com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmOverTheCounter);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfTradeIdentification1Choice";
 				definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public MICIdentifier getExchange() {
+		return exchange;
+	}
+
+	public void setExchange(MICIdentifier exchange) {
+		this.exchange = exchange;
+	}
+
+	public AnyBICIdentifier getParty() {
+		return party;
+	}
+
+	public void setParty(AnyBICIdentifier party) {
+		this.party = party;
+	}
+
+	public Max35Text getOverTheCounter() {
+		return overTheCounter;
+	}
+
+	public void setOverTheCounter(Max35Text overTheCounter) {
+		this.overTheCounter = overTheCounter;
 	}
 }

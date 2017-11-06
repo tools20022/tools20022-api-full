@@ -33,37 +33,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#ManagementFee
- * ChargeType9Code.ManagementFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmManagementFee
+ * ChargeType9Code.mmManagementFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#BackEndLoad
- * ChargeType9Code.BackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmBackEndLoad
+ * ChargeType9Code.mmBackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#FrontEndLoad
- * ChargeType9Code.FrontEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmFrontEndLoad
+ * ChargeType9Code.mmFrontEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#AdvisoryFee
- * ChargeType9Code.AdvisoryFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType9Code#CustodyFee
- * ChargeType9Code.CustodyFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmAdvisoryFee
+ * ChargeType9Code.mmAdvisoryFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#PublicationFee
- * ChargeType9Code.PublicationFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmCustodyFee
+ * ChargeType9Code.mmCustodyFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#AccountingFee
- * ChargeType9Code.AccountingFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmPublicationFee
+ * ChargeType9Code.mmPublicationFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#Equalisation
- * ChargeType9Code.Equalisation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType9Code#Penalty
- * ChargeType9Code.Penalty}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmAccountingFee
+ * ChargeType9Code.mmAccountingFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmEqualisation
+ * ChargeType9Code.mmEqualisation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType9Code#mmPenalty
+ * ChargeType9Code.mmPenalty}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -100,7 +101,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "ManagementFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ManagementFee = new MMCode() {
+	public static final MMCode mmManagementFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementFee";
@@ -123,7 +124,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "BackEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode BackEndLoad = new MMCode() {
+	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
@@ -146,7 +147,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "FrontEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrontEndLoad = new MMCode() {
+	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
@@ -169,7 +170,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "AdvisoryFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdvisoryFee = new MMCode() {
+	public static final MMCode mmAdvisoryFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisoryFee";
@@ -192,7 +193,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "CustodyFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyFee = new MMCode() {
+	public static final MMCode mmCustodyFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyFee";
@@ -215,7 +216,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "PublicationFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode PublicationFee = new MMCode() {
+	public static final MMCode mmPublicationFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicationFee";
@@ -238,7 +239,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "AccountingFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountingFee = new MMCode() {
+	public static final MMCode mmAccountingFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingFee";
@@ -261,7 +262,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "Equalisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Equalisation = new MMCode() {
+	public static final MMCode mmEqualisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equalisation";
@@ -284,7 +285,7 @@ public class ChargeType9Code extends ChargeTypeCode {
 	 * name} = "Penalty"</li>
 	 * </ul>
 	 */
-	public static final MMCode Penalty = new MMCode() {
+	public static final MMCode mmPenalty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Penalty";
@@ -295,14 +296,15 @@ public class ChargeType9Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MANF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType9Code";
 				definition = "Specifies the type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType9Code.ManagementFee, com.tools20022.repository.codeset.ChargeType9Code.BackEndLoad, com.tools20022.repository.codeset.ChargeType9Code.FrontEndLoad,
-						com.tools20022.repository.codeset.ChargeType9Code.AdvisoryFee, com.tools20022.repository.codeset.ChargeType9Code.CustodyFee, com.tools20022.repository.codeset.ChargeType9Code.PublicationFee,
-						com.tools20022.repository.codeset.ChargeType9Code.AccountingFee, com.tools20022.repository.codeset.ChargeType9Code.Equalisation, com.tools20022.repository.codeset.ChargeType9Code.Penalty);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType9Code.mmManagementFee, com.tools20022.repository.codeset.ChargeType9Code.mmBackEndLoad,
+						com.tools20022.repository.codeset.ChargeType9Code.mmFrontEndLoad, com.tools20022.repository.codeset.ChargeType9Code.mmAdvisoryFee, com.tools20022.repository.codeset.ChargeType9Code.mmCustodyFee,
+						com.tools20022.repository.codeset.ChargeType9Code.mmPublicationFee, com.tools20022.repository.codeset.ChargeType9Code.mmAccountingFee, com.tools20022.repository.codeset.ChargeType9Code.mmEqualisation,
+						com.tools20022.repository.codeset.ChargeType9Code.mmPenalty);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

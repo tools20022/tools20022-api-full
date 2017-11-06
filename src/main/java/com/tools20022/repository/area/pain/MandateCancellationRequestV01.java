@@ -69,18 +69,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV01#GroupHeader
- * MandateCancellationRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV01#mmGroupHeader
+ * MandateCancellationRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV01#UnderlyingCancellationDetails
- * MandateCancellationRequestV01.UnderlyingCancellationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV01#mmUnderlyingCancellationDetails
+ * MandateCancellationRequestV01.mmUnderlyingCancellationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV01#identifier
- * MandateCancellationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader31 groupHeader;
 	/**
 	 * Set of characteristics to identify the message and parties playing a role
 	 * in the cancellation of the mandate, but which are not part of the
@@ -130,17 +129,18 @@ public class MandateCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the cancellation of the mandate, but which are not part of the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
 	};
+	protected MandateCancellation1 underlyingCancellationDetails;
 	/**
 	 * Set of elements used to provide details on the cancellation request.
 	 * <p>
@@ -165,42 +165,15 @@ public class MandateCancellationRequestV01 {
 	 * "Set of elements used to provide details on the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingCancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingCancellationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygCxlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingCancellationDetails";
 			definition = "Set of elements used to provide details on the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MandateCancellation1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "011";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -215,10 +188,34 @@ public class MandateCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "MndtCxlReq";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV01.GroupHeader, com.tools20022.repository.area.pain.MandateCancellationRequestV01.UnderlyingCancellationDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.MandateCancellationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV01.mmGroupHeader,
+						com.tools20022.repository.area.pain.MandateCancellationRequestV01.mmUnderlyingCancellationDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "011";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader31 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader31 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public MandateCancellation1 getUnderlyingCancellationDetails() {
+		return underlyingCancellationDetails;
+	}
+
+	public void setUnderlyingCancellationDetails(MandateCancellation1 underlyingCancellationDetails) {
+		this.underlyingCancellationDetails = underlyingCancellationDetails;
 	}
 }

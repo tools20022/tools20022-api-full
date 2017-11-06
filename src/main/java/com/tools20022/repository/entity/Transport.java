@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Moving of goods or people from one place to another by vehicle.
@@ -42,151 +43,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#Incoterms
- * Transport.Incoterms}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#Identification
- * Transport.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#Packaging
- * Transport.Packaging}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#ArrivalDateTime
- * Transport.ArrivalDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#PartialShipment
- * Transport.PartialShipment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#TransShipment
- * Transport.TransShipment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#ProductDelivery
- * Transport.ProductDelivery}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
- * Transport.PlaceOfDeparture}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmIncoterms
+ * Transport.mmIncoterms}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmIdentification
+ * Transport.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmPackaging
+ * Transport.mmPackaging}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmArrivalDateTime
+ * Transport.mmArrivalDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmPartialShipment
+ * Transport.mmPartialShipment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmTransShipment
+ * Transport.mmTransShipment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmProductDelivery
+ * Transport.mmProductDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
- * Transport.PlaceOfDestination}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#TransportCharges
- * Transport.TransportCharges}</li>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+ * Transport.mmPlaceOfDeparture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Transport#FreightChargesPrepaidOrCollect
- * Transport.FreightChargesPrepaidOrCollect}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#ShipmentDates
- * Transport.ShipmentDates}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#TransportedGoods
- * Transport.TransportedGoods}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#PartyRole
- * Transport.PartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#TransitLocation
- * Transport.TransitLocation}</li>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+ * Transport.mmPlaceOfDestination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Transport#TransportDocuments
- * Transport.TransportDocuments}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmTransportCharges
+ * Transport.mmTransportCharges}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmFreightChargesPrepaidOrCollect
+ * Transport.mmFreightChargesPrepaidOrCollect}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmShipmentDates
+ * Transport.mmShipmentDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Location#DepartureTransportParameters
- * Location.DepartureTransportParameters}</li>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmTransportedGoods
+ * Transport.mmTransportedGoods}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmPartyRole
+ * Transport.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Transport#mmTransitLocation
+ * Transport.mmTransitLocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Location#DestinationTransportParameters
- * Location.DestinationTransportParameters}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#RelatedTransport
- * Location.RelatedTransport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#Transport
- * Document.Transport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#Transport
- * Charges.Transport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Incoterms#Transport
- * Incoterms.Transport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#Transport
- * Goods.Transport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#Routing
- * ProductDelivery.Routing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Packaging#Transport
- * Packaging.Transport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransportPartyRole#Transport
- * TransportPartyRole.Transport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#RelatedTransport
- * ShipmentDateRange.RelatedTransport}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransportMeans3#ModeCode
- * TransportMeans3.ModeCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment2#TransportMeans
- * Consignment2.TransportMeans}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransportMeans1Choice#IndividualTransport
- * TransportMeans1Choice.IndividualTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransportMeans1Choice#MultimodalTransport
- * TransportMeans1Choice.MultimodalTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans1#IndividualTransport
- * TransportMeans1.IndividualTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans1#MultimodalTransport
- * TransportMeans1.MultimodalTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#IndividualTransport
- * TransportMeans2Choice.IndividualTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#MultimodalTransport
- * TransportMeans2Choice.MultimodalTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDetails1#RoutingSummary
- * TransportDetails1.RoutingSummary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDataSet2#TransportInformation
- * TransportDataSet2.TransportInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans2#IndividualTransport
- * TransportMeans2.IndividualTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans2#MultimodalTransport
- * TransportMeans2.MultimodalTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDetails2#RoutingSummary
- * TransportDetails2.RoutingSummary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDataSet3#TransportInformation
- * TransportDataSet3.TransportInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDataSet4#TransportInformation
- * TransportDataSet4.TransportInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDetails3#RoutingSummary
- * TransportDetails3.RoutingSummary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans4#IndividualTransport
- * TransportMeans4.IndividualTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans4#MultimodalTransport
- * TransportMeans4.MultimodalTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans5#IndividualTransport
- * TransportMeans5.IndividualTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans5#MultimodalTransport
- * TransportMeans5.MultimodalTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDataSet5#TransportInformation
- * TransportDataSet5.TransportInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans6#IndividualTransport
- * TransportMeans6.IndividualTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans6#MultimodalTransport
- * TransportMeans6.MultimodalTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDetails4#RoutingSummary
- * TransportDetails4.RoutingSummary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment4#TransportMeans
- * Consignment4.TransportMeans}</li>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmTransportDocuments
+ * Transport.mmTransportDocuments}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -200,6 +94,116 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransportByRoad}</li>
  * <li>{@linkplain com.tools20022.repository.entity.TransportByRail
  * TransportByRail}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmDepartureTransportParameters
+ * Location.mmDepartureTransportParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmDestinationTransportParameters
+ * Location.mmDestinationTransportParameters}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmRelatedTransport
+ * Location.mmRelatedTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmTransport
+ * Document.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmTransport
+ * Charges.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Incoterms#mmTransport
+ * Incoterms.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmTransport
+ * Goods.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductDelivery#mmRouting
+ * ProductDelivery.mmRouting}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmTransport
+ * Packaging.mmTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransportPartyRole#mmTransport
+ * TransportPartyRole.mmTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmRelatedTransport
+ * ShipmentDateRange.mmRelatedTransport}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportMeans3#mmModeCode
+ * TransportMeans3.mmModeCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment2#mmTransportMeans
+ * Consignment2.mmTransportMeans}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransportMeans1Choice#mmIndividualTransport
+ * TransportMeans1Choice.mmIndividualTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransportMeans1Choice#mmMultimodalTransport
+ * TransportMeans1Choice.mmMultimodalTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans1#mmIndividualTransport
+ * TransportMeans1.mmIndividualTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans1#mmMultimodalTransport
+ * TransportMeans1.mmMultimodalTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#mmIndividualTransport
+ * TransportMeans2Choice.mmIndividualTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#mmMultimodalTransport
+ * TransportMeans2Choice.mmMultimodalTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDetails1#mmRoutingSummary
+ * TransportDetails1.mmRoutingSummary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDataSet2#mmTransportInformation
+ * TransportDataSet2.mmTransportInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans2#mmIndividualTransport
+ * TransportMeans2.mmIndividualTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans2#mmMultimodalTransport
+ * TransportMeans2.mmMultimodalTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDetails2#mmRoutingSummary
+ * TransportDetails2.mmRoutingSummary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDataSet3#mmTransportInformation
+ * TransportDataSet3.mmTransportInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDataSet4#mmTransportInformation
+ * TransportDataSet4.mmTransportInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDetails3#mmRoutingSummary
+ * TransportDetails3.mmRoutingSummary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans4#mmIndividualTransport
+ * TransportMeans4.mmIndividualTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans4#mmMultimodalTransport
+ * TransportMeans4.mmMultimodalTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans5#mmIndividualTransport
+ * TransportMeans5.mmIndividualTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans5#mmMultimodalTransport
+ * TransportMeans5.mmMultimodalTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDataSet5#mmTransportInformation
+ * TransportDataSet5.mmTransportInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans6#mmIndividualTransport
+ * TransportMeans6.mmIndividualTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans6#mmMultimodalTransport
+ * TransportMeans6.mmMultimodalTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportDetails4#mmRoutingSummary
+ * TransportDetails4.mmRoutingSummary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment4#mmTransportMeans
+ * Consignment4.mmTransportMeans}</li>
  * </ul>
  * </li>
  * <li>
@@ -267,8 +271,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -283,6 +287,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Transport {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Incoterms incoterms;
 	/**
 	 * Specifies the applicable Incoterm and associated location.
 	 * <p>
@@ -291,8 +296,8 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Incoterms#Transport
-	 * Incoterms.Transport}</li>
+	 * {@linkplain com.tools20022.repository.entity.Incoterms#mmTransport
+	 * Incoterms.mmTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -300,61 +305,65 @@ public class Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Incoterms Incoterms}
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement6#Incoterms
-	 * TradeAgreement6.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#Incoterms
-	 * LineItem10.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails4#Incoterms
-	 * LineItemDetails4.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#Incoterms
-	 * LineItem5.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails7#Incoterms
-	 * LineItemDetails7.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#Incoterms
-	 * LineItem7.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#Incoterms
-	 * LineItem4.Incoterms}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails1#Incoterms
-	 * TransportDetails1.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#Incoterms
-	 * LineItem9.Incoterms}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#Incoterms
-	 * TransportDetails2.Incoterms}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#Incoterms
-	 * TransportDetails3.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#Incoterms
-	 * LineItem11.Incoterms}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#Incoterms
-	 * LineItemDetails10.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem12#Incoterms
-	 * LineItem12.Incoterms}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#Incoterms
-	 * LineItemDetails13.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#Incoterms
-	 * LineItem13.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem15#Incoterms
-	 * LineItem15.Incoterms}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#Incoterms
-	 * TransportDetails4.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement13#Incoterms
-	 * TradeAgreement13.Incoterms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#Incoterms
-	 * LineItem16.Incoterms}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement6#mmIncoterms
+	 * TradeAgreement6.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#mmIncoterms
+	 * LineItem10.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#mmIncoterms
+	 * LineItemDetails4.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#mmIncoterms
+	 * LineItem5.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmIncoterms
+	 * LineItemDetails7.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#mmIncoterms
+	 * LineItem7.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmIncoterms
+	 * LineItem4.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails1#mmIncoterms
+	 * TransportDetails1.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#mmIncoterms
+	 * LineItem9.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#mmIncoterms
+	 * TransportDetails2.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#mmIncoterms
+	 * TransportDetails3.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#mmIncoterms
+	 * LineItem11.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmIncoterms
+	 * LineItemDetails10.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem12#mmIncoterms
+	 * LineItem12.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmIncoterms
+	 * LineItemDetails13.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#mmIncoterms
+	 * LineItem13.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem15#mmIncoterms
+	 * LineItem15.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#mmIncoterms
+	 * TransportDetails4.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement13#mmIncoterms
+	 * TradeAgreement13.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmIncoterms
+	 * LineItem16.mmIncoterms}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -367,26 +376,28 @@ public class Transport {
 	 * "Specifies the applicable Incoterm and associated location."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Incoterms = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIncoterms = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement6.Incoterms, com.tools20022.repository.msg.LineItem10.Incoterms, com.tools20022.repository.msg.LineItemDetails4.Incoterms,
-					com.tools20022.repository.msg.LineItem5.Incoterms, com.tools20022.repository.msg.LineItemDetails7.Incoterms, com.tools20022.repository.msg.LineItem7.Incoterms, com.tools20022.repository.msg.LineItem4.Incoterms,
-					com.tools20022.repository.msg.TransportDetails1.Incoterms, com.tools20022.repository.msg.LineItem9.Incoterms, com.tools20022.repository.msg.TransportDetails2.Incoterms,
-					com.tools20022.repository.msg.TransportDetails3.Incoterms, com.tools20022.repository.msg.LineItem11.Incoterms, com.tools20022.repository.msg.LineItemDetails10.Incoterms,
-					com.tools20022.repository.msg.LineItem12.Incoterms, com.tools20022.repository.msg.LineItemDetails13.Incoterms, com.tools20022.repository.msg.LineItem13.Incoterms, com.tools20022.repository.msg.LineItem15.Incoterms,
-					com.tools20022.repository.msg.TransportDetails4.Incoterms, com.tools20022.repository.msg.TradeAgreement13.Incoterms, com.tools20022.repository.msg.LineItem16.Incoterms);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement6.mmIncoterms, com.tools20022.repository.msg.LineItem10.mmIncoterms, com.tools20022.repository.msg.LineItemDetails4.mmIncoterms,
+					com.tools20022.repository.msg.LineItem5.mmIncoterms, com.tools20022.repository.msg.LineItemDetails7.mmIncoterms, com.tools20022.repository.msg.LineItem7.mmIncoterms, com.tools20022.repository.msg.LineItem4.mmIncoterms,
+					com.tools20022.repository.msg.TransportDetails1.mmIncoterms, com.tools20022.repository.msg.LineItem9.mmIncoterms, com.tools20022.repository.msg.TransportDetails2.mmIncoterms,
+					com.tools20022.repository.msg.TransportDetails3.mmIncoterms, com.tools20022.repository.msg.LineItem11.mmIncoterms, com.tools20022.repository.msg.LineItemDetails10.mmIncoterms,
+					com.tools20022.repository.msg.LineItem12.mmIncoterms, com.tools20022.repository.msg.LineItemDetails13.mmIncoterms, com.tools20022.repository.msg.LineItem13.mmIncoterms,
+					com.tools20022.repository.msg.LineItem15.mmIncoterms, com.tools20022.repository.msg.TransportDetails4.mmIncoterms, com.tools20022.repository.msg.TradeAgreement13.mmIncoterms,
+					com.tools20022.repository.msg.LineItem16.mmIncoterms);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Incoterms.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Incoterms.Transport;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Incoterms.mmTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Incoterms.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Unique identification of the means of transport, such as the
 	 * International Maritime Organization number of a vessel.
@@ -397,18 +408,18 @@ public class Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportMeans3#Identification
-	 * TransportMeans3.Identification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportMeans3#mmIdentification
+	 * TransportMeans3.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -422,19 +433,20 @@ public class Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans3.Identification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans3.mmIdentification);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the means of transport, such as the International Maritime Organization number of a vessel.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Packaging packaging;
 	/**
 	 * Physical packaging of goods for transport.
 	 * <p>
@@ -443,8 +455,8 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Packaging#Transport
-	 * Packaging.Transport}</li>
+	 * {@linkplain com.tools20022.repository.entity.Packaging#mmTransport
+	 * Packaging.mmTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -452,28 +464,28 @@ public class Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Packaging Packaging}
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#Packaging
-	 * LineItem10.Packaging}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#Consignment
-	 * TransportDetails2.Consignment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#Consignment
-	 * TransportDetails3.Consignment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#Consignment
-	 * TransportDetails4.Consignment}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#Packaging
-	 * LineItem16.Packaging}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem10#mmPackaging
+	 * LineItem10.mmPackaging}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#mmConsignment
+	 * TransportDetails2.mmConsignment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#mmConsignment
+	 * TransportDetails3.mmConsignment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#mmConsignment
+	 * TransportDetails4.mmConsignment}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmPackaging
+	 * LineItem16.mmPackaging}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -485,22 +497,23 @@ public class Transport {
 	 * definition} = "Physical packaging of goods for transport."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Packaging = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPackaging = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.Packaging, com.tools20022.repository.msg.TransportDetails2.Consignment, com.tools20022.repository.msg.TransportDetails3.Consignment,
-					com.tools20022.repository.msg.TransportDetails4.Consignment, com.tools20022.repository.msg.LineItem16.Packaging);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmPackaging, com.tools20022.repository.msg.TransportDetails2.mmConsignment, com.tools20022.repository.msg.TransportDetails3.mmConsignment,
+					com.tools20022.repository.msg.TransportDetails4.mmConsignment, com.tools20022.repository.msg.LineItem16.mmPackaging);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Packaging";
 			definition = "Physical packaging of goods for transport.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.Transport;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.mmTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 		}
 	};
+	protected ISODateTime arrivalDateTime;
 	/**
 	 * Date and time when the goods reach their destination..
 	 * <p>
@@ -510,21 +523,21 @@ public class Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem10#DeliveryDateTime
-	 * LineItem10.DeliveryDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem16#DeliveryDateTime
-	 * LineItem16.DeliveryDateTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem10#mmDeliveryDateTime
+	 * LineItem10.mmDeliveryDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmDeliveryDateTime
+	 * LineItem16.mmDeliveryDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -536,19 +549,20 @@ public class Transport {
 	 * definition} = "Date and time when the goods reach their destination.."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ArrivalDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmArrivalDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.DeliveryDateTime, com.tools20022.repository.msg.LineItem16.DeliveryDateTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmDeliveryDateTime, com.tools20022.repository.msg.LineItem16.mmDeliveryDateTime);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ArrivalDateTime";
 			definition = "Date and time when the goods reach their destination..";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected YesNoIndicator partialShipment;
 	/**
 	 * Indicates whether or not partial shipments are allowed.
 	 * <p>
@@ -559,23 +573,27 @@ public class Transport {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#PartialShipment
-	 * LineItem5.PartialShipment}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#PartialShipment
-	 * LineItem7.PartialShipment}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#PartialShipment
-	 * LineItem11.PartialShipment}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#PartialShipment
-	 * LineItem13.PartialShipment}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem5#mmPartialShipment
+	 * LineItem5.mmPartialShipment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem7#mmPartialShipment
+	 * LineItem7.mmPartialShipment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11#mmPartialShipment
+	 * LineItem11.mmPartialShipment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13#mmPartialShipment
+	 * LineItem13.mmPartialShipment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -587,20 +605,21 @@ public class Transport {
 	 * definition} = "Indicates whether or not partial shipments are allowed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PartialShipment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPartialShipment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem5.PartialShipment, com.tools20022.repository.msg.LineItem7.PartialShipment, com.tools20022.repository.msg.LineItem11.PartialShipment,
-					com.tools20022.repository.msg.LineItem13.PartialShipment);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem5.mmPartialShipment, com.tools20022.repository.msg.LineItem7.mmPartialShipment, com.tools20022.repository.msg.LineItem11.mmPartialShipment,
+					com.tools20022.repository.msg.LineItem13.mmPartialShipment);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartialShipment";
 			definition = "Indicates whether or not partial shipments are allowed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator transShipment;
 	/**
 	 * Indicates whether or not transshipment of goods is allowed.
 	 * <p>
@@ -611,23 +630,23 @@ public class Transport {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#TransShipment
-	 * LineItem5.TransShipment}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#TransShipment
-	 * LineItem7.TransShipment}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#TransShipment
-	 * LineItem11.TransShipment}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#TransShipment
-	 * LineItem13.TransShipment}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#mmTransShipment
+	 * LineItem5.mmTransShipment}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#mmTransShipment
+	 * LineItem7.mmTransShipment}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#mmTransShipment
+	 * LineItem11.mmTransShipment}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#mmTransShipment
+	 * LineItem13.mmTransShipment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -640,20 +659,21 @@ public class Transport {
 	 * "Indicates whether or not transshipment of goods is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransShipment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransShipment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem5.TransShipment, com.tools20022.repository.msg.LineItem7.TransShipment, com.tools20022.repository.msg.LineItem11.TransShipment,
-					com.tools20022.repository.msg.LineItem13.TransShipment);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem5.mmTransShipment, com.tools20022.repository.msg.LineItem7.mmTransShipment, com.tools20022.repository.msg.LineItem11.mmTransShipment,
+					com.tools20022.repository.msg.LineItem13.mmTransShipment);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransShipment";
 			definition = "Indicates whether or not transshipment of goods is allowed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ProductDelivery productDelivery;
 	/**
 	 * Specifies the delivery parameters of a trade.
 	 * <p>
@@ -662,8 +682,8 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ProductDelivery#Routing
-	 * ProductDelivery.Routing}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmRouting
+	 * ProductDelivery.mmRouting}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -686,20 +706,21 @@ public class Transport {
 	 * definition} = "Specifies the delivery parameters of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ProductDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProductDelivery = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProductDelivery";
 			definition = "Specifies the delivery parameters of a trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.Routing;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmRouting;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 		}
 	};
+	protected Location placeOfDeparture;
 	/**
 	 * Place from where the goods must leave.
 	 * <p>
@@ -708,110 +729,110 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Location#DepartureTransportParameters
-	 * Location.DepartureTransportParameters}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmDepartureTransportParameters
+	 * Location.mmDepartureTransportParameters}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir1#DepartureAirport
-	 * TransportByAir1.DepartureAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea1#PortOfLoading
-	 * TransportBySea1.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad1#PlaceOfReceipt
-	 * TransportByRoad1.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail1#PlaceOfReceipt
-	 * TransportByRail1.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#DepartureAirport
-	 * MultimodalTransport1.DepartureAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PortOfLoading
-	 * MultimodalTransport1.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PlaceOfReceipt
-	 * MultimodalTransport1.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#TakingInCharge
-	 * MultimodalTransport1.TakingInCharge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir3#DepartureAirport
-	 * TransportByAir3.DepartureAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea3#PortOfLoading
-	 * TransportBySea3.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad3#PlaceOfReceipt
-	 * TransportByRoad3.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#TakingInCharge
-	 * MultimodalTransport3.TakingInCharge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#DepartureAirport
-	 * TransportByAir2.DepartureAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea2#PortOfLoading
-	 * TransportBySea2.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad2#PlaceOfReceipt
-	 * TransportByRoad2.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail2#PlaceOfReceipt
-	 * TransportByRail2.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#DepartureAirport
-	 * MultimodalTransport2.DepartureAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#PortOfLoading
-	 * MultimodalTransport2.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#PlaceOfReceipt
-	 * MultimodalTransport2.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#TakingInCharge
-	 * MultimodalTransport2.TakingInCharge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea4#PortOfLoading
-	 * TransportBySea4.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#PlaceOfReceipt
-	 * TransportByRail4.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir4#DepartureAirport
-	 * TransportByAir4.DepartureAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad4#PlaceOfReceipt
-	 * TransportByRoad4.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#PortOfLoading
-	 * TransportBySea5.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#DepartureAirport
-	 * TransportByAir5.DepartureAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea6#PortOfLoading
-	 * TransportBySea6.PortOfLoading}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail5#PlaceOfReceipt
-	 * TransportByRail5.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad5#PlaceOfReceipt
-	 * TransportByRoad5.PlaceOfReceipt}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir1#mmDepartureAirport
+	 * TransportByAir1.mmDepartureAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea1#mmPortOfLoading
+	 * TransportBySea1.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad1#mmPlaceOfReceipt
+	 * TransportByRoad1.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail1#mmPlaceOfReceipt
+	 * TransportByRail1.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmDepartureAirport
+	 * MultimodalTransport1.mmDepartureAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPortOfLoading
+	 * MultimodalTransport1.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPlaceOfReceipt
+	 * MultimodalTransport1.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmTakingInCharge
+	 * MultimodalTransport1.mmTakingInCharge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir3#mmDepartureAirport
+	 * TransportByAir3.mmDepartureAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea3#mmPortOfLoading
+	 * TransportBySea3.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad3#mmPlaceOfReceipt
+	 * TransportByRoad3.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#mmTakingInCharge
+	 * MultimodalTransport3.mmTakingInCharge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#mmDepartureAirport
+	 * TransportByAir2.mmDepartureAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea2#mmPortOfLoading
+	 * TransportBySea2.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad2#mmPlaceOfReceipt
+	 * TransportByRoad2.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail2#mmPlaceOfReceipt
+	 * TransportByRail2.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmDepartureAirport
+	 * MultimodalTransport2.mmDepartureAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmPortOfLoading
+	 * MultimodalTransport2.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmPlaceOfReceipt
+	 * MultimodalTransport2.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmTakingInCharge
+	 * MultimodalTransport2.mmTakingInCharge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea4#mmPortOfLoading
+	 * TransportBySea4.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmPlaceOfReceipt
+	 * TransportByRail4.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmDepartureAirport
+	 * TransportByAir4.mmDepartureAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad4#mmPlaceOfReceipt
+	 * TransportByRoad4.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmPortOfLoading
+	 * TransportBySea5.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmDepartureAirport
+	 * TransportByAir5.mmDepartureAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea6#mmPortOfLoading
+	 * TransportBySea6.mmPortOfLoading}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmPlaceOfReceipt
+	 * TransportByRail5.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad5#mmPlaceOfReceipt
+	 * TransportByRoad5.mmPlaceOfReceipt}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -823,30 +844,31 @@ public class Transport {
 	 * definition} = "Place from where the goods must leave."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PlaceOfDeparture = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPlaceOfDeparture = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir1.DepartureAirport, com.tools20022.repository.msg.TransportBySea1.PortOfLoading, com.tools20022.repository.msg.TransportByRoad1.PlaceOfReceipt,
-					com.tools20022.repository.msg.TransportByRail1.PlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport1.DepartureAirport, com.tools20022.repository.msg.MultimodalTransport1.PortOfLoading,
-					com.tools20022.repository.msg.MultimodalTransport1.PlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport1.TakingInCharge, com.tools20022.repository.msg.TransportByAir3.DepartureAirport,
-					com.tools20022.repository.msg.TransportBySea3.PortOfLoading, com.tools20022.repository.msg.TransportByRoad3.PlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport3.TakingInCharge,
-					com.tools20022.repository.msg.TransportByAir2.DepartureAirport, com.tools20022.repository.msg.TransportBySea2.PortOfLoading, com.tools20022.repository.msg.TransportByRoad2.PlaceOfReceipt,
-					com.tools20022.repository.msg.TransportByRail2.PlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport2.DepartureAirport, com.tools20022.repository.msg.MultimodalTransport2.PortOfLoading,
-					com.tools20022.repository.msg.MultimodalTransport2.PlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport2.TakingInCharge, com.tools20022.repository.msg.TransportBySea4.PortOfLoading,
-					com.tools20022.repository.msg.TransportByRail4.PlaceOfReceipt, com.tools20022.repository.msg.TransportByAir4.DepartureAirport, com.tools20022.repository.msg.TransportByRoad4.PlaceOfReceipt,
-					com.tools20022.repository.msg.TransportBySea5.PortOfLoading, com.tools20022.repository.msg.TransportByAir5.DepartureAirport, com.tools20022.repository.msg.TransportBySea6.PortOfLoading,
-					com.tools20022.repository.msg.TransportByRail5.PlaceOfReceipt, com.tools20022.repository.msg.TransportByRoad5.PlaceOfReceipt);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir1.mmDepartureAirport, com.tools20022.repository.msg.TransportBySea1.mmPortOfLoading,
+					com.tools20022.repository.msg.TransportByRoad1.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRail1.mmPlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport1.mmDepartureAirport,
+					com.tools20022.repository.msg.MultimodalTransport1.mmPortOfLoading, com.tools20022.repository.msg.MultimodalTransport1.mmPlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport1.mmTakingInCharge,
+					com.tools20022.repository.msg.TransportByAir3.mmDepartureAirport, com.tools20022.repository.msg.TransportBySea3.mmPortOfLoading, com.tools20022.repository.msg.TransportByRoad3.mmPlaceOfReceipt,
+					com.tools20022.repository.msg.MultimodalTransport3.mmTakingInCharge, com.tools20022.repository.msg.TransportByAir2.mmDepartureAirport, com.tools20022.repository.msg.TransportBySea2.mmPortOfLoading,
+					com.tools20022.repository.msg.TransportByRoad2.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRail2.mmPlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport2.mmDepartureAirport,
+					com.tools20022.repository.msg.MultimodalTransport2.mmPortOfLoading, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport2.mmTakingInCharge,
+					com.tools20022.repository.msg.TransportBySea4.mmPortOfLoading, com.tools20022.repository.msg.TransportByRail4.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByAir4.mmDepartureAirport,
+					com.tools20022.repository.msg.TransportByRoad4.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportBySea5.mmPortOfLoading, com.tools20022.repository.msg.TransportByAir5.mmDepartureAirport,
+					com.tools20022.repository.msg.TransportBySea6.mmPortOfLoading, com.tools20022.repository.msg.TransportByRail5.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRoad5.mmPlaceOfReceipt);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfDeparture";
 			definition = "Place from where the goods must leave.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.DepartureTransportParameters;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmDepartureTransportParameters;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
+	protected Location placeOfDestination;
 	/**
 	 * Place where the goods must arrive.
 	 * <p>
@@ -855,116 +877,116 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Location#DestinationTransportParameters
-	 * Location.DestinationTransportParameters}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmDestinationTransportParameters
+	 * Location.mmDestinationTransportParameters}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir1#DestinationAirport
-	 * TransportByAir1.DestinationAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea1#PortOfDischarge
-	 * TransportBySea1.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad1#PlaceOfDelivery
-	 * TransportByRoad1.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail1#PlaceOfDelivery
-	 * TransportByRail1.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#DestinationAirport
-	 * MultimodalTransport1.DestinationAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PortOfDischarge
-	 * MultimodalTransport1.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PlaceOfDelivery
-	 * MultimodalTransport1.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#PlaceOfFinalDestination
-	 * MultimodalTransport1.PlaceOfFinalDestination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir3#DestinationAirport
-	 * TransportByAir3.DestinationAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea3#PortOfDischarge
-	 * TransportBySea3.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad3#PlaceOfDelivery
-	 * TransportByRoad3.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail3#PlaceOfReceipt
-	 * TransportByRail3.PlaceOfReceipt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail3#PlaceOfDelivery
-	 * TransportByRail3.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#PlaceOfFinalDestination
-	 * MultimodalTransport3.PlaceOfFinalDestination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#DestinationAirport
-	 * TransportByAir2.DestinationAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea2#PortOfDischarge
-	 * TransportBySea2.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad2#PlaceOfDelivery
-	 * TransportByRoad2.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail2#PlaceOfDelivery
-	 * TransportByRail2.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#DestinationAirport
-	 * MultimodalTransport2.DestinationAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#PortOfDischarge
-	 * MultimodalTransport2.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#PlaceOfDelivery
-	 * MultimodalTransport2.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#PlaceOfFinalDestination
-	 * MultimodalTransport2.PlaceOfFinalDestination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea4#PortOfDischarge
-	 * TransportBySea4.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#PlaceOfDelivery
-	 * TransportByRail4.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir4#DestinationAirport
-	 * TransportByAir4.DestinationAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad4#PlaceOfDelivery
-	 * TransportByRoad4.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#PortOfDischarge
-	 * TransportBySea5.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#DestinationAirport
-	 * TransportByAir5.DestinationAirport}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportBySea6#PortOfDischarge
-	 * TransportBySea6.PortOfDischarge}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRail5#PlaceOfDelivery
-	 * TransportByRail5.PlaceOfDelivery}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByRoad5#PlaceOfDelivery
-	 * TransportByRoad5.PlaceOfDelivery}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir1#mmDestinationAirport
+	 * TransportByAir1.mmDestinationAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea1#mmPortOfDischarge
+	 * TransportBySea1.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad1#mmPlaceOfDelivery
+	 * TransportByRoad1.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail1#mmPlaceOfDelivery
+	 * TransportByRail1.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmDestinationAirport
+	 * MultimodalTransport1.mmDestinationAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPortOfDischarge
+	 * MultimodalTransport1.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPlaceOfDelivery
+	 * MultimodalTransport1.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport1#mmPlaceOfFinalDestination
+	 * MultimodalTransport1.mmPlaceOfFinalDestination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir3#mmDestinationAirport
+	 * TransportByAir3.mmDestinationAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea3#mmPortOfDischarge
+	 * TransportBySea3.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad3#mmPlaceOfDelivery
+	 * TransportByRoad3.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail3#mmPlaceOfReceipt
+	 * TransportByRail3.mmPlaceOfReceipt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail3#mmPlaceOfDelivery
+	 * TransportByRail3.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#mmPlaceOfFinalDestination
+	 * MultimodalTransport3.mmPlaceOfFinalDestination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#mmDestinationAirport
+	 * TransportByAir2.mmDestinationAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea2#mmPortOfDischarge
+	 * TransportBySea2.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad2#mmPlaceOfDelivery
+	 * TransportByRoad2.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail2#mmPlaceOfDelivery
+	 * TransportByRail2.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmDestinationAirport
+	 * MultimodalTransport2.mmDestinationAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmPortOfDischarge
+	 * MultimodalTransport2.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmPlaceOfDelivery
+	 * MultimodalTransport2.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MultimodalTransport2#mmPlaceOfFinalDestination
+	 * MultimodalTransport2.mmPlaceOfFinalDestination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea4#mmPortOfDischarge
+	 * TransportBySea4.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail4#mmPlaceOfDelivery
+	 * TransportByRail4.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmDestinationAirport
+	 * TransportByAir4.mmDestinationAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad4#mmPlaceOfDelivery
+	 * TransportByRoad4.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea5#mmPortOfDischarge
+	 * TransportBySea5.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmDestinationAirport
+	 * TransportByAir5.mmDestinationAirport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportBySea6#mmPortOfDischarge
+	 * TransportBySea6.mmPortOfDischarge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRail5#mmPlaceOfDelivery
+	 * TransportByRail5.mmPlaceOfDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByRoad5#mmPlaceOfDelivery
+	 * TransportByRoad5.mmPlaceOfDelivery}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -976,31 +998,32 @@ public class Transport {
 	 * definition} = "Place where the goods must arrive."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PlaceOfDestination = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPlaceOfDestination = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir1.DestinationAirport, com.tools20022.repository.msg.TransportBySea1.PortOfDischarge,
-					com.tools20022.repository.msg.TransportByRoad1.PlaceOfDelivery, com.tools20022.repository.msg.TransportByRail1.PlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport1.DestinationAirport,
-					com.tools20022.repository.msg.MultimodalTransport1.PortOfDischarge, com.tools20022.repository.msg.MultimodalTransport1.PlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport1.PlaceOfFinalDestination,
-					com.tools20022.repository.msg.TransportByAir3.DestinationAirport, com.tools20022.repository.msg.TransportBySea3.PortOfDischarge, com.tools20022.repository.msg.TransportByRoad3.PlaceOfDelivery,
-					com.tools20022.repository.msg.TransportByRail3.PlaceOfReceipt, com.tools20022.repository.msg.TransportByRail3.PlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport3.PlaceOfFinalDestination,
-					com.tools20022.repository.msg.TransportByAir2.DestinationAirport, com.tools20022.repository.msg.TransportBySea2.PortOfDischarge, com.tools20022.repository.msg.TransportByRoad2.PlaceOfDelivery,
-					com.tools20022.repository.msg.TransportByRail2.PlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport2.DestinationAirport, com.tools20022.repository.msg.MultimodalTransport2.PortOfDischarge,
-					com.tools20022.repository.msg.MultimodalTransport2.PlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport2.PlaceOfFinalDestination, com.tools20022.repository.msg.TransportBySea4.PortOfDischarge,
-					com.tools20022.repository.msg.TransportByRail4.PlaceOfDelivery, com.tools20022.repository.msg.TransportByAir4.DestinationAirport, com.tools20022.repository.msg.TransportByRoad4.PlaceOfDelivery,
-					com.tools20022.repository.msg.TransportBySea5.PortOfDischarge, com.tools20022.repository.msg.TransportByAir5.DestinationAirport, com.tools20022.repository.msg.TransportBySea6.PortOfDischarge,
-					com.tools20022.repository.msg.TransportByRail5.PlaceOfDelivery, com.tools20022.repository.msg.TransportByRoad5.PlaceOfDelivery);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir1.mmDestinationAirport, com.tools20022.repository.msg.TransportBySea1.mmPortOfDischarge,
+					com.tools20022.repository.msg.TransportByRoad1.mmPlaceOfDelivery, com.tools20022.repository.msg.TransportByRail1.mmPlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport1.mmDestinationAirport,
+					com.tools20022.repository.msg.MultimodalTransport1.mmPortOfDischarge, com.tools20022.repository.msg.MultimodalTransport1.mmPlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport1.mmPlaceOfFinalDestination,
+					com.tools20022.repository.msg.TransportByAir3.mmDestinationAirport, com.tools20022.repository.msg.TransportBySea3.mmPortOfDischarge, com.tools20022.repository.msg.TransportByRoad3.mmPlaceOfDelivery,
+					com.tools20022.repository.msg.TransportByRail3.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRail3.mmPlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport3.mmPlaceOfFinalDestination,
+					com.tools20022.repository.msg.TransportByAir2.mmDestinationAirport, com.tools20022.repository.msg.TransportBySea2.mmPortOfDischarge, com.tools20022.repository.msg.TransportByRoad2.mmPlaceOfDelivery,
+					com.tools20022.repository.msg.TransportByRail2.mmPlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport2.mmDestinationAirport, com.tools20022.repository.msg.MultimodalTransport2.mmPortOfDischarge,
+					com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfDelivery, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfFinalDestination, com.tools20022.repository.msg.TransportBySea4.mmPortOfDischarge,
+					com.tools20022.repository.msg.TransportByRail4.mmPlaceOfDelivery, com.tools20022.repository.msg.TransportByAir4.mmDestinationAirport, com.tools20022.repository.msg.TransportByRoad4.mmPlaceOfDelivery,
+					com.tools20022.repository.msg.TransportBySea5.mmPortOfDischarge, com.tools20022.repository.msg.TransportByAir5.mmDestinationAirport, com.tools20022.repository.msg.TransportBySea6.mmPortOfDischarge,
+					com.tools20022.repository.msg.TransportByRail5.mmPlaceOfDelivery, com.tools20022.repository.msg.TransportByRoad5.mmPlaceOfDelivery);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfDestination";
 			definition = "Place where the goods must arrive.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.DestinationTransportParameters;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmDestinationTransportParameters;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Charges> transportCharges;
 	/**
 	 * Charges related to the conveyance of goods.
 	 * <p>
@@ -1009,75 +1032,79 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#Transport
-	 * Charges.Transport}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmTransport
+	 * Charges.mmTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#FreightCharges
-	 * LineItemDetails4.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#FreightCharges
-	 * LineItem5.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#FreightCharges
-	 * LineItemDetails7.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#FreightCharges
-	 * LineItem7.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#FreightCharges
-	 * LineItemDetails6.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#FreightCharges
-	 * LineItem4.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails1#FreightCharges
-	 * TransportDetails1.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#FreightCharges
-	 * LineItemDetails9.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#FreightCharges
-	 * LineItem9.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#FreightCharges
-	 * TransportDetails2.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#FreightCharges
-	 * TransportDetails3.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#FreightCharges
-	 * LineItem11.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#FreightCharges
-	 * LineItemDetails10.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem12#FreightCharges
-	 * LineItem12.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#FreightCharges
-	 * LineItemDetails11.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#FreightCharges
-	 * LineItemDetails13.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#FreightCharges
-	 * LineItem13.FreightCharges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem15#FreightCharges
-	 * LineItem15.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#FreightCharges
-	 * LineItemDetails14.FreightCharges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#FreightCharges
-	 * TransportDetails4.FreightCharges}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails4#mmFreightCharges
+	 * LineItemDetails4.mmFreightCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#mmFreightCharges
+	 * LineItem5.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmFreightCharges
+	 * LineItemDetails7.mmFreightCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#mmFreightCharges
+	 * LineItem7.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails6#mmFreightCharges
+	 * LineItemDetails6.mmFreightCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmFreightCharges
+	 * LineItem4.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails1#mmFreightCharges
+	 * TransportDetails1.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails9#mmFreightCharges
+	 * LineItemDetails9.mmFreightCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#mmFreightCharges
+	 * LineItem9.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#mmFreightCharges
+	 * TransportDetails2.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#mmFreightCharges
+	 * TransportDetails3.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11#mmFreightCharges
+	 * LineItem11.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmFreightCharges
+	 * LineItemDetails10.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem12#mmFreightCharges
+	 * LineItem12.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails11#mmFreightCharges
+	 * LineItemDetails11.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmFreightCharges
+	 * LineItemDetails13.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13#mmFreightCharges
+	 * LineItem13.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem15#mmFreightCharges
+	 * LineItem15.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails14#mmFreightCharges
+	 * LineItemDetails14.mmFreightCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#mmFreightCharges
+	 * TransportDetails4.mmFreightCharges}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1089,26 +1116,27 @@ public class Transport {
 	 * definition} = "Charges related to the conveyance of goods."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransportCharges = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransportCharges = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails4.FreightCharges, com.tools20022.repository.msg.LineItem5.FreightCharges, com.tools20022.repository.msg.LineItemDetails7.FreightCharges,
-					com.tools20022.repository.msg.LineItem7.FreightCharges, com.tools20022.repository.msg.LineItemDetails6.FreightCharges, com.tools20022.repository.msg.LineItem4.FreightCharges,
-					com.tools20022.repository.msg.TransportDetails1.FreightCharges, com.tools20022.repository.msg.LineItemDetails9.FreightCharges, com.tools20022.repository.msg.LineItem9.FreightCharges,
-					com.tools20022.repository.msg.TransportDetails2.FreightCharges, com.tools20022.repository.msg.TransportDetails3.FreightCharges, com.tools20022.repository.msg.LineItem11.FreightCharges,
-					com.tools20022.repository.msg.LineItemDetails10.FreightCharges, com.tools20022.repository.msg.LineItem12.FreightCharges, com.tools20022.repository.msg.LineItemDetails11.FreightCharges,
-					com.tools20022.repository.msg.LineItemDetails13.FreightCharges, com.tools20022.repository.msg.LineItem13.FreightCharges, com.tools20022.repository.msg.LineItem15.FreightCharges,
-					com.tools20022.repository.msg.LineItemDetails14.FreightCharges, com.tools20022.repository.msg.TransportDetails4.FreightCharges);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails4.mmFreightCharges, com.tools20022.repository.msg.LineItem5.mmFreightCharges, com.tools20022.repository.msg.LineItemDetails7.mmFreightCharges,
+					com.tools20022.repository.msg.LineItem7.mmFreightCharges, com.tools20022.repository.msg.LineItemDetails6.mmFreightCharges, com.tools20022.repository.msg.LineItem4.mmFreightCharges,
+					com.tools20022.repository.msg.TransportDetails1.mmFreightCharges, com.tools20022.repository.msg.LineItemDetails9.mmFreightCharges, com.tools20022.repository.msg.LineItem9.mmFreightCharges,
+					com.tools20022.repository.msg.TransportDetails2.mmFreightCharges, com.tools20022.repository.msg.TransportDetails3.mmFreightCharges, com.tools20022.repository.msg.LineItem11.mmFreightCharges,
+					com.tools20022.repository.msg.LineItemDetails10.mmFreightCharges, com.tools20022.repository.msg.LineItem12.mmFreightCharges, com.tools20022.repository.msg.LineItemDetails11.mmFreightCharges,
+					com.tools20022.repository.msg.LineItemDetails13.mmFreightCharges, com.tools20022.repository.msg.LineItem13.mmFreightCharges, com.tools20022.repository.msg.LineItem15.mmFreightCharges,
+					com.tools20022.repository.msg.LineItemDetails14.mmFreightCharges, com.tools20022.repository.msg.TransportDetails4.mmFreightCharges);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransportCharges";
 			definition = "Charges related to the conveyance of goods.";
 			minOccurs = 0;
-			type_lazy = () -> Charges.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Charges.Transport;
+			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 		}
 	};
+	protected FreightChargesCode freightChargesPrepaidOrCollect;
 	/**
 	 * Identifies whether the freight charges associated with the items are
 	 * "prepaid" or "collect".
@@ -1120,23 +1148,23 @@ public class Transport {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FreightChargesCode
 	 * FreightChargesCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge12#Type
-	 * Charge12.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge13#Type
-	 * Charge13.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge24#Type
-	 * Charge24.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge25#Type
-	 * Charge25.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge12#mmType
+	 * Charge12.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge13#mmType
+	 * Charge13.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge24#mmType
+	 * Charge24.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge25#mmType
+	 * Charge25.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1150,19 +1178,20 @@ public class Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FreightChargesPrepaidOrCollect = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFreightChargesPrepaidOrCollect = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge12.Type, com.tools20022.repository.msg.Charge13.Type, com.tools20022.repository.msg.Charge24.Type, com.tools20022.repository.msg.Charge25.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge12.mmType, com.tools20022.repository.msg.Charge13.mmType, com.tools20022.repository.msg.Charge24.mmType, com.tools20022.repository.msg.Charge25.mmType);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FreightChargesPrepaidOrCollect";
 			definition = "Identifies whether the freight charges associated with the items are \"prepaid\" or \"collect\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FreightChargesCode.mmObject();
 		}
 	};
+	protected ShipmentDateRange shipmentDates;
 	/**
 	 * Specifies the shipment date, the earliest shipment date and the latest
 	 * shipment date.
@@ -1172,8 +1201,8 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#RelatedTransport
-	 * ShipmentDateRange.RelatedTransport}</li>
+	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmRelatedTransport
+	 * ShipmentDateRange.mmRelatedTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1181,45 +1210,45 @@ public class Transport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ShipmentDateRange
 	 * ShipmentDateRange}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#ShipmentSchedule
-	 * LineItemDetails7.ShipmentSchedule}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem7#ShipmentDateRange
-	 * LineItem7.ShipmentDateRange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#ShipmentDate
-	 * TransportDetails3.ShipmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem11#ShipmentDateRange
-	 * LineItem11.ShipmentDateRange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#ShipmentSchedule
-	 * LineItemDetails10.ShipmentSchedule}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#ShipmentSchedule
-	 * LineItemDetails13.ShipmentSchedule}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem13#ShipmentDateRange
-	 * LineItem13.ShipmentDateRange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#ShipmentDate
-	 * TransportDetails4.ShipmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SupportingDocumentEntry1#ShipmentAttributes
-	 * SupportingDocumentEntry1.ShipmentAttributes}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeContract1#ShipmentSchedule
-	 * TradeContract1.ShipmentSchedule}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails7#mmShipmentSchedule
+	 * LineItemDetails7.mmShipmentSchedule}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem7#mmShipmentDateRange
+	 * LineItem7.mmShipmentDateRange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#mmShipmentDate
+	 * TransportDetails3.mmShipmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11#mmShipmentDateRange
+	 * LineItem11.mmShipmentDateRange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails10#mmShipmentSchedule
+	 * LineItemDetails10.mmShipmentSchedule}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemDetails13#mmShipmentSchedule
+	 * LineItemDetails13.mmShipmentSchedule}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13#mmShipmentDateRange
+	 * LineItem13.mmShipmentDateRange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#mmShipmentDate
+	 * TransportDetails4.mmShipmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SupportingDocumentEntry1#mmShipmentAttributes
+	 * SupportingDocumentEntry1.mmShipmentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeContract1#mmShipmentSchedule
+	 * TradeContract1.mmShipmentSchedule}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1233,24 +1262,25 @@ public class Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ShipmentDates = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmShipmentDates = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails7.ShipmentSchedule, com.tools20022.repository.msg.LineItem7.ShipmentDateRange, com.tools20022.repository.msg.TransportDetails3.ShipmentDate,
-					com.tools20022.repository.msg.LineItem11.ShipmentDateRange, com.tools20022.repository.msg.LineItemDetails10.ShipmentSchedule, com.tools20022.repository.msg.LineItemDetails13.ShipmentSchedule,
-					com.tools20022.repository.msg.LineItem13.ShipmentDateRange, com.tools20022.repository.msg.TransportDetails4.ShipmentDate, com.tools20022.repository.msg.SupportingDocumentEntry1.ShipmentAttributes,
-					com.tools20022.repository.msg.TradeContract1.ShipmentSchedule);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails7.mmShipmentSchedule, com.tools20022.repository.msg.LineItem7.mmShipmentDateRange,
+					com.tools20022.repository.msg.TransportDetails3.mmShipmentDate, com.tools20022.repository.msg.LineItem11.mmShipmentDateRange, com.tools20022.repository.msg.LineItemDetails10.mmShipmentSchedule,
+					com.tools20022.repository.msg.LineItemDetails13.mmShipmentSchedule, com.tools20022.repository.msg.LineItem13.mmShipmentDateRange, com.tools20022.repository.msg.TransportDetails4.mmShipmentDate,
+					com.tools20022.repository.msg.SupportingDocumentEntry1.mmShipmentAttributes, com.tools20022.repository.msg.TradeContract1.mmShipmentSchedule);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ShipmentDates";
 			definition = "Specifies the shipment date, the earliest shipment date and the latest shipment date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ShipmentDateRange.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.RelatedTransport;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmRelatedTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Goods> transportedGoods;
 	/**
 	 * Goods that are transported.
 	 * <p>
@@ -1258,35 +1288,36 @@ public class Transport {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Goods#Transport
-	 * Goods.Transport}</li>
+	 * opposite} =
+	 * {@linkplain com.tools20022.repository.entity.Goods#mmTransport
+	 * Goods.mmTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Goods Goods}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails1#TransportedGoods
-	 * TransportDetails1.TransportedGoods}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#TransportedGoods
-	 * TransportDetails2.TransportedGoods}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#TransportedGoods
-	 * TransportDetails3.TransportedGoods}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#TransportedGoods
-	 * TransportDetails4.TransportedGoods}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Transport
 	 * Transport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails1#mmTransportedGoods
+	 * TransportDetails1.mmTransportedGoods}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails2#mmTransportedGoods
+	 * TransportDetails2.mmTransportedGoods}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails3#mmTransportedGoods
+	 * TransportDetails3.mmTransportedGoods}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails4#mmTransportedGoods
+	 * TransportDetails4.mmTransportedGoods}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1298,21 +1329,22 @@ public class Transport {
 	 * definition} = "Goods that are transported."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransportedGoods = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransportedGoods = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails1.TransportedGoods, com.tools20022.repository.msg.TransportDetails2.TransportedGoods,
-					com.tools20022.repository.msg.TransportDetails3.TransportedGoods, com.tools20022.repository.msg.TransportDetails4.TransportedGoods);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails1.mmTransportedGoods, com.tools20022.repository.msg.TransportDetails2.mmTransportedGoods,
+					com.tools20022.repository.msg.TransportDetails3.mmTransportedGoods, com.tools20022.repository.msg.TransportDetails4.mmTransportedGoods);
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransportedGoods";
 			definition = "Goods that are transported.";
 			minOccurs = 1;
-			type_lazy = () -> Goods.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Goods.Transport;
+			opposite_lazy = () -> com.tools20022.repository.entity.Goods.mmTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 		}
 	};
+	protected TransportPartyRole partyRole;
 	/**
 	 * Specifies each role linked to the transport of goods.
 	 * <p>
@@ -1321,8 +1353,8 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TransportPartyRole#Transport
-	 * TransportPartyRole.Transport}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransportPartyRole#mmTransport
+	 * TransportPartyRole.mmTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1345,20 +1377,21 @@ public class Transport {
 	 * definition} = "Specifies each role linked to the transport of goods."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies each role linked to the transport of goods.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransportPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TransportPartyRole.Transport;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.TransportPartyRole.mmTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TransportPartyRole.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Location> transitLocation;
 	/**
 	 * Place through which the goods are transiting.
 	 * <p>
@@ -1367,8 +1400,8 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Location#RelatedTransport
-	 * Location.RelatedTransport}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmRelatedTransport
+	 * Location.mmRelatedTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1390,7 +1423,7 @@ public class Transport {
 	 * definition} = "Place through which the goods are transiting."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransitLocation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransitLocation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
@@ -1398,11 +1431,12 @@ public class Transport {
 			name = "TransitLocation";
 			definition = "Place through which the goods are transiting.";
 			minOccurs = 0;
-			type_lazy = () -> Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.RelatedTransport;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmRelatedTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
+	protected Document transportDocuments;
 	/**
 	 * Documents which may be required in relation with the transportation of
 	 * goods.
@@ -1412,8 +1446,8 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Transport
-	 * Document.Transport}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmTransport
+	 * Document.mmTransport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1437,48 +1471,48 @@ public class Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransportDocuments = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransportDocuments = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Transport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransportDocuments";
 			definition = "Documents which may be required in relation with the transportation of goods.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Document.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Document.Transport;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmTransport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Transport";
 				definition = "Moving of goods or people from one place to another by vehicle.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.DepartureTransportParameters, com.tools20022.repository.entity.Location.DestinationTransportParameters,
-						com.tools20022.repository.entity.Location.RelatedTransport, com.tools20022.repository.entity.Document.Transport, com.tools20022.repository.entity.Charges.Transport,
-						com.tools20022.repository.entity.Incoterms.Transport, com.tools20022.repository.entity.Goods.Transport, com.tools20022.repository.entity.ProductDelivery.Routing, com.tools20022.repository.entity.Packaging.Transport,
-						com.tools20022.repository.entity.TransportPartyRole.Transport, com.tools20022.repository.entity.ShipmentDateRange.RelatedTransport);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans3.ModeCode, com.tools20022.repository.msg.Consignment2.TransportMeans,
-						com.tools20022.repository.choice.TransportMeans1Choice.IndividualTransport, com.tools20022.repository.choice.TransportMeans1Choice.MultimodalTransport,
-						com.tools20022.repository.msg.TransportMeans1.IndividualTransport, com.tools20022.repository.msg.TransportMeans1.MultimodalTransport, com.tools20022.repository.choice.TransportMeans2Choice.IndividualTransport,
-						com.tools20022.repository.choice.TransportMeans2Choice.MultimodalTransport, com.tools20022.repository.msg.TransportDetails1.RoutingSummary, com.tools20022.repository.msg.TransportDataSet2.TransportInformation,
-						com.tools20022.repository.msg.TransportMeans2.IndividualTransport, com.tools20022.repository.msg.TransportMeans2.MultimodalTransport, com.tools20022.repository.msg.TransportDetails2.RoutingSummary,
-						com.tools20022.repository.msg.TransportDataSet3.TransportInformation, com.tools20022.repository.msg.TransportDataSet4.TransportInformation, com.tools20022.repository.msg.TransportDetails3.RoutingSummary,
-						com.tools20022.repository.msg.TransportMeans4.IndividualTransport, com.tools20022.repository.msg.TransportMeans4.MultimodalTransport, com.tools20022.repository.msg.TransportMeans5.IndividualTransport,
-						com.tools20022.repository.msg.TransportMeans5.MultimodalTransport, com.tools20022.repository.msg.TransportDataSet5.TransportInformation, com.tools20022.repository.msg.TransportMeans6.IndividualTransport,
-						com.tools20022.repository.msg.TransportMeans6.MultimodalTransport, com.tools20022.repository.msg.TransportDetails4.RoutingSummary, com.tools20022.repository.msg.Consignment4.TransportMeans);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.mmDepartureTransportParameters, com.tools20022.repository.entity.Location.mmDestinationTransportParameters,
+						com.tools20022.repository.entity.Location.mmRelatedTransport, com.tools20022.repository.entity.Document.mmTransport, com.tools20022.repository.entity.Charges.mmTransport,
+						com.tools20022.repository.entity.Incoterms.mmTransport, com.tools20022.repository.entity.Goods.mmTransport, com.tools20022.repository.entity.ProductDelivery.mmRouting,
+						com.tools20022.repository.entity.Packaging.mmTransport, com.tools20022.repository.entity.TransportPartyRole.mmTransport, com.tools20022.repository.entity.ShipmentDateRange.mmRelatedTransport);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans3.mmModeCode, com.tools20022.repository.msg.Consignment2.mmTransportMeans,
+						com.tools20022.repository.choice.TransportMeans1Choice.mmIndividualTransport, com.tools20022.repository.choice.TransportMeans1Choice.mmMultimodalTransport,
+						com.tools20022.repository.msg.TransportMeans1.mmIndividualTransport, com.tools20022.repository.msg.TransportMeans1.mmMultimodalTransport, com.tools20022.repository.choice.TransportMeans2Choice.mmIndividualTransport,
+						com.tools20022.repository.choice.TransportMeans2Choice.mmMultimodalTransport, com.tools20022.repository.msg.TransportDetails1.mmRoutingSummary, com.tools20022.repository.msg.TransportDataSet2.mmTransportInformation,
+						com.tools20022.repository.msg.TransportMeans2.mmIndividualTransport, com.tools20022.repository.msg.TransportMeans2.mmMultimodalTransport, com.tools20022.repository.msg.TransportDetails2.mmRoutingSummary,
+						com.tools20022.repository.msg.TransportDataSet3.mmTransportInformation, com.tools20022.repository.msg.TransportDataSet4.mmTransportInformation, com.tools20022.repository.msg.TransportDetails3.mmRoutingSummary,
+						com.tools20022.repository.msg.TransportMeans4.mmIndividualTransport, com.tools20022.repository.msg.TransportMeans4.mmMultimodalTransport, com.tools20022.repository.msg.TransportMeans5.mmIndividualTransport,
+						com.tools20022.repository.msg.TransportMeans5.mmMultimodalTransport, com.tools20022.repository.msg.TransportDataSet5.mmTransportInformation, com.tools20022.repository.msg.TransportMeans6.mmIndividualTransport,
+						com.tools20022.repository.msg.TransportMeans6.mmMultimodalTransport, com.tools20022.repository.msg.TransportDetails4.mmRoutingSummary, com.tools20022.repository.msg.Consignment4.mmTransportMeans);
 				subType_lazy = () -> Arrays.asList(TransportByAir.mmObject(), TransportBySea.mmObject(), TransportByRoad.mmObject(), TransportByRail.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.Incoterms, com.tools20022.repository.entity.Transport.Identification, com.tools20022.repository.entity.Transport.Packaging,
-						com.tools20022.repository.entity.Transport.ArrivalDateTime, com.tools20022.repository.entity.Transport.PartialShipment, com.tools20022.repository.entity.Transport.TransShipment,
-						com.tools20022.repository.entity.Transport.ProductDelivery, com.tools20022.repository.entity.Transport.PlaceOfDeparture, com.tools20022.repository.entity.Transport.PlaceOfDestination,
-						com.tools20022.repository.entity.Transport.TransportCharges, com.tools20022.repository.entity.Transport.FreightChargesPrepaidOrCollect, com.tools20022.repository.entity.Transport.ShipmentDates,
-						com.tools20022.repository.entity.Transport.TransportedGoods, com.tools20022.repository.entity.Transport.PartyRole, com.tools20022.repository.entity.Transport.TransitLocation,
-						com.tools20022.repository.entity.Transport.TransportDocuments);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmIncoterms, com.tools20022.repository.entity.Transport.mmIdentification, com.tools20022.repository.entity.Transport.mmPackaging,
+						com.tools20022.repository.entity.Transport.mmArrivalDateTime, com.tools20022.repository.entity.Transport.mmPartialShipment, com.tools20022.repository.entity.Transport.mmTransShipment,
+						com.tools20022.repository.entity.Transport.mmProductDelivery, com.tools20022.repository.entity.Transport.mmPlaceOfDeparture, com.tools20022.repository.entity.Transport.mmPlaceOfDestination,
+						com.tools20022.repository.entity.Transport.mmTransportCharges, com.tools20022.repository.entity.Transport.mmFreightChargesPrepaidOrCollect, com.tools20022.repository.entity.Transport.mmShipmentDates,
+						com.tools20022.repository.entity.Transport.mmTransportedGoods, com.tools20022.repository.entity.Transport.mmPartyRole, com.tools20022.repository.entity.Transport.mmTransitLocation,
+						com.tools20022.repository.entity.Transport.mmTransportDocuments);
 				derivationComponent_lazy = () -> Arrays.asList(TransportMeans3.mmObject(), Consignment2.mmObject(), SingleTransport1.mmObject(), MultimodalTransport1.mmObject(), TransportMeans1Choice.mmObject(),
 						SingleTransport4.mmObject(), MultimodalTransport3.mmObject(), TransportMeans1.mmObject(), SingleTransport2.mmObject(), MultimodalTransport2.mmObject(), TransportMeans2Choice.mmObject(), TransportDetails1.mmObject(),
 						TransportDataSet2.mmObject(), SingleTransport5.mmObject(), TransportMeans2.mmObject(), TransportDetails2.mmObject(), TransportDataSet3.mmObject(), SingleTransport3.mmObject(), TransportDataSet4.mmObject(),
@@ -1487,5 +1521,133 @@ public class Transport {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Incoterms getIncoterms() {
+		return incoterms;
+	}
+
+	public void setIncoterms(com.tools20022.repository.entity.Incoterms incoterms) {
+		this.incoterms = incoterms;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Packaging getPackaging() {
+		return packaging;
+	}
+
+	public void setPackaging(com.tools20022.repository.entity.Packaging packaging) {
+		this.packaging = packaging;
+	}
+
+	public ISODateTime getArrivalDateTime() {
+		return arrivalDateTime;
+	}
+
+	public void setArrivalDateTime(ISODateTime arrivalDateTime) {
+		this.arrivalDateTime = arrivalDateTime;
+	}
+
+	public YesNoIndicator getPartialShipment() {
+		return partialShipment;
+	}
+
+	public void setPartialShipment(YesNoIndicator partialShipment) {
+		this.partialShipment = partialShipment;
+	}
+
+	public YesNoIndicator getTransShipment() {
+		return transShipment;
+	}
+
+	public void setTransShipment(YesNoIndicator transShipment) {
+		this.transShipment = transShipment;
+	}
+
+	public ProductDelivery getProductDelivery() {
+		return productDelivery;
+	}
+
+	public void setProductDelivery(com.tools20022.repository.entity.ProductDelivery productDelivery) {
+		this.productDelivery = productDelivery;
+	}
+
+	public Location getPlaceOfDeparture() {
+		return placeOfDeparture;
+	}
+
+	public void setPlaceOfDeparture(com.tools20022.repository.entity.Location placeOfDeparture) {
+		this.placeOfDeparture = placeOfDeparture;
+	}
+
+	public Location getPlaceOfDestination() {
+		return placeOfDestination;
+	}
+
+	public void setPlaceOfDestination(com.tools20022.repository.entity.Location placeOfDestination) {
+		this.placeOfDestination = placeOfDestination;
+	}
+
+	public List<Charges> getTransportCharges() {
+		return transportCharges;
+	}
+
+	public void setTransportCharges(List<com.tools20022.repository.entity.Charges> transportCharges) {
+		this.transportCharges = transportCharges;
+	}
+
+	public FreightChargesCode getFreightChargesPrepaidOrCollect() {
+		return freightChargesPrepaidOrCollect;
+	}
+
+	public void setFreightChargesPrepaidOrCollect(FreightChargesCode freightChargesPrepaidOrCollect) {
+		this.freightChargesPrepaidOrCollect = freightChargesPrepaidOrCollect;
+	}
+
+	public ShipmentDateRange getShipmentDates() {
+		return shipmentDates;
+	}
+
+	public void setShipmentDates(com.tools20022.repository.entity.ShipmentDateRange shipmentDates) {
+		this.shipmentDates = shipmentDates;
+	}
+
+	public List<Goods> getTransportedGoods() {
+		return transportedGoods;
+	}
+
+	public void setTransportedGoods(List<com.tools20022.repository.entity.Goods> transportedGoods) {
+		this.transportedGoods = transportedGoods;
+	}
+
+	public TransportPartyRole getPartyRole() {
+		return partyRole;
+	}
+
+	public void setPartyRole(com.tools20022.repository.entity.TransportPartyRole partyRole) {
+		this.partyRole = partyRole;
+	}
+
+	public List<Location> getTransitLocation() {
+		return transitLocation;
+	}
+
+	public void setTransitLocation(List<com.tools20022.repository.entity.Location> transitLocation) {
+		this.transitLocation = transitLocation;
+	}
+
+	public Document getTransportDocuments() {
+		return transportDocuments;
+	}
+
+	public void setTransportDocuments(com.tools20022.repository.entity.Document transportDocuments) {
+		this.transportDocuments = transportDocuments;
 	}
 }

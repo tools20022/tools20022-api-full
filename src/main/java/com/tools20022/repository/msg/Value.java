@@ -26,6 +26,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -37,10 +38,10 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Value#BaseCurrencyItem
- * Value.BaseCurrencyItem}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Value#AlternateCurrencyItem
- * Value.AlternateCurrencyItem}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Value#mmBaseCurrencyItem
+ * Value.mmBaseCurrencyItem}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Value#mmAlternateCurrencyItem
+ * Value.mmAlternateCurrencyItem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -66,6 +67,7 @@ import java.util.function.Supplier;
 public class Value {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount baseCurrencyItem;
 	/**
 	 * Specifies the amount in the base currency of the receiver.
 	 * <p>
@@ -79,8 +81,8 @@ public class Value {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Value
@@ -99,20 +101,21 @@ public class Value {
 	 * "Specifies the amount in the base currency of the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseCurrencyItem = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseCurrencyItem = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> Value.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "BaseCcyItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrencyItem";
 			definition = "Specifies the amount in the base currency of the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyAndAmount> alternateCurrencyItem;
 	/**
 	 * Specifies the amount in another currency.
 	 * <p>
@@ -126,8 +129,8 @@ public class Value {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ResultingAmount
-	 * CurrencyExchange.ResultingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmResultingAmount
+	 * CurrencyExchange.mmResultingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Value
@@ -145,10 +148,10 @@ public class Value {
 	 * definition} = "Specifies the amount in another currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternateCurrencyItem = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternateCurrencyItem = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> Value.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ResultingAmount;
 			isDerived = false;
 			xmlTag = "AltrnCcyItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,9 +165,9 @@ public class Value {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Value.BaseCurrencyItem, com.tools20022.repository.msg.Value.AlternateCurrencyItem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Value.mmBaseCurrencyItem, com.tools20022.repository.msg.Value.mmAlternateCurrencyItem);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -178,5 +181,21 @@ public class Value {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getBaseCurrencyItem() {
+		return baseCurrencyItem;
+	}
+
+	public void setBaseCurrencyItem(ActiveOrHistoricCurrencyAndAmount baseCurrencyItem) {
+		this.baseCurrencyItem = baseCurrencyItem;
+	}
+
+	public List<ActiveOrHistoricCurrencyAndAmount> getAlternateCurrencyItem() {
+		return alternateCurrencyItem;
+	}
+
+	public void setAlternateCurrencyItem(List<ActiveOrHistoricCurrencyAndAmount> alternateCurrencyItem) {
+		this.alternateCurrencyItem = alternateCurrencyItem;
 	}
 }

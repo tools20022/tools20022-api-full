@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FailedSettlementReason1FormatChoice#Code
- * FailedSettlementReason1FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.FailedSettlementReason1FormatChoice#mmCode
+ * FailedSettlementReason1FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FailedSettlementReason1FormatChoice#Proprietary
- * FailedSettlementReason1FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.FailedSettlementReason1FormatChoice#mmProprietary
+ * FailedSettlementReason1FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FailedSettlementReason1FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FailedSettlementReason1Code code;
 	/**
 	 * Standard code to specify the reason of a settlement failure.
 	 * <p>
@@ -80,8 +81,8 @@ public class FailedSettlementReason1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#MovementFailureReason
-	 * CorporateActionStatusReason.MovementFailureReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmMovementFailureReason
+	 * CorporateActionStatusReason.mmMovementFailureReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class FailedSettlementReason1FormatChoice {
 	 * "Standard code to specify the reason of a settlement failure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmMovementFailureReason;
 			componentContext_lazy = () -> FailedSettlementReason1FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.MovementFailureReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the reason of a settlement failure.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FailedSettlementReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code for specifying the reason of a settlement failure.
 	 * <p>
@@ -128,8 +130,8 @@ public class FailedSettlementReason1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#MovementFailureReason
-	 * CorporateActionStatusReason.MovementFailureReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmMovementFailureReason
+	 * CorporateActionStatusReason.mmMovementFailureReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,17 +151,17 @@ public class FailedSettlementReason1FormatChoice {
 	 * "Proprietary code for specifying the reason of a settlement failure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmMovementFailureReason;
 			componentContext_lazy = () -> FailedSettlementReason1FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.MovementFailureReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code for specifying the reason of a settlement failure.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -167,14 +169,30 @@ public class FailedSettlementReason1FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementReason1FormatChoice.Code, com.tools20022.repository.choice.FailedSettlementReason1FormatChoice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FailedSettlementReason1FormatChoice.mmCode, com.tools20022.repository.choice.FailedSettlementReason1FormatChoice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FailedSettlementReason1FormatChoice";
 				definition = "Choice between a standard code or a proprietary code for specifying the reason of a settlement failure.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FailedSettlementReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(FailedSettlementReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

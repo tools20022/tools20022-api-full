@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * EntryStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus3Code#Booked
- * EntryStatus3Code.Booked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus3Code#mmBooked
+ * EntryStatus3Code.mmBooked}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +77,7 @@ public class EntryStatus3Code extends EntryStatusCode {
 	 * name} = "Booked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Booked = new MMCode() {
+	public static final MMCode mmBooked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Booked";
@@ -88,12 +88,12 @@ public class EntryStatus3Code extends EntryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus3Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus3Code.Booked);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus3Code.mmBooked);
 				trace_lazy = () -> EntryStatusCode.mmObject();
 			}
 		});

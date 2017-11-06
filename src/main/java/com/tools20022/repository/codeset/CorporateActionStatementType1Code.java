@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#Missing
- * CorporateActionStatementType1Code.Missing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#mmMissing
+ * CorporateActionStatementType1Code.mmMissing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#All
- * CorporateActionStatementType1Code.All}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#mmAll
+ * CorporateActionStatementType1Code.mmAll}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CorporateActionStatementType1Code extends CorporateActionStatementT
 	 * name} = "Missing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Missing = new MMCode() {
+	public static final MMCode mmMissing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Missing";
@@ -107,7 +107,7 @@ public class CorporateActionStatementType1Code extends CorporateActionStatementT
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode All = new MMCode() {
+	public static final MMCode mmAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
@@ -118,12 +118,12 @@ public class CorporateActionStatementType1Code extends CorporateActionStatementT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MISS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatementType1Code";
 				definition = "Indicates whether the statement contains missing instructions only or all instructions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementType1Code.Missing, com.tools20022.repository.codeset.CorporateActionStatementType1Code.All);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementType1Code.mmMissing, com.tools20022.repository.codeset.CorporateActionStatementType1Code.mmAll);
 				trace_lazy = () -> CorporateActionStatementTypeCode.mmObject();
 			}
 		});

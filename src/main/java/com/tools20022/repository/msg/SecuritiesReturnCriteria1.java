@@ -34,62 +34,63 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#FinancialInstrumentIdentification
- * SecuritiesReturnCriteria1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmFinancialInstrumentIdentification
+ * SecuritiesReturnCriteria1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#ISOSecurityLongName
- * SecuritiesReturnCriteria1.ISOSecurityLongName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmISOSecurityLongName
+ * SecuritiesReturnCriteria1.mmISOSecurityLongName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#ISOSecurityShortName
- * SecuritiesReturnCriteria1.ISOSecurityShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmISOSecurityShortName
+ * SecuritiesReturnCriteria1.mmISOSecurityShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#ClassificationFinancialInstrument
- * SecuritiesReturnCriteria1.ClassificationFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmClassificationFinancialInstrument
+ * SecuritiesReturnCriteria1.mmClassificationFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#MaturityDate
- * SecuritiesReturnCriteria1.MaturityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmMaturityDate
+ * SecuritiesReturnCriteria1.mmMaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#IssueDate
- * SecuritiesReturnCriteria1.IssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmIssueDate
+ * SecuritiesReturnCriteria1.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#IssueCurrency
- * SecuritiesReturnCriteria1.IssueCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmIssueCurrency
+ * SecuritiesReturnCriteria1.mmIssueCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#CountryOfIssue
- * SecuritiesReturnCriteria1.CountryOfIssue}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmCountryOfIssue
+ * SecuritiesReturnCriteria1.mmCountryOfIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#SecurityStatus
- * SecuritiesReturnCriteria1.SecurityStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmSecurityStatus
+ * SecuritiesReturnCriteria1.mmSecurityStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#InvestorCSD
- * SecuritiesReturnCriteria1.InvestorCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmInvestorCSD
+ * SecuritiesReturnCriteria1.mmInvestorCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#IssuerCSD
- * SecuritiesReturnCriteria1.IssuerCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmIssuerCSD
+ * SecuritiesReturnCriteria1.mmIssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#TechnicalIssuerCSD
- * SecuritiesReturnCriteria1.TechnicalIssuerCSD}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#CSD
- * SecuritiesReturnCriteria1.CSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmTechnicalIssuerCSD
+ * SecuritiesReturnCriteria1.mmTechnicalIssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#SecuritiesQuantityType
- * SecuritiesReturnCriteria1.SecuritiesQuantityType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmCSD
+ * SecuritiesReturnCriteria1.mmCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#MinimumDenomination
- * SecuritiesReturnCriteria1.MinimumDenomination}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmSecuritiesQuantityType
+ * SecuritiesReturnCriteria1.mmSecuritiesQuantityType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#MinimumMultipleQuantity
- * SecuritiesReturnCriteria1.MinimumMultipleQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmMinimumDenomination
+ * SecuritiesReturnCriteria1.mmMinimumDenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#DeviatingSettlementUnit
- * SecuritiesReturnCriteria1.DeviatingSettlementUnit}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmMinimumMultipleQuantity
+ * SecuritiesReturnCriteria1.mmMinimumMultipleQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReturnCriteria1#mmDeviatingSettlementUnit
+ * SecuritiesReturnCriteria1.mmDeviatingSettlementUnit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator financialInstrumentIdentification;
 	/**
 	 * Identification of a security.
 	 * <p>
@@ -133,7 +135,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -141,11 +143,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator iSOSecurityLongName;
 	/**
 	 * Name of the security.
 	 * <p>
@@ -174,7 +177,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Name of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISOSecurityLongName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISOSecurityLongName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -182,11 +185,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityLongName";
 			definition = "Name of the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator iSOSecurityShortName;
 	/**
 	 * Short name of the security expressed as ISO 18773/18774.
 	 * <p>
@@ -215,7 +219,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Short name of the security expressed as ISO 18773/18774."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISOSecurityShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISOSecurityShortName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -223,11 +227,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityShortName";
 			definition = "Short name of the security expressed as ISO 18773/18774.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator classificationFinancialInstrument;
 	/**
 	 * Classification type of the financial instrument, as per the ISO
 	 * Classification of Financial Instrument (CFI) codification, for example,
@@ -260,7 +265,7 @@ public class SecuritiesReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -268,11 +273,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator maturityDate;
 	/**
 	 * Planned final repayment date at the time of issuance.
 	 * <p>
@@ -301,7 +307,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Planned final repayment date at the time of issuance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -309,11 +315,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator issueDate;
 	/**
 	 * Date/time at which the security was made available.
 	 * <p>
@@ -342,7 +349,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Date/time at which the security was made available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -350,11 +357,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator issueCurrency;
 	/**
 	 * Currency in which a security is issued or redenominated.
 	 * <p>
@@ -383,7 +391,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -391,11 +399,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator countryOfIssue;
 	/**
 	 * Primary market or country where a security is issued by the issuer or its
 	 * agent.
@@ -427,7 +436,7 @@ public class SecuritiesReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -435,11 +444,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator securityStatus;
 	/**
 	 * Specifies the status of the security within its lifecycle.
 	 * <p>
@@ -469,7 +479,7 @@ public class SecuritiesReturnCriteria1 {
 	 * "Specifies the status of the security within its lifecycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -477,11 +487,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator investorCSD;
 	/**
 	 * CSD Investor of a security.
 	 * <p>
@@ -510,7 +521,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "CSD Investor of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestorCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestorCSD = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -518,11 +529,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "CSD Investor of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator issuerCSD;
 	/**
 	 * CSD Issuer of a security.
 	 * <p>
@@ -551,7 +563,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "CSD Issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerCSD = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -559,11 +571,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "CSD Issuer of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator technicalIssuerCSD;
 	/**
 	 * Technical issuer of a security.
 	 * <p>
@@ -592,7 +605,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Technical issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalIssuerCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalIssuerCSD = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -600,11 +613,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalIssuerCSD";
 			definition = "Technical issuer of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator cSD;
 	/**
 	 * CSD of a security
 	 * <p>
@@ -633,7 +647,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "CSD of a security"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSD = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -641,11 +655,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSD";
 			definition = "CSD of a security";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator securitiesQuantityType;
 	/**
 	 * Quantity of a security.
 	 * <p>
@@ -674,7 +689,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Quantity of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesQuantityType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -682,11 +697,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantityType";
 			definition = "Quantity of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator minimumDenomination;
 	/**
 	 * Indicates the minimum quantity (unit or nominal) of a security.
 	 * <p>
@@ -716,7 +732,7 @@ public class SecuritiesReturnCriteria1 {
 	 * "Indicates the minimum quantity (unit or nominal) of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumDenomination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumDenomination = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -724,11 +740,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumDenomination";
 			definition = "Indicates the minimum quantity (unit or nominal) of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator minimumMultipleQuantity;
 	/**
 	 * Minimum multiple quantity (unit or nominal) of securities.
 	 * <p>
@@ -758,7 +775,7 @@ public class SecuritiesReturnCriteria1 {
 	 * "Minimum multiple quantity (unit or nominal) of securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumMultipleQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumMultipleQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -766,11 +783,12 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMultipleQuantity";
 			definition = "Minimum multiple quantity (unit or nominal) of securities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator deviatingSettlementUnit;
 	/**
 	 * Minimum quantity of securities that can be purchased without incurring a
 	 * larger fee. For example, if the round lot size is 100 and the trade is
@@ -804,7 +822,7 @@ public class SecuritiesReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeviatingSettlementUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeviatingSettlementUnit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -812,8 +830,8 @@ public class SecuritiesReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviatingSettlementUnit";
 			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -821,19 +839,156 @@ public class SecuritiesReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesReturnCriteria1.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesReturnCriteria1.ISOSecurityLongName,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.ISOSecurityShortName, com.tools20022.repository.msg.SecuritiesReturnCriteria1.ClassificationFinancialInstrument,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.MaturityDate, com.tools20022.repository.msg.SecuritiesReturnCriteria1.IssueDate, com.tools20022.repository.msg.SecuritiesReturnCriteria1.IssueCurrency,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.CountryOfIssue, com.tools20022.repository.msg.SecuritiesReturnCriteria1.SecurityStatus, com.tools20022.repository.msg.SecuritiesReturnCriteria1.InvestorCSD,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.IssuerCSD, com.tools20022.repository.msg.SecuritiesReturnCriteria1.TechnicalIssuerCSD, com.tools20022.repository.msg.SecuritiesReturnCriteria1.CSD,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.SecuritiesQuantityType, com.tools20022.repository.msg.SecuritiesReturnCriteria1.MinimumDenomination,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.MinimumMultipleQuantity, com.tools20022.repository.msg.SecuritiesReturnCriteria1.DeviatingSettlementUnit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmISOSecurityLongName,
+						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmISOSecurityShortName, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmClassificationFinancialInstrument,
+						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmMaturityDate, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmIssueDate, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmIssueCurrency,
+						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmSecurityStatus,
+						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmInvestorCSD, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmIssuerCSD,
+						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmCSD,
+						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmSecuritiesQuantityType, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmMinimumDenomination,
+						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmMinimumMultipleQuantity, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmDeviatingSettlementUnit);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesReturnCriteria1";
 				definition = "Return criteria for information to be returned in the report deriving from a query about securities reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(RequestedIndicator financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public RequestedIndicator getISOSecurityLongName() {
+		return iSOSecurityLongName;
+	}
+
+	public void setISOSecurityLongName(RequestedIndicator iSOSecurityLongName) {
+		this.iSOSecurityLongName = iSOSecurityLongName;
+	}
+
+	public RequestedIndicator getISOSecurityShortName() {
+		return iSOSecurityShortName;
+	}
+
+	public void setISOSecurityShortName(RequestedIndicator iSOSecurityShortName) {
+		this.iSOSecurityShortName = iSOSecurityShortName;
+	}
+
+	public RequestedIndicator getClassificationFinancialInstrument() {
+		return classificationFinancialInstrument;
+	}
+
+	public void setClassificationFinancialInstrument(RequestedIndicator classificationFinancialInstrument) {
+		this.classificationFinancialInstrument = classificationFinancialInstrument;
+	}
+
+	public RequestedIndicator getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(RequestedIndicator maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public RequestedIndicator getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(RequestedIndicator issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public RequestedIndicator getIssueCurrency() {
+		return issueCurrency;
+	}
+
+	public void setIssueCurrency(RequestedIndicator issueCurrency) {
+		this.issueCurrency = issueCurrency;
+	}
+
+	public RequestedIndicator getCountryOfIssue() {
+		return countryOfIssue;
+	}
+
+	public void setCountryOfIssue(RequestedIndicator countryOfIssue) {
+		this.countryOfIssue = countryOfIssue;
+	}
+
+	public RequestedIndicator getSecurityStatus() {
+		return securityStatus;
+	}
+
+	public void setSecurityStatus(RequestedIndicator securityStatus) {
+		this.securityStatus = securityStatus;
+	}
+
+	public RequestedIndicator getInvestorCSD() {
+		return investorCSD;
+	}
+
+	public void setInvestorCSD(RequestedIndicator investorCSD) {
+		this.investorCSD = investorCSD;
+	}
+
+	public RequestedIndicator getIssuerCSD() {
+		return issuerCSD;
+	}
+
+	public void setIssuerCSD(RequestedIndicator issuerCSD) {
+		this.issuerCSD = issuerCSD;
+	}
+
+	public RequestedIndicator getTechnicalIssuerCSD() {
+		return technicalIssuerCSD;
+	}
+
+	public void setTechnicalIssuerCSD(RequestedIndicator technicalIssuerCSD) {
+		this.technicalIssuerCSD = technicalIssuerCSD;
+	}
+
+	public RequestedIndicator getCSD() {
+		return cSD;
+	}
+
+	public void setCSD(RequestedIndicator cSD) {
+		this.cSD = cSD;
+	}
+
+	public RequestedIndicator getSecuritiesQuantityType() {
+		return securitiesQuantityType;
+	}
+
+	public void setSecuritiesQuantityType(RequestedIndicator securitiesQuantityType) {
+		this.securitiesQuantityType = securitiesQuantityType;
+	}
+
+	public RequestedIndicator getMinimumDenomination() {
+		return minimumDenomination;
+	}
+
+	public void setMinimumDenomination(RequestedIndicator minimumDenomination) {
+		this.minimumDenomination = minimumDenomination;
+	}
+
+	public RequestedIndicator getMinimumMultipleQuantity() {
+		return minimumMultipleQuantity;
+	}
+
+	public void setMinimumMultipleQuantity(RequestedIndicator minimumMultipleQuantity) {
+		this.minimumMultipleQuantity = minimumMultipleQuantity;
+	}
+
+	public RequestedIndicator getDeviatingSettlementUnit() {
+		return deviatingSettlementUnit;
+	}
+
+	public void setDeviatingSettlementUnit(RequestedIndicator deviatingSettlementUnit) {
+		this.deviatingSettlementUnit = deviatingSettlementUnit;
 	}
 }

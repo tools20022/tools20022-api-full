@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IncludedAccount1#SecuritiesAccountIdentification
- * IncludedAccount1.SecuritiesAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IncludedAccount1#mmSecuritiesAccountIdentification
+ * IncludedAccount1.mmSecuritiesAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IncludedAccount1#IncludedIndicator
- * IncludedAccount1.IncludedIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.IncludedAccount1#mmIncludedIndicator
+ * IncludedAccount1.mmIncludedIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IncludedAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text securitiesAccountIdentification;
 	/**
 	 * Identification of the securities account.
 	 * <p>
@@ -78,8 +79,8 @@ public class IncludedAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class IncludedAccount1 {
 	 * definition} = "Identification of the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> IncludedAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Identification of the securities account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator includedIndicator;
 	/**
 	 * Indicates whether the account is impacted or not by the standing
 	 * instruction.
@@ -146,7 +148,7 @@ public class IncludedAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncludedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncludedIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IncludedAccount1.mmObject();
 			isDerived = false;
@@ -154,8 +156,8 @@ public class IncludedAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedIndicator";
 			definition = "Indicates whether the account is impacted or not by the standing instruction.\n\nYes = The account is impacted by the standing instruction.\nNo = The account is not impacted by the standing instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class IncludedAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncludedAccount1.SecuritiesAccountIdentification, com.tools20022.repository.msg.IncludedAccount1.IncludedIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncludedAccount1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.IncludedAccount1.mmIncludedIndicator);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IncludedAccount1";
 				definition = "Provides information about the account that is impacted or not by the standing instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSecuritiesAccountIdentification() {
+		return securitiesAccountIdentification;
+	}
+
+	public void setSecuritiesAccountIdentification(Max35Text securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	}
+
+	public YesNoIndicator getIncludedIndicator() {
+		return includedIndicator;
+	}
+
+	public void setIncludedIndicator(YesNoIndicator includedIndicator) {
+		this.includedIndicator = includedIndicator;
 	}
 }

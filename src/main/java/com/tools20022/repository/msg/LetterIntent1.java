@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LetterIntent1#LetterIntentReference
- * LetterIntent1.LetterIntentReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LetterIntent1#Amount
- * LetterIntent1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LetterIntent1#StartDate
- * LetterIntent1.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LetterIntent1#EndDate
- * LetterIntent1.EndDate}</li>
+ * {@linkplain com.tools20022.repository.msg.LetterIntent1#mmLetterIntentReference
+ * LetterIntent1.mmLetterIntentReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LetterIntent1#mmAmount
+ * LetterIntent1.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LetterIntent1#mmStartDate
+ * LetterIntent1.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LetterIntent1#mmEndDate
+ * LetterIntent1.mmEndDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LetterIntent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text letterIntentReference;
 	/**
 	 * Reference of a letter of intent program, in which sales commissions are
 	 * reduced based on the aggregate of a customer's actual purchase and
@@ -94,7 +95,7 @@ public class LetterIntent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LetterIntentReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLetterIntentReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class LetterIntent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterIntentReference";
 			definition = "Reference of a letter of intent program, in which sales commissions are reduced based on the aggregate of a customer's actual purchase and anticipated purchases, over a specific period of time, and as agreed by the customer. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Amount stated on the letter of intent.
 	 * <p>
@@ -134,7 +136,7 @@ public class LetterIntent1 {
 	 * definition} = "Amount stated on the letter of intent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class LetterIntent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount stated on the letter of intent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected ISODate startDate;
 	/**
 	 * Start date stated on the letter of intent.
 	 * <p>
@@ -173,7 +176,7 @@ public class LetterIntent1 {
 	 * definition} = "Start date stated on the letter of intent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
@@ -181,11 +184,12 @@ public class LetterIntent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date stated on the letter of intent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate endDate;
 	/**
 	 * End date stated on the letter of intent.
 	 * <p>
@@ -212,7 +216,7 @@ public class LetterIntent1 {
 	 * definition} = "End date stated on the letter of intent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
@@ -220,8 +224,8 @@ public class LetterIntent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End date stated on the letter of intent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -229,14 +233,46 @@ public class LetterIntent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LetterIntent1.LetterIntentReference, com.tools20022.repository.msg.LetterIntent1.Amount, com.tools20022.repository.msg.LetterIntent1.StartDate,
-						com.tools20022.repository.msg.LetterIntent1.EndDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LetterIntent1.mmLetterIntentReference, com.tools20022.repository.msg.LetterIntent1.mmAmount, com.tools20022.repository.msg.LetterIntent1.mmStartDate,
+						com.tools20022.repository.msg.LetterIntent1.mmEndDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LetterIntent1";
 				definition = "Specifies information about the letter of intent.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getLetterIntentReference() {
+		return letterIntentReference;
+	}
+
+	public void setLetterIntentReference(Max35Text letterIntentReference) {
+		this.letterIntentReference = letterIntentReference;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public ISODate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(ISODate endDate) {
+		this.endDate = endDate;
 	}
 }

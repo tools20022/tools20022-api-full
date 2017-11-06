@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#BalanceCompensable
- * ServicePaymentMethod1Code.BalanceCompensable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#mmBalanceCompensable
+ * ServicePaymentMethod1Code.mmBalanceCompensable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#HardCharge
- * ServicePaymentMethod1Code.HardCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#mmHardCharge
+ * ServicePaymentMethod1Code.mmHardCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#PreviouslyCharged
- * ServicePaymentMethod1Code.PreviouslyCharged}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#mmPreviouslyCharged
+ * ServicePaymentMethod1Code.mmPreviouslyCharged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#InvoicedSeparately
- * ServicePaymentMethod1Code.InvoicedSeparately}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#mmInvoicedSeparately
+ * ServicePaymentMethod1Code.mmInvoicedSeparately}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#Waived
- * ServicePaymentMethod1Code.Waived}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#mmWaived
+ * ServicePaymentMethod1Code.mmWaived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#Free
- * ServicePaymentMethod1Code.Free}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServicePaymentMethod1Code#mmFree
+ * ServicePaymentMethod1Code.mmFree}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class ServicePaymentMethod1Code extends ServicePaymentMethodCode {
 	 * name} = "BalanceCompensable"</li>
 	 * </ul>
 	 */
-	public static final MMCode BalanceCompensable = new MMCode() {
+	public static final MMCode mmBalanceCompensable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceCompensable";
@@ -116,7 +116,7 @@ public class ServicePaymentMethod1Code extends ServicePaymentMethodCode {
 	 * name} = "HardCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode HardCharge = new MMCode() {
+	public static final MMCode mmHardCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HardCharge";
@@ -139,7 +139,7 @@ public class ServicePaymentMethod1Code extends ServicePaymentMethodCode {
 	 * name} = "PreviouslyCharged"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreviouslyCharged = new MMCode() {
+	public static final MMCode mmPreviouslyCharged = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyCharged";
@@ -162,7 +162,7 @@ public class ServicePaymentMethod1Code extends ServicePaymentMethodCode {
 	 * name} = "InvoicedSeparately"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvoicedSeparately = new MMCode() {
+	public static final MMCode mmInvoicedSeparately = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoicedSeparately";
@@ -185,7 +185,7 @@ public class ServicePaymentMethod1Code extends ServicePaymentMethodCode {
 	 * name} = "Waived"</li>
 	 * </ul>
 	 */
-	public static final MMCode Waived = new MMCode() {
+	public static final MMCode mmWaived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Waived";
@@ -208,7 +208,7 @@ public class ServicePaymentMethod1Code extends ServicePaymentMethodCode {
 	 * name} = "Free"</li>
 	 * </ul>
 	 */
-	public static final MMCode Free = new MMCode() {
+	public static final MMCode mmFree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Free";
@@ -219,14 +219,14 @@ public class ServicePaymentMethod1Code extends ServicePaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BCMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ServicePaymentMethod1Code";
 				definition = "Defines the  method for the payment of the services charge.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServicePaymentMethod1Code.BalanceCompensable, com.tools20022.repository.codeset.ServicePaymentMethod1Code.HardCharge,
-						com.tools20022.repository.codeset.ServicePaymentMethod1Code.PreviouslyCharged, com.tools20022.repository.codeset.ServicePaymentMethod1Code.InvoicedSeparately,
-						com.tools20022.repository.codeset.ServicePaymentMethod1Code.Waived, com.tools20022.repository.codeset.ServicePaymentMethod1Code.Free);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServicePaymentMethod1Code.mmBalanceCompensable, com.tools20022.repository.codeset.ServicePaymentMethod1Code.mmHardCharge,
+						com.tools20022.repository.codeset.ServicePaymentMethod1Code.mmPreviouslyCharged, com.tools20022.repository.codeset.ServicePaymentMethod1Code.mmInvoicedSeparately,
+						com.tools20022.repository.codeset.ServicePaymentMethod1Code.mmWaived, com.tools20022.repository.codeset.ServicePaymentMethod1Code.mmFree);
 				trace_lazy = () -> ServicePaymentMethodCode.mmObject();
 			}
 		});

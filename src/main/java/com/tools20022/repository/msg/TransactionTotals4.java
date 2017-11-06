@@ -31,19 +31,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals4#TotalCredit
- * TransactionTotals4.TotalCredit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals4#TotalDebit
- * TransactionTotals4.TotalDebit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals4#TotalNumber
- * TransactionTotals4.TotalNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals4#mmTotalCredit
+ * TransactionTotals4.mmTotalCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals4#mmTotalDebit
+ * TransactionTotals4.mmTotalDebit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals4#mmTotalNumber
+ * TransactionTotals4.mmTotalNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionTotals4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionTotals5 totalCredit;
 	/**
 	 * Total of credit transactions.
 	 * <p>
@@ -96,7 +100,7 @@ public class TransactionTotals4 {
 	 * definition} = "Total of credit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalCredit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalCredit = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionTotals4.mmObject();
 			isDerived = false;
@@ -104,12 +108,13 @@ public class TransactionTotals4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCredit";
 			definition = "Total of credit transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionTotals5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 		}
 	};
+	protected TransactionTotals5 totalDebit;
 	/**
 	 * Total of debit transactions.
 	 * <p>
@@ -136,7 +141,7 @@ public class TransactionTotals4 {
 	 * definition} = "Total of debit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalDebit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalDebit = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionTotals4.mmObject();
 			isDerived = false;
@@ -144,12 +149,13 @@ public class TransactionTotals4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDebit";
 			definition = "Total of debit transactions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionTotals5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 		}
 	};
+	protected TransactionTotals6 totalNumber;
 	/**
 	 * Additional count which may be utilised for reconciliation.
 	 * <p>
@@ -177,7 +183,7 @@ public class TransactionTotals4 {
 	 * "Additional count which may be utilised for reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionTotals4.mmObject();
 			isDerived = false;
@@ -185,26 +191,50 @@ public class TransactionTotals4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Additional count which may be utilised for reconciliation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionTotals6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals4.TotalCredit, com.tools20022.repository.msg.TransactionTotals4.TotalDebit,
-						com.tools20022.repository.msg.TransactionTotals4.TotalNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals4.mmTotalCredit, com.tools20022.repository.msg.TransactionTotals4.mmTotalDebit,
+						com.tools20022.repository.msg.TransactionTotals4.mmTotalNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals4";
 				definition = "Totals of the reconciliation.";
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals5.mmObject(), com.tools20022.repository.msg.TransactionTotals6.mmObject());
 				previousVersion_lazy = () -> TransactionTotals3.mmObject();
-				nextVersions_lazy = () -> Arrays.asList(TransactionTotals5.mmObject(), TransactionTotals6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionTotals5 getTotalCredit() {
+		return totalCredit;
+	}
+
+	public void setTotalCredit(com.tools20022.repository.msg.TransactionTotals5 totalCredit) {
+		this.totalCredit = totalCredit;
+	}
+
+	public TransactionTotals5 getTotalDebit() {
+		return totalDebit;
+	}
+
+	public void setTotalDebit(com.tools20022.repository.msg.TransactionTotals5 totalDebit) {
+		this.totalDebit = totalDebit;
+	}
+
+	public TransactionTotals6 getTotalNumber() {
+		return totalNumber;
+	}
+
+	public void setTotalNumber(com.tools20022.repository.msg.TransactionTotals6 totalNumber) {
+		this.totalNumber = totalNumber;
 	}
 }

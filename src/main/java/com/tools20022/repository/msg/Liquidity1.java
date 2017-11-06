@@ -36,14 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#Value
- * Liquidity1.Value}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#NumberOfSecurities
- * Liquidity1.NumberOfSecurities}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#Upper
- * Liquidity1.Upper}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#Lower
- * Liquidity1.Lower}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#mmValue
+ * Liquidity1.mmValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Liquidity1#mmNumberOfSecurities
+ * Liquidity1.mmNumberOfSecurities}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#mmUpper
+ * Liquidity1.mmUpper}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#mmLower
+ * Liquidity1.mmLower}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Liquidity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount value;
 	/**
 	 * Market value of the securities position for which liquidity details are
 	 * provided.
@@ -82,8 +84,8 @@ public class Liquidity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Liquidity#Value
-	 * Liquidity.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#mmValue
+	 * Liquidity.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Liquidity1
@@ -103,20 +105,21 @@ public class Liquidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmValue;
 			componentContext_lazy = () -> Liquidity1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.Value;
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Market value of the securities position for which liquidity details are provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DecimalNumber numberOfSecurities;
 	/**
 	 * Number of securities for which liquidity range details are provided.
 	 * <p>
@@ -145,7 +148,7 @@ public class Liquidity1 {
 	 * "Number of securities for which liquidity range details are provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfSecurities = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Liquidity1.mmObject();
 			isDerived = false;
@@ -153,11 +156,12 @@ public class Liquidity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfSecurities";
 			definition = "Number of securities for which liquidity range details are provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected PercentageRate upper;
 	/**
 	 * Upper liquidity indicator, represented as a percentage of the average
 	 * trade daily volume.
@@ -172,8 +176,8 @@ public class Liquidity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Liquidity#Upper
-	 * Liquidity.Upper}</li>
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#mmUpper
+	 * Liquidity.mmUpper}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Liquidity1
@@ -193,20 +197,21 @@ public class Liquidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Upper = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpper = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmUpper;
 			componentContext_lazy = () -> Liquidity1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.Upper;
 			isDerived = false;
 			xmlTag = "Upper";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Upper";
 			definition = "Upper liquidity indicator, represented as a percentage of the average trade daily volume.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate lower;
 	/**
 	 * Lower liquidity indicator, represented as a percentage of the average
 	 * trade daily volume.
@@ -221,8 +226,8 @@ public class Liquidity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Liquidity#Lower
-	 * Liquidity.Lower}</li>
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#mmLower
+	 * Liquidity.mmLower}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Liquidity1
@@ -242,17 +247,17 @@ public class Liquidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Lower = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLower = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmLower;
 			componentContext_lazy = () -> Liquidity1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.Lower;
 			isDerived = false;
 			xmlTag = "Lwr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lower";
 			definition = "Lower liquidity indicator, represented as a percentage of the average trade daily volume.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -260,15 +265,47 @@ public class Liquidity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Liquidity1.Value, com.tools20022.repository.msg.Liquidity1.NumberOfSecurities, com.tools20022.repository.msg.Liquidity1.Upper,
-						com.tools20022.repository.msg.Liquidity1.Lower);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Liquidity1.mmValue, com.tools20022.repository.msg.Liquidity1.mmNumberOfSecurities, com.tools20022.repository.msg.Liquidity1.mmUpper,
+						com.tools20022.repository.msg.Liquidity1.mmLower);
 				trace_lazy = () -> Liquidity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Liquidity1";
 				definition = "Ability of a financial instrument to be easily traded and converted to cash, at conditions that do not affect its price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getValue() {
+		return value;
+	}
+
+	public void setValue(ActiveCurrencyAndAmount value) {
+		this.value = value;
+	}
+
+	public DecimalNumber getNumberOfSecurities() {
+		return numberOfSecurities;
+	}
+
+	public void setNumberOfSecurities(DecimalNumber numberOfSecurities) {
+		this.numberOfSecurities = numberOfSecurities;
+	}
+
+	public PercentageRate getUpper() {
+		return upper;
+	}
+
+	public void setUpper(PercentageRate upper) {
+		this.upper = upper;
+	}
+
+	public PercentageRate getLower() {
+		return lower;
+	}
+
+	public void setLower(PercentageRate lower) {
+		this.lower = lower;
 	}
 }

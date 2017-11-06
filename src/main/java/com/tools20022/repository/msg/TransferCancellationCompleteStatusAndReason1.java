@@ -38,9 +38,9 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#ReasonOrExtendedReasonOrDataSourceSchemeRule
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#mmReasonOrExtendedReasonOrDataSourceSchemeRule
  * TransferCancellationCompleteStatusAndReason1.
- * ReasonOrExtendedReasonOrDataSourceSchemeRule}</li>
+ * mmReasonOrExtendedReasonOrDataSourceSchemeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,14 +48,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#Reason
- * TransferCancellationCompleteStatusAndReason1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#mmReason
+ * TransferCancellationCompleteStatusAndReason1.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#ExtendedReason
- * TransferCancellationCompleteStatusAndReason1.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#mmExtendedReason
+ * TransferCancellationCompleteStatusAndReason1.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#DataSourceScheme
- * TransferCancellationCompleteStatusAndReason1.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#mmDataSourceScheme
+ * TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +65,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,6 +81,7 @@ import java.util.function.Supplier;
 public class TransferCancellationCompleteStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancelledStatusReason1Code reason;
 	/**
 	 * Reason for the transfer cancellation complete status.
 	 * <p>
@@ -94,8 +95,8 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,20 +115,21 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * definition} = "Reason for the transfer cancellation complete status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the transfer cancellation complete status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the transfer cancellation complete status.
 	 * <p>
@@ -156,7 +158,7 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * definition} = "Reason for the transfer cancellation complete status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
 			isDerived = false;
@@ -164,11 +166,12 @@ public class TransferCancellationCompleteStatusAndReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the transfer cancellation complete status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the transfer cancellation
 	 * complete status.
@@ -181,8 +184,8 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,19 +206,19 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the transfer cancellation complete status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
 	/**
@@ -228,14 +231,14 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#Reason
-	 * TransferCancellationCompleteStatusAndReason1.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#mmReason
+	 * TransferCancellationCompleteStatusAndReason1.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#ExtendedReason
-	 * TransferCancellationCompleteStatusAndReason1.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#mmExtendedReason
+	 * TransferCancellationCompleteStatusAndReason1.mmExtendedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#DataSourceScheme
-	 * TransferCancellationCompleteStatusAndReason1.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1#mmDataSourceScheme
+	 * TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -255,24 +258,24 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonOrExtendedReasonOrDataSourceSchemeRule = new MMXor() {
+	public static final MMXor mmReasonOrExtendedReasonOrDataSourceSchemeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonOrDataSourceSchemeRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme,) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.Reason, com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.ExtendedReason,
-					com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.DataSourceScheme);
 			messageComponent_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmReason, com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmExtendedReason,
+					com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.Reason, com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.ExtendedReason,
-						com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.DataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmReason, com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmExtendedReason,
+						com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -283,9 +286,33 @@ public class TransferCancellationCompleteStatusAndReason1 {
 				})).get();
 				name = "TransferCancellationCompleteStatusAndReason1";
 				definition = "Status of the transfer cancellation is complete.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.ReasonOrExtendedReasonOrDataSourceSchemeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmReasonOrExtendedReasonOrDataSourceSchemeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancelledStatusReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(CancelledStatusReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
 	}
 }

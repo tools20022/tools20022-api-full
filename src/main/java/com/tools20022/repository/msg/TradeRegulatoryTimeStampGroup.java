@@ -39,30 +39,30 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#TradeRegulatoryTimeStamp
- * TradeRegulatoryTimeStampGroup.TradeRegulatoryTimeStamp}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#mmTradeRegulatoryTimeStamp
+ * TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStamp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#TradeRegulatoryTimeStampType
- * TradeRegulatoryTimeStampGroup.TradeRegulatoryTimeStampType}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#mmTradeRegulatoryTimeStampType
+ * TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#TradeRegulatoryTimeStampOrigin
- * TradeRegulatoryTimeStampGroup.TradeRegulatoryTimeStampOrigin}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#mmTradeRegulatoryTimeStampOrigin
+ * TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampOrigin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#DeskType
- * TradeRegulatoryTimeStampGroup.DeskType}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#mmDeskType
+ * TradeRegulatoryTimeStampGroup.mmDeskType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#DeskTypeSource
- * TradeRegulatoryTimeStampGroup.DeskTypeSource}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#mmDeskTypeSource
+ * TradeRegulatoryTimeStampGroup.mmDeskTypeSource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#DeskOrderHandlingInstructions
- * TradeRegulatoryTimeStampGroup.DeskOrderHandlingInstructions}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup#mmDeskOrderHandlingInstructions
+ * TradeRegulatoryTimeStampGroup.mmDeskOrderHandlingInstructions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,6 +79,7 @@ import java.util.function.Supplier;
 public class TradeRegulatoryTimeStampGroup {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime tradeRegulatoryTimeStamp;
 	/**
 	 * Traded / Regulatory timestamp value. Used to store time information
 	 * required by government regulators or self regulatory organizations (such
@@ -110,7 +111,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeRegulatoryTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeRegulatoryTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -118,11 +119,12 @@ public class TradeRegulatoryTimeStampGroup {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStamp";
 			definition = "Traded / Regulatory timestamp value. Used to store time information required by government regulators or self regulatory organizations (such as an exchange or clearing house).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text tradeRegulatoryTimeStampType;
 	/**
 	 * Traded / Regulatory timestamp type (eg, ExecutionTime, Time In, Time Out,
 	 * BrokerReceipt, BrokerExecution, Desk receipt).
@@ -153,7 +155,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeRegulatoryTimeStampType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeRegulatoryTimeStampType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -161,11 +163,12 @@ public class TradeRegulatoryTimeStampGroup {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStampType";
 			definition = "Traded / Regulatory timestamp type (eg, ExecutionTime, Time In, Time Out, BrokerReceipt, BrokerExecution, Desk receipt).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text tradeRegulatoryTimeStampOrigin;
 	/**
 	 * Provides the origin of the timestamp.
 	 * <p>
@@ -193,7 +196,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * definition} = "Provides the origin of the timestamp."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeRegulatoryTimeStampOrigin = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeRegulatoryTimeStampOrigin = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -201,11 +204,12 @@ public class TradeRegulatoryTimeStampGroup {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStampOrigin";
 			definition = "Provides the origin of the timestamp.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text deskType;
 	/**
 	 * Type of trading desk (eg, Agency, Arbitrage, Derivatives, International,
 	 * Institutional, Preferred Trading,...). Note of applicability: values are
@@ -238,7 +242,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeskType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeskType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -246,11 +250,12 @@ public class TradeRegulatoryTimeStampGroup {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskType";
 			definition = "Type of trading desk (eg, Agency, Arbitrage, Derivatives, International, Institutional, Preferred Trading,...). Note of applicability: values are required in US futures markets by the Commodity Futures Trading Commission (CFTC) to support computerized trade reconstruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text deskTypeSource;
 	/**
 	 * Provides the desk type source, valid value is NASD OATS.
 	 * <p>
@@ -278,7 +283,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * definition} = "Provides the desk type source, valid value is NASD OATS."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeskTypeSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeskTypeSource = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -286,11 +291,12 @@ public class TradeRegulatoryTimeStampGroup {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskTypeSource";
 			definition = "Provides the desk type source, valid value is NASD OATS.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CustomerHandlingInstructionChoice deskOrderHandlingInstructions;
 	/**
 	 * Firms that are taking in orders manually but routing for execution
 	 * electronically and for reporting to the Order Audit Trail System must
@@ -324,7 +330,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeskOrderHandlingInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeskOrderHandlingInstructions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -332,8 +338,8 @@ public class TradeRegulatoryTimeStampGroup {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskOrderHandlingInstructions";
 			definition = "Firms that are taking in orders manually but routing for execution electronically and for reporting to the Order Audit Trail System must capture the client's handling instructions.This is intended for compliance reporting only (OATS Phase III regulatory requirement).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CustomerHandlingInstructionChoice.mmObject();
 		}
 	};
@@ -341,10 +347,10 @@ public class TradeRegulatoryTimeStampGroup {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.TradeRegulatoryTimeStamp, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.TradeRegulatoryTimeStampType,
-						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.TradeRegulatoryTimeStampOrigin, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.DeskType,
-						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.DeskTypeSource, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.DeskOrderHandlingInstructions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStamp, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampType,
+						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampOrigin, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskType,
+						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskTypeSource, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskOrderHandlingInstructions);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -358,5 +364,53 @@ public class TradeRegulatoryTimeStampGroup {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getTradeRegulatoryTimeStamp() {
+		return tradeRegulatoryTimeStamp;
+	}
+
+	public void setTradeRegulatoryTimeStamp(ISODateTime tradeRegulatoryTimeStamp) {
+		this.tradeRegulatoryTimeStamp = tradeRegulatoryTimeStamp;
+	}
+
+	public Max35Text getTradeRegulatoryTimeStampType() {
+		return tradeRegulatoryTimeStampType;
+	}
+
+	public void setTradeRegulatoryTimeStampType(Max35Text tradeRegulatoryTimeStampType) {
+		this.tradeRegulatoryTimeStampType = tradeRegulatoryTimeStampType;
+	}
+
+	public Max35Text getTradeRegulatoryTimeStampOrigin() {
+		return tradeRegulatoryTimeStampOrigin;
+	}
+
+	public void setTradeRegulatoryTimeStampOrigin(Max35Text tradeRegulatoryTimeStampOrigin) {
+		this.tradeRegulatoryTimeStampOrigin = tradeRegulatoryTimeStampOrigin;
+	}
+
+	public Max35Text getDeskType() {
+		return deskType;
+	}
+
+	public void setDeskType(Max35Text deskType) {
+		this.deskType = deskType;
+	}
+
+	public Max35Text getDeskTypeSource() {
+		return deskTypeSource;
+	}
+
+	public void setDeskTypeSource(Max35Text deskTypeSource) {
+		this.deskTypeSource = deskTypeSource;
+	}
+
+	public CustomerHandlingInstructionChoice getDeskOrderHandlingInstructions() {
+		return deskOrderHandlingInstructions;
+	}
+
+	public void setDeskOrderHandlingInstructions(CustomerHandlingInstructionChoice deskOrderHandlingInstructions) {
+		this.deskOrderHandlingInstructions = deskOrderHandlingInstructions;
 	}
 }

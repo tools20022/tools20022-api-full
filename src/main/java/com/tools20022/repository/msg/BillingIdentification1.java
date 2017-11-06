@@ -36,15 +36,15 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingIdentification1#BillingIdentification
- * BillingIdentification1.BillingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingIdentification1#mmBillingIdentification
+ * BillingIdentification1.mmBillingIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -59,6 +59,7 @@ import java.util.function.Supplier;
 public class BillingIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text billingIdentification;
 	/**
 	 * Unique reference of a the related Invoice
 	 * <p>
@@ -86,7 +87,7 @@ public class BillingIdentification1 {
 	 * definition} = "Unique reference of a the related Invoice"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BillingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BillingIdentification1.mmObject();
 			isDerived = false;
@@ -94,8 +95,8 @@ public class BillingIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingIdentification";
 			definition = "Unique reference of a the related Invoice";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -103,8 +104,8 @@ public class BillingIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingIdentification1.BillingIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingIdentification1.mmBillingIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -118,5 +119,13 @@ public class BillingIdentification1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getBillingIdentification() {
+		return billingIdentification;
+	}
+
+	public void setBillingIdentification(Max35Text billingIdentification) {
+		this.billingIdentification = billingIdentification;
 	}
 }

@@ -29,22 +29,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ContentTypeCode#PlainData
- * ContentTypeCode.PlainData}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ContentTypeCode#SignedData
- * ContentTypeCode.SignedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#EnvelopedData
- * ContentTypeCode.EnvelopedData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmPlainData
+ * ContentTypeCode.mmPlainData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#DigestedData
- * ContentTypeCode.DigestedData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmSignedData
+ * ContentTypeCode.mmSignedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#EncryptedData
- * ContentTypeCode.EncryptedData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmEnvelopedData
+ * ContentTypeCode.mmEnvelopedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#AuthenticatedData
- * ContentTypeCode.AuthenticatedData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmDigestedData
+ * ContentTypeCode.mmDigestedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmEncryptedData
+ * ContentTypeCode.mmEncryptedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmAuthenticatedData
+ * ContentTypeCode.mmAuthenticatedData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +107,7 @@ public class ContentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PlainData = new MMCode() {
+	public static final MMCode mmPlainData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PlainData";
@@ -136,7 +138,7 @@ public class ContentTypeCode {
 	 * "Digital signature - (ASN.1 Object Identifier: id-signedData)."</li>
 	 * </ul>
 	 */
-	public static final MMCode SignedData = new MMCode() {
+	public static final MMCode mmSignedData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SignedData";
@@ -169,7 +171,7 @@ public class ContentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EnvelopedData = new MMCode() {
+	public static final MMCode mmEnvelopedData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EnvelopedData";
@@ -200,7 +202,7 @@ public class ContentTypeCode {
 	 * "Message digest - (ASN.1 Object Identifier: id-digestedData)."</li>
 	 * </ul>
 	 */
-	public static final MMCode DigestedData = new MMCode() {
+	public static final MMCode mmDigestedData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DigestedData";
@@ -231,7 +233,7 @@ public class ContentTypeCode {
 	 * "Encrypted data - (ASN.1 Object Identifier: id-encryptedData)."</li>
 	 * </ul>
 	 */
-	public static final MMCode EncryptedData = new MMCode() {
+	public static final MMCode mmEncryptedData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EncryptedData";
@@ -264,7 +266,7 @@ public class ContentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AuthenticatedData = new MMCode() {
+	public static final MMCode mmAuthenticatedData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AuthenticatedData";
@@ -277,13 +279,14 @@ public class ContentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DATA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContentTypeCode";
 				definition = "Identification of the type of protection for a protected data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentTypeCode.PlainData, com.tools20022.repository.codeset.ContentTypeCode.SignedData, com.tools20022.repository.codeset.ContentTypeCode.EnvelopedData,
-						com.tools20022.repository.codeset.ContentTypeCode.DigestedData, com.tools20022.repository.codeset.ContentTypeCode.EncryptedData, com.tools20022.repository.codeset.ContentTypeCode.AuthenticatedData);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentTypeCode.mmPlainData, com.tools20022.repository.codeset.ContentTypeCode.mmSignedData,
+						com.tools20022.repository.codeset.ContentTypeCode.mmEnvelopedData, com.tools20022.repository.codeset.ContentTypeCode.mmDigestedData, com.tools20022.repository.codeset.ContentTypeCode.mmEncryptedData,
+						com.tools20022.repository.codeset.ContentTypeCode.mmAuthenticatedData);
 				derivation_lazy = () -> Arrays.asList(ContentType1Code.mmObject(), ContentType2Code.mmObject());
 			}
 		});

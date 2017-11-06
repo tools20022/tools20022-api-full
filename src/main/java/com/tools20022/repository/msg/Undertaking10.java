@@ -33,10 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking10#NewUndertakingAmount
- * Undertaking10.NewUndertakingAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Undertaking10#NewExpiryDetails
- * Undertaking10.NewExpiryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking10#mmNewUndertakingAmount
+ * Undertaking10.mmNewUndertakingAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking10#mmNewExpiryDetails
+ * Undertaking10.mmNewExpiryDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Undertaking10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingAmount2 newUndertakingAmount;
 	/**
 	 * Details related to the requested new amount for the counter-undertaking.
 	 * <p>
@@ -73,8 +75,8 @@ public class Undertaking10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingAmount
-	 * Undertaking.UndertakingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmount
+	 * Undertaking.mmUndertakingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +96,21 @@ public class Undertaking10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewUndertakingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewUndertakingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> Undertaking10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingAmount;
 			isDerived = false;
 			xmlTag = "NewUdrtkgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewUndertakingAmount";
 			definition = "Details related to the requested new amount for the counter-undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> UndertakingAmount2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
 		}
 	};
+	protected ExpiryDetails1 newExpiryDetails;
 	/**
 	 * Details related to the requested new expiry terms for the
 	 * counter-undertaking.
@@ -121,8 +124,8 @@ public class Undertaking10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Expiry
-	 * Undertaking.Expiry}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmExpiry
+	 * Undertaking.mmExpiry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,32 +145,48 @@ public class Undertaking10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewExpiryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewExpiryDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmExpiry;
 			componentContext_lazy = () -> Undertaking10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Expiry;
 			isDerived = false;
 			xmlTag = "NewXpryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewExpiryDetails";
 			definition = "Details related to the requested new expiry terms for the counter-undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ExpiryDetails1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking10.NewUndertakingAmount, com.tools20022.repository.msg.Undertaking10.NewExpiryDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking10.mmNewUndertakingAmount, com.tools20022.repository.msg.Undertaking10.mmNewExpiryDetails);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Undertaking10";
 				definition = "Details related to the undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingAmount2 getNewUndertakingAmount() {
+		return newUndertakingAmount;
+	}
+
+	public void setNewUndertakingAmount(com.tools20022.repository.msg.UndertakingAmount2 newUndertakingAmount) {
+		this.newUndertakingAmount = newUndertakingAmount;
+	}
+
+	public ExpiryDetails1 getNewExpiryDetails() {
+		return newExpiryDetails;
+	}
+
+	public void setNewExpiryDetails(com.tools20022.repository.msg.ExpiryDetails1 newExpiryDetails) {
+		this.newExpiryDetails = newExpiryDetails;
 	}
 }

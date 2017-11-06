@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity1Code#NoTransaction
- * ReportPeriodActivity1Code.NoTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity1Code#mmNoTransaction
+ * ReportPeriodActivity1Code.mmNoTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class ReportPeriodActivity1Code extends ReportPeriodActivityCode {
 	 * name} = "NoTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoTransaction = new MMCode() {
+	public static final MMCode mmNoTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
@@ -84,11 +84,11 @@ public class ReportPeriodActivity1Code extends ReportPeriodActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivity1Code";
 				definition = "Specifies the type of report activity for a specific reporting period.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivity1Code.NoTransaction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivity1Code.mmNoTransaction);
 				trace_lazy = () -> ReportPeriodActivityCode.mmObject();
 			}
 		});

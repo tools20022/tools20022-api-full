@@ -75,48 +75,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#CharacterSet
- * BusinessApplicationHeaderV01.CharacterSet}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmCharacterSet
+ * BusinessApplicationHeaderV01.mmCharacterSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#From
- * BusinessApplicationHeaderV01.From}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmFrom
+ * BusinessApplicationHeaderV01.mmFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#To
- * BusinessApplicationHeaderV01.To}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmTo
+ * BusinessApplicationHeaderV01.mmTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#BusinessMessageIdentifier
- * BusinessApplicationHeaderV01.BusinessMessageIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmBusinessMessageIdentifier
+ * BusinessApplicationHeaderV01.mmBusinessMessageIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#MessageDefinitionIdentifier
- * BusinessApplicationHeaderV01.MessageDefinitionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmMessageDefinitionIdentifier
+ * BusinessApplicationHeaderV01.mmMessageDefinitionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#BusinessService
- * BusinessApplicationHeaderV01.BusinessService}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmBusinessService
+ * BusinessApplicationHeaderV01.mmBusinessService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#CreationDate
- * BusinessApplicationHeaderV01.CreationDate}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmCreationDate
+ * BusinessApplicationHeaderV01.mmCreationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#CopyDuplicate
- * BusinessApplicationHeaderV01.CopyDuplicate}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmCopyDuplicate
+ * BusinessApplicationHeaderV01.mmCopyDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#PossibleDuplicate
- * BusinessApplicationHeaderV01.PossibleDuplicate}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmPossibleDuplicate
+ * BusinessApplicationHeaderV01.mmPossibleDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#Priority
- * BusinessApplicationHeaderV01.Priority}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmPriority
+ * BusinessApplicationHeaderV01.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#Signature
- * BusinessApplicationHeaderV01.Signature}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmSignature
+ * BusinessApplicationHeaderV01.mmSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#Related
- * BusinessApplicationHeaderV01.Related}</li>
+ * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#mmRelated
+ * BusinessApplicationHeaderV01.mmRelated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.head.BusinessApplicationHeaderV01#identifier
- * BusinessApplicationHeaderV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code head.001.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,6 +130,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessApplicationHeaderV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected UnicodeChartsCode characterSet;
 	/**
 	 * Contains the character set of the text-based elements used in the
 	 * Business Message.
@@ -158,17 +157,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CharacterSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCharacterSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CharSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CharacterSet";
 			definition = "Contains the character set of the text-based elements used in the Business Message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> UnicodeChartsCode.mmObject();
 		}
 	};
+	protected Party9Choice from;
 	/**
 	 * The sending MessagingEndpoint that has created this Business Message for
 	 * the receiving MessagingEndpoint that will process this Business Message.<br>
@@ -198,17 +198,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock From = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFrom = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Fr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "The sending MessagingEndpoint that has created this Business Message for the receiving MessagingEndpoint that will process this Business Message.\r\n\r\nNote\tthe sending MessagingEndpoint might be different from the sending address potentially contained in the transport header (as defined in the transport layer).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Party9Choice.mmObject();
 		}
 	};
+	protected Party9Choice to;
 	/**
 	 * The MessagingEndpoint designated by the sending MessagingEndpoint to be
 	 * the recipient who will ultimately process this Business Message.<br>
@@ -238,17 +239,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock To = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTo = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "To";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "The MessagingEndpoint designated by the sending MessagingEndpoint to be the recipient who will ultimately process this Business Message.\r\n\r\nNote the receiving MessagingEndpoint might be different from the receiving address potentially contained in the transport header (as defined in the transport layer).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Party9Choice.mmObject();
 		}
 	};
+	protected Max35Text businessMessageIdentifier;
 	/**
 	 * Unambiguously identifies the Business Message to the MessagingEndpoint
 	 * that has created the Business Message.
@@ -274,17 +276,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BusinessMessageIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBusinessMessageIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BizMsgIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessMessageIdentifier";
 			definition = "Unambiguously identifies the Business Message to the MessagingEndpoint that has created the Business Message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text messageDefinitionIdentifier;
 	/**
 	 * Contains the MessageIdentifier that defines the BusinessMessage.<br>
 	 * It must contain a MessageIdentifier published on the ISO 20022 website.<br>
@@ -312,17 +315,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageDefinitionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageDefinitionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgDefIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDefinitionIdentifier";
 			definition = "Contains the MessageIdentifier that defines the BusinessMessage.\r\nIt must contain a MessageIdentifier published on the ISO 20022 website.\r\n\r\nexample\tcamt.001.001.03";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text businessService;
 	/**
 	 * Specifies the business service agreed between the two MessagingEndpoints
 	 * under which rules this Business Message is exchanged.<br>
@@ -351,17 +355,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BusinessService = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBusinessService = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BizSvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessService";
 			definition = "Specifies the business service agreed between the two MessagingEndpoints under which rules this Business Message is exchanged.\r\n To be used when there is a choice of processing services or processing service levels.\r\nExample: E&I";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISONormalisedDateTime creationDate;
 	/**
 	 * Date and time when this Business Message (header) was created.<br>
 	 * Note Times must be normalized, using the "Z" annotation.
@@ -388,17 +393,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CreationDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCreationDate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CreDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDate";
 			definition = "Date and time when this Business Message (header) was created.\r\nNote    Times must be normalized, using the \"Z\" annotation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISONormalisedDateTime.mmObject();
 		}
 	};
+	protected CopyDuplicate1Code copyDuplicate;
 	/**
 	 * Indicates whether the message is a Copy, a Duplicate or a copy of a
 	 * duplicate of a previously sent ISO 20022 Message.
@@ -425,17 +431,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDuplicate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDuplicate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDplct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Indicates whether the message is a Copy, a Duplicate or a copy of a duplicate of a previously sent ISO 20022 Message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator possibleDuplicate;
 	/**
 	 * Flag indicating if the Business Message exchanged between the
 	 * MessagingEndpoints is possibly a duplicate. <br>
@@ -473,17 +480,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PossibleDuplicate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPossibleDuplicate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PssblDplct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
 			definition = "Flag indicating if the Business Message exchanged between the MessagingEndpoints is possibly a duplicate. \r\nIf the receiving MessagingEndpoint  did not receive the original, then this Business Message should be processed as if it were the original. \r\n\r\nIf the receiving MessagingEndpoint did receive the original, then it should perform necessary actions to avoid processing this Business Message again.\r\n\r\nThis will guarantee business idempotent behaviour.\r\n\r\nNOTE: this is named \"PossResend\" in FIX - this is an application level resend not a network level retransmission";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected BusinessMessagePriorityCode priority;
 	/**
 	 * Relative indication of the processing precedence of the message over a
 	 * (set of) Business Messages with assigned priorities.
@@ -510,17 +518,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Priority = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPriority = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Prty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Relative indication of the processing precedence of the message over a (set of) Business Messages with assigned priorities.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BusinessMessagePriorityCode.mmObject();
 		}
 	};
+	protected SignatureEnvelope signature;
 	/**
 	 * Contains the digital signature of the Business Entity authorised to sign
 	 * this Business Message.
@@ -547,17 +556,18 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Signature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Contains the digital signature of the Business Entity authorised to sign this Business Message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SignatureEnvelope.mmObject();
 		}
 	};
+	protected BusinessApplicationHeader1 related;
 	/**
 	 * Specifies the Business Application Header of the Business Message to
 	 * which this Business Message relates.<br>
@@ -586,42 +596,15 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Related = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelated = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rltd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Related";
 			definition = "Specifies the Business Application Header of the Business Message to which this Business Message relates.\r\nCan be used when replying to a query;  can also be used when canceling or amending.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BusinessApplicationHeader1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "head"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "head";
-			messageFunctionality = "001";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -634,15 +617,118 @@ public class BusinessApplicationHeaderV01 {
 				rootElement = "Document";
 				xmlTag = "AppHdr";
 				businessArea_lazy = () -> BusinessApplicationHeaderLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.CharacterSet, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.From,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.To, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.BusinessMessageIdentifier,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.MessageDefinitionIdentifier, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.BusinessService,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.CreationDate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.CopyDuplicate,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.PossibleDuplicate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.Priority,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.Signature, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.Related);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.head.BusinessApplicationHeaderV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCharacterSet, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmFrom,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmTo, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmBusinessMessageIdentifier,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmMessageDefinitionIdentifier, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmBusinessService,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCreationDate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCopyDuplicate,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmPossibleDuplicate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmPriority,
+						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmSignature, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmRelated);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "head";
+						messageFunctionality = "001";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnicodeChartsCode getCharacterSet() {
+		return characterSet;
+	}
+
+	public void setCharacterSet(UnicodeChartsCode characterSet) {
+		this.characterSet = characterSet;
+	}
+
+	public Party9Choice getFrom() {
+		return from;
+	}
+
+	public void setFrom(Party9Choice from) {
+		this.from = from;
+	}
+
+	public Party9Choice getTo() {
+		return to;
+	}
+
+	public void setTo(Party9Choice to) {
+		this.to = to;
+	}
+
+	public Max35Text getBusinessMessageIdentifier() {
+		return businessMessageIdentifier;
+	}
+
+	public void setBusinessMessageIdentifier(Max35Text businessMessageIdentifier) {
+		this.businessMessageIdentifier = businessMessageIdentifier;
+	}
+
+	public Max35Text getMessageDefinitionIdentifier() {
+		return messageDefinitionIdentifier;
+	}
+
+	public void setMessageDefinitionIdentifier(Max35Text messageDefinitionIdentifier) {
+		this.messageDefinitionIdentifier = messageDefinitionIdentifier;
+	}
+
+	public Max35Text getBusinessService() {
+		return businessService;
+	}
+
+	public void setBusinessService(Max35Text businessService) {
+		this.businessService = businessService;
+	}
+
+	public ISONormalisedDateTime getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(ISONormalisedDateTime creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public CopyDuplicate1Code getCopyDuplicate() {
+		return copyDuplicate;
+	}
+
+	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+		this.copyDuplicate = copyDuplicate;
+	}
+
+	public YesNoIndicator getPossibleDuplicate() {
+		return possibleDuplicate;
+	}
+
+	public void setPossibleDuplicate(YesNoIndicator possibleDuplicate) {
+		this.possibleDuplicate = possibleDuplicate;
+	}
+
+	public BusinessMessagePriorityCode getPriority() {
+		return priority;
+	}
+
+	public void setPriority(BusinessMessagePriorityCode priority) {
+		this.priority = priority;
+	}
+
+	public SignatureEnvelope getSignature() {
+		return signature;
+	}
+
+	public void setSignature(SignatureEnvelope signature) {
+		this.signature = signature;
+	}
+
+	public BusinessApplicationHeader1 getRelated() {
+		return related;
+	}
+
+	public void setRelated(BusinessApplicationHeader1 related) {
+		this.related = related;
 	}
 }

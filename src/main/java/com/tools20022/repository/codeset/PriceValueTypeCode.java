@@ -30,53 +30,57 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Discount
- * PriceValueTypeCode.Discount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Premium
- * PriceValueTypeCode.Premium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Par
- * PriceValueTypeCode.Par}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Yield
- * PriceValueTypeCode.Yield}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Spread
- * PriceValueTypeCode.Spread}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#PerUnit
- * PriceValueTypeCode.PerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmDiscount
+ * PriceValueTypeCode.mmDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Absolute
- * PriceValueTypeCode.Absolute}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmPremium
+ * PriceValueTypeCode.mmPremium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmPar
+ * PriceValueTypeCode.mmPar}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmYield
+ * PriceValueTypeCode.mmYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#TEDPrice
- * PriceValueTypeCode.TEDPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmSpread
+ * PriceValueTypeCode.mmSpread}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#TEDYield
- * PriceValueTypeCode.TEDYield}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmPerUnit
+ * PriceValueTypeCode.mmPerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#FixedCabinetTrade
- * PriceValueTypeCode.FixedCabinetTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmAbsolute
+ * PriceValueTypeCode.mmAbsolute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#VariableCabinetTrade
- * PriceValueTypeCode.VariableCabinetTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmTEDPrice
+ * PriceValueTypeCode.mmTEDPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Percentage
- * PriceValueTypeCode.Percentage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Unknown
- * PriceValueTypeCode.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmTEDYield
+ * PriceValueTypeCode.mmTEDYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#OpenDated
- * PriceValueTypeCode.OpenDated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmFixedCabinetTrade
+ * PriceValueTypeCode.mmFixedCabinetTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#Unspecified
- * PriceValueTypeCode.Unspecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmVariableCabinetTrade
+ * PriceValueTypeCode.mmVariableCabinetTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#ToBeSpecified
- * PriceValueTypeCode.ToBeSpecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmPercentage
+ * PriceValueTypeCode.mmPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#ActualAmount
- * PriceValueTypeCode.ActualAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmUnknown
+ * PriceValueTypeCode.mmUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#NilPayment
- * PriceValueTypeCode.NilPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmOpenDated
+ * PriceValueTypeCode.mmOpenDated}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmUnspecified
+ * PriceValueTypeCode.mmUnspecified}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmToBeSpecified
+ * PriceValueTypeCode.mmToBeSpecified}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmActualAmount
+ * PriceValueTypeCode.mmActualAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode#mmNilPayment
+ * PriceValueTypeCode.mmNilPayment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -111,8 +115,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -156,7 +160,7 @@ public class PriceValueTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Discount";
@@ -189,7 +193,7 @@ public class PriceValueTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Premium = new MMCode() {
+	public static final MMCode mmPremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Premium";
@@ -219,7 +223,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price is the face amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode Par = new MMCode() {
+	public static final MMCode mmPar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Par";
@@ -249,7 +253,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price expressed as a yield."</li>
 	 * </ul>
 	 */
-	public static final MMCode Yield = new MMCode() {
+	public static final MMCode mmYield = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Yield";
@@ -279,7 +283,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Difference between a market maker's bid and asked price."</li>
 	 * </ul>
 	 */
-	public static final MMCode Spread = new MMCode() {
+	public static final MMCode mmSpread = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Spread";
@@ -309,7 +313,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price expressed per unit."</li>
 	 * </ul>
 	 */
-	public static final MMCode PerUnit = new MMCode() {
+	public static final MMCode mmPerUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PerUnit";
@@ -339,7 +343,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price is expressed as absolute."</li>
 	 * </ul>
 	 */
-	public static final MMCode Absolute = new MMCode() {
+	public static final MMCode mmAbsolute = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Absolute";
@@ -369,7 +373,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price is expressed as Treasury Euro Dollar price."</li>
 	 * </ul>
 	 */
-	public static final MMCode TEDPrice = new MMCode() {
+	public static final MMCode mmTEDPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TEDPrice";
@@ -399,7 +403,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price is expressed as Treasury Euro Dollar yield."</li>
 	 * </ul>
 	 */
-	public static final MMCode TEDYield = new MMCode() {
+	public static final MMCode mmTEDYield = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TEDYield";
@@ -433,7 +437,7 @@ public class PriceValueTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FixedCabinetTrade = new MMCode() {
+	public static final MMCode mmFixedCabinetTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FixedCabinetTrade";
@@ -467,7 +471,7 @@ public class PriceValueTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode VariableCabinetTrade = new MMCode() {
+	public static final MMCode mmVariableCabinetTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VariableCabinetTrade";
@@ -497,7 +501,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price expressed as a percentage of par."</li>
 	 * </ul>
 	 */
-	public static final MMCode Percentage = new MMCode() {
+	public static final MMCode mmPercentage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
@@ -528,7 +532,7 @@ public class PriceValueTypeCode {
 	 * "Price is unknown by the sender or has not been established."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
@@ -558,7 +562,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price has not been established."</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenDated = new MMCode() {
+	public static final MMCode mmOpenDated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpenDated";
@@ -588,7 +592,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price is not required to be specified by account owner."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unspecified = new MMCode() {
+	public static final MMCode mmUnspecified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Unspecified";
@@ -618,7 +622,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price to be specified by account owner."</li>
 	 * </ul>
 	 */
-	public static final MMCode ToBeSpecified = new MMCode() {
+	public static final MMCode mmToBeSpecified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ToBeSpecified";
@@ -649,7 +653,7 @@ public class PriceValueTypeCode {
 	 * "Price expressed as a currency and amount per unit or per share."</li>
 	 * </ul>
 	 */
-	public static final MMCode ActualAmount = new MMCode() {
+	public static final MMCode mmActualAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ActualAmount";
@@ -679,7 +683,7 @@ public class PriceValueTypeCode {
 	 * definition} = "Price will not be paid."</li>
 	 * </ul>
 	 */
-	public static final MMCode NilPayment = new MMCode() {
+	public static final MMCode mmNilPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NilPayment";
@@ -692,17 +696,18 @@ public class PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceValueTypeCode";
 				definition = "Price will not be paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueTypeCode.Discount, com.tools20022.repository.codeset.PriceValueTypeCode.Premium, com.tools20022.repository.codeset.PriceValueTypeCode.Par,
-						com.tools20022.repository.codeset.PriceValueTypeCode.Yield, com.tools20022.repository.codeset.PriceValueTypeCode.Spread, com.tools20022.repository.codeset.PriceValueTypeCode.PerUnit,
-						com.tools20022.repository.codeset.PriceValueTypeCode.Absolute, com.tools20022.repository.codeset.PriceValueTypeCode.TEDPrice, com.tools20022.repository.codeset.PriceValueTypeCode.TEDYield,
-						com.tools20022.repository.codeset.PriceValueTypeCode.FixedCabinetTrade, com.tools20022.repository.codeset.PriceValueTypeCode.VariableCabinetTrade, com.tools20022.repository.codeset.PriceValueTypeCode.Percentage,
-						com.tools20022.repository.codeset.PriceValueTypeCode.Unknown, com.tools20022.repository.codeset.PriceValueTypeCode.OpenDated, com.tools20022.repository.codeset.PriceValueTypeCode.Unspecified,
-						com.tools20022.repository.codeset.PriceValueTypeCode.ToBeSpecified, com.tools20022.repository.codeset.PriceValueTypeCode.ActualAmount, com.tools20022.repository.codeset.PriceValueTypeCode.NilPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueTypeCode.mmDiscount, com.tools20022.repository.codeset.PriceValueTypeCode.mmPremium, com.tools20022.repository.codeset.PriceValueTypeCode.mmPar,
+						com.tools20022.repository.codeset.PriceValueTypeCode.mmYield, com.tools20022.repository.codeset.PriceValueTypeCode.mmSpread, com.tools20022.repository.codeset.PriceValueTypeCode.mmPerUnit,
+						com.tools20022.repository.codeset.PriceValueTypeCode.mmAbsolute, com.tools20022.repository.codeset.PriceValueTypeCode.mmTEDPrice, com.tools20022.repository.codeset.PriceValueTypeCode.mmTEDYield,
+						com.tools20022.repository.codeset.PriceValueTypeCode.mmFixedCabinetTrade, com.tools20022.repository.codeset.PriceValueTypeCode.mmVariableCabinetTrade,
+						com.tools20022.repository.codeset.PriceValueTypeCode.mmPercentage, com.tools20022.repository.codeset.PriceValueTypeCode.mmUnknown, com.tools20022.repository.codeset.PriceValueTypeCode.mmOpenDated,
+						com.tools20022.repository.codeset.PriceValueTypeCode.mmUnspecified, com.tools20022.repository.codeset.PriceValueTypeCode.mmToBeSpecified, com.tools20022.repository.codeset.PriceValueTypeCode.mmActualAmount,
+						com.tools20022.repository.codeset.PriceValueTypeCode.mmNilPayment);
 				derivation_lazy = () -> Arrays.asList(PriceValueType1Code.mmObject(), PriceRateType3Code.mmObject(), PriceValueType4Code.mmObject(), PriceValueType9Code.mmObject(), PriceValueType5Code.mmObject(),
 						PriceValueType10Code.mmObject(), PriceValueType8Code.mmObject(), PriceValueType2Code.mmObject(), PriceValueType3Code.mmObject(), CommissionValueType1Code.mmObject(), PriceValueType7Code.mmObject(),
 						PriceValueType6Code.mmObject());

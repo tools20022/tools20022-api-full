@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#EmailAddress
- * AttributeType2Code.EmailAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#mmEmailAddress
+ * AttributeType2Code.mmEmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#ChallengePassword
- * AttributeType2Code.ChallengePassword}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#mmChallengePassword
+ * AttributeType2Code.mmChallengePassword}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class AttributeType2Code extends AttributeTypeCode {
 	 * name} = "EmailAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmailAddress = new MMCode() {
+	public static final MMCode mmEmailAddress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
@@ -98,7 +98,7 @@ public class AttributeType2Code extends AttributeTypeCode {
 	 * name} = "ChallengePassword"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChallengePassword = new MMCode() {
+	public static final MMCode mmChallengePassword = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChallengePassword";
@@ -109,11 +109,11 @@ public class AttributeType2Code extends AttributeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AttributeType2Code";
 				definition = "Attributes of certificate extensions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeType2Code.EmailAddress, com.tools20022.repository.codeset.AttributeType2Code.ChallengePassword);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeType2Code.mmEmailAddress, com.tools20022.repository.codeset.AttributeType2Code.mmChallengePassword);
 				trace_lazy = () -> AttributeTypeCode.mmObject();
 			}
 		});

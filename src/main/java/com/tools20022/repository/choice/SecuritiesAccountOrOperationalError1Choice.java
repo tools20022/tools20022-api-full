@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SecuritiesAccountReport1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to report between the securities account reference data
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice#SecuritiesAccountReport
- * SecuritiesAccountOrOperationalError1Choice.SecuritiesAccountReport}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice#mmSecuritiesAccountReport
+ * SecuritiesAccountOrOperationalError1Choice.mmSecuritiesAccountReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice#OperationalError
- * SecuritiesAccountOrOperationalError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice#mmOperationalError
+ * SecuritiesAccountOrOperationalError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccountOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<SecuritiesAccountReport1> securitiesAccountReport;
 	/**
 	 * Report information about securities account reference data.
 	 * <p>
@@ -90,7 +92,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 * "Report information about securities account reference data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAccountReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -99,10 +101,11 @@ public class SecuritiesAccountOrOperationalError1Choice {
 			name = "SecuritiesAccountReport";
 			definition = "Report information about securities account reference data.";
 			minOccurs = 1;
-			type_lazy = () -> SecuritiesAccountReport1.mmObject();
 			isComposite = true;
+			type_lazy = () -> SecuritiesAccountReport1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Operational error resulting from a rejection.
 	 * <p>
@@ -129,7 +132,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 * definition} = "Operational error resulting from a rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -138,22 +141,38 @@ public class SecuritiesAccountOrOperationalError1Choice {
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.SecuritiesAccountReport,
-						com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmSecuritiesAccountReport,
+						com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountOrOperationalError1Choice";
 				definition = "Set of elements used to report between the securities account reference data or an operational error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesAccountReport1> getSecuritiesAccountReport() {
+		return securitiesAccountReport;
+	}
+
+	public void setSecuritiesAccountReport(List<SecuritiesAccountReport1> securitiesAccountReport) {
+		this.securitiesAccountReport = securitiesAccountReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#NoAcknowledgement
- * ResponseLevelCode.NoAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#mmNoAcknowledgement
+ * ResponseLevelCode.mmNoAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#AcknowledgementNegativeError
- * ResponseLevelCode.AcknowledgementNegativeError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#mmAcknowledgementNegativeError
+ * ResponseLevelCode.mmAcknowledgementNegativeError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#AcknowledgementEach
- * ResponseLevelCode.AcknowledgementEach}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#mmAcknowledgementEach
+ * ResponseLevelCode.mmAcknowledgementEach}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class ResponseLevelCode {
 	 * definition} = "No acknowledgement is requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAcknowledgement = new MMCode() {
+	public static final MMCode mmNoAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAcknowledgement";
@@ -125,7 +125,7 @@ public class ResponseLevelCode {
 	 * "Acknowledgement of only negative or erroneous messages is requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgementNegativeError = new MMCode() {
+	public static final MMCode mmAcknowledgementNegativeError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementNegativeError";
@@ -155,7 +155,7 @@ public class ResponseLevelCode {
 	 * definition} = "Acknowledgement of each message is requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgementEach = new MMCode() {
+	public static final MMCode mmAcknowledgementEach = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementEach";
@@ -168,13 +168,13 @@ public class ResponseLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResponseLevelCode";
 				definition = "Specifies the level of response requested from the receiver of the message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseLevelCode.NoAcknowledgement, com.tools20022.repository.codeset.ResponseLevelCode.AcknowledgementNegativeError,
-						com.tools20022.repository.codeset.ResponseLevelCode.AcknowledgementEach);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseLevelCode.mmNoAcknowledgement, com.tools20022.repository.codeset.ResponseLevelCode.mmAcknowledgementNegativeError,
+						com.tools20022.repository.codeset.ResponseLevelCode.mmAcknowledgementEach);
 				derivation_lazy = () -> Arrays.asList(ResponseLevel1Code.mmObject());
 			}
 		});

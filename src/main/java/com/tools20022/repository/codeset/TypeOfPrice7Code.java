@@ -33,43 +33,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Bid
- * TypeOfPrice7Code.Bid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Offer
- * TypeOfPrice7Code.Offer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmBid
+ * TypeOfPrice7Code.mmBid}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmOffer
+ * TypeOfPrice7Code.mmOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#NetAssetValue
- * TypeOfPrice7Code.NetAssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Creation
- * TypeOfPrice7Code.Creation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmNetAssetValue
+ * TypeOfPrice7Code.mmNetAssetValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Cancellation
- * TypeOfPrice7Code.Cancellation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Interim
- * TypeOfPrice7Code.Interim}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Swing
- * TypeOfPrice7Code.Swing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Other
- * TypeOfPrice7Code.Other}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Mid
- * TypeOfPrice7Code.Mid}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmCreation
+ * TypeOfPrice7Code.mmCreation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Reinvestment
- * TypeOfPrice7Code.Reinvestment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Switch
- * TypeOfPrice7Code.Switch}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmCancellation
+ * TypeOfPrice7Code.mmCancellation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmInterim
+ * TypeOfPrice7Code.mmInterim}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmSwing
+ * TypeOfPrice7Code.mmSwing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmOther
+ * TypeOfPrice7Code.mmOther}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmMid
+ * TypeOfPrice7Code.mmMid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#DailyDividendRate
- * TypeOfPrice7Code.DailyDividendRate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#Actual
- * TypeOfPrice7Code.Actual}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmReinvestment
+ * TypeOfPrice7Code.mmReinvestment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmSwitch
+ * TypeOfPrice7Code.mmSwitch}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmDailyDividendRate
+ * TypeOfPrice7Code.mmDailyDividendRate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code#mmActual
+ * TypeOfPrice7Code.mmActual}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +106,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Bid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bid = new MMCode() {
+	public static final MMCode mmBid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
@@ -128,7 +129,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Offer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offer = new MMCode() {
+	public static final MMCode mmOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
@@ -151,7 +152,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "NetAssetValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetAssetValue = new MMCode() {
+	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
@@ -174,7 +175,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Creation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Creation = new MMCode() {
+	public static final MMCode mmCreation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creation";
@@ -197,7 +198,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -220,7 +221,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
@@ -243,7 +244,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Swing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swing = new MMCode() {
+	public static final MMCode mmSwing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swing";
@@ -266,7 +267,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -289,7 +290,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Mid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mid = new MMCode() {
+	public static final MMCode mmMid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mid";
@@ -312,7 +313,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Reinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reinvestment = new MMCode() {
+	public static final MMCode mmReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
@@ -335,7 +336,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Switch"</li>
 	 * </ul>
 	 */
-	public static final MMCode Switch = new MMCode() {
+	public static final MMCode mmSwitch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
@@ -358,7 +359,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "DailyDividendRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode DailyDividendRate = new MMCode() {
+	public static final MMCode mmDailyDividendRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DailyDividendRate";
@@ -381,7 +382,7 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	 * name} = "Actual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Actual = new MMCode() {
+	public static final MMCode mmActual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
@@ -392,16 +393,16 @@ public class TypeOfPrice7Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice7Code";
 				definition = "Specifies the type of price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice7Code.Bid, com.tools20022.repository.codeset.TypeOfPrice7Code.Offer, com.tools20022.repository.codeset.TypeOfPrice7Code.NetAssetValue,
-						com.tools20022.repository.codeset.TypeOfPrice7Code.Creation, com.tools20022.repository.codeset.TypeOfPrice7Code.Cancellation, com.tools20022.repository.codeset.TypeOfPrice7Code.Interim,
-						com.tools20022.repository.codeset.TypeOfPrice7Code.Swing, com.tools20022.repository.codeset.TypeOfPrice7Code.Other, com.tools20022.repository.codeset.TypeOfPrice7Code.Mid,
-						com.tools20022.repository.codeset.TypeOfPrice7Code.Reinvestment, com.tools20022.repository.codeset.TypeOfPrice7Code.Switch, com.tools20022.repository.codeset.TypeOfPrice7Code.DailyDividendRate,
-						com.tools20022.repository.codeset.TypeOfPrice7Code.Actual);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice7Code.mmBid, com.tools20022.repository.codeset.TypeOfPrice7Code.mmOffer, com.tools20022.repository.codeset.TypeOfPrice7Code.mmNetAssetValue,
+						com.tools20022.repository.codeset.TypeOfPrice7Code.mmCreation, com.tools20022.repository.codeset.TypeOfPrice7Code.mmCancellation, com.tools20022.repository.codeset.TypeOfPrice7Code.mmInterim,
+						com.tools20022.repository.codeset.TypeOfPrice7Code.mmSwing, com.tools20022.repository.codeset.TypeOfPrice7Code.mmOther, com.tools20022.repository.codeset.TypeOfPrice7Code.mmMid,
+						com.tools20022.repository.codeset.TypeOfPrice7Code.mmReinvestment, com.tools20022.repository.codeset.TypeOfPrice7Code.mmSwitch, com.tools20022.repository.codeset.TypeOfPrice7Code.mmDailyDividendRate,
+						com.tools20022.repository.codeset.TypeOfPrice7Code.mmActual);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

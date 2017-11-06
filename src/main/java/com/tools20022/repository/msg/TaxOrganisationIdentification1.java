@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#Name
- * TaxOrganisationIdentification1.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#mmName
+ * TaxOrganisationIdentification1.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#PostalAddress
- * TaxOrganisationIdentification1.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#mmPostalAddress
+ * TaxOrganisationIdentification1.mmPostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#ContactDetails
- * TaxOrganisationIdentification1.ContactDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#mmContactDetails
+ * TaxOrganisationIdentification1.mmContactDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxOrganisationIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -84,8 +86,8 @@ public class TaxOrganisationIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#PartyName
-	 * PartyIdentificationInformation.PartyName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyName
+	 * PartyIdentificationInformation.mmPartyName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +108,21 @@ public class TaxOrganisationIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyName;
 			componentContext_lazy = () -> TaxOrganisationIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.PartyName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PostalAddress6 postalAddress;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services.
@@ -154,21 +157,22 @@ public class TaxOrganisationIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> TaxOrganisationIdentification1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
 		}
 	};
+	protected ContactDetails2 contactDetails;
 	/**
 	 * Set of elements used to indicate how to contact the party.
 	 * <p>
@@ -201,34 +205,58 @@ public class TaxOrganisationIdentification1 {
 	 * "Set of elements used to indicate how to contact the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxOrganisationIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> TaxOrganisationIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CtctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Set of elements used to indicate how to contact the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContactDetails2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactDetails2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxOrganisationIdentification1.Name, com.tools20022.repository.msg.TaxOrganisationIdentification1.PostalAddress,
-						com.tools20022.repository.msg.TaxOrganisationIdentification1.ContactDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxOrganisationIdentification1.mmName, com.tools20022.repository.msg.TaxOrganisationIdentification1.mmPostalAddress,
+						com.tools20022.repository.msg.TaxOrganisationIdentification1.mmContactDetails);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxOrganisationIdentification1";
 				definition = "Party to which the TaxReport is delivered. This message block contains party details for a specific tax authority.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getName() {
+		return name;
+	}
+
+	public void setName(Max140Text name) {
+		this.name = name;
+	}
+
+	public PostalAddress6 getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress6 postalAddress) {
+		this.postalAddress = postalAddress;
+	}
+
+	public ContactDetails2 getContactDetails() {
+		return contactDetails;
+	}
+
+	public void setContactDetails(com.tools20022.repository.msg.ContactDetails2 contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 }

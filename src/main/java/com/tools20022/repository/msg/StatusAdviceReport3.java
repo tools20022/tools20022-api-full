@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ReportingMessageStatus1Code;
 import com.tools20022.repository.datatype.ISODate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the report level status advice.
@@ -34,23 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.StatusAdviceReport3#Status
- * StatusAdviceReport3.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusAdviceReport3#mmStatus
+ * StatusAdviceReport3.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAdviceReport3#ValidationRule
- * StatusAdviceReport3.ValidationRule}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAdviceReport3#mmValidationRule
+ * StatusAdviceReport3.mmValidationRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAdviceReport3#MessageDate
- * StatusAdviceReport3.MessageDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusAdviceReport3#Statistics
- * StatusAdviceReport3.Statistics}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAdviceReport3#mmMessageDate
+ * StatusAdviceReport3.mmMessageDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAdviceReport3#mmStatistics
+ * StatusAdviceReport3.mmStatistics}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusAdviceReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportingMessageStatus1Code status;
 	/**
 	 * Provides the status for the full message.
 	 * <p>
@@ -92,7 +95,7 @@ public class StatusAdviceReport3 {
 	 * definition} = "Provides the status for the full message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -100,11 +103,12 @@ public class StatusAdviceReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Provides the status for the full message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * Provides the details of the rule which could not be validated.
 	 * <p>
@@ -133,7 +137,7 @@ public class StatusAdviceReport3 {
 	 * "Provides the details of the rule which could not be validated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -142,10 +146,11 @@ public class StatusAdviceReport3 {
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
 			minOccurs = 0;
-			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
 		}
 	};
+	protected ISODate messageDate;
 	/**
 	 * Indicates the report date whith the status advice message is related to.
 	 * <p>
@@ -175,7 +180,7 @@ public class StatusAdviceReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -183,11 +188,12 @@ public class StatusAdviceReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDate";
 			definition = "Indicates the report date whith the status advice message is related to.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected OriginalReportStatistics3 statistics;
 	/**
 	 * Statistical information on the results of the records processing.
 	 * <p>
@@ -216,7 +222,7 @@ public class StatusAdviceReport3 {
 	 * "Statistical information on the results of the records processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Statistics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatistics = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -224,24 +230,56 @@ public class StatusAdviceReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statistics";
 			definition = "Statistical information on the results of the records processing.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalReportStatistics3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalReportStatistics3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAdviceReport3.Status, com.tools20022.repository.msg.StatusAdviceReport3.ValidationRule,
-						com.tools20022.repository.msg.StatusAdviceReport3.MessageDate, com.tools20022.repository.msg.StatusAdviceReport3.Statistics);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAdviceReport3.mmStatus, com.tools20022.repository.msg.StatusAdviceReport3.mmValidationRule,
+						com.tools20022.repository.msg.StatusAdviceReport3.mmMessageDate, com.tools20022.repository.msg.StatusAdviceReport3.mmStatistics);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusAdviceReport3";
 				definition = "Provides the report level status advice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportingMessageStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(ReportingMessageStatus1Code status) {
+		this.status = status;
+	}
+
+	public List<GenericValidationRuleIdentification1> getValidationRule() {
+		return validationRule;
+	}
+
+	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = validationRule;
+	}
+
+	public ISODate getMessageDate() {
+		return messageDate;
+	}
+
+	public void setMessageDate(ISODate messageDate) {
+		this.messageDate = messageDate;
+	}
+
+	public OriginalReportStatistics3 getStatistics() {
+		return statistics;
+	}
+
+	public void setStatistics(com.tools20022.repository.msg.OriginalReportStatistics3 statistics) {
+		this.statistics = statistics;
 	}
 }

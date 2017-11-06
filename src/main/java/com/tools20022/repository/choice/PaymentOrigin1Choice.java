@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#FINMessageType
- * PaymentOrigin1Choice.FINMessageType}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#mmFINMessageType
+ * PaymentOrigin1Choice.mmFINMessageType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#XMLMessageName
- * PaymentOrigin1Choice.XMLMessageName}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#mmXMLMessageName
+ * PaymentOrigin1Choice.mmXMLMessageName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#Proprietary
- * PaymentOrigin1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#mmProprietary
+ * PaymentOrigin1Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#Instrument
- * PaymentOrigin1Choice.Instrument}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#mmInstrument
+ * PaymentOrigin1Choice.mmInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentOrigin1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max3NumericText fINMessageType;
 	/**
 	 * Specifies that the payment was included in a SWIFT FIN format message eg,
 	 * MT 103.
@@ -103,7 +104,7 @@ public class PaymentOrigin1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FINMessageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFINMessageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isDerived = false;
@@ -111,11 +112,12 @@ public class PaymentOrigin1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FINMessageType";
 			definition = "Specifies that the payment was included in a SWIFT FIN format message eg, MT 103.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max35Text xMLMessageName;
 	/**
 	 * Specifies that the payment was included in a SWIFT XML message.
 	 * <p>
@@ -144,7 +146,7 @@ public class PaymentOrigin1Choice {
 	 * "Specifies that the payment was included in a SWIFT XML message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute XMLMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmXMLMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isDerived = false;
@@ -152,11 +154,12 @@ public class PaymentOrigin1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XMLMessageName";
 			definition = "Specifies that the payment was included in a SWIFT XML message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Specifies that the payment was included in a proprietary format message.
 	 * <p>
@@ -186,7 +189,7 @@ public class PaymentOrigin1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isDerived = false;
@@ -194,11 +197,12 @@ public class PaymentOrigin1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies that the payment was included in a proprietary format message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PaymentInstrument1Code instrument;
 	/**
 	 * Specifies the type of payment when not included in a SWIFT or proprietary
 	 * format.
@@ -213,8 +217,8 @@ public class PaymentOrigin1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentInstrument
-	 * Payment.PaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentInstrument
+	 * Payment.mmPaymentInstrument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,17 +239,17 @@ public class PaymentOrigin1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Instrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstrument = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentInstrument;
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentInstrument;
 			isDerived = false;
 			xmlTag = "Instrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instrument";
 			definition = "Specifies the type of payment when not included in a SWIFT or proprietary format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentInstrument1Code.mmObject();
 		}
 	};
@@ -253,15 +257,47 @@ public class PaymentOrigin1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentOrigin1Choice.FINMessageType, com.tools20022.repository.choice.PaymentOrigin1Choice.XMLMessageName,
-						com.tools20022.repository.choice.PaymentOrigin1Choice.Proprietary, com.tools20022.repository.choice.PaymentOrigin1Choice.Instrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentOrigin1Choice.mmFINMessageType, com.tools20022.repository.choice.PaymentOrigin1Choice.mmXMLMessageName,
+						com.tools20022.repository.choice.PaymentOrigin1Choice.mmProprietary, com.tools20022.repository.choice.PaymentOrigin1Choice.mmInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentOrigin1Choice";
 				definition = "Specifies the format under which the payment that generated the entry was transmitted.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max3NumericText getFINMessageType() {
+		return fINMessageType;
+	}
+
+	public void setFINMessageType(Max3NumericText fINMessageType) {
+		this.fINMessageType = fINMessageType;
+	}
+
+	public Max35Text getXMLMessageName() {
+		return xMLMessageName;
+	}
+
+	public void setXMLMessageName(Max35Text xMLMessageName) {
+		this.xMLMessageName = xMLMessageName;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
+	}
+
+	public PaymentInstrument1Code getInstrument() {
+		return instrument;
+	}
+
+	public void setInstrument(PaymentInstrument1Code instrument) {
+		this.instrument = instrument;
 	}
 }

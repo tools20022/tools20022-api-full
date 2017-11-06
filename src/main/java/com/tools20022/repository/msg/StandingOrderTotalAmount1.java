@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#SetPredefinedOrder
- * StandingOrderTotalAmount1.SetPredefinedOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#mmSetPredefinedOrder
+ * StandingOrderTotalAmount1.mmSetPredefinedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#PendingPredefinedOrder
- * StandingOrderTotalAmount1.PendingPredefinedOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#mmPendingPredefinedOrder
+ * StandingOrderTotalAmount1.mmPendingPredefinedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#SetStandingOrder
- * StandingOrderTotalAmount1.SetStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#mmSetStandingOrder
+ * StandingOrderTotalAmount1.mmSetStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#PendingStandingOrder
- * StandingOrderTotalAmount1.PendingStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderTotalAmount1#mmPendingStandingOrder
+ * StandingOrderTotalAmount1.mmPendingStandingOrder}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingOrderTotalAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TotalAmountAndCurrency1 setPredefinedOrder;
 	/**
 	 * Total defined amount of predefined liquidity transfer orders.
 	 * <p>
@@ -95,7 +96,7 @@ public class StandingOrderTotalAmount1 {
 	 * "Total defined amount of predefined liquidity transfer orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SetPredefinedOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSetPredefinedOrder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderTotalAmount1.mmObject();
 			isDerived = false;
@@ -103,12 +104,13 @@ public class StandingOrderTotalAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SetPredefinedOrder";
 			definition = "Total defined amount of predefined liquidity transfer orders.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TotalAmountAndCurrency1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalAmountAndCurrency1.mmObject();
 		}
 	};
+	protected TotalAmountAndCurrency1 pendingPredefinedOrder;
 	/**
 	 * Total amount of not yet executed predefined liquidity transfer orders.
 	 * <p>
@@ -137,7 +139,7 @@ public class StandingOrderTotalAmount1 {
 	 * "Total amount of not yet executed predefined liquidity transfer orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingPredefinedOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingPredefinedOrder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderTotalAmount1.mmObject();
 			isDerived = false;
@@ -145,12 +147,13 @@ public class StandingOrderTotalAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingPredefinedOrder";
 			definition = "Total amount of not yet executed predefined liquidity transfer orders.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TotalAmountAndCurrency1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalAmountAndCurrency1.mmObject();
 		}
 	};
+	protected TotalAmountAndCurrency1 setStandingOrder;
 	/**
 	 * Total defined amount of standing liquidity transfer orders.
 	 * <p>
@@ -179,7 +182,7 @@ public class StandingOrderTotalAmount1 {
 	 * "Total defined amount of standing liquidity transfer orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SetStandingOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSetStandingOrder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderTotalAmount1.mmObject();
 			isDerived = false;
@@ -187,12 +190,13 @@ public class StandingOrderTotalAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SetStandingOrder";
 			definition = "Total defined amount of standing liquidity transfer orders.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TotalAmountAndCurrency1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalAmountAndCurrency1.mmObject();
 		}
 	};
+	protected TotalAmountAndCurrency1 pendingStandingOrder;
 	/**
 	 * Total amount of not yet executed standing liquidity transfer orders.
 	 * <p>
@@ -221,7 +225,7 @@ public class StandingOrderTotalAmount1 {
 	 * "Total amount of not yet executed standing liquidity transfer orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingStandingOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingStandingOrder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderTotalAmount1.mmObject();
 			isDerived = false;
@@ -229,24 +233,56 @@ public class StandingOrderTotalAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingStandingOrder";
 			definition = "Total amount of not yet executed standing liquidity transfer orders.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TotalAmountAndCurrency1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalAmountAndCurrency1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderTotalAmount1.SetPredefinedOrder, com.tools20022.repository.msg.StandingOrderTotalAmount1.PendingPredefinedOrder,
-						com.tools20022.repository.msg.StandingOrderTotalAmount1.SetStandingOrder, com.tools20022.repository.msg.StandingOrderTotalAmount1.PendingStandingOrder);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderTotalAmount1.mmSetPredefinedOrder, com.tools20022.repository.msg.StandingOrderTotalAmount1.mmPendingPredefinedOrder,
+						com.tools20022.repository.msg.StandingOrderTotalAmount1.mmSetStandingOrder, com.tools20022.repository.msg.StandingOrderTotalAmount1.mmPendingStandingOrder);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderTotalAmount1";
 				definition = "Provides details on the overall amount of \"not yet executed\" predefined liquidity transfer orders or \"defined\" by a system participant in its sphere of responsibility within the system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TotalAmountAndCurrency1 getSetPredefinedOrder() {
+		return setPredefinedOrder;
+	}
+
+	public void setSetPredefinedOrder(com.tools20022.repository.msg.TotalAmountAndCurrency1 setPredefinedOrder) {
+		this.setPredefinedOrder = setPredefinedOrder;
+	}
+
+	public TotalAmountAndCurrency1 getPendingPredefinedOrder() {
+		return pendingPredefinedOrder;
+	}
+
+	public void setPendingPredefinedOrder(com.tools20022.repository.msg.TotalAmountAndCurrency1 pendingPredefinedOrder) {
+		this.pendingPredefinedOrder = pendingPredefinedOrder;
+	}
+
+	public TotalAmountAndCurrency1 getSetStandingOrder() {
+		return setStandingOrder;
+	}
+
+	public void setSetStandingOrder(com.tools20022.repository.msg.TotalAmountAndCurrency1 setStandingOrder) {
+		this.setStandingOrder = setStandingOrder;
+	}
+
+	public TotalAmountAndCurrency1 getPendingStandingOrder() {
+		return pendingStandingOrder;
+	}
+
+	public void setPendingStandingOrder(com.tools20022.repository.msg.TotalAmountAndCurrency1 pendingStandingOrder) {
+		this.pendingStandingOrder = pendingStandingOrder;
 	}
 }

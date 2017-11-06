@@ -32,41 +32,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.CRSStatusCode CRSStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS101
- * CRSStatus1Code.CRS101}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS102
- * CRSStatus1Code.CRS102}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS103
- * CRSStatus1Code.CRS103}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS104
- * CRSStatus1Code.CRS104}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS105
- * CRSStatus1Code.CRS105}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS106
- * CRSStatus1Code.CRS106}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS107
- * CRSStatus1Code.CRS107}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS108
- * CRSStatus1Code.CRS108}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS109
- * CRSStatus1Code.CRS109}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS110
- * CRSStatus1Code.CRS110}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS111
- * CRSStatus1Code.CRS111}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS112
- * CRSStatus1Code.CRS112}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS113
- * CRSStatus1Code.CRS113}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#CRS114
- * CRSStatus1Code.CRS114}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS101
+ * CRSStatus1Code.mmCRS101}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS102
+ * CRSStatus1Code.mmCRS102}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS103
+ * CRSStatus1Code.mmCRS103}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS104
+ * CRSStatus1Code.mmCRS104}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS105
+ * CRSStatus1Code.mmCRS105}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS106
+ * CRSStatus1Code.mmCRS106}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS107
+ * CRSStatus1Code.mmCRS107}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS108
+ * CRSStatus1Code.mmCRS108}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS109
+ * CRSStatus1Code.mmCRS109}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS110
+ * CRSStatus1Code.mmCRS110}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS111
+ * CRSStatus1Code.mmCRS111}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS112
+ * CRSStatus1Code.mmCRS112}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS113
+ * CRSStatus1Code.mmCRS113}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CRSStatus1Code#mmCRS114
+ * CRSStatus1Code.mmCRS114}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS101"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS101 = new MMCode() {
+	public static final MMCode mmCRS101 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS101";
@@ -119,7 +119,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS102"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS102 = new MMCode() {
+	public static final MMCode mmCRS102 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS102";
@@ -142,7 +142,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS103"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS103 = new MMCode() {
+	public static final MMCode mmCRS103 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS103";
@@ -165,7 +165,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS104"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS104 = new MMCode() {
+	public static final MMCode mmCRS104 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS104";
@@ -188,7 +188,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS105"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS105 = new MMCode() {
+	public static final MMCode mmCRS105 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS105";
@@ -211,7 +211,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS106"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS106 = new MMCode() {
+	public static final MMCode mmCRS106 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS106";
@@ -234,7 +234,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS107"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS107 = new MMCode() {
+	public static final MMCode mmCRS107 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS107";
@@ -257,7 +257,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS108"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS108 = new MMCode() {
+	public static final MMCode mmCRS108 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS108";
@@ -280,7 +280,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS109"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS109 = new MMCode() {
+	public static final MMCode mmCRS109 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS109";
@@ -303,7 +303,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS110"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS110 = new MMCode() {
+	public static final MMCode mmCRS110 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS110";
@@ -326,7 +326,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS111"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS111 = new MMCode() {
+	public static final MMCode mmCRS111 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS111";
@@ -349,7 +349,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS112"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS112 = new MMCode() {
+	public static final MMCode mmCRS112 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS112";
@@ -372,7 +372,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS113"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS113 = new MMCode() {
+	public static final MMCode mmCRS113 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS113";
@@ -395,7 +395,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 * name} = "CRS114"</li>
 	 * </ul>
 	 */
-	public static final MMCode CRS114 = new MMCode() {
+	public static final MMCode mmCRS114 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS114";
@@ -406,15 +406,15 @@ public class CRSStatus1Code extends CRSStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CRSStatus1Code";
 				definition = "Specifies the Common Reporting Status (CRS) status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSStatus1Code.CRS101, com.tools20022.repository.codeset.CRSStatus1Code.CRS102, com.tools20022.repository.codeset.CRSStatus1Code.CRS103,
-						com.tools20022.repository.codeset.CRSStatus1Code.CRS104, com.tools20022.repository.codeset.CRSStatus1Code.CRS105, com.tools20022.repository.codeset.CRSStatus1Code.CRS106,
-						com.tools20022.repository.codeset.CRSStatus1Code.CRS107, com.tools20022.repository.codeset.CRSStatus1Code.CRS108, com.tools20022.repository.codeset.CRSStatus1Code.CRS109,
-						com.tools20022.repository.codeset.CRSStatus1Code.CRS110, com.tools20022.repository.codeset.CRSStatus1Code.CRS111, com.tools20022.repository.codeset.CRSStatus1Code.CRS112,
-						com.tools20022.repository.codeset.CRSStatus1Code.CRS113, com.tools20022.repository.codeset.CRSStatus1Code.CRS114);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSStatus1Code.mmCRS101, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS102, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS103,
+						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS104, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS105, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS106,
+						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS107, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS108, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS109,
+						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS110, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS111, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS112,
+						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS113, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS114);
 				trace_lazy = () -> CRSStatusCode.mmObject();
 			}
 		});

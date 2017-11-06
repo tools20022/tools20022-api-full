@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code#NoRight
- * AccountPermissionType1Code.NoRight}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code#mmNoRight
+ * AccountPermissionType1Code.mmNoRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code#RightToUseAlone
- * AccountPermissionType1Code.RightToUseAlone}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code#mmRightToUseAlone
+ * AccountPermissionType1Code.mmRightToUseAlone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code#RightToUseWithOther
- * AccountPermissionType1Code.RightToUseWithOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code#mmRightToUseWithOther
+ * AccountPermissionType1Code.mmRightToUseWithOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	 * name} = "NoRight"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoRight = new MMCode() {
+	public static final MMCode mmNoRight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRight";
@@ -101,7 +101,7 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	 * name} = "RightToUseAlone"</li>
 	 * </ul>
 	 */
-	public static final MMCode RightToUseAlone = new MMCode() {
+	public static final MMCode mmRightToUseAlone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseAlone";
@@ -124,7 +124,7 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	 * name} = "RightToUseWithOther"</li>
 	 * </ul>
 	 */
-	public static final MMCode RightToUseWithOther = new MMCode() {
+	public static final MMCode mmRightToUseWithOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseWithOther";
@@ -135,12 +135,12 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountPermissionType1Code";
 				definition = "Specifies the permission to use the account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountPermissionType1Code.NoRight, com.tools20022.repository.codeset.AccountPermissionType1Code.RightToUseAlone,
-						com.tools20022.repository.codeset.AccountPermissionType1Code.RightToUseWithOther);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountPermissionType1Code.mmNoRight, com.tools20022.repository.codeset.AccountPermissionType1Code.mmRightToUseAlone,
+						com.tools20022.repository.codeset.AccountPermissionType1Code.mmRightToUseWithOther);
 				trace_lazy = () -> AccountPermissionTypeCode.mmObject();
 			}
 		});

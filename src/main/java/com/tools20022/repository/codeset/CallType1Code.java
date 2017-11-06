@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.CallTypeCode CallTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CallType1Code#Lottery
- * CallType1Code.Lottery}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CallType1Code#ProRata
- * CallType1Code.ProRata}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CallType1Code#mmLottery
+ * CallType1Code.mmLottery}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CallType1Code#mmProRata
+ * CallType1Code.mmProRata}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class CallType1Code extends CallTypeCode {
 	 * name} = "Lottery"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lottery = new MMCode() {
+	public static final MMCode mmLottery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lottery";
@@ -101,7 +101,7 @@ public class CallType1Code extends CallTypeCode {
 	 * name} = "ProRata"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProRata = new MMCode() {
+	public static final MMCode mmProRata = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProRata";
@@ -112,12 +112,12 @@ public class CallType1Code extends CallTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LOTT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CallType1Code";
 				definition = "Defines the type of execution of the call feature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallType1Code.Lottery, com.tools20022.repository.codeset.CallType1Code.ProRata);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallType1Code.mmLottery, com.tools20022.repository.codeset.CallType1Code.mmProRata);
 				trace_lazy = () -> CallTypeCode.mmObject();
 			}
 		});

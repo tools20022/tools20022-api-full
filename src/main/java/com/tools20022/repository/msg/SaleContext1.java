@@ -36,22 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SaleContext1#SaleIdentification
- * SaleContext1.SaleIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SaleContext1#mmSaleIdentification
+ * SaleContext1.mmSaleIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SaleContext1#SaleReferenceNumber
- * SaleContext1.SaleReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.SaleContext1#mmSaleReferenceNumber
+ * SaleContext1.mmSaleReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SaleContext1#SaleReconciliationIdentification
- * SaleContext1.SaleReconciliationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SaleContext1#mmSaleReconciliationIdentification
+ * SaleContext1.mmSaleReconciliationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SaleContext1#CashierIdentification
- * SaleContext1.CashierIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SaleContext1#ShiftNumber
- * SaleContext1.ShiftNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.SaleContext1#mmCashierIdentification
+ * SaleContext1.mmCashierIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SaleContext1#mmShiftNumber
+ * SaleContext1.mmShiftNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SaleContext1#AdditionalSaleData
- * SaleContext1.AdditionalSaleData}</li>
+ * {@linkplain com.tools20022.repository.msg.SaleContext1#mmAdditionalSaleData
+ * SaleContext1.mmAdditionalSaleData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SaleContext1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text saleIdentification;
 	/**
 	 * Identification of the sale terminal (electronic cash register) or the
 	 * sale system.
@@ -112,13 +113,13 @@ public class SaleContext1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SaleContext2#SaleIdentification
-	 * SaleContext2.SaleIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SaleContext2#mmSaleIdentification
+	 * SaleContext2.mmSaleIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SaleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSaleIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SaleContext1.mmObject();
 			isDerived = false;
@@ -126,12 +127,13 @@ public class SaleContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleIdentification";
 			definition = "Identification of the sale terminal (electronic cash register) or the sale system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.SaleIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmSaleIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text saleReferenceNumber;
 	/**
 	 * Identify a sale transaction assigned by the sale system.
 	 * <p>
@@ -160,13 +162,13 @@ public class SaleContext1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SaleContext2#SaleReferenceNumber
-	 * SaleContext2.SaleReferenceNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.SaleContext2#mmSaleReferenceNumber
+	 * SaleContext2.mmSaleReferenceNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SaleReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSaleReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SaleContext1.mmObject();
 			isDerived = false;
@@ -174,12 +176,13 @@ public class SaleContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReferenceNumber";
 			definition = "Identify a sale transaction assigned by the sale system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.SaleReferenceNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmSaleReferenceNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text saleReconciliationIdentification;
 	/**
 	 * Identifier of the reconciliation between the Sale system and the POI
 	 * system.
@@ -211,13 +214,13 @@ public class SaleContext1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SaleContext2#SaleReconciliationIdentification
-	 * SaleContext2.SaleReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SaleContext2#mmSaleReconciliationIdentification
+	 * SaleContext2.mmSaleReconciliationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SaleReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSaleReconciliationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SaleContext1.mmObject();
 			isDerived = false;
@@ -225,12 +228,13 @@ public class SaleContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReconciliationIdentification";
 			definition = "Identifier of the reconciliation between the Sale system and the POI system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.SaleReconciliationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmSaleReconciliationIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cashierIdentification;
 	/**
 	 * Identification of the cashier who carried out the transaction.
 	 * <p>
@@ -243,8 +247,8 @@ public class SaleContext1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,27 +269,28 @@ public class SaleContext1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SaleContext2#CashierIdentification
-	 * SaleContext2.CashierIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SaleContext2#mmCashierIdentification
+	 * SaleContext2.mmCashierIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashierIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashierIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SaleContext1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "CshrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashierIdentification";
 			definition = "Identification of the cashier who carried out the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.CashierIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmCashierIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max2NumericText shiftNumber;
 	/**
 	 * Identifies the shift of the cashier.
 	 * <p>
@@ -314,13 +319,13 @@ public class SaleContext1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SaleContext2#ShiftNumber
-	 * SaleContext2.ShiftNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SaleContext2#mmShiftNumber
+	 * SaleContext2.mmShiftNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShiftNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShiftNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SaleContext1.mmObject();
 			isDerived = false;
@@ -328,12 +333,13 @@ public class SaleContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShiftNumber";
 			definition = "Identifies the shift of the cashier.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.ShiftNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmShiftNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
 		}
 	};
+	protected Max70Text additionalSaleData;
 	/**
 	 * Additional information associated with the sale transaction.
 	 * <p>
@@ -363,13 +369,13 @@ public class SaleContext1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SaleContext2#AdditionalSaleData
-	 * SaleContext2.AdditionalSaleData}</li>
+	 * {@linkplain com.tools20022.repository.msg.SaleContext2#mmAdditionalSaleData
+	 * SaleContext2.mmAdditionalSaleData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalSaleData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalSaleData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SaleContext1.mmObject();
 			isDerived = false;
@@ -377,9 +383,9 @@ public class SaleContext1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalSaleData";
 			definition = "Additional information associated with the sale transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.AdditionalSaleData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmAdditionalSaleData);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -387,11 +393,11 @@ public class SaleContext1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext1.SaleIdentification, com.tools20022.repository.msg.SaleContext1.SaleReferenceNumber,
-						com.tools20022.repository.msg.SaleContext1.SaleReconciliationIdentification, com.tools20022.repository.msg.SaleContext1.CashierIdentification, com.tools20022.repository.msg.SaleContext1.ShiftNumber,
-						com.tools20022.repository.msg.SaleContext1.AdditionalSaleData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext1.mmSaleIdentification, com.tools20022.repository.msg.SaleContext1.mmSaleReferenceNumber,
+						com.tools20022.repository.msg.SaleContext1.mmSaleReconciliationIdentification, com.tools20022.repository.msg.SaleContext1.mmCashierIdentification, com.tools20022.repository.msg.SaleContext1.mmShiftNumber,
+						com.tools20022.repository.msg.SaleContext1.mmAdditionalSaleData);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SaleContext1";
 				definition = "Sale context in which the transaction is performed.";
@@ -399,5 +405,53 @@ public class SaleContext1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSaleIdentification() {
+		return saleIdentification;
+	}
+
+	public void setSaleIdentification(Max35Text saleIdentification) {
+		this.saleIdentification = saleIdentification;
+	}
+
+	public Max35Text getSaleReferenceNumber() {
+		return saleReferenceNumber;
+	}
+
+	public void setSaleReferenceNumber(Max35Text saleReferenceNumber) {
+		this.saleReferenceNumber = saleReferenceNumber;
+	}
+
+	public Max35Text getSaleReconciliationIdentification() {
+		return saleReconciliationIdentification;
+	}
+
+	public void setSaleReconciliationIdentification(Max35Text saleReconciliationIdentification) {
+		this.saleReconciliationIdentification = saleReconciliationIdentification;
+	}
+
+	public Max35Text getCashierIdentification() {
+		return cashierIdentification;
+	}
+
+	public void setCashierIdentification(Max35Text cashierIdentification) {
+		this.cashierIdentification = cashierIdentification;
+	}
+
+	public Max2NumericText getShiftNumber() {
+		return shiftNumber;
+	}
+
+	public void setShiftNumber(Max2NumericText shiftNumber) {
+		this.shiftNumber = shiftNumber;
+	}
+
+	public Max70Text getAdditionalSaleData() {
+		return additionalSaleData;
+	}
+
+	public void setAdditionalSaleData(Max70Text additionalSaleData) {
+		this.additionalSaleData = additionalSaleData;
 	}
 }

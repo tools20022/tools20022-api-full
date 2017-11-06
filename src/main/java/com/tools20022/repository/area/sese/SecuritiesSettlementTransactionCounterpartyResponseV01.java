@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope An account owner sends a
@@ -86,25 +87,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#TransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#mmTransactionIdentification
  * SecuritiesSettlementTransactionCounterpartyResponseV01.
- * TransactionIdentification}</li>
+ * mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#ResponseStatus
- * SecuritiesSettlementTransactionCounterpartyResponseV01.ResponseStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#mmResponseStatus
+ * SecuritiesSettlementTransactionCounterpartyResponseV01.mmResponseStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#TransactionDetails
- * SecuritiesSettlementTransactionCounterpartyResponseV01.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#mmTransactionDetails
+ * SecuritiesSettlementTransactionCounterpartyResponseV01.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#SupplementaryData
- * SecuritiesSettlementTransactionCounterpartyResponseV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#mmSupplementaryData
+ * SecuritiesSettlementTransactionCounterpartyResponseV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#identifier
- * SecuritiesSettlementTransactionCounterpartyResponseV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.040.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -128,6 +127,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementTransactionCounterpartyResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentification2 transactionIdentification;
 	/**
 	 * Provides unambiguous transaction identification information.
 	 * <p>
@@ -154,25 +154,26 @@ public class SecuritiesSettlementTransactionCounterpartyResponseV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#TransactionIdentification
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#mmTransactionIdentification
 	 * SecuritiesSettlementTransactionCounterpartyResponseV02.
-	 * TransactionIdentification}</li>
+	 * mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Provides unambiguous transaction identification information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.mmTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionIdentification2.mmObject();
 		}
 	};
+	protected ResponseStatus3Choice responseStatus;
 	/**
 	 * Provides the response status related to an allegement or a counterparty's
 	 * instruction.
@@ -201,24 +202,25 @@ public class SecuritiesSettlementTransactionCounterpartyResponseV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#ResponseStatus
-	 * SecuritiesSettlementTransactionCounterpartyResponseV02.ResponseStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#mmResponseStatus
+	 * SecuritiesSettlementTransactionCounterpartyResponseV02.mmResponseStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ResponseStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResponseStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RspnSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseStatus";
 			definition = "Provides the response status related to an allegement or a counterparty's instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.ResponseStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.mmResponseStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ResponseStatus3Choice.mmObject();
 		}
 	};
+	protected TransactionDetails40 transactionDetails;
 	/**
 	 * Identifies the details of the transaction.
 	 * <p>
@@ -244,25 +246,26 @@ public class SecuritiesSettlementTransactionCounterpartyResponseV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#TransactionDetails
-	 * SecuritiesSettlementTransactionCounterpartyResponseV02.TransactionDetails
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#mmTransactionDetails
+	 * SecuritiesSettlementTransactionCounterpartyResponseV02.
+	 * mmTransactionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.TransactionDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.mmTransactionDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails40.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -291,49 +294,22 @@ public class SecuritiesSettlementTransactionCounterpartyResponseV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#SupplementaryData
-	 * SecuritiesSettlementTransactionCounterpartyResponseV02.SupplementaryData}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02#mmSupplementaryData
+	 * SecuritiesSettlementTransactionCounterpartyResponseV02.
+	 * mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "040"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "040";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -348,13 +324,52 @@ public class SecuritiesSettlementTransactionCounterpartyResponseV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxCtrPtyRspn";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.TransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.ResponseStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.TransactionDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.mmResponseStatus,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "040";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentification2 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(TransactionIdentification2 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public ResponseStatus3Choice getResponseStatus() {
+		return responseStatus;
+	}
+
+	public void setResponseStatus(ResponseStatus3Choice responseStatus) {
+		this.responseStatus = responseStatus;
+	}
+
+	public TransactionDetails40 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(TransactionDetails40 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

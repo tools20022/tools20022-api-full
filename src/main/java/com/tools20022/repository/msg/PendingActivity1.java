@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PendingActivity1#Type
- * PendingActivity1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PendingActivity1#Description
- * PendingActivity1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingActivity1#mmType
+ * PendingActivity1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingActivity1#mmDescription
+ * PendingActivity1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingActivity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Action1Code type;
 	/**
 	 * Code which specifies the next course of action that the receiver of the
 	 * message must take.
@@ -90,7 +91,7 @@ public class PendingActivity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PendingActivity1.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class PendingActivity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Code which specifies the next course of action that the receiver of the message must take.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Action1Code.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Further information on the course of action that the receiver of the
 	 * message must take.
@@ -133,7 +135,7 @@ public class PendingActivity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PendingActivity1.mmObject();
 			isDerived = false;
@@ -141,8 +143,8 @@ public class PendingActivity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Further information on the course of action that the receiver of the message must take.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -150,13 +152,29 @@ public class PendingActivity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingActivity1.Type, com.tools20022.repository.msg.PendingActivity1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingActivity1.mmType, com.tools20022.repository.msg.PendingActivity1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingActivity1";
 				definition = "Specifies the event that require an action from one of the parties to the trade transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Action1Code getType() {
+		return type;
+	}
+
+	public void setType(Action1Code type) {
+		this.type = type;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmAndDigest1#DigestAlgorithm
- * AlgorithmAndDigest1.DigestAlgorithm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AlgorithmAndDigest1#Digest
- * AlgorithmAndDigest1.Digest}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmAndDigest1#mmDigestAlgorithm
+ * AlgorithmAndDigest1.mmDigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AlgorithmAndDigest1#mmDigest
+ * AlgorithmAndDigest1.mmDigest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmAndDigest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm5Code digestAlgorithm;
 	/**
 	 * Digest algorithm used to create the digest.
 	 * <p>
@@ -86,7 +87,7 @@ public class AlgorithmAndDigest1 {
 	 * definition} = "Digest algorithm used to create the digest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmAndDigest1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class AlgorithmAndDigest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Digest algorithm used to create the digest.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
+	protected Max140Text digest;
 	/**
 	 * Result of data-digesting process.
 	 * <p>
@@ -126,7 +128,7 @@ public class AlgorithmAndDigest1 {
 	 * definition} = "Result of data-digesting process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Digest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigest = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmAndDigest1.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class AlgorithmAndDigest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digest";
 			definition = "Result of data-digesting process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class AlgorithmAndDigest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmAndDigest1.DigestAlgorithm, com.tools20022.repository.msg.AlgorithmAndDigest1.Digest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmAndDigest1.mmDigestAlgorithm, com.tools20022.repository.msg.AlgorithmAndDigest1.mmDigest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmAndDigest1";
 				definition = "Defines a cryptographic digest algorithm and value.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm5Code getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(Algorithm5Code digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public Max140Text getDigest() {
+		return digest;
+	}
+
+	public void setDigest(Max140Text digest) {
+		this.digest = digest;
 	}
 }

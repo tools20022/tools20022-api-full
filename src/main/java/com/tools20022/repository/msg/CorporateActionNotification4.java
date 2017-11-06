@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4#NotificationType
- * CorporateActionNotification4.NotificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4#mmNotificationType
+ * CorporateActionNotification4.mmNotificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4#ProcessingStatus
- * CorporateActionNotification4.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4#mmProcessingStatus
+ * CorporateActionNotification4.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4#EligibleBalanceIndicator
- * CorporateActionNotification4.EligibleBalanceIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotification4#mmEligibleBalanceIndicator
+ * CorporateActionNotification4.mmEligibleBalanceIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,15 +56,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05#NotificationGeneralInformation
- * CorporateActionNotificationV05.NotificationGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV05#mmNotificationGeneralInformation
+ * CorporateActionNotificationV05.mmNotificationGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNotification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionNotificationType1Code notificationType;
 	/**
 	 * Specifies the type of notification.
 	 * <p>
@@ -102,8 +103,8 @@ public class CorporateActionNotification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#NotificationType
-	 * CorporateActionNotification.NotificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#mmNotificationType
+	 * CorporateActionNotification.mmNotificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -124,33 +125,34 @@ public class CorporateActionNotification4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification5#NotificationType
-	 * CorporateActionNotification5.NotificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification5#mmNotificationType
+	 * CorporateActionNotification5.mmNotificationType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification3#NotificationType
-	 * CorporateActionNotification3.NotificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification3#mmNotificationType
+	 * CorporateActionNotification3.mmNotificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmNotificationType;
 			componentContext_lazy = () -> CorporateActionNotification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.NotificationType;
 			isDerived = false;
 			xmlTag = "NtfctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationType";
 			definition = "Specifies the type of notification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification3.NotificationType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification5.NotificationType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification5.mmNotificationType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification3.mmNotificationType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNotificationType1Code.mmObject();
 		}
 	};
+	protected CorporateActionProcessingStatus4Choice processingStatus;
 	/**
 	 * Specifies the status of the details of the corporate action event.
 	 * <p>
@@ -163,8 +165,8 @@ public class CorporateActionNotification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionStatus
-	 * CorporateActionEvent.CorporateActionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionStatus
+	 * CorporateActionEvent.mmCorporateActionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,34 +188,35 @@ public class CorporateActionNotification4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification5#ProcessingStatus
-	 * CorporateActionNotification5.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification5#mmProcessingStatus
+	 * CorporateActionNotification5.mmProcessingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification3#ProcessingStatus
-	 * CorporateActionNotification3.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification3#mmProcessingStatus
+	 * CorporateActionNotification3.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus;
 			componentContext_lazy = () -> CorporateActionNotification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.CorporateActionStatus;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification3.ProcessingStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification5.ProcessingStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification5.mmProcessingStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification3.mmProcessingStatus;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionProcessingStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionProcessingStatus4Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator eligibleBalanceIndicator;
 	/**
 	 * Indicates whether the eligible balance is final except for a voluntary
 	 * corporate action event where it can represent the current eligible
@@ -229,8 +232,8 @@ public class CorporateActionNotification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#EligibleBalanceIndicator
-	 * CorporateActionEntitlement.EligibleBalanceIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmEligibleBalanceIndicator
+	 * CorporateActionEntitlement.mmEligibleBalanceIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,30 +256,30 @@ public class CorporateActionNotification4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification5#EligibleBalanceIndicator
-	 * CorporateActionNotification5.EligibleBalanceIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification5#mmEligibleBalanceIndicator
+	 * CorporateActionNotification5.mmEligibleBalanceIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification3#EligibleBalanceIndicator
-	 * CorporateActionNotification3.EligibleBalanceIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotification3#mmEligibleBalanceIndicator
+	 * CorporateActionNotification3.mmEligibleBalanceIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EligibleBalanceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEligibleBalanceIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmEligibleBalanceIndicator;
 			componentContext_lazy = () -> CorporateActionNotification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.EligibleBalanceIndicator;
 			isDerived = false;
 			xmlTag = "ElgblBalInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleBalanceIndicator";
 			definition = "Indicates whether the eligible balance is final except for a voluntary corporate action event where it can represent the current eligible balance when communicated before expiration date of that event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification3.EligibleBalanceIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification5.EligibleBalanceIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification5.mmEligibleBalanceIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification3.mmEligibleBalanceIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -284,18 +287,42 @@ public class CorporateActionNotification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification4.NotificationType, com.tools20022.repository.msg.CorporateActionNotification4.ProcessingStatus,
-						com.tools20022.repository.msg.CorporateActionNotification4.EligibleBalanceIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification4.mmNotificationType, com.tools20022.repository.msg.CorporateActionNotification4.mmProcessingStatus,
+						com.tools20022.repository.msg.CorporateActionNotification4.mmEligibleBalanceIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmNotificationGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV05.NotificationGeneralInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotification4";
 				definition = "Corporate action event notification status and contents.";
-				previousVersion_lazy = () -> CorporateActionNotification3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionNotification5.mmObject());
+				previousVersion_lazy = () -> CorporateActionNotification3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionNotificationType1Code getNotificationType() {
+		return notificationType;
+	}
+
+	public void setNotificationType(CorporateActionNotificationType1Code notificationType) {
+		this.notificationType = notificationType;
+	}
+
+	public CorporateActionProcessingStatus4Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(CorporateActionProcessingStatus4Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public YesNoIndicator getEligibleBalanceIndicator() {
+		return eligibleBalanceIndicator;
+	}
+
+	public void setEligibleBalanceIndicator(YesNoIndicator eligibleBalanceIndicator) {
+		this.eligibleBalanceIndicator = eligibleBalanceIndicator;
 	}
 }

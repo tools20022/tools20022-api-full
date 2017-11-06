@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope <br>
@@ -69,21 +70,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06#TradeData
- * ForeignExchangeTradeStatusNotificationV06.TradeData}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06#mmTradeData
+ * ForeignExchangeTradeStatusNotificationV06.mmTradeData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06#RegulatoryReporting
- * ForeignExchangeTradeStatusNotificationV06.RegulatoryReporting}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06#mmRegulatoryReporting
+ * ForeignExchangeTradeStatusNotificationV06.mmRegulatoryReporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06#SupplementaryData
- * ForeignExchangeTradeStatusNotificationV06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06#mmSupplementaryData
+ * ForeignExchangeTradeStatusNotificationV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06#identifier
- * ForeignExchangeTradeStatusNotificationV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code fxtr.008.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeTradeStatusNotificationV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeData15 tradeData;
 	/**
 	 * Provides information on the status of a trade in a system.
 	 * <p>
@@ -122,17 +122,18 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 	 * "Provides information on the status of a trade in a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeData";
 			definition = "Provides information on the status of a trade in a system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeData15.mmObject();
 		}
 	};
+	protected RegulatoryReporting6 regulatoryReporting;
 	/**
 	 * Information that is to be provided to trade repositories in the context
 	 * of the regulatory standards around over-the-counter (OTC) derivatives,
@@ -160,17 +161,18 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RegulatoryReporting = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRegulatoryReporting = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RgltryRptg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryReporting";
 			definition = "Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RegulatoryReporting6.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -197,7 +199,7 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,33 +207,6 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "fxtr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "fxtr";
-			messageFunctionality = "008";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -245,11 +220,42 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 				rootElement = "Document";
 				xmlTag = "FXTradStsNtfctn";
 				businessArea_lazy = () -> ForeignExchangeTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06.TradeData,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06.RegulatoryReporting, com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06.mmTradeData,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06.mmRegulatoryReporting, com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusNotificationV06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "fxtr";
+						messageFunctionality = "008";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeData15 getTradeData() {
+		return tradeData;
+	}
+
+	public void setTradeData(TradeData15 tradeData) {
+		this.tradeData = tradeData;
+	}
+
+	public RegulatoryReporting6 getRegulatoryReporting() {
+		return regulatoryReporting;
+	}
+
+	public void setRegulatoryReporting(RegulatoryReporting6 regulatoryReporting) {
+		this.regulatoryReporting = regulatoryReporting;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -36,8 +36,8 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel4#Code
- * ServiceLevel4.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel4#mmCode
+ * ServiceLevel4.mmCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -62,6 +62,7 @@ import java.util.function.Supplier;
 public class ServiceLevel4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ServiceLevel3Code code;
 	/**
 	 * Identification of a pre-agreed level of service between the parties in a
 	 * coded form.
@@ -76,8 +77,8 @@ public class ServiceLevel4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ServiceLevel#Code
-	 * ServiceLevel.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmCode
+	 * ServiceLevel.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,17 +98,17 @@ public class ServiceLevel4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmCode;
 			componentContext_lazy = () -> ServiceLevel4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Identification of a pre-agreed level of service between the parties in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ServiceLevel3Code.mmObject();
 		}
 	};
@@ -115,9 +116,9 @@ public class ServiceLevel4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceLevel4.Code);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceLevel4.mmCode);
 				trace_lazy = () -> ServiceLevel.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -131,5 +132,13 @@ public class ServiceLevel4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ServiceLevel3Code getCode() {
+		return code;
+	}
+
+	public void setCode(ServiceLevel3Code code) {
+		this.code = code;
 	}
 }

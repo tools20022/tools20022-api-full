@@ -29,13 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RequestStatusCode#Financed
- * RequestStatusCode.Financed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RequestStatusCode#Pending
- * RequestStatusCode.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestStatusCode#NotFinanced
- * RequestStatusCode.NotFinanced}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestStatusCode#mmFinanced
+ * RequestStatusCode.mmFinanced}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RequestStatusCode#mmPending
+ * RequestStatusCode.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RequestStatusCode#mmNotFinanced
+ * RequestStatusCode.mmNotFinanced}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +93,7 @@ public class RequestStatusCode {
 	 * "Single Invoice/Instalment financing request has been financed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Financed = new MMCode() {
+	public static final MMCode mmFinanced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Financed";
@@ -124,7 +126,7 @@ public class RequestStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -155,7 +157,7 @@ public class RequestStatusCode {
 	 * "Single Invoice/Instalment financing request has not been financed."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotFinanced = new MMCode() {
+	public static final MMCode mmNotFinanced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFinanced";
@@ -168,12 +170,13 @@ public class RequestStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FNCD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestStatusCode";
 				definition = "Specifies the coded status of invoice financing request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestStatusCode.Financed, com.tools20022.repository.codeset.RequestStatusCode.Pending, com.tools20022.repository.codeset.RequestStatusCode.NotFinanced);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestStatusCode.mmFinanced, com.tools20022.repository.codeset.RequestStatusCode.mmPending,
+						com.tools20022.repository.codeset.RequestStatusCode.mmNotFinanced);
 				derivation_lazy = () -> Arrays.asList(RequestStatus1Code.mmObject());
 			}
 		});

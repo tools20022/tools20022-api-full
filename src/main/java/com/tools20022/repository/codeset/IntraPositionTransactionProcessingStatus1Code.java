@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#Cancelled
- * IntraPositionTransactionProcessingStatus1Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmCancelled
+ * IntraPositionTransactionProcessingStatus1Code.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#AcknowledgedAccepted
- * IntraPositionTransactionProcessingStatus1Code.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmAcknowledgedAccepted
+ * IntraPositionTransactionProcessingStatus1Code.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#Rejected
- * IntraPositionTransactionProcessingStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmRejected
+ * IntraPositionTransactionProcessingStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#InRepair
- * IntraPositionTransactionProcessingStatus1Code.InRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmInRepair
+ * IntraPositionTransactionProcessingStatus1Code.mmInRepair}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -112,7 +112,7 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgedAccepted = new MMCode() {
+	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
@@ -135,7 +135,7 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -158,7 +158,7 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "InRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode InRepair = new MMCode() {
+	public static final MMCode mmInRepair = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
@@ -169,14 +169,14 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionTransactionProcessingStatus1Code";
 				definition = "Provides the processing status of a transaction (at account servicer level).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.Cancelled,
-						com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.AcknowledgedAccepted, com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.Rejected,
-						com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.InRepair);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmCancelled,
+						com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmAcknowledgedAccepted, com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmRejected,
+						com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmInRepair);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
 			}
 		});

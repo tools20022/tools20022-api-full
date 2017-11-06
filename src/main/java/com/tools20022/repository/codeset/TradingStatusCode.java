@@ -29,18 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingStatusCode#Halted
- * TradingStatusCode.Halted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingStatusCode#mmHalted
+ * TradingStatusCode.mmHalted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingStatusCode#Suspended
- * TradingStatusCode.Suspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingStatusCode#mmSuspended
+ * TradingStatusCode.mmSuspended}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class TradingStatusCode {
 	 * definition} = "The trading status is halted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Halted = new MMCode() {
+	public static final MMCode mmHalted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Halted";
@@ -110,7 +110,7 @@ public class TradingStatusCode {
 	 * definition} = "The trading status is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Suspended";
@@ -123,12 +123,12 @@ public class TradingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HALT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "TradingStatusCode";
 				definition = "Specifies the trading status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingStatusCode.Halted, com.tools20022.repository.codeset.TradingStatusCode.Suspended);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingStatusCode.mmHalted, com.tools20022.repository.codeset.TradingStatusCode.mmSuspended);
 			}
 		});
 		return mmObject_lazy.get();

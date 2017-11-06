@@ -32,17 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ProvidedCode ProvidedCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Provided1Code#NotProvided
- * Provided1Code.NotProvided}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Provided1Code#Provided
- * Provided1Code.Provided}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Provided1Code#mmNotProvided
+ * Provided1Code.mmNotProvided}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Provided1Code#mmProvided
+ * Provided1Code.mmProvided}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +79,7 @@ public class Provided1Code extends ProvidedCode {
 	 * name} = "NotProvided"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotProvided = new MMCode() {
+	public static final MMCode mmNotProvided = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotProvided";
@@ -101,7 +102,7 @@ public class Provided1Code extends ProvidedCode {
 	 * name} = "Provided"</li>
 	 * </ul>
 	 */
-	public static final MMCode Provided = new MMCode() {
+	public static final MMCode mmProvided = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provided";
@@ -112,12 +113,12 @@ public class Provided1Code extends ProvidedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NPRO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Provided1Code";
 				definition = "Specifies whether items have been provided.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Provided1Code.NotProvided, com.tools20022.repository.codeset.Provided1Code.Provided);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Provided1Code.mmNotProvided, com.tools20022.repository.codeset.Provided1Code.mmProvided);
 				trace_lazy = () -> ProvidedCode.mmObject();
 			}
 		});

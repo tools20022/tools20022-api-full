@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountFullfilTypeCode#Completely
- * AmountFullfilTypeCode.Completely}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountFullfilTypeCode#mmCompletely
+ * AmountFullfilTypeCode.mmCompletely}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountFullfilTypeCode#Partial
- * AmountFullfilTypeCode.Partial}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountFullfilTypeCode#mmPartial
+ * AmountFullfilTypeCode.mmPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountFullfilTypeCode#TotalOrPartial
- * AmountFullfilTypeCode.TotalOrPartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountFullfilTypeCode#mmTotalOrPartial
+ * AmountFullfilTypeCode.mmTotalOrPartial}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class AmountFullfilTypeCode {
 	 * definition} = "Full redemption."</li>
 	 * </ul>
 	 */
-	public static final MMCode Completely = new MMCode() {
+	public static final MMCode mmCompletely = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Completely";
@@ -115,7 +115,7 @@ public class AmountFullfilTypeCode {
 	 * definition} = "Partial redemption."</li>
 	 * </ul>
 	 */
-	public static final MMCode Partial = new MMCode() {
+	public static final MMCode mmPartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Partial";
@@ -145,7 +145,7 @@ public class AmountFullfilTypeCode {
 	 * definition} = "Full or partial redemption."</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalOrPartial = new MMCode() {
+	public static final MMCode mmTotalOrPartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalOrPartial";
@@ -158,13 +158,13 @@ public class AmountFullfilTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountFullfilTypeCode";
 				definition = "Specifies if the redemption is partly or fully.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountFullfilTypeCode.Completely, com.tools20022.repository.codeset.AmountFullfilTypeCode.Partial,
-						com.tools20022.repository.codeset.AmountFullfilTypeCode.TotalOrPartial);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountFullfilTypeCode.mmCompletely, com.tools20022.repository.codeset.AmountFullfilTypeCode.mmPartial,
+						com.tools20022.repository.codeset.AmountFullfilTypeCode.mmTotalOrPartial);
 			}
 		});
 		return mmObject_lazy.get();

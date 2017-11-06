@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError2Choice#BusinessError
- * CollateralValueReportOrError2Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError2Choice#mmBusinessError
+ * CollateralValueReportOrError2Choice.mmBusinessError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError2Choice#CollateralValue
- * CollateralValueReportOrError2Choice.CollateralValue}</li>
+ * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError2Choice#mmCollateralValue
+ * CollateralValueReportOrError2Choice.mmCollateralValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralValueReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ErrorHandling3 businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -85,7 +86,7 @@ public class CollateralValueReportOrError2Choice {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -93,12 +94,13 @@ public class CollateralValueReportOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	protected CollateralValuePosition1 collateralValue;
 	/**
 	 * Requested information on the value of the position for collateral
 	 * purposes.
@@ -129,7 +131,7 @@ public class CollateralValueReportOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralValue = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -137,23 +139,39 @@ public class CollateralValueReportOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Requested information on the value of the position for collateral purposes.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralValuePosition1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CollateralValuePosition1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralValueReportOrError2Choice.BusinessError, com.tools20022.repository.choice.CollateralValueReportOrError2Choice.CollateralValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmBusinessError, com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmCollateralValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReportOrError2Choice";
 				definition = "Business Report on collateral value or on business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ErrorHandling3 getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(ErrorHandling3 businessError) {
+		this.businessError = businessError;
+	}
+
+	public CollateralValuePosition1 getCollateralValue() {
+		return collateralValue;
+	}
+
+	public void setCollateralValue(CollateralValuePosition1 collateralValue) {
+		this.collateralValue = collateralValue;
 	}
 }

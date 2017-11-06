@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.FixedOrRecurrentDate1Choice;
 import com.tools20022.repository.entity.AutomaticVariation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Trigger parameters.
@@ -33,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Trigger1#DateChoice
- * Trigger1.DateChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trigger1#DocumentaryEvent
- * Trigger1.DocumentaryEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trigger1#mmDateChoice
+ * Trigger1.mmDateChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trigger1#mmDocumentaryEvent
+ * Trigger1.mmDocumentaryEvent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Trigger1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FixedOrRecurrentDate1Choice dateChoice;
 	/**
 	 * Details related to the date on which a variation is effective.
 	 * <p>
@@ -72,8 +74,8 @@ public class Trigger1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trigger#TriggerDate
-	 * Trigger.TriggerDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trigger#mmTriggerDate
+	 * Trigger.mmTriggerDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Trigger1
@@ -92,21 +94,22 @@ public class Trigger1 {
 	 * "Details related to the date on which a variation is effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateChoice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trigger.mmTriggerDate;
 			componentContext_lazy = () -> Trigger1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trigger.TriggerDate;
 			isDerived = false;
 			xmlTag = "DtChc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateChoice";
 			definition = "Details related to the date on which a variation is effective.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FixedOrRecurrentDate1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FixedOrRecurrentDate1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Document10> documentaryEvent;
 	/**
 	 * Details related to the documentary event on which a variation is
 	 * triggered.
@@ -118,8 +121,8 @@ public class Trigger1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#SpecifiedDocument
-	 * Undertaking.SpecifiedDocument}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmSpecifiedDocument
+	 * Undertaking.mmSpecifiedDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Trigger1
@@ -139,32 +142,48 @@ public class Trigger1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DocumentaryEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDocumentaryEvent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmSpecifiedDocument;
 			componentContext_lazy = () -> Trigger1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.SpecifiedDocument;
 			isDerived = false;
 			xmlTag = "DcmntryEvt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentaryEvent";
 			definition = "Details related to the documentary event on which a variation is triggered.";
 			minOccurs = 0;
-			type_lazy = () -> Document10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trigger1.DateChoice, com.tools20022.repository.msg.Trigger1.DocumentaryEvent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trigger1.mmDateChoice, com.tools20022.repository.msg.Trigger1.mmDocumentaryEvent);
 				trace_lazy = () -> AutomaticVariation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Trigger1";
 				definition = "Trigger parameters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FixedOrRecurrentDate1Choice getDateChoice() {
+		return dateChoice;
+	}
+
+	public void setDateChoice(FixedOrRecurrentDate1Choice dateChoice) {
+		this.dateChoice = dateChoice;
+	}
+
+	public List<Document10> getDocumentaryEvent() {
+		return documentaryEvent;
+	}
+
+	public void setDocumentaryEvent(List<com.tools20022.repository.msg.Document10> documentaryEvent) {
+		this.documentaryEvent = documentaryEvent;
 	}
 }

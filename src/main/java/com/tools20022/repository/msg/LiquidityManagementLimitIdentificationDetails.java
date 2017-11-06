@@ -39,11 +39,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails#SystemIdentification
- * LiquidityManagementLimitIdentificationDetails.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails#mmSystemIdentification
+ * LiquidityManagementLimitIdentificationDetails.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails#Type
- * LiquidityManagementLimitIdentificationDetails.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails#mmType
+ * LiquidityManagementLimitIdentificationDetails.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LiquidityManagementLimitIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemIdentificationChoice systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -83,8 +84,8 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashClearingSystem
-	 * TransactionAdministrator.CashClearingSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashClearingSystem
+	 * TransactionAdministrator.mmCashClearingSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 * definition} = "Identification of a particular cash clearing system. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.CashClearingSystem;
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	protected LiquidityLimitType1Code type;
 	/**
 	 * Type of liquidity management limit.
 	 * <p>
@@ -130,8 +132,8 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#LiquidityLimitType
-	 * LiquidityManagementLimit.LiquidityLimitType}</li>
+	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmLiquidityLimitType
+	 * LiquidityManagementLimit.mmLiquidityLimitType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,17 +152,17 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 * definition} = "Type of liquidity management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmLiquidityLimitType;
 			componentContext_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.LiquidityLimitType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of liquidity management limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LiquidityLimitType1Code.mmObject();
 		}
 	};
@@ -168,14 +170,31 @@ public class LiquidityManagementLimitIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.SystemIdentification, com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmSystemIdentification,
+						com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmType);
 				trace_lazy = () -> LiquidityManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityManagementLimitIdentificationDetails";
 				definition = "Cash management feature limiting the amount of liquidity needed to perform clearing and settlement operations. At any point in time during the process, the limit imposes the maximum amount of liquidity available for operations concerning the system or other managed elements, eg, transaction amount or counterparty.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemIdentificationChoice getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public LiquidityLimitType1Code getType() {
+		return type;
+	}
+
+	public void setType(LiquidityLimitType1Code type) {
+		this.type = type;
 	}
 }

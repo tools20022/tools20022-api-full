@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.EventDescription1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The PartyEventAdvice message can be sent by any party to any other party. It
@@ -65,24 +66,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#Header
- * PartyEventAdviceV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#mmHeader
+ * PartyEventAdviceV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#EventNotice
- * PartyEventAdviceV01.EventNotice}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#mmEventNotice
+ * PartyEventAdviceV01.mmEventNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#EventCount
- * PartyEventAdviceV01.EventCount}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#mmEventCount
+ * PartyEventAdviceV01.mmEventCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#AttachedMessage
- * PartyEventAdviceV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#mmAttachedMessage
+ * PartyEventAdviceV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#identifier
- * PartyEventAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.055.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyEventAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected BusinessLetter1 header;
 	/**
 	 * Set of characteristics that unambiguously identify the event, common
 	 * parameters, documents and identifications.
@@ -123,17 +123,18 @@ public class PartyEventAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics that unambiguously identify the event, common parameters, documents and identifications.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
 	};
+	protected List<EventDescription1> eventNotice;
 	/**
 	 * Description of the event.
 	 * <p>
@@ -157,7 +158,7 @@ public class PartyEventAdviceV01 {
 	 * definition} = "Description of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EventNotice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEventNotice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtNtce";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,6 +168,7 @@ public class PartyEventAdviceV01 {
 			complexType_lazy = () -> EventDescription1.mmObject();
 		}
 	};
+	protected Max15NumericText eventCount;
 	/**
 	 * Number of events as control value.
 	 * <p>
@@ -190,17 +192,18 @@ public class PartyEventAdviceV01 {
 	 * definition} = "Number of events as control value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EventCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEventCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtCnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCount";
 			definition = "Number of events as control value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
 	 * Referenced or related business message.
 	 * <p>
@@ -224,7 +227,7 @@ public class PartyEventAdviceV01 {
 	 * definition} = "Referenced or related business message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AttachedMessage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,33 +235,6 @@ public class PartyEventAdviceV01 {
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "055"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "055";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -272,11 +248,50 @@ public class PartyEventAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "PtyEvtAdvc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.PartyEventAdviceV01.Header, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.EventNotice,
-						com.tools20022.repository.area.tsmt.PartyEventAdviceV01.EventCount, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.AttachedMessage);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.PartyEventAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmHeader, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmEventNotice,
+						com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmEventCount, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmAttachedMessage);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "055";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BusinessLetter1 getHeader() {
+		return header;
+	}
+
+	public void setHeader(BusinessLetter1 header) {
+		this.header = header;
+	}
+
+	public List<EventDescription1> getEventNotice() {
+		return eventNotice;
+	}
+
+	public void setEventNotice(List<EventDescription1> eventNotice) {
+		this.eventNotice = eventNotice;
+	}
+
+	public Max15NumericText getEventCount() {
+		return eventCount;
+	}
+
+	public void setEventCount(Max15NumericText eventCount) {
+		this.eventCount = eventCount;
+	}
+
+	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
+		return attachedMessage;
+	}
+
+	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
+		this.attachedMessage = attachedMessage;
 	}
 }

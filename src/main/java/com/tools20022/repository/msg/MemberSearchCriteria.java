@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.MemberType1Code;
 import com.tools20022.repository.entity.SystemMemberRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a member.
@@ -36,12 +37,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria#Identification
- * MemberSearchCriteria.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemberSearchCriteria#Type
- * MemberSearchCriteria.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemberSearchCriteria#Status
- * MemberSearchCriteria.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria#mmIdentification
+ * MemberSearchCriteria.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MemberSearchCriteria#mmType
+ * MemberSearchCriteria.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MemberSearchCriteria#mmStatus
+ * MemberSearchCriteria.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<MemberIdentificationChoice> identification;
 	/**
 	 * Unique and unambiguous identification of a member within a system,
 	 * assigned using the member identification scheme of the system.
@@ -101,10 +103,10 @@ public class MemberSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
+			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,6 +116,7 @@ public class MemberSearchCriteria {
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
 		}
 	};
+	protected List<MemberType1Code> type;
 	/**
 	 * Nature of the relationship a member has with a system.
 	 * <p>
@@ -127,8 +130,8 @@ public class MemberSearchCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole#Type
-	 * SystemMemberRole.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmType
+	 * SystemMemberRole.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,10 +150,10 @@ public class MemberSearchCriteria {
 	 * definition} = "Nature of the relationship a member has with a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmType;
 			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,6 +163,7 @@ public class MemberSearchCriteria {
 			simpleType_lazy = () -> MemberType1Code.mmObject();
 		}
 	};
+	protected List<MemberStatus1Code> status;
 	/**
 	 * Status of a member in a system, eg, enabled or deleted.
 	 * <p>
@@ -173,8 +177,8 @@ public class MemberSearchCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole#MemberStatus
-	 * SystemMemberRole.MemberStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmMemberStatus
+	 * SystemMemberRole.mmMemberStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,10 +197,10 @@ public class MemberSearchCriteria {
 	 * definition} = "Status of a member in a system, eg, enabled or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmMemberStatus;
 			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.MemberStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,15 +214,39 @@ public class MemberSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.MemberSearchCriteria.Identification, com.tools20022.repository.msg.MemberSearchCriteria.Type, com.tools20022.repository.msg.MemberSearchCriteria.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.mmIdentification, com.tools20022.repository.msg.MemberSearchCriteria.mmType,
+						com.tools20022.repository.msg.MemberSearchCriteria.mmStatus);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberSearchCriteria";
 				definition = "Defines the criteria used to search for a member.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<MemberIdentificationChoice> getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(List<MemberIdentificationChoice> identification) {
+		this.identification = identification;
+	}
+
+	public List<MemberType1Code> getType() {
+		return type;
+	}
+
+	public void setType(List<MemberType1Code> type) {
+		this.type = type;
+	}
+
+	public List<MemberStatus1Code> getStatus() {
+		return status;
+	}
+
+	public void setStatus(List<MemberStatus1Code> status) {
+		this.status = status;
 	}
 }

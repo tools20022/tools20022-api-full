@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxCalculationBasisType1Choice#Basis
- * TaxCalculationBasisType1Choice.Basis}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxCalculationBasisType1Choice#mmBasis
+ * TaxCalculationBasisType1Choice.mmBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxCalculationBasisType1Choice#Proprietary
- * TaxCalculationBasisType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxCalculationBasisType1Choice#mmProprietary
+ * TaxCalculationBasisType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxCalculationBasisType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxationBasis2Code basis;
 	/**
 	 * Basis used to determine the capital gain or loss, eg, the purchase price.
 	 * <p>
@@ -76,7 +77,7 @@ public class TaxCalculationBasisType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Basis Tax.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class TaxCalculationBasisType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Basis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationBasisType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Basis;
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxationBasis2Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Basis used to determine the capital gain or loss, eg, the purchase price.
 	 * <p>
@@ -124,7 +126,7 @@ public class TaxCalculationBasisType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Basis Tax.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class TaxCalculationBasisType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationBasisType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Basis;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class TaxCalculationBasisType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCalculationBasisType1Choice.Basis, com.tools20022.repository.choice.TaxCalculationBasisType1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCalculationBasisType1Choice.mmBasis, com.tools20022.repository.choice.TaxCalculationBasisType1Choice.mmProprietary);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxCalculationBasisType1Choice";
 				definition = "Choice of calculation basis type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxationBasis2Code getBasis() {
+		return basis;
+	}
+
+	public void setBasis(TaxationBasis2Code basis) {
+		this.basis = basis;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -34,60 +34,60 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#OnLinePIN
- * AuthenticationMethod5Code.OnLinePIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmOnLinePIN
+ * AuthenticationMethod5Code.mmOnLinePIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#PaperSignature
- * AuthenticationMethod5Code.PaperSignature}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmPaperSignature
+ * AuthenticationMethod5Code.mmPaperSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#Password
- * AuthenticationMethod5Code.Password}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmPassword
+ * AuthenticationMethod5Code.mmPassword}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#SecureCertificate
- * AuthenticationMethod5Code.SecureCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmSecureCertificate
+ * AuthenticationMethod5Code.mmSecureCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#SecuredChannel
- * AuthenticationMethod5Code.SecuredChannel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmSecuredChannel
+ * AuthenticationMethod5Code.mmSecuredChannel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#SecureNoCertificate
- * AuthenticationMethod5Code.SecureNoCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmSecureNoCertificate
+ * AuthenticationMethod5Code.mmSecureNoCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#SignatureCapture
- * AuthenticationMethod5Code.SignatureCapture}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmSignatureCapture
+ * AuthenticationMethod5Code.mmSignatureCapture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#BillingAddressVerification
- * AuthenticationMethod5Code.BillingAddressVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmBillingAddressVerification
+ * AuthenticationMethod5Code.mmBillingAddressVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#Biometry
- * AuthenticationMethod5Code.Biometry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmBiometry
+ * AuthenticationMethod5Code.mmBiometry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#CardholderIdentificationData
- * AuthenticationMethod5Code.CardholderIdentificationData}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmCardholderIdentificationData
+ * AuthenticationMethod5Code.mmCardholderIdentificationData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#CryptogramVerification
- * AuthenticationMethod5Code.CryptogramVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmCryptogramVerification
+ * AuthenticationMethod5Code.mmCryptogramVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#CSCVerification
- * AuthenticationMethod5Code.CSCVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmCSCVerification
+ * AuthenticationMethod5Code.mmCSCVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#PassiveAuthentication
- * AuthenticationMethod5Code.PassiveAuthentication}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmPassiveAuthentication
+ * AuthenticationMethod5Code.mmPassiveAuthentication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#SecureElectronicCommerce
- * AuthenticationMethod5Code.SecureElectronicCommerce}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmSecureElectronicCommerce
+ * AuthenticationMethod5Code.mmSecureElectronicCommerce}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#ShippingAddressVerification
- * AuthenticationMethod5Code.ShippingAddressVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmShippingAddressVerification
+ * AuthenticationMethod5Code.mmShippingAddressVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#PaymentToken
- * AuthenticationMethod5Code.PaymentToken}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod5Code#mmPaymentToken
+ * AuthenticationMethod5Code.mmPaymentToken}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -128,15 +128,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#OnLinePIN
-	 * AuthenticationMethod3Code.OnLinePIN}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmOnLinePIN
+	 * AuthenticationMethod3Code.mmOnLinePIN}</li>
 	 * </ul>
 	 */
-	public static final MMCode OnLinePIN = new MMCode() {
+	public static final MMCode mmOnLinePIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLinePIN";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.OnLinePIN;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmOnLinePIN;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -157,15 +157,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#PaperSignature
-	 * AuthenticationMethod3Code.PaperSignature}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmPaperSignature
+	 * AuthenticationMethod3Code.mmPaperSignature}</li>
 	 * </ul>
 	 */
-	public static final MMCode PaperSignature = new MMCode() {
+	public static final MMCode mmPaperSignature = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaperSignature";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.PaperSignature;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmPaperSignature;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -186,15 +186,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#Password
-	 * AuthenticationMethod3Code.Password}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmPassword
+	 * AuthenticationMethod3Code.mmPassword}</li>
 	 * </ul>
 	 */
-	public static final MMCode Password = new MMCode() {
+	public static final MMCode mmPassword = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Password";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.Password;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmPassword;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -215,15 +215,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#SecureCertificate
-	 * AuthenticationMethod3Code.SecureCertificate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmSecureCertificate
+	 * AuthenticationMethod3Code.mmSecureCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMCode SecureCertificate = new MMCode() {
+	public static final MMCode mmSecureCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureCertificate";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.SecureCertificate;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmSecureCertificate;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -244,15 +244,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#SecuredChannel
-	 * AuthenticationMethod3Code.SecuredChannel}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmSecuredChannel
+	 * AuthenticationMethod3Code.mmSecuredChannel}</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuredChannel = new MMCode() {
+	public static final MMCode mmSecuredChannel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredChannel";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.SecuredChannel;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmSecuredChannel;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -273,15 +273,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#SecureNoCertificate
-	 * AuthenticationMethod3Code.SecureNoCertificate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmSecureNoCertificate
+	 * AuthenticationMethod3Code.mmSecureNoCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMCode SecureNoCertificate = new MMCode() {
+	public static final MMCode mmSecureNoCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureNoCertificate";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.SecureNoCertificate;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmSecureNoCertificate;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -302,15 +302,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#SignatureCapture
-	 * AuthenticationMethod3Code.SignatureCapture}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmSignatureCapture
+	 * AuthenticationMethod3Code.mmSignatureCapture}</li>
 	 * </ul>
 	 */
-	public static final MMCode SignatureCapture = new MMCode() {
+	public static final MMCode mmSignatureCapture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureCapture";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.SignatureCapture;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmSignatureCapture;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -331,15 +331,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#BillingAddressVerification
-	 * AuthenticationMethod3Code.BillingAddressVerification}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmBillingAddressVerification
+	 * AuthenticationMethod3Code.mmBillingAddressVerification}</li>
 	 * </ul>
 	 */
-	public static final MMCode BillingAddressVerification = new MMCode() {
+	public static final MMCode mmBillingAddressVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingAddressVerification";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.BillingAddressVerification;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmBillingAddressVerification;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -360,15 +360,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#Biometry
-	 * AuthenticationMethod3Code.Biometry}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmBiometry
+	 * AuthenticationMethod3Code.mmBiometry}</li>
 	 * </ul>
 	 */
-	public static final MMCode Biometry = new MMCode() {
+	public static final MMCode mmBiometry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Biometry";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.Biometry;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmBiometry;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -389,15 +389,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#CardholderIdentificationData
-	 * AuthenticationMethod3Code.CardholderIdentificationData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmCardholderIdentificationData
+	 * AuthenticationMethod3Code.mmCardholderIdentificationData}</li>
 	 * </ul>
 	 */
-	public static final MMCode CardholderIdentificationData = new MMCode() {
+	public static final MMCode mmCardholderIdentificationData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderIdentificationData";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.CardholderIdentificationData;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmCardholderIdentificationData;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -418,15 +418,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#CryptogramVerification
-	 * AuthenticationMethod3Code.CryptogramVerification}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmCryptogramVerification
+	 * AuthenticationMethod3Code.mmCryptogramVerification}</li>
 	 * </ul>
 	 */
-	public static final MMCode CryptogramVerification = new MMCode() {
+	public static final MMCode mmCryptogramVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CryptogramVerification";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.CryptogramVerification;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmCryptogramVerification;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -447,15 +447,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#CSCVerification
-	 * AuthenticationMethod3Code.CSCVerification}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmCSCVerification
+	 * AuthenticationMethod3Code.mmCSCVerification}</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCVerification = new MMCode() {
+	public static final MMCode mmCSCVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCVerification";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.CSCVerification;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmCSCVerification;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -476,15 +476,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#PassiveAuthentication
-	 * AuthenticationMethod3Code.PassiveAuthentication}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmPassiveAuthentication
+	 * AuthenticationMethod3Code.mmPassiveAuthentication}</li>
 	 * </ul>
 	 */
-	public static final MMCode PassiveAuthentication = new MMCode() {
+	public static final MMCode mmPassiveAuthentication = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassiveAuthentication";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.PassiveAuthentication;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmPassiveAuthentication;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -505,15 +505,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#SecureElectronicCommerce
-	 * AuthenticationMethod3Code.SecureElectronicCommerce}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmSecureElectronicCommerce
+	 * AuthenticationMethod3Code.mmSecureElectronicCommerce}</li>
 	 * </ul>
 	 */
-	public static final MMCode SecureElectronicCommerce = new MMCode() {
+	public static final MMCode mmSecureElectronicCommerce = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureElectronicCommerce";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.SecureElectronicCommerce;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmSecureElectronicCommerce;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -534,15 +534,15 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#ShippingAddressVerification
-	 * AuthenticationMethod3Code.ShippingAddressVerification}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationMethod3Code#mmShippingAddressVerification
+	 * AuthenticationMethod3Code.mmShippingAddressVerification}</li>
 	 * </ul>
 	 */
-	public static final MMCode ShippingAddressVerification = new MMCode() {
+	public static final MMCode mmShippingAddressVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingAddressVerification";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.ShippingAddressVerification;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationMethod3Code.mmShippingAddressVerification;
 			owner_lazy = () -> AuthenticationMethod5Code.mmObject();
 		}
 	};
@@ -562,7 +562,7 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	 * name} = "PaymentToken"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentToken = new MMCode() {
+	public static final MMCode mmPaymentToken = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentToken";
@@ -573,20 +573,20 @@ public class AuthenticationMethod5Code extends AuthenticationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADDB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationMethod5Code";
 				definition = "Methods used to authenticate a person or a card.";
 				previousVersion_lazy = () -> AuthenticationMethod3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationMethod5Code.OnLinePIN, com.tools20022.repository.codeset.AuthenticationMethod5Code.PaperSignature,
-						com.tools20022.repository.codeset.AuthenticationMethod5Code.Password, com.tools20022.repository.codeset.AuthenticationMethod5Code.SecureCertificate,
-						com.tools20022.repository.codeset.AuthenticationMethod5Code.SecuredChannel, com.tools20022.repository.codeset.AuthenticationMethod5Code.SecureNoCertificate,
-						com.tools20022.repository.codeset.AuthenticationMethod5Code.SignatureCapture, com.tools20022.repository.codeset.AuthenticationMethod5Code.BillingAddressVerification,
-						com.tools20022.repository.codeset.AuthenticationMethod5Code.Biometry, com.tools20022.repository.codeset.AuthenticationMethod5Code.CardholderIdentificationData,
-						com.tools20022.repository.codeset.AuthenticationMethod5Code.CryptogramVerification, com.tools20022.repository.codeset.AuthenticationMethod5Code.CSCVerification,
-						com.tools20022.repository.codeset.AuthenticationMethod5Code.PassiveAuthentication, com.tools20022.repository.codeset.AuthenticationMethod5Code.SecureElectronicCommerce,
-						com.tools20022.repository.codeset.AuthenticationMethod5Code.ShippingAddressVerification, com.tools20022.repository.codeset.AuthenticationMethod5Code.PaymentToken);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationMethod5Code.mmOnLinePIN, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmPaperSignature,
+						com.tools20022.repository.codeset.AuthenticationMethod5Code.mmPassword, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmSecureCertificate,
+						com.tools20022.repository.codeset.AuthenticationMethod5Code.mmSecuredChannel, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmSecureNoCertificate,
+						com.tools20022.repository.codeset.AuthenticationMethod5Code.mmSignatureCapture, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmBillingAddressVerification,
+						com.tools20022.repository.codeset.AuthenticationMethod5Code.mmBiometry, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmCardholderIdentificationData,
+						com.tools20022.repository.codeset.AuthenticationMethod5Code.mmCryptogramVerification, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmCSCVerification,
+						com.tools20022.repository.codeset.AuthenticationMethod5Code.mmPassiveAuthentication, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmSecureElectronicCommerce,
+						com.tools20022.repository.codeset.AuthenticationMethod5Code.mmShippingAddressVerification, com.tools20022.repository.codeset.AuthenticationMethod5Code.mmPaymentToken);
 				trace_lazy = () -> AuthenticationMethodCode.mmObject();
 			}
 		});

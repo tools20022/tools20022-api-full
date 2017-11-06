@@ -62,21 +62,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#Identification
- * AgentCADistributionBreakdownAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#mmIdentification
+ * AgentCADistributionBreakdownAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#CorporateActionGeneralInformation
- * AgentCADistributionBreakdownAdviceV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#mmCorporateActionGeneralInformation
+ * AgentCADistributionBreakdownAdviceV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#CorporateActionDistributionDetails
- * AgentCADistributionBreakdownAdviceV01.CorporateActionDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#mmCorporateActionDistributionDetails
+ * AgentCADistributionBreakdownAdviceV01.mmCorporateActionDistributionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01#identifier
- * AgentCADistributionBreakdownAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.016.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCADistributionBreakdownAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * advice.
@@ -118,17 +117,18 @@ public class AgentCADistributionBreakdownAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -152,17 +152,18 @@ public class AgentCADistributionBreakdownAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected EntitlementAdvice1 corporateActionDistributionDetails;
 	/**
 	 * Provides information about the CA option and the entitlements.
 	 * <p>
@@ -187,42 +188,15 @@ public class AgentCADistributionBreakdownAdviceV01 {
 	 * "Provides information about the CA option and the entitlements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionDistributionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionDistributionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnDstrbtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDistributionDetails";
 			definition = "Provides information about the CA option and the entitlements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> EntitlementAdvice1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "016"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "016";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -236,12 +210,43 @@ public class AgentCADistributionBreakdownAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCADstrbtnBrkdwnAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.CorporateActionDistributionDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.mmCorporateActionDistributionDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "016";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public EntitlementAdvice1 getCorporateActionDistributionDetails() {
+		return corporateActionDistributionDetails;
+	}
+
+	public void setCorporateActionDistributionDetails(EntitlementAdvice1 corporateActionDistributionDetails) {
+		this.corporateActionDistributionDetails = corporateActionDistributionDetails;
 	}
 }

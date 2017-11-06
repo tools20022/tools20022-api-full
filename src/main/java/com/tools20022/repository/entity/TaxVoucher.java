@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.TaxVoucher2;
 import com.tools20022.repository.msg.TaxVoucher3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Statement showing the amount or value of a distribution and either the tax
@@ -42,50 +43,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#RequestedTaxationRate
- * TaxVoucher.RequestedTaxationRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#CreditRate
- * TaxVoucher.CreditRate}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRequestedTaxationRate
+ * TaxVoucher.mmRequestedTaxationRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#mmCreditRate
+ * TaxVoucher.mmCreditRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#RelatedSecurityTax
- * TaxVoucher.RelatedSecurityTax}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRelatedSecurityTax
+ * TaxVoucher.mmRelatedSecurityTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#SundryOrOtherAmount
- * TaxVoucher.SundryOrOtherAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#CreditAmount
- * TaxVoucher.CreditAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmSundryOrOtherAmount
+ * TaxVoucher.mmSundryOrOtherAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#mmCreditAmount
+ * TaxVoucher.mmCreditAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#CashAmountBroughtForward
- * TaxVoucher.CashAmountBroughtForward}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmCashAmountBroughtForward
+ * TaxVoucher.mmCashAmountBroughtForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#CashAmountCarriedForward
- * TaxVoucher.CashAmountCarriedForward}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmCashAmountCarriedForward
+ * TaxVoucher.mmCashAmountCarriedForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#NotionalTaxAmount
- * TaxVoucher.NotionalTaxAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#Distribution
- * TaxVoucher.Distribution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#Identification
- * TaxVoucher.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#BargainDate
- * TaxVoucher.BargainDate}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmNotionalTaxAmount
+ * TaxVoucher.mmNotionalTaxAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#mmDistribution
+ * TaxVoucher.mmDistribution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#mmIdentification
+ * TaxVoucher.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#mmBargainDate
+ * TaxVoucher.mmBargainDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#BargainSettlementDate
- * TaxVoucher.BargainSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#TaxVoucherRate
- * TaxVoucher.TaxVoucherRate}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmBargainSettlementDate
+ * TaxVoucher.mmBargainSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxVoucher#mmTaxVoucherRate
+ * TaxVoucher.mmTaxVoucherRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#RecordDateHolding
- * TaxVoucher.RecordDateHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRecordDateHolding
+ * TaxVoucher.mmRecordDateHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#ScripDividendReinvestmentPricePerShare
- * TaxVoucher.ScripDividendReinvestmentPricePerShare}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmScripDividendReinvestmentPricePerShare
+ * TaxVoucher.mmScripDividendReinvestmentPricePerShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#AllotedSharesCost
- * TaxVoucher.AllotedSharesCost}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmAllotedSharesCost
+ * TaxVoucher.mmAllotedSharesCost}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#ForeignExchangeTransaction
- * TaxVoucher.ForeignExchangeTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmForeignExchangeTransaction
+ * TaxVoucher.mmForeignExchangeTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,19 +94,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#TaxVoucher
- * SecuritiesPricing.TaxVoucher}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxVoucher
- * SecuritiesTax.TaxVoucher}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
+ * SecuritiesPricing.mmTaxVoucher}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
+ * SecuritiesTax.mmTaxVoucher}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#TaxVoucher
- * SecuritiesQuantity.TaxVoucher}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
+ * SecuritiesQuantity.mmTaxVoucher}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#CurrencyExchangeForTaxVoucher
- * ForeignExchangeTrade.CurrencyExchangeForTaxVoucher}</li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
+ * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#TaxVoucher
- * CorporateActionDistribution.TaxVoucher}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
+ * CorporateActionDistribution.mmTaxVoucher}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,8 +121,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,6 +138,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxVoucher {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate requestedTaxationRate;
 	/**
 	 * Requested tax rate in case of breakdown of tax rate, for example, used
 	 * for adjustment of tax rate. This is the new requested applicable rate.
@@ -148,33 +150,33 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate8#RequestedTaxationRate
-	 * CorporateActionRate8.RequestedTaxationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#RequestedTaxationRate
-	 * CorporateActionRate9.RequestedTaxationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate47#RequestedTaxationRate
-	 * CorporateActionRate47.RequestedTaxationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate59#RequestedTaxationRate
-	 * CorporateActionRate59.RequestedTaxationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate71#RequestedWithholdingTaxRate
-	 * CorporateActionRate71.RequestedWithholdingTaxRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#RequestedWithholdingTaxRate
-	 * CorporateActionRate73.RequestedWithholdingTaxRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate8#mmRequestedTaxationRate
+	 * CorporateActionRate8.mmRequestedTaxationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#mmRequestedTaxationRate
+	 * CorporateActionRate9.mmRequestedTaxationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate47#mmRequestedTaxationRate
+	 * CorporateActionRate47.mmRequestedTaxationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate59#mmRequestedTaxationRate
+	 * CorporateActionRate59.mmRequestedTaxationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate71#mmRequestedWithholdingTaxRate
+	 * CorporateActionRate71.mmRequestedWithholdingTaxRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#mmRequestedWithholdingTaxRate
+	 * CorporateActionRate73.mmRequestedWithholdingTaxRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -188,21 +190,22 @@ public class TaxVoucher {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RequestedTaxationRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRequestedTaxationRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate8.RequestedTaxationRate, com.tools20022.repository.msg.CorporateActionRate9.RequestedTaxationRate,
-					com.tools20022.repository.msg.CorporateActionRate47.RequestedTaxationRate, com.tools20022.repository.msg.CorporateActionRate59.RequestedTaxationRate,
-					com.tools20022.repository.msg.CorporateActionRate71.RequestedWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate73.RequestedWithholdingTaxRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate8.mmRequestedTaxationRate, com.tools20022.repository.msg.CorporateActionRate9.mmRequestedTaxationRate,
+					com.tools20022.repository.msg.CorporateActionRate47.mmRequestedTaxationRate, com.tools20022.repository.msg.CorporateActionRate59.mmRequestedTaxationRate,
+					com.tools20022.repository.msg.CorporateActionRate71.mmRequestedWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate73.mmRequestedWithholdingTaxRate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RequestedTaxationRate";
 			definition = "Requested tax rate in case of breakdown of tax rate, for example, used for adjustment of tax rate. This is the new requested applicable rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate creditRate;
 	/**
 	 * Applicable tax rate on the tax credit amount.
 	 * <p>
@@ -213,123 +216,129 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#TaxCreditRate
-	 * CorporateActionRate4.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#TaxCreditRate
-	 * CorporateActionRate10.TaxCreditRate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RateDetails2#TaxCreditRate
-	 * RateDetails2.TaxCreditRate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RateDetails4#TaxCreditRate
-	 * RateDetails4.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate29#TaxCreditRate
-	 * CorporateActionRate29.TaxCreditRate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RateDetails7#TaxCreditRate
-	 * RateDetails7.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate34#TaxCreditRate
-	 * CorporateActionRate34.TaxCreditRate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RateDetails9#TaxCreditRate
-	 * RateDetails9.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails11#TaxCreditRate
-	 * RateDetails11.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails12#TaxCreditRate
-	 * RateDetails12.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#TaxCreditRate
-	 * CorporateActionRate5.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#TaxCreditRate
-	 * CorporateActionRate12.TaxCreditRate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RateDetails3#TaxCreditRate
-	 * RateDetails3.TaxCreditRate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RateDetails5#TaxCreditRate
-	 * RateDetails5.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate28#TaxCreditRate
-	 * CorporateActionRate28.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate33#TaxCreditRate
-	 * CorporateActionRate33.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails10#TaxCreditRate
-	 * RateDetails10.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails13#TaxCreditRate
-	 * RateDetails13.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails15#TaxCreditRate
-	 * RateDetails15.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate48#TaxCreditRate
-	 * CorporateActionRate48.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate49#TaxCreditRate
-	 * CorporateActionRate49.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails14#TaxCreditRate
-	 * RateDetails14.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate58#TaxCreditRate
-	 * CorporateActionRate58.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails18#TaxCreditRate
-	 * RateDetails18.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails21#TaxCreditRate
-	 * RateDetails21.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate65#TaxCreditRate
-	 * CorporateActionRate65.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails23#TaxCreditRate
-	 * RateDetails23.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate69#TaxCreditRate
-	 * CorporateActionRate69.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails22#TaxCreditRate
-	 * RateDetails22.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate72#TaxCreditRate
-	 * CorporateActionRate72.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails24#TaxCreditRate
-	 * RateDetails24.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails25#TaxCreditRate
-	 * RateDetails25.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate77#TaxCreditRate
-	 * CorporateActionRate77.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#TaxCreditRate
-	 * CorporateActionRate75.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails26#TaxCreditRate
-	 * RateDetails26.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails27#TaxCreditRate
-	 * RateDetails27.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails28#TaxCreditRate
-	 * RateDetails28.TaxCreditRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails30#TaxCreditRate
-	 * RateDetails30.TaxCreditRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#mmTaxCreditRate
+	 * CorporateActionRate4.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#mmTaxCreditRate
+	 * CorporateActionRate10.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails2#mmTaxCreditRate
+	 * RateDetails2.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails4#mmTaxCreditRate
+	 * RateDetails4.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate29#mmTaxCreditRate
+	 * CorporateActionRate29.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails7#mmTaxCreditRate
+	 * RateDetails7.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate34#mmTaxCreditRate
+	 * CorporateActionRate34.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails9#mmTaxCreditRate
+	 * RateDetails9.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails11#mmTaxCreditRate
+	 * RateDetails11.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails12#mmTaxCreditRate
+	 * RateDetails12.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#mmTaxCreditRate
+	 * CorporateActionRate5.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#mmTaxCreditRate
+	 * CorporateActionRate12.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails3#mmTaxCreditRate
+	 * RateDetails3.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails5#mmTaxCreditRate
+	 * RateDetails5.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate28#mmTaxCreditRate
+	 * CorporateActionRate28.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate33#mmTaxCreditRate
+	 * CorporateActionRate33.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails10#mmTaxCreditRate
+	 * RateDetails10.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails13#mmTaxCreditRate
+	 * RateDetails13.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails15#mmTaxCreditRate
+	 * RateDetails15.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate48#mmTaxCreditRate
+	 * CorporateActionRate48.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate49#mmTaxCreditRate
+	 * CorporateActionRate49.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails14#mmTaxCreditRate
+	 * RateDetails14.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate58#mmTaxCreditRate
+	 * CorporateActionRate58.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails18#mmTaxCreditRate
+	 * RateDetails18.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails21#mmTaxCreditRate
+	 * RateDetails21.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate65#mmTaxCreditRate
+	 * CorporateActionRate65.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails23#mmTaxCreditRate
+	 * RateDetails23.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate69#mmTaxCreditRate
+	 * CorporateActionRate69.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails22#mmTaxCreditRate
+	 * RateDetails22.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate72#mmTaxCreditRate
+	 * CorporateActionRate72.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails24#mmTaxCreditRate
+	 * RateDetails24.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails25#mmTaxCreditRate
+	 * RateDetails25.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate77#mmTaxCreditRate
+	 * CorporateActionRate77.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#mmTaxCreditRate
+	 * CorporateActionRate75.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails26#mmTaxCreditRate
+	 * RateDetails26.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails27#mmTaxCreditRate
+	 * RateDetails27.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails28#mmTaxCreditRate
+	 * RateDetails28.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmTaxCreditRate
+	 * RateDetails30.mmTaxCreditRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -341,31 +350,32 @@ public class TaxVoucher {
 	 * definition} = "Applicable tax rate on the tax credit amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CreditRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCreditRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate10.TaxCreditRate,
-					com.tools20022.repository.msg.RateDetails2.TaxCreditRate, com.tools20022.repository.msg.RateDetails4.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate29.TaxCreditRate,
-					com.tools20022.repository.msg.RateDetails7.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate34.TaxCreditRate, com.tools20022.repository.msg.RateDetails9.TaxCreditRate,
-					com.tools20022.repository.msg.RateDetails11.TaxCreditRate, com.tools20022.repository.msg.RateDetails12.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate5.TaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate12.TaxCreditRate, com.tools20022.repository.msg.RateDetails3.TaxCreditRate, com.tools20022.repository.msg.RateDetails5.TaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate28.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate33.TaxCreditRate, com.tools20022.repository.msg.RateDetails10.TaxCreditRate,
-					com.tools20022.repository.msg.RateDetails13.TaxCreditRate, com.tools20022.repository.msg.RateDetails15.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate48.TaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate49.TaxCreditRate, com.tools20022.repository.msg.RateDetails14.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate58.TaxCreditRate,
-					com.tools20022.repository.msg.RateDetails18.TaxCreditRate, com.tools20022.repository.msg.RateDetails21.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate65.TaxCreditRate,
-					com.tools20022.repository.msg.RateDetails23.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate69.TaxCreditRate, com.tools20022.repository.msg.RateDetails22.TaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate72.TaxCreditRate, com.tools20022.repository.msg.RateDetails24.TaxCreditRate, com.tools20022.repository.msg.RateDetails25.TaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate77.TaxCreditRate, com.tools20022.repository.msg.CorporateActionRate75.TaxCreditRate, com.tools20022.repository.msg.RateDetails26.TaxCreditRate,
-					com.tools20022.repository.msg.RateDetails27.TaxCreditRate, com.tools20022.repository.msg.RateDetails28.TaxCreditRate, com.tools20022.repository.msg.RateDetails30.TaxCreditRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate10.mmTaxCreditRate,
+					com.tools20022.repository.msg.RateDetails2.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails4.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate29.mmTaxCreditRate,
+					com.tools20022.repository.msg.RateDetails7.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate34.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails9.mmTaxCreditRate,
+					com.tools20022.repository.msg.RateDetails11.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails12.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate5.mmTaxCreditRate,
+					com.tools20022.repository.msg.CorporateActionRate12.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails3.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails5.mmTaxCreditRate,
+					com.tools20022.repository.msg.CorporateActionRate28.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate33.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails10.mmTaxCreditRate,
+					com.tools20022.repository.msg.RateDetails13.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails15.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate48.mmTaxCreditRate,
+					com.tools20022.repository.msg.CorporateActionRate49.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails14.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate58.mmTaxCreditRate,
+					com.tools20022.repository.msg.RateDetails18.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails21.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate65.mmTaxCreditRate,
+					com.tools20022.repository.msg.RateDetails23.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate69.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails22.mmTaxCreditRate,
+					com.tools20022.repository.msg.CorporateActionRate72.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails24.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails25.mmTaxCreditRate,
+					com.tools20022.repository.msg.CorporateActionRate77.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate75.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails26.mmTaxCreditRate,
+					com.tools20022.repository.msg.RateDetails27.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails28.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails30.mmTaxCreditRate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditRate";
 			definition = "Applicable tax rate on the tax credit amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesTax> relatedSecurityTax;
 	/**
 	 * Specifies tax elements on the security which is involved in the corporate
 	 * event.
@@ -375,8 +385,8 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxVoucher
-	 * SecuritiesTax.TaxVoucher}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
+	 * SecuritiesTax.mmTaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -384,96 +394,96 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesTax
 	 * SecuritiesTax}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#WithholdingOfForeignTax
-	 * CorporateActionRate4.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#WithholdingOfLocalTax
-	 * CorporateActionRate4.WithholdingOfLocalTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#WithholdingOfForeignTax
-	 * CorporateActionRate10.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#WithholdingOfLocalTax
-	 * CorporateActionRate10.WithholdingOfLocalTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate26#WithholdingOfForeignTax
-	 * CorporateActionRate26.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate31#WithholdingOfForeignTax
-	 * CorporateActionRate31.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate38#WithholdingOfForeignTax
-	 * CorporateActionRate38.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate39#WithholdingOfForeignTax
-	 * CorporateActionRate39.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#WithholdingOfForeignTax
-	 * CorporateActionRate5.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#WithholdingOfLocalTax
-	 * CorporateActionRate5.WithholdingOfLocalTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#WithholdingOfForeignTax
-	 * CorporateActionRate12.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#WithholdingOfLocalTax
-	 * CorporateActionRate12.WithholdingOfLocalTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate25#WithholdingOfForeignTax
-	 * CorporateActionRate25.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate30#WithholdingOfForeignTax
-	 * CorporateActionRate30.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate37#WithholdingOfForeignTax
-	 * CorporateActionRate37.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate40#WithholdingOfForeignTax
-	 * CorporateActionRate40.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate36#WithholdingOfForeignTax
-	 * CorporateActionRate36.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate42#WithholdingOfForeignTax
-	 * CorporateActionRate42.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#WithholdingOfForeignTax
-	 * CorporateActionRate2.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#WithholdingOfLocalTax
-	 * CorporateActionRate2.WithholdingOfLocalTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#RelatedTax
-	 * CorporateActionRate2.RelatedTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate46#WithholdingOfForeignTax
-	 * CorporateActionRate46.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate45#WithholdingOfForeignTax
-	 * CorporateActionRate45.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate44#WithholdingOfForeignTax
-	 * CorporateActionRate44.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate60#WithholdingOfForeignTax
-	 * CorporateActionRate60.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate64#WithholdingOfForeignTax
-	 * CorporateActionRate64.WithholdingOfForeignTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate57#WithholdingOfForeignTax
-	 * CorporateActionRate57.WithholdingOfForeignTax}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#mmWithholdingOfForeignTax
+	 * CorporateActionRate4.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#mmWithholdingOfLocalTax
+	 * CorporateActionRate4.mmWithholdingOfLocalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#mmWithholdingOfForeignTax
+	 * CorporateActionRate10.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#mmWithholdingOfLocalTax
+	 * CorporateActionRate10.mmWithholdingOfLocalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate26#mmWithholdingOfForeignTax
+	 * CorporateActionRate26.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate31#mmWithholdingOfForeignTax
+	 * CorporateActionRate31.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate38#mmWithholdingOfForeignTax
+	 * CorporateActionRate38.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate39#mmWithholdingOfForeignTax
+	 * CorporateActionRate39.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#mmWithholdingOfForeignTax
+	 * CorporateActionRate5.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#mmWithholdingOfLocalTax
+	 * CorporateActionRate5.mmWithholdingOfLocalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#mmWithholdingOfForeignTax
+	 * CorporateActionRate12.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#mmWithholdingOfLocalTax
+	 * CorporateActionRate12.mmWithholdingOfLocalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate25#mmWithholdingOfForeignTax
+	 * CorporateActionRate25.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate30#mmWithholdingOfForeignTax
+	 * CorporateActionRate30.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate37#mmWithholdingOfForeignTax
+	 * CorporateActionRate37.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate40#mmWithholdingOfForeignTax
+	 * CorporateActionRate40.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate36#mmWithholdingOfForeignTax
+	 * CorporateActionRate36.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate42#mmWithholdingOfForeignTax
+	 * CorporateActionRate42.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#mmWithholdingOfForeignTax
+	 * CorporateActionRate2.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#mmWithholdingOfLocalTax
+	 * CorporateActionRate2.mmWithholdingOfLocalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#mmRelatedTax
+	 * CorporateActionRate2.mmRelatedTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate46#mmWithholdingOfForeignTax
+	 * CorporateActionRate46.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate45#mmWithholdingOfForeignTax
+	 * CorporateActionRate45.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate44#mmWithholdingOfForeignTax
+	 * CorporateActionRate44.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate60#mmWithholdingOfForeignTax
+	 * CorporateActionRate60.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate64#mmWithholdingOfForeignTax
+	 * CorporateActionRate64.mmWithholdingOfForeignTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate57#mmWithholdingOfForeignTax
+	 * CorporateActionRate57.mmWithholdingOfForeignTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -487,32 +497,33 @@ public class TaxVoucher {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedSecurityTax = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedSecurityTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate4.WithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate10.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate10.WithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate26.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate31.WithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate38.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate39.WithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate5.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate5.WithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate12.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate12.WithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate25.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate30.WithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate37.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate40.WithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate36.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate42.WithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate2.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate2.WithholdingOfLocalTax, com.tools20022.repository.msg.CorporateActionRate2.RelatedTax,
-					com.tools20022.repository.msg.CorporateActionRate46.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate45.WithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate44.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate60.WithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate64.WithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate57.WithholdingOfForeignTax);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate4.mmWithholdingOfLocalTax,
+					com.tools20022.repository.msg.CorporateActionRate10.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate10.mmWithholdingOfLocalTax,
+					com.tools20022.repository.msg.CorporateActionRate26.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate31.mmWithholdingOfForeignTax,
+					com.tools20022.repository.msg.CorporateActionRate38.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate39.mmWithholdingOfForeignTax,
+					com.tools20022.repository.msg.CorporateActionRate5.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate5.mmWithholdingOfLocalTax,
+					com.tools20022.repository.msg.CorporateActionRate12.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate12.mmWithholdingOfLocalTax,
+					com.tools20022.repository.msg.CorporateActionRate25.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate30.mmWithholdingOfForeignTax,
+					com.tools20022.repository.msg.CorporateActionRate37.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate40.mmWithholdingOfForeignTax,
+					com.tools20022.repository.msg.CorporateActionRate36.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate42.mmWithholdingOfForeignTax,
+					com.tools20022.repository.msg.CorporateActionRate2.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate2.mmWithholdingOfLocalTax, com.tools20022.repository.msg.CorporateActionRate2.mmRelatedTax,
+					com.tools20022.repository.msg.CorporateActionRate46.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate45.mmWithholdingOfForeignTax,
+					com.tools20022.repository.msg.CorporateActionRate44.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate60.mmWithholdingOfForeignTax,
+					com.tools20022.repository.msg.CorporateActionRate64.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate57.mmWithholdingOfForeignTax);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurityTax";
 			definition = "Specifies tax elements on the security which is involved in the corporate event.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesTax.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxVoucher;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxVoucher;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmObject();
 		}
 	};
+	protected CurrencyAndAmount sundryOrOtherAmount;
 	/**
 	 * Amount of money related to taxable income that cannot be categorised.
 	 * <p>
@@ -523,126 +534,126 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#SundryOrOtherAmount
-	 * CorporateActionAmounts2.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#SundryOrOtherAmount
-	 * CorporateActionAmounts5.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#SundryOrOtherAmount
-	 * CorporateActionAmounts11.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#SundryOrOtherAmount
-	 * CorporateActionAmounts12.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#SundryOrOtherAmount
-	 * CorporateActionAmounts17.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#SundryOrOtherAmount
-	 * CorporateActionAmounts20.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#SundryOrOtherAmount
-	 * CorporateActionAmounts23.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#SundryOrOtherAmount
-	 * CorporateActionAmounts24.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts3#SundryOrOtherAmount
-	 * CorporateActionAmounts3.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts6#SundryOrOtherAmount
-	 * CorporateActionAmounts6.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts9#SundryOrOtherAmount
-	 * CorporateActionAmounts9.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts13#SundryOrOtherAmount
-	 * CorporateActionAmounts13.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts16#SundryOrOtherAmount
-	 * CorporateActionAmounts16.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts19#SundryOrOtherAmount
-	 * CorporateActionAmounts19.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts22#SundryOrOtherAmount
-	 * CorporateActionAmounts22.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts25#SundryOrOtherAmount
-	 * CorporateActionAmounts25.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts4#SundryOrOtherAmount
-	 * CorporateActionAmounts4.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts7#SundryOrOtherAmount
-	 * CorporateActionAmounts7.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts10#SundryOrOtherAmount
-	 * CorporateActionAmounts10.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts14#SundryOrOtherAmount
-	 * CorporateActionAmounts14.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts15#SundryOrOtherAmount
-	 * CorporateActionAmounts15.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts18#SundryOrOtherAmount
-	 * CorporateActionAmounts18.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts21#SundryOrOtherAmount
-	 * CorporateActionAmounts21.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts26#SundryOrOtherAmount
-	 * CorporateActionAmounts26.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#SundryOrOtherAmount
-	 * CorporateActionAmounts1.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#SundryOrOtherAmount
-	 * CorporateActionAmounts29.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts27#SundryOrOtherAmount
-	 * CorporateActionAmounts27.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts28#SundryOrOtherAmount
-	 * CorporateActionAmounts28.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts33#SundryOrOtherAmount
-	 * CorporateActionAmounts33.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts32#SundryOrOtherAmount
-	 * CorporateActionAmounts32.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#SundryOrOtherAmount
-	 * CorporateActionAmounts35.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#SundryOrOtherAmount
-	 * CorporateActionAmounts37.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts36#SundryOrOtherAmount
-	 * CorporateActionAmounts36.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts38#SundryOrOtherAmount
-	 * CorporateActionAmounts38.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#SundryOrOtherAmount
-	 * CorporateActionAmounts39.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts41#SundryOrOtherAmount
-	 * CorporateActionAmounts41.SundryOrOtherAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#SundryOrOtherAmount
-	 * CorporateActionAmounts40.SundryOrOtherAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#mmSundryOrOtherAmount
+	 * CorporateActionAmounts2.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#mmSundryOrOtherAmount
+	 * CorporateActionAmounts5.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#mmSundryOrOtherAmount
+	 * CorporateActionAmounts11.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#mmSundryOrOtherAmount
+	 * CorporateActionAmounts12.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#mmSundryOrOtherAmount
+	 * CorporateActionAmounts17.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#mmSundryOrOtherAmount
+	 * CorporateActionAmounts20.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#mmSundryOrOtherAmount
+	 * CorporateActionAmounts23.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#mmSundryOrOtherAmount
+	 * CorporateActionAmounts24.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts3#mmSundryOrOtherAmount
+	 * CorporateActionAmounts3.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts6#mmSundryOrOtherAmount
+	 * CorporateActionAmounts6.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts9#mmSundryOrOtherAmount
+	 * CorporateActionAmounts9.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts13#mmSundryOrOtherAmount
+	 * CorporateActionAmounts13.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts16#mmSundryOrOtherAmount
+	 * CorporateActionAmounts16.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts19#mmSundryOrOtherAmount
+	 * CorporateActionAmounts19.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts22#mmSundryOrOtherAmount
+	 * CorporateActionAmounts22.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts25#mmSundryOrOtherAmount
+	 * CorporateActionAmounts25.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts4#mmSundryOrOtherAmount
+	 * CorporateActionAmounts4.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts7#mmSundryOrOtherAmount
+	 * CorporateActionAmounts7.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts10#mmSundryOrOtherAmount
+	 * CorporateActionAmounts10.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts14#mmSundryOrOtherAmount
+	 * CorporateActionAmounts14.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts15#mmSundryOrOtherAmount
+	 * CorporateActionAmounts15.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts18#mmSundryOrOtherAmount
+	 * CorporateActionAmounts18.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts21#mmSundryOrOtherAmount
+	 * CorporateActionAmounts21.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts26#mmSundryOrOtherAmount
+	 * CorporateActionAmounts26.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#mmSundryOrOtherAmount
+	 * CorporateActionAmounts1.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmSundryOrOtherAmount
+	 * CorporateActionAmounts29.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts27#mmSundryOrOtherAmount
+	 * CorporateActionAmounts27.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts28#mmSundryOrOtherAmount
+	 * CorporateActionAmounts28.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts33#mmSundryOrOtherAmount
+	 * CorporateActionAmounts33.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts32#mmSundryOrOtherAmount
+	 * CorporateActionAmounts32.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#mmSundryOrOtherAmount
+	 * CorporateActionAmounts35.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmSundryOrOtherAmount
+	 * CorporateActionAmounts37.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts36#mmSundryOrOtherAmount
+	 * CorporateActionAmounts36.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts38#mmSundryOrOtherAmount
+	 * CorporateActionAmounts38.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmSundryOrOtherAmount
+	 * CorporateActionAmounts39.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts41#mmSundryOrOtherAmount
+	 * CorporateActionAmounts41.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmSundryOrOtherAmount
+	 * CorporateActionAmounts40.mmSundryOrOtherAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -655,37 +666,38 @@ public class TaxVoucher {
 	 * "Amount of money related to taxable income that cannot be categorised."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SundryOrOtherAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSundryOrOtherAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts5.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts12.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts20.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts24.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts6.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts9.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts13.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts16.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts19.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts25.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts4.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts7.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts14.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts18.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts26.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts29.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts28.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts32.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts37.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts38.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts41.SundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.SundryOrOtherAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts11.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts17.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts23.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts3.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts9.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts16.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts22.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts4.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts10.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts15.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts21.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts1.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts27.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts33.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts35.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts36.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts39.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmSundryOrOtherAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts40.mmSundryOrOtherAmount);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SundryOrOtherAmount";
 			definition = "Amount of money related to taxable income that cannot be categorised.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount creditAmount;
 	/**
 	 * Amount of money per equity allocated as the result of a tax credit.
 	 * <p>
@@ -696,126 +708,126 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#TaxCreditAmount
-	 * CorporateActionAmounts2.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#TaxCreditAmount
-	 * CorporateActionAmounts5.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#TaxCreditAmount
-	 * CorporateActionAmounts11.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#TaxCreditAmount
-	 * CorporateActionAmounts12.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#TaxCreditAmount
-	 * CorporateActionAmounts17.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#TaxCreditAmount
-	 * CorporateActionAmounts20.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#TaxCreditAmount
-	 * CorporateActionAmounts23.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#TaxCreditAmount
-	 * CorporateActionAmounts24.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts3#TaxCreditAmount
-	 * CorporateActionAmounts3.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts6#TaxCreditAmount
-	 * CorporateActionAmounts6.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts9#TaxCreditAmount
-	 * CorporateActionAmounts9.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts13#TaxCreditAmount
-	 * CorporateActionAmounts13.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts16#TaxCreditAmount
-	 * CorporateActionAmounts16.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts19#TaxCreditAmount
-	 * CorporateActionAmounts19.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts22#TaxCreditAmount
-	 * CorporateActionAmounts22.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts25#TaxCreditAmount
-	 * CorporateActionAmounts25.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts4#TaxCreditAmount
-	 * CorporateActionAmounts4.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts7#TaxCreditAmount
-	 * CorporateActionAmounts7.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts10#TaxCreditAmount
-	 * CorporateActionAmounts10.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts14#TaxCreditAmount
-	 * CorporateActionAmounts14.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts15#TaxCreditAmount
-	 * CorporateActionAmounts15.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts18#TaxCreditAmount
-	 * CorporateActionAmounts18.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts21#TaxCreditAmount
-	 * CorporateActionAmounts21.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts26#TaxCreditAmount
-	 * CorporateActionAmounts26.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#TaxCreditAmount
-	 * CorporateActionAmounts1.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TaxCreditAmount
-	 * CorporateActionAmounts29.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts27#TaxCreditAmount
-	 * CorporateActionAmounts27.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts28#TaxCreditAmount
-	 * CorporateActionAmounts28.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts33#TaxCreditAmount
-	 * CorporateActionAmounts33.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts32#TaxCreditAmount
-	 * CorporateActionAmounts32.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#TaxCreditAmount
-	 * CorporateActionAmounts35.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TaxCreditAmount
-	 * CorporateActionAmounts37.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts36#TaxCreditAmount
-	 * CorporateActionAmounts36.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts38#TaxCreditAmount
-	 * CorporateActionAmounts38.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#TaxCreditAmount
-	 * CorporateActionAmounts39.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts41#TaxCreditAmount
-	 * CorporateActionAmounts41.TaxCreditAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#TaxCreditAmount
-	 * CorporateActionAmounts40.TaxCreditAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#mmTaxCreditAmount
+	 * CorporateActionAmounts2.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#mmTaxCreditAmount
+	 * CorporateActionAmounts5.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#mmTaxCreditAmount
+	 * CorporateActionAmounts11.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#mmTaxCreditAmount
+	 * CorporateActionAmounts12.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#mmTaxCreditAmount
+	 * CorporateActionAmounts17.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#mmTaxCreditAmount
+	 * CorporateActionAmounts20.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#mmTaxCreditAmount
+	 * CorporateActionAmounts23.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#mmTaxCreditAmount
+	 * CorporateActionAmounts24.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts3#mmTaxCreditAmount
+	 * CorporateActionAmounts3.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts6#mmTaxCreditAmount
+	 * CorporateActionAmounts6.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts9#mmTaxCreditAmount
+	 * CorporateActionAmounts9.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts13#mmTaxCreditAmount
+	 * CorporateActionAmounts13.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts16#mmTaxCreditAmount
+	 * CorporateActionAmounts16.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts19#mmTaxCreditAmount
+	 * CorporateActionAmounts19.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts22#mmTaxCreditAmount
+	 * CorporateActionAmounts22.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts25#mmTaxCreditAmount
+	 * CorporateActionAmounts25.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts4#mmTaxCreditAmount
+	 * CorporateActionAmounts4.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts7#mmTaxCreditAmount
+	 * CorporateActionAmounts7.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts10#mmTaxCreditAmount
+	 * CorporateActionAmounts10.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts14#mmTaxCreditAmount
+	 * CorporateActionAmounts14.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts15#mmTaxCreditAmount
+	 * CorporateActionAmounts15.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts18#mmTaxCreditAmount
+	 * CorporateActionAmounts18.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts21#mmTaxCreditAmount
+	 * CorporateActionAmounts21.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts26#mmTaxCreditAmount
+	 * CorporateActionAmounts26.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#mmTaxCreditAmount
+	 * CorporateActionAmounts1.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTaxCreditAmount
+	 * CorporateActionAmounts29.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts27#mmTaxCreditAmount
+	 * CorporateActionAmounts27.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts28#mmTaxCreditAmount
+	 * CorporateActionAmounts28.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts33#mmTaxCreditAmount
+	 * CorporateActionAmounts33.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts32#mmTaxCreditAmount
+	 * CorporateActionAmounts32.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#mmTaxCreditAmount
+	 * CorporateActionAmounts35.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTaxCreditAmount
+	 * CorporateActionAmounts37.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts36#mmTaxCreditAmount
+	 * CorporateActionAmounts36.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts38#mmTaxCreditAmount
+	 * CorporateActionAmounts38.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmTaxCreditAmount
+	 * CorporateActionAmounts39.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts41#mmTaxCreditAmount
+	 * CorporateActionAmounts41.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmTaxCreditAmount
+	 * CorporateActionAmounts40.mmTaxCreditAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -828,31 +840,37 @@ public class TaxVoucher {
 	 * "Amount of money per equity allocated as the result of a tax credit."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CreditAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCreditAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts5.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts12.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts17.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts20.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts23.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts24.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts6.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts9.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts16.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts19.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts25.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts4.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts7.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts10.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts14.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts18.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts21.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts26.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts1.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts29.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts28.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts33.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts32.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts35.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts37.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts38.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts39.TaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts41.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts40.TaxCreditAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts11.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts17.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts23.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts3.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts13.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts19.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts25.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts10.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts15.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts21.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts1.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts27.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts33.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts35.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts36.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts39.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmTaxCreditAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts40.mmTaxCreditAmount);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditAmount";
 			definition = "Amount of money per equity allocated as the result of a tax credit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount cashAmountBroughtForward;
 	/**
 	 * Cash amount retained from previous dividend or interest payment.
 	 * <p>
@@ -863,54 +881,54 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#CashAmountBroughtForward
-	 * CorporateActionAmounts2.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#CashAmountBroughtForward
-	 * CorporateActionAmounts5.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#CashAmountBroughtForward
-	 * CorporateActionAmounts11.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#CashAmountBroughtForward
-	 * CorporateActionAmounts12.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#CashAmountBroughtForward
-	 * CorporateActionAmounts17.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#CashAmountBroughtForward
-	 * CorporateActionAmounts20.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#CashAmountBroughtForward
-	 * CorporateActionAmounts23.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#CashAmountBroughtForward
-	 * CorporateActionAmounts24.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#CashAmountBroughtForward
-	 * TaxVoucher1.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#CashAmountBroughtForward
-	 * CorporateActionAmounts29.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#CashAmountBroughtForward
-	 * CorporateActionAmounts35.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#CashAmountBroughtForward
-	 * CorporateActionAmounts37.CashAmountBroughtForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#CashAmountBroughtForward
-	 * CorporateActionAmounts39.CashAmountBroughtForward}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#mmCashAmountBroughtForward
+	 * CorporateActionAmounts2.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#mmCashAmountBroughtForward
+	 * CorporateActionAmounts5.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#mmCashAmountBroughtForward
+	 * CorporateActionAmounts11.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#mmCashAmountBroughtForward
+	 * CorporateActionAmounts12.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#mmCashAmountBroughtForward
+	 * CorporateActionAmounts17.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#mmCashAmountBroughtForward
+	 * CorporateActionAmounts20.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#mmCashAmountBroughtForward
+	 * CorporateActionAmounts23.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#mmCashAmountBroughtForward
+	 * CorporateActionAmounts24.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmCashAmountBroughtForward
+	 * TaxVoucher1.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmCashAmountBroughtForward
+	 * CorporateActionAmounts29.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#mmCashAmountBroughtForward
+	 * CorporateActionAmounts35.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmCashAmountBroughtForward
+	 * CorporateActionAmounts37.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmCashAmountBroughtForward
+	 * CorporateActionAmounts39.mmCashAmountBroughtForward}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -923,25 +941,26 @@ public class TaxVoucher {
 	 * "Cash amount retained from previous dividend or interest payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CashAmountBroughtForward = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCashAmountBroughtForward = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.CashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts5.CashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts11.CashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts12.CashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts17.CashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts20.CashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts23.CashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts24.CashAmountBroughtForward,
-					com.tools20022.repository.msg.TaxVoucher1.CashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts29.CashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts35.CashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts37.CashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts39.CashAmountBroughtForward);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts5.mmCashAmountBroughtForward,
+					com.tools20022.repository.msg.CorporateActionAmounts11.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts12.mmCashAmountBroughtForward,
+					com.tools20022.repository.msg.CorporateActionAmounts17.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts20.mmCashAmountBroughtForward,
+					com.tools20022.repository.msg.CorporateActionAmounts23.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts24.mmCashAmountBroughtForward,
+					com.tools20022.repository.msg.TaxVoucher1.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts29.mmCashAmountBroughtForward,
+					com.tools20022.repository.msg.CorporateActionAmounts35.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts37.mmCashAmountBroughtForward,
+					com.tools20022.repository.msg.CorporateActionAmounts39.mmCashAmountBroughtForward);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashAmountBroughtForward";
 			definition = "Cash amount retained from previous dividend or interest payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount cashAmountCarriedForward;
 	/**
 	 * Cash amount carried forward to next dividend or interest payment.
 	 * <p>
@@ -952,54 +971,54 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#CashAmountCarriedForward
-	 * CorporateActionAmounts2.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#CashAmountCarriedForward
-	 * CorporateActionAmounts5.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#CashAmountCarriedForward
-	 * CorporateActionAmounts11.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#CashAmountCarriedForward
-	 * CorporateActionAmounts12.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#CashAmountCarriedForward
-	 * CorporateActionAmounts17.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#CashAmountCarriedForward
-	 * CorporateActionAmounts20.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#CashAmountCarriedForward
-	 * CorporateActionAmounts23.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#CashAmountCarriedForward
-	 * CorporateActionAmounts24.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#CashAmountCarriedForward
-	 * TaxVoucher1.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#CashAmountCarriedForward
-	 * CorporateActionAmounts29.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#CashAmountCarriedForward
-	 * CorporateActionAmounts35.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#CashAmountCarriedForward
-	 * CorporateActionAmounts37.CashAmountCarriedForward}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#CashAmountCarriedForward
-	 * CorporateActionAmounts39.CashAmountCarriedForward}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#mmCashAmountCarriedForward
+	 * CorporateActionAmounts2.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#mmCashAmountCarriedForward
+	 * CorporateActionAmounts5.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#mmCashAmountCarriedForward
+	 * CorporateActionAmounts11.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#mmCashAmountCarriedForward
+	 * CorporateActionAmounts12.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#mmCashAmountCarriedForward
+	 * CorporateActionAmounts17.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#mmCashAmountCarriedForward
+	 * CorporateActionAmounts20.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#mmCashAmountCarriedForward
+	 * CorporateActionAmounts23.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#mmCashAmountCarriedForward
+	 * CorporateActionAmounts24.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmCashAmountCarriedForward
+	 * TaxVoucher1.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmCashAmountCarriedForward
+	 * CorporateActionAmounts29.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#mmCashAmountCarriedForward
+	 * CorporateActionAmounts35.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmCashAmountCarriedForward
+	 * CorporateActionAmounts37.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmCashAmountCarriedForward
+	 * CorporateActionAmounts39.mmCashAmountCarriedForward}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1012,25 +1031,26 @@ public class TaxVoucher {
 	 * "Cash amount carried forward to next dividend or interest payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CashAmountCarriedForward = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCashAmountCarriedForward = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.CashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts5.CashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts11.CashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts12.CashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts17.CashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts20.CashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts23.CashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts24.CashAmountCarriedForward,
-					com.tools20022.repository.msg.TaxVoucher1.CashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts29.CashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts35.CashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts37.CashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts39.CashAmountCarriedForward);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts5.mmCashAmountCarriedForward,
+					com.tools20022.repository.msg.CorporateActionAmounts11.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts12.mmCashAmountCarriedForward,
+					com.tools20022.repository.msg.CorporateActionAmounts17.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts20.mmCashAmountCarriedForward,
+					com.tools20022.repository.msg.CorporateActionAmounts23.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts24.mmCashAmountCarriedForward,
+					com.tools20022.repository.msg.TaxVoucher1.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts29.mmCashAmountCarriedForward,
+					com.tools20022.repository.msg.CorporateActionAmounts35.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts37.mmCashAmountCarriedForward,
+					com.tools20022.repository.msg.CorporateActionAmounts39.mmCashAmountCarriedForward);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashAmountCarriedForward";
 			definition = "Cash amount carried forward to next dividend or interest payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount notionalTaxAmount;
 	/**
 	 * Tax on the amount of cash that would have been paid when new securities
 	 * are issued in lieu of a cash dividend.
@@ -1042,51 +1062,51 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#NotionalTaxAmount
-	 * CorporateActionAmounts2.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#NotionalTaxAmount
-	 * CorporateActionAmounts5.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#NotionalTaxAmount
-	 * CorporateActionAmounts11.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#NotionalTaxAmount
-	 * CorporateActionAmounts12.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#NotionalTaxAmount
-	 * CorporateActionAmounts17.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#NotionalTaxAmount
-	 * CorporateActionAmounts20.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#NotionalTaxAmount
-	 * CorporateActionAmounts23.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#NotionalTaxAmount
-	 * CorporateActionAmounts24.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#NotionalTaxAmount
-	 * CorporateActionAmounts29.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#NotionalTaxAmount
-	 * CorporateActionAmounts35.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#NotionalTaxAmount
-	 * CorporateActionAmounts37.NotionalTaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#NotionalTaxAmount
-	 * CorporateActionAmounts39.NotionalTaxAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#mmNotionalTaxAmount
+	 * CorporateActionAmounts2.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#mmNotionalTaxAmount
+	 * CorporateActionAmounts5.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#mmNotionalTaxAmount
+	 * CorporateActionAmounts11.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#mmNotionalTaxAmount
+	 * CorporateActionAmounts12.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#mmNotionalTaxAmount
+	 * CorporateActionAmounts17.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#mmNotionalTaxAmount
+	 * CorporateActionAmounts20.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#mmNotionalTaxAmount
+	 * CorporateActionAmounts23.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#mmNotionalTaxAmount
+	 * CorporateActionAmounts24.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmNotionalTaxAmount
+	 * CorporateActionAmounts29.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#mmNotionalTaxAmount
+	 * CorporateActionAmounts35.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmNotionalTaxAmount
+	 * CorporateActionAmounts37.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmNotionalTaxAmount
+	 * CorporateActionAmounts39.mmNotionalTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1100,24 +1120,25 @@ public class TaxVoucher {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NotionalTaxAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNotionalTaxAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.NotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts5.NotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.NotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts12.NotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.NotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts20.NotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.NotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts24.NotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts29.NotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts35.NotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts37.NotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts39.NotionalTaxAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmNotionalTaxAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts11.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmNotionalTaxAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts17.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmNotionalTaxAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts23.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmNotionalTaxAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts29.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts35.mmNotionalTaxAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts37.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmNotionalTaxAmount);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotionalTaxAmount";
 			definition = "Tax on the amount of cash that would have been paid when new securities are issued in lieu of a cash dividend.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CorporateActionDistribution distribution;
 	/**
 	 * Corporate action distribution process for which tax voucher information
 	 * is provided.
@@ -1127,8 +1148,8 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#TaxVoucher
-	 * CorporateActionDistribution.TaxVoucher}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
+	 * CorporateActionDistribution.mmTaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1154,20 +1175,21 @@ public class TaxVoucher {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Distribution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDistribution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
 			definition = "Corporate action distribution process for which tax voucher information is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionDistribution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.TaxVoucher;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmTaxVoucher;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification for the tax voucher.
 	 * <p>
@@ -1177,19 +1199,21 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2#Identification
-	 * TaxVoucher2.Identification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3#Identification
-	 * TaxVoucher3.Identification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher2#mmIdentification
+	 * TaxVoucher2.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher3#mmIdentification
+	 * TaxVoucher3.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1202,19 +1226,20 @@ public class TaxVoucher {
 	 * "Unique and unambiguous identification for the tax voucher."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.Identification, com.tools20022.repository.msg.TaxVoucher3.Identification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmIdentification, com.tools20022.repository.msg.TaxVoucher3.mmIdentification);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the tax voucher.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate bargainDate;
 	/**
 	 * Date on which DRIP purchase completed.
 	 * <p>
@@ -1224,21 +1249,21 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2#BargainDate
-	 * TaxVoucher2.BargainDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3#BargainDate
-	 * TaxVoucher3.BargainDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1#BargainDate
-	 * TaxVoucher1.BargainDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2#mmBargainDate
+	 * TaxVoucher2.mmBargainDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3#mmBargainDate
+	 * TaxVoucher3.mmBargainDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1#mmBargainDate
+	 * TaxVoucher1.mmBargainDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1250,19 +1275,20 @@ public class TaxVoucher {
 	 * definition} = "Date on which DRIP purchase completed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BargainDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBargainDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.BargainDate, com.tools20022.repository.msg.TaxVoucher3.BargainDate, com.tools20022.repository.msg.TaxVoucher1.BargainDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmBargainDate, com.tools20022.repository.msg.TaxVoucher3.mmBargainDate, com.tools20022.repository.msg.TaxVoucher1.mmBargainDate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BargainDate";
 			definition = "Date on which DRIP purchase completed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate bargainSettlementDate;
 	/**
 	 * Settlement date of the DRIP purchase transaction.
 	 * <p>
@@ -1272,24 +1298,24 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher2#BargainSettlementDate
-	 * TaxVoucher2.BargainSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher3#BargainSettlementDate
-	 * TaxVoucher3.BargainSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#BargainSettlementDate
-	 * TaxVoucher1.BargainSettlementDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher2#mmBargainSettlementDate
+	 * TaxVoucher2.mmBargainSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher3#mmBargainSettlementDate
+	 * TaxVoucher3.mmBargainSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmBargainSettlementDate
+	 * TaxVoucher1.mmBargainSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1301,20 +1327,21 @@ public class TaxVoucher {
 	 * definition} = "Settlement date of the DRIP purchase transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BargainSettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBargainSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.BargainSettlementDate, com.tools20022.repository.msg.TaxVoucher3.BargainSettlementDate,
-					com.tools20022.repository.msg.TaxVoucher1.BargainSettlementDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmBargainSettlementDate, com.tools20022.repository.msg.TaxVoucher3.mmBargainSettlementDate,
+					com.tools20022.repository.msg.TaxVoucher1.mmBargainSettlementDate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BargainSettlementDate";
 			definition = "Settlement date of the DRIP purchase transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected BaseOneRate taxVoucherRate;
 	/**
 	 * Distribution rate per share.
 	 * <p>
@@ -1324,17 +1351,18 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1#TaxVoucherRate
-	 * TaxVoucher1.TaxVoucherRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmTaxVoucherRate
+	 * TaxVoucher1.mmTaxVoucherRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1346,19 +1374,20 @@ public class TaxVoucher {
 	 * definition} = "Distribution rate per share."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TaxVoucherRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTaxVoucherRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.TaxVoucherRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmTaxVoucherRate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucherRate";
 			definition = "Distribution rate per share.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected SecuritiesQuantity recordDateHolding;
 	/**
 	 * Securities holding on record date.
 	 * <p>
@@ -1367,8 +1396,8 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#TaxVoucher
-	 * SecuritiesQuantity.TaxVoucher}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
+	 * SecuritiesQuantity.mmTaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1376,18 +1405,18 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#RecordDateHolding
-	 * TaxVoucher1.RecordDateHolding}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmRecordDateHolding
+	 * TaxVoucher1.mmRecordDateHolding}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1399,21 +1428,22 @@ public class TaxVoucher {
 	 * definition} = "Securities holding on record date."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RecordDateHolding = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRecordDateHolding = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.RecordDateHolding);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmRecordDateHolding);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RecordDateHolding";
 			definition = "Securities holding on record date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.TaxVoucher;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmTaxVoucher;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected SecuritiesPricing scripDividendReinvestmentPricePerShare;
 	/**
 	 * Cost per share of new shares allotted.
 	 * <p>
@@ -1422,8 +1452,8 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#TaxVoucher
-	 * SecuritiesPricing.TaxVoucher}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
+	 * SecuritiesPricing.mmTaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1431,18 +1461,18 @@ public class TaxVoucher {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#ScripDividendReinvestmentPricePerShare
-	 * TaxVoucher1.ScripDividendReinvestmentPricePerShare}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmScripDividendReinvestmentPricePerShare
+	 * TaxVoucher1.mmScripDividendReinvestmentPricePerShare}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1454,21 +1484,22 @@ public class TaxVoucher {
 	 * definition} = "Cost per share of new shares allotted."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ScripDividendReinvestmentPricePerShare = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmScripDividendReinvestmentPricePerShare = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.ScripDividendReinvestmentPricePerShare);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmScripDividendReinvestmentPricePerShare);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ScripDividendReinvestmentPricePerShare";
 			definition = "Cost per share of new shares allotted.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.TaxVoucher;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTaxVoucher;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount allotedSharesCost;
 	/**
 	 * Total cash amount required to purchase shares allotted.
 	 * <p>
@@ -1479,18 +1510,18 @@ public class TaxVoucher {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#AllotedSharesCost
-	 * TaxVoucher1.AllotedSharesCost}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TaxVoucher TaxVoucher}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmAllotedSharesCost
+	 * TaxVoucher1.mmAllotedSharesCost}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1502,19 +1533,20 @@ public class TaxVoucher {
 	 * definition} = "Total cash amount required to purchase shares allotted."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AllotedSharesCost = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAllotedSharesCost = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.AllotedSharesCost);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmAllotedSharesCost);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AllotedSharesCost";
 			definition = "Total cash amount required to purchase shares allotted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ForeignExchangeTrade> foreignExchangeTransaction;
 	/**
 	 * Provides information about the foreign exchange transaction.
 	 * <p>
@@ -1523,8 +1555,8 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#CurrencyExchangeForTaxVoucher
-	 * ForeignExchangeTrade.CurrencyExchangeForTaxVoucher}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
+	 * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1549,7 +1581,7 @@ public class TaxVoucher {
 	 * "Provides information about the foreign exchange transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ForeignExchangeTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmForeignExchangeTransaction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
@@ -1557,31 +1589,168 @@ public class TaxVoucher {
 			name = "ForeignExchangeTransaction";
 			definition = "Provides information about the foreign exchange transaction.";
 			minOccurs = 0;
-			type_lazy = () -> ForeignExchangeTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.CurrencyExchangeForTaxVoucher;
+			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxVoucher";
 				definition = "Statement showing the amount or value of a distribution and either the tax credit to which the recipient is entitled in respect of that distribution; or the amount of tax deducted from the distribution.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.TaxVoucher, com.tools20022.repository.entity.SecuritiesTax.TaxVoucher,
-						com.tools20022.repository.entity.SecuritiesQuantity.TaxVoucher, com.tools20022.repository.entity.ForeignExchangeTrade.CurrencyExchangeForTaxVoucher,
-						com.tools20022.repository.entity.CorporateActionDistribution.TaxVoucher);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxVoucher.RequestedTaxationRate, com.tools20022.repository.entity.TaxVoucher.CreditRate, com.tools20022.repository.entity.TaxVoucher.RelatedSecurityTax,
-						com.tools20022.repository.entity.TaxVoucher.SundryOrOtherAmount, com.tools20022.repository.entity.TaxVoucher.CreditAmount, com.tools20022.repository.entity.TaxVoucher.CashAmountBroughtForward,
-						com.tools20022.repository.entity.TaxVoucher.CashAmountCarriedForward, com.tools20022.repository.entity.TaxVoucher.NotionalTaxAmount, com.tools20022.repository.entity.TaxVoucher.Distribution,
-						com.tools20022.repository.entity.TaxVoucher.Identification, com.tools20022.repository.entity.TaxVoucher.BargainDate, com.tools20022.repository.entity.TaxVoucher.BargainSettlementDate,
-						com.tools20022.repository.entity.TaxVoucher.TaxVoucherRate, com.tools20022.repository.entity.TaxVoucher.RecordDateHolding, com.tools20022.repository.entity.TaxVoucher.ScripDividendReinvestmentPricePerShare,
-						com.tools20022.repository.entity.TaxVoucher.AllotedSharesCost, com.tools20022.repository.entity.TaxVoucher.ForeignExchangeTransaction);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmTaxVoucher, com.tools20022.repository.entity.SecuritiesTax.mmTaxVoucher,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmTaxVoucher, com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher,
+						com.tools20022.repository.entity.CorporateActionDistribution.mmTaxVoucher);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxVoucher.mmRequestedTaxationRate, com.tools20022.repository.entity.TaxVoucher.mmCreditRate,
+						com.tools20022.repository.entity.TaxVoucher.mmRelatedSecurityTax, com.tools20022.repository.entity.TaxVoucher.mmSundryOrOtherAmount, com.tools20022.repository.entity.TaxVoucher.mmCreditAmount,
+						com.tools20022.repository.entity.TaxVoucher.mmCashAmountBroughtForward, com.tools20022.repository.entity.TaxVoucher.mmCashAmountCarriedForward, com.tools20022.repository.entity.TaxVoucher.mmNotionalTaxAmount,
+						com.tools20022.repository.entity.TaxVoucher.mmDistribution, com.tools20022.repository.entity.TaxVoucher.mmIdentification, com.tools20022.repository.entity.TaxVoucher.mmBargainDate,
+						com.tools20022.repository.entity.TaxVoucher.mmBargainSettlementDate, com.tools20022.repository.entity.TaxVoucher.mmTaxVoucherRate, com.tools20022.repository.entity.TaxVoucher.mmRecordDateHolding,
+						com.tools20022.repository.entity.TaxVoucher.mmScripDividendReinvestmentPricePerShare, com.tools20022.repository.entity.TaxVoucher.mmAllotedSharesCost,
+						com.tools20022.repository.entity.TaxVoucher.mmForeignExchangeTransaction);
 				derivationComponent_lazy = () -> Arrays.asList(TaxVoucher2.mmObject(), TaxVoucher3.mmObject(), TaxVoucher1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRequestedTaxationRate() {
+		return requestedTaxationRate;
+	}
+
+	public void setRequestedTaxationRate(PercentageRate requestedTaxationRate) {
+		this.requestedTaxationRate = requestedTaxationRate;
+	}
+
+	public PercentageRate getCreditRate() {
+		return creditRate;
+	}
+
+	public void setCreditRate(PercentageRate creditRate) {
+		this.creditRate = creditRate;
+	}
+
+	public List<SecuritiesTax> getRelatedSecurityTax() {
+		return relatedSecurityTax;
+	}
+
+	public void setRelatedSecurityTax(List<com.tools20022.repository.entity.SecuritiesTax> relatedSecurityTax) {
+		this.relatedSecurityTax = relatedSecurityTax;
+	}
+
+	public CurrencyAndAmount getSundryOrOtherAmount() {
+		return sundryOrOtherAmount;
+	}
+
+	public void setSundryOrOtherAmount(CurrencyAndAmount sundryOrOtherAmount) {
+		this.sundryOrOtherAmount = sundryOrOtherAmount;
+	}
+
+	public CurrencyAndAmount getCreditAmount() {
+		return creditAmount;
+	}
+
+	public void setCreditAmount(CurrencyAndAmount creditAmount) {
+		this.creditAmount = creditAmount;
+	}
+
+	public CurrencyAndAmount getCashAmountBroughtForward() {
+		return cashAmountBroughtForward;
+	}
+
+	public void setCashAmountBroughtForward(CurrencyAndAmount cashAmountBroughtForward) {
+		this.cashAmountBroughtForward = cashAmountBroughtForward;
+	}
+
+	public CurrencyAndAmount getCashAmountCarriedForward() {
+		return cashAmountCarriedForward;
+	}
+
+	public void setCashAmountCarriedForward(CurrencyAndAmount cashAmountCarriedForward) {
+		this.cashAmountCarriedForward = cashAmountCarriedForward;
+	}
+
+	public CurrencyAndAmount getNotionalTaxAmount() {
+		return notionalTaxAmount;
+	}
+
+	public void setNotionalTaxAmount(CurrencyAndAmount notionalTaxAmount) {
+		this.notionalTaxAmount = notionalTaxAmount;
+	}
+
+	public CorporateActionDistribution getDistribution() {
+		return distribution;
+	}
+
+	public void setDistribution(com.tools20022.repository.entity.CorporateActionDistribution distribution) {
+		this.distribution = distribution;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODate getBargainDate() {
+		return bargainDate;
+	}
+
+	public void setBargainDate(ISODate bargainDate) {
+		this.bargainDate = bargainDate;
+	}
+
+	public ISODate getBargainSettlementDate() {
+		return bargainSettlementDate;
+	}
+
+	public void setBargainSettlementDate(ISODate bargainSettlementDate) {
+		this.bargainSettlementDate = bargainSettlementDate;
+	}
+
+	public BaseOneRate getTaxVoucherRate() {
+		return taxVoucherRate;
+	}
+
+	public void setTaxVoucherRate(BaseOneRate taxVoucherRate) {
+		this.taxVoucherRate = taxVoucherRate;
+	}
+
+	public SecuritiesQuantity getRecordDateHolding() {
+		return recordDateHolding;
+	}
+
+	public void setRecordDateHolding(com.tools20022.repository.entity.SecuritiesQuantity recordDateHolding) {
+		this.recordDateHolding = recordDateHolding;
+	}
+
+	public SecuritiesPricing getScripDividendReinvestmentPricePerShare() {
+		return scripDividendReinvestmentPricePerShare;
+	}
+
+	public void setScripDividendReinvestmentPricePerShare(com.tools20022.repository.entity.SecuritiesPricing scripDividendReinvestmentPricePerShare) {
+		this.scripDividendReinvestmentPricePerShare = scripDividendReinvestmentPricePerShare;
+	}
+
+	public ActiveCurrencyAndAmount getAllotedSharesCost() {
+		return allotedSharesCost;
+	}
+
+	public void setAllotedSharesCost(ActiveCurrencyAndAmount allotedSharesCost) {
+		this.allotedSharesCost = allotedSharesCost;
+	}
+
+	public List<ForeignExchangeTrade> getForeignExchangeTransaction() {
+		return foreignExchangeTransaction;
+	}
+
+	public void setForeignExchangeTransaction(List<com.tools20022.repository.entity.ForeignExchangeTrade> foreignExchangeTransaction) {
+		this.foreignExchangeTransaction = foreignExchangeTransaction;
 	}
 }

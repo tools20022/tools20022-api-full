@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyReport1#PartyIdentification
- * PartyReport1.PartyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyReport1#PartyOrError
- * PartyReport1.PartyOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyReport1#mmPartyIdentification
+ * PartyReport1.mmPartyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyReport1#mmPartyOrError
+ * PartyReport1.mmPartyOrError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification3 partyIdentification;
 	/**
 	 * Unique identification to unambiguously identify the party within the
 	 * system.
@@ -88,7 +89,7 @@ public class PartyReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyReport1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class PartyReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification to unambiguously identify the party within the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
+	protected PartyOrBusinessError1Choice partyOrError;
 	/**
 	 * Identifies the returned party reference data or error information.
 	 * <p>
@@ -128,7 +130,7 @@ public class PartyReport1 {
 	 * "Identifies the returned party reference data or error information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyReport1.mmObject();
 			isDerived = false;
@@ -136,23 +138,39 @@ public class PartyReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyOrError";
 			definition = "Identifies the returned party reference data or error information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyOrBusinessError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyOrBusinessError1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyReport1.PartyIdentification, com.tools20022.repository.msg.PartyReport1.PartyOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyReport1.mmPartyIdentification, com.tools20022.repository.msg.PartyReport1.mmPartyOrError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyReport1";
 				definition = "Report information about party reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification3 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public PartyOrBusinessError1Choice getPartyOrError() {
+		return partyOrError;
+	}
+
+	public void setPartyOrError(PartyOrBusinessError1Choice partyOrError) {
+		this.partyOrError = partyOrError;
 	}
 }

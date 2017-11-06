@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#Initial
- * CollateralSubstitutionSequence1Code.Initial}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#mmInitial
+ * CollateralSubstitutionSequence1Code.mmInitial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#Updated
- * CollateralSubstitutionSequence1Code.Updated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#mmUpdated
+ * CollateralSubstitutionSequence1Code.mmUpdated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	 * name} = "Initial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Initial = new MMCode() {
+	public static final MMCode mmInitial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
@@ -105,7 +105,7 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	 * name} = "Updated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Updated = new MMCode() {
+	public static final MMCode mmUpdated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Updated";
@@ -116,12 +116,12 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionSequence1Code";
 				definition = "Indicates whether the collateral substitution request is new or updated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.Initial, com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.Updated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.mmInitial, com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.mmUpdated);
 				trace_lazy = () -> CollateralSubstitutionSequenceCode.mmObject();
 			}
 		});

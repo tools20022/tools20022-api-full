@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.entity.Limit;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a limit.
@@ -36,38 +37,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#SystemIdentification
- * LimitSearchCriteria3.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmSystemIdentification
+ * LimitSearchCriteria3.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#BilateralLimitCounterpartyIdentification
- * LimitSearchCriteria3.BilateralLimitCounterpartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmBilateralLimitCounterpartyIdentification
+ * LimitSearchCriteria3.mmBilateralLimitCounterpartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#DefaultLimitType
- * LimitSearchCriteria3.DefaultLimitType}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmDefaultLimitType
+ * LimitSearchCriteria3.mmDefaultLimitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#CurrentLimitType
- * LimitSearchCriteria3.CurrentLimitType}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmCurrentLimitType
+ * LimitSearchCriteria3.mmCurrentLimitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#AccountOwner
- * LimitSearchCriteria3.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmAccountOwner
+ * LimitSearchCriteria3.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#AccountIdentification
- * LimitSearchCriteria3.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmAccountIdentification
+ * LimitSearchCriteria3.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#UsedAmount
- * LimitSearchCriteria3.UsedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmUsedAmount
+ * LimitSearchCriteria3.mmUsedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#UsedPercentage
- * LimitSearchCriteria3.UsedPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmUsedPercentage
+ * LimitSearchCriteria3.mmUsedPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#LimitCurrency
- * LimitSearchCriteria3.LimitCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmLimitCurrency
+ * LimitSearchCriteria3.mmLimitCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#LimitAmount
- * LimitSearchCriteria3.LimitAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmLimitAmount
+ * LimitSearchCriteria3.mmLimitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#LimitValidAsOfDate
- * LimitSearchCriteria3.LimitValidAsOfDate}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmLimitValidAsOfDate
+ * LimitSearchCriteria3.mmLimitValidAsOfDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -75,8 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitSearchCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemIdentification2Choice systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -102,8 +104,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#CashClearingSystem
-	 * TransactionAdministrator.CashClearingSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashClearingSystem
+	 * TransactionAdministrator.mmCashClearingSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -122,21 +124,22 @@ public class LimitSearchCriteria3 {
 	 * definition} = "Identification of a particular cash clearing system. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.CashClearingSystem;
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemIdentification2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> bilateralLimitCounterpartyIdentification;
 	/**
 	 * Unique and unambiguous identification of a member within a system,
 	 * assigned using the member identification scheme of the system.
@@ -150,8 +153,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,20 +175,21 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected List<LimitType1Choice> defaultLimitType;
 	/**
 	 * Type of limit as set by default in the system. The default limit is
 	 * applicable by the system unless otherwise instructed.
@@ -200,7 +204,7 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Type Limit.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmType Limit.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,10 +225,10 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultLimitType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Type;
 			isDerived = false;
 			xmlTag = "DfltLmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,6 +238,7 @@ public class LimitSearchCriteria3 {
 			complexType_lazy = () -> LimitType1Choice.mmObject();
 		}
 	};
+	protected List<LimitType1Choice> currentLimitType;
 	/**
 	 * Type of limit applied by the system at the present time.
 	 * <p>
@@ -247,7 +252,7 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Type Limit.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmType Limit.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -266,10 +271,10 @@ public class LimitSearchCriteria3 {
 	 * definition} = "Type of limit applied by the system at the present time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentLimitType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Type;
 			isDerived = false;
 			xmlTag = "CurLmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,6 +284,7 @@ public class LimitSearchCriteria3 {
 			complexType_lazy = () -> LimitType1Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountOwner;
 	/**
 	 * Owner of the account which is being queried.
 	 * <p>
@@ -291,8 +297,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,21 +317,22 @@ public class LimitSearchCriteria3 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -339,8 +346,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -361,21 +368,22 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected AmountRange2Choice usedAmount;
 	/**
 	 * Actual usage of the limit expressed as an amount.
 	 * <p>
@@ -387,8 +395,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#UsedAmount
-	 * Limit.UsedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmUsedAmount
+	 * Limit.mmUsedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -407,21 +415,22 @@ public class LimitSearchCriteria3 {
 	 * definition} = "Actual usage of the limit expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UsedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUsedAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmUsedAmount;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.UsedAmount;
 			isDerived = false;
 			xmlTag = "UsdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountRange2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AmountRange2Choice.mmObject();
 		}
 	};
+	protected PercentageRange1Choice usedPercentage;
 	/**
 	 * Actual usage of the limit expressed as a percentage.
 	 * <p>
@@ -435,8 +444,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#UsedPercentage
-	 * Limit.UsedPercentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmUsedPercentage
+	 * Limit.mmUsedPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -455,20 +464,21 @@ public class LimitSearchCriteria3 {
 	 * definition} = "Actual usage of the limit expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UsedPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUsedPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmUsedPercentage;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.UsedPercentage;
 			isDerived = false;
 			xmlTag = "UsdPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedPercentage";
 			definition = "Actual usage of the limit expressed as a percentage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PercentageRange1Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode limitCurrency;
 	/**
 	 * Currency unit used to specify the limit amount.
 	 * <p>
@@ -482,8 +492,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Currency
-	 * Limit.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmCurrency
+	 * Limit.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -502,20 +512,21 @@ public class LimitSearchCriteria3 {
 	 * definition} = "Currency unit used to specify the limit amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCurrency;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Currency;
 			isDerived = false;
 			xmlTag = "LmtCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCurrency";
 			definition = "Currency unit used to specify the limit amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected AmountRange2Choice limitAmount;
 	/**
 	 * Amount of money of the limit, expressed in an eligible currency.
 	 * <p>
@@ -527,7 +538,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -547,21 +559,22 @@ public class LimitSearchCriteria3 {
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "LmtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitAmount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountRange2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AmountRange2Choice.mmObject();
 		}
 	};
+	protected DateAndPeriod2Choice limitValidAsOfDate;
 	/**
 	 * Range of dates when the limit becomes valid.
 	 * <p>
@@ -575,8 +588,8 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -595,17 +608,17 @@ public class LimitSearchCriteria3 {
 	 * definition} = "Range of dates when the limit becomes valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitValidAsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitValidAsOfDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> LimitSearchCriteria3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "LmtVldAsOfDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitValidAsOfDate";
 			definition = "Range of dates when the limit becomes valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndPeriod2Choice.mmObject();
 		}
 	};
@@ -613,17 +626,105 @@ public class LimitSearchCriteria3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria3.SystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria3.BilateralLimitCounterpartyIdentification,
-						com.tools20022.repository.msg.LimitSearchCriteria3.DefaultLimitType, com.tools20022.repository.msg.LimitSearchCriteria3.CurrentLimitType, com.tools20022.repository.msg.LimitSearchCriteria3.AccountOwner,
-						com.tools20022.repository.msg.LimitSearchCriteria3.AccountIdentification, com.tools20022.repository.msg.LimitSearchCriteria3.UsedAmount, com.tools20022.repository.msg.LimitSearchCriteria3.UsedPercentage,
-						com.tools20022.repository.msg.LimitSearchCriteria3.LimitCurrency, com.tools20022.repository.msg.LimitSearchCriteria3.LimitAmount, com.tools20022.repository.msg.LimitSearchCriteria3.LimitValidAsOfDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria3.mmSystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria3.mmBilateralLimitCounterpartyIdentification,
+						com.tools20022.repository.msg.LimitSearchCriteria3.mmDefaultLimitType, com.tools20022.repository.msg.LimitSearchCriteria3.mmCurrentLimitType, com.tools20022.repository.msg.LimitSearchCriteria3.mmAccountOwner,
+						com.tools20022.repository.msg.LimitSearchCriteria3.mmAccountIdentification, com.tools20022.repository.msg.LimitSearchCriteria3.mmUsedAmount, com.tools20022.repository.msg.LimitSearchCriteria3.mmUsedPercentage,
+						com.tools20022.repository.msg.LimitSearchCriteria3.mmLimitCurrency, com.tools20022.repository.msg.LimitSearchCriteria3.mmLimitAmount, com.tools20022.repository.msg.LimitSearchCriteria3.mmLimitValidAsOfDate);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitSearchCriteria3";
 				definition = "Defines the criteria used to search for a limit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemIdentification2Choice getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(SystemIdentification2Choice systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public List<BranchAndFinancialInstitutionIdentification5> getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification;
+	}
+
+	public void setBilateralLimitCounterpartyIdentification(List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> bilateralLimitCounterpartyIdentification) {
+		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
+	}
+
+	public List<LimitType1Choice> getDefaultLimitType() {
+		return defaultLimitType;
+	}
+
+	public void setDefaultLimitType(List<LimitType1Choice> defaultLimitType) {
+		this.defaultLimitType = defaultLimitType;
+	}
+
+	public List<LimitType1Choice> getCurrentLimitType() {
+		return currentLimitType;
+	}
+
+	public void setCurrentLimitType(List<LimitType1Choice> currentLimitType) {
+		this.currentLimitType = currentLimitType;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public AccountIdentification4Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public AmountRange2Choice getUsedAmount() {
+		return usedAmount;
+	}
+
+	public void setUsedAmount(AmountRange2Choice usedAmount) {
+		this.usedAmount = usedAmount;
+	}
+
+	public PercentageRange1Choice getUsedPercentage() {
+		return usedPercentage;
+	}
+
+	public void setUsedPercentage(PercentageRange1Choice usedPercentage) {
+		this.usedPercentage = usedPercentage;
+	}
+
+	public ActiveCurrencyCode getLimitCurrency() {
+		return limitCurrency;
+	}
+
+	public void setLimitCurrency(ActiveCurrencyCode limitCurrency) {
+		this.limitCurrency = limitCurrency;
+	}
+
+	public AmountRange2Choice getLimitAmount() {
+		return limitAmount;
+	}
+
+	public void setLimitAmount(AmountRange2Choice limitAmount) {
+		this.limitAmount = limitAmount;
+	}
+
+	public DateAndPeriod2Choice getLimitValidAsOfDate() {
+		return limitValidAsOfDate;
+	}
+
+	public void setLimitValidAsOfDate(DateAndPeriod2Choice limitValidAsOfDate) {
+		this.limitValidAsOfDate = limitValidAsOfDate;
 	}
 }

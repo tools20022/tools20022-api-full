@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.FrequencyCode FrequencyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#Daily
- * Frequency4Code.Daily}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#Monthly
- * Frequency4Code.Monthly}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#Annual
- * Frequency4Code.Annual}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#mmDaily
+ * Frequency4Code.mmDaily}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#mmMonthly
+ * Frequency4Code.mmMonthly}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#mmAnnual
+ * Frequency4Code.mmAnnual}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class Frequency4Code extends FrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode Daily = new MMCode() {
+	public static final MMCode mmDaily = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
@@ -104,7 +104,7 @@ public class Frequency4Code extends FrequencyCode {
 	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
-	public static final MMCode Monthly = new MMCode() {
+	public static final MMCode mmMonthly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
@@ -127,7 +127,7 @@ public class Frequency4Code extends FrequencyCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Annual = new MMCode() {
+	public static final MMCode mmAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
@@ -138,12 +138,12 @@ public class Frequency4Code extends FrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Frequency4Code";
 				definition = "Period unit between consecutive payments (for example day, month, year).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Frequency4Code.Daily, com.tools20022.repository.codeset.Frequency4Code.Monthly, com.tools20022.repository.codeset.Frequency4Code.Annual);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Frequency4Code.mmDaily, com.tools20022.repository.codeset.Frequency4Code.mmMonthly, com.tools20022.repository.codeset.Frequency4Code.mmAnnual);
 				trace_lazy = () -> FrequencyCode.mmObject();
 			}
 		});

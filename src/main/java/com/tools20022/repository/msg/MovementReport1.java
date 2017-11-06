@@ -34,23 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MovementReport1#QueryReference
- * MovementReport1.QueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MovementReport1#ReportIdentification
- * MovementReport1.ReportIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MovementReport1#QueryType
- * MovementReport1.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.MovementReport1#mmQueryReference
+ * MovementReport1.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MovementReport1#ActivityIndicator
- * MovementReport1.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MovementReport1#mmReportIdentification
+ * MovementReport1.mmReportIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MovementReport1#mmQueryType
+ * MovementReport1.mmQueryType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MovementReport1#mmActivityIndicator
+ * MovementReport1.mmActivityIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MovementReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queryReference;
 	/**
 	 * Identification of the Query message sent to request this statement.
 	 * <p>
@@ -92,7 +94,7 @@ public class MovementReport1 {
 	 * "Identification of the Query message sent to request this statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MovementReport1.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class MovementReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the Query message sent to request this statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text reportIdentification;
 	/**
 	 * Reference common to all pages of a report.
 	 * <p>
@@ -132,7 +135,7 @@ public class MovementReport1 {
 	 * definition} = "Reference common to all pages of a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MovementReport1.mmObject();
 			isDerived = false;
@@ -140,11 +143,12 @@ public class MovementReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference common to all pages of a report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected MovementResponseType1Code queryType;
 	/**
 	 * Defines the type of query.
 	 * <p>
@@ -173,7 +177,7 @@ public class MovementReport1 {
 	 * definition} = "Defines the type of query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MovementReport1.mmObject();
 			isDerived = false;
@@ -181,11 +185,12 @@ public class MovementReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -217,7 +222,7 @@ public class MovementReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MovementReport1.mmObject();
 			isDerived = false;
@@ -225,8 +230,8 @@ public class MovementReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -234,14 +239,46 @@ public class MovementReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MovementReport1.QueryReference, com.tools20022.repository.msg.MovementReport1.ReportIdentification,
-						com.tools20022.repository.msg.MovementReport1.QueryType, com.tools20022.repository.msg.MovementReport1.ActivityIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MovementReport1.mmQueryReference, com.tools20022.repository.msg.MovementReport1.mmReportIdentification,
+						com.tools20022.repository.msg.MovementReport1.mmQueryType, com.tools20022.repository.msg.MovementReport1.mmActivityIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MovementReport1";
 				definition = "Characteristics of the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(Max35Text queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public MovementResponseType1Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(MovementResponseType1Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
 	}
 }

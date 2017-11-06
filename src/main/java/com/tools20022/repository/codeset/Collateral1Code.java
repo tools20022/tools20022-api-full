@@ -32,18 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.CollateralCode CollateralCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Collateral1Code#Collateral
- * Collateral1Code.Collateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Collateral1Code#NotCollateral
- * Collateral1Code.NotCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.Collateral1Code#mmCollateral
+ * Collateral1Code.mmCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Collateral1Code#mmNotCollateral
+ * Collateral1Code.mmNotCollateral}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +74,7 @@ public class Collateral1Code extends CollateralCode {
 	 * name} = "Collateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Collateral = new MMCode() {
+	public static final MMCode mmCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
@@ -96,7 +97,7 @@ public class Collateral1Code extends CollateralCode {
 	 * name} = "NotCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotCollateral = new MMCode() {
+	public static final MMCode mmNotCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCollateral";
@@ -107,11 +108,11 @@ public class Collateral1Code extends CollateralCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Collateral1Code";
 				definition = "Specifies whether the item is used as collateral.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Collateral1Code.Collateral, com.tools20022.repository.codeset.Collateral1Code.NotCollateral);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Collateral1Code.mmCollateral, com.tools20022.repository.codeset.Collateral1Code.mmNotCollateral);
 				trace_lazy = () -> CollateralCode.mmObject();
 			}
 		});

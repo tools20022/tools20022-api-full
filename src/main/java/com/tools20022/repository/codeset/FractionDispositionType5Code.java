@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#IssueFraction
- * FractionDispositionType5Code.IssueFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#mmIssueFraction
+ * FractionDispositionType5Code.mmIssueFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#RoundDown
- * FractionDispositionType5Code.RoundDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#mmRoundDown
+ * FractionDispositionType5Code.mmRoundDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#RoundUp
- * FractionDispositionType5Code.RoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#mmRoundUp
+ * FractionDispositionType5Code.mmRoundUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#RoundToNearest
- * FractionDispositionType5Code.RoundToNearest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#mmRoundToNearest
+ * FractionDispositionType5Code.mmRoundToNearest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#Unknown
- * FractionDispositionType5Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType5Code#mmUnknown
+ * FractionDispositionType5Code.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class FractionDispositionType5Code extends FractionDispositionTypeCode {
 	 * name} = "IssueFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssueFraction = new MMCode() {
+	public static final MMCode mmIssueFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
@@ -117,7 +117,7 @@ public class FractionDispositionType5Code extends FractionDispositionTypeCode {
 	 * name} = "RoundDown"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDown = new MMCode() {
+	public static final MMCode mmRoundDown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
@@ -140,7 +140,7 @@ public class FractionDispositionType5Code extends FractionDispositionTypeCode {
 	 * name} = "RoundUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUp = new MMCode() {
+	public static final MMCode mmRoundUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
@@ -163,7 +163,7 @@ public class FractionDispositionType5Code extends FractionDispositionTypeCode {
 	 * name} = "RoundToNearest"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundToNearest = new MMCode() {
+	public static final MMCode mmRoundToNearest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundToNearest";
@@ -186,7 +186,7 @@ public class FractionDispositionType5Code extends FractionDispositionTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -197,14 +197,14 @@ public class FractionDispositionType5Code extends FractionDispositionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType5Code";
 				definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType5Code.IssueFraction, com.tools20022.repository.codeset.FractionDispositionType5Code.RoundDown,
-						com.tools20022.repository.codeset.FractionDispositionType5Code.RoundUp, com.tools20022.repository.codeset.FractionDispositionType5Code.RoundToNearest,
-						com.tools20022.repository.codeset.FractionDispositionType5Code.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType5Code.mmIssueFraction, com.tools20022.repository.codeset.FractionDispositionType5Code.mmRoundDown,
+						com.tools20022.repository.codeset.FractionDispositionType5Code.mmRoundUp, com.tools20022.repository.codeset.FractionDispositionType5Code.mmRoundToNearest,
+						com.tools20022.repository.codeset.FractionDispositionType5Code.mmUnknown);
 				trace_lazy = () -> FractionDispositionTypeCode.mmObject();
 			}
 		});

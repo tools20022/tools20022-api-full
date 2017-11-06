@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherIdentification2SD1#PlaceAndName
- * OtherIdentification2SD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherIdentification2SD1#mmPlaceAndName
+ * OtherIdentification2SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherIdentification2SD1#LocalLanguageSecurityName
- * OtherIdentification2SD1.LocalLanguageSecurityName}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherIdentification2SD1#mmLocalLanguageSecurityName
+ * OtherIdentification2SD1.mmLocalLanguageSecurityName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherIdentification2SD1#AbbreviatedLocalLanguageSecurityName
- * OtherIdentification2SD1.AbbreviatedLocalLanguageSecurityName}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherIdentification2SD1#mmAbbreviatedLocalLanguageSecurityName
+ * OtherIdentification2SD1.mmAbbreviatedLocalLanguageSecurityName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherIdentification2SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -102,7 +103,7 @@ public class OtherIdentification2SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OtherIdentification2SD1.mmObject();
 			isDerived = false;
@@ -110,11 +111,12 @@ public class OtherIdentification2SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max240Text localLanguageSecurityName;
 	/**
 	 * Full and formal name of underlying securities in the local language.
 	 * <p>
@@ -127,8 +129,8 @@ public class OtherIdentification2SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +150,21 @@ public class OtherIdentification2SD1 {
 	 * "Full and formal name of underlying securities in the local language."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification2SD1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "LclLangSctyNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalLanguageSecurityName";
 			definition = "Full and formal name of underlying securities in the local language.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
+	protected Max240Text abbreviatedLocalLanguageSecurityName;
 	/**
 	 * Abbreviated name of underlying securities in the local language. <br>
 	 * In case of non-listed securities, it will be a full local language
@@ -194,7 +197,7 @@ public class OtherIdentification2SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OtherIdentification2SD1.mmObject();
 			isDerived = false;
@@ -202,8 +205,8 @@ public class OtherIdentification2SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
 			definition = "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n 銘柄名（銘柄略称";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
@@ -211,15 +214,39 @@ public class OtherIdentification2SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification2SD1.PlaceAndName, com.tools20022.repository.msg.OtherIdentification2SD1.LocalLanguageSecurityName,
-						com.tools20022.repository.msg.OtherIdentification2SD1.AbbreviatedLocalLanguageSecurityName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification2SD1.mmPlaceAndName, com.tools20022.repository.msg.OtherIdentification2SD1.mmLocalLanguageSecurityName,
+						com.tools20022.repository.msg.OtherIdentification2SD1.mmAbbreviatedLocalLanguageSecurityName);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification2SD1";
 				definition = "Extension to  identify an underlying security by proprietary or domestic identification scheme";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max240Text getLocalLanguageSecurityName() {
+		return localLanguageSecurityName;
+	}
+
+	public void setLocalLanguageSecurityName(Max240Text localLanguageSecurityName) {
+		this.localLanguageSecurityName = localLanguageSecurityName;
+	}
+
+	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
+		return abbreviatedLocalLanguageSecurityName;
+	}
+
+	public void setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
+		this.abbreviatedLocalLanguageSecurityName = abbreviatedLocalLanguageSecurityName;
 	}
 }

@@ -33,10 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccountAndEntry1#Account
- * CashAccountAndEntry1.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccountAndEntry1#Entry
- * CashAccountAndEntry1.Entry}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountAndEntry1#mmAccount
+ * CashAccountAndEntry1.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountAndEntry1#mmEntry
+ * CashAccountAndEntry1.mmEntry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountAndEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount25 account;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -92,21 +93,22 @@ public class CashAccountAndEntry1 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashAccountAndEntry1.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> CashAccountAndEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	protected CashEntry1 entry;
 	/**
 	 * Posting of an item to a cash account, in the context of a cash
 	 * transaction, that results in an increase or decrease to the balance of
@@ -119,8 +121,8 @@ public class CashAccountAndEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashEntry
-	 * CashAccount.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashEntry
+	 * CashAccount.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,33 +143,49 @@ public class CashAccountAndEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Entry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashEntry;
 			componentContext_lazy = () -> CashAccountAndEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashEntry;
 			isDerived = false;
 			xmlTag = "Ntry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entry";
 			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashEntry1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashEntry1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAndEntry1.Account, com.tools20022.repository.msg.CashAccountAndEntry1.Entry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAndEntry1.mmAccount, com.tools20022.repository.msg.CashAccountAndEntry1.mmEntry);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountAndEntry1";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount25 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = account;
+	}
+
+	public CashEntry1 getEntry() {
+		return entry;
+	}
+
+	public void setEntry(com.tools20022.repository.msg.CashEntry1 entry) {
+		this.entry = entry;
 	}
 }

@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RateName1#Issuer
- * RateName1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateName1#RateName
- * RateName1.RateName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateName1#mmIssuer
+ * RateName1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateName1#mmRateName
+ * RateName1.mmRateName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max8Text issuer;
 	/**
 	 * Entity that assigns the identification.
 	 * <p>
@@ -86,7 +87,7 @@ public class RateName1 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateName1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class RateName1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected Max35Text rateName;
 	/**
 	 * Rate Name specifies the reference rate or basis rate on which a variable
 	 * rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
@@ -128,7 +130,7 @@ public class RateName1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateName1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class RateName1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateName";
 			definition = "Rate Name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class RateName1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateName1.Issuer, com.tools20022.repository.msg.RateName1.RateName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateName1.mmIssuer, com.tools20022.repository.msg.RateName1.mmRateName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateName1";
 				definition = "Rate name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max8Text getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max8Text issuer) {
+		this.issuer = issuer;
+	}
+
+	public Max35Text getRateName() {
+		return rateName;
+	}
+
+	public void setRateName(Max35Text rateName) {
+		this.rateName = rateName;
 	}
 }

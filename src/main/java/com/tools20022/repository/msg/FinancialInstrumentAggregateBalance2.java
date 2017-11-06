@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Aggregated position held in a securities account for a specified financial
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2#SettledBalance
- * FinancialInstrumentAggregateBalance2.SettledBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2#mmSettledBalance
+ * FinancialInstrumentAggregateBalance2.mmSettledBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2#TradedBalance
- * FinancialInstrumentAggregateBalance2.TradedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2#mmTradedBalance
+ * FinancialInstrumentAggregateBalance2.mmTradedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2#BalanceBreakdown
- * FinancialInstrumentAggregateBalance2.BalanceBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2#mmBalanceBreakdown
+ * FinancialInstrumentAggregateBalance2.mmBalanceBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAggregateBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1Choice settledBalance;
 	/**
 	 * Balance of settled transactions.
 	 * <p>
@@ -101,21 +103,22 @@ public class FinancialInstrumentAggregateBalance2 {
 	 * definition} = "Balance of settled transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettledBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettledBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "SttldBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledBalance";
 			definition = "Balance of settled transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice tradedBalance;
 	/**
 	 * Balance of settled transactions and transactions pending settlement.
 	 * <p>
@@ -149,21 +152,22 @@ public class FinancialInstrumentAggregateBalance2 {
 	 * "Balance of settled transactions and transactions pending settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "TraddBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradedBalance";
 			definition = "Balance of settled transactions and transactions pending settlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SubBalanceBreakdown1> balanceBreakdown;
 	/**
 	 * Breakdown of the balances of holdings into sub-balances.
 	 * <p>
@@ -195,33 +199,57 @@ public class FinancialInstrumentAggregateBalance2 {
 	 * definition} = "Breakdown of the balances of holdings into sub-balances."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceBreakdown = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "BalBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceBreakdown";
 			definition = "Breakdown of the balances of holdings into sub-balances.";
 			minOccurs = 0;
-			type_lazy = () -> SubBalanceBreakdown1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubBalanceBreakdown1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.SettledBalance, com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.TradedBalance,
-						com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.BalanceBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmSettledBalance, com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmTradedBalance,
+						com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmBalanceBreakdown);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAggregateBalance2";
 				definition = "Aggregated position held in a securities account for a specified financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1Choice getSettledBalance() {
+		return settledBalance;
+	}
+
+	public void setSettledBalance(FinancialInstrumentQuantity1Choice settledBalance) {
+		this.settledBalance = settledBalance;
+	}
+
+	public FinancialInstrumentQuantity1Choice getTradedBalance() {
+		return tradedBalance;
+	}
+
+	public void setTradedBalance(FinancialInstrumentQuantity1Choice tradedBalance) {
+		this.tradedBalance = tradedBalance;
+	}
+
+	public List<SubBalanceBreakdown1> getBalanceBreakdown() {
+		return balanceBreakdown;
+	}
+
+	public void setBalanceBreakdown(List<com.tools20022.repository.msg.SubBalanceBreakdown1> balanceBreakdown) {
+		this.balanceBreakdown = balanceBreakdown;
 	}
 }

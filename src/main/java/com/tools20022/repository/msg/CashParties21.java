@@ -35,13 +35,13 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashParties21#Creditor
- * CashParties21.Creditor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashParties21#CreditorAgent
- * CashParties21.CreditorAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashParties21#mmCreditor
+ * CashParties21.mmCreditor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashParties21#mmCreditorAgent
+ * CashParties21.mmCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashParties21#MarketClaimCounterparty
- * CashParties21.MarketClaimCounterparty}</li>
+ * {@linkplain com.tools20022.repository.msg.CashParties21#mmMarketClaimCounterparty
+ * CashParties21.mmMarketClaimCounterparty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,6 +76,7 @@ import java.util.function.Supplier;
 public class CashParties21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentificationAndAccount52 creditor;
 	/**
 	 * Party to which an amount of money is due.
 	 * <p>
@@ -88,8 +89,8 @@ public class CashParties21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,34 +109,35 @@ public class CashParties21 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashParties28#Creditor
-	 * CashParties28.Creditor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashParties28#mmCreditor
+	 * CashParties28.mmCreditor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashParties10#Creditor
-	 * CashParties10.Creditor}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashParties10#mmCreditor
+	 * CashParties10.mmCreditor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Creditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashParties21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties10.Creditor;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties28.Creditor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties28.mmCreditor);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties10.mmCreditor;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount52.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount52.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount101 creditorAgent;
 	/**
 	 * Financial institution servicing an account for the creditor.
 	 * <p>
@@ -148,8 +150,8 @@ public class CashParties21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,34 +172,35 @@ public class CashParties21 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashParties28#CreditorAgent
-	 * CashParties28.CreditorAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashParties28#mmCreditorAgent
+	 * CashParties28.mmCreditorAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashParties10#CreditorAgent
-	 * CashParties10.CreditorAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashParties10#mmCreditorAgent
+	 * CashParties10.mmCreditorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashParties21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties10.CreditorAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties28.CreditorAgent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties28.mmCreditorAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties10.mmCreditorAgent;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount101.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount101.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount52 marketClaimCounterparty;
 	/**
 	 * Party that has reimbursed the account owner with funds to which they were
 	 * legally entitled.
@@ -211,8 +214,8 @@ public class CashParties21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -234,41 +237,42 @@ public class CashParties21 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashParties28#MarketClaimCounterparty
-	 * CashParties28.MarketClaimCounterparty}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashParties28#mmMarketClaimCounterparty
+	 * CashParties28.mmMarketClaimCounterparty}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashParties10#MarketClaimCounterparty
-	 * CashParties10.MarketClaimCounterparty}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashParties10#mmMarketClaimCounterparty
+	 * CashParties10.mmMarketClaimCounterparty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketClaimCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketClaimCounterparty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashParties21.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "MktClmCtrPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaimCounterparty";
 			definition = "Party that has reimbursed the account owner with funds to which they were legally entitled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties10.MarketClaimCounterparty;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties28.MarketClaimCounterparty);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties28.mmMarketClaimCounterparty);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties10.mmMarketClaimCounterparty;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount52.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount52.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties21.Creditor, com.tools20022.repository.msg.CashParties21.CreditorAgent, com.tools20022.repository.msg.CashParties21.MarketClaimCounterparty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties21.mmCreditor, com.tools20022.repository.msg.CashParties21.mmCreditorAgent,
+						com.tools20022.repository.msg.CashParties21.mmMarketClaimCounterparty);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -279,10 +283,34 @@ public class CashParties21 {
 				})).get();
 				name = "CashParties21";
 				definition = "Specifies cash parties in the framework of a corporate action event.";
-				previousVersion_lazy = () -> CashParties10.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CashParties28.mmObject());
+				previousVersion_lazy = () -> CashParties10.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentificationAndAccount52 getCreditor() {
+		return creditor;
+	}
+
+	public void setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount52 creditor) {
+		this.creditor = creditor;
+	}
+
+	public PartyIdentificationAndAccount101 getCreditorAgent() {
+		return creditorAgent;
+	}
+
+	public void setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount101 creditorAgent) {
+		this.creditorAgent = creditorAgent;
+	}
+
+	public PartyIdentificationAndAccount52 getMarketClaimCounterparty() {
+		return marketClaimCounterparty;
+	}
+
+	public void setMarketClaimCounterparty(com.tools20022.repository.msg.PartyIdentificationAndAccount52 marketClaimCounterparty) {
+		this.marketClaimCounterparty = marketClaimCounterparty;
 	}
 }

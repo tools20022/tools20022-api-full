@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VariationType1Code#Decrease
- * VariationType1Code.Decrease}</li>
+ * {@linkplain com.tools20022.repository.codeset.VariationType1Code#mmDecrease
+ * VariationType1Code.mmDecrease}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VariationType1Code#Increase
- * VariationType1Code.Increase}</li>
+ * {@linkplain com.tools20022.repository.codeset.VariationType1Code#mmIncrease
+ * VariationType1Code.mmIncrease}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class VariationType1Code extends VariationTypeCode {
 	 * name} = "Decrease"</li>
 	 * </ul>
 	 */
-	public static final MMCode Decrease = new MMCode() {
+	public static final MMCode mmDecrease = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decrease";
@@ -104,7 +104,7 @@ public class VariationType1Code extends VariationTypeCode {
 	 * name} = "Increase"</li>
 	 * </ul>
 	 */
-	public static final MMCode Increase = new MMCode() {
+	public static final MMCode mmIncrease = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Increase";
@@ -115,12 +115,12 @@ public class VariationType1Code extends VariationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DECR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VariationType1Code";
 				definition = "Specifies the type of variation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VariationType1Code.Decrease, com.tools20022.repository.codeset.VariationType1Code.Increase);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VariationType1Code.mmDecrease, com.tools20022.repository.codeset.VariationType1Code.mmIncrease);
 				trace_lazy = () -> VariationTypeCode.mmObject();
 			}
 		});

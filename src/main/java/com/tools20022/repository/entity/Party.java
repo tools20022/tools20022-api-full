@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Entity involved in an activity.
@@ -40,99 +41,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Party#ContactPoint
- * Party.ContactPoint}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#Identification
- * Party.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#MoneyLaunderingCheck
- * Party.MoneyLaunderingCheck}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#TaxationConditions
- * Party.TaxationConditions}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#Domicile
- * Party.Domicile}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#Residence
- * Party.Residence}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#PowerOfAttorney
- * Party.PowerOfAttorney}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#Location
- * Party.Location}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#CloseLinkSecurity
- * Party.CloseLinkSecurity}</li>
- * </ul>
- * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmContactPoint
+ * Party.mmContactPoint}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmIdentification
+ * Party.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#CloseLink
- * Security.CloseLink}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#RelatedParty
- * ContactPoint.RelatedParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#IdentifiedParty
- * PartyIdentificationInformation.IdentifiedParty}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#DomiciledParty
- * Location.DomiciledParty}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#Party
- * Location.Party}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#TaxableParty
- * Location.TaxableParty}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#TaxableParty
- * Tax.TaxableParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PowerOfAttorney#AuthorisedParty
- * PowerOfAttorney.AuthorisedParty}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#Party
- * InvestmentAccountOwnershipInformation6.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#Party
- * InvestmentAccountOwnershipInformation7.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate1#MandateHolder
- * OperationMandate1.MandateHolder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation1#PartyOrGroup
- * PartyAndAuthorisation1.PartyOrGroup}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation3#PartyOrGroup
- * PartyAndAuthorisation3.PartyOrGroup}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report2#NonClearingMember
- * Report2.NonClearingMember}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetPosition1#Depository
- * NetPosition1.Depository}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#Party
- * InvestmentAccountOwnershipInformation8.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#Party
- * InvestmentAccountOwnershipInformation9.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#Party
- * InvestmentAccountOwnershipInformation10.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#Party
- * InvestmentAccountOwnershipInformation11.Party}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report5#NonClearingMember
- * Report5.NonClearingMember}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#Party
- * InvestmentAccountOwnershipInformation12.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#Party
- * InvestmentAccountOwnershipInformation13.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#Party
- * InvestmentAccountOwnershipInformation15.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#Party
- * InvestmentAccountOwnershipInformation14.Party}</li>
+ * {@linkplain com.tools20022.repository.entity.Party#mmMoneyLaunderingCheck
+ * Party.mmMoneyLaunderingCheck}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmTaxationConditions
+ * Party.mmTaxationConditions}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmDomicile
+ * Party.mmDomicile}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmResidence
+ * Party.mmResidence}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmPowerOfAttorney
+ * Party.mmPowerOfAttorney}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmLocation
+ * Party.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmCloseLinkSecurity
+ * Party.mmCloseLinkSecurity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -140,6 +67,81 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.Organisation Organisation}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Person Person}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmCloseLink
+ * Security.mmCloseLink}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedParty
+ * ContactPoint.mmRelatedParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmIdentifiedParty
+ * PartyIdentificationInformation.mmIdentifiedParty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmDomiciledParty
+ * Location.mmDomiciledParty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmParty
+ * Location.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmTaxableParty
+ * Location.mmTaxableParty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableParty
+ * Tax.mmTaxableParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PowerOfAttorney#mmAuthorisedParty
+ * PowerOfAttorney.mmAuthorisedParty}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#mmParty
+ * InvestmentAccountOwnershipInformation6.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#mmParty
+ * InvestmentAccountOwnershipInformation7.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate1#mmMandateHolder
+ * OperationMandate1.mmMandateHolder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation1#mmPartyOrGroup
+ * PartyAndAuthorisation1.mmPartyOrGroup}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyAndAuthorisation3#mmPartyOrGroup
+ * PartyAndAuthorisation3.mmPartyOrGroup}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report2#mmNonClearingMember
+ * Report2.mmNonClearingMember}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetPosition1#mmDepository
+ * NetPosition1.mmDepository}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#mmParty
+ * InvestmentAccountOwnershipInformation8.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#mmParty
+ * InvestmentAccountOwnershipInformation9.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#mmParty
+ * InvestmentAccountOwnershipInformation10.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#mmParty
+ * InvestmentAccountOwnershipInformation11.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report5#mmNonClearingMember
+ * Report5.mmNonClearingMember}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#mmParty
+ * InvestmentAccountOwnershipInformation12.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#mmParty
+ * InvestmentAccountOwnershipInformation13.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmParty
+ * InvestmentAccountOwnershipInformation15.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmParty
+ * InvestmentAccountOwnershipInformation14.mmParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -247,8 +249,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -262,6 +264,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Party extends RolePlayer {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.ContactPoint> contactPoint;
 	/**
 	 * Number, physical or virtual address, used for communication.
 	 * <p>
@@ -270,8 +273,8 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#RelatedParty
-	 * ContactPoint.RelatedParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedParty
+	 * ContactPoint.mmRelatedParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -279,123 +282,124 @@ public class Party extends RolePlayer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
 	 * ContactPoint}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex#LocalOrderDesk
-	 * LocalMarketAnnex.LocalOrderDesk}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#LocalOrderDesk
-	 * LocalMarketAnnex2.LocalOrderDesk}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#FundManagementCompany
-	 * FundProcessingPassport1.FundManagementCompany}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation2#PrimaryCommunicationAddress
-	 * Organisation2.PrimaryCommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation2#SecondaryCommunicationAddress
-	 * Organisation2.SecondaryCommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation3#PrimaryCommunicationAddress
-	 * Organisation3.PrimaryCommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation3#SecondaryCommunicationAddress
-	 * Organisation3.SecondaryCommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification32#ContactDetails
-	 * PartyIdentification32.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification43#ContactDetails
-	 * PartyIdentification43.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#PartyContactDetails
-	 * PartyTextInformation1.PartyContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation2#PartyContactDetails
-	 * PartyTextInformation2.PartyContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation3#PartyContactDetails
-	 * PartyTextInformation3.PartyContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation4#PartyContactDetails
-	 * PartyTextInformation4.PartyContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation5#PartyContactDetails
-	 * PartyTextInformation5.PartyContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification41#ContactDetails
-	 * PartyIdentification41.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification40#ContactDetails
-	 * PartyIdentification40.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExtendOrPayQuery1#BankContact
-	 * ExtendOrPayQuery1.BankContact}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification42#ContactDetails
-	 * PartyIdentification42.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralInformation1#ContactInformation
-	 * GeneralInformation1.ContactInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralInformation4#ContactInformation
-	 * GeneralInformation4.ContactInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralInformation2#ContactInformation
-	 * GeneralInformation2.ContactInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1#ContactInformation
-	 * PartyAndAccountIdentificationAndContactInformation1.ContactInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification45#ContactDetails
-	 * PartyIdentification45.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress#CommunicationAddress
-	 * ContactIdentificationAndAddress.CommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MemberDetails#CommunicationAddress
-	 * MemberDetails.CommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MemberDetails1#CommunicationAddress
-	 * MemberDetails1.CommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#PreferredMethod
-	 * ContactDetails3.PreferredMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification58#ContactDetails
-	 * PartyIdentification58.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountTax1#NonResidenceCountry
-	 * AccountTax1.NonResidenceCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Intermediary16#CommunicationInformation
-	 * Intermediary16.CommunicationInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Member1#CommunicationAddress
-	 * Member1.CommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Member2#CommunicationAddress
-	 * Member2.CommunicationAddress}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification77#ContactDetails
-	 * PartyIdentification77.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification112#ContactDetails
-	 * PartyIdentification112.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification28#ContactDetails
-	 * OrganisationIdentification28.ContactDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralInformation5#ContactInformation
-	 * GeneralInformation5.ContactInformation}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
 	 * Party}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex#mmLocalOrderDesk
+	 * LocalMarketAnnex.mmLocalOrderDesk}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex2#mmLocalOrderDesk
+	 * LocalMarketAnnex2.mmLocalOrderDesk}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmFundManagementCompany
+	 * FundProcessingPassport1.mmFundManagementCompany}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation2#mmPrimaryCommunicationAddress
+	 * Organisation2.mmPrimaryCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation2#mmSecondaryCommunicationAddress
+	 * Organisation2.mmSecondaryCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation3#mmPrimaryCommunicationAddress
+	 * Organisation3.mmPrimaryCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation3#mmSecondaryCommunicationAddress
+	 * Organisation3.mmSecondaryCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification32#mmContactDetails
+	 * PartyIdentification32.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification43#mmContactDetails
+	 * PartyIdentification43.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#mmPartyContactDetails
+	 * PartyTextInformation1.mmPartyContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation2#mmPartyContactDetails
+	 * PartyTextInformation2.mmPartyContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation3#mmPartyContactDetails
+	 * PartyTextInformation3.mmPartyContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation4#mmPartyContactDetails
+	 * PartyTextInformation4.mmPartyContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation5#mmPartyContactDetails
+	 * PartyTextInformation5.mmPartyContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification41#mmContactDetails
+	 * PartyIdentification41.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification40#mmContactDetails
+	 * PartyIdentification40.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExtendOrPayQuery1#mmBankContact
+	 * ExtendOrPayQuery1.mmBankContact}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification42#mmContactDetails
+	 * PartyIdentification42.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralInformation1#mmContactInformation
+	 * GeneralInformation1.mmContactInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralInformation4#mmContactInformation
+	 * GeneralInformation4.mmContactInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmContactInformation
+	 * GeneralInformation2.mmContactInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1#mmContactInformation
+	 * PartyAndAccountIdentificationAndContactInformation1.mmContactInformation}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification45#mmContactDetails
+	 * PartyIdentification45.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress#mmCommunicationAddress
+	 * ContactIdentificationAndAddress.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberDetails#mmCommunicationAddress
+	 * MemberDetails.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberDetails1#mmCommunicationAddress
+	 * MemberDetails1.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#mmPreferredMethod
+	 * ContactDetails3.mmPreferredMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification58#mmContactDetails
+	 * PartyIdentification58.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountTax1#mmNonResidenceCountry
+	 * AccountTax1.mmNonResidenceCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary16#mmCommunicationInformation
+	 * Intermediary16.mmCommunicationInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Member1#mmCommunicationAddress
+	 * Member1.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Member2#mmCommunicationAddress
+	 * Member2.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmContactDetails
+	 * PartyIdentification77.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification112#mmContactDetails
+	 * PartyIdentification112.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification28#mmContactDetails
+	 * OrganisationIdentification28.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralInformation5#mmContactInformation
+	 * GeneralInformation5.mmContactInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -408,33 +412,35 @@ public class Party extends RolePlayer {
 	 * "Number, physical or virtual address, used for communication."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ContactPoint = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmContactPoint = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex.LocalOrderDesk, com.tools20022.repository.msg.LocalMarketAnnex2.LocalOrderDesk,
-					com.tools20022.repository.msg.FundProcessingPassport1.FundManagementCompany, com.tools20022.repository.msg.Organisation2.PrimaryCommunicationAddress,
-					com.tools20022.repository.msg.Organisation2.SecondaryCommunicationAddress, com.tools20022.repository.msg.Organisation3.PrimaryCommunicationAddress,
-					com.tools20022.repository.msg.Organisation3.SecondaryCommunicationAddress, com.tools20022.repository.msg.PartyIdentification32.ContactDetails, com.tools20022.repository.msg.PartyIdentification43.ContactDetails,
-					com.tools20022.repository.msg.PartyTextInformation1.PartyContactDetails, com.tools20022.repository.msg.PartyTextInformation2.PartyContactDetails, com.tools20022.repository.msg.PartyTextInformation3.PartyContactDetails,
-					com.tools20022.repository.msg.PartyTextInformation4.PartyContactDetails, com.tools20022.repository.msg.PartyTextInformation5.PartyContactDetails, com.tools20022.repository.msg.PartyIdentification41.ContactDetails,
-					com.tools20022.repository.msg.PartyIdentification40.ContactDetails, com.tools20022.repository.msg.ExtendOrPayQuery1.BankContact, com.tools20022.repository.msg.PartyIdentification42.ContactDetails,
-					com.tools20022.repository.msg.GeneralInformation1.ContactInformation, com.tools20022.repository.msg.GeneralInformation4.ContactInformation, com.tools20022.repository.msg.GeneralInformation2.ContactInformation,
-					com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.ContactInformation, com.tools20022.repository.msg.PartyIdentification45.ContactDetails,
-					com.tools20022.repository.msg.ContactIdentificationAndAddress.CommunicationAddress, com.tools20022.repository.msg.MemberDetails.CommunicationAddress, com.tools20022.repository.msg.MemberDetails1.CommunicationAddress,
-					com.tools20022.repository.msg.ContactDetails3.PreferredMethod, com.tools20022.repository.msg.PartyIdentification58.ContactDetails, com.tools20022.repository.msg.AccountTax1.NonResidenceCountry,
-					com.tools20022.repository.msg.Intermediary16.CommunicationInformation, com.tools20022.repository.msg.Member1.CommunicationAddress, com.tools20022.repository.msg.Member2.CommunicationAddress,
-					com.tools20022.repository.msg.PartyIdentification77.ContactDetails, com.tools20022.repository.msg.PartyIdentification112.ContactDetails, com.tools20022.repository.msg.OrganisationIdentification28.ContactDetails,
-					com.tools20022.repository.msg.GeneralInformation5.ContactInformation);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex.mmLocalOrderDesk, com.tools20022.repository.msg.LocalMarketAnnex2.mmLocalOrderDesk,
+					com.tools20022.repository.msg.FundProcessingPassport1.mmFundManagementCompany, com.tools20022.repository.msg.Organisation2.mmPrimaryCommunicationAddress,
+					com.tools20022.repository.msg.Organisation2.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.Organisation3.mmPrimaryCommunicationAddress,
+					com.tools20022.repository.msg.Organisation3.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.PartyIdentification32.mmContactDetails, com.tools20022.repository.msg.PartyIdentification43.mmContactDetails,
+					com.tools20022.repository.msg.PartyTextInformation1.mmPartyContactDetails, com.tools20022.repository.msg.PartyTextInformation2.mmPartyContactDetails,
+					com.tools20022.repository.msg.PartyTextInformation3.mmPartyContactDetails, com.tools20022.repository.msg.PartyTextInformation4.mmPartyContactDetails,
+					com.tools20022.repository.msg.PartyTextInformation5.mmPartyContactDetails, com.tools20022.repository.msg.PartyIdentification41.mmContactDetails, com.tools20022.repository.msg.PartyIdentification40.mmContactDetails,
+					com.tools20022.repository.msg.ExtendOrPayQuery1.mmBankContact, com.tools20022.repository.msg.PartyIdentification42.mmContactDetails, com.tools20022.repository.msg.GeneralInformation1.mmContactInformation,
+					com.tools20022.repository.msg.GeneralInformation4.mmContactInformation, com.tools20022.repository.msg.GeneralInformation2.mmContactInformation,
+					com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmContactInformation, com.tools20022.repository.msg.PartyIdentification45.mmContactDetails,
+					com.tools20022.repository.msg.ContactIdentificationAndAddress.mmCommunicationAddress, com.tools20022.repository.msg.MemberDetails.mmCommunicationAddress,
+					com.tools20022.repository.msg.MemberDetails1.mmCommunicationAddress, com.tools20022.repository.msg.ContactDetails3.mmPreferredMethod, com.tools20022.repository.msg.PartyIdentification58.mmContactDetails,
+					com.tools20022.repository.msg.AccountTax1.mmNonResidenceCountry, com.tools20022.repository.msg.Intermediary16.mmCommunicationInformation, com.tools20022.repository.msg.Member1.mmCommunicationAddress,
+					com.tools20022.repository.msg.Member2.mmCommunicationAddress, com.tools20022.repository.msg.PartyIdentification77.mmContactDetails, com.tools20022.repository.msg.PartyIdentification112.mmContactDetails,
+					com.tools20022.repository.msg.OrganisationIdentification28.mmContactDetails, com.tools20022.repository.msg.GeneralInformation5.mmContactInformation);
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ContactPoint";
 			definition = "Number, physical or virtual address, used for communication.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.RelatedParty;
+			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmRelatedParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PartyIdentificationInformation> identification;
 	/**
 	 * Specific identification assigned to a party.
 	 * <p>
@@ -443,8 +449,8 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#IdentifiedParty
-	 * PartyIdentificationInformation.IdentifiedParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmIdentifiedParty
+	 * PartyIdentificationInformation.mmIdentifiedParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -453,12 +459,12 @@ public class Party extends RolePlayer {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 2363 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
 	 * Party}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} = List of 2363 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -470,7 +476,7 @@ public class Party extends RolePlayer {
 	 * definition} = "Specific identification assigned to a party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Identification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> ListBuilderForParty_00.addElems(new ArrayList<>());
 			elementContext_lazy = () -> Party.mmObject();
@@ -479,11 +485,12 @@ public class Party extends RolePlayer {
 			name = "Identification";
 			definition = "Specific identification assigned to a party.";
 			minOccurs = 1;
-			type_lazy = () -> PartyIdentificationInformation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.IdentifiedParty;
+			opposite_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 		}
 	};
+	protected MoneyLaunderingCheckCode moneyLaunderingCheck;
 	/**
 	 * Status of an identity check to prevent money laundering. This includes
 	 * the counter-terrorism check.
@@ -495,81 +502,81 @@ public class Party extends RolePlayer {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheckCode
 	 * MoneyLaunderingCheckCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation5.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#ExtendedMoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation5.ExtendedMoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation2.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#ExtendedMoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation2.ExtendedMoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MoneyLaunderingCheck1Choice#Code
-	 * MoneyLaunderingCheck1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MoneyLaunderingCheck1Choice#Proprietary
-	 * MoneyLaunderingCheck1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation6.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation3.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#ExtendedMoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation3.ExtendedMoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation4.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#ExtendedMoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation4.ExtendedMoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation7.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderParameters1#MoneyLaunderingStatus
-	 * OrderParameters1.MoneyLaunderingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.List1#MoneyLaunderingStatus
-	 * List1.MoneyLaunderingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation8.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation9.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation10.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation11.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation12.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation13.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation15.MoneyLaunderingCheck}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#MoneyLaunderingCheck
-	 * InvestmentAccountOwnershipInformation14.MoneyLaunderingCheck}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
 	 * Party}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation5.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#mmExtendedMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation5.mmExtendedMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmExtendedMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation2.mmExtendedMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MoneyLaunderingCheck1Choice#mmCode
+	 * MoneyLaunderingCheck1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MoneyLaunderingCheck1Choice#mmProprietary
+	 * MoneyLaunderingCheck1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation6.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation3.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#mmExtendedMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation3.mmExtendedMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation4.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#mmExtendedMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation4.mmExtendedMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation7.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderParameters1#mmMoneyLaunderingStatus
+	 * OrderParameters1.mmMoneyLaunderingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.List1#mmMoneyLaunderingStatus
+	 * List1.mmMoneyLaunderingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation8.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation9.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation10.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation11.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation12.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation13.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation15.mmMoneyLaunderingCheck}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmMoneyLaunderingCheck
+	 * InvestmentAccountOwnershipInformation14.mmMoneyLaunderingCheck}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -583,29 +590,31 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MoneyLaunderingCheck = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMoneyLaunderingCheck = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.MoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.ExtendedMoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.MoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.ExtendedMoneyLaunderingCheck,
-					com.tools20022.repository.choice.MoneyLaunderingCheck1Choice.Code, com.tools20022.repository.choice.MoneyLaunderingCheck1Choice.Proprietary,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.MoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.ExtendedMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.ExtendedMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.OrderParameters1.MoneyLaunderingStatus, com.tools20022.repository.msg.List1.MoneyLaunderingStatus, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.MoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.MoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.MoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.MoneyLaunderingCheck,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.MoneyLaunderingCheck);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.mmExtendedMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmExtendedMoneyLaunderingCheck, com.tools20022.repository.choice.MoneyLaunderingCheck1Choice.mmCode,
+					com.tools20022.repository.choice.MoneyLaunderingCheck1Choice.mmProprietary, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmExtendedMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.mmMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.mmExtendedMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.mmMoneyLaunderingCheck, com.tools20022.repository.msg.OrderParameters1.mmMoneyLaunderingStatus,
+					com.tools20022.repository.msg.List1.mmMoneyLaunderingStatus, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.mmMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmMoneyLaunderingCheck, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmMoneyLaunderingCheck,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmMoneyLaunderingCheck);
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MoneyLaunderingCheck";
 			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MoneyLaunderingCheckCode.mmObject();
 		}
 	};
+	protected Tax taxationConditions;
 	/**
 	 * Taxation parameters which apply to an individual person or to an
 	 * organisation.
@@ -615,46 +624,47 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxableParty
-	 * Tax.TaxableParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxableParty
+	 * Tax.mmTaxableParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax8#Country Tax8.Country}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax17#Country
-	 * Tax17.Country}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax16#Country
-	 * Tax16.Country}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#Country
-	 * Tax14.Country}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax18#Country
-	 * Tax18.Country}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax19#Country
-	 * Tax19.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxIdentification1#TaxationCountry
-	 * TaxIdentification1.TaxationCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxIdentification2#IssuerCountry
-	 * TaxIdentification2.IssuerCountry}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax32#Country
-	 * Tax32.Country}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax30#Country
-	 * Tax30.Country}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#Country
-	 * Tax31.Country}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
 	 * Party}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax8#mmCountry
+	 * Tax8.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax17#mmCountry
+	 * Tax17.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax16#mmCountry
+	 * Tax16.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmCountry
+	 * Tax14.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax18#mmCountry
+	 * Tax18.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax19#mmCountry
+	 * Tax19.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxIdentification1#mmTaxationCountry
+	 * TaxIdentification1.mmTaxationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxIdentification2#mmIssuerCountry
+	 * TaxIdentification2.mmIssuerCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax32#mmCountry
+	 * Tax32.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax30#mmCountry
+	 * Tax30.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#mmCountry
+	 * Tax31.mmCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -668,23 +678,24 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TaxationConditions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTaxationConditions = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax8.Country, com.tools20022.repository.msg.Tax17.Country, com.tools20022.repository.msg.Tax16.Country, com.tools20022.repository.msg.Tax14.Country,
-					com.tools20022.repository.msg.Tax18.Country, com.tools20022.repository.msg.Tax19.Country, com.tools20022.repository.msg.TaxIdentification1.TaxationCountry, com.tools20022.repository.msg.TaxIdentification2.IssuerCountry,
-					com.tools20022.repository.msg.Tax32.Country, com.tools20022.repository.msg.Tax30.Country, com.tools20022.repository.msg.Tax31.Country);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax8.mmCountry, com.tools20022.repository.msg.Tax17.mmCountry, com.tools20022.repository.msg.Tax16.mmCountry, com.tools20022.repository.msg.Tax14.mmCountry,
+					com.tools20022.repository.msg.Tax18.mmCountry, com.tools20022.repository.msg.Tax19.mmCountry, com.tools20022.repository.msg.TaxIdentification1.mmTaxationCountry,
+					com.tools20022.repository.msg.TaxIdentification2.mmIssuerCountry, com.tools20022.repository.msg.Tax32.mmCountry, com.tools20022.repository.msg.Tax30.mmCountry, com.tools20022.repository.msg.Tax31.mmCountry);
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxationConditions";
 			definition = "Taxation parameters which apply to an individual person or to an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Tax.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.TaxableParty;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
+	protected Location domicile;
 	/**
 	 * Location in which a person is permanently domiciled (the place of a
 	 * person's permanent home).
@@ -694,29 +705,29 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Location#DomiciledParty
-	 * Location.DomiciledParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmDomiciledParty
+	 * Location.mmDomiciledParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#DomicileCountry
-	 * BeneficialOwner1.DomicileCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#DomicileCountry
-	 * BeneficialOwner2.DomicileCountry}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
 	 * Party}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmDomicileCountry
+	 * BeneficialOwner1.mmDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmDomicileCountry
+	 * BeneficialOwner2.mmDomicileCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -730,21 +741,22 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Domicile = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDomicile = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner1.DomicileCountry, com.tools20022.repository.msg.BeneficialOwner2.DomicileCountry);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner1.mmDomicileCountry, com.tools20022.repository.msg.BeneficialOwner2.mmDomicileCountry);
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Domicile";
 			definition = "Location in which a person is permanently domiciled (the place of a person's permanent home).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.DomiciledParty;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmDomiciledParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Location> residence;
 	/**
 	 * Location from which the affairs of a company are directed or location in
 	 * which a person resides (the place of a person's home).
@@ -753,29 +765,30 @@ public class Party extends RolePlayer {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Location#Party
-	 * Location.Party}</li>
+	 * opposite} =
+	 * {@linkplain com.tools20022.repository.entity.Location#mmParty
+	 * Location.mmParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Location Location}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReportSpecification4#BuyerCountry
-	 * ReportSpecification4.BuyerCountry}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReportSpecification4#SellerCountry
-	 * ReportSpecification4.SellerCountry}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
 	 * Party}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportSpecification4#mmBuyerCountry
+	 * ReportSpecification4.mmBuyerCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportSpecification4#mmSellerCountry
+	 * ReportSpecification4.mmSellerCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -789,20 +802,21 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Residence = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmResidence = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportSpecification4.BuyerCountry, com.tools20022.repository.msg.ReportSpecification4.SellerCountry);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportSpecification4.mmBuyerCountry, com.tools20022.repository.msg.ReportSpecification4.mmSellerCountry);
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Residence";
 			definition = "Location from which the affairs of a company are directed or location in which a person resides (the place of a person's home).";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.Party;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
+	protected PowerOfAttorney powerOfAttorney;
 	/**
 	 * Power of attorney which is held by the party.
 	 * <p>
@@ -811,8 +825,8 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorney#AuthorisedParty
-	 * PowerOfAttorney.AuthorisedParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorney#mmAuthorisedParty
+	 * PowerOfAttorney.mmAuthorisedParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -835,20 +849,21 @@ public class Party extends RolePlayer {
 	 * definition} = "Power of attorney which is held by the party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PowerOfAttorney = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPowerOfAttorney = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PowerOfAttorney";
 			definition = "Power of attorney which is held by the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.AuthorisedParty;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmObject();
 		}
 	};
+	protected Location location;
 	/**
 	 * Location of the taxable party.
 	 * <p>
@@ -857,8 +872,8 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Location#TaxableParty
-	 * Location.TaxableParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.Location#mmTaxableParty
+	 * Location.mmTaxableParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -880,20 +895,21 @@ public class Party extends RolePlayer {
 	 * definition} = "Location of the taxable party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Location = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Location";
 			definition = "Location of the taxable party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.TaxableParty;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmTaxableParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
+	protected Security closeLinkSecurity;
 	/**
 	 * Security for which a close link with a party is identified.
 	 * <p>
@@ -902,8 +918,8 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Security#CloseLink
-	 * Security.CloseLink}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmCloseLink
+	 * Security.mmCloseLink}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -926,43 +942,43 @@ public class Party extends RolePlayer {
 	 * "Security for which a close link with a party is identified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CloseLinkSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCloseLinkSecurity = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Party.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CloseLinkSecurity";
 			definition = "Security for which a close link with a party is identified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Security.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.CloseLink;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmCloseLink;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Party";
 				definition = "Entity involved in an activity.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.CloseLink, com.tools20022.repository.entity.ContactPoint.RelatedParty,
-						com.tools20022.repository.entity.PartyIdentificationInformation.IdentifiedParty, com.tools20022.repository.entity.Location.DomiciledParty, com.tools20022.repository.entity.Location.Party,
-						com.tools20022.repository.entity.Location.TaxableParty, com.tools20022.repository.entity.Tax.TaxableParty, com.tools20022.repository.entity.PowerOfAttorney.AuthorisedParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.Party, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.Party,
-						com.tools20022.repository.msg.OperationMandate1.MandateHolder, com.tools20022.repository.msg.PartyAndAuthorisation1.PartyOrGroup, com.tools20022.repository.msg.PartyAndAuthorisation3.PartyOrGroup,
-						com.tools20022.repository.msg.Report2.NonClearingMember, com.tools20022.repository.msg.NetPosition1.Depository, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.Party,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.Party, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.Party,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.Party, com.tools20022.repository.msg.Report5.NonClearingMember, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.Party,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.Party, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.Party,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.Party);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCloseLink, com.tools20022.repository.entity.ContactPoint.mmRelatedParty,
+						com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedParty, com.tools20022.repository.entity.Location.mmDomiciledParty, com.tools20022.repository.entity.Location.mmParty,
+						com.tools20022.repository.entity.Location.mmTaxableParty, com.tools20022.repository.entity.Tax.mmTaxableParty, com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.mmParty, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.mmParty,
+						com.tools20022.repository.msg.OperationMandate1.mmMandateHolder, com.tools20022.repository.msg.PartyAndAuthorisation1.mmPartyOrGroup, com.tools20022.repository.msg.PartyAndAuthorisation3.mmPartyOrGroup,
+						com.tools20022.repository.msg.Report2.mmNonClearingMember, com.tools20022.repository.msg.NetPosition1.mmDepository, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.mmParty,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmParty, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmParty,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.mmParty, com.tools20022.repository.msg.Report5.mmNonClearingMember,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmParty, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmParty,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmParty, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmParty);
 				subType_lazy = () -> Arrays.asList(Organisation.mmObject(), Person.mmObject());
 				superType_lazy = () -> RolePlayer.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Party.ContactPoint, com.tools20022.repository.entity.Party.Identification, com.tools20022.repository.entity.Party.MoneyLaunderingCheck,
-						com.tools20022.repository.entity.Party.TaxationConditions, com.tools20022.repository.entity.Party.Domicile, com.tools20022.repository.entity.Party.Residence, com.tools20022.repository.entity.Party.PowerOfAttorney,
-						com.tools20022.repository.entity.Party.Location, com.tools20022.repository.entity.Party.CloseLinkSecurity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Party.mmContactPoint, com.tools20022.repository.entity.Party.mmIdentification, com.tools20022.repository.entity.Party.mmMoneyLaunderingCheck,
+						com.tools20022.repository.entity.Party.mmTaxationConditions, com.tools20022.repository.entity.Party.mmDomicile, com.tools20022.repository.entity.Party.mmResidence,
+						com.tools20022.repository.entity.Party.mmPowerOfAttorney, com.tools20022.repository.entity.Party.mmLocation, com.tools20022.repository.entity.Party.mmCloseLinkSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(CountryAndResidentialStatusType1.mmObject(), Party14Choice.mmObject(), PartyIdentificationAndAccount93.mmObject(), Counterparty1Choice.mmObject(),
 						Counterparty4Choice.mmObject(), PartyIdentificationAndAccount81.mmObject(), PartyIdentificationAndAccount86.mmObject(), Counterparty7Choice.mmObject(), PartyIdentificationAndAccount88.mmObject(),
 						PartyIdentificationAndAccount92.mmObject(), Counterparty2Choice.mmObject(), Counterparty3Choice.mmObject(), Counterparty6Choice.mmObject(), TradingPartyCapacity1Choice.mmObject(),
@@ -974,5 +990,77 @@ public class Party extends RolePlayer {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ContactPoint> getContactPoint() {
+		return contactPoint;
+	}
+
+	public void setContactPoint(List<com.tools20022.repository.entity.ContactPoint> contactPoint) {
+		this.contactPoint = contactPoint;
+	}
+
+	public List<PartyIdentificationInformation> getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(List<com.tools20022.repository.entity.PartyIdentificationInformation> identification) {
+		this.identification = identification;
+	}
+
+	public MoneyLaunderingCheckCode getMoneyLaunderingCheck() {
+		return moneyLaunderingCheck;
+	}
+
+	public void setMoneyLaunderingCheck(MoneyLaunderingCheckCode moneyLaunderingCheck) {
+		this.moneyLaunderingCheck = moneyLaunderingCheck;
+	}
+
+	public Tax getTaxationConditions() {
+		return taxationConditions;
+	}
+
+	public void setTaxationConditions(com.tools20022.repository.entity.Tax taxationConditions) {
+		this.taxationConditions = taxationConditions;
+	}
+
+	public Location getDomicile() {
+		return domicile;
+	}
+
+	public void setDomicile(com.tools20022.repository.entity.Location domicile) {
+		this.domicile = domicile;
+	}
+
+	public List<Location> getResidence() {
+		return residence;
+	}
+
+	public void setResidence(List<com.tools20022.repository.entity.Location> residence) {
+		this.residence = residence;
+	}
+
+	public PowerOfAttorney getPowerOfAttorney() {
+		return powerOfAttorney;
+	}
+
+	public void setPowerOfAttorney(com.tools20022.repository.entity.PowerOfAttorney powerOfAttorney) {
+		this.powerOfAttorney = powerOfAttorney;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(com.tools20022.repository.entity.Location location) {
+		this.location = location;
+	}
+
+	public Security getCloseLinkSecurity() {
+		return closeLinkSecurity;
+	}
+
+	public void setCloseLinkSecurity(com.tools20022.repository.entity.Security closeLinkSecurity) {
+		this.closeLinkSecurity = closeLinkSecurity;
 	}
 }

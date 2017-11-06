@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#Allowed
- * CurrencyConversionResponse3Code.Allowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmAllowed
+ * CurrencyConversionResponse3Code.mmAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#Assumed
- * CurrencyConversionResponse3Code.Assumed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmAssumed
+ * CurrencyConversionResponse3Code.mmAssumed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#InvalidCard
- * CurrencyConversionResponse3Code.InvalidCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmInvalidCard
+ * CurrencyConversionResponse3Code.mmInvalidCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#InvalidMerchant
- * CurrencyConversionResponse3Code.InvalidMerchant}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmInvalidMerchant
+ * CurrencyConversionResponse3Code.mmInvalidMerchant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#InvalidProduct
- * CurrencyConversionResponse3Code.InvalidProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmInvalidProduct
+ * CurrencyConversionResponse3Code.mmInvalidProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#NoRate
- * CurrencyConversionResponse3Code.NoRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmNoRate
+ * CurrencyConversionResponse3Code.mmNoRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#NotAvailable
- * CurrencyConversionResponse3Code.NotAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmNotAvailable
+ * CurrencyConversionResponse3Code.mmNotAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#Restriction
- * CurrencyConversionResponse3Code.Restriction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmRestriction
+ * CurrencyConversionResponse3Code.mmRestriction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#Catalogue
- * CurrencyConversionResponse3Code.Catalogue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code#mmCatalogue
+ * CurrencyConversionResponse3Code.mmCatalogue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,15 +101,15 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#Allowed
-	 * CurrencyConversionResponse1Code.Allowed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#mmAllowed
+	 * CurrencyConversionResponse1Code.mmAllowed}</li>
 	 * </ul>
 	 */
-	public static final MMCode Allowed = new MMCode() {
+	public static final MMCode mmAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowed";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.Allowed;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.mmAllowed;
 			owner_lazy = () -> CurrencyConversionResponse3Code.mmObject();
 		}
 	};
@@ -130,15 +130,15 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#Assumed
-	 * CurrencyConversionResponse1Code.Assumed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#mmAssumed
+	 * CurrencyConversionResponse1Code.mmAssumed}</li>
 	 * </ul>
 	 */
-	public static final MMCode Assumed = new MMCode() {
+	public static final MMCode mmAssumed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assumed";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.Assumed;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.mmAssumed;
 			owner_lazy = () -> CurrencyConversionResponse3Code.mmObject();
 		}
 	};
@@ -159,15 +159,15 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#InvalidCard
-	 * CurrencyConversionResponse1Code.InvalidCard}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#mmInvalidCard
+	 * CurrencyConversionResponse1Code.mmInvalidCard}</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCard = new MMCode() {
+	public static final MMCode mmInvalidCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCard";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.InvalidCard;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.mmInvalidCard;
 			owner_lazy = () -> CurrencyConversionResponse3Code.mmObject();
 		}
 	};
@@ -188,15 +188,15 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#InvalidMerchant
-	 * CurrencyConversionResponse1Code.InvalidMerchant}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#mmInvalidMerchant
+	 * CurrencyConversionResponse1Code.mmInvalidMerchant}</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidMerchant = new MMCode() {
+	public static final MMCode mmInvalidMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMerchant";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.InvalidMerchant;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.mmInvalidMerchant;
 			owner_lazy = () -> CurrencyConversionResponse3Code.mmObject();
 		}
 	};
@@ -217,15 +217,15 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#InvalidProduct
-	 * CurrencyConversionResponse1Code.InvalidProduct}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#mmInvalidProduct
+	 * CurrencyConversionResponse1Code.mmInvalidProduct}</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidProduct = new MMCode() {
+	public static final MMCode mmInvalidProduct = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidProduct";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.InvalidProduct;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.mmInvalidProduct;
 			owner_lazy = () -> CurrencyConversionResponse3Code.mmObject();
 		}
 	};
@@ -246,15 +246,15 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#NoRate
-	 * CurrencyConversionResponse1Code.NoRate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#mmNoRate
+	 * CurrencyConversionResponse1Code.mmNoRate}</li>
 	 * </ul>
 	 */
-	public static final MMCode NoRate = new MMCode() {
+	public static final MMCode mmNoRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRate";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.NoRate;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.mmNoRate;
 			owner_lazy = () -> CurrencyConversionResponse3Code.mmObject();
 		}
 	};
@@ -275,15 +275,15 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#NotAvailable
-	 * CurrencyConversionResponse1Code.NotAvailable}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code#mmNotAvailable
+	 * CurrencyConversionResponse1Code.mmNotAvailable}</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAvailable = new MMCode() {
+	public static final MMCode mmNotAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAvailable";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.NotAvailable;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse1Code.mmNotAvailable;
 			owner_lazy = () -> CurrencyConversionResponse3Code.mmObject();
 		}
 	};
@@ -303,7 +303,7 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * name} = "Restriction"</li>
 	 * </ul>
 	 */
-	public static final MMCode Restriction = new MMCode() {
+	public static final MMCode mmRestriction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
@@ -326,7 +326,7 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	 * name} = "Catalogue"</li>
 	 * </ul>
 	 */
-	public static final MMCode Catalogue = new MMCode() {
+	public static final MMCode mmCatalogue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Catalogue";
@@ -337,16 +337,16 @@ public class CurrencyConversionResponse3Code extends CurrencyConversionResponseC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversionResponse3Code";
 				definition = "Result of a requested currency conversion.";
 				previousVersion_lazy = () -> CurrencyConversionResponse1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyConversionResponse3Code.Allowed, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.Assumed,
-						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.InvalidCard, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.InvalidMerchant,
-						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.InvalidProduct, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.NoRate,
-						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.NotAvailable, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.Restriction,
-						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.Catalogue);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmAllowed, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmAssumed,
+						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmInvalidCard, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmInvalidMerchant,
+						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmInvalidProduct, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmNoRate,
+						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmNotAvailable, com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmRestriction,
+						com.tools20022.repository.codeset.CurrencyConversionResponse3Code.mmCatalogue);
 				trace_lazy = () -> CurrencyConversionResponseCode.mmObject();
 			}
 		});

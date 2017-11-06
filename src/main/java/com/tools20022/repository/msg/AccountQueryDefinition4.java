@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountQueryDefinition4#QueryType
- * AccountQueryDefinition4.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountQueryDefinition4#mmQueryType
+ * AccountQueryDefinition4.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountQueryDefinition4#AccountCriteria
- * AccountQueryDefinition4.AccountCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountQueryDefinition4#mmAccountCriteria
+ * AccountQueryDefinition4.mmAccountCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountQueryDefinition4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType2Code queryType;
 	/**
 	 * Specifies the type of matching items to be returned in the response to
 	 * the query.
@@ -91,7 +92,7 @@ public class AccountQueryDefinition4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountQueryDefinition4.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class AccountQueryDefinition4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	protected AccountCriteriaDefinition4Choice accountCriteria;
 	/**
 	 * Definition of the account query criteria.
 	 * <p>
@@ -131,7 +133,7 @@ public class AccountQueryDefinition4 {
 	 * definition} = "Definition of the account query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountQueryDefinition4.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class AccountQueryDefinition4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCriteria";
 			definition = "Definition of the account query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountCriteriaDefinition4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountCriteriaDefinition4Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountQueryDefinition4.QueryType, com.tools20022.repository.msg.AccountQueryDefinition4.AccountCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountQueryDefinition4.mmQueryType, com.tools20022.repository.msg.AccountQueryDefinition4.mmAccountCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountQueryDefinition4";
 				definition = "Specification of the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType2Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType2Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public AccountCriteriaDefinition4Choice getAccountCriteria() {
+		return accountCriteria;
+	}
+
+	public void setAccountCriteria(AccountCriteriaDefinition4Choice accountCriteria) {
+		this.accountCriteria = accountCriteria;
 	}
 }

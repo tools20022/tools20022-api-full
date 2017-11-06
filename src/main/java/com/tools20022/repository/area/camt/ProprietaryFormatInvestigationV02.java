@@ -63,21 +63,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#Assignment
- * ProprietaryFormatInvestigationV02.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#mmAssignment
+ * ProprietaryFormatInvestigationV02.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#Case
- * ProprietaryFormatInvestigationV02.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#mmCase
+ * ProprietaryFormatInvestigationV02.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#ProprietaryData
- * ProprietaryFormatInvestigationV02.ProprietaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#mmProprietaryData
+ * ProprietaryFormatInvestigationV02.mmProprietaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#identifier
- * ProprietaryFormatInvestigationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.035.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryFormatInvestigationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment2 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage Rule: the Assigner must be the sender of this
@@ -127,17 +126,18 @@ public class ProprietaryFormatInvestigationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage Rule: the Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -159,17 +159,18 @@ public class ProprietaryFormatInvestigationV02 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
 		}
 	};
+	protected ProprietaryData4 proprietaryData;
 	/**
 	 * Proprietary information.
 	 * <p>
@@ -193,42 +194,15 @@ public class ProprietaryFormatInvestigationV02 {
 	 * definition} = "Proprietary information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProprietaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProprietaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryData";
 			definition = "Proprietary information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryData4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "035"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "035";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -243,11 +217,42 @@ public class ProprietaryFormatInvestigationV02 {
 				rootElement = "Document";
 				xmlTag = "PrtryFrmtInvstgtn";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.Assignment, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.Case,
-						com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.ProprietaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmAssignment, com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmCase,
+						com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmProprietaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "035";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment2 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment2 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case2 case_) {
+		this.case_ = case_;
+	}
+
+	public ProprietaryData4 getProprietaryData() {
+		return proprietaryData;
+	}
+
+	public void setProprietaryData(ProprietaryData4 proprietaryData) {
+		this.proprietaryData = proprietaryData;
 	}
 }

@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CommunicationChannel1#Method
- * CommunicationChannel1.Method}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationChannel1#mmMethod
+ * CommunicationChannel1.mmMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#DeliverToPartyType
- * CommunicationChannel1.DeliverToPartyType}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#mmDeliverToPartyType
+ * CommunicationChannel1.mmDeliverToPartyType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#DeliverToName
- * CommunicationChannel1.DeliverToName}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#mmDeliverToName
+ * CommunicationChannel1.mmDeliverToName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#DeliverToAddress
- * CommunicationChannel1.DeliverToAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#mmDeliverToAddress
+ * CommunicationChannel1.mmDeliverToAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommunicationChannel1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalChannel1Code method;
 	/**
 	 * Method by which the original undertaking or proposed amendment is to be
 	 * made available.<br>
@@ -86,8 +87,8 @@ public class CommunicationChannel1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#CommunicationMethod
-	 * Presentation.CommunicationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmCommunicationMethod
+	 * Presentation.mmCommunicationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Method = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> CommunicationChannel1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.CommunicationMethod;
 			isDerived = false;
 			xmlTag = "Mtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Method by which the original undertaking or proposed amendment is to be made available.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalChannel1Code.mmObject();
 		}
 	};
+	protected PartyType1Choice deliverToPartyType;
 	/**
 	 * Type of party to whom the original undertaking or proposed amendment is
 	 * intended to be delivered.
@@ -158,20 +160,21 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliverToPartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliverToPartyType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CommunicationChannel1.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingDeliveryToParty.mmObject();
+			componentContext_lazy = () -> CommunicationChannel1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrToPtyTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverToPartyType";
 			definition = "Type of party to whom the original undertaking or proposed amendment is intended to be delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyType1Choice.mmObject();
 		}
 	};
+	protected Max140Text deliverToName;
 	/**
 	 * Name of party to whom the original undertaking or proposed amendment is
 	 * intended to be delivered.
@@ -185,8 +188,8 @@ public class CommunicationChannel1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,20 +210,21 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliverToName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliverToName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> CommunicationChannel1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "DlvrToNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverToName";
 			definition = "Name of party to whom the original undertaking or proposed amendment is intended to be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PostalAddress6 deliverToAddress;
 	/**
 	 * Address of party to whom the original undertaking or proposed amendment
 	 * is intended to be delivered.
@@ -255,34 +259,66 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliverToAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliverToAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CommunicationChannel1.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> CommunicationChannel1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrToAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverToAddress";
 			definition = "Address of party to whom the original undertaking or proposed amendment is intended to be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationChannel1.Method, com.tools20022.repository.msg.CommunicationChannel1.DeliverToPartyType,
-						com.tools20022.repository.msg.CommunicationChannel1.DeliverToName, com.tools20022.repository.msg.CommunicationChannel1.DeliverToAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationChannel1.mmMethod, com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToPartyType,
+						com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToName, com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToAddress);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommunicationChannel1";
 				definition = "Communication channel information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalChannel1Code getMethod() {
+		return method;
+	}
+
+	public void setMethod(ExternalChannel1Code method) {
+		this.method = method;
+	}
+
+	public PartyType1Choice getDeliverToPartyType() {
+		return deliverToPartyType;
+	}
+
+	public void setDeliverToPartyType(PartyType1Choice deliverToPartyType) {
+		this.deliverToPartyType = deliverToPartyType;
+	}
+
+	public Max140Text getDeliverToName() {
+		return deliverToName;
+	}
+
+	public void setDeliverToName(Max140Text deliverToName) {
+		this.deliverToName = deliverToName;
+	}
+
+	public PostalAddress6 getDeliverToAddress() {
+		return deliverToAddress;
+	}
+
+	public void setDeliverToAddress(com.tools20022.repository.msg.PostalAddress6 deliverToAddress) {
+		this.deliverToAddress = deliverToAddress;
 	}
 }

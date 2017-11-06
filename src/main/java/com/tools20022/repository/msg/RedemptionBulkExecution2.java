@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Execution of a redemption order.
@@ -41,29 +42,29 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#PlaceOfTrade
- * RedemptionBulkExecution2.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmPlaceOfTrade
+ * RedemptionBulkExecution2.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#OrderDateTime
- * RedemptionBulkExecution2.OrderDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmOrderDateTime
+ * RedemptionBulkExecution2.mmOrderDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#CancellationRight
- * RedemptionBulkExecution2.CancellationRight}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmCancellationRight
+ * RedemptionBulkExecution2.mmCancellationRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#FinancialInstrumentDetails
- * RedemptionBulkExecution2.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmFinancialInstrumentDetails
+ * RedemptionBulkExecution2.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#IndividualExecutionDetails
- * RedemptionBulkExecution2.IndividualExecutionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmIndividualExecutionDetails
+ * RedemptionBulkExecution2.mmIndividualExecutionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#RequestedSettlementCurrency
- * RedemptionBulkExecution2.RequestedSettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmRequestedSettlementCurrency
+ * RedemptionBulkExecution2.mmRequestedSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#RequestedNAVCurrency
- * RedemptionBulkExecution2.RequestedNAVCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmRequestedNAVCurrency
+ * RedemptionBulkExecution2.mmRequestedNAVCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#BulkCashSettlementDetails
- * RedemptionBulkExecution2.BulkCashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmBulkCashSettlementDetails
+ * RedemptionBulkExecution2.mmBulkCashSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,15 +75,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#BulkExecutionDetails
- * RedemptionBulkOrderConfirmationV02.BulkExecutionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#mmBulkExecutionDetails
+ * RedemptionBulkOrderConfirmationV02.mmBulkExecutionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -97,6 +98,7 @@ import java.util.function.Supplier;
 public class RedemptionBulkExecution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode placeOfTrade;
 	/**
 	 * Market in which the advised trade transaction was executed.
 	 * <p>
@@ -109,7 +111,8 @@ public class RedemptionBulkExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -129,20 +132,21 @@ public class RedemptionBulkExecution2 {
 	 * "Market in which the advised trade transaction was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which the advised trade transaction was executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ISODateTime orderDateTime;
 	/**
 	 * Date and time at which the order was placed by the investor.
 	 * <p>
@@ -155,8 +159,8 @@ public class RedemptionBulkExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderDateTime
-	 * InvestmentFundOrder.OrderDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderDateTime
+	 * InvestmentFundOrder.mmOrderDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,20 +180,21 @@ public class RedemptionBulkExecution2 {
 	 * "Date and time at which the order was placed by the investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderDateTime;
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDateTime";
 			definition = "Date and time at which the order was placed by the investor.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CancellationRight1 cancellationRight;
 	/**
 	 * Cancellation right of an investor with respect to an investment fund
 	 * order.
@@ -204,8 +209,8 @@ public class RedemptionBulkExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#CancellationRight
-	 * InvestmentFundOrder.CancellationRight}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmCancellationRight
+	 * InvestmentFundOrder.mmCancellationRight}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,20 +231,21 @@ public class RedemptionBulkExecution2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.CancellationRight;
 			isDerived = false;
 			xmlTag = "CxlRght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRight";
 			definition = "Cancellation right of an investor with respect to an investment fund order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> CancellationRight1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.CancellationRight1.mmObject();
 		}
 	};
+	protected FinancialInstrument6 financialInstrumentDetails;
 	/**
 	 * Investment fund class to which an investment fund order execution is
 	 * related.
@@ -252,8 +258,8 @@ public class RedemptionBulkExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentFundClass
-	 * InvestmentFundTransaction.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundClass
+	 * InvestmentFundTransaction.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -274,21 +280,22 @@ public class RedemptionBulkExecution2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class to which an investment fund order execution is related.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.RedemptionExecution3> individualExecutionDetails;
 	/**
 	 * Execution of a redemption order.
 	 * <p>
@@ -320,20 +327,21 @@ public class RedemptionBulkExecution2 {
 	 * definition} = "Execution of a redemption order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualExecutionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualExecutionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
 			businessComponentTrace_lazy = () -> RedemptionExecution.mmObject();
+			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvExctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualExecutionDetails";
 			definition = "Execution of a redemption order.";
 			minOccurs = 1;
-			type_lazy = () -> RedemptionExecution3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RedemptionExecution3.mmObject();
 		}
 	};
+	protected CurrencyCode requestedSettlementCurrency;
 	/**
 	 * Currency requested for settlement of cash proceeds.
 	 * <p>
@@ -346,8 +354,8 @@ public class RedemptionBulkExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#RequestedSettlementCurrency
-	 * InvestmentFundOrder.RequestedSettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRequestedSettlementCurrency
+	 * InvestmentFundOrder.mmRequestedSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -366,20 +374,21 @@ public class RedemptionBulkExecution2 {
 	 * definition} = "Currency requested for settlement of cash proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedSettlementCurrency;
 			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.RequestedSettlementCurrency;
 			isDerived = false;
 			xmlTag = "ReqdSttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementCurrency";
 			definition = "Currency requested for settlement of cash proceeds.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected CurrencyCode requestedNAVCurrency;
 	/**
 	 * Currency to be used for pricing the fund. This currency must be among the
 	 * set of currencies in which the price may be expressed, as stated in the
@@ -394,8 +403,8 @@ public class RedemptionBulkExecution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#RequestedNAVCurrency
-	 * InvestmentFundClass.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmRequestedNAVCurrency
+	 * InvestmentFundClass.mmRequestedNAVCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -416,20 +425,21 @@ public class RedemptionBulkExecution2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedNAVCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.RequestedNAVCurrency;
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected PaymentTransaction18 bulkCashSettlementDetails;
 	/**
 	 * Payment transaction related to the execution of an investment fund
 	 * transaction.
@@ -463,32 +473,32 @@ public class RedemptionBulkExecution2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BulkCashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBulkCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
 			businessComponentTrace_lazy = () -> BulkPayment.mmObject();
+			componentContext_lazy = () -> RedemptionBulkExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "BlkCshSttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails";
 			definition = "Payment transaction related to the execution of an investment fund transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentTransaction18.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction18.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkExecution2.PlaceOfTrade, com.tools20022.repository.msg.RedemptionBulkExecution2.OrderDateTime,
-						com.tools20022.repository.msg.RedemptionBulkExecution2.CancellationRight, com.tools20022.repository.msg.RedemptionBulkExecution2.FinancialInstrumentDetails,
-						com.tools20022.repository.msg.RedemptionBulkExecution2.IndividualExecutionDetails, com.tools20022.repository.msg.RedemptionBulkExecution2.RequestedSettlementCurrency,
-						com.tools20022.repository.msg.RedemptionBulkExecution2.RequestedNAVCurrency, com.tools20022.repository.msg.RedemptionBulkExecution2.BulkCashSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkExecution2.mmPlaceOfTrade, com.tools20022.repository.msg.RedemptionBulkExecution2.mmOrderDateTime,
+						com.tools20022.repository.msg.RedemptionBulkExecution2.mmCancellationRight, com.tools20022.repository.msg.RedemptionBulkExecution2.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.RedemptionBulkExecution2.mmIndividualExecutionDetails, com.tools20022.repository.msg.RedemptionBulkExecution2.mmRequestedSettlementCurrency,
+						com.tools20022.repository.msg.RedemptionBulkExecution2.mmRequestedNAVCurrency, com.tools20022.repository.msg.RedemptionBulkExecution2.mmBulkCashSettlementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmBulkExecutionDetails);
 				trace_lazy = () -> RedemptionExecution.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.BulkExecutionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -502,5 +512,69 @@ public class RedemptionBulkExecution2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getPlaceOfTrade() {
+		return placeOfTrade;
+	}
+
+	public void setPlaceOfTrade(CountryCode placeOfTrade) {
+		this.placeOfTrade = placeOfTrade;
+	}
+
+	public ISODateTime getOrderDateTime() {
+		return orderDateTime;
+	}
+
+	public void setOrderDateTime(ISODateTime orderDateTime) {
+		this.orderDateTime = orderDateTime;
+	}
+
+	public CancellationRight1 getCancellationRight() {
+		return cancellationRight;
+	}
+
+	public void setCancellationRight(com.tools20022.repository.msg.CancellationRight1 cancellationRight) {
+		this.cancellationRight = cancellationRight;
+	}
+
+	public FinancialInstrument6 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument6 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public List<RedemptionExecution3> getIndividualExecutionDetails() {
+		return individualExecutionDetails;
+	}
+
+	public void setIndividualExecutionDetails(List<com.tools20022.repository.msg.RedemptionExecution3> individualExecutionDetails) {
+		this.individualExecutionDetails = individualExecutionDetails;
+	}
+
+	public CurrencyCode getRequestedSettlementCurrency() {
+		return requestedSettlementCurrency;
+	}
+
+	public void setRequestedSettlementCurrency(CurrencyCode requestedSettlementCurrency) {
+		this.requestedSettlementCurrency = requestedSettlementCurrency;
+	}
+
+	public CurrencyCode getRequestedNAVCurrency() {
+		return requestedNAVCurrency;
+	}
+
+	public void setRequestedNAVCurrency(CurrencyCode requestedNAVCurrency) {
+		this.requestedNAVCurrency = requestedNAVCurrency;
+	}
+
+	public PaymentTransaction18 getBulkCashSettlementDetails() {
+		return bulkCashSettlementDetails;
+	}
+
+	public void setBulkCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction18 bulkCashSettlementDetails) {
+		this.bulkCashSettlementDetails = bulkCashSettlementDetails;
 	}
 }

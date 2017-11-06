@@ -34,11 +34,11 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance1#FirstOpeningBalanceOrIntermediaryOpeningBalanceRule
- * PaginationBalance1.FirstOpeningBalanceOrIntermediaryOpeningBalanceRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmFirstOpeningBalanceOrIntermediaryOpeningBalanceRule
+ * PaginationBalance1.mmFirstOpeningBalanceOrIntermediaryOpeningBalanceRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance1#FinalClosingBalanceOrIntermediaryClosingBalanceRule
- * PaginationBalance1.FinalClosingBalanceOrIntermediaryClosingBalanceRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmFinalClosingBalanceOrIntermediaryClosingBalanceRule
+ * PaginationBalance1.mmFinalClosingBalanceOrIntermediaryClosingBalanceRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,24 +46,24 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance1#FirstOpeningBalance
- * PaginationBalance1.FirstOpeningBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmFirstOpeningBalance
+ * PaginationBalance1.mmFirstOpeningBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance1#IntermediaryOpeningBalance
- * PaginationBalance1.IntermediaryOpeningBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmIntermediaryOpeningBalance
+ * PaginationBalance1.mmIntermediaryOpeningBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance1#FinalClosingBalance
- * PaginationBalance1.FinalClosingBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmFinalClosingBalance
+ * PaginationBalance1.mmFinalClosingBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance1#IntermediaryClosingBalance
- * PaginationBalance1.IntermediaryClosingBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmIntermediaryClosingBalance
+ * PaginationBalance1.mmIntermediaryClosingBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -86,6 +86,7 @@ import java.util.function.Supplier;
 public class PaginationBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 firstOpeningBalance;
 	/**
 	 * Opening balance of the financial instrument in the statement.
 	 * <p>
@@ -115,7 +116,7 @@ public class PaginationBalance1 {
 	 * "Opening balance of the financial instrument in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstOpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstOpeningBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
@@ -123,11 +124,12 @@ public class PaginationBalance1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstOpeningBalance";
 			definition = "Opening balance of the financial instrument in the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 intermediaryOpeningBalance;
 	/**
 	 * Opening balance of this page only. It must be the interemdiary closing
 	 * balance of the previous page (part of the same statement).
@@ -159,7 +161,7 @@ public class PaginationBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntermediaryOpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntermediaryOpeningBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
@@ -167,11 +169,12 @@ public class PaginationBalance1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryOpeningBalance";
 			definition = "Opening balance of this page only. It must be the interemdiary closing balance of the previous page (part of the same statement).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 finalClosingBalance;
 	/**
 	 * Closing balance of the financial instrument in the statement.
 	 * <p>
@@ -201,7 +204,7 @@ public class PaginationBalance1 {
 	 * "Closing balance of the financial instrument in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalClosingBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
@@ -209,11 +212,12 @@ public class PaginationBalance1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalClosingBalance";
 			definition = "Closing balance of the financial instrument in the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 intermediaryClosingBalance;
 	/**
 	 * Closing Balance of this page only. Must be the interemdiary opening
 	 * balance of the next page (part of the same statement).
@@ -245,7 +249,7 @@ public class PaginationBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntermediaryClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntermediaryClosingBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
@@ -253,9 +257,9 @@ public class PaginationBalance1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryClosingBalance";
 			definition = "Closing Balance of this page only. Must be the interemdiary opening balance of the next page (part of the same statement).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
 	/**
@@ -268,11 +272,11 @@ public class PaginationBalance1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#FirstOpeningBalance
-	 * PaginationBalance1.FirstOpeningBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmFirstOpeningBalance
+	 * PaginationBalance1.mmFirstOpeningBalance}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#IntermediaryOpeningBalance
-	 * PaginationBalance1.IntermediaryOpeningBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmIntermediaryOpeningBalance
+	 * PaginationBalance1.mmIntermediaryOpeningBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -292,13 +296,13 @@ public class PaginationBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor FirstOpeningBalanceOrIntermediaryOpeningBalanceRule = new MMXor() {
+	public static final MMXor mmFirstOpeningBalanceOrIntermediaryOpeningBalanceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstOpeningBalanceOrIntermediaryOpeningBalanceRule";
 			definition = "Either FirstOpeningBalance or IntermediaryOpeningBalance may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.FirstOpeningBalance, com.tools20022.repository.msg.PaginationBalance1.IntermediaryOpeningBalance);
 			messageComponent_lazy = () -> PaginationBalance1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFirstOpeningBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryOpeningBalance);
 		}
 	};
 	/**
@@ -311,11 +315,11 @@ public class PaginationBalance1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#FinalClosingBalance
-	 * PaginationBalance1.FinalClosingBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmFinalClosingBalance
+	 * PaginationBalance1.mmFinalClosingBalance}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#IntermediaryClosingBalance
-	 * PaginationBalance1.IntermediaryClosingBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1#mmIntermediaryClosingBalance
+	 * PaginationBalance1.mmIntermediaryClosingBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -335,22 +339,22 @@ public class PaginationBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor FinalClosingBalanceOrIntermediaryClosingBalanceRule = new MMXor() {
+	public static final MMXor mmFinalClosingBalanceOrIntermediaryClosingBalanceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalClosingBalanceOrIntermediaryClosingBalanceRule";
 			definition = "Either FinalClosingBalance or IntermediaryClosingBalance may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.FinalClosingBalance, com.tools20022.repository.msg.PaginationBalance1.IntermediaryClosingBalance);
 			messageComponent_lazy = () -> PaginationBalance1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFinalClosingBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryClosingBalance);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.FirstOpeningBalance, com.tools20022.repository.msg.PaginationBalance1.IntermediaryOpeningBalance,
-						com.tools20022.repository.msg.PaginationBalance1.FinalClosingBalance, com.tools20022.repository.msg.PaginationBalance1.IntermediaryClosingBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFirstOpeningBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryOpeningBalance,
+						com.tools20022.repository.msg.PaginationBalance1.mmFinalClosingBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryClosingBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -362,10 +366,42 @@ public class PaginationBalance1 {
 				name = "PaginationBalance1";
 				definition = "Balance of a financial instrument for a specific statement page.";
 				nextVersions_lazy = () -> Arrays.asList(PaginationBalance2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.FirstOpeningBalanceOrIntermediaryOpeningBalanceRule,
-						com.tools20022.repository.msg.PaginationBalance1.FinalClosingBalanceOrIntermediaryClosingBalanceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFirstOpeningBalanceOrIntermediaryOpeningBalanceRule,
+						com.tools20022.repository.msg.PaginationBalance1.mmFinalClosingBalanceOrIntermediaryClosingBalanceRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getFirstOpeningBalance() {
+		return firstOpeningBalance;
+	}
+
+	public void setFirstOpeningBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 firstOpeningBalance) {
+		this.firstOpeningBalance = firstOpeningBalance;
+	}
+
+	public FinancialInstrumentQuantity1 getIntermediaryOpeningBalance() {
+		return intermediaryOpeningBalance;
+	}
+
+	public void setIntermediaryOpeningBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 intermediaryOpeningBalance) {
+		this.intermediaryOpeningBalance = intermediaryOpeningBalance;
+	}
+
+	public FinancialInstrumentQuantity1 getFinalClosingBalance() {
+		return finalClosingBalance;
+	}
+
+	public void setFinalClosingBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 finalClosingBalance) {
+		this.finalClosingBalance = finalClosingBalance;
+	}
+
+	public FinancialInstrumentQuantity1 getIntermediaryClosingBalance() {
+		return intermediaryClosingBalance;
+	}
+
+	public void setIntermediaryClosingBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 intermediaryClosingBalance) {
+		this.intermediaryClosingBalance = intermediaryClosingBalance;
 	}
 }

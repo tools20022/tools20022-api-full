@@ -37,29 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#OriginalGroupIdentification
- * CancellationRequestInformation1.OriginalGroupIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmOriginalGroupIdentification
+ * CancellationRequestInformation1.mmOriginalGroupIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#OriginalCreationDateTime
- * CancellationRequestInformation1.OriginalCreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmOriginalCreationDateTime
+ * CancellationRequestInformation1.mmOriginalCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#NumberOfInvoiceRequests
- * CancellationRequestInformation1.NumberOfInvoiceRequests}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmNumberOfInvoiceRequests
+ * CancellationRequestInformation1.mmNumberOfInvoiceRequests}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#TotalBulkInvoiceAmount
- * CancellationRequestInformation1.TotalBulkInvoiceAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmTotalBulkInvoiceAmount
+ * CancellationRequestInformation1.mmTotalBulkInvoiceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#CancellationReason
- * CancellationRequestInformation1.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmCancellationReason
+ * CancellationRequestInformation1.mmCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#FinancingRequestor
- * CancellationRequestInformation1.FinancingRequestor}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmFinancingRequestor
+ * CancellationRequestInformation1.mmFinancingRequestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#IntermediaryAgent
- * CancellationRequestInformation1.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmIntermediaryAgent
+ * CancellationRequestInformation1.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#FirstAgent
- * CancellationRequestInformation1.FirstAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRequestInformation1#mmFirstAgent
+ * CancellationRequestInformation1.mmFirstAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -70,15 +70,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#CancellationRequestInformation
- * InvoiceFinancingCancellationRequestV01.CancellationRequestInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#mmCancellationRequestInformation
+ * InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationRequestInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalGroupIdentification;
 	/**
 	 * Unique and unambiguous identifier of the original financing request
 	 * message as assigned by the original sending party.
@@ -124,7 +125,7 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
 			isDerived = false;
@@ -132,11 +133,12 @@ public class CancellationRequestInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupIdentification";
 			definition = "Unique and unambiguous identifier of the original financing request message as assigned by the original sending party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalCreationDateTime;
 	/**
 	 * Date and time at which the original financing request message was
 	 * created.
@@ -167,7 +169,7 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
 			isDerived = false;
@@ -175,11 +177,12 @@ public class CancellationRequestInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original financing request message was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfInvoiceRequests;
 	/**
 	 * Specifies the number of single invoice financing requests included in the
 	 * original financing request message.
@@ -211,7 +214,7 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfInvoiceRequests = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfInvoiceRequests = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
 			isDerived = false;
@@ -219,11 +222,12 @@ public class CancellationRequestInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfInvoiceRequests";
 			definition = "Specifies the number of single invoice financing requests included in the original financing request message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalBulkInvoiceAmount;
 	/**
 	 * Total amount of the bulk invoice financing request. It is composed by the
 	 * sum of the total amounts of all invoices included in the original
@@ -256,7 +260,7 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalBulkInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalBulkInvoiceAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
 			isDerived = false;
@@ -264,11 +268,12 @@ public class CancellationRequestInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBulkInvoiceAmount";
 			definition = "Total amount of the bulk invoice financing request. It is composed by the sum of the total amounts of all invoices included in the original financing request message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max105Text cancellationReason;
 	/**
 	 * Further details on the cancellation request information, in an uncoded
 	 * form.
@@ -282,8 +287,8 @@ public class CancellationRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#CancellationRequestReason
-	 * InvoiceFinancingStatus.CancellationRequestReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmCancellationRequestReason
+	 * InvoiceFinancingStatus.mmCancellationRequestReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -304,20 +309,21 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmCancellationRequestReason;
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.CancellationRequestReason;
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Further details on the cancellation request information, in an uncoded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount6 financingRequestor;
 	/**
 	 * Party that requests the cancellation of a financing request previously
 	 * sent.
@@ -331,8 +337,8 @@ public class CancellationRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -353,21 +359,22 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancingRequestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancingRequestor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "FincgRqstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingRequestor";
 			definition = "Party that requests the cancellation of a financing request previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification6 intermediaryAgent;
 	/**
 	 * Financial institution that receives the request from the financing
 	 * requestor and forwards it to the first agent for execution.
@@ -381,8 +388,8 @@ public class CancellationRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -403,21 +410,22 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			definition = "Financial institution that receives the request from the financing requestor and forwards it to the first agent for execution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification6 firstAgent;
 	/**
 	 * Financial institution of financing requestor to which an invoice
 	 * financing cancellation request is addressed.
@@ -431,8 +439,8 @@ public class CancellationRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -453,37 +461,102 @@ public class CancellationRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FirstAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution of financing requestor to which an invoice financing cancellation request is addressed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRequestInformation1.OriginalGroupIdentification, com.tools20022.repository.msg.CancellationRequestInformation1.OriginalCreationDateTime,
-						com.tools20022.repository.msg.CancellationRequestInformation1.NumberOfInvoiceRequests, com.tools20022.repository.msg.CancellationRequestInformation1.TotalBulkInvoiceAmount,
-						com.tools20022.repository.msg.CancellationRequestInformation1.CancellationReason, com.tools20022.repository.msg.CancellationRequestInformation1.FinancingRequestor,
-						com.tools20022.repository.msg.CancellationRequestInformation1.IntermediaryAgent, com.tools20022.repository.msg.CancellationRequestInformation1.FirstAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRequestInformation1.mmOriginalGroupIdentification,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmOriginalCreationDateTime, com.tools20022.repository.msg.CancellationRequestInformation1.mmNumberOfInvoiceRequests,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmTotalBulkInvoiceAmount, com.tools20022.repository.msg.CancellationRequestInformation1.mmCancellationReason,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmFinancingRequestor, com.tools20022.repository.msg.CancellationRequestInformation1.mmIntermediaryAgent,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmFirstAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.CancellationRequestInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationRequestInformation1";
 				definition = "Set of information related to the cancellation request, such as actors involved and identification of the original multiple invoice financing request to which the cancellation request is referring.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalGroupIdentification() {
+		return originalGroupIdentification;
+	}
+
+	public void setOriginalGroupIdentification(Max35Text originalGroupIdentification) {
+		this.originalGroupIdentification = originalGroupIdentification;
+	}
+
+	public ISODateTime getOriginalCreationDateTime() {
+		return originalCreationDateTime;
+	}
+
+	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = originalCreationDateTime;
+	}
+
+	public Max15NumericText getNumberOfInvoiceRequests() {
+		return numberOfInvoiceRequests;
+	}
+
+	public void setNumberOfInvoiceRequests(Max15NumericText numberOfInvoiceRequests) {
+		this.numberOfInvoiceRequests = numberOfInvoiceRequests;
+	}
+
+	public ActiveCurrencyAndAmount getTotalBulkInvoiceAmount() {
+		return totalBulkInvoiceAmount;
+	}
+
+	public void setTotalBulkInvoiceAmount(ActiveCurrencyAndAmount totalBulkInvoiceAmount) {
+		this.totalBulkInvoiceAmount = totalBulkInvoiceAmount;
+	}
+
+	public Max105Text getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(Max105Text cancellationReason) {
+		this.cancellationReason = cancellationReason;
+	}
+
+	public PartyIdentificationAndAccount6 getFinancingRequestor() {
+		return financingRequestor;
+	}
+
+	public void setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
+		this.financingRequestor = financingRequestor;
+	}
+
+	public FinancialInstitutionIdentification6 getIntermediaryAgent() {
+		return intermediaryAgent;
+	}
+
+	public void setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
+		this.intermediaryAgent = intermediaryAgent;
+	}
+
+	public FinancialInstitutionIdentification6 getFirstAgent() {
+		return firstAgent;
+	}
+
+	public void setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
+		this.firstAgent = firstAgent;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.InstructionQueryType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria based on which information is included.
@@ -37,33 +38,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#CancellationRequestIdentification
- * IntraPositionQueryCriteria2.CancellationRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#mmCancellationRequestIdentification
+ * IntraPositionQueryCriteria2.mmCancellationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#InstructionQueryType
- * IntraPositionQueryCriteria2.InstructionQueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#mmInstructionQueryType
+ * IntraPositionQueryCriteria2.mmInstructionQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#ProcessingStatus
- * IntraPositionQueryCriteria2.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#mmProcessingStatus
+ * IntraPositionQueryCriteria2.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#SafekeepingAccount
- * IntraPositionQueryCriteria2.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#mmSafekeepingAccount
+ * IntraPositionQueryCriteria2.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#AccountOwner
- * IntraPositionQueryCriteria2.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#mmAccountOwner
+ * IntraPositionQueryCriteria2.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#MessageOriginator
- * IntraPositionQueryCriteria2.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#mmMessageOriginator
+ * IntraPositionQueryCriteria2.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#CreationDateTime
- * IntraPositionQueryCriteria2.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria2#mmCreationDateTime
+ * IntraPositionQueryCriteria2.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionQueryCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> cancellationRequestIdentification;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -104,7 +106,7 @@ public class IntraPositionQueryCriteria2 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -116,6 +118,7 @@ public class IntraPositionQueryCriteria2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected InstructionQueryType1Code instructionQueryType;
 	/**
 	 * Type of underlying transaction to be cancelled, such as an settlement
 	 * instruction or an intra-position movement.
@@ -147,7 +150,7 @@ public class IntraPositionQueryCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -155,11 +158,12 @@ public class IntraPositionQueryCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionQueryType";
 			definition = "Type of underlying transaction to be cancelled, such as an settlement instruction or an intra-position movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InstructionQueryType1Code.mmObject();
 		}
 	};
+	protected List<CancellationProcessingStatus3Choice> processingStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -188,7 +192,7 @@ public class IntraPositionQueryCriteria2 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -200,6 +204,7 @@ public class IntraPositionQueryCriteria2 {
 			complexType_lazy = () -> CancellationProcessingStatus3Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesAccount13> safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -226,7 +231,7 @@ public class IntraPositionQueryCriteria2 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -235,10 +240,11 @@ public class IntraPositionQueryCriteria2 {
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> accountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -266,7 +272,7 @@ public class IntraPositionQueryCriteria2 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -275,10 +281,11 @@ public class IntraPositionQueryCriteria2 {
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -307,7 +314,7 @@ public class IntraPositionQueryCriteria2 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -316,10 +323,11 @@ public class IntraPositionQueryCriteria2 {
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice creationDateTime;
 	/**
 	 * Specifies the creation date/time of the settlement instruction or the
 	 * intra-position movement.
@@ -351,7 +359,7 @@ public class IntraPositionQueryCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -359,8 +367,8 @@ public class IntraPositionQueryCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the settlement instruction or the intra-position movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
@@ -368,16 +376,72 @@ public class IntraPositionQueryCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria2.CancellationRequestIdentification, com.tools20022.repository.msg.IntraPositionQueryCriteria2.InstructionQueryType,
-						com.tools20022.repository.msg.IntraPositionQueryCriteria2.ProcessingStatus, com.tools20022.repository.msg.IntraPositionQueryCriteria2.SafekeepingAccount,
-						com.tools20022.repository.msg.IntraPositionQueryCriteria2.AccountOwner, com.tools20022.repository.msg.IntraPositionQueryCriteria2.MessageOriginator,
-						com.tools20022.repository.msg.IntraPositionQueryCriteria2.CreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria2.mmCancellationRequestIdentification, com.tools20022.repository.msg.IntraPositionQueryCriteria2.mmInstructionQueryType,
+						com.tools20022.repository.msg.IntraPositionQueryCriteria2.mmProcessingStatus, com.tools20022.repository.msg.IntraPositionQueryCriteria2.mmSafekeepingAccount,
+						com.tools20022.repository.msg.IntraPositionQueryCriteria2.mmAccountOwner, com.tools20022.repository.msg.IntraPositionQueryCriteria2.mmMessageOriginator,
+						com.tools20022.repository.msg.IntraPositionQueryCriteria2.mmCreationDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionQueryCriteria2";
 				definition = "Defines the criteria based on which information is included.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getCancellationRequestIdentification() {
+		return cancellationRequestIdentification;
+	}
+
+	public void setCancellationRequestIdentification(List<Max35Text> cancellationRequestIdentification) {
+		this.cancellationRequestIdentification = cancellationRequestIdentification;
+	}
+
+	public InstructionQueryType1Code getInstructionQueryType() {
+		return instructionQueryType;
+	}
+
+	public void setInstructionQueryType(InstructionQueryType1Code instructionQueryType) {
+		this.instructionQueryType = instructionQueryType;
+	}
+
+	public List<CancellationProcessingStatus3Choice> getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(List<CancellationProcessingStatus3Choice> processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public List<SecuritiesAccount13> getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(List<com.tools20022.repository.msg.SecuritiesAccount13> safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<SystemPartyIdentification5> getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(List<com.tools20022.repository.msg.SystemPartyIdentification5> accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public List<SystemPartyIdentification5> getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public DateAndDateTimeSearch2Choice getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(DateAndDateTimeSearch2Choice creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information such as the registration details.
@@ -34,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative30#RegistrationDetails
- * CorporateActionNarrative30.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative30#mmRegistrationDetails
+ * CorporateActionNarrative30.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative30#PartyContactNarrative
- * CorporateActionNarrative30.PartyContactNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative30#mmPartyContactNarrative
+ * CorporateActionNarrative30.mmPartyContactNarrative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative30#CertificationBreakdown
- * CorporateActionNarrative30.CertificationBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative30#mmCertificationBreakdown
+ * CorporateActionNarrative30.mmCertificationBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,18 +53,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06#AdditionalInformation
- * CorporateActionInstructionV06.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06#mmAdditionalInformation
+ * CorporateActionInstructionV06.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#AdditionalInformation
- * CorporateActionInstructionV07.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmAdditionalInformation
+ * CorporateActionInstructionV07.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max350Text> registrationDetails;
 	/**
 	 * Provides information required for the registration.
 	 * <p>
@@ -94,8 +96,8 @@ public class CorporateActionNarrative30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#RegistrationDetails
-	 * CorporateActionEvent.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRegistrationDetails
+	 * CorporateActionEvent.mmRegistrationDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,24 +117,25 @@ public class CorporateActionNarrative30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative21#RegistrationDetails
-	 * CorporateActionNarrative21.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative21#mmRegistrationDetails
+	 * CorporateActionNarrative21.mmRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> CorporateActionNarrative30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.RegistrationDetails;
 			isDerived = false;
 			xmlTag = "RegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative21.RegistrationDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative21.mmRegistrationDetails;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> partyContactNarrative;
 	/**
 	 * Provides additional information regarding the party, for example, the
 	 * contact unit or person responsible for the transaction identified in the
@@ -147,8 +150,8 @@ public class CorporateActionNarrative30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#ContactPersonRole
-	 * Role.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmContactPersonRole
+	 * Role.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,24 +173,25 @@ public class CorporateActionNarrative30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative21#PartyContactNarrative
-	 * CorporateActionNarrative21.PartyContactNarrative}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative21#mmPartyContactNarrative
+	 * CorporateActionNarrative21.mmPartyContactNarrative}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative30.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactNarrative";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative21.PartyContactNarrative;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative21.mmPartyContactNarrative;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> certificationBreakdown;
 	/**
 	 * Provides information required for the certification/breakdown.
 	 * <p>
@@ -217,11 +221,11 @@ public class CorporateActionNarrative30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative21#CertificationBreakdown
-	 * CorporateActionNarrative21.CertificationBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative21#mmCertificationBreakdown
+	 * CorporateActionNarrative21.mmCertificationBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationBreakdown = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative30.mmObject();
 			isDerived = false;
@@ -229,7 +233,7 @@ public class CorporateActionNarrative30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationBreakdown";
 			definition = "Provides information required for the certification/breakdown.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative21.CertificationBreakdown;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative21.mmCertificationBreakdown;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -238,12 +242,12 @@ public class CorporateActionNarrative30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative30.RegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative30.PartyContactNarrative,
-						com.tools20022.repository.msg.CorporateActionNarrative30.CertificationBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative30.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative30.mmPartyContactNarrative,
+						com.tools20022.repository.msg.CorporateActionNarrative30.mmCertificationBreakdown);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV07.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative30";
 				definition = "Provides additional information such as the registration details.";
@@ -251,5 +255,29 @@ public class CorporateActionNarrative30 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max350Text> getRegistrationDetails() {
+		return registrationDetails;
+	}
+
+	public void setRegistrationDetails(List<Max350Text> registrationDetails) {
+		this.registrationDetails = registrationDetails;
+	}
+
+	public List<Max350Text> getPartyContactNarrative() {
+		return partyContactNarrative;
+	}
+
+	public void setPartyContactNarrative(List<Max350Text> partyContactNarrative) {
+		this.partyContactNarrative = partyContactNarrative;
+	}
+
+	public List<Max350Text> getCertificationBreakdown() {
+		return certificationBreakdown;
+	}
+
+	public void setCertificationBreakdown(List<Max350Text> certificationBreakdown) {
+		this.certificationBreakdown = certificationBreakdown;
 	}
 }

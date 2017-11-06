@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient1Choice#KeyTransport
- * Recipient1Choice.KeyTransport}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Recipient1Choice#KEK
- * Recipient1Choice.KEK}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient1Choice#mmKeyTransport
+ * Recipient1Choice.mmKeyTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Recipient1Choice#mmKEK
+ * Recipient1Choice.mmKEK}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Recipient1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected KeyTransport1 keyTransport;
 	/**
 	 * Encryption key using previously distributed asymmetric key.
 	 * <p>
@@ -92,7 +93,7 @@ public class Recipient1Choice {
 	 * "Encryption key using previously distributed asymmetric key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient1Choice.mmObject();
 			isDerived = false;
@@ -100,12 +101,13 @@ public class Recipient1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyTransport";
 			definition = "Encryption key using previously distributed asymmetric key.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> KeyTransport1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> KeyTransport1.mmObject();
 		}
 	};
+	protected KEK1 kEK;
 	/**
 	 * Encryption key using previously distributed symmetric key.
 	 * <p>
@@ -132,7 +134,7 @@ public class Recipient1Choice {
 	 * "Encryption key using previously distributed symmetric key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient1Choice.mmObject();
 			isDerived = false;
@@ -140,18 +142,18 @@ public class Recipient1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEK";
 			definition = "Encryption key using previously distributed symmetric key.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> KEK1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> KEK1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient1Choice.KeyTransport, com.tools20022.repository.choice.Recipient1Choice.KEK);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient1Choice.mmKeyTransport, com.tools20022.repository.choice.Recipient1Choice.mmKEK);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Recipient1Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
@@ -159,5 +161,21 @@ public class Recipient1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public KeyTransport1 getKeyTransport() {
+		return keyTransport;
+	}
+
+	public void setKeyTransport(KeyTransport1 keyTransport) {
+		this.keyTransport = keyTransport;
+	}
+
+	public KEK1 getKEK() {
+		return kEK;
+	}
+
+	public void setKEK(KEK1 kEK) {
+		this.kEK = kEK;
 	}
 }

@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Reason2#Description
- * Reason2.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reason2#mmDescription
+ * Reason2.mmDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,36 +45,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestV02#RequestReason
- * StatusChangeRequestV02.RequestReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestV02#mmRequestReason
+ * StatusChangeRequestV02.mmRequestReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#RequestReason
- * StatusChangeRequestNotificationV03.RequestReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmRequestReason
+ * StatusChangeRequestNotificationV03.mmRequestReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#RejectionReason
- * StatusChangeRequestRejectionV02.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmRejectionReason
+ * StatusChangeRequestRejectionV02.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#RejectionReason
- * StatusChangeRequestRejectionNotificationV03.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#mmRejectionReason
+ * StatusChangeRequestRejectionNotificationV03.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03#RejectionReason
- * StatusExtensionRequestRejectionV03.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03#mmRejectionReason
+ * StatusExtensionRequestRejectionV03.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#RejectionReason
- * StatusExtensionRejectionNotificationV03.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#mmRejectionReason
+ * StatusExtensionRejectionNotificationV03.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01#RejectionReason
- * RoleAndBaselineRejectionV01.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01#mmRejectionReason
+ * RoleAndBaselineRejectionV01.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#RejectionReason
- * RoleAndBaselineRejectionNotificationV01.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#mmRejectionReason
+ * RoleAndBaselineRejectionNotificationV01.mmRejectionReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text description;
 	/**
 	 * Detailed description of the rejection.
 	 * <p>
@@ -100,8 +101,8 @@ public class Reason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Reason2
@@ -119,17 +120,17 @@ public class Reason2 {
 	 * definition} = "Detailed description of the rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> Reason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Detailed description of the rejection.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -137,18 +138,26 @@ public class Reason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reason2.Description);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reason2.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestReason, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmRequestReason,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmRejectionReason, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmRejectionReason,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmRejectionReason, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmRejectionReason,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmRejectionReason, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmRejectionReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestV02.RequestReason, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.RequestReason,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.RejectionReason, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.RejectionReason,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.RejectionReason, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.RejectionReason,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.RejectionReason, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.RejectionReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reason2";
 				definition = "Specifies the reason for an action.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

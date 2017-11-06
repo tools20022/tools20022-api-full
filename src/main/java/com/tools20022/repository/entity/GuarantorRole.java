@@ -37,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.GuarantorRole#Position
- * GuarantorRole.Position}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.GuarantorRole#mmPosition
+ * GuarantorRole.mmPosition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GuarantorRole extends GuaranteePartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected positiveInteger position;
 	/**
 	 * Rank of this guarantor.
 	 * <p>
@@ -74,17 +75,18 @@ public class GuarantorRole extends GuaranteePartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.positiveInteger
 	 * positiveInteger}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#Position
-	 * GuaranteeDetails1.Position}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.GuarantorRole GuarantorRole}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmPosition
+	 * GuaranteeDetails1.mmPosition}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -97,16 +99,16 @@ public class GuarantorRole extends GuaranteePartyRole {
 	 * definition} = "Rank of this guarantor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Position = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPosition = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeDetails1.Position);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeDetails1.mmPosition);
 			elementContext_lazy = () -> GuarantorRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Position";
 			definition = "Rank of this guarantor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> positiveInteger.mmObject();
 		}
 	};
@@ -114,14 +116,22 @@ public class GuarantorRole extends GuaranteePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GuarantorRole";
 				definition = "Legal entity, other than the issuer, who gives a guarantee. The guarantor becomes liable in case of default.";
 				superType_lazy = () -> GuaranteePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GuarantorRole.Position);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GuarantorRole.mmPosition);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public positiveInteger getPosition() {
+		return position;
+	}
+
+	public void setPosition(positiveInteger position) {
+		this.position = position;
 	}
 }

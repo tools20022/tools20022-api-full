@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Eligibility1Code#EligibleCounterparty
- * Eligibility1Code.EligibleCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.Eligibility1Code#mmEligibleCounterparty
+ * Eligibility1Code.mmEligibleCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Eligibility1Code#RetailClient
- * Eligibility1Code.RetailClient}</li>
+ * {@linkplain com.tools20022.repository.codeset.Eligibility1Code#mmRetailClient
+ * Eligibility1Code.mmRetailClient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Eligibility1Code#ProfessionalClient
- * Eligibility1Code.ProfessionalClient}</li>
+ * {@linkplain com.tools20022.repository.codeset.Eligibility1Code#mmProfessionalClient
+ * Eligibility1Code.mmProfessionalClient}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class Eligibility1Code extends EligibilityCode {
 	 * name} = "EligibleCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode EligibleCounterparty = new MMCode() {
+	public static final MMCode mmEligibleCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleCounterparty";
@@ -110,7 +110,7 @@ public class Eligibility1Code extends EligibilityCode {
 	 * name} = "RetailClient"</li>
 	 * </ul>
 	 */
-	public static final MMCode RetailClient = new MMCode() {
+	public static final MMCode mmRetailClient = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailClient";
@@ -133,7 +133,7 @@ public class Eligibility1Code extends EligibilityCode {
 	 * name} = "ProfessionalClient"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProfessionalClient = new MMCode() {
+	public static final MMCode mmProfessionalClient = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfessionalClient";
@@ -144,13 +144,13 @@ public class Eligibility1Code extends EligibilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELIG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Eligibility1Code";
 				definition = "Identifies the type of investor. The rules that apply to each type of client are different.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Eligibility1Code.EligibleCounterparty, com.tools20022.repository.codeset.Eligibility1Code.RetailClient,
-						com.tools20022.repository.codeset.Eligibility1Code.ProfessionalClient);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Eligibility1Code.mmEligibleCounterparty, com.tools20022.repository.codeset.Eligibility1Code.mmRetailClient,
+						com.tools20022.repository.codeset.Eligibility1Code.mmProfessionalClient);
 				trace_lazy = () -> EligibilityCode.mmObject();
 			}
 		});

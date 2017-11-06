@@ -35,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#AlienRegistrationNumber
- * TypeOfIdentification1Code.AlienRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#mmAlienRegistrationNumber
+ * TypeOfIdentification1Code.mmAlienRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#PassportNumber
- * TypeOfIdentification1Code.PassportNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#mmPassportNumber
+ * TypeOfIdentification1Code.mmPassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#TaxExemptIdentificationNumber
- * TypeOfIdentification1Code.TaxExemptIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#mmTaxExemptIdentificationNumber
+ * TypeOfIdentification1Code.mmTaxExemptIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#CorporateIdentification
- * TypeOfIdentification1Code.CorporateIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#mmCorporateIdentification
+ * TypeOfIdentification1Code.mmCorporateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#DriverLicenseNumber
- * TypeOfIdentification1Code.DriverLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#mmDriverLicenseNumber
+ * TypeOfIdentification1Code.mmDriverLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#ForeignInvestmentIdentityNumber
- * TypeOfIdentification1Code.ForeignInvestmentIdentityNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#mmForeignInvestmentIdentityNumber
+ * TypeOfIdentification1Code.mmForeignInvestmentIdentityNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#TaxIdentificationNumber
- * TypeOfIdentification1Code.TaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification1Code#mmTaxIdentificationNumber
+ * TypeOfIdentification1Code.mmTaxIdentificationNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +99,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 * name} = "AlienRegistrationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlienRegistrationNumber = new MMCode() {
+	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
@@ -122,7 +122,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 * name} = "PassportNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode PassportNumber = new MMCode() {
+	public static final MMCode mmPassportNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
@@ -145,7 +145,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 * name} = "TaxExemptIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxExemptIdentificationNumber = new MMCode() {
+	public static final MMCode mmTaxExemptIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptIdentificationNumber";
@@ -168,7 +168,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 * name} = "CorporateIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateIdentification = new MMCode() {
+	public static final MMCode mmCorporateIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateIdentification";
@@ -191,7 +191,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 * name} = "DriverLicenseNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode DriverLicenseNumber = new MMCode() {
+	public static final MMCode mmDriverLicenseNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriverLicenseNumber";
@@ -214,7 +214,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 * name} = "ForeignInvestmentIdentityNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignInvestmentIdentityNumber = new MMCode() {
+	public static final MMCode mmForeignInvestmentIdentityNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignInvestmentIdentityNumber";
@@ -237,7 +237,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 * name} = "TaxIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxIdentificationNumber = new MMCode() {
+	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
@@ -248,15 +248,15 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ARNU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfIdentification1Code";
 				definition = "Specifies the type of alternate identification which can be used to give an alternate identification of the party identified.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfIdentification1Code.AlienRegistrationNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.PassportNumber,
-						com.tools20022.repository.codeset.TypeOfIdentification1Code.TaxExemptIdentificationNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.CorporateIdentification,
-						com.tools20022.repository.codeset.TypeOfIdentification1Code.DriverLicenseNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.ForeignInvestmentIdentityNumber,
-						com.tools20022.repository.codeset.TypeOfIdentification1Code.TaxIdentificationNumber);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfIdentification1Code.mmAlienRegistrationNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.mmPassportNumber,
+						com.tools20022.repository.codeset.TypeOfIdentification1Code.mmTaxExemptIdentificationNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.mmCorporateIdentification,
+						com.tools20022.repository.codeset.TypeOfIdentification1Code.mmDriverLicenseNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.mmForeignInvestmentIdentityNumber,
+						com.tools20022.repository.codeset.TypeOfIdentification1Code.mmTaxIdentificationNumber);
 				trace_lazy = () -> TypeOfIdentificationCode.mmObject();
 			}
 		});

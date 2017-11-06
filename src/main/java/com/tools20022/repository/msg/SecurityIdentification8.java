@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#SecurityIdentification
- * SecurityIdentification8.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#mmSecurityIdentification
+ * SecurityIdentification8.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#Description
- * SecurityIdentification8.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#mmDescription
+ * SecurityIdentification8.mmDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification10Choice securityIdentification;
 	/**
 	 * Security identifier.
 	 * <p>
@@ -100,21 +101,22 @@ public class SecurityIdentification8 {
 	 * definition} = "Security identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityIdentification8.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Security identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification10Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecurityIdentification10Choice.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Textual description of a security instrument.
 	 * <p>
@@ -147,17 +149,17 @@ public class SecurityIdentification8 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityIdentification8.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Textual description of a security instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -165,14 +167,30 @@ public class SecurityIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification8.SecurityIdentification, com.tools20022.repository.msg.SecurityIdentification8.Description);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification8.mmSecurityIdentification, com.tools20022.repository.msg.SecurityIdentification8.mmDescription);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityIdentification8";
 				definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification10Choice getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(SecurityIdentification10Choice securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

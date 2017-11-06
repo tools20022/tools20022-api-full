@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.Security;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reporting per financial instrument.
@@ -33,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14#FinancialInstrumentIdentification
- * FinancialInstrumentDetails14.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14#mmFinancialInstrumentIdentification
+ * FinancialInstrumentDetails14.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14#FinancialInstrumentAttributes
- * FinancialInstrumentDetails14.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14#mmFinancialInstrumentAttributes
+ * FinancialInstrumentDetails14.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14#SubBalance
- * FinancialInstrumentDetails14.SubBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14#mmSubBalance
+ * FinancialInstrumentDetails14.mmSubBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#FinancialInstrument
- * IntraPositionMovementPostingReportV04.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04#mmFinancialInstrument
+ * IntraPositionMovementPostingReportV04.mmFinancialInstrument}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentDetails14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -96,8 +98,8 @@ public class FinancialInstrumentDetails14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,28 +122,29 @@ public class FinancialInstrumentDetails14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21#FinancialInstrumentIdentification
-	 * FinancialInstrumentDetails21.FinancialInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21#mmFinancialInstrumentIdentification
+	 * FinancialInstrumentDetails21.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentDetails14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails21.FinancialInstrumentIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails21.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes36 financialInstrumentAttributes;
 	/**
 	 * Elements characterising a financial instrument.
 	 * <p>
@@ -175,28 +178,29 @@ public class FinancialInstrumentDetails14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21#FinancialInstrumentAttributes
-	 * FinancialInstrumentDetails21.FinancialInstrumentAttributes}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21#mmFinancialInstrumentAttributes
+	 * FinancialInstrumentDetails21.mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentDetails14.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> FinancialInstrumentDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails21.FinancialInstrumentAttributes);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails21.mmFinancialInstrumentAttributes);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes36.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IntraPositionDetails28> subBalance;
 	/**
 	 * Identification of the sub-balance.
 	 * <p>
@@ -208,8 +212,8 @@ public class FinancialInstrumentDetails14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#RelatedSubBalance
-	 * SecuritiesQuantity.RelatedSubBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedSubBalance
+	 * SecuritiesQuantity.mmRelatedSubBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,43 +234,67 @@ public class FinancialInstrumentDetails14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21#SubBalance
-	 * FinancialInstrumentDetails21.SubBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21#mmSubBalance
+	 * FinancialInstrumentDetails21.mmSubBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedSubBalance;
 			componentContext_lazy = () -> FinancialInstrumentDetails14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.RelatedSubBalance;
 			isDerived = false;
 			xmlTag = "SubBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalance";
 			definition = "Identification of the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails21.SubBalance);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails21.mmSubBalance);
 			minOccurs = 1;
-			type_lazy = () -> IntraPositionDetails28.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails28.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails14.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentDetails14.FinancialInstrumentAttributes, com.tools20022.repository.msg.FinancialInstrumentDetails14.SubBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails14.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentDetails14.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.FinancialInstrumentDetails14.mmSubBalance);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmFinancialInstrument);
 				trace_lazy = () -> Security.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.FinancialInstrument);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentDetails14";
 				definition = "Reporting per financial instrument.";
-				previousVersion_lazy = () -> FinancialInstrumentDetails10.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails21.mmObject());
+				previousVersion_lazy = () -> FinancialInstrumentDetails10.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public FinancialInstrumentAttributes36 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes36 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public List<IntraPositionDetails28> getSubBalance() {
+		return subBalance;
+	}
+
+	public void setSubBalance(List<com.tools20022.repository.msg.IntraPositionDetails28> subBalance) {
+		this.subBalance = subBalance;
 	}
 }

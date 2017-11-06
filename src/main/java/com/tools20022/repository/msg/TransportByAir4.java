@@ -38,24 +38,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByAir4#DepartureAirport
- * TransportByAir4.DepartureAirport}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmDepartureAirport
+ * TransportByAir4.mmDepartureAirport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByAir4#DestinationAirport
- * TransportByAir4.DestinationAirport}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByAir4#FlightNumber
- * TransportByAir4.FlightNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByAir4#AirCarrierName
- * TransportByAir4.AirCarrierName}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmDestinationAirport
+ * TransportByAir4.mmDestinationAirport}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByAir4#mmFlightNumber
+ * TransportByAir4.mmFlightNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByAir4#AirCarrierCountry
- * TransportByAir4.AirCarrierCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmAirCarrierName
+ * TransportByAir4.mmAirCarrierName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByAir4#CarrierAgentName
- * TransportByAir4.CarrierAgentName}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmAirCarrierCountry
+ * TransportByAir4.mmAirCarrierCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByAir4#CarrierAgentCountry
- * TransportByAir4.CarrierAgentCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmCarrierAgentName
+ * TransportByAir4.mmCarrierAgentName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir4#mmCarrierAgentCountry
+ * TransportByAir4.mmCarrierAgentCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportByAir4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AirportName1Choice departureAirport;
 	/**
 	 * Place from where the goods must leave.
 	 * <p>
@@ -100,8 +102,8 @@ public class TransportByAir4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -122,34 +124,35 @@ public class TransportByAir4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#DepartureAirport
-	 * TransportByAir5.DepartureAirport}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmDepartureAirport
+	 * TransportByAir5.mmDepartureAirport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#DepartureAirport
-	 * TransportByAir2.DepartureAirport}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#mmDepartureAirport
+	 * TransportByAir2.mmDepartureAirport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DepartureAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportByAir4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "DprtureAirprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepartureAirport";
 			definition = "Place from where the goods must leave.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByAir2.DepartureAirport;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.DepartureAirport);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.mmDepartureAirport);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByAir2.mmDepartureAirport;
 			maxOccurs = 1;
-			type_lazy = () -> AirportName1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	protected AirportName1Choice destinationAirport;
 	/**
 	 * Place where the goods must arrive.
 	 * <p>
@@ -161,8 +164,8 @@ public class TransportByAir4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,34 +186,35 @@ public class TransportByAir4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#DestinationAirport
-	 * TransportByAir5.DestinationAirport}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmDestinationAirport
+	 * TransportByAir5.mmDestinationAirport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#DestinationAirport
-	 * TransportByAir2.DestinationAirport}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#mmDestinationAirport
+	 * TransportByAir2.mmDestinationAirport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DestinationAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportByAir4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "DstnAirprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DestinationAirport";
 			definition = "Place where the goods must arrive.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByAir2.DestinationAirport;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.DestinationAirport);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.mmDestinationAirport);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByAir2.mmDestinationAirport;
 			maxOccurs = 1;
-			type_lazy = () -> AirportName1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	protected Max35Text flightNumber;
 	/**
 	 * Flight number allocated by the airline that is carrying the goods from an
 	 * airport of departure to an airport of destination;.
@@ -224,8 +228,8 @@ public class TransportByAir4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransportByAir#FlightNumber
-	 * TransportByAir.FlightNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransportByAir#mmFlightNumber
+	 * TransportByAir.mmFlightNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,20 +250,21 @@ public class TransportByAir4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FlightNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFlightNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmFlightNumber;
 			componentContext_lazy = () -> TransportByAir4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.FlightNumber;
 			isDerived = false;
 			xmlTag = "FlghtNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlightNumber";
 			definition = "Flight number allocated by the airline that is carrying the goods from an airport of departure to an airport of destination;.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max70Text airCarrierName;
 	/**
 	 * Identifies the party that is responsible for the conveyance of the goods
 	 * from one place to another.
@@ -273,8 +278,8 @@ public class TransportByAir4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,33 +302,34 @@ public class TransportByAir4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#AirCarrierName
-	 * TransportByAir5.AirCarrierName}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmAirCarrierName
+	 * TransportByAir5.mmAirCarrierName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#AirCarrierName
-	 * TransportByAir2.AirCarrierName}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir2#mmAirCarrierName
+	 * TransportByAir2.mmAirCarrierName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AirCarrierName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAirCarrierName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> TransportByAir4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "AirCrrierNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByAir2.AirCarrierName;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.AirCarrierName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.mmAirCarrierName);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportByAir2.mmAirCarrierName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode airCarrierCountry;
 	/**
 	 * Country in which the carrier of the goods, for example, shipping company,
 	 * is located or registered.
@@ -337,7 +343,8 @@ public class TransportByAir4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -360,27 +367,28 @@ public class TransportByAir4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#AirCarrierCountry
-	 * TransportByAir5.AirCarrierCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmAirCarrierCountry
+	 * TransportByAir5.mmAirCarrierCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AirCarrierCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAirCarrierCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> TransportByAir4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "AirCrrierCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirCarrierCountry";
 			definition = "Country in which the carrier of the goods, for example, shipping company, is located or registered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.AirCarrierCountry);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.mmAirCarrierCountry);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max70Text carrierAgentName;
 	/**
 	 * Name of the carrier's (for example, shipping company's) agent that acts
 	 * on behalf of the carrier and may be the issuer of transport documents
@@ -395,8 +403,8 @@ public class TransportByAir4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -419,27 +427,28 @@ public class TransportByAir4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#CarrierAgentName
-	 * TransportByAir5.CarrierAgentName}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmCarrierAgentName
+	 * TransportByAir5.mmCarrierAgentName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CarrierAgentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> TransportByAir4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "CrrierAgtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierAgentName";
 			definition = "Name of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.CarrierAgentName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.mmCarrierAgentName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode carrierAgentCountry;
 	/**
 	 * Country of registration of the carrier's (for example, shipping
 	 * company's) agent that acts on behalf of the carrier and may be the issuer
@@ -454,7 +463,8 @@ public class TransportByAir4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -477,24 +487,24 @@ public class TransportByAir4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#CarrierAgentCountry
-	 * TransportByAir5.CarrierAgentCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportByAir5#mmCarrierAgentCountry
+	 * TransportByAir5.mmCarrierAgentCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CarrierAgentCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> TransportByAir4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "CrrierAgtCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierAgentCountry";
 			definition = "Country of registration of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.CarrierAgentCountry);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.mmCarrierAgentCountry);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -502,18 +512,74 @@ public class TransportByAir4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir4.DepartureAirport, com.tools20022.repository.msg.TransportByAir4.DestinationAirport,
-						com.tools20022.repository.msg.TransportByAir4.FlightNumber, com.tools20022.repository.msg.TransportByAir4.AirCarrierName, com.tools20022.repository.msg.TransportByAir4.AirCarrierCountry,
-						com.tools20022.repository.msg.TransportByAir4.CarrierAgentName, com.tools20022.repository.msg.TransportByAir4.CarrierAgentCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir4.mmDepartureAirport, com.tools20022.repository.msg.TransportByAir4.mmDestinationAirport,
+						com.tools20022.repository.msg.TransportByAir4.mmFlightNumber, com.tools20022.repository.msg.TransportByAir4.mmAirCarrierName, com.tools20022.repository.msg.TransportByAir4.mmAirCarrierCountry,
+						com.tools20022.repository.msg.TransportByAir4.mmCarrierAgentName, com.tools20022.repository.msg.TransportByAir4.mmCarrierAgentCountry);
 				trace_lazy = () -> TransportByAir.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportByAir4";
 				definition = "Information related to the transportation of goods by air.";
-				previousVersion_lazy = () -> TransportByAir2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransportByAir5.mmObject());
+				previousVersion_lazy = () -> TransportByAir2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AirportName1Choice getDepartureAirport() {
+		return departureAirport;
+	}
+
+	public void setDepartureAirport(AirportName1Choice departureAirport) {
+		this.departureAirport = departureAirport;
+	}
+
+	public AirportName1Choice getDestinationAirport() {
+		return destinationAirport;
+	}
+
+	public void setDestinationAirport(AirportName1Choice destinationAirport) {
+		this.destinationAirport = destinationAirport;
+	}
+
+	public Max35Text getFlightNumber() {
+		return flightNumber;
+	}
+
+	public void setFlightNumber(Max35Text flightNumber) {
+		this.flightNumber = flightNumber;
+	}
+
+	public Max70Text getAirCarrierName() {
+		return airCarrierName;
+	}
+
+	public void setAirCarrierName(Max70Text airCarrierName) {
+		this.airCarrierName = airCarrierName;
+	}
+
+	public CountryCode getAirCarrierCountry() {
+		return airCarrierCountry;
+	}
+
+	public void setAirCarrierCountry(CountryCode airCarrierCountry) {
+		this.airCarrierCountry = airCarrierCountry;
+	}
+
+	public Max70Text getCarrierAgentName() {
+		return carrierAgentName;
+	}
+
+	public void setCarrierAgentName(Max70Text carrierAgentName) {
+		this.carrierAgentName = carrierAgentName;
+	}
+
+	public CountryCode getCarrierAgentCountry() {
+		return carrierAgentCountry;
+	}
+
+	public void setCarrierAgentCountry(CountryCode carrierAgentCountry) {
+		this.carrierAgentCountry = carrierAgentCountry;
 	}
 }

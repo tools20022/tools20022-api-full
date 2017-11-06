@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IncompetentExemptionStatus1#DocumentationAcknowledgementOfExemption
- * IncompetentExemptionStatus1.DocumentationAcknowledgementOfExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.IncompetentExemptionStatus1#mmDocumentationAcknowledgementOfExemption
+ * IncompetentExemptionStatus1.mmDocumentationAcknowledgementOfExemption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IncompetentExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AcknowledgementOfExemption1Choice documentationAcknowledgementOfExemption;
 	/**
 	 * Acknowledgement of exempt instruction specifying whether the
 	 * documentation will be sent to DTC (The Depository Trust Corporation) or
@@ -86,7 +87,7 @@ public class IncompetentExemptionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IncompetentExemptionStatus1.mmObject();
 			isDerived = false;
@@ -94,23 +95,31 @@ public class IncompetentExemptionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationAcknowledgementOfExemption";
 			definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC  (The Depository Trust Corporation) or not (not maintained by DTCC).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncompetentExemptionStatus1.DocumentationAcknowledgementOfExemption);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncompetentExemptionStatus1.mmDocumentationAcknowledgementOfExemption);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IncompetentExemptionStatus1";
 				definition = "Incompetent beneficial owner exemption information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AcknowledgementOfExemption1Choice getDocumentationAcknowledgementOfExemption() {
+		return documentationAcknowledgementOfExemption;
+	}
+
+	public void setDocumentationAcknowledgementOfExemption(AcknowledgementOfExemption1Choice documentationAcknowledgementOfExemption) {
+		this.documentationAcknowledgementOfExemption = documentationAcknowledgementOfExemption;
 	}
 }

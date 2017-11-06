@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#AnnouncementDate
- * CorporateActionNotification1.AnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#mmAnnouncementDate
+ * CorporateActionNotification1.mmAnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#FurtherDetailedAnnouncementDate
- * CorporateActionNotification1.FurtherDetailedAnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#mmFurtherDetailedAnnouncementDate
+ * CorporateActionNotification1.mmFurtherDetailedAnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#OfficialAnnouncementPublicationDate
- * CorporateActionNotification1.OfficialAnnouncementPublicationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#mmOfficialAnnouncementPublicationDate
+ * CorporateActionNotification1.mmOfficialAnnouncementPublicationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#ProcessingStatus
- * CorporateActionNotification1.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotification1#mmProcessingStatus
+ * CorporateActionNotification1.mmProcessingStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,15 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#NotificationGeneralInformation
- * AgentCANotificationAdviceV01.NotificationGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmNotificationGeneralInformation
+ * AgentCANotificationAdviceV01.mmNotificationGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNotification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat4Choice announcementDate;
 	/**
 	 * Date/time at which the issuer announced that a corporate action event
 	 * will occur.
@@ -93,8 +94,8 @@ public class CorporateActionNotification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AnnouncementDate
-	 * CorporateActionEvent.AnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAnnouncementDate
+	 * CorporateActionEvent.mmAnnouncementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,20 +116,21 @@ public class CorporateActionNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AnnouncementDate;
 			isDerived = false;
 			xmlTag = "AnncmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time at which the issuer announced that a corporate action event will occur.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice furtherDetailedAnnouncementDate;
 	/**
 	 * Date/time at which additional information on the event will be announced,
 	 * eg, exchange ratio announcement date.
@@ -143,8 +145,8 @@ public class CorporateActionNotification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#FurtherDetailsAnnouncementDate
-	 * CorporateActionEvent.FurtherDetailsAnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmFurtherDetailsAnnouncementDate
+	 * CorporateActionEvent.mmFurtherDetailsAnnouncementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,20 +167,21 @@ public class CorporateActionNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FurtherDetailedAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFurtherDetailedAnnouncementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmFurtherDetailsAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.FurtherDetailsAnnouncementDate;
 			isDerived = false;
 			xmlTag = "FrthrDtldAnncmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherDetailedAnnouncementDate";
 			definition = "Date/time at which additional information on the event will be announced, eg, exchange ratio announcement date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice officialAnnouncementPublicationDate;
 	/**
 	 * Date/time at which the corporate action is legally announced by an
 	 * official body, eg, publication by a governmental administration.
@@ -193,8 +196,8 @@ public class CorporateActionNotification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#OfficialAnnouncementPublicationDate
-	 * CorporateActionEventRegistration.OfficialAnnouncementPublicationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialAnnouncementPublicationDate
+	 * CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,20 +218,21 @@ public class CorporateActionNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OfficialAnnouncementPublicationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOfficialAnnouncementPublicationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.OfficialAnnouncementPublicationDate;
 			isDerived = false;
 			xmlTag = "OffclAnncmntPblctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialAnnouncementPublicationDate";
 			definition = "Date/time at which the corporate action is legally announced by an official body, eg, publication by a governmental administration.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected ProcessingStatus1FormatChoice processingStatus;
 	/**
 	 * Specifies the status of the details of the event.
 	 * <p>
@@ -242,8 +246,8 @@ public class CorporateActionNotification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionStatus
-	 * CorporateActionEvent.CorporateActionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionStatus
+	 * CorporateActionEvent.mmCorporateActionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,17 +266,17 @@ public class CorporateActionNotification1 {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.CorporateActionStatus;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus1FormatChoice.mmObject();
 		}
 	};
@@ -280,16 +284,48 @@ public class CorporateActionNotification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification1.AnnouncementDate, com.tools20022.repository.msg.CorporateActionNotification1.FurtherDetailedAnnouncementDate,
-						com.tools20022.repository.msg.CorporateActionNotification1.OfficialAnnouncementPublicationDate, com.tools20022.repository.msg.CorporateActionNotification1.ProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification1.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionNotification1.mmFurtherDetailedAnnouncementDate,
+						com.tools20022.repository.msg.CorporateActionNotification1.mmOfficialAnnouncementPublicationDate, com.tools20022.repository.msg.CorporateActionNotification1.mmProcessingStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmNotificationGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.NotificationGeneralInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotification1";
 				definition = "Provides information about the notification advice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat4Choice getAnnouncementDate() {
+		return announcementDate;
+	}
+
+	public void setAnnouncementDate(DateFormat4Choice announcementDate) {
+		this.announcementDate = announcementDate;
+	}
+
+	public DateFormat4Choice getFurtherDetailedAnnouncementDate() {
+		return furtherDetailedAnnouncementDate;
+	}
+
+	public void setFurtherDetailedAnnouncementDate(DateFormat4Choice furtherDetailedAnnouncementDate) {
+		this.furtherDetailedAnnouncementDate = furtherDetailedAnnouncementDate;
+	}
+
+	public DateFormat4Choice getOfficialAnnouncementPublicationDate() {
+		return officialAnnouncementPublicationDate;
+	}
+
+	public void setOfficialAnnouncementPublicationDate(DateFormat4Choice officialAnnouncementPublicationDate) {
+		this.officialAnnouncementPublicationDate = officialAnnouncementPublicationDate;
+	}
+
+	public ProcessingStatus1FormatChoice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus1FormatChoice processingStatus) {
+		this.processingStatus = processingStatus;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,48 +75,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#ReportIdentification
- * DeltaReportV03.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmReportIdentification
+ * DeltaReportV03.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#TransactionIdentification
- * DeltaReportV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmTransactionIdentification
+ * DeltaReportV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#EstablishedBaselineIdentification
- * DeltaReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmEstablishedBaselineIdentification
+ * DeltaReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#TransactionStatus
- * DeltaReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmTransactionStatus
+ * DeltaReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#AmendmentNumber
- * DeltaReportV03.AmendmentNumber}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmAmendmentNumber
+ * DeltaReportV03.mmAmendmentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#UserTransactionReference
- * DeltaReportV03.UserTransactionReference}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#Buyer
- * DeltaReportV03.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#Seller
- * DeltaReportV03.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#BuyerBank
- * DeltaReportV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmUserTransactionReference
+ * DeltaReportV03.mmUserTransactionReference}</li>
+ * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmBuyer
+ * DeltaReportV03.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmSeller
+ * DeltaReportV03.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#SellerBank
- * DeltaReportV03.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmBuyerBank
+ * DeltaReportV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#SubmitterProposedBaselineReference
- * DeltaReportV03.SubmitterProposedBaselineReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmSellerBank
+ * DeltaReportV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#UpdatedElement
- * DeltaReportV03.UpdatedElement}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmSubmitterProposedBaselineReference
+ * DeltaReportV03.mmSubmitterProposedBaselineReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#RequestForAction
- * DeltaReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmUpdatedElement
+ * DeltaReportV03.mmUpdatedElement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmRequestForAction
+ * DeltaReportV03.mmRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#identifier
- * DeltaReportV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.015.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,6 +131,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeltaReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 reportIdentification;
 	/**
 	 * Identifies the report.
 	 * <p>
@@ -154,17 +155,18 @@ public class DeltaReportV03 {
 	 * definition} = "Identifies the report. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -192,17 +194,18 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * baseline when it is established.
@@ -229,17 +232,18 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 	};
+	protected TransactionStatus4 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -264,17 +268,18 @@ public class DeltaReportV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 	};
+	protected Count1 amendmentNumber;
 	/**
 	 * Sequence number of the proposed baseline amendment.
 	 * <p>
@@ -296,17 +301,18 @@ public class DeltaReportV03 {
 	 * definition} = "Sequence number of the proposed baseline amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AmendmentNumber = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAmendmentNumber = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AmdmntNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentNumber";
 			definition = "Sequence number of the proposed baseline amendment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Count1.mmObject();
 		}
 	};
+	protected List<DocumentIdentification5> userTransactionReference;
 	/**
 	 * Reference to the transaction for each financial institution which is a
 	 * party to the transaction.
@@ -333,17 +339,18 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 	};
+	protected PartyIdentification26 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -368,17 +375,18 @@ public class DeltaReportV03 {
 	 * "Party that buys goods or services, or a financial instrument. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Buyer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 	};
+	protected PartyIdentification26 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -403,17 +411,18 @@ public class DeltaReportV03 {
 	 * "Party that sells goods or services, or a financial instrument. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Seller = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 	};
+	protected BICIdentification1 buyerBank;
 	/**
 	 * The financial institution of the buyer, uniquely identified by its BIC.
 	 * <p>
@@ -439,17 +448,18 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected BICIdentification1 sellerBank;
 	/**
 	 * The financial institution of the seller, uniquely identified by its BIC.
 	 * <p>
@@ -475,17 +485,18 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected DocumentIdentification1 submitterProposedBaselineReference;
 	/**
 	 * Reference to the identification of the baseline included in the amendment
 	 * request.
@@ -512,17 +523,18 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterProposedBaselineReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterProposedBaselineReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrPropsdBaselnRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterProposedBaselineReference";
 			definition = "Reference to the identification of the baseline included in the amendment request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification1.mmObject();
 		}
 	};
+	protected List<ComparisonResult2> updatedElement;
 	/**
 	 * Detailed comparison between the currently established baseline elements
 	 * and the proposed ones.
@@ -549,7 +561,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UpdatedElement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUpdatedElement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UpdtdElmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -559,6 +571,7 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> ComparisonResult2.mmObject();
 		}
 	};
+	protected PendingActivity2 requestForAction;
 	/**
 	 * Information on the next processing step required.
 	 * <p>
@@ -582,42 +595,15 @@ public class DeltaReportV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "015"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "015";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -631,15 +617,126 @@ public class DeltaReportV03 {
 				rootElement = "Document";
 				xmlTag = "DltaRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DeltaReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.DeltaReportV03.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.DeltaReportV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.AmendmentNumber, com.tools20022.repository.area.tsmt.DeltaReportV03.UserTransactionReference, com.tools20022.repository.area.tsmt.DeltaReportV03.Buyer,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.Seller, com.tools20022.repository.area.tsmt.DeltaReportV03.BuyerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.SellerBank,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.SubmitterProposedBaselineReference, com.tools20022.repository.area.tsmt.DeltaReportV03.UpdatedElement,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.RequestForAction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.DeltaReportV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DeltaReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.DeltaReportV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.DeltaReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmAmendmentNumber, com.tools20022.repository.area.tsmt.DeltaReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyer,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmSeller, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.mmSellerBank,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmSubmitterProposedBaselineReference, com.tools20022.repository.area.tsmt.DeltaReportV03.mmUpdatedElement,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmRequestForAction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "015";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification3 getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification;
+	}
+
+	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	}
+
+	public TransactionStatus4 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public Count1 getAmendmentNumber() {
+		return amendmentNumber;
+	}
+
+	public void setAmendmentNumber(Count1 amendmentNumber) {
+		this.amendmentNumber = amendmentNumber;
+	}
+
+	public List<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public PartyIdentification26 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(PartyIdentification26 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PartyIdentification26 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(PartyIdentification26 seller) {
+		this.seller = seller;
+	}
+
+	public BICIdentification1 getBuyerBank() {
+		return buyerBank;
+	}
+
+	public void setBuyerBank(BICIdentification1 buyerBank) {
+		this.buyerBank = buyerBank;
+	}
+
+	public BICIdentification1 getSellerBank() {
+		return sellerBank;
+	}
+
+	public void setSellerBank(BICIdentification1 sellerBank) {
+		this.sellerBank = sellerBank;
+	}
+
+	public DocumentIdentification1 getSubmitterProposedBaselineReference() {
+		return submitterProposedBaselineReference;
+	}
+
+	public void setSubmitterProposedBaselineReference(DocumentIdentification1 submitterProposedBaselineReference) {
+		this.submitterProposedBaselineReference = submitterProposedBaselineReference;
+	}
+
+	public List<ComparisonResult2> getUpdatedElement() {
+		return updatedElement;
+	}
+
+	public void setUpdatedElement(List<ComparisonResult2> updatedElement) {
+		this.updatedElement = updatedElement;
+	}
+
+	public PendingActivity2 getRequestForAction() {
+		return requestForAction;
+	}
+
+	public void setRequestForAction(PendingActivity2 requestForAction) {
+		this.requestForAction = requestForAction;
 	}
 }

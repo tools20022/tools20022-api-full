@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PublicRSAKey2#Algorithm
- * PublicRSAKey2.Algorithm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PublicRSAKey2#PublicKeyValue
- * PublicRSAKey2.PublicKeyValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PublicRSAKey2#mmAlgorithm
+ * PublicRSAKey2.mmAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PublicRSAKey2#mmPublicKeyValue
+ * PublicRSAKey2.mmPublicKeyValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PublicRSAKey2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm7Code algorithm;
 	/**
 	 * Asymmetric cryptographic algorithm.
 	 * <p>
@@ -87,7 +88,7 @@ public class PublicRSAKey2 {
 	 * definition} = "Asymmetric cryptographic algorithm."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PublicRSAKey2.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class PublicRSAKey2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Asymmetric cryptographic algorithm.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm7Code.mmObject();
 		}
 	};
+	protected PublicRSAKey1 publicKeyValue;
 	/**
 	 * Public key value.
 	 * <p>
@@ -125,7 +127,7 @@ public class PublicRSAKey2 {
 	 * definition} = "Public key value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PublicKeyValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPublicKeyValue = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PublicRSAKey2.mmObject();
 			isDerived = false;
@@ -133,24 +135,40 @@ public class PublicRSAKey2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicKeyValue";
 			definition = "Public key value.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PublicRSAKey1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PublicRSAKey1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PublicRSAKey2.Algorithm, com.tools20022.repository.msg.PublicRSAKey2.PublicKeyValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PublicRSAKey2.mmAlgorithm, com.tools20022.repository.msg.PublicRSAKey2.mmPublicKeyValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PublicRSAKey2";
 				definition = "Value of the public component of a RSA key.";
-				previousVersion_lazy = () -> PublicRSAKey1.mmObject();
+				previousVersion_lazy = () -> com.tools20022.repository.msg.PublicRSAKey1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm7Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm7Code algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public PublicRSAKey1 getPublicKeyValue() {
+		return publicKeyValue;
+	}
+
+	public void setPublicKeyValue(com.tools20022.repository.msg.PublicRSAKey1 publicKeyValue) {
+		this.publicKeyValue = publicKeyValue;
 	}
 }

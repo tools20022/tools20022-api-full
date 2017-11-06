@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PowerOfAttorneyRequirements1#LegalRequirement
- * PowerOfAttorneyRequirements1.LegalRequirement}</li>
+ * {@linkplain com.tools20022.repository.msg.PowerOfAttorneyRequirements1#mmLegalRequirement
+ * PowerOfAttorneyRequirements1.mmLegalRequirement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PowerOfAttorneyRequirements1#OtherDocumentation
- * PowerOfAttorneyRequirements1.OtherDocumentation}</li>
+ * {@linkplain com.tools20022.repository.msg.PowerOfAttorneyRequirements1#mmOtherDocumentation
+ * PowerOfAttorneyRequirements1.mmOtherDocumentation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PowerOfAttorneyRequirements1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PowerOfAttorneyLegalisation1Code legalRequirement;
 	/**
 	 * Specifies whether the power of attorney needs to be validated by some
 	 * authority.
@@ -80,8 +81,8 @@ public class PowerOfAttorneyRequirements1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#LegalRequirement
-	 * PowerOfAttorneyRequirements.LegalRequirement}</li>
+	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmLegalRequirement
+	 * PowerOfAttorneyRequirements.mmLegalRequirement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class PowerOfAttorneyRequirements1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalRequirement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalRequirement = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmLegalRequirement;
 			componentContext_lazy = () -> PowerOfAttorneyRequirements1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.LegalRequirement;
 			isDerived = false;
 			xmlTag = "LglRqrmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRequirement";
 			definition = "Specifies whether the power of attorney needs to be validated by some authority.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
 		}
 	};
+	protected Max350Text otherDocumentation;
 	/**
 	 * Specifies the documents needed to obtain a valid power of attorney.
 	 * <p>
@@ -128,8 +130,8 @@ public class PowerOfAttorneyRequirements1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#OtherDocumentation
-	 * PowerOfAttorneyRequirements.OtherDocumentation}</li>
+	 * {@linkplain com.tools20022.repository.entity.PowerOfAttorneyRequirements#mmOtherDocumentation
+	 * PowerOfAttorneyRequirements.mmOtherDocumentation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,17 +151,17 @@ public class PowerOfAttorneyRequirements1 {
 	 * "Specifies the documents needed to obtain a valid power of attorney. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherDocumentation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherDocumentation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmOtherDocumentation;
 			componentContext_lazy = () -> PowerOfAttorneyRequirements1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.OtherDocumentation;
 			isDerived = false;
 			xmlTag = "OthrDcmnttn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentation";
 			definition = "Specifies the documents needed to obtain a valid power of attorney. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -167,14 +169,30 @@ public class PowerOfAttorneyRequirements1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PowerOfAttorneyRequirements1.LegalRequirement, com.tools20022.repository.msg.PowerOfAttorneyRequirements1.OtherDocumentation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PowerOfAttorneyRequirements1.mmLegalRequirement, com.tools20022.repository.msg.PowerOfAttorneyRequirements1.mmOtherDocumentation);
 				trace_lazy = () -> PowerOfAttorneyRequirements.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PowerOfAttorneyRequirements1";
 				definition = "Specifies the conditions to be filled in to obtain a valid power of attorney.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PowerOfAttorneyLegalisation1Code getLegalRequirement() {
+		return legalRequirement;
+	}
+
+	public void setLegalRequirement(PowerOfAttorneyLegalisation1Code legalRequirement) {
+		this.legalRequirement = legalRequirement;
+	}
+
+	public Max350Text getOtherDocumentation() {
+		return otherDocumentation;
+	}
+
+	public void setOtherDocumentation(Max350Text otherDocumentation) {
+		this.otherDocumentation = otherDocumentation;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SwitchOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status report of the individual orders of a bulk or multiple order that was
@@ -37,35 +38,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#MasterReference
- * SwitchOrderStatusAndReason2.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmMasterReference
+ * SwitchOrderStatusAndReason2.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#OrderReference
- * SwitchOrderStatusAndReason2.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmOrderReference
+ * SwitchOrderStatusAndReason2.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#ClientReference
- * SwitchOrderStatusAndReason2.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmClientReference
+ * SwitchOrderStatusAndReason2.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#DealReference
- * SwitchOrderStatusAndReason2.DealReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmDealReference
+ * SwitchOrderStatusAndReason2.mmDealReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#CancellationReference
- * SwitchOrderStatusAndReason2.CancellationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmCancellationReference
+ * SwitchOrderStatusAndReason2.mmCancellationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#OrderStatus
- * SwitchOrderStatusAndReason2.OrderStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmOrderStatus
+ * SwitchOrderStatusAndReason2.mmOrderStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#LegInformation
- * SwitchOrderStatusAndReason2.LegInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmLegInformation
+ * SwitchOrderStatusAndReason2.mmLegInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#StatusInitiator
- * SwitchOrderStatusAndReason2.StatusInitiator}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmStatusInitiator
+ * SwitchOrderStatusAndReason2.mmStatusInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#OrderData
- * SwitchOrderStatusAndReason2.OrderData}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmOrderData
+ * SwitchOrderStatusAndReason2.mmOrderData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#NewDetails
- * SwitchOrderStatusAndReason2.NewDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmNewDetails
+ * SwitchOrderStatusAndReason2.mmNewDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchOrderStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Reference assigned to a set of orders or trades in order to link them
 	 * together.
@@ -108,8 +110,8 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -131,25 +133,26 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#MasterReference
-	 * SwitchOrderStatusAndReason1.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmMasterReference
+	 * SwitchOrderStatusAndReason1.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for the order, as assigned by the
 	 * instructing party.
@@ -163,8 +166,8 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,25 +189,26 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#OrderReference
-	 * SwitchOrderStatusAndReason1.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmOrderReference
+	 * SwitchOrderStatusAndReason1.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for the order, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.OrderReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmOrderReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of the order. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -219,8 +223,8 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,25 +246,26 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#ClientReference
-	 * SwitchOrderStatusAndReason1.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmClientReference
+	 * SwitchOrderStatusAndReason1.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.ClientReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmClientReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text dealReference;
 	/**
 	 * Unique and unambiguous identifier for the order execution, as assigned by
 	 * the confirming party.
@@ -274,8 +279,8 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#DealIdentification
-	 * InvestmentFundOrderExecution.DealIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmDealIdentification
+	 * InvestmentFundOrderExecution.mmDealIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,25 +302,26 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#DealReference
-	 * SwitchOrderStatusAndReason1.DealReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmDealReference
+	 * SwitchOrderStatusAndReason1.mmDealReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.DealIdentification;
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Unique and unambiguous identifier for the order execution, as assigned by the confirming party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.DealReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmDealReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for the order cancellation, as assigned
 	 * by the instructing party.
@@ -347,11 +353,11 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#CancellationReference
-	 * SwitchOrderStatusAndReason1.CancellationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmCancellationReference
+	 * SwitchOrderStatusAndReason1.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
 			isDerived = false;
@@ -359,12 +365,13 @@ public class SwitchOrderStatusAndReason2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for the order cancellation, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.CancellationReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmCancellationReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OrderStatus4Choice orderStatus;
 	/**
 	 * Status of the switch order.
 	 * <p>
@@ -376,8 +383,8 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#OrderStatus
-	 * SecuritiesOrderStatus.OrderStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmOrderStatus
+	 * SecuritiesOrderStatus.mmOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -396,21 +403,22 @@ public class SwitchOrderStatusAndReason2 {
 	 * definition} = "Status of the switch order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.OrderStatus;
 			isDerived = false;
 			xmlTag = "OrdrSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderStatus";
 			definition = "Status of the switch order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrderStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OrderStatus4Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SwitchLegReferences2> legInformation;
 	/**
 	 * Information about a switch leg that is rejected or repaired.
 	 * <p>
@@ -439,11 +447,11 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#LegInformation
-	 * SwitchOrderStatusAndReason1.LegInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmLegInformation
+	 * SwitchOrderStatusAndReason1.mmLegInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
 			isDerived = false;
@@ -451,12 +459,13 @@ public class SwitchOrderStatusAndReason2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegInformation";
 			definition = "Information about a switch leg that is rejected or repaired.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.LegInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmLegInformation;
 			minOccurs = 0;
-			type_lazy = () -> SwitchLegReferences2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
 		}
 	};
+	protected PartyIdentification113 statusInitiator;
 	/**
 	 * Party that initiates the status of the order.
 	 * <p>
@@ -468,8 +477,8 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -489,26 +498,27 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#StatusInitiator
-	 * SwitchOrderStatusAndReason1.StatusInitiator}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmStatusInitiator
+	 * SwitchOrderStatusAndReason1.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.StatusInitiator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmStatusInitiator;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	protected FundOrderData6 orderData;
 	/**
 	 * Order data.
 	 * <p>
@@ -540,26 +550,27 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#OrderData
-	 * SwitchOrderStatusAndReason1.OrderData}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmOrderData
+	 * SwitchOrderStatusAndReason1.mmOrderData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
 			businessComponentTrace_lazy = () -> SwitchOrder.mmObject();
+			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderData";
 			definition = "Order data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.OrderData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmOrderData;
 			maxOccurs = 1;
-			type_lazy = () -> FundOrderData6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundOrderData6.mmObject();
 		}
 	};
+	protected ExpectedExecutionDetails2 newDetails;
 	/**
 	 * Expected execution information.
 	 * <p>
@@ -572,8 +583,8 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#InvestmentFundOrderExecution
-	 * InvestmentFundOrder.InvestmentFundOrderExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentFundOrderExecution
+	 * InvestmentFundOrder.mmInvestmentFundOrderExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -593,37 +604,37 @@ public class SwitchOrderStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#NewDetails
-	 * SwitchOrderStatusAndReason1.NewDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmNewDetails
+	 * SwitchOrderStatusAndReason1.mmNewDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.InvestmentFundOrderExecution;
 			isDerived = false;
 			xmlTag = "NewDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDetails";
 			definition = "Expected execution information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.NewDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmNewDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ExpectedExecutionDetails2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.MasterReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.OrderReference,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.ClientReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.DealReference,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.CancellationReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.OrderStatus,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.LegInformation, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.StatusInitiator,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.OrderData, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.NewDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmMasterReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmOrderReference,
+						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmClientReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmDealReference,
+						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmCancellationReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmOrderStatus,
+						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmLegInformation, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmStatusInitiator,
+						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmOrderData, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmNewDetails);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderStatusAndReason2";
 				definition = "Status report of the individual orders of a bulk or multiple order that was previously received.";
@@ -631,5 +642,85 @@ public class SwitchOrderStatusAndReason2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public Max35Text getDealReference() {
+		return dealReference;
+	}
+
+	public void setDealReference(Max35Text dealReference) {
+		this.dealReference = dealReference;
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
+	}
+
+	public OrderStatus4Choice getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(OrderStatus4Choice orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public List<SwitchLegReferences2> getLegInformation() {
+		return legInformation;
+	}
+
+	public void setLegInformation(List<com.tools20022.repository.msg.SwitchLegReferences2> legInformation) {
+		this.legInformation = legInformation;
+	}
+
+	public PartyIdentification113 getStatusInitiator() {
+		return statusInitiator;
+	}
+
+	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+		this.statusInitiator = statusInitiator;
+	}
+
+	public FundOrderData6 getOrderData() {
+		return orderData;
+	}
+
+	public void setOrderData(com.tools20022.repository.msg.FundOrderData6 orderData) {
+		this.orderData = orderData;
+	}
+
+	public ExpectedExecutionDetails2 getNewDetails() {
+		return newDetails;
+	}
+
+	public void setNewDetails(com.tools20022.repository.msg.ExpectedExecutionDetails2 newDetails) {
+		this.newDetails = newDetails;
 	}
 }

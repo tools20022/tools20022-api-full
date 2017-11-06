@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentReturnReason2#Originator
- * PaymentReturnReason2.Originator}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReturnReason2#mmOriginator
+ * PaymentReturnReason2.mmOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentReturnReason1#Originator
- * PaymentReturnReason1.Originator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData1#StatusOriginator
- * TradeData1.StatusOriginator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData4#StatusOriginator
- * TradeData4.StatusOriginator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData3#StatusOriginator
- * TradeData3.StatusOriginator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData2#StatusOriginator
- * TradeData2.StatusOriginator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData6#StatusOriginator
- * TradeData6.StatusOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReturnReason1#mmOriginator
+ * PaymentReturnReason1.mmOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData1#mmStatusOriginator
+ * TradeData1.mmStatusOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData4#mmStatusOriginator
+ * TradeData4.mmStatusOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData3#mmStatusOriginator
+ * TradeData3.mmStatusOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData2#mmStatusOriginator
+ * TradeData2.mmStatusOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData6#mmStatusOriginator
+ * TradeData6.mmStatusOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationStatusReason1#Originator
- * ValidationStatusReason1.Originator}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationStatusReason1#mmOriginator
+ * ValidationStatusReason1.mmOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateSuspensionReason1#Originator
- * MandateSuspensionReason1.Originator}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateSuspensionReason1#mmOriginator
+ * MandateSuspensionReason1.mmOriginator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -66,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,14 +87,14 @@ public class StatusOriginator extends InvestigationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusOriginator";
 				definition = "Provides the identification of the originator issuing the transaction reason.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentReturnReason2.Originator, com.tools20022.repository.msg.PaymentReturnReason1.Originator,
-						com.tools20022.repository.msg.TradeData1.StatusOriginator, com.tools20022.repository.msg.TradeData4.StatusOriginator, com.tools20022.repository.msg.TradeData3.StatusOriginator,
-						com.tools20022.repository.msg.TradeData2.StatusOriginator, com.tools20022.repository.msg.TradeData6.StatusOriginator, com.tools20022.repository.msg.ValidationStatusReason1.Originator,
-						com.tools20022.repository.msg.MandateSuspensionReason1.Originator);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentReturnReason2.mmOriginator, com.tools20022.repository.msg.PaymentReturnReason1.mmOriginator,
+						com.tools20022.repository.msg.TradeData1.mmStatusOriginator, com.tools20022.repository.msg.TradeData4.mmStatusOriginator, com.tools20022.repository.msg.TradeData3.mmStatusOriginator,
+						com.tools20022.repository.msg.TradeData2.mmStatusOriginator, com.tools20022.repository.msg.TradeData6.mmStatusOriginator, com.tools20022.repository.msg.ValidationStatusReason1.mmOriginator,
+						com.tools20022.repository.msg.MandateSuspensionReason1.mmOriginator);
 				superType_lazy = () -> InvestigationPartyRole.mmObject();
 			}
 		});

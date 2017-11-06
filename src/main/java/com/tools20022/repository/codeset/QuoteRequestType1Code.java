@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteRequestType1Code#Manual
- * QuoteRequestType1Code.Manual}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteRequestType1Code#mmManual
+ * QuoteRequestType1Code.mmManual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteRequestType1Code#Automatic
- * QuoteRequestType1Code.Automatic}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteRequestType1Code#mmAutomatic
+ * QuoteRequestType1Code.mmAutomatic}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class QuoteRequestType1Code extends QuoteRequestTypeCode {
 	 * name} = "Manual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Manual = new MMCode() {
+	public static final MMCode mmManual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
@@ -107,7 +107,7 @@ public class QuoteRequestType1Code extends QuoteRequestTypeCode {
 	 * name} = "Automatic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Automatic = new MMCode() {
+	public static final MMCode mmAutomatic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Automatic";
@@ -118,12 +118,12 @@ public class QuoteRequestType1Code extends QuoteRequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MANU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuoteRequestType1Code";
 				definition = "Indicates the type of quote request (e.g. manual vs. automatic) being generated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteRequestType1Code.Manual, com.tools20022.repository.codeset.QuoteRequestType1Code.Automatic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteRequestType1Code.mmManual, com.tools20022.repository.codeset.QuoteRequestType1Code.mmAutomatic);
 				trace_lazy = () -> QuoteRequestTypeCode.mmObject();
 			}
 		});

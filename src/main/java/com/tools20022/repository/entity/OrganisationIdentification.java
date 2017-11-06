@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Unique and unambiguous way to identify an organisation.
@@ -41,38 +42,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
- * OrganisationIdentification.BICFI}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+ * OrganisationIdentification.mmBICFI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
- * OrganisationIdentification.AnyBIC}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+ * OrganisationIdentification.mmAnyBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#OrganisationName
- * OrganisationIdentification.OrganisationName}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisationName
+ * OrganisationIdentification.mmOrganisationName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#Organisation
- * OrganisationIdentification.Organisation}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisation
+ * OrganisationIdentification.mmOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#ClearingSystemMemberIdentificationType
- * OrganisationIdentification.ClearingSystemMemberIdentificationType}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
+ * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICNonFI
- * OrganisationIdentification.BICNonFI}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICNonFI
+ * OrganisationIdentification.mmBICNonFI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#EANGLN
- * OrganisationIdentification.EANGLN}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmEANGLN
+ * OrganisationIdentification.mmEANGLN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#CHIPSUniversalIdentifier
- * OrganisationIdentification.CHIPSUniversalIdentifier}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmCHIPSUniversalIdentifier
+ * OrganisationIdentification.mmCHIPSUniversalIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#DUNS
- * OrganisationIdentification.DUNS}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmDUNS
+ * OrganisationIdentification.mmDUNS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BankPartyIdentification
- * OrganisationIdentification.BankPartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBankPartyIdentification
+ * OrganisationIdentification.mmBankPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
- * OrganisationIdentification.MIC}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+ * OrganisationIdentification.mmMIC}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,14 +81,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
- * Organisation.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+ * Organisation.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationName#Organisation
- * OrganisationName.Organisation}</li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationName#mmOrganisation
+ * OrganisationName.mmOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#OrganisationIdentification
- * CashClearingSystemMember.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmOrganisationIdentification
+ * CashClearingSystemMember.mmOrganisationIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,108 +96,109 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#NameAndAddress
- * FinancialInstitutionIdentification3Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#mmNameAndAddress
+ * FinancialInstitutionIdentification3Choice.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#Other
- * FinancialInstitutionIdentification8.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmOther
+ * FinancialInstitutionIdentification8.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party2Choice#OrganisationIdentification
- * Party2Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party2Choice#mmOrganisationIdentification
+ * Party2Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party6Choice#OrganisationIdentification
- * Party6Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party6Choice#mmOrganisationIdentification
+ * Party6Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party11Choice#OrganisationIdentification
- * Party11Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party11Choice#mmOrganisationIdentification
+ * Party11Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#NameAndAddress
- * FinancialInstitutionIdentification5Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#mmNameAndAddress
+ * FinancialInstitutionIdentification5Choice.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#CombinedIdentification
- * FinancialInstitutionIdentification5Choice.CombinedIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#mmCombinedIdentification
+ * FinancialInstitutionIdentification5Choice.mmCombinedIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#Other
- * FinancialInstitutionIdentification7.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#mmOther
+ * FinancialInstitutionIdentification7.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party8Choice#OrganisationIdentification
- * Party8Choice.OrganisationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent1#Agent
- * ProprietaryAgent1.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent2#Agent
- * ProprietaryAgent2.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent3#Agent
- * ProprietaryAgent3.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges2#Agent Charges2.Agent}</li>
+ * {@linkplain com.tools20022.repository.choice.Party8Choice#mmOrganisationIdentification
+ * Party8Choice.mmOrganisationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent1#mmAgent
+ * ProprietaryAgent1.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent2#mmAgent
+ * ProprietaryAgent2.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryAgent3#mmAgent
+ * ProprietaryAgent3.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges2#mmAgent
+ * Charges2.mmAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party10Choice#OrganisationIdentification
- * Party10Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party10Choice#mmOrganisationIdentification
+ * Party10Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party9Choice#OrganisationIdentification
- * Party9Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party9Choice#mmOrganisationIdentification
+ * Party9Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party9Choice#FinancialInstitutionIdentification
- * Party9Choice.FinancialInstitutionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party9Choice#mmFinancialInstitutionIdentification
+ * Party9Choice.mmFinancialInstitutionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification59#LegalEntityIdentifier
- * PartyIdentification59.LegalEntityIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmLegalEntityIdentifier
+ * PartyIdentification59.mmLegalEntityIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#AnyBIC
- * PartyIdentification73Choice.AnyBIC}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#mmAnyBIC
+ * PartyIdentification73Choice.mmAnyBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification60#LegalEntityIdentifier
- * PartyIdentification60.LegalEntityIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification60#mmLegalEntityIdentifier
+ * PartyIdentification60.mmLegalEntityIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party1Choice#OrganisationIdentification
- * Party1Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party1Choice#mmOrganisationIdentification
+ * Party1Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice#NameAndAddress
- * FinancialInstitutionIdentification4Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice#mmNameAndAddress
+ * FinancialInstitutionIdentification4Choice.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification9#Other
- * FinancialInstitutionIdentification9.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification9#mmOther
+ * FinancialInstitutionIdentification9.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party13Choice#OrganisationIdentification
- * Party13Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party13Choice#mmOrganisationIdentification
+ * Party13Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party13Choice#FinancialInstitutionIdentification
- * Party13Choice.FinancialInstitutionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party13Choice#mmFinancialInstitutionIdentification
+ * Party13Choice.mmFinancialInstitutionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#AccountServicer
- * CashAccountCharacteristics1.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics1#mmAccountServicer
+ * CashAccountCharacteristics1.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyOrganisation1Choice#OrganisationIdentification
- * PartyOrganisation1Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyOrganisation1Choice#mmOrganisationIdentification
+ * PartyOrganisation1Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party5Choice#OrganisationIdentification
- * Party5Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party5Choice#mmOrganisationIdentification
+ * Party5Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice#NameAndAddress
- * FinancialInstitutionIdentification6Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice#mmNameAndAddress
+ * FinancialInstitutionIdentification6Choice.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#Other
- * TradingVenueIdentification1Choice.Other}</li>
+ * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#mmOther
+ * TradingVenueIdentification1Choice.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#AccountServicer
- * CashAccountCharacteristics2.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmAccountServicer
+ * CashAccountCharacteristics2.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party29Choice#OrganisationIdentification
- * Party29Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party29Choice#mmOrganisationIdentification
+ * Party29Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party29Choice#FinancialInstitutionIdentification
- * Party29Choice.FinancialInstitutionIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party29Choice#mmFinancialInstitutionIdentification
+ * Party29Choice.mmFinancialInstitutionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Party1#OrganisationIdentification
- * Party1.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Party1#mmOrganisationIdentification
+ * Party1.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#NameAndAddress
- * FinancialInstitutionIdentification7Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#mmNameAndAddress
+ * FinancialInstitutionIdentification7Choice.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification10#Party
- * FinancialInstitutionIdentification10.Party}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification10#mmParty
+ * FinancialInstitutionIdentification10.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#NameAndAddress
- * FinancialInstitutionIdentification8Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#mmNameAndAddress
+ * FinancialInstitutionIdentification8Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -316,8 +318,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -331,6 +333,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrganisationIdentification extends PartyIdentificationInformation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICFIIdentifier bICFI;
 	/**
 	 * Code allocated to a financial institution by the ISO 9362 Registration
 	 * Authority as described in ISO 9362
@@ -344,261 +347,263 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BICFIIdentifier
 	 * BICFIIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactDetails1#Identification
-	 * ContactDetails1.Identification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount15#Servicer
-	 * CashAccount15.Servicer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount14#Servicer
-	 * CashAccount14.Servicer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#Identification
-	 * OrderDeskContactDetails.Identification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount21#Servicer
-	 * CashAccount21.Servicer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#Servicer
-	 * CashAccount22.Servicer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#BIC
-	 * FinancialInstitutionIdentification3Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#BIC
-	 * MemberIdentificationChoice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MemberIdentification2Choice#BICFI
-	 * MemberIdentification2Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference1Details#InstructingAgentIdentification
-	 * PaymentInstructionReference1Details.InstructingAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference1Details#InstructedAgentIdentification
-	 * PaymentInstructionReference1Details.InstructedAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference2Details#InstructingAgentIdentification
-	 * PaymentInstructionReference2Details.InstructingAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference2Details#InstructedAgentIdentification
-	 * PaymentInstructionReference2Details.InstructedAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails3#InstructingAgentIdentification
-	 * PaymentInstructionReferenceDetails3.InstructingAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails3#InstructedAgentIdentification
-	 * PaymentInstructionReferenceDetails3.InstructedAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#InstructingAgentIdentification
-	 * PaymentInstructionReferenceDetails4.InstructingAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#InstructedAgentIdentification
-	 * PaymentInstructionReferenceDetails4.InstructedAgentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#BICFI
-	 * FinancialInstitutionIdentification8.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1#AccountOwner
-	 * LimitIdentificationDetails1.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2#AccountOwner
-	 * LimitIdentificationDetails2.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#BIC
-	 * OrganisationIdentification2.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria1#AccountOwner
-	 * LimitSearchCriteria1.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria2#AccountOwner
-	 * LimitSearchCriteria2.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#AccountOwner
-	 * LimitSearchCriteria3.AccountOwner}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BICIdentification1#BIC
-	 * BICIdentification1.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StandingOrderIdentification1#AccountOwner
-	 * StandingOrderIdentification1.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#AccountServicer
-	 * CashAccountDetails1.AccountServicer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails3#AccountServicer
-	 * CashAccountDetails3.AccountServicer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#BIC
-	 * FinancialInstitutionIdentification3.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#BIC
-	 * FinancialInstitutionIdentification5Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#BIC
-	 * FinancialInstitutionIdentification7.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification3Choice#BIC
-	 * PartyIdentification3Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification30Choice#BIC
-	 * PartyIdentification30Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification38Choice#BICFI
-	 * PartyIdentification38Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification61Choice#BICFI
-	 * PartyIdentification61Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification31Choice#BIC
-	 * PartyIdentification31Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification42Choice#BICFI
-	 * PartyIdentification42Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification55Choice#BICFI
-	 * PartyIdentification55Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification32Choice#BIC
-	 * PartyIdentification32Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#BIC
-	 * PartyIdentification35Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#BIC
-	 * PartyIdentification6Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BICOrCountryCodeChoice#BIC
-	 * BICOrCountryCodeChoice.BIC}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification54#BIC
-	 * PartyIdentification54.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification68Choice#BIC
-	 * PartyIdentification68Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#BIC
-	 * OrganisationIdentification6.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#BIC
-	 * FinancialInstitutionIdentification1.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification6#BIC
-	 * FinancialInstitutionIdentification6.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice#BIC
-	 * FinancialInstitutionIdentification4Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequiredSubmission2#Submitter
-	 * RequiredSubmission2.Submitter}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Baseline3#BuyerSideSubmittingBank
-	 * Baseline3.BuyerSideSubmittingBank}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Baseline3#SellerSideSubmittingBank
-	 * Baseline3.SellerSideSubmittingBank}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification3#BIC
-	 * ContactIdentification3.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification29Choice#BIC
-	 * PartyIdentification29Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification34Choice#BIC
-	 * PartyIdentification34Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification9#BICFI
-	 * FinancialInstitutionIdentification9.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification3#BIC
-	 * OrganisationIdentification3.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification4#BIC
-	 * FinancialInstitutionIdentification4.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice#BIC
-	 * FinancialInstitutionIdentification6Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification3#RelatedPartyIdentification
-	 * SystemPartyIdentification3.RelatedPartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification3#ResponsiblePartyIdentification
-	 * SystemPartyIdentification3.ResponsiblePartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification5#ResponsiblePartyIdentification
-	 * SystemPartyIdentification5.ResponsiblePartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TechnicalIdentification1Choice#BICFI
-	 * TechnicalIdentification1Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification1#Identification
-	 * SystemPartyIdentification1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#CSDIdentification
-	 * CSDOrNCB1Choice.CSDIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#NCBIdentification
-	 * CSDOrNCB1Choice.NCBIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification2#Identification
-	 * SystemPartyIdentification2.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#Identification
-	 * SystemPartyIdentification4.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#ResponsiblePartyIdentification
-	 * SystemPartyIdentification4.ResponsiblePartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitIdentification4#AccountOwner
-	 * LimitIdentification4.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals1#BilledCustomerIdentification
-	 * ServiceCategoryTotals1.BilledCustomerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#BilledCustomerIdentification
-	 * BillingSearchCriteria1.BilledCustomerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#AccountOwner
-	 * LimitUtilisationJournalSearchCriteria1.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Baseline4#BuyerSideSubmittingBank
-	 * Baseline4.BuyerSideSubmittingBank}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Baseline4#SellerSideSubmittingBank
-	 * Baseline4.SellerSideSubmittingBank}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification13#BICFI
-	 * FinancialInstitutionIdentification13.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Baseline5#BuyerSideSubmittingBank
-	 * Baseline5.BuyerSideSubmittingBank}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Baseline5#SellerSideSubmittingBank
-	 * Baseline5.SellerSideSubmittingBank}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification88Choice#BICFI
-	 * PartyIdentification88Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification94Choice#BICFI
-	 * PartyIdentification94Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#BICFI
-	 * FinancialInstitutionIdentification7Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification102Choice#AnyBIC
-	 * PartyIdentification102Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification101Choice#BIC
-	 * PartyIdentification101Choice.BIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification113Choice#BICFI
-	 * PartyIdentification113Choice.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#BICFI
-	 * FinancialInstitutionIdentification8Choice.BICFI}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails1#mmIdentification
+	 * ContactDetails1.mmIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount15#mmServicer
+	 * CashAccount15.mmServicer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount14#mmServicer
+	 * CashAccount14.mmServicer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderDeskContactDetails#mmIdentification
+	 * OrderDeskContactDetails.mmIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount21#mmServicer
+	 * CashAccount21.mmServicer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount22#mmServicer
+	 * CashAccount22.mmServicer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#mmBIC
+	 * FinancialInstitutionIdentification3Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#mmBIC
+	 * MemberIdentificationChoice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MemberIdentification2Choice#mmBICFI
+	 * MemberIdentification2Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference1Details#mmInstructingAgentIdentification
+	 * PaymentInstructionReference1Details.mmInstructingAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference1Details#mmInstructedAgentIdentification
+	 * PaymentInstructionReference1Details.mmInstructedAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference2Details#mmInstructingAgentIdentification
+	 * PaymentInstructionReference2Details.mmInstructingAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReference2Details#mmInstructedAgentIdentification
+	 * PaymentInstructionReference2Details.mmInstructedAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails3#mmInstructingAgentIdentification
+	 * PaymentInstructionReferenceDetails3.mmInstructingAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails3#mmInstructedAgentIdentification
+	 * PaymentInstructionReferenceDetails3.mmInstructedAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmInstructingAgentIdentification
+	 * PaymentInstructionReferenceDetails4.mmInstructingAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmInstructedAgentIdentification
+	 * PaymentInstructionReferenceDetails4.mmInstructedAgentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmBICFI
+	 * FinancialInstitutionIdentification8.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1#mmAccountOwner
+	 * LimitIdentificationDetails1.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2#mmAccountOwner
+	 * LimitIdentificationDetails2.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmBIC
+	 * OrganisationIdentification2.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria1#mmAccountOwner
+	 * LimitSearchCriteria1.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria2#mmAccountOwner
+	 * LimitSearchCriteria2.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria3#mmAccountOwner
+	 * LimitSearchCriteria3.mmAccountOwner}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BICIdentification1#mmBIC
+	 * BICIdentification1.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderIdentification1#mmAccountOwner
+	 * StandingOrderIdentification1.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#mmAccountServicer
+	 * CashAccountDetails1.mmAccountServicer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails3#mmAccountServicer
+	 * CashAccountDetails3.mmAccountServicer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#mmBIC
+	 * FinancialInstitutionIdentification3.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#mmBIC
+	 * FinancialInstitutionIdentification5Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#mmBIC
+	 * FinancialInstitutionIdentification7.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification3Choice#mmBIC
+	 * PartyIdentification3Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification30Choice#mmBIC
+	 * PartyIdentification30Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification38Choice#mmBICFI
+	 * PartyIdentification38Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification61Choice#mmBICFI
+	 * PartyIdentification61Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification31Choice#mmBIC
+	 * PartyIdentification31Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification42Choice#mmBICFI
+	 * PartyIdentification42Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification55Choice#mmBICFI
+	 * PartyIdentification55Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification32Choice#mmBIC
+	 * PartyIdentification32Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#mmBIC
+	 * PartyIdentification35Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#mmBIC
+	 * PartyIdentification6Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BICOrCountryCodeChoice#mmBIC
+	 * BICOrCountryCodeChoice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification54#mmBIC
+	 * PartyIdentification54.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification68Choice#mmBIC
+	 * PartyIdentification68Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#mmBIC
+	 * OrganisationIdentification6.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#mmBIC
+	 * FinancialInstitutionIdentification1.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification6#mmBIC
+	 * FinancialInstitutionIdentification6.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice#mmBIC
+	 * FinancialInstitutionIdentification4Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequiredSubmission2#mmSubmitter
+	 * RequiredSubmission2.mmSubmitter}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline3#mmBuyerSideSubmittingBank
+	 * Baseline3.mmBuyerSideSubmittingBank}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline3#mmSellerSideSubmittingBank
+	 * Baseline3.mmSellerSideSubmittingBank}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#mmBIC
+	 * ContactIdentification3.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification29Choice#mmBIC
+	 * PartyIdentification29Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification34Choice#mmBIC
+	 * PartyIdentification34Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification9#mmBICFI
+	 * FinancialInstitutionIdentification9.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification3#mmBIC
+	 * OrganisationIdentification3.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification4#mmBIC
+	 * FinancialInstitutionIdentification4.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice#mmBIC
+	 * FinancialInstitutionIdentification6Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification3#mmRelatedPartyIdentification
+	 * SystemPartyIdentification3.mmRelatedPartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification3#mmResponsiblePartyIdentification
+	 * SystemPartyIdentification3.mmResponsiblePartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification5#mmResponsiblePartyIdentification
+	 * SystemPartyIdentification5.mmResponsiblePartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TechnicalIdentification1Choice#mmBICFI
+	 * TechnicalIdentification1Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification1#mmIdentification
+	 * SystemPartyIdentification1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#mmCSDIdentification
+	 * CSDOrNCB1Choice.mmCSDIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CSDOrNCB1Choice#mmNCBIdentification
+	 * CSDOrNCB1Choice.mmNCBIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification2#mmIdentification
+	 * SystemPartyIdentification2.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#mmIdentification
+	 * SystemPartyIdentification4.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#mmResponsiblePartyIdentification
+	 * SystemPartyIdentification4.mmResponsiblePartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitIdentification4#mmAccountOwner
+	 * LimitIdentification4.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals1#mmBilledCustomerIdentification
+	 * ServiceCategoryTotals1.mmBilledCustomerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmBilledCustomerIdentification
+	 * BillingSearchCriteria1.mmBilledCustomerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#mmAccountOwner
+	 * LimitUtilisationJournalSearchCriteria1.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline4#mmBuyerSideSubmittingBank
+	 * Baseline4.mmBuyerSideSubmittingBank}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline4#mmSellerSideSubmittingBank
+	 * Baseline4.mmSellerSideSubmittingBank}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification13#mmBICFI
+	 * FinancialInstitutionIdentification13.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline5#mmBuyerSideSubmittingBank
+	 * Baseline5.mmBuyerSideSubmittingBank}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Baseline5#mmSellerSideSubmittingBank
+	 * Baseline5.mmSellerSideSubmittingBank}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification88Choice#mmBICFI
+	 * PartyIdentification88Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification94Choice#mmBICFI
+	 * PartyIdentification94Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#mmBICFI
+	 * FinancialInstitutionIdentification7Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification102Choice#mmAnyBIC
+	 * PartyIdentification102Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification101Choice#mmBIC
+	 * PartyIdentification101Choice.mmBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification113Choice#mmBICFI
+	 * PartyIdentification113Choice.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#mmBICFI
+	 * FinancialInstitutionIdentification8Choice.mmBICFI}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -612,50 +617,53 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BICFI = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBICFI = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.Identification, com.tools20022.repository.msg.CashAccount15.Servicer, com.tools20022.repository.msg.CashAccount14.Servicer,
-					com.tools20022.repository.msg.OrderDeskContactDetails.Identification, com.tools20022.repository.msg.CashAccount21.Servicer, com.tools20022.repository.msg.CashAccount22.Servicer,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.BIC, com.tools20022.repository.choice.MemberIdentificationChoice.BIC, com.tools20022.repository.choice.MemberIdentification2Choice.BICFI,
-					com.tools20022.repository.msg.PaymentInstructionReference1Details.InstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReference1Details.InstructedAgentIdentification,
-					com.tools20022.repository.msg.PaymentInstructionReference2Details.InstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReference2Details.InstructedAgentIdentification,
-					com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.InstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.InstructedAgentIdentification,
-					com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.InstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.InstructedAgentIdentification,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification8.BICFI, com.tools20022.repository.msg.LimitIdentificationDetails1.AccountOwner, com.tools20022.repository.msg.LimitIdentificationDetails2.AccountOwner,
-					com.tools20022.repository.msg.OrganisationIdentification2.BIC, com.tools20022.repository.msg.LimitSearchCriteria1.AccountOwner, com.tools20022.repository.msg.LimitSearchCriteria2.AccountOwner,
-					com.tools20022.repository.msg.LimitSearchCriteria3.AccountOwner, com.tools20022.repository.msg.BICIdentification1.BIC, com.tools20022.repository.msg.StandingOrderIdentification1.AccountOwner,
-					com.tools20022.repository.msg.CashAccountDetails1.AccountServicer, com.tools20022.repository.msg.CashAccountDetails3.AccountServicer, com.tools20022.repository.msg.FinancialInstitutionIdentification3.BIC,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.BIC, com.tools20022.repository.msg.FinancialInstitutionIdentification7.BIC, com.tools20022.repository.choice.PartyIdentification3Choice.BIC,
-					com.tools20022.repository.choice.PartyIdentification30Choice.BIC, com.tools20022.repository.choice.PartyIdentification38Choice.BICFI, com.tools20022.repository.choice.PartyIdentification61Choice.BICFI,
-					com.tools20022.repository.choice.PartyIdentification31Choice.BIC, com.tools20022.repository.choice.PartyIdentification42Choice.BICFI, com.tools20022.repository.choice.PartyIdentification55Choice.BICFI,
-					com.tools20022.repository.choice.PartyIdentification32Choice.BIC, com.tools20022.repository.choice.PartyIdentification35Choice.BIC, com.tools20022.repository.msg.PartyIdentification6Choice.BIC,
-					com.tools20022.repository.choice.BICOrCountryCodeChoice.BIC, com.tools20022.repository.msg.PartyIdentification54.BIC, com.tools20022.repository.choice.PartyIdentification68Choice.BIC,
-					com.tools20022.repository.msg.OrganisationIdentification6.BIC, com.tools20022.repository.msg.FinancialInstitutionIdentification1.BIC, com.tools20022.repository.msg.FinancialInstitutionIdentification6.BIC,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.BIC, com.tools20022.repository.msg.RequiredSubmission2.Submitter, com.tools20022.repository.msg.Baseline3.BuyerSideSubmittingBank,
-					com.tools20022.repository.msg.Baseline3.SellerSideSubmittingBank, com.tools20022.repository.msg.ContactIdentification3.BIC, com.tools20022.repository.choice.PartyIdentification29Choice.BIC,
-					com.tools20022.repository.choice.PartyIdentification34Choice.BIC, com.tools20022.repository.msg.FinancialInstitutionIdentification9.BICFI, com.tools20022.repository.msg.OrganisationIdentification3.BIC,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification4.BIC, com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.BIC,
-					com.tools20022.repository.msg.SystemPartyIdentification3.RelatedPartyIdentification, com.tools20022.repository.msg.SystemPartyIdentification3.ResponsiblePartyIdentification,
-					com.tools20022.repository.msg.SystemPartyIdentification5.ResponsiblePartyIdentification, com.tools20022.repository.choice.TechnicalIdentification1Choice.BICFI,
-					com.tools20022.repository.msg.SystemPartyIdentification1.Identification, com.tools20022.repository.choice.CSDOrNCB1Choice.CSDIdentification, com.tools20022.repository.choice.CSDOrNCB1Choice.NCBIdentification,
-					com.tools20022.repository.msg.SystemPartyIdentification2.Identification, com.tools20022.repository.msg.SystemPartyIdentification4.Identification,
-					com.tools20022.repository.msg.SystemPartyIdentification4.ResponsiblePartyIdentification, com.tools20022.repository.msg.LimitIdentification4.AccountOwner,
-					com.tools20022.repository.msg.ServiceCategoryTotals1.BilledCustomerIdentification, com.tools20022.repository.msg.BillingSearchCriteria1.BilledCustomerIdentification,
-					com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.AccountOwner, com.tools20022.repository.msg.Baseline4.BuyerSideSubmittingBank, com.tools20022.repository.msg.Baseline4.SellerSideSubmittingBank,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification13.BICFI, com.tools20022.repository.msg.Baseline5.BuyerSideSubmittingBank, com.tools20022.repository.msg.Baseline5.SellerSideSubmittingBank,
-					com.tools20022.repository.choice.PartyIdentification88Choice.BICFI, com.tools20022.repository.choice.PartyIdentification94Choice.BICFI, com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.BICFI,
-					com.tools20022.repository.choice.PartyIdentification102Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification101Choice.BIC, com.tools20022.repository.choice.PartyIdentification113Choice.BICFI,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.BICFI);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmIdentification, com.tools20022.repository.msg.CashAccount15.mmServicer, com.tools20022.repository.msg.CashAccount14.mmServicer,
+					com.tools20022.repository.msg.OrderDeskContactDetails.mmIdentification, com.tools20022.repository.msg.CashAccount21.mmServicer, com.tools20022.repository.msg.CashAccount22.mmServicer,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.mmBIC, com.tools20022.repository.choice.MemberIdentificationChoice.mmBIC, com.tools20022.repository.choice.MemberIdentification2Choice.mmBICFI,
+					com.tools20022.repository.msg.PaymentInstructionReference1Details.mmInstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReference1Details.mmInstructedAgentIdentification,
+					com.tools20022.repository.msg.PaymentInstructionReference2Details.mmInstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReference2Details.mmInstructedAgentIdentification,
+					com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmInstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmInstructedAgentIdentification,
+					com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInstructingAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInstructedAgentIdentification,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmBICFI, com.tools20022.repository.msg.LimitIdentificationDetails1.mmAccountOwner,
+					com.tools20022.repository.msg.LimitIdentificationDetails2.mmAccountOwner, com.tools20022.repository.msg.OrganisationIdentification2.mmBIC, com.tools20022.repository.msg.LimitSearchCriteria1.mmAccountOwner,
+					com.tools20022.repository.msg.LimitSearchCriteria2.mmAccountOwner, com.tools20022.repository.msg.LimitSearchCriteria3.mmAccountOwner, com.tools20022.repository.msg.BICIdentification1.mmBIC,
+					com.tools20022.repository.msg.StandingOrderIdentification1.mmAccountOwner, com.tools20022.repository.msg.CashAccountDetails1.mmAccountServicer, com.tools20022.repository.msg.CashAccountDetails3.mmAccountServicer,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmBIC, com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.mmBIC,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmBIC, com.tools20022.repository.choice.PartyIdentification3Choice.mmBIC, com.tools20022.repository.choice.PartyIdentification30Choice.mmBIC,
+					com.tools20022.repository.choice.PartyIdentification38Choice.mmBICFI, com.tools20022.repository.choice.PartyIdentification61Choice.mmBICFI, com.tools20022.repository.choice.PartyIdentification31Choice.mmBIC,
+					com.tools20022.repository.choice.PartyIdentification42Choice.mmBICFI, com.tools20022.repository.choice.PartyIdentification55Choice.mmBICFI, com.tools20022.repository.choice.PartyIdentification32Choice.mmBIC,
+					com.tools20022.repository.choice.PartyIdentification35Choice.mmBIC, com.tools20022.repository.msg.PartyIdentification6Choice.mmBIC, com.tools20022.repository.choice.BICOrCountryCodeChoice.mmBIC,
+					com.tools20022.repository.msg.PartyIdentification54.mmBIC, com.tools20022.repository.choice.PartyIdentification68Choice.mmBIC, com.tools20022.repository.msg.OrganisationIdentification6.mmBIC,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmBIC, com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmBIC,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmBIC, com.tools20022.repository.msg.RequiredSubmission2.mmSubmitter, com.tools20022.repository.msg.Baseline3.mmBuyerSideSubmittingBank,
+					com.tools20022.repository.msg.Baseline3.mmSellerSideSubmittingBank, com.tools20022.repository.msg.ContactIdentification3.mmBIC, com.tools20022.repository.choice.PartyIdentification29Choice.mmBIC,
+					com.tools20022.repository.choice.PartyIdentification34Choice.mmBIC, com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmBICFI, com.tools20022.repository.msg.OrganisationIdentification3.mmBIC,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification4.mmBIC, com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.mmBIC,
+					com.tools20022.repository.msg.SystemPartyIdentification3.mmRelatedPartyIdentification, com.tools20022.repository.msg.SystemPartyIdentification3.mmResponsiblePartyIdentification,
+					com.tools20022.repository.msg.SystemPartyIdentification5.mmResponsiblePartyIdentification, com.tools20022.repository.choice.TechnicalIdentification1Choice.mmBICFI,
+					com.tools20022.repository.msg.SystemPartyIdentification1.mmIdentification, com.tools20022.repository.choice.CSDOrNCB1Choice.mmCSDIdentification, com.tools20022.repository.choice.CSDOrNCB1Choice.mmNCBIdentification,
+					com.tools20022.repository.msg.SystemPartyIdentification2.mmIdentification, com.tools20022.repository.msg.SystemPartyIdentification4.mmIdentification,
+					com.tools20022.repository.msg.SystemPartyIdentification4.mmResponsiblePartyIdentification, com.tools20022.repository.msg.LimitIdentification4.mmAccountOwner,
+					com.tools20022.repository.msg.ServiceCategoryTotals1.mmBilledCustomerIdentification, com.tools20022.repository.msg.BillingSearchCriteria1.mmBilledCustomerIdentification,
+					com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.Baseline4.mmBuyerSideSubmittingBank, com.tools20022.repository.msg.Baseline4.mmSellerSideSubmittingBank,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification13.mmBICFI, com.tools20022.repository.msg.Baseline5.mmBuyerSideSubmittingBank, com.tools20022.repository.msg.Baseline5.mmSellerSideSubmittingBank,
+					com.tools20022.repository.choice.PartyIdentification88Choice.mmBICFI, com.tools20022.repository.choice.PartyIdentification94Choice.mmBICFI,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmBICFI, com.tools20022.repository.choice.PartyIdentification102Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification101Choice.mmBIC, com.tools20022.repository.choice.PartyIdentification113Choice.mmBICFI,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.mmBICFI);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BICFI";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected AnyBICIdentifier anyBIC;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -669,596 +677,597 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.AnyBICIdentifier
 	 * AnyBICIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification1Choice#BICOrBEI
-	 * PartyIdentification1Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#BICOrBEI
-	 * PartyIdentification2Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification4Choice#BICOrBEI
-	 * PartyIdentification4Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#BICOrBEI
-	 * PartyIdentification5Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification4#BICOrBEI
-	 * OrganisationIdentification4.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification8#AnyBIC
-	 * OrganisationIdentification8.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#AccountOwner
-	 * AccountCashEntrySearch2.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#AccountServicer
-	 * AccountCashEntrySearch2.AccountServicer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#AccountOwner
-	 * CashAccountDetails1.AccountOwner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#BICOrBEI
-	 * PartyIdentification13Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification36Choice#AnyBIC
-	 * PartyIdentification36Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification7#AnyBIC
-	 * OrganisationIdentification7.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification51Choice#AnyBIC
-	 * PartyIdentification51Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification9#AnyBIC
-	 * OrganisationIdentification9.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#BICOrBEI
-	 * PartyIdentification12Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#BICOrBEI
-	 * PartyIdentification10Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification14Choice#BICOrBEI
-	 * PartyIdentification14Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification44Choice#AnyBIC
-	 * PartyIdentification44Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification45Choice#AnyBIC
-	 * PartyIdentification45Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification37Choice#AnyBIC
-	 * PartyIdentification37Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#PlaceOfClearing
-	 * SecuritiesTradeDetails25.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#Identification
-	 * SafekeepingPlaceTypeAndAnyBICIdentifier1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification43Choice#AnyBIC
-	 * PartyIdentification43Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#PlaceOfClearing
-	 * SecuritiesTradeDetails26.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification58Choice#AnyBIC
-	 * PartyIdentification58Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification62Choice#AnyBIC
-	 * PartyIdentification62Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification60Choice#AnyBIC
-	 * PartyIdentification60Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification65Choice#AnyBIC
-	 * PartyIdentification65Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#PlaceOfClearing
-	 * SecuritiesTradeDetails27.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#PlaceOfClearing
-	 * SecuritiesTradeDetails28.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification18Choice#BICOrBEI
-	 * PartyIdentification18Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification16Choice#BICOrBEI
-	 * PartyIdentification16Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification46Choice#AnyBIC
-	 * PartyIdentification46Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification56Choice#AnyBIC
-	 * PartyIdentification56Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification48Choice#AnyBIC
-	 * PartyIdentification48Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification52Choice#AnyBIC
-	 * PartyIdentification52Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification41Choice#AnyBIC
-	 * PartyIdentification41Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification50Choice#AnyBIC
-	 * PartyIdentification50Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification17Choice#BICOrBEI
-	 * PartyIdentification17Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification39Choice#AnyBIC
-	 * PartyIdentification39Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification40Choice#AnyBIC
-	 * PartyIdentification40Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification53Choice#AnyBIC
-	 * PartyIdentification53Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification54Choice#AnyBIC
-	 * PartyIdentification54Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification47Choice#AnyBIC
-	 * PartyIdentification47Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification57Choice#AnyBIC
-	 * PartyIdentification57Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification3#BICOrBEI
-	 * PartyIdentification3.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification49Choice#AnyBIC
-	 * PartyIdentification49Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification59Choice#AnyBIC
-	 * PartyIdentification59Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#PlaceOfClearing
-	 * SecuritiesTradeDetails6.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#PlaceOfClearing
-	 * SecuritiesTradeDetails13.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#PlaceOfClearing
-	 * SecuritiesTradeDetails3.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#PlaceOfClearing
-	 * SecuritiesTradeDetails11.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification64Choice#AnyBIC
-	 * PartyIdentification64Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#PlaceOfClearing
-	 * SecuritiesTradeDetails2.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#PlaceOfClearing
-	 * SecuritiesTradeDetails16.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification63Choice#AnyBIC
-	 * PartyIdentification63Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#PlaceOfClearing
-	 * SecuritiesTradeDetails1.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#PlaceOfClearing
-	 * SecuritiesTradeDetails15.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#PlaceOfClearing
-	 * TransactionDetails5.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification15Choice#BICOrBEI
-	 * PartyIdentification15Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#PlaceOfClearing
-	 * TransactionDetails9.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#PlaceOfClearing
-	 * TransactionDetails22.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#PlaceOfClearing
-	 * TransactionDetails23.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#PlaceOfClearing
-	 * TransactionDetails36.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#PlaceOfClearing
-	 * TransactionDetails47.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#PlaceOfClearing
-	 * TransactionDetails53.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#PlaceOfClearing
-	 * TransactionDetails58.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#PlaceOfClearing
-	 * TransactionDetails7.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#PlaceOfClearing
-	 * TransactionDetails16.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#PlaceOfClearing
-	 * TransactionDetails26.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#PlaceOfClearing
-	 * TransactionDetails27.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#PlaceOfClearing
-	 * TransactionDetails39.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#PlaceOfClearing
-	 * TransactionDetails50.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#PlaceOfClearing
-	 * TransactionDetails56.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#PlaceOfClearing
-	 * TransactionDetails59.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6#PlaceOfClearing
-	 * TransactionDetails6.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18#PlaceOfClearing
-	 * TransactionDetails18.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24#PlaceOfClearing
-	 * TransactionDetails24.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34#PlaceOfClearing
-	 * TransactionDetails34.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37#PlaceOfClearing
-	 * TransactionDetails37.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48#PlaceOfClearing
-	 * TransactionDetails48.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#PlaceOfClearing
-	 * TransactionDetails57.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60#PlaceOfClearing
-	 * TransactionDetails60.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification70Choice#AnyBIC
-	 * PartyIdentification70Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification23Choice#BICOrBEI
-	 * PartyIdentification23Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#BICOrBEI
-	 * PartyIdentification23.BICOrBEI}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Case#Creator Case.Creator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#BICOrBEI
-	 * PartyIdentification7Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification22#BICOrBEI
-	 * PartyIdentification22.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification8Choice#BICOrBEI
-	 * PartyIdentification8Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification44#AnyBIC
-	 * PartyIdentification44.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification19Choice#AnyBIC
-	 * PartyIdentification19Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification59#AnyBIC
-	 * PartyIdentification59.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#Party
-	 * PlaceOfTradeIdentification1Choice.Party}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#BICOrBEI
-	 * PartyIdentification9Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount17#CorrespondentBankIdentification
-	 * CashAccount17.CorrespondentBankIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#SystematicInternaliser
-	 * OffMarket1Choice.SystematicInternaliser}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification24Choice#BICOrBEI
-	 * PartyIdentification24Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification11Choice#BICOrBEI
-	 * PartyIdentification11Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#PlaceOfClearing
-	 * SecuritiesTradeDetails8.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails18#PlaceOfClearing
-	 * SecuritiesTradeDetails18.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#PlaceOfClearing
-	 * SecuritiesTradeDetails4.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#PlaceOfClearing
-	 * SecuritiesTradeDetails17.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification33Choice#AnyBIC
-	 * PartyIdentification33Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#PlaceOfClearing
-	 * SecuritiesTradeDetails9.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails21#PlaceOfClearing
-	 * SecuritiesTradeDetails21.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#PlaceOfClearing
-	 * SecuritiesTradeDetails10.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#PlaceOfClearing
-	 * SecuritiesTradeDetails22.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#PlaceOfClearing
-	 * SecuritiesTradeDetails23.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#PlaceOfClearing
-	 * SecuritiesTradeDetails29.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification66Choice#AnyBIC
-	 * PartyIdentification66Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification67Choice#AnyBIC
-	 * PartyIdentification67Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification26Choice#BICOrBEI
-	 * PartyIdentification26Choice.BICOrBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification72Choice#AnyBIC
-	 * PartyIdentification72Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#AnyBIC
-	 * PartyIdentification71Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51#PlaceOfClearing
-	 * TransactionDetails51.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#PlaceOfClearing
-	 * TransactionDetails61.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#PlaceOfClearing
-	 * TransactionDetails62.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63#PlaceOfClearing
-	 * TransactionDetails63.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#PlaceOfClearing
-	 * SecuritiesTradeDetails31.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#PlaceOfClearing
-	 * SecuritiesTradeDetails33.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#PlaceOfClearing
-	 * SecuritiesTradeDetails35.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#PlaceOfClearing
-	 * SecuritiesTradeDetails38.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#PlaceOfClearing
-	 * SecuritiesTradeDetails37.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails36#PlaceOfClearing
-	 * SecuritiesTradeDetails36.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#PlaceOfClearing
-	 * SecuritiesTradeDetails34.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#PlaceOfClearing
-	 * SecuritiesTradeDetails32.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification62#BICFI
-	 * PartyIdentification62.BICFI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification64#AnyBIC
-	 * PartyIdentification64.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#AnyBIC
-	 * PartyIdentification75Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#PlaceOfClearing
-	 * SecuritiesTradeDetails44.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#PlaceOfClearing
-	 * SecuritiesTradeDetails39.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#PlaceOfClearing
-	 * SecuritiesTradeDetails43.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails41#PlaceOfClearing
-	 * SecuritiesTradeDetails41.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#PlaceOfClearing
-	 * SecuritiesTradeDetails40.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#PlaceOfClearing
-	 * TransactionDetails66.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#PlaceOfClearing
-	 * SecuritiesTradeDetails42.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#PlaceOfClearing
-	 * TransactionDetails67.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68#PlaceOfClearing
-	 * TransactionDetails68.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#PlaceOfClearing
-	 * SecuritiesTradeDetails46.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#PlaceOfClearing
-	 * SecuritiesTradeDetails47.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#PlaceOfClearing
-	 * TransactionDetails70.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#PlaceOfClearing
-	 * TransactionDetails69.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification83Choice#AnyBIC
-	 * PartyIdentification83Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification89Choice#AnyBIC
-	 * PartyIdentification89Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification87Choice#AnyBIC
-	 * PartyIdentification87Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#PlaceOfClearing
-	 * TransactionDetails71.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#PlaceOfClearing
-	 * TransactionDetails72.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#AnyBIC
-	 * PartyIdentification90Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification92Choice#AnyBIC
-	 * PartyIdentification92Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#PlaceOfClearing
-	 * SecuritiesTradeDetails49.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#PlaceOfClearing
-	 * TransactionDetails79.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#PlaceOfClearing
-	 * TransactionDetails75.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#PlaceOfClearing
-	 * TransactionDetails78.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#PlaceOfClearing
-	 * SecuritiesTradeDetails51.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#PlaceOfClearing
-	 * SecuritiesTradeDetails53.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#PlaceOfClearing
-	 * SecuritiesTradeDetails55.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#PlaceOfClearing
-	 * SecuritiesTradeDetails56.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails54#PlaceOfClearing
-	 * SecuritiesTradeDetails54.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#PlaceOfClearing
-	 * SecuritiesTradeDetails52.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification93Choice#AnyBIC
-	 * PartyIdentification93Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#PlaceOfClearing
-	 * SecuritiesTradeDetails50.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification26#AnyBIC
-	 * OrganisationIdentification26.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#AnyBIC
-	 * PartyIdentification97Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#AnyBIC
-	 * PartyIdentification96Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification99Choice#AnyBIC
-	 * PartyIdentification99Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification100Choice#AnyBIC
-	 * PartyIdentification100Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification104Choice#AnyBIC
-	 * PartyIdentification104Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification111Choice#AnyBIC
-	 * PartyIdentification111Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification103Choice#AnyBIC
-	 * PartyIdentification103Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#PlaceOfClearing
-	 * SecuritiesTradeDetails59.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#PlaceOfClearing
-	 * SecuritiesTradeDetails58.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#PlaceOfClearing
-	 * SecuritiesTradeDetails61.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#PlaceOfClearing
-	 * SecuritiesTradeDetails63.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#PlaceOfClearing
-	 * SecuritiesTradeDetails62.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#PlaceOfClearing
-	 * TransactionDetails87.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails60#PlaceOfClearing
-	 * SecuritiesTradeDetails60.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails91#PlaceOfClearing
-	 * TransactionDetails91.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#PlaceOfClearing
-	 * TransactionDetails90.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#PlaceOfClearing
-	 * SecuritiesTradeDetails65.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#PlaceOfClearing
-	 * SecuritiesTradeDetails66.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification115Choice#AnyBIC
-	 * PartyIdentification115Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification114Choice#AnyBIC
-	 * PartyIdentification114Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification95Choice#AnyBIC
-	 * PartyIdentification95Choice.AnyBIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#PlaceOfClearing
-	 * SecuritiesTradeDetails67.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#PlaceOfClearing
-	 * SecuritiesTradeDetails68.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#PlaceOfClearing
-	 * TransactionDetails97.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#PlaceOfClearing
-	 * TransactionDetails96.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails95#PlaceOfClearing
-	 * TransactionDetails95.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#PlaceOfClearing
-	 * SecuritiesTradeDetails69.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#PlaceOfClearing
-	 * SecuritiesTradeDetails70.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#PlaceOfClearing
-	 * TransactionDetails100.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#PlaceOfClearing
-	 * TransactionDetails99.PlaceOfClearing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#PlaceOfClearing
-	 * TransactionDetails98.PlaceOfClearing}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification1Choice#mmBICOrBEI
+	 * PartyIdentification1Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#mmBICOrBEI
+	 * PartyIdentification2Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification4Choice#mmBICOrBEI
+	 * PartyIdentification4Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#mmBICOrBEI
+	 * PartyIdentification5Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification4#mmBICOrBEI
+	 * OrganisationIdentification4.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification8#mmAnyBIC
+	 * OrganisationIdentification8.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmAccountOwner
+	 * AccountCashEntrySearch2.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmAccountServicer
+	 * AccountCashEntrySearch2.mmAccountServicer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountDetails1#mmAccountOwner
+	 * CashAccountDetails1.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#mmBICOrBEI
+	 * PartyIdentification13Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification36Choice#mmAnyBIC
+	 * PartyIdentification36Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification7#mmAnyBIC
+	 * OrganisationIdentification7.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification51Choice#mmAnyBIC
+	 * PartyIdentification51Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification9#mmAnyBIC
+	 * OrganisationIdentification9.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#mmBICOrBEI
+	 * PartyIdentification12Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#mmBICOrBEI
+	 * PartyIdentification10Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification14Choice#mmBICOrBEI
+	 * PartyIdentification14Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification44Choice#mmAnyBIC
+	 * PartyIdentification44Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification45Choice#mmAnyBIC
+	 * PartyIdentification45Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification37Choice#mmAnyBIC
+	 * PartyIdentification37Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#mmPlaceOfClearing
+	 * SecuritiesTradeDetails25.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#mmIdentification
+	 * SafekeepingPlaceTypeAndAnyBICIdentifier1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification43Choice#mmAnyBIC
+	 * PartyIdentification43Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#mmPlaceOfClearing
+	 * SecuritiesTradeDetails26.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification58Choice#mmAnyBIC
+	 * PartyIdentification58Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification62Choice#mmAnyBIC
+	 * PartyIdentification62Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification60Choice#mmAnyBIC
+	 * PartyIdentification60Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification65Choice#mmAnyBIC
+	 * PartyIdentification65Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#mmPlaceOfClearing
+	 * SecuritiesTradeDetails27.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#mmPlaceOfClearing
+	 * SecuritiesTradeDetails28.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification18Choice#mmBICOrBEI
+	 * PartyIdentification18Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification16Choice#mmBICOrBEI
+	 * PartyIdentification16Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification46Choice#mmAnyBIC
+	 * PartyIdentification46Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification56Choice#mmAnyBIC
+	 * PartyIdentification56Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification48Choice#mmAnyBIC
+	 * PartyIdentification48Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification52Choice#mmAnyBIC
+	 * PartyIdentification52Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification41Choice#mmAnyBIC
+	 * PartyIdentification41Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification50Choice#mmAnyBIC
+	 * PartyIdentification50Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification17Choice#mmBICOrBEI
+	 * PartyIdentification17Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification39Choice#mmAnyBIC
+	 * PartyIdentification39Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification40Choice#mmAnyBIC
+	 * PartyIdentification40Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification53Choice#mmAnyBIC
+	 * PartyIdentification53Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification54Choice#mmAnyBIC
+	 * PartyIdentification54Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification47Choice#mmAnyBIC
+	 * PartyIdentification47Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification57Choice#mmAnyBIC
+	 * PartyIdentification57Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification3#mmBICOrBEI
+	 * PartyIdentification3.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification49Choice#mmAnyBIC
+	 * PartyIdentification49Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification59Choice#mmAnyBIC
+	 * PartyIdentification59Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#mmPlaceOfClearing
+	 * SecuritiesTradeDetails6.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#mmPlaceOfClearing
+	 * SecuritiesTradeDetails13.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#mmPlaceOfClearing
+	 * SecuritiesTradeDetails3.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#mmPlaceOfClearing
+	 * SecuritiesTradeDetails11.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification64Choice#mmAnyBIC
+	 * PartyIdentification64Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#mmPlaceOfClearing
+	 * SecuritiesTradeDetails2.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#mmPlaceOfClearing
+	 * SecuritiesTradeDetails16.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification63Choice#mmAnyBIC
+	 * PartyIdentification63Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#mmPlaceOfClearing
+	 * SecuritiesTradeDetails1.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#mmPlaceOfClearing
+	 * SecuritiesTradeDetails15.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#mmPlaceOfClearing
+	 * TransactionDetails5.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification15Choice#mmBICOrBEI
+	 * PartyIdentification15Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#mmPlaceOfClearing
+	 * TransactionDetails9.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#mmPlaceOfClearing
+	 * TransactionDetails22.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#mmPlaceOfClearing
+	 * TransactionDetails23.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#mmPlaceOfClearing
+	 * TransactionDetails36.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#mmPlaceOfClearing
+	 * TransactionDetails47.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#mmPlaceOfClearing
+	 * TransactionDetails53.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#mmPlaceOfClearing
+	 * TransactionDetails58.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#mmPlaceOfClearing
+	 * TransactionDetails7.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#mmPlaceOfClearing
+	 * TransactionDetails16.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#mmPlaceOfClearing
+	 * TransactionDetails26.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#mmPlaceOfClearing
+	 * TransactionDetails27.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#mmPlaceOfClearing
+	 * TransactionDetails39.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#mmPlaceOfClearing
+	 * TransactionDetails50.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#mmPlaceOfClearing
+	 * TransactionDetails56.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#mmPlaceOfClearing
+	 * TransactionDetails59.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6#mmPlaceOfClearing
+	 * TransactionDetails6.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18#mmPlaceOfClearing
+	 * TransactionDetails18.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24#mmPlaceOfClearing
+	 * TransactionDetails24.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34#mmPlaceOfClearing
+	 * TransactionDetails34.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37#mmPlaceOfClearing
+	 * TransactionDetails37.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48#mmPlaceOfClearing
+	 * TransactionDetails48.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmPlaceOfClearing
+	 * TransactionDetails57.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60#mmPlaceOfClearing
+	 * TransactionDetails60.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification70Choice#mmAnyBIC
+	 * PartyIdentification70Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification23Choice#mmBICOrBEI
+	 * PartyIdentification23Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmBICOrBEI
+	 * PartyIdentification23.mmBICOrBEI}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Case#mmCreator
+	 * Case.mmCreator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#mmBICOrBEI
+	 * PartyIdentification7Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification22#mmBICOrBEI
+	 * PartyIdentification22.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification8Choice#mmBICOrBEI
+	 * PartyIdentification8Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification44#mmAnyBIC
+	 * PartyIdentification44.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification19Choice#mmAnyBIC
+	 * PartyIdentification19Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmAnyBIC
+	 * PartyIdentification59.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#mmParty
+	 * PlaceOfTradeIdentification1Choice.mmParty}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#mmBICOrBEI
+	 * PartyIdentification9Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount17#mmCorrespondentBankIdentification
+	 * CashAccount17.mmCorrespondentBankIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OffMarket1Choice#mmSystematicInternaliser
+	 * OffMarket1Choice.mmSystematicInternaliser}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification24Choice#mmBICOrBEI
+	 * PartyIdentification24Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification11Choice#mmBICOrBEI
+	 * PartyIdentification11Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#mmPlaceOfClearing
+	 * SecuritiesTradeDetails8.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails18#mmPlaceOfClearing
+	 * SecuritiesTradeDetails18.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmPlaceOfClearing
+	 * SecuritiesTradeDetails4.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#mmPlaceOfClearing
+	 * SecuritiesTradeDetails17.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification33Choice#mmAnyBIC
+	 * PartyIdentification33Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#mmPlaceOfClearing
+	 * SecuritiesTradeDetails9.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails21#mmPlaceOfClearing
+	 * SecuritiesTradeDetails21.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmPlaceOfClearing
+	 * SecuritiesTradeDetails10.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#mmPlaceOfClearing
+	 * SecuritiesTradeDetails22.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#mmPlaceOfClearing
+	 * SecuritiesTradeDetails23.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#mmPlaceOfClearing
+	 * SecuritiesTradeDetails29.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification66Choice#mmAnyBIC
+	 * PartyIdentification66Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification67Choice#mmAnyBIC
+	 * PartyIdentification67Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification26Choice#mmBICOrBEI
+	 * PartyIdentification26Choice.mmBICOrBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification72Choice#mmAnyBIC
+	 * PartyIdentification72Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#mmAnyBIC
+	 * PartyIdentification71Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51#mmPlaceOfClearing
+	 * TransactionDetails51.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#mmPlaceOfClearing
+	 * TransactionDetails61.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#mmPlaceOfClearing
+	 * TransactionDetails62.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmPlaceOfClearing
+	 * TransactionDetails63.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#mmPlaceOfClearing
+	 * SecuritiesTradeDetails31.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#mmPlaceOfClearing
+	 * SecuritiesTradeDetails33.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#mmPlaceOfClearing
+	 * SecuritiesTradeDetails35.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#mmPlaceOfClearing
+	 * SecuritiesTradeDetails38.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#mmPlaceOfClearing
+	 * SecuritiesTradeDetails37.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails36#mmPlaceOfClearing
+	 * SecuritiesTradeDetails36.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#mmPlaceOfClearing
+	 * SecuritiesTradeDetails34.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#mmPlaceOfClearing
+	 * SecuritiesTradeDetails32.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification62#mmBICFI
+	 * PartyIdentification62.mmBICFI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification64#mmAnyBIC
+	 * PartyIdentification64.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#mmAnyBIC
+	 * PartyIdentification75Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#mmPlaceOfClearing
+	 * SecuritiesTradeDetails44.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#mmPlaceOfClearing
+	 * SecuritiesTradeDetails39.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#mmPlaceOfClearing
+	 * SecuritiesTradeDetails43.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails41#mmPlaceOfClearing
+	 * SecuritiesTradeDetails41.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#mmPlaceOfClearing
+	 * SecuritiesTradeDetails40.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#mmPlaceOfClearing
+	 * TransactionDetails66.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#mmPlaceOfClearing
+	 * SecuritiesTradeDetails42.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#mmPlaceOfClearing
+	 * TransactionDetails67.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68#mmPlaceOfClearing
+	 * TransactionDetails68.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#mmPlaceOfClearing
+	 * SecuritiesTradeDetails46.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#mmPlaceOfClearing
+	 * SecuritiesTradeDetails47.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#mmPlaceOfClearing
+	 * TransactionDetails70.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#mmPlaceOfClearing
+	 * TransactionDetails69.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification83Choice#mmAnyBIC
+	 * PartyIdentification83Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification89Choice#mmAnyBIC
+	 * PartyIdentification89Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification87Choice#mmAnyBIC
+	 * PartyIdentification87Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#mmPlaceOfClearing
+	 * TransactionDetails71.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#mmPlaceOfClearing
+	 * TransactionDetails72.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#mmAnyBIC
+	 * PartyIdentification90Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification92Choice#mmAnyBIC
+	 * PartyIdentification92Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#mmPlaceOfClearing
+	 * SecuritiesTradeDetails49.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#mmPlaceOfClearing
+	 * TransactionDetails79.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#mmPlaceOfClearing
+	 * TransactionDetails75.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmPlaceOfClearing
+	 * TransactionDetails78.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#mmPlaceOfClearing
+	 * SecuritiesTradeDetails51.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#mmPlaceOfClearing
+	 * SecuritiesTradeDetails53.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#mmPlaceOfClearing
+	 * SecuritiesTradeDetails55.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#mmPlaceOfClearing
+	 * SecuritiesTradeDetails56.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails54#mmPlaceOfClearing
+	 * SecuritiesTradeDetails54.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#mmPlaceOfClearing
+	 * SecuritiesTradeDetails52.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification93Choice#mmAnyBIC
+	 * PartyIdentification93Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#mmPlaceOfClearing
+	 * SecuritiesTradeDetails50.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification26#mmAnyBIC
+	 * OrganisationIdentification26.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#mmAnyBIC
+	 * PartyIdentification97Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmAnyBIC
+	 * PartyIdentification96Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification99Choice#mmAnyBIC
+	 * PartyIdentification99Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification100Choice#mmAnyBIC
+	 * PartyIdentification100Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification104Choice#mmAnyBIC
+	 * PartyIdentification104Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification111Choice#mmAnyBIC
+	 * PartyIdentification111Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification103Choice#mmAnyBIC
+	 * PartyIdentification103Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#mmPlaceOfClearing
+	 * SecuritiesTradeDetails59.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#mmPlaceOfClearing
+	 * SecuritiesTradeDetails58.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#mmPlaceOfClearing
+	 * SecuritiesTradeDetails61.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#mmPlaceOfClearing
+	 * SecuritiesTradeDetails63.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#mmPlaceOfClearing
+	 * SecuritiesTradeDetails62.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#mmPlaceOfClearing
+	 * TransactionDetails87.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails60#mmPlaceOfClearing
+	 * SecuritiesTradeDetails60.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails91#mmPlaceOfClearing
+	 * TransactionDetails91.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmPlaceOfClearing
+	 * TransactionDetails90.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#mmPlaceOfClearing
+	 * SecuritiesTradeDetails65.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmPlaceOfClearing
+	 * SecuritiesTradeDetails66.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification115Choice#mmAnyBIC
+	 * PartyIdentification115Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification114Choice#mmAnyBIC
+	 * PartyIdentification114Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification95Choice#mmAnyBIC
+	 * PartyIdentification95Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#mmPlaceOfClearing
+	 * SecuritiesTradeDetails67.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#mmPlaceOfClearing
+	 * SecuritiesTradeDetails68.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmPlaceOfClearing
+	 * TransactionDetails97.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmPlaceOfClearing
+	 * TransactionDetails96.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails95#mmPlaceOfClearing
+	 * TransactionDetails95.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmPlaceOfClearing
+	 * SecuritiesTradeDetails69.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmPlaceOfClearing
+	 * SecuritiesTradeDetails70.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#mmPlaceOfClearing
+	 * TransactionDetails100.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmPlaceOfClearing
+	 * TransactionDetails99.mmPlaceOfClearing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmPlaceOfClearing
+	 * TransactionDetails98.mmPlaceOfClearing}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1272,84 +1281,89 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AnyBIC = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAnyBIC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification1Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification2Choice.BICOrBEI,
-					com.tools20022.repository.choice.PartyIdentification4Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification5Choice.BICOrBEI, com.tools20022.repository.msg.OrganisationIdentification4.BICOrBEI,
-					com.tools20022.repository.msg.OrganisationIdentification8.AnyBIC, com.tools20022.repository.msg.AccountCashEntrySearch2.AccountOwner, com.tools20022.repository.msg.AccountCashEntrySearch2.AccountServicer,
-					com.tools20022.repository.msg.CashAccountDetails1.AccountOwner, com.tools20022.repository.choice.PartyIdentification13Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification36Choice.AnyBIC,
-					com.tools20022.repository.msg.OrganisationIdentification7.AnyBIC, com.tools20022.repository.choice.PartyIdentification51Choice.AnyBIC, com.tools20022.repository.msg.OrganisationIdentification9.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification12Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification10Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification14Choice.BICOrBEI,
-					com.tools20022.repository.choice.PartyIdentification44Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification45Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification37Choice.AnyBIC,
-					com.tools20022.repository.msg.SecuritiesTradeDetails25.PlaceOfClearing, com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.Identification,
-					com.tools20022.repository.choice.PartyIdentification43Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails26.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification58Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification62Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification60Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification65Choice.AnyBIC,
-					com.tools20022.repository.msg.SecuritiesTradeDetails27.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails28.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification18Choice.BICOrBEI,
-					com.tools20022.repository.choice.PartyIdentification16Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification46Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification56Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification48Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification52Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification41Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification50Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification17Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification39Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification40Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification53Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification54Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification47Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification57Choice.AnyBIC, com.tools20022.repository.msg.PartyIdentification3.BICOrBEI,
-					com.tools20022.repository.choice.PartyIdentification49Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification59Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails6.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails13.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails3.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails11.PlaceOfClearing,
-					com.tools20022.repository.choice.PartyIdentification64Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails2.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails16.PlaceOfClearing,
-					com.tools20022.repository.choice.PartyIdentification63Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails1.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails15.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails5.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification15Choice.BICOrBEI, com.tools20022.repository.msg.TransactionDetails9.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails22.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails23.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails36.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails47.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails53.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails58.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails7.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails16.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails26.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails27.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails39.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails50.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails56.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails59.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails6.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails18.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails24.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails34.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails37.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails48.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails57.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails60.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification70Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification23Choice.BICOrBEI,
-					com.tools20022.repository.msg.PartyIdentification23.BICOrBEI, com.tools20022.repository.msg.Case.Creator, com.tools20022.repository.choice.PartyIdentification7Choice.BICOrBEI,
-					com.tools20022.repository.msg.PartyIdentification22.BICOrBEI, com.tools20022.repository.choice.PartyIdentification8Choice.BICOrBEI, com.tools20022.repository.msg.PartyIdentification44.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification19Choice.AnyBIC, com.tools20022.repository.msg.PartyIdentification59.AnyBIC, com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.Party,
-					com.tools20022.repository.choice.PartyIdentification9Choice.BICOrBEI, com.tools20022.repository.msg.CashAccount17.CorrespondentBankIdentification,
-					com.tools20022.repository.choice.OffMarket1Choice.SystematicInternaliser, com.tools20022.repository.choice.PartyIdentification24Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification11Choice.BICOrBEI,
-					com.tools20022.repository.msg.SecuritiesTradeDetails8.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails18.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails4.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails17.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification33Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails9.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails21.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails10.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails22.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails23.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails29.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification66Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification67Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification26Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification72Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification71Choice.AnyBIC, com.tools20022.repository.msg.TransactionDetails51.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails61.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails62.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails63.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails31.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails33.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails35.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails38.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails37.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails36.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails34.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails32.PlaceOfClearing, com.tools20022.repository.msg.PartyIdentification62.BICFI, com.tools20022.repository.msg.PartyIdentification64.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification75Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails44.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails39.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails43.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails41.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails40.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails66.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails42.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails67.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails68.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails46.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails47.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails70.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails69.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification83Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification89Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification87Choice.AnyBIC, com.tools20022.repository.msg.TransactionDetails71.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails72.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification90Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification92Choice.AnyBIC,
-					com.tools20022.repository.msg.SecuritiesTradeDetails49.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails79.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails75.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails78.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails51.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails53.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails55.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails56.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails54.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails52.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification93Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails50.PlaceOfClearing,
-					com.tools20022.repository.msg.OrganisationIdentification26.AnyBIC, com.tools20022.repository.choice.PartyIdentification97Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification96Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification99Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification100Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification104Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification111Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification103Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails59.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails58.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails61.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails63.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails62.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails87.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails60.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails91.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails90.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails65.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails66.PlaceOfClearing, com.tools20022.repository.choice.PartyIdentification115Choice.AnyBIC, com.tools20022.repository.choice.PartyIdentification114Choice.AnyBIC,
-					com.tools20022.repository.choice.PartyIdentification95Choice.AnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails67.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails68.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails97.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails96.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails95.PlaceOfClearing,
-					com.tools20022.repository.msg.SecuritiesTradeDetails69.PlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails70.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails100.PlaceOfClearing,
-					com.tools20022.repository.msg.TransactionDetails99.PlaceOfClearing, com.tools20022.repository.msg.TransactionDetails98.PlaceOfClearing);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification1Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification2Choice.mmBICOrBEI,
+					com.tools20022.repository.choice.PartyIdentification4Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification5Choice.mmBICOrBEI, com.tools20022.repository.msg.OrganisationIdentification4.mmBICOrBEI,
+					com.tools20022.repository.msg.OrganisationIdentification8.mmAnyBIC, com.tools20022.repository.msg.AccountCashEntrySearch2.mmAccountOwner, com.tools20022.repository.msg.AccountCashEntrySearch2.mmAccountServicer,
+					com.tools20022.repository.msg.CashAccountDetails1.mmAccountOwner, com.tools20022.repository.choice.PartyIdentification13Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification36Choice.mmAnyBIC,
+					com.tools20022.repository.msg.OrganisationIdentification7.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification51Choice.mmAnyBIC, com.tools20022.repository.msg.OrganisationIdentification9.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification12Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification10Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification14Choice.mmBICOrBEI,
+					com.tools20022.repository.choice.PartyIdentification44Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification45Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification37Choice.mmAnyBIC,
+					com.tools20022.repository.msg.SecuritiesTradeDetails25.mmPlaceOfClearing, com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmIdentification,
+					com.tools20022.repository.choice.PartyIdentification43Choice.mmAnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification58Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification62Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification60Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification65Choice.mmAnyBIC,
+					com.tools20022.repository.msg.SecuritiesTradeDetails27.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails28.mmPlaceOfClearing,
+					com.tools20022.repository.choice.PartyIdentification18Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification16Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification46Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification56Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification48Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification52Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification41Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification50Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification17Choice.mmBICOrBEI,
+					com.tools20022.repository.choice.PartyIdentification39Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification40Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification53Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification54Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification47Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification57Choice.mmAnyBIC,
+					com.tools20022.repository.msg.PartyIdentification3.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification49Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification59Choice.mmAnyBIC,
+					com.tools20022.repository.msg.SecuritiesTradeDetails6.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails13.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails3.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails11.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification64Choice.mmAnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails2.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails16.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification63Choice.mmAnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails1.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails15.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails5.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification15Choice.mmBICOrBEI,
+					com.tools20022.repository.msg.TransactionDetails9.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails22.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails23.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails36.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails47.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails53.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails58.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails7.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails16.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails26.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails27.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails39.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails50.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails56.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails59.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails6.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails18.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails24.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails34.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails37.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails48.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails57.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails60.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification70Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification23Choice.mmBICOrBEI, com.tools20022.repository.msg.PartyIdentification23.mmBICOrBEI, com.tools20022.repository.msg.Case.mmCreator,
+					com.tools20022.repository.choice.PartyIdentification7Choice.mmBICOrBEI, com.tools20022.repository.msg.PartyIdentification22.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification8Choice.mmBICOrBEI,
+					com.tools20022.repository.msg.PartyIdentification44.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification19Choice.mmAnyBIC, com.tools20022.repository.msg.PartyIdentification59.mmAnyBIC,
+					com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmParty, com.tools20022.repository.choice.PartyIdentification9Choice.mmBICOrBEI,
+					com.tools20022.repository.msg.CashAccount17.mmCorrespondentBankIdentification, com.tools20022.repository.choice.OffMarket1Choice.mmSystematicInternaliser,
+					com.tools20022.repository.choice.PartyIdentification24Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification11Choice.mmBICOrBEI, com.tools20022.repository.msg.SecuritiesTradeDetails8.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails18.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification33Choice.mmAnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails9.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails21.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails22.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails29.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification66Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification67Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification26Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification72Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification71Choice.mmAnyBIC,
+					com.tools20022.repository.msg.TransactionDetails51.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails61.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails62.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails63.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails31.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails33.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails35.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails38.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails37.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails36.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails34.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails32.mmPlaceOfClearing, com.tools20022.repository.msg.PartyIdentification62.mmBICFI,
+					com.tools20022.repository.msg.PartyIdentification64.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification75Choice.mmAnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails39.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails43.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails41.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails40.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails66.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails42.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails67.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails68.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails46.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails47.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails70.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails69.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification83Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification89Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification87Choice.mmAnyBIC, com.tools20022.repository.msg.TransactionDetails71.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails72.mmPlaceOfClearing,
+					com.tools20022.repository.choice.PartyIdentification90Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification92Choice.mmAnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails79.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails75.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails78.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails51.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails53.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails55.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails56.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails54.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails52.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification93Choice.mmAnyBIC,
+					com.tools20022.repository.msg.SecuritiesTradeDetails50.mmPlaceOfClearing, com.tools20022.repository.msg.OrganisationIdentification26.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification97Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification96Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification99Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification100Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification104Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification111Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification103Choice.mmAnyBIC,
+					com.tools20022.repository.msg.SecuritiesTradeDetails59.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails58.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails63.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails62.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails87.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails60.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails91.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails90.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails65.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails66.mmPlaceOfClearing, com.tools20022.repository.choice.PartyIdentification115Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification114Choice.mmAnyBIC,
+					com.tools20022.repository.choice.PartyIdentification95Choice.mmAnyBIC, com.tools20022.repository.msg.SecuritiesTradeDetails67.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails68.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails97.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails96.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails95.mmPlaceOfClearing,
+					com.tools20022.repository.msg.SecuritiesTradeDetails69.mmPlaceOfClearing, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails100.mmPlaceOfClearing,
+					com.tools20022.repository.msg.TransactionDetails99.mmPlaceOfClearing, com.tools20022.repository.msg.TransactionDetails98.mmPlaceOfClearing);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.OrganisationName> organisationName;
 	/**
 	 * Name by which an organisation is known and which is usually used to
 	 * identify that organisation. It is derived from the association between
@@ -1360,8 +1374,8 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationName#Organisation
-	 * OrganisationName.Organisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationName#mmOrganisation
+	 * OrganisationName.mmOrganisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1369,24 +1383,24 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.OrganisationName
 	 * OrganisationName}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation2#Name
-	 * Organisation2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation4#Name
-	 * Organisation4.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation3#Name
-	 * Organisation3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Organisation21#Name
-	 * Organisation21.Name}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation2#mmName
+	 * Organisation2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation4#mmName
+	 * Organisation4.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation3#mmName
+	 * Organisation3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation21#mmName
+	 * Organisation21.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1400,21 +1414,22 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OrganisationName = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOrganisationName = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.Name, com.tools20022.repository.msg.Organisation4.Name, com.tools20022.repository.msg.Organisation3.Name,
-					com.tools20022.repository.msg.Organisation21.Name);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.mmName, com.tools20022.repository.msg.Organisation4.mmName, com.tools20022.repository.msg.Organisation3.mmName,
+					com.tools20022.repository.msg.Organisation21.mmName);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OrganisationName";
 			definition = "Name by which an organisation is known and which is usually used to identify that organisation. It is derived from the association between PartyIdentificationInformation and PartyName.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.OrganisationName.Organisation;
+			opposite_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmOrganisation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 		}
 	};
+	protected Organisation organisation;
 	/**
 	 * Organisation which is identified
 	 * <p>
@@ -1423,8 +1438,8 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1448,20 +1463,21 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * definition} = "Organisation which is identified"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Organisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
 			definition = "Organisation which is identified";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashClearingSystemMember> clearingSystemMemberIdentificationType;
 	/**
 	 * Unique and unambiguous identifier of a clearing system member, assigned
 	 * by the system or system administrator.
@@ -1471,8 +1487,8 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#OrganisationIdentification
-	 * CashClearingSystemMember.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmOrganisationIdentification
+	 * CashClearingSystemMember.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1481,59 +1497,65 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification3Choice.
-	 * ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#ClearingSystemMemberIdentification
-	 * MemberIdentificationChoice.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MemberIdentification2Choice#ClearingSystemMemberIdentification
-	 * MemberIdentification2Choice.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification8.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification3.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification5Choice.
-	 * ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification7.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification59#ClearingSystemIdentification
-	 * PartyIdentification59.ClearingSystemIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification1.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification6#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification6.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification9#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification9.ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification7Choice.
-	 * ClearingSystemMemberIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#ClearingSystemMemberIdentification
-	 * FinancialInstitutionIdentification8Choice.
-	 * ClearingSystemMemberIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification3Choice.
+	 * mmClearingSystemMemberIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MemberIdentificationChoice#mmClearingSystemMemberIdentification
+	 * MemberIdentificationChoice.mmClearingSystemMemberIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MemberIdentification2Choice#mmClearingSystemMemberIdentification
+	 * MemberIdentification2Choice.mmClearingSystemMemberIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification8.mmClearingSystemMemberIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification3.mmClearingSystemMemberIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification5Choice.
+	 * mmClearingSystemMemberIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification7#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification7.mmClearingSystemMemberIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmClearingSystemIdentification
+	 * PartyIdentification59.mmClearingSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification1.mmClearingSystemMemberIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification6#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification6.mmClearingSystemMemberIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification9#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification9.mmClearingSystemMemberIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification7Choice.
+	 * mmClearingSystemMemberIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification8Choice.
+	 * mmClearingSystemMemberIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1547,27 +1569,28 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ClearingSystemMemberIdentificationType = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmClearingSystemMemberIdentificationType = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.ClearingSystemMemberIdentification,
-					com.tools20022.repository.choice.MemberIdentificationChoice.ClearingSystemMemberIdentification, com.tools20022.repository.choice.MemberIdentification2Choice.ClearingSystemMemberIdentification,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification8.ClearingSystemMemberIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification3.ClearingSystemMemberIdentification,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.ClearingSystemMemberIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification7.ClearingSystemMemberIdentification,
-					com.tools20022.repository.msg.PartyIdentification59.ClearingSystemIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification1.ClearingSystemMemberIdentification,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification6.ClearingSystemMemberIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification9.ClearingSystemMemberIdentification,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.ClearingSystemMemberIdentification,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.ClearingSystemMemberIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.mmClearingSystemMemberIdentification,
+					com.tools20022.repository.choice.MemberIdentificationChoice.mmClearingSystemMemberIdentification, com.tools20022.repository.choice.MemberIdentification2Choice.mmClearingSystemMemberIdentification,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmClearingSystemMemberIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmClearingSystemMemberIdentification,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.mmClearingSystemMemberIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmClearingSystemMemberIdentification,
+					com.tools20022.repository.msg.PartyIdentification59.mmClearingSystemIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmClearingSystemMemberIdentification,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmClearingSystemMemberIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmClearingSystemMemberIdentification,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmClearingSystemMemberIdentification,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.mmClearingSystemMemberIdentification);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemMemberIdentificationType";
 			definition = "Unique and unambiguous identifier of a clearing system member, assigned by the system or system administrator.";
 			minOccurs = 0;
-			type_lazy = () -> CashClearingSystemMember.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.OrganisationIdentification;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmOrganisationIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 		}
 	};
+	protected BICNonFIIdentifier bICNonFI;
 	/**
 	 * Code allocated to a non-financial institution by the ISO 9362
 	 * Registration Authority as described in ISO 9362
@@ -1581,37 +1604,38 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BICNonFIIdentifier
 	 * BICNonFIIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#IBEI
-	 * OrganisationIdentification2.IBEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#BEI
-	 * OrganisationIdentification2.BEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations#IssuerIdentification
-	 * FinancialInstrumentStipulations.IssuerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations2#IssuerIdentification
-	 * FinancialInstrumentStipulations2.IssuerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#BEI
-	 * NonFinancialInstitutionIdentification1.BEI}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification25#BEI
-	 * PartyIdentification25.BEI}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification9#BEI
-	 * PartyIdentification9.BEI}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification5#BEI
-	 * PartyIdentification5.BEI}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmIBEI
+	 * OrganisationIdentification2.mmIBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmBEI
+	 * OrganisationIdentification2.mmBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations#mmIssuerIdentification
+	 * FinancialInstrumentStipulations.mmIssuerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations2#mmIssuerIdentification
+	 * FinancialInstrumentStipulations2.mmIssuerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmBEI
+	 * NonFinancialInstitutionIdentification1.mmBEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification25#mmBEI
+	 * PartyIdentification25.mmBEI}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification9#mmBEI
+	 * PartyIdentification9.mmBEI}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification5#mmBEI
+	 * PartyIdentification5.mmBEI}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1625,22 +1649,23 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BICNonFI = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBICNonFI = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.IBEI, com.tools20022.repository.msg.OrganisationIdentification2.BEI,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations.IssuerIdentification, com.tools20022.repository.msg.FinancialInstrumentStipulations2.IssuerIdentification,
-					com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.BEI, com.tools20022.repository.msg.PartyIdentification25.BEI, com.tools20022.repository.msg.PartyIdentification9.BEI,
-					com.tools20022.repository.msg.PartyIdentification5.BEI);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.mmIBEI, com.tools20022.repository.msg.OrganisationIdentification2.mmBEI,
+					com.tools20022.repository.msg.FinancialInstrumentStipulations.mmIssuerIdentification, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmIssuerIdentification,
+					com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmBEI, com.tools20022.repository.msg.PartyIdentification25.mmBEI, com.tools20022.repository.msg.PartyIdentification9.mmBEI,
+					com.tools20022.repository.msg.PartyIdentification5.mmBEI);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BICNonFI";
 			definition = "Code allocated to a non-financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICNonFIIdentifier.mmObject();
 		}
 	};
+	protected EANGLNIdentifier eANGLN;
 	/**
 	 * Global Location Number. A non-significant reference number used to
 	 * identify legal entities, functional entities, or physical entities
@@ -1655,22 +1680,22 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.EANGLNIdentifier
 	 * EANGLNIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#EANGLN
-	 * OrganisationIdentification2.EANGLN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#EANGLN
-	 * NonFinancialInstitutionIdentification1.EANGLN}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmEANGLN
+	 * OrganisationIdentification2.mmEANGLN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmEANGLN
+	 * NonFinancialInstitutionIdentification1.mmEANGLN}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1684,19 +1709,20 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EANGLN = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEANGLN = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.EANGLN, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.EANGLN);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.mmEANGLN, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmEANGLN);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EANGLN";
 			definition = "Global Location Number. A non-significant reference number used to identify legal entities, functional entities, or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information that is linked to it.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();
 		}
 	};
+	protected CHIPSUniversalIdentifier cHIPSUniversalIdentifier;
 	/**
 	 * (United States) Clearing House Interbank Payments System (CHIPS)
 	 * Universal Identification (UID). Identifies entities that own accounts at
@@ -1710,22 +1736,22 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CHIPSUniversalIdentifier
 	 * CHIPSUniversalIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#CHIPSUniversalIdentification
-	 * OrganisationIdentification2.CHIPSUniversalIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#CHIPSUniversalIdentification
-	 * NonFinancialInstitutionIdentification1.CHIPSUniversalIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmCHIPSUniversalIdentification
+	 * OrganisationIdentification2.mmCHIPSUniversalIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmCHIPSUniversalIdentification
+	 * NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1739,19 +1765,21 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CHIPSUniversalIdentifier = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCHIPSUniversalIdentifier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.CHIPSUniversalIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.CHIPSUniversalIdentification);
+			derivation_lazy = () -> Arrays
+					.asList(com.tools20022.repository.msg.OrganisationIdentification2.mmCHIPSUniversalIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CHIPSUniversalIdentifier";
 			definition = "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID). Identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> com.tools20022.repository.datatype.CHIPSUniversalIdentifier.mmObject();
 		}
 	};
+	protected DunsIdentifier dUNS;
 	/**
 	 * Data Universal Numbering System. A unique identification number provided
 	 * by Dun &amp; Bradstreet to identify an organization.
@@ -1763,22 +1791,22 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DunsIdentifier
 	 * DunsIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#DUNS
-	 * OrganisationIdentification2.DUNS}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#DUNS
-	 * NonFinancialInstitutionIdentification1.DUNS}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmDUNS
+	 * OrganisationIdentification2.mmDUNS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmDUNS
+	 * NonFinancialInstitutionIdentification1.mmDUNS}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1792,19 +1820,20 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DUNS = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDUNS = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.DUNS, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.DUNS);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.mmDUNS, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmDUNS);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DUNS";
 			definition = "Data Universal Numbering System. A unique identification number provided by Dun & Bradstreet to identify an organization.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DunsIdentifier.mmObject();
 		}
 	};
+	protected Max35Text bankPartyIdentification;
 	/**
 	 * Unique and unambiguous assignment made by a specific bank to identify a
 	 * relationship as defined between the bank and its client.
@@ -1815,22 +1844,22 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#BankPartyIdentification
-	 * OrganisationIdentification2.BankPartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#BankPartyIdentification
-	 * NonFinancialInstitutionIdentification1.BankPartyIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmBankPartyIdentification
+	 * OrganisationIdentification2.mmBankPartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmBankPartyIdentification
+	 * NonFinancialInstitutionIdentification1.mmBankPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1844,19 +1873,20 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BankPartyIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBankPartyIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.BankPartyIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.BankPartyIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.mmBankPartyIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmBankPartyIdentification);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankPartyIdentification";
 			definition = "Unique and unambiguous assignment made by a specific bank to identify a relationship as defined between the bank and its client.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected MICIdentifier mIC;
 	/**
 	 * Market Identifier Code. Identification of a financial market, as
 	 * stipulated in the norm ISO 10383
@@ -1869,102 +1899,102 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.MICIdentifier
 	 * MICIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MarketIdentification1Choice#MarketIdentifierCode
-	 * MarketIdentification1Choice.MarketIdentifierCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#MarketIdentifierCode
-	 * MarketIdentification3Choice.MarketIdentifierCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#Description
-	 * MarketIdentification3Choice.Description}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MarketIdentification2Choice#MarketIdentifierCode
-	 * MarketIdentification2Choice.MarketIdentifierCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MarketIdentification4Choice#MarketIdentifierCode
-	 * MarketIdentification4Choice.MarketIdentifierCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MarketIdentification4Choice#Description
-	 * MarketIdentification4Choice.Description}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#LocalMarketPlace
-	 * PriceSourceFormatChoice.LocalMarketPlace}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#MIC
-	 * PartyIdentification6Choice.MIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarketIdentification1#Identification
-	 * MarketIdentification1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#PlaceOfIssueIdentification
-	 * FinancialInstrumentAttributes1.PlaceOfIssueIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarketIdentification77#Identification
-	 * MarketIdentification77.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#Exchange
-	 * PlaceOfTradeIdentification1Choice.Exchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson#PlaceOfListing
-	 * MeetingContactPerson.PlaceOfListing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#PlaceOfListing
-	 * MeetingContactPerson1.PlaceOfListing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice#MarketIdentification
-	 * PlaceOfTradeIdentification2Choice.MarketIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription1#PlaceOfListing
-	 * SecurityInstrumentDescription1.PlaceOfListing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification24Choice#MIC
-	 * PartyIdentification24Choice.MIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification11Choice#CentralCounterparty
-	 * PartyIdentification11Choice.CentralCounterparty}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#PlaceOfListing
-	 * SecurityInstrumentDescription2.PlaceOfListing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification3Choice#Exchange
-	 * PlaceOfTradeIdentification3Choice.Exchange}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Issuance1#IssuePlace
-	 * Issuance1.IssuePlace}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#MarketIdentification
-	 * TradingParameters1.MarketIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#PlaceOfListing
-	 * MeetingContactPerson2.PlaceOfListing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#MarketIdentificationCode
-	 * TradingVenueIdentification1Choice.MarketIdentificationCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradingVenueAttributes1#Identification
-	 * TradingVenueAttributes1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#MIC
-	 * PersonOrOrganisation1Choice.MIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation30#PlaceOfListing
-	 * Organisation30.PlaceOfListing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation29#PlaceOfListing
-	 * Organisation29.PlaceOfListing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarketDetail2#Identification
-	 * MarketDetail2.Identification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketIdentification1Choice#mmMarketIdentifierCode
+	 * MarketIdentification1Choice.mmMarketIdentifierCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#mmMarketIdentifierCode
+	 * MarketIdentification3Choice.mmMarketIdentifierCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#mmDescription
+	 * MarketIdentification3Choice.mmDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketIdentification2Choice#mmMarketIdentifierCode
+	 * MarketIdentification2Choice.mmMarketIdentifierCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketIdentification4Choice#mmMarketIdentifierCode
+	 * MarketIdentification4Choice.mmMarketIdentifierCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketIdentification4Choice#mmDescription
+	 * MarketIdentification4Choice.mmDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#mmLocalMarketPlace
+	 * PriceSourceFormatChoice.mmLocalMarketPlace}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#mmMIC
+	 * PartyIdentification6Choice.mmMIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarketIdentification1#mmIdentification
+	 * MarketIdentification1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmPlaceOfIssueIdentification
+	 * FinancialInstrumentAttributes1.mmPlaceOfIssueIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarketIdentification77#mmIdentification
+	 * MarketIdentification77.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice#mmExchange
+	 * PlaceOfTradeIdentification1Choice.mmExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson#mmPlaceOfListing
+	 * MeetingContactPerson.mmPlaceOfListing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson1#mmPlaceOfListing
+	 * MeetingContactPerson1.mmPlaceOfListing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice#mmMarketIdentification
+	 * PlaceOfTradeIdentification2Choice.mmMarketIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription1#mmPlaceOfListing
+	 * SecurityInstrumentDescription1.mmPlaceOfListing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification24Choice#mmMIC
+	 * PartyIdentification24Choice.mmMIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification11Choice#mmCentralCounterparty
+	 * PartyIdentification11Choice.mmCentralCounterparty}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2#mmPlaceOfListing
+	 * SecurityInstrumentDescription2.mmPlaceOfListing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PlaceOfTradeIdentification3Choice#mmExchange
+	 * PlaceOfTradeIdentification3Choice.mmExchange}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance1#mmIssuePlace
+	 * Issuance1.mmIssuePlace}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#mmMarketIdentification
+	 * TradingParameters1.mmMarketIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingContactPerson2#mmPlaceOfListing
+	 * MeetingContactPerson2.mmPlaceOfListing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#mmMarketIdentificationCode
+	 * TradingVenueIdentification1Choice.mmMarketIdentificationCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradingVenueAttributes1#mmIdentification
+	 * TradingVenueAttributes1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#mmMIC
+	 * PersonOrOrganisation1Choice.mmMIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation30#mmPlaceOfListing
+	 * Organisation30.mmPlaceOfListing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation29#mmPlaceOfListing
+	 * Organisation29.mmPlaceOfListing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarketDetail2#mmIdentification
+	 * MarketDetail2.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1978,28 +2008,28 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MIC = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMIC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentification1Choice.MarketIdentifierCode, com.tools20022.repository.choice.MarketIdentification3Choice.MarketIdentifierCode,
-					com.tools20022.repository.choice.MarketIdentification3Choice.Description, com.tools20022.repository.choice.MarketIdentification2Choice.MarketIdentifierCode,
-					com.tools20022.repository.choice.MarketIdentification4Choice.MarketIdentifierCode, com.tools20022.repository.choice.MarketIdentification4Choice.Description,
-					com.tools20022.repository.choice.PriceSourceFormatChoice.LocalMarketPlace, com.tools20022.repository.msg.PartyIdentification6Choice.MIC, com.tools20022.repository.msg.MarketIdentification1.Identification,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes1.PlaceOfIssueIdentification, com.tools20022.repository.msg.MarketIdentification77.Identification,
-					com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.Exchange, com.tools20022.repository.msg.MeetingContactPerson.PlaceOfListing, com.tools20022.repository.msg.MeetingContactPerson1.PlaceOfListing,
-					com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.MarketIdentification, com.tools20022.repository.msg.SecurityInstrumentDescription1.PlaceOfListing,
-					com.tools20022.repository.choice.PartyIdentification24Choice.MIC, com.tools20022.repository.choice.PartyIdentification11Choice.CentralCounterparty,
-					com.tools20022.repository.msg.SecurityInstrumentDescription2.PlaceOfListing, com.tools20022.repository.choice.PlaceOfTradeIdentification3Choice.Exchange, com.tools20022.repository.msg.Issuance1.IssuePlace,
-					com.tools20022.repository.msg.TradingParameters1.MarketIdentification, com.tools20022.repository.msg.MeetingContactPerson2.PlaceOfListing,
-					com.tools20022.repository.choice.TradingVenueIdentification1Choice.MarketIdentificationCode, com.tools20022.repository.msg.TradingVenueAttributes1.Identification,
-					com.tools20022.repository.choice.PersonOrOrganisation1Choice.MIC, com.tools20022.repository.msg.Organisation30.PlaceOfListing, com.tools20022.repository.msg.Organisation29.PlaceOfListing,
-					com.tools20022.repository.msg.MarketDetail2.Identification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentification1Choice.mmMarketIdentifierCode, com.tools20022.repository.choice.MarketIdentification3Choice.mmMarketIdentifierCode,
+					com.tools20022.repository.choice.MarketIdentification3Choice.mmDescription, com.tools20022.repository.choice.MarketIdentification2Choice.mmMarketIdentifierCode,
+					com.tools20022.repository.choice.MarketIdentification4Choice.mmMarketIdentifierCode, com.tools20022.repository.choice.MarketIdentification4Choice.mmDescription,
+					com.tools20022.repository.choice.PriceSourceFormatChoice.mmLocalMarketPlace, com.tools20022.repository.msg.PartyIdentification6Choice.mmMIC, com.tools20022.repository.msg.MarketIdentification1.mmIdentification,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmPlaceOfIssueIdentification, com.tools20022.repository.msg.MarketIdentification77.mmIdentification,
+					com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmExchange, com.tools20022.repository.msg.MeetingContactPerson.mmPlaceOfListing, com.tools20022.repository.msg.MeetingContactPerson1.mmPlaceOfListing,
+					com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.mmMarketIdentification, com.tools20022.repository.msg.SecurityInstrumentDescription1.mmPlaceOfListing,
+					com.tools20022.repository.choice.PartyIdentification24Choice.mmMIC, com.tools20022.repository.choice.PartyIdentification11Choice.mmCentralCounterparty,
+					com.tools20022.repository.msg.SecurityInstrumentDescription2.mmPlaceOfListing, com.tools20022.repository.choice.PlaceOfTradeIdentification3Choice.mmExchange, com.tools20022.repository.msg.Issuance1.mmIssuePlace,
+					com.tools20022.repository.msg.TradingParameters1.mmMarketIdentification, com.tools20022.repository.msg.MeetingContactPerson2.mmPlaceOfListing,
+					com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmMarketIdentificationCode, com.tools20022.repository.msg.TradingVenueAttributes1.mmIdentification,
+					com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmMIC, com.tools20022.repository.msg.Organisation30.mmPlaceOfListing, com.tools20022.repository.msg.Organisation29.mmPlaceOfListing,
+					com.tools20022.repository.msg.MarketDetail2.mmIdentification);
 			elementContext_lazy = () -> OrganisationIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MIC";
 			definition = "Market Identifier Code. Identification of a financial market, as stipulated in the norm ISO 10383 \"Codes for exchanges and market identifications\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
@@ -2007,35 +2037,36 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrganisationIdentification";
 				definition = "Unique and unambiguous way to identify an organisation.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.OrganisationIdentification, com.tools20022.repository.entity.OrganisationName.Organisation,
-						com.tools20022.repository.entity.CashClearingSystemMember.OrganisationIdentification);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.NameAndAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification8.Other,
-						com.tools20022.repository.choice.Party2Choice.OrganisationIdentification, com.tools20022.repository.choice.Party6Choice.OrganisationIdentification,
-						com.tools20022.repository.choice.Party11Choice.OrganisationIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.NameAndAddress,
-						com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.CombinedIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification7.Other,
-						com.tools20022.repository.choice.Party8Choice.OrganisationIdentification, com.tools20022.repository.msg.ProprietaryAgent1.Agent, com.tools20022.repository.msg.ProprietaryAgent2.Agent,
-						com.tools20022.repository.msg.ProprietaryAgent3.Agent, com.tools20022.repository.msg.Charges2.Agent, com.tools20022.repository.choice.Party10Choice.OrganisationIdentification,
-						com.tools20022.repository.choice.Party9Choice.OrganisationIdentification, com.tools20022.repository.choice.Party9Choice.FinancialInstitutionIdentification,
-						com.tools20022.repository.msg.PartyIdentification59.LegalEntityIdentifier, com.tools20022.repository.choice.PartyIdentification73Choice.AnyBIC,
-						com.tools20022.repository.msg.PartyIdentification60.LegalEntityIdentifier, com.tools20022.repository.choice.Party1Choice.OrganisationIdentification,
-						com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.NameAndAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification9.Other,
-						com.tools20022.repository.choice.Party13Choice.OrganisationIdentification, com.tools20022.repository.choice.Party13Choice.FinancialInstitutionIdentification,
-						com.tools20022.repository.msg.CashAccountCharacteristics1.AccountServicer, com.tools20022.repository.choice.PartyOrganisation1Choice.OrganisationIdentification,
-						com.tools20022.repository.choice.Party5Choice.OrganisationIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.NameAndAddress,
-						com.tools20022.repository.choice.TradingVenueIdentification1Choice.Other, com.tools20022.repository.msg.CashAccountCharacteristics2.AccountServicer,
-						com.tools20022.repository.choice.Party29Choice.OrganisationIdentification, com.tools20022.repository.choice.Party29Choice.FinancialInstitutionIdentification,
-						com.tools20022.repository.msg.Party1.OrganisationIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.NameAndAddress,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification10.Party, com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.NameAndAddress);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmOrganisationIdentification, com.tools20022.repository.entity.OrganisationName.mmOrganisation,
+						com.tools20022.repository.entity.CashClearingSystemMember.mmOrganisationIdentification);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.mmNameAndAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmOther,
+						com.tools20022.repository.choice.Party2Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party6Choice.mmOrganisationIdentification,
+						com.tools20022.repository.choice.Party11Choice.mmOrganisationIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.mmCombinedIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmOther,
+						com.tools20022.repository.choice.Party8Choice.mmOrganisationIdentification, com.tools20022.repository.msg.ProprietaryAgent1.mmAgent, com.tools20022.repository.msg.ProprietaryAgent2.mmAgent,
+						com.tools20022.repository.msg.ProprietaryAgent3.mmAgent, com.tools20022.repository.msg.Charges2.mmAgent, com.tools20022.repository.choice.Party10Choice.mmOrganisationIdentification,
+						com.tools20022.repository.choice.Party9Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party9Choice.mmFinancialInstitutionIdentification,
+						com.tools20022.repository.msg.PartyIdentification59.mmLegalEntityIdentifier, com.tools20022.repository.choice.PartyIdentification73Choice.mmAnyBIC,
+						com.tools20022.repository.msg.PartyIdentification60.mmLegalEntityIdentifier, com.tools20022.repository.choice.Party1Choice.mmOrganisationIdentification,
+						com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmNameAndAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmOther,
+						com.tools20022.repository.choice.Party13Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party13Choice.mmFinancialInstitutionIdentification,
+						com.tools20022.repository.msg.CashAccountCharacteristics1.mmAccountServicer, com.tools20022.repository.choice.PartyOrganisation1Choice.mmOrganisationIdentification,
+						com.tools20022.repository.choice.Party5Choice.mmOrganisationIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmOther, com.tools20022.repository.msg.CashAccountCharacteristics2.mmAccountServicer,
+						com.tools20022.repository.choice.Party29Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party29Choice.mmFinancialInstitutionIdentification,
+						com.tools20022.repository.msg.Party1.mmOrganisationIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmParty, com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.mmNameAndAddress);
 				superType_lazy = () -> PartyIdentificationInformation.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationIdentification.BICFI, com.tools20022.repository.entity.OrganisationIdentification.AnyBIC,
-						com.tools20022.repository.entity.OrganisationIdentification.OrganisationName, com.tools20022.repository.entity.OrganisationIdentification.Organisation,
-						com.tools20022.repository.entity.OrganisationIdentification.ClearingSystemMemberIdentificationType, com.tools20022.repository.entity.OrganisationIdentification.BICNonFI,
-						com.tools20022.repository.entity.OrganisationIdentification.EANGLN, com.tools20022.repository.entity.OrganisationIdentification.CHIPSUniversalIdentifier,
-						com.tools20022.repository.entity.OrganisationIdentification.DUNS, com.tools20022.repository.entity.OrganisationIdentification.BankPartyIdentification, com.tools20022.repository.entity.OrganisationIdentification.MIC);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationIdentification.mmBICFI, com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC,
+						com.tools20022.repository.entity.OrganisationIdentification.mmOrganisationName, com.tools20022.repository.entity.OrganisationIdentification.mmOrganisation,
+						com.tools20022.repository.entity.OrganisationIdentification.mmClearingSystemMemberIdentificationType, com.tools20022.repository.entity.OrganisationIdentification.mmBICNonFI,
+						com.tools20022.repository.entity.OrganisationIdentification.mmEANGLN, com.tools20022.repository.entity.OrganisationIdentification.mmCHIPSUniversalIdentifier,
+						com.tools20022.repository.entity.OrganisationIdentification.mmDUNS, com.tools20022.repository.entity.OrganisationIdentification.mmBankPartyIdentification,
+						com.tools20022.repository.entity.OrganisationIdentification.mmMIC);
 				derivationComponent_lazy = () -> Arrays.asList(BranchData.mmObject(), FinancialInstitutionIdentification3Choice.mmObject(), GenericFinancialIdentification1.mmObject(), FinancialInstitutionIdentification8.mmObject(),
 						BranchData2.mmObject(), OrganisationIdentification2.mmObject(), OrganisationIdentificationSchemeName1Choice.mmObject(), GenericOrganisationIdentification1.mmObject(), OrganisationIdentification4.mmObject(),
 						OrganisationIdentification8.mmObject(), FinancialInstitutionIdentification3.mmObject(), FinancialInstitutionIdentification5Choice.mmObject(), FinancialInstitutionIdentification7.mmObject(),
@@ -2049,5 +2080,93 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICFIIdentifier getBICFI() {
+		return bICFI;
+	}
+
+	public void setBICFI(BICFIIdentifier bICFI) {
+		this.bICFI = bICFI;
+	}
+
+	public AnyBICIdentifier getAnyBIC() {
+		return anyBIC;
+	}
+
+	public void setAnyBIC(AnyBICIdentifier anyBIC) {
+		this.anyBIC = anyBIC;
+	}
+
+	public List<OrganisationName> getOrganisationName() {
+		return organisationName;
+	}
+
+	public void setOrganisationName(List<com.tools20022.repository.entity.OrganisationName> organisationName) {
+		this.organisationName = organisationName;
+	}
+
+	public Organisation getOrganisation() {
+		return organisation;
+	}
+
+	public void setOrganisation(com.tools20022.repository.entity.Organisation organisation) {
+		this.organisation = organisation;
+	}
+
+	public List<CashClearingSystemMember> getClearingSystemMemberIdentificationType() {
+		return clearingSystemMemberIdentificationType;
+	}
+
+	public void setClearingSystemMemberIdentificationType(List<com.tools20022.repository.entity.CashClearingSystemMember> clearingSystemMemberIdentificationType) {
+		this.clearingSystemMemberIdentificationType = clearingSystemMemberIdentificationType;
+	}
+
+	public BICNonFIIdentifier getBICNonFI() {
+		return bICNonFI;
+	}
+
+	public void setBICNonFI(BICNonFIIdentifier bICNonFI) {
+		this.bICNonFI = bICNonFI;
+	}
+
+	public EANGLNIdentifier getEANGLN() {
+		return eANGLN;
+	}
+
+	public void setEANGLN(EANGLNIdentifier eANGLN) {
+		this.eANGLN = eANGLN;
+	}
+
+	public CHIPSUniversalIdentifier getCHIPSUniversalIdentifier() {
+		return cHIPSUniversalIdentifier;
+	}
+
+	public void setCHIPSUniversalIdentifier(com.tools20022.repository.datatype.CHIPSUniversalIdentifier cHIPSUniversalIdentifier) {
+		this.cHIPSUniversalIdentifier = cHIPSUniversalIdentifier;
+	}
+
+	public DunsIdentifier getDUNS() {
+		return dUNS;
+	}
+
+	public void setDUNS(DunsIdentifier dUNS) {
+		this.dUNS = dUNS;
+	}
+
+	public Max35Text getBankPartyIdentification() {
+		return bankPartyIdentification;
+	}
+
+	public void setBankPartyIdentification(Max35Text bankPartyIdentification) {
+		this.bankPartyIdentification = bankPartyIdentification;
+	}
+
+	public MICIdentifier getMIC() {
+		return mIC;
+	}
+
+	public void setMIC(MICIdentifier mIC) {
+		this.mIC = mIC;
 	}
 }

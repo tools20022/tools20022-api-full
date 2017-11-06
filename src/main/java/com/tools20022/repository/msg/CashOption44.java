@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.Payment1Code;
 import com.tools20022.repository.entity.CashProceedsDefinition;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the cash option.
@@ -38,39 +39,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption44#CreditDebitIndicator
- * CashOption44.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption44#mmCreditDebitIndicator
+ * CashOption44.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption44#ContractualPaymentIndicator
- * CashOption44.ContractualPaymentIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption44#mmContractualPaymentIndicator
+ * CashOption44.mmContractualPaymentIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption44#IssuerOfferorTaxabilityIndicator
- * CashOption44.IssuerOfferorTaxabilityIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#IncomeType
- * CashOption44.IncomeType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#ExemptionType
- * CashOption44.ExemptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption44#mmIssuerOfferorTaxabilityIndicator
+ * CashOption44.mmIssuerOfferorTaxabilityIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmIncomeType
+ * CashOption44.mmIncomeType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmExemptionType
+ * CashOption44.mmExemptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption44#CountryOfIncomeSource
- * CashOption44.CountryOfIncomeSource}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#Account
- * CashOption44.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#CashParties
- * CashOption44.CashParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#AmountDetails
- * CashOption44.AmountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#DateDetails
- * CashOption44.DateDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption44#mmCountryOfIncomeSource
+ * CashOption44.mmCountryOfIncomeSource}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmAccount
+ * CashOption44.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmCashParties
+ * CashOption44.mmCashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmAmountDetails
+ * CashOption44.mmAmountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmDateDetails
+ * CashOption44.mmDateDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption44#ForeignExchangeDetails
- * CashOption44.ForeignExchangeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#TaxVoucherDetails
- * CashOption44.TaxVoucherDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption44#mmForeignExchangeDetails
+ * CashOption44.mmForeignExchangeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption44#RateAndAmountDetails
- * CashOption44.RateAndAmountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44#PriceDetails
- * CashOption44.PriceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption44#mmTaxVoucherDetails
+ * CashOption44.mmTaxVoucherDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashOption44#mmRateAndAmountDetails
+ * CashOption44.mmRateAndAmountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmPriceDetails
+ * CashOption44.mmPriceDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -79,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashOption44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the value is a debit or credit.
 	 * <p>
@@ -116,8 +119,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#CreditDebitIndicator
-	 * ProceedsDefinition.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmCreditDebitIndicator
+	 * ProceedsDefinition.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,33 +140,34 @@ public class CashOption44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#CreditDebitIndicator
-	 * CashOption52.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmCreditDebitIndicator
+	 * CashOption52.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#CreditDebitIndicator
-	 * CashOption39.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmCreditDebitIndicator
+	 * CashOption39.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or credit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.CreditDebitIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.CreditDebitIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmCreditDebitIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected Payment1Code contractualPaymentIndicator;
 	/**
 	 * Indicates whether the cash payment occurs or will occur in advance of
 	 * receipt of proceeds from the issuer and based on a contractual agreement
@@ -179,8 +183,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#ContractualPaymentIndicator
-	 * CashProceedsDefinition.ContractualPaymentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmContractualPaymentIndicator
+	 * CashProceedsDefinition.mmContractualPaymentIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,33 +206,34 @@ public class CashOption44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#ContractualPaymentIndicator
-	 * CashOption52.ContractualPaymentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmContractualPaymentIndicator
+	 * CashOption52.mmContractualPaymentIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#ContractualPaymentIndicator
-	 * CashOption39.ContractualPaymentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmContractualPaymentIndicator
+	 * CashOption39.mmContractualPaymentIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractualPaymentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractualPaymentIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmContractualPaymentIndicator;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.ContractualPaymentIndicator;
 			isDerived = false;
 			xmlTag = "CtrctlPmtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractualPaymentIndicator";
 			definition = "Indicates whether the cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer or upon receipt of proceeds from the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.ContractualPaymentIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.ContractualPaymentIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmContractualPaymentIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmContractualPaymentIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Payment1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 issuerOfferorTaxabilityIndicator;
 	/**
 	 * Proceeds are taxable according to the information provided by the issuer
 	 * / offeror.
@@ -243,8 +248,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#IssuerOfferorTaxabilityIndicator
-	 * ProceedsDefinition.IssuerOfferorTaxabilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmIssuerOfferorTaxabilityIndicator
+	 * ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -266,27 +271,28 @@ public class CashOption44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#IssuerOfferorTaxabilityIndicator
-	 * CashOption52.IssuerOfferorTaxabilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption52.mmIssuerOfferorTaxabilityIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.IssuerOfferorTaxabilityIndicator;
 			isDerived = false;
 			xmlTag = "IssrOfferrTaxbltyInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
 			definition = "Proceeds are taxable according to the information provided by the issuer / offeror.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.IssuerOfferorTaxabilityIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmIssuerOfferorTaxabilityIndicator);
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
 		}
 	};
+	protected GenericIdentification30 incomeType;
 	/**
 	 * Specifies the type of income. The lists of income type codes to be used,
 	 * are available on the SMPG website at www.smpg.info.
@@ -300,8 +306,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#IncomeType
-	 * CashProceedsDefinition.IncomeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
+	 * CashProceedsDefinition.mmIncomeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -322,34 +328,35 @@ public class CashOption44 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#IncomeType
-	 * CashOption52.IncomeType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#mmIncomeType
+	 * CashOption52.mmIncomeType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#IncomeType
-	 * CashOption39.IncomeType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmIncomeType
+	 * CashOption39.mmIncomeType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IncomeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIncomeType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmIncomeType;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.IncomeType;
 			isDerived = false;
 			xmlTag = "IncmTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeType";
 			definition = "Specifies the type of income.\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.IncomeType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.IncomeType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmIncomeType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmIncomeType;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification30> exemptionType;
 	/**
 	 * Specifies the basis for the reduced rate of withholding.
 	 * <p>
@@ -377,18 +384,19 @@ public class CashOption44 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#ExemptionType
-	 * CashOption52.ExemptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmExemptionType
+	 * CashOption52.mmExemptionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#ExemptionType
-	 * CashOption39.ExemptionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmExemptionType
+	 * CashOption39.mmExemptionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExemptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExemptionType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CashOption44.mmObject();
 			isDerived = false;
@@ -396,13 +404,14 @@ public class CashOption44 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionType";
 			definition = "Specifies the basis for the reduced rate of withholding.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.ExemptionType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.ExemptionType);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmExemptionType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmExemptionType;
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification30.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
 		}
 	};
+	protected CountryCode countryOfIncomeSource;
 	/**
 	 * Indicates the country from which the income originates.
 	 * <p>
@@ -415,8 +424,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#CountryOfIncomeSource
-	 * ProceedsDefinition.CountryOfIncomeSource}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmCountryOfIncomeSource
+	 * ProceedsDefinition.mmCountryOfIncomeSource}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -436,27 +445,28 @@ public class CashOption44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#CountryOfIncomeSource
-	 * CashOption52.CountryOfIncomeSource}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmCountryOfIncomeSource
+	 * CashOption52.mmCountryOfIncomeSource}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIncomeSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIncomeSource = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCountryOfIncomeSource;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.CountryOfIncomeSource;
 			isDerived = false;
 			xmlTag = "CtryOfIncmSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncomeSource";
 			definition = "Indicates the country from which the income originates.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.CountryOfIncomeSource);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmCountryOfIncomeSource);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Account8Choice account;
 	/**
 	 * Choice between a cash account, a charges account or a tax account.
 	 * <p>
@@ -468,8 +478,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#CashAccount
-	 * CorporateActionElection.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmCashAccount
+	 * CorporateActionElection.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -489,34 +499,35 @@ public class CashOption44 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#Account
-	 * CashOption52.Account}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#mmAccount
+	 * CashOption52.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#Account
-	 * CashOption39.Account}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmAccount
+	 * CashOption39.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmCashAccount;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Choice between a cash account, a charges account or a tax account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.Account;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.Account);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmAccount;
 			maxOccurs = 1;
-			type_lazy = () -> Account8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Account8Choice.mmObject();
 		}
 	};
+	protected CashParties28 cashParties;
 	/**
 	 * Provides information about cash parties.
 	 * <p>
@@ -528,8 +539,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PartyRole
-	 * Payment.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
+	 * Payment.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -548,34 +559,35 @@ public class CashOption44 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#CashParties
-	 * CashOption52.CashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#mmCashParties
+	 * CashOption52.mmCashParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#CashParties
-	 * CashOption39.CashParties}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmCashParties
+	 * CashOption39.mmCashParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PartyRole;
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Provides information about cash parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.CashParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.CashParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmCashParties);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmCashParties;
 			maxOccurs = 1;
-			type_lazy = () -> CashParties28.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashParties28.mmObject();
 		}
 	};
+	protected CorporateActionAmounts37 amountDetails;
 	/**
 	 * Provides information about the amounts related to a cash movement.
 	 * <p>
@@ -588,8 +600,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#RelatedChoiceCorporateAction
-	 * CorporateActionOption.RelatedChoiceCorporateAction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmRelatedChoiceCorporateAction
+	 * CorporateActionOption.mmRelatedChoiceCorporateAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -609,34 +621,36 @@ public class CashOption44 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#AmountDetails
-	 * CashOption52.AmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmAmountDetails
+	 * CashOption52.mmAmountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#AmountDetails
-	 * CashOption39.AmountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmAmountDetails
+	 * CashOption39.mmAmountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.RelatedChoiceCorporateAction;
 			isDerived = false;
 			xmlTag = "AmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Provides information about the amounts related to a cash movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.AmountDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.AmountDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmAmountDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmAmountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionAmounts37.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts37.mmObject();
 		}
 	};
+	protected CorporateActionDate24 dateDetails;
 	/**
 	 * Provides information about the dates related to a cash movement.
 	 * <p>
@@ -648,8 +662,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#RelatedChoiceCorporateAction
-	 * CorporateActionOption.RelatedChoiceCorporateAction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmRelatedChoiceCorporateAction
+	 * CorporateActionOption.mmRelatedChoiceCorporateAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -669,34 +683,35 @@ public class CashOption44 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#DateDetails
-	 * CashOption52.DateDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#mmDateDetails
+	 * CashOption52.mmDateDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#DateDetails
-	 * CashOption39.DateDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmDateDetails
+	 * CashOption39.mmDateDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.RelatedChoiceCorporateAction;
 			isDerived = false;
 			xmlTag = "DtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a cash movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.DateDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.DateDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmDateDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmDateDetails;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionDate24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate24.mmObject();
 		}
 	};
+	protected ForeignExchangeTerms23 foreignExchangeDetails;
 	/**
 	 * Exchange rate between the amount and the resulting amount.
 	 * <p>
@@ -708,8 +723,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#ExchangeRate
-	 * CorporateActionEvent.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmExchangeRate
+	 * CorporateActionEvent.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -730,34 +745,35 @@ public class CashOption44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#ForeignExchangeDetails
-	 * CashOption52.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmForeignExchangeDetails
+	 * CashOption52.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#ForeignExchangeDetails
-	 * CashOption39.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmForeignExchangeDetails
+	 * CashOption39.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmExchangeRate;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.ExchangeRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Exchange rate between the amount and the resulting amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.ForeignExchangeDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.ForeignExchangeDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmForeignExchangeDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmForeignExchangeDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ForeignExchangeTerms23.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
 		}
 	};
+	protected TaxVoucher2 taxVoucherDetails;
 	/**
 	 * Provides information about the tax voucher related to a cash movement.
 	 * <p>
@@ -769,8 +785,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#TaxVoucher
-	 * CorporateActionDistribution.TaxVoucher}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
+	 * CorporateActionDistribution.mmTaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -791,34 +807,35 @@ public class CashOption44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#TaxVoucherDetails
-	 * CashOption52.TaxVoucherDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmTaxVoucherDetails
+	 * CashOption52.mmTaxVoucherDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#TaxVoucherDetails
-	 * CashOption39.TaxVoucherDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmTaxVoucherDetails
+	 * CashOption39.mmTaxVoucherDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxVoucherDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxVoucherDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmTaxVoucher;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.TaxVoucher;
 			isDerived = false;
 			xmlTag = "TaxVchrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxVoucherDetails";
 			definition = "Provides information about the tax voucher related to a cash movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.TaxVoucherDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.TaxVoucherDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmTaxVoucherDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmTaxVoucherDetails;
 			maxOccurs = 1;
-			type_lazy = () -> TaxVoucher2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxVoucher2.mmObject();
 		}
 	};
+	protected RateDetails23 rateAndAmountDetails;
 	/**
 	 * Provides information about the corporate action option.
 	 * <p>
@@ -830,8 +847,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#RelatedChoiceCorporateAction
-	 * CorporateActionOption.RelatedChoiceCorporateAction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmRelatedChoiceCorporateAction
+	 * CorporateActionOption.mmRelatedChoiceCorporateAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -851,34 +868,35 @@ public class CashOption44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#RateAndAmountDetails
-	 * CashOption52.RateAndAmountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmRateAndAmountDetails
+	 * CashOption52.mmRateAndAmountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#RateAndAmountDetails
-	 * CashOption39.RateAndAmountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmRateAndAmountDetails
+	 * CashOption39.mmRateAndAmountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateAndAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateAndAmountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.RelatedChoiceCorporateAction;
 			isDerived = false;
 			xmlTag = "RateAndAmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateAndAmountDetails";
 			definition = "Provides information about the corporate action option.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.RateAndAmountDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.RateAndAmountDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmRateAndAmountDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmRateAndAmountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> RateDetails23.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RateDetails23.mmObject();
 		}
 	};
+	protected PriceDetails23 priceDetails;
 	/**
 	 * Provides information about the prices related to a corporate action
 	 * option.
@@ -891,8 +909,8 @@ public class CashOption44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionPrice
-	 * CorporateActionEvent.CorporateActionPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionPrice
+	 * CorporateActionEvent.mmCorporateActionPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -913,52 +931,165 @@ public class CashOption44 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#PriceDetails
-	 * CashOption52.PriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmPriceDetails
+	 * CashOption52.mmPriceDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#PriceDetails
-	 * CashOption39.PriceDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmPriceDetails
+	 * CashOption39.mmPriceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> CashOption44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.CorporateActionPrice;
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to a corporate action option.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.PriceDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.PriceDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption52.mmPriceDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption39.mmPriceDetails;
 			maxOccurs = 1;
-			type_lazy = () -> PriceDetails23.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PriceDetails23.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption44.CreditDebitIndicator, com.tools20022.repository.msg.CashOption44.ContractualPaymentIndicator,
-						com.tools20022.repository.msg.CashOption44.IssuerOfferorTaxabilityIndicator, com.tools20022.repository.msg.CashOption44.IncomeType, com.tools20022.repository.msg.CashOption44.ExemptionType,
-						com.tools20022.repository.msg.CashOption44.CountryOfIncomeSource, com.tools20022.repository.msg.CashOption44.Account, com.tools20022.repository.msg.CashOption44.CashParties,
-						com.tools20022.repository.msg.CashOption44.AmountDetails, com.tools20022.repository.msg.CashOption44.DateDetails, com.tools20022.repository.msg.CashOption44.ForeignExchangeDetails,
-						com.tools20022.repository.msg.CashOption44.TaxVoucherDetails, com.tools20022.repository.msg.CashOption44.RateAndAmountDetails, com.tools20022.repository.msg.CashOption44.PriceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption44.mmCreditDebitIndicator, com.tools20022.repository.msg.CashOption44.mmContractualPaymentIndicator,
+						com.tools20022.repository.msg.CashOption44.mmIssuerOfferorTaxabilityIndicator, com.tools20022.repository.msg.CashOption44.mmIncomeType, com.tools20022.repository.msg.CashOption44.mmExemptionType,
+						com.tools20022.repository.msg.CashOption44.mmCountryOfIncomeSource, com.tools20022.repository.msg.CashOption44.mmAccount, com.tools20022.repository.msg.CashOption44.mmCashParties,
+						com.tools20022.repository.msg.CashOption44.mmAmountDetails, com.tools20022.repository.msg.CashOption44.mmDateDetails, com.tools20022.repository.msg.CashOption44.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.CashOption44.mmTaxVoucherDetails, com.tools20022.repository.msg.CashOption44.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption44.mmPriceDetails);
 				trace_lazy = () -> CashProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashOption44";
 				definition = "Provides information about the cash option.";
-				previousVersion_lazy = () -> CashOption39.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CashOption52.mmObject());
+				previousVersion_lazy = () -> CashOption39.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public Payment1Code getContractualPaymentIndicator() {
+		return contractualPaymentIndicator;
+	}
+
+	public void setContractualPaymentIndicator(Payment1Code contractualPaymentIndicator) {
+		this.contractualPaymentIndicator = contractualPaymentIndicator;
+	}
+
+	public GenericIdentification30 getIssuerOfferorTaxabilityIndicator() {
+		return issuerOfferorTaxabilityIndicator;
+	}
+
+	public void setIssuerOfferorTaxabilityIndicator(com.tools20022.repository.msg.GenericIdentification30 issuerOfferorTaxabilityIndicator) {
+		this.issuerOfferorTaxabilityIndicator = issuerOfferorTaxabilityIndicator;
+	}
+
+	public GenericIdentification30 getIncomeType() {
+		return incomeType;
+	}
+
+	public void setIncomeType(com.tools20022.repository.msg.GenericIdentification30 incomeType) {
+		this.incomeType = incomeType;
+	}
+
+	public List<GenericIdentification30> getExemptionType() {
+		return exemptionType;
+	}
+
+	public void setExemptionType(List<com.tools20022.repository.msg.GenericIdentification30> exemptionType) {
+		this.exemptionType = exemptionType;
+	}
+
+	public CountryCode getCountryOfIncomeSource() {
+		return countryOfIncomeSource;
+	}
+
+	public void setCountryOfIncomeSource(CountryCode countryOfIncomeSource) {
+		this.countryOfIncomeSource = countryOfIncomeSource;
+	}
+
+	public Account8Choice getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account8Choice account) {
+		this.account = account;
+	}
+
+	public CashParties28 getCashParties() {
+		return cashParties;
+	}
+
+	public void setCashParties(com.tools20022.repository.msg.CashParties28 cashParties) {
+		this.cashParties = cashParties;
+	}
+
+	public CorporateActionAmounts37 getAmountDetails() {
+		return amountDetails;
+	}
+
+	public void setAmountDetails(com.tools20022.repository.msg.CorporateActionAmounts37 amountDetails) {
+		this.amountDetails = amountDetails;
+	}
+
+	public CorporateActionDate24 getDateDetails() {
+		return dateDetails;
+	}
+
+	public void setDateDetails(com.tools20022.repository.msg.CorporateActionDate24 dateDetails) {
+		this.dateDetails = dateDetails;
+	}
+
+	public ForeignExchangeTerms23 getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms23 foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
+	}
+
+	public TaxVoucher2 getTaxVoucherDetails() {
+		return taxVoucherDetails;
+	}
+
+	public void setTaxVoucherDetails(com.tools20022.repository.msg.TaxVoucher2 taxVoucherDetails) {
+		this.taxVoucherDetails = taxVoucherDetails;
+	}
+
+	public RateDetails23 getRateAndAmountDetails() {
+		return rateAndAmountDetails;
+	}
+
+	public void setRateAndAmountDetails(com.tools20022.repository.msg.RateDetails23 rateAndAmountDetails) {
+		this.rateAndAmountDetails = rateAndAmountDetails;
+	}
+
+	public PriceDetails23 getPriceDetails() {
+		return priceDetails;
+	}
+
+	public void setPriceDetails(com.tools20022.repository.msg.PriceDetails23 priceDetails) {
+		this.priceDetails = priceDetails;
 	}
 }

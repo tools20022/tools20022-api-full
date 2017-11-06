@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.Invoice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies a list of reconciliation information concerning financial items.
@@ -35,47 +36,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#Date
- * ReconciliationList1.Date}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#mmDate
+ * ReconciliationList1.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#RelatedDocument
- * ReconciliationList1.RelatedDocument}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#Recipient
- * ReconciliationList1.Recipient}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#Advisor
- * ReconciliationList1.Advisor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#Parameters
- * ReconciliationList1.Parameters}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmRelatedDocument
+ * ReconciliationList1.mmRelatedDocument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentReference
- * ReconciliationList1.PaymentReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmRecipient
+ * ReconciliationList1.mmRecipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#mmAdvisor
+ * ReconciliationList1.mmAdvisor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentMeans
- * ReconciliationList1.PaymentMeans}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmParameters
+ * ReconciliationList1.mmParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentDate
- * ReconciliationList1.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentReference
+ * ReconciliationList1.mmPaymentReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentTerms
- * ReconciliationList1.PaymentTerms}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentMeans
+ * ReconciliationList1.mmPaymentMeans}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentAmount
- * ReconciliationList1.PaymentAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#Item
- * ReconciliationList1.Item}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#ItemCount
- * ReconciliationList1.ItemCount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#ControlSum
- * ReconciliationList1.ControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentDate
+ * ReconciliationList1.mmPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#AssociatedDocument
- * ReconciliationList1.AssociatedDocument}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentTerms
+ * ReconciliationList1.mmPaymentTerms}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#AdditionalInformation
- * ReconciliationList1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentAmount
+ * ReconciliationList1.mmPaymentAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#mmItem
+ * ReconciliationList1.mmItem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#ValidationStatusInformation
- * ReconciliationList1.ValidationStatusInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmItemCount
+ * ReconciliationList1.mmItemCount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmControlSum
+ * ReconciliationList1.mmControlSum}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmAssociatedDocument
+ * ReconciliationList1.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmAdditionalInformation
+ * ReconciliationList1.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmValidationStatusInformation
+ * ReconciliationList1.mmValidationStatusInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -85,18 +90,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01#ReconciliationList
- * InvoicePaymentReconciliationAdviceV01.ReconciliationList}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01#mmReconciliationList
+ * InvoicePaymentReconciliationAdviceV01.mmReconciliationList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#ReconciliationList
- * InvoicePaymentReconciliationStatusV01.ReconciliationList}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmReconciliationList
+ * InvoicePaymentReconciliationStatusV01.mmReconciliationList}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReconciliationList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Date of creation of this document.
 	 * <p>
@@ -123,8 +129,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +149,21 @@ public class ReconciliationList1 {
 	 * definition} = "Date of creation of this document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of creation of this document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument;
 	/**
 	 * Reference to related documents for example to original assignment in a
 	 * status response or retry.
@@ -191,20 +198,21 @@ public class ReconciliationList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedDocument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDoc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDocument";
 			definition = "Reference to related documents for example to original assignment in a status response or retry.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected QualifiedPartyIdentification1 recipient;
 	/**
 	 * Party to be advised.
 	 * <p>
@@ -217,8 +225,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -237,21 +245,22 @@ public class ReconciliationList1 {
 	 * definition} = "Party to be advised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Recipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Rcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Party to be advised.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected QualifiedPartyIdentification1 advisor;
 	/**
 	 * Informing party.
 	 * <p>
@@ -264,8 +273,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -284,21 +293,22 @@ public class ReconciliationList1 {
 	 * definition} = "Informing party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Advisor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdvisor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Advsr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advisor";
 			definition = "Informing party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected FinancialItemParameters1 parameters;
 	/**
 	 * Identification parameters.
 	 * <p>
@@ -330,21 +340,22 @@ public class ReconciliationList1 {
 	 * definition} = "Identification parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Parameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
+			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Identification parameters.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialItemParameters1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialItemParameters1.mmObject();
 		}
 	};
+	protected PaymentIdentification1 paymentReference;
 	/**
 	 * Reference to a payment instruction.
 	 * <p>
@@ -356,8 +367,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentRelatedIdentifications
-	 * Payment.PaymentRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
+	 * Payment.mmPaymentRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -376,21 +387,22 @@ public class ReconciliationList1 {
 	 * definition} = "Reference to a payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentReference = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "PmtRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReference";
 			definition = "Reference to a payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentIdentification1.mmObject();
 		}
 	};
+	protected PaymentMeans1 paymentMeans;
 	/**
 	 * Set of elements used to further specify the type of transaction.
 	 * <p>
@@ -402,8 +414,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#Payment
-	 * Invoice.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmPayment
+	 * Invoice.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -423,21 +435,22 @@ public class ReconciliationList1 {
 	 * "Set of elements used to further specify the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentMeans = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentMeans = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmPayment;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.Payment;
 			isDerived = false;
 			xmlTag = "PmtMeans";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMeans";
 			definition = "Set of elements used to further specify the type of transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentMeans1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
 		}
 	};
+	protected ISODate paymentDate;
 	/**
 	 * Effective date of payment.
 	 * <p>
@@ -450,8 +463,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
-	 * ObligationFulfilment.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+	 * ObligationFulfilment.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -470,20 +483,21 @@ public class ReconciliationList1 {
 	 * definition} = "Effective date of payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.Date;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Effective date of payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PaymentTerms6 paymentTerms;
 	/**
 	 * Terms of the payment.
 	 * <p>
@@ -495,8 +509,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#PaymentObligation
-	 * Document.PaymentObligation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmPaymentObligation
+	 * Document.mmPaymentObligation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -515,21 +529,22 @@ public class ReconciliationList1 {
 	 * definition} = "Terms of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPaymentObligation;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.PaymentObligation;
 			isDerived = false;
 			xmlTag = "PmtTerms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Terms of the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentTerms6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
 		}
 	};
+	protected CurrencyAndAmount paymentAmount;
 	/**
 	 * Amount of the referenced payment.
 	 * <p>
@@ -543,8 +558,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -563,20 +578,21 @@ public class ReconciliationList1 {
 	 * definition} = "Amount of the referenced payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "PmtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentAmount";
 			definition = "Amount of the referenced payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialItem1> item;
 	/**
 	 * Financial item impacted by the payment.
 	 * <p>
@@ -607,20 +623,21 @@ public class ReconciliationList1 {
 	 * definition} = "Financial item impacted by the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Item = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmItem = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
+			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "Itm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Item";
 			definition = "Financial item impacted by the payment.";
 			minOccurs = 1;
-			type_lazy = () -> FinancialItem1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
 		}
 	};
+	protected Max15NumericText itemCount;
 	/**
 	 * Number of individual items contained in the list.
 	 * <p>
@@ -649,7 +666,7 @@ public class ReconciliationList1 {
 	 * definition} = "Number of individual items contained in the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemCount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
@@ -657,11 +674,12 @@ public class ReconciliationList1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Number of individual items contained in the list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in the list, irrespective of
 	 * currencies.
@@ -693,7 +711,7 @@ public class ReconciliationList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
@@ -701,11 +719,12 @@ public class ReconciliationList1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the list, irrespective of currencies.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * Associated free form document.
 	 * <p>
@@ -737,20 +756,21 @@ public class ReconciliationList1 {
 	 * definition} = "Associated free form document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected Max2000Text additionalInformation;
 	/**
 	 * Additional proprietary formal information concerning the list.
 	 * <p>
@@ -779,7 +799,7 @@ public class ReconciliationList1 {
 	 * "Additional proprietary formal information concerning the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
@@ -787,11 +807,12 @@ public class ReconciliationList1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional proprietary formal information concerning the list.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected ValidationStatusInformation1 validationStatusInformation;
 	/**
 	 * Validation status of the list.
 	 * <p>
@@ -804,8 +825,8 @@ public class ReconciliationList1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -824,40 +845,168 @@ public class ReconciliationList1 {
 	 * definition} = "Validation status of the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Validation status of the list.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ValidationStatusInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReconciliationList1.Date, com.tools20022.repository.msg.ReconciliationList1.RelatedDocument,
-						com.tools20022.repository.msg.ReconciliationList1.Recipient, com.tools20022.repository.msg.ReconciliationList1.Advisor, com.tools20022.repository.msg.ReconciliationList1.Parameters,
-						com.tools20022.repository.msg.ReconciliationList1.PaymentReference, com.tools20022.repository.msg.ReconciliationList1.PaymentMeans, com.tools20022.repository.msg.ReconciliationList1.PaymentDate,
-						com.tools20022.repository.msg.ReconciliationList1.PaymentTerms, com.tools20022.repository.msg.ReconciliationList1.PaymentAmount, com.tools20022.repository.msg.ReconciliationList1.Item,
-						com.tools20022.repository.msg.ReconciliationList1.ItemCount, com.tools20022.repository.msg.ReconciliationList1.ControlSum, com.tools20022.repository.msg.ReconciliationList1.AssociatedDocument,
-						com.tools20022.repository.msg.ReconciliationList1.AdditionalInformation, com.tools20022.repository.msg.ReconciliationList1.ValidationStatusInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReconciliationList1.mmDate, com.tools20022.repository.msg.ReconciliationList1.mmRelatedDocument,
+						com.tools20022.repository.msg.ReconciliationList1.mmRecipient, com.tools20022.repository.msg.ReconciliationList1.mmAdvisor, com.tools20022.repository.msg.ReconciliationList1.mmParameters,
+						com.tools20022.repository.msg.ReconciliationList1.mmPaymentReference, com.tools20022.repository.msg.ReconciliationList1.mmPaymentMeans, com.tools20022.repository.msg.ReconciliationList1.mmPaymentDate,
+						com.tools20022.repository.msg.ReconciliationList1.mmPaymentTerms, com.tools20022.repository.msg.ReconciliationList1.mmPaymentAmount, com.tools20022.repository.msg.ReconciliationList1.mmItem,
+						com.tools20022.repository.msg.ReconciliationList1.mmItemCount, com.tools20022.repository.msg.ReconciliationList1.mmControlSum, com.tools20022.repository.msg.ReconciliationList1.mmAssociatedDocument,
+						com.tools20022.repository.msg.ReconciliationList1.mmAdditionalInformation, com.tools20022.repository.msg.ReconciliationList1.mmValidationStatusInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmReconciliationList,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmReconciliationList);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.ReconciliationList,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.ReconciliationList);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReconciliationList1";
 				definition = "Specifies a list of reconciliation information concerning financial items.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public List<QualifiedDocumentInformation1> getRelatedDocument() {
+		return relatedDocument;
+	}
+
+	public void setRelatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument) {
+		this.relatedDocument = relatedDocument;
+	}
+
+	public QualifiedPartyIdentification1 getRecipient() {
+		return recipient;
+	}
+
+	public void setRecipient(com.tools20022.repository.msg.QualifiedPartyIdentification1 recipient) {
+		this.recipient = recipient;
+	}
+
+	public QualifiedPartyIdentification1 getAdvisor() {
+		return advisor;
+	}
+
+	public void setAdvisor(com.tools20022.repository.msg.QualifiedPartyIdentification1 advisor) {
+		this.advisor = advisor;
+	}
+
+	public FinancialItemParameters1 getParameters() {
+		return parameters;
+	}
+
+	public void setParameters(com.tools20022.repository.msg.FinancialItemParameters1 parameters) {
+		this.parameters = parameters;
+	}
+
+	public PaymentIdentification1 getPaymentReference() {
+		return paymentReference;
+	}
+
+	public void setPaymentReference(com.tools20022.repository.msg.PaymentIdentification1 paymentReference) {
+		this.paymentReference = paymentReference;
+	}
+
+	public PaymentMeans1 getPaymentMeans() {
+		return paymentMeans;
+	}
+
+	public void setPaymentMeans(com.tools20022.repository.msg.PaymentMeans1 paymentMeans) {
+		this.paymentMeans = paymentMeans;
+	}
+
+	public ISODate getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(ISODate paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
+	public PaymentTerms6 getPaymentTerms() {
+		return paymentTerms;
+	}
+
+	public void setPaymentTerms(com.tools20022.repository.msg.PaymentTerms6 paymentTerms) {
+		this.paymentTerms = paymentTerms;
+	}
+
+	public CurrencyAndAmount getPaymentAmount() {
+		return paymentAmount;
+	}
+
+	public void setPaymentAmount(CurrencyAndAmount paymentAmount) {
+		this.paymentAmount = paymentAmount;
+	}
+
+	public List<FinancialItem1> getItem() {
+		return item;
+	}
+
+	public void setItem(List<com.tools20022.repository.msg.FinancialItem1> item) {
+		this.item = item;
+	}
+
+	public Max15NumericText getItemCount() {
+		return itemCount;
+	}
+
+	public void setItemCount(Max15NumericText itemCount) {
+		this.itemCount = itemCount;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+	}
+
+	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
+		return associatedDocument;
+	}
+
+	public void setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+		this.associatedDocument = associatedDocument;
+	}
+
+	public Max2000Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max2000Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public ValidationStatusInformation1 getValidationStatusInformation() {
+		return validationStatusInformation;
+	}
+
+	public void setValidationStatusInformation(com.tools20022.repository.msg.ValidationStatusInformation1 validationStatusInformation) {
+		this.validationStatusInformation = validationStatusInformation;
 	}
 }

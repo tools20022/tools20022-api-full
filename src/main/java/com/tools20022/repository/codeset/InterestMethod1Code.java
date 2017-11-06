@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestMethod1Code#PhysicalSettlement
- * InterestMethod1Code.PhysicalSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InterestMethod1Code#RollIn
- * InterestMethod1Code.RollIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestMethod1Code#mmPhysicalSettlement
+ * InterestMethod1Code.mmPhysicalSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestMethod1Code#mmRollIn
+ * InterestMethod1Code.mmRollIn}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class InterestMethod1Code extends InterestMethodCode {
 	 * name} = "PhysicalSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSettlement = new MMCode() {
+	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
@@ -104,7 +105,7 @@ public class InterestMethod1Code extends InterestMethodCode {
 	 * name} = "RollIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode RollIn = new MMCode() {
+	public static final MMCode mmRollIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollIn";
@@ -115,12 +116,12 @@ public class InterestMethod1Code extends InterestMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PHYS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestMethod1Code";
 				definition = "Specifies whether the interest will be setlled in cash or rolled in.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestMethod1Code.PhysicalSettlement, com.tools20022.repository.codeset.InterestMethod1Code.RollIn);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestMethod1Code.mmPhysicalSettlement, com.tools20022.repository.codeset.InterestMethod1Code.mmRollIn);
 				trace_lazy = () -> InterestMethodCode.mmObject();
 			}
 		});

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1#BaseProduct
- * FertilizerCommodityDiammoniumPhosphate1.BaseProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1#mmBaseProduct
+ * FertilizerCommodityDiammoniumPhosphate1.mmBaseProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1#SubProduct
- * FertilizerCommodityDiammoniumPhosphate1.SubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1#mmSubProduct
+ * FertilizerCommodityDiammoniumPhosphate1.mmSubProduct}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FertilizerCommodityDiammoniumPhosphate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassProductType5Code baseProduct;
 	/**
 	 * Base product for the underlying asset class as specified in the
 	 * classification of commodities derivatives table.
@@ -79,8 +80,8 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#BaseProduct
-	 * Commodity.BaseProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
+	 * Commodity.mmBaseProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
 			componentContext_lazy = () -> FertilizerCommodityDiammoniumPhosphate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.BaseProduct;
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType5Code.mmObject();
 		}
 	};
+	protected AssetClassSubProductType40Code subProduct;
 	/**
 	 * Sub-product for the underlying asset class.
 	 * <p>
@@ -128,8 +130,8 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> FertilizerCommodityDiammoniumPhosphate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType40Code.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.BaseProduct, com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.SubProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.mmBaseProduct, com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.mmSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FertilizerCommodityDiammoniumPhosphate1";
 				definition = "Defines commodity sub-product attributes of a fertilizer derivative of type diammonium phosphate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassProductType5Code getBaseProduct() {
+		return baseProduct;
+	}
+
+	public void setBaseProduct(AssetClassProductType5Code baseProduct) {
+		this.baseProduct = baseProduct;
+	}
+
+	public AssetClassSubProductType40Code getSubProduct() {
+		return subProduct;
+	}
+
+	public void setSubProduct(AssetClassSubProductType40Code subProduct) {
+		this.subProduct = subProduct;
 	}
 }

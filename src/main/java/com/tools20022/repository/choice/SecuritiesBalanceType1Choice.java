@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesBalanceType1Choice#Structured
- * SecuritiesBalanceType1Choice.Structured}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesBalanceType1Choice#mmStructured
+ * SecuritiesBalanceType1Choice.mmStructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesBalanceType1Choice#Unstructured
- * SecuritiesBalanceType1Choice.Unstructured}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesBalanceType1Choice#mmUnstructured
+ * SecuritiesBalanceType1Choice.mmUnstructured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesBalanceType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesBalanceType1Code structured;
 	/**
 	 * Balance reason in structured format.
 	 * <p>
@@ -79,8 +80,8 @@ public class SecuritiesBalanceType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesBalanceType
-	 * SecuritiesBalance.SecuritiesBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+	 * SecuritiesBalance.mmSecuritiesBalanceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class SecuritiesBalanceType1Choice {
 	 * definition} = "Balance reason in structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> SecuritiesBalanceType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesBalanceType;
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Balance reason in structured format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType1Code.mmObject();
 		}
 	};
+	protected Max35Text unstructured;
 	/**
 	 * Balance reason in free text form.
 	 * <p>
@@ -125,8 +127,8 @@ public class SecuritiesBalanceType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesBalanceType
-	 * SecuritiesBalance.SecuritiesBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+	 * SecuritiesBalance.mmSecuritiesBalanceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class SecuritiesBalanceType1Choice {
 	 * definition} = "Balance reason in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> SecuritiesBalanceType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesBalanceType;
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Balance reason in free text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class SecuritiesBalanceType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesBalanceType1Choice.Structured, com.tools20022.repository.choice.SecuritiesBalanceType1Choice.Unstructured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmStructured, com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmUnstructured);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType1Choice";
 				definition = "Choice between specification of the balance type in structured or free text format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesBalanceType1Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(SecuritiesBalanceType1Code structured) {
+		this.structured = structured;
+	}
+
+	public Max35Text getUnstructured() {
+		return unstructured;
+	}
+
+	public void setUnstructured(Max35Text unstructured) {
+		this.unstructured = unstructured;
 	}
 }

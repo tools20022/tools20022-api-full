@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.TerminalManagementErrorAction2Code;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Action to perform in case of error on the related action in progress.
@@ -34,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorAction2#ActionResult
- * ErrorAction2.ActionResult}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorAction2#ActionToProcess
- * ErrorAction2.ActionToProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorAction2#mmActionResult
+ * ErrorAction2.mmActionResult}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorAction2#mmActionToProcess
+ * ErrorAction2.mmActionToProcess}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ErrorAction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<TerminalManagementActionResult1Code> actionResult;
 	/**
 	 * List of error action result codes.
 	 * <p>
@@ -85,8 +87,8 @@ public class ErrorAction2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#ActionResult
-	 * TerminalManagementAction.ActionResult}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionResult
+	 * TerminalManagementAction.mmActionResult}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,26 +107,28 @@ public class ErrorAction2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ErrorAction3#ActionResult
-	 * ErrorAction3.ActionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ErrorAction3#mmActionResult
+	 * ErrorAction3.mmActionResult}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionResult = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> ErrorAction2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.ActionResult;
 			isDerived = false;
 			xmlTag = "ActnRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionResult";
 			definition = "List of error action result codes.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction3.ActionResult);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction3.mmActionResult);
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
 		}
 	};
+	protected TerminalManagementErrorAction2Code actionToProcess;
 	/**
 	 * Action to be processed for the related errors.
 	 * <p>
@@ -138,8 +142,8 @@ public class ErrorAction2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#ActionToProcess
-	 * TerminalManagementAction.ActionToProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementAction#mmActionToProcess
+	 * TerminalManagementAction.mmActionToProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,24 +163,24 @@ public class ErrorAction2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ErrorAction3#ActionToProcess
-	 * ErrorAction3.ActionToProcess}</li>
+	 * {@linkplain com.tools20022.repository.msg.ErrorAction3#mmActionToProcess
+	 * ErrorAction3.mmActionToProcess}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionToProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionToProcess = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmActionToProcess;
 			componentContext_lazy = () -> ErrorAction2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.ActionToProcess;
 			isDerived = false;
 			xmlTag = "ActnToPrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionToProcess";
 			definition = "Action to be processed for the related errors.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction3.ActionToProcess);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction3.mmActionToProcess);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
 		}
 	};
@@ -184,16 +188,32 @@ public class ErrorAction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction2.ActionResult, com.tools20022.repository.msg.ErrorAction2.ActionToProcess);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction2.mmActionResult, com.tools20022.repository.msg.ErrorAction2.mmActionToProcess);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ErrorAction2";
 				definition = "Action to perform in case of error on the related action in progress.";
-				previousVersion_lazy = () -> ErrorAction1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ErrorAction3.mmObject());
+				previousVersion_lazy = () -> ErrorAction1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<TerminalManagementActionResult1Code> getActionResult() {
+		return actionResult;
+	}
+
+	public void setActionResult(List<TerminalManagementActionResult1Code> actionResult) {
+		this.actionResult = actionResult;
+	}
+
+	public TerminalManagementErrorAction2Code getActionToProcess() {
+		return actionToProcess;
+	}
+
+	public void setActionToProcess(TerminalManagementErrorAction2Code actionToProcess) {
+		this.actionToProcess = actionToProcess;
 	}
 }

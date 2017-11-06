@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet4#Identification
- * TerminalManagementDataSet4.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet4#mmIdentification
+ * TerminalManagementDataSet4.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet4#SequenceCounter
- * TerminalManagementDataSet4.SequenceCounter}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet4#mmSequenceCounter
+ * TerminalManagementDataSet4.mmSequenceCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet4#Content
- * TerminalManagementDataSet4.Content}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet4#mmContent
+ * TerminalManagementDataSet4.mmContent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalManagementDataSet4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataSetIdentification3 identification;
 	/**
 	 * Identification of the data set containing the status report.
 	 * <p>
@@ -103,13 +104,13 @@ public class TerminalManagementDataSet4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet9#Identification
-	 * TerminalManagementDataSet9.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet9#mmIdentification
+	 * TerminalManagementDataSet9.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet4.mmObject();
 			isDerived = false;
@@ -117,13 +118,14 @@ public class TerminalManagementDataSet4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the data set containing the status report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet9.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet9.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification3.mmObject();
 		}
 	};
+	protected Max9NumericText sequenceCounter;
 	/**
 	 * Counter to identify a single data set within the whole transfer.
 	 * <p>
@@ -155,13 +157,13 @@ public class TerminalManagementDataSet4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet9#SequenceCounter
-	 * TerminalManagementDataSet9.SequenceCounter}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet9#mmSequenceCounter
+	 * TerminalManagementDataSet9.mmSequenceCounter}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet4.mmObject();
 			isDerived = false;
@@ -169,12 +171,13 @@ public class TerminalManagementDataSet4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Counter to identify a single data set within the whole transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet9.SequenceCounter);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet9.mmSequenceCounter);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected StatusReportContent2 content;
 	/**
 	 * Content of the status report.
 	 * <p>
@@ -203,13 +206,13 @@ public class TerminalManagementDataSet4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet9#Content
-	 * TerminalManagementDataSet9.Content}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet9#mmContent
+	 * TerminalManagementDataSet9.mmContent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Content = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet4.mmObject();
 			isDerived = false;
@@ -217,27 +220,51 @@ public class TerminalManagementDataSet4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Content of the status report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet9.Content);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet9.mmContent);
 			maxOccurs = 1;
-			type_lazy = () -> StatusReportContent2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet4.Identification, com.tools20022.repository.msg.TerminalManagementDataSet4.SequenceCounter,
-						com.tools20022.repository.msg.TerminalManagementDataSet4.Content);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet4.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet4.mmSequenceCounter,
+						com.tools20022.repository.msg.TerminalManagementDataSet4.mmContent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet4";
 				definition = "Data related to the status report of a point of interaction (POI).";
-				previousVersion_lazy = () -> TerminalManagementDataSet1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet9.mmObject());
+				previousVersion_lazy = () -> TerminalManagementDataSet1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataSetIdentification3 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification3 identification) {
+		this.identification = identification;
+	}
+
+	public Max9NumericText getSequenceCounter() {
+		return sequenceCounter;
+	}
+
+	public void setSequenceCounter(Max9NumericText sequenceCounter) {
+		this.sequenceCounter = sequenceCounter;
+	}
+
+	public StatusReportContent2 getContent() {
+		return content;
+	}
+
+	public void setContent(com.tools20022.repository.msg.StatusReportContent2 content) {
+		this.content = content;
 	}
 }

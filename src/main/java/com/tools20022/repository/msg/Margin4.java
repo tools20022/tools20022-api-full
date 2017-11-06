@@ -35,10 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Margin4#Type Margin4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Margin4#Amount Margin4.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Margin4#CreditDebitIndicator
- * Margin4.CreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin4#mmType Margin4.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin4#mmAmount
+ * Margin4.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin4#mmCreditDebitIndicator
+ * Margin4.mmCreditDebitIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Margin4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarginType1Choice type;
 	/**
 	 * Specifies the type of margin that is calculated.
 	 * <p>
@@ -74,8 +76,8 @@ public class Margin4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#MarginType
-	 * MarginCall.MarginType}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarginType
+	 * MarginCall.mmMarginType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Margin4
@@ -93,20 +95,21 @@ public class Margin4 {
 	 * definition} = "Specifies the type of margin that is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarginType;
 			componentContext_lazy = () -> Margin4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.MarginType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of margin that is calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MarginType1Choice.mmObject();
 		}
 	};
+	protected Amount2 amount;
 	/**
 	 * Provides the margin amount in the reporting currency and optionally in
 	 * the original currency.
@@ -118,8 +121,8 @@ public class Margin4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#TotalMarginAmount
-	 * MarginCall.TotalMarginAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarginAmount
+	 * MarginCall.mmTotalMarginAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Margin4
@@ -139,21 +142,22 @@ public class Margin4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Amount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmTotalMarginAmount;
 			componentContext_lazy = () -> Margin4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.TotalMarginAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Provides the margin amount in the reporting currency and optionally in the original currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies whether the margin type position is short or long, that is,
 	 * whether the balance is a negative or positive balance.
@@ -184,7 +188,7 @@ public class Margin4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Margin4.mmObject();
 			isDerived = false;
@@ -192,8 +196,8 @@ public class Margin4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the margin type position is short or long, that is, whether the balance is a negative or positive balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
@@ -201,14 +205,38 @@ public class Margin4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin4.Type, com.tools20022.repository.msg.Margin4.Amount, com.tools20022.repository.msg.Margin4.CreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin4.mmType, com.tools20022.repository.msg.Margin4.mmAmount, com.tools20022.repository.msg.Margin4.mmCreditDebitIndicator);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Margin4";
 				definition = "Provides details on the type of margin amounts.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarginType1Choice getType() {
+		return type;
+	}
+
+	public void setType(MarginType1Choice type) {
+		this.type = type;
+	}
+
+	public Amount2 getAmount() {
+		return amount;
+	}
+
+	public void setAmount(com.tools20022.repository.msg.Amount2 amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
 	}
 }

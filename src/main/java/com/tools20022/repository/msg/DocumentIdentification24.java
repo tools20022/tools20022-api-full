@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification24#MessageNumber
- * DocumentIdentification24.MessageNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification24#mmMessageNumber
+ * DocumentIdentification24.mmMessageNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification24#Reference
- * DocumentIdentification24.Reference}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification24#mmReference
+ * DocumentIdentification24.mmReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#QueryDetails
- * SecuritiesStatusOrStatementQueryStatusAdviceV03.QueryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmQueryDetails
+ * SecuritiesStatusOrStatementQueryStatusAdviceV03.mmQueryDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber1Choice messageNumber;
 	/**
 	 * Message type number/message identifier of the message referenced in the
 	 * linkage sequence.
@@ -113,13 +114,13 @@ public class DocumentIdentification24 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification30#MessageNumber
-	 * DocumentIdentification30.MessageNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification30#mmMessageNumber
+	 * DocumentIdentification30.mmMessageNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentIdentification24.mmObject();
 			isDerived = false;
@@ -127,12 +128,13 @@ public class DocumentIdentification24 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification30.MessageNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification30.mmMessageNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber1Choice.mmObject();
 		}
 	};
+	protected Identification1 reference;
 	/**
 	 * Reference to the query identification.
 	 * <p>
@@ -162,13 +164,13 @@ public class DocumentIdentification24 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification30#Reference
-	 * DocumentIdentification30.Reference}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification30#mmReference
+	 * DocumentIdentification30.mmReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentIdentification24.mmObject();
 			isDerived = false;
@@ -176,20 +178,20 @@ public class DocumentIdentification24 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the query identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification30.Reference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification30.mmReference);
 			maxOccurs = 1;
-			complexType_lazy = () -> Identification1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.Identification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification24.MessageNumber, com.tools20022.repository.msg.DocumentIdentification24.Reference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification24.mmMessageNumber, com.tools20022.repository.msg.DocumentIdentification24.mmReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmQueryDetails);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.QueryDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification24";
 				definition = "Identification of the message number and the query identification.";
@@ -197,5 +199,21 @@ public class DocumentIdentification24 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber1Choice getMessageNumber() {
+		return messageNumber;
+	}
+
+	public void setMessageNumber(DocumentNumber1Choice messageNumber) {
+		this.messageNumber = messageNumber;
+	}
+
+	public Identification1 getReference() {
+		return reference;
+	}
+
+	public void setReference(com.tools20022.repository.msg.Identification1 reference) {
+		this.reference = reference;
 	}
 }

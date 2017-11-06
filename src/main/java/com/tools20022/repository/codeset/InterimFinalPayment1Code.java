@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterimFinalPayment1Code#Interim
- * InterimFinalPayment1Code.Interim}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterimFinalPayment1Code#mmInterim
+ * InterimFinalPayment1Code.mmInterim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterimFinalPayment1Code#Final
- * InterimFinalPayment1Code.Final}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterimFinalPayment1Code#mmFinal
+ * InterimFinalPayment1Code.mmFinal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class InterimFinalPayment1Code extends InterimFinalPaymentCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
@@ -104,7 +104,7 @@ public class InterimFinalPayment1Code extends InterimFinalPaymentCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
@@ -115,12 +115,12 @@ public class InterimFinalPayment1Code extends InterimFinalPaymentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterimFinalPayment1Code";
 				definition = "Specifies payment type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterimFinalPayment1Code.Interim, com.tools20022.repository.codeset.InterimFinalPayment1Code.Final);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterimFinalPayment1Code.mmInterim, com.tools20022.repository.codeset.InterimFinalPayment1Code.mmFinal);
 				trace_lazy = () -> InterimFinalPaymentCode.mmObject();
 			}
 		});

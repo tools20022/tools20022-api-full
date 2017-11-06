@@ -34,36 +34,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#CardRetained
- * FailureReason8Code.CardRetained}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmCardRetained
+ * FailureReason8Code.mmCardRetained}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#CardCaptured
- * FailureReason8Code.CardCaptured}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmCardCaptured
+ * FailureReason8Code.mmCardCaptured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#CustomerCancel
- * FailureReason8Code.CustomerCancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmCustomerCancel
+ * FailureReason8Code.mmCustomerCancel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#ForgottenCard
- * FailureReason8Code.ForgottenCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmForgottenCard
+ * FailureReason8Code.mmForgottenCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#Malfunction
- * FailureReason8Code.Malfunction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmMalfunction
+ * FailureReason8Code.mmMalfunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#SecurityError
- * FailureReason8Code.SecurityError}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmSecurityError
+ * FailureReason8Code.mmSecurityError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#SuspectedFraud
- * FailureReason8Code.SuspectedFraud}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmSuspectedFraud
+ * FailureReason8Code.mmSuspectedFraud}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#UnableToCapture
- * FailureReason8Code.UnableToCapture}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason8Code#mmUnableToCapture
+ * FailureReason8Code.mmUnableToCapture}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,7 +93,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "CardRetained"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardRetained = new MMCode() {
+	public static final MMCode mmCardRetained = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRetained";
@@ -116,7 +116,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "CardCaptured"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardCaptured = new MMCode() {
+	public static final MMCode mmCardCaptured = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCaptured";
@@ -139,7 +139,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "CustomerCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerCancel = new MMCode() {
+	public static final MMCode mmCustomerCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCancel";
@@ -162,7 +162,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "ForgottenCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForgottenCard = new MMCode() {
+	public static final MMCode mmForgottenCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForgottenCard";
@@ -185,7 +185,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "Malfunction"</li>
 	 * </ul>
 	 */
-	public static final MMCode Malfunction = new MMCode() {
+	public static final MMCode mmMalfunction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Malfunction";
@@ -208,7 +208,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "SecurityError"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityError = new MMCode() {
+	public static final MMCode mmSecurityError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityError";
@@ -231,7 +231,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "SuspectedFraud"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspectedFraud = new MMCode() {
+	public static final MMCode mmSuspectedFraud = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedFraud";
@@ -254,7 +254,7 @@ public class FailureReason8Code extends FailureReasonCode {
 	 * name} = "UnableToCapture"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnableToCapture = new MMCode() {
+	public static final MMCode mmUnableToCapture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToCapture";
@@ -265,13 +265,13 @@ public class FailureReason8Code extends FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FailureReason8Code";
 				definition = "Exception occurring outside the service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason8Code.CardRetained, com.tools20022.repository.codeset.FailureReason8Code.CardCaptured,
-						com.tools20022.repository.codeset.FailureReason8Code.CustomerCancel, com.tools20022.repository.codeset.FailureReason8Code.ForgottenCard, com.tools20022.repository.codeset.FailureReason8Code.Malfunction,
-						com.tools20022.repository.codeset.FailureReason8Code.SecurityError, com.tools20022.repository.codeset.FailureReason8Code.SuspectedFraud, com.tools20022.repository.codeset.FailureReason8Code.UnableToCapture);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason8Code.mmCardRetained, com.tools20022.repository.codeset.FailureReason8Code.mmCardCaptured,
+						com.tools20022.repository.codeset.FailureReason8Code.mmCustomerCancel, com.tools20022.repository.codeset.FailureReason8Code.mmForgottenCard, com.tools20022.repository.codeset.FailureReason8Code.mmMalfunction,
+						com.tools20022.repository.codeset.FailureReason8Code.mmSecurityError, com.tools20022.repository.codeset.FailureReason8Code.mmSuspectedFraud, com.tools20022.repository.codeset.FailureReason8Code.mmUnableToCapture);
 				trace_lazy = () -> FailureReasonCode.mmObject();
 			}
 		});

@@ -30,12 +30,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountLevelCode#Intermediate
- * AccountLevelCode.Intermediate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountLevelCode#Summary
- * AccountLevelCode.Summary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountLevelCode#Detail
- * AccountLevelCode.Detail}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountLevelCode#mmIntermediate
+ * AccountLevelCode.mmIntermediate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountLevelCode#mmSummary
+ * AccountLevelCode.mmSummary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountLevelCode#mmDetail
+ * AccountLevelCode.mmDetail}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class AccountLevelCode {
 	 * definition} = "Intermediate level within an account hierarchy."</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediate = new MMCode() {
+	public static final MMCode mmIntermediate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediate";
@@ -123,7 +123,7 @@ public class AccountLevelCode {
 	 * definition} = "Highest level within an account hierarchy."</li>
 	 * </ul>
 	 */
-	public static final MMCode Summary = new MMCode() {
+	public static final MMCode mmSummary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Summary";
@@ -153,7 +153,7 @@ public class AccountLevelCode {
 	 * definition} = "Account is a real deposit/current account."</li>
 	 * </ul>
 	 */
-	public static final MMCode Detail = new MMCode() {
+	public static final MMCode mmDetail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detail";
@@ -166,12 +166,12 @@ public class AccountLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountLevelCode";
 				definition = "Defines the level of an account within the account hierarchy.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountLevelCode.Intermediate, com.tools20022.repository.codeset.AccountLevelCode.Summary, com.tools20022.repository.codeset.AccountLevelCode.Detail);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountLevelCode.mmIntermediate, com.tools20022.repository.codeset.AccountLevelCode.mmSummary, com.tools20022.repository.codeset.AccountLevelCode.mmDetail);
 				derivation_lazy = () -> Arrays.asList(AccountLevel2Code.mmObject(), AccountLevel1Code.mmObject());
 			}
 		});

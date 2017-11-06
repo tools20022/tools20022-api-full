@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information regarding corporate action general
@@ -37,27 +38,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#PlaceAndName
- * CorporateActionGeneralInformationSD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#mmPlaceAndName
+ * CorporateActionGeneralInformationSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#SecurityIdentification
- * CorporateActionGeneralInformationSD3.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#mmSecurityIdentification
+ * CorporateActionGeneralInformationSD3.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#RecordDate
- * CorporateActionGeneralInformationSD3.RecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#mmRecordDate
+ * CorporateActionGeneralInformationSD3.mmRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#PaymentDate
- * CorporateActionGeneralInformationSD3.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#mmPaymentDate
+ * CorporateActionGeneralInformationSD3.mmPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#UnallocatedDetails
- * CorporateActionGeneralInformationSD3.UnallocatedDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD3#mmUnallocatedDetails
+ * CorporateActionGeneralInformationSD3.mmUnallocatedDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionGeneralInformationSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -110,13 +112,13 @@ public class CorporateActionGeneralInformationSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD16#PlaceAndName
-	 * CorporateActionGeneralInformationSD16.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD16#mmPlaceAndName
+	 * CorporateActionGeneralInformationSD16.mmPlaceAndName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -124,12 +126,13 @@ public class CorporateActionGeneralInformationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.PlaceAndName);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmPlaceAndName);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SecurityIdentification15 securityIdentification;
 	/**
 	 * Identifies the financial instrument.
 	 * <p>
@@ -160,13 +163,13 @@ public class CorporateActionGeneralInformationSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD16#SecurityIdentification
-	 * CorporateActionGeneralInformationSD16.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD16#mmSecurityIdentification
+	 * CorporateActionGeneralInformationSD16.mmSecurityIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -174,12 +177,13 @@ public class CorporateActionGeneralInformationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.SecurityIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmSecurityIdentification);
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	protected ISODate recordDate;
 	/**
 	 * Date at which positions are stuck at the end of the day to note which
 	 * parties will receive the relevant amount of entitlement, due to be
@@ -212,7 +216,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -220,11 +224,12 @@ public class CorporateActionGeneralInformationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) and its Participants may use this as a reference ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateFormat22Choice paymentDate;
 	/**
 	 * Date/time at which the movement was due to take place (cash and/or
 	 * securities).
@@ -256,7 +261,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -264,11 +269,12 @@ public class CorporateActionGeneralInformationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1> unallocatedDetails;
 	/**
 	 * Additional information about the corporate action event.
 	 * <p>
@@ -298,13 +304,13 @@ public class CorporateActionGeneralInformationSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD16#UnallocatedDetails
-	 * CorporateActionGeneralInformationSD16.UnallocatedDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD16#mmUnallocatedDetails
+	 * CorporateActionGeneralInformationSD16.mmUnallocatedDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnallocatedDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnallocatedDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -312,20 +318,20 @@ public class CorporateActionGeneralInformationSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDetails";
 			definition = "Additional information about the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.UnallocatedDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmUnallocatedDetails);
 			minOccurs = 0;
-			type_lazy = () -> CorporateActionUnallocatedDetailsSD1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.PlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.SecurityIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.RecordDate, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.PaymentDate,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.UnallocatedDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmSecurityIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmRecordDate, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmPaymentDate,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmUnallocatedDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD3";
 				definition = "Provides additional information regarding corporate action general information.";
@@ -333,5 +339,45 @@ public class CorporateActionGeneralInformationSD3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public SecurityIdentification15 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public ISODate getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(ISODate recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public DateFormat22Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat22Choice paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
+	public List<CorporateActionUnallocatedDetailsSD1> getUnallocatedDetails() {
+		return unallocatedDetails;
+	}
+
+	public void setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1> unallocatedDetails) {
+		this.unallocatedDetails = unallocatedDetails;
 	}
 }

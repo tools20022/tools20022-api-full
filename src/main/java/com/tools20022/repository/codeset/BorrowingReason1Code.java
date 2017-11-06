@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#SelfConsumption
- * BorrowingReason1Code.SelfConsumption}</li>
+ * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#mmSelfConsumption
+ * BorrowingReason1Code.mmSelfConsumption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#TransferToThirdParty
- * BorrowingReason1Code.TransferToThirdParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#mmTransferToThirdParty
+ * BorrowingReason1Code.mmTransferToThirdParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#MarketMakingPurpose
- * BorrowingReason1Code.MarketMakingPurpose}</li>
+ * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#mmMarketMakingPurpose
+ * BorrowingReason1Code.mmMarketMakingPurpose}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 * name} = "SelfConsumption"</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfConsumption = new MMCode() {
+	public static final MMCode mmSelfConsumption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfConsumption";
@@ -107,7 +107,7 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 * name} = "TransferToThirdParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferToThirdParty = new MMCode() {
+	public static final MMCode mmTransferToThirdParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferToThirdParty";
@@ -130,7 +130,7 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 * name} = "MarketMakingPurpose"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketMakingPurpose = new MMCode() {
+	public static final MMCode mmMarketMakingPurpose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMakingPurpose";
@@ -141,13 +141,13 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SFCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BorrowingReason1Code";
 				definition = "Identifies the underlying reason for the borrowing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BorrowingReason1Code.SelfConsumption, com.tools20022.repository.codeset.BorrowingReason1Code.TransferToThirdParty,
-						com.tools20022.repository.codeset.BorrowingReason1Code.MarketMakingPurpose);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BorrowingReason1Code.mmSelfConsumption, com.tools20022.repository.codeset.BorrowingReason1Code.mmTransferToThirdParty,
+						com.tools20022.repository.codeset.BorrowingReason1Code.mmMarketMakingPurpose);
 				trace_lazy = () -> BorrowingReasonCode.mmObject();
 			}
 		});

@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.SafekeepingPlaceFormatChoice;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.codeset.SecuritiesEntryType2Code;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,15 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance6#Balance
- * HoldingBalance6.Balance}</li>
- * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance6#BalanceType
- * HoldingBalance6.BalanceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance6#mmBalance
+ * HoldingBalance6.mmBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance6#mmBalanceType
+ * HoldingBalance6.mmBalanceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance6#SafekeepingPlace
- * HoldingBalance6.SafekeepingPlace}</li>
- * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance6#Date
- * HoldingBalance6.Date}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance6#mmSafekeepingPlace
+ * HoldingBalance6.mmSafekeepingPlace}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance6#mmDate
+ * HoldingBalance6.mmDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HoldingBalance6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnitOrFaceAmount1Choice balance;
 	/**
 	 * Total quantity of financial instrument for the referenced holding.
 	 * <p>
@@ -91,8 +93,8 @@ public class HoldingBalance6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AggregateQuantity
-	 * SecuritiesBalance.AggregateQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+	 * SecuritiesBalance.mmAggregateQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,27 +115,28 @@ public class HoldingBalance6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance7#Balance
-	 * HoldingBalance7.Balance}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance7#mmBalance
+	 * HoldingBalance7.mmBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Balance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> HoldingBalance6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AggregateQuantity;
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Total quantity of financial instrument for the referenced holding.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.Balance);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.mmBalance);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected SecuritiesEntryType2Code balanceType;
 	/**
 	 * Reason a security is not available or additional information about the
 	 * financial instrument for which the balance is given, for example,
@@ -149,8 +152,8 @@ public class HoldingBalance6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesBalanceType
-	 * SecuritiesBalance.SecuritiesBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+	 * SecuritiesBalance.mmSecuritiesBalanceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,27 +176,28 @@ public class HoldingBalance6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldingBalance7#BalanceType
-	 * HoldingBalance7.BalanceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldingBalance7#mmBalanceType
+	 * HoldingBalance7.mmBalanceType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> HoldingBalance6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesBalanceType;
 			isDerived = false;
 			xmlTag = "BalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceType";
 			definition = "Reason a security is not available or additional information about the financial instrument for which the balance is given, for example, unregistered, registered in nominee name.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.BalanceType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.mmBalanceType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesEntryType2Code.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormatChoice safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -234,27 +238,28 @@ public class HoldingBalance6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldingBalance7#SafekeepingPlace
-	 * HoldingBalance7.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldingBalance7#mmSafekeepingPlace
+	 * HoldingBalance7.mmSafekeepingPlace}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> HoldingBalance6.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.SafekeepingPlace);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.mmSafekeepingPlace);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Date of the entitlement.
 	 * <p>
@@ -267,8 +272,8 @@ public class HoldingBalance6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#EntitlementFixingDate
-	 * MeetingEntitlement.EntitlementFixingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementFixingDate
+	 * MeetingEntitlement.mmEntitlementFixingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,24 +293,24 @@ public class HoldingBalance6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance7#Date
-	 * HoldingBalance7.Date}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.HoldingBalance7#mmDate
+	 * HoldingBalance7.mmDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementFixingDate;
 			componentContext_lazy = () -> HoldingBalance6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.EntitlementFixingDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of the entitlement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.Date);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance7.mmDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -313,10 +318,10 @@ public class HoldingBalance6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance6.Balance, com.tools20022.repository.msg.HoldingBalance6.BalanceType, com.tools20022.repository.msg.HoldingBalance6.SafekeepingPlace,
-						com.tools20022.repository.msg.HoldingBalance6.Date);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance6.mmBalance, com.tools20022.repository.msg.HoldingBalance6.mmBalanceType,
+						com.tools20022.repository.msg.HoldingBalance6.mmSafekeepingPlace, com.tools20022.repository.msg.HoldingBalance6.mmDate);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HoldingBalance6";
 				definition = "Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.";
@@ -324,5 +329,37 @@ public class HoldingBalance6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnitOrFaceAmount1Choice getBalance() {
+		return balance;
+	}
+
+	public void setBalance(UnitOrFaceAmount1Choice balance) {
+		this.balance = balance;
+	}
+
+	public SecuritiesEntryType2Code getBalanceType() {
+		return balanceType;
+	}
+
+	public void setBalanceType(SecuritiesEntryType2Code balanceType) {
+		this.balanceType = balanceType;
+	}
+
+	public SafekeepingPlaceFormatChoice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormatChoice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
 	}
 }

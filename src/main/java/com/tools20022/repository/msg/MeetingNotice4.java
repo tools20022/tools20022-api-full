@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the shareholders meeting, specifying the participation
@@ -42,56 +43,57 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#MeetingIdentification
- * MeetingNotice4.MeetingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmMeetingIdentification
+ * MeetingNotice4.mmMeetingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#IssuerMeetingIdentification
- * MeetingNotice4.IssuerMeetingIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingNotice4#Type
- * MeetingNotice4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingNotice4#Classification
- * MeetingNotice4.Classification}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmIssuerMeetingIdentification
+ * MeetingNotice4.mmIssuerMeetingIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingNotice4#mmType
+ * MeetingNotice4.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AnnouncementDate
- * MeetingNotice4.AnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmClassification
+ * MeetingNotice4.mmClassification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AttendanceRequired
- * MeetingNotice4.AttendanceRequired}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAnnouncementDate
+ * MeetingNotice4.mmAnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AttendanceConfirmationInformation
- * MeetingNotice4.AttendanceConfirmationInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAttendanceRequired
+ * MeetingNotice4.mmAttendanceRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AttendanceConfirmationDeadline
- * MeetingNotice4.AttendanceConfirmationDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAttendanceConfirmationInformation
+ * MeetingNotice4.mmAttendanceConfirmationInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AttendanceConfirmationSTPDeadline
- * MeetingNotice4.AttendanceConfirmationSTPDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAttendanceConfirmationDeadline
+ * MeetingNotice4.mmAttendanceConfirmationDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AttendanceConfirmationMarketDeadline
- * MeetingNotice4.AttendanceConfirmationMarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAttendanceConfirmationSTPDeadline
+ * MeetingNotice4.mmAttendanceConfirmationSTPDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AdditionalDocumentationURLAddress
- * MeetingNotice4.AdditionalDocumentationURLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAttendanceConfirmationMarketDeadline
+ * MeetingNotice4.mmAttendanceConfirmationMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#AdditionalProcedureDetails
- * MeetingNotice4.AdditionalProcedureDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAdditionalDocumentationURLAddress
+ * MeetingNotice4.mmAdditionalDocumentationURLAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#TotalNumberOfSecuritiesOutstanding
- * MeetingNotice4.TotalNumberOfSecuritiesOutstanding}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmAdditionalProcedureDetails
+ * MeetingNotice4.mmAdditionalProcedureDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#TotalNumberOfVotingRights
- * MeetingNotice4.TotalNumberOfVotingRights}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmTotalNumberOfSecuritiesOutstanding
+ * MeetingNotice4.mmTotalNumberOfSecuritiesOutstanding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#ProxyAppointmentNotificationAddress
- * MeetingNotice4.ProxyAppointmentNotificationAddress}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingNotice4#ProxyChoice
- * MeetingNotice4.ProxyChoice}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmTotalNumberOfVotingRights
+ * MeetingNotice4.mmTotalNumberOfVotingRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#ContactPersonDetails
- * MeetingNotice4.ContactPersonDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmProxyAppointmentNotificationAddress
+ * MeetingNotice4.mmProxyAppointmentNotificationAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingNotice4#mmProxyChoice
+ * MeetingNotice4.mmProxyChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingNotice4#ResultPublicationDate
- * MeetingNotice4.ResultPublicationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmContactPersonDetails
+ * MeetingNotice4.mmContactPersonDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingNotice4#mmResultPublicationDate
+ * MeetingNotice4.mmResultPublicationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -102,15 +104,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#Meeting
- * MeetingNotificationV05.Meeting}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#mmMeeting
+ * MeetingNotificationV05.mmMeeting}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,6 +131,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingNotice4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text meetingIdentification;
 	/**
 	 * Identification assigned to the general meeting by the party notifying the
 	 * meeting. It must be unique for the party notifying the meeting.
@@ -142,8 +145,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#Identification
-	 * Meeting.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmIdentification
+	 * Meeting.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,25 +167,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#MeetingIdentification
-	 * MeetingNotice3.MeetingIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmMeetingIdentification
+	 * MeetingNotice3.mmMeetingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMeetingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmIdentification;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.Identification;
 			isDerived = false;
 			xmlTag = "MtgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentification";
 			definition = "Identification assigned to the general meeting by the party notifying the meeting. It must be unique for the party notifying the meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.MeetingIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmMeetingIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text issuerMeetingIdentification;
 	/**
 	 * Identification assigned to the meeting by the issuer. It must be unique
 	 * for the issuer.
@@ -196,8 +200,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting#IssuerMeetingIdentification
-	 * IssuerMeeting.IssuerMeetingIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmIssuerMeetingIdentification
+	 * IssuerMeeting.mmIssuerMeetingIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -218,25 +222,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#IssuerMeetingIdentification
-	 * MeetingNotice3.IssuerMeetingIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmIssuerMeetingIdentification
+	 * MeetingNotice3.mmIssuerMeetingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerMeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerMeetingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmIssuerMeetingIdentification;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.IssuerMeetingIdentification;
 			isDerived = false;
 			xmlTag = "IssrMtgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerMeetingIdentification";
 			definition = "Identification assigned to the meeting by the issuer. It must be unique for the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.IssuerMeetingIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmIssuerMeetingIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected MeetingType3Code type;
 	/**
 	 * Specifies the type of security holders meeting.
 	 * <p>
@@ -250,7 +255,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#Type Meeting.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmType
+	 * Meeting.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -269,25 +275,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#Type
-	 * MeetingNotice3.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmType
+	 * MeetingNotice3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmType;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of security holders meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.Type;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MeetingType3Code.mmObject();
 		}
 	};
+	protected MeetingTypeClassification1Choice classification;
 	/**
 	 * Classifies the type of meeting.
 	 * <p>
@@ -301,8 +308,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#MeetingEventClassification
-	 * Meeting.MeetingEventClassification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmMeetingEventClassification
+	 * Meeting.mmMeetingEventClassification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -321,25 +328,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#Classification
-	 * MeetingNotice3.Classification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmClassification
+	 * MeetingNotice3.mmClassification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Classification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmMeetingEventClassification;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.MeetingEventClassification;
 			isDerived = false;
 			xmlTag = "Clssfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Classification";
 			definition = "Classifies the type of meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.Classification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmClassification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MeetingTypeClassification1Choice.mmObject();
 		}
 	};
+	protected ISODate announcementDate;
 	/**
 	 * Official meeting announcement date.
 	 * <p>
@@ -352,8 +360,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AnnouncementDate
-	 * CorporateActionEvent.AnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAnnouncementDate
+	 * CorporateActionEvent.mmAnnouncementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -372,25 +380,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AnnouncementDate
-	 * MeetingNotice3.AnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAnnouncementDate
+	 * MeetingNotice3.mmAnnouncementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AnnouncementDate;
 			isDerived = false;
 			xmlTag = "AnncmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Official meeting announcement date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AnnouncementDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAnnouncementDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected YesNoIndicator attendanceRequired;
 	/**
 	 * Indicates whether physical participation to the meeting is required in
 	 * order to be allowed to vote.
@@ -405,8 +414,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#AttendanceRequired
-	 * Meeting.AttendanceRequired}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmAttendanceRequired
+	 * Meeting.mmAttendanceRequired}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -427,25 +436,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AttendanceRequired
-	 * MeetingNotice3.AttendanceRequired}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAttendanceRequired
+	 * MeetingNotice3.mmAttendanceRequired}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceRequired = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmAttendanceRequired;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.AttendanceRequired;
 			isDerived = false;
 			xmlTag = "AttndncReqrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceRequired";
 			definition = "Indicates whether physical participation to the meeting is required in order to be allowed to vote.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AttendanceRequired;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAttendanceRequired;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max350Text attendanceConfirmationInformation;
 	/**
 	 * Indicates how to order the attendance card or to give notice of
 	 * attendance.
@@ -459,8 +469,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#AttendanceConfirmation
-	 * Meeting.AttendanceConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmAttendanceConfirmation
+	 * Meeting.mmAttendanceConfirmation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -481,25 +491,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AttendanceConfirmationInformation
-	 * MeetingNotice3.AttendanceConfirmationInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAttendanceConfirmationInformation
+	 * MeetingNotice3.mmAttendanceConfirmationInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceConfirmationInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceConfirmationInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmAttendanceConfirmation;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.AttendanceConfirmation;
 			isDerived = false;
 			xmlTag = "AttndncConfInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceConfirmationInformation";
 			definition = "Indicates how to order the attendance card or to give notice of attendance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AttendanceConfirmationInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAttendanceConfirmationInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DateFormat29Choice attendanceConfirmationDeadline;
 	/**
 	 * Date and time by which the beneficial owner or agent must notify of its
 	 * intention to participate in the meeting. This deadline is set by an
@@ -515,8 +526,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#IntermediaryDeadline
-	 * Deadline.IntermediaryDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmIntermediaryDeadline
+	 * Deadline.mmIntermediaryDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -537,25 +548,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AttendanceConfirmationDeadline
-	 * MeetingNotice3.AttendanceConfirmationDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAttendanceConfirmationDeadline
+	 * MeetingNotice3.mmAttendanceConfirmationDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceConfirmationDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceConfirmationDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.IntermediaryDeadline;
 			isDerived = false;
 			xmlTag = "AttndncConfDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceConfirmationDeadline";
 			definition = "Date and time by which the beneficial owner or agent must notify of its intention to participate in the meeting. This deadline is set by an intermediary.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AttendanceConfirmationDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAttendanceConfirmationDeadline;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	protected DateFormat29Choice attendanceConfirmationSTPDeadline;
 	/**
 	 * Date and time by which the beneficial owner or agent must notify of its
 	 * intention to participate in the meeting (STP mode). This deadline is set
@@ -571,8 +583,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#STPDeadline
-	 * Deadline.STPDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmSTPDeadline
+	 * Deadline.mmSTPDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -593,25 +605,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AttendanceConfirmationSTPDeadline
-	 * MeetingNotice3.AttendanceConfirmationSTPDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAttendanceConfirmationSTPDeadline
+	 * MeetingNotice3.mmAttendanceConfirmationSTPDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceConfirmationSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceConfirmationSTPDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.STPDeadline;
 			isDerived = false;
 			xmlTag = "AttndncConfSTPDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceConfirmationSTPDeadline";
 			definition = "Date and time by which the beneficial owner or agent must notify of its intention to participate in the meeting (STP mode). This deadline is set by an intermediary.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AttendanceConfirmationSTPDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAttendanceConfirmationSTPDeadline;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	protected DateFormat29Choice attendanceConfirmationMarketDeadline;
 	/**
 	 * Date and time by which the attendance to the meeting should be confirmed.
 	 * This deadline is set by the issuer.
@@ -626,8 +639,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#MarketDeadline
-	 * Deadline.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+	 * Deadline.mmMarketDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -648,25 +661,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AttendanceConfirmationMarketDeadline
-	 * MeetingNotice3.AttendanceConfirmationMarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAttendanceConfirmationMarketDeadline
+	 * MeetingNotice3.mmAttendanceConfirmationMarketDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceConfirmationMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceConfirmationMarketDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.MarketDeadline;
 			isDerived = false;
 			xmlTag = "AttndncConfMktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceConfirmationMarketDeadline";
 			definition = "Date and time by which the attendance to the meeting should be confirmed. This deadline is set by the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AttendanceConfirmationMarketDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAttendanceConfirmationMarketDeadline;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	protected Max256Text additionalDocumentationURLAddress;
 	/**
 	 * Address to use over the www (HTTP) service where additional information
 	 * on the meeting may be found.
@@ -680,8 +694,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#URLAddress
-	 * ElectronicAddress.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+	 * ElectronicAddress.mmURLAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -702,25 +716,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AdditionalDocumentationURLAddress
-	 * MeetingNotice3.AdditionalDocumentationURLAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAdditionalDocumentationURLAddress
+	 * MeetingNotice3.mmAdditionalDocumentationURLAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalDocumentationURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalDocumentationURLAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.URLAddress;
 			isDerived = false;
 			xmlTag = "AddtlDcmnttnURLAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDocumentationURLAddress";
 			definition = "Address to use over the www (HTTP) service where additional information on the meeting may be found.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AdditionalDocumentationURLAddress;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAdditionalDocumentationURLAddress;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AdditionalRights2> additionalProcedureDetails;
 	/**
 	 * Additional procedural information about the general meeting, specifying
 	 * the participation requirements and the voting procedures. Alternatively,
@@ -734,8 +749,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#AdditionalRight
-	 * Meeting.AdditionalRight}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmAdditionalRight
+	 * Meeting.mmAdditionalRight}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -756,26 +771,27 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#AdditionalProcedureDetails
-	 * MeetingNotice3.AdditionalProcedureDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmAdditionalProcedureDetails
+	 * MeetingNotice3.mmAdditionalProcedureDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalProcedureDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalProcedureDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmAdditionalRight;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.AdditionalRight;
 			isDerived = false;
 			xmlTag = "AddtlPrcdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProcedureDetails";
 			definition = "Additional procedural information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, this may indicate where such information may be obtained.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.AdditionalProcedureDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmAdditionalProcedureDetails;
 			maxOccurs = 5;
-			type_lazy = () -> AdditionalRights2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalRights2.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice totalNumberOfSecuritiesOutstanding;
 	/**
 	 * Number of securities admitted to the vote, expressed as an amount and a
 	 * currency.
@@ -790,8 +806,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#TotalNumberOfSecuritiesOutstanding
-	 * MeetingParticipation.TotalNumberOfSecuritiesOutstanding}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#mmTotalNumberOfSecuritiesOutstanding
+	 * MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -812,25 +828,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#TotalNumberOfSecuritiesOutstanding
-	 * MeetingNotice3.TotalNumberOfSecuritiesOutstanding}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmTotalNumberOfSecuritiesOutstanding
+	 * MeetingNotice3.mmTotalNumberOfSecuritiesOutstanding}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.TotalNumberOfSecuritiesOutstanding;
 			isDerived = false;
 			xmlTag = "TtlNbOfSctiesOutsdng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfSecuritiesOutstanding";
 			definition = "Number of securities admitted to the vote, expressed as an amount and a currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.TotalNumberOfSecuritiesOutstanding;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmTotalNumberOfSecuritiesOutstanding;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected Number totalNumberOfVotingRights;
 	/**
 	 * Number of rights admitted to the vote.
 	 * <p>
@@ -843,8 +860,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#TotalNumberOfVotingRights
-	 * MeetingParticipation.TotalNumberOfVotingRights}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingParticipation#mmTotalNumberOfVotingRights
+	 * MeetingParticipation.mmTotalNumberOfVotingRights}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -863,25 +880,26 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#TotalNumberOfVotingRights
-	 * MeetingNotice3.TotalNumberOfVotingRights}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmTotalNumberOfVotingRights
+	 * MeetingNotice3.mmTotalNumberOfVotingRights}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfVotingRights = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfVotingRights;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.TotalNumberOfVotingRights;
 			isDerived = false;
 			xmlTag = "TtlNbOfVtngRghts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfVotingRights";
 			definition = "Number of rights admitted to the vote.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.TotalNumberOfVotingRights;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmTotalNumberOfVotingRights;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected PostalAddress1 proxyAppointmentNotificationAddress;
 	/**
 	 * Address where the information on the proxy should be sent.
 	 * <p>
@@ -914,26 +932,27 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#ProxyAppointmentNotificationAddress
-	 * MeetingNotice3.ProxyAppointmentNotificationAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmProxyAppointmentNotificationAddress
+	 * MeetingNotice3.mmProxyAppointmentNotificationAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProxyAppointmentNotificationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProxyAppointmentNotificationAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MeetingNotice4.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> MeetingNotice4.mmObject();
 			isDerived = false;
 			xmlTag = "PrxyAppntmntNtfctnAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyAppointmentNotificationAddress";
 			definition = "Address where the information on the proxy should be sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.ProxyAppointmentNotificationAddress;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmProxyAppointmentNotificationAddress;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	protected Proxy2Choice proxyChoice;
 	/**
 	 * Indicates whether a proxy is allowed.
 	 * <p>
@@ -945,8 +964,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#ProxyAppointmentConditions
-	 * Meeting.ProxyAppointmentConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmProxyAppointmentConditions
+	 * Meeting.mmProxyAppointmentConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -965,26 +984,27 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#ProxyChoice
-	 * MeetingNotice3.ProxyChoice}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmProxyChoice
+	 * MeetingNotice3.mmProxyChoice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProxyChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProxyChoice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmProxyAppointmentConditions;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.ProxyAppointmentConditions;
 			isDerived = false;
 			xmlTag = "PrxyChc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyChoice";
 			definition = "Indicates whether a proxy is allowed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.ProxyChoice;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmProxyChoice;
 			maxOccurs = 1;
-			type_lazy = () -> Proxy2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Proxy2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.MeetingContactPerson2> contactPersonDetails;
 	/**
 	 * Contact person at the party organising the meeting, at the issuer or at
 	 * an intermediary.
@@ -1018,26 +1038,27 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#ContactPersonDetails
-	 * MeetingNotice3.ContactPersonDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmContactPersonDetails
+	 * MeetingNotice3.mmContactPersonDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactPersonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactPersonDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MeetingNotice4.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> MeetingNotice4.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPersonDetails";
 			definition = "Contact person at the party organising the meeting, at the issuer or at an intermediary.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.ContactPersonDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmContactPersonDetails;
 			maxOccurs = 12;
-			type_lazy = () -> MeetingContactPerson2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson2.mmObject();
 		}
 	};
+	protected DateFormat3Choice resultPublicationDate;
 	/**
 	 * Date on which the company publishes the results of its meeting.
 	 * <p>
@@ -1051,8 +1072,8 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#ResultPublicationDate
-	 * CorporateActionEvent.ResultPublicationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmResultPublicationDate
+	 * CorporateActionEvent.mmResultPublicationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1072,22 +1093,22 @@ public class MeetingNotice4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#ResultPublicationDate
-	 * MeetingNotice3.ResultPublicationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingNotice3#mmResultPublicationDate
+	 * MeetingNotice3.mmResultPublicationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResultPublicationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResultPublicationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmResultPublicationDate;
 			componentContext_lazy = () -> MeetingNotice4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.ResultPublicationDate;
 			isDerived = false;
 			xmlTag = "RsltPblctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultPublicationDate";
 			definition = "Date on which the company publishes the results of its meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.ResultPublicationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MeetingNotice3.mmResultPublicationDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat3Choice.mmObject();
 		}
 	};
@@ -1095,17 +1116,17 @@ public class MeetingNotice4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingNotice4.MeetingIdentification, com.tools20022.repository.msg.MeetingNotice4.IssuerMeetingIdentification,
-						com.tools20022.repository.msg.MeetingNotice4.Type, com.tools20022.repository.msg.MeetingNotice4.Classification, com.tools20022.repository.msg.MeetingNotice4.AnnouncementDate,
-						com.tools20022.repository.msg.MeetingNotice4.AttendanceRequired, com.tools20022.repository.msg.MeetingNotice4.AttendanceConfirmationInformation,
-						com.tools20022.repository.msg.MeetingNotice4.AttendanceConfirmationDeadline, com.tools20022.repository.msg.MeetingNotice4.AttendanceConfirmationSTPDeadline,
-						com.tools20022.repository.msg.MeetingNotice4.AttendanceConfirmationMarketDeadline, com.tools20022.repository.msg.MeetingNotice4.AdditionalDocumentationURLAddress,
-						com.tools20022.repository.msg.MeetingNotice4.AdditionalProcedureDetails, com.tools20022.repository.msg.MeetingNotice4.TotalNumberOfSecuritiesOutstanding,
-						com.tools20022.repository.msg.MeetingNotice4.TotalNumberOfVotingRights, com.tools20022.repository.msg.MeetingNotice4.ProxyAppointmentNotificationAddress, com.tools20022.repository.msg.MeetingNotice4.ProxyChoice,
-						com.tools20022.repository.msg.MeetingNotice4.ContactPersonDetails, com.tools20022.repository.msg.MeetingNotice4.ResultPublicationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingNotice4.mmMeetingIdentification, com.tools20022.repository.msg.MeetingNotice4.mmIssuerMeetingIdentification,
+						com.tools20022.repository.msg.MeetingNotice4.mmType, com.tools20022.repository.msg.MeetingNotice4.mmClassification, com.tools20022.repository.msg.MeetingNotice4.mmAnnouncementDate,
+						com.tools20022.repository.msg.MeetingNotice4.mmAttendanceRequired, com.tools20022.repository.msg.MeetingNotice4.mmAttendanceConfirmationInformation,
+						com.tools20022.repository.msg.MeetingNotice4.mmAttendanceConfirmationDeadline, com.tools20022.repository.msg.MeetingNotice4.mmAttendanceConfirmationSTPDeadline,
+						com.tools20022.repository.msg.MeetingNotice4.mmAttendanceConfirmationMarketDeadline, com.tools20022.repository.msg.MeetingNotice4.mmAdditionalDocumentationURLAddress,
+						com.tools20022.repository.msg.MeetingNotice4.mmAdditionalProcedureDetails, com.tools20022.repository.msg.MeetingNotice4.mmTotalNumberOfSecuritiesOutstanding,
+						com.tools20022.repository.msg.MeetingNotice4.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.MeetingNotice4.mmProxyAppointmentNotificationAddress,
+						com.tools20022.repository.msg.MeetingNotice4.mmProxyChoice, com.tools20022.repository.msg.MeetingNotice4.mmContactPersonDetails, com.tools20022.repository.msg.MeetingNotice4.mmResultPublicationDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV05.mmMeeting);
 				trace_lazy = () -> MeetingNotice.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV05.Meeting);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingNotice4";
 				definition = "Information about the shareholders meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.";
@@ -1113,5 +1134,149 @@ public class MeetingNotice4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMeetingIdentification() {
+		return meetingIdentification;
+	}
+
+	public void setMeetingIdentification(Max35Text meetingIdentification) {
+		this.meetingIdentification = meetingIdentification;
+	}
+
+	public Max35Text getIssuerMeetingIdentification() {
+		return issuerMeetingIdentification;
+	}
+
+	public void setIssuerMeetingIdentification(Max35Text issuerMeetingIdentification) {
+		this.issuerMeetingIdentification = issuerMeetingIdentification;
+	}
+
+	public MeetingType3Code getType() {
+		return type;
+	}
+
+	public void setType(MeetingType3Code type) {
+		this.type = type;
+	}
+
+	public MeetingTypeClassification1Choice getClassification() {
+		return classification;
+	}
+
+	public void setClassification(MeetingTypeClassification1Choice classification) {
+		this.classification = classification;
+	}
+
+	public ISODate getAnnouncementDate() {
+		return announcementDate;
+	}
+
+	public void setAnnouncementDate(ISODate announcementDate) {
+		this.announcementDate = announcementDate;
+	}
+
+	public YesNoIndicator getAttendanceRequired() {
+		return attendanceRequired;
+	}
+
+	public void setAttendanceRequired(YesNoIndicator attendanceRequired) {
+		this.attendanceRequired = attendanceRequired;
+	}
+
+	public Max350Text getAttendanceConfirmationInformation() {
+		return attendanceConfirmationInformation;
+	}
+
+	public void setAttendanceConfirmationInformation(Max350Text attendanceConfirmationInformation) {
+		this.attendanceConfirmationInformation = attendanceConfirmationInformation;
+	}
+
+	public DateFormat29Choice getAttendanceConfirmationDeadline() {
+		return attendanceConfirmationDeadline;
+	}
+
+	public void setAttendanceConfirmationDeadline(DateFormat29Choice attendanceConfirmationDeadline) {
+		this.attendanceConfirmationDeadline = attendanceConfirmationDeadline;
+	}
+
+	public DateFormat29Choice getAttendanceConfirmationSTPDeadline() {
+		return attendanceConfirmationSTPDeadline;
+	}
+
+	public void setAttendanceConfirmationSTPDeadline(DateFormat29Choice attendanceConfirmationSTPDeadline) {
+		this.attendanceConfirmationSTPDeadline = attendanceConfirmationSTPDeadline;
+	}
+
+	public DateFormat29Choice getAttendanceConfirmationMarketDeadline() {
+		return attendanceConfirmationMarketDeadline;
+	}
+
+	public void setAttendanceConfirmationMarketDeadline(DateFormat29Choice attendanceConfirmationMarketDeadline) {
+		this.attendanceConfirmationMarketDeadline = attendanceConfirmationMarketDeadline;
+	}
+
+	public Max256Text getAdditionalDocumentationURLAddress() {
+		return additionalDocumentationURLAddress;
+	}
+
+	public void setAdditionalDocumentationURLAddress(Max256Text additionalDocumentationURLAddress) {
+		this.additionalDocumentationURLAddress = additionalDocumentationURLAddress;
+	}
+
+	public List<AdditionalRights2> getAdditionalProcedureDetails() {
+		return additionalProcedureDetails;
+	}
+
+	public void setAdditionalProcedureDetails(List<com.tools20022.repository.msg.AdditionalRights2> additionalProcedureDetails) {
+		this.additionalProcedureDetails = additionalProcedureDetails;
+	}
+
+	public UnitOrFaceAmount1Choice getTotalNumberOfSecuritiesOutstanding() {
+		return totalNumberOfSecuritiesOutstanding;
+	}
+
+	public void setTotalNumberOfSecuritiesOutstanding(UnitOrFaceAmount1Choice totalNumberOfSecuritiesOutstanding) {
+		this.totalNumberOfSecuritiesOutstanding = totalNumberOfSecuritiesOutstanding;
+	}
+
+	public Number getTotalNumberOfVotingRights() {
+		return totalNumberOfVotingRights;
+	}
+
+	public void setTotalNumberOfVotingRights(Number totalNumberOfVotingRights) {
+		this.totalNumberOfVotingRights = totalNumberOfVotingRights;
+	}
+
+	public PostalAddress1 getProxyAppointmentNotificationAddress() {
+		return proxyAppointmentNotificationAddress;
+	}
+
+	public void setProxyAppointmentNotificationAddress(com.tools20022.repository.msg.PostalAddress1 proxyAppointmentNotificationAddress) {
+		this.proxyAppointmentNotificationAddress = proxyAppointmentNotificationAddress;
+	}
+
+	public Proxy2Choice getProxyChoice() {
+		return proxyChoice;
+	}
+
+	public void setProxyChoice(Proxy2Choice proxyChoice) {
+		this.proxyChoice = proxyChoice;
+	}
+
+	public List<MeetingContactPerson2> getContactPersonDetails() {
+		return contactPersonDetails;
+	}
+
+	public void setContactPersonDetails(List<com.tools20022.repository.msg.MeetingContactPerson2> contactPersonDetails) {
+		this.contactPersonDetails = contactPersonDetails;
+	}
+
+	public DateFormat3Choice getResultPublicationDate() {
+		return resultPublicationDate;
+	}
+
+	public void setResultPublicationDate(DateFormat3Choice resultPublicationDate) {
+		this.resultPublicationDate = resultPublicationDate;
 	}
 }

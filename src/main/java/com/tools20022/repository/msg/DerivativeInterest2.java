@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInterest2#OtherNotionalCurrency
- * DerivativeInterest2.OtherNotionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInterest2#mmOtherNotionalCurrency
+ * DerivativeInterest2.mmOtherNotionalCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DerivativeInterest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyCode otherNotionalCurrency;
 	/**
 	 * Currency in which leg 2 of the contract is denominated, in case of
 	 * multi-currency or cross-currency swaps.<br>
@@ -76,8 +77,8 @@ public class DerivativeInterest2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrency
-	 * Derivative.NotionalCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
+	 * Derivative.mmNotionalCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,17 +99,17 @@ public class DerivativeInterest2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> DerivativeInterest2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrency;
 			isDerived = false;
 			xmlTag = "OthrNtnlCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNotionalCurrency";
 			definition = "Currency in which leg 2 of the contract is denominated, in case of multi-currency or cross-currency swaps.\r\n\r\nCurrency in which leg 2 of the swap is denominated, in case of swaptions where the underlying swap is multi-currency.\r\n\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
@@ -116,14 +117,22 @@ public class DerivativeInterest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInterest2.OtherNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInterest2.mmOtherNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DerivativeInterest2";
 				definition = "Specifies a multi-leg interest derivative.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyCode getOtherNotionalCurrency() {
+		return otherNotionalCurrency;
+	}
+
+	public void setOtherNotionalCurrency(ActiveOrHistoricCurrencyCode otherNotionalCurrency) {
+		this.otherNotionalCurrency = otherNotionalCurrency;
 	}
 }

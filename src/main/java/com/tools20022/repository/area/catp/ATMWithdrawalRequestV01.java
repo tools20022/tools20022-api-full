@@ -56,24 +56,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#Header
- * ATMWithdrawalRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#mmHeader
+ * ATMWithdrawalRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#ProtectedATMWithdrawalRequest
- * ATMWithdrawalRequestV01.ProtectedATMWithdrawalRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#mmProtectedATMWithdrawalRequest
+ * ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#ATMWithdrawalRequest
- * ATMWithdrawalRequestV01.ATMWithdrawalRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#mmATMWithdrawalRequest
+ * ATMWithdrawalRequestV01.mmATMWithdrawalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#SecurityTrailer
- * ATMWithdrawalRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#mmSecurityTrailer
+ * ATMWithdrawalRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#identifier
- * ATMWithdrawalRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catp.001.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMWithdrawalRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header20 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -121,17 +120,18 @@ public class ATMWithdrawalRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMWithdrawalRequest;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -155,17 +155,18 @@ public class ATMWithdrawalRequestV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMWithdrawalRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMWithdrawalRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMWdrwlReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMWithdrawalRequest";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMWithdrawalRequest1 aTMWithdrawalRequest;
 	/**
 	 * Information related to the request of a withdrawal transaction from an
 	 * ATM.
@@ -192,17 +193,18 @@ public class ATMWithdrawalRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMWithdrawalRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMWithdrawalRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMWdrwlReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalRequest";
 			definition = "Information related to the request of a withdrawal transaction from an ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMWithdrawalRequest1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -226,42 +228,15 @@ public class ATMWithdrawalRequestV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catp";
-			messageFunctionality = "001";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -276,11 +251,50 @@ public class ATMWithdrawalRequestV01 {
 				rootElement = "Document";
 				xmlTag = "ATMWdrwlReq";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.Header, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.ProtectedATMWithdrawalRequest,
-						com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.ATMWithdrawalRequest, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmHeader, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest,
+						com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmATMWithdrawalRequest, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catp";
+						messageFunctionality = "001";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header20 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header20 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMWithdrawalRequest() {
+		return protectedATMWithdrawalRequest;
+	}
+
+	public void setProtectedATMWithdrawalRequest(ContentInformationType10 protectedATMWithdrawalRequest) {
+		this.protectedATMWithdrawalRequest = protectedATMWithdrawalRequest;
+	}
+
+	public ATMWithdrawalRequest1 getATMWithdrawalRequest() {
+		return aTMWithdrawalRequest;
+	}
+
+	public void setATMWithdrawalRequest(ATMWithdrawalRequest1 aTMWithdrawalRequest) {
+		this.aTMWithdrawalRequest = aTMWithdrawalRequest;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

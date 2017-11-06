@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#CertificateOfDeposit
- * FinancialInstrumentProductType1Code.CertificateOfDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#mmCertificateOfDeposit
+ * FinancialInstrumentProductType1Code.mmCertificateOfDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#CommercialPaper
- * FinancialInstrumentProductType1Code.CommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#mmCommercialPaper
+ * FinancialInstrumentProductType1Code.mmCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#OtherShortTermDebtSecurities
- * FinancialInstrumentProductType1Code.OtherShortTermDebtSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#mmOtherShortTermDebtSecurities
+ * FinancialInstrumentProductType1Code.mmOtherShortTermDebtSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#AssetBackedCommercialPaper
- * FinancialInstrumentProductType1Code.AssetBackedCommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#mmAssetBackedCommercialPaper
+ * FinancialInstrumentProductType1Code.mmAssetBackedCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#FloatingRateNote
- * FinancialInstrumentProductType1Code.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#mmFloatingRateNote
+ * FinancialInstrumentProductType1Code.mmFloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#CallAccountCallMoney
- * FinancialInstrumentProductType1Code.CallAccountCallMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#mmCallAccountCallMoney
+ * FinancialInstrumentProductType1Code.mmCallAccountCallMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#Deposit
- * FinancialInstrumentProductType1Code.Deposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentProductType1Code#mmDeposit
+ * FinancialInstrumentProductType1Code.mmDeposit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +90,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 * name} = "CertificateOfDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateOfDeposit = new MMCode() {
+	public static final MMCode mmCertificateOfDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDeposit";
@@ -113,7 +113,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 * name} = "CommercialPaper"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialPaper = new MMCode() {
+	public static final MMCode mmCommercialPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialPaper";
@@ -136,7 +136,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 * name} = "OtherShortTermDebtSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherShortTermDebtSecurities = new MMCode() {
+	public static final MMCode mmOtherShortTermDebtSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherShortTermDebtSecurities";
@@ -159,7 +159,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 * name} = "AssetBackedCommercialPaper"</li>
 	 * </ul>
 	 */
-	public static final MMCode AssetBackedCommercialPaper = new MMCode() {
+	public static final MMCode mmAssetBackedCommercialPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetBackedCommercialPaper";
@@ -182,7 +182,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 * name} = "FloatingRateNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode FloatingRateNote = new MMCode() {
+	public static final MMCode mmFloatingRateNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
@@ -205,7 +205,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 * name} = "CallAccountCallMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode CallAccountCallMoney = new MMCode() {
+	public static final MMCode mmCallAccountCallMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallAccountCallMoney";
@@ -228,7 +228,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 * name} = "Deposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deposit = new MMCode() {
+	public static final MMCode mmDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deposit";
@@ -239,14 +239,14 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentProductType1Code";
 				definition = "Specifies the type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.CertificateOfDeposit, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.CommercialPaper,
-						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.OtherShortTermDebtSecurities, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.AssetBackedCommercialPaper,
-						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.FloatingRateNote, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.CallAccountCallMoney,
-						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.Deposit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmCertificateOfDeposit, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmCommercialPaper,
+						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmOtherShortTermDebtSecurities, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmAssetBackedCommercialPaper,
+						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmFloatingRateNote, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmCallAccountCallMoney,
+						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmDeposit);
 				trace_lazy = () -> FinancialInstrumentProductTypeCode.mmObject();
 			}
 		});

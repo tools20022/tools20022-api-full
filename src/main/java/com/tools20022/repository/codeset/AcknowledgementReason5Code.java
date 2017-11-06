@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#AccountServicerDeadlineMissed
- * AcknowledgementReason5Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmAccountServicerDeadlineMissed
+ * AcknowledgementReason5Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#MarketPracticeRuleDiscrepency
- * AcknowledgementReason5Code.MarketPracticeRuleDiscrepency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmMarketPracticeRuleDiscrepency
+ * AcknowledgementReason5Code.mmMarketPracticeRuleDiscrepency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#Other
- * AcknowledgementReason5Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmOther
+ * AcknowledgementReason5Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#ConditionalCurrency
- * AcknowledgementReason5Code.ConditionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmConditionalCurrency
+ * AcknowledgementReason5Code.mmConditionalCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#ConditionalRegistrar
- * AcknowledgementReason5Code.ConditionalRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmConditionalRegistrar
+ * AcknowledgementReason5Code.mmConditionalRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#ConditionalRealignement
- * AcknowledgementReason5Code.ConditionalRealignement}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmConditionalRealignement
+ * AcknowledgementReason5Code.mmConditionalRealignement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#NotStraightThroughProcessing
- * AcknowledgementReason5Code.NotStraightThroughProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmNotStraightThroughProcessing
+ * AcknowledgementReason5Code.mmNotStraightThroughProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#AcceptedWithoutVotingRights
- * AcknowledgementReason5Code.AcceptedWithoutVotingRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmAcceptedWithoutVotingRights
+ * AcknowledgementReason5Code.mmAcceptedWithoutVotingRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#MarketDeadlineMissed
- * AcknowledgementReason5Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason5Code#mmMarketDeadlineMissed
+ * AcknowledgementReason5Code.mmMarketDeadlineMissed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -103,7 +103,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -126,7 +126,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "MarketPracticeRuleDiscrepency"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPracticeRuleDiscrepency = new MMCode() {
+	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
@@ -149,7 +149,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -172,7 +172,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "ConditionalCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalCurrency = new MMCode() {
+	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
@@ -195,7 +195,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "ConditionalRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRegistrar = new MMCode() {
+	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
@@ -218,7 +218,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "ConditionalRealignement"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRealignement = new MMCode() {
+	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
@@ -241,7 +241,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "NotStraightThroughProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotStraightThroughProcessing = new MMCode() {
+	public static final MMCode mmNotStraightThroughProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotStraightThroughProcessing";
@@ -264,7 +264,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "AcceptedWithoutVotingRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithoutVotingRights = new MMCode() {
+	public static final MMCode mmAcceptedWithoutVotingRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithoutVotingRights";
@@ -287,7 +287,7 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -298,16 +298,16 @@ public class AcknowledgementReason5Code extends AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason5Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason5Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason5Code.MarketPracticeRuleDiscrepency,
-						com.tools20022.repository.codeset.AcknowledgementReason5Code.Other, com.tools20022.repository.codeset.AcknowledgementReason5Code.ConditionalCurrency,
-						com.tools20022.repository.codeset.AcknowledgementReason5Code.ConditionalRegistrar, com.tools20022.repository.codeset.AcknowledgementReason5Code.ConditionalRealignement,
-						com.tools20022.repository.codeset.AcknowledgementReason5Code.NotStraightThroughProcessing, com.tools20022.repository.codeset.AcknowledgementReason5Code.AcceptedWithoutVotingRights,
-						com.tools20022.repository.codeset.AcknowledgementReason5Code.MarketDeadlineMissed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason5Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason5Code.mmMarketPracticeRuleDiscrepency,
+						com.tools20022.repository.codeset.AcknowledgementReason5Code.mmOther, com.tools20022.repository.codeset.AcknowledgementReason5Code.mmConditionalCurrency,
+						com.tools20022.repository.codeset.AcknowledgementReason5Code.mmConditionalRegistrar, com.tools20022.repository.codeset.AcknowledgementReason5Code.mmConditionalRealignement,
+						com.tools20022.repository.codeset.AcknowledgementReason5Code.mmNotStraightThroughProcessing, com.tools20022.repository.codeset.AcknowledgementReason5Code.mmAcceptedWithoutVotingRights,
+						com.tools20022.repository.codeset.AcknowledgementReason5Code.mmMarketDeadlineMissed);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
 			}
 		});

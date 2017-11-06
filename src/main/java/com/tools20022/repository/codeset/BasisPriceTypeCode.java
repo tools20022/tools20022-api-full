@@ -30,31 +30,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#MorningSessionClosePrice
- * BasisPriceTypeCode.MorningSessionClosePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmMorningSessionClosePrice
+ * BasisPriceTypeCode.mmMorningSessionClosePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#ClosingPrice
- * BasisPriceTypeCode.ClosingPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmClosingPrice
+ * BasisPriceTypeCode.mmClosingPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#CurrentPrice
- * BasisPriceTypeCode.CurrentPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmCurrentPrice
+ * BasisPriceTypeCode.mmCurrentPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#SpecialQuotation
- * BasisPriceTypeCode.SpecialQuotation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#VWAPDay
- * BasisPriceTypeCode.VWAPDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmSpecialQuotation
+ * BasisPriceTypeCode.mmSpecialQuotation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#VWAPMorning
- * BasisPriceTypeCode.VWAPMorning}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmVWAPDay
+ * BasisPriceTypeCode.mmVWAPDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#VWAPAfternoon
- * BasisPriceTypeCode.VWAPAfternoon}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmVWAPMorning
+ * BasisPriceTypeCode.mmVWAPMorning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#StrikePrice
- * BasisPriceTypeCode.StrikePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmVWAPAfternoon
+ * BasisPriceTypeCode.mmVWAPAfternoon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#OpenPrice
- * BasisPriceTypeCode.OpenPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmStrikePrice
+ * BasisPriceTypeCode.mmStrikePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BasisPriceTypeCode#mmOpenPrice
+ * BasisPriceTypeCode.mmOpenPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -67,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -109,7 +110,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Closing price at morning session."</li>
 	 * </ul>
 	 */
-	public static final MMCode MorningSessionClosePrice = new MMCode() {
+	public static final MMCode mmMorningSessionClosePrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MorningSessionClosePrice";
@@ -139,7 +140,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Closing price."</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosingPrice = new MMCode() {
+	public static final MMCode mmClosingPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClosingPrice";
@@ -169,7 +170,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Current price."</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrentPrice = new MMCode() {
+	public static final MMCode mmCurrentPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CurrentPrice";
@@ -199,7 +200,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Price computed after a trading halt."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialQuotation = new MMCode() {
+	public static final MMCode mmSpecialQuotation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialQuotation";
@@ -229,7 +230,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Value weighted average price through the day."</li>
 	 * </ul>
 	 */
-	public static final MMCode VWAPDay = new MMCode() {
+	public static final MMCode mmVWAPDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VWAPDay";
@@ -259,7 +260,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Value weighted average price through a morning session."</li>
 	 * </ul>
 	 */
-	public static final MMCode VWAPMorning = new MMCode() {
+	public static final MMCode mmVWAPMorning = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VWAPMorning";
@@ -290,7 +291,7 @@ public class BasisPriceTypeCode {
 	 * "Value weighted average price through an afternoon session."</li>
 	 * </ul>
 	 */
-	public static final MMCode VWAPAfternoon = new MMCode() {
+	public static final MMCode mmVWAPAfternoon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VWAPAfternoon";
@@ -320,7 +321,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Exercise price defined on a derivative product."</li>
 	 * </ul>
 	 */
-	public static final MMCode StrikePrice = new MMCode() {
+	public static final MMCode mmStrikePrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StrikePrice";
@@ -350,7 +351,7 @@ public class BasisPriceTypeCode {
 	 * definition} = "Price of a trade opening session."</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenPrice = new MMCode() {
+	public static final MMCode mmOpenPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpenPrice";
@@ -363,15 +364,15 @@ public class BasisPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MSCP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BasisPriceTypeCode";
 				definition = "Basis price type in a bid order. Used for list trading.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BasisPriceTypeCode.MorningSessionClosePrice, com.tools20022.repository.codeset.BasisPriceTypeCode.ClosingPrice,
-						com.tools20022.repository.codeset.BasisPriceTypeCode.CurrentPrice, com.tools20022.repository.codeset.BasisPriceTypeCode.SpecialQuotation, com.tools20022.repository.codeset.BasisPriceTypeCode.VWAPDay,
-						com.tools20022.repository.codeset.BasisPriceTypeCode.VWAPMorning, com.tools20022.repository.codeset.BasisPriceTypeCode.VWAPAfternoon, com.tools20022.repository.codeset.BasisPriceTypeCode.StrikePrice,
-						com.tools20022.repository.codeset.BasisPriceTypeCode.OpenPrice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BasisPriceTypeCode.mmMorningSessionClosePrice, com.tools20022.repository.codeset.BasisPriceTypeCode.mmClosingPrice,
+						com.tools20022.repository.codeset.BasisPriceTypeCode.mmCurrentPrice, com.tools20022.repository.codeset.BasisPriceTypeCode.mmSpecialQuotation, com.tools20022.repository.codeset.BasisPriceTypeCode.mmVWAPDay,
+						com.tools20022.repository.codeset.BasisPriceTypeCode.mmVWAPMorning, com.tools20022.repository.codeset.BasisPriceTypeCode.mmVWAPAfternoon, com.tools20022.repository.codeset.BasisPriceTypeCode.mmStrikePrice,
+						com.tools20022.repository.codeset.BasisPriceTypeCode.mmOpenPrice);
 				derivation_lazy = () -> Arrays.asList(BasisPriceType1Code.mmObject());
 			}
 		});

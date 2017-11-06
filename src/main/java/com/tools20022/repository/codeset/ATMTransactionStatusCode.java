@@ -30,23 +30,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#Success
- * ATMTransactionStatusCode.Success}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#mmSuccess
+ * ATMTransactionStatusCode.mmSuccess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#Doubt
- * ATMTransactionStatusCode.Doubt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#mmDoubt
+ * ATMTransactionStatusCode.mmDoubt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#Failure
- * ATMTransactionStatusCode.Failure}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#mmFailure
+ * ATMTransactionStatusCode.mmFailure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#Full
- * ATMTransactionStatusCode.Full}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#mmFull
+ * ATMTransactionStatusCode.mmFull}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#Partial
- * ATMTransactionStatusCode.Partial}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#mmPartial
+ * ATMTransactionStatusCode.mmPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#None
- * ATMTransactionStatusCode.None}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#mmNone
+ * ATMTransactionStatusCode.mmNone}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,7 +97,7 @@ public class ATMTransactionStatusCode {
 	 * definition} = "Transaction was successfully completed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Success = new MMCode() {
+	public static final MMCode mmSuccess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
@@ -128,7 +128,7 @@ public class ATMTransactionStatusCode {
 	 * "Undetermined status, for instance possibly forgotten notes."</li>
 	 * </ul>
 	 */
-	public static final MMCode Doubt = new MMCode() {
+	public static final MMCode mmDoubt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Doubt";
@@ -158,7 +158,7 @@ public class ATMTransactionStatusCode {
 	 * definition} = "Transaction failed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Failure = new MMCode() {
+	public static final MMCode mmFailure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
@@ -189,7 +189,7 @@ public class ATMTransactionStatusCode {
 	 * "Total presented amount is equal to the amount to dispense."</li>
 	 * </ul>
 	 */
-	public static final MMCode Full = new MMCode() {
+	public static final MMCode mmFull = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Full";
@@ -220,7 +220,7 @@ public class ATMTransactionStatusCode {
 	 * "Total presented amount is lower than the amount to dispense."</li>
 	 * </ul>
 	 */
-	public static final MMCode Partial = new MMCode() {
+	public static final MMCode mmPartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Partial";
@@ -250,7 +250,7 @@ public class ATMTransactionStatusCode {
 	 * definition} = "Total presented amount is equal to zero."</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -263,13 +263,13 @@ public class ATMTransactionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionStatusCode";
 				definition = "Status of an ATM transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMTransactionStatusCode.Success, com.tools20022.repository.codeset.ATMTransactionStatusCode.Doubt,
-						com.tools20022.repository.codeset.ATMTransactionStatusCode.Failure, com.tools20022.repository.codeset.ATMTransactionStatusCode.Full, com.tools20022.repository.codeset.ATMTransactionStatusCode.Partial,
-						com.tools20022.repository.codeset.ATMTransactionStatusCode.None);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMTransactionStatusCode.mmSuccess, com.tools20022.repository.codeset.ATMTransactionStatusCode.mmDoubt,
+						com.tools20022.repository.codeset.ATMTransactionStatusCode.mmFailure, com.tools20022.repository.codeset.ATMTransactionStatusCode.mmFull, com.tools20022.repository.codeset.ATMTransactionStatusCode.mmPartial,
+						com.tools20022.repository.codeset.ATMTransactionStatusCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(ATMTransactionStatus1Code.mmObject(), ATMTransactionStatus2Code.mmObject());
 			}
 		});

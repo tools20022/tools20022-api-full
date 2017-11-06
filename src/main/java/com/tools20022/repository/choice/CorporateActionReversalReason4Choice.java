@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionReversalReason4Choice#Code
- * CorporateActionReversalReason4Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionReversalReason4Choice#mmCode
+ * CorporateActionReversalReason4Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionReversalReason4Choice#Proprietary
- * CorporateActionReversalReason4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionReversalReason4Choice#mmProprietary
+ * CorporateActionReversalReason4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionReversalReason4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionReversalReason1Code code;
 	/**
 	 * Standard code to specify the reason for the reversal.
 	 * <p>
@@ -80,8 +81,8 @@ public class CorporateActionReversalReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#ReversalReason
-	 * CorporateActionStatusReason.ReversalReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmReversalReason
+	 * CorporateActionStatusReason.mmReversalReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class CorporateActionReversalReason4Choice {
 	 * definition} = "Standard code to specify the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmReversalReason;
 			componentContext_lazy = () -> CorporateActionReversalReason4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.ReversalReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the reason for the reversal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Proprietary identification for the reason of the reversal.
 	 * <p>
@@ -127,8 +129,8 @@ public class CorporateActionReversalReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#ReversalReason
-	 * CorporateActionStatusReason.ReversalReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmReversalReason
+	 * CorporateActionStatusReason.mmReversalReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class CorporateActionReversalReason4Choice {
 	 * "Proprietary identification for the reason of the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmReversalReason;
 			componentContext_lazy = () -> CorporateActionReversalReason4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.ReversalReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification for the reason of the reversal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class CorporateActionReversalReason4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionReversalReason4Choice.Code, com.tools20022.repository.choice.CorporateActionReversalReason4Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionReversalReason4Choice.mmCode, com.tools20022.repository.choice.CorporateActionReversalReason4Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionReversalReason4Choice";
 				definition = "Choice between a standard code or proprietary code to specify the reason for the reversal.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionReversalReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionReversalReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

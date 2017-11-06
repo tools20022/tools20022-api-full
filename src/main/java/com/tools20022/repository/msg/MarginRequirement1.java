@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginRequirement1#DeliverMarginAmount
- * MarginRequirement1.DeliverMarginAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginRequirement1#mmDeliverMarginAmount
+ * MarginRequirement1.mmDeliverMarginAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginRequirement1#ReturnMarginAmount
- * MarginRequirement1.ReturnMarginAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginRequirement1#mmReturnMarginAmount
+ * MarginRequirement1.mmReturnMarginAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginRequirement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount deliverMarginAmount;
 	/**
 	 * Amount of new margin that will be delivered to one party by the other
 	 * party after rounding, threshold and minimum transfer amount are taken
@@ -81,8 +82,8 @@ public class MarginRequirement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#DeliverMarginAmount
-	 * MarginAmountRequirement.DeliverMarginAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#mmDeliverMarginAmount
+	 * MarginAmountRequirement.mmDeliverMarginAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class MarginRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliverMarginAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliverMarginAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginAmountRequirement.mmDeliverMarginAmount;
 			componentContext_lazy = () -> MarginRequirement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginAmountRequirement.DeliverMarginAmount;
 			isDerived = false;
 			xmlTag = "DlvrMrgnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverMarginAmount";
 			definition = "Amount of new margin that will be delivered to one party by the other party after rounding, threshold and minimum transfer amount are taken into account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount returnMarginAmount;
 	/**
 	 * Amount of new margin that will be recalled to one party from the other
 	 * party after rounding, threshold and minimum transfer amount are taken
@@ -132,8 +134,8 @@ public class MarginRequirement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#ReturnMarginAmount
-	 * MarginAmountRequirement.ReturnMarginAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#mmReturnMarginAmount
+	 * MarginAmountRequirement.mmReturnMarginAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,17 +156,17 @@ public class MarginRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReturnMarginAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReturnMarginAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginAmountRequirement.mmReturnMarginAmount;
 			componentContext_lazy = () -> MarginRequirement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginAmountRequirement.ReturnMarginAmount;
 			isDerived = false;
 			xmlTag = "RtrMrgnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnMarginAmount";
 			definition = "Amount of new margin that will be recalled to one party from the other party after rounding, threshold and minimum transfer amount are taken into account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -172,14 +174,30 @@ public class MarginRequirement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.DeliverMarginAmount, com.tools20022.repository.msg.MarginRequirement1.ReturnMarginAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.mmDeliverMarginAmount, com.tools20022.repository.msg.MarginRequirement1.mmReturnMarginAmount);
 				trace_lazy = () -> MarginAmountRequirement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginRequirement1";
 				definition = "Amount of expected margin required by any of the parties of the margin calculation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getDeliverMarginAmount() {
+		return deliverMarginAmount;
+	}
+
+	public void setDeliverMarginAmount(ActiveCurrencyAndAmount deliverMarginAmount) {
+		this.deliverMarginAmount = deliverMarginAmount;
+	}
+
+	public ActiveCurrencyAndAmount getReturnMarginAmount() {
+		return returnMarginAmount;
+	}
+
+	public void setReturnMarginAmount(ActiveCurrencyAndAmount returnMarginAmount) {
+		this.returnMarginAmount = returnMarginAmount;
 	}
 }

@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#Days
- * AutoExtend1Choice.Days}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#Months
- * AutoExtend1Choice.Months}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#Years
- * AutoExtend1Choice.Years}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#Date
- * AutoExtend1Choice.Date}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#mmDays
+ * AutoExtend1Choice.mmDays}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#mmMonths
+ * AutoExtend1Choice.mmMonths}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#mmYears
+ * AutoExtend1Choice.mmYears}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AutoExtend1Choice#mmDate
+ * AutoExtend1Choice.mmDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AutoExtend1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number days;
 	/**
 	 * Number of days.
 	 * <p>
@@ -88,7 +89,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Number of days."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Days = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDays = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class AutoExtend1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
 			definition = "Number of days.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number months;
 	/**
 	 * Number of months
 	 * <p>
@@ -128,7 +130,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Number of months"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Months = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMonths = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -136,11 +138,12 @@ public class AutoExtend1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Months";
 			definition = "Number of months";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number years;
 	/**
 	 * Number of years.
 	 * <p>
@@ -168,7 +171,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Number of years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Years = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmYears = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -176,11 +179,12 @@ public class AutoExtend1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Years";
 			definition = "Number of years.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Auto extension end date.
 	 * <p>
@@ -208,7 +212,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Auto extension end date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -216,8 +220,8 @@ public class AutoExtend1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Auto extension end date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -225,14 +229,46 @@ public class AutoExtend1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutoExtend1Choice.Days, com.tools20022.repository.choice.AutoExtend1Choice.Months, com.tools20022.repository.choice.AutoExtend1Choice.Years,
-						com.tools20022.repository.choice.AutoExtend1Choice.Date);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutoExtend1Choice.mmDays, com.tools20022.repository.choice.AutoExtend1Choice.mmMonths, com.tools20022.repository.choice.AutoExtend1Choice.mmYears,
+						com.tools20022.repository.choice.AutoExtend1Choice.mmDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AutoExtend1Choice";
 				definition = "Choice of format for the auto extend period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getDays() {
+		return days;
+	}
+
+	public void setDays(Number days) {
+		this.days = days;
+	}
+
+	public Number getMonths() {
+		return months;
+	}
+
+	public void setMonths(Number months) {
+		this.months = months;
+	}
+
+	public Number getYears() {
+		return years;
+	}
+
+	public void setYears(Number years) {
+		this.years = years;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
 	}
 }

@@ -30,12 +30,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CutOffCode#AnticipatedEarlyCutoff
- * CutOffCode.AnticipatedEarlyCutoff}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#Early
- * CutOffCode.Early}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#Late
- * CutOffCode.Late}</li>
+ * {@linkplain com.tools20022.repository.codeset.CutOffCode#mmAnticipatedEarlyCutoff
+ * CutOffCode.mmAnticipatedEarlyCutoff}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#mmEarly
+ * CutOffCode.mmEarly}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#mmLate
+ * CutOffCode.mmLate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class CutOffCode {
 	 * definition} = "Cut-off may change to early."</li>
 	 * </ul>
 	 */
-	public static final MMCode AnticipatedEarlyCutoff = new MMCode() {
+	public static final MMCode mmAnticipatedEarlyCutoff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnticipatedEarlyCutoff";
@@ -121,7 +121,7 @@ public class CutOffCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Early = new MMCode() {
+	public static final MMCode mmEarly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Early";
@@ -153,7 +153,7 @@ public class CutOffCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Late = new MMCode() {
+	public static final MMCode mmLate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
@@ -166,12 +166,12 @@ public class CutOffCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AERL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CutOffCode";
 				definition = "Specifies the cut-off  type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CutOffCode.AnticipatedEarlyCutoff, com.tools20022.repository.codeset.CutOffCode.Early, com.tools20022.repository.codeset.CutOffCode.Late);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CutOffCode.mmAnticipatedEarlyCutoff, com.tools20022.repository.codeset.CutOffCode.mmEarly, com.tools20022.repository.codeset.CutOffCode.mmLate);
 				derivation_lazy = () -> Arrays.asList(CutOff1Code.mmObject());
 			}
 		});

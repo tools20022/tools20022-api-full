@@ -33,35 +33,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#DisplayMessage
- * ActionType1Code.DisplayMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmDisplayMessage
+ * ActionType1Code.mmDisplayMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#PrintMessage
- * ActionType1Code.PrintMessage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#Referral
- * ActionType1Code.Referral}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmPrintMessage
+ * ActionType1Code.mmPrintMessage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#mmReferral
+ * ActionType1Code.mmReferral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#CaptureCard
- * ActionType1Code.CaptureCard}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#PINRetry
- * ActionType1Code.PINRetry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#PINLastTry
- * ActionType1Code.PINLastTry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmCaptureCard
+ * ActionType1Code.mmCaptureCard}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#mmPINRetry
+ * ActionType1Code.mmPINRetry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#RequestData
- * ActionType1Code.RequestData}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#Busy
- * ActionType1Code.Busy}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmPINLastTry
+ * ActionType1Code.mmPINLastTry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#IdentificationRequired
- * ActionType1Code.IdentificationRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmRequestData
+ * ActionType1Code.mmRequestData}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#mmBusy
+ * ActionType1Code.mmBusy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmIdentificationRequired
+ * ActionType1Code.mmIdentificationRequired}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +98,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "DisplayMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode DisplayMessage = new MMCode() {
+	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
@@ -120,7 +121,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "PrintMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrintMessage = new MMCode() {
+	public static final MMCode mmPrintMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintMessage";
@@ -143,7 +144,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "Referral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Referral = new MMCode() {
+	public static final MMCode mmReferral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
@@ -166,7 +167,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "CaptureCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode CaptureCard = new MMCode() {
+	public static final MMCode mmCaptureCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
@@ -189,7 +190,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "PINRetry"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINRetry = new MMCode() {
+	public static final MMCode mmPINRetry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
@@ -212,7 +213,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "PINLastTry"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINLastTry = new MMCode() {
+	public static final MMCode mmPINLastTry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
@@ -235,7 +236,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "RequestData"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestData = new MMCode() {
+	public static final MMCode mmRequestData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
@@ -258,7 +259,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "Busy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Busy = new MMCode() {
+	public static final MMCode mmBusy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
@@ -281,7 +282,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "IdentificationRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode IdentificationRequired = new MMCode() {
+	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
@@ -292,14 +293,15 @@ public class ActionType1Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionType1Code";
 				definition = "Type of action to be performed by the POI System.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType1Code.DisplayMessage, com.tools20022.repository.codeset.ActionType1Code.PrintMessage, com.tools20022.repository.codeset.ActionType1Code.Referral,
-						com.tools20022.repository.codeset.ActionType1Code.CaptureCard, com.tools20022.repository.codeset.ActionType1Code.PINRetry, com.tools20022.repository.codeset.ActionType1Code.PINLastTry,
-						com.tools20022.repository.codeset.ActionType1Code.RequestData, com.tools20022.repository.codeset.ActionType1Code.Busy, com.tools20022.repository.codeset.ActionType1Code.IdentificationRequired);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType1Code.mmDisplayMessage, com.tools20022.repository.codeset.ActionType1Code.mmPrintMessage,
+						com.tools20022.repository.codeset.ActionType1Code.mmReferral, com.tools20022.repository.codeset.ActionType1Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType1Code.mmPINRetry,
+						com.tools20022.repository.codeset.ActionType1Code.mmPINLastTry, com.tools20022.repository.codeset.ActionType1Code.mmRequestData, com.tools20022.repository.codeset.ActionType1Code.mmBusy,
+						com.tools20022.repository.codeset.ActionType1Code.mmIdentificationRequired);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

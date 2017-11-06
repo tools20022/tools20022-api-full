@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityMetal1Choice#NonPrecious
- * AssetClassCommodityMetal1Choice.NonPrecious}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityMetal1Choice#mmNonPrecious
+ * AssetClassCommodityMetal1Choice.mmNonPrecious}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityMetal1Choice#Precious
- * AssetClassCommodityMetal1Choice.Precious}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityMetal1Choice#mmPrecious
+ * AssetClassCommodityMetal1Choice.mmPrecious}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetClassCommodityMetal1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MetalCommodityNonPrecious1 nonPrecious;
 	/**
 	 * Non-precious metal commodity derivative.
 	 * <p>
@@ -75,8 +76,8 @@ public class AssetClassCommodityMetal1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,21 +96,22 @@ public class AssetClassCommodityMetal1Choice {
 	 * definition} = "Non-precious metal commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonPrecious = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonPrecious = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityMetal1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "NonPrcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPrecious";
 			definition = "Non-precious metal commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MetalCommodityNonPrecious1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MetalCommodityNonPrecious1.mmObject();
 		}
 	};
+	protected MetalCommodityPrecious1 precious;
 	/**
 	 * Precious metal commodity derivative.
 	 * <p>
@@ -122,8 +124,8 @@ public class AssetClassCommodityMetal1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,33 +144,49 @@ public class AssetClassCommodityMetal1Choice {
 	 * definition} = "Precious metal commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Precious = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrecious = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityMetal1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "Prcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precious";
 			definition = "Precious metal commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MetalCommodityPrecious1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MetalCommodityPrecious1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.NonPrecious, com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.Precious);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmNonPrecious, com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmPrecious);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityMetal1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is metal.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MetalCommodityNonPrecious1 getNonPrecious() {
+		return nonPrecious;
+	}
+
+	public void setNonPrecious(MetalCommodityNonPrecious1 nonPrecious) {
+		this.nonPrecious = nonPrecious;
+	}
+
+	public MetalCommodityPrecious1 getPrecious() {
+		return precious;
+	}
+
+	public void setPrecious(MetalCommodityPrecious1 precious) {
+		this.precious = precious;
 	}
 }

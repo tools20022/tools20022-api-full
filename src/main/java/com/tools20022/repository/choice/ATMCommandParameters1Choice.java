@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ATMCommandParameters1Choice#ATMRequiredGlobalStatus
- * ATMCommandParameters1Choice.ATMRequiredGlobalStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ATMCommandParameters1Choice#mmATMRequiredGlobalStatus
+ * ATMCommandParameters1Choice.mmATMRequiredGlobalStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ATMCommandParameters1Choice#ExpectedMessageFunction
- * ATMCommandParameters1Choice.ExpectedMessageFunction}</li>
+ * {@linkplain com.tools20022.repository.choice.ATMCommandParameters1Choice#mmExpectedMessageFunction
+ * ATMCommandParameters1Choice.mmExpectedMessageFunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ATMCommandParameters1Choice#RequiredConfigurationParameter
- * ATMCommandParameters1Choice.RequiredConfigurationParameter}</li>
+ * {@linkplain com.tools20022.repository.choice.ATMCommandParameters1Choice#mmRequiredConfigurationParameter
+ * ATMCommandParameters1Choice.mmRequiredConfigurationParameter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCommandParameters1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMStatus1Code aTMRequiredGlobalStatus;
 	/**
 	 * Required status of the ATM, parameters of the status update command.
 	 * <p>
@@ -89,8 +90,8 @@ public class ATMCommandParameters1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#Status System.Status}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmStatus
+	 * System.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,27 +113,28 @@ public class ATMCommandParameters1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters2Choice#ATMRequiredGlobalStatus
-	 * ATMCommandParameters2Choice.ATMRequiredGlobalStatus}</li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters2Choice#mmATMRequiredGlobalStatus
+	 * ATMCommandParameters2Choice.mmATMRequiredGlobalStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ATMRequiredGlobalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmATMRequiredGlobalStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmStatus;
 			componentContext_lazy = () -> ATMCommandParameters1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.Status;
 			isDerived = false;
 			xmlTag = "ATMReqrdGblSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMRequiredGlobalStatus";
 			definition = "Required status of the ATM, parameters of the status update command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.ATMRequiredGlobalStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmATMRequiredGlobalStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
 		}
 	};
+	protected MessageFunction8Code expectedMessageFunction;
 	/**
 	 * Message to send for the send message command.
 	 * <p>
@@ -163,13 +165,13 @@ public class ATMCommandParameters1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters2Choice#ExpectedMessageFunction
-	 * ATMCommandParameters2Choice.ExpectedMessageFunction}</li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters2Choice#mmExpectedMessageFunction
+	 * ATMCommandParameters2Choice.mmExpectedMessageFunction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedMessageFunction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommandParameters1Choice.mmObject();
 			isDerived = false;
@@ -177,12 +179,13 @@ public class ATMCommandParameters1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedMessageFunction";
 			definition = "Message to send for the send message command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.ExpectedMessageFunction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmExpectedMessageFunction);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
 		}
 	};
+	protected ATMConfigurationParameter1 requiredConfigurationParameter;
 	/**
 	 * Parameters to be used by the configuration update command.
 	 * <p>
@@ -213,13 +216,13 @@ public class ATMCommandParameters1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters2Choice#RequiredConfigurationParameter
-	 * ATMCommandParameters2Choice.RequiredConfigurationParameter}</li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters2Choice#mmRequiredConfigurationParameter
+	 * ATMCommandParameters2Choice.mmRequiredConfigurationParameter}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequiredConfigurationParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequiredConfigurationParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCommandParameters1Choice.mmObject();
 			isDerived = false;
@@ -227,21 +230,21 @@ public class ATMCommandParameters1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredConfigurationParameter";
 			definition = "Parameters to be used by the configuration update command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.RequiredConfigurationParameter);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmRequiredConfigurationParameter);
 			maxOccurs = 1;
-			type_lazy = () -> ATMConfigurationParameter1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ATMConfigurationParameter1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters1Choice.ATMRequiredGlobalStatus, com.tools20022.repository.choice.ATMCommandParameters1Choice.ExpectedMessageFunction,
-						com.tools20022.repository.choice.ATMCommandParameters1Choice.RequiredConfigurationParameter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters1Choice.mmATMRequiredGlobalStatus, com.tools20022.repository.choice.ATMCommandParameters1Choice.mmExpectedMessageFunction,
+						com.tools20022.repository.choice.ATMCommandParameters1Choice.mmRequiredConfigurationParameter);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandParameters1Choice";
 				definition = "Specific parameters attached to an ATM command.";
@@ -249,5 +252,29 @@ public class ATMCommandParameters1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMStatus1Code getATMRequiredGlobalStatus() {
+		return aTMRequiredGlobalStatus;
+	}
+
+	public void setATMRequiredGlobalStatus(ATMStatus1Code aTMRequiredGlobalStatus) {
+		this.aTMRequiredGlobalStatus = aTMRequiredGlobalStatus;
+	}
+
+	public MessageFunction8Code getExpectedMessageFunction() {
+		return expectedMessageFunction;
+	}
+
+	public void setExpectedMessageFunction(MessageFunction8Code expectedMessageFunction) {
+		this.expectedMessageFunction = expectedMessageFunction;
+	}
+
+	public ATMConfigurationParameter1 getRequiredConfigurationParameter() {
+		return requiredConfigurationParameter;
+	}
+
+	public void setRequiredConfigurationParameter(ATMConfigurationParameter1 requiredConfigurationParameter) {
+		this.requiredConfigurationParameter = requiredConfigurationParameter;
 	}
 }

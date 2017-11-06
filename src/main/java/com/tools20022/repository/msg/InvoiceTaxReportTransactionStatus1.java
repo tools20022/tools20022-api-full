@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.TaxReportingStatus2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details of each individual invoice tax report transaction.
@@ -35,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#TaxReportIdentification
- * InvoiceTaxReportTransactionStatus1.TaxReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmTaxReportIdentification
+ * InvoiceTaxReportTransactionStatus1.mmTaxReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#Status
- * InvoiceTaxReportTransactionStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmStatus
+ * InvoiceTaxReportTransactionStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#ValidationRule
- * InvoiceTaxReportTransactionStatus1.ValidationRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmValidationRule
+ * InvoiceTaxReportTransactionStatus1.mmValidationRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#SupplementaryData
- * InvoiceTaxReportTransactionStatus1.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1#mmSupplementaryData
+ * InvoiceTaxReportTransactionStatus1.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,15 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#TransactionStatus
- * InvoiceTaxReportStatusAdviceV01.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01#mmTransactionStatus
+ * InvoiceTaxReportStatusAdviceV01.mmTransactionStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceTaxReportTransactionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text taxReportIdentification;
 	/**
 	 * Report identification, for example invoice number or report number from
 	 * point of sales system.
@@ -111,11 +113,11 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#UniqueTransactionIdentifier
-	 * MoneyMarketTransactionStatus2.UniqueTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmUniqueTransactionIdentifier
+	 * MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -123,12 +125,13 @@ public class InvoiceTaxReportTransactionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReportIdentification";
 			definition = "Report identification, for example invoice number or report number from point of sales system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.UniqueTransactionIdentifier;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TaxReportingStatus2Code status;
 	/**
 	 * Defines status of the reported transaction.
 	 * <p>
@@ -158,11 +161,11 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#Status
-	 * MoneyMarketTransactionStatus2.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmStatus
+	 * MoneyMarketTransactionStatus2.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -170,12 +173,13 @@ public class InvoiceTaxReportTransactionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines status of the reported transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.Status;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxReportingStatus2Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * Provides the details of the rule which could not be validated.
 	 * <p>
@@ -205,11 +209,11 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#ValidationRule
-	 * MoneyMarketTransactionStatus2.ValidationRule}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmValidationRule
+	 * MoneyMarketTransactionStatus2.mmValidationRule}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -217,12 +221,13 @@ public class InvoiceTaxReportTransactionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.ValidationRule;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmValidationRule;
 			minOccurs = 0;
-			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -253,11 +258,11 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#SupplementaryData
-	 * MoneyMarketTransactionStatus2.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmSupplementaryData
+	 * MoneyMarketTransactionStatus2.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -265,20 +270,20 @@ public class InvoiceTaxReportTransactionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmSupplementaryData;
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.TaxReportIdentification, com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.Status,
-						com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.ValidationRule, com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.SupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.TransactionStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmTaxReportIdentification, com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmStatus,
+						com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmValidationRule, com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.mmTransactionStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvoiceTaxReportTransactionStatus1";
 				definition = "Provides the details of each individual invoice tax report transaction.";
@@ -286,5 +291,37 @@ public class InvoiceTaxReportTransactionStatus1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTaxReportIdentification() {
+		return taxReportIdentification;
+	}
+
+	public void setTaxReportIdentification(Max35Text taxReportIdentification) {
+		this.taxReportIdentification = taxReportIdentification;
+	}
+
+	public TaxReportingStatus2Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(TaxReportingStatus2Code status) {
+		this.status = status;
+	}
+
+	public List<GenericValidationRuleIdentification1> getValidationRule() {
+		return validationRule;
+	}
+
+	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = validationRule;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

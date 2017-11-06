@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD1#PlaceAndName
- * CorporateActionPriceSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD1#mmPlaceAndName
+ * CorporateActionPriceSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD1#DeclaredCashInLieuPrice
- * CorporateActionPriceSD1.DeclaredCashInLieuPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD1#mmDeclaredCashInLieuPrice
+ * CorporateActionPriceSD1.mmDeclaredCashInLieuPrice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPriceSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -89,7 +90,7 @@ public class CorporateActionPriceSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPriceSD1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class CorporateActionPriceSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAnd13DecimalAmount declaredCashInLieuPrice;
 	/**
 	 * Corresponding cash in lieu price as declared on the market by issuer/
 	 * offeror.
@@ -133,7 +135,7 @@ public class CorporateActionPriceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclaredCashInLieuPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclaredCashInLieuPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPriceSD1.mmObject();
 			isDerived = false;
@@ -141,8 +143,8 @@ public class CorporateActionPriceSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredCashInLieuPrice";
 			definition = "Corresponding cash in lieu price as declared on the market by issuer/ offeror.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -150,13 +152,29 @@ public class CorporateActionPriceSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPriceSD1.PlaceAndName, com.tools20022.repository.msg.CorporateActionPriceSD1.DeclaredCashInLieuPrice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPriceSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionPriceSD1.mmDeclaredCashInLieuPrice);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPriceSD1";
 				definition = "Provides additional information regarding corporate action option securities movement price details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public RestrictedFINActiveCurrencyAnd13DecimalAmount getDeclaredCashInLieuPrice() {
+		return declaredCashInLieuPrice;
+	}
+
+	public void setDeclaredCashInLieuPrice(RestrictedFINActiveCurrencyAnd13DecimalAmount declaredCashInLieuPrice) {
+		this.declaredCashInLieuPrice = declaredCashInLieuPrice;
 	}
 }

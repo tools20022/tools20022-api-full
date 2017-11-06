@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#ModificationReason
- * InvestmentAccountModificationDetails.ModificationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#mmModificationReason
+ * InvestmentAccountModificationDetails.mmModificationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#AccountApplicationIdentification
- * InvestmentAccountModificationDetails.AccountApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountModificationDetails#mmAccountApplicationIdentification
+ * InvestmentAccountModificationDetails.mmAccountApplicationIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,21 +47,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#InstructionDetails
- * AccountModificationInstructionV02.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmInstructionDetails
+ * AccountModificationInstructionV02.mmInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#InstructionDetails
- * AccountModificationInstructionV03.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#mmInstructionDetails
+ * AccountModificationInstructionV03.mmInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#InstructionDetails
- * AccountModificationInstructionV04.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#mmInstructionDetails
+ * AccountModificationInstructionV04.mmInstructionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccountModificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text modificationReason;
 	/**
 	 * Reason for the modification brought to the investment account
 	 * information.
@@ -116,13 +117,13 @@ public class InvestmentAccountModificationDetails {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#ModificationReason
-	 * InvestmentAccountModification1.ModificationReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#mmModificationReason
+	 * InvestmentAccountModification1.mmModificationReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 			isDerived = false;
@@ -130,12 +131,13 @@ public class InvestmentAccountModificationDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationReason";
 			definition = "Reason for the modification brought to the investment account information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.ModificationReason);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.mmModificationReason);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text accountApplicationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the account modification request.
 	 * <p>
@@ -166,13 +168,13 @@ public class InvestmentAccountModificationDetails {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#AccountApplicationIdentification
-	 * InvestmentAccountModification1.AccountApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountModification1#mmAccountApplicationIdentification
+	 * InvestmentAccountModification1.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 			isDerived = false;
@@ -180,9 +182,9 @@ public class InvestmentAccountModificationDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account modification request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.AccountApplicationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.mmAccountApplicationIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -190,11 +192,11 @@ public class InvestmentAccountModificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModificationDetails.ModificationReason,
-						com.tools20022.repository.msg.InvestmentAccountModificationDetails.AccountApplicationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.InstructionDetails,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.InstructionDetails, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.InstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmModificationReason,
+						com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInstructionDetails,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmInstructionDetails, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmInstructionDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountModificationDetails";
 				definition = "Provide information about the reason for the modification and about the application request which triggered this modification.";
@@ -202,5 +204,21 @@ public class InvestmentAccountModificationDetails {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getModificationReason() {
+		return modificationReason;
+	}
+
+	public void setModificationReason(Max350Text modificationReason) {
+		this.modificationReason = modificationReason;
+	}
+
+	public Max35Text getAccountApplicationIdentification() {
+		return accountApplicationIdentification;
+	}
+
+	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 }

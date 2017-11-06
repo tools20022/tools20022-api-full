@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ChargesInformation4#ChargesAmount
- * ChargesInformation4.ChargesAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ChargesInformation4#mmChargesAmount
+ * ChargesInformation4.mmChargesAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ChargesInformation4#ChargesParty
- * ChargesInformation4.ChargesParty}</li>
+ * {@linkplain com.tools20022.repository.msg.ChargesInformation4#mmChargesParty
+ * ChargesInformation4.mmChargesParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChargesInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EuroMax9Amount chargesAmount;
 	/**
 	 * Transaction charges to be paid by the charge bearer.
 	 * <p>
@@ -76,8 +77,8 @@ public class ChargesInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class ChargesInformation4 {
 	 * definition} = "Transaction charges to be paid by the charge bearer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> ChargesInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ChrgsAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmount";
 			definition = "Transaction charges to be paid by the charge bearer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EuroMax9Amount.mmObject();
 		}
 	};
+	protected FinancialInstitution2 chargesParty;
 	/**
 	 * Party that takes the transaction charges or to which the transaction
 	 * charges are due.
@@ -122,8 +124,8 @@ public class ChargesInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,33 +146,49 @@ public class ChargesInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargesParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargesParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> ChargesInformation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "ChrgsPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesParty";
 			definition = "Party that takes the transaction charges or to which the transaction charges are due.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitution2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesInformation4.ChargesAmount, com.tools20022.repository.msg.ChargesInformation4.ChargesParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesInformation4.mmChargesAmount, com.tools20022.repository.msg.ChargesInformation4.mmChargesParty);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ChargesInformation4";
 				definition = "Information on the charges related to the payment transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EuroMax9Amount getChargesAmount() {
+		return chargesAmount;
+	}
+
+	public void setChargesAmount(EuroMax9Amount chargesAmount) {
+		this.chargesAmount = chargesAmount;
+	}
+
+	public FinancialInstitution2 getChargesParty() {
+		return chargesParty;
+	}
+
+	public void setChargesParty(com.tools20022.repository.msg.FinancialInstitution2 chargesParty) {
+		this.chargesParty = chargesParty;
 	}
 }

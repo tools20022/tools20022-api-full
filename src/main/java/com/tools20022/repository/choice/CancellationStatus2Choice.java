@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancellationStatus2Choice#ProcessingStatus
- * CancellationStatus2Choice.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CancellationStatus2Choice#mmProcessingStatus
+ * CancellationStatus2Choice.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancellationStatus2Choice#RejectionStatus
- * CancellationStatus2Choice.RejectionStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CancellationStatus2Choice#mmRejectionStatus
+ * CancellationStatus2Choice.mmRejectionStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationProcessingStatus1 processingStatus;
 	/**
 	 * Status advising on the processing of the cancellation request.
 	 * <p>
@@ -76,8 +77,8 @@ public class CancellationStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#InstructionCancellationStatus
-	 * MeetingStatus.InstructionCancellationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmInstructionCancellationStatus
+	 * MeetingStatus.mmInstructionCancellationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,21 +98,22 @@ public class CancellationStatus2Choice {
 	 * "Status advising on the processing of the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmInstructionCancellationStatus;
 			componentContext_lazy = () -> CancellationStatus2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.InstructionCancellationStatus;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status advising on the processing of the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationProcessingStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CancellationProcessingStatus1.mmObject();
 		}
 	};
+	protected AdditionalStatus2 rejectionStatus;
 	/**
 	 * Status advising on the rejection of the cancellation request.
 	 * <p>
@@ -123,8 +125,8 @@ public class CancellationStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#Reason
-	 * MeetingStatus.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmReason
+	 * MeetingStatus.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,33 +146,49 @@ public class CancellationStatus2Choice {
 	 * "Status advising on the rejection of the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectionStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmReason;
 			componentContext_lazy = () -> CancellationStatus2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.Reason;
 			isDerived = false;
 			xmlTag = "RjctnSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionStatus";
 			definition = "Status advising on the rejection of the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalStatus2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AdditionalStatus2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus2Choice.ProcessingStatus, com.tools20022.repository.choice.CancellationStatus2Choice.RejectionStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus2Choice.mmProcessingStatus, com.tools20022.repository.choice.CancellationStatus2Choice.mmRejectionStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus2Choice";
 				definition = "Status applying to the instruction cancellation request received.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationProcessingStatus1 getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(CancellationProcessingStatus1 processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public AdditionalStatus2 getRejectionStatus() {
+		return rejectionStatus;
+	}
+
+	public void setRejectionStatus(AdditionalStatus2 rejectionStatus) {
+		this.rejectionStatus = rejectionStatus;
 	}
 }

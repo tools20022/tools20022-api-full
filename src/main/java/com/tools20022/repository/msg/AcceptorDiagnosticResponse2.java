@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse2#Environment
- * AcceptorDiagnosticResponse2.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse2#mmEnvironment
+ * AcceptorDiagnosticResponse2.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse2#TMSTrigger
- * AcceptorDiagnosticResponse2.TMSTrigger}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse2#mmTMSTrigger
+ * AcceptorDiagnosticResponse2.mmTMSTrigger}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02#DiagnosticResponse
- * AcceptorDiagnosticResponseV02.DiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02#mmDiagnosticResponse
+ * AcceptorDiagnosticResponseV02.mmDiagnosticResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorDiagnosticResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardPaymentEnvironment17 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -114,28 +115,29 @@ public class AcceptorDiagnosticResponse2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse3#Environment
-	 * AcceptorDiagnosticResponse3.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse3#mmEnvironment
+	 * AcceptorDiagnosticResponse3.mmEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorDiagnosticResponse2.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> AcceptorDiagnosticResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse3.Environment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmEnvironment);
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentEnvironment17.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment17.mmObject();
 		}
 	};
+	protected TMSTrigger1 tMSTrigger;
 	/**
 	 * Instructions for contacting the terminal management host.
 	 * <p>
@@ -147,8 +149,8 @@ public class AcceptorDiagnosticResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TMSTrigger
-	 * CardPaymentAcquiring.TMSTrigger}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTMSTrigger
+	 * CardPaymentAcquiring.mmTMSTrigger}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,43 +172,59 @@ public class AcceptorDiagnosticResponse2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse3#TMSTrigger
-	 * AcceptorDiagnosticResponse3.TMSTrigger}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse3#mmTMSTrigger
+	 * AcceptorDiagnosticResponse3.mmTMSTrigger}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TMSTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> AcceptorDiagnosticResponse2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TMSTrigger;
 			isDerived = false;
 			xmlTag = "TMSTrggr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSTrigger";
 			definition = "Instructions for contacting the terminal management host.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse3.TMSTrigger);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmTMSTrigger);
 			maxOccurs = 1;
-			type_lazy = () -> TMSTrigger1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse2.Environment, com.tools20022.repository.msg.AcceptorDiagnosticResponse2.TMSTrigger);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse2.mmEnvironment, com.tools20022.repository.msg.AcceptorDiagnosticResponse2.mmTMSTrigger);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02.mmDiagnosticResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02.DiagnosticResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticResponse2";
 				definition = "Diagnostic response from the acquirer.";
-				previousVersion_lazy = () -> AcceptorDiagnosticResponse1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse3.mmObject());
+				previousVersion_lazy = () -> AcceptorDiagnosticResponse1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardPaymentEnvironment17 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment17 environment) {
+		this.environment = environment;
+	}
+
+	public TMSTrigger1 getTMSTrigger() {
+		return tMSTrigger;
+	}
+
+	public void setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+		this.tMSTrigger = tMSTrigger;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.TransparencyDataReport14;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The FinancialInstrumentReportingNonEquityTradingActivityResult message is
@@ -57,23 +58,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#ReportHeader
- * FinancialInstrumentReportingNonEquityTradingActivityResultV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#mmReportHeader
+ * FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmReportHeader}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#NonEquityTransparencyData
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#mmNonEquityTransparencyData
  * FinancialInstrumentReportingNonEquityTradingActivityResultV01.
- * NonEquityTransparencyData}</li>
+ * mmNonEquityTransparencyData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#SupplementaryData
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#mmSupplementaryData
  * FinancialInstrumentReportingNonEquityTradingActivityResultV01.
- * SupplementaryData}</li>
+ * mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01#identifier
- * FinancialInstrumentReportingNonEquityTradingActivityResultV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.045.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentReportingNonEquityTradingActivityResultV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesMarketReportHeader1 reportHeader;
 	/**
 	 * Header information related to the global report.
 	 * <p>
@@ -112,17 +113,18 @@ public class FinancialInstrumentReportingNonEquityTradingActivityResultV01 {
 	 * definition} = "Header information related to the global report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Header information related to the global report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 		}
 	};
+	protected List<TransparencyDataReport14> nonEquityTransparencyData;
 	/**
 	 * Details the transparency data reported by a trading venue.
 	 * <p>
@@ -147,7 +149,7 @@ public class FinancialInstrumentReportingNonEquityTradingActivityResultV01 {
 	 * "Details the transparency data reported by a trading venue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NonEquityTransparencyData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNonEquityTransparencyData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NonEqtyTrnsprncyData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,6 +159,7 @@ public class FinancialInstrumentReportingNonEquityTradingActivityResultV01 {
 			complexType_lazy = () -> TransparencyDataReport14.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -183,7 +186,7 @@ public class FinancialInstrumentReportingNonEquityTradingActivityResultV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,33 +194,6 @@ public class FinancialInstrumentReportingNonEquityTradingActivityResultV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "045"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "045";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -231,12 +207,43 @@ public class FinancialInstrumentReportingNonEquityTradingActivityResultV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgNonEqtyTradgActvtyRslt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.ReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.NonEquityTransparencyData,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmReportHeader,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmNonEquityTransparencyData,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "045";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesMarketReportHeader1 getReportHeader() {
+		return reportHeader;
+	}
+
+	public void setReportHeader(SecuritiesMarketReportHeader1 reportHeader) {
+		this.reportHeader = reportHeader;
+	}
+
+	public List<TransparencyDataReport14> getNonEquityTransparencyData() {
+		return nonEquityTransparencyData;
+	}
+
+	public void setNonEquityTransparencyData(List<TransparencyDataReport14> nonEquityTransparencyData) {
+		this.nonEquityTransparencyData = nonEquityTransparencyData;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

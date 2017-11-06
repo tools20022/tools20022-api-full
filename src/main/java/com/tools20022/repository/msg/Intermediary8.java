@@ -40,25 +40,25 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Intermediary8#RoleOrExtendedRoleRule
- * Intermediary8.RoleOrExtendedRoleRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Intermediary8#mmRoleOrExtendedRoleRule
+ * Intermediary8.mmRoleOrExtendedRoleRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#Identification
- * Intermediary8.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#Account
- * Intermediary8.Account}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#mmIdentification
+ * Intermediary8.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#mmAccount
+ * Intermediary8.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Intermediary8#OrderOriginatorEligibility
- * Intermediary8.OrderOriginatorEligibility}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#Role
- * Intermediary8.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#ExtendedRole
- * Intermediary8.ExtendedRole}</li>
+ * {@linkplain com.tools20022.repository.msg.Intermediary8#mmOrderOriginatorEligibility
+ * Intermediary8.mmOrderOriginatorEligibility}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#mmRole
+ * Intermediary8.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#mmExtendedRole
+ * Intermediary8.mmExtendedRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,24 +69,24 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#RelatedPartyDetails
- * RedemptionBulkOrderV03.RelatedPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#mmRelatedPartyDetails
+ * RedemptionBulkOrderV03.mmRelatedPartyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#RelatedPartyDetails
- * RedemptionOrderV03.RelatedPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#mmRelatedPartyDetails
+ * RedemptionOrderV03.mmRelatedPartyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#RelatedPartyDetails
- * SubscriptionBulkOrderV03.RelatedPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#mmRelatedPartyDetails
+ * SubscriptionBulkOrderV03.mmRelatedPartyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#RelatedPartyDetails
- * SubscriptionOrderV03.RelatedPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#mmRelatedPartyDetails
+ * SubscriptionOrderV03.mmRelatedPartyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -109,6 +109,7 @@ import java.util.function.Supplier;
 public class Intermediary8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice identification;
 	/**
 	 * Unique and unambiguous identifier of the intermediary.
 	 * <p>
@@ -122,8 +123,8 @@ public class Intermediary8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,27 +144,28 @@ public class Intermediary8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Intermediary40#Identification
-	 * Intermediary40.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary40#mmIdentification
+	 * Intermediary40.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Account7 account;
 	/**
 	 * Business relationship between two entities; one entity is the account
 	 * owner, the other entity is the account servicer.
@@ -175,8 +177,8 @@ public class Intermediary8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#Account
-	 * TradePartyRole.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmAccount
+	 * TradePartyRole.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,28 +199,29 @@ public class Intermediary8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary40#Account
-	 * Intermediary40.Account}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary40#mmAccount
+	 * Intermediary40.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.Account;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.Account);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.mmAccount);
 			maxOccurs = 1;
-			type_lazy = () -> Account7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account7.mmObject();
 		}
 	};
+	protected OrderOriginatorEligibility1Code orderOriginatorEligibility;
 	/**
 	 * Counterparties eligibility as defined by article 24 of the EU MiFID
 	 * Directive applicable to transactions executed by investment firms for
@@ -234,8 +237,8 @@ public class Intermediary8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole#Capacity
-	 * InvestorRole.Capacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
+	 * InvestorRole.mmCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,27 +260,28 @@ public class Intermediary8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Intermediary40#OrderOriginatorEligibility
-	 * Intermediary40.OrderOriginatorEligibility}</li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary40#mmOrderOriginatorEligibility
+	 * Intermediary40.mmOrderOriginatorEligibility}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderOriginatorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmCapacity;
 			componentContext_lazy = () -> Intermediary8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.Capacity;
 			isDerived = false;
 			xmlTag = "OrdrOrgtrElgblty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility";
 			definition = "Counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.OrderOriginatorEligibility);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.mmOrderOriginatorEligibility);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
 		}
 	};
+	protected InvestmentFundRole2Code role;
 	/**
 	 * Function performed by the intermediary.
 	 * <p>
@@ -311,27 +315,28 @@ public class Intermediary8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary40#Role
-	 * Intermediary40.Role}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary40#mmRole
+	 * Intermediary40.mmRole}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Role = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Intermediary8.mmObject();
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
+			componentContext_lazy = () -> Intermediary8.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.Role);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary40.mmRole);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedRole;
 	/**
 	 * Function performed by the intermediary.
 	 * <p>
@@ -364,17 +369,17 @@ public class Intermediary8 {
 	 * definition} = "Function performed by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedRole = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Intermediary8.mmObject();
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
+			componentContext_lazy = () -> Intermediary8.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRole";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedRole";
 			definition = "Function performed by the intermediary.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
@@ -386,10 +391,11 @@ public class Intermediary8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#Role
-	 * Intermediary8.Role}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#ExtendedRole
-	 * Intermediary8.ExtendedRole}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary8#mmRole
+	 * Intermediary8.mmRole}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary8#mmExtendedRole
+	 * Intermediary8.mmExtendedRole}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -407,25 +413,25 @@ public class Intermediary8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor RoleOrExtendedRoleRule = new MMXor() {
+	public static final MMXor mmRoleOrExtendedRoleRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoleOrExtendedRoleRule";
 			definition = "Either Role or ExtendedRole may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary8.Role, com.tools20022.repository.msg.Intermediary8.ExtendedRole);
 			messageComponent_lazy = () -> Intermediary8.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary8.mmRole, com.tools20022.repository.msg.Intermediary8.mmExtendedRole);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary8.Identification, com.tools20022.repository.msg.Intermediary8.Account,
-						com.tools20022.repository.msg.Intermediary8.OrderOriginatorEligibility, com.tools20022.repository.msg.Intermediary8.Role, com.tools20022.repository.msg.Intermediary8.ExtendedRole);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary8.mmIdentification, com.tools20022.repository.msg.Intermediary8.mmAccount,
+						com.tools20022.repository.msg.Intermediary8.mmOrderOriginatorEligibility, com.tools20022.repository.msg.Intermediary8.mmRole, com.tools20022.repository.msg.Intermediary8.mmExtendedRole);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.RedemptionOrderV03.mmRelatedPartyDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.SubscriptionOrderV03.mmRelatedPartyDetails);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderV03.RelatedPartyDetails, com.tools20022.repository.area.setr.RedemptionOrderV03.RelatedPartyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.RelatedPartyDetails, com.tools20022.repository.area.setr.SubscriptionOrderV03.RelatedPartyDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -437,9 +443,49 @@ public class Intermediary8 {
 				name = "Intermediary8";
 				definition = "Party that provides services to investors relating to financial products.";
 				nextVersions_lazy = () -> Arrays.asList(Intermediary29.mmObject(), Intermediary40.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary8.RoleOrExtendedRoleRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary8.mmRoleOrExtendedRoleRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification2Choice identification) {
+		this.identification = identification;
+	}
+
+	public Account7 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.Account7 account) {
+		this.account = account;
+	}
+
+	public OrderOriginatorEligibility1Code getOrderOriginatorEligibility() {
+		return orderOriginatorEligibility;
+	}
+
+	public void setOrderOriginatorEligibility(OrderOriginatorEligibility1Code orderOriginatorEligibility) {
+		this.orderOriginatorEligibility = orderOriginatorEligibility;
+	}
+
+	public InvestmentFundRole2Code getRole() {
+		return role;
+	}
+
+	public void setRole(InvestmentFundRole2Code role) {
+		this.role = role;
+	}
+
+	public Extended350Code getExtendedRole() {
+		return extendedRole;
+	}
+
+	public void setExtendedRole(Extended350Code extendedRole) {
+		this.extendedRole = extendedRole;
 	}
 }

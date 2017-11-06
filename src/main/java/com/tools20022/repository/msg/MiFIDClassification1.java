@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MiFIDClassification1#Classification
- * MiFIDClassification1.Classification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MiFIDClassification1#Narrative
- * MiFIDClassification1.Narrative}</li>
+ * {@linkplain com.tools20022.repository.msg.MiFIDClassification1#mmClassification
+ * MiFIDClassification1.mmClassification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MiFIDClassification1#mmNarrative
+ * MiFIDClassification1.mmNarrative}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MiFIDClassification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderOriginatorEligibility1Code classification;
 	/**
 	 * MiFID classification of the account owner.
 	 * <p>
@@ -86,7 +88,7 @@ public class MiFIDClassification1 {
 	 * definition} = "MiFID classification of the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Classification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MiFIDClassification1.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class MiFIDClassification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Classification";
 			definition = "MiFID classification of the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
 		}
 	};
+	protected Max350Text narrative;
 	/**
 	 * Additional information about the source of classification.
 	 * <p>
@@ -127,7 +130,7 @@ public class MiFIDClassification1 {
 	 * "Additional information about the source of classification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Narrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MiFIDClassification1.mmObject();
 			isDerived = false;
@@ -135,8 +138,8 @@ public class MiFIDClassification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Narrative";
 			definition = "Additional information about the source of classification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -144,13 +147,29 @@ public class MiFIDClassification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MiFIDClassification1.Classification, com.tools20022.repository.msg.MiFIDClassification1.Narrative);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MiFIDClassification1.mmClassification, com.tools20022.repository.msg.MiFIDClassification1.mmNarrative);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MiFIDClassification1";
 				definition = "Details about the MIFID classification of the account owner.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderOriginatorEligibility1Code getClassification() {
+		return classification;
+	}
+
+	public void setClassification(OrderOriginatorEligibility1Code classification) {
+		this.classification = classification;
+	}
+
+	public Max350Text getNarrative() {
+		return narrative;
+	}
+
+	public void setNarrative(Max350Text narrative) {
+		this.narrative = narrative;
 	}
 }

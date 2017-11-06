@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the business error details.
@@ -32,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessError1#FinancialInstrumentIdentification
- * BusinessError1.FinancialInstrumentIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessError1#BusinessError
- * BusinessError1.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessError1#mmFinancialInstrumentIdentification
+ * BusinessError1.mmFinancialInstrumentIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessError1#mmBusinessError
+ * BusinessError1.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessError1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Way(s) of identifying the security.
 	 * <p>
@@ -82,7 +84,7 @@ public class BusinessError1 {
 	 * definition} = "Way(s) of identifying the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessError1.mmObject();
 			isDerived = false;
@@ -90,12 +92,13 @@ public class BusinessError1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ErrorHandling3> businessError;
 	/**
 	 * Provides the business error.
 	 * <p>
@@ -121,7 +124,7 @@ public class BusinessError1 {
 	 * definition} = "Provides the business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessError1.mmObject();
 			isDerived = false;
@@ -130,21 +133,37 @@ public class BusinessError1 {
 			name = "BusinessError";
 			definition = "Provides the business error.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessError1.FinancialInstrumentIdentification, com.tools20022.repository.msg.BusinessError1.BusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessError1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.BusinessError1.mmBusinessError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessError1";
 				definition = "Provides the business error details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<com.tools20022.repository.msg.ErrorHandling3> businessError) {
+		this.businessError = businessError;
 	}
 }

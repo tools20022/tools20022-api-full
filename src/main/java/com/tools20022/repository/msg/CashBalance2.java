@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.CashBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements defining the balance details.
@@ -37,19 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#Type
- * CashBalance2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#CreditLine
- * CashBalance2.CreditLine}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#Amount
- * CashBalance2.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#mmType
+ * CashBalance2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#mmCreditLine
+ * CashBalance2.mmCreditLine}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#mmAmount
+ * CashBalance2.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalance2#CreditDebitIndicator
- * CashBalance2.CreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#Date
- * CashBalance2.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#Availability
- * CashBalance2.Availability}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalance2#mmCreditDebitIndicator
+ * CashBalance2.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#mmDate
+ * CashBalance2.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance2#mmAvailability
+ * CashBalance2.mmAvailability}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BalanceType2Choice type;
 	/**
 	 * Specifies the nature of a balance, eg, opening booked balance.
 	 * <p>
@@ -84,7 +86,8 @@ public class CashBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,21 +106,22 @@ public class CashBalance2 {
 	 * "Specifies the nature of a balance, eg, opening booked balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> CashBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance, eg, opening booked balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BalanceType2Choice.mmObject();
 		}
 	};
+	protected CreditLine1 creditLine;
 	/**
 	 * Provides further details on the credit line information.
 	 * <p>
@@ -129,8 +133,8 @@ public class CashBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#CreditLine
-	 * DebitCreditFacility.CreditLine}</li>
+	 * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCreditLine
+	 * DebitCreditFacility.mmCreditLine}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,21 +152,22 @@ public class CashBalance2 {
 	 * definition} = "Provides further details on the credit line information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditLine = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditLine = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmCreditLine;
 			componentContext_lazy = () -> CashBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.CreditLine;
 			isDerived = false;
 			xmlTag = "CdtLine";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLine";
 			definition = "Provides further details on the credit line information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CreditLine1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CreditLine1.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Currency and amount of money of the cash balance.
 	 * <p>
@@ -176,8 +181,8 @@ public class CashBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#Amount
-	 * CashBalance.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmAmount
+	 * CashBalance.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,20 +200,21 @@ public class CashBalance2 {
 	 * definition} = "Currency and amount of money of the cash balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
 			componentContext_lazy = () -> CashBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount of money of the cash balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the balance is a credit or a debit balance. A zero
 	 * balance is considered to be a credit balance
@@ -223,8 +229,8 @@ public class CashBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#CreditDebitIndicator
-	 * Balance.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
+	 * Balance.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -244,20 +250,21 @@ public class CashBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Specifies the date (and time) of the balance.
 	 * <p>
@@ -271,8 +278,8 @@ public class CashBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#ValueDate
-	 * Balance.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+	 * Balance.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -290,20 +297,21 @@ public class CashBalance2 {
 	 * definition} = "Specifies the date (and time) of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
 			componentContext_lazy = () -> CashBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.ValueDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specifies the date (and time) of the balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashBalanceAvailability1> availability;
 	/**
 	 * Set of elements used to indicate when the booked funds will become
 	 * available, ie can be accessed and start generating interest.
@@ -323,8 +331,8 @@ public class CashBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#Availability
-	 * CashBalance.Availability}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmAvailability
+	 * CashBalance.mmAvailability}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -344,33 +352,81 @@ public class CashBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Availability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAvailability;
 			componentContext_lazy = () -> CashBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.Availability;
 			isDerived = false;
 			xmlTag = "Avlbty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest. \n\nUsage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).";
 			minOccurs = 0;
-			type_lazy = () -> CashBalanceAvailability1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance2.Type, com.tools20022.repository.msg.CashBalance2.CreditLine, com.tools20022.repository.msg.CashBalance2.Amount,
-						com.tools20022.repository.msg.CashBalance2.CreditDebitIndicator, com.tools20022.repository.msg.CashBalance2.Date, com.tools20022.repository.msg.CashBalance2.Availability);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance2.mmType, com.tools20022.repository.msg.CashBalance2.mmCreditLine, com.tools20022.repository.msg.CashBalance2.mmAmount,
+						com.tools20022.repository.msg.CashBalance2.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance2.mmDate, com.tools20022.repository.msg.CashBalance2.mmAvailability);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashBalance2";
 				definition = "Set of elements defining the balance details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BalanceType2Choice getType() {
+		return type;
+	}
+
+	public void setType(BalanceType2Choice type) {
+		this.type = type;
+	}
+
+	public CreditLine1 getCreditLine() {
+		return creditLine;
+	}
+
+	public void setCreditLine(com.tools20022.repository.msg.CreditLine1 creditLine) {
+		this.creditLine = creditLine;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public List<CashBalanceAvailability1> getAvailability() {
+		return availability;
+	}
+
+	public void setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability1> availability) {
+		this.availability = availability;
 	}
 }

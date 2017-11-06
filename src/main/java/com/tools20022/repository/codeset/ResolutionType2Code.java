@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionType2Code#Extraordinary
- * ResolutionType2Code.Extraordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionType2Code#mmExtraordinary
+ * ResolutionType2Code.mmExtraordinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionType2Code#Special
- * ResolutionType2Code.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionType2Code#mmSpecial
+ * ResolutionType2Code.mmSpecial}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class ResolutionType2Code extends ResolutionTypeCode {
 	 * name} = "Extraordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Extraordinary = new MMCode() {
+	public static final MMCode mmExtraordinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
@@ -98,7 +98,7 @@ public class ResolutionType2Code extends ResolutionTypeCode {
 	 * name} = "Special"</li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
@@ -109,11 +109,11 @@ public class ResolutionType2Code extends ResolutionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResolutionType2Code";
 				definition = "Specifies the type of resolution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionType2Code.Extraordinary, com.tools20022.repository.codeset.ResolutionType2Code.Special);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionType2Code.mmExtraordinary, com.tools20022.repository.codeset.ResolutionType2Code.mmSpecial);
 				trace_lazy = () -> ResolutionTypeCode.mmObject();
 			}
 		});

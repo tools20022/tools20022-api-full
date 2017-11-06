@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.PortfolioValuation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Valuation information of the portfolio.
@@ -35,47 +36,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#TotalPortfolioValue
- * TotalPortfolioValuation1.TotalPortfolioValue}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmTotalPortfolioValue
+ * TotalPortfolioValuation1.mmTotalPortfolioValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#PreviousTotalPortfolioValue
- * TotalPortfolioValuation1.PreviousTotalPortfolioValue}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmPreviousTotalPortfolioValue
+ * TotalPortfolioValuation1.mmPreviousTotalPortfolioValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#TotalPortfolioValueChange
- * TotalPortfolioValuation1.TotalPortfolioValueChange}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmTotalPortfolioValueChange
+ * TotalPortfolioValuation1.mmTotalPortfolioValueChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#TotalBookValue
- * TotalPortfolioValuation1.TotalBookValue}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmTotalBookValue
+ * TotalPortfolioValuation1.mmTotalBookValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#PreviousTotalBookValue
- * TotalPortfolioValuation1.PreviousTotalBookValue}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmPreviousTotalBookValue
+ * TotalPortfolioValuation1.mmPreviousTotalBookValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#TotalBookValueChange
- * TotalPortfolioValuation1.TotalBookValueChange}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmTotalBookValueChange
+ * TotalPortfolioValuation1.mmTotalBookValueChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#TotalReceipts
- * TotalPortfolioValuation1.TotalReceipts}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmTotalReceipts
+ * TotalPortfolioValuation1.mmTotalReceipts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#TotalDisbursements
- * TotalPortfolioValuation1.TotalDisbursements}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmTotalDisbursements
+ * TotalPortfolioValuation1.mmTotalDisbursements}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#IncomeReceived
- * TotalPortfolioValuation1.IncomeReceived}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmIncomeReceived
+ * TotalPortfolioValuation1.mmIncomeReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#ExpensesPaid
- * TotalPortfolioValuation1.ExpensesPaid}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmExpensesPaid
+ * TotalPortfolioValuation1.mmExpensesPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#UnrealisedGainOrLoss
- * TotalPortfolioValuation1.UnrealisedGainOrLoss}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmUnrealisedGainOrLoss
+ * TotalPortfolioValuation1.mmUnrealisedGainOrLoss}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#RealisedGainOrLoss
- * TotalPortfolioValuation1.RealisedGainOrLoss}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmRealisedGainOrLoss
+ * TotalPortfolioValuation1.mmRealisedGainOrLoss}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#AccruedIncome
- * TotalPortfolioValuation1.AccruedIncome}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmAccruedIncome
+ * TotalPortfolioValuation1.mmAccruedIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#InvestmentFundDetails
- * TotalPortfolioValuation1.InvestmentFundDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1#mmInvestmentFundDetails
+ * TotalPortfolioValuation1.mmInvestmentFundDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -86,15 +87,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#TotalPortfolioValuation
- * TotalPortfolioValuationReportV01.TotalPortfolioValuation}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmTotalPortfolioValuation
+ * TotalPortfolioValuationReportV01.mmTotalPortfolioValuation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalPortfolioValuation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection30 totalPortfolioValue;
 	/**
 	 * Total value of the portfolio (sum of the assets, liabilities and
 	 * unrealised gain/loss) calculated according to the accounting rules.
@@ -122,8 +124,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#TotalPortfolioValue
-	 * PortfolioValuation.TotalPortfolioValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmTotalPortfolioValue
+	 * PortfolioValuation.mmTotalPortfolioValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +146,21 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalPortfolioValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalPortfolioValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmTotalPortfolioValue;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.TotalPortfolioValue;
 			isDerived = false;
 			xmlTag = "TtlPrtflVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPortfolioValue";
 			definition = "Total value of the portfolio (sum of the assets, liabilities and unrealised gain/loss) calculated according to the accounting rules.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndDirection30 previousTotalPortfolioValue;
 	/**
 	 * Previous total value of the portfolio.
 	 * <p>
@@ -171,8 +174,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#TotalPortfolioValue
-	 * PortfolioValuation.TotalPortfolioValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmTotalPortfolioValue
+	 * PortfolioValuation.mmTotalPortfolioValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,20 +194,21 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Previous total value of the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousTotalPortfolioValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousTotalPortfolioValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmTotalPortfolioValue;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.TotalPortfolioValue;
 			isDerived = false;
 			xmlTag = "PrvsTtlPrtflVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalPortfolioValue";
 			definition = "Previous total value of the portfolio.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndRate2 totalPortfolioValueChange;
 	/**
 	 * Difference or change between the previous total portfolio value and the
 	 * current total portfolio value.
@@ -235,7 +239,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalPortfolioValueChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalPortfolioValueChange = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
 			isDerived = false;
@@ -243,11 +247,12 @@ public class TotalPortfolioValuation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPortfolioValueChange";
 			definition = "Difference or change between the previous total portfolio value and the current total portfolio value.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndRate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
 		}
 	};
+	protected AmountAndDirection30 totalBookValue;
 	/**
 	 * Net asset on balance sheet - total portfolio value minus or plus the
 	 * unrealised gain or loss.
@@ -262,8 +267,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#TotalBookValue
-	 * PortfolioValuation.TotalBookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmTotalBookValue
+	 * PortfolioValuation.mmTotalBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -284,20 +289,21 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalBookValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmTotalBookValue;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.TotalBookValue;
 			isDerived = false;
 			xmlTag = "TtlBookVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBookValue";
 			definition = "Net asset on balance sheet - total portfolio value minus or plus the unrealised gain or loss.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndDirection30 previousTotalBookValue;
 	/**
 	 * Previous net asset on balance sheet.
 	 * <p>
@@ -311,8 +317,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#TotalBookValue
-	 * PortfolioValuation.TotalBookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmTotalBookValue
+	 * PortfolioValuation.mmTotalBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -331,20 +337,21 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Previous net asset on balance sheet."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousTotalBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousTotalBookValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmTotalBookValue;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.TotalBookValue;
 			isDerived = false;
 			xmlTag = "PrvsTtlBookVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalBookValue";
 			definition = "Previous net asset on balance sheet.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndRate2 totalBookValueChange;
 	/**
 	 * Difference or change between the previous net asset on balance sheet and
 	 * the current net asset on balance sheet.
@@ -375,7 +382,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalBookValueChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalBookValueChange = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
 			isDerived = false;
@@ -383,11 +390,12 @@ public class TotalPortfolioValuation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBookValueChange";
 			definition = "Difference or change between the previous net asset on balance sheet and the current net asset on balance sheet.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndRate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
 		}
 	};
+	protected AmountAndDirection30 totalReceipts;
 	/**
 	 * Total receipts attributable to the portfolio.
 	 * <p>
@@ -401,8 +409,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#TotalReceipts
-	 * PortfolioValuation.TotalReceipts}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmTotalReceipts
+	 * PortfolioValuation.mmTotalReceipts}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -421,20 +429,21 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Total receipts attributable to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalReceipts = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalReceipts = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmTotalReceipts;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.TotalReceipts;
 			isDerived = false;
 			xmlTag = "TtlRcts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReceipts";
 			definition = "Total receipts attributable to the portfolio.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndDirection30 totalDisbursements;
 	/**
 	 * Total disbursements attributable to the portfolio.
 	 * <p>
@@ -448,8 +457,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#TotalDisbursements
-	 * PortfolioValuation.TotalDisbursements}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmTotalDisbursements
+	 * PortfolioValuation.mmTotalDisbursements}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -468,20 +477,21 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Total disbursements attributable to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalDisbursements = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalDisbursements = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmTotalDisbursements;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.TotalDisbursements;
 			isDerived = false;
 			xmlTag = "TtlDsbrsmnts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDisbursements";
 			definition = "Total disbursements attributable to the portfolio.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndDirection30 incomeReceived;
 	/**
 	 * Income attributable to the portfolio.
 	 * <p>
@@ -495,8 +505,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#IncomeReceived
-	 * PortfolioValuation.IncomeReceived}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmIncomeReceived
+	 * PortfolioValuation.mmIncomeReceived}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -515,20 +525,21 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Income attributable to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncomeReceived = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncomeReceived = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmIncomeReceived;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.IncomeReceived;
 			isDerived = false;
 			xmlTag = "IncmRcvd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeReceived";
 			definition = "Income attributable to the portfolio.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndDirection30 expensesPaid;
 	/**
 	 * Expenses attributable to the portfolio
 	 * <p>
@@ -542,8 +553,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#ExpensesPaid
-	 * PortfolioValuation.ExpensesPaid}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioValuation#mmExpensesPaid
+	 * PortfolioValuation.mmExpensesPaid}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -562,20 +573,21 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Expenses attributable to the portfolio"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpensesPaid = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpensesPaid = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmExpensesPaid;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.ExpensesPaid;
 			isDerived = false;
 			xmlTag = "ExpnssPd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpensesPaid";
 			definition = "Expenses attributable to the portfolio";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected AmountAndDirection31 unrealisedGainOrLoss;
 	/**
 	 * Difference between the holding value and the book value of the portfolio.
 	 * <p>
@@ -589,8 +601,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#UnrealisedGainOrLoss
-	 * AssetHolding.UnrealisedGainOrLoss}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmUnrealisedGainOrLoss
+	 * AssetHolding.mmUnrealisedGainOrLoss}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -611,20 +623,21 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnrealisedGainOrLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnrealisedGainOrLoss = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmUnrealisedGainOrLoss;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.UnrealisedGainOrLoss;
 			isDerived = false;
 			xmlTag = "UrlsdGnOrLoss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrealisedGainOrLoss";
 			definition = "Difference between the holding value and the book value of the portfolio.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection31.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
 		}
 	};
+	protected AmountAndDirection31 realisedGainOrLoss;
 	/**
 	 * Difference between the realised value caused by the actual
 	 * trade/re-evaluation and the book value of the portfolio.
@@ -639,8 +652,8 @@ public class TotalPortfolioValuation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#RealisedGainOrLoss
-	 * AssetHolding.RealisedGainOrLoss}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmRealisedGainOrLoss
+	 * AssetHolding.mmRealisedGainOrLoss}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -661,20 +674,21 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RealisedGainOrLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRealisedGainOrLoss = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmRealisedGainOrLoss;
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.RealisedGainOrLoss;
 			isDerived = false;
 			xmlTag = "RealsdGnOrLoss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealisedGainOrLoss";
 			definition = "Difference between the realised value caused by the actual trade/re-evaluation and the book value of the portfolio.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection31.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
 		}
 	};
+	protected AmountAndDirection30 accruedIncome;
 	/**
 	 * Accrued income.
 	 * <p>
@@ -703,7 +717,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Accrued income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedIncome = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedIncome = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
 			isDerived = false;
@@ -711,11 +725,12 @@ public class TotalPortfolioValuation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedIncome";
 			definition = "Accrued income.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection30.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InvestmentFund1> investmentFundDetails;
 	/**
 	 * Valuation information of the investment fund or investment fund share
 	 * class.
@@ -750,39 +765,151 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentFundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentFundDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtFndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundDetails";
 			definition = "Valuation information of the investment fund or investment fund share class.";
 			minOccurs = 0;
-			type_lazy = () -> InvestmentFund1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalPortfolioValuation1.TotalPortfolioValue, com.tools20022.repository.msg.TotalPortfolioValuation1.PreviousTotalPortfolioValue,
-						com.tools20022.repository.msg.TotalPortfolioValuation1.TotalPortfolioValueChange, com.tools20022.repository.msg.TotalPortfolioValuation1.TotalBookValue,
-						com.tools20022.repository.msg.TotalPortfolioValuation1.PreviousTotalBookValue, com.tools20022.repository.msg.TotalPortfolioValuation1.TotalBookValueChange,
-						com.tools20022.repository.msg.TotalPortfolioValuation1.TotalReceipts, com.tools20022.repository.msg.TotalPortfolioValuation1.TotalDisbursements, com.tools20022.repository.msg.TotalPortfolioValuation1.IncomeReceived,
-						com.tools20022.repository.msg.TotalPortfolioValuation1.ExpensesPaid, com.tools20022.repository.msg.TotalPortfolioValuation1.UnrealisedGainOrLoss,
-						com.tools20022.repository.msg.TotalPortfolioValuation1.RealisedGainOrLoss, com.tools20022.repository.msg.TotalPortfolioValuation1.AccruedIncome,
-						com.tools20022.repository.msg.TotalPortfolioValuation1.InvestmentFundDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalPortfolioValue, com.tools20022.repository.msg.TotalPortfolioValuation1.mmPreviousTotalPortfolioValue,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalPortfolioValueChange, com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalBookValue,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmPreviousTotalBookValue, com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalBookValueChange,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalReceipts, com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalDisbursements,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmIncomeReceived, com.tools20022.repository.msg.TotalPortfolioValuation1.mmExpensesPaid,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmUnrealisedGainOrLoss, com.tools20022.repository.msg.TotalPortfolioValuation1.mmRealisedGainOrLoss,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmAccruedIncome, com.tools20022.repository.msg.TotalPortfolioValuation1.mmInvestmentFundDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmTotalPortfolioValuation);
 				trace_lazy = () -> PortfolioValuation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.TotalPortfolioValuation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalPortfolioValuation1";
 				definition = "Valuation information of the portfolio.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection30 getTotalPortfolioValue() {
+		return totalPortfolioValue;
+	}
+
+	public void setTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 totalPortfolioValue) {
+		this.totalPortfolioValue = totalPortfolioValue;
+	}
+
+	public AmountAndDirection30 getPreviousTotalPortfolioValue() {
+		return previousTotalPortfolioValue;
+	}
+
+	public void setPreviousTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalPortfolioValue) {
+		this.previousTotalPortfolioValue = previousTotalPortfolioValue;
+	}
+
+	public AmountAndRate2 getTotalPortfolioValueChange() {
+		return totalPortfolioValueChange;
+	}
+
+	public void setTotalPortfolioValueChange(com.tools20022.repository.msg.AmountAndRate2 totalPortfolioValueChange) {
+		this.totalPortfolioValueChange = totalPortfolioValueChange;
+	}
+
+	public AmountAndDirection30 getTotalBookValue() {
+		return totalBookValue;
+	}
+
+	public void setTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 totalBookValue) {
+		this.totalBookValue = totalBookValue;
+	}
+
+	public AmountAndDirection30 getPreviousTotalBookValue() {
+		return previousTotalBookValue;
+	}
+
+	public void setPreviousTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalBookValue) {
+		this.previousTotalBookValue = previousTotalBookValue;
+	}
+
+	public AmountAndRate2 getTotalBookValueChange() {
+		return totalBookValueChange;
+	}
+
+	public void setTotalBookValueChange(com.tools20022.repository.msg.AmountAndRate2 totalBookValueChange) {
+		this.totalBookValueChange = totalBookValueChange;
+	}
+
+	public AmountAndDirection30 getTotalReceipts() {
+		return totalReceipts;
+	}
+
+	public void setTotalReceipts(com.tools20022.repository.msg.AmountAndDirection30 totalReceipts) {
+		this.totalReceipts = totalReceipts;
+	}
+
+	public AmountAndDirection30 getTotalDisbursements() {
+		return totalDisbursements;
+	}
+
+	public void setTotalDisbursements(com.tools20022.repository.msg.AmountAndDirection30 totalDisbursements) {
+		this.totalDisbursements = totalDisbursements;
+	}
+
+	public AmountAndDirection30 getIncomeReceived() {
+		return incomeReceived;
+	}
+
+	public void setIncomeReceived(com.tools20022.repository.msg.AmountAndDirection30 incomeReceived) {
+		this.incomeReceived = incomeReceived;
+	}
+
+	public AmountAndDirection30 getExpensesPaid() {
+		return expensesPaid;
+	}
+
+	public void setExpensesPaid(com.tools20022.repository.msg.AmountAndDirection30 expensesPaid) {
+		this.expensesPaid = expensesPaid;
+	}
+
+	public AmountAndDirection31 getUnrealisedGainOrLoss() {
+		return unrealisedGainOrLoss;
+	}
+
+	public void setUnrealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 unrealisedGainOrLoss) {
+		this.unrealisedGainOrLoss = unrealisedGainOrLoss;
+	}
+
+	public AmountAndDirection31 getRealisedGainOrLoss() {
+		return realisedGainOrLoss;
+	}
+
+	public void setRealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 realisedGainOrLoss) {
+		this.realisedGainOrLoss = realisedGainOrLoss;
+	}
+
+	public AmountAndDirection30 getAccruedIncome() {
+		return accruedIncome;
+	}
+
+	public void setAccruedIncome(com.tools20022.repository.msg.AmountAndDirection30 accruedIncome) {
+		this.accruedIncome = accruedIncome;
+	}
+
+	public List<InvestmentFund1> getInvestmentFundDetails() {
+		return investmentFundDetails;
+	}
+
+	public void setInvestmentFundDetails(List<com.tools20022.repository.msg.InvestmentFund1> investmentFundDetails) {
+		this.investmentFundDetails = investmentFundDetails;
 	}
 }

@@ -20,12 +20,14 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.msg.OrganisationIdentification2;
 import com.tools20022.repository.msg.PersonIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between the identification of a person and the identification of a
@@ -38,11 +40,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party2Choice#OrganisationIdentification
- * Party2Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party2Choice#mmOrganisationIdentification
+ * Party2Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party2Choice#PrivateIdentification
- * Party2Choice.PrivateIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Party2Choice#mmPrivateIdentification
+ * Party2Choice.mmPrivateIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Party2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrganisationIdentification2 organisationIdentification;
 	/**
 	 * Unique and unambiguous way of identifying an organisation.
 	 * <p>
@@ -102,20 +105,21 @@ public class Party2Choice {
 	 * "Unique and unambiguous way of identifying an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrganisationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> Party2Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way of identifying an organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OrganisationIdentification2.mmObject();
 		}
 	};
+	protected List<PersonIdentification3> privateIdentification;
 	/**
 	 * Unique and unambiguous identification of a person, eg, passport.
 	 * <p>
@@ -147,33 +151,49 @@ public class Party2Choice {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Party2Choice.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> Party2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateIdentification";
 			definition = "Unique and unambiguous identification of a person, eg, passport.";
-			minOccurs = 1;
 			maxOccurs = 4;
-			type_lazy = () -> PersonIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PersonIdentification3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party2Choice.OrganisationIdentification, com.tools20022.repository.choice.Party2Choice.PrivateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party2Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party2Choice.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Party2Choice";
 				definition = "Choice between the identification of a person and the identification of a non-financial institution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrganisationIdentification2 getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(OrganisationIdentification2 organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
+	}
+
+	public List<PersonIdentification3> getPrivateIdentification() {
+		return privateIdentification;
+	}
+
+	public void setPrivateIdentification(List<PersonIdentification3> privateIdentification) {
+		this.privateIdentification = privateIdentification;
 	}
 }

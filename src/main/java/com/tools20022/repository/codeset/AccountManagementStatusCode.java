@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#Received
- * AccountManagementStatusCode.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#mmReceived
+ * AccountManagementStatusCode.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#Accepted
- * AccountManagementStatusCode.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#mmAccepted
+ * AccountManagementStatusCode.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#ProcessingOngoing
- * AccountManagementStatusCode.ProcessingOngoing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#mmProcessingOngoing
+ * AccountManagementStatusCode.mmProcessingOngoing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#SentToNextParty
- * AccountManagementStatusCode.SentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode#mmSentToNextParty
+ * AccountManagementStatusCode.mmSentToNextParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +98,7 @@ public class AccountManagementStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -129,7 +129,7 @@ public class AccountManagementStatusCode {
 	 * "The account management instruction has been validated and accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -162,7 +162,7 @@ public class AccountManagementStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingOngoing = new MMCode() {
+	public static final MMCode mmProcessingOngoing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingOngoing";
@@ -195,7 +195,7 @@ public class AccountManagementStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -208,13 +208,13 @@ public class AccountManagementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusCode";
 				definition = "Specifies the status of an account management instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementStatusCode.Received, com.tools20022.repository.codeset.AccountManagementStatusCode.Accepted,
-						com.tools20022.repository.codeset.AccountManagementStatusCode.ProcessingOngoing, com.tools20022.repository.codeset.AccountManagementStatusCode.SentToNextParty);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementStatusCode.mmReceived, com.tools20022.repository.codeset.AccountManagementStatusCode.mmAccepted,
+						com.tools20022.repository.codeset.AccountManagementStatusCode.mmProcessingOngoing, com.tools20022.repository.codeset.AccountManagementStatusCode.mmSentToNextParty);
 				derivation_lazy = () -> Arrays.asList(AccountManagementStatus1Code.mmObject());
 			}
 		});

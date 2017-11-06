@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code#Accumulated
- * SubscriptionChargeApplicationType1Code.Accumulated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code#mmAccumulated
+ * SubscriptionChargeApplicationType1Code.mmAccumulated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code#Immediate
- * SubscriptionChargeApplicationType1Code.Immediate}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code#mmImmediate
+ * SubscriptionChargeApplicationType1Code.mmImmediate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class SubscriptionChargeApplicationType1Code extends SubscriptionChargeAp
 	 * name} = "Accumulated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accumulated = new MMCode() {
+	public static final MMCode mmAccumulated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accumulated";
@@ -107,7 +107,7 @@ public class SubscriptionChargeApplicationType1Code extends SubscriptionChargeAp
 	 * name} = "Immediate"</li>
 	 * </ul>
 	 */
-	public static final MMCode Immediate = new MMCode() {
+	public static final MMCode mmImmediate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Immediate";
@@ -118,12 +118,12 @@ public class SubscriptionChargeApplicationType1Code extends SubscriptionChargeAp
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionChargeApplicationType1Code";
 				definition = "Indicates whether the cash debit for the subscription charge is made immediately or accumulated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code.Accumulated, com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code.Immediate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code.mmAccumulated, com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code.mmImmediate);
 				trace_lazy = () -> SubscriptionChargeApplicationTypeCode.mmObject();
 			}
 		});

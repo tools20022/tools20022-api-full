@@ -32,21 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#SHA256
- * Algorithm11Code.SHA256}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#SHA384
- * Algorithm11Code.SHA384}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#SHA512
- * Algorithm11Code.SHA512}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#SHA1
- * Algorithm11Code.SHA1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#mmSHA256
+ * Algorithm11Code.mmSHA256}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#mmSHA384
+ * Algorithm11Code.mmSHA384}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#mmSHA512
+ * Algorithm11Code.mmSHA512}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm11Code#mmSHA1
+ * Algorithm11Code.mmSHA1}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,15 +86,15 @@ public class Algorithm11Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm5Code#SHA256
-	 * Algorithm5Code.SHA256}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm5Code#mmSHA256
+	 * Algorithm5Code.mmSHA256}</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA256 = new MMCode() {
+	public static final MMCode mmSHA256 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm5Code.SHA256;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm5Code.mmSHA256;
 			owner_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
@@ -115,15 +115,15 @@ public class Algorithm11Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm5Code#SHA384
-	 * Algorithm5Code.SHA384}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm5Code#mmSHA384
+	 * Algorithm5Code.mmSHA384}</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA384 = new MMCode() {
+	public static final MMCode mmSHA384 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA384";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm5Code.SHA384;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm5Code.mmSHA384;
 			owner_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
@@ -144,15 +144,15 @@ public class Algorithm11Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm5Code#SHA512
-	 * Algorithm5Code.SHA512}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm5Code#mmSHA512
+	 * Algorithm5Code.mmSHA512}</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA512 = new MMCode() {
+	public static final MMCode mmSHA512 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA512";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm5Code.SHA512;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm5Code.mmSHA512;
 			owner_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
@@ -172,7 +172,7 @@ public class Algorithm11Code extends AlgorithmCode {
 	 * name} = "SHA1"</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA1 = new MMCode() {
+	public static final MMCode mmSHA1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA1";
@@ -183,14 +183,14 @@ public class Algorithm11Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HS25");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm11Code";
 				definition = "Identification of a digest algorithm.";
 				previousVersion_lazy = () -> Algorithm5Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm11Code.SHA256, com.tools20022.repository.codeset.Algorithm11Code.SHA384, com.tools20022.repository.codeset.Algorithm11Code.SHA512,
-						com.tools20022.repository.codeset.Algorithm11Code.SHA1);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm11Code.mmSHA256, com.tools20022.repository.codeset.Algorithm11Code.mmSHA384, com.tools20022.repository.codeset.Algorithm11Code.mmSHA512,
+						com.tools20022.repository.codeset.Algorithm11Code.mmSHA1);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

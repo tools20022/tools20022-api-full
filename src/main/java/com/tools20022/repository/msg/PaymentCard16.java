@@ -38,20 +38,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentCard16#CardDataEntryMode
- * PaymentCard16.CardDataEntryMode}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentCard16#mmCardDataEntryMode
+ * PaymentCard16.mmCardDataEntryMode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentCard16#FallbackIndicator
- * PaymentCard16.FallbackIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentCard16#mmFallbackIndicator
+ * PaymentCard16.mmFallbackIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentCard16#ProtectedCardData
- * PaymentCard16.ProtectedCardData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard16#PlainCardData
- * PaymentCard16.PlainCardData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard16#CardCountryCode
- * PaymentCard16.CardCountryCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard16#CardCurrencyCode
- * PaymentCard16.CardCurrencyCode}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentCard16#mmProtectedCardData
+ * PaymentCard16.mmProtectedCardData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard16#mmPlainCardData
+ * PaymentCard16.mmPlainCardData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentCard16#mmCardCountryCode
+ * PaymentCard16.mmCardCountryCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentCard16#mmCardCurrencyCode
+ * PaymentCard16.mmCardCurrencyCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentCard16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardDataReading1Code cardDataEntryMode;
 	/**
 	 * Entry mode used to obtain the card data.
 	 * <p>
@@ -114,16 +117,16 @@ public class PaymentCard16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#CardDataEntryMode
-	 * PaymentCard17.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#mmCardDataEntryMode
+	 * PaymentCard17.mmCardDataEntryMode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#CardDataEntryMode
-	 * PaymentCard22.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#mmCardDataEntryMode
+	 * PaymentCard22.mmCardDataEntryMode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentCard16.mmObject();
 			isDerived = false;
@@ -131,12 +134,13 @@ public class PaymentCard16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Entry mode used to obtain the card data.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.CardDataEntryMode, com.tools20022.repository.msg.PaymentCard22.CardDataEntryMode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.mmCardDataEntryMode, com.tools20022.repository.msg.PaymentCard22.mmCardDataEntryMode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
 	};
+	protected CardFallback1Code fallbackIndicator;
 	/**
 	 * Indicates the occurrence of a fall-back on the card entry mode.
 	 * <p>
@@ -167,16 +171,16 @@ public class PaymentCard16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#FallbackIndicator
-	 * PaymentCard17.FallbackIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#mmFallbackIndicator
+	 * PaymentCard17.mmFallbackIndicator}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#FallbackIndicator
-	 * PaymentCard22.FallbackIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#mmFallbackIndicator
+	 * PaymentCard22.mmFallbackIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FallbackIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentCard16.mmObject();
 			isDerived = false;
@@ -184,12 +188,13 @@ public class PaymentCard16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackIndicator";
 			definition = "Indicates the occurrence of a fall-back on the card entry mode.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.FallbackIndicator, com.tools20022.repository.msg.PaymentCard22.FallbackIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.mmFallbackIndicator, com.tools20022.repository.msg.PaymentCard22.mmFallbackIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardFallback1Code.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedCardData;
 	/**
 	 * Replacement of the message element PlainCardData by a digital envelope
 	 * using a cryptographic key.
@@ -221,21 +226,21 @@ public class PaymentCard16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#ProtectedCardData
-	 * PaymentCard17.ProtectedCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#mmProtectedCardData
+	 * PaymentCard17.mmProtectedCardData}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#ProtectedCardData
-	 * PaymentCard22.ProtectedCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#mmProtectedCardData
+	 * PaymentCard22.mmProtectedCardData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#ProtectedCardData
-	 * PaymentCard14.ProtectedCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#mmProtectedCardData
+	 * PaymentCard14.mmProtectedCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProtectedCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentCard16.mmObject();
 			isDerived = false;
@@ -243,14 +248,15 @@ public class PaymentCard16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedCardData";
 			definition = "Replacement of the message element PlainCardData by a digital envelope using a cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.ProtectedCardData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.ProtectedCardData, com.tools20022.repository.msg.PaymentCard22.ProtectedCardData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.mmProtectedCardData, com.tools20022.repository.msg.PaymentCard22.mmProtectedCardData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.mmProtectedCardData;
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 		}
 	};
+	protected PlainCardData13 plainCardData;
 	/**
 	 * Sensitive data associated with the card performing the transaction.
 	 * <p>
@@ -279,21 +285,21 @@ public class PaymentCard16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#PlainCardData
-	 * PaymentCard17.PlainCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#mmPlainCardData
+	 * PaymentCard17.mmPlainCardData}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#PlainCardData
-	 * PaymentCard22.PlainCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#mmPlainCardData
+	 * PaymentCard22.mmPlainCardData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#PlainCardData
-	 * PaymentCard14.PlainCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#mmPlainCardData
+	 * PaymentCard14.mmPlainCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlainCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlainCardData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentCard16.mmObject();
 			isDerived = false;
@@ -301,14 +307,15 @@ public class PaymentCard16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainCardData";
 			definition = "Sensitive data associated with the card performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.PlainCardData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.PlainCardData, com.tools20022.repository.msg.PaymentCard22.PlainCardData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.mmPlainCardData, com.tools20022.repository.msg.PaymentCard22.mmPlainCardData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.mmPlainCardData;
 			maxOccurs = 1;
-			type_lazy = () -> PlainCardData13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PlainCardData13.mmObject();
 		}
 	};
+	protected Max3Text cardCountryCode;
 	/**
 	 * Country code assigned to the card by the card issuer.
 	 * <p>
@@ -321,8 +328,8 @@ public class PaymentCard16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard#CardCountryCode
-	 * PaymentCard.CardCountryCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCardCountryCode
+	 * PaymentCard.mmCardCountryCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -342,36 +349,37 @@ public class PaymentCard16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#CardCountryCode
-	 * PaymentCard17.CardCountryCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#mmCardCountryCode
+	 * PaymentCard17.mmCardCountryCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#CardCountryCode
-	 * PaymentCard22.CardCountryCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#mmCardCountryCode
+	 * PaymentCard22.mmCardCountryCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#CardCountryCode
-	 * PaymentCard14.CardCountryCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#mmCardCountryCode
+	 * PaymentCard14.mmCardCountryCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardCountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardCountryCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardCountryCode;
 			componentContext_lazy = () -> PaymentCard16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.CardCountryCode;
 			isDerived = false;
 			xmlTag = "CardCtryCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCountryCode";
 			definition = "Country code assigned to the card by the card issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.CardCountryCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.CardCountryCode, com.tools20022.repository.msg.PaymentCard22.CardCountryCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.mmCardCountryCode, com.tools20022.repository.msg.PaymentCard22.mmCardCountryCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.mmCardCountryCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	protected Exact3AlphaNumericText cardCurrencyCode;
 	/**
 	 * Currency code of the card issuer (ISO 4217 numeric code).
 	 * <p>
@@ -402,21 +410,21 @@ public class PaymentCard16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#CardCurrencyCode
-	 * PaymentCard17.CardCurrencyCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard17#mmCardCurrencyCode
+	 * PaymentCard17.mmCardCurrencyCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#CardCurrencyCode
-	 * PaymentCard22.CardCurrencyCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard22#mmCardCurrencyCode
+	 * PaymentCard22.mmCardCurrencyCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#CardCurrencyCode
-	 * PaymentCard14.CardCurrencyCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard14#mmCardCurrencyCode
+	 * PaymentCard14.mmCardCurrencyCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardCurrencyCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentCard16.mmObject();
 			isDerived = false;
@@ -424,10 +432,10 @@ public class PaymentCard16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCurrencyCode";
 			definition = "Currency code of the card issuer (ISO 4217 numeric code).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.CardCurrencyCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.CardCurrencyCode, com.tools20022.repository.msg.PaymentCard22.CardCurrencyCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard17.mmCardCurrencyCode, com.tools20022.repository.msg.PaymentCard22.mmCardCurrencyCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard14.mmCardCurrencyCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact3AlphaNumericText.mmObject();
 		}
 	};
@@ -435,18 +443,66 @@ public class PaymentCard16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard16.CardDataEntryMode, com.tools20022.repository.msg.PaymentCard16.FallbackIndicator,
-						com.tools20022.repository.msg.PaymentCard16.ProtectedCardData, com.tools20022.repository.msg.PaymentCard16.PlainCardData, com.tools20022.repository.msg.PaymentCard16.CardCountryCode,
-						com.tools20022.repository.msg.PaymentCard16.CardCurrencyCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard16.mmCardDataEntryMode, com.tools20022.repository.msg.PaymentCard16.mmFallbackIndicator,
+						com.tools20022.repository.msg.PaymentCard16.mmProtectedCardData, com.tools20022.repository.msg.PaymentCard16.mmPlainCardData, com.tools20022.repository.msg.PaymentCard16.mmCardCountryCode,
+						com.tools20022.repository.msg.PaymentCard16.mmCardCurrencyCode);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentCard16";
 				definition = "Card performing the withdrawal transaction.";
-				previousVersion_lazy = () -> PaymentCard14.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PaymentCard17.mmObject(), PaymentCard22.mmObject());
+				previousVersion_lazy = () -> PaymentCard14.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardDataReading1Code getCardDataEntryMode() {
+		return cardDataEntryMode;
+	}
+
+	public void setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
+		this.cardDataEntryMode = cardDataEntryMode;
+	}
+
+	public CardFallback1Code getFallbackIndicator() {
+		return fallbackIndicator;
+	}
+
+	public void setFallbackIndicator(CardFallback1Code fallbackIndicator) {
+		this.fallbackIndicator = fallbackIndicator;
+	}
+
+	public ContentInformationType10 getProtectedCardData() {
+		return protectedCardData;
+	}
+
+	public void setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
+		this.protectedCardData = protectedCardData;
+	}
+
+	public PlainCardData13 getPlainCardData() {
+		return plainCardData;
+	}
+
+	public void setPlainCardData(com.tools20022.repository.msg.PlainCardData13 plainCardData) {
+		this.plainCardData = plainCardData;
+	}
+
+	public Max3Text getCardCountryCode() {
+		return cardCountryCode;
+	}
+
+	public void setCardCountryCode(Max3Text cardCountryCode) {
+		this.cardCountryCode = cardCountryCode;
+	}
+
+	public Exact3AlphaNumericText getCardCurrencyCode() {
+		return cardCurrencyCode;
+	}
+
+	public void setCardCurrencyCode(Exact3AlphaNumericText cardCurrencyCode) {
+		this.cardCurrencyCode = cardCurrencyCode;
 	}
 }

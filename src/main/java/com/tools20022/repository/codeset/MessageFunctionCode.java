@@ -30,323 +30,323 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AuthorisationRequest
- * MessageFunctionCode.AuthorisationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAuthorisationRequest
+ * MessageFunctionCode.mmAuthorisationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AuthorisationResponse
- * MessageFunctionCode.AuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAuthorisationResponse
+ * MessageFunctionCode.mmAuthorisationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialAuthorisationRequest
- * MessageFunctionCode.FinancialAuthorisationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialAuthorisationRequest
+ * MessageFunctionCode.mmFinancialAuthorisationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialAuthorisationResponse
- * MessageFunctionCode.FinancialAuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialAuthorisationResponse
+ * MessageFunctionCode.mmFinancialAuthorisationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CompletionAdvice
- * MessageFunctionCode.CompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCompletionAdvice
+ * MessageFunctionCode.mmCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CompletionAdviceResponse
- * MessageFunctionCode.CompletionAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCompletionAdviceResponse
+ * MessageFunctionCode.mmCompletionAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialCompletionAdvice
- * MessageFunctionCode.FinancialCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialCompletionAdvice
+ * MessageFunctionCode.mmFinancialCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialCompletionAdviceResponse
- * MessageFunctionCode.FinancialCompletionAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialCompletionAdviceResponse
+ * MessageFunctionCode.mmFinancialCompletionAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ReversalAdvice
- * MessageFunctionCode.ReversalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmReversalAdvice
+ * MessageFunctionCode.mmReversalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ReversalAdviceResponse
- * MessageFunctionCode.ReversalAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmReversalAdviceResponse
+ * MessageFunctionCode.mmReversalAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialReversalAdvice
- * MessageFunctionCode.FinancialReversalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialReversalAdvice
+ * MessageFunctionCode.mmFinancialReversalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialReversalAdviceResponse
- * MessageFunctionCode.FinancialReversalAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialReversalAdviceResponse
+ * MessageFunctionCode.mmFinancialReversalAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CancellationRequest
- * MessageFunctionCode.CancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCancellationRequest
+ * MessageFunctionCode.mmCancellationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CancellationResponse
- * MessageFunctionCode.CancellationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCancellationResponse
+ * MessageFunctionCode.mmCancellationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CancellationAdvice
- * MessageFunctionCode.CancellationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCancellationAdvice
+ * MessageFunctionCode.mmCancellationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CancellationAdviceResponse
- * MessageFunctionCode.CancellationAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCancellationAdviceResponse
+ * MessageFunctionCode.mmCancellationAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#DiagnosticRequest
- * MessageFunctionCode.DiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmDiagnosticRequest
+ * MessageFunctionCode.mmDiagnosticRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#DiagnosticResponse
- * MessageFunctionCode.DiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmDiagnosticResponse
+ * MessageFunctionCode.mmDiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ReconciliationRequest
- * MessageFunctionCode.ReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmReconciliationRequest
+ * MessageFunctionCode.mmReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ReconciliationResponse
- * MessageFunctionCode.ReconciliationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmReconciliationResponse
+ * MessageFunctionCode.mmReconciliationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#BatchTransfer
- * MessageFunctionCode.BatchTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmBatchTransfer
+ * MessageFunctionCode.mmBatchTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#Rejection
- * MessageFunctionCode.Rejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmRejection
+ * MessageFunctionCode.mmRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#Response
- * MessageFunctionCode.Response}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmResponse
+ * MessageFunctionCode.mmResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#Request
- * MessageFunctionCode.Request}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmRequest
+ * MessageFunctionCode.mmRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CurrencyConversionRequest
- * MessageFunctionCode.CurrencyConversionRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCurrencyConversionRequest
+ * MessageFunctionCode.mmCurrencyConversionRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CurrencyConversionResponse
- * MessageFunctionCode.CurrencyConversionResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCurrencyConversionResponse
+ * MessageFunctionCode.mmCurrencyConversionResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReconciliationAdvice
- * MessageFunctionCode.AcquirerReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReconciliationAdvice
+ * MessageFunctionCode.mmAcquirerReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReconciliationAdviceResponse
- * MessageFunctionCode.AcquirerReconciliationAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReconciliationAdviceResponse
+ * MessageFunctionCode.mmAcquirerReconciliationAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReconciliationNotification
- * MessageFunctionCode.AcquirerReconciliationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReconciliationNotification
+ * MessageFunctionCode.mmAcquirerReconciliationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReconciliationRequest
- * MessageFunctionCode.AcquirerReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReconciliationRequest
+ * MessageFunctionCode.mmAcquirerReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReconciliationResponse
- * MessageFunctionCode.AcquirerReconciliationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReconciliationResponse
+ * MessageFunctionCode.mmAcquirerReconciliationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReject
- * MessageFunctionCode.AcquirerReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReject
+ * MessageFunctionCode.mmAcquirerReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AgentReconciliationAdvice
- * MessageFunctionCode.AgentReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAgentReconciliationAdvice
+ * MessageFunctionCode.mmAgentReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AgentReconciliationAdviceResponse
- * MessageFunctionCode.AgentReconciliationAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAgentReconciliationAdviceResponse
+ * MessageFunctionCode.mmAgentReconciliationAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AgentReconciliationNotification
- * MessageFunctionCode.AgentReconciliationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAgentReconciliationNotification
+ * MessageFunctionCode.mmAgentReconciliationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AgentReconciliationRequest
- * MessageFunctionCode.AgentReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAgentReconciliationRequest
+ * MessageFunctionCode.mmAgentReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AgentReconciliationResponse
- * MessageFunctionCode.AgentReconciliationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAgentReconciliationResponse
+ * MessageFunctionCode.mmAgentReconciliationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AgentReject
- * MessageFunctionCode.AgentReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAgentReject
+ * MessageFunctionCode.mmAgentReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AuthorisationAdvice
- * MessageFunctionCode.AuthorisationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAuthorisationAdvice
+ * MessageFunctionCode.mmAuthorisationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AuthorisationAdviceResponse
- * MessageFunctionCode.AuthorisationAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAuthorisationAdviceResponse
+ * MessageFunctionCode.mmAuthorisationAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AuthorisationNotification
- * MessageFunctionCode.AuthorisationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAuthorisationNotification
+ * MessageFunctionCode.mmAuthorisationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialAdvice
- * MessageFunctionCode.FinancialAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialAdvice
+ * MessageFunctionCode.mmFinancialAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialAdviceResponse
- * MessageFunctionCode.FinancialAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialAdviceResponse
+ * MessageFunctionCode.mmFinancialAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialNotification
- * MessageFunctionCode.FinancialNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialNotification
+ * MessageFunctionCode.mmFinancialNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialRequest
- * MessageFunctionCode.FinancialRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialRequest
+ * MessageFunctionCode.mmFinancialRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#FinancialResponse
- * MessageFunctionCode.FinancialResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmFinancialResponse
+ * MessageFunctionCode.mmFinancialResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#IssuerReconciliationAdvice
- * MessageFunctionCode.IssuerReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmIssuerReconciliationAdvice
+ * MessageFunctionCode.mmIssuerReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#IssuerReconciliationAdviceResponse
- * MessageFunctionCode.IssuerReconciliationAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmIssuerReconciliationAdviceResponse
+ * MessageFunctionCode.mmIssuerReconciliationAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#IssuerReconciliationNotification
- * MessageFunctionCode.IssuerReconciliationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmIssuerReconciliationNotification
+ * MessageFunctionCode.mmIssuerReconciliationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#IssuerReconciliationRequest
- * MessageFunctionCode.IssuerReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmIssuerReconciliationRequest
+ * MessageFunctionCode.mmIssuerReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#IssuerReconciliationResponse
- * MessageFunctionCode.IssuerReconciliationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmIssuerReconciliationResponse
+ * MessageFunctionCode.mmIssuerReconciliationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#IssuerReject
- * MessageFunctionCode.IssuerReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmIssuerReject
+ * MessageFunctionCode.mmIssuerReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#NetworkManagementAdvice
- * MessageFunctionCode.NetworkManagementAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmNetworkManagementAdvice
+ * MessageFunctionCode.mmNetworkManagementAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#NetworkManagementAdviceResponse
- * MessageFunctionCode.NetworkManagementAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmNetworkManagementAdviceResponse
+ * MessageFunctionCode.mmNetworkManagementAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#NetworkManagementRequest
- * MessageFunctionCode.NetworkManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmNetworkManagementRequest
+ * MessageFunctionCode.mmNetworkManagementRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#NetworkManagementResponse
- * MessageFunctionCode.NetworkManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmNetworkManagementResponse
+ * MessageFunctionCode.mmNetworkManagementResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#KeyExchangeAdvice
- * MessageFunctionCode.KeyExchangeAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmKeyExchangeAdvice
+ * MessageFunctionCode.mmKeyExchangeAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#KeyExchangeAdviceResponse
- * MessageFunctionCode.KeyExchangeAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmKeyExchangeAdviceResponse
+ * MessageFunctionCode.mmKeyExchangeAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#KeyExchangeRequest
- * MessageFunctionCode.KeyExchangeRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmKeyExchangeRequest
+ * MessageFunctionCode.mmKeyExchangeRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#KeyExchangeResponse
- * MessageFunctionCode.KeyExchangeResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmKeyExchangeResponse
+ * MessageFunctionCode.mmKeyExchangeResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReversalAdvice
- * MessageFunctionCode.AcquirerReversalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReversalAdvice
+ * MessageFunctionCode.mmAcquirerReversalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReversalAdviceResponse
- * MessageFunctionCode.AcquirerReversalAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReversalAdviceResponse
+ * MessageFunctionCode.mmAcquirerReversalAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReversalNotification
- * MessageFunctionCode.AcquirerReversalNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReversalNotification
+ * MessageFunctionCode.mmAcquirerReversalNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReversalRequest
- * MessageFunctionCode.AcquirerReversalRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReversalRequest
+ * MessageFunctionCode.mmAcquirerReversalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcquirerReversalResponse
- * MessageFunctionCode.AcquirerReversalResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcquirerReversalResponse
+ * MessageFunctionCode.mmAcquirerReversalResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMBalance
- * MessageFunctionCode.ATMBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMBalance
+ * MessageFunctionCode.mmATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMCompletionAdvice
- * MessageFunctionCode.ATMCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMCompletionAdvice
+ * MessageFunctionCode.mmATMCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMCompletionAcknowledgement
- * MessageFunctionCode.ATMCompletionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMCompletionAcknowledgement
+ * MessageFunctionCode.mmATMCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMControl
- * MessageFunctionCode.ATMControl}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMControl
+ * MessageFunctionCode.mmATMControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMDeviceControl
- * MessageFunctionCode.ATMDeviceControl}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMDeviceControl
+ * MessageFunctionCode.mmATMDeviceControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMDiagnosticRequest
- * MessageFunctionCode.ATMDiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMDiagnosticRequest
+ * MessageFunctionCode.mmATMDiagnosticRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMDiagnosticResponse
- * MessageFunctionCode.ATMDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMDiagnosticResponse
+ * MessageFunctionCode.mmATMDiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMGlobalStatus
- * MessageFunctionCode.ATMGlobalStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMGlobalStatus
+ * MessageFunctionCode.mmATMGlobalStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMInquiryRequest
- * MessageFunctionCode.ATMInquiryRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMInquiryRequest
+ * MessageFunctionCode.mmATMInquiryRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMInquiryResponse
- * MessageFunctionCode.ATMInquiryResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMInquiryResponse
+ * MessageFunctionCode.mmATMInquiryResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMKeyDownloadRequest
- * MessageFunctionCode.ATMKeyDownloadRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMKeyDownloadRequest
+ * MessageFunctionCode.mmATMKeyDownloadRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMPINManagementResponse
- * MessageFunctionCode.ATMPINManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMPINManagementResponse
+ * MessageFunctionCode.mmATMPINManagementResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMPINManagementRequest
- * MessageFunctionCode.ATMPINManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMPINManagementRequest
+ * MessageFunctionCode.mmATMPINManagementRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMKeyDownloadResponse
- * MessageFunctionCode.ATMKeyDownloadResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMKeyDownloadResponse
+ * MessageFunctionCode.mmATMKeyDownloadResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMRequestReject
- * MessageFunctionCode.ATMRequestReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMRequestReject
+ * MessageFunctionCode.mmATMRequestReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMResponseReject
- * MessageFunctionCode.ATMResponseReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMResponseReject
+ * MessageFunctionCode.mmATMResponseReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMWithdrawalRequest
- * MessageFunctionCode.ATMWithdrawalRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMWithdrawalRequest
+ * MessageFunctionCode.mmATMWithdrawalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMWithdrawalResponse
- * MessageFunctionCode.ATMWithdrawalResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMWithdrawalResponse
+ * MessageFunctionCode.mmATMWithdrawalResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMWithdrawalAdvice
- * MessageFunctionCode.ATMWithdrawalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMWithdrawalAdvice
+ * MessageFunctionCode.mmATMWithdrawalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMWithdrawalAknowledgement
- * MessageFunctionCode.ATMWithdrawalAknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMWithdrawalAknowledgement
+ * MessageFunctionCode.mmATMWithdrawalAknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CountersInquiry
- * MessageFunctionCode.CountersInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCountersInquiry
+ * MessageFunctionCode.mmCountersInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#HostToATMRequest
- * MessageFunctionCode.HostToATMRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmHostToATMRequest
+ * MessageFunctionCode.mmHostToATMRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#HostToATMAcknowledgement
- * MessageFunctionCode.HostToATMAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmHostToATMAcknowledgement
+ * MessageFunctionCode.mmHostToATMAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMOperation
- * MessageFunctionCode.ATMOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMOperation
+ * MessageFunctionCode.mmATMOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#SecurityControl
- * MessageFunctionCode.SecurityControl}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmSecurityControl
+ * MessageFunctionCode.mmSecurityControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#SecurityDetails
- * MessageFunctionCode.SecurityDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmSecurityDetails
+ * MessageFunctionCode.mmSecurityDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#SecurityKeyCompletion
- * MessageFunctionCode.SecurityKeyCompletion}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmSecurityKeyCompletion
+ * MessageFunctionCode.mmSecurityKeyCompletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#SecurityKeyStatus
- * MessageFunctionCode.SecurityKeyStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmSecurityKeyStatus
+ * MessageFunctionCode.mmSecurityKeyStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcceptorRequestReject
- * MessageFunctionCode.AcceptorRequestReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcceptorRequestReject
+ * MessageFunctionCode.mmAcceptorRequestReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#AcceptorResponseReject
- * MessageFunctionCode.AcceptorResponseReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmAcceptorResponseReject
+ * MessageFunctionCode.mmAcceptorResponseReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMDepositRequest
- * MessageFunctionCode.ATMDepositRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMDepositRequest
+ * MessageFunctionCode.mmATMDepositRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMDepositResponse
- * MessageFunctionCode.ATMDepositResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMDepositResponse
+ * MessageFunctionCode.mmATMDepositResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMDepositCompletionAdvice
- * MessageFunctionCode.ATMDepositCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMDepositCompletionAdvice
+ * MessageFunctionCode.mmATMDepositCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMDepositCompletionAcknowledgement
- * MessageFunctionCode.ATMDepositCompletionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMDepositCompletionAcknowledgement
+ * MessageFunctionCode.mmATMDepositCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMExceptionAdvice
- * MessageFunctionCode.ATMExceptionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMExceptionAdvice
+ * MessageFunctionCode.mmATMExceptionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMExceptionAcknowledgement
- * MessageFunctionCode.ATMExceptionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMExceptionAcknowledgement
+ * MessageFunctionCode.mmATMExceptionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMTransferRequest
- * MessageFunctionCode.ATMTransferRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMTransferRequest
+ * MessageFunctionCode.mmATMTransferRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#ATMTransferResponse
- * MessageFunctionCode.ATMTransferResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmATMTransferResponse
+ * MessageFunctionCode.mmATMTransferResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CountersReport
- * MessageFunctionCode.CountersReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCountersReport
+ * MessageFunctionCode.mmCountersReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CurrencyConversionAdvice
- * MessageFunctionCode.CurrencyConversionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCurrencyConversionAdvice
+ * MessageFunctionCode.mmCurrencyConversionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CurrencyConversionAdviceResponse
- * MessageFunctionCode.CurrencyConversionAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#mmCurrencyConversionAdviceResponse
+ * MessageFunctionCode.mmCurrencyConversionAdviceResponse}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -383,8 +383,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -428,7 +428,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisationRequest = new MMCode() {
+	public static final MMCode mmAuthorisationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AuthorisationRequest";
@@ -458,7 +458,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response for authorisation without financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisationResponse = new MMCode() {
+	public static final MMCode mmAuthorisationResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AuthorisationResponse";
@@ -488,7 +488,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for authorisation with financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialAuthorisationRequest = new MMCode() {
+	public static final MMCode mmFinancialAuthorisationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialAuthorisationRequest";
@@ -518,7 +518,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response for authorisation with financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialAuthorisationResponse = new MMCode() {
+	public static final MMCode mmFinancialAuthorisationResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialAuthorisationResponse";
@@ -548,7 +548,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice for completion without financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode CompletionAdvice = new MMCode() {
+	public static final MMCode mmCompletionAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CompletionAdvice";
@@ -579,7 +579,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CompletionAdviceResponse = new MMCode() {
+	public static final MMCode mmCompletionAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CompletionAdviceResponse";
@@ -609,7 +609,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice for completion with financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialCompletionAdvice = new MMCode() {
+	public static final MMCode mmFinancialCompletionAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialCompletionAdvice";
@@ -639,7 +639,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice response for completion with financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialCompletionAdviceResponse = new MMCode() {
+	public static final MMCode mmFinancialCompletionAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialCompletionAdviceResponse";
@@ -669,7 +669,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice for reversal without financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReversalAdvice = new MMCode() {
+	public static final MMCode mmReversalAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReversalAdvice";
@@ -699,7 +699,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice response for reversal without financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReversalAdviceResponse = new MMCode() {
+	public static final MMCode mmReversalAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReversalAdviceResponse";
@@ -729,7 +729,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice for reversal with financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialReversalAdvice = new MMCode() {
+	public static final MMCode mmFinancialReversalAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialReversalAdvice";
@@ -759,7 +759,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice response for reversal with financial capture."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialReversalAdviceResponse = new MMCode() {
+	public static final MMCode mmFinancialReversalAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialReversalAdviceResponse";
@@ -789,7 +789,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationRequest = new MMCode() {
+	public static final MMCode mmCancellationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationRequest";
@@ -819,7 +819,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response for cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationResponse = new MMCode() {
+	public static final MMCode mmCancellationResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationResponse";
@@ -849,7 +849,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice for cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationAdvice = new MMCode() {
+	public static final MMCode mmCancellationAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationAdvice";
@@ -879,7 +879,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice response for cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationAdviceResponse = new MMCode() {
+	public static final MMCode mmCancellationAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationAdviceResponse";
@@ -909,7 +909,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for diagnostic."</li>
 	 * </ul>
 	 */
-	public static final MMCode DiagnosticRequest = new MMCode() {
+	public static final MMCode mmDiagnosticRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DiagnosticRequest";
@@ -939,7 +939,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response for diagnostic."</li>
 	 * </ul>
 	 */
-	public static final MMCode DiagnosticResponse = new MMCode() {
+	public static final MMCode mmDiagnosticResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DiagnosticResponse";
@@ -969,7 +969,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReconciliationRequest = new MMCode() {
+	public static final MMCode mmReconciliationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationRequest";
@@ -999,7 +999,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response for reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReconciliationResponse = new MMCode() {
+	public static final MMCode mmReconciliationResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationResponse";
@@ -1030,7 +1030,7 @@ public class MessageFunctionCode {
 	 * "Transfer the financial data as a collection of transction."</li>
 	 * </ul>
 	 */
-	public static final MMCode BatchTransfer = new MMCode() {
+	public static final MMCode mmBatchTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BatchTransfer";
@@ -1060,7 +1060,7 @@ public class MessageFunctionCode {
 	 * definition} = "Reject a request or an advice."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejection = new MMCode() {
+	public static final MMCode mmRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Rejection";
@@ -1090,7 +1090,7 @@ public class MessageFunctionCode {
 	 * definition} = "Message function is a response."</li>
 	 * </ul>
 	 */
-	public static final MMCode Response = new MMCode() {
+	public static final MMCode mmResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
@@ -1120,7 +1120,7 @@ public class MessageFunctionCode {
 	 * definition} = "Message function is a request."</li>
 	 * </ul>
 	 */
-	public static final MMCode Request = new MMCode() {
+	public static final MMCode mmRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
@@ -1150,7 +1150,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for dynamic currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrencyConversionRequest = new MMCode() {
+	public static final MMCode mmCurrencyConversionRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionRequest";
@@ -1180,7 +1180,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response from a dynamic currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrencyConversionResponse = new MMCode() {
+	public static final MMCode mmCurrencyConversionResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionResponse";
@@ -1210,7 +1210,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice of transaction totals from an acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReconciliationAdvice = new MMCode() {
+	public static final MMCode mmAcquirerReconciliationAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationAdvice";
@@ -1243,7 +1243,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReconciliationAdviceResponse = new MMCode() {
+	public static final MMCode mmAcquirerReconciliationAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationAdviceResponse";
@@ -1273,7 +1273,7 @@ public class MessageFunctionCode {
 	 * definition} = "Notification of transaction totals from an acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReconciliationNotification = new MMCode() {
+	public static final MMCode mmAcquirerReconciliationNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationNotification";
@@ -1303,7 +1303,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request of transaction totals exchange from an acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReconciliationRequest = new MMCode() {
+	public static final MMCode mmAcquirerReconciliationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationRequest";
@@ -1336,7 +1336,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReconciliationResponse = new MMCode() {
+	public static final MMCode mmAcquirerReconciliationResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationResponse";
@@ -1366,7 +1366,7 @@ public class MessageFunctionCode {
 	 * definition} = "Reject of a message by an acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReject = new MMCode() {
+	public static final MMCode mmAcquirerReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReject";
@@ -1396,7 +1396,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice of transaction totals from a processor."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgentReconciliationAdvice = new MMCode() {
+	public static final MMCode mmAgentReconciliationAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationAdvice";
@@ -1429,7 +1429,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AgentReconciliationAdviceResponse = new MMCode() {
+	public static final MMCode mmAgentReconciliationAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationAdviceResponse";
@@ -1459,7 +1459,7 @@ public class MessageFunctionCode {
 	 * definition} = "Notification of transaction totals from a processor."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgentReconciliationNotification = new MMCode() {
+	public static final MMCode mmAgentReconciliationNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationNotification";
@@ -1489,7 +1489,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request of transaction totals exchange from a processor."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgentReconciliationRequest = new MMCode() {
+	public static final MMCode mmAgentReconciliationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationRequest";
@@ -1522,7 +1522,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AgentReconciliationResponse = new MMCode() {
+	public static final MMCode mmAgentReconciliationResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationResponse";
@@ -1552,7 +1552,7 @@ public class MessageFunctionCode {
 	 * definition} = "Reject of a message by an agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgentReject = new MMCode() {
+	public static final MMCode mmAgentReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReject";
@@ -1585,7 +1585,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisationAdvice = new MMCode() {
+	public static final MMCode mmAuthorisationAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationAdvice";
@@ -1615,7 +1615,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to an AuthorisationAdvice."</li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisationAdviceResponse = new MMCode() {
+	public static final MMCode mmAuthorisationAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationAdviceResponse";
@@ -1645,7 +1645,7 @@ public class MessageFunctionCode {
 	 * definition} = "Information about an authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisationNotification = new MMCode() {
+	public static final MMCode mmAuthorisationNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationNotification";
@@ -1679,7 +1679,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialAdvice = new MMCode() {
+	public static final MMCode mmFinancialAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvice";
@@ -1709,7 +1709,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a FinancialAdvice."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialAdviceResponse = new MMCode() {
+	public static final MMCode mmFinancialAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdviceResponse";
@@ -1739,7 +1739,7 @@ public class MessageFunctionCode {
 	 * definition} = "Initiator requests the clearing of the transaction. "</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialNotification = new MMCode() {
+	public static final MMCode mmFinancialNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialNotification";
@@ -1772,7 +1772,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialRequest = new MMCode() {
+	public static final MMCode mmFinancialRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialRequest";
@@ -1802,7 +1802,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a FinancialRequest."</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialResponse = new MMCode() {
+	public static final MMCode mmFinancialResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialResponse";
@@ -1832,7 +1832,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice of transaction totals from an issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerReconciliationAdvice = new MMCode() {
+	public static final MMCode mmIssuerReconciliationAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationAdvice";
@@ -1865,7 +1865,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerReconciliationAdviceResponse = new MMCode() {
+	public static final MMCode mmIssuerReconciliationAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationAdviceResponse";
@@ -1895,7 +1895,7 @@ public class MessageFunctionCode {
 	 * definition} = "Notification of transaction totals from an issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerReconciliationNotification = new MMCode() {
+	public static final MMCode mmIssuerReconciliationNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationNotification";
@@ -1925,7 +1925,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request of transaction totals exchange from an issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerReconciliationRequest = new MMCode() {
+	public static final MMCode mmIssuerReconciliationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationRequest";
@@ -1958,7 +1958,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerReconciliationResponse = new MMCode() {
+	public static final MMCode mmIssuerReconciliationResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationResponse";
@@ -1988,7 +1988,7 @@ public class MessageFunctionCode {
 	 * definition} = "Reject of a message by an issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerReject = new MMCode() {
+	public static final MMCode mmIssuerReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReject";
@@ -2018,7 +2018,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advise of a performed network management service."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetworkManagementAdvice = new MMCode() {
+	public static final MMCode mmNetworkManagementAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementAdvice";
@@ -2048,7 +2048,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a NetworkManagementAdvice."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetworkManagementAdviceResponse = new MMCode() {
+	public static final MMCode mmNetworkManagementAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementAdviceResponse";
@@ -2078,7 +2078,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request of a network management service."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetworkManagementRequest = new MMCode() {
+	public static final MMCode mmNetworkManagementRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementRequest";
@@ -2108,7 +2108,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a NetworkManagementRequest."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetworkManagementResponse = new MMCode() {
+	public static final MMCode mmNetworkManagementResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementResponse";
@@ -2138,7 +2138,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advise of a performed key update."</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyExchangeAdvice = new MMCode() {
+	public static final MMCode mmKeyExchangeAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeAdvice";
@@ -2168,7 +2168,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a KeyExchangeAdvice."</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyExchangeAdviceResponse = new MMCode() {
+	public static final MMCode mmKeyExchangeAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeAdviceResponse";
@@ -2198,7 +2198,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request of a key exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyExchangeRequest = new MMCode() {
+	public static final MMCode mmKeyExchangeRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeRequest";
@@ -2228,7 +2228,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a KeyExchangeRequest."</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyExchangeResponse = new MMCode() {
+	public static final MMCode mmKeyExchangeResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeResponse";
@@ -2259,7 +2259,7 @@ public class MessageFunctionCode {
 	 * "Reversal advice of an authorisation or a financial message."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReversalAdvice = new MMCode() {
+	public static final MMCode mmAcquirerReversalAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalAdvice";
@@ -2289,7 +2289,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a reversal advice."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReversalAdviceResponse = new MMCode() {
+	public static final MMCode mmAcquirerReversalAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalAdviceResponse";
@@ -2320,7 +2320,7 @@ public class MessageFunctionCode {
 	 * "Reversal notification of an authorisation or a financial message."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReversalNotification = new MMCode() {
+	public static final MMCode mmAcquirerReversalNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalNotification";
@@ -2351,7 +2351,7 @@ public class MessageFunctionCode {
 	 * "Reversal request of an authorisation or a financial message."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReversalRequest = new MMCode() {
+	public static final MMCode mmAcquirerReversalRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalRequest";
@@ -2381,7 +2381,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a reversal request."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerReversalResponse = new MMCode() {
+	public static final MMCode mmAcquirerReversalResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalResponse";
@@ -2412,7 +2412,7 @@ public class MessageFunctionCode {
 	 * "Provide the ATM counters resettting those that are applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMBalance = new MMCode() {
+	public static final MMCode mmATMBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
@@ -2442,7 +2442,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice of an ATM transaction completion."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMCompletionAdvice = new MMCode() {
+	public static final MMCode mmATMCompletionAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCompletionAdvice";
@@ -2472,7 +2472,7 @@ public class MessageFunctionCode {
 	 * definition} = "Acknowledgement of a completion advice."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMCompletionAcknowledgement = new MMCode() {
+	public static final MMCode mmATMCompletionAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCompletionAcknowledgement";
@@ -2502,7 +2502,7 @@ public class MessageFunctionCode {
 	 * definition} = "Global ATM commands."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMControl = new MMCode() {
+	public static final MMCode mmATMControl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMControl";
@@ -2532,7 +2532,7 @@ public class MessageFunctionCode {
 	 * definition} = "Maintenance commands to perform."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDeviceControl = new MMCode() {
+	public static final MMCode mmATMDeviceControl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDeviceControl";
@@ -2562,7 +2562,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for a diagnostic."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDiagnosticRequest = new MMCode() {
+	public static final MMCode mmATMDiagnosticRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDiagnosticRequest";
@@ -2592,7 +2592,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a diagnostic request."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDiagnosticResponse = new MMCode() {
+	public static final MMCode mmATMDiagnosticResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDiagnosticResponse";
@@ -2622,7 +2622,7 @@ public class MessageFunctionCode {
 	 * definition} = "Global status of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMGlobalStatus = new MMCode() {
+	public static final MMCode mmATMGlobalStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMGlobalStatus";
@@ -2652,7 +2652,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for an inquiry."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMInquiryRequest = new MMCode() {
+	public static final MMCode mmATMInquiryRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryRequest";
@@ -2682,7 +2682,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to an inquiry request."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMInquiryResponse = new MMCode() {
+	public static final MMCode mmATMInquiryResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryResponse";
@@ -2712,7 +2712,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for a key download."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMKeyDownloadRequest = new MMCode() {
+	public static final MMCode mmATMKeyDownloadRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadRequest";
@@ -2742,7 +2742,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a cardholder PIN management request."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMPINManagementResponse = new MMCode() {
+	public static final MMCode mmATMPINManagementResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMPINManagementResponse";
@@ -2772,7 +2772,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for a cardholder PIN management."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMPINManagementRequest = new MMCode() {
+	public static final MMCode mmATMPINManagementRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMPINManagementRequest";
@@ -2802,7 +2802,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a key download."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMKeyDownloadResponse = new MMCode() {
+	public static final MMCode mmATMKeyDownloadResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadResponse";
@@ -2832,7 +2832,7 @@ public class MessageFunctionCode {
 	 * definition} = "Rejected request message."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMRequestReject = new MMCode() {
+	public static final MMCode mmATMRequestReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMRequestReject";
@@ -2862,7 +2862,7 @@ public class MessageFunctionCode {
 	 * definition} = "Rejected response message."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMResponseReject = new MMCode() {
+	public static final MMCode mmATMResponseReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMResponseReject";
@@ -2892,7 +2892,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for a withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalRequest = new MMCode() {
+	public static final MMCode mmATMWithdrawalRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalRequest";
@@ -2922,7 +2922,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a withdrawal transaction request."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalResponse = new MMCode() {
+	public static final MMCode mmATMWithdrawalResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalResponse";
@@ -2952,7 +2952,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response of a withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalAdvice = new MMCode() {
+	public static final MMCode mmATMWithdrawalAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalAdvice";
@@ -2982,7 +2982,7 @@ public class MessageFunctionCode {
 	 * definition} = "Acknowledgement of a withdrawal transaction advice."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalAknowledgement = new MMCode() {
+	public static final MMCode mmATMWithdrawalAknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalAknowledgement";
@@ -3012,7 +3012,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request the value of the ATM counters."</li>
 	 * </ul>
 	 */
-	public static final MMCode CountersInquiry = new MMCode() {
+	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
@@ -3043,7 +3043,7 @@ public class MessageFunctionCode {
 	 * "Request from a host to an ATM to be contacted by this ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode HostToATMRequest = new MMCode() {
+	public static final MMCode mmHostToATMRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMRequest";
@@ -3074,7 +3074,7 @@ public class MessageFunctionCode {
 	 * "Acknowledgement of a request from a host to an ATM for contacting."</li>
 	 * </ul>
 	 */
-	public static final MMCode HostToATMAcknowledgement = new MMCode() {
+	public static final MMCode mmHostToATMAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMAcknowledgement";
@@ -3104,7 +3104,7 @@ public class MessageFunctionCode {
 	 * definition} = "Logical or physical operation on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMOperation = new MMCode() {
+	public static final MMCode mmATMOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMOperation";
@@ -3134,7 +3134,7 @@ public class MessageFunctionCode {
 	 * definition} = "Security Commands."</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityControl = new MMCode() {
+	public static final MMCode mmSecurityControl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityControl";
@@ -3164,7 +3164,7 @@ public class MessageFunctionCode {
 	 * definition} = "Security detailed report."</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityDetails = new MMCode() {
+	public static final MMCode mmSecurityDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDetails";
@@ -3197,7 +3197,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityKeyCompletion = new MMCode() {
+	public static final MMCode mmSecurityKeyCompletion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityKeyCompletion";
@@ -3227,7 +3227,7 @@ public class MessageFunctionCode {
 	 * definition} = "Status of cryptographic keys."</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityKeyStatus = new MMCode() {
+	public static final MMCode mmSecurityKeyStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityKeyStatus";
@@ -3258,7 +3258,7 @@ public class MessageFunctionCode {
 	 * "Reject of a request or an advice message by an acquirer or an agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptorRequestReject = new MMCode() {
+	public static final MMCode mmAcceptorRequestReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorRequestReject";
@@ -3291,7 +3291,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptorResponseReject = new MMCode() {
+	public static final MMCode mmAcceptorResponseReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorResponseReject";
@@ -3321,7 +3321,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for a deposit."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDepositRequest = new MMCode() {
+	public static final MMCode mmATMDepositRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositRequest";
@@ -3351,7 +3351,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a deposit request."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDepositResponse = new MMCode() {
+	public static final MMCode mmATMDepositResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositResponse";
@@ -3381,7 +3381,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice of an ATM deposit transaction completion."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDepositCompletionAdvice = new MMCode() {
+	public static final MMCode mmATMDepositCompletionAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositCompletionAdvice";
@@ -3411,7 +3411,7 @@ public class MessageFunctionCode {
 	 * definition} = "Acknowledgement of a deposit completion advice."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDepositCompletionAcknowledgement = new MMCode() {
+	public static final MMCode mmATMDepositCompletionAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositCompletionAcknowledgement";
@@ -3441,7 +3441,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice of an ATM exception."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMExceptionAdvice = new MMCode() {
+	public static final MMCode mmATMExceptionAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMExceptionAdvice";
@@ -3471,7 +3471,7 @@ public class MessageFunctionCode {
 	 * definition} = "Acknowledgement of an exception advice."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMExceptionAcknowledgement = new MMCode() {
+	public static final MMCode mmATMExceptionAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMExceptionAcknowledgement";
@@ -3501,7 +3501,7 @@ public class MessageFunctionCode {
 	 * definition} = "Request for a fund transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMTransferRequest = new MMCode() {
+	public static final MMCode mmATMTransferRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMTransferRequest";
@@ -3531,7 +3531,7 @@ public class MessageFunctionCode {
 	 * definition} = "Response to a fund transfer request."</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMTransferResponse = new MMCode() {
+	public static final MMCode mmATMTransferResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMTransferResponse";
@@ -3564,7 +3564,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CountersReport = new MMCode() {
+	public static final MMCode mmCountersReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersReport";
@@ -3594,7 +3594,7 @@ public class MessageFunctionCode {
 	 * definition} = "Advice for dynamic currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrencyConversionAdvice = new MMCode() {
+	public static final MMCode mmCurrencyConversionAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdvice";
@@ -3627,7 +3627,7 @@ public class MessageFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CurrencyConversionAdviceResponse = new MMCode() {
+	public static final MMCode mmCurrencyConversionAdviceResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdviceResponse";
@@ -3640,64 +3640,64 @@ public class MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTQ");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageFunctionCode";
 				definition = "Type of process related to a specific message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunctionCode.AuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.AuthorisationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.FinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.FinancialAuthorisationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.CompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.CompletionAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.FinancialCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.FinancialCompletionAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ReversalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.ReversalAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.FinancialReversalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.FinancialReversalAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.CancellationRequest, com.tools20022.repository.codeset.MessageFunctionCode.CancellationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.CancellationAdvice, com.tools20022.repository.codeset.MessageFunctionCode.CancellationAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.DiagnosticRequest, com.tools20022.repository.codeset.MessageFunctionCode.DiagnosticResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.ReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.BatchTransfer, com.tools20022.repository.codeset.MessageFunctionCode.Rejection, com.tools20022.repository.codeset.MessageFunctionCode.Response,
-						com.tools20022.repository.codeset.MessageFunctionCode.Request, com.tools20022.repository.codeset.MessageFunctionCode.CurrencyConversionRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.CurrencyConversionResponse, com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReconciliationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReconciliationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReject, com.tools20022.repository.codeset.MessageFunctionCode.AgentReconciliationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.AgentReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.AgentReconciliationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.AgentReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.AgentReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.AgentReject, com.tools20022.repository.codeset.MessageFunctionCode.AuthorisationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.AuthorisationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.AuthorisationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.FinancialAdvice, com.tools20022.repository.codeset.MessageFunctionCode.FinancialAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.FinancialNotification, com.tools20022.repository.codeset.MessageFunctionCode.FinancialRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.FinancialResponse, com.tools20022.repository.codeset.MessageFunctionCode.IssuerReconciliationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.IssuerReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.IssuerReconciliationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.IssuerReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.IssuerReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.IssuerReject, com.tools20022.repository.codeset.MessageFunctionCode.NetworkManagementAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.NetworkManagementAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.NetworkManagementRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.NetworkManagementResponse, com.tools20022.repository.codeset.MessageFunctionCode.KeyExchangeAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.KeyExchangeAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.KeyExchangeRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.KeyExchangeResponse, com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReversalAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReversalAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReversalNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReversalRequest, com.tools20022.repository.codeset.MessageFunctionCode.AcquirerReversalResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMBalance, com.tools20022.repository.codeset.MessageFunctionCode.ATMCompletionAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMCompletionAcknowledgement, com.tools20022.repository.codeset.MessageFunctionCode.ATMControl,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMDeviceControl, com.tools20022.repository.codeset.MessageFunctionCode.ATMDiagnosticRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMDiagnosticResponse, com.tools20022.repository.codeset.MessageFunctionCode.ATMGlobalStatus,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMInquiryRequest, com.tools20022.repository.codeset.MessageFunctionCode.ATMInquiryResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMKeyDownloadRequest, com.tools20022.repository.codeset.MessageFunctionCode.ATMPINManagementResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMPINManagementRequest, com.tools20022.repository.codeset.MessageFunctionCode.ATMKeyDownloadResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMRequestReject, com.tools20022.repository.codeset.MessageFunctionCode.ATMResponseReject,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMWithdrawalRequest, com.tools20022.repository.codeset.MessageFunctionCode.ATMWithdrawalResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMWithdrawalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.ATMWithdrawalAknowledgement,
-						com.tools20022.repository.codeset.MessageFunctionCode.CountersInquiry, com.tools20022.repository.codeset.MessageFunctionCode.HostToATMRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.HostToATMAcknowledgement, com.tools20022.repository.codeset.MessageFunctionCode.ATMOperation,
-						com.tools20022.repository.codeset.MessageFunctionCode.SecurityControl, com.tools20022.repository.codeset.MessageFunctionCode.SecurityDetails,
-						com.tools20022.repository.codeset.MessageFunctionCode.SecurityKeyCompletion, com.tools20022.repository.codeset.MessageFunctionCode.SecurityKeyStatus,
-						com.tools20022.repository.codeset.MessageFunctionCode.AcceptorRequestReject, com.tools20022.repository.codeset.MessageFunctionCode.AcceptorResponseReject,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMDepositRequest, com.tools20022.repository.codeset.MessageFunctionCode.ATMDepositResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMDepositCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.ATMDepositCompletionAcknowledgement,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMExceptionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.ATMExceptionAcknowledgement,
-						com.tools20022.repository.codeset.MessageFunctionCode.ATMTransferRequest, com.tools20022.repository.codeset.MessageFunctionCode.ATMTransferResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.CountersReport, com.tools20022.repository.codeset.MessageFunctionCode.CurrencyConversionAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.CurrencyConversionAdviceResponse);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAuthorisationResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmCompletionAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialCompletionAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmReversalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmReversalAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialReversalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialReversalAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmDiagnosticRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmDiagnosticResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmReconciliationResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmBatchTransfer, com.tools20022.repository.codeset.MessageFunctionCode.mmRejection, com.tools20022.repository.codeset.MessageFunctionCode.mmResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionRequest,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationNotification,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReject, com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationNotification,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReject, com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationNotification,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialNotification, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialRequest,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationNotification,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReject, com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementRequest,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeRequest,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalNotification,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMBalance, com.tools20022.repository.codeset.MessageFunctionCode.mmATMCompletionAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMCompletionAcknowledgement, com.tools20022.repository.codeset.MessageFunctionCode.mmATMControl,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDeviceControl, com.tools20022.repository.codeset.MessageFunctionCode.mmATMDiagnosticRequest,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDiagnosticResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmATMGlobalStatus,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMInquiryRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMInquiryResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMKeyDownloadRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMPINManagementResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMPINManagementRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMKeyDownloadResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMRequestReject, com.tools20022.repository.codeset.MessageFunctionCode.mmATMResponseReject,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalAknowledgement,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmCountersInquiry, com.tools20022.repository.codeset.MessageFunctionCode.mmHostToATMRequest,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmHostToATMAcknowledgement, com.tools20022.repository.codeset.MessageFunctionCode.mmATMOperation,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityControl, com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityDetails,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityKeyCompletion, com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityKeyStatus,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmAcceptorRequestReject, com.tools20022.repository.codeset.MessageFunctionCode.mmAcceptorResponseReject,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositCompletionAcknowledgement,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMExceptionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmATMExceptionAcknowledgement,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmATMTransferRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMTransferResponse,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmCountersReport, com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionAdviceResponse);
 				derivation_lazy = () -> Arrays.asList(MessageFunction3Code.mmObject(), MessageFunction1Code.mmObject(), MessageFunction2Code.mmObject(), MessageFunction4Code.mmObject(), MessageFunction6Code.mmObject(),
 						MessageFunction5Code.mmObject(), MessageFunction7Code.mmObject(), MessageFunction8Code.mmObject(), MessageFunction9Code.mmObject(), MessageFunction10Code.mmObject(), MessageFunction11Code.mmObject(),
 						MessageFunction12Code.mmObject(), MessageFunction13Code.mmObject());

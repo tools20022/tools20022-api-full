@@ -72,23 +72,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#Header
- * CaseStatusReportV03.Header}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#Case
- * CaseStatusReportV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#mmHeader
+ * CaseStatusReportV03.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#Status
- * CaseStatusReportV03.Status}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#mmCase
+ * CaseStatusReportV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#NewAssignment
- * CaseStatusReportV03.NewAssignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#mmStatus
+ * CaseStatusReportV03.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#mmNewAssignment
+ * CaseStatusReportV03.mmNewAssignment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#identifier
- * CaseStatusReportV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.039.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CaseStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportHeader2 header;
 	/**
 	 * Specifies generic information about an investigation report.
 	 * <p>
@@ -134,17 +134,18 @@ public class CaseStatusReportV03 {
 	 * "Specifies generic information about an investigation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Specifies generic information about an investigation report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader2.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -166,17 +167,18 @@ public class CaseStatusReportV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
 		}
 	};
+	protected CaseStatus2 status;
 	/**
 	 * Defines the status of the case.
 	 * <p>
@@ -199,17 +201,18 @@ public class CaseStatusReportV03 {
 	 * definition} = "Defines the status of the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Status = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines the status of the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseStatus2.mmObject();
 		}
 	};
+	protected CaseAssignment2 newAssignment;
 	/**
 	 * Identifies the change of an assignment for an investigation case from an
 	 * assigner to a new assignee. Usage: The Assigner must be the sender of
@@ -236,42 +239,15 @@ public class CaseStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NewAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNewAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NewAssgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAssignment";
 			definition = "Identifies the change of an assignment for an investigation case from an assigner to a new assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "039"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "039";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -286,11 +262,50 @@ public class CaseStatusReportV03 {
 				rootElement = "Document";
 				xmlTag = "CaseStsRpt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReportV03.Header, com.tools20022.repository.area.camt.CaseStatusReportV03.Case,
-						com.tools20022.repository.area.camt.CaseStatusReportV03.Status, com.tools20022.repository.area.camt.CaseStatusReportV03.NewAssignment);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.CaseStatusReportV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReportV03.mmHeader, com.tools20022.repository.area.camt.CaseStatusReportV03.mmCase,
+						com.tools20022.repository.area.camt.CaseStatusReportV03.mmStatus, com.tools20022.repository.area.camt.CaseStatusReportV03.mmNewAssignment);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "039";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportHeader2 getHeader() {
+		return header;
+	}
+
+	public void setHeader(ReportHeader2 header) {
+		this.header = header;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case2 case_) {
+		this.case_ = case_;
+	}
+
+	public CaseStatus2 getStatus() {
+		return status;
+	}
+
+	public void setStatus(CaseStatus2 status) {
+		this.status = status;
+	}
+
+	public CaseAssignment2 getNewAssignment() {
+		return newAssignment;
+	}
+
+	public void setNewAssignment(CaseAssignment2 newAssignment) {
+		this.newAssignment = newAssignment;
 	}
 }

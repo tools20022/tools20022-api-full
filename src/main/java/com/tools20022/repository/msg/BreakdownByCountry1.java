@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.CountryCode;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the cash-in and cash-out flows by country.
@@ -33,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BreakdownByCountry1#Country
- * BreakdownByCountry1.Country}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BreakdownByCountry1#mmCountry
+ * BreakdownByCountry1.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByCountry1#CashInForecast
- * BreakdownByCountry1.CashInForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByCountry1#mmCashInForecast
+ * BreakdownByCountry1.mmCashInForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByCountry1#CashOutForecast
- * BreakdownByCountry1.CashOutForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByCountry1#mmCashOutForecast
+ * BreakdownByCountry1.mmCashOutForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByCountry1#NetCashForecast
- * BreakdownByCountry1.NetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByCountry1#mmNetCashForecast
+ * BreakdownByCountry1.mmNetCashForecast}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BreakdownByCountry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country for which the cash flow is being reported.
 	 * <p>
@@ -100,13 +102,13 @@ public class BreakdownByCountry1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#Country
-	 * BreakdownByCountry2.Country}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#mmCountry
+	 * BreakdownByCountry2.mmCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class BreakdownByCountry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country for which the cash flow is being reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.Country);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.mmCountry);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashInForecast3> cashInForecast;
 	/**
 	 * Cash movement into the fund as a result of investment funds transactions,
 	 * eg, subscriptions or switch-in.
@@ -151,13 +154,13 @@ public class BreakdownByCountry1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#CashInForecast
-	 * BreakdownByCountry2.CashInForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#mmCashInForecast
+	 * BreakdownByCountry2.mmCashInForecast}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -165,12 +168,13 @@ public class BreakdownByCountry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecast";
 			definition = "Cash movement into the fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.CashInForecast);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.mmCashInForecast);
 			minOccurs = 0;
-			type_lazy = () -> CashInForecast3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashOutForecast3> cashOutForecast;
 	/**
 	 * Cash movement out of the fund as a result of investment funds
 	 * transactions, eg, redemptions or switch-out.
@@ -202,13 +206,13 @@ public class BreakdownByCountry1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#CashOutForecast
-	 * BreakdownByCountry2.CashOutForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#mmCashOutForecast
+	 * BreakdownByCountry2.mmCashOutForecast}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashOutForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -216,12 +220,13 @@ public class BreakdownByCountry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecast";
 			definition = "Cash movement out of the fund as a result of investment funds transactions, eg, redemptions or switch-out.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.CashOutForecast);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.mmCashOutForecast);
 			minOccurs = 0;
-			type_lazy = () -> CashOutForecast3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NetCashForecast2> netCashForecast;
 	/**
 	 * Net cash as a result of the cash-in and cash-out flows specified for the
 	 * country.
@@ -253,13 +258,13 @@ public class BreakdownByCountry1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#NetCashForecast
-	 * BreakdownByCountry2.NetCashForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByCountry2#mmNetCashForecast
+	 * BreakdownByCountry2.mmNetCashForecast}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetCashForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -267,19 +272,19 @@ public class BreakdownByCountry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified for the country.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.NetCashForecast);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.mmNetCashForecast);
 			minOccurs = 0;
-			type_lazy = () -> NetCashForecast2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry1.Country, com.tools20022.repository.msg.BreakdownByCountry1.CashInForecast,
-						com.tools20022.repository.msg.BreakdownByCountry1.CashOutForecast, com.tools20022.repository.msg.BreakdownByCountry1.NetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry1.mmCountry, com.tools20022.repository.msg.BreakdownByCountry1.mmCashInForecast,
+						com.tools20022.repository.msg.BreakdownByCountry1.mmCashOutForecast, com.tools20022.repository.msg.BreakdownByCountry1.mmNetCashForecast);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByCountry1";
 				definition = "Specifies the cash-in and cash-out flows by country.";
@@ -287,5 +292,37 @@ public class BreakdownByCountry1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public List<CashInForecast3> getCashInForecast() {
+		return cashInForecast;
+	}
+
+	public void setCashInForecast(List<com.tools20022.repository.msg.CashInForecast3> cashInForecast) {
+		this.cashInForecast = cashInForecast;
+	}
+
+	public List<CashOutForecast3> getCashOutForecast() {
+		return cashOutForecast;
+	}
+
+	public void setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast3> cashOutForecast) {
+		this.cashOutForecast = cashOutForecast;
+	}
+
+	public List<NetCashForecast2> getNetCashForecast() {
+		return netCashForecast;
+	}
+
+	public void setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast2> netCashForecast) {
+		this.netCashForecast = netCashForecast;
 	}
 }

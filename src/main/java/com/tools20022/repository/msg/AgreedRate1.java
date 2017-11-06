@@ -37,12 +37,12 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AgreedRate1#ExchangeRate
- * AgreedRate1.ExchangeRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AgreedRate1#UnitCurrency
- * AgreedRate1.UnitCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AgreedRate1#QuotedCurrency
- * AgreedRate1.QuotedCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgreedRate1#mmExchangeRate
+ * AgreedRate1.mmExchangeRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgreedRate1#mmUnitCurrency
+ * AgreedRate1.mmUnitCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgreedRate1#mmQuotedCurrency
+ * AgreedRate1.mmQuotedCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,42 +53,42 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02#AgreedRate
- * ForeignExchangeTradeInstructionAmendmentV02.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02#mmAgreedRate
+ * ForeignExchangeTradeInstructionAmendmentV02.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02#AgreedRate
- * ForeignExchangeTradeInstructionCancellationV02.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02#mmAgreedRate
+ * ForeignExchangeTradeInstructionCancellationV02.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#AgreedRate
- * ForeignExchangeTradeInstructionV02.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#mmAgreedRate
+ * ForeignExchangeTradeInstructionV02.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02#AgreedRate
- * ForeignExchangeTradeStatusAndDetailsNotificationV02.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02#mmAgreedRate
+ * ForeignExchangeTradeStatusAndDetailsNotificationV02.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02#AgreedRate
- * CreateNonDeliverableForwardOpeningV02.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02#mmAgreedRate
+ * CreateNonDeliverableForwardOpeningV02.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02#AgreedRate
- * AmendNonDeliverableForwardOpeningV02.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02#mmAgreedRate
+ * AmendNonDeliverableForwardOpeningV02.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02#AgreedRate
- * CancelNonDeliverableForwardOpeningV02.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02#mmAgreedRate
+ * CancelNonDeliverableForwardOpeningV02.mmAgreedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#ValuationRate
- * CreateNonDeliverableForwardValuationV02.ValuationRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmValuationRate
+ * CreateNonDeliverableForwardValuationV02.mmValuationRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#ValuationRate
- * AmendNonDeliverableForwardValuationV02.ValuationRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmValuationRate
+ * AmendNonDeliverableForwardValuationV02.mmValuationRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02#ValuationRate
- * CancelNonDeliverableForwardValuationV02.ValuationRate}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02#mmValuationRate
+ * CancelNonDeliverableForwardValuationV02.mmValuationRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -110,6 +110,7 @@ import java.util.function.Supplier;
 public class AgreedRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaseOneRate exchangeRate;
 	/**
 	 * The value of one currency expressed in relation to another currency.
 	 * ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency
@@ -124,8 +125,8 @@ public class AgreedRate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,27 +147,28 @@ public class AgreedRate1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AgreedRate3#ExchangeRate
-	 * AgreedRate3.ExchangeRate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AgreedRate3#mmExchangeRate
+	 * AgreedRate3.mmExchangeRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> AgreedRate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.ExchangeRate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.mmExchangeRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected CurrencyCode unitCurrency;
 	/**
 	 * Currency in which the rate of exchange is expressed in a currency
 	 * exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
@@ -180,8 +182,8 @@ public class AgreedRate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#UnitCurrency
-	 * CurrencyExchange.UnitCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmUnitCurrency
+	 * CurrencyExchange.mmUnitCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,27 +204,28 @@ public class AgreedRate1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AgreedRate3#UnitCurrency
-	 * AgreedRate3.UnitCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AgreedRate3#mmUnitCurrency
+	 * AgreedRate3.mmUnitCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> AgreedRate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.UnitCurrency;
 			isDerived = false;
 			xmlTag = "UnitCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.UnitCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.mmUnitCurrency);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected CurrencyCode quotedCurrency;
 	/**
 	 * Currency into which the base currency is converted, in a currency
 	 * exchange.
@@ -236,8 +239,8 @@ public class AgreedRate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#QuotedCurrency
-	 * CurrencyExchange.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmQuotedCurrency
+	 * CurrencyExchange.mmQuotedCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,24 +261,25 @@ public class AgreedRate1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AgreedRate3#QuotedCurrency
-	 * AgreedRate3.QuotedCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AgreedRate3#mmQuotedCurrency
+	 * AgreedRate3.mmQuotedCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> AgreedRate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.QuotedCurrency;
 			isDerived = false;
 			xmlTag = "QtdCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.QuotedCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.mmQuotedCurrency);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
@@ -283,15 +287,15 @@ public class AgreedRate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate1.ExchangeRate, com.tools20022.repository.msg.AgreedRate1.UnitCurrency, com.tools20022.repository.msg.AgreedRate1.QuotedCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate1.mmExchangeRate, com.tools20022.repository.msg.AgreedRate1.mmUnitCurrency, com.tools20022.repository.msg.AgreedRate1.mmQuotedCurrency);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmAgreedRate,
+						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmAgreedRate, com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmAgreedRate,
+						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmAgreedRate, com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.mmAgreedRate,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmAgreedRate, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmAgreedRate,
+						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmValuationRate, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmValuationRate,
+						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmValuationRate);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.AgreedRate,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.AgreedRate, com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.AgreedRate,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.AgreedRate, com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.AgreedRate,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.AgreedRate, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.AgreedRate,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.ValuationRate, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.ValuationRate,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.ValuationRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -306,5 +310,29 @@ public class AgreedRate1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public CurrencyCode getUnitCurrency() {
+		return unitCurrency;
+	}
+
+	public void setUnitCurrency(CurrencyCode unitCurrency) {
+		this.unitCurrency = unitCurrency;
+	}
+
+	public CurrencyCode getQuotedCurrency() {
+		return quotedCurrency;
+	}
+
+	public void setQuotedCurrency(CurrencyCode quotedCurrency) {
+		this.quotedCurrency = quotedCurrency;
 	}
 }

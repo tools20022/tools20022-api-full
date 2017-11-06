@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SystemIdentificationChoice#ClearingSystemIdentification
- * SystemIdentificationChoice.ClearingSystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SystemIdentificationChoice#mmClearingSystemIdentification
+ * SystemIdentificationChoice.mmClearingSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SystemIdentificationChoice#Country
- * SystemIdentificationChoice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.SystemIdentificationChoice#mmCountry
+ * SystemIdentificationChoice.mmCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashClearingSystem1Code clearingSystemIdentification;
 	/**
 	 * Clearing service selected for a transaction.
 	 * <p>
@@ -76,8 +77,8 @@ public class SystemIdentificationChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#Identification
-	 * CashClearingSystem.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmIdentification
+	 * CashClearingSystem.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class SystemIdentificationChoice {
 	 * definition} = "Clearing service selected for a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmIdentification;
 			componentContext_lazy = () -> SystemIdentificationChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.Identification;
 			isDerived = false;
 			xmlTag = "ClrSysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemIdentification";
 			definition = "Clearing service selected for a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country in which the system is located.
 	 * <p>
@@ -122,7 +124,8 @@ public class SystemIdentificationChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +144,17 @@ public class SystemIdentificationChoice {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> SystemIdentificationChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the system is located.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -159,14 +162,30 @@ public class SystemIdentificationChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemIdentificationChoice.ClearingSystemIdentification, com.tools20022.repository.choice.SystemIdentificationChoice.Country);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemIdentificationChoice.mmClearingSystemIdentification, com.tools20022.repository.choice.SystemIdentificationChoice.mmCountry);
 				trace_lazy = () -> CashClearingSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemIdentificationChoice";
 				definition = "Information used to identify a cash clearing system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashClearingSystem1Code getClearingSystemIdentification() {
+		return clearingSystemIdentification;
+	}
+
+	public void setClearingSystemIdentification(CashClearingSystem1Code clearingSystemIdentification) {
+		this.clearingSystemIdentification = clearingSystemIdentification;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
 	}
 }

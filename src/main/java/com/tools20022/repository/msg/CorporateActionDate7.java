@@ -34,19 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#PostingDate
- * CorporateActionDate7.PostingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDate7#ValueDate
- * CorporateActionDate7.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#mmPostingDate
+ * CorporateActionDate7.mmPostingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#ForeignExchangeRateFixingDate
- * CorporateActionDate7.ForeignExchangeRateFixingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#mmValueDate
+ * CorporateActionDate7.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#EarliestPaymentDate
- * CorporateActionDate7.EarliestPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#mmForeignExchangeRateFixingDate
+ * CorporateActionDate7.mmForeignExchangeRateFixingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#PaymentDate
- * CorporateActionDate7.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#mmEarliestPaymentDate
+ * CorporateActionDate7.mmEarliestPaymentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate7#mmPaymentDate
+ * CorporateActionDate7.mmPaymentDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDate7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice postingDate;
 	/**
 	 * Date/Time of the posting (credit or debit) to the account.
 	 * <p>
@@ -90,8 +92,8 @@ public class CorporateActionDate7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingDateTime
-	 * CorporateActionDistribution.PostingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingDateTime
+	 * CorporateActionDistribution.mmPostingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +113,21 @@ public class CorporateActionDate7 {
 	 * "Date/Time of the posting (credit or debit) to the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> CorporateActionDate7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingDateTime;
 			isDerived = false;
 			xmlTag = "PstngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice valueDate;
 	/**
 	 * Date/time at which assets become available to the account owner (in a
 	 * credit entry), or cease to be available to the account owner (in a debit
@@ -140,8 +143,8 @@ public class CorporateActionDate7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#ValueDate
-	 * ProceedsDefinition.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmValueDate
+	 * ProceedsDefinition.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +165,21 @@ public class CorporateActionDate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmValueDate;
 			componentContext_lazy = () -> CorporateActionDate7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time at which assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice foreignExchangeRateFixingDate;
 	/**
 	 * Date/time at which a foreign exchange rate will be determined.
 	 * <p>
@@ -189,8 +193,8 @@ public class CorporateActionDate7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FixingCondition#FixingDateTime
-	 * FixingCondition.FixingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.FixingCondition#mmFixingDateTime
+	 * FixingCondition.mmFixingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class CorporateActionDate7 {
 	 * "Date/time at which a foreign exchange rate will be determined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignExchangeRateFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignExchangeRateFixingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> CorporateActionDate7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.FixingDateTime;
 			isDerived = false;
 			xmlTag = "FXRateFxgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRateFixingDate";
 			definition = "Date/time at which a foreign exchange rate will be determined.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice earliestPaymentDate;
 	/**
 	 * Date on which a payment can be made, for example, if payment date is a
 	 * non-business day or to indicate the first payment date of an offer.
@@ -238,8 +243,8 @@ public class CorporateActionDate7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#EarliestPaymentDate
-	 * ProceedsDefinition.EarliestPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmEarliestPaymentDate
+	 * ProceedsDefinition.mmEarliestPaymentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +265,21 @@ public class CorporateActionDate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> CorporateActionDate7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.EarliestPaymentDate;
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice paymentDate;
 	/**
 	 * Date on which the distribution is due to take place (cash and/or
 	 * securities).
@@ -288,8 +294,8 @@ public class CorporateActionDate7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#MovementDate
-	 * CorporateActionDistribution.MovementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmMovementDate
+	 * CorporateActionDistribution.mmMovementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,17 +316,17 @@ public class CorporateActionDate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> CorporateActionDate7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.MovementDate;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which the distribution is due to take place (cash and/or securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -328,11 +334,11 @@ public class CorporateActionDate7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate7.PostingDate, com.tools20022.repository.msg.CorporateActionDate7.ValueDate,
-						com.tools20022.repository.msg.CorporateActionDate7.ForeignExchangeRateFixingDate, com.tools20022.repository.msg.CorporateActionDate7.EarliestPaymentDate,
-						com.tools20022.repository.msg.CorporateActionDate7.PaymentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate7.mmPostingDate, com.tools20022.repository.msg.CorporateActionDate7.mmValueDate,
+						com.tools20022.repository.msg.CorporateActionDate7.mmForeignExchangeRateFixingDate, com.tools20022.repository.msg.CorporateActionDate7.mmEarliestPaymentDate,
+						com.tools20022.repository.msg.CorporateActionDate7.mmPaymentDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate7";
 				definition = "Specifies corporate action dates.";
@@ -340,5 +346,45 @@ public class CorporateActionDate7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getPostingDate() {
+		return postingDate;
+	}
+
+	public void setPostingDate(DateAndDateTimeChoice postingDate) {
+		this.postingDate = postingDate;
+	}
+
+	public DateAndDateTimeChoice getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(DateAndDateTimeChoice valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public DateAndDateTimeChoice getForeignExchangeRateFixingDate() {
+		return foreignExchangeRateFixingDate;
+	}
+
+	public void setForeignExchangeRateFixingDate(DateAndDateTimeChoice foreignExchangeRateFixingDate) {
+		this.foreignExchangeRateFixingDate = foreignExchangeRateFixingDate;
+	}
+
+	public DateAndDateTimeChoice getEarliestPaymentDate() {
+		return earliestPaymentDate;
+	}
+
+	public void setEarliestPaymentDate(DateAndDateTimeChoice earliestPaymentDate) {
+		this.earliestPaymentDate = earliestPaymentDate;
+	}
+
+	public DateAndDateTimeChoice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateAndDateTimeChoice paymentDate) {
+		this.paymentDate = paymentDate;
 	}
 }

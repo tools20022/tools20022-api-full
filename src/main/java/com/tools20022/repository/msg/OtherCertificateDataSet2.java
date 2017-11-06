@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TradeCertificate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Formal document used to record a fact and used as proof of the fact, in the
@@ -39,23 +40,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#DataSetIdentification
- * OtherCertificateDataSet2.DataSetIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#mmDataSetIdentification
+ * OtherCertificateDataSet2.mmDataSetIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#CertificateIdentification
- * OtherCertificateDataSet2.CertificateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#mmCertificateIdentification
+ * OtherCertificateDataSet2.mmCertificateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#CertificateType
- * OtherCertificateDataSet2.CertificateType}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#mmCertificateType
+ * OtherCertificateDataSet2.mmCertificateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#IssueDate
- * OtherCertificateDataSet2.IssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#mmIssueDate
+ * OtherCertificateDataSet2.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#Issuer
- * OtherCertificateDataSet2.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#mmIssuer
+ * OtherCertificateDataSet2.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#CertificateInformation
- * OtherCertificateDataSet2.CertificateInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2#mmCertificateInformation
+ * OtherCertificateDataSet2.mmCertificateInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,18 +67,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#OtherCertificateDataSet
- * ForwardDataSetSubmissionReportV05.OtherCertificateDataSet}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#mmOtherCertificateDataSet
+ * ForwardDataSetSubmissionReportV05.mmOtherCertificateDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#OtherCertificateDataSet
- * DataSetSubmissionV05.OtherCertificateDataSet}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmOtherCertificateDataSet
+ * DataSetSubmissionV05.mmOtherCertificateDataSet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherCertificateDataSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification1 dataSetIdentification;
 	/**
 	 * Identifies the certificate data set.
 	 * <p>
@@ -125,11 +127,11 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#DataSetIdentification
-	 * OtherCertificateDataSet1.DataSetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#mmDataSetIdentification
+	 * OtherCertificateDataSet1.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OtherCertificateDataSet2.mmObject();
 			isDerived = false;
@@ -137,13 +139,14 @@ public class OtherCertificateDataSet2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identifies the certificate data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.DataSetIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.mmDataSetIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
 		}
 	};
+	protected Max35Text certificateIdentification;
 	/**
 	 * Unique identifier of the document.
 	 * <p>
@@ -156,8 +159,8 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,25 +180,26 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#CertificateIdentification
-	 * OtherCertificateDataSet1.CertificateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#mmCertificateIdentification
+	 * OtherCertificateDataSet1.mmCertificateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OtherCertificateDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "CertId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateIdentification";
 			definition = "Unique identifier of the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.CertificateIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText certificateType;
 	/**
 	 * Specifies the type of the certificate.
 	 * <p>
@@ -209,8 +213,8 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeCertificate#CertificateType
-	 * TradeCertificate.CertificateType}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmCertificateType
+	 * TradeCertificate.mmCertificateType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,25 +234,26 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#CertificateType
-	 * OtherCertificateDataSet1.CertificateType}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#mmCertificateType
+	 * OtherCertificateDataSet1.mmCertificateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> OtherCertificateDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeCertificate.CertificateType;
 			isDerived = false;
 			xmlTag = "CertTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateType";
 			definition = "Specifies the type of the certificate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.CertificateType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected ISODate issueDate;
 	/**
 	 * Issue date of the document.
 	 * <p>
@@ -261,8 +266,8 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -282,25 +287,26 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#IssueDate
-	 * OtherCertificateDataSet1.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#mmIssueDate
+	 * OtherCertificateDataSet1.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> OtherCertificateDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.IssueDate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.mmIssueDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyIdentification26 issuer;
 	/**
 	 * Issuer of the certificate, typically the inspection company or its agent.
 	 * <p>
@@ -312,8 +318,8 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,26 +341,27 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#Issuer
-	 * OtherCertificateDataSet1.Issuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#mmIssuer
+	 * OtherCertificateDataSet1.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherCertificateDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Issuer of the certificate, typically the inspection company or its agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.Issuer;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.mmIssuer;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification26.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
 		}
 	};
+	protected List<Max350Text> certificateInformation;
 	/**
 	 * Additional and important information that could not be captured by
 	 * structured fields.
@@ -386,11 +393,11 @@ public class OtherCertificateDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#CertificateInformation
-	 * OtherCertificateDataSet1.CertificateInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1#mmCertificateInformation
+	 * OtherCertificateDataSet1.mmCertificateInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OtherCertificateDataSet2.mmObject();
 			isDerived = false;
@@ -398,7 +405,7 @@ public class OtherCertificateDataSet2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateInformation";
 			definition = "Additional and important information that could not be captured by structured fields.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.CertificateInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -407,13 +414,13 @@ public class OtherCertificateDataSet2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.DataSetIdentification, com.tools20022.repository.msg.OtherCertificateDataSet2.CertificateIdentification,
-						com.tools20022.repository.msg.OtherCertificateDataSet2.CertificateType, com.tools20022.repository.msg.OtherCertificateDataSet2.IssueDate, com.tools20022.repository.msg.OtherCertificateDataSet2.Issuer,
-						com.tools20022.repository.msg.OtherCertificateDataSet2.CertificateInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.mmDataSetIdentification, com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateIdentification,
+						com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateType, com.tools20022.repository.msg.OtherCertificateDataSet2.mmIssueDate, com.tools20022.repository.msg.OtherCertificateDataSet2.mmIssuer,
+						com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmOtherCertificateDataSet,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmOtherCertificateDataSet);
 				trace_lazy = () -> TradeCertificate.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays
-						.asList(com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.OtherCertificateDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.OtherCertificateDataSet);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherCertificateDataSet2";
 				definition = "Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.";
@@ -421,5 +428,53 @@ public class OtherCertificateDataSet2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification1 getDataSetIdentification() {
+		return dataSetIdentification;
+	}
+
+	public void setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+		this.dataSetIdentification = dataSetIdentification;
+	}
+
+	public Max35Text getCertificateIdentification() {
+		return certificateIdentification;
+	}
+
+	public void setCertificateIdentification(Max35Text certificateIdentification) {
+		this.certificateIdentification = certificateIdentification;
+	}
+
+	public Exact4AlphaNumericText getCertificateType() {
+		return certificateType;
+	}
+
+	public void setCertificateType(Exact4AlphaNumericText certificateType) {
+		this.certificateType = certificateType;
+	}
+
+	public ISODate getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(ISODate issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public PartyIdentification26 getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(com.tools20022.repository.msg.PartyIdentification26 issuer) {
+		this.issuer = issuer;
+	}
+
+	public List<Max350Text> getCertificateInformation() {
+		return certificateInformation;
+	}
+
+	public void setCertificateInformation(List<Max350Text> certificateInformation) {
+		this.certificateInformation = certificateInformation;
 	}
 }

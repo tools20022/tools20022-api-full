@@ -33,21 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentInstructionStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FinalStatus1Code#Settled
- * FinalStatus1Code.Settled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FinalStatus1Code#Rejected
- * FinalStatus1Code.Rejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FinalStatus1Code#Cancelled
- * FinalStatus1Code.Cancelled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FinalStatus1Code#Finalised
- * FinalStatus1Code.Finalised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FinalStatus1Code#mmSettled
+ * FinalStatus1Code.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FinalStatus1Code#mmRejected
+ * FinalStatus1Code.mmRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FinalStatus1Code#mmCancelled
+ * FinalStatus1Code.mmCancelled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FinalStatus1Code#mmFinalised
+ * FinalStatus1Code.mmFinalised}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +86,7 @@ public class FinalStatus1Code extends PaymentInstructionStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -106,7 +109,7 @@ public class FinalStatus1Code extends PaymentInstructionStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -129,7 +132,7 @@ public class FinalStatus1Code extends PaymentInstructionStatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -152,7 +155,7 @@ public class FinalStatus1Code extends PaymentInstructionStatusCode {
 	 * name} = "Finalised"</li>
 	 * </ul>
 	 */
-	public static final MMCode Finalised = new MMCode() {
+	public static final MMCode mmFinalised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Finalised";
@@ -163,13 +166,13 @@ public class FinalStatus1Code extends PaymentInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STLD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinalStatus1Code";
 				definition = "Specifies the final status of a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinalStatus1Code.Settled, com.tools20022.repository.codeset.FinalStatus1Code.Rejected, com.tools20022.repository.codeset.FinalStatus1Code.Cancelled,
-						com.tools20022.repository.codeset.FinalStatus1Code.Finalised);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinalStatus1Code.mmSettled, com.tools20022.repository.codeset.FinalStatus1Code.mmRejected, com.tools20022.repository.codeset.FinalStatus1Code.mmCancelled,
+						com.tools20022.repository.codeset.FinalStatus1Code.mmFinalised);
 				trace_lazy = () -> PaymentInstructionStatusCode.mmObject();
 			}
 		});

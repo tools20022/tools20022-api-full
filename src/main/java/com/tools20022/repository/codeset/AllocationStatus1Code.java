@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllocationStatus1Code#FullyAllocated
- * AllocationStatus1Code.FullyAllocated}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllocationStatus1Code#mmFullyAllocated
+ * AllocationStatus1Code.mmFullyAllocated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllocationStatus1Code#PartiallyAllocated
- * AllocationStatus1Code.PartiallyAllocated}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllocationStatus1Code#mmPartiallyAllocated
+ * AllocationStatus1Code.mmPartiallyAllocated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class AllocationStatus1Code extends AllocationStatusCode {
 	 * name} = "FullyAllocated"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullyAllocated = new MMCode() {
+	public static final MMCode mmFullyAllocated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyAllocated";
@@ -106,7 +106,7 @@ public class AllocationStatus1Code extends AllocationStatusCode {
 	 * name} = "PartiallyAllocated"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyAllocated = new MMCode() {
+	public static final MMCode mmPartiallyAllocated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAllocated";
@@ -117,12 +117,12 @@ public class AllocationStatus1Code extends AllocationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AOLF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AllocationStatus1Code";
 				definition = "Specifies the  status of allocation of collateral to cover the instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllocationStatus1Code.FullyAllocated, com.tools20022.repository.codeset.AllocationStatus1Code.PartiallyAllocated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllocationStatus1Code.mmFullyAllocated, com.tools20022.repository.codeset.AllocationStatus1Code.mmPartiallyAllocated);
 				trace_lazy = () -> AllocationStatusCode.mmObject();
 			}
 		});

@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Clearing2#SettlementNettingEligibleCode
- * Clearing2.SettlementNettingEligibleCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Clearing2#ClearingSegment
- * Clearing2.ClearingSegment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Clearing2#GuaranteedTrade
- * Clearing2.GuaranteedTrade}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Clearing2#NonGuaranteedTrade
- * Clearing2.NonGuaranteedTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.Clearing2#mmSettlementNettingEligibleCode
+ * Clearing2.mmSettlementNettingEligibleCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Clearing2#mmClearingSegment
+ * Clearing2.mmClearingSegment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Clearing2#mmGuaranteedTrade
+ * Clearing2.mmGuaranteedTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Clearing2#mmNonGuaranteedTrade
+ * Clearing2.mmNonGuaranteedTrade}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Clearing2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NettingEligible1Code settlementNettingEligibleCode;
 	/**
 	 * Indicates to the clearing member whether the trade is eligible for
 	 * settlement netting or not.
@@ -87,8 +88,8 @@ public class Clearing2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#SettlementNetting
-	 * Trade.SettlementNetting}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmSettlementNetting
+	 * Trade.mmSettlementNetting}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Clearing2
@@ -110,27 +111,28 @@ public class Clearing2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Clearing4#SettlementNettingEligibleCode
-	 * Clearing4.SettlementNettingEligibleCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.Clearing4#mmSettlementNettingEligibleCode
+	 * Clearing4.mmSettlementNettingEligibleCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementNettingEligibleCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementNettingEligibleCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmSettlementNetting;
 			componentContext_lazy = () -> Clearing2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.SettlementNetting;
 			isDerived = false;
 			xmlTag = "SttlmNetgElgblCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementNettingEligibleCode";
 			definition = "Indicates to the clearing member whether the trade is eligible for settlement netting or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.SettlementNettingEligibleCode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.mmSettlementNettingEligibleCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NettingEligible1Code.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingSegment;
 	/**
 	 * Clearing organisation that will clear the trade.<br>
 	 * Note: This field allows clearing member firm to segregate flows coming
@@ -148,8 +150,8 @@ public class Clearing2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Clearing2
@@ -170,27 +172,29 @@ public class Clearing2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Clearing4#ClearingSegment
-	 * Clearing4.ClearingSegment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Clearing4#mmClearingSegment
+	 * Clearing4.mmClearingSegment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSegment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Clearing2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "ClrSgmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\nNote: This field allows clearing member firm to segregate flows coming from clearing counterparty's clearing system. Indeed, clearing member firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.ClearingSegment);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.mmClearingSegment);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator guaranteedTrade;
 	/**
 	 * Indicates if the position is guaranteed or non-guaranteed by the central
 	 * counterparty, that is whether the CCP has done the novation and then
@@ -206,8 +210,8 @@ public class Clearing2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Clearing#GuaranteedTrade
-	 * Clearing.GuaranteedTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.Clearing#mmGuaranteedTrade
+	 * Clearing.mmGuaranteedTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Clearing2
@@ -228,27 +232,29 @@ public class Clearing2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Clearing4#GuaranteedTrade
-	 * Clearing4.GuaranteedTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Clearing4#mmGuaranteedTrade
+	 * Clearing4.mmGuaranteedTrade}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GuaranteedTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGuaranteedTrade = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Clearing.mmGuaranteedTrade;
 			componentContext_lazy = () -> Clearing2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Clearing.GuaranteedTrade;
 			isDerived = false;
 			xmlTag = "GrntedTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedTrade";
 			definition = "Indicates if the position is guaranteed or non-guaranteed by the central counterparty, that is whether the CCP has done the novation and then guarantees the trade, or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.GuaranteedTrade);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.mmGuaranteedTrade);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected NonGuaranteedTrade2 nonGuaranteedTrade;
 	/**
 	 * In case of trades that are not guaranteed by the central counterparty
 	 * (this is when the central counterparty has not done the novation),
@@ -263,8 +269,8 @@ public class Clearing2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#RelatedTrade
-	 * SecuritiesTradeExecution.RelatedTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmRelatedTrade
+	 * SecuritiesTradeExecution.mmRelatedTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Clearing2
@@ -286,36 +292,36 @@ public class Clearing2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Clearing4#NonGuaranteedTrade
-	 * Clearing4.NonGuaranteedTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.Clearing4#mmNonGuaranteedTrade
+	 * Clearing4.mmNonGuaranteedTrade}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonGuaranteedTrade = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonGuaranteedTrade = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmRelatedTrade;
 			componentContext_lazy = () -> Clearing2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.RelatedTrade;
 			isDerived = false;
 			xmlTag = "NonGrntedTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonGuaranteedTrade";
 			definition = "In case of trades that are not guaranteed by the central counterparty (this is when the central counterparty has not done the novation), provides details such as the trade counterparty member identification or the trade counterparty clearing member identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.NonGuaranteedTrade);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing4.mmNonGuaranteedTrade);
 			maxOccurs = 1;
-			type_lazy = () -> NonGuaranteedTrade2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing2.SettlementNettingEligibleCode, com.tools20022.repository.msg.Clearing2.ClearingSegment,
-						com.tools20022.repository.msg.Clearing2.GuaranteedTrade, com.tools20022.repository.msg.Clearing2.NonGuaranteedTrade);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing2.mmSettlementNettingEligibleCode, com.tools20022.repository.msg.Clearing2.mmClearingSegment,
+						com.tools20022.repository.msg.Clearing2.mmGuaranteedTrade, com.tools20022.repository.msg.Clearing2.mmNonGuaranteedTrade);
 				trace_lazy = () -> Clearing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Clearing2";
 				definition = "Provides the clearing details.";
@@ -323,5 +329,37 @@ public class Clearing2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NettingEligible1Code getSettlementNettingEligibleCode() {
+		return settlementNettingEligibleCode;
+	}
+
+	public void setSettlementNettingEligibleCode(NettingEligible1Code settlementNettingEligibleCode) {
+		this.settlementNettingEligibleCode = settlementNettingEligibleCode;
+	}
+
+	public PartyIdentification35Choice getClearingSegment() {
+		return clearingSegment;
+	}
+
+	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+		this.clearingSegment = clearingSegment;
+	}
+
+	public YesNoIndicator getGuaranteedTrade() {
+		return guaranteedTrade;
+	}
+
+	public void setGuaranteedTrade(YesNoIndicator guaranteedTrade) {
+		this.guaranteedTrade = guaranteedTrade;
+	}
+
+	public NonGuaranteedTrade2 getNonGuaranteedTrade() {
+		return nonGuaranteedTrade;
+	}
+
+	public void setNonGuaranteedTrade(com.tools20022.repository.msg.NonGuaranteedTrade2 nonGuaranteedTrade) {
+		this.nonGuaranteedTrade = nonGuaranteedTrade;
 	}
 }

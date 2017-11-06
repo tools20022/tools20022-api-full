@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#Gross
- * StandingInstructionGrossNet1Code.Gross}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#mmGross
+ * StandingInstructionGrossNet1Code.mmGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#Net
- * StandingInstructionGrossNet1Code.Net}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#mmNet
+ * StandingInstructionGrossNet1Code.mmNet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class StandingInstructionGrossNet1Code extends StandingInstructionGrossNe
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gross = new MMCode() {
+	public static final MMCode mmGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
@@ -104,7 +104,7 @@ public class StandingInstructionGrossNet1Code extends StandingInstructionGrossNe
 	 * name} = "Net"</li>
 	 * </ul>
 	 */
-	public static final MMCode Net = new MMCode() {
+	public static final MMCode mmNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
@@ -115,12 +115,12 @@ public class StandingInstructionGrossNet1Code extends StandingInstructionGrossNe
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingInstructionGrossNet1Code";
 				definition = "Specifies the type of standing instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.Gross, com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.Net);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.mmGross, com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.mmNet);
 				trace_lazy = () -> StandingInstructionGrossNetCode.mmObject();
 			}
 		});

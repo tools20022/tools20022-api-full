@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.Undertaking;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the advice for the issuance of an undertaking.
@@ -34,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#UndertakingIssuanceMessage
- * UndertakingAdvice1.UndertakingIssuanceMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#mmUndertakingIssuanceMessage
+ * UndertakingAdvice1.mmUndertakingIssuanceMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#FirstAdvisingPartyAdditionalInformation
- * UndertakingAdvice1.FirstAdvisingPartyAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#mmFirstAdvisingPartyAdditionalInformation
+ * UndertakingAdvice1.mmFirstAdvisingPartyAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#SecondAdvisingPartyAdditionalInformation
- * UndertakingAdvice1.SecondAdvisingPartyAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#mmSecondAdvisingPartyAdditionalInformation
+ * UndertakingAdvice1.mmSecondAdvisingPartyAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#ConfirmationDetails
- * UndertakingAdvice1.ConfirmationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#mmConfirmationDetails
+ * UndertakingAdvice1.mmConfirmationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#DigitalSignature
- * UndertakingAdvice1.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAdvice1#mmDigitalSignature
+ * UndertakingAdvice1.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,15 +59,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01#UndertakingIssuanceAdviceDetails
- * UndertakingIssuanceAdviceV01.UndertakingIssuanceAdviceDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01#mmUndertakingIssuanceAdviceDetails
+ * UndertakingIssuanceAdviceV01.mmUndertakingIssuanceAdviceDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingIssuanceMessage undertakingIssuanceMessage;
 	/**
 	 * Contents of the related UndertakingIssuance message.
 	 * <p>
@@ -111,21 +113,22 @@ public class UndertakingAdvice1 {
 	 * definition} = "Contents of the related UndertakingIssuance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIssuanceMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIssuanceMessage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
+			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgIssncMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuanceMessage";
 			definition = "Contents of the related UndertakingIssuance message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingIssuanceMessage.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingIssuanceMessage.mmObject();
 		}
 	};
+	protected AdvisingPartyAdditionalInformation1 firstAdvisingPartyAdditionalInformation;
 	/**
 	 * Additional information related to the first advising party.
 	 * <p>
@@ -155,7 +158,7 @@ public class UndertakingAdvice1 {
 	 * "Additional information related to the first advising party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstAdvisingPartyAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstAdvisingPartyAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
@@ -163,11 +166,12 @@ public class UndertakingAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAdvisingPartyAdditionalInformation";
 			definition = "Additional information related to the first advising party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
 		}
 	};
+	protected AdvisingPartyAdditionalInformation1 secondAdvisingPartyAdditionalInformation;
 	/**
 	 * Additional information related to the second advising party.
 	 * <p>
@@ -197,7 +201,7 @@ public class UndertakingAdvice1 {
 	 * "Additional information related to the second advising party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondAdvisingPartyAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondAdvisingPartyAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
@@ -205,11 +209,12 @@ public class UndertakingAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyAdditionalInformation";
 			definition = "Additional information related to the second advising party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
 		}
 	};
+	protected UndertakingConfirmation1 confirmationDetails;
 	/**
 	 * Details related to the confirmation of the undertaking.
 	 * <p>
@@ -237,7 +242,7 @@ public class UndertakingAdvice1 {
 	 * definition} = "Details related to the confirmation of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ConfirmationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConfirmationDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
@@ -245,12 +250,13 @@ public class UndertakingAdvice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
 			definition = "Details related to the confirmation of the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UndertakingConfirmation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyAndSignature2> digitalSignature;
 	/**
 	 * Digital signature of the party providing additional undertaking advice
 	 * details.
@@ -263,8 +269,8 @@ public class UndertakingAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#ElectronicSignature
-	 * Undertaking.ElectronicSignature}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmElectronicSignature
+	 * Undertaking.mmElectronicSignature}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -285,36 +291,76 @@ public class UndertakingAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.ElectronicSignature;
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the party providing additional undertaking advice details.";
-			minOccurs = 0;
 			maxOccurs = 3;
-			type_lazy = () -> PartyAndSignature2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyAndSignature2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAdvice1.UndertakingIssuanceMessage, com.tools20022.repository.msg.UndertakingAdvice1.FirstAdvisingPartyAdditionalInformation,
-						com.tools20022.repository.msg.UndertakingAdvice1.SecondAdvisingPartyAdditionalInformation, com.tools20022.repository.msg.UndertakingAdvice1.ConfirmationDetails,
-						com.tools20022.repository.msg.UndertakingAdvice1.DigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAdvice1.mmUndertakingIssuanceMessage, com.tools20022.repository.msg.UndertakingAdvice1.mmFirstAdvisingPartyAdditionalInformation,
+						com.tools20022.repository.msg.UndertakingAdvice1.mmSecondAdvisingPartyAdditionalInformation, com.tools20022.repository.msg.UndertakingAdvice1.mmConfirmationDetails,
+						com.tools20022.repository.msg.UndertakingAdvice1.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.mmUndertakingIssuanceAdviceDetails);
 				trace_lazy = () -> Undertaking.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.UndertakingIssuanceAdviceDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAdvice1";
 				definition = "Details of the advice for the issuance of an undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingIssuanceMessage getUndertakingIssuanceMessage() {
+		return undertakingIssuanceMessage;
+	}
+
+	public void setUndertakingIssuanceMessage(com.tools20022.repository.msg.UndertakingIssuanceMessage undertakingIssuanceMessage) {
+		this.undertakingIssuanceMessage = undertakingIssuanceMessage;
+	}
+
+	public AdvisingPartyAdditionalInformation1 getFirstAdvisingPartyAdditionalInformation() {
+		return firstAdvisingPartyAdditionalInformation;
+	}
+
+	public void setFirstAdvisingPartyAdditionalInformation(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1 firstAdvisingPartyAdditionalInformation) {
+		this.firstAdvisingPartyAdditionalInformation = firstAdvisingPartyAdditionalInformation;
+	}
+
+	public AdvisingPartyAdditionalInformation1 getSecondAdvisingPartyAdditionalInformation() {
+		return secondAdvisingPartyAdditionalInformation;
+	}
+
+	public void setSecondAdvisingPartyAdditionalInformation(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1 secondAdvisingPartyAdditionalInformation) {
+		this.secondAdvisingPartyAdditionalInformation = secondAdvisingPartyAdditionalInformation;
+	}
+
+	public UndertakingConfirmation1 getConfirmationDetails() {
+		return confirmationDetails;
+	}
+
+	public void setConfirmationDetails(com.tools20022.repository.msg.UndertakingConfirmation1 confirmationDetails) {
+		this.confirmationDetails = confirmationDetails;
+	}
+
+	public List<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(List<com.tools20022.repository.msg.PartyAndSignature2> digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

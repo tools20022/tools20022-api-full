@@ -46,16 +46,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#PreferenceToIncome
- * Equity.PreferenceToIncome}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#ConvertibleIndicator
- * Equity.ConvertibleIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#NonPaidAmount
- * Equity.NonPaidAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#ParValue
- * Equity.ParValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#VotingRightsPerShare
- * Equity.VotingRightsPerShare}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
+ * Equity.mmPreferenceToIncome}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Equity#mmConvertibleIndicator
+ * Equity.mmConvertibleIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmNonPaidAmount
+ * Equity.mmNonPaidAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmParValue
+ * Equity.mmParValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Equity#mmVotingRightsPerShare
+ * Equity.mmVotingRightsPerShare}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,10 +65,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Equity
- * FinancialInstrumentProperties1Choice.Equity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#Equity
- * FinancialInstrument28.Equity}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmEquity
+ * FinancialInstrumentProperties1Choice.mmEquity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmEquity
+ * FinancialInstrument28.mmEquity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -81,8 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Equity extends Security {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PreferenceToIncomeCode preferenceToIncome;
 	/**
 	 * Indicates the level of priority to claim on income and assets of the
 	 * company in case of the payment of dividends and in the event of a
@@ -111,76 +114,78 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PreferenceToIncomeCode
 	 * PreferenceToIncomeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#Code
-	 * PreferenceToIncome1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#Proprietary
-	 * PreferenceToIncome1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome2Choice#Code
-	 * PreferenceToIncome2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome2Choice#Proprietary
-	 * PreferenceToIncome2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes8#PreferenceToIncome
-	 * FinancialInstrumentAttributes8.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes20#PreferenceToIncome
-	 * FinancialInstrumentAttributes20.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes4#PreferenceToIncome
-	 * FinancialInstrumentAttributes4.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome3Choice#Code
-	 * PreferenceToIncome3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome3Choice#Proprietary
-	 * PreferenceToIncome3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes13#PreferenceToIncome
-	 * FinancialInstrumentAttributes13.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes21#PreferenceToIncome
-	 * FinancialInstrumentAttributes21.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes26#PreferenceToIncome
-	 * FinancialInstrumentAttributes26.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes27#PreferenceToIncome
-	 * FinancialInstrumentAttributes27.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#PreferenceToIncome
-	 * FinancialInstrumentAttributes14.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes30#PreferenceToIncome
-	 * FinancialInstrumentAttributes30.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes28#PreferenceToIncome
-	 * FinancialInstrumentAttributes28.PreferenceToIncome}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Equity1#PreferenceToIncome
-	 * Equity1.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes15#PreferenceToIncome
-	 * FinancialInstrumentAttributes15.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes29#PreferenceToIncome
-	 * FinancialInstrumentAttributes29.PreferenceToIncome}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Equity2#PreferenceToIncome
-	 * Equity2.PreferenceToIncome}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#PreferenceToIncome
-	 * FinancialInstrumentAttributes2.PreferenceToIncome}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
 	 * Equity}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#mmCode
+	 * PreferenceToIncome1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome1Choice#mmProprietary
+	 * PreferenceToIncome1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome2Choice#mmCode
+	 * PreferenceToIncome2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome2Choice#mmProprietary
+	 * PreferenceToIncome2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes8#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes8.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes20#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes20.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes4#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes4.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome3Choice#mmCode
+	 * PreferenceToIncome3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome3Choice#mmProprietary
+	 * PreferenceToIncome3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes13#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes13.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes21#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes21.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes26#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes26.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes27#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes27.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes14#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes14.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes30#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes30.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes28#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes28.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Equity1#mmPreferenceToIncome
+	 * Equity1.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes15#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes15.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes29#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes29.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Equity2#mmPreferenceToIncome
+	 * Equity2.mmPreferenceToIncome}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#mmPreferenceToIncome
+	 * FinancialInstrumentAttributes2.mmPreferenceToIncome}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,29 +199,30 @@ public class Equity extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PreferenceToIncome = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPreferenceToIncome = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(com.tools20022.repository.choice.PreferenceToIncome1Choice.Code, com.tools20022.repository.choice.PreferenceToIncome1Choice.Proprietary, com.tools20022.repository.choice.PreferenceToIncome2Choice.Code,
-							com.tools20022.repository.choice.PreferenceToIncome2Choice.Proprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes8.PreferenceToIncome,
-							com.tools20022.repository.msg.FinancialInstrumentAttributes20.PreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes4.PreferenceToIncome,
-							com.tools20022.repository.choice.PreferenceToIncome3Choice.Code, com.tools20022.repository.choice.PreferenceToIncome3Choice.Proprietary,
-							com.tools20022.repository.msg.FinancialInstrumentAttributes13.PreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes21.PreferenceToIncome,
-							com.tools20022.repository.msg.FinancialInstrumentAttributes26.PreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes27.PreferenceToIncome,
-							com.tools20022.repository.msg.FinancialInstrumentAttributes14.PreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes30.PreferenceToIncome,
-							com.tools20022.repository.msg.FinancialInstrumentAttributes28.PreferenceToIncome, com.tools20022.repository.msg.Equity1.PreferenceToIncome,
-							com.tools20022.repository.msg.FinancialInstrumentAttributes15.PreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes29.PreferenceToIncome,
-							com.tools20022.repository.msg.Equity2.PreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes2.PreferenceToIncome);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreferenceToIncome1Choice.mmCode, com.tools20022.repository.choice.PreferenceToIncome1Choice.mmProprietary,
+					com.tools20022.repository.choice.PreferenceToIncome2Choice.mmCode, com.tools20022.repository.choice.PreferenceToIncome2Choice.mmProprietary,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPreferenceToIncome,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPreferenceToIncome, com.tools20022.repository.choice.PreferenceToIncome3Choice.mmCode,
+					com.tools20022.repository.choice.PreferenceToIncome3Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPreferenceToIncome,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPreferenceToIncome,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPreferenceToIncome,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPreferenceToIncome,
+					com.tools20022.repository.msg.Equity1.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPreferenceToIncome,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPreferenceToIncome, com.tools20022.repository.msg.Equity2.mmPreferenceToIncome,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPreferenceToIncome);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PreferenceToIncome";
 			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncomeCode.mmObject();
 		}
 	};
+	protected YesNoIndicator convertibleIndicator;
 	/**
 	 * Indicates whether the investor or the issuer has a conversion option.
 	 * <p>
@@ -227,18 +233,18 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Equity1#ConvertibleIndicator
-	 * Equity1.ConvertibleIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
 	 * Equity}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Equity1#mmConvertibleIndicator
+	 * Equity1.mmConvertibleIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -251,19 +257,20 @@ public class Equity extends Security {
 	 * "Indicates whether the investor or the issuer has a conversion option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ConvertibleIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.ConvertibleIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmConvertibleIndicator);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConvertibleIndicator";
 			definition = "Indicates whether the investor or the issuer has a conversion option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected CurrencyAndAmount nonPaidAmount;
 	/**
 	 * Nominal amount which is not paid yet.
 	 * <p>
@@ -274,19 +281,19 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Equity1#NonPaidAmount
-	 * Equity1.NonPaidAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Equity2#NonPaidAmount
-	 * Equity2.NonPaidAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
 	 * Equity}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Equity1#mmNonPaidAmount
+	 * Equity1.mmNonPaidAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Equity2#mmNonPaidAmount
+	 * Equity2.mmNonPaidAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -298,19 +305,20 @@ public class Equity extends Security {
 	 * definition} = "Nominal amount which is not paid yet."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NonPaidAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNonPaidAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.NonPaidAmount, com.tools20022.repository.msg.Equity2.NonPaidAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmNonPaidAmount, com.tools20022.repository.msg.Equity2.mmNonPaidAmount);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NonPaidAmount";
 			definition = "Nominal amount which is not paid yet.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount parValue;
 	/**
 	 * Nominal value of an equity security.
 	 * <p>
@@ -321,19 +329,19 @@ public class Equity extends Security {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Equity1#ParValue
-	 * Equity1.ParValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Equity2#ParValue
-	 * Equity2.ParValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
 	 * Equity}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Equity1#mmParValue
+	 * Equity1.mmParValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Equity2#mmParValue
+	 * Equity2.mmParValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -345,19 +353,20 @@ public class Equity extends Security {
 	 * definition} = "Nominal value of an equity security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ParValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmParValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.ParValue, com.tools20022.repository.msg.Equity2.ParValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmParValue, com.tools20022.repository.msg.Equity2.mmParValue);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ParValue";
 			definition = "Nominal value of an equity security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Number votingRightsPerShare;
 	/**
 	 * Number of voting rights per share.
 	 * <p>
@@ -367,21 +376,21 @@ public class Equity extends Security {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Equity1#VotingRightsPerShare
-	 * Equity1.VotingRightsPerShare}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Equity2#VotingRightsPerShare
-	 * Equity2.VotingRightsPerShare}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Equity
 	 * Equity}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Equity1#mmVotingRightsPerShare
+	 * Equity1.mmVotingRightsPerShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Equity2#mmVotingRightsPerShare
+	 * Equity2.mmVotingRightsPerShare}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -393,16 +402,16 @@ public class Equity extends Security {
 	 * definition} = "Number of voting rights per share."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute VotingRightsPerShare = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmVotingRightsPerShare = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.VotingRightsPerShare, com.tools20022.repository.msg.Equity2.VotingRightsPerShare);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmVotingRightsPerShare, com.tools20022.repository.msg.Equity2.mmVotingRightsPerShare);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VotingRightsPerShare";
 			definition = "Number of voting rights per share.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -410,17 +419,57 @@ public class Equity extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Equity";
 				definition = "Financial instrument that represents a title of ownership in a company. That is, the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, for example, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Equity, com.tools20022.repository.msg.FinancialInstrument28.Equity);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmEquity, com.tools20022.repository.msg.FinancialInstrument28.mmEquity);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Equity.PreferenceToIncome, com.tools20022.repository.entity.Equity.ConvertibleIndicator, com.tools20022.repository.entity.Equity.NonPaidAmount,
-						com.tools20022.repository.entity.Equity.ParValue, com.tools20022.repository.entity.Equity.VotingRightsPerShare);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Equity.mmPreferenceToIncome, com.tools20022.repository.entity.Equity.mmConvertibleIndicator, com.tools20022.repository.entity.Equity.mmNonPaidAmount,
+						com.tools20022.repository.entity.Equity.mmParValue, com.tools20022.repository.entity.Equity.mmVotingRightsPerShare);
 				derivationComponent_lazy = () -> Arrays.asList(Equity1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PreferenceToIncomeCode getPreferenceToIncome() {
+		return preferenceToIncome;
+	}
+
+	public void setPreferenceToIncome(PreferenceToIncomeCode preferenceToIncome) {
+		this.preferenceToIncome = preferenceToIncome;
+	}
+
+	public YesNoIndicator getConvertibleIndicator() {
+		return convertibleIndicator;
+	}
+
+	public void setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
+		this.convertibleIndicator = convertibleIndicator;
+	}
+
+	public CurrencyAndAmount getNonPaidAmount() {
+		return nonPaidAmount;
+	}
+
+	public void setNonPaidAmount(CurrencyAndAmount nonPaidAmount) {
+		this.nonPaidAmount = nonPaidAmount;
+	}
+
+	public CurrencyAndAmount getParValue() {
+		return parValue;
+	}
+
+	public void setParValue(CurrencyAndAmount parValue) {
+		this.parValue = parValue;
+	}
+
+	public Number getVotingRightsPerShare() {
+		return votingRightsPerShare;
+	}
+
+	public void setVotingRightsPerShare(Number votingRightsPerShare) {
+		this.votingRightsPerShare = votingRightsPerShare;
 	}
 }

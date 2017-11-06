@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.FinancialInvoiceISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -75,27 +76,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#InvoiceHeader
- * FinancialInvoiceV01.InvoiceHeader}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#mmInvoiceHeader
+ * FinancialInvoiceV01.mmInvoiceHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#TradeAgreement
- * FinancialInvoiceV01.TradeAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#mmTradeAgreement
+ * FinancialInvoiceV01.mmTradeAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#TradeDelivery
- * FinancialInvoiceV01.TradeDelivery}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#mmTradeDelivery
+ * FinancialInvoiceV01.mmTradeDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#TradeSettlement
- * FinancialInvoiceV01.TradeSettlement}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#mmTradeSettlement
+ * FinancialInvoiceV01.mmTradeSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#LineItem
- * FinancialInvoiceV01.LineItem}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#mmLineItem
+ * FinancialInvoiceV01.mmLineItem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsin.FinancialInvoiceV01#identifier
- * FinancialInvoiceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsin.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInvoiceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected InvoiceHeader1 invoiceHeader;
 	/**
 	 * Collection of data that is exchanged between two or more parties in
 	 * written, printed or electronic form. It contains general data relevant to
@@ -138,17 +138,18 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InvoiceHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvoiceHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvcHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceHeader";
 			definition = "Collection of data that is exchanged between two or more parties in written, printed or electronic form. It contains general data relevant to the main body of the invoice such as date of issue, currency code and identification number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvoiceHeader1.mmObject();
 		}
 	};
+	protected TradeAgreement6 tradeAgreement;
 	/**
 	 * Commercial information such as terms of commerce, parties, and
 	 * documentation, related to the trading agreement under which this invoice
@@ -175,17 +176,18 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAgreement";
 			definition = "Commercial information such as terms of commerce, parties, and documentation, related to the trading agreement under which this invoice is issued.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement6.mmObject();
 		}
 	};
+	protected TradeDelivery1 tradeDelivery;
 	/**
 	 * Supply chain shipping arrangements for delivery of invoiced products
 	 * and/or services.
@@ -211,17 +213,18 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeDelivery = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeDelivery = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradDlvry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDelivery";
 			definition = "Supply chain shipping arrangements for delivery of invoiced products and/or services.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeDelivery1.mmObject();
 		}
 	};
+	protected TradeSettlement1 tradeSettlement;
 	/**
 	 * Settlement information that enables the financial reconciliation and
 	 * payment of this invoice.<br>
@@ -248,17 +251,18 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeSettlement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradSttlm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlement";
 			definition = "Settlement information that enables the financial reconciliation and payment of this invoice.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeSettlement1.mmObject();
 		}
 	};
+	protected List<LineItem10> lineItem;
 	/**
 	 * Unit of information in this invoice showning the related provision of
 	 * products and/or services and monetary summations reported as a discrete
@@ -287,7 +291,7 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock LineItem = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmLineItem = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "LineItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,33 +299,6 @@ public class FinancialInvoiceV01 {
 			definition = "Unit of information in this invoice showning the related  provision of products and/or services and monetary summations reported as a discrete line item.\r\n\r\n\r\n";
 			minOccurs = 0;
 			complexType_lazy = () -> LineItem10.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsin"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsin";
-			messageFunctionality = "004";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -335,11 +312,58 @@ public class FinancialInvoiceV01 {
 				rootElement = "Document";
 				xmlTag = "FinInvc";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.FinancialInvoiceV01.InvoiceHeader, com.tools20022.repository.area.tsin.FinancialInvoiceV01.TradeAgreement,
-						com.tools20022.repository.area.tsin.FinancialInvoiceV01.TradeDelivery, com.tools20022.repository.area.tsin.FinancialInvoiceV01.TradeSettlement, com.tools20022.repository.area.tsin.FinancialInvoiceV01.LineItem);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsin.FinancialInvoiceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmInvoiceHeader, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeAgreement,
+						com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeDelivery, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeSettlement, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmLineItem);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsin";
+						messageFunctionality = "004";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvoiceHeader1 getInvoiceHeader() {
+		return invoiceHeader;
+	}
+
+	public void setInvoiceHeader(InvoiceHeader1 invoiceHeader) {
+		this.invoiceHeader = invoiceHeader;
+	}
+
+	public TradeAgreement6 getTradeAgreement() {
+		return tradeAgreement;
+	}
+
+	public void setTradeAgreement(TradeAgreement6 tradeAgreement) {
+		this.tradeAgreement = tradeAgreement;
+	}
+
+	public TradeDelivery1 getTradeDelivery() {
+		return tradeDelivery;
+	}
+
+	public void setTradeDelivery(TradeDelivery1 tradeDelivery) {
+		this.tradeDelivery = tradeDelivery;
+	}
+
+	public TradeSettlement1 getTradeSettlement() {
+		return tradeSettlement;
+	}
+
+	public void setTradeSettlement(TradeSettlement1 tradeSettlement) {
+		this.tradeSettlement = tradeSettlement;
+	}
+
+	public List<LineItem10> getLineItem() {
+		return lineItem;
+	}
+
+	public void setLineItem(List<LineItem10> lineItem) {
+		this.lineItem = lineItem;
 	}
 }

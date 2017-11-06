@@ -33,12 +33,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod1#FromToDate
- * ReportingPeriod1.FromToDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod1#FromToTime
- * ReportingPeriod1.FromToTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod1#Type
- * ReportingPeriod1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod1#mmFromToDate
+ * ReportingPeriod1.mmFromToDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod1#mmFromToTime
+ * ReportingPeriod1.mmFromToTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod1#mmType
+ * ReportingPeriod1.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportingPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DatePeriodDetails1 fromToDate;
 	/**
 	 * Specifies a date range.
 	 * <p>
@@ -75,8 +76,8 @@ public class ReportingPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class ReportingPeriod1 {
 	 * definition} = "Specifies a date range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> ReportingPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Specifies a date range.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DatePeriodDetails1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails1.mmObject();
 		}
 	};
+	protected TimePeriodDetails1 fromToTime;
 	/**
 	 * Specifies a time range.
 	 * <p>
@@ -122,8 +124,8 @@ public class ReportingPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,20 +144,21 @@ public class ReportingPeriod1 {
 	 * definition} = "Specifies a time range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromToTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromToTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> ReportingPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "FrToTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToTime";
 			definition = "Specifies a time range.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> TimePeriodDetails1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.TimePeriodDetails1.mmObject();
 		}
 	};
+	protected QueryType3Code type;
 	/**
 	 * Specifies whether all matching items need to be reported or only those
 	 * items that are new or have changed since the last similar request was
@@ -188,7 +191,7 @@ public class ReportingPeriod1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportingPeriod1.mmObject();
 			isDerived = false;
@@ -196,8 +199,8 @@ public class ReportingPeriod1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether all matching items need to be reported or only those items that are new or have changed since the last similar request was made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> QueryType3Code.mmObject();
 		}
 	};
@@ -205,14 +208,38 @@ public class ReportingPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportingPeriod1.FromToDate, com.tools20022.repository.msg.ReportingPeriod1.FromToTime, com.tools20022.repository.msg.ReportingPeriod1.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportingPeriod1.mmFromToDate, com.tools20022.repository.msg.ReportingPeriod1.mmFromToTime, com.tools20022.repository.msg.ReportingPeriod1.mmType);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingPeriod1";
 				definition = "Specifies the requested reporting period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DatePeriodDetails1 getFromToDate() {
+		return fromToDate;
+	}
+
+	public void setFromToDate(com.tools20022.repository.msg.DatePeriodDetails1 fromToDate) {
+		this.fromToDate = fromToDate;
+	}
+
+	public TimePeriodDetails1 getFromToTime() {
+		return fromToTime;
+	}
+
+	public void setFromToTime(com.tools20022.repository.msg.TimePeriodDetails1 fromToTime) {
+		this.fromToTime = fromToTime;
+	}
+
+	public QueryType3Code getType() {
+		return type;
+	}
+
+	public void setType(QueryType3Code type) {
+		this.type = type;
 	}
 }

@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument58#ISIN
- * FinancialInstrument58.ISIN}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument58#Name
- * FinancialInstrument58.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument58#mmISIN
+ * FinancialInstrument58.mmISIN}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument58#mmName
+ * FinancialInstrument58.mmName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument58 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINOct2015Identifier iSIN;
 	/**
 	 * Identification of the index on which the financial instrument is based.
 	 * <p>
@@ -73,8 +74,8 @@ public class FinancialInstrument58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class FinancialInstrument58 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> FinancialInstrument58.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "Identification of the index on which the financial instrument is based.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected FloatingInterestRate8 name;
 	/**
 	 * Name of the index on which the financial instrument is based.
 	 * <p>
@@ -120,7 +122,8 @@ public class FinancialInstrument58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#Index Spread.Index}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmIndex
+	 * Spread.mmIndex}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,33 +143,49 @@ public class FinancialInstrument58 {
 	 * "Name of the index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Name = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmName = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmIndex;
 			componentContext_lazy = () -> FinancialInstrument58.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.Index;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the index on which the financial instrument is based.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FloatingInterestRate8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument58.ISIN, com.tools20022.repository.msg.FinancialInstrument58.Name);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument58.mmISIN, com.tools20022.repository.msg.FinancialInstrument58.mmName);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument58";
 				definition = "Specifies underlying instruments or index a derivative has.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINOct2015Identifier getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(ISINOct2015Identifier iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public FloatingInterestRate8 getName() {
+		return name;
+	}
+
+	public void setName(com.tools20022.repository.msg.FloatingInterestRate8 name) {
+		this.name = name;
 	}
 }

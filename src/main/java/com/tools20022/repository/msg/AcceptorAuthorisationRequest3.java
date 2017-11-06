@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3#Environment
- * AcceptorAuthorisationRequest3.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3#mmEnvironment
+ * AcceptorAuthorisationRequest3.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3#Context
- * AcceptorAuthorisationRequest3.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3#mmContext
+ * AcceptorAuthorisationRequest3.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3#Transaction
- * AcceptorAuthorisationRequest3.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3#mmTransaction
+ * AcceptorAuthorisationRequest3.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV03#AuthorisationRequest
- * AcceptorAuthorisationRequestV03.AuthorisationRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV03#mmAuthorisationRequest
+ * AcceptorAuthorisationRequestV03.mmAuthorisationRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorAuthorisationRequest3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardPaymentEnvironment20 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -117,34 +118,35 @@ public class AcceptorAuthorisationRequest3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4#Environment
-	 * AcceptorAuthorisationRequest4.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4#mmEnvironment
+	 * AcceptorAuthorisationRequest4.mmEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2#Environment
-	 * AcceptorAuthorisationRequest2.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2#mmEnvironment
+	 * AcceptorAuthorisationRequest2.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorAuthorisationRequest3.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> AcceptorAuthorisationRequest3.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest2.Environment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest4.Environment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest4.mmEnvironment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest2.mmEnvironment;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentEnvironment20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment20.mmObject();
 		}
 	};
+	protected CardPaymentContext5 context;
 	/**
 	 * Context in which the transaction is performed (payment and sale).
 	 * <p>
@@ -156,8 +158,8 @@ public class AcceptorAuthorisationRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#CardPaymentAcquiring
-	 * CardPayment.CardPaymentAcquiring}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
+	 * CardPayment.mmCardPaymentAcquiring}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,34 +181,35 @@ public class AcceptorAuthorisationRequest3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4#Context
-	 * AcceptorAuthorisationRequest4.Context}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4#mmContext
+	 * AcceptorAuthorisationRequest4.mmContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2#Context
-	 * AcceptorAuthorisationRequest2.Context}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2#mmContext
+	 * AcceptorAuthorisationRequest2.mmContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> AcceptorAuthorisationRequest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.CardPaymentAcquiring;
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest2.Context;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest4.Context);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest4.mmContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest2.mmContext;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentContext5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentContext5.mmObject();
 		}
 	};
+	protected CardPaymentTransaction22 transaction;
 	/**
 	 * Card payment transaction for which the authorisation is requested.
 	 * <p>
@@ -241,50 +244,74 @@ public class AcceptorAuthorisationRequest3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4#Transaction
-	 * AcceptorAuthorisationRequest4.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4#mmTransaction
+	 * AcceptorAuthorisationRequest4.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2#Transaction
-	 * AcceptorAuthorisationRequest2.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2#mmTransaction
+	 * AcceptorAuthorisationRequest2.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorAuthorisationRequest3.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> AcceptorAuthorisationRequest3.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction for which the authorisation is requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest2.Transaction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest4.Transaction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest4.mmTransaction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest2.mmTransaction;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentTransaction22.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction22.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest3.Environment, com.tools20022.repository.msg.AcceptorAuthorisationRequest3.Context,
-						com.tools20022.repository.msg.AcceptorAuthorisationRequest3.Transaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationRequest3.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationRequest3.mmContext,
+						com.tools20022.repository.msg.AcceptorAuthorisationRequest3.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV03.mmAuthorisationRequest);
 				trace_lazy = () -> CardPayment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV03.AuthorisationRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorAuthorisationRequest3";
 				definition = "Authorisation request from an acceptor.";
-				previousVersion_lazy = () -> AcceptorAuthorisationRequest2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequest4.mmObject());
+				previousVersion_lazy = () -> AcceptorAuthorisationRequest2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardPaymentEnvironment20 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment20 environment) {
+		this.environment = environment;
+	}
+
+	public CardPaymentContext5 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.CardPaymentContext5 context) {
+		this.context = context;
+	}
+
+	public CardPaymentTransaction22 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardPaymentTransaction22 transaction) {
+		this.transaction = transaction;
 	}
 }

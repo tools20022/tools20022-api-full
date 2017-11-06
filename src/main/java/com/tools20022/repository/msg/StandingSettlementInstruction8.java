@@ -42,20 +42,20 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#SettlementStandingInstructionDatabase
- * StandingSettlementInstruction8.SettlementStandingInstructionDatabase}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#mmSettlementStandingInstructionDatabase
+ * StandingSettlementInstruction8.mmSettlementStandingInstructionDatabase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#Counterparty
- * StandingSettlementInstruction8.Counterparty}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#mmCounterparty
+ * StandingSettlementInstruction8.mmCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#Vendor
- * StandingSettlementInstruction8.Vendor}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#mmVendor
+ * StandingSettlementInstruction8.mmVendor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#OtherDeliveringSettlementParties
- * StandingSettlementInstruction8.OtherDeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction8.mmOtherDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#OtherReceivingSettlementParties
- * StandingSettlementInstruction8.OtherReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8#mmOtherReceivingSettlementParties
+ * StandingSettlementInstruction8.mmOtherReceivingSettlementParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +65,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,6 +82,7 @@ import java.util.function.Supplier;
 public class StandingSettlementInstruction8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementStandingInstructionDatabase2Choice settlementStandingInstructionDatabase;
 	/**
 	 * Specifies what settlement standing instruction database is to be used to
 	 * derive the settlement parties involved in the transaction.
@@ -117,21 +118,22 @@ public class StandingSettlementInstruction8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementStandingInstructionDatabase = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementStandingInstructionDatabase = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			businessComponentTrace_lazy = () -> StandingSettlementInstruction.mmObject();
+			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmStgInstrDB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStandingInstructionDatabase";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementStandingInstructionDatabase2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SettlementStandingInstructionDatabase2Choice.mmObject();
 		}
 	};
+	protected Counterparty8Choice counterparty;
 	/**
 	 * Identification of the buyer or seller in a standing settlement
 	 * instruction enabling to derive the Standing Settlement Instruction.
@@ -166,21 +168,22 @@ public class StandingSettlementInstruction8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Counterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCounterparty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
+			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterparty";
 			definition = "Identification of the buyer or seller in a standing settlement instruction enabling to derive the Standing Settlement Instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Counterparty8Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Counterparty8Choice.mmObject();
 		}
 	};
+	protected PartyIdentification65Choice vendor;
 	/**
 	 * Vendor of the Settlement Standing Instruction database requested to be
 	 * consulted.
@@ -194,8 +197,8 @@ public class StandingSettlementInstruction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,21 +219,22 @@ public class StandingSettlementInstruction8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Vendor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVendor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Vndr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vendor";
 			definition = "Vendor of the Settlement Standing Instruction database requested to be consulted.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification65Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification65Choice.mmObject();
 		}
 	};
+	protected SettlementParties20 otherDeliveringSettlementParties;
 	/**
 	 * Delivering parties, other than the seller, needed for deriving the
 	 * standing settlement instruction (for example, depository) or provided for
@@ -266,21 +270,22 @@ public class StandingSettlementInstruction8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			isDerived = false;
 			xmlTag = "OthrDlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDeliveringSettlementParties";
 			definition = "Delivering parties, other than the seller, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties20.mmObject();
 		}
 	};
+	protected SettlementParties20 otherReceivingSettlementParties;
 	/**
 	 * Receiving parties, other than the buyer, needed for deriving the standing
 	 * settlement instruction (for example, depository) or provided for
@@ -316,30 +321,30 @@ public class StandingSettlementInstruction8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> StandingSettlementInstruction8.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReceivingSettlementParties";
 			definition = "Receiving parties, other than the buyer, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties20.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction8.SettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction8.Counterparty,
-						com.tools20022.repository.msg.StandingSettlementInstruction8.Vendor, com.tools20022.repository.msg.StandingSettlementInstruction8.OtherDeliveringSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction8.OtherReceivingSettlementParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction8.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction8.mmCounterparty,
+						com.tools20022.repository.msg.StandingSettlementInstruction8.mmVendor, com.tools20022.repository.msg.StandingSettlementInstruction8.mmOtherDeliveringSettlementParties,
+						com.tools20022.repository.msg.StandingSettlementInstruction8.mmOtherReceivingSettlementParties);
 				trace_lazy = () -> StandingSettlementInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -353,5 +358,45 @@ public class StandingSettlementInstruction8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementStandingInstructionDatabase2Choice getSettlementStandingInstructionDatabase() {
+		return settlementStandingInstructionDatabase;
+	}
+
+	public void setSettlementStandingInstructionDatabase(SettlementStandingInstructionDatabase2Choice settlementStandingInstructionDatabase) {
+		this.settlementStandingInstructionDatabase = settlementStandingInstructionDatabase;
+	}
+
+	public Counterparty8Choice getCounterparty() {
+		return counterparty;
+	}
+
+	public void setCounterparty(Counterparty8Choice counterparty) {
+		this.counterparty = counterparty;
+	}
+
+	public PartyIdentification65Choice getVendor() {
+		return vendor;
+	}
+
+	public void setVendor(PartyIdentification65Choice vendor) {
+		this.vendor = vendor;
+	}
+
+	public SettlementParties20 getOtherDeliveringSettlementParties() {
+		return otherDeliveringSettlementParties;
+	}
+
+	public void setOtherDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties20 otherDeliveringSettlementParties) {
+		this.otherDeliveringSettlementParties = otherDeliveringSettlementParties;
+	}
+
+	public SettlementParties20 getOtherReceivingSettlementParties() {
+		return otherReceivingSettlementParties;
+	}
+
+	public void setOtherReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties20 otherReceivingSettlementParties) {
+		this.otherReceivingSettlementParties = otherReceivingSettlementParties;
 	}
 }

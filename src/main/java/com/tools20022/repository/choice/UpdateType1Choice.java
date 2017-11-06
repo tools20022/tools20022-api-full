@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType1Choice#Code
- * UpdateType1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType1Choice#mmCode
+ * UpdateType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UpdateType1Choice#Proprietary
- * UpdateType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType1Choice#mmProprietary
+ * UpdateType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdateType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatementUpdateType1Code code;
 	/**
 	 * Indicates whether the report is complete or contains changes only.
 	 * <p>
@@ -87,7 +88,7 @@ public class UpdateType1Choice {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdateType1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class UpdateType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Indicates whether the report is complete or contains changes only.
 	 * <p>
@@ -129,7 +131,7 @@ public class UpdateType1Choice {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdateType1Choice.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class UpdateType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class UpdateType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType1Choice.Code, com.tools20022.repository.choice.UpdateType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType1Choice.mmCode, com.tools20022.repository.choice.UpdateType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType1Choice";
 				definition = "Choice of format for the update information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatementUpdateType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(StatementUpdateType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

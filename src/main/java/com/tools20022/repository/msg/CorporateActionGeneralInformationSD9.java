@@ -37,24 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#PlaceAndName
- * CorporateActionGeneralInformationSD9.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#mmPlaceAndName
+ * CorporateActionGeneralInformationSD9.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#EventGroup
- * CorporateActionGeneralInformationSD9.EventGroup}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#mmEventGroup
+ * CorporateActionGeneralInformationSD9.mmEventGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#EventType
- * CorporateActionGeneralInformationSD9.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#mmEventType
+ * CorporateActionGeneralInformationSD9.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#SubEventType
- * CorporateActionGeneralInformationSD9.SubEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD9#mmSubEventType
+ * CorporateActionGeneralInformationSD9.mmSubEventType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionGeneralInformationSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -97,7 +98,7 @@ public class CorporateActionGeneralInformationSD9 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD9.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class CorporateActionGeneralInformationSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected EventGroup1Code eventGroup;
 	/**
 	 * DTC processing domain/ category for event types.
 	 * <p>
@@ -138,7 +140,7 @@ public class CorporateActionGeneralInformationSD9 {
 	 * definition} = "DTC processing domain/ category for event types."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD9.mmObject();
 			isDerived = false;
@@ -146,11 +148,12 @@ public class CorporateActionGeneralInformationSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EventGroup1Code.mmObject();
 		}
 	};
+	protected ExtendedEventType1Code eventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action event type name. Used in place for the events that cannot be
@@ -185,7 +188,7 @@ public class CorporateActionGeneralInformationSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD9.mmObject();
 			isDerived = false;
@@ -193,11 +196,12 @@ public class CorporateActionGeneralInformationSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
 	};
+	protected DTCCSubEventType1Code subEventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action sub event type name further defines the event type.
@@ -229,7 +233,7 @@ public class CorporateActionGeneralInformationSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD9.mmObject();
 			isDerived = false;
@@ -237,8 +241,8 @@ public class CorporateActionGeneralInformationSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType1Code.mmObject();
 		}
 	};
@@ -246,14 +250,46 @@ public class CorporateActionGeneralInformationSD9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.PlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.EventGroup,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.EventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.SubEventType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.mmEventGroup,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD9.mmSubEventType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD9";
 				definition = "Provides additional information regarding corporate action general information details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public EventGroup1Code getEventGroup() {
+		return eventGroup;
+	}
+
+	public void setEventGroup(EventGroup1Code eventGroup) {
+		this.eventGroup = eventGroup;
+	}
+
+	public ExtendedEventType1Code getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(ExtendedEventType1Code eventType) {
+		this.eventType = eventType;
+	}
+
+	public DTCCSubEventType1Code getSubEventType() {
+		return subEventType;
+	}
+
+	public void setSubEventType(DTCCSubEventType1Code subEventType) {
+		this.subEventType = subEventType;
 	}
 }

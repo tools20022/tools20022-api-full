@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementDateCode7Choice#Code
- * SettlementDateCode7Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDateCode7Choice#mmCode
+ * SettlementDateCode7Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementDateCode7Choice#Proprietary
- * SettlementDateCode7Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDateCode7Choice#mmProprietary
+ * SettlementDateCode7Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementDateCode7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementDate4Code code;
 	/**
 	 * Settlement date expressed as an ISO 20022 code.
 	 * <p>
@@ -92,11 +93,11 @@ public class SettlementDateCode7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementDateCode1Choice#Code
-	 * SettlementDateCode1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDateCode1Choice#mmCode
+	 * SettlementDateCode1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDateCode7Choice.mmObject();
 			isDerived = false;
@@ -104,12 +105,13 @@ public class SettlementDateCode7Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Settlement date expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDateCode1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDateCode1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDate4Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Settlement date expressed as a proprietary code.
 	 * <p>
@@ -139,11 +141,11 @@ public class SettlementDateCode7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementDateCode1Choice#Proprietary
-	 * SettlementDateCode1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDateCode1Choice#mmProprietary
+	 * SettlementDateCode1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDateCode7Choice.mmObject();
 			isDerived = false;
@@ -151,9 +153,9 @@ public class SettlementDateCode7Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settlement date expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDateCode1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDateCode1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -161,8 +163,8 @@ public class SettlementDateCode7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDateCode7Choice.Code, com.tools20022.repository.choice.SettlementDateCode7Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDateCode7Choice.mmCode, com.tools20022.repository.choice.SettlementDateCode7Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDateCode7Choice";
 				definition = "Choice of format for the settlement date code.";
@@ -170,5 +172,21 @@ public class SettlementDateCode7Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementDate4Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettlementDate4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

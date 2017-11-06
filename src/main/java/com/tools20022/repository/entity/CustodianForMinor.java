@@ -38,50 +38,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties2#CustodianForMinor
- * AccountParties2.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties2#mmCustodianForMinor
+ * AccountParties2.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties5#CustodianForMinor
- * AccountParties5.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties5#mmCustodianForMinor
+ * AccountParties5.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties1Choice#CustodianForMinor
- * AccountParties1Choice.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties1Choice#mmCustodianForMinor
+ * AccountParties1Choice.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#CustodianForMinor
- * AccountParties3.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmCustodianForMinor
+ * AccountParties3.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties4#CustodianForMinor
- * AccountParties4.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties4#mmCustodianForMinor
+ * AccountParties4.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties2Choice#CustodianForMinor
- * AccountParties2Choice.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties2Choice#mmCustodianForMinor
+ * AccountParties2Choice.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties3Choice#CustodianForMinor
- * AccountParties3Choice.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties3Choice#mmCustodianForMinor
+ * AccountParties3Choice.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties4Choice#CustodianForMinor
- * AccountParties4Choice.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties4Choice#mmCustodianForMinor
+ * AccountParties4Choice.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties7Choice#CustodianForMinor
- * AccountParties7Choice.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties7Choice#mmCustodianForMinor
+ * AccountParties7Choice.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties6Choice#CustodianForMinor
- * AccountParties6Choice.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties6Choice#mmCustodianForMinor
+ * AccountParties6Choice.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties5Choice#CustodianForMinor
- * AccountParties5Choice.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties5Choice#mmCustodianForMinor
+ * AccountParties5Choice.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties13#CustodianForMinor
- * AccountParties13.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties13#mmCustodianForMinor
+ * AccountParties13.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties14#CustodianForMinor
- * AccountParties14.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties14#mmCustodianForMinor
+ * AccountParties14.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties15#CustodianForMinor
- * AccountParties15.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties15#mmCustodianForMinor
+ * AccountParties15.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties16#CustodianForMinor
- * AccountParties16.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties16#mmCustodianForMinor
+ * AccountParties16.mmCustodianForMinor}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -91,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,16 +112,17 @@ public class CustodianForMinor extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustodianForMinor";
 				definition = "Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.CustodianForMinor, com.tools20022.repository.msg.AccountParties5.CustodianForMinor,
-						com.tools20022.repository.choice.AccountParties1Choice.CustodianForMinor, com.tools20022.repository.msg.AccountParties3.CustodianForMinor, com.tools20022.repository.msg.AccountParties4.CustodianForMinor,
-						com.tools20022.repository.choice.AccountParties2Choice.CustodianForMinor, com.tools20022.repository.choice.AccountParties3Choice.CustodianForMinor,
-						com.tools20022.repository.choice.AccountParties4Choice.CustodianForMinor, com.tools20022.repository.choice.AccountParties7Choice.CustodianForMinor,
-						com.tools20022.repository.choice.AccountParties6Choice.CustodianForMinor, com.tools20022.repository.choice.AccountParties5Choice.CustodianForMinor, com.tools20022.repository.msg.AccountParties13.CustodianForMinor,
-						com.tools20022.repository.msg.AccountParties14.CustodianForMinor, com.tools20022.repository.msg.AccountParties15.CustodianForMinor, com.tools20022.repository.msg.AccountParties16.CustodianForMinor);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties5.mmCustodianForMinor,
+						com.tools20022.repository.choice.AccountParties1Choice.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties3.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties4.mmCustodianForMinor,
+						com.tools20022.repository.choice.AccountParties2Choice.mmCustodianForMinor, com.tools20022.repository.choice.AccountParties3Choice.mmCustodianForMinor,
+						com.tools20022.repository.choice.AccountParties4Choice.mmCustodianForMinor, com.tools20022.repository.choice.AccountParties7Choice.mmCustodianForMinor,
+						com.tools20022.repository.choice.AccountParties6Choice.mmCustodianForMinor, com.tools20022.repository.choice.AccountParties5Choice.mmCustodianForMinor,
+						com.tools20022.repository.msg.AccountParties13.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties14.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties15.mmCustodianForMinor,
+						com.tools20022.repository.msg.AccountParties16.mmCustodianForMinor);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#Counterparty
- * PledgeeType1Code.Counterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#mmCounterparty
+ * PledgeeType1Code.mmCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#RegulatoryBody
- * PledgeeType1Code.RegulatoryBody}</li>
+ * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#mmRegulatoryBody
+ * PledgeeType1Code.mmRegulatoryBody}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	 * name} = "Counterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode Counterparty = new MMCode() {
+	public static final MMCode mmCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterparty";
@@ -98,7 +98,7 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	 * name} = "RegulatoryBody"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatoryBody = new MMCode() {
+	public static final MMCode mmRegulatoryBody = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryBody";
@@ -109,11 +109,11 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PledgeeType1Code";
 				definition = "Specifies the type of pledgee.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PledgeeType1Code.Counterparty, com.tools20022.repository.codeset.PledgeeType1Code.RegulatoryBody);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PledgeeType1Code.mmCounterparty, com.tools20022.repository.codeset.PledgeeType1Code.mmRegulatoryBody);
 				trace_lazy = () -> PledgeeTypeCode.mmObject();
 			}
 		});

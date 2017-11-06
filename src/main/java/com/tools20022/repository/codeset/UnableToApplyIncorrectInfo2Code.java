@@ -34,84 +34,84 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectRelatedReference
- * UnableToApplyIncorrectInfo2Code.IncorrectRelatedReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectRelatedReference
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectBankOperationCode
- * UnableToApplyIncorrectInfo2Code.IncorrectBankOperationCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectBankOperationCode
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectBankOperationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectInstructionCode
- * UnableToApplyIncorrectInfo2Code.IncorrectInstructionCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectInstructionCode
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectInstructionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectRequestedExecutionDate
- * UnableToApplyIncorrectInfo2Code.IncorrectRequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectRequestedExecutionDate
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectValueDate
- * UnableToApplyIncorrectInfo2Code.IncorrectValueDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectValueDate
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectInterbankSettledAmount
- * UnableToApplyIncorrectInfo2Code.IncorrectInterbankSettledAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectInterbankSettledAmount
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectInterbankSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectDebtor
- * UnableToApplyIncorrectInfo2Code.IncorrectDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectDebtor
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectDebtorAccount
- * UnableToApplyIncorrectInfo2Code.IncorrectDebtorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectDebtorAccount
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectDebtorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectReceiverCorrespondent
- * UnableToApplyIncorrectInfo2Code.IncorrectReceiverCorrespondent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectReceiverCorrespondent
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectReceiverCorrespondent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectThirdReimbursementInstitution
- * UnableToApplyIncorrectInfo2Code.IncorrectThirdReimbursementInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectThirdReimbursementInstitution
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectThirdReimbursementInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectPaymentScheme
- * UnableToApplyIncorrectInfo2Code.IncorrectPaymentScheme}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectPaymentScheme
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectPaymentScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectAccountOfBeneficiaryInstitution
- * UnableToApplyIncorrectInfo2Code.IncorrectAccountOfBeneficiaryInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectAccountOfBeneficiaryInstitution
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectAccountOfBeneficiaryInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectCreditor
- * UnableToApplyIncorrectInfo2Code.IncorrectCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectCreditor
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectCreditorAccount
- * UnableToApplyIncorrectInfo2Code.IncorrectCreditorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectCreditorAccount
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectCreditorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectRemittanceInformation
- * UnableToApplyIncorrectInfo2Code.IncorrectRemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectRemittanceInformation
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectRemittanceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectPaymentPurpose
- * UnableToApplyIncorrectInfo2Code.IncorrectPaymentPurpose}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectPaymentPurpose
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectPaymentPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectDetailsOfCharges
- * UnableToApplyIncorrectInfo2Code.IncorrectDetailsOfCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectDetailsOfCharges
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectDetailsOfCharges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectSenderToReceiverInformation
- * UnableToApplyIncorrectInfo2Code.IncorrectSenderToReceiverInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectSenderToReceiverInformation
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectSenderToReceiverInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#IncorrectInstructionForFinalAgent
- * UnableToApplyIncorrectInfo2Code.IncorrectInstructionForFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmIncorrectInstructionForFinalAgent
+ * UnableToApplyIncorrectInfo2Code.mmIncorrectInstructionForFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#MismatchCreditorNameAccount
- * UnableToApplyIncorrectInfo2Code.MismatchCreditorNameAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmMismatchCreditorNameAccount
+ * UnableToApplyIncorrectInfo2Code.mmMismatchCreditorNameAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#MismatchDebtorNameAccount
- * UnableToApplyIncorrectInfo2Code.MismatchDebtorNameAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmMismatchDebtorNameAccount
+ * UnableToApplyIncorrectInfo2Code.mmMismatchDebtorNameAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#MismatchFinalAgentNameAccount
- * UnableToApplyIncorrectInfo2Code.MismatchFinalAgentNameAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmMismatchFinalAgentNameAccount
+ * UnableToApplyIncorrectInfo2Code.mmMismatchFinalAgentNameAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#InsufficientDebtorDetails
- * UnableToApplyIncorrectInfo2Code.InsufficientDebtorDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmInsufficientDebtorDetails
+ * UnableToApplyIncorrectInfo2Code.mmInsufficientDebtorDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#InsufficientCreditorDetails
- * UnableToApplyIncorrectInfo2Code.InsufficientCreditorDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code#mmInsufficientCreditorDetails
+ * UnableToApplyIncorrectInfo2Code.mmInsufficientCreditorDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -148,7 +148,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectRelatedReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectRelatedReference = new MMCode() {
+	public static final MMCode mmIncorrectRelatedReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRelatedReference";
@@ -171,7 +171,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectBankOperationCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectBankOperationCode = new MMCode() {
+	public static final MMCode mmIncorrectBankOperationCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectBankOperationCode";
@@ -194,7 +194,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectInstructionCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectInstructionCode = new MMCode() {
+	public static final MMCode mmIncorrectInstructionCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInstructionCode";
@@ -217,7 +217,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectRequestedExecutionDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectRequestedExecutionDate = new MMCode() {
+	public static final MMCode mmIncorrectRequestedExecutionDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRequestedExecutionDate";
@@ -240,7 +240,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectValueDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectValueDate = new MMCode() {
+	public static final MMCode mmIncorrectValueDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectValueDate";
@@ -263,7 +263,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectInterbankSettledAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectInterbankSettledAmount = new MMCode() {
+	public static final MMCode mmIncorrectInterbankSettledAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInterbankSettledAmount";
@@ -286,7 +286,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectDebtor = new MMCode() {
+	public static final MMCode mmIncorrectDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDebtor";
@@ -309,7 +309,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectDebtorAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectDebtorAccount = new MMCode() {
+	public static final MMCode mmIncorrectDebtorAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDebtorAccount";
@@ -332,7 +332,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectReceiverCorrespondent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectReceiverCorrespondent = new MMCode() {
+	public static final MMCode mmIncorrectReceiverCorrespondent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectReceiverCorrespondent";
@@ -355,7 +355,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectThirdReimbursementInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectThirdReimbursementInstitution = new MMCode() {
+	public static final MMCode mmIncorrectThirdReimbursementInstitution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectThirdReimbursementInstitution";
@@ -378,7 +378,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectPaymentScheme"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectPaymentScheme = new MMCode() {
+	public static final MMCode mmIncorrectPaymentScheme = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentScheme";
@@ -401,7 +401,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectAccountOfBeneficiaryInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAccountOfBeneficiaryInstitution = new MMCode() {
+	public static final MMCode mmIncorrectAccountOfBeneficiaryInstitution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountOfBeneficiaryInstitution";
@@ -424,7 +424,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCreditor = new MMCode() {
+	public static final MMCode mmIncorrectCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCreditor";
@@ -447,7 +447,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectCreditorAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCreditorAccount = new MMCode() {
+	public static final MMCode mmIncorrectCreditorAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCreditorAccount";
@@ -470,7 +470,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectRemittanceInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectRemittanceInformation = new MMCode() {
+	public static final MMCode mmIncorrectRemittanceInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRemittanceInformation";
@@ -493,7 +493,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectPaymentPurpose"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectPaymentPurpose = new MMCode() {
+	public static final MMCode mmIncorrectPaymentPurpose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentPurpose";
@@ -516,7 +516,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectDetailsOfCharges"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectDetailsOfCharges = new MMCode() {
+	public static final MMCode mmIncorrectDetailsOfCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDetailsOfCharges";
@@ -539,7 +539,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectSenderToReceiverInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectSenderToReceiverInformation = new MMCode() {
+	public static final MMCode mmIncorrectSenderToReceiverInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSenderToReceiverInformation";
@@ -562,7 +562,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectInstructionForFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectInstructionForFinalAgent = new MMCode() {
+	public static final MMCode mmIncorrectInstructionForFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInstructionForFinalAgent";
@@ -585,7 +585,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "MismatchCreditorNameAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MismatchCreditorNameAccount = new MMCode() {
+	public static final MMCode mmMismatchCreditorNameAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchCreditorNameAccount";
@@ -608,7 +608,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "MismatchDebtorNameAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MismatchDebtorNameAccount = new MMCode() {
+	public static final MMCode mmMismatchDebtorNameAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchDebtorNameAccount";
@@ -631,7 +631,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "MismatchFinalAgentNameAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MismatchFinalAgentNameAccount = new MMCode() {
+	public static final MMCode mmMismatchFinalAgentNameAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchFinalAgentNameAccount";
@@ -654,7 +654,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "InsufficientDebtorDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientDebtorDetails = new MMCode() {
+	public static final MMCode mmInsufficientDebtorDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientDebtorDetails";
@@ -677,7 +677,7 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	 * name} = "InsufficientCreditorDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientCreditorDetails = new MMCode() {
+	public static final MMCode mmInsufficientCreditorDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCreditorDetails";
@@ -688,23 +688,23 @@ public class UnableToApplyIncorrectInfo2Code extends UnableToApplyIncorrectInfoC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IN01");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyIncorrectInfo2Code";
 				definition = "Used when the unable to apply is due to incorrect information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectRelatedReference, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectBankOperationCode,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectInstructionCode, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectRequestedExecutionDate,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectValueDate, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectInterbankSettledAmount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectDebtor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectDebtorAccount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectReceiverCorrespondent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectThirdReimbursementInstitution,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectPaymentScheme, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectAccountOfBeneficiaryInstitution,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectCreditor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectCreditorAccount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectRemittanceInformation, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectPaymentPurpose,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectDetailsOfCharges, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectSenderToReceiverInformation,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.IncorrectInstructionForFinalAgent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.MismatchCreditorNameAccount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.MismatchDebtorNameAccount, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.MismatchFinalAgentNameAccount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.InsufficientDebtorDetails, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.InsufficientCreditorDetails);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectRelatedReference, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectBankOperationCode,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectInstructionCode, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectRequestedExecutionDate,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectValueDate, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectInterbankSettledAmount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectDebtor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectDebtorAccount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectReceiverCorrespondent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectThirdReimbursementInstitution,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectPaymentScheme, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectAccountOfBeneficiaryInstitution,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectCreditor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectCreditorAccount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectRemittanceInformation, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectPaymentPurpose,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectDetailsOfCharges, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectSenderToReceiverInformation,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmIncorrectInstructionForFinalAgent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmMismatchCreditorNameAccount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmMismatchDebtorNameAccount, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmMismatchFinalAgentNameAccount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmInsufficientDebtorDetails, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code.mmInsufficientCreditorDetails);
 				trace_lazy = () -> UnableToApplyIncorrectInfoCode.mmObject();
 			}
 		});

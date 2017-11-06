@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#NonRenounceable
- * RenounceableStatus1Code.NonRenounceable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#mmNonRenounceable
+ * RenounceableStatus1Code.mmNonRenounceable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#Renounceable
- * RenounceableStatus1Code.Renounceable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#mmRenounceable
+ * RenounceableStatus1Code.mmRenounceable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class RenounceableStatus1Code extends RenounceableStatusCode {
 	 * name} = "NonRenounceable"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonRenounceable = new MMCode() {
+	public static final MMCode mmNonRenounceable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRenounceable";
@@ -104,7 +104,7 @@ public class RenounceableStatus1Code extends RenounceableStatusCode {
 	 * name} = "Renounceable"</li>
 	 * </ul>
 	 */
-	public static final MMCode Renounceable = new MMCode() {
+	public static final MMCode mmRenounceable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Renounceable";
@@ -115,12 +115,12 @@ public class RenounceableStatus1Code extends RenounceableStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NREN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RenounceableStatus1Code";
 				definition = "Specifies the renounceable status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RenounceableStatus1Code.NonRenounceable, com.tools20022.repository.codeset.RenounceableStatus1Code.Renounceable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RenounceableStatus1Code.mmNonRenounceable, com.tools20022.repository.codeset.RenounceableStatus1Code.mmRenounceable);
 				trace_lazy = () -> RenounceableStatusCode.mmObject();
 			}
 		});

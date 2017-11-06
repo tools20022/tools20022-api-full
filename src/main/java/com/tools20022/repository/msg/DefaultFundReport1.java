@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the calculation of the default fund and the collateral
@@ -33,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultFundReport1#DefaultFundCalculation
- * DefaultFundReport1.DefaultFundCalculation}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultFundReport1#mmDefaultFundCalculation
+ * DefaultFundReport1.mmDefaultFundCalculation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultFundReport1#CollateralDescription
- * DefaultFundReport1.CollateralDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultFundReport1#mmCollateralDescription
+ * DefaultFundReport1.mmCollateralDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultFundReport1#NetExcessOrDeficit
- * DefaultFundReport1.NetExcessOrDeficit}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultFundReport1#mmNetExcessOrDeficit
+ * DefaultFundReport1.mmNetExcessOrDeficit}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#ReportDetails
- * DefaultFundContributionReportV02.ReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#mmReportDetails
+ * DefaultFundContributionReportV02.mmReportDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DefaultFundReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.DefaultFund1> defaultFundCalculation;
 	/**
 	 * Provides details about the calculation of the clearing member
 	 * contribution to the default fund.
@@ -101,7 +103,7 @@ public class DefaultFundReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DefaultFundCalculation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDefaultFundCalculation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DefaultFundReport1.mmObject();
 			isDerived = false;
@@ -110,10 +112,11 @@ public class DefaultFundReport1 {
 			name = "DefaultFundCalculation";
 			definition = "Provides details about the calculation of the clearing member contribution to the default fund.";
 			minOccurs = 1;
-			type_lazy = () -> DefaultFund1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DefaultFund1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Collateral3> collateralDescription;
 	/**
 	 * Provides details about the collateral held.
 	 * <p>
@@ -140,7 +143,7 @@ public class DefaultFundReport1 {
 	 * definition} = "Provides details about the collateral held."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralDescription = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DefaultFundReport1.mmObject();
 			isDerived = false;
@@ -149,10 +152,11 @@ public class DefaultFundReport1 {
 			name = "CollateralDescription";
 			definition = "Provides details about the collateral held.";
 			minOccurs = 1;
-			type_lazy = () -> Collateral3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Collateral3.mmObject();
 		}
 	};
+	protected AmountAndDirection21 netExcessOrDeficit;
 	/**
 	 * Excess amount that the central counterparty will restitute to the
 	 * clearing member or deficit to be provided by the member for the guarantee
@@ -183,7 +187,7 @@ public class DefaultFundReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetExcessOrDeficit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetExcessOrDeficit = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DefaultFundReport1.mmObject();
 			isDerived = false;
@@ -191,25 +195,49 @@ public class DefaultFundReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetExcessOrDeficit";
 			definition = "Excess amount that the central counterparty will restitute to the clearing member or deficit to be provided by the member for the guarantee fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection21.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultFundReport1.DefaultFundCalculation, com.tools20022.repository.msg.DefaultFundReport1.CollateralDescription,
-						com.tools20022.repository.msg.DefaultFundReport1.NetExcessOrDeficit);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.DefaultFundContributionReportV02.ReportDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultFundReport1.mmDefaultFundCalculation, com.tools20022.repository.msg.DefaultFundReport1.mmCollateralDescription,
+						com.tools20022.repository.msg.DefaultFundReport1.mmNetExcessOrDeficit);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmReportDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DefaultFundReport1";
 				definition = "Provides details on the calculation of the default fund and the collateral that has been posted by the clearing member.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<DefaultFund1> getDefaultFundCalculation() {
+		return defaultFundCalculation;
+	}
+
+	public void setDefaultFundCalculation(List<com.tools20022.repository.msg.DefaultFund1> defaultFundCalculation) {
+		this.defaultFundCalculation = defaultFundCalculation;
+	}
+
+	public List<Collateral3> getCollateralDescription() {
+		return collateralDescription;
+	}
+
+	public void setCollateralDescription(List<com.tools20022.repository.msg.Collateral3> collateralDescription) {
+		this.collateralDescription = collateralDescription;
+	}
+
+	public AmountAndDirection21 getNetExcessOrDeficit() {
+		return netExcessOrDeficit;
+	}
+
+	public void setNetExcessOrDeficit(com.tools20022.repository.msg.AmountAndDirection21 netExcessOrDeficit) {
+		this.netExcessOrDeficit = netExcessOrDeficit;
 	}
 }

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionInType1#Structured
- * InvestmentFundTransactionInType1.Structured}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionInType1#mmStructured
+ * InvestmentFundTransactionInType1.mmStructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionInType1#AdditionalInformation
- * InvestmentFundTransactionInType1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionInType1#mmAdditionalInformation
+ * InvestmentFundTransactionInType1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundTransactionInType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentFundTransactionInType3Code structured;
 	/**
 	 * Type of transaction, expressed as a code.
 	 * <p>
@@ -80,8 +81,8 @@ public class InvestmentFundTransactionInType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#Type
-	 * InvestmentFundTransaction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmType
+	 * InvestmentFundTransaction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class InvestmentFundTransactionInType1 {
 	 * definition} = "Type of transaction, expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> InvestmentFundTransactionInType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.Type;
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Type of transaction, expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the type of transaction.
 	 * <p>
@@ -141,7 +143,7 @@ public class InvestmentFundTransactionInType1 {
 	 * definition} = "Additional information about the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentFundTransactionInType1.mmObject();
 			isDerived = false;
@@ -149,8 +151,8 @@ public class InvestmentFundTransactionInType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the type of transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -158,14 +160,30 @@ public class InvestmentFundTransactionInType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransactionInType1.Structured, com.tools20022.repository.msg.InvestmentFundTransactionInType1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransactionInType1.mmStructured, com.tools20022.repository.msg.InvestmentFundTransactionInType1.mmAdditionalInformation);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionInType1";
 				definition = "Investment fund transactions that result in cash movements into a fund, eg, subscription, switch-in.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentFundTransactionInType3Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(InvestmentFundTransactionInType3Code structured) {
+		this.structured = structured;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

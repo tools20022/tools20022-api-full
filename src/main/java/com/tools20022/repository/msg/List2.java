@@ -43,12 +43,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.List2#ListIdentification
- * List2.ListIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List2#TradeOriginationDateTime
- * List2.TradeOriginationDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List2#TradeDate
- * List2.TradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List2#mmListIdentification
+ * List2.mmListIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.List2#mmTradeOriginationDateTime
+ * List2.mmTradeOriginationDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List2#mmTradeDate
+ * List2.mmTradeDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class List2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text listIdentification;
 	/**
 	 * Unique identifier for a list, as assigned by the trading party. The
 	 * identifier must be unique within a single trading day.
@@ -87,8 +89,8 @@ public class List2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#ListIdentification
-	 * ListTrading.ListIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmListIdentification
+	 * ListTrading.mmListIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.List2
@@ -108,20 +110,21 @@ public class List2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
 			componentContext_lazy = () -> List2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.ListIdentification;
 			isDerived = false;
 			xmlTag = "ListId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime tradeOriginationDateTime;
 	/**
 	 * Indicates the date and time of the agreement in principal between
 	 * counter-parties prior to actual trade date. Used with fixed income for
@@ -136,8 +139,8 @@ public class List2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeOriginationDate
-	 * SecuritiesTrade.TradeOriginationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeOriginationDate
+	 * SecuritiesTrade.mmTradeOriginationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.List2
@@ -157,20 +160,21 @@ public class List2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeOriginationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeOriginationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeOriginationDate;
 			componentContext_lazy = () -> List2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeOriginationDate;
 			isDerived = false;
 			xmlTag = "TradOrgtnDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginationDateTime";
 			definition = "Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.\nUsed with fixed income for municipal new issue markets.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime tradeDate;
 	/**
 	 * Specifies the date/time on which the trade was executed.
 	 * <p>
@@ -183,8 +187,8 @@ public class List2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.List2
@@ -202,17 +206,17 @@ public class List2 {
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> List2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -220,14 +224,38 @@ public class List2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List2.ListIdentification, com.tools20022.repository.msg.List2.TradeOriginationDateTime, com.tools20022.repository.msg.List2.TradeDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List2.mmListIdentification, com.tools20022.repository.msg.List2.mmTradeOriginationDateTime, com.tools20022.repository.msg.List2.mmTradeDate);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "List2";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getListIdentification() {
+		return listIdentification;
+	}
+
+	public void setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = listIdentification;
+	}
+
+	public ISODateTime getTradeOriginationDateTime() {
+		return tradeOriginationDateTime;
+	}
+
+	public void setTradeOriginationDateTime(ISODateTime tradeOriginationDateTime) {
+		this.tradeOriginationDateTime = tradeOriginationDateTime;
+	}
+
+	public ISODateTime getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODateTime tradeDate) {
+		this.tradeDate = tradeDate;
 	}
 }

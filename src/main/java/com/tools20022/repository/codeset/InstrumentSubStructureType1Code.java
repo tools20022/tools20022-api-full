@@ -34,72 +34,72 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#AssetBackedSecurity
- * InstrumentSubStructureType1Code.AssetBackedSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmAssetBackedSecurity
+ * InstrumentSubStructureType1Code.mmAssetBackedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#AirlineTrust
- * InstrumentSubStructureType1Code.AirlineTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmAirlineTrust
+ * InstrumentSubStructureType1Code.mmAirlineTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#AutoTrust
- * InstrumentSubStructureType1Code.AutoTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmAutoTrust
+ * InstrumentSubStructureType1Code.mmAutoTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CollateralBondObligation
- * InstrumentSubStructureType1Code.CollateralBondObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCollateralBondObligation
+ * InstrumentSubStructureType1Code.mmCollateralBondObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CollateralDebtObligation
- * InstrumentSubStructureType1Code.CollateralDebtObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCollateralDebtObligation
+ * InstrumentSubStructureType1Code.mmCollateralDebtObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CreditLinkedNotes
- * InstrumentSubStructureType1Code.CreditLinkedNotes}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCreditLinkedNotes
+ * InstrumentSubStructureType1Code.mmCreditLinkedNotes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CollateralLoanObligation
- * InstrumentSubStructureType1Code.CollateralLoanObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCollateralLoanObligation
+ * InstrumentSubStructureType1Code.mmCollateralLoanObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CommercialMortgage
- * InstrumentSubStructureType1Code.CommercialMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCommercialMortgage
+ * InstrumentSubStructureType1Code.mmCommercialMortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#Consumer
- * InstrumentSubStructureType1Code.Consumer}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmConsumer
+ * InstrumentSubStructureType1Code.mmConsumer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CreditCardTrust
- * InstrumentSubStructureType1Code.CreditCardTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCreditCardTrust
+ * InstrumentSubStructureType1Code.mmCreditCardTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#HomeEquityLoans
- * InstrumentSubStructureType1Code.HomeEquityLoans}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmHomeEquityLoans
+ * InstrumentSubStructureType1Code.mmHomeEquityLoans}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#LoanParticipationNote
- * InstrumentSubStructureType1Code.LoanParticipationNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmLoanParticipationNote
+ * InstrumentSubStructureType1Code.mmLoanParticipationNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CoveredBond
- * InstrumentSubStructureType1Code.CoveredBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCoveredBond
+ * InstrumentSubStructureType1Code.mmCoveredBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#PaymentRight
- * InstrumentSubStructureType1Code.PaymentRight}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmPaymentRight
+ * InstrumentSubStructureType1Code.mmPaymentRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#Repackagings
- * InstrumentSubStructureType1Code.Repackagings}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmRepackagings
+ * InstrumentSubStructureType1Code.mmRepackagings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#ResidentialMortgage
- * InstrumentSubStructureType1Code.ResidentialMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmResidentialMortgage
+ * InstrumentSubStructureType1Code.mmResidentialMortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#StructuredCoveredBond
- * InstrumentSubStructureType1Code.StructuredCoveredBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmStructuredCoveredBond
+ * InstrumentSubStructureType1Code.mmStructuredCoveredBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#StraightBond
- * InstrumentSubStructureType1Code.StraightBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmStraightBond
+ * InstrumentSubStructureType1Code.mmStraightBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#StudentLoanTrust
- * InstrumentSubStructureType1Code.StudentLoanTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmStudentLoanTrust
+ * InstrumentSubStructureType1Code.mmStudentLoanTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#WholeBusinessSecurity
- * InstrumentSubStructureType1Code.WholeBusinessSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmWholeBusinessSecurity
+ * InstrumentSubStructureType1Code.mmWholeBusinessSecurity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -135,7 +135,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "AssetBackedSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode AssetBackedSecurity = new MMCode() {
+	public static final MMCode mmAssetBackedSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetBackedSecurity";
@@ -158,7 +158,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "AirlineTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode AirlineTrust = new MMCode() {
+	public static final MMCode mmAirlineTrust = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirlineTrust";
@@ -181,7 +181,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "AutoTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode AutoTrust = new MMCode() {
+	public static final MMCode mmAutoTrust = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoTrust";
@@ -204,7 +204,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CollateralBondObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralBondObligation = new MMCode() {
+	public static final MMCode mmCollateralBondObligation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralBondObligation";
@@ -227,7 +227,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CollateralDebtObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralDebtObligation = new MMCode() {
+	public static final MMCode mmCollateralDebtObligation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralDebtObligation";
@@ -250,7 +250,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CreditLinkedNotes"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditLinkedNotes = new MMCode() {
+	public static final MMCode mmCreditLinkedNotes = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLinkedNotes";
@@ -273,7 +273,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CollateralLoanObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralLoanObligation = new MMCode() {
+	public static final MMCode mmCollateralLoanObligation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralLoanObligation";
@@ -296,7 +296,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CommercialMortgage"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialMortgage = new MMCode() {
+	public static final MMCode mmCommercialMortgage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialMortgage";
@@ -319,7 +319,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "Consumer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Consumer = new MMCode() {
+	public static final MMCode mmConsumer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consumer";
@@ -342,7 +342,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CreditCardTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditCardTrust = new MMCode() {
+	public static final MMCode mmCreditCardTrust = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditCardTrust";
@@ -365,7 +365,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "HomeEquityLoans"</li>
 	 * </ul>
 	 */
-	public static final MMCode HomeEquityLoans = new MMCode() {
+	public static final MMCode mmHomeEquityLoans = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HomeEquityLoans";
@@ -388,7 +388,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "LoanParticipationNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode LoanParticipationNote = new MMCode() {
+	public static final MMCode mmLoanParticipationNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LoanParticipationNote";
@@ -411,7 +411,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CoveredBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode CoveredBond = new MMCode() {
+	public static final MMCode mmCoveredBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredBond";
@@ -434,7 +434,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "PaymentRight"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentRight = new MMCode() {
+	public static final MMCode mmPaymentRight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentRight";
@@ -457,7 +457,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "Repackagings"</li>
 	 * </ul>
 	 */
-	public static final MMCode Repackagings = new MMCode() {
+	public static final MMCode mmRepackagings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repackagings";
@@ -480,7 +480,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "ResidentialMortgage"</li>
 	 * </ul>
 	 */
-	public static final MMCode ResidentialMortgage = new MMCode() {
+	public static final MMCode mmResidentialMortgage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidentialMortgage";
@@ -503,7 +503,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "StructuredCoveredBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode StructuredCoveredBond = new MMCode() {
+	public static final MMCode mmStructuredCoveredBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredCoveredBond";
@@ -526,7 +526,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "StraightBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode StraightBond = new MMCode() {
+	public static final MMCode mmStraightBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StraightBond";
@@ -549,7 +549,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "StudentLoanTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode StudentLoanTrust = new MMCode() {
+	public static final MMCode mmStudentLoanTrust = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StudentLoanTrust";
@@ -572,7 +572,7 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "WholeBusinessSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode WholeBusinessSecurity = new MMCode() {
+	public static final MMCode mmWholeBusinessSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WholeBusinessSecurity";
@@ -583,21 +583,21 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ABSE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstrumentSubStructureType1Code";
 				definition = "Indicates the type of deal for structured finance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstrumentSubStructureType1Code.AssetBackedSecurity, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.AirlineTrust,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.AutoTrust, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CollateralBondObligation,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CollateralDebtObligation, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CreditLinkedNotes,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CollateralLoanObligation, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CommercialMortgage,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.Consumer, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CreditCardTrust,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.HomeEquityLoans, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.LoanParticipationNote,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CoveredBond, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.PaymentRight,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.Repackagings, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.ResidentialMortgage,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.StructuredCoveredBond, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.StraightBond,
-						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.StudentLoanTrust, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.WholeBusinessSecurity);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmAssetBackedSecurity, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmAirlineTrust,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmAutoTrust, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmCollateralBondObligation,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmCollateralDebtObligation, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmCreditLinkedNotes,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmCollateralLoanObligation, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmCommercialMortgage,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmConsumer, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmCreditCardTrust,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmHomeEquityLoans, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmLoanParticipationNote,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmCoveredBond, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmPaymentRight,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmRepackagings, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmResidentialMortgage,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmStructuredCoveredBond, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmStraightBond,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmStudentLoanTrust, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmWholeBusinessSecurity);
 				trace_lazy = () -> InstrumentSubStructureTypeCode.mmObject();
 			}
 		});

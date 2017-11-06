@@ -35,10 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InitialAmount1Choice#InitialNumberOfInstalments
- * InitialAmount1Choice.InitialNumberOfInstalments}</li>
- * <li>{@linkplain com.tools20022.repository.choice.InitialAmount1Choice#Amount
- * InitialAmount1Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.InitialAmount1Choice#mmInitialNumberOfInstalments
+ * InitialAmount1Choice.mmInitialNumberOfInstalments}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InitialAmount1Choice#mmAmount
+ * InitialAmount1Choice.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InitialAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number initialNumberOfInstalments;
 	/**
 	 * Number of pre-paid instalment periods at the time the investment plan is
 	 * created.
@@ -75,8 +77,8 @@ public class InitialAmount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#InitialNumberOfInstalment
-	 * Instalment.InitialNumberOfInstalment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmInitialNumberOfInstalment
+	 * Instalment.mmInitialNumberOfInstalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +99,21 @@ public class InitialAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitialNumberOfInstalments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitialNumberOfInstalments = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmInitialNumberOfInstalment;
 			componentContext_lazy = () -> InitialAmount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.InitialNumberOfInstalment;
 			isDerived = false;
 			xmlTag = "InitlNbOfInstlmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialNumberOfInstalments";
 			definition = "Number of pre-paid instalment periods at the time the investment plan is created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount to be paid or redeemed at the time the investment plan is created.
 	 * <p>
@@ -124,8 +127,8 @@ public class InitialAmount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Amount
-	 * PaymentObligation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAmount
+	 * PaymentObligation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +149,17 @@ public class InitialAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
 			componentContext_lazy = () -> InitialAmount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount to be paid or redeemed at the time the investment plan is created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -164,14 +167,30 @@ public class InitialAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InitialAmount1Choice.InitialNumberOfInstalments, com.tools20022.repository.choice.InitialAmount1Choice.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InitialAmount1Choice.mmInitialNumberOfInstalments, com.tools20022.repository.choice.InitialAmount1Choice.mmAmount);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InitialAmount1Choice";
 				definition = "Choice of an initial amount or number of pre-paid instalments.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getInitialNumberOfInstalments() {
+		return initialNumberOfInstalments;
+	}
+
+	public void setInitialNumberOfInstalments(Number initialNumberOfInstalments) {
+		this.initialNumberOfInstalments = initialNumberOfInstalments;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

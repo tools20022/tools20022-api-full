@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#Reason
- * RejectedCancellationStatusReason1Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#mmReason
+ * RejectedCancellationStatusReason1Choice.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#ExtendedReason
- * RejectedCancellationStatusReason1Choice.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#mmExtendedReason
+ * RejectedCancellationStatusReason1Choice.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#DataSourceScheme
- * RejectedCancellationStatusReason1Choice.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#mmDataSourceScheme
+ * RejectedCancellationStatusReason1Choice.mmDataSourceScheme}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectedCancellationStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectedCancellationStatusReason1Code reason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -97,7 +98,7 @@ public class RejectedCancellationStatusReason1Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class RejectedCancellationStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -138,7 +140,7 @@ public class RejectedCancellationStatusReason1Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -146,11 +148,12 @@ public class RejectedCancellationStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the rejected status.
 	 * <p>
@@ -183,34 +186,58 @@ public class RejectedCancellationStatusReason1Choice {
 	 * "Proprietary identification of the reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.Reason, com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.ExtendedReason,
-						com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.DataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmReason, com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmExtendedReason,
+						com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmDataSourceScheme);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationStatusReason1Choice";
 				definition = "Reason for which a cancellation is rejected.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectedCancellationStatusReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(RejectedCancellationStatusReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
 	}
 }

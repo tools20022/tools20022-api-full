@@ -34,117 +34,119 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#ProcessingBatch
- * RepairReason1Code.ProcessingBatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmProcessingBatch
+ * RepairReason1Code.mmProcessingBatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#TransactionCallDelay
- * RepairReason1Code.TransactionCallDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmTransactionCallDelay
+ * RepairReason1Code.mmTransactionCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#CorporateAction
- * RepairReason1Code.CorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmCorporateAction
+ * RepairReason1Code.mmCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#CashAccount
- * RepairReason1Code.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmCashAccount
+ * RepairReason1Code.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#ImpossibleCashSettlementSystem
- * RepairReason1Code.ImpossibleCashSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmImpossibleCashSettlementSystem
+ * RepairReason1Code.mmImpossibleCashSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#SettlementDate
- * RepairReason1Code.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSettlementDate
+ * RepairReason1Code.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#DealPrice
- * RepairReason1Code.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmDealPrice
+ * RepairReason1Code.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#PlaceOfSettlement
- * RepairReason1Code.PlaceOfSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmPlaceOfSettlement
+ * RepairReason1Code.mmPlaceOfSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#SettlementAmount
- * RepairReason1Code.SettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepairReason1Code#Quantity
- * RepairReason1Code.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepairReason1Code#Security
- * RepairReason1Code.Security}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSettlementAmount
+ * RepairReason1Code.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#TradeDate
- * RepairReason1Code.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmQuantity
+ * RepairReason1Code.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#ForfeitAmount
- * RepairReason1Code.ForfeitAmount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepairReason1Code#Agent
- * RepairReason1Code.Agent}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSecurity
+ * RepairReason1Code.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#ReceivingOrDeliveringCustodian
- * RepairReason1Code.ReceivingOrDeliveringCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmTradeDate
+ * RepairReason1Code.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#BuyerorSeller
- * RepairReason1Code.BuyerorSeller}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmForfeitAmount
+ * RepairReason1Code.mmForfeitAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmAgent
+ * RepairReason1Code.mmAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#CommonReference
- * RepairReason1Code.CommonReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmReceivingOrDeliveringCustodian
+ * RepairReason1Code.mmReceivingOrDeliveringCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#LetterOfGuaranteeIndicator
- * RepairReason1Code.LetterOfGuaranteeIndicator}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmBuyerorSeller
+ * RepairReason1Code.mmBuyerorSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#MinimumSettlementQuantity
- * RepairReason1Code.MinimumSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmCommonReference
+ * RepairReason1Code.mmCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#MultipleSettlementQuantity
- * RepairReason1Code.MultipleSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmLetterOfGuaranteeIndicator
+ * RepairReason1Code.mmLetterOfGuaranteeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#SettlementAmountCurrency
- * RepairReason1Code.SettlementAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmMinimumSettlementQuantity
+ * RepairReason1Code.mmMinimumSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#PhysicalSettlementImpossible
- * RepairReason1Code.PhysicalSettlementImpossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmMultipleSettlementQuantity
+ * RepairReason1Code.mmMultipleSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#PlaceOfTrade
- * RepairReason1Code.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSettlementAmountCurrency
+ * RepairReason1Code.mmSettlementAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#Reference
- * RepairReason1Code.Reference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmPhysicalSettlementImpossible
+ * RepairReason1Code.mmPhysicalSettlementImpossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#TerminationTransactionAmount
- * RepairReason1Code.TerminationTransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmPlaceOfTrade
+ * RepairReason1Code.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#RepurchaseRate
- * RepairReason1Code.RepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmReference
+ * RepairReason1Code.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#PremiumAmount
- * RepairReason1Code.PremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmTerminationTransactionAmount
+ * RepairReason1Code.mmTerminationTransactionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#RepurchaseRateType
- * RepairReason1Code.RepurchaseRateType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmRepurchaseRate
+ * RepairReason1Code.mmRepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#SpreadRate
- * RepairReason1Code.SpreadRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmPremiumAmount
+ * RepairReason1Code.mmPremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#ImpossibleToUseTheRTGSSystemInstructed
- * RepairReason1Code.ImpossibleToUseTheRTGSSystemInstructed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmRepurchaseRateType
+ * RepairReason1Code.mmRepurchaseRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#SafekeepingAccount
- * RepairReason1Code.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSpreadRate
+ * RepairReason1Code.mmSpreadRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#SettlementTransaction
- * RepairReason1Code.SettlementTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmImpossibleToUseTheRTGSSystemInstructed
+ * RepairReason1Code.mmImpossibleToUseTheRTGSSystemInstructed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#SettlementSystemMethod
- * RepairReason1Code.SettlementSystemMethod}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSafekeepingAccount
+ * RepairReason1Code.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#ClosingDateTime
- * RepairReason1Code.ClosingDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSettlementTransaction
+ * RepairReason1Code.mmSettlementTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#TaxStatus
- * RepairReason1Code.TaxStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmSettlementSystemMethod
+ * RepairReason1Code.mmSettlementSystemMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#VariableRateSupport
- * RepairReason1Code.VariableRateSupport}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmClosingDateTime
+ * RepairReason1Code.mmClosingDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmTaxStatus
+ * RepairReason1Code.mmTaxStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason1Code#mmVariableRateSupport
+ * RepairReason1Code.mmVariableRateSupport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -180,7 +182,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "ProcessingBatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingBatch = new MMCode() {
+	public static final MMCode mmProcessingBatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatch";
@@ -203,7 +205,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "TransactionCallDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionCallDelay = new MMCode() {
+	public static final MMCode mmTransactionCallDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCallDelay";
@@ -226,7 +228,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "CorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateAction = new MMCode() {
+	public static final MMCode mmCorporateAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
@@ -249,7 +251,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "CashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashAccount = new MMCode() {
+	public static final MMCode mmCashAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
@@ -272,7 +274,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "ImpossibleCashSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImpossibleCashSettlementSystem = new MMCode() {
+	public static final MMCode mmImpossibleCashSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleCashSettlementSystem";
@@ -295,7 +297,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDate = new MMCode() {
+	public static final MMCode mmSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
@@ -318,7 +320,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "DealPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode DealPrice = new MMCode() {
+	public static final MMCode mmDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
@@ -341,7 +343,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "PlaceOfSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfSettlement = new MMCode() {
+	public static final MMCode mmPlaceOfSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSettlement";
@@ -364,7 +366,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "SettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmount = new MMCode() {
+	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
@@ -387,7 +389,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "Quantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Quantity = new MMCode() {
+	public static final MMCode mmQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
@@ -410,7 +412,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode Security = new MMCode() {
+	public static final MMCode mmSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
@@ -433,7 +435,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeDate = new MMCode() {
+	public static final MMCode mmTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
@@ -456,7 +458,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "ForfeitAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForfeitAmount = new MMCode() {
+	public static final MMCode mmForfeitAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitAmount";
@@ -479,7 +481,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "Agent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agent = new MMCode() {
+	public static final MMCode mmAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
@@ -502,7 +504,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "ReceivingOrDeliveringCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingOrDeliveringCustodian = new MMCode() {
+	public static final MMCode mmReceivingOrDeliveringCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingOrDeliveringCustodian";
@@ -525,7 +527,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "BuyerorSeller"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyerorSeller = new MMCode() {
+	public static final MMCode mmBuyerorSeller = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerorSeller";
@@ -548,7 +550,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "CommonReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommonReference = new MMCode() {
+	public static final MMCode mmCommonReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
@@ -571,7 +573,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "LetterOfGuaranteeIndicator"</li>
 	 * </ul>
 	 */
-	public static final MMCode LetterOfGuaranteeIndicator = new MMCode() {
+	public static final MMCode mmLetterOfGuaranteeIndicator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuaranteeIndicator";
@@ -594,7 +596,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "MinimumSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumSettlementQuantity = new MMCode() {
+	public static final MMCode mmMinimumSettlementQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementQuantity";
@@ -617,7 +619,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "MultipleSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleSettlementQuantity = new MMCode() {
+	public static final MMCode mmMultipleSettlementQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementQuantity";
@@ -640,7 +642,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "SettlementAmountCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmountCurrency = new MMCode() {
+	public static final MMCode mmSettlementAmountCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrency";
@@ -663,7 +665,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "PhysicalSettlementImpossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSettlementImpossible = new MMCode() {
+	public static final MMCode mmPhysicalSettlementImpossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlementImpossible";
@@ -686,7 +688,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "PlaceOfTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfTrade = new MMCode() {
+	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
@@ -709,7 +711,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "Reference"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reference = new MMCode() {
+	public static final MMCode mmReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
@@ -732,7 +734,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "TerminationTransactionAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode TerminationTransactionAmount = new MMCode() {
+	public static final MMCode mmTerminationTransactionAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationTransactionAmount";
@@ -755,7 +757,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "RepurchaseRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRate = new MMCode() {
+	public static final MMCode mmRepurchaseRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
@@ -778,7 +780,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "PremiumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode PremiumAmount = new MMCode() {
+	public static final MMCode mmPremiumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumAmount";
@@ -801,7 +803,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "RepurchaseRateType"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRateType = new MMCode() {
+	public static final MMCode mmRepurchaseRateType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRateType";
@@ -824,7 +826,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "SpreadRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpreadRate = new MMCode() {
+	public static final MMCode mmSpreadRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadRate";
@@ -847,7 +849,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "ImpossibleToUseTheRTGSSystemInstructed"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
+	public static final MMCode mmImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleToUseTheRTGSSystemInstructed";
@@ -870,7 +872,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "SafekeepingAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccount = new MMCode() {
+	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
@@ -893,7 +895,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "SettlementTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementTransaction = new MMCode() {
+	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
@@ -916,7 +918,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "SettlementSystemMethod"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementSystemMethod = new MMCode() {
+	public static final MMCode mmSettlementSystemMethod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
@@ -939,7 +941,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "ClosingDateTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosingDateTime = new MMCode() {
+	public static final MMCode mmClosingDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDateTime";
@@ -962,7 +964,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "TaxStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxStatus = new MMCode() {
+	public static final MMCode mmTaxStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
@@ -985,7 +987,7 @@ public class RepairReason1Code extends RepairReasonCode {
 	 * name} = "VariableRateSupport"</li>
 	 * </ul>
 	 */
-	public static final MMCode VariableRateSupport = new MMCode() {
+	public static final MMCode mmVariableRateSupport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
@@ -996,26 +998,27 @@ public class RepairReason1Code extends RepairReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BATC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepairReason1Code";
 				definition = "Specifies the reason why the instruction is in repair.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepairReason1Code.ProcessingBatch, com.tools20022.repository.codeset.RepairReason1Code.TransactionCallDelay,
-						com.tools20022.repository.codeset.RepairReason1Code.CorporateAction, com.tools20022.repository.codeset.RepairReason1Code.CashAccount,
-						com.tools20022.repository.codeset.RepairReason1Code.ImpossibleCashSettlementSystem, com.tools20022.repository.codeset.RepairReason1Code.SettlementDate, com.tools20022.repository.codeset.RepairReason1Code.DealPrice,
-						com.tools20022.repository.codeset.RepairReason1Code.PlaceOfSettlement, com.tools20022.repository.codeset.RepairReason1Code.SettlementAmount, com.tools20022.repository.codeset.RepairReason1Code.Quantity,
-						com.tools20022.repository.codeset.RepairReason1Code.Security, com.tools20022.repository.codeset.RepairReason1Code.TradeDate, com.tools20022.repository.codeset.RepairReason1Code.ForfeitAmount,
-						com.tools20022.repository.codeset.RepairReason1Code.Agent, com.tools20022.repository.codeset.RepairReason1Code.ReceivingOrDeliveringCustodian, com.tools20022.repository.codeset.RepairReason1Code.BuyerorSeller,
-						com.tools20022.repository.codeset.RepairReason1Code.CommonReference, com.tools20022.repository.codeset.RepairReason1Code.LetterOfGuaranteeIndicator,
-						com.tools20022.repository.codeset.RepairReason1Code.MinimumSettlementQuantity, com.tools20022.repository.codeset.RepairReason1Code.MultipleSettlementQuantity,
-						com.tools20022.repository.codeset.RepairReason1Code.SettlementAmountCurrency, com.tools20022.repository.codeset.RepairReason1Code.PhysicalSettlementImpossible,
-						com.tools20022.repository.codeset.RepairReason1Code.PlaceOfTrade, com.tools20022.repository.codeset.RepairReason1Code.Reference, com.tools20022.repository.codeset.RepairReason1Code.TerminationTransactionAmount,
-						com.tools20022.repository.codeset.RepairReason1Code.RepurchaseRate, com.tools20022.repository.codeset.RepairReason1Code.PremiumAmount, com.tools20022.repository.codeset.RepairReason1Code.RepurchaseRateType,
-						com.tools20022.repository.codeset.RepairReason1Code.SpreadRate, com.tools20022.repository.codeset.RepairReason1Code.ImpossibleToUseTheRTGSSystemInstructed,
-						com.tools20022.repository.codeset.RepairReason1Code.SafekeepingAccount, com.tools20022.repository.codeset.RepairReason1Code.SettlementTransaction,
-						com.tools20022.repository.codeset.RepairReason1Code.SettlementSystemMethod, com.tools20022.repository.codeset.RepairReason1Code.ClosingDateTime, com.tools20022.repository.codeset.RepairReason1Code.TaxStatus,
-						com.tools20022.repository.codeset.RepairReason1Code.VariableRateSupport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepairReason1Code.mmProcessingBatch, com.tools20022.repository.codeset.RepairReason1Code.mmTransactionCallDelay,
+						com.tools20022.repository.codeset.RepairReason1Code.mmCorporateAction, com.tools20022.repository.codeset.RepairReason1Code.mmCashAccount,
+						com.tools20022.repository.codeset.RepairReason1Code.mmImpossibleCashSettlementSystem, com.tools20022.repository.codeset.RepairReason1Code.mmSettlementDate,
+						com.tools20022.repository.codeset.RepairReason1Code.mmDealPrice, com.tools20022.repository.codeset.RepairReason1Code.mmPlaceOfSettlement, com.tools20022.repository.codeset.RepairReason1Code.mmSettlementAmount,
+						com.tools20022.repository.codeset.RepairReason1Code.mmQuantity, com.tools20022.repository.codeset.RepairReason1Code.mmSecurity, com.tools20022.repository.codeset.RepairReason1Code.mmTradeDate,
+						com.tools20022.repository.codeset.RepairReason1Code.mmForfeitAmount, com.tools20022.repository.codeset.RepairReason1Code.mmAgent, com.tools20022.repository.codeset.RepairReason1Code.mmReceivingOrDeliveringCustodian,
+						com.tools20022.repository.codeset.RepairReason1Code.mmBuyerorSeller, com.tools20022.repository.codeset.RepairReason1Code.mmCommonReference,
+						com.tools20022.repository.codeset.RepairReason1Code.mmLetterOfGuaranteeIndicator, com.tools20022.repository.codeset.RepairReason1Code.mmMinimumSettlementQuantity,
+						com.tools20022.repository.codeset.RepairReason1Code.mmMultipleSettlementQuantity, com.tools20022.repository.codeset.RepairReason1Code.mmSettlementAmountCurrency,
+						com.tools20022.repository.codeset.RepairReason1Code.mmPhysicalSettlementImpossible, com.tools20022.repository.codeset.RepairReason1Code.mmPlaceOfTrade,
+						com.tools20022.repository.codeset.RepairReason1Code.mmReference, com.tools20022.repository.codeset.RepairReason1Code.mmTerminationTransactionAmount,
+						com.tools20022.repository.codeset.RepairReason1Code.mmRepurchaseRate, com.tools20022.repository.codeset.RepairReason1Code.mmPremiumAmount, com.tools20022.repository.codeset.RepairReason1Code.mmRepurchaseRateType,
+						com.tools20022.repository.codeset.RepairReason1Code.mmSpreadRate, com.tools20022.repository.codeset.RepairReason1Code.mmImpossibleToUseTheRTGSSystemInstructed,
+						com.tools20022.repository.codeset.RepairReason1Code.mmSafekeepingAccount, com.tools20022.repository.codeset.RepairReason1Code.mmSettlementTransaction,
+						com.tools20022.repository.codeset.RepairReason1Code.mmSettlementSystemMethod, com.tools20022.repository.codeset.RepairReason1Code.mmClosingDateTime, com.tools20022.repository.codeset.RepairReason1Code.mmTaxStatus,
+						com.tools20022.repository.codeset.RepairReason1Code.mmVariableRateSupport);
 				trace_lazy = () -> RepairReasonCode.mmObject();
 			}
 		});

@@ -34,18 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * SideIndicatorCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SideIndicator1Code#CCPLeg
- * SideIndicator1Code.CCPLeg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SideIndicator1Code#ClientLeg
- * SideIndicator1Code.ClientLeg}</li>
+ * {@linkplain com.tools20022.repository.codeset.SideIndicator1Code#mmCCPLeg
+ * SideIndicator1Code.mmCCPLeg}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SideIndicator1Code#mmClientLeg
+ * SideIndicator1Code.mmClientLeg}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class SideIndicator1Code extends SideIndicatorCode {
 	 * name} = "CCPLeg"</li>
 	 * </ul>
 	 */
-	public static final MMCode CCPLeg = new MMCode() {
+	public static final MMCode mmCCPLeg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPLeg";
@@ -106,7 +107,7 @@ public class SideIndicator1Code extends SideIndicatorCode {
 	 * name} = "ClientLeg"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClientLeg = new MMCode() {
+	public static final MMCode mmClientLeg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientLeg";
@@ -117,12 +118,12 @@ public class SideIndicator1Code extends SideIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CCPL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SideIndicator1Code";
 				definition = "To indicate either the reference for the Central Counterparty (CCP) leg or the reference for the client leg of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SideIndicator1Code.CCPLeg, com.tools20022.repository.codeset.SideIndicator1Code.ClientLeg);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SideIndicator1Code.mmCCPLeg, com.tools20022.repository.codeset.SideIndicator1Code.mmClientLeg);
 				trace_lazy = () -> SideIndicatorCode.mmObject();
 			}
 		});

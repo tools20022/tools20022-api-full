@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Invoice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Report on specific billing data.
@@ -36,22 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#RegulatoryData
- * BillingReport1.RegulatoryData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#InvoiceDate
- * BillingReport1.InvoiceDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingReport1#BillingIdentification
- * BillingReport1.BillingIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#BillingPeriod
- * BillingReport1.BillingPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#CSDOrNCB
- * BillingReport1.CSDOrNCB}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#InvoiceTotals
- * BillingReport1.InvoiceTotals}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingReport1#mmRegulatoryData
+ * BillingReport1.mmRegulatoryData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#mmInvoiceDate
+ * BillingReport1.mmInvoiceDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingReport1#ServiceCategoryTotals
- * BillingReport1.ServiceCategoryTotals}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingReport1#mmBillingIdentification
+ * BillingReport1.mmBillingIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#mmBillingPeriod
+ * BillingReport1.mmBillingPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#mmCSDOrNCB
+ * BillingReport1.mmCSDOrNCB}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#mmInvoiceTotals
+ * BillingReport1.mmInvoiceTotals}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BillingReport1#mmServiceCategoryTotals
+ * BillingReport1.mmServiceCategoryTotals}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvoiceLegalIssue1 regulatoryData;
 	/**
 	 * Information about legal and regulatory data exchanged between invoicing
 	 * and paying party.
@@ -106,21 +109,22 @@ public class BillingReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegulatoryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegulatoryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BillingReport1.mmObject();
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
+			componentContext_lazy = () -> BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryData";
 			definition = "Information about legal and regulatory data exchanged between invoicing and paying party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvoiceLegalIssue1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
 		}
 	};
+	protected ISODate invoiceDate;
 	/**
 	 * Date at which the billing report was created.
 	 * <p>
@@ -133,8 +137,8 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,20 +156,21 @@ public class BillingReport1 {
 	 * definition} = "Date at which the billing report was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvoiceDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvoiceDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> BillingReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "InvcDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceDate";
 			definition = "Date at which the billing report was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text billingIdentification;
 	/**
 	 * Unique identification of the billing report.
 	 * <p>
@@ -178,8 +183,8 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,20 +202,21 @@ public class BillingReport1 {
 	 * definition} = "Unique identification of the billing report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BillingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BillingReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "BllgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingIdentification";
 			definition = "Unique identification of the billing report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DatePeriodDetails billingPeriod;
 	/**
 	 * Date period for which the report data is valid.
 	 * <p>
@@ -224,8 +230,8 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#PeriodCovered
-	 * Invoice.PeriodCovered}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmPeriodCovered
+	 * Invoice.mmPeriodCovered}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,20 +249,21 @@ public class BillingReport1 {
 	 * definition} = "Date period for which the report data is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BillingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBillingPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> BillingReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.PeriodCovered;
 			isDerived = false;
 			xmlTag = "BllgPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingPeriod";
 			definition = "Date period for which the report data is valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DatePeriodDetails.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
 		}
 	};
+	protected CSDOrNCB1Choice cSDOrNCB;
 	/**
 	 * Specifies the billed party either CSD or NCB (party identification of the
 	 * CSD or NCB which has a contractual relationship with the billed customer)
@@ -269,8 +276,8 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#PartyRole
-	 * CashSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmPartyRole
+	 * CashSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -290,21 +297,22 @@ public class BillingReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CSDOrNCB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmPartyRole;
 			componentContext_lazy = () -> BillingReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "CSDOrNCB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Specifies the billed party either CSD or NCB (party identification of the CSD or NCB  which has a contractual relationship with the billed customer)";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CSDOrNCB1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CSDOrNCB1Choice.mmObject();
 		}
 	};
+	protected InvoiceTotals2 invoiceTotals;
 	/**
 	 * Specifies totals related to the invoice.
 	 * <p>
@@ -334,21 +342,22 @@ public class BillingReport1 {
 	 * definition} = "Specifies totals related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvoiceTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoiceTotals = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BillingReport1.mmObject();
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
+			componentContext_lazy = () -> BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcTtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceTotals";
 			definition = "Specifies totals related to the invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvoiceTotals2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvoiceTotals2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ServiceCategoryTotals1> serviceCategoryTotals;
 	/**
 	 * Specifies totals related to the service category.
 	 * <p>
@@ -378,34 +387,90 @@ public class BillingReport1 {
 	 * definition} = "Specifies totals related to the service category."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ServiceCategoryTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServiceCategoryTotals = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BillingReport1.mmObject();
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
+			componentContext_lazy = () -> BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcCtgyTtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceCategoryTotals";
 			definition = "Specifies totals related to the service category.";
 			minOccurs = 1;
-			type_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingReport1.RegulatoryData, com.tools20022.repository.msg.BillingReport1.InvoiceDate,
-						com.tools20022.repository.msg.BillingReport1.BillingIdentification, com.tools20022.repository.msg.BillingReport1.BillingPeriod, com.tools20022.repository.msg.BillingReport1.CSDOrNCB,
-						com.tools20022.repository.msg.BillingReport1.InvoiceTotals, com.tools20022.repository.msg.BillingReport1.ServiceCategoryTotals);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingReport1.mmRegulatoryData, com.tools20022.repository.msg.BillingReport1.mmInvoiceDate,
+						com.tools20022.repository.msg.BillingReport1.mmBillingIdentification, com.tools20022.repository.msg.BillingReport1.mmBillingPeriod, com.tools20022.repository.msg.BillingReport1.mmCSDOrNCB,
+						com.tools20022.repository.msg.BillingReport1.mmInvoiceTotals, com.tools20022.repository.msg.BillingReport1.mmServiceCategoryTotals);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingReport1";
 				definition = "Report on specific billing data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvoiceLegalIssue1 getRegulatoryData() {
+		return regulatoryData;
+	}
+
+	public void setRegulatoryData(com.tools20022.repository.msg.InvoiceLegalIssue1 regulatoryData) {
+		this.regulatoryData = regulatoryData;
+	}
+
+	public ISODate getInvoiceDate() {
+		return invoiceDate;
+	}
+
+	public void setInvoiceDate(ISODate invoiceDate) {
+		this.invoiceDate = invoiceDate;
+	}
+
+	public Max35Text getBillingIdentification() {
+		return billingIdentification;
+	}
+
+	public void setBillingIdentification(Max35Text billingIdentification) {
+		this.billingIdentification = billingIdentification;
+	}
+
+	public DatePeriodDetails getBillingPeriod() {
+		return billingPeriod;
+	}
+
+	public void setBillingPeriod(com.tools20022.repository.msg.DatePeriodDetails billingPeriod) {
+		this.billingPeriod = billingPeriod;
+	}
+
+	public CSDOrNCB1Choice getCSDOrNCB() {
+		return cSDOrNCB;
+	}
+
+	public void setCSDOrNCB(CSDOrNCB1Choice cSDOrNCB) {
+		this.cSDOrNCB = cSDOrNCB;
+	}
+
+	public InvoiceTotals2 getInvoiceTotals() {
+		return invoiceTotals;
+	}
+
+	public void setInvoiceTotals(com.tools20022.repository.msg.InvoiceTotals2 invoiceTotals) {
+		this.invoiceTotals = invoiceTotals;
+	}
+
+	public List<ServiceCategoryTotals1> getServiceCategoryTotals() {
+		return serviceCategoryTotals;
+	}
+
+	public void setServiceCategoryTotals(List<com.tools20022.repository.msg.ServiceCategoryTotals1> serviceCategoryTotals) {
+		this.serviceCategoryTotals = serviceCategoryTotals;
 	}
 }

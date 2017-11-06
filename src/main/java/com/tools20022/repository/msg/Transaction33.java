@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.CreditDebitCode;
+import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.entity.System;
 import java.util.Arrays;
@@ -35,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Transaction33#PaymentTo
- * Transaction33.PaymentTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transaction33#PaymentFrom
- * Transaction33.PaymentFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction33#mmPaymentTo
+ * Transaction33.mmPaymentTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction33#mmPaymentFrom
+ * Transaction33.mmPaymentFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transaction33#CreditDebitIndicator
- * Transaction33.CreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transaction33#Payment
- * Transaction33.Payment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transaction33#AccountEntry
- * Transaction33.AccountEntry}</li>
+ * {@linkplain com.tools20022.repository.msg.Transaction33#mmCreditDebitIndicator
+ * Transaction33.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction33#mmPayment
+ * Transaction33.mmPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction33#mmAccountEntry
+ * Transaction33.mmAccountEntry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Transaction33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected System1 paymentTo;
 	/**
 	 * Destination of the payment (be it a member or a system or both).
 	 * <p>
@@ -101,26 +103,27 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Transaction24#PaymentTo
-	 * Transaction24.PaymentTo}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction24#mmPaymentTo
+	 * Transaction24.mmPaymentTo}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Transaction33.mmObject();
 			businessComponentTrace_lazy = () -> System.mmObject();
+			componentContext_lazy = () -> Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTo";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Destination of the payment (be it a member or a system or both).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.PaymentTo;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.mmPaymentTo;
 			maxOccurs = 1;
-			type_lazy = () -> System1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	protected System1 paymentFrom;
 	/**
 	 * Origin of the payment (be it a member or a system or both).
 	 * <p>
@@ -151,26 +154,27 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Transaction24#PaymentFrom
-	 * Transaction24.PaymentFrom}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction24#mmPaymentFrom
+	 * Transaction24.mmPaymentFrom}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Transaction33.mmObject();
 			businessComponentTrace_lazy = () -> System.mmObject();
+			componentContext_lazy = () -> Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Origin of the payment (be it a member or a system or both).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.PaymentFrom;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.mmPaymentFrom;
 			maxOccurs = 1;
-			type_lazy = () -> System1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the payment transaction is a debit or credit
 	 * transaction.
@@ -185,8 +189,8 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreditDebitIndicator
-	 * PaymentExecution.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreditDebitIndicator
+	 * PaymentExecution.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,25 +211,26 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Transaction24#CreditDebitIndicator
-	 * Transaction24.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction24#mmCreditDebitIndicator
+	 * Transaction24.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> Transaction33.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the payment transaction is a debit or credit transaction. \n";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.CreditDebitIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected PaymentInstruction14 payment;
 	/**
 	 * Instruction to pay an amount of money to an ultimate beneficiary, on
 	 * behalf of an originator. This instruction may have to be forwarded
@@ -261,26 +266,27 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Transaction24#Payment
-	 * Transaction24.Payment}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction24#mmPayment
+	 * Transaction24.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Payment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Transaction33.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.Payment;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.mmPayment;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstruction14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 		}
 	};
+	protected CashAccountAndEntry1 accountEntry;
 	/**
 	 * Posting of an item to a cash account, in the context of a cash
 	 * transaction, that results in an increase or decrease to the balance of
@@ -294,8 +300,8 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BookEntry#CashEntry
-	 * BookEntry.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.BookEntry#mmCashEntry
+	 * BookEntry.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -316,34 +322,34 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Transaction24#AccountEntry
-	 * Transaction24.AccountEntry}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction24#mmAccountEntry
+	 * Transaction24.mmAccountEntry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountEntry = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BookEntry.mmCashEntry;
 			componentContext_lazy = () -> Transaction33.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BookEntry.CashEntry;
 			isDerived = false;
 			xmlTag = "AcctNtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntry";
 			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.AccountEntry;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction24.mmAccountEntry;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountAndEntry1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccountAndEntry1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction33.PaymentTo, com.tools20022.repository.msg.Transaction33.PaymentFrom, com.tools20022.repository.msg.Transaction33.CreditDebitIndicator,
-						com.tools20022.repository.msg.Transaction33.Payment, com.tools20022.repository.msg.Transaction33.AccountEntry);
-				trace_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction33.mmPaymentTo, com.tools20022.repository.msg.Transaction33.mmPaymentFrom,
+						com.tools20022.repository.msg.Transaction33.mmCreditDebitIndicator, com.tools20022.repository.msg.Transaction33.mmPayment, com.tools20022.repository.msg.Transaction33.mmAccountEntry);
+				trace_lazy = () -> Payment.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Transaction33";
 				definition = "Information related to the payment transaction.";
@@ -351,5 +357,45 @@ public class Transaction33 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public System1 getPaymentTo() {
+		return paymentTo;
+	}
+
+	public void setPaymentTo(com.tools20022.repository.msg.System1 paymentTo) {
+		this.paymentTo = paymentTo;
+	}
+
+	public System1 getPaymentFrom() {
+		return paymentFrom;
+	}
+
+	public void setPaymentFrom(com.tools20022.repository.msg.System1 paymentFrom) {
+		this.paymentFrom = paymentFrom;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public PaymentInstruction14 getPayment() {
+		return payment;
+	}
+
+	public void setPayment(com.tools20022.repository.msg.PaymentInstruction14 payment) {
+		this.payment = payment;
+	}
+
+	public CashAccountAndEntry1 getAccountEntry() {
+		return accountEntry;
+	}
+
+	public void setAccountEntry(com.tools20022.repository.msg.CashAccountAndEntry1 accountEntry) {
+		this.accountEntry = accountEntry;
 	}
 }

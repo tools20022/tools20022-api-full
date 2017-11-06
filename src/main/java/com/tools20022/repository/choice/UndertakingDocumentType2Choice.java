@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType2Choice#Code
- * UndertakingDocumentType2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType2Choice#mmCode
+ * UndertakingDocumentType2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType2Choice#Proprietary
- * UndertakingDocumentType2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType2Choice#mmProprietary
+ * UndertakingDocumentType2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingDocumentType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalUndertakingDocumentType2Code code;
 	/**
 	 * Document type.<br>
 	 * <p>
@@ -77,8 +78,8 @@ public class UndertakingDocumentType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#DocumentType
-	 * UndertakingDocument.DocumentType}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmDocumentType
+	 * UndertakingDocument.mmDocumentType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class UndertakingDocumentType2Choice {
 	 * definition} = "Document type.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> UndertakingDocumentType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.DocumentType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Document type.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingDocumentType2Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Document type expressed as a proprietary code.
 	 * <p>
@@ -122,8 +124,8 @@ public class UndertakingDocumentType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#DocumentType
-	 * UndertakingDocument.DocumentType}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmDocumentType
+	 * UndertakingDocument.mmDocumentType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,33 +144,49 @@ public class UndertakingDocumentType2Choice {
 	 * definition} = "Document type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> UndertakingDocumentType2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.DocumentType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Document type expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UndertakingDocumentType2Choice.Code, com.tools20022.repository.choice.UndertakingDocumentType2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UndertakingDocumentType2Choice.mmCode, com.tools20022.repository.choice.UndertakingDocumentType2Choice.mmProprietary);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingDocumentType2Choice";
 				definition = "Choice of format for the document type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalUndertakingDocumentType2Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalUndertakingDocumentType2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

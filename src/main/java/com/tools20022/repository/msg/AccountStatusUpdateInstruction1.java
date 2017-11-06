@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstruction1#UpdateInstruction
- * AccountStatusUpdateInstruction1.UpdateInstruction}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstruction1#mmUpdateInstruction
+ * AccountStatusUpdateInstruction1.mmUpdateInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstruction1#UpdateInstructionReason
- * AccountStatusUpdateInstruction1.UpdateInstructionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatusUpdateInstruction1#mmUpdateInstructionReason
+ * AccountStatusUpdateInstruction1.mmUpdateInstructionReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountStatusUpdateInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountStatusUpdateInstruction1Choice updateInstruction;
 	/**
 	 * Type of status change instructed for the account status.
 	 * <p>
@@ -87,7 +88,7 @@ public class AccountStatusUpdateInstruction1 {
 	 * definition} = "Type of status change instructed for the account status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpdateInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpdateInstruction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountStatusUpdateInstruction1.mmObject();
 			isDerived = false;
@@ -95,12 +96,13 @@ public class AccountStatusUpdateInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateInstruction";
 			definition = "Type of status change instructed for the account status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AccountStatusUpdateInstruction1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AccountStatusUpdateInstruction1Choice.mmObject();
 		}
 	};
+	protected AccountStatusUpdateInstructionReason1Choice updateInstructionReason;
 	/**
 	 * Reason for the instruction to change the account status.
 	 * <p>
@@ -128,7 +130,7 @@ public class AccountStatusUpdateInstruction1 {
 	 * definition} = "Reason for the instruction to change the account status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpdateInstructionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpdateInstructionReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountStatusUpdateInstruction1.mmObject();
 			isDerived = false;
@@ -136,23 +138,39 @@ public class AccountStatusUpdateInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateInstructionReason";
 			definition = "Reason for the instruction to change the account status.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountStatusUpdateInstructionReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountStatusUpdateInstructionReason1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatusUpdateInstruction1.UpdateInstruction, com.tools20022.repository.msg.AccountStatusUpdateInstruction1.UpdateInstructionReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatusUpdateInstruction1.mmUpdateInstruction, com.tools20022.repository.msg.AccountStatusUpdateInstruction1.mmUpdateInstructionReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstruction1";
 				definition = "Instruction for a change to an account status and reason for the change.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountStatusUpdateInstruction1Choice getUpdateInstruction() {
+		return updateInstruction;
+	}
+
+	public void setUpdateInstruction(AccountStatusUpdateInstruction1Choice updateInstruction) {
+		this.updateInstruction = updateInstruction;
+	}
+
+	public AccountStatusUpdateInstructionReason1Choice getUpdateInstructionReason() {
+		return updateInstructionReason;
+	}
+
+	public void setUpdateInstructionReason(AccountStatusUpdateInstructionReason1Choice updateInstructionReason) {
+		this.updateInstructionReason = updateInstructionReason;
 	}
 }

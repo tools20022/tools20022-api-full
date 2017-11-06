@@ -32,19 +32,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CustomerDevice1#Identification
- * CustomerDevice1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CustomerDevice1#Type
- * CustomerDevice1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CustomerDevice1#Provider
- * CustomerDevice1.Provider}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CustomerDevice1#mmIdentification
+ * CustomerDevice1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CustomerDevice1#mmType
+ * CustomerDevice1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CustomerDevice1#mmProvider
+ * CustomerDevice1.mmProvider}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomerDevice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identifier of the component.
 	 * <p>
@@ -85,7 +87,7 @@ public class CustomerDevice1 {
 	 * definition} = "Identifier of the component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerDevice1.mmObject();
 			isDerived = false;
@@ -93,11 +95,12 @@ public class CustomerDevice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifier of the component.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text type;
 	/**
 	 * Type of component.
 	 * <p>
@@ -125,7 +128,7 @@ public class CustomerDevice1 {
 	 * definition} = "Type of component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerDevice1.mmObject();
 			isDerived = false;
@@ -133,11 +136,12 @@ public class CustomerDevice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of component.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text provider;
 	/**
 	 * Provider of the component.
 	 * <p>
@@ -165,7 +169,7 @@ public class CustomerDevice1 {
 	 * definition} = "Provider of the component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Provider = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProvider = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerDevice1.mmObject();
 			isDerived = false;
@@ -173,8 +177,8 @@ public class CustomerDevice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provider";
 			definition = "Provider of the component.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -182,13 +186,37 @@ public class CustomerDevice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerDevice1.Identification, com.tools20022.repository.msg.CustomerDevice1.Type, com.tools20022.repository.msg.CustomerDevice1.Provider);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerDevice1.mmIdentification, com.tools20022.repository.msg.CustomerDevice1.mmType, com.tools20022.repository.msg.CustomerDevice1.mmProvider);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustomerDevice1";
 				definition = "Device used by the customer to perform the payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public Max35Text getProvider() {
+		return provider;
+	}
+
+	public void setProvider(Max35Text provider) {
+		this.provider = provider;
 	}
 }

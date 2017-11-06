@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#DES
- * CryptographicKeyType1Code.DES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmDES
+ * CryptographicKeyType1Code.mmDES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#AES
- * CryptographicKeyType1Code.AES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmAES
+ * CryptographicKeyType1Code.mmAES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#RSA
- * CryptographicKeyType1Code.RSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmRSA
+ * CryptographicKeyType1Code.mmRSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#ECC
- * CryptographicKeyType1Code.ECC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmECC
+ * CryptographicKeyType1Code.mmECC}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "DES"</li>
 	 * </ul>
 	 */
-	public static final MMCode DES = new MMCode() {
+	public static final MMCode mmDES = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES";
@@ -110,7 +110,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "AES"</li>
 	 * </ul>
 	 */
-	public static final MMCode AES = new MMCode() {
+	public static final MMCode mmAES = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES";
@@ -133,7 +133,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "RSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode RSA = new MMCode() {
+	public static final MMCode mmRSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSA";
@@ -156,7 +156,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "ECC"</li>
 	 * </ul>
 	 */
-	public static final MMCode ECC = new MMCode() {
+	public static final MMCode mmECC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECC";
@@ -167,13 +167,13 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DESC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType1Code";
 				definition = "Type of algorithm used by the cryptographic key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType1Code.DES, com.tools20022.repository.codeset.CryptographicKeyType1Code.AES,
-						com.tools20022.repository.codeset.CryptographicKeyType1Code.RSA, com.tools20022.repository.codeset.CryptographicKeyType1Code.ECC);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType1Code.mmDES, com.tools20022.repository.codeset.CryptographicKeyType1Code.mmAES,
+						com.tools20022.repository.codeset.CryptographicKeyType1Code.mmRSA, com.tools20022.repository.codeset.CryptographicKeyType1Code.mmECC);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
 			}
 		});

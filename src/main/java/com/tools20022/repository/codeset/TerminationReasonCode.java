@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#UnderlyingBusinessFinished
- * TerminationReasonCode.UnderlyingBusinessFinished}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#mmUnderlyingBusinessFinished
+ * TerminationReasonCode.mmUnderlyingBusinessFinished}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#WarrantyObligationPeriodExpired
- * TerminationReasonCode.WarrantyObligationPeriodExpired}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#mmWarrantyObligationPeriodExpired
+ * TerminationReasonCode.mmWarrantyObligationPeriodExpired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#TenderNonAcceptance
- * TerminationReasonCode.TenderNonAcceptance}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#mmTenderNonAcceptance
+ * TerminationReasonCode.mmTenderNonAcceptance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#ReductionTermsFulfilled
- * TerminationReasonCode.ReductionTermsFulfilled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode#mmReductionTermsFulfilled
+ * TerminationReasonCode.mmReductionTermsFulfilled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class TerminationReasonCode {
 	 * "Reason for termination is underlying business has finished."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderlyingBusinessFinished = new MMCode() {
+	public static final MMCode mmUnderlyingBusinessFinished = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingBusinessFinished";
@@ -127,7 +127,7 @@ public class TerminationReasonCode {
 	 * "Reason for termination is warranty obligation period has expired."</li>
 	 * </ul>
 	 */
-	public static final MMCode WarrantyObligationPeriodExpired = new MMCode() {
+	public static final MMCode mmWarrantyObligationPeriodExpired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantyObligationPeriodExpired";
@@ -157,7 +157,7 @@ public class TerminationReasonCode {
 	 * definition} = "Reason for termination is non-acceptance of a tender."</li>
 	 * </ul>
 	 */
-	public static final MMCode TenderNonAcceptance = new MMCode() {
+	public static final MMCode mmTenderNonAcceptance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderNonAcceptance";
@@ -188,7 +188,7 @@ public class TerminationReasonCode {
 	 * "Reason for termination is reduction terms have been fulfilled."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReductionTermsFulfilled = new MMCode() {
+	public static final MMCode mmReductionTermsFulfilled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReductionTermsFulfilled";
@@ -201,13 +201,13 @@ public class TerminationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUFI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminationReasonCode";
 				definition = "Specifies the termination reason.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminationReasonCode.UnderlyingBusinessFinished, com.tools20022.repository.codeset.TerminationReasonCode.WarrantyObligationPeriodExpired,
-						com.tools20022.repository.codeset.TerminationReasonCode.TenderNonAcceptance, com.tools20022.repository.codeset.TerminationReasonCode.ReductionTermsFulfilled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminationReasonCode.mmUnderlyingBusinessFinished, com.tools20022.repository.codeset.TerminationReasonCode.mmWarrantyObligationPeriodExpired,
+						com.tools20022.repository.codeset.TerminationReasonCode.mmTenderNonAcceptance, com.tools20022.repository.codeset.TerminationReasonCode.mmReductionTermsFulfilled);
 				derivation_lazy = () -> Arrays.asList(TerminationReason1Code.mmObject());
 			}
 		});

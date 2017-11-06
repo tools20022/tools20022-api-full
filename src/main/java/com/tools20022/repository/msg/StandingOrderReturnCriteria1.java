@@ -33,63 +33,63 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#StandingOrderIdentificationIndicator
- * StandingOrderReturnCriteria1.StandingOrderIdentificationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmStandingOrderIdentificationIndicator
+ * StandingOrderReturnCriteria1.mmStandingOrderIdentificationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#TypeIndicator
- * StandingOrderReturnCriteria1.TypeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmTypeIndicator
+ * StandingOrderReturnCriteria1.mmTypeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#SystemMemberIndicator
- * StandingOrderReturnCriteria1.SystemMemberIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmSystemMemberIndicator
+ * StandingOrderReturnCriteria1.mmSystemMemberIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#ResponsiblePartyIndicator
- * StandingOrderReturnCriteria1.ResponsiblePartyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmResponsiblePartyIndicator
+ * StandingOrderReturnCriteria1.mmResponsiblePartyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#CurrencyIndicator
- * StandingOrderReturnCriteria1.CurrencyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmCurrencyIndicator
+ * StandingOrderReturnCriteria1.mmCurrencyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#DebtorAccountIndicator
- * StandingOrderReturnCriteria1.DebtorAccountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmDebtorAccountIndicator
+ * StandingOrderReturnCriteria1.mmDebtorAccountIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#CreditorAccountIndicator
- * StandingOrderReturnCriteria1.CreditorAccountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmCreditorAccountIndicator
+ * StandingOrderReturnCriteria1.mmCreditorAccountIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#AssociatedPoolAccount
- * StandingOrderReturnCriteria1.AssociatedPoolAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmAssociatedPoolAccount
+ * StandingOrderReturnCriteria1.mmAssociatedPoolAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#FrequencyIndicator
- * StandingOrderReturnCriteria1.FrequencyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmFrequencyIndicator
+ * StandingOrderReturnCriteria1.mmFrequencyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#ExecutionTypeIndicator
- * StandingOrderReturnCriteria1.ExecutionTypeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmExecutionTypeIndicator
+ * StandingOrderReturnCriteria1.mmExecutionTypeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#ValidityFromIndicator
- * StandingOrderReturnCriteria1.ValidityFromIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmValidityFromIndicator
+ * StandingOrderReturnCriteria1.mmValidityFromIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#ValidToIndicator
- * StandingOrderReturnCriteria1.ValidToIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmValidToIndicator
+ * StandingOrderReturnCriteria1.mmValidToIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#LinkSetIdentificationIndicator
- * StandingOrderReturnCriteria1.LinkSetIdentificationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmLinkSetIdentificationIndicator
+ * StandingOrderReturnCriteria1.mmLinkSetIdentificationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#LinkSetOrderIdentificationIndicator
- * StandingOrderReturnCriteria1.LinkSetOrderIdentificationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmLinkSetOrderIdentificationIndicator
+ * StandingOrderReturnCriteria1.mmLinkSetOrderIdentificationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#LinkSetOrderSequenceIndicator
- * StandingOrderReturnCriteria1.LinkSetOrderSequenceIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmLinkSetOrderSequenceIndicator
+ * StandingOrderReturnCriteria1.mmLinkSetOrderSequenceIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#TotalAmountIndicator
- * StandingOrderReturnCriteria1.TotalAmountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmTotalAmountIndicator
+ * StandingOrderReturnCriteria1.mmTotalAmountIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#ZeroSweepIndicator
- * StandingOrderReturnCriteria1.ZeroSweepIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderReturnCriteria1#mmZeroSweepIndicator
+ * StandingOrderReturnCriteria1.mmZeroSweepIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingOrderReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator standingOrderIdentificationIndicator;
 	/**
 	 * Defines the criteria used to report on a multilateral balance.
 	 * <p>
@@ -132,7 +133,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Defines the criteria used to report on a multilateral balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandingOrderIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandingOrderIdentificationIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -140,11 +141,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderIdentificationIndicator";
 			definition = "Defines the criteria used to report on a multilateral balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator typeIndicator;
 	/**
 	 * Indicates whether the standing order type is requested.
 	 * <p>
@@ -173,7 +175,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the standing order type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -181,11 +183,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the standing order type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator systemMemberIndicator;
 	/**
 	 * Indicates whether the system member identification is requested.
 	 * <p>
@@ -215,7 +218,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the system member identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemMemberIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemMemberIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -223,11 +226,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMemberIndicator";
 			definition = "Indicates whether the system member identification is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator responsiblePartyIndicator;
 	/**
 	 * Indicates whether the responsible party identification is requested.
 	 * <p>
@@ -257,7 +261,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the responsible party identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponsiblePartyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponsiblePartyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -265,11 +269,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIndicator";
 			definition = "Indicates whether the responsible party identification is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator currencyIndicator;
 	/**
 	 * Indicates whether the account currency is requested.
 	 * <p>
@@ -298,7 +303,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the account currency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -306,11 +311,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyIndicator";
 			definition = "Indicates whether the account currency is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator debtorAccountIndicator;
 	/**
 	 * Indicates whether the account type is requested.
 	 * <p>
@@ -339,7 +345,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the account type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebtorAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtorAccountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -347,11 +353,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccountIndicator";
 			definition = "Indicates whether the account type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator creditorAccountIndicator;
 	/**
 	 * Indicates whether the multilateral limit is requested.
 	 * <p>
@@ -380,7 +387,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the multilateral limit is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditorAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditorAccountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -388,11 +395,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccountIndicator";
 			definition = "Indicates whether the multilateral limit is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator associatedPoolAccount;
 	/**
 	 * Indicates whether the associated pool account is requested.
 	 * <p>
@@ -422,7 +430,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the associated pool account is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AssociatedPoolAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -430,11 +438,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedPoolAccount";
 			definition = "Indicates whether the associated pool account is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator frequencyIndicator;
 	/**
 	 * Indicates whether the frequency is requested.
 	 * <p>
@@ -463,7 +472,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the frequency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FrequencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequencyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -471,11 +480,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyIndicator";
 			definition = "Indicates whether the frequency is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator executionTypeIndicator;
 	/**
 	 * Indicates whether the execution type is requested.
 	 * <p>
@@ -504,7 +514,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the execution type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutionTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutionTypeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -512,11 +522,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionTypeIndicator";
 			definition = "Indicates whether the execution type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator validityFromIndicator;
 	/**
 	 * Indicates whether the account standing order is requested.
 	 * <p>
@@ -546,7 +557,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the account standing order is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidityFromIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidityFromIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -554,11 +565,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityFromIndicator";
 			definition = "Indicates whether the account standing order is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator validToIndicator;
 	/**
 	 * Indicates whether the account owner information is requested.
 	 * <p>
@@ -588,7 +600,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the account owner information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidToIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidToIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -596,11 +608,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidToIndicator";
 			definition = "Indicates whether the account owner information is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator linkSetIdentificationIndicator;
 	/**
 	 * Indicates whether the link set identification is requested.
 	 * <p>
@@ -630,7 +643,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the link set identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkSetIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkSetIdentificationIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -638,11 +651,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetIdentificationIndicator";
 			definition = "Indicates whether the link set identification is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator linkSetOrderIdentificationIndicator;
 	/**
 	 * Indicates whether the identification of a standing order within a link
 	 * set is requested.
@@ -674,7 +688,7 @@ public class StandingOrderReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkSetOrderIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkSetOrderIdentificationIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -682,11 +696,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderIdentificationIndicator";
 			definition = "Indicates whether the identification of a standing order within a link set is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator linkSetOrderSequenceIndicator;
 	/**
 	 * Indicates whether the sequence of a standing order within a link set is
 	 * requested.
@@ -718,7 +733,7 @@ public class StandingOrderReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkSetOrderSequenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkSetOrderSequenceIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -726,11 +741,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderSequenceIndicator";
 			definition = "Indicates whether the sequence of a standing order within a link set is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator totalAmountIndicator;
 	/**
 	 * Indicates whether the total amount per standing order type is requested.
 	 * <p>
@@ -761,7 +777,7 @@ public class StandingOrderReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -769,11 +785,12 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountIndicator";
 			definition = "Indicates whether the total amount per standing order type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator zeroSweepIndicator;
 	/**
 	 * Indicates whether the zero sweeping indicator is requested.
 	 * <p>
@@ -803,7 +820,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the zero sweeping indicator is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ZeroSweepIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -811,8 +828,8 @@ public class StandingOrderReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroSweepIndicator";
 			definition = "Indicates whether the zero sweeping indicator is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -820,21 +837,157 @@ public class StandingOrderReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderReturnCriteria1.StandingOrderIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.TypeIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.SystemMemberIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.ResponsiblePartyIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.CurrencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.DebtorAccountIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.CreditorAccountIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.AssociatedPoolAccount,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.FrequencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.ExecutionTypeIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.ValidityFromIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.ValidToIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.LinkSetIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.LinkSetOrderIdentificationIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.LinkSetOrderSequenceIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.TotalAmountIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.ZeroSweepIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmStandingOrderIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmTypeIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmSystemMemberIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmResponsiblePartyIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmCurrencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmDebtorAccountIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmCreditorAccountIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmAssociatedPoolAccount,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmFrequencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmExecutionTypeIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmValidityFromIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmValidToIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetOrderIdentificationIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetOrderSequenceIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmTotalAmountIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmZeroSweepIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderReturnCriteria1";
 				definition = "Defines the criteria used to report on standing orders.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getStandingOrderIdentificationIndicator() {
+		return standingOrderIdentificationIndicator;
+	}
+
+	public void setStandingOrderIdentificationIndicator(RequestedIndicator standingOrderIdentificationIndicator) {
+		this.standingOrderIdentificationIndicator = standingOrderIdentificationIndicator;
+	}
+
+	public RequestedIndicator getTypeIndicator() {
+		return typeIndicator;
+	}
+
+	public void setTypeIndicator(RequestedIndicator typeIndicator) {
+		this.typeIndicator = typeIndicator;
+	}
+
+	public RequestedIndicator getSystemMemberIndicator() {
+		return systemMemberIndicator;
+	}
+
+	public void setSystemMemberIndicator(RequestedIndicator systemMemberIndicator) {
+		this.systemMemberIndicator = systemMemberIndicator;
+	}
+
+	public RequestedIndicator getResponsiblePartyIndicator() {
+		return responsiblePartyIndicator;
+	}
+
+	public void setResponsiblePartyIndicator(RequestedIndicator responsiblePartyIndicator) {
+		this.responsiblePartyIndicator = responsiblePartyIndicator;
+	}
+
+	public RequestedIndicator getCurrencyIndicator() {
+		return currencyIndicator;
+	}
+
+	public void setCurrencyIndicator(RequestedIndicator currencyIndicator) {
+		this.currencyIndicator = currencyIndicator;
+	}
+
+	public RequestedIndicator getDebtorAccountIndicator() {
+		return debtorAccountIndicator;
+	}
+
+	public void setDebtorAccountIndicator(RequestedIndicator debtorAccountIndicator) {
+		this.debtorAccountIndicator = debtorAccountIndicator;
+	}
+
+	public RequestedIndicator getCreditorAccountIndicator() {
+		return creditorAccountIndicator;
+	}
+
+	public void setCreditorAccountIndicator(RequestedIndicator creditorAccountIndicator) {
+		this.creditorAccountIndicator = creditorAccountIndicator;
+	}
+
+	public RequestedIndicator getAssociatedPoolAccount() {
+		return associatedPoolAccount;
+	}
+
+	public void setAssociatedPoolAccount(RequestedIndicator associatedPoolAccount) {
+		this.associatedPoolAccount = associatedPoolAccount;
+	}
+
+	public RequestedIndicator getFrequencyIndicator() {
+		return frequencyIndicator;
+	}
+
+	public void setFrequencyIndicator(RequestedIndicator frequencyIndicator) {
+		this.frequencyIndicator = frequencyIndicator;
+	}
+
+	public RequestedIndicator getExecutionTypeIndicator() {
+		return executionTypeIndicator;
+	}
+
+	public void setExecutionTypeIndicator(RequestedIndicator executionTypeIndicator) {
+		this.executionTypeIndicator = executionTypeIndicator;
+	}
+
+	public RequestedIndicator getValidityFromIndicator() {
+		return validityFromIndicator;
+	}
+
+	public void setValidityFromIndicator(RequestedIndicator validityFromIndicator) {
+		this.validityFromIndicator = validityFromIndicator;
+	}
+
+	public RequestedIndicator getValidToIndicator() {
+		return validToIndicator;
+	}
+
+	public void setValidToIndicator(RequestedIndicator validToIndicator) {
+		this.validToIndicator = validToIndicator;
+	}
+
+	public RequestedIndicator getLinkSetIdentificationIndicator() {
+		return linkSetIdentificationIndicator;
+	}
+
+	public void setLinkSetIdentificationIndicator(RequestedIndicator linkSetIdentificationIndicator) {
+		this.linkSetIdentificationIndicator = linkSetIdentificationIndicator;
+	}
+
+	public RequestedIndicator getLinkSetOrderIdentificationIndicator() {
+		return linkSetOrderIdentificationIndicator;
+	}
+
+	public void setLinkSetOrderIdentificationIndicator(RequestedIndicator linkSetOrderIdentificationIndicator) {
+		this.linkSetOrderIdentificationIndicator = linkSetOrderIdentificationIndicator;
+	}
+
+	public RequestedIndicator getLinkSetOrderSequenceIndicator() {
+		return linkSetOrderSequenceIndicator;
+	}
+
+	public void setLinkSetOrderSequenceIndicator(RequestedIndicator linkSetOrderSequenceIndicator) {
+		this.linkSetOrderSequenceIndicator = linkSetOrderSequenceIndicator;
+	}
+
+	public RequestedIndicator getTotalAmountIndicator() {
+		return totalAmountIndicator;
+	}
+
+	public void setTotalAmountIndicator(RequestedIndicator totalAmountIndicator) {
+		this.totalAmountIndicator = totalAmountIndicator;
+	}
+
+	public RequestedIndicator getZeroSweepIndicator() {
+		return zeroSweepIndicator;
+	}
+
+	public void setZeroSweepIndicator(RequestedIndicator zeroSweepIndicator) {
+		this.zeroSweepIndicator = zeroSweepIndicator;
 	}
 }

@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PendingReason22Choice#Code
- * PendingReason22Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingReason22Choice#Proprietary
- * PendingReason22Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingReason22Choice#mmCode
+ * PendingReason22Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PendingReason22Choice#mmProprietary
+ * PendingReason22Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingReason22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingReason11Code code;
 	/**
 	 * Standard code to specify the reason why the instruction/event has a
 	 * pending status.
@@ -91,8 +93,8 @@ public class PendingReason22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,33 +117,34 @@ public class PendingReason22Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingReason24Choice#Code
-	 * PendingReason24Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingReason24Choice#mmCode
+	 * PendingReason24Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PendingReason6Choice#Code
-	 * PendingReason6Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingReason6Choice#mmCode
+	 * PendingReason6Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> PendingReason22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the reason why the instruction/event has a pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingReason6Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingReason24Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingReason24Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingReason6Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason11Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the reason why the instruction/event has a
 	 * pending status.
@@ -156,8 +159,8 @@ public class PendingReason22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,30 +183,30 @@ public class PendingReason22Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingReason24Choice#Proprietary
-	 * PendingReason24Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingReason24Choice#mmProprietary
+	 * PendingReason24Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PendingReason6Choice#Proprietary
-	 * PendingReason6Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingReason6Choice#mmProprietary
+	 * PendingReason6Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> PendingReason22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the reason why the instruction/event has a pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingReason6Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingReason24Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingReason24Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingReason6Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -211,16 +214,32 @@ public class PendingReason22Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingReason22Choice.Code, com.tools20022.repository.choice.PendingReason22Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingReason22Choice.mmCode, com.tools20022.repository.choice.PendingReason22Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingReason22Choice";
 				definition = "Choice between a standard code and a proprietary code to specify the reason why the instruction/event has a pending status.";
-				previousVersion_lazy = () -> PendingReason6Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PendingReason24Choice.mmObject());
+				previousVersion_lazy = () -> PendingReason6Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingReason11Code getCode() {
+		return code;
+	}
+
+	public void setCode(PendingReason11Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

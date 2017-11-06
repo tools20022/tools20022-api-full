@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#FailedValidation
- * RejectionReason13Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#mmFailedValidation
+ * RejectionReason13Code.mmFailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#SameIdentification
- * RejectionReason13Code.SameIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#mmSameIdentification
+ * RejectionReason13Code.mmSameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#InvalidIdentification
- * RejectionReason13Code.InvalidIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#mmInvalidIdentification
+ * RejectionReason13Code.mmInvalidIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#InvalidCAIdentification
- * RejectionReason13Code.InvalidCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#mmInvalidCAIdentification
+ * RejectionReason13Code.mmInvalidCAIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#MismatchedCAIdentification
- * RejectionReason13Code.MismatchedCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason13Code#mmMismatchedCAIdentification
+ * RejectionReason13Code.mmMismatchedCAIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class RejectionReason13Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -113,7 +113,7 @@ public class RejectionReason13Code extends RejectionReasonCode {
 	 * name} = "SameIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode SameIdentification = new MMCode() {
+	public static final MMCode mmSameIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameIdentification";
@@ -136,7 +136,7 @@ public class RejectionReason13Code extends RejectionReasonCode {
 	 * name} = "InvalidIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidIdentification = new MMCode() {
+	public static final MMCode mmInvalidIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidIdentification";
@@ -159,7 +159,7 @@ public class RejectionReason13Code extends RejectionReasonCode {
 	 * name} = "InvalidCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCAIdentification = new MMCode() {
+	public static final MMCode mmInvalidCAIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCAIdentification";
@@ -182,7 +182,7 @@ public class RejectionReason13Code extends RejectionReasonCode {
 	 * name} = "MismatchedCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode MismatchedCAIdentification = new MMCode() {
+	public static final MMCode mmMismatchedCAIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchedCAIdentification";
@@ -193,14 +193,14 @@ public class RejectionReason13Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason13Code";
 				definition = "Specifies the reason of a rejection of a movement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason13Code.FailedValidation, com.tools20022.repository.codeset.RejectionReason13Code.SameIdentification,
-						com.tools20022.repository.codeset.RejectionReason13Code.InvalidIdentification, com.tools20022.repository.codeset.RejectionReason13Code.InvalidCAIdentification,
-						com.tools20022.repository.codeset.RejectionReason13Code.MismatchedCAIdentification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason13Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason13Code.mmSameIdentification,
+						com.tools20022.repository.codeset.RejectionReason13Code.mmInvalidIdentification, com.tools20022.repository.codeset.RejectionReason13Code.mmInvalidCAIdentification,
+						com.tools20022.repository.codeset.RejectionReason13Code.mmMismatchedCAIdentification);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.FundsCashFlow;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Breakdown of cash movements into a fund as a result of investment funds
@@ -36,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#Amount
- * FundCashInBreakdown1.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#mmAmount
+ * FundCashInBreakdown1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#UnitsNumber
- * FundCashInBreakdown1.UnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#mmUnitsNumber
+ * FundCashInBreakdown1.mmUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#NewAmountIndicator
- * FundCashInBreakdown1.NewAmountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#mmNewAmountIndicator
+ * FundCashInBreakdown1.mmNewAmountIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#InvestmentFundTransactionInTypeDetails
- * FundCashInBreakdown1.InvestmentFundTransactionInTypeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#mmInvestmentFundTransactionInTypeDetails
+ * FundCashInBreakdown1.mmInvestmentFundTransactionInTypeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#OriginalOrderQuantityDetails
- * FundCashInBreakdown1.OriginalOrderQuantityDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#mmOriginalOrderQuantityDetails
+ * FundCashInBreakdown1.mmOriginalOrderQuantityDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#CommissionDetails
- * FundCashInBreakdown1.CommissionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown1#mmCommissionDetails
+ * FundCashInBreakdown1.mmCommissionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundCashInBreakdown1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
 	 * Amount of cash flow in, expressed as an amount of money.
 	 * <p>
@@ -91,8 +93,8 @@ public class FundCashInBreakdown1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +113,21 @@ public class FundCashInBreakdown1 {
 	 * definition} = "Amount of cash flow in, expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> FundCashInBreakdown1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of cash flow in, expressed as an amount of money.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
 	 * Amount of the cash flow in, expressed as a number of units.
 	 * <p>
@@ -138,8 +141,8 @@ public class FundCashInBreakdown1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +162,21 @@ public class FundCashInBreakdown1 {
 	 * "Amount of the cash flow in,  expressed as a number of units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> FundCashInBreakdown1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Amount of the cash flow in,  expressed as a number of units.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected YesNoIndicator newAmountIndicator;
 	/**
 	 * Indicates whether the cash flow is an item that did not appear on the
 	 * previously sent report, eg, because it was received close to cut-off
@@ -205,7 +209,7 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewAmountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundCashInBreakdown1.mmObject();
 			isDerived = false;
@@ -213,11 +217,12 @@ public class FundCashInBreakdown1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAmountIndicator";
 			definition = "Indicates whether the cash flow is an item that did not appear on the previously sent report, eg, because it was received close to cut-off time.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected InvestmentFundTransactionInType1 investmentFundTransactionInTypeDetails;
 	/**
 	 * Breakdown of the cash movements into a fund by transaction type, eg,
 	 * subscription, switch-in.
@@ -231,8 +236,8 @@ public class FundCashInBreakdown1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#Type
-	 * InvestmentFundTransaction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmType
+	 * InvestmentFundTransaction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,21 +258,22 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentFundTransactionInTypeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentFundTransactionInTypeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> FundCashInBreakdown1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.Type;
 			isDerived = false;
 			xmlTag = "InvstmtFndTxInTpDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactionInTypeDetails";
 			definition = "Breakdown of the cash movements into a fund by transaction type, eg, subscription, switch-in.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentFundTransactionInType1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionInType1.mmObject();
 		}
 	};
+	protected OriginalOrderQuantityType1 originalOrderQuantityDetails;
 	/**
 	 * Breakdown of the cash movements into a fund by order type, eg, order by
 	 * quantity of units or amount of money.
@@ -281,8 +287,8 @@ public class FundCashInBreakdown1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#QuantityType
-	 * SecuritiesOrder.QuantityType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmQuantityType
+	 * SecuritiesOrder.mmQuantityType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -303,21 +309,22 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalOrderQuantityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalOrderQuantityDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> FundCashInBreakdown1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.QuantityType;
 			isDerived = false;
 			xmlTag = "OrgnlOrdrQtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrderQuantityDetails";
 			definition = "Breakdown of the cash movements into a fund by order type, eg, order by quantity of units or amount of money.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalOrderQuantityType1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalOrderQuantityType1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Commission4> commissionDetails;
 	/**
 	 * Information related to the commission applied to an order, eg, back-end
 	 * or front-end commission.
@@ -330,8 +337,8 @@ public class FundCashInBreakdown1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeCommission
-	 * Trade.TradeCommission}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeCommission
+	 * Trade.mmTradeCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -352,34 +359,82 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
 			componentContext_lazy = () -> FundCashInBreakdown1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeCommission;
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Information related to the commission applied to an order, eg, back-end or front-end commission.";
 			minOccurs = 0;
-			type_lazy = () -> Commission4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Commission4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashInBreakdown1.Amount, com.tools20022.repository.msg.FundCashInBreakdown1.UnitsNumber,
-						com.tools20022.repository.msg.FundCashInBreakdown1.NewAmountIndicator, com.tools20022.repository.msg.FundCashInBreakdown1.InvestmentFundTransactionInTypeDetails,
-						com.tools20022.repository.msg.FundCashInBreakdown1.OriginalOrderQuantityDetails, com.tools20022.repository.msg.FundCashInBreakdown1.CommissionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashInBreakdown1.mmAmount, com.tools20022.repository.msg.FundCashInBreakdown1.mmUnitsNumber,
+						com.tools20022.repository.msg.FundCashInBreakdown1.mmNewAmountIndicator, com.tools20022.repository.msg.FundCashInBreakdown1.mmInvestmentFundTransactionInTypeDetails,
+						com.tools20022.repository.msg.FundCashInBreakdown1.mmOriginalOrderQuantityDetails, com.tools20022.repository.msg.FundCashInBreakdown1.mmCommissionDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundCashInBreakdown1";
 				definition = "Breakdown of cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public FinancialInstrumentQuantity1 getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public YesNoIndicator getNewAmountIndicator() {
+		return newAmountIndicator;
+	}
+
+	public void setNewAmountIndicator(YesNoIndicator newAmountIndicator) {
+		this.newAmountIndicator = newAmountIndicator;
+	}
+
+	public InvestmentFundTransactionInType1 getInvestmentFundTransactionInTypeDetails() {
+		return investmentFundTransactionInTypeDetails;
+	}
+
+	public void setInvestmentFundTransactionInTypeDetails(com.tools20022.repository.msg.InvestmentFundTransactionInType1 investmentFundTransactionInTypeDetails) {
+		this.investmentFundTransactionInTypeDetails = investmentFundTransactionInTypeDetails;
+	}
+
+	public OriginalOrderQuantityType1 getOriginalOrderQuantityDetails() {
+		return originalOrderQuantityDetails;
+	}
+
+	public void setOriginalOrderQuantityDetails(com.tools20022.repository.msg.OriginalOrderQuantityType1 originalOrderQuantityDetails) {
+		this.originalOrderQuantityDetails = originalOrderQuantityDetails;
+	}
+
+	public List<Commission4> getCommissionDetails() {
+		return commissionDetails;
+	}
+
+	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission4> commissionDetails) {
+		this.commissionDetails = commissionDetails;
 	}
 }

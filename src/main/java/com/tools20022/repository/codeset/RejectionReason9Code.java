@@ -34,23 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#CancellationNotAllowed
- * RejectionReason9Code.CancellationNotAllowed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason9Code#Late
- * RejectionReason9Code.Late}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmCancellationNotAllowed
+ * RejectionReason9Code.mmCancellationNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#ElectionAlreadyCancelled
- * RejectionReason9Code.ElectionAlreadyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmLate
+ * RejectionReason9Code.mmLate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#FailedValidation
- * RejectionReason9Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmElectionAlreadyCancelled
+ * RejectionReason9Code.mmElectionAlreadyCancelled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmFailedValidation
+ * RejectionReason9Code.mmFailedValidation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +88,7 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "CancellationNotAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationNotAllowed = new MMCode() {
+	public static final MMCode mmCancellationNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationNotAllowed";
@@ -110,7 +111,7 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "Late"</li>
 	 * </ul>
 	 */
-	public static final MMCode Late = new MMCode() {
+	public static final MMCode mmLate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
@@ -133,7 +134,7 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "ElectionAlreadyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode ElectionAlreadyCancelled = new MMCode() {
+	public static final MMCode mmElectionAlreadyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAlreadyCancelled";
@@ -156,7 +157,7 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -167,13 +168,13 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NCAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason9Code";
 				definition = "Specifies the reason of a rejection of an election cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason9Code.CancellationNotAllowed, com.tools20022.repository.codeset.RejectionReason9Code.Late,
-						com.tools20022.repository.codeset.RejectionReason9Code.ElectionAlreadyCancelled, com.tools20022.repository.codeset.RejectionReason9Code.FailedValidation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason9Code.mmCancellationNotAllowed, com.tools20022.repository.codeset.RejectionReason9Code.mmLate,
+						com.tools20022.repository.codeset.RejectionReason9Code.mmElectionAlreadyCancelled, com.tools20022.repository.codeset.RejectionReason9Code.mmFailedValidation);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InterestCalculation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides general interest information that applies to the account at a
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#Type
- * AccountInterest1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#Rate
- * AccountInterest1.Rate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#FromToDate
- * AccountInterest1.FromToDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#Reason
- * AccountInterest1.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#mmType
+ * AccountInterest1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#mmRate
+ * AccountInterest1.mmRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#mmFromToDate
+ * AccountInterest1.mmFromToDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountInterest1#mmReason
+ * AccountInterest1.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountInterest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InterestType1Choice type;
 	/**
 	 * Specifies the type of interest.
 	 * <p>
@@ -80,8 +82,8 @@ public class AccountInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#InterestType
-	 * InterestCalculation.InterestType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmInterestType
+	 * InterestCalculation.mmInterestType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,21 +102,22 @@ public class AccountInterest1 {
 	 * definition} = "Specifies the type of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestType;
 			componentContext_lazy = () -> AccountInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.InterestType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InterestType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InterestType1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Rate1> rate;
 	/**
 	 * Set of elements qualifying the interest rate.
 	 * <p>
@@ -125,8 +128,8 @@ public class AccountInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#Rate
-	 * InterestCalculation.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRate
+	 * InterestCalculation.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +148,21 @@ public class AccountInterest1 {
 	 * definition} = "Set of elements qualifying the interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
 			componentContext_lazy = () -> AccountInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Set of elements qualifying the interest rate.";
 			minOccurs = 0;
-			type_lazy = () -> Rate1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Rate1.mmObject();
 		}
 	};
+	protected DateTimePeriodDetails fromToDate;
 	/**
 	 * Range of time between a start date and an end date for the calculation of
 	 * the interest.
@@ -171,8 +175,8 @@ public class AccountInterest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#InterestPeriod
-	 * InterestCalculation.InterestPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmInterestPeriod
+	 * InterestCalculation.mmInterestPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,21 +197,22 @@ public class AccountInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FromToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> AccountInterest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.InterestPeriod;
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for the calculation of the interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriodDetails.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
 		}
 	};
+	protected Max35Text reason;
 	/**
 	 * Underlying reason for the interest, eg, yearly credit interest on a
 	 * savings account.
@@ -238,7 +243,7 @@ public class AccountInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountInterest1.mmObject();
 			isDerived = false;
@@ -246,8 +251,8 @@ public class AccountInterest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Underlying reason for the interest, eg, yearly credit interest on a savings account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -255,15 +260,47 @@ public class AccountInterest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountInterest1.Type, com.tools20022.repository.msg.AccountInterest1.Rate, com.tools20022.repository.msg.AccountInterest1.FromToDate,
-						com.tools20022.repository.msg.AccountInterest1.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountInterest1.mmType, com.tools20022.repository.msg.AccountInterest1.mmRate, com.tools20022.repository.msg.AccountInterest1.mmFromToDate,
+						com.tools20022.repository.msg.AccountInterest1.mmReason);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountInterest1";
 				definition = "Provides general interest information that applies to the account at a particular moment in time.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InterestType1Choice getType() {
+		return type;
+	}
+
+	public void setType(InterestType1Choice type) {
+		this.type = type;
+	}
+
+	public List<Rate1> getRate() {
+		return rate;
+	}
+
+	public void setRate(List<com.tools20022.repository.msg.Rate1> rate) {
+		this.rate = rate;
+	}
+
+	public DateTimePeriodDetails getFromToDate() {
+		return fromToDate;
+	}
+
+	public void setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+		this.fromToDate = fromToDate;
+	}
+
+	public Max35Text getReason() {
+		return reason;
+	}
+
+	public void setReason(Max35Text reason) {
+		this.reason = reason;
 	}
 }

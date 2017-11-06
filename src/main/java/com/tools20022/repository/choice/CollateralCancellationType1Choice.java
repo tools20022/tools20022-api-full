@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CollateralCancellationType1Choice#Code
- * CollateralCancellationType1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CollateralCancellationType1Choice#mmCode
+ * CollateralCancellationType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CollateralCancellationType1Choice#Proprietary
- * CollateralCancellationType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CollateralCancellationType1Choice#mmProprietary
+ * CollateralCancellationType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralCancellationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CollateralManagementCancellationReason1Code code;
 	/**
 	 * Provides the cancellation reason using an ISO 20022 code.
 	 * <p>
@@ -79,8 +80,8 @@ public class CollateralCancellationType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#CollateralManagementCancellationReason
-	 * CollateralStatus.CollateralManagementCancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateralManagementCancellationReason
+	 * CollateralStatus.mmCollateralManagementCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class CollateralCancellationType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> CollateralCancellationType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.CollateralManagementCancellationReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the cancellation reason using an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralManagementCancellationReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Provides the cancellation reason using a proprietary code.
 	 * <p>
@@ -127,8 +129,8 @@ public class CollateralCancellationType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#CollateralManagementCancellationReason
-	 * CollateralStatus.CollateralManagementCancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateralManagementCancellationReason
+	 * CollateralStatus.mmCollateralManagementCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class CollateralCancellationType1Choice {
 	 * "Provides the cancellation reason using a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> CollateralCancellationType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.CollateralManagementCancellationReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the cancellation reason using a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class CollateralCancellationType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralCancellationType1Choice.Code, com.tools20022.repository.choice.CollateralCancellationType1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralCancellationType1Choice.mmCode, com.tools20022.repository.choice.CollateralCancellationType1Choice.mmProprietary);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralCancellationType1Choice";
 				definition = "Choice between a code and a proprietary code for the reason the collateral message has been cancelled.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CollateralManagementCancellationReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CollateralManagementCancellationReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

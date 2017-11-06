@@ -33,32 +33,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#WithholdingTax
- * TaxRecord1Code.WithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#mmWithholdingTax
+ * TaxRecord1Code.mmWithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#ValueAddedTax
- * TaxRecord1Code.ValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#mmValueAddedTax
+ * TaxRecord1Code.mmValueAddedTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#IncomePaymentDetails
- * TaxRecord1Code.IncomePaymentDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#mmIncomePaymentDetails
+ * TaxRecord1Code.mmIncomePaymentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#TotalAmountForIncomePayments
- * TaxRecord1Code.TotalAmountForIncomePayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#mmTotalAmountForIncomePayments
+ * TaxRecord1Code.mmTotalAmountForIncomePayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#MoneyPaymentDetails
- * TaxRecord1Code.MoneyPaymentDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#mmMoneyPaymentDetails
+ * TaxRecord1Code.mmMoneyPaymentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#TotalAmountForMoneyPayments
- * TaxRecord1Code.TotalAmountForMoneyPayments}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxRecord1Code#Other
- * TaxRecord1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecord1Code#mmTotalAmountForMoneyPayments
+ * TaxRecord1Code.mmTotalAmountForMoneyPayments}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxRecord1Code#mmOther
+ * TaxRecord1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTax = new MMCode() {
+	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
@@ -117,7 +117,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -140,7 +140,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 * name} = "IncomePaymentDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncomePaymentDetails = new MMCode() {
+	public static final MMCode mmIncomePaymentDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePaymentDetails";
@@ -163,7 +163,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 * name} = "TotalAmountForIncomePayments"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalAmountForIncomePayments = new MMCode() {
+	public static final MMCode mmTotalAmountForIncomePayments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForIncomePayments";
@@ -186,7 +186,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 * name} = "MoneyPaymentDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode MoneyPaymentDetails = new MMCode() {
+	public static final MMCode mmMoneyPaymentDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyPaymentDetails";
@@ -209,7 +209,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 * name} = "TotalAmountForMoneyPayments"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalAmountForMoneyPayments = new MMCode() {
+	public static final MMCode mmTotalAmountForMoneyPayments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForMoneyPayments";
@@ -232,7 +232,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -243,14 +243,14 @@ public class TaxRecord1Code extends TaxRecordCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WHTX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxRecord1Code";
 				definition = "Specifies the type of tax details.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxRecord1Code.WithholdingTax, com.tools20022.repository.codeset.TaxRecord1Code.ValueAddedTax,
-						com.tools20022.repository.codeset.TaxRecord1Code.IncomePaymentDetails, com.tools20022.repository.codeset.TaxRecord1Code.TotalAmountForIncomePayments,
-						com.tools20022.repository.codeset.TaxRecord1Code.MoneyPaymentDetails, com.tools20022.repository.codeset.TaxRecord1Code.TotalAmountForMoneyPayments, com.tools20022.repository.codeset.TaxRecord1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxRecord1Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxRecord1Code.mmValueAddedTax,
+						com.tools20022.repository.codeset.TaxRecord1Code.mmIncomePaymentDetails, com.tools20022.repository.codeset.TaxRecord1Code.mmTotalAmountForIncomePayments,
+						com.tools20022.repository.codeset.TaxRecord1Code.mmMoneyPaymentDetails, com.tools20022.repository.codeset.TaxRecord1Code.mmTotalAmountForMoneyPayments, com.tools20022.repository.codeset.TaxRecord1Code.mmOther);
 				trace_lazy = () -> TaxRecordCode.mmObject();
 			}
 		});

@@ -28,12 +28,10 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.NewSecuritiesIssuanceType6Code;
-import com.tools20022.repository.entity.CorporateActionEvent;
-import com.tools20022.repository.entity.CorporateActionOption;
-import com.tools20022.repository.entity.DeliveringSettlementParty;
-import com.tools20022.repository.entity.ReceivingSettlementParty;
+import com.tools20022.repository.entity.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the corporate action security option.
@@ -45,53 +43,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#FinancialInstrumentIdentification
- * SecuritiesOption55.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmFinancialInstrumentIdentification
+ * SecuritiesOption55.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#CreditDebitIndicator
- * SecuritiesOption55.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmCreditDebitIndicator
+ * SecuritiesOption55.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#TemporaryFinancialInstrumentIndicator
- * SecuritiesOption55.TemporaryFinancialInstrumentIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmTemporaryFinancialInstrumentIndicator
+ * SecuritiesOption55.mmTemporaryFinancialInstrumentIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#NewSecuritiesIssuanceIndicator
- * SecuritiesOption55.NewSecuritiesIssuanceIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmNewSecuritiesIssuanceIndicator
+ * SecuritiesOption55.mmNewSecuritiesIssuanceIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#IssuerOfferorTaxabilityIndicator
- * SecuritiesOption55.IssuerOfferorTaxabilityIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption55#IncomeType
- * SecuritiesOption55.IncomeType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmIssuerOfferorTaxabilityIndicator
+ * SecuritiesOption55.mmIssuerOfferorTaxabilityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#ExemptionType
- * SecuritiesOption55.ExemptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmIncomeType
+ * SecuritiesOption55.mmIncomeType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#CountryOfIncomeSource
- * SecuritiesOption55.CountryOfIncomeSource}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmExemptionType
+ * SecuritiesOption55.mmExemptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#PostingQuantity
- * SecuritiesOption55.PostingQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmCountryOfIncomeSource
+ * SecuritiesOption55.mmCountryOfIncomeSource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#SafekeepingPlace
- * SecuritiesOption55.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmPostingQuantity
+ * SecuritiesOption55.mmPostingQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#FractionDisposition
- * SecuritiesOption55.FractionDisposition}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmSafekeepingPlace
+ * SecuritiesOption55.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#CurrencyOption
- * SecuritiesOption55.CurrencyOption}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption55#DateDetails
- * SecuritiesOption55.DateDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption55#RateDetails
- * SecuritiesOption55.RateDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmFractionDisposition
+ * SecuritiesOption55.mmFractionDisposition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#PriceDetails
- * SecuritiesOption55.PriceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmCurrencyOption
+ * SecuritiesOption55.mmCurrencyOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#ReceivingSettlementParties
- * SecuritiesOption55.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmDateDetails
+ * SecuritiesOption55.mmDateDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#DeliveringSettlementParties
- * SecuritiesOption55.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmRateDetails
+ * SecuritiesOption55.mmRateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmPriceDetails
+ * SecuritiesOption55.mmPriceDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmReceivingSettlementParties
+ * SecuritiesOption55.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmDeliveringSettlementParties
+ * SecuritiesOption55.mmDeliveringSettlementParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -100,8 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesOption55 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification20 financialInstrumentIdentification;
 	/**
 	 * Identification of the financial instrument.
 	 * <p>
@@ -128,8 +130,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,21 +150,22 @@ public class SecuritiesOption55 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies whether the value is a debit or credit.
 	 * <p>
@@ -176,8 +179,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#CreditDebitIndicator
-	 * ProceedsDefinition.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmCreditDebitIndicator
+	 * ProceedsDefinition.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,20 +199,21 @@ public class SecuritiesOption55 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected TemporaryFinancialInstrumentIndicator4Choice temporaryFinancialInstrumentIndicator;
 	/**
 	 * Specifies that the security identified is a temporary security
 	 * identification used for processing reasons, for example, contra security
@@ -224,8 +228,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#TemporaryFinancialInstrumentIndicator
-	 * Security.TemporaryFinancialInstrumentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmTemporaryFinancialInstrumentIndicator
+	 * Security.mmTemporaryFinancialInstrumentIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,21 +250,22 @@ public class SecuritiesOption55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TemporaryFinancialInstrumentIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTemporaryFinancialInstrumentIndicator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.TemporaryFinancialInstrumentIndicator;
 			isDerived = false;
 			xmlTag = "TempFinInstrmInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
 			definition = "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TemporaryFinancialInstrumentIndicator4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> TemporaryFinancialInstrumentIndicator4Choice.mmObject();
 		}
 	};
+	protected NewSecuritiesIssuanceType6Code newSecuritiesIssuanceIndicator;
 	/**
 	 * Indicates whether the securities are newly issued or not.
 	 * <p>
@@ -290,7 +295,7 @@ public class SecuritiesOption55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewSecuritiesIssuanceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewSecuritiesIssuanceIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			isDerived = false;
@@ -298,11 +303,12 @@ public class SecuritiesOption55 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSecuritiesIssuanceIndicator";
 			definition = "Indicates whether the securities are newly issued or not.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NewSecuritiesIssuanceType6Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 issuerOfferorTaxabilityIndicator;
 	/**
 	 * Proceeds are taxable according to the information provided by the issuer
 	 * / offeror.
@@ -317,8 +323,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#IssuerOfferorTaxabilityIndicator
-	 * ProceedsDefinition.IssuerOfferorTaxabilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmIssuerOfferorTaxabilityIndicator
+	 * ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -339,20 +345,21 @@ public class SecuritiesOption55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.IssuerOfferorTaxabilityIndicator;
 			isDerived = false;
 			xmlTag = "IssrOfferrTaxbltyInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
 			definition = "Proceeds are taxable according to the information provided by the issuer / offeror.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
 		}
 	};
+	protected GenericIdentification47 incomeType;
 	/**
 	 * Specifies the type of income. The lists of income type codes to be used,
 	 * are available on the SMPG website at www.smpg.info.
@@ -366,8 +373,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#IncomeType
-	 * CashProceedsDefinition.IncomeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
+	 * CashProceedsDefinition.mmIncomeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -388,21 +395,22 @@ public class SecuritiesOption55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IncomeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIncomeType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmIncomeType;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.IncomeType;
 			isDerived = false;
 			xmlTag = "IncmTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeType";
 			definition = "Specifies the type of income.\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification47> exemptionType;
 	/**
 	 * Specifies the basis for the reduced rate of withholding.
 	 * <p>
@@ -430,7 +438,7 @@ public class SecuritiesOption55 {
 	 * definition} = "Specifies the basis for the reduced rate of withholding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExemptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExemptionType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			isDerived = false;
@@ -439,10 +447,11 @@ public class SecuritiesOption55 {
 			name = "ExemptionType";
 			definition = "Specifies the basis for the reduced rate of withholding.";
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification47.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
 		}
 	};
+	protected CountryCode countryOfIncomeSource;
 	/**
 	 * Indicates the country from which the income originates.
 	 * <p>
@@ -455,8 +464,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#CountryOfIncomeSource
-	 * ProceedsDefinition.CountryOfIncomeSource}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmCountryOfIncomeSource
+	 * ProceedsDefinition.mmCountryOfIncomeSource}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -475,20 +484,21 @@ public class SecuritiesOption55 {
 	 * definition} = "Indicates the country from which the income originates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIncomeSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIncomeSource = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCountryOfIncomeSource;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.CountryOfIncomeSource;
 			isDerived = false;
 			xmlTag = "CtryOfIncmSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncomeSource";
 			definition = "Indicates the country from which the income originates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Quantity10Choice postingQuantity;
 	/**
 	 * Quantity of securities that have been posted (credit or debit) to the
 	 * safekeeping account.
@@ -501,8 +511,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingQuantity
-	 * CorporateActionDistribution.PostingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingQuantity
+	 * CorporateActionDistribution.mmPostingQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -523,21 +533,22 @@ public class SecuritiesOption55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostingQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostingQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingQuantity;
 			isDerived = false;
 			xmlTag = "PstngQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Quantity of securities that have been posted (credit or debit) to the safekeeping account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity10Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Quantity10Choice.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormat17Choice safekeepingPlace;
 	/**
 	 * Location where the financial instruments are/will be safekept.
 	 * <p>
@@ -571,21 +582,22 @@ public class SecuritiesOption55 {
 	 * "Location where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
 		}
 	};
+	protected FractionDispositionType30Choice fractionDisposition;
 	/**
 	 * Specifies how fractions resulting from derived securities will be
 	 * processed or how prorated decisions will be rounding, if provided with a
@@ -600,8 +612,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#FractionDisposition
-	 * CorporateActionOption.FractionDisposition}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmFractionDisposition
+	 * CorporateActionOption.mmFractionDisposition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -622,21 +634,22 @@ public class SecuritiesOption55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FractionDisposition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFractionDisposition = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.FractionDisposition;
 			isDerived = false;
 			xmlTag = "FrctnDspstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FractionDispositionType30Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FractionDispositionType30Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currencyOption;
 	/**
 	 * Currency in which the cash disbursed from an interest or dividend payment
 	 * is offered.
@@ -651,8 +664,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#CurrencyOption
-	 * CorporateActionOption.CurrencyOption}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCurrencyOption
+	 * CorporateActionOption.mmCurrencyOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -673,20 +686,21 @@ public class SecuritiesOption55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyOption = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyOption = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmCurrencyOption;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.CurrencyOption;
 			isDerived = false;
 			xmlTag = "CcyOptn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency in which the cash disbursed from an interest or dividend payment is offered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected SecurityDate13 dateDetails;
 	/**
 	 * Provides information about the dates related to securities movement.
 	 * <p>
@@ -698,8 +712,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#UnderlyingSecurity
-	 * CorporateActionEvent.UnderlyingSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnderlyingSecurity
+	 * CorporateActionEvent.mmUnderlyingSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -719,21 +733,22 @@ public class SecuritiesOption55 {
 	 * "Provides information about the dates related to securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.UnderlyingSecurity;
 			isDerived = false;
 			xmlTag = "DtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to securities movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityDate13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityDate13.mmObject();
 		}
 	};
+	protected CorporateActionRate75 rateDetails;
 	/**
 	 * Provides information about the rates related to securities movement.
 	 * <p>
@@ -766,21 +781,22 @@ public class SecuritiesOption55 {
 	 * "Provides information about the rates related to securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
+			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			isDerived = false;
 			xmlTag = "RateDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateDetails";
 			definition = "Provides information about the rates related to securities movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionRate75.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionRate75.mmObject();
 		}
 	};
+	protected CorporateActionPrice64 priceDetails;
 	/**
 	 * Provides information about the prices related to securities movement.
 	 * <p>
@@ -792,8 +808,8 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionPrice
-	 * CorporateActionEvent.CorporateActionPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionPrice
+	 * CorporateActionEvent.mmCorporateActionPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -813,21 +829,22 @@ public class SecuritiesOption55 {
 	 * "Provides information about the prices related to securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> SecuritiesOption55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.CorporateActionPrice;
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to securities movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionPrice64.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice64.mmObject();
 		}
 	};
+	protected SettlementParties43 receivingSettlementParties;
 	/**
 	 * Identifies the chain of receiving settlement parties.
 	 * <p>
@@ -859,21 +876,22 @@ public class SecuritiesOption55 {
 	 * definition} = "Identifies the chain of receiving settlement parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties43.mmObject();
 		}
 	};
+	protected SettlementParties43 deliveringSettlementParties;
 	/**
 	 * Identifies the chain of delivering settlement parties.
 	 * <p>
@@ -905,39 +923,175 @@ public class SecuritiesOption55 {
 	 * definition} = "Identifies the chain of delivering settlement parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> SecuritiesOption55.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties43.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption55.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesOption55.CreditDebitIndicator,
-						com.tools20022.repository.msg.SecuritiesOption55.TemporaryFinancialInstrumentIndicator, com.tools20022.repository.msg.SecuritiesOption55.NewSecuritiesIssuanceIndicator,
-						com.tools20022.repository.msg.SecuritiesOption55.IssuerOfferorTaxabilityIndicator, com.tools20022.repository.msg.SecuritiesOption55.IncomeType, com.tools20022.repository.msg.SecuritiesOption55.ExemptionType,
-						com.tools20022.repository.msg.SecuritiesOption55.CountryOfIncomeSource, com.tools20022.repository.msg.SecuritiesOption55.PostingQuantity, com.tools20022.repository.msg.SecuritiesOption55.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption55.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption55.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption55.DateDetails,
-						com.tools20022.repository.msg.SecuritiesOption55.RateDetails, com.tools20022.repository.msg.SecuritiesOption55.PriceDetails, com.tools20022.repository.msg.SecuritiesOption55.ReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption55.DeliveringSettlementParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption55.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesOption55.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.SecuritiesOption55.mmTemporaryFinancialInstrumentIndicator, com.tools20022.repository.msg.SecuritiesOption55.mmNewSecuritiesIssuanceIndicator,
+						com.tools20022.repository.msg.SecuritiesOption55.mmIssuerOfferorTaxabilityIndicator, com.tools20022.repository.msg.SecuritiesOption55.mmIncomeType, com.tools20022.repository.msg.SecuritiesOption55.mmExemptionType,
+						com.tools20022.repository.msg.SecuritiesOption55.mmCountryOfIncomeSource, com.tools20022.repository.msg.SecuritiesOption55.mmPostingQuantity, com.tools20022.repository.msg.SecuritiesOption55.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption55.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption55.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption55.mmDateDetails,
+						com.tools20022.repository.msg.SecuritiesOption55.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption55.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption55.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.SecuritiesOption55.mmDeliveringSettlementParties);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOption55";
 				definition = "Provides information about the corporate action security option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification20 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification20 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public TemporaryFinancialInstrumentIndicator4Choice getTemporaryFinancialInstrumentIndicator() {
+		return temporaryFinancialInstrumentIndicator;
+	}
+
+	public void setTemporaryFinancialInstrumentIndicator(TemporaryFinancialInstrumentIndicator4Choice temporaryFinancialInstrumentIndicator) {
+		this.temporaryFinancialInstrumentIndicator = temporaryFinancialInstrumentIndicator;
+	}
+
+	public NewSecuritiesIssuanceType6Code getNewSecuritiesIssuanceIndicator() {
+		return newSecuritiesIssuanceIndicator;
+	}
+
+	public void setNewSecuritiesIssuanceIndicator(NewSecuritiesIssuanceType6Code newSecuritiesIssuanceIndicator) {
+		this.newSecuritiesIssuanceIndicator = newSecuritiesIssuanceIndicator;
+	}
+
+	public GenericIdentification47 getIssuerOfferorTaxabilityIndicator() {
+		return issuerOfferorTaxabilityIndicator;
+	}
+
+	public void setIssuerOfferorTaxabilityIndicator(com.tools20022.repository.msg.GenericIdentification47 issuerOfferorTaxabilityIndicator) {
+		this.issuerOfferorTaxabilityIndicator = issuerOfferorTaxabilityIndicator;
+	}
+
+	public GenericIdentification47 getIncomeType() {
+		return incomeType;
+	}
+
+	public void setIncomeType(com.tools20022.repository.msg.GenericIdentification47 incomeType) {
+		this.incomeType = incomeType;
+	}
+
+	public List<GenericIdentification47> getExemptionType() {
+		return exemptionType;
+	}
+
+	public void setExemptionType(List<com.tools20022.repository.msg.GenericIdentification47> exemptionType) {
+		this.exemptionType = exemptionType;
+	}
+
+	public CountryCode getCountryOfIncomeSource() {
+		return countryOfIncomeSource;
+	}
+
+	public void setCountryOfIncomeSource(CountryCode countryOfIncomeSource) {
+		this.countryOfIncomeSource = countryOfIncomeSource;
+	}
+
+	public Quantity10Choice getPostingQuantity() {
+		return postingQuantity;
+	}
+
+	public void setPostingQuantity(Quantity10Choice postingQuantity) {
+		this.postingQuantity = postingQuantity;
+	}
+
+	public SafekeepingPlaceFormat17Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat17Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public FractionDispositionType30Choice getFractionDisposition() {
+		return fractionDisposition;
+	}
+
+	public void setFractionDisposition(FractionDispositionType30Choice fractionDisposition) {
+		this.fractionDisposition = fractionDisposition;
+	}
+
+	public ActiveCurrencyCode getCurrencyOption() {
+		return currencyOption;
+	}
+
+	public void setCurrencyOption(ActiveCurrencyCode currencyOption) {
+		this.currencyOption = currencyOption;
+	}
+
+	public SecurityDate13 getDateDetails() {
+		return dateDetails;
+	}
+
+	public void setDateDetails(com.tools20022.repository.msg.SecurityDate13 dateDetails) {
+		this.dateDetails = dateDetails;
+	}
+
+	public CorporateActionRate75 getRateDetails() {
+		return rateDetails;
+	}
+
+	public void setRateDetails(com.tools20022.repository.msg.CorporateActionRate75 rateDetails) {
+		this.rateDetails = rateDetails;
+	}
+
+	public CorporateActionPrice64 getPriceDetails() {
+		return priceDetails;
+	}
+
+	public void setPriceDetails(com.tools20022.repository.msg.CorporateActionPrice64 priceDetails) {
+		this.priceDetails = priceDetails;
+	}
+
+	public SettlementParties43 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties43 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public SettlementParties43 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties43 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 }

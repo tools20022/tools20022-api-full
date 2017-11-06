@@ -37,10 +37,11 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TransferReason1#Code
- * TransferReason1.Code}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TransferReason1#Proprietary
- * TransferReason1.Proprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TransferReason1#mmCode
+ * TransferReason1.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransferReason1#mmProprietary
+ * TransferReason1.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -65,6 +66,7 @@ import java.util.function.Supplier;
 public class TransferReason1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransferReason1Code code;
 	/**
 	 * Transfer reason expressed as an ISO 20022 code.
 	 * <p>
@@ -78,8 +80,8 @@ public class TransferReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferReason
-	 * SecuritiesTransfer.TransferReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferReason
+	 * SecuritiesTransfer.mmTransferReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +100,21 @@ public class TransferReason1 {
 	 * definition} = "Transfer reason expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferReason;
 			componentContext_lazy = () -> TransferReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Transfer reason expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransferReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification27 proprietary;
 	/**
 	 * Transfer reason expressed as a proprietary code.
 	 * <p>
@@ -125,8 +128,8 @@ public class TransferReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferReason
-	 * SecuritiesTransfer.TransferReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferReason
+	 * SecuritiesTransfer.mmTransferReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +148,17 @@ public class TransferReason1 {
 	 * definition} = "Transfer reason expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferReason;
 			componentContext_lazy = () -> TransferReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Transfer reason expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification27.mmObject();
 		}
 	};
@@ -163,9 +166,9 @@ public class TransferReason1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferReason1.Code, com.tools20022.repository.choice.TransferReason1.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferReason1.mmCode, com.tools20022.repository.choice.TransferReason1.mmProprietary);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -179,5 +182,21 @@ public class TransferReason1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransferReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(TransferReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification27 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification27 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

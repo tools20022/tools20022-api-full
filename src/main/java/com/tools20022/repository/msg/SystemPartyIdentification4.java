@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#Identification
- * SystemPartyIdentification4.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#mmIdentification
+ * SystemPartyIdentification4.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#ResponsiblePartyIdentification
- * SystemPartyIdentification4.ResponsiblePartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification4#mmResponsiblePartyIdentification
+ * SystemPartyIdentification4.mmResponsiblePartyIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemPartyIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICFIIdentifier identification;
 	/**
 	 * Unique identification to unambiguously identify the party within the
 	 * system.
@@ -80,8 +81,8 @@ public class SystemPartyIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class SystemPartyIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> SystemPartyIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification to unambiguously identify the party within the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected CSDOrNCB1Choice responsiblePartyIdentification;
 	/**
 	 * Unique identification of the party responsible (national central bank or
 	 * central securities depositary) for the party reference data.
@@ -130,8 +132,8 @@ public class SystemPartyIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,17 +154,17 @@ public class SystemPartyIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> SystemPartyIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "RspnsblPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIdentification";
 			definition = "Unique identification of the party responsible (national central bank or central securities depositary) for the party reference data.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CSDOrNCB1Choice.mmObject();
 		}
 	};
@@ -170,14 +172,30 @@ public class SystemPartyIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyIdentification4.Identification, com.tools20022.repository.msg.SystemPartyIdentification4.ResponsiblePartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyIdentification4.mmIdentification, com.tools20022.repository.msg.SystemPartyIdentification4.mmResponsiblePartyIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification4";
 				definition = "Unique identification, as assigned by the executing system, to unambiguously identify the party in the system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICFIIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(BICFIIdentifier identification) {
+		this.identification = identification;
+	}
+
+	public CSDOrNCB1Choice getResponsiblePartyIdentification() {
+		return responsiblePartyIdentification;
+	}
+
+	public void setResponsiblePartyIdentification(CSDOrNCB1Choice responsiblePartyIdentification) {
+		this.responsiblePartyIdentification = responsiblePartyIdentification;
 	}
 }

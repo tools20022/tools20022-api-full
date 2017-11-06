@@ -31,17 +31,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TerminationDate1Choice#Date
- * TerminationDate1Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TerminationDate1Choice#Code
- * TerminationDate1Choice.Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TerminationDate1Choice#mmDate
+ * TerminationDate1Choice.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TerminationDate1Choice#mmCode
+ * TerminationDate1Choice.mmCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminationDate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Termination date is defined as a choice between a date or a date and time
 	 * format.
@@ -86,7 +89,7 @@ public class TerminationDate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminationDate1Choice.mmObject();
 			isDerived = false;
@@ -94,11 +97,12 @@ public class TerminationDate1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Termination date is defined as a choice between a date or a date and time format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Date1Choice code;
 	/**
 	 * Termination date is defined using a code or data source scheme.
 	 * <p>
@@ -127,7 +131,7 @@ public class TerminationDate1Choice {
 	 * "Termination date is defined using a code or data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminationDate1Choice.mmObject();
 			isDerived = false;
@@ -135,22 +139,38 @@ public class TerminationDate1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Termination date is defined using a code or data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> Date1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.Date1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate1Choice.Date, com.tools20022.repository.choice.TerminationDate1Choice.Code);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate1Choice.mmDate, com.tools20022.repository.choice.TerminationDate1Choice.mmCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TerminationDate1Choice";
 				definition = "Choice between a date or a code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public Date1Choice getCode() {
+		return code;
+	}
+
+	public void setCode(com.tools20022.repository.choice.Date1Choice code) {
+		this.code = code;
 	}
 }

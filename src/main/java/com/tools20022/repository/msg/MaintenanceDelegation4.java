@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5000Binary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information on the delegation of a maintenance action or maintenance
@@ -40,42 +41,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#MaintenanceService
- * MaintenanceDelegation4.MaintenanceService}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmMaintenanceService
+ * MaintenanceDelegation4.mmMaintenanceService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#Response
- * MaintenanceDelegation4.Response}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmResponse
+ * MaintenanceDelegation4.mmResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#ResponseReason
- * MaintenanceDelegation4.ResponseReason}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmResponseReason
+ * MaintenanceDelegation4.mmResponseReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#DelegationType
- * MaintenanceDelegation4.DelegationType}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmDelegationType
+ * MaintenanceDelegation4.mmDelegationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#POISubset
- * MaintenanceDelegation4.POISubset}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmPOISubset
+ * MaintenanceDelegation4.mmPOISubset}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#DelegationScopeIdentification
- * MaintenanceDelegation4.DelegationScopeIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmDelegationScopeIdentification
+ * MaintenanceDelegation4.mmDelegationScopeIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#DelegationScopeDefinition
- * MaintenanceDelegation4.DelegationScopeDefinition}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmDelegationScopeDefinition
+ * MaintenanceDelegation4.mmDelegationScopeDefinition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#DelegationProof
- * MaintenanceDelegation4.DelegationProof}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmDelegationProof
+ * MaintenanceDelegation4.mmDelegationProof}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#ProtectedDelegationProof
- * MaintenanceDelegation4.ProtectedDelegationProof}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmProtectedDelegationProof
+ * MaintenanceDelegation4.mmProtectedDelegationProof}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#POIIdentificationAssociation
- * MaintenanceDelegation4.POIIdentificationAssociation}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation4#mmPOIIdentificationAssociation
+ * MaintenanceDelegation4.mmPOIIdentificationAssociation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MaintenanceDelegation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<DataSetCategory6Code> maintenanceService;
 	/**
 	 * Maintenance service to be delegated.
 	 * <p>
@@ -124,11 +126,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#MaintenanceService
-	 * MaintenanceDelegation2.MaintenanceService}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmMaintenanceService
+	 * MaintenanceDelegation2.mmMaintenanceService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaintenanceService = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaintenanceService = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -136,11 +138,12 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceService";
 			definition = "Maintenance service to be delegated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.MaintenanceService;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmMaintenanceService;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory6Code.mmObject();
 		}
 	};
+	protected Response2Code response;
 	/**
 	 * Response of the MTM to the delegation of the maintenance service.
 	 * <p>
@@ -171,11 +174,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#Response
-	 * MaintenanceDelegation2.Response}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmResponse
+	 * MaintenanceDelegation2.mmResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Response = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -183,12 +186,13 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Response of the MTM to the delegation of the maintenance service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.Response;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmResponse;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Response2Code.mmObject();
 		}
 	};
+	protected Max35Text responseReason;
 	/**
 	 * Reason of the response of the MTM.
 	 * <p>
@@ -217,11 +221,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#ResponseReason
-	 * MaintenanceDelegation2.ResponseReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmResponseReason
+	 * MaintenanceDelegation2.mmResponseReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -229,12 +233,13 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseReason";
 			definition = "Reason of the response of the MTM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.ResponseReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmResponseReason;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TerminalManagementAction3Code delegationType;
 	/**
 	 * Type of delegation action.
 	 * <p>
@@ -263,7 +268,7 @@ public class MaintenanceDelegation4 {
 	 * definition} = "Type of delegation action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DelegationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelegationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -271,11 +276,12 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationType";
 			definition = "Type of delegation action.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
 	};
+	protected List<Max35Text> pOISubset;
 	/**
 	 * Subset of the terminal estate for the delegated actions, for instance for
 	 * pilot or key deactivation). The subset may be expressed as a list of POI
@@ -308,11 +314,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#POISubset
-	 * MaintenanceDelegation2.POISubset}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmPOISubset
+	 * MaintenanceDelegation2.mmPOISubset}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POISubset = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOISubset = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -320,11 +326,12 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POISubset";
 			definition = "Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.POISubset;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmPOISubset;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text delegationScopeIdentification;
 	/**
 	 * Identification of the parameters subset assigned by the MTM.
 	 * <p>
@@ -354,11 +361,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#ParametersSubsetIdentification
-	 * MaintenanceDelegation2.ParametersSubsetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmParametersSubsetIdentification
+	 * MaintenanceDelegation2.mmParametersSubsetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DelegationScopeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelegationScopeIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -366,12 +373,13 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationScopeIdentification";
 			definition = "Identification of the parameters subset assigned by the MTM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.ParametersSubsetIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmParametersSubsetIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max3000Binary delegationScopeDefinition;
 	/**
 	 * Definition of the delegation scope, for instance inside the payment
 	 * application parameters the range of application profiles, the RID
@@ -405,11 +413,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#ParametersSubsetDefinition
-	 * MaintenanceDelegation2.ParametersSubsetDefinition}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmParametersSubsetDefinition
+	 * MaintenanceDelegation2.mmParametersSubsetDefinition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DelegationScopeDefinition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelegationScopeDefinition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -417,12 +425,13 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationScopeDefinition";
 			definition = "Definition of the delegation scope, for instance inside the payment application parameters the range of application profiles, the RID (registered application provider identification).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.ParametersSubsetDefinition;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmParametersSubsetDefinition;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	protected Max5000Binary delegationProof;
 	/**
 	 * Proof of delegation to be verified by the POI, when performing the
 	 * delegated actions.
@@ -455,11 +464,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#DelegationProof
-	 * MaintenanceDelegation2.DelegationProof}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmDelegationProof
+	 * MaintenanceDelegation2.mmDelegationProof}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DelegationProof = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelegationProof = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -467,12 +476,13 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationProof";
 			definition = "Proof of delegation to be verified by the POI, when performing the delegated actions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.DelegationProof;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmDelegationProof;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
 	};
+	protected ContentInformationType12 protectedDelegationProof;
 	/**
 	 * Protected proof of delegation.
 	 * <p>
@@ -501,11 +511,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#ProtectedDelegationProof
-	 * MaintenanceDelegation2.ProtectedDelegationProof}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmProtectedDelegationProof
+	 * MaintenanceDelegation2.mmProtectedDelegationProof}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProtectedDelegationProof = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProtectedDelegationProof = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -513,13 +523,14 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedDelegationProof";
 			definition = "Protected proof of delegation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.ProtectedDelegationProof;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmProtectedDelegationProof;
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType12.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.MaintenanceIdentificationAssociation1> pOIIdentificationAssociation;
 	/**
 	 * Association of the TM identifier and the MTM identifier of a POI.
 	 * <p>
@@ -549,11 +560,11 @@ public class MaintenanceDelegation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#POIIdentificationAssociation
-	 * MaintenanceDelegation2.POIIdentificationAssociation}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation2#mmPOIIdentificationAssociation
+	 * MaintenanceDelegation2.mmPOIIdentificationAssociation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIIdentificationAssociation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIIdentificationAssociation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegation4.mmObject();
 			isDerived = false;
@@ -561,22 +572,22 @@ public class MaintenanceDelegation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentificationAssociation";
 			definition = "Association of the TM identifier and the MTM identifier of a POI.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.POIIdentificationAssociation;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation2.mmPOIIdentificationAssociation;
 			minOccurs = 0;
-			type_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation4.MaintenanceService, com.tools20022.repository.msg.MaintenanceDelegation4.Response,
-						com.tools20022.repository.msg.MaintenanceDelegation4.ResponseReason, com.tools20022.repository.msg.MaintenanceDelegation4.DelegationType, com.tools20022.repository.msg.MaintenanceDelegation4.POISubset,
-						com.tools20022.repository.msg.MaintenanceDelegation4.DelegationScopeIdentification, com.tools20022.repository.msg.MaintenanceDelegation4.DelegationScopeDefinition,
-						com.tools20022.repository.msg.MaintenanceDelegation4.DelegationProof, com.tools20022.repository.msg.MaintenanceDelegation4.ProtectedDelegationProof,
-						com.tools20022.repository.msg.MaintenanceDelegation4.POIIdentificationAssociation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation4.mmMaintenanceService, com.tools20022.repository.msg.MaintenanceDelegation4.mmResponse,
+						com.tools20022.repository.msg.MaintenanceDelegation4.mmResponseReason, com.tools20022.repository.msg.MaintenanceDelegation4.mmDelegationType, com.tools20022.repository.msg.MaintenanceDelegation4.mmPOISubset,
+						com.tools20022.repository.msg.MaintenanceDelegation4.mmDelegationScopeIdentification, com.tools20022.repository.msg.MaintenanceDelegation4.mmDelegationScopeDefinition,
+						com.tools20022.repository.msg.MaintenanceDelegation4.mmDelegationProof, com.tools20022.repository.msg.MaintenanceDelegation4.mmProtectedDelegationProof,
+						com.tools20022.repository.msg.MaintenanceDelegation4.mmPOIIdentificationAssociation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegation4";
 				definition = "Information on the delegation of a maintenance action or maintenance function.";
@@ -584,5 +595,85 @@ public class MaintenanceDelegation4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<DataSetCategory6Code> getMaintenanceService() {
+		return maintenanceService;
+	}
+
+	public void setMaintenanceService(List<DataSetCategory6Code> maintenanceService) {
+		this.maintenanceService = maintenanceService;
+	}
+
+	public Response2Code getResponse() {
+		return response;
+	}
+
+	public void setResponse(Response2Code response) {
+		this.response = response;
+	}
+
+	public Max35Text getResponseReason() {
+		return responseReason;
+	}
+
+	public void setResponseReason(Max35Text responseReason) {
+		this.responseReason = responseReason;
+	}
+
+	public TerminalManagementAction3Code getDelegationType() {
+		return delegationType;
+	}
+
+	public void setDelegationType(TerminalManagementAction3Code delegationType) {
+		this.delegationType = delegationType;
+	}
+
+	public List<Max35Text> getPOISubset() {
+		return pOISubset;
+	}
+
+	public void setPOISubset(List<Max35Text> pOISubset) {
+		this.pOISubset = pOISubset;
+	}
+
+	public Max35Text getDelegationScopeIdentification() {
+		return delegationScopeIdentification;
+	}
+
+	public void setDelegationScopeIdentification(Max35Text delegationScopeIdentification) {
+		this.delegationScopeIdentification = delegationScopeIdentification;
+	}
+
+	public Max3000Binary getDelegationScopeDefinition() {
+		return delegationScopeDefinition;
+	}
+
+	public void setDelegationScopeDefinition(Max3000Binary delegationScopeDefinition) {
+		this.delegationScopeDefinition = delegationScopeDefinition;
+	}
+
+	public Max5000Binary getDelegationProof() {
+		return delegationProof;
+	}
+
+	public void setDelegationProof(Max5000Binary delegationProof) {
+		this.delegationProof = delegationProof;
+	}
+
+	public ContentInformationType12 getProtectedDelegationProof() {
+		return protectedDelegationProof;
+	}
+
+	public void setProtectedDelegationProof(com.tools20022.repository.msg.ContentInformationType12 protectedDelegationProof) {
+		this.protectedDelegationProof = protectedDelegationProof;
+	}
+
+	public List<MaintenanceIdentificationAssociation1> getPOIIdentificationAssociation() {
+		return pOIIdentificationAssociation;
+	}
+
+	public void setPOIIdentificationAssociation(List<com.tools20022.repository.msg.MaintenanceIdentificationAssociation1> pOIIdentificationAssociation) {
+		this.pOIIdentificationAssociation = pOIIdentificationAssociation;
 	}
 }

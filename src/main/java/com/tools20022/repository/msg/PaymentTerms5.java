@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms5#PaymentTerms
- * PaymentTerms5.PaymentTerms}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms5#mmPaymentTerms
+ * PaymentTerms5.mmPaymentTerms}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms5#AmountOrPercentage
- * PaymentTerms5.AmountOrPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms5#mmAmountOrPercentage
+ * PaymentTerms5.mmAmountOrPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTerms5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentCodeOrOther2Choice paymentTerms;
 	/**
 	 * Specifies the payment terms using a code or other means.
 	 * <p>
@@ -77,8 +78,8 @@ public class PaymentTerms5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentOffset
-	 * PaymentObligation.PaymentOffset}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentOffset
+	 * PaymentObligation.mmPaymentOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,26 +98,27 @@ public class PaymentTerms5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms4#PaymentTerms
-	 * PaymentTerms4.PaymentTerms}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms4#mmPaymentTerms
+	 * PaymentTerms4.mmPaymentTerms}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> PaymentTerms5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentOffset;
 			isDerived = false;
 			xmlTag = "PmtTerms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Specifies the payment terms using a code or other means.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms4.PaymentTerms;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms4.mmPaymentTerms;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentCodeOrOther2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentCodeOrOther2Choice.mmObject();
 		}
 	};
+	protected AmountOrPercentage2Choice amountOrPercentage;
 	/**
 	 * Specifies if it is a fixed amount or a percentage.
 	 * <p>
@@ -144,11 +146,11 @@ public class PaymentTerms5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms4#AmountOrPercentage
-	 * PaymentTerms4.AmountOrPercentage}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms4#mmAmountOrPercentage
+	 * PaymentTerms4.mmAmountOrPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountOrPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountOrPercentage = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentTerms5.mmObject();
 			isDerived = false;
@@ -156,20 +158,20 @@ public class PaymentTerms5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrPercentage";
 			definition = "Specifies if it is a fixed amount or a percentage.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms4.AmountOrPercentage;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms4.mmAmountOrPercentage;
 			maxOccurs = 1;
-			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms5.PaymentTerms, com.tools20022.repository.msg.PaymentTerms5.AmountOrPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms5.mmPaymentTerms, com.tools20022.repository.msg.PaymentTerms5.mmAmountOrPercentage);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerms5";
 				definition = "Specifies the payment terms of the underlying transaction.";
@@ -177,5 +179,21 @@ public class PaymentTerms5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentCodeOrOther2Choice getPaymentTerms() {
+		return paymentTerms;
+	}
+
+	public void setPaymentTerms(PaymentCodeOrOther2Choice paymentTerms) {
+		this.paymentTerms = paymentTerms;
+	}
+
+	public AmountOrPercentage2Choice getAmountOrPercentage() {
+		return amountOrPercentage;
+	}
+
+	public void setAmountOrPercentage(AmountOrPercentage2Choice amountOrPercentage) {
+		this.amountOrPercentage = amountOrPercentage;
 	}
 }

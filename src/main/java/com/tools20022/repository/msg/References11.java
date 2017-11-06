@@ -34,15 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.References11#PoolReference
- * References11.PoolReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.References11#PreviousReference
- * References11.PreviousReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.References11#RelatedReference
- * References11.RelatedReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.References11#mmPoolReference
+ * References11.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.References11#CounterpartyReference
- * References11.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.References11#mmPreviousReference
+ * References11.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.References11#mmRelatedReference
+ * References11.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.References11#mmCounterpartyReference
+ * References11.mmCounterpartyReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,36 +56,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03#References
- * ReversalOfTransferInConfirmationV03.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03#mmReferences
+ * ReversalOfTransferInConfirmationV03.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04#References
- * ReversalOfTransferInConfirmationV04.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04#mmReferences
+ * ReversalOfTransferInConfirmationV04.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03#References
- * ReversalOfTransferOutConfirmationV03.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03#mmReferences
+ * ReversalOfTransferOutConfirmationV03.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#References
- * ReversalOfTransferOutConfirmationV04.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#mmReferences
+ * ReversalOfTransferOutConfirmationV04.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV03#References
- * TransferInCancellationRequestV03.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV03#mmReferences
+ * TransferInCancellationRequestV03.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV04#References
- * TransferInCancellationRequestV04.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV04#mmReferences
+ * TransferInCancellationRequestV04.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03#References
- * TransferOutCancellationRequestV03.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03#mmReferences
+ * TransferOutCancellationRequestV03.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV04#References
- * TransferOutCancellationRequestV04.References}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV04#mmReferences
+ * TransferOutCancellationRequestV04.mmReferences}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class References11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -133,13 +136,14 @@ public class References11 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.References15#PoolReference
-	 * References15.PoolReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.References15#mmPoolReference
+	 * References15.mmPoolReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PoolReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPoolReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References11.mmObject();
 			isDerived = false;
@@ -147,12 +151,13 @@ public class References11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References15.PoolReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References15.mmPoolReference);
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference of the linked message that was previously sent.
 	 * <p>
@@ -183,13 +188,13 @@ public class References11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.References15#PreviousReference
-	 * References15.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.References15#mmPreviousReference
+	 * References15.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References11.mmObject();
 			isDerived = false;
@@ -197,12 +202,13 @@ public class References11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References15.PreviousReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References15.mmPreviousReference);
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -233,13 +239,13 @@ public class References11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.References15#RelatedReference
-	 * References15.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.References15#mmRelatedReference
+	 * References15.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References11.mmObject();
 			isDerived = false;
@@ -247,12 +253,13 @@ public class References11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References15.RelatedReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References15.mmRelatedReference);
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 counterpartyReference;
 	/**
 	 * Unambiguous identification of the transfer allocated by the counterparty.
 	 * <p>
@@ -266,8 +273,8 @@ public class References11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CounterpartyReference
-	 * TradeIdentification.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCounterpartyReference
+	 * TradeIdentification.mmCounterpartyReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,32 +294,32 @@ public class References11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> References11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CounterpartyReference;
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References11.PoolReference, com.tools20022.repository.msg.References11.PreviousReference, com.tools20022.repository.msg.References11.RelatedReference,
-						com.tools20022.repository.msg.References11.CounterpartyReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References11.mmPoolReference, com.tools20022.repository.msg.References11.mmPreviousReference,
+						com.tools20022.repository.msg.References11.mmRelatedReference, com.tools20022.repository.msg.References11.mmCounterpartyReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.mmReferences, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04.mmReferences,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03.mmReferences, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.mmReferences,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV03.mmReferences, com.tools20022.repository.area.sese.TransferInCancellationRequestV04.mmReferences,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmReferences, com.tools20022.repository.area.sese.TransferOutCancellationRequestV04.mmReferences);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.References, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04.References,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03.References, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.References,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV03.References, com.tools20022.repository.area.sese.TransferInCancellationRequestV04.References,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.References, com.tools20022.repository.area.sese.TransferOutCancellationRequestV04.References);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "References11";
 				definition = "Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.";
@@ -320,5 +327,37 @@ public class References11 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(com.tools20022.repository.msg.AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(com.tools20022.repository.msg.AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(com.tools20022.repository.msg.AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public AdditionalReference2 getCounterpartyReference() {
+		return counterpartyReference;
+	}
+
+	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+		this.counterpartyReference = counterpartyReference;
 	}
 }

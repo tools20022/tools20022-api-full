@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#PlaceAndName
- * CorporateActionOptionSD7.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#mmPlaceAndName
+ * CorporateActionOptionSD7.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#ExtendedOptionFeatures
- * CorporateActionOptionSD7.ExtendedOptionFeatures}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#mmExtendedOptionFeatures
+ * CorporateActionOptionSD7.mmExtendedOptionFeatures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#DTCDefaultOptionFlag
- * CorporateActionOptionSD7.DTCDefaultOptionFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#mmDTCDefaultOptionFlag
+ * CorporateActionOptionSD7.mmDTCDefaultOptionFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#OptionalDividendSupplementaryDataRequiredFlag
- * CorporateActionOptionSD7.OptionalDividendSupplementaryDataRequiredFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD7#mmOptionalDividendSupplementaryDataRequiredFlag
+ * CorporateActionOptionSD7.mmOptionalDividendSupplementaryDataRequiredFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOptionSD7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -98,7 +99,7 @@ public class CorporateActionOptionSD7 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class CorporateActionOptionSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ExtendedOptionFeature1Code extendedOptionFeatures;
 	/**
 	 * Used for options that have particular proprietary feature that cannot be
 	 * represented in standard ISO message.
@@ -142,7 +144,7 @@ public class CorporateActionOptionSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedOptionFeatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedOptionFeatures = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
 			isDerived = false;
@@ -150,11 +152,12 @@ public class CorporateActionOptionSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator dTCDefaultOptionFlag;
 	/**
 	 * Identifies whether the option will be processed as default by DTC (The
 	 * Depository Trust Corporation) when no election is made.
@@ -186,7 +189,7 @@ public class CorporateActionOptionSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCDefaultOptionFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCDefaultOptionFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
 			isDerived = false;
@@ -194,11 +197,12 @@ public class CorporateActionOptionSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDefaultOptionFlag";
 			definition = "Identifies whether the option will be processed as default by DTC (The Depository Trust Corporation) when no election is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator optionalDividendSupplementaryDataRequiredFlag;
 	/**
 	 * Indicates whether optional dividend supplementary data are required in
 	 * the ISO 20022 CAIN instructions for this event.
@@ -230,7 +234,7 @@ public class CorporateActionOptionSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
 			isDerived = false;
@@ -238,8 +242,8 @@ public class CorporateActionOptionSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividendSupplementaryDataRequiredFlag";
 			definition = "Indicates whether optional dividend supplementary data are required in the ISO 20022 CAIN instructions for this event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -247,9 +251,9 @@ public class CorporateActionOptionSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD7.PlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD7.ExtendedOptionFeatures,
-						com.tools20022.repository.msg.CorporateActionOptionSD7.DTCDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD7.OptionalDividendSupplementaryDataRequiredFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD7.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD7.mmExtendedOptionFeatures,
+						com.tools20022.repository.msg.CorporateActionOptionSD7.mmDTCDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD7.mmOptionalDividendSupplementaryDataRequiredFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD7";
 				definition = "Provides additional information regarding corporate action option details.";
@@ -257,5 +261,37 @@ public class CorporateActionOptionSD7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
+		return extendedOptionFeatures;
+	}
+
+	public void setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
+		this.extendedOptionFeatures = extendedOptionFeatures;
+	}
+
+	public YesNoIndicator getDTCDefaultOptionFlag() {
+		return dTCDefaultOptionFlag;
+	}
+
+	public void setDTCDefaultOptionFlag(YesNoIndicator dTCDefaultOptionFlag) {
+		this.dTCDefaultOptionFlag = dTCDefaultOptionFlag;
+	}
+
+	public YesNoIndicator getOptionalDividendSupplementaryDataRequiredFlag() {
+		return optionalDividendSupplementaryDataRequiredFlag;
+	}
+
+	public void setOptionalDividendSupplementaryDataRequiredFlag(YesNoIndicator optionalDividendSupplementaryDataRequiredFlag) {
+		this.optionalDividendSupplementaryDataRequiredFlag = optionalDividendSupplementaryDataRequiredFlag;
 	}
 }

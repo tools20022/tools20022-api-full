@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#AccreditedInvestor
- * BeneficiaryCertificationType3Code.AccreditedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmAccreditedInvestor
+ * BeneficiaryCertificationType3Code.mmAccreditedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#NonCompany
- * BeneficiaryCertificationType3Code.NonCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmNonCompany
+ * BeneficiaryCertificationType3Code.mmNonCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#QIBCertification
- * BeneficiaryCertificationType3Code.QIBCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmQIBCertification
+ * BeneficiaryCertificationType3Code.mmQIBCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#NarrativeDescription
- * BeneficiaryCertificationType3Code.NarrativeDescription}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmNarrativeDescription
+ * BeneficiaryCertificationType3Code.mmNarrativeDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "AccreditedInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccreditedInvestor = new MMCode() {
+	public static final MMCode mmAccreditedInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccreditedInvestor";
@@ -118,7 +118,7 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "NonCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonCompany = new MMCode() {
+	public static final MMCode mmNonCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompany";
@@ -141,7 +141,7 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "QIBCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode QIBCertification = new MMCode() {
+	public static final MMCode mmQIBCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QIBCertification";
@@ -164,7 +164,7 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "NarrativeDescription"</li>
 	 * </ul>
 	 */
-	public static final MMCode NarrativeDescription = new MMCode() {
+	public static final MMCode mmNarrativeDescription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeDescription";
@@ -175,14 +175,14 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationType3Code";
 				definition = "Specifies the type of certification required.";
 				nextVersions_lazy = () -> Arrays.asList(BeneficiaryCertificationType5Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.AccreditedInvestor, com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.NonCompany,
-						com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.QIBCertification, com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.NarrativeDescription);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmAccreditedInvestor, com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmNonCompany,
+						com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmQIBCertification, com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmNarrativeDescription);
 				trace_lazy = () -> BeneficiaryCertificationTypeCode.mmObject();
 			}
 		});

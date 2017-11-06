@@ -29,20 +29,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#ExaByte
- * MemoryUnitCode.ExaByte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#PetaByte
- * MemoryUnitCode.PetaByte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#TeraByte
- * MemoryUnitCode.TeraByte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#GigaByte
- * MemoryUnitCode.GigaByte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#MegaByte
- * MemoryUnitCode.MegaByte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#KiloByte
- * MemoryUnitCode.KiloByte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#Byte
- * MemoryUnitCode.Byte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#mmExaByte
+ * MemoryUnitCode.mmExaByte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#mmPetaByte
+ * MemoryUnitCode.mmPetaByte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#mmTeraByte
+ * MemoryUnitCode.mmTeraByte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#mmGigaByte
+ * MemoryUnitCode.mmGigaByte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#mmMegaByte
+ * MemoryUnitCode.mmMegaByte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#mmKiloByte
+ * MemoryUnitCode.mmKiloByte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemoryUnitCode#mmByte
+ * MemoryUnitCode.mmByte}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +97,7 @@ public class MemoryUnitCode {
 	 * definition} = "Exa byte."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExaByte = new MMCode() {
+	public static final MMCode mmExaByte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExaByte";
@@ -127,7 +127,7 @@ public class MemoryUnitCode {
 	 * definition} = "Peta byte."</li>
 	 * </ul>
 	 */
-	public static final MMCode PetaByte = new MMCode() {
+	public static final MMCode mmPetaByte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PetaByte";
@@ -157,7 +157,7 @@ public class MemoryUnitCode {
 	 * definition} = "Tera byte."</li>
 	 * </ul>
 	 */
-	public static final MMCode TeraByte = new MMCode() {
+	public static final MMCode mmTeraByte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TeraByte";
@@ -187,7 +187,7 @@ public class MemoryUnitCode {
 	 * definition} = "Giga byte."</li>
 	 * </ul>
 	 */
-	public static final MMCode GigaByte = new MMCode() {
+	public static final MMCode mmGigaByte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GigaByte";
@@ -217,7 +217,7 @@ public class MemoryUnitCode {
 	 * definition} = "Mega byte."</li>
 	 * </ul>
 	 */
-	public static final MMCode MegaByte = new MMCode() {
+	public static final MMCode mmMegaByte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MegaByte";
@@ -247,7 +247,7 @@ public class MemoryUnitCode {
 	 * definition} = "Kilo byte."</li>
 	 * </ul>
 	 */
-	public static final MMCode KiloByte = new MMCode() {
+	public static final MMCode mmKiloByte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "KiloByte";
@@ -277,7 +277,7 @@ public class MemoryUnitCode {
 	 * definition} = "Byte."</li>
 	 * </ul>
 	 */
-	public static final MMCode Byte = new MMCode() {
+	public static final MMCode mmByte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Byte";
@@ -290,14 +290,14 @@ public class MemoryUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXAB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MemoryUnitCode";
 				definition = "Unit of the memory size.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemoryUnitCode.ExaByte, com.tools20022.repository.codeset.MemoryUnitCode.PetaByte, com.tools20022.repository.codeset.MemoryUnitCode.TeraByte,
-						com.tools20022.repository.codeset.MemoryUnitCode.GigaByte, com.tools20022.repository.codeset.MemoryUnitCode.MegaByte, com.tools20022.repository.codeset.MemoryUnitCode.KiloByte,
-						com.tools20022.repository.codeset.MemoryUnitCode.Byte);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemoryUnitCode.mmExaByte, com.tools20022.repository.codeset.MemoryUnitCode.mmPetaByte, com.tools20022.repository.codeset.MemoryUnitCode.mmTeraByte,
+						com.tools20022.repository.codeset.MemoryUnitCode.mmGigaByte, com.tools20022.repository.codeset.MemoryUnitCode.mmMegaByte, com.tools20022.repository.codeset.MemoryUnitCode.mmKiloByte,
+						com.tools20022.repository.codeset.MemoryUnitCode.mmByte);
 				derivation_lazy = () -> Arrays.asList(MemoryUnit1Code.mmObject());
 			}
 		});

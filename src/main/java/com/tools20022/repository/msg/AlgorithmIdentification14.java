@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification14#Algorithm
- * AlgorithmIdentification14.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification14#mmAlgorithm
+ * AlgorithmIdentification14.mmAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification14#Parameter
- * AlgorithmIdentification14.Parameter}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification14#mmParameter
+ * AlgorithmIdentification14.mmParameter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmIdentification14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm15Code algorithm;
 	/**
 	 * Identification of the encryption algorithm.
 	 * <p>
@@ -95,11 +96,11 @@ public class AlgorithmIdentification14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification6#Algorithm
-	 * AlgorithmIdentification6.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification6#mmAlgorithm
+	 * AlgorithmIdentification6.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification14.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class AlgorithmIdentification14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the encryption algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification6.Algorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification6.mmAlgorithm;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm15Code.mmObject();
 		}
 	};
+	protected Parameter6 parameter;
 	/**
 	 * Parameters associated with the CBC (Chain Block Chaining) encryption
 	 * algorithm.
@@ -142,11 +144,11 @@ public class AlgorithmIdentification14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification6#Parameter
-	 * AlgorithmIdentification6.Parameter}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification6#mmParameter
+	 * AlgorithmIdentification6.mmParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Parameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification14.mmObject();
 			isDerived = false;
@@ -154,19 +156,19 @@ public class AlgorithmIdentification14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated with the CBC (Chain Block Chaining) encryption algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification6.Parameter;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification6.mmParameter;
 			maxOccurs = 1;
-			type_lazy = () -> Parameter6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Parameter6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification14.Algorithm, com.tools20022.repository.msg.AlgorithmIdentification14.Parameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification14.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification14.mmParameter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification14";
 				definition = "Cryptographic algorithm and parameters for encryptions with a symmetric cryptographic key.";
@@ -174,5 +176,21 @@ public class AlgorithmIdentification14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm15Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm15Code algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public Parameter6 getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(com.tools20022.repository.msg.Parameter6 parameter) {
+		this.parameter = parameter;
 	}
 }

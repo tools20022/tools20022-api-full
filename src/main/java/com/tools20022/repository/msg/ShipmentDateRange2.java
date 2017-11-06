@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ShipmentDateRange2#SubQuantityValue
- * ShipmentDateRange2.SubQuantityValue}</li>
+ * {@linkplain com.tools20022.repository.msg.ShipmentDateRange2#mmSubQuantityValue
+ * ShipmentDateRange2.mmSubQuantityValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ShipmentDateRange2#EarliestShipmentDate
- * ShipmentDateRange2.EarliestShipmentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ShipmentDateRange2#mmEarliestShipmentDate
+ * ShipmentDateRange2.mmEarliestShipmentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ShipmentDateRange2#LatestShipmentDate
- * ShipmentDateRange2.LatestShipmentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ShipmentDateRange2#mmLatestShipmentDate
+ * ShipmentDateRange2.mmLatestShipmentDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ShipmentDateRange2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber subQuantityValue;
 	/**
 	 * Sub quantity that must be shipped no sooner than the earliest shipment
 	 * date and no later than the latest shipment date.
@@ -101,7 +102,7 @@ public class ShipmentDateRange2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubQuantityValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubQuantityValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ShipmentDateRange2.mmObject();
 			isDerived = false;
@@ -109,11 +110,12 @@ public class ShipmentDateRange2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubQuantityValue";
 			definition = "Sub quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected ISODate earliestShipmentDate;
 	/**
 	 * Earliest date whereby the goods must be shipped.
 	 * <p>
@@ -126,8 +128,8 @@ public class ShipmentDateRange2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#EarliestShipmentDate
-	 * ShipmentDateRange.EarliestShipmentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmEarliestShipmentDate
+	 * ShipmentDateRange.mmEarliestShipmentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +148,21 @@ public class ShipmentDateRange2 {
 	 * definition} = "Earliest date whereby the goods must be shipped."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestShipmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestShipmentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmEarliestShipmentDate;
 			componentContext_lazy = () -> ShipmentDateRange2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.EarliestShipmentDate;
 			isDerived = false;
 			xmlTag = "EarlstShipmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestShipmentDate";
 			definition = "Earliest date whereby the goods must be shipped.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate latestShipmentDate;
 	/**
 	 * Latest date whereby the goods must be shipped.
 	 * <p>
@@ -172,8 +175,8 @@ public class ShipmentDateRange2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#LatestShipmentDate
-	 * ShipmentDateRange.LatestShipmentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmLatestShipmentDate
+	 * ShipmentDateRange.mmLatestShipmentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,17 +195,17 @@ public class ShipmentDateRange2 {
 	 * definition} = "Latest date whereby the goods must be shipped."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LatestShipmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLatestShipmentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmLatestShipmentDate;
 			componentContext_lazy = () -> ShipmentDateRange2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.LatestShipmentDate;
 			isDerived = false;
 			xmlTag = "LatstShipmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDate";
 			definition = "Latest date whereby the goods must be shipped.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -210,15 +213,39 @@ public class ShipmentDateRange2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShipmentDateRange2.SubQuantityValue, com.tools20022.repository.msg.ShipmentDateRange2.EarliestShipmentDate,
-						com.tools20022.repository.msg.ShipmentDateRange2.LatestShipmentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShipmentDateRange2.mmSubQuantityValue, com.tools20022.repository.msg.ShipmentDateRange2.mmEarliestShipmentDate,
+						com.tools20022.repository.msg.ShipmentDateRange2.mmLatestShipmentDate);
 				trace_lazy = () -> ShipmentDateRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ShipmentDateRange2";
 				definition = "Specifies a shipment schedule, that is the quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getSubQuantityValue() {
+		return subQuantityValue;
+	}
+
+	public void setSubQuantityValue(DecimalNumber subQuantityValue) {
+		this.subQuantityValue = subQuantityValue;
+	}
+
+	public ISODate getEarliestShipmentDate() {
+		return earliestShipmentDate;
+	}
+
+	public void setEarliestShipmentDate(ISODate earliestShipmentDate) {
+		this.earliestShipmentDate = earliestShipmentDate;
+	}
+
+	public ISODate getLatestShipmentDate() {
+		return latestShipmentDate;
+	}
+
+	public void setLatestShipmentDate(ISODate latestShipmentDate) {
+		this.latestShipmentDate = latestShipmentDate;
 	}
 }

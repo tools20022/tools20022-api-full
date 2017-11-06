@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.CashAccountAuditTrailReport1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Used to report between the cash account reference data or an operational
@@ -35,18 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice#CashAccountAuditTrailReport
- * CashAccountAuditTrailOrOperationalError1Choice.CashAccountAuditTrailReport}</li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice#mmCashAccountAuditTrailReport
+ * CashAccountAuditTrailOrOperationalError1Choice.mmCashAccountAuditTrailReport}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice#OperationalError
- * CashAccountAuditTrailOrOperationalError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice#mmOperationalError
+ * CashAccountAuditTrailOrOperationalError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountAuditTrailOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CashAccountAuditTrailReport1> cashAccountAuditTrailReport;
 	/**
 	 * Report information about cash account reference data.
 	 * <p>
@@ -89,7 +92,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 	 * definition} = "Report information about cash account reference data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountAuditTrailReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountAuditTrailReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CashAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -98,10 +101,11 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			name = "CashAccountAuditTrailReport";
 			definition = "Report information about cash account reference data.";
 			minOccurs = 1;
-			type_lazy = () -> CashAccountAuditTrailReport1.mmObject();
 			isComposite = true;
+			type_lazy = () -> CashAccountAuditTrailReport1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Operational error resulting from a rejection.
 	 * <p>
@@ -128,7 +132,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 	 * definition} = "Operational error resulting from a rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CashAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -137,22 +141,38 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.CashAccountAuditTrailReport,
-						com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.mmCashAccountAuditTrailReport,
+						com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailOrOperationalError1Choice";
 				definition = "Used to report between the cash account reference data or an operational error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CashAccountAuditTrailReport1> getCashAccountAuditTrailReport() {
+		return cashAccountAuditTrailReport;
+	}
+
+	public void setCashAccountAuditTrailReport(List<CashAccountAuditTrailReport1> cashAccountAuditTrailReport) {
+		this.cashAccountAuditTrailReport = cashAccountAuditTrailReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

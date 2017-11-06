@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlannedQuantity1Choice#Quantity
- * PlannedQuantity1Choice.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PlannedQuantity1Choice#Code
- * PlannedQuantity1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PlannedQuantity1Choice#mmQuantity
+ * PlannedQuantity1Choice.mmQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PlannedQuantity1Choice#mmCode
+ * PlannedQuantity1Choice.mmCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlannedQuantity1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
 	 * Planned quantity of financial instrument or lot of rights/warrants to be
 	 * purchased.
@@ -89,7 +91,7 @@ public class PlannedQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PlannedQuantity1Choice.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class PlannedQuantity1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Planned quantity of financial instrument or lot of rights/warrants to be purchased.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected SecuritiesQuantity2Code code;
 	/**
 	 * Code for the planned quantity of financial instrument or lot of
 	 * rights/warrants to be purchased.
@@ -133,7 +136,7 @@ public class PlannedQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PlannedQuantity1Choice.mmObject();
 			isDerived = false;
@@ -141,8 +144,8 @@ public class PlannedQuantity1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Code for the planned quantity of financial instrument or lot of rights/warrants to be purchased.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesQuantity2Code.mmObject();
 		}
 	};
@@ -150,13 +153,29 @@ public class PlannedQuantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlannedQuantity1Choice.Quantity, com.tools20022.repository.choice.PlannedQuantity1Choice.Code);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlannedQuantity1Choice.mmQuantity, com.tools20022.repository.choice.PlannedQuantity1Choice.mmCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlannedQuantity1Choice";
 				definition = "Planned number of shares to be purchased\r\n 買付予定株式数";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity15Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public SecuritiesQuantity2Code getCode() {
+		return code;
+	}
+
+	public void setCode(SecuritiesQuantity2Code code) {
+		this.code = code;
 	}
 }

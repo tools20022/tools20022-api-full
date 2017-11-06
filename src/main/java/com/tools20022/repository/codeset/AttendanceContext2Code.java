@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#AttendantDelivery
- * AttendanceContext2Code.AttendantDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmAttendantDelivery
+ * AttendanceContext2Code.mmAttendantDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#CarrierDelivery
- * AttendanceContext2Code.CarrierDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmCarrierDelivery
+ * AttendanceContext2Code.mmCarrierDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#CustomerDelivery
- * AttendanceContext2Code.CustomerDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmCustomerDelivery
+ * AttendanceContext2Code.mmCustomerDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#FullServe
- * AttendanceContext2Code.FullServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmFullServe
+ * AttendanceContext2Code.mmFullServe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#SelfServe
- * AttendanceContext2Code.SelfServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmSelfServe
+ * AttendanceContext2Code.mmSelfServe}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +84,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "AttendantDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode AttendantDelivery = new MMCode() {
+	public static final MMCode mmAttendantDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendantDelivery";
@@ -107,7 +107,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "CarrierDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode CarrierDelivery = new MMCode() {
+	public static final MMCode mmCarrierDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierDelivery";
@@ -130,7 +130,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "CustomerDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerDelivery = new MMCode() {
+	public static final MMCode mmCustomerDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDelivery";
@@ -153,7 +153,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "FullServe"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullServe = new MMCode() {
+	public static final MMCode mmFullServe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullServe";
@@ -176,7 +176,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "SelfServe"</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfServe = new MMCode() {
+	public static final MMCode mmSelfServe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfServe";
@@ -187,12 +187,14 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AttendanceContext2Code";
 				definition = "Identify the method of delivery or distribution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContext2Code.AttendantDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.CarrierDelivery,
-						com.tools20022.repository.codeset.AttendanceContext2Code.CustomerDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.FullServe, com.tools20022.repository.codeset.AttendanceContext2Code.SelfServe);
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.AttendanceContext2Code.mmAttendantDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.mmCarrierDelivery,
+								com.tools20022.repository.codeset.AttendanceContext2Code.mmCustomerDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.mmFullServe,
+								com.tools20022.repository.codeset.AttendanceContext2Code.mmSelfServe);
 				trace_lazy = () -> AttendanceContextCode.mmObject();
 			}
 		});

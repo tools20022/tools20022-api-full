@@ -42,29 +42,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#TransactionIdentification
- * LongPaymentIdentification1.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmTransactionIdentification
+ * LongPaymentIdentification1.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#InterBankSettlementAmount
- * LongPaymentIdentification1.InterBankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmInterBankSettlementAmount
+ * LongPaymentIdentification1.mmInterBankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#InterBankSettlementDate
- * LongPaymentIdentification1.InterBankSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmInterBankSettlementDate
+ * LongPaymentIdentification1.mmInterBankSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#PaymentMethod
- * LongPaymentIdentification1.PaymentMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmPaymentMethod
+ * LongPaymentIdentification1.mmPaymentMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#InstructingAgent
- * LongPaymentIdentification1.InstructingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmInstructingAgent
+ * LongPaymentIdentification1.mmInstructingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#InstructedAgent
- * LongPaymentIdentification1.InstructedAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmInstructedAgent
+ * LongPaymentIdentification1.mmInstructedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#EntryType
- * LongPaymentIdentification1.EntryType}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmEntryType
+ * LongPaymentIdentification1.mmEntryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#EndToEndIdentification
- * LongPaymentIdentification1.EndToEndIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LongPaymentIdentification1#mmEndToEndIdentification
+ * LongPaymentIdentification1.mmEndToEndIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LongPaymentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique identification, as assigned by the first instructing agent, to
 	 * unambiguously identify the transaction that is passed on, unchanged,
@@ -109,8 +110,8 @@ public class LongPaymentIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#TransactionIdentification
-	 * PaymentIdentification.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmTransactionIdentification
+	 * PaymentIdentification.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -131,20 +132,21 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.\nUsage: this is the former PaymentInstructionReference element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount interBankSettlementAmount;
 	/**
 	 * Amount of money moved between the instructing agent and the instructed
 	 * agent.
@@ -159,8 +161,8 @@ public class LongPaymentIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,20 +183,21 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterBankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterBankSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterBankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate interBankSettlementDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -209,8 +212,8 @@ public class LongPaymentIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -231,20 +234,21 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterBankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterBankSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterBankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PaymentOrigin1Choice paymentMethod;
 	/**
 	 * Message type with which the instruction has been initiated.
 	 * <p>
@@ -258,8 +262,8 @@ public class LongPaymentIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#Payment
-	 * PaymentExecution.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmPayment
+	 * PaymentExecution.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -279,20 +283,21 @@ public class LongPaymentIdentification1 {
 	 * "Message type with which the instruction has been initiated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
 			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.Payment;
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Message type with which the instruction has been initiated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PaymentOrigin1Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 instructingAgent;
 	/**
 	 * Agent that instructs the next party in the chain to carry out the (set
 	 * of) instruction(s).
@@ -327,21 +332,22 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 instructedAgent;
 	/**
 	 * Agent that is instructed by the previous party in the chain to carry out
 	 * the (set of) instruction(s).
@@ -376,21 +382,22 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected EntryTypeIdentifier entryType;
 	/**
 	 * Optional qualifier providing additional system specific information about
 	 * the entry.
@@ -422,7 +429,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
 			isDerived = false;
@@ -430,11 +437,12 @@ public class LongPaymentIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryType";
 			definition = "Optional qualifier providing additional system specific information about the entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EntryTypeIdentifier.mmObject();
 		}
 	};
+	protected Max35Text endToEndIdentification;
 	/**
 	 * Unique identification, as assigned by the initiating party, to
 	 * unambiguously identify the transaction. This identification is passed on,
@@ -452,8 +460,8 @@ public class LongPaymentIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#EndToEndIdentification
-	 * PaymentIdentification.EndToEndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+	 * PaymentIdentification.mmEndToEndIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -474,17 +482,17 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.EndToEndIdentification;
 			isDerived = false;
 			xmlTag = "EndToEndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.\nIt can be included in several messages related to the transaction.\nUsage: this is the former RelatedReference.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -492,17 +500,81 @@ public class LongPaymentIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LongPaymentIdentification1.TransactionIdentification, com.tools20022.repository.msg.LongPaymentIdentification1.InterBankSettlementAmount,
-						com.tools20022.repository.msg.LongPaymentIdentification1.InterBankSettlementDate, com.tools20022.repository.msg.LongPaymentIdentification1.PaymentMethod,
-						com.tools20022.repository.msg.LongPaymentIdentification1.InstructingAgent, com.tools20022.repository.msg.LongPaymentIdentification1.InstructedAgent,
-						com.tools20022.repository.msg.LongPaymentIdentification1.EntryType, com.tools20022.repository.msg.LongPaymentIdentification1.EndToEndIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LongPaymentIdentification1.mmTransactionIdentification, com.tools20022.repository.msg.LongPaymentIdentification1.mmInterBankSettlementAmount,
+						com.tools20022.repository.msg.LongPaymentIdentification1.mmInterBankSettlementDate, com.tools20022.repository.msg.LongPaymentIdentification1.mmPaymentMethod,
+						com.tools20022.repository.msg.LongPaymentIdentification1.mmInstructingAgent, com.tools20022.repository.msg.LongPaymentIdentification1.mmInstructedAgent,
+						com.tools20022.repository.msg.LongPaymentIdentification1.mmEntryType, com.tools20022.repository.msg.LongPaymentIdentification1.mmEndToEndIdentification);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LongPaymentIdentification1";
 				definition = "Identifies a payment instruction by a set of characteristics  (as per EBA system requirements) which provides an unambiguous identification of the instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public ImpliedCurrencyAndAmount getInterBankSettlementAmount() {
+		return interBankSettlementAmount;
+	}
+
+	public void setInterBankSettlementAmount(ImpliedCurrencyAndAmount interBankSettlementAmount) {
+		this.interBankSettlementAmount = interBankSettlementAmount;
+	}
+
+	public ISODate getInterBankSettlementDate() {
+		return interBankSettlementDate;
+	}
+
+	public void setInterBankSettlementDate(ISODate interBankSettlementDate) {
+		this.interBankSettlementDate = interBankSettlementDate;
+	}
+
+	public PaymentOrigin1Choice getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
+		return instructingAgent;
+	}
+
+	public void setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
+		this.instructingAgent = instructingAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
+		return instructedAgent;
+	}
+
+	public void setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedAgent) {
+		this.instructedAgent = instructedAgent;
+	}
+
+	public EntryTypeIdentifier getEntryType() {
+		return entryType;
+	}
+
+	public void setEntryType(EntryTypeIdentifier entryType) {
+		this.entryType = entryType;
+	}
+
+	public Max35Text getEndToEndIdentification() {
+		return endToEndIdentification;
+	}
+
+	public void setEndToEndIdentification(Max35Text endToEndIdentification) {
+		this.endToEndIdentification = endToEndIdentification;
 	}
 }

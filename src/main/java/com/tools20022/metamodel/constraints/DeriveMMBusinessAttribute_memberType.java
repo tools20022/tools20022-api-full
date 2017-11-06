@@ -31,6 +31,6 @@ public class DeriveMMBusinessAttribute_memberType implements Function<MMBusiness
 	 */
 	@Override
 	public MMRepositoryType apply(MMBusinessAttribute mmBean) {
-		throw new RuntimeException("Not implemented!");
+		return mmBean.getBusinessElementType();
 	}
 }

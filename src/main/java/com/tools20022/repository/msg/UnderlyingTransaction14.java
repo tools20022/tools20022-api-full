@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the underlying (group of) transaction(s) to which the resolution
@@ -34,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction14#OriginalGroupInformationAndStatus
- * UnderlyingTransaction14.OriginalGroupInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction14#mmOriginalGroupInformationAndStatus
+ * UnderlyingTransaction14.mmOriginalGroupInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction14#OriginalPaymentInformationAndStatus
- * UnderlyingTransaction14.OriginalPaymentInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction14#mmOriginalPaymentInformationAndStatus
+ * UnderlyingTransaction14.mmOriginalPaymentInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction14#TransactionInformationAndStatus
- * UnderlyingTransaction14.TransactionInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction14#mmTransactionInformationAndStatus
+ * UnderlyingTransaction14.mmTransactionInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,15 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#CancellationDetails
- * ResolutionOfInvestigationV06.CancellationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06#mmCancellationDetails
+ * ResolutionOfInvestigationV06.mmCancellationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnderlyingTransaction14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalGroupHeader5 originalGroupInformationAndStatus;
 	/**
 	 * Provides information on the original cancellation message, to which the
 	 * resolution refers.
@@ -123,34 +125,35 @@ public class UnderlyingTransaction14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction17#OriginalGroupInformationAndStatus
-	 * UnderlyingTransaction17.OriginalGroupInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction17#mmOriginalGroupInformationAndStatus
+	 * UnderlyingTransaction17.mmOriginalGroupInformationAndStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction9#OriginalGroupInformationAndStatus
-	 * UnderlyingTransaction9.OriginalGroupInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction9#mmOriginalGroupInformationAndStatus
+	 * UnderlyingTransaction9.mmOriginalGroupInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalGroupInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalGroupInformationAndStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnderlyingTransaction14.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> UnderlyingTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Provides information on the original cancellation message, to which the resolution refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction9.OriginalGroupInformationAndStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction17.OriginalGroupInformationAndStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction17.mmOriginalGroupInformationAndStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction9.mmOriginalGroupInformationAndStatus;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalGroupHeader5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OriginalPaymentInstruction17> originalPaymentInformationAndStatus;
 	/**
 	 * Provides information on the original (group of) transactions, to which
 	 * the cancellation status refers.
@@ -188,33 +191,34 @@ public class UnderlyingTransaction14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction17#OriginalPaymentInformationAndStatus
-	 * UnderlyingTransaction17.OriginalPaymentInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction17#mmOriginalPaymentInformationAndStatus
+	 * UnderlyingTransaction17.mmOriginalPaymentInformationAndStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction9#OriginalPaymentInformationAndStatus
-	 * UnderlyingTransaction9.OriginalPaymentInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction9#mmOriginalPaymentInformationAndStatus
+	 * UnderlyingTransaction9.mmOriginalPaymentInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalPaymentInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalPaymentInformationAndStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnderlyingTransaction14.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> UnderlyingTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndStatus";
 			definition = "Provides information on the original (group of) transactions, to which the cancellation status refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction9.OriginalPaymentInformationAndStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction17.OriginalPaymentInformationAndStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction17.mmOriginalPaymentInformationAndStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction9.mmOriginalPaymentInformationAndStatus;
 			minOccurs = 0;
-			type_lazy = () -> OriginalPaymentInstruction17.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction17.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentTransaction67> transactionInformationAndStatus;
 	/**
 	 * Provides details on the original transactions to which the cancellation
 	 * request message refers.
@@ -227,8 +231,8 @@ public class UnderlyingTransaction14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#Payment
-	 * PaymentExecution.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmPayment
+	 * PaymentExecution.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -251,49 +255,73 @@ public class UnderlyingTransaction14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction17#TransactionInformationAndStatus
-	 * UnderlyingTransaction17.TransactionInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction17#mmTransactionInformationAndStatus
+	 * UnderlyingTransaction17.mmTransactionInformationAndStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction9#TransactionInformationAndStatus
-	 * UnderlyingTransaction9.TransactionInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction9#mmTransactionInformationAndStatus
+	 * UnderlyingTransaction9.mmTransactionInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionInformationAndStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
 			componentContext_lazy = () -> UnderlyingTransaction14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.Payment;
 			isDerived = false;
 			xmlTag = "TxInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformationAndStatus";
 			definition = "Provides details on the original transactions to which the cancellation request message refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction9.TransactionInformationAndStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction17.TransactionInformationAndStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction17.mmTransactionInformationAndStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction9.mmTransactionInformationAndStatus;
 			minOccurs = 0;
-			type_lazy = () -> PaymentTransaction67.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction67.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction14.OriginalGroupInformationAndStatus, com.tools20022.repository.msg.UnderlyingTransaction14.OriginalPaymentInformationAndStatus,
-						com.tools20022.repository.msg.UnderlyingTransaction14.TransactionInformationAndStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction14.mmOriginalGroupInformationAndStatus,
+						com.tools20022.repository.msg.UnderlyingTransaction14.mmOriginalPaymentInformationAndStatus, com.tools20022.repository.msg.UnderlyingTransaction14.mmTransactionInformationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmCancellationDetails);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.CancellationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction14";
 				definition = "Identifies the underlying (group of) transaction(s) to which the resolution of investigation applies.";
-				previousVersion_lazy = () -> UnderlyingTransaction9.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction17.mmObject());
+				previousVersion_lazy = () -> UnderlyingTransaction9.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalGroupHeader5 getOriginalGroupInformationAndStatus() {
+		return originalGroupInformationAndStatus;
+	}
+
+	public void setOriginalGroupInformationAndStatus(com.tools20022.repository.msg.OriginalGroupHeader5 originalGroupInformationAndStatus) {
+		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+	}
+
+	public List<OriginalPaymentInstruction17> getOriginalPaymentInformationAndStatus() {
+		return originalPaymentInformationAndStatus;
+	}
+
+	public void setOriginalPaymentInformationAndStatus(List<com.tools20022.repository.msg.OriginalPaymentInstruction17> originalPaymentInformationAndStatus) {
+		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
+	}
+
+	public List<PaymentTransaction67> getTransactionInformationAndStatus() {
+		return transactionInformationAndStatus;
+	}
+
+	public void setTransactionInformationAndStatus(List<com.tools20022.repository.msg.PaymentTransaction67> transactionInformationAndStatus) {
+		this.transactionInformationAndStatus = transactionInformationAndStatus;
 	}
 }

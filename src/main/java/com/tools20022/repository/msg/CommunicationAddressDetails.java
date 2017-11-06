@@ -21,7 +21,9 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.LongPostalAddress1Choice;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#PostalAddress
- * CommunicationAddressDetails.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#mmPostalAddress
+ * CommunicationAddressDetails.mmPostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#PhoneNumber
- * CommunicationAddressDetails.PhoneNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#mmPhoneNumber
+ * CommunicationAddressDetails.mmPhoneNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#FaxNumber
- * CommunicationAddressDetails.FaxNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#mmFaxNumber
+ * CommunicationAddressDetails.mmFaxNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#EmailAddress
- * CommunicationAddressDetails.EmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationAddressDetails#mmEmailAddress
+ * CommunicationAddressDetails.mmEmailAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommunicationAddressDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LongPostalAddress1Choice postalAddress;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services.
@@ -106,20 +109,21 @@ public class CommunicationAddressDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostalAddress = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> CommunicationAddressDetails.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> LongPostalAddress1Choice.mmObject();
 		}
 	};
+	protected PhoneNumber phoneNumber;
 	/**
 	 * Collection of information that identifies a phone number, as defined by
 	 * telecom services.
@@ -133,8 +137,8 @@ public class CommunicationAddressDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#PhoneNumber
-	 * PhoneAddress.PhoneNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#mmPhoneNumber
+	 * PhoneAddress.mmPhoneNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +159,21 @@ public class CommunicationAddressDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> CommunicationAddressDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.PhoneNumber;
 			isDerived = false;
 			xmlTag = "PhneNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.PhoneNumber.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected PhoneNumber faxNumber;
 	/**
 	 * Collection of information that identifies a FAX number, as defined by
 	 * telecom services.
@@ -182,8 +187,8 @@ public class CommunicationAddressDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#FaxNumber
-	 * PhoneAddress.FaxNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhoneAddress#mmFaxNumber
+	 * PhoneAddress.mmFaxNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,20 +209,21 @@ public class CommunicationAddressDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FaxNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> CommunicationAddressDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.FaxNumber;
 			isDerived = false;
 			xmlTag = "FaxNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.PhoneNumber.mmObject();
+			minOccurs = 0;
+			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected Max256Text emailAddress;
 	/**
 	 * Address for electronic mail (e-mail).
 	 * <p>
@@ -230,8 +236,8 @@ public class CommunicationAddressDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#EmailAddress
-	 * ElectronicAddress.EmailAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
+	 * ElectronicAddress.mmEmailAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,17 +256,17 @@ public class CommunicationAddressDetails {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> CommunicationAddressDetails.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.EmailAddress;
 			isDerived = false;
 			xmlTag = "EmailAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -268,15 +274,47 @@ public class CommunicationAddressDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddressDetails.PostalAddress, com.tools20022.repository.msg.CommunicationAddressDetails.PhoneNumber,
-						com.tools20022.repository.msg.CommunicationAddressDetails.FaxNumber, com.tools20022.repository.msg.CommunicationAddressDetails.EmailAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddressDetails.mmPostalAddress, com.tools20022.repository.msg.CommunicationAddressDetails.mmPhoneNumber,
+						com.tools20022.repository.msg.CommunicationAddressDetails.mmFaxNumber, com.tools20022.repository.msg.CommunicationAddressDetails.mmEmailAddress);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CommunicationAddressDetails";
 				definition = "Communication device number or electronic address used for communication.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LongPostalAddress1Choice getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(LongPostalAddress1Choice postalAddress) {
+		this.postalAddress = postalAddress;
+	}
+
+	public PhoneNumber getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(PhoneNumber phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public PhoneNumber getFaxNumber() {
+		return faxNumber;
+	}
+
+	public void setFaxNumber(PhoneNumber faxNumber) {
+		this.faxNumber = faxNumber;
+	}
+
+	public Max256Text getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(Max256Text emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 }

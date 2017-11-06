@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#StructuredProductCharacteristics
- * ProductCharacteristics1Choice.StructuredProductCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#mmStructuredProductCharacteristics
+ * ProductCharacteristics1Choice.mmStructuredProductCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#OtherProductCharacteristics
- * ProductCharacteristics1Choice.OtherProductCharacteristics}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductCharacteristics1Choice#mmOtherProductCharacteristics
+ * ProductCharacteristics1Choice.mmOtherProductCharacteristics}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductCharacteristics1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProductCharacteristics1 structuredProductCharacteristics;
 	/**
 	 * Specifies the type of product characteristic.
 	 * <p>
@@ -98,21 +99,22 @@ public class ProductCharacteristics1Choice {
 	 * definition} = "Specifies the type of product characteristic."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StructuredProductCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStructuredProductCharacteristics = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProductCharacteristics1Choice.mmObject();
 			businessComponentTrace_lazy = () -> ProductCharacteristics.mmObject();
+			componentContext_lazy = () -> ProductCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StrdPdctChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredProductCharacteristics";
 			definition = "Specifies the type of product characteristic.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProductCharacteristics1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProductCharacteristics1.mmObject();
 		}
 	};
+	protected GenericIdentification4 otherProductCharacteristics;
 	/**
 	 * Specifies the type of product characteristic not present in the code
 	 * list.
@@ -147,34 +149,50 @@ public class ProductCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherProductCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherProductCharacteristics = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProductCharacteristics1Choice.mmObject();
 			businessComponentTrace_lazy = () -> ProductCharacteristics.mmObject();
+			componentContext_lazy = () -> ProductCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPdctChrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProductCharacteristics";
 			definition = "Specifies the type of product characteristic not present in the code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCharacteristics1Choice.StructuredProductCharacteristics,
-						com.tools20022.repository.choice.ProductCharacteristics1Choice.OtherProductCharacteristics);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCharacteristics1Choice.mmStructuredProductCharacteristics,
+						com.tools20022.repository.choice.ProductCharacteristics1Choice.mmOtherProductCharacteristics);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics1Choice";
 				definition = "Specifies that the category of a product may be indicated by a code or by free text.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProductCharacteristics1 getStructuredProductCharacteristics() {
+		return structuredProductCharacteristics;
+	}
+
+	public void setStructuredProductCharacteristics(ProductCharacteristics1 structuredProductCharacteristics) {
+		this.structuredProductCharacteristics = structuredProductCharacteristics;
+	}
+
+	public GenericIdentification4 getOtherProductCharacteristics() {
+		return otherProductCharacteristics;
+	}
+
+	public void setOtherProductCharacteristics(GenericIdentification4 otherProductCharacteristics) {
+		this.otherProductCharacteristics = otherProductCharacteristics;
 	}
 }

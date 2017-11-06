@@ -33,23 +33,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionStyleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#American
- * OptionStyle1Code.American}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#European
- * OptionStyle1Code.European}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#Bermudan
- * OptionStyle1Code.Bermudan}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#Asian
- * OptionStyle1Code.Asian}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#Canary
- * OptionStyle1Code.Canary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmAmerican
+ * OptionStyle1Code.mmAmerican}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmEuropean
+ * OptionStyle1Code.mmEuropean}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmBermudan
+ * OptionStyle1Code.mmBermudan}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmAsian
+ * OptionStyle1Code.mmAsian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmCanary
+ * OptionStyle1Code.mmCanary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +88,7 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode American = new MMCode() {
+	public static final MMCode mmAmerican = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
@@ -108,7 +111,7 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode European = new MMCode() {
+	public static final MMCode mmEuropean = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
@@ -131,7 +134,7 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "Bermudan"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bermudan = new MMCode() {
+	public static final MMCode mmBermudan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
@@ -154,7 +157,7 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "Asian"</li>
 	 * </ul>
 	 */
-	public static final MMCode Asian = new MMCode() {
+	public static final MMCode mmAsian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asian";
@@ -177,7 +180,7 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "Canary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Canary = new MMCode() {
+	public static final MMCode mmCanary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Canary";
@@ -188,13 +191,13 @@ public class OptionStyle1Code extends OptionStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle1Code";
 				definition = "Defines how an option can be exercised";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle1Code.American, com.tools20022.repository.codeset.OptionStyle1Code.European, com.tools20022.repository.codeset.OptionStyle1Code.Bermudan,
-						com.tools20022.repository.codeset.OptionStyle1Code.Asian, com.tools20022.repository.codeset.OptionStyle1Code.Canary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle1Code.mmAmerican, com.tools20022.repository.codeset.OptionStyle1Code.mmEuropean, com.tools20022.repository.codeset.OptionStyle1Code.mmBermudan,
+						com.tools20022.repository.codeset.OptionStyle1Code.mmAsian, com.tools20022.repository.codeset.OptionStyle1Code.mmCanary);
 				trace_lazy = () -> OptionStyleCode.mmObject();
 			}
 		});

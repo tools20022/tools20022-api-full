@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PersonIdentificationType3Choice#Code
- * PersonIdentificationType3Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PersonIdentificationType3Choice#mmCode
+ * PersonIdentificationType3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PersonIdentificationType3Choice#Proprietary
- * PersonIdentificationType3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PersonIdentificationType3Choice#mmProprietary
+ * PersonIdentificationType3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonIdentificationType3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PersonIdentificationType3Code code;
 	/**
 	 * Person identification expressed as a code.
 	 * <p>
@@ -91,7 +92,7 @@ public class PersonIdentificationType3Choice {
 	 * definition} = "Person identification expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PersonIdentificationType3Choice.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class PersonIdentificationType3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Person identification expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType3Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Person identification expressed as a proprietary code.
 	 * <p>
@@ -132,7 +134,7 @@ public class PersonIdentificationType3Choice {
 	 * definition} = "Person identification expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PersonIdentificationType3Choice.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class PersonIdentificationType3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Person identification expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -149,14 +151,30 @@ public class PersonIdentificationType3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonIdentificationType3Choice.Code, com.tools20022.repository.choice.PersonIdentificationType3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonIdentificationType3Choice.mmCode, com.tools20022.repository.choice.PersonIdentificationType3Choice.mmProprietary);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType3Choice";
 				definition = "Specifies the type of identification of a person.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PersonIdentificationType3Code getCode() {
+		return code;
+	}
+
+	public void setCode(PersonIdentificationType3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

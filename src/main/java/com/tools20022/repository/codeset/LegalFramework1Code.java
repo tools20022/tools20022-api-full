@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalFramework1Code#PensionLivree
- * LegalFramework1Code.PensionLivree}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalFramework1Code#mmPensionLivree
+ * LegalFramework1Code.mmPensionLivree}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class LegalFramework1Code extends LegalFrameworkCode {
 	 * name} = "PensionLivree"</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionLivree = new MMCode() {
+	public static final MMCode mmPensionLivree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PensionLivree";
@@ -89,12 +89,12 @@ public class LegalFramework1Code extends LegalFrameworkCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FRAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LegalFramework1Code";
 				definition = "Identifies the legal framework of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalFramework1Code.PensionLivree);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalFramework1Code.mmPensionLivree);
 				trace_lazy = () -> LegalFrameworkCode.mmObject();
 			}
 		});

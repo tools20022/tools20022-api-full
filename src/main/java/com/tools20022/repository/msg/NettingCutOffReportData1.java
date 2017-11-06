@@ -38,29 +38,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#MessageIdentification
- * NettingCutOffReportData1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmMessageIdentification
+ * NettingCutOffReportData1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#CreationDateTime
- * NettingCutOffReportData1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmCreationDateTime
+ * NettingCutOffReportData1.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#ReportType
- * NettingCutOffReportData1.ReportType}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmReportType
+ * NettingCutOffReportData1.mmReportType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#ActivationDate
- * NettingCutOffReportData1.ActivationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmActivationDate
+ * NettingCutOffReportData1.mmActivationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#NetServiceParticipantIdentification
- * NettingCutOffReportData1.NetServiceParticipantIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmNetServiceParticipantIdentification
+ * NettingCutOffReportData1.mmNetServiceParticipantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#ReportServicer
- * NettingCutOffReportData1.ReportServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmReportServicer
+ * NettingCutOffReportData1.mmReportServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#NetServiceType
- * NettingCutOffReportData1.NetServiceType}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmNetServiceType
+ * NettingCutOffReportData1.mmNetServiceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#MessagePagination
- * NettingCutOffReportData1.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.msg.NettingCutOffReportData1#mmMessagePagination
+ * NettingCutOffReportData1.mmMessagePagination}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,15 +68,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01#ReportData
- * NettingCutOffReferenceDataReportV01.ReportData}</li>
+ * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01#mmReportData
+ * NettingCutOffReferenceDataReportV01.mmReportData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NettingCutOffReportData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for a message, as assigned by the
 	 * Sender. This unique identifier can be used for cross-referencing purposes
@@ -122,7 +123,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -130,11 +131,12 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the net report was generated.
 	 * <p>
@@ -162,7 +164,7 @@ public class NettingCutOffReportData1 {
 	 * definition} = "Date and time at which the net report was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -170,11 +172,12 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the net report was generated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max4Text reportType;
 	/**
 	 * Describes the type of net report, indicating how the obligations have
 	 * been calculated.
@@ -205,7 +208,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -213,11 +216,12 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportType";
 			definition = "Describes the type of net report, indicating how the obligations have been calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected ISODate activationDate;
 	/**
 	 * Date on which the proposed netting cut off will become active.
 	 * <p>
@@ -246,7 +250,7 @@ public class NettingCutOffReportData1 {
 	 * "Date on which the proposed netting cut off will become active."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -254,11 +258,12 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivationDate";
 			definition = "Date on which the proposed netting cut off will become active.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice netServiceParticipantIdentification;
 	/**
 	 * Describes the participant receiving the net report.
 	 * <p>
@@ -286,7 +291,7 @@ public class NettingCutOffReportData1 {
 	 * definition} = "Describes the participant receiving the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetServiceParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetServiceParticipantIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -294,12 +299,13 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceParticipantIdentification";
 			definition = "Describes the participant receiving the net report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice reportServicer;
 	/**
 	 * Describes the central system responsible for generating the net report.
 	 * <p>
@@ -329,7 +335,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportServicer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -337,12 +343,13 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportServicer";
 			definition = "Describes the central system responsible for generating the net report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected Max35Text netServiceType;
 	/**
 	 * Describes the type of netting service supporting the net report.
 	 * <p>
@@ -371,7 +378,7 @@ public class NettingCutOffReportData1 {
 	 * "Describes the type of netting service supporting the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetServiceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -379,11 +386,12 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceType";
 			definition = "Describes the type of netting service supporting the net report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Page number of the message (within the net cut off report) and
 	 * continuation indicator to indicate that the report is to continue or that
@@ -413,7 +421,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -421,27 +429,91 @@ public class NettingCutOffReportData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Page number of the message (within the net cut off report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Pagination.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NettingCutOffReportData1.MessageIdentification, com.tools20022.repository.msg.NettingCutOffReportData1.CreationDateTime,
-						com.tools20022.repository.msg.NettingCutOffReportData1.ReportType, com.tools20022.repository.msg.NettingCutOffReportData1.ActivationDate,
-						com.tools20022.repository.msg.NettingCutOffReportData1.NetServiceParticipantIdentification, com.tools20022.repository.msg.NettingCutOffReportData1.ReportServicer,
-						com.tools20022.repository.msg.NettingCutOffReportData1.NetServiceType, com.tools20022.repository.msg.NettingCutOffReportData1.MessagePagination);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01.ReportData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NettingCutOffReportData1.mmMessageIdentification, com.tools20022.repository.msg.NettingCutOffReportData1.mmCreationDateTime,
+						com.tools20022.repository.msg.NettingCutOffReportData1.mmReportType, com.tools20022.repository.msg.NettingCutOffReportData1.mmActivationDate,
+						com.tools20022.repository.msg.NettingCutOffReportData1.mmNetServiceParticipantIdentification, com.tools20022.repository.msg.NettingCutOffReportData1.mmReportServicer,
+						com.tools20022.repository.msg.NettingCutOffReportData1.mmNetServiceType, com.tools20022.repository.msg.NettingCutOffReportData1.mmMessagePagination);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01.mmReportData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NettingCutOffReportData1";
 				definition = "Specifies the meta data associated with a netting cut off report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public Max4Text getReportType() {
+		return reportType;
+	}
+
+	public void setReportType(Max4Text reportType) {
+		this.reportType = reportType;
+	}
+
+	public ISODate getActivationDate() {
+		return activationDate;
+	}
+
+	public void setActivationDate(ISODate activationDate) {
+		this.activationDate = activationDate;
+	}
+
+	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
+		return netServiceParticipantIdentification;
+	}
+
+	public void setNetServiceParticipantIdentification(PartyIdentification73Choice netServiceParticipantIdentification) {
+		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
+	}
+
+	public PartyIdentification73Choice getReportServicer() {
+		return reportServicer;
+	}
+
+	public void setReportServicer(PartyIdentification73Choice reportServicer) {
+		this.reportServicer = reportServicer;
+	}
+
+	public Max35Text getNetServiceType() {
+		return netServiceType;
+	}
+
+	public void setNetServiceType(Max35Text netServiceType) {
+		this.netServiceType = netServiceType;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+		this.messagePagination = messagePagination;
 	}
 }

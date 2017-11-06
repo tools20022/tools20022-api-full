@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DisputeNotification1Choice#DisputeNotificationDetails
- * DisputeNotification1Choice.DisputeNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.DisputeNotification1Choice#mmDisputeNotificationDetails
+ * DisputeNotification1Choice.mmDisputeNotificationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DisputeNotification1Choice#SegregatedIndependentAmountDisputeDetails
- * DisputeNotification1Choice.SegregatedIndependentAmountDisputeDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.DisputeNotification1Choice#mmSegregatedIndependentAmountDisputeDetails
+ * DisputeNotification1Choice.mmSegregatedIndependentAmountDisputeDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,18 +51,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03#DisputeNotification
- * MarginCallDisputeNotificationV03.DisputeNotification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03#mmDisputeNotification
+ * MarginCallDisputeNotificationV03.mmDisputeNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04#DisputeNotification
- * MarginCallDisputeNotificationV04.DisputeNotification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04#mmDisputeNotification
+ * MarginCallDisputeNotificationV04.mmDisputeNotification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DisputeNotification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DisputeNotification1 disputeNotificationDetails;
 	/**
 	 * Provides the dispute notification details for the variation margin and
 	 * optionaly the segregated independent amount.
@@ -112,21 +113,22 @@ public class DisputeNotification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DisputeNotificationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDisputeNotificationDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DisputeNotification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> DisputeManagement.mmObject();
+			componentContext_lazy = () -> DisputeNotification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DsptNtfctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeNotificationDetails";
 			definition = "Provides the dispute notification details for the variation margin and optionaly the segregated independent amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DisputeNotification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DisputeNotification1.mmObject();
 		}
 	};
+	protected SegregatedIndependentAmountDispute1 segregatedIndependentAmountDisputeDetails;
 	/**
 	 * Provides the dispute notification details for the segregated independent
 	 * amount only.
@@ -140,8 +142,8 @@ public class DisputeNotification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#SegregatedIndependentAmount
-	 * MarginCall.SegregatedIndependentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmSegregatedIndependentAmount
+	 * MarginCall.mmSegregatedIndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,36 +164,52 @@ public class DisputeNotification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmountDisputeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountDisputeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> DisputeNotification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.SegregatedIndependentAmount;
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmtDsptDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountDisputeDetails";
 			definition = "Provides the dispute notification details for the segregated independent amount only.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisputeNotification1Choice.DisputeNotificationDetails,
-						com.tools20022.repository.choice.DisputeNotification1Choice.SegregatedIndependentAmountDisputeDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisputeNotification1Choice.mmDisputeNotificationDetails,
+						com.tools20022.repository.choice.DisputeNotification1Choice.mmSegregatedIndependentAmountDisputeDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmDisputeNotification,
+						com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04.mmDisputeNotification);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.DisputeNotification,
-						com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04.DisputeNotification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DisputeNotification1Choice";
 				definition = "Provides the dispute notification details for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DisputeNotification1 getDisputeNotificationDetails() {
+		return disputeNotificationDetails;
+	}
+
+	public void setDisputeNotificationDetails(DisputeNotification1 disputeNotificationDetails) {
+		this.disputeNotificationDetails = disputeNotificationDetails;
+	}
+
+	public SegregatedIndependentAmountDispute1 getSegregatedIndependentAmountDisputeDetails() {
+		return segregatedIndependentAmountDisputeDetails;
+	}
+
+	public void setSegregatedIndependentAmountDisputeDetails(SegregatedIndependentAmountDispute1 segregatedIndependentAmountDisputeDetails) {
+		this.segregatedIndependentAmountDisputeDetails = segregatedIndependentAmountDisputeDetails;
 	}
 }

@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod7Code#Cheque
- * PaymentMethod7Code.Cheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentMethod7Code#CreditTransfer
- * PaymentMethod7Code.CreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethod7Code#mmCheque
+ * PaymentMethod7Code.mmCheque}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethod7Code#mmCreditTransfer
+ * PaymentMethod7Code.mmCreditTransfer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class PaymentMethod7Code extends PaymentMethodCode {
 	 * name} = "Cheque"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cheque = new MMCode() {
+	public static final MMCode mmCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
@@ -104,7 +105,7 @@ public class PaymentMethod7Code extends PaymentMethodCode {
 	 * name} = "CreditTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditTransfer = new MMCode() {
+	public static final MMCode mmCreditTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransfer";
@@ -115,12 +116,12 @@ public class PaymentMethod7Code extends PaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CHK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentMethod7Code";
 				definition = "Specifies the transfer method that will be used  to transfer the cash.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod7Code.Cheque, com.tools20022.repository.codeset.PaymentMethod7Code.CreditTransfer);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod7Code.mmCheque, com.tools20022.repository.codeset.PaymentMethod7Code.mmCreditTransfer);
 				trace_lazy = () -> PaymentMethodCode.mmObject();
 			}
 		});

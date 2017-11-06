@@ -34,23 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Registration2Code#PartyHold
- * Registration2Code.PartyHold}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Registration2Code#CSDHold
- * Registration2Code.CSDHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.Registration2Code#mmPartyHold
+ * Registration2Code.mmPartyHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Registration2Code#ConditionalDelivery
- * Registration2Code.ConditionalDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.Registration2Code#mmCSDHold
+ * Registration2Code.mmCSDHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Registration2Code#CSDValidation
- * Registration2Code.CSDValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.Registration2Code#mmConditionalDelivery
+ * Registration2Code.mmConditionalDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Registration2Code#mmCSDValidation
+ * Registration2Code.mmCSDValidation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +87,7 @@ public class Registration2Code extends RegistrationCode {
 	 * name} = "PartyHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartyHold = new MMCode() {
+	public static final MMCode mmPartyHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyHold";
@@ -109,7 +110,7 @@ public class Registration2Code extends RegistrationCode {
 	 * name} = "CSDHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSDHold = new MMCode() {
+	public static final MMCode mmCSDHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDHold";
@@ -132,7 +133,7 @@ public class Registration2Code extends RegistrationCode {
 	 * name} = "ConditionalDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalDelivery = new MMCode() {
+	public static final MMCode mmConditionalDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDelivery";
@@ -155,7 +156,7 @@ public class Registration2Code extends RegistrationCode {
 	 * name} = "CSDValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSDValidation = new MMCode() {
+	public static final MMCode mmCSDValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDValidation";
@@ -166,13 +167,13 @@ public class Registration2Code extends RegistrationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PTYH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Registration2Code";
 				definition = "Specifies whether registration should occur upon receipt.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Registration2Code.PartyHold, com.tools20022.repository.codeset.Registration2Code.CSDHold,
-						com.tools20022.repository.codeset.Registration2Code.ConditionalDelivery, com.tools20022.repository.codeset.Registration2Code.CSDValidation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Registration2Code.mmPartyHold, com.tools20022.repository.codeset.Registration2Code.mmCSDHold,
+						com.tools20022.repository.codeset.Registration2Code.mmConditionalDelivery, com.tools20022.repository.codeset.Registration2Code.mmCSDValidation);
 				trace_lazy = () -> RegistrationCode.mmObject();
 			}
 		});

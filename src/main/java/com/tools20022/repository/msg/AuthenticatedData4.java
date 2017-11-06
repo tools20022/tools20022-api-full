@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Message authentication code (MAC), computed on the data to protect with an
@@ -36,25 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData4#Version
- * AuthenticatedData4.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData4#Recipient
- * AuthenticatedData4.Recipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData4#mmVersion
+ * AuthenticatedData4.mmVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData4#mmRecipient
+ * AuthenticatedData4.mmRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AuthenticatedData4#MACAlgorithm
- * AuthenticatedData4.MACAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AuthenticatedData4#mmMACAlgorithm
+ * AuthenticatedData4.mmMACAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AuthenticatedData4#EncapsulatedContent
- * AuthenticatedData4.EncapsulatedContent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData4#MAC
- * AuthenticatedData4.MAC}</li>
+ * {@linkplain com.tools20022.repository.msg.AuthenticatedData4#mmEncapsulatedContent
+ * AuthenticatedData4.mmEncapsulatedContent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData4#mmMAC
+ * AuthenticatedData4.mmMAC}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AuthenticatedData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the data structure.
 	 * <p>
@@ -102,11 +104,11 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#Version
-	 * AuthenticatedData3.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#mmVersion
+	 * AuthenticatedData3.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class AuthenticatedData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.Version;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.mmVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<Recipient4Choice> recipient;
 	/**
 	 * Session key or protection key identification used by the recipient.
 	 * <p>
@@ -148,11 +151,11 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#Recipient
-	 * AuthenticatedData3.Recipient}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#mmRecipient
+	 * AuthenticatedData3.mmRecipient}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Recipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -160,12 +163,13 @@ public class AuthenticatedData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Session key or protection key identification used by the recipient.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.Recipient;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.mmRecipient;
 			minOccurs = 1;
-			type_lazy = () -> Recipient4Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> Recipient4Choice.mmObject();
 		}
 	};
+	protected AlgorithmIdentification15 mACAlgorithm;
 	/**
 	 * Algorithm to compute message authentication code (MAC).
 	 * <p>
@@ -194,11 +198,11 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#MACAlgorithm
-	 * AuthenticatedData3.MACAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#mmMACAlgorithm
+	 * AuthenticatedData3.mmMACAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MACAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMACAlgorithm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -206,13 +210,14 @@ public class AuthenticatedData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACAlgorithm";
 			definition = "Algorithm to compute message authentication code (MAC).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.MACAlgorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.mmMACAlgorithm;
 			maxOccurs = 1;
-			type_lazy = () -> AlgorithmIdentification15.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification15.mmObject();
 		}
 	};
+	protected EncapsulatedContent3 encapsulatedContent;
 	/**
 	 * Data to authenticate.
 	 * <p>
@@ -240,11 +245,11 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#EncapsulatedContent
-	 * AuthenticatedData3.EncapsulatedContent}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#mmEncapsulatedContent
+	 * AuthenticatedData3.mmEncapsulatedContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -252,13 +257,14 @@ public class AuthenticatedData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data to authenticate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.EncapsulatedContent;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.mmEncapsulatedContent;
 			maxOccurs = 1;
-			type_lazy = () -> EncapsulatedContent3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent3.mmObject();
 		}
 	};
+	protected Max140Binary mAC;
 	/**
 	 * Message authentication code value.
 	 * <p>
@@ -288,11 +294,11 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#MAC
-	 * AuthenticatedData3.MAC}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData3#mmMAC
+	 * AuthenticatedData3.mmMAC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MAC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMAC = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -300,9 +306,9 @@ public class AuthenticatedData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MAC";
 			definition = "Message authentication code value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.MAC;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.mmMAC;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
@@ -310,9 +316,9 @@ public class AuthenticatedData4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.Version, com.tools20022.repository.msg.AuthenticatedData4.Recipient, com.tools20022.repository.msg.AuthenticatedData4.MACAlgorithm,
-						com.tools20022.repository.msg.AuthenticatedData4.EncapsulatedContent, com.tools20022.repository.msg.AuthenticatedData4.MAC);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.mmVersion, com.tools20022.repository.msg.AuthenticatedData4.mmRecipient,
+						com.tools20022.repository.msg.AuthenticatedData4.mmMACAlgorithm, com.tools20022.repository.msg.AuthenticatedData4.mmEncapsulatedContent, com.tools20022.repository.msg.AuthenticatedData4.mmMAC);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AuthenticatedData4";
 				definition = "Message authentication code (MAC), computed on the data to protect with an encryption key.";
@@ -320,5 +326,45 @@ public class AuthenticatedData4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public List<Recipient4Choice> getRecipient() {
+		return recipient;
+	}
+
+	public void setRecipient(List<Recipient4Choice> recipient) {
+		this.recipient = recipient;
+	}
+
+	public AlgorithmIdentification15 getMACAlgorithm() {
+		return mACAlgorithm;
+	}
+
+	public void setMACAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification15 mACAlgorithm) {
+		this.mACAlgorithm = mACAlgorithm;
+	}
+
+	public EncapsulatedContent3 getEncapsulatedContent() {
+		return encapsulatedContent;
+	}
+
+	public void setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent3 encapsulatedContent) {
+		this.encapsulatedContent = encapsulatedContent;
+	}
+
+	public Max140Binary getMAC() {
+		return mAC;
+	}
+
+	public void setMAC(Max140Binary mAC) {
+		this.mAC = mAC;
 	}
 }

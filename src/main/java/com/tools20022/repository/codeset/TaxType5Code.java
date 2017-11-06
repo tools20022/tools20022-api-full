@@ -32,57 +32,59 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#Provincial
- * TaxType5Code.Provincial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#NationalTax
- * TaxType5Code.NationalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#StateTax
- * TaxType5Code.StateTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmProvincial
+ * TaxType5Code.mmProvincial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmNationalTax
+ * TaxType5Code.mmNationalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmStateTax
+ * TaxType5Code.mmStateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#WithholdingTax
- * TaxType5Code.WithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmWithholdingTax
+ * TaxType5Code.mmWithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#CapitalGainTax
- * TaxType5Code.CapitalGainTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmCapitalGainTax
+ * TaxType5Code.mmCapitalGainTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#InterimProfitTax
- * TaxType5Code.InterimProfitTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#StampDuty
- * TaxType5Code.StampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#WealthTax
- * TaxType5Code.WealthTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmInterimProfitTax
+ * TaxType5Code.mmInterimProfitTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmStampDuty
+ * TaxType5Code.mmStampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmWealthTax
+ * TaxType5Code.mmWealthTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#InheritanceTax
- * TaxType5Code.InheritanceTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmInheritanceTax
+ * TaxType5Code.mmInheritanceTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#SolidaritySurcharge
- * TaxType5Code.SolidaritySurcharge}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#TaxCredit
- * TaxType5Code.TaxCredit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#GiftTax
- * TaxType5Code.GiftTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmSolidaritySurcharge
+ * TaxType5Code.mmSolidaritySurcharge}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmTaxCredit
+ * TaxType5Code.mmTaxCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmGiftTax
+ * TaxType5Code.mmGiftTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#ConsumptionTax
- * TaxType5Code.ConsumptionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmConsumptionTax
+ * TaxType5Code.mmConsumptionTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#EUTaxRetention
- * TaxType5Code.EUTaxRetention}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#Aktiengewinn1
- * TaxType5Code.Aktiengewinn1}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#Aktiengewinn2
- * TaxType5Code.Aktiengewinn2}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmEUTaxRetention
+ * TaxType5Code.mmEUTaxRetention}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType5Code#Zwischengewinn
- * TaxType5Code.Zwischengewinn}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#Other
- * TaxType5Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmAktiengewinn1
+ * TaxType5Code.mmAktiengewinn1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmAktiengewinn2
+ * TaxType5Code.mmAktiengewinn2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType5Code#mmZwischengewinn
+ * TaxType5Code.mmZwischengewinn}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType5Code#mmOther
+ * TaxType5Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -117,7 +119,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "Provincial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Provincial = new MMCode() {
+	public static final MMCode mmProvincial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
@@ -139,7 +141,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "NationalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalTax = new MMCode() {
+	public static final MMCode mmNationalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
@@ -161,7 +163,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "StateTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode StateTax = new MMCode() {
+	public static final MMCode mmStateTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
@@ -183,7 +185,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTax = new MMCode() {
+	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
@@ -205,7 +207,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "CapitalGainTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGainTax = new MMCode() {
+	public static final MMCode mmCapitalGainTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainTax";
@@ -227,7 +229,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "InterimProfitTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterimProfitTax = new MMCode() {
+	public static final MMCode mmInterimProfitTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimProfitTax";
@@ -249,7 +251,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode StampDuty = new MMCode() {
+	public static final MMCode mmStampDuty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
@@ -271,7 +273,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "WealthTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WealthTax = new MMCode() {
+	public static final MMCode mmWealthTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WealthTax";
@@ -293,7 +295,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "InheritanceTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode InheritanceTax = new MMCode() {
+	public static final MMCode mmInheritanceTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InheritanceTax";
@@ -315,7 +317,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "SolidaritySurcharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode SolidaritySurcharge = new MMCode() {
+	public static final MMCode mmSolidaritySurcharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolidaritySurcharge";
@@ -337,7 +339,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "TaxCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxCredit = new MMCode() {
+	public static final MMCode mmTaxCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
@@ -359,7 +361,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "GiftTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode GiftTax = new MMCode() {
+	public static final MMCode mmGiftTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GiftTax";
@@ -381,7 +383,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "ConsumptionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsumptionTax = new MMCode() {
+	public static final MMCode mmConsumptionTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
@@ -403,7 +405,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUTaxRetention = new MMCode() {
+	public static final MMCode mmEUTaxRetention = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
@@ -425,7 +427,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "Aktiengewinn1"</li>
 	 * </ul>
 	 */
-	public static final MMCode Aktiengewinn1 = new MMCode() {
+	public static final MMCode mmAktiengewinn1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aktiengewinn1";
@@ -447,7 +449,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "Aktiengewinn2"</li>
 	 * </ul>
 	 */
-	public static final MMCode Aktiengewinn2 = new MMCode() {
+	public static final MMCode mmAktiengewinn2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aktiengewinn2";
@@ -469,7 +471,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "Zwischengewinn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Zwischengewinn = new MMCode() {
+	public static final MMCode mmZwischengewinn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zwischengewinn";
@@ -491,7 +493,7 @@ public class TaxType5Code extends TaxTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -502,17 +504,17 @@ public class TaxType5Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType5Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType5Code.Provincial, com.tools20022.repository.codeset.TaxType5Code.NationalTax, com.tools20022.repository.codeset.TaxType5Code.StateTax,
-						com.tools20022.repository.codeset.TaxType5Code.WithholdingTax, com.tools20022.repository.codeset.TaxType5Code.CapitalGainTax, com.tools20022.repository.codeset.TaxType5Code.InterimProfitTax,
-						com.tools20022.repository.codeset.TaxType5Code.StampDuty, com.tools20022.repository.codeset.TaxType5Code.WealthTax, com.tools20022.repository.codeset.TaxType5Code.InheritanceTax,
-						com.tools20022.repository.codeset.TaxType5Code.SolidaritySurcharge, com.tools20022.repository.codeset.TaxType5Code.TaxCredit, com.tools20022.repository.codeset.TaxType5Code.GiftTax,
-						com.tools20022.repository.codeset.TaxType5Code.ConsumptionTax, com.tools20022.repository.codeset.TaxType5Code.EUTaxRetention, com.tools20022.repository.codeset.TaxType5Code.Aktiengewinn1,
-						com.tools20022.repository.codeset.TaxType5Code.Aktiengewinn2, com.tools20022.repository.codeset.TaxType5Code.Zwischengewinn, com.tools20022.repository.codeset.TaxType5Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType5Code.mmProvincial, com.tools20022.repository.codeset.TaxType5Code.mmNationalTax, com.tools20022.repository.codeset.TaxType5Code.mmStateTax,
+						com.tools20022.repository.codeset.TaxType5Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxType5Code.mmCapitalGainTax, com.tools20022.repository.codeset.TaxType5Code.mmInterimProfitTax,
+						com.tools20022.repository.codeset.TaxType5Code.mmStampDuty, com.tools20022.repository.codeset.TaxType5Code.mmWealthTax, com.tools20022.repository.codeset.TaxType5Code.mmInheritanceTax,
+						com.tools20022.repository.codeset.TaxType5Code.mmSolidaritySurcharge, com.tools20022.repository.codeset.TaxType5Code.mmTaxCredit, com.tools20022.repository.codeset.TaxType5Code.mmGiftTax,
+						com.tools20022.repository.codeset.TaxType5Code.mmConsumptionTax, com.tools20022.repository.codeset.TaxType5Code.mmEUTaxRetention, com.tools20022.repository.codeset.TaxType5Code.mmAktiengewinn1,
+						com.tools20022.repository.codeset.TaxType5Code.mmAktiengewinn2, com.tools20022.repository.codeset.TaxType5Code.mmZwischengewinn, com.tools20022.repository.codeset.TaxType5Code.mmOther);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

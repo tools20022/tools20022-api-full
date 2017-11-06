@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InstructionType1#Type
- * InstructionType1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstructionType1#mmType
+ * InstructionType1.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -42,21 +42,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03#Instruction
- * InitialBaselineSubmissionV03.Instruction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03#mmInstruction
+ * InitialBaselineSubmissionV03.mmInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04#Instruction
- * InitialBaselineSubmissionV04.Instruction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04#mmInstruction
+ * InitialBaselineSubmissionV04.mmInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05#Instruction
- * InitialBaselineSubmissionV05.Instruction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05#mmInstruction
+ * InitialBaselineSubmissionV05.mmInstruction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructionType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InstructionType1Code type;
 	/**
 	 * Specifies whether the baseline has to be pushed to the other party or
 	 * simply lodged.
@@ -103,7 +104,7 @@ public class InstructionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionType1.mmObject();
 			isDerived = false;
@@ -111,8 +112,8 @@ public class InstructionType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the baseline has to be pushed to the other party or simply lodged.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InstructionType1Code.mmObject();
 		}
 	};
@@ -120,15 +121,23 @@ public class InstructionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionType1.Type);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.Instruction, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.Instruction,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.Instruction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionType1.mmType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmInstruction, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmInstruction,
+						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.mmInstruction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionType1";
 				definition = "Specifies the type of instruction requested by the submitter by means of a code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InstructionType1Code getType() {
+		return type;
+	}
+
+	public void setType(InstructionType1Code type) {
+		this.type = type;
 	}
 }

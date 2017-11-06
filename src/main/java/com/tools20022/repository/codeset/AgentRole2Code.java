@@ -33,23 +33,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#SystemPayingAgent
- * AgentRole2Code.SystemPayingAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#CoDomicile
- * AgentRole2Code.CoDomicile}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#IssuerAgent
- * AgentRole2Code.IssuerAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#Registrar
- * AgentRole2Code.Registrar}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#PayingAgent
- * AgentRole2Code.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmSystemPayingAgent
+ * AgentRole2Code.mmSystemPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmCoDomicile
+ * AgentRole2Code.mmCoDomicile}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmIssuerAgent
+ * AgentRole2Code.mmIssuerAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmRegistrar
+ * AgentRole2Code.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmPayingAgent
+ * AgentRole2Code.mmPayingAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +88,7 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "SystemPayingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystemPayingAgent = new MMCode() {
+	public static final MMCode mmSystemPayingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemPayingAgent";
@@ -108,7 +111,7 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "CoDomicile"</li>
 	 * </ul>
 	 */
-	public static final MMCode CoDomicile = new MMCode() {
+	public static final MMCode mmCoDomicile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoDomicile";
@@ -131,7 +134,7 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "IssuerAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerAgent = new MMCode() {
+	public static final MMCode mmIssuerAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgent";
@@ -154,7 +157,7 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "Registrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode Registrar = new MMCode() {
+	public static final MMCode mmRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registrar";
@@ -177,7 +180,7 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "PayingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayingAgent = new MMCode() {
+	public static final MMCode mmPayingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
@@ -188,13 +191,13 @@ public class AgentRole2Code extends AgentRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SPAY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgentRole2Code";
 				definition = "Specifies the role of the agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRole2Code.SystemPayingAgent, com.tools20022.repository.codeset.AgentRole2Code.CoDomicile, com.tools20022.repository.codeset.AgentRole2Code.IssuerAgent,
-						com.tools20022.repository.codeset.AgentRole2Code.Registrar, com.tools20022.repository.codeset.AgentRole2Code.PayingAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRole2Code.mmSystemPayingAgent, com.tools20022.repository.codeset.AgentRole2Code.mmCoDomicile,
+						com.tools20022.repository.codeset.AgentRole2Code.mmIssuerAgent, com.tools20022.repository.codeset.AgentRole2Code.mmRegistrar, com.tools20022.repository.codeset.AgentRole2Code.mmPayingAgent);
 				trace_lazy = () -> AgentRoleCode.mmObject();
 			}
 		});

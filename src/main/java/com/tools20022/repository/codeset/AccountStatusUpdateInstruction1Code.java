@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#Close
- * AccountStatusUpdateInstruction1Code.Close}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#mmClose
+ * AccountStatusUpdateInstruction1Code.mmClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#Reactive
- * AccountStatusUpdateInstruction1Code.Reactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#mmReactive
+ * AccountStatusUpdateInstruction1Code.mmReactive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class AccountStatusUpdateInstruction1Code extends AccountStatusUpdateInst
 	 * name} = "Close"</li>
 	 * </ul>
 	 */
-	public static final MMCode Close = new MMCode() {
+	public static final MMCode mmClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Close";
@@ -98,7 +98,7 @@ public class AccountStatusUpdateInstruction1Code extends AccountStatusUpdateInst
 	 * name} = "Reactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reactive = new MMCode() {
+	public static final MMCode mmReactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reactive";
@@ -109,11 +109,11 @@ public class AccountStatusUpdateInstruction1Code extends AccountStatusUpdateInst
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstruction1Code";
 				definition = "Specifies the type of account status update instructed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.Close, com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.Reactive);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.mmClose, com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.mmReactive);
 				trace_lazy = () -> AccountStatusUpdateInstructionCode.mmObject();
 			}
 		});

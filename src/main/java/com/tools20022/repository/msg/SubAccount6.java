@@ -34,14 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#Identification
- * SubAccount6.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#Name
- * SubAccount6.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#Characteristic
- * SubAccount6.Characteristic}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#AccountDesignation
- * SubAccount6.AccountDesignation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#mmIdentification
+ * SubAccount6.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#mmName
+ * SubAccount6.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#mmCharacteristic
+ * SubAccount6.mmCharacteristic}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubAccount6#mmAccountDesignation
+ * SubAccount6.mmAccountDesignation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -82,8 +84,8 @@ public class SubAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,25 +106,26 @@ public class SubAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccount5#Identification
-	 * SubAccount5.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccount5#mmIdentification
+	 * SubAccount5.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> SubAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccount5.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text name;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -137,8 +140,8 @@ public class SubAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,25 +162,26 @@ public class SubAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccount5#Name
-	 * SubAccount5.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccount5#mmName
+	 * SubAccount5.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> SubAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccount5.Name;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text characteristic;
 	/**
 	 * Additional properties of the account.
 	 * <p>
@@ -209,25 +213,26 @@ public class SubAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SubAccount5#Characteristic
-	 * SubAccount5.Characteristic}</li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccount5#mmCharacteristic
+	 * SubAccount5.mmCharacteristic}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Characteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SubAccount6.mmObject();
 			businessComponentTrace_lazy = () -> Account.mmObject();
+			componentContext_lazy = () -> SubAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "Chrtc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristic";
 			definition = "Additional properties of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccount5.Characteristic;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmCharacteristic;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountDesignation;
 	/**
 	 * Supplementary registration information applying to a specific block of
 	 * units for dealing and reporting purposes. The supplementary registration
@@ -244,8 +249,8 @@ public class SubAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#Designation
-	 * InvestmentAccount.Designation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDesignation
+	 * InvestmentAccount.mmDesignation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,17 +270,17 @@ public class SubAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountDesignation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> SubAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.Designation;
 			isDerived = false;
 			xmlTag = "AcctDsgnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDesignation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -283,10 +288,10 @@ public class SubAccount6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccount6.Identification, com.tools20022.repository.msg.SubAccount6.Name, com.tools20022.repository.msg.SubAccount6.Characteristic,
-						com.tools20022.repository.msg.SubAccount6.AccountDesignation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccount6.mmIdentification, com.tools20022.repository.msg.SubAccount6.mmName, com.tools20022.repository.msg.SubAccount6.mmCharacteristic,
+						com.tools20022.repository.msg.SubAccount6.mmAccountDesignation);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubAccount6";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
@@ -294,5 +299,37 @@ public class SubAccount6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getCharacteristic() {
+		return characteristic;
+	}
+
+	public void setCharacteristic(Max35Text characteristic) {
+		this.characteristic = characteristic;
+	}
+
+	public Max35Text getAccountDesignation() {
+		return accountDesignation;
+	}
+
+	public void setAccountDesignation(Max35Text accountDesignation) {
+		this.accountDesignation = accountDesignation;
 	}
 }

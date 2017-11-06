@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NumberOfItemsPerStatus1#Status
- * NumberOfItemsPerStatus1.Status}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfItemsPerStatus1#NumberOfItems
- * NumberOfItemsPerStatus1.NumberOfItems}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfItemsPerStatus1#mmStatus
+ * NumberOfItemsPerStatus1.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfItemsPerStatus1#mmNumberOfItems
+ * NumberOfItemsPerStatus1.mmNumberOfItems}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#NumberOfItemsPerStatus
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.NumberOfItemsPerStatus}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmNumberOfItemsPerStatus
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmNumberOfItemsPerStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NumberOfItemsPerStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportItemStatus1Code status;
 	/**
 	 * Common status of the report items for which the number of report items is
 	 * specified in NumberOfItems.
@@ -106,11 +108,11 @@ public class NumberOfItemsPerStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#DetailedStatus
-	 * NumberOfTransactionsPerStatus3.DetailedStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#mmDetailedStatus
+	 * NumberOfTransactionsPerStatus3.mmDetailedStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
@@ -118,12 +120,13 @@ public class NumberOfItemsPerStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Common status of the report items for which the number of report items is specified in NumberOfItems.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.DetailedStatus;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportItemStatus1Code.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfItems;
 	/**
 	 * Number of items for the status.
 	 * <p>
@@ -153,11 +156,11 @@ public class NumberOfItemsPerStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#DetailedNumberOfTransactions
-	 * NumberOfTransactionsPerStatus3.DetailedNumberOfTransactions}</li>
+	 * {@linkplain com.tools20022.repository.msg.NumberOfTransactionsPerStatus3#mmDetailedNumberOfTransactions
+	 * NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfItems = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfItems = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
@@ -165,9 +168,9 @@ public class NumberOfItemsPerStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfItems";
 			definition = "Number of items for the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.DetailedNumberOfTransactions;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
@@ -175,9 +178,9 @@ public class NumberOfItemsPerStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfItemsPerStatus1.Status, com.tools20022.repository.msg.NumberOfItemsPerStatus1.NumberOfItems);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.NumberOfItemsPerStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmStatus, com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmNumberOfItems);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmNumberOfItemsPerStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NumberOfItemsPerStatus1";
 				definition = "Provides detailed information on the number of reported items with their respective acceptance status.";
@@ -185,5 +188,21 @@ public class NumberOfItemsPerStatus1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportItemStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(ReportItemStatus1Code status) {
+		this.status = status;
+	}
+
+	public Max15NumericText getNumberOfItems() {
+		return numberOfItems;
+	}
+
+	public void setNumberOfItems(Max15NumericText numberOfItems) {
+		this.numberOfItems = numberOfItems;
 	}
 }

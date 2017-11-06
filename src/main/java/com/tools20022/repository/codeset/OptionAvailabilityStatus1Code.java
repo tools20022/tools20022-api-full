@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionAvailabilityStatus1Code#Inactive
- * OptionAvailabilityStatus1Code.Inactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionAvailabilityStatus1Code#mmInactive
+ * OptionAvailabilityStatus1Code.mmInactive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionAvailabilityStatus1Code#Cancelled
- * OptionAvailabilityStatus1Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionAvailabilityStatus1Code#mmCancelled
+ * OptionAvailabilityStatus1Code.mmCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class OptionAvailabilityStatus1Code extends OptionAvailabilityStatusCode 
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Inactive = new MMCode() {
+	public static final MMCode mmInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
@@ -104,7 +104,7 @@ public class OptionAvailabilityStatus1Code extends OptionAvailabilityStatusCode 
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -115,12 +115,12 @@ public class OptionAvailabilityStatus1Code extends OptionAvailabilityStatusCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionAvailabilityStatus1Code";
 				definition = "Specifies the status of the option availability.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionAvailabilityStatus1Code.Inactive, com.tools20022.repository.codeset.OptionAvailabilityStatus1Code.Cancelled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionAvailabilityStatus1Code.mmInactive, com.tools20022.repository.codeset.OptionAvailabilityStatus1Code.mmCancelled);
 				trace_lazy = () -> OptionAvailabilityStatusCode.mmObject();
 			}
 		});

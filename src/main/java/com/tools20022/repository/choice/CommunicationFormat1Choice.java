@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CommunicationFormat1Choice#Code
- * CommunicationFormat1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CommunicationFormat1Choice#mmCode
+ * CommunicationFormat1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CommunicationFormat1Choice#Proprietary
- * CommunicationFormat1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CommunicationFormat1Choice#mmProprietary
+ * CommunicationFormat1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommunicationFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalCommunicationFormat1Code code;
 	/**
 	 * Unique and unambiguous identification of communication format using a
 	 * code list.
@@ -90,7 +91,7 @@ public class CommunicationFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommunicationFormat1Choice.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class CommunicationFormat1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Unique and unambiguous identification of communication format using a code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalCommunicationFormat1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Unique and unambiguous identification of communication format using a
 	 * proprietary identification scheme.
@@ -133,7 +135,7 @@ public class CommunicationFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CommunicationFormat1Choice.mmObject();
 			isDerived = false;
@@ -141,8 +143,8 @@ public class CommunicationFormat1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Unique and unambiguous identification of communication format using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -150,13 +152,29 @@ public class CommunicationFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommunicationFormat1Choice.Code, com.tools20022.repository.choice.CommunicationFormat1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommunicationFormat1Choice.mmCode, com.tools20022.repository.choice.CommunicationFormat1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommunicationFormat1Choice";
 				definition = "Specifies a choice of format for statements.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalCommunicationFormat1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalCommunicationFormat1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -26,6 +26,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for system business day information.
@@ -37,18 +38,18 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayInformationSearchCriteria#SystemIdentification
- * BusinessDayInformationSearchCriteria.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayInformationSearchCriteria#mmSystemIdentification
+ * BusinessDayInformationSearchCriteria.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayInformationSearchCriteria#SystemCurrency
- * BusinessDayInformationSearchCriteria.SystemCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayInformationSearchCriteria#mmSystemCurrency
+ * BusinessDayInformationSearchCriteria.mmSystemCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -64,6 +65,7 @@ import java.util.function.Supplier;
 public class BusinessDayInformationSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<SystemIdentificationChoice> systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -92,7 +94,7 @@ public class BusinessDayInformationSearchCriteria {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayInformationSearchCriteria.mmObject();
 			isDerived = false;
@@ -104,6 +106,7 @@ public class BusinessDayInformationSearchCriteria {
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	protected List<CurrencyCode> systemCurrency;
 	/**
 	 * Currency which may be processed by the system. A system may process
 	 * transactions in a single currency or in multiple currencies.
@@ -134,7 +137,7 @@ public class BusinessDayInformationSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayInformationSearchCriteria.mmObject();
 			isDerived = false;
@@ -150,8 +153,8 @@ public class BusinessDayInformationSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.SystemIdentification, com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.SystemCurrency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmSystemIdentification, com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmSystemCurrency);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -165,5 +168,21 @@ public class BusinessDayInformationSearchCriteria {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SystemIdentificationChoice> getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(List<SystemIdentificationChoice> systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public List<CurrencyCode> getSystemCurrency() {
+		return systemCurrency;
+	}
+
+	public void setSystemCurrency(List<CurrencyCode> systemCurrency) {
+		this.systemCurrency = systemCurrency;
 	}
 }

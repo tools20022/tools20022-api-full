@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#CreateCertificate
- * CardPaymentServiceType10Code.CreateCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#mmCreateCertificate
+ * CardPaymentServiceType10Code.mmCreateCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#RenewCerificate
- * CardPaymentServiceType10Code.RenewCerificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#mmRenewCerificate
+ * CardPaymentServiceType10Code.mmRenewCerificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#RevokeCertificate
- * CardPaymentServiceType10Code.RevokeCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#mmRevokeCertificate
+ * CardPaymentServiceType10Code.mmRevokeCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#RemoveWhiteList
- * CardPaymentServiceType10Code.RemoveWhiteList}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#mmRemoveWhiteList
+ * CardPaymentServiceType10Code.mmRemoveWhiteList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#AddWhiteList
- * CardPaymentServiceType10Code.AddWhiteList}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code#mmAddWhiteList
+ * CardPaymentServiceType10Code.mmAddWhiteList}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +84,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 * name} = "CreateCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreateCertificate = new MMCode() {
+	public static final MMCode mmCreateCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateCertificate";
@@ -107,7 +107,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 * name} = "RenewCerificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RenewCerificate = new MMCode() {
+	public static final MMCode mmRenewCerificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenewCerificate";
@@ -130,7 +130,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 * name} = "RevokeCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RevokeCertificate = new MMCode() {
+	public static final MMCode mmRevokeCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevokeCertificate";
@@ -153,7 +153,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 * name} = "RemoveWhiteList"</li>
 	 * </ul>
 	 */
-	public static final MMCode RemoveWhiteList = new MMCode() {
+	public static final MMCode mmRemoveWhiteList = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoveWhiteList";
@@ -176,7 +176,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 * name} = "AddWhiteList"</li>
 	 * </ul>
 	 */
-	public static final MMCode AddWhiteList = new MMCode() {
+	public static final MMCode mmAddWhiteList = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddWhiteList";
@@ -187,13 +187,13 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType10Code";
 				definition = "Requested certificate management service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType10Code.CreateCertificate, com.tools20022.repository.codeset.CardPaymentServiceType10Code.RenewCerificate,
-						com.tools20022.repository.codeset.CardPaymentServiceType10Code.RevokeCertificate, com.tools20022.repository.codeset.CardPaymentServiceType10Code.RemoveWhiteList,
-						com.tools20022.repository.codeset.CardPaymentServiceType10Code.AddWhiteList);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmCreateCertificate, com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmRenewCerificate,
+						com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmRevokeCertificate, com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmRemoveWhiteList,
+						com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmAddWhiteList);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 			}
 		});

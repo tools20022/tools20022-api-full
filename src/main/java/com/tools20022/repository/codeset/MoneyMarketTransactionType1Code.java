@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyMarketTransactionType1Code#CashBorrowing
- * MoneyMarketTransactionType1Code.CashBorrowing}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyMarketTransactionType1Code#mmCashBorrowing
+ * MoneyMarketTransactionType1Code.mmCashBorrowing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyMarketTransactionType1Code#CashLending
- * MoneyMarketTransactionType1Code.CashLending}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyMarketTransactionType1Code#mmCashLending
+ * MoneyMarketTransactionType1Code.mmCashLending}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class MoneyMarketTransactionType1Code extends MoneyMarketTransactionTypeC
 	 * name} = "CashBorrowing"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashBorrowing = new MMCode() {
+	public static final MMCode mmCashBorrowing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBorrowing";
@@ -101,7 +101,7 @@ public class MoneyMarketTransactionType1Code extends MoneyMarketTransactionTypeC
 	 * name} = "CashLending"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashLending = new MMCode() {
+	public static final MMCode mmCashLending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashLending";
@@ -112,11 +112,11 @@ public class MoneyMarketTransactionType1Code extends MoneyMarketTransactionTypeC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketTransactionType1Code";
 				definition = "Specifies the transaction type used in the money market statistical reporting for the secured market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoneyMarketTransactionType1Code.CashBorrowing, com.tools20022.repository.codeset.MoneyMarketTransactionType1Code.CashLending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoneyMarketTransactionType1Code.mmCashBorrowing, com.tools20022.repository.codeset.MoneyMarketTransactionType1Code.mmCashLending);
 				trace_lazy = () -> MoneyMarketTransactionTypeCode.mmObject();
 			}
 		});

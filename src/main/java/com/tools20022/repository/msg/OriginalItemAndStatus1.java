@@ -40,24 +40,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#OriginalItemIdentification
- * OriginalItemAndStatus1.OriginalItemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmOriginalItemIdentification
+ * OriginalItemAndStatus1.mmOriginalItemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#OriginalEndToEndIdentification
- * OriginalItemAndStatus1.OriginalEndToEndIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#Amount
- * OriginalItemAndStatus1.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmOriginalEndToEndIdentification
+ * OriginalItemAndStatus1.mmOriginalEndToEndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#ExpectedValueDate
- * OriginalItemAndStatus1.ExpectedValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#Debtor
- * OriginalItemAndStatus1.Debtor}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmAmount
+ * OriginalItemAndStatus1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#ItemStatus
- * OriginalItemAndStatus1.ItemStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmExpectedValueDate
+ * OriginalItemAndStatus1.mmExpectedValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#AdditionalStatusInformation
- * OriginalItemAndStatus1.AdditionalStatusInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmDebtor
+ * OriginalItemAndStatus1.mmDebtor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmItemStatus
+ * OriginalItemAndStatus1.mmItemStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmAdditionalStatusInformation
+ * OriginalItemAndStatus1.mmAdditionalStatusInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalItemAndStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalItemIdentification;
 	/**
 	 * Identification of the original notification item.
 	 * <p>
@@ -94,8 +97,8 @@ public class OriginalItemAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,20 +117,21 @@ public class OriginalItemAndStatus1 {
 	 * definition} = "Identification of the original notification item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalItemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> OriginalItemAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "OrgnlItmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalItemIdentification";
 			definition = "Identification of the original notification item.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalEndToEndIdentification;
 	/**
 	 * Unique identification as assigned by the debtor to unambiguously identify
 	 * the original underlying transaction to the creditor.
@@ -141,8 +145,8 @@ public class OriginalItemAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#EndToEndIdentification
-	 * PaymentIdentification.EndToEndIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmEndToEndIdentification
+	 * PaymentIdentification.mmEndToEndIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +167,21 @@ public class OriginalItemAndStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> OriginalItemAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.EndToEndIdentification;
 			isDerived = false;
 			xmlTag = "OrgnlEndToEndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification as assigned by the debtor to unambiguously identify the original underlying transaction to the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
 	 * Amount of money expected to be credited to the account, as per the
 	 * original notification to receive.
@@ -191,8 +196,8 @@ public class OriginalItemAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -213,20 +218,21 @@ public class OriginalItemAndStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> OriginalItemAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money expected to be credited to the account, as per the original notification to receive.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate expectedValueDate;
 	/**
 	 * Value date on which the account was expected to be credited.
 	 * <p>
@@ -239,8 +245,8 @@ public class OriginalItemAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +266,21 @@ public class OriginalItemAndStatus1 {
 	 * "Value date on which the account was expected to be credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> OriginalItemAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "XpctdValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedValueDate";
 			definition = "Value date on which the account was expected to be credited.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyIdentification32 debtor;
 	/**
 	 * Party that owes an amount of money to the (ultimate) creditor.
 	 * <p>
@@ -285,8 +292,8 @@ public class OriginalItemAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -306,21 +313,22 @@ public class OriginalItemAndStatus1 {
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Debtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OriginalItemAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
 		}
 	};
+	protected TransactionStatus1Code itemStatus;
 	/**
 	 * Specifies the status of the notification item.
 	 * <p>
@@ -334,8 +342,8 @@ public class OriginalItemAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#TransactionStatus
-	 * PaymentStatus.TransactionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmTransactionStatus
+	 * PaymentStatus.mmTransactionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -354,20 +362,21 @@ public class OriginalItemAndStatus1 {
 	 * definition} = "Specifies the status of the notification item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmTransactionStatus;
 			componentContext_lazy = () -> OriginalItemAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.TransactionStatus;
 			isDerived = false;
 			xmlTag = "ItmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemStatus";
 			definition = "Specifies the status of the notification item.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransactionStatus1Code.mmObject();
 		}
 	};
+	protected Max105Text additionalStatusInformation;
 	/**
 	 * Further details of the item status.
 	 * <p>
@@ -395,7 +404,7 @@ public class OriginalItemAndStatus1 {
 	 * definition} = "Further details of the item status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalStatusInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalStatusInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalItemAndStatus1.mmObject();
 			isDerived = false;
@@ -403,8 +412,8 @@ public class OriginalItemAndStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalStatusInformation";
 			definition = "Further details of the item status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
@@ -412,16 +421,72 @@ public class OriginalItemAndStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalItemAndStatus1.OriginalItemIdentification, com.tools20022.repository.msg.OriginalItemAndStatus1.OriginalEndToEndIdentification,
-						com.tools20022.repository.msg.OriginalItemAndStatus1.Amount, com.tools20022.repository.msg.OriginalItemAndStatus1.ExpectedValueDate, com.tools20022.repository.msg.OriginalItemAndStatus1.Debtor,
-						com.tools20022.repository.msg.OriginalItemAndStatus1.ItemStatus, com.tools20022.repository.msg.OriginalItemAndStatus1.AdditionalStatusInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalItemAndStatus1.mmOriginalItemIdentification, com.tools20022.repository.msg.OriginalItemAndStatus1.mmOriginalEndToEndIdentification,
+						com.tools20022.repository.msg.OriginalItemAndStatus1.mmAmount, com.tools20022.repository.msg.OriginalItemAndStatus1.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItemAndStatus1.mmDebtor,
+						com.tools20022.repository.msg.OriginalItemAndStatus1.mmItemStatus, com.tools20022.repository.msg.OriginalItemAndStatus1.mmAdditionalStatusInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalItemAndStatus1";
 				definition = "Set of elements used to identify the original notification item and to provide the status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalItemIdentification() {
+		return originalItemIdentification;
+	}
+
+	public void setOriginalItemIdentification(Max35Text originalItemIdentification) {
+		this.originalItemIdentification = originalItemIdentification;
+	}
+
+	public Max35Text getOriginalEndToEndIdentification() {
+		return originalEndToEndIdentification;
+	}
+
+	public void setOriginalEndToEndIdentification(Max35Text originalEndToEndIdentification) {
+		this.originalEndToEndIdentification = originalEndToEndIdentification;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public ISODate getExpectedValueDate() {
+		return expectedValueDate;
+	}
+
+	public void setExpectedValueDate(ISODate expectedValueDate) {
+		this.expectedValueDate = expectedValueDate;
+	}
+
+	public PartyIdentification32 getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(com.tools20022.repository.msg.PartyIdentification32 debtor) {
+		this.debtor = debtor;
+	}
+
+	public TransactionStatus1Code getItemStatus() {
+		return itemStatus;
+	}
+
+	public void setItemStatus(TransactionStatus1Code itemStatus) {
+		this.itemStatus = itemStatus;
+	}
+
+	public Max105Text getAdditionalStatusInformation() {
+		return additionalStatusInformation;
+	}
+
+	public void setAdditionalStatusInformation(Max105Text additionalStatusInformation) {
+		this.additionalStatusInformation = additionalStatusInformation;
 	}
 }

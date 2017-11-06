@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#BankingHoliday
- * SystemClosureReason1Code.BankingHoliday}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmBankingHoliday
+ * SystemClosureReason1Code.mmBankingHoliday}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#SystemMaintenance
- * SystemClosureReason1Code.SystemMaintenance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmSystemMaintenance
+ * SystemClosureReason1Code.mmSystemMaintenance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#NoOperation
- * SystemClosureReason1Code.NoOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmNoOperation
+ * SystemClosureReason1Code.mmNoOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#Recovery
- * SystemClosureReason1Code.Recovery}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmRecovery
+ * SystemClosureReason1Code.mmRecovery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#AllowedDowntimeWindow
- * SystemClosureReason1Code.AllowedDowntimeWindow}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmAllowedDowntimeWindow
+ * SystemClosureReason1Code.mmAllowedDowntimeWindow}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "BankingHoliday"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankingHoliday = new MMCode() {
+	public static final MMCode mmBankingHoliday = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankingHoliday";
@@ -113,7 +113,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "SystemMaintenance"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystemMaintenance = new MMCode() {
+	public static final MMCode mmSystemMaintenance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMaintenance";
@@ -136,7 +136,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "NoOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoOperation = new MMCode() {
+	public static final MMCode mmNoOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoOperation";
@@ -159,7 +159,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "Recovery"</li>
 	 * </ul>
 	 */
-	public static final MMCode Recovery = new MMCode() {
+	public static final MMCode mmRecovery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recovery";
@@ -182,7 +182,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "AllowedDowntimeWindow"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllowedDowntimeWindow = new MMCode() {
+	public static final MMCode mmAllowedDowntimeWindow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowedDowntimeWindow";
@@ -193,14 +193,14 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BHOL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemClosureReason1Code";
 				definition = "Specifies the reason for system inactivity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemClosureReason1Code.BankingHoliday, com.tools20022.repository.codeset.SystemClosureReason1Code.SystemMaintenance,
-						com.tools20022.repository.codeset.SystemClosureReason1Code.NoOperation, com.tools20022.repository.codeset.SystemClosureReason1Code.Recovery,
-						com.tools20022.repository.codeset.SystemClosureReason1Code.AllowedDowntimeWindow);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemClosureReason1Code.mmBankingHoliday, com.tools20022.repository.codeset.SystemClosureReason1Code.mmSystemMaintenance,
+						com.tools20022.repository.codeset.SystemClosureReason1Code.mmNoOperation, com.tools20022.repository.codeset.SystemClosureReason1Code.mmRecovery,
+						com.tools20022.repository.codeset.SystemClosureReason1Code.mmAllowedDowntimeWindow);
 				trace_lazy = () -> SystemClosureReasonCode.mmObject();
 			}
 		});

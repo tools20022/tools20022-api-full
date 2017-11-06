@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType1Code#ReleasePending
- * RequestType1Code.ReleasePending}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType1Code#mmReleasePending
+ * RequestType1Code.mmReleasePending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType1Code#HoldNormal
- * RequestType1Code.HoldNormal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType1Code#mmHoldNormal
+ * RequestType1Code.mmHoldNormal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType1Code#Cancellation
- * RequestType1Code.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType1Code#mmCancellation
+ * RequestType1Code.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType1Code#ReSequence
- * RequestType1Code.ReSequence}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType1Code#mmReSequence
+ * RequestType1Code.mmReSequence}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType1Code#ReleaseSuspicious
- * RequestType1Code.ReleaseSuspicious}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType1Code#mmReleaseSuspicious
+ * RequestType1Code.mmReleaseSuspicious}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 * name} = "ReleasePending"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReleasePending = new MMCode() {
+	public static final MMCode mmReleasePending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleasePending";
@@ -116,7 +116,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 * name} = "HoldNormal"</li>
 	 * </ul>
 	 */
-	public static final MMCode HoldNormal = new MMCode() {
+	public static final MMCode mmHoldNormal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldNormal";
@@ -139,7 +139,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -162,7 +162,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 * name} = "ReSequence"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReSequence = new MMCode() {
+	public static final MMCode mmReSequence = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSequence";
@@ -185,7 +185,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 * name} = "ReleaseSuspicious"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReleaseSuspicious = new MMCode() {
+	public static final MMCode mmReleaseSuspicious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleaseSuspicious";
@@ -196,13 +196,13 @@ public class RequestType1Code extends RequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RT01");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestType1Code";
 				definition = "Specifies the request used to further detail the type of information that will be queried.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestType1Code.ReleasePending, com.tools20022.repository.codeset.RequestType1Code.HoldNormal,
-						com.tools20022.repository.codeset.RequestType1Code.Cancellation, com.tools20022.repository.codeset.RequestType1Code.ReSequence, com.tools20022.repository.codeset.RequestType1Code.ReleaseSuspicious);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestType1Code.mmReleasePending, com.tools20022.repository.codeset.RequestType1Code.mmHoldNormal,
+						com.tools20022.repository.codeset.RequestType1Code.mmCancellation, com.tools20022.repository.codeset.RequestType1Code.mmReSequence, com.tools20022.repository.codeset.RequestType1Code.mmReleaseSuspicious);
 				trace_lazy = () -> RequestTypeCode.mmObject();
 			}
 		});

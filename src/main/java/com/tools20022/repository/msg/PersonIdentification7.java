@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PersonIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of unique and unambiguous ways to identify a person.
@@ -36,40 +37,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#DriversLicenseNumber
- * PersonIdentification7.DriversLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmDriversLicenseNumber
+ * PersonIdentification7.mmDriversLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#CustomerNumber
- * PersonIdentification7.CustomerNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmCustomerNumber
+ * PersonIdentification7.mmCustomerNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#SocialSecurityNumber
- * PersonIdentification7.SocialSecurityNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmSocialSecurityNumber
+ * PersonIdentification7.mmSocialSecurityNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#AlienRegistrationNumber
- * PersonIdentification7.AlienRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmAlienRegistrationNumber
+ * PersonIdentification7.mmAlienRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#PassportNumber
- * PersonIdentification7.PassportNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmPassportNumber
+ * PersonIdentification7.mmPassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#TaxIdentificationNumber
- * PersonIdentification7.TaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmTaxIdentificationNumber
+ * PersonIdentification7.mmTaxIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#IdentityCardNumber
- * PersonIdentification7.IdentityCardNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmIdentityCardNumber
+ * PersonIdentification7.mmIdentityCardNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#EmployerIdentificationNumber
- * PersonIdentification7.EmployerIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmEmployerIdentificationNumber
+ * PersonIdentification7.mmEmployerIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#EmployeeIdentificationNumber
- * PersonIdentification7.EmployeeIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmEmployeeIdentificationNumber
+ * PersonIdentification7.mmEmployeeIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#EmailAddress
- * PersonIdentification7.EmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmEmailAddress
+ * PersonIdentification7.mmEmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification7#DateAndPlaceOfBirth
- * PersonIdentification7.DateAndPlaceOfBirth}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification7#Other
- * PersonIdentification7.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmDateAndPlaceOfBirth
+ * PersonIdentification7.mmDateAndPlaceOfBirth}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification7#mmOther
+ * PersonIdentification7.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -78,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text driversLicenseNumber;
 	/**
 	 * Number assigned by a license authority to a driver's license.
 	 * <p>
@@ -116,8 +118,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#DriversLicenseNumber
-	 * PersonIdentification.DriversLicenseNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmDriversLicenseNumber
+	 * PersonIdentification.mmDriversLicenseNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,27 +141,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#DriverLicenseNumber
-	 * PersonIdentification11.DriverLicenseNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmDriverLicenseNumber
+	 * PersonIdentification11.mmDriverLicenseNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DriversLicenseNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDriversLicenseNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmDriversLicenseNumber;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.DriversLicenseNumber;
 			isDerived = false;
 			xmlTag = "DrvrsLicNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
 			definition = "Number assigned by a license authority to a driver's license.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.DriverLicenseNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmDriverLicenseNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text customerNumber;
 	/**
 	 * Number assigned by an agent to identify its customer.
 	 * <p>
@@ -189,13 +192,13 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#CustomerNumber
-	 * PersonIdentification11.CustomerNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmCustomerNumber
+	 * PersonIdentification11.mmCustomerNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
 			isDerived = false;
@@ -203,12 +206,13 @@ public class PersonIdentification7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerNumber";
 			definition = "Number assigned by an agent to identify its customer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.CustomerNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmCustomerNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text socialSecurityNumber;
 	/**
 	 * Number assigned by a social security agency.
 	 * <p>
@@ -221,8 +225,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#SocialSecurityNumber
-	 * PersonIdentification.SocialSecurityNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmSocialSecurityNumber
+	 * PersonIdentification.mmSocialSecurityNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -243,27 +247,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#SocialSecurityNumber
-	 * PersonIdentification11.SocialSecurityNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmSocialSecurityNumber
+	 * PersonIdentification11.mmSocialSecurityNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SocialSecurityNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSocialSecurityNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmSocialSecurityNumber;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.SocialSecurityNumber;
 			isDerived = false;
 			xmlTag = "SclSctyNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumber";
 			definition = "Number assigned by a social security agency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.SocialSecurityNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmSocialSecurityNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text alienRegistrationNumber;
 	/**
 	 * Number assigned by a government agency to identify foreign nationals.
 	 * <p>
@@ -276,8 +281,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#AlienRegistrationNumber
-	 * PersonIdentification.AlienRegistrationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmAlienRegistrationNumber
+	 * PersonIdentification.mmAlienRegistrationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,27 +304,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#AlienRegistrationNumber
-	 * PersonIdentification11.AlienRegistrationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmAlienRegistrationNumber
+	 * PersonIdentification11.mmAlienRegistrationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlienRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlienRegistrationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmAlienRegistrationNumber;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.AlienRegistrationNumber;
 			isDerived = false;
 			xmlTag = "AlnRegnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
 			definition = "Number assigned by a government agency to identify foreign nationals.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.AlienRegistrationNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmAlienRegistrationNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text passportNumber;
 	/**
 	 * Number assigned by a passport authority to a passport.
 	 * <p>
@@ -332,8 +338,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#PassportNumber
-	 * PersonIdentification.PassportNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPassportNumber
+	 * PersonIdentification.mmPassportNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -354,27 +360,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#PassportNumber
-	 * PersonIdentification11.PassportNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmPassportNumber
+	 * PersonIdentification11.mmPassportNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PassportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPassportNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPassportNumber;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.PassportNumber;
 			isDerived = false;
 			xmlTag = "PsptNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
 			definition = "Number assigned by a passport authority to a passport.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.PassportNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmPassportNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text taxIdentificationNumber;
 	/**
 	 * Number assigned by a tax authority to an entity.
 	 * <p>
@@ -387,8 +394,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -409,27 +416,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#TaxIdentificationNumber
-	 * PersonIdentification11.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmTaxIdentificationNumber
+	 * PersonIdentification11.mmTaxIdentificationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "TaxIdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.TaxIdentificationNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmTaxIdentificationNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text identityCardNumber;
 	/**
 	 * Number assigned by a national authority to an identity card.
 	 * <p>
@@ -442,8 +450,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#IdentityCardNumber
-	 * PersonIdentification.IdentityCardNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmIdentityCardNumber
+	 * PersonIdentification.mmIdentityCardNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -465,27 +473,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#IdentityCardNumber
-	 * PersonIdentification11.IdentityCardNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmIdentityCardNumber
+	 * PersonIdentification11.mmIdentityCardNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentityCardNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentityCardNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmIdentityCardNumber;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.IdentityCardNumber;
 			isDerived = false;
 			xmlTag = "IdntyCardNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCardNumber";
 			definition = "Number assigned by a national authority to an identity card.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.IdentityCardNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmIdentityCardNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text employerIdentificationNumber;
 	/**
 	 * Number assigned to an employer by a registration authority.
 	 * <p>
@@ -498,8 +507,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#EmployerIdentificationNumber
-	 * PersonIdentification.EmployerIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmEmployerIdentificationNumber
+	 * PersonIdentification.mmEmployerIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -521,27 +530,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#EmployerIdentificationNumber
-	 * PersonIdentification11.EmployerIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmEmployerIdentificationNumber
+	 * PersonIdentification11.mmEmployerIdentificationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EmployerIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEmployerIdentificationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmEmployerIdentificationNumber;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.EmployerIdentificationNumber;
 			isDerived = false;
 			xmlTag = "MplyrIdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
 			definition = "Number assigned to an employer by a registration authority.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.EmployerIdentificationNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmEmployerIdentificationNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text employeeIdentificationNumber;
 	/**
 	 * Number assigned to an employee by a employer.
 	 * <p>
@@ -571,13 +581,13 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#EmployeeIdentificationNumber
-	 * PersonIdentification11.EmployeeIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmEmployeeIdentificationNumber
+	 * PersonIdentification11.mmEmployeeIdentificationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EmployeeIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEmployeeIdentificationNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
 			isDerived = false;
@@ -585,12 +595,13 @@ public class PersonIdentification7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeIdentificationNumber";
 			definition = "Number assigned to an employee by a employer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.EmployeeIdentificationNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmEmployeeIdentificationNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max256Text emailAddress;
 	/**
 	 * Address for electronic mail (e-mail).
 	 * <p>
@@ -603,8 +614,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#EmailAddress
-	 * ElectronicAddress.EmailAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
+	 * ElectronicAddress.mmEmailAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -625,27 +636,28 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#EmailAddress
-	 * PersonIdentification11.EmailAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmEmailAddress
+	 * PersonIdentification11.mmEmailAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.EmailAddress;
 			isDerived = false;
 			xmlTag = "EmailAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.EmailAddress);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmEmailAddress);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected DateAndPlaceOfBirth dateAndPlaceOfBirth;
 	/**
 	 * Date and place of birth of a person.
 	 * <p>
@@ -657,8 +669,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#Person
-	 * PersonIdentification.Person}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPerson
+	 * PersonIdentification.mmPerson}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -679,34 +691,35 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#DateAndPlaceOfBirth
-	 * PersonIdentification11.DateAndPlaceOfBirth}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmDateAndPlaceOfBirth
+	 * PersonIdentification11.mmDateAndPlaceOfBirth}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#DateAndPlaceOfBirth
-	 * PersonIdentification5.DateAndPlaceOfBirth}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#mmDateAndPlaceOfBirth
+	 * PersonIdentification5.mmDateAndPlaceOfBirth}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateAndPlaceOfBirth = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateAndPlaceOfBirth = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPerson;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.Person;
 			isDerived = false;
 			xmlTag = "DtAndPlcOfBirth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndPlaceOfBirth";
 			definition = "Date and place of birth of a person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PersonIdentification5.DateAndPlaceOfBirth;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.DateAndPlaceOfBirth);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmDateAndPlaceOfBirth);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PersonIdentification5.mmDateAndPlaceOfBirth;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.DateAndPlaceOfBirth.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateAndPlaceOfBirth.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification4> other;
 	/**
 	 * Unique identification of a person, as assigned by an institution, using
 	 * an identification scheme.
@@ -719,8 +732,8 @@ public class PersonIdentification7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -743,52 +756,148 @@ public class PersonIdentification7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#Other
-	 * PersonIdentification11.Other}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmOther
+	 * PersonIdentification11.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#Other
-	 * PersonIdentification5.Other}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#mmOther
+	 * PersonIdentification5.mmOther}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PersonIdentification7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of a person, as assigned by an institution, using an identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PersonIdentification5.Other;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.Other);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification11.mmOther);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PersonIdentification5.mmOther;
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification7.DriversLicenseNumber, com.tools20022.repository.msg.PersonIdentification7.CustomerNumber,
-						com.tools20022.repository.msg.PersonIdentification7.SocialSecurityNumber, com.tools20022.repository.msg.PersonIdentification7.AlienRegistrationNumber,
-						com.tools20022.repository.msg.PersonIdentification7.PassportNumber, com.tools20022.repository.msg.PersonIdentification7.TaxIdentificationNumber,
-						com.tools20022.repository.msg.PersonIdentification7.IdentityCardNumber, com.tools20022.repository.msg.PersonIdentification7.EmployerIdentificationNumber,
-						com.tools20022.repository.msg.PersonIdentification7.EmployeeIdentificationNumber, com.tools20022.repository.msg.PersonIdentification7.EmailAddress,
-						com.tools20022.repository.msg.PersonIdentification7.DateAndPlaceOfBirth, com.tools20022.repository.msg.PersonIdentification7.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification7.mmDriversLicenseNumber, com.tools20022.repository.msg.PersonIdentification7.mmCustomerNumber,
+						com.tools20022.repository.msg.PersonIdentification7.mmSocialSecurityNumber, com.tools20022.repository.msg.PersonIdentification7.mmAlienRegistrationNumber,
+						com.tools20022.repository.msg.PersonIdentification7.mmPassportNumber, com.tools20022.repository.msg.PersonIdentification7.mmTaxIdentificationNumber,
+						com.tools20022.repository.msg.PersonIdentification7.mmIdentityCardNumber, com.tools20022.repository.msg.PersonIdentification7.mmEmployerIdentificationNumber,
+						com.tools20022.repository.msg.PersonIdentification7.mmEmployeeIdentificationNumber, com.tools20022.repository.msg.PersonIdentification7.mmEmailAddress,
+						com.tools20022.repository.msg.PersonIdentification7.mmDateAndPlaceOfBirth, com.tools20022.repository.msg.PersonIdentification7.mmOther);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentification7";
 				definition = "Set of unique and unambiguous ways to identify a person.";
-				previousVersion_lazy = () -> PersonIdentification5.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PersonIdentification11.mmObject());
+				previousVersion_lazy = () -> PersonIdentification5.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getDriversLicenseNumber() {
+		return driversLicenseNumber;
+	}
+
+	public void setDriversLicenseNumber(Max35Text driversLicenseNumber) {
+		this.driversLicenseNumber = driversLicenseNumber;
+	}
+
+	public Max35Text getCustomerNumber() {
+		return customerNumber;
+	}
+
+	public void setCustomerNumber(Max35Text customerNumber) {
+		this.customerNumber = customerNumber;
+	}
+
+	public Max35Text getSocialSecurityNumber() {
+		return socialSecurityNumber;
+	}
+
+	public void setSocialSecurityNumber(Max35Text socialSecurityNumber) {
+		this.socialSecurityNumber = socialSecurityNumber;
+	}
+
+	public Max35Text getAlienRegistrationNumber() {
+		return alienRegistrationNumber;
+	}
+
+	public void setAlienRegistrationNumber(Max35Text alienRegistrationNumber) {
+		this.alienRegistrationNumber = alienRegistrationNumber;
+	}
+
+	public Max35Text getPassportNumber() {
+		return passportNumber;
+	}
+
+	public void setPassportNumber(Max35Text passportNumber) {
+		this.passportNumber = passportNumber;
+	}
+
+	public Max35Text getTaxIdentificationNumber() {
+		return taxIdentificationNumber;
+	}
+
+	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+		this.taxIdentificationNumber = taxIdentificationNumber;
+	}
+
+	public Max35Text getIdentityCardNumber() {
+		return identityCardNumber;
+	}
+
+	public void setIdentityCardNumber(Max35Text identityCardNumber) {
+		this.identityCardNumber = identityCardNumber;
+	}
+
+	public Max35Text getEmployerIdentificationNumber() {
+		return employerIdentificationNumber;
+	}
+
+	public void setEmployerIdentificationNumber(Max35Text employerIdentificationNumber) {
+		this.employerIdentificationNumber = employerIdentificationNumber;
+	}
+
+	public Max35Text getEmployeeIdentificationNumber() {
+		return employeeIdentificationNumber;
+	}
+
+	public void setEmployeeIdentificationNumber(Max35Text employeeIdentificationNumber) {
+		this.employeeIdentificationNumber = employeeIdentificationNumber;
+	}
+
+	public Max256Text getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(Max256Text emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public DateAndPlaceOfBirth getDateAndPlaceOfBirth() {
+		return dateAndPlaceOfBirth;
+	}
+
+	public void setDateAndPlaceOfBirth(com.tools20022.repository.msg.DateAndPlaceOfBirth dateAndPlaceOfBirth) {
+		this.dateAndPlaceOfBirth = dateAndPlaceOfBirth;
+	}
+
+	public List<GenericIdentification4> getOther() {
+		return other;
+	}
+
+	public void setOther(List<com.tools20022.repository.msg.GenericIdentification4> other) {
+		this.other = other;
 	}
 }

@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#ElectionInstruction
- * DTCCorporateActionInstructionType1Code.ElectionInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#mmElectionInstruction
+ * DTCCorporateActionInstructionType1Code.mmElectionInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#ProtectInstruction
- * DTCCorporateActionInstructionType1Code.ProtectInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#mmProtectInstruction
+ * DTCCorporateActionInstructionType1Code.mmProtectInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#CoverProtectSystem
- * DTCCorporateActionInstructionType1Code.CoverProtectSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#mmCoverProtectSystem
+ * DTCCorporateActionInstructionType1Code.mmCoverProtectSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#CoverProtectAgent
- * DTCCorporateActionInstructionType1Code.CoverProtectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code#mmCoverProtectAgent
+ * DTCCorporateActionInstructionType1Code.mmCoverProtectAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 * name} = "ElectionInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode ElectionInstruction = new MMCode() {
+	public static final MMCode mmElectionInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionInstruction";
@@ -110,7 +110,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 * name} = "ProtectInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProtectInstruction = new MMCode() {
+	public static final MMCode mmProtectInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectInstruction";
@@ -133,7 +133,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 * name} = "CoverProtectSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode CoverProtectSystem = new MMCode() {
+	public static final MMCode mmCoverProtectSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverProtectSystem";
@@ -156,7 +156,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 * name} = "CoverProtectAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CoverProtectAgent = new MMCode() {
+	public static final MMCode mmCoverProtectAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverProtectAgent";
@@ -167,13 +167,13 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCCorporateActionInstructionType1Code";
 				definition = "Specifies the type of the corporate action instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.ElectionInstruction, com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.ProtectInstruction,
-						com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.CoverProtectSystem, com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.CoverProtectAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmElectionInstruction, com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmProtectInstruction,
+						com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmCoverProtectSystem, com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmCoverProtectAgent);
 				trace_lazy = () -> DTCCorporateActionInstructionTypeCode.mmObject();
 			}
 		});

@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommodityDerivate6#SettlementLocation
- * CommodityDerivate6.SettlementLocation}</li>
+ * {@linkplain com.tools20022.repository.msg.CommodityDerivate6#mmSettlementLocation
+ * CommodityDerivate6.mmSettlementLocation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommodityDerivate6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max25Text settlementLocation;
 	/**
 	 * Place where the delivery and the cash settlement of the base product
 	 * occurs.
@@ -95,17 +96,17 @@ public class CommodityDerivate6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementLocation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CommodityDerivate6.mmObject();
 			businessComponentTrace_lazy = () -> PlaceOfSettlement.mmObject();
+			componentContext_lazy = () -> CommodityDerivate6.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmLctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementLocation";
 			definition = "Place where the delivery and the cash settlement of the base product occurs. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
 		}
 	};
@@ -113,14 +114,22 @@ public class CommodityDerivate6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate6.SettlementLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate6.mmSettlementLocation);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate6";
 				definition = "Transparency calculation specific details for an energy commodity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max25Text getSettlementLocation() {
+		return settlementLocation;
+	}
+
+	public void setSettlementLocation(Max25Text settlementLocation) {
+		this.settlementLocation = settlementLocation;
 	}
 }

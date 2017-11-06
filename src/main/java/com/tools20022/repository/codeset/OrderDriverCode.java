@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.SideCode SideCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#Buy
- * OrderDriverCode.Buy}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#Sell
- * OrderDriverCode.Sell}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#mmBuy
+ * OrderDriverCode.mmBuy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#mmSell
+ * OrderDriverCode.mmSell}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class OrderDriverCode extends SideCode {
 	 * name} = "Buy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Buy = new MMCode() {
+	public static final MMCode mmBuy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
@@ -101,7 +101,7 @@ public class OrderDriverCode extends SideCode {
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sell = new MMCode() {
+	public static final MMCode mmSell = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
@@ -112,12 +112,12 @@ public class OrderDriverCode extends SideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderDriverCode";
 				definition = "Specifies if the order is sell or buy driven.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderDriverCode.Buy, com.tools20022.repository.codeset.OrderDriverCode.Sell);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderDriverCode.mmBuy, com.tools20022.repository.codeset.OrderDriverCode.mmSell);
 				trace_lazy = () -> SideCode.mmObject();
 			}
 		});

@@ -39,45 +39,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#PlaceAndName
- * UnderlyingSecurityExtension2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmPlaceAndName
+ * UnderlyingSecurityExtension2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#CountryOfListing
- * UnderlyingSecurityExtension2.CountryOfListing}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmCountryOfListing
+ * UnderlyingSecurityExtension2.mmCountryOfListing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#CountryOfIncorporation
- * UnderlyingSecurityExtension2.CountryOfIncorporation}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmCountryOfIncorporation
+ * UnderlyingSecurityExtension2.mmCountryOfIncorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#IncomeSourceCountry
- * UnderlyingSecurityExtension2.IncomeSourceCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmIncomeSourceCountry
+ * UnderlyingSecurityExtension2.mmIncomeSourceCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#IssuerDescription
- * UnderlyingSecurityExtension2.IssuerDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmIssuerDescription
+ * UnderlyingSecurityExtension2.mmIssuerDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#DTCAssetClass
- * UnderlyingSecurityExtension2.DTCAssetClass}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmDTCAssetClass
+ * UnderlyingSecurityExtension2.mmDTCAssetClass}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#DTCAssetType
- * UnderlyingSecurityExtension2.DTCAssetType}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmDTCAssetType
+ * UnderlyingSecurityExtension2.mmDTCAssetType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#PrimaryExchangeFlag
- * UnderlyingSecurityExtension2.PrimaryExchangeFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmPrimaryExchangeFlag
+ * UnderlyingSecurityExtension2.mmPrimaryExchangeFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#SecurityEligibilityIndicator
- * UnderlyingSecurityExtension2.SecurityEligibilityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmSecurityEligibilityIndicator
+ * UnderlyingSecurityExtension2.mmSecurityEligibilityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#SECRegisteredFlag
- * UnderlyingSecurityExtension2.SECRegisteredFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmSECRegisteredFlag
+ * UnderlyingSecurityExtension2.mmSECRegisteredFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#TickerSymbol
- * UnderlyingSecurityExtension2.TickerSymbol}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingSecurityExtension2#mmTickerSymbol
+ * UnderlyingSecurityExtension2.mmTickerSymbol}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnderlyingSecurityExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -119,7 +120,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -127,11 +128,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CountryCode countryOfListing;
 	/**
 	 * Country in which the security was issued.
 	 * <p>
@@ -159,7 +161,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Country in which the security was issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfListing = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -167,11 +169,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfListing";
 			definition = "Country in which the security was issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountryCode countryOfIncorporation;
 	/**
 	 * Country of incorporation of the issuer.
 	 * <p>
@@ -199,7 +202,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Country of incorporation of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIncorporation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIncorporation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -207,11 +210,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncorporation";
 			definition = "Country of incorporation of the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountryCode incomeSourceCountry;
 	/**
 	 * Country of source income for the security.
 	 * <p>
@@ -239,7 +243,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Country of source income for the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncomeSourceCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncomeSourceCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -247,11 +251,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeSourceCountry";
 			definition = "Country of source income for the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max70Text issuerDescription;
 	/**
 	 * Name of the issuer.
 	 * <p>
@@ -279,7 +284,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Name of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -287,11 +292,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerDescription";
 			definition = "Name of the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected AssetClass1Code dTCAssetClass;
 	/**
 	 * Classification of instruments in to asset classes at DTC (The Depository
 	 * Trust Corporation).
@@ -323,7 +329,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -331,11 +337,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments in to asset classes at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
 		}
 	};
+	protected DTCAssetType1Code dTCAssetType;
 	/**
 	 * Further classification of instruments into (issue) asset types at DTC
 	 * (The Depository Trust Corporation).
@@ -367,7 +374,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -375,11 +382,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator primaryExchangeFlag;
 	/**
 	 * Indicate if the stock exchange associated to place of listing code is
 	 * primary or secondary.
@@ -411,7 +419,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrimaryExchangeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrimaryExchangeFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -419,11 +427,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryExchangeFlag";
 			definition = "Indicate if the stock exchange associated to place of listing code is primary or secondary.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator securityEligibilityIndicator;
 	/**
 	 * Indicates whether the security is eligible for holding at DTC.
 	 * <p>
@@ -453,7 +462,7 @@ public class UnderlyingSecurityExtension2 {
 	 * "Indicates whether the security is eligible for holding at DTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityEligibilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityEligibilityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -461,11 +470,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibilityIndicator";
 			definition = "Indicates whether the security is eligible for holding at DTC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator sECRegisteredFlag;
 	/**
 	 * Indicates whether the event has been registered with US Securities
 	 * Exchange Commission (SEC).
@@ -497,7 +507,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SECRegisteredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSECRegisteredFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -505,11 +515,12 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SECRegisteredFlag";
 			definition = "Indicates whether the event has been registered with US Securities Exchange Commission (SEC).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text tickerSymbol;
 	/**
 	 * Ticket symbol for the event security (underlying security).
 	 * <p>
@@ -538,7 +549,7 @@ public class UnderlyingSecurityExtension2 {
 	 * "Ticket symbol for the event security (underlying security). "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TickerSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -546,8 +557,8 @@ public class UnderlyingSecurityExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Ticket symbol for the event security (underlying security). ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -555,18 +566,106 @@ public class UnderlyingSecurityExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityExtension2.PlaceAndName, com.tools20022.repository.msg.UnderlyingSecurityExtension2.CountryOfListing,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.CountryOfIncorporation, com.tools20022.repository.msg.UnderlyingSecurityExtension2.IncomeSourceCountry,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.IssuerDescription, com.tools20022.repository.msg.UnderlyingSecurityExtension2.DTCAssetClass,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.DTCAssetType, com.tools20022.repository.msg.UnderlyingSecurityExtension2.PrimaryExchangeFlag,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.SecurityEligibilityIndicator, com.tools20022.repository.msg.UnderlyingSecurityExtension2.SECRegisteredFlag,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.TickerSymbol);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmPlaceAndName, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmCountryOfListing,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmCountryOfIncorporation, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmIncomeSourceCountry,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmIssuerDescription, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmDTCAssetClass,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmDTCAssetType, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmPrimaryExchangeFlag,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmSecurityEligibilityIndicator, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmSECRegisteredFlag,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmTickerSymbol);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnderlyingSecurityExtension2";
 				definition = "Provides additional information regarding underlying security details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public CountryCode getCountryOfListing() {
+		return countryOfListing;
+	}
+
+	public void setCountryOfListing(CountryCode countryOfListing) {
+		this.countryOfListing = countryOfListing;
+	}
+
+	public CountryCode getCountryOfIncorporation() {
+		return countryOfIncorporation;
+	}
+
+	public void setCountryOfIncorporation(CountryCode countryOfIncorporation) {
+		this.countryOfIncorporation = countryOfIncorporation;
+	}
+
+	public CountryCode getIncomeSourceCountry() {
+		return incomeSourceCountry;
+	}
+
+	public void setIncomeSourceCountry(CountryCode incomeSourceCountry) {
+		this.incomeSourceCountry = incomeSourceCountry;
+	}
+
+	public Max70Text getIssuerDescription() {
+		return issuerDescription;
+	}
+
+	public void setIssuerDescription(Max70Text issuerDescription) {
+		this.issuerDescription = issuerDescription;
+	}
+
+	public AssetClass1Code getDTCAssetClass() {
+		return dTCAssetClass;
+	}
+
+	public void setDTCAssetClass(AssetClass1Code dTCAssetClass) {
+		this.dTCAssetClass = dTCAssetClass;
+	}
+
+	public DTCAssetType1Code getDTCAssetType() {
+		return dTCAssetType;
+	}
+
+	public void setDTCAssetType(DTCAssetType1Code dTCAssetType) {
+		this.dTCAssetType = dTCAssetType;
+	}
+
+	public YesNoIndicator getPrimaryExchangeFlag() {
+		return primaryExchangeFlag;
+	}
+
+	public void setPrimaryExchangeFlag(YesNoIndicator primaryExchangeFlag) {
+		this.primaryExchangeFlag = primaryExchangeFlag;
+	}
+
+	public YesNoIndicator getSecurityEligibilityIndicator() {
+		return securityEligibilityIndicator;
+	}
+
+	public void setSecurityEligibilityIndicator(YesNoIndicator securityEligibilityIndicator) {
+		this.securityEligibilityIndicator = securityEligibilityIndicator;
+	}
+
+	public YesNoIndicator getSECRegisteredFlag() {
+		return sECRegisteredFlag;
+	}
+
+	public void setSECRegisteredFlag(YesNoIndicator sECRegisteredFlag) {
+		this.sECRegisteredFlag = sECRegisteredFlag;
+	}
+
+	public Max35Text getTickerSymbol() {
+		return tickerSymbol;
+	}
+
+	public void setTickerSymbol(Max35Text tickerSymbol) {
+		this.tickerSymbol = tickerSymbol;
 	}
 }

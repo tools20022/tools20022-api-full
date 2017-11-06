@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#Prorata
- * PreAllocationMethod1Code.Prorata}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#mmProrata
+ * PreAllocationMethod1Code.mmProrata}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#SpeakFirst
- * PreAllocationMethod1Code.SpeakFirst}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#mmSpeakFirst
+ * PreAllocationMethod1Code.mmSpeakFirst}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	 * name} = "Prorata"</li>
 	 * </ul>
 	 */
-	public static final MMCode Prorata = new MMCode() {
+	public static final MMCode mmProrata = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prorata";
@@ -104,7 +104,7 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	 * name} = "SpeakFirst"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpeakFirst = new MMCode() {
+	public static final MMCode mmSpeakFirst = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
@@ -115,12 +115,12 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PreAllocationMethod1Code";
 				definition = "Indicates the method of preallocation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreAllocationMethod1Code.Prorata, com.tools20022.repository.codeset.PreAllocationMethod1Code.SpeakFirst);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreAllocationMethod1Code.mmProrata, com.tools20022.repository.codeset.PreAllocationMethod1Code.mmSpeakFirst);
 				trace_lazy = () -> PreAllocationMethodCode.mmObject();
 			}
 		});

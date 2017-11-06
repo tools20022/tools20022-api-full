@@ -40,20 +40,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment2#FirstAdvisingPartyAdditionalInformation
- * Amendment2.FirstAdvisingPartyAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment2#mmFirstAdvisingPartyAdditionalInformation
+ * Amendment2.mmFirstAdvisingPartyAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment2#SecondAdvisingPartyAdditionalInformation
- * Amendment2.SecondAdvisingPartyAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment2#mmSecondAdvisingPartyAdditionalInformation
+ * Amendment2.mmSecondAdvisingPartyAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking1#SecondAdvisingParty
- * Undertaking1.SecondAdvisingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking1#mmSecondAdvisingParty
+ * Undertaking1.mmSecondAdvisingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking4#SecondAdvisingParty
- * Undertaking4.SecondAdvisingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking4#mmSecondAdvisingParty
+ * Undertaking4.mmSecondAdvisingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Undertaking3#SecondAdvisingParty
- * Undertaking3.SecondAdvisingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.Undertaking3#mmSecondAdvisingParty
+ * Undertaking3.mmSecondAdvisingParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -72,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,12 +93,12 @@ public class UndertakingAdvisingParty extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAdvisingParty";
 				definition = "Party that advises the undertaking at the request of the issuer. For further clarification, reference the applicable rules to which the undertaking is subject.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment2.FirstAdvisingPartyAdditionalInformation, com.tools20022.repository.msg.Amendment2.SecondAdvisingPartyAdditionalInformation,
-						com.tools20022.repository.msg.Undertaking1.SecondAdvisingParty, com.tools20022.repository.msg.Undertaking4.SecondAdvisingParty, com.tools20022.repository.msg.Undertaking3.SecondAdvisingParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment2.mmFirstAdvisingPartyAdditionalInformation, com.tools20022.repository.msg.Amendment2.mmSecondAdvisingPartyAdditionalInformation,
+						com.tools20022.repository.msg.Undertaking1.mmSecondAdvisingParty, com.tools20022.repository.msg.Undertaking4.mmSecondAdvisingParty, com.tools20022.repository.msg.Undertaking3.mmSecondAdvisingParty);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(AdvisingPartyAdditionalInformation1.mmObject());
 			}

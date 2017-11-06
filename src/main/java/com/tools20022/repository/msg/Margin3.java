@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.MarginCall;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the calculation of the margin.
@@ -33,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Margin3#InitialMargin
- * Margin3.InitialMargin}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Margin3#VariationMargin
- * Margin3.VariationMargin}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Margin3#OtherMargin
- * Margin3.OtherMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin3#mmInitialMargin
+ * Margin3.mmInitialMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin3#mmVariationMargin
+ * Margin3.mmVariationMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin3#mmOtherMargin
+ * Margin3.mmOtherMargin}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Margin3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amount2 initialMargin;
 	/**
 	 * Margin required for absorbing future market price fluctuations (market
 	 * risks) occurring between the default of a member and close-out of
@@ -73,8 +75,8 @@ public class Margin3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#InitialMargin
-	 * MarginCall.InitialMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmInitialMargin
+	 * MarginCall.mmInitialMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Margin3
@@ -94,21 +96,22 @@ public class Margin3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InitialMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitialMargin = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmInitialMargin;
 			componentContext_lazy = () -> Margin3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.InitialMargin;
 			isDerived = false;
 			xmlTag = "InitlMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMargin";
 			definition = "Margin required for absorbing future market price fluctuations (market risks) occurring between the default of a member and close-out of unsettled securities positions by the central counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.VariationMargin3> variationMargin;
 	/**
 	 * Provides details on the calculation of the variation margin.
 	 * <p>
@@ -120,8 +123,8 @@ public class Margin3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#VariationMargin
-	 * MarginCall.VariationMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmVariationMargin
+	 * MarginCall.mmVariationMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Margin3
@@ -140,20 +143,21 @@ public class Margin3 {
 	 * "Provides details on the calculation of the variation margin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VariationMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> Margin3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.VariationMargin;
 			isDerived = false;
 			xmlTag = "VartnMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Provides details on the calculation of the variation margin.";
 			minOccurs = 0;
-			type_lazy = () -> VariationMargin3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Margin4> otherMargin;
 	/**
 	 * Provides details on the margin type and amount.
 	 * <p>
@@ -184,31 +188,55 @@ public class Margin3 {
 	 * definition} = "Provides details on the margin type and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherMargin = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Margin3.mmObject();
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
+			componentContext_lazy = () -> Margin3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherMargin";
 			definition = "Provides details on the margin type and amount.";
 			minOccurs = 0;
-			complexType_lazy = () -> Margin4.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.Margin4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin3.InitialMargin, com.tools20022.repository.msg.Margin3.VariationMargin, com.tools20022.repository.msg.Margin3.OtherMargin);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin3.mmInitialMargin, com.tools20022.repository.msg.Margin3.mmVariationMargin, com.tools20022.repository.msg.Margin3.mmOtherMargin);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Margin3";
 				definition = "Provides details on the calculation of the margin.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amount2 getInitialMargin() {
+		return initialMargin;
+	}
+
+	public void setInitialMargin(com.tools20022.repository.msg.Amount2 initialMargin) {
+		this.initialMargin = initialMargin;
+	}
+
+	public List<VariationMargin3> getVariationMargin() {
+		return variationMargin;
+	}
+
+	public void setVariationMargin(List<com.tools20022.repository.msg.VariationMargin3> variationMargin) {
+		this.variationMargin = variationMargin;
+	}
+
+	public List<Margin4> getOtherMargin() {
+		return otherMargin;
+	}
+
+	public void setOtherMargin(List<com.tools20022.repository.msg.Margin4> otherMargin) {
+		this.otherMargin = otherMargin;
 	}
 }

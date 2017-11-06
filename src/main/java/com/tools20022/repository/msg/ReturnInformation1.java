@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnInformation1#ReturnedInterbankSettlementAmount
- * ReturnInformation1.ReturnedInterbankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnInformation1#mmReturnedInterbankSettlementAmount
+ * ReturnInformation1.mmReturnedInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnInformation1#InterbankSettlementDate
- * ReturnInformation1.InterbankSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnInformation1#mmInterbankSettlementDate
+ * ReturnInformation1.mmInterbankSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnInformation1#ClearingChannel
- * ReturnInformation1.ClearingChannel}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnInformation1#mmClearingChannel
+ * ReturnInformation1.mmClearingChannel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReturnInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount returnedInterbankSettlementAmount;
 	/**
 	 * Returned amount of money moved between the instructing agent and the
 	 * instructed agent in the return transaction.
@@ -84,8 +85,8 @@ public class ReturnInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class ReturnInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReturnedInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReturnedInterbankSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> ReturnInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "RtrdIntrBkSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnedInterbankSettlementAmount";
 			definition = "Returned amount of money moved between the instructing agent and the instructed agent in the return transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate interbankSettlementDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -134,8 +136,8 @@ public class ReturnInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +158,21 @@ public class ReturnInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> ReturnInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ClearingChannel2Code clearingChannel;
 	/**
 	 * Specifies the clearing channel to be used to process the payment
 	 * instruction.
@@ -184,8 +187,8 @@ public class ReturnInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ClearingChannel
-	 * PaymentProcessing.ClearingChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
+	 * PaymentProcessing.mmClearingChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,17 +209,17 @@ public class ReturnInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> ReturnInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ClearingChannel;
 			isDerived = false;
 			xmlTag = "ClrChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
 		}
 	};
@@ -224,15 +227,39 @@ public class ReturnInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnInformation1.ReturnedInterbankSettlementAmount, com.tools20022.repository.msg.ReturnInformation1.InterbankSettlementDate,
-						com.tools20022.repository.msg.ReturnInformation1.ClearingChannel);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnInformation1.mmReturnedInterbankSettlementAmount, com.tools20022.repository.msg.ReturnInformation1.mmInterbankSettlementDate,
+						com.tools20022.repository.msg.ReturnInformation1.mmClearingChannel);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnInformation1";
 				definition = "Details on the returns expected by the debtor side after cancellation or modification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getReturnedInterbankSettlementAmount() {
+		return returnedInterbankSettlementAmount;
+	}
+
+	public void setReturnedInterbankSettlementAmount(CurrencyAndAmount returnedInterbankSettlementAmount) {
+		this.returnedInterbankSettlementAmount = returnedInterbankSettlementAmount;
+	}
+
+	public ISODate getInterbankSettlementDate() {
+		return interbankSettlementDate;
+	}
+
+	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = interbankSettlementDate;
+	}
+
+	public ClearingChannel2Code getClearingChannel() {
+		return clearingChannel;
+	}
+
+	public void setClearingChannel(ClearingChannel2Code clearingChannel) {
+		this.clearingChannel = clearingChannel;
 	}
 }

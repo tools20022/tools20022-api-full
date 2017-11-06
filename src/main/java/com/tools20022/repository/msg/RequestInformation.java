@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestInformation#Identification
- * RequestInformation.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestInformation#mmIdentification
+ * RequestInformation.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestInformation#RequestedExecutionDate
- * RequestInformation.RequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestInformation#mmRequestedExecutionDate
+ * RequestInformation.mmRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestInformation#QuantityOfSecurity
- * RequestInformation.QuantityOfSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestInformation#mmQuantityOfSecurity
+ * RequestInformation.mmQuantityOfSecurity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identifies the request.
 	 * <p>
@@ -94,7 +95,7 @@ public class RequestInformation {
 	 * definition} = "Identifies the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestInformation.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class RequestInformation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime requestedExecutionDate;
 	/**
 	 * Date at which the instruction must b e executed.
 	 * <p>
@@ -119,8 +121,8 @@ public class RequestInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#RequestedExecutionDate
-	 * InstructionForMeeting.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmRequestedExecutionDate
+	 * InstructionForMeeting.mmRequestedExecutionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,20 +141,21 @@ public class RequestInformation {
 	 * definition} = "Date at which the instruction must b e executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> RequestInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.RequestedExecutionDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must b e executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Number quantityOfSecurity;
 	/**
 	 * Quantity expressed as a number, eg, a number of shares.
 	 * <p>
@@ -165,8 +168,8 @@ public class RequestInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,17 +188,17 @@ public class RequestInformation {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuantityOfSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantityOfSecurity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> RequestInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "QtyOfScty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityOfSecurity";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -203,15 +206,39 @@ public class RequestInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestInformation.Identification, com.tools20022.repository.msg.RequestInformation.RequestedExecutionDate,
-						com.tools20022.repository.msg.RequestInformation.QuantityOfSecurity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestInformation.mmIdentification, com.tools20022.repository.msg.RequestInformation.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.RequestInformation.mmQuantityOfSecurity);
 				trace_lazy = () -> InstructionForMeeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestInformation";
 				definition = "Request to execute instructions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODateTime getRequestedExecutionDate() {
+		return requestedExecutionDate;
+	}
+
+	public void setRequestedExecutionDate(ISODateTime requestedExecutionDate) {
+		this.requestedExecutionDate = requestedExecutionDate;
+	}
+
+	public Number getQuantityOfSecurity() {
+		return quantityOfSecurity;
+	}
+
+	public void setQuantityOfSecurity(Number quantityOfSecurity) {
+		this.quantityOfSecurity = quantityOfSecurity;
 	}
 }

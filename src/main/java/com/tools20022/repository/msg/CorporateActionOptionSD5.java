@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#PlaceAndName
- * CorporateActionOptionSD5.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#mmPlaceAndName
+ * CorporateActionOptionSD5.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#OptionStatus
- * CorporateActionOptionSD5.OptionStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#mmOptionStatus
+ * CorporateActionOptionSD5.mmOptionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#RandomLotPreferenceFlag
- * CorporateActionOptionSD5.RandomLotPreferenceFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#mmRandomLotPreferenceFlag
+ * CorporateActionOptionSD5.mmRandomLotPreferenceFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#NewShareDispatchedDate
- * CorporateActionOptionSD5.NewShareDispatchedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD5#mmNewShareDispatchedDate
+ * CorporateActionOptionSD5.mmNewShareDispatchedDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOptionSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -95,7 +96,7 @@ public class CorporateActionOptionSD5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class CorporateActionOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected WorkflowStatus1Code optionStatus;
 	/**
 	 * Workflow status of the specified option based on the consistency of the
 	 * issuer declared data elements (excluding DTC data elements).
@@ -139,7 +141,7 @@ public class CorporateActionOptionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -147,11 +149,12 @@ public class CorporateActionOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStatus";
 			definition = "Workflow status of the specified option based on the consistency of the issuer declared data elements (excluding DTC data elements).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator randomLotPreferenceFlag;
 	/**
 	 * Indicates whether or not the offeror will select random lots if the offer
 	 * has been prorated. The offeror may accept or reject conditional tenders
@@ -187,7 +190,7 @@ public class CorporateActionOptionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RandomLotPreferenceFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRandomLotPreferenceFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class CorporateActionOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomLotPreferenceFlag";
 			definition = "Indicates whether or not the offeror will select random lots if the offer has been prorated. The offeror may accept or reject conditional tenders on a random basis. Holders must indicate their willingness to have their rejected conditional tender accepted by random lot (if necessary). The holder must surrender all shares held in order to be eligible for this preference. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISODate newShareDispatchedDate;
 	/**
 	 * Date on which the new shares to be issued will be distributed, as opposed
 	 * to the "declared payable date." This date is typically used in some Asian
@@ -231,7 +235,7 @@ public class CorporateActionOptionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewShareDispatchedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewShareDispatchedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -239,8 +243,8 @@ public class CorporateActionOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewShareDispatchedDate";
 			definition = "Date on which the new shares to be issued will be distributed, as opposed to the \"declared payable date.\" This date is typically used in some Asian markets.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -248,14 +252,46 @@ public class CorporateActionOptionSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD5.PlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD5.OptionStatus,
-						com.tools20022.repository.msg.CorporateActionOptionSD5.RandomLotPreferenceFlag, com.tools20022.repository.msg.CorporateActionOptionSD5.NewShareDispatchedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD5.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD5.mmOptionStatus,
+						com.tools20022.repository.msg.CorporateActionOptionSD5.mmRandomLotPreferenceFlag, com.tools20022.repository.msg.CorporateActionOptionSD5.mmNewShareDispatchedDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD5";
 				definition = "Provides additional information regarding corporate action option details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public WorkflowStatus1Code getOptionStatus() {
+		return optionStatus;
+	}
+
+	public void setOptionStatus(WorkflowStatus1Code optionStatus) {
+		this.optionStatus = optionStatus;
+	}
+
+	public YesNoIndicator getRandomLotPreferenceFlag() {
+		return randomLotPreferenceFlag;
+	}
+
+	public void setRandomLotPreferenceFlag(YesNoIndicator randomLotPreferenceFlag) {
+		this.randomLotPreferenceFlag = randomLotPreferenceFlag;
+	}
+
+	public ISODate getNewShareDispatchedDate() {
+		return newShareDispatchedDate;
+	}
+
+	public void setNewShareDispatchedDate(ISODate newShareDispatchedDate) {
+		this.newShareDispatchedDate = newShareDispatchedDate;
 	}
 }

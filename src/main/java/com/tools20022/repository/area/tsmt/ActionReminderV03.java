@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -80,33 +81,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#ReminderIdentification
- * ActionReminderV03.ReminderIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmReminderIdentification
+ * ActionReminderV03.mmReminderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#TransactionIdentification
- * ActionReminderV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmTransactionIdentification
+ * ActionReminderV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#EstablishedBaselineIdentification
- * ActionReminderV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmEstablishedBaselineIdentification
+ * ActionReminderV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#TransactionStatus
- * ActionReminderV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmTransactionStatus
+ * ActionReminderV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#UserTransactionReference
- * ActionReminderV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmUserTransactionReference
+ * ActionReminderV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#MessageRequiringAction
- * ActionReminderV03.MessageRequiringAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmMessageRequiringAction
+ * ActionReminderV03.mmMessageRequiringAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#PendingRequestForAction
- * ActionReminderV03.PendingRequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmPendingRequestForAction
+ * ActionReminderV03.mmPendingRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#identifier
- * ActionReminderV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.024.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,6 +121,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ActionReminderV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 reminderIdentification;
 	/**
 	 * Identifies the reminder message.
 	 * <p>
@@ -145,17 +145,18 @@ public class ActionReminderV03 {
 	 * definition} = "Identifies the reminder message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReminderIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReminderIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RmndrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReminderIdentification";
 			definition = "Identifies the reminder message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -183,17 +184,18 @@ public class ActionReminderV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * baseline when it is established.
@@ -220,17 +222,18 @@ public class ActionReminderV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 	};
+	protected TransactionStatus4 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -255,17 +258,18 @@ public class ActionReminderV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 	};
+	protected List<DocumentIdentification5> userTransactionReference;
 	/**
 	 * Reference to the transaction for each financial institution which is a
 	 * party to the transaction.
@@ -292,17 +296,18 @@ public class ActionReminderV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 	};
+	protected MessageIdentification1 messageRequiringAction;
 	/**
 	 * Identifies the message for which an action is required.
 	 * <p>
@@ -326,17 +331,18 @@ public class ActionReminderV03 {
 	 * definition} = "Identifies the message for which an action is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageRequiringAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageRequiringAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgReqrngActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRequiringAction";
 			definition = "Identifies the message for which an action is required.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected PendingActivity2 pendingRequestForAction;
 	/**
 	 * Next processing step required.
 	 * <p>
@@ -360,42 +366,15 @@ public class ActionReminderV03 {
 	 * definition} = "Next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PendingRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPendingRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PdgReqForActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingRequestForAction";
 			definition = "Next processing step required.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PendingActivity2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "024"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "024";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -409,13 +388,76 @@ public class ActionReminderV03 {
 				rootElement = "Document";
 				xmlTag = "ActnRmndr";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActionReminderV03.ReminderIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.UserTransactionReference, com.tools20022.repository.area.tsmt.ActionReminderV03.MessageRequiringAction,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.PendingRequestForAction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.ActionReminderV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActionReminderV03.mmReminderIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.ActionReminderV03.mmMessageRequiringAction,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmPendingRequestForAction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "024";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getReminderIdentification() {
+		return reminderIdentification;
+	}
+
+	public void setReminderIdentification(MessageIdentification1 reminderIdentification) {
+		this.reminderIdentification = reminderIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification3 getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification;
+	}
+
+	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	}
+
+	public TransactionStatus4 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public MessageIdentification1 getMessageRequiringAction() {
+		return messageRequiringAction;
+	}
+
+	public void setMessageRequiringAction(MessageIdentification1 messageRequiringAction) {
+		this.messageRequiringAction = messageRequiringAction;
+	}
+
+	public PendingActivity2 getPendingRequestForAction() {
+		return pendingRequestForAction;
+	}
+
+	public void setPendingRequestForAction(PendingActivity2 pendingRequestForAction) {
+		this.pendingRequestForAction = pendingRequestForAction;
 	}
 }

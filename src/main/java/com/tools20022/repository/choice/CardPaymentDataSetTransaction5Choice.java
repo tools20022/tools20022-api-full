@@ -37,24 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#Completion
- * CardPaymentDataSetTransaction5Choice.Completion}</li>
+ * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#mmCompletion
+ * CardPaymentDataSetTransaction5Choice.mmCompletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#Cancellation
- * CardPaymentDataSetTransaction5Choice.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#mmCancellation
+ * CardPaymentDataSetTransaction5Choice.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#AuthorisationRequest
- * CardPaymentDataSetTransaction5Choice.AuthorisationRequest}</li>
+ * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#mmAuthorisationRequest
+ * CardPaymentDataSetTransaction5Choice.mmAuthorisationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#AuthorisationResponse
- * CardPaymentDataSetTransaction5Choice.AuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice#mmAuthorisationResponse
+ * CardPaymentDataSetTransaction5Choice.mmAuthorisationResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentDataSetTransaction5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardPaymentDataSetTransaction18 completion;
 	/**
 	 * Completed card payment transaction to be captured.
 	 * <p>
@@ -103,11 +104,11 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#Completion
-	 * CardPaymentDataSetTransaction4Choice.Completion}</li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#mmCompletion
+	 * CardPaymentDataSetTransaction4Choice.mmCompletion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Completion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompletion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSetTransaction5Choice.mmObject();
 			isDerived = false;
@@ -115,12 +116,13 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completion";
 			definition = "Completed card payment transaction to be captured.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.Completion;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmCompletion;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction18.mmObject();
 		}
 	};
+	protected CardPaymentDataSetTransaction19 cancellation;
 	/**
 	 * Cancelled card payment transaction to be captured.
 	 * <p>
@@ -150,11 +152,11 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#Cancellation
-	 * CardPaymentDataSetTransaction4Choice.Cancellation}</li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#mmCancellation
+	 * CardPaymentDataSetTransaction4Choice.mmCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Cancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSetTransaction5Choice.mmObject();
 			isDerived = false;
@@ -162,12 +164,13 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Cancelled card payment transaction to be captured.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.Cancellation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmCancellation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction19.mmObject();
 		}
 	};
+	protected CardPaymentDataSetTransaction20 authorisationRequest;
 	/**
 	 * Card payment transaction including an authorisation request.
 	 * <p>
@@ -198,11 +201,11 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#AuthorisationRequest
-	 * CardPaymentDataSetTransaction4Choice.AuthorisationRequest}</li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#mmAuthorisationRequest
+	 * CardPaymentDataSetTransaction4Choice.mmAuthorisationRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthorisationRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorisationRequest = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSetTransaction5Choice.mmObject();
 			isDerived = false;
@@ -210,12 +213,13 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
 			definition = "Card payment transaction including an authorisation request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.AuthorisationRequest;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmAuthorisationRequest;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction20.mmObject();
 		}
 	};
+	protected CardPaymentDataSetTransaction21 authorisationResponse;
 	/**
 	 * Card payment transaction including an authorisation response.
 	 * <p>
@@ -246,11 +250,11 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#AuthorisationResponse
-	 * CardPaymentDataSetTransaction4Choice.AuthorisationResponse}</li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice#mmAuthorisationResponse
+	 * CardPaymentDataSetTransaction4Choice.mmAuthorisationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthorisationResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorisationResponse = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSetTransaction5Choice.mmObject();
 			isDerived = false;
@@ -258,9 +262,9 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
 			definition = "Card payment transaction including an authorisation response.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.AuthorisationResponse;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmAuthorisationResponse;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction21.mmObject();
 		}
 	};
@@ -268,9 +272,9 @@ public class CardPaymentDataSetTransaction5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.Completion, com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.Cancellation,
-						com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.AuthorisationRequest, com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.AuthorisationResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.mmCompletion, com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.mmCancellation,
+						com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.mmAuthorisationRequest, com.tools20022.repository.choice.CardPaymentDataSetTransaction5Choice.mmAuthorisationResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction5Choice";
 				definition = "Card payment transaction choice between cancellation, authorisation request and authorisation response.";
@@ -278,5 +282,37 @@ public class CardPaymentDataSetTransaction5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardPaymentDataSetTransaction18 getCompletion() {
+		return completion;
+	}
+
+	public void setCompletion(CardPaymentDataSetTransaction18 completion) {
+		this.completion = completion;
+	}
+
+	public CardPaymentDataSetTransaction19 getCancellation() {
+		return cancellation;
+	}
+
+	public void setCancellation(CardPaymentDataSetTransaction19 cancellation) {
+		this.cancellation = cancellation;
+	}
+
+	public CardPaymentDataSetTransaction20 getAuthorisationRequest() {
+		return authorisationRequest;
+	}
+
+	public void setAuthorisationRequest(CardPaymentDataSetTransaction20 authorisationRequest) {
+		this.authorisationRequest = authorisationRequest;
+	}
+
+	public CardPaymentDataSetTransaction21 getAuthorisationResponse() {
+		return authorisationResponse;
+	}
+
+	public void setAuthorisationResponse(CardPaymentDataSetTransaction21 authorisationResponse) {
+		this.authorisationResponse = authorisationResponse;
 	}
 }

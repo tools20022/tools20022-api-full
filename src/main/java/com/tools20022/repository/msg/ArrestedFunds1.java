@@ -34,22 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ArrestedFunds1#ArrestIdentification
- * ArrestedFunds1.ArrestIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ArrestedFunds1#TotalAmount
- * ArrestedFunds1.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ArrestedFunds1#mmArrestIdentification
+ * ArrestedFunds1.mmArrestIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ArrestedFunds1#mmTotalAmount
+ * ArrestedFunds1.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ArrestedFunds1#RemainingUnpaidAmount
- * ArrestedFunds1.RemainingUnpaidAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ArrestedFunds1#ArrestedAmount
- * ArrestedFunds1.ArrestedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ArrestedFunds1#mmRemainingUnpaidAmount
+ * ArrestedFunds1.mmRemainingUnpaidAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ArrestedFunds1#mmArrestedAmount
+ * ArrestedFunds1.mmArrestedAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ArrestedFunds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max10Text arrestIdentification;
 	/**
 	 * Identification of the arrest order assigned by the account servicer.
 	 * <p>
@@ -90,7 +92,7 @@ public class ArrestedFunds1 {
 	 * "Identification of the arrest order assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ArrestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmArrestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class ArrestedFunds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArrestIdentification";
 			definition = "Identification of the arrest order assigned by the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalAmount;
 	/**
 	 * Total amount owed subject to arrest.
 	 * <p>
@@ -130,7 +133,7 @@ public class ArrestedFunds1 {
 	 * definition} = "Total amount owed subject to arrest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -138,11 +141,12 @@ public class ArrestedFunds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount owed subject to arrest.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount remainingUnpaidAmount;
 	/**
 	 * Remaining unpaid amount out of total amount owed subject to arrest.
 	 * <p>
@@ -171,7 +175,7 @@ public class ArrestedFunds1 {
 	 * "Remaining unpaid amount out of total amount owed subject to arrest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemainingUnpaidAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemainingUnpaidAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -179,11 +183,12 @@ public class ArrestedFunds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingUnpaidAmount";
 			definition = "Remaining unpaid amount out of total amount owed subject to arrest.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount arrestedAmount;
 	/**
 	 * Funds blocked for settlement of the arrest order.
 	 * <p>
@@ -211,7 +216,7 @@ public class ArrestedFunds1 {
 	 * definition} = "Funds blocked for settlement of the arrest order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ArrestedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmArrestedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -219,8 +224,8 @@ public class ArrestedFunds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArrestedAmount";
 			definition = "Funds blocked for settlement of the arrest order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -228,14 +233,46 @@ public class ArrestedFunds1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ArrestedFunds1.ArrestIdentification, com.tools20022.repository.msg.ArrestedFunds1.TotalAmount,
-						com.tools20022.repository.msg.ArrestedFunds1.RemainingUnpaidAmount, com.tools20022.repository.msg.ArrestedFunds1.ArrestedAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ArrestedFunds1.mmArrestIdentification, com.tools20022.repository.msg.ArrestedFunds1.mmTotalAmount,
+						com.tools20022.repository.msg.ArrestedFunds1.mmRemainingUnpaidAmount, com.tools20022.repository.msg.ArrestedFunds1.mmArrestedAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ArrestedFunds1";
 				definition = "Information about funds that have been arrested. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max10Text getArrestIdentification() {
+		return arrestIdentification;
+	}
+
+	public void setArrestIdentification(Max10Text arrestIdentification) {
+		this.arrestIdentification = arrestIdentification;
+	}
+
+	public ActiveCurrencyAndAmount getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(ActiveCurrencyAndAmount totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public ActiveCurrencyAndAmount getRemainingUnpaidAmount() {
+		return remainingUnpaidAmount;
+	}
+
+	public void setRemainingUnpaidAmount(ActiveCurrencyAndAmount remainingUnpaidAmount) {
+		this.remainingUnpaidAmount = remainingUnpaidAmount;
+	}
+
+	public ActiveCurrencyAndAmount getArrestedAmount() {
+		return arrestedAmount;
+	}
+
+	public void setArrestedAmount(ActiveCurrencyAndAmount arrestedAmount) {
+		this.arrestedAmount = arrestedAmount;
 	}
 }

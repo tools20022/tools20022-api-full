@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the movement instructions.
@@ -32,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MovementInstruction1#MovementGeneralInformation
- * MovementInstruction1.MovementGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MovementInstruction1#mmMovementGeneralInformation
+ * MovementInstruction1.mmMovementGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MovementInstruction1#UnderlyingSecuritiesMovementDetails
- * MovementInstruction1.UnderlyingSecuritiesMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.MovementInstruction1#mmUnderlyingSecuritiesMovementDetails
+ * MovementInstruction1.mmUnderlyingSecuritiesMovementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MovementInstruction1#UnderlyingCashMovementDetails
- * MovementInstruction1.UnderlyingCashMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.MovementInstruction1#mmUnderlyingCashMovementDetails
+ * MovementInstruction1.mmUnderlyingCashMovementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MovementInstruction1#ProceedsMovementDetails
- * MovementInstruction1.ProceedsMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.MovementInstruction1#mmProceedsMovementDetails
+ * MovementInstruction1.mmProceedsMovementDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#MovementDetails
- * AgentCAMovementCancellationRequestV01.MovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01#mmMovementDetails
+ * AgentCAMovementCancellationRequestV01.mmMovementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MovementInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionMovement1 movementGeneralInformation;
 	/**
 	 * Provides general information about the movement.
 	 * <p>
@@ -99,7 +101,7 @@ public class MovementInstruction1 {
 	 * definition} = "Provides general information about the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MovementGeneralInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMovementGeneralInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
@@ -107,12 +109,13 @@ public class MovementInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementGeneralInformation";
 			definition = "Provides general information about the movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionMovement1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails;
 	/**
 	 * Provides information about the underlying securities movement.
 	 * <p>
@@ -141,7 +144,7 @@ public class MovementInstruction1 {
 	 * "Provides information about the underlying securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingSecuritiesMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingSecuritiesMovementDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
@@ -150,10 +153,11 @@ public class MovementInstruction1 {
 			name = "UnderlyingSecuritiesMovementDetails";
 			definition = "Provides information about the underlying securities movement.";
 			minOccurs = 0;
-			type_lazy = () -> UnderlyingSecurityMovement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashMovement2> underlyingCashMovementDetails;
 	/**
 	 * Provides information about the underlying cash movement.
 	 * <p>
@@ -180,7 +184,7 @@ public class MovementInstruction1 {
 	 * definition} = "Provides information about the underlying cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingCashMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingCashMovementDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
@@ -189,10 +193,11 @@ public class MovementInstruction1 {
 			name = "UnderlyingCashMovementDetails";
 			definition = "Provides information about the underlying cash movement.";
 			minOccurs = 0;
-			type_lazy = () -> CashMovement2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashMovement2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ProceedsMovement1> proceedsMovementDetails;
 	/**
 	 * Provides information about the proceeds, ie, outturned resources.
 	 * <p>
@@ -220,7 +225,7 @@ public class MovementInstruction1 {
 	 * "Provides information about the proceeds, ie, outturned resources."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProceedsMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProceedsMovementDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
@@ -229,23 +234,55 @@ public class MovementInstruction1 {
 			name = "ProceedsMovementDetails";
 			definition = "Provides information about the proceeds, ie, outturned resources.";
 			minOccurs = 0;
-			type_lazy = () -> ProceedsMovement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProceedsMovement1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MovementInstruction1.MovementGeneralInformation, com.tools20022.repository.msg.MovementInstruction1.UnderlyingSecuritiesMovementDetails,
-						com.tools20022.repository.msg.MovementInstruction1.UnderlyingCashMovementDetails, com.tools20022.repository.msg.MovementInstruction1.ProceedsMovementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.MovementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MovementInstruction1.mmMovementGeneralInformation, com.tools20022.repository.msg.MovementInstruction1.mmUnderlyingSecuritiesMovementDetails,
+						com.tools20022.repository.msg.MovementInstruction1.mmUnderlyingCashMovementDetails, com.tools20022.repository.msg.MovementInstruction1.mmProceedsMovementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmMovementDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MovementInstruction1";
 				definition = "Details of the movement instructions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionMovement1 getMovementGeneralInformation() {
+		return movementGeneralInformation;
+	}
+
+	public void setMovementGeneralInformation(com.tools20022.repository.msg.CorporateActionMovement1 movementGeneralInformation) {
+		this.movementGeneralInformation = movementGeneralInformation;
+	}
+
+	public List<UnderlyingSecurityMovement1> getUnderlyingSecuritiesMovementDetails() {
+		return underlyingSecuritiesMovementDetails;
+	}
+
+	public void setUnderlyingSecuritiesMovementDetails(List<com.tools20022.repository.msg.UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
+		this.underlyingSecuritiesMovementDetails = underlyingSecuritiesMovementDetails;
+	}
+
+	public List<CashMovement2> getUnderlyingCashMovementDetails() {
+		return underlyingCashMovementDetails;
+	}
+
+	public void setUnderlyingCashMovementDetails(List<com.tools20022.repository.msg.CashMovement2> underlyingCashMovementDetails) {
+		this.underlyingCashMovementDetails = underlyingCashMovementDetails;
+	}
+
+	public List<ProceedsMovement1> getProceedsMovementDetails() {
+		return proceedsMovementDetails;
+	}
+
+	public void setProceedsMovementDetails(List<com.tools20022.repository.msg.ProceedsMovement1> proceedsMovementDetails) {
+		this.proceedsMovementDetails = proceedsMovementDetails;
 	}
 }

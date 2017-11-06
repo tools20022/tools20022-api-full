@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.FinancingAgreementList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The message PartyRegistrationAndGuaranteeStatus is either sent by a factoring
@@ -73,30 +74,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#Header
- * PartyRegistrationAndGuaranteeStatusV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmHeader
+ * PartyRegistrationAndGuaranteeStatusV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#AgreementList
- * PartyRegistrationAndGuaranteeStatusV01.AgreementList}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmAgreementList
+ * PartyRegistrationAndGuaranteeStatusV01.mmAgreementList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#AgreementCount
- * PartyRegistrationAndGuaranteeStatusV01.AgreementCount}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmAgreementCount
+ * PartyRegistrationAndGuaranteeStatusV01.mmAgreementCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#ItemCount
- * PartyRegistrationAndGuaranteeStatusV01.ItemCount}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmItemCount
+ * PartyRegistrationAndGuaranteeStatusV01.mmItemCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#ControlSum
- * PartyRegistrationAndGuaranteeStatusV01.ControlSum}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmControlSum
+ * PartyRegistrationAndGuaranteeStatusV01.mmControlSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#AttachedMessage
- * PartyRegistrationAndGuaranteeStatusV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmAttachedMessage
+ * PartyRegistrationAndGuaranteeStatusV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#identifier
- * PartyRegistrationAndGuaranteeStatusV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsin.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyRegistrationAndGuaranteeStatusV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected BusinessLetter1 header;
 	/**
 	 * Set of characteristics that unambiguously identify the status, common
 	 * parameters, documents and identifications.
@@ -137,17 +137,18 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics that unambiguously identify the status, common parameters, documents and identifications.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
 	};
+	protected List<FinancingAgreementList1> agreementList;
 	/**
 	 * List of agreements.
 	 * <p>
@@ -171,7 +172,7 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 	 * definition} = "List of agreements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgreementList = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreementList = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgrmtList";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,6 +182,7 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 			complexType_lazy = () -> FinancingAgreementList1.mmObject();
 		}
 	};
+	protected Max15NumericText agreementCount;
 	/**
 	 * Number of agreement lists as control value.
 	 * <p>
@@ -204,17 +206,18 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 	 * definition} = "Number of agreement lists as control value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgreementCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreementCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgrmtCnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementCount";
 			definition = "Number of agreement lists as control value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected Max15NumericText itemCount;
 	/**
 	 * Total number of individual items in all lists.
 	 * <p>
@@ -238,17 +241,18 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 	 * definition} = "Total number of individual items in all lists."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ItemCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmItemCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ItmCnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Total number of individual items in all lists.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in all lists, irrespective of
 	 * currencies or direction.
@@ -275,17 +279,18 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ControlSum = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmControlSum = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrlSum";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in all lists, irrespective of currencies or direction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
 	 * Referenced or related business message.
 	 * <p>
@@ -309,7 +314,7 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 	 * definition} = "Referenced or related business message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AttachedMessage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,33 +322,6 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsin"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsin";
-			messageFunctionality = "010";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -357,12 +335,68 @@ public class PartyRegistrationAndGuaranteeStatusV01 {
 				rootElement = "Document";
 				xmlTag = "PtyRegnAndGrntSts";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.Header, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.AgreementList,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.AgreementCount, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.ItemCount,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.ControlSum, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.AttachedMessage);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmHeader,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmAgreementList, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmAgreementCount,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmItemCount, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmControlSum,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmAttachedMessage);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsin";
+						messageFunctionality = "010";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BusinessLetter1 getHeader() {
+		return header;
+	}
+
+	public void setHeader(BusinessLetter1 header) {
+		this.header = header;
+	}
+
+	public List<FinancingAgreementList1> getAgreementList() {
+		return agreementList;
+	}
+
+	public void setAgreementList(List<FinancingAgreementList1> agreementList) {
+		this.agreementList = agreementList;
+	}
+
+	public Max15NumericText getAgreementCount() {
+		return agreementCount;
+	}
+
+	public void setAgreementCount(Max15NumericText agreementCount) {
+		this.agreementCount = agreementCount;
+	}
+
+	public Max15NumericText getItemCount() {
+		return itemCount;
+	}
+
+	public void setItemCount(Max15NumericText itemCount) {
+		this.itemCount = itemCount;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+	}
+
+	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
+		return attachedMessage;
+	}
+
+	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
+		this.attachedMessage = attachedMessage;
 	}
 }

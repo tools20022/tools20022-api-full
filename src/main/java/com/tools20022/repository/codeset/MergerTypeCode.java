@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#OrdinaryMerger
- * MergerTypeCode.OrdinaryMerger}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#mmOrdinaryMerger
+ * MergerTypeCode.mmOrdinaryMerger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#ExchangeofShares
- * MergerTypeCode.ExchangeofShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#mmExchangeofShares
+ * MergerTypeCode.mmExchangeofShares}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#TransferofShares
- * MergerTypeCode.TransferofShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#mmTransferofShares
+ * MergerTypeCode.mmTransferofShares}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,7 +79,7 @@ public class MergerTypeCode {
 	 * definition} = "The type of merger is an ordinary merger."</li>
 	 * </ul>
 	 */
-	public static final MMCode OrdinaryMerger = new MMCode() {
+	public static final MMCode mmOrdinaryMerger = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryMerger";
@@ -109,7 +109,7 @@ public class MergerTypeCode {
 	 * definition} = "The type of merger is an exchange of shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeofShares = new MMCode() {
+	public static final MMCode mmExchangeofShares = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeofShares";
@@ -139,7 +139,7 @@ public class MergerTypeCode {
 	 * definition} = "The type of merger is a transfer of shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferofShares = new MMCode() {
+	public static final MMCode mmTransferofShares = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferofShares";
@@ -152,12 +152,12 @@ public class MergerTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MergerTypeCode";
 				definition = "Types of merger for the TSE/JASDEC extension.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MergerTypeCode.OrdinaryMerger, com.tools20022.repository.codeset.MergerTypeCode.ExchangeofShares,
-						com.tools20022.repository.codeset.MergerTypeCode.TransferofShares);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MergerTypeCode.mmOrdinaryMerger, com.tools20022.repository.codeset.MergerTypeCode.mmExchangeofShares,
+						com.tools20022.repository.codeset.MergerTypeCode.mmTransferofShares);
 			}
 		});
 		return mmObject_lazy.get();

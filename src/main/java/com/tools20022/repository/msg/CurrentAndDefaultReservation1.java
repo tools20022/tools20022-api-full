@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.Reservation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on reservations.
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#CurrentReservation
- * CurrentAndDefaultReservation1.CurrentReservation}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#mmCurrentReservation
+ * CurrentAndDefaultReservation1.mmCurrentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#DefaultReservation
- * CurrentAndDefaultReservation1.DefaultReservation}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1#mmDefaultReservation
+ * CurrentAndDefaultReservation1.mmDefaultReservation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrentAndDefaultReservation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.ReservationReport3> currentReservation;
 	/**
 	 * Report is given for a current reservation.
 	 * <p>
@@ -100,27 +102,28 @@ public class CurrentAndDefaultReservation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#CurrentReservation
-	 * CurrentAndDefaultReservation2.CurrentReservation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#mmCurrentReservation
+	 * CurrentAndDefaultReservation2.mmCurrentReservation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrentReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrentReservation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrentAndDefaultReservation1.mmObject();
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
+			componentContext_lazy = () -> CurrentAndDefaultReservation1.mmObject();
 			isDerived = false;
 			xmlTag = "CurRsvatn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentReservation";
 			definition = "Report is given for a current reservation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrentAndDefaultReservation2.CurrentReservation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrentAndDefaultReservation2.mmCurrentReservation);
 			minOccurs = 0;
-			type_lazy = () -> ReservationReport3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReservationReport3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReservationReport3> defaultReservation;
 	/**
 	 * Report is given for a default reservation.
 	 * <p>
@@ -153,34 +156,34 @@ public class CurrentAndDefaultReservation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#DefaultReservation
-	 * CurrentAndDefaultReservation2.DefaultReservation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation2#mmDefaultReservation
+	 * CurrentAndDefaultReservation2.mmDefaultReservation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DefaultReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDefaultReservation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrentAndDefaultReservation1.mmObject();
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
+			componentContext_lazy = () -> CurrentAndDefaultReservation1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltRsvatn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultReservation";
 			definition = "Report is given for a default reservation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrentAndDefaultReservation2.DefaultReservation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrentAndDefaultReservation2.mmDefaultReservation);
 			minOccurs = 0;
-			type_lazy = () -> ReservationReport3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReservationReport3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrentAndDefaultReservation1.CurrentReservation, com.tools20022.repository.msg.CurrentAndDefaultReservation1.DefaultReservation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmCurrentReservation, com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmDefaultReservation);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrentAndDefaultReservation1";
 				definition = "Reports on reservations.";
@@ -188,5 +191,21 @@ public class CurrentAndDefaultReservation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ReservationReport3> getCurrentReservation() {
+		return currentReservation;
+	}
+
+	public void setCurrentReservation(List<com.tools20022.repository.msg.ReservationReport3> currentReservation) {
+		this.currentReservation = currentReservation;
+	}
+
+	public List<ReservationReport3> getDefaultReservation() {
+		return defaultReservation;
+	}
+
+	public void setDefaultReservation(List<com.tools20022.repository.msg.ReservationReport3> defaultReservation) {
+		this.defaultReservation = defaultReservation;
 	}
 }

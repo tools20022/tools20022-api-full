@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Participant details from National BIC directory.
@@ -34,20 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryInformation1#ParticipantInformation
- * DirectoryInformation1.ParticipantInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryInformation1#mmParticipantInformation
+ * DirectoryInformation1.mmParticipantInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectoryInformation1#ParticipantSWIFTIdentifiersList
- * DirectoryInformation1.ParticipantSWIFTIdentifiersList}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectoryInformation1#Accounts
- * DirectoryInformation1.Accounts}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryInformation1#mmParticipantSWIFTIdentifiersList
+ * DirectoryInformation1.mmParticipantSWIFTIdentifiersList}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectoryInformation1#mmAccounts
+ * DirectoryInformation1.mmAccounts}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DirectoryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DirectoryParticipantInformation1 participantInformation;
 	/**
 	 * Information about participant.
 	 * <p>
@@ -88,7 +91,7 @@ public class DirectoryInformation1 {
 	 * definition} = "Information about participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryInformation1.mmObject();
 			isDerived = false;
@@ -96,12 +99,13 @@ public class DirectoryInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantInformation";
 			definition = "Information about participant.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DirectoryParticipantInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 		}
 	};
+	protected List<BICFIIdentifier> participantSWIFTIdentifiersList;
 	/**
 	 * SWIFT assigned BIC.
 	 * <p>
@@ -130,7 +134,7 @@ public class DirectoryInformation1 {
 	 * definition} = "SWIFT assigned BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ParticipantSWIFTIdentifiersList = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParticipantSWIFTIdentifiersList = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DirectoryInformation1.mmObject();
 			isDerived = false;
@@ -142,6 +146,7 @@ public class DirectoryInformation1 {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DirectoryAccountInformation1> accounts;
 	/**
 	 * Account information.
 	 * <p>
@@ -169,7 +174,7 @@ public class DirectoryInformation1 {
 	 * definition} = "Account information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Accounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccounts = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DirectoryInformation1.mmObject();
 			isDerived = false;
@@ -178,22 +183,46 @@ public class DirectoryInformation1 {
 			name = "Accounts";
 			definition = "Account information.";
 			minOccurs = 0;
-			type_lazy = () -> DirectoryAccountInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DirectoryAccountInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryInformation1.ParticipantInformation, com.tools20022.repository.msg.DirectoryInformation1.ParticipantSWIFTIdentifiersList,
-						com.tools20022.repository.msg.DirectoryInformation1.Accounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryInformation1.mmParticipantInformation, com.tools20022.repository.msg.DirectoryInformation1.mmParticipantSWIFTIdentifiersList,
+						com.tools20022.repository.msg.DirectoryInformation1.mmAccounts);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryInformation1";
 				definition = "Participant details from National BIC directory.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DirectoryParticipantInformation1 getParticipantInformation() {
+		return participantInformation;
+	}
+
+	public void setParticipantInformation(com.tools20022.repository.msg.DirectoryParticipantInformation1 participantInformation) {
+		this.participantInformation = participantInformation;
+	}
+
+	public List<BICFIIdentifier> getParticipantSWIFTIdentifiersList() {
+		return participantSWIFTIdentifiersList;
+	}
+
+	public void setParticipantSWIFTIdentifiersList(List<BICFIIdentifier> participantSWIFTIdentifiersList) {
+		this.participantSWIFTIdentifiersList = participantSWIFTIdentifiersList;
+	}
+
+	public List<DirectoryAccountInformation1> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(List<com.tools20022.repository.msg.DirectoryAccountInformation1> accounts) {
+		this.accounts = accounts;
 	}
 }

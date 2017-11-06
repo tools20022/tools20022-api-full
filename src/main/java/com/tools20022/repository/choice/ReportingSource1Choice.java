@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ReportingSource1Choice#Code
- * ReportingSource1Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportingSource1Choice#Proprietary
- * ReportingSource1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportingSource1Choice#mmCode
+ * ReportingSource1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReportingSource1Choice#mmProprietary
+ * ReportingSource1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportingSource1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalReportingSource1Code code;
 	/**
 	 * Reporting source, as published in an external reporting source code list.
 	 * <p>
@@ -88,7 +90,7 @@ public class ReportingSource1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportingSource1Choice.mmObject();
 			isDerived = false;
@@ -96,11 +98,12 @@ public class ReportingSource1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reporting source, as published in an external reporting source code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalReportingSource1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Reporting source, in a proprietary form.
 	 * <p>
@@ -128,7 +131,7 @@ public class ReportingSource1Choice {
 	 * definition} = "Reporting source, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportingSource1Choice.mmObject();
 			isDerived = false;
@@ -136,8 +139,8 @@ public class ReportingSource1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reporting source, in a proprietary form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -145,13 +148,29 @@ public class ReportingSource1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingSource1Choice.Code, com.tools20022.repository.choice.ReportingSource1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingSource1Choice.mmCode, com.tools20022.repository.choice.ReportingSource1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingSource1Choice";
 				definition = "Specifies the source used to generate the reporting.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalReportingSource1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalReportingSource1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

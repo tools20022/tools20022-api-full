@@ -32,42 +32,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ActionTypeCode ActionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType5Code#Busy
- * ActionType5Code.Busy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType5Code#mmBusy
+ * ActionType5Code.mmBusy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType5Code#CaptureCard
- * ActionType5Code.CaptureCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmCaptureCard
+ * ActionType5Code.mmCaptureCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType5Code#DisplayMessage
- * ActionType5Code.DisplayMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmDisplayMessage
+ * ActionType5Code.mmDisplayMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType5Code#ForbidOverride
- * ActionType5Code.ForbidOverride}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmForbidOverride
+ * ActionType5Code.mmForbidOverride}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType5Code#IdentificationRequired
- * ActionType5Code.IdentificationRequired}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType5Code#PINLastTry
- * ActionType5Code.PINLastTry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType5Code#PINRetry
- * ActionType5Code.PINRetry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmIdentificationRequired
+ * ActionType5Code.mmIdentificationRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType5Code#PrintMessage
- * ActionType5Code.PrintMessage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType5Code#Referral
- * ActionType5Code.Referral}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmPINLastTry
+ * ActionType5Code.mmPINLastTry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType5Code#mmPINRetry
+ * ActionType5Code.mmPINRetry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType5Code#RequestData
- * ActionType5Code.RequestData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmPrintMessage
+ * ActionType5Code.mmPrintMessage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType5Code#mmReferral
+ * ActionType5Code.mmReferral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType5Code#UpdateTrack
- * ActionType5Code.UpdateTrack}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmRequestData
+ * ActionType5Code.mmRequestData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType5Code#mmUpdateTrack
+ * ActionType5Code.mmUpdateTrack}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,7 +98,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "Busy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Busy = new MMCode() {
+	public static final MMCode mmBusy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
@@ -120,7 +121,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "CaptureCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode CaptureCard = new MMCode() {
+	public static final MMCode mmCaptureCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
@@ -143,7 +144,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "DisplayMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode DisplayMessage = new MMCode() {
+	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
@@ -166,7 +167,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "ForbidOverride"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForbidOverride = new MMCode() {
+	public static final MMCode mmForbidOverride = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForbidOverride";
@@ -189,7 +190,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "IdentificationRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode IdentificationRequired = new MMCode() {
+	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
@@ -212,7 +213,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "PINLastTry"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINLastTry = new MMCode() {
+	public static final MMCode mmPINLastTry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
@@ -235,7 +236,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "PINRetry"</li>
 	 * </ul>
 	 */
-	public static final MMCode PINRetry = new MMCode() {
+	public static final MMCode mmPINRetry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
@@ -258,7 +259,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "PrintMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrintMessage = new MMCode() {
+	public static final MMCode mmPrintMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintMessage";
@@ -281,7 +282,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "Referral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Referral = new MMCode() {
+	public static final MMCode mmReferral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
@@ -304,7 +305,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "RequestData"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestData = new MMCode() {
+	public static final MMCode mmRequestData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
@@ -327,7 +328,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 * name} = "UpdateTrack"</li>
 	 * </ul>
 	 */
-	public static final MMCode UpdateTrack = new MMCode() {
+	public static final MMCode mmUpdateTrack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateTrack";
@@ -338,14 +339,14 @@ public class ActionType5Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionType5Code";
 				definition = "Type of action to be performed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType5Code.Busy, com.tools20022.repository.codeset.ActionType5Code.CaptureCard, com.tools20022.repository.codeset.ActionType5Code.DisplayMessage,
-						com.tools20022.repository.codeset.ActionType5Code.ForbidOverride, com.tools20022.repository.codeset.ActionType5Code.IdentificationRequired, com.tools20022.repository.codeset.ActionType5Code.PINLastTry,
-						com.tools20022.repository.codeset.ActionType5Code.PINRetry, com.tools20022.repository.codeset.ActionType5Code.PrintMessage, com.tools20022.repository.codeset.ActionType5Code.Referral,
-						com.tools20022.repository.codeset.ActionType5Code.RequestData, com.tools20022.repository.codeset.ActionType5Code.UpdateTrack);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType5Code.mmBusy, com.tools20022.repository.codeset.ActionType5Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType5Code.mmDisplayMessage,
+						com.tools20022.repository.codeset.ActionType5Code.mmForbidOverride, com.tools20022.repository.codeset.ActionType5Code.mmIdentificationRequired, com.tools20022.repository.codeset.ActionType5Code.mmPINLastTry,
+						com.tools20022.repository.codeset.ActionType5Code.mmPINRetry, com.tools20022.repository.codeset.ActionType5Code.mmPrintMessage, com.tools20022.repository.codeset.ActionType5Code.mmReferral,
+						com.tools20022.repository.codeset.ActionType5Code.mmRequestData, com.tools20022.repository.codeset.ActionType5Code.mmUpdateTrack);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

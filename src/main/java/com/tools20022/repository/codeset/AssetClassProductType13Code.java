@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType13Code#MultiCommodityExotic
- * AssetClassProductType13Code.MultiCommodityExotic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType13Code#mmMultiCommodityExotic
+ * AssetClassProductType13Code.mmMultiCommodityExotic}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class AssetClassProductType13Code extends AssetClassProductTypeCode {
 	 * name} = "MultiCommodityExotic"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultiCommodityExotic = new MMCode() {
+	public static final MMCode mmMultiCommodityExotic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiCommodityExotic";
@@ -84,11 +84,11 @@ public class AssetClassProductType13Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType13Code";
 				definition = "Commodity derivative base product code list for Multi Commodity Exotic.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType13Code.MultiCommodityExotic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType13Code.mmMultiCommodityExotic);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

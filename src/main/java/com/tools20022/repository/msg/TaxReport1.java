@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.BuyerRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Contains all needed party details for tax agency (sender of the TaxReport)
@@ -35,23 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#TaxReportHeader
- * TaxReport1.TaxReportHeader}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#Seller
- * TaxReport1.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#Buyer
- * TaxReport1.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#TradeSettlement
- * TaxReport1.TradeSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#OtherParty
- * TaxReport1.OtherParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#mmTaxReportHeader
+ * TaxReport1.mmTaxReportHeader}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#mmSeller
+ * TaxReport1.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#mmBuyer
+ * TaxReport1.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#mmTradeSettlement
+ * TaxReport1.mmTradeSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#mmOtherParty
+ * TaxReport1.mmOtherParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxReport1#AdditionalInformation
- * TaxReport1.AdditionalInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#AdditionalReference
- * TaxReport1.AdditionalReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#SupplementaryData
- * TaxReport1.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxReport1#mmAdditionalInformation
+ * TaxReport1.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxReport1#mmAdditionalReference
+ * TaxReport1.mmAdditionalReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReport1#mmSupplementaryData
+ * TaxReport1.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,15 +63,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportV01#TaxReport
- * InvoiceTaxReportV01.TaxReport}</li>
+ * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportV01#mmTaxReport
+ * InvoiceTaxReportV01.mmTaxReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader69 taxReportHeader;
 	/**
 	 * Basic report details.
 	 * <p>
@@ -117,7 +120,7 @@ public class TaxReport1 {
 	 * definition} = "Basic report details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxReportHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxReportHeader = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
@@ -125,12 +128,13 @@ public class TaxReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReportHeader";
 			definition = "Basic report details.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GroupHeader69.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 		}
 	};
+	protected PartyIdentification72 seller;
 	/**
 	 * Tax reporting agent, for example seller.<br>
 	 * Responsible to issue tax reporting to tax authority.
@@ -159,7 +163,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Seller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
@@ -167,12 +171,13 @@ public class TaxReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Tax reporting agent, for example seller.\r\nResponsible to issue tax reporting to tax authority.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification72.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 		}
 	};
+	protected PartyIdentification72 buyer;
 	/**
 	 * Specifies the buyer of goods/service reported in this message.
 	 * <p>
@@ -203,21 +208,22 @@ public class TaxReport1 {
 	 * "Specifies the buyer of goods/service reported in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
+			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Specifies the buyer of goods/service reported in this message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification72.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 		}
 	};
+	protected TradeSettlement2 tradeSettlement;
 	/**
 	 * Contains the details of the business transactions reported in the
 	 * message.
@@ -246,7 +252,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeSettlement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
@@ -254,12 +260,13 @@ public class TaxReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlement";
 			definition = "Contains the details of the business transactions reported in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradeSettlement2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentification72> otherParty;
 	/**
 	 * Reserved for parties that may be required by a specific tax authority.
 	 * <p>
@@ -286,7 +293,7 @@ public class TaxReport1 {
 	 * "Reserved for parties that may be required by a specific tax authority."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
@@ -295,10 +302,11 @@ public class TaxReport1 {
 			name = "OtherParty";
 			definition = "Reserved for parties that may be required by a specific tax authority.";
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentification72.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation;
 	/**
 	 * Additional reference like site key or identifier.
 	 * <p>
@@ -324,7 +332,7 @@ public class TaxReport1 {
 	 * definition} = "Additional reference like site key or identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
@@ -333,10 +341,11 @@ public class TaxReport1 {
 			name = "AdditionalInformation";
 			definition = "Additional reference like site key or identifier.";
 			minOccurs = 0;
-			type_lazy = () -> AdditionalInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReference;
 	/**
 	 * Structure to deliver link to external attachment or deliver base64-coded
 	 * attachment inside message.
@@ -366,7 +375,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
@@ -375,10 +384,11 @@ public class TaxReport1 {
 			name = "AdditionalReference";
 			definition = "Structure to deliver link to external attachment or deliver base64-coded attachment inside message. ";
 			minOccurs = 0;
-			type_lazy = () -> DocumentGeneralInformation2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -407,7 +417,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
@@ -416,20 +426,20 @@ public class TaxReport1 {
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReport1.TaxReportHeader, com.tools20022.repository.msg.TaxReport1.Seller, com.tools20022.repository.msg.TaxReport1.Buyer,
-						com.tools20022.repository.msg.TaxReport1.TradeSettlement, com.tools20022.repository.msg.TaxReport1.OtherParty, com.tools20022.repository.msg.TaxReport1.AdditionalInformation,
-						com.tools20022.repository.msg.TaxReport1.AdditionalReference, com.tools20022.repository.msg.TaxReport1.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReport1.mmTaxReportHeader, com.tools20022.repository.msg.TaxReport1.mmSeller, com.tools20022.repository.msg.TaxReport1.mmBuyer,
+						com.tools20022.repository.msg.TaxReport1.mmTradeSettlement, com.tools20022.repository.msg.TaxReport1.mmOtherParty, com.tools20022.repository.msg.TaxReport1.mmAdditionalInformation,
+						com.tools20022.repository.msg.TaxReport1.mmAdditionalReference, com.tools20022.repository.msg.TaxReport1.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportV01.mmTaxReport);
 				trace_lazy = () -> BuyerRole.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportV01.TaxReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxReport1";
 				definition = "Contains all needed party details for tax agency (sender of the TaxReport) and tax authority (receiver of the TaxReport) and the details of the reported sales transaction and calculated tax related that specific business transaction.";
@@ -437,5 +447,69 @@ public class TaxReport1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader69 getTaxReportHeader() {
+		return taxReportHeader;
+	}
+
+	public void setTaxReportHeader(com.tools20022.repository.msg.GroupHeader69 taxReportHeader) {
+		this.taxReportHeader = taxReportHeader;
+	}
+
+	public PartyIdentification72 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(com.tools20022.repository.msg.PartyIdentification72 seller) {
+		this.seller = seller;
+	}
+
+	public PartyIdentification72 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(com.tools20022.repository.msg.PartyIdentification72 buyer) {
+		this.buyer = buyer;
+	}
+
+	public TradeSettlement2 getTradeSettlement() {
+		return tradeSettlement;
+	}
+
+	public void setTradeSettlement(com.tools20022.repository.msg.TradeSettlement2 tradeSettlement) {
+		this.tradeSettlement = tradeSettlement;
+	}
+
+	public List<PartyIdentification72> getOtherParty() {
+		return otherParty;
+	}
+
+	public void setOtherParty(List<com.tools20022.repository.msg.PartyIdentification72> otherParty) {
+		this.otherParty = otherParty;
+	}
+
+	public List<AdditionalInformation1> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<DocumentGeneralInformation2> getAdditionalReference() {
+		return additionalReference;
+	}
+
+	public void setAdditionalReference(List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReference) {
+		this.additionalReference = additionalReference;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

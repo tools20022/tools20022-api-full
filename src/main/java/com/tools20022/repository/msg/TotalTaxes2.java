@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information regarding the total amount of taxes.
@@ -34,10 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes2#TotalAmountOfTaxes
- * TotalTaxes2.TotalAmountOfTaxes}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes2#TaxDetails
- * TotalTaxes2.TaxDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes2#mmTotalAmountOfTaxes
+ * TotalTaxes2.mmTotalAmountOfTaxes}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes2#mmTaxDetails
+ * TotalTaxes2.mmTaxDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalTaxes2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount totalAmountOfTaxes;
 	/**
 	 * Total value of the taxes for a specific order.
 	 * <p>
@@ -74,7 +77,7 @@ public class TotalTaxes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +95,21 @@ public class TotalTaxes2 {
 	 * definition} = "Total value of the taxes for a specific order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmountOfTaxes = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmountOfTaxes = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> TotalTaxes2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TtlAmtOfTaxs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountOfTaxes";
 			definition = "Total value of the taxes for a specific order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax7> taxDetails;
 	/**
 	 * Information related to a specific tax.
 	 * <p>
@@ -135,32 +139,48 @@ public class TotalTaxes2 {
 	 * definition} = "Information related to a specific tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalTaxes2.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> TotalTaxes2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Information related to a specific tax.";
 			minOccurs = 1;
-			type_lazy = () -> Tax7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes2.TotalAmountOfTaxes, com.tools20022.repository.msg.TotalTaxes2.TaxDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes2.mmTotalAmountOfTaxes, com.tools20022.repository.msg.TotalTaxes2.mmTaxDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalTaxes2";
 				definition = "Information regarding the total amount of taxes.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getTotalAmountOfTaxes() {
+		return totalAmountOfTaxes;
+	}
+
+	public void setTotalAmountOfTaxes(ActiveCurrencyAnd13DecimalAmount totalAmountOfTaxes) {
+		this.totalAmountOfTaxes = totalAmountOfTaxes;
+	}
+
+	public List<Tax7> getTaxDetails() {
+		return taxDetails;
+	}
+
+	public void setTaxDetails(List<com.tools20022.repository.msg.Tax7> taxDetails) {
+		this.taxDetails = taxDetails;
 	}
 }

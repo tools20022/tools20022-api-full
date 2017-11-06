@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#BankPositionEnquiry
- * RequestType2Code.BankPositionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmBankPositionEnquiry
+ * RequestType2Code.mmBankPositionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#SpecificTransactionEnquiry
- * RequestType2Code.SpecificTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmSpecificTransactionEnquiry
+ * RequestType2Code.mmSpecificTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#QueuedTransactionEnquiry
- * RequestType2Code.QueuedTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmQueuedTransactionEnquiry
+ * RequestType2Code.mmQueuedTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#SuspiciousTransactionEnquiry
- * RequestType2Code.SuspiciousTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmSuspiciousTransactionEnquiry
+ * RequestType2Code.mmSuspiciousTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#PendingInwardCreditsEnquiry
- * RequestType2Code.PendingInwardCreditsEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmPendingInwardCreditsEnquiry
+ * RequestType2Code.mmPendingInwardCreditsEnquiry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "BankPositionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode BankPositionEnquiry = new MMCode() {
+	public static final MMCode mmBankPositionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPositionEnquiry";
@@ -116,7 +116,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "SpecificTransactionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecificTransactionEnquiry = new MMCode() {
+	public static final MMCode mmSpecificTransactionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificTransactionEnquiry";
@@ -139,7 +139,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "QueuedTransactionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode QueuedTransactionEnquiry = new MMCode() {
+	public static final MMCode mmQueuedTransactionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueuedTransactionEnquiry";
@@ -162,7 +162,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "SuspiciousTransactionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspiciousTransactionEnquiry = new MMCode() {
+	public static final MMCode mmSuspiciousTransactionEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousTransactionEnquiry";
@@ -185,7 +185,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "PendingInwardCreditsEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingInwardCreditsEnquiry = new MMCode() {
+	public static final MMCode mmPendingInwardCreditsEnquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingInwardCreditsEnquiry";
@@ -196,14 +196,14 @@ public class RequestType2Code extends RequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RT11");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestType2Code";
 				definition = "Specifies the request used to further detail the type of information that will be queried.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestType2Code.BankPositionEnquiry, com.tools20022.repository.codeset.RequestType2Code.SpecificTransactionEnquiry,
-						com.tools20022.repository.codeset.RequestType2Code.QueuedTransactionEnquiry, com.tools20022.repository.codeset.RequestType2Code.SuspiciousTransactionEnquiry,
-						com.tools20022.repository.codeset.RequestType2Code.PendingInwardCreditsEnquiry);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestType2Code.mmBankPositionEnquiry, com.tools20022.repository.codeset.RequestType2Code.mmSpecificTransactionEnquiry,
+						com.tools20022.repository.codeset.RequestType2Code.mmQueuedTransactionEnquiry, com.tools20022.repository.codeset.RequestType2Code.mmSuspiciousTransactionEnquiry,
+						com.tools20022.repository.codeset.RequestType2Code.mmPendingInwardCreditsEnquiry);
 				trace_lazy = () -> RequestTypeCode.mmObject();
 			}
 		});

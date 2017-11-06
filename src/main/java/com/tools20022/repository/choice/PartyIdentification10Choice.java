@@ -39,14 +39,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#BICOrBEI
- * PartyIdentification10Choice.BICOrBEI}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#mmBICOrBEI
+ * PartyIdentification10Choice.mmBICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#ProprietaryIdentification
- * PartyIdentification10Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#mmProprietaryIdentification
+ * PartyIdentification10Choice.mmProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#NameAndAddress
- * PartyIdentification10Choice.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#mmNameAndAddress
+ * PartyIdentification10Choice.mmNameAndAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,405 +58,408 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#MessageOriginator
- * CorporateActionCancellationAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmMessageOriginator
+ * CorporateActionCancellationAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#MessageRecipient
- * CorporateActionCancellationAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmMessageRecipient
+ * CorporateActionCancellationAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#IssuerAgent
- * CorporateActionCancellationAdviceV01.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmIssuerAgent
+ * CorporateActionCancellationAdviceV01.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#PayingAgent
- * CorporateActionCancellationAdviceV01.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmPayingAgent
+ * CorporateActionCancellationAdviceV01.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#SubPayingAgent
- * CorporateActionCancellationAdviceV01.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmSubPayingAgent
+ * CorporateActionCancellationAdviceV01.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#Registrar
- * CorporateActionCancellationAdviceV01.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmRegistrar
+ * CorporateActionCancellationAdviceV01.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#ResellingAgent
- * CorporateActionCancellationAdviceV01.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmResellingAgent
+ * CorporateActionCancellationAdviceV01.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#PhysicalSecuritiesAgent
- * CorporateActionCancellationAdviceV01.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmPhysicalSecuritiesAgent
+ * CorporateActionCancellationAdviceV01.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#DropAgent
- * CorporateActionCancellationAdviceV01.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmDropAgent
+ * CorporateActionCancellationAdviceV01.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#SolicitationAgent
- * CorporateActionCancellationAdviceV01.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmSolicitationAgent
+ * CorporateActionCancellationAdviceV01.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#InformationAgent
- * CorporateActionCancellationAdviceV01.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmInformationAgent
+ * CorporateActionCancellationAdviceV01.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#MessageOriginator
- * CorporateActionEventProcessingStatusAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#mmMessageOriginator
+ * CorporateActionEventProcessingStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#MessageRecipient
- * CorporateActionEventProcessingStatusAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#mmMessageRecipient
+ * CorporateActionEventProcessingStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#MessageOriginator
- * CorporateActionInstructionV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#mmMessageOriginator
+ * CorporateActionInstructionV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#MessageRecipient
- * CorporateActionInstructionV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#mmMessageRecipient
+ * CorporateActionInstructionV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#MessageOriginator
- * CorporateActionInstructionCancellationRequestV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#mmMessageOriginator
+ * CorporateActionInstructionCancellationRequestV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#MessageRecipient
- * CorporateActionInstructionCancellationRequestV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#mmMessageRecipient
+ * CorporateActionInstructionCancellationRequestV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#MessageOriginator
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmMessageOriginator
  * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * MessageOriginator}</li>
+ * mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#MessageRecipient
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.MessageRecipient
- * }</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmMessageRecipient
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.
+ * mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#MessageOriginator
- * CorporateActionInstructionStatementReportV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#mmMessageOriginator
+ * CorporateActionInstructionStatementReportV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#MessageRecipient
- * CorporateActionInstructionStatementReportV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#mmMessageRecipient
+ * CorporateActionInstructionStatementReportV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#MessageOriginator
- * CorporateActionInstructionStatusAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#mmMessageOriginator
+ * CorporateActionInstructionStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#MessageRecipient
- * CorporateActionInstructionStatusAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#mmMessageRecipient
+ * CorporateActionInstructionStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#MessageOriginator
- * CorporateActionMovementConfirmationV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#mmMessageOriginator
+ * CorporateActionMovementConfirmationV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#MessageRecipient
- * CorporateActionMovementConfirmationV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#mmMessageRecipient
+ * CorporateActionMovementConfirmationV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#IssuerAgent
- * CorporateActionMovementConfirmationV01.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#mmIssuerAgent
+ * CorporateActionMovementConfirmationV01.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#PayingAgent
- * CorporateActionMovementConfirmationV01.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#mmPayingAgent
+ * CorporateActionMovementConfirmationV01.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#SubPayingAgent
- * CorporateActionMovementConfirmationV01.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#mmSubPayingAgent
+ * CorporateActionMovementConfirmationV01.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#MessageOriginator
- * CorporateActionMovementPreliminaryAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmMessageOriginator
+ * CorporateActionMovementPreliminaryAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#MessageRecipient
- * CorporateActionMovementPreliminaryAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmMessageRecipient
+ * CorporateActionMovementPreliminaryAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#IssuerAgent
- * CorporateActionMovementPreliminaryAdviceV01.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#PayingAgent
- * CorporateActionMovementPreliminaryAdviceV01.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#SubPayingAgent
- * CorporateActionMovementPreliminaryAdviceV01.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmSubPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#Registrar
- * CorporateActionMovementPreliminaryAdviceV01.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceV01.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#ResellingAgent
- * CorporateActionMovementPreliminaryAdviceV01.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmResellingAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#PhysicalSecuritiesAgent
- * CorporateActionMovementPreliminaryAdviceV01.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmPhysicalSecuritiesAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#DropAgent
- * CorporateActionMovementPreliminaryAdviceV01.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#SolicitationAgent
- * CorporateActionMovementPreliminaryAdviceV01.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#InformationAgent
- * CorporateActionMovementPreliminaryAdviceV01.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceV01.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#MessageOriginator
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmMessageOriginator
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
- * MessageOriginator}</li>
+ * mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#MessageRecipient
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmMessageRecipient
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
- * MessageRecipient}</li>
+ * mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#IssuerAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#PayingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#SubPayingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.SubPayingAgent}
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmSubPayingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
+ * mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmResellingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
+ * mmResellingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmPhysicalSecuritiesAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
+ * mmPhysicalSecuritiesAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmDropAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
+ * mmSolicitationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
+ * mmInformationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#mmMessageOriginator
+ * CorporateActionMovementReversalAdviceV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#mmMessageRecipient
+ * CorporateActionMovementReversalAdviceV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#mmIssuerAgent
+ * CorporateActionMovementReversalAdviceV01.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#mmPayingAgent
+ * CorporateActionMovementReversalAdviceV01.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#mmSubPayingAgent
+ * CorporateActionMovementReversalAdviceV01.mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmMessageOriginator
+ * CorporateActionNotificationV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmMessageRecipient
+ * CorporateActionNotificationV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmIssuerAgent
+ * CorporateActionNotificationV01.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmPayingAgent
+ * CorporateActionNotificationV01.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmSubPayingAgent
+ * CorporateActionNotificationV01.mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmRegistrar
+ * CorporateActionNotificationV01.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmResellingAgent
+ * CorporateActionNotificationV01.mmResellingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmPhysicalSecuritiesAgent
+ * CorporateActionNotificationV01.mmPhysicalSecuritiesAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmDropAgent
+ * CorporateActionNotificationV01.mmDropAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmSolicitationAgent
+ * CorporateActionNotificationV01.mmSolicitationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmInformationAgent
+ * CorporateActionNotificationV01.mmInformationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmMessageOriginator
+ * IntraPositionMovementConfirmationV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmMessageRecipient
+ * IntraPositionMovementConfirmationV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#mmMessageOriginator
+ * IntraPositionMovementPostingReportV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#mmMessageRecipient
+ * IntraPositionMovementPostingReportV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#mmAccountServicer
+ * SecuritiesBalanceAccountingReportV03.mmAccountServicer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#mmMessageOriginator
+ * SecuritiesBalanceAccountingReportV03.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#mmMessageRecipient
+ * SecuritiesBalanceAccountingReportV03.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#mmAccountServicer
+ * SecuritiesBalanceCustodyReportV03.mmAccountServicer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#mmMessageOriginator
+ * SecuritiesBalanceCustodyReportV03.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#mmMessageRecipient
+ * SecuritiesBalanceCustodyReportV03.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#mmMessageOriginator
+ * SecuritiesFinancingConfirmationV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#mmMessageRecipient
+ * SecuritiesFinancingConfirmationV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01#mmMessageOriginator
+ * SecuritiesFinancingInstructionV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01#mmMessageRecipient
+ * SecuritiesFinancingInstructionV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#mmMessageOriginator
+ * SecuritiesMessageCancellationAdviceV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#mmMessageRecipient
+ * SecuritiesMessageCancellationAdviceV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#mmMessageOriginator
+ * SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageOriginator}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#Registrar
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#mmMessageRecipient
+ * SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#ResellingAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.ResellingAgent}
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#mmMessageOriginator
+ * SecuritiesSettlementConditionsModificationRequestV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#mmMessageRecipient
+ * SecuritiesSettlementConditionsModificationRequestV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01#mmMessageOriginator
+ * SecuritiesSettlementTransactionConfirmationV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01#mmMessageRecipient
+ * SecuritiesSettlementTransactionConfirmationV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01#mmMessageOriginator
+ * SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageOriginator}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#PhysicalSecuritiesAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
- * PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01#mmMessageRecipient
+ * SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#DropAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01#mmMessageOriginator
+ * SecuritiesSettlementTransactionInstructionV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#SolicitationAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
- * SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01#mmMessageRecipient
+ * SecuritiesSettlementTransactionInstructionV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#InformationAgent
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.
- * InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01#mmMessageOriginator
+ * SecuritiesSettlementTransactionStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#MessageOriginator
- * CorporateActionMovementReversalAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01#mmMessageRecipient
+ * SecuritiesSettlementTransactionStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#MessageRecipient
- * CorporateActionMovementReversalAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#mmMessageOriginator
+ * SecuritiesTransactionPendingReportV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#IssuerAgent
- * CorporateActionMovementReversalAdviceV01.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#mmMessageRecipient
+ * SecuritiesTransactionPendingReportV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#PayingAgent
- * CorporateActionMovementReversalAdviceV01.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#mmMessageOriginator
+ * SecuritiesTransactionPostingReportV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#SubPayingAgent
- * CorporateActionMovementReversalAdviceV01.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#mmMessageRecipient
+ * SecuritiesTransactionPostingReportV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#MessageOriginator
- * CorporateActionNotificationV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#mmMessageOriginator
+ * IntraPositionMovementInstructionV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#MessageRecipient
- * CorporateActionNotificationV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#mmMessageRecipient
+ * IntraPositionMovementInstructionV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#IssuerAgent
- * CorporateActionNotificationV01.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#mmMessageOriginator
+ * IntraPositionMovementStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#PayingAgent
- * CorporateActionNotificationV01.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#mmMessageRecipient
+ * IntraPositionMovementStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#SubPayingAgent
- * CorporateActionNotificationV01.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#mmMessageOriginator
+ * PortfolioTransferNotificationV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#Registrar
- * CorporateActionNotificationV01.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#mmMessageRecipient
+ * PortfolioTransferNotificationV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#ResellingAgent
- * CorporateActionNotificationV01.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01#mmMessageOriginator
+ * SecuritiesFinancingModificationInstructionV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#PhysicalSecuritiesAgent
- * CorporateActionNotificationV01.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01#mmMessageRecipient
+ * SecuritiesFinancingModificationInstructionV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#DropAgent
- * CorporateActionNotificationV01.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01#mmMessageOriginator
+ * SecuritiesFinancingStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#SolicitationAgent
- * CorporateActionNotificationV01.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01#mmMessageRecipient
+ * SecuritiesFinancingStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#InformationAgent
- * CorporateActionNotificationV01.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01#mmMessageOriginator
+ * SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#MessageOriginator
- * IntraPositionMovementConfirmationV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01#mmMessageRecipient
+ * SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#MessageRecipient
- * IntraPositionMovementConfirmationV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#mmMessageOriginator
+ * SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageOriginator}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#MessageOriginator
- * IntraPositionMovementPostingReportV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#mmMessageRecipient
+ * SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#MessageRecipient
- * IntraPositionMovementPostingReportV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#mmMessageOriginator
+ * SecuritiesSettlementTransactionAllegementReportV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#AccountServicer
- * SecuritiesBalanceAccountingReportV03.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#mmMessageRecipient
+ * SecuritiesSettlementTransactionAllegementReportV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#MessageOriginator
- * SecuritiesBalanceAccountingReportV03.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#mmMessageOriginator
+ * SecuritiesSettlementTransactionReversalAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#MessageRecipient
- * SecuritiesBalanceAccountingReportV03.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#mmMessageRecipient
+ * SecuritiesSettlementTransactionReversalAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#AccountServicer
- * SecuritiesBalanceCustodyReportV03.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmMessageOriginator
+ * SecuritiesStatementQueryV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#MessageOriginator
- * SecuritiesBalanceCustodyReportV03.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmMessageRecipient
+ * SecuritiesStatementQueryV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#MessageRecipient
- * SecuritiesBalanceCustodyReportV03.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#mmMessageOriginator
+ * SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#MessageOriginator
- * SecuritiesFinancingConfirmationV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#mmMessageRecipient
+ * SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#MessageRecipient
- * SecuritiesFinancingConfirmationV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmMessageOriginator
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01#MessageOriginator
- * SecuritiesFinancingInstructionV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmMessageRecipient
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01#MessageRecipient
- * SecuritiesFinancingInstructionV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01#mmMessageOriginator
+ * SecuritiesTransactionCancellationRequestV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#MessageOriginator
- * SecuritiesMessageCancellationAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01#mmMessageRecipient
+ * SecuritiesTransactionCancellationRequestV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#MessageRecipient
- * SecuritiesMessageCancellationAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#mmMessageOriginator
+ * SecuritiesTransactionStatusQueryV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#MessageOriginator
- * SecuritiesSettlementConditionModificationStatusAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#mmMessageRecipient
+ * SecuritiesTransactionStatusQueryV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#MessageRecipient
- * SecuritiesSettlementConditionModificationStatusAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV01#mmMessageOriginator
+ * CorporateActionNarrativeV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#MessageOriginator
- * SecuritiesSettlementConditionsModificationRequestV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#MessageRecipient
- * SecuritiesSettlementConditionsModificationRequestV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01#MessageOriginator
- * SecuritiesSettlementTransactionConfirmationV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01#MessageRecipient
- * SecuritiesSettlementTransactionConfirmationV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01#MessageOriginator
- * SecuritiesSettlementTransactionGenerationNotificationV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01#MessageRecipient
- * SecuritiesSettlementTransactionGenerationNotificationV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01#MessageOriginator
- * SecuritiesSettlementTransactionInstructionV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01#MessageRecipient
- * SecuritiesSettlementTransactionInstructionV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01#MessageOriginator
- * SecuritiesSettlementTransactionStatusAdviceV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01#MessageRecipient
- * SecuritiesSettlementTransactionStatusAdviceV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#MessageOriginator
- * SecuritiesTransactionPendingReportV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#MessageRecipient
- * SecuritiesTransactionPendingReportV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#MessageOriginator
- * SecuritiesTransactionPostingReportV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#MessageRecipient
- * SecuritiesTransactionPostingReportV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#MessageOriginator
- * IntraPositionMovementInstructionV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#MessageRecipient
- * IntraPositionMovementInstructionV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#MessageOriginator
- * IntraPositionMovementStatusAdviceV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#MessageRecipient
- * IntraPositionMovementStatusAdviceV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#MessageOriginator
- * PortfolioTransferNotificationV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#MessageRecipient
- * PortfolioTransferNotificationV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01#MessageOriginator
- * SecuritiesFinancingModificationInstructionV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01#MessageRecipient
- * SecuritiesFinancingModificationInstructionV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01#MessageOriginator
- * SecuritiesFinancingStatusAdviceV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01#MessageRecipient
- * SecuritiesFinancingStatusAdviceV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01#MessageOriginator
- * SecuritiesSettlementAllegementRemovalAdviceV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01#MessageRecipient
- * SecuritiesSettlementAllegementRemovalAdviceV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#MessageOriginator
- * SecuritiesSettlementTransactionAllegementNotificationV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#MessageRecipient
- * SecuritiesSettlementTransactionAllegementNotificationV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#MessageOriginator
- * SecuritiesSettlementTransactionAllegementReportV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#MessageRecipient
- * SecuritiesSettlementTransactionAllegementReportV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#MessageOriginator
- * SecuritiesSettlementTransactionReversalAdviceV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#MessageRecipient
- * SecuritiesSettlementTransactionReversalAdviceV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#MessageOriginator
- * SecuritiesStatementQueryV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#MessageRecipient
- * SecuritiesStatementQueryV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#MessageOriginator
- * SecuritiesStatusOrStatementQueryStatusAdviceV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#MessageRecipient
- * SecuritiesStatusOrStatementQueryStatusAdviceV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#MessageOriginator
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#MessageRecipient
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01#MessageOriginator
- * SecuritiesTransactionCancellationRequestV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01#MessageRecipient
- * SecuritiesTransactionCancellationRequestV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#MessageOriginator
- * SecuritiesTransactionStatusQueryV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#MessageRecipient
- * SecuritiesTransactionStatusQueryV01.MessageRecipient}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV01#MessageOriginator
- * CorporateActionNarrativeV01.MessageOriginator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV01#MessageRecipient
- * CorporateActionNarrativeV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV01#mmMessageRecipient
+ * CorporateActionNarrativeV01.mmMessageRecipient}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -471,6 +474,7 @@ import java.util.function.Supplier;
 public class PartyIdentification10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bICOrBEI;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -487,8 +491,8 @@ public class PartyIdentification10Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -509,20 +513,21 @@ public class PartyIdentification10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification10Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification19 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -537,8 +542,8 @@ public class PartyIdentification10Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -559,20 +564,21 @@ public class PartyIdentification10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification10Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification19.mmObject();
 		}
 	};
+	protected NameAndAddress5 nameAndAddress;
 	/**
 	 * Name and address of a party.
 	 * <p>
@@ -605,17 +611,17 @@ public class PartyIdentification10Choice {
 	 * definition} = "Name and address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification10Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
@@ -623,82 +629,85 @@ public class PartyIdentification10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification10Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification10Choice.ProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification10Choice.NameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification10Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification10Choice.mmProprietaryIdentification,
+						com.tools20022.repository.choice.PartyIdentification10Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmRegistrar,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmPhysicalSecuritiesAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmSolicitationAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmInformationAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmMessageRecipient,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmRegistrar,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmResellingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmPhysicalSecuritiesAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmDropAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmSolicitationAgent,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmInformationAgent, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmMessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmAccountServicer,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmMessageOriginator, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmMessageRecipient,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmMessageOriginator,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmMessageRecipient,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmMessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmMessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageRecipient,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmMessageOriginator, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmMessageRecipient,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmMessageOriginator, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmMessageOriginator, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmMessageRecipient,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageOriginator, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageRecipient,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmMessageOriginator,
+						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionNarrativeV01.mmMessageOriginator,
+						com.tools20022.repository.area.seev.CorporateActionNarrativeV01.mmMessageRecipient);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.MessageRecipient, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.PayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.Registrar, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.PhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.SolicitationAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.InformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.MessageOriginator, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.MessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV01.MessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionV01.MessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.MessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.MessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.MessageRecipient, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.MessageRecipient, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.MessageRecipient, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.MessageRecipient, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.PayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.MessageOriginator, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.MessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.Registrar,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.ResellingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.PhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.DropAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.SolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.InformationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.MessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.Registrar,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.PhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.SolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.InformationAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.MessageRecipient, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.PayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.MessageOriginator, com.tools20022.repository.area.seev.CorporateActionNotificationV01.MessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.Registrar,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.ResellingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.PhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.DropAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.SolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.InformationAgent, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.MessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.MessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.MessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.MessageRecipient, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.AccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.MessageOriginator, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.MessageRecipient,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.AccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.MessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.MessageRecipient, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.MessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.MessageOriginator, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.MessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.MessageOriginator, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.MessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.MessageRecipient, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.MessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.MessageRecipient, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.MessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.MessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.MessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.MessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.MessageRecipient, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.MessageOriginator,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.MessageRecipient,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.MessageOriginator, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.MessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.MessageOriginator, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.MessageRecipient,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.MessageOriginator, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.MessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.MessageOriginator, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.MessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.MessageRecipient, com.tools20022.repository.area.seev.CorporateActionNarrativeV01.MessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV01.MessageRecipient);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -712,5 +721,29 @@ public class PartyIdentification10Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBICOrBEI() {
+		return bICOrBEI;
+	}
+
+	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = bICOrBEI;
+	}
+
+	public GenericIdentification19 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification19 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
+	}
+
+	public NameAndAddress5 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
 	}
 }

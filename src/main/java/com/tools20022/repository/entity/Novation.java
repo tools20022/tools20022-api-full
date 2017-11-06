@@ -38,18 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Novation#SecuritiesClearing
- * Novation.SecuritiesClearing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Novation#NovationStatus
- * Novation.NovationStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Novation#mmSecuritiesClearing
+ * Novation.mmSecuritiesClearing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Novation#mmNovationStatus
+ * Novation.mmNovationStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesClearing#Novation
- * SecuritiesClearing.Novation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmNovation
+ * SecuritiesClearing.mmNovation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Novation extends ObligationFulfilment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesClearing securitiesClearing;
 	/**
 	 * Clearing process to which the novation is related.
 	 * <p>
@@ -84,8 +87,8 @@ public class Novation extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#Novation
-	 * SecuritiesClearing.Novation}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesClearing#mmNovation
+	 * SecuritiesClearing.mmNovation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -108,20 +111,21 @@ public class Novation extends ObligationFulfilment {
 	 * definition} = "Clearing process to which the novation is related."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesClearing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesClearing = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Novation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesClearing";
 			definition = "Clearing process to which the novation is related.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.Novation;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmNovation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmObject();
 		}
 	};
+	protected NovationStatusCode novationStatus;
 	/**
 	 * Provides the novation status for the transaction.
 	 * <p>
@@ -132,27 +136,27 @@ public class Novation extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.NovationStatusCode
 	 * NovationStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4#NovationStatus
-	 * SecuredMarketTransaction4.NovationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#NovationStatus
-	 * ForeignExchangeSwapTransaction3.NovationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction4#NovationStatus
-	 * OvernightIndexSwapTransaction4.NovationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#NovationStatus
-	 * UnsecuredMarketTransaction4.NovationStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Novation
 	 * Novation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4#mmNovationStatus
+	 * SecuredMarketTransaction4.mmNovationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#mmNovationStatus
+	 * ForeignExchangeSwapTransaction3.mmNovationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction4#mmNovationStatus
+	 * OvernightIndexSwapTransaction4.mmNovationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmNovationStatus
+	 * UnsecuredMarketTransaction4.mmNovationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -164,17 +168,17 @@ public class Novation extends ObligationFulfilment {
 	 * definition} = "Provides the novation status for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NovationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNovationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuredMarketTransaction4.NovationStatus, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.NovationStatus,
-					com.tools20022.repository.msg.OvernightIndexSwapTransaction4.NovationStatus, com.tools20022.repository.msg.UnsecuredMarketTransaction4.NovationStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuredMarketTransaction4.mmNovationStatus, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmNovationStatus,
+					com.tools20022.repository.msg.OvernightIndexSwapTransaction4.mmNovationStatus, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmNovationStatus);
 			elementContext_lazy = () -> Novation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NovationStatus";
 			definition = "Provides the novation status for the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NovationStatusCode.mmObject();
 		}
 	};
@@ -182,15 +186,31 @@ public class Novation extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Novation";
 				definition = "Act of either replacing an obligation to perform with a new obligation, or replacing a party to an agreement with a new party.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesClearing.Novation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesClearing.mmNovation);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Novation.SecuritiesClearing, com.tools20022.repository.entity.Novation.NovationStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Novation.mmSecuritiesClearing, com.tools20022.repository.entity.Novation.mmNovationStatus);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesClearing getSecuritiesClearing() {
+		return securitiesClearing;
+	}
+
+	public void setSecuritiesClearing(com.tools20022.repository.entity.SecuritiesClearing securitiesClearing) {
+		this.securitiesClearing = securitiesClearing;
+	}
+
+	public NovationStatusCode getNovationStatus() {
+		return novationStatus;
+	}
+
+	public void setNovationStatus(NovationStatusCode novationStatus) {
+		this.novationStatus = novationStatus;
 	}
 }

@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5#Type
- * DebtInstrument5.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5#IssuanceDate
- * DebtInstrument5.IssuanceDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5#mmType
+ * DebtInstrument5.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5#mmIssuanceDate
+ * DebtInstrument5.mmIssuanceDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebtInstrument5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BondType1Code type;
 	/**
 	 * Specifies the type of bond type.
 	 * <p>
@@ -73,8 +74,8 @@ public class DebtInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ProductType
-	 * AssetClassification.ProductType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmProductType
+	 * AssetClassification.mmProductType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class DebtInstrument5 {
 	 * definition} = "Specifies the type of bond type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
 			componentContext_lazy = () -> DebtInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ProductType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of bond type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BondType1Code.mmObject();
 		}
 	};
+	protected ISODate issuanceDate;
 	/**
 	 * Date on which a bond is issued and begins to accrue interest.
 	 * <p>
@@ -119,8 +121,8 @@ public class DebtInstrument5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,17 +142,17 @@ public class DebtInstrument5 {
 	 * "Date on which a bond is issued and begins to accrue interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuanceDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuanceDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> DebtInstrument5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "IssncDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceDate";
 			definition = "Date on which a bond is issued and begins to accrue interest.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -158,14 +160,30 @@ public class DebtInstrument5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument5.Type, com.tools20022.repository.msg.DebtInstrument5.IssuanceDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument5.mmType, com.tools20022.repository.msg.DebtInstrument5.mmIssuanceDate);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrument5";
 				definition = "Specifies the debit instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BondType1Code getType() {
+		return type;
+	}
+
+	public void setType(BondType1Code type) {
+		this.type = type;
+	}
+
+	public ISODate getIssuanceDate() {
+		return issuanceDate;
+	}
+
+	public void setIssuanceDate(ISODate issuanceDate) {
+		this.issuanceDate = issuanceDate;
 	}
 }

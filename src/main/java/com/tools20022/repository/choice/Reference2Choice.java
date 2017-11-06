@@ -39,38 +39,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#MarginCallRequestIdentification
- * Reference2Choice.MarginCallRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmMarginCallRequestIdentification
+ * Reference2Choice.mmMarginCallRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#MarginCallResponseIdentification
- * Reference2Choice.MarginCallResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmMarginCallResponseIdentification
+ * Reference2Choice.mmMarginCallResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#CollateralProposalIdentification
- * Reference2Choice.CollateralProposalIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmCollateralProposalIdentification
+ * Reference2Choice.mmCollateralProposalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#CollateralProposalResponseIdentification
- * Reference2Choice.CollateralProposalResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmCollateralProposalResponseIdentification
+ * Reference2Choice.mmCollateralProposalResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#DisputeNotificationIdentification
- * Reference2Choice.DisputeNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmDisputeNotificationIdentification
+ * Reference2Choice.mmDisputeNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#CollateralSubstitutionRequestIdentification
- * Reference2Choice.CollateralSubstitutionRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmCollateralSubstitutionRequestIdentification
+ * Reference2Choice.mmCollateralSubstitutionRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#CollateralSubstitutionResponseIdentification
- * Reference2Choice.CollateralSubstitutionResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmCollateralSubstitutionResponseIdentification
+ * Reference2Choice.mmCollateralSubstitutionResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#CollateralSubstitutionConfirmationIdentification
- * Reference2Choice.CollateralSubstitutionConfirmationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmCollateralSubstitutionConfirmationIdentification
+ * Reference2Choice.mmCollateralSubstitutionConfirmationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#InterestPaymentRequestIdentification
- * Reference2Choice.InterestPaymentRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmInterestPaymentRequestIdentification
+ * Reference2Choice.mmInterestPaymentRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#InterestPaymentResponseIdentification
- * Reference2Choice.InterestPaymentResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmInterestPaymentResponseIdentification
+ * Reference2Choice.mmInterestPaymentResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reference2Choice#InterestPaymentStatementIdentification
- * Reference2Choice.InterestPaymentStatementIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.Reference2Choice#mmInterestPaymentStatementIdentification
+ * Reference2Choice.mmInterestPaymentStatementIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -78,18 +78,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03#Reference
- * CollateralManagementCancellationRequestV03.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03#mmReference
+ * CollateralManagementCancellationRequestV03.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04#Reference
- * CollateralManagementCancellationRequestV04.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04#mmReference
+ * CollateralManagementCancellationRequestV04.mmReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text marginCallRequestIdentification;
 	/**
 	 * Unique identifier of the margin call request.
 	 * <p>
@@ -132,7 +133,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -140,11 +141,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Unique identifier of the margin call request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text marginCallResponseIdentification;
 	/**
 	 * Unique identifier of the margin call response.
 	 * <p>
@@ -172,7 +174,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the margin call response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -180,11 +182,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResponseIdentification";
 			definition = "Unique identifier of the margin call response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralProposalIdentification;
 	/**
 	 * Unique identifier of the collateral proposal.
 	 * <p>
@@ -212,7 +215,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the collateral proposal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralProposalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralProposalIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -220,11 +223,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalIdentification";
 			definition = "Unique identifier of the collateral proposal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralProposalResponseIdentification;
 	/**
 	 * Unique identifier of the collateral proposal response.
 	 * <p>
@@ -252,7 +256,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the collateral proposal response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralProposalResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralProposalResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -260,11 +264,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalResponseIdentification";
 			definition = "Unique identifier of the collateral proposal response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text disputeNotificationIdentification;
 	/**
 	 * Unique identifier of the dispute notification.
 	 * <p>
@@ -292,7 +297,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the dispute notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisputeNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisputeNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -300,11 +305,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeNotificationIdentification";
 			definition = "Unique identifier of the dispute notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralSubstitutionRequestIdentification;
 	/**
 	 * Choice between the identification of the MarginCallRequest message, the
 	 * MarginCallResponse message, the CollateralProposal message, the
@@ -341,7 +347,7 @@ public class Reference2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -349,11 +355,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message, the CollateralSubstitutionResponse message, the CollateralSubstitutionConfirmation message, the InterestPaymentRequest message, the InterestPaymentResponse message, the InterestPaymentStatement message or the MarginCallDisputeNotification message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralSubstitutionResponseIdentification;
 	/**
 	 * Unique identifier of the collateral substitution response.
 	 * <p>
@@ -382,7 +389,7 @@ public class Reference2Choice {
 	 * "Unique identifier of the collateral substitution response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -390,11 +397,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionResponseIdentification";
 			definition = "Unique identifier of the collateral substitution response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text collateralSubstitutionConfirmationIdentification;
 	/**
 	 * Unique identifier of the collateral substitution confirmation.
 	 * <p>
@@ -423,7 +431,7 @@ public class Reference2Choice {
 	 * "Unique identifier of the collateral substitution confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralSubstitutionConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralSubstitutionConfirmationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -431,11 +439,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionConfirmationIdentification";
 			definition = "Unique identifier of the collateral substitution confirmation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text interestPaymentRequestIdentification;
 	/**
 	 * Unique identifier of the interest payment request.
 	 * <p>
@@ -463,7 +472,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the interest payment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPaymentRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPaymentRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -471,11 +480,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRequestIdentification";
 			definition = "Unique identifier of the interest payment request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text interestPaymentResponseIdentification;
 	/**
 	 * Unique identifier of the interest payment response.
 	 * <p>
@@ -503,7 +513,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the interest payment response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPaymentResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPaymentResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -511,11 +521,12 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentResponseIdentification";
 			definition = "Unique identifier of the interest payment response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text interestPaymentStatementIdentification;
 	/**
 	 * Unique identifier of the interest payment statement.
 	 * <p>
@@ -543,7 +554,7 @@ public class Reference2Choice {
 	 * definition} = "Unique identifier of the interest payment statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPaymentStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPaymentStatementIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
@@ -551,8 +562,8 @@ public class Reference2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentStatementIdentification";
 			definition = "Unique identifier of the interest payment statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -560,20 +571,108 @@ public class Reference2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reference2Choice.MarginCallRequestIdentification, com.tools20022.repository.choice.Reference2Choice.MarginCallResponseIdentification,
-						com.tools20022.repository.choice.Reference2Choice.CollateralProposalIdentification, com.tools20022.repository.choice.Reference2Choice.CollateralProposalResponseIdentification,
-						com.tools20022.repository.choice.Reference2Choice.DisputeNotificationIdentification, com.tools20022.repository.choice.Reference2Choice.CollateralSubstitutionRequestIdentification,
-						com.tools20022.repository.choice.Reference2Choice.CollateralSubstitutionResponseIdentification, com.tools20022.repository.choice.Reference2Choice.CollateralSubstitutionConfirmationIdentification,
-						com.tools20022.repository.choice.Reference2Choice.InterestPaymentRequestIdentification, com.tools20022.repository.choice.Reference2Choice.InterestPaymentResponseIdentification,
-						com.tools20022.repository.choice.Reference2Choice.InterestPaymentStatementIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.Reference,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.Reference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reference2Choice.mmMarginCallRequestIdentification, com.tools20022.repository.choice.Reference2Choice.mmMarginCallResponseIdentification,
+						com.tools20022.repository.choice.Reference2Choice.mmCollateralProposalIdentification, com.tools20022.repository.choice.Reference2Choice.mmCollateralProposalResponseIdentification,
+						com.tools20022.repository.choice.Reference2Choice.mmDisputeNotificationIdentification, com.tools20022.repository.choice.Reference2Choice.mmCollateralSubstitutionRequestIdentification,
+						com.tools20022.repository.choice.Reference2Choice.mmCollateralSubstitutionResponseIdentification, com.tools20022.repository.choice.Reference2Choice.mmCollateralSubstitutionConfirmationIdentification,
+						com.tools20022.repository.choice.Reference2Choice.mmInterestPaymentRequestIdentification, com.tools20022.repository.choice.Reference2Choice.mmInterestPaymentResponseIdentification,
+						com.tools20022.repository.choice.Reference2Choice.mmInterestPaymentStatementIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmReference,
+						com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmReference);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reference2Choice";
 				definition = "Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message, the CollateralSubstitutionResponse message, the CollateralSubstitutionConfirmation message, the InterestPaymentRequest message, the InterestPaymentResponse message, the InterestPaymentStatement message or the MarginCallDisputeNotification message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMarginCallRequestIdentification() {
+		return marginCallRequestIdentification;
+	}
+
+	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	}
+
+	public Max35Text getMarginCallResponseIdentification() {
+		return marginCallResponseIdentification;
+	}
+
+	public void setMarginCallResponseIdentification(Max35Text marginCallResponseIdentification) {
+		this.marginCallResponseIdentification = marginCallResponseIdentification;
+	}
+
+	public Max35Text getCollateralProposalIdentification() {
+		return collateralProposalIdentification;
+	}
+
+	public void setCollateralProposalIdentification(Max35Text collateralProposalIdentification) {
+		this.collateralProposalIdentification = collateralProposalIdentification;
+	}
+
+	public Max35Text getCollateralProposalResponseIdentification() {
+		return collateralProposalResponseIdentification;
+	}
+
+	public void setCollateralProposalResponseIdentification(Max35Text collateralProposalResponseIdentification) {
+		this.collateralProposalResponseIdentification = collateralProposalResponseIdentification;
+	}
+
+	public Max35Text getDisputeNotificationIdentification() {
+		return disputeNotificationIdentification;
+	}
+
+	public void setDisputeNotificationIdentification(Max35Text disputeNotificationIdentification) {
+		this.disputeNotificationIdentification = disputeNotificationIdentification;
+	}
+
+	public Max35Text getCollateralSubstitutionRequestIdentification() {
+		return collateralSubstitutionRequestIdentification;
+	}
+
+	public void setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
+		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
+	}
+
+	public Max35Text getCollateralSubstitutionResponseIdentification() {
+		return collateralSubstitutionResponseIdentification;
+	}
+
+	public void setCollateralSubstitutionResponseIdentification(Max35Text collateralSubstitutionResponseIdentification) {
+		this.collateralSubstitutionResponseIdentification = collateralSubstitutionResponseIdentification;
+	}
+
+	public Max35Text getCollateralSubstitutionConfirmationIdentification() {
+		return collateralSubstitutionConfirmationIdentification;
+	}
+
+	public void setCollateralSubstitutionConfirmationIdentification(Max35Text collateralSubstitutionConfirmationIdentification) {
+		this.collateralSubstitutionConfirmationIdentification = collateralSubstitutionConfirmationIdentification;
+	}
+
+	public Max35Text getInterestPaymentRequestIdentification() {
+		return interestPaymentRequestIdentification;
+	}
+
+	public void setInterestPaymentRequestIdentification(Max35Text interestPaymentRequestIdentification) {
+		this.interestPaymentRequestIdentification = interestPaymentRequestIdentification;
+	}
+
+	public Max35Text getInterestPaymentResponseIdentification() {
+		return interestPaymentResponseIdentification;
+	}
+
+	public void setInterestPaymentResponseIdentification(Max35Text interestPaymentResponseIdentification) {
+		this.interestPaymentResponseIdentification = interestPaymentResponseIdentification;
+	}
+
+	public Max35Text getInterestPaymentStatementIdentification() {
+		return interestPaymentStatementIdentification;
+	}
+
+	public void setInterestPaymentStatementIdentification(Max35Text interestPaymentStatementIdentification) {
+		this.interestPaymentStatementIdentification = interestPaymentStatementIdentification;
 	}
 }

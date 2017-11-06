@@ -30,44 +30,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#ContractForDifference
- * FinancialInstrumentContractTypeCode.ContractForDifference}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmContractForDifference
+ * FinancialInstrumentContractTypeCode.mmContractForDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#ForwardRateAgreement
- * FinancialInstrumentContractTypeCode.ForwardRateAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmForwardRateAgreement
+ * FinancialInstrumentContractTypeCode.mmForwardRateAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#Futures
- * FinancialInstrumentContractTypeCode.Futures}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmFutures
+ * FinancialInstrumentContractTypeCode.mmFutures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#Forward
- * FinancialInstrumentContractTypeCode.Forward}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmForward
+ * FinancialInstrumentContractTypeCode.mmForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#Option
- * FinancialInstrumentContractTypeCode.Option}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmOption
+ * FinancialInstrumentContractTypeCode.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#Swap
- * FinancialInstrumentContractTypeCode.Swap}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmSwap
+ * FinancialInstrumentContractTypeCode.mmSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#SpreadBetting
- * FinancialInstrumentContractTypeCode.SpreadBetting}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmSpreadBetting
+ * FinancialInstrumentContractTypeCode.mmSpreadBetting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#Swaption
- * FinancialInstrumentContractTypeCode.Swaption}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmSwaption
+ * FinancialInstrumentContractTypeCode.mmSwaption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#Other
- * FinancialInstrumentContractTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmOther
+ * FinancialInstrumentContractTypeCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#FuturesOnSwap
- * FinancialInstrumentContractTypeCode.FuturesOnSwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmFuturesOnSwap
+ * FinancialInstrumentContractTypeCode.mmFuturesOnSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#PortfolioSwap
- * FinancialInstrumentContractTypeCode.PortfolioSwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmPortfolioSwap
+ * FinancialInstrumentContractTypeCode.mmPortfolioSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#ForwardsOnASwap
- * FinancialInstrumentContractTypeCode.ForwardsOnASwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmForwardsOnASwap
+ * FinancialInstrumentContractTypeCode.mmForwardsOnASwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#ForwardFreightAgreement
- * FinancialInstrumentContractTypeCode.ForwardFreightAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode#mmForwardFreightAgreement
+ * FinancialInstrumentContractTypeCode.mmForwardFreightAgreement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -81,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,7 +118,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type contracts for difference."</li>
 	 * </ul>
 	 */
-	public static final MMCode ContractForDifference = new MMCode() {
+	public static final MMCode mmContractForDifference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractForDifference";
@@ -148,7 +148,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type forward rate agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardRateAgreement = new MMCode() {
+	public static final MMCode mmForwardRateAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardRateAgreement";
@@ -178,7 +178,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type future."</li>
 	 * </ul>
 	 */
-	public static final MMCode Futures = new MMCode() {
+	public static final MMCode mmFutures = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Futures";
@@ -209,7 +209,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type forward.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode Forward = new MMCode() {
+	public static final MMCode mmForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forward";
@@ -239,7 +239,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type option.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode Option = new MMCode() {
+	public static final MMCode mmOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
@@ -269,7 +269,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type swap.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swap = new MMCode() {
+	public static final MMCode mmSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
@@ -299,7 +299,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type spread betting.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpreadBetting = new MMCode() {
+	public static final MMCode mmSpreadBetting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadBetting";
@@ -329,7 +329,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type swaption.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swaption = new MMCode() {
+	public static final MMCode mmSwaption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swaption";
@@ -359,7 +359,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of other financial instrument contract type. "</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -389,7 +389,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type future on a swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode FuturesOnSwap = new MMCode() {
+	public static final MMCode mmFuturesOnSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FuturesOnSwap";
@@ -419,7 +419,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type portfolio swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode PortfolioSwap = new MMCode() {
+	public static final MMCode mmPortfolioSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioSwap";
@@ -449,7 +449,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type forwards on a swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardsOnASwap = new MMCode() {
+	public static final MMCode mmForwardsOnASwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardsOnASwap";
@@ -479,7 +479,7 @@ public class FinancialInstrumentContractTypeCode {
 	 * definition} = "Contract of type forward freight agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardFreightAgreement = new MMCode() {
+	public static final MMCode mmForwardFreightAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardFreightAgreement";
@@ -492,17 +492,17 @@ public class FinancialInstrumentContractTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentContractTypeCode";
 				definition = "Specifies the contract type of a derivate financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.ContractForDifference, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.ForwardRateAgreement,
-						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Futures, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Forward,
-						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Option, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Swap,
-						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.SpreadBetting, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Swaption,
-						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Other, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.FuturesOnSwap,
-						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.PortfolioSwap, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.ForwardsOnASwap,
-						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.ForwardFreightAgreement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmContractForDifference, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmForwardRateAgreement,
+						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmFutures, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmForward,
+						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmOption, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmSwap,
+						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmSpreadBetting, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmSwaption,
+						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmOther, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmFuturesOnSwap,
+						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmPortfolioSwap, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmForwardsOnASwap,
+						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmForwardFreightAgreement);
 				derivation_lazy = () -> Arrays.asList(FinancialInstrumentContractType1Code.mmObject());
 			}
 		});

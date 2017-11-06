@@ -34,216 +34,216 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Opening
- * SystemBalanceType1Code.Opening}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmOpening
+ * SystemBalanceType1Code.mmOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Interim
- * SystemBalanceType1Code.Interim}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmInterim
+ * SystemBalanceType1Code.mmInterim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Closing
- * SystemBalanceType1Code.Closing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmClosing
+ * SystemBalanceType1Code.mmClosing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Book
- * SystemBalanceType1Code.Book}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmBook
+ * SystemBalanceType1Code.mmBook}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Current
- * SystemBalanceType1Code.Current}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCurrent
+ * SystemBalanceType1Code.mmCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Pending
- * SystemBalanceType1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmPending
+ * SystemBalanceType1Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#LimitRelated
- * SystemBalanceType1Code.LimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmLimitRelated
+ * SystemBalanceType1Code.mmLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Available
- * SystemBalanceType1Code.Available}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmAvailable
+ * SystemBalanceType1Code.mmAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#LiquidityTransfer
- * SystemBalanceType1Code.LiquidityTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmLiquidityTransfer
+ * SystemBalanceType1Code.mmLiquidityTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Credit
- * SystemBalanceType1Code.Credit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCredit
+ * SystemBalanceType1Code.mmCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#EligibleAssets
- * SystemBalanceType1Code.EligibleAssets}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmEligibleAssets
+ * SystemBalanceType1Code.mmEligibleAssets}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Payment
- * SystemBalanceType1Code.Payment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmPayment
+ * SystemBalanceType1Code.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Blocked
- * SystemBalanceType1Code.Blocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmBlocked
+ * SystemBalanceType1Code.mmBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Expected
- * SystemBalanceType1Code.Expected}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmExpected
+ * SystemBalanceType1Code.mmExpected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#DaylightOverdraft
- * SystemBalanceType1Code.DaylightOverdraft}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmDaylightOverdraft
+ * SystemBalanceType1Code.mmDaylightOverdraft}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#ExpectedCredit
- * SystemBalanceType1Code.ExpectedCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmExpectedCredit
+ * SystemBalanceType1Code.mmExpectedCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#ExpectedDebit
- * SystemBalanceType1Code.ExpectedDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmExpectedDebit
+ * SystemBalanceType1Code.mmExpectedDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Adjustment
- * SystemBalanceType1Code.Adjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmAdjustment
+ * SystemBalanceType1Code.mmAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#ProgressiveAverage
- * SystemBalanceType1Code.ProgressiveAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmProgressiveAverage
+ * SystemBalanceType1Code.mmProgressiveAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Debit
- * SystemBalanceType1Code.Debit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmDebit
+ * SystemBalanceType1Code.mmDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Threshold
- * SystemBalanceType1Code.Threshold}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmThreshold
+ * SystemBalanceType1Code.mmThreshold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Noted
- * SystemBalanceType1Code.Noted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmNoted
+ * SystemBalanceType1Code.mmNoted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Self
- * SystemBalanceType1Code.Self}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmSelf
+ * SystemBalanceType1Code.mmSelf}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Master
- * SystemBalanceType1Code.Master}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmMaster
+ * SystemBalanceType1Code.mmMaster}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#ForecastSettlement
- * SystemBalanceType1Code.ForecastSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmForecastSettlement
+ * SystemBalanceType1Code.mmForecastSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#BlockedTrades
- * SystemBalanceType1Code.BlockedTrades}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmBlockedTrades
+ * SystemBalanceType1Code.mmBlockedTrades}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#OtherBlockedTrades
- * SystemBalanceType1Code.OtherBlockedTrades}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmOtherBlockedTrades
+ * SystemBalanceType1Code.mmOtherBlockedTrades}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Custody
- * SystemBalanceType1Code.Custody}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCustody
+ * SystemBalanceType1Code.mmCustody}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CashForecast
- * SystemBalanceType1Code.CashForecast}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCashForecast
+ * SystemBalanceType1Code.mmCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#DividendsCollection
- * SystemBalanceType1Code.DividendsCollection}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmDividendsCollection
+ * SystemBalanceType1Code.mmDividendsCollection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#NetFunding
- * SystemBalanceType1Code.NetFunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmNetFunding
+ * SystemBalanceType1Code.mmNetFunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#PayInPayOut
- * SystemBalanceType1Code.PayInPayOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmPayInPayOut
+ * SystemBalanceType1Code.mmPayInPayOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#ExchangeForecast
- * SystemBalanceType1Code.ExchangeForecast}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmExchangeForecast
+ * SystemBalanceType1Code.mmExchangeForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CentralCounterparty
- * SystemBalanceType1Code.CentralCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCentralCounterparty
+ * SystemBalanceType1Code.mmCentralCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#TotalOnHold
- * SystemBalanceType1Code.TotalOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmTotalOnHold
+ * SystemBalanceType1Code.mmTotalOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CreditOnHold
- * SystemBalanceType1Code.CreditOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCreditOnHold
+ * SystemBalanceType1Code.mmCreditOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#DebitOnHold
- * SystemBalanceType1Code.DebitOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmDebitOnHold
+ * SystemBalanceType1Code.mmDebitOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#TotalProcessed
- * SystemBalanceType1Code.TotalProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmTotalProcessed
+ * SystemBalanceType1Code.mmTotalProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CreditProcessed
- * SystemBalanceType1Code.CreditProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCreditProcessed
+ * SystemBalanceType1Code.mmCreditProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#DebitProcessed
- * SystemBalanceType1Code.DebitProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmDebitProcessed
+ * SystemBalanceType1Code.mmDebitProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#TotalFuture
- * SystemBalanceType1Code.TotalFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmTotalFuture
+ * SystemBalanceType1Code.mmTotalFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#TotalRejected
- * SystemBalanceType1Code.TotalRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmTotalRejected
+ * SystemBalanceType1Code.mmTotalRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#FirmCollateralisation
- * SystemBalanceType1Code.FirmCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmFirmCollateralisation
+ * SystemBalanceType1Code.mmFirmCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#UsedAmountsFirmCollateralisation
- * SystemBalanceType1Code.UsedAmountsFirmCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmUsedAmountsFirmCollateralisation
+ * SystemBalanceType1Code.mmUsedAmountsFirmCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#SelfCollateralisation
- * SystemBalanceType1Code.SelfCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmSelfCollateralisation
+ * SystemBalanceType1Code.mmSelfCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#UsedAmountsSelfCollateralisation
- * SystemBalanceType1Code.UsedAmountsSelfCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmUsedAmountsSelfCollateralisation
+ * SystemBalanceType1Code.mmUsedAmountsSelfCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CustodyActual
- * SystemBalanceType1Code.CustodyActual}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCustodyActual
+ * SystemBalanceType1Code.mmCustodyActual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CCPGuaranteedForecasting
- * SystemBalanceType1Code.CCPGuaranteedForecasting}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCCPGuaranteedForecasting
+ * SystemBalanceType1Code.mmCCPGuaranteedForecasting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#NonCCPGuaranteedForecasting
- * SystemBalanceType1Code.NonCCPGuaranteedForecasting}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmNonCCPGuaranteedForecasting
+ * SystemBalanceType1Code.mmNonCCPGuaranteedForecasting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#DefinitiveSettledSecurities
- * SystemBalanceType1Code.DefinitiveSettledSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmDefinitiveSettledSecurities
+ * SystemBalanceType1Code.mmDefinitiveSettledSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#LackOfHoldingsTransactions
- * SystemBalanceType1Code.LackOfHoldingsTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmLackOfHoldingsTransactions
+ * SystemBalanceType1Code.mmLackOfHoldingsTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#NonSettledSecurities
- * SystemBalanceType1Code.NonSettledSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmNonSettledSecurities
+ * SystemBalanceType1Code.mmNonSettledSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CCPGuaranteedOTCTransactions
- * SystemBalanceType1Code.CCPGuaranteedOTCTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCCPGuaranteedOTCTransactions
+ * SystemBalanceType1Code.mmCCPGuaranteedOTCTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#ForecastOTCTransactions
- * SystemBalanceType1Code.ForecastOTCTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmForecastOTCTransactions
+ * SystemBalanceType1Code.mmForecastOTCTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#NonCCPGuaranteedOTCTransactions
- * SystemBalanceType1Code.NonCCPGuaranteedOTCTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmNonCCPGuaranteedOTCTransactions
+ * SystemBalanceType1Code.mmNonCCPGuaranteedOTCTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#SAPDirectDebitAmount
- * SystemBalanceType1Code.SAPDirectDebitAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmSAPDirectDebitAmount
+ * SystemBalanceType1Code.mmSAPDirectDebitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#SAPDirectCreditAmount
- * SystemBalanceType1Code.SAPDirectCreditAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmSAPDirectCreditAmount
+ * SystemBalanceType1Code.mmSAPDirectCreditAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CMUPRepoDebit
- * SystemBalanceType1Code.CMUPRepoDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCMUPRepoDebit
+ * SystemBalanceType1Code.mmCMUPRepoDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#CMUPRepoCredit
- * SystemBalanceType1Code.CMUPRepoCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmCMUPRepoCredit
+ * SystemBalanceType1Code.mmCMUPRepoCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#BulkSettlementCMUPDebit
- * SystemBalanceType1Code.BulkSettlementCMUPDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmBulkSettlementCMUPDebit
+ * SystemBalanceType1Code.mmBulkSettlementCMUPDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#BulkSettlementCMUPCredit
- * SystemBalanceType1Code.BulkSettlementCMUPCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmBulkSettlementCMUPCredit
+ * SystemBalanceType1Code.mmBulkSettlementCMUPCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#SAPQueueAmount
- * SystemBalanceType1Code.SAPQueueAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmSAPQueueAmount
+ * SystemBalanceType1Code.mmSAPQueueAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#IntradayRepoLimit
- * SystemBalanceType1Code.IntradayRepoLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmIntradayRepoLimit
+ * SystemBalanceType1Code.mmIntradayRepoLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#IntradayRepoDrawings
- * SystemBalanceType1Code.IntradayRepoDrawings}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmIntradayRepoDrawings
+ * SystemBalanceType1Code.mmIntradayRepoDrawings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#DiscountWindowRepoDrawings
- * SystemBalanceType1Code.DiscountWindowRepoDrawings}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmDiscountWindowRepoDrawings
+ * SystemBalanceType1Code.mmDiscountWindowRepoDrawings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#AvailableDMVForDiscountWindowRepo
- * SystemBalanceType1Code.AvailableDMVForDiscountWindowRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmAvailableDMVForDiscountWindowRepo
+ * SystemBalanceType1Code.mmAvailableDMVForDiscountWindowRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#AvailableDMVForIntradayRepo
- * SystemBalanceType1Code.AvailableDMVForIntradayRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmAvailableDMVForIntradayRepo
+ * SystemBalanceType1Code.mmAvailableDMVForIntradayRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#Restricted
- * SystemBalanceType1Code.Restricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code#mmRestricted
+ * SystemBalanceType1Code.mmRestricted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -280,7 +280,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Opening"</li>
 	 * </ul>
 	 */
-	public static final MMCode Opening = new MMCode() {
+	public static final MMCode mmOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
@@ -303,7 +303,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
@@ -326,7 +326,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Closing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closing = new MMCode() {
+	public static final MMCode mmClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
@@ -349,7 +349,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Book"</li>
 	 * </ul>
 	 */
-	public static final MMCode Book = new MMCode() {
+	public static final MMCode mmBook = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
@@ -372,7 +372,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Current"</li>
 	 * </ul>
 	 */
-	public static final MMCode Current = new MMCode() {
+	public static final MMCode mmCurrent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
@@ -395,7 +395,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -418,7 +418,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "LimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode LimitRelated = new MMCode() {
+	public static final MMCode mmLimitRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitRelated";
@@ -441,7 +441,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Available"</li>
 	 * </ul>
 	 */
-	public static final MMCode Available = new MMCode() {
+	public static final MMCode mmAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
@@ -464,7 +464,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "LiquidityTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidityTransfer = new MMCode() {
+	public static final MMCode mmLiquidityTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityTransfer";
@@ -487,7 +487,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Credit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Credit = new MMCode() {
+	public static final MMCode mmCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
@@ -510,7 +510,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "EligibleAssets"</li>
 	 * </ul>
 	 */
-	public static final MMCode EligibleAssets = new MMCode() {
+	public static final MMCode mmEligibleAssets = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleAssets";
@@ -533,7 +533,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Payment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Payment = new MMCode() {
+	public static final MMCode mmPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
@@ -556,7 +556,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Blocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Blocked = new MMCode() {
+	public static final MMCode mmBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
@@ -579,7 +579,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Expected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expected = new MMCode() {
+	public static final MMCode mmExpected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expected";
@@ -602,7 +602,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "DaylightOverdraft"</li>
 	 * </ul>
 	 */
-	public static final MMCode DaylightOverdraft = new MMCode() {
+	public static final MMCode mmDaylightOverdraft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DaylightOverdraft";
@@ -625,7 +625,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "ExpectedCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExpectedCredit = new MMCode() {
+	public static final MMCode mmExpectedCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCredit";
@@ -648,7 +648,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "ExpectedDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExpectedDebit = new MMCode() {
+	public static final MMCode mmExpectedDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDebit";
@@ -671,7 +671,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Adjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Adjustment = new MMCode() {
+	public static final MMCode mmAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
@@ -694,7 +694,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "ProgressiveAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProgressiveAverage = new MMCode() {
+	public static final MMCode mmProgressiveAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressiveAverage";
@@ -717,7 +717,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Debit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Debit = new MMCode() {
+	public static final MMCode mmDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
@@ -740,7 +740,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Threshold"</li>
 	 * </ul>
 	 */
-	public static final MMCode Threshold = new MMCode() {
+	public static final MMCode mmThreshold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Threshold";
@@ -763,7 +763,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Noted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Noted = new MMCode() {
+	public static final MMCode mmNoted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Noted";
@@ -786,7 +786,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Self"</li>
 	 * </ul>
 	 */
-	public static final MMCode Self = new MMCode() {
+	public static final MMCode mmSelf = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Self";
@@ -809,7 +809,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Master"</li>
 	 * </ul>
 	 */
-	public static final MMCode Master = new MMCode() {
+	public static final MMCode mmMaster = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Master";
@@ -832,7 +832,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "ForecastSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForecastSettlement = new MMCode() {
+	public static final MMCode mmForecastSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastSettlement";
@@ -855,7 +855,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "BlockedTrades"</li>
 	 * </ul>
 	 */
-	public static final MMCode BlockedTrades = new MMCode() {
+	public static final MMCode mmBlockedTrades = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedTrades";
@@ -878,7 +878,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "OtherBlockedTrades"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherBlockedTrades = new MMCode() {
+	public static final MMCode mmOtherBlockedTrades = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBlockedTrades";
@@ -901,7 +901,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Custody"</li>
 	 * </ul>
 	 */
-	public static final MMCode Custody = new MMCode() {
+	public static final MMCode mmCustody = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
@@ -924,7 +924,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CashForecast"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashForecast = new MMCode() {
+	public static final MMCode mmCashForecast = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashForecast";
@@ -947,7 +947,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "DividendsCollection"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendsCollection = new MMCode() {
+	public static final MMCode mmDividendsCollection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendsCollection";
@@ -970,7 +970,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "NetFunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetFunding = new MMCode() {
+	public static final MMCode mmNetFunding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetFunding";
@@ -993,7 +993,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "PayInPayOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayInPayOut = new MMCode() {
+	public static final MMCode mmPayInPayOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInPayOut";
@@ -1016,7 +1016,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "ExchangeForecast"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeForecast = new MMCode() {
+	public static final MMCode mmExchangeForecast = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForecast";
@@ -1039,7 +1039,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CentralCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode CentralCounterparty = new MMCode() {
+	public static final MMCode mmCentralCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralCounterparty";
@@ -1062,7 +1062,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "TotalOnHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalOnHold = new MMCode() {
+	public static final MMCode mmTotalOnHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalOnHold";
@@ -1085,7 +1085,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CreditOnHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditOnHold = new MMCode() {
+	public static final MMCode mmCreditOnHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditOnHold";
@@ -1108,7 +1108,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "DebitOnHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode DebitOnHold = new MMCode() {
+	public static final MMCode mmDebitOnHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitOnHold";
@@ -1131,7 +1131,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "TotalProcessed"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalProcessed = new MMCode() {
+	public static final MMCode mmTotalProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalProcessed";
@@ -1154,7 +1154,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CreditProcessed"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditProcessed = new MMCode() {
+	public static final MMCode mmCreditProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditProcessed";
@@ -1177,7 +1177,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "DebitProcessed"</li>
 	 * </ul>
 	 */
-	public static final MMCode DebitProcessed = new MMCode() {
+	public static final MMCode mmDebitProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitProcessed";
@@ -1200,7 +1200,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "TotalFuture"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalFuture = new MMCode() {
+	public static final MMCode mmTotalFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFuture";
@@ -1223,7 +1223,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "TotalRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalRejected = new MMCode() {
+	public static final MMCode mmTotalRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRejected";
@@ -1246,7 +1246,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "FirmCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FirmCollateralisation = new MMCode() {
+	public static final MMCode mmFirmCollateralisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirmCollateralisation";
@@ -1269,7 +1269,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "UsedAmountsFirmCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode UsedAmountsFirmCollateralisation = new MMCode() {
+	public static final MMCode mmUsedAmountsFirmCollateralisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmountsFirmCollateralisation";
@@ -1292,7 +1292,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "SelfCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfCollateralisation = new MMCode() {
+	public static final MMCode mmSelfCollateralisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCollateralisation";
@@ -1315,7 +1315,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "UsedAmountsSelfCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode UsedAmountsSelfCollateralisation = new MMCode() {
+	public static final MMCode mmUsedAmountsSelfCollateralisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmountsSelfCollateralisation";
@@ -1338,7 +1338,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CustodyActual"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyActual = new MMCode() {
+	public static final MMCode mmCustodyActual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyActual";
@@ -1361,7 +1361,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CCPGuaranteedForecasting"</li>
 	 * </ul>
 	 */
-	public static final MMCode CCPGuaranteedForecasting = new MMCode() {
+	public static final MMCode mmCCPGuaranteedForecasting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPGuaranteedForecasting";
@@ -1384,7 +1384,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "NonCCPGuaranteedForecasting"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonCCPGuaranteedForecasting = new MMCode() {
+	public static final MMCode mmNonCCPGuaranteedForecasting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCCPGuaranteedForecasting";
@@ -1407,7 +1407,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "DefinitiveSettledSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode DefinitiveSettledSecurities = new MMCode() {
+	public static final MMCode mmDefinitiveSettledSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefinitiveSettledSecurities";
@@ -1430,7 +1430,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "LackOfHoldingsTransactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfHoldingsTransactions = new MMCode() {
+	public static final MMCode mmLackOfHoldingsTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfHoldingsTransactions";
@@ -1453,7 +1453,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "NonSettledSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonSettledSecurities = new MMCode() {
+	public static final MMCode mmNonSettledSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonSettledSecurities";
@@ -1476,7 +1476,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CCPGuaranteedOTCTransactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode CCPGuaranteedOTCTransactions = new MMCode() {
+	public static final MMCode mmCCPGuaranteedOTCTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPGuaranteedOTCTransactions";
@@ -1499,7 +1499,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "ForecastOTCTransactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForecastOTCTransactions = new MMCode() {
+	public static final MMCode mmForecastOTCTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastOTCTransactions";
@@ -1522,7 +1522,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "NonCCPGuaranteedOTCTransactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonCCPGuaranteedOTCTransactions = new MMCode() {
+	public static final MMCode mmNonCCPGuaranteedOTCTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCCPGuaranteedOTCTransactions";
@@ -1545,7 +1545,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "SAPDirectDebitAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SAPDirectDebitAmount = new MMCode() {
+	public static final MMCode mmSAPDirectDebitAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SAPDirectDebitAmount";
@@ -1568,7 +1568,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "SAPDirectCreditAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SAPDirectCreditAmount = new MMCode() {
+	public static final MMCode mmSAPDirectCreditAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SAPDirectCreditAmount";
@@ -1591,7 +1591,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CMUPRepoDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode CMUPRepoDebit = new MMCode() {
+	public static final MMCode mmCMUPRepoDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMUPRepoDebit";
@@ -1614,7 +1614,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "CMUPRepoCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode CMUPRepoCredit = new MMCode() {
+	public static final MMCode mmCMUPRepoCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMUPRepoCredit";
@@ -1637,7 +1637,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "BulkSettlementCMUPDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode BulkSettlementCMUPDebit = new MMCode() {
+	public static final MMCode mmBulkSettlementCMUPDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkSettlementCMUPDebit";
@@ -1660,7 +1660,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "BulkSettlementCMUPCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode BulkSettlementCMUPCredit = new MMCode() {
+	public static final MMCode mmBulkSettlementCMUPCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkSettlementCMUPCredit";
@@ -1683,7 +1683,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "SAPQueueAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SAPQueueAmount = new MMCode() {
+	public static final MMCode mmSAPQueueAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SAPQueueAmount";
@@ -1706,7 +1706,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "IntradayRepoLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntradayRepoLimit = new MMCode() {
+	public static final MMCode mmIntradayRepoLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntradayRepoLimit";
@@ -1729,7 +1729,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "IntradayRepoDrawings"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntradayRepoDrawings = new MMCode() {
+	public static final MMCode mmIntradayRepoDrawings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntradayRepoDrawings";
@@ -1752,7 +1752,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "DiscountWindowRepoDrawings"</li>
 	 * </ul>
 	 */
-	public static final MMCode DiscountWindowRepoDrawings = new MMCode() {
+	public static final MMCode mmDiscountWindowRepoDrawings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountWindowRepoDrawings";
@@ -1775,7 +1775,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "AvailableDMVForDiscountWindowRepo"</li>
 	 * </ul>
 	 */
-	public static final MMCode AvailableDMVForDiscountWindowRepo = new MMCode() {
+	public static final MMCode mmAvailableDMVForDiscountWindowRepo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDMVForDiscountWindowRepo";
@@ -1798,7 +1798,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "AvailableDMVForIntradayRepo"</li>
 	 * </ul>
 	 */
-	public static final MMCode AvailableDMVForIntradayRepo = new MMCode() {
+	public static final MMCode mmAvailableDMVForIntradayRepo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDMVForIntradayRepo";
@@ -1821,7 +1821,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Restricted = new MMCode() {
+	public static final MMCode mmRestricted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
@@ -1832,41 +1832,43 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPNG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemBalanceType1Code";
 				definition = "Specifies the nature of the system balance, such as opening balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemBalanceType1Code.Opening, com.tools20022.repository.codeset.SystemBalanceType1Code.Interim,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.Closing, com.tools20022.repository.codeset.SystemBalanceType1Code.Book, com.tools20022.repository.codeset.SystemBalanceType1Code.Current,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.Pending, com.tools20022.repository.codeset.SystemBalanceType1Code.LimitRelated, com.tools20022.repository.codeset.SystemBalanceType1Code.Available,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.LiquidityTransfer, com.tools20022.repository.codeset.SystemBalanceType1Code.Credit, com.tools20022.repository.codeset.SystemBalanceType1Code.EligibleAssets,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.Payment, com.tools20022.repository.codeset.SystemBalanceType1Code.Blocked, com.tools20022.repository.codeset.SystemBalanceType1Code.Expected,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.DaylightOverdraft, com.tools20022.repository.codeset.SystemBalanceType1Code.ExpectedCredit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.ExpectedDebit, com.tools20022.repository.codeset.SystemBalanceType1Code.Adjustment,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.ProgressiveAverage, com.tools20022.repository.codeset.SystemBalanceType1Code.Debit, com.tools20022.repository.codeset.SystemBalanceType1Code.Threshold,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.Noted, com.tools20022.repository.codeset.SystemBalanceType1Code.Self, com.tools20022.repository.codeset.SystemBalanceType1Code.Master,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.ForecastSettlement, com.tools20022.repository.codeset.SystemBalanceType1Code.BlockedTrades,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.OtherBlockedTrades, com.tools20022.repository.codeset.SystemBalanceType1Code.Custody, com.tools20022.repository.codeset.SystemBalanceType1Code.CashForecast,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.DividendsCollection, com.tools20022.repository.codeset.SystemBalanceType1Code.NetFunding,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.PayInPayOut, com.tools20022.repository.codeset.SystemBalanceType1Code.ExchangeForecast,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.CentralCounterparty, com.tools20022.repository.codeset.SystemBalanceType1Code.TotalOnHold,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.CreditOnHold, com.tools20022.repository.codeset.SystemBalanceType1Code.DebitOnHold, com.tools20022.repository.codeset.SystemBalanceType1Code.TotalProcessed,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.CreditProcessed, com.tools20022.repository.codeset.SystemBalanceType1Code.DebitProcessed,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.TotalFuture, com.tools20022.repository.codeset.SystemBalanceType1Code.TotalRejected,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.FirmCollateralisation, com.tools20022.repository.codeset.SystemBalanceType1Code.UsedAmountsFirmCollateralisation,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.SelfCollateralisation, com.tools20022.repository.codeset.SystemBalanceType1Code.UsedAmountsSelfCollateralisation,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.CustodyActual, com.tools20022.repository.codeset.SystemBalanceType1Code.CCPGuaranteedForecasting,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.NonCCPGuaranteedForecasting, com.tools20022.repository.codeset.SystemBalanceType1Code.DefinitiveSettledSecurities,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.LackOfHoldingsTransactions, com.tools20022.repository.codeset.SystemBalanceType1Code.NonSettledSecurities,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.CCPGuaranteedOTCTransactions, com.tools20022.repository.codeset.SystemBalanceType1Code.ForecastOTCTransactions,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.NonCCPGuaranteedOTCTransactions, com.tools20022.repository.codeset.SystemBalanceType1Code.SAPDirectDebitAmount,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.SAPDirectCreditAmount, com.tools20022.repository.codeset.SystemBalanceType1Code.CMUPRepoDebit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.CMUPRepoCredit, com.tools20022.repository.codeset.SystemBalanceType1Code.BulkSettlementCMUPDebit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.BulkSettlementCMUPCredit, com.tools20022.repository.codeset.SystemBalanceType1Code.SAPQueueAmount,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.IntradayRepoLimit, com.tools20022.repository.codeset.SystemBalanceType1Code.IntradayRepoDrawings,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.DiscountWindowRepoDrawings, com.tools20022.repository.codeset.SystemBalanceType1Code.AvailableDMVForDiscountWindowRepo,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.AvailableDMVForIntradayRepo, com.tools20022.repository.codeset.SystemBalanceType1Code.Restricted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemBalanceType1Code.mmOpening, com.tools20022.repository.codeset.SystemBalanceType1Code.mmInterim,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmClosing, com.tools20022.repository.codeset.SystemBalanceType1Code.mmBook, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCurrent,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmPending, com.tools20022.repository.codeset.SystemBalanceType1Code.mmLimitRelated, com.tools20022.repository.codeset.SystemBalanceType1Code.mmAvailable,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmLiquidityTransfer, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCredit,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmEligibleAssets, com.tools20022.repository.codeset.SystemBalanceType1Code.mmPayment, com.tools20022.repository.codeset.SystemBalanceType1Code.mmBlocked,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmExpected, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDaylightOverdraft,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmExpectedCredit, com.tools20022.repository.codeset.SystemBalanceType1Code.mmExpectedDebit,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmAdjustment, com.tools20022.repository.codeset.SystemBalanceType1Code.mmProgressiveAverage, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDebit,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmThreshold, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNoted, com.tools20022.repository.codeset.SystemBalanceType1Code.mmSelf,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmMaster, com.tools20022.repository.codeset.SystemBalanceType1Code.mmForecastSettlement,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmBlockedTrades, com.tools20022.repository.codeset.SystemBalanceType1Code.mmOtherBlockedTrades,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCustody, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCashForecast,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmDividendsCollection, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNetFunding,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmPayInPayOut, com.tools20022.repository.codeset.SystemBalanceType1Code.mmExchangeForecast,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCentralCounterparty, com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalOnHold,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCreditOnHold, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDebitOnHold,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalProcessed, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCreditProcessed,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmDebitProcessed, com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalFuture,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalRejected, com.tools20022.repository.codeset.SystemBalanceType1Code.mmFirmCollateralisation,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmUsedAmountsFirmCollateralisation, com.tools20022.repository.codeset.SystemBalanceType1Code.mmSelfCollateralisation,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmUsedAmountsSelfCollateralisation, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCustodyActual,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCCPGuaranteedForecasting, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNonCCPGuaranteedForecasting,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmDefinitiveSettledSecurities, com.tools20022.repository.codeset.SystemBalanceType1Code.mmLackOfHoldingsTransactions,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmNonSettledSecurities, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCCPGuaranteedOTCTransactions,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmForecastOTCTransactions, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNonCCPGuaranteedOTCTransactions,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmSAPDirectDebitAmount, com.tools20022.repository.codeset.SystemBalanceType1Code.mmSAPDirectCreditAmount,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCMUPRepoDebit, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCMUPRepoCredit,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmBulkSettlementCMUPDebit, com.tools20022.repository.codeset.SystemBalanceType1Code.mmBulkSettlementCMUPCredit,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmSAPQueueAmount, com.tools20022.repository.codeset.SystemBalanceType1Code.mmIntradayRepoLimit,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmIntradayRepoDrawings, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDiscountWindowRepoDrawings,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmAvailableDMVForDiscountWindowRepo, com.tools20022.repository.codeset.SystemBalanceType1Code.mmAvailableDMVForIntradayRepo,
+						com.tools20022.repository.codeset.SystemBalanceType1Code.mmRestricted);
 				trace_lazy = () -> SystemBalanceTypeCode.mmObject();
 			}
 		});

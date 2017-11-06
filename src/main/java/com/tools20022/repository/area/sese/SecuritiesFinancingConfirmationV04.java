@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope A securities financing transaction account servicer sends a
@@ -79,60 +80,58 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#TransactionIdentificationDetails
- * SecuritiesFinancingConfirmationV04.TransactionIdentificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmTransactionIdentificationDetails
+ * SecuritiesFinancingConfirmationV04.mmTransactionIdentificationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#AdditionalParameters
- * SecuritiesFinancingConfirmationV04.AdditionalParameters}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmAdditionalParameters
+ * SecuritiesFinancingConfirmationV04.mmAdditionalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#TradeDetails
- * SecuritiesFinancingConfirmationV04.TradeDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmTradeDetails
+ * SecuritiesFinancingConfirmationV04.mmTradeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#FinancialInstrumentIdentification
- * SecuritiesFinancingConfirmationV04.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingConfirmationV04.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#FinancialInstrumentAttributes
- * SecuritiesFinancingConfirmationV04.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmFinancialInstrumentAttributes
+ * SecuritiesFinancingConfirmationV04.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#QuantityAndAccountDetails
- * SecuritiesFinancingConfirmationV04.QuantityAndAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmQuantityAndAccountDetails
+ * SecuritiesFinancingConfirmationV04.mmQuantityAndAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#SecuritiesFinancingDetails
- * SecuritiesFinancingConfirmationV04.SecuritiesFinancingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmSecuritiesFinancingDetails
+ * SecuritiesFinancingConfirmationV04.mmSecuritiesFinancingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#StandingSettlementInstructionDetails
- * SecuritiesFinancingConfirmationV04.StandingSettlementInstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmStandingSettlementInstructionDetails
+ * SecuritiesFinancingConfirmationV04.mmStandingSettlementInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#SettlementParameters
- * SecuritiesFinancingConfirmationV04.SettlementParameters}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmSettlementParameters
+ * SecuritiesFinancingConfirmationV04.mmSettlementParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#DeliveringSettlementParties
- * SecuritiesFinancingConfirmationV04.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmDeliveringSettlementParties
+ * SecuritiesFinancingConfirmationV04.mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#ReceivingSettlementParties
- * SecuritiesFinancingConfirmationV04.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmReceivingSettlementParties
+ * SecuritiesFinancingConfirmationV04.mmReceivingSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#CashParties
- * SecuritiesFinancingConfirmationV04.CashParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmCashParties
+ * SecuritiesFinancingConfirmationV04.mmCashParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#SettledAmount
- * SecuritiesFinancingConfirmationV04.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmSettledAmount
+ * SecuritiesFinancingConfirmationV04.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#OtherAmounts
- * SecuritiesFinancingConfirmationV04.OtherAmounts}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmOtherAmounts
+ * SecuritiesFinancingConfirmationV04.mmOtherAmounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#OtherBusinessParties
- * SecuritiesFinancingConfirmationV04.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmOtherBusinessParties
+ * SecuritiesFinancingConfirmationV04.mmOtherBusinessParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#SupplementaryData
- * SecuritiesFinancingConfirmationV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#mmSupplementaryData
+ * SecuritiesFinancingConfirmationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04#identifier
- * SecuritiesFinancingConfirmationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.035.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -160,6 +159,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesFinancingConfirmationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactionTypeAndAdditionalParameters3 transactionIdentificationDetails;
 	/**
 	 * Securities financing transaction identification information, type
 	 * (repurchase agreement, reverse repurchase agreement, securities lending
@@ -189,24 +189,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#TransactionIdentificationDetails
-	 * SecuritiesFinancingConfirmationV05.TransactionIdentificationDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmTransactionIdentificationDetails
+	 * SecuritiesFinancingConfirmationV05.mmTransactionIdentificationDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxIdDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationDetails";
 			definition = "Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.TransactionIdentificationDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmTransactionIdentificationDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionTypeAndAdditionalParameters3.mmObject();
 		}
 	};
+	protected AdditionalParameters18 additionalParameters;
 	/**
 	 * Additional parameters to the transaction.
 	 * <p>
@@ -232,24 +233,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#AdditionalParameters
-	 * SecuritiesFinancingConfirmationV05.AdditionalParameters}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmAdditionalParameters
+	 * SecuritiesFinancingConfirmationV05.mmAdditionalParameters}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParameters";
 			definition = "Additional parameters to the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.AdditionalParameters);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmAdditionalParameters);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalParameters18.mmObject();
 		}
 	};
+	protected SecuritiesTradeDetails6 tradeDetails;
 	/**
 	 * Details of the securities financing deal.
 	 * <p>
@@ -275,24 +277,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#TradeDetails
-	 * SecuritiesFinancingConfirmationV05.TradeDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmTradeDetails
+	 * SecuritiesFinancingConfirmationV05.mmTradeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDetails";
 			definition = "Details of the securities financing deal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.TradeDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmTradeDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesTradeDetails6.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Financial instrument representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -321,24 +324,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#FinancialInstrumentIdentification
-	 * SecuritiesFinancingConfirmationV05.FinancialInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmFinancialInstrumentIdentification
+	 * SecuritiesFinancingConfirmationV05.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.FinancialInstrumentIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes35 financialInstrumentAttributes;
 	/**
 	 * Elements characterising a financial instrument.
 	 * <p>
@@ -364,24 +368,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#FinancialInstrumentAttributes
-	 * SecuritiesFinancingConfirmationV05.FinancialInstrumentAttributes}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmFinancialInstrumentAttributes
+	 * SecuritiesFinancingConfirmationV05.mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentAttributes = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.FinancialInstrumentAttributes);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmFinancialInstrumentAttributes);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes35.mmObject();
 		}
 	};
+	protected QuantityAndAccount18 quantityAndAccountDetails;
 	/**
 	 * Details related to the account and quantity involved in the transaction.
 	 * <p>
@@ -409,24 +414,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#QuantityAndAccountDetails
-	 * SecuritiesFinancingConfirmationV05.QuantityAndAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmQuantityAndAccountDetails
+	 * SecuritiesFinancingConfirmationV05.mmQuantityAndAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock QuantityAndAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmQuantityAndAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "QtyAndAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityAndAccountDetails";
 			definition = "Details related to the account and quantity involved in the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.QuantityAndAccountDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmQuantityAndAccountDetails);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> QuantityAndAccount18.mmObject();
 		}
 	};
+	protected SecuritiesFinancingTransactionDetails11 securitiesFinancingDetails;
 	/**
 	 * Details of the closing of the securities financing transaction.
 	 * <p>
@@ -453,24 +459,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#SecuritiesFinancingDetails
-	 * SecuritiesFinancingConfirmationV05.SecuritiesFinancingDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmSecuritiesFinancingDetails
+	 * SecuritiesFinancingConfirmationV05.mmSecuritiesFinancingDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecuritiesFinancingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecuritiesFinancingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctiesFincgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingDetails";
 			definition = "Details of the closing of the securities financing transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.SecuritiesFinancingDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmSecuritiesFinancingDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesFinancingTransactionDetails11.mmObject();
 		}
 	};
+	protected StandingSettlementInstruction3 standingSettlementInstructionDetails;
 	/**
 	 * Specifies what settlement standing instruction database is to be used to
 	 * derive the settlement parties involved in the transaction.
@@ -499,24 +506,26 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#StandingSettlementInstructionDetails
-	 * SecuritiesFinancingConfirmationV05.StandingSettlementInstructionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmStandingSettlementInstructionDetails
+	 * SecuritiesFinancingConfirmationV05.mmStandingSettlementInstructionDetails
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StandingSettlementInstructionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStandingSettlementInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StgSttlmInstrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementInstructionDetails";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.StandingSettlementInstructionDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmStandingSettlementInstructionDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StandingSettlementInstruction3.mmObject();
 		}
 	};
+	protected SettlementDetails60 settlementParameters;
 	/**
 	 * Parameters which explicitly state the conditions that must be fulfilled
 	 * before a particular transaction of a financial instrument can be settled.
@@ -547,24 +556,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#SettlementParameters
-	 * SecuritiesFinancingConfirmationV05.SettlementParameters}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmSettlementParameters
+	 * SecuritiesFinancingConfirmationV05.mmSettlementParameters}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.SettlementParameters);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmSettlementParameters);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementDetails60.mmObject();
 		}
 	};
+	protected SettlementParties10 deliveringSettlementParties;
 	/**
 	 * Identifies the chain of delivering settlement parties.
 	 * <p>
@@ -590,24 +600,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#DeliveringSettlementParties
-	 * SecuritiesFinancingConfirmationV05.DeliveringSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmDeliveringSettlementParties
+	 * SecuritiesFinancingConfirmationV05.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DeliveringSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDeliveringSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.DeliveringSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmDeliveringSettlementParties);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties10.mmObject();
 		}
 	};
+	protected SettlementParties10 receivingSettlementParties;
 	/**
 	 * Identifies the chain of receiving settlement parties.
 	 * <p>
@@ -633,24 +644,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#ReceivingSettlementParties
-	 * SecuritiesFinancingConfirmationV05.ReceivingSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmReceivingSettlementParties
+	 * SecuritiesFinancingConfirmationV05.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReceivingSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReceivingSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.ReceivingSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmReceivingSettlementParties);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties10.mmObject();
 		}
 	};
+	protected CashParties17 cashParties;
 	/**
 	 * Cash parties involved in the transaction if different for the securities
 	 * settlement parties.
@@ -678,24 +690,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#CashParties
-	 * SecuritiesFinancingConfirmationV05.CashParties}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmCashParties
+	 * SecuritiesFinancingConfirmationV05.mmCashParties}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CashParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCashParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties involved in the transaction if different for the securities settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.CashParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmCashParties);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashParties17.mmObject();
 		}
 	};
+	protected AmountAndDirection2 settledAmount;
 	/**
 	 * Amount effectively settled and which will be credited to/debited from the
 	 * account owner's cash account. It may differ from the instructed
@@ -725,24 +738,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#SettledAmount
-	 * SecuritiesFinancingConfirmationV05.SettledAmount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmSettledAmount
+	 * SecuritiesFinancingConfirmationV05.mmSettledAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettledAmount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettledAmount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Amount effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.SettledAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmSettledAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AmountAndDirection2.mmObject();
 		}
 	};
+	protected OtherAmounts17 otherAmounts;
 	/**
 	 * Other amounts than the settlement amount.
 	 * <p>
@@ -767,24 +781,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#OtherAmounts
-	 * SecuritiesFinancingConfirmationV05.OtherAmounts}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmOtherAmounts
+	 * SecuritiesFinancingConfirmationV05.mmOtherAmounts}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmounts";
 			definition = "Other amounts than the settlement amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.OtherAmounts);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmOtherAmounts);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OtherAmounts17.mmObject();
 		}
 	};
+	protected OtherParties19 otherBusinessParties;
 	/**
 	 * Other business parties relevant to the transaction.
 	 * <p>
@@ -809,24 +824,25 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#OtherBusinessParties
-	 * SecuritiesFinancingConfirmationV05.OtherBusinessParties}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmOtherBusinessParties
+	 * SecuritiesFinancingConfirmationV05.mmOtherBusinessParties}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherBusinessParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherBusinessParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrBizPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties relevant to the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.OtherBusinessParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmOtherBusinessParties);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OtherParties19.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -855,48 +871,21 @@ public class SecuritiesFinancingConfirmationV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#SupplementaryData
-	 * SecuritiesFinancingConfirmationV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05#mmSupplementaryData
+	 * SecuritiesFinancingConfirmationV05.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "035"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "035";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -906,24 +895,159 @@ public class SecuritiesFinancingConfirmationV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingConfirmationV04";
 				definition = "Scope\nA securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction. \n\nThe account servicer/owner relationship may be:\n\n- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants\n\n- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or \n\n- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.\n\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
-				previousVersion_lazy = () -> SecuritiesFinancingConfirmationV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV05.mmObject());
+				previousVersion_lazy = () -> SecuritiesFinancingConfirmationV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesFincgConf";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.TransactionIdentificationDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.AdditionalParameters, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.TradeDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.FinancialInstrumentIdentification, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.FinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.QuantityAndAccountDetails, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.SecuritiesFinancingDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.StandingSettlementInstructionDetails, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.SettlementParameters,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.DeliveringSettlementParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.ReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.CashParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.SettledAmount,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.OtherAmounts, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.OtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmTransactionIdentificationDetails,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmAdditionalParameters, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmTradeDetails,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmFinancialInstrumentIdentification, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmQuantityAndAccountDetails, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmSecuritiesFinancingDetails,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmStandingSettlementInstructionDetails, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmSettlementParameters,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmDeliveringSettlementParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmReceivingSettlementParties,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmCashParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmSettledAmount,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmOtherAmounts, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmOtherBusinessParties,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "035";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionTypeAndAdditionalParameters3 getTransactionIdentificationDetails() {
+		return transactionIdentificationDetails;
+	}
+
+	public void setTransactionIdentificationDetails(TransactionTypeAndAdditionalParameters3 transactionIdentificationDetails) {
+		this.transactionIdentificationDetails = transactionIdentificationDetails;
+	}
+
+	public AdditionalParameters18 getAdditionalParameters() {
+		return additionalParameters;
+	}
+
+	public void setAdditionalParameters(AdditionalParameters18 additionalParameters) {
+		this.additionalParameters = additionalParameters;
+	}
+
+	public SecuritiesTradeDetails6 getTradeDetails() {
+		return tradeDetails;
+	}
+
+	public void setTradeDetails(SecuritiesTradeDetails6 tradeDetails) {
+		this.tradeDetails = tradeDetails;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public FinancialInstrumentAttributes35 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(FinancialInstrumentAttributes35 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public QuantityAndAccount18 getQuantityAndAccountDetails() {
+		return quantityAndAccountDetails;
+	}
+
+	public void setQuantityAndAccountDetails(QuantityAndAccount18 quantityAndAccountDetails) {
+		this.quantityAndAccountDetails = quantityAndAccountDetails;
+	}
+
+	public SecuritiesFinancingTransactionDetails11 getSecuritiesFinancingDetails() {
+		return securitiesFinancingDetails;
+	}
+
+	public void setSecuritiesFinancingDetails(SecuritiesFinancingTransactionDetails11 securitiesFinancingDetails) {
+		this.securitiesFinancingDetails = securitiesFinancingDetails;
+	}
+
+	public StandingSettlementInstruction3 getStandingSettlementInstructionDetails() {
+		return standingSettlementInstructionDetails;
+	}
+
+	public void setStandingSettlementInstructionDetails(StandingSettlementInstruction3 standingSettlementInstructionDetails) {
+		this.standingSettlementInstructionDetails = standingSettlementInstructionDetails;
+	}
+
+	public SettlementDetails60 getSettlementParameters() {
+		return settlementParameters;
+	}
+
+	public void setSettlementParameters(SettlementDetails60 settlementParameters) {
+		this.settlementParameters = settlementParameters;
+	}
+
+	public SettlementParties10 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(SettlementParties10 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public SettlementParties10 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(SettlementParties10 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public CashParties17 getCashParties() {
+		return cashParties;
+	}
+
+	public void setCashParties(CashParties17 cashParties) {
+		this.cashParties = cashParties;
+	}
+
+	public AmountAndDirection2 getSettledAmount() {
+		return settledAmount;
+	}
+
+	public void setSettledAmount(AmountAndDirection2 settledAmount) {
+		this.settledAmount = settledAmount;
+	}
+
+	public OtherAmounts17 getOtherAmounts() {
+		return otherAmounts;
+	}
+
+	public void setOtherAmounts(OtherAmounts17 otherAmounts) {
+		this.otherAmounts = otherAmounts;
+	}
+
+	public OtherParties19 getOtherBusinessParties() {
+		return otherBusinessParties;
+	}
+
+	public void setOtherBusinessParties(OtherParties19 otherBusinessParties) {
+		this.otherBusinessParties = otherBusinessParties;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

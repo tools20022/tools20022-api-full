@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PriceFormat7Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies prices.
@@ -36,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#ExercisePrice
- * CorporateActionPrice5.ExercisePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#mmExercisePrice
+ * CorporateActionPrice5.mmExercisePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#GenericCashPriceReceivedPerProduct
- * CorporateActionPrice5.GenericCashPriceReceivedPerProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#mmGenericCashPriceReceivedPerProduct
+ * CorporateActionPrice5.mmGenericCashPriceReceivedPerProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#GenericCashPricePaidPerProduct
- * CorporateActionPrice5.GenericCashPricePaidPerProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#mmGenericCashPricePaidPerProduct
+ * CorporateActionPrice5.mmGenericCashPricePaidPerProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#TaxableIncomePerDividendShare
- * CorporateActionPrice5.TaxableIncomePerDividendShare}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#mmTaxableIncomePerDividendShare
+ * CorporateActionPrice5.mmTaxableIncomePerDividendShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#CashInLieuOfSharePrice
- * CorporateActionPrice5.CashInLieuOfSharePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#mmCashInLieuOfSharePrice
+ * CorporateActionPrice5.mmCashInLieuOfSharePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#OverSubscriptionDepositPrice
- * CorporateActionPrice5.OverSubscriptionDepositPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice5#mmOverSubscriptionDepositPrice
+ * CorporateActionPrice5.mmOverSubscriptionDepositPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPrice5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceFormat6Choice exercisePrice;
 	/**
 	 * 1. Price at which security will be purchased/sold if warrant is
 	 * exercised, either as an actual amount or a percentage. 2. Price at which
@@ -93,8 +95,8 @@ public class CorporateActionPrice5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#CorporateActionExercisePrice
-	 * CorporateActionPrice.CorporateActionExercisePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionExercisePrice
+	 * CorporateActionPrice.mmCorporateActionExercisePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,20 +117,21 @@ public class CorporateActionPrice5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExercisePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExercisePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionExercisePrice;
 			componentContext_lazy = () -> CorporateActionPrice5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.CorporateActionExercisePrice;
 			isDerived = false;
 			xmlTag = "ExrcPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "1. Price at which security will be purchased/sold if warrant is exercised, either as an actual amount or a percentage.\n2. Price at which a bond is converted to underlying security either as an actual amount or a percentage.\n3. Strike price of an option, represented either as an actual amount, a percentage or a number of points above an index.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat6Choice.mmObject();
 		}
 	};
+	protected List<PriceFormat7Choice> genericCashPriceReceivedPerProduct;
 	/**
 	 * Generic cash price received per product by the underlying security holder
 	 * either as a percentage or an amount, for example, redemption price.
@@ -143,8 +146,8 @@ public class CorporateActionPrice5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#GenericCashPriceReceivedPerProduct
-	 * CorporateActionPrice.GenericCashPriceReceivedPerProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
+	 * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,10 +168,10 @@ public class CorporateActionPrice5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GenericCashPriceReceivedPerProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGenericCashPriceReceivedPerProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.GenericCashPriceReceivedPerProduct;
 			isDerived = false;
 			xmlTag = "GncCshPricRcvdPerPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,6 +181,7 @@ public class CorporateActionPrice5 {
 			complexType_lazy = () -> PriceFormat7Choice.mmObject();
 		}
 	};
+	protected PriceFormat5Choice genericCashPricePaidPerProduct;
 	/**
 	 * Generic cash price paid per product by the underlying security holder
 	 * either as a percentage or an amount, for example, reinvestment price.
@@ -192,8 +196,8 @@ public class CorporateActionPrice5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#GenericCashPricePaidPerProduct
-	 * CorporateActionPrice.GenericCashPricePaidPerProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
+	 * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,20 +218,21 @@ public class CorporateActionPrice5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GenericCashPricePaidPerProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGenericCashPricePaidPerProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.GenericCashPricePaidPerProduct;
 			isDerived = false;
 			xmlTag = "GncCshPricPdPerPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, reinvestment price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat5Choice.mmObject();
 		}
 	};
+	protected AmountPrice3 taxableIncomePerDividendShare;
 	/**
 	 * Amount included in the dividend/NAV that is identified as gains directly
 	 * or indirectly derived from interest payments within the scope of the EU
@@ -242,8 +247,8 @@ public class CorporateActionPrice5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#TaxableIncomePerDividendShare
-	 * SecuritiesTax.TaxableIncomePerDividendShare}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerDividendShare
+	 * SecuritiesTax.mmTaxableIncomePerDividendShare}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -264,20 +269,21 @@ public class CorporateActionPrice5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxableIncomePerDividendShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxableIncomePerDividendShare = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerDividendShare;
 			componentContext_lazy = () -> CorporateActionPrice5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.TaxableIncomePerDividendShare;
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvddShr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerDividendShare";
 			definition = "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountPrice3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountPrice3.mmObject();
 		}
 	};
+	protected PriceFormat5Choice cashInLieuOfSharePrice;
 	/**
 	 * Cash disbursement in lieu of equities; usually in lieu of fractional
 	 * quantity.
@@ -292,8 +298,8 @@ public class CorporateActionPrice5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#CashInLieuOfSharePrice
-	 * CorporateActionPrice.CashInLieuOfSharePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
+	 * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -314,20 +320,21 @@ public class CorporateActionPrice5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashInLieuOfSharePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashInLieuOfSharePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> CorporateActionPrice5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.CashInLieuOfSharePrice;
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat5Choice.mmObject();
 		}
 	};
+	protected PriceFormat5Choice overSubscriptionDepositPrice;
 	/**
 	 * Amount of money required per over-subscribed equity as defined by the
 	 * issuer.
@@ -342,8 +349,8 @@ public class CorporateActionPrice5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#OverSubscriptionDepositPrice
-	 * CorporateActionPrice.OverSubscriptionDepositPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
+	 * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -364,17 +371,17 @@ public class CorporateActionPrice5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OverSubscriptionDepositPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOverSubscriptionDepositPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmOverSubscriptionDepositPrice;
 			componentContext_lazy = () -> CorporateActionPrice5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.OverSubscriptionDepositPrice;
 			isDerived = false;
 			xmlTag = "OverSbcptDpstPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat5Choice.mmObject();
 		}
 	};
@@ -382,16 +389,64 @@ public class CorporateActionPrice5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice5.ExercisePrice, com.tools20022.repository.msg.CorporateActionPrice5.GenericCashPriceReceivedPerProduct,
-						com.tools20022.repository.msg.CorporateActionPrice5.GenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice5.TaxableIncomePerDividendShare,
-						com.tools20022.repository.msg.CorporateActionPrice5.CashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice5.OverSubscriptionDepositPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice5.mmExercisePrice, com.tools20022.repository.msg.CorporateActionPrice5.mmGenericCashPriceReceivedPerProduct,
+						com.tools20022.repository.msg.CorporateActionPrice5.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice5.mmTaxableIncomePerDividendShare,
+						com.tools20022.repository.msg.CorporateActionPrice5.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice5.mmOverSubscriptionDepositPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice5";
 				definition = "Specifies prices.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceFormat6Choice getExercisePrice() {
+		return exercisePrice;
+	}
+
+	public void setExercisePrice(PriceFormat6Choice exercisePrice) {
+		this.exercisePrice = exercisePrice;
+	}
+
+	public List<PriceFormat7Choice> getGenericCashPriceReceivedPerProduct() {
+		return genericCashPriceReceivedPerProduct;
+	}
+
+	public void setGenericCashPriceReceivedPerProduct(List<PriceFormat7Choice> genericCashPriceReceivedPerProduct) {
+		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
+	}
+
+	public PriceFormat5Choice getGenericCashPricePaidPerProduct() {
+		return genericCashPricePaidPerProduct;
+	}
+
+	public void setGenericCashPricePaidPerProduct(PriceFormat5Choice genericCashPricePaidPerProduct) {
+		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
+	}
+
+	public AmountPrice3 getTaxableIncomePerDividendShare() {
+		return taxableIncomePerDividendShare;
+	}
+
+	public void setTaxableIncomePerDividendShare(com.tools20022.repository.msg.AmountPrice3 taxableIncomePerDividendShare) {
+		this.taxableIncomePerDividendShare = taxableIncomePerDividendShare;
+	}
+
+	public PriceFormat5Choice getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice;
+	}
+
+	public void setCashInLieuOfSharePrice(PriceFormat5Choice cashInLieuOfSharePrice) {
+		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+	}
+
+	public PriceFormat5Choice getOverSubscriptionDepositPrice() {
+		return overSubscriptionDepositPrice;
+	}
+
+	public void setOverSubscriptionDepositPrice(PriceFormat5Choice overSubscriptionDepositPrice) {
+		this.overSubscriptionDepositPrice = overSubscriptionDepositPrice;
 	}
 }

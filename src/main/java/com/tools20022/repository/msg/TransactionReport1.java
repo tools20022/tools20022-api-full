@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReport1#PaymentIdentification
- * TransactionReport1.PaymentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReport1#mmPaymentIdentification
+ * TransactionReport1.mmPaymentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReport1#TransactionOrError
- * TransactionReport1.TransactionOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReport1#mmTransactionOrError
+ * TransactionReport1.mmTransactionOrError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentIdentification4Choice paymentIdentification;
 	/**
 	 * Reference to the instruction related to the payment for which information
 	 * is requested.
@@ -98,13 +99,13 @@ public class TransactionReport1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionReport2#PaymentIdentification
-	 * TransactionReport2.PaymentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReport2#mmPaymentIdentification
+	 * TransactionReport2.mmPaymentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReport1.mmObject();
 			isDerived = false;
@@ -112,13 +113,14 @@ public class TransactionReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Reference to the instruction related to the payment for which information is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport2.PaymentIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport2.mmPaymentIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentIdentification4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentIdentification4Choice.mmObject();
 		}
 	};
+	protected TransactionOrError1Choice transactionOrError;
 	/**
 	 * Requested information on the payment transaction when information has not
 	 * been found.
@@ -151,13 +153,13 @@ public class TransactionReport1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionReport2#TransactionOrError
-	 * TransactionReport2.TransactionOrError}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReport2#mmTransactionOrError
+	 * TransactionReport2.mmTransactionOrError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReport1.mmObject();
 			isDerived = false;
@@ -165,19 +167,19 @@ public class TransactionReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOrError";
 			definition = "Requested information on the payment transaction when information has not been found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport2.TransactionOrError);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport2.mmTransactionOrError);
 			maxOccurs = 1;
-			type_lazy = () -> TransactionOrError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TransactionOrError1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport1.PaymentIdentification, com.tools20022.repository.msg.TransactionReport1.TransactionOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport1.mmPaymentIdentification, com.tools20022.repository.msg.TransactionReport1.mmTransactionOrError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionReport1";
 				definition = "Provides details on the payment transactions.";
@@ -185,5 +187,21 @@ public class TransactionReport1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentIdentification4Choice getPaymentIdentification() {
+		return paymentIdentification;
+	}
+
+	public void setPaymentIdentification(PaymentIdentification4Choice paymentIdentification) {
+		this.paymentIdentification = paymentIdentification;
+	}
+
+	public TransactionOrError1Choice getTransactionOrError() {
+		return transactionOrError;
+	}
+
+	public void setTransactionOrError(TransactionOrError1Choice transactionOrError) {
+		this.transactionOrError = transactionOrError;
 	}
 }

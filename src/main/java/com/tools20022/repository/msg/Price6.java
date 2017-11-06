@@ -37,10 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Price6#RateOrAmount
- * Price6.RateOrAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Price6#Type Price6.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Price6#Source Price6.Source}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Price6#mmRateOrAmount
+ * Price6.mmRateOrAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Price6#mmType Price6.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Price6#mmSource
+ * Price6.mmSource}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Price6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceRateOrAmountChoice rateOrAmount;
 	/**
 	 * Value of the price expressed as a currency and value or as a rate.
 	 * <p>
@@ -76,8 +78,8 @@ public class Price6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Price6
@@ -96,21 +98,22 @@ public class Price6 {
 	 * "Value of the price expressed as a currency and value or as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateOrAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateOrAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> Price6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "RateOrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateOrAmount";
 			definition = "Value of the price expressed as a currency and value or as a rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PriceRateOrAmountChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PriceRateOrAmountChoice.mmObject();
 		}
 	};
+	protected TypeOfPrice13Code type;
 	/**
 	 * Specification of the price type.
 	 * <p>
@@ -124,8 +127,8 @@ public class Price6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Price6
@@ -143,20 +146,21 @@ public class Price6 {
 	 * definition} = "Specification of the price type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> Price6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specification of the price type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
 	};
+	protected PriceSource2Code source;
 	/**
 	 * Source for the price valuation.
 	 * <p>
@@ -189,17 +193,17 @@ public class Price6 {
 	 * definition} = "Source for the price valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Source = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSource = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Price6.mmObject();
 			businessComponentTrace_lazy = () -> SourceOfPrice.mmObject();
+			componentContext_lazy = () -> Price6.mmObject();
 			isDerived = false;
 			xmlTag = "Src";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Source";
 			definition = "Source for the price valuation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceSource2Code.mmObject();
 		}
 	};
@@ -207,14 +211,38 @@ public class Price6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Price6.RateOrAmount, com.tools20022.repository.msg.Price6.Type, com.tools20022.repository.msg.Price6.Source);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Price6.mmRateOrAmount, com.tools20022.repository.msg.Price6.mmType, com.tools20022.repository.msg.Price6.mmSource);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Price6";
 				definition = "Provides the value, type and source of price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceRateOrAmountChoice getRateOrAmount() {
+		return rateOrAmount;
+	}
+
+	public void setRateOrAmount(PriceRateOrAmountChoice rateOrAmount) {
+		this.rateOrAmount = rateOrAmount;
+	}
+
+	public TypeOfPrice13Code getType() {
+		return type;
+	}
+
+	public void setType(TypeOfPrice13Code type) {
+		this.type = type;
+	}
+
+	public PriceSource2Code getSource() {
+		return source;
+	}
+
+	public void setSource(PriceSource2Code source) {
+		this.source = source;
 	}
 }

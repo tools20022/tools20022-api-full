@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExemptionReasonType1Choice#ExemptionReason
- * ExemptionReasonType1Choice.ExemptionReason}</li>
+ * {@linkplain com.tools20022.repository.choice.ExemptionReasonType1Choice#mmExemptionReason
+ * ExemptionReasonType1Choice.mmExemptionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExemptionReasonType1Choice#Proprietary
- * ExemptionReasonType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ExemptionReasonType1Choice#mmProprietary
+ * ExemptionReasonType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExemptionReasonType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxExemptReason1Code exemptionReason;
 	/**
 	 * Reason for a tax exemption.
 	 * <p>
@@ -72,8 +73,8 @@ public class ExemptionReasonType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#ExemptionReason
-	 * Tax.ExemptionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
+	 * Tax.mmExemptionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +93,21 @@ public class ExemptionReasonType1Choice {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmExemptionReason;
 			componentContext_lazy = () -> ExemptionReasonType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.ExemptionReason;
 			isDerived = false;
 			xmlTag = "XmptnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReason";
 			definition = "Reason for a tax exemption.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxExemptReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Reason for a tax exemption.
 	 * <p>
@@ -119,8 +121,8 @@ public class ExemptionReasonType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#ExemptionReason
-	 * Tax.ExemptionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
+	 * Tax.mmExemptionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,17 +141,17 @@ public class ExemptionReasonType1Choice {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmExemptionReason;
 			componentContext_lazy = () -> ExemptionReasonType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.ExemptionReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for a tax exemption.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -157,13 +159,29 @@ public class ExemptionReasonType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExemptionReasonType1Choice.ExemptionReason, com.tools20022.repository.choice.ExemptionReasonType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExemptionReasonType1Choice.mmExemptionReason, com.tools20022.repository.choice.ExemptionReasonType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExemptionReasonType1Choice";
 				definition = "Choice of an exemption reason type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxExemptReason1Code getExemptionReason() {
+		return exemptionReason;
+	}
+
+	public void setExemptionReason(TaxExemptReason1Code exemptionReason) {
+		this.exemptionReason = exemptionReason;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

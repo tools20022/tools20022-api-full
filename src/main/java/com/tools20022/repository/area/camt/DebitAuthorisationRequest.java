@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.DebitAuthorisationDetails;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
@@ -77,24 +78,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#Assignment
- * DebitAuthorisationRequest.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#mmAssignment
+ * DebitAuthorisationRequest.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#Case
- * DebitAuthorisationRequest.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#mmCase
+ * DebitAuthorisationRequest.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#Underlying
- * DebitAuthorisationRequest.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#mmUnderlying
+ * DebitAuthorisationRequest.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#Detail
- * DebitAuthorisationRequest.Detail}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#mmDetail
+ * DebitAuthorisationRequest.mmDetail}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#identifier
- * DebitAuthorisationRequest.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.037.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebitAuthorisationRequest {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment assignment;
 	/**
 	 * Identifies the case assignment.
 	 * <p>
@@ -132,17 +132,18 @@ public class DebitAuthorisationRequest {
 	 * definition} = "Identifies the case assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the case assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -164,17 +165,18 @@ public class DebitAuthorisationRequest {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
+	protected PaymentInstructionExtract underlying;
 	/**
 	 * Identifies the underlying payment instructrion.
 	 * <p>
@@ -198,17 +200,18 @@ public class DebitAuthorisationRequest {
 	 * definition} = "Identifies the underlying payment instructrion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the underlying payment instructrion.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 	};
+	protected DebitAuthorisationDetails detail;
 	/**
 	 * Detailed information about the request.
 	 * <p>
@@ -232,42 +235,15 @@ public class DebitAuthorisationRequest {
 	 * definition} = "Detailed information about the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Detail = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDetail = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Dtl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detail";
 			definition = "Detailed information about the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DebitAuthorisationDetails.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "037"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "037";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -282,11 +258,50 @@ public class DebitAuthorisationRequest {
 				xmlTag = "camt.037.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.037.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequest.Assignment, com.tools20022.repository.area.camt.DebitAuthorisationRequest.Case,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequest.Underlying, com.tools20022.repository.area.camt.DebitAuthorisationRequest.Detail);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequest.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmCase,
+						com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmUnderlying, com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmDetail);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "037";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
+	}
+
+	public PaymentInstructionExtract getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(PaymentInstructionExtract underlying) {
+		this.underlying = underlying;
+	}
+
+	public DebitAuthorisationDetails getDetail() {
+		return detail;
+	}
+
+	public void setDetail(DebitAuthorisationDetails detail) {
+		this.detail = detail;
 	}
 }

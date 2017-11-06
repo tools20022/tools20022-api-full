@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#CardInformation
- * ATMCustomerProfile1Code.CardInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#mmCardInformation
+ * ATMCustomerProfile1Code.mmCardInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#OtherRequest
- * ATMCustomerProfile1Code.OtherRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#mmOtherRequest
+ * ATMCustomerProfile1Code.mmOtherRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#ProfileRequest
- * ATMCustomerProfile1Code.ProfileRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#mmProfileRequest
+ * ATMCustomerProfile1Code.mmProfileRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 * name} = "CardInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardInformation = new MMCode() {
+	public static final MMCode mmCardInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardInformation";
@@ -104,7 +104,7 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 * name} = "OtherRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherRequest = new MMCode() {
+	public static final MMCode mmOtherRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRequest";
@@ -127,7 +127,7 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 * name} = "ProfileRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProfileRequest = new MMCode() {
+	public static final MMCode mmProfileRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileRequest";
@@ -138,12 +138,12 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile1Code";
 				definition = "Describes the main way customer information was collected to build up the customer menu and the withdrawal request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfile1Code.CardInformation, com.tools20022.repository.codeset.ATMCustomerProfile1Code.OtherRequest,
-						com.tools20022.repository.codeset.ATMCustomerProfile1Code.ProfileRequest);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmCardInformation, com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmOtherRequest,
+						com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmProfileRequest);
 				trace_lazy = () -> ATMCustomerProfileCode.mmObject();
 			}
 		});

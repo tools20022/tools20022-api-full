@@ -30,27 +30,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#Default
- * SettlementInstructionModeCode.Default}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#mmDefault
+ * SettlementInstructionModeCode.mmDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#StandingInstruction
- * SettlementInstructionModeCode.StandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#mmStandingInstruction
+ * SettlementInstructionModeCode.mmStandingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#AllocationAccountOverriding
- * SettlementInstructionModeCode.AllocationAccountOverriding}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#mmAllocationAccountOverriding
+ * SettlementInstructionModeCode.mmAllocationAccountOverriding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#AllocationAccountStanding
- * SettlementInstructionModeCode.AllocationAccountStanding}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#mmAllocationAccountStanding
+ * SettlementInstructionModeCode.mmAllocationAccountStanding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#CIVSingleAccount
- * SettlementInstructionModeCode.CIVSingleAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionModeCode#mmCIVSingleAccount
+ * SettlementInstructionModeCode.mmCIVSingleAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class SettlementInstructionModeCode {
 	 * "Settlement takes place according to the standard market rules."</li>
 	 * </ul>
 	 */
-	public static final MMCode Default = new MMCode() {
+	public static final MMCode mmDefault = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Default";
@@ -123,7 +123,7 @@ public class SettlementInstructionModeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode StandingInstruction = new MMCode() {
+	public static final MMCode mmStandingInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "StandingInstruction";
@@ -157,7 +157,7 @@ public class SettlementInstructionModeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AllocationAccountOverriding = new MMCode() {
+	public static final MMCode mmAllocationAccountOverriding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "AllocationAccountOverriding";
@@ -190,7 +190,7 @@ public class SettlementInstructionModeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AllocationAccountStanding = new MMCode() {
+	public static final MMCode mmAllocationAccountStanding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "AllocationAccountStanding";
@@ -223,7 +223,7 @@ public class SettlementInstructionModeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CIVSingleAccount = new MMCode() {
+	public static final MMCode mmCIVSingleAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CIVSingleAccount";
@@ -236,14 +236,14 @@ public class SettlementInstructionModeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DFLT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "SettlementInstructionModeCode";
 				definition = "Specifies the mode used for settlement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionModeCode.Default, com.tools20022.repository.codeset.SettlementInstructionModeCode.StandingInstruction,
-						com.tools20022.repository.codeset.SettlementInstructionModeCode.AllocationAccountOverriding, com.tools20022.repository.codeset.SettlementInstructionModeCode.AllocationAccountStanding,
-						com.tools20022.repository.codeset.SettlementInstructionModeCode.CIVSingleAccount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionModeCode.mmDefault, com.tools20022.repository.codeset.SettlementInstructionModeCode.mmStandingInstruction,
+						com.tools20022.repository.codeset.SettlementInstructionModeCode.mmAllocationAccountOverriding, com.tools20022.repository.codeset.SettlementInstructionModeCode.mmAllocationAccountStanding,
+						com.tools20022.repository.codeset.SettlementInstructionModeCode.mmCIVSingleAccount);
 			}
 		});
 		return mmObject_lazy.get();

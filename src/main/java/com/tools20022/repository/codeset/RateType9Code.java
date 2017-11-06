@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType9Code#AnyAndAll
- * RateType9Code.AnyAndAll}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType9Code#mmAnyAndAll
+ * RateType9Code.mmAnyAndAll}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class RateType9Code extends RateTypeCode {
 	 * name} = "AnyAndAll"</li>
 	 * </ul>
 	 */
-	public static final MMCode AnyAndAll = new MMCode() {
+	public static final MMCode mmAnyAndAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyAndAll";
@@ -94,13 +94,13 @@ public class RateType9Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ANYA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType9Code";
 				definition = "Specifies the type of rate.";
 				nextVersions_lazy = () -> Arrays.asList(RateType10Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType9Code.AnyAndAll);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType9Code.mmAnyAndAll);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

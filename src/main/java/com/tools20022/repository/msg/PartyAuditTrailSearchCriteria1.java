@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1#PartyIdentification
- * PartyAuditTrailSearchCriteria1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1#mmPartyIdentification
+ * PartyAuditTrailSearchCriteria1.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1#DatePeriod
- * PartyAuditTrailSearchCriteria1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1#mmDatePeriod
+ * PartyAuditTrailSearchCriteria1.mmDatePeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification3 partyIdentification;
 	/**
 	 * Describes party to be queried.
 	 * <p>
@@ -86,7 +87,7 @@ public class PartyAuditTrailSearchCriteria1 {
 	 * definition} = "Describes party to be queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -94,12 +95,13 @@ public class PartyAuditTrailSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Describes party to be queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
+	protected DateSearchChoice datePeriod;
 	/**
 	 * Describes date period for querying information.
 	 * <p>
@@ -128,7 +130,7 @@ public class PartyAuditTrailSearchCriteria1 {
 	 * definition} = "Describes date period for querying information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class PartyAuditTrailSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Describes date period for querying information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class PartyAuditTrailSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.PartyIdentification, com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.DatePeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmPartyIdentification, com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmDatePeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for party audit trail query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification3 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public DateSearchChoice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateSearchChoice datePeriod) {
+		this.datePeriod = datePeriod;
 	}
 }

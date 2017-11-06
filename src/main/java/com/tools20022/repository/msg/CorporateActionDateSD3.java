@@ -34,48 +34,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#PlaceAndName
- * CorporateActionDateSD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmPlaceAndName
+ * CorporateActionDateSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#DTCLastDayForEarlyRedemption
- * CorporateActionDateSD3.DTCLastDayForEarlyRedemption}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmDTCLastDayForEarlyRedemption
+ * CorporateActionDateSD3.mmDTCLastDayForEarlyRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#DTCPositionCaptureDate
- * CorporateActionDateSD3.DTCPositionCaptureDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmDTCPositionCaptureDate
+ * CorporateActionDateSD3.mmDTCPositionCaptureDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#NewYorkCutOffDate
- * CorporateActionDateSD3.NewYorkCutOffDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmNewYorkCutOffDate
+ * CorporateActionDateSD3.mmNewYorkCutOffDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#DTCExtendedCutOffDate
- * CorporateActionDateSD3.DTCExtendedCutOffDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmDTCExtendedCutOffDate
+ * CorporateActionDateSD3.mmDTCExtendedCutOffDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#EffectiveDateByExchange
- * CorporateActionDateSD3.EffectiveDateByExchange}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmEffectiveDateByExchange
+ * CorporateActionDateSD3.mmEffectiveDateByExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#DateDeclaredWorthless
- * CorporateActionDateSD3.DateDeclaredWorthless}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmDateDeclaredWorthless
+ * CorporateActionDateSD3.mmDateDeclaredWorthless}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#DeleteWorthlessSecurityDate
- * CorporateActionDateSD3.DeleteWorthlessSecurityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmDeleteWorthlessSecurityDate
+ * CorporateActionDateSD3.mmDeleteWorthlessSecurityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#DTCExitDate
- * CorporateActionDateSD3.DTCExitDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmDTCExitDate
+ * CorporateActionDateSD3.mmDTCExitDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#SubscriptionBeginDate
- * CorporateActionDateSD3.SubscriptionBeginDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmSubscriptionBeginDate
+ * CorporateActionDateSD3.mmSubscriptionBeginDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#FilingDate
- * CorporateActionDateSD3.FilingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmFilingDate
+ * CorporateActionDateSD3.mmFilingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#HearingDate
- * CorporateActionDateSD3.HearingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD3#mmHearingDate
+ * CorporateActionDateSD3.mmHearingDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDateSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -117,7 +118,7 @@ public class CorporateActionDateSD3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -125,11 +126,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate dTCLastDayForEarlyRedemption;
 	/**
 	 * Last day on which DTC (The Depository Trust Corporation) will accept
 	 * instructions for CD early redemptions. This is specific to CDs when the
@@ -161,7 +163,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCLastDayForEarlyRedemption = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCLastDayForEarlyRedemption = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -169,11 +171,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCLastDayForEarlyRedemption";
 			definition = "Last day on which DTC (The Depository Trust Corporation) will accept instructions for CD early redemptions. This is specific to CDs when the registered holder is deceased.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate dTCPositionCaptureDate;
 	/**
 	 * Date when positions are captured and entitlements are calculated in the
 	 * system at DTC (The Depository Trust Corporation).
@@ -204,7 +207,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCPositionCaptureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -212,11 +215,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPositionCaptureDate";
 			definition = "Date when positions are captured and entitlements are calculated in the system at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate newYorkCutOffDate;
 	/**
 	 * Last day to deposit securities at DTC and receive the entitlement for an
 	 * event approaching record date. Issues that have a New York cut-off date
@@ -248,7 +252,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewYorkCutOffDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewYorkCutOffDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -256,11 +260,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkCutOffDate";
 			definition = "Last day to deposit securities at DTC and receive the entitlement for an event approaching record date. Issues that have a New York cut-off date have an out-of-town agent on DTC's records.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate dTCExtendedCutOffDate;
 	/**
 	 * Cutoff date for DTC (The Depository Trust Corporation) deposit and
 	 * withdrawal activity. Certain events require an earlier cutoff date. This
@@ -294,7 +299,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCExtendedCutOffDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCExtendedCutOffDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -302,11 +307,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExtendedCutOffDate";
 			definition = "Cutoff date for DTC (The Depository Trust Corporation) deposit and withdrawal activity. Certain events require an earlier cutoff date. This is typically used on event securities requiring the submission of bearer coupons. Those events usually stop deposit and withdrawal activity one month prior to the declared record date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate effectiveDateByExchange;
 	/**
 	 * Effective date as declared by the primary exchange that generally
 	 * coincides with cessation of trading in the old security and commencement
@@ -338,7 +344,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveDateByExchange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveDateByExchange = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -346,11 +352,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateByExchange";
 			definition = "Effective date as declared by the primary exchange that generally coincides with cessation of trading in the old security and commencement of trading in the new security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate dateDeclaredWorthless;
 	/**
 	 * Date that DTC received formal notification from the agent/issuer stating
 	 * that the securities are null and void.
@@ -381,7 +388,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateDeclaredWorthless = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateDeclaredWorthless = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -389,11 +396,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDeclaredWorthless";
 			definition = "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate deleteWorthlessSecurityDate;
 	/**
 	 * Date when DTC participant positions will be deleted. Typically used for
 	 * expired rights and warrants.
@@ -424,7 +432,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeleteWorthlessSecurityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeleteWorthlessSecurityDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -432,11 +440,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeleteWorthlessSecurityDate";
 			definition = "Date when DTC participant positions will be deleted. Typically used for expired rights and warrants.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate dTCExitDate;
 	/**
 	 * Date on which securities will be exited to DTC participants from DTC (The
 	 * Depository Trust Corporation).
@@ -467,7 +476,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCExitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCExitDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -475,11 +484,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitDate";
 			definition = "Date on which securities will be exited to DTC participants from DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate subscriptionBeginDate;
 	/**
 	 * Date on which a holder can begin to subscribe for new/additional shares.
 	 * <p>
@@ -509,7 +519,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionBeginDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionBeginDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -517,11 +527,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionBeginDate";
 			definition = "Date on which a holder can begin to subscribe for new/additional shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate filingDate;
 	/**
 	 * Date on which a company files a petition for reorganisation under Chapter
 	 * 11 of the United States Bankruptcy Code.
@@ -552,7 +563,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FilingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFilingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -560,11 +571,12 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FilingDate";
 			definition = "Date on which a company files a petition for reorganisation under Chapter 11 of the United States Bankruptcy Code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate hearingDate;
 	/**
 	 * Hearing date as set by the court. Hearing date is material to the
 	 * shareholder/interested party as this may be the last opportunity to make
@@ -596,7 +608,7 @@ public class CorporateActionDateSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HearingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHearingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD3.mmObject();
 			isDerived = false;
@@ -604,8 +616,8 @@ public class CorporateActionDateSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HearingDate";
 			definition = "Hearing date as set by the court. Hearing date is material to the shareholder/interested party as this may be the last opportunity to make a case against/for a settlement. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -613,18 +625,114 @@ public class CorporateActionDateSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD3.PlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD3.DTCLastDayForEarlyRedemption,
-						com.tools20022.repository.msg.CorporateActionDateSD3.DTCPositionCaptureDate, com.tools20022.repository.msg.CorporateActionDateSD3.NewYorkCutOffDate,
-						com.tools20022.repository.msg.CorporateActionDateSD3.DTCExtendedCutOffDate, com.tools20022.repository.msg.CorporateActionDateSD3.EffectiveDateByExchange,
-						com.tools20022.repository.msg.CorporateActionDateSD3.DateDeclaredWorthless, com.tools20022.repository.msg.CorporateActionDateSD3.DeleteWorthlessSecurityDate,
-						com.tools20022.repository.msg.CorporateActionDateSD3.DTCExitDate, com.tools20022.repository.msg.CorporateActionDateSD3.SubscriptionBeginDate, com.tools20022.repository.msg.CorporateActionDateSD3.FilingDate,
-						com.tools20022.repository.msg.CorporateActionDateSD3.HearingDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD3.mmDTCLastDayForEarlyRedemption,
+						com.tools20022.repository.msg.CorporateActionDateSD3.mmDTCPositionCaptureDate, com.tools20022.repository.msg.CorporateActionDateSD3.mmNewYorkCutOffDate,
+						com.tools20022.repository.msg.CorporateActionDateSD3.mmDTCExtendedCutOffDate, com.tools20022.repository.msg.CorporateActionDateSD3.mmEffectiveDateByExchange,
+						com.tools20022.repository.msg.CorporateActionDateSD3.mmDateDeclaredWorthless, com.tools20022.repository.msg.CorporateActionDateSD3.mmDeleteWorthlessSecurityDate,
+						com.tools20022.repository.msg.CorporateActionDateSD3.mmDTCExitDate, com.tools20022.repository.msg.CorporateActionDateSD3.mmSubscriptionBeginDate, com.tools20022.repository.msg.CorporateActionDateSD3.mmFilingDate,
+						com.tools20022.repository.msg.CorporateActionDateSD3.mmHearingDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateSD3";
 				definition = "Provides additional information regarding corporate action date details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODate getDTCLastDayForEarlyRedemption() {
+		return dTCLastDayForEarlyRedemption;
+	}
+
+	public void setDTCLastDayForEarlyRedemption(ISODate dTCLastDayForEarlyRedemption) {
+		this.dTCLastDayForEarlyRedemption = dTCLastDayForEarlyRedemption;
+	}
+
+	public ISODate getDTCPositionCaptureDate() {
+		return dTCPositionCaptureDate;
+	}
+
+	public void setDTCPositionCaptureDate(ISODate dTCPositionCaptureDate) {
+		this.dTCPositionCaptureDate = dTCPositionCaptureDate;
+	}
+
+	public ISODate getNewYorkCutOffDate() {
+		return newYorkCutOffDate;
+	}
+
+	public void setNewYorkCutOffDate(ISODate newYorkCutOffDate) {
+		this.newYorkCutOffDate = newYorkCutOffDate;
+	}
+
+	public ISODate getDTCExtendedCutOffDate() {
+		return dTCExtendedCutOffDate;
+	}
+
+	public void setDTCExtendedCutOffDate(ISODate dTCExtendedCutOffDate) {
+		this.dTCExtendedCutOffDate = dTCExtendedCutOffDate;
+	}
+
+	public ISODate getEffectiveDateByExchange() {
+		return effectiveDateByExchange;
+	}
+
+	public void setEffectiveDateByExchange(ISODate effectiveDateByExchange) {
+		this.effectiveDateByExchange = effectiveDateByExchange;
+	}
+
+	public ISODate getDateDeclaredWorthless() {
+		return dateDeclaredWorthless;
+	}
+
+	public void setDateDeclaredWorthless(ISODate dateDeclaredWorthless) {
+		this.dateDeclaredWorthless = dateDeclaredWorthless;
+	}
+
+	public ISODate getDeleteWorthlessSecurityDate() {
+		return deleteWorthlessSecurityDate;
+	}
+
+	public void setDeleteWorthlessSecurityDate(ISODate deleteWorthlessSecurityDate) {
+		this.deleteWorthlessSecurityDate = deleteWorthlessSecurityDate;
+	}
+
+	public ISODate getDTCExitDate() {
+		return dTCExitDate;
+	}
+
+	public void setDTCExitDate(ISODate dTCExitDate) {
+		this.dTCExitDate = dTCExitDate;
+	}
+
+	public ISODate getSubscriptionBeginDate() {
+		return subscriptionBeginDate;
+	}
+
+	public void setSubscriptionBeginDate(ISODate subscriptionBeginDate) {
+		this.subscriptionBeginDate = subscriptionBeginDate;
+	}
+
+	public ISODate getFilingDate() {
+		return filingDate;
+	}
+
+	public void setFilingDate(ISODate filingDate) {
+		this.filingDate = filingDate;
+	}
+
+	public ISODate getHearingDate() {
+		return hearingDate;
+	}
+
+	public void setHearingDate(ISODate hearingDate) {
+		this.hearingDate = hearingDate;
 	}
 }

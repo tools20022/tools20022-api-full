@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpeningDetails#OpeningType
- * InvestmentAccountOpeningDetails.OpeningType}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpeningDetails#mmOpeningType
+ * InvestmentAccountOpeningDetails.mmOpeningType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpeningDetails#AccountApplicationIdentification
- * InvestmentAccountOpeningDetails.AccountApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpeningDetails#mmAccountApplicationIdentification
+ * InvestmentAccountOpeningDetails.mmAccountApplicationIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,21 +47,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#InstructionDetails
- * AccountOpeningInstructionV02.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#mmInstructionDetails
+ * AccountOpeningInstructionV02.mmInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#InstructionDetails
- * AccountOpeningInstructionV03.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#mmInstructionDetails
+ * AccountOpeningInstructionV03.mmInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#InstructionDetails
- * AccountOpeningInstructionV04.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#mmInstructionDetails
+ * AccountOpeningInstructionV04.mmInstructionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccountOpeningDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountOpeningType1Code openingType;
 	/**
 	 * Specifies if the account opening instruction is about a newly created
 	 * account or a supplementary account.
@@ -117,13 +118,13 @@ public class InvestmentAccountOpeningDetails {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpening1#OpeningType
-	 * InvestmentAccountOpening1.OpeningType}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpening1#mmOpeningType
+	 * InvestmentAccountOpening1.mmOpeningType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
@@ -131,12 +132,13 @@ public class InvestmentAccountOpeningDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningType";
 			definition = "Specifies if the account opening instruction is about a newly created account or a supplementary account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpening1.OpeningType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpening1.mmOpeningType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountOpeningType1Code.mmObject();
 		}
 	};
+	protected Max35Text accountApplicationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the account opening request at
 	 * application level.
@@ -169,13 +171,13 @@ public class InvestmentAccountOpeningDetails {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpening1#AccountApplicationIdentification
-	 * InvestmentAccountOpening1.AccountApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOpening1#mmAccountApplicationIdentification
+	 * InvestmentAccountOpening1.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
@@ -183,9 +185,9 @@ public class InvestmentAccountOpeningDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening request at application level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpening1.AccountApplicationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpening1.mmAccountApplicationIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -193,10 +195,10 @@ public class InvestmentAccountOpeningDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpeningDetails.OpeningType, com.tools20022.repository.msg.InvestmentAccountOpeningDetails.AccountApplicationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.InstructionDetails, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.InstructionDetails,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.InstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmOpeningType, com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmInstructionDetails, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmInstructionDetails,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmInstructionDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountOpeningDetails";
 				definition = "Provide information about the type of opening instruction and identification of the application request.";
@@ -204,5 +206,21 @@ public class InvestmentAccountOpeningDetails {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountOpeningType1Code getOpeningType() {
+		return openingType;
+	}
+
+	public void setOpeningType(AccountOpeningType1Code openingType) {
+		this.openingType = openingType;
+	}
+
+	public Max35Text getAccountApplicationIdentification() {
+		return accountApplicationIdentification;
+	}
+
+	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 }

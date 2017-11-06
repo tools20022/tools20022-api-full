@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13Decima
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the rates related to securities movement.
@@ -36,50 +37,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#AdditionalTax
- * RateDetails24.AdditionalTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#ChargesFees
- * RateDetails24.ChargesFees}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#FiscalStamp
- * RateDetails24.FiscalStamp}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#FullyFrankedRate
- * RateDetails24.FullyFrankedRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmAdditionalTax
+ * RateDetails24.mmAdditionalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmChargesFees
+ * RateDetails24.mmChargesFees}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmFiscalStamp
+ * RateDetails24.mmFiscalStamp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateDetails24#GrossDividendRate
- * RateDetails24.GrossDividendRate}</li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmFullyFrankedRate
+ * RateDetails24.mmFullyFrankedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateDetails24#EarlySolicitationFeeRate
- * RateDetails24.EarlySolicitationFeeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmGrossDividendRate
+ * RateDetails24.mmGrossDividendRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateDetails24#ThirdPartyIncentiveRate
- * RateDetails24.ThirdPartyIncentiveRate}</li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmEarlySolicitationFeeRate
+ * RateDetails24.mmEarlySolicitationFeeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateDetails24#InterestRateUsedForPayment
- * RateDetails24.InterestRateUsedForPayment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#NetDividendRate
- * RateDetails24.NetDividendRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#NonResidentRate
- * RateDetails24.NonResidentRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#ApplicableRate
- * RateDetails24.ApplicableRate}</li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmThirdPartyIncentiveRate
+ * RateDetails24.mmThirdPartyIncentiveRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateDetails24#SolicitationFeeRate
- * RateDetails24.SolicitationFeeRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#TaxCreditRate
- * RateDetails24.TaxCreditRate}</li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmInterestRateUsedForPayment
+ * RateDetails24.mmInterestRateUsedForPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateDetails24#WithholdingTaxRate
- * RateDetails24.WithholdingTaxRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#SecondLevelTax
- * RateDetails24.SecondLevelTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#TaxOnIncome
- * RateDetails24.TaxOnIncome}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#TaxOnProfits
- * RateDetails24.TaxOnProfits}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#TaxReclaimRate
- * RateDetails24.TaxReclaimRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#EqualisationRate
- * RateDetails24.EqualisationRate}</li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmNetDividendRate
+ * RateDetails24.mmNetDividendRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmNonResidentRate
+ * RateDetails24.mmNonResidentRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmApplicableRate
+ * RateDetails24.mmApplicableRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmSolicitationFeeRate
+ * RateDetails24.mmSolicitationFeeRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmTaxCreditRate
+ * RateDetails24.mmTaxCreditRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmWithholdingTaxRate
+ * RateDetails24.mmWithholdingTaxRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmSecondLevelTax
+ * RateDetails24.mmSecondLevelTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmTaxOnIncome
+ * RateDetails24.mmTaxOnIncome}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmTaxOnProfits
+ * RateDetails24.mmTaxOnProfits}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails24#mmTaxReclaimRate
+ * RateDetails24.mmTaxReclaimRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RateDetails24#mmEqualisationRate
+ * RateDetails24.mmEqualisationRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -88,8 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateDetails24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateAndAmountFormat43Choice additionalTax;
 	/**
 	 * Rate used for additional tax that cannot be categorised.
 	 * <p>
@@ -116,8 +122,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#TaxVoucher
-	 * CorporateActionDistribution.TaxVoucher}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
+	 * CorporateActionDistribution.mmTaxVoucher}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,21 +141,22 @@ public class RateDetails24 {
 	 * definition} = "Rate used for additional tax that cannot be categorised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalTax = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmTaxVoucher;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.TaxVoucher;
 			isDerived = false;
 			xmlTag = "AddtlTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTax";
 			definition = "Rate used for additional tax that cannot be categorised.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat43Choice chargesFees;
 	/**
 	 * Rate used to calculate the amount of the charges/fees that cannot be
 	 * categorised.
@@ -163,8 +170,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionCharge
-	 * CorporateActionEvent.CorporateActionCharge}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionCharge
+	 * CorporateActionEvent.mmCorporateActionCharge}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -184,21 +191,22 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargesFees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargesFees = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionCharge;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.CorporateActionCharge;
 			isDerived = false;
 			xmlTag = "ChrgsFees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesFees";
 			definition = "Rate used to calculate the amount of the charges/fees that cannot be categorised.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	protected PercentageRate fiscalStamp;
 	/**
 	 * Percentage of fiscal tax to apply.
 	 * <p>
@@ -212,7 +220,7 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,20 +238,21 @@ public class RateDetails24 {
 	 * definition} = "Percentage of fiscal tax to apply."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FiscalStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFiscalStamp = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "FsclStmp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalStamp";
 			definition = "Percentage of fiscal tax to apply.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RateAndAmountFormat43Choice fullyFrankedRate;
 	/**
 	 * Rate resulting from a fully franked dividend paid by a company; rate
 	 * includes tax credit for companies that have made sufficient tax payments
@@ -258,8 +267,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#FullyFrankedRateAndAmount
-	 * Dividend.FullyFrankedRateAndAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmFullyFrankedRateAndAmount
+	 * Dividend.mmFullyFrankedRateAndAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -279,21 +288,22 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FullyFrankedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFullyFrankedRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmFullyFrankedRateAndAmount;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.FullyFrankedRateAndAmount;
 			isDerived = false;
 			xmlTag = "FullyFrnkdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyFrankedRate";
 			definition = "Rate resulting from a fully franked dividend paid by a company; rate includes tax credit for companies that have made sufficient tax payments during fiscal period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	protected List<GrossDividendRateFormat24Choice> grossDividendRate;
 	/**
 	 * Cash dividend amount per equity before deductions or allowances have been
 	 * made.
@@ -307,8 +317,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#GrossDividend
-	 * Dividend.GrossDividend}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmGrossDividend
+	 * Dividend.mmGrossDividend}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -328,20 +338,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GrossDividendRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGrossDividendRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmGrossDividend;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.GrossDividend;
 			isDerived = false;
 			xmlTag = "GrssDvddRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossDividendRate";
 			definition = "Cash dividend amount per equity before deductions or allowances have been made.";
 			minOccurs = 0;
-			type_lazy = () -> GrossDividendRateFormat24Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> GrossDividendRateFormat24Choice.mmObject();
 		}
 	};
+	protected SolicitationFeeRateFormat9Choice earlySolicitationFeeRate;
 	/**
 	 * Cash rate made available, as an incentive, in addition to the
 	 * solicitation fee, in order to encourage early participation in an offer.
@@ -356,8 +367,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#EarlySolicitationFeeRate
-	 * CorporateActionFeesAndCharges.EarlySolicitationFeeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmEarlySolicitationFeeRate
+	 * CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -377,20 +388,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarlySolicitationFeeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarlySolicitationFeeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.EarlySolicitationFeeRate;
 			isDerived = false;
 			xmlTag = "EarlySlctnFeeRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlySolicitationFeeRate";
 			definition = "Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SolicitationFeeRateFormat9Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat43Choice thirdPartyIncentiveRate;
 	/**
 	 * Cash rate made available in an event in order to encourage participation
 	 * in the offer. As information, Payment is made to a third party who has
@@ -406,8 +418,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#CashIncentiveRate
-	 * CashProceedsDefinition.CashIncentiveRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveRate
+	 * CashProceedsDefinition.mmCashIncentiveRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -427,20 +439,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ThirdPartyIncentiveRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmThirdPartyIncentiveRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmCashIncentiveRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.CashIncentiveRate;
 			isDerived = false;
 			xmlTag = "ThrdPtyIncntivRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdPartyIncentiveRate";
 			definition = "Cash rate made available in an event in order to encourage participation in the offer. As information, Payment is made to a third party who has solicited an entity to take part in the offer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	protected List<InterestRateUsedForPaymentFormat9Choice> interestRateUsedForPayment;
 	/**
 	 * Actual interest rate used for the payment of the interest for the
 	 * specified interest period.
@@ -454,8 +467,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -475,20 +488,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InterestRateUsedForPayment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterestRateUsedForPayment = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "IntrstRateUsdForPmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateUsedForPayment";
 			definition = "Actual interest rate used for the payment of the interest for the specified interest period.";
 			minOccurs = 0;
-			type_lazy = () -> InterestRateUsedForPaymentFormat9Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> InterestRateUsedForPaymentFormat9Choice.mmObject();
 		}
 	};
+	protected List<NetDividendRateFormat26Choice> netDividendRate;
 	/**
 	 * Cash dividend amount per equity after deductions or allowances have been
 	 * made.
@@ -502,8 +516,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#NetDividend
-	 * Dividend.NetDividend}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmNetDividend
+	 * Dividend.mmNetDividend}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -523,20 +537,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetDividendRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetDividendRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmNetDividend;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.NetDividend;
 			isDerived = false;
 			xmlTag = "NetDvddRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate";
 			definition = "Cash dividend amount per equity after deductions or allowances have been made.";
 			minOccurs = 0;
-			type_lazy = () -> NetDividendRateFormat26Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> NetDividendRateFormat26Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat43Choice nonResidentRate;
 	/**
 	 * Rate per share to which a non-resident is entitled.
 	 * <p>
@@ -549,8 +564,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#Rate Dividend.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmRate
+	 * Dividend.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -568,21 +583,22 @@ public class RateDetails24 {
 	 * definition} = "Rate per share to which a non-resident is entitled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonResidentRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonResidentRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.Rate;
 			isDerived = false;
 			xmlTag = "NonResdtRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonResidentRate";
 			definition = "Rate per share to which a non-resident is entitled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	protected PercentageRate applicableRate;
 	/**
 	 * Rate applicable to the event announced, for example, redemption rate for
 	 * a redemption event.
@@ -597,8 +613,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#ApplicableRate
-	 * BiddingConditions.ApplicableRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmApplicableRate
+	 * BiddingConditions.mmApplicableRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -618,20 +634,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicableRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicableRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmApplicableRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.ApplicableRate;
 			isDerived = false;
 			xmlTag = "AplblRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicableRate";
 			definition = "Rate applicable to the event announced, for example, redemption rate for a redemption event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected SolicitationFeeRateFormat9Choice solicitationFeeRate;
 	/**
 	 * Rate of the cash premium made available if the securities holder consents
 	 * or participates to an event, for example consent fees or solicitation
@@ -647,8 +664,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#SolicitationFee
-	 * CorporateActionFeesAndCharges.SolicitationFee}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
+	 * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -668,20 +685,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SolicitationFeeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSolicitationFeeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmSolicitationFee;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.SolicitationFee;
 			isDerived = false;
 			xmlTag = "SlctnFeeRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationFeeRate";
 			definition = "Rate of the cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fee.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SolicitationFeeRateFormat9Choice.mmObject();
 		}
 	};
+	protected List<TaxCreditRateFormat9Choice> taxCreditRate;
 	/**
 	 * Amount of money per equity allocated as the result of a tax credit.
 	 * <p>
@@ -694,8 +712,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#CreditRate
-	 * TaxVoucher.CreditRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmCreditRate
+	 * TaxVoucher.mmCreditRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -714,20 +732,21 @@ public class RateDetails24 {
 	 * "Amount of money per equity allocated as the result of a tax credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxCreditRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxCreditRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmCreditRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.CreditRate;
 			isDerived = false;
 			xmlTag = "TaxCdtRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate";
 			definition = "Amount of money per equity allocated as the result of a tax credit.";
 			minOccurs = 0;
-			type_lazy = () -> TaxCreditRateFormat9Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> TaxCreditRateFormat9Choice.mmObject();
 		}
 	};
+	protected List<RateAndAmountFormat45Choice> withholdingTaxRate;
 	/**
 	 * Percentage of a cash distribution that will be withheld by the tax
 	 * authorities of the jurisdiction of the issuer, for which a relief at
@@ -743,7 +762,7 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -763,10 +782,10 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WithholdingTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "WhldgTaxRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -776,6 +795,7 @@ public class RateDetails24 {
 			complexType_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 		}
 	};
+	protected List<RateAndAmountFormat45Choice> secondLevelTax;
 	/**
 	 * Rate at which the income will be withheld by a jurisdiction other than
 	 * the jurisdiction of the issuer’s country of tax incorporation, for which
@@ -792,7 +812,7 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -812,20 +832,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecondLevelTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecondLevelTax = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "ScndLvlTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax";
 			definition = "Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.";
 			minOccurs = 0;
-			type_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 		}
 	};
+	protected RateAndAmountFormat43Choice taxOnIncome;
 	/**
 	 * Taxation applied on an amount clearly identified as an income.
 	 * <p>
@@ -839,7 +860,7 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -858,20 +879,21 @@ public class RateDetails24 {
 	 * "Taxation applied on an amount clearly identified as an income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxOnIncome = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxOnIncome = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "TaxOnIncm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxOnIncome";
 			definition = "Taxation applied on an amount clearly identified as an income.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	protected PercentageRate taxOnProfits;
 	/**
 	 * Taxation applied on an amount clearly identified as capital profits,
 	 * capital gains.
@@ -886,7 +908,7 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -906,20 +928,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxOnProfits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxOnProfits = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "TaxOnPrfts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxOnProfits";
 			definition = "Taxation applied on an amount clearly identified as capital profits, capital gains.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate taxReclaimRate;
 	/**
 	 * Percentage of cash that was paid in excess of actual tax obligation and
 	 * was reclaimed.
@@ -934,7 +957,7 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -954,20 +977,21 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxReclaimRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxReclaimRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "TaxRclmRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaimRate";
 			definition = "Percentage of cash that was paid in excess of actual tax obligation and was reclaimed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAnd13DecimalAmount equalisationRate;
 	/**
 	 * Portion of the fund distribution which represents the average accrued
 	 * income included in the purchase price for units bought during the account
@@ -983,8 +1007,8 @@ public class RateDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Equalisation#Amount
-	 * Equalisation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Equalisation#mmAmount
+	 * Equalisation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1004,17 +1028,17 @@ public class RateDetails24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EqualisationRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEqualisationRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.mmAmount;
 			componentContext_lazy = () -> RateDetails24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.Amount;
 			isDerived = false;
 			xmlTag = "EqulstnRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualisationRate";
 			definition = "Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -1022,20 +1046,172 @@ public class RateDetails24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateDetails24.AdditionalTax, com.tools20022.repository.msg.RateDetails24.ChargesFees, com.tools20022.repository.msg.RateDetails24.FiscalStamp,
-						com.tools20022.repository.msg.RateDetails24.FullyFrankedRate, com.tools20022.repository.msg.RateDetails24.GrossDividendRate, com.tools20022.repository.msg.RateDetails24.EarlySolicitationFeeRate,
-						com.tools20022.repository.msg.RateDetails24.ThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails24.InterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails24.NetDividendRate,
-						com.tools20022.repository.msg.RateDetails24.NonResidentRate, com.tools20022.repository.msg.RateDetails24.ApplicableRate, com.tools20022.repository.msg.RateDetails24.SolicitationFeeRate,
-						com.tools20022.repository.msg.RateDetails24.TaxCreditRate, com.tools20022.repository.msg.RateDetails24.WithholdingTaxRate, com.tools20022.repository.msg.RateDetails24.SecondLevelTax,
-						com.tools20022.repository.msg.RateDetails24.TaxOnIncome, com.tools20022.repository.msg.RateDetails24.TaxOnProfits, com.tools20022.repository.msg.RateDetails24.TaxReclaimRate,
-						com.tools20022.repository.msg.RateDetails24.EqualisationRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateDetails24.mmAdditionalTax, com.tools20022.repository.msg.RateDetails24.mmChargesFees, com.tools20022.repository.msg.RateDetails24.mmFiscalStamp,
+						com.tools20022.repository.msg.RateDetails24.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails24.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails24.mmEarlySolicitationFeeRate,
+						com.tools20022.repository.msg.RateDetails24.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails24.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails24.mmNetDividendRate,
+						com.tools20022.repository.msg.RateDetails24.mmNonResidentRate, com.tools20022.repository.msg.RateDetails24.mmApplicableRate, com.tools20022.repository.msg.RateDetails24.mmSolicitationFeeRate,
+						com.tools20022.repository.msg.RateDetails24.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails24.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails24.mmSecondLevelTax,
+						com.tools20022.repository.msg.RateDetails24.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails24.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails24.mmTaxReclaimRate,
+						com.tools20022.repository.msg.RateDetails24.mmEqualisationRate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateDetails24";
 				definition = "Provides information about the rates related to securities movement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateAndAmountFormat43Choice getAdditionalTax() {
+		return additionalTax;
+	}
+
+	public void setAdditionalTax(RateAndAmountFormat43Choice additionalTax) {
+		this.additionalTax = additionalTax;
+	}
+
+	public RateAndAmountFormat43Choice getChargesFees() {
+		return chargesFees;
+	}
+
+	public void setChargesFees(RateAndAmountFormat43Choice chargesFees) {
+		this.chargesFees = chargesFees;
+	}
+
+	public PercentageRate getFiscalStamp() {
+		return fiscalStamp;
+	}
+
+	public void setFiscalStamp(PercentageRate fiscalStamp) {
+		this.fiscalStamp = fiscalStamp;
+	}
+
+	public RateAndAmountFormat43Choice getFullyFrankedRate() {
+		return fullyFrankedRate;
+	}
+
+	public void setFullyFrankedRate(RateAndAmountFormat43Choice fullyFrankedRate) {
+		this.fullyFrankedRate = fullyFrankedRate;
+	}
+
+	public List<GrossDividendRateFormat24Choice> getGrossDividendRate() {
+		return grossDividendRate;
+	}
+
+	public void setGrossDividendRate(List<GrossDividendRateFormat24Choice> grossDividendRate) {
+		this.grossDividendRate = grossDividendRate;
+	}
+
+	public SolicitationFeeRateFormat9Choice getEarlySolicitationFeeRate() {
+		return earlySolicitationFeeRate;
+	}
+
+	public void setEarlySolicitationFeeRate(SolicitationFeeRateFormat9Choice earlySolicitationFeeRate) {
+		this.earlySolicitationFeeRate = earlySolicitationFeeRate;
+	}
+
+	public RateAndAmountFormat43Choice getThirdPartyIncentiveRate() {
+		return thirdPartyIncentiveRate;
+	}
+
+	public void setThirdPartyIncentiveRate(RateAndAmountFormat43Choice thirdPartyIncentiveRate) {
+		this.thirdPartyIncentiveRate = thirdPartyIncentiveRate;
+	}
+
+	public List<InterestRateUsedForPaymentFormat9Choice> getInterestRateUsedForPayment() {
+		return interestRateUsedForPayment;
+	}
+
+	public void setInterestRateUsedForPayment(List<InterestRateUsedForPaymentFormat9Choice> interestRateUsedForPayment) {
+		this.interestRateUsedForPayment = interestRateUsedForPayment;
+	}
+
+	public List<NetDividendRateFormat26Choice> getNetDividendRate() {
+		return netDividendRate;
+	}
+
+	public void setNetDividendRate(List<NetDividendRateFormat26Choice> netDividendRate) {
+		this.netDividendRate = netDividendRate;
+	}
+
+	public RateAndAmountFormat43Choice getNonResidentRate() {
+		return nonResidentRate;
+	}
+
+	public void setNonResidentRate(RateAndAmountFormat43Choice nonResidentRate) {
+		this.nonResidentRate = nonResidentRate;
+	}
+
+	public PercentageRate getApplicableRate() {
+		return applicableRate;
+	}
+
+	public void setApplicableRate(PercentageRate applicableRate) {
+		this.applicableRate = applicableRate;
+	}
+
+	public SolicitationFeeRateFormat9Choice getSolicitationFeeRate() {
+		return solicitationFeeRate;
+	}
+
+	public void setSolicitationFeeRate(SolicitationFeeRateFormat9Choice solicitationFeeRate) {
+		this.solicitationFeeRate = solicitationFeeRate;
+	}
+
+	public List<TaxCreditRateFormat9Choice> getTaxCreditRate() {
+		return taxCreditRate;
+	}
+
+	public void setTaxCreditRate(List<TaxCreditRateFormat9Choice> taxCreditRate) {
+		this.taxCreditRate = taxCreditRate;
+	}
+
+	public List<RateAndAmountFormat45Choice> getWithholdingTaxRate() {
+		return withholdingTaxRate;
+	}
+
+	public void setWithholdingTaxRate(List<RateAndAmountFormat45Choice> withholdingTaxRate) {
+		this.withholdingTaxRate = withholdingTaxRate;
+	}
+
+	public List<RateAndAmountFormat45Choice> getSecondLevelTax() {
+		return secondLevelTax;
+	}
+
+	public void setSecondLevelTax(List<RateAndAmountFormat45Choice> secondLevelTax) {
+		this.secondLevelTax = secondLevelTax;
+	}
+
+	public RateAndAmountFormat43Choice getTaxOnIncome() {
+		return taxOnIncome;
+	}
+
+	public void setTaxOnIncome(RateAndAmountFormat43Choice taxOnIncome) {
+		this.taxOnIncome = taxOnIncome;
+	}
+
+	public PercentageRate getTaxOnProfits() {
+		return taxOnProfits;
+	}
+
+	public void setTaxOnProfits(PercentageRate taxOnProfits) {
+		this.taxOnProfits = taxOnProfits;
+	}
+
+	public PercentageRate getTaxReclaimRate() {
+		return taxReclaimRate;
+	}
+
+	public void setTaxReclaimRate(PercentageRate taxReclaimRate) {
+		this.taxReclaimRate = taxReclaimRate;
+	}
+
+	public RestrictedFINActiveCurrencyAnd13DecimalAmount getEqualisationRate() {
+		return equalisationRate;
+	}
+
+	public void setEqualisationRate(RestrictedFINActiveCurrencyAnd13DecimalAmount equalisationRate) {
+		this.equalisationRate = equalisationRate;
 	}
 }

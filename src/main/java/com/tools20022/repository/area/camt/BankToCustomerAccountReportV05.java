@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousv
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,21 +75,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05#GroupHeader
- * BankToCustomerAccountReportV05.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05#mmGroupHeader
+ * BankToCustomerAccountReportV05.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05#Report
- * BankToCustomerAccountReportV05.Report}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05#mmReport
+ * BankToCustomerAccountReportV05.mmReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05#SupplementaryData
- * BankToCustomerAccountReportV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05#mmSupplementaryData
+ * BankToCustomerAccountReportV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05#identifier
- * BankToCustomerAccountReportV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.052.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankToCustomerAccountReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader58 groupHeader;
 	/**
 	 * Common information for the message.
 	 * <p>
@@ -140,30 +140,31 @@ public class BankToCustomerAccountReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06#GroupHeader
-	 * BankToCustomerAccountReportV06.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06#mmGroupHeader
+	 * BankToCustomerAccountReportV06.mmGroupHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV04#GroupHeader
-	 * BankToCustomerAccountReportV04.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV04#mmGroupHeader
+	 * BankToCustomerAccountReportV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common information for the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerAccountReportV04.GroupHeader;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.GroupHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.mmGroupHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerAccountReportV04.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
 	};
+	protected List<AccountReport18> report;
 	/**
 	 * Reports on a cash account.
 	 * <p>
@@ -188,29 +189,30 @@ public class BankToCustomerAccountReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06#Report
-	 * BankToCustomerAccountReportV06.Report}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06#mmReport
+	 * BankToCustomerAccountReportV06.mmReport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV04#Report
-	 * BankToCustomerAccountReportV04.Report}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV04#mmReport
+	 * BankToCustomerAccountReportV04.mmReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Report = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "Reports on a cash account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerAccountReportV04.Report;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.Report);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.mmReport);
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerAccountReportV04.mmReport;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountReport18.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -239,54 +241,27 @@ public class BankToCustomerAccountReportV05 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06#SupplementaryData
-	 * BankToCustomerAccountReportV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06#mmSupplementaryData
+	 * BankToCustomerAccountReportV06.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV04#SupplementaryData
-	 * BankToCustomerAccountReportV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV04#mmSupplementaryData
+	 * BankToCustomerAccountReportV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerAccountReportV04.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV06.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerAccountReportV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "052"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "052";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -296,17 +271,48 @@ public class BankToCustomerAccountReportV05 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BankToCustomerAccountReportV05";
 				definition = "Scope\r\nThe BankToCustomerAccountReport message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of the entries reported to the account, and/or to provide the owner with balance information on the account at a given point in time.\r\nUsage\r\nThe BankToCustomerAccountReport message can contain reports for more than one account. It provides information for cash management and/or reconciliation. It can be used to:\r\n- report pending and booked items;\r\n- provide balance information.\r\nIt can include underlying details of transactions that have been included in the entry.\r\nIt is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).\r\nFor a statement, the Bank-to-Customer Account Statement message should be used.";
-				previousVersion_lazy = () -> BankToCustomerAccountReportV04.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(BankToCustomerAccountReportV06.mmObject());
+				previousVersion_lazy = () -> BankToCustomerAccountReportV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(BanktoCustomerCashManagementISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "BkToCstmrAcctRpt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV05.GroupHeader, com.tools20022.repository.area.camt.BankToCustomerAccountReportV05.Report,
-						com.tools20022.repository.area.camt.BankToCustomerAccountReportV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerAccountReportV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerAccountReportV05.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerAccountReportV05.mmReport,
+						com.tools20022.repository.area.camt.BankToCustomerAccountReportV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "052";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader58 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader58 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<AccountReport18> getReport() {
+		return report;
+	}
+
+	public void setReport(List<AccountReport18> report) {
+		this.report = report;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

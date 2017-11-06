@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.UpdatedAdditionalInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,27 +75,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#AccountDetails
- * CorporateActionNarrativeV02.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#mmAccountDetails
+ * CorporateActionNarrativeV02.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#UnderlyingSecurity
- * CorporateActionNarrativeV02.UnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#mmUnderlyingSecurity
+ * CorporateActionNarrativeV02.mmUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#CorporateActionGeneralInformation
- * CorporateActionNarrativeV02.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#mmCorporateActionGeneralInformation
+ * CorporateActionNarrativeV02.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#AdditionalInformation
- * CorporateActionNarrativeV02.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#mmAdditionalInformation
+ * CorporateActionNarrativeV02.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#SupplementaryData
- * CorporateActionNarrativeV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#mmSupplementaryData
+ * CorporateActionNarrativeV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV02#identifier
- * CorporateActionNarrativeV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.038.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,6 +121,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrativeV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification14Choice accountDetails;
 	/**
 	 * General information about the safekeeping account and the account owner.
 	 * <p>
@@ -147,17 +147,18 @@ public class CorporateActionNarrativeV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "General information about the safekeeping account and the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification14Choice.mmObject();
 		}
 	};
+	protected UnderlyingSecurity3 underlyingSecurity;
 	/**
 	 * Provides information about the securitised right for entitlement.
 	 * <p>
@@ -182,17 +183,18 @@ public class CorporateActionNarrativeV02 {
 	 * "Provides information about the securitised right for entitlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingSecurity = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygScty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Provides information about the securitised right for entitlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnderlyingSecurity3.mmObject();
 		}
 	};
+	protected CorporateActionGeneralInformation10 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -216,17 +218,18 @@ public class CorporateActionNarrativeV02 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation10.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation2 additionalInformation;
 	/**
 	 * Provides additional information.
 	 * <p>
@@ -250,17 +253,18 @@ public class CorporateActionNarrativeV02 {
 	 * definition} = "Provides additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UpdatedAdditionalInformation2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -287,7 +291,7 @@ public class CorporateActionNarrativeV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,33 +301,6 @@ public class CorporateActionNarrativeV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "038";
-			version = "02";
-			flavour = "001";
-		}
-	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
@@ -331,18 +308,65 @@ public class CorporateActionNarrativeV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrativeV02";
 				definition = "Scope\r\nThe CorporateActionNarrative message is sent between an account servicer and an account owner or its designated agent to cater for tax reclaims, restrictions, documentation requirements. This message is bi-directional.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
-				previousVersion_lazy = () -> CorporateActionNarrativeV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrativeV03.mmObject());
+				previousVersion_lazy = () -> CorporateActionNarrativeV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnNrrtv";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV02.AccountDetails, com.tools20022.repository.area.seev.CorporateActionNarrativeV02.UnderlyingSecurity,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV02.CorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionNarrativeV02.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV02.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionNarrativeV02.mmUnderlyingSecurity,
+						com.tools20022.repository.area.seev.CorporateActionNarrativeV02.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionNarrativeV02.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionNarrativeV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "038";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification14Choice getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(AccountIdentification14Choice accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public UnderlyingSecurity3 getUnderlyingSecurity() {
+		return underlyingSecurity;
+	}
+
+	public void setUnderlyingSecurity(UnderlyingSecurity3 underlyingSecurity) {
+		this.underlyingSecurity = underlyingSecurity;
+	}
+
+	public CorporateActionGeneralInformation10 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation10 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public UpdatedAdditionalInformation2 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(UpdatedAdditionalInformation2 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

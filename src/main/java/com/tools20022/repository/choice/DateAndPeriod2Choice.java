@@ -35,22 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#Date
- * DateAndPeriod2Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#Period
- * DateAndPeriod2Choice.Period}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#mmDate
+ * DateAndPeriod2Choice.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#FromDate
- * DateAndPeriod2Choice.FromDate}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#ToDate
- * DateAndPeriod2Choice.ToDate}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#mmPeriod
+ * DateAndPeriod2Choice.mmPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#mmFromDate
+ * DateAndPeriod2Choice.mmFromDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateAndPeriod2Choice#mmToDate
+ * DateAndPeriod2Choice.mmToDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateAndPeriod2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Specific date within a period.
 	 * <p>
@@ -91,7 +94,7 @@ public class DateAndPeriod2Choice {
 	 * definition} = "Specific date within a period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
 			isDerived = false;
@@ -99,11 +102,12 @@ public class DateAndPeriod2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specific date within a period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Period2 period;
 	/**
 	 * Time span defined by a start date and an end date.
 	 * <p>
@@ -134,21 +138,22 @@ public class DateAndPeriod2Choice {
 	 * definition} = "Time span defined by a start date and an end date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Period = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
+			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Time span defined by a start date and an end date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period2.mmObject();
 		}
 	};
+	protected ISODate fromDate;
 	/**
 	 * Date at which the range starts.
 	 * <p>
@@ -161,8 +166,8 @@ public class DateAndPeriod2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,20 +186,21 @@ public class DateAndPeriod2Choice {
 	 * definition} = "Date at which the range starts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "FrDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDate";
 			definition = "Date at which the range starts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate toDate;
 	/**
 	 * Date at which the range ends.
 	 * <p>
@@ -207,8 +213,8 @@ public class DateAndPeriod2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#ToDateTime
-	 * DateTimePeriod.ToDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmToDateTime
+	 * DateTimePeriod.mmToDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -227,17 +233,17 @@ public class DateAndPeriod2Choice {
 	 * definition} = "Date at which the range ends."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.ToDateTime;
 			isDerived = false;
 			xmlTag = "ToDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDate";
 			definition = "Date at which the range ends.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -245,14 +251,46 @@ public class DateAndPeriod2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndPeriod2Choice.Date, com.tools20022.repository.choice.DateAndPeriod2Choice.Period,
-						com.tools20022.repository.choice.DateAndPeriod2Choice.FromDate, com.tools20022.repository.choice.DateAndPeriod2Choice.ToDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndPeriod2Choice.mmDate, com.tools20022.repository.choice.DateAndPeriod2Choice.mmPeriod,
+						com.tools20022.repository.choice.DateAndPeriod2Choice.mmFromDate, com.tools20022.repository.choice.DateAndPeriod2Choice.mmToDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateAndPeriod2Choice";
 				definition = "Choice between a date and period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public Period2 getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(Period2 period) {
+		this.period = period;
+	}
+
+	public ISODate getFromDate() {
+		return fromDate;
+	}
+
+	public void setFromDate(ISODate fromDate) {
+		this.fromDate = fromDate;
+	}
+
+	public ISODate getToDate() {
+		return toDate;
+	}
+
+	public void setToDate(ISODate toDate) {
+		this.toDate = toDate;
 	}
 }

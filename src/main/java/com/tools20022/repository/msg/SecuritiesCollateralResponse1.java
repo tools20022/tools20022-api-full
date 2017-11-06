@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#CollateralIdentification
- * SecuritiesCollateralResponse1.CollateralIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#mmCollateralIdentification
+ * SecuritiesCollateralResponse1.mmCollateralIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#AssetNumber
- * SecuritiesCollateralResponse1.AssetNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#mmAssetNumber
+ * SecuritiesCollateralResponse1.mmAssetNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#ResponseType
- * SecuritiesCollateralResponse1.ResponseType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#mmResponseType
+ * SecuritiesCollateralResponse1.mmResponseType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#RejectionReason
- * SecuritiesCollateralResponse1.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#mmRejectionReason
+ * SecuritiesCollateralResponse1.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#RejectionInformation
- * SecuritiesCollateralResponse1.RejectionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateralResponse1#mmRejectionInformation
+ * SecuritiesCollateralResponse1.mmRejectionInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesCollateralResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text collateralIdentification;
 	/**
 	 * Provides the identification of the proposed collateral.
 	 * <p>
@@ -109,11 +110,11 @@ public class SecuritiesCollateralResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#CollateralIdentification
-	 * CashCollateralResponse1.CollateralIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmCollateralIdentification
+	 * CashCollateralResponse1.mmCollateralIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCollateralResponse1.mmObject();
 			isDerived = false;
@@ -121,12 +122,13 @@ public class SecuritiesCollateralResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIdentification";
 			definition = "Provides the identification of the proposed collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.CollateralIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmCollateralIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text assetNumber;
 	/**
 	 * Identifies the register number of the collateral deposit assigned by the
 	 * central counterparty.
@@ -157,7 +159,7 @@ public class SecuritiesCollateralResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AssetNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssetNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCollateralResponse1.mmObject();
 			isDerived = false;
@@ -165,11 +167,12 @@ public class SecuritiesCollateralResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetNumber";
 			definition = "Identifies the register number of the collateral deposit assigned by the central counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Status4Code responseType;
 	/**
 	 * Specifies the status of the collateral proposal.
 	 * <p>
@@ -182,8 +185,8 @@ public class SecuritiesCollateralResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Status
-	 * StatusReason.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmStatus
+	 * StatusReason.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,25 +206,26 @@ public class SecuritiesCollateralResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#ResponseType
-	 * CashCollateralResponse1.ResponseType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmResponseType
+	 * CashCollateralResponse1.mmResponseType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmStatus;
 			componentContext_lazy = () -> SecuritiesCollateralResponse1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Status;
 			isDerived = false;
 			xmlTag = "RspnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Specifies the status of the collateral proposal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.ResponseType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmResponseType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
 		}
 	};
+	protected RejectionReasonV021Code rejectionReason;
 	/**
 	 * Specifies the reason why the instruction/cancellation request has a
 	 * rejected status.
@@ -236,8 +240,8 @@ public class SecuritiesCollateralResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,25 +263,26 @@ public class SecuritiesCollateralResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#RejectionReason
-	 * CashCollateralResponse1.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmRejectionReason
+	 * CashCollateralResponse1.mmRejectionReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> SecuritiesCollateralResponse1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.RejectionReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmRejectionReason;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
 	};
+	protected Max35Text rejectionInformation;
 	/**
 	 * Additional information regarding why the collateral proposal has a
 	 * rejected status.
@@ -309,11 +314,11 @@ public class SecuritiesCollateralResponse1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#RejectionInformation
-	 * CashCollateralResponse1.RejectionInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmRejectionInformation
+	 * CashCollateralResponse1.mmRejectionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCollateralResponse1.mmObject();
 			isDerived = false;
@@ -321,9 +326,9 @@ public class SecuritiesCollateralResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionInformation";
 			definition = "Additional information regarding why the collateral proposal has a rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.RejectionInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmRejectionInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -331,11 +336,11 @@ public class SecuritiesCollateralResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateralResponse1.CollateralIdentification, com.tools20022.repository.msg.SecuritiesCollateralResponse1.AssetNumber,
-						com.tools20022.repository.msg.SecuritiesCollateralResponse1.ResponseType, com.tools20022.repository.msg.SecuritiesCollateralResponse1.RejectionReason,
-						com.tools20022.repository.msg.SecuritiesCollateralResponse1.RejectionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmCollateralIdentification, com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmAssetNumber,
+						com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmResponseType, com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmRejectionReason,
+						com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmRejectionInformation);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCollateralResponse1";
 				definition = "Provides more details on the response such as the response type, the collateral identification, and optionally further details in case of rejection.";
@@ -343,5 +348,45 @@ public class SecuritiesCollateralResponse1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCollateralIdentification() {
+		return collateralIdentification;
+	}
+
+	public void setCollateralIdentification(Max35Text collateralIdentification) {
+		this.collateralIdentification = collateralIdentification;
+	}
+
+	public Max35Text getAssetNumber() {
+		return assetNumber;
+	}
+
+	public void setAssetNumber(Max35Text assetNumber) {
+		this.assetNumber = assetNumber;
+	}
+
+	public Status4Code getResponseType() {
+		return responseType;
+	}
+
+	public void setResponseType(Status4Code responseType) {
+		this.responseType = responseType;
+	}
+
+	public RejectionReasonV021Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReasonV021Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+
+	public Max35Text getRejectionInformation() {
+		return rejectionInformation;
+	}
+
+	public void setRejectionInformation(Max35Text rejectionInformation) {
+		this.rejectionInformation = rejectionInformation;
 	}
 }

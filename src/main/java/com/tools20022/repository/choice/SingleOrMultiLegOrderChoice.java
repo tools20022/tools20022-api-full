@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SingleOrMultiLegOrderChoice#SingleOrderDetails
- * SingleOrMultiLegOrderChoice.SingleOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.SingleOrMultiLegOrderChoice#mmSingleOrderDetails
+ * SingleOrMultiLegOrderChoice.mmSingleOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SingleOrMultiLegOrderChoice#MultilegOrderDetails
- * SingleOrMultiLegOrderChoice.MultilegOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.SingleOrMultiLegOrderChoice#mmMultilegOrderDetails
+ * SingleOrMultiLegOrderChoice.mmMultilegOrderDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SingleOrMultiLegOrderChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SingleOrder1 singleOrderDetails;
 	/**
 	 * Provides details about the single order.
 	 * <p>
@@ -91,21 +92,22 @@ public class SingleOrMultiLegOrderChoice {
 	 * definition} = "Provides details about the single order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SingleOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSingleOrderDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
+			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglOrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOrderDetails";
 			definition = "Provides details about the single order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SingleOrder1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SingleOrder1.mmObject();
 		}
 	};
+	protected MultiLegOrder1 multilegOrderDetails;
 	/**
 	 * Provides details about the multileg order.
 	 * <p>
@@ -137,32 +139,48 @@ public class SingleOrMultiLegOrderChoice {
 	 * definition} = "Provides details about the multileg order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MultilegOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMultilegOrderDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
+			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
 			isDerived = false;
 			xmlTag = "MltlgOrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilegOrderDetails";
 			definition = "Provides details about the multileg order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MultiLegOrder1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MultiLegOrder1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.SingleOrderDetails, com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.MultilegOrderDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmSingleOrderDetails, com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmMultilegOrderDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrMultiLegOrderChoice";
 				definition = "Choice between a single order or a multileg order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SingleOrder1 getSingleOrderDetails() {
+		return singleOrderDetails;
+	}
+
+	public void setSingleOrderDetails(SingleOrder1 singleOrderDetails) {
+		this.singleOrderDetails = singleOrderDetails;
+	}
+
+	public MultiLegOrder1 getMultilegOrderDetails() {
+		return multilegOrderDetails;
+	}
+
+	public void setMultilegOrderDetails(MultiLegOrder1 multilegOrderDetails) {
+		this.multilegOrderDetails = multilegOrderDetails;
 	}
 }

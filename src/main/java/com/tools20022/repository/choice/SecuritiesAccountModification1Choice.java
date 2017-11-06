@@ -37,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesAccountModification1Choice#SystemSecuritiesAccount
- * SecuritiesAccountModification1Choice.SystemSecuritiesAccount}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccountModification1Choice#mmSystemSecuritiesAccount
+ * SecuritiesAccountModification1Choice.mmSystemSecuritiesAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesAccountModification1Choice#SystemRestriction
- * SecuritiesAccountModification1Choice.SystemRestriction}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccountModification1Choice#mmSystemRestriction
+ * SecuritiesAccountModification1Choice.mmSystemRestriction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesAccountModification1Choice#MarketSpecificAttribute
- * SecuritiesAccountModification1Choice.MarketSpecificAttribute}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccountModification1Choice#mmMarketSpecificAttribute
+ * SecuritiesAccountModification1Choice.mmMarketSpecificAttribute}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccountModification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemSecuritiesAccount2 systemSecuritiesAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -95,7 +96,7 @@ public class SecuritiesAccountModification1Choice {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemSecuritiesAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemSecuritiesAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class SecuritiesAccountModification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemSecuritiesAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SystemSecuritiesAccount2.mmObject();
 		}
 	};
+	protected SystemRestriction1 systemRestriction;
 	/**
 	 * Defines the specific processing characteristics for a party to ensure
 	 * configurability of specific requirements, as prescribed by national legal
@@ -138,7 +140,7 @@ public class SecuritiesAccountModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SystemRestriction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSystemRestriction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
@@ -146,12 +148,13 @@ public class SecuritiesAccountModification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemRestriction";
 			definition = "Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemRestriction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SystemRestriction1.mmObject();
 		}
 	};
+	protected MarketSpecificAttribute1 marketSpecificAttribute;
 	/**
 	 * Additional attributes defined by a central security depositary for a
 	 * party.
@@ -182,7 +185,7 @@ public class SecuritiesAccountModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketSpecificAttribute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketSpecificAttribute = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
@@ -190,24 +193,48 @@ public class SecuritiesAccountModification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
 			definition = "Additional attributes defined by a central security depositary for a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarketSpecificAttribute1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarketSpecificAttribute1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountModification1Choice.SystemSecuritiesAccount,
-						com.tools20022.repository.choice.SecuritiesAccountModification1Choice.SystemRestriction, com.tools20022.repository.choice.SecuritiesAccountModification1Choice.MarketSpecificAttribute);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmSystemSecuritiesAccount,
+						com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmSystemRestriction, com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountModification1Choice";
 				definition = "Identifies which information are involved by a modification request for securities account reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemSecuritiesAccount2 getSystemSecuritiesAccount() {
+		return systemSecuritiesAccount;
+	}
+
+	public void setSystemSecuritiesAccount(SystemSecuritiesAccount2 systemSecuritiesAccount) {
+		this.systemSecuritiesAccount = systemSecuritiesAccount;
+	}
+
+	public SystemRestriction1 getSystemRestriction() {
+		return systemRestriction;
+	}
+
+	public void setSystemRestriction(SystemRestriction1 systemRestriction) {
+		this.systemRestriction = systemRestriction;
+	}
+
+	public MarketSpecificAttribute1 getMarketSpecificAttribute() {
+		return marketSpecificAttribute;
+	}
+
+	public void setMarketSpecificAttribute(MarketSpecificAttribute1 marketSpecificAttribute) {
+		this.marketSpecificAttribute = marketSpecificAttribute;
 	}
 }

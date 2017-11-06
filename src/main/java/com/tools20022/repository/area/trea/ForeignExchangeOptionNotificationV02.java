@@ -61,27 +61,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#TradingSideIdentification
- * ForeignExchangeOptionNotificationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#mmTradingSideIdentification
+ * ForeignExchangeOptionNotificationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#CounterpartySideIdentification
- * ForeignExchangeOptionNotificationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#mmCounterpartySideIdentification
+ * ForeignExchangeOptionNotificationV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#OptionData
- * ForeignExchangeOptionNotificationV02.OptionData}</li>
+ * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#mmOptionData
+ * ForeignExchangeOptionNotificationV02.mmOptionData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#TradeStatus
- * ForeignExchangeOptionNotificationV02.TradeStatus}</li>
+ * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#mmTradeStatus
+ * ForeignExchangeOptionNotificationV02.mmTradeStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#SettlementData
- * ForeignExchangeOptionNotificationV02.SettlementData}</li>
+ * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#mmSettlementData
+ * ForeignExchangeOptionNotificationV02.mmSettlementData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02#identifier
- * ForeignExchangeOptionNotificationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code trea.012.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeOptionNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradePartyIdentification4 tradingSideIdentification;
 	/**
 	 * Specifies the trading side of the currency option trade which is
 	 * reported.
@@ -123,17 +122,18 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the currency option trade which is reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 	};
+	protected TradePartyIdentification4 counterpartySideIdentification;
 	/**
 	 * Specifies the counterparty of the non deliverable trade which is
 	 * reported.
@@ -160,17 +160,18 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the non deliverable trade which is reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 	};
+	protected OptionData2 optionData;
 	/**
 	 * Provides information on the conditions of the option.
 	 * <p>
@@ -193,17 +194,18 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * definition} = "Provides information on the conditions of the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OptionData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOptionData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OptnData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionData";
 			definition = "Provides information on the conditions of the option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OptionData2.mmObject();
 		}
 	};
+	protected TradeStatus1 tradeStatus;
 	/**
 	 * Provides information on the status of a trade in a settlement system.
 	 * <p>
@@ -227,17 +229,18 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * "Provides information on the status of a trade in a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeStatus";
 			definition = "Provides information on the status of a trade in a settlement system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeStatus1.mmObject();
 		}
 	};
+	protected SettlementData2 settlementData;
 	/**
 	 * Provides information on the settlement of a trade.
 	 * <p>
@@ -260,42 +263,15 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * definition} = "Provides information on the settlement of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementData";
 			definition = "Provides information on the settlement of a trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementData2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "trea"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "trea";
-			messageFunctionality = "012";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -309,12 +285,59 @@ public class ForeignExchangeOptionNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "FXOptnNtfctnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.OptionData,
-						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.TradeStatus, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.SettlementData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmOptionData,
+						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmTradeStatus, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmSettlementData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "trea";
+						messageFunctionality = "012";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradePartyIdentification4 getTradingSideIdentification() {
+		return tradingSideIdentification;
+	}
+
+	public void setTradingSideIdentification(TradePartyIdentification4 tradingSideIdentification) {
+		this.tradingSideIdentification = tradingSideIdentification;
+	}
+
+	public TradePartyIdentification4 getCounterpartySideIdentification() {
+		return counterpartySideIdentification;
+	}
+
+	public void setCounterpartySideIdentification(TradePartyIdentification4 counterpartySideIdentification) {
+		this.counterpartySideIdentification = counterpartySideIdentification;
+	}
+
+	public OptionData2 getOptionData() {
+		return optionData;
+	}
+
+	public void setOptionData(OptionData2 optionData) {
+		this.optionData = optionData;
+	}
+
+	public TradeStatus1 getTradeStatus() {
+		return tradeStatus;
+	}
+
+	public void setTradeStatus(TradeStatus1 tradeStatus) {
+		this.tradeStatus = tradeStatus;
+	}
+
+	public SettlementData2 getSettlementData() {
+		return settlementData;
+	}
+
+	public void setSettlementData(SettlementData2 settlementData) {
+		this.settlementData = settlementData;
 	}
 }

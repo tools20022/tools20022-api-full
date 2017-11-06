@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.Document;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Nature of the amount and currency on a document referred to in the remittance
@@ -37,22 +38,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#DuePayableAmount
- * RemittanceAmount2.DuePayableAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmDuePayableAmount
+ * RemittanceAmount2.mmDuePayableAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#DiscountAppliedAmount
- * RemittanceAmount2.DiscountAppliedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmDiscountAppliedAmount
+ * RemittanceAmount2.mmDiscountAppliedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#CreditNoteAmount
- * RemittanceAmount2.CreditNoteAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RemittanceAmount2#TaxAmount
- * RemittanceAmount2.TaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmCreditNoteAmount
+ * RemittanceAmount2.mmCreditNoteAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmTaxAmount
+ * RemittanceAmount2.mmTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#AdjustmentAmountAndReason
- * RemittanceAmount2.AdjustmentAmountAndReason}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmAdjustmentAmountAndReason
+ * RemittanceAmount2.mmAdjustmentAmountAndReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#RemittedAmount
- * RemittanceAmount2.RemittedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmRemittedAmount
+ * RemittanceAmount2.mmRemittedAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RemittanceAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount duePayableAmount;
 	/**
 	 * Amount specified is the exact amount due and payable to the creditor.
 	 * <p>
@@ -97,8 +99,8 @@ public class RemittanceAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Amount
-	 * PaymentObligation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAmount
+	 * PaymentObligation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,27 +122,28 @@ public class RemittanceAmount2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#DuePayableAmount
-	 * RemittanceAmount3.DuePayableAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#mmDuePayableAmount
+	 * RemittanceAmount3.mmDuePayableAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DuePayableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDuePayableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
 			componentContext_lazy = () -> RemittanceAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Amount;
 			isDerived = false;
 			xmlTag = "DuePyblAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuePayableAmount";
 			definition = "Amount specified is the exact amount due and payable to the creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.DuePayableAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.mmDuePayableAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DiscountAmountAndType1> discountAppliedAmount;
 	/**
 	 * Amount specified for the referred document is the amount of discount to
 	 * be applied to the amount due and payable to the creditor.
@@ -155,8 +158,8 @@ public class RemittanceAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountAppliedAmount
-	 * Discount.DiscountAppliedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountAppliedAmount
+	 * Discount.mmDiscountAppliedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,26 +182,27 @@ public class RemittanceAmount2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#DiscountAppliedAmount
-	 * RemittanceAmount3.DiscountAppliedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#mmDiscountAppliedAmount
+	 * RemittanceAmount3.mmDiscountAppliedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DiscountAppliedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscountAppliedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> RemittanceAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountAppliedAmount;
 			isDerived = false;
 			xmlTag = "DscntApldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountAppliedAmount";
 			definition = "Amount specified for the referred document is the amount of discount to be applied to the amount due and payable to the creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.DiscountAppliedAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.mmDiscountAppliedAmount);
 			minOccurs = 0;
-			complexType_lazy = () -> DiscountAmountAndType1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.DiscountAmountAndType1.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount creditNoteAmount;
 	/**
 	 * Amount specified for the referred document is the amount of a credit
 	 * note.
@@ -213,8 +217,8 @@ public class RemittanceAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#CreditDebitNoteAmount
-	 * Invoice.CreditDebitNoteAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitNoteAmount
+	 * Invoice.mmCreditDebitNoteAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -237,27 +241,28 @@ public class RemittanceAmount2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#CreditNoteAmount
-	 * RemittanceAmount3.CreditNoteAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#mmCreditNoteAmount
+	 * RemittanceAmount3.mmCreditNoteAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditNoteAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditNoteAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmCreditDebitNoteAmount;
 			componentContext_lazy = () -> RemittanceAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.CreditDebitNoteAmount;
 			isDerived = false;
 			xmlTag = "CdtNoteAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNoteAmount";
 			definition = "Amount specified for the referred document is the amount of a credit note.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.CreditNoteAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.mmCreditNoteAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TaxAmountAndType1> taxAmount;
 	/**
 	 * Quantity of cash resulting from the calculation of the tax.
 	 * <p>
@@ -271,8 +276,8 @@ public class RemittanceAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#TotalTaxAmount
-	 * Invoice.TotalTaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalTaxAmount
+	 * Invoice.mmTotalTaxAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -294,26 +299,27 @@ public class RemittanceAmount2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#TaxAmount
-	 * RemittanceAmount3.TaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#mmTaxAmount
+	 * RemittanceAmount3.mmTaxAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalTaxAmount;
 			componentContext_lazy = () -> RemittanceAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.TotalTaxAmount;
 			isDerived = false;
 			xmlTag = "TaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAmount";
 			definition = "Quantity of cash resulting from the calculation of the tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.TaxAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.mmTaxAmount);
 			minOccurs = 0;
-			complexType_lazy = () -> TaxAmountAndType1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.TaxAmountAndType1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DocumentAdjustment1> adjustmentAmountAndReason;
 	/**
 	 * Specifies detailed information on the amount and reason of the document
 	 * adjustment.
@@ -326,8 +332,8 @@ public class RemittanceAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Adjustments
-	 * Payment.Adjustments}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAdjustments
+	 * Payment.mmAdjustments}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -350,27 +356,28 @@ public class RemittanceAmount2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#AdjustmentAmountAndReason
-	 * RemittanceAmount3.AdjustmentAmountAndReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#mmAdjustmentAmountAndReason
+	 * RemittanceAmount3.mmAdjustmentAmountAndReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdjustmentAmountAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdjustmentAmountAndReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAdjustments;
 			componentContext_lazy = () -> RemittanceAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Adjustments;
 			isDerived = false;
 			xmlTag = "AdjstmntAmtAndRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentAmountAndReason";
 			definition = "Specifies detailed information on the amount and reason of the document adjustment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.AdjustmentAmountAndReason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.mmAdjustmentAmountAndReason);
 			minOccurs = 0;
-			type_lazy = () -> DocumentAdjustment1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentAdjustment1.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount remittedAmount;
 	/**
 	 * Amount of money remitted for the referred document.
 	 * <p>
@@ -384,8 +391,8 @@ public class RemittanceAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#RemittedAmount
-	 * Document.RemittedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmRemittedAmount
+	 * Document.mmRemittedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -406,24 +413,24 @@ public class RemittanceAmount2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#RemittedAmount
-	 * RemittanceAmount3.RemittedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount3#mmRemittedAmount
+	 * RemittanceAmount3.mmRemittedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemittedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemittedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmRemittedAmount;
 			componentContext_lazy = () -> RemittanceAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.RemittedAmount;
 			isDerived = false;
 			xmlTag = "RmtdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittedAmount";
 			definition = "Amount of money remitted for the referred document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.RemittedAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount3.mmRemittedAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
@@ -431,11 +438,11 @@ public class RemittanceAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount2.DuePayableAmount, com.tools20022.repository.msg.RemittanceAmount2.DiscountAppliedAmount,
-						com.tools20022.repository.msg.RemittanceAmount2.CreditNoteAmount, com.tools20022.repository.msg.RemittanceAmount2.TaxAmount, com.tools20022.repository.msg.RemittanceAmount2.AdjustmentAmountAndReason,
-						com.tools20022.repository.msg.RemittanceAmount2.RemittedAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount2.mmDuePayableAmount, com.tools20022.repository.msg.RemittanceAmount2.mmDiscountAppliedAmount,
+						com.tools20022.repository.msg.RemittanceAmount2.mmCreditNoteAmount, com.tools20022.repository.msg.RemittanceAmount2.mmTaxAmount, com.tools20022.repository.msg.RemittanceAmount2.mmAdjustmentAmountAndReason,
+						com.tools20022.repository.msg.RemittanceAmount2.mmRemittedAmount);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RemittanceAmount2";
 				definition = "Nature of the amount and currency on a document referred to in the remittance section, typically either the original amount due/payable or the amount actually remitted for the referenced document.";
@@ -443,5 +450,53 @@ public class RemittanceAmount2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getDuePayableAmount() {
+		return duePayableAmount;
+	}
+
+	public void setDuePayableAmount(ActiveOrHistoricCurrencyAndAmount duePayableAmount) {
+		this.duePayableAmount = duePayableAmount;
+	}
+
+	public List<DiscountAmountAndType1> getDiscountAppliedAmount() {
+		return discountAppliedAmount;
+	}
+
+	public void setDiscountAppliedAmount(List<com.tools20022.repository.msg.DiscountAmountAndType1> discountAppliedAmount) {
+		this.discountAppliedAmount = discountAppliedAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getCreditNoteAmount() {
+		return creditNoteAmount;
+	}
+
+	public void setCreditNoteAmount(ActiveOrHistoricCurrencyAndAmount creditNoteAmount) {
+		this.creditNoteAmount = creditNoteAmount;
+	}
+
+	public List<TaxAmountAndType1> getTaxAmount() {
+		return taxAmount;
+	}
+
+	public void setTaxAmount(List<com.tools20022.repository.msg.TaxAmountAndType1> taxAmount) {
+		this.taxAmount = taxAmount;
+	}
+
+	public List<DocumentAdjustment1> getAdjustmentAmountAndReason() {
+		return adjustmentAmountAndReason;
+	}
+
+	public void setAdjustmentAmountAndReason(List<com.tools20022.repository.msg.DocumentAdjustment1> adjustmentAmountAndReason) {
+		this.adjustmentAmountAndReason = adjustmentAmountAndReason;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getRemittedAmount() {
+		return remittedAmount;
+	}
+
+	public void setRemittedAmount(ActiveOrHistoricCurrencyAndAmount remittedAmount) {
+		this.remittedAmount = remittedAmount;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cash management feature limiting the maximum risk that a party accepts to
@@ -47,22 +48,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#CashManagementService
- * RiskManagementLimit.CashManagementService}</li>
+ * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCashManagementService
+ * RiskManagementLimit.mmCashManagementService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#Counterparty
- * RiskManagementLimit.Counterparty}</li>
+ * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCounterparty
+ * RiskManagementLimit.mmCounterparty}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#Limit
- * SystemMemberRole.Limit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmLimit
+ * SystemMemberRole.mmLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashManagementService#RiskManagementLimit
- * CashManagementService.RiskManagementLimit}</li>
+ * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRiskManagementLimit
+ * CashManagementService.mmRiskManagementLimit}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,103 +71,103 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1#CurrentLimitIdentification
- * LimitDetailsStructure1.CurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1#mmCurrentLimitIdentification
+ * LimitDetailsStructure1.mmCurrentLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1#DefaultLimitIdentification
- * LimitDetailsStructure1.DefaultLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1#mmDefaultLimitIdentification
+ * LimitDetailsStructure1.mmDefaultLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1#NewLimitValueSet
- * LimitDetailsStructure1.NewLimitValueSet}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1#mmNewLimitValueSet
+ * LimitDetailsStructure1.mmNewLimitValueSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#CurrentLimitIdentification
- * LimitDetailsStructure3.CurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmCurrentLimitIdentification
+ * LimitDetailsStructure3.mmCurrentLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#AllCurrentLimits
- * LimitDetailsStructure3.AllCurrentLimits}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmAllCurrentLimits
+ * LimitDetailsStructure3.mmAllCurrentLimits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitStructure1Choice#CurrentLimitIdentification
- * LimitStructure1Choice.CurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitStructure1Choice#mmCurrentLimitIdentification
+ * LimitStructure1Choice.mmCurrentLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitStructure1Choice#AllCurrentLimits
- * LimitStructure1Choice.AllCurrentLimits}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitStructure1Choice#mmAllCurrentLimits
+ * LimitStructure1Choice.mmAllCurrentLimits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#CurrentLimitIdentification
- * LimitDetailsStructure2.CurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#mmCurrentLimitIdentification
+ * LimitDetailsStructure2.mmCurrentLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#DefaultLimitIdentification
- * LimitDetailsStructure2.DefaultLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#mmDefaultLimitIdentification
+ * LimitDetailsStructure2.mmDefaultLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#AllCurrentLimits
- * LimitDetailsStructure2.AllCurrentLimits}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#mmAllCurrentLimits
+ * LimitDetailsStructure2.mmAllCurrentLimits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#AllDefaultLimits
- * LimitDetailsStructure2.AllDefaultLimits}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#mmAllDefaultLimits
+ * LimitDetailsStructure2.mmAllDefaultLimits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#NewLimitValueSet
- * LimitDetailsStructure2.NewLimitValueSet}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure2#mmNewLimitValueSet
+ * LimitDetailsStructure2.mmNewLimitValueSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#Current
- * LimitIdentification1Choice.Current}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmCurrent
+ * LimitIdentification1Choice.mmCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#Default
- * LimitIdentification1Choice.Default}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmDefault
+ * LimitIdentification1Choice.mmDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#AllCurrent
- * LimitIdentification1Choice.AllCurrent}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmAllCurrent
+ * LimitIdentification1Choice.mmAllCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#AllDefault
- * LimitIdentification1Choice.AllDefault}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitIdentification1Choice#mmAllDefault
+ * LimitIdentification1Choice.mmAllDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitStructure1#LimitIdentification
- * LimitStructure1.LimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitStructure1#mmLimitIdentification
+ * LimitStructure1.mmLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitStructure1#NewLimitValueSet
- * LimitStructure1.NewLimitValueSet}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitStructure1#mmNewLimitValueSet
+ * LimitStructure1.mmNewLimitValueSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport1#LimitIdentification
- * LimitReport1.LimitIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport1#Limit
- * LimitReport1.Limit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits1#CurrentLimit
- * Limits1.CurrentLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits1#DefaultLimit
- * Limits1.DefaultLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport1#mmLimitIdentification
+ * LimitReport1.mmLimitIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport1#mmLimit
+ * LimitReport1.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits1#mmCurrentLimit
+ * Limits1.mmCurrentLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits1#mmDefaultLimit
+ * Limits1.mmDefaultLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport2#LimitIdentification
- * LimitReport2.LimitIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#Limit
- * LimitReport2.Limit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits2#CurrentLimit
- * Limits2.CurrentLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits2#DefaultLimit
- * Limits2.DefaultLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport2#mmLimitIdentification
+ * LimitReport2.mmLimitIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#mmLimit
+ * LimitReport2.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits2#mmCurrentLimit
+ * Limits2.mmCurrentLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits2#mmDefaultLimit
+ * Limits2.mmDefaultLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport3#LimitIdentification
- * LimitReport3.LimitIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport3#Limit
- * LimitReport3.Limit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits3#CurrentLimit
- * Limits3.CurrentLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits3#DefaultLimit
- * Limits3.DefaultLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport3#mmLimitIdentification
+ * LimitReport3.mmLimitIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport3#mmLimit
+ * LimitReport3.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits3#mmCurrentLimit
+ * Limits3.mmCurrentLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits3#mmDefaultLimit
+ * Limits3.mmDefaultLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport4#LimitIdentification
- * LimitReport4.LimitIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits4#CurrentLimit
- * Limits4.CurrentLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits4#DefaultLimit
- * Limits4.DefaultLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport4#mmLimitIdentification
+ * LimitReport4.mmLimitIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits4#mmCurrentLimit
+ * Limits4.mmCurrentLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits4#mmDefaultLimit
+ * Limits4.mmDefaultLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CurrentLimitChoice#RiskManagementCurrentLimitIdentification
- * CurrentLimitChoice.RiskManagementCurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.CurrentLimitChoice#mmRiskManagementCurrentLimitIdentification
+ * CurrentLimitChoice.mmRiskManagementCurrentLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport5#LimitIdentification
- * LimitReport5.LimitIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits5#CurrentLimit
- * Limits5.CurrentLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits5#DefaultLimit
- * Limits5.DefaultLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport5#mmLimitIdentification
+ * LimitReport5.mmLimitIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits5#mmCurrentLimit
+ * Limits5.mmCurrentLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits5#mmDefaultLimit
+ * Limits5.mmDefaultLimit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -230,8 +231,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -247,6 +248,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RiskManagementLimit extends Limit {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashManagementService cashManagementService;
 	/**
 	 * Cash management service which offers limit management services.
 	 * <p>
@@ -255,8 +257,8 @@ public class RiskManagementLimit extends Limit {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashManagementService#RiskManagementLimit
-	 * CashManagementService.RiskManagementLimit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRiskManagementLimit
+	 * CashManagementService.mmRiskManagementLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -282,20 +284,21 @@ public class RiskManagementLimit extends Limit {
 	 * "Cash management service which offers limit management services."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashManagementService = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashManagementService = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> RiskManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashManagementService";
 			definition = "Cash management service which offers limit management services.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashManagementService.RiskManagementLimit;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmRiskManagementLimit;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SystemMemberRole> counterparty;
 	/**
 	 * Identification of the system member for which the limit is established.
 	 * <p>
@@ -304,8 +307,8 @@ public class RiskManagementLimit extends Limit {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole#Limit
-	 * SystemMemberRole.Limit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmLimit
+	 * SystemMemberRole.mmLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -313,22 +316,22 @@ public class RiskManagementLimit extends Limit {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemMemberRole
 	 * SystemMemberRole}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria1#BilateralLimitCounterpartyIdentification
-	 * LimitSearchCriteria1.BilateralLimitCounterpartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria2#BilateralLimitCounterpartyIdentification
-	 * LimitSearchCriteria2.BilateralLimitCounterpartyIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RiskManagementLimit
 	 * RiskManagementLimit}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria1#mmBilateralLimitCounterpartyIdentification
+	 * LimitSearchCriteria1.mmBilateralLimitCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria2#mmBilateralLimitCounterpartyIdentification
+	 * LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -342,45 +345,46 @@ public class RiskManagementLimit extends Limit {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Counterparty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCounterparty = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria1.BilateralLimitCounterpartyIdentification, com.tools20022.repository.msg.LimitSearchCriteria2.BilateralLimitCounterpartyIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria1.mmBilateralLimitCounterpartyIdentification, com.tools20022.repository.msg.LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification);
 			elementContext_lazy = () -> RiskManagementLimit.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Counterparty";
 			definition = "Identification of the system member for which the limit is established.";
 			minOccurs = 1;
-			type_lazy = () -> SystemMemberRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.Limit;
+			opposite_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmLimit;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RiskManagementLimit";
 				definition = "Cash management feature limiting the maximum risk that a party accepts to take with respect to a counterparty or a set of counterparties. A risk management limit is either bilateral, for a counterparty, or multilateral, for a set of counterparties or all other members in a system.The limit may also apply to sponsored or indirect members. In principle, a risk management limit is calculated on the net position between two members and is expressed as a credit or debit limit, from the point of view of the party setting the limit.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemMemberRole.Limit, com.tools20022.repository.entity.CashManagementService.RiskManagementLimit);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure1.CurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure1.DefaultLimitIdentification,
-						com.tools20022.repository.msg.LimitDetailsStructure1.NewLimitValueSet, com.tools20022.repository.msg.LimitDetailsStructure3.CurrentLimitIdentification,
-						com.tools20022.repository.msg.LimitDetailsStructure3.AllCurrentLimits, com.tools20022.repository.choice.LimitStructure1Choice.CurrentLimitIdentification,
-						com.tools20022.repository.choice.LimitStructure1Choice.AllCurrentLimits, com.tools20022.repository.msg.LimitDetailsStructure2.CurrentLimitIdentification,
-						com.tools20022.repository.msg.LimitDetailsStructure2.DefaultLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure2.AllCurrentLimits,
-						com.tools20022.repository.msg.LimitDetailsStructure2.AllDefaultLimits, com.tools20022.repository.msg.LimitDetailsStructure2.NewLimitValueSet, com.tools20022.repository.choice.LimitIdentification1Choice.Current,
-						com.tools20022.repository.choice.LimitIdentification1Choice.Default, com.tools20022.repository.choice.LimitIdentification1Choice.AllCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.AllDefault,
-						com.tools20022.repository.msg.LimitStructure1.LimitIdentification, com.tools20022.repository.msg.LimitStructure1.NewLimitValueSet, com.tools20022.repository.msg.LimitReport1.LimitIdentification,
-						com.tools20022.repository.msg.LimitReport1.Limit, com.tools20022.repository.msg.Limits1.CurrentLimit, com.tools20022.repository.msg.Limits1.DefaultLimit,
-						com.tools20022.repository.msg.LimitReport2.LimitIdentification, com.tools20022.repository.msg.LimitReport2.Limit, com.tools20022.repository.msg.Limits2.CurrentLimit,
-						com.tools20022.repository.msg.Limits2.DefaultLimit, com.tools20022.repository.msg.LimitReport3.LimitIdentification, com.tools20022.repository.msg.LimitReport3.Limit,
-						com.tools20022.repository.msg.Limits3.CurrentLimit, com.tools20022.repository.msg.Limits3.DefaultLimit, com.tools20022.repository.msg.LimitReport4.LimitIdentification,
-						com.tools20022.repository.msg.Limits4.CurrentLimit, com.tools20022.repository.msg.Limits4.DefaultLimit, com.tools20022.repository.choice.CurrentLimitChoice.RiskManagementCurrentLimitIdentification,
-						com.tools20022.repository.msg.LimitReport5.LimitIdentification, com.tools20022.repository.msg.Limits5.CurrentLimit, com.tools20022.repository.msg.Limits5.DefaultLimit);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemMemberRole.mmLimit, com.tools20022.repository.entity.CashManagementService.mmRiskManagementLimit);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure1.mmCurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure1.mmDefaultLimitIdentification,
+						com.tools20022.repository.msg.LimitDetailsStructure1.mmNewLimitValueSet, com.tools20022.repository.msg.LimitDetailsStructure3.mmCurrentLimitIdentification,
+						com.tools20022.repository.msg.LimitDetailsStructure3.mmAllCurrentLimits, com.tools20022.repository.choice.LimitStructure1Choice.mmCurrentLimitIdentification,
+						com.tools20022.repository.choice.LimitStructure1Choice.mmAllCurrentLimits, com.tools20022.repository.msg.LimitDetailsStructure2.mmCurrentLimitIdentification,
+						com.tools20022.repository.msg.LimitDetailsStructure2.mmDefaultLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure2.mmAllCurrentLimits,
+						com.tools20022.repository.msg.LimitDetailsStructure2.mmAllDefaultLimits, com.tools20022.repository.msg.LimitDetailsStructure2.mmNewLimitValueSet,
+						com.tools20022.repository.choice.LimitIdentification1Choice.mmCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.mmDefault, com.tools20022.repository.choice.LimitIdentification1Choice.mmAllCurrent,
+						com.tools20022.repository.choice.LimitIdentification1Choice.mmAllDefault, com.tools20022.repository.msg.LimitStructure1.mmLimitIdentification, com.tools20022.repository.msg.LimitStructure1.mmNewLimitValueSet,
+						com.tools20022.repository.msg.LimitReport1.mmLimitIdentification, com.tools20022.repository.msg.LimitReport1.mmLimit, com.tools20022.repository.msg.Limits1.mmCurrentLimit,
+						com.tools20022.repository.msg.Limits1.mmDefaultLimit, com.tools20022.repository.msg.LimitReport2.mmLimitIdentification, com.tools20022.repository.msg.LimitReport2.mmLimit,
+						com.tools20022.repository.msg.Limits2.mmCurrentLimit, com.tools20022.repository.msg.Limits2.mmDefaultLimit, com.tools20022.repository.msg.LimitReport3.mmLimitIdentification,
+						com.tools20022.repository.msg.LimitReport3.mmLimit, com.tools20022.repository.msg.Limits3.mmCurrentLimit, com.tools20022.repository.msg.Limits3.mmDefaultLimit,
+						com.tools20022.repository.msg.LimitReport4.mmLimitIdentification, com.tools20022.repository.msg.Limits4.mmCurrentLimit, com.tools20022.repository.msg.Limits4.mmDefaultLimit,
+						com.tools20022.repository.choice.CurrentLimitChoice.mmRiskManagementCurrentLimitIdentification, com.tools20022.repository.msg.LimitReport5.mmLimitIdentification, com.tools20022.repository.msg.Limits5.mmCurrentLimit,
+						com.tools20022.repository.msg.Limits5.mmDefaultLimit);
 				superType_lazy = () -> Limit.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RiskManagementLimit.CashManagementService, com.tools20022.repository.entity.RiskManagementLimit.Counterparty);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RiskManagementLimit.mmCashManagementService, com.tools20022.repository.entity.RiskManagementLimit.mmCounterparty);
 				derivationComponent_lazy = () -> Arrays.asList(RiskManagementLimitIdentificationDetails.mmObject(), LimitIdentificationDetails1.mmObject(), LimitIdentificationDetails2.mmObject(), LimitDetailsStructure1.mmObject(),
 						LimitIdentificationDetails3.mmObject(), LimitDetailsStructure3.mmObject(), LimitType1Choice.mmObject(), LimitIdentification1.mmObject(), LimitIdentification2.mmObject(), LimitStructure1Choice.mmObject(),
 						LimitDetailsStructure2.mmObject(), LimitIdentification1Choice.mmObject(), LimitStructure1.mmObject(), BilateralLimitDetails1.mmObject(), BilateralLimitDetails2.mmObject(), BilateralLimitDetails3.mmObject(),
@@ -389,5 +393,21 @@ public class RiskManagementLimit extends Limit {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashManagementService getCashManagementService() {
+		return cashManagementService;
+	}
+
+	public void setCashManagementService(com.tools20022.repository.entity.CashManagementService cashManagementService) {
+		this.cashManagementService = cashManagementService;
+	}
+
+	public List<SystemMemberRole> getCounterparty() {
+		return counterparty;
+	}
+
+	public void setCounterparty(List<com.tools20022.repository.entity.SystemMemberRole> counterparty) {
+		this.counterparty = counterparty;
 	}
 }

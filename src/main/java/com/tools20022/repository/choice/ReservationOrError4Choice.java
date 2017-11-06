@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.CurrentAndDefaultReservation2;
 import com.tools20022.repository.msg.ErrorHandling4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * It is used to provide confirmation details of one or more reservations set by
@@ -37,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError4Choice#BusinessReport
- * ReservationOrError4Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError4Choice#mmBusinessReport
+ * ReservationOrError4Choice.mmBusinessReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError4Choice#OperationalError
- * ReservationOrError4Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError4Choice#mmOperationalError
+ * ReservationOrError4Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationOrError4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrentAndDefaultReservation2 businessReport;
 	/**
 	 * Reports on reservations.
 	 * <p>
@@ -103,26 +105,27 @@ public class ReservationOrError4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ReservationOrError2Choice#BusinessReport
-	 * ReservationOrError2Choice.BusinessReport}</li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError2Choice#mmBusinessReport
+	 * ReservationOrError2Choice.mmBusinessReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReservationOrError4Choice.mmObject();
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
+			componentContext_lazy = () -> ReservationOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on reservations.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.BusinessReport;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.mmBusinessReport;
 			maxOccurs = 1;
-			type_lazy = () -> CurrentAndDefaultReservation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CurrentAndDefaultReservation2.mmObject();
 		}
 	};
+	protected List<ErrorHandling4> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -153,11 +156,11 @@ public class ReservationOrError4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ReservationOrError2Choice#OperationalError
-	 * ReservationOrError2Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError2Choice#mmOperationalError
+	 * ReservationOrError2Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReservationOrError4Choice.mmObject();
 			isDerived = false;
@@ -165,19 +168,19 @@ public class ReservationOrError4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.OperationalError;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.mmOperationalError;
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling4.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError4Choice.BusinessReport, com.tools20022.repository.choice.ReservationOrError4Choice.OperationalError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError4Choice.mmBusinessReport, com.tools20022.repository.choice.ReservationOrError4Choice.mmOperationalError);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReservationOrError4Choice";
 				definition = "It is used to provide confirmation details of one or more reservations set by the member (or on behalf of the member) and managed by the transaction administrator.";
@@ -185,5 +188,21 @@ public class ReservationOrError4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrentAndDefaultReservation2 getBusinessReport() {
+		return businessReport;
+	}
+
+	public void setBusinessReport(CurrentAndDefaultReservation2 businessReport) {
+		this.businessReport = businessReport;
+	}
+
+	public List<ErrorHandling4> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling4> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

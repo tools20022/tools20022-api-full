@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType10#ContentType
- * ContentInformationType10.ContentType}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType10#mmContentType
+ * ContentInformationType10.mmContentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType10#EnvelopedData
- * ContentInformationType10.EnvelopedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType10#mmEnvelopedData
+ * ContentInformationType10.mmEnvelopedData}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,155 +46,155 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#ProtectedATMReconciliationAdvice
- * ATMReconciliationAdviceV01.ProtectedATMReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#mmProtectedATMReconciliationAdvice
+ * ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01#ProtectedATMReconciliationAcknowledgement
- * ATMReconciliationAcknowledgementV01.ProtectedATMReconciliationAcknowledgement
- * }</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01#mmProtectedATMReconciliationAcknowledgement
+ * ATMReconciliationAcknowledgementV01.
+ * mmProtectedATMReconciliationAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#ProtectedHostToATMAcknowledgement
- * HostToATMAcknowledgementV01.ProtectedHostToATMAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#mmProtectedHostToATMAcknowledgement
+ * HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV01#ProtectedATMDiagnosticResponse
- * ATMDiagnosticResponseV01.ProtectedATMDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV01#mmProtectedATMDiagnosticResponse
+ * ATMDiagnosticResponseV01.mmProtectedATMDiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV01#ProtectedATMDiagnosticRequest
- * ATMDiagnosticRequestV01.ProtectedATMDiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV01#mmProtectedATMDiagnosticRequest
+ * ATMDiagnosticRequestV01.mmProtectedATMDiagnosticRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#ProtectedATMKeyDownloadResponse
- * ATMKeyDownloadResponseV01.ProtectedATMKeyDownloadResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#mmProtectedATMKeyDownloadResponse
+ * ATMKeyDownloadResponseV01.mmProtectedATMKeyDownloadResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV01#ProtectedATMDeviceReport
- * ATMDeviceReportV01.ProtectedATMDeviceReport}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV01#mmProtectedATMDeviceReport
+ * ATMDeviceReportV01.mmProtectedATMDeviceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#ProtectedHostToATMRequest
- * HostToATMRequestV01.ProtectedHostToATMRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#mmProtectedHostToATMRequest
+ * HostToATMRequestV01.mmProtectedHostToATMRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01#ProtectedATMKeyDownloadRequest
- * ATMKeyDownloadRequestV01.ProtectedATMKeyDownloadRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01#mmProtectedATMKeyDownloadRequest
+ * ATMKeyDownloadRequestV01.mmProtectedATMKeyDownloadRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV01#ProtectedATMDeviceControl
- * ATMDeviceControlV01.ProtectedATMDeviceControl}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV01#mmProtectedATMDeviceControl
+ * ATMDeviceControlV01.mmProtectedATMDeviceControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#ProtectedATMInquiryResponse
- * ATMInquiryResponseV01.ProtectedATMInquiryResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01#mmProtectedATMInquiryResponse
+ * ATMInquiryResponseV01.mmProtectedATMInquiryResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV01#ProtectedATMInquiryRequest
- * ATMInquiryRequestV01.ProtectedATMInquiryRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV01#mmProtectedATMInquiryRequest
+ * ATMInquiryRequestV01.mmProtectedATMInquiryRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV01#ProtectedATMCompletionAdvice
- * ATMCompletionAdviceV01.ProtectedATMCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV01#mmProtectedATMCompletionAdvice
+ * ATMCompletionAdviceV01.mmProtectedATMCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV01#ProtectedATMWithdrawalResponse
- * ATMWithdrawalResponseV01.ProtectedATMWithdrawalResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV01#mmProtectedATMWithdrawalResponse
+ * ATMWithdrawalResponseV01.mmProtectedATMWithdrawalResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01#ProtectedATMCompletionAcknowledgement
- * ATMCompletionAcknowledgementV01.ProtectedATMCompletionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01#mmProtectedATMCompletionAcknowledgement
+ * ATMCompletionAcknowledgementV01.mmProtectedATMCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01#ProtectedATMWithdrawalCompletionAdvice
- * ATMWithdrawalCompletionAdviceV01.ProtectedATMWithdrawalCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01#mmProtectedATMWithdrawalCompletionAdvice
+ * ATMWithdrawalCompletionAdviceV01.mmProtectedATMWithdrawalCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01#ProtectedATMWithdrawalCompletionAcknowledgement
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01#mmProtectedATMWithdrawalCompletionAcknowledgement
  * ATMWithdrawalCompletionAcknowledgementV01.
- * ProtectedATMWithdrawalCompletionAcknowledgement}</li>
+ * mmProtectedATMWithdrawalCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#ProtectedATMWithdrawalRequest
- * ATMWithdrawalRequestV01.ProtectedATMWithdrawalRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01#mmProtectedATMWithdrawalRequest
+ * ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#ProtectedATMPINManagementRequest
- * ATMPINManagementRequestV01.ProtectedATMPINManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#mmProtectedATMPINManagementRequest
+ * ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV01#ProtectedATMPINManagementResponse
- * ATMPINManagementResponseV01.ProtectedATMPINManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV01#mmProtectedATMPINManagementResponse
+ * ATMPINManagementResponseV01.mmProtectedATMPINManagementResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01#ProtectedATMExceptionAcknowledgement
- * ATMExceptionAcknowledgementV01.ProtectedATMExceptionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01#mmProtectedATMExceptionAcknowledgement
+ * ATMExceptionAcknowledgementV01.mmProtectedATMExceptionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV02#ProtectedATMWithdrawalRequest
- * ATMWithdrawalRequestV02.ProtectedATMWithdrawalRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV02#mmProtectedATMWithdrawalRequest
+ * ATMWithdrawalRequestV02.mmProtectedATMWithdrawalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01#ProtectedATMExceptionAdvice
- * ATMExceptionAdviceV01.ProtectedATMExceptionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01#mmProtectedATMExceptionAdvice
+ * ATMExceptionAdviceV01.mmProtectedATMExceptionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV02#ProtectedATMDeviceControl
- * ATMDeviceControlV02.ProtectedATMDeviceControl}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV02#mmProtectedATMDeviceControl
+ * ATMDeviceControlV02.mmProtectedATMDeviceControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV02#ProtectedATMReconciliationAdvice
- * ATMReconciliationAdviceV02.ProtectedATMReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV02#mmProtectedATMReconciliationAdvice
+ * ATMReconciliationAdviceV02.mmProtectedATMReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02#ProtectedATMReconciliationAcknowledgement
- * ATMReconciliationAcknowledgementV02.ProtectedATMReconciliationAcknowledgement
- * }</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02#mmProtectedATMReconciliationAcknowledgement
+ * ATMReconciliationAcknowledgementV02.
+ * mmProtectedATMReconciliationAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositResponseV01#ProtectedATMDepositResponse
- * ATMDepositResponseV01.ProtectedATMDepositResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositResponseV01#mmProtectedATMDepositResponse
+ * ATMDepositResponseV01.mmProtectedATMDepositResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#ProtectedATMDepositRequest
- * ATMDepositRequestV01.ProtectedATMDepositRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#mmProtectedATMDepositRequest
+ * ATMDepositRequestV01.mmProtectedATMDepositRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02#ProtectedATMWithdrawalCompletionAdvice
- * ATMWithdrawalCompletionAdviceV02.ProtectedATMWithdrawalCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02#mmProtectedATMWithdrawalCompletionAdvice
+ * ATMWithdrawalCompletionAdviceV02.mmProtectedATMWithdrawalCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV02#ProtectedATMInquiryResponse
- * ATMInquiryResponseV02.ProtectedATMInquiryResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV02#mmProtectedATMInquiryResponse
+ * ATMInquiryResponseV02.mmProtectedATMInquiryResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01#ProtectedATMDepositCompletionAcknowledgement
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01#mmProtectedATMDepositCompletionAcknowledgement
  * ATMDepositCompletionAcknowledgementV01.
- * ProtectedATMDepositCompletionAcknowledgement}</li>
+ * mmProtectedATMDepositCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#ProtectedATMDeviceReport
- * ATMDeviceReportV02.ProtectedATMDeviceReport}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#mmProtectedATMDeviceReport
+ * ATMDeviceReportV02.mmProtectedATMDeviceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV02#ProtectedATMPINManagementRequest
- * ATMPINManagementRequestV02.ProtectedATMPINManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV02#mmProtectedATMPINManagementRequest
+ * ATMPINManagementRequestV02.mmProtectedATMPINManagementRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMTransferRequestV01#ProtectedATMTransferRequest
- * ATMTransferRequestV01.ProtectedATMTransferRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMTransferRequestV01#mmProtectedATMTransferRequest
+ * ATMTransferRequestV01.mmProtectedATMTransferRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#ProtectedATMDiagnosticResponse
- * ATMDiagnosticResponseV02.ProtectedATMDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#mmProtectedATMDiagnosticResponse
+ * ATMDiagnosticResponseV02.mmProtectedATMDiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02#ProtectedATMDiagnosticRequest
- * ATMDiagnosticRequestV02.ProtectedATMDiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02#mmProtectedATMDiagnosticRequest
+ * ATMDiagnosticRequestV02.mmProtectedATMDiagnosticRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02#ProtectedATMKeyDownloadRequest
- * ATMKeyDownloadRequestV02.ProtectedATMKeyDownloadRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02#mmProtectedATMKeyDownloadRequest
+ * ATMKeyDownloadRequestV02.mmProtectedATMKeyDownloadRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV02#ProtectedATMWithdrawalResponse
- * ATMWithdrawalResponseV02.ProtectedATMWithdrawalResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV02#mmProtectedATMWithdrawalResponse
+ * ATMWithdrawalResponseV02.mmProtectedATMWithdrawalResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#ProtectedATMWithdrawalCompletionAcknowledgement
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02#mmProtectedATMWithdrawalCompletionAcknowledgement
  * ATMWithdrawalCompletionAcknowledgementV02.
- * ProtectedATMWithdrawalCompletionAcknowledgement}</li>
+ * mmProtectedATMWithdrawalCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV02#ProtectedATMPINManagementResponse
- * ATMPINManagementResponseV02.ProtectedATMPINManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV02#mmProtectedATMPINManagementResponse
+ * ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#ProtectedATMDepositCompletionAdvice
- * ATMDepositCompletionAdviceV01.ProtectedATMDepositCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#mmProtectedATMDepositCompletionAdvice
+ * ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV02#ProtectedATMInquiryRequest
- * ATMInquiryRequestV02.ProtectedATMInquiryRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV02#mmProtectedATMInquiryRequest
+ * ATMInquiryRequestV02.mmProtectedATMInquiryRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02#ProtectedATMCompletionAcknowledgement
- * ATMCompletionAcknowledgementV02.ProtectedATMCompletionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02#mmProtectedATMCompletionAcknowledgement
+ * ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV02#ProtectedATMCompletionAdvice
- * ATMCompletionAdviceV02.ProtectedATMCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV02#mmProtectedATMCompletionAdvice
+ * ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMTransferResponseV01#ProtectedATMTransferResponse
- * ATMTransferResponseV01.ProtectedATMTransferResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMTransferResponseV01#mmProtectedATMTransferResponse
+ * ATMTransferResponseV01.mmProtectedATMTransferResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02#ProtectedATMKeyDownloadResponse
- * ATMKeyDownloadResponseV02.ProtectedATMKeyDownloadResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02#mmProtectedATMKeyDownloadResponse
+ * ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -213,6 +213,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContentInformationType10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType2Code contentType;
 	/**
 	 * Type of data protection.
 	 * <p>
@@ -242,11 +243,11 @@ public class ContentInformationType10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType7#ContentType
-	 * ContentInformationType7.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType7#mmContentType
+	 * ContentInformationType7.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ContentInformationType10.mmObject();
 			isDerived = false;
@@ -254,12 +255,13 @@ public class ContentInformationType10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.ContentType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmContentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	protected EnvelopedData4 envelopedData;
 	/**
 	 * Data protection by encryption or by a digital envelope, with an
 	 * encryption key.
@@ -290,11 +292,11 @@ public class ContentInformationType10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ContentInformationType7#EnvelopedData
-	 * ContentInformationType7.EnvelopedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType7#mmEnvelopedData
+	 * ContentInformationType7.mmEnvelopedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType10.mmObject();
 			isDerived = false;
@@ -302,45 +304,46 @@ public class ContentInformationType10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption or by a digital envelope, with an encryption key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.EnvelopedData;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmEnvelopedData;
 			maxOccurs = 1;
-			type_lazy = () -> EnvelopedData4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType10.ContentType, com.tools20022.repository.msg.ContentInformationType10.EnvelopedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.ProtectedATMReconciliationAdvice,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.ProtectedATMReconciliationAcknowledgement, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.ProtectedHostToATMAcknowledgement,
-						com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.ProtectedATMDiagnosticResponse, com.tools20022.repository.area.caam.ATMDiagnosticRequestV01.ProtectedATMDiagnosticRequest,
-						com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.ProtectedATMKeyDownloadResponse, com.tools20022.repository.area.caam.ATMDeviceReportV01.ProtectedATMDeviceReport,
-						com.tools20022.repository.area.caam.HostToATMRequestV01.ProtectedHostToATMRequest, com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.ProtectedATMKeyDownloadRequest,
-						com.tools20022.repository.area.caam.ATMDeviceControlV01.ProtectedATMDeviceControl, com.tools20022.repository.area.catp.ATMInquiryResponseV01.ProtectedATMInquiryResponse,
-						com.tools20022.repository.area.catp.ATMInquiryRequestV01.ProtectedATMInquiryRequest, com.tools20022.repository.area.catp.ATMCompletionAdviceV01.ProtectedATMCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.ProtectedATMWithdrawalResponse, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.ProtectedATMCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.ProtectedATMWithdrawalCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.ProtectedATMWithdrawalCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.ProtectedATMWithdrawalRequest, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.ProtectedATMPINManagementRequest,
-						com.tools20022.repository.area.catp.ATMPINManagementResponseV01.ProtectedATMPINManagementResponse, com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.ProtectedATMExceptionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMWithdrawalRequestV02.ProtectedATMWithdrawalRequest, com.tools20022.repository.area.caam.ATMExceptionAdviceV01.ProtectedATMExceptionAdvice,
-						com.tools20022.repository.area.caam.ATMDeviceControlV02.ProtectedATMDeviceControl, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.ProtectedATMReconciliationAdvice,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02.ProtectedATMReconciliationAcknowledgement, com.tools20022.repository.area.catp.ATMDepositResponseV01.ProtectedATMDepositResponse,
-						com.tools20022.repository.area.catp.ATMDepositRequestV01.ProtectedATMDepositRequest, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02.ProtectedATMWithdrawalCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV02.ProtectedATMInquiryResponse, com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.ProtectedATMDepositCompletionAcknowledgement,
-						com.tools20022.repository.area.caam.ATMDeviceReportV02.ProtectedATMDeviceReport, com.tools20022.repository.area.catp.ATMPINManagementRequestV02.ProtectedATMPINManagementRequest,
-						com.tools20022.repository.area.catp.ATMTransferRequestV01.ProtectedATMTransferRequest, com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.ProtectedATMDiagnosticResponse,
-						com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.ProtectedATMDiagnosticRequest, com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02.ProtectedATMKeyDownloadRequest,
-						com.tools20022.repository.area.catp.ATMWithdrawalResponseV02.ProtectedATMWithdrawalResponse,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.ProtectedATMWithdrawalCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMPINManagementResponseV02.ProtectedATMPINManagementResponse, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.ProtectedATMDepositCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMInquiryRequestV02.ProtectedATMInquiryRequest, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.ProtectedATMCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMCompletionAdviceV02.ProtectedATMCompletionAdvice, com.tools20022.repository.area.catp.ATMTransferResponseV01.ProtectedATMTransferResponse,
-						com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.ProtectedATMKeyDownloadResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType10.mmContentType, com.tools20022.repository.msg.ContentInformationType10.mmEnvelopedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice,
+						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmProtectedATMReconciliationAcknowledgement,
+						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement, com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmProtectedATMDiagnosticResponse,
+						com.tools20022.repository.area.caam.ATMDiagnosticRequestV01.mmProtectedATMDiagnosticRequest, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.mmProtectedATMKeyDownloadResponse,
+						com.tools20022.repository.area.caam.ATMDeviceReportV01.mmProtectedATMDeviceReport, com.tools20022.repository.area.caam.HostToATMRequestV01.mmProtectedHostToATMRequest,
+						com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.mmProtectedATMKeyDownloadRequest, com.tools20022.repository.area.caam.ATMDeviceControlV01.mmProtectedATMDeviceControl,
+						com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmProtectedATMInquiryResponse, com.tools20022.repository.area.catp.ATMInquiryRequestV01.mmProtectedATMInquiryRequest,
+						com.tools20022.repository.area.catp.ATMCompletionAdviceV01.mmProtectedATMCompletionAdvice, com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.mmProtectedATMWithdrawalResponse,
+						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmProtectedATMCompletionAcknowledgement,
+						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmProtectedATMWithdrawalCompletionAdvice,
+						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.mmProtectedATMWithdrawalCompletionAcknowledgement,
+						com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest,
+						com.tools20022.repository.area.catp.ATMPINManagementResponseV01.mmProtectedATMPINManagementResponse, com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmProtectedATMExceptionAcknowledgement,
+						com.tools20022.repository.area.catp.ATMWithdrawalRequestV02.mmProtectedATMWithdrawalRequest, com.tools20022.repository.area.caam.ATMExceptionAdviceV01.mmProtectedATMExceptionAdvice,
+						com.tools20022.repository.area.caam.ATMDeviceControlV02.mmProtectedATMDeviceControl, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmProtectedATMReconciliationAdvice,
+						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02.mmProtectedATMReconciliationAcknowledgement, com.tools20022.repository.area.catp.ATMDepositResponseV01.mmProtectedATMDepositResponse,
+						com.tools20022.repository.area.catp.ATMDepositRequestV01.mmProtectedATMDepositRequest, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02.mmProtectedATMWithdrawalCompletionAdvice,
+						com.tools20022.repository.area.catp.ATMInquiryResponseV02.mmProtectedATMInquiryResponse, com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.mmProtectedATMDepositCompletionAcknowledgement,
+						com.tools20022.repository.area.caam.ATMDeviceReportV02.mmProtectedATMDeviceReport, com.tools20022.repository.area.catp.ATMPINManagementRequestV02.mmProtectedATMPINManagementRequest,
+						com.tools20022.repository.area.catp.ATMTransferRequestV01.mmProtectedATMTransferRequest, com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmProtectedATMDiagnosticResponse,
+						com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmProtectedATMDiagnosticRequest, com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02.mmProtectedATMKeyDownloadRequest,
+						com.tools20022.repository.area.catp.ATMWithdrawalResponseV02.mmProtectedATMWithdrawalResponse,
+						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmProtectedATMWithdrawalCompletionAcknowledgement,
+						com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice,
+						com.tools20022.repository.area.catp.ATMInquiryRequestV02.mmProtectedATMInquiryRequest, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement,
+						com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice, com.tools20022.repository.area.catp.ATMTransferResponseV01.mmProtectedATMTransferResponse,
+						com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType10";
 				definition = "General cryptographic message syntax (CMS) containing encrypted data.";
@@ -348,5 +351,21 @@ public class ContentInformationType10 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType2Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType2Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public EnvelopedData4 getEnvelopedData() {
+		return envelopedData;
+	}
+
+	public void setEnvelopedData(com.tools20022.repository.msg.EnvelopedData4 envelopedData) {
+		this.envelopedData = envelopedData;
 	}
 }

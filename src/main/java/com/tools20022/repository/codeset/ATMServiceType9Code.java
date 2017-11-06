@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#CustomerTransfer
- * ATMServiceType9Code.CustomerTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#mmCustomerTransfer
+ * ATMServiceType9Code.mmCustomerTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#InterCustomerTransfer
- * ATMServiceType9Code.InterCustomerTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#mmInterCustomerTransfer
+ * ATMServiceType9Code.mmInterCustomerTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#Payment
- * ATMServiceType9Code.Payment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#mmPayment
+ * ATMServiceType9Code.mmPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,17 +88,17 @@ public class ATMServiceType9Code extends ATMServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#CustomerTransfer
-	 * ATMServiceType10Code.CustomerTransfer}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#mmCustomerTransfer
+	 * ATMServiceType10Code.mmCustomerTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerTransfer = new MMCode() {
+	public static final MMCode mmCustomerTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTransfer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType10Code.CustomerTransfer);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType10Code.mmCustomerTransfer);
 			owner_lazy = () -> ATMServiceType9Code.mmObject();
 		}
 	};
@@ -120,17 +120,17 @@ public class ATMServiceType9Code extends ATMServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#InterCustomerTransfer
-	 * ATMServiceType10Code.InterCustomerTransfer}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#mmInterCustomerTransfer
+	 * ATMServiceType10Code.mmInterCustomerTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InterCustomerTransfer = new MMCode() {
+	public static final MMCode mmInterCustomerTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterCustomerTransfer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType10Code.InterCustomerTransfer);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType10Code.mmInterCustomerTransfer);
 			owner_lazy = () -> ATMServiceType9Code.mmObject();
 		}
 	};
@@ -152,17 +152,17 @@ public class ATMServiceType9Code extends ATMServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#Payment
-	 * ATMServiceType10Code.Payment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#mmPayment
+	 * ATMServiceType10Code.mmPayment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Payment = new MMCode() {
+	public static final MMCode mmPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType10Code.Payment);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType10Code.mmPayment);
 			owner_lazy = () -> ATMServiceType9Code.mmObject();
 		}
 	};
@@ -170,13 +170,13 @@ public class ATMServiceType9Code extends ATMServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType9Code";
 				definition = "Describes the type of fund transfer selected by the customer or the ATM.";
 				nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType9Code.CustomerTransfer, com.tools20022.repository.codeset.ATMServiceType9Code.InterCustomerTransfer,
-						com.tools20022.repository.codeset.ATMServiceType9Code.Payment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType9Code.mmCustomerTransfer, com.tools20022.repository.codeset.ATMServiceType9Code.mmInterCustomerTransfer,
+						com.tools20022.repository.codeset.ATMServiceType9Code.mmPayment);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
 			}
 		});

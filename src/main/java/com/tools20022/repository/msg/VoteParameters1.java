@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.VotingCondition;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information describing how the voting process is organised.
@@ -41,60 +42,60 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#SecuritiesQuantityRequiredToVote
- * VoteParameters1.SecuritiesQuantityRequiredToVote}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmSecuritiesQuantityRequiredToVote
+ * VoteParameters1.mmSecuritiesQuantityRequiredToVote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#PartialVoteAllowed
- * VoteParameters1.PartialVoteAllowed}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmPartialVoteAllowed
+ * VoteParameters1.mmPartialVoteAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#SplitVoteAllowed
- * VoteParameters1.SplitVoteAllowed}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteParameters1#VoteDeadline
- * VoteParameters1.VoteDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmSplitVoteAllowed
+ * VoteParameters1.mmSplitVoteAllowed}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteDeadline
+ * VoteParameters1.mmVoteDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VoteSTPDeadline
- * VoteParameters1.VoteSTPDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteSTPDeadline
+ * VoteParameters1.mmVoteSTPDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VoteMarketDeadline
- * VoteParameters1.VoteMarketDeadline}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteParameters1#VoteMethods
- * VoteParameters1.VoteMethods}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteMarketDeadline
+ * VoteParameters1.mmVoteMarketDeadline}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteMethods
+ * VoteParameters1.mmVoteMethods}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VotingBallotElectronicAddress
- * VoteParameters1.VotingBallotElectronicAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVotingBallotElectronicAddress
+ * VoteParameters1.mmVotingBallotElectronicAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VotingBallotRequestAddress
- * VoteParameters1.VotingBallotRequestAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVotingBallotRequestAddress
+ * VoteParameters1.mmVotingBallotRequestAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#RevocabilityDeadline
- * VoteParameters1.RevocabilityDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmRevocabilityDeadline
+ * VoteParameters1.mmRevocabilityDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#RevocabilitySTPDeadline
- * VoteParameters1.RevocabilitySTPDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmRevocabilitySTPDeadline
+ * VoteParameters1.mmRevocabilitySTPDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#RevocabilityMarketDeadline
- * VoteParameters1.RevocabilityMarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmRevocabilityMarketDeadline
+ * VoteParameters1.mmRevocabilityMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#BeneficialOwnerDisclosure
- * VoteParameters1.BeneficialOwnerDisclosure}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmBeneficialOwnerDisclosure
+ * VoteParameters1.mmBeneficialOwnerDisclosure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VoteInstructionType
- * VoteParameters1.VoteInstructionType}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteInstructionType
+ * VoteParameters1.mmVoteInstructionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#IncentivePremium
- * VoteParameters1.IncentivePremium}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmIncentivePremium
+ * VoteParameters1.mmIncentivePremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VoteWithPremiumDeadline
- * VoteParameters1.VoteWithPremiumDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteWithPremiumDeadline
+ * VoteParameters1.mmVoteWithPremiumDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VoteWithPremiumSTPDeadline
- * VoteParameters1.VoteWithPremiumSTPDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteWithPremiumSTPDeadline
+ * VoteParameters1.mmVoteWithPremiumSTPDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#VoteWithPremiumMarketDeadline
- * VoteParameters1.VoteWithPremiumMarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmVoteWithPremiumMarketDeadline
+ * VoteParameters1.mmVoteWithPremiumMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteParameters1#AdditionalVotingRequirements
- * VoteParameters1.AdditionalVotingRequirements}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteParameters1#mmAdditionalVotingRequirements
+ * VoteParameters1.mmAdditionalVotingRequirements}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -105,15 +106,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Vote
- * MeetingNotificationV02.Vote}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmVote
+ * MeetingNotificationV02.mmVote}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VoteParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber securitiesQuantityRequiredToVote;
 	/**
 	 * Number of holdings required for a vote.
 	 * <p>
@@ -140,8 +142,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#SecuritiesQuantityRequiredToVote
-	 * VotingCondition.SecuritiesQuantityRequiredToVote}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmSecuritiesQuantityRequiredToVote
+	 * VotingCondition.mmSecuritiesQuantityRequiredToVote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,20 +162,21 @@ public class VoteParameters1 {
 	 * definition} = "Number of holdings required for a vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesQuantityRequiredToVote = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesQuantityRequiredToVote = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmSecuritiesQuantityRequiredToVote;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.SecuritiesQuantityRequiredToVote;
 			isDerived = false;
 			xmlTag = "SctiesQtyReqrdToVote";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantityRequiredToVote";
 			definition = "Number of holdings required for a vote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected YesNoIndicator partialVoteAllowed;
 	/**
 	 * Specifies whether it is allowed to only vote on a part of the entire
 	 * holding, leaving part of the position un-voted.
@@ -188,8 +191,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#PartialVoteAllowed
-	 * VotingCondition.PartialVoteAllowed}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmPartialVoteAllowed
+	 * VotingCondition.mmPartialVoteAllowed}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +213,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialVoteAllowed = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialVoteAllowed = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmPartialVoteAllowed;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.PartialVoteAllowed;
 			isDerived = false;
 			xmlTag = "PrtlVoteAllwd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialVoteAllowed";
 			definition = "Specifies whether it is allowed to only vote on a part of the entire holding, leaving part of the position un-voted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator splitVoteAllowed;
 	/**
 	 * Specifies whether it is allowed to vote in different directions for the
 	 * entire holding.
@@ -238,8 +242,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#SplitVoteAllowed
-	 * VotingCondition.SplitVoteAllowed}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmSplitVoteAllowed
+	 * VotingCondition.mmSplitVoteAllowed}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +264,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SplitVoteAllowed = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSplitVoteAllowed = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmSplitVoteAllowed;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.SplitVoteAllowed;
 			isDerived = false;
 			xmlTag = "SpltVoteAllwd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitVoteAllowed";
 			definition = "Specifies whether it is allowed to vote in different directions for the entire holding.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DateFormat2Choice voteDeadline;
 	/**
 	 * Date and time by which the vote instructions should be submitted to the
 	 * intermediary.
@@ -288,8 +293,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#IntermediaryDeadline
-	 * Deadline.IntermediaryDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmIntermediaryDeadline
+	 * Deadline.mmIntermediaryDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,20 +315,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.IntermediaryDeadline;
 			isDerived = false;
 			xmlTag = "VoteDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteDeadline";
 			definition = "Date and time by which the vote instructions should be submitted to the intermediary.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected DateFormat2Choice voteSTPDeadline;
 	/**
 	 * Date and time by which the vote instructions should be submitted to the
 	 * intermediary (STP mode).
@@ -338,8 +344,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#STPDeadline
-	 * Deadline.STPDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmSTPDeadline
+	 * Deadline.mmSTPDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -360,20 +366,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteSTPDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.STPDeadline;
 			isDerived = false;
 			xmlTag = "VoteSTPDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteSTPDeadline";
 			definition = "Date and time by which the vote instructions should be submitted to the intermediary (STP mode).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected DateFormat2Choice voteMarketDeadline;
 	/**
 	 * Date and time by which the vote instructions should be submitted to the
 	 * issuer.
@@ -388,8 +395,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#MarketDeadline
-	 * Deadline.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+	 * Deadline.mmMarketDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -410,20 +417,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteMarketDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.MarketDeadline;
 			isDerived = false;
 			xmlTag = "VoteMktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteMarketDeadline";
 			definition = "Date and time by which the vote instructions should be submitted to the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected VoteMethods voteMethods;
 	/**
 	 * Indicates the different methods that can be used to vote.
 	 * <p>
@@ -435,8 +443,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#VoteLocation
-	 * VotingCondition.VoteLocation}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmVoteLocation
+	 * VotingCondition.mmVoteLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -456,21 +464,22 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VoteMethods = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVoteMethods = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmVoteLocation;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.VoteLocation;
 			isDerived = false;
 			xmlTag = "VoteMthds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteMethods";
 			definition = "Indicates the different methods that can be used to vote.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.VoteMethods.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VoteMethods.mmObject();
 		}
 	};
+	protected CommunicationAddress4 votingBallotElectronicAddress;
 	/**
 	 * Electronic location, e-mail or URL address, where the voting ballot can
 	 * be requested.
@@ -505,21 +514,22 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VotingBallotElectronicAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVotingBallotElectronicAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> VoteParameters1.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
+			componentContext_lazy = () -> VoteParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "VtngBlltElctrncAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotingBallotElectronicAddress";
 			definition = "Electronic location, e-mail or URL address, where the voting ballot can be requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommunicationAddress4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
 		}
 	};
+	protected PostalAddress1 votingBallotRequestAddress;
 	/**
 	 * Specifies the postal address where the voting ballot can be requested.
 	 * <p>
@@ -552,21 +562,22 @@ public class VoteParameters1 {
 	 * "Specifies the postal address where the voting ballot can be requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VotingBallotRequestAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVotingBallotRequestAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> VoteParameters1.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> VoteParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "VtngBlltReqAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotingBallotRequestAddress";
 			definition = "Specifies the postal address where the voting ballot can be requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	protected DateFormat2Choice revocabilityDeadline;
 	/**
 	 * Date till which the instructing party can revoke, change or withdraw its
 	 * voting instruction. This deadline is specified by an intermediary.
@@ -581,8 +592,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#IntermediaryDeadline
-	 * Deadline.IntermediaryDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmIntermediaryDeadline
+	 * Deadline.mmIntermediaryDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -603,20 +614,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RevocabilityDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRevocabilityDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.IntermediaryDeadline;
 			isDerived = false;
 			xmlTag = "RvcbltyDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilityDeadline";
 			definition = "Date till which the instructing party can revoke, change or withdraw its voting instruction. This deadline is specified by an intermediary.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected DateFormat2Choice revocabilitySTPDeadline;
 	/**
 	 * Date till which the instructing party can revoke, change or withdraw its
 	 * voting instruction. This deadline is specified by an intermediary (STP
@@ -632,8 +644,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#STPDeadline
-	 * Deadline.STPDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmSTPDeadline
+	 * Deadline.mmSTPDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -654,20 +666,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RevocabilitySTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRevocabilitySTPDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.STPDeadline;
 			isDerived = false;
 			xmlTag = "RvcbltySTPDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilitySTPDeadline";
 			definition = "Date till which the instructing party can revoke, change or withdraw its voting instruction. This deadline is specified by an intermediary (STP mode).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected DateFormat2Choice revocabilityMarketDeadline;
 	/**
 	 * Date till which the instructing party can revoke, change or withdraw its
 	 * voting instruction. This deadline is set by the issuer.
@@ -682,8 +695,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#MarketDeadline
-	 * Deadline.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+	 * Deadline.mmMarketDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -704,20 +717,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RevocabilityMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRevocabilityMarketDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.MarketDeadline;
 			isDerived = false;
 			xmlTag = "RvcbltyMktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilityMarketDeadline";
 			definition = "Date till which the instructing party can revoke, change or withdraw its voting instruction. This deadline is set by the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator beneficialOwnerDisclosure;
 	/**
 	 * Indicates whether beneficiary details (eg name and address) must be
 	 * supplied in order to take part to a meeting.
@@ -732,8 +746,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#BeneficialOwnerDisclosure
-	 * VotingCondition.BeneficialOwnerDisclosure}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmBeneficialOwnerDisclosure
+	 * VotingCondition.mmBeneficialOwnerDisclosure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -754,20 +768,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficialOwnerDisclosure = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficialOwnerDisclosure = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmBeneficialOwnerDisclosure;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.BeneficialOwnerDisclosure;
 			isDerived = false;
 			xmlTag = "BnfclOwnrDsclsr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerDisclosure";
 			definition = "Indicates whether beneficiary details (eg name and address) must be supplied in order to take part to a meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<VoteInstruction2Code> voteInstructionType;
 	/**
 	 * Identifies the possible types of voting instructions. When used at the
 	 * resolution level, it supersedes the value specified in the meeting
@@ -783,8 +798,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#VoteInstructionType
-	 * VotingCondition.VoteInstructionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmVoteInstructionType
+	 * VotingCondition.mmVoteInstructionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -805,20 +820,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteInstructionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteInstructionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmVoteInstructionType;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.VoteInstructionType;
 			isDerived = false;
 			xmlTag = "VoteInstrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionType";
 			definition = "Identifies the possible types of voting instructions. When used at the resolution level, it supersedes the value specified in the meeting notice.";
-			minOccurs = 0;
 			maxOccurs = 8;
+			minOccurs = 0;
 			simpleType_lazy = () -> VoteInstruction2Code.mmObject();
 		}
 	};
+	protected IncentivePremium2 incentivePremium;
 	/**
 	 * Cash premium paid to the security holder when voting.
 	 * <p>
@@ -830,8 +846,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VotingCondition#IncentivePremium
-	 * VotingCondition.IncentivePremium}</li>
+	 * {@linkplain com.tools20022.repository.entity.VotingCondition#mmIncentivePremium
+	 * VotingCondition.mmIncentivePremium}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -850,21 +866,22 @@ public class VoteParameters1 {
 	 * definition} = "Cash premium paid to the security holder when voting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IncentivePremium = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIncentivePremium = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmIncentivePremium;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.IncentivePremium;
 			isDerived = false;
 			xmlTag = "IncntivPrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncentivePremium";
 			definition = "Cash premium paid to the security holder when voting.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IncentivePremium2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IncentivePremium2.mmObject();
 		}
 	};
+	protected DateFormat2Choice voteWithPremiumDeadline;
 	/**
 	 * Date and time by which the vote instructions should be submitted to the
 	 * intermediary to take advantage of the premium.
@@ -879,8 +896,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#IntermediaryDeadline
-	 * Deadline.IntermediaryDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmIntermediaryDeadline
+	 * Deadline.mmIntermediaryDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -901,20 +918,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteWithPremiumDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteWithPremiumDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.IntermediaryDeadline;
 			isDerived = false;
 			xmlTag = "VoteWthPrmDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteWithPremiumDeadline";
 			definition = "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected DateFormat2Choice voteWithPremiumSTPDeadline;
 	/**
 	 * Date and time by which the vote instructions should be submitted to the
 	 * intermediary to take advantage of the premium (STP mode).
@@ -929,8 +947,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#STPDeadline
-	 * Deadline.STPDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmSTPDeadline
+	 * Deadline.mmSTPDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -951,20 +969,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteWithPremiumSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteWithPremiumSTPDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.STPDeadline;
 			isDerived = false;
 			xmlTag = "VoteWthPrmSTPDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteWithPremiumSTPDeadline";
 			definition = "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium (STP mode).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected DateFormat2Choice voteWithPremiumMarketDeadline;
 	/**
 	 * Date and time by which the vote instructions should be submitted to the
 	 * issuer to take advantage of the premium.
@@ -979,8 +998,8 @@ public class VoteParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#MarketDeadline
-	 * Deadline.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+	 * Deadline.mmMarketDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1001,20 +1020,21 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteWithPremiumMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteWithPremiumMarketDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> VoteParameters1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.MarketDeadline;
 			isDerived = false;
 			xmlTag = "VoteWthPrmMktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteWithPremiumMarketDeadline";
 			definition = "Date and time by which the vote instructions should be submitted to the issuer to take advantage of the premium.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected Max350Text additionalVotingRequirements;
 	/**
 	 * Additional information on specific requirements for allowing a person to
 	 * vote.
@@ -1045,7 +1065,7 @@ public class VoteParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalVotingRequirements = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalVotingRequirements = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VoteParameters1.mmObject();
 			isDerived = false;
@@ -1053,8 +1073,8 @@ public class VoteParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalVotingRequirements";
 			definition = "Additional information on specific requirements for allowing a person to vote.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -1062,21 +1082,174 @@ public class VoteParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters1.SecuritiesQuantityRequiredToVote, com.tools20022.repository.msg.VoteParameters1.PartialVoteAllowed,
-						com.tools20022.repository.msg.VoteParameters1.SplitVoteAllowed, com.tools20022.repository.msg.VoteParameters1.VoteDeadline, com.tools20022.repository.msg.VoteParameters1.VoteSTPDeadline,
-						com.tools20022.repository.msg.VoteParameters1.VoteMarketDeadline, com.tools20022.repository.msg.VoteParameters1.VoteMethods, com.tools20022.repository.msg.VoteParameters1.VotingBallotElectronicAddress,
-						com.tools20022.repository.msg.VoteParameters1.VotingBallotRequestAddress, com.tools20022.repository.msg.VoteParameters1.RevocabilityDeadline, com.tools20022.repository.msg.VoteParameters1.RevocabilitySTPDeadline,
-						com.tools20022.repository.msg.VoteParameters1.RevocabilityMarketDeadline, com.tools20022.repository.msg.VoteParameters1.BeneficialOwnerDisclosure, com.tools20022.repository.msg.VoteParameters1.VoteInstructionType,
-						com.tools20022.repository.msg.VoteParameters1.IncentivePremium, com.tools20022.repository.msg.VoteParameters1.VoteWithPremiumDeadline, com.tools20022.repository.msg.VoteParameters1.VoteWithPremiumSTPDeadline,
-						com.tools20022.repository.msg.VoteParameters1.VoteWithPremiumMarketDeadline, com.tools20022.repository.msg.VoteParameters1.AdditionalVotingRequirements);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters1.mmSecuritiesQuantityRequiredToVote, com.tools20022.repository.msg.VoteParameters1.mmPartialVoteAllowed,
+						com.tools20022.repository.msg.VoteParameters1.mmSplitVoteAllowed, com.tools20022.repository.msg.VoteParameters1.mmVoteDeadline, com.tools20022.repository.msg.VoteParameters1.mmVoteSTPDeadline,
+						com.tools20022.repository.msg.VoteParameters1.mmVoteMarketDeadline, com.tools20022.repository.msg.VoteParameters1.mmVoteMethods, com.tools20022.repository.msg.VoteParameters1.mmVotingBallotElectronicAddress,
+						com.tools20022.repository.msg.VoteParameters1.mmVotingBallotRequestAddress, com.tools20022.repository.msg.VoteParameters1.mmRevocabilityDeadline,
+						com.tools20022.repository.msg.VoteParameters1.mmRevocabilitySTPDeadline, com.tools20022.repository.msg.VoteParameters1.mmRevocabilityMarketDeadline,
+						com.tools20022.repository.msg.VoteParameters1.mmBeneficialOwnerDisclosure, com.tools20022.repository.msg.VoteParameters1.mmVoteInstructionType, com.tools20022.repository.msg.VoteParameters1.mmIncentivePremium,
+						com.tools20022.repository.msg.VoteParameters1.mmVoteWithPremiumDeadline, com.tools20022.repository.msg.VoteParameters1.mmVoteWithPremiumSTPDeadline,
+						com.tools20022.repository.msg.VoteParameters1.mmVoteWithPremiumMarketDeadline, com.tools20022.repository.msg.VoteParameters1.mmAdditionalVotingRequirements);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmVote);
 				trace_lazy = () -> VotingCondition.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.Vote);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VoteParameters1";
 				definition = "Information describing how the voting process is organised.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getSecuritiesQuantityRequiredToVote() {
+		return securitiesQuantityRequiredToVote;
+	}
+
+	public void setSecuritiesQuantityRequiredToVote(DecimalNumber securitiesQuantityRequiredToVote) {
+		this.securitiesQuantityRequiredToVote = securitiesQuantityRequiredToVote;
+	}
+
+	public YesNoIndicator getPartialVoteAllowed() {
+		return partialVoteAllowed;
+	}
+
+	public void setPartialVoteAllowed(YesNoIndicator partialVoteAllowed) {
+		this.partialVoteAllowed = partialVoteAllowed;
+	}
+
+	public YesNoIndicator getSplitVoteAllowed() {
+		return splitVoteAllowed;
+	}
+
+	public void setSplitVoteAllowed(YesNoIndicator splitVoteAllowed) {
+		this.splitVoteAllowed = splitVoteAllowed;
+	}
+
+	public DateFormat2Choice getVoteDeadline() {
+		return voteDeadline;
+	}
+
+	public void setVoteDeadline(DateFormat2Choice voteDeadline) {
+		this.voteDeadline = voteDeadline;
+	}
+
+	public DateFormat2Choice getVoteSTPDeadline() {
+		return voteSTPDeadline;
+	}
+
+	public void setVoteSTPDeadline(DateFormat2Choice voteSTPDeadline) {
+		this.voteSTPDeadline = voteSTPDeadline;
+	}
+
+	public DateFormat2Choice getVoteMarketDeadline() {
+		return voteMarketDeadline;
+	}
+
+	public void setVoteMarketDeadline(DateFormat2Choice voteMarketDeadline) {
+		this.voteMarketDeadline = voteMarketDeadline;
+	}
+
+	public VoteMethods getVoteMethods() {
+		return voteMethods;
+	}
+
+	public void setVoteMethods(com.tools20022.repository.msg.VoteMethods voteMethods) {
+		this.voteMethods = voteMethods;
+	}
+
+	public CommunicationAddress4 getVotingBallotElectronicAddress() {
+		return votingBallotElectronicAddress;
+	}
+
+	public void setVotingBallotElectronicAddress(com.tools20022.repository.msg.CommunicationAddress4 votingBallotElectronicAddress) {
+		this.votingBallotElectronicAddress = votingBallotElectronicAddress;
+	}
+
+	public PostalAddress1 getVotingBallotRequestAddress() {
+		return votingBallotRequestAddress;
+	}
+
+	public void setVotingBallotRequestAddress(com.tools20022.repository.msg.PostalAddress1 votingBallotRequestAddress) {
+		this.votingBallotRequestAddress = votingBallotRequestAddress;
+	}
+
+	public DateFormat2Choice getRevocabilityDeadline() {
+		return revocabilityDeadline;
+	}
+
+	public void setRevocabilityDeadline(DateFormat2Choice revocabilityDeadline) {
+		this.revocabilityDeadline = revocabilityDeadline;
+	}
+
+	public DateFormat2Choice getRevocabilitySTPDeadline() {
+		return revocabilitySTPDeadline;
+	}
+
+	public void setRevocabilitySTPDeadline(DateFormat2Choice revocabilitySTPDeadline) {
+		this.revocabilitySTPDeadline = revocabilitySTPDeadline;
+	}
+
+	public DateFormat2Choice getRevocabilityMarketDeadline() {
+		return revocabilityMarketDeadline;
+	}
+
+	public void setRevocabilityMarketDeadline(DateFormat2Choice revocabilityMarketDeadline) {
+		this.revocabilityMarketDeadline = revocabilityMarketDeadline;
+	}
+
+	public YesNoIndicator getBeneficialOwnerDisclosure() {
+		return beneficialOwnerDisclosure;
+	}
+
+	public void setBeneficialOwnerDisclosure(YesNoIndicator beneficialOwnerDisclosure) {
+		this.beneficialOwnerDisclosure = beneficialOwnerDisclosure;
+	}
+
+	public List<VoteInstruction2Code> getVoteInstructionType() {
+		return voteInstructionType;
+	}
+
+	public void setVoteInstructionType(List<VoteInstruction2Code> voteInstructionType) {
+		this.voteInstructionType = voteInstructionType;
+	}
+
+	public IncentivePremium2 getIncentivePremium() {
+		return incentivePremium;
+	}
+
+	public void setIncentivePremium(com.tools20022.repository.msg.IncentivePremium2 incentivePremium) {
+		this.incentivePremium = incentivePremium;
+	}
+
+	public DateFormat2Choice getVoteWithPremiumDeadline() {
+		return voteWithPremiumDeadline;
+	}
+
+	public void setVoteWithPremiumDeadline(DateFormat2Choice voteWithPremiumDeadline) {
+		this.voteWithPremiumDeadline = voteWithPremiumDeadline;
+	}
+
+	public DateFormat2Choice getVoteWithPremiumSTPDeadline() {
+		return voteWithPremiumSTPDeadline;
+	}
+
+	public void setVoteWithPremiumSTPDeadline(DateFormat2Choice voteWithPremiumSTPDeadline) {
+		this.voteWithPremiumSTPDeadline = voteWithPremiumSTPDeadline;
+	}
+
+	public DateFormat2Choice getVoteWithPremiumMarketDeadline() {
+		return voteWithPremiumMarketDeadline;
+	}
+
+	public void setVoteWithPremiumMarketDeadline(DateFormat2Choice voteWithPremiumMarketDeadline) {
+		this.voteWithPremiumMarketDeadline = voteWithPremiumMarketDeadline;
+	}
+
+	public Max350Text getAdditionalVotingRequirements() {
+		return additionalVotingRequirements;
+	}
+
+	public void setAdditionalVotingRequirements(Max350Text additionalVotingRequirements) {
+		this.additionalVotingRequirements = additionalVotingRequirements;
 	}
 }

@@ -41,8 +41,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TradeOriginatorRole#OriginatorRole
- * TradeOriginatorRole.OriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.entity.TradeOriginatorRole#mmOriginatorRole
+ * TradeOriginatorRole.mmOriginatorRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,119 +50,119 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#TradeOriginatorRole
- * SecuritiesTradeDetails25.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#mmTradeOriginatorRole
+ * SecuritiesTradeDetails25.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#TradeOriginatorRole
- * SecuritiesTradeDetails26.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#mmTradeOriginatorRole
+ * SecuritiesTradeDetails26.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#TradeOriginatorRole
- * SecuritiesTradeDetails27.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#mmTradeOriginatorRole
+ * SecuritiesTradeDetails27.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#TradeOriginatorRole
- * SecuritiesTradeDetails28.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#mmTradeOriginatorRole
+ * SecuritiesTradeDetails28.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#TradeOriginatorRole
- * SecuritiesTradeDetails6.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#mmTradeOriginatorRole
+ * SecuritiesTradeDetails6.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#TradeOriginatorRole
- * SecuritiesTradeDetails13.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#mmTradeOriginatorRole
+ * SecuritiesTradeDetails13.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#TradeOriginatorRole
- * SecuritiesTradeDetails3.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails3#mmTradeOriginatorRole
+ * SecuritiesTradeDetails3.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#TradeOriginatorRole
- * SecuritiesTradeDetails11.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails11#mmTradeOriginatorRole
+ * SecuritiesTradeDetails11.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#TradeOriginatorRole
- * SecuritiesTradeDetails2.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#mmTradeOriginatorRole
+ * SecuritiesTradeDetails2.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#TradeOriginatorRole
- * SecuritiesTradeDetails16.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#mmTradeOriginatorRole
+ * SecuritiesTradeDetails16.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#TradeOriginatorRole
- * SecuritiesTradeDetails1.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#mmTradeOriginatorRole
+ * SecuritiesTradeDetails1.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#TradeOriginatorRole
- * SecuritiesTradeDetails15.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#mmTradeOriginatorRole
+ * SecuritiesTradeDetails15.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#TradeOriginatorRole
- * SecuritiesTradeDetails31.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#mmTradeOriginatorRole
+ * SecuritiesTradeDetails31.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#TradeOriginatorRole
- * SecuritiesTradeDetails33.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#mmTradeOriginatorRole
+ * SecuritiesTradeDetails33.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#TradeOriginatorRole
- * SecuritiesTradeDetails38.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#mmTradeOriginatorRole
+ * SecuritiesTradeDetails38.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#TradeOriginatorRole
- * SecuritiesTradeDetails37.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails37#mmTradeOriginatorRole
+ * SecuritiesTradeDetails37.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#TradeOriginatorRole
- * SecuritiesTradeDetails34.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#mmTradeOriginatorRole
+ * SecuritiesTradeDetails34.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#TradeOriginatorRole
- * SecuritiesTradeDetails32.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#mmTradeOriginatorRole
+ * SecuritiesTradeDetails32.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#TradeOriginatorRole
- * SecuritiesTradeDetails44.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#mmTradeOriginatorRole
+ * SecuritiesTradeDetails44.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#TradeOriginatorRole
- * SecuritiesTradeDetails39.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#mmTradeOriginatorRole
+ * SecuritiesTradeDetails39.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#TradeOriginatorRole
- * SecuritiesTradeDetails43.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#mmTradeOriginatorRole
+ * SecuritiesTradeDetails43.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#TradeOriginatorRole
- * SecuritiesTradeDetails40.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails40#mmTradeOriginatorRole
+ * SecuritiesTradeDetails40.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#TradeOriginatorRole
- * SecuritiesTradeDetails46.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#mmTradeOriginatorRole
+ * SecuritiesTradeDetails46.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#TradeOriginatorRole
- * SecuritiesTradeDetails47.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#mmTradeOriginatorRole
+ * SecuritiesTradeDetails47.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#TradeOriginatorRole
- * SecuritiesTradeDetails51.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#mmTradeOriginatorRole
+ * SecuritiesTradeDetails51.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#TradeOriginatorRole
- * SecuritiesTradeDetails53.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#mmTradeOriginatorRole
+ * SecuritiesTradeDetails53.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#TradeOriginatorRole
- * SecuritiesTradeDetails55.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#mmTradeOriginatorRole
+ * SecuritiesTradeDetails55.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#TradeOriginatorRole
- * SecuritiesTradeDetails56.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails56#mmTradeOriginatorRole
+ * SecuritiesTradeDetails56.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#TradeOriginatorRole
- * SecuritiesTradeDetails52.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#mmTradeOriginatorRole
+ * SecuritiesTradeDetails52.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#TradeOriginatorRole
- * SecuritiesTradeDetails50.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#mmTradeOriginatorRole
+ * SecuritiesTradeDetails50.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#TradeOriginatorRole
- * SecuritiesTradeDetails59.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails59#mmTradeOriginatorRole
+ * SecuritiesTradeDetails59.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#TradeOriginatorRole
- * SecuritiesTradeDetails58.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#mmTradeOriginatorRole
+ * SecuritiesTradeDetails58.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#TradeOriginatorRole
- * SecuritiesTradeDetails63.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#mmTradeOriginatorRole
+ * SecuritiesTradeDetails63.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#TradeOriginatorRole
- * SecuritiesTradeDetails62.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#mmTradeOriginatorRole
+ * SecuritiesTradeDetails62.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#TradeOriginatorRole
- * SecuritiesTradeDetails65.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#mmTradeOriginatorRole
+ * SecuritiesTradeDetails65.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#TradeOriginatorRole
- * SecuritiesTradeDetails66.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmTradeOriginatorRole
+ * SecuritiesTradeDetails66.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#TradeOriginatorRole
- * SecuritiesTradeDetails67.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#mmTradeOriginatorRole
+ * SecuritiesTradeDetails67.mmTradeOriginatorRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#TradeOriginatorRole
- * SecuritiesTradeDetails70.TradeOriginatorRole}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmTradeOriginatorRole
+ * SecuritiesTradeDetails70.mmTradeOriginatorRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -185,8 +185,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -201,6 +201,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeOriginatorRole extends TradePartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginatorRoleCode originatorRole;
 	/**
 	 * Specifies the role of the trading party in the transaction.
 	 * <p>
@@ -211,40 +212,40 @@ public class TradeOriginatorRole extends TradePartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode
 	 * OriginatorRoleCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator1Choice#Code
-	 * TradeOriginator1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator1Choice#Proprietary
-	 * TradeOriginator1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator2Choice#Code
-	 * TradeOriginator2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator2Choice#Proprietary
-	 * TradeOriginator2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator3Choice#Code
-	 * TradeOriginator3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator3Choice#Proprietary
-	 * TradeOriginator3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator4Choice#Code
-	 * TradeOriginator4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TradeOriginator4Choice#Proprietary
-	 * TradeOriginator4Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.TradeOriginatorRole
 	 * TradeOriginatorRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator1Choice#mmCode
+	 * TradeOriginator1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator1Choice#mmProprietary
+	 * TradeOriginator1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator2Choice#mmCode
+	 * TradeOriginator2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator2Choice#mmProprietary
+	 * TradeOriginator2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator3Choice#mmCode
+	 * TradeOriginator3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator3Choice#mmProprietary
+	 * TradeOriginator3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator4Choice#mmCode
+	 * TradeOriginator4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeOriginator4Choice#mmProprietary
+	 * TradeOriginator4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -257,18 +258,18 @@ public class TradeOriginatorRole extends TradePartyRole {
 	 * "Specifies the role of the trading party in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OriginatorRole = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOriginatorRole = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeOriginator1Choice.Code, com.tools20022.repository.choice.TradeOriginator1Choice.Proprietary,
-					com.tools20022.repository.choice.TradeOriginator2Choice.Code, com.tools20022.repository.choice.TradeOriginator2Choice.Proprietary, com.tools20022.repository.choice.TradeOriginator3Choice.Code,
-					com.tools20022.repository.choice.TradeOriginator3Choice.Proprietary, com.tools20022.repository.choice.TradeOriginator4Choice.Code, com.tools20022.repository.choice.TradeOriginator4Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeOriginator1Choice.mmCode, com.tools20022.repository.choice.TradeOriginator1Choice.mmProprietary,
+					com.tools20022.repository.choice.TradeOriginator2Choice.mmCode, com.tools20022.repository.choice.TradeOriginator2Choice.mmProprietary, com.tools20022.repository.choice.TradeOriginator3Choice.mmCode,
+					com.tools20022.repository.choice.TradeOriginator3Choice.mmProprietary, com.tools20022.repository.choice.TradeOriginator4Choice.mmCode, com.tools20022.repository.choice.TradeOriginator4Choice.mmProprietary);
 			elementContext_lazy = () -> TradeOriginatorRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OriginatorRole";
 			definition = "Specifies the role of the trading party in the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OriginatorRoleCode.mmObject();
 		}
 	};
@@ -276,34 +277,42 @@ public class TradeOriginatorRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeOriginatorRole";
 				definition = "Specifies the trading party at the source of the transaction.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails26.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails27.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails28.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails6.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails13.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails3.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails11.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails2.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails16.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails1.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails15.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails31.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails33.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails38.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails37.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails34.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails32.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails44.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails39.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails43.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails40.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails46.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails47.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails51.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails53.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails55.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails56.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails52.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails50.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails59.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails58.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails63.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails62.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails65.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails66.TradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails67.TradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails70.TradeOriginatorRole);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails27.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails28.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails6.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails13.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails3.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails11.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails2.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails16.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails1.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails15.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails31.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails33.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails38.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails37.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails34.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails32.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails44.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails39.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails43.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails40.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails46.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails47.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails51.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails53.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails55.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails56.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails52.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails50.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails59.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails58.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails63.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails62.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails65.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails66.mmTradeOriginatorRole,
+						com.tools20022.repository.msg.SecuritiesTradeDetails67.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmTradeOriginatorRole);
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeOriginatorRole.OriginatorRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeOriginatorRole.mmOriginatorRole);
 				derivationComponent_lazy = () -> Arrays.asList(TradeOriginator1Choice.mmObject(), TradeOriginator2Choice.mmObject(), TradeOriginator3Choice.mmObject(), TradeOriginator4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginatorRoleCode getOriginatorRole() {
+		return originatorRole;
+	}
+
+	public void setOriginatorRole(OriginatorRoleCode originatorRole) {
+		this.originatorRole = originatorRole;
 	}
 }

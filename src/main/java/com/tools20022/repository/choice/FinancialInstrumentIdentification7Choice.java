@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#Single
- * FinancialInstrumentIdentification7Choice.Single}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#mmSingle
+ * FinancialInstrumentIdentification7Choice.mmSingle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#Basket
- * FinancialInstrumentIdentification7Choice.Basket}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#mmBasket
+ * FinancialInstrumentIdentification7Choice.mmBasket}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentIdentification7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentIdentification6Choice single;
 	/**
 	 * Instrument consists of single instrument.
 	 * <p>
@@ -78,8 +79,8 @@ public class FinancialInstrumentIdentification7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#IdentifiedSecurity
-	 * SecuritiesIdentification.IdentifiedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentifiedSecurity
+	 * SecuritiesIdentification.mmIdentifiedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +99,22 @@ public class FinancialInstrumentIdentification7Choice {
 	 * definition} = "Instrument consists of single instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Single = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSingle = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.IdentifiedSecurity;
 			isDerived = false;
 			xmlTag = "Sngl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
 			definition = "Instrument consists of single instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentIdentification6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmObject();
 		}
 	};
+	protected BasketDescription3 basket;
 	/**
 	 * Instrument consists of multiple instruments.
 	 * <p>
@@ -124,8 +126,8 @@ public class FinancialInstrumentIdentification7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#IdentifiedSecurity
-	 * SecuritiesIdentification.IdentifiedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentifiedSecurity
+	 * SecuritiesIdentification.mmIdentifiedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,33 +146,49 @@ public class FinancialInstrumentIdentification7Choice {
 	 * definition} = "Instrument consists of multiple instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Basket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBasket = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.IdentifiedSecurity;
 			isDerived = false;
 			xmlTag = "Bskt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
 			definition = "Instrument consists of multiple instruments.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BasketDescription3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BasketDescription3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.Single, com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.Basket);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmSingle, com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmBasket);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentIdentification7Choice";
 				definition = "Choice for identifying the underlying instruments that a derivative can consist of.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentIdentification6Choice getSingle() {
+		return single;
+	}
+
+	public void setSingle(com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice single) {
+		this.single = single;
+	}
+
+	public BasketDescription3 getBasket() {
+		return basket;
+	}
+
+	public void setBasket(BasketDescription3 basket) {
+		this.basket = basket;
 	}
 }

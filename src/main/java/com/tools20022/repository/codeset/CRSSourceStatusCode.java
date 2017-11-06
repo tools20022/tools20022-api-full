@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CRSSourceStatusCode#Calculated
- * CRSSourceStatusCode.Calculated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CRSSourceStatusCode#mmCalculated
+ * CRSSourceStatusCode.mmCalculated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CRSSourceStatusCode#Declared
- * CRSSourceStatusCode.Declared}</li>
+ * {@linkplain com.tools20022.repository.codeset.CRSSourceStatusCode#mmDeclared
+ * CRSSourceStatusCode.mmDeclared}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class CRSSourceStatusCode {
 	 * "Source of the Common Reporting Standard (CRS) status is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMCode Calculated = new MMCode() {
+	public static final MMCode mmCalculated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Calculated";
@@ -118,7 +118,7 @@ public class CRSSourceStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Declared = new MMCode() {
+	public static final MMCode mmDeclared = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declared";
@@ -131,11 +131,11 @@ public class CRSSourceStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CRSSourceStatusCode";
 				definition = "Specifies the source of Common Reporting Standard (CRS) status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSSourceStatusCode.Calculated, com.tools20022.repository.codeset.CRSSourceStatusCode.Declared);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSSourceStatusCode.mmCalculated, com.tools20022.repository.codeset.CRSSourceStatusCode.mmDeclared);
 				derivation_lazy = () -> Arrays.asList(CRSSourceStatus1Code.mmObject());
 			}
 		});

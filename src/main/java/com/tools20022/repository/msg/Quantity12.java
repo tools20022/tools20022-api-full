@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details on the quantity, account and other related information involved in a
@@ -37,14 +38,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity12#SettlementQuantity
- * Quantity12.SettlementQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity12#DenominationChoice
- * Quantity12.DenominationChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity12#CertificateNumber
- * Quantity12.CertificateNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity12#QuantityBreakdown
- * Quantity12.QuantityBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Quantity12#mmSettlementQuantity
+ * Quantity12.mmSettlementQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Quantity12#mmDenominationChoice
+ * Quantity12.mmDenominationChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity12#mmCertificateNumber
+ * Quantity12.mmCertificateNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity12#mmQuantityBreakdown
+ * Quantity12.mmQuantityBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quantity12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity15Choice settlementQuantity;
 	/**
 	 * Total quantity of securities to be settled.
 	 * <p>
@@ -82,8 +86,8 @@ public class Quantity12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementQuantity
-	 * SecuritiesSettlement.SettlementQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+	 * SecuritiesSettlement.mmSettlementQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Quantity12
@@ -101,21 +105,22 @@ public class Quantity12 {
 	 * definition} = "Total quantity of securities to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> Quantity12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementQuantity;
 			isDerived = false;
 			xmlTag = "SttlmQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected RestrictedFINXMax210Text denominationChoice;
 	/**
 	 * Denomination of the security to be received or delivered.
 	 * <p>
@@ -129,8 +134,8 @@ public class Quantity12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#DenominationChoice
-	 * SecuritiesSettlement.DenominationChoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmDenominationChoice
+	 * SecuritiesSettlement.mmDenominationChoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Quantity12
@@ -149,20 +154,21 @@ public class Quantity12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DenominationChoice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmDenominationChoice;
 			componentContext_lazy = () -> Quantity12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.DenominationChoice;
 			isDerived = false;
 			xmlTag = "DnmtnChc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination of the security to be received or delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesCertificate5> certificateNumber;
 	/**
 	 * Unique and unambiguous identifier of a certificate assigned by the
 	 * issuer.
@@ -175,8 +181,8 @@ public class Quantity12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#Number
-	 * SecuritiesCertificate.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmNumber
+	 * SecuritiesCertificate.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Quantity12
@@ -196,20 +202,21 @@ public class Quantity12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CertificateNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> Quantity12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.Number;
 			isDerived = false;
 			xmlTag = "CertNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesCertificate5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuantityBreakdown38> quantityBreakdown;
 	/**
 	 * Breakdown of a quantity into lots such as tax lots, instrument series,
 	 * etc.
@@ -242,33 +249,65 @@ public class Quantity12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity12.mmObject();
 			businessComponentTrace_lazy = () -> LotBreakdown.mmObject();
+			componentContext_lazy = () -> Quantity12.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
 			minOccurs = 0;
-			type_lazy = () -> QuantityBreakdown38.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown38.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity12.SettlementQuantity, com.tools20022.repository.msg.Quantity12.DenominationChoice, com.tools20022.repository.msg.Quantity12.CertificateNumber,
-						com.tools20022.repository.msg.Quantity12.QuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity12.mmSettlementQuantity, com.tools20022.repository.msg.Quantity12.mmDenominationChoice,
+						com.tools20022.repository.msg.Quantity12.mmCertificateNumber, com.tools20022.repository.msg.Quantity12.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quantity12";
 				definition = "Details on the quantity, account and other related information involved in a transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity15Choice getSettlementQuantity() {
+		return settlementQuantity;
+	}
+
+	public void setSettlementQuantity(FinancialInstrumentQuantity15Choice settlementQuantity) {
+		this.settlementQuantity = settlementQuantity;
+	}
+
+	public RestrictedFINXMax210Text getDenominationChoice() {
+		return denominationChoice;
+	}
+
+	public void setDenominationChoice(RestrictedFINXMax210Text denominationChoice) {
+		this.denominationChoice = denominationChoice;
+	}
+
+	public List<SecuritiesCertificate5> getCertificateNumber() {
+		return certificateNumber;
+	}
+
+	public void setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate5> certificateNumber) {
+		this.certificateNumber = certificateNumber;
+	}
+
+	public List<QuantityBreakdown38> getQuantityBreakdown() {
+		return quantityBreakdown;
+	}
+
+	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown38> quantityBreakdown) {
+		this.quantityBreakdown = quantityBreakdown;
 	}
 }

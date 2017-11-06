@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.SettlementPartyRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Infrastructure that may be a component of a clearing house and which
@@ -40,8 +41,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CentralClearingCounterpartyRole#System
- * CentralClearingCounterpartyRole.System}</li>
+ * {@linkplain com.tools20022.repository.entity.CentralClearingCounterpartyRole#mmSystem
+ * CentralClearingCounterpartyRole.mmSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ClearingSystem#CentralClearingCounterparty
- * ClearingSystem.CentralClearingCounterparty}</li>
+ * {@linkplain com.tools20022.repository.entity.ClearingSystem#mmCentralClearingCounterparty
+ * ClearingSystem.mmCentralClearingCounterparty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CentralClearingCounterpartyRole extends SettlementPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.ClearingSystem> system;
 	/**
 	 * Specifies the system which plays a role in the clearing of securities.
 	 * <p>
@@ -85,8 +87,8 @@ public class CentralClearingCounterpartyRole extends SettlementPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ClearingSystem#CentralClearingCounterparty
-	 * ClearingSystem.CentralClearingCounterparty}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClearingSystem#mmCentralClearingCounterparty
+	 * ClearingSystem.mmCentralClearingCounterparty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -111,7 +113,7 @@ public class CentralClearingCounterpartyRole extends SettlementPartyRole {
 	 * "Specifies the system which plays a role in the clearing of securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd System = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CentralClearingCounterpartyRole.mmObject();
 			isDerived = false;
@@ -119,24 +121,32 @@ public class CentralClearingCounterpartyRole extends SettlementPartyRole {
 			name = "System";
 			definition = "Specifies the system which plays a role in the clearing of securities.";
 			minOccurs = 0;
-			type_lazy = () -> ClearingSystem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ClearingSystem.CentralClearingCounterparty;
+			opposite_lazy = () -> com.tools20022.repository.entity.ClearingSystem.mmCentralClearingCounterparty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ClearingSystem.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CentralClearingCounterpartyRole";
 				definition = "Infrastructure that may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingSystem.CentralClearingCounterparty);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingSystem.mmCentralClearingCounterparty);
 				superType_lazy = () -> SettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CentralClearingCounterpartyRole.System);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CentralClearingCounterpartyRole.mmSystem);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ClearingSystem> getSystem() {
+		return system;
+	}
+
+	public void setSystem(List<com.tools20022.repository.entity.ClearingSystem> system) {
+		this.system = system;
 	}
 }

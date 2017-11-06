@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Money;
 import com.tools20022.repository.entity.Security;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the collateral that will be either delivered, returned or
@@ -39,24 +40,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral17#MarginCallRequestIdentification
- * Collateral17.MarginCallRequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral17#mmMarginCallRequestIdentification
+ * Collateral17.mmMarginCallRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral17#MarginCallResponseIdentification
- * Collateral17.MarginCallResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral17#mmMarginCallResponseIdentification
+ * Collateral17.mmMarginCallResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral17#StandardSettlementInstructions
- * Collateral17.StandardSettlementInstructions}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral17#mmStandardSettlementInstructions
+ * Collateral17.mmStandardSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral17#CollateralProposalResponseIdentification
- * Collateral17.CollateralProposalResponseIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral17#mmCollateralProposalResponseIdentification
+ * Collateral17.mmCollateralProposalResponseIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral17#SecuritiesCollateral
- * Collateral17.SecuritiesCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral17#CashCollateral
- * Collateral17.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral17#OtherCollateral
- * Collateral17.OtherCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral17#mmSecuritiesCollateral
+ * Collateral17.mmSecuritiesCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral17#mmCashCollateral
+ * Collateral17.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral17#mmOtherCollateral
+ * Collateral17.mmOtherCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Collateral17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text marginCallRequestIdentification;
 	/**
 	 * Specifies the reference to the unambiguous identification of the margin
 	 * call request.
@@ -114,11 +116,11 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#MarginCallRequestIdentification
-	 * Collateral11.MarginCallRequestIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmMarginCallRequestIdentification
+	 * Collateral11.mmMarginCallRequestIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Collateral17.mmObject();
 			isDerived = false;
@@ -126,12 +128,13 @@ public class Collateral17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Specifies the reference to the unambiguous identification of the margin call request.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.MarginCallRequestIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.mmMarginCallRequestIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text marginCallResponseIdentification;
 	/**
 	 * Specifies the reference to the unambiguous identification of the margin
 	 * call response.
@@ -162,11 +165,11 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#MarginCallResponseIdentification
-	 * Collateral11.MarginCallResponseIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmMarginCallResponseIdentification
+	 * Collateral11.mmMarginCallResponseIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Collateral17.mmObject();
 			isDerived = false;
@@ -174,12 +177,13 @@ public class Collateral17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResponseIdentification";
 			definition = "Specifies the reference to the unambiguous identification of the margin call response.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.MarginCallResponseIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.mmMarginCallResponseIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max140Text standardSettlementInstructions;
 	/**
 	 * Specifies the standard settlement instructions.
 	 * <p>
@@ -192,8 +196,8 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#StandingSettlementInstructions
-	 * CollateralAgreement.StandingSettlementInstructions}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmStandingSettlementInstructions
+	 * CollateralAgreement.mmStandingSettlementInstructions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,25 +216,26 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#StandardSettlementInstructions
-	 * Collateral11.StandardSettlementInstructions}</li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmStandardSettlementInstructions
+	 * Collateral11.mmStandardSettlementInstructions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandardSettlementInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandardSettlementInstructions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmStandingSettlementInstructions;
 			componentContext_lazy = () -> Collateral17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.StandingSettlementInstructions;
 			isDerived = false;
 			xmlTag = "StdSttlmInstrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardSettlementInstructions";
 			definition = "Specifies the standard settlement instructions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.StandardSettlementInstructions;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.mmStandardSettlementInstructions;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max35Text collateralProposalResponseIdentification;
 	/**
 	 * Specifies the reference to the unambiguous identification of the
 	 * collateral proposal response (in case of counter proposal).
@@ -261,11 +266,11 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#CollateralProposalResponseIdentification
-	 * Collateral11.CollateralProposalResponseIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmCollateralProposalResponseIdentification
+	 * Collateral11.mmCollateralProposalResponseIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralProposalResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralProposalResponseIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Collateral17.mmObject();
 			isDerived = false;
@@ -273,12 +278,13 @@ public class Collateral17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalResponseIdentification";
 			definition = "Specifies the reference to the unambiguous identification of the collateral proposal response (in case of counter proposal).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.CollateralProposalResponseIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.mmCollateralProposalResponseIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesCollateral8> securitiesCollateral;
 	/**
 	 * Collateral type is securities.
 	 * <p>
@@ -309,25 +315,26 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#SecuritiesCollateral
-	 * Collateral11.SecuritiesCollateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmSecuritiesCollateral
+	 * Collateral11.mmSecuritiesCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Collateral17.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> Collateral17.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCollateral";
 			definition = "Collateral type is securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.SecuritiesCollateral;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.mmSecuritiesCollateral;
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesCollateral8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashCollateral2> cashCollateral;
 	/**
 	 * Collateral type is cash.
 	 * <p>
@@ -358,25 +365,26 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#CashCollateral
-	 * Collateral11.CashCollateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmCashCollateral
+	 * Collateral11.mmCashCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Collateral17.mmObject();
 			businessComponentTrace_lazy = () -> Money.mmObject();
+			componentContext_lazy = () -> Collateral17.mmObject();
 			isDerived = false;
 			xmlTag = "CshColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCollateral";
 			definition = "Collateral type is cash.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.CashCollateral;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.mmCashCollateral;
 			minOccurs = 0;
-			type_lazy = () -> CashCollateral2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OtherCollateral5> otherCollateral;
 	/**
 	 * Collateral type is other than securities or cash for example letter of
 	 * credit.
@@ -389,8 +397,8 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#Asset
-	 * AssetHolding.Asset}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmAsset
+	 * AssetHolding.mmAsset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -411,34 +419,34 @@ public class Collateral17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Collateral11#OtherCollateral
-	 * Collateral11.OtherCollateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral11#mmOtherCollateral
+	 * Collateral11.mmOtherCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAsset;
 			componentContext_lazy = () -> Collateral17.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.Asset;
 			isDerived = false;
 			xmlTag = "OthrColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCollateral";
 			definition = "Collateral type is other than securities or cash for example letter of credit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.OtherCollateral;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral11.mmOtherCollateral;
 			minOccurs = 0;
-			type_lazy = () -> OtherCollateral5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherCollateral5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral17.MarginCallRequestIdentification, com.tools20022.repository.msg.Collateral17.MarginCallResponseIdentification,
-						com.tools20022.repository.msg.Collateral17.StandardSettlementInstructions, com.tools20022.repository.msg.Collateral17.CollateralProposalResponseIdentification,
-						com.tools20022.repository.msg.Collateral17.SecuritiesCollateral, com.tools20022.repository.msg.Collateral17.CashCollateral, com.tools20022.repository.msg.Collateral17.OtherCollateral);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral17.mmMarginCallRequestIdentification, com.tools20022.repository.msg.Collateral17.mmMarginCallResponseIdentification,
+						com.tools20022.repository.msg.Collateral17.mmStandardSettlementInstructions, com.tools20022.repository.msg.Collateral17.mmCollateralProposalResponseIdentification,
+						com.tools20022.repository.msg.Collateral17.mmSecuritiesCollateral, com.tools20022.repository.msg.Collateral17.mmCashCollateral, com.tools20022.repository.msg.Collateral17.mmOtherCollateral);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Collateral17";
 				definition = "Provides details on the collateral that will be either delivered, returned or both.";
@@ -446,5 +454,61 @@ public class Collateral17 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMarginCallRequestIdentification() {
+		return marginCallRequestIdentification;
+	}
+
+	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	}
+
+	public Max35Text getMarginCallResponseIdentification() {
+		return marginCallResponseIdentification;
+	}
+
+	public void setMarginCallResponseIdentification(Max35Text marginCallResponseIdentification) {
+		this.marginCallResponseIdentification = marginCallResponseIdentification;
+	}
+
+	public Max140Text getStandardSettlementInstructions() {
+		return standardSettlementInstructions;
+	}
+
+	public void setStandardSettlementInstructions(Max140Text standardSettlementInstructions) {
+		this.standardSettlementInstructions = standardSettlementInstructions;
+	}
+
+	public Max35Text getCollateralProposalResponseIdentification() {
+		return collateralProposalResponseIdentification;
+	}
+
+	public void setCollateralProposalResponseIdentification(Max35Text collateralProposalResponseIdentification) {
+		this.collateralProposalResponseIdentification = collateralProposalResponseIdentification;
+	}
+
+	public List<SecuritiesCollateral8> getSecuritiesCollateral() {
+		return securitiesCollateral;
+	}
+
+	public void setSecuritiesCollateral(List<com.tools20022.repository.msg.SecuritiesCollateral8> securitiesCollateral) {
+		this.securitiesCollateral = securitiesCollateral;
+	}
+
+	public List<CashCollateral2> getCashCollateral() {
+		return cashCollateral;
+	}
+
+	public void setCashCollateral(List<com.tools20022.repository.msg.CashCollateral2> cashCollateral) {
+		this.cashCollateral = cashCollateral;
+	}
+
+	public List<OtherCollateral5> getOtherCollateral() {
+		return otherCollateral;
+	}
+
+	public void setOtherCollateral(List<com.tools20022.repository.msg.OtherCollateral5> otherCollateral) {
+		this.otherCollateral = otherCollateral;
 	}
 }

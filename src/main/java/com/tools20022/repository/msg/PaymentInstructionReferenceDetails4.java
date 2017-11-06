@@ -37,29 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#PaymentInstructionReference
- * PaymentInstructionReferenceDetails4.PaymentInstructionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmPaymentInstructionReference
+ * PaymentInstructionReferenceDetails4.mmPaymentInstructionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#InterbankSettlementAmount
- * PaymentInstructionReferenceDetails4.InterbankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmInterbankSettlementAmount
+ * PaymentInstructionReferenceDetails4.mmInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#InterbankValueDate
- * PaymentInstructionReferenceDetails4.InterbankValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmInterbankValueDate
+ * PaymentInstructionReferenceDetails4.mmInterbankValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#PaymentMethod
- * PaymentInstructionReferenceDetails4.PaymentMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmPaymentMethod
+ * PaymentInstructionReferenceDetails4.mmPaymentMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#InstructingAgentIdentification
- * PaymentInstructionReferenceDetails4.InstructingAgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmInstructingAgentIdentification
+ * PaymentInstructionReferenceDetails4.mmInstructingAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#InstructedAgentIdentification
- * PaymentInstructionReferenceDetails4.InstructedAgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmInstructedAgentIdentification
+ * PaymentInstructionReferenceDetails4.mmInstructedAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#EntryType
- * PaymentInstructionReferenceDetails4.EntryType}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmEntryType
+ * PaymentInstructionReferenceDetails4.mmEntryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#RelatedReference
- * PaymentInstructionReferenceDetails4.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmRelatedReference
+ * PaymentInstructionReferenceDetails4.mmRelatedReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInstructionReferenceDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text paymentInstructionReference;
 	/**
 	 * Unique and unambiguous identifier for a payment instruction, as assigned
 	 * by the clearing agent or the initiating party.
@@ -98,8 +99,8 @@ public class PaymentInstructionReferenceDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,20 +121,21 @@ public class PaymentInstructionReferenceDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInstructionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInstructionReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "PmtInstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionReference";
 			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount interbankSettlementAmount;
 	/**
 	 * Amount of money moved between the instructing agent and the instructed
 	 * agent.
@@ -148,8 +150,8 @@ public class PaymentInstructionReferenceDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,20 +172,21 @@ public class PaymentInstructionReferenceDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate interbankValueDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -198,8 +201,8 @@ public class PaymentInstructionReferenceDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -220,20 +223,21 @@ public class PaymentInstructionReferenceDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "IntrBkValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankValueDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PaymentOrigin1Choice paymentMethod;
 	/**
 	 * The message type with which the instruction has been initiated.
 	 * <p>
@@ -247,8 +251,8 @@ public class PaymentInstructionReferenceDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentInstrument
-	 * Payment.PaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentInstrument
+	 * Payment.mmPaymentInstrument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -268,20 +272,21 @@ public class PaymentInstructionReferenceDetails4 {
 	 * "The message type with which the instruction has been initiated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentInstrument;
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentInstrument;
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "The message type with which the instruction has been initiated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PaymentOrigin1Choice.mmObject();
 		}
 	};
+	protected BICIdentifier instructingAgentIdentification;
 	/**
 	 * The identification of the instructing agent that transmitted the payment
 	 * instruction.
@@ -296,8 +301,8 @@ public class PaymentInstructionReferenceDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -318,20 +323,21 @@ public class PaymentInstructionReferenceDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructingAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructingAgentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "InstgAgtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentIdentification";
 			definition = "The identification of the instructing agent that transmitted the payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier instructedAgentIdentification;
 	/**
 	 * The identification of the instructed agent in the payment instruction.
 	 * <p>
@@ -345,8 +351,8 @@ public class PaymentInstructionReferenceDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -366,20 +372,21 @@ public class PaymentInstructionReferenceDetails4 {
 	 * "The identification of the instructed agent in the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAgentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "InstdAgtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgentIdentification";
 			definition = "The identification of the instructed agent in the payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected EntryTypeIdentifier entryType;
 	/**
 	 * An optional qualifier providing additional system specific information
 	 * about the entry.
@@ -413,7 +420,7 @@ public class PaymentInstructionReferenceDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
 			isDerived = false;
@@ -421,11 +428,12 @@ public class PaymentInstructionReferenceDetails4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryType";
 			definition = "An optional qualifier providing additional system specific information about the entry.\n\nUsage:";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EntryTypeIdentifier.mmObject();
 		}
 	};
+	protected Max35Text relatedReference;
 	/**
 	 * The related reference as stipulated in the payment instruction.
 	 * <p>
@@ -454,7 +462,7 @@ public class PaymentInstructionReferenceDetails4 {
 	 * "The related reference as stipulated in the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails4.mmObject();
 			isDerived = false;
@@ -462,8 +470,8 @@ public class PaymentInstructionReferenceDetails4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "The related reference as stipulated in the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -471,18 +479,82 @@ public class PaymentInstructionReferenceDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.PaymentInstructionReference,
-						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.InterbankSettlementAmount, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.InterbankValueDate,
-						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.PaymentMethod, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.InstructingAgentIdentification,
-						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.InstructedAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.EntryType,
-						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.RelatedReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmPaymentInstructionReference,
+						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInterbankValueDate,
+						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInstructingAgentIdentification,
+						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInstructedAgentIdentification, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmEntryType,
+						com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmRelatedReference);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentInstructionReferenceDetails4";
 				definition = "Identifies a payment instruction by a set of characteristics  (as per EBA system requirements) which provides an unambiguous identification of the instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPaymentInstructionReference() {
+		return paymentInstructionReference;
+	}
+
+	public void setPaymentInstructionReference(Max35Text paymentInstructionReference) {
+		this.paymentInstructionReference = paymentInstructionReference;
+	}
+
+	public ImpliedCurrencyAndAmount getInterbankSettlementAmount() {
+		return interbankSettlementAmount;
+	}
+
+	public void setInterbankSettlementAmount(ImpliedCurrencyAndAmount interbankSettlementAmount) {
+		this.interbankSettlementAmount = interbankSettlementAmount;
+	}
+
+	public ISODate getInterbankValueDate() {
+		return interbankValueDate;
+	}
+
+	public void setInterbankValueDate(ISODate interbankValueDate) {
+		this.interbankValueDate = interbankValueDate;
+	}
+
+	public PaymentOrigin1Choice getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	public BICIdentifier getInstructingAgentIdentification() {
+		return instructingAgentIdentification;
+	}
+
+	public void setInstructingAgentIdentification(BICIdentifier instructingAgentIdentification) {
+		this.instructingAgentIdentification = instructingAgentIdentification;
+	}
+
+	public BICIdentifier getInstructedAgentIdentification() {
+		return instructedAgentIdentification;
+	}
+
+	public void setInstructedAgentIdentification(BICIdentifier instructedAgentIdentification) {
+		this.instructedAgentIdentification = instructedAgentIdentification;
+	}
+
+	public EntryTypeIdentifier getEntryType() {
+		return entryType;
+	}
+
+	public void setEntryType(EntryTypeIdentifier entryType) {
+		this.entryType = entryType;
+	}
+
+	public Max35Text getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(Max35Text relatedReference) {
+		this.relatedReference = relatedReference;
 	}
 }

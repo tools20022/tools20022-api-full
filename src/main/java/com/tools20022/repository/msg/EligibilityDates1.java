@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EligibilityDates1#EntitlementFixingDate
- * EligibilityDates1.EntitlementFixingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.EligibilityDates1#mmEntitlementFixingDate
+ * EligibilityDates1.mmEntitlementFixingDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,24 +46,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#Eligibility
- * MeetingEntitlementNotificationV02.Eligibility}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#mmEligibility
+ * MeetingEntitlementNotificationV02.mmEligibility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#Eligibility
- * MeetingEntitlementNotificationV03.Eligibility}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmEligibility
+ * MeetingEntitlementNotificationV03.mmEligibility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#Eligibility
- * MeetingEntitlementNotificationV04.Eligibility}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#mmEligibility
+ * MeetingEntitlementNotificationV04.mmEligibility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05#Eligibility
- * MeetingEntitlementNotificationV05.Eligibility}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05#mmEligibility
+ * MeetingEntitlementNotificationV05.mmEligibility}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EligibilityDates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate entitlementFixingDate;
 	/**
 	 * Date at which the positions are struck to note which parties will receive
 	 * the entitlement, e.g. record date, book close date...
@@ -90,8 +91,8 @@ public class EligibilityDates1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#EntitlementFixingDate
-	 * MeetingEntitlement.EntitlementFixingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementFixingDate
+	 * MeetingEntitlement.mmEntitlementFixingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,17 +113,17 @@ public class EligibilityDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntitlementFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntitlementFixingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementFixingDate;
 			componentContext_lazy = () -> EligibilityDates1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.EntitlementFixingDate;
 			isDerived = false;
 			xmlTag = "EntitlmntFxgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementFixingDate";
 			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date...";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -130,16 +131,24 @@ public class EligibilityDates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibilityDates1.EntitlementFixingDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibilityDates1.mmEntitlementFixingDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmEligibility, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmEligibility,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmEligibility, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmEligibility);
 				trace_lazy = () -> MeetingNotice.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.Eligibility, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.Eligibility,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.Eligibility, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.Eligibility);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EligibilityDates1";
 				definition = "Dates determining the entitlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getEntitlementFixingDate() {
+		return entitlementFixingDate;
+	}
+
+	public void setEntitlementFixingDate(ISODate entitlementFixingDate) {
+		this.entitlementFixingDate = entitlementFixingDate;
 	}
 }

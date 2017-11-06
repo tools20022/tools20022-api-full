@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.UndertakingDocument;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Document presented for examination.
@@ -37,24 +38,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#CompleteIndicator
- * DemandDocumentation1.CompleteIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#mmCompleteIndicator
+ * DemandDocumentation1.mmCompleteIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#CompletionInformation
- * DemandDocumentation1.CompletionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#mmCompletionInformation
+ * DemandDocumentation1.mmCompletionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#EnclosedFile
- * DemandDocumentation1.EnclosedFile}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#mmEnclosedFile
+ * DemandDocumentation1.mmEnclosedFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#DemandNarrative
- * DemandDocumentation1.DemandNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.DemandDocumentation1#mmDemandNarrative
+ * DemandDocumentation1.mmDemandNarrative}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DemandDocumentation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator completeIndicator;
 	/**
 	 * Indication as to whether the presentation is complete.
 	 * <p>
@@ -96,7 +98,7 @@ public class DemandDocumentation1 {
 	 * definition} = "Indication as to whether the presentation is complete."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CompleteIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompleteIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class DemandDocumentation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteIndicator";
 			definition = "Indication as to whether the presentation is complete.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max2000Text completionInformation;
 	/**
 	 * Information related to an incomplete presentation.
 	 * <p>
@@ -136,7 +139,7 @@ public class DemandDocumentation1 {
 	 * definition} = "Information related to an incomplete presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CompletionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompletionInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
@@ -144,11 +147,12 @@ public class DemandDocumentation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionInformation";
 			definition = "Information related to an incomplete presentation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
 	/**
 	 * Document or template enclosed in the demand.
 	 * <p>
@@ -179,20 +183,21 @@ public class DemandDocumentation1 {
 	 * definition} = "Document or template enclosed in the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EnclosedFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingDocument.mmObject();
+			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "NclsdFile";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnclosedFile";
 			definition = "Document or template enclosed in the demand.";
 			minOccurs = 0;
-			type_lazy = () -> Document9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 		}
 	};
+	protected Max20000Text demandNarrative;
 	/**
 	 * Narrative text constituting the demand.
 	 * <p>
@@ -221,7 +226,7 @@ public class DemandDocumentation1 {
 	 * definition} = "Narrative text constituting the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DemandNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDemandNarrative = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
@@ -229,8 +234,8 @@ public class DemandDocumentation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandNarrative";
 			definition = "Narrative text constituting the demand.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
 	};
@@ -238,14 +243,46 @@ public class DemandDocumentation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DemandDocumentation1.CompleteIndicator, com.tools20022.repository.msg.DemandDocumentation1.CompletionInformation,
-						com.tools20022.repository.msg.DemandDocumentation1.EnclosedFile, com.tools20022.repository.msg.DemandDocumentation1.DemandNarrative);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DemandDocumentation1.mmCompleteIndicator, com.tools20022.repository.msg.DemandDocumentation1.mmCompletionInformation,
+						com.tools20022.repository.msg.DemandDocumentation1.mmEnclosedFile, com.tools20022.repository.msg.DemandDocumentation1.mmDemandNarrative);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DemandDocumentation1";
 				definition = "Document presented for examination.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getCompleteIndicator() {
+		return completeIndicator;
+	}
+
+	public void setCompleteIndicator(YesNoIndicator completeIndicator) {
+		this.completeIndicator = completeIndicator;
+	}
+
+	public Max2000Text getCompletionInformation() {
+		return completionInformation;
+	}
+
+	public void setCompletionInformation(Max2000Text completionInformation) {
+		this.completionInformation = completionInformation;
+	}
+
+	public List<Document9> getEnclosedFile() {
+		return enclosedFile;
+	}
+
+	public void setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+		this.enclosedFile = enclosedFile;
+	}
+
+	public Max20000Text getDemandNarrative() {
+		return demandNarrative;
+	}
+
+	public void setDemandNarrative(Max20000Text demandNarrative) {
+		this.demandNarrative = demandNarrative;
 	}
 }

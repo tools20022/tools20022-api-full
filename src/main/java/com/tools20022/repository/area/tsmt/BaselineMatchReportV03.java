@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,51 +74,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#ReportIdentification
- * BaselineMatchReportV03.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmReportIdentification
+ * BaselineMatchReportV03.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#TransactionIdentification
- * BaselineMatchReportV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmTransactionIdentification
+ * BaselineMatchReportV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#EstablishedBaselineIdentification
- * BaselineMatchReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmEstablishedBaselineIdentification
+ * BaselineMatchReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#TransactionStatus
- * BaselineMatchReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmTransactionStatus
+ * BaselineMatchReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#UserTransactionReference
- * BaselineMatchReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmUserTransactionReference
+ * BaselineMatchReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#Buyer
- * BaselineMatchReportV03.Buyer}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmBuyer
+ * BaselineMatchReportV03.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#Seller
- * BaselineMatchReportV03.Seller}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmSeller
+ * BaselineMatchReportV03.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#BuyerBank
- * BaselineMatchReportV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmBuyerBank
+ * BaselineMatchReportV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#SellerBank
- * BaselineMatchReportV03.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmSellerBank
+ * BaselineMatchReportV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#BaselineEstablishmentTrials
- * BaselineMatchReportV03.BaselineEstablishmentTrials}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmBaselineEstablishmentTrials
+ * BaselineMatchReportV03.mmBaselineEstablishmentTrials}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#ComparedDocumentReference
- * BaselineMatchReportV03.ComparedDocumentReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmComparedDocumentReference
+ * BaselineMatchReportV03.mmComparedDocumentReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#Report
- * BaselineMatchReportV03.Report}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmReport
+ * BaselineMatchReportV03.mmReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#RequestForAction
- * BaselineMatchReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmRequestForAction
+ * BaselineMatchReportV03.mmRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#identifier
- * BaselineMatchReportV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.010.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,6 +132,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BaselineMatchReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 reportIdentification;
 	/**
 	 * Identifies the report.
 	 * <p>
@@ -156,17 +156,18 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Identifies the report. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -194,17 +195,18 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * baseline when it is established.
@@ -231,17 +233,18 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 	};
+	protected TransactionStatus4 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -266,17 +269,18 @@ public class BaselineMatchReportV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 	};
+	protected List<DocumentIdentification5> userTransactionReference;
 	/**
 	 * Reference to the transaction for each financial institution which is a
 	 * party to the transaction.
@@ -303,17 +307,18 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 	};
+	protected PartyIdentification26 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -338,17 +343,18 @@ public class BaselineMatchReportV03 {
 	 * "Party that buys goods or services, or a financial instrument. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Buyer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 	};
+	protected PartyIdentification26 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -373,17 +379,18 @@ public class BaselineMatchReportV03 {
 	 * "Party that sells goods or services, or a financial instrument. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Seller = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 	};
+	protected BICIdentification1 buyerBank;
 	/**
 	 * The financial institution of the buyer, uniquely identified by its BIC.
 	 * <p>
@@ -409,17 +416,18 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected BICIdentification1 sellerBank;
 	/**
 	 * The financial institution of the seller, uniquely identified by its BIC.
 	 * <p>
@@ -445,17 +453,18 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected Limit1 baselineEstablishmentTrials;
 	/**
 	 * Specifies the number of matching trials for a baseline.
 	 * <p>
@@ -477,17 +486,18 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Specifies the number of matching trials for a baseline."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BaselineEstablishmentTrials = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBaselineEstablishmentTrials = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BaselnEstblishmtTrils";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaselineEstablishmentTrials";
 			definition = "Specifies the number of matching trials for a baseline.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Limit1.mmObject();
 		}
 	};
+	protected List<DocumentIdentification4> comparedDocumentReference;
 	/**
 	 * Identifies the two baselines compared in this report.
 	 * <p>
@@ -511,17 +521,18 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Identifies the two baselines compared in this report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ComparedDocumentReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmComparedDocumentReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmpardDocRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComparedDocumentReference";
 			definition = "Identifies the two baselines compared in this report.";
-			minOccurs = 2;
 			maxOccurs = 2;
+			minOccurs = 2;
 			complexType_lazy = () -> DocumentIdentification4.mmObject();
 		}
 	};
+	protected MisMatchReport3 report;
 	/**
 	 * Description of the differences between the two proposed baselines
 	 * <p>
@@ -545,17 +556,18 @@ public class BaselineMatchReportV03 {
 	 * "Description of the differences between the two proposed baselines"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Report = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "Description of the differences between the two proposed baselines";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MisMatchReport3.mmObject();
 		}
 	};
+	protected PendingActivity2 requestForAction;
 	/**
 	 * Information on the next processing step required.
 	 * <p>
@@ -579,42 +591,15 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "010";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -628,15 +613,126 @@ public class BaselineMatchReportV03 {
 				rootElement = "Document";
 				xmlTag = "BaselnMtchRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.UserTransactionReference, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.Buyer,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.Seller, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.BuyerBank, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.SellerBank,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.BaselineEstablishmentTrials, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.ComparedDocumentReference,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.Report, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.RequestForAction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.BaselineMatchReportV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyer,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSeller, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSellerBank,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBaselineEstablishmentTrials, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmComparedDocumentReference,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmReport, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmRequestForAction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "010";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification3 getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification;
+	}
+
+	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	}
+
+	public TransactionStatus4 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public PartyIdentification26 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(PartyIdentification26 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PartyIdentification26 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(PartyIdentification26 seller) {
+		this.seller = seller;
+	}
+
+	public BICIdentification1 getBuyerBank() {
+		return buyerBank;
+	}
+
+	public void setBuyerBank(BICIdentification1 buyerBank) {
+		this.buyerBank = buyerBank;
+	}
+
+	public BICIdentification1 getSellerBank() {
+		return sellerBank;
+	}
+
+	public void setSellerBank(BICIdentification1 sellerBank) {
+		this.sellerBank = sellerBank;
+	}
+
+	public Limit1 getBaselineEstablishmentTrials() {
+		return baselineEstablishmentTrials;
+	}
+
+	public void setBaselineEstablishmentTrials(Limit1 baselineEstablishmentTrials) {
+		this.baselineEstablishmentTrials = baselineEstablishmentTrials;
+	}
+
+	public List<DocumentIdentification4> getComparedDocumentReference() {
+		return comparedDocumentReference;
+	}
+
+	public void setComparedDocumentReference(List<DocumentIdentification4> comparedDocumentReference) {
+		this.comparedDocumentReference = comparedDocumentReference;
+	}
+
+	public MisMatchReport3 getReport() {
+		return report;
+	}
+
+	public void setReport(MisMatchReport3 report) {
+		this.report = report;
+	}
+
+	public PendingActivity2 getRequestForAction() {
+		return requestForAction;
+	}
+
+	public void setRequestForAction(PendingActivity2 requestForAction) {
+		this.requestForAction = requestForAction;
 	}
 }

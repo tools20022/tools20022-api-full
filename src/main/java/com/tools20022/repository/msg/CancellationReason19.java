@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CancellationReason19#Code
- * CancellationReason19.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CancellationReason19#mmCode
+ * CancellationReason19.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationReason19#CorporateActionEventIdentification
- * CancellationReason19.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationReason19#mmCorporateActionEventIdentification
+ * CancellationReason19.mmCorporateActionEventIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05#CancellationReason
- * SecuritiesTransactionCancellationRequest002V05.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05#mmCancellationReason
+ * SecuritiesTransactionCancellationRequest002V05.mmCancellationReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationReason19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationReason24Choice code;
 	/**
 	 * Specifies the reason why the instruction is cancelled.
 	 * <p>
@@ -86,8 +87,8 @@ public class CancellationReason19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,26 +108,27 @@ public class CancellationReason19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationReason13#Code
-	 * CancellationReason13.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationReason13#mmCode
+	 * CancellationReason13.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancellationReason19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction is cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationReason13.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationReason13.mmCode;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationReason24Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CancellationReason24Choice.mmObject();
 		}
 	};
+	protected RestrictedFINMax16Text corporateActionEventIdentification;
 	/**
 	 * Provides the corporate action event identification of the event that
 	 * triggered the cancellation.
@@ -141,8 +143,8 @@ public class CancellationReason19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,22 +166,22 @@ public class CancellationReason19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationReason13#CorporateActionEventIdentification
-	 * CancellationReason13.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationReason13#mmCorporateActionEventIdentification
+	 * CancellationReason13.mmCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> CancellationReason19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Provides the corporate action event identification of the event that triggered the cancellation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationReason13.CorporateActionEventIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationReason13.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
 		}
 	};
@@ -187,15 +189,31 @@ public class CancellationReason19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReason19.Code, com.tools20022.repository.msg.CancellationReason19.CorporateActionEventIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReason19.mmCode, com.tools20022.repository.msg.CancellationReason19.mmCorporateActionEventIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05.mmCancellationReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05.CancellationReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationReason19";
 				definition = "Specifies the reason why the instruction or request is cancelled.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationReason24Choice getCode() {
+		return code;
+	}
+
+	public void setCode(CancellationReason24Choice code) {
+		this.code = code;
+	}
+
+	public RestrictedFINMax16Text getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification;
+	}
+
+	public void setCorporateActionEventIdentification(RestrictedFINMax16Text corporateActionEventIdentification) {
+		this.corporateActionEventIdentification = corporateActionEventIdentification;
 	}
 }

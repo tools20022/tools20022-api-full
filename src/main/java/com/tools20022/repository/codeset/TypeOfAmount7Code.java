@@ -33,27 +33,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfAmountCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#Fees
- * TypeOfAmount7Code.Fees}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmFees
+ * TypeOfAmount7Code.mmFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#IssuerFees
- * TypeOfAmount7Code.IssuerFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmIssuerFees
+ * TypeOfAmount7Code.mmIssuerFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#InterchangeFees
- * TypeOfAmount7Code.InterchangeFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmInterchangeFees
+ * TypeOfAmount7Code.mmInterchangeFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#ProcessingFees
- * TypeOfAmount7Code.ProcessingFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmProcessingFees
+ * TypeOfAmount7Code.mmProcessingFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#InternationalServiceAssessmentFees
- * TypeOfAmount7Code.InternationalServiceAssessmentFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmInternationalServiceAssessmentFees
+ * TypeOfAmount7Code.mmInternationalServiceAssessmentFees}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +83,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "Fees"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fees = new MMCode() {
+	public static final MMCode mmFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
@@ -106,7 +106,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "IssuerFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerFees = new MMCode() {
+	public static final MMCode mmIssuerFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerFees";
@@ -129,7 +129,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "InterchangeFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterchangeFees = new MMCode() {
+	public static final MMCode mmInterchangeFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterchangeFees";
@@ -152,7 +152,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "ProcessingFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingFees = new MMCode() {
+	public static final MMCode mmProcessingFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingFees";
@@ -175,7 +175,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "InternationalServiceAssessmentFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode InternationalServiceAssessmentFees = new MMCode() {
+	public static final MMCode mmInternationalServiceAssessmentFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalServiceAssessmentFees";
@@ -186,12 +186,13 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount7Code";
 				definition = "Type or class of amount. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount7Code.Fees, com.tools20022.repository.codeset.TypeOfAmount7Code.IssuerFees, com.tools20022.repository.codeset.TypeOfAmount7Code.InterchangeFees,
-						com.tools20022.repository.codeset.TypeOfAmount7Code.ProcessingFees, com.tools20022.repository.codeset.TypeOfAmount7Code.InternationalServiceAssessmentFees);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount7Code.mmFees, com.tools20022.repository.codeset.TypeOfAmount7Code.mmIssuerFees,
+						com.tools20022.repository.codeset.TypeOfAmount7Code.mmInterchangeFees, com.tools20022.repository.codeset.TypeOfAmount7Code.mmProcessingFees,
+						com.tools20022.repository.codeset.TypeOfAmount7Code.mmInternationalServiceAssessmentFees);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

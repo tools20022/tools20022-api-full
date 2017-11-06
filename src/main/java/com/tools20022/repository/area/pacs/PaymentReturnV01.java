@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.PaymentTransactionInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -71,21 +72,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01#GroupHeader
- * PaymentReturnV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01#mmGroupHeader
+ * PaymentReturnV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01#OriginalGroupInformation
- * PaymentReturnV01.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01#mmOriginalGroupInformation
+ * PaymentReturnV01.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01#TransactionInformation
- * PaymentReturnV01.TransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01#mmTransactionInformation
+ * PaymentReturnV01.mmTransactionInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV01#identifier
- * PaymentReturnV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentReturnV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader6 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -133,17 +133,18 @@ public class PaymentReturnV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader6.mmObject();
 		}
 	};
+	protected OriginalGroupInformation2 originalGroupInformation;
 	/**
 	 * Information concerning the original group of transactions, to which the
 	 * message refers.
@@ -170,17 +171,18 @@ public class PaymentReturnV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OriginalGroupInformation2.mmObject();
 		}
 	};
+	protected List<PaymentTransactionInformation2> transactionInformation;
 	/**
 	 * Information concerning the original transactions, to which the return
 	 * message refers.
@@ -207,7 +209,7 @@ public class PaymentReturnV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,33 +217,6 @@ public class PaymentReturnV01 {
 			definition = "Information concerning the original transactions, to which the return message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransactionInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "004";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -257,11 +232,42 @@ public class PaymentReturnV01 {
 				xmlTag = "pacs.004.001.01";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
 				xmlName = "pacs.004.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV01.GroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV01.OriginalGroupInformation,
-						com.tools20022.repository.area.pacs.PaymentReturnV01.TransactionInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV01.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV01.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.PaymentReturnV01.mmTransactionInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "004";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader6 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader6 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalGroupInformation2 getOriginalGroupInformation() {
+		return originalGroupInformation;
+	}
+
+	public void setOriginalGroupInformation(OriginalGroupInformation2 originalGroupInformation) {
+		this.originalGroupInformation = originalGroupInformation;
+	}
+
+	public List<PaymentTransactionInformation2> getTransactionInformation() {
+		return transactionInformation;
+	}
+
+	public void setTransactionInformation(List<PaymentTransactionInformation2> transactionInformation) {
+		this.transactionInformation = transactionInformation;
 	}
 }

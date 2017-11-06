@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevel1Code#SingleEuroPaymentsArea
- * ServiceLevel1Code.SingleEuroPaymentsArea}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevel1Code#mmSingleEuroPaymentsArea
+ * ServiceLevel1Code.mmSingleEuroPaymentsArea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevel1Code#SameDayValue
- * ServiceLevel1Code.SameDayValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevel1Code#mmSameDayValue
+ * ServiceLevel1Code.mmSameDayValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevel1Code#EBAPriorityService
- * ServiceLevel1Code.EBAPriorityService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevel1Code#mmEBAPriorityService
+ * ServiceLevel1Code.mmEBAPriorityService}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	 * name} = "SingleEuroPaymentsArea"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleEuroPaymentsArea = new MMCode() {
+	public static final MMCode mmSingleEuroPaymentsArea = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleEuroPaymentsArea";
@@ -108,7 +108,7 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	 * name} = "SameDayValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode SameDayValue = new MMCode() {
+	public static final MMCode mmSameDayValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameDayValue";
@@ -131,7 +131,7 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	 * name} = "EBAPriorityService"</li>
 	 * </ul>
 	 */
-	public static final MMCode EBAPriorityService = new MMCode() {
+	public static final MMCode mmEBAPriorityService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAPriorityService";
@@ -142,13 +142,13 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEPA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel1Code";
 				definition = "Specifies the pre-agreed level of service between the parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel1Code.SingleEuroPaymentsArea, com.tools20022.repository.codeset.ServiceLevel1Code.SameDayValue,
-						com.tools20022.repository.codeset.ServiceLevel1Code.EBAPriorityService);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel1Code.mmSingleEuroPaymentsArea, com.tools20022.repository.codeset.ServiceLevel1Code.mmSameDayValue,
+						com.tools20022.repository.codeset.ServiceLevel1Code.mmEBAPriorityService);
 				trace_lazy = () -> ServiceLevelCode.mmObject();
 			}
 		});

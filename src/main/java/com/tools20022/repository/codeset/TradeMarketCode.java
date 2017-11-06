@@ -29,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#NAFTA
- * TradeMarketCode.NAFTA}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmNAFTA
+ * TradeMarketCode.mmNAFTA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#International
- * TradeMarketCode.International}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmInternational
+ * TradeMarketCode.mmInternational}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#FrenchDomTom
- * TradeMarketCode.FrenchDomTom}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmFrenchDomTom
+ * TradeMarketCode.mmFrenchDomTom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#EuroDomestic
- * TradeMarketCode.EuroDomestic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#Domestic
- * TradeMarketCode.Domestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmEuroDomestic
+ * TradeMarketCode.mmEuroDomestic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmDomestic
+ * TradeMarketCode.mmDomestic}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,7 +94,7 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NAFTA = new MMCode() {
+	public static final MMCode mmNAFTA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NAFTA";
@@ -127,7 +127,7 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode International = new MMCode() {
+	public static final MMCode mmInternational = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "International";
@@ -160,7 +160,7 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FrenchDomTom = new MMCode() {
+	public static final MMCode mmFrenchDomTom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FrenchDomTom";
@@ -194,7 +194,7 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EuroDomestic = new MMCode() {
+	public static final MMCode mmEuroDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EuroDomestic";
@@ -227,7 +227,7 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Domestic = new MMCode() {
+	public static final MMCode mmDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Domestic";
@@ -240,12 +240,12 @@ public class TradeMarketCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeMarketCode";
 				definition = "Specifies a code for a trade market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeMarketCode.NAFTA, com.tools20022.repository.codeset.TradeMarketCode.International, com.tools20022.repository.codeset.TradeMarketCode.FrenchDomTom,
-						com.tools20022.repository.codeset.TradeMarketCode.EuroDomestic, com.tools20022.repository.codeset.TradeMarketCode.Domestic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeMarketCode.mmNAFTA, com.tools20022.repository.codeset.TradeMarketCode.mmInternational, com.tools20022.repository.codeset.TradeMarketCode.mmFrenchDomTom,
+						com.tools20022.repository.codeset.TradeMarketCode.mmEuroDomestic, com.tools20022.repository.codeset.TradeMarketCode.mmDomestic);
 				derivation_lazy = () -> Arrays.asList(TradeMarket1Code.mmObject());
 			}
 		});

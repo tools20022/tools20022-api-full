@@ -30,10 +30,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#Failure
- * DeliveryStatusCode.Failure}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#Success
- * DeliveryStatusCode.Success}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#mmFailure
+ * DeliveryStatusCode.mmFailure}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#mmSuccess
+ * DeliveryStatusCode.mmSuccess}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +86,7 @@ public class DeliveryStatusCode {
 	 * definition} = "Delivery failed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Failure = new MMCode() {
+	public static final MMCode mmFailure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
@@ -114,7 +116,7 @@ public class DeliveryStatusCode {
 	 * definition} = "Delivery succeeded."</li>
 	 * </ul>
 	 */
-	public static final MMCode Success = new MMCode() {
+	public static final MMCode mmSuccess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
@@ -127,11 +129,11 @@ public class DeliveryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeliveryStatusCode";
 				definition = "Provides an explicit indication whether the delivery attempt resulted in success or failure. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryStatusCode.Failure, com.tools20022.repository.codeset.DeliveryStatusCode.Success);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryStatusCode.mmFailure, com.tools20022.repository.codeset.DeliveryStatusCode.mmSuccess);
 				derivation_lazy = () -> Arrays.asList(DeliveryStatus1Code.mmObject());
 			}
 		});

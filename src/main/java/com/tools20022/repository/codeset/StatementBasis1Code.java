@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementBasis1Code#Contractual
- * StatementBasis1Code.Contractual}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementBasis1Code#mmContractual
+ * StatementBasis1Code.mmContractual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementBasis1Code#Settled
- * StatementBasis1Code.Settled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.StatementBasis1Code#Traded
- * StatementBasis1Code.Traded}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementBasis1Code#mmSettled
+ * StatementBasis1Code.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.StatementBasis1Code#mmTraded
+ * StatementBasis1Code.mmTraded}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +85,7 @@ public class StatementBasis1Code extends StatementBasisCode {
 	 * name} = "Contractual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Contractual = new MMCode() {
+	public static final MMCode mmContractual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contractual";
@@ -107,7 +108,7 @@ public class StatementBasis1Code extends StatementBasisCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -130,7 +131,7 @@ public class StatementBasis1Code extends StatementBasisCode {
 	 * name} = "Traded"</li>
 	 * </ul>
 	 */
-	public static final MMCode Traded = new MMCode() {
+	public static final MMCode mmTraded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traded";
@@ -141,12 +142,13 @@ public class StatementBasis1Code extends StatementBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CONT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementBasis1Code";
 				definition = "Specifies the type of balances on which the statement is prepared.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementBasis1Code.Contractual, com.tools20022.repository.codeset.StatementBasis1Code.Settled, com.tools20022.repository.codeset.StatementBasis1Code.Traded);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementBasis1Code.mmContractual, com.tools20022.repository.codeset.StatementBasis1Code.mmSettled,
+						com.tools20022.repository.codeset.StatementBasis1Code.mmTraded);
 				trace_lazy = () -> StatementBasisCode.mmObject();
 			}
 		});

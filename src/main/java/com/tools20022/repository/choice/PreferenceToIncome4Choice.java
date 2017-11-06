@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreferenceToIncome4Choice#Code
- * PreferenceToIncome4Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PreferenceToIncome4Choice#mmCode
+ * PreferenceToIncome4Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreferenceToIncome4Choice#Proprietary
- * PreferenceToIncome4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PreferenceToIncome4Choice#mmProprietary
+ * PreferenceToIncome4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PreferenceToIncome4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PreferenceToIncome1Code code;
 	/**
 	 * Preference to income expressed as an ISO 20022 code.
 	 * <p>
@@ -88,7 +89,7 @@ public class PreferenceToIncome4Choice {
 	 * definition} = "Preference to income expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PreferenceToIncome4Choice.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class PreferenceToIncome4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Preference to income expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
 		}
 	};
+	protected GenericIdentification40 proprietary;
 	/**
 	 * Preference to income expressed as a proprietary code.
 	 * <p>
@@ -128,7 +130,7 @@ public class PreferenceToIncome4Choice {
 	 * definition} = "Preference to income expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PreferenceToIncome4Choice.mmObject();
 			isDerived = false;
@@ -136,23 +138,39 @@ public class PreferenceToIncome4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Preference to income expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification40.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreferenceToIncome4Choice.Code, com.tools20022.repository.choice.PreferenceToIncome4Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreferenceToIncome4Choice.mmCode, com.tools20022.repository.choice.PreferenceToIncome4Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PreferenceToIncome4Choice";
 				definition = "Choice of format for Preference to income.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PreferenceToIncome1Code getCode() {
+		return code;
+	}
+
+	public void setCode(PreferenceToIncome1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification40 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification40 proprietary) {
+		this.proprietary = proprietary;
 	}
 }
